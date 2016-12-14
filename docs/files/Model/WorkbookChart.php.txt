@@ -1,0 +1,382 @@
+<?php
+/**
+* Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
+* 
+* WorkbookChart File
+* PHP version 7
+*
+* @category  Library
+* @package   Microsoft.Graph
+* @author    Caitlin Bales <caitbal@microsoft.com>
+* @copyright 2016 Microsoft Corporation
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   GIT: 0.1.0
+* @link      https://graph.microsoft.io/
+*/
+namespace Microsoft\Graph\Model;
+
+/**
+* WorkbookChart class
+*
+* @category  Model
+* @package   Microsoft.Graph
+* @author    Caitlin Bales <caitbal@microsoft.com>
+* @copyright 2016 Microsoft Corporation
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   Release: 0.1.0
+* @link      https://graph.microsoft.io/
+*/
+class WorkbookChart
+{
+    /**
+    * The array of properties available
+    * to the model
+    *
+    * @var array(string => string)
+    */
+    private $_propDict;
+    /**
+    * Construct a new WorkbookChart
+    *
+    * @param array $propDict A list of properties to set
+    */
+    function __construct($propDict = array())
+    {
+        $this->_propDict = $propDict;
+    }
+
+    /**
+    * Gets the property dictionary of the WorkbookChart
+    *
+    * @return array The list of properties
+    */
+    public function getProperties()
+    {
+        return $this->_propDict;
+    }
+
+    /**
+    * Gets the height
+    *
+    * @return float The height
+    */
+    public function getHeight()
+    {
+        if (array_key_exists("height", $this->_propDict)) {
+            return $this->_propDict["height"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the height
+    *
+    * @param float $val The height
+    *
+    * @return null
+    */
+    public function setHeight($val)
+    {
+        $this->propDict["height"] = $val;
+    }
+
+    /**
+    * Gets the left
+    *
+    * @return float The left
+    */
+    public function getLeft()
+    {
+        if (array_key_exists("left", $this->_propDict)) {
+            return $this->_propDict["left"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the left
+    *
+    * @param float $val The left
+    *
+    * @return null
+    */
+    public function setLeft($val)
+    {
+        $this->propDict["left"] = $val;
+    }
+
+    /**
+    * Gets the name
+    *
+    * @return string The name
+    */
+    public function getName()
+    {
+        if (array_key_exists("name", $this->_propDict)) {
+            return $this->_propDict["name"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the name
+    *
+    * @param string $val The name
+    *
+    * @return null
+    */
+    public function setName($val)
+    {
+        $this->propDict["name"] = $val;
+    }
+
+    /**
+    * Gets the top
+    *
+    * @return float The top
+    */
+    public function getTop()
+    {
+        if (array_key_exists("top", $this->_propDict)) {
+            return $this->_propDict["top"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the top
+    *
+    * @param float $val The top
+    *
+    * @return null
+    */
+    public function setTop($val)
+    {
+        $this->propDict["top"] = $val;
+    }
+
+    /**
+    * Gets the width
+    *
+    * @return float The width
+    */
+    public function getWidth()
+    {
+        if (array_key_exists("width", $this->_propDict)) {
+            return $this->_propDict["width"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the width
+    *
+    * @param float $val The width
+    *
+    * @return null
+    */
+    public function setWidth($val)
+    {
+        $this->propDict["width"] = $val;
+    }
+
+    /**
+    * Gets the axes
+    *
+    * @return WorkbookChartAxes The axes
+    */
+    public function getAxes()
+    {
+        if (array_key_exists("axes", $this->_propDict)) {
+            if (is_a($this->_propDict["axes"], 'WorkbookChartAxes')) {
+                return $this->_propDict["axes"];
+            } else {
+                $this->_propDict["axes"] = new WorkbookChartAxes($this->_propDict["axes"]);
+                return $this->_propDict["axes"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the axes
+    *
+    * @param string $val The axes
+    *
+    * @return null
+    */
+    public function setAxes($val)
+    {
+        $this->propDict["axes"] = $val;
+    }
+
+    /**
+    * Gets the dataLabels
+    *
+    * @return WorkbookChartDataLabels The dataLabels
+    */
+    public function getDataLabels()
+    {
+        if (array_key_exists("dataLabels", $this->_propDict)) {
+            if (is_a($this->_propDict["dataLabels"], 'WorkbookChartDataLabels')) {
+                return $this->_propDict["dataLabels"];
+            } else {
+                $this->_propDict["dataLabels"] = new WorkbookChartDataLabels($this->_propDict["dataLabels"]);
+                return $this->_propDict["dataLabels"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the dataLabels
+    *
+    * @param string $val The dataLabels
+    *
+    * @return null
+    */
+    public function setDataLabels($val)
+    {
+        $this->propDict["dataLabels"] = $val;
+    }
+
+    /**
+    * Gets the format
+    *
+    * @return WorkbookChartAreaFormat The format
+    */
+    public function getFormat()
+    {
+        if (array_key_exists("format", $this->_propDict)) {
+            if (is_a($this->_propDict["format"], 'WorkbookChartAreaFormat')) {
+                return $this->_propDict["format"];
+            } else {
+                $this->_propDict["format"] = new WorkbookChartAreaFormat($this->_propDict["format"]);
+                return $this->_propDict["format"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the format
+    *
+    * @param string $val The format
+    *
+    * @return null
+    */
+    public function setFormat($val)
+    {
+        $this->propDict["format"] = $val;
+    }
+
+    /**
+    * Gets the legend
+    *
+    * @return WorkbookChartLegend The legend
+    */
+    public function getLegend()
+    {
+        if (array_key_exists("legend", $this->_propDict)) {
+            if (is_a($this->_propDict["legend"], 'WorkbookChartLegend')) {
+                return $this->_propDict["legend"];
+            } else {
+                $this->_propDict["legend"] = new WorkbookChartLegend($this->_propDict["legend"]);
+                return $this->_propDict["legend"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the legend
+    *
+    * @param string $val The legend
+    *
+    * @return null
+    */
+    public function setLegend($val)
+    {
+        $this->propDict["legend"] = $val;
+    }
+
+    /** 
+    * Gets the series
+    *
+    * @return SeriesCollectionPage The series
+    */
+    public function getSeries()
+    {
+        if (array_key_exists("series", $this->_propDict)) {
+            return SeriesCollectionPage($this->_propDict["series"]);
+        } else {
+            return null;
+        }
+    }
+
+
+    /**
+    * Gets the title
+    *
+    * @return WorkbookChartTitle The title
+    */
+    public function getTitle()
+    {
+        if (array_key_exists("title", $this->_propDict)) {
+            if (is_a($this->_propDict["title"], 'WorkbookChartTitle')) {
+                return $this->_propDict["title"];
+            } else {
+                $this->_propDict["title"] = new WorkbookChartTitle($this->_propDict["title"]);
+                return $this->_propDict["title"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the title
+    *
+    * @param string $val The title
+    *
+    * @return null
+    */
+    public function setTitle($val)
+    {
+        $this->propDict["title"] = $val;
+    }
+
+    /**
+    * Gets the worksheet
+    *
+    * @return WorkbookWorksheet The worksheet
+    */
+    public function getWorksheet()
+    {
+        if (array_key_exists("worksheet", $this->_propDict)) {
+            if (is_a($this->_propDict["worksheet"], 'WorkbookWorksheet')) {
+                return $this->_propDict["worksheet"];
+            } else {
+                $this->_propDict["worksheet"] = new WorkbookWorksheet($this->_propDict["worksheet"]);
+                return $this->_propDict["worksheet"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the worksheet
+    *
+    * @param string $val The worksheet
+    *
+    * @return null
+    */
+    public function setWorksheet($val)
+    {
+        $this->propDict["worksheet"] = $val;
+    }
+}

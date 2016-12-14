@@ -1,0 +1,80 @@
+<?php
+/**
+* Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
+* 
+* Recipient File
+* PHP version 7
+*
+* @category  Library
+* @package   Microsoft.Graph
+* @author    Caitlin Bales <caitbal@microsoft.com>
+* @copyright 2016 Microsoft Corporation
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   GIT: 0.1.0
+* @link      https://graph.microsoft.io/
+*/
+namespace Microsoft\Graph\Model;
+/**
+* Recipient class
+*
+* @category  Model
+* @package   Microsoft.Graph
+* @author    Caitlin Bales <caitbal@microsoft.com>
+* @copyright 2016 Microsoft Corporation
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   Release: 0.1.0
+* @link      https://graph.microsoft.io/
+*/
+class Recipient
+{
+    /**
+    * The array of properties available 
+    * to the model
+    *
+    * @var array(string => string)
+    */
+    private $_propDict;
+    /**
+    * Recipient constructor
+    *
+    * @param array $propDict List of properties to set
+    * Defaults to an empty array
+    *
+    * @return null
+    */
+    public function __construct($propDict=array())
+    {
+        $this->_propDict = $propDict;
+    }
+
+    /**
+    * Gets the emailAddress
+    *
+    * @return EmailAddress The emailAddress
+    */
+    public function getEmailAddress()
+    {
+        if (array_key_exists("emailAddress", $this->propDict)) {
+            if (is_a($this->propDict["emailAddress"], 'EmailAddress')) {
+                return $this->propDict["emailAddress"];
+            } else {
+                $this->propDict["emailAddress"] = new EmailAddress($this->propDict["emailAddress"]);
+                return $this->propDict["emailAddress"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the emailAddress
+    *
+    * @param EmailAddress $val The value to assign to the emailAddress
+    *
+    * @return null
+    */
+    public function setEmailAddress($val)
+    {
+        $this->propDict["emailAddress"] = $val;
+    }
+}
+

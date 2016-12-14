@@ -1,0 +1,924 @@
+<?php
+/**
+* Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
+* 
+* Event File
+* PHP version 7
+*
+* @category  Library
+* @package   Microsoft.Graph
+* @author    Caitlin Bales <caitbal@microsoft.com>
+* @copyright 2016 Microsoft Corporation
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   GIT: 0.1.0
+* @link      https://graph.microsoft.io/
+*/
+namespace Microsoft\Graph\Model;
+
+/**
+* Event class
+*
+* @category  Model
+* @package   Microsoft.Graph
+* @author    Caitlin Bales <caitbal@microsoft.com>
+* @copyright 2016 Microsoft Corporation
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   Release: 0.1.0
+* @link      https://graph.microsoft.io/
+*/
+class Event
+{
+    /**
+    * The array of properties available
+    * to the model
+    *
+    * @var array(string => string)
+    */
+    private $_propDict;
+    /**
+    * Construct a new Event
+    *
+    * @param array $propDict A list of properties to set
+    */
+    function __construct($propDict = array())
+    {
+        $this->_propDict = $propDict;
+    }
+
+    /**
+    * Gets the property dictionary of the Event
+    *
+    * @return array The list of properties
+    */
+    public function getProperties()
+    {
+        return $this->_propDict;
+    }
+
+    /**
+    * Gets the originalStartTimeZone
+    *
+    * @return string The originalStartTimeZone
+    */
+    public function getOriginalStartTimeZone()
+    {
+        if (array_key_exists("originalStartTimeZone", $this->_propDict)) {
+            return $this->_propDict["originalStartTimeZone"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the originalStartTimeZone
+    *
+    * @param string $val The originalStartTimeZone
+    *
+    * @return null
+    */
+    public function setOriginalStartTimeZone($val)
+    {
+        $this->propDict["originalStartTimeZone"] = $val;
+    }
+
+    /**
+    * Gets the originalEndTimeZone
+    *
+    * @return string The originalEndTimeZone
+    */
+    public function getOriginalEndTimeZone()
+    {
+        if (array_key_exists("originalEndTimeZone", $this->_propDict)) {
+            return $this->_propDict["originalEndTimeZone"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the originalEndTimeZone
+    *
+    * @param string $val The originalEndTimeZone
+    *
+    * @return null
+    */
+    public function setOriginalEndTimeZone($val)
+    {
+        $this->propDict["originalEndTimeZone"] = $val;
+    }
+
+    /**
+    * Gets the responseStatus
+    *
+    * @return ResponseStatus The responseStatus
+    */
+    public function getResponseStatus()
+    {
+        if (array_key_exists("responseStatus", $this->_propDict)) {
+            if (is_a($this->_propDict["responseStatus"], 'ResponseStatus')) {
+                return $this->_propDict["responseStatus"];
+            } else {
+                $this->_propDict["responseStatus"] = new ResponseStatus($this->_propDict["responseStatus"]);
+                return $this->_propDict["responseStatus"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the responseStatus
+    *
+    * @param string $val The responseStatus
+    *
+    * @return null
+    */
+    public function setResponseStatus($val)
+    {
+        $this->propDict["responseStatus"] = $val;
+    }
+
+    /**
+    * Gets the iCalUId
+    *
+    * @return string The iCalUId
+    */
+    public function getICalUId()
+    {
+        if (array_key_exists("iCalUId", $this->_propDict)) {
+            return $this->_propDict["iCalUId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the iCalUId
+    *
+    * @param string $val The iCalUId
+    *
+    * @return null
+    */
+    public function setICalUId($val)
+    {
+        $this->propDict["iCalUId"] = $val;
+    }
+
+    /**
+    * Gets the reminderMinutesBeforeStart
+    *
+    * @return int The reminderMinutesBeforeStart
+    */
+    public function getReminderMinutesBeforeStart()
+    {
+        if (array_key_exists("reminderMinutesBeforeStart", $this->_propDict)) {
+            return $this->_propDict["reminderMinutesBeforeStart"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the reminderMinutesBeforeStart
+    *
+    * @param int $val The reminderMinutesBeforeStart
+    *
+    * @return null
+    */
+    public function setReminderMinutesBeforeStart($val)
+    {
+        $this->propDict["reminderMinutesBeforeStart"] = intval($val);
+    }
+
+    /**
+    * Gets the isReminderOn
+    *
+    * @return bool The isReminderOn
+    */
+    public function getIsReminderOn()
+    {
+        if (array_key_exists("isReminderOn", $this->_propDict)) {
+            return $this->_propDict["isReminderOn"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isReminderOn
+    *
+    * @param bool $val The isReminderOn
+    *
+    * @return null
+    */
+    public function setIsReminderOn($val)
+    {
+        $this->propDict["isReminderOn"] = boolval($val);
+    }
+
+    /**
+    * Gets the hasAttachments
+    *
+    * @return bool The hasAttachments
+    */
+    public function getHasAttachments()
+    {
+        if (array_key_exists("hasAttachments", $this->_propDict)) {
+            return $this->_propDict["hasAttachments"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the hasAttachments
+    *
+    * @param bool $val The hasAttachments
+    *
+    * @return null
+    */
+    public function setHasAttachments($val)
+    {
+        $this->propDict["hasAttachments"] = boolval($val);
+    }
+
+    /**
+    * Gets the subject
+    *
+    * @return string The subject
+    */
+    public function getSubject()
+    {
+        if (array_key_exists("subject", $this->_propDict)) {
+            return $this->_propDict["subject"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the subject
+    *
+    * @param string $val The subject
+    *
+    * @return null
+    */
+    public function setSubject($val)
+    {
+        $this->propDict["subject"] = $val;
+    }
+
+    /**
+    * Gets the body
+    *
+    * @return ItemBody The body
+    */
+    public function getBody()
+    {
+        if (array_key_exists("body", $this->_propDict)) {
+            if (is_a($this->_propDict["body"], 'ItemBody')) {
+                return $this->_propDict["body"];
+            } else {
+                $this->_propDict["body"] = new ItemBody($this->_propDict["body"]);
+                return $this->_propDict["body"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the body
+    *
+    * @param string $val The body
+    *
+    * @return null
+    */
+    public function setBody($val)
+    {
+        $this->propDict["body"] = $val;
+    }
+
+    /**
+    * Gets the bodyPreview
+    *
+    * @return string The bodyPreview
+    */
+    public function getBodyPreview()
+    {
+        if (array_key_exists("bodyPreview", $this->_propDict)) {
+            return $this->_propDict["bodyPreview"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the bodyPreview
+    *
+    * @param string $val The bodyPreview
+    *
+    * @return null
+    */
+    public function setBodyPreview($val)
+    {
+        $this->propDict["bodyPreview"] = $val;
+    }
+
+    /**
+    * Gets the importance
+    *
+    * @return Importance The importance
+    */
+    public function getImportance()
+    {
+        if (array_key_exists("importance", $this->_propDict)) {
+            if (is_a($this->_propDict["importance"], 'Importance')) {
+                return $this->_propDict["importance"];
+            } else {
+                $this->_propDict["importance"] = new Importance($this->_propDict["importance"]);
+                return $this->_propDict["importance"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the importance
+    *
+    * @param string $val The importance
+    *
+    * @return null
+    */
+    public function setImportance($val)
+    {
+        $this->propDict["importance"] = $val;
+    }
+
+    /**
+    * Gets the sensitivity
+    *
+    * @return Sensitivity The sensitivity
+    */
+    public function getSensitivity()
+    {
+        if (array_key_exists("sensitivity", $this->_propDict)) {
+            if (is_a($this->_propDict["sensitivity"], 'Sensitivity')) {
+                return $this->_propDict["sensitivity"];
+            } else {
+                $this->_propDict["sensitivity"] = new Sensitivity($this->_propDict["sensitivity"]);
+                return $this->_propDict["sensitivity"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the sensitivity
+    *
+    * @param string $val The sensitivity
+    *
+    * @return null
+    */
+    public function setSensitivity($val)
+    {
+        $this->propDict["sensitivity"] = $val;
+    }
+
+    /**
+    * Gets the start
+    *
+    * @return DateTimeTimeZone The start
+    */
+    public function getStart()
+    {
+        if (array_key_exists("start", $this->_propDict)) {
+            if (is_a($this->_propDict["start"], 'DateTimeTimeZone')) {
+                return $this->_propDict["start"];
+            } else {
+                $this->_propDict["start"] = new DateTimeTimeZone($this->_propDict["start"]);
+                return $this->_propDict["start"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the start
+    *
+    * @param string $val The start
+    *
+    * @return null
+    */
+    public function setStart($val)
+    {
+        $this->propDict["start"] = $val;
+    }
+
+    /**
+    * Gets the originalStart
+    *
+    * @return datetime The originalStart
+    */
+    public function getOriginalStart()
+    {
+        if (array_key_exists("originalStart", $this->_propDict)) {
+            return new \DateTime($this->_propDict["originalStart"]);
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the originalStart
+    *
+    * @param datetime $val The originalStart
+    *
+    * @return null
+    */
+    public function setOriginalStart($val)
+    {
+        $this->_propDict["originalStart"] 
+            = $val->format(\DateTime::ISO8601) . "Z";
+    }
+
+    /**
+    * Gets the end
+    *
+    * @return DateTimeTimeZone The end
+    */
+    public function getEnd()
+    {
+        if (array_key_exists("end", $this->_propDict)) {
+            if (is_a($this->_propDict["end"], 'DateTimeTimeZone')) {
+                return $this->_propDict["end"];
+            } else {
+                $this->_propDict["end"] = new DateTimeTimeZone($this->_propDict["end"]);
+                return $this->_propDict["end"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the end
+    *
+    * @param string $val The end
+    *
+    * @return null
+    */
+    public function setEnd($val)
+    {
+        $this->propDict["end"] = $val;
+    }
+
+    /**
+    * Gets the location
+    *
+    * @return Location The location
+    */
+    public function getLocation()
+    {
+        if (array_key_exists("location", $this->_propDict)) {
+            if (is_a($this->_propDict["location"], 'Location')) {
+                return $this->_propDict["location"];
+            } else {
+                $this->_propDict["location"] = new Location($this->_propDict["location"]);
+                return $this->_propDict["location"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the location
+    *
+    * @param string $val The location
+    *
+    * @return null
+    */
+    public function setLocation($val)
+    {
+        $this->propDict["location"] = $val;
+    }
+
+    /**
+    * Gets the isAllDay
+    *
+    * @return bool The isAllDay
+    */
+    public function getIsAllDay()
+    {
+        if (array_key_exists("isAllDay", $this->_propDict)) {
+            return $this->_propDict["isAllDay"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isAllDay
+    *
+    * @param bool $val The isAllDay
+    *
+    * @return null
+    */
+    public function setIsAllDay($val)
+    {
+        $this->propDict["isAllDay"] = boolval($val);
+    }
+
+    /**
+    * Gets the isCancelled
+    *
+    * @return bool The isCancelled
+    */
+    public function getIsCancelled()
+    {
+        if (array_key_exists("isCancelled", $this->_propDict)) {
+            return $this->_propDict["isCancelled"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isCancelled
+    *
+    * @param bool $val The isCancelled
+    *
+    * @return null
+    */
+    public function setIsCancelled($val)
+    {
+        $this->propDict["isCancelled"] = boolval($val);
+    }
+
+    /**
+    * Gets the isOrganizer
+    *
+    * @return bool The isOrganizer
+    */
+    public function getIsOrganizer()
+    {
+        if (array_key_exists("isOrganizer", $this->_propDict)) {
+            return $this->_propDict["isOrganizer"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isOrganizer
+    *
+    * @param bool $val The isOrganizer
+    *
+    * @return null
+    */
+    public function setIsOrganizer($val)
+    {
+        $this->propDict["isOrganizer"] = boolval($val);
+    }
+
+    /**
+    * Gets the recurrence
+    *
+    * @return PatternedRecurrence The recurrence
+    */
+    public function getRecurrence()
+    {
+        if (array_key_exists("recurrence", $this->_propDict)) {
+            if (is_a($this->_propDict["recurrence"], 'PatternedRecurrence')) {
+                return $this->_propDict["recurrence"];
+            } else {
+                $this->_propDict["recurrence"] = new PatternedRecurrence($this->_propDict["recurrence"]);
+                return $this->_propDict["recurrence"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the recurrence
+    *
+    * @param string $val The recurrence
+    *
+    * @return null
+    */
+    public function setRecurrence($val)
+    {
+        $this->propDict["recurrence"] = $val;
+    }
+
+    /**
+    * Gets the responseRequested
+    *
+    * @return bool The responseRequested
+    */
+    public function getResponseRequested()
+    {
+        if (array_key_exists("responseRequested", $this->_propDict)) {
+            return $this->_propDict["responseRequested"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the responseRequested
+    *
+    * @param bool $val The responseRequested
+    *
+    * @return null
+    */
+    public function setResponseRequested($val)
+    {
+        $this->propDict["responseRequested"] = boolval($val);
+    }
+
+    /**
+    * Gets the seriesMasterId
+    *
+    * @return string The seriesMasterId
+    */
+    public function getSeriesMasterId()
+    {
+        if (array_key_exists("seriesMasterId", $this->_propDict)) {
+            return $this->_propDict["seriesMasterId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the seriesMasterId
+    *
+    * @param string $val The seriesMasterId
+    *
+    * @return null
+    */
+    public function setSeriesMasterId($val)
+    {
+        $this->propDict["seriesMasterId"] = $val;
+    }
+
+    /**
+    * Gets the showAs
+    *
+    * @return FreeBusyStatus The showAs
+    */
+    public function getShowAs()
+    {
+        if (array_key_exists("showAs", $this->_propDict)) {
+            if (is_a($this->_propDict["showAs"], 'FreeBusyStatus')) {
+                return $this->_propDict["showAs"];
+            } else {
+                $this->_propDict["showAs"] = new FreeBusyStatus($this->_propDict["showAs"]);
+                return $this->_propDict["showAs"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the showAs
+    *
+    * @param string $val The showAs
+    *
+    * @return null
+    */
+    public function setShowAs($val)
+    {
+        $this->propDict["showAs"] = $val;
+    }
+
+    /**
+    * Gets the type
+    *
+    * @return EventType The type
+    */
+    public function getType()
+    {
+        if (array_key_exists("type", $this->_propDict)) {
+            if (is_a($this->_propDict["type"], 'EventType')) {
+                return $this->_propDict["type"];
+            } else {
+                $this->_propDict["type"] = new EventType($this->_propDict["type"]);
+                return $this->_propDict["type"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the type
+    *
+    * @param string $val The type
+    *
+    * @return null
+    */
+    public function setType($val)
+    {
+        $this->propDict["type"] = $val;
+    }
+
+    /** 
+    * Gets the attendees
+    *
+    * @return AttendeesCollectionPage The attendees
+    */
+    public function getAttendees()
+    {
+        if (array_key_exists("attendees", $this->_propDict)) {
+            return AttendeesCollectionPage($this->_propDict["attendees"]);
+        } else {
+            return null;
+        }
+    }
+
+
+    /**
+    * Gets the organizer
+    *
+    * @return Recipient The organizer
+    */
+    public function getOrganizer()
+    {
+        if (array_key_exists("organizer", $this->_propDict)) {
+            if (is_a($this->_propDict["organizer"], 'Recipient')) {
+                return $this->_propDict["organizer"];
+            } else {
+                $this->_propDict["organizer"] = new Recipient($this->_propDict["organizer"]);
+                return $this->_propDict["organizer"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the organizer
+    *
+    * @param string $val The organizer
+    *
+    * @return null
+    */
+    public function setOrganizer($val)
+    {
+        $this->propDict["organizer"] = $val;
+    }
+
+    /**
+    * Gets the webLink
+    *
+    * @return string The webLink
+    */
+    public function getWebLink()
+    {
+        if (array_key_exists("webLink", $this->_propDict)) {
+            return $this->_propDict["webLink"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the webLink
+    *
+    * @param string $val The webLink
+    *
+    * @return null
+    */
+    public function setWebLink($val)
+    {
+        $this->propDict["webLink"] = $val;
+    }
+
+    /**
+    * Gets the onlineMeetingUrl
+    *
+    * @return string The onlineMeetingUrl
+    */
+    public function getOnlineMeetingUrl()
+    {
+        if (array_key_exists("onlineMeetingUrl", $this->_propDict)) {
+            return $this->_propDict["onlineMeetingUrl"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the onlineMeetingUrl
+    *
+    * @param string $val The onlineMeetingUrl
+    *
+    * @return null
+    */
+    public function setOnlineMeetingUrl($val)
+    {
+        $this->propDict["onlineMeetingUrl"] = $val;
+    }
+
+    /**
+    * Gets the calendar
+    *
+    * @return Calendar The calendar
+    */
+    public function getCalendar()
+    {
+        if (array_key_exists("calendar", $this->_propDict)) {
+            if (is_a($this->_propDict["calendar"], 'Calendar')) {
+                return $this->_propDict["calendar"];
+            } else {
+                $this->_propDict["calendar"] = new Calendar($this->_propDict["calendar"]);
+                return $this->_propDict["calendar"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the calendar
+    *
+    * @param string $val The calendar
+    *
+    * @return null
+    */
+    public function setCalendar($val)
+    {
+        $this->propDict["calendar"] = $val;
+    }
+
+    /** 
+    * Gets the instances
+    *
+    * @return InstancesCollectionPage The instances
+    */
+    public function getInstances()
+    {
+        if (array_key_exists("instances", $this->_propDict)) {
+            return InstancesCollectionPage($this->_propDict["instances"]);
+        } else {
+            return null;
+        }
+    }
+
+
+    /** 
+    * Gets the extensions
+    *
+    * @return ExtensionsCollectionPage The extensions
+    */
+    public function getExtensions()
+    {
+        if (array_key_exists("extensions", $this->_propDict)) {
+            return ExtensionsCollectionPage($this->_propDict["extensions"]);
+        } else {
+            return null;
+        }
+    }
+
+
+    /** 
+    * Gets the attachments
+    *
+    * @return AttachmentsCollectionPage The attachments
+    */
+    public function getAttachments()
+    {
+        if (array_key_exists("attachments", $this->_propDict)) {
+            return AttachmentsCollectionPage($this->_propDict["attachments"]);
+        } else {
+            return null;
+        }
+    }
+
+
+    /** 
+    * Gets the singleValueExtendedProperties
+    *
+    * @return SingleValueExtendedPropertiesCollectionPage The singleValueExtendedProperties
+    */
+    public function getSingleValueExtendedProperties()
+    {
+        if (array_key_exists("singleValueExtendedProperties", $this->_propDict)) {
+            return SingleValueExtendedPropertiesCollectionPage($this->_propDict["singleValueExtendedProperties"]);
+        } else {
+            return null;
+        }
+    }
+
+
+    /** 
+    * Gets the multiValueExtendedProperties
+    *
+    * @return MultiValueExtendedPropertiesCollectionPage The multiValueExtendedProperties
+    */
+    public function getMultiValueExtendedProperties()
+    {
+        if (array_key_exists("multiValueExtendedProperties", $this->_propDict)) {
+            return MultiValueExtendedPropertiesCollectionPage($this->_propDict["multiValueExtendedProperties"]);
+        } else {
+            return null;
+        }
+    }
+
+}
