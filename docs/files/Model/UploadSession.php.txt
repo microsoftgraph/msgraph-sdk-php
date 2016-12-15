@@ -1,0 +1,129 @@
+<?php
+/**
+* Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
+* 
+* UploadSession File
+* PHP version 7
+*
+* @category  Library
+* @package   Microsoft.Graph
+* @author    Caitlin Bales <caitbal@microsoft.com>
+* @copyright 2016 Microsoft Corporation
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   GIT: 0.1.0
+* @link      https://graph.microsoft.io/
+*/
+namespace Microsoft\Graph\Model;
+/**
+* UploadSession class
+*
+* @category  Model
+* @package   Microsoft.Graph
+* @author    Caitlin Bales <caitbal@microsoft.com>
+* @copyright 2016 Microsoft Corporation
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   Release: 0.1.0
+* @link      https://graph.microsoft.io/
+*/
+class UploadSession
+{
+    /**
+    * The array of properties available 
+    * to the model
+    *
+    * @var array(string => string)
+    */
+    private $_propDict;
+    /**
+    * UploadSession constructor
+    *
+    * @param array $propDict List of properties to set
+    * Defaults to an empty array
+    *
+    * @return null
+    */
+    public function __construct($propDict=array())
+    {
+        $this->_propDict = $propDict;
+    }
+    
+    /**
+    * Gets the uploadUrl
+    *
+    * @return string The uploadUrl
+    */
+    public function getUploadUrl()
+    {
+        if (array_key_exists("uploadUrl", $this->propDict)) {
+            return $this->propDict["uploadUrl"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the uploadUrl
+    *
+    * @param string $val The value of the uploadUrl
+    *
+    * @return null
+    */
+    public function setUploadUrl($val)
+    {
+        $this->_propDict["upload_url"] = $val;
+    }
+    
+    /**
+    * Gets the expirationDateTime
+    *
+    * @return datetime The expirationDateTime
+    */
+    public function getExpirationDateTime()
+    {
+        if (array_key_exists("expirationDateTime", $this->propDict)) {
+            return new \DateTime($this->_propDict["expirationDateTime"]);
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the expirationDateTime
+    *
+    * @param datetime $val The value of the expirationDateTime
+    *
+    * @return null
+    */
+    public function setExpirationDateTime($val)
+    {
+        $this->_propDict["expiration_date_time"] 
+            = $val->format(\DateTime::ISO8601) . "Z";
+    }
+    
+    /**
+    * Gets the nextExpectedRanges
+    *
+    * @return string The nextExpectedRanges
+    */
+    public function getNextExpectedRanges()
+    {
+        if (array_key_exists("nextExpectedRanges", $this->propDict)) {
+            return $this->propDict["nextExpectedRanges"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the nextExpectedRanges
+    *
+    * @param string $val The value of the nextExpectedRanges
+    *
+    * @return null
+    */
+    public function setNextExpectedRanges($val)
+    {
+        $this->_propDict["next_expected_ranges"] = $val;
+    }
+}
+

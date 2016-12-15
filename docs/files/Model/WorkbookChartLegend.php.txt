@@ -1,0 +1,165 @@
+<?php
+/**
+* Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
+* 
+* WorkbookChartLegend File
+* PHP version 7
+*
+* @category  Library
+* @package   Microsoft.Graph
+* @author    Caitlin Bales <caitbal@microsoft.com>
+* @copyright 2016 Microsoft Corporation
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   GIT: 0.1.0
+* @link      https://graph.microsoft.io/
+*/
+namespace Microsoft\Graph\Model;
+
+/**
+* WorkbookChartLegend class
+*
+* @category  Model
+* @package   Microsoft.Graph
+* @author    Caitlin Bales <caitbal@microsoft.com>
+* @copyright 2016 Microsoft Corporation
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   Release: 0.1.0
+* @link      https://graph.microsoft.io/
+*/
+class WorkbookChartLegend
+{
+    /**
+    * The array of properties available
+    * to the model
+    *
+    * @var array(string => string)
+    */
+    private $_propDict;
+    /**
+    * Construct a new WorkbookChartLegend
+    *
+    * @param array $propDict A list of properties to set
+    */
+    function __construct($propDict = array())
+    {
+        $this->_propDict = $propDict;
+    }
+
+    /**
+    * Gets the property dictionary of the WorkbookChartLegend
+    *
+    * @return array The list of properties
+    */
+    public function getProperties()
+    {
+        return $this->_propDict;
+    }
+
+    /**
+    * Gets the overlay
+    *
+    * @return bool The overlay
+    */
+    public function getOverlay()
+    {
+        if (array_key_exists("overlay", $this->_propDict)) {
+            return $this->_propDict["overlay"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the overlay
+    *
+    * @param bool $val The overlay
+    *
+    * @return null
+    */
+    public function setOverlay($val)
+    {
+        $this->propDict["overlay"] = boolval($val);
+    }
+
+    /**
+    * Gets the position
+    *
+    * @return string The position
+    */
+    public function getPosition()
+    {
+        if (array_key_exists("position", $this->_propDict)) {
+            return $this->_propDict["position"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the position
+    *
+    * @param string $val The position
+    *
+    * @return null
+    */
+    public function setPosition($val)
+    {
+        $this->propDict["position"] = $val;
+    }
+
+    /**
+    * Gets the visible
+    *
+    * @return bool The visible
+    */
+    public function getVisible()
+    {
+        if (array_key_exists("visible", $this->_propDict)) {
+            return $this->_propDict["visible"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the visible
+    *
+    * @param bool $val The visible
+    *
+    * @return null
+    */
+    public function setVisible($val)
+    {
+        $this->propDict["visible"] = boolval($val);
+    }
+
+    /**
+    * Gets the format
+    *
+    * @return WorkbookChartLegendFormat The format
+    */
+    public function getFormat()
+    {
+        if (array_key_exists("format", $this->_propDict)) {
+            if (is_a($this->_propDict["format"], 'WorkbookChartLegendFormat')) {
+                return $this->_propDict["format"];
+            } else {
+                $this->_propDict["format"] = new WorkbookChartLegendFormat($this->_propDict["format"]);
+                return $this->_propDict["format"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the format
+    *
+    * @param string $val The format
+    *
+    * @return null
+    */
+    public function setFormat($val)
+    {
+        $this->propDict["format"] = $val;
+    }
+}

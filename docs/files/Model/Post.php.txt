@@ -1,0 +1,357 @@
+<?php
+/**
+* Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
+* 
+* Post File
+* PHP version 7
+*
+* @category  Library
+* @package   Microsoft.Graph
+* @author    Caitlin Bales <caitbal@microsoft.com>
+* @copyright 2016 Microsoft Corporation
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   GIT: 0.1.0
+* @link      https://graph.microsoft.io/
+*/
+namespace Microsoft\Graph\Model;
+
+/**
+* Post class
+*
+* @category  Model
+* @package   Microsoft.Graph
+* @author    Caitlin Bales <caitbal@microsoft.com>
+* @copyright 2016 Microsoft Corporation
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   Release: 0.1.0
+* @link      https://graph.microsoft.io/
+*/
+class Post
+{
+    /**
+    * The array of properties available
+    * to the model
+    *
+    * @var array(string => string)
+    */
+    private $_propDict;
+    /**
+    * Construct a new Post
+    *
+    * @param array $propDict A list of properties to set
+    */
+    function __construct($propDict = array())
+    {
+        $this->_propDict = $propDict;
+    }
+
+    /**
+    * Gets the property dictionary of the Post
+    *
+    * @return array The list of properties
+    */
+    public function getProperties()
+    {
+        return $this->_propDict;
+    }
+
+    /**
+    * Gets the body
+    *
+    * @return ItemBody The body
+    */
+    public function getBody()
+    {
+        if (array_key_exists("body", $this->_propDict)) {
+            if (is_a($this->_propDict["body"], 'ItemBody')) {
+                return $this->_propDict["body"];
+            } else {
+                $this->_propDict["body"] = new ItemBody($this->_propDict["body"]);
+                return $this->_propDict["body"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the body
+    *
+    * @param string $val The body
+    *
+    * @return null
+    */
+    public function setBody($val)
+    {
+        $this->propDict["body"] = $val;
+    }
+
+    /**
+    * Gets the receivedDateTime
+    *
+    * @return datetime The receivedDateTime
+    */
+    public function getReceivedDateTime()
+    {
+        if (array_key_exists("receivedDateTime", $this->_propDict)) {
+            return new \DateTime($this->_propDict["receivedDateTime"]);
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the receivedDateTime
+    *
+    * @param datetime $val The receivedDateTime
+    *
+    * @return null
+    */
+    public function setReceivedDateTime($val)
+    {
+        $this->_propDict["receivedDateTime"] 
+            = $val->format(\DateTime::ISO8601) . "Z";
+    }
+
+    /**
+    * Gets the hasAttachments
+    *
+    * @return bool The hasAttachments
+    */
+    public function getHasAttachments()
+    {
+        if (array_key_exists("hasAttachments", $this->_propDict)) {
+            return $this->_propDict["hasAttachments"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the hasAttachments
+    *
+    * @param bool $val The hasAttachments
+    *
+    * @return null
+    */
+    public function setHasAttachments($val)
+    {
+        $this->propDict["hasAttachments"] = boolval($val);
+    }
+
+    /**
+    * Gets the from
+    *
+    * @return Recipient The from
+    */
+    public function getFrom()
+    {
+        if (array_key_exists("from", $this->_propDict)) {
+            if (is_a($this->_propDict["from"], 'Recipient')) {
+                return $this->_propDict["from"];
+            } else {
+                $this->_propDict["from"] = new Recipient($this->_propDict["from"]);
+                return $this->_propDict["from"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the from
+    *
+    * @param string $val The from
+    *
+    * @return null
+    */
+    public function setFrom($val)
+    {
+        $this->propDict["from"] = $val;
+    }
+
+    /**
+    * Gets the sender
+    *
+    * @return Recipient The sender
+    */
+    public function getSender()
+    {
+        if (array_key_exists("sender", $this->_propDict)) {
+            if (is_a($this->_propDict["sender"], 'Recipient')) {
+                return $this->_propDict["sender"];
+            } else {
+                $this->_propDict["sender"] = new Recipient($this->_propDict["sender"]);
+                return $this->_propDict["sender"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the sender
+    *
+    * @param string $val The sender
+    *
+    * @return null
+    */
+    public function setSender($val)
+    {
+        $this->propDict["sender"] = $val;
+    }
+
+    /**
+    * Gets the conversationThreadId
+    *
+    * @return string The conversationThreadId
+    */
+    public function getConversationThreadId()
+    {
+        if (array_key_exists("conversationThreadId", $this->_propDict)) {
+            return $this->_propDict["conversationThreadId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the conversationThreadId
+    *
+    * @param string $val The conversationThreadId
+    *
+    * @return null
+    */
+    public function setConversationThreadId($val)
+    {
+        $this->propDict["conversationThreadId"] = $val;
+    }
+
+    /** 
+    * Gets the newParticipants
+    *
+    * @return NewParticipantsCollectionPage The newParticipants
+    */
+    public function getNewParticipants()
+    {
+        if (array_key_exists("newParticipants", $this->_propDict)) {
+            return NewParticipantsCollectionPage($this->_propDict["newParticipants"]);
+        } else {
+            return null;
+        }
+    }
+
+
+    /**
+    * Gets the conversationId
+    *
+    * @return string The conversationId
+    */
+    public function getConversationId()
+    {
+        if (array_key_exists("conversationId", $this->_propDict)) {
+            return $this->_propDict["conversationId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the conversationId
+    *
+    * @param string $val The conversationId
+    *
+    * @return null
+    */
+    public function setConversationId($val)
+    {
+        $this->propDict["conversationId"] = $val;
+    }
+
+    /** 
+    * Gets the extensions
+    *
+    * @return ExtensionsCollectionPage The extensions
+    */
+    public function getExtensions()
+    {
+        if (array_key_exists("extensions", $this->_propDict)) {
+            return ExtensionsCollectionPage($this->_propDict["extensions"]);
+        } else {
+            return null;
+        }
+    }
+
+
+    /**
+    * Gets the inReplyTo
+    *
+    * @return Post The inReplyTo
+    */
+    public function getInReplyTo()
+    {
+        if (array_key_exists("inReplyTo", $this->_propDict)) {
+            if (is_a($this->_propDict["inReplyTo"], 'Post')) {
+                return $this->_propDict["inReplyTo"];
+            } else {
+                $this->_propDict["inReplyTo"] = new Post($this->_propDict["inReplyTo"]);
+                return $this->_propDict["inReplyTo"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the inReplyTo
+    *
+    * @param string $val The inReplyTo
+    *
+    * @return null
+    */
+    public function setInReplyTo($val)
+    {
+        $this->propDict["inReplyTo"] = $val;
+    }
+
+    /** 
+    * Gets the attachments
+    *
+    * @return AttachmentsCollectionPage The attachments
+    */
+    public function getAttachments()
+    {
+        if (array_key_exists("attachments", $this->_propDict)) {
+            return AttachmentsCollectionPage($this->_propDict["attachments"]);
+        } else {
+            return null;
+        }
+    }
+
+
+    /** 
+    * Gets the singleValueExtendedProperties
+    *
+    * @return SingleValueExtendedPropertiesCollectionPage The singleValueExtendedProperties
+    */
+    public function getSingleValueExtendedProperties()
+    {
+        if (array_key_exists("singleValueExtendedProperties", $this->_propDict)) {
+            return SingleValueExtendedPropertiesCollectionPage($this->_propDict["singleValueExtendedProperties"]);
+        } else {
+            return null;
+        }
+    }
+
+
+    /** 
+    * Gets the multiValueExtendedProperties
+    *
+    * @return MultiValueExtendedPropertiesCollectionPage The multiValueExtendedProperties
+    */
+    public function getMultiValueExtendedProperties()
+    {
+        if (array_key_exists("multiValueExtendedProperties", $this->_propDict)) {
+            return MultiValueExtendedPropertiesCollectionPage($this->_propDict["multiValueExtendedProperties"]);
+        } else {
+            return null;
+        }
+    }
+
+}

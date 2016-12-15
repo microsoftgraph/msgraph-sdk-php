@@ -1,0 +1,109 @@
+<?php
+/**
+* Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
+* 
+* FileAttachment File
+* PHP version 7
+*
+* @category  Library
+* @package   Microsoft.Graph
+* @author    Caitlin Bales <caitbal@microsoft.com>
+* @copyright 2016 Microsoft Corporation
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   GIT: 0.1.0
+* @link      https://graph.microsoft.io/
+*/
+namespace Microsoft\Graph\Model;
+
+/**
+* FileAttachment class
+*
+* @category  Model
+* @package   Microsoft.Graph
+* @author    Caitlin Bales <caitbal@microsoft.com>
+* @copyright 2016 Microsoft Corporation
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   Release: 0.1.0
+* @link      https://graph.microsoft.io/
+*/
+class FileAttachment
+{
+    /**
+    * The array of properties available
+    * to the model
+    *
+    * @var array(string => string)
+    */
+    private $_propDict;
+    /**
+    * Construct a new FileAttachment
+    *
+    * @param array $propDict A list of properties to set
+    */
+    function __construct($propDict = array())
+    {
+        $this->_propDict = $propDict;
+    }
+
+    /**
+    * Gets the property dictionary of the FileAttachment
+    *
+    * @return array The list of properties
+    */
+    public function getProperties()
+    {
+        return $this->_propDict;
+    }
+
+    /**
+    * Gets the contentId
+    *
+    * @return string The contentId
+    */
+    public function getContentId()
+    {
+        if (array_key_exists("contentId", $this->_propDict)) {
+            return $this->_propDict["contentId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the contentId
+    *
+    * @param string $val The contentId
+    *
+    * @return null
+    */
+    public function setContentId($val)
+    {
+        $this->propDict["contentId"] = $val;
+    }
+
+    /**
+    * Gets the contentLocation
+    *
+    * @return string The contentLocation
+    */
+    public function getContentLocation()
+    {
+        if (array_key_exists("contentLocation", $this->_propDict)) {
+            return $this->_propDict["contentLocation"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the contentLocation
+    *
+    * @param string $val The contentLocation
+    *
+    * @return null
+    */
+    public function setContentLocation($val)
+    {
+        $this->propDict["contentLocation"] = $val;
+    }
+}

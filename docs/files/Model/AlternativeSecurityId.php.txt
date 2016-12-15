@@ -1,0 +1,102 @@
+<?php
+/**
+* Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
+* 
+* AlternativeSecurityId File
+* PHP version 7
+*
+* @category  Library
+* @package   Microsoft.Graph
+* @author    Caitlin Bales <caitbal@microsoft.com>
+* @copyright 2016 Microsoft Corporation
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   GIT: 0.1.0
+* @link      https://graph.microsoft.io/
+*/
+namespace Microsoft\Graph\Model;
+/**
+* AlternativeSecurityId class
+*
+* @category  Model
+* @package   Microsoft.Graph
+* @author    Caitlin Bales <caitbal@microsoft.com>
+* @copyright 2016 Microsoft Corporation
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   Release: 0.1.0
+* @link      https://graph.microsoft.io/
+*/
+class AlternativeSecurityId
+{
+    /**
+    * The array of properties available 
+    * to the model
+    *
+    * @var array(string => string)
+    */
+    private $_propDict;
+    /**
+    * AlternativeSecurityId constructor
+    *
+    * @param array $propDict List of properties to set
+    * Defaults to an empty array
+    *
+    * @return null
+    */
+    public function __construct($propDict=array())
+    {
+        $this->_propDict = $propDict;
+    }
+    
+    /**
+    * Gets the type
+    *
+    * @return int The type
+    */
+    public function getType()
+    {
+        if (array_key_exists("type", $this->propDict)) {
+            return $this->propDict["type"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the type
+    *
+    * @param int $val The value of the type
+    *
+    * @return null
+    */
+    public function setType($val)
+    {
+        $this->_propDict["type"] = $val;
+    }
+    
+    /**
+    * Gets the identityProvider
+    *
+    * @return string The identityProvider
+    */
+    public function getIdentityProvider()
+    {
+        if (array_key_exists("identityProvider", $this->propDict)) {
+            return $this->propDict["identityProvider"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the identityProvider
+    *
+    * @param string $val The value of the identityProvider
+    *
+    * @return null
+    */
+    public function setIdentityProvider($val)
+    {
+        $this->_propDict["identity_provider"] = $val;
+    }
+}
+

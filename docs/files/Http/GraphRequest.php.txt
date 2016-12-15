@@ -1,0 +1,395 @@
+<?php 
+/**
+* Copyright (c) Microsoft Corporation.  All Rights Reserved.  
+* Licensed under the MIT License.  See License in the project root 
+* for license information.
+* 
+* GraphRequest File
+* PHP version 7
+*
+* @category  Library
+* @package   Microsoft.Graph
+* @author    Caitlin Bales <caitbal@microsoft.com>
+* @copyright 2016 Microsoft Corporation
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   GIT: 0.1.0
+* @link      https://graph.microsoft.io/
+*/
+
+namespace Microsoft\Graph\Http;
+
+use GuzzleHttp\Psr7\stream_for;
+/**
+ * Class GraphRequest
+ *
+ * @category Library
+ * @package  Microsoft.Graph
+ * @author   Caitlin Bales <caitbal@microsoft.com>
+ * @license  https://opensource.org/licenses/MIT MIT License
+ * @link     https://graph.microsoft.io/
+ */
+class GraphRequest
+{
+    /**
+    * A valid access token
+    *
+    * @var string
+    */
+    protected $accessToken;
+    /**
+    * The API version to use ("v1.0", "beta")
+    *
+    * @var string
+    */
+    protected $apiVersion;
+    /**
+    * The base url to call
+    *
+    * @var string
+    */
+    protected $baseUrl;
+    /**
+    * The endpoint to call
+    *
+    * @var string
+    */
+    protected $endpoint;
+    /**
+    * The Guzzle client used to make the HTTP request
+    *
+    * @var GuzzleHttp\Guzzle\Client
+    */
+    protected $guzzleClient;
+    /**
+    * An array of headers to send with the request
+    *
+    * @var array(string => string)
+    */
+    protected $headers;
+    /**
+    * The body of the request (optional)
+    *
+    * @var string
+    */
+    protected $requestBody;
+    /**
+    * The type of request to make ("GET", "POST", etc.)
+    *
+    * @var string
+    */
+    protected $requestType;
+    /**
+    * True if the response should be returned as
+    * a stream
+    *
+    * @var bool
+    */
+    protected $returnsStream;
+    /**
+    * The return type to cast the response as
+    *
+    * @var Microsoft\Graph\Model
+    */
+    protected $returnType;
+    /**
+    * The timeout, in seconds
+    *
+    * @var string
+    */
+    protected $timeout;
+
+    /**
+    * Constructs a new Graph Request object
+    *
+    * @param string $requestType The HTTP method to use, e.g. "GET" or "POST"
+    * @param string $endpoint    The Graph endpoint to call
+    * @param string $accessToken A valid access token to validate the Graph call
+    * @param string $baseUrl     The base URL to call
+    * @param string $apiVersion  The API version to use
+    */ 
+    public function __construct($requestType, $endpoint, $accessToken, $baseUrl, $apiVersion)
+    {
+        $this->requestType = $requestType;
+        $this->endpoint = $endpoint;
+        $this->accessToken = $accessToken;
+
+        if (!$this->accessToken) {
+            throw new \Microsoft\Graph\Exception\GraphException(NO_ACCESS_TOKEN);
+        }
+
+        $this->baseUrl = $baseUrl;
+        $this->apiVersion = $apiVersion;
+        $this->timeout = 0;
+        $this->headers = $this->_getDefaultHeaders(); 
+    }
+
+    /**
+    * Sets the return type of the response object
+    *
+    * @param mixed $returnClass The object class to use
+    *
+    * @return The GraphRequest object
+    */
+    public function setReturnType($returnClass)
+    {
+        $this->returnType = $returnClass;
+        if (strcasecmp($this->returnType, 'stream') == 0) {
+            $this->returnsStream  = true;
+        } else {
+            $this->returnsStream = false;
+        }
+        return $this;
+    }
+
+    /**
+    * Adds custom headers to the request
+    *
+    * @param array $headers An array of custom headers
+    *
+    * @return The request object
+    */
+    public function addHeaders($headers)
+    {
+        $this->headers = array_merge($this->headers, $headers);
+        return $this;
+    }
+
+    /**
+    * Get the request headers
+    *
+    * @return $headers An array of headers
+    */
+    public function getHeaders()
+    {
+        return $this->headers;
+    }
+
+    /**
+    * Attach a body to the request. Will JSON encode 
+    * any Microsoft\Graph\Model objects as well as arrays
+    *
+    * @param mixed $obj The object to include in the request
+    *
+    * @return The request object
+    */
+    public function attachBody($obj)
+    {
+        if (is_string($obj) || is_a($obj, 'GuzzleHttp\\Psr7\\Stream')) {
+            $this->requestBody = $obj;
+        } else if (array_key_exists("propDict", $obj)) {
+            $this->requestBody = json_encode($obj->propDict);
+        } else {
+            $this->requestBody = json_encode($obj);
+        }
+        return $this;
+    }
+
+    /**
+    * Get the body of the request
+    *
+    * @return Request body of any type
+    */
+    public function getBody()
+    {
+        return $this->requestBody;
+    }
+
+    /**
+    * Sets the timeout limit of the cURL request
+    *
+    * @param string $timeout The timeout in ms
+    * 
+    * @return The request object
+    */
+    public function setTimeout($timeout)
+    {
+        $this->timeout = $timeout;
+        return $this;
+    }
+
+    /**
+    * Executes the HTTP request using Guzzle
+    *
+    * @param mixed $client The client to use in the request
+    *
+    * @return An object or array of objects 
+    *         of class $returnType
+    */
+    public function execute($client = null)
+    {
+        if (!$client) {
+            $client = new \GuzzleHttp\Client(
+                [
+                    'base_uri' => $this->baseUrl,
+                    'headers' => $this->headers
+                ]
+            );
+        }
+
+        $result = $client->request(
+            $this->requestType, 
+            $this->_getRequestUrl(), 
+            [
+                'body' => $this->requestBody,
+                'stream' =>  $this->returnsStream,
+                'timeout' => $this->timeout
+            ]
+        );
+
+        if ($this->returnsStream) {
+            return $result;
+        }
+        try {
+            $response = new GraphResponse(
+                $this, 
+                $result->getBody()->getContents(), 
+                $result->getStatusCode(), 
+                $result->getHeaders()
+            );
+        } catch (GraphException $e) {
+            echo $e->__toString();
+        }
+
+        $returnObj = $response;
+
+        if ($this->returnType) {
+            $returnObj = $response->getResponseAsObject($this->returnType);
+        }
+        return $returnObj; 
+    }
+
+    /**
+    * Executes the HTTP request asynchronously using Guzzle
+    *
+    * @param mixed $client The client to use in the request
+    *
+    * @return An object or array of objects 
+    *         of class $returnType
+    */
+    public function executeAsync($client = null)
+    {
+        if (!$client) {
+            $client = new \GuzzleHttp\Client(
+                [
+                    'base_uri' => $this->baseUrl,
+                    'headers' => $this->headers
+                ]
+            );
+        }
+
+        $promise = $client->requestAsync(
+            $this->requestType,
+            $this->_getRequestUrl(),
+            [
+                'body' => $this->requestBody,
+                'stream' => $this->returnsStream,
+                'timeout' => $this->timeout
+            ]
+        )->then(
+            function ($result) {
+                $response = new GraphResponse(
+                    $this, 
+                    $result->getBody()->getContents(), 
+                    $result->getStatusCode(), 
+                    $this->headers
+                );
+                $returnObject = $response;
+                if ($this->returnType) {
+                    $returnObject = $response->getResponseAsObject(
+                        $this->returnType
+                    );
+                }
+                return $returnObject;
+            },
+            function ($reason) {
+                error_log("Async call failed: " . $reason->getMessage());
+                return null;
+            }
+        );
+        return $promise;
+    }
+
+    /**
+    * Download a file from OneDrive to a given location
+    *
+    * @param string $path   The path to download the file to
+    * @param mixed  $client The client to use in the request
+    *
+    * @return null
+    */
+    public function download($path, $client = null)
+    {
+        $file = fopen($path, 'w') or die('Could not open provided document path');
+        if (!$client) {
+            $client = $this->guzzleClient;
+        }
+        $guzzleResult = $client->request(
+            $this->requestType, 
+            $this->_getRequestUrl(), 
+            [
+                'body' => $this->requestBody,
+                'sink' => $file
+            ]
+        );
+        fclose($file);
+        return null;
+    }
+
+    /**
+    * Upload a file to OneDrive from a given location
+    *
+    * @param string $path   The path of the file to upload
+    * @param mixed  $client The client to use in the request
+    *
+    * @return An object or array of objects (DriveItems)
+    */
+    public function upload($path, $client = null)
+    {
+        $file = fopen($path, 'r') or die('Could not open document for upload');
+        $stream = \GuzzleHttp\Psr7\stream_for($file);
+        $this->requestBody = $stream;
+        
+        return $this->execute($client);
+    }
+
+    /**
+    * Get a list of headers for the request
+    *
+    * @return array The headers for the request
+    */
+    private function _getDefaultHeaders()
+    {
+        $headers = [
+            'Host' => $this->baseUrl,
+            'Content-Type' => 'application/json',
+            'SdkVersion' => 'Graph-php-' . SDK_VERSION,
+            'Authorization' => 'Bearer ' . $this->accessToken
+        ];
+        return $headers;
+    }
+
+    /**
+    * Get the concatenated request URL
+    *
+    * @return The request URL
+    */
+    private function _getRequestUrl()
+    {
+        return $this->apiVersion . $this->endpoint;
+    }
+
+    /**
+    * Checks whether the endpoint currently contains query
+    * parameters and returns the relevant concatenator for 
+    * the new query string
+    *
+    * @return "?" or "&"
+    */
+    protected function getConcatenator()
+    {
+        if (stripos($this->endpoint, "?") === false) {
+            return "?";
+        }
+        return "&";
+    }
+}

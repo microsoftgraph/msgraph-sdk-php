@@ -1,0 +1,466 @@
+<?php
+/**
+* Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
+* 
+* Audio File
+* PHP version 7
+*
+* @category  Library
+* @package   Microsoft.Graph
+* @author    Caitlin Bales <caitbal@microsoft.com>
+* @copyright 2016 Microsoft Corporation
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   GIT: 0.1.0
+* @link      https://graph.microsoft.io/
+*/
+namespace Microsoft\Graph\Model;
+/**
+* Audio class
+*
+* @category  Model
+* @package   Microsoft.Graph
+* @author    Caitlin Bales <caitbal@microsoft.com>
+* @copyright 2016 Microsoft Corporation
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   Release: 0.1.0
+* @link      https://graph.microsoft.io/
+*/
+class Audio
+{
+    /**
+    * The array of properties available 
+    * to the model
+    *
+    * @var array(string => string)
+    */
+    private $_propDict;
+    /**
+    * Audio constructor
+    *
+    * @param array $propDict List of properties to set
+    * Defaults to an empty array
+    *
+    * @return null
+    */
+    public function __construct($propDict=array())
+    {
+        $this->_propDict = $propDict;
+    }
+    
+    /**
+    * Gets the album
+    *
+    * @return string The album
+    */
+    public function getAlbum()
+    {
+        if (array_key_exists("album", $this->propDict)) {
+            return $this->propDict["album"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the album
+    *
+    * @param string $val The value of the album
+    *
+    * @return null
+    */
+    public function setAlbum($val)
+    {
+        $this->_propDict["album"] = $val;
+    }
+    
+    /**
+    * Gets the albumArtist
+    *
+    * @return string The albumArtist
+    */
+    public function getAlbumArtist()
+    {
+        if (array_key_exists("albumArtist", $this->propDict)) {
+            return $this->propDict["albumArtist"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the albumArtist
+    *
+    * @param string $val The value of the albumArtist
+    *
+    * @return null
+    */
+    public function setAlbumArtist($val)
+    {
+        $this->_propDict["album_artist"] = $val;
+    }
+    
+    /**
+    * Gets the artist
+    *
+    * @return string The artist
+    */
+    public function getArtist()
+    {
+        if (array_key_exists("artist", $this->propDict)) {
+            return $this->propDict["artist"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the artist
+    *
+    * @param string $val The value of the artist
+    *
+    * @return null
+    */
+    public function setArtist($val)
+    {
+        $this->_propDict["artist"] = $val;
+    }
+    
+    /**
+    * Gets the bitrate
+    *
+    * @return int The bitrate
+    */
+    public function getBitrate()
+    {
+        if (array_key_exists("bitrate", $this->propDict)) {
+            return $this->propDict["bitrate"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the bitrate
+    *
+    * @param int $val The value of the bitrate
+    *
+    * @return null
+    */
+    public function setBitrate($val)
+    {
+        $this->_propDict["bitrate"] = $val;
+    }
+    
+    /**
+    * Gets the composers
+    *
+    * @return string The composers
+    */
+    public function getComposers()
+    {
+        if (array_key_exists("composers", $this->propDict)) {
+            return $this->propDict["composers"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the composers
+    *
+    * @param string $val The value of the composers
+    *
+    * @return null
+    */
+    public function setComposers($val)
+    {
+        $this->_propDict["composers"] = $val;
+    }
+    
+    /**
+    * Gets the copyright
+    *
+    * @return string The copyright
+    */
+    public function getCopyright()
+    {
+        if (array_key_exists("copyright", $this->propDict)) {
+            return $this->propDict["copyright"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the copyright
+    *
+    * @param string $val The value of the copyright
+    *
+    * @return null
+    */
+    public function setCopyright($val)
+    {
+        $this->_propDict["copyright"] = $val;
+    }
+    
+    /**
+    * Gets the disc
+    *
+    * @return int The disc
+    */
+    public function getDisc()
+    {
+        if (array_key_exists("disc", $this->propDict)) {
+            return $this->propDict["disc"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the disc
+    *
+    * @param int $val The value of the disc
+    *
+    * @return null
+    */
+    public function setDisc($val)
+    {
+        $this->_propDict["disc"] = $val;
+    }
+    
+    /**
+    * Gets the discCount
+    *
+    * @return int The discCount
+    */
+    public function getDiscCount()
+    {
+        if (array_key_exists("discCount", $this->propDict)) {
+            return $this->propDict["discCount"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the discCount
+    *
+    * @param int $val The value of the discCount
+    *
+    * @return null
+    */
+    public function setDiscCount($val)
+    {
+        $this->_propDict["disc_count"] = $val;
+    }
+    
+    /**
+    * Gets the duration
+    *
+    * @return int The duration
+    */
+    public function getDuration()
+    {
+        if (array_key_exists("duration", $this->propDict)) {
+            return $this->propDict["duration"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the duration
+    *
+    * @param int $val The value of the duration
+    *
+    * @return null
+    */
+    public function setDuration($val)
+    {
+        $this->_propDict["duration"] = $val;
+    }
+    
+    /**
+    * Gets the genre
+    *
+    * @return string The genre
+    */
+    public function getGenre()
+    {
+        if (array_key_exists("genre", $this->propDict)) {
+            return $this->propDict["genre"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the genre
+    *
+    * @param string $val The value of the genre
+    *
+    * @return null
+    */
+    public function setGenre($val)
+    {
+        $this->_propDict["genre"] = $val;
+    }
+    
+    /**
+    * Gets the hasDrm
+    *
+    * @return bool The hasDrm
+    */
+    public function getHasDrm()
+    {
+        if (array_key_exists("hasDrm", $this->propDict)) {
+            return $this->propDict["hasDrm"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the hasDrm
+    *
+    * @param bool $val The value of the hasDrm
+    *
+    * @return null
+    */
+    public function setHasDrm($val)
+    {
+        $this->_propDict["has_drm"] = $val;
+    }
+    
+    /**
+    * Gets the isVariableBitrate
+    *
+    * @return bool The isVariableBitrate
+    */
+    public function getIsVariableBitrate()
+    {
+        if (array_key_exists("isVariableBitrate", $this->propDict)) {
+            return $this->propDict["isVariableBitrate"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isVariableBitrate
+    *
+    * @param bool $val The value of the isVariableBitrate
+    *
+    * @return null
+    */
+    public function setIsVariableBitrate($val)
+    {
+        $this->_propDict["is_variable_bitrate"] = $val;
+    }
+    
+    /**
+    * Gets the title
+    *
+    * @return string The title
+    */
+    public function getTitle()
+    {
+        if (array_key_exists("title", $this->propDict)) {
+            return $this->propDict["title"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the title
+    *
+    * @param string $val The value of the title
+    *
+    * @return null
+    */
+    public function setTitle($val)
+    {
+        $this->_propDict["title"] = $val;
+    }
+    
+    /**
+    * Gets the track
+    *
+    * @return int The track
+    */
+    public function getTrack()
+    {
+        if (array_key_exists("track", $this->propDict)) {
+            return $this->propDict["track"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the track
+    *
+    * @param int $val The value of the track
+    *
+    * @return null
+    */
+    public function setTrack($val)
+    {
+        $this->_propDict["track"] = $val;
+    }
+    
+    /**
+    * Gets the trackCount
+    *
+    * @return int The trackCount
+    */
+    public function getTrackCount()
+    {
+        if (array_key_exists("trackCount", $this->propDict)) {
+            return $this->propDict["trackCount"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the trackCount
+    *
+    * @param int $val The value of the trackCount
+    *
+    * @return null
+    */
+    public function setTrackCount($val)
+    {
+        $this->_propDict["track_count"] = $val;
+    }
+    
+    /**
+    * Gets the year
+    *
+    * @return int The year
+    */
+    public function getYear()
+    {
+        if (array_key_exists("year", $this->propDict)) {
+            return $this->propDict["year"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the year
+    *
+    * @param int $val The value of the year
+    *
+    * @return null
+    */
+    public function setYear($val)
+    {
+        $this->_propDict["year"] = $val;
+    }
+}
+

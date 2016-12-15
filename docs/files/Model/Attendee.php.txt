@@ -1,0 +1,110 @@
+<?php
+/**
+* Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
+* 
+* Attendee File
+* PHP version 7
+*
+* @category  Library
+* @package   Microsoft.Graph
+* @author    Caitlin Bales <caitbal@microsoft.com>
+* @copyright 2016 Microsoft Corporation
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   GIT: 0.1.0
+* @link      https://graph.microsoft.io/
+*/
+namespace Microsoft\Graph\Model;
+/**
+* Attendee class
+*
+* @category  Model
+* @package   Microsoft.Graph
+* @author    Caitlin Bales <caitbal@microsoft.com>
+* @copyright 2016 Microsoft Corporation
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   Release: 0.1.0
+* @link      https://graph.microsoft.io/
+*/
+class Attendee
+{
+    /**
+    * The array of properties available 
+    * to the model
+    *
+    * @var array(string => string)
+    */
+    private $_propDict;
+    /**
+    * Attendee constructor
+    *
+    * @param array $propDict List of properties to set
+    * Defaults to an empty array
+    *
+    * @return null
+    */
+    public function __construct($propDict=array())
+    {
+        $this->_propDict = $propDict;
+    }
+
+    /**
+    * Gets the status
+    *
+    * @return ResponseStatus The status
+    */
+    public function getStatus()
+    {
+        if (array_key_exists("status", $this->propDict)) {
+            if (is_a($this->propDict["status"], 'ResponseStatus')) {
+                return $this->propDict["status"];
+            } else {
+                $this->propDict["status"] = new ResponseStatus($this->propDict["status"]);
+                return $this->propDict["status"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the status
+    *
+    * @param ResponseStatus $val The value to assign to the status
+    *
+    * @return null
+    */
+    public function setStatus($val)
+    {
+        $this->propDict["status"] = $val;
+    }
+
+    /**
+    * Gets the type
+    *
+    * @return AttendeeType The type
+    */
+    public function getType()
+    {
+        if (array_key_exists("type", $this->propDict)) {
+            if (is_a($this->propDict["type"], 'AttendeeType')) {
+                return $this->propDict["type"];
+            } else {
+                $this->propDict["type"] = new AttendeeType($this->propDict["type"]);
+                return $this->propDict["type"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the type
+    *
+    * @param AttendeeType $val The value to assign to the type
+    *
+    * @return null
+    */
+    public function setType($val)
+    {
+        $this->propDict["type"] = $val;
+    }
+}
+
