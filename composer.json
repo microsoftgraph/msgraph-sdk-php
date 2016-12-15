@@ -1,5 +1,5 @@
 {
-	"name": "microsoft/graph",
+	"name": "microsoft-graph/msgraph-sdk-php",
 	"version": "0.1.0",
 	"type": "library",
 	"description": "The Microsoft Graph SDK for PHP",
