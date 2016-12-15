@@ -1,12 +1,12 @@
-# Getting started with the Microsoft Graph SDK for PHP
+# Get started with the Microsoft Graph SDK for PHP
 
-*This SDK is currently in preview, please continue to provide [feedback](https://github.com/microsoftgraph/msgraph-sdk-php/issues/new) as we iterate towards a production supported library.*
+*This SDK is currently in preview. Please continue to provide [feedback](https://github.com/microsoftgraph/msgraph-sdk-php/issues/new) as we iterate towards a production-supported library.*
 
 [![Build Status](https://travis-ci.org/microsoftgraph/msgraph-sdk-php.svg?branch=master)](https://travis-ci.org/microsoftgraph/msgraph-sdk-php)
 
 
-## Installation
-The PHP SDK can be installed with Composer:
+## Install the SDK
+You can install the PHP SDK with Composer.
 ```
 {
     "require": {
@@ -14,15 +14,15 @@ The PHP SDK can be installed with Composer:
     }
 }
 ```
-## Getting started
+## Get started with Microsoft Graph
 
 ### Register your application
 
-Register your application to use Microsoft Graph API using one of the following
+Register your application to use the Microsoft Graph API by using one of the following
 supported authentication portals:
 
 * [Microsoft Application Registration Portal](https://apps.dev.microsoft.com) (**Recommended**):
-  Register a new application that authenticates using the v2.0 authentication endpoint. This endpoint autthenticates both personal (Microsoft) and work or school (Azure Active Directory) accounts.
+  Register a new application that authenticates using the v2.0 authentication endpoint. This endpoint authenticates both personal (Microsoft) and work or school (Azure Active Directory) accounts.
 * [Microsoft Azure Active Directory](https://manage.windowsazure.com): Register
   a new application in your tenant's Active Directory to support work or school
   users for your tenant, or multiple tenants.
@@ -30,12 +30,14 @@ supported authentication portals:
 ### Authenticate with the Microsoft Graph service
 
 The Microsoft Graph SDK for PHP does not include any default authentication implementations.
-Instead, the user will want to authenticate with the library of their choice, or against the OAuth
+Instead, you can authenticate with the library of your choice, or against the OAuth
 endpoint directly.
 
-See the [PHP Connect Sample](https://github.com/microsoftgraph/php-rest-connect-sample.php) for connecting with OAuth2.
+To connect with Oauth2, see the [PHP Connect Sample](https://github.com/microsoftgraph/php-rest-connect-sample.php).
 
-### Usage example
+### Call Microsoft Graph
+
+The following is an example that shows how to call Microsoft Graph.
 
 ```php
 use Microsoft\Graph\Graph;
@@ -56,11 +58,11 @@ class UsageExample
 }
 ```
 
-## Development
+## Develop
 
-### Running Tests
+### Run Tests
 
-Run ```vendor/bin/phpunit``` from the base directory
+Run ```vendor/bin/phpunit``` from the base directory.
 
 
 ## Documentation and resources
@@ -71,12 +73,12 @@ Run ```vendor/bin/phpunit``` from the base directory
 
 * [Examples](https://github.com/microsoftgraph/msgraph-sdk-php/wiki/Example-calls)
 
-* [Microsoft Graph API](https://graph.microsoft.io)
+* [Microsoft Graph website](https://graph.microsoft.io)
 
 ## Issues
 
-To view or log issues, see [issues](https://github.com/microsoftgraph/msgraph-sdk-php/issues).
+View or log issues on the [Issues](https://github.com/microsoftgraph/msgraph-sdk-php/issues) tab in the repo.
 
-## License
+## Copyright and license
 
 Copyright (c) Microsoft Corporation. All Rights Reserved. Licensed under the MIT [license](LICENSE).
