@@ -2,6 +2,9 @@
 
 *This SDK is currently in preview, please continue to provide [feedback](https://github.com/microsoftgraph/msgraph-sdk-php/issues/new) as we iterate towards a production supported library.*
 
+[![Build Status](https://travis-ci.org/microsoftgraph/msgraph-sdk-php.svg?branch=master)](https://travis-ci.org/microsoftgraph/msgraph-sdk-php)
+
+
 ## Installation
 The PHP SDK can be installed with Composer:
 ```
