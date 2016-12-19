@@ -3,6 +3,7 @@
 *This SDK is currently in preview. Please continue to provide [feedback](https://github.com/microsoftgraph/msgraph-sdk-php/issues/new) as we iterate towards a production-supported library.*
 
 [![Build Status](https://travis-ci.org/microsoftgraph/msgraph-sdk-php.svg?branch=master)](https://travis-ci.org/microsoftgraph/msgraph-sdk-php)
+[![Latest Stable Version](https://poser.pugx.org/microsoft-graph/msgraph-sdk-php/version)](https://packagist.org/packages/microsoft-graph/msgraph-sdk-php)
 
 
 ## Install the SDK
@@ -33,7 +34,7 @@ The Microsoft Graph SDK for PHP does not include any default authentication impl
 Instead, you can authenticate with the library of your choice, or against the OAuth
 endpoint directly.
 
-To connect with Oauth2, see the [PHP Connect Sample](https://github.com/microsoftgraph/php-rest-connect-sample.php).
+To connect with Oauth2, see the [PHP Connect Sample](https://github.com/microsoftgraph/php-connect-sample).
 
 ### Call Microsoft Graph
 
