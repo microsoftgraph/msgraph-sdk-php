@@ -3,7 +3,7 @@
 *This SDK is currently in preview. Please continue to provide [feedback](https://github.com/microsoftgraph/msgraph-sdk-php/issues/new) as we iterate towards a production-supported library.*
 
 [![Build Status](https://travis-ci.org/microsoftgraph/msgraph-sdk-php.svg?branch=master)](https://travis-ci.org/microsoftgraph/msgraph-sdk-php)
-[![Latest Stable Version](https://poser.pugx.org/microsoft-graph/msgraph-sdk-php/version)](https://packagist.org/packages/microsoft-graph/msgraph-sdk-php)
+[![Latest Stable Version](https://poser.pugx.org/microsoft/microsoft-graph/version)](https://packagist.org/packages/microsoft/microsoft-graph)
 
 
 ## Install the SDK
