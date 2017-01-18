@@ -48,16 +48,19 @@ use Microsoft\Graph\Model;
 
 class UsageExample
 {
-    $accessToken = 'xxx';
+    public function run()
+    {
+        $accessToken = 'xxx';
 
-    $graph = new Graph();
-    $graph->setAccessToken($accessToken);
+        $graph = new Graph();
+        $graph->setAccessToken($accessToken);
 
-    $user = $graph->createRequest("GET", "/me")
-                  ->setReturnType(Model\User::class)
-                  ->execute();
+        $user = $graph->createRequest("GET", "/me")
+                      ->setReturnType(Model\User::class)
+                      ->execute();
 
-    echo "Hello, I am $user->getGivenName() ";
+        echo "Hello, I am $user->getGivenName() ";
+    }
 }
 ```
 
