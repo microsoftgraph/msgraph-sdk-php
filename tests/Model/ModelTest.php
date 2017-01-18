@@ -48,6 +48,7 @@ class ModelTest extends TestCase
         foreach ($this->entities as $entityClass) {
             $entity = new $entityClass();
             $this->assertInstanceOf($entityClass, $entity);
+            $this->assertTrue(is_array($entity->getProperties()));
         }
     }
 

@@ -27,28 +27,6 @@ namespace Microsoft\Graph\Model;
 class WorkbookWorksheetProtection extends Entity
 {
     /**
-    * The array of properties available
-    * to the model
-    *
-    * @var array(string => string)
-    */
-    private $_propDict;
-    
-    /**
-    * Construct a new WorkbookWorksheetProtection
-    *
-    * @param array $propDict A list of properties to set
-    *
-    * @return WorkbookWorksheetProtection
-    */
-    function __construct($propDict = array())
-    {
-        parent::__construct();
-        $this->_propDict = $propDict;
-        return $this;
-    }
-
-    /**
     * Gets the property dictionary of the WorkbookWorksheetProtection
     *
     * @return array The list of properties

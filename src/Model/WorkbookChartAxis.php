@@ -27,28 +27,6 @@ namespace Microsoft\Graph\Model;
 class WorkbookChartAxis extends Entity
 {
     /**
-    * The array of properties available
-    * to the model
-    *
-    * @var array(string => string)
-    */
-    private $_propDict;
-    
-    /**
-    * Construct a new WorkbookChartAxis
-    *
-    * @param array $propDict A list of properties to set
-    *
-    * @return WorkbookChartAxis
-    */
-    function __construct($propDict = array())
-    {
-        parent::__construct();
-        $this->_propDict = $propDict;
-        return $this;
-    }
-
-    /**
     * Gets the property dictionary of the WorkbookChartAxis
     *
     * @return array The list of properties

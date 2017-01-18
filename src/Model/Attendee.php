@@ -26,28 +26,6 @@ namespace Microsoft\Graph\Model;
 class Attendee extends Entity
 {
     /**
-    * The array of properties available 
-    * to the model
-    *
-    * @var array(string => string)
-    */
-    private $_propDict;
-    /**
-    * Attendee constructor
-    *
-    * @param array $propDict List of properties to set
-    * Defaults to an empty array
-    *
-    * @return Attendee
-    */
-    public function __construct($propDict=array())
-    {
-        parent::__construct();
-        $this->_propDict = $propDict;
-        return $this;
-    }
-
-	/**
     * Gets the property dictionary of the Attendee
     *
     * @return array The list of properties
@@ -85,37 +63,6 @@ class Attendee extends Entity
     public function setStatus($val)
     {
         $this->_propDict["status"] = $val;
-         return $this;
-    }
-
-    /**
-    * Gets the type
-    *
-    * @return AttendeeType The type
-    */
-    public function getType()
-    {
-        if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "AttendeeType")) {
-                return $this->_propDict["type"];
-            } else {
-                $this->_propDict["type"] = new AttendeeType($this->_propDict["type"]);
-                return $this->_propDict["type"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the type
-    *
-    * @param AttendeeType $val The value to assign to the type
-    *
-    * @return Attendee The Attendee
-    */
-    public function setType($val)
-    {
-        $this->_propDict["type"] = $val;
          return $this;
     }
 }

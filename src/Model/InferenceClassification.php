@@ -27,28 +27,6 @@ namespace Microsoft\Graph\Model;
 class InferenceClassification extends Entity
 {
     /**
-    * The array of properties available
-    * to the model
-    *
-    * @var array(string => string)
-    */
-    private $_propDict;
-    
-    /**
-    * Construct a new InferenceClassification
-    *
-    * @param array $propDict A list of properties to set
-    *
-    * @return InferenceClassification
-    */
-    function __construct($propDict = array())
-    {
-        parent::__construct();
-        $this->_propDict = $propDict;
-        return $this;
-    }
-
-    /**
     * Gets the property dictionary of the InferenceClassification
     *
     * @return array The list of properties

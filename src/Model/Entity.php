@@ -32,21 +32,17 @@ class Entity
     *
     * @var array(string => string)
     */
-    private $_propDict;
+    protected $_propDict;
     
     /**
     * Construct a new Entity
     *
     * @param array $propDict A list of properties to set
-    *
-    * @return Entity
     */
     function __construct($propDict = array())
     {
-        $this->_propDict = $propDict;
-        return $this;
+		$this->_propDict = $propDict;
     }
-
     /**
     * Gets the property dictionary of the Entity
     *

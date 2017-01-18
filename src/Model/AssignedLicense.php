@@ -26,28 +26,6 @@ namespace Microsoft\Graph\Model;
 class AssignedLicense extends Entity
 {
     /**
-    * The array of properties available 
-    * to the model
-    *
-    * @var array(string => string)
-    */
-    private $_propDict;
-    /**
-    * AssignedLicense constructor
-    *
-    * @param array $propDict List of properties to set
-    * Defaults to an empty array
-    *
-    * @return AssignedLicense
-    */
-    public function __construct($propDict=array())
-    {
-        parent::__construct();
-        $this->_propDict = $propDict;
-        return $this;
-    }
-
-	/**
     * Gets the property dictionary of the AssignedLicense
     *
     * @return array The list of properties

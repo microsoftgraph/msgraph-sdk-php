@@ -26,28 +26,6 @@ namespace Microsoft\Graph\Model;
 class RemoteItem extends Entity
 {
     /**
-    * The array of properties available 
-    * to the model
-    *
-    * @var array(string => string)
-    */
-    private $_propDict;
-    /**
-    * RemoteItem constructor
-    *
-    * @param array $propDict List of properties to set
-    * Defaults to an empty array
-    *
-    * @return RemoteItem
-    */
-    public function __construct($propDict=array())
-    {
-        parent::__construct();
-        $this->_propDict = $propDict;
-        return $this;
-    }
-
-	/**
     * Gets the property dictionary of the RemoteItem
     *
     * @return array The list of properties

@@ -27,28 +27,6 @@ namespace Microsoft\Graph\Model;
 class WorkbookRangeSort extends Entity
 {
     /**
-    * The array of properties available
-    * to the model
-    *
-    * @var array(string => string)
-    */
-    private $_propDict;
-    
-    /**
-    * Construct a new WorkbookRangeSort
-    *
-    * @param array $propDict A list of properties to set
-    *
-    * @return WorkbookRangeSort
-    */
-    function __construct($propDict = array())
-    {
-        parent::__construct();
-        $this->_propDict = $propDict;
-        return $this;
-    }
-
-    /**
     * Gets the property dictionary of the WorkbookRangeSort
     *
     * @return array The list of properties
