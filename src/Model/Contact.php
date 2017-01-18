@@ -27,28 +27,6 @@ namespace Microsoft\Graph\Model;
 class Contact extends Entity
 {
     /**
-    * The array of properties available
-    * to the model
-    *
-    * @var array(string => string)
-    */
-    private $_propDict;
-    
-    /**
-    * Construct a new Contact
-    *
-    * @param array $propDict A list of properties to set
-    *
-    * @return Contact
-    */
-    function __construct($propDict = array())
-    {
-        parent::__construct();
-        $this->_propDict = $propDict;
-        return $this;
-    }
-
-    /**
     * Gets the property dictionary of the Contact
     *
     * @return array The list of properties

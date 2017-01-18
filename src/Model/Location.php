@@ -26,28 +26,6 @@ namespace Microsoft\Graph\Model;
 class Location extends Entity
 {
     /**
-    * The array of properties available 
-    * to the model
-    *
-    * @var array(string => string)
-    */
-    private $_propDict;
-    /**
-    * Location constructor
-    *
-    * @param array $propDict List of properties to set
-    * Defaults to an empty array
-    *
-    * @return Location
-    */
-    public function __construct($propDict=array())
-    {
-        parent::__construct();
-        $this->_propDict = $propDict;
-        return $this;
-    }
-
-	/**
     * Gets the property dictionary of the Location
     *
     * @return array The list of properties
@@ -81,6 +59,33 @@ class Location extends Entity
     public function setDisplayName($val)
     {
         $this->_propDict["display_name"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the locationEmailAddress
+    *
+    * @return string The locationEmailAddress
+    */
+    public function getLocationEmailAddress()
+    {
+        if (array_key_exists("locationEmailAddress", $this->_propDict)) {
+            return $this->_propDict["locationEmailAddress"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the locationEmailAddress
+    *
+    * @param string $val The value of the locationEmailAddress
+    *
+    * @return Location
+    */
+    public function setLocationEmailAddress($val)
+    {
+        $this->_propDict["location_email_address"] = $val;
         return $this;
     }
 

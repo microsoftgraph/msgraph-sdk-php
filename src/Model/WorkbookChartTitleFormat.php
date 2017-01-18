@@ -27,28 +27,6 @@ namespace Microsoft\Graph\Model;
 class WorkbookChartTitleFormat extends Entity
 {
     /**
-    * The array of properties available
-    * to the model
-    *
-    * @var array(string => string)
-    */
-    private $_propDict;
-    
-    /**
-    * Construct a new WorkbookChartTitleFormat
-    *
-    * @param array $propDict A list of properties to set
-    *
-    * @return WorkbookChartTitleFormat
-    */
-    function __construct($propDict = array())
-    {
-        parent::__construct();
-        $this->_propDict = $propDict;
-        return $this;
-    }
-
-    /**
     * Gets the property dictionary of the WorkbookChartTitleFormat
     *
     * @return array The list of properties

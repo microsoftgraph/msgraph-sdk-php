@@ -27,28 +27,6 @@ namespace Microsoft\Graph\Model;
 class SharedDriveItem extends Entity
 {
     /**
-    * The array of properties available
-    * to the model
-    *
-    * @var array(string => string)
-    */
-    private $_propDict;
-    
-    /**
-    * Construct a new SharedDriveItem
-    *
-    * @param array $propDict A list of properties to set
-    *
-    * @return SharedDriveItem
-    */
-    function __construct($propDict = array())
-    {
-        parent::__construct();
-        $this->_propDict = $propDict;
-        return $this;
-    }
-
-    /**
     * Gets the property dictionary of the SharedDriveItem
     *
     * @return array The list of properties

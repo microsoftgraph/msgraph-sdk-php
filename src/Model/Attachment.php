@@ -27,28 +27,6 @@ namespace Microsoft\Graph\Model;
 class Attachment extends Entity
 {
     /**
-    * The array of properties available
-    * to the model
-    *
-    * @var array(string => string)
-    */
-    private $_propDict;
-    
-    /**
-    * Construct a new Attachment
-    *
-    * @param array $propDict A list of properties to set
-    *
-    * @return Attachment
-    */
-    function __construct($propDict = array())
-    {
-        parent::__construct();
-        $this->_propDict = $propDict;
-        return $this;
-    }
-
-    /**
     * Gets the property dictionary of the Attachment
     *
     * @return array The list of properties
