@@ -13,7 +13,7 @@ You can install the PHP SDK with Composer.
 ```
 {
     "require": {
-        "microsoft-graph/msgraph-sdk-php": "0.1.*"
+        "microsoft/microsoft-graph": "0.1.*"
     }
 }
 ```
