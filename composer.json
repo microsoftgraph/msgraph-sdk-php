@@ -21,6 +21,8 @@
 					 "mikey179/vfsStream": "~1"
 				    },
 	"autoload": {
-		"psr-4": { "Microsoft\\Graph\\": "src/" }
+		"psr-4": { "Microsoft\\Graph\\": "src/",
+				   "Microsoft\\Graph\\Test\\": "tests/Functional/"
+			 	}
 	}
 }
