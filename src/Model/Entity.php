@@ -53,7 +53,7 @@ class Entity implements \JsonSerializable
     {
         return $this->_propDict;
     }
-
+    
     /**
     * Gets the id
     *
@@ -67,7 +67,7 @@ class Entity implements \JsonSerializable
             return null;
         }
     }
-
+    
     /**
     * Sets the id
     *
@@ -80,7 +80,29 @@ class Entity implements \JsonSerializable
         $this->_propDict["id"] = $val;
         return $this;
     }
-
+    
+    /**
+    * Gets the ODataType
+    *
+    * @return string The ODataType
+    */
+    public function getODataType()
+    {
+        return $this->_propDict["@odata.type"];
+    }
+    
+    /**
+    * Sets the ODataType
+    *
+    * @param string The ODataType
+    *
+    * @return Entity
+    */
+    public function setODataType($val)
+    {
+        $this->_propDict["@odata.type"] = $val;
+    }
+    
     /**
     * Serializes the object by property array
     *
