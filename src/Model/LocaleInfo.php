@@ -26,16 +26,6 @@ namespace Microsoft\Graph\Model;
 class LocaleInfo extends Entity
 {
     /**
-    * Gets the property dictionary of the LocaleInfo
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-    
-    /**
     * Gets the locale
     *
     * @return string The locale
@@ -61,7 +51,6 @@ class LocaleInfo extends Entity
         $this->_propDict["locale"] = $val;
         return $this;
     }
-    
     /**
     * Gets the displayName
     *

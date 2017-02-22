@@ -25,13 +25,4 @@ namespace Microsoft\Graph\Model;
 */
 class Root extends Entity
 {
-    /**
-    * Gets the property dictionary of the Root
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
 }

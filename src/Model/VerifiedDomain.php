@@ -26,16 +26,6 @@ namespace Microsoft\Graph\Model;
 class VerifiedDomain extends Entity
 {
     /**
-    * Gets the property dictionary of the VerifiedDomain
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-    
-    /**
     * Gets the capabilities
     *
     * @return string The capabilities
@@ -61,7 +51,6 @@ class VerifiedDomain extends Entity
         $this->_propDict["capabilities"] = $val;
         return $this;
     }
-    
     /**
     * Gets the isDefault
     *
@@ -88,7 +77,6 @@ class VerifiedDomain extends Entity
         $this->_propDict["is_default"] = $val;
         return $this;
     }
-    
     /**
     * Gets the isInitial
     *
@@ -115,7 +103,6 @@ class VerifiedDomain extends Entity
         $this->_propDict["is_initial"] = $val;
         return $this;
     }
-    
     /**
     * Gets the name
     *
@@ -142,7 +129,6 @@ class VerifiedDomain extends Entity
         $this->_propDict["name"] = $val;
         return $this;
     }
-    
     /**
     * Gets the type
     *

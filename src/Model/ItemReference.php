@@ -26,16 +26,6 @@ namespace Microsoft\Graph\Model;
 class ItemReference extends Entity
 {
     /**
-    * Gets the property dictionary of the ItemReference
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-    
-    /**
     * Gets the driveId
     *
     * @return string The driveId
@@ -61,7 +51,6 @@ class ItemReference extends Entity
         $this->_propDict["drive_id"] = $val;
         return $this;
     }
-    
     /**
     * Gets the id
     *
@@ -88,7 +77,6 @@ class ItemReference extends Entity
         $this->_propDict["id"] = $val;
         return $this;
     }
-    
     /**
     * Gets the name
     *
@@ -115,7 +103,6 @@ class ItemReference extends Entity
         $this->_propDict["name"] = $val;
         return $this;
     }
-    
     /**
     * Gets the path
     *
@@ -142,7 +129,6 @@ class ItemReference extends Entity
         $this->_propDict["path"] = $val;
         return $this;
     }
-    
     /**
     * Gets the shareId
     *

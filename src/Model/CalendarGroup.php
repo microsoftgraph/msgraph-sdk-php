@@ -27,16 +27,6 @@ namespace Microsoft\Graph\Model;
 class CalendarGroup extends Entity
 {
     /**
-    * Gets the property dictionary of the CalendarGroup
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-
-    /**
     * Gets the name
     *
     * @return string The name
@@ -49,7 +39,7 @@ class CalendarGroup extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the name
     *
@@ -62,7 +52,7 @@ class CalendarGroup extends Entity
         $this->_propDict["name"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the classId
     *
@@ -76,7 +66,7 @@ class CalendarGroup extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the classId
     *
@@ -89,7 +79,7 @@ class CalendarGroup extends Entity
         $this->_propDict["classId"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the changeKey
     *
@@ -103,7 +93,7 @@ class CalendarGroup extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the changeKey
     *
@@ -116,7 +106,7 @@ class CalendarGroup extends Entity
         $this->_propDict["changeKey"] = $val;
         return $this;
     }
-
+    
     /** 
     * Gets the calendars
     *
@@ -130,7 +120,7 @@ class CalendarGroup extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the calendars
     *
@@ -143,5 +133,5 @@ class CalendarGroup extends Entity
 		$this->_propDict["calendars"] = $val;
         return $this;
     }
-
+    
 }

@@ -26,16 +26,6 @@ namespace Microsoft\Graph\Model;
 class Location extends Entity
 {
     /**
-    * Gets the property dictionary of the Location
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-    
-    /**
     * Gets the displayName
     *
     * @return string The displayName
@@ -61,7 +51,6 @@ class Location extends Entity
         $this->_propDict["display_name"] = $val;
         return $this;
     }
-    
     /**
     * Gets the locationEmailAddress
     *

@@ -24,18 +24,8 @@ namespace Microsoft\Graph\Model;
 * @version   Release: 0.1.0
 * @link      https://graph.microsoft.io/
 */
-class EventMessage extends Entity
+class EventMessage extends Message
 {
-    /**
-    * Gets the property dictionary of the EventMessage
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-
     /**
     * Gets the meetingMessageType
     *
@@ -53,7 +43,7 @@ class EventMessage extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the meetingMessageType
     *
@@ -66,7 +56,7 @@ class EventMessage extends Entity
         $this->_propDict["meetingMessageType"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the event
     *
@@ -84,7 +74,7 @@ class EventMessage extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the event
     *
@@ -97,4 +87,5 @@ class EventMessage extends Entity
         $this->_propDict["event"] = $val;
         return $this;
     }
+    
 }

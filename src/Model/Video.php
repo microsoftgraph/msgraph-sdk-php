@@ -26,16 +26,6 @@ namespace Microsoft\Graph\Model;
 class Video extends Entity
 {
     /**
-    * Gets the property dictionary of the Video
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-    
-    /**
     * Gets the bitrate
     *
     * @return int The bitrate
@@ -61,7 +51,6 @@ class Video extends Entity
         $this->_propDict["bitrate"] = $val;
         return $this;
     }
-    
     /**
     * Gets the duration
     *
@@ -88,7 +77,6 @@ class Video extends Entity
         $this->_propDict["duration"] = $val;
         return $this;
     }
-    
     /**
     * Gets the height
     *
@@ -115,7 +103,6 @@ class Video extends Entity
         $this->_propDict["height"] = $val;
         return $this;
     }
-    
     /**
     * Gets the width
     *

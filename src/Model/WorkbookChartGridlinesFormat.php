@@ -27,16 +27,6 @@ namespace Microsoft\Graph\Model;
 class WorkbookChartGridlinesFormat extends Entity
 {
     /**
-    * Gets the property dictionary of the WorkbookChartGridlinesFormat
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-
-    /**
     * Gets the line
     *
     * @return WorkbookChartLineFormat The line
@@ -53,7 +43,7 @@ class WorkbookChartGridlinesFormat extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the line
     *
@@ -66,4 +56,5 @@ class WorkbookChartGridlinesFormat extends Entity
         $this->_propDict["line"] = $val;
         return $this;
     }
+    
 }

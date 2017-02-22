@@ -25,15 +25,6 @@ namespace Microsoft\Graph\Model;
 */
 class RecurrencePattern extends Entity
 {
-    /**
-    * Gets the property dictionary of the RecurrencePattern
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
 
     /**
     * Gets the type
@@ -65,7 +56,6 @@ class RecurrencePattern extends Entity
         $this->_propDict["type"] = $val;
          return $this;
     }
-    
     /**
     * Gets the interval
     *
@@ -92,7 +82,6 @@ class RecurrencePattern extends Entity
         $this->_propDict["interval"] = $val;
         return $this;
     }
-    
     /**
     * Gets the month
     *
@@ -119,7 +108,6 @@ class RecurrencePattern extends Entity
         $this->_propDict["month"] = $val;
         return $this;
     }
-    
     /**
     * Gets the dayOfMonth
     *

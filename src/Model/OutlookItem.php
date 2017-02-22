@@ -27,16 +27,6 @@ namespace Microsoft\Graph\Model;
 class OutlookItem extends Entity
 {
     /**
-    * Gets the property dictionary of the OutlookItem
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-
-    /**
     * Gets the createdDateTime
     *
     * @return \DateTime The createdDateTime
@@ -53,7 +43,7 @@ class OutlookItem extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the createdDateTime
     *
@@ -66,7 +56,7 @@ class OutlookItem extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the lastModifiedDateTime
     *
@@ -84,7 +74,7 @@ class OutlookItem extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the lastModifiedDateTime
     *
@@ -97,7 +87,7 @@ class OutlookItem extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the changeKey
     *
@@ -111,7 +101,7 @@ class OutlookItem extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the changeKey
     *
@@ -124,7 +114,7 @@ class OutlookItem extends Entity
         $this->_propDict["changeKey"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the categories
     *
@@ -138,7 +128,7 @@ class OutlookItem extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the categories
     *
@@ -151,4 +141,5 @@ class OutlookItem extends Entity
         $this->_propDict["categories"] = $val;
         return $this;
     }
+    
 }

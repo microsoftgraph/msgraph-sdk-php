@@ -43,6 +43,7 @@ class Entity implements \JsonSerializable
     {
 		$this->_propDict = $propDict;
     }
+
     /**
     * Gets the property dictionary of the Entity
     *
@@ -79,6 +80,7 @@ class Entity implements \JsonSerializable
         $this->_propDict["id"] = $val;
         return $this;
     }
+
     /**
     * Serializes the object by property array
     *

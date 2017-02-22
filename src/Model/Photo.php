@@ -26,16 +26,6 @@ namespace Microsoft\Graph\Model;
 class Photo extends Entity
 {
     /**
-    * Gets the property dictionary of the Photo
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-    
-    /**
     * Gets the cameraMake
     *
     * @return string The cameraMake
@@ -61,7 +51,6 @@ class Photo extends Entity
         $this->_propDict["camera_make"] = $val;
         return $this;
     }
-    
     /**
     * Gets the cameraModel
     *
@@ -88,7 +77,6 @@ class Photo extends Entity
         $this->_propDict["camera_model"] = $val;
         return $this;
     }
-    
     /**
     * Gets the exposureDenominator
     *
@@ -115,7 +103,6 @@ class Photo extends Entity
         $this->_propDict["exposure_denominator"] = $val;
         return $this;
     }
-    
     /**
     * Gets the exposureNumerator
     *
@@ -142,7 +129,6 @@ class Photo extends Entity
         $this->_propDict["exposure_numerator"] = $val;
         return $this;
     }
-    
     /**
     * Gets the focalLength
     *
@@ -169,7 +155,6 @@ class Photo extends Entity
         $this->_propDict["focal_length"] = $val;
         return $this;
     }
-    
     /**
     * Gets the fNumber
     *
@@ -227,7 +212,6 @@ class Photo extends Entity
         $this->_propDict["takenDateTime"] = $val;
          return $this;
     }
-    
     /**
     * Gets the iso
     *

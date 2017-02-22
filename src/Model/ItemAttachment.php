@@ -24,18 +24,8 @@ namespace Microsoft\Graph\Model;
 * @version   Release: 0.1.0
 * @link      https://graph.microsoft.io/
 */
-class ItemAttachment extends Entity
+class ItemAttachment extends Attachment
 {
-    /**
-    * Gets the property dictionary of the ItemAttachment
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-
     /**
     * Gets the item
     *
@@ -53,7 +43,7 @@ class ItemAttachment extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the item
     *
@@ -66,4 +56,5 @@ class ItemAttachment extends Entity
         $this->_propDict["item"] = $val;
         return $this;
     }
+    
 }

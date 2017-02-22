@@ -27,16 +27,6 @@ namespace Microsoft\Graph\Model;
 class Workbook extends Entity
 {
     /**
-    * Gets the property dictionary of the Workbook
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-
-    /**
     * Gets the application
     *
     * @return WorkbookApplication The application
@@ -53,7 +43,7 @@ class Workbook extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the application
     *
@@ -66,7 +56,7 @@ class Workbook extends Entity
         $this->_propDict["application"] = $val;
         return $this;
     }
-
+    
     /** 
     * Gets the names
     *
@@ -80,7 +70,7 @@ class Workbook extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the names
     *
@@ -93,8 +83,7 @@ class Workbook extends Entity
 		$this->_propDict["names"] = $val;
         return $this;
     }
-
-
+    
     /** 
     * Gets the tables
     *
@@ -108,7 +97,7 @@ class Workbook extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the tables
     *
@@ -121,8 +110,7 @@ class Workbook extends Entity
 		$this->_propDict["tables"] = $val;
         return $this;
     }
-
-
+    
     /** 
     * Gets the worksheets
     *
@@ -136,7 +124,7 @@ class Workbook extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the worksheets
     *
@@ -149,8 +137,7 @@ class Workbook extends Entity
 		$this->_propDict["worksheets"] = $val;
         return $this;
     }
-
-
+    
     /**
     * Gets the functions
     *
@@ -168,7 +155,7 @@ class Workbook extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the functions
     *
@@ -181,4 +168,5 @@ class Workbook extends Entity
         $this->_propDict["functions"] = $val;
         return $this;
     }
+    
 }

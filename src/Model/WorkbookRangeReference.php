@@ -26,16 +26,6 @@ namespace Microsoft\Graph\Model;
 class WorkbookRangeReference extends Entity
 {
     /**
-    * Gets the property dictionary of the WorkbookRangeReference
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-    
-    /**
     * Gets the address
     *
     * @return string The address

@@ -24,18 +24,8 @@ namespace Microsoft\Graph\Model;
 * @version   Release: 0.1.0
 * @link      https://graph.microsoft.io/
 */
-class DirectoryRole extends Entity
+class DirectoryRole extends DirectoryObject
 {
-    /**
-    * Gets the property dictionary of the DirectoryRole
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-
     /**
     * Gets the description
     *
@@ -49,7 +39,7 @@ class DirectoryRole extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the description
     *
@@ -62,7 +52,7 @@ class DirectoryRole extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the displayName
     *
@@ -76,7 +66,7 @@ class DirectoryRole extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the displayName
     *
@@ -89,7 +79,7 @@ class DirectoryRole extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the roleTemplateId
     *
@@ -103,7 +93,7 @@ class DirectoryRole extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the roleTemplateId
     *
@@ -116,7 +106,7 @@ class DirectoryRole extends Entity
         $this->_propDict["roleTemplateId"] = $val;
         return $this;
     }
-
+    
     /** 
     * Gets the members
     *
@@ -130,7 +120,7 @@ class DirectoryRole extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the members
     *
@@ -143,5 +133,5 @@ class DirectoryRole extends Entity
 		$this->_propDict["members"] = $val;
         return $this;
     }
-
+    
 }

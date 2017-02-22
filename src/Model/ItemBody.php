@@ -25,15 +25,6 @@ namespace Microsoft\Graph\Model;
 */
 class ItemBody extends Entity
 {
-    /**
-    * Gets the property dictionary of the ItemBody
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
 
     /**
     * Gets the contentType
@@ -65,7 +56,6 @@ class ItemBody extends Entity
         $this->_propDict["contentType"] = $val;
          return $this;
     }
-    
     /**
     * Gets the content
     *

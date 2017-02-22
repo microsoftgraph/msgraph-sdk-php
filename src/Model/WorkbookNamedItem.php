@@ -27,16 +27,6 @@ namespace Microsoft\Graph\Model;
 class WorkbookNamedItem extends Entity
 {
     /**
-    * Gets the property dictionary of the WorkbookNamedItem
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-
-    /**
     * Gets the name
     *
     * @return string The name
@@ -49,7 +39,7 @@ class WorkbookNamedItem extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the name
     *
@@ -62,7 +52,7 @@ class WorkbookNamedItem extends Entity
         $this->_propDict["name"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the type
     *
@@ -76,7 +66,7 @@ class WorkbookNamedItem extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the type
     *
@@ -89,7 +79,7 @@ class WorkbookNamedItem extends Entity
         $this->_propDict["type"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the value
     *
@@ -103,7 +93,7 @@ class WorkbookNamedItem extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the value
     *
@@ -116,7 +106,7 @@ class WorkbookNamedItem extends Entity
         $this->_propDict["value"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the visible
     *
@@ -130,7 +120,7 @@ class WorkbookNamedItem extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the visible
     *
@@ -143,4 +133,5 @@ class WorkbookNamedItem extends Entity
         $this->_propDict["visible"] = boolval($val);
         return $this;
     }
+    
 }

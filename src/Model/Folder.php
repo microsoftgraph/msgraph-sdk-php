@@ -26,16 +26,6 @@ namespace Microsoft\Graph\Model;
 class Folder extends Entity
 {
     /**
-    * Gets the property dictionary of the Folder
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-    
-    /**
     * Gets the childCount
     *
     * @return int The childCount

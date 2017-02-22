@@ -26,16 +26,6 @@ namespace Microsoft\Graph\Model;
 */
 class ConversationThread extends Entity
 {
-    /**
-    * Gets the property dictionary of the ConversationThread
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-
     /** 
     * Gets the toRecipients
     *
@@ -49,7 +39,7 @@ class ConversationThread extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the toRecipients
     *
@@ -62,8 +52,7 @@ class ConversationThread extends Entity
 		$this->_propDict["toRecipients"] = $val;
         return $this;
     }
-
-
+    
     /**
     * Gets the topic
     *
@@ -77,7 +66,7 @@ class ConversationThread extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the topic
     *
@@ -90,7 +79,7 @@ class ConversationThread extends Entity
         $this->_propDict["topic"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the hasAttachments
     *
@@ -104,7 +93,7 @@ class ConversationThread extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the hasAttachments
     *
@@ -117,7 +106,7 @@ class ConversationThread extends Entity
         $this->_propDict["hasAttachments"] = boolval($val);
         return $this;
     }
-
+    
     /**
     * Gets the lastDeliveredDateTime
     *
@@ -135,7 +124,7 @@ class ConversationThread extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the lastDeliveredDateTime
     *
@@ -148,7 +137,7 @@ class ConversationThread extends Entity
         $this->_propDict["lastDeliveredDateTime"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the uniqueSenders
     *
@@ -162,7 +151,7 @@ class ConversationThread extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the uniqueSenders
     *
@@ -175,7 +164,7 @@ class ConversationThread extends Entity
         $this->_propDict["uniqueSenders"] = $val;
         return $this;
     }
-
+    
     /** 
     * Gets the ccRecipients
     *
@@ -189,7 +178,7 @@ class ConversationThread extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the ccRecipients
     *
@@ -202,8 +191,7 @@ class ConversationThread extends Entity
 		$this->_propDict["ccRecipients"] = $val;
         return $this;
     }
-
-
+    
     /**
     * Gets the preview
     *
@@ -217,7 +205,7 @@ class ConversationThread extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the preview
     *
@@ -230,7 +218,7 @@ class ConversationThread extends Entity
         $this->_propDict["preview"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the isLocked
     *
@@ -244,7 +232,7 @@ class ConversationThread extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the isLocked
     *
@@ -257,7 +245,7 @@ class ConversationThread extends Entity
         $this->_propDict["isLocked"] = boolval($val);
         return $this;
     }
-
+    
     /** 
     * Gets the posts
     *
@@ -271,7 +259,7 @@ class ConversationThread extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the posts
     *
@@ -284,5 +272,5 @@ class ConversationThread extends Entity
 		$this->_propDict["posts"] = $val;
         return $this;
     }
-
+    
 }

@@ -26,16 +26,6 @@ namespace Microsoft\Graph\Model;
 */
 class InferenceClassification extends Entity
 {
-    /**
-    * Gets the property dictionary of the InferenceClassification
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-
     /** 
     * Gets the overrides
     *
@@ -49,7 +39,7 @@ class InferenceClassification extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the overrides
     *
@@ -62,5 +52,5 @@ class InferenceClassification extends Entity
 		$this->_propDict["overrides"] = $val;
         return $this;
     }
-
+    
 }

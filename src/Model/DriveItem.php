@@ -27,16 +27,6 @@ namespace Microsoft\Graph\Model;
 class DriveItem extends Entity
 {
     /**
-    * Gets the property dictionary of the DriveItem
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-
-    /**
     * Gets the createdBy
     *
     * @return IdentitySet The createdBy
@@ -53,7 +43,7 @@ class DriveItem extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the createdBy
     *
@@ -66,7 +56,7 @@ class DriveItem extends Entity
         $this->_propDict["createdBy"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the createdDateTime
     *
@@ -84,7 +74,7 @@ class DriveItem extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the createdDateTime
     *
@@ -97,7 +87,7 @@ class DriveItem extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the description
     *
@@ -111,7 +101,7 @@ class DriveItem extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the description
     *
@@ -124,7 +114,7 @@ class DriveItem extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the eTag
     *
@@ -138,7 +128,7 @@ class DriveItem extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the eTag
     *
@@ -151,7 +141,7 @@ class DriveItem extends Entity
         $this->_propDict["eTag"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the lastModifiedBy
     *
@@ -169,7 +159,7 @@ class DriveItem extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the lastModifiedBy
     *
@@ -182,7 +172,7 @@ class DriveItem extends Entity
         $this->_propDict["lastModifiedBy"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the lastModifiedDateTime
     *
@@ -200,7 +190,7 @@ class DriveItem extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the lastModifiedDateTime
     *
@@ -213,7 +203,7 @@ class DriveItem extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the name
     *
@@ -227,7 +217,7 @@ class DriveItem extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the name
     *
@@ -240,7 +230,7 @@ class DriveItem extends Entity
         $this->_propDict["name"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the webUrl
     *
@@ -254,7 +244,7 @@ class DriveItem extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the webUrl
     *
@@ -267,7 +257,7 @@ class DriveItem extends Entity
         $this->_propDict["webUrl"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the audio
     *
@@ -285,7 +275,7 @@ class DriveItem extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the audio
     *
@@ -298,7 +288,7 @@ class DriveItem extends Entity
         $this->_propDict["audio"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the content
     *
@@ -316,7 +306,7 @@ class DriveItem extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the content
     *
@@ -329,7 +319,7 @@ class DriveItem extends Entity
         $this->_propDict["content"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the cTag
     *
@@ -343,7 +333,7 @@ class DriveItem extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the cTag
     *
@@ -356,7 +346,7 @@ class DriveItem extends Entity
         $this->_propDict["cTag"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the deleted
     *
@@ -374,7 +364,7 @@ class DriveItem extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the deleted
     *
@@ -387,7 +377,7 @@ class DriveItem extends Entity
         $this->_propDict["deleted"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the file
     *
@@ -405,7 +395,7 @@ class DriveItem extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the file
     *
@@ -418,7 +408,7 @@ class DriveItem extends Entity
         $this->_propDict["file"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the fileSystemInfo
     *
@@ -436,7 +426,7 @@ class DriveItem extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the fileSystemInfo
     *
@@ -449,7 +439,7 @@ class DriveItem extends Entity
         $this->_propDict["fileSystemInfo"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the folder
     *
@@ -467,7 +457,7 @@ class DriveItem extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the folder
     *
@@ -480,7 +470,7 @@ class DriveItem extends Entity
         $this->_propDict["folder"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the image
     *
@@ -498,7 +488,7 @@ class DriveItem extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the image
     *
@@ -511,7 +501,7 @@ class DriveItem extends Entity
         $this->_propDict["image"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the location
     *
@@ -529,7 +519,7 @@ class DriveItem extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the location
     *
@@ -542,7 +532,7 @@ class DriveItem extends Entity
         $this->_propDict["location"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the package
     *
@@ -560,7 +550,7 @@ class DriveItem extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the package
     *
@@ -573,7 +563,7 @@ class DriveItem extends Entity
         $this->_propDict["package"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the parentReference
     *
@@ -591,7 +581,7 @@ class DriveItem extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the parentReference
     *
@@ -604,7 +594,7 @@ class DriveItem extends Entity
         $this->_propDict["parentReference"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the photo
     *
@@ -622,7 +612,7 @@ class DriveItem extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the photo
     *
@@ -635,7 +625,7 @@ class DriveItem extends Entity
         $this->_propDict["photo"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the remoteItem
     *
@@ -653,7 +643,7 @@ class DriveItem extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the remoteItem
     *
@@ -666,7 +656,7 @@ class DriveItem extends Entity
         $this->_propDict["remoteItem"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the root
     *
@@ -684,7 +674,7 @@ class DriveItem extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the root
     *
@@ -697,7 +687,7 @@ class DriveItem extends Entity
         $this->_propDict["root"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the searchResult
     *
@@ -715,7 +705,7 @@ class DriveItem extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the searchResult
     *
@@ -728,7 +718,7 @@ class DriveItem extends Entity
         $this->_propDict["searchResult"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the shared
     *
@@ -746,7 +736,7 @@ class DriveItem extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the shared
     *
@@ -759,7 +749,7 @@ class DriveItem extends Entity
         $this->_propDict["shared"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the sharepointIds
     *
@@ -777,7 +767,7 @@ class DriveItem extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the sharepointIds
     *
@@ -790,7 +780,7 @@ class DriveItem extends Entity
         $this->_propDict["sharepointIds"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the size
     *
@@ -804,7 +794,7 @@ class DriveItem extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the size
     *
@@ -817,7 +807,7 @@ class DriveItem extends Entity
         $this->_propDict["size"] = intval($val);
         return $this;
     }
-
+    
     /**
     * Gets the specialFolder
     *
@@ -835,7 +825,7 @@ class DriveItem extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the specialFolder
     *
@@ -848,7 +838,7 @@ class DriveItem extends Entity
         $this->_propDict["specialFolder"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the video
     *
@@ -866,7 +856,7 @@ class DriveItem extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the video
     *
@@ -879,7 +869,7 @@ class DriveItem extends Entity
         $this->_propDict["video"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the webDavUrl
     *
@@ -893,7 +883,7 @@ class DriveItem extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the webDavUrl
     *
@@ -906,7 +896,7 @@ class DriveItem extends Entity
         $this->_propDict["webDavUrl"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the createdByUser
     *
@@ -924,7 +914,7 @@ class DriveItem extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the createdByUser
     *
@@ -937,7 +927,7 @@ class DriveItem extends Entity
         $this->_propDict["createdByUser"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the workbook
     *
@@ -955,7 +945,7 @@ class DriveItem extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the workbook
     *
@@ -968,7 +958,7 @@ class DriveItem extends Entity
         $this->_propDict["workbook"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the lastModifiedByUser
     *
@@ -986,7 +976,7 @@ class DriveItem extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the lastModifiedByUser
     *
@@ -999,7 +989,7 @@ class DriveItem extends Entity
         $this->_propDict["lastModifiedByUser"] = $val;
         return $this;
     }
-
+    
     /** 
     * Gets the children
     *
@@ -1013,7 +1003,7 @@ class DriveItem extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the children
     *
@@ -1026,8 +1016,7 @@ class DriveItem extends Entity
 		$this->_propDict["children"] = $val;
         return $this;
     }
-
-
+    
     /** 
     * Gets the permissions
     *
@@ -1041,7 +1030,7 @@ class DriveItem extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the permissions
     *
@@ -1054,8 +1043,7 @@ class DriveItem extends Entity
 		$this->_propDict["permissions"] = $val;
         return $this;
     }
-
-
+    
     /** 
     * Gets the thumbnails
     *
@@ -1069,7 +1057,7 @@ class DriveItem extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the thumbnails
     *
@@ -1082,5 +1070,5 @@ class DriveItem extends Entity
 		$this->_propDict["thumbnails"] = $val;
         return $this;
     }
-
+    
 }

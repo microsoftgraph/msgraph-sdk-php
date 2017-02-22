@@ -26,16 +26,6 @@ namespace Microsoft\Graph\Model;
 class SpecialFolder extends Entity
 {
     /**
-    * Gets the property dictionary of the SpecialFolder
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-    
-    /**
     * Gets the name
     *
     * @return string The name

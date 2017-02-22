@@ -24,18 +24,8 @@ namespace Microsoft\Graph\Model;
 * @version   Release: 0.1.0
 * @link      https://graph.microsoft.io/
 */
-class Message extends Entity
+class Message extends OutlookItem
 {
-    /**
-    * Gets the property dictionary of the Message
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-
     /**
     * Gets the receivedDateTime
     *
@@ -53,7 +43,7 @@ class Message extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the receivedDateTime
     *
@@ -66,7 +56,7 @@ class Message extends Entity
         $this->_propDict["receivedDateTime"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the sentDateTime
     *
@@ -84,7 +74,7 @@ class Message extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the sentDateTime
     *
@@ -97,7 +87,7 @@ class Message extends Entity
         $this->_propDict["sentDateTime"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the hasAttachments
     *
@@ -111,7 +101,7 @@ class Message extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the hasAttachments
     *
@@ -124,7 +114,7 @@ class Message extends Entity
         $this->_propDict["hasAttachments"] = boolval($val);
         return $this;
     }
-
+    
     /**
     * Gets the internetMessageId
     *
@@ -138,7 +128,7 @@ class Message extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the internetMessageId
     *
@@ -151,7 +141,7 @@ class Message extends Entity
         $this->_propDict["internetMessageId"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the subject
     *
@@ -165,7 +155,7 @@ class Message extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the subject
     *
@@ -178,7 +168,7 @@ class Message extends Entity
         $this->_propDict["subject"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the body
     *
@@ -196,7 +186,7 @@ class Message extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the body
     *
@@ -209,7 +199,7 @@ class Message extends Entity
         $this->_propDict["body"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the bodyPreview
     *
@@ -223,7 +213,7 @@ class Message extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the bodyPreview
     *
@@ -236,7 +226,7 @@ class Message extends Entity
         $this->_propDict["bodyPreview"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the importance
     *
@@ -254,7 +244,7 @@ class Message extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the importance
     *
@@ -267,7 +257,7 @@ class Message extends Entity
         $this->_propDict["importance"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the parentFolderId
     *
@@ -281,7 +271,7 @@ class Message extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the parentFolderId
     *
@@ -294,7 +284,7 @@ class Message extends Entity
         $this->_propDict["parentFolderId"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the sender
     *
@@ -312,7 +302,7 @@ class Message extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the sender
     *
@@ -325,7 +315,7 @@ class Message extends Entity
         $this->_propDict["sender"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the from
     *
@@ -343,7 +333,7 @@ class Message extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the from
     *
@@ -356,7 +346,7 @@ class Message extends Entity
         $this->_propDict["from"] = $val;
         return $this;
     }
-
+    
     /** 
     * Gets the toRecipients
     *
@@ -370,7 +360,7 @@ class Message extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the toRecipients
     *
@@ -383,8 +373,7 @@ class Message extends Entity
 		$this->_propDict["toRecipients"] = $val;
         return $this;
     }
-
-
+    
     /** 
     * Gets the ccRecipients
     *
@@ -398,7 +387,7 @@ class Message extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the ccRecipients
     *
@@ -411,8 +400,7 @@ class Message extends Entity
 		$this->_propDict["ccRecipients"] = $val;
         return $this;
     }
-
-
+    
     /** 
     * Gets the bccRecipients
     *
@@ -426,7 +414,7 @@ class Message extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the bccRecipients
     *
@@ -439,8 +427,7 @@ class Message extends Entity
 		$this->_propDict["bccRecipients"] = $val;
         return $this;
     }
-
-
+    
     /** 
     * Gets the replyTo
     *
@@ -454,7 +441,7 @@ class Message extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the replyTo
     *
@@ -467,8 +454,7 @@ class Message extends Entity
 		$this->_propDict["replyTo"] = $val;
         return $this;
     }
-
-
+    
     /**
     * Gets the conversationId
     *
@@ -482,7 +468,7 @@ class Message extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the conversationId
     *
@@ -495,7 +481,7 @@ class Message extends Entity
         $this->_propDict["conversationId"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the uniqueBody
     *
@@ -513,7 +499,7 @@ class Message extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the uniqueBody
     *
@@ -526,7 +512,7 @@ class Message extends Entity
         $this->_propDict["uniqueBody"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the isDeliveryReceiptRequested
     *
@@ -540,7 +526,7 @@ class Message extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the isDeliveryReceiptRequested
     *
@@ -553,7 +539,7 @@ class Message extends Entity
         $this->_propDict["isDeliveryReceiptRequested"] = boolval($val);
         return $this;
     }
-
+    
     /**
     * Gets the isReadReceiptRequested
     *
@@ -567,7 +553,7 @@ class Message extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the isReadReceiptRequested
     *
@@ -580,7 +566,7 @@ class Message extends Entity
         $this->_propDict["isReadReceiptRequested"] = boolval($val);
         return $this;
     }
-
+    
     /**
     * Gets the isRead
     *
@@ -594,7 +580,7 @@ class Message extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the isRead
     *
@@ -607,7 +593,7 @@ class Message extends Entity
         $this->_propDict["isRead"] = boolval($val);
         return $this;
     }
-
+    
     /**
     * Gets the isDraft
     *
@@ -621,7 +607,7 @@ class Message extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the isDraft
     *
@@ -634,7 +620,7 @@ class Message extends Entity
         $this->_propDict["isDraft"] = boolval($val);
         return $this;
     }
-
+    
     /**
     * Gets the webLink
     *
@@ -648,7 +634,7 @@ class Message extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the webLink
     *
@@ -661,7 +647,7 @@ class Message extends Entity
         $this->_propDict["webLink"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the inferenceClassification
     *
@@ -679,7 +665,7 @@ class Message extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the inferenceClassification
     *
@@ -692,7 +678,7 @@ class Message extends Entity
         $this->_propDict["inferenceClassification"] = $val;
         return $this;
     }
-
+    
     /** 
     * Gets the attachments
     *
@@ -706,7 +692,7 @@ class Message extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the attachments
     *
@@ -719,8 +705,7 @@ class Message extends Entity
 		$this->_propDict["attachments"] = $val;
         return $this;
     }
-
-
+    
     /** 
     * Gets the extensions
     *
@@ -734,7 +719,7 @@ class Message extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the extensions
     *
@@ -747,8 +732,7 @@ class Message extends Entity
 		$this->_propDict["extensions"] = $val;
         return $this;
     }
-
-
+    
     /** 
     * Gets the singleValueExtendedProperties
     *
@@ -762,7 +746,7 @@ class Message extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the singleValueExtendedProperties
     *
@@ -775,8 +759,7 @@ class Message extends Entity
 		$this->_propDict["singleValueExtendedProperties"] = $val;
         return $this;
     }
-
-
+    
     /** 
     * Gets the multiValueExtendedProperties
     *
@@ -790,7 +773,7 @@ class Message extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the multiValueExtendedProperties
     *
@@ -803,5 +786,5 @@ class Message extends Entity
 		$this->_propDict["multiValueExtendedProperties"] = $val;
         return $this;
     }
-
+    
 }

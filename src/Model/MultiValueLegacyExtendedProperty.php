@@ -27,16 +27,6 @@ namespace Microsoft\Graph\Model;
 class MultiValueLegacyExtendedProperty extends Entity
 {
     /**
-    * Gets the property dictionary of the MultiValueLegacyExtendedProperty
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-
-    /**
     * Gets the value
     *
     * @return string The value
@@ -49,7 +39,7 @@ class MultiValueLegacyExtendedProperty extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the value
     *
@@ -62,4 +52,5 @@ class MultiValueLegacyExtendedProperty extends Entity
         $this->_propDict["value"] = $val;
         return $this;
     }
+    
 }

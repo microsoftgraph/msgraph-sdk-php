@@ -27,16 +27,6 @@ namespace Microsoft\Graph\Model;
 class Attachment extends Entity
 {
     /**
-    * Gets the property dictionary of the Attachment
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-
-    /**
     * Gets the lastModifiedDateTime
     *
     * @return \DateTime The lastModifiedDateTime
@@ -53,7 +43,7 @@ class Attachment extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the lastModifiedDateTime
     *
@@ -66,7 +56,7 @@ class Attachment extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the name
     *
@@ -80,7 +70,7 @@ class Attachment extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the name
     *
@@ -93,7 +83,7 @@ class Attachment extends Entity
         $this->_propDict["name"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the contentType
     *
@@ -107,7 +97,7 @@ class Attachment extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the contentType
     *
@@ -120,7 +110,7 @@ class Attachment extends Entity
         $this->_propDict["contentType"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the size
     *
@@ -134,7 +124,7 @@ class Attachment extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the size
     *
@@ -147,7 +137,7 @@ class Attachment extends Entity
         $this->_propDict["size"] = intval($val);
         return $this;
     }
-
+    
     /**
     * Gets the isInline
     *
@@ -161,7 +151,7 @@ class Attachment extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the isInline
     *
@@ -174,4 +164,5 @@ class Attachment extends Entity
         $this->_propDict["isInline"] = boolval($val);
         return $this;
     }
+    
 }

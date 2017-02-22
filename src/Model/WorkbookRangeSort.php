@@ -26,13 +26,4 @@ namespace Microsoft\Graph\Model;
 */
 class WorkbookRangeSort extends Entity
 {
-    /**
-    * Gets the property dictionary of the WorkbookRangeSort
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
 }

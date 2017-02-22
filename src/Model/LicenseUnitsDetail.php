@@ -26,16 +26,6 @@ namespace Microsoft\Graph\Model;
 class LicenseUnitsDetail extends Entity
 {
     /**
-    * Gets the property dictionary of the LicenseUnitsDetail
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-    
-    /**
     * Gets the enabled
     *
     * @return int The enabled
@@ -61,7 +51,6 @@ class LicenseUnitsDetail extends Entity
         $this->_propDict["enabled"] = $val;
         return $this;
     }
-    
     /**
     * Gets the suspended
     *
@@ -88,7 +77,6 @@ class LicenseUnitsDetail extends Entity
         $this->_propDict["suspended"] = $val;
         return $this;
     }
-    
     /**
     * Gets the warning
     *

@@ -25,15 +25,6 @@ namespace Microsoft\Graph\Model;
 */
 class AssignedPlan extends Entity
 {
-    /**
-    * Gets the property dictionary of the AssignedPlan
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
 
     /**
     * Gets the assignedDateTime
@@ -65,7 +56,6 @@ class AssignedPlan extends Entity
         $this->_propDict["assignedDateTime"] = $val;
          return $this;
     }
-    
     /**
     * Gets the capabilityStatus
     *
@@ -92,7 +82,6 @@ class AssignedPlan extends Entity
         $this->_propDict["capability_status"] = $val;
         return $this;
     }
-    
     /**
     * Gets the service
     *
@@ -119,7 +108,6 @@ class AssignedPlan extends Entity
         $this->_propDict["service"] = $val;
         return $this;
     }
-    
     /**
     * Gets the servicePlanId
     *

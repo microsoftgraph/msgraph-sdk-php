@@ -25,15 +25,6 @@ namespace Microsoft\Graph\Model;
 */
 class Recipient extends Entity
 {
-    /**
-    * Gets the property dictionary of the Recipient
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
 
     /**
     * Gets the emailAddress

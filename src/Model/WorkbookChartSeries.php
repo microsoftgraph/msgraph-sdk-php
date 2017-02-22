@@ -27,16 +27,6 @@ namespace Microsoft\Graph\Model;
 class WorkbookChartSeries extends Entity
 {
     /**
-    * Gets the property dictionary of the WorkbookChartSeries
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-
-    /**
     * Gets the name
     *
     * @return string The name
@@ -49,7 +39,7 @@ class WorkbookChartSeries extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the name
     *
@@ -62,7 +52,7 @@ class WorkbookChartSeries extends Entity
         $this->_propDict["name"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the format
     *
@@ -80,7 +70,7 @@ class WorkbookChartSeries extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the format
     *
@@ -93,7 +83,7 @@ class WorkbookChartSeries extends Entity
         $this->_propDict["format"] = $val;
         return $this;
     }
-
+    
     /** 
     * Gets the points
     *
@@ -107,7 +97,7 @@ class WorkbookChartSeries extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the points
     *
@@ -120,5 +110,5 @@ class WorkbookChartSeries extends Entity
 		$this->_propDict["points"] = $val;
         return $this;
     }
-
+    
 }

@@ -27,16 +27,6 @@ namespace Microsoft\Graph\Model;
 class Drive extends Entity
 {
     /**
-    * Gets the property dictionary of the Drive
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-
-    /**
     * Gets the driveType
     *
     * @return string The driveType
@@ -49,7 +39,7 @@ class Drive extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the driveType
     *
@@ -62,7 +52,7 @@ class Drive extends Entity
         $this->_propDict["driveType"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the owner
     *
@@ -80,7 +70,7 @@ class Drive extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the owner
     *
@@ -93,7 +83,7 @@ class Drive extends Entity
         $this->_propDict["owner"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the quota
     *
@@ -111,7 +101,7 @@ class Drive extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the quota
     *
@@ -124,7 +114,7 @@ class Drive extends Entity
         $this->_propDict["quota"] = $val;
         return $this;
     }
-
+    
     /** 
     * Gets the items
     *
@@ -138,7 +128,7 @@ class Drive extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the items
     *
@@ -151,8 +141,7 @@ class Drive extends Entity
 		$this->_propDict["items"] = $val;
         return $this;
     }
-
-
+    
     /** 
     * Gets the special
     *
@@ -166,7 +155,7 @@ class Drive extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the special
     *
@@ -179,8 +168,7 @@ class Drive extends Entity
 		$this->_propDict["special"] = $val;
         return $this;
     }
-
-
+    
     /**
     * Gets the root
     *
@@ -198,7 +186,7 @@ class Drive extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the root
     *
@@ -211,4 +199,5 @@ class Drive extends Entity
         $this->_propDict["root"] = $val;
         return $this;
     }
+    
 }

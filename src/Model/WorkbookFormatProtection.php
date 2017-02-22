@@ -27,16 +27,6 @@ namespace Microsoft\Graph\Model;
 class WorkbookFormatProtection extends Entity
 {
     /**
-    * Gets the property dictionary of the WorkbookFormatProtection
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-
-    /**
     * Gets the formulaHidden
     *
     * @return bool The formulaHidden
@@ -49,7 +39,7 @@ class WorkbookFormatProtection extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the formulaHidden
     *
@@ -62,7 +52,7 @@ class WorkbookFormatProtection extends Entity
         $this->_propDict["formulaHidden"] = boolval($val);
         return $this;
     }
-
+    
     /**
     * Gets the locked
     *
@@ -76,7 +66,7 @@ class WorkbookFormatProtection extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the locked
     *
@@ -89,4 +79,5 @@ class WorkbookFormatProtection extends Entity
         $this->_propDict["locked"] = boolval($val);
         return $this;
     }
+    
 }
