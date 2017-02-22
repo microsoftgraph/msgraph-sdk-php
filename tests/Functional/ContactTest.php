@@ -43,7 +43,7 @@ class ContactTest extends TestCase
     											)
     							->setReturnType(Model\Contact::class)
     							->execute();
-    							print_r($syncedContact);
+
     	$this->assertNotNull($syncedContact->getSingleValueExtendedProperties());
     }
 }

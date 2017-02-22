@@ -24,7 +24,7 @@ namespace Microsoft\Graph\Model;
 * @version   Release: 0.1.0
 * @link      https://graph.microsoft.io/
 */
-class Entity
+class Entity implements \JsonSerializable
 {
     /**
     * The array of properties available
@@ -78,5 +78,14 @@ class Entity
     {
         $this->_propDict["id"] = $val;
         return $this;
+    }
+    /**
+    * Serializes the object by property array
+    *
+    * @return array The list of properties
+    */
+    public function jsonSerialize()
+    {
+        return $this->getProperties();
     }
 }
