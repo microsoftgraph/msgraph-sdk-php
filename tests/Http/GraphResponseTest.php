@@ -36,17 +36,13 @@ class GraphResponseTest extends TestCase
 
     }
 
-    public function testGetSkipToken()
+    public function testGetNextLink()
     {
-        //Temporarily make getSkipToken() public
-        $reflectionMethod = new ReflectionMethod('Microsoft\Graph\Http\GraphResponse', 'getSkipToken');
-        $reflectionMethod->setAccessible(true);
-
-        $body = json_encode(array('@odata.nextLink' => 'https://url.com/resource?$skiptoken=10'));
+        $body = json_encode(array('@odata.nextLink' => 'https://url.com/resource?$top=4&skip=4'));
         $response = new GraphResponse($this->request, $body);
 
-        $token = $reflectionMethod->invokeArgs($response, array());
-        $this->assertEquals('10', $token);
+        $nextLink = $response->getNextLink();
+        $this->assertEquals('https://url.com/resource?$top=4&skip=4', $nextLink);
     }
 
     public function testDecodeBody()

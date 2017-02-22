@@ -149,20 +149,16 @@ class GraphResponse
     }
 
     /**
-    * Gets the skip token of a response object from OData
+    * Gets the next link of a response object from OData
+    * If the nextLink is null, there are no more pages
     *
-    * @return string skip token, if provided
+    * @return string nextLink, if provided
     */
-    public function getSkipToken()
+    public function getNextLink()
     {
         if (array_key_exists("@odata.nextLink", $this->getBody())) {
             $nextLink = $this->getBody()['@odata.nextLink'];
-            $url = explode("?", $nextLink)[1];
-            $url = explode("skiptoken=", $url);
-            if (count($url) > 1) {
-                return $url[1];
-            }
-            return null;
+            return $nextLink;
         }
         return null;
     }

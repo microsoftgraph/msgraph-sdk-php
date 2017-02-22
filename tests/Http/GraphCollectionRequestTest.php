@@ -34,24 +34,24 @@ class GraphCollectionRequestTest extends TestCase
         $this->expectException(PHPUnit_Framework_Error::class);
 
         //First page
-        $this->collectionRequest->setPageCallInfo(false);
+        $this->collectionRequest->setPageCallInfo();
         $response = $this->collectionRequest->execute($this->client);
         $this->collectionRequest->processPageCallReturn($response);
 
         //Last page
-        $this->collectionRequest->setPageCallInfo(false);
+        $this->collectionRequest->setPageCallInfo();
         $response = $this->collectionRequest->execute($this->client);
         $result1 = $this->collectionRequest->processPageCallReturn($response);
 
         $this->assertTrue($this->collectionRequest->isEnd());
 
         //Expect error
-        $this->collectionRequest->setPageCallInfo(false);
+        $this->collectionRequest->setPageCallInfo();
     }
 
     public function testProcessPageCallReturn()
     {
-        $this->collectionRequest->setPageCallInfo(false);
+        $this->collectionRequest->setPageCallInfo();
         $response = $this->collectionRequest->execute($this->client);
         $result = $this->collectionRequest->processPageCallReturn($response);
         $this->assertInstanceOf(Microsoft\Graph\Model\User::class, $result);
@@ -66,29 +66,9 @@ class GraphCollectionRequestTest extends TestCase
 
         $this->assertEquals($requestUrl, '/version/endpoint');
 
-        $this->collectionRequest->setPageCallInfo(false);
+        $this->collectionRequest->setPageCallInfo();
 
         $requestUrl = $this->reflectedRequestUrlHandler->invokeArgs($this->collectionRequest, array());
         $this->assertEquals('/version/endpoint?$top=2', $requestUrl);
-
-        $response = $this->collectionRequest->execute($this->client);
-        $this->collectionRequest->processPageCallReturn($response);
-
-        $requestUrl = $this->reflectedRequestUrlHandler->invokeArgs($this->collectionRequest, array());
-        $this->assertEquals('/version/endpoint', $requestUrl);
-    }
-
-    public function testGetPrevPage()
-    {
-        $this->collectionRequest->setPageCallInfo(true);
-
-        $requestUrl = $this->reflectedRequestUrlHandler->invokeArgs($this->collectionRequest, array());
-        $this->assertEquals('/version/endpoint?$top=2&previous-page=true', $requestUrl);
-
-        $response = $this->collectionRequest->execute($this->client);
-        $this->collectionRequest->processPageCallReturn($response);
-
-        $requestUrl = $this->reflectedRequestUrlHandler->invokeArgs($this->collectionRequest, array());
-        $this->assertEquals('/version/endpoint', $requestUrl);
     }
 }

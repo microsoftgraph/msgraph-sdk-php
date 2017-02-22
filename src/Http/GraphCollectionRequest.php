@@ -37,11 +37,11 @@ class GraphCollectionRequest extends GraphRequest
     */
     protected $pageSize;
     /**
-    * The skip token to use in calling a new page of results
+    * The next link to use in calling a new page of results
     *
     * @var string
     */
-    protected $skipToken;
+    protected $nextLink;
     /**
     * True if the user has reached the end of the collection
     *
@@ -54,12 +54,6 @@ class GraphCollectionRequest extends GraphRequest
     * @var string
     */
     protected $originalEndpoint;
-    /**
-    * The return type that the user specified
-    *
-    * @var string
-    */
-    protected $originalReturnType;
 
     /**
     * Constructs a new GraphCollectionRequest object
@@ -136,9 +130,9 @@ class GraphCollectionRequest extends GraphRequest
     *
     * @return array of objects of class $returnType
     */
-    public function getPage($prev = false)
+    public function getPage()
     {
-        $this->setPageCallInfo($prev);
+        $this->setPageCallInfo();
         $response = $this->execute();
 
         return $this->processPageCallReturn($response);
@@ -151,11 +145,10 @@ class GraphCollectionRequest extends GraphRequest
     *
     * @return GraphCollectionRequest
     */
-    public function setPageCallInfo($prev) 
+    public function setPageCallInfo() 
     {
         // Store these to add temporary query data to request
         $this->originalReturnType = $this->returnType;
-        $this->originalEndpoint = $this->endpoint;
 
         /* This allows processPageCallReturn to receive
            all of the response data, not just the objects */
@@ -166,16 +159,15 @@ class GraphCollectionRequest extends GraphRequest
             return null;
         }
 
-        // Build the page navigation query string
-        $query = '$top=' . $this->pageSize;
-        if ($this->skipToken) {
-            $query .='&$skiptoken=' . $this->skipToken;
+        if ($this->nextLink) {
+            $baseLength = strlen($this->baseUrl) + strlen($this->apiVersion);
+            $this->endpoint = substr($this->nextLink, $baseLength);
+        } else {
+            // This is the first request to the endpoint
+            if ($this->pageSize) {
+                $this->endpoint .= $this->getConcatenator() . '$top=' . $this->pageSize;
+            }
         }
-        if ($prev) {
-            $query .='&previous-page=true';
-        }
-
-        $this->endpoint = $this->endpoint . $this->getConcatenator() . $query;
         return $this;
     }
 
@@ -190,11 +182,11 @@ class GraphCollectionRequest extends GraphRequest
     */
     public function processPageCallReturn($response)
     {
-        $this->skipToken = $response->getSkipToken();
+        $this->nextLink = $response->getNextLink();
 
         /* If no skip token is returned, we have reached the end
            of the collection */
-        if (!$this->skipToken) {
+        if (!$this->nextLink) {
             $this->end = true;
         }
 
@@ -206,21 +198,9 @@ class GraphCollectionRequest extends GraphRequest
         }
 
         // Restore user-defined parameters
-        $this->endpoint = $this->originalEndpoint;
         $this->returnType = $this->originalReturnType;
 
         return $result;
-    }
-
-    /**
-    * Gets the previous page of results from the collection
-    *
-    * @return array of objects of class $returnType
-    */
-    public function getPrevPage()
-    {
-        $this->end = false;
-        return $this->getPage(true);
     }
 
     /**
