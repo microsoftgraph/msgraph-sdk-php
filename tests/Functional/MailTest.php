@@ -82,4 +82,53 @@ class MailTest extends TestCase
                                      ->execute();
         $this->assertNotNull($mailFolderMessages);
     }
+
+//TODO: FIX STREAMS
+    /**
+    * @group functional 
+    * @group failing
+    */
+    public function testGetMailWithAttachment()
+    {
+        $graphTestBase = new GraphTestBase();
+        $client = $graphTestBase->graphClient;
+
+        $messageCollection = $client->createRequest("GET", "/me/messages?\$filter=hasAttachments eq true")
+                                    ->setReturnType(Model\Message::class)
+                                    ->execute();
+        $messageId = $messageCollection[0]->getId();
+
+        if (count($messageCollection) > 0) {
+            $attachments = $client->createRequest("GET", "/me/messages/$messageId/attachments")
+                                  ->setReturnType(Model\Attachment::class)
+                                  ->execute();
+
+            $attachmentId = $attachments[0]->getId();
+            $attachment = $client->createRequest("GET", "/me/messages/$messageId/attachments/$attachmentId")
+                                 ->setReturnType(GuzzleHttp\Psr7\Stream::class)
+                                 ->execute();
+            $attachment = $attachment->getResponseAsObject(Model\FileAttachment::class);
+            $this->assertInstanceOf(Model\FileAttachment::class, $attachment);
+            $this->assertNotNull($attachment->getContentBytes());
+        }
+    }
+
+    /**
+    * @group functional
+    */
+    public function testMailGetNextPage()
+    {
+        $graphTestBase = new GraphTestBase();
+        $client = $graphTestBase->graphClient;
+
+        $messageIterator = $client->createCollectionRequest("GET", "/me/messages")
+                                  ->setReturnType(Model\Message::class);
+        $messages = $messageIterator->getPage();
+
+        while (!$messageIterator->isEnd())
+        {
+            $messages = $messageIterator->getPage();
+        }
+        $this->assertNotNull($messages);
+    }
 }
