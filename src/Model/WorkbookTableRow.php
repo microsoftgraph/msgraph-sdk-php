@@ -27,16 +27,6 @@ namespace Microsoft\Graph\Model;
 class WorkbookTableRow extends Entity
 {
     /**
-    * Gets the property dictionary of the WorkbookTableRow
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-
-    /**
     * Gets the index
     *
     * @return int The index
@@ -49,7 +39,7 @@ class WorkbookTableRow extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the index
     *
@@ -62,7 +52,7 @@ class WorkbookTableRow extends Entity
         $this->_propDict["index"] = intval($val);
         return $this;
     }
-
+    
     /**
     * Gets the values
     *
@@ -76,7 +66,7 @@ class WorkbookTableRow extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the values
     *
@@ -89,4 +79,5 @@ class WorkbookTableRow extends Entity
         $this->_propDict["values"] = $val;
         return $this;
     }
+    
 }

@@ -27,16 +27,6 @@ namespace Microsoft\Graph\Model;
 class SubscribedSku extends Entity
 {
     /**
-    * Gets the property dictionary of the SubscribedSku
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-
-    /**
     * Gets the capabilityStatus
     *
     * @return string The capabilityStatus
@@ -49,7 +39,7 @@ class SubscribedSku extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the capabilityStatus
     *
@@ -62,7 +52,7 @@ class SubscribedSku extends Entity
         $this->_propDict["capabilityStatus"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the consumedUnits
     *
@@ -76,7 +66,7 @@ class SubscribedSku extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the consumedUnits
     *
@@ -89,7 +79,7 @@ class SubscribedSku extends Entity
         $this->_propDict["consumedUnits"] = intval($val);
         return $this;
     }
-
+    
     /**
     * Gets the prepaidUnits
     *
@@ -107,7 +97,7 @@ class SubscribedSku extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the prepaidUnits
     *
@@ -120,7 +110,7 @@ class SubscribedSku extends Entity
         $this->_propDict["prepaidUnits"] = $val;
         return $this;
     }
-
+    
     /** 
     * Gets the servicePlans
     *
@@ -134,7 +124,7 @@ class SubscribedSku extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the servicePlans
     *
@@ -147,8 +137,7 @@ class SubscribedSku extends Entity
 		$this->_propDict["servicePlans"] = $val;
         return $this;
     }
-
-
+    
     /**
     * Gets the skuId
     *
@@ -162,7 +151,7 @@ class SubscribedSku extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the skuId
     *
@@ -175,7 +164,7 @@ class SubscribedSku extends Entity
         $this->_propDict["skuId"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the skuPartNumber
     *
@@ -189,7 +178,7 @@ class SubscribedSku extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the skuPartNumber
     *
@@ -202,7 +191,7 @@ class SubscribedSku extends Entity
         $this->_propDict["skuPartNumber"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the appliesTo
     *
@@ -216,7 +205,7 @@ class SubscribedSku extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the appliesTo
     *
@@ -229,4 +218,5 @@ class SubscribedSku extends Entity
         $this->_propDict["appliesTo"] = $val;
         return $this;
     }
+    
 }

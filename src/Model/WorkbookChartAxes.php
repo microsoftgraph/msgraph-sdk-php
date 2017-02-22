@@ -27,16 +27,6 @@ namespace Microsoft\Graph\Model;
 class WorkbookChartAxes extends Entity
 {
     /**
-    * Gets the property dictionary of the WorkbookChartAxes
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-
-    /**
     * Gets the categoryAxis
     *
     * @return WorkbookChartAxis The categoryAxis
@@ -53,7 +43,7 @@ class WorkbookChartAxes extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the categoryAxis
     *
@@ -66,7 +56,7 @@ class WorkbookChartAxes extends Entity
         $this->_propDict["categoryAxis"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the seriesAxis
     *
@@ -84,7 +74,7 @@ class WorkbookChartAxes extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the seriesAxis
     *
@@ -97,7 +87,7 @@ class WorkbookChartAxes extends Entity
         $this->_propDict["seriesAxis"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the valueAxis
     *
@@ -115,7 +105,7 @@ class WorkbookChartAxes extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the valueAxis
     *
@@ -128,4 +118,5 @@ class WorkbookChartAxes extends Entity
         $this->_propDict["valueAxis"] = $val;
         return $this;
     }
+    
 }

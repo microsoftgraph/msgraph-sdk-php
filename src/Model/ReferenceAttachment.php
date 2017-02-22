@@ -24,15 +24,6 @@ namespace Microsoft\Graph\Model;
 * @version   Release: 0.1.0
 * @link      https://graph.microsoft.io/
 */
-class ReferenceAttachment extends Entity
+class ReferenceAttachment extends Attachment
 {
-    /**
-    * Gets the property dictionary of the ReferenceAttachment
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
 }

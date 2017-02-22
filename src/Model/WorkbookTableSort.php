@@ -26,16 +26,6 @@ namespace Microsoft\Graph\Model;
 */
 class WorkbookTableSort extends Entity
 {
-    /**
-    * Gets the property dictionary of the WorkbookTableSort
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-
     /** 
     * Gets the fields
     *
@@ -49,7 +39,7 @@ class WorkbookTableSort extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the fields
     *
@@ -62,8 +52,7 @@ class WorkbookTableSort extends Entity
 		$this->_propDict["fields"] = $val;
         return $this;
     }
-
-
+    
     /**
     * Gets the matchCase
     *
@@ -77,7 +66,7 @@ class WorkbookTableSort extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the matchCase
     *
@@ -90,7 +79,7 @@ class WorkbookTableSort extends Entity
         $this->_propDict["matchCase"] = boolval($val);
         return $this;
     }
-
+    
     /**
     * Gets the method
     *
@@ -104,7 +93,7 @@ class WorkbookTableSort extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the method
     *
@@ -117,4 +106,5 @@ class WorkbookTableSort extends Entity
         $this->_propDict["method"] = $val;
         return $this;
     }
+    
 }

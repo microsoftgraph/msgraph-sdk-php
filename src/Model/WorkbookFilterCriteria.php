@@ -26,16 +26,6 @@ namespace Microsoft\Graph\Model;
 class WorkbookFilterCriteria extends Entity
 {
     /**
-    * Gets the property dictionary of the WorkbookFilterCriteria
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-    
-    /**
     * Gets the color
     *
     * @return string The color
@@ -61,7 +51,6 @@ class WorkbookFilterCriteria extends Entity
         $this->_propDict["color"] = $val;
         return $this;
     }
-    
     /**
     * Gets the criterion1
     *
@@ -88,7 +77,6 @@ class WorkbookFilterCriteria extends Entity
         $this->_propDict["criterion1"] = $val;
         return $this;
     }
-    
     /**
     * Gets the criterion2
     *
@@ -115,7 +103,6 @@ class WorkbookFilterCriteria extends Entity
         $this->_propDict["criterion2"] = $val;
         return $this;
     }
-    
     /**
     * Gets the dynamicCriteria
     *
@@ -142,7 +129,6 @@ class WorkbookFilterCriteria extends Entity
         $this->_propDict["dynamic_criteria"] = $val;
         return $this;
     }
-    
     /**
     * Gets the filterOn
     *
@@ -200,7 +186,6 @@ class WorkbookFilterCriteria extends Entity
         $this->_propDict["icon"] = $val;
          return $this;
     }
-    
     /**
     * Gets the operator
     *
@@ -227,7 +212,6 @@ class WorkbookFilterCriteria extends Entity
         $this->_propDict["operator"] = $val;
         return $this;
     }
-    
     /**
     * Gets the values
     *

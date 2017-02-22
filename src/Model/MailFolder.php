@@ -27,16 +27,6 @@ namespace Microsoft\Graph\Model;
 class MailFolder extends Entity
 {
     /**
-    * Gets the property dictionary of the MailFolder
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-
-    /**
     * Gets the displayName
     *
     * @return string The displayName
@@ -49,7 +39,7 @@ class MailFolder extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the displayName
     *
@@ -62,7 +52,7 @@ class MailFolder extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the parentFolderId
     *
@@ -76,7 +66,7 @@ class MailFolder extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the parentFolderId
     *
@@ -89,7 +79,7 @@ class MailFolder extends Entity
         $this->_propDict["parentFolderId"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the childFolderCount
     *
@@ -103,7 +93,7 @@ class MailFolder extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the childFolderCount
     *
@@ -116,7 +106,7 @@ class MailFolder extends Entity
         $this->_propDict["childFolderCount"] = intval($val);
         return $this;
     }
-
+    
     /**
     * Gets the unreadItemCount
     *
@@ -130,7 +120,7 @@ class MailFolder extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the unreadItemCount
     *
@@ -143,7 +133,7 @@ class MailFolder extends Entity
         $this->_propDict["unreadItemCount"] = intval($val);
         return $this;
     }
-
+    
     /**
     * Gets the totalItemCount
     *
@@ -157,7 +147,7 @@ class MailFolder extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the totalItemCount
     *
@@ -170,7 +160,7 @@ class MailFolder extends Entity
         $this->_propDict["totalItemCount"] = intval($val);
         return $this;
     }
-
+    
     /** 
     * Gets the messages
     *
@@ -184,7 +174,7 @@ class MailFolder extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the messages
     *
@@ -197,8 +187,7 @@ class MailFolder extends Entity
 		$this->_propDict["messages"] = $val;
         return $this;
     }
-
-
+    
     /** 
     * Gets the childFolders
     *
@@ -212,7 +201,7 @@ class MailFolder extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the childFolders
     *
@@ -225,8 +214,7 @@ class MailFolder extends Entity
 		$this->_propDict["childFolders"] = $val;
         return $this;
     }
-
-
+    
     /** 
     * Gets the singleValueExtendedProperties
     *
@@ -240,7 +228,7 @@ class MailFolder extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the singleValueExtendedProperties
     *
@@ -253,8 +241,7 @@ class MailFolder extends Entity
 		$this->_propDict["singleValueExtendedProperties"] = $val;
         return $this;
     }
-
-
+    
     /** 
     * Gets the multiValueExtendedProperties
     *
@@ -268,7 +255,7 @@ class MailFolder extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the multiValueExtendedProperties
     *
@@ -281,5 +268,5 @@ class MailFolder extends Entity
 		$this->_propDict["multiValueExtendedProperties"] = $val;
         return $this;
     }
-
+    
 }

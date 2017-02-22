@@ -27,16 +27,6 @@ namespace Microsoft\Graph\Model;
 class WorkbookChartDataLabelFormat extends Entity
 {
     /**
-    * Gets the property dictionary of the WorkbookChartDataLabelFormat
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-
-    /**
     * Gets the fill
     *
     * @return WorkbookChartFill The fill
@@ -53,7 +43,7 @@ class WorkbookChartDataLabelFormat extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the fill
     *
@@ -66,7 +56,7 @@ class WorkbookChartDataLabelFormat extends Entity
         $this->_propDict["fill"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the font
     *
@@ -84,7 +74,7 @@ class WorkbookChartDataLabelFormat extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the font
     *
@@ -97,4 +87,5 @@ class WorkbookChartDataLabelFormat extends Entity
         $this->_propDict["font"] = $val;
         return $this;
     }
+    
 }

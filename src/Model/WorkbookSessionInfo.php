@@ -26,16 +26,6 @@ namespace Microsoft\Graph\Model;
 class WorkbookSessionInfo extends Entity
 {
     /**
-    * Gets the property dictionary of the WorkbookSessionInfo
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-    
-    /**
     * Gets the id
     *
     * @return string The id
@@ -61,7 +51,6 @@ class WorkbookSessionInfo extends Entity
         $this->_propDict["id"] = $val;
         return $this;
     }
-    
     /**
     * Gets the persistChanges
     *

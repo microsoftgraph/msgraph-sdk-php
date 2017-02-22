@@ -26,16 +26,6 @@ namespace Microsoft\Graph\Model;
 class Quota extends Entity
 {
     /**
-    * Gets the property dictionary of the Quota
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-    
-    /**
     * Gets the deleted
     *
     * @return int The deleted
@@ -61,7 +51,6 @@ class Quota extends Entity
         $this->_propDict["deleted"] = $val;
         return $this;
     }
-    
     /**
     * Gets the remaining
     *
@@ -88,7 +77,6 @@ class Quota extends Entity
         $this->_propDict["remaining"] = $val;
         return $this;
     }
-    
     /**
     * Gets the state
     *
@@ -115,7 +103,6 @@ class Quota extends Entity
         $this->_propDict["state"] = $val;
         return $this;
     }
-    
     /**
     * Gets the total
     *
@@ -142,7 +129,6 @@ class Quota extends Entity
         $this->_propDict["total"] = $val;
         return $this;
     }
-    
     /**
     * Gets the used
     *

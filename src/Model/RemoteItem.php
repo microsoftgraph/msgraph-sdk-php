@@ -25,15 +25,6 @@ namespace Microsoft\Graph\Model;
 */
 class RemoteItem extends Entity
 {
-    /**
-    * Gets the property dictionary of the RemoteItem
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
 
     /**
     * Gets the createdBy
@@ -189,7 +180,6 @@ class RemoteItem extends Entity
         $this->_propDict["folder"] = $val;
          return $this;
     }
-    
     /**
     * Gets the id
     *
@@ -278,7 +268,6 @@ class RemoteItem extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
          return $this;
     }
-    
     /**
     * Gets the name
     *
@@ -398,7 +387,6 @@ class RemoteItem extends Entity
         $this->_propDict["sharepointIds"] = $val;
          return $this;
     }
-    
     /**
     * Gets the size
     *
@@ -456,7 +444,6 @@ class RemoteItem extends Entity
         $this->_propDict["specialFolder"] = $val;
          return $this;
     }
-    
     /**
     * Gets the webDavUrl
     *
@@ -483,7 +470,6 @@ class RemoteItem extends Entity
         $this->_propDict["web_dav_url"] = $val;
         return $this;
     }
-    
     /**
     * Gets the webUrl
     *

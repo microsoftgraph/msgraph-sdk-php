@@ -26,16 +26,6 @@ namespace Microsoft\Graph\Model;
 class AssignedLicense extends Entity
 {
     /**
-    * Gets the property dictionary of the AssignedLicense
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-    
-    /**
     * Gets the disabledPlans
     *
     * @return string The disabledPlans
@@ -61,7 +51,6 @@ class AssignedLicense extends Entity
         $this->_propDict["disabled_plans"] = $val;
         return $this;
     }
-    
     /**
     * Gets the skuId
     *

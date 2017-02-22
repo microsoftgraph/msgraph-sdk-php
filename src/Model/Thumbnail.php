@@ -25,15 +25,6 @@ namespace Microsoft\Graph\Model;
 */
 class Thumbnail extends Entity
 {
-    /**
-    * Gets the property dictionary of the Thumbnail
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
 
     /**
     * Gets the content
@@ -65,7 +56,6 @@ class Thumbnail extends Entity
         $this->_propDict["content"] = $val;
          return $this;
     }
-    
     /**
     * Gets the height
     *
@@ -92,7 +82,6 @@ class Thumbnail extends Entity
         $this->_propDict["height"] = $val;
         return $this;
     }
-    
     /**
     * Gets the url
     *
@@ -119,7 +108,6 @@ class Thumbnail extends Entity
         $this->_propDict["url"] = $val;
         return $this;
     }
-    
     /**
     * Gets the width
     *

@@ -26,13 +26,4 @@ namespace Microsoft\Graph\Model;
 */
 class Extension extends Entity
 {
-    /**
-    * Gets the property dictionary of the Extension
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
 }

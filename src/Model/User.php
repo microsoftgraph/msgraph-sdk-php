@@ -24,18 +24,8 @@ namespace Microsoft\Graph\Model;
 * @version   Release: 0.1.0
 * @link      https://graph.microsoft.io/
 */
-class User extends Entity
+class User extends DirectoryObject
 {
-    /**
-    * Gets the property dictionary of the User
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-
     /**
     * Gets the accountEnabled
     *
@@ -49,7 +39,7 @@ class User extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the accountEnabled
     *
@@ -62,7 +52,7 @@ class User extends Entity
         $this->_propDict["accountEnabled"] = boolval($val);
         return $this;
     }
-
+    
     /** 
     * Gets the assignedLicenses
     *
@@ -76,7 +66,7 @@ class User extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the assignedLicenses
     *
@@ -89,8 +79,7 @@ class User extends Entity
 		$this->_propDict["assignedLicenses"] = $val;
         return $this;
     }
-
-
+    
     /** 
     * Gets the assignedPlans
     *
@@ -104,7 +93,7 @@ class User extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the assignedPlans
     *
@@ -117,8 +106,7 @@ class User extends Entity
 		$this->_propDict["assignedPlans"] = $val;
         return $this;
     }
-
-
+    
     /**
     * Gets the businessPhones
     *
@@ -132,7 +120,7 @@ class User extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the businessPhones
     *
@@ -145,7 +133,7 @@ class User extends Entity
         $this->_propDict["businessPhones"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the city
     *
@@ -159,7 +147,7 @@ class User extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the city
     *
@@ -172,7 +160,7 @@ class User extends Entity
         $this->_propDict["city"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the companyName
     *
@@ -186,7 +174,7 @@ class User extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the companyName
     *
@@ -199,7 +187,7 @@ class User extends Entity
         $this->_propDict["companyName"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the country
     *
@@ -213,7 +201,7 @@ class User extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the country
     *
@@ -226,7 +214,7 @@ class User extends Entity
         $this->_propDict["country"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the department
     *
@@ -240,7 +228,7 @@ class User extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the department
     *
@@ -253,7 +241,7 @@ class User extends Entity
         $this->_propDict["department"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the displayName
     *
@@ -267,7 +255,7 @@ class User extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the displayName
     *
@@ -280,7 +268,7 @@ class User extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the givenName
     *
@@ -294,7 +282,7 @@ class User extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the givenName
     *
@@ -307,7 +295,7 @@ class User extends Entity
         $this->_propDict["givenName"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the jobTitle
     *
@@ -321,7 +309,7 @@ class User extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the jobTitle
     *
@@ -334,7 +322,7 @@ class User extends Entity
         $this->_propDict["jobTitle"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the mail
     *
@@ -348,7 +336,7 @@ class User extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the mail
     *
@@ -361,7 +349,7 @@ class User extends Entity
         $this->_propDict["mail"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the mailNickname
     *
@@ -375,7 +363,7 @@ class User extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the mailNickname
     *
@@ -388,7 +376,7 @@ class User extends Entity
         $this->_propDict["mailNickname"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the mobilePhone
     *
@@ -402,7 +390,7 @@ class User extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the mobilePhone
     *
@@ -415,7 +403,7 @@ class User extends Entity
         $this->_propDict["mobilePhone"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the onPremisesImmutableId
     *
@@ -429,7 +417,7 @@ class User extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the onPremisesImmutableId
     *
@@ -442,7 +430,7 @@ class User extends Entity
         $this->_propDict["onPremisesImmutableId"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the onPremisesLastSyncDateTime
     *
@@ -460,7 +448,7 @@ class User extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the onPremisesLastSyncDateTime
     *
@@ -473,7 +461,7 @@ class User extends Entity
         $this->_propDict["onPremisesLastSyncDateTime"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the onPremisesSecurityIdentifier
     *
@@ -487,7 +475,7 @@ class User extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the onPremisesSecurityIdentifier
     *
@@ -500,7 +488,7 @@ class User extends Entity
         $this->_propDict["onPremisesSecurityIdentifier"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the onPremisesSyncEnabled
     *
@@ -514,7 +502,7 @@ class User extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the onPremisesSyncEnabled
     *
@@ -527,7 +515,7 @@ class User extends Entity
         $this->_propDict["onPremisesSyncEnabled"] = boolval($val);
         return $this;
     }
-
+    
     /**
     * Gets the passwordPolicies
     *
@@ -541,7 +529,7 @@ class User extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the passwordPolicies
     *
@@ -554,7 +542,7 @@ class User extends Entity
         $this->_propDict["passwordPolicies"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the passwordProfile
     *
@@ -572,7 +560,7 @@ class User extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the passwordProfile
     *
@@ -585,7 +573,7 @@ class User extends Entity
         $this->_propDict["passwordProfile"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the officeLocation
     *
@@ -599,7 +587,7 @@ class User extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the officeLocation
     *
@@ -612,7 +600,7 @@ class User extends Entity
         $this->_propDict["officeLocation"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the postalCode
     *
@@ -626,7 +614,7 @@ class User extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the postalCode
     *
@@ -639,7 +627,7 @@ class User extends Entity
         $this->_propDict["postalCode"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the preferredLanguage
     *
@@ -653,7 +641,7 @@ class User extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the preferredLanguage
     *
@@ -666,7 +654,7 @@ class User extends Entity
         $this->_propDict["preferredLanguage"] = $val;
         return $this;
     }
-
+    
     /** 
     * Gets the provisionedPlans
     *
@@ -680,7 +668,7 @@ class User extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the provisionedPlans
     *
@@ -693,8 +681,7 @@ class User extends Entity
 		$this->_propDict["provisionedPlans"] = $val;
         return $this;
     }
-
-
+    
     /**
     * Gets the proxyAddresses
     *
@@ -708,7 +695,7 @@ class User extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the proxyAddresses
     *
@@ -721,7 +708,7 @@ class User extends Entity
         $this->_propDict["proxyAddresses"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the state
     *
@@ -735,7 +722,7 @@ class User extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the state
     *
@@ -748,7 +735,7 @@ class User extends Entity
         $this->_propDict["state"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the streetAddress
     *
@@ -762,7 +749,7 @@ class User extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the streetAddress
     *
@@ -775,7 +762,7 @@ class User extends Entity
         $this->_propDict["streetAddress"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the surname
     *
@@ -789,7 +776,7 @@ class User extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the surname
     *
@@ -802,7 +789,7 @@ class User extends Entity
         $this->_propDict["surname"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the usageLocation
     *
@@ -816,7 +803,7 @@ class User extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the usageLocation
     *
@@ -829,7 +816,7 @@ class User extends Entity
         $this->_propDict["usageLocation"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the userPrincipalName
     *
@@ -843,7 +830,7 @@ class User extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the userPrincipalName
     *
@@ -856,7 +843,7 @@ class User extends Entity
         $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the userType
     *
@@ -870,7 +857,7 @@ class User extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the userType
     *
@@ -883,7 +870,7 @@ class User extends Entity
         $this->_propDict["userType"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the mailboxSettings
     *
@@ -901,7 +888,7 @@ class User extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the mailboxSettings
     *
@@ -914,7 +901,7 @@ class User extends Entity
         $this->_propDict["mailboxSettings"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the aboutMe
     *
@@ -928,7 +915,7 @@ class User extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the aboutMe
     *
@@ -941,7 +928,7 @@ class User extends Entity
         $this->_propDict["aboutMe"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the birthday
     *
@@ -959,7 +946,7 @@ class User extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the birthday
     *
@@ -972,7 +959,7 @@ class User extends Entity
         $this->_propDict["birthday"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the hireDate
     *
@@ -990,7 +977,7 @@ class User extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the hireDate
     *
@@ -1003,7 +990,7 @@ class User extends Entity
         $this->_propDict["hireDate"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the interests
     *
@@ -1017,7 +1004,7 @@ class User extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the interests
     *
@@ -1030,7 +1017,7 @@ class User extends Entity
         $this->_propDict["interests"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the mySite
     *
@@ -1044,7 +1031,7 @@ class User extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the mySite
     *
@@ -1057,7 +1044,7 @@ class User extends Entity
         $this->_propDict["mySite"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the pastProjects
     *
@@ -1071,7 +1058,7 @@ class User extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the pastProjects
     *
@@ -1084,7 +1071,7 @@ class User extends Entity
         $this->_propDict["pastProjects"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the preferredName
     *
@@ -1098,7 +1085,7 @@ class User extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the preferredName
     *
@@ -1111,7 +1098,7 @@ class User extends Entity
         $this->_propDict["preferredName"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the responsibilities
     *
@@ -1125,7 +1112,7 @@ class User extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the responsibilities
     *
@@ -1138,7 +1125,7 @@ class User extends Entity
         $this->_propDict["responsibilities"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the schools
     *
@@ -1152,7 +1139,7 @@ class User extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the schools
     *
@@ -1165,7 +1152,7 @@ class User extends Entity
         $this->_propDict["schools"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the skills
     *
@@ -1179,7 +1166,7 @@ class User extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the skills
     *
@@ -1192,7 +1179,7 @@ class User extends Entity
         $this->_propDict["skills"] = $val;
         return $this;
     }
-
+    
     /** 
     * Gets the ownedDevices
     *
@@ -1206,7 +1193,7 @@ class User extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the ownedDevices
     *
@@ -1219,8 +1206,7 @@ class User extends Entity
 		$this->_propDict["ownedDevices"] = $val;
         return $this;
     }
-
-
+    
     /** 
     * Gets the registeredDevices
     *
@@ -1234,7 +1220,7 @@ class User extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the registeredDevices
     *
@@ -1247,8 +1233,7 @@ class User extends Entity
 		$this->_propDict["registeredDevices"] = $val;
         return $this;
     }
-
-
+    
     /**
     * Gets the manager
     *
@@ -1266,7 +1251,7 @@ class User extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the manager
     *
@@ -1279,7 +1264,7 @@ class User extends Entity
         $this->_propDict["manager"] = $val;
         return $this;
     }
-
+    
     /** 
     * Gets the directReports
     *
@@ -1293,7 +1278,7 @@ class User extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the directReports
     *
@@ -1306,8 +1291,7 @@ class User extends Entity
 		$this->_propDict["directReports"] = $val;
         return $this;
     }
-
-
+    
     /** 
     * Gets the memberOf
     *
@@ -1321,7 +1305,7 @@ class User extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the memberOf
     *
@@ -1334,8 +1318,7 @@ class User extends Entity
 		$this->_propDict["memberOf"] = $val;
         return $this;
     }
-
-
+    
     /** 
     * Gets the createdObjects
     *
@@ -1349,7 +1332,7 @@ class User extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the createdObjects
     *
@@ -1362,8 +1345,7 @@ class User extends Entity
 		$this->_propDict["createdObjects"] = $val;
         return $this;
     }
-
-
+    
     /** 
     * Gets the ownedObjects
     *
@@ -1377,7 +1359,7 @@ class User extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the ownedObjects
     *
@@ -1390,8 +1372,7 @@ class User extends Entity
 		$this->_propDict["ownedObjects"] = $val;
         return $this;
     }
-
-
+    
     /** 
     * Gets the messages
     *
@@ -1405,7 +1386,7 @@ class User extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the messages
     *
@@ -1418,8 +1399,7 @@ class User extends Entity
 		$this->_propDict["messages"] = $val;
         return $this;
     }
-
-
+    
     /** 
     * Gets the mailFolders
     *
@@ -1433,7 +1413,7 @@ class User extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the mailFolders
     *
@@ -1446,8 +1426,7 @@ class User extends Entity
 		$this->_propDict["mailFolders"] = $val;
         return $this;
     }
-
-
+    
     /**
     * Gets the calendar
     *
@@ -1465,7 +1444,7 @@ class User extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the calendar
     *
@@ -1478,7 +1457,7 @@ class User extends Entity
         $this->_propDict["calendar"] = $val;
         return $this;
     }
-
+    
     /** 
     * Gets the calendars
     *
@@ -1492,7 +1471,7 @@ class User extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the calendars
     *
@@ -1505,8 +1484,7 @@ class User extends Entity
 		$this->_propDict["calendars"] = $val;
         return $this;
     }
-
-
+    
     /** 
     * Gets the calendarGroups
     *
@@ -1520,7 +1498,7 @@ class User extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the calendarGroups
     *
@@ -1533,8 +1511,7 @@ class User extends Entity
 		$this->_propDict["calendarGroups"] = $val;
         return $this;
     }
-
-
+    
     /** 
     * Gets the calendarView
     *
@@ -1548,7 +1525,7 @@ class User extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the calendarView
     *
@@ -1561,8 +1538,7 @@ class User extends Entity
 		$this->_propDict["calendarView"] = $val;
         return $this;
     }
-
-
+    
     /** 
     * Gets the events
     *
@@ -1576,7 +1552,7 @@ class User extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the events
     *
@@ -1589,8 +1565,7 @@ class User extends Entity
 		$this->_propDict["events"] = $val;
         return $this;
     }
-
-
+    
     /** 
     * Gets the contacts
     *
@@ -1604,7 +1579,7 @@ class User extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the contacts
     *
@@ -1617,8 +1592,7 @@ class User extends Entity
 		$this->_propDict["contacts"] = $val;
         return $this;
     }
-
-
+    
     /** 
     * Gets the contactFolders
     *
@@ -1632,7 +1606,7 @@ class User extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the contactFolders
     *
@@ -1645,8 +1619,7 @@ class User extends Entity
 		$this->_propDict["contactFolders"] = $val;
         return $this;
     }
-
-
+    
     /**
     * Gets the inferenceClassification
     *
@@ -1664,7 +1637,7 @@ class User extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the inferenceClassification
     *
@@ -1677,7 +1650,7 @@ class User extends Entity
         $this->_propDict["inferenceClassification"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the photo
     *
@@ -1695,7 +1668,7 @@ class User extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the photo
     *
@@ -1708,7 +1681,7 @@ class User extends Entity
         $this->_propDict["photo"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the drive
     *
@@ -1726,7 +1699,7 @@ class User extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the drive
     *
@@ -1739,7 +1712,7 @@ class User extends Entity
         $this->_propDict["drive"] = $val;
         return $this;
     }
-
+    
     /** 
     * Gets the drives
     *
@@ -1753,7 +1726,7 @@ class User extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the drives
     *
@@ -1766,5 +1739,5 @@ class User extends Entity
 		$this->_propDict["drives"] = $val;
         return $this;
     }
-
+    
 }

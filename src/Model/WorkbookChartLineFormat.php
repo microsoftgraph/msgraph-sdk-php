@@ -27,16 +27,6 @@ namespace Microsoft\Graph\Model;
 class WorkbookChartLineFormat extends Entity
 {
     /**
-    * Gets the property dictionary of the WorkbookChartLineFormat
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-
-    /**
     * Gets the color
     *
     * @return string The color
@@ -49,7 +39,7 @@ class WorkbookChartLineFormat extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the color
     *
@@ -62,4 +52,5 @@ class WorkbookChartLineFormat extends Entity
         $this->_propDict["color"] = $val;
         return $this;
     }
+    
 }

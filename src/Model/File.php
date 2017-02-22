@@ -25,15 +25,6 @@ namespace Microsoft\Graph\Model;
 */
 class File extends Entity
 {
-    /**
-    * Gets the property dictionary of the File
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
 
     /**
     * Gets the hashes
@@ -65,7 +56,6 @@ class File extends Entity
         $this->_propDict["hashes"] = $val;
          return $this;
     }
-    
     /**
     * Gets the mimeType
     *
@@ -92,7 +82,6 @@ class File extends Entity
         $this->_propDict["mime_type"] = $val;
         return $this;
     }
-    
     /**
     * Gets the processingMetadata
     *

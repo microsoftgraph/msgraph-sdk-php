@@ -24,18 +24,8 @@ namespace Microsoft\Graph\Model;
 * @version   Release: 0.1.0
 * @link      https://graph.microsoft.io/
 */
-class Device extends Entity
+class Device extends DirectoryObject
 {
-    /**
-    * Gets the property dictionary of the Device
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-
     /**
     * Gets the accountEnabled
     *
@@ -49,7 +39,7 @@ class Device extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the accountEnabled
     *
@@ -62,7 +52,7 @@ class Device extends Entity
         $this->_propDict["accountEnabled"] = boolval($val);
         return $this;
     }
-
+    
     /** 
     * Gets the alternativeSecurityIds
     *
@@ -76,7 +66,7 @@ class Device extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the alternativeSecurityIds
     *
@@ -89,8 +79,7 @@ class Device extends Entity
 		$this->_propDict["alternativeSecurityIds"] = $val;
         return $this;
     }
-
-
+    
     /**
     * Gets the approximateLastSignInDateTime
     *
@@ -108,7 +97,7 @@ class Device extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the approximateLastSignInDateTime
     *
@@ -121,7 +110,7 @@ class Device extends Entity
         $this->_propDict["approximateLastSignInDateTime"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the deviceId
     *
@@ -135,7 +124,7 @@ class Device extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the deviceId
     *
@@ -148,7 +137,7 @@ class Device extends Entity
         $this->_propDict["deviceId"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the deviceMetadata
     *
@@ -162,7 +151,7 @@ class Device extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the deviceMetadata
     *
@@ -175,7 +164,7 @@ class Device extends Entity
         $this->_propDict["deviceMetadata"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the deviceVersion
     *
@@ -189,7 +178,7 @@ class Device extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the deviceVersion
     *
@@ -202,7 +191,7 @@ class Device extends Entity
         $this->_propDict["deviceVersion"] = intval($val);
         return $this;
     }
-
+    
     /**
     * Gets the displayName
     *
@@ -216,7 +205,7 @@ class Device extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the displayName
     *
@@ -229,7 +218,7 @@ class Device extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the isCompliant
     *
@@ -243,7 +232,7 @@ class Device extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the isCompliant
     *
@@ -256,7 +245,7 @@ class Device extends Entity
         $this->_propDict["isCompliant"] = boolval($val);
         return $this;
     }
-
+    
     /**
     * Gets the isManaged
     *
@@ -270,7 +259,7 @@ class Device extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the isManaged
     *
@@ -283,7 +272,7 @@ class Device extends Entity
         $this->_propDict["isManaged"] = boolval($val);
         return $this;
     }
-
+    
     /**
     * Gets the onPremisesLastSyncDateTime
     *
@@ -301,7 +290,7 @@ class Device extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the onPremisesLastSyncDateTime
     *
@@ -314,7 +303,7 @@ class Device extends Entity
         $this->_propDict["onPremisesLastSyncDateTime"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the onPremisesSyncEnabled
     *
@@ -328,7 +317,7 @@ class Device extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the onPremisesSyncEnabled
     *
@@ -341,7 +330,7 @@ class Device extends Entity
         $this->_propDict["onPremisesSyncEnabled"] = boolval($val);
         return $this;
     }
-
+    
     /**
     * Gets the operatingSystem
     *
@@ -355,7 +344,7 @@ class Device extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the operatingSystem
     *
@@ -368,7 +357,7 @@ class Device extends Entity
         $this->_propDict["operatingSystem"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the operatingSystemVersion
     *
@@ -382,7 +371,7 @@ class Device extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the operatingSystemVersion
     *
@@ -395,7 +384,7 @@ class Device extends Entity
         $this->_propDict["operatingSystemVersion"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the physicalIds
     *
@@ -409,7 +398,7 @@ class Device extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the physicalIds
     *
@@ -422,7 +411,7 @@ class Device extends Entity
         $this->_propDict["physicalIds"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the trustType
     *
@@ -436,7 +425,7 @@ class Device extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the trustType
     *
@@ -449,7 +438,7 @@ class Device extends Entity
         $this->_propDict["trustType"] = $val;
         return $this;
     }
-
+    
     /** 
     * Gets the registeredOwners
     *
@@ -463,7 +452,7 @@ class Device extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the registeredOwners
     *
@@ -476,8 +465,7 @@ class Device extends Entity
 		$this->_propDict["registeredOwners"] = $val;
         return $this;
     }
-
-
+    
     /** 
     * Gets the registeredUsers
     *
@@ -491,7 +479,7 @@ class Device extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the registeredUsers
     *
@@ -504,5 +492,5 @@ class Device extends Entity
 		$this->_propDict["registeredUsers"] = $val;
         return $this;
     }
-
+    
 }

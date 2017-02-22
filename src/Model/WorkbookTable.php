@@ -27,16 +27,6 @@ namespace Microsoft\Graph\Model;
 class WorkbookTable extends Entity
 {
     /**
-    * Gets the property dictionary of the WorkbookTable
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-
-    /**
     * Gets the highlightFirstColumn
     *
     * @return bool The highlightFirstColumn
@@ -49,7 +39,7 @@ class WorkbookTable extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the highlightFirstColumn
     *
@@ -62,7 +52,7 @@ class WorkbookTable extends Entity
         $this->_propDict["highlightFirstColumn"] = boolval($val);
         return $this;
     }
-
+    
     /**
     * Gets the highlightLastColumn
     *
@@ -76,7 +66,7 @@ class WorkbookTable extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the highlightLastColumn
     *
@@ -89,7 +79,7 @@ class WorkbookTable extends Entity
         $this->_propDict["highlightLastColumn"] = boolval($val);
         return $this;
     }
-
+    
     /**
     * Gets the name
     *
@@ -103,7 +93,7 @@ class WorkbookTable extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the name
     *
@@ -116,7 +106,7 @@ class WorkbookTable extends Entity
         $this->_propDict["name"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the showBandedColumns
     *
@@ -130,7 +120,7 @@ class WorkbookTable extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the showBandedColumns
     *
@@ -143,7 +133,7 @@ class WorkbookTable extends Entity
         $this->_propDict["showBandedColumns"] = boolval($val);
         return $this;
     }
-
+    
     /**
     * Gets the showBandedRows
     *
@@ -157,7 +147,7 @@ class WorkbookTable extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the showBandedRows
     *
@@ -170,7 +160,7 @@ class WorkbookTable extends Entity
         $this->_propDict["showBandedRows"] = boolval($val);
         return $this;
     }
-
+    
     /**
     * Gets the showFilterButton
     *
@@ -184,7 +174,7 @@ class WorkbookTable extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the showFilterButton
     *
@@ -197,7 +187,7 @@ class WorkbookTable extends Entity
         $this->_propDict["showFilterButton"] = boolval($val);
         return $this;
     }
-
+    
     /**
     * Gets the showHeaders
     *
@@ -211,7 +201,7 @@ class WorkbookTable extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the showHeaders
     *
@@ -224,7 +214,7 @@ class WorkbookTable extends Entity
         $this->_propDict["showHeaders"] = boolval($val);
         return $this;
     }
-
+    
     /**
     * Gets the showTotals
     *
@@ -238,7 +228,7 @@ class WorkbookTable extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the showTotals
     *
@@ -251,7 +241,7 @@ class WorkbookTable extends Entity
         $this->_propDict["showTotals"] = boolval($val);
         return $this;
     }
-
+    
     /**
     * Gets the style
     *
@@ -265,7 +255,7 @@ class WorkbookTable extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the style
     *
@@ -278,7 +268,7 @@ class WorkbookTable extends Entity
         $this->_propDict["style"] = $val;
         return $this;
     }
-
+    
     /** 
     * Gets the columns
     *
@@ -292,7 +282,7 @@ class WorkbookTable extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the columns
     *
@@ -305,8 +295,7 @@ class WorkbookTable extends Entity
 		$this->_propDict["columns"] = $val;
         return $this;
     }
-
-
+    
     /** 
     * Gets the rows
     *
@@ -320,7 +309,7 @@ class WorkbookTable extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the rows
     *
@@ -333,8 +322,7 @@ class WorkbookTable extends Entity
 		$this->_propDict["rows"] = $val;
         return $this;
     }
-
-
+    
     /**
     * Gets the sort
     *
@@ -352,7 +340,7 @@ class WorkbookTable extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the sort
     *
@@ -365,7 +353,7 @@ class WorkbookTable extends Entity
         $this->_propDict["sort"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the worksheet
     *
@@ -383,7 +371,7 @@ class WorkbookTable extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the worksheet
     *
@@ -396,4 +384,5 @@ class WorkbookTable extends Entity
         $this->_propDict["worksheet"] = $val;
         return $this;
     }
+    
 }

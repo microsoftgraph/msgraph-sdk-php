@@ -26,16 +26,6 @@ namespace Microsoft\Graph\Model;
 class PasswordProfile extends Entity
 {
     /**
-    * Gets the property dictionary of the PasswordProfile
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-    
-    /**
     * Gets the password
     *
     * @return string The password
@@ -61,7 +51,6 @@ class PasswordProfile extends Entity
         $this->_propDict["password"] = $val;
         return $this;
     }
-    
     /**
     * Gets the forceChangePasswordNextSignIn
     *

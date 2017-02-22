@@ -27,16 +27,6 @@ namespace Microsoft\Graph\Model;
 class Conversation extends Entity
 {
     /**
-    * Gets the property dictionary of the Conversation
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-
-    /**
     * Gets the topic
     *
     * @return string The topic
@@ -49,7 +39,7 @@ class Conversation extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the topic
     *
@@ -62,7 +52,7 @@ class Conversation extends Entity
         $this->_propDict["topic"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the hasAttachments
     *
@@ -76,7 +66,7 @@ class Conversation extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the hasAttachments
     *
@@ -89,7 +79,7 @@ class Conversation extends Entity
         $this->_propDict["hasAttachments"] = boolval($val);
         return $this;
     }
-
+    
     /**
     * Gets the lastDeliveredDateTime
     *
@@ -107,7 +97,7 @@ class Conversation extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the lastDeliveredDateTime
     *
@@ -120,7 +110,7 @@ class Conversation extends Entity
         $this->_propDict["lastDeliveredDateTime"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the uniqueSenders
     *
@@ -134,7 +124,7 @@ class Conversation extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the uniqueSenders
     *
@@ -147,7 +137,7 @@ class Conversation extends Entity
         $this->_propDict["uniqueSenders"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the preview
     *
@@ -161,7 +151,7 @@ class Conversation extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the preview
     *
@@ -174,7 +164,7 @@ class Conversation extends Entity
         $this->_propDict["preview"] = $val;
         return $this;
     }
-
+    
     /** 
     * Gets the threads
     *
@@ -188,7 +178,7 @@ class Conversation extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the threads
     *
@@ -201,5 +191,5 @@ class Conversation extends Entity
 		$this->_propDict["threads"] = $val;
         return $this;
     }
-
+    
 }

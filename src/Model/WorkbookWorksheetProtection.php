@@ -27,16 +27,6 @@ namespace Microsoft\Graph\Model;
 class WorkbookWorksheetProtection extends Entity
 {
     /**
-    * Gets the property dictionary of the WorkbookWorksheetProtection
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-
-    /**
     * Gets the options
     *
     * @return WorkbookWorksheetProtectionOptions The options
@@ -53,7 +43,7 @@ class WorkbookWorksheetProtection extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the options
     *
@@ -66,7 +56,7 @@ class WorkbookWorksheetProtection extends Entity
         $this->_propDict["options"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the protected
     *
@@ -80,7 +70,7 @@ class WorkbookWorksheetProtection extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the protected
     *
@@ -93,4 +83,5 @@ class WorkbookWorksheetProtection extends Entity
         $this->_propDict["protected"] = boolval($val);
         return $this;
     }
+    
 }

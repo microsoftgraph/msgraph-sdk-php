@@ -26,16 +26,6 @@ namespace Microsoft\Graph\Model;
 class ServicePlanInfo extends Entity
 {
     /**
-    * Gets the property dictionary of the ServicePlanInfo
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-    
-    /**
     * Gets the servicePlanId
     *
     * @return string The servicePlanId
@@ -61,7 +51,6 @@ class ServicePlanInfo extends Entity
         $this->_propDict["service_plan_id"] = $val;
         return $this;
     }
-    
     /**
     * Gets the servicePlanName
     *
@@ -88,7 +77,6 @@ class ServicePlanInfo extends Entity
         $this->_propDict["service_plan_name"] = $val;
         return $this;
     }
-    
     /**
     * Gets the provisioningStatus
     *
@@ -115,7 +103,6 @@ class ServicePlanInfo extends Entity
         $this->_propDict["provisioning_status"] = $val;
         return $this;
     }
-    
     /**
     * Gets the appliesTo
     *

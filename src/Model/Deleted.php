@@ -26,16 +26,6 @@ namespace Microsoft\Graph\Model;
 class Deleted extends Entity
 {
     /**
-    * Gets the property dictionary of the Deleted
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-    
-    /**
     * Gets the state
     *
     * @return string The state

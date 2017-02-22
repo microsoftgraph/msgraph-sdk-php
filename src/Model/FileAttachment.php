@@ -24,18 +24,8 @@ namespace Microsoft\Graph\Model;
 * @version   Release: 0.1.0
 * @link      https://graph.microsoft.io/
 */
-class FileAttachment extends Entity
+class FileAttachment extends Attachment
 {
-    /**
-    * Gets the property dictionary of the FileAttachment
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-
     /**
     * Gets the contentId
     *
@@ -49,7 +39,7 @@ class FileAttachment extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the contentId
     *
@@ -62,7 +52,7 @@ class FileAttachment extends Entity
         $this->_propDict["contentId"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the contentLocation
     *
@@ -76,7 +66,7 @@ class FileAttachment extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the contentLocation
     *
@@ -89,7 +79,7 @@ class FileAttachment extends Entity
         $this->_propDict["contentLocation"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the contentBytes
     *
@@ -107,7 +97,7 @@ class FileAttachment extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the contentBytes
     *
@@ -120,4 +110,5 @@ class FileAttachment extends Entity
         $this->_propDict["contentBytes"] = $val;
         return $this;
     }
+    
 }

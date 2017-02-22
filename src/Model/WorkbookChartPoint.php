@@ -27,16 +27,6 @@ namespace Microsoft\Graph\Model;
 class WorkbookChartPoint extends Entity
 {
     /**
-    * Gets the property dictionary of the WorkbookChartPoint
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-
-    /**
     * Gets the value
     *
     * @return string The value
@@ -49,7 +39,7 @@ class WorkbookChartPoint extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the value
     *
@@ -62,7 +52,7 @@ class WorkbookChartPoint extends Entity
         $this->_propDict["value"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the format
     *
@@ -80,7 +70,7 @@ class WorkbookChartPoint extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the format
     *
@@ -93,4 +83,5 @@ class WorkbookChartPoint extends Entity
         $this->_propDict["format"] = $val;
         return $this;
     }
+    
 }

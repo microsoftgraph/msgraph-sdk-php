@@ -27,16 +27,6 @@ namespace Microsoft\Graph\Model;
 class WorkbookChartGridlines extends Entity
 {
     /**
-    * Gets the property dictionary of the WorkbookChartGridlines
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-
-    /**
     * Gets the visible
     *
     * @return bool The visible
@@ -49,7 +39,7 @@ class WorkbookChartGridlines extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the visible
     *
@@ -62,7 +52,7 @@ class WorkbookChartGridlines extends Entity
         $this->_propDict["visible"] = boolval($val);
         return $this;
     }
-
+    
     /**
     * Gets the format
     *
@@ -80,7 +70,7 @@ class WorkbookChartGridlines extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the format
     *
@@ -93,4 +83,5 @@ class WorkbookChartGridlines extends Entity
         $this->_propDict["format"] = $val;
         return $this;
     }
+    
 }

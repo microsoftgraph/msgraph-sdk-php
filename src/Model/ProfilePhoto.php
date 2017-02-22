@@ -27,16 +27,6 @@ namespace Microsoft\Graph\Model;
 class ProfilePhoto extends Entity
 {
     /**
-    * Gets the property dictionary of the ProfilePhoto
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-
-    /**
     * Gets the height
     *
     * @return int The height
@@ -49,7 +39,7 @@ class ProfilePhoto extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the height
     *
@@ -62,7 +52,7 @@ class ProfilePhoto extends Entity
         $this->_propDict["height"] = intval($val);
         return $this;
     }
-
+    
     /**
     * Gets the width
     *
@@ -76,7 +66,7 @@ class ProfilePhoto extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the width
     *
@@ -89,4 +79,5 @@ class ProfilePhoto extends Entity
         $this->_propDict["width"] = intval($val);
         return $this;
     }
+    
 }

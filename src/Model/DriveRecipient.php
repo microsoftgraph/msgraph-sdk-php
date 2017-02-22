@@ -26,16 +26,6 @@ namespace Microsoft\Graph\Model;
 class DriveRecipient extends Entity
 {
     /**
-    * Gets the property dictionary of the DriveRecipient
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-    
-    /**
     * Gets the email
     *
     * @return string The email
@@ -61,7 +51,6 @@ class DriveRecipient extends Entity
         $this->_propDict["email"] = $val;
         return $this;
     }
-    
     /**
     * Gets the alias
     *
@@ -88,7 +77,6 @@ class DriveRecipient extends Entity
         $this->_propDict["alias"] = $val;
         return $this;
     }
-    
     /**
     * Gets the objectId
     *

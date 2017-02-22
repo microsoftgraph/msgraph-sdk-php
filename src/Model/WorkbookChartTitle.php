@@ -27,16 +27,6 @@ namespace Microsoft\Graph\Model;
 class WorkbookChartTitle extends Entity
 {
     /**
-    * Gets the property dictionary of the WorkbookChartTitle
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-
-    /**
     * Gets the overlay
     *
     * @return bool The overlay
@@ -49,7 +39,7 @@ class WorkbookChartTitle extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the overlay
     *
@@ -62,7 +52,7 @@ class WorkbookChartTitle extends Entity
         $this->_propDict["overlay"] = boolval($val);
         return $this;
     }
-
+    
     /**
     * Gets the text
     *
@@ -76,7 +66,7 @@ class WorkbookChartTitle extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the text
     *
@@ -89,7 +79,7 @@ class WorkbookChartTitle extends Entity
         $this->_propDict["text"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the visible
     *
@@ -103,7 +93,7 @@ class WorkbookChartTitle extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the visible
     *
@@ -116,7 +106,7 @@ class WorkbookChartTitle extends Entity
         $this->_propDict["visible"] = boolval($val);
         return $this;
     }
-
+    
     /**
     * Gets the format
     *
@@ -134,7 +124,7 @@ class WorkbookChartTitle extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the format
     *
@@ -147,4 +137,5 @@ class WorkbookChartTitle extends Entity
         $this->_propDict["format"] = $val;
         return $this;
     }
+    
 }
