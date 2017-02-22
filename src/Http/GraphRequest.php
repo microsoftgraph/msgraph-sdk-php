@@ -188,7 +188,7 @@ class GraphRequest
             $model = strtolower(end($class));
             
             $body = $this->flattenDictionary($obj->getProperties());
-            $this->requestBody = "{" . $model . ":" . json_encode($body) . "}";
+            $this->requestBody = json_encode($body);
         } 
         // By default, JSON-encode (i.e. arrays)
         else {
