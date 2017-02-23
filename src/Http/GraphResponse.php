@@ -17,6 +17,9 @@
 
 namespace Microsoft\Graph\Http;
 
+use Microsoft\Graph\Exception\GraphException;
+use Microsoft\Graph\Core\GraphConstants;
+
 /**
  * Class GraphResponse
  *
@@ -139,8 +142,14 @@ class GraphResponse
         //If more than one object is returned
         if (array_key_exists('value', $result)) {
             $objArray = array();
-            foreach ($result['value'] as $obj) {
-                $objArray[] = new $class($obj);
+            print_r($result);
+            $values = $result['value'];
+            if ($values) {
+                foreach ($values as $obj) {
+                    $objArray[] = new $class($obj);
+                }
+            } else {
+                throw new GraphException(GraphConstants::UNABLE_TO_CREATE_INSTANCE_OF_TYPE . " $returnType");
             }
             return $objArray;
         } else {
