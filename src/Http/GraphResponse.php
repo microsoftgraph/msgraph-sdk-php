@@ -139,20 +139,26 @@ class GraphResponse
         $class = $returnType;
         $result = $this->getBody();
 
-        //If more than one object is returned
-        if (array_key_exists('value', $result)) {
-            $objArray = array();
-            $values = $result['value'];
-            if ($values) {
-                foreach ($values as $obj) {
-                    $objArray[] = new $class($obj);
+        try {
+            //If more than one object is returned
+            if (array_key_exists('value', $result)) {
+                $objArray = array();
+                $values = $result['value'];
+
+                //Check that this is an object array instead of a value called "value"
+                if ($values && is_array($values)) {
+                    foreach ($values as $obj) {
+                        $objArray[] = new $class($obj);
+                    }
+                } else {
+                    return new $class($result);
                 }
+                return $objArray;
             } else {
-                throw new GraphException(GraphConstants::UNABLE_TO_CREATE_INSTANCE_OF_TYPE . " $returnType");
+                return new $class($result);
             }
-            return $objArray;
-        } else {
-            return new $class($result);
+        } catch (GraphException $e) {
+            throw new GraphException(GraphConstants::UNABLE_TO_CREATE_INSTANCE_OF_TYPE . " $returnType");
         }
     }
 
