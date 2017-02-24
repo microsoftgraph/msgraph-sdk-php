@@ -5,17 +5,22 @@ use Microsoft\Graph\Model;
 
 class MailTest extends TestCase
 {
+    private $_client;
+
+    protected function setUp()
+    {
+        $graphTestBase = new GraphTestBase();
+        $this->_client = $graphTestBase->graphClient;
+    }
+
     /**
     * @group functional
     */
     public function createEmail($emailBody)
     {
-        $graphTestBase = new GraphTestBase();
-        $client = $graphTestBase->graphClient;
-
-        $me = $client->createRequest("GET", "/me")
-                     ->setReturnType(Model\User::class)
-                     ->execute();
+        $me = $this->_client->createRequest("GET", "/me")
+                            ->setReturnType(Model\User::class)
+                            ->execute();
         $subject = new DateTime();
         $subject = $subject->format('Y-m-d H:i:s');
         
@@ -39,18 +44,15 @@ class MailTest extends TestCase
     {
         $message = $this->createEmail("Sent from the SendMail test");
 
-        $graphTestBase = new GraphTestBase();
-        $client = $graphTestBase->graphClient;
-
         $body = array("message" => $message);
 
-        $client->createRequest("POST", "/me/sendmail")
-               ->attachBody($body)
-               ->execute();
+        $this->_client->createRequest("POST", "/me/sendmail")
+                      ->attachBody($body)
+                      ->execute();
 
-        $mailFolderMessages = $client->createRequest("GET", "/me/mailFolders/sentItems/messages?\$filter=subject eq '\$message->getSubject()'")
-                                     ->setReturnType(Model\Message::class)
-                                     ->execute();
+        $mailFolderMessages = $this->_client->createRequest("GET", "/me/mailFolders/sentItems/messages?\$filter=subject eq '\$message->getSubject()'")
+                                            ->setReturnType(Model\Message::class)
+                                            ->execute();
         $this->assertNotNull($mailFolderMessages);
     }
     
@@ -61,9 +63,6 @@ class MailTest extends TestCase
     {
         $message = $this->createEmail("Sent from the SendMailWithAttachment test");
 
-        $graphTestBase = new GraphTestBase();
-        $client = $graphTestBase->graphClient;
-
         $attachment = new Model\FileAttachment();
         $attachment->setName("MyFileAttachment.txt");
         $attachment->setContentBytes("data");
@@ -73,13 +72,13 @@ class MailTest extends TestCase
 
         $body = array("message" => $message);
 
-        $client->createRequest("POST", "/me/sendmail")
-               ->attachBody($body)
-               ->execute();
+        $this->_client->createRequest("POST", "/me/sendmail")
+                      ->attachBody($body)
+                      ->execute();
 
-        $mailFolderMessages = $client->createRequest("GET", "/me/mailFolders/sentItems/messages?\$filter=subject eq '\$message->getSubject()'")
-                                     ->setReturnType(Model\Message::class)
-                                     ->execute();
+        $mailFolderMessages = $this->_client->createRequest("GET", "/me/mailFolders/sentItems/messages?\$filter=subject eq '\$message->getSubject()'")
+                                            ->setReturnType(Model\Message::class)
+                                            ->execute();
         $this->assertNotNull($mailFolderMessages);
     }
 
@@ -90,24 +89,22 @@ class MailTest extends TestCase
     */
     public function testGetMailWithAttachment()
     {
-        $graphTestBase = new GraphTestBase();
-        $client = $graphTestBase->graphClient;
-
-        $messageCollection = $client->createRequest("GET", "/me/messages?\$filter=hasAttachments eq true")
-                                    ->setReturnType(Model\Message::class)
-                                    ->execute();
+        $messageCollection = $this->_client->createRequest("GET", "/me/messages?\$filter=hasAttachments eq true")
+                                           ->setReturnType(Model\Message::class)
+                                           ->execute();
         $messageId = $messageCollection[0]->getId();
 
         if (count($messageCollection) > 0) {
-            $attachments = $client->createRequest("GET", "/me/messages/$messageId/attachments")
-                                  ->setReturnType(Model\Attachment::class)
-                                  ->execute();
+            $attachments = $this->_client->createRequest("GET", "/me/messages/$messageId/attachments")
+                                         ->setReturnType(Model\Attachment::class)
+                                         ->execute();
 
             $attachmentId = $attachments[0]->getId();
-            $attachment = $client->createRequest("GET", "/me/messages/$messageId/attachments/$attachmentId")
-                                 ->setReturnType(GuzzleHttp\Psr7\Stream::class)
-                                 ->execute();
+            $attachment = $this->_client->createRequest("GET", "/me/messages/$messageId/attachments/$attachmentId")
+                                        ->setReturnType(GuzzleHttp\Psr7\Stream::class)
+                                        ->execute();
             $attachment = $attachment->getResponseAsObject(Model\FileAttachment::class);
+
             $this->assertInstanceOf(Model\FileAttachment::class, $attachment);
             $this->assertNotNull($attachment->getContentBytes());
         }
@@ -118,11 +115,8 @@ class MailTest extends TestCase
     */
     public function testMailGetNextPage()
     {
-        $graphTestBase = new GraphTestBase();
-        $client = $graphTestBase->graphClient;
-
-        $messageIterator = $client->createCollectionRequest("GET", "/me/messages")
-                                  ->setReturnType(Model\Message::class);
+        $messageIterator = $this->_client->createCollectionRequest("GET", "/me/messages")
+                                         ->setReturnType(Model\Message::class);
         $messages = $messageIterator->getPage();
 
         while (!$messageIterator->isEnd())
