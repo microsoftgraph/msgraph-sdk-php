@@ -109,6 +109,9 @@ class ExcelTest extends TestCase
 	    }
     }
 
+    /**
+    * @group functional
+    */
     public function testChangeNumberFormat()
     {
     	$graphTestBase = new GraphTestBase();

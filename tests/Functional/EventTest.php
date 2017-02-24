@@ -5,6 +5,9 @@ use Microsoft\Graph\Model;
 
 class EventTest extends TestCase
 {
+    /**
+    * @group functional
+    */
 	public function testGetCalendarView()
 	{
 		$graphTestBase = new GraphTestBase();
