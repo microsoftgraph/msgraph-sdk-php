@@ -16,7 +16,7 @@ class GraphResponseTest extends TestCase
     public function setUp()
     {
         $this->responseBody = array('body' => 'content', 'displayName' => 'Bob Barker');
-        
+
         $body = json_encode($this->responseBody);
         $multiBody = json_encode(array('value' => array('1' => array('givenName' => 'Bob'), '2' => array('givenName' => 'Drew'))));
         $valueBody = json_encode(array('value' => 'Bob Barker'));
@@ -43,17 +43,6 @@ class GraphResponseTest extends TestCase
         $this->assertEquals($this->responseBody['displayName'], $response->getDisplayName());
     }
 
-    public function testGetResponseAsListOfObjects()
-    {
-        $this->request->setReturnType(Model\User::class);
-        $response = $this->request->execute($this->client);
-        $response = $this->request->execute($this->client);
-
-        $this->assertContainsOnlyInstancesOf(Model\User::class, $response);
-        $this->assertEquals('Drew Carey', $response[1]->getDisplayName());
-        $this->assertEquals(2, count($response));
-    }
-
     public function testGetResponseHeaders()
     {
         $response = $this->request->execute($this->client);
@@ -69,19 +58,6 @@ class GraphResponseTest extends TestCase
 
         $nextLink = $response->getNextLink();
         $this->assertEquals('https://url.com/resource?$top=4&skip=4', $nextLink);
-    }
-
-    public function testNoSkipToken()
-    {
-        //Temporarily make getSkipToken() public
-        $reflectionMethod = new ReflectionMethod('Microsoft\Graph\Http\GraphResponse', 'getSkipToken');
-        $reflectionMethod->setAccessible(true);
-
-        $body = json_encode(array('@odata.nextLink' => 'https://url.com/resource'));
-        $response = new GraphResponse($this->request, $body);
-
-        $token = $reflectionMethod->invokeArgs($response, array());
-        $this->assertNull($token);
     }
 
     public function testDecodeBody()

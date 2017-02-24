@@ -240,7 +240,7 @@ class GraphRequest
         // Wrap response in GraphResponse layer
         $response = new GraphResponse(
             $this, 
-            $result->getBody()->getContents(), 
+            $result->getBody(), 
             $result->getStatusCode(), 
             $result->getHeaders()
         );
@@ -281,7 +281,7 @@ class GraphRequest
             function ($result) {
                 $response = new GraphResponse(
                     $this, 
-                    $result->getBody()->getContents(), 
+                    $result->getBody(), 
                     $result->getStatusCode(), 
                     $result->getHeaders()
                 );

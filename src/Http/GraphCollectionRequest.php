@@ -101,7 +101,6 @@ class GraphCollectionRequest extends GraphRequest
         /* The $count query parameter for the Graph API
            is available on several models but not all */
         trigger_error('Count unavailable for this collection');
-        return null;
     }
 
     /**
@@ -156,7 +155,6 @@ class GraphCollectionRequest extends GraphRequest
 
         if ($this->end) {
             trigger_error('Reached end of collection');
-            return null;
         }
 
         if ($this->nextLink) {

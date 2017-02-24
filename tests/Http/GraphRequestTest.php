@@ -108,7 +108,7 @@ class GraphRequestTest extends TestCase
         $model = new Microsoft\Graph\Model\User(array("id" => 1, "manager" => new Microsoft\Graph\Model\User(array("id" => 2))));
         $this->requests[0]->attachBody($model);
         $body = $this->requests[0]->getBody();
-        $this->assertEquals('{user:{"id":1,"manager":{"id":2}}}', $body);
+        $this->assertEquals('{"id":1,"manager":{"id":2}}', $body);
     }
 
     public function testAttachDoubleNestedDictionary()
@@ -142,14 +142,6 @@ class GraphRequestTest extends TestCase
         $response = $this->requests[0]->execute($this->client);
 
         $this->assertInstanceOf(Microsoft\Graph\Http\GraphResponse::class, $response);
-    }
-    
-    public function testReturnStream()
-    {
-        $this->requests[0]->setReturnType('stream');
-        $response = $this->requests[0]->execute($this->client);
-
-        $this->assertInstanceOf(GuzzleHttp\Psr7\Response::class, $response);
     }
 
     public function testExecuteWithTimeout()
