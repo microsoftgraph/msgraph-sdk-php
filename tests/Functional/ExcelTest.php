@@ -23,7 +23,7 @@ class ExcelTest extends TestCase
         $this->deleteTestFile($this->_fileId);
     }
 
-    public function createTestFile($filename)
+    private function createTestFile($filename)
     {
     	$excelWorkbook = new Model\DriveItem();
     	$excelWorkbook->setName($filename);
@@ -40,7 +40,7 @@ class ExcelTest extends TestCase
     	return $excelWorkbookDriveItem->getId();
     }
 
-    public function deleteTestFile($fileId)
+    private function deleteTestFile($fileId)
     {
     	//After updating the doc, the service cannot immediately process the delete
     	sleep(4);
@@ -50,7 +50,7 @@ class ExcelTest extends TestCase
     		          ->execute();
     }
 
-    public function uploadTestFileContent($fileId)
+    private function uploadTestFileContent($fileId)
     {
         $stream = GuzzleHttp\Psr7\stream_for(fopen(".\\tests\\Functional\\Resources\\excelTestResource.xlsx", "r"));
     	$excelDriveItem = $this->_client->createRequest("PUT", "/me/drive/items/" . $this->_fileId . "/content")

@@ -5,17 +5,22 @@ use Microsoft\Graph\Model;
 
 class UserTest extends TestCase
 {
+    private $_client;
+
+    protected function setUp()
+    {
+        $graphTestBase = new GraphTestBase();
+        $this->_client = $graphTestBase->graphClient;
+    }
+
 	/**
 	* @group functional
 	*/
 	public function testFilterByStartsWith()
 	{
-		$graphTestBase = new GraphTestBase();
-    	$client = $graphTestBase->graphClient;
-
-    	$users = $client->createRequest("GET", "/users?\$filter=startswith(displayName, 'A')")
-    					->setReturnType(Model\User::class)
-    					->execute();
+    	$users = $this->_client->createRequest("GET", "/users?\$filter=startswith(displayName, 'A')")
+    					       ->setReturnType(Model\User::class)
+    					       ->execute();
     	foreach ($users as $user)
     	{
     		$this->assertEquals("A", substr($user->getDisplayName(), 0,1));
@@ -27,11 +32,8 @@ class UserTest extends TestCase
     */
     public function testGetPhoto()
     {
-    	$graphTestBase = new GraphTestBase();
-    	$client = $graphTestBase->graphClient;
-
-    	$photo = $client->createRequest("GET", "/me/photo/\$value")
-    					->execute();
+    	$photo = $this->_client->createRequest("GET", "/me/photo/\$value")
+    					       ->execute();
     	$this->assertNotNull($photo->getRawBody());
     }
 
@@ -40,12 +42,9 @@ class UserTest extends TestCase
     */
     public function testGetUser()
     {
-    	$graphTestBase = new GraphTestBase();
-    	$client = $graphTestBase->graphClient;
-
-    	$user = $client->createRequest("GET", "/me")
-    				   ->setReturnType(Model\User::class)
-    				   ->execute();
+    	$user = $this->_client->createRequest("GET", "/me")
+    				          ->setReturnType(Model\User::class)
+    				          ->execute();
     	$this->assertNotNull($user->getUserPrincipalName());
     }
 
@@ -54,12 +53,9 @@ class UserTest extends TestCase
     */
     public function testGetManager()
     {
-    	$graphTestBase = new GraphTestBase();
-    	$client = $graphTestBase->graphClient;
-
-    	$manager = $client->createRequest("GET", "/me/manager")
-    				   ->setReturnType(Model\User::class)
-    				   ->execute();
+    	$manager = $this->_client->createRequest("GET", "/me/manager")
+    				             ->setReturnType(Model\User::class)
+    				             ->execute();
     	$this->assertNotNull($manager->getDisplayName());
     }
 
@@ -68,19 +64,16 @@ class UserTest extends TestCase
     */
     public function testUpdateManager()
     {
-    	$graphTestBase = new GraphTestBase();
-    	$client = $graphTestBase->graphClient;
+    	$manager = $this->_client->createRequest("GET", "/me/manager")
+    				             ->setReturnType(Model\User::class)
+    				             ->execute();
 
-    	$manager = $client->createRequest("GET", "/me/manager")
-    				   ->setReturnType(Model\User::class)
-    				   ->execute();
-
-    	$client->createRequest("PUT", "/me/manager/\$ref")
-    		   ->attachBody('{"@odata.id": "https://graph.microsoft.com/v1.0/users/'.$manager->getId().'"}')
-    		   ->execute();
-    	$newManager = $client->createRequest("GET", "/me/manager")
-    				   ->setReturnType(Model\User::class)
-    				   ->execute();
+    	$this->_client->createRequest("PUT", "/me/manager/\$ref")
+    		          ->attachBody('{"@odata.id": "https://graph.microsoft.com/v1.0/users/'.$manager->getId().'"}')
+    		          ->execute();
+    	$newManager = $this->_client->createRequest("GET", "/me/manager")
+    				                ->setReturnType(Model\User::class)
+    				                ->execute();
     	$this->assertEquals($manager, $newManager);
     }
 
@@ -89,13 +82,10 @@ class UserTest extends TestCase
     */
     public function testGetMemberGroupsWithSecurityEnabled()
     {
-		$graphTestBase = new GraphTestBase();
-    	$client = $graphTestBase->graphClient;
-
-    	$groups = $client->createRequest("POST", "/me/getMemberGroups")
-    					  ->attachBody("{securityEnabledOnly: true}")
-    				      ->setReturnType(Model\Group::class)
-    				      ->execute();
+    	$groups = $this->_client->createRequest("POST", "/me/getMemberGroups")
+    					        ->attachBody("{securityEnabledOnly: true}")
+    				            ->setReturnType(Model\Group::class)
+    				            ->execute();
     	$this->assertNotNull($groups);
     }
 
@@ -104,36 +94,30 @@ class UserTest extends TestCase
     */
     public function testUpdateUser()
     {
-    	$graphTestBase = new GraphTestBase();
-    	$client = $graphTestBase->graphClient;
-
     	$user = $this->getCurrentUser();
 
     	$newUser = new Model\User();
     	$newUser->setGivenName("Katherine");
 
-    	$client->createRequest("PATCH", "/me")
-    						  ->attachBody($newUser)
-    						  ->execute();
+    	$this->_client->createRequest("PATCH", "/me")
+    				  ->attachBody($newUser)
+    				  ->execute();
     	$updatedUser = $this->getCurrentUser();
 
     	$this->assertEquals("Katherine", $updatedUser->getGivenName());
     	$this->assertEquals($user->getMail(), $updatedUser->getMail());
 
-    	$client->createRequest("PATCH", "/me")
-    		   ->attachBody($user)
-    		   ->setReturnType(Model\User::class)
-    		   ->execute();
+    	$this->_client->createRequest("PATCH", "/me")
+    		          ->attachBody($user)
+    		          ->setReturnType(Model\User::class)
+    		          ->execute();
     	$restoredUser = $this->getCurrentUser();
     	$this->assertEquals($user->getGivenName(), $restoredUser->getGivenName());
     }
 
-    public function getCurrentUser()
+    private function getCurrentUser()
     {
-    	$graphTestBase = new GraphTestBase();
-    	$client = $graphTestBase->graphClient;
-
-    	return $client->createRequest("GET", "/me")
+    	return $this->_client->createRequest("GET", "/me")
     				      ->setReturnType(Model\User::class)
     				      ->execute();
     }
