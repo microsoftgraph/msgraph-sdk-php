@@ -238,16 +238,12 @@ class GraphRequest
         );
 
         // Wrap response in GraphResponse layer
-        try {
-            $response = new GraphResponse(
-                $this, 
-                $result->getBody(), 
-                $result->getStatusCode(), 
-                $result->getHeaders()
-            );
-        } catch (GraphException $e) {
-            throw new GraphException(GraphConstants::UNABLE_TO_PARSE_RESPONSE);
-        }
+        $response = new GraphResponse(
+            $this, 
+            $result->getBody()->getContents(), 
+            $result->getStatusCode(), 
+            $result->getHeaders()
+        );
 
         // If no return type is specified, return GraphResponse
         $returnObj = $response;
@@ -322,17 +318,22 @@ class GraphRequest
             $client = $this->createGuzzleClient();
         }
         try {
-            $file = fopen($path, 'w');
+            if (file_exists($path) && is_writeable($path)) {
+                $file = fopen($path, 'w');
 
-            $client->request(
-                $this->requestType, 
-                $this->_getRequestUrl(), 
-                [
-                    'body' => $this->requestBody,
-                    'sink' => $file
-                ]
-            );
-            fclose($file);
+                $client->request(
+                    $this->requestType, 
+                    $this->_getRequestUrl(), 
+                    [
+                        'body' => $this->requestBody,
+                        'sink' => $file
+                    ]
+                );
+                fclose($file);
+            } else {
+                throw new GraphException(GraphConstants::INVALID_FILE);
+            }
+            
         } catch(GraphException $e) {
             throw new GraphException(GraphConstants::INVALID_FILE);
         }
@@ -355,10 +356,14 @@ class GraphRequest
             $client = $this->createGuzzleClient();
         }
         try {
-            $file = fopen($path, 'r');
-            $stream = \GuzzleHttp\Psr7\stream_for($file);
-            $this->requestBody = $stream;
-            return $this->execute($client);
+            if (file_exists($path) && is_readable($path)) {
+                $file = fopen($path, 'r');
+                $stream = \GuzzleHttp\Psr7\stream_for($file);
+                $this->requestBody = $stream;
+                return $this->execute($client);
+            } else {
+                throw new GraphException(GraphConstants::INVALID_FILE);
+            }
         } catch(GraphException $e) {
             throw new GraphException(GraphConstants::INVALID_FILE);
         }

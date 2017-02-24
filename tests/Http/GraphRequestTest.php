@@ -29,8 +29,7 @@ class GraphRequestTest extends TestCase
         $mock = new GuzzleHttp\Handler\MockHandler([
             new GuzzleHttp\Psr7\Response(200, ['foo' => 'bar'], $body),
             new GuzzleHttp\Psr7\Response(201, ['foo' => 'bar']),
-            new GuzzleHttp\Psr7\Response(200, ['foo' => 'bar'], $body),
-            new GuzzleHttp\Psr7\Response(201, ['foo' => 'bar'])
+            new GuzzleHttp\Psr7\Response(200, ['foo' => 'bar'], $body)
         ]);
         $handler = GuzzleHttp\HandlerStack::create($mock);
         $this->client = new GuzzleHttp\Client(['handler' => $handler]);
@@ -98,9 +97,44 @@ class GraphRequestTest extends TestCase
 
     public function testGetBody()
     {
-        $request = $this->requests[0]->attachBody("content");
+        $testBody = json_encode(array('body' => 'content'));
+        $this->requests[0]->attachBody($testBody);
+        $body = $this->requests[0]->getBody();
+        $this->assertEquals($testBody, $body);
+    }
 
-        $this->assertEquals("content", $request->getBody());
+    public function testAttachPropertyDictionary()
+    {
+        $model = new Microsoft\Graph\Model\User(array("id" => 1, "manager" => new Microsoft\Graph\Model\User(array("id" => 2))));
+        $this->requests[0]->attachBody($model);
+        $body = $this->requests[0]->getBody();
+        $this->assertEquals('{user:{"id":1,"manager":{"id":2}}}', $body);
+    }
+
+    public function testAttachDoubleNestedDictionary()
+    {
+        $testBody = json_encode(array("data"=> array("key" => array("key2" => "val"))));
+        $this->requests[0]->attachBody(array("data"=> array("key" => array("key2" => "val"))));
+        $body = $this->requests[0]->getBody();
+        $this->assertEquals($testBody, $body);
+    }
+
+    public function testSetTimeout()
+    {
+        $this->requests[0]->setTimeout('200');
+        $this->assertAttributeEquals('200', 'timeout', $this->requests[0]);
+    }
+
+    public function testCreateGuzzleClient()
+    {
+        $reflectionMethod = new ReflectionMethod('Microsoft\Graph\Http\GraphRequest', 'createGuzzleClient');
+        $reflectionMethod->setAccessible(true);
+
+        $request = $this->requests[0];
+        $client = $reflectionMethod->invokeArgs($request, array());
+
+        $this->assertInstanceOf(GuzzleHttp\Client::class, $client);
+
     }
 
     public function testExecute()
@@ -108,6 +142,14 @@ class GraphRequestTest extends TestCase
         $response = $this->requests[0]->execute($this->client);
 
         $this->assertInstanceOf(Microsoft\Graph\Http\GraphResponse::class, $response);
+    }
+    
+    public function testReturnStream()
+    {
+        $this->requests[0]->setReturnType('stream');
+        $response = $this->requests[0]->execute($this->client);
+
+        $this->assertInstanceOf(GuzzleHttp\Psr7\Response::class, $response);
     }
 
     public function testExecuteWithTimeout()
