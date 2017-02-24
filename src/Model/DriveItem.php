@@ -300,7 +300,7 @@ class DriveItem extends Entity
             if (is_a($this->_propDict["content"], "\GuzzleHttp\Psr7\Stream")) {
                 return $this->_propDict["content"];
             } else {
-                $this->_propDict["content"] = new \GuzzleHttp\Psr7\Stream($this->_propDict["content"]);
+                $this->_propDict["content"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["content"]);
                 return $this->_propDict["content"];
             }
         }
