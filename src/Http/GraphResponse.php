@@ -140,6 +140,9 @@ class GraphResponse
         $result = $this->getBody();
 
         try {
+            if ($returnType == "GuzzleHttp\Psr7\Stream") {
+                return $result;
+            }
             //If more than one object is returned
             if (array_key_exists('value', $result)) {
                 $objArray = array();
