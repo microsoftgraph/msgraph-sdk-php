@@ -3,4 +3,4 @@ composer.lock
 /vendor/
 /coverage
 .idea/
-/tests/Functional/TestConstants.php
+tests/Functional/TestConstants.php
