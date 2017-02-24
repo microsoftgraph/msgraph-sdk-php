@@ -110,6 +110,13 @@ class GraphRequestTest extends TestCase
         $this->assertInstanceOf(Microsoft\Graph\Http\GraphResponse::class, $response);
     }
 
+    public function testExecuteWithTimeout()
+    {
+        $response = $this->requests[0]->setTimeout(300)->execute($this->client);
+
+        $this->assertInstanceOf(Microsoft\Graph\Http\GraphResponse::class, $response);
+    }
+
     public function testExecuteAsync()
     {
         $body = json_encode(array('body' => 'content'));
