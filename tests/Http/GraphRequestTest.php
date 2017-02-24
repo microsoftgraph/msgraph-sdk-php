@@ -96,6 +96,13 @@ class GraphRequestTest extends TestCase
         $this->assertEquals($this->defaultHeaders, $headers);
     }
 
+    public function testGetBody()
+    {
+        $request = $this->requests[0]->attachBody("content");
+
+        $this->assertEquals("content", $request->getBody());
+    }
+
     public function testExecute()
     {
         $response = $this->requests[0]->execute($this->client);

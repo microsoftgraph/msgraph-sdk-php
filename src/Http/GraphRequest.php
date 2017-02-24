@@ -136,7 +136,7 @@ class GraphRequest
     public function setReturnType($returnClass)
     {
         $this->returnType = $returnClass;
-        if (strcasecmp($this->returnType, 'stream') == 0) {
+        if ($this->returnType == "GuzzleHttp\Psr7\Stream") {
             $this->returnsStream  = true;
         } else {
             $this->returnsStream = false;
@@ -237,16 +237,11 @@ class GraphRequest
             ]
         );
 
-        //Send back the bare response
-        if ($this->returnsStream) {
-            return $result;
-        }
-
         // Wrap response in GraphResponse layer
         try {
             $response = new GraphResponse(
                 $this, 
-                $result->getBody()->getContents(), 
+                $result->getBody(), 
                 $result->getStatusCode(), 
                 $result->getHeaders()
             );

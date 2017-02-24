@@ -16,9 +16,14 @@ class GraphResponseTest extends TestCase
     {
         $this->responseBody = array('body' => 'content', 'displayName' => 'Bob Barker');
         $body = json_encode($this->responseBody);
+        $multiBody = json_encode(array('value' => array('1' => array('givenName' => 'Bob'), '2' => array('givenName' => 'Drew'))));
+        $valueBody = json_encode(array('value' => 'Bob Barker'));
+
         $mock = new GuzzleHttp\Handler\MockHandler([
             new GuzzleHttp\Psr7\Response(200, ['foo' => 'bar'], $body),
-            new GuzzleHttp\Psr7\Response(200, ['foo' => 'bar'], $body)
+            new GuzzleHttp\Psr7\Response(200, ['foo' => 'bar'], $body),
+            new GuzzleHttp\Psr7\Response(200, ['foo' => 'bar'], $multiBody),
+            new GuzzleHttp\Psr7\Response(200, ['foo' => 'bar'], $valueBody),
         ]);
         $handler = GuzzleHttp\HandlerStack::create($mock);
         $this->client = new GuzzleHttp\Client(['handler' => $handler]);
@@ -34,6 +39,14 @@ class GraphResponseTest extends TestCase
         $this->assertInstanceOf(Model\User::class, $response);
         $this->assertEquals($this->responseBody['displayName'], $response->getDisplayName());
 
+    }
+
+    public function testGetResponseHeaders()
+    {
+        $response = $this->request->execute($this->client);
+        $headers = $response->getHeaders();
+
+        $this->assertEquals(["foo" => ["bar"]], $headers);
     }
 
     public function testGetNextLink()
@@ -91,5 +104,25 @@ class GraphResponseTest extends TestCase
         $response = $this->request->execute($this->client);
 
         $this->assertEquals('200', $response->getStatus());
+    }
+
+    public function testGetMultipleObjects()
+    {
+        $this->request->execute($this->client);
+        $this->request->execute($this->client);
+        $hosts = $this->request->setReturnType(Model\User::class)->execute($this->client);
+
+        $this->assertEquals(2, count($hosts));
+        $this->assertEquals("Bob", $hosts[0]->getGivenName());
+    }
+
+    public function testGetValueObject()
+    {
+        $this->request->execute($this->client);
+        $this->request->execute($this->client);
+        $this->request->execute($this->client);
+        $response = $this->request->setReturnType(Model\User::class)->execute($this->client);
+
+        $this->assertInstanceOf(Model\User::class, $response);
     }
 }

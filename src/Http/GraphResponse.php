@@ -64,7 +64,7 @@ class GraphResponse
     * @param string $httpStatusCode The returned status code
     * @param array  $headers        The returned headers
     */
-    public function __construct($request, $body = null, $httpStatusCode = null, $headers = array())
+    public function __construct($request, $body = null, $httpStatusCode = null, $headers = null)
     {
         $this->_request = $request;
         $this->_body = $body;
@@ -139,29 +139,26 @@ class GraphResponse
         $class = $returnType;
         $result = $this->getBody();
 
-        try {
-            if ($returnType == "GuzzleHttp\Psr7\Stream") {
-                return $result;
-            }
-            //If more than one object is returned
-            if (array_key_exists('value', $result)) {
-                $objArray = array();
-                $values = $result['value'];
+        if ($returnType == "GuzzleHttp\Psr7\Stream") {
+              return $this->_body;  
+        }
 
-                //Check that this is an object array instead of a value called "value"
-                if ($values && is_array($values)) {
-                    foreach ($values as $obj) {
-                        $objArray[] = new $class($obj);
-                    }
-                } else {
-                    return new $class($result);
+        //If more than one object is returned
+        if (array_key_exists('value', $result)) {
+            $objArray = array();
+            $values = $result['value'];
+
+            //Check that this is an object array instead of a value called "value"
+            if ($values && is_array($values)) {
+                foreach ($values as $obj) {
+                    $objArray[] = new $class($obj);
                 }
-                return $objArray;
             } else {
                 return new $class($result);
             }
-        } catch (GraphException $e) {
-            throw new GraphException(GraphConstants::UNABLE_TO_CREATE_INSTANCE_OF_TYPE . " $returnType");
+            return $objArray;
+        } else {
+            return new $class($result);
         }
     }
 

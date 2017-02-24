@@ -46,7 +46,7 @@ class OnedriveTest extends TestCase
     		{
     			$itemId = $item->getId();
     			$driveItemContent = $this->_client->createRequest("GET", "/me/drive/items/$itemId/content")
-    									          ->setReturnType("stream")
+    									          ->setReturnType(GuzzleHttp\Psr7\Stream::class)
     									          ->execute();
     			$this->assertNotNull($driveItemContent);
     		}
