@@ -44,6 +44,17 @@ class StreamTest extends TestCase
         $this->assertEquals($this->container[0]['request']->getBody()->getContents(), $file->getContent());
     }
 
+    public function testInvalidUpload()
+    {
+        $this->expectException(Microsoft\Graph\Exception\GraphException::class);
+
+        $file = new VfsStreamFile('foo.txt', 0000);
+        $this->root->addChild($file);
+
+        $request = new GraphRequest("GET", "/me", "token", "url", "/v1.0");
+        $request->upload($file->url(), $this->client);
+    }
+
     public function testDownload()
     {
         $request = new GraphRequest("GET", "/me", "token", "url", "/v1.0");
@@ -52,6 +63,17 @@ class StreamTest extends TestCase
 
         $request->download($file->url(), $this->client);
         $this->assertEquals($this->body, $file->getContent());
+    }
+
+    public function testInvalidDownload()
+    {
+        $this->expectException(Microsoft\Graph\Exception\GraphException::class);
+
+        $file = new VfsStreamFile('foo.txt', 0000);
+        $this->root->addChild($file);
+
+        $request = new GraphRequest("GET", "/me", "token", "url", "/v1.0");
+        $request->download($file->url(), $this->client);
     }
 
     public function testSetReturnStream()

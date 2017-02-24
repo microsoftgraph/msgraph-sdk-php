@@ -157,12 +157,13 @@ class GraphResponse
     {
         if (array_key_exists("@odata.nextLink", $this->getBody())) {
             $nextLink = $this->getBody()['@odata.nextLink'];
-            $url = explode("?", $nextLink)[1];
-            $url = explode("skiptoken=", $url);
-            if (count($url) > 1) {
-                return $url[1];
+            if (stripos($nextLink, "?") !== FALSE) {
+                $url = explode("?", $nextLink)[1];
+                if (stripos($url, "skiptoken=") !== FALSE) {
+                    $url = explode("skiptoken=", $url);
+                    return $url[1];
+                }
             }
-            return null;
         }
         return null;
     }
