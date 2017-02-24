@@ -82,10 +82,8 @@ class MailTest extends TestCase
         $this->assertNotNull($mailFolderMessages);
     }
 
-//TODO: FIX STREAMS
     /**
-    * @group functional 
-    * @group failing
+    * @group functional
     */
     public function testGetMailWithAttachment()
     {
@@ -101,9 +99,8 @@ class MailTest extends TestCase
 
             $attachmentId = $attachments[0]->getId();
             $attachment = $this->_client->createRequest("GET", "/me/messages/$messageId/attachments/$attachmentId")
-                                        ->setReturnType(GuzzleHttp\Psr7\Stream::class)
+                                        ->setReturnType(Model\FileAttachment::class)
                                         ->execute();
-            $attachment = $attachment->getResponseAsObject(Model\FileAttachment::class);
 
             $this->assertInstanceOf(Model\FileAttachment::class, $attachment);
             $this->assertNotNull($attachment->getContentBytes());
