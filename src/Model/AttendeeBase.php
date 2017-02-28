@@ -23,7 +23,7 @@ namespace Microsoft\Graph\Model;
 * @version   Release: 0.1.0
 * @link      https://graph.microsoft.io/
 */
-class AttendeeBase extends Entity
+class AttendeeBase extends Recipient
 {
 
     /**

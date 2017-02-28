@@ -23,7 +23,7 @@ namespace Microsoft\Graph\Model;
 * @version   Release: 0.1.0
 * @link      https://graph.microsoft.io/
 */
-class LocationConstraintItem extends Entity
+class LocationConstraintItem extends Location
 {
     /**
     * Gets the resolveAvailability
