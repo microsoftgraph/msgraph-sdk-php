@@ -27,16 +27,6 @@ namespace Microsoft\Graph\Model;
 class InferenceClassificationOverride extends Entity
 {
     /**
-    * Gets the property dictionary of the InferenceClassificationOverride
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-
-    /**
     * Gets the classifyAs
     *
     * @return InferenceClassificationType The classifyAs
@@ -53,7 +43,7 @@ class InferenceClassificationOverride extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the classifyAs
     *
@@ -66,7 +56,7 @@ class InferenceClassificationOverride extends Entity
         $this->_propDict["classifyAs"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the senderEmailAddress
     *
@@ -84,7 +74,7 @@ class InferenceClassificationOverride extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the senderEmailAddress
     *
@@ -97,4 +87,5 @@ class InferenceClassificationOverride extends Entity
         $this->_propDict["senderEmailAddress"] = $val;
         return $this;
     }
+    
 }

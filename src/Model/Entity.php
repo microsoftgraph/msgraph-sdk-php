@@ -24,7 +24,7 @@ namespace Microsoft\Graph\Model;
 * @version   Release: 0.1.0
 * @link      https://graph.microsoft.io/
 */
-class Entity
+class Entity implements \JsonSerializable
 {
     /**
     * The array of properties available
@@ -43,6 +43,7 @@ class Entity
     {
 		$this->_propDict = $propDict;
     }
+
     /**
     * Gets the property dictionary of the Entity
     *
@@ -52,7 +53,7 @@ class Entity
     {
         return $this->_propDict;
     }
-
+    
     /**
     * Gets the id
     *
@@ -66,7 +67,7 @@ class Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the id
     *
@@ -78,5 +79,37 @@ class Entity
     {
         $this->_propDict["id"] = $val;
         return $this;
+    }
+    
+    /**
+    * Gets the ODataType
+    *
+    * @return string The ODataType
+    */
+    public function getODataType()
+    {
+        return $this->_propDict["@odata.type"];
+    }
+    
+    /**
+    * Sets the ODataType
+    *
+    * @param string The ODataType
+    *
+    * @return Entity
+    */
+    public function setODataType($val)
+    {
+        $this->_propDict["@odata.type"] = $val;
+    }
+    
+    /**
+    * Serializes the object by property array
+    *
+    * @return array The list of properties
+    */
+    public function jsonSerialize()
+    {
+        return $this->getProperties();
     }
 }

@@ -24,7 +24,7 @@ class GraphConstants
     const REST_ENDPOINT = "https://graph.microsoft.com/";
 
     // Define HTTP request constants
-    const SDK_VERSION = "0.1.0";
+    const SDK_VERSION = "0.1.1";
 
     // Define error constants
     const MAX_PAGE_SIZE = 999;
@@ -34,7 +34,7 @@ class GraphConstants
     // Define error message constants
     const BASE_URL_MISSING = "Base URL cannot be null or empty.";
     const REQUEST_TIMED_OUT = "The request timed out.";
-    const UNABLE_TO_CREATE_INSTANCE_OF_TYPE = "Unable to create instance of type.";
+    const UNABLE_TO_CREATE_INSTANCE_OF_TYPE = "Unable to create instance of type";
 
     // Define user error constants
     const INVALID_FILE = "Unable to open file stream for the given path.";

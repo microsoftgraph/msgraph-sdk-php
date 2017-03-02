@@ -59,4 +59,25 @@ class ModelTest extends TestCase
             $this->assertInstanceOf($complexTypeClass, $complexEntity);
         }
     }
+
+    public function testInvalidEnum()
+    {
+        $this->expectException(Microsoft\Graph\Exception\GraphException::class);
+
+        $enum = new TestEnum("test");
+    }
+
+    public function testValidEnum()
+    {
+        $enum = new TestEnum("0");
+
+        $this->assertFalse($enum->is("1"));
+        $this->assertEquals("0", $enum->value());
+    }
+}
+
+class TestEnum extends Enum {
+
+    const TEST = "0";
+    const TEST1 = "1";
 }

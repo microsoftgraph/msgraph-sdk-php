@@ -26,16 +26,6 @@ namespace Microsoft\Graph\Model;
 class EmailAddress extends Entity
 {
     /**
-    * Gets the property dictionary of the EmailAddress
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-    
-    /**
     * Gets the name
     *
     * @return string The name
@@ -61,7 +51,6 @@ class EmailAddress extends Entity
         $this->_propDict["name"] = $val;
         return $this;
     }
-    
     /**
     * Gets the address
     *

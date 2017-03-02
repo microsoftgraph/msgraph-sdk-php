@@ -27,16 +27,6 @@ namespace Microsoft\Graph\Model;
 class ThumbnailSet extends Entity
 {
     /**
-    * Gets the property dictionary of the ThumbnailSet
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-
-    /**
     * Gets the large
     *
     * @return Thumbnail The large
@@ -53,7 +43,7 @@ class ThumbnailSet extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the large
     *
@@ -66,7 +56,7 @@ class ThumbnailSet extends Entity
         $this->_propDict["large"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the medium
     *
@@ -84,7 +74,7 @@ class ThumbnailSet extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the medium
     *
@@ -97,7 +87,7 @@ class ThumbnailSet extends Entity
         $this->_propDict["medium"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the small
     *
@@ -115,7 +105,7 @@ class ThumbnailSet extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the small
     *
@@ -128,7 +118,7 @@ class ThumbnailSet extends Entity
         $this->_propDict["small"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the source
     *
@@ -146,7 +136,7 @@ class ThumbnailSet extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the source
     *
@@ -159,4 +149,5 @@ class ThumbnailSet extends Entity
         $this->_propDict["source"] = $val;
         return $this;
     }
+    
 }

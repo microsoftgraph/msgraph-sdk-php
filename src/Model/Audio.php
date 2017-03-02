@@ -26,16 +26,6 @@ namespace Microsoft\Graph\Model;
 class Audio extends Entity
 {
     /**
-    * Gets the property dictionary of the Audio
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-    
-    /**
     * Gets the album
     *
     * @return string The album
@@ -61,7 +51,6 @@ class Audio extends Entity
         $this->_propDict["album"] = $val;
         return $this;
     }
-    
     /**
     * Gets the albumArtist
     *
@@ -88,7 +77,6 @@ class Audio extends Entity
         $this->_propDict["album_artist"] = $val;
         return $this;
     }
-    
     /**
     * Gets the artist
     *
@@ -115,7 +103,6 @@ class Audio extends Entity
         $this->_propDict["artist"] = $val;
         return $this;
     }
-    
     /**
     * Gets the bitrate
     *
@@ -142,7 +129,6 @@ class Audio extends Entity
         $this->_propDict["bitrate"] = $val;
         return $this;
     }
-    
     /**
     * Gets the composers
     *
@@ -169,7 +155,6 @@ class Audio extends Entity
         $this->_propDict["composers"] = $val;
         return $this;
     }
-    
     /**
     * Gets the copyright
     *
@@ -196,7 +181,6 @@ class Audio extends Entity
         $this->_propDict["copyright"] = $val;
         return $this;
     }
-    
     /**
     * Gets the disc
     *
@@ -223,7 +207,6 @@ class Audio extends Entity
         $this->_propDict["disc"] = $val;
         return $this;
     }
-    
     /**
     * Gets the discCount
     *
@@ -250,7 +233,6 @@ class Audio extends Entity
         $this->_propDict["disc_count"] = $val;
         return $this;
     }
-    
     /**
     * Gets the duration
     *
@@ -277,7 +259,6 @@ class Audio extends Entity
         $this->_propDict["duration"] = $val;
         return $this;
     }
-    
     /**
     * Gets the genre
     *
@@ -304,7 +285,6 @@ class Audio extends Entity
         $this->_propDict["genre"] = $val;
         return $this;
     }
-    
     /**
     * Gets the hasDrm
     *
@@ -331,7 +311,6 @@ class Audio extends Entity
         $this->_propDict["has_drm"] = $val;
         return $this;
     }
-    
     /**
     * Gets the isVariableBitrate
     *
@@ -358,7 +337,6 @@ class Audio extends Entity
         $this->_propDict["is_variable_bitrate"] = $val;
         return $this;
     }
-    
     /**
     * Gets the title
     *
@@ -385,7 +363,6 @@ class Audio extends Entity
         $this->_propDict["title"] = $val;
         return $this;
     }
-    
     /**
     * Gets the track
     *
@@ -412,7 +389,6 @@ class Audio extends Entity
         $this->_propDict["track"] = $val;
         return $this;
     }
-    
     /**
     * Gets the trackCount
     *
@@ -439,7 +415,6 @@ class Audio extends Entity
         $this->_propDict["track_count"] = $val;
         return $this;
     }
-    
     /**
     * Gets the year
     *

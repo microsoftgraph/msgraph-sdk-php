@@ -26,16 +26,6 @@ namespace Microsoft\Graph\Model;
 class GeoCoordinates extends Entity
 {
     /**
-    * Gets the property dictionary of the GeoCoordinates
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-    
-    /**
     * Gets the altitude
     *
     * @return float The altitude
@@ -61,7 +51,6 @@ class GeoCoordinates extends Entity
         $this->_propDict["altitude"] = $val;
         return $this;
     }
-    
     /**
     * Gets the latitude
     *
@@ -88,7 +77,6 @@ class GeoCoordinates extends Entity
         $this->_propDict["latitude"] = $val;
         return $this;
     }
-    
     /**
     * Gets the longitude
     *

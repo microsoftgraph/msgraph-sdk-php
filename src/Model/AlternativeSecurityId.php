@@ -26,16 +26,6 @@ namespace Microsoft\Graph\Model;
 class AlternativeSecurityId extends Entity
 {
     /**
-    * Gets the property dictionary of the AlternativeSecurityId
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-    
-    /**
     * Gets the type
     *
     * @return int The type
@@ -61,7 +51,6 @@ class AlternativeSecurityId extends Entity
         $this->_propDict["type"] = $val;
         return $this;
     }
-    
     /**
     * Gets the identityProvider
     *
@@ -100,7 +89,7 @@ class AlternativeSecurityId extends Entity
             if (is_a($this->_propDict["key"], "\GuzzleHttp\Psr7\Stream")) {
                 return $this->_propDict["key"];
             } else {
-                $this->_propDict["key"] = new \GuzzleHttp\Psr7\Stream($this->_propDict["key"]);
+                $this->_propDict["key"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["key"]);
                 return $this->_propDict["key"];
             }
         }

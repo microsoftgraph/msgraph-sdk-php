@@ -68,7 +68,14 @@ class UsageExample
 
 ### Run Tests
 
-Run ```vendor/bin/phpunit``` from the base directory.
+Run 
+```php
+vendor/bin/phpunit --exclude-group functional
+``` 
+from the base directory.
+
+*The set of functional tests are meant to be run against a test account. Currently, the 
+tests to do not restore state of the account.*
 
 
 ## Documentation and resources

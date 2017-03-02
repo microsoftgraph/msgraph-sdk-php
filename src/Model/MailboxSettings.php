@@ -25,15 +25,6 @@ namespace Microsoft\Graph\Model;
 */
 class MailboxSettings extends Entity
 {
-    /**
-    * Gets the property dictionary of the MailboxSettings
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
 
     /**
     * Gets the automaticRepliesSetting
@@ -65,7 +56,6 @@ class MailboxSettings extends Entity
         $this->_propDict["automaticRepliesSetting"] = $val;
          return $this;
     }
-    
     /**
     * Gets the timeZone
     *

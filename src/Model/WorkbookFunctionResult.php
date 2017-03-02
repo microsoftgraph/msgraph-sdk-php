@@ -27,16 +27,6 @@ namespace Microsoft\Graph\Model;
 class WorkbookFunctionResult extends Entity
 {
     /**
-    * Gets the property dictionary of the WorkbookFunctionResult
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-
-    /**
     * Gets the error
     *
     * @return string The error
@@ -49,7 +39,7 @@ class WorkbookFunctionResult extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the error
     *
@@ -62,7 +52,7 @@ class WorkbookFunctionResult extends Entity
         $this->_propDict["error"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the value
     *
@@ -76,7 +66,7 @@ class WorkbookFunctionResult extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the value
     *
@@ -89,4 +79,5 @@ class WorkbookFunctionResult extends Entity
         $this->_propDict["value"] = $val;
         return $this;
     }
+    
 }

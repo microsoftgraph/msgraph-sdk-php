@@ -27,16 +27,6 @@ namespace Microsoft\Graph\Model;
 class WorkbookRangeFont extends Entity
 {
     /**
-    * Gets the property dictionary of the WorkbookRangeFont
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-
-    /**
     * Gets the bold
     *
     * @return bool The bold
@@ -49,7 +39,7 @@ class WorkbookRangeFont extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the bold
     *
@@ -62,7 +52,7 @@ class WorkbookRangeFont extends Entity
         $this->_propDict["bold"] = boolval($val);
         return $this;
     }
-
+    
     /**
     * Gets the color
     *
@@ -76,7 +66,7 @@ class WorkbookRangeFont extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the color
     *
@@ -89,7 +79,7 @@ class WorkbookRangeFont extends Entity
         $this->_propDict["color"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the italic
     *
@@ -103,7 +93,7 @@ class WorkbookRangeFont extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the italic
     *
@@ -116,7 +106,7 @@ class WorkbookRangeFont extends Entity
         $this->_propDict["italic"] = boolval($val);
         return $this;
     }
-
+    
     /**
     * Gets the name
     *
@@ -130,7 +120,7 @@ class WorkbookRangeFont extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the name
     *
@@ -143,7 +133,7 @@ class WorkbookRangeFont extends Entity
         $this->_propDict["name"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the size
     *
@@ -157,7 +147,7 @@ class WorkbookRangeFont extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the size
     *
@@ -170,7 +160,7 @@ class WorkbookRangeFont extends Entity
         $this->_propDict["size"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the underline
     *
@@ -184,7 +174,7 @@ class WorkbookRangeFont extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the underline
     *
@@ -197,4 +187,5 @@ class WorkbookRangeFont extends Entity
         $this->_propDict["underline"] = $val;
         return $this;
     }
+    
 }

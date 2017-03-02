@@ -26,13 +26,4 @@ namespace Microsoft\Graph\Model;
 */
 class DirectoryObject extends Entity
 {
-    /**
-    * Gets the property dictionary of the DirectoryObject
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
 }

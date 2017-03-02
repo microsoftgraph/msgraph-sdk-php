@@ -24,18 +24,8 @@ namespace Microsoft\Graph\Model;
 * @version   Release: 0.1.0
 * @link      https://graph.microsoft.io/
 */
-class Event extends Entity
+class Event extends OutlookItem
 {
-    /**
-    * Gets the property dictionary of the Event
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-
     /**
     * Gets the originalStartTimeZone
     *
@@ -49,7 +39,7 @@ class Event extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the originalStartTimeZone
     *
@@ -62,7 +52,7 @@ class Event extends Entity
         $this->_propDict["originalStartTimeZone"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the originalEndTimeZone
     *
@@ -76,7 +66,7 @@ class Event extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the originalEndTimeZone
     *
@@ -89,7 +79,7 @@ class Event extends Entity
         $this->_propDict["originalEndTimeZone"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the responseStatus
     *
@@ -107,7 +97,7 @@ class Event extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the responseStatus
     *
@@ -120,7 +110,7 @@ class Event extends Entity
         $this->_propDict["responseStatus"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the iCalUId
     *
@@ -134,7 +124,7 @@ class Event extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the iCalUId
     *
@@ -147,7 +137,7 @@ class Event extends Entity
         $this->_propDict["iCalUId"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the reminderMinutesBeforeStart
     *
@@ -161,7 +151,7 @@ class Event extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the reminderMinutesBeforeStart
     *
@@ -174,7 +164,7 @@ class Event extends Entity
         $this->_propDict["reminderMinutesBeforeStart"] = intval($val);
         return $this;
     }
-
+    
     /**
     * Gets the isReminderOn
     *
@@ -188,7 +178,7 @@ class Event extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the isReminderOn
     *
@@ -201,7 +191,7 @@ class Event extends Entity
         $this->_propDict["isReminderOn"] = boolval($val);
         return $this;
     }
-
+    
     /**
     * Gets the hasAttachments
     *
@@ -215,7 +205,7 @@ class Event extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the hasAttachments
     *
@@ -228,7 +218,7 @@ class Event extends Entity
         $this->_propDict["hasAttachments"] = boolval($val);
         return $this;
     }
-
+    
     /**
     * Gets the subject
     *
@@ -242,7 +232,7 @@ class Event extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the subject
     *
@@ -255,7 +245,7 @@ class Event extends Entity
         $this->_propDict["subject"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the body
     *
@@ -273,7 +263,7 @@ class Event extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the body
     *
@@ -286,7 +276,7 @@ class Event extends Entity
         $this->_propDict["body"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the bodyPreview
     *
@@ -300,7 +290,7 @@ class Event extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the bodyPreview
     *
@@ -313,7 +303,7 @@ class Event extends Entity
         $this->_propDict["bodyPreview"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the importance
     *
@@ -331,7 +321,7 @@ class Event extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the importance
     *
@@ -344,7 +334,7 @@ class Event extends Entity
         $this->_propDict["importance"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the sensitivity
     *
@@ -362,7 +352,7 @@ class Event extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the sensitivity
     *
@@ -375,7 +365,7 @@ class Event extends Entity
         $this->_propDict["sensitivity"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the start
     *
@@ -393,7 +383,7 @@ class Event extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the start
     *
@@ -406,7 +396,7 @@ class Event extends Entity
         $this->_propDict["start"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the originalStart
     *
@@ -424,7 +414,7 @@ class Event extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the originalStart
     *
@@ -437,7 +427,7 @@ class Event extends Entity
         $this->_propDict["originalStart"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the end
     *
@@ -455,7 +445,7 @@ class Event extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the end
     *
@@ -468,7 +458,7 @@ class Event extends Entity
         $this->_propDict["end"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the location
     *
@@ -486,7 +476,7 @@ class Event extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the location
     *
@@ -499,7 +489,7 @@ class Event extends Entity
         $this->_propDict["location"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the isAllDay
     *
@@ -513,7 +503,7 @@ class Event extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the isAllDay
     *
@@ -526,7 +516,7 @@ class Event extends Entity
         $this->_propDict["isAllDay"] = boolval($val);
         return $this;
     }
-
+    
     /**
     * Gets the isCancelled
     *
@@ -540,7 +530,7 @@ class Event extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the isCancelled
     *
@@ -553,7 +543,7 @@ class Event extends Entity
         $this->_propDict["isCancelled"] = boolval($val);
         return $this;
     }
-
+    
     /**
     * Gets the isOrganizer
     *
@@ -567,7 +557,7 @@ class Event extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the isOrganizer
     *
@@ -580,7 +570,7 @@ class Event extends Entity
         $this->_propDict["isOrganizer"] = boolval($val);
         return $this;
     }
-
+    
     /**
     * Gets the recurrence
     *
@@ -598,7 +588,7 @@ class Event extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the recurrence
     *
@@ -611,7 +601,7 @@ class Event extends Entity
         $this->_propDict["recurrence"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the responseRequested
     *
@@ -625,7 +615,7 @@ class Event extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the responseRequested
     *
@@ -638,7 +628,7 @@ class Event extends Entity
         $this->_propDict["responseRequested"] = boolval($val);
         return $this;
     }
-
+    
     /**
     * Gets the seriesMasterId
     *
@@ -652,7 +642,7 @@ class Event extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the seriesMasterId
     *
@@ -665,7 +655,7 @@ class Event extends Entity
         $this->_propDict["seriesMasterId"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the showAs
     *
@@ -683,7 +673,7 @@ class Event extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the showAs
     *
@@ -696,7 +686,7 @@ class Event extends Entity
         $this->_propDict["showAs"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the type
     *
@@ -714,7 +704,7 @@ class Event extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the type
     *
@@ -727,7 +717,7 @@ class Event extends Entity
         $this->_propDict["type"] = $val;
         return $this;
     }
-
+    
     /** 
     * Gets the attendees
     *
@@ -741,7 +731,7 @@ class Event extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the attendees
     *
@@ -754,8 +744,7 @@ class Event extends Entity
 		$this->_propDict["attendees"] = $val;
         return $this;
     }
-
-
+    
     /**
     * Gets the organizer
     *
@@ -773,7 +762,7 @@ class Event extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the organizer
     *
@@ -786,7 +775,7 @@ class Event extends Entity
         $this->_propDict["organizer"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the webLink
     *
@@ -800,7 +789,7 @@ class Event extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the webLink
     *
@@ -813,7 +802,7 @@ class Event extends Entity
         $this->_propDict["webLink"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the onlineMeetingUrl
     *
@@ -827,7 +816,7 @@ class Event extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the onlineMeetingUrl
     *
@@ -840,7 +829,7 @@ class Event extends Entity
         $this->_propDict["onlineMeetingUrl"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the calendar
     *
@@ -858,7 +847,7 @@ class Event extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the calendar
     *
@@ -871,7 +860,7 @@ class Event extends Entity
         $this->_propDict["calendar"] = $val;
         return $this;
     }
-
+    
     /** 
     * Gets the instances
     *
@@ -885,7 +874,7 @@ class Event extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the instances
     *
@@ -898,8 +887,7 @@ class Event extends Entity
 		$this->_propDict["instances"] = $val;
         return $this;
     }
-
-
+    
     /** 
     * Gets the extensions
     *
@@ -913,7 +901,7 @@ class Event extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the extensions
     *
@@ -926,8 +914,7 @@ class Event extends Entity
 		$this->_propDict["extensions"] = $val;
         return $this;
     }
-
-
+    
     /** 
     * Gets the attachments
     *
@@ -941,7 +928,7 @@ class Event extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the attachments
     *
@@ -954,8 +941,7 @@ class Event extends Entity
 		$this->_propDict["attachments"] = $val;
         return $this;
     }
-
-
+    
     /** 
     * Gets the singleValueExtendedProperties
     *
@@ -969,7 +955,7 @@ class Event extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the singleValueExtendedProperties
     *
@@ -982,8 +968,7 @@ class Event extends Entity
 		$this->_propDict["singleValueExtendedProperties"] = $val;
         return $this;
     }
-
-
+    
     /** 
     * Gets the multiValueExtendedProperties
     *
@@ -997,7 +982,7 @@ class Event extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the multiValueExtendedProperties
     *
@@ -1010,5 +995,5 @@ class Event extends Entity
 		$this->_propDict["multiValueExtendedProperties"] = $val;
         return $this;
     }
-
+    
 }

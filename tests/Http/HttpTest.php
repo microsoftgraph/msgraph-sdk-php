@@ -132,7 +132,7 @@ class HttpTest extends TestCase
 
         $response = $request->execute($this->client);
         $this->assertInstanceOf(Microsoft\Graph\Http\GraphResponse::class, $response);
-        $this->assertEquals("{user:".json_encode($user->getProperties())."}", $this->container[0]['request']->getBody()->getContents());
+        $this->assertEquals(json_encode($user->getProperties()), $this->container[0]['request']->getBody()->getContents());
     }
 
     public function testSendString()

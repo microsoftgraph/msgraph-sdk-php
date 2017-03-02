@@ -136,7 +136,7 @@ class GraphRequest
     public function setReturnType($returnClass)
     {
         $this->returnType = $returnClass;
-        if (strcasecmp($this->returnType, 'stream') == 0) {
+        if ($this->returnType == "GuzzleHttp\Psr7\Stream") {
             $this->returnsStream  = true;
         } else {
             $this->returnsStream = false;
@@ -181,16 +181,7 @@ class GraphRequest
         if (is_string($obj) || is_a($obj, 'GuzzleHttp\\Psr7\\Stream')) {
             $this->requestBody = $obj;
         } 
-        // JSON-encode the model object's property dictionary
-        else if (method_exists($obj, 'getProperties')) {
-            $class = get_class($obj);
-            $class = explode("\\", $class);
-            $model = strtolower(end($class));
-            
-            $body = $this->flattenDictionary($obj->getProperties());
-            $this->requestBody = "{" . $model . ":" . json_encode($body) . "}";
-        } 
-        // By default, JSON-encode (i.e. arrays)
+        // By default, JSON-encode
         else {
             $this->requestBody = json_encode($obj);
         }
@@ -246,15 +237,10 @@ class GraphRequest
             ]
         );
 
-        //Send back the bare response
-        if ($this->returnsStream) {
-            return $result;
-        }
-
         // Wrap response in GraphResponse layer
         $response = new GraphResponse(
             $this, 
-            $result->getBody()->getContents(), 
+            $result->getBody(), 
             $result->getStatusCode(), 
             $result->getHeaders()
         );
@@ -295,7 +281,7 @@ class GraphRequest
             function ($result) {
                 $response = new GraphResponse(
                     $this, 
-                    $result->getBody()->getContents(), 
+                    $result->getBody(), 
                     $result->getStatusCode(), 
                     $result->getHeaders()
                 );
@@ -442,29 +428,5 @@ class GraphRequest
             ]
         );
         return $client;
-    }
-
-    /**
-    * Flattens the property dictionaries into 
-    * JSON-friendly arrays
-    *
-    * @param mixed $obj the object to flatten
-    *
-    * @return array flattened object
-    */
-    protected function flattenDictionary($obj) {
-        foreach ($obj as $arrayKey => $arrayValue) {
-            if (method_exists($arrayValue, 'getProperties')) {
-                $data = $arrayValue->getProperties();
-                $obj[$arrayKey] = $data;
-            } else {
-                $data = $arrayValue;
-            }
-            if (is_array($data)) {
-                $newItem = $this->flattenDictionary($data);
-                $obj[$arrayKey] = $newItem;
-            }
-        }
-        return $obj;
     }
 }

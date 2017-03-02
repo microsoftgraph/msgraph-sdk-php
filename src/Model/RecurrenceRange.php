@@ -25,15 +25,6 @@ namespace Microsoft\Graph\Model;
 */
 class RecurrenceRange extends Entity
 {
-    /**
-    * Gets the property dictionary of the RecurrenceRange
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
 
     /**
     * Gets the type
@@ -127,7 +118,6 @@ class RecurrenceRange extends Entity
         $this->_propDict["endDate"] = $val;
          return $this;
     }
-    
     /**
     * Gets the recurrenceTimeZone
     *
@@ -154,7 +144,6 @@ class RecurrenceRange extends Entity
         $this->_propDict["recurrence_time_zone"] = $val;
         return $this;
     }
-    
     /**
     * Gets the numberOfOccurrences
     *

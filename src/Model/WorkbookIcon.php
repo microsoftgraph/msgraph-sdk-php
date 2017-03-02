@@ -26,16 +26,6 @@ namespace Microsoft\Graph\Model;
 class WorkbookIcon extends Entity
 {
     /**
-    * Gets the property dictionary of the WorkbookIcon
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-    
-    /**
     * Gets the index
     *
     * @return int The index
@@ -61,7 +51,6 @@ class WorkbookIcon extends Entity
         $this->_propDict["index"] = $val;
         return $this;
     }
-    
     /**
     * Gets the set
     *

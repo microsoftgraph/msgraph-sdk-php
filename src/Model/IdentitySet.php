@@ -25,15 +25,6 @@ namespace Microsoft\Graph\Model;
 */
 class IdentitySet extends Entity
 {
-    /**
-    * Gets the property dictionary of the IdentitySet
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
 
     /**
     * Gets the application

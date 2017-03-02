@@ -17,6 +17,9 @@
 
 namespace Microsoft\Graph\Http;
 
+use Microsoft\Graph\Exception\GraphException;
+use Microsoft\Graph\Core\GraphConstants;
+
 /**
  * Class GraphResponse
  *
@@ -61,7 +64,7 @@ class GraphResponse
     * @param string $httpStatusCode The returned status code
     * @param array  $headers        The returned headers
     */
-    public function __construct($request, $body = null, $httpStatusCode = null, $headers = array())
+    public function __construct($request, $body = null, $httpStatusCode = null, $headers = null)
     {
         $this->_request = $request;
         $this->_body = $body;
@@ -136,11 +139,22 @@ class GraphResponse
         $class = $returnType;
         $result = $this->getBody();
 
+        if ($returnType == "GuzzleHttp\Psr7\Stream") {
+              return $this->_body;  
+        }
+
         //If more than one object is returned
         if (array_key_exists('value', $result)) {
             $objArray = array();
-            foreach ($result['value'] as $obj) {
-                $objArray[] = new $class($obj);
+            $values = $result['value'];
+
+            //Check that this is an object array instead of a value called "value"
+            if ($values && is_array($values)) {
+                foreach ($values as $obj) {
+                    $objArray[] = new $class($obj);
+                }
+            } else {
+                return new $class($result);
             }
             return $objArray;
         } else {
@@ -149,21 +163,16 @@ class GraphResponse
     }
 
     /**
-    * Gets the skip token of a response object from OData
+    * Gets the next link of a response object from OData
+    * If the nextLink is null, there are no more pages
     *
-    * @return string skip token, if provided
+    * @return string nextLink, if provided
     */
-    public function getSkipToken()
+    public function getNextLink()
     {
         if (array_key_exists("@odata.nextLink", $this->getBody())) {
             $nextLink = $this->getBody()['@odata.nextLink'];
-            if (stripos($nextLink, "?") !== FALSE) {
-                $url = explode("?", $nextLink)[1];
-                if (stripos($url, "skiptoken=") !== FALSE) {
-                    $url = explode("skiptoken=", $url);
-                    return $url[1];
-                }
-            }
+            return $nextLink;
         }
         return null;
     }

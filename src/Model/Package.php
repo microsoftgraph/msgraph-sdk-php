@@ -26,16 +26,6 @@ namespace Microsoft\Graph\Model;
 class Package extends Entity
 {
     /**
-    * Gets the property dictionary of the Package
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-    
-    /**
     * Gets the type
     *
     * @return string The type

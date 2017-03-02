@@ -26,16 +26,6 @@ namespace Microsoft\Graph\Model;
 class Image extends Entity
 {
     /**
-    * Gets the property dictionary of the Image
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-    
-    /**
     * Gets the height
     *
     * @return int The height
@@ -61,7 +51,6 @@ class Image extends Entity
         $this->_propDict["height"] = $val;
         return $this;
     }
-    
     /**
     * Gets the width
     *

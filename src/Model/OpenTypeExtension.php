@@ -24,18 +24,8 @@ namespace Microsoft\Graph\Model;
 * @version   Release: 0.1.0
 * @link      https://graph.microsoft.io/
 */
-class OpenTypeExtension extends Entity
+class OpenTypeExtension extends Extension
 {
-    /**
-    * Gets the property dictionary of the OpenTypeExtension
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-
     /**
     * Gets the extensionName
     *
@@ -49,7 +39,7 @@ class OpenTypeExtension extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the extensionName
     *
@@ -62,4 +52,5 @@ class OpenTypeExtension extends Entity
         $this->_propDict["extensionName"] = $val;
         return $this;
     }
+    
 }

@@ -26,16 +26,6 @@ namespace Microsoft\Graph\Model;
 class SharepointIds extends Entity
 {
     /**
-    * Gets the property dictionary of the SharepointIds
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-    
-    /**
     * Gets the listId
     *
     * @return string The listId
@@ -61,7 +51,6 @@ class SharepointIds extends Entity
         $this->_propDict["list_id"] = $val;
         return $this;
     }
-    
     /**
     * Gets the listItemId
     *
@@ -88,7 +77,6 @@ class SharepointIds extends Entity
         $this->_propDict["list_item_id"] = $val;
         return $this;
     }
-    
     /**
     * Gets the listItemUniqueId
     *
@@ -115,7 +103,6 @@ class SharepointIds extends Entity
         $this->_propDict["list_item_unique_id"] = $val;
         return $this;
     }
-    
     /**
     * Gets the siteId
     *
@@ -142,7 +129,6 @@ class SharepointIds extends Entity
         $this->_propDict["site_id"] = $val;
         return $this;
     }
-    
     /**
     * Gets the webId
     *

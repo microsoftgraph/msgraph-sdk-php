@@ -26,16 +26,6 @@ namespace Microsoft\Graph\Model;
 class UploadSession extends Entity
 {
     /**
-    * Gets the property dictionary of the UploadSession
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-    
-    /**
     * Gets the uploadUrl
     *
     * @return string The uploadUrl
@@ -92,7 +82,6 @@ class UploadSession extends Entity
         $this->_propDict["expirationDateTime"] = $val;
          return $this;
     }
-    
     /**
     * Gets the nextExpectedRanges
     *

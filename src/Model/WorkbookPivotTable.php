@@ -27,16 +27,6 @@ namespace Microsoft\Graph\Model;
 class WorkbookPivotTable extends Entity
 {
     /**
-    * Gets the property dictionary of the WorkbookPivotTable
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-
-    /**
     * Gets the name
     *
     * @return string The name
@@ -49,7 +39,7 @@ class WorkbookPivotTable extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the name
     *
@@ -62,7 +52,7 @@ class WorkbookPivotTable extends Entity
         $this->_propDict["name"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the worksheet
     *
@@ -80,7 +70,7 @@ class WorkbookPivotTable extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the worksheet
     *
@@ -93,4 +83,5 @@ class WorkbookPivotTable extends Entity
         $this->_propDict["worksheet"] = $val;
         return $this;
     }
+    
 }

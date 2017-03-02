@@ -23,17 +23,8 @@ namespace Microsoft\Graph\Model;
 * @version   Release: 0.1.0
 * @link      https://graph.microsoft.io/
 */
-class Attendee extends Entity
+class Attendee extends AttendeeBase
 {
-    /**
-    * Gets the property dictionary of the Attendee
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
 
     /**
     * Gets the status

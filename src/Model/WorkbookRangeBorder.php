@@ -27,16 +27,6 @@ namespace Microsoft\Graph\Model;
 class WorkbookRangeBorder extends Entity
 {
     /**
-    * Gets the property dictionary of the WorkbookRangeBorder
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-
-    /**
     * Gets the color
     *
     * @return string The color
@@ -49,7 +39,7 @@ class WorkbookRangeBorder extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the color
     *
@@ -62,7 +52,7 @@ class WorkbookRangeBorder extends Entity
         $this->_propDict["color"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the sideIndex
     *
@@ -76,7 +66,7 @@ class WorkbookRangeBorder extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the sideIndex
     *
@@ -89,7 +79,7 @@ class WorkbookRangeBorder extends Entity
         $this->_propDict["sideIndex"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the style
     *
@@ -103,7 +93,7 @@ class WorkbookRangeBorder extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the style
     *
@@ -116,7 +106,7 @@ class WorkbookRangeBorder extends Entity
         $this->_propDict["style"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the weight
     *
@@ -130,7 +120,7 @@ class WorkbookRangeBorder extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the weight
     *
@@ -143,4 +133,5 @@ class WorkbookRangeBorder extends Entity
         $this->_propDict["weight"] = $val;
         return $this;
     }
+    
 }

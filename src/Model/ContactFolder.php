@@ -27,16 +27,6 @@ namespace Microsoft\Graph\Model;
 class ContactFolder extends Entity
 {
     /**
-    * Gets the property dictionary of the ContactFolder
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-
-    /**
     * Gets the parentFolderId
     *
     * @return string The parentFolderId
@@ -49,7 +39,7 @@ class ContactFolder extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the parentFolderId
     *
@@ -62,7 +52,7 @@ class ContactFolder extends Entity
         $this->_propDict["parentFolderId"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the displayName
     *
@@ -76,7 +66,7 @@ class ContactFolder extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the displayName
     *
@@ -89,7 +79,7 @@ class ContactFolder extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-
+    
     /** 
     * Gets the contacts
     *
@@ -103,7 +93,7 @@ class ContactFolder extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the contacts
     *
@@ -116,8 +106,7 @@ class ContactFolder extends Entity
 		$this->_propDict["contacts"] = $val;
         return $this;
     }
-
-
+    
     /** 
     * Gets the childFolders
     *
@@ -131,7 +120,7 @@ class ContactFolder extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the childFolders
     *
@@ -144,8 +133,7 @@ class ContactFolder extends Entity
 		$this->_propDict["childFolders"] = $val;
         return $this;
     }
-
-
+    
     /** 
     * Gets the singleValueExtendedProperties
     *
@@ -159,7 +147,7 @@ class ContactFolder extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the singleValueExtendedProperties
     *
@@ -172,8 +160,7 @@ class ContactFolder extends Entity
 		$this->_propDict["singleValueExtendedProperties"] = $val;
         return $this;
     }
-
-
+    
     /** 
     * Gets the multiValueExtendedProperties
     *
@@ -187,7 +174,7 @@ class ContactFolder extends Entity
             return null;
         }
     }
-	
+    
     /** 
     * Sets the multiValueExtendedProperties
     *
@@ -200,5 +187,5 @@ class ContactFolder extends Entity
 		$this->_propDict["multiValueExtendedProperties"] = $val;
         return $this;
     }
-
+    
 }

@@ -27,16 +27,6 @@ namespace Microsoft\Graph\Model;
 class WorkbookFilter extends Entity
 {
     /**
-    * Gets the property dictionary of the WorkbookFilter
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-
-    /**
     * Gets the criteria
     *
     * @return WorkbookFilterCriteria The criteria
@@ -53,7 +43,7 @@ class WorkbookFilter extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the criteria
     *
@@ -66,4 +56,5 @@ class WorkbookFilter extends Entity
         $this->_propDict["criteria"] = $val;
         return $this;
     }
+    
 }

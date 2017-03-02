@@ -1,6 +1,6 @@
 {
 	"name": "microsoft/microsoft-graph",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"type": "library",
 	"description": "The Microsoft Graph SDK for PHP",
 	"homepage": "https://graph.microsoft.io/en-us/",
@@ -21,6 +21,8 @@
 					 "mikey179/vfsStream": "~1"
 				    },
 	"autoload": {
-		"psr-4": { "Microsoft\\Graph\\": "src/" }
+		"psr-4": { "Microsoft\\Graph\\": "src/",
+				   "Microsoft\\Graph\\Test\\": "tests/Functional/"
+			 	}
 	}
 }

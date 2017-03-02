@@ -16,11 +16,16 @@ class GraphResponseTest extends TestCase
     public function setUp()
     {
         $this->responseBody = array('body' => 'content', 'displayName' => 'Bob Barker');
-        $this->collectionBody = array("value" => array(array('displayName' => 'Bob Barker'), array('displayName' => 'Drew Carey')));
+
+        $body = json_encode($this->responseBody);
+        $multiBody = json_encode(array('value' => array('1' => array('givenName' => 'Bob'), '2' => array('givenName' => 'Drew'))));
+        $valueBody = json_encode(array('value' => 'Bob Barker'));
 
         $mock = new GuzzleHttp\Handler\MockHandler([
-            new GuzzleHttp\Psr7\Response(200, ['foo' => 'bar'], json_encode($this->responseBody)),
-            new GuzzleHttp\Psr7\Response(200, ['foo' => 'bar'], json_encode($this->collectionBody))
+            new GuzzleHttp\Psr7\Response(200, ['foo' => 'bar'], $body),
+            new GuzzleHttp\Psr7\Response(200, ['foo' => 'bar'], $body),
+            new GuzzleHttp\Psr7\Response(200, ['foo' => 'bar'], $multiBody),
+            new GuzzleHttp\Psr7\Response(200, ['foo' => 'bar'], $valueBody),
         ]);
         $handler = GuzzleHttp\HandlerStack::create($mock);
         $this->client = new GuzzleHttp\Client(['handler' => $handler]);
@@ -38,41 +43,21 @@ class GraphResponseTest extends TestCase
         $this->assertEquals($this->responseBody['displayName'], $response->getDisplayName());
     }
 
-    public function testGetResponseAsListOfObjects()
+    public function testGetResponseHeaders()
     {
-        $this->request->setReturnType(Model\User::class);
         $response = $this->request->execute($this->client);
-        $response = $this->request->execute($this->client);
+        $headers = $response->getHeaders();
 
-        $this->assertContainsOnlyInstancesOf(Model\User::class, $response);
-        $this->assertEquals('Drew Carey', $response[1]->getDisplayName());
-        $this->assertEquals(2, count($response));
+        $this->assertEquals(["foo" => ["bar"]], $headers);
     }
 
-    public function testGetSkipToken()
+    public function testGetNextLink()
     {
-        //Temporarily make getSkipToken() public
-        $reflectionMethod = new ReflectionMethod('Microsoft\Graph\Http\GraphResponse', 'getSkipToken');
-        $reflectionMethod->setAccessible(true);
-
-        $body = json_encode(array('@odata.nextLink' => 'https://url.com/resource?$skiptoken=10'));
+        $body = json_encode(array('@odata.nextLink' => 'https://url.com/resource?$top=4&skip=4'));
         $response = new GraphResponse($this->request, $body);
 
-        $token = $reflectionMethod->invokeArgs($response, array());
-        $this->assertEquals('10', $token);
-    }
-
-    public function testNoSkipToken()
-    {
-        //Temporarily make getSkipToken() public
-        $reflectionMethod = new ReflectionMethod('Microsoft\Graph\Http\GraphResponse', 'getSkipToken');
-        $reflectionMethod->setAccessible(true);
-
-        $body = json_encode(array('@odata.nextLink' => 'https://url.com/resource'));
-        $response = new GraphResponse($this->request, $body);
-
-        $token = $reflectionMethod->invokeArgs($response, array());
-        $this->assertNull($token);
+        $nextLink = $response->getNextLink();
+        $this->assertEquals('https://url.com/resource?$top=4&skip=4', $nextLink);
     }
 
     public function testDecodeBody()
@@ -127,5 +112,25 @@ class GraphResponseTest extends TestCase
         $response = $this->request->execute($this->client);
 
         $this->assertEquals('200', $response->getStatus());
+    }
+
+    public function testGetMultipleObjects()
+    {
+        $this->request->execute($this->client);
+        $this->request->execute($this->client);
+        $hosts = $this->request->setReturnType(Model\User::class)->execute($this->client);
+
+        $this->assertEquals(2, count($hosts));
+        $this->assertEquals("Bob", $hosts[0]->getGivenName());
+    }
+
+    public function testGetValueObject()
+    {
+        $this->request->execute($this->client);
+        $this->request->execute($this->client);
+        $this->request->execute($this->client);
+        $response = $this->request->setReturnType(Model\User::class)->execute($this->client);
+
+        $this->assertInstanceOf(Model\User::class, $response);
     }
 }
