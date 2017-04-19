@@ -27,95 +27,8 @@ class MeetingTimeSuggestion extends Entity
 {
 
     /**
-    * Gets the meetingTimeSlot
-    *
-    * @return TimeSlot The meetingTimeSlot
-    */
-    public function getMeetingTimeSlot()
-    {
-        if (array_key_exists("meetingTimeSlot", $this->_propDict)) {
-            if (is_a($this->_propDict["meetingTimeSlot"], "TimeSlot")) {
-                return $this->_propDict["meetingTimeSlot"];
-            } else {
-                $this->_propDict["meetingTimeSlot"] = new TimeSlot($this->_propDict["meetingTimeSlot"]);
-                return $this->_propDict["meetingTimeSlot"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the meetingTimeSlot
-    *
-    * @param TimeSlot $val The value to assign to the meetingTimeSlot
-    *
-    * @return MeetingTimeSuggestion The MeetingTimeSuggestion
-    */
-    public function setMeetingTimeSlot($val)
-    {
-        $this->_propDict["meetingTimeSlot"] = $val;
-         return $this;
-    }
-    /**
-    * Gets the confidence
-    *
-    * @return float The confidence
-    */
-    public function getConfidence()
-    {
-        if (array_key_exists("confidence", $this->_propDict)) {
-            return $this->_propDict["confidence"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the confidence
-    *
-    * @param float $val The value of the confidence
-    *
-    * @return MeetingTimeSuggestion
-    */
-    public function setConfidence($val)
-    {
-        $this->_propDict["confidence"] = $val;
-        return $this;
-    }
-
-    /**
-    * Gets the organizerAvailability
-    *
-    * @return FreeBusyStatus The organizerAvailability
-    */
-    public function getOrganizerAvailability()
-    {
-        if (array_key_exists("organizerAvailability", $this->_propDict)) {
-            if (is_a($this->_propDict["organizerAvailability"], "FreeBusyStatus")) {
-                return $this->_propDict["organizerAvailability"];
-            } else {
-                $this->_propDict["organizerAvailability"] = new FreeBusyStatus($this->_propDict["organizerAvailability"]);
-                return $this->_propDict["organizerAvailability"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the organizerAvailability
-    *
-    * @param FreeBusyStatus $val The value to assign to the organizerAvailability
-    *
-    * @return MeetingTimeSuggestion The MeetingTimeSuggestion
-    */
-    public function setOrganizerAvailability($val)
-    {
-        $this->_propDict["organizerAvailability"] = $val;
-         return $this;
-    }
-
-    /**
     * Gets the attendeeAvailability
+    * An array that shows the availability status of each attendee for this meeting suggestion.
     *
     * @return AttendeeAvailability The attendeeAvailability
     */
@@ -134,6 +47,7 @@ class MeetingTimeSuggestion extends Entity
 
     /**
     * Sets the attendeeAvailability
+    * An array that shows the availability status of each attendee for this meeting suggestion.
     *
     * @param AttendeeAvailability $val The value to assign to the attendeeAvailability
     *
@@ -144,9 +58,38 @@ class MeetingTimeSuggestion extends Entity
         $this->_propDict["attendeeAvailability"] = $val;
          return $this;
     }
+    /**
+    * Gets the confidence
+    * A percentage that represents the likelhood of all the attendees attending.
+    *
+    * @return float The confidence
+    */
+    public function getConfidence()
+    {
+        if (array_key_exists("confidence", $this->_propDict)) {
+            return $this->_propDict["confidence"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the confidence
+    * A percentage that represents the likelhood of all the attendees attending.
+    *
+    * @param float $val The value of the confidence
+    *
+    * @return MeetingTimeSuggestion
+    */
+    public function setConfidence($val)
+    {
+        $this->_propDict["confidence"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the locations
+    * An array that specifies the name and geographic location of each meeting location for this meeting suggestion.
     *
     * @return Location The locations
     */
@@ -165,6 +108,7 @@ class MeetingTimeSuggestion extends Entity
 
     /**
     * Sets the locations
+    * An array that specifies the name and geographic location of each meeting location for this meeting suggestion.
     *
     * @param Location $val The value to assign to the locations
     *
@@ -175,8 +119,75 @@ class MeetingTimeSuggestion extends Entity
         $this->_propDict["locations"] = $val;
          return $this;
     }
+
+    /**
+    * Gets the meetingTimeSlot
+    * A time period suggested for the meeting.
+    *
+    * @return TimeSlot The meetingTimeSlot
+    */
+    public function getMeetingTimeSlot()
+    {
+        if (array_key_exists("meetingTimeSlot", $this->_propDict)) {
+            if (is_a($this->_propDict["meetingTimeSlot"], "TimeSlot")) {
+                return $this->_propDict["meetingTimeSlot"];
+            } else {
+                $this->_propDict["meetingTimeSlot"] = new TimeSlot($this->_propDict["meetingTimeSlot"]);
+                return $this->_propDict["meetingTimeSlot"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the meetingTimeSlot
+    * A time period suggested for the meeting.
+    *
+    * @param TimeSlot $val The value to assign to the meetingTimeSlot
+    *
+    * @return MeetingTimeSuggestion The MeetingTimeSuggestion
+    */
+    public function setMeetingTimeSlot($val)
+    {
+        $this->_propDict["meetingTimeSlot"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the organizerAvailability
+    * Availability of the meeting organizer for this meeting suggestion. Possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
+    *
+    * @return FreeBusyStatus The organizerAvailability
+    */
+    public function getOrganizerAvailability()
+    {
+        if (array_key_exists("organizerAvailability", $this->_propDict)) {
+            if (is_a($this->_propDict["organizerAvailability"], "FreeBusyStatus")) {
+                return $this->_propDict["organizerAvailability"];
+            } else {
+                $this->_propDict["organizerAvailability"] = new FreeBusyStatus($this->_propDict["organizerAvailability"]);
+                return $this->_propDict["organizerAvailability"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the organizerAvailability
+    * Availability of the meeting organizer for this meeting suggestion. Possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
+    *
+    * @param FreeBusyStatus $val The value to assign to the organizerAvailability
+    *
+    * @return MeetingTimeSuggestion The MeetingTimeSuggestion
+    */
+    public function setOrganizerAvailability($val)
+    {
+        $this->_propDict["organizerAvailability"] = $val;
+         return $this;
+    }
     /**
     * Gets the suggestionReason
+    * Reason for suggesting the meeting time.
     *
     * @return string The suggestionReason
     */
@@ -191,6 +202,7 @@ class MeetingTimeSuggestion extends Entity
 
     /**
     * Sets the suggestionReason
+    * Reason for suggesting the meeting time.
     *
     * @param string $val The value of the suggestionReason
     *

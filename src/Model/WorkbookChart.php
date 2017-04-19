@@ -285,11 +285,12 @@ class WorkbookChart extends Entity
         return $this;
     }
     
-    /** 
-    * Gets the series
-    *
-    * @return array The series
-    */
+
+     /** 
+     * Gets the series
+     *
+     * @return array The series
+     */
     public function getSeries()
     {
         if (array_key_exists("series", $this->_propDict)) {

@@ -31,10 +31,10 @@ class MeetingMessageType extends Enum
     /**
     * The Enum MeetingMessageType
     */
-    const NONE = "0";
-    const MEETING_REQUEST = "1";
-    const MEETING_CANCELLED = "2";
-    const MEETING_ACCEPTED = "3";
+    const MEETING_ACCEPTED = "0";
+    const MEETING_CANCELLED = "1";
+    const MEETING_DECLINED = "2";
+    const MEETING_REQUEST = "3";
     const MEETING_TENATIVELY_ACCEPTED = "4";
-    const MEETING_DECLINED = "5";
+    const NONE = "5";
 }

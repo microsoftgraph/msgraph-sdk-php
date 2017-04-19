@@ -432,33 +432,6 @@ class WorkbookRange extends Entity
     }
     
     /**
-    * Gets the valueTypes
-    *
-    * @return string The valueTypes
-    */
-    public function getValueTypes()
-    {
-        if (array_key_exists("valueTypes", $this->_propDict)) {
-            return $this->_propDict["valueTypes"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the valueTypes
-    *
-    * @param string $val The valueTypes
-    *
-    * @return WorkbookRange
-    */
-    public function setValueTypes($val)
-    {
-        $this->_propDict["valueTypes"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the values
     *
     * @return string The values
@@ -482,6 +455,33 @@ class WorkbookRange extends Entity
     public function setValues($val)
     {
         $this->_propDict["values"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the valueTypes
+    *
+    * @return string The valueTypes
+    */
+    public function getValueTypes()
+    {
+        if (array_key_exists("valueTypes", $this->_propDict)) {
+            return $this->_propDict["valueTypes"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the valueTypes
+    *
+    * @param string $val The valueTypes
+    *
+    * @return WorkbookRange
+    */
+    public function setValueTypes($val)
+    {
+        $this->_propDict["valueTypes"] = $val;
         return $this;
     }
     

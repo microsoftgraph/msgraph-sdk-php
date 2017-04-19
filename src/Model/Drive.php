@@ -28,6 +28,7 @@ class Drive extends Entity
 {
     /**
     * Gets the driveType
+    * Describes the type of drive represented by this resource. OneDrive personal drives will return personal. OneDrive for Business will return business. SharePoint document libraries will return documentLibrary. Read-only.
     *
     * @return string The driveType
     */
@@ -42,6 +43,7 @@ class Drive extends Entity
     
     /**
     * Sets the driveType
+    * Describes the type of drive represented by this resource. OneDrive personal drives will return personal. OneDrive for Business will return business. SharePoint document libraries will return documentLibrary. Read-only.
     *
     * @param string $val The driveType
     *
@@ -55,6 +57,7 @@ class Drive extends Entity
     
     /**
     * Gets the owner
+    * Optional. The user account that owns the drive.
     *
     * @return IdentitySet The owner
     */
@@ -73,6 +76,7 @@ class Drive extends Entity
     
     /**
     * Sets the owner
+    * Optional. The user account that owns the drive.
     *
     * @param string $val The owner
     *
@@ -86,6 +90,7 @@ class Drive extends Entity
     
     /**
     * Gets the quota
+    * Optional. Information about the drive's storage space quota.
     *
     * @return Quota The quota
     */
@@ -104,6 +109,7 @@ class Drive extends Entity
     
     /**
     * Sets the quota
+    * Optional. Information about the drive's storage space quota.
     *
     * @param string $val The quota
     *
@@ -115,11 +121,13 @@ class Drive extends Entity
         return $this;
     }
     
-    /** 
-    * Gets the items
-    *
-    * @return array The items
-    */
+
+     /** 
+     * Gets the items
+    * All items contained in the drive. Read-only. Nullable.
+     *
+     * @return array The items
+     */
     public function getItems()
     {
         if (array_key_exists("items", $this->_propDict)) {
@@ -131,6 +139,7 @@ class Drive extends Entity
     
     /** 
     * Sets the items
+    * All items contained in the drive. Read-only. Nullable.
     *
     * @param string $val The items
     *
@@ -142,35 +151,9 @@ class Drive extends Entity
         return $this;
     }
     
-    /** 
-    * Gets the special
-    *
-    * @return array The special
-    */
-    public function getSpecial()
-    {
-        if (array_key_exists("special", $this->_propDict)) {
-           return $this->_propDict["special"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the special
-    *
-    * @param string $val The special
-    *
-    * @return Drive
-    */
-    public function setSpecial($val)
-    {
-		$this->_propDict["special"] = $val;
-        return $this;
-    }
-    
     /**
     * Gets the root
+    * The root folder of the drive. Read-only.
     *
     * @return DriveItem The root
     */
@@ -189,6 +172,7 @@ class Drive extends Entity
     
     /**
     * Sets the root
+    * The root folder of the drive. Read-only.
     *
     * @param string $val The root
     *
@@ -197,6 +181,36 @@ class Drive extends Entity
     public function setRoot($val)
     {
         $this->_propDict["root"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the special
+    * Collection of common folders available in OneDrive. Read-only. Nullable.
+     *
+     * @return array The special
+     */
+    public function getSpecial()
+    {
+        if (array_key_exists("special", $this->_propDict)) {
+           return $this->_propDict["special"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the special
+    * Collection of common folders available in OneDrive. Read-only. Nullable.
+    *
+    * @param string $val The special
+    *
+    * @return Drive
+    */
+    public function setSpecial($val)
+    {
+		$this->_propDict["special"] = $val;
         return $this;
     }
     

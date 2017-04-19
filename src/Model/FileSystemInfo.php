@@ -28,6 +28,7 @@ class FileSystemInfo extends Entity
 
     /**
     * Gets the createdDateTime
+    * The UTC date and time the file was created on a client.
     *
     * @return \DateTime The createdDateTime
     */
@@ -46,6 +47,7 @@ class FileSystemInfo extends Entity
 
     /**
     * Sets the createdDateTime
+    * The UTC date and time the file was created on a client.
     *
     * @param \DateTime $val The value to assign to the createdDateTime
     *
@@ -59,6 +61,7 @@ class FileSystemInfo extends Entity
 
     /**
     * Gets the lastModifiedDateTime
+    * The UTC date and time the file was last modified on a client.
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -77,6 +80,7 @@ class FileSystemInfo extends Entity
 
     /**
     * Sets the lastModifiedDateTime
+    * The UTC date and time the file was last modified on a client.
     *
     * @param \DateTime $val The value to assign to the lastModifiedDateTime
     *

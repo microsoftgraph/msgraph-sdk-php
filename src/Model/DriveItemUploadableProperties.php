@@ -26,32 +26,6 @@ namespace Microsoft\Graph\Model;
 class DriveItemUploadableProperties extends Entity
 {
     /**
-    * Gets the name
-    *
-    * @return string The name
-    */
-    public function getName()
-    {
-        if (array_key_exists("name", $this->_propDict)) {
-            return $this->_propDict["name"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the name
-    *
-    * @param string $val The value of the name
-    *
-    * @return DriveItemUploadableProperties
-    */
-    public function setName($val)
-    {
-        $this->_propDict["name"] = $val;
-        return $this;
-    }
-    /**
     * Gets the description
     *
     * @return string The description
@@ -107,5 +81,31 @@ class DriveItemUploadableProperties extends Entity
     {
         $this->_propDict["fileSystemInfo"] = $val;
          return $this;
+    }
+    /**
+    * Gets the name
+    *
+    * @return string The name
+    */
+    public function getName()
+    {
+        if (array_key_exists("name", $this->_propDict)) {
+            return $this->_propDict["name"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the name
+    *
+    * @param string $val The value of the name
+    *
+    * @return DriveItemUploadableProperties
+    */
+    public function setName($val)
+    {
+        $this->_propDict["name"] = $val;
+        return $this;
     }
 }

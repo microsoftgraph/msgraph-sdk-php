@@ -26,33 +26,8 @@ namespace Microsoft\Graph\Model;
 class DriveRecipient extends Entity
 {
     /**
-    * Gets the email
-    *
-    * @return string The email
-    */
-    public function getEmail()
-    {
-        if (array_key_exists("email", $this->_propDict)) {
-            return $this->_propDict["email"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the email
-    *
-    * @param string $val The value of the email
-    *
-    * @return DriveRecipient
-    */
-    public function setEmail($val)
-    {
-        $this->_propDict["email"] = $val;
-        return $this;
-    }
-    /**
     * Gets the alias
+    * The alias of the domain object, for cases where an email address is unavailable (e.g. security groups).
     *
     * @return string The alias
     */
@@ -67,6 +42,7 @@ class DriveRecipient extends Entity
 
     /**
     * Sets the alias
+    * The alias of the domain object, for cases where an email address is unavailable (e.g. security groups).
     *
     * @param string $val The value of the alias
     *
@@ -78,7 +54,36 @@ class DriveRecipient extends Entity
         return $this;
     }
     /**
+    * Gets the email
+    * The email address for the recipient, if the recipient has an associated email address.
+    *
+    * @return string The email
+    */
+    public function getEmail()
+    {
+        if (array_key_exists("email", $this->_propDict)) {
+            return $this->_propDict["email"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the email
+    * The email address for the recipient, if the recipient has an associated email address.
+    *
+    * @param string $val The value of the email
+    *
+    * @return DriveRecipient
+    */
+    public function setEmail($val)
+    {
+        $this->_propDict["email"] = $val;
+        return $this;
+    }
+    /**
     * Gets the objectId
+    * The unique identifier for the recipient in the directory.
     *
     * @return string The objectId
     */
@@ -93,6 +98,7 @@ class DriveRecipient extends Entity
 
     /**
     * Sets the objectId
+    * The unique identifier for the recipient in the directory.
     *
     * @param string $val The value of the objectId
     *
