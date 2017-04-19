@@ -27,34 +27,8 @@ namespace Microsoft\Graph\Model;
 class ContactFolder extends Entity
 {
     /**
-    * Gets the parentFolderId
-    *
-    * @return string The parentFolderId
-    */
-    public function getParentFolderId()
-    {
-        if (array_key_exists("parentFolderId", $this->_propDict)) {
-            return $this->_propDict["parentFolderId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the parentFolderId
-    *
-    * @param string $val The parentFolderId
-    *
-    * @return ContactFolder
-    */
-    public function setParentFolderId($val)
-    {
-        $this->_propDict["parentFolderId"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the displayName
+    * The folder's display name.
     *
     * @return string The displayName
     */
@@ -69,6 +43,7 @@ class ContactFolder extends Entity
     
     /**
     * Sets the displayName
+    * The folder's display name.
     *
     * @param string $val The displayName
     *
@@ -80,38 +55,42 @@ class ContactFolder extends Entity
         return $this;
     }
     
-    /** 
-    * Gets the contacts
+    /**
+    * Gets the parentFolderId
+    * The ID of the folder's parent folder.
     *
-    * @return array The contacts
+    * @return string The parentFolderId
     */
-    public function getContacts()
+    public function getParentFolderId()
     {
-        if (array_key_exists("contacts", $this->_propDict)) {
-           return $this->_propDict["contacts"];
+        if (array_key_exists("parentFolderId", $this->_propDict)) {
+            return $this->_propDict["parentFolderId"];
         } else {
             return null;
         }
     }
     
-    /** 
-    * Sets the contacts
+    /**
+    * Sets the parentFolderId
+    * The ID of the folder's parent folder.
     *
-    * @param string $val The contacts
+    * @param string $val The parentFolderId
     *
     * @return ContactFolder
     */
-    public function setContacts($val)
+    public function setParentFolderId($val)
     {
-		$this->_propDict["contacts"] = $val;
+        $this->_propDict["parentFolderId"] = $val;
         return $this;
     }
     
-    /** 
-    * Gets the childFolders
-    *
-    * @return array The childFolders
-    */
+
+     /** 
+     * Gets the childFolders
+    * The collection of child folders in the folder. Navigation property. Read-only. Nullable.
+     *
+     * @return array The childFolders
+     */
     public function getChildFolders()
     {
         if (array_key_exists("childFolders", $this->_propDict)) {
@@ -123,6 +102,7 @@ class ContactFolder extends Entity
     
     /** 
     * Sets the childFolders
+    * The collection of child folders in the folder. Navigation property. Read-only. Nullable.
     *
     * @param string $val The childFolders
     *
@@ -134,38 +114,43 @@ class ContactFolder extends Entity
         return $this;
     }
     
-    /** 
-    * Gets the singleValueExtendedProperties
-    *
-    * @return array The singleValueExtendedProperties
-    */
-    public function getSingleValueExtendedProperties()
+
+     /** 
+     * Gets the contacts
+    * The contacts in the folder. Navigation property. Read-only. Nullable.
+     *
+     * @return array The contacts
+     */
+    public function getContacts()
     {
-        if (array_key_exists("singleValueExtendedProperties", $this->_propDict)) {
-           return $this->_propDict["singleValueExtendedProperties"];
+        if (array_key_exists("contacts", $this->_propDict)) {
+           return $this->_propDict["contacts"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the singleValueExtendedProperties
+    * Sets the contacts
+    * The contacts in the folder. Navigation property. Read-only. Nullable.
     *
-    * @param string $val The singleValueExtendedProperties
+    * @param string $val The contacts
     *
     * @return ContactFolder
     */
-    public function setSingleValueExtendedProperties($val)
+    public function setContacts($val)
     {
-		$this->_propDict["singleValueExtendedProperties"] = $val;
+		$this->_propDict["contacts"] = $val;
         return $this;
     }
     
-    /** 
-    * Gets the multiValueExtendedProperties
-    *
-    * @return array The multiValueExtendedProperties
-    */
+
+     /** 
+     * Gets the multiValueExtendedProperties
+    * The collection of multi-value extended properties defined for the contactFolder. Read-only. Nullable.
+     *
+     * @return array The multiValueExtendedProperties
+     */
     public function getMultiValueExtendedProperties()
     {
         if (array_key_exists("multiValueExtendedProperties", $this->_propDict)) {
@@ -177,6 +162,7 @@ class ContactFolder extends Entity
     
     /** 
     * Sets the multiValueExtendedProperties
+    * The collection of multi-value extended properties defined for the contactFolder. Read-only. Nullable.
     *
     * @param string $val The multiValueExtendedProperties
     *
@@ -185,6 +171,36 @@ class ContactFolder extends Entity
     public function setMultiValueExtendedProperties($val)
     {
 		$this->_propDict["multiValueExtendedProperties"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the singleValueExtendedProperties
+    * The collection of single-value extended properties defined for the contactFolder. Read-only. Nullable.
+     *
+     * @return array The singleValueExtendedProperties
+     */
+    public function getSingleValueExtendedProperties()
+    {
+        if (array_key_exists("singleValueExtendedProperties", $this->_propDict)) {
+           return $this->_propDict["singleValueExtendedProperties"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the singleValueExtendedProperties
+    * The collection of single-value extended properties defined for the contactFolder. Read-only. Nullable.
+    *
+    * @param string $val The singleValueExtendedProperties
+    *
+    * @return ContactFolder
+    */
+    public function setSingleValueExtendedProperties($val)
+    {
+		$this->_propDict["singleValueExtendedProperties"] = $val;
         return $this;
     }
     

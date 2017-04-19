@@ -31,10 +31,10 @@ class FreeBusyStatus extends Enum
     /**
     * The Enum FreeBusyStatus
     */
-    const FREE = "0";
-    const TENTATIVE = "1";
-    const BUSY = "2";
-    const OOF = "3";
-    const WORKING_ELSEWHERE = "4";
-    const UNKNOWN = "5";
+    const BUSY = "0";
+    const FREE = "1";
+    const OOF = "2";
+    const TENTATIVE = "3";
+    const UNKNOWN = "4";
+    const WORKING_ELSEWHERE = "5";
 }

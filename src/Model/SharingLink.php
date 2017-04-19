@@ -28,6 +28,7 @@ class SharingLink extends Entity
 
     /**
     * Gets the application
+    * The app the link is associated with.
     *
     * @return Identity The application
     */
@@ -46,6 +47,7 @@ class SharingLink extends Entity
 
     /**
     * Sets the application
+    * The app the link is associated with.
     *
     * @param Identity $val The value to assign to the application
     *
@@ -57,33 +59,8 @@ class SharingLink extends Entity
          return $this;
     }
     /**
-    * Gets the type
-    *
-    * @return string The type
-    */
-    public function getType()
-    {
-        if (array_key_exists("type", $this->_propDict)) {
-            return $this->_propDict["type"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the type
-    *
-    * @param string $val The value of the type
-    *
-    * @return SharingLink
-    */
-    public function setType($val)
-    {
-        $this->_propDict["type"] = $val;
-        return $this;
-    }
-    /**
     * Gets the scope
+    * The scope of the link represented by this permission. Value anonymous indicates the link is usable by anyone, organization indicates the link is only usable for users signed into the same tenant.
     *
     * @return string The scope
     */
@@ -98,6 +75,7 @@ class SharingLink extends Entity
 
     /**
     * Sets the scope
+    * The scope of the link represented by this permission. Value anonymous indicates the link is usable by anyone, organization indicates the link is only usable for users signed into the same tenant.
     *
     * @param string $val The value of the scope
     *
@@ -109,7 +87,36 @@ class SharingLink extends Entity
         return $this;
     }
     /**
+    * Gets the type
+    * The type of the link created.
+    *
+    * @return string The type
+    */
+    public function getType()
+    {
+        if (array_key_exists("type", $this->_propDict)) {
+            return $this->_propDict["type"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the type
+    * The type of the link created.
+    *
+    * @param string $val The value of the type
+    *
+    * @return SharingLink
+    */
+    public function setType($val)
+    {
+        $this->_propDict["type"] = $val;
+        return $this;
+    }
+    /**
     * Gets the webUrl
+    * A URL that opens the item in the browser on the OneDrive website.
     *
     * @return string The webUrl
     */
@@ -124,6 +131,7 @@ class SharingLink extends Entity
 
     /**
     * Sets the webUrl
+    * A URL that opens the item in the browser on the OneDrive website.
     *
     * @param string $val The value of the webUrl
     *

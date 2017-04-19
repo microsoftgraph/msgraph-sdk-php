@@ -161,11 +161,12 @@ class WorkbookRangeFormat extends Entity
         return $this;
     }
     
-    /** 
-    * Gets the borders
-    *
-    * @return array The borders
-    */
+
+     /** 
+     * Gets the borders
+     *
+     * @return array The borders
+     */
     public function getBorders()
     {
         if (array_key_exists("borders", $this->_propDict)) {

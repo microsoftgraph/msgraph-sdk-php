@@ -27,61 +27,8 @@ namespace Microsoft\Graph\Model;
 class MailFolder extends Entity
 {
     /**
-    * Gets the displayName
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the displayName
-    *
-    * @param string $val The displayName
-    *
-    * @return MailFolder
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the parentFolderId
-    *
-    * @return string The parentFolderId
-    */
-    public function getParentFolderId()
-    {
-        if (array_key_exists("parentFolderId", $this->_propDict)) {
-            return $this->_propDict["parentFolderId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the parentFolderId
-    *
-    * @param string $val The parentFolderId
-    *
-    * @return MailFolder
-    */
-    public function setParentFolderId($val)
-    {
-        $this->_propDict["parentFolderId"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the childFolderCount
+    * The number of immediate child mailFolders in the current mailFolder.
     *
     * @return int The childFolderCount
     */
@@ -96,6 +43,7 @@ class MailFolder extends Entity
     
     /**
     * Sets the childFolderCount
+    * The number of immediate child mailFolders in the current mailFolder.
     *
     * @param int $val The childFolderCount
     *
@@ -108,34 +56,66 @@ class MailFolder extends Entity
     }
     
     /**
-    * Gets the unreadItemCount
+    * Gets the displayName
+    * The mailFolder's display name.
     *
-    * @return int The unreadItemCount
+    * @return string The displayName
     */
-    public function getUnreadItemCount()
+    public function getDisplayName()
     {
-        if (array_key_exists("unreadItemCount", $this->_propDict)) {
-            return $this->_propDict["unreadItemCount"];
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the unreadItemCount
+    * Sets the displayName
+    * The mailFolder's display name.
     *
-    * @param int $val The unreadItemCount
+    * @param string $val The displayName
     *
     * @return MailFolder
     */
-    public function setUnreadItemCount($val)
+    public function setDisplayName($val)
     {
-        $this->_propDict["unreadItemCount"] = intval($val);
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the parentFolderId
+    * The unique identifier for the mailFolder's parent mailFolder.
+    *
+    * @return string The parentFolderId
+    */
+    public function getParentFolderId()
+    {
+        if (array_key_exists("parentFolderId", $this->_propDict)) {
+            return $this->_propDict["parentFolderId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the parentFolderId
+    * The unique identifier for the mailFolder's parent mailFolder.
+    *
+    * @param string $val The parentFolderId
+    *
+    * @return MailFolder
+    */
+    public function setParentFolderId($val)
+    {
+        $this->_propDict["parentFolderId"] = $val;
         return $this;
     }
     
     /**
     * Gets the totalItemCount
+    * The number of items in the mailFolder.
     *
     * @return int The totalItemCount
     */
@@ -150,6 +130,7 @@ class MailFolder extends Entity
     
     /**
     * Sets the totalItemCount
+    * The number of items in the mailFolder.
     *
     * @param int $val The totalItemCount
     *
@@ -161,38 +142,42 @@ class MailFolder extends Entity
         return $this;
     }
     
-    /** 
-    * Gets the messages
+    /**
+    * Gets the unreadItemCount
+    * The number of items in the mailFolder marked as unread.
     *
-    * @return array The messages
+    * @return int The unreadItemCount
     */
-    public function getMessages()
+    public function getUnreadItemCount()
     {
-        if (array_key_exists("messages", $this->_propDict)) {
-           return $this->_propDict["messages"];
+        if (array_key_exists("unreadItemCount", $this->_propDict)) {
+            return $this->_propDict["unreadItemCount"];
         } else {
             return null;
         }
     }
     
-    /** 
-    * Sets the messages
+    /**
+    * Sets the unreadItemCount
+    * The number of items in the mailFolder marked as unread.
     *
-    * @param string $val The messages
+    * @param int $val The unreadItemCount
     *
     * @return MailFolder
     */
-    public function setMessages($val)
+    public function setUnreadItemCount($val)
     {
-		$this->_propDict["messages"] = $val;
+        $this->_propDict["unreadItemCount"] = intval($val);
         return $this;
     }
     
-    /** 
-    * Gets the childFolders
-    *
-    * @return array The childFolders
-    */
+
+     /** 
+     * Gets the childFolders
+    * The collection of child folders in the mailFolder.
+     *
+     * @return array The childFolders
+     */
     public function getChildFolders()
     {
         if (array_key_exists("childFolders", $this->_propDict)) {
@@ -204,6 +189,7 @@ class MailFolder extends Entity
     
     /** 
     * Sets the childFolders
+    * The collection of child folders in the mailFolder.
     *
     * @param string $val The childFolders
     *
@@ -215,38 +201,43 @@ class MailFolder extends Entity
         return $this;
     }
     
-    /** 
-    * Gets the singleValueExtendedProperties
-    *
-    * @return array The singleValueExtendedProperties
-    */
-    public function getSingleValueExtendedProperties()
+
+     /** 
+     * Gets the messages
+    * The collection of messages in the mailFolder.
+     *
+     * @return array The messages
+     */
+    public function getMessages()
     {
-        if (array_key_exists("singleValueExtendedProperties", $this->_propDict)) {
-           return $this->_propDict["singleValueExtendedProperties"];
+        if (array_key_exists("messages", $this->_propDict)) {
+           return $this->_propDict["messages"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the singleValueExtendedProperties
+    * Sets the messages
+    * The collection of messages in the mailFolder.
     *
-    * @param string $val The singleValueExtendedProperties
+    * @param string $val The messages
     *
     * @return MailFolder
     */
-    public function setSingleValueExtendedProperties($val)
+    public function setMessages($val)
     {
-		$this->_propDict["singleValueExtendedProperties"] = $val;
+		$this->_propDict["messages"] = $val;
         return $this;
     }
     
-    /** 
-    * Gets the multiValueExtendedProperties
-    *
-    * @return array The multiValueExtendedProperties
-    */
+
+     /** 
+     * Gets the multiValueExtendedProperties
+    * The collection of multi-value extended properties defined for the mailFolder. Read-only. Nullable.
+     *
+     * @return array The multiValueExtendedProperties
+     */
     public function getMultiValueExtendedProperties()
     {
         if (array_key_exists("multiValueExtendedProperties", $this->_propDict)) {
@@ -258,6 +249,7 @@ class MailFolder extends Entity
     
     /** 
     * Sets the multiValueExtendedProperties
+    * The collection of multi-value extended properties defined for the mailFolder. Read-only. Nullable.
     *
     * @param string $val The multiValueExtendedProperties
     *
@@ -266,6 +258,36 @@ class MailFolder extends Entity
     public function setMultiValueExtendedProperties($val)
     {
 		$this->_propDict["multiValueExtendedProperties"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the singleValueExtendedProperties
+    * The collection of single-value extended properties defined for the mailFolder. Read-only. Nullable.
+     *
+     * @return array The singleValueExtendedProperties
+     */
+    public function getSingleValueExtendedProperties()
+    {
+        if (array_key_exists("singleValueExtendedProperties", $this->_propDict)) {
+           return $this->_propDict["singleValueExtendedProperties"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the singleValueExtendedProperties
+    * The collection of single-value extended properties defined for the mailFolder. Read-only. Nullable.
+    *
+    * @param string $val The singleValueExtendedProperties
+    *
+    * @return MailFolder
+    */
+    public function setSingleValueExtendedProperties($val)
+    {
+		$this->_propDict["singleValueExtendedProperties"] = $val;
         return $this;
     }
     

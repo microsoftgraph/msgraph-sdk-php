@@ -26,65 +26,37 @@ namespace Microsoft\Graph\Model;
 class Reminder extends Entity
 {
     /**
-    * Gets the eventId
+    * Gets the changeKey
+    * Identifies the version of the reminder. Every time the reminder is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object.
     *
-    * @return string The eventId
+    * @return string The changeKey
     */
-    public function getEventId()
+    public function getChangeKey()
     {
-        if (array_key_exists("eventId", $this->_propDict)) {
-            return $this->_propDict["eventId"];
+        if (array_key_exists("changeKey", $this->_propDict)) {
+            return $this->_propDict["changeKey"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the eventId
+    * Sets the changeKey
+    * Identifies the version of the reminder. Every time the reminder is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object.
     *
-    * @param string $val The value of the eventId
+    * @param string $val The value of the changeKey
     *
     * @return Reminder
     */
-    public function setEventId($val)
+    public function setChangeKey($val)
     {
-        $this->_propDict["event_id"] = $val;
+        $this->_propDict["change_key"] = $val;
         return $this;
     }
 
     /**
-    * Gets the eventStartTime
-    *
-    * @return DateTimeTimeZone The eventStartTime
-    */
-    public function getEventStartTime()
-    {
-        if (array_key_exists("eventStartTime", $this->_propDict)) {
-            if (is_a($this->_propDict["eventStartTime"], "DateTimeTimeZone")) {
-                return $this->_propDict["eventStartTime"];
-            } else {
-                $this->_propDict["eventStartTime"] = new DateTimeTimeZone($this->_propDict["eventStartTime"]);
-                return $this->_propDict["eventStartTime"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the eventStartTime
-    *
-    * @param DateTimeTimeZone $val The value to assign to the eventStartTime
-    *
-    * @return Reminder The Reminder
-    */
-    public function setEventStartTime($val)
-    {
-        $this->_propDict["eventStartTime"] = $val;
-         return $this;
-    }
-
-    /**
     * Gets the eventEndTime
+    * The date, time and time zone that the event ends.
     *
     * @return DateTimeTimeZone The eventEndTime
     */
@@ -103,6 +75,7 @@ class Reminder extends Entity
 
     /**
     * Sets the eventEndTime
+    * The date, time and time zone that the event ends.
     *
     * @param DateTimeTimeZone $val The value to assign to the eventEndTime
     *
@@ -114,60 +87,37 @@ class Reminder extends Entity
          return $this;
     }
     /**
-    * Gets the changeKey
+    * Gets the eventId
+    * The unique ID of the event. Read only.
     *
-    * @return string The changeKey
+    * @return string The eventId
     */
-    public function getChangeKey()
+    public function getEventId()
     {
-        if (array_key_exists("changeKey", $this->_propDict)) {
-            return $this->_propDict["changeKey"];
+        if (array_key_exists("eventId", $this->_propDict)) {
+            return $this->_propDict["eventId"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the changeKey
+    * Sets the eventId
+    * The unique ID of the event. Read only.
     *
-    * @param string $val The value of the changeKey
-    *
-    * @return Reminder
-    */
-    public function setChangeKey($val)
-    {
-        $this->_propDict["change_key"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the eventSubject
-    *
-    * @return string The eventSubject
-    */
-    public function getEventSubject()
-    {
-        if (array_key_exists("eventSubject", $this->_propDict)) {
-            return $this->_propDict["eventSubject"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the eventSubject
-    *
-    * @param string $val The value of the eventSubject
+    * @param string $val The value of the eventId
     *
     * @return Reminder
     */
-    public function setEventSubject($val)
+    public function setEventId($val)
     {
-        $this->_propDict["event_subject"] = $val;
+        $this->_propDict["event_id"] = $val;
         return $this;
     }
 
     /**
     * Gets the eventLocation
+    * The location of the event.
     *
     * @return Location The eventLocation
     */
@@ -186,6 +136,7 @@ class Reminder extends Entity
 
     /**
     * Sets the eventLocation
+    * The location of the event.
     *
     * @param Location $val The value to assign to the eventLocation
     *
@@ -196,8 +147,70 @@ class Reminder extends Entity
         $this->_propDict["eventLocation"] = $val;
          return $this;
     }
+
+    /**
+    * Gets the eventStartTime
+    * The date, time, and time zone that the event starts.
+    *
+    * @return DateTimeTimeZone The eventStartTime
+    */
+    public function getEventStartTime()
+    {
+        if (array_key_exists("eventStartTime", $this->_propDict)) {
+            if (is_a($this->_propDict["eventStartTime"], "DateTimeTimeZone")) {
+                return $this->_propDict["eventStartTime"];
+            } else {
+                $this->_propDict["eventStartTime"] = new DateTimeTimeZone($this->_propDict["eventStartTime"]);
+                return $this->_propDict["eventStartTime"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the eventStartTime
+    * The date, time, and time zone that the event starts.
+    *
+    * @param DateTimeTimeZone $val The value to assign to the eventStartTime
+    *
+    * @return Reminder The Reminder
+    */
+    public function setEventStartTime($val)
+    {
+        $this->_propDict["eventStartTime"] = $val;
+         return $this;
+    }
+    /**
+    * Gets the eventSubject
+    * The text of the event's subject line.
+    *
+    * @return string The eventSubject
+    */
+    public function getEventSubject()
+    {
+        if (array_key_exists("eventSubject", $this->_propDict)) {
+            return $this->_propDict["eventSubject"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the eventSubject
+    * The text of the event's subject line.
+    *
+    * @param string $val The value of the eventSubject
+    *
+    * @return Reminder
+    */
+    public function setEventSubject($val)
+    {
+        $this->_propDict["event_subject"] = $val;
+        return $this;
+    }
     /**
     * Gets the eventWebLink
+    * The URL to open the event in Outlook on the web.The event will open in the browser if you are logged in to your mailbox via Outlook on the web. You will be prompted to login if you are not already logged in with the browser.This URL can be accessed from within an iFrame.
     *
     * @return string The eventWebLink
     */
@@ -212,6 +225,7 @@ class Reminder extends Entity
 
     /**
     * Sets the eventWebLink
+    * The URL to open the event in Outlook on the web.The event will open in the browser if you are logged in to your mailbox via Outlook on the web. You will be prompted to login if you are not already logged in with the browser.This URL can be accessed from within an iFrame.
     *
     * @param string $val The value of the eventWebLink
     *
@@ -225,6 +239,7 @@ class Reminder extends Entity
 
     /**
     * Gets the reminderFireTime
+    * The date, time, and time zone that the reminder is set to occur.
     *
     * @return DateTimeTimeZone The reminderFireTime
     */
@@ -243,6 +258,7 @@ class Reminder extends Entity
 
     /**
     * Sets the reminderFireTime
+    * The date, time, and time zone that the reminder is set to occur.
     *
     * @param DateTimeTimeZone $val The value to assign to the reminderFireTime
     *

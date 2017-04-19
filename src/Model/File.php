@@ -28,6 +28,7 @@ class File extends Entity
 
     /**
     * Gets the hashes
+    * Hashes of the file's binary content, if available. Read-only.
     *
     * @return Hashes The hashes
     */
@@ -46,6 +47,7 @@ class File extends Entity
 
     /**
     * Sets the hashes
+    * Hashes of the file's binary content, if available. Read-only.
     *
     * @param Hashes $val The value to assign to the hashes
     *
@@ -58,6 +60,7 @@ class File extends Entity
     }
     /**
     * Gets the mimeType
+    * The MIME type for the file. This is determined by logic on the server and might not be the value provided when the file was uploaded. Read-only.
     *
     * @return string The mimeType
     */
@@ -72,6 +75,7 @@ class File extends Entity
 
     /**
     * Sets the mimeType
+    * The MIME type for the file. This is determined by logic on the server and might not be the value provided when the file was uploaded. Read-only.
     *
     * @param string $val The value of the mimeType
     *

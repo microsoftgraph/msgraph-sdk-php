@@ -28,6 +28,7 @@ class SharedDriveItem extends Entity
 {
     /**
     * Gets the name
+    * The display name of the shared item.
     *
     * @return string The name
     */
@@ -42,6 +43,7 @@ class SharedDriveItem extends Entity
     
     /**
     * Sets the name
+    * The display name of the shared item.
     *
     * @param string $val The name
     *
@@ -55,6 +57,7 @@ class SharedDriveItem extends Entity
     
     /**
     * Gets the owner
+    * Information about the owner of the shared item being referenced.
     *
     * @return IdentitySet The owner
     */
@@ -73,6 +76,7 @@ class SharedDriveItem extends Entity
     
     /**
     * Sets the owner
+    * Information about the owner of the shared item being referenced.
     *
     * @param string $val The owner
     *
@@ -81,6 +85,34 @@ class SharedDriveItem extends Entity
     public function setOwner($val)
     {
         $this->_propDict["owner"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the items
+     *
+     * @return array The items
+     */
+    public function getItems()
+    {
+        if (array_key_exists("items", $this->_propDict)) {
+           return $this->_propDict["items"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the items
+    *
+    * @param string $val The items
+    *
+    * @return SharedDriveItem
+    */
+    public function setItems($val)
+    {
+		$this->_propDict["items"] = $val;
         return $this;
     }
     
@@ -112,33 +144,6 @@ class SharedDriveItem extends Entity
     public function setRoot($val)
     {
         $this->_propDict["root"] = $val;
-        return $this;
-    }
-    
-    /** 
-    * Gets the items
-    *
-    * @return array The items
-    */
-    public function getItems()
-    {
-        if (array_key_exists("items", $this->_propDict)) {
-           return $this->_propDict["items"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the items
-    *
-    * @param string $val The items
-    *
-    * @return SharedDriveItem
-    */
-    public function setItems($val)
-    {
-		$this->_propDict["items"] = $val;
         return $this;
     }
     

@@ -84,11 +84,12 @@ class WorkbookChartSeries extends Entity
         return $this;
     }
     
-    /** 
-    * Gets the points
-    *
-    * @return array The points
-    */
+
+     /** 
+     * Gets the points
+     *
+     * @return array The points
+     */
     public function getPoints()
     {
         if (array_key_exists("points", $this->_propDict)) {

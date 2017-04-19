@@ -31,10 +31,10 @@ class RecurrencePatternType extends Enum
     /**
     * The Enum RecurrencePatternType
     */
-    const DAILY = "0";
-    const WEEKLY = "1";
-    const ABSOLUTE_MONTHLY = "2";
+    const ABSOLUTE_MONTHLY = "0";
+    const ABSOLUTE_YEARLY = "1";
+    const DAILY = "2";
     const RELATIVE_MONTHLY = "3";
-    const ABSOLUTE_YEARLY = "4";
-    const RELATIVE_YEARLY = "5";
+    const RELATIVE_YEARLY = "4";
+    const WEEKLY = "5";
 }
