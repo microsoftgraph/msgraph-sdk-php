@@ -50,7 +50,7 @@ class AssignedLicense extends Entity
     */
     public function setDisabledPlans($val)
     {
-        $this->_propDict["disabled_plans"] = $val;
+        $this->_propDict["disabledPlans"] = $val;
         return $this;
     }
     /**
@@ -78,7 +78,7 @@ class AssignedLicense extends Entity
     */
     public function setSkuId($val)
     {
-        $this->_propDict["sku_id"] = $val;
+        $this->_propDict["skuId"] = $val;
         return $this;
     }
 }

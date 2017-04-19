@@ -50,7 +50,7 @@ class Photo extends Entity
     */
     public function setCameraMake($val)
     {
-        $this->_propDict["camera_make"] = $val;
+        $this->_propDict["cameraMake"] = $val;
         return $this;
     }
     /**
@@ -78,7 +78,7 @@ class Photo extends Entity
     */
     public function setCameraModel($val)
     {
-        $this->_propDict["camera_model"] = $val;
+        $this->_propDict["cameraModel"] = $val;
         return $this;
     }
     /**
@@ -106,7 +106,7 @@ class Photo extends Entity
     */
     public function setExposureDenominator($val)
     {
-        $this->_propDict["exposure_denominator"] = $val;
+        $this->_propDict["exposureDenominator"] = $val;
         return $this;
     }
     /**
@@ -134,7 +134,7 @@ class Photo extends Entity
     */
     public function setExposureNumerator($val)
     {
-        $this->_propDict["exposure_numerator"] = $val;
+        $this->_propDict["exposureNumerator"] = $val;
         return $this;
     }
     /**
@@ -162,7 +162,7 @@ class Photo extends Entity
     */
     public function setFNumber($val)
     {
-        $this->_propDict["f_number"] = $val;
+        $this->_propDict["fNumber"] = $val;
         return $this;
     }
     /**
@@ -190,7 +190,7 @@ class Photo extends Entity
     */
     public function setFocalLength($val)
     {
-        $this->_propDict["focal_length"] = $val;
+        $this->_propDict["focalLength"] = $val;
         return $this;
     }
     /**

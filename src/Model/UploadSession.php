@@ -83,7 +83,7 @@ class UploadSession extends Entity
     */
     public function setNextExpectedRanges($val)
     {
-        $this->_propDict["next_expected_ranges"] = $val;
+        $this->_propDict["nextExpectedRanges"] = $val;
         return $this;
     }
     /**
@@ -111,7 +111,7 @@ class UploadSession extends Entity
     */
     public function setUploadUrl($val)
     {
-        $this->_propDict["upload_url"] = $val;
+        $this->_propDict["uploadUrl"] = $val;
         return $this;
     }
 }

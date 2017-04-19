@@ -497,7 +497,7 @@ class RemoteItem extends Entity
     */
     public function setWebDavUrl($val)
     {
-        $this->_propDict["web_dav_url"] = $val;
+        $this->_propDict["webDavUrl"] = $val;
         return $this;
     }
     /**
@@ -525,7 +525,7 @@ class RemoteItem extends Entity
     */
     public function setWebUrl($val)
     {
-        $this->_propDict["web_url"] = $val;
+        $this->_propDict["webUrl"] = $val;
         return $this;
     }
 }

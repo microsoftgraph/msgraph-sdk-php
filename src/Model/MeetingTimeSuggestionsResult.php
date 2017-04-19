@@ -50,7 +50,7 @@ class MeetingTimeSuggestionsResult extends Entity
     */
     public function setEmptySuggestionsReason($val)
     {
-        $this->_propDict["empty_suggestions_reason"] = $val;
+        $this->_propDict["emptySuggestionsReason"] = $val;
         return $this;
     }
 

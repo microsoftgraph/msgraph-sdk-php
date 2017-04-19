@@ -48,7 +48,7 @@ class AlternativeSecurityId extends Entity
     */
     public function setIdentityProvider($val)
     {
-        $this->_propDict["identity_provider"] = $val;
+        $this->_propDict["identityProvider"] = $val;
         return $this;
     }
 

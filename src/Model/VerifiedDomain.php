@@ -74,7 +74,7 @@ class VerifiedDomain extends Entity
     */
     public function setIsDefault($val)
     {
-        $this->_propDict["is_default"] = $val;
+        $this->_propDict["isDefault"] = $val;
         return $this;
     }
     /**
@@ -100,7 +100,7 @@ class VerifiedDomain extends Entity
     */
     public function setIsInitial($val)
     {
-        $this->_propDict["is_initial"] = $val;
+        $this->_propDict["isInitial"] = $val;
         return $this;
     }
     /**

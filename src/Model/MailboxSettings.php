@@ -116,7 +116,7 @@ class MailboxSettings extends Entity
     */
     public function setTimeZone($val)
     {
-        $this->_propDict["time_zone"] = $val;
+        $this->_propDict["timeZone"] = $val;
         return $this;
     }
 }

@@ -48,7 +48,7 @@ class LocationConstraint extends Entity
     */
     public function setIsRequired($val)
     {
-        $this->_propDict["is_required"] = $val;
+        $this->_propDict["isRequired"] = $val;
         return $this;
     }
 
@@ -105,7 +105,7 @@ class LocationConstraint extends Entity
     */
     public function setSuggestLocation($val)
     {
-        $this->_propDict["suggest_location"] = $val;
+        $this->_propDict["suggestLocation"] = $val;
         return $this;
     }
 }

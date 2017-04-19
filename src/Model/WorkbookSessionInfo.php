@@ -74,7 +74,7 @@ class WorkbookSessionInfo extends Entity
     */
     public function setPersistChanges($val)
     {
-        $this->_propDict["persist_changes"] = $val;
+        $this->_propDict["persistChanges"] = $val;
         return $this;
     }
 }

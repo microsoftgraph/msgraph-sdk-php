@@ -50,7 +50,7 @@ class ItemReference extends Entity
     */
     public function setDriveId($val)
     {
-        $this->_propDict["drive_id"] = $val;
+        $this->_propDict["driveId"] = $val;
         return $this;
     }
     /**
@@ -158,7 +158,7 @@ class ItemReference extends Entity
     */
     public function setShareId($val)
     {
-        $this->_propDict["share_id"] = $val;
+        $this->_propDict["shareId"] = $val;
         return $this;
     }
 }

@@ -79,7 +79,7 @@ class RecurrenceRange extends Entity
     */
     public function setNumberOfOccurrences($val)
     {
-        $this->_propDict["number_of_occurrences"] = $val;
+        $this->_propDict["numberOfOccurrences"] = $val;
         return $this;
     }
     /**
@@ -105,7 +105,7 @@ class RecurrenceRange extends Entity
     */
     public function setRecurrenceTimeZone($val)
     {
-        $this->_propDict["recurrence_time_zone"] = $val;
+        $this->_propDict["recurrenceTimeZone"] = $val;
         return $this;
     }
 

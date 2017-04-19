@@ -50,7 +50,7 @@ class LocationConstraintItem extends Location
     */
     public function setResolveAvailability($val)
     {
-        $this->_propDict["resolve_availability"] = $val;
+        $this->_propDict["resolveAvailability"] = $val;
         return $this;
     }
 }

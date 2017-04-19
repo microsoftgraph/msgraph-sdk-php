@@ -48,7 +48,7 @@ class ProvisionedPlan extends Entity
     */
     public function setCapabilityStatus($val)
     {
-        $this->_propDict["capability_status"] = $val;
+        $this->_propDict["capabilityStatus"] = $val;
         return $this;
     }
     /**
@@ -74,7 +74,7 @@ class ProvisionedPlan extends Entity
     */
     public function setProvisioningStatus($val)
     {
-        $this->_propDict["provisioning_status"] = $val;
+        $this->_propDict["provisioningStatus"] = $val;
         return $this;
     }
     /**
