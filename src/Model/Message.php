@@ -26,151 +26,39 @@ namespace Microsoft\Graph\Model;
 */
 class Message extends OutlookItem
 {
-    /**
-    * Gets the receivedDateTime
-    *
-    * @return \DateTime The receivedDateTime
-    */
-    public function getReceivedDateTime()
+
+     /** 
+     * Gets the bccRecipients
+    * The Bcc: recipients for the message.
+     *
+     * @return array The bccRecipients
+     */
+    public function getBccRecipients()
     {
-        if (array_key_exists("receivedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["receivedDateTime"], "\DateTime")) {
-                return $this->_propDict["receivedDateTime"];
-            } else {
-                $this->_propDict["receivedDateTime"] = new \DateTime($this->_propDict["receivedDateTime"]);
-                return $this->_propDict["receivedDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the receivedDateTime
-    *
-    * @param string $val The receivedDateTime
-    *
-    * @return Message
-    */
-    public function setReceivedDateTime($val)
-    {
-        $this->_propDict["receivedDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the sentDateTime
-    *
-    * @return \DateTime The sentDateTime
-    */
-    public function getSentDateTime()
-    {
-        if (array_key_exists("sentDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["sentDateTime"], "\DateTime")) {
-                return $this->_propDict["sentDateTime"];
-            } else {
-                $this->_propDict["sentDateTime"] = new \DateTime($this->_propDict["sentDateTime"]);
-                return $this->_propDict["sentDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the sentDateTime
-    *
-    * @param string $val The sentDateTime
-    *
-    * @return Message
-    */
-    public function setSentDateTime($val)
-    {
-        $this->_propDict["sentDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the hasAttachments
-    *
-    * @return bool The hasAttachments
-    */
-    public function getHasAttachments()
-    {
-        if (array_key_exists("hasAttachments", $this->_propDict)) {
-            return $this->_propDict["hasAttachments"];
+        if (array_key_exists("bccRecipients", $this->_propDict)) {
+           return $this->_propDict["bccRecipients"];
         } else {
             return null;
         }
     }
     
-    /**
-    * Sets the hasAttachments
+    /** 
+    * Sets the bccRecipients
+    * The Bcc: recipients for the message.
     *
-    * @param bool $val The hasAttachments
-    *
-    * @return Message
-    */
-    public function setHasAttachments($val)
-    {
-        $this->_propDict["hasAttachments"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the internetMessageId
-    *
-    * @return string The internetMessageId
-    */
-    public function getInternetMessageId()
-    {
-        if (array_key_exists("internetMessageId", $this->_propDict)) {
-            return $this->_propDict["internetMessageId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the internetMessageId
-    *
-    * @param string $val The internetMessageId
+    * @param string $val The bccRecipients
     *
     * @return Message
     */
-    public function setInternetMessageId($val)
+    public function setBccRecipients($val)
     {
-        $this->_propDict["internetMessageId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the subject
-    *
-    * @return string The subject
-    */
-    public function getSubject()
-    {
-        if (array_key_exists("subject", $this->_propDict)) {
-            return $this->_propDict["subject"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the subject
-    *
-    * @param string $val The subject
-    *
-    * @return Message
-    */
-    public function setSubject($val)
-    {
-        $this->_propDict["subject"] = $val;
+		$this->_propDict["bccRecipients"] = $val;
         return $this;
     }
     
     /**
     * Gets the body
+    * The body of the message.
     *
     * @return ItemBody The body
     */
@@ -189,6 +77,7 @@ class Message extends OutlookItem
     
     /**
     * Sets the body
+    * The body of the message.
     *
     * @param string $val The body
     *
@@ -202,6 +91,7 @@ class Message extends OutlookItem
     
     /**
     * Gets the bodyPreview
+    * The first 255 characters of the message body.
     *
     * @return string The bodyPreview
     */
@@ -216,6 +106,7 @@ class Message extends OutlookItem
     
     /**
     * Sets the bodyPreview
+    * The first 255 characters of the message body.
     *
     * @param string $val The bodyPreview
     *
@@ -227,97 +118,68 @@ class Message extends OutlookItem
         return $this;
     }
     
-    /**
-    * Gets the importance
-    *
-    * @return Importance The importance
-    */
-    public function getImportance()
+
+     /** 
+     * Gets the ccRecipients
+    * The Cc: recipients for the message.
+     *
+     * @return array The ccRecipients
+     */
+    public function getCcRecipients()
     {
-        if (array_key_exists("importance", $this->_propDict)) {
-            if (is_a($this->_propDict["importance"], "Importance")) {
-                return $this->_propDict["importance"];
-            } else {
-                $this->_propDict["importance"] = new Importance($this->_propDict["importance"]);
-                return $this->_propDict["importance"];
-            }
+        if (array_key_exists("ccRecipients", $this->_propDict)) {
+           return $this->_propDict["ccRecipients"];
+        } else {
+            return null;
         }
-        return null;
     }
     
-    /**
-    * Sets the importance
+    /** 
+    * Sets the ccRecipients
+    * The Cc: recipients for the message.
     *
-    * @param string $val The importance
+    * @param string $val The ccRecipients
     *
     * @return Message
     */
-    public function setImportance($val)
+    public function setCcRecipients($val)
     {
-        $this->_propDict["importance"] = $val;
+		$this->_propDict["ccRecipients"] = $val;
         return $this;
     }
     
     /**
-    * Gets the parentFolderId
+    * Gets the conversationId
+    * The ID of the conversation the email belongs to.
     *
-    * @return string The parentFolderId
+    * @return string The conversationId
     */
-    public function getParentFolderId()
+    public function getConversationId()
     {
-        if (array_key_exists("parentFolderId", $this->_propDict)) {
-            return $this->_propDict["parentFolderId"];
+        if (array_key_exists("conversationId", $this->_propDict)) {
+            return $this->_propDict["conversationId"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the parentFolderId
+    * Sets the conversationId
+    * The ID of the conversation the email belongs to.
     *
-    * @param string $val The parentFolderId
-    *
-    * @return Message
-    */
-    public function setParentFolderId($val)
-    {
-        $this->_propDict["parentFolderId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the sender
-    *
-    * @return Recipient The sender
-    */
-    public function getSender()
-    {
-        if (array_key_exists("sender", $this->_propDict)) {
-            if (is_a($this->_propDict["sender"], "Recipient")) {
-                return $this->_propDict["sender"];
-            } else {
-                $this->_propDict["sender"] = new Recipient($this->_propDict["sender"]);
-                return $this->_propDict["sender"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the sender
-    *
-    * @param string $val The sender
+    * @param string $val The conversationId
     *
     * @return Message
     */
-    public function setSender($val)
+    public function setConversationId($val)
     {
-        $this->_propDict["sender"] = $val;
+        $this->_propDict["conversationId"] = $val;
         return $this;
     }
     
     /**
     * Gets the from
+    * The mailbox owner and sender of the message.
     *
     * @return Recipient The from
     */
@@ -336,6 +198,7 @@ class Message extends OutlookItem
     
     /**
     * Sets the from
+    * The mailbox owner and sender of the message.
     *
     * @param string $val The from
     *
@@ -347,309 +210,71 @@ class Message extends OutlookItem
         return $this;
     }
     
-    /** 
-    * Gets the toRecipients
-    *
-    * @return array The toRecipients
-    */
-    public function getToRecipients()
-    {
-        if (array_key_exists("toRecipients", $this->_propDict)) {
-           return $this->_propDict["toRecipients"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the toRecipients
-    *
-    * @param string $val The toRecipients
-    *
-    * @return Message
-    */
-    public function setToRecipients($val)
-    {
-		$this->_propDict["toRecipients"] = $val;
-        return $this;
-    }
-    
-    /** 
-    * Gets the ccRecipients
-    *
-    * @return array The ccRecipients
-    */
-    public function getCcRecipients()
-    {
-        if (array_key_exists("ccRecipients", $this->_propDict)) {
-           return $this->_propDict["ccRecipients"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the ccRecipients
-    *
-    * @param string $val The ccRecipients
-    *
-    * @return Message
-    */
-    public function setCcRecipients($val)
-    {
-		$this->_propDict["ccRecipients"] = $val;
-        return $this;
-    }
-    
-    /** 
-    * Gets the bccRecipients
-    *
-    * @return array The bccRecipients
-    */
-    public function getBccRecipients()
-    {
-        if (array_key_exists("bccRecipients", $this->_propDict)) {
-           return $this->_propDict["bccRecipients"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the bccRecipients
-    *
-    * @param string $val The bccRecipients
-    *
-    * @return Message
-    */
-    public function setBccRecipients($val)
-    {
-		$this->_propDict["bccRecipients"] = $val;
-        return $this;
-    }
-    
-    /** 
-    * Gets the replyTo
-    *
-    * @return array The replyTo
-    */
-    public function getReplyTo()
-    {
-        if (array_key_exists("replyTo", $this->_propDict)) {
-           return $this->_propDict["replyTo"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the replyTo
-    *
-    * @param string $val The replyTo
-    *
-    * @return Message
-    */
-    public function setReplyTo($val)
-    {
-		$this->_propDict["replyTo"] = $val;
-        return $this;
-    }
-    
     /**
-    * Gets the conversationId
+    * Gets the hasAttachments
+    * Indicates whether the message has attachments.
     *
-    * @return string The conversationId
+    * @return bool The hasAttachments
     */
-    public function getConversationId()
+    public function getHasAttachments()
     {
-        if (array_key_exists("conversationId", $this->_propDict)) {
-            return $this->_propDict["conversationId"];
+        if (array_key_exists("hasAttachments", $this->_propDict)) {
+            return $this->_propDict["hasAttachments"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the conversationId
+    * Sets the hasAttachments
+    * Indicates whether the message has attachments.
     *
-    * @param string $val The conversationId
+    * @param bool $val The hasAttachments
     *
     * @return Message
     */
-    public function setConversationId($val)
+    public function setHasAttachments($val)
     {
-        $this->_propDict["conversationId"] = $val;
+        $this->_propDict["hasAttachments"] = boolval($val);
         return $this;
     }
     
     /**
-    * Gets the uniqueBody
+    * Gets the importance
+    * The importance of the message: Low, Normal, High.
     *
-    * @return ItemBody The uniqueBody
+    * @return Importance The importance
     */
-    public function getUniqueBody()
+    public function getImportance()
     {
-        if (array_key_exists("uniqueBody", $this->_propDict)) {
-            if (is_a($this->_propDict["uniqueBody"], "ItemBody")) {
-                return $this->_propDict["uniqueBody"];
+        if (array_key_exists("importance", $this->_propDict)) {
+            if (is_a($this->_propDict["importance"], "Importance")) {
+                return $this->_propDict["importance"];
             } else {
-                $this->_propDict["uniqueBody"] = new ItemBody($this->_propDict["uniqueBody"]);
-                return $this->_propDict["uniqueBody"];
+                $this->_propDict["importance"] = new Importance($this->_propDict["importance"]);
+                return $this->_propDict["importance"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the uniqueBody
+    * Sets the importance
+    * The importance of the message: Low, Normal, High.
     *
-    * @param string $val The uniqueBody
-    *
-    * @return Message
-    */
-    public function setUniqueBody($val)
-    {
-        $this->_propDict["uniqueBody"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the isDeliveryReceiptRequested
-    *
-    * @return bool The isDeliveryReceiptRequested
-    */
-    public function getIsDeliveryReceiptRequested()
-    {
-        if (array_key_exists("isDeliveryReceiptRequested", $this->_propDict)) {
-            return $this->_propDict["isDeliveryReceiptRequested"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the isDeliveryReceiptRequested
-    *
-    * @param bool $val The isDeliveryReceiptRequested
+    * @param string $val The importance
     *
     * @return Message
     */
-    public function setIsDeliveryReceiptRequested($val)
+    public function setImportance($val)
     {
-        $this->_propDict["isDeliveryReceiptRequested"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the isReadReceiptRequested
-    *
-    * @return bool The isReadReceiptRequested
-    */
-    public function getIsReadReceiptRequested()
-    {
-        if (array_key_exists("isReadReceiptRequested", $this->_propDict)) {
-            return $this->_propDict["isReadReceiptRequested"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the isReadReceiptRequested
-    *
-    * @param bool $val The isReadReceiptRequested
-    *
-    * @return Message
-    */
-    public function setIsReadReceiptRequested($val)
-    {
-        $this->_propDict["isReadReceiptRequested"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the isRead
-    *
-    * @return bool The isRead
-    */
-    public function getIsRead()
-    {
-        if (array_key_exists("isRead", $this->_propDict)) {
-            return $this->_propDict["isRead"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the isRead
-    *
-    * @param bool $val The isRead
-    *
-    * @return Message
-    */
-    public function setIsRead($val)
-    {
-        $this->_propDict["isRead"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the isDraft
-    *
-    * @return bool The isDraft
-    */
-    public function getIsDraft()
-    {
-        if (array_key_exists("isDraft", $this->_propDict)) {
-            return $this->_propDict["isDraft"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the isDraft
-    *
-    * @param bool $val The isDraft
-    *
-    * @return Message
-    */
-    public function setIsDraft($val)
-    {
-        $this->_propDict["isDraft"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the webLink
-    *
-    * @return string The webLink
-    */
-    public function getWebLink()
-    {
-        if (array_key_exists("webLink", $this->_propDict)) {
-            return $this->_propDict["webLink"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the webLink
-    *
-    * @param string $val The webLink
-    *
-    * @return Message
-    */
-    public function setWebLink($val)
-    {
-        $this->_propDict["webLink"] = $val;
+        $this->_propDict["importance"] = $val;
         return $this;
     }
     
     /**
     * Gets the inferenceClassification
+    * The classification of the message for the user, based on inferred relevance or importance, or on an explicit override. Possible values are: focused or other.
     *
     * @return InferenceClassificationType The inferenceClassification
     */
@@ -668,6 +293,7 @@ class Message extends OutlookItem
     
     /**
     * Sets the inferenceClassification
+    * The classification of the message for the user, based on inferred relevance or importance, or on an explicit override. Possible values are: focused or other.
     *
     * @param string $val The inferenceClassification
     *
@@ -679,11 +305,437 @@ class Message extends OutlookItem
         return $this;
     }
     
-    /** 
-    * Gets the attachments
+    /**
+    * Gets the internetMessageId
+    * The message ID in the format specified by RFC2822.
     *
-    * @return array The attachments
+    * @return string The internetMessageId
     */
+    public function getInternetMessageId()
+    {
+        if (array_key_exists("internetMessageId", $this->_propDict)) {
+            return $this->_propDict["internetMessageId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the internetMessageId
+    * The message ID in the format specified by RFC2822.
+    *
+    * @param string $val The internetMessageId
+    *
+    * @return Message
+    */
+    public function setInternetMessageId($val)
+    {
+        $this->_propDict["internetMessageId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the isDeliveryReceiptRequested
+    * Indicates whether a read receipt is requested for the message.
+    *
+    * @return bool The isDeliveryReceiptRequested
+    */
+    public function getIsDeliveryReceiptRequested()
+    {
+        if (array_key_exists("isDeliveryReceiptRequested", $this->_propDict)) {
+            return $this->_propDict["isDeliveryReceiptRequested"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isDeliveryReceiptRequested
+    * Indicates whether a read receipt is requested for the message.
+    *
+    * @param bool $val The isDeliveryReceiptRequested
+    *
+    * @return Message
+    */
+    public function setIsDeliveryReceiptRequested($val)
+    {
+        $this->_propDict["isDeliveryReceiptRequested"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the isDraft
+    * Indicates whether the message is a draft. A message is a draft if it hasn't been sent yet.
+    *
+    * @return bool The isDraft
+    */
+    public function getIsDraft()
+    {
+        if (array_key_exists("isDraft", $this->_propDict)) {
+            return $this->_propDict["isDraft"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isDraft
+    * Indicates whether the message is a draft. A message is a draft if it hasn't been sent yet.
+    *
+    * @param bool $val The isDraft
+    *
+    * @return Message
+    */
+    public function setIsDraft($val)
+    {
+        $this->_propDict["isDraft"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the isRead
+    * Indicates whether the message has been read.
+    *
+    * @return bool The isRead
+    */
+    public function getIsRead()
+    {
+        if (array_key_exists("isRead", $this->_propDict)) {
+            return $this->_propDict["isRead"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isRead
+    * Indicates whether the message has been read.
+    *
+    * @param bool $val The isRead
+    *
+    * @return Message
+    */
+    public function setIsRead($val)
+    {
+        $this->_propDict["isRead"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the isReadReceiptRequested
+    * Indicates whether a read receipt is requested for the message.
+    *
+    * @return bool The isReadReceiptRequested
+    */
+    public function getIsReadReceiptRequested()
+    {
+        if (array_key_exists("isReadReceiptRequested", $this->_propDict)) {
+            return $this->_propDict["isReadReceiptRequested"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isReadReceiptRequested
+    * Indicates whether a read receipt is requested for the message.
+    *
+    * @param bool $val The isReadReceiptRequested
+    *
+    * @return Message
+    */
+    public function setIsReadReceiptRequested($val)
+    {
+        $this->_propDict["isReadReceiptRequested"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the parentFolderId
+    * The unique identifier for the message's parent mailFolder.
+    *
+    * @return string The parentFolderId
+    */
+    public function getParentFolderId()
+    {
+        if (array_key_exists("parentFolderId", $this->_propDict)) {
+            return $this->_propDict["parentFolderId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the parentFolderId
+    * The unique identifier for the message's parent mailFolder.
+    *
+    * @param string $val The parentFolderId
+    *
+    * @return Message
+    */
+    public function setParentFolderId($val)
+    {
+        $this->_propDict["parentFolderId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the receivedDateTime
+    * The date and time the message was received.
+    *
+    * @return \DateTime The receivedDateTime
+    */
+    public function getReceivedDateTime()
+    {
+        if (array_key_exists("receivedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["receivedDateTime"], "\DateTime")) {
+                return $this->_propDict["receivedDateTime"];
+            } else {
+                $this->_propDict["receivedDateTime"] = new \DateTime($this->_propDict["receivedDateTime"]);
+                return $this->_propDict["receivedDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the receivedDateTime
+    * The date and time the message was received.
+    *
+    * @param string $val The receivedDateTime
+    *
+    * @return Message
+    */
+    public function setReceivedDateTime($val)
+    {
+        $this->_propDict["receivedDateTime"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the replyTo
+    * The email addresses to use when replying.
+     *
+     * @return array The replyTo
+     */
+    public function getReplyTo()
+    {
+        if (array_key_exists("replyTo", $this->_propDict)) {
+           return $this->_propDict["replyTo"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the replyTo
+    * The email addresses to use when replying.
+    *
+    * @param string $val The replyTo
+    *
+    * @return Message
+    */
+    public function setReplyTo($val)
+    {
+		$this->_propDict["replyTo"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the sender
+    * The account that is actually used to generate the message.
+    *
+    * @return Recipient The sender
+    */
+    public function getSender()
+    {
+        if (array_key_exists("sender", $this->_propDict)) {
+            if (is_a($this->_propDict["sender"], "Recipient")) {
+                return $this->_propDict["sender"];
+            } else {
+                $this->_propDict["sender"] = new Recipient($this->_propDict["sender"]);
+                return $this->_propDict["sender"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the sender
+    * The account that is actually used to generate the message.
+    *
+    * @param string $val The sender
+    *
+    * @return Message
+    */
+    public function setSender($val)
+    {
+        $this->_propDict["sender"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the sentDateTime
+    * The date and time the message was sent.
+    *
+    * @return \DateTime The sentDateTime
+    */
+    public function getSentDateTime()
+    {
+        if (array_key_exists("sentDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["sentDateTime"], "\DateTime")) {
+                return $this->_propDict["sentDateTime"];
+            } else {
+                $this->_propDict["sentDateTime"] = new \DateTime($this->_propDict["sentDateTime"]);
+                return $this->_propDict["sentDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the sentDateTime
+    * The date and time the message was sent.
+    *
+    * @param string $val The sentDateTime
+    *
+    * @return Message
+    */
+    public function setSentDateTime($val)
+    {
+        $this->_propDict["sentDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the subject
+    * The subject of the message.
+    *
+    * @return string The subject
+    */
+    public function getSubject()
+    {
+        if (array_key_exists("subject", $this->_propDict)) {
+            return $this->_propDict["subject"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the subject
+    * The subject of the message.
+    *
+    * @param string $val The subject
+    *
+    * @return Message
+    */
+    public function setSubject($val)
+    {
+        $this->_propDict["subject"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the toRecipients
+    * The To: recipients for the message.
+     *
+     * @return array The toRecipients
+     */
+    public function getToRecipients()
+    {
+        if (array_key_exists("toRecipients", $this->_propDict)) {
+           return $this->_propDict["toRecipients"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the toRecipients
+    * The To: recipients for the message.
+    *
+    * @param string $val The toRecipients
+    *
+    * @return Message
+    */
+    public function setToRecipients($val)
+    {
+		$this->_propDict["toRecipients"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the uniqueBody
+    * The part of the body of the message that is unique to the current message. uniqueBody is not provided by default but can be retrieved for a given message by use of the ?$select=uniqueBody query.
+    *
+    * @return ItemBody The uniqueBody
+    */
+    public function getUniqueBody()
+    {
+        if (array_key_exists("uniqueBody", $this->_propDict)) {
+            if (is_a($this->_propDict["uniqueBody"], "ItemBody")) {
+                return $this->_propDict["uniqueBody"];
+            } else {
+                $this->_propDict["uniqueBody"] = new ItemBody($this->_propDict["uniqueBody"]);
+                return $this->_propDict["uniqueBody"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the uniqueBody
+    * The part of the body of the message that is unique to the current message. uniqueBody is not provided by default but can be retrieved for a given message by use of the ?$select=uniqueBody query.
+    *
+    * @param string $val The uniqueBody
+    *
+    * @return Message
+    */
+    public function setUniqueBody($val)
+    {
+        $this->_propDict["uniqueBody"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the webLink
+    * The URL to open the message in Outlook Web App.You can append an ispopout argument to the end of the URL to change how the message is displayed. If ispopout is not present or if it is set to 1, then the message is shown in a popout window. If ispopout is set to 0, then the browser will show the message in the Outlook Web App review pane.The message will open in the browser if you are logged in to your mailbox via Outlook Web App. You will be prompted to login if you are not already logged in with the browser.This URL can be accessed from within an iFrame.
+    *
+    * @return string The webLink
+    */
+    public function getWebLink()
+    {
+        if (array_key_exists("webLink", $this->_propDict)) {
+            return $this->_propDict["webLink"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the webLink
+    * The URL to open the message in Outlook Web App.You can append an ispopout argument to the end of the URL to change how the message is displayed. If ispopout is not present or if it is set to 1, then the message is shown in a popout window. If ispopout is set to 0, then the browser will show the message in the Outlook Web App review pane.The message will open in the browser if you are logged in to your mailbox via Outlook Web App. You will be prompted to login if you are not already logged in with the browser.This URL can be accessed from within an iFrame.
+    *
+    * @param string $val The webLink
+    *
+    * @return Message
+    */
+    public function setWebLink($val)
+    {
+        $this->_propDict["webLink"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the attachments
+    * The fileAttachment and itemAttachment attachments for the message.
+     *
+     * @return array The attachments
+     */
     public function getAttachments()
     {
         if (array_key_exists("attachments", $this->_propDict)) {
@@ -695,6 +747,7 @@ class Message extends OutlookItem
     
     /** 
     * Sets the attachments
+    * The fileAttachment and itemAttachment attachments for the message.
     *
     * @param string $val The attachments
     *
@@ -706,11 +759,13 @@ class Message extends OutlookItem
         return $this;
     }
     
-    /** 
-    * Gets the extensions
-    *
-    * @return array The extensions
-    */
+
+     /** 
+     * Gets the extensions
+    * The collection of open extensions defined for the message. Read-only. Nullable.
+     *
+     * @return array The extensions
+     */
     public function getExtensions()
     {
         if (array_key_exists("extensions", $this->_propDict)) {
@@ -722,6 +777,7 @@ class Message extends OutlookItem
     
     /** 
     * Sets the extensions
+    * The collection of open extensions defined for the message. Read-only. Nullable.
     *
     * @param string $val The extensions
     *
@@ -733,38 +789,13 @@ class Message extends OutlookItem
         return $this;
     }
     
-    /** 
-    * Gets the singleValueExtendedProperties
-    *
-    * @return array The singleValueExtendedProperties
-    */
-    public function getSingleValueExtendedProperties()
-    {
-        if (array_key_exists("singleValueExtendedProperties", $this->_propDict)) {
-           return $this->_propDict["singleValueExtendedProperties"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the singleValueExtendedProperties
-    *
-    * @param string $val The singleValueExtendedProperties
-    *
-    * @return Message
-    */
-    public function setSingleValueExtendedProperties($val)
-    {
-		$this->_propDict["singleValueExtendedProperties"] = $val;
-        return $this;
-    }
-    
-    /** 
-    * Gets the multiValueExtendedProperties
-    *
-    * @return array The multiValueExtendedProperties
-    */
+
+     /** 
+     * Gets the multiValueExtendedProperties
+    * The collection of multi-value extended properties defined for the message. Read-only. Nullable.
+     *
+     * @return array The multiValueExtendedProperties
+     */
     public function getMultiValueExtendedProperties()
     {
         if (array_key_exists("multiValueExtendedProperties", $this->_propDict)) {
@@ -776,6 +807,7 @@ class Message extends OutlookItem
     
     /** 
     * Sets the multiValueExtendedProperties
+    * The collection of multi-value extended properties defined for the message. Read-only. Nullable.
     *
     * @param string $val The multiValueExtendedProperties
     *
@@ -784,6 +816,36 @@ class Message extends OutlookItem
     public function setMultiValueExtendedProperties($val)
     {
 		$this->_propDict["multiValueExtendedProperties"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the singleValueExtendedProperties
+    * The collection of single-value extended properties defined for the message. Read-only. Nullable.
+     *
+     * @return array The singleValueExtendedProperties
+     */
+    public function getSingleValueExtendedProperties()
+    {
+        if (array_key_exists("singleValueExtendedProperties", $this->_propDict)) {
+           return $this->_propDict["singleValueExtendedProperties"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the singleValueExtendedProperties
+    * The collection of single-value extended properties defined for the message. Read-only. Nullable.
+    *
+    * @param string $val The singleValueExtendedProperties
+    *
+    * @return Message
+    */
+    public function setSingleValueExtendedProperties($val)
+    {
+		$this->_propDict["singleValueExtendedProperties"] = $val;
         return $this;
     }
     

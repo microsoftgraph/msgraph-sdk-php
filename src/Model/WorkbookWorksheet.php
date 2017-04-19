@@ -107,11 +107,12 @@ class WorkbookWorksheet extends Entity
         return $this;
     }
     
-    /** 
-    * Gets the charts
-    *
-    * @return array The charts
-    */
+
+     /** 
+     * Gets the charts
+     *
+     * @return array The charts
+     */
     public function getCharts()
     {
         if (array_key_exists("charts", $this->_propDict)) {
@@ -134,11 +135,12 @@ class WorkbookWorksheet extends Entity
         return $this;
     }
     
-    /** 
-    * Gets the pivotTables
-    *
-    * @return array The pivotTables
-    */
+
+     /** 
+     * Gets the pivotTables
+     *
+     * @return array The pivotTables
+     */
     public function getPivotTables()
     {
         if (array_key_exists("pivotTables", $this->_propDict)) {
@@ -192,11 +194,12 @@ class WorkbookWorksheet extends Entity
         return $this;
     }
     
-    /** 
-    * Gets the tables
-    *
-    * @return array The tables
-    */
+
+     /** 
+     * Gets the tables
+     *
+     * @return array The tables
+     */
     public function getTables()
     {
         if (array_key_exists("tables", $this->_propDict)) {

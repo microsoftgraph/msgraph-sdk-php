@@ -26,11 +26,13 @@ namespace Microsoft\Graph\Model;
 */
 class Organization extends DirectoryObject
 {
-    /** 
-    * Gets the assignedPlans
-    *
-    * @return array The assignedPlans
-    */
+
+     /** 
+     * Gets the assignedPlans
+    * The collection of service plans associated with the tenant. Not nullable.
+     *
+     * @return array The assignedPlans
+     */
     public function getAssignedPlans()
     {
         if (array_key_exists("assignedPlans", $this->_propDict)) {
@@ -42,6 +44,7 @@ class Organization extends DirectoryObject
     
     /** 
     * Sets the assignedPlans
+    * The collection of service plans associated with the tenant. Not nullable.
     *
     * @param string $val The assignedPlans
     *
@@ -163,6 +166,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the displayName
+    * The display name for the tenant.
     *
     * @return string The displayName
     */
@@ -177,6 +181,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the displayName
+    * The display name for the tenant.
     *
     * @param string $val The displayName
     *
@@ -190,6 +195,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the marketingNotificationEmails
+    * Not nullable.
     *
     * @return string The marketingNotificationEmails
     */
@@ -204,6 +210,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the marketingNotificationEmails
+    * Not nullable.
     *
     * @param string $val The marketingNotificationEmails
     *
@@ -327,11 +334,13 @@ class Organization extends DirectoryObject
         return $this;
     }
     
-    /** 
-    * Gets the provisionedPlans
-    *
-    * @return array The provisionedPlans
-    */
+
+     /** 
+     * Gets the provisionedPlans
+    * Not nullable.
+     *
+     * @return array The provisionedPlans
+     */
     public function getProvisionedPlans()
     {
         if (array_key_exists("provisionedPlans", $this->_propDict)) {
@@ -343,6 +352,7 @@ class Organization extends DirectoryObject
     
     /** 
     * Sets the provisionedPlans
+    * Not nullable.
     *
     * @param string $val The provisionedPlans
     *
@@ -464,6 +474,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the technicalNotificationMails
+    * Not nullable.
     *
     * @return string The technicalNotificationMails
     */
@@ -478,6 +489,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the technicalNotificationMails
+    * Not nullable.
     *
     * @param string $val The technicalNotificationMails
     *
@@ -489,11 +501,13 @@ class Organization extends DirectoryObject
         return $this;
     }
     
-    /** 
-    * Gets the verifiedDomains
-    *
-    * @return array The verifiedDomains
-    */
+
+     /** 
+     * Gets the verifiedDomains
+    * The collection of domains associated with this tenant. Not nullable.
+     *
+     * @return array The verifiedDomains
+     */
     public function getVerifiedDomains()
     {
         if (array_key_exists("verifiedDomains", $this->_propDict)) {
@@ -505,6 +519,7 @@ class Organization extends DirectoryObject
     
     /** 
     * Sets the verifiedDomains
+    * The collection of domains associated with this tenant. Not nullable.
     *
     * @param string $val The verifiedDomains
     *

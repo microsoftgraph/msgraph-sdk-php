@@ -27,7 +27,74 @@ namespace Microsoft\Graph\Model;
 class DriveItem extends Entity
 {
     /**
+    * Gets the audio
+    * Audio metadata, if the item is an audio file. Read-only.
+    *
+    * @return Audio The audio
+    */
+    public function getAudio()
+    {
+        if (array_key_exists("audio", $this->_propDict)) {
+            if (is_a($this->_propDict["audio"], "Audio")) {
+                return $this->_propDict["audio"];
+            } else {
+                $this->_propDict["audio"] = new Audio($this->_propDict["audio"]);
+                return $this->_propDict["audio"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the audio
+    * Audio metadata, if the item is an audio file. Read-only.
+    *
+    * @param string $val The audio
+    *
+    * @return DriveItem
+    */
+    public function setAudio($val)
+    {
+        $this->_propDict["audio"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the content
+    * The content stream, if the item represents a file.
+    *
+    * @return \GuzzleHttp\Psr7\Stream The content
+    */
+    public function getContent()
+    {
+        if (array_key_exists("content", $this->_propDict)) {
+            if (is_a($this->_propDict["content"], "\GuzzleHttp\Psr7\Stream")) {
+                return $this->_propDict["content"];
+            } else {
+                $this->_propDict["content"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["content"]);
+                return $this->_propDict["content"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the content
+    * The content stream, if the item represents a file.
+    *
+    * @param string $val The content
+    *
+    * @return DriveItem
+    */
+    public function setContent($val)
+    {
+        $this->_propDict["content"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the createdBy
+    * Identity of the user, device, and application which created the item. Read-only.
     *
     * @return IdentitySet The createdBy
     */
@@ -46,6 +113,7 @@ class DriveItem extends Entity
     
     /**
     * Sets the createdBy
+    * Identity of the user, device, and application which created the item. Read-only.
     *
     * @param string $val The createdBy
     *
@@ -59,6 +127,7 @@ class DriveItem extends Entity
     
     /**
     * Gets the createdDateTime
+    * Date and time of item creation. Read-only.
     *
     * @return \DateTime The createdDateTime
     */
@@ -77,6 +146,7 @@ class DriveItem extends Entity
     
     /**
     * Sets the createdDateTime
+    * Date and time of item creation. Read-only.
     *
     * @param string $val The createdDateTime
     *
@@ -85,6 +155,68 @@ class DriveItem extends Entity
     public function setCreatedDateTime($val)
     {
         $this->_propDict["createdDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the cTag
+    * An eTag for the content of the item. This eTag is not changed if only the metadata is changed. Note This property is not returned if the item is a folder. Read-only.
+    *
+    * @return string The cTag
+    */
+    public function getCTag()
+    {
+        if (array_key_exists("cTag", $this->_propDict)) {
+            return $this->_propDict["cTag"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the cTag
+    * An eTag for the content of the item. This eTag is not changed if only the metadata is changed. Note This property is not returned if the item is a folder. Read-only.
+    *
+    * @param string $val The cTag
+    *
+    * @return DriveItem
+    */
+    public function setCTag($val)
+    {
+        $this->_propDict["cTag"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the deleted
+    * Information about the deleted state of the item. Read-only.
+    *
+    * @return Deleted The deleted
+    */
+    public function getDeleted()
+    {
+        if (array_key_exists("deleted", $this->_propDict)) {
+            if (is_a($this->_propDict["deleted"], "Deleted")) {
+                return $this->_propDict["deleted"];
+            } else {
+                $this->_propDict["deleted"] = new Deleted($this->_propDict["deleted"]);
+                return $this->_propDict["deleted"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the deleted
+    * Information about the deleted state of the item. Read-only.
+    *
+    * @param string $val The deleted
+    *
+    * @return DriveItem
+    */
+    public function setDeleted($val)
+    {
+        $this->_propDict["deleted"] = $val;
         return $this;
     }
     
@@ -117,6 +249,7 @@ class DriveItem extends Entity
     
     /**
     * Gets the eTag
+    * eTag for the entire item (metadata + content). Read-only.
     *
     * @return string The eTag
     */
@@ -131,6 +264,7 @@ class DriveItem extends Entity
     
     /**
     * Sets the eTag
+    * eTag for the entire item (metadata + content). Read-only.
     *
     * @param string $val The eTag
     *
@@ -143,243 +277,8 @@ class DriveItem extends Entity
     }
     
     /**
-    * Gets the lastModifiedBy
-    *
-    * @return IdentitySet The lastModifiedBy
-    */
-    public function getLastModifiedBy()
-    {
-        if (array_key_exists("lastModifiedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedBy"], "IdentitySet")) {
-                return $this->_propDict["lastModifiedBy"];
-            } else {
-                $this->_propDict["lastModifiedBy"] = new IdentitySet($this->_propDict["lastModifiedBy"]);
-                return $this->_propDict["lastModifiedBy"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the lastModifiedBy
-    *
-    * @param string $val The lastModifiedBy
-    *
-    * @return DriveItem
-    */
-    public function setLastModifiedBy($val)
-    {
-        $this->_propDict["lastModifiedBy"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the lastModifiedDateTime
-    *
-    * @return \DateTime The lastModifiedDateTime
-    */
-    public function getLastModifiedDateTime()
-    {
-        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
-                return $this->_propDict["lastModifiedDateTime"];
-            } else {
-                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
-                return $this->_propDict["lastModifiedDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the lastModifiedDateTime
-    *
-    * @param string $val The lastModifiedDateTime
-    *
-    * @return DriveItem
-    */
-    public function setLastModifiedDateTime($val)
-    {
-        $this->_propDict["lastModifiedDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the name
-    *
-    * @return string The name
-    */
-    public function getName()
-    {
-        if (array_key_exists("name", $this->_propDict)) {
-            return $this->_propDict["name"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the name
-    *
-    * @param string $val The name
-    *
-    * @return DriveItem
-    */
-    public function setName($val)
-    {
-        $this->_propDict["name"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the webUrl
-    *
-    * @return string The webUrl
-    */
-    public function getWebUrl()
-    {
-        if (array_key_exists("webUrl", $this->_propDict)) {
-            return $this->_propDict["webUrl"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the webUrl
-    *
-    * @param string $val The webUrl
-    *
-    * @return DriveItem
-    */
-    public function setWebUrl($val)
-    {
-        $this->_propDict["webUrl"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the audio
-    *
-    * @return Audio The audio
-    */
-    public function getAudio()
-    {
-        if (array_key_exists("audio", $this->_propDict)) {
-            if (is_a($this->_propDict["audio"], "Audio")) {
-                return $this->_propDict["audio"];
-            } else {
-                $this->_propDict["audio"] = new Audio($this->_propDict["audio"]);
-                return $this->_propDict["audio"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the audio
-    *
-    * @param string $val The audio
-    *
-    * @return DriveItem
-    */
-    public function setAudio($val)
-    {
-        $this->_propDict["audio"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the content
-    *
-    * @return \GuzzleHttp\Psr7\Stream The content
-    */
-    public function getContent()
-    {
-        if (array_key_exists("content", $this->_propDict)) {
-            if (is_a($this->_propDict["content"], "\GuzzleHttp\Psr7\Stream")) {
-                return $this->_propDict["content"];
-            } else {
-                $this->_propDict["content"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["content"]);
-                return $this->_propDict["content"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the content
-    *
-    * @param string $val The content
-    *
-    * @return DriveItem
-    */
-    public function setContent($val)
-    {
-        $this->_propDict["content"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the cTag
-    *
-    * @return string The cTag
-    */
-    public function getCTag()
-    {
-        if (array_key_exists("cTag", $this->_propDict)) {
-            return $this->_propDict["cTag"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the cTag
-    *
-    * @param string $val The cTag
-    *
-    * @return DriveItem
-    */
-    public function setCTag($val)
-    {
-        $this->_propDict["cTag"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the deleted
-    *
-    * @return Deleted The deleted
-    */
-    public function getDeleted()
-    {
-        if (array_key_exists("deleted", $this->_propDict)) {
-            if (is_a($this->_propDict["deleted"], "Deleted")) {
-                return $this->_propDict["deleted"];
-            } else {
-                $this->_propDict["deleted"] = new Deleted($this->_propDict["deleted"]);
-                return $this->_propDict["deleted"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the deleted
-    *
-    * @param string $val The deleted
-    *
-    * @return DriveItem
-    */
-    public function setDeleted($val)
-    {
-        $this->_propDict["deleted"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the file
+    * File metadata, if the item is a file. Read-only.
     *
     * @return File The file
     */
@@ -398,6 +297,7 @@ class DriveItem extends Entity
     
     /**
     * Sets the file
+    * File metadata, if the item is a file. Read-only.
     *
     * @param string $val The file
     *
@@ -411,6 +311,7 @@ class DriveItem extends Entity
     
     /**
     * Gets the fileSystemInfo
+    * File system information on client. Read-write.
     *
     * @return FileSystemInfo The fileSystemInfo
     */
@@ -429,6 +330,7 @@ class DriveItem extends Entity
     
     /**
     * Sets the fileSystemInfo
+    * File system information on client. Read-write.
     *
     * @param string $val The fileSystemInfo
     *
@@ -442,6 +344,7 @@ class DriveItem extends Entity
     
     /**
     * Gets the folder
+    * Folder metadata, if the item is a folder. Read-only.
     *
     * @return Folder The folder
     */
@@ -460,6 +363,7 @@ class DriveItem extends Entity
     
     /**
     * Sets the folder
+    * Folder metadata, if the item is a folder. Read-only.
     *
     * @param string $val The folder
     *
@@ -473,6 +377,7 @@ class DriveItem extends Entity
     
     /**
     * Gets the image
+    * Image metadata, if the item is an image. Read-only.
     *
     * @return Image The image
     */
@@ -491,6 +396,7 @@ class DriveItem extends Entity
     
     /**
     * Sets the image
+    * Image metadata, if the item is an image. Read-only.
     *
     * @param string $val The image
     *
@@ -503,7 +409,74 @@ class DriveItem extends Entity
     }
     
     /**
+    * Gets the lastModifiedBy
+    * Identity of the user, device, and application which last modified the item. Read-only.
+    *
+    * @return IdentitySet The lastModifiedBy
+    */
+    public function getLastModifiedBy()
+    {
+        if (array_key_exists("lastModifiedBy", $this->_propDict)) {
+            if (is_a($this->_propDict["lastModifiedBy"], "IdentitySet")) {
+                return $this->_propDict["lastModifiedBy"];
+            } else {
+                $this->_propDict["lastModifiedBy"] = new IdentitySet($this->_propDict["lastModifiedBy"]);
+                return $this->_propDict["lastModifiedBy"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the lastModifiedBy
+    * Identity of the user, device, and application which last modified the item. Read-only.
+    *
+    * @param string $val The lastModifiedBy
+    *
+    * @return DriveItem
+    */
+    public function setLastModifiedBy($val)
+    {
+        $this->_propDict["lastModifiedBy"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the lastModifiedDateTime
+    * Date and time the item was last modified. Read-only.
+    *
+    * @return \DateTime The lastModifiedDateTime
+    */
+    public function getLastModifiedDateTime()
+    {
+        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+                return $this->_propDict["lastModifiedDateTime"];
+            } else {
+                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
+                return $this->_propDict["lastModifiedDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the lastModifiedDateTime
+    * Date and time the item was last modified. Read-only.
+    *
+    * @param string $val The lastModifiedDateTime
+    *
+    * @return DriveItem
+    */
+    public function setLastModifiedDateTime($val)
+    {
+        $this->_propDict["lastModifiedDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the location
+    * Location metadata, if the item has location data. Read-only.
     *
     * @return GeoCoordinates The location
     */
@@ -522,6 +495,7 @@ class DriveItem extends Entity
     
     /**
     * Sets the location
+    * Location metadata, if the item has location data. Read-only.
     *
     * @param string $val The location
     *
@@ -534,7 +508,37 @@ class DriveItem extends Entity
     }
     
     /**
+    * Gets the name
+    * The name of the item (filename and extension). Read-write.
+    *
+    * @return string The name
+    */
+    public function getName()
+    {
+        if (array_key_exists("name", $this->_propDict)) {
+            return $this->_propDict["name"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the name
+    * The name of the item (filename and extension). Read-write.
+    *
+    * @param string $val The name
+    *
+    * @return DriveItem
+    */
+    public function setName($val)
+    {
+        $this->_propDict["name"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the package
+    * If present, indicates that this item is a package instead of a folder or file. Packages are treated like files in some contexts and folders in others. Read-only.
     *
     * @return Package The package
     */
@@ -553,6 +557,7 @@ class DriveItem extends Entity
     
     /**
     * Sets the package
+    * If present, indicates that this item is a package instead of a folder or file. Packages are treated like files in some contexts and folders in others. Read-only.
     *
     * @param string $val The package
     *
@@ -566,6 +571,7 @@ class DriveItem extends Entity
     
     /**
     * Gets the parentReference
+    * Parent information, if the item has a parent. Read-write.
     *
     * @return ItemReference The parentReference
     */
@@ -584,6 +590,7 @@ class DriveItem extends Entity
     
     /**
     * Sets the parentReference
+    * Parent information, if the item has a parent. Read-write.
     *
     * @param string $val The parentReference
     *
@@ -597,6 +604,7 @@ class DriveItem extends Entity
     
     /**
     * Gets the photo
+    * Photo metadata, if the item is a photo. Read-only.
     *
     * @return Photo The photo
     */
@@ -615,6 +623,7 @@ class DriveItem extends Entity
     
     /**
     * Sets the photo
+    * Photo metadata, if the item is a photo. Read-only.
     *
     * @param string $val The photo
     *
@@ -628,6 +637,7 @@ class DriveItem extends Entity
     
     /**
     * Gets the remoteItem
+    * Remote item data, if the item is shared from a drive other than the one being accessed. Read-only.
     *
     * @return RemoteItem The remoteItem
     */
@@ -646,6 +656,7 @@ class DriveItem extends Entity
     
     /**
     * Sets the remoteItem
+    * Remote item data, if the item is shared from a drive other than the one being accessed. Read-only.
     *
     * @param string $val The remoteItem
     *
@@ -690,6 +701,7 @@ class DriveItem extends Entity
     
     /**
     * Gets the searchResult
+    * Search metadata, if the item is from a search result. Read-only.
     *
     * @return SearchResult The searchResult
     */
@@ -708,6 +720,7 @@ class DriveItem extends Entity
     
     /**
     * Sets the searchResult
+    * Search metadata, if the item is from a search result. Read-only.
     *
     * @param string $val The searchResult
     *
@@ -721,6 +734,7 @@ class DriveItem extends Entity
     
     /**
     * Gets the shared
+    * Indicates that the item has been shared with others and provides information about the shared state of the item. Read-only.
     *
     * @return Shared The shared
     */
@@ -739,6 +753,7 @@ class DriveItem extends Entity
     
     /**
     * Sets the shared
+    * Indicates that the item has been shared with others and provides information about the shared state of the item. Read-only.
     *
     * @param string $val The shared
     *
@@ -783,6 +798,7 @@ class DriveItem extends Entity
     
     /**
     * Gets the size
+    * Size of the item in bytes. Read-only.
     *
     * @return int The size
     */
@@ -797,6 +813,7 @@ class DriveItem extends Entity
     
     /**
     * Sets the size
+    * Size of the item in bytes. Read-only.
     *
     * @param int $val The size
     *
@@ -810,6 +827,7 @@ class DriveItem extends Entity
     
     /**
     * Gets the specialFolder
+    * If the current item is also available as a special folder, this facet is returned. Read-only.
     *
     * @return SpecialFolder The specialFolder
     */
@@ -828,6 +846,7 @@ class DriveItem extends Entity
     
     /**
     * Sets the specialFolder
+    * If the current item is also available as a special folder, this facet is returned. Read-only.
     *
     * @param string $val The specialFolder
     *
@@ -841,6 +860,7 @@ class DriveItem extends Entity
     
     /**
     * Gets the video
+    * Video metadata, if the item is a video. Read-only.
     *
     * @return Video The video
     */
@@ -859,6 +879,7 @@ class DriveItem extends Entity
     
     /**
     * Sets the video
+    * Video metadata, if the item is a video. Read-only.
     *
     * @param string $val The video
     *
@@ -898,7 +919,67 @@ class DriveItem extends Entity
     }
     
     /**
+    * Gets the webUrl
+    * URL that displays the resource in the browser. Read-only.
+    *
+    * @return string The webUrl
+    */
+    public function getWebUrl()
+    {
+        if (array_key_exists("webUrl", $this->_propDict)) {
+            return $this->_propDict["webUrl"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the webUrl
+    * URL that displays the resource in the browser. Read-only.
+    *
+    * @param string $val The webUrl
+    *
+    * @return DriveItem
+    */
+    public function setWebUrl($val)
+    {
+        $this->_propDict["webUrl"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the children
+    * Collection containing Item objects for the immediate children of Item. Only items representing folders have children. Read-only. Nullable.
+     *
+     * @return array The children
+     */
+    public function getChildren()
+    {
+        if (array_key_exists("children", $this->_propDict)) {
+           return $this->_propDict["children"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the children
+    * Collection containing Item objects for the immediate children of Item. Only items representing folders have children. Read-only. Nullable.
+    *
+    * @param string $val The children
+    *
+    * @return DriveItem
+    */
+    public function setChildren($val)
+    {
+		$this->_propDict["children"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the createdByUser
+    * Identity of the user, device, and application which created the item. Read-only.
     *
     * @return User The createdByUser
     */
@@ -917,6 +998,7 @@ class DriveItem extends Entity
     
     /**
     * Sets the createdByUser
+    * Identity of the user, device, and application which created the item. Read-only.
     *
     * @param string $val The createdByUser
     *
@@ -925,6 +1007,99 @@ class DriveItem extends Entity
     public function setCreatedByUser($val)
     {
         $this->_propDict["createdByUser"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the lastModifiedByUser
+    * Identity of the user, device, and application which last modified the item. Read-only.
+    *
+    * @return User The lastModifiedByUser
+    */
+    public function getLastModifiedByUser()
+    {
+        if (array_key_exists("lastModifiedByUser", $this->_propDict)) {
+            if (is_a($this->_propDict["lastModifiedByUser"], "User")) {
+                return $this->_propDict["lastModifiedByUser"];
+            } else {
+                $this->_propDict["lastModifiedByUser"] = new User($this->_propDict["lastModifiedByUser"]);
+                return $this->_propDict["lastModifiedByUser"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the lastModifiedByUser
+    * Identity of the user, device, and application which last modified the item. Read-only.
+    *
+    * @param string $val The lastModifiedByUser
+    *
+    * @return DriveItem
+    */
+    public function setLastModifiedByUser($val)
+    {
+        $this->_propDict["lastModifiedByUser"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the permissions
+    * The set of permissions for the item. Read-only. Nullable.
+     *
+     * @return array The permissions
+     */
+    public function getPermissions()
+    {
+        if (array_key_exists("permissions", $this->_propDict)) {
+           return $this->_propDict["permissions"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the permissions
+    * The set of permissions for the item. Read-only. Nullable.
+    *
+    * @param string $val The permissions
+    *
+    * @return DriveItem
+    */
+    public function setPermissions($val)
+    {
+		$this->_propDict["permissions"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the thumbnails
+    * Collection containing ThumbnailSet objects associated with the item. For more info, see getting thumbnails. Read-only. Nullable.
+     *
+     * @return array The thumbnails
+     */
+    public function getThumbnails()
+    {
+        if (array_key_exists("thumbnails", $this->_propDict)) {
+           return $this->_propDict["thumbnails"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the thumbnails
+    * Collection containing ThumbnailSet objects associated with the item. For more info, see getting thumbnails. Read-only. Nullable.
+    *
+    * @param string $val The thumbnails
+    *
+    * @return DriveItem
+    */
+    public function setThumbnails($val)
+    {
+		$this->_propDict["thumbnails"] = $val;
         return $this;
     }
     
@@ -956,118 +1131,6 @@ class DriveItem extends Entity
     public function setWorkbook($val)
     {
         $this->_propDict["workbook"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the lastModifiedByUser
-    *
-    * @return User The lastModifiedByUser
-    */
-    public function getLastModifiedByUser()
-    {
-        if (array_key_exists("lastModifiedByUser", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedByUser"], "User")) {
-                return $this->_propDict["lastModifiedByUser"];
-            } else {
-                $this->_propDict["lastModifiedByUser"] = new User($this->_propDict["lastModifiedByUser"]);
-                return $this->_propDict["lastModifiedByUser"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the lastModifiedByUser
-    *
-    * @param string $val The lastModifiedByUser
-    *
-    * @return DriveItem
-    */
-    public function setLastModifiedByUser($val)
-    {
-        $this->_propDict["lastModifiedByUser"] = $val;
-        return $this;
-    }
-    
-    /** 
-    * Gets the children
-    *
-    * @return array The children
-    */
-    public function getChildren()
-    {
-        if (array_key_exists("children", $this->_propDict)) {
-           return $this->_propDict["children"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the children
-    *
-    * @param string $val The children
-    *
-    * @return DriveItem
-    */
-    public function setChildren($val)
-    {
-		$this->_propDict["children"] = $val;
-        return $this;
-    }
-    
-    /** 
-    * Gets the permissions
-    *
-    * @return array The permissions
-    */
-    public function getPermissions()
-    {
-        if (array_key_exists("permissions", $this->_propDict)) {
-           return $this->_propDict["permissions"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the permissions
-    *
-    * @param string $val The permissions
-    *
-    * @return DriveItem
-    */
-    public function setPermissions($val)
-    {
-		$this->_propDict["permissions"] = $val;
-        return $this;
-    }
-    
-    /** 
-    * Gets the thumbnails
-    *
-    * @return array The thumbnails
-    */
-    public function getThumbnails()
-    {
-        if (array_key_exists("thumbnails", $this->_propDict)) {
-           return $this->_propDict["thumbnails"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the thumbnails
-    *
-    * @param string $val The thumbnails
-    *
-    * @return DriveItem
-    */
-    public function setThumbnails($val)
-    {
-		$this->_propDict["thumbnails"] = $val;
         return $this;
     }
     

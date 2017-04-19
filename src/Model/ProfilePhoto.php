@@ -28,6 +28,7 @@ class ProfilePhoto extends Entity
 {
     /**
     * Gets the height
+    * The height of the photo. Read-only.
     *
     * @return int The height
     */
@@ -42,6 +43,7 @@ class ProfilePhoto extends Entity
     
     /**
     * Sets the height
+    * The height of the photo. Read-only.
     *
     * @param int $val The height
     *
@@ -55,6 +57,7 @@ class ProfilePhoto extends Entity
     
     /**
     * Gets the width
+    * The width of the photo. Read-only.
     *
     * @return int The width
     */
@@ -69,6 +72,7 @@ class ProfilePhoto extends Entity
     
     /**
     * Sets the width
+    * The width of the photo. Read-only.
     *
     * @param int $val The width
     *

@@ -28,6 +28,7 @@ class ItemAttachment extends Attachment
 {
     /**
     * Gets the item
+    * The attached message or event. Navigation property.
     *
     * @return OutlookItem The item
     */
@@ -46,6 +47,7 @@ class ItemAttachment extends Attachment
     
     /**
     * Sets the item
+    * The attached message or event. Navigation property.
     *
     * @param string $val The item
     *

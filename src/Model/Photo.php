@@ -27,6 +27,7 @@ class Photo extends Entity
 {
     /**
     * Gets the cameraMake
+    * Camera manufacturer. Read-only.
     *
     * @return string The cameraMake
     */
@@ -41,6 +42,7 @@ class Photo extends Entity
 
     /**
     * Sets the cameraMake
+    * Camera manufacturer. Read-only.
     *
     * @param string $val The value of the cameraMake
     *
@@ -53,6 +55,7 @@ class Photo extends Entity
     }
     /**
     * Gets the cameraModel
+    * Camera model. Read-only.
     *
     * @return string The cameraModel
     */
@@ -67,6 +70,7 @@ class Photo extends Entity
 
     /**
     * Sets the cameraModel
+    * Camera model. Read-only.
     *
     * @param string $val The value of the cameraModel
     *
@@ -79,6 +83,7 @@ class Photo extends Entity
     }
     /**
     * Gets the exposureDenominator
+    * The denominator for the exposure time fraction from the camera. Read-only.
     *
     * @return float The exposureDenominator
     */
@@ -93,6 +98,7 @@ class Photo extends Entity
 
     /**
     * Sets the exposureDenominator
+    * The denominator for the exposure time fraction from the camera. Read-only.
     *
     * @param float $val The value of the exposureDenominator
     *
@@ -105,6 +111,7 @@ class Photo extends Entity
     }
     /**
     * Gets the exposureNumerator
+    * The numerator for the exposure time fraction from the camera. Read-only.
     *
     * @return float The exposureNumerator
     */
@@ -119,6 +126,7 @@ class Photo extends Entity
 
     /**
     * Sets the exposureNumerator
+    * The numerator for the exposure time fraction from the camera. Read-only.
     *
     * @param float $val The value of the exposureNumerator
     *
@@ -130,33 +138,8 @@ class Photo extends Entity
         return $this;
     }
     /**
-    * Gets the focalLength
-    *
-    * @return float The focalLength
-    */
-    public function getFocalLength()
-    {
-        if (array_key_exists("focalLength", $this->_propDict)) {
-            return $this->_propDict["focalLength"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the focalLength
-    *
-    * @param float $val The value of the focalLength
-    *
-    * @return Photo
-    */
-    public function setFocalLength($val)
-    {
-        $this->_propDict["focal_length"] = $val;
-        return $this;
-    }
-    /**
     * Gets the fNumber
+    * The F-stop value from the camera. Read-only.
     *
     * @return float The fNumber
     */
@@ -171,6 +154,7 @@ class Photo extends Entity
 
     /**
     * Sets the fNumber
+    * The F-stop value from the camera. Read-only.
     *
     * @param float $val The value of the fNumber
     *
@@ -181,9 +165,66 @@ class Photo extends Entity
         $this->_propDict["f_number"] = $val;
         return $this;
     }
+    /**
+    * Gets the focalLength
+    * The focal length from the camera. Read-only.
+    *
+    * @return float The focalLength
+    */
+    public function getFocalLength()
+    {
+        if (array_key_exists("focalLength", $this->_propDict)) {
+            return $this->_propDict["focalLength"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the focalLength
+    * The focal length from the camera. Read-only.
+    *
+    * @param float $val The value of the focalLength
+    *
+    * @return Photo
+    */
+    public function setFocalLength($val)
+    {
+        $this->_propDict["focal_length"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the iso
+    * The ISO value from the camera. Read-only.
+    *
+    * @return int The iso
+    */
+    public function getIso()
+    {
+        if (array_key_exists("iso", $this->_propDict)) {
+            return $this->_propDict["iso"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the iso
+    * The ISO value from the camera. Read-only.
+    *
+    * @param int $val The value of the iso
+    *
+    * @return Photo
+    */
+    public function setIso($val)
+    {
+        $this->_propDict["iso"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the takenDateTime
+    * Represents the date and time the photo was taken. Read-only.
     *
     * @return \DateTime The takenDateTime
     */
@@ -202,6 +243,7 @@ class Photo extends Entity
 
     /**
     * Sets the takenDateTime
+    * Represents the date and time the photo was taken. Read-only.
     *
     * @param \DateTime $val The value to assign to the takenDateTime
     *
@@ -211,31 +253,5 @@ class Photo extends Entity
     {
         $this->_propDict["takenDateTime"] = $val;
          return $this;
-    }
-    /**
-    * Gets the iso
-    *
-    * @return int The iso
-    */
-    public function getIso()
-    {
-        if (array_key_exists("iso", $this->_propDict)) {
-            return $this->_propDict["iso"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the iso
-    *
-    * @param int $val The value of the iso
-    *
-    * @return Photo
-    */
-    public function setIso($val)
-    {
-        $this->_propDict["iso"] = $val;
-        return $this;
     }
 }

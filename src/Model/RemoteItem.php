@@ -28,6 +28,7 @@ class RemoteItem extends Entity
 
     /**
     * Gets the createdBy
+    * Identity of the user, device, and application which created the item. Read-only.
     *
     * @return IdentitySet The createdBy
     */
@@ -46,6 +47,7 @@ class RemoteItem extends Entity
 
     /**
     * Sets the createdBy
+    * Identity of the user, device, and application which created the item. Read-only.
     *
     * @param IdentitySet $val The value to assign to the createdBy
     *
@@ -59,6 +61,7 @@ class RemoteItem extends Entity
 
     /**
     * Gets the createdDateTime
+    * Date and time of item creation. Read-only.
     *
     * @return \DateTime The createdDateTime
     */
@@ -77,6 +80,7 @@ class RemoteItem extends Entity
 
     /**
     * Sets the createdDateTime
+    * Date and time of item creation. Read-only.
     *
     * @param \DateTime $val The value to assign to the createdDateTime
     *
@@ -90,6 +94,7 @@ class RemoteItem extends Entity
 
     /**
     * Gets the file
+    * Indicates that the remote item is a file. Read-only.
     *
     * @return File The file
     */
@@ -108,6 +113,7 @@ class RemoteItem extends Entity
 
     /**
     * Sets the file
+    * Indicates that the remote item is a file. Read-only.
     *
     * @param File $val The value to assign to the file
     *
@@ -121,6 +127,7 @@ class RemoteItem extends Entity
 
     /**
     * Gets the fileSystemInfo
+    * Information about the remote item from the local file system. Read-only.
     *
     * @return FileSystemInfo The fileSystemInfo
     */
@@ -139,6 +146,7 @@ class RemoteItem extends Entity
 
     /**
     * Sets the fileSystemInfo
+    * Information about the remote item from the local file system. Read-only.
     *
     * @param FileSystemInfo $val The value to assign to the fileSystemInfo
     *
@@ -152,6 +160,7 @@ class RemoteItem extends Entity
 
     /**
     * Gets the folder
+    * Indicates that the remote item is a folder. Read-only.
     *
     * @return Folder The folder
     */
@@ -170,6 +179,7 @@ class RemoteItem extends Entity
 
     /**
     * Sets the folder
+    * Indicates that the remote item is a folder. Read-only.
     *
     * @param Folder $val The value to assign to the folder
     *
@@ -182,6 +192,7 @@ class RemoteItem extends Entity
     }
     /**
     * Gets the id
+    * Unique identifier for the remote item in its drive. Read-only.
     *
     * @return string The id
     */
@@ -196,6 +207,7 @@ class RemoteItem extends Entity
 
     /**
     * Sets the id
+    * Unique identifier for the remote item in its drive. Read-only.
     *
     * @param string $val The value of the id
     *
@@ -209,6 +221,7 @@ class RemoteItem extends Entity
 
     /**
     * Gets the lastModifiedBy
+    * Identity of the user, device, and application which last modified the item. Read-only.
     *
     * @return IdentitySet The lastModifiedBy
     */
@@ -227,6 +240,7 @@ class RemoteItem extends Entity
 
     /**
     * Sets the lastModifiedBy
+    * Identity of the user, device, and application which last modified the item. Read-only.
     *
     * @param IdentitySet $val The value to assign to the lastModifiedBy
     *
@@ -240,6 +254,7 @@ class RemoteItem extends Entity
 
     /**
     * Gets the lastModifiedDateTime
+    * Date and time the item was last modified. Read-only.
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -258,6 +273,7 @@ class RemoteItem extends Entity
 
     /**
     * Sets the lastModifiedDateTime
+    * Date and time the item was last modified. Read-only.
     *
     * @param \DateTime $val The value to assign to the lastModifiedDateTime
     *
@@ -270,6 +286,7 @@ class RemoteItem extends Entity
     }
     /**
     * Gets the name
+    * Optional. Filename of the remote item. Read-only.
     *
     * @return string The name
     */
@@ -284,6 +301,7 @@ class RemoteItem extends Entity
 
     /**
     * Sets the name
+    * Optional. Filename of the remote item. Read-only.
     *
     * @param string $val The value of the name
     *
@@ -297,6 +315,7 @@ class RemoteItem extends Entity
 
     /**
     * Gets the package
+    * If present, indicates that this item is a package instead of a folder or file. Packages are treated like files in some contexts and folders in others. Read-only.
     *
     * @return Package The package
     */
@@ -315,6 +334,7 @@ class RemoteItem extends Entity
 
     /**
     * Sets the package
+    * If present, indicates that this item is a package instead of a folder or file. Packages are treated like files in some contexts and folders in others. Read-only.
     *
     * @param Package $val The value to assign to the package
     *
@@ -328,6 +348,7 @@ class RemoteItem extends Entity
 
     /**
     * Gets the parentReference
+    * Properties of the parent of the remote item. Read-only.
     *
     * @return ItemReference The parentReference
     */
@@ -346,6 +367,7 @@ class RemoteItem extends Entity
 
     /**
     * Sets the parentReference
+    * Properties of the parent of the remote item. Read-only.
     *
     * @param ItemReference $val The value to assign to the parentReference
     *
@@ -359,6 +381,7 @@ class RemoteItem extends Entity
 
     /**
     * Gets the sharepointIds
+    * Provides interop between items in OneDrive for Business and SharePoint with the full set of item identifiers. Read-only.
     *
     * @return SharepointIds The sharepointIds
     */
@@ -377,6 +400,7 @@ class RemoteItem extends Entity
 
     /**
     * Sets the sharepointIds
+    * Provides interop between items in OneDrive for Business and SharePoint with the full set of item identifiers. Read-only.
     *
     * @param SharepointIds $val The value to assign to the sharepointIds
     *
@@ -389,6 +413,7 @@ class RemoteItem extends Entity
     }
     /**
     * Gets the size
+    * Size of the remote item. Read-only.
     *
     * @return int The size
     */
@@ -403,6 +428,7 @@ class RemoteItem extends Entity
 
     /**
     * Sets the size
+    * Size of the remote item. Read-only.
     *
     * @param int $val The value of the size
     *
@@ -416,6 +442,7 @@ class RemoteItem extends Entity
 
     /**
     * Gets the specialFolder
+    * If the current item is also available as a special folder, this facet is returned. Read-only.
     *
     * @return SpecialFolder The specialFolder
     */
@@ -434,6 +461,7 @@ class RemoteItem extends Entity
 
     /**
     * Sets the specialFolder
+    * If the current item is also available as a special folder, this facet is returned. Read-only.
     *
     * @param SpecialFolder $val The value to assign to the specialFolder
     *
@@ -446,6 +474,7 @@ class RemoteItem extends Entity
     }
     /**
     * Gets the webDavUrl
+    * DAV compatible URL for the item.
     *
     * @return string The webDavUrl
     */
@@ -460,6 +489,7 @@ class RemoteItem extends Entity
 
     /**
     * Sets the webDavUrl
+    * DAV compatible URL for the item.
     *
     * @param string $val The value of the webDavUrl
     *
@@ -472,6 +502,7 @@ class RemoteItem extends Entity
     }
     /**
     * Gets the webUrl
+    * URL that displays the resource in the browser. Read-only.
     *
     * @return string The webUrl
     */
@@ -486,6 +517,7 @@ class RemoteItem extends Entity
 
     /**
     * Sets the webUrl
+    * URL that displays the resource in the browser. Read-only.
     *
     * @param string $val The value of the webUrl
     *

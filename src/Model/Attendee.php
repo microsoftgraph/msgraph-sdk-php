@@ -28,6 +28,7 @@ class Attendee extends AttendeeBase
 
     /**
     * Gets the status
+    * The attendee's response (none, accepted, declined, etc.) for the event and date-time that the response was sent.
     *
     * @return ResponseStatus The status
     */
@@ -46,6 +47,7 @@ class Attendee extends AttendeeBase
 
     /**
     * Sets the status
+    * The attendee's response (none, accepted, declined, etc.) for the event and date-time that the response was sent.
     *
     * @param ResponseStatus $val The value to assign to the status
     *

@@ -269,11 +269,12 @@ class WorkbookTable extends Entity
         return $this;
     }
     
-    /** 
-    * Gets the columns
-    *
-    * @return array The columns
-    */
+
+     /** 
+     * Gets the columns
+     *
+     * @return array The columns
+     */
     public function getColumns()
     {
         if (array_key_exists("columns", $this->_propDict)) {
@@ -296,11 +297,12 @@ class WorkbookTable extends Entity
         return $this;
     }
     
-    /** 
-    * Gets the rows
-    *
-    * @return array The rows
-    */
+
+     /** 
+     * Gets the rows
+     *
+     * @return array The rows
+     */
     public function getRows()
     {
         if (array_key_exists("rows", $this->_propDict)) {
