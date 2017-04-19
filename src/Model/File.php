@@ -83,7 +83,7 @@ class File extends Entity
     */
     public function setMimeType($val)
     {
-        $this->_propDict["mime_type"] = $val;
+        $this->_propDict["mimeType"] = $val;
         return $this;
     }
     /**
@@ -109,7 +109,7 @@ class File extends Entity
     */
     public function setProcessingMetadata($val)
     {
-        $this->_propDict["processing_metadata"] = $val;
+        $this->_propDict["processingMetadata"] = $val;
         return $this;
     }
 }

@@ -83,7 +83,7 @@ class AutomaticRepliesSetting extends Entity
     */
     public function setExternalReplyMessage($val)
     {
-        $this->_propDict["external_reply_message"] = $val;
+        $this->_propDict["externalReplyMessage"] = $val;
         return $this;
     }
     /**
@@ -111,7 +111,7 @@ class AutomaticRepliesSetting extends Entity
     */
     public function setInternalReplyMessage($val)
     {
-        $this->_propDict["internal_reply_message"] = $val;
+        $this->_propDict["internalReplyMessage"] = $val;
         return $this;
     }
 

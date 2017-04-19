@@ -48,7 +48,7 @@ class RecurrencePattern extends Entity
     */
     public function setDayOfMonth($val)
     {
-        $this->_propDict["day_of_month"] = $val;
+        $this->_propDict["dayOfMonth"] = $val;
         return $this;
     }
 

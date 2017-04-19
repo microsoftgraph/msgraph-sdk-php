@@ -48,7 +48,7 @@ class PasswordProfile extends Entity
     */
     public function setForceChangePasswordNextSignIn($val)
     {
-        $this->_propDict["force_change_password_next_sign_in"] = $val;
+        $this->_propDict["forceChangePasswordNextSignIn"] = $val;
         return $this;
     }
     /**

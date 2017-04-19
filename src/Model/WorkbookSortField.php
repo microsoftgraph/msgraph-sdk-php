@@ -100,7 +100,7 @@ class WorkbookSortField extends Entity
     */
     public function setDataOption($val)
     {
-        $this->_propDict["data_option"] = $val;
+        $this->_propDict["dataOption"] = $val;
         return $this;
     }
 
@@ -183,7 +183,7 @@ class WorkbookSortField extends Entity
     */
     public function setSortOn($val)
     {
-        $this->_propDict["sort_on"] = $val;
+        $this->_propDict["sortOn"] = $val;
         return $this;
     }
 }

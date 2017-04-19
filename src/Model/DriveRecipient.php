@@ -106,7 +106,7 @@ class DriveRecipient extends Entity
     */
     public function setObjectId($val)
     {
-        $this->_propDict["object_id"] = $val;
+        $this->_propDict["objectId"] = $val;
         return $this;
     }
 }

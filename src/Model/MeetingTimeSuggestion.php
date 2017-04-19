@@ -210,7 +210,7 @@ class MeetingTimeSuggestion extends Entity
     */
     public function setSuggestionReason($val)
     {
-        $this->_propDict["suggestion_reason"] = $val;
+        $this->_propDict["suggestionReason"] = $val;
         return $this;
     }
 }

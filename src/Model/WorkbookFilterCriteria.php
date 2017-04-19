@@ -126,7 +126,7 @@ class WorkbookFilterCriteria extends Entity
     */
     public function setDynamicCriteria($val)
     {
-        $this->_propDict["dynamic_criteria"] = $val;
+        $this->_propDict["dynamicCriteria"] = $val;
         return $this;
     }
     /**
@@ -152,7 +152,7 @@ class WorkbookFilterCriteria extends Entity
     */
     public function setFilterOn($val)
     {
-        $this->_propDict["filter_on"] = $val;
+        $this->_propDict["filterOn"] = $val;
         return $this;
     }
 

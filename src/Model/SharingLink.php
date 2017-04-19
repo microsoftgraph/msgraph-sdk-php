@@ -139,7 +139,7 @@ class SharingLink extends Entity
     */
     public function setWebUrl($val)
     {
-        $this->_propDict["web_url"] = $val;
+        $this->_propDict["webUrl"] = $val;
         return $this;
     }
 }

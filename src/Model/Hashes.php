@@ -50,7 +50,7 @@ class Hashes extends Entity
     */
     public function setCrc32Hash($val)
     {
-        $this->_propDict["crc32_hash"] = $val;
+        $this->_propDict["crc32Hash"] = $val;
         return $this;
     }
     /**
@@ -78,7 +78,7 @@ class Hashes extends Entity
     */
     public function setQuickXorHash($val)
     {
-        $this->_propDict["quick_xor_hash"] = $val;
+        $this->_propDict["quickXorHash"] = $val;
         return $this;
     }
     /**
@@ -106,7 +106,7 @@ class Hashes extends Entity
     */
     public function setSha1Hash($val)
     {
-        $this->_propDict["sha1_hash"] = $val;
+        $this->_propDict["sha1Hash"] = $val;
         return $this;
     }
 }

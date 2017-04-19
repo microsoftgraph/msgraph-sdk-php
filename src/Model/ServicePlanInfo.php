@@ -48,7 +48,7 @@ class ServicePlanInfo extends Entity
     */
     public function setAppliesTo($val)
     {
-        $this->_propDict["applies_to"] = $val;
+        $this->_propDict["appliesTo"] = $val;
         return $this;
     }
     /**
@@ -76,7 +76,7 @@ class ServicePlanInfo extends Entity
     */
     public function setProvisioningStatus($val)
     {
-        $this->_propDict["provisioning_status"] = $val;
+        $this->_propDict["provisioningStatus"] = $val;
         return $this;
     }
     /**
@@ -104,7 +104,7 @@ class ServicePlanInfo extends Entity
     */
     public function setServicePlanId($val)
     {
-        $this->_propDict["service_plan_id"] = $val;
+        $this->_propDict["servicePlanId"] = $val;
         return $this;
     }
     /**
@@ -132,7 +132,7 @@ class ServicePlanInfo extends Entity
     */
     public function setServicePlanName($val)
     {
-        $this->_propDict["service_plan_name"] = $val;
+        $this->_propDict["servicePlanName"] = $val;
         return $this;
     }
 }

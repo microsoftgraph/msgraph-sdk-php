@@ -48,7 +48,7 @@ class WorkbookWorksheetProtectionOptions extends Entity
     */
     public function setAllowAutoFilter($val)
     {
-        $this->_propDict["allow_auto_filter"] = $val;
+        $this->_propDict["allowAutoFilter"] = $val;
         return $this;
     }
     /**
@@ -74,7 +74,7 @@ class WorkbookWorksheetProtectionOptions extends Entity
     */
     public function setAllowDeleteColumns($val)
     {
-        $this->_propDict["allow_delete_columns"] = $val;
+        $this->_propDict["allowDeleteColumns"] = $val;
         return $this;
     }
     /**
@@ -100,7 +100,7 @@ class WorkbookWorksheetProtectionOptions extends Entity
     */
     public function setAllowDeleteRows($val)
     {
-        $this->_propDict["allow_delete_rows"] = $val;
+        $this->_propDict["allowDeleteRows"] = $val;
         return $this;
     }
     /**
@@ -126,7 +126,7 @@ class WorkbookWorksheetProtectionOptions extends Entity
     */
     public function setAllowFormatCells($val)
     {
-        $this->_propDict["allow_format_cells"] = $val;
+        $this->_propDict["allowFormatCells"] = $val;
         return $this;
     }
     /**
@@ -152,7 +152,7 @@ class WorkbookWorksheetProtectionOptions extends Entity
     */
     public function setAllowFormatColumns($val)
     {
-        $this->_propDict["allow_format_columns"] = $val;
+        $this->_propDict["allowFormatColumns"] = $val;
         return $this;
     }
     /**
@@ -178,7 +178,7 @@ class WorkbookWorksheetProtectionOptions extends Entity
     */
     public function setAllowFormatRows($val)
     {
-        $this->_propDict["allow_format_rows"] = $val;
+        $this->_propDict["allowFormatRows"] = $val;
         return $this;
     }
     /**
@@ -204,7 +204,7 @@ class WorkbookWorksheetProtectionOptions extends Entity
     */
     public function setAllowInsertColumns($val)
     {
-        $this->_propDict["allow_insert_columns"] = $val;
+        $this->_propDict["allowInsertColumns"] = $val;
         return $this;
     }
     /**
@@ -230,7 +230,7 @@ class WorkbookWorksheetProtectionOptions extends Entity
     */
     public function setAllowInsertHyperlinks($val)
     {
-        $this->_propDict["allow_insert_hyperlinks"] = $val;
+        $this->_propDict["allowInsertHyperlinks"] = $val;
         return $this;
     }
     /**
@@ -256,7 +256,7 @@ class WorkbookWorksheetProtectionOptions extends Entity
     */
     public function setAllowInsertRows($val)
     {
-        $this->_propDict["allow_insert_rows"] = $val;
+        $this->_propDict["allowInsertRows"] = $val;
         return $this;
     }
     /**
@@ -282,7 +282,7 @@ class WorkbookWorksheetProtectionOptions extends Entity
     */
     public function setAllowPivotTables($val)
     {
-        $this->_propDict["allow_pivot_tables"] = $val;
+        $this->_propDict["allowPivotTables"] = $val;
         return $this;
     }
     /**
@@ -308,7 +308,7 @@ class WorkbookWorksheetProtectionOptions extends Entity
     */
     public function setAllowSort($val)
     {
-        $this->_propDict["allow_sort"] = $val;
+        $this->_propDict["allowSort"] = $val;
         return $this;
     }
 }

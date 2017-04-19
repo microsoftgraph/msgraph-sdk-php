@@ -83,7 +83,7 @@ class Location extends Entity
     */
     public function setDisplayName($val)
     {
-        $this->_propDict["display_name"] = $val;
+        $this->_propDict["displayName"] = $val;
         return $this;
     }
     /**
@@ -111,7 +111,7 @@ class Location extends Entity
     */
     public function setLocationEmailAddress($val)
     {
-        $this->_propDict["location_email_address"] = $val;
+        $this->_propDict["locationEmailAddress"] = $val;
         return $this;
     }
 }

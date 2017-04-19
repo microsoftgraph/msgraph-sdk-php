@@ -48,7 +48,7 @@ class DateTimeTimeZone extends Entity
     */
     public function setDateTime($val)
     {
-        $this->_propDict["date_time"] = $val;
+        $this->_propDict["dateTime"] = $val;
         return $this;
     }
     /**
@@ -74,7 +74,7 @@ class DateTimeTimeZone extends Entity
     */
     public function setTimeZone($val)
     {
-        $this->_propDict["time_zone"] = $val;
+        $this->_propDict["timeZone"] = $val;
         return $this;
     }
 }

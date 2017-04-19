@@ -50,7 +50,7 @@ class Reminder extends Entity
     */
     public function setChangeKey($val)
     {
-        $this->_propDict["change_key"] = $val;
+        $this->_propDict["changeKey"] = $val;
         return $this;
     }
 
@@ -111,7 +111,7 @@ class Reminder extends Entity
     */
     public function setEventId($val)
     {
-        $this->_propDict["event_id"] = $val;
+        $this->_propDict["eventId"] = $val;
         return $this;
     }
 
@@ -205,7 +205,7 @@ class Reminder extends Entity
     */
     public function setEventSubject($val)
     {
-        $this->_propDict["event_subject"] = $val;
+        $this->_propDict["eventSubject"] = $val;
         return $this;
     }
     /**
@@ -233,7 +233,7 @@ class Reminder extends Entity
     */
     public function setEventWebLink($val)
     {
-        $this->_propDict["event_web_link"] = $val;
+        $this->_propDict["eventWebLink"] = $val;
         return $this;
     }
 
