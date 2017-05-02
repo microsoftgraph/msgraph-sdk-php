@@ -35,7 +35,7 @@ class Attendee extends AttendeeBase
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "ResponseStatus")) {
+            if (is_a($this->_propDict["status"], "Microsoft\Graph\Model\ResponseStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new ResponseStatus($this->_propDict["status"]);

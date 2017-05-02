@@ -34,7 +34,7 @@ class TimeConstraint extends Entity
     public function getActivityDomain()
     {
         if (array_key_exists("activityDomain", $this->_propDict)) {
-            if (is_a($this->_propDict["activityDomain"], "ActivityDomain")) {
+            if (is_a($this->_propDict["activityDomain"], "Microsoft\Graph\Model\ActivityDomain")) {
                 return $this->_propDict["activityDomain"];
             } else {
                 $this->_propDict["activityDomain"] = new ActivityDomain($this->_propDict["activityDomain"]);
@@ -65,7 +65,7 @@ class TimeConstraint extends Entity
     public function getTimeslots()
     {
         if (array_key_exists("timeslots", $this->_propDict)) {
-            if (is_a($this->_propDict["timeslots"], "TimeSlot")) {
+            if (is_a($this->_propDict["timeslots"], "Microsoft\Graph\Model\TimeSlot")) {
                 return $this->_propDict["timeslots"];
             } else {
                 $this->_propDict["timeslots"] = new TimeSlot($this->_propDict["timeslots"]);

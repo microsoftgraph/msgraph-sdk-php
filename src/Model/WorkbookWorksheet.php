@@ -171,7 +171,7 @@ class WorkbookWorksheet extends Entity
     public function getProtection()
     {
         if (array_key_exists("protection", $this->_propDict)) {
-            if (is_a($this->_propDict["protection"], "WorkbookWorksheetProtection")) {
+            if (is_a($this->_propDict["protection"], "Microsoft\Graph\Model\WorkbookWorksheetProtection")) {
                 return $this->_propDict["protection"];
             } else {
                 $this->_propDict["protection"] = new WorkbookWorksheetProtection($this->_propDict["protection"]);

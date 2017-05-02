@@ -63,7 +63,7 @@ class SharingInvitation extends Entity
     public function getInvitedBy()
     {
         if (array_key_exists("invitedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["invitedBy"], "IdentitySet")) {
+            if (is_a($this->_propDict["invitedBy"], "Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["invitedBy"];
             } else {
                 $this->_propDict["invitedBy"] = new IdentitySet($this->_propDict["invitedBy"]);

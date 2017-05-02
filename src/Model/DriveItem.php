@@ -35,7 +35,7 @@ class DriveItem extends Entity
     public function getAudio()
     {
         if (array_key_exists("audio", $this->_propDict)) {
-            if (is_a($this->_propDict["audio"], "Audio")) {
+            if (is_a($this->_propDict["audio"], "Microsoft\Graph\Model\Audio")) {
                 return $this->_propDict["audio"];
             } else {
                 $this->_propDict["audio"] = new Audio($this->_propDict["audio"]);
@@ -68,7 +68,7 @@ class DriveItem extends Entity
     public function getContent()
     {
         if (array_key_exists("content", $this->_propDict)) {
-            if (is_a($this->_propDict["content"], "\GuzzleHttp\Psr7\Stream")) {
+            if (is_a($this->_propDict["content"], "Microsoft\Graph\Model\\GuzzleHttp\Psr7\Stream")) {
                 return $this->_propDict["content"];
             } else {
                 $this->_propDict["content"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["content"]);
@@ -101,7 +101,7 @@ class DriveItem extends Entity
     public function getCreatedBy()
     {
         if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "IdentitySet")) {
+            if (is_a($this->_propDict["createdBy"], "Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["createdBy"];
             } else {
                 $this->_propDict["createdBy"] = new IdentitySet($this->_propDict["createdBy"]);
@@ -134,7 +134,7 @@ class DriveItem extends Entity
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["createdDateTime"], "Microsoft\Graph\Model\\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -196,7 +196,7 @@ class DriveItem extends Entity
     public function getDeleted()
     {
         if (array_key_exists("deleted", $this->_propDict)) {
-            if (is_a($this->_propDict["deleted"], "Deleted")) {
+            if (is_a($this->_propDict["deleted"], "Microsoft\Graph\Model\Deleted")) {
                 return $this->_propDict["deleted"];
             } else {
                 $this->_propDict["deleted"] = new Deleted($this->_propDict["deleted"]);
@@ -285,7 +285,7 @@ class DriveItem extends Entity
     public function getFile()
     {
         if (array_key_exists("file", $this->_propDict)) {
-            if (is_a($this->_propDict["file"], "File")) {
+            if (is_a($this->_propDict["file"], "Microsoft\Graph\Model\File")) {
                 return $this->_propDict["file"];
             } else {
                 $this->_propDict["file"] = new File($this->_propDict["file"]);
@@ -318,7 +318,7 @@ class DriveItem extends Entity
     public function getFileSystemInfo()
     {
         if (array_key_exists("fileSystemInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["fileSystemInfo"], "FileSystemInfo")) {
+            if (is_a($this->_propDict["fileSystemInfo"], "Microsoft\Graph\Model\FileSystemInfo")) {
                 return $this->_propDict["fileSystemInfo"];
             } else {
                 $this->_propDict["fileSystemInfo"] = new FileSystemInfo($this->_propDict["fileSystemInfo"]);
@@ -351,7 +351,7 @@ class DriveItem extends Entity
     public function getFolder()
     {
         if (array_key_exists("folder", $this->_propDict)) {
-            if (is_a($this->_propDict["folder"], "Folder")) {
+            if (is_a($this->_propDict["folder"], "Microsoft\Graph\Model\Folder")) {
                 return $this->_propDict["folder"];
             } else {
                 $this->_propDict["folder"] = new Folder($this->_propDict["folder"]);
@@ -384,7 +384,7 @@ class DriveItem extends Entity
     public function getImage()
     {
         if (array_key_exists("image", $this->_propDict)) {
-            if (is_a($this->_propDict["image"], "Image")) {
+            if (is_a($this->_propDict["image"], "Microsoft\Graph\Model\Image")) {
                 return $this->_propDict["image"];
             } else {
                 $this->_propDict["image"] = new Image($this->_propDict["image"]);
@@ -417,7 +417,7 @@ class DriveItem extends Entity
     public function getLastModifiedBy()
     {
         if (array_key_exists("lastModifiedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedBy"], "IdentitySet")) {
+            if (is_a($this->_propDict["lastModifiedBy"], "Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["lastModifiedBy"];
             } else {
                 $this->_propDict["lastModifiedBy"] = new IdentitySet($this->_propDict["lastModifiedBy"]);
@@ -450,7 +450,7 @@ class DriveItem extends Entity
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "Microsoft\Graph\Model\\DateTime")) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -483,7 +483,7 @@ class DriveItem extends Entity
     public function getLocation()
     {
         if (array_key_exists("location", $this->_propDict)) {
-            if (is_a($this->_propDict["location"], "GeoCoordinates")) {
+            if (is_a($this->_propDict["location"], "Microsoft\Graph\Model\GeoCoordinates")) {
                 return $this->_propDict["location"];
             } else {
                 $this->_propDict["location"] = new GeoCoordinates($this->_propDict["location"]);
@@ -545,7 +545,7 @@ class DriveItem extends Entity
     public function getPackage()
     {
         if (array_key_exists("package", $this->_propDict)) {
-            if (is_a($this->_propDict["package"], "Package")) {
+            if (is_a($this->_propDict["package"], "Microsoft\Graph\Model\Package")) {
                 return $this->_propDict["package"];
             } else {
                 $this->_propDict["package"] = new Package($this->_propDict["package"]);
@@ -578,7 +578,7 @@ class DriveItem extends Entity
     public function getParentReference()
     {
         if (array_key_exists("parentReference", $this->_propDict)) {
-            if (is_a($this->_propDict["parentReference"], "ItemReference")) {
+            if (is_a($this->_propDict["parentReference"], "Microsoft\Graph\Model\ItemReference")) {
                 return $this->_propDict["parentReference"];
             } else {
                 $this->_propDict["parentReference"] = new ItemReference($this->_propDict["parentReference"]);
@@ -611,7 +611,7 @@ class DriveItem extends Entity
     public function getPhoto()
     {
         if (array_key_exists("photo", $this->_propDict)) {
-            if (is_a($this->_propDict["photo"], "Photo")) {
+            if (is_a($this->_propDict["photo"], "Microsoft\Graph\Model\Photo")) {
                 return $this->_propDict["photo"];
             } else {
                 $this->_propDict["photo"] = new Photo($this->_propDict["photo"]);
@@ -644,7 +644,7 @@ class DriveItem extends Entity
     public function getRemoteItem()
     {
         if (array_key_exists("remoteItem", $this->_propDict)) {
-            if (is_a($this->_propDict["remoteItem"], "RemoteItem")) {
+            if (is_a($this->_propDict["remoteItem"], "Microsoft\Graph\Model\RemoteItem")) {
                 return $this->_propDict["remoteItem"];
             } else {
                 $this->_propDict["remoteItem"] = new RemoteItem($this->_propDict["remoteItem"]);
@@ -676,7 +676,7 @@ class DriveItem extends Entity
     public function getRoot()
     {
         if (array_key_exists("root", $this->_propDict)) {
-            if (is_a($this->_propDict["root"], "Root")) {
+            if (is_a($this->_propDict["root"], "Microsoft\Graph\Model\Root")) {
                 return $this->_propDict["root"];
             } else {
                 $this->_propDict["root"] = new Root($this->_propDict["root"]);
@@ -708,7 +708,7 @@ class DriveItem extends Entity
     public function getSearchResult()
     {
         if (array_key_exists("searchResult", $this->_propDict)) {
-            if (is_a($this->_propDict["searchResult"], "SearchResult")) {
+            if (is_a($this->_propDict["searchResult"], "Microsoft\Graph\Model\SearchResult")) {
                 return $this->_propDict["searchResult"];
             } else {
                 $this->_propDict["searchResult"] = new SearchResult($this->_propDict["searchResult"]);
@@ -741,7 +741,7 @@ class DriveItem extends Entity
     public function getShared()
     {
         if (array_key_exists("shared", $this->_propDict)) {
-            if (is_a($this->_propDict["shared"], "Shared")) {
+            if (is_a($this->_propDict["shared"], "Microsoft\Graph\Model\Shared")) {
                 return $this->_propDict["shared"];
             } else {
                 $this->_propDict["shared"] = new Shared($this->_propDict["shared"]);
@@ -773,7 +773,7 @@ class DriveItem extends Entity
     public function getSharepointIds()
     {
         if (array_key_exists("sharepointIds", $this->_propDict)) {
-            if (is_a($this->_propDict["sharepointIds"], "SharepointIds")) {
+            if (is_a($this->_propDict["sharepointIds"], "Microsoft\Graph\Model\SharepointIds")) {
                 return $this->_propDict["sharepointIds"];
             } else {
                 $this->_propDict["sharepointIds"] = new SharepointIds($this->_propDict["sharepointIds"]);
@@ -834,7 +834,7 @@ class DriveItem extends Entity
     public function getSpecialFolder()
     {
         if (array_key_exists("specialFolder", $this->_propDict)) {
-            if (is_a($this->_propDict["specialFolder"], "SpecialFolder")) {
+            if (is_a($this->_propDict["specialFolder"], "Microsoft\Graph\Model\SpecialFolder")) {
                 return $this->_propDict["specialFolder"];
             } else {
                 $this->_propDict["specialFolder"] = new SpecialFolder($this->_propDict["specialFolder"]);
@@ -867,7 +867,7 @@ class DriveItem extends Entity
     public function getVideo()
     {
         if (array_key_exists("video", $this->_propDict)) {
-            if (is_a($this->_propDict["video"], "Video")) {
+            if (is_a($this->_propDict["video"], "Microsoft\Graph\Model\Video")) {
                 return $this->_propDict["video"];
             } else {
                 $this->_propDict["video"] = new Video($this->_propDict["video"]);
@@ -986,7 +986,7 @@ class DriveItem extends Entity
     public function getCreatedByUser()
     {
         if (array_key_exists("createdByUser", $this->_propDict)) {
-            if (is_a($this->_propDict["createdByUser"], "User")) {
+            if (is_a($this->_propDict["createdByUser"], "Microsoft\Graph\Model\User")) {
                 return $this->_propDict["createdByUser"];
             } else {
                 $this->_propDict["createdByUser"] = new User($this->_propDict["createdByUser"]);
@@ -1019,7 +1019,7 @@ class DriveItem extends Entity
     public function getLastModifiedByUser()
     {
         if (array_key_exists("lastModifiedByUser", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedByUser"], "User")) {
+            if (is_a($this->_propDict["lastModifiedByUser"], "Microsoft\Graph\Model\User")) {
                 return $this->_propDict["lastModifiedByUser"];
             } else {
                 $this->_propDict["lastModifiedByUser"] = new User($this->_propDict["lastModifiedByUser"]);
@@ -1111,7 +1111,7 @@ class DriveItem extends Entity
     public function getWorkbook()
     {
         if (array_key_exists("workbook", $this->_propDict)) {
-            if (is_a($this->_propDict["workbook"], "Workbook")) {
+            if (is_a($this->_propDict["workbook"], "Microsoft\Graph\Model\Workbook")) {
                 return $this->_propDict["workbook"];
             } else {
                 $this->_propDict["workbook"] = new Workbook($this->_propDict["workbook"]);

@@ -115,7 +115,7 @@ class WorkbookTableColumn extends Entity
     public function getFilter()
     {
         if (array_key_exists("filter", $this->_propDict)) {
-            if (is_a($this->_propDict["filter"], "WorkbookFilter")) {
+            if (is_a($this->_propDict["filter"], "Microsoft\Graph\Model\WorkbookFilter")) {
                 return $this->_propDict["filter"];
             } else {
                 $this->_propDict["filter"] = new WorkbookFilter($this->_propDict["filter"]);
