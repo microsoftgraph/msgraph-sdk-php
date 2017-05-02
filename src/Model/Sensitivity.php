@@ -31,8 +31,8 @@ class Sensitivity extends Enum
     /**
     * The Enum Sensitivity
     */
-    const CONFIDENTIAL = "0";
-    const NORMAL = "1";
-    const PERSONAL = "2";
-    const MSGRAPH_PRIVATE = 3;
+    const CONFIDENTIAL = "confidential";
+    const NORMAL = "normal";
+    const PERSONAL = "personal";
+    const GRAPHPRIVATE = 3;
 }

@@ -31,7 +31,7 @@ class AutomaticRepliesStatus extends Enum
     /**
     * The Enum AutomaticRepliesStatus
     */
-    const ALWAYS_ENABLED = "0";
-    const DISABLED = "1";
-    const SCHEDULED = "2";
+    const ALWAYS_ENABLED = "alwaysEnabled";
+    const DISABLED = "disabled";
+    const SCHEDULED = "scheduled";
 }
