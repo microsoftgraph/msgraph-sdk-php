@@ -31,6 +31,6 @@ class InferenceClassificationType extends Enum
     /**
     * The Enum InferenceClassificationType
     */
-    const FOCUSED = "0";
-    const OTHER = "1";
+    const FOCUSED = "focused";
+    const OTHER = "other";
 }

@@ -64,7 +64,7 @@ class Drive extends Entity
     public function getOwner()
     {
         if (array_key_exists("owner", $this->_propDict)) {
-            if (is_a($this->_propDict["owner"], "IdentitySet")) {
+            if (is_a($this->_propDict["owner"], "Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["owner"];
             } else {
                 $this->_propDict["owner"] = new IdentitySet($this->_propDict["owner"]);
@@ -97,7 +97,7 @@ class Drive extends Entity
     public function getQuota()
     {
         if (array_key_exists("quota", $this->_propDict)) {
-            if (is_a($this->_propDict["quota"], "Quota")) {
+            if (is_a($this->_propDict["quota"], "Microsoft\Graph\Model\Quota")) {
                 return $this->_propDict["quota"];
             } else {
                 $this->_propDict["quota"] = new Quota($this->_propDict["quota"]);
@@ -160,7 +160,7 @@ class Drive extends Entity
     public function getRoot()
     {
         if (array_key_exists("root", $this->_propDict)) {
-            if (is_a($this->_propDict["root"], "DriveItem")) {
+            if (is_a($this->_propDict["root"], "Microsoft\Graph\Model\DriveItem")) {
                 return $this->_propDict["root"];
             } else {
                 $this->_propDict["root"] = new DriveItem($this->_propDict["root"]);

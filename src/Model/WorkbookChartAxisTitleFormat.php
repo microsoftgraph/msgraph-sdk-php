@@ -34,7 +34,7 @@ class WorkbookChartAxisTitleFormat extends Entity
     public function getFont()
     {
         if (array_key_exists("font", $this->_propDict)) {
-            if (is_a($this->_propDict["font"], "WorkbookChartFont")) {
+            if (is_a($this->_propDict["font"], "Microsoft\Graph\Model\WorkbookChartFont")) {
                 return $this->_propDict["font"];
             } else {
                 $this->_propDict["font"] = new WorkbookChartFont($this->_propDict["font"]);

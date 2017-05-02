@@ -35,7 +35,7 @@ class Shared extends Entity
     public function getOwner()
     {
         if (array_key_exists("owner", $this->_propDict)) {
-            if (is_a($this->_propDict["owner"], "IdentitySet")) {
+            if (is_a($this->_propDict["owner"], "Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["owner"];
             } else {
                 $this->_propDict["owner"] = new IdentitySet($this->_propDict["owner"]);

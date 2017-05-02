@@ -505,7 +505,7 @@ class User extends DirectoryObject
     public function getMailboxSettings()
     {
         if (array_key_exists("mailboxSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["mailboxSettings"], "MailboxSettings")) {
+            if (is_a($this->_propDict["mailboxSettings"], "Microsoft\Graph\Model\MailboxSettings")) {
                 return $this->_propDict["mailboxSettings"];
             } else {
                 $this->_propDict["mailboxSettings"] = new MailboxSettings($this->_propDict["mailboxSettings"]);
@@ -803,7 +803,7 @@ class User extends DirectoryObject
     public function getPasswordProfile()
     {
         if (array_key_exists("passwordProfile", $this->_propDict)) {
-            if (is_a($this->_propDict["passwordProfile"], "PasswordProfile")) {
+            if (is_a($this->_propDict["passwordProfile"], "Microsoft\Graph\Model\PasswordProfile")) {
                 return $this->_propDict["passwordProfile"];
             } else {
                 $this->_propDict["passwordProfile"] = new PasswordProfile($this->_propDict["passwordProfile"]);
@@ -1272,7 +1272,7 @@ class User extends DirectoryObject
     public function getCalendar()
     {
         if (array_key_exists("calendar", $this->_propDict)) {
-            if (is_a($this->_propDict["calendar"], "Calendar")) {
+            if (is_a($this->_propDict["calendar"], "Microsoft\Graph\Model\Calendar")) {
                 return $this->_propDict["calendar"];
             } else {
                 $this->_propDict["calendar"] = new Calendar($this->_propDict["calendar"]);
@@ -1515,7 +1515,7 @@ class User extends DirectoryObject
     public function getDrive()
     {
         if (array_key_exists("drive", $this->_propDict)) {
-            if (is_a($this->_propDict["drive"], "Drive")) {
+            if (is_a($this->_propDict["drive"], "Microsoft\Graph\Model\Drive")) {
                 return $this->_propDict["drive"];
             } else {
                 $this->_propDict["drive"] = new Drive($this->_propDict["drive"]);
@@ -1606,7 +1606,7 @@ class User extends DirectoryObject
     public function getInferenceClassification()
     {
         if (array_key_exists("inferenceClassification", $this->_propDict)) {
-            if (is_a($this->_propDict["inferenceClassification"], "InferenceClassification")) {
+            if (is_a($this->_propDict["inferenceClassification"], "Microsoft\Graph\Model\InferenceClassification")) {
                 return $this->_propDict["inferenceClassification"];
             } else {
                 $this->_propDict["inferenceClassification"] = new InferenceClassification($this->_propDict["inferenceClassification"]);
@@ -1669,7 +1669,7 @@ class User extends DirectoryObject
     public function getManager()
     {
         if (array_key_exists("manager", $this->_propDict)) {
-            if (is_a($this->_propDict["manager"], "DirectoryObject")) {
+            if (is_a($this->_propDict["manager"], "Microsoft\Graph\Model\DirectoryObject")) {
                 return $this->_propDict["manager"];
             } else {
                 $this->_propDict["manager"] = new DirectoryObject($this->_propDict["manager"]);
@@ -1822,7 +1822,7 @@ class User extends DirectoryObject
     public function getPhoto()
     {
         if (array_key_exists("photo", $this->_propDict)) {
-            if (is_a($this->_propDict["photo"], "ProfilePhoto")) {
+            if (is_a($this->_propDict["photo"], "Microsoft\Graph\Model\ProfilePhoto")) {
                 return $this->_propDict["photo"];
             } else {
                 $this->_propDict["photo"] = new ProfilePhoto($this->_propDict["photo"]);

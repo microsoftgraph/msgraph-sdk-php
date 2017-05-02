@@ -35,7 +35,7 @@ class MailboxSettings extends Entity
     public function getAutomaticRepliesSetting()
     {
         if (array_key_exists("automaticRepliesSetting", $this->_propDict)) {
-            if (is_a($this->_propDict["automaticRepliesSetting"], "AutomaticRepliesSetting")) {
+            if (is_a($this->_propDict["automaticRepliesSetting"], "Microsoft\Graph\Model\AutomaticRepliesSetting")) {
                 return $this->_propDict["automaticRepliesSetting"];
             } else {
                 $this->_propDict["automaticRepliesSetting"] = new AutomaticRepliesSetting($this->_propDict["automaticRepliesSetting"]);
@@ -68,7 +68,7 @@ class MailboxSettings extends Entity
     public function getLanguage()
     {
         if (array_key_exists("language", $this->_propDict)) {
-            if (is_a($this->_propDict["language"], "LocaleInfo")) {
+            if (is_a($this->_propDict["language"], "Microsoft\Graph\Model\LocaleInfo")) {
                 return $this->_propDict["language"];
             } else {
                 $this->_propDict["language"] = new LocaleInfo($this->_propDict["language"]);

@@ -64,7 +64,7 @@ class Calendar extends Entity
     public function getColor()
     {
         if (array_key_exists("color", $this->_propDict)) {
-            if (is_a($this->_propDict["color"], "CalendarColor")) {
+            if (is_a($this->_propDict["color"], "Microsoft\Graph\Model\CalendarColor")) {
                 return $this->_propDict["color"];
             } else {
                 $this->_propDict["color"] = new CalendarColor($this->_propDict["color"]);

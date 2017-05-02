@@ -250,7 +250,7 @@ class WorkbookChartDataLabels extends Entity
     public function getFormat()
     {
         if (array_key_exists("format", $this->_propDict)) {
-            if (is_a($this->_propDict["format"], "WorkbookChartDataLabelFormat")) {
+            if (is_a($this->_propDict["format"], "Microsoft\Graph\Model\WorkbookChartDataLabelFormat")) {
                 return $this->_propDict["format"];
             } else {
                 $this->_propDict["format"] = new WorkbookChartDataLabelFormat($this->_propDict["format"]);

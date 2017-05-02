@@ -34,7 +34,7 @@ class WorkbookChartAxes extends Entity
     public function getCategoryAxis()
     {
         if (array_key_exists("categoryAxis", $this->_propDict)) {
-            if (is_a($this->_propDict["categoryAxis"], "WorkbookChartAxis")) {
+            if (is_a($this->_propDict["categoryAxis"], "Microsoft\Graph\Model\WorkbookChartAxis")) {
                 return $this->_propDict["categoryAxis"];
             } else {
                 $this->_propDict["categoryAxis"] = new WorkbookChartAxis($this->_propDict["categoryAxis"]);
@@ -65,7 +65,7 @@ class WorkbookChartAxes extends Entity
     public function getSeriesAxis()
     {
         if (array_key_exists("seriesAxis", $this->_propDict)) {
-            if (is_a($this->_propDict["seriesAxis"], "WorkbookChartAxis")) {
+            if (is_a($this->_propDict["seriesAxis"], "Microsoft\Graph\Model\WorkbookChartAxis")) {
                 return $this->_propDict["seriesAxis"];
             } else {
                 $this->_propDict["seriesAxis"] = new WorkbookChartAxis($this->_propDict["seriesAxis"]);
@@ -96,7 +96,7 @@ class WorkbookChartAxes extends Entity
     public function getValueAxis()
     {
         if (array_key_exists("valueAxis", $this->_propDict)) {
-            if (is_a($this->_propDict["valueAxis"], "WorkbookChartAxis")) {
+            if (is_a($this->_propDict["valueAxis"], "Microsoft\Graph\Model\WorkbookChartAxis")) {
                 return $this->_propDict["valueAxis"];
             } else {
                 $this->_propDict["valueAxis"] = new WorkbookChartAxis($this->_propDict["valueAxis"]);
