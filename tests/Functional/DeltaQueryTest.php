@@ -13,6 +13,9 @@ class DeltaQueryTest extends TestCase
         $this->_client = $graphTestBase->graphClient;
     }
 
+    /**
+    * @group functional
+    */
 	public function testDeltaQuery()
     {
         $this->_client->setApiVersion("beta");
