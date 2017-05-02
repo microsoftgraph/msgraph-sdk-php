@@ -491,7 +491,7 @@ class Event extends OutlookItem
     public function getOriginalStart()
     {
         if (array_key_exists("originalStart", $this->_propDict)) {
-            if (is_a($this->_propDict["originalStart"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["originalStart"], "\DateTime")) {
                 return $this->_propDict["originalStart"];
             } else {
                 $this->_propDict["originalStart"] = new \DateTime($this->_propDict["originalStart"]);

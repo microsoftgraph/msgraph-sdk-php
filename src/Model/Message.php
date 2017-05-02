@@ -488,7 +488,7 @@ class Message extends OutlookItem
     public function getReceivedDateTime()
     {
         if (array_key_exists("receivedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["receivedDateTime"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["receivedDateTime"], "\DateTime")) {
                 return $this->_propDict["receivedDateTime"];
             } else {
                 $this->_propDict["receivedDateTime"] = new \DateTime($this->_propDict["receivedDateTime"]);
@@ -584,7 +584,7 @@ class Message extends OutlookItem
     public function getSentDateTime()
     {
         if (array_key_exists("sentDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["sentDateTime"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["sentDateTime"], "\DateTime")) {
                 return $this->_propDict["sentDateTime"];
             } else {
                 $this->_propDict["sentDateTime"] = new \DateTime($this->_propDict["sentDateTime"]);

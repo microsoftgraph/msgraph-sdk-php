@@ -94,7 +94,7 @@ class Device extends DirectoryObject
     public function getApproximateLastSignInDateTime()
     {
         if (array_key_exists("approximateLastSignInDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["approximateLastSignInDateTime"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["approximateLastSignInDateTime"], "\DateTime")) {
                 return $this->_propDict["approximateLastSignInDateTime"];
             } else {
                 $this->_propDict["approximateLastSignInDateTime"] = new \DateTime($this->_propDict["approximateLastSignInDateTime"]);
@@ -297,7 +297,7 @@ class Device extends DirectoryObject
     public function getOnPremisesLastSyncDateTime()
     {
         if (array_key_exists("onPremisesLastSyncDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["onPremisesLastSyncDateTime"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["onPremisesLastSyncDateTime"], "\DateTime")) {
                 return $this->_propDict["onPremisesLastSyncDateTime"];
             } else {
                 $this->_propDict["onPremisesLastSyncDateTime"] = new \DateTime($this->_propDict["onPremisesLastSyncDateTime"]);
