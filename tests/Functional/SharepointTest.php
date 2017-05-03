@@ -14,6 +14,9 @@ class SharepointTest extends TestCase
         $this->_client->setApiVersion("stagingv1.0");
     }
 
+    /**
+    * @group functional
+    */
 	public function testAccessRootSite()
     {
         $files = $this->_client->createRequest("GET", "/sites/root/drive/root/children")
@@ -23,6 +26,9 @@ class SharepointTest extends TestCase
         $this->assertNotNull($files);
     }
 
+    /**
+    * @group functional
+    */
     public function testSearch()
     {
         $results = $this->_client->createRequest("GET", "/sites/root?search='a'")
