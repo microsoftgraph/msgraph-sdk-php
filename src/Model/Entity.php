@@ -107,11 +107,18 @@ class Entity implements \JsonSerializable
     
     /**
     * Serializes the object by property array
+	* Manually serialize DateTime into RFC3339 format
     *
     * @return array The list of properties
     */
     public function jsonSerialize()
     {
-        return $this->getProperties();
+        $serializableProperties = $this->getProperties();
+        foreach ($serializableProperties as $property => $val) {
+            if (is_a($val, "\DateTime")) {
+                $serializableProperties[$property] = $val->format(\DateTime::RFC3339);
+            }
+        }
+        return $serializableProperties;
     }
 }
