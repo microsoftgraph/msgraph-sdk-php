@@ -3,7 +3,7 @@ use PHPUnit\Framework\TestCase;
 use Microsoft\Graph\Test\GraphTestBase;
 use Microsoft\Graph\Model;
 
-class PalnnerTest extends TestCase
+class PlannerTest extends TestCase
 {
     private $_client;
 
