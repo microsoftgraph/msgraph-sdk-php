@@ -13,6 +13,9 @@ class WebhooksTest extends TestCase
         $this->_client = $graphTestBase->graphClient;
     }
 
+    /**
+    * @group functional
+    */
 	public function testWebhooks()
     {
         $sub = new Model\Subscription();
