@@ -49,7 +49,7 @@ class DriveItem extends Entity
     * Sets the audio
     * Audio metadata, if the item is an audio file. Read-only.
     *
-    * @param string $val The audio
+    * @param Audio $val The audio
     *
     * @return DriveItem
     */
@@ -82,7 +82,7 @@ class DriveItem extends Entity
     * Sets the content
     * The content stream, if the item represents a file.
     *
-    * @param string $val The content
+    * @param \GuzzleHttp\Psr7\Stream $val The content
     *
     * @return DriveItem
     */
@@ -115,7 +115,7 @@ class DriveItem extends Entity
     * Sets the createdBy
     * Identity of the user, device, and application which created the item. Read-only.
     *
-    * @param string $val The createdBy
+    * @param IdentitySet $val The createdBy
     *
     * @return DriveItem
     */
@@ -148,7 +148,7 @@ class DriveItem extends Entity
     * Sets the createdDateTime
     * Date and time of item creation. Read-only.
     *
-    * @param string $val The createdDateTime
+    * @param \DateTime $val The createdDateTime
     *
     * @return DriveItem
     */
@@ -210,7 +210,7 @@ class DriveItem extends Entity
     * Sets the deleted
     * Information about the deleted state of the item. Read-only.
     *
-    * @param string $val The deleted
+    * @param Deleted $val The deleted
     *
     * @return DriveItem
     */
@@ -299,7 +299,7 @@ class DriveItem extends Entity
     * Sets the file
     * File metadata, if the item is a file. Read-only.
     *
-    * @param string $val The file
+    * @param File $val The file
     *
     * @return DriveItem
     */
@@ -332,7 +332,7 @@ class DriveItem extends Entity
     * Sets the fileSystemInfo
     * File system information on client. Read-write.
     *
-    * @param string $val The fileSystemInfo
+    * @param FileSystemInfo $val The fileSystemInfo
     *
     * @return DriveItem
     */
@@ -365,7 +365,7 @@ class DriveItem extends Entity
     * Sets the folder
     * Folder metadata, if the item is a folder. Read-only.
     *
-    * @param string $val The folder
+    * @param Folder $val The folder
     *
     * @return DriveItem
     */
@@ -398,7 +398,7 @@ class DriveItem extends Entity
     * Sets the image
     * Image metadata, if the item is an image. Read-only.
     *
-    * @param string $val The image
+    * @param Image $val The image
     *
     * @return DriveItem
     */
@@ -431,7 +431,7 @@ class DriveItem extends Entity
     * Sets the lastModifiedBy
     * Identity of the user, device, and application which last modified the item. Read-only.
     *
-    * @param string $val The lastModifiedBy
+    * @param IdentitySet $val The lastModifiedBy
     *
     * @return DriveItem
     */
@@ -464,7 +464,7 @@ class DriveItem extends Entity
     * Sets the lastModifiedDateTime
     * Date and time the item was last modified. Read-only.
     *
-    * @param string $val The lastModifiedDateTime
+    * @param \DateTime $val The lastModifiedDateTime
     *
     * @return DriveItem
     */
@@ -497,7 +497,7 @@ class DriveItem extends Entity
     * Sets the location
     * Location metadata, if the item has location data. Read-only.
     *
-    * @param string $val The location
+    * @param GeoCoordinates $val The location
     *
     * @return DriveItem
     */
@@ -559,7 +559,7 @@ class DriveItem extends Entity
     * Sets the package
     * If present, indicates that this item is a package instead of a folder or file. Packages are treated like files in some contexts and folders in others. Read-only.
     *
-    * @param string $val The package
+    * @param Package $val The package
     *
     * @return DriveItem
     */
@@ -592,7 +592,7 @@ class DriveItem extends Entity
     * Sets the parentReference
     * Parent information, if the item has a parent. Read-write.
     *
-    * @param string $val The parentReference
+    * @param ItemReference $val The parentReference
     *
     * @return DriveItem
     */
@@ -625,7 +625,7 @@ class DriveItem extends Entity
     * Sets the photo
     * Photo metadata, if the item is a photo. Read-only.
     *
-    * @param string $val The photo
+    * @param Photo $val The photo
     *
     * @return DriveItem
     */
@@ -658,7 +658,7 @@ class DriveItem extends Entity
     * Sets the remoteItem
     * Remote item data, if the item is shared from a drive other than the one being accessed. Read-only.
     *
-    * @param string $val The remoteItem
+    * @param RemoteItem $val The remoteItem
     *
     * @return DriveItem
     */
@@ -689,7 +689,7 @@ class DriveItem extends Entity
     /**
     * Sets the root
     *
-    * @param string $val The root
+    * @param Root $val The root
     *
     * @return DriveItem
     */
@@ -722,7 +722,7 @@ class DriveItem extends Entity
     * Sets the searchResult
     * Search metadata, if the item is from a search result. Read-only.
     *
-    * @param string $val The searchResult
+    * @param SearchResult $val The searchResult
     *
     * @return DriveItem
     */
@@ -755,7 +755,7 @@ class DriveItem extends Entity
     * Sets the shared
     * Indicates that the item has been shared with others and provides information about the shared state of the item. Read-only.
     *
-    * @param string $val The shared
+    * @param Shared $val The shared
     *
     * @return DriveItem
     */
@@ -786,7 +786,7 @@ class DriveItem extends Entity
     /**
     * Sets the sharepointIds
     *
-    * @param string $val The sharepointIds
+    * @param SharepointIds $val The sharepointIds
     *
     * @return DriveItem
     */
@@ -848,7 +848,7 @@ class DriveItem extends Entity
     * Sets the specialFolder
     * If the current item is also available as a special folder, this facet is returned. Read-only.
     *
-    * @param string $val The specialFolder
+    * @param SpecialFolder $val The specialFolder
     *
     * @return DriveItem
     */
@@ -881,7 +881,7 @@ class DriveItem extends Entity
     * Sets the video
     * Video metadata, if the item is a video. Read-only.
     *
-    * @param string $val The video
+    * @param Video $val The video
     *
     * @return DriveItem
     */
@@ -967,7 +967,7 @@ class DriveItem extends Entity
     * Sets the children
     * Collection containing Item objects for the immediate children of Item. Only items representing folders have children. Read-only. Nullable.
     *
-    * @param string $val The children
+    * @param DriveItem $val The children
     *
     * @return DriveItem
     */
@@ -1000,7 +1000,7 @@ class DriveItem extends Entity
     * Sets the createdByUser
     * Identity of the user, device, and application which created the item. Read-only.
     *
-    * @param string $val The createdByUser
+    * @param User $val The createdByUser
     *
     * @return DriveItem
     */
@@ -1033,7 +1033,7 @@ class DriveItem extends Entity
     * Sets the lastModifiedByUser
     * Identity of the user, device, and application which last modified the item. Read-only.
     *
-    * @param string $val The lastModifiedByUser
+    * @param User $val The lastModifiedByUser
     *
     * @return DriveItem
     */
@@ -1063,7 +1063,7 @@ class DriveItem extends Entity
     * Sets the permissions
     * The set of permissions for the item. Read-only. Nullable.
     *
-    * @param string $val The permissions
+    * @param Permission $val The permissions
     *
     * @return DriveItem
     */
@@ -1093,7 +1093,7 @@ class DriveItem extends Entity
     * Sets the thumbnails
     * Collection containing ThumbnailSet objects associated with the item. For more info, see getting thumbnails. Read-only. Nullable.
     *
-    * @param string $val The thumbnails
+    * @param ThumbnailSet $val The thumbnails
     *
     * @return DriveItem
     */
@@ -1124,7 +1124,7 @@ class DriveItem extends Entity
     /**
     * Sets the workbook
     *
-    * @param string $val The workbook
+    * @param Workbook $val The workbook
     *
     * @return DriveItem
     */

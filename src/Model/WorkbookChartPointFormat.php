@@ -47,7 +47,7 @@ class WorkbookChartPointFormat extends Entity
     /**
     * Sets the fill
     *
-    * @param string $val The fill
+    * @param WorkbookChartFill $val The fill
     *
     * @return WorkbookChartPointFormat
     */

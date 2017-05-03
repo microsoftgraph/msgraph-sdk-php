@@ -47,7 +47,7 @@ class WorkbookChartAxisTitleFormat extends Entity
     /**
     * Sets the font
     *
-    * @param string $val The font
+    * @param WorkbookChartFont $val The font
     *
     * @return WorkbookChartAxisTitleFormat
     */

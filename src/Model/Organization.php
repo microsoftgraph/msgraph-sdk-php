@@ -46,7 +46,7 @@ class Organization extends DirectoryObject
     * Sets the assignedPlans
     * The collection of service plans associated with the tenant. Not nullable.
     *
-    * @param string $val The assignedPlans
+    * @param AssignedPlan $val The assignedPlans
     *
     * @return Organization
     */
@@ -243,7 +243,7 @@ class Organization extends DirectoryObject
     /**
     * Sets the onPremisesLastSyncDateTime
     *
-    * @param string $val The onPremisesLastSyncDateTime
+    * @param \DateTime $val The onPremisesLastSyncDateTime
     *
     * @return Organization
     */
@@ -354,7 +354,7 @@ class Organization extends DirectoryObject
     * Sets the provisionedPlans
     * Not nullable.
     *
-    * @param string $val The provisionedPlans
+    * @param ProvisionedPlan $val The provisionedPlans
     *
     * @return Organization
     */
@@ -521,7 +521,7 @@ class Organization extends DirectoryObject
     * Sets the verifiedDomains
     * The collection of domains associated with this tenant. Not nullable.
     *
-    * @param string $val The verifiedDomains
+    * @param VerifiedDomain $val The verifiedDomains
     *
     * @return Organization
     */

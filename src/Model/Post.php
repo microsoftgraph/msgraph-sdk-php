@@ -49,7 +49,7 @@ class Post extends OutlookItem
     * Sets the body
     * The contents of the post. This is a default property. This property can be null.
     *
-    * @param string $val The body
+    * @param ItemBody $val The body
     *
     * @return Post
     */
@@ -140,7 +140,7 @@ class Post extends OutlookItem
     * Sets the from
     * Used in delegate access scenarios. Indicates who posted the message on behalf of another user. This is a default property.
     *
-    * @param string $val The from
+    * @param Recipient $val The from
     *
     * @return Post
     */
@@ -199,7 +199,7 @@ class Post extends OutlookItem
     * Sets the newParticipants
     * Conversation participants that were added to the thread as part of this post.
     *
-    * @param string $val The newParticipants
+    * @param Recipient $val The newParticipants
     *
     * @return Post
     */
@@ -232,7 +232,7 @@ class Post extends OutlookItem
     * Sets the receivedDateTime
     * Specifies when the post was received. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
-    * @param string $val The receivedDateTime
+    * @param \DateTime $val The receivedDateTime
     *
     * @return Post
     */
@@ -265,7 +265,7 @@ class Post extends OutlookItem
     * Sets the sender
     * Contains the address of the sender. The value of Sender is assumed to be the address of the authenticated user in the case when Sender is not specified. This is a default property.
     *
-    * @param string $val The sender
+    * @param Recipient $val The sender
     *
     * @return Post
     */
@@ -295,7 +295,7 @@ class Post extends OutlookItem
     * Sets the attachments
     * Read-only. Nullable.
     *
-    * @param string $val The attachments
+    * @param Attachment $val The attachments
     *
     * @return Post
     */
@@ -325,7 +325,7 @@ class Post extends OutlookItem
     * Sets the extensions
     * The collection of open extensions defined for the post. Read-only. Nullable.
     *
-    * @param string $val The extensions
+    * @param Extension $val The extensions
     *
     * @return Post
     */
@@ -358,7 +358,7 @@ class Post extends OutlookItem
     * Sets the inReplyTo
     * Read-only.
     *
-    * @param string $val The inReplyTo
+    * @param Post $val The inReplyTo
     *
     * @return Post
     */
@@ -388,7 +388,7 @@ class Post extends OutlookItem
     * Sets the multiValueExtendedProperties
     * The collection of multi-value extended properties defined for the post. Read-only. Nullable.
     *
-    * @param string $val The multiValueExtendedProperties
+    * @param MultiValueLegacyExtendedProperty $val The multiValueExtendedProperties
     *
     * @return Post
     */
@@ -418,7 +418,7 @@ class Post extends OutlookItem
     * Sets the singleValueExtendedProperties
     * The collection of single-value extended properties defined for the post. Read-only. Nullable.
     *
-    * @param string $val The singleValueExtendedProperties
+    * @param SingleValueLegacyExtendedProperty $val The singleValueExtendedProperties
     *
     * @return Post
     */

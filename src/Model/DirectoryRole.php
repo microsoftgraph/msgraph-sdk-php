@@ -133,7 +133,7 @@ class DirectoryRole extends DirectoryObject
     * Sets the members
     * Users that are members of this directory role. HTTP Methods: GET, POST, DELETE. Read-only. Nullable.
     *
-    * @param string $val The members
+    * @param DirectoryObject $val The members
     *
     * @return DirectoryRole
     */

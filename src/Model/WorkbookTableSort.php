@@ -44,7 +44,7 @@ class WorkbookTableSort extends Entity
     /** 
     * Sets the fields
     *
-    * @param string $val The fields
+    * @param WorkbookSortField $val The fields
     *
     * @return WorkbookTableSort
     */

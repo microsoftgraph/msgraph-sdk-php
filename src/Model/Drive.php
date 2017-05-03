@@ -78,7 +78,7 @@ class Drive extends Entity
     * Sets the owner
     * Optional. The user account that owns the drive.
     *
-    * @param string $val The owner
+    * @param IdentitySet $val The owner
     *
     * @return Drive
     */
@@ -111,7 +111,7 @@ class Drive extends Entity
     * Sets the quota
     * Optional. Information about the drive's storage space quota.
     *
-    * @param string $val The quota
+    * @param Quota $val The quota
     *
     * @return Drive
     */
@@ -141,7 +141,7 @@ class Drive extends Entity
     * Sets the items
     * All items contained in the drive. Read-only. Nullable.
     *
-    * @param string $val The items
+    * @param DriveItem $val The items
     *
     * @return Drive
     */
@@ -174,7 +174,7 @@ class Drive extends Entity
     * Sets the root
     * The root folder of the drive. Read-only.
     *
-    * @param string $val The root
+    * @param DriveItem $val The root
     *
     * @return Drive
     */
@@ -204,7 +204,7 @@ class Drive extends Entity
     * Sets the special
     * Collection of common folders available in OneDrive. Read-only. Nullable.
     *
-    * @param string $val The special
+    * @param DriveItem $val The special
     *
     * @return Drive
     */

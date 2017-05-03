@@ -179,7 +179,7 @@ class WorkbookRangeFormat extends Entity
     /** 
     * Sets the borders
     *
-    * @param string $val The borders
+    * @param WorkbookRangeBorder $val The borders
     *
     * @return WorkbookRangeFormat
     */
@@ -210,7 +210,7 @@ class WorkbookRangeFormat extends Entity
     /**
     * Sets the fill
     *
-    * @param string $val The fill
+    * @param WorkbookRangeFill $val The fill
     *
     * @return WorkbookRangeFormat
     */
@@ -241,7 +241,7 @@ class WorkbookRangeFormat extends Entity
     /**
     * Sets the font
     *
-    * @param string $val The font
+    * @param WorkbookRangeFont $val The font
     *
     * @return WorkbookRangeFormat
     */
@@ -272,7 +272,7 @@ class WorkbookRangeFormat extends Entity
     /**
     * Sets the protection
     *
-    * @param string $val The protection
+    * @param WorkbookFormatProtection $val The protection
     *
     * @return WorkbookRangeFormat
     */

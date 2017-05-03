@@ -47,7 +47,7 @@ class EventMessage extends Message
     /**
     * Sets the meetingMessageType
     *
-    * @param string $val The meetingMessageType
+    * @param MeetingMessageType $val The meetingMessageType
     *
     * @return EventMessage
     */
@@ -78,7 +78,7 @@ class EventMessage extends Message
     /**
     * Sets the event
     *
-    * @param string $val The event
+    * @param Event $val The event
     *
     * @return EventMessage
     */

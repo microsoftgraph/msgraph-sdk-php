@@ -46,7 +46,7 @@ class Message extends OutlookItem
     * Sets the bccRecipients
     * The Bcc: recipients for the message.
     *
-    * @param string $val The bccRecipients
+    * @param Recipient $val The bccRecipients
     *
     * @return Message
     */
@@ -79,7 +79,7 @@ class Message extends OutlookItem
     * Sets the body
     * The body of the message.
     *
-    * @param string $val The body
+    * @param ItemBody $val The body
     *
     * @return Message
     */
@@ -138,7 +138,7 @@ class Message extends OutlookItem
     * Sets the ccRecipients
     * The Cc: recipients for the message.
     *
-    * @param string $val The ccRecipients
+    * @param Recipient $val The ccRecipients
     *
     * @return Message
     */
@@ -200,7 +200,7 @@ class Message extends OutlookItem
     * Sets the from
     * The mailbox owner and sender of the message.
     *
-    * @param string $val The from
+    * @param Recipient $val The from
     *
     * @return Message
     */
@@ -262,7 +262,7 @@ class Message extends OutlookItem
     * Sets the importance
     * The importance of the message: Low, Normal, High.
     *
-    * @param string $val The importance
+    * @param Importance $val The importance
     *
     * @return Message
     */
@@ -295,7 +295,7 @@ class Message extends OutlookItem
     * Sets the inferenceClassification
     * The classification of the message for the user, based on inferred relevance or importance, or on an explicit override. Possible values are: focused or other.
     *
-    * @param string $val The inferenceClassification
+    * @param InferenceClassificationType $val The inferenceClassification
     *
     * @return Message
     */
@@ -502,7 +502,7 @@ class Message extends OutlookItem
     * Sets the receivedDateTime
     * The date and time the message was received.
     *
-    * @param string $val The receivedDateTime
+    * @param \DateTime $val The receivedDateTime
     *
     * @return Message
     */
@@ -532,7 +532,7 @@ class Message extends OutlookItem
     * Sets the replyTo
     * The email addresses to use when replying.
     *
-    * @param string $val The replyTo
+    * @param Recipient $val The replyTo
     *
     * @return Message
     */
@@ -565,7 +565,7 @@ class Message extends OutlookItem
     * Sets the sender
     * The account that is actually used to generate the message.
     *
-    * @param string $val The sender
+    * @param Recipient $val The sender
     *
     * @return Message
     */
@@ -598,7 +598,7 @@ class Message extends OutlookItem
     * Sets the sentDateTime
     * The date and time the message was sent.
     *
-    * @param string $val The sentDateTime
+    * @param \DateTime $val The sentDateTime
     *
     * @return Message
     */
@@ -657,7 +657,7 @@ class Message extends OutlookItem
     * Sets the toRecipients
     * The To: recipients for the message.
     *
-    * @param string $val The toRecipients
+    * @param Recipient $val The toRecipients
     *
     * @return Message
     */
@@ -690,7 +690,7 @@ class Message extends OutlookItem
     * Sets the uniqueBody
     * The part of the body of the message that is unique to the current message. uniqueBody is not provided by default but can be retrieved for a given message by use of the ?$select=uniqueBody query.
     *
-    * @param string $val The uniqueBody
+    * @param ItemBody $val The uniqueBody
     *
     * @return Message
     */
@@ -749,7 +749,7 @@ class Message extends OutlookItem
     * Sets the attachments
     * The fileAttachment and itemAttachment attachments for the message.
     *
-    * @param string $val The attachments
+    * @param Attachment $val The attachments
     *
     * @return Message
     */
@@ -779,7 +779,7 @@ class Message extends OutlookItem
     * Sets the extensions
     * The collection of open extensions defined for the message. Read-only. Nullable.
     *
-    * @param string $val The extensions
+    * @param Extension $val The extensions
     *
     * @return Message
     */
@@ -809,7 +809,7 @@ class Message extends OutlookItem
     * Sets the multiValueExtendedProperties
     * The collection of multi-value extended properties defined for the message. Read-only. Nullable.
     *
-    * @param string $val The multiValueExtendedProperties
+    * @param MultiValueLegacyExtendedProperty $val The multiValueExtendedProperties
     *
     * @return Message
     */
@@ -839,7 +839,7 @@ class Message extends OutlookItem
     * Sets the singleValueExtendedProperties
     * The collection of single-value extended properties defined for the message. Read-only. Nullable.
     *
-    * @param string $val The singleValueExtendedProperties
+    * @param SingleValueLegacyExtendedProperty $val The singleValueExtendedProperties
     *
     * @return Message
     */

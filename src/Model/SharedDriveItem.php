@@ -78,7 +78,7 @@ class SharedDriveItem extends Entity
     * Sets the owner
     * Information about the owner of the shared item being referenced.
     *
-    * @param string $val The owner
+    * @param IdentitySet $val The owner
     *
     * @return SharedDriveItem
     */
@@ -106,7 +106,7 @@ class SharedDriveItem extends Entity
     /** 
     * Sets the items
     *
-    * @param string $val The items
+    * @param DriveItem $val The items
     *
     * @return SharedDriveItem
     */
@@ -137,7 +137,7 @@ class SharedDriveItem extends Entity
     /**
     * Sets the root
     *
-    * @param string $val The root
+    * @param DriveItem $val The root
     *
     * @return SharedDriveItem
     */

@@ -47,7 +47,7 @@ class WorkbookWorksheetProtection extends Entity
     /**
     * Sets the options
     *
-    * @param string $val The options
+    * @param WorkbookWorksheetProtectionOptions $val The options
     *
     * @return WorkbookWorksheetProtection
     */

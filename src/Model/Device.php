@@ -75,7 +75,7 @@ class Device extends DirectoryObject
     * Sets the alternativeSecurityIds
     * The any operator is required for filter expressions on multi-valued properties. Not nullable. Required.
     *
-    * @param string $val The alternativeSecurityIds
+    * @param AlternativeSecurityId $val The alternativeSecurityIds
     *
     * @return Device
     */
@@ -108,7 +108,7 @@ class Device extends DirectoryObject
     * Sets the approximateLastSignInDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
-    * @param string $val The approximateLastSignInDateTime
+    * @param \DateTime $val The approximateLastSignInDateTime
     *
     * @return Device
     */
@@ -311,7 +311,7 @@ class Device extends DirectoryObject
     * Sets the onPremisesLastSyncDateTime
     * The last time at which the object was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
-    * @param string $val The onPremisesLastSyncDateTime
+    * @param \DateTime $val The onPremisesLastSyncDateTime
     *
     * @return Device
     */
@@ -484,7 +484,7 @@ class Device extends DirectoryObject
     * Sets the registeredOwners
     * Users that are registered owners of the device. Read-only. Nullable.
     *
-    * @param string $val The registeredOwners
+    * @param DirectoryObject $val The registeredOwners
     *
     * @return Device
     */
@@ -514,7 +514,7 @@ class Device extends DirectoryObject
     * Sets the registeredUsers
     * Users that are registered users of the device. Read-only. Nullable.
     *
-    * @param string $val The registeredUsers
+    * @param DirectoryObject $val The registeredUsers
     *
     * @return Device
     */

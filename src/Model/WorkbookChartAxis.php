@@ -155,7 +155,7 @@ class WorkbookChartAxis extends Entity
     /**
     * Sets the format
     *
-    * @param string $val The format
+    * @param WorkbookChartAxisFormat $val The format
     *
     * @return WorkbookChartAxis
     */
@@ -186,7 +186,7 @@ class WorkbookChartAxis extends Entity
     /**
     * Sets the majorGridlines
     *
-    * @param string $val The majorGridlines
+    * @param WorkbookChartGridlines $val The majorGridlines
     *
     * @return WorkbookChartAxis
     */
@@ -217,7 +217,7 @@ class WorkbookChartAxis extends Entity
     /**
     * Sets the minorGridlines
     *
-    * @param string $val The minorGridlines
+    * @param WorkbookChartGridlines $val The minorGridlines
     *
     * @return WorkbookChartAxis
     */
@@ -248,7 +248,7 @@ class WorkbookChartAxis extends Entity
     /**
     * Sets the title
     *
-    * @param string $val The title
+    * @param WorkbookChartAxisTitle $val The title
     *
     * @return WorkbookChartAxis
     */

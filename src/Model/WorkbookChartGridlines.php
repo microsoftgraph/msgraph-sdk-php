@@ -74,7 +74,7 @@ class WorkbookChartGridlines extends Entity
     /**
     * Sets the format
     *
-    * @param string $val The format
+    * @param WorkbookChartGridlinesFormat $val The format
     *
     * @return WorkbookChartGridlines
     */

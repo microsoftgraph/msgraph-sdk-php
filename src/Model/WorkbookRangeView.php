@@ -363,7 +363,7 @@ class WorkbookRangeView extends Entity
     * Sets the rows
     * Represents a collection of range views associated with the range. Read-only. Read-only.
     *
-    * @param string $val The rows
+    * @param WorkbookRangeView $val The rows
     *
     * @return WorkbookRangeView
     */

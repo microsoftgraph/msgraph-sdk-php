@@ -191,7 +191,7 @@ class MailFolder extends Entity
     * Sets the childFolders
     * The collection of child folders in the mailFolder.
     *
-    * @param string $val The childFolders
+    * @param MailFolder $val The childFolders
     *
     * @return MailFolder
     */
@@ -221,7 +221,7 @@ class MailFolder extends Entity
     * Sets the messages
     * The collection of messages in the mailFolder.
     *
-    * @param string $val The messages
+    * @param Message $val The messages
     *
     * @return MailFolder
     */
@@ -251,7 +251,7 @@ class MailFolder extends Entity
     * Sets the multiValueExtendedProperties
     * The collection of multi-value extended properties defined for the mailFolder. Read-only. Nullable.
     *
-    * @param string $val The multiValueExtendedProperties
+    * @param MultiValueLegacyExtendedProperty $val The multiValueExtendedProperties
     *
     * @return MailFolder
     */
@@ -281,7 +281,7 @@ class MailFolder extends Entity
     * Sets the singleValueExtendedProperties
     * The collection of single-value extended properties defined for the mailFolder. Read-only. Nullable.
     *
-    * @param string $val The singleValueExtendedProperties
+    * @param SingleValueLegacyExtendedProperty $val The singleValueExtendedProperties
     *
     * @return MailFolder
     */

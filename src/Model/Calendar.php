@@ -78,7 +78,7 @@ class Calendar extends Entity
     * Sets the color
     * Specifies the color theme to distinguish the calendar from other calendars in a UI. The property values are: LightBlue=0, LightGreen=1, LightOrange=2, LightGray=3, LightYellow=4, LightTeal=5, LightPink=6, LightBrown=7, LightRed=8, MaxColor=9, Auto=-1
     *
-    * @param string $val The color
+    * @param CalendarColor $val The color
     *
     * @return Calendar
     */
@@ -137,7 +137,7 @@ class Calendar extends Entity
     * Sets the calendarView
     * The calendar view for the calendar. Navigation property. Read-only.
     *
-    * @param string $val The calendarView
+    * @param Event $val The calendarView
     *
     * @return Calendar
     */
@@ -167,7 +167,7 @@ class Calendar extends Entity
     * Sets the events
     * The events in the calendar. Navigation property. Read-only.
     *
-    * @param string $val The events
+    * @param Event $val The events
     *
     * @return Calendar
     */
@@ -197,7 +197,7 @@ class Calendar extends Entity
     * Sets the multiValueExtendedProperties
     * The collection of multi-value extended properties defined for the calendar. Read-only. Nullable.
     *
-    * @param string $val The multiValueExtendedProperties
+    * @param MultiValueLegacyExtendedProperty $val The multiValueExtendedProperties
     *
     * @return Calendar
     */
@@ -227,7 +227,7 @@ class Calendar extends Entity
     * Sets the singleValueExtendedProperties
     * The collection of single-value extended properties defined for the calendar. Read-only. Nullable.
     *
-    * @param string $val The singleValueExtendedProperties
+    * @param SingleValueLegacyExtendedProperty $val The singleValueExtendedProperties
     *
     * @return Calendar
     */

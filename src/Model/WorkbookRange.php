@@ -506,7 +506,7 @@ class WorkbookRange extends Entity
     /**
     * Sets the format
     *
-    * @param string $val The format
+    * @param WorkbookRangeFormat $val The format
     *
     * @return WorkbookRange
     */
@@ -537,7 +537,7 @@ class WorkbookRange extends Entity
     /**
     * Sets the sort
     *
-    * @param string $val The sort
+    * @param WorkbookRangeSort $val The sort
     *
     * @return WorkbookRange
     */
@@ -568,7 +568,7 @@ class WorkbookRange extends Entity
     /**
     * Sets the worksheet
     *
-    * @param string $val The worksheet
+    * @param WorkbookWorksheet $val The worksheet
     *
     * @return WorkbookRange
     */

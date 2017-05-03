@@ -78,7 +78,7 @@ class Conversation extends Entity
     * Sets the lastDeliveredDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
-    * @param string $val The lastDeliveredDateTime
+    * @param \DateTime $val The lastDeliveredDateTime
     *
     * @return Conversation
     */
@@ -195,7 +195,7 @@ class Conversation extends Entity
     * Sets the threads
     * A collection of all the conversation threads in the conversation. A navigation property. Read-only. Nullable.
     *
-    * @param string $val The threads
+    * @param ConversationThread $val The threads
     *
     * @return Conversation
     */

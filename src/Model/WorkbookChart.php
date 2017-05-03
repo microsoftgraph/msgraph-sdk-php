@@ -182,7 +182,7 @@ class WorkbookChart extends Entity
     /**
     * Sets the axes
     *
-    * @param string $val The axes
+    * @param WorkbookChartAxes $val The axes
     *
     * @return WorkbookChart
     */
@@ -213,7 +213,7 @@ class WorkbookChart extends Entity
     /**
     * Sets the dataLabels
     *
-    * @param string $val The dataLabels
+    * @param WorkbookChartDataLabels $val The dataLabels
     *
     * @return WorkbookChart
     */
@@ -244,7 +244,7 @@ class WorkbookChart extends Entity
     /**
     * Sets the format
     *
-    * @param string $val The format
+    * @param WorkbookChartAreaFormat $val The format
     *
     * @return WorkbookChart
     */
@@ -275,7 +275,7 @@ class WorkbookChart extends Entity
     /**
     * Sets the legend
     *
-    * @param string $val The legend
+    * @param WorkbookChartLegend $val The legend
     *
     * @return WorkbookChart
     */
@@ -303,7 +303,7 @@ class WorkbookChart extends Entity
     /** 
     * Sets the series
     *
-    * @param string $val The series
+    * @param WorkbookChartSeries $val The series
     *
     * @return WorkbookChart
     */
@@ -334,7 +334,7 @@ class WorkbookChart extends Entity
     /**
     * Sets the title
     *
-    * @param string $val The title
+    * @param WorkbookChartTitle $val The title
     *
     * @return WorkbookChart
     */
@@ -365,7 +365,7 @@ class WorkbookChart extends Entity
     /**
     * Sets the worksheet
     *
-    * @param string $val The worksheet
+    * @param WorkbookWorksheet $val The worksheet
     *
     * @return WorkbookChart
     */

@@ -74,7 +74,7 @@ class WorkbookChartPoint extends Entity
     /**
     * Sets the format
     *
-    * @param string $val The format
+    * @param WorkbookChartPointFormat $val The format
     *
     * @return WorkbookChartPoint
     */

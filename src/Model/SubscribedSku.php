@@ -136,7 +136,7 @@ class SubscribedSku extends Entity
     * Sets the prepaidUnits
     * Information about the number and status of prepaid licenses.
     *
-    * @param string $val The prepaidUnits
+    * @param LicenseUnitsDetail $val The prepaidUnits
     *
     * @return SubscribedSku
     */
@@ -166,7 +166,7 @@ class SubscribedSku extends Entity
     * Sets the servicePlans
     * Information about the service plans that are available with the SKU.
     *
-    * @param string $val The servicePlans
+    * @param ServicePlanInfo $val The servicePlans
     *
     * @return SubscribedSku
     */

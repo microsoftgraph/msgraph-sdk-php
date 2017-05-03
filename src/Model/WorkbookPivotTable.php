@@ -78,7 +78,7 @@ class WorkbookPivotTable extends Entity
     * Sets the worksheet
     * The worksheet containing the current PivotTable. Read-only.
     *
-    * @param string $val The worksheet
+    * @param WorkbookWorksheet $val The worksheet
     *
     * @return WorkbookPivotTable
     */

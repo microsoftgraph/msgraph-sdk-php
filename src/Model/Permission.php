@@ -49,7 +49,7 @@ class Permission extends Entity
     * Sets the grantedTo
     * For user type permissions, the details of the users & applications for this permission. Read-only.
     *
-    * @param string $val The grantedTo
+    * @param IdentitySet $val The grantedTo
     *
     * @return Permission
     */
@@ -82,7 +82,7 @@ class Permission extends Entity
     * Sets the inheritedFrom
     * Provides a reference to the ancestor of the current permission, if it is inherited from an ancestor. Read-only.
     *
-    * @param string $val The inheritedFrom
+    * @param ItemReference $val The inheritedFrom
     *
     * @return Permission
     */
@@ -115,7 +115,7 @@ class Permission extends Entity
     * Sets the invitation
     * Details of any associated sharing invitation for this permission. Read-only.
     *
-    * @param string $val The invitation
+    * @param SharingInvitation $val The invitation
     *
     * @return Permission
     */
@@ -148,7 +148,7 @@ class Permission extends Entity
     * Sets the link
     * Provides the link details of the current permission, if it is a link type permissions. Read-only.
     *
-    * @param string $val The link
+    * @param SharingLink $val The link
     *
     * @return Permission
     */

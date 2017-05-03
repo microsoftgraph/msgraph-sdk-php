@@ -46,7 +46,7 @@ class ConversationThread extends Entity
     * Sets the ccRecipients
     * The Cc: recipients for the thread.
     *
-    * @param string $val The ccRecipients
+    * @param Recipient $val The ccRecipients
     *
     * @return ConversationThread
     */
@@ -137,7 +137,7 @@ class ConversationThread extends Entity
     * Sets the lastDeliveredDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
-    * @param string $val The lastDeliveredDateTime
+    * @param \DateTime $val The lastDeliveredDateTime
     *
     * @return ConversationThread
     */
@@ -225,7 +225,7 @@ class ConversationThread extends Entity
     * Sets the toRecipients
     * The To: recipients for the thread.
     *
-    * @param string $val The toRecipients
+    * @param Recipient $val The toRecipients
     *
     * @return ConversationThread
     */
@@ -284,7 +284,7 @@ class ConversationThread extends Entity
     * Sets the posts
     * Read-only. Nullable.
     *
-    * @param string $val The posts
+    * @param Post $val The posts
     *
     * @return ConversationThread
     */

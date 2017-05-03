@@ -78,7 +78,7 @@ class Contact extends OutlookItem
     * Sets the birthday
     * The contact's birthday. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
-    * @param string $val The birthday
+    * @param \DateTime $val The birthday
     *
     * @return Contact
     */
@@ -111,7 +111,7 @@ class Contact extends OutlookItem
     * Sets the businessAddress
     * The contact's business address.
     *
-    * @param string $val The businessAddress
+    * @param PhysicalAddress $val The businessAddress
     *
     * @return Contact
     */
@@ -315,7 +315,7 @@ class Contact extends OutlookItem
     * Sets the emailAddresses
     * The contact's email addresses.
     *
-    * @param string $val The emailAddresses
+    * @param EmailAddress $val The emailAddresses
     *
     * @return Contact
     */
@@ -435,7 +435,7 @@ class Contact extends OutlookItem
     * Sets the homeAddress
     * The contact's home address.
     *
-    * @param string $val The homeAddress
+    * @param PhysicalAddress $val The homeAddress
     *
     * @return Contact
     */
@@ -729,7 +729,7 @@ class Contact extends OutlookItem
     * Sets the otherAddress
     * Other addresses for the contact.
     *
-    * @param string $val The otherAddress
+    * @param PhysicalAddress $val The otherAddress
     *
     * @return Contact
     */
@@ -1020,7 +1020,7 @@ class Contact extends OutlookItem
     * Sets the extensions
     * The collection of open extensions defined for the contact. Read-only. Nullable.
     *
-    * @param string $val The extensions
+    * @param Extension $val The extensions
     *
     * @return Contact
     */
@@ -1050,7 +1050,7 @@ class Contact extends OutlookItem
     * Sets the multiValueExtendedProperties
     * The collection of multi-value extended properties defined for the contact. Read-only. Nullable.
     *
-    * @param string $val The multiValueExtendedProperties
+    * @param MultiValueLegacyExtendedProperty $val The multiValueExtendedProperties
     *
     * @return Contact
     */
@@ -1083,7 +1083,7 @@ class Contact extends OutlookItem
     * Sets the photo
     * Optional contact picture. You can get or set a photo for a contact.
     *
-    * @param string $val The photo
+    * @param ProfilePhoto $val The photo
     *
     * @return Contact
     */
@@ -1113,7 +1113,7 @@ class Contact extends OutlookItem
     * Sets the singleValueExtendedProperties
     * The collection of single-value extended properties defined for the contact. Read-only. Nullable.
     *
-    * @param string $val The singleValueExtendedProperties
+    * @param SingleValueLegacyExtendedProperty $val The singleValueExtendedProperties
     *
     * @return Contact
     */

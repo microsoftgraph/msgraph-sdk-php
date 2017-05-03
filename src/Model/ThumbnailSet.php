@@ -49,7 +49,7 @@ class ThumbnailSet extends Entity
     * Sets the large
     * A 1920x1920 scaled thumbnail.
     *
-    * @param string $val The large
+    * @param Thumbnail $val The large
     *
     * @return ThumbnailSet
     */
@@ -82,7 +82,7 @@ class ThumbnailSet extends Entity
     * Sets the medium
     * A 176x176 scaled thumbnail.
     *
-    * @param string $val The medium
+    * @param Thumbnail $val The medium
     *
     * @return ThumbnailSet
     */
@@ -115,7 +115,7 @@ class ThumbnailSet extends Entity
     * Sets the small
     * A 48x48 cropped thumbnail.
     *
-    * @param string $val The small
+    * @param Thumbnail $val The small
     *
     * @return ThumbnailSet
     */
@@ -148,7 +148,7 @@ class ThumbnailSet extends Entity
     * Sets the source
     * A custom thumbnail image or the original image used to generate other thumbnails.
     *
-    * @param string $val The source
+    * @param Thumbnail $val The source
     *
     * @return ThumbnailSet
     */

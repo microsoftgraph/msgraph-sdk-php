@@ -47,7 +47,7 @@ class WorkbookChartAxisFormat extends Entity
     /**
     * Sets the font
     *
-    * @param string $val The font
+    * @param WorkbookChartFont $val The font
     *
     * @return WorkbookChartAxisFormat
     */
@@ -78,7 +78,7 @@ class WorkbookChartAxisFormat extends Entity
     /**
     * Sets the line
     *
-    * @param string $val The line
+    * @param WorkbookChartLineFormat $val The line
     *
     * @return WorkbookChartAxisFormat
     */

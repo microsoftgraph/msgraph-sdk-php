@@ -101,7 +101,7 @@ class WorkbookChartAxisTitle extends Entity
     /**
     * Sets the format
     *
-    * @param string $val The format
+    * @param WorkbookChartAxisTitleFormat $val The format
     *
     * @return WorkbookChartAxisTitle
     */

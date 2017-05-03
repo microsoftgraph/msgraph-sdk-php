@@ -47,7 +47,7 @@ class Workbook extends Entity
     /**
     * Sets the application
     *
-    * @param string $val The application
+    * @param WorkbookApplication $val The application
     *
     * @return Workbook
     */
@@ -78,7 +78,7 @@ class Workbook extends Entity
     /**
     * Sets the functions
     *
-    * @param string $val The functions
+    * @param WorkbookFunctions $val The functions
     *
     * @return Workbook
     */
@@ -106,7 +106,7 @@ class Workbook extends Entity
     /** 
     * Sets the names
     *
-    * @param string $val The names
+    * @param WorkbookNamedItem $val The names
     *
     * @return Workbook
     */
@@ -134,7 +134,7 @@ class Workbook extends Entity
     /** 
     * Sets the tables
     *
-    * @param string $val The tables
+    * @param WorkbookTable $val The tables
     *
     * @return Workbook
     */
@@ -162,7 +162,7 @@ class Workbook extends Entity
     /** 
     * Sets the worksheets
     *
-    * @param string $val The worksheets
+    * @param WorkbookWorksheet $val The worksheets
     *
     * @return Workbook
     */

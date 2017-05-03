@@ -46,7 +46,7 @@ class Event extends OutlookItem
     * Sets the attendees
     * The collection of attendees for the event.
     *
-    * @param string $val The attendees
+    * @param Attendee $val The attendees
     *
     * @return Event
     */
@@ -79,7 +79,7 @@ class Event extends OutlookItem
     * Sets the body
     * The body of the message associated with the event.
     *
-    * @param string $val The body
+    * @param ItemBody $val The body
     *
     * @return Event
     */
@@ -141,7 +141,7 @@ class Event extends OutlookItem
     * Sets the end
     * The date, time, and time zone that the event ends.
     *
-    * @param string $val The end
+    * @param DateTimeTimeZone $val The end
     *
     * @return Event
     */
@@ -232,7 +232,7 @@ class Event extends OutlookItem
     * Sets the importance
     * The importance of the event: Low = 0, Normal = 1, High = 2. Possible values are: Low, Normal, High.
     *
-    * @param string $val The importance
+    * @param Importance $val The importance
     *
     * @return Event
     */
@@ -381,7 +381,7 @@ class Event extends OutlookItem
     * Sets the location
     * The location of the event.
     *
-    * @param string $val The location
+    * @param Location $val The location
     *
     * @return Event
     */
@@ -443,7 +443,7 @@ class Event extends OutlookItem
     * Sets the organizer
     * The organizer of the event.
     *
-    * @param string $val The organizer
+    * @param Recipient $val The organizer
     *
     * @return Event
     */
@@ -505,7 +505,7 @@ class Event extends OutlookItem
     * Sets the originalStart
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
-    * @param string $val The originalStart
+    * @param \DateTime $val The originalStart
     *
     * @return Event
     */
@@ -567,7 +567,7 @@ class Event extends OutlookItem
     * Sets the recurrence
     * The recurrence pattern for the event.
     *
-    * @param string $val The recurrence
+    * @param PatternedRecurrence $val The recurrence
     *
     * @return Event
     */
@@ -658,7 +658,7 @@ class Event extends OutlookItem
     * Sets the responseStatus
     * Indicates the type of response sent in response to an event message.
     *
-    * @param string $val The responseStatus
+    * @param ResponseStatus $val The responseStatus
     *
     * @return Event
     */
@@ -691,7 +691,7 @@ class Event extends OutlookItem
     * Sets the sensitivity
     * Possible values are: Normal, Personal, Private, Confidential.
     *
-    * @param string $val The sensitivity
+    * @param Sensitivity $val The sensitivity
     *
     * @return Event
     */
@@ -753,7 +753,7 @@ class Event extends OutlookItem
     * Sets the showAs
     * The status to show: Free = 0, Tentative = 1, Busy = 2, Oof = 3, WorkingElsewhere = 4, Unknown = -1. Possible values are: Free, Tentative, Busy, Oof, WorkingElsewhere, Unknown.
     *
-    * @param string $val The showAs
+    * @param FreeBusyStatus $val The showAs
     *
     * @return Event
     */
@@ -786,7 +786,7 @@ class Event extends OutlookItem
     * Sets the start
     * The date, time, and time zone that the event starts.
     *
-    * @param string $val The start
+    * @param DateTimeTimeZone $val The start
     *
     * @return Event
     */
@@ -848,7 +848,7 @@ class Event extends OutlookItem
     * Sets the type
     * The event type: SingleInstance = 0, Occurrence = 1, Exception = 2, SeriesMaster = 3. Possible values are: SingleInstance, Occurrence, Exception, SeriesMaster.
     *
-    * @param string $val The type
+    * @param EventType $val The type
     *
     * @return Event
     */
@@ -907,7 +907,7 @@ class Event extends OutlookItem
     * Sets the attachments
     * The collection of fileAttachment and itemAttachment attachments for the event. Navigation property. Read-only. Nullable.
     *
-    * @param string $val The attachments
+    * @param Attachment $val The attachments
     *
     * @return Event
     */
@@ -940,7 +940,7 @@ class Event extends OutlookItem
     * Sets the calendar
     * The calendar that contains the event. Navigation property. Read-only.
     *
-    * @param string $val The calendar
+    * @param Calendar $val The calendar
     *
     * @return Event
     */
@@ -970,7 +970,7 @@ class Event extends OutlookItem
     * Sets the extensions
     * The collection of open extensions defined for the event. Read-only. Nullable.
     *
-    * @param string $val The extensions
+    * @param Extension $val The extensions
     *
     * @return Event
     */
@@ -1000,7 +1000,7 @@ class Event extends OutlookItem
     * Sets the instances
     * The instances of the event. Navigation property. Read-only. Nullable.
     *
-    * @param string $val The instances
+    * @param Event $val The instances
     *
     * @return Event
     */
@@ -1030,7 +1030,7 @@ class Event extends OutlookItem
     * Sets the multiValueExtendedProperties
     * The collection of multi-value extended properties defined for the event. Read-only. Nullable.
     *
-    * @param string $val The multiValueExtendedProperties
+    * @param MultiValueLegacyExtendedProperty $val The multiValueExtendedProperties
     *
     * @return Event
     */
@@ -1060,7 +1060,7 @@ class Event extends OutlookItem
     * Sets the singleValueExtendedProperties
     * The collection of single-value extended properties defined for the event. Read-only. Nullable.
     *
-    * @param string $val The singleValueExtendedProperties
+    * @param SingleValueLegacyExtendedProperty $val The singleValueExtendedProperties
     *
     * @return Event
     */

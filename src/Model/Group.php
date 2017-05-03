@@ -310,7 +310,7 @@ class Group extends DirectoryObject
     * Sets the onPremisesLastSyncDateTime
     * Indicates the last time at which the group was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only. Supports $filter.
     *
-    * @param string $val The onPremisesLastSyncDateTime
+    * @param \DateTime $val The onPremisesLastSyncDateTime
     *
     * @return Group
     */
@@ -514,7 +514,7 @@ class Group extends DirectoryObject
     * Sets the acceptedSenders
     * The list of users or groups that are allowed to create post's or calendar events in this group. If this list is non-empty then only users or groups listed here are allowed to post.
     *
-    * @param string $val The acceptedSenders
+    * @param DirectoryObject $val The acceptedSenders
     *
     * @return Group
     */
@@ -547,7 +547,7 @@ class Group extends DirectoryObject
     * Sets the calendar
     * The group's calendar. Read-only.
     *
-    * @param string $val The calendar
+    * @param Calendar $val The calendar
     *
     * @return Group
     */
@@ -577,7 +577,7 @@ class Group extends DirectoryObject
     * Sets the calendarView
     * The calendar view for the calendar. Read-only.
     *
-    * @param string $val The calendarView
+    * @param Event $val The calendarView
     *
     * @return Group
     */
@@ -607,7 +607,7 @@ class Group extends DirectoryObject
     * Sets the conversations
     * The group's conversations.
     *
-    * @param string $val The conversations
+    * @param Conversation $val The conversations
     *
     * @return Group
     */
@@ -640,7 +640,7 @@ class Group extends DirectoryObject
     * Sets the createdOnBehalfOf
     * The user (or application) that created the group. NOTE: This is not set if the user is an administrator. Read-only.
     *
-    * @param string $val The createdOnBehalfOf
+    * @param DirectoryObject $val The createdOnBehalfOf
     *
     * @return Group
     */
@@ -673,7 +673,7 @@ class Group extends DirectoryObject
     * Sets the drive
     * The group's drive. Read-only.
     *
-    * @param string $val The drive
+    * @param Drive $val The drive
     *
     * @return Group
     */
@@ -703,7 +703,7 @@ class Group extends DirectoryObject
     * Sets the events
     * The group's calendar events.
     *
-    * @param string $val The events
+    * @param Event $val The events
     *
     * @return Group
     */
@@ -733,7 +733,7 @@ class Group extends DirectoryObject
     * Sets the memberOf
     * Groups that this group is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable.
     *
-    * @param string $val The memberOf
+    * @param DirectoryObject $val The memberOf
     *
     * @return Group
     */
@@ -763,7 +763,7 @@ class Group extends DirectoryObject
     * Sets the members
     * Users and groups that are members of this group. HTTP Methods: GET (supported for all groups), POST (supported for Office 365 groups, security groups and mail-enabled security groups), DELETE (supported for Office 365 groups and security groups) Nullable.
     *
-    * @param string $val The members
+    * @param DirectoryObject $val The members
     *
     * @return Group
     */
@@ -793,7 +793,7 @@ class Group extends DirectoryObject
     * Sets the owners
     * The owners of the group. The owners are a set of non-admin users who are allowed to modify this object. Limited to 10 owners. HTTP Methods: GET (supported for all groups), POST (supported for Office 365 groups, security groups and mail-enabled security groups), DELETE (supported for Office 365 groups and security groups). Nullable.
     *
-    * @param string $val The owners
+    * @param DirectoryObject $val The owners
     *
     * @return Group
     */
@@ -826,7 +826,7 @@ class Group extends DirectoryObject
     * Sets the photo
     * The group's profile photo
     *
-    * @param string $val The photo
+    * @param ProfilePhoto $val The photo
     *
     * @return Group
     */
@@ -856,7 +856,7 @@ class Group extends DirectoryObject
     * Sets the rejectedSenders
     * The list of users or groups that are not allowed to create posts or calendar events in this group. Nullable
     *
-    * @param string $val The rejectedSenders
+    * @param DirectoryObject $val The rejectedSenders
     *
     * @return Group
     */
@@ -886,7 +886,7 @@ class Group extends DirectoryObject
     * Sets the threads
     * The group's conversation threads. Nullable.
     *
-    * @param string $val The threads
+    * @param ConversationThread $val The threads
     *
     * @return Group
     */

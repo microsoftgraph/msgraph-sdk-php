@@ -133,7 +133,7 @@ class CalendarGroup extends Entity
     * Sets the calendars
     * The calendars in the calendar group. Navigation property. Read-only. Nullable.
     *
-    * @param string $val The calendars
+    * @param Calendar $val The calendars
     *
     * @return CalendarGroup
     */

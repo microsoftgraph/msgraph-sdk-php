@@ -125,7 +125,7 @@ class WorkbookWorksheet extends Entity
     /** 
     * Sets the charts
     *
-    * @param string $val The charts
+    * @param WorkbookChart $val The charts
     *
     * @return WorkbookWorksheet
     */
@@ -153,7 +153,7 @@ class WorkbookWorksheet extends Entity
     /** 
     * Sets the pivotTables
     *
-    * @param string $val The pivotTables
+    * @param WorkbookPivotTable $val The pivotTables
     *
     * @return WorkbookWorksheet
     */
@@ -184,7 +184,7 @@ class WorkbookWorksheet extends Entity
     /**
     * Sets the protection
     *
-    * @param string $val The protection
+    * @param WorkbookWorksheetProtection $val The protection
     *
     * @return WorkbookWorksheet
     */
@@ -212,7 +212,7 @@ class WorkbookWorksheet extends Entity
     /** 
     * Sets the tables
     *
-    * @param string $val The tables
+    * @param WorkbookTable $val The tables
     *
     * @return WorkbookWorksheet
     */

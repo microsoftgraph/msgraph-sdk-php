@@ -104,7 +104,7 @@ class User extends DirectoryObject
     * Sets the assignedLicenses
     * The licenses that are assigned to the user. Not nullable.
     *
-    * @param string $val The assignedLicenses
+    * @param AssignedLicense $val The assignedLicenses
     *
     * @return User
     */
@@ -134,7 +134,7 @@ class User extends DirectoryObject
     * Sets the assignedPlans
     * The plans that are assigned to the user. Read-only. Not nullable.
     *
-    * @param string $val The assignedPlans
+    * @param AssignedPlan $val The assignedPlans
     *
     * @return User
     */
@@ -167,7 +167,7 @@ class User extends DirectoryObject
     * Sets the birthday
     * The birthday of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
-    * @param string $val The birthday
+    * @param \DateTime $val The birthday
     *
     * @return User
     */
@@ -399,7 +399,7 @@ class User extends DirectoryObject
     * Sets the hireDate
     * The hire date of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
-    * @param string $val The hireDate
+    * @param \DateTime $val The hireDate
     *
     * @return User
     */
@@ -519,7 +519,7 @@ class User extends DirectoryObject
     * Sets the mailboxSettings
     * Settings for the primary mailbox of the signed-in user. You can get or update settings for sending automatic replies to incoming messages, locale and time zone.
     *
-    * @param string $val The mailboxSettings
+    * @param MailboxSettings $val The mailboxSettings
     *
     * @return User
     */
@@ -697,7 +697,7 @@ class User extends DirectoryObject
     * Sets the onPremisesLastSyncDateTime
     * Indicates the last time at which the object was synced with the on-premises directory; for example: "2013-02-16T03:04:54Z". The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
     *
-    * @param string $val The onPremisesLastSyncDateTime
+    * @param \DateTime $val The onPremisesLastSyncDateTime
     *
     * @return User
     */
@@ -817,7 +817,7 @@ class User extends DirectoryObject
     * Sets the passwordProfile
     * Specifies the password profile for the user. The profile contains the user’s password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required.
     *
-    * @param string $val The passwordProfile
+    * @param PasswordProfile $val The passwordProfile
     *
     * @return User
     */
@@ -963,7 +963,7 @@ class User extends DirectoryObject
     * Sets the provisionedPlans
     * The plans that are provisioned for the user. Read-only. Not nullable.
     *
-    * @param string $val The provisionedPlans
+    * @param ProvisionedPlan $val The provisionedPlans
     *
     * @return User
     */
@@ -1286,7 +1286,7 @@ class User extends DirectoryObject
     * Sets the calendar
     * The user's primary calendar. Read-only.
     *
-    * @param string $val The calendar
+    * @param Calendar $val The calendar
     *
     * @return User
     */
@@ -1316,7 +1316,7 @@ class User extends DirectoryObject
     * Sets the calendarGroups
     * The user's calendar groups. Read-only. Nullable.
     *
-    * @param string $val The calendarGroups
+    * @param CalendarGroup $val The calendarGroups
     *
     * @return User
     */
@@ -1346,7 +1346,7 @@ class User extends DirectoryObject
     * Sets the calendars
     * The user's calendars. Read-only. Nullable.
     *
-    * @param string $val The calendars
+    * @param Calendar $val The calendars
     *
     * @return User
     */
@@ -1376,7 +1376,7 @@ class User extends DirectoryObject
     * Sets the calendarView
     * The calendar view for the calendar. Read-only. Nullable.
     *
-    * @param string $val The calendarView
+    * @param Event $val The calendarView
     *
     * @return User
     */
@@ -1406,7 +1406,7 @@ class User extends DirectoryObject
     * Sets the contactFolders
     * The user's contacts folders. Read-only. Nullable.
     *
-    * @param string $val The contactFolders
+    * @param ContactFolder $val The contactFolders
     *
     * @return User
     */
@@ -1436,7 +1436,7 @@ class User extends DirectoryObject
     * Sets the contacts
     * The user's contacts. Read-only. Nullable.
     *
-    * @param string $val The contacts
+    * @param Contact $val The contacts
     *
     * @return User
     */
@@ -1466,7 +1466,7 @@ class User extends DirectoryObject
     * Sets the createdObjects
     * Directory objects that were created by the user. Read-only. Nullable.
     *
-    * @param string $val The createdObjects
+    * @param DirectoryObject $val The createdObjects
     *
     * @return User
     */
@@ -1496,7 +1496,7 @@ class User extends DirectoryObject
     * Sets the directReports
     * The users and contacts that report to the user. (The users and contacts that have their manager property set to this user.) Read-only. Nullable.
     *
-    * @param string $val The directReports
+    * @param DirectoryObject $val The directReports
     *
     * @return User
     */
@@ -1529,7 +1529,7 @@ class User extends DirectoryObject
     * Sets the drive
     * The user's OneDrive. Read-only.
     *
-    * @param string $val The drive
+    * @param Drive $val The drive
     *
     * @return User
     */
@@ -1557,7 +1557,7 @@ class User extends DirectoryObject
     /** 
     * Sets the drives
     *
-    * @param string $val The drives
+    * @param Drive $val The drives
     *
     * @return User
     */
@@ -1587,7 +1587,7 @@ class User extends DirectoryObject
     * Sets the events
     * The user's events. Default is to show Events under the Default Calendar. Read-only. Nullable.
     *
-    * @param string $val The events
+    * @param Event $val The events
     *
     * @return User
     */
@@ -1620,7 +1620,7 @@ class User extends DirectoryObject
     * Sets the inferenceClassification
     * Relevance classification of the user's messages based on explicit designations which override inferred relevance or importance.
     *
-    * @param string $val The inferenceClassification
+    * @param InferenceClassification $val The inferenceClassification
     *
     * @return User
     */
@@ -1650,7 +1650,7 @@ class User extends DirectoryObject
     * Sets the mailFolders
     * The user's mail folders. Read-only. Nullable.
     *
-    * @param string $val The mailFolders
+    * @param MailFolder $val The mailFolders
     *
     * @return User
     */
@@ -1683,7 +1683,7 @@ class User extends DirectoryObject
     * Sets the manager
     * The user or contact that is this user’s manager. Read-only. (HTTP Methods: GET, PUT, DELETE.)
     *
-    * @param string $val The manager
+    * @param DirectoryObject $val The manager
     *
     * @return User
     */
@@ -1713,7 +1713,7 @@ class User extends DirectoryObject
     * Sets the memberOf
     * The groups and directory roles that the user is a member of. Read-only. Nullable.
     *
-    * @param string $val The memberOf
+    * @param DirectoryObject $val The memberOf
     *
     * @return User
     */
@@ -1743,7 +1743,7 @@ class User extends DirectoryObject
     * Sets the messages
     * The messages in a mailbox or folder. Read-only. Nullable.
     *
-    * @param string $val The messages
+    * @param Message $val The messages
     *
     * @return User
     */
@@ -1773,7 +1773,7 @@ class User extends DirectoryObject
     * Sets the ownedDevices
     * Devices that are owned by the user. Read-only. Nullable.
     *
-    * @param string $val The ownedDevices
+    * @param DirectoryObject $val The ownedDevices
     *
     * @return User
     */
@@ -1803,7 +1803,7 @@ class User extends DirectoryObject
     * Sets the ownedObjects
     * Directory objects that are owned by the user. Read-only. Nullable.
     *
-    * @param string $val The ownedObjects
+    * @param DirectoryObject $val The ownedObjects
     *
     * @return User
     */
@@ -1836,7 +1836,7 @@ class User extends DirectoryObject
     * Sets the photo
     * The user's profile photo. Read-only.
     *
-    * @param string $val The photo
+    * @param ProfilePhoto $val The photo
     *
     * @return User
     */
@@ -1866,7 +1866,7 @@ class User extends DirectoryObject
     * Sets the registeredDevices
     * Devices that are registered for the user. Read-only. Nullable.
     *
-    * @param string $val The registeredDevices
+    * @param DirectoryObject $val The registeredDevices
     *
     * @return User
     */
