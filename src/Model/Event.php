@@ -88,7 +88,7 @@ class Event extends OutlookItem
     public function getResponseStatus()
     {
         if (array_key_exists("responseStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["responseStatus"], "ResponseStatus")) {
+            if (is_a($this->_propDict["responseStatus"], "Microsoft\Graph\Model\ResponseStatus")) {
                 return $this->_propDict["responseStatus"];
             } else {
                 $this->_propDict["responseStatus"] = new ResponseStatus($this->_propDict["responseStatus"]);
@@ -101,7 +101,7 @@ class Event extends OutlookItem
     /**
     * Sets the responseStatus
     *
-    * @param string $val The responseStatus
+    * @param ResponseStatus $val The responseStatus
     *
     * @return Event
     */
@@ -254,7 +254,7 @@ class Event extends OutlookItem
     public function getBody()
     {
         if (array_key_exists("body", $this->_propDict)) {
-            if (is_a($this->_propDict["body"], "ItemBody")) {
+            if (is_a($this->_propDict["body"], "Microsoft\Graph\Model\ItemBody")) {
                 return $this->_propDict["body"];
             } else {
                 $this->_propDict["body"] = new ItemBody($this->_propDict["body"]);
@@ -267,7 +267,7 @@ class Event extends OutlookItem
     /**
     * Sets the body
     *
-    * @param string $val The body
+    * @param ItemBody $val The body
     *
     * @return Event
     */
@@ -312,7 +312,7 @@ class Event extends OutlookItem
     public function getImportance()
     {
         if (array_key_exists("importance", $this->_propDict)) {
-            if (is_a($this->_propDict["importance"], "Importance")) {
+            if (is_a($this->_propDict["importance"], "Microsoft\Graph\Model\Importance")) {
                 return $this->_propDict["importance"];
             } else {
                 $this->_propDict["importance"] = new Importance($this->_propDict["importance"]);
@@ -325,7 +325,7 @@ class Event extends OutlookItem
     /**
     * Sets the importance
     *
-    * @param string $val The importance
+    * @param Importance $val The importance
     *
     * @return Event
     */
@@ -343,7 +343,7 @@ class Event extends OutlookItem
     public function getSensitivity()
     {
         if (array_key_exists("sensitivity", $this->_propDict)) {
-            if (is_a($this->_propDict["sensitivity"], "Sensitivity")) {
+            if (is_a($this->_propDict["sensitivity"], "Microsoft\Graph\Model\Sensitivity")) {
                 return $this->_propDict["sensitivity"];
             } else {
                 $this->_propDict["sensitivity"] = new Sensitivity($this->_propDict["sensitivity"]);
@@ -356,7 +356,7 @@ class Event extends OutlookItem
     /**
     * Sets the sensitivity
     *
-    * @param string $val The sensitivity
+    * @param Sensitivity $val The sensitivity
     *
     * @return Event
     */
@@ -374,7 +374,7 @@ class Event extends OutlookItem
     public function getStart()
     {
         if (array_key_exists("start", $this->_propDict)) {
-            if (is_a($this->_propDict["start"], "DateTimeTimeZone")) {
+            if (is_a($this->_propDict["start"], "Microsoft\Graph\Model\DateTimeTimeZone")) {
                 return $this->_propDict["start"];
             } else {
                 $this->_propDict["start"] = new DateTimeTimeZone($this->_propDict["start"]);
@@ -387,7 +387,7 @@ class Event extends OutlookItem
     /**
     * Sets the start
     *
-    * @param string $val The start
+    * @param DateTimeTimeZone $val The start
     *
     * @return Event
     */
@@ -418,7 +418,7 @@ class Event extends OutlookItem
     /**
     * Sets the originalStart
     *
-    * @param string $val The originalStart
+    * @param \DateTime $val The originalStart
     *
     * @return Event
     */
@@ -436,7 +436,7 @@ class Event extends OutlookItem
     public function getEnd()
     {
         if (array_key_exists("end", $this->_propDict)) {
-            if (is_a($this->_propDict["end"], "DateTimeTimeZone")) {
+            if (is_a($this->_propDict["end"], "Microsoft\Graph\Model\DateTimeTimeZone")) {
                 return $this->_propDict["end"];
             } else {
                 $this->_propDict["end"] = new DateTimeTimeZone($this->_propDict["end"]);
@@ -449,7 +449,7 @@ class Event extends OutlookItem
     /**
     * Sets the end
     *
-    * @param string $val The end
+    * @param DateTimeTimeZone $val The end
     *
     * @return Event
     */
@@ -467,7 +467,7 @@ class Event extends OutlookItem
     public function getLocation()
     {
         if (array_key_exists("location", $this->_propDict)) {
-            if (is_a($this->_propDict["location"], "Location")) {
+            if (is_a($this->_propDict["location"], "Microsoft\Graph\Model\Location")) {
                 return $this->_propDict["location"];
             } else {
                 $this->_propDict["location"] = new Location($this->_propDict["location"]);
@@ -480,7 +480,7 @@ class Event extends OutlookItem
     /**
     * Sets the location
     *
-    * @param string $val The location
+    * @param Location $val The location
     *
     * @return Event
     */
@@ -579,7 +579,7 @@ class Event extends OutlookItem
     public function getRecurrence()
     {
         if (array_key_exists("recurrence", $this->_propDict)) {
-            if (is_a($this->_propDict["recurrence"], "PatternedRecurrence")) {
+            if (is_a($this->_propDict["recurrence"], "Microsoft\Graph\Model\PatternedRecurrence")) {
                 return $this->_propDict["recurrence"];
             } else {
                 $this->_propDict["recurrence"] = new PatternedRecurrence($this->_propDict["recurrence"]);
@@ -592,7 +592,7 @@ class Event extends OutlookItem
     /**
     * Sets the recurrence
     *
-    * @param string $val The recurrence
+    * @param PatternedRecurrence $val The recurrence
     *
     * @return Event
     */
@@ -664,7 +664,7 @@ class Event extends OutlookItem
     public function getShowAs()
     {
         if (array_key_exists("showAs", $this->_propDict)) {
-            if (is_a($this->_propDict["showAs"], "FreeBusyStatus")) {
+            if (is_a($this->_propDict["showAs"], "Microsoft\Graph\Model\FreeBusyStatus")) {
                 return $this->_propDict["showAs"];
             } else {
                 $this->_propDict["showAs"] = new FreeBusyStatus($this->_propDict["showAs"]);
@@ -677,7 +677,7 @@ class Event extends OutlookItem
     /**
     * Sets the showAs
     *
-    * @param string $val The showAs
+    * @param FreeBusyStatus $val The showAs
     *
     * @return Event
     */
@@ -695,7 +695,7 @@ class Event extends OutlookItem
     public function getType()
     {
         if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "EventType")) {
+            if (is_a($this->_propDict["type"], "Microsoft\Graph\Model\EventType")) {
                 return $this->_propDict["type"];
             } else {
                 $this->_propDict["type"] = new EventType($this->_propDict["type"]);
@@ -708,7 +708,7 @@ class Event extends OutlookItem
     /**
     * Sets the type
     *
-    * @param string $val The type
+    * @param EventType $val The type
     *
     * @return Event
     */
@@ -718,11 +718,12 @@ class Event extends OutlookItem
         return $this;
     }
     
-    /** 
-    * Gets the attendees
-    *
-    * @return array The attendees
-    */
+
+     /** 
+     * Gets the attendees
+     *
+     * @return array The attendees
+     */
     public function getAttendees()
     {
         if (array_key_exists("attendees", $this->_propDict)) {
@@ -735,7 +736,7 @@ class Event extends OutlookItem
     /** 
     * Sets the attendees
     *
-    * @param string $val The attendees
+    * @param Attendee $val The attendees
     *
     * @return Event
     */
@@ -753,7 +754,7 @@ class Event extends OutlookItem
     public function getOrganizer()
     {
         if (array_key_exists("organizer", $this->_propDict)) {
-            if (is_a($this->_propDict["organizer"], "Recipient")) {
+            if (is_a($this->_propDict["organizer"], "Microsoft\Graph\Model\Recipient")) {
                 return $this->_propDict["organizer"];
             } else {
                 $this->_propDict["organizer"] = new Recipient($this->_propDict["organizer"]);
@@ -766,7 +767,7 @@ class Event extends OutlookItem
     /**
     * Sets the organizer
     *
-    * @param string $val The organizer
+    * @param Recipient $val The organizer
     *
     * @return Event
     */
@@ -838,7 +839,7 @@ class Event extends OutlookItem
     public function getCalendar()
     {
         if (array_key_exists("calendar", $this->_propDict)) {
-            if (is_a($this->_propDict["calendar"], "Calendar")) {
+            if (is_a($this->_propDict["calendar"], "Microsoft\Graph\Model\Calendar")) {
                 return $this->_propDict["calendar"];
             } else {
                 $this->_propDict["calendar"] = new Calendar($this->_propDict["calendar"]);
@@ -851,7 +852,7 @@ class Event extends OutlookItem
     /**
     * Sets the calendar
     *
-    * @param string $val The calendar
+    * @param Calendar $val The calendar
     *
     * @return Event
     */
@@ -861,11 +862,12 @@ class Event extends OutlookItem
         return $this;
     }
     
-    /** 
-    * Gets the instances
-    *
-    * @return array The instances
-    */
+
+     /** 
+     * Gets the instances
+     *
+     * @return array The instances
+     */
     public function getInstances()
     {
         if (array_key_exists("instances", $this->_propDict)) {
@@ -878,7 +880,7 @@ class Event extends OutlookItem
     /** 
     * Sets the instances
     *
-    * @param string $val The instances
+    * @param Event $val The instances
     *
     * @return Event
     */
@@ -888,11 +890,12 @@ class Event extends OutlookItem
         return $this;
     }
     
-    /** 
-    * Gets the extensions
-    *
-    * @return array The extensions
-    */
+
+     /** 
+     * Gets the extensions
+     *
+     * @return array The extensions
+     */
     public function getExtensions()
     {
         if (array_key_exists("extensions", $this->_propDict)) {
@@ -905,7 +908,7 @@ class Event extends OutlookItem
     /** 
     * Sets the extensions
     *
-    * @param string $val The extensions
+    * @param Extension $val The extensions
     *
     * @return Event
     */
@@ -915,11 +918,12 @@ class Event extends OutlookItem
         return $this;
     }
     
-    /** 
-    * Gets the attachments
-    *
-    * @return array The attachments
-    */
+
+     /** 
+     * Gets the attachments
+     *
+     * @return array The attachments
+     */
     public function getAttachments()
     {
         if (array_key_exists("attachments", $this->_propDict)) {
@@ -932,7 +936,7 @@ class Event extends OutlookItem
     /** 
     * Sets the attachments
     *
-    * @param string $val The attachments
+    * @param Attachment $val The attachments
     *
     * @return Event
     */
@@ -942,11 +946,12 @@ class Event extends OutlookItem
         return $this;
     }
     
-    /** 
-    * Gets the singleValueExtendedProperties
-    *
-    * @return array The singleValueExtendedProperties
-    */
+
+     /** 
+     * Gets the singleValueExtendedProperties
+     *
+     * @return array The singleValueExtendedProperties
+     */
     public function getSingleValueExtendedProperties()
     {
         if (array_key_exists("singleValueExtendedProperties", $this->_propDict)) {
@@ -959,7 +964,7 @@ class Event extends OutlookItem
     /** 
     * Sets the singleValueExtendedProperties
     *
-    * @param string $val The singleValueExtendedProperties
+    * @param SingleValueLegacyExtendedProperty $val The singleValueExtendedProperties
     *
     * @return Event
     */
@@ -969,11 +974,12 @@ class Event extends OutlookItem
         return $this;
     }
     
-    /** 
-    * Gets the multiValueExtendedProperties
-    *
-    * @return array The multiValueExtendedProperties
-    */
+
+     /** 
+     * Gets the multiValueExtendedProperties
+     *
+     * @return array The multiValueExtendedProperties
+     */
     public function getMultiValueExtendedProperties()
     {
         if (array_key_exists("multiValueExtendedProperties", $this->_propDict)) {
@@ -986,7 +992,7 @@ class Event extends OutlookItem
     /** 
     * Sets the multiValueExtendedProperties
     *
-    * @param string $val The multiValueExtendedProperties
+    * @param MultiValueLegacyExtendedProperty $val The multiValueExtendedProperties
     *
     * @return Event
     */

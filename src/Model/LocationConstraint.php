@@ -48,7 +48,7 @@ class LocationConstraint extends Entity
     */
     public function setIsRequired($val)
     {
-        $this->_propDict["is_required"] = $val;
+        $this->_propDict["isRequired"] = $val;
         return $this;
     }
     /**
@@ -74,7 +74,7 @@ class LocationConstraint extends Entity
     */
     public function setSuggestLocation($val)
     {
-        $this->_propDict["suggest_location"] = $val;
+        $this->_propDict["suggestLocation"] = $val;
         return $this;
     }
 
@@ -86,7 +86,7 @@ class LocationConstraint extends Entity
     public function getLocations()
     {
         if (array_key_exists("locations", $this->_propDict)) {
-            if (is_a($this->_propDict["locations"], "LocationConstraintItem")) {
+            if (is_a($this->_propDict["locations"], "Microsoft\Graph\Model\LocationConstraintItem")) {
                 return $this->_propDict["locations"];
             } else {
                 $this->_propDict["locations"] = new LocationConstraintItem($this->_propDict["locations"]);

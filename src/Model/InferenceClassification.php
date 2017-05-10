@@ -26,11 +26,12 @@ namespace Microsoft\Graph\Model;
 */
 class InferenceClassification extends Entity
 {
-    /** 
-    * Gets the overrides
-    *
-    * @return array The overrides
-    */
+
+     /** 
+     * Gets the overrides
+     *
+     * @return array The overrides
+     */
     public function getOverrides()
     {
         if (array_key_exists("overrides", $this->_propDict)) {
@@ -43,7 +44,7 @@ class InferenceClassification extends Entity
     /** 
     * Sets the overrides
     *
-    * @param string $val The overrides
+    * @param InferenceClassificationOverride $val The overrides
     *
     * @return InferenceClassification
     */

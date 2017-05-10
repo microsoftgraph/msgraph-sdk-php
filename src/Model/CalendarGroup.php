@@ -107,11 +107,12 @@ class CalendarGroup extends Entity
         return $this;
     }
     
-    /** 
-    * Gets the calendars
-    *
-    * @return array The calendars
-    */
+
+     /** 
+     * Gets the calendars
+     *
+     * @return array The calendars
+     */
     public function getCalendars()
     {
         if (array_key_exists("calendars", $this->_propDict)) {
@@ -124,7 +125,7 @@ class CalendarGroup extends Entity
     /** 
     * Sets the calendars
     *
-    * @param string $val The calendars
+    * @param Calendar $val The calendars
     *
     * @return CalendarGroup
     */

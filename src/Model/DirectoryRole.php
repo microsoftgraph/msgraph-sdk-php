@@ -107,11 +107,12 @@ class DirectoryRole extends DirectoryObject
         return $this;
     }
     
-    /** 
-    * Gets the members
-    *
-    * @return array The members
-    */
+
+     /** 
+     * Gets the members
+     *
+     * @return array The members
+     */
     public function getMembers()
     {
         if (array_key_exists("members", $this->_propDict)) {
@@ -124,7 +125,7 @@ class DirectoryRole extends DirectoryObject
     /** 
     * Sets the members
     *
-    * @param string $val The members
+    * @param DirectoryObject $val The members
     *
     * @return DirectoryRole
     */

@@ -209,7 +209,7 @@ class Group extends DirectoryObject
     /**
     * Sets the onPremisesLastSyncDateTime
     *
-    * @param string $val The onPremisesLastSyncDateTime
+    * @param \DateTime $val The onPremisesLastSyncDateTime
     *
     * @return Group
     */
@@ -462,11 +462,12 @@ class Group extends DirectoryObject
         return $this;
     }
     
-    /** 
-    * Gets the members
-    *
-    * @return array The members
-    */
+
+     /** 
+     * Gets the members
+     *
+     * @return array The members
+     */
     public function getMembers()
     {
         if (array_key_exists("members", $this->_propDict)) {
@@ -479,7 +480,7 @@ class Group extends DirectoryObject
     /** 
     * Sets the members
     *
-    * @param string $val The members
+    * @param DirectoryObject $val The members
     *
     * @return Group
     */
@@ -489,11 +490,12 @@ class Group extends DirectoryObject
         return $this;
     }
     
-    /** 
-    * Gets the memberOf
-    *
-    * @return array The memberOf
-    */
+
+     /** 
+     * Gets the memberOf
+     *
+     * @return array The memberOf
+     */
     public function getMemberOf()
     {
         if (array_key_exists("memberOf", $this->_propDict)) {
@@ -506,7 +508,7 @@ class Group extends DirectoryObject
     /** 
     * Sets the memberOf
     *
-    * @param string $val The memberOf
+    * @param DirectoryObject $val The memberOf
     *
     * @return Group
     */
@@ -524,7 +526,7 @@ class Group extends DirectoryObject
     public function getCreatedOnBehalfOf()
     {
         if (array_key_exists("createdOnBehalfOf", $this->_propDict)) {
-            if (is_a($this->_propDict["createdOnBehalfOf"], "DirectoryObject")) {
+            if (is_a($this->_propDict["createdOnBehalfOf"], "Microsoft\Graph\Model\DirectoryObject")) {
                 return $this->_propDict["createdOnBehalfOf"];
             } else {
                 $this->_propDict["createdOnBehalfOf"] = new DirectoryObject($this->_propDict["createdOnBehalfOf"]);
@@ -537,7 +539,7 @@ class Group extends DirectoryObject
     /**
     * Sets the createdOnBehalfOf
     *
-    * @param string $val The createdOnBehalfOf
+    * @param DirectoryObject $val The createdOnBehalfOf
     *
     * @return Group
     */
@@ -547,11 +549,12 @@ class Group extends DirectoryObject
         return $this;
     }
     
-    /** 
-    * Gets the owners
-    *
-    * @return array The owners
-    */
+
+     /** 
+     * Gets the owners
+     *
+     * @return array The owners
+     */
     public function getOwners()
     {
         if (array_key_exists("owners", $this->_propDict)) {
@@ -564,7 +567,7 @@ class Group extends DirectoryObject
     /** 
     * Sets the owners
     *
-    * @param string $val The owners
+    * @param DirectoryObject $val The owners
     *
     * @return Group
     */
@@ -574,11 +577,12 @@ class Group extends DirectoryObject
         return $this;
     }
     
-    /** 
-    * Gets the threads
-    *
-    * @return array The threads
-    */
+
+     /** 
+     * Gets the threads
+     *
+     * @return array The threads
+     */
     public function getThreads()
     {
         if (array_key_exists("threads", $this->_propDict)) {
@@ -591,7 +595,7 @@ class Group extends DirectoryObject
     /** 
     * Sets the threads
     *
-    * @param string $val The threads
+    * @param ConversationThread $val The threads
     *
     * @return Group
     */
@@ -609,7 +613,7 @@ class Group extends DirectoryObject
     public function getCalendar()
     {
         if (array_key_exists("calendar", $this->_propDict)) {
-            if (is_a($this->_propDict["calendar"], "Calendar")) {
+            if (is_a($this->_propDict["calendar"], "Microsoft\Graph\Model\Calendar")) {
                 return $this->_propDict["calendar"];
             } else {
                 $this->_propDict["calendar"] = new Calendar($this->_propDict["calendar"]);
@@ -622,7 +626,7 @@ class Group extends DirectoryObject
     /**
     * Sets the calendar
     *
-    * @param string $val The calendar
+    * @param Calendar $val The calendar
     *
     * @return Group
     */
@@ -632,11 +636,12 @@ class Group extends DirectoryObject
         return $this;
     }
     
-    /** 
-    * Gets the calendarView
-    *
-    * @return array The calendarView
-    */
+
+     /** 
+     * Gets the calendarView
+     *
+     * @return array The calendarView
+     */
     public function getCalendarView()
     {
         if (array_key_exists("calendarView", $this->_propDict)) {
@@ -649,7 +654,7 @@ class Group extends DirectoryObject
     /** 
     * Sets the calendarView
     *
-    * @param string $val The calendarView
+    * @param Event $val The calendarView
     *
     * @return Group
     */
@@ -659,11 +664,12 @@ class Group extends DirectoryObject
         return $this;
     }
     
-    /** 
-    * Gets the events
-    *
-    * @return array The events
-    */
+
+     /** 
+     * Gets the events
+     *
+     * @return array The events
+     */
     public function getEvents()
     {
         if (array_key_exists("events", $this->_propDict)) {
@@ -676,7 +682,7 @@ class Group extends DirectoryObject
     /** 
     * Sets the events
     *
-    * @param string $val The events
+    * @param Event $val The events
     *
     * @return Group
     */
@@ -686,11 +692,12 @@ class Group extends DirectoryObject
         return $this;
     }
     
-    /** 
-    * Gets the conversations
-    *
-    * @return array The conversations
-    */
+
+     /** 
+     * Gets the conversations
+     *
+     * @return array The conversations
+     */
     public function getConversations()
     {
         if (array_key_exists("conversations", $this->_propDict)) {
@@ -703,7 +710,7 @@ class Group extends DirectoryObject
     /** 
     * Sets the conversations
     *
-    * @param string $val The conversations
+    * @param Conversation $val The conversations
     *
     * @return Group
     */
@@ -721,7 +728,7 @@ class Group extends DirectoryObject
     public function getPhoto()
     {
         if (array_key_exists("photo", $this->_propDict)) {
-            if (is_a($this->_propDict["photo"], "ProfilePhoto")) {
+            if (is_a($this->_propDict["photo"], "Microsoft\Graph\Model\ProfilePhoto")) {
                 return $this->_propDict["photo"];
             } else {
                 $this->_propDict["photo"] = new ProfilePhoto($this->_propDict["photo"]);
@@ -734,7 +741,7 @@ class Group extends DirectoryObject
     /**
     * Sets the photo
     *
-    * @param string $val The photo
+    * @param ProfilePhoto $val The photo
     *
     * @return Group
     */
@@ -744,11 +751,40 @@ class Group extends DirectoryObject
         return $this;
     }
     
+
+     /** 
+     * Gets the photos
+     *
+     * @return array The photos
+     */
+    public function getPhotos()
+    {
+        if (array_key_exists("photos", $this->_propDict)) {
+           return $this->_propDict["photos"];
+        } else {
+            return null;
+        }
+    }
+    
     /** 
-    * Gets the acceptedSenders
+    * Sets the photos
     *
-    * @return array The acceptedSenders
+    * @param ProfilePhoto $val The photos
+    *
+    * @return Group
     */
+    public function setPhotos($val)
+    {
+		$this->_propDict["photos"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the acceptedSenders
+     *
+     * @return array The acceptedSenders
+     */
     public function getAcceptedSenders()
     {
         if (array_key_exists("acceptedSenders", $this->_propDict)) {
@@ -761,7 +797,7 @@ class Group extends DirectoryObject
     /** 
     * Sets the acceptedSenders
     *
-    * @param string $val The acceptedSenders
+    * @param DirectoryObject $val The acceptedSenders
     *
     * @return Group
     */
@@ -771,11 +807,12 @@ class Group extends DirectoryObject
         return $this;
     }
     
-    /** 
-    * Gets the rejectedSenders
-    *
-    * @return array The rejectedSenders
-    */
+
+     /** 
+     * Gets the rejectedSenders
+     *
+     * @return array The rejectedSenders
+     */
     public function getRejectedSenders()
     {
         if (array_key_exists("rejectedSenders", $this->_propDict)) {
@@ -788,7 +825,7 @@ class Group extends DirectoryObject
     /** 
     * Sets the rejectedSenders
     *
-    * @param string $val The rejectedSenders
+    * @param DirectoryObject $val The rejectedSenders
     *
     * @return Group
     */
@@ -806,7 +843,7 @@ class Group extends DirectoryObject
     public function getDrive()
     {
         if (array_key_exists("drive", $this->_propDict)) {
-            if (is_a($this->_propDict["drive"], "Drive")) {
+            if (is_a($this->_propDict["drive"], "Microsoft\Graph\Model\Drive")) {
                 return $this->_propDict["drive"];
             } else {
                 $this->_propDict["drive"] = new Drive($this->_propDict["drive"]);
@@ -819,13 +856,100 @@ class Group extends DirectoryObject
     /**
     * Sets the drive
     *
-    * @param string $val The drive
+    * @param Drive $val The drive
     *
     * @return Group
     */
     public function setDrive($val)
     {
         $this->_propDict["drive"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the drives
+     *
+     * @return array The drives
+     */
+    public function getDrives()
+    {
+        if (array_key_exists("drives", $this->_propDict)) {
+           return $this->_propDict["drives"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the drives
+    *
+    * @param Drive $val The drives
+    *
+    * @return Group
+    */
+    public function setDrives($val)
+    {
+		$this->_propDict["drives"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the sites
+     *
+     * @return array The sites
+     */
+    public function getSites()
+    {
+        if (array_key_exists("sites", $this->_propDict)) {
+           return $this->_propDict["sites"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the sites
+    *
+    * @param Site $val The sites
+    *
+    * @return Group
+    */
+    public function setSites($val)
+    {
+		$this->_propDict["sites"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the planner
+    *
+    * @return PlannerGroup The planner
+    */
+    public function getPlanner()
+    {
+        if (array_key_exists("planner", $this->_propDict)) {
+            if (is_a($this->_propDict["planner"], "Microsoft\Graph\Model\PlannerGroup")) {
+                return $this->_propDict["planner"];
+            } else {
+                $this->_propDict["planner"] = new PlannerGroup($this->_propDict["planner"]);
+                return $this->_propDict["planner"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the planner
+    *
+    * @param PlannerGroup $val The planner
+    *
+    * @return Group
+    */
+    public function setPlanner($val)
+    {
+        $this->_propDict["planner"] = $val;
         return $this;
     }
     

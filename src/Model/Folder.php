@@ -48,7 +48,7 @@ class Folder extends Entity
     */
     public function setChildCount($val)
     {
-        $this->_propDict["child_count"] = $val;
+        $this->_propDict["childCount"] = $val;
         return $this;
     }
 }

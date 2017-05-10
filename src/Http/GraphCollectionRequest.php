@@ -43,6 +43,12 @@ class GraphCollectionRequest extends GraphRequest
     */
     protected $nextLink;
     /**
+    * The delta link to use in calling /delta a subsequent time
+    *
+    * @var string
+    */
+    protected $deltaLink;
+    /**
     * True if the user has reached the end of the collection
     *
     * @var bool
@@ -181,6 +187,7 @@ class GraphCollectionRequest extends GraphRequest
     public function processPageCallReturn($response)
     {
         $this->nextLink = $response->getNextLink();
+        $this->deltaLink = $response->getDeltaLink();
 
         /* If no skip token is returned, we have reached the end
            of the collection */
@@ -209,5 +216,16 @@ class GraphCollectionRequest extends GraphRequest
     public function isEnd()
     {
         return $this->end;
+    }
+
+    /**
+    * Gets a delta link to use with subsequent
+    * calls to /delta
+    *
+    * @return string|null The delta link
+    */
+    public function getDeltaLink()
+    {
+        return $this->deltaLink;
     }
 }

@@ -34,7 +34,7 @@ class SharingLink extends Entity
     public function getApplication()
     {
         if (array_key_exists("application", $this->_propDict)) {
-            if (is_a($this->_propDict["application"], "Identity")) {
+            if (is_a($this->_propDict["application"], "Microsoft\Graph\Model\Identity")) {
                 return $this->_propDict["application"];
             } else {
                 $this->_propDict["application"] = new Identity($this->_propDict["application"]);
@@ -55,32 +55,6 @@ class SharingLink extends Entity
     {
         $this->_propDict["application"] = $val;
          return $this;
-    }
-    /**
-    * Gets the type
-    *
-    * @return string The type
-    */
-    public function getType()
-    {
-        if (array_key_exists("type", $this->_propDict)) {
-            return $this->_propDict["type"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the type
-    *
-    * @param string $val The value of the type
-    *
-    * @return SharingLink
-    */
-    public function setType($val)
-    {
-        $this->_propDict["type"] = $val;
-        return $this;
     }
     /**
     * Gets the scope
@@ -109,6 +83,32 @@ class SharingLink extends Entity
         return $this;
     }
     /**
+    * Gets the type
+    *
+    * @return string The type
+    */
+    public function getType()
+    {
+        if (array_key_exists("type", $this->_propDict)) {
+            return $this->_propDict["type"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the type
+    *
+    * @param string $val The value of the type
+    *
+    * @return SharingLink
+    */
+    public function setType($val)
+    {
+        $this->_propDict["type"] = $val;
+        return $this;
+    }
+    /**
     * Gets the webUrl
     *
     * @return string The webUrl
@@ -131,7 +131,7 @@ class SharingLink extends Entity
     */
     public function setWebUrl($val)
     {
-        $this->_propDict["web_url"] = $val;
+        $this->_propDict["webUrl"] = $val;
         return $this;
     }
 }

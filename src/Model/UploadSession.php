@@ -25,32 +25,6 @@ namespace Microsoft\Graph\Model;
 */
 class UploadSession extends Entity
 {
-    /**
-    * Gets the uploadUrl
-    *
-    * @return string The uploadUrl
-    */
-    public function getUploadUrl()
-    {
-        if (array_key_exists("uploadUrl", $this->_propDict)) {
-            return $this->_propDict["uploadUrl"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the uploadUrl
-    *
-    * @param string $val The value of the uploadUrl
-    *
-    * @return UploadSession
-    */
-    public function setUploadUrl($val)
-    {
-        $this->_propDict["upload_url"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the expirationDateTime
@@ -60,7 +34,7 @@ class UploadSession extends Entity
     public function getExpirationDateTime()
     {
         if (array_key_exists("expirationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["expirationDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["expirationDateTime"], "Microsoft\Graph\Model\\DateTime")) {
                 return $this->_propDict["expirationDateTime"];
             } else {
                 $this->_propDict["expirationDateTime"] = new \DateTime($this->_propDict["expirationDateTime"]);
@@ -105,7 +79,33 @@ class UploadSession extends Entity
     */
     public function setNextExpectedRanges($val)
     {
-        $this->_propDict["next_expected_ranges"] = $val;
+        $this->_propDict["nextExpectedRanges"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the uploadUrl
+    *
+    * @return string The uploadUrl
+    */
+    public function getUploadUrl()
+    {
+        if (array_key_exists("uploadUrl", $this->_propDict)) {
+            return $this->_propDict["uploadUrl"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the uploadUrl
+    *
+    * @param string $val The value of the uploadUrl
+    *
+    * @return UploadSession
+    */
+    public function setUploadUrl($val)
+    {
+        $this->_propDict["uploadUrl"] = $val;
         return $this;
     }
 }

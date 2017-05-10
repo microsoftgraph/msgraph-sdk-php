@@ -53,11 +53,12 @@ class User extends DirectoryObject
         return $this;
     }
     
-    /** 
-    * Gets the assignedLicenses
-    *
-    * @return array The assignedLicenses
-    */
+
+     /** 
+     * Gets the assignedLicenses
+     *
+     * @return array The assignedLicenses
+     */
     public function getAssignedLicenses()
     {
         if (array_key_exists("assignedLicenses", $this->_propDict)) {
@@ -70,7 +71,7 @@ class User extends DirectoryObject
     /** 
     * Sets the assignedLicenses
     *
-    * @param string $val The assignedLicenses
+    * @param AssignedLicense $val The assignedLicenses
     *
     * @return User
     */
@@ -80,11 +81,12 @@ class User extends DirectoryObject
         return $this;
     }
     
-    /** 
-    * Gets the assignedPlans
-    *
-    * @return array The assignedPlans
-    */
+
+     /** 
+     * Gets the assignedPlans
+     *
+     * @return array The assignedPlans
+     */
     public function getAssignedPlans()
     {
         if (array_key_exists("assignedPlans", $this->_propDict)) {
@@ -97,7 +99,7 @@ class User extends DirectoryObject
     /** 
     * Sets the assignedPlans
     *
-    * @param string $val The assignedPlans
+    * @param AssignedPlan $val The assignedPlans
     *
     * @return User
     */
@@ -297,6 +299,33 @@ class User extends DirectoryObject
     }
     
     /**
+    * Gets the imAddresses
+    *
+    * @return string The imAddresses
+    */
+    public function getImAddresses()
+    {
+        if (array_key_exists("imAddresses", $this->_propDict)) {
+            return $this->_propDict["imAddresses"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the imAddresses
+    *
+    * @param string $val The imAddresses
+    *
+    * @return User
+    */
+    public function setImAddresses($val)
+    {
+        $this->_propDict["imAddresses"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the jobTitle
     *
     * @return string The jobTitle
@@ -452,7 +481,7 @@ class User extends DirectoryObject
     /**
     * Sets the onPremisesLastSyncDateTime
     *
-    * @param string $val The onPremisesLastSyncDateTime
+    * @param \DateTime $val The onPremisesLastSyncDateTime
     *
     * @return User
     */
@@ -551,7 +580,7 @@ class User extends DirectoryObject
     public function getPasswordProfile()
     {
         if (array_key_exists("passwordProfile", $this->_propDict)) {
-            if (is_a($this->_propDict["passwordProfile"], "PasswordProfile")) {
+            if (is_a($this->_propDict["passwordProfile"], "Microsoft\Graph\Model\PasswordProfile")) {
                 return $this->_propDict["passwordProfile"];
             } else {
                 $this->_propDict["passwordProfile"] = new PasswordProfile($this->_propDict["passwordProfile"]);
@@ -564,7 +593,7 @@ class User extends DirectoryObject
     /**
     * Sets the passwordProfile
     *
-    * @param string $val The passwordProfile
+    * @param PasswordProfile $val The passwordProfile
     *
     * @return User
     */
@@ -655,11 +684,12 @@ class User extends DirectoryObject
         return $this;
     }
     
-    /** 
-    * Gets the provisionedPlans
-    *
-    * @return array The provisionedPlans
-    */
+
+     /** 
+     * Gets the provisionedPlans
+     *
+     * @return array The provisionedPlans
+     */
     public function getProvisionedPlans()
     {
         if (array_key_exists("provisionedPlans", $this->_propDict)) {
@@ -672,7 +702,7 @@ class User extends DirectoryObject
     /** 
     * Sets the provisionedPlans
     *
-    * @param string $val The provisionedPlans
+    * @param ProvisionedPlan $val The provisionedPlans
     *
     * @return User
     */
@@ -879,7 +909,7 @@ class User extends DirectoryObject
     public function getMailboxSettings()
     {
         if (array_key_exists("mailboxSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["mailboxSettings"], "MailboxSettings")) {
+            if (is_a($this->_propDict["mailboxSettings"], "Microsoft\Graph\Model\MailboxSettings")) {
                 return $this->_propDict["mailboxSettings"];
             } else {
                 $this->_propDict["mailboxSettings"] = new MailboxSettings($this->_propDict["mailboxSettings"]);
@@ -892,7 +922,7 @@ class User extends DirectoryObject
     /**
     * Sets the mailboxSettings
     *
-    * @param string $val The mailboxSettings
+    * @param MailboxSettings $val The mailboxSettings
     *
     * @return User
     */
@@ -950,7 +980,7 @@ class User extends DirectoryObject
     /**
     * Sets the birthday
     *
-    * @param string $val The birthday
+    * @param \DateTime $val The birthday
     *
     * @return User
     */
@@ -981,7 +1011,7 @@ class User extends DirectoryObject
     /**
     * Sets the hireDate
     *
-    * @param string $val The hireDate
+    * @param \DateTime $val The hireDate
     *
     * @return User
     */
@@ -1180,11 +1210,12 @@ class User extends DirectoryObject
         return $this;
     }
     
-    /** 
-    * Gets the ownedDevices
-    *
-    * @return array The ownedDevices
-    */
+
+     /** 
+     * Gets the ownedDevices
+     *
+     * @return array The ownedDevices
+     */
     public function getOwnedDevices()
     {
         if (array_key_exists("ownedDevices", $this->_propDict)) {
@@ -1197,7 +1228,7 @@ class User extends DirectoryObject
     /** 
     * Sets the ownedDevices
     *
-    * @param string $val The ownedDevices
+    * @param DirectoryObject $val The ownedDevices
     *
     * @return User
     */
@@ -1207,11 +1238,12 @@ class User extends DirectoryObject
         return $this;
     }
     
-    /** 
-    * Gets the registeredDevices
-    *
-    * @return array The registeredDevices
-    */
+
+     /** 
+     * Gets the registeredDevices
+     *
+     * @return array The registeredDevices
+     */
     public function getRegisteredDevices()
     {
         if (array_key_exists("registeredDevices", $this->_propDict)) {
@@ -1224,7 +1256,7 @@ class User extends DirectoryObject
     /** 
     * Sets the registeredDevices
     *
-    * @param string $val The registeredDevices
+    * @param DirectoryObject $val The registeredDevices
     *
     * @return User
     */
@@ -1242,7 +1274,7 @@ class User extends DirectoryObject
     public function getManager()
     {
         if (array_key_exists("manager", $this->_propDict)) {
-            if (is_a($this->_propDict["manager"], "DirectoryObject")) {
+            if (is_a($this->_propDict["manager"], "Microsoft\Graph\Model\DirectoryObject")) {
                 return $this->_propDict["manager"];
             } else {
                 $this->_propDict["manager"] = new DirectoryObject($this->_propDict["manager"]);
@@ -1255,7 +1287,7 @@ class User extends DirectoryObject
     /**
     * Sets the manager
     *
-    * @param string $val The manager
+    * @param DirectoryObject $val The manager
     *
     * @return User
     */
@@ -1265,11 +1297,12 @@ class User extends DirectoryObject
         return $this;
     }
     
-    /** 
-    * Gets the directReports
-    *
-    * @return array The directReports
-    */
+
+     /** 
+     * Gets the directReports
+     *
+     * @return array The directReports
+     */
     public function getDirectReports()
     {
         if (array_key_exists("directReports", $this->_propDict)) {
@@ -1282,7 +1315,7 @@ class User extends DirectoryObject
     /** 
     * Sets the directReports
     *
-    * @param string $val The directReports
+    * @param DirectoryObject $val The directReports
     *
     * @return User
     */
@@ -1292,11 +1325,12 @@ class User extends DirectoryObject
         return $this;
     }
     
-    /** 
-    * Gets the memberOf
-    *
-    * @return array The memberOf
-    */
+
+     /** 
+     * Gets the memberOf
+     *
+     * @return array The memberOf
+     */
     public function getMemberOf()
     {
         if (array_key_exists("memberOf", $this->_propDict)) {
@@ -1309,7 +1343,7 @@ class User extends DirectoryObject
     /** 
     * Sets the memberOf
     *
-    * @param string $val The memberOf
+    * @param DirectoryObject $val The memberOf
     *
     * @return User
     */
@@ -1319,11 +1353,12 @@ class User extends DirectoryObject
         return $this;
     }
     
-    /** 
-    * Gets the createdObjects
-    *
-    * @return array The createdObjects
-    */
+
+     /** 
+     * Gets the createdObjects
+     *
+     * @return array The createdObjects
+     */
     public function getCreatedObjects()
     {
         if (array_key_exists("createdObjects", $this->_propDict)) {
@@ -1336,7 +1371,7 @@ class User extends DirectoryObject
     /** 
     * Sets the createdObjects
     *
-    * @param string $val The createdObjects
+    * @param DirectoryObject $val The createdObjects
     *
     * @return User
     */
@@ -1346,11 +1381,12 @@ class User extends DirectoryObject
         return $this;
     }
     
-    /** 
-    * Gets the ownedObjects
-    *
-    * @return array The ownedObjects
-    */
+
+     /** 
+     * Gets the ownedObjects
+     *
+     * @return array The ownedObjects
+     */
     public function getOwnedObjects()
     {
         if (array_key_exists("ownedObjects", $this->_propDict)) {
@@ -1363,7 +1399,7 @@ class User extends DirectoryObject
     /** 
     * Sets the ownedObjects
     *
-    * @param string $val The ownedObjects
+    * @param DirectoryObject $val The ownedObjects
     *
     * @return User
     */
@@ -1373,11 +1409,40 @@ class User extends DirectoryObject
         return $this;
     }
     
+
+     /** 
+     * Gets the licenseDetails
+     *
+     * @return array The licenseDetails
+     */
+    public function getLicenseDetails()
+    {
+        if (array_key_exists("licenseDetails", $this->_propDict)) {
+           return $this->_propDict["licenseDetails"];
+        } else {
+            return null;
+        }
+    }
+    
     /** 
-    * Gets the messages
+    * Sets the licenseDetails
     *
-    * @return array The messages
+    * @param LicenseDetails $val The licenseDetails
+    *
+    * @return User
     */
+    public function setLicenseDetails($val)
+    {
+		$this->_propDict["licenseDetails"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the messages
+     *
+     * @return array The messages
+     */
     public function getMessages()
     {
         if (array_key_exists("messages", $this->_propDict)) {
@@ -1390,7 +1455,7 @@ class User extends DirectoryObject
     /** 
     * Sets the messages
     *
-    * @param string $val The messages
+    * @param Message $val The messages
     *
     * @return User
     */
@@ -1400,11 +1465,12 @@ class User extends DirectoryObject
         return $this;
     }
     
-    /** 
-    * Gets the mailFolders
-    *
-    * @return array The mailFolders
-    */
+
+     /** 
+     * Gets the mailFolders
+     *
+     * @return array The mailFolders
+     */
     public function getMailFolders()
     {
         if (array_key_exists("mailFolders", $this->_propDict)) {
@@ -1417,7 +1483,7 @@ class User extends DirectoryObject
     /** 
     * Sets the mailFolders
     *
-    * @param string $val The mailFolders
+    * @param MailFolder $val The mailFolders
     *
     * @return User
     */
@@ -1435,7 +1501,7 @@ class User extends DirectoryObject
     public function getCalendar()
     {
         if (array_key_exists("calendar", $this->_propDict)) {
-            if (is_a($this->_propDict["calendar"], "Calendar")) {
+            if (is_a($this->_propDict["calendar"], "Microsoft\Graph\Model\Calendar")) {
                 return $this->_propDict["calendar"];
             } else {
                 $this->_propDict["calendar"] = new Calendar($this->_propDict["calendar"]);
@@ -1448,7 +1514,7 @@ class User extends DirectoryObject
     /**
     * Sets the calendar
     *
-    * @param string $val The calendar
+    * @param Calendar $val The calendar
     *
     * @return User
     */
@@ -1458,11 +1524,12 @@ class User extends DirectoryObject
         return $this;
     }
     
-    /** 
-    * Gets the calendars
-    *
-    * @return array The calendars
-    */
+
+     /** 
+     * Gets the calendars
+     *
+     * @return array The calendars
+     */
     public function getCalendars()
     {
         if (array_key_exists("calendars", $this->_propDict)) {
@@ -1475,7 +1542,7 @@ class User extends DirectoryObject
     /** 
     * Sets the calendars
     *
-    * @param string $val The calendars
+    * @param Calendar $val The calendars
     *
     * @return User
     */
@@ -1485,11 +1552,12 @@ class User extends DirectoryObject
         return $this;
     }
     
-    /** 
-    * Gets the calendarGroups
-    *
-    * @return array The calendarGroups
-    */
+
+     /** 
+     * Gets the calendarGroups
+     *
+     * @return array The calendarGroups
+     */
     public function getCalendarGroups()
     {
         if (array_key_exists("calendarGroups", $this->_propDict)) {
@@ -1502,7 +1570,7 @@ class User extends DirectoryObject
     /** 
     * Sets the calendarGroups
     *
-    * @param string $val The calendarGroups
+    * @param CalendarGroup $val The calendarGroups
     *
     * @return User
     */
@@ -1512,11 +1580,12 @@ class User extends DirectoryObject
         return $this;
     }
     
-    /** 
-    * Gets the calendarView
-    *
-    * @return array The calendarView
-    */
+
+     /** 
+     * Gets the calendarView
+     *
+     * @return array The calendarView
+     */
     public function getCalendarView()
     {
         if (array_key_exists("calendarView", $this->_propDict)) {
@@ -1529,7 +1598,7 @@ class User extends DirectoryObject
     /** 
     * Sets the calendarView
     *
-    * @param string $val The calendarView
+    * @param Event $val The calendarView
     *
     * @return User
     */
@@ -1539,11 +1608,12 @@ class User extends DirectoryObject
         return $this;
     }
     
-    /** 
-    * Gets the events
-    *
-    * @return array The events
-    */
+
+     /** 
+     * Gets the events
+     *
+     * @return array The events
+     */
     public function getEvents()
     {
         if (array_key_exists("events", $this->_propDict)) {
@@ -1556,7 +1626,7 @@ class User extends DirectoryObject
     /** 
     * Sets the events
     *
-    * @param string $val The events
+    * @param Event $val The events
     *
     * @return User
     */
@@ -1566,11 +1636,12 @@ class User extends DirectoryObject
         return $this;
     }
     
-    /** 
-    * Gets the contacts
-    *
-    * @return array The contacts
-    */
+
+     /** 
+     * Gets the contacts
+     *
+     * @return array The contacts
+     */
     public function getContacts()
     {
         if (array_key_exists("contacts", $this->_propDict)) {
@@ -1583,7 +1654,7 @@ class User extends DirectoryObject
     /** 
     * Sets the contacts
     *
-    * @param string $val The contacts
+    * @param Contact $val The contacts
     *
     * @return User
     */
@@ -1593,11 +1664,12 @@ class User extends DirectoryObject
         return $this;
     }
     
-    /** 
-    * Gets the contactFolders
-    *
-    * @return array The contactFolders
-    */
+
+     /** 
+     * Gets the contactFolders
+     *
+     * @return array The contactFolders
+     */
     public function getContactFolders()
     {
         if (array_key_exists("contactFolders", $this->_propDict)) {
@@ -1610,7 +1682,7 @@ class User extends DirectoryObject
     /** 
     * Sets the contactFolders
     *
-    * @param string $val The contactFolders
+    * @param ContactFolder $val The contactFolders
     *
     * @return User
     */
@@ -1628,7 +1700,7 @@ class User extends DirectoryObject
     public function getInferenceClassification()
     {
         if (array_key_exists("inferenceClassification", $this->_propDict)) {
-            if (is_a($this->_propDict["inferenceClassification"], "InferenceClassification")) {
+            if (is_a($this->_propDict["inferenceClassification"], "Microsoft\Graph\Model\InferenceClassification")) {
                 return $this->_propDict["inferenceClassification"];
             } else {
                 $this->_propDict["inferenceClassification"] = new InferenceClassification($this->_propDict["inferenceClassification"]);
@@ -1641,7 +1713,7 @@ class User extends DirectoryObject
     /**
     * Sets the inferenceClassification
     *
-    * @param string $val The inferenceClassification
+    * @param InferenceClassification $val The inferenceClassification
     *
     * @return User
     */
@@ -1659,7 +1731,7 @@ class User extends DirectoryObject
     public function getPhoto()
     {
         if (array_key_exists("photo", $this->_propDict)) {
-            if (is_a($this->_propDict["photo"], "ProfilePhoto")) {
+            if (is_a($this->_propDict["photo"], "Microsoft\Graph\Model\ProfilePhoto")) {
                 return $this->_propDict["photo"];
             } else {
                 $this->_propDict["photo"] = new ProfilePhoto($this->_propDict["photo"]);
@@ -1672,13 +1744,41 @@ class User extends DirectoryObject
     /**
     * Sets the photo
     *
-    * @param string $val The photo
+    * @param ProfilePhoto $val The photo
     *
     * @return User
     */
     public function setPhoto($val)
     {
         $this->_propDict["photo"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the photos
+     *
+     * @return array The photos
+     */
+    public function getPhotos()
+    {
+        if (array_key_exists("photos", $this->_propDict)) {
+           return $this->_propDict["photos"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the photos
+    *
+    * @param ProfilePhoto $val The photos
+    *
+    * @return User
+    */
+    public function setPhotos($val)
+    {
+		$this->_propDict["photos"] = $val;
         return $this;
     }
     
@@ -1690,7 +1790,7 @@ class User extends DirectoryObject
     public function getDrive()
     {
         if (array_key_exists("drive", $this->_propDict)) {
-            if (is_a($this->_propDict["drive"], "Drive")) {
+            if (is_a($this->_propDict["drive"], "Microsoft\Graph\Model\Drive")) {
                 return $this->_propDict["drive"];
             } else {
                 $this->_propDict["drive"] = new Drive($this->_propDict["drive"]);
@@ -1703,7 +1803,7 @@ class User extends DirectoryObject
     /**
     * Sets the drive
     *
-    * @param string $val The drive
+    * @param Drive $val The drive
     *
     * @return User
     */
@@ -1713,11 +1813,12 @@ class User extends DirectoryObject
         return $this;
     }
     
-    /** 
-    * Gets the drives
-    *
-    * @return array The drives
-    */
+
+     /** 
+     * Gets the drives
+     *
+     * @return array The drives
+     */
     public function getDrives()
     {
         if (array_key_exists("drives", $this->_propDict)) {
@@ -1730,13 +1831,44 @@ class User extends DirectoryObject
     /** 
     * Sets the drives
     *
-    * @param string $val The drives
+    * @param Drive $val The drives
     *
     * @return User
     */
     public function setDrives($val)
     {
 		$this->_propDict["drives"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the planner
+    *
+    * @return PlannerUser The planner
+    */
+    public function getPlanner()
+    {
+        if (array_key_exists("planner", $this->_propDict)) {
+            if (is_a($this->_propDict["planner"], "Microsoft\Graph\Model\PlannerUser")) {
+                return $this->_propDict["planner"];
+            } else {
+                $this->_propDict["planner"] = new PlannerUser($this->_propDict["planner"]);
+                return $this->_propDict["planner"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the planner
+    *
+    * @param PlannerUser $val The planner
+    *
+    * @return User
+    */
+    public function setPlanner($val)
+    {
+        $this->_propDict["planner"] = $val;
         return $this;
     }
     

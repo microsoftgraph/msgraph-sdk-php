@@ -61,7 +61,7 @@ class Calendar extends Entity
     public function getColor()
     {
         if (array_key_exists("color", $this->_propDict)) {
-            if (is_a($this->_propDict["color"], "CalendarColor")) {
+            if (is_a($this->_propDict["color"], "Microsoft\Graph\Model\CalendarColor")) {
                 return $this->_propDict["color"];
             } else {
                 $this->_propDict["color"] = new CalendarColor($this->_propDict["color"]);
@@ -74,7 +74,7 @@ class Calendar extends Entity
     /**
     * Sets the color
     *
-    * @param string $val The color
+    * @param CalendarColor $val The color
     *
     * @return Calendar
     */
@@ -111,11 +111,12 @@ class Calendar extends Entity
         return $this;
     }
     
-    /** 
-    * Gets the events
-    *
-    * @return array The events
-    */
+
+     /** 
+     * Gets the events
+     *
+     * @return array The events
+     */
     public function getEvents()
     {
         if (array_key_exists("events", $this->_propDict)) {
@@ -128,7 +129,7 @@ class Calendar extends Entity
     /** 
     * Sets the events
     *
-    * @param string $val The events
+    * @param Event $val The events
     *
     * @return Calendar
     */
@@ -138,11 +139,12 @@ class Calendar extends Entity
         return $this;
     }
     
-    /** 
-    * Gets the calendarView
-    *
-    * @return array The calendarView
-    */
+
+     /** 
+     * Gets the calendarView
+     *
+     * @return array The calendarView
+     */
     public function getCalendarView()
     {
         if (array_key_exists("calendarView", $this->_propDict)) {
@@ -155,7 +157,7 @@ class Calendar extends Entity
     /** 
     * Sets the calendarView
     *
-    * @param string $val The calendarView
+    * @param Event $val The calendarView
     *
     * @return Calendar
     */
@@ -165,11 +167,12 @@ class Calendar extends Entity
         return $this;
     }
     
-    /** 
-    * Gets the singleValueExtendedProperties
-    *
-    * @return array The singleValueExtendedProperties
-    */
+
+     /** 
+     * Gets the singleValueExtendedProperties
+     *
+     * @return array The singleValueExtendedProperties
+     */
     public function getSingleValueExtendedProperties()
     {
         if (array_key_exists("singleValueExtendedProperties", $this->_propDict)) {
@@ -182,7 +185,7 @@ class Calendar extends Entity
     /** 
     * Sets the singleValueExtendedProperties
     *
-    * @param string $val The singleValueExtendedProperties
+    * @param SingleValueLegacyExtendedProperty $val The singleValueExtendedProperties
     *
     * @return Calendar
     */
@@ -192,11 +195,12 @@ class Calendar extends Entity
         return $this;
     }
     
-    /** 
-    * Gets the multiValueExtendedProperties
-    *
-    * @return array The multiValueExtendedProperties
-    */
+
+     /** 
+     * Gets the multiValueExtendedProperties
+     *
+     * @return array The multiValueExtendedProperties
+     */
     public function getMultiValueExtendedProperties()
     {
         if (array_key_exists("multiValueExtendedProperties", $this->_propDict)) {
@@ -209,7 +213,7 @@ class Calendar extends Entity
     /** 
     * Sets the multiValueExtendedProperties
     *
-    * @param string $val The multiValueExtendedProperties
+    * @param MultiValueLegacyExtendedProperty $val The multiValueExtendedProperties
     *
     * @return Calendar
     */

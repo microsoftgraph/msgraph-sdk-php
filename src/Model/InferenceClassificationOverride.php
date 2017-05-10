@@ -34,7 +34,7 @@ class InferenceClassificationOverride extends Entity
     public function getClassifyAs()
     {
         if (array_key_exists("classifyAs", $this->_propDict)) {
-            if (is_a($this->_propDict["classifyAs"], "InferenceClassificationType")) {
+            if (is_a($this->_propDict["classifyAs"], "Microsoft\Graph\Model\InferenceClassificationType")) {
                 return $this->_propDict["classifyAs"];
             } else {
                 $this->_propDict["classifyAs"] = new InferenceClassificationType($this->_propDict["classifyAs"]);
@@ -47,7 +47,7 @@ class InferenceClassificationOverride extends Entity
     /**
     * Sets the classifyAs
     *
-    * @param string $val The classifyAs
+    * @param InferenceClassificationType $val The classifyAs
     *
     * @return InferenceClassificationOverride
     */
@@ -65,7 +65,7 @@ class InferenceClassificationOverride extends Entity
     public function getSenderEmailAddress()
     {
         if (array_key_exists("senderEmailAddress", $this->_propDict)) {
-            if (is_a($this->_propDict["senderEmailAddress"], "EmailAddress")) {
+            if (is_a($this->_propDict["senderEmailAddress"], "Microsoft\Graph\Model\EmailAddress")) {
                 return $this->_propDict["senderEmailAddress"];
             } else {
                 $this->_propDict["senderEmailAddress"] = new EmailAddress($this->_propDict["senderEmailAddress"]);
@@ -78,7 +78,7 @@ class InferenceClassificationOverride extends Entity
     /**
     * Sets the senderEmailAddress
     *
-    * @param string $val The senderEmailAddress
+    * @param EmailAddress $val The senderEmailAddress
     *
     * @return InferenceClassificationOverride
     */

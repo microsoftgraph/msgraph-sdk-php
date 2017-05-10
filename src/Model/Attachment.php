@@ -47,7 +47,7 @@ class Attachment extends Entity
     /**
     * Sets the lastModifiedDateTime
     *
-    * @param string $val The lastModifiedDateTime
+    * @param \DateTime $val The lastModifiedDateTime
     *
     * @return Attachment
     */

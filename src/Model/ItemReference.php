@@ -48,7 +48,7 @@ class ItemReference extends Entity
     */
     public function setDriveId($val)
     {
-        $this->_propDict["drive_id"] = $val;
+        $this->_propDict["driveId"] = $val;
         return $this;
     }
     /**
@@ -152,7 +152,38 @@ class ItemReference extends Entity
     */
     public function setShareId($val)
     {
-        $this->_propDict["share_id"] = $val;
+        $this->_propDict["shareId"] = $val;
         return $this;
+    }
+
+    /**
+    * Gets the sharepointIds
+    *
+    * @return SharepointIds The sharepointIds
+    */
+    public function getSharepointIds()
+    {
+        if (array_key_exists("sharepointIds", $this->_propDict)) {
+            if (is_a($this->_propDict["sharepointIds"], "Microsoft\Graph\Model\SharepointIds")) {
+                return $this->_propDict["sharepointIds"];
+            } else {
+                $this->_propDict["sharepointIds"] = new SharepointIds($this->_propDict["sharepointIds"]);
+                return $this->_propDict["sharepointIds"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the sharepointIds
+    *
+    * @param SharepointIds $val The value to assign to the sharepointIds
+    *
+    * @return ItemReference The ItemReference
+    */
+    public function setSharepointIds($val)
+    {
+        $this->_propDict["sharepointIds"] = $val;
+         return $this;
     }
 }

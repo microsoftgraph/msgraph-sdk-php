@@ -47,7 +47,7 @@ class Message extends OutlookItem
     /**
     * Sets the receivedDateTime
     *
-    * @param string $val The receivedDateTime
+    * @param \DateTime $val The receivedDateTime
     *
     * @return Message
     */
@@ -78,7 +78,7 @@ class Message extends OutlookItem
     /**
     * Sets the sentDateTime
     *
-    * @param string $val The sentDateTime
+    * @param \DateTime $val The sentDateTime
     *
     * @return Message
     */
@@ -177,7 +177,7 @@ class Message extends OutlookItem
     public function getBody()
     {
         if (array_key_exists("body", $this->_propDict)) {
-            if (is_a($this->_propDict["body"], "ItemBody")) {
+            if (is_a($this->_propDict["body"], "Microsoft\Graph\Model\ItemBody")) {
                 return $this->_propDict["body"];
             } else {
                 $this->_propDict["body"] = new ItemBody($this->_propDict["body"]);
@@ -190,7 +190,7 @@ class Message extends OutlookItem
     /**
     * Sets the body
     *
-    * @param string $val The body
+    * @param ItemBody $val The body
     *
     * @return Message
     */
@@ -235,7 +235,7 @@ class Message extends OutlookItem
     public function getImportance()
     {
         if (array_key_exists("importance", $this->_propDict)) {
-            if (is_a($this->_propDict["importance"], "Importance")) {
+            if (is_a($this->_propDict["importance"], "Microsoft\Graph\Model\Importance")) {
                 return $this->_propDict["importance"];
             } else {
                 $this->_propDict["importance"] = new Importance($this->_propDict["importance"]);
@@ -248,7 +248,7 @@ class Message extends OutlookItem
     /**
     * Sets the importance
     *
-    * @param string $val The importance
+    * @param Importance $val The importance
     *
     * @return Message
     */
@@ -293,7 +293,7 @@ class Message extends OutlookItem
     public function getSender()
     {
         if (array_key_exists("sender", $this->_propDict)) {
-            if (is_a($this->_propDict["sender"], "Recipient")) {
+            if (is_a($this->_propDict["sender"], "Microsoft\Graph\Model\Recipient")) {
                 return $this->_propDict["sender"];
             } else {
                 $this->_propDict["sender"] = new Recipient($this->_propDict["sender"]);
@@ -306,7 +306,7 @@ class Message extends OutlookItem
     /**
     * Sets the sender
     *
-    * @param string $val The sender
+    * @param Recipient $val The sender
     *
     * @return Message
     */
@@ -324,7 +324,7 @@ class Message extends OutlookItem
     public function getFrom()
     {
         if (array_key_exists("from", $this->_propDict)) {
-            if (is_a($this->_propDict["from"], "Recipient")) {
+            if (is_a($this->_propDict["from"], "Microsoft\Graph\Model\Recipient")) {
                 return $this->_propDict["from"];
             } else {
                 $this->_propDict["from"] = new Recipient($this->_propDict["from"]);
@@ -337,7 +337,7 @@ class Message extends OutlookItem
     /**
     * Sets the from
     *
-    * @param string $val The from
+    * @param Recipient $val The from
     *
     * @return Message
     */
@@ -347,11 +347,12 @@ class Message extends OutlookItem
         return $this;
     }
     
-    /** 
-    * Gets the toRecipients
-    *
-    * @return array The toRecipients
-    */
+
+     /** 
+     * Gets the toRecipients
+     *
+     * @return array The toRecipients
+     */
     public function getToRecipients()
     {
         if (array_key_exists("toRecipients", $this->_propDict)) {
@@ -364,7 +365,7 @@ class Message extends OutlookItem
     /** 
     * Sets the toRecipients
     *
-    * @param string $val The toRecipients
+    * @param Recipient $val The toRecipients
     *
     * @return Message
     */
@@ -374,11 +375,12 @@ class Message extends OutlookItem
         return $this;
     }
     
-    /** 
-    * Gets the ccRecipients
-    *
-    * @return array The ccRecipients
-    */
+
+     /** 
+     * Gets the ccRecipients
+     *
+     * @return array The ccRecipients
+     */
     public function getCcRecipients()
     {
         if (array_key_exists("ccRecipients", $this->_propDict)) {
@@ -391,7 +393,7 @@ class Message extends OutlookItem
     /** 
     * Sets the ccRecipients
     *
-    * @param string $val The ccRecipients
+    * @param Recipient $val The ccRecipients
     *
     * @return Message
     */
@@ -401,11 +403,12 @@ class Message extends OutlookItem
         return $this;
     }
     
-    /** 
-    * Gets the bccRecipients
-    *
-    * @return array The bccRecipients
-    */
+
+     /** 
+     * Gets the bccRecipients
+     *
+     * @return array The bccRecipients
+     */
     public function getBccRecipients()
     {
         if (array_key_exists("bccRecipients", $this->_propDict)) {
@@ -418,7 +421,7 @@ class Message extends OutlookItem
     /** 
     * Sets the bccRecipients
     *
-    * @param string $val The bccRecipients
+    * @param Recipient $val The bccRecipients
     *
     * @return Message
     */
@@ -428,11 +431,12 @@ class Message extends OutlookItem
         return $this;
     }
     
-    /** 
-    * Gets the replyTo
-    *
-    * @return array The replyTo
-    */
+
+     /** 
+     * Gets the replyTo
+     *
+     * @return array The replyTo
+     */
     public function getReplyTo()
     {
         if (array_key_exists("replyTo", $this->_propDict)) {
@@ -445,7 +449,7 @@ class Message extends OutlookItem
     /** 
     * Sets the replyTo
     *
-    * @param string $val The replyTo
+    * @param Recipient $val The replyTo
     *
     * @return Message
     */
@@ -490,7 +494,7 @@ class Message extends OutlookItem
     public function getUniqueBody()
     {
         if (array_key_exists("uniqueBody", $this->_propDict)) {
-            if (is_a($this->_propDict["uniqueBody"], "ItemBody")) {
+            if (is_a($this->_propDict["uniqueBody"], "Microsoft\Graph\Model\ItemBody")) {
                 return $this->_propDict["uniqueBody"];
             } else {
                 $this->_propDict["uniqueBody"] = new ItemBody($this->_propDict["uniqueBody"]);
@@ -503,7 +507,7 @@ class Message extends OutlookItem
     /**
     * Sets the uniqueBody
     *
-    * @param string $val The uniqueBody
+    * @param ItemBody $val The uniqueBody
     *
     * @return Message
     */
@@ -656,7 +660,7 @@ class Message extends OutlookItem
     public function getInferenceClassification()
     {
         if (array_key_exists("inferenceClassification", $this->_propDict)) {
-            if (is_a($this->_propDict["inferenceClassification"], "InferenceClassificationType")) {
+            if (is_a($this->_propDict["inferenceClassification"], "Microsoft\Graph\Model\InferenceClassificationType")) {
                 return $this->_propDict["inferenceClassification"];
             } else {
                 $this->_propDict["inferenceClassification"] = new InferenceClassificationType($this->_propDict["inferenceClassification"]);
@@ -669,7 +673,7 @@ class Message extends OutlookItem
     /**
     * Sets the inferenceClassification
     *
-    * @param string $val The inferenceClassification
+    * @param InferenceClassificationType $val The inferenceClassification
     *
     * @return Message
     */
@@ -679,11 +683,12 @@ class Message extends OutlookItem
         return $this;
     }
     
-    /** 
-    * Gets the attachments
-    *
-    * @return array The attachments
-    */
+
+     /** 
+     * Gets the attachments
+     *
+     * @return array The attachments
+     */
     public function getAttachments()
     {
         if (array_key_exists("attachments", $this->_propDict)) {
@@ -696,7 +701,7 @@ class Message extends OutlookItem
     /** 
     * Sets the attachments
     *
-    * @param string $val The attachments
+    * @param Attachment $val The attachments
     *
     * @return Message
     */
@@ -706,11 +711,12 @@ class Message extends OutlookItem
         return $this;
     }
     
-    /** 
-    * Gets the extensions
-    *
-    * @return array The extensions
-    */
+
+     /** 
+     * Gets the extensions
+     *
+     * @return array The extensions
+     */
     public function getExtensions()
     {
         if (array_key_exists("extensions", $this->_propDict)) {
@@ -723,7 +729,7 @@ class Message extends OutlookItem
     /** 
     * Sets the extensions
     *
-    * @param string $val The extensions
+    * @param Extension $val The extensions
     *
     * @return Message
     */
@@ -733,11 +739,12 @@ class Message extends OutlookItem
         return $this;
     }
     
-    /** 
-    * Gets the singleValueExtendedProperties
-    *
-    * @return array The singleValueExtendedProperties
-    */
+
+     /** 
+     * Gets the singleValueExtendedProperties
+     *
+     * @return array The singleValueExtendedProperties
+     */
     public function getSingleValueExtendedProperties()
     {
         if (array_key_exists("singleValueExtendedProperties", $this->_propDict)) {
@@ -750,7 +757,7 @@ class Message extends OutlookItem
     /** 
     * Sets the singleValueExtendedProperties
     *
-    * @param string $val The singleValueExtendedProperties
+    * @param SingleValueLegacyExtendedProperty $val The singleValueExtendedProperties
     *
     * @return Message
     */
@@ -760,11 +767,12 @@ class Message extends OutlookItem
         return $this;
     }
     
-    /** 
-    * Gets the multiValueExtendedProperties
-    *
-    * @return array The multiValueExtendedProperties
-    */
+
+     /** 
+     * Gets the multiValueExtendedProperties
+     *
+     * @return array The multiValueExtendedProperties
+     */
     public function getMultiValueExtendedProperties()
     {
         if (array_key_exists("multiValueExtendedProperties", $this->_propDict)) {
@@ -777,7 +785,7 @@ class Message extends OutlookItem
     /** 
     * Sets the multiValueExtendedProperties
     *
-    * @param string $val The multiValueExtendedProperties
+    * @param MultiValueLegacyExtendedProperty $val The multiValueExtendedProperties
     *
     * @return Message
     */

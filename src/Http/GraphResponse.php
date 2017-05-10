@@ -176,4 +176,20 @@ class GraphResponse
         }
         return null;
     }
+
+    /**
+    * Gets the delta link of a response object from OData
+    * If the deltaLink is null, there are more pages in the collection;
+    * use nextLink to obtain more
+    *
+    * @return string|null deltaLink
+    */
+    public function getDeltaLink()
+    {
+        if (array_key_exists("@odata.deltaLink", $this->getBody())) {
+            $deltaLink = $this->getBody()['@odata.deltaLink'];
+            return $deltaLink;
+        }
+        return null;
+    }
 }

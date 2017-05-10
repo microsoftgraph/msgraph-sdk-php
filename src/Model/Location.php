@@ -48,7 +48,7 @@ class Location extends Entity
     */
     public function setDisplayName($val)
     {
-        $this->_propDict["display_name"] = $val;
+        $this->_propDict["displayName"] = $val;
         return $this;
     }
     /**
@@ -74,7 +74,7 @@ class Location extends Entity
     */
     public function setLocationEmailAddress($val)
     {
-        $this->_propDict["location_email_address"] = $val;
+        $this->_propDict["locationEmailAddress"] = $val;
         return $this;
     }
 
@@ -86,7 +86,7 @@ class Location extends Entity
     public function getAddress()
     {
         if (array_key_exists("address", $this->_propDict)) {
-            if (is_a($this->_propDict["address"], "PhysicalAddress")) {
+            if (is_a($this->_propDict["address"], "Microsoft\Graph\Model\PhysicalAddress")) {
                 return $this->_propDict["address"];
             } else {
                 $this->_propDict["address"] = new PhysicalAddress($this->_propDict["address"]);

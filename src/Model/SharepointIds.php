@@ -48,7 +48,7 @@ class SharepointIds extends Entity
     */
     public function setListId($val)
     {
-        $this->_propDict["list_id"] = $val;
+        $this->_propDict["listId"] = $val;
         return $this;
     }
     /**
@@ -74,7 +74,7 @@ class SharepointIds extends Entity
     */
     public function setListItemId($val)
     {
-        $this->_propDict["list_item_id"] = $val;
+        $this->_propDict["listItemId"] = $val;
         return $this;
     }
     /**
@@ -100,7 +100,7 @@ class SharepointIds extends Entity
     */
     public function setListItemUniqueId($val)
     {
-        $this->_propDict["list_item_unique_id"] = $val;
+        $this->_propDict["listItemUniqueId"] = $val;
         return $this;
     }
     /**
@@ -126,7 +126,33 @@ class SharepointIds extends Entity
     */
     public function setSiteId($val)
     {
-        $this->_propDict["site_id"] = $val;
+        $this->_propDict["siteId"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the siteUrl
+    *
+    * @return string The siteUrl
+    */
+    public function getSiteUrl()
+    {
+        if (array_key_exists("siteUrl", $this->_propDict)) {
+            return $this->_propDict["siteUrl"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the siteUrl
+    *
+    * @param string $val The value of the siteUrl
+    *
+    * @return SharepointIds
+    */
+    public function setSiteUrl($val)
+    {
+        $this->_propDict["siteUrl"] = $val;
         return $this;
     }
     /**
@@ -152,7 +178,7 @@ class SharepointIds extends Entity
     */
     public function setWebId($val)
     {
-        $this->_propDict["web_id"] = $val;
+        $this->_propDict["webId"] = $val;
         return $this;
     }
 }

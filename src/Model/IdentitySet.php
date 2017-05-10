@@ -34,7 +34,7 @@ class IdentitySet extends Entity
     public function getApplication()
     {
         if (array_key_exists("application", $this->_propDict)) {
-            if (is_a($this->_propDict["application"], "Identity")) {
+            if (is_a($this->_propDict["application"], "Microsoft\Graph\Model\Identity")) {
                 return $this->_propDict["application"];
             } else {
                 $this->_propDict["application"] = new Identity($this->_propDict["application"]);
@@ -65,7 +65,7 @@ class IdentitySet extends Entity
     public function getDevice()
     {
         if (array_key_exists("device", $this->_propDict)) {
-            if (is_a($this->_propDict["device"], "Identity")) {
+            if (is_a($this->_propDict["device"], "Microsoft\Graph\Model\Identity")) {
                 return $this->_propDict["device"];
             } else {
                 $this->_propDict["device"] = new Identity($this->_propDict["device"]);
@@ -96,7 +96,7 @@ class IdentitySet extends Entity
     public function getUser()
     {
         if (array_key_exists("user", $this->_propDict)) {
-            if (is_a($this->_propDict["user"], "Identity")) {
+            if (is_a($this->_propDict["user"], "Microsoft\Graph\Model\Identity")) {
                 return $this->_propDict["user"];
             } else {
                 $this->_propDict["user"] = new Identity($this->_propDict["user"]);

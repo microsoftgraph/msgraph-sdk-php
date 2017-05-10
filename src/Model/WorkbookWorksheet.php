@@ -107,11 +107,12 @@ class WorkbookWorksheet extends Entity
         return $this;
     }
     
-    /** 
-    * Gets the charts
-    *
-    * @return array The charts
-    */
+
+     /** 
+     * Gets the charts
+     *
+     * @return array The charts
+     */
     public function getCharts()
     {
         if (array_key_exists("charts", $this->_propDict)) {
@@ -124,7 +125,7 @@ class WorkbookWorksheet extends Entity
     /** 
     * Sets the charts
     *
-    * @param string $val The charts
+    * @param WorkbookChart $val The charts
     *
     * @return WorkbookWorksheet
     */
@@ -134,11 +135,40 @@ class WorkbookWorksheet extends Entity
         return $this;
     }
     
+
+     /** 
+     * Gets the names
+     *
+     * @return array The names
+     */
+    public function getNames()
+    {
+        if (array_key_exists("names", $this->_propDict)) {
+           return $this->_propDict["names"];
+        } else {
+            return null;
+        }
+    }
+    
     /** 
-    * Gets the pivotTables
+    * Sets the names
     *
-    * @return array The pivotTables
+    * @param WorkbookNamedItem $val The names
+    *
+    * @return WorkbookWorksheet
     */
+    public function setNames($val)
+    {
+		$this->_propDict["names"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the pivotTables
+     *
+     * @return array The pivotTables
+     */
     public function getPivotTables()
     {
         if (array_key_exists("pivotTables", $this->_propDict)) {
@@ -151,7 +181,7 @@ class WorkbookWorksheet extends Entity
     /** 
     * Sets the pivotTables
     *
-    * @param string $val The pivotTables
+    * @param WorkbookPivotTable $val The pivotTables
     *
     * @return WorkbookWorksheet
     */
@@ -169,7 +199,7 @@ class WorkbookWorksheet extends Entity
     public function getProtection()
     {
         if (array_key_exists("protection", $this->_propDict)) {
-            if (is_a($this->_propDict["protection"], "WorkbookWorksheetProtection")) {
+            if (is_a($this->_propDict["protection"], "Microsoft\Graph\Model\WorkbookWorksheetProtection")) {
                 return $this->_propDict["protection"];
             } else {
                 $this->_propDict["protection"] = new WorkbookWorksheetProtection($this->_propDict["protection"]);
@@ -182,7 +212,7 @@ class WorkbookWorksheet extends Entity
     /**
     * Sets the protection
     *
-    * @param string $val The protection
+    * @param WorkbookWorksheetProtection $val The protection
     *
     * @return WorkbookWorksheet
     */
@@ -192,11 +222,12 @@ class WorkbookWorksheet extends Entity
         return $this;
     }
     
-    /** 
-    * Gets the tables
-    *
-    * @return array The tables
-    */
+
+     /** 
+     * Gets the tables
+     *
+     * @return array The tables
+     */
     public function getTables()
     {
         if (array_key_exists("tables", $this->_propDict)) {
@@ -209,7 +240,7 @@ class WorkbookWorksheet extends Entity
     /** 
     * Sets the tables
     *
-    * @param string $val The tables
+    * @param WorkbookTable $val The tables
     *
     * @return WorkbookWorksheet
     */

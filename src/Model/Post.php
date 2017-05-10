@@ -34,7 +34,7 @@ class Post extends OutlookItem
     public function getBody()
     {
         if (array_key_exists("body", $this->_propDict)) {
-            if (is_a($this->_propDict["body"], "ItemBody")) {
+            if (is_a($this->_propDict["body"], "Microsoft\Graph\Model\ItemBody")) {
                 return $this->_propDict["body"];
             } else {
                 $this->_propDict["body"] = new ItemBody($this->_propDict["body"]);
@@ -47,7 +47,7 @@ class Post extends OutlookItem
     /**
     * Sets the body
     *
-    * @param string $val The body
+    * @param ItemBody $val The body
     *
     * @return Post
     */
@@ -78,7 +78,7 @@ class Post extends OutlookItem
     /**
     * Sets the receivedDateTime
     *
-    * @param string $val The receivedDateTime
+    * @param \DateTime $val The receivedDateTime
     *
     * @return Post
     */
@@ -123,7 +123,7 @@ class Post extends OutlookItem
     public function getFrom()
     {
         if (array_key_exists("from", $this->_propDict)) {
-            if (is_a($this->_propDict["from"], "Recipient")) {
+            if (is_a($this->_propDict["from"], "Microsoft\Graph\Model\Recipient")) {
                 return $this->_propDict["from"];
             } else {
                 $this->_propDict["from"] = new Recipient($this->_propDict["from"]);
@@ -136,7 +136,7 @@ class Post extends OutlookItem
     /**
     * Sets the from
     *
-    * @param string $val The from
+    * @param Recipient $val The from
     *
     * @return Post
     */
@@ -154,7 +154,7 @@ class Post extends OutlookItem
     public function getSender()
     {
         if (array_key_exists("sender", $this->_propDict)) {
-            if (is_a($this->_propDict["sender"], "Recipient")) {
+            if (is_a($this->_propDict["sender"], "Microsoft\Graph\Model\Recipient")) {
                 return $this->_propDict["sender"];
             } else {
                 $this->_propDict["sender"] = new Recipient($this->_propDict["sender"]);
@@ -167,7 +167,7 @@ class Post extends OutlookItem
     /**
     * Sets the sender
     *
-    * @param string $val The sender
+    * @param Recipient $val The sender
     *
     * @return Post
     */
@@ -204,11 +204,12 @@ class Post extends OutlookItem
         return $this;
     }
     
-    /** 
-    * Gets the newParticipants
-    *
-    * @return array The newParticipants
-    */
+
+     /** 
+     * Gets the newParticipants
+     *
+     * @return array The newParticipants
+     */
     public function getNewParticipants()
     {
         if (array_key_exists("newParticipants", $this->_propDict)) {
@@ -221,7 +222,7 @@ class Post extends OutlookItem
     /** 
     * Sets the newParticipants
     *
-    * @param string $val The newParticipants
+    * @param Recipient $val The newParticipants
     *
     * @return Post
     */
@@ -258,11 +259,12 @@ class Post extends OutlookItem
         return $this;
     }
     
-    /** 
-    * Gets the extensions
-    *
-    * @return array The extensions
-    */
+
+     /** 
+     * Gets the extensions
+     *
+     * @return array The extensions
+     */
     public function getExtensions()
     {
         if (array_key_exists("extensions", $this->_propDict)) {
@@ -275,7 +277,7 @@ class Post extends OutlookItem
     /** 
     * Sets the extensions
     *
-    * @param string $val The extensions
+    * @param Extension $val The extensions
     *
     * @return Post
     */
@@ -293,7 +295,7 @@ class Post extends OutlookItem
     public function getInReplyTo()
     {
         if (array_key_exists("inReplyTo", $this->_propDict)) {
-            if (is_a($this->_propDict["inReplyTo"], "Post")) {
+            if (is_a($this->_propDict["inReplyTo"], "Microsoft\Graph\Model\Post")) {
                 return $this->_propDict["inReplyTo"];
             } else {
                 $this->_propDict["inReplyTo"] = new Post($this->_propDict["inReplyTo"]);
@@ -306,7 +308,7 @@ class Post extends OutlookItem
     /**
     * Sets the inReplyTo
     *
-    * @param string $val The inReplyTo
+    * @param Post $val The inReplyTo
     *
     * @return Post
     */
@@ -316,11 +318,12 @@ class Post extends OutlookItem
         return $this;
     }
     
-    /** 
-    * Gets the attachments
-    *
-    * @return array The attachments
-    */
+
+     /** 
+     * Gets the attachments
+     *
+     * @return array The attachments
+     */
     public function getAttachments()
     {
         if (array_key_exists("attachments", $this->_propDict)) {
@@ -333,7 +336,7 @@ class Post extends OutlookItem
     /** 
     * Sets the attachments
     *
-    * @param string $val The attachments
+    * @param Attachment $val The attachments
     *
     * @return Post
     */
@@ -343,11 +346,12 @@ class Post extends OutlookItem
         return $this;
     }
     
-    /** 
-    * Gets the singleValueExtendedProperties
-    *
-    * @return array The singleValueExtendedProperties
-    */
+
+     /** 
+     * Gets the singleValueExtendedProperties
+     *
+     * @return array The singleValueExtendedProperties
+     */
     public function getSingleValueExtendedProperties()
     {
         if (array_key_exists("singleValueExtendedProperties", $this->_propDict)) {
@@ -360,7 +364,7 @@ class Post extends OutlookItem
     /** 
     * Sets the singleValueExtendedProperties
     *
-    * @param string $val The singleValueExtendedProperties
+    * @param SingleValueLegacyExtendedProperty $val The singleValueExtendedProperties
     *
     * @return Post
     */
@@ -370,11 +374,12 @@ class Post extends OutlookItem
         return $this;
     }
     
-    /** 
-    * Gets the multiValueExtendedProperties
-    *
-    * @return array The multiValueExtendedProperties
-    */
+
+     /** 
+     * Gets the multiValueExtendedProperties
+     *
+     * @return array The multiValueExtendedProperties
+     */
     public function getMultiValueExtendedProperties()
     {
         if (array_key_exists("multiValueExtendedProperties", $this->_propDict)) {
@@ -387,7 +392,7 @@ class Post extends OutlookItem
     /** 
     * Sets the multiValueExtendedProperties
     *
-    * @param string $val The multiValueExtendedProperties
+    * @param MultiValueLegacyExtendedProperty $val The multiValueExtendedProperties
     *
     * @return Post
     */

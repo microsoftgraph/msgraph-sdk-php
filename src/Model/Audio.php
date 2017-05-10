@@ -74,7 +74,7 @@ class Audio extends Entity
     */
     public function setAlbumArtist($val)
     {
-        $this->_propDict["album_artist"] = $val;
+        $this->_propDict["albumArtist"] = $val;
         return $this;
     }
     /**
@@ -230,7 +230,7 @@ class Audio extends Entity
     */
     public function setDiscCount($val)
     {
-        $this->_propDict["disc_count"] = $val;
+        $this->_propDict["discCount"] = $val;
         return $this;
     }
     /**
@@ -308,7 +308,7 @@ class Audio extends Entity
     */
     public function setHasDrm($val)
     {
-        $this->_propDict["has_drm"] = $val;
+        $this->_propDict["hasDrm"] = $val;
         return $this;
     }
     /**
@@ -334,7 +334,7 @@ class Audio extends Entity
     */
     public function setIsVariableBitrate($val)
     {
-        $this->_propDict["is_variable_bitrate"] = $val;
+        $this->_propDict["isVariableBitrate"] = $val;
         return $this;
     }
     /**
@@ -412,7 +412,7 @@ class Audio extends Entity
     */
     public function setTrackCount($val)
     {
-        $this->_propDict["track_count"] = $val;
+        $this->_propDict["trackCount"] = $val;
         return $this;
     }
     /**

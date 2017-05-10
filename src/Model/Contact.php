@@ -74,7 +74,7 @@ class Contact extends OutlookItem
     /**
     * Sets the birthday
     *
-    * @param string $val The birthday
+    * @param \DateTime $val The birthday
     *
     * @return Contact
     */
@@ -408,11 +408,12 @@ class Contact extends OutlookItem
         return $this;
     }
     
-    /** 
-    * Gets the emailAddresses
-    *
-    * @return array The emailAddresses
-    */
+
+     /** 
+     * Gets the emailAddresses
+     *
+     * @return array The emailAddresses
+     */
     public function getEmailAddresses()
     {
         if (array_key_exists("emailAddresses", $this->_propDict)) {
@@ -425,7 +426,7 @@ class Contact extends OutlookItem
     /** 
     * Sets the emailAddresses
     *
-    * @param string $val The emailAddresses
+    * @param EmailAddress $val The emailAddresses
     *
     * @return Contact
     */
@@ -767,7 +768,7 @@ class Contact extends OutlookItem
     public function getHomeAddress()
     {
         if (array_key_exists("homeAddress", $this->_propDict)) {
-            if (is_a($this->_propDict["homeAddress"], "PhysicalAddress")) {
+            if (is_a($this->_propDict["homeAddress"], "Microsoft\Graph\Model\PhysicalAddress")) {
                 return $this->_propDict["homeAddress"];
             } else {
                 $this->_propDict["homeAddress"] = new PhysicalAddress($this->_propDict["homeAddress"]);
@@ -780,7 +781,7 @@ class Contact extends OutlookItem
     /**
     * Sets the homeAddress
     *
-    * @param string $val The homeAddress
+    * @param PhysicalAddress $val The homeAddress
     *
     * @return Contact
     */
@@ -798,7 +799,7 @@ class Contact extends OutlookItem
     public function getBusinessAddress()
     {
         if (array_key_exists("businessAddress", $this->_propDict)) {
-            if (is_a($this->_propDict["businessAddress"], "PhysicalAddress")) {
+            if (is_a($this->_propDict["businessAddress"], "Microsoft\Graph\Model\PhysicalAddress")) {
                 return $this->_propDict["businessAddress"];
             } else {
                 $this->_propDict["businessAddress"] = new PhysicalAddress($this->_propDict["businessAddress"]);
@@ -811,7 +812,7 @@ class Contact extends OutlookItem
     /**
     * Sets the businessAddress
     *
-    * @param string $val The businessAddress
+    * @param PhysicalAddress $val The businessAddress
     *
     * @return Contact
     */
@@ -829,7 +830,7 @@ class Contact extends OutlookItem
     public function getOtherAddress()
     {
         if (array_key_exists("otherAddress", $this->_propDict)) {
-            if (is_a($this->_propDict["otherAddress"], "PhysicalAddress")) {
+            if (is_a($this->_propDict["otherAddress"], "Microsoft\Graph\Model\PhysicalAddress")) {
                 return $this->_propDict["otherAddress"];
             } else {
                 $this->_propDict["otherAddress"] = new PhysicalAddress($this->_propDict["otherAddress"]);
@@ -842,7 +843,7 @@ class Contact extends OutlookItem
     /**
     * Sets the otherAddress
     *
-    * @param string $val The otherAddress
+    * @param PhysicalAddress $val The otherAddress
     *
     * @return Contact
     */
@@ -933,11 +934,12 @@ class Contact extends OutlookItem
         return $this;
     }
     
-    /** 
-    * Gets the extensions
-    *
-    * @return array The extensions
-    */
+
+     /** 
+     * Gets the extensions
+     *
+     * @return array The extensions
+     */
     public function getExtensions()
     {
         if (array_key_exists("extensions", $this->_propDict)) {
@@ -950,7 +952,7 @@ class Contact extends OutlookItem
     /** 
     * Sets the extensions
     *
-    * @param string $val The extensions
+    * @param Extension $val The extensions
     *
     * @return Contact
     */
@@ -960,11 +962,12 @@ class Contact extends OutlookItem
         return $this;
     }
     
-    /** 
-    * Gets the singleValueExtendedProperties
-    *
-    * @return array The singleValueExtendedProperties
-    */
+
+     /** 
+     * Gets the singleValueExtendedProperties
+     *
+     * @return array The singleValueExtendedProperties
+     */
     public function getSingleValueExtendedProperties()
     {
         if (array_key_exists("singleValueExtendedProperties", $this->_propDict)) {
@@ -977,7 +980,7 @@ class Contact extends OutlookItem
     /** 
     * Sets the singleValueExtendedProperties
     *
-    * @param string $val The singleValueExtendedProperties
+    * @param SingleValueLegacyExtendedProperty $val The singleValueExtendedProperties
     *
     * @return Contact
     */
@@ -987,11 +990,12 @@ class Contact extends OutlookItem
         return $this;
     }
     
-    /** 
-    * Gets the multiValueExtendedProperties
-    *
-    * @return array The multiValueExtendedProperties
-    */
+
+     /** 
+     * Gets the multiValueExtendedProperties
+     *
+     * @return array The multiValueExtendedProperties
+     */
     public function getMultiValueExtendedProperties()
     {
         if (array_key_exists("multiValueExtendedProperties", $this->_propDict)) {
@@ -1004,7 +1008,7 @@ class Contact extends OutlookItem
     /** 
     * Sets the multiValueExtendedProperties
     *
-    * @param string $val The multiValueExtendedProperties
+    * @param MultiValueLegacyExtendedProperty $val The multiValueExtendedProperties
     *
     * @return Contact
     */
@@ -1022,7 +1026,7 @@ class Contact extends OutlookItem
     public function getPhoto()
     {
         if (array_key_exists("photo", $this->_propDict)) {
-            if (is_a($this->_propDict["photo"], "ProfilePhoto")) {
+            if (is_a($this->_propDict["photo"], "Microsoft\Graph\Model\ProfilePhoto")) {
                 return $this->_propDict["photo"];
             } else {
                 $this->_propDict["photo"] = new ProfilePhoto($this->_propDict["photo"]);
@@ -1035,7 +1039,7 @@ class Contact extends OutlookItem
     /**
     * Sets the photo
     *
-    * @param string $val The photo
+    * @param ProfilePhoto $val The photo
     *
     * @return Contact
     */

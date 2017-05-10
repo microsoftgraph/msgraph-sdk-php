@@ -31,9 +31,9 @@ class WeekIndex extends Enum
     /**
     * The Enum WeekIndex
     */
-    const FIRST = "0";
-    const SECOND = "1";
-    const THIRD = "2";
-    const FOURTH = "3";
-    const LAST = "4";
+    const FIRST = "first";
+    const SECOND = "second";
+    const THIRD = "third";
+    const FOURTH = "fourth";
+    const LAST = "last";
 }

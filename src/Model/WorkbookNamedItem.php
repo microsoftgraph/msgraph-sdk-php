@@ -27,6 +27,33 @@ namespace Microsoft\Graph\Model;
 class WorkbookNamedItem extends Entity
 {
     /**
+    * Gets the comment
+    *
+    * @return string The comment
+    */
+    public function getComment()
+    {
+        if (array_key_exists("comment", $this->_propDict)) {
+            return $this->_propDict["comment"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the comment
+    *
+    * @param string $val The comment
+    *
+    * @return WorkbookNamedItem
+    */
+    public function setComment($val)
+    {
+        $this->_propDict["comment"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the name
     *
     * @return string The name
@@ -50,6 +77,33 @@ class WorkbookNamedItem extends Entity
     public function setName($val)
     {
         $this->_propDict["name"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the scope
+    *
+    * @return string The scope
+    */
+    public function getScope()
+    {
+        if (array_key_exists("scope", $this->_propDict)) {
+            return $this->_propDict["scope"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the scope
+    *
+    * @param string $val The scope
+    *
+    * @return WorkbookNamedItem
+    */
+    public function setScope($val)
+    {
+        $this->_propDict["scope"] = $val;
         return $this;
     }
     
@@ -131,6 +185,37 @@ class WorkbookNamedItem extends Entity
     public function setVisible($val)
     {
         $this->_propDict["visible"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the worksheet
+    *
+    * @return WorkbookWorksheet The worksheet
+    */
+    public function getWorksheet()
+    {
+        if (array_key_exists("worksheet", $this->_propDict)) {
+            if (is_a($this->_propDict["worksheet"], "Microsoft\Graph\Model\WorkbookWorksheet")) {
+                return $this->_propDict["worksheet"];
+            } else {
+                $this->_propDict["worksheet"] = new WorkbookWorksheet($this->_propDict["worksheet"]);
+                return $this->_propDict["worksheet"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the worksheet
+    *
+    * @param WorkbookWorksheet $val The worksheet
+    *
+    * @return WorkbookNamedItem
+    */
+    public function setWorksheet($val)
+    {
+        $this->_propDict["worksheet"] = $val;
         return $this;
     }
     

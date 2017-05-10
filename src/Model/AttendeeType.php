@@ -31,7 +31,7 @@ class AttendeeType extends Enum
     /**
     * The Enum AttendeeType
     */
-    const REQUIRED = "0";
-    const OPTIONAL = "1";
-    const RESOURCE = "2";
+    const REQUIRED = "required";
+    const OPTIONAL = "optional";
+    const RESOURCE = "resource";
 }

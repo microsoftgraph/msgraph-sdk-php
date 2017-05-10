@@ -88,7 +88,7 @@ class SubscribedSku extends Entity
     public function getPrepaidUnits()
     {
         if (array_key_exists("prepaidUnits", $this->_propDict)) {
-            if (is_a($this->_propDict["prepaidUnits"], "LicenseUnitsDetail")) {
+            if (is_a($this->_propDict["prepaidUnits"], "Microsoft\Graph\Model\LicenseUnitsDetail")) {
                 return $this->_propDict["prepaidUnits"];
             } else {
                 $this->_propDict["prepaidUnits"] = new LicenseUnitsDetail($this->_propDict["prepaidUnits"]);
@@ -101,7 +101,7 @@ class SubscribedSku extends Entity
     /**
     * Sets the prepaidUnits
     *
-    * @param string $val The prepaidUnits
+    * @param LicenseUnitsDetail $val The prepaidUnits
     *
     * @return SubscribedSku
     */
@@ -111,11 +111,12 @@ class SubscribedSku extends Entity
         return $this;
     }
     
-    /** 
-    * Gets the servicePlans
-    *
-    * @return array The servicePlans
-    */
+
+     /** 
+     * Gets the servicePlans
+     *
+     * @return array The servicePlans
+     */
     public function getServicePlans()
     {
         if (array_key_exists("servicePlans", $this->_propDict)) {
@@ -128,7 +129,7 @@ class SubscribedSku extends Entity
     /** 
     * Sets the servicePlans
     *
-    * @param string $val The servicePlans
+    * @param ServicePlanInfo $val The servicePlans
     *
     * @return SubscribedSku
     */

@@ -269,11 +269,12 @@ class WorkbookTable extends Entity
         return $this;
     }
     
-    /** 
-    * Gets the columns
-    *
-    * @return array The columns
-    */
+
+     /** 
+     * Gets the columns
+     *
+     * @return array The columns
+     */
     public function getColumns()
     {
         if (array_key_exists("columns", $this->_propDict)) {
@@ -286,7 +287,7 @@ class WorkbookTable extends Entity
     /** 
     * Sets the columns
     *
-    * @param string $val The columns
+    * @param WorkbookTableColumn $val The columns
     *
     * @return WorkbookTable
     */
@@ -296,11 +297,12 @@ class WorkbookTable extends Entity
         return $this;
     }
     
-    /** 
-    * Gets the rows
-    *
-    * @return array The rows
-    */
+
+     /** 
+     * Gets the rows
+     *
+     * @return array The rows
+     */
     public function getRows()
     {
         if (array_key_exists("rows", $this->_propDict)) {
@@ -313,7 +315,7 @@ class WorkbookTable extends Entity
     /** 
     * Sets the rows
     *
-    * @param string $val The rows
+    * @param WorkbookTableRow $val The rows
     *
     * @return WorkbookTable
     */
@@ -331,7 +333,7 @@ class WorkbookTable extends Entity
     public function getSort()
     {
         if (array_key_exists("sort", $this->_propDict)) {
-            if (is_a($this->_propDict["sort"], "WorkbookTableSort")) {
+            if (is_a($this->_propDict["sort"], "Microsoft\Graph\Model\WorkbookTableSort")) {
                 return $this->_propDict["sort"];
             } else {
                 $this->_propDict["sort"] = new WorkbookTableSort($this->_propDict["sort"]);
@@ -344,7 +346,7 @@ class WorkbookTable extends Entity
     /**
     * Sets the sort
     *
-    * @param string $val The sort
+    * @param WorkbookTableSort $val The sort
     *
     * @return WorkbookTable
     */
@@ -362,7 +364,7 @@ class WorkbookTable extends Entity
     public function getWorksheet()
     {
         if (array_key_exists("worksheet", $this->_propDict)) {
-            if (is_a($this->_propDict["worksheet"], "WorkbookWorksheet")) {
+            if (is_a($this->_propDict["worksheet"], "Microsoft\Graph\Model\WorkbookWorksheet")) {
                 return $this->_propDict["worksheet"];
             } else {
                 $this->_propDict["worksheet"] = new WorkbookWorksheet($this->_propDict["worksheet"]);
@@ -375,7 +377,7 @@ class WorkbookTable extends Entity
     /**
     * Sets the worksheet
     *
-    * @param string $val The worksheet
+    * @param WorkbookWorksheet $val The worksheet
     *
     * @return WorkbookTable
     */

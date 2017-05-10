@@ -34,7 +34,7 @@ class Workbook extends Entity
     public function getApplication()
     {
         if (array_key_exists("application", $this->_propDict)) {
-            if (is_a($this->_propDict["application"], "WorkbookApplication")) {
+            if (is_a($this->_propDict["application"], "Microsoft\Graph\Model\WorkbookApplication")) {
                 return $this->_propDict["application"];
             } else {
                 $this->_propDict["application"] = new WorkbookApplication($this->_propDict["application"]);
@@ -47,7 +47,7 @@ class Workbook extends Entity
     /**
     * Sets the application
     *
-    * @param string $val The application
+    * @param WorkbookApplication $val The application
     *
     * @return Workbook
     */
@@ -57,11 +57,12 @@ class Workbook extends Entity
         return $this;
     }
     
-    /** 
-    * Gets the names
-    *
-    * @return array The names
-    */
+
+     /** 
+     * Gets the names
+     *
+     * @return array The names
+     */
     public function getNames()
     {
         if (array_key_exists("names", $this->_propDict)) {
@@ -74,7 +75,7 @@ class Workbook extends Entity
     /** 
     * Sets the names
     *
-    * @param string $val The names
+    * @param WorkbookNamedItem $val The names
     *
     * @return Workbook
     */
@@ -84,11 +85,12 @@ class Workbook extends Entity
         return $this;
     }
     
-    /** 
-    * Gets the tables
-    *
-    * @return array The tables
-    */
+
+     /** 
+     * Gets the tables
+     *
+     * @return array The tables
+     */
     public function getTables()
     {
         if (array_key_exists("tables", $this->_propDict)) {
@@ -101,7 +103,7 @@ class Workbook extends Entity
     /** 
     * Sets the tables
     *
-    * @param string $val The tables
+    * @param WorkbookTable $val The tables
     *
     * @return Workbook
     */
@@ -111,11 +113,12 @@ class Workbook extends Entity
         return $this;
     }
     
-    /** 
-    * Gets the worksheets
-    *
-    * @return array The worksheets
-    */
+
+     /** 
+     * Gets the worksheets
+     *
+     * @return array The worksheets
+     */
     public function getWorksheets()
     {
         if (array_key_exists("worksheets", $this->_propDict)) {
@@ -128,7 +131,7 @@ class Workbook extends Entity
     /** 
     * Sets the worksheets
     *
-    * @param string $val The worksheets
+    * @param WorkbookWorksheet $val The worksheets
     *
     * @return Workbook
     */
@@ -146,7 +149,7 @@ class Workbook extends Entity
     public function getFunctions()
     {
         if (array_key_exists("functions", $this->_propDict)) {
-            if (is_a($this->_propDict["functions"], "WorkbookFunctions")) {
+            if (is_a($this->_propDict["functions"], "Microsoft\Graph\Model\WorkbookFunctions")) {
                 return $this->_propDict["functions"];
             } else {
                 $this->_propDict["functions"] = new WorkbookFunctions($this->_propDict["functions"]);
@@ -159,7 +162,7 @@ class Workbook extends Entity
     /**
     * Sets the functions
     *
-    * @param string $val The functions
+    * @param WorkbookFunctions $val The functions
     *
     * @return Workbook
     */

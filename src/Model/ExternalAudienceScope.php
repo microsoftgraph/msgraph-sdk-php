@@ -31,7 +31,7 @@ class ExternalAudienceScope extends Enum
     /**
     * The Enum ExternalAudienceScope
     */
-    const NONE = "0";
-    const CONTACTS_ONLY = "1";
-    const ALL = "2";
+    const NONE = "none";
+    const CONTACTS_ONLY = "contactsOnly";
+    const ALL = "all";
 }

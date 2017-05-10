@@ -323,11 +323,12 @@ class WorkbookRangeView extends Entity
         return $this;
     }
     
-    /** 
-    * Gets the rows
-    *
-    * @return array The rows
-    */
+
+     /** 
+     * Gets the rows
+     *
+     * @return array The rows
+     */
     public function getRows()
     {
         if (array_key_exists("rows", $this->_propDict)) {
@@ -340,7 +341,7 @@ class WorkbookRangeView extends Entity
     /** 
     * Sets the rows
     *
-    * @param string $val The rows
+    * @param WorkbookRangeView $val The rows
     *
     * @return WorkbookRangeView
     */

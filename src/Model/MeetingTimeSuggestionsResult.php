@@ -34,7 +34,7 @@ class MeetingTimeSuggestionsResult extends Entity
     public function getMeetingTimeSuggestions()
     {
         if (array_key_exists("meetingTimeSuggestions", $this->_propDict)) {
-            if (is_a($this->_propDict["meetingTimeSuggestions"], "MeetingTimeSuggestion")) {
+            if (is_a($this->_propDict["meetingTimeSuggestions"], "Microsoft\Graph\Model\MeetingTimeSuggestion")) {
                 return $this->_propDict["meetingTimeSuggestions"];
             } else {
                 $this->_propDict["meetingTimeSuggestions"] = new MeetingTimeSuggestion($this->_propDict["meetingTimeSuggestions"]);
@@ -79,7 +79,7 @@ class MeetingTimeSuggestionsResult extends Entity
     */
     public function setEmptySuggestionsReason($val)
     {
-        $this->_propDict["empty_suggestions_reason"] = $val;
+        $this->_propDict["emptySuggestionsReason"] = $val;
         return $this;
     }
 }

@@ -34,7 +34,7 @@ class RecurrenceRange extends Entity
     public function getType()
     {
         if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "RecurrenceRangeType")) {
+            if (is_a($this->_propDict["type"], "Microsoft\Graph\Model\RecurrenceRangeType")) {
                 return $this->_propDict["type"];
             } else {
                 $this->_propDict["type"] = new RecurrenceRangeType($this->_propDict["type"]);
@@ -65,7 +65,7 @@ class RecurrenceRange extends Entity
     public function getStartDate()
     {
         if (array_key_exists("startDate", $this->_propDict)) {
-            if (is_a($this->_propDict["startDate"], "\DateTime")) {
+            if (is_a($this->_propDict["startDate"], "Microsoft\Graph\Model\\DateTime")) {
                 return $this->_propDict["startDate"];
             } else {
                 $this->_propDict["startDate"] = new \DateTime($this->_propDict["startDate"]);
@@ -96,7 +96,7 @@ class RecurrenceRange extends Entity
     public function getEndDate()
     {
         if (array_key_exists("endDate", $this->_propDict)) {
-            if (is_a($this->_propDict["endDate"], "\DateTime")) {
+            if (is_a($this->_propDict["endDate"], "Microsoft\Graph\Model\\DateTime")) {
                 return $this->_propDict["endDate"];
             } else {
                 $this->_propDict["endDate"] = new \DateTime($this->_propDict["endDate"]);
@@ -141,7 +141,7 @@ class RecurrenceRange extends Entity
     */
     public function setRecurrenceTimeZone($val)
     {
-        $this->_propDict["recurrence_time_zone"] = $val;
+        $this->_propDict["recurrenceTimeZone"] = $val;
         return $this;
     }
     /**
@@ -167,7 +167,7 @@ class RecurrenceRange extends Entity
     */
     public function setNumberOfOccurrences($val)
     {
-        $this->_propDict["number_of_occurrences"] = $val;
+        $this->_propDict["numberOfOccurrences"] = $val;
         return $this;
     }
 }

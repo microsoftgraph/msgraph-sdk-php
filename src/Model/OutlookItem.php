@@ -47,7 +47,7 @@ class OutlookItem extends Entity
     /**
     * Sets the createdDateTime
     *
-    * @param string $val The createdDateTime
+    * @param \DateTime $val The createdDateTime
     *
     * @return OutlookItem
     */
@@ -78,7 +78,7 @@ class OutlookItem extends Entity
     /**
     * Sets the lastModifiedDateTime
     *
-    * @param string $val The lastModifiedDateTime
+    * @param \DateTime $val The lastModifiedDateTime
     *
     * @return OutlookItem
     */

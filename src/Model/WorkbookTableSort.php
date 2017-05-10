@@ -26,11 +26,12 @@ namespace Microsoft\Graph\Model;
 */
 class WorkbookTableSort extends Entity
 {
-    /** 
-    * Gets the fields
-    *
-    * @return array The fields
-    */
+
+     /** 
+     * Gets the fields
+     *
+     * @return array The fields
+     */
     public function getFields()
     {
         if (array_key_exists("fields", $this->_propDict)) {
@@ -43,7 +44,7 @@ class WorkbookTableSort extends Entity
     /** 
     * Sets the fields
     *
-    * @param string $val The fields
+    * @param WorkbookSortField $val The fields
     *
     * @return WorkbookTableSort
     */

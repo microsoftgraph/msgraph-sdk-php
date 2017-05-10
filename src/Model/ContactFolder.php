@@ -80,11 +80,12 @@ class ContactFolder extends Entity
         return $this;
     }
     
-    /** 
-    * Gets the contacts
-    *
-    * @return array The contacts
-    */
+
+     /** 
+     * Gets the contacts
+     *
+     * @return array The contacts
+     */
     public function getContacts()
     {
         if (array_key_exists("contacts", $this->_propDict)) {
@@ -97,7 +98,7 @@ class ContactFolder extends Entity
     /** 
     * Sets the contacts
     *
-    * @param string $val The contacts
+    * @param Contact $val The contacts
     *
     * @return ContactFolder
     */
@@ -107,11 +108,12 @@ class ContactFolder extends Entity
         return $this;
     }
     
-    /** 
-    * Gets the childFolders
-    *
-    * @return array The childFolders
-    */
+
+     /** 
+     * Gets the childFolders
+     *
+     * @return array The childFolders
+     */
     public function getChildFolders()
     {
         if (array_key_exists("childFolders", $this->_propDict)) {
@@ -124,7 +126,7 @@ class ContactFolder extends Entity
     /** 
     * Sets the childFolders
     *
-    * @param string $val The childFolders
+    * @param ContactFolder $val The childFolders
     *
     * @return ContactFolder
     */
@@ -134,11 +136,12 @@ class ContactFolder extends Entity
         return $this;
     }
     
-    /** 
-    * Gets the singleValueExtendedProperties
-    *
-    * @return array The singleValueExtendedProperties
-    */
+
+     /** 
+     * Gets the singleValueExtendedProperties
+     *
+     * @return array The singleValueExtendedProperties
+     */
     public function getSingleValueExtendedProperties()
     {
         if (array_key_exists("singleValueExtendedProperties", $this->_propDict)) {
@@ -151,7 +154,7 @@ class ContactFolder extends Entity
     /** 
     * Sets the singleValueExtendedProperties
     *
-    * @param string $val The singleValueExtendedProperties
+    * @param SingleValueLegacyExtendedProperty $val The singleValueExtendedProperties
     *
     * @return ContactFolder
     */
@@ -161,11 +164,12 @@ class ContactFolder extends Entity
         return $this;
     }
     
-    /** 
-    * Gets the multiValueExtendedProperties
-    *
-    * @return array The multiValueExtendedProperties
-    */
+
+     /** 
+     * Gets the multiValueExtendedProperties
+     *
+     * @return array The multiValueExtendedProperties
+     */
     public function getMultiValueExtendedProperties()
     {
         if (array_key_exists("multiValueExtendedProperties", $this->_propDict)) {
@@ -178,7 +182,7 @@ class ContactFolder extends Entity
     /** 
     * Sets the multiValueExtendedProperties
     *
-    * @param string $val The multiValueExtendedProperties
+    * @param MultiValueLegacyExtendedProperty $val The multiValueExtendedProperties
     *
     * @return ContactFolder
     */

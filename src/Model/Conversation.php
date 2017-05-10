@@ -101,7 +101,7 @@ class Conversation extends Entity
     /**
     * Sets the lastDeliveredDateTime
     *
-    * @param string $val The lastDeliveredDateTime
+    * @param \DateTime $val The lastDeliveredDateTime
     *
     * @return Conversation
     */
@@ -165,11 +165,12 @@ class Conversation extends Entity
         return $this;
     }
     
-    /** 
-    * Gets the threads
-    *
-    * @return array The threads
-    */
+
+     /** 
+     * Gets the threads
+     *
+     * @return array The threads
+     */
     public function getThreads()
     {
         if (array_key_exists("threads", $this->_propDict)) {
@@ -182,7 +183,7 @@ class Conversation extends Entity
     /** 
     * Sets the threads
     *
-    * @param string $val The threads
+    * @param ConversationThread $val The threads
     *
     * @return Conversation
     */

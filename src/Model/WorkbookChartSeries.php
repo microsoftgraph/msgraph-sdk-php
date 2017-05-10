@@ -61,7 +61,7 @@ class WorkbookChartSeries extends Entity
     public function getFormat()
     {
         if (array_key_exists("format", $this->_propDict)) {
-            if (is_a($this->_propDict["format"], "WorkbookChartSeriesFormat")) {
+            if (is_a($this->_propDict["format"], "Microsoft\Graph\Model\WorkbookChartSeriesFormat")) {
                 return $this->_propDict["format"];
             } else {
                 $this->_propDict["format"] = new WorkbookChartSeriesFormat($this->_propDict["format"]);
@@ -74,7 +74,7 @@ class WorkbookChartSeries extends Entity
     /**
     * Sets the format
     *
-    * @param string $val The format
+    * @param WorkbookChartSeriesFormat $val The format
     *
     * @return WorkbookChartSeries
     */
@@ -84,11 +84,12 @@ class WorkbookChartSeries extends Entity
         return $this;
     }
     
-    /** 
-    * Gets the points
-    *
-    * @return array The points
-    */
+
+     /** 
+     * Gets the points
+     *
+     * @return array The points
+     */
     public function getPoints()
     {
         if (array_key_exists("points", $this->_propDict)) {
@@ -101,7 +102,7 @@ class WorkbookChartSeries extends Entity
     /** 
     * Sets the points
     *
-    * @param string $val The points
+    * @param WorkbookChartPoint $val The points
     *
     * @return WorkbookChartSeries
     */

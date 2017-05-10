@@ -126,7 +126,7 @@ class PhysicalAddress extends Entity
     */
     public function setCountryOrRegion($val)
     {
-        $this->_propDict["country_or_region"] = $val;
+        $this->_propDict["countryOrRegion"] = $val;
         return $this;
     }
     /**
@@ -152,7 +152,7 @@ class PhysicalAddress extends Entity
     */
     public function setPostalCode($val)
     {
-        $this->_propDict["postal_code"] = $val;
+        $this->_propDict["postalCode"] = $val;
         return $this;
     }
 }

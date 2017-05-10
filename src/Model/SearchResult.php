@@ -48,7 +48,7 @@ class SearchResult extends Entity
     */
     public function setOnClickTelemetryUrl($val)
     {
-        $this->_propDict["on_click_telemetry_url"] = $val;
+        $this->_propDict["onClickTelemetryUrl"] = $val;
         return $this;
     }
 }

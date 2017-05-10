@@ -26,32 +26,6 @@ namespace Microsoft\Graph\Model;
 class DriveRecipient extends Entity
 {
     /**
-    * Gets the email
-    *
-    * @return string The email
-    */
-    public function getEmail()
-    {
-        if (array_key_exists("email", $this->_propDict)) {
-            return $this->_propDict["email"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the email
-    *
-    * @param string $val The value of the email
-    *
-    * @return DriveRecipient
-    */
-    public function setEmail($val)
-    {
-        $this->_propDict["email"] = $val;
-        return $this;
-    }
-    /**
     * Gets the alias
     *
     * @return string The alias
@@ -78,6 +52,32 @@ class DriveRecipient extends Entity
         return $this;
     }
     /**
+    * Gets the email
+    *
+    * @return string The email
+    */
+    public function getEmail()
+    {
+        if (array_key_exists("email", $this->_propDict)) {
+            return $this->_propDict["email"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the email
+    *
+    * @param string $val The value of the email
+    *
+    * @return DriveRecipient
+    */
+    public function setEmail($val)
+    {
+        $this->_propDict["email"] = $val;
+        return $this;
+    }
+    /**
     * Gets the objectId
     *
     * @return string The objectId
@@ -100,7 +100,7 @@ class DriveRecipient extends Entity
     */
     public function setObjectId($val)
     {
-        $this->_propDict["object_id"] = $val;
+        $this->_propDict["objectId"] = $val;
         return $this;
     }
 }

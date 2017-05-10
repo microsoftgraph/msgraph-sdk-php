@@ -24,7 +24,7 @@ namespace Microsoft\Graph\Model;
 * @version   Release: 0.1.0
 * @link      https://graph.microsoft.io/
 */
-class Drive extends Entity
+class Drive extends BaseItem
 {
     /**
     * Gets the driveType
@@ -61,7 +61,7 @@ class Drive extends Entity
     public function getOwner()
     {
         if (array_key_exists("owner", $this->_propDict)) {
-            if (is_a($this->_propDict["owner"], "IdentitySet")) {
+            if (is_a($this->_propDict["owner"], "Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["owner"];
             } else {
                 $this->_propDict["owner"] = new IdentitySet($this->_propDict["owner"]);
@@ -74,7 +74,7 @@ class Drive extends Entity
     /**
     * Sets the owner
     *
-    * @param string $val The owner
+    * @param IdentitySet $val The owner
     *
     * @return Drive
     */
@@ -92,7 +92,7 @@ class Drive extends Entity
     public function getQuota()
     {
         if (array_key_exists("quota", $this->_propDict)) {
-            if (is_a($this->_propDict["quota"], "Quota")) {
+            if (is_a($this->_propDict["quota"], "Microsoft\Graph\Model\Quota")) {
                 return $this->_propDict["quota"];
             } else {
                 $this->_propDict["quota"] = new Quota($this->_propDict["quota"]);
@@ -105,7 +105,7 @@ class Drive extends Entity
     /**
     * Sets the quota
     *
-    * @param string $val The quota
+    * @param Quota $val The quota
     *
     * @return Drive
     */
@@ -115,11 +115,43 @@ class Drive extends Entity
         return $this;
     }
     
-    /** 
-    * Gets the items
+    /**
+    * Gets the sharePointIds
     *
-    * @return array The items
+    * @return SharepointIds The sharePointIds
     */
+    public function getSharePointIds()
+    {
+        if (array_key_exists("sharePointIds", $this->_propDict)) {
+            if (is_a($this->_propDict["sharePointIds"], "Microsoft\Graph\Model\SharepointIds")) {
+                return $this->_propDict["sharePointIds"];
+            } else {
+                $this->_propDict["sharePointIds"] = new SharepointIds($this->_propDict["sharePointIds"]);
+                return $this->_propDict["sharePointIds"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the sharePointIds
+    *
+    * @param SharepointIds $val The sharePointIds
+    *
+    * @return Drive
+    */
+    public function setSharePointIds($val)
+    {
+        $this->_propDict["sharePointIds"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the items
+     *
+     * @return array The items
+     */
     public function getItems()
     {
         if (array_key_exists("items", $this->_propDict)) {
@@ -132,40 +164,13 @@ class Drive extends Entity
     /** 
     * Sets the items
     *
-    * @param string $val The items
+    * @param DriveItem $val The items
     *
     * @return Drive
     */
     public function setItems($val)
     {
 		$this->_propDict["items"] = $val;
-        return $this;
-    }
-    
-    /** 
-    * Gets the special
-    *
-    * @return array The special
-    */
-    public function getSpecial()
-    {
-        if (array_key_exists("special", $this->_propDict)) {
-           return $this->_propDict["special"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the special
-    *
-    * @param string $val The special
-    *
-    * @return Drive
-    */
-    public function setSpecial($val)
-    {
-		$this->_propDict["special"] = $val;
         return $this;
     }
     
@@ -177,7 +182,7 @@ class Drive extends Entity
     public function getRoot()
     {
         if (array_key_exists("root", $this->_propDict)) {
-            if (is_a($this->_propDict["root"], "DriveItem")) {
+            if (is_a($this->_propDict["root"], "Microsoft\Graph\Model\DriveItem")) {
                 return $this->_propDict["root"];
             } else {
                 $this->_propDict["root"] = new DriveItem($this->_propDict["root"]);
@@ -190,13 +195,41 @@ class Drive extends Entity
     /**
     * Sets the root
     *
-    * @param string $val The root
+    * @param DriveItem $val The root
     *
     * @return Drive
     */
     public function setRoot($val)
     {
         $this->_propDict["root"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the special
+     *
+     * @return array The special
+     */
+    public function getSpecial()
+    {
+        if (array_key_exists("special", $this->_propDict)) {
+           return $this->_propDict["special"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the special
+    *
+    * @param DriveItem $val The special
+    *
+    * @return Drive
+    */
+    public function setSpecial($val)
+    {
+		$this->_propDict["special"] = $val;
         return $this;
     }
     

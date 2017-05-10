@@ -48,7 +48,7 @@ class Photo extends Entity
     */
     public function setCameraMake($val)
     {
-        $this->_propDict["camera_make"] = $val;
+        $this->_propDict["cameraMake"] = $val;
         return $this;
     }
     /**
@@ -74,7 +74,7 @@ class Photo extends Entity
     */
     public function setCameraModel($val)
     {
-        $this->_propDict["camera_model"] = $val;
+        $this->_propDict["cameraModel"] = $val;
         return $this;
     }
     /**
@@ -100,7 +100,7 @@ class Photo extends Entity
     */
     public function setExposureDenominator($val)
     {
-        $this->_propDict["exposure_denominator"] = $val;
+        $this->_propDict["exposureDenominator"] = $val;
         return $this;
     }
     /**
@@ -126,33 +126,7 @@ class Photo extends Entity
     */
     public function setExposureNumerator($val)
     {
-        $this->_propDict["exposure_numerator"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the focalLength
-    *
-    * @return float The focalLength
-    */
-    public function getFocalLength()
-    {
-        if (array_key_exists("focalLength", $this->_propDict)) {
-            return $this->_propDict["focalLength"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the focalLength
-    *
-    * @param float $val The value of the focalLength
-    *
-    * @return Photo
-    */
-    public function setFocalLength($val)
-    {
-        $this->_propDict["focal_length"] = $val;
+        $this->_propDict["exposureNumerator"] = $val;
         return $this;
     }
     /**
@@ -178,39 +152,34 @@ class Photo extends Entity
     */
     public function setFNumber($val)
     {
-        $this->_propDict["f_number"] = $val;
+        $this->_propDict["fNumber"] = $val;
         return $this;
     }
-
     /**
-    * Gets the takenDateTime
+    * Gets the focalLength
     *
-    * @return \DateTime The takenDateTime
+    * @return float The focalLength
     */
-    public function getTakenDateTime()
+    public function getFocalLength()
     {
-        if (array_key_exists("takenDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["takenDateTime"], "\DateTime")) {
-                return $this->_propDict["takenDateTime"];
-            } else {
-                $this->_propDict["takenDateTime"] = new \DateTime($this->_propDict["takenDateTime"]);
-                return $this->_propDict["takenDateTime"];
-            }
+        if (array_key_exists("focalLength", $this->_propDict)) {
+            return $this->_propDict["focalLength"];
+        } else {
+            return null;
         }
-        return null;
     }
 
     /**
-    * Sets the takenDateTime
+    * Sets the focalLength
     *
-    * @param \DateTime $val The value to assign to the takenDateTime
+    * @param float $val The value of the focalLength
     *
-    * @return Photo The Photo
+    * @return Photo
     */
-    public function setTakenDateTime($val)
+    public function setFocalLength($val)
     {
-        $this->_propDict["takenDateTime"] = $val;
-         return $this;
+        $this->_propDict["focalLength"] = $val;
+        return $this;
     }
     /**
     * Gets the iso
@@ -237,5 +206,36 @@ class Photo extends Entity
     {
         $this->_propDict["iso"] = $val;
         return $this;
+    }
+
+    /**
+    * Gets the takenDateTime
+    *
+    * @return \DateTime The takenDateTime
+    */
+    public function getTakenDateTime()
+    {
+        if (array_key_exists("takenDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["takenDateTime"], "Microsoft\Graph\Model\\DateTime")) {
+                return $this->_propDict["takenDateTime"];
+            } else {
+                $this->_propDict["takenDateTime"] = new \DateTime($this->_propDict["takenDateTime"]);
+                return $this->_propDict["takenDateTime"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the takenDateTime
+    *
+    * @param \DateTime $val The value to assign to the takenDateTime
+    *
+    * @return Photo The Photo
+    */
+    public function setTakenDateTime($val)
+    {
+        $this->_propDict["takenDateTime"] = $val;
+         return $this;
     }
 }

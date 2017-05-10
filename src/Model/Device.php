@@ -53,11 +53,12 @@ class Device extends DirectoryObject
         return $this;
     }
     
-    /** 
-    * Gets the alternativeSecurityIds
-    *
-    * @return array The alternativeSecurityIds
-    */
+
+     /** 
+     * Gets the alternativeSecurityIds
+     *
+     * @return array The alternativeSecurityIds
+     */
     public function getAlternativeSecurityIds()
     {
         if (array_key_exists("alternativeSecurityIds", $this->_propDict)) {
@@ -70,7 +71,7 @@ class Device extends DirectoryObject
     /** 
     * Sets the alternativeSecurityIds
     *
-    * @param string $val The alternativeSecurityIds
+    * @param AlternativeSecurityId $val The alternativeSecurityIds
     *
     * @return Device
     */
@@ -101,7 +102,7 @@ class Device extends DirectoryObject
     /**
     * Sets the approximateLastSignInDateTime
     *
-    * @param string $val The approximateLastSignInDateTime
+    * @param \DateTime $val The approximateLastSignInDateTime
     *
     * @return Device
     */
@@ -294,7 +295,7 @@ class Device extends DirectoryObject
     /**
     * Sets the onPremisesLastSyncDateTime
     *
-    * @param string $val The onPremisesLastSyncDateTime
+    * @param \DateTime $val The onPremisesLastSyncDateTime
     *
     * @return Device
     */
@@ -439,11 +440,12 @@ class Device extends DirectoryObject
         return $this;
     }
     
-    /** 
-    * Gets the registeredOwners
-    *
-    * @return array The registeredOwners
-    */
+
+     /** 
+     * Gets the registeredOwners
+     *
+     * @return array The registeredOwners
+     */
     public function getRegisteredOwners()
     {
         if (array_key_exists("registeredOwners", $this->_propDict)) {
@@ -456,7 +458,7 @@ class Device extends DirectoryObject
     /** 
     * Sets the registeredOwners
     *
-    * @param string $val The registeredOwners
+    * @param DirectoryObject $val The registeredOwners
     *
     * @return Device
     */
@@ -466,11 +468,12 @@ class Device extends DirectoryObject
         return $this;
     }
     
-    /** 
-    * Gets the registeredUsers
-    *
-    * @return array The registeredUsers
-    */
+
+     /** 
+     * Gets the registeredUsers
+     *
+     * @return array The registeredUsers
+     */
     public function getRegisteredUsers()
     {
         if (array_key_exists("registeredUsers", $this->_propDict)) {
@@ -483,7 +486,7 @@ class Device extends DirectoryObject
     /** 
     * Sets the registeredUsers
     *
-    * @param string $val The registeredUsers
+    * @param DirectoryObject $val The registeredUsers
     *
     * @return Device
     */

@@ -34,7 +34,7 @@ class MailboxSettings extends Entity
     public function getAutomaticRepliesSetting()
     {
         if (array_key_exists("automaticRepliesSetting", $this->_propDict)) {
-            if (is_a($this->_propDict["automaticRepliesSetting"], "AutomaticRepliesSetting")) {
+            if (is_a($this->_propDict["automaticRepliesSetting"], "Microsoft\Graph\Model\AutomaticRepliesSetting")) {
                 return $this->_propDict["automaticRepliesSetting"];
             } else {
                 $this->_propDict["automaticRepliesSetting"] = new AutomaticRepliesSetting($this->_propDict["automaticRepliesSetting"]);
@@ -55,6 +55,32 @@ class MailboxSettings extends Entity
     {
         $this->_propDict["automaticRepliesSetting"] = $val;
          return $this;
+    }
+    /**
+    * Gets the archiveFolder
+    *
+    * @return string The archiveFolder
+    */
+    public function getArchiveFolder()
+    {
+        if (array_key_exists("archiveFolder", $this->_propDict)) {
+            return $this->_propDict["archiveFolder"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the archiveFolder
+    *
+    * @param string $val The value of the archiveFolder
+    *
+    * @return MailboxSettings
+    */
+    public function setArchiveFolder($val)
+    {
+        $this->_propDict["archiveFolder"] = $val;
+        return $this;
     }
     /**
     * Gets the timeZone
@@ -79,7 +105,7 @@ class MailboxSettings extends Entity
     */
     public function setTimeZone($val)
     {
-        $this->_propDict["time_zone"] = $val;
+        $this->_propDict["timeZone"] = $val;
         return $this;
     }
 
@@ -91,7 +117,7 @@ class MailboxSettings extends Entity
     public function getLanguage()
     {
         if (array_key_exists("language", $this->_propDict)) {
-            if (is_a($this->_propDict["language"], "LocaleInfo")) {
+            if (is_a($this->_propDict["language"], "Microsoft\Graph\Model\LocaleInfo")) {
                 return $this->_propDict["language"];
             } else {
                 $this->_propDict["language"] = new LocaleInfo($this->_propDict["language"]);

@@ -161,11 +161,12 @@ class MailFolder extends Entity
         return $this;
     }
     
-    /** 
-    * Gets the messages
-    *
-    * @return array The messages
-    */
+
+     /** 
+     * Gets the messages
+     *
+     * @return array The messages
+     */
     public function getMessages()
     {
         if (array_key_exists("messages", $this->_propDict)) {
@@ -178,7 +179,7 @@ class MailFolder extends Entity
     /** 
     * Sets the messages
     *
-    * @param string $val The messages
+    * @param Message $val The messages
     *
     * @return MailFolder
     */
@@ -188,11 +189,12 @@ class MailFolder extends Entity
         return $this;
     }
     
-    /** 
-    * Gets the childFolders
-    *
-    * @return array The childFolders
-    */
+
+     /** 
+     * Gets the childFolders
+     *
+     * @return array The childFolders
+     */
     public function getChildFolders()
     {
         if (array_key_exists("childFolders", $this->_propDict)) {
@@ -205,7 +207,7 @@ class MailFolder extends Entity
     /** 
     * Sets the childFolders
     *
-    * @param string $val The childFolders
+    * @param MailFolder $val The childFolders
     *
     * @return MailFolder
     */
@@ -215,11 +217,12 @@ class MailFolder extends Entity
         return $this;
     }
     
-    /** 
-    * Gets the singleValueExtendedProperties
-    *
-    * @return array The singleValueExtendedProperties
-    */
+
+     /** 
+     * Gets the singleValueExtendedProperties
+     *
+     * @return array The singleValueExtendedProperties
+     */
     public function getSingleValueExtendedProperties()
     {
         if (array_key_exists("singleValueExtendedProperties", $this->_propDict)) {
@@ -232,7 +235,7 @@ class MailFolder extends Entity
     /** 
     * Sets the singleValueExtendedProperties
     *
-    * @param string $val The singleValueExtendedProperties
+    * @param SingleValueLegacyExtendedProperty $val The singleValueExtendedProperties
     *
     * @return MailFolder
     */
@@ -242,11 +245,12 @@ class MailFolder extends Entity
         return $this;
     }
     
-    /** 
-    * Gets the multiValueExtendedProperties
-    *
-    * @return array The multiValueExtendedProperties
-    */
+
+     /** 
+     * Gets the multiValueExtendedProperties
+     *
+     * @return array The multiValueExtendedProperties
+     */
     public function getMultiValueExtendedProperties()
     {
         if (array_key_exists("multiValueExtendedProperties", $this->_propDict)) {
@@ -259,7 +263,7 @@ class MailFolder extends Entity
     /** 
     * Sets the multiValueExtendedProperties
     *
-    * @param string $val The multiValueExtendedProperties
+    * @param MultiValueLegacyExtendedProperty $val The multiValueExtendedProperties
     *
     * @return MailFolder
     */

@@ -61,7 +61,7 @@ class WorkbookChartPoint extends Entity
     public function getFormat()
     {
         if (array_key_exists("format", $this->_propDict)) {
-            if (is_a($this->_propDict["format"], "WorkbookChartPointFormat")) {
+            if (is_a($this->_propDict["format"], "Microsoft\Graph\Model\WorkbookChartPointFormat")) {
                 return $this->_propDict["format"];
             } else {
                 $this->_propDict["format"] = new WorkbookChartPointFormat($this->_propDict["format"]);
@@ -74,7 +74,7 @@ class WorkbookChartPoint extends Entity
     /**
     * Sets the format
     *
-    * @param string $val The format
+    * @param WorkbookChartPointFormat $val The format
     *
     * @return WorkbookChartPoint
     */

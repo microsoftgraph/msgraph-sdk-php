@@ -26,11 +26,12 @@ namespace Microsoft\Graph\Model;
 */
 class ConversationThread extends Entity
 {
-    /** 
-    * Gets the toRecipients
-    *
-    * @return array The toRecipients
-    */
+
+     /** 
+     * Gets the toRecipients
+     *
+     * @return array The toRecipients
+     */
     public function getToRecipients()
     {
         if (array_key_exists("toRecipients", $this->_propDict)) {
@@ -43,7 +44,7 @@ class ConversationThread extends Entity
     /** 
     * Sets the toRecipients
     *
-    * @param string $val The toRecipients
+    * @param Recipient $val The toRecipients
     *
     * @return ConversationThread
     */
@@ -128,7 +129,7 @@ class ConversationThread extends Entity
     /**
     * Sets the lastDeliveredDateTime
     *
-    * @param string $val The lastDeliveredDateTime
+    * @param \DateTime $val The lastDeliveredDateTime
     *
     * @return ConversationThread
     */
@@ -165,11 +166,12 @@ class ConversationThread extends Entity
         return $this;
     }
     
-    /** 
-    * Gets the ccRecipients
-    *
-    * @return array The ccRecipients
-    */
+
+     /** 
+     * Gets the ccRecipients
+     *
+     * @return array The ccRecipients
+     */
     public function getCcRecipients()
     {
         if (array_key_exists("ccRecipients", $this->_propDict)) {
@@ -182,7 +184,7 @@ class ConversationThread extends Entity
     /** 
     * Sets the ccRecipients
     *
-    * @param string $val The ccRecipients
+    * @param Recipient $val The ccRecipients
     *
     * @return ConversationThread
     */
@@ -246,11 +248,12 @@ class ConversationThread extends Entity
         return $this;
     }
     
-    /** 
-    * Gets the posts
-    *
-    * @return array The posts
-    */
+
+     /** 
+     * Gets the posts
+     *
+     * @return array The posts
+     */
     public function getPosts()
     {
         if (array_key_exists("posts", $this->_propDict)) {
@@ -263,7 +266,7 @@ class ConversationThread extends Entity
     /** 
     * Sets the posts
     *
-    * @param string $val The posts
+    * @param Post $val The posts
     *
     * @return ConversationThread
     */

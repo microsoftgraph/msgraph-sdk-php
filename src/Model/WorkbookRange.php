@@ -493,7 +493,7 @@ class WorkbookRange extends Entity
     public function getFormat()
     {
         if (array_key_exists("format", $this->_propDict)) {
-            if (is_a($this->_propDict["format"], "WorkbookRangeFormat")) {
+            if (is_a($this->_propDict["format"], "Microsoft\Graph\Model\WorkbookRangeFormat")) {
                 return $this->_propDict["format"];
             } else {
                 $this->_propDict["format"] = new WorkbookRangeFormat($this->_propDict["format"]);
@@ -506,7 +506,7 @@ class WorkbookRange extends Entity
     /**
     * Sets the format
     *
-    * @param string $val The format
+    * @param WorkbookRangeFormat $val The format
     *
     * @return WorkbookRange
     */
@@ -524,7 +524,7 @@ class WorkbookRange extends Entity
     public function getSort()
     {
         if (array_key_exists("sort", $this->_propDict)) {
-            if (is_a($this->_propDict["sort"], "WorkbookRangeSort")) {
+            if (is_a($this->_propDict["sort"], "Microsoft\Graph\Model\WorkbookRangeSort")) {
                 return $this->_propDict["sort"];
             } else {
                 $this->_propDict["sort"] = new WorkbookRangeSort($this->_propDict["sort"]);
@@ -537,7 +537,7 @@ class WorkbookRange extends Entity
     /**
     * Sets the sort
     *
-    * @param string $val The sort
+    * @param WorkbookRangeSort $val The sort
     *
     * @return WorkbookRange
     */
@@ -555,7 +555,7 @@ class WorkbookRange extends Entity
     public function getWorksheet()
     {
         if (array_key_exists("worksheet", $this->_propDict)) {
-            if (is_a($this->_propDict["worksheet"], "WorkbookWorksheet")) {
+            if (is_a($this->_propDict["worksheet"], "Microsoft\Graph\Model\WorkbookWorksheet")) {
                 return $this->_propDict["worksheet"];
             } else {
                 $this->_propDict["worksheet"] = new WorkbookWorksheet($this->_propDict["worksheet"]);
@@ -568,7 +568,7 @@ class WorkbookRange extends Entity
     /**
     * Sets the worksheet
     *
-    * @param string $val The worksheet
+    * @param WorkbookWorksheet $val The worksheet
     *
     * @return WorkbookRange
     */

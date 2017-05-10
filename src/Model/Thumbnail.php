@@ -34,7 +34,7 @@ class Thumbnail extends Entity
     public function getContent()
     {
         if (array_key_exists("content", $this->_propDict)) {
-            if (is_a($this->_propDict["content"], "\GuzzleHttp\Psr7\Stream")) {
+            if (is_a($this->_propDict["content"], "Microsoft\Graph\Model\\GuzzleHttp\Psr7\Stream")) {
                 return $this->_propDict["content"];
             } else {
                 $this->_propDict["content"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["content"]);
@@ -80,6 +80,32 @@ class Thumbnail extends Entity
     public function setHeight($val)
     {
         $this->_propDict["height"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the sourceItemId
+    *
+    * @return string The sourceItemId
+    */
+    public function getSourceItemId()
+    {
+        if (array_key_exists("sourceItemId", $this->_propDict)) {
+            return $this->_propDict["sourceItemId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the sourceItemId
+    *
+    * @param string $val The value of the sourceItemId
+    *
+    * @return Thumbnail
+    */
+    public function setSourceItemId($val)
+    {
+        $this->_propDict["sourceItemId"] = $val;
         return $this;
     }
     /**

@@ -155,7 +155,7 @@ class Subscription extends Entity
     /**
     * Sets the expirationDateTime
     *
-    * @param string $val The expirationDateTime
+    * @param \DateTime $val The expirationDateTime
     *
     * @return Subscription
     */

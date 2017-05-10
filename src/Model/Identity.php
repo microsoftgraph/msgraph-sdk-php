@@ -48,7 +48,7 @@ class Identity extends Entity
     */
     public function setDisplayName($val)
     {
-        $this->_propDict["display_name"] = $val;
+        $this->_propDict["displayName"] = $val;
         return $this;
     }
     /**

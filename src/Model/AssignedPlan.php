@@ -34,7 +34,7 @@ class AssignedPlan extends Entity
     public function getAssignedDateTime()
     {
         if (array_key_exists("assignedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["assignedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["assignedDateTime"], "Microsoft\Graph\Model\\DateTime")) {
                 return $this->_propDict["assignedDateTime"];
             } else {
                 $this->_propDict["assignedDateTime"] = new \DateTime($this->_propDict["assignedDateTime"]);
@@ -79,7 +79,7 @@ class AssignedPlan extends Entity
     */
     public function setCapabilityStatus($val)
     {
-        $this->_propDict["capability_status"] = $val;
+        $this->_propDict["capabilityStatus"] = $val;
         return $this;
     }
     /**
@@ -131,7 +131,7 @@ class AssignedPlan extends Entity
     */
     public function setServicePlanId($val)
     {
-        $this->_propDict["service_plan_id"] = $val;
+        $this->_propDict["servicePlanId"] = $val;
         return $this;
     }
 }

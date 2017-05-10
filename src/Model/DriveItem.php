@@ -24,240 +24,8 @@ namespace Microsoft\Graph\Model;
 * @version   Release: 0.1.0
 * @link      https://graph.microsoft.io/
 */
-class DriveItem extends Entity
+class DriveItem extends BaseItem
 {
-    /**
-    * Gets the createdBy
-    *
-    * @return IdentitySet The createdBy
-    */
-    public function getCreatedBy()
-    {
-        if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "IdentitySet")) {
-                return $this->_propDict["createdBy"];
-            } else {
-                $this->_propDict["createdBy"] = new IdentitySet($this->_propDict["createdBy"]);
-                return $this->_propDict["createdBy"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the createdBy
-    *
-    * @param string $val The createdBy
-    *
-    * @return DriveItem
-    */
-    public function setCreatedBy($val)
-    {
-        $this->_propDict["createdBy"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the createdDateTime
-    *
-    * @return \DateTime The createdDateTime
-    */
-    public function getCreatedDateTime()
-    {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
-                return $this->_propDict["createdDateTime"];
-            } else {
-                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
-                return $this->_propDict["createdDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the createdDateTime
-    *
-    * @param string $val The createdDateTime
-    *
-    * @return DriveItem
-    */
-    public function setCreatedDateTime($val)
-    {
-        $this->_propDict["createdDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the description
-    *
-    * @return string The description
-    */
-    public function getDescription()
-    {
-        if (array_key_exists("description", $this->_propDict)) {
-            return $this->_propDict["description"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the description
-    *
-    * @param string $val The description
-    *
-    * @return DriveItem
-    */
-    public function setDescription($val)
-    {
-        $this->_propDict["description"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the eTag
-    *
-    * @return string The eTag
-    */
-    public function getETag()
-    {
-        if (array_key_exists("eTag", $this->_propDict)) {
-            return $this->_propDict["eTag"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the eTag
-    *
-    * @param string $val The eTag
-    *
-    * @return DriveItem
-    */
-    public function setETag($val)
-    {
-        $this->_propDict["eTag"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the lastModifiedBy
-    *
-    * @return IdentitySet The lastModifiedBy
-    */
-    public function getLastModifiedBy()
-    {
-        if (array_key_exists("lastModifiedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedBy"], "IdentitySet")) {
-                return $this->_propDict["lastModifiedBy"];
-            } else {
-                $this->_propDict["lastModifiedBy"] = new IdentitySet($this->_propDict["lastModifiedBy"]);
-                return $this->_propDict["lastModifiedBy"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the lastModifiedBy
-    *
-    * @param string $val The lastModifiedBy
-    *
-    * @return DriveItem
-    */
-    public function setLastModifiedBy($val)
-    {
-        $this->_propDict["lastModifiedBy"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the lastModifiedDateTime
-    *
-    * @return \DateTime The lastModifiedDateTime
-    */
-    public function getLastModifiedDateTime()
-    {
-        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
-                return $this->_propDict["lastModifiedDateTime"];
-            } else {
-                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
-                return $this->_propDict["lastModifiedDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the lastModifiedDateTime
-    *
-    * @param string $val The lastModifiedDateTime
-    *
-    * @return DriveItem
-    */
-    public function setLastModifiedDateTime($val)
-    {
-        $this->_propDict["lastModifiedDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the name
-    *
-    * @return string The name
-    */
-    public function getName()
-    {
-        if (array_key_exists("name", $this->_propDict)) {
-            return $this->_propDict["name"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the name
-    *
-    * @param string $val The name
-    *
-    * @return DriveItem
-    */
-    public function setName($val)
-    {
-        $this->_propDict["name"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the webUrl
-    *
-    * @return string The webUrl
-    */
-    public function getWebUrl()
-    {
-        if (array_key_exists("webUrl", $this->_propDict)) {
-            return $this->_propDict["webUrl"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the webUrl
-    *
-    * @param string $val The webUrl
-    *
-    * @return DriveItem
-    */
-    public function setWebUrl($val)
-    {
-        $this->_propDict["webUrl"] = $val;
-        return $this;
-    }
-    
     /**
     * Gets the audio
     *
@@ -266,7 +34,7 @@ class DriveItem extends Entity
     public function getAudio()
     {
         if (array_key_exists("audio", $this->_propDict)) {
-            if (is_a($this->_propDict["audio"], "Audio")) {
+            if (is_a($this->_propDict["audio"], "Microsoft\Graph\Model\Audio")) {
                 return $this->_propDict["audio"];
             } else {
                 $this->_propDict["audio"] = new Audio($this->_propDict["audio"]);
@@ -279,7 +47,7 @@ class DriveItem extends Entity
     /**
     * Sets the audio
     *
-    * @param string $val The audio
+    * @param Audio $val The audio
     *
     * @return DriveItem
     */
@@ -310,7 +78,7 @@ class DriveItem extends Entity
     /**
     * Sets the content
     *
-    * @param string $val The content
+    * @param \GuzzleHttp\Psr7\Stream $val The content
     *
     * @return DriveItem
     */
@@ -355,7 +123,7 @@ class DriveItem extends Entity
     public function getDeleted()
     {
         if (array_key_exists("deleted", $this->_propDict)) {
-            if (is_a($this->_propDict["deleted"], "Deleted")) {
+            if (is_a($this->_propDict["deleted"], "Microsoft\Graph\Model\Deleted")) {
                 return $this->_propDict["deleted"];
             } else {
                 $this->_propDict["deleted"] = new Deleted($this->_propDict["deleted"]);
@@ -368,7 +136,7 @@ class DriveItem extends Entity
     /**
     * Sets the deleted
     *
-    * @param string $val The deleted
+    * @param Deleted $val The deleted
     *
     * @return DriveItem
     */
@@ -386,7 +154,7 @@ class DriveItem extends Entity
     public function getFile()
     {
         if (array_key_exists("file", $this->_propDict)) {
-            if (is_a($this->_propDict["file"], "File")) {
+            if (is_a($this->_propDict["file"], "Microsoft\Graph\Model\File")) {
                 return $this->_propDict["file"];
             } else {
                 $this->_propDict["file"] = new File($this->_propDict["file"]);
@@ -399,7 +167,7 @@ class DriveItem extends Entity
     /**
     * Sets the file
     *
-    * @param string $val The file
+    * @param File $val The file
     *
     * @return DriveItem
     */
@@ -417,7 +185,7 @@ class DriveItem extends Entity
     public function getFileSystemInfo()
     {
         if (array_key_exists("fileSystemInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["fileSystemInfo"], "FileSystemInfo")) {
+            if (is_a($this->_propDict["fileSystemInfo"], "Microsoft\Graph\Model\FileSystemInfo")) {
                 return $this->_propDict["fileSystemInfo"];
             } else {
                 $this->_propDict["fileSystemInfo"] = new FileSystemInfo($this->_propDict["fileSystemInfo"]);
@@ -430,7 +198,7 @@ class DriveItem extends Entity
     /**
     * Sets the fileSystemInfo
     *
-    * @param string $val The fileSystemInfo
+    * @param FileSystemInfo $val The fileSystemInfo
     *
     * @return DriveItem
     */
@@ -448,7 +216,7 @@ class DriveItem extends Entity
     public function getFolder()
     {
         if (array_key_exists("folder", $this->_propDict)) {
-            if (is_a($this->_propDict["folder"], "Folder")) {
+            if (is_a($this->_propDict["folder"], "Microsoft\Graph\Model\Folder")) {
                 return $this->_propDict["folder"];
             } else {
                 $this->_propDict["folder"] = new Folder($this->_propDict["folder"]);
@@ -461,7 +229,7 @@ class DriveItem extends Entity
     /**
     * Sets the folder
     *
-    * @param string $val The folder
+    * @param Folder $val The folder
     *
     * @return DriveItem
     */
@@ -479,7 +247,7 @@ class DriveItem extends Entity
     public function getImage()
     {
         if (array_key_exists("image", $this->_propDict)) {
-            if (is_a($this->_propDict["image"], "Image")) {
+            if (is_a($this->_propDict["image"], "Microsoft\Graph\Model\Image")) {
                 return $this->_propDict["image"];
             } else {
                 $this->_propDict["image"] = new Image($this->_propDict["image"]);
@@ -492,7 +260,7 @@ class DriveItem extends Entity
     /**
     * Sets the image
     *
-    * @param string $val The image
+    * @param Image $val The image
     *
     * @return DriveItem
     */
@@ -510,7 +278,7 @@ class DriveItem extends Entity
     public function getLocation()
     {
         if (array_key_exists("location", $this->_propDict)) {
-            if (is_a($this->_propDict["location"], "GeoCoordinates")) {
+            if (is_a($this->_propDict["location"], "Microsoft\Graph\Model\GeoCoordinates")) {
                 return $this->_propDict["location"];
             } else {
                 $this->_propDict["location"] = new GeoCoordinates($this->_propDict["location"]);
@@ -523,7 +291,7 @@ class DriveItem extends Entity
     /**
     * Sets the location
     *
-    * @param string $val The location
+    * @param GeoCoordinates $val The location
     *
     * @return DriveItem
     */
@@ -541,7 +309,7 @@ class DriveItem extends Entity
     public function getPackage()
     {
         if (array_key_exists("package", $this->_propDict)) {
-            if (is_a($this->_propDict["package"], "Package")) {
+            if (is_a($this->_propDict["package"], "Microsoft\Graph\Model\Package")) {
                 return $this->_propDict["package"];
             } else {
                 $this->_propDict["package"] = new Package($this->_propDict["package"]);
@@ -554,44 +322,13 @@ class DriveItem extends Entity
     /**
     * Sets the package
     *
-    * @param string $val The package
+    * @param Package $val The package
     *
     * @return DriveItem
     */
     public function setPackage($val)
     {
         $this->_propDict["package"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the parentReference
-    *
-    * @return ItemReference The parentReference
-    */
-    public function getParentReference()
-    {
-        if (array_key_exists("parentReference", $this->_propDict)) {
-            if (is_a($this->_propDict["parentReference"], "ItemReference")) {
-                return $this->_propDict["parentReference"];
-            } else {
-                $this->_propDict["parentReference"] = new ItemReference($this->_propDict["parentReference"]);
-                return $this->_propDict["parentReference"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the parentReference
-    *
-    * @param string $val The parentReference
-    *
-    * @return DriveItem
-    */
-    public function setParentReference($val)
-    {
-        $this->_propDict["parentReference"] = $val;
         return $this;
     }
     
@@ -603,7 +340,7 @@ class DriveItem extends Entity
     public function getPhoto()
     {
         if (array_key_exists("photo", $this->_propDict)) {
-            if (is_a($this->_propDict["photo"], "Photo")) {
+            if (is_a($this->_propDict["photo"], "Microsoft\Graph\Model\Photo")) {
                 return $this->_propDict["photo"];
             } else {
                 $this->_propDict["photo"] = new Photo($this->_propDict["photo"]);
@@ -616,7 +353,7 @@ class DriveItem extends Entity
     /**
     * Sets the photo
     *
-    * @param string $val The photo
+    * @param Photo $val The photo
     *
     * @return DriveItem
     */
@@ -634,7 +371,7 @@ class DriveItem extends Entity
     public function getRemoteItem()
     {
         if (array_key_exists("remoteItem", $this->_propDict)) {
-            if (is_a($this->_propDict["remoteItem"], "RemoteItem")) {
+            if (is_a($this->_propDict["remoteItem"], "Microsoft\Graph\Model\RemoteItem")) {
                 return $this->_propDict["remoteItem"];
             } else {
                 $this->_propDict["remoteItem"] = new RemoteItem($this->_propDict["remoteItem"]);
@@ -647,7 +384,7 @@ class DriveItem extends Entity
     /**
     * Sets the remoteItem
     *
-    * @param string $val The remoteItem
+    * @param RemoteItem $val The remoteItem
     *
     * @return DriveItem
     */
@@ -665,7 +402,7 @@ class DriveItem extends Entity
     public function getRoot()
     {
         if (array_key_exists("root", $this->_propDict)) {
-            if (is_a($this->_propDict["root"], "Root")) {
+            if (is_a($this->_propDict["root"], "Microsoft\Graph\Model\Root")) {
                 return $this->_propDict["root"];
             } else {
                 $this->_propDict["root"] = new Root($this->_propDict["root"]);
@@ -678,7 +415,7 @@ class DriveItem extends Entity
     /**
     * Sets the root
     *
-    * @param string $val The root
+    * @param Root $val The root
     *
     * @return DriveItem
     */
@@ -696,7 +433,7 @@ class DriveItem extends Entity
     public function getSearchResult()
     {
         if (array_key_exists("searchResult", $this->_propDict)) {
-            if (is_a($this->_propDict["searchResult"], "SearchResult")) {
+            if (is_a($this->_propDict["searchResult"], "Microsoft\Graph\Model\SearchResult")) {
                 return $this->_propDict["searchResult"];
             } else {
                 $this->_propDict["searchResult"] = new SearchResult($this->_propDict["searchResult"]);
@@ -709,7 +446,7 @@ class DriveItem extends Entity
     /**
     * Sets the searchResult
     *
-    * @param string $val The searchResult
+    * @param SearchResult $val The searchResult
     *
     * @return DriveItem
     */
@@ -727,7 +464,7 @@ class DriveItem extends Entity
     public function getShared()
     {
         if (array_key_exists("shared", $this->_propDict)) {
-            if (is_a($this->_propDict["shared"], "Shared")) {
+            if (is_a($this->_propDict["shared"], "Microsoft\Graph\Model\Shared")) {
                 return $this->_propDict["shared"];
             } else {
                 $this->_propDict["shared"] = new Shared($this->_propDict["shared"]);
@@ -740,7 +477,7 @@ class DriveItem extends Entity
     /**
     * Sets the shared
     *
-    * @param string $val The shared
+    * @param Shared $val The shared
     *
     * @return DriveItem
     */
@@ -758,7 +495,7 @@ class DriveItem extends Entity
     public function getSharepointIds()
     {
         if (array_key_exists("sharepointIds", $this->_propDict)) {
-            if (is_a($this->_propDict["sharepointIds"], "SharepointIds")) {
+            if (is_a($this->_propDict["sharepointIds"], "Microsoft\Graph\Model\SharepointIds")) {
                 return $this->_propDict["sharepointIds"];
             } else {
                 $this->_propDict["sharepointIds"] = new SharepointIds($this->_propDict["sharepointIds"]);
@@ -771,7 +508,7 @@ class DriveItem extends Entity
     /**
     * Sets the sharepointIds
     *
-    * @param string $val The sharepointIds
+    * @param SharepointIds $val The sharepointIds
     *
     * @return DriveItem
     */
@@ -816,7 +553,7 @@ class DriveItem extends Entity
     public function getSpecialFolder()
     {
         if (array_key_exists("specialFolder", $this->_propDict)) {
-            if (is_a($this->_propDict["specialFolder"], "SpecialFolder")) {
+            if (is_a($this->_propDict["specialFolder"], "Microsoft\Graph\Model\SpecialFolder")) {
                 return $this->_propDict["specialFolder"];
             } else {
                 $this->_propDict["specialFolder"] = new SpecialFolder($this->_propDict["specialFolder"]);
@@ -829,7 +566,7 @@ class DriveItem extends Entity
     /**
     * Sets the specialFolder
     *
-    * @param string $val The specialFolder
+    * @param SpecialFolder $val The specialFolder
     *
     * @return DriveItem
     */
@@ -847,7 +584,7 @@ class DriveItem extends Entity
     public function getVideo()
     {
         if (array_key_exists("video", $this->_propDict)) {
-            if (is_a($this->_propDict["video"], "Video")) {
+            if (is_a($this->_propDict["video"], "Microsoft\Graph\Model\Video")) {
                 return $this->_propDict["video"];
             } else {
                 $this->_propDict["video"] = new Video($this->_propDict["video"]);
@@ -860,7 +597,7 @@ class DriveItem extends Entity
     /**
     * Sets the video
     *
-    * @param string $val The video
+    * @param Video $val The video
     *
     * @return DriveItem
     */
@@ -897,104 +634,12 @@ class DriveItem extends Entity
         return $this;
     }
     
-    /**
-    * Gets the createdByUser
-    *
-    * @return User The createdByUser
-    */
-    public function getCreatedByUser()
-    {
-        if (array_key_exists("createdByUser", $this->_propDict)) {
-            if (is_a($this->_propDict["createdByUser"], "User")) {
-                return $this->_propDict["createdByUser"];
-            } else {
-                $this->_propDict["createdByUser"] = new User($this->_propDict["createdByUser"]);
-                return $this->_propDict["createdByUser"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the createdByUser
-    *
-    * @param string $val The createdByUser
-    *
-    * @return DriveItem
-    */
-    public function setCreatedByUser($val)
-    {
-        $this->_propDict["createdByUser"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the workbook
-    *
-    * @return Workbook The workbook
-    */
-    public function getWorkbook()
-    {
-        if (array_key_exists("workbook", $this->_propDict)) {
-            if (is_a($this->_propDict["workbook"], "Workbook")) {
-                return $this->_propDict["workbook"];
-            } else {
-                $this->_propDict["workbook"] = new Workbook($this->_propDict["workbook"]);
-                return $this->_propDict["workbook"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the workbook
-    *
-    * @param string $val The workbook
-    *
-    * @return DriveItem
-    */
-    public function setWorkbook($val)
-    {
-        $this->_propDict["workbook"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the lastModifiedByUser
-    *
-    * @return User The lastModifiedByUser
-    */
-    public function getLastModifiedByUser()
-    {
-        if (array_key_exists("lastModifiedByUser", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedByUser"], "User")) {
-                return $this->_propDict["lastModifiedByUser"];
-            } else {
-                $this->_propDict["lastModifiedByUser"] = new User($this->_propDict["lastModifiedByUser"]);
-                return $this->_propDict["lastModifiedByUser"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the lastModifiedByUser
-    *
-    * @param string $val The lastModifiedByUser
-    *
-    * @return DriveItem
-    */
-    public function setLastModifiedByUser($val)
-    {
-        $this->_propDict["lastModifiedByUser"] = $val;
-        return $this;
-    }
-    
-    /** 
-    * Gets the children
-    *
-    * @return array The children
-    */
+
+     /** 
+     * Gets the children
+     *
+     * @return array The children
+     */
     public function getChildren()
     {
         if (array_key_exists("children", $this->_propDict)) {
@@ -1007,7 +652,7 @@ class DriveItem extends Entity
     /** 
     * Sets the children
     *
-    * @param string $val The children
+    * @param DriveItem $val The children
     *
     * @return DriveItem
     */
@@ -1017,11 +662,12 @@ class DriveItem extends Entity
         return $this;
     }
     
-    /** 
-    * Gets the permissions
-    *
-    * @return array The permissions
-    */
+
+     /** 
+     * Gets the permissions
+     *
+     * @return array The permissions
+     */
     public function getPermissions()
     {
         if (array_key_exists("permissions", $this->_propDict)) {
@@ -1034,7 +680,7 @@ class DriveItem extends Entity
     /** 
     * Sets the permissions
     *
-    * @param string $val The permissions
+    * @param Permission $val The permissions
     *
     * @return DriveItem
     */
@@ -1044,11 +690,12 @@ class DriveItem extends Entity
         return $this;
     }
     
-    /** 
-    * Gets the thumbnails
-    *
-    * @return array The thumbnails
-    */
+
+     /** 
+     * Gets the thumbnails
+     *
+     * @return array The thumbnails
+     */
     public function getThumbnails()
     {
         if (array_key_exists("thumbnails", $this->_propDict)) {
@@ -1061,13 +708,44 @@ class DriveItem extends Entity
     /** 
     * Sets the thumbnails
     *
-    * @param string $val The thumbnails
+    * @param ThumbnailSet $val The thumbnails
     *
     * @return DriveItem
     */
     public function setThumbnails($val)
     {
 		$this->_propDict["thumbnails"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the workbook
+    *
+    * @return Workbook The workbook
+    */
+    public function getWorkbook()
+    {
+        if (array_key_exists("workbook", $this->_propDict)) {
+            if (is_a($this->_propDict["workbook"], "Microsoft\Graph\Model\Workbook")) {
+                return $this->_propDict["workbook"];
+            } else {
+                $this->_propDict["workbook"] = new Workbook($this->_propDict["workbook"]);
+                return $this->_propDict["workbook"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the workbook
+    *
+    * @param Workbook $val The workbook
+    *
+    * @return DriveItem
+    */
+    public function setWorkbook($val)
+    {
+        $this->_propDict["workbook"] = $val;
         return $this;
     }
     

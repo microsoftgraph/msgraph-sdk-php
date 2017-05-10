@@ -101,7 +101,7 @@ class FileAttachment extends Attachment
     /**
     * Sets the contentBytes
     *
-    * @param string $val The contentBytes
+    * @param \GuzzleHttp\Psr7\Stream $val The contentBytes
     *
     * @return FileAttachment
     */

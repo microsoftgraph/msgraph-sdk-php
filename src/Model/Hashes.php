@@ -48,33 +48,7 @@ class Hashes extends Entity
     */
     public function setCrc32Hash($val)
     {
-        $this->_propDict["crc32_hash"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the sha1Hash
-    *
-    * @return string The sha1Hash
-    */
-    public function getSha1Hash()
-    {
-        if (array_key_exists("sha1Hash", $this->_propDict)) {
-            return $this->_propDict["sha1Hash"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the sha1Hash
-    *
-    * @param string $val The value of the sha1Hash
-    *
-    * @return Hashes
-    */
-    public function setSha1Hash($val)
-    {
-        $this->_propDict["sha1_hash"] = $val;
+        $this->_propDict["crc32Hash"] = $val;
         return $this;
     }
     /**
@@ -100,7 +74,33 @@ class Hashes extends Entity
     */
     public function setQuickXorHash($val)
     {
-        $this->_propDict["quick_xor_hash"] = $val;
+        $this->_propDict["quickXorHash"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the sha1Hash
+    *
+    * @return string The sha1Hash
+    */
+    public function getSha1Hash()
+    {
+        if (array_key_exists("sha1Hash", $this->_propDict)) {
+            return $this->_propDict["sha1Hash"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the sha1Hash
+    *
+    * @param string $val The value of the sha1Hash
+    *
+    * @return Hashes
+    */
+    public function setSha1Hash($val)
+    {
+        $this->_propDict["sha1Hash"] = $val;
         return $this;
     }
 }

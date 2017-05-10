@@ -34,7 +34,7 @@ class Shared extends Entity
     public function getOwner()
     {
         if (array_key_exists("owner", $this->_propDict)) {
-            if (is_a($this->_propDict["owner"], "IdentitySet")) {
+            if (is_a($this->_propDict["owner"], "Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["owner"];
             } else {
                 $this->_propDict["owner"] = new IdentitySet($this->_propDict["owner"]);
@@ -81,5 +81,67 @@ class Shared extends Entity
     {
         $this->_propDict["scope"] = $val;
         return $this;
+    }
+
+    /**
+    * Gets the sharedBy
+    *
+    * @return IdentitySet The sharedBy
+    */
+    public function getSharedBy()
+    {
+        if (array_key_exists("sharedBy", $this->_propDict)) {
+            if (is_a($this->_propDict["sharedBy"], "Microsoft\Graph\Model\IdentitySet")) {
+                return $this->_propDict["sharedBy"];
+            } else {
+                $this->_propDict["sharedBy"] = new IdentitySet($this->_propDict["sharedBy"]);
+                return $this->_propDict["sharedBy"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the sharedBy
+    *
+    * @param IdentitySet $val The value to assign to the sharedBy
+    *
+    * @return Shared The Shared
+    */
+    public function setSharedBy($val)
+    {
+        $this->_propDict["sharedBy"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the sharedDateTime
+    *
+    * @return \DateTime The sharedDateTime
+    */
+    public function getSharedDateTime()
+    {
+        if (array_key_exists("sharedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["sharedDateTime"], "Microsoft\Graph\Model\\DateTime")) {
+                return $this->_propDict["sharedDateTime"];
+            } else {
+                $this->_propDict["sharedDateTime"] = new \DateTime($this->_propDict["sharedDateTime"]);
+                return $this->_propDict["sharedDateTime"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the sharedDateTime
+    *
+    * @param \DateTime $val The value to assign to the sharedDateTime
+    *
+    * @return Shared The Shared
+    */
+    public function setSharedDateTime($val)
+    {
+        $this->_propDict["sharedDateTime"] = $val;
+         return $this;
     }
 }

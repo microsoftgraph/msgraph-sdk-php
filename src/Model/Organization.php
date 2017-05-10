@@ -26,11 +26,12 @@ namespace Microsoft\Graph\Model;
 */
 class Organization extends DirectoryObject
 {
-    /** 
-    * Gets the assignedPlans
-    *
-    * @return array The assignedPlans
-    */
+
+     /** 
+     * Gets the assignedPlans
+     *
+     * @return array The assignedPlans
+     */
     public function getAssignedPlans()
     {
         if (array_key_exists("assignedPlans", $this->_propDict)) {
@@ -43,7 +44,7 @@ class Organization extends DirectoryObject
     /** 
     * Sets the assignedPlans
     *
-    * @param string $val The assignedPlans
+    * @param AssignedPlan $val The assignedPlans
     *
     * @return Organization
     */
@@ -236,7 +237,7 @@ class Organization extends DirectoryObject
     /**
     * Sets the onPremisesLastSyncDateTime
     *
-    * @param string $val The onPremisesLastSyncDateTime
+    * @param \DateTime $val The onPremisesLastSyncDateTime
     *
     * @return Organization
     */
@@ -327,11 +328,12 @@ class Organization extends DirectoryObject
         return $this;
     }
     
-    /** 
-    * Gets the provisionedPlans
-    *
-    * @return array The provisionedPlans
-    */
+
+     /** 
+     * Gets the provisionedPlans
+     *
+     * @return array The provisionedPlans
+     */
     public function getProvisionedPlans()
     {
         if (array_key_exists("provisionedPlans", $this->_propDict)) {
@@ -344,7 +346,7 @@ class Organization extends DirectoryObject
     /** 
     * Sets the provisionedPlans
     *
-    * @param string $val The provisionedPlans
+    * @param ProvisionedPlan $val The provisionedPlans
     *
     * @return Organization
     */
@@ -489,11 +491,12 @@ class Organization extends DirectoryObject
         return $this;
     }
     
-    /** 
-    * Gets the verifiedDomains
-    *
-    * @return array The verifiedDomains
-    */
+
+     /** 
+     * Gets the verifiedDomains
+     *
+     * @return array The verifiedDomains
+     */
     public function getVerifiedDomains()
     {
         if (array_key_exists("verifiedDomains", $this->_propDict)) {
@@ -506,7 +509,7 @@ class Organization extends DirectoryObject
     /** 
     * Sets the verifiedDomains
     *
-    * @param string $val The verifiedDomains
+    * @param VerifiedDomain $val The verifiedDomains
     *
     * @return Organization
     */
