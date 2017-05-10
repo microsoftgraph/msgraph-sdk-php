@@ -1,6 +1,6 @@
 {
 	"name": "microsoft/microsoft-graph",
-	"version": "0.1.1",
+	"version": "1.0.0",
 	"type": "library",
 	"description": "The Microsoft Graph SDK for PHP",
 	"homepage": "https://graph.microsoft.io/en-us/",
