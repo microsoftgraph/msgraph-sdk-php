@@ -26,6 +26,32 @@ namespace Microsoft\Graph\Model;
 class AlternativeSecurityId extends Entity
 {
     /**
+    * Gets the type
+    *
+    * @return int The type
+    */
+    public function getType()
+    {
+        if (array_key_exists("type", $this->_propDict)) {
+            return $this->_propDict["type"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the type
+    *
+    * @param int $val The value of the type
+    *
+    * @return AlternativeSecurityId
+    */
+    public function setType($val)
+    {
+        $this->_propDict["type"] = $val;
+        return $this;
+    }
+    /**
     * Gets the identityProvider
     *
     * @return string The identityProvider
@@ -81,31 +107,5 @@ class AlternativeSecurityId extends Entity
     {
         $this->_propDict["key"] = $val;
          return $this;
-    }
-    /**
-    * Gets the type
-    *
-    * @return int The type
-    */
-    public function getType()
-    {
-        if (array_key_exists("type", $this->_propDict)) {
-            return $this->_propDict["type"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the type
-    *
-    * @param int $val The value of the type
-    *
-    * @return AlternativeSecurityId
-    */
-    public function setType($val)
-    {
-        $this->_propDict["type"] = $val;
-        return $this;
     }
 }

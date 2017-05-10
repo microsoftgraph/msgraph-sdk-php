@@ -1,0 +1,116 @@
+<?php
+/**
+* Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
+* 
+* PlannerAssignment File
+* PHP version 7
+*
+* @category  Library
+* @package   Microsoft.Graph
+* @copyright 2016 Microsoft Corporation
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   GIT: 0.1.0
+* @link      https://graph.microsoft.io/
+*/
+namespace Microsoft\Graph\Model;
+/**
+* PlannerAssignment class
+*
+* @category  Model
+* @package   Microsoft.Graph
+* @copyright 2016 Microsoft Corporation
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   Release: 0.1.0
+* @link      https://graph.microsoft.io/
+*/
+class PlannerAssignment extends Entity
+{
+
+    /**
+    * Gets the assignedBy
+    *
+    * @return IdentitySet The assignedBy
+    */
+    public function getAssignedBy()
+    {
+        if (array_key_exists("assignedBy", $this->_propDict)) {
+            if (is_a($this->_propDict["assignedBy"], "Microsoft\Graph\Model\IdentitySet")) {
+                return $this->_propDict["assignedBy"];
+            } else {
+                $this->_propDict["assignedBy"] = new IdentitySet($this->_propDict["assignedBy"]);
+                return $this->_propDict["assignedBy"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the assignedBy
+    *
+    * @param IdentitySet $val The value to assign to the assignedBy
+    *
+    * @return PlannerAssignment The PlannerAssignment
+    */
+    public function setAssignedBy($val)
+    {
+        $this->_propDict["assignedBy"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the assignedDateTime
+    *
+    * @return \DateTime The assignedDateTime
+    */
+    public function getAssignedDateTime()
+    {
+        if (array_key_exists("assignedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["assignedDateTime"], "Microsoft\Graph\Model\\DateTime")) {
+                return $this->_propDict["assignedDateTime"];
+            } else {
+                $this->_propDict["assignedDateTime"] = new \DateTime($this->_propDict["assignedDateTime"]);
+                return $this->_propDict["assignedDateTime"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the assignedDateTime
+    *
+    * @param \DateTime $val The value to assign to the assignedDateTime
+    *
+    * @return PlannerAssignment The PlannerAssignment
+    */
+    public function setAssignedDateTime($val)
+    {
+        $this->_propDict["assignedDateTime"] = $val;
+         return $this;
+    }
+    /**
+    * Gets the orderHint
+    *
+    * @return string The orderHint
+    */
+    public function getOrderHint()
+    {
+        if (array_key_exists("orderHint", $this->_propDict)) {
+            return $this->_propDict["orderHint"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the orderHint
+    *
+    * @param string $val The value of the orderHint
+    *
+    * @return PlannerAssignment
+    */
+    public function setOrderHint($val)
+    {
+        $this->_propDict["orderHint"] = $val;
+        return $this;
+    }
+}

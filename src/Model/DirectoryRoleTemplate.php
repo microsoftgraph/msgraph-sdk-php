@@ -28,7 +28,6 @@ class DirectoryRoleTemplate extends DirectoryObject
 {
     /**
     * Gets the description
-    * The description to set for the directory role. Read-only.
     *
     * @return string The description
     */
@@ -43,7 +42,6 @@ class DirectoryRoleTemplate extends DirectoryObject
     
     /**
     * Sets the description
-    * The description to set for the directory role. Read-only.
     *
     * @param string $val The description
     *
@@ -57,7 +55,6 @@ class DirectoryRoleTemplate extends DirectoryObject
     
     /**
     * Gets the displayName
-    * The display name to set for the directory role. Read-only.
     *
     * @return string The displayName
     */
@@ -72,7 +69,6 @@ class DirectoryRoleTemplate extends DirectoryObject
     
     /**
     * Sets the displayName
-    * The display name to set for the directory role. Read-only.
     *
     * @param string $val The displayName
     *

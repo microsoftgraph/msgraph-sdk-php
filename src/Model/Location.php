@@ -25,10 +25,61 @@ namespace Microsoft\Graph\Model;
 */
 class Location extends Entity
 {
+    /**
+    * Gets the displayName
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the displayName
+    *
+    * @param string $val The value of the displayName
+    *
+    * @return Location
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the locationEmailAddress
+    *
+    * @return string The locationEmailAddress
+    */
+    public function getLocationEmailAddress()
+    {
+        if (array_key_exists("locationEmailAddress", $this->_propDict)) {
+            return $this->_propDict["locationEmailAddress"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the locationEmailAddress
+    *
+    * @param string $val The value of the locationEmailAddress
+    *
+    * @return Location
+    */
+    public function setLocationEmailAddress($val)
+    {
+        $this->_propDict["locationEmailAddress"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the address
-    * The street address of the location.
     *
     * @return PhysicalAddress The address
     */
@@ -47,7 +98,6 @@ class Location extends Entity
 
     /**
     * Sets the address
-    * The street address of the location.
     *
     * @param PhysicalAddress $val The value to assign to the address
     *
@@ -57,61 +107,5 @@ class Location extends Entity
     {
         $this->_propDict["address"] = $val;
          return $this;
-    }
-    /**
-    * Gets the displayName
-    * The name associated with the location.
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the displayName
-    * The name associated with the location.
-    *
-    * @param string $val The value of the displayName
-    *
-    * @return Location
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the locationEmailAddress
-    * Optional email address of the location.
-    *
-    * @return string The locationEmailAddress
-    */
-    public function getLocationEmailAddress()
-    {
-        if (array_key_exists("locationEmailAddress", $this->_propDict)) {
-            return $this->_propDict["locationEmailAddress"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the locationEmailAddress
-    * Optional email address of the location.
-    *
-    * @param string $val The value of the locationEmailAddress
-    *
-    * @return Location
-    */
-    public function setLocationEmailAddress($val)
-    {
-        $this->_propDict["locationEmailAddress"] = $val;
-        return $this;
     }
 }

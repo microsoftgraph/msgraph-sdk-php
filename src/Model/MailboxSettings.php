@@ -28,7 +28,6 @@ class MailboxSettings extends Entity
 
     /**
     * Gets the automaticRepliesSetting
-    * Configuration settings to automatically notify the sender of an incoming email with a message from the signed-in user.
     *
     * @return AutomaticRepliesSetting The automaticRepliesSetting
     */
@@ -47,7 +46,6 @@ class MailboxSettings extends Entity
 
     /**
     * Sets the automaticRepliesSetting
-    * Configuration settings to automatically notify the sender of an incoming email with a message from the signed-in user.
     *
     * @param AutomaticRepliesSetting $val The value to assign to the automaticRepliesSetting
     *
@@ -58,10 +56,61 @@ class MailboxSettings extends Entity
         $this->_propDict["automaticRepliesSetting"] = $val;
          return $this;
     }
+    /**
+    * Gets the archiveFolder
+    *
+    * @return string The archiveFolder
+    */
+    public function getArchiveFolder()
+    {
+        if (array_key_exists("archiveFolder", $this->_propDict)) {
+            return $this->_propDict["archiveFolder"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the archiveFolder
+    *
+    * @param string $val The value of the archiveFolder
+    *
+    * @return MailboxSettings
+    */
+    public function setArchiveFolder($val)
+    {
+        $this->_propDict["archiveFolder"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the timeZone
+    *
+    * @return string The timeZone
+    */
+    public function getTimeZone()
+    {
+        if (array_key_exists("timeZone", $this->_propDict)) {
+            return $this->_propDict["timeZone"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the timeZone
+    *
+    * @param string $val The value of the timeZone
+    *
+    * @return MailboxSettings
+    */
+    public function setTimeZone($val)
+    {
+        $this->_propDict["timeZone"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the language
-    * The locale information for the user, including the preferred language and country/region.
     *
     * @return LocaleInfo The language
     */
@@ -80,7 +129,6 @@ class MailboxSettings extends Entity
 
     /**
     * Sets the language
-    * The locale information for the user, including the preferred language and country/region.
     *
     * @param LocaleInfo $val The value to assign to the language
     *
@@ -90,33 +138,5 @@ class MailboxSettings extends Entity
     {
         $this->_propDict["language"] = $val;
          return $this;
-    }
-    /**
-    * Gets the timeZone
-    * The default time zone for the user's mailbox.
-    *
-    * @return string The timeZone
-    */
-    public function getTimeZone()
-    {
-        if (array_key_exists("timeZone", $this->_propDict)) {
-            return $this->_propDict["timeZone"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the timeZone
-    * The default time zone for the user's mailbox.
-    *
-    * @param string $val The value of the timeZone
-    *
-    * @return MailboxSettings
-    */
-    public function setTimeZone($val)
-    {
-        $this->_propDict["timeZone"] = $val;
-        return $this;
     }
 }

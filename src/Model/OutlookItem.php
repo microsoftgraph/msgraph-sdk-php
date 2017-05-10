@@ -27,60 +27,6 @@ namespace Microsoft\Graph\Model;
 class OutlookItem extends Entity
 {
     /**
-    * Gets the categories
-    *
-    * @return string The categories
-    */
-    public function getCategories()
-    {
-        if (array_key_exists("categories", $this->_propDict)) {
-            return $this->_propDict["categories"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the categories
-    *
-    * @param string $val The categories
-    *
-    * @return OutlookItem
-    */
-    public function setCategories($val)
-    {
-        $this->_propDict["categories"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the changeKey
-    *
-    * @return string The changeKey
-    */
-    public function getChangeKey()
-    {
-        if (array_key_exists("changeKey", $this->_propDict)) {
-            return $this->_propDict["changeKey"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the changeKey
-    *
-    * @param string $val The changeKey
-    *
-    * @return OutlookItem
-    */
-    public function setChangeKey($val)
-    {
-        $this->_propDict["changeKey"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the createdDateTime
     *
     * @return \DateTime The createdDateTime
@@ -139,6 +85,60 @@ class OutlookItem extends Entity
     public function setLastModifiedDateTime($val)
     {
         $this->_propDict["lastModifiedDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the changeKey
+    *
+    * @return string The changeKey
+    */
+    public function getChangeKey()
+    {
+        if (array_key_exists("changeKey", $this->_propDict)) {
+            return $this->_propDict["changeKey"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the changeKey
+    *
+    * @param string $val The changeKey
+    *
+    * @return OutlookItem
+    */
+    public function setChangeKey($val)
+    {
+        $this->_propDict["changeKey"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the categories
+    *
+    * @return string The categories
+    */
+    public function getCategories()
+    {
+        if (array_key_exists("categories", $this->_propDict)) {
+            return $this->_propDict["categories"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the categories
+    *
+    * @param string $val The categories
+    *
+    * @return OutlookItem
+    */
+    public function setCategories($val)
+    {
+        $this->_propDict["categories"] = $val;
         return $this;
     }
     

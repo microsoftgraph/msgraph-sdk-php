@@ -31,6 +31,6 @@ class BodyType extends Enum
     /**
     * The Enum BodyType
     */
-    const HTML = "html";
     const TEXT = "text";
+    const HTML = "html";
 }

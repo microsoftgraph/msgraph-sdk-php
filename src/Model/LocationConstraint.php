@@ -51,6 +51,32 @@ class LocationConstraint extends Entity
         $this->_propDict["isRequired"] = $val;
         return $this;
     }
+    /**
+    * Gets the suggestLocation
+    *
+    * @return bool The suggestLocation
+    */
+    public function getSuggestLocation()
+    {
+        if (array_key_exists("suggestLocation", $this->_propDict)) {
+            return $this->_propDict["suggestLocation"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the suggestLocation
+    *
+    * @param bool $val The value of the suggestLocation
+    *
+    * @return LocationConstraint
+    */
+    public function setSuggestLocation($val)
+    {
+        $this->_propDict["suggestLocation"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the locations
@@ -81,31 +107,5 @@ class LocationConstraint extends Entity
     {
         $this->_propDict["locations"] = $val;
          return $this;
-    }
-    /**
-    * Gets the suggestLocation
-    *
-    * @return bool The suggestLocation
-    */
-    public function getSuggestLocation()
-    {
-        if (array_key_exists("suggestLocation", $this->_propDict)) {
-            return $this->_propDict["suggestLocation"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the suggestLocation
-    *
-    * @param bool $val The value of the suggestLocation
-    *
-    * @return LocationConstraint
-    */
-    public function setSuggestLocation($val)
-    {
-        $this->_propDict["suggestLocation"] = $val;
-        return $this;
     }
 }

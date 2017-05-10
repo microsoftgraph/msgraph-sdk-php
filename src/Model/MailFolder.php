@@ -27,37 +27,7 @@ namespace Microsoft\Graph\Model;
 class MailFolder extends Entity
 {
     /**
-    * Gets the childFolderCount
-    * The number of immediate child mailFolders in the current mailFolder.
-    *
-    * @return int The childFolderCount
-    */
-    public function getChildFolderCount()
-    {
-        if (array_key_exists("childFolderCount", $this->_propDict)) {
-            return $this->_propDict["childFolderCount"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the childFolderCount
-    * The number of immediate child mailFolders in the current mailFolder.
-    *
-    * @param int $val The childFolderCount
-    *
-    * @return MailFolder
-    */
-    public function setChildFolderCount($val)
-    {
-        $this->_propDict["childFolderCount"] = intval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the displayName
-    * The mailFolder's display name.
     *
     * @return string The displayName
     */
@@ -72,7 +42,6 @@ class MailFolder extends Entity
     
     /**
     * Sets the displayName
-    * The mailFolder's display name.
     *
     * @param string $val The displayName
     *
@@ -86,7 +55,6 @@ class MailFolder extends Entity
     
     /**
     * Gets the parentFolderId
-    * The unique identifier for the mailFolder's parent mailFolder.
     *
     * @return string The parentFolderId
     */
@@ -101,7 +69,6 @@ class MailFolder extends Entity
     
     /**
     * Sets the parentFolderId
-    * The unique identifier for the mailFolder's parent mailFolder.
     *
     * @param string $val The parentFolderId
     *
@@ -114,37 +81,34 @@ class MailFolder extends Entity
     }
     
     /**
-    * Gets the totalItemCount
-    * The number of items in the mailFolder.
+    * Gets the childFolderCount
     *
-    * @return int The totalItemCount
+    * @return int The childFolderCount
     */
-    public function getTotalItemCount()
+    public function getChildFolderCount()
     {
-        if (array_key_exists("totalItemCount", $this->_propDict)) {
-            return $this->_propDict["totalItemCount"];
+        if (array_key_exists("childFolderCount", $this->_propDict)) {
+            return $this->_propDict["childFolderCount"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the totalItemCount
-    * The number of items in the mailFolder.
+    * Sets the childFolderCount
     *
-    * @param int $val The totalItemCount
+    * @param int $val The childFolderCount
     *
     * @return MailFolder
     */
-    public function setTotalItemCount($val)
+    public function setChildFolderCount($val)
     {
-        $this->_propDict["totalItemCount"] = intval($val);
+        $this->_propDict["childFolderCount"] = intval($val);
         return $this;
     }
     
     /**
     * Gets the unreadItemCount
-    * The number of items in the mailFolder marked as unread.
     *
     * @return int The unreadItemCount
     */
@@ -159,7 +123,6 @@ class MailFolder extends Entity
     
     /**
     * Sets the unreadItemCount
-    * The number of items in the mailFolder marked as unread.
     *
     * @param int $val The unreadItemCount
     *
@@ -171,40 +134,36 @@ class MailFolder extends Entity
         return $this;
     }
     
-
-     /** 
-     * Gets the childFolders
-    * The collection of child folders in the mailFolder.
-     *
-     * @return array The childFolders
-     */
-    public function getChildFolders()
+    /**
+    * Gets the totalItemCount
+    *
+    * @return int The totalItemCount
+    */
+    public function getTotalItemCount()
     {
-        if (array_key_exists("childFolders", $this->_propDict)) {
-           return $this->_propDict["childFolders"];
+        if (array_key_exists("totalItemCount", $this->_propDict)) {
+            return $this->_propDict["totalItemCount"];
         } else {
             return null;
         }
     }
     
-    /** 
-    * Sets the childFolders
-    * The collection of child folders in the mailFolder.
+    /**
+    * Sets the totalItemCount
     *
-    * @param MailFolder $val The childFolders
+    * @param int $val The totalItemCount
     *
     * @return MailFolder
     */
-    public function setChildFolders($val)
+    public function setTotalItemCount($val)
     {
-		$this->_propDict["childFolders"] = $val;
+        $this->_propDict["totalItemCount"] = intval($val);
         return $this;
     }
     
 
      /** 
      * Gets the messages
-    * The collection of messages in the mailFolder.
      *
      * @return array The messages
      */
@@ -219,7 +178,6 @@ class MailFolder extends Entity
     
     /** 
     * Sets the messages
-    * The collection of messages in the mailFolder.
     *
     * @param Message $val The messages
     *
@@ -233,38 +191,35 @@ class MailFolder extends Entity
     
 
      /** 
-     * Gets the multiValueExtendedProperties
-    * The collection of multi-value extended properties defined for the mailFolder. Read-only. Nullable.
+     * Gets the childFolders
      *
-     * @return array The multiValueExtendedProperties
+     * @return array The childFolders
      */
-    public function getMultiValueExtendedProperties()
+    public function getChildFolders()
     {
-        if (array_key_exists("multiValueExtendedProperties", $this->_propDict)) {
-           return $this->_propDict["multiValueExtendedProperties"];
+        if (array_key_exists("childFolders", $this->_propDict)) {
+           return $this->_propDict["childFolders"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the multiValueExtendedProperties
-    * The collection of multi-value extended properties defined for the mailFolder. Read-only. Nullable.
+    * Sets the childFolders
     *
-    * @param MultiValueLegacyExtendedProperty $val The multiValueExtendedProperties
+    * @param MailFolder $val The childFolders
     *
     * @return MailFolder
     */
-    public function setMultiValueExtendedProperties($val)
+    public function setChildFolders($val)
     {
-		$this->_propDict["multiValueExtendedProperties"] = $val;
+		$this->_propDict["childFolders"] = $val;
         return $this;
     }
     
 
      /** 
      * Gets the singleValueExtendedProperties
-    * The collection of single-value extended properties defined for the mailFolder. Read-only. Nullable.
      *
      * @return array The singleValueExtendedProperties
      */
@@ -279,7 +234,6 @@ class MailFolder extends Entity
     
     /** 
     * Sets the singleValueExtendedProperties
-    * The collection of single-value extended properties defined for the mailFolder. Read-only. Nullable.
     *
     * @param SingleValueLegacyExtendedProperty $val The singleValueExtendedProperties
     *
@@ -288,6 +242,34 @@ class MailFolder extends Entity
     public function setSingleValueExtendedProperties($val)
     {
 		$this->_propDict["singleValueExtendedProperties"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the multiValueExtendedProperties
+     *
+     * @return array The multiValueExtendedProperties
+     */
+    public function getMultiValueExtendedProperties()
+    {
+        if (array_key_exists("multiValueExtendedProperties", $this->_propDict)) {
+           return $this->_propDict["multiValueExtendedProperties"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the multiValueExtendedProperties
+    *
+    * @param MultiValueLegacyExtendedProperty $val The multiValueExtendedProperties
+    *
+    * @return MailFolder
+    */
+    public function setMultiValueExtendedProperties($val)
+    {
+		$this->_propDict["multiValueExtendedProperties"] = $val;
         return $this;
     }
     

@@ -24,11 +24,10 @@ namespace Microsoft\Graph\Model;
 * @version   Release: 0.1.0
 * @link      https://graph.microsoft.io/
 */
-class Drive extends Entity
+class Drive extends BaseItem
 {
     /**
     * Gets the driveType
-    * Describes the type of drive represented by this resource. OneDrive personal drives will return personal. OneDrive for Business will return business. SharePoint document libraries will return documentLibrary. Read-only.
     *
     * @return string The driveType
     */
@@ -43,7 +42,6 @@ class Drive extends Entity
     
     /**
     * Sets the driveType
-    * Describes the type of drive represented by this resource. OneDrive personal drives will return personal. OneDrive for Business will return business. SharePoint document libraries will return documentLibrary. Read-only.
     *
     * @param string $val The driveType
     *
@@ -57,7 +55,6 @@ class Drive extends Entity
     
     /**
     * Gets the owner
-    * Optional. The user account that owns the drive.
     *
     * @return IdentitySet The owner
     */
@@ -76,7 +73,6 @@ class Drive extends Entity
     
     /**
     * Sets the owner
-    * Optional. The user account that owns the drive.
     *
     * @param IdentitySet $val The owner
     *
@@ -90,7 +86,6 @@ class Drive extends Entity
     
     /**
     * Gets the quota
-    * Optional. Information about the drive's storage space quota.
     *
     * @return Quota The quota
     */
@@ -109,7 +104,6 @@ class Drive extends Entity
     
     /**
     * Sets the quota
-    * Optional. Information about the drive's storage space quota.
     *
     * @param Quota $val The quota
     *
@@ -121,10 +115,40 @@ class Drive extends Entity
         return $this;
     }
     
+    /**
+    * Gets the sharePointIds
+    *
+    * @return SharepointIds The sharePointIds
+    */
+    public function getSharePointIds()
+    {
+        if (array_key_exists("sharePointIds", $this->_propDict)) {
+            if (is_a($this->_propDict["sharePointIds"], "Microsoft\Graph\Model\SharepointIds")) {
+                return $this->_propDict["sharePointIds"];
+            } else {
+                $this->_propDict["sharePointIds"] = new SharepointIds($this->_propDict["sharePointIds"]);
+                return $this->_propDict["sharePointIds"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the sharePointIds
+    *
+    * @param SharepointIds $val The sharePointIds
+    *
+    * @return Drive
+    */
+    public function setSharePointIds($val)
+    {
+        $this->_propDict["sharePointIds"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the items
-    * All items contained in the drive. Read-only. Nullable.
      *
      * @return array The items
      */
@@ -139,7 +163,6 @@ class Drive extends Entity
     
     /** 
     * Sets the items
-    * All items contained in the drive. Read-only. Nullable.
     *
     * @param DriveItem $val The items
     *
@@ -153,7 +176,6 @@ class Drive extends Entity
     
     /**
     * Gets the root
-    * The root folder of the drive. Read-only.
     *
     * @return DriveItem The root
     */
@@ -172,7 +194,6 @@ class Drive extends Entity
     
     /**
     * Sets the root
-    * The root folder of the drive. Read-only.
     *
     * @param DriveItem $val The root
     *
@@ -187,7 +208,6 @@ class Drive extends Entity
 
      /** 
      * Gets the special
-    * Collection of common folders available in OneDrive. Read-only. Nullable.
      *
      * @return array The special
      */
@@ -202,7 +222,6 @@ class Drive extends Entity
     
     /** 
     * Sets the special
-    * Collection of common folders available in OneDrive. Read-only. Nullable.
     *
     * @param DriveItem $val The special
     *

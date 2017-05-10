@@ -24,11 +24,10 @@ namespace Microsoft\Graph\Model;
 * @version   Release: 0.1.0
 * @link      https://graph.microsoft.io/
 */
-class SharedDriveItem extends Entity
+class SharedDriveItem extends BaseItem
 {
     /**
     * Gets the name
-    * The display name of the shared item.
     *
     * @return string The name
     */
@@ -43,7 +42,6 @@ class SharedDriveItem extends Entity
     
     /**
     * Sets the name
-    * The display name of the shared item.
     *
     * @param string $val The name
     *
@@ -57,7 +55,6 @@ class SharedDriveItem extends Entity
     
     /**
     * Gets the owner
-    * Information about the owner of the shared item being referenced.
     *
     * @return IdentitySet The owner
     */
@@ -76,7 +73,6 @@ class SharedDriveItem extends Entity
     
     /**
     * Sets the owner
-    * Information about the owner of the shared item being referenced.
     *
     * @param IdentitySet $val The owner
     *
@@ -85,6 +81,37 @@ class SharedDriveItem extends Entity
     public function setOwner($val)
     {
         $this->_propDict["owner"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the driveItem
+    *
+    * @return DriveItem The driveItem
+    */
+    public function getDriveItem()
+    {
+        if (array_key_exists("driveItem", $this->_propDict)) {
+            if (is_a($this->_propDict["driveItem"], "Microsoft\Graph\Model\DriveItem")) {
+                return $this->_propDict["driveItem"];
+            } else {
+                $this->_propDict["driveItem"] = new DriveItem($this->_propDict["driveItem"]);
+                return $this->_propDict["driveItem"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the driveItem
+    *
+    * @param DriveItem $val The driveItem
+    *
+    * @return SharedDriveItem
+    */
+    public function setDriveItem($val)
+    {
+        $this->_propDict["driveItem"] = $val;
         return $this;
     }
     
@@ -144,6 +171,37 @@ class SharedDriveItem extends Entity
     public function setRoot($val)
     {
         $this->_propDict["root"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the site
+    *
+    * @return Site The site
+    */
+    public function getSite()
+    {
+        if (array_key_exists("site", $this->_propDict)) {
+            if (is_a($this->_propDict["site"], "Microsoft\Graph\Model\Site")) {
+                return $this->_propDict["site"];
+            } else {
+                $this->_propDict["site"] = new Site($this->_propDict["site"]);
+                return $this->_propDict["site"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the site
+    *
+    * @param Site $val The site
+    *
+    * @return SharedDriveItem
+    */
+    public function setSite($val)
+    {
+        $this->_propDict["site"] = $val;
         return $this;
     }
     

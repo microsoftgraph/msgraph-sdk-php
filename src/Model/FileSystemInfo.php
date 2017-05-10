@@ -28,7 +28,6 @@ class FileSystemInfo extends Entity
 
     /**
     * Gets the createdDateTime
-    * The UTC date and time the file was created on a client.
     *
     * @return \DateTime The createdDateTime
     */
@@ -47,7 +46,6 @@ class FileSystemInfo extends Entity
 
     /**
     * Sets the createdDateTime
-    * The UTC date and time the file was created on a client.
     *
     * @param \DateTime $val The value to assign to the createdDateTime
     *
@@ -60,8 +58,38 @@ class FileSystemInfo extends Entity
     }
 
     /**
+    * Gets the lastAccessedDateTime
+    *
+    * @return \DateTime The lastAccessedDateTime
+    */
+    public function getLastAccessedDateTime()
+    {
+        if (array_key_exists("lastAccessedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastAccessedDateTime"], "Microsoft\Graph\Model\\DateTime")) {
+                return $this->_propDict["lastAccessedDateTime"];
+            } else {
+                $this->_propDict["lastAccessedDateTime"] = new \DateTime($this->_propDict["lastAccessedDateTime"]);
+                return $this->_propDict["lastAccessedDateTime"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the lastAccessedDateTime
+    *
+    * @param \DateTime $val The value to assign to the lastAccessedDateTime
+    *
+    * @return FileSystemInfo The FileSystemInfo
+    */
+    public function setLastAccessedDateTime($val)
+    {
+        $this->_propDict["lastAccessedDateTime"] = $val;
+         return $this;
+    }
+
+    /**
     * Gets the lastModifiedDateTime
-    * The UTC date and time the file was last modified on a client.
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -80,7 +108,6 @@ class FileSystemInfo extends Entity
 
     /**
     * Sets the lastModifiedDateTime
-    * The UTC date and time the file was last modified on a client.
     *
     * @param \DateTime $val The value to assign to the lastModifiedDateTime
     *

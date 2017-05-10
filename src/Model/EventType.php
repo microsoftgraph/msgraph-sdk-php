@@ -31,8 +31,8 @@ class EventType extends Enum
     /**
     * The Enum EventType
     */
-    const EXCEPTION = "exception";
-    const OCCURRENCE = "occurrence";
-    const SERIES_MASTER = "seriesMaster";
     const SINGLE_INSTANCE = "singleInstance";
+    const OCCURRENCE = "occurrence";
+    const EXCEPTION = "exception";
+    const SERIES_MASTER = "seriesMaster";
 }

@@ -27,86 +27,34 @@ class RecurrenceRange extends Entity
 {
 
     /**
-    * Gets the endDate
+    * Gets the type
     *
-    * @return \DateTime The endDate
+    * @return RecurrenceRangeType The type
     */
-    public function getEndDate()
+    public function getType()
     {
-        if (array_key_exists("endDate", $this->_propDict)) {
-            if (is_a($this->_propDict["endDate"], "Microsoft\Graph\Model\\DateTime")) {
-                return $this->_propDict["endDate"];
+        if (array_key_exists("type", $this->_propDict)) {
+            if (is_a($this->_propDict["type"], "Microsoft\Graph\Model\RecurrenceRangeType")) {
+                return $this->_propDict["type"];
             } else {
-                $this->_propDict["endDate"] = new \DateTime($this->_propDict["endDate"]);
-                return $this->_propDict["endDate"];
+                $this->_propDict["type"] = new RecurrenceRangeType($this->_propDict["type"]);
+                return $this->_propDict["type"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the endDate
+    * Sets the type
     *
-    * @param \DateTime $val The value to assign to the endDate
+    * @param RecurrenceRangeType $val The value to assign to the type
     *
     * @return RecurrenceRange The RecurrenceRange
     */
-    public function setEndDate($val)
+    public function setType($val)
     {
-        $this->_propDict["endDate"] = $val;
+        $this->_propDict["type"] = $val;
          return $this;
-    }
-    /**
-    * Gets the numberOfOccurrences
-    *
-    * @return int The numberOfOccurrences
-    */
-    public function getNumberOfOccurrences()
-    {
-        if (array_key_exists("numberOfOccurrences", $this->_propDict)) {
-            return $this->_propDict["numberOfOccurrences"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the numberOfOccurrences
-    *
-    * @param int $val The value of the numberOfOccurrences
-    *
-    * @return RecurrenceRange
-    */
-    public function setNumberOfOccurrences($val)
-    {
-        $this->_propDict["numberOfOccurrences"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the recurrenceTimeZone
-    *
-    * @return string The recurrenceTimeZone
-    */
-    public function getRecurrenceTimeZone()
-    {
-        if (array_key_exists("recurrenceTimeZone", $this->_propDict)) {
-            return $this->_propDict["recurrenceTimeZone"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the recurrenceTimeZone
-    *
-    * @param string $val The value of the recurrenceTimeZone
-    *
-    * @return RecurrenceRange
-    */
-    public function setRecurrenceTimeZone($val)
-    {
-        $this->_propDict["recurrenceTimeZone"] = $val;
-        return $this;
     }
 
     /**
@@ -141,33 +89,85 @@ class RecurrenceRange extends Entity
     }
 
     /**
-    * Gets the type
+    * Gets the endDate
     *
-    * @return RecurrenceRangeType The type
+    * @return \DateTime The endDate
     */
-    public function getType()
+    public function getEndDate()
     {
-        if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "Microsoft\Graph\Model\RecurrenceRangeType")) {
-                return $this->_propDict["type"];
+        if (array_key_exists("endDate", $this->_propDict)) {
+            if (is_a($this->_propDict["endDate"], "Microsoft\Graph\Model\\DateTime")) {
+                return $this->_propDict["endDate"];
             } else {
-                $this->_propDict["type"] = new RecurrenceRangeType($this->_propDict["type"]);
-                return $this->_propDict["type"];
+                $this->_propDict["endDate"] = new \DateTime($this->_propDict["endDate"]);
+                return $this->_propDict["endDate"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the type
+    * Sets the endDate
     *
-    * @param RecurrenceRangeType $val The value to assign to the type
+    * @param \DateTime $val The value to assign to the endDate
     *
     * @return RecurrenceRange The RecurrenceRange
     */
-    public function setType($val)
+    public function setEndDate($val)
     {
-        $this->_propDict["type"] = $val;
+        $this->_propDict["endDate"] = $val;
          return $this;
+    }
+    /**
+    * Gets the recurrenceTimeZone
+    *
+    * @return string The recurrenceTimeZone
+    */
+    public function getRecurrenceTimeZone()
+    {
+        if (array_key_exists("recurrenceTimeZone", $this->_propDict)) {
+            return $this->_propDict["recurrenceTimeZone"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the recurrenceTimeZone
+    *
+    * @param string $val The value of the recurrenceTimeZone
+    *
+    * @return RecurrenceRange
+    */
+    public function setRecurrenceTimeZone($val)
+    {
+        $this->_propDict["recurrenceTimeZone"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the numberOfOccurrences
+    *
+    * @return int The numberOfOccurrences
+    */
+    public function getNumberOfOccurrences()
+    {
+        if (array_key_exists("numberOfOccurrences", $this->_propDict)) {
+            return $this->_propDict["numberOfOccurrences"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the numberOfOccurrences
+    *
+    * @param int $val The value of the numberOfOccurrences
+    *
+    * @return RecurrenceRange
+    */
+    public function setNumberOfOccurrences($val)
+    {
+        $this->_propDict["numberOfOccurrences"] = $val;
+        return $this;
     }
 }

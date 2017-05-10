@@ -57,37 +57,6 @@ class Workbook extends Entity
         return $this;
     }
     
-    /**
-    * Gets the functions
-    *
-    * @return WorkbookFunctions The functions
-    */
-    public function getFunctions()
-    {
-        if (array_key_exists("functions", $this->_propDict)) {
-            if (is_a($this->_propDict["functions"], "Microsoft\Graph\Model\WorkbookFunctions")) {
-                return $this->_propDict["functions"];
-            } else {
-                $this->_propDict["functions"] = new WorkbookFunctions($this->_propDict["functions"]);
-                return $this->_propDict["functions"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the functions
-    *
-    * @param WorkbookFunctions $val The functions
-    *
-    * @return Workbook
-    */
-    public function setFunctions($val)
-    {
-        $this->_propDict["functions"] = $val;
-        return $this;
-    }
-    
 
      /** 
      * Gets the names
@@ -169,6 +138,37 @@ class Workbook extends Entity
     public function setWorksheets($val)
     {
 		$this->_propDict["worksheets"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the functions
+    *
+    * @return WorkbookFunctions The functions
+    */
+    public function getFunctions()
+    {
+        if (array_key_exists("functions", $this->_propDict)) {
+            if (is_a($this->_propDict["functions"], "Microsoft\Graph\Model\WorkbookFunctions")) {
+                return $this->_propDict["functions"];
+            } else {
+                $this->_propDict["functions"] = new WorkbookFunctions($this->_propDict["functions"]);
+                return $this->_propDict["functions"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the functions
+    *
+    * @param WorkbookFunctions $val The functions
+    *
+    * @return Workbook
+    */
+    public function setFunctions($val)
+    {
+        $this->_propDict["functions"] = $val;
         return $this;
     }
     

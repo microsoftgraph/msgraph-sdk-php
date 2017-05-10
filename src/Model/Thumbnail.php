@@ -58,7 +58,6 @@ class Thumbnail extends Entity
     }
     /**
     * Gets the height
-    * The height of the thumbnail, in pixels.
     *
     * @return int The height
     */
@@ -73,7 +72,6 @@ class Thumbnail extends Entity
 
     /**
     * Sets the height
-    * The height of the thumbnail, in pixels.
     *
     * @param int $val The value of the height
     *
@@ -85,8 +83,33 @@ class Thumbnail extends Entity
         return $this;
     }
     /**
+    * Gets the sourceItemId
+    *
+    * @return string The sourceItemId
+    */
+    public function getSourceItemId()
+    {
+        if (array_key_exists("sourceItemId", $this->_propDict)) {
+            return $this->_propDict["sourceItemId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the sourceItemId
+    *
+    * @param string $val The value of the sourceItemId
+    *
+    * @return Thumbnail
+    */
+    public function setSourceItemId($val)
+    {
+        $this->_propDict["sourceItemId"] = $val;
+        return $this;
+    }
+    /**
     * Gets the url
-    * The URL used to fetch the thumbnail content.
     *
     * @return string The url
     */
@@ -101,7 +124,6 @@ class Thumbnail extends Entity
 
     /**
     * Sets the url
-    * The URL used to fetch the thumbnail content.
     *
     * @param string $val The value of the url
     *
@@ -114,7 +136,6 @@ class Thumbnail extends Entity
     }
     /**
     * Gets the width
-    * The width of the thumbnail, in pixels.
     *
     * @return int The width
     */
@@ -129,7 +150,6 @@ class Thumbnail extends Entity
 
     /**
     * Sets the width
-    * The width of the thumbnail, in pixels.
     *
     * @param int $val The value of the width
     *

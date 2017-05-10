@@ -28,7 +28,6 @@ class Device extends DirectoryObject
 {
     /**
     * Gets the accountEnabled
-    * true if the account is enabled; otherwise, false. Required.
     *
     * @return bool The accountEnabled
     */
@@ -43,7 +42,6 @@ class Device extends DirectoryObject
     
     /**
     * Sets the accountEnabled
-    * true if the account is enabled; otherwise, false. Required.
     *
     * @param bool $val The accountEnabled
     *
@@ -58,7 +56,6 @@ class Device extends DirectoryObject
 
      /** 
      * Gets the alternativeSecurityIds
-    * The any operator is required for filter expressions on multi-valued properties. Not nullable. Required.
      *
      * @return array The alternativeSecurityIds
      */
@@ -73,7 +70,6 @@ class Device extends DirectoryObject
     
     /** 
     * Sets the alternativeSecurityIds
-    * The any operator is required for filter expressions on multi-valued properties. Not nullable. Required.
     *
     * @param AlternativeSecurityId $val The alternativeSecurityIds
     *
@@ -87,7 +83,6 @@ class Device extends DirectoryObject
     
     /**
     * Gets the approximateLastSignInDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The approximateLastSignInDateTime
     */
@@ -106,7 +101,6 @@ class Device extends DirectoryObject
     
     /**
     * Sets the approximateLastSignInDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The approximateLastSignInDateTime
     *
@@ -120,7 +114,6 @@ class Device extends DirectoryObject
     
     /**
     * Gets the deviceId
-    * Unique client specified GUID to represent the device. Required.
     *
     * @return string The deviceId
     */
@@ -135,7 +128,6 @@ class Device extends DirectoryObject
     
     /**
     * Sets the deviceId
-    * Unique client specified GUID to represent the device. Required.
     *
     * @param string $val The deviceId
     *
@@ -203,7 +195,6 @@ class Device extends DirectoryObject
     
     /**
     * Gets the displayName
-    * The display name for the device. Required.
     *
     * @return string The displayName
     */
@@ -218,7 +209,6 @@ class Device extends DirectoryObject
     
     /**
     * Sets the displayName
-    * The display name for the device. Required.
     *
     * @param string $val The displayName
     *
@@ -232,7 +222,6 @@ class Device extends DirectoryObject
     
     /**
     * Gets the isCompliant
-    * true if the device complies with Mobile Device Management (MDM) policies; otherwise, false.
     *
     * @return bool The isCompliant
     */
@@ -247,7 +236,6 @@ class Device extends DirectoryObject
     
     /**
     * Sets the isCompliant
-    * true if the device complies with Mobile Device Management (MDM) policies; otherwise, false.
     *
     * @param bool $val The isCompliant
     *
@@ -261,7 +249,6 @@ class Device extends DirectoryObject
     
     /**
     * Gets the isManaged
-    * true if the device is managed by a Mobile Device Management (MDM) app such as Intune; otherwise, false.
     *
     * @return bool The isManaged
     */
@@ -276,7 +263,6 @@ class Device extends DirectoryObject
     
     /**
     * Sets the isManaged
-    * true if the device is managed by a Mobile Device Management (MDM) app such as Intune; otherwise, false.
     *
     * @param bool $val The isManaged
     *
@@ -290,7 +276,6 @@ class Device extends DirectoryObject
     
     /**
     * Gets the onPremisesLastSyncDateTime
-    * The last time at which the object was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The onPremisesLastSyncDateTime
     */
@@ -309,7 +294,6 @@ class Device extends DirectoryObject
     
     /**
     * Sets the onPremisesLastSyncDateTime
-    * The last time at which the object was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The onPremisesLastSyncDateTime
     *
@@ -323,7 +307,6 @@ class Device extends DirectoryObject
     
     /**
     * Gets the onPremisesSyncEnabled
-    * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default).
     *
     * @return bool The onPremisesSyncEnabled
     */
@@ -338,7 +321,6 @@ class Device extends DirectoryObject
     
     /**
     * Sets the onPremisesSyncEnabled
-    * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default).
     *
     * @param bool $val The onPremisesSyncEnabled
     *
@@ -352,7 +334,6 @@ class Device extends DirectoryObject
     
     /**
     * Gets the operatingSystem
-    * The type of operating system on the device. Required.
     *
     * @return string The operatingSystem
     */
@@ -367,7 +348,6 @@ class Device extends DirectoryObject
     
     /**
     * Sets the operatingSystem
-    * The type of operating system on the device. Required.
     *
     * @param string $val The operatingSystem
     *
@@ -381,7 +361,6 @@ class Device extends DirectoryObject
     
     /**
     * Gets the operatingSystemVersion
-    * The version of the operating system on the device. Required.
     *
     * @return string The operatingSystemVersion
     */
@@ -396,7 +375,6 @@ class Device extends DirectoryObject
     
     /**
     * Sets the operatingSystemVersion
-    * The version of the operating system on the device. Required.
     *
     * @param string $val The operatingSystemVersion
     *
@@ -410,7 +388,6 @@ class Device extends DirectoryObject
     
     /**
     * Gets the physicalIds
-    * Not nullable.
     *
     * @return string The physicalIds
     */
@@ -425,7 +402,6 @@ class Device extends DirectoryObject
     
     /**
     * Sets the physicalIds
-    * Not nullable.
     *
     * @param string $val The physicalIds
     *
@@ -467,7 +443,6 @@ class Device extends DirectoryObject
 
      /** 
      * Gets the registeredOwners
-    * Users that are registered owners of the device. Read-only. Nullable.
      *
      * @return array The registeredOwners
      */
@@ -482,7 +457,6 @@ class Device extends DirectoryObject
     
     /** 
     * Sets the registeredOwners
-    * Users that are registered owners of the device. Read-only. Nullable.
     *
     * @param DirectoryObject $val The registeredOwners
     *
@@ -497,7 +471,6 @@ class Device extends DirectoryObject
 
      /** 
      * Gets the registeredUsers
-    * Users that are registered users of the device. Read-only. Nullable.
      *
      * @return array The registeredUsers
      */
@@ -512,7 +485,6 @@ class Device extends DirectoryObject
     
     /** 
     * Sets the registeredUsers
-    * Users that are registered users of the device. Read-only. Nullable.
     *
     * @param DirectoryObject $val The registeredUsers
     *

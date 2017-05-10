@@ -27,37 +27,34 @@ namespace Microsoft\Graph\Model;
 class Calendar extends Entity
 {
     /**
-    * Gets the changeKey
-    * Identifies the version of the calendar object. Every time the calendar is changed, ChangeKey  changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
+    * Gets the name
     *
-    * @return string The changeKey
+    * @return string The name
     */
-    public function getChangeKey()
+    public function getName()
     {
-        if (array_key_exists("changeKey", $this->_propDict)) {
-            return $this->_propDict["changeKey"];
+        if (array_key_exists("name", $this->_propDict)) {
+            return $this->_propDict["name"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the changeKey
-    * Identifies the version of the calendar object. Every time the calendar is changed, ChangeKey  changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
+    * Sets the name
     *
-    * @param string $val The changeKey
+    * @param string $val The name
     *
     * @return Calendar
     */
-    public function setChangeKey($val)
+    public function setName($val)
     {
-        $this->_propDict["changeKey"] = $val;
+        $this->_propDict["name"] = $val;
         return $this;
     }
     
     /**
     * Gets the color
-    * Specifies the color theme to distinguish the calendar from other calendars in a UI. The property values are: LightBlue=0, LightGreen=1, LightOrange=2, LightGray=3, LightYellow=4, LightTeal=5, LightPink=6, LightBrown=7, LightRed=8, MaxColor=9, Auto=-1
     *
     * @return CalendarColor The color
     */
@@ -76,7 +73,6 @@ class Calendar extends Entity
     
     /**
     * Sets the color
-    * Specifies the color theme to distinguish the calendar from other calendars in a UI. The property values are: LightBlue=0, LightGreen=1, LightOrange=2, LightGray=3, LightYellow=4, LightTeal=5, LightPink=6, LightBrown=7, LightRed=8, MaxColor=9, Auto=-1
     *
     * @param CalendarColor $val The color
     *
@@ -89,68 +85,35 @@ class Calendar extends Entity
     }
     
     /**
-    * Gets the name
-    * The calendar name.
+    * Gets the changeKey
     *
-    * @return string The name
+    * @return string The changeKey
     */
-    public function getName()
+    public function getChangeKey()
     {
-        if (array_key_exists("name", $this->_propDict)) {
-            return $this->_propDict["name"];
+        if (array_key_exists("changeKey", $this->_propDict)) {
+            return $this->_propDict["changeKey"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the name
-    * The calendar name.
+    * Sets the changeKey
     *
-    * @param string $val The name
-    *
-    * @return Calendar
-    */
-    public function setName($val)
-    {
-        $this->_propDict["name"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the calendarView
-    * The calendar view for the calendar. Navigation property. Read-only.
-     *
-     * @return array The calendarView
-     */
-    public function getCalendarView()
-    {
-        if (array_key_exists("calendarView", $this->_propDict)) {
-           return $this->_propDict["calendarView"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the calendarView
-    * The calendar view for the calendar. Navigation property. Read-only.
-    *
-    * @param Event $val The calendarView
+    * @param string $val The changeKey
     *
     * @return Calendar
     */
-    public function setCalendarView($val)
+    public function setChangeKey($val)
     {
-		$this->_propDict["calendarView"] = $val;
+        $this->_propDict["changeKey"] = $val;
         return $this;
     }
     
 
      /** 
      * Gets the events
-    * The events in the calendar. Navigation property. Read-only.
      *
      * @return array The events
      */
@@ -165,7 +128,6 @@ class Calendar extends Entity
     
     /** 
     * Sets the events
-    * The events in the calendar. Navigation property. Read-only.
     *
     * @param Event $val The events
     *
@@ -179,38 +141,35 @@ class Calendar extends Entity
     
 
      /** 
-     * Gets the multiValueExtendedProperties
-    * The collection of multi-value extended properties defined for the calendar. Read-only. Nullable.
+     * Gets the calendarView
      *
-     * @return array The multiValueExtendedProperties
+     * @return array The calendarView
      */
-    public function getMultiValueExtendedProperties()
+    public function getCalendarView()
     {
-        if (array_key_exists("multiValueExtendedProperties", $this->_propDict)) {
-           return $this->_propDict["multiValueExtendedProperties"];
+        if (array_key_exists("calendarView", $this->_propDict)) {
+           return $this->_propDict["calendarView"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the multiValueExtendedProperties
-    * The collection of multi-value extended properties defined for the calendar. Read-only. Nullable.
+    * Sets the calendarView
     *
-    * @param MultiValueLegacyExtendedProperty $val The multiValueExtendedProperties
+    * @param Event $val The calendarView
     *
     * @return Calendar
     */
-    public function setMultiValueExtendedProperties($val)
+    public function setCalendarView($val)
     {
-		$this->_propDict["multiValueExtendedProperties"] = $val;
+		$this->_propDict["calendarView"] = $val;
         return $this;
     }
     
 
      /** 
      * Gets the singleValueExtendedProperties
-    * The collection of single-value extended properties defined for the calendar. Read-only. Nullable.
      *
      * @return array The singleValueExtendedProperties
      */
@@ -225,7 +184,6 @@ class Calendar extends Entity
     
     /** 
     * Sets the singleValueExtendedProperties
-    * The collection of single-value extended properties defined for the calendar. Read-only. Nullable.
     *
     * @param SingleValueLegacyExtendedProperty $val The singleValueExtendedProperties
     *
@@ -234,6 +192,34 @@ class Calendar extends Entity
     public function setSingleValueExtendedProperties($val)
     {
 		$this->_propDict["singleValueExtendedProperties"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the multiValueExtendedProperties
+     *
+     * @return array The multiValueExtendedProperties
+     */
+    public function getMultiValueExtendedProperties()
+    {
+        if (array_key_exists("multiValueExtendedProperties", $this->_propDict)) {
+           return $this->_propDict["multiValueExtendedProperties"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the multiValueExtendedProperties
+    *
+    * @param MultiValueLegacyExtendedProperty $val The multiValueExtendedProperties
+    *
+    * @return Calendar
+    */
+    public function setMultiValueExtendedProperties($val)
+    {
+		$this->_propDict["multiValueExtendedProperties"] = $val;
         return $this;
     }
     

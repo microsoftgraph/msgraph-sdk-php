@@ -137,6 +137,34 @@ class WorkbookWorksheet extends Entity
     
 
      /** 
+     * Gets the names
+     *
+     * @return array The names
+     */
+    public function getNames()
+    {
+        if (array_key_exists("names", $this->_propDict)) {
+           return $this->_propDict["names"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the names
+    *
+    * @param WorkbookNamedItem $val The names
+    *
+    * @return WorkbookWorksheet
+    */
+    public function setNames($val)
+    {
+		$this->_propDict["names"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the pivotTables
      *
      * @return array The pivotTables
