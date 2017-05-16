@@ -27,6 +27,7 @@ class ServicePlanInfo extends Entity
 {
     /**
     * Gets the servicePlanId
+    * The unique identifier of the service plan.
     *
     * @return string The servicePlanId
     */
@@ -41,6 +42,7 @@ class ServicePlanInfo extends Entity
 
     /**
     * Sets the servicePlanId
+    * The unique identifier of the service plan.
     *
     * @param string $val The value of the servicePlanId
     *
@@ -53,6 +55,7 @@ class ServicePlanInfo extends Entity
     }
     /**
     * Gets the servicePlanName
+    * The name of the service plan.
     *
     * @return string The servicePlanName
     */
@@ -67,6 +70,7 @@ class ServicePlanInfo extends Entity
 
     /**
     * Sets the servicePlanName
+    * The name of the service plan.
     *
     * @param string $val The value of the servicePlanName
     *
@@ -79,6 +83,7 @@ class ServicePlanInfo extends Entity
     }
     /**
     * Gets the provisioningStatus
+    * The provisioning status of the service plan.
     *
     * @return string The provisioningStatus
     */
@@ -93,6 +98,7 @@ class ServicePlanInfo extends Entity
 
     /**
     * Sets the provisioningStatus
+    * The provisioning status of the service plan.
     *
     * @param string $val The value of the provisioningStatus
     *

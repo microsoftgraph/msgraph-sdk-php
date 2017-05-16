@@ -27,6 +27,7 @@ class Reminder extends Entity
 {
     /**
     * Gets the eventId
+    * The unique ID of the event. Read only.
     *
     * @return string The eventId
     */
@@ -41,6 +42,7 @@ class Reminder extends Entity
 
     /**
     * Sets the eventId
+    * The unique ID of the event. Read only.
     *
     * @param string $val The value of the eventId
     *
@@ -54,6 +56,7 @@ class Reminder extends Entity
 
     /**
     * Gets the eventStartTime
+    * The date, time, and time zone that the event starts.
     *
     * @return DateTimeTimeZone The eventStartTime
     */
@@ -72,6 +75,7 @@ class Reminder extends Entity
 
     /**
     * Sets the eventStartTime
+    * The date, time, and time zone that the event starts.
     *
     * @param DateTimeTimeZone $val The value to assign to the eventStartTime
     *
@@ -85,6 +89,7 @@ class Reminder extends Entity
 
     /**
     * Gets the eventEndTime
+    * The date, time and time zone that the event ends.
     *
     * @return DateTimeTimeZone The eventEndTime
     */
@@ -103,6 +108,7 @@ class Reminder extends Entity
 
     /**
     * Sets the eventEndTime
+    * The date, time and time zone that the event ends.
     *
     * @param DateTimeTimeZone $val The value to assign to the eventEndTime
     *
@@ -115,6 +121,7 @@ class Reminder extends Entity
     }
     /**
     * Gets the changeKey
+    * Identifies the version of the reminder. Every time the reminder is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object.
     *
     * @return string The changeKey
     */
@@ -129,6 +136,7 @@ class Reminder extends Entity
 
     /**
     * Sets the changeKey
+    * Identifies the version of the reminder. Every time the reminder is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object.
     *
     * @param string $val The value of the changeKey
     *
@@ -141,6 +149,7 @@ class Reminder extends Entity
     }
     /**
     * Gets the eventSubject
+    * The text of the event's subject line.
     *
     * @return string The eventSubject
     */
@@ -155,6 +164,7 @@ class Reminder extends Entity
 
     /**
     * Sets the eventSubject
+    * The text of the event's subject line.
     *
     * @param string $val The value of the eventSubject
     *
@@ -168,6 +178,7 @@ class Reminder extends Entity
 
     /**
     * Gets the eventLocation
+    * The location of the event.
     *
     * @return Location The eventLocation
     */
@@ -186,6 +197,7 @@ class Reminder extends Entity
 
     /**
     * Sets the eventLocation
+    * The location of the event.
     *
     * @param Location $val The value to assign to the eventLocation
     *
@@ -198,6 +210,7 @@ class Reminder extends Entity
     }
     /**
     * Gets the eventWebLink
+    * The URL to open the event in Outlook on the web.The event will open in the browser if you are logged in to your mailbox via Outlook on the web. You will be prompted to login if you are not already logged in with the browser.This URL can be accessed from within an iFrame.
     *
     * @return string The eventWebLink
     */
@@ -212,6 +225,7 @@ class Reminder extends Entity
 
     /**
     * Sets the eventWebLink
+    * The URL to open the event in Outlook on the web.The event will open in the browser if you are logged in to your mailbox via Outlook on the web. You will be prompted to login if you are not already logged in with the browser.This URL can be accessed from within an iFrame.
     *
     * @param string $val The value of the eventWebLink
     *
@@ -225,6 +239,7 @@ class Reminder extends Entity
 
     /**
     * Gets the reminderFireTime
+    * The date, time, and time zone that the reminder is set to occur.
     *
     * @return DateTimeTimeZone The reminderFireTime
     */
@@ -243,6 +258,7 @@ class Reminder extends Entity
 
     /**
     * Sets the reminderFireTime
+    * The date, time, and time zone that the reminder is set to occur.
     *
     * @param DateTimeTimeZone $val The value to assign to the reminderFireTime
     *

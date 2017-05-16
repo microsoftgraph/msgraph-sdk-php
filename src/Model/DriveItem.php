@@ -28,6 +28,7 @@ class DriveItem extends BaseItem
 {
     /**
     * Gets the audio
+    * Audio metadata, if the item is an audio file. Read-only.
     *
     * @return Audio The audio
     */
@@ -46,6 +47,7 @@ class DriveItem extends BaseItem
     
     /**
     * Sets the audio
+    * Audio metadata, if the item is an audio file. Read-only.
     *
     * @param Audio $val The audio
     *
@@ -59,6 +61,7 @@ class DriveItem extends BaseItem
     
     /**
     * Gets the content
+    * The content stream, if the item represents a file.
     *
     * @return \GuzzleHttp\Psr7\Stream The content
     */
@@ -77,6 +80,7 @@ class DriveItem extends BaseItem
     
     /**
     * Sets the content
+    * The content stream, if the item represents a file.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The content
     *
@@ -90,6 +94,7 @@ class DriveItem extends BaseItem
     
     /**
     * Gets the cTag
+    * An eTag for the content of the item. This eTag is not changed if only the metadata is changed. Note This property is not returned if the item is a folder. Read-only.
     *
     * @return string The cTag
     */
@@ -104,6 +109,7 @@ class DriveItem extends BaseItem
     
     /**
     * Sets the cTag
+    * An eTag for the content of the item. This eTag is not changed if only the metadata is changed. Note This property is not returned if the item is a folder. Read-only.
     *
     * @param string $val The cTag
     *
@@ -117,6 +123,7 @@ class DriveItem extends BaseItem
     
     /**
     * Gets the deleted
+    * Information about the deleted state of the item. Read-only.
     *
     * @return Deleted The deleted
     */
@@ -135,6 +142,7 @@ class DriveItem extends BaseItem
     
     /**
     * Sets the deleted
+    * Information about the deleted state of the item. Read-only.
     *
     * @param Deleted $val The deleted
     *
@@ -148,6 +156,7 @@ class DriveItem extends BaseItem
     
     /**
     * Gets the file
+    * File metadata, if the item is a file. Read-only.
     *
     * @return File The file
     */
@@ -166,6 +175,7 @@ class DriveItem extends BaseItem
     
     /**
     * Sets the file
+    * File metadata, if the item is a file. Read-only.
     *
     * @param File $val The file
     *
@@ -179,6 +189,7 @@ class DriveItem extends BaseItem
     
     /**
     * Gets the fileSystemInfo
+    * File system information on client. Read-write.
     *
     * @return FileSystemInfo The fileSystemInfo
     */
@@ -197,6 +208,7 @@ class DriveItem extends BaseItem
     
     /**
     * Sets the fileSystemInfo
+    * File system information on client. Read-write.
     *
     * @param FileSystemInfo $val The fileSystemInfo
     *
@@ -210,6 +222,7 @@ class DriveItem extends BaseItem
     
     /**
     * Gets the folder
+    * Folder metadata, if the item is a folder. Read-only.
     *
     * @return Folder The folder
     */
@@ -228,6 +241,7 @@ class DriveItem extends BaseItem
     
     /**
     * Sets the folder
+    * Folder metadata, if the item is a folder. Read-only.
     *
     * @param Folder $val The folder
     *
@@ -241,6 +255,7 @@ class DriveItem extends BaseItem
     
     /**
     * Gets the image
+    * Image metadata, if the item is an image. Read-only.
     *
     * @return Image The image
     */
@@ -259,6 +274,7 @@ class DriveItem extends BaseItem
     
     /**
     * Sets the image
+    * Image metadata, if the item is an image. Read-only.
     *
     * @param Image $val The image
     *
@@ -272,6 +288,7 @@ class DriveItem extends BaseItem
     
     /**
     * Gets the location
+    * Location metadata, if the item has location data. Read-only.
     *
     * @return GeoCoordinates The location
     */
@@ -290,6 +307,7 @@ class DriveItem extends BaseItem
     
     /**
     * Sets the location
+    * Location metadata, if the item has location data. Read-only.
     *
     * @param GeoCoordinates $val The location
     *
@@ -303,6 +321,7 @@ class DriveItem extends BaseItem
     
     /**
     * Gets the package
+    * If present, indicates that this item is a package instead of a folder or file. Packages are treated like files in some contexts and folders in others. Read-only.
     *
     * @return Package The package
     */
@@ -321,6 +340,7 @@ class DriveItem extends BaseItem
     
     /**
     * Sets the package
+    * If present, indicates that this item is a package instead of a folder or file. Packages are treated like files in some contexts and folders in others. Read-only.
     *
     * @param Package $val The package
     *
@@ -334,6 +354,7 @@ class DriveItem extends BaseItem
     
     /**
     * Gets the photo
+    * Photo metadata, if the item is a photo. Read-only.
     *
     * @return Photo The photo
     */
@@ -352,6 +373,7 @@ class DriveItem extends BaseItem
     
     /**
     * Sets the photo
+    * Photo metadata, if the item is a photo. Read-only.
     *
     * @param Photo $val The photo
     *
@@ -365,6 +387,7 @@ class DriveItem extends BaseItem
     
     /**
     * Gets the remoteItem
+    * Remote item data, if the item is shared from a drive other than the one being accessed. Read-only.
     *
     * @return RemoteItem The remoteItem
     */
@@ -383,6 +406,7 @@ class DriveItem extends BaseItem
     
     /**
     * Sets the remoteItem
+    * Remote item data, if the item is shared from a drive other than the one being accessed. Read-only.
     *
     * @param RemoteItem $val The remoteItem
     *
@@ -427,6 +451,7 @@ class DriveItem extends BaseItem
     
     /**
     * Gets the searchResult
+    * Search metadata, if the item is from a search result. Read-only.
     *
     * @return SearchResult The searchResult
     */
@@ -445,6 +470,7 @@ class DriveItem extends BaseItem
     
     /**
     * Sets the searchResult
+    * Search metadata, if the item is from a search result. Read-only.
     *
     * @param SearchResult $val The searchResult
     *
@@ -458,6 +484,7 @@ class DriveItem extends BaseItem
     
     /**
     * Gets the shared
+    * Indicates that the item has been shared with others and provides information about the shared state of the item. Read-only.
     *
     * @return Shared The shared
     */
@@ -476,6 +503,7 @@ class DriveItem extends BaseItem
     
     /**
     * Sets the shared
+    * Indicates that the item has been shared with others and provides information about the shared state of the item. Read-only.
     *
     * @param Shared $val The shared
     *
@@ -520,6 +548,7 @@ class DriveItem extends BaseItem
     
     /**
     * Gets the size
+    * Size of the item in bytes. Read-only.
     *
     * @return int The size
     */
@@ -534,6 +563,7 @@ class DriveItem extends BaseItem
     
     /**
     * Sets the size
+    * Size of the item in bytes. Read-only.
     *
     * @param int $val The size
     *
@@ -547,6 +577,7 @@ class DriveItem extends BaseItem
     
     /**
     * Gets the specialFolder
+    * If the current item is also available as a special folder, this facet is returned. Read-only.
     *
     * @return SpecialFolder The specialFolder
     */
@@ -565,6 +596,7 @@ class DriveItem extends BaseItem
     
     /**
     * Sets the specialFolder
+    * If the current item is also available as a special folder, this facet is returned. Read-only.
     *
     * @param SpecialFolder $val The specialFolder
     *
@@ -578,6 +610,7 @@ class DriveItem extends BaseItem
     
     /**
     * Gets the video
+    * Video metadata, if the item is a video. Read-only.
     *
     * @return Video The video
     */
@@ -596,6 +629,7 @@ class DriveItem extends BaseItem
     
     /**
     * Sets the video
+    * Video metadata, if the item is a video. Read-only.
     *
     * @param Video $val The video
     *
@@ -637,6 +671,7 @@ class DriveItem extends BaseItem
 
      /** 
      * Gets the children
+    * Collection containing Item objects for the immediate children of Item. Only items representing folders have children. Read-only. Nullable.
      *
      * @return array The children
      */
@@ -651,6 +686,7 @@ class DriveItem extends BaseItem
     
     /** 
     * Sets the children
+    * Collection containing Item objects for the immediate children of Item. Only items representing folders have children. Read-only. Nullable.
     *
     * @param DriveItem $val The children
     *
@@ -665,6 +701,7 @@ class DriveItem extends BaseItem
 
      /** 
      * Gets the permissions
+    * The set of permissions for the item. Read-only. Nullable.
      *
      * @return array The permissions
      */
@@ -679,6 +716,7 @@ class DriveItem extends BaseItem
     
     /** 
     * Sets the permissions
+    * The set of permissions for the item. Read-only. Nullable.
     *
     * @param Permission $val The permissions
     *
@@ -693,6 +731,7 @@ class DriveItem extends BaseItem
 
      /** 
      * Gets the thumbnails
+    * Collection containing ThumbnailSet objects associated with the item. For more info, see getting thumbnails. Read-only. Nullable.
      *
      * @return array The thumbnails
      */
@@ -707,6 +746,7 @@ class DriveItem extends BaseItem
     
     /** 
     * Sets the thumbnails
+    * Collection containing ThumbnailSet objects associated with the item. For more info, see getting thumbnails. Read-only. Nullable.
     *
     * @param ThumbnailSet $val The thumbnails
     *

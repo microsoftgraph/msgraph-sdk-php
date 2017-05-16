@@ -28,6 +28,7 @@ class ContactFolder extends Entity
 {
     /**
     * Gets the parentFolderId
+    * The ID of the folder's parent folder.
     *
     * @return string The parentFolderId
     */
@@ -42,6 +43,7 @@ class ContactFolder extends Entity
     
     /**
     * Sets the parentFolderId
+    * The ID of the folder's parent folder.
     *
     * @param string $val The parentFolderId
     *
@@ -55,6 +57,7 @@ class ContactFolder extends Entity
     
     /**
     * Gets the displayName
+    * The folder's display name.
     *
     * @return string The displayName
     */
@@ -69,6 +72,7 @@ class ContactFolder extends Entity
     
     /**
     * Sets the displayName
+    * The folder's display name.
     *
     * @param string $val The displayName
     *
@@ -83,6 +87,7 @@ class ContactFolder extends Entity
 
      /** 
      * Gets the contacts
+    * The contacts in the folder. Navigation property. Read-only. Nullable.
      *
      * @return array The contacts
      */
@@ -97,6 +102,7 @@ class ContactFolder extends Entity
     
     /** 
     * Sets the contacts
+    * The contacts in the folder. Navigation property. Read-only. Nullable.
     *
     * @param Contact $val The contacts
     *
@@ -111,6 +117,7 @@ class ContactFolder extends Entity
 
      /** 
      * Gets the childFolders
+    * The collection of child folders in the folder. Navigation property. Read-only. Nullable.
      *
      * @return array The childFolders
      */
@@ -125,6 +132,7 @@ class ContactFolder extends Entity
     
     /** 
     * Sets the childFolders
+    * The collection of child folders in the folder. Navigation property. Read-only. Nullable.
     *
     * @param ContactFolder $val The childFolders
     *
@@ -139,6 +147,7 @@ class ContactFolder extends Entity
 
      /** 
      * Gets the singleValueExtendedProperties
+    * The collection of single-value extended properties defined for the contactFolder. Read-only. Nullable.
      *
      * @return array The singleValueExtendedProperties
      */
@@ -153,6 +162,7 @@ class ContactFolder extends Entity
     
     /** 
     * Sets the singleValueExtendedProperties
+    * The collection of single-value extended properties defined for the contactFolder. Read-only. Nullable.
     *
     * @param SingleValueLegacyExtendedProperty $val The singleValueExtendedProperties
     *
@@ -167,6 +177,7 @@ class ContactFolder extends Entity
 
      /** 
      * Gets the multiValueExtendedProperties
+    * The collection of multi-value extended properties defined for the contactFolder. Read-only. Nullable.
      *
      * @return array The multiValueExtendedProperties
      */
@@ -181,6 +192,7 @@ class ContactFolder extends Entity
     
     /** 
     * Sets the multiValueExtendedProperties
+    * The collection of multi-value extended properties defined for the contactFolder. Read-only. Nullable.
     *
     * @param MultiValueLegacyExtendedProperty $val The multiValueExtendedProperties
     *
