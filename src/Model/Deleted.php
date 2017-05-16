@@ -27,6 +27,7 @@ class Deleted extends Entity
 {
     /**
     * Gets the state
+    * Represents the state of the deleted item.
     *
     * @return string The state
     */
@@ -41,6 +42,7 @@ class Deleted extends Entity
 
     /**
     * Sets the state
+    * Represents the state of the deleted item.
     *
     * @param string $val The value of the state
     *

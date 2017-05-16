@@ -28,6 +28,7 @@ class Drive extends BaseItem
 {
     /**
     * Gets the driveType
+    * Describes the type of drive represented by this resource. OneDrive personal drives will return personal. OneDrive for Business will return business. SharePoint document libraries will return documentLibrary. Read-only.
     *
     * @return string The driveType
     */
@@ -42,6 +43,7 @@ class Drive extends BaseItem
     
     /**
     * Sets the driveType
+    * Describes the type of drive represented by this resource. OneDrive personal drives will return personal. OneDrive for Business will return business. SharePoint document libraries will return documentLibrary. Read-only.
     *
     * @param string $val The driveType
     *
@@ -55,6 +57,7 @@ class Drive extends BaseItem
     
     /**
     * Gets the owner
+    * Optional. The user account that owns the drive.
     *
     * @return IdentitySet The owner
     */
@@ -73,6 +76,7 @@ class Drive extends BaseItem
     
     /**
     * Sets the owner
+    * Optional. The user account that owns the drive.
     *
     * @param IdentitySet $val The owner
     *
@@ -86,6 +90,7 @@ class Drive extends BaseItem
     
     /**
     * Gets the quota
+    * Optional. Information about the drive's storage space quota.
     *
     * @return Quota The quota
     */
@@ -104,6 +109,7 @@ class Drive extends BaseItem
     
     /**
     * Sets the quota
+    * Optional. Information about the drive's storage space quota.
     *
     * @param Quota $val The quota
     *
@@ -149,6 +155,7 @@ class Drive extends BaseItem
 
      /** 
      * Gets the items
+    * All items contained in the drive. Read-only. Nullable.
      *
      * @return array The items
      */
@@ -163,6 +170,7 @@ class Drive extends BaseItem
     
     /** 
     * Sets the items
+    * All items contained in the drive. Read-only. Nullable.
     *
     * @param DriveItem $val The items
     *
@@ -176,6 +184,7 @@ class Drive extends BaseItem
     
     /**
     * Gets the root
+    * The root folder of the drive. Read-only.
     *
     * @return DriveItem The root
     */
@@ -194,6 +203,7 @@ class Drive extends BaseItem
     
     /**
     * Sets the root
+    * The root folder of the drive. Read-only.
     *
     * @param DriveItem $val The root
     *
@@ -208,6 +218,7 @@ class Drive extends BaseItem
 
      /** 
      * Gets the special
+    * Collection of common folders available in OneDrive. Read-only. Nullable.
      *
      * @return array The special
      */
@@ -222,6 +233,7 @@ class Drive extends BaseItem
     
     /** 
     * Sets the special
+    * Collection of common folders available in OneDrive. Read-only. Nullable.
     *
     * @param DriveItem $val The special
     *

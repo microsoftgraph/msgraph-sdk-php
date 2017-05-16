@@ -27,6 +27,33 @@ namespace Microsoft\Graph\Model;
 class Site extends BaseItem
 {
     /**
+    * Gets the displayName
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the displayName
+    *
+    * @param string $val The displayName
+    *
+    * @return Site
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the root
     *
     * @return Root The root
@@ -116,33 +143,6 @@ class Site extends BaseItem
     public function setSiteCollection($val)
     {
         $this->_propDict["siteCollection"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the title
-    *
-    * @return string The title
-    */
-    public function getTitle()
-    {
-        if (array_key_exists("title", $this->_propDict)) {
-            return $this->_propDict["title"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the title
-    *
-    * @param string $val The title
-    *
-    * @return Site
-    */
-    public function setTitle($val)
-    {
-        $this->_propDict["title"] = $val;
         return $this;
     }
     

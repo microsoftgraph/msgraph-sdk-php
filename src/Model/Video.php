@@ -27,6 +27,7 @@ class Video extends Entity
 {
     /**
     * Gets the bitrate
+    * Bit rate of the video in bits per second.
     *
     * @return int The bitrate
     */
@@ -41,6 +42,7 @@ class Video extends Entity
 
     /**
     * Sets the bitrate
+    * Bit rate of the video in bits per second.
     *
     * @param int $val The value of the bitrate
     *
@@ -53,6 +55,7 @@ class Video extends Entity
     }
     /**
     * Gets the duration
+    * Duration of the file in milliseconds.
     *
     * @return int The duration
     */
@@ -67,6 +70,7 @@ class Video extends Entity
 
     /**
     * Sets the duration
+    * Duration of the file in milliseconds.
     *
     * @param int $val The value of the duration
     *
@@ -79,6 +83,7 @@ class Video extends Entity
     }
     /**
     * Gets the height
+    * Height of the video, in pixels.
     *
     * @return int The height
     */
@@ -93,6 +98,7 @@ class Video extends Entity
 
     /**
     * Sets the height
+    * Height of the video, in pixels.
     *
     * @param int $val The value of the height
     *
@@ -105,6 +111,7 @@ class Video extends Entity
     }
     /**
     * Gets the width
+    * Width of the video, in pixels.
     *
     * @return int The width
     */
@@ -119,6 +126,7 @@ class Video extends Entity
 
     /**
     * Sets the width
+    * Width of the video, in pixels.
     *
     * @param int $val The value of the width
     *

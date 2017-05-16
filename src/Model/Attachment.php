@@ -28,6 +28,7 @@ class Attachment extends Entity
 {
     /**
     * Gets the lastModifiedDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -46,6 +47,7 @@ class Attachment extends Entity
     
     /**
     * Sets the lastModifiedDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -59,6 +61,7 @@ class Attachment extends Entity
     
     /**
     * Gets the name
+    * The attachment's file name.
     *
     * @return string The name
     */
@@ -73,6 +76,7 @@ class Attachment extends Entity
     
     /**
     * Sets the name
+    * The attachment's file name.
     *
     * @param string $val The name
     *
@@ -86,6 +90,7 @@ class Attachment extends Entity
     
     /**
     * Gets the contentType
+    * The MIME type.
     *
     * @return string The contentType
     */
@@ -100,6 +105,7 @@ class Attachment extends Entity
     
     /**
     * Sets the contentType
+    * The MIME type.
     *
     * @param string $val The contentType
     *
@@ -113,6 +119,7 @@ class Attachment extends Entity
     
     /**
     * Gets the size
+    * The length of the attachment in bytes.
     *
     * @return int The size
     */
@@ -127,6 +134,7 @@ class Attachment extends Entity
     
     /**
     * Sets the size
+    * The length of the attachment in bytes.
     *
     * @param int $val The size
     *
@@ -140,6 +148,7 @@ class Attachment extends Entity
     
     /**
     * Gets the isInline
+    * true if the attachment is an inline attachment; otherwise, false.
     *
     * @return bool The isInline
     */
@@ -154,6 +163,7 @@ class Attachment extends Entity
     
     /**
     * Sets the isInline
+    * true if the attachment is an inline attachment; otherwise, false.
     *
     * @param bool $val The isInline
     *

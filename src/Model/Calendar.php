@@ -28,6 +28,7 @@ class Calendar extends Entity
 {
     /**
     * Gets the name
+    * The calendar name.
     *
     * @return string The name
     */
@@ -42,6 +43,7 @@ class Calendar extends Entity
     
     /**
     * Sets the name
+    * The calendar name.
     *
     * @param string $val The name
     *
@@ -55,6 +57,7 @@ class Calendar extends Entity
     
     /**
     * Gets the color
+    * Specifies the color theme to distinguish the calendar from other calendars in a UI. The property values are: LightBlue=0, LightGreen=1, LightOrange=2, LightGray=3, LightYellow=4, LightTeal=5, LightPink=6, LightBrown=7, LightRed=8, MaxColor=9, Auto=-1
     *
     * @return CalendarColor The color
     */
@@ -73,6 +76,7 @@ class Calendar extends Entity
     
     /**
     * Sets the color
+    * Specifies the color theme to distinguish the calendar from other calendars in a UI. The property values are: LightBlue=0, LightGreen=1, LightOrange=2, LightGray=3, LightYellow=4, LightTeal=5, LightPink=6, LightBrown=7, LightRed=8, MaxColor=9, Auto=-1
     *
     * @param CalendarColor $val The color
     *
@@ -86,6 +90,7 @@ class Calendar extends Entity
     
     /**
     * Gets the changeKey
+    * Identifies the version of the calendar object. Every time the calendar is changed, ChangeKey  changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
     *
     * @return string The changeKey
     */
@@ -100,6 +105,7 @@ class Calendar extends Entity
     
     /**
     * Sets the changeKey
+    * Identifies the version of the calendar object. Every time the calendar is changed, ChangeKey  changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
     *
     * @param string $val The changeKey
     *
@@ -114,6 +120,7 @@ class Calendar extends Entity
 
      /** 
      * Gets the events
+    * The events in the calendar. Navigation property. Read-only.
      *
      * @return array The events
      */
@@ -128,6 +135,7 @@ class Calendar extends Entity
     
     /** 
     * Sets the events
+    * The events in the calendar. Navigation property. Read-only.
     *
     * @param Event $val The events
     *
@@ -142,6 +150,7 @@ class Calendar extends Entity
 
      /** 
      * Gets the calendarView
+    * The calendar view for the calendar. Navigation property. Read-only.
      *
      * @return array The calendarView
      */
@@ -156,6 +165,7 @@ class Calendar extends Entity
     
     /** 
     * Sets the calendarView
+    * The calendar view for the calendar. Navigation property. Read-only.
     *
     * @param Event $val The calendarView
     *
@@ -170,6 +180,7 @@ class Calendar extends Entity
 
      /** 
      * Gets the singleValueExtendedProperties
+    * The collection of single-value extended properties defined for the calendar. Read-only. Nullable.
      *
      * @return array The singleValueExtendedProperties
      */
@@ -184,6 +195,7 @@ class Calendar extends Entity
     
     /** 
     * Sets the singleValueExtendedProperties
+    * The collection of single-value extended properties defined for the calendar. Read-only. Nullable.
     *
     * @param SingleValueLegacyExtendedProperty $val The singleValueExtendedProperties
     *
@@ -198,6 +210,7 @@ class Calendar extends Entity
 
      /** 
      * Gets the multiValueExtendedProperties
+    * The collection of multi-value extended properties defined for the calendar. Read-only. Nullable.
      *
      * @return array The multiValueExtendedProperties
      */
@@ -212,6 +225,7 @@ class Calendar extends Entity
     
     /** 
     * Sets the multiValueExtendedProperties
+    * The collection of multi-value extended properties defined for the calendar. Read-only. Nullable.
     *
     * @param MultiValueLegacyExtendedProperty $val The multiValueExtendedProperties
     *

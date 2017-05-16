@@ -28,6 +28,7 @@ class Shared extends Entity
 
     /**
     * Gets the owner
+    * The identity of the owner of the shared item. Read-only.
     *
     * @return IdentitySet The owner
     */
@@ -46,6 +47,7 @@ class Shared extends Entity
 
     /**
     * Sets the owner
+    * The identity of the owner of the shared item. Read-only.
     *
     * @param IdentitySet $val The value to assign to the owner
     *
@@ -58,6 +60,7 @@ class Shared extends Entity
     }
     /**
     * Gets the scope
+    * Indicates the scope of how the item is shared: anonymous, organization, or users. Read-only.
     *
     * @return string The scope
     */
@@ -72,6 +75,7 @@ class Shared extends Entity
 
     /**
     * Sets the scope
+    * Indicates the scope of how the item is shared: anonymous, organization, or users. Read-only.
     *
     * @param string $val The value of the scope
     *
