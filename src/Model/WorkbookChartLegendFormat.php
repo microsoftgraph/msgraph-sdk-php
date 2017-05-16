@@ -34,7 +34,7 @@ class WorkbookChartLegendFormat extends Entity
     public function getFill()
     {
         if (array_key_exists("fill", $this->_propDict)) {
-            if (is_a($this->_propDict["fill"], "WorkbookChartFill")) {
+            if (is_a($this->_propDict["fill"], "Microsoft\Graph\Model\WorkbookChartFill")) {
                 return $this->_propDict["fill"];
             } else {
                 $this->_propDict["fill"] = new WorkbookChartFill($this->_propDict["fill"]);
@@ -47,7 +47,7 @@ class WorkbookChartLegendFormat extends Entity
     /**
     * Sets the fill
     *
-    * @param string $val The fill
+    * @param WorkbookChartFill $val The fill
     *
     * @return WorkbookChartLegendFormat
     */
@@ -65,7 +65,7 @@ class WorkbookChartLegendFormat extends Entity
     public function getFont()
     {
         if (array_key_exists("font", $this->_propDict)) {
-            if (is_a($this->_propDict["font"], "WorkbookChartFont")) {
+            if (is_a($this->_propDict["font"], "Microsoft\Graph\Model\WorkbookChartFont")) {
                 return $this->_propDict["font"];
             } else {
                 $this->_propDict["font"] = new WorkbookChartFont($this->_propDict["font"]);
@@ -78,7 +78,7 @@ class WorkbookChartLegendFormat extends Entity
     /**
     * Sets the font
     *
-    * @param string $val The font
+    * @param WorkbookChartFont $val The font
     *
     * @return WorkbookChartLegendFormat
     */

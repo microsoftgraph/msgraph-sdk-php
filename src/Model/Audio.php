@@ -27,7 +27,6 @@ class Audio extends Entity
 {
     /**
     * Gets the album
-    * The title of the album for this audio file.
     *
     * @return string The album
     */
@@ -42,7 +41,6 @@ class Audio extends Entity
 
     /**
     * Sets the album
-    * The title of the album for this audio file.
     *
     * @param string $val The value of the album
     *
@@ -55,7 +53,6 @@ class Audio extends Entity
     }
     /**
     * Gets the albumArtist
-    * The artist named on the album for the audio file.
     *
     * @return string The albumArtist
     */
@@ -70,7 +67,6 @@ class Audio extends Entity
 
     /**
     * Sets the albumArtist
-    * The artist named on the album for the audio file.
     *
     * @param string $val The value of the albumArtist
     *
@@ -78,12 +74,11 @@ class Audio extends Entity
     */
     public function setAlbumArtist($val)
     {
-        $this->_propDict["album_artist"] = $val;
+        $this->_propDict["albumArtist"] = $val;
         return $this;
     }
     /**
     * Gets the artist
-    * The performing artist for the audio file.
     *
     * @return string The artist
     */
@@ -98,7 +93,6 @@ class Audio extends Entity
 
     /**
     * Sets the artist
-    * The performing artist for the audio file.
     *
     * @param string $val The value of the artist
     *
@@ -111,7 +105,6 @@ class Audio extends Entity
     }
     /**
     * Gets the bitrate
-    * Bitrate expressed in kbps.
     *
     * @return int The bitrate
     */
@@ -126,7 +119,6 @@ class Audio extends Entity
 
     /**
     * Sets the bitrate
-    * Bitrate expressed in kbps.
     *
     * @param int $val The value of the bitrate
     *
@@ -139,7 +131,6 @@ class Audio extends Entity
     }
     /**
     * Gets the composers
-    * The name of the composer of the audio file.
     *
     * @return string The composers
     */
@@ -154,7 +145,6 @@ class Audio extends Entity
 
     /**
     * Sets the composers
-    * The name of the composer of the audio file.
     *
     * @param string $val The value of the composers
     *
@@ -167,7 +157,6 @@ class Audio extends Entity
     }
     /**
     * Gets the copyright
-    * Copyright information for the audio file.
     *
     * @return string The copyright
     */
@@ -182,7 +171,6 @@ class Audio extends Entity
 
     /**
     * Sets the copyright
-    * Copyright information for the audio file.
     *
     * @param string $val The value of the copyright
     *
@@ -195,7 +183,6 @@ class Audio extends Entity
     }
     /**
     * Gets the disc
-    * The number of the disc this audio file came from.
     *
     * @return int The disc
     */
@@ -210,7 +197,6 @@ class Audio extends Entity
 
     /**
     * Sets the disc
-    * The number of the disc this audio file came from.
     *
     * @param int $val The value of the disc
     *
@@ -223,7 +209,6 @@ class Audio extends Entity
     }
     /**
     * Gets the discCount
-    * The total number of discs in this album.
     *
     * @return int The discCount
     */
@@ -238,7 +223,6 @@ class Audio extends Entity
 
     /**
     * Sets the discCount
-    * The total number of discs in this album.
     *
     * @param int $val The value of the discCount
     *
@@ -246,12 +230,11 @@ class Audio extends Entity
     */
     public function setDiscCount($val)
     {
-        $this->_propDict["disc_count"] = $val;
+        $this->_propDict["discCount"] = $val;
         return $this;
     }
     /**
     * Gets the duration
-    * Duration of the audio file, expressed in milliseconds
     *
     * @return int The duration
     */
@@ -266,7 +249,6 @@ class Audio extends Entity
 
     /**
     * Sets the duration
-    * Duration of the audio file, expressed in milliseconds
     *
     * @param int $val The value of the duration
     *
@@ -279,7 +261,6 @@ class Audio extends Entity
     }
     /**
     * Gets the genre
-    * The genre of this audio file.
     *
     * @return string The genre
     */
@@ -294,7 +275,6 @@ class Audio extends Entity
 
     /**
     * Sets the genre
-    * The genre of this audio file.
     *
     * @param string $val The value of the genre
     *
@@ -307,7 +287,6 @@ class Audio extends Entity
     }
     /**
     * Gets the hasDrm
-    * Indicates if the file is protected with digital rights management.
     *
     * @return bool The hasDrm
     */
@@ -322,7 +301,6 @@ class Audio extends Entity
 
     /**
     * Sets the hasDrm
-    * Indicates if the file is protected with digital rights management.
     *
     * @param bool $val The value of the hasDrm
     *
@@ -330,12 +308,11 @@ class Audio extends Entity
     */
     public function setHasDrm($val)
     {
-        $this->_propDict["has_drm"] = $val;
+        $this->_propDict["hasDrm"] = $val;
         return $this;
     }
     /**
     * Gets the isVariableBitrate
-    * Indicates if the file is encoded with a variable bitrate.
     *
     * @return bool The isVariableBitrate
     */
@@ -350,7 +327,6 @@ class Audio extends Entity
 
     /**
     * Sets the isVariableBitrate
-    * Indicates if the file is encoded with a variable bitrate.
     *
     * @param bool $val The value of the isVariableBitrate
     *
@@ -358,12 +334,11 @@ class Audio extends Entity
     */
     public function setIsVariableBitrate($val)
     {
-        $this->_propDict["is_variable_bitrate"] = $val;
+        $this->_propDict["isVariableBitrate"] = $val;
         return $this;
     }
     /**
     * Gets the title
-    * The title of the audio file.
     *
     * @return string The title
     */
@@ -378,7 +353,6 @@ class Audio extends Entity
 
     /**
     * Sets the title
-    * The title of the audio file.
     *
     * @param string $val The value of the title
     *
@@ -391,7 +365,6 @@ class Audio extends Entity
     }
     /**
     * Gets the track
-    * The number of the track on the original disc for this audio file.
     *
     * @return int The track
     */
@@ -406,7 +379,6 @@ class Audio extends Entity
 
     /**
     * Sets the track
-    * The number of the track on the original disc for this audio file.
     *
     * @param int $val The value of the track
     *
@@ -419,7 +391,6 @@ class Audio extends Entity
     }
     /**
     * Gets the trackCount
-    * The total number of tracks on the original disc for this audio file.
     *
     * @return int The trackCount
     */
@@ -434,7 +405,6 @@ class Audio extends Entity
 
     /**
     * Sets the trackCount
-    * The total number of tracks on the original disc for this audio file.
     *
     * @param int $val The value of the trackCount
     *
@@ -442,12 +412,11 @@ class Audio extends Entity
     */
     public function setTrackCount($val)
     {
-        $this->_propDict["track_count"] = $val;
+        $this->_propDict["trackCount"] = $val;
         return $this;
     }
     /**
     * Gets the year
-    * The year the audio file was recorded.
     *
     * @return int The year
     */
@@ -462,7 +431,6 @@ class Audio extends Entity
 
     /**
     * Sets the year
-    * The year the audio file was recorded.
     *
     * @param int $val The value of the year
     *

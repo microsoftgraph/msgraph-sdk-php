@@ -29,7 +29,6 @@ class Organization extends DirectoryObject
 
      /** 
      * Gets the assignedPlans
-    * The collection of service plans associated with the tenant. Not nullable.
      *
      * @return array The assignedPlans
      */
@@ -44,9 +43,8 @@ class Organization extends DirectoryObject
     
     /** 
     * Sets the assignedPlans
-    * The collection of service plans associated with the tenant. Not nullable.
     *
-    * @param string $val The assignedPlans
+    * @param AssignedPlan $val The assignedPlans
     *
     * @return Organization
     */
@@ -166,7 +164,6 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the displayName
-    * The display name for the tenant.
     *
     * @return string The displayName
     */
@@ -181,7 +178,6 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the displayName
-    * The display name for the tenant.
     *
     * @param string $val The displayName
     *
@@ -195,7 +191,6 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the marketingNotificationEmails
-    * Not nullable.
     *
     * @return string The marketingNotificationEmails
     */
@@ -210,7 +205,6 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the marketingNotificationEmails
-    * Not nullable.
     *
     * @param string $val The marketingNotificationEmails
     *
@@ -243,7 +237,7 @@ class Organization extends DirectoryObject
     /**
     * Sets the onPremisesLastSyncDateTime
     *
-    * @param string $val The onPremisesLastSyncDateTime
+    * @param \DateTime $val The onPremisesLastSyncDateTime
     *
     * @return Organization
     */
@@ -337,7 +331,6 @@ class Organization extends DirectoryObject
 
      /** 
      * Gets the provisionedPlans
-    * Not nullable.
      *
      * @return array The provisionedPlans
      */
@@ -352,9 +345,8 @@ class Organization extends DirectoryObject
     
     /** 
     * Sets the provisionedPlans
-    * Not nullable.
     *
-    * @param string $val The provisionedPlans
+    * @param ProvisionedPlan $val The provisionedPlans
     *
     * @return Organization
     */
@@ -474,7 +466,6 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the technicalNotificationMails
-    * Not nullable.
     *
     * @return string The technicalNotificationMails
     */
@@ -489,7 +480,6 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the technicalNotificationMails
-    * Not nullable.
     *
     * @param string $val The technicalNotificationMails
     *
@@ -504,7 +494,6 @@ class Organization extends DirectoryObject
 
      /** 
      * Gets the verifiedDomains
-    * The collection of domains associated with this tenant. Not nullable.
      *
      * @return array The verifiedDomains
      */
@@ -519,9 +508,8 @@ class Organization extends DirectoryObject
     
     /** 
     * Sets the verifiedDomains
-    * The collection of domains associated with this tenant. Not nullable.
     *
-    * @param string $val The verifiedDomains
+    * @param VerifiedDomain $val The verifiedDomains
     *
     * @return Organization
     */

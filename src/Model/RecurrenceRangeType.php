@@ -31,7 +31,7 @@ class RecurrenceRangeType extends Enum
     /**
     * The Enum RecurrenceRangeType
     */
-    const END_DATE = "0";
-    const NO_END = "1";
-    const NUMBERED = "2";
+    const END_DATE = "endDate";
+    const NO_END = "noEnd";
+    const NUMBERED = "numbered";
 }

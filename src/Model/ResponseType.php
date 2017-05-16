@@ -31,10 +31,10 @@ class ResponseType extends Enum
     /**
     * The Enum ResponseType
     */
-    const ACCEPTED = "0";
-    const DECLINED = "1";
-    const NONE = "2";
-    const NOT_RESPONDED = "3";
-    const ORGANIZER = "4";
-    const TENTATIVELY_ACCEPTED = "5";
+    const NONE = "none";
+    const ORGANIZER = "organizer";
+    const TENTATIVELY_ACCEPTED = "tentativelyAccepted";
+    const ACCEPTED = "accepted";
+    const DECLINED = "declined";
+    const NOT_RESPONDED = "notResponded";
 }

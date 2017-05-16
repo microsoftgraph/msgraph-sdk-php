@@ -169,7 +169,7 @@ class WorkbookChart extends Entity
     public function getAxes()
     {
         if (array_key_exists("axes", $this->_propDict)) {
-            if (is_a($this->_propDict["axes"], "WorkbookChartAxes")) {
+            if (is_a($this->_propDict["axes"], "Microsoft\Graph\Model\WorkbookChartAxes")) {
                 return $this->_propDict["axes"];
             } else {
                 $this->_propDict["axes"] = new WorkbookChartAxes($this->_propDict["axes"]);
@@ -182,7 +182,7 @@ class WorkbookChart extends Entity
     /**
     * Sets the axes
     *
-    * @param string $val The axes
+    * @param WorkbookChartAxes $val The axes
     *
     * @return WorkbookChart
     */
@@ -200,7 +200,7 @@ class WorkbookChart extends Entity
     public function getDataLabels()
     {
         if (array_key_exists("dataLabels", $this->_propDict)) {
-            if (is_a($this->_propDict["dataLabels"], "WorkbookChartDataLabels")) {
+            if (is_a($this->_propDict["dataLabels"], "Microsoft\Graph\Model\WorkbookChartDataLabels")) {
                 return $this->_propDict["dataLabels"];
             } else {
                 $this->_propDict["dataLabels"] = new WorkbookChartDataLabels($this->_propDict["dataLabels"]);
@@ -213,7 +213,7 @@ class WorkbookChart extends Entity
     /**
     * Sets the dataLabels
     *
-    * @param string $val The dataLabels
+    * @param WorkbookChartDataLabels $val The dataLabels
     *
     * @return WorkbookChart
     */
@@ -231,7 +231,7 @@ class WorkbookChart extends Entity
     public function getFormat()
     {
         if (array_key_exists("format", $this->_propDict)) {
-            if (is_a($this->_propDict["format"], "WorkbookChartAreaFormat")) {
+            if (is_a($this->_propDict["format"], "Microsoft\Graph\Model\WorkbookChartAreaFormat")) {
                 return $this->_propDict["format"];
             } else {
                 $this->_propDict["format"] = new WorkbookChartAreaFormat($this->_propDict["format"]);
@@ -244,7 +244,7 @@ class WorkbookChart extends Entity
     /**
     * Sets the format
     *
-    * @param string $val The format
+    * @param WorkbookChartAreaFormat $val The format
     *
     * @return WorkbookChart
     */
@@ -262,7 +262,7 @@ class WorkbookChart extends Entity
     public function getLegend()
     {
         if (array_key_exists("legend", $this->_propDict)) {
-            if (is_a($this->_propDict["legend"], "WorkbookChartLegend")) {
+            if (is_a($this->_propDict["legend"], "Microsoft\Graph\Model\WorkbookChartLegend")) {
                 return $this->_propDict["legend"];
             } else {
                 $this->_propDict["legend"] = new WorkbookChartLegend($this->_propDict["legend"]);
@@ -275,7 +275,7 @@ class WorkbookChart extends Entity
     /**
     * Sets the legend
     *
-    * @param string $val The legend
+    * @param WorkbookChartLegend $val The legend
     *
     * @return WorkbookChart
     */
@@ -303,7 +303,7 @@ class WorkbookChart extends Entity
     /** 
     * Sets the series
     *
-    * @param string $val The series
+    * @param WorkbookChartSeries $val The series
     *
     * @return WorkbookChart
     */
@@ -321,7 +321,7 @@ class WorkbookChart extends Entity
     public function getTitle()
     {
         if (array_key_exists("title", $this->_propDict)) {
-            if (is_a($this->_propDict["title"], "WorkbookChartTitle")) {
+            if (is_a($this->_propDict["title"], "Microsoft\Graph\Model\WorkbookChartTitle")) {
                 return $this->_propDict["title"];
             } else {
                 $this->_propDict["title"] = new WorkbookChartTitle($this->_propDict["title"]);
@@ -334,7 +334,7 @@ class WorkbookChart extends Entity
     /**
     * Sets the title
     *
-    * @param string $val The title
+    * @param WorkbookChartTitle $val The title
     *
     * @return WorkbookChart
     */
@@ -352,7 +352,7 @@ class WorkbookChart extends Entity
     public function getWorksheet()
     {
         if (array_key_exists("worksheet", $this->_propDict)) {
-            if (is_a($this->_propDict["worksheet"], "WorkbookWorksheet")) {
+            if (is_a($this->_propDict["worksheet"], "Microsoft\Graph\Model\WorkbookWorksheet")) {
                 return $this->_propDict["worksheet"];
             } else {
                 $this->_propDict["worksheet"] = new WorkbookWorksheet($this->_propDict["worksheet"]);
@@ -365,7 +365,7 @@ class WorkbookChart extends Entity
     /**
     * Sets the worksheet
     *
-    * @param string $val The worksheet
+    * @param WorkbookWorksheet $val The worksheet
     *
     * @return WorkbookChart
     */

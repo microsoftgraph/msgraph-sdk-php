@@ -28,14 +28,13 @@ class Recipient extends Entity
 
     /**
     * Gets the emailAddress
-    * The recipient's email address.
     *
     * @return EmailAddress The emailAddress
     */
     public function getEmailAddress()
     {
         if (array_key_exists("emailAddress", $this->_propDict)) {
-            if (is_a($this->_propDict["emailAddress"], "EmailAddress")) {
+            if (is_a($this->_propDict["emailAddress"], "Microsoft\Graph\Model\EmailAddress")) {
                 return $this->_propDict["emailAddress"];
             } else {
                 $this->_propDict["emailAddress"] = new EmailAddress($this->_propDict["emailAddress"]);
@@ -47,7 +46,6 @@ class Recipient extends Entity
 
     /**
     * Sets the emailAddress
-    * The recipient's email address.
     *
     * @param EmailAddress $val The value to assign to the emailAddress
     *

@@ -28,14 +28,13 @@ class Permission extends Entity
 {
     /**
     * Gets the grantedTo
-    * For user type permissions, the details of the users & applications for this permission. Read-only.
     *
     * @return IdentitySet The grantedTo
     */
     public function getGrantedTo()
     {
         if (array_key_exists("grantedTo", $this->_propDict)) {
-            if (is_a($this->_propDict["grantedTo"], "IdentitySet")) {
+            if (is_a($this->_propDict["grantedTo"], "Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["grantedTo"];
             } else {
                 $this->_propDict["grantedTo"] = new IdentitySet($this->_propDict["grantedTo"]);
@@ -47,9 +46,8 @@ class Permission extends Entity
     
     /**
     * Sets the grantedTo
-    * For user type permissions, the details of the users & applications for this permission. Read-only.
     *
-    * @param string $val The grantedTo
+    * @param IdentitySet $val The grantedTo
     *
     * @return Permission
     */
@@ -61,14 +59,13 @@ class Permission extends Entity
     
     /**
     * Gets the inheritedFrom
-    * Provides a reference to the ancestor of the current permission, if it is inherited from an ancestor. Read-only.
     *
     * @return ItemReference The inheritedFrom
     */
     public function getInheritedFrom()
     {
         if (array_key_exists("inheritedFrom", $this->_propDict)) {
-            if (is_a($this->_propDict["inheritedFrom"], "ItemReference")) {
+            if (is_a($this->_propDict["inheritedFrom"], "Microsoft\Graph\Model\ItemReference")) {
                 return $this->_propDict["inheritedFrom"];
             } else {
                 $this->_propDict["inheritedFrom"] = new ItemReference($this->_propDict["inheritedFrom"]);
@@ -80,9 +77,8 @@ class Permission extends Entity
     
     /**
     * Sets the inheritedFrom
-    * Provides a reference to the ancestor of the current permission, if it is inherited from an ancestor. Read-only.
     *
-    * @param string $val The inheritedFrom
+    * @param ItemReference $val The inheritedFrom
     *
     * @return Permission
     */
@@ -94,14 +90,13 @@ class Permission extends Entity
     
     /**
     * Gets the invitation
-    * Details of any associated sharing invitation for this permission. Read-only.
     *
     * @return SharingInvitation The invitation
     */
     public function getInvitation()
     {
         if (array_key_exists("invitation", $this->_propDict)) {
-            if (is_a($this->_propDict["invitation"], "SharingInvitation")) {
+            if (is_a($this->_propDict["invitation"], "Microsoft\Graph\Model\SharingInvitation")) {
                 return $this->_propDict["invitation"];
             } else {
                 $this->_propDict["invitation"] = new SharingInvitation($this->_propDict["invitation"]);
@@ -113,9 +108,8 @@ class Permission extends Entity
     
     /**
     * Sets the invitation
-    * Details of any associated sharing invitation for this permission. Read-only.
     *
-    * @param string $val The invitation
+    * @param SharingInvitation $val The invitation
     *
     * @return Permission
     */
@@ -127,14 +121,13 @@ class Permission extends Entity
     
     /**
     * Gets the link
-    * Provides the link details of the current permission, if it is a link type permissions. Read-only.
     *
     * @return SharingLink The link
     */
     public function getLink()
     {
         if (array_key_exists("link", $this->_propDict)) {
-            if (is_a($this->_propDict["link"], "SharingLink")) {
+            if (is_a($this->_propDict["link"], "Microsoft\Graph\Model\SharingLink")) {
                 return $this->_propDict["link"];
             } else {
                 $this->_propDict["link"] = new SharingLink($this->_propDict["link"]);
@@ -146,9 +139,8 @@ class Permission extends Entity
     
     /**
     * Sets the link
-    * Provides the link details of the current permission, if it is a link type permissions. Read-only.
     *
-    * @param string $val The link
+    * @param SharingLink $val The link
     *
     * @return Permission
     */
@@ -187,7 +179,6 @@ class Permission extends Entity
     
     /**
     * Gets the shareId
-    * A unique token for this permission. Read-only.
     *
     * @return string The shareId
     */
@@ -202,7 +193,6 @@ class Permission extends Entity
     
     /**
     * Sets the shareId
-    * A unique token for this permission. Read-only.
     *
     * @param string $val The shareId
     *

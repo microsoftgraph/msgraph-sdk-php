@@ -27,7 +27,6 @@ class Folder extends Entity
 {
     /**
     * Gets the childCount
-    * Number of children contained immediately within this container.
     *
     * @return int The childCount
     */
@@ -42,7 +41,6 @@ class Folder extends Entity
 
     /**
     * Sets the childCount
-    * Number of children contained immediately within this container.
     *
     * @param int $val The value of the childCount
     *
@@ -50,7 +48,7 @@ class Folder extends Entity
     */
     public function setChildCount($val)
     {
-        $this->_propDict["child_count"] = $val;
+        $this->_propDict["childCount"] = $val;
         return $this;
     }
 }

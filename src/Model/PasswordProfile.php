@@ -26,32 +26,6 @@ namespace Microsoft\Graph\Model;
 class PasswordProfile extends Entity
 {
     /**
-    * Gets the forceChangePasswordNextSignIn
-    *
-    * @return bool The forceChangePasswordNextSignIn
-    */
-    public function getForceChangePasswordNextSignIn()
-    {
-        if (array_key_exists("forceChangePasswordNextSignIn", $this->_propDict)) {
-            return $this->_propDict["forceChangePasswordNextSignIn"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the forceChangePasswordNextSignIn
-    *
-    * @param bool $val The value of the forceChangePasswordNextSignIn
-    *
-    * @return PasswordProfile
-    */
-    public function setForceChangePasswordNextSignIn($val)
-    {
-        $this->_propDict["force_change_password_next_sign_in"] = $val;
-        return $this;
-    }
-    /**
     * Gets the password
     *
     * @return string The password
@@ -75,6 +49,32 @@ class PasswordProfile extends Entity
     public function setPassword($val)
     {
         $this->_propDict["password"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the forceChangePasswordNextSignIn
+    *
+    * @return bool The forceChangePasswordNextSignIn
+    */
+    public function getForceChangePasswordNextSignIn()
+    {
+        if (array_key_exists("forceChangePasswordNextSignIn", $this->_propDict)) {
+            return $this->_propDict["forceChangePasswordNextSignIn"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the forceChangePasswordNextSignIn
+    *
+    * @param bool $val The value of the forceChangePasswordNextSignIn
+    *
+    * @return PasswordProfile
+    */
+    public function setForceChangePasswordNextSignIn($val)
+    {
+        $this->_propDict["forceChangePasswordNextSignIn"] = $val;
         return $this;
     }
 }

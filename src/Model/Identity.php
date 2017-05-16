@@ -27,7 +27,6 @@ class Identity extends Entity
 {
     /**
     * Gets the displayName
-    * The identity's display name. Note that this may not always be available or up to date. For example, if a user changes their display name, the API may show the new value in a future response, but the items associated with the user won't show up as having changed when using find changes
     *
     * @return string The displayName
     */
@@ -42,7 +41,6 @@ class Identity extends Entity
 
     /**
     * Sets the displayName
-    * The identity's display name. Note that this may not always be available or up to date. For example, if a user changes their display name, the API may show the new value in a future response, but the items associated with the user won't show up as having changed when using find changes
     *
     * @param string $val The value of the displayName
     *
@@ -50,12 +48,11 @@ class Identity extends Entity
     */
     public function setDisplayName($val)
     {
-        $this->_propDict["display_name"] = $val;
+        $this->_propDict["displayName"] = $val;
         return $this;
     }
     /**
     * Gets the id
-    * Unique identifier for the identity.
     *
     * @return string The id
     */
@@ -70,7 +67,6 @@ class Identity extends Entity
 
     /**
     * Sets the id
-    * Unique identifier for the identity.
     *
     * @param string $val The value of the id
     *

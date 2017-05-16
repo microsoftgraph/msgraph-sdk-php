@@ -56,7 +56,6 @@ class Entity implements \JsonSerializable
     
     /**
     * Gets the id
-    * Read-only.
     *
     * @return string The id
     */
@@ -71,7 +70,6 @@ class Entity implements \JsonSerializable
     
     /**
     * Sets the id
-    * Read-only.
     *
     * @param string $val The id
     *
@@ -107,11 +105,18 @@ class Entity implements \JsonSerializable
     
     /**
     * Serializes the object by property array
+	* Manually serialize DateTime into RFC3339 format
     *
     * @return array The list of properties
     */
     public function jsonSerialize()
     {
-        return $this->getProperties();
+        $serializableProperties = $this->getProperties();
+        foreach ($serializableProperties as $property => $val) {
+            if (is_a($val, "\DateTime")) {
+                $serializableProperties[$property] = $val->format(\DateTime::RFC3339);
+            }
+        }
+        return $serializableProperties;
     }
 }

@@ -28,14 +28,13 @@ class MailboxSettings extends Entity
 
     /**
     * Gets the automaticRepliesSetting
-    * Configuration settings to automatically notify the sender of an incoming email with a message from the signed-in user.
     *
     * @return AutomaticRepliesSetting The automaticRepliesSetting
     */
     public function getAutomaticRepliesSetting()
     {
         if (array_key_exists("automaticRepliesSetting", $this->_propDict)) {
-            if (is_a($this->_propDict["automaticRepliesSetting"], "AutomaticRepliesSetting")) {
+            if (is_a($this->_propDict["automaticRepliesSetting"], "Microsoft\Graph\Model\AutomaticRepliesSetting")) {
                 return $this->_propDict["automaticRepliesSetting"];
             } else {
                 $this->_propDict["automaticRepliesSetting"] = new AutomaticRepliesSetting($this->_propDict["automaticRepliesSetting"]);
@@ -47,7 +46,6 @@ class MailboxSettings extends Entity
 
     /**
     * Sets the automaticRepliesSetting
-    * Configuration settings to automatically notify the sender of an incoming email with a message from the signed-in user.
     *
     * @param AutomaticRepliesSetting $val The value to assign to the automaticRepliesSetting
     *
@@ -58,42 +56,34 @@ class MailboxSettings extends Entity
         $this->_propDict["automaticRepliesSetting"] = $val;
          return $this;
     }
-
     /**
-    * Gets the language
-    * The locale information for the user, including the preferred language and country/region.
+    * Gets the archiveFolder
     *
-    * @return LocaleInfo The language
+    * @return string The archiveFolder
     */
-    public function getLanguage()
+    public function getArchiveFolder()
     {
-        if (array_key_exists("language", $this->_propDict)) {
-            if (is_a($this->_propDict["language"], "LocaleInfo")) {
-                return $this->_propDict["language"];
-            } else {
-                $this->_propDict["language"] = new LocaleInfo($this->_propDict["language"]);
-                return $this->_propDict["language"];
-            }
+        if (array_key_exists("archiveFolder", $this->_propDict)) {
+            return $this->_propDict["archiveFolder"];
+        } else {
+            return null;
         }
-        return null;
     }
 
     /**
-    * Sets the language
-    * The locale information for the user, including the preferred language and country/region.
+    * Sets the archiveFolder
     *
-    * @param LocaleInfo $val The value to assign to the language
+    * @param string $val The value of the archiveFolder
     *
-    * @return MailboxSettings The MailboxSettings
+    * @return MailboxSettings
     */
-    public function setLanguage($val)
+    public function setArchiveFolder($val)
     {
-        $this->_propDict["language"] = $val;
-         return $this;
+        $this->_propDict["archiveFolder"] = $val;
+        return $this;
     }
     /**
     * Gets the timeZone
-    * The default time zone for the user's mailbox.
     *
     * @return string The timeZone
     */
@@ -108,7 +98,6 @@ class MailboxSettings extends Entity
 
     /**
     * Sets the timeZone
-    * The default time zone for the user's mailbox.
     *
     * @param string $val The value of the timeZone
     *
@@ -116,7 +105,38 @@ class MailboxSettings extends Entity
     */
     public function setTimeZone($val)
     {
-        $this->_propDict["time_zone"] = $val;
+        $this->_propDict["timeZone"] = $val;
         return $this;
+    }
+
+    /**
+    * Gets the language
+    *
+    * @return LocaleInfo The language
+    */
+    public function getLanguage()
+    {
+        if (array_key_exists("language", $this->_propDict)) {
+            if (is_a($this->_propDict["language"], "Microsoft\Graph\Model\LocaleInfo")) {
+                return $this->_propDict["language"];
+            } else {
+                $this->_propDict["language"] = new LocaleInfo($this->_propDict["language"]);
+                return $this->_propDict["language"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the language
+    *
+    * @param LocaleInfo $val The value to assign to the language
+    *
+    * @return MailboxSettings The MailboxSettings
+    */
+    public function setLanguage($val)
+    {
+        $this->_propDict["language"] = $val;
+         return $this;
     }
 }

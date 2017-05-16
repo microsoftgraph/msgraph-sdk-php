@@ -28,14 +28,13 @@ class Attendee extends AttendeeBase
 
     /**
     * Gets the status
-    * The attendee's response (none, accepted, declined, etc.) for the event and date-time that the response was sent.
     *
     * @return ResponseStatus The status
     */
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "ResponseStatus")) {
+            if (is_a($this->_propDict["status"], "Microsoft\Graph\Model\ResponseStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new ResponseStatus($this->_propDict["status"]);
@@ -47,7 +46,6 @@ class Attendee extends AttendeeBase
 
     /**
     * Sets the status
-    * The attendee's response (none, accepted, declined, etc.) for the event and date-time that the response was sent.
     *
     * @param ResponseStatus $val The value to assign to the status
     *

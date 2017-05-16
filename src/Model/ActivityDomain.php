@@ -31,7 +31,8 @@ class ActivityDomain extends Enum
     /**
     * The Enum ActivityDomain
     */
-    const PERSONAL = "0";
-    const UNKNOWN = "1";
-    const WORK = "2";
+    const UNKNOWN = "unknown";
+    const WORK = "work";
+    const PERSONAL = "personal";
+    const UNRESTRICTED = "unrestricted";
 }

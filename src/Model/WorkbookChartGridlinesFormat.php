@@ -34,7 +34,7 @@ class WorkbookChartGridlinesFormat extends Entity
     public function getLine()
     {
         if (array_key_exists("line", $this->_propDict)) {
-            if (is_a($this->_propDict["line"], "WorkbookChartLineFormat")) {
+            if (is_a($this->_propDict["line"], "Microsoft\Graph\Model\WorkbookChartLineFormat")) {
                 return $this->_propDict["line"];
             } else {
                 $this->_propDict["line"] = new WorkbookChartLineFormat($this->_propDict["line"]);
@@ -47,7 +47,7 @@ class WorkbookChartGridlinesFormat extends Entity
     /**
     * Sets the line
     *
-    * @param string $val The line
+    * @param WorkbookChartLineFormat $val The line
     *
     * @return WorkbookChartGridlinesFormat
     */

@@ -28,14 +28,13 @@ class UploadSession extends Entity
 
     /**
     * Gets the expirationDateTime
-    * The date and time in UTC that the upload session will expire. The complete file must be uploaded before this expiration time is reached.
     *
     * @return \DateTime The expirationDateTime
     */
     public function getExpirationDateTime()
     {
         if (array_key_exists("expirationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["expirationDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["expirationDateTime"], "Microsoft\Graph\Model\\DateTime")) {
                 return $this->_propDict["expirationDateTime"];
             } else {
                 $this->_propDict["expirationDateTime"] = new \DateTime($this->_propDict["expirationDateTime"]);
@@ -47,7 +46,6 @@ class UploadSession extends Entity
 
     /**
     * Sets the expirationDateTime
-    * The date and time in UTC that the upload session will expire. The complete file must be uploaded before this expiration time is reached.
     *
     * @param \DateTime $val The value to assign to the expirationDateTime
     *
@@ -60,7 +58,6 @@ class UploadSession extends Entity
     }
     /**
     * Gets the nextExpectedRanges
-    * A collection of byte ranges that the server is missing for the file. These ranges are zero indexed and of the format "start-end" (e.g. "0-26" to indicate the first 27 bytes of the file).
     *
     * @return string The nextExpectedRanges
     */
@@ -75,7 +72,6 @@ class UploadSession extends Entity
 
     /**
     * Sets the nextExpectedRanges
-    * A collection of byte ranges that the server is missing for the file. These ranges are zero indexed and of the format "start-end" (e.g. "0-26" to indicate the first 27 bytes of the file).
     *
     * @param string $val The value of the nextExpectedRanges
     *
@@ -83,12 +79,11 @@ class UploadSession extends Entity
     */
     public function setNextExpectedRanges($val)
     {
-        $this->_propDict["next_expected_ranges"] = $val;
+        $this->_propDict["nextExpectedRanges"] = $val;
         return $this;
     }
     /**
     * Gets the uploadUrl
-    * The URL endpoint that accepts PUT requests for byte ranges of the file.
     *
     * @return string The uploadUrl
     */
@@ -103,7 +98,6 @@ class UploadSession extends Entity
 
     /**
     * Sets the uploadUrl
-    * The URL endpoint that accepts PUT requests for byte ranges of the file.
     *
     * @param string $val The value of the uploadUrl
     *
@@ -111,7 +105,7 @@ class UploadSession extends Entity
     */
     public function setUploadUrl($val)
     {
-        $this->_propDict["upload_url"] = $val;
+        $this->_propDict["uploadUrl"] = $val;
         return $this;
     }
 }

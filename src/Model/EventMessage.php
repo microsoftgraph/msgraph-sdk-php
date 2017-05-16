@@ -34,7 +34,7 @@ class EventMessage extends Message
     public function getMeetingMessageType()
     {
         if (array_key_exists("meetingMessageType", $this->_propDict)) {
-            if (is_a($this->_propDict["meetingMessageType"], "MeetingMessageType")) {
+            if (is_a($this->_propDict["meetingMessageType"], "Microsoft\Graph\Model\MeetingMessageType")) {
                 return $this->_propDict["meetingMessageType"];
             } else {
                 $this->_propDict["meetingMessageType"] = new MeetingMessageType($this->_propDict["meetingMessageType"]);
@@ -47,7 +47,7 @@ class EventMessage extends Message
     /**
     * Sets the meetingMessageType
     *
-    * @param string $val The meetingMessageType
+    * @param MeetingMessageType $val The meetingMessageType
     *
     * @return EventMessage
     */
@@ -65,7 +65,7 @@ class EventMessage extends Message
     public function getEvent()
     {
         if (array_key_exists("event", $this->_propDict)) {
-            if (is_a($this->_propDict["event"], "Event")) {
+            if (is_a($this->_propDict["event"], "Microsoft\Graph\Model\Event")) {
                 return $this->_propDict["event"];
             } else {
                 $this->_propDict["event"] = new Event($this->_propDict["event"]);
@@ -78,7 +78,7 @@ class EventMessage extends Message
     /**
     * Sets the event
     *
-    * @param string $val The event
+    * @param Event $val The event
     *
     * @return EventMessage
     */

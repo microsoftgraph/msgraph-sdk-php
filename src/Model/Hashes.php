@@ -27,7 +27,6 @@ class Hashes extends Entity
 {
     /**
     * Gets the crc32Hash
-    * The CRC32 value of the file (if available). Read-only.
     *
     * @return string The crc32Hash
     */
@@ -42,7 +41,6 @@ class Hashes extends Entity
 
     /**
     * Sets the crc32Hash
-    * The CRC32 value of the file (if available). Read-only.
     *
     * @param string $val The value of the crc32Hash
     *
@@ -50,12 +48,11 @@ class Hashes extends Entity
     */
     public function setCrc32Hash($val)
     {
-        $this->_propDict["crc32_hash"] = $val;
+        $this->_propDict["crc32Hash"] = $val;
         return $this;
     }
     /**
     * Gets the quickXorHash
-    * A proprietary hash of the file that can be used to determine if the contents of the file have changed (if available). Read-only.
     *
     * @return string The quickXorHash
     */
@@ -70,7 +67,6 @@ class Hashes extends Entity
 
     /**
     * Sets the quickXorHash
-    * A proprietary hash of the file that can be used to determine if the contents of the file have changed (if available). Read-only.
     *
     * @param string $val The value of the quickXorHash
     *
@@ -78,12 +74,11 @@ class Hashes extends Entity
     */
     public function setQuickXorHash($val)
     {
-        $this->_propDict["quick_xor_hash"] = $val;
+        $this->_propDict["quickXorHash"] = $val;
         return $this;
     }
     /**
     * Gets the sha1Hash
-    * SHA1 hash for the contents of the file (if available). Read-only.
     *
     * @return string The sha1Hash
     */
@@ -98,7 +93,6 @@ class Hashes extends Entity
 
     /**
     * Sets the sha1Hash
-    * SHA1 hash for the contents of the file (if available). Read-only.
     *
     * @param string $val The value of the sha1Hash
     *
@@ -106,7 +100,7 @@ class Hashes extends Entity
     */
     public function setSha1Hash($val)
     {
-        $this->_propDict["sha1_hash"] = $val;
+        $this->_propDict["sha1Hash"] = $val;
         return $this;
     }
 }

@@ -28,14 +28,13 @@ class File extends Entity
 
     /**
     * Gets the hashes
-    * Hashes of the file's binary content, if available. Read-only.
     *
     * @return Hashes The hashes
     */
     public function getHashes()
     {
         if (array_key_exists("hashes", $this->_propDict)) {
-            if (is_a($this->_propDict["hashes"], "Hashes")) {
+            if (is_a($this->_propDict["hashes"], "Microsoft\Graph\Model\Hashes")) {
                 return $this->_propDict["hashes"];
             } else {
                 $this->_propDict["hashes"] = new Hashes($this->_propDict["hashes"]);
@@ -47,7 +46,6 @@ class File extends Entity
 
     /**
     * Sets the hashes
-    * Hashes of the file's binary content, if available. Read-only.
     *
     * @param Hashes $val The value to assign to the hashes
     *
@@ -60,7 +58,6 @@ class File extends Entity
     }
     /**
     * Gets the mimeType
-    * The MIME type for the file. This is determined by logic on the server and might not be the value provided when the file was uploaded. Read-only.
     *
     * @return string The mimeType
     */
@@ -75,7 +72,6 @@ class File extends Entity
 
     /**
     * Sets the mimeType
-    * The MIME type for the file. This is determined by logic on the server and might not be the value provided when the file was uploaded. Read-only.
     *
     * @param string $val The value of the mimeType
     *
@@ -83,7 +79,7 @@ class File extends Entity
     */
     public function setMimeType($val)
     {
-        $this->_propDict["mime_type"] = $val;
+        $this->_propDict["mimeType"] = $val;
         return $this;
     }
     /**
@@ -109,7 +105,7 @@ class File extends Entity
     */
     public function setProcessingMetadata($val)
     {
-        $this->_propDict["processing_metadata"] = $val;
+        $this->_propDict["processingMetadata"] = $val;
         return $this;
     }
 }

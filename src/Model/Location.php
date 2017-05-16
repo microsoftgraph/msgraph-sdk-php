@@ -25,42 +25,8 @@ namespace Microsoft\Graph\Model;
 */
 class Location extends Entity
 {
-
-    /**
-    * Gets the address
-    * The street address of the location.
-    *
-    * @return PhysicalAddress The address
-    */
-    public function getAddress()
-    {
-        if (array_key_exists("address", $this->_propDict)) {
-            if (is_a($this->_propDict["address"], "PhysicalAddress")) {
-                return $this->_propDict["address"];
-            } else {
-                $this->_propDict["address"] = new PhysicalAddress($this->_propDict["address"]);
-                return $this->_propDict["address"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the address
-    * The street address of the location.
-    *
-    * @param PhysicalAddress $val The value to assign to the address
-    *
-    * @return Location The Location
-    */
-    public function setAddress($val)
-    {
-        $this->_propDict["address"] = $val;
-         return $this;
-    }
     /**
     * Gets the displayName
-    * The name associated with the location.
     *
     * @return string The displayName
     */
@@ -75,7 +41,6 @@ class Location extends Entity
 
     /**
     * Sets the displayName
-    * The name associated with the location.
     *
     * @param string $val The value of the displayName
     *
@@ -83,12 +48,11 @@ class Location extends Entity
     */
     public function setDisplayName($val)
     {
-        $this->_propDict["display_name"] = $val;
+        $this->_propDict["displayName"] = $val;
         return $this;
     }
     /**
     * Gets the locationEmailAddress
-    * Optional email address of the location.
     *
     * @return string The locationEmailAddress
     */
@@ -103,7 +67,6 @@ class Location extends Entity
 
     /**
     * Sets the locationEmailAddress
-    * Optional email address of the location.
     *
     * @param string $val The value of the locationEmailAddress
     *
@@ -111,7 +74,38 @@ class Location extends Entity
     */
     public function setLocationEmailAddress($val)
     {
-        $this->_propDict["location_email_address"] = $val;
+        $this->_propDict["locationEmailAddress"] = $val;
         return $this;
+    }
+
+    /**
+    * Gets the address
+    *
+    * @return PhysicalAddress The address
+    */
+    public function getAddress()
+    {
+        if (array_key_exists("address", $this->_propDict)) {
+            if (is_a($this->_propDict["address"], "Microsoft\Graph\Model\PhysicalAddress")) {
+                return $this->_propDict["address"];
+            } else {
+                $this->_propDict["address"] = new PhysicalAddress($this->_propDict["address"]);
+                return $this->_propDict["address"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the address
+    *
+    * @param PhysicalAddress $val The value to assign to the address
+    *
+    * @return Location The Location
+    */
+    public function setAddress($val)
+    {
+        $this->_propDict["address"] = $val;
+         return $this;
     }
 }

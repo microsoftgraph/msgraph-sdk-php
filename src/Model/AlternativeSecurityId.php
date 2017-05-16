@@ -26,63 +26,6 @@ namespace Microsoft\Graph\Model;
 class AlternativeSecurityId extends Entity
 {
     /**
-    * Gets the identityProvider
-    *
-    * @return string The identityProvider
-    */
-    public function getIdentityProvider()
-    {
-        if (array_key_exists("identityProvider", $this->_propDict)) {
-            return $this->_propDict["identityProvider"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the identityProvider
-    *
-    * @param string $val The value of the identityProvider
-    *
-    * @return AlternativeSecurityId
-    */
-    public function setIdentityProvider($val)
-    {
-        $this->_propDict["identity_provider"] = $val;
-        return $this;
-    }
-
-    /**
-    * Gets the key
-    *
-    * @return \GuzzleHttp\Psr7\Stream The key
-    */
-    public function getKey()
-    {
-        if (array_key_exists("key", $this->_propDict)) {
-            if (is_a($this->_propDict["key"], "\GuzzleHttp\Psr7\Stream")) {
-                return $this->_propDict["key"];
-            } else {
-                $this->_propDict["key"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["key"]);
-                return $this->_propDict["key"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the key
-    *
-    * @param \GuzzleHttp\Psr7\Stream $val The value to assign to the key
-    *
-    * @return AlternativeSecurityId The AlternativeSecurityId
-    */
-    public function setKey($val)
-    {
-        $this->_propDict["key"] = $val;
-         return $this;
-    }
-    /**
     * Gets the type
     *
     * @return int The type
@@ -107,5 +50,62 @@ class AlternativeSecurityId extends Entity
     {
         $this->_propDict["type"] = $val;
         return $this;
+    }
+    /**
+    * Gets the identityProvider
+    *
+    * @return string The identityProvider
+    */
+    public function getIdentityProvider()
+    {
+        if (array_key_exists("identityProvider", $this->_propDict)) {
+            return $this->_propDict["identityProvider"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the identityProvider
+    *
+    * @param string $val The value of the identityProvider
+    *
+    * @return AlternativeSecurityId
+    */
+    public function setIdentityProvider($val)
+    {
+        $this->_propDict["identityProvider"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the key
+    *
+    * @return \GuzzleHttp\Psr7\Stream The key
+    */
+    public function getKey()
+    {
+        if (array_key_exists("key", $this->_propDict)) {
+            if (is_a($this->_propDict["key"], "Microsoft\Graph\Model\\GuzzleHttp\Psr7\Stream")) {
+                return $this->_propDict["key"];
+            } else {
+                $this->_propDict["key"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["key"]);
+                return $this->_propDict["key"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the key
+    *
+    * @param \GuzzleHttp\Psr7\Stream $val The value to assign to the key
+    *
+    * @return AlternativeSecurityId The AlternativeSecurityId
+    */
+    public function setKey($val)
+    {
+        $this->_propDict["key"] = $val;
+         return $this;
     }
 }

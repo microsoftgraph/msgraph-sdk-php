@@ -27,37 +27,7 @@ namespace Microsoft\Graph\Model;
 class SubscribedSku extends Entity
 {
     /**
-    * Gets the appliesTo
-    * For example, "User" or "Company".
-    *
-    * @return string The appliesTo
-    */
-    public function getAppliesTo()
-    {
-        if (array_key_exists("appliesTo", $this->_propDict)) {
-            return $this->_propDict["appliesTo"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the appliesTo
-    * For example, "User" or "Company".
-    *
-    * @param string $val The appliesTo
-    *
-    * @return SubscribedSku
-    */
-    public function setAppliesTo($val)
-    {
-        $this->_propDict["appliesTo"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the capabilityStatus
-    * For example, "Enabled", "LockedOut", and "Suspended".
     *
     * @return string The capabilityStatus
     */
@@ -72,7 +42,6 @@ class SubscribedSku extends Entity
     
     /**
     * Sets the capabilityStatus
-    * For example, "Enabled", "LockedOut", and "Suspended".
     *
     * @param string $val The capabilityStatus
     *
@@ -86,7 +55,6 @@ class SubscribedSku extends Entity
     
     /**
     * Gets the consumedUnits
-    * The number of licenses that have been assigned.
     *
     * @return int The consumedUnits
     */
@@ -101,7 +69,6 @@ class SubscribedSku extends Entity
     
     /**
     * Sets the consumedUnits
-    * The number of licenses that have been assigned.
     *
     * @param int $val The consumedUnits
     *
@@ -115,14 +82,13 @@ class SubscribedSku extends Entity
     
     /**
     * Gets the prepaidUnits
-    * Information about the number and status of prepaid licenses.
     *
     * @return LicenseUnitsDetail The prepaidUnits
     */
     public function getPrepaidUnits()
     {
         if (array_key_exists("prepaidUnits", $this->_propDict)) {
-            if (is_a($this->_propDict["prepaidUnits"], "LicenseUnitsDetail")) {
+            if (is_a($this->_propDict["prepaidUnits"], "Microsoft\Graph\Model\LicenseUnitsDetail")) {
                 return $this->_propDict["prepaidUnits"];
             } else {
                 $this->_propDict["prepaidUnits"] = new LicenseUnitsDetail($this->_propDict["prepaidUnits"]);
@@ -134,9 +100,8 @@ class SubscribedSku extends Entity
     
     /**
     * Sets the prepaidUnits
-    * Information about the number and status of prepaid licenses.
     *
-    * @param string $val The prepaidUnits
+    * @param LicenseUnitsDetail $val The prepaidUnits
     *
     * @return SubscribedSku
     */
@@ -149,7 +114,6 @@ class SubscribedSku extends Entity
 
      /** 
      * Gets the servicePlans
-    * Information about the service plans that are available with the SKU.
      *
      * @return array The servicePlans
      */
@@ -164,9 +128,8 @@ class SubscribedSku extends Entity
     
     /** 
     * Sets the servicePlans
-    * Information about the service plans that are available with the SKU.
     *
-    * @param string $val The servicePlans
+    * @param ServicePlanInfo $val The servicePlans
     *
     * @return SubscribedSku
     */
@@ -178,7 +141,6 @@ class SubscribedSku extends Entity
     
     /**
     * Gets the skuId
-    * The unique identifier (GUID) for the service SKU.
     *
     * @return string The skuId
     */
@@ -193,7 +155,6 @@ class SubscribedSku extends Entity
     
     /**
     * Sets the skuId
-    * The unique identifier (GUID) for the service SKU.
     *
     * @param string $val The skuId
     *
@@ -207,7 +168,6 @@ class SubscribedSku extends Entity
     
     /**
     * Gets the skuPartNumber
-    * The SKU part number; for example: "AAD_PREMIUM" or "RMSBASIC".
     *
     * @return string The skuPartNumber
     */
@@ -222,7 +182,6 @@ class SubscribedSku extends Entity
     
     /**
     * Sets the skuPartNumber
-    * The SKU part number; for example: "AAD_PREMIUM" or "RMSBASIC".
     *
     * @param string $val The skuPartNumber
     *
@@ -231,6 +190,33 @@ class SubscribedSku extends Entity
     public function setSkuPartNumber($val)
     {
         $this->_propDict["skuPartNumber"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the appliesTo
+    *
+    * @return string The appliesTo
+    */
+    public function getAppliesTo()
+    {
+        if (array_key_exists("appliesTo", $this->_propDict)) {
+            return $this->_propDict["appliesTo"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the appliesTo
+    *
+    * @param string $val The appliesTo
+    *
+    * @return SubscribedSku
+    */
+    public function setAppliesTo($val)
+    {
+        $this->_propDict["appliesTo"] = $val;
         return $this;
     }
     

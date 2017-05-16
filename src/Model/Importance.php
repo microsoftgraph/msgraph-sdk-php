@@ -31,7 +31,7 @@ class Importance extends Enum
     /**
     * The Enum Importance
     */
-    const HIGH = "0";
-    const LOW = "1";
-    const NORMAL = "2";
+    const LOW = "low";
+    const NORMAL = "normal";
+    const HIGH = "high";
 }

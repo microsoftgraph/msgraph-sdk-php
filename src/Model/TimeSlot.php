@@ -27,48 +27,14 @@ class TimeSlot extends Entity
 {
 
     /**
-    * Gets the end
-    * The time a period begins.
-    *
-    * @return DateTimeTimeZone The end
-    */
-    public function getEnd()
-    {
-        if (array_key_exists("end", $this->_propDict)) {
-            if (is_a($this->_propDict["end"], "DateTimeTimeZone")) {
-                return $this->_propDict["end"];
-            } else {
-                $this->_propDict["end"] = new DateTimeTimeZone($this->_propDict["end"]);
-                return $this->_propDict["end"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the end
-    * The time a period begins.
-    *
-    * @param DateTimeTimeZone $val The value to assign to the end
-    *
-    * @return TimeSlot The TimeSlot
-    */
-    public function setEnd($val)
-    {
-        $this->_propDict["end"] = $val;
-         return $this;
-    }
-
-    /**
     * Gets the start
-    * The time the period ends.
     *
     * @return DateTimeTimeZone The start
     */
     public function getStart()
     {
         if (array_key_exists("start", $this->_propDict)) {
-            if (is_a($this->_propDict["start"], "DateTimeTimeZone")) {
+            if (is_a($this->_propDict["start"], "Microsoft\Graph\Model\DateTimeTimeZone")) {
                 return $this->_propDict["start"];
             } else {
                 $this->_propDict["start"] = new DateTimeTimeZone($this->_propDict["start"]);
@@ -80,7 +46,6 @@ class TimeSlot extends Entity
 
     /**
     * Sets the start
-    * The time the period ends.
     *
     * @param DateTimeTimeZone $val The value to assign to the start
     *
@@ -89,6 +54,37 @@ class TimeSlot extends Entity
     public function setStart($val)
     {
         $this->_propDict["start"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the end
+    *
+    * @return DateTimeTimeZone The end
+    */
+    public function getEnd()
+    {
+        if (array_key_exists("end", $this->_propDict)) {
+            if (is_a($this->_propDict["end"], "Microsoft\Graph\Model\DateTimeTimeZone")) {
+                return $this->_propDict["end"];
+            } else {
+                $this->_propDict["end"] = new DateTimeTimeZone($this->_propDict["end"]);
+                return $this->_propDict["end"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the end
+    *
+    * @param DateTimeTimeZone $val The value to assign to the end
+    *
+    * @return TimeSlot The TimeSlot
+    */
+    public function setEnd($val)
+    {
+        $this->_propDict["end"] = $val;
          return $this;
     }
 }

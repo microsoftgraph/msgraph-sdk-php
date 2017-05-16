@@ -31,11 +31,11 @@ class DayOfWeek extends Enum
     /**
     * The Enum DayOfWeek
     */
-    const FRIDAY = "0";
-    const MONDAY = "1";
-    const SATURDAY = "2";
-    const SUNDAY = "3";
-    const THURSDAY = "4";
-    const TUESDAY = "5";
-    const WEDNESDAY = "6";
+    const SUNDAY = "sunday";
+    const MONDAY = "monday";
+    const TUESDAY = "tuesday";
+    const WEDNESDAY = "wednesday";
+    const THURSDAY = "thursday";
+    const FRIDAY = "friday";
+    const SATURDAY = "saturday";
 }

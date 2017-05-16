@@ -74,6 +74,17 @@ class ModelTest extends TestCase
         $this->assertFalse($enum->is("1"));
         $this->assertEquals("0", $enum->value());
     }
+
+    public function testSetObject()
+    {
+        $drive = new Model\Drive();
+        $drive->setRoot(new Model\DriveItem());
+        $results = $drive->getRoot();
+        $results2 = $drive->getRoot();
+        $this->assertInstanceOf(Model\DriveItem::class, $results);
+        $this->assertInstanceOf(Model\DriveItem::class, $results2);
+        $this->assertEquals($results, $results2);
+    }
 }
 
 class TestEnum extends Enum {

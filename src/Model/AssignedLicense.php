@@ -27,7 +27,6 @@ class AssignedLicense extends Entity
 {
     /**
     * Gets the disabledPlans
-    * A collection of the unique identifiers for plans that have been disabled.
     *
     * @return string The disabledPlans
     */
@@ -42,7 +41,6 @@ class AssignedLicense extends Entity
 
     /**
     * Sets the disabledPlans
-    * A collection of the unique identifiers for plans that have been disabled.
     *
     * @param string $val The value of the disabledPlans
     *
@@ -50,12 +48,11 @@ class AssignedLicense extends Entity
     */
     public function setDisabledPlans($val)
     {
-        $this->_propDict["disabled_plans"] = $val;
+        $this->_propDict["disabledPlans"] = $val;
         return $this;
     }
     /**
     * Gets the skuId
-    * The unique identifier for the SKU.
     *
     * @return string The skuId
     */
@@ -70,7 +67,6 @@ class AssignedLicense extends Entity
 
     /**
     * Sets the skuId
-    * The unique identifier for the SKU.
     *
     * @param string $val The value of the skuId
     *
@@ -78,7 +74,7 @@ class AssignedLicense extends Entity
     */
     public function setSkuId($val)
     {
-        $this->_propDict["sku_id"] = $val;
+        $this->_propDict["skuId"] = $val;
         return $this;
     }
 }

@@ -29,7 +29,6 @@ class InferenceClassification extends Entity
 
      /** 
      * Gets the overrides
-    * A set of overrides for a user to always classify messages from specific senders in certain ways: focused, or other. Read-only. Nullable.
      *
      * @return array The overrides
      */
@@ -44,9 +43,8 @@ class InferenceClassification extends Entity
     
     /** 
     * Sets the overrides
-    * A set of overrides for a user to always classify messages from specific senders in certain ways: focused, or other. Read-only. Nullable.
     *
-    * @param string $val The overrides
+    * @param InferenceClassificationOverride $val The overrides
     *
     * @return InferenceClassification
     */

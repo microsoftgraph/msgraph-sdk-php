@@ -126,7 +126,7 @@ class WorkbookFilterCriteria extends Entity
     */
     public function setDynamicCriteria($val)
     {
-        $this->_propDict["dynamic_criteria"] = $val;
+        $this->_propDict["dynamicCriteria"] = $val;
         return $this;
     }
     /**
@@ -152,7 +152,7 @@ class WorkbookFilterCriteria extends Entity
     */
     public function setFilterOn($val)
     {
-        $this->_propDict["filter_on"] = $val;
+        $this->_propDict["filterOn"] = $val;
         return $this;
     }
 
@@ -164,7 +164,7 @@ class WorkbookFilterCriteria extends Entity
     public function getIcon()
     {
         if (array_key_exists("icon", $this->_propDict)) {
-            if (is_a($this->_propDict["icon"], "WorkbookIcon")) {
+            if (is_a($this->_propDict["icon"], "Microsoft\Graph\Model\WorkbookIcon")) {
                 return $this->_propDict["icon"];
             } else {
                 $this->_propDict["icon"] = new WorkbookIcon($this->_propDict["icon"]);

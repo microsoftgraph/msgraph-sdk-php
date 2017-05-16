@@ -26,36 +26,7 @@ namespace Microsoft\Graph\Model;
 class EmailAddress extends Entity
 {
     /**
-    * Gets the address
-    * The email address of the person or entity.
-    *
-    * @return string The address
-    */
-    public function getAddress()
-    {
-        if (array_key_exists("address", $this->_propDict)) {
-            return $this->_propDict["address"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the address
-    * The email address of the person or entity.
-    *
-    * @param string $val The value of the address
-    *
-    * @return EmailAddress
-    */
-    public function setAddress($val)
-    {
-        $this->_propDict["address"] = $val;
-        return $this;
-    }
-    /**
     * Gets the name
-    * The display name of the person or entity.
     *
     * @return string The name
     */
@@ -70,7 +41,6 @@ class EmailAddress extends Entity
 
     /**
     * Sets the name
-    * The display name of the person or entity.
     *
     * @param string $val The value of the name
     *
@@ -79,6 +49,32 @@ class EmailAddress extends Entity
     public function setName($val)
     {
         $this->_propDict["name"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the address
+    *
+    * @return string The address
+    */
+    public function getAddress()
+    {
+        if (array_key_exists("address", $this->_propDict)) {
+            return $this->_propDict["address"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the address
+    *
+    * @param string $val The value of the address
+    *
+    * @return EmailAddress
+    */
+    public function setAddress($val)
+    {
+        $this->_propDict["address"] = $val;
         return $this;
     }
 }

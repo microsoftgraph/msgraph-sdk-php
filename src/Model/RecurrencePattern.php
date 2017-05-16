@@ -25,123 +25,35 @@ namespace Microsoft\Graph\Model;
 */
 class RecurrencePattern extends Entity
 {
-    /**
-    * Gets the dayOfMonth
-    *
-    * @return int The dayOfMonth
-    */
-    public function getDayOfMonth()
-    {
-        if (array_key_exists("dayOfMonth", $this->_propDict)) {
-            return $this->_propDict["dayOfMonth"];
-        } else {
-            return null;
-        }
-    }
 
     /**
-    * Sets the dayOfMonth
+    * Gets the type
     *
-    * @param int $val The value of the dayOfMonth
-    *
-    * @return RecurrencePattern
+    * @return RecurrencePatternType The type
     */
-    public function setDayOfMonth($val)
+    public function getType()
     {
-        $this->_propDict["day_of_month"] = $val;
-        return $this;
-    }
-
-    /**
-    * Gets the daysOfWeek
-    *
-    * @return DayOfWeek The daysOfWeek
-    */
-    public function getDaysOfWeek()
-    {
-        if (array_key_exists("daysOfWeek", $this->_propDict)) {
-            if (is_a($this->_propDict["daysOfWeek"], "DayOfWeek")) {
-                return $this->_propDict["daysOfWeek"];
+        if (array_key_exists("type", $this->_propDict)) {
+            if (is_a($this->_propDict["type"], "Microsoft\Graph\Model\RecurrencePatternType")) {
+                return $this->_propDict["type"];
             } else {
-                $this->_propDict["daysOfWeek"] = new DayOfWeek($this->_propDict["daysOfWeek"]);
-                return $this->_propDict["daysOfWeek"];
+                $this->_propDict["type"] = new RecurrencePatternType($this->_propDict["type"]);
+                return $this->_propDict["type"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the daysOfWeek
+    * Sets the type
     *
-    * @param DayOfWeek $val The value to assign to the daysOfWeek
-    *
-    * @return RecurrencePattern The RecurrencePattern
-    */
-    public function setDaysOfWeek($val)
-    {
-        $this->_propDict["daysOfWeek"] = $val;
-         return $this;
-    }
-
-    /**
-    * Gets the firstDayOfWeek
-    *
-    * @return DayOfWeek The firstDayOfWeek
-    */
-    public function getFirstDayOfWeek()
-    {
-        if (array_key_exists("firstDayOfWeek", $this->_propDict)) {
-            if (is_a($this->_propDict["firstDayOfWeek"], "DayOfWeek")) {
-                return $this->_propDict["firstDayOfWeek"];
-            } else {
-                $this->_propDict["firstDayOfWeek"] = new DayOfWeek($this->_propDict["firstDayOfWeek"]);
-                return $this->_propDict["firstDayOfWeek"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the firstDayOfWeek
-    *
-    * @param DayOfWeek $val The value to assign to the firstDayOfWeek
+    * @param RecurrencePatternType $val The value to assign to the type
     *
     * @return RecurrencePattern The RecurrencePattern
     */
-    public function setFirstDayOfWeek($val)
+    public function setType($val)
     {
-        $this->_propDict["firstDayOfWeek"] = $val;
-         return $this;
-    }
-
-    /**
-    * Gets the index
-    *
-    * @return WeekIndex The index
-    */
-    public function getIndex()
-    {
-        if (array_key_exists("index", $this->_propDict)) {
-            if (is_a($this->_propDict["index"], "WeekIndex")) {
-                return $this->_propDict["index"];
-            } else {
-                $this->_propDict["index"] = new WeekIndex($this->_propDict["index"]);
-                return $this->_propDict["index"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the index
-    *
-    * @param WeekIndex $val The value to assign to the index
-    *
-    * @return RecurrencePattern The RecurrencePattern
-    */
-    public function setIndex($val)
-    {
-        $this->_propDict["index"] = $val;
+        $this->_propDict["type"] = $val;
          return $this;
     }
     /**
@@ -196,35 +108,123 @@ class RecurrencePattern extends Entity
         $this->_propDict["month"] = $val;
         return $this;
     }
+    /**
+    * Gets the dayOfMonth
+    *
+    * @return int The dayOfMonth
+    */
+    public function getDayOfMonth()
+    {
+        if (array_key_exists("dayOfMonth", $this->_propDict)) {
+            return $this->_propDict["dayOfMonth"];
+        } else {
+            return null;
+        }
+    }
 
     /**
-    * Gets the type
+    * Sets the dayOfMonth
     *
-    * @return RecurrencePatternType The type
+    * @param int $val The value of the dayOfMonth
+    *
+    * @return RecurrencePattern
     */
-    public function getType()
+    public function setDayOfMonth($val)
     {
-        if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "RecurrencePatternType")) {
-                return $this->_propDict["type"];
+        $this->_propDict["dayOfMonth"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the daysOfWeek
+    *
+    * @return DayOfWeek The daysOfWeek
+    */
+    public function getDaysOfWeek()
+    {
+        if (array_key_exists("daysOfWeek", $this->_propDict)) {
+            if (is_a($this->_propDict["daysOfWeek"], "Microsoft\Graph\Model\DayOfWeek")) {
+                return $this->_propDict["daysOfWeek"];
             } else {
-                $this->_propDict["type"] = new RecurrencePatternType($this->_propDict["type"]);
-                return $this->_propDict["type"];
+                $this->_propDict["daysOfWeek"] = new DayOfWeek($this->_propDict["daysOfWeek"]);
+                return $this->_propDict["daysOfWeek"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the type
+    * Sets the daysOfWeek
     *
-    * @param RecurrencePatternType $val The value to assign to the type
+    * @param DayOfWeek $val The value to assign to the daysOfWeek
     *
     * @return RecurrencePattern The RecurrencePattern
     */
-    public function setType($val)
+    public function setDaysOfWeek($val)
     {
-        $this->_propDict["type"] = $val;
+        $this->_propDict["daysOfWeek"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the firstDayOfWeek
+    *
+    * @return DayOfWeek The firstDayOfWeek
+    */
+    public function getFirstDayOfWeek()
+    {
+        if (array_key_exists("firstDayOfWeek", $this->_propDict)) {
+            if (is_a($this->_propDict["firstDayOfWeek"], "Microsoft\Graph\Model\DayOfWeek")) {
+                return $this->_propDict["firstDayOfWeek"];
+            } else {
+                $this->_propDict["firstDayOfWeek"] = new DayOfWeek($this->_propDict["firstDayOfWeek"]);
+                return $this->_propDict["firstDayOfWeek"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the firstDayOfWeek
+    *
+    * @param DayOfWeek $val The value to assign to the firstDayOfWeek
+    *
+    * @return RecurrencePattern The RecurrencePattern
+    */
+    public function setFirstDayOfWeek($val)
+    {
+        $this->_propDict["firstDayOfWeek"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the index
+    *
+    * @return WeekIndex The index
+    */
+    public function getIndex()
+    {
+        if (array_key_exists("index", $this->_propDict)) {
+            if (is_a($this->_propDict["index"], "Microsoft\Graph\Model\WeekIndex")) {
+                return $this->_propDict["index"];
+            } else {
+                $this->_propDict["index"] = new WeekIndex($this->_propDict["index"]);
+                return $this->_propDict["index"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the index
+    *
+    * @param WeekIndex $val The value to assign to the index
+    *
+    * @return RecurrencePattern The RecurrencePattern
+    */
+    public function setIndex($val)
+    {
+        $this->_propDict["index"] = $val;
          return $this;
     }
 }
