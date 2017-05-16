@@ -47,7 +47,7 @@ class WorkbookFilter extends Entity
     /**
     * Sets the criteria
     *
-    * @param string $val The criteria
+    * @param WorkbookFilterCriteria $val The criteria
     *
     * @return WorkbookFilter
     */

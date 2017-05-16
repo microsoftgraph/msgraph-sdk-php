@@ -27,66 +27,7 @@ namespace Microsoft\Graph\Model;
 class Group extends DirectoryObject
 {
     /**
-    * Gets the allowExternalSenders
-    * Default is false. Indicates if people external to the organization can send messages to the group.
-    *
-    * @return bool The allowExternalSenders
-    */
-    public function getAllowExternalSenders()
-    {
-        if (array_key_exists("allowExternalSenders", $this->_propDict)) {
-            return $this->_propDict["allowExternalSenders"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the allowExternalSenders
-    * Default is false. Indicates if people external to the organization can send messages to the group.
-    *
-    * @param bool $val The allowExternalSenders
-    *
-    * @return Group
-    */
-    public function setAllowExternalSenders($val)
-    {
-        $this->_propDict["allowExternalSenders"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the autoSubscribeNewMembers
-    * Default is false. Indicates if new members added to the group will be auto-subscribed to receive email notifications. You can set this property in a PATCH request for the group; do not set it in the initial POST request that creates the group.
-    *
-    * @return bool The autoSubscribeNewMembers
-    */
-    public function getAutoSubscribeNewMembers()
-    {
-        if (array_key_exists("autoSubscribeNewMembers", $this->_propDict)) {
-            return $this->_propDict["autoSubscribeNewMembers"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the autoSubscribeNewMembers
-    * Default is false. Indicates if new members added to the group will be auto-subscribed to receive email notifications. You can set this property in a PATCH request for the group; do not set it in the initial POST request that creates the group.
-    *
-    * @param bool $val The autoSubscribeNewMembers
-    *
-    * @return Group
-    */
-    public function setAutoSubscribeNewMembers($val)
-    {
-        $this->_propDict["autoSubscribeNewMembers"] = boolval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the description
-    * An optional description for the group.
     *
     * @return string The description
     */
@@ -101,7 +42,6 @@ class Group extends DirectoryObject
     
     /**
     * Sets the description
-    * An optional description for the group.
     *
     * @param string $val The description
     *
@@ -115,7 +55,6 @@ class Group extends DirectoryObject
     
     /**
     * Gets the displayName
-    * The display name for the group. This property is required when a group is created and it cannot be cleared during updates. Supports $filter and $orderby.
     *
     * @return string The displayName
     */
@@ -130,7 +69,6 @@ class Group extends DirectoryObject
     
     /**
     * Sets the displayName
-    * The display name for the group. This property is required when a group is created and it cannot be cleared during updates. Supports $filter and $orderby.
     *
     * @param string $val The displayName
     *
@@ -144,7 +82,6 @@ class Group extends DirectoryObject
     
     /**
     * Gets the groupTypes
-    * Specifies the type of group to create. Possible values are Unified to create an Office 365 group, or DynamicMembership for dynamic groups.  For all other group types, like security-enabled groups and email-enabled security groups, do not set this property. Supports $filter.
     *
     * @return string The groupTypes
     */
@@ -159,7 +96,6 @@ class Group extends DirectoryObject
     
     /**
     * Sets the groupTypes
-    * Specifies the type of group to create. Possible values are Unified to create an Office 365 group, or DynamicMembership for dynamic groups.  For all other group types, like security-enabled groups and email-enabled security groups, do not set this property. Supports $filter.
     *
     * @param string $val The groupTypes
     *
@@ -172,37 +108,7 @@ class Group extends DirectoryObject
     }
     
     /**
-    * Gets the isSubscribedByMail
-    * Default value is true. Indicates whether the current user is subscribed to receive email conversations.
-    *
-    * @return bool The isSubscribedByMail
-    */
-    public function getIsSubscribedByMail()
-    {
-        if (array_key_exists("isSubscribedByMail", $this->_propDict)) {
-            return $this->_propDict["isSubscribedByMail"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the isSubscribedByMail
-    * Default value is true. Indicates whether the current user is subscribed to receive email conversations.
-    *
-    * @param bool $val The isSubscribedByMail
-    *
-    * @return Group
-    */
-    public function setIsSubscribedByMail($val)
-    {
-        $this->_propDict["isSubscribedByMail"] = boolval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the mail
-    * The SMTP address for the group, for example, "serviceadmins@contoso.onmicrosoft.com". Read-only. Supports $filter.
     *
     * @return string The mail
     */
@@ -217,7 +123,6 @@ class Group extends DirectoryObject
     
     /**
     * Sets the mail
-    * The SMTP address for the group, for example, "serviceadmins@contoso.onmicrosoft.com". Read-only. Supports $filter.
     *
     * @param string $val The mail
     *
@@ -231,7 +136,6 @@ class Group extends DirectoryObject
     
     /**
     * Gets the mailEnabled
-    * Specifies whether the group is mail-enabled. If the securityEnabled property is also true, the group is a mail-enabled security group; otherwise, the group is a Microsoft Exchange distribution group.
     *
     * @return bool The mailEnabled
     */
@@ -246,7 +150,6 @@ class Group extends DirectoryObject
     
     /**
     * Sets the mailEnabled
-    * Specifies whether the group is mail-enabled. If the securityEnabled property is also true, the group is a mail-enabled security group; otherwise, the group is a Microsoft Exchange distribution group.
     *
     * @param bool $val The mailEnabled
     *
@@ -260,7 +163,6 @@ class Group extends DirectoryObject
     
     /**
     * Gets the mailNickname
-    * The mail alias for the group. This property must be specified when a group is created. Supports $filter.
     *
     * @return string The mailNickname
     */
@@ -275,7 +177,6 @@ class Group extends DirectoryObject
     
     /**
     * Sets the mailNickname
-    * The mail alias for the group. This property must be specified when a group is created. Supports $filter.
     *
     * @param string $val The mailNickname
     *
@@ -289,7 +190,6 @@ class Group extends DirectoryObject
     
     /**
     * Gets the onPremisesLastSyncDateTime
-    * Indicates the last time at which the group was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only. Supports $filter.
     *
     * @return \DateTime The onPremisesLastSyncDateTime
     */
@@ -308,9 +208,8 @@ class Group extends DirectoryObject
     
     /**
     * Sets the onPremisesLastSyncDateTime
-    * Indicates the last time at which the group was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only. Supports $filter.
     *
-    * @param string $val The onPremisesLastSyncDateTime
+    * @param \DateTime $val The onPremisesLastSyncDateTime
     *
     * @return Group
     */
@@ -322,7 +221,6 @@ class Group extends DirectoryObject
     
     /**
     * Gets the onPremisesSecurityIdentifier
-    * Contains the on-premises security identifier (SID) for the group that was synchronized from on-premises to the cloud. Read-only.
     *
     * @return string The onPremisesSecurityIdentifier
     */
@@ -337,7 +235,6 @@ class Group extends DirectoryObject
     
     /**
     * Sets the onPremisesSecurityIdentifier
-    * Contains the on-premises security identifier (SID) for the group that was synchronized from on-premises to the cloud. Read-only.
     *
     * @param string $val The onPremisesSecurityIdentifier
     *
@@ -351,7 +248,6 @@ class Group extends DirectoryObject
     
     /**
     * Gets the onPremisesSyncEnabled
-    * true if this group is synced from an on-premises directory; false if this group was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Read-only. Supports $filter.
     *
     * @return bool The onPremisesSyncEnabled
     */
@@ -366,7 +262,6 @@ class Group extends DirectoryObject
     
     /**
     * Sets the onPremisesSyncEnabled
-    * true if this group is synced from an on-premises directory; false if this group was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Read-only. Supports $filter.
     *
     * @param bool $val The onPremisesSyncEnabled
     *
@@ -380,7 +275,6 @@ class Group extends DirectoryObject
     
     /**
     * Gets the proxyAddresses
-    * The any operator is required for filter expressions on multi-valued properties. Read-only. Not nullable. Supports $filter.
     *
     * @return string The proxyAddresses
     */
@@ -395,7 +289,6 @@ class Group extends DirectoryObject
     
     /**
     * Sets the proxyAddresses
-    * The any operator is required for filter expressions on multi-valued properties. Read-only. Not nullable. Supports $filter.
     *
     * @param string $val The proxyAddresses
     *
@@ -409,7 +302,6 @@ class Group extends DirectoryObject
     
     /**
     * Gets the securityEnabled
-    * Specifies whether the group is a security group. If the mailEnabled property is also true, the group is a mail-enabled security group; otherwise it is a security group. Must be false for Office 365 groups. Supports $filter.
     *
     * @return bool The securityEnabled
     */
@@ -424,7 +316,6 @@ class Group extends DirectoryObject
     
     /**
     * Sets the securityEnabled
-    * Specifies whether the group is a security group. If the mailEnabled property is also true, the group is a mail-enabled security group; otherwise it is a security group. Must be false for Office 365 groups. Supports $filter.
     *
     * @param bool $val The securityEnabled
     *
@@ -437,37 +328,7 @@ class Group extends DirectoryObject
     }
     
     /**
-    * Gets the unseenCount
-    * Count of posts that the current  user has not seen since his last visit.
-    *
-    * @return int The unseenCount
-    */
-    public function getUnseenCount()
-    {
-        if (array_key_exists("unseenCount", $this->_propDict)) {
-            return $this->_propDict["unseenCount"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the unseenCount
-    * Count of posts that the current  user has not seen since his last visit.
-    *
-    * @param int $val The unseenCount
-    *
-    * @return Group
-    */
-    public function setUnseenCount($val)
-    {
-        $this->_propDict["unseenCount"] = intval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the visibility
-    * Specifies the visibility of an Office 365 group. Possible values are: Private, Public, or empty (which is interpreted as Public).
     *
     * @return string The visibility
     */
@@ -482,7 +343,6 @@ class Group extends DirectoryObject
     
     /**
     * Sets the visibility
-    * Specifies the visibility of an Office 365 group. Possible values are: Private, Public, or empty (which is interpreted as Public).
     *
     * @param string $val The visibility
     *
@@ -494,132 +354,172 @@ class Group extends DirectoryObject
         return $this;
     }
     
-
-     /** 
-     * Gets the acceptedSenders
-    * The list of users or groups that are allowed to create post's or calendar events in this group. If this list is non-empty then only users or groups listed here are allowed to post.
-     *
-     * @return array The acceptedSenders
-     */
-    public function getAcceptedSenders()
+    /**
+    * Gets the allowExternalSenders
+    *
+    * @return bool The allowExternalSenders
+    */
+    public function getAllowExternalSenders()
     {
-        if (array_key_exists("acceptedSenders", $this->_propDict)) {
-           return $this->_propDict["acceptedSenders"];
+        if (array_key_exists("allowExternalSenders", $this->_propDict)) {
+            return $this->_propDict["allowExternalSenders"];
         } else {
             return null;
         }
     }
     
-    /** 
-    * Sets the acceptedSenders
-    * The list of users or groups that are allowed to create post's or calendar events in this group. If this list is non-empty then only users or groups listed here are allowed to post.
+    /**
+    * Sets the allowExternalSenders
     *
-    * @param string $val The acceptedSenders
+    * @param bool $val The allowExternalSenders
     *
     * @return Group
     */
-    public function setAcceptedSenders($val)
+    public function setAllowExternalSenders($val)
     {
-		$this->_propDict["acceptedSenders"] = $val;
+        $this->_propDict["allowExternalSenders"] = boolval($val);
         return $this;
     }
     
     /**
-    * Gets the calendar
-    * The group's calendar. Read-only.
+    * Gets the autoSubscribeNewMembers
     *
-    * @return Calendar The calendar
+    * @return bool The autoSubscribeNewMembers
     */
-    public function getCalendar()
+    public function getAutoSubscribeNewMembers()
     {
-        if (array_key_exists("calendar", $this->_propDict)) {
-            if (is_a($this->_propDict["calendar"], "Microsoft\Graph\Model\Calendar")) {
-                return $this->_propDict["calendar"];
-            } else {
-                $this->_propDict["calendar"] = new Calendar($this->_propDict["calendar"]);
-                return $this->_propDict["calendar"];
-            }
+        if (array_key_exists("autoSubscribeNewMembers", $this->_propDict)) {
+            return $this->_propDict["autoSubscribeNewMembers"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the calendar
-    * The group's calendar. Read-only.
+    * Sets the autoSubscribeNewMembers
     *
-    * @param string $val The calendar
+    * @param bool $val The autoSubscribeNewMembers
     *
     * @return Group
     */
-    public function setCalendar($val)
+    public function setAutoSubscribeNewMembers($val)
     {
-        $this->_propDict["calendar"] = $val;
+        $this->_propDict["autoSubscribeNewMembers"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the isSubscribedByMail
+    *
+    * @return bool The isSubscribedByMail
+    */
+    public function getIsSubscribedByMail()
+    {
+        if (array_key_exists("isSubscribedByMail", $this->_propDict)) {
+            return $this->_propDict["isSubscribedByMail"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isSubscribedByMail
+    *
+    * @param bool $val The isSubscribedByMail
+    *
+    * @return Group
+    */
+    public function setIsSubscribedByMail($val)
+    {
+        $this->_propDict["isSubscribedByMail"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the unseenCount
+    *
+    * @return int The unseenCount
+    */
+    public function getUnseenCount()
+    {
+        if (array_key_exists("unseenCount", $this->_propDict)) {
+            return $this->_propDict["unseenCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the unseenCount
+    *
+    * @param int $val The unseenCount
+    *
+    * @return Group
+    */
+    public function setUnseenCount($val)
+    {
+        $this->_propDict["unseenCount"] = intval($val);
         return $this;
     }
     
 
      /** 
-     * Gets the calendarView
-    * The calendar view for the calendar. Read-only.
+     * Gets the members
      *
-     * @return array The calendarView
+     * @return array The members
      */
-    public function getCalendarView()
+    public function getMembers()
     {
-        if (array_key_exists("calendarView", $this->_propDict)) {
-           return $this->_propDict["calendarView"];
+        if (array_key_exists("members", $this->_propDict)) {
+           return $this->_propDict["members"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the calendarView
-    * The calendar view for the calendar. Read-only.
+    * Sets the members
     *
-    * @param string $val The calendarView
+    * @param DirectoryObject $val The members
     *
     * @return Group
     */
-    public function setCalendarView($val)
+    public function setMembers($val)
     {
-		$this->_propDict["calendarView"] = $val;
+		$this->_propDict["members"] = $val;
         return $this;
     }
     
 
      /** 
-     * Gets the conversations
-    * The group's conversations.
+     * Gets the memberOf
      *
-     * @return array The conversations
+     * @return array The memberOf
      */
-    public function getConversations()
+    public function getMemberOf()
     {
-        if (array_key_exists("conversations", $this->_propDict)) {
-           return $this->_propDict["conversations"];
+        if (array_key_exists("memberOf", $this->_propDict)) {
+           return $this->_propDict["memberOf"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the conversations
-    * The group's conversations.
+    * Sets the memberOf
     *
-    * @param string $val The conversations
+    * @param DirectoryObject $val The memberOf
     *
     * @return Group
     */
-    public function setConversations($val)
+    public function setMemberOf($val)
     {
-		$this->_propDict["conversations"] = $val;
+		$this->_propDict["memberOf"] = $val;
         return $this;
     }
     
     /**
     * Gets the createdOnBehalfOf
-    * The user (or application) that created the group. NOTE: This is not set if the user is an administrator. Read-only.
     *
     * @return DirectoryObject The createdOnBehalfOf
     */
@@ -638,9 +538,8 @@ class Group extends DirectoryObject
     
     /**
     * Sets the createdOnBehalfOf
-    * The user (or application) that created the group. NOTE: This is not set if the user is an administrator. Read-only.
     *
-    * @param string $val The createdOnBehalfOf
+    * @param DirectoryObject $val The createdOnBehalfOf
     *
     * @return Group
     */
@@ -650,133 +549,9 @@ class Group extends DirectoryObject
         return $this;
     }
     
-    /**
-    * Gets the drive
-    * The group's drive. Read-only.
-    *
-    * @return Drive The drive
-    */
-    public function getDrive()
-    {
-        if (array_key_exists("drive", $this->_propDict)) {
-            if (is_a($this->_propDict["drive"], "Microsoft\Graph\Model\Drive")) {
-                return $this->_propDict["drive"];
-            } else {
-                $this->_propDict["drive"] = new Drive($this->_propDict["drive"]);
-                return $this->_propDict["drive"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the drive
-    * The group's drive. Read-only.
-    *
-    * @param string $val The drive
-    *
-    * @return Group
-    */
-    public function setDrive($val)
-    {
-        $this->_propDict["drive"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the events
-    * The group's calendar events.
-     *
-     * @return array The events
-     */
-    public function getEvents()
-    {
-        if (array_key_exists("events", $this->_propDict)) {
-           return $this->_propDict["events"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the events
-    * The group's calendar events.
-    *
-    * @param string $val The events
-    *
-    * @return Group
-    */
-    public function setEvents($val)
-    {
-		$this->_propDict["events"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the memberOf
-    * Groups that this group is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable.
-     *
-     * @return array The memberOf
-     */
-    public function getMemberOf()
-    {
-        if (array_key_exists("memberOf", $this->_propDict)) {
-           return $this->_propDict["memberOf"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the memberOf
-    * Groups that this group is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable.
-    *
-    * @param string $val The memberOf
-    *
-    * @return Group
-    */
-    public function setMemberOf($val)
-    {
-		$this->_propDict["memberOf"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the members
-    * Users and groups that are members of this group. HTTP Methods: GET (supported for all groups), POST (supported for Office 365 groups, security groups and mail-enabled security groups), DELETE (supported for Office 365 groups and security groups) Nullable.
-     *
-     * @return array The members
-     */
-    public function getMembers()
-    {
-        if (array_key_exists("members", $this->_propDict)) {
-           return $this->_propDict["members"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the members
-    * Users and groups that are members of this group. HTTP Methods: GET (supported for all groups), POST (supported for Office 365 groups, security groups and mail-enabled security groups), DELETE (supported for Office 365 groups and security groups) Nullable.
-    *
-    * @param string $val The members
-    *
-    * @return Group
-    */
-    public function setMembers($val)
-    {
-		$this->_propDict["members"] = $val;
-        return $this;
-    }
-    
 
      /** 
      * Gets the owners
-    * The owners of the group. The owners are a set of non-admin users who are allowed to modify this object. Limited to 10 owners. HTTP Methods: GET (supported for all groups), POST (supported for Office 365 groups, security groups and mail-enabled security groups), DELETE (supported for Office 365 groups and security groups). Nullable.
      *
      * @return array The owners
      */
@@ -791,9 +566,8 @@ class Group extends DirectoryObject
     
     /** 
     * Sets the owners
-    * The owners of the group. The owners are a set of non-admin users who are allowed to modify this object. Limited to 10 owners. HTTP Methods: GET (supported for all groups), POST (supported for Office 365 groups, security groups and mail-enabled security groups), DELETE (supported for Office 365 groups and security groups). Nullable.
     *
-    * @param string $val The owners
+    * @param DirectoryObject $val The owners
     *
     * @return Group
     */
@@ -803,9 +577,151 @@ class Group extends DirectoryObject
         return $this;
     }
     
+
+     /** 
+     * Gets the threads
+     *
+     * @return array The threads
+     */
+    public function getThreads()
+    {
+        if (array_key_exists("threads", $this->_propDict)) {
+           return $this->_propDict["threads"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the threads
+    *
+    * @param ConversationThread $val The threads
+    *
+    * @return Group
+    */
+    public function setThreads($val)
+    {
+		$this->_propDict["threads"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the calendar
+    *
+    * @return Calendar The calendar
+    */
+    public function getCalendar()
+    {
+        if (array_key_exists("calendar", $this->_propDict)) {
+            if (is_a($this->_propDict["calendar"], "Microsoft\Graph\Model\Calendar")) {
+                return $this->_propDict["calendar"];
+            } else {
+                $this->_propDict["calendar"] = new Calendar($this->_propDict["calendar"]);
+                return $this->_propDict["calendar"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the calendar
+    *
+    * @param Calendar $val The calendar
+    *
+    * @return Group
+    */
+    public function setCalendar($val)
+    {
+        $this->_propDict["calendar"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the calendarView
+     *
+     * @return array The calendarView
+     */
+    public function getCalendarView()
+    {
+        if (array_key_exists("calendarView", $this->_propDict)) {
+           return $this->_propDict["calendarView"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the calendarView
+    *
+    * @param Event $val The calendarView
+    *
+    * @return Group
+    */
+    public function setCalendarView($val)
+    {
+		$this->_propDict["calendarView"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the events
+     *
+     * @return array The events
+     */
+    public function getEvents()
+    {
+        if (array_key_exists("events", $this->_propDict)) {
+           return $this->_propDict["events"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the events
+    *
+    * @param Event $val The events
+    *
+    * @return Group
+    */
+    public function setEvents($val)
+    {
+		$this->_propDict["events"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the conversations
+     *
+     * @return array The conversations
+     */
+    public function getConversations()
+    {
+        if (array_key_exists("conversations", $this->_propDict)) {
+           return $this->_propDict["conversations"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the conversations
+    *
+    * @param Conversation $val The conversations
+    *
+    * @return Group
+    */
+    public function setConversations($val)
+    {
+		$this->_propDict["conversations"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the photo
-    * The group's profile photo
     *
     * @return ProfilePhoto The photo
     */
@@ -824,9 +740,8 @@ class Group extends DirectoryObject
     
     /**
     * Sets the photo
-    * The group's profile photo
     *
-    * @param string $val The photo
+    * @param ProfilePhoto $val The photo
     *
     * @return Group
     */
@@ -838,8 +753,63 @@ class Group extends DirectoryObject
     
 
      /** 
+     * Gets the photos
+     *
+     * @return array The photos
+     */
+    public function getPhotos()
+    {
+        if (array_key_exists("photos", $this->_propDict)) {
+           return $this->_propDict["photos"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the photos
+    *
+    * @param ProfilePhoto $val The photos
+    *
+    * @return Group
+    */
+    public function setPhotos($val)
+    {
+		$this->_propDict["photos"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the acceptedSenders
+     *
+     * @return array The acceptedSenders
+     */
+    public function getAcceptedSenders()
+    {
+        if (array_key_exists("acceptedSenders", $this->_propDict)) {
+           return $this->_propDict["acceptedSenders"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the acceptedSenders
+    *
+    * @param DirectoryObject $val The acceptedSenders
+    *
+    * @return Group
+    */
+    public function setAcceptedSenders($val)
+    {
+		$this->_propDict["acceptedSenders"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the rejectedSenders
-    * The list of users or groups that are not allowed to create posts or calendar events in this group. Nullable
      *
      * @return array The rejectedSenders
      */
@@ -854,9 +824,8 @@ class Group extends DirectoryObject
     
     /** 
     * Sets the rejectedSenders
-    * The list of users or groups that are not allowed to create posts or calendar events in this group. Nullable
     *
-    * @param string $val The rejectedSenders
+    * @param DirectoryObject $val The rejectedSenders
     *
     * @return Group
     */
@@ -866,33 +835,121 @@ class Group extends DirectoryObject
         return $this;
     }
     
+    /**
+    * Gets the drive
+    *
+    * @return Drive The drive
+    */
+    public function getDrive()
+    {
+        if (array_key_exists("drive", $this->_propDict)) {
+            if (is_a($this->_propDict["drive"], "Microsoft\Graph\Model\Drive")) {
+                return $this->_propDict["drive"];
+            } else {
+                $this->_propDict["drive"] = new Drive($this->_propDict["drive"]);
+                return $this->_propDict["drive"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the drive
+    *
+    * @param Drive $val The drive
+    *
+    * @return Group
+    */
+    public function setDrive($val)
+    {
+        $this->_propDict["drive"] = $val;
+        return $this;
+    }
+    
 
      /** 
-     * Gets the threads
-    * The group's conversation threads. Nullable.
+     * Gets the drives
      *
-     * @return array The threads
+     * @return array The drives
      */
-    public function getThreads()
+    public function getDrives()
     {
-        if (array_key_exists("threads", $this->_propDict)) {
-           return $this->_propDict["threads"];
+        if (array_key_exists("drives", $this->_propDict)) {
+           return $this->_propDict["drives"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the threads
-    * The group's conversation threads. Nullable.
+    * Sets the drives
     *
-    * @param string $val The threads
+    * @param Drive $val The drives
     *
     * @return Group
     */
-    public function setThreads($val)
+    public function setDrives($val)
     {
-		$this->_propDict["threads"] = $val;
+		$this->_propDict["drives"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the sites
+     *
+     * @return array The sites
+     */
+    public function getSites()
+    {
+        if (array_key_exists("sites", $this->_propDict)) {
+           return $this->_propDict["sites"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the sites
+    *
+    * @param Site $val The sites
+    *
+    * @return Group
+    */
+    public function setSites($val)
+    {
+		$this->_propDict["sites"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the planner
+    *
+    * @return PlannerGroup The planner
+    */
+    public function getPlanner()
+    {
+        if (array_key_exists("planner", $this->_propDict)) {
+            if (is_a($this->_propDict["planner"], "Microsoft\Graph\Model\PlannerGroup")) {
+                return $this->_propDict["planner"];
+            } else {
+                $this->_propDict["planner"] = new PlannerGroup($this->_propDict["planner"]);
+                return $this->_propDict["planner"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the planner
+    *
+    * @param PlannerGroup $val The planner
+    *
+    * @return Group
+    */
+    public function setPlanner($val)
+    {
+        $this->_propDict["planner"] = $val;
         return $this;
     }
     

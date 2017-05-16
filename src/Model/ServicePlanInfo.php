@@ -26,6 +26,84 @@ namespace Microsoft\Graph\Model;
 class ServicePlanInfo extends Entity
 {
     /**
+    * Gets the servicePlanId
+    *
+    * @return string The servicePlanId
+    */
+    public function getServicePlanId()
+    {
+        if (array_key_exists("servicePlanId", $this->_propDict)) {
+            return $this->_propDict["servicePlanId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the servicePlanId
+    *
+    * @param string $val The value of the servicePlanId
+    *
+    * @return ServicePlanInfo
+    */
+    public function setServicePlanId($val)
+    {
+        $this->_propDict["servicePlanId"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the servicePlanName
+    *
+    * @return string The servicePlanName
+    */
+    public function getServicePlanName()
+    {
+        if (array_key_exists("servicePlanName", $this->_propDict)) {
+            return $this->_propDict["servicePlanName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the servicePlanName
+    *
+    * @param string $val The value of the servicePlanName
+    *
+    * @return ServicePlanInfo
+    */
+    public function setServicePlanName($val)
+    {
+        $this->_propDict["servicePlanName"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the provisioningStatus
+    *
+    * @return string The provisioningStatus
+    */
+    public function getProvisioningStatus()
+    {
+        if (array_key_exists("provisioningStatus", $this->_propDict)) {
+            return $this->_propDict["provisioningStatus"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the provisioningStatus
+    *
+    * @param string $val The value of the provisioningStatus
+    *
+    * @return ServicePlanInfo
+    */
+    public function setProvisioningStatus($val)
+    {
+        $this->_propDict["provisioningStatus"] = $val;
+        return $this;
+    }
+    /**
     * Gets the appliesTo
     *
     * @return string The appliesTo
@@ -49,90 +127,6 @@ class ServicePlanInfo extends Entity
     public function setAppliesTo($val)
     {
         $this->_propDict["appliesTo"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the provisioningStatus
-    * The provisioning status of the service plan.
-    *
-    * @return string The provisioningStatus
-    */
-    public function getProvisioningStatus()
-    {
-        if (array_key_exists("provisioningStatus", $this->_propDict)) {
-            return $this->_propDict["provisioningStatus"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the provisioningStatus
-    * The provisioning status of the service plan.
-    *
-    * @param string $val The value of the provisioningStatus
-    *
-    * @return ServicePlanInfo
-    */
-    public function setProvisioningStatus($val)
-    {
-        $this->_propDict["provisioningStatus"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the servicePlanId
-    * The unique identifier of the service plan.
-    *
-    * @return string The servicePlanId
-    */
-    public function getServicePlanId()
-    {
-        if (array_key_exists("servicePlanId", $this->_propDict)) {
-            return $this->_propDict["servicePlanId"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the servicePlanId
-    * The unique identifier of the service plan.
-    *
-    * @param string $val The value of the servicePlanId
-    *
-    * @return ServicePlanInfo
-    */
-    public function setServicePlanId($val)
-    {
-        $this->_propDict["servicePlanId"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the servicePlanName
-    * The name of the service plan.
-    *
-    * @return string The servicePlanName
-    */
-    public function getServicePlanName()
-    {
-        if (array_key_exists("servicePlanName", $this->_propDict)) {
-            return $this->_propDict["servicePlanName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the servicePlanName
-    * The name of the service plan.
-    *
-    * @param string $val The value of the servicePlanName
-    *
-    * @return ServicePlanInfo
-    */
-    public function setServicePlanName($val)
-    {
-        $this->_propDict["servicePlanName"] = $val;
         return $this;
     }
 }

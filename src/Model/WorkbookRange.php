@@ -432,33 +432,6 @@ class WorkbookRange extends Entity
     }
     
     /**
-    * Gets the values
-    *
-    * @return string The values
-    */
-    public function getValues()
-    {
-        if (array_key_exists("values", $this->_propDict)) {
-            return $this->_propDict["values"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the values
-    *
-    * @param string $val The values
-    *
-    * @return WorkbookRange
-    */
-    public function setValues($val)
-    {
-        $this->_propDict["values"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the valueTypes
     *
     * @return string The valueTypes
@@ -486,6 +459,33 @@ class WorkbookRange extends Entity
     }
     
     /**
+    * Gets the values
+    *
+    * @return string The values
+    */
+    public function getValues()
+    {
+        if (array_key_exists("values", $this->_propDict)) {
+            return $this->_propDict["values"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the values
+    *
+    * @param string $val The values
+    *
+    * @return WorkbookRange
+    */
+    public function setValues($val)
+    {
+        $this->_propDict["values"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the format
     *
     * @return WorkbookRangeFormat The format
@@ -506,7 +506,7 @@ class WorkbookRange extends Entity
     /**
     * Sets the format
     *
-    * @param string $val The format
+    * @param WorkbookRangeFormat $val The format
     *
     * @return WorkbookRange
     */
@@ -537,7 +537,7 @@ class WorkbookRange extends Entity
     /**
     * Sets the sort
     *
-    * @param string $val The sort
+    * @param WorkbookRangeSort $val The sort
     *
     * @return WorkbookRange
     */
@@ -568,7 +568,7 @@ class WorkbookRange extends Entity
     /**
     * Sets the worksheet
     *
-    * @param string $val The worksheet
+    * @param WorkbookWorksheet $val The worksheet
     *
     * @return WorkbookRange
     */

@@ -28,7 +28,6 @@ class WorkbookPivotTable extends Entity
 {
     /**
     * Gets the name
-    * Name of the PivotTable.
     *
     * @return string The name
     */
@@ -43,7 +42,6 @@ class WorkbookPivotTable extends Entity
     
     /**
     * Sets the name
-    * Name of the PivotTable.
     *
     * @param string $val The name
     *
@@ -57,7 +55,6 @@ class WorkbookPivotTable extends Entity
     
     /**
     * Gets the worksheet
-    * The worksheet containing the current PivotTable. Read-only.
     *
     * @return WorkbookWorksheet The worksheet
     */
@@ -76,9 +73,8 @@ class WorkbookPivotTable extends Entity
     
     /**
     * Sets the worksheet
-    * The worksheet containing the current PivotTable. Read-only.
     *
-    * @param string $val The worksheet
+    * @param WorkbookWorksheet $val The worksheet
     *
     * @return WorkbookPivotTable
     */

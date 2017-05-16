@@ -31,15 +31,15 @@ class CalendarColor extends Enum
     /**
     * The Enum CalendarColor
     */
-    const AUTO = "auto";
     const LIGHT_BLUE = "lightBlue";
-    const LIGHT_BROWN = "lightBrown";
-    const LIGHT_GRAY = "lightGray";
     const LIGHT_GREEN = "lightGreen";
     const LIGHT_ORANGE = "lightOrange";
-    const LIGHT_PINK = "lightPink";
-    const LIGHT_RED = "lightRed";
-    const LIGHT_TEAL = "lightTeal";
+    const LIGHT_GRAY = "lightGray";
     const LIGHT_YELLOW = "lightYellow";
+    const LIGHT_TEAL = "lightTeal";
+    const LIGHT_PINK = "lightPink";
+    const LIGHT_BROWN = "lightBrown";
+    const LIGHT_RED = "lightRed";
     const MAX_COLOR = "maxColor";
+    const AUTO = "auto";
 }

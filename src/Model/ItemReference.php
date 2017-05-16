@@ -27,7 +27,6 @@ class ItemReference extends Entity
 {
     /**
     * Gets the driveId
-    * Unique identifier of the OneDrive instance that contains the item. Read-only.
     *
     * @return string The driveId
     */
@@ -42,7 +41,6 @@ class ItemReference extends Entity
 
     /**
     * Sets the driveId
-    * Unique identifier of the OneDrive instance that contains the item. Read-only.
     *
     * @param string $val The value of the driveId
     *
@@ -55,7 +53,6 @@ class ItemReference extends Entity
     }
     /**
     * Gets the id
-    * Unique identifier of the item in the drive. Read-only.
     *
     * @return string The id
     */
@@ -70,7 +67,6 @@ class ItemReference extends Entity
 
     /**
     * Sets the id
-    * Unique identifier of the item in the drive. Read-only.
     *
     * @param string $val The value of the id
     *
@@ -109,7 +105,6 @@ class ItemReference extends Entity
     }
     /**
     * Gets the path
-    * Path that can be used to navigate to the item. Read-only.
     *
     * @return string The path
     */
@@ -124,7 +119,6 @@ class ItemReference extends Entity
 
     /**
     * Sets the path
-    * Path that can be used to navigate to the item. Read-only.
     *
     * @param string $val The value of the path
     *
@@ -160,5 +154,36 @@ class ItemReference extends Entity
     {
         $this->_propDict["shareId"] = $val;
         return $this;
+    }
+
+    /**
+    * Gets the sharepointIds
+    *
+    * @return SharepointIds The sharepointIds
+    */
+    public function getSharepointIds()
+    {
+        if (array_key_exists("sharepointIds", $this->_propDict)) {
+            if (is_a($this->_propDict["sharepointIds"], "Microsoft\Graph\Model\SharepointIds")) {
+                return $this->_propDict["sharepointIds"];
+            } else {
+                $this->_propDict["sharepointIds"] = new SharepointIds($this->_propDict["sharepointIds"]);
+                return $this->_propDict["sharepointIds"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the sharepointIds
+    *
+    * @param SharepointIds $val The value to assign to the sharepointIds
+    *
+    * @return ItemReference The ItemReference
+    */
+    public function setSharepointIds($val)
+    {
+        $this->_propDict["sharepointIds"] = $val;
+         return $this;
     }
 }

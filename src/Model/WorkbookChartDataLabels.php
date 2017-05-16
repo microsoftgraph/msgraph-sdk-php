@@ -263,7 +263,7 @@ class WorkbookChartDataLabels extends Entity
     /**
     * Sets the format
     *
-    * @param string $val The format
+    * @param WorkbookChartDataLabelFormat $val The format
     *
     * @return WorkbookChartDataLabels
     */

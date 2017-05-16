@@ -125,13 +125,41 @@ class WorkbookWorksheet extends Entity
     /** 
     * Sets the charts
     *
-    * @param string $val The charts
+    * @param WorkbookChart $val The charts
     *
     * @return WorkbookWorksheet
     */
     public function setCharts($val)
     {
 		$this->_propDict["charts"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the names
+     *
+     * @return array The names
+     */
+    public function getNames()
+    {
+        if (array_key_exists("names", $this->_propDict)) {
+           return $this->_propDict["names"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the names
+    *
+    * @param WorkbookNamedItem $val The names
+    *
+    * @return WorkbookWorksheet
+    */
+    public function setNames($val)
+    {
+		$this->_propDict["names"] = $val;
         return $this;
     }
     
@@ -153,7 +181,7 @@ class WorkbookWorksheet extends Entity
     /** 
     * Sets the pivotTables
     *
-    * @param string $val The pivotTables
+    * @param WorkbookPivotTable $val The pivotTables
     *
     * @return WorkbookWorksheet
     */
@@ -184,7 +212,7 @@ class WorkbookWorksheet extends Entity
     /**
     * Sets the protection
     *
-    * @param string $val The protection
+    * @param WorkbookWorksheetProtection $val The protection
     *
     * @return WorkbookWorksheet
     */
@@ -212,7 +240,7 @@ class WorkbookWorksheet extends Entity
     /** 
     * Sets the tables
     *
-    * @param string $val The tables
+    * @param WorkbookTable $val The tables
     *
     * @return WorkbookWorksheet
     */

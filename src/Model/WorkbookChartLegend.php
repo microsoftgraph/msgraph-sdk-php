@@ -128,7 +128,7 @@ class WorkbookChartLegend extends Entity
     /**
     * Sets the format
     *
-    * @param string $val The format
+    * @param WorkbookChartLegendFormat $val The format
     *
     * @return WorkbookChartLegend
     */

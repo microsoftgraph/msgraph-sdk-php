@@ -47,7 +47,7 @@ class WorkbookChartTitleFormat extends Entity
     /**
     * Sets the fill
     *
-    * @param string $val The fill
+    * @param WorkbookChartFill $val The fill
     *
     * @return WorkbookChartTitleFormat
     */
@@ -78,7 +78,7 @@ class WorkbookChartTitleFormat extends Entity
     /**
     * Sets the font
     *
-    * @param string $val The font
+    * @param WorkbookChartFont $val The font
     *
     * @return WorkbookChartTitleFormat
     */

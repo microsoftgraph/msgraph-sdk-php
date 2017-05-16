@@ -47,7 +47,7 @@ class WorkbookChartAxes extends Entity
     /**
     * Sets the categoryAxis
     *
-    * @param string $val The categoryAxis
+    * @param WorkbookChartAxis $val The categoryAxis
     *
     * @return WorkbookChartAxes
     */
@@ -78,7 +78,7 @@ class WorkbookChartAxes extends Entity
     /**
     * Sets the seriesAxis
     *
-    * @param string $val The seriesAxis
+    * @param WorkbookChartAxis $val The seriesAxis
     *
     * @return WorkbookChartAxes
     */
@@ -109,7 +109,7 @@ class WorkbookChartAxes extends Entity
     /**
     * Sets the valueAxis
     *
-    * @param string $val The valueAxis
+    * @param WorkbookChartAxis $val The valueAxis
     *
     * @return WorkbookChartAxes
     */

@@ -27,29 +27,64 @@ namespace Microsoft\Graph\Model;
 class OutlookItem extends Entity
 {
     /**
-    * Gets the categories
+    * Gets the createdDateTime
     *
-    * @return string The categories
+    * @return \DateTime The createdDateTime
     */
-    public function getCategories()
+    public function getCreatedDateTime()
     {
-        if (array_key_exists("categories", $this->_propDict)) {
-            return $this->_propDict["categories"];
-        } else {
-            return null;
+        if (array_key_exists("createdDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+                return $this->_propDict["createdDateTime"];
+            } else {
+                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
+                return $this->_propDict["createdDateTime"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the categories
+    * Sets the createdDateTime
     *
-    * @param string $val The categories
+    * @param \DateTime $val The createdDateTime
     *
     * @return OutlookItem
     */
-    public function setCategories($val)
+    public function setCreatedDateTime($val)
     {
-        $this->_propDict["categories"] = $val;
+        $this->_propDict["createdDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the lastModifiedDateTime
+    *
+    * @return \DateTime The lastModifiedDateTime
+    */
+    public function getLastModifiedDateTime()
+    {
+        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+                return $this->_propDict["lastModifiedDateTime"];
+            } else {
+                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
+                return $this->_propDict["lastModifiedDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the lastModifiedDateTime
+    *
+    * @param \DateTime $val The lastModifiedDateTime
+    *
+    * @return OutlookItem
+    */
+    public function setLastModifiedDateTime($val)
+    {
+        $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
     
@@ -81,64 +116,29 @@ class OutlookItem extends Entity
     }
     
     /**
-    * Gets the createdDateTime
+    * Gets the categories
     *
-    * @return \DateTime The createdDateTime
+    * @return string The categories
     */
-    public function getCreatedDateTime()
+    public function getCategories()
     {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
-                return $this->_propDict["createdDateTime"];
-            } else {
-                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
-                return $this->_propDict["createdDateTime"];
-            }
+        if (array_key_exists("categories", $this->_propDict)) {
+            return $this->_propDict["categories"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the createdDateTime
+    * Sets the categories
     *
-    * @param string $val The createdDateTime
+    * @param string $val The categories
     *
     * @return OutlookItem
     */
-    public function setCreatedDateTime($val)
+    public function setCategories($val)
     {
-        $this->_propDict["createdDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the lastModifiedDateTime
-    *
-    * @return \DateTime The lastModifiedDateTime
-    */
-    public function getLastModifiedDateTime()
-    {
-        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
-                return $this->_propDict["lastModifiedDateTime"];
-            } else {
-                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
-                return $this->_propDict["lastModifiedDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the lastModifiedDateTime
-    *
-    * @param string $val The lastModifiedDateTime
-    *
-    * @return OutlookItem
-    */
-    public function setLastModifiedDateTime($val)
-    {
-        $this->_propDict["lastModifiedDateTime"] = $val;
+        $this->_propDict["categories"] = $val;
         return $this;
     }
     

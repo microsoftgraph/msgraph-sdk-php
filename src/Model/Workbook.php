@@ -47,44 +47,13 @@ class Workbook extends Entity
     /**
     * Sets the application
     *
-    * @param string $val The application
+    * @param WorkbookApplication $val The application
     *
     * @return Workbook
     */
     public function setApplication($val)
     {
         $this->_propDict["application"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the functions
-    *
-    * @return WorkbookFunctions The functions
-    */
-    public function getFunctions()
-    {
-        if (array_key_exists("functions", $this->_propDict)) {
-            if (is_a($this->_propDict["functions"], "Microsoft\Graph\Model\WorkbookFunctions")) {
-                return $this->_propDict["functions"];
-            } else {
-                $this->_propDict["functions"] = new WorkbookFunctions($this->_propDict["functions"]);
-                return $this->_propDict["functions"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the functions
-    *
-    * @param string $val The functions
-    *
-    * @return Workbook
-    */
-    public function setFunctions($val)
-    {
-        $this->_propDict["functions"] = $val;
         return $this;
     }
     
@@ -106,7 +75,7 @@ class Workbook extends Entity
     /** 
     * Sets the names
     *
-    * @param string $val The names
+    * @param WorkbookNamedItem $val The names
     *
     * @return Workbook
     */
@@ -134,7 +103,7 @@ class Workbook extends Entity
     /** 
     * Sets the tables
     *
-    * @param string $val The tables
+    * @param WorkbookTable $val The tables
     *
     * @return Workbook
     */
@@ -162,13 +131,44 @@ class Workbook extends Entity
     /** 
     * Sets the worksheets
     *
-    * @param string $val The worksheets
+    * @param WorkbookWorksheet $val The worksheets
     *
     * @return Workbook
     */
     public function setWorksheets($val)
     {
 		$this->_propDict["worksheets"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the functions
+    *
+    * @return WorkbookFunctions The functions
+    */
+    public function getFunctions()
+    {
+        if (array_key_exists("functions", $this->_propDict)) {
+            if (is_a($this->_propDict["functions"], "Microsoft\Graph\Model\WorkbookFunctions")) {
+                return $this->_propDict["functions"];
+            } else {
+                $this->_propDict["functions"] = new WorkbookFunctions($this->_propDict["functions"]);
+                return $this->_propDict["functions"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the functions
+    *
+    * @param WorkbookFunctions $val The functions
+    *
+    * @return Workbook
+    */
+    public function setFunctions($val)
+    {
+        $this->_propDict["functions"] = $val;
         return $this;
     }
     

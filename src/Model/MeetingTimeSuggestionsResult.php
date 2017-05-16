@@ -25,38 +25,9 @@ namespace Microsoft\Graph\Model;
 */
 class MeetingTimeSuggestionsResult extends Entity
 {
-    /**
-    * Gets the emptySuggestionsReason
-    * A reason for not returning any meeting suggestions. Possible values are: attendeesUnavailable, attendeesUnavailableOrUnknown, locationsUnavailable, organizerUnavailable, or unknown.
-    *
-    * @return string The emptySuggestionsReason
-    */
-    public function getEmptySuggestionsReason()
-    {
-        if (array_key_exists("emptySuggestionsReason", $this->_propDict)) {
-            return $this->_propDict["emptySuggestionsReason"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the emptySuggestionsReason
-    * A reason for not returning any meeting suggestions. Possible values are: attendeesUnavailable, attendeesUnavailableOrUnknown, locationsUnavailable, organizerUnavailable, or unknown.
-    *
-    * @param string $val The value of the emptySuggestionsReason
-    *
-    * @return MeetingTimeSuggestionsResult
-    */
-    public function setEmptySuggestionsReason($val)
-    {
-        $this->_propDict["emptySuggestionsReason"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the meetingTimeSuggestions
-    * An array of meeting suggestions.
     *
     * @return MeetingTimeSuggestion The meetingTimeSuggestions
     */
@@ -75,7 +46,6 @@ class MeetingTimeSuggestionsResult extends Entity
 
     /**
     * Sets the meetingTimeSuggestions
-    * An array of meeting suggestions.
     *
     * @param MeetingTimeSuggestion $val The value to assign to the meetingTimeSuggestions
     *
@@ -85,5 +55,31 @@ class MeetingTimeSuggestionsResult extends Entity
     {
         $this->_propDict["meetingTimeSuggestions"] = $val;
          return $this;
+    }
+    /**
+    * Gets the emptySuggestionsReason
+    *
+    * @return string The emptySuggestionsReason
+    */
+    public function getEmptySuggestionsReason()
+    {
+        if (array_key_exists("emptySuggestionsReason", $this->_propDict)) {
+            return $this->_propDict["emptySuggestionsReason"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the emptySuggestionsReason
+    *
+    * @param string $val The value of the emptySuggestionsReason
+    *
+    * @return MeetingTimeSuggestionsResult
+    */
+    public function setEmptySuggestionsReason($val)
+    {
+        $this->_propDict["emptySuggestionsReason"] = $val;
+        return $this;
     }
 }

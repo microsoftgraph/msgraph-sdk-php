@@ -74,7 +74,7 @@ class WorkbookChartSeries extends Entity
     /**
     * Sets the format
     *
-    * @param string $val The format
+    * @param WorkbookChartSeriesFormat $val The format
     *
     * @return WorkbookChartSeries
     */
@@ -102,7 +102,7 @@ class WorkbookChartSeries extends Entity
     /** 
     * Sets the points
     *
-    * @param string $val The points
+    * @param WorkbookChartPoint $val The points
     *
     * @return WorkbookChartSeries
     */

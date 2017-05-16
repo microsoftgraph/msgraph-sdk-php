@@ -128,7 +128,7 @@ class WorkbookTableColumn extends Entity
     /**
     * Sets the filter
     *
-    * @param string $val The filter
+    * @param WorkbookFilter $val The filter
     *
     * @return WorkbookTableColumn
     */

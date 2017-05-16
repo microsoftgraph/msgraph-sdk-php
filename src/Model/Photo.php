@@ -27,7 +27,6 @@ class Photo extends Entity
 {
     /**
     * Gets the cameraMake
-    * Camera manufacturer. Read-only.
     *
     * @return string The cameraMake
     */
@@ -42,7 +41,6 @@ class Photo extends Entity
 
     /**
     * Sets the cameraMake
-    * Camera manufacturer. Read-only.
     *
     * @param string $val The value of the cameraMake
     *
@@ -55,7 +53,6 @@ class Photo extends Entity
     }
     /**
     * Gets the cameraModel
-    * Camera model. Read-only.
     *
     * @return string The cameraModel
     */
@@ -70,7 +67,6 @@ class Photo extends Entity
 
     /**
     * Sets the cameraModel
-    * Camera model. Read-only.
     *
     * @param string $val The value of the cameraModel
     *
@@ -83,7 +79,6 @@ class Photo extends Entity
     }
     /**
     * Gets the exposureDenominator
-    * The denominator for the exposure time fraction from the camera. Read-only.
     *
     * @return float The exposureDenominator
     */
@@ -98,7 +93,6 @@ class Photo extends Entity
 
     /**
     * Sets the exposureDenominator
-    * The denominator for the exposure time fraction from the camera. Read-only.
     *
     * @param float $val The value of the exposureDenominator
     *
@@ -111,7 +105,6 @@ class Photo extends Entity
     }
     /**
     * Gets the exposureNumerator
-    * The numerator for the exposure time fraction from the camera. Read-only.
     *
     * @return float The exposureNumerator
     */
@@ -126,7 +119,6 @@ class Photo extends Entity
 
     /**
     * Sets the exposureNumerator
-    * The numerator for the exposure time fraction from the camera. Read-only.
     *
     * @param float $val The value of the exposureNumerator
     *
@@ -139,7 +131,6 @@ class Photo extends Entity
     }
     /**
     * Gets the fNumber
-    * The F-stop value from the camera. Read-only.
     *
     * @return float The fNumber
     */
@@ -154,7 +145,6 @@ class Photo extends Entity
 
     /**
     * Sets the fNumber
-    * The F-stop value from the camera. Read-only.
     *
     * @param float $val The value of the fNumber
     *
@@ -167,7 +157,6 @@ class Photo extends Entity
     }
     /**
     * Gets the focalLength
-    * The focal length from the camera. Read-only.
     *
     * @return float The focalLength
     */
@@ -182,7 +171,6 @@ class Photo extends Entity
 
     /**
     * Sets the focalLength
-    * The focal length from the camera. Read-only.
     *
     * @param float $val The value of the focalLength
     *
@@ -195,7 +183,6 @@ class Photo extends Entity
     }
     /**
     * Gets the iso
-    * The ISO value from the camera. Read-only.
     *
     * @return int The iso
     */
@@ -210,7 +197,6 @@ class Photo extends Entity
 
     /**
     * Sets the iso
-    * The ISO value from the camera. Read-only.
     *
     * @param int $val The value of the iso
     *
@@ -224,7 +210,6 @@ class Photo extends Entity
 
     /**
     * Gets the takenDateTime
-    * Represents the date and time the photo was taken. Read-only.
     *
     * @return \DateTime The takenDateTime
     */
@@ -243,7 +228,6 @@ class Photo extends Entity
 
     /**
     * Sets the takenDateTime
-    * Represents the date and time the photo was taken. Read-only.
     *
     * @param \DateTime $val The value to assign to the takenDateTime
     *

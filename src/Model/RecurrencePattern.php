@@ -25,6 +25,89 @@ namespace Microsoft\Graph\Model;
 */
 class RecurrencePattern extends Entity
 {
+
+    /**
+    * Gets the type
+    *
+    * @return RecurrencePatternType The type
+    */
+    public function getType()
+    {
+        if (array_key_exists("type", $this->_propDict)) {
+            if (is_a($this->_propDict["type"], "Microsoft\Graph\Model\RecurrencePatternType")) {
+                return $this->_propDict["type"];
+            } else {
+                $this->_propDict["type"] = new RecurrencePatternType($this->_propDict["type"]);
+                return $this->_propDict["type"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the type
+    *
+    * @param RecurrencePatternType $val The value to assign to the type
+    *
+    * @return RecurrencePattern The RecurrencePattern
+    */
+    public function setType($val)
+    {
+        $this->_propDict["type"] = $val;
+         return $this;
+    }
+    /**
+    * Gets the interval
+    *
+    * @return int The interval
+    */
+    public function getInterval()
+    {
+        if (array_key_exists("interval", $this->_propDict)) {
+            return $this->_propDict["interval"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the interval
+    *
+    * @param int $val The value of the interval
+    *
+    * @return RecurrencePattern
+    */
+    public function setInterval($val)
+    {
+        $this->_propDict["interval"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the month
+    *
+    * @return int The month
+    */
+    public function getMonth()
+    {
+        if (array_key_exists("month", $this->_propDict)) {
+            return $this->_propDict["month"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the month
+    *
+    * @param int $val The value of the month
+    *
+    * @return RecurrencePattern
+    */
+    public function setMonth($val)
+    {
+        $this->_propDict["month"] = $val;
+        return $this;
+    }
     /**
     * Gets the dayOfMonth
     *
@@ -142,89 +225,6 @@ class RecurrencePattern extends Entity
     public function setIndex($val)
     {
         $this->_propDict["index"] = $val;
-         return $this;
-    }
-    /**
-    * Gets the interval
-    *
-    * @return int The interval
-    */
-    public function getInterval()
-    {
-        if (array_key_exists("interval", $this->_propDict)) {
-            return $this->_propDict["interval"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the interval
-    *
-    * @param int $val The value of the interval
-    *
-    * @return RecurrencePattern
-    */
-    public function setInterval($val)
-    {
-        $this->_propDict["interval"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the month
-    *
-    * @return int The month
-    */
-    public function getMonth()
-    {
-        if (array_key_exists("month", $this->_propDict)) {
-            return $this->_propDict["month"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the month
-    *
-    * @param int $val The value of the month
-    *
-    * @return RecurrencePattern
-    */
-    public function setMonth($val)
-    {
-        $this->_propDict["month"] = $val;
-        return $this;
-    }
-
-    /**
-    * Gets the type
-    *
-    * @return RecurrencePatternType The type
-    */
-    public function getType()
-    {
-        if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "Microsoft\Graph\Model\RecurrencePatternType")) {
-                return $this->_propDict["type"];
-            } else {
-                $this->_propDict["type"] = new RecurrencePatternType($this->_propDict["type"]);
-                return $this->_propDict["type"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the type
-    *
-    * @param RecurrencePatternType $val The value to assign to the type
-    *
-    * @return RecurrencePattern The RecurrencePattern
-    */
-    public function setType($val)
-    {
-        $this->_propDict["type"] = $val;
          return $this;
     }
 }

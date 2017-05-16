@@ -28,37 +28,61 @@ class ConversationThread extends Entity
 {
 
      /** 
-     * Gets the ccRecipients
-    * The Cc: recipients for the thread.
+     * Gets the toRecipients
      *
-     * @return array The ccRecipients
+     * @return array The toRecipients
      */
-    public function getCcRecipients()
+    public function getToRecipients()
     {
-        if (array_key_exists("ccRecipients", $this->_propDict)) {
-           return $this->_propDict["ccRecipients"];
+        if (array_key_exists("toRecipients", $this->_propDict)) {
+           return $this->_propDict["toRecipients"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the ccRecipients
-    * The Cc: recipients for the thread.
+    * Sets the toRecipients
     *
-    * @param string $val The ccRecipients
+    * @param Recipient $val The toRecipients
     *
     * @return ConversationThread
     */
-    public function setCcRecipients($val)
+    public function setToRecipients($val)
     {
-		$this->_propDict["ccRecipients"] = $val;
+		$this->_propDict["toRecipients"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the topic
+    *
+    * @return string The topic
+    */
+    public function getTopic()
+    {
+        if (array_key_exists("topic", $this->_propDict)) {
+            return $this->_propDict["topic"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the topic
+    *
+    * @param string $val The topic
+    *
+    * @return ConversationThread
+    */
+    public function setTopic($val)
+    {
+        $this->_propDict["topic"] = $val;
         return $this;
     }
     
     /**
     * Gets the hasAttachments
-    * Indicates whether any of the posts within this thread has at least one attachment.
     *
     * @return bool The hasAttachments
     */
@@ -73,7 +97,6 @@ class ConversationThread extends Entity
     
     /**
     * Sets the hasAttachments
-    * Indicates whether any of the posts within this thread has at least one attachment.
     *
     * @param bool $val The hasAttachments
     *
@@ -86,37 +109,7 @@ class ConversationThread extends Entity
     }
     
     /**
-    * Gets the isLocked
-    * Indicates if the thread is locked.
-    *
-    * @return bool The isLocked
-    */
-    public function getIsLocked()
-    {
-        if (array_key_exists("isLocked", $this->_propDict)) {
-            return $this->_propDict["isLocked"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the isLocked
-    * Indicates if the thread is locked.
-    *
-    * @param bool $val The isLocked
-    *
-    * @return ConversationThread
-    */
-    public function setIsLocked($val)
-    {
-        $this->_propDict["isLocked"] = boolval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the lastDeliveredDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The lastDeliveredDateTime
     */
@@ -135,9 +128,8 @@ class ConversationThread extends Entity
     
     /**
     * Sets the lastDeliveredDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
-    * @param string $val The lastDeliveredDateTime
+    * @param \DateTime $val The lastDeliveredDateTime
     *
     * @return ConversationThread
     */
@@ -148,96 +140,7 @@ class ConversationThread extends Entity
     }
     
     /**
-    * Gets the preview
-    * A short summary from the body of the latest post in this converstaion.
-    *
-    * @return string The preview
-    */
-    public function getPreview()
-    {
-        if (array_key_exists("preview", $this->_propDict)) {
-            return $this->_propDict["preview"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the preview
-    * A short summary from the body of the latest post in this converstaion.
-    *
-    * @param string $val The preview
-    *
-    * @return ConversationThread
-    */
-    public function setPreview($val)
-    {
-        $this->_propDict["preview"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the topic
-    * The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated.
-    *
-    * @return string The topic
-    */
-    public function getTopic()
-    {
-        if (array_key_exists("topic", $this->_propDict)) {
-            return $this->_propDict["topic"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the topic
-    * The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated.
-    *
-    * @param string $val The topic
-    *
-    * @return ConversationThread
-    */
-    public function setTopic($val)
-    {
-        $this->_propDict["topic"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the toRecipients
-    * The To: recipients for the thread.
-     *
-     * @return array The toRecipients
-     */
-    public function getToRecipients()
-    {
-        if (array_key_exists("toRecipients", $this->_propDict)) {
-           return $this->_propDict["toRecipients"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the toRecipients
-    * The To: recipients for the thread.
-    *
-    * @param string $val The toRecipients
-    *
-    * @return ConversationThread
-    */
-    public function setToRecipients($val)
-    {
-		$this->_propDict["toRecipients"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the uniqueSenders
-    * All the users that sent a message to this thread.
     *
     * @return string The uniqueSenders
     */
@@ -252,7 +155,6 @@ class ConversationThread extends Entity
     
     /**
     * Sets the uniqueSenders
-    * All the users that sent a message to this thread.
     *
     * @param string $val The uniqueSenders
     *
@@ -266,8 +168,89 @@ class ConversationThread extends Entity
     
 
      /** 
+     * Gets the ccRecipients
+     *
+     * @return array The ccRecipients
+     */
+    public function getCcRecipients()
+    {
+        if (array_key_exists("ccRecipients", $this->_propDict)) {
+           return $this->_propDict["ccRecipients"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the ccRecipients
+    *
+    * @param Recipient $val The ccRecipients
+    *
+    * @return ConversationThread
+    */
+    public function setCcRecipients($val)
+    {
+		$this->_propDict["ccRecipients"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the preview
+    *
+    * @return string The preview
+    */
+    public function getPreview()
+    {
+        if (array_key_exists("preview", $this->_propDict)) {
+            return $this->_propDict["preview"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the preview
+    *
+    * @param string $val The preview
+    *
+    * @return ConversationThread
+    */
+    public function setPreview($val)
+    {
+        $this->_propDict["preview"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the isLocked
+    *
+    * @return bool The isLocked
+    */
+    public function getIsLocked()
+    {
+        if (array_key_exists("isLocked", $this->_propDict)) {
+            return $this->_propDict["isLocked"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isLocked
+    *
+    * @param bool $val The isLocked
+    *
+    * @return ConversationThread
+    */
+    public function setIsLocked($val)
+    {
+        $this->_propDict["isLocked"] = boolval($val);
+        return $this;
+    }
+    
+
+     /** 
      * Gets the posts
-    * Read-only. Nullable.
      *
      * @return array The posts
      */
@@ -282,9 +265,8 @@ class ConversationThread extends Entity
     
     /** 
     * Sets the posts
-    * Read-only. Nullable.
     *
-    * @param string $val The posts
+    * @param Post $val The posts
     *
     * @return ConversationThread
     */
