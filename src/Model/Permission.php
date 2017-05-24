@@ -28,6 +28,7 @@ class Permission extends Entity
 {
     /**
     * Gets the grantedTo
+    * For user type permissions, the details of the users & applications for this permission. Read-only.
     *
     * @return IdentitySet The grantedTo
     */
@@ -46,6 +47,7 @@ class Permission extends Entity
     
     /**
     * Sets the grantedTo
+    * For user type permissions, the details of the users & applications for this permission. Read-only.
     *
     * @param IdentitySet $val The grantedTo
     *
@@ -59,6 +61,7 @@ class Permission extends Entity
     
     /**
     * Gets the inheritedFrom
+    * Provides a reference to the ancestor of the current permission, if it is inherited from an ancestor. Read-only.
     *
     * @return ItemReference The inheritedFrom
     */
@@ -77,6 +80,7 @@ class Permission extends Entity
     
     /**
     * Sets the inheritedFrom
+    * Provides a reference to the ancestor of the current permission, if it is inherited from an ancestor. Read-only.
     *
     * @param ItemReference $val The inheritedFrom
     *
@@ -90,6 +94,7 @@ class Permission extends Entity
     
     /**
     * Gets the invitation
+    * Details of any associated sharing invitation for this permission. Read-only.
     *
     * @return SharingInvitation The invitation
     */
@@ -108,6 +113,7 @@ class Permission extends Entity
     
     /**
     * Sets the invitation
+    * Details of any associated sharing invitation for this permission. Read-only.
     *
     * @param SharingInvitation $val The invitation
     *
@@ -121,6 +127,7 @@ class Permission extends Entity
     
     /**
     * Gets the link
+    * Provides the link details of the current permission, if it is a link type permissions. Read-only.
     *
     * @return SharingLink The link
     */
@@ -139,6 +146,7 @@ class Permission extends Entity
     
     /**
     * Sets the link
+    * Provides the link details of the current permission, if it is a link type permissions. Read-only.
     *
     * @param SharingLink $val The link
     *
@@ -179,6 +187,7 @@ class Permission extends Entity
     
     /**
     * Gets the shareId
+    * A unique token for this permission. Read-only.
     *
     * @return string The shareId
     */
@@ -193,6 +202,7 @@ class Permission extends Entity
     
     /**
     * Sets the shareId
+    * A unique token for this permission. Read-only.
     *
     * @param string $val The shareId
     *

@@ -28,6 +28,7 @@ class CalendarGroup extends Entity
 {
     /**
     * Gets the name
+    * The group name.
     *
     * @return string The name
     */
@@ -42,6 +43,7 @@ class CalendarGroup extends Entity
     
     /**
     * Sets the name
+    * The group name.
     *
     * @param string $val The name
     *
@@ -55,6 +57,7 @@ class CalendarGroup extends Entity
     
     /**
     * Gets the classId
+    * The class identifier. Read-only.
     *
     * @return string The classId
     */
@@ -69,6 +72,7 @@ class CalendarGroup extends Entity
     
     /**
     * Sets the classId
+    * The class identifier. Read-only.
     *
     * @param string $val The classId
     *
@@ -82,6 +86,7 @@ class CalendarGroup extends Entity
     
     /**
     * Gets the changeKey
+    * Identifies the version of the calendar group. Every time the calendar group is changed, ChangeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
     *
     * @return string The changeKey
     */
@@ -96,6 +101,7 @@ class CalendarGroup extends Entity
     
     /**
     * Sets the changeKey
+    * Identifies the version of the calendar group. Every time the calendar group is changed, ChangeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
     *
     * @param string $val The changeKey
     *
@@ -110,6 +116,7 @@ class CalendarGroup extends Entity
 
      /** 
      * Gets the calendars
+    * The calendars in the calendar group. Navigation property. Read-only. Nullable.
      *
      * @return array The calendars
      */
@@ -124,6 +131,7 @@ class CalendarGroup extends Entity
     
     /** 
     * Sets the calendars
+    * The calendars in the calendar group. Navigation property. Read-only. Nullable.
     *
     * @param Calendar $val The calendars
     *
