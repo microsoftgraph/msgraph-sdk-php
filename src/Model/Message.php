@@ -181,7 +181,7 @@ class Message extends OutlookItem
     
     /**
     * Gets the body
-    * The body of the message.
+    * The body of the message. It can be in HTML or text format.
     *
     * @return ItemBody The body
     */
@@ -200,7 +200,7 @@ class Message extends OutlookItem
     
     /**
     * Sets the body
-    * The body of the message.
+    * The body of the message. It can be in HTML or text format.
     *
     * @param ItemBody $val The body
     *
@@ -214,7 +214,7 @@ class Message extends OutlookItem
     
     /**
     * Gets the bodyPreview
-    * The first 255 characters of the message body.
+    * The first 255 characters of the message body. It is in text format.
     *
     * @return string The bodyPreview
     */
@@ -229,7 +229,7 @@ class Message extends OutlookItem
     
     /**
     * Sets the bodyPreview
-    * The first 255 characters of the message body.
+    * The first 255 characters of the message body. It is in text format.
     *
     * @param string $val The bodyPreview
     *
@@ -520,7 +520,7 @@ class Message extends OutlookItem
     
     /**
     * Gets the uniqueBody
-    * The part of the body of the message that is unique to the current message.
+    * The part of the body of the message that is unique to the current message. uniqueBody is not returned by default but can be retrieved for a given message by use of the ?$select=uniqueBody query. It can be in HTML or text format.
     *
     * @return ItemBody The uniqueBody
     */
@@ -539,7 +539,7 @@ class Message extends OutlookItem
     
     /**
     * Sets the uniqueBody
-    * The part of the body of the message that is unique to the current message.
+    * The part of the body of the message that is unique to the current message. uniqueBody is not returned by default but can be retrieved for a given message by use of the ?$select=uniqueBody query. It can be in HTML or text format.
     *
     * @param ItemBody $val The uniqueBody
     *
@@ -762,7 +762,7 @@ class Message extends OutlookItem
 
      /** 
      * Gets the extensions
-    * The collection of open type data extensions defined for the contact. Read-only. Nullable.
+    * The collection of open extensions defined for the message. Read-only. Nullable.
      *
      * @return array The extensions
      */
@@ -777,7 +777,7 @@ class Message extends OutlookItem
     
     /** 
     * Sets the extensions
-    * The collection of open type data extensions defined for the contact. Read-only. Nullable.
+    * The collection of open extensions defined for the message. Read-only. Nullable.
     *
     * @param Extension $val The extensions
     *

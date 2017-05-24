@@ -1003,7 +1003,7 @@ class Contact extends OutlookItem
 
      /** 
      * Gets the extensions
-    * The collection of open type data extensions defined for the contact. Read-only. Nullable.
+    * The collection of open extensions defined for the contact. Read-only. Nullable.
      *
      * @return array The extensions
      */
@@ -1018,7 +1018,7 @@ class Contact extends OutlookItem
     
     /** 
     * Sets the extensions
-    * The collection of open type data extensions defined for the contact. Read-only. Nullable.
+    * The collection of open extensions defined for the contact. Read-only. Nullable.
     *
     * @param Extension $val The extensions
     *
