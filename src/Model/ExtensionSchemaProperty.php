@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* AttendeeBase File
+* ExtensionSchemaProperty File
 * PHP version 7
 *
 * @category  Library
@@ -14,7 +14,7 @@
 */
 namespace Microsoft\Graph\Model;
 /**
-* AttendeeBase class
+* ExtensionSchemaProperty class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -23,39 +23,58 @@ namespace Microsoft\Graph\Model;
 * @version   Release: 0.1.0
 * @link      https://graph.microsoft.io/
 */
-class AttendeeBase extends Recipient
+class ExtensionSchemaProperty extends Entity
 {
+    /**
+    * Gets the name
+    *
+    * @return string The name
+    */
+    public function getName()
+    {
+        if (array_key_exists("name", $this->_propDict)) {
+            return $this->_propDict["name"];
+        } else {
+            return null;
+        }
+    }
 
     /**
-    * Gets the type
-    * The type of attendee. Possible values are: required, optional, resource. Currently if the attendee is a person, findMeetingTimes always considers the person is of the Required type.
+    * Sets the name
     *
-    * @return AttendeeType The type
+    * @param string $val The value of the name
+    *
+    * @return ExtensionSchemaProperty
+    */
+    public function setName($val)
+    {
+        $this->_propDict["name"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the type
+    *
+    * @return string The type
     */
     public function getType()
     {
         if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "Microsoft\Graph\Model\AttendeeType")) {
-                return $this->_propDict["type"];
-            } else {
-                $this->_propDict["type"] = new AttendeeType($this->_propDict["type"]);
-                return $this->_propDict["type"];
-            }
+            return $this->_propDict["type"];
+        } else {
+            return null;
         }
-        return null;
     }
 
     /**
     * Sets the type
-    * The type of attendee. Possible values are: required, optional, resource. Currently if the attendee is a person, findMeetingTimes always considers the person is of the Required type.
     *
-    * @param AttendeeType $val The value to assign to the type
+    * @param string $val The value of the type
     *
-    * @return AttendeeBase The AttendeeBase
+    * @return ExtensionSchemaProperty
     */
     public function setType($val)
     {
         $this->_propDict["type"] = $val;
-         return $this;
+        return $this;
     }
 }

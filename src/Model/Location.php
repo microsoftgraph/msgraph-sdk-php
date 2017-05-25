@@ -55,6 +55,7 @@ class Location extends Entity
     }
     /**
     * Gets the locationEmailAddress
+    * Optional email address of the location.
     *
     * @return string The locationEmailAddress
     */
@@ -69,6 +70,7 @@ class Location extends Entity
 
     /**
     * Sets the locationEmailAddress
+    * Optional email address of the location.
     *
     * @param string $val The value of the locationEmailAddress
     *

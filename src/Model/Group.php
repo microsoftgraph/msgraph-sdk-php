@@ -380,7 +380,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the allowExternalSenders
-    * Default is false. Indicates if people external to the organization can send messages to the group. You can set this property in a PATCH request for the group; do not set it in the initial POST request that creates the group.
+    * Default is false. Indicates if people external to the organization can send messages to the group.
     *
     * @return bool The allowExternalSenders
     */
@@ -395,7 +395,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the allowExternalSenders
-    * Default is false. Indicates if people external to the organization can send messages to the group. You can set this property in a PATCH request for the group; do not set it in the initial POST request that creates the group.
+    * Default is false. Indicates if people external to the organization can send messages to the group.
     *
     * @param bool $val The allowExternalSenders
     *
@@ -614,6 +614,34 @@ class Group extends DirectoryObject
     public function setOwners($val)
     {
 		$this->_propDict["owners"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the extensions
+     *
+     * @return array The extensions
+     */
+    public function getExtensions()
+    {
+        if (array_key_exists("extensions", $this->_propDict)) {
+           return $this->_propDict["extensions"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the extensions
+    *
+    * @param Extension $val The extensions
+    *
+    * @return Group
+    */
+    public function setExtensions($val)
+    {
+		$this->_propDict["extensions"] = $val;
         return $this;
     }
     
@@ -1008,6 +1036,37 @@ class Group extends DirectoryObject
     public function setPlanner($val)
     {
         $this->_propDict["planner"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the onenote
+    *
+    * @return Onenote The onenote
+    */
+    public function getOnenote()
+    {
+        if (array_key_exists("onenote", $this->_propDict)) {
+            if (is_a($this->_propDict["onenote"], "Microsoft\Graph\Model\Onenote")) {
+                return $this->_propDict["onenote"];
+            } else {
+                $this->_propDict["onenote"] = new Onenote($this->_propDict["onenote"]);
+                return $this->_propDict["onenote"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the onenote
+    *
+    * @param Onenote $val The onenote
+    *
+    * @return Group
+    */
+    public function setOnenote($val)
+    {
+        $this->_propDict["onenote"] = $val;
         return $this;
     }
     

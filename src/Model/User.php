@@ -1533,6 +1533,34 @@ class User extends DirectoryObject
     
 
      /** 
+     * Gets the extensions
+     *
+     * @return array The extensions
+     */
+    public function getExtensions()
+    {
+        if (array_key_exists("extensions", $this->_propDict)) {
+           return $this->_propDict["extensions"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the extensions
+    *
+    * @param Extension $val The extensions
+    *
+    * @return User
+    */
+    public function setExtensions($val)
+    {
+		$this->_propDict["extensions"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the messages
     * The messages in a mailbox or folder. Read-only. Nullable.
      *
@@ -1987,6 +2015,37 @@ class User extends DirectoryObject
     public function setPlanner($val)
     {
         $this->_propDict["planner"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the onenote
+    *
+    * @return Onenote The onenote
+    */
+    public function getOnenote()
+    {
+        if (array_key_exists("onenote", $this->_propDict)) {
+            if (is_a($this->_propDict["onenote"], "Microsoft\Graph\Model\Onenote")) {
+                return $this->_propDict["onenote"];
+            } else {
+                $this->_propDict["onenote"] = new Onenote($this->_propDict["onenote"]);
+                return $this->_propDict["onenote"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the onenote
+    *
+    * @param Onenote $val The onenote
+    *
+    * @return User
+    */
+    public function setOnenote($val)
+    {
+        $this->_propDict["onenote"] = $val;
         return $this;
     }
     

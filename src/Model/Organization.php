@@ -531,4 +531,32 @@ class Organization extends DirectoryObject
         return $this;
     }
     
+
+     /** 
+     * Gets the extensions
+     *
+     * @return array The extensions
+     */
+    public function getExtensions()
+    {
+        if (array_key_exists("extensions", $this->_propDict)) {
+           return $this->_propDict["extensions"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the extensions
+    *
+    * @param Extension $val The extensions
+    *
+    * @return Organization
+    */
+    public function setExtensions($val)
+    {
+		$this->_propDict["extensions"] = $val;
+        return $this;
+    }
+    
 }

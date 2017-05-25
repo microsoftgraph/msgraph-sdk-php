@@ -28,7 +28,7 @@ class Event extends OutlookItem
 {
     /**
     * Gets the originalStartTimeZone
-    * The start time zone that was set when the event was created.
+    * The start time zone that was set when the event was created. A value of tzone://Microsoft/Custom indicates that a legacy custom time zone was set in desktop Outlook.
     *
     * @return string The originalStartTimeZone
     */
@@ -43,7 +43,7 @@ class Event extends OutlookItem
     
     /**
     * Sets the originalStartTimeZone
-    * The start time zone that was set when the event was created.
+    * The start time zone that was set when the event was created. A value of tzone://Microsoft/Custom indicates that a legacy custom time zone was set in desktop Outlook.
     *
     * @param string $val The originalStartTimeZone
     *
@@ -57,7 +57,7 @@ class Event extends OutlookItem
     
     /**
     * Gets the originalEndTimeZone
-    * The end time zone that was set when the event was created.
+    * The end time zone that was set when the event was created. A value of tzone://Microsoft/Customindicates that a legacy custom time zone was set in desktop Outlook.
     *
     * @return string The originalEndTimeZone
     */
@@ -72,7 +72,7 @@ class Event extends OutlookItem
     
     /**
     * Sets the originalEndTimeZone
-    * The end time zone that was set when the event was created.
+    * The end time zone that was set when the event was created. A value of tzone://Microsoft/Customindicates that a legacy custom time zone was set in desktop Outlook.
     *
     * @param string $val The originalEndTimeZone
     *
@@ -264,7 +264,7 @@ class Event extends OutlookItem
     
     /**
     * Gets the body
-    * The body of the message associated with the event.
+    * The body of the message associated with the event. It can be in HTML or text format.
     *
     * @return ItemBody The body
     */
@@ -283,7 +283,7 @@ class Event extends OutlookItem
     
     /**
     * Sets the body
-    * The body of the message associated with the event.
+    * The body of the message associated with the event. It can be in HTML or text format.
     *
     * @param ItemBody $val The body
     *
@@ -297,7 +297,7 @@ class Event extends OutlookItem
     
     /**
     * Gets the bodyPreview
-    * The preview of the message associated with the event.
+    * The preview of the message associated with the event. It is in text format.
     *
     * @return string The bodyPreview
     */
@@ -312,7 +312,7 @@ class Event extends OutlookItem
     
     /**
     * Sets the bodyPreview
-    * The preview of the message associated with the event.
+    * The preview of the message associated with the event. It is in text format.
     *
     * @param string $val The bodyPreview
     *
@@ -611,7 +611,7 @@ class Event extends OutlookItem
     
     /**
     * Gets the recurrence
-    * The recurrence patern for the event.
+    * The recurrence pattern for the event.
     *
     * @return PatternedRecurrence The recurrence
     */
@@ -630,7 +630,7 @@ class Event extends OutlookItem
     
     /**
     * Sets the recurrence
-    * The recurrence patern for the event.
+    * The recurrence pattern for the event.
     *
     * @param PatternedRecurrence $val The recurrence
     *
@@ -953,7 +953,7 @@ class Event extends OutlookItem
 
      /** 
      * Gets the extensions
-    * The collection of open type data extensions defined for the contact. Read-only. Nullable.
+    * The collection of open extensions defined for the event. Read-only. Nullable.
      *
      * @return array The extensions
      */
@@ -968,7 +968,7 @@ class Event extends OutlookItem
     
     /** 
     * Sets the extensions
-    * The collection of open type data extensions defined for the contact. Read-only. Nullable.
+    * The collection of open extensions defined for the event. Read-only. Nullable.
     *
     * @param Extension $val The extensions
     *
