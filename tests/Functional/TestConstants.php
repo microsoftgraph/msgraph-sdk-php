@@ -16,4 +16,8 @@ class TestConstants
     const CLIENT_ID = "CLIENT_ID";
     const USERNAME = "USERNAME";
     const PASSWORD = "USER_PASSWORD";
+
+    // Planner plans can currently not be deleted; you will need
+    // to create your own plan and specify the ID here
+    const PLAN_ID = "PLAN_ID";
 }
