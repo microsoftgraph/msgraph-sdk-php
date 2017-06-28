@@ -16,6 +16,8 @@ class AzureTest extends TestCase
 
     /**
     * @group functional
+    *
+    * Administrative units are not yet available on Graph v1
     */
 	public function testAdminUnits()
     {
