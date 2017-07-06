@@ -12,7 +12,7 @@ before_install:
     - composer self-update
 
 install:
-    - composer install --prefer-source --no-interaction --no-progress --no-suggest $COMPOSER_FLAGS
+    - composer update --prefer-source --no-interaction --no-progress --no-suggest $COMPOSER_FLAGS
 
 script:
     - vendor/bin/phpunit --exclude-group functional
