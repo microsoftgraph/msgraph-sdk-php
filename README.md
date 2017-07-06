@@ -7,11 +7,11 @@
 If you want to play around with the PHP library, you can get up and running quickly with the [PHP Connect Sample](https://github.com/microsoftgraph/php-connect-sample). This sample will start you with a little Laravel project that helps you with registration, authentication, and making a simple call to the service.
 
 ## Install the SDK
-You can install the PHP SDK with Composer.
+You can install the PHP SDK with Composer, either run `composer require microsoft/microsoft-graph`, or edit your `composer.json` file:
 ```
 {
     "require": {
-        "microsoft/microsoft-graph": "1.0.*"
+        "microsoft/microsoft-graph": "^1.0"
     }
 }
 ```
@@ -30,11 +30,23 @@ supported authentication portals:
 
 ### Authenticate with the Microsoft Graph service
 
-The Microsoft Graph SDK for PHP does not include any default authentication implementations.
-Instead, you can authenticate with the library of your choice, or against the OAuth
-endpoint directly.
+The Microsoft Graph SDK for PHP does not include any default authentication implementations. The [`thenetworg/oauth2-azure`](https://github.com/thenetworg/oauth2-azure) library will handle standard Oauth2 for you, and provide a usable token for querying the Graph.
 
-To connect with Oauth2, see the [PHP Connect Sample](https://github.com/microsoftgraph/php-connect-sample).
+To authenticate as an application you can use the [Guzzle HTTP client](http://docs.guzzlephp.org/en/stable/), which comes preinstalled with this library, for example like this:
+```php
+$guzzle = new \GuzzleHttp\Client();
+$url = 'https://login.microsoftonline.com/' . $tenantId . '/oauth2/token?api-version=1.0';
+$token = json_decode($guzzle->post($url, [
+    'form_params' => [
+        'client_id' => $clientId,
+        'client_secret' => $clientSecret,
+        'resource' => 'https://graph.microsoft.com/',
+        'grant_type' => 'client_credentials',
+    ],
+])->getBody()->getContents());
+$accessToken = $token->access_token;
+```
+For an integrated example on how to use Oauth2 in a Laravel application and use the Graph, see the [PHP Connect Sample](https://github.com/microsoftgraph/php-connect-sample).
 
 ### Call Microsoft Graph
 
