@@ -17,7 +17,7 @@
 
 namespace Microsoft\Graph\Core;
 
-class GraphConstants
+final class GraphConstants
 {
     // These can be overwritten in setters in the Graph object
     const API_VERSION = "v1.0";
