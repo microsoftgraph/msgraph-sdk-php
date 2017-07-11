@@ -31,4 +31,28 @@ class OpenTypeTest extends TestCase
     	$this->_client->createRequest("DELETE", "/me/extensions/" . $eResult->getId())
     		->execute();
     }
+
+    /**
+    * @group functional
+    */
+    public function testSchemaExtensions()
+    {
+        $extension = new Model\SchemaExtension();
+        $extension->setId("schematest");
+        $extension->setDescription("PHP Graph SDK test");
+        $extension->setTargetTypes(array("Group"));
+
+        $property = new Model\ExtensionSchemaProperty();
+        $property->setName("courseId");
+        $property->setType("Integer");
+
+        $extension->setSchemaExtensionProperties(array($property));
+
+        $newExtension = $this->_client
+            ->createRequest("POST", "/schemaExtensions")
+            ->attachBody($extension)
+            ->setReturnType(Model\SchemaExtension::class)
+            ->execute();
+        $this->assertEquals($extension->getDescription(), $newExtension->getDescription());
+    }
 }

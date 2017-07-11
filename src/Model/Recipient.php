@@ -28,6 +28,7 @@ class Recipient extends Entity
 
     /**
     * Gets the emailAddress
+    * The recipient's email address.
     *
     * @return EmailAddress The emailAddress
     */
@@ -46,6 +47,7 @@ class Recipient extends Entity
 
     /**
     * Sets the emailAddress
+    * The recipient's email address.
     *
     * @param EmailAddress $val The value to assign to the emailAddress
     *

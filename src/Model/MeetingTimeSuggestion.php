@@ -28,6 +28,7 @@ class MeetingTimeSuggestion extends Entity
 
     /**
     * Gets the meetingTimeSlot
+    * A time period suggested for the meeting.
     *
     * @return TimeSlot The meetingTimeSlot
     */
@@ -46,6 +47,7 @@ class MeetingTimeSuggestion extends Entity
 
     /**
     * Sets the meetingTimeSlot
+    * A time period suggested for the meeting.
     *
     * @param TimeSlot $val The value to assign to the meetingTimeSlot
     *
@@ -58,6 +60,7 @@ class MeetingTimeSuggestion extends Entity
     }
     /**
     * Gets the confidence
+    * A percentage that represents the likelhood of all the attendees attending.
     *
     * @return float The confidence
     */
@@ -72,6 +75,7 @@ class MeetingTimeSuggestion extends Entity
 
     /**
     * Sets the confidence
+    * A percentage that represents the likelhood of all the attendees attending.
     *
     * @param float $val The value of the confidence
     *
@@ -85,6 +89,7 @@ class MeetingTimeSuggestion extends Entity
 
     /**
     * Gets the organizerAvailability
+    * Availability of the meeting organizer for this meeting suggestion. Possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
     *
     * @return FreeBusyStatus The organizerAvailability
     */
@@ -103,6 +108,7 @@ class MeetingTimeSuggestion extends Entity
 
     /**
     * Sets the organizerAvailability
+    * Availability of the meeting organizer for this meeting suggestion. Possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
     *
     * @param FreeBusyStatus $val The value to assign to the organizerAvailability
     *
@@ -116,6 +122,7 @@ class MeetingTimeSuggestion extends Entity
 
     /**
     * Gets the attendeeAvailability
+    * An array that shows the availability status of each attendee for this meeting suggestion.
     *
     * @return AttendeeAvailability The attendeeAvailability
     */
@@ -134,6 +141,7 @@ class MeetingTimeSuggestion extends Entity
 
     /**
     * Sets the attendeeAvailability
+    * An array that shows the availability status of each attendee for this meeting suggestion.
     *
     * @param AttendeeAvailability $val The value to assign to the attendeeAvailability
     *
@@ -147,6 +155,7 @@ class MeetingTimeSuggestion extends Entity
 
     /**
     * Gets the locations
+    * An array that specifies the name and geographic location of each meeting location for this meeting suggestion.
     *
     * @return Location The locations
     */
@@ -165,6 +174,7 @@ class MeetingTimeSuggestion extends Entity
 
     /**
     * Sets the locations
+    * An array that specifies the name and geographic location of each meeting location for this meeting suggestion.
     *
     * @param Location $val The value to assign to the locations
     *
@@ -177,6 +187,7 @@ class MeetingTimeSuggestion extends Entity
     }
     /**
     * Gets the suggestionReason
+    * Reason for suggesting the meeting time.
     *
     * @return string The suggestionReason
     */
@@ -191,6 +202,7 @@ class MeetingTimeSuggestion extends Entity
 
     /**
     * Sets the suggestionReason
+    * Reason for suggesting the meeting time.
     *
     * @param string $val The value of the suggestionReason
     *

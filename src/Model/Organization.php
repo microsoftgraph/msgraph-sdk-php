@@ -29,6 +29,7 @@ class Organization extends DirectoryObject
 
      /** 
      * Gets the assignedPlans
+    * The collection of service plans associated with the tenant. Not nullable.
      *
      * @return array The assignedPlans
      */
@@ -43,6 +44,7 @@ class Organization extends DirectoryObject
     
     /** 
     * Sets the assignedPlans
+    * The collection of service plans associated with the tenant. Not nullable.
     *
     * @param AssignedPlan $val The assignedPlans
     *
@@ -164,6 +166,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the displayName
+    * The display name for the tenant.
     *
     * @return string The displayName
     */
@@ -178,6 +181,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the displayName
+    * The display name for the tenant.
     *
     * @param string $val The displayName
     *
@@ -191,6 +195,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the marketingNotificationEmails
+    * Not nullable.
     *
     * @return string The marketingNotificationEmails
     */
@@ -205,6 +210,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the marketingNotificationEmails
+    * Not nullable.
     *
     * @param string $val The marketingNotificationEmails
     *
@@ -331,6 +337,7 @@ class Organization extends DirectoryObject
 
      /** 
      * Gets the provisionedPlans
+    * Not nullable.
      *
      * @return array The provisionedPlans
      */
@@ -345,6 +352,7 @@ class Organization extends DirectoryObject
     
     /** 
     * Sets the provisionedPlans
+    * Not nullable.
     *
     * @param ProvisionedPlan $val The provisionedPlans
     *
@@ -466,6 +474,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the technicalNotificationMails
+    * Not nullable.
     *
     * @return string The technicalNotificationMails
     */
@@ -480,6 +489,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the technicalNotificationMails
+    * Not nullable.
     *
     * @param string $val The technicalNotificationMails
     *
@@ -494,6 +504,7 @@ class Organization extends DirectoryObject
 
      /** 
      * Gets the verifiedDomains
+    * The collection of domains associated with this tenant. Not nullable.
      *
      * @return array The verifiedDomains
      */
@@ -508,6 +519,7 @@ class Organization extends DirectoryObject
     
     /** 
     * Sets the verifiedDomains
+    * The collection of domains associated with this tenant. Not nullable.
     *
     * @param VerifiedDomain $val The verifiedDomains
     *
@@ -516,6 +528,34 @@ class Organization extends DirectoryObject
     public function setVerifiedDomains($val)
     {
 		$this->_propDict["verifiedDomains"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the extensions
+     *
+     * @return array The extensions
+     */
+    public function getExtensions()
+    {
+        if (array_key_exists("extensions", $this->_propDict)) {
+           return $this->_propDict["extensions"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the extensions
+    *
+    * @param Extension $val The extensions
+    *
+    * @return Organization
+    */
+    public function setExtensions($val)
+    {
+		$this->_propDict["extensions"] = $val;
         return $this;
     }
     

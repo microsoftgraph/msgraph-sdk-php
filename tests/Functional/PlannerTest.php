@@ -2,13 +2,14 @@
 use PHPUnit\Framework\TestCase;
 use Microsoft\Graph\Test\GraphTestBase;
 use Microsoft\Graph\Model;
+use Microsoft\Graph\Test\TestConstants;
 
 class PlannerTest extends TestCase
 {
     private $_client;
 
     //This test currently does not clean up after itself
-    private $planId = "bVQECPYdRkqg3c9Mp4mJbmQADG1N";
+    private $planId = TestConstants::PLAN_ID;
     private $planBucket;
     private $planTask;
 

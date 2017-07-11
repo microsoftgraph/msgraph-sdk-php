@@ -28,6 +28,7 @@ class AttendeeAvailability extends Entity
 
     /**
     * Gets the attendee
+    * The type of attendee - whether it's a person or a resource, and whether required or optional if it's a person.
     *
     * @return AttendeeBase The attendee
     */
@@ -46,6 +47,7 @@ class AttendeeAvailability extends Entity
 
     /**
     * Sets the attendee
+    * The type of attendee - whether it's a person or a resource, and whether required or optional if it's a person.
     *
     * @param AttendeeBase $val The value to assign to the attendee
     *
@@ -59,6 +61,7 @@ class AttendeeAvailability extends Entity
 
     /**
     * Gets the availability
+    * The availability status of the attendee. Possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
     *
     * @return FreeBusyStatus The availability
     */
@@ -77,6 +80,7 @@ class AttendeeAvailability extends Entity
 
     /**
     * Sets the availability
+    * The availability status of the attendee. Possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
     *
     * @param FreeBusyStatus $val The value to assign to the availability
     *

@@ -28,6 +28,7 @@ class InvitedUserMessageInfo extends Entity
 
     /**
     * Gets the ccRecipients
+    * Additional recipients the invitation message should be sent to. Currently only 1 additional recipient is supported.
     *
     * @return Recipient The ccRecipients
     */
@@ -46,6 +47,7 @@ class InvitedUserMessageInfo extends Entity
 
     /**
     * Sets the ccRecipients
+    * Additional recipients the invitation message should be sent to. Currently only 1 additional recipient is supported.
     *
     * @param Recipient $val The value to assign to the ccRecipients
     *
@@ -58,6 +60,7 @@ class InvitedUserMessageInfo extends Entity
     }
     /**
     * Gets the messageLanguage
+    * The language you want to send the default message in. If the customizedMessageBody is specified, this property is ignored, and the message is sent using the customizedMessageBody. The language format should be in ISO 639. The default is en-US.
     *
     * @return string The messageLanguage
     */
@@ -72,6 +75,7 @@ class InvitedUserMessageInfo extends Entity
 
     /**
     * Sets the messageLanguage
+    * The language you want to send the default message in. If the customizedMessageBody is specified, this property is ignored, and the message is sent using the customizedMessageBody. The language format should be in ISO 639. The default is en-US.
     *
     * @param string $val The value of the messageLanguage
     *
@@ -84,6 +88,7 @@ class InvitedUserMessageInfo extends Entity
     }
     /**
     * Gets the customizedMessageBody
+    * Customized message body you want to send if you don't want the default message.
     *
     * @return string The customizedMessageBody
     */
@@ -98,6 +103,7 @@ class InvitedUserMessageInfo extends Entity
 
     /**
     * Sets the customizedMessageBody
+    * Customized message body you want to send if you don't want the default message.
     *
     * @param string $val The value of the customizedMessageBody
     *

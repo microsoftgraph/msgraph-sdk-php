@@ -27,6 +27,7 @@ class ItemReference extends Entity
 {
     /**
     * Gets the driveId
+    * Unique identifier of the OneDrive instance that contains the item. Read-only.
     *
     * @return string The driveId
     */
@@ -41,6 +42,7 @@ class ItemReference extends Entity
 
     /**
     * Sets the driveId
+    * Unique identifier of the OneDrive instance that contains the item. Read-only.
     *
     * @param string $val The value of the driveId
     *
@@ -53,6 +55,7 @@ class ItemReference extends Entity
     }
     /**
     * Gets the id
+    * Unique identifier of the item in the drive. Read-only.
     *
     * @return string The id
     */
@@ -67,6 +70,7 @@ class ItemReference extends Entity
 
     /**
     * Sets the id
+    * Unique identifier of the item in the drive. Read-only.
     *
     * @param string $val The value of the id
     *
@@ -105,6 +109,7 @@ class ItemReference extends Entity
     }
     /**
     * Gets the path
+    * Path that can be used to navigate to the item. Read-only.
     *
     * @return string The path
     */
@@ -119,6 +124,7 @@ class ItemReference extends Entity
 
     /**
     * Sets the path
+    * Path that can be used to navigate to the item. Read-only.
     *
     * @param string $val The value of the path
     *

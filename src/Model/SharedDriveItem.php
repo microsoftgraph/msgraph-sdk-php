@@ -28,6 +28,7 @@ class SharedDriveItem extends BaseItem
 {
     /**
     * Gets the name
+    * The display name of the shared item.
     *
     * @return string The name
     */
@@ -42,6 +43,7 @@ class SharedDriveItem extends BaseItem
     
     /**
     * Sets the name
+    * The display name of the shared item.
     *
     * @param string $val The name
     *
@@ -55,6 +57,7 @@ class SharedDriveItem extends BaseItem
     
     /**
     * Gets the owner
+    * Information about the owner of the shared item being referenced.
     *
     * @return IdentitySet The owner
     */
@@ -73,6 +76,7 @@ class SharedDriveItem extends BaseItem
     
     /**
     * Sets the owner
+    * Information about the owner of the shared item being referenced.
     *
     * @param IdentitySet $val The owner
     *
