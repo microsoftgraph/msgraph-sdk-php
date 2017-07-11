@@ -23,5 +23,13 @@ You can view the [README](https://github.com/microsoftgraph/MSGraph-SDK-Code-Gen
 
 For the purposes of the PHP library, the generator runs through an OData-compliant metadata file published by Microsoft Graph (https://graph.microsoft.com/v1.0/$metadata) and builds up a list of models. These models are converted into PHP code using T4 templates, which use C# to programmatically define what PHP code is written to the file.
 
+### When new features are added to the library
+Generation happens as part of a manual process that occurs once a significant change or set of changes has been added to the Graph. This may include:
+ - A new workload comes to v1.0 of Graph (Microsoft Teams, Batching, etc.)
+ - There is significant addition of functionality (Delta Queries, etc.)
+ 
+However, this is evaluated on a case-by-case basis. If the library is missing v1.0 Graph functionality that you wish to utilize, please [file an issue](https://github.com/microsoftgraph/msgraph-sdk-php/issues).
+
+We do our best to prevent breaking changes from being introduced into the library during this process. If you find a breaking change, please file an issue and we will work to get this resolved ASAP.
 
 
