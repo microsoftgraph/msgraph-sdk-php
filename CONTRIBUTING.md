@@ -1,6 +1,8 @@
 # Contributing to the Microsoft Graph PHP SDK
 Thanks for considering making a contribution! Read over our guidelines and we will do our best to see your PRs merged successfully.
 
+**NOTE**: A signed a contribution license agreement is required for all contributions and is checked automatically on new pull requests. You will be asked to read and sign the agreement https://cla.microsoft.com/ after submitting a request to this repository.
+
 There are a few different recommended paths to get contributions into the released version of this library.
 
 ## File issues
