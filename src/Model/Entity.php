@@ -101,6 +101,8 @@ class Entity implements \JsonSerializable
     public function setODataType($val)
     {
         $this->_propDict["@odata.type"] = $val;
+	    
+        return $this;
     }
     
     /**
