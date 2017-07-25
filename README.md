@@ -96,7 +96,7 @@ tests to do not restore state of the account.*
 
 * [Examples](https://github.com/microsoftgraph/msgraph-sdk-php/wiki/Example-calls)
 
-* [Microsoft Graph website](https://graph.microsoft.io)
+* [Microsoft Graph website](https://developer.microsoft.com/en-us/graph/)
 
 ## Issues
 
