@@ -27,6 +27,7 @@ class DomainState extends Entity
 {
     /**
     * Gets the status
+    * Current status of the operation.  Scheduled - Operation has been scheduled but has not started.  InProgress - Task has started and is in progress.  Failed - Operation has failed.
     *
     * @return string The status
     */
@@ -41,6 +42,7 @@ class DomainState extends Entity
 
     /**
     * Sets the status
+    * Current status of the operation.  Scheduled - Operation has been scheduled but has not started.  InProgress - Task has started and is in progress.  Failed - Operation has failed.
     *
     * @param string $val The value of the status
     *
@@ -53,6 +55,7 @@ class DomainState extends Entity
     }
     /**
     * Gets the operation
+    * Type of asynchronous operation. The values can be ForceDelete or Verification
     *
     * @return string The operation
     */
@@ -67,6 +70,7 @@ class DomainState extends Entity
 
     /**
     * Sets the operation
+    * Type of asynchronous operation. The values can be ForceDelete or Verification
     *
     * @param string $val The value of the operation
     *
@@ -80,6 +84,7 @@ class DomainState extends Entity
 
     /**
     * Gets the lastActionDateTime
+    * Timestamp for when the last activity occurred. The value is updated when an operation is scheduled, the asynchronous task starts, and when the operation completes.
     *
     * @return \DateTime The lastActionDateTime
     */
@@ -98,6 +103,7 @@ class DomainState extends Entity
 
     /**
     * Sets the lastActionDateTime
+    * Timestamp for when the last activity occurred. The value is updated when an operation is scheduled, the asynchronous task starts, and when the operation completes.
     *
     * @param \DateTime $val The value to assign to the lastActionDateTime
     *

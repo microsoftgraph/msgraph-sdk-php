@@ -28,6 +28,7 @@ class PlannerTaskDetails extends Entity
 {
     /**
     * Gets the description
+    * Description of the task
     *
     * @return string The description
     */
@@ -42,6 +43,7 @@ class PlannerTaskDetails extends Entity
     
     /**
     * Sets the description
+    * Description of the task
     *
     * @param string $val The description
     *
@@ -55,6 +57,7 @@ class PlannerTaskDetails extends Entity
     
     /**
     * Gets the previewType
+    * This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
     *
     * @return PlannerPreviewType The previewType
     */
@@ -73,6 +76,7 @@ class PlannerTaskDetails extends Entity
     
     /**
     * Sets the previewType
+    * This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
     *
     * @param PlannerPreviewType $val The previewType
     *
@@ -86,6 +90,7 @@ class PlannerTaskDetails extends Entity
     
     /**
     * Gets the references
+    * The collection of references on the task.
     *
     * @return PlannerExternalReferences The references
     */
@@ -104,6 +109,7 @@ class PlannerTaskDetails extends Entity
     
     /**
     * Sets the references
+    * The collection of references on the task.
     *
     * @param PlannerExternalReferences $val The references
     *
@@ -117,6 +123,7 @@ class PlannerTaskDetails extends Entity
     
     /**
     * Gets the checklist
+    * The collection of checklist items on the task.
     *
     * @return PlannerChecklistItems The checklist
     */
@@ -135,6 +142,7 @@ class PlannerTaskDetails extends Entity
     
     /**
     * Sets the checklist
+    * The collection of checklist items on the task.
     *
     * @param PlannerChecklistItems $val The checklist
     *

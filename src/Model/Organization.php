@@ -534,6 +534,7 @@ class Organization extends DirectoryObject
 
      /** 
      * Gets the extensions
+    * The collection of open extensions defined for the organization. Read-only. Nullable.
      *
      * @return array The extensions
      */
@@ -548,6 +549,7 @@ class Organization extends DirectoryObject
     
     /** 
     * Sets the extensions
+    * The collection of open extensions defined for the organization. Read-only. Nullable.
     *
     * @param Extension $val The extensions
     *

@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* ExtensionSchemaProperty File
+* SettingTemplateValue File
 * PHP version 7
 *
 * @category  Library
@@ -14,7 +14,7 @@
 */
 namespace Microsoft\Graph\Model;
 /**
-* ExtensionSchemaProperty class
+* SettingTemplateValue class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -23,11 +23,10 @@ namespace Microsoft\Graph\Model;
 * @version   Release: 0.1.0
 * @link      https://graph.microsoft.io/
 */
-class ExtensionSchemaProperty extends Entity
+class SettingTemplateValue extends Entity
 {
     /**
     * Gets the name
-    * The name of the strongly-typed property defined as part of a schema extension.
     *
     * @return string The name
     */
@@ -42,11 +41,10 @@ class ExtensionSchemaProperty extends Entity
 
     /**
     * Sets the name
-    * The name of the strongly-typed property defined as part of a schema extension.
     *
     * @param string $val The value of the name
     *
-    * @return ExtensionSchemaProperty
+    * @return SettingTemplateValue
     */
     public function setName($val)
     {
@@ -55,7 +53,6 @@ class ExtensionSchemaProperty extends Entity
     }
     /**
     * Gets the type
-    * The type of the property that is defined as part of a schema extension.  Allowed values are Binary, Boolean, DateTime, Integer or String.  See the table below for more details.
     *
     * @return string The type
     */
@@ -70,15 +67,66 @@ class ExtensionSchemaProperty extends Entity
 
     /**
     * Sets the type
-    * The type of the property that is defined as part of a schema extension.  Allowed values are Binary, Boolean, DateTime, Integer or String.  See the table below for more details.
     *
     * @param string $val The value of the type
     *
-    * @return ExtensionSchemaProperty
+    * @return SettingTemplateValue
     */
     public function setType($val)
     {
         $this->_propDict["type"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the defaultValue
+    *
+    * @return string The defaultValue
+    */
+    public function getDefaultValue()
+    {
+        if (array_key_exists("defaultValue", $this->_propDict)) {
+            return $this->_propDict["defaultValue"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the defaultValue
+    *
+    * @param string $val The value of the defaultValue
+    *
+    * @return SettingTemplateValue
+    */
+    public function setDefaultValue($val)
+    {
+        $this->_propDict["defaultValue"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the description
+    *
+    * @return string The description
+    */
+    public function getDescription()
+    {
+        if (array_key_exists("description", $this->_propDict)) {
+            return $this->_propDict["description"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the description
+    *
+    * @param string $val The value of the description
+    *
+    * @return SettingTemplateValue
+    */
+    public function setDescription($val)
+    {
+        $this->_propDict["description"] = $val;
         return $this;
     }
 }

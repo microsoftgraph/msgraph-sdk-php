@@ -89,6 +89,7 @@ class Shared extends Entity
 
     /**
     * Gets the sharedBy
+    * The identity of the user who shared the item. Read-only.
     *
     * @return IdentitySet The sharedBy
     */
@@ -107,6 +108,7 @@ class Shared extends Entity
 
     /**
     * Sets the sharedBy
+    * The identity of the user who shared the item. Read-only.
     *
     * @param IdentitySet $val The value to assign to the sharedBy
     *
@@ -120,6 +122,7 @@ class Shared extends Entity
 
     /**
     * Gets the sharedDateTime
+    * The UTC date and time when the item was shared. Read-only.
     *
     * @return \DateTime The sharedDateTime
     */
@@ -138,6 +141,7 @@ class Shared extends Entity
 
     /**
     * Sets the sharedDateTime
+    * The UTC date and time when the item was shared. Read-only.
     *
     * @param \DateTime $val The value to assign to the sharedDateTime
     *

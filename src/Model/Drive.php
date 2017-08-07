@@ -57,7 +57,7 @@ class Drive extends BaseItem
     
     /**
     * Gets the owner
-    * Optional. The user account that owns the drive.
+    * Optional. The user account that owns the drive. Read-only.
     *
     * @return IdentitySet The owner
     */
@@ -76,7 +76,7 @@ class Drive extends BaseItem
     
     /**
     * Sets the owner
-    * Optional. The user account that owns the drive.
+    * Optional. The user account that owns the drive. Read-only.
     *
     * @param IdentitySet $val The owner
     *
@@ -90,7 +90,7 @@ class Drive extends BaseItem
     
     /**
     * Gets the quota
-    * Optional. Information about the drive's storage space quota.
+    * Optional. Information about the drive's storage space quota. Read-only.
     *
     * @return Quota The quota
     */
@@ -109,7 +109,7 @@ class Drive extends BaseItem
     
     /**
     * Sets the quota
-    * Optional. Information about the drive's storage space quota.
+    * Optional. Information about the drive's storage space quota. Read-only.
     *
     * @param Quota $val The quota
     *

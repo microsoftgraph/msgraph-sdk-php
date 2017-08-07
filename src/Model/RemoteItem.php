@@ -381,6 +381,7 @@ class RemoteItem extends Entity
 
     /**
     * Gets the shared
+    * Indicates that the item has been shared with others and provides information about the shared state of the item. Read-only.
     *
     * @return Shared The shared
     */
@@ -399,6 +400,7 @@ class RemoteItem extends Entity
 
     /**
     * Sets the shared
+    * Indicates that the item has been shared with others and provides information about the shared state of the item. Read-only.
     *
     * @param Shared $val The value to assign to the shared
     *

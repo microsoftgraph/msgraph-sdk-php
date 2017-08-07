@@ -28,7 +28,7 @@ class SubscribedSku extends Entity
 {
     /**
     * Gets the capabilityStatus
-    * For example, "Enabled", "LockedOut", and "Suspended".
+    * For example, "Enabled".
     *
     * @return string The capabilityStatus
     */
@@ -43,7 +43,7 @@ class SubscribedSku extends Entity
     
     /**
     * Sets the capabilityStatus
-    * For example, "Enabled", "LockedOut", and "Suspended".
+    * For example, "Enabled".
     *
     * @param string $val The capabilityStatus
     *
@@ -120,7 +120,7 @@ class SubscribedSku extends Entity
 
      /** 
      * Gets the servicePlans
-    * Information about the service plans that are available with the SKU.
+    * Information about the service plans that are available with the SKU. Not nullable
      *
      * @return array The servicePlans
      */
@@ -135,7 +135,7 @@ class SubscribedSku extends Entity
     
     /** 
     * Sets the servicePlans
-    * Information about the service plans that are available with the SKU.
+    * Information about the service plans that are available with the SKU. Not nullable
     *
     * @param ServicePlanInfo $val The servicePlans
     *

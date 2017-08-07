@@ -28,6 +28,7 @@ class PlannerTask extends Entity
 {
     /**
     * Gets the createdBy
+    * Identity of the user that created the task.
     *
     * @return IdentitySet The createdBy
     */
@@ -46,6 +47,7 @@ class PlannerTask extends Entity
     
     /**
     * Sets the createdBy
+    * Identity of the user that created the task.
     *
     * @param IdentitySet $val The createdBy
     *
@@ -59,6 +61,7 @@ class PlannerTask extends Entity
     
     /**
     * Gets the planId
+    * Plan ID to which the task belongs.
     *
     * @return string The planId
     */
@@ -73,6 +76,7 @@ class PlannerTask extends Entity
     
     /**
     * Sets the planId
+    * Plan ID to which the task belongs.
     *
     * @param string $val The planId
     *
@@ -86,6 +90,7 @@ class PlannerTask extends Entity
     
     /**
     * Gets the bucketId
+    * Bucket ID to which the task belongs. The bucket needs to be in the plan that the task is in. It is 28 characters long and case sensitive. Format validation is done on the service.
     *
     * @return string The bucketId
     */
@@ -100,6 +105,7 @@ class PlannerTask extends Entity
     
     /**
     * Sets the bucketId
+    * Bucket ID to which the task belongs. The bucket needs to be in the plan that the task is in. It is 28 characters long and case sensitive. Format validation is done on the service.
     *
     * @param string $val The bucketId
     *
@@ -113,6 +119,7 @@ class PlannerTask extends Entity
     
     /**
     * Gets the title
+    * Title of the task.
     *
     * @return string The title
     */
@@ -127,6 +134,7 @@ class PlannerTask extends Entity
     
     /**
     * Sets the title
+    * Title of the task.
     *
     * @param string $val The title
     *
@@ -140,6 +148,7 @@ class PlannerTask extends Entity
     
     /**
     * Gets the orderHint
+    * Hint used to order items of this type in a list view. The format is defined as outlined here.
     *
     * @return string The orderHint
     */
@@ -154,6 +163,7 @@ class PlannerTask extends Entity
     
     /**
     * Sets the orderHint
+    * Hint used to order items of this type in a list view. The format is defined as outlined here.
     *
     * @param string $val The orderHint
     *
@@ -167,6 +177,7 @@ class PlannerTask extends Entity
     
     /**
     * Gets the assigneePriority
+    * Hint used to order items of this type in a list view. The format is defined as outlined here.
     *
     * @return string The assigneePriority
     */
@@ -181,6 +192,7 @@ class PlannerTask extends Entity
     
     /**
     * Sets the assigneePriority
+    * Hint used to order items of this type in a list view. The format is defined as outlined here.
     *
     * @param string $val The assigneePriority
     *
@@ -194,6 +206,7 @@ class PlannerTask extends Entity
     
     /**
     * Gets the percentComplete
+    * Percentage of task completion. When set to 100, the task is considered completed.
     *
     * @return int The percentComplete
     */
@@ -208,6 +221,7 @@ class PlannerTask extends Entity
     
     /**
     * Sets the percentComplete
+    * Percentage of task completion. When set to 100, the task is considered completed.
     *
     * @param int $val The percentComplete
     *
@@ -221,6 +235,7 @@ class PlannerTask extends Entity
     
     /**
     * Gets the startDateTime
+    * Date and time at which the task starts. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The startDateTime
     */
@@ -239,6 +254,7 @@ class PlannerTask extends Entity
     
     /**
     * Sets the startDateTime
+    * Date and time at which the task starts. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The startDateTime
     *
@@ -252,6 +268,7 @@ class PlannerTask extends Entity
     
     /**
     * Gets the createdDateTime
+    * Read-only. Date and time at which the task is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The createdDateTime
     */
@@ -270,6 +287,7 @@ class PlannerTask extends Entity
     
     /**
     * Sets the createdDateTime
+    * Read-only. Date and time at which the task is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -283,6 +301,7 @@ class PlannerTask extends Entity
     
     /**
     * Gets the dueDateTime
+    * Date and time at which the task is due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The dueDateTime
     */
@@ -301,6 +320,7 @@ class PlannerTask extends Entity
     
     /**
     * Sets the dueDateTime
+    * Date and time at which the task is due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The dueDateTime
     *
@@ -314,6 +334,7 @@ class PlannerTask extends Entity
     
     /**
     * Gets the hasDescription
+    * Read-only. Value is true if the details object of the task has a non-empty description and false otherwise.
     *
     * @return bool The hasDescription
     */
@@ -328,6 +349,7 @@ class PlannerTask extends Entity
     
     /**
     * Sets the hasDescription
+    * Read-only. Value is true if the details object of the task has a non-empty description and false otherwise.
     *
     * @param bool $val The hasDescription
     *
@@ -341,6 +363,7 @@ class PlannerTask extends Entity
     
     /**
     * Gets the previewType
+    * This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference.
     *
     * @return PlannerPreviewType The previewType
     */
@@ -359,6 +382,7 @@ class PlannerTask extends Entity
     
     /**
     * Sets the previewType
+    * This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference.
     *
     * @param PlannerPreviewType $val The previewType
     *
@@ -372,6 +396,7 @@ class PlannerTask extends Entity
     
     /**
     * Gets the completedDateTime
+    * Read-only. Date and time at which the 'percentComplete' of the task is set to '100'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The completedDateTime
     */
@@ -390,6 +415,7 @@ class PlannerTask extends Entity
     
     /**
     * Sets the completedDateTime
+    * Read-only. Date and time at which the 'percentComplete' of the task is set to '100'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The completedDateTime
     *
@@ -403,6 +429,7 @@ class PlannerTask extends Entity
     
     /**
     * Gets the completedBy
+    * Identity of the user that completed the task.
     *
     * @return IdentitySet The completedBy
     */
@@ -421,6 +448,7 @@ class PlannerTask extends Entity
     
     /**
     * Sets the completedBy
+    * Identity of the user that completed the task.
     *
     * @param IdentitySet $val The completedBy
     *
@@ -434,6 +462,7 @@ class PlannerTask extends Entity
     
     /**
     * Gets the referenceCount
+    * Number of external references that exist on the task.
     *
     * @return int The referenceCount
     */
@@ -448,6 +477,7 @@ class PlannerTask extends Entity
     
     /**
     * Sets the referenceCount
+    * Number of external references that exist on the task.
     *
     * @param int $val The referenceCount
     *
@@ -461,6 +491,7 @@ class PlannerTask extends Entity
     
     /**
     * Gets the checklistItemCount
+    * Number of checklist items that are present on the task.
     *
     * @return int The checklistItemCount
     */
@@ -475,6 +506,7 @@ class PlannerTask extends Entity
     
     /**
     * Sets the checklistItemCount
+    * Number of checklist items that are present on the task.
     *
     * @param int $val The checklistItemCount
     *
@@ -488,6 +520,7 @@ class PlannerTask extends Entity
     
     /**
     * Gets the activeChecklistItemCount
+    * Number of checklist items with value set to 'false', representing incomplete items.
     *
     * @return int The activeChecklistItemCount
     */
@@ -502,6 +535,7 @@ class PlannerTask extends Entity
     
     /**
     * Sets the activeChecklistItemCount
+    * Number of checklist items with value set to 'false', representing incomplete items.
     *
     * @param int $val The activeChecklistItemCount
     *
@@ -515,6 +549,7 @@ class PlannerTask extends Entity
     
     /**
     * Gets the appliedCategories
+    * The categories to which the task has been applied. See applied Categories for possible values.
     *
     * @return PlannerAppliedCategories The appliedCategories
     */
@@ -533,6 +568,7 @@ class PlannerTask extends Entity
     
     /**
     * Sets the appliedCategories
+    * The categories to which the task has been applied. See applied Categories for possible values.
     *
     * @param PlannerAppliedCategories $val The appliedCategories
     *
@@ -546,6 +582,7 @@ class PlannerTask extends Entity
     
     /**
     * Gets the assignments
+    * The set of assignees the task is assigned to.
     *
     * @return PlannerAssignments The assignments
     */
@@ -564,6 +601,7 @@ class PlannerTask extends Entity
     
     /**
     * Sets the assignments
+    * The set of assignees the task is assigned to.
     *
     * @param PlannerAssignments $val The assignments
     *
@@ -577,6 +615,7 @@ class PlannerTask extends Entity
     
     /**
     * Gets the conversationThreadId
+    * Thread ID of the conversation on the task. This is the ID of the conversation thread object created in the group.
     *
     * @return string The conversationThreadId
     */
@@ -591,6 +630,7 @@ class PlannerTask extends Entity
     
     /**
     * Sets the conversationThreadId
+    * Thread ID of the conversation on the task. This is the ID of the conversation thread object created in the group.
     *
     * @param string $val The conversationThreadId
     *
@@ -604,6 +644,7 @@ class PlannerTask extends Entity
     
     /**
     * Gets the details
+    * Read-only. Nullable. Additional details about the task.
     *
     * @return PlannerTaskDetails The details
     */
@@ -622,6 +663,7 @@ class PlannerTask extends Entity
     
     /**
     * Sets the details
+    * Read-only. Nullable. Additional details about the task.
     *
     * @param PlannerTaskDetails $val The details
     *
@@ -635,6 +677,7 @@ class PlannerTask extends Entity
     
     /**
     * Gets the assignedToTaskBoardFormat
+    * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by assignedTo.
     *
     * @return PlannerAssignedToTaskBoardTaskFormat The assignedToTaskBoardFormat
     */
@@ -653,6 +696,7 @@ class PlannerTask extends Entity
     
     /**
     * Sets the assignedToTaskBoardFormat
+    * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by assignedTo.
     *
     * @param PlannerAssignedToTaskBoardTaskFormat $val The assignedToTaskBoardFormat
     *
@@ -666,6 +710,7 @@ class PlannerTask extends Entity
     
     /**
     * Gets the progressTaskBoardFormat
+    * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by progress.
     *
     * @return PlannerProgressTaskBoardTaskFormat The progressTaskBoardFormat
     */
@@ -684,6 +729,7 @@ class PlannerTask extends Entity
     
     /**
     * Sets the progressTaskBoardFormat
+    * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by progress.
     *
     * @param PlannerProgressTaskBoardTaskFormat $val The progressTaskBoardFormat
     *
@@ -697,6 +743,7 @@ class PlannerTask extends Entity
     
     /**
     * Gets the bucketTaskBoardFormat
+    * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by bucket.
     *
     * @return PlannerBucketTaskBoardTaskFormat The bucketTaskBoardFormat
     */
@@ -715,6 +762,7 @@ class PlannerTask extends Entity
     
     /**
     * Sets the bucketTaskBoardFormat
+    * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by bucket.
     *
     * @param PlannerBucketTaskBoardTaskFormat $val The bucketTaskBoardFormat
     *
