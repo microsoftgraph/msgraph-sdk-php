@@ -117,6 +117,118 @@ class Calendar extends Entity
         return $this;
     }
     
+    /**
+    * Gets the canShare
+    *
+    * @return bool The canShare
+    */
+    public function getCanShare()
+    {
+        if (array_key_exists("canShare", $this->_propDict)) {
+            return $this->_propDict["canShare"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the canShare
+    *
+    * @param bool $val The canShare
+    *
+    * @return Calendar
+    */
+    public function setCanShare($val)
+    {
+        $this->_propDict["canShare"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the canViewPrivateItems
+    *
+    * @return bool The canViewPrivateItems
+    */
+    public function getCanViewPrivateItems()
+    {
+        if (array_key_exists("canViewPrivateItems", $this->_propDict)) {
+            return $this->_propDict["canViewPrivateItems"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the canViewPrivateItems
+    *
+    * @param bool $val The canViewPrivateItems
+    *
+    * @return Calendar
+    */
+    public function setCanViewPrivateItems($val)
+    {
+        $this->_propDict["canViewPrivateItems"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the canEdit
+    *
+    * @return bool The canEdit
+    */
+    public function getCanEdit()
+    {
+        if (array_key_exists("canEdit", $this->_propDict)) {
+            return $this->_propDict["canEdit"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the canEdit
+    *
+    * @param bool $val The canEdit
+    *
+    * @return Calendar
+    */
+    public function setCanEdit($val)
+    {
+        $this->_propDict["canEdit"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the owner
+    *
+    * @return EmailAddress The owner
+    */
+    public function getOwner()
+    {
+        if (array_key_exists("owner", $this->_propDict)) {
+            if (is_a($this->_propDict["owner"], "Microsoft\Graph\Model\EmailAddress")) {
+                return $this->_propDict["owner"];
+            } else {
+                $this->_propDict["owner"] = new EmailAddress($this->_propDict["owner"]);
+                return $this->_propDict["owner"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the owner
+    *
+    * @param EmailAddress $val The owner
+    *
+    * @return Calendar
+    */
+    public function setOwner($val)
+    {
+        $this->_propDict["owner"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the events

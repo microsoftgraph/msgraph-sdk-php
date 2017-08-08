@@ -28,6 +28,7 @@ class PageLinks extends Entity
 
     /**
     * Gets the oneNoteClientUrl
+    * Opens the page in the OneNote native client if it's installed.
     *
     * @return ExternalLink The oneNoteClientUrl
     */
@@ -46,6 +47,7 @@ class PageLinks extends Entity
 
     /**
     * Sets the oneNoteClientUrl
+    * Opens the page in the OneNote native client if it's installed.
     *
     * @param ExternalLink $val The value to assign to the oneNoteClientUrl
     *
@@ -59,6 +61,7 @@ class PageLinks extends Entity
 
     /**
     * Gets the oneNoteWebUrl
+    * Opens the page in OneNote Online.
     *
     * @return ExternalLink The oneNoteWebUrl
     */
@@ -77,6 +80,7 @@ class PageLinks extends Entity
 
     /**
     * Sets the oneNoteWebUrl
+    * Opens the page in OneNote Online.
     *
     * @param ExternalLink $val The value to assign to the oneNoteWebUrl
     *

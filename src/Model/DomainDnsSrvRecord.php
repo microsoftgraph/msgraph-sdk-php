@@ -28,6 +28,7 @@ class DomainDnsSrvRecord extends DomainDnsRecord
 {
     /**
     * Gets the nameTarget
+    * Value to use when configuring the Target property of the SRV record at the DNS host.
     *
     * @return string The nameTarget
     */
@@ -42,6 +43,7 @@ class DomainDnsSrvRecord extends DomainDnsRecord
     
     /**
     * Sets the nameTarget
+    * Value to use when configuring the Target property of the SRV record at the DNS host.
     *
     * @param string $val The nameTarget
     *
@@ -55,6 +57,7 @@ class DomainDnsSrvRecord extends DomainDnsRecord
     
     /**
     * Gets the port
+    * Value to use when configuring the port property of the SRV record at the DNS host.
     *
     * @return int The port
     */
@@ -69,6 +72,7 @@ class DomainDnsSrvRecord extends DomainDnsRecord
     
     /**
     * Sets the port
+    * Value to use when configuring the port property of the SRV record at the DNS host.
     *
     * @param int $val The port
     *
@@ -82,6 +86,7 @@ class DomainDnsSrvRecord extends DomainDnsRecord
     
     /**
     * Gets the priority
+    * Value to use when configuring the priority property of the SRV record at the DNS host.
     *
     * @return int The priority
     */
@@ -96,6 +101,7 @@ class DomainDnsSrvRecord extends DomainDnsRecord
     
     /**
     * Sets the priority
+    * Value to use when configuring the priority property of the SRV record at the DNS host.
     *
     * @param int $val The priority
     *
@@ -109,6 +115,7 @@ class DomainDnsSrvRecord extends DomainDnsRecord
     
     /**
     * Gets the protocol
+    * Value to use when configuring the protocol property of the SRV record at the DNS host.
     *
     * @return string The protocol
     */
@@ -123,6 +130,7 @@ class DomainDnsSrvRecord extends DomainDnsRecord
     
     /**
     * Sets the protocol
+    * Value to use when configuring the protocol property of the SRV record at the DNS host.
     *
     * @param string $val The protocol
     *
@@ -136,6 +144,7 @@ class DomainDnsSrvRecord extends DomainDnsRecord
     
     /**
     * Gets the service
+    * Value to use when configuring the service property of the SRV record at the DNS host.
     *
     * @return string The service
     */
@@ -150,6 +159,7 @@ class DomainDnsSrvRecord extends DomainDnsRecord
     
     /**
     * Sets the service
+    * Value to use when configuring the service property of the SRV record at the DNS host.
     *
     * @param string $val The service
     *
@@ -163,6 +173,7 @@ class DomainDnsSrvRecord extends DomainDnsRecord
     
     /**
     * Gets the weight
+    * Value to use when configuring the weight property of the SRV record at the DNS host.
     *
     * @return int The weight
     */
@@ -177,6 +188,7 @@ class DomainDnsSrvRecord extends DomainDnsRecord
     
     /**
     * Sets the weight
+    * Value to use when configuring the weight property of the SRV record at the DNS host.
     *
     * @param int $val The weight
     *

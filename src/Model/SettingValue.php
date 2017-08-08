@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* OnenoteOperationError File
+* SettingValue File
 * PHP version 7
 *
 * @category  Library
@@ -14,7 +14,7 @@
 */
 namespace Microsoft\Graph\Model;
 /**
-* OnenoteOperationError class
+* SettingValue class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -23,62 +23,58 @@ namespace Microsoft\Graph\Model;
 * @version   Release: 0.1.0
 * @link      https://graph.microsoft.io/
 */
-class OnenoteOperationError extends Entity
+class SettingValue extends Entity
 {
     /**
-    * Gets the code
-    * The error code.
+    * Gets the name
     *
-    * @return string The code
+    * @return string The name
     */
-    public function getCode()
+    public function getName()
     {
-        if (array_key_exists("code", $this->_propDict)) {
-            return $this->_propDict["code"];
+        if (array_key_exists("name", $this->_propDict)) {
+            return $this->_propDict["name"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the code
-    * The error code.
+    * Sets the name
     *
-    * @param string $val The value of the code
+    * @param string $val The value of the name
     *
-    * @return OnenoteOperationError
+    * @return SettingValue
     */
-    public function setCode($val)
+    public function setName($val)
     {
-        $this->_propDict["code"] = $val;
+        $this->_propDict["name"] = $val;
         return $this;
     }
     /**
-    * Gets the message
-    * The error message.
+    * Gets the value
     *
-    * @return string The message
+    * @return string The value
     */
-    public function getMessage()
+    public function getValue()
     {
-        if (array_key_exists("message", $this->_propDict)) {
-            return $this->_propDict["message"];
+        if (array_key_exists("value", $this->_propDict)) {
+            return $this->_propDict["value"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the message
-    * The error message.
+    * Sets the value
     *
-    * @param string $val The value of the message
+    * @param string $val The value of the value
     *
-    * @return OnenoteOperationError
+    * @return SettingValue
     */
-    public function setMessage($val)
+    public function setValue($val)
     {
-        $this->_propDict["message"] = $val;
+        $this->_propDict["value"] = $val;
         return $this;
     }
 }

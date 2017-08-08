@@ -86,6 +86,7 @@ class Thumbnail extends Entity
     }
     /**
     * Gets the sourceItemId
+    * The unique identifier of the item that provided the thumbnail. This is only available when a folder thumbnail is requested.
     *
     * @return string The sourceItemId
     */
@@ -100,6 +101,7 @@ class Thumbnail extends Entity
 
     /**
     * Sets the sourceItemId
+    * The unique identifier of the item that provided the thumbnail. This is only available when a folder thumbnail is requested.
     *
     * @param string $val The value of the sourceItemId
     *

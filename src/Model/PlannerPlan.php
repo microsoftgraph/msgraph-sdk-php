@@ -28,6 +28,7 @@ class PlannerPlan extends Entity
 {
     /**
     * Gets the createdBy
+    * Read-only. The user that created the Plan
     *
     * @return IdentitySet The createdBy
     */
@@ -46,6 +47,7 @@ class PlannerPlan extends Entity
     
     /**
     * Sets the createdBy
+    * Read-only. The user that created the Plan
     *
     * @param IdentitySet $val The createdBy
     *
@@ -59,6 +61,7 @@ class PlannerPlan extends Entity
     
     /**
     * Gets the createdDateTime
+    * Read-only. Date and time at which the plan is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The createdDateTime
     */
@@ -77,6 +80,7 @@ class PlannerPlan extends Entity
     
     /**
     * Sets the createdDateTime
+    * Read-only. Date and time at which the plan is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -90,6 +94,7 @@ class PlannerPlan extends Entity
     
     /**
     * Gets the owner
+    * ID of the Group that owns the plan. A valid group must exist before this field can be set. Once set, this can only be updated by the owner.
     *
     * @return string The owner
     */
@@ -104,6 +109,7 @@ class PlannerPlan extends Entity
     
     /**
     * Sets the owner
+    * ID of the Group that owns the plan. A valid group must exist before this field can be set. Once set, this can only be updated by the owner.
     *
     * @param string $val The owner
     *
@@ -117,6 +123,7 @@ class PlannerPlan extends Entity
     
     /**
     * Gets the title
+    * Required. Title of the plan.
     *
     * @return string The title
     */
@@ -131,6 +138,7 @@ class PlannerPlan extends Entity
     
     /**
     * Sets the title
+    * Required. Title of the plan.
     *
     * @param string $val The title
     *
@@ -145,6 +153,7 @@ class PlannerPlan extends Entity
 
      /** 
      * Gets the tasks
+    * Read-only. Nullable. Collection of tasks in the plan.
      *
      * @return array The tasks
      */
@@ -159,6 +168,7 @@ class PlannerPlan extends Entity
     
     /** 
     * Sets the tasks
+    * Read-only. Nullable. Collection of tasks in the plan.
     *
     * @param PlannerTask $val The tasks
     *
@@ -173,6 +183,7 @@ class PlannerPlan extends Entity
 
      /** 
      * Gets the buckets
+    * Read-only. Nullable. Collection of buckets in the plan.
      *
      * @return array The buckets
      */
@@ -187,6 +198,7 @@ class PlannerPlan extends Entity
     
     /** 
     * Sets the buckets
+    * Read-only. Nullable. Collection of buckets in the plan.
     *
     * @param PlannerBucket $val The buckets
     *
@@ -200,6 +212,7 @@ class PlannerPlan extends Entity
     
     /**
     * Gets the details
+    * Read-only. Nullable. Additional details about the plan.
     *
     * @return PlannerPlanDetails The details
     */
@@ -218,6 +231,7 @@ class PlannerPlan extends Entity
     
     /**
     * Sets the details
+    * Read-only. Nullable. Additional details about the plan.
     *
     * @param PlannerPlanDetails $val The details
     *

@@ -27,7 +27,7 @@ class SharepointIds extends Entity
 {
     /**
     * Gets the listId
-    * The unique identifier for the item's list in SharePoint.
+    * The unique identifier (guid) for the item's list in SharePoint.
     *
     * @return string The listId
     */
@@ -42,7 +42,7 @@ class SharepointIds extends Entity
 
     /**
     * Sets the listId
-    * The unique identifier for the item's list in SharePoint.
+    * The unique identifier (guid) for the item's list in SharePoint.
     *
     * @param string $val The value of the listId
     *
@@ -83,7 +83,7 @@ class SharepointIds extends Entity
     }
     /**
     * Gets the listItemUniqueId
-    * The unique identifier for the item within OneDrive for Busienss or a SharePoint site.
+    * The unique identifier (guid) for the item within OneDrive for Busienss or a SharePoint site.
     *
     * @return string The listItemUniqueId
     */
@@ -98,7 +98,7 @@ class SharepointIds extends Entity
 
     /**
     * Sets the listItemUniqueId
-    * The unique identifier for the item within OneDrive for Busienss or a SharePoint site.
+    * The unique identifier (guid) for the item within OneDrive for Busienss or a SharePoint site.
     *
     * @param string $val The value of the listItemUniqueId
     *
@@ -111,7 +111,7 @@ class SharepointIds extends Entity
     }
     /**
     * Gets the siteId
-    * The unique identifier for the item's site collection.
+    * The unique identifier (guid) for the item's site collection (SPSite).
     *
     * @return string The siteId
     */
@@ -126,7 +126,7 @@ class SharepointIds extends Entity
 
     /**
     * Sets the siteId
-    * The unique identifier for the item's site collection.
+    * The unique identifier (guid) for the item's site collection (SPSite).
     *
     * @param string $val The value of the siteId
     *
@@ -139,6 +139,7 @@ class SharepointIds extends Entity
     }
     /**
     * Gets the siteUrl
+    * The SharePoint URL for the site that contains the item.
     *
     * @return string The siteUrl
     */
@@ -153,6 +154,7 @@ class SharepointIds extends Entity
 
     /**
     * Sets the siteUrl
+    * The SharePoint URL for the site that contains the item.
     *
     * @param string $val The value of the siteUrl
     *
@@ -165,7 +167,7 @@ class SharepointIds extends Entity
     }
     /**
     * Gets the webId
-    * The unique identifier for the item's site.
+    * The unique identifier (guid) for the item's site (SPWeb).
     *
     * @return string The webId
     */
@@ -180,7 +182,7 @@ class SharepointIds extends Entity
 
     /**
     * Sets the webId
-    * The unique identifier for the item's site.
+    * The unique identifier (guid) for the item's site (SPWeb).
     *
     * @param string $val The value of the webId
     *

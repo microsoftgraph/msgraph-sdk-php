@@ -117,6 +117,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the businessPhones
+    * The telephone numbers for the user. NOTE: Although this is a string collection, only one number can be set for this property.
     *
     * @return string The businessPhones
     */
@@ -131,6 +132,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the businessPhones
+    * The telephone numbers for the user. NOTE: Although this is a string collection, only one number can be set for this property.
     *
     * @param string $val The businessPhones
     *
@@ -173,6 +175,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the companyName
+    * The company name which the user is associated.
     *
     * @return string The companyName
     */
@@ -187,6 +190,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the companyName
+    * The company name which the user is associated.
     *
     * @param string $val The companyName
     *
@@ -1534,6 +1538,7 @@ class User extends DirectoryObject
 
      /** 
      * Gets the extensions
+    * The collection of open extensions defined for the user. Read-only. Nullable.
      *
      * @return array The extensions
      */
@@ -1548,6 +1553,7 @@ class User extends DirectoryObject
     
     /** 
     * Sets the extensions
+    * The collection of open extensions defined for the user. Read-only. Nullable.
     *
     * @param Extension $val The extensions
     *
@@ -1962,6 +1968,7 @@ class User extends DirectoryObject
 
      /** 
      * Gets the drives
+    * A collection of drives available for this user. Read-only.
      *
      * @return array The drives
      */
@@ -1976,6 +1983,7 @@ class User extends DirectoryObject
     
     /** 
     * Sets the drives
+    * A collection of drives available for this user. Read-only.
     *
     * @param Drive $val The drives
     *
@@ -2020,6 +2028,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the onenote
+    * Read-only.
     *
     * @return Onenote The onenote
     */
@@ -2038,6 +2047,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the onenote
+    * Read-only.
     *
     * @param Onenote $val The onenote
     *

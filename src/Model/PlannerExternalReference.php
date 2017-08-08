@@ -27,6 +27,7 @@ class PlannerExternalReference extends Entity
 {
     /**
     * Gets the alias
+    * A name alias to describe the reference.
     *
     * @return string The alias
     */
@@ -41,6 +42,7 @@ class PlannerExternalReference extends Entity
 
     /**
     * Sets the alias
+    * A name alias to describe the reference.
     *
     * @param string $val The value of the alias
     *
@@ -53,6 +55,7 @@ class PlannerExternalReference extends Entity
     }
     /**
     * Gets the type
+    * Used to describe the type of the reference. Types include: PowerPoint, Word, Excel, Other.
     *
     * @return string The type
     */
@@ -67,6 +70,7 @@ class PlannerExternalReference extends Entity
 
     /**
     * Sets the type
+    * Used to describe the type of the reference. Types include: PowerPoint, Word, Excel, Other.
     *
     * @param string $val The value of the type
     *
@@ -79,6 +83,7 @@ class PlannerExternalReference extends Entity
     }
     /**
     * Gets the previewPriority
+    * Used to set the relative priority order in which the reference will be shown as a preview on the task.
     *
     * @return string The previewPriority
     */
@@ -93,6 +98,7 @@ class PlannerExternalReference extends Entity
 
     /**
     * Sets the previewPriority
+    * Used to set the relative priority order in which the reference will be shown as a preview on the task.
     *
     * @param string $val The value of the previewPriority
     *
@@ -106,6 +112,7 @@ class PlannerExternalReference extends Entity
 
     /**
     * Gets the lastModifiedBy
+    * Read-only. User ID by which this is last modified.
     *
     * @return IdentitySet The lastModifiedBy
     */
@@ -124,6 +131,7 @@ class PlannerExternalReference extends Entity
 
     /**
     * Sets the lastModifiedBy
+    * Read-only. User ID by which this is last modified.
     *
     * @param IdentitySet $val The value to assign to the lastModifiedBy
     *
@@ -137,6 +145,7 @@ class PlannerExternalReference extends Entity
 
     /**
     * Gets the lastModifiedDateTime
+    * Read-only. Date and time at which this is last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -155,6 +164,7 @@ class PlannerExternalReference extends Entity
 
     /**
     * Sets the lastModifiedDateTime
+    * Read-only. Date and time at which this is last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The value to assign to the lastModifiedDateTime
     *

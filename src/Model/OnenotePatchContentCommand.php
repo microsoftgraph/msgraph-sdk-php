@@ -28,6 +28,7 @@ class OnenotePatchContentCommand extends Entity
 
     /**
     * Gets the action
+    * The action to perform on the target element. Possible values are: replace, append, delete, insert, or prepend.
     *
     * @return OnenotePatchActionType The action
     */
@@ -46,6 +47,7 @@ class OnenotePatchContentCommand extends Entity
 
     /**
     * Sets the action
+    * The action to perform on the target element. Possible values are: replace, append, delete, insert, or prepend.
     *
     * @param OnenotePatchActionType $val The value to assign to the action
     *
@@ -58,6 +60,7 @@ class OnenotePatchContentCommand extends Entity
     }
     /**
     * Gets the target
+    * The element to update. Must be the #<data-id> or the generated <id> of the element, or the body or title keyword.
     *
     * @return string The target
     */
@@ -72,6 +75,7 @@ class OnenotePatchContentCommand extends Entity
 
     /**
     * Sets the target
+    * The element to update. Must be the #<data-id> or the generated <id> of the element, or the body or title keyword.
     *
     * @param string $val The value of the target
     *
@@ -84,6 +88,7 @@ class OnenotePatchContentCommand extends Entity
     }
     /**
     * Gets the content
+    * A string of well-formed HTML to add to the page, and any image or file binary data. If the content contains binary data, the request must be sent using the multipart/form-data content type with a "Commands" part.
     *
     * @return string The content
     */
@@ -98,6 +103,7 @@ class OnenotePatchContentCommand extends Entity
 
     /**
     * Sets the content
+    * A string of well-formed HTML to add to the page, and any image or file binary data. If the content contains binary data, the request must be sent using the multipart/form-data content type with a "Commands" part.
     *
     * @param string $val The value of the content
     *
@@ -111,6 +117,7 @@ class OnenotePatchContentCommand extends Entity
 
     /**
     * Gets the position
+    * The location to add the supplied content, relative to the target element. Possible values are: after (default) or before.
     *
     * @return OnenotePatchInsertPosition The position
     */
@@ -129,6 +136,7 @@ class OnenotePatchContentCommand extends Entity
 
     /**
     * Sets the position
+    * The location to add the supplied content, relative to the target element. Possible values are: after (default) or before.
     *
     * @param OnenotePatchInsertPosition $val The value to assign to the position
     *
