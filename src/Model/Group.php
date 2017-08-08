@@ -27,6 +27,33 @@ namespace Microsoft\Graph\Model;
 class Group extends DirectoryObject
 {
     /**
+    * Gets the classification
+    *
+    * @return string The classification
+    */
+    public function getClassification()
+    {
+        if (array_key_exists("classification", $this->_propDict)) {
+            return $this->_propDict["classification"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the classification
+    *
+    * @param string $val The classification
+    *
+    * @return Group
+    */
+    public function setClassification($val)
+    {
+        $this->_propDict["classification"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the description
     * An optional description for the group.
     *
@@ -619,7 +646,36 @@ class Group extends DirectoryObject
     
 
      /** 
+     * Gets the settings
+     *
+     * @return array The settings
+     */
+    public function getSettings()
+    {
+        if (array_key_exists("settings", $this->_propDict)) {
+           return $this->_propDict["settings"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the settings
+    *
+    * @param GroupSetting $val The settings
+    *
+    * @return Group
+    */
+    public function setSettings($val)
+    {
+		$this->_propDict["settings"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the extensions
+    * The collection of open extensions defined for the group. Read-only. Nullable.
      *
      * @return array The extensions
      */
@@ -634,6 +690,7 @@ class Group extends DirectoryObject
     
     /** 
     * Sets the extensions
+    * The collection of open extensions defined for the group. Read-only. Nullable.
     *
     * @param Extension $val The extensions
     *
@@ -834,6 +891,7 @@ class Group extends DirectoryObject
 
      /** 
      * Gets the photos
+    * The profile photos owned by the group. Read-only. Nullable.
      *
      * @return array The photos
      */
@@ -848,6 +906,7 @@ class Group extends DirectoryObject
     
     /** 
     * Sets the photos
+    * The profile photos owned by the group. Read-only. Nullable.
     *
     * @param ProfilePhoto $val The photos
     *
@@ -983,6 +1042,7 @@ class Group extends DirectoryObject
 
      /** 
      * Gets the sites
+    * The list of SharePoint sites in this group. Access the default site with /sites/root.
      *
      * @return array The sites
      */
@@ -997,6 +1057,7 @@ class Group extends DirectoryObject
     
     /** 
     * Sets the sites
+    * The list of SharePoint sites in this group. Access the default site with /sites/root.
     *
     * @param Site $val The sites
     *
@@ -1010,6 +1071,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the planner
+    * Entry-point to Planner resource that might exist for a Unified Group.
     *
     * @return PlannerGroup The planner
     */
@@ -1028,6 +1090,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the planner
+    * Entry-point to Planner resource that might exist for a Unified Group.
     *
     * @param PlannerGroup $val The planner
     *
@@ -1041,6 +1104,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the onenote
+    * Read-only.
     *
     * @return Onenote The onenote
     */
@@ -1059,6 +1123,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the onenote
+    * Read-only.
     *
     * @param Onenote $val The onenote
     *

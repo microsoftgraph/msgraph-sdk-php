@@ -27,7 +27,7 @@ class ItemReference extends Entity
 {
     /**
     * Gets the driveId
-    * Unique identifier of the OneDrive instance that contains the item. Read-only.
+    * Unique identifier of the drive instance that contains the item. Read-only.
     *
     * @return string The driveId
     */
@@ -42,7 +42,7 @@ class ItemReference extends Entity
 
     /**
     * Sets the driveId
-    * Unique identifier of the OneDrive instance that contains the item. Read-only.
+    * Unique identifier of the drive instance that contains the item. Read-only.
     *
     * @param string $val The value of the driveId
     *
@@ -83,6 +83,7 @@ class ItemReference extends Entity
     }
     /**
     * Gets the name
+    * The name of the item being referenced. Read-only.
     *
     * @return string The name
     */
@@ -97,6 +98,7 @@ class ItemReference extends Entity
 
     /**
     * Sets the name
+    * The name of the item being referenced. Read-only.
     *
     * @param string $val The value of the name
     *
@@ -137,6 +139,7 @@ class ItemReference extends Entity
     }
     /**
     * Gets the shareId
+    * A unique identifier for a shared resource that can be accessed via the Shares API.
     *
     * @return string The shareId
     */
@@ -151,6 +154,7 @@ class ItemReference extends Entity
 
     /**
     * Sets the shareId
+    * A unique identifier for a shared resource that can be accessed via the Shares API.
     *
     * @param string $val The value of the shareId
     *
@@ -164,6 +168,7 @@ class ItemReference extends Entity
 
     /**
     * Gets the sharepointIds
+    * Returns identifiers useful for SharePoint REST compatibility. Read-only.
     *
     * @return SharepointIds The sharepointIds
     */
@@ -182,6 +187,7 @@ class ItemReference extends Entity
 
     /**
     * Sets the sharepointIds
+    * Returns identifiers useful for SharePoint REST compatibility. Read-only.
     *
     * @param SharepointIds $val The value to assign to the sharepointIds
     *

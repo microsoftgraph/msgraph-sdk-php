@@ -27,35 +27,6 @@ namespace Microsoft\Graph\Model;
 class SharedDriveItem extends BaseItem
 {
     /**
-    * Gets the name
-    * The display name of the shared item.
-    *
-    * @return string The name
-    */
-    public function getName()
-    {
-        if (array_key_exists("name", $this->_propDict)) {
-            return $this->_propDict["name"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the name
-    * The display name of the shared item.
-    *
-    * @param string $val The name
-    *
-    * @return SharedDriveItem
-    */
-    public function setName($val)
-    {
-        $this->_propDict["name"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the owner
     * Information about the owner of the shared item being referenced.
     *
@@ -90,6 +61,7 @@ class SharedDriveItem extends BaseItem
     
     /**
     * Gets the driveItem
+    * A driveItem for the resource that was shared.  This is identical to the root property.
     *
     * @return DriveItem The driveItem
     */
@@ -108,6 +80,7 @@ class SharedDriveItem extends BaseItem
     
     /**
     * Sets the driveItem
+    * A driveItem for the resource that was shared.  This is identical to the root property.
     *
     * @param DriveItem $val The driveItem
     *
@@ -122,6 +95,7 @@ class SharedDriveItem extends BaseItem
 
      /** 
      * Gets the items
+    * A collection of shared driveItem resources. This collection cannot be enumerated, but items can be accessed by their unique ID.
      *
      * @return array The items
      */
@@ -136,6 +110,7 @@ class SharedDriveItem extends BaseItem
     
     /** 
     * Sets the items
+    * A collection of shared driveItem resources. This collection cannot be enumerated, but items can be accessed by their unique ID.
     *
     * @param DriveItem $val The items
     *
@@ -149,6 +124,7 @@ class SharedDriveItem extends BaseItem
     
     /**
     * Gets the root
+    * The top level shared driveItem. If a single file is shared, this item is the file. If a folder is shared, this item will be the folder. You can use the item's facets to determine which case applies.
     *
     * @return DriveItem The root
     */
@@ -167,6 +143,7 @@ class SharedDriveItem extends BaseItem
     
     /**
     * Sets the root
+    * The top level shared driveItem. If a single file is shared, this item is the file. If a folder is shared, this item will be the folder. You can use the item's facets to determine which case applies.
     *
     * @param DriveItem $val The root
     *
@@ -180,6 +157,7 @@ class SharedDriveItem extends BaseItem
     
     /**
     * Gets the site
+    * A site resource that contains the item that was shared.
     *
     * @return Site The site
     */
@@ -198,6 +176,7 @@ class SharedDriveItem extends BaseItem
     
     /**
     * Sets the site
+    * A site resource that contains the item that was shared.
     *
     * @param Site $val The site
     *

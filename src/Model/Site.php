@@ -28,6 +28,7 @@ class Site extends BaseItem
 {
     /**
     * Gets the displayName
+    * The full title for the site. Read-only.
     *
     * @return string The displayName
     */
@@ -42,6 +43,7 @@ class Site extends BaseItem
     
     /**
     * Sets the displayName
+    * The full title for the site. Read-only.
     *
     * @param string $val The displayName
     *
@@ -55,6 +57,7 @@ class Site extends BaseItem
     
     /**
     * Gets the root
+    * If present, indicates that this is the root site in the site collection. Read-only.
     *
     * @return Root The root
     */
@@ -73,6 +76,7 @@ class Site extends BaseItem
     
     /**
     * Sets the root
+    * If present, indicates that this is the root site in the site collection. Read-only.
     *
     * @param Root $val The root
     *
@@ -86,6 +90,7 @@ class Site extends BaseItem
     
     /**
     * Gets the sharepointIds
+    * Returns identifiers useful for SharePoint REST compatibility. Read-only.
     *
     * @return SharepointIds The sharepointIds
     */
@@ -104,6 +109,7 @@ class Site extends BaseItem
     
     /**
     * Sets the sharepointIds
+    * Returns identifiers useful for SharePoint REST compatibility. Read-only.
     *
     * @param SharepointIds $val The sharepointIds
     *
@@ -117,6 +123,7 @@ class Site extends BaseItem
     
     /**
     * Gets the siteCollection
+    * Provides details about the site's site collection. Available only on the root site. Read-only.
     *
     * @return SiteCollection The siteCollection
     */
@@ -135,6 +142,7 @@ class Site extends BaseItem
     
     /**
     * Sets the siteCollection
+    * Provides details about the site's site collection. Available only on the root site. Read-only.
     *
     * @param SiteCollection $val The siteCollection
     *
@@ -148,6 +156,7 @@ class Site extends BaseItem
     
     /**
     * Gets the drive
+    * The default drive (document library) for this site.
     *
     * @return Drive The drive
     */
@@ -166,6 +175,7 @@ class Site extends BaseItem
     
     /**
     * Sets the drive
+    * The default drive (document library) for this site.
     *
     * @param Drive $val The drive
     *
@@ -180,6 +190,7 @@ class Site extends BaseItem
 
      /** 
      * Gets the drives
+    * The collection of drives (document libraries) under this site.
      *
      * @return array The drives
      */
@@ -194,6 +205,7 @@ class Site extends BaseItem
     
     /** 
     * Sets the drives
+    * The collection of drives (document libraries) under this site.
     *
     * @param Drive $val The drives
     *
@@ -208,6 +220,7 @@ class Site extends BaseItem
 
      /** 
      * Gets the sites
+    * The collection of the sub-sites under this site.
      *
      * @return array The sites
      */
@@ -222,6 +235,7 @@ class Site extends BaseItem
     
     /** 
     * Sets the sites
+    * The collection of the sub-sites under this site.
     *
     * @param Site $val The sites
     *
@@ -230,6 +244,37 @@ class Site extends BaseItem
     public function setSites($val)
     {
 		$this->_propDict["sites"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the onenote
+    *
+    * @return Onenote The onenote
+    */
+    public function getOnenote()
+    {
+        if (array_key_exists("onenote", $this->_propDict)) {
+            if (is_a($this->_propDict["onenote"], "Microsoft\Graph\Model\Onenote")) {
+                return $this->_propDict["onenote"];
+            } else {
+                $this->_propDict["onenote"] = new Onenote($this->_propDict["onenote"]);
+                return $this->_propDict["onenote"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the onenote
+    *
+    * @param Onenote $val The onenote
+    *
+    * @return Site
+    */
+    public function setOnenote($val)
+    {
+        $this->_propDict["onenote"] = $val;
         return $this;
     }
     

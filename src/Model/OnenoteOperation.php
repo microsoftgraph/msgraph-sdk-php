@@ -28,6 +28,7 @@ class OnenoteOperation extends Operation
 {
     /**
     * Gets the resourceLocation
+    * The resource URI for the object. For example, the resource URI for a copied page or section.
     *
     * @return string The resourceLocation
     */
@@ -42,6 +43,7 @@ class OnenoteOperation extends Operation
     
     /**
     * Sets the resourceLocation
+    * The resource URI for the object. For example, the resource URI for a copied page or section.
     *
     * @param string $val The resourceLocation
     *
@@ -55,6 +57,7 @@ class OnenoteOperation extends Operation
     
     /**
     * Gets the resourceId
+    * The resource id.
     *
     * @return string The resourceId
     */
@@ -69,6 +72,7 @@ class OnenoteOperation extends Operation
     
     /**
     * Sets the resourceId
+    * The resource id.
     *
     * @param string $val The resourceId
     *
@@ -82,6 +86,7 @@ class OnenoteOperation extends Operation
     
     /**
     * Gets the error
+    * The error returned by the operation.
     *
     * @return OnenoteOperationError The error
     */
@@ -100,6 +105,7 @@ class OnenoteOperation extends Operation
     
     /**
     * Sets the error
+    * The error returned by the operation.
     *
     * @param OnenoteOperationError $val The error
     *
@@ -113,6 +119,7 @@ class OnenoteOperation extends Operation
     
     /**
     * Gets the percentComplete
+    * The operation percent complete if the operation is still in running status
     *
     * @return string The percentComplete
     */
@@ -127,6 +134,7 @@ class OnenoteOperation extends Operation
     
     /**
     * Sets the percentComplete
+    * The operation percent complete if the operation is still in running status
     *
     * @param string $val The percentComplete
     *

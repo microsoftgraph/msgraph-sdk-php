@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* Identity File
+* GroupSettingTemplate File
 * PHP version 7
 *
 * @category  Library
@@ -13,8 +13,9 @@
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Model;
+
 /**
-* Identity class
+* GroupSettingTemplate class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -23,11 +24,10 @@ namespace Microsoft\Graph\Model;
 * @version   Release: 0.1.0
 * @link      https://graph.microsoft.io/
 */
-class Identity extends Entity
+class GroupSettingTemplate extends DirectoryObject
 {
     /**
     * Gets the displayName
-    * The identity's display name. Note that this may not always be available or up to date. For example, if a user changes their display name, the API may show the new value in a future response, but the items associated with the user won't show up as having changed when using delta
     *
     * @return string The displayName
     */
@@ -39,46 +39,73 @@ class Identity extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the displayName
-    * The identity's display name. Note that this may not always be available or up to date. For example, if a user changes their display name, the API may show the new value in a future response, but the items associated with the user won't show up as having changed when using delta
     *
-    * @param string $val The value of the displayName
+    * @param string $val The displayName
     *
-    * @return Identity
+    * @return GroupSettingTemplate
     */
     public function setDisplayName($val)
     {
         $this->_propDict["displayName"] = $val;
         return $this;
     }
+    
     /**
-    * Gets the id
-    * Unique identifier for the identity.
+    * Gets the description
     *
-    * @return string The id
+    * @return string The description
     */
-    public function getId()
+    public function getDescription()
     {
-        if (array_key_exists("id", $this->_propDict)) {
-            return $this->_propDict["id"];
+        if (array_key_exists("description", $this->_propDict)) {
+            return $this->_propDict["description"];
         } else {
             return null;
         }
     }
-
+    
     /**
-    * Sets the id
-    * Unique identifier for the identity.
+    * Sets the description
     *
-    * @param string $val The value of the id
+    * @param string $val The description
     *
-    * @return Identity
+    * @return GroupSettingTemplate
     */
-    public function setId($val)
+    public function setDescription($val)
     {
-        $this->_propDict["id"] = $val;
+        $this->_propDict["description"] = $val;
         return $this;
     }
+    
+
+     /** 
+     * Gets the values
+     *
+     * @return array The values
+     */
+    public function getValues()
+    {
+        if (array_key_exists("values", $this->_propDict)) {
+           return $this->_propDict["values"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the values
+    *
+    * @param SettingTemplateValue $val The values
+    *
+    * @return GroupSettingTemplate
+    */
+    public function setValues($val)
+    {
+		$this->_propDict["values"] = $val;
+        return $this;
+    }
+    
 }

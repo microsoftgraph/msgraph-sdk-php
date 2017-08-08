@@ -28,6 +28,7 @@ class SchemaExtension extends Entity
 {
     /**
     * Gets the description
+    * Description for the schema extension.
     *
     * @return string The description
     */
@@ -42,6 +43,7 @@ class SchemaExtension extends Entity
     
     /**
     * Sets the description
+    * Description for the schema extension.
     *
     * @param string $val The description
     *
@@ -55,6 +57,7 @@ class SchemaExtension extends Entity
     
     /**
     * Gets the targetTypes
+    * Set of Microsoft Graph types (that can support extensions) that the schema extension can be applied to. Select from contact, device, event, group, message, organization, post, or user.
     *
     * @return string The targetTypes
     */
@@ -69,6 +72,7 @@ class SchemaExtension extends Entity
     
     /**
     * Sets the targetTypes
+    * Set of Microsoft Graph types (that can support extensions) that the schema extension can be applied to. Select from contact, device, event, group, message, organization, post, or user.
     *
     * @param string $val The targetTypes
     *
@@ -83,6 +87,7 @@ class SchemaExtension extends Entity
 
      /** 
      * Gets the schemaExtensionProperties
+    * The collection of property names and types that make up the schema extension definition.
      *
      * @return array The schemaExtensionProperties
      */
@@ -97,6 +102,7 @@ class SchemaExtension extends Entity
     
     /** 
     * Sets the schemaExtensionProperties
+    * The collection of property names and types that make up the schema extension definition.
     *
     * @param ExtensionSchemaProperty $val The schemaExtensionProperties
     *
@@ -110,6 +116,7 @@ class SchemaExtension extends Entity
     
     /**
     * Gets the status
+    * The lifecycle state of the schema extension. Possible states are InDevelopment, Available, and Deprecated. Automatically set to InDevelopment on creation. Schema extensions provides more information on the possible state transitions and behaviors.
     *
     * @return string The status
     */
@@ -124,6 +131,7 @@ class SchemaExtension extends Entity
     
     /**
     * Sets the status
+    * The lifecycle state of the schema extension. Possible states are InDevelopment, Available, and Deprecated. Automatically set to InDevelopment on creation. Schema extensions provides more information on the possible state transitions and behaviors.
     *
     * @param string $val The status
     *
@@ -137,6 +145,7 @@ class SchemaExtension extends Entity
     
     /**
     * Gets the owner
+    * The appId of the application that created the schema extension. Read-only.
     *
     * @return string The owner
     */
@@ -151,6 +160,7 @@ class SchemaExtension extends Entity
     
     /**
     * Sets the owner
+    * The appId of the application that created the schema extension. Read-only.
     *
     * @param string $val The owner
     *

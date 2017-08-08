@@ -28,6 +28,7 @@ class PlannerBucket extends Entity
 {
     /**
     * Gets the name
+    * Name of the bucket.
     *
     * @return string The name
     */
@@ -42,6 +43,7 @@ class PlannerBucket extends Entity
     
     /**
     * Sets the name
+    * Name of the bucket.
     *
     * @param string $val The name
     *
@@ -55,6 +57,7 @@ class PlannerBucket extends Entity
     
     /**
     * Gets the planId
+    * Plan ID to which the bucket belongs.
     *
     * @return string The planId
     */
@@ -69,6 +72,7 @@ class PlannerBucket extends Entity
     
     /**
     * Sets the planId
+    * Plan ID to which the bucket belongs.
     *
     * @param string $val The planId
     *
@@ -82,6 +86,7 @@ class PlannerBucket extends Entity
     
     /**
     * Gets the orderHint
+    * Hint used to order items of this type in a list view. The format is defined as outlined here.
     *
     * @return string The orderHint
     */
@@ -96,6 +101,7 @@ class PlannerBucket extends Entity
     
     /**
     * Sets the orderHint
+    * Hint used to order items of this type in a list view. The format is defined as outlined here.
     *
     * @param string $val The orderHint
     *
@@ -110,6 +116,7 @@ class PlannerBucket extends Entity
 
      /** 
      * Gets the tasks
+    * Read-only. Nullable. The collection of tasks in the bucket.
      *
      * @return array The tasks
      */
@@ -124,6 +131,7 @@ class PlannerBucket extends Entity
     
     /** 
     * Sets the tasks
+    * Read-only. Nullable. The collection of tasks in the bucket.
     *
     * @param PlannerTask $val The tasks
     *

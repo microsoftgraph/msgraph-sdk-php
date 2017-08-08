@@ -96,11 +96,15 @@ tests to do not restore state of the account.*
 
 * [Examples](https://github.com/microsoftgraph/msgraph-sdk-php/wiki/Example-calls)
 
-* [Microsoft Graph website](https://graph.microsoft.io)
+* [Microsoft Graph website](https://developer.microsoft.com/en-us/graph/)
 
 ## Issues
 
 View or log issues on the [Issues](https://github.com/microsoftgraph/msgraph-sdk-php/issues) tab in the repo.
+
+## Contribute
+
+Please read our [Contributing](https://github.com/microsoftgraph/msgraph-sdk-php/blob/master/CONTRIBUTING.md) guidelines carefully for advice on how to contribute to this repo.
 
 ## Copyright and license
 

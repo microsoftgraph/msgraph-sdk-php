@@ -61,7 +61,6 @@ class DriveItem extends BaseItem
     
     /**
     * Gets the content
-    * The content stream, if the item represents a file.
     *
     * @return \GuzzleHttp\Psr7\Stream The content
     */
@@ -80,7 +79,6 @@ class DriveItem extends BaseItem
     
     /**
     * Sets the content
-    * The content stream, if the item represents a file.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The content
     *
@@ -420,6 +418,7 @@ class DriveItem extends BaseItem
     
     /**
     * Gets the root
+    * If this property is non-null, it indicates that the driveItem is the top-most driveItem in the drive.
     *
     * @return Root The root
     */
@@ -438,6 +437,7 @@ class DriveItem extends BaseItem
     
     /**
     * Sets the root
+    * If this property is non-null, it indicates that the driveItem is the top-most driveItem in the drive.
     *
     * @param Root $val The root
     *
@@ -517,6 +517,7 @@ class DriveItem extends BaseItem
     
     /**
     * Gets the sharepointIds
+    * Returns identifiers useful for SharePoint REST compatibility. Read-only.
     *
     * @return SharepointIds The sharepointIds
     */
@@ -535,6 +536,7 @@ class DriveItem extends BaseItem
     
     /**
     * Sets the sharepointIds
+    * Returns identifiers useful for SharePoint REST compatibility. Read-only.
     *
     * @param SharepointIds $val The sharepointIds
     *
@@ -643,6 +645,7 @@ class DriveItem extends BaseItem
     
     /**
     * Gets the webDavUrl
+    * WebDAV compatible URL for the item.
     *
     * @return string The webDavUrl
     */
@@ -657,6 +660,7 @@ class DriveItem extends BaseItem
     
     /**
     * Sets the webDavUrl
+    * WebDAV compatible URL for the item.
     *
     * @param string $val The webDavUrl
     *

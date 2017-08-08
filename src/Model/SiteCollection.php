@@ -27,6 +27,7 @@ class SiteCollection extends Entity
 {
     /**
     * Gets the hostname
+    * The hostname for the site collection. Read-only.
     *
     * @return string The hostname
     */
@@ -41,6 +42,7 @@ class SiteCollection extends Entity
 
     /**
     * Sets the hostname
+    * The hostname for the site collection. Read-only.
     *
     * @param string $val The value of the hostname
     *

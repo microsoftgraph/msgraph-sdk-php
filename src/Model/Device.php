@@ -527,6 +527,7 @@ class Device extends DirectoryObject
 
      /** 
      * Gets the extensions
+    * The collection of open extensions defined for the device. Read-only. Nullable.
      *
      * @return array The extensions
      */
@@ -541,6 +542,7 @@ class Device extends DirectoryObject
     
     /** 
     * Sets the extensions
+    * The collection of open extensions defined for the device. Read-only. Nullable.
     *
     * @param Extension $val The extensions
     *

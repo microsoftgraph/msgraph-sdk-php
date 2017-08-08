@@ -27,6 +27,7 @@ class PlannerCategoryDescriptions extends Entity
 {
     /**
     * Gets the category1
+    * The label associated with Category 1
     *
     * @return string The category1
     */
@@ -41,6 +42,7 @@ class PlannerCategoryDescriptions extends Entity
 
     /**
     * Sets the category1
+    * The label associated with Category 1
     *
     * @param string $val The value of the category1
     *
@@ -53,6 +55,7 @@ class PlannerCategoryDescriptions extends Entity
     }
     /**
     * Gets the category2
+    * The label associated with Category 2
     *
     * @return string The category2
     */
@@ -67,6 +70,7 @@ class PlannerCategoryDescriptions extends Entity
 
     /**
     * Sets the category2
+    * The label associated with Category 2
     *
     * @param string $val The value of the category2
     *
@@ -79,6 +83,7 @@ class PlannerCategoryDescriptions extends Entity
     }
     /**
     * Gets the category3
+    * The label associated with Category 3
     *
     * @return string The category3
     */
@@ -93,6 +98,7 @@ class PlannerCategoryDescriptions extends Entity
 
     /**
     * Sets the category3
+    * The label associated with Category 3
     *
     * @param string $val The value of the category3
     *
@@ -105,6 +111,7 @@ class PlannerCategoryDescriptions extends Entity
     }
     /**
     * Gets the category4
+    * The label associated with Category 4
     *
     * @return string The category4
     */
@@ -119,6 +126,7 @@ class PlannerCategoryDescriptions extends Entity
 
     /**
     * Sets the category4
+    * The label associated with Category 4
     *
     * @param string $val The value of the category4
     *
@@ -131,6 +139,7 @@ class PlannerCategoryDescriptions extends Entity
     }
     /**
     * Gets the category5
+    * The label associated with Category 5
     *
     * @return string The category5
     */
@@ -145,6 +154,7 @@ class PlannerCategoryDescriptions extends Entity
 
     /**
     * Sets the category5
+    * The label associated with Category 5
     *
     * @param string $val The value of the category5
     *
@@ -157,6 +167,7 @@ class PlannerCategoryDescriptions extends Entity
     }
     /**
     * Gets the category6
+    * The label associated with Category 6
     *
     * @return string The category6
     */
@@ -171,6 +182,7 @@ class PlannerCategoryDescriptions extends Entity
 
     /**
     * Sets the category6
+    * The label associated with Category 6
     *
     * @param string $val The value of the category6
     *
