@@ -98,6 +98,12 @@ class GraphRequest
     * @var string
     */
     protected $timeout;
+    /**
+    * The proxy port to use. Null to disable
+    *
+    * @var string
+    */
+    protected $proxyPort;
 
     /**
     * Constructs a new Graph Request object
@@ -110,7 +116,7 @@ class GraphRequest
      *
      * @throws GraphException when no access token is provided
     */ 
-    public function __construct($requestType, $endpoint, $accessToken, $baseUrl, $apiVersion)
+    public function __construct($requestType, $endpoint, $accessToken, $baseUrl, $apiVersion, $proxyPort = null)
     {
         $this->requestType = $requestType;
         $this->endpoint = $endpoint;
@@ -124,6 +130,7 @@ class GraphRequest
         $this->apiVersion = $apiVersion;
         $this->timeout = 0;
         $this->headers = $this->_getDefaultHeaders();
+        $this->proxyPort = $proxyPort;
     }
 
     /**
@@ -224,7 +231,7 @@ class GraphRequest
     public function execute($client = null)
     {
         if (is_null($client)) {
-            $client = $this->createGuzzleClient();
+            $client = $this->createGuzzleClient($this->proxyPort);
         }
 
         $result = $client->request(
@@ -265,7 +272,7 @@ class GraphRequest
     public function executeAsync($client = null)
     {
         if (is_null($client)) {
-            $client = $this->createGuzzleClient();
+            $client = $this->createGuzzleClient($this->proxyPort);
         }
 
         $promise = $client->requestAsync(
@@ -420,17 +427,24 @@ class GraphRequest
     * client is not reused. This allows the user
     * to set and change headers on a per-request
     * basis
+    * 
+    * @param string $proxyPort The port to forward
+    * requests through. If null, a proxy is not used
     *
     * @return \GuzzleHttp\Client The new client
     */
-    protected function createGuzzleClient()
-    {
-        $client = new Client(
-            [
-                'base_uri' => $this->baseUrl,
-                'headers' => $this->headers
-            ]
-        );
+    protected function createGuzzleClient($proxyPort = null)
+    { 
+        $clientSettings = [
+            'base_uri' => $this->baseUrl,
+            'headers' => $this->headers
+        ];
+        if ($proxyPort != null) {
+            $clientSettings['verify'] = false;
+            $clientSettings['proxy'] = $proxyPort;
+        } 
+        $client = new Client($clientSettings);
+        
         return $client;
     }
 }

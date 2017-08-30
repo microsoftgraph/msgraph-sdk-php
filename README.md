@@ -76,6 +76,12 @@ class UsageExample
 
 ## Develop
 
+### Debug
+You can use the library with a proxy such as Fiddler to debug requests and responses as they come across the wire. Set the proxy port on the Graph object like this:
+```php
+$graph->setProxyPort("localhost:8000");
+```
+
 ### Run Tests
 
 Run 
