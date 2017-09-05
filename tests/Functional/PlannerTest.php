@@ -2,14 +2,13 @@
 use PHPUnit\Framework\TestCase;
 use Microsoft\Graph\Test\GraphTestBase;
 use Microsoft\Graph\Model;
-use Microsoft\Graph\Test\TestConstants;
 
 class PlannerTest extends TestCase
 {
     private $_client;
 
     //This test currently does not clean up after itself
-    private $planId = TestConstants::PLAN_ID;
+    private $planId;
     private $planBucket;
     private $planTask;
 
@@ -18,6 +17,8 @@ class PlannerTest extends TestCase
         $graphTestBase = new GraphTestBase();
         $this->_client = $graphTestBase->graphClient;
         $this->_client->setApiVersion("stagingbeta");
+
+        $planId = PLAN_ID;
 
         $bucket = new Model\PlannerBucket();
         $bucket->setName("Test Bucket");
