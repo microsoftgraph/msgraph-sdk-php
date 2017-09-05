@@ -16,7 +16,7 @@ install:
 
 script:
   - |
-    if [ "${TRAVIS_PULL_REQUEST}" == "false" && "${TRAVIS_BRANCH}" == "master" ]; then
+    if [ $TRAVIS_PULL_REQUEST == "false" ] && [ $TRAVIS_BRANCH == "master" ]; then
       vendor/bin/phpunit
     else
       vendor/bin/phpunit --exclude-group functional
