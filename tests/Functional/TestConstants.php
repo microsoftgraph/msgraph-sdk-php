@@ -17,4 +17,4 @@ define("PASSWORD", getenv("test_password"));
 
 // Planner plans can currently not be deleted; you will need
  // to create your own plan and specify the ID here
-define("PLAN_ID", getenv("test_plan_id"));
+define("PLAN_ID", getenv("plan_id"));
