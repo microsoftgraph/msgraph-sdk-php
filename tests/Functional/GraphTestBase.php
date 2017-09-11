@@ -2,6 +2,7 @@
 namespace Microsoft\Graph\Test;
 
 use Microsoft\Graph\Graph;
+include_once("TestConstants.php");
 
 class GraphTestBase
 {
@@ -17,9 +18,9 @@ class GraphTestBase
 
     public function __construct()
     {
-        $this->clientId = TestConstants::CLIENT_ID;
-        $this->username = TestConstants::USERNAME;
-        $this->password = TestConstants::PASSWORD;
+        $this->clientId = CLIENT_ID;
+        $this->username = USERNAME;
+        $this->password = PASSWORD;
 
         $this->getAuthenticatedClient();
     }
