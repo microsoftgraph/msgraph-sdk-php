@@ -52,6 +52,13 @@ class Graph
     * @var string
     */
     private $_baseUrl;
+    /**
+    * The port to use for proxy requests
+    * Null disables port forwarding
+    *
+    * @var string
+    */
+    private $_proxyPort;
 
     /**
     * Creates a new Graph object, which is used to call the Graph API
@@ -104,6 +111,21 @@ class Graph
     }
 
     /**
+    * Sets the proxy port. This allows you 
+    * to use tools such as Fiddler to view
+    * requests and responses made with Guzzle
+    *
+    * @param string port The port number to use
+    *
+    * @return Graph object
+    */
+    public function setProxyPort($port)
+    {
+        $this->_proxyPort = $port;
+        return $this;
+    }
+
+    /**
     * Creates a new request object with the given Graph information
     *
     * @param string $requestType The HTTP method to use, e.g. "GET" or "POST"
@@ -119,7 +141,8 @@ class Graph
             $endpoint, 
             $this->_accessToken, 
             $this->_baseUrl, 
-            $this->_apiVersion
+            $this->_apiVersion,
+            $this->_proxyPort
         );
     }
 
@@ -140,7 +163,8 @@ class Graph
             $endpoint, 
             $this->_accessToken, 
             $this->_baseUrl, 
-            $this->_apiVersion
+            $this->_apiVersion,
+            $this->_proxyPort
         );
     }
 }

@@ -76,6 +76,17 @@ class UsageExample
 
 ## Develop
 
+### Debug
+You can use the library with a proxy such as [Fiddler](http://www.telerik.com/fiddler) or [Charles Proxy](https://www.charlesproxy.com/) to debug requests and responses as they come across the wire. Set the proxy port on the Graph object like this:
+```php
+$graph->setProxyPort("localhost:8888");
+```
+Then, open your proxy client to view the requests & responses sent using the library. 
+
+![Screenshot of Fiddler /me/sendmail request and response](https://github.com/microsoftgraph/msgraph-sdk-php/blob/master/docs/images/Fiddler.PNG)
+
+This is especially helpful when the library does not return the results you expected to determine whether there are bugs in the API or this SDK. Therefore, you may be asked to provide this information when attempting to triage an issue you file.
+
 ### Run Tests
 
 Run 
