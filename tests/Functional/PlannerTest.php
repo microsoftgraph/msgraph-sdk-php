@@ -16,9 +16,8 @@ class PlannerTest extends TestCase
     {
         $graphTestBase = new GraphTestBase();
         $this->_client = $graphTestBase->graphClient;
-        $this->_client->setApiVersion("stagingbeta");
 
-        $planId = PLAN_ID;
+        $this->planId = PLAN_ID;
 
         $bucket = new Model\PlannerBucket();
         $bucket->setName("Test Bucket");
