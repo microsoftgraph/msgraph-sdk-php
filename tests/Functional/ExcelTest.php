@@ -14,7 +14,7 @@ class ExcelTest extends TestCase
         $graphTestBase = new GraphTestBase();
         $this->_client = $graphTestBase->graphClient;
 
-        $this->_fileId = $this->createTestFile('_excelTestResource.xlsx');
+        $this->_fileId = $this->createTestFile('_excelTestResource'.rand().'.xlsx');
         $this->uploadTestFileContent($this->_fileId);
     }
 
