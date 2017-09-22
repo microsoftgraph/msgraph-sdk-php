@@ -37,6 +37,7 @@ class OpenTypeTest extends TestCase
     */
     public function testSchemaExtensions()
     {
+        $this->markTestSkipped();
         $extension = new Model\SchemaExtension();
         $extension->setId("schematest");
         $extension->setDescription("PHP Graph SDK test");

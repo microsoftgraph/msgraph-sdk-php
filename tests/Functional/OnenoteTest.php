@@ -110,8 +110,8 @@ class OnenoteTest extends TestCase
         $end = "\r\n\r\n" .
                 "--" . $boundary . "--";
 
-        $imageStream = GuzzleHttp\Psr7\stream_for(fopen(".\\tests\\Functional\\Resources\\hamilton.jpg", "r"));
-        $docStream = GuzzleHttp\Psr7\stream_for(fopen(".\\tests\\Functional\\Resources\\document.pdf", "r"));
+        $imageStream = GuzzleHttp\Psr7\stream_for(fopen("./tests/Functional/Resources/hamilton.jpg", "r"));
+        $docStream = GuzzleHttp\Psr7\stream_for(fopen("./tests/Functional/Resources/document.pdf", "r"));
 
         $request = GuzzleHttp\Psr7\stream_for($html . $imageStream . $doc . $docStream . $end);
 
