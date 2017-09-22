@@ -53,4 +53,35 @@ class Folder extends Entity
         $this->_propDict["childCount"] = $val;
         return $this;
     }
+
+    /**
+    * Gets the view
+    *
+    * @return FolderView The view
+    */
+    public function getView()
+    {
+        if (array_key_exists("view", $this->_propDict)) {
+            if (is_a($this->_propDict["view"], "Microsoft\Graph\Model\FolderView")) {
+                return $this->_propDict["view"];
+            } else {
+                $this->_propDict["view"] = new FolderView($this->_propDict["view"]);
+                return $this->_propDict["view"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the view
+    *
+    * @param FolderView $val The value to assign to the view
+    *
+    * @return Folder The Folder
+    */
+    public function setView($val)
+    {
+        $this->_propDict["view"] = $val;
+         return $this;
+    }
 }

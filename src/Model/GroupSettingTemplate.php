@@ -28,6 +28,7 @@ class GroupSettingTemplate extends DirectoryObject
 {
     /**
     * Gets the displayName
+    * Display name of the template.
     *
     * @return string The displayName
     */
@@ -42,6 +43,7 @@ class GroupSettingTemplate extends DirectoryObject
     
     /**
     * Sets the displayName
+    * Display name of the template.
     *
     * @param string $val The displayName
     *
@@ -55,6 +57,7 @@ class GroupSettingTemplate extends DirectoryObject
     
     /**
     * Gets the description
+    * Description of the template.
     *
     * @return string The description
     */
@@ -69,6 +72,7 @@ class GroupSettingTemplate extends DirectoryObject
     
     /**
     * Sets the description
+    * Description of the template.
     *
     * @param string $val The description
     *
@@ -83,6 +87,7 @@ class GroupSettingTemplate extends DirectoryObject
 
      /** 
      * Gets the values
+    * Collection of settingTemplateValues that list the set of available settings, defaults and types that make up this template.
      *
      * @return array The values
      */
@@ -97,6 +102,7 @@ class GroupSettingTemplate extends DirectoryObject
     
     /** 
     * Sets the values
+    * Collection of settingTemplateValues that list the set of available settings, defaults and types that make up this template.
     *
     * @param SettingTemplateValue $val The values
     *

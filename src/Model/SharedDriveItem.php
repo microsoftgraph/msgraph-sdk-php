@@ -123,6 +123,68 @@ class SharedDriveItem extends BaseItem
     }
     
     /**
+    * Gets the list
+    *
+    * @return GraphList The list
+    */
+    public function getList()
+    {
+        if (array_key_exists("list", $this->_propDict)) {
+            if (is_a($this->_propDict["list"], "Microsoft\Graph\Model\List")) {
+                return $this->_propDict["list"];
+            } else {
+                $this->_propDict["list"] = new GraphList($this->_propDict["list"]);
+                return $this->_propDict["list"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the list
+    *
+    * @param GraphList $val The list
+    *
+    * @return SharedDriveItem
+    */
+    public function setList($val)
+    {
+        $this->_propDict["list"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the listItem
+    *
+    * @return ListItem The listItem
+    */
+    public function getListItem()
+    {
+        if (array_key_exists("listItem", $this->_propDict)) {
+            if (is_a($this->_propDict["listItem"], "Microsoft\Graph\Model\ListItem")) {
+                return $this->_propDict["listItem"];
+            } else {
+                $this->_propDict["listItem"] = new ListItem($this->_propDict["listItem"]);
+                return $this->_propDict["listItem"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the listItem
+    *
+    * @param ListItem $val The listItem
+    *
+    * @return SharedDriveItem
+    */
+    public function setListItem($val)
+    {
+        $this->_propDict["listItem"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the root
     * The top level shared driveItem. If a single file is shared, this item is the file. If a folder is shared, this item will be the folder. You can use the item's facets to determine which case applies.
     *

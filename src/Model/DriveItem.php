@@ -702,6 +702,37 @@ class DriveItem extends BaseItem
         return $this;
     }
     
+    /**
+    * Gets the listItem
+    *
+    * @return ListItem The listItem
+    */
+    public function getListItem()
+    {
+        if (array_key_exists("listItem", $this->_propDict)) {
+            if (is_a($this->_propDict["listItem"], "Microsoft\Graph\Model\ListItem")) {
+                return $this->_propDict["listItem"];
+            } else {
+                $this->_propDict["listItem"] = new ListItem($this->_propDict["listItem"]);
+                return $this->_propDict["listItem"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the listItem
+    *
+    * @param ListItem $val The listItem
+    *
+    * @return DriveItem
+    */
+    public function setListItem($val)
+    {
+        $this->_propDict["listItem"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the permissions

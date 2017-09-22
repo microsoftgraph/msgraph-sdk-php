@@ -154,6 +154,62 @@ class Site extends BaseItem
         return $this;
     }
     
+
+     /** 
+     * Gets the columns
+     *
+     * @return array The columns
+     */
+    public function getColumns()
+    {
+        if (array_key_exists("columns", $this->_propDict)) {
+           return $this->_propDict["columns"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the columns
+    *
+    * @param ColumnDefinition $val The columns
+    *
+    * @return Site
+    */
+    public function setColumns($val)
+    {
+		$this->_propDict["columns"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the contentTypes
+     *
+     * @return array The contentTypes
+     */
+    public function getContentTypes()
+    {
+        if (array_key_exists("contentTypes", $this->_propDict)) {
+           return $this->_propDict["contentTypes"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the contentTypes
+    *
+    * @param ContentType $val The contentTypes
+    *
+    * @return Site
+    */
+    public function setContentTypes($val)
+    {
+		$this->_propDict["contentTypes"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the drive
     * The default drive (document library) for this site.
@@ -219,6 +275,64 @@ class Site extends BaseItem
     
 
      /** 
+     * Gets the items
+    * Used to address any item contained in this site. This collection cannot be enumerated.
+     *
+     * @return array The items
+     */
+    public function getItems()
+    {
+        if (array_key_exists("items", $this->_propDict)) {
+           return $this->_propDict["items"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the items
+    * Used to address any item contained in this site. This collection cannot be enumerated.
+    *
+    * @param BaseItem $val The items
+    *
+    * @return Site
+    */
+    public function setItems($val)
+    {
+		$this->_propDict["items"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the lists
+     *
+     * @return array The lists
+     */
+    public function getLists()
+    {
+        if (array_key_exists("lists", $this->_propDict)) {
+           return $this->_propDict["lists"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the lists
+    *
+    * @param GraphList $val The lists
+    *
+    * @return Site
+    */
+    public function setLists($val)
+    {
+		$this->_propDict["lists"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the sites
     * The collection of the sub-sites under this site.
      *
@@ -249,6 +363,7 @@ class Site extends BaseItem
     
     /**
     * Gets the onenote
+    * Calls the OneNote service for notebook related operations.
     *
     * @return Onenote The onenote
     */
@@ -267,6 +382,7 @@ class Site extends BaseItem
     
     /**
     * Sets the onenote
+    * Calls the OneNote service for notebook related operations.
     *
     * @param Onenote $val The onenote
     *

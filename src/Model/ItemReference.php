@@ -54,6 +54,32 @@ class ItemReference extends Entity
         return $this;
     }
     /**
+    * Gets the driveType
+    *
+    * @return string The driveType
+    */
+    public function getDriveType()
+    {
+        if (array_key_exists("driveType", $this->_propDict)) {
+            return $this->_propDict["driveType"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the driveType
+    *
+    * @param string $val The value of the driveType
+    *
+    * @return ItemReference
+    */
+    public function setDriveType($val)
+    {
+        $this->_propDict["driveType"] = $val;
+        return $this;
+    }
+    /**
     * Gets the id
     * Unique identifier of the item in the drive. Read-only.
     *

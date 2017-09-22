@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* SharePoint File
+* ContentTypeInfo File
 * PHP version 7
 *
 * @category  Library
@@ -13,9 +13,8 @@
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Model;
-
 /**
-* SharePoint class
+* ContentTypeInfo class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,6 +23,32 @@ namespace Microsoft\Graph\Model;
 * @version   Release: 0.1.0
 * @link      https://graph.microsoft.io/
 */
-class SharePoint extends Entity
+class ContentTypeInfo extends Entity
 {
+    /**
+    * Gets the id
+    *
+    * @return string The id
+    */
+    public function getId()
+    {
+        if (array_key_exists("id", $this->_propDict)) {
+            return $this->_propDict["id"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the id
+    *
+    * @param string $val The value of the id
+    *
+    * @return ContentTypeInfo
+    */
+    public function setId($val)
+    {
+        $this->_propDict["id"] = $val;
+        return $this;
+    }
 }

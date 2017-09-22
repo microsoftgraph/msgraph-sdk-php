@@ -152,6 +152,37 @@ class Drive extends BaseItem
         return $this;
     }
     
+    /**
+    * Gets the system
+    *
+    * @return SystemFacet The system
+    */
+    public function getSystem()
+    {
+        if (array_key_exists("system", $this->_propDict)) {
+            if (is_a($this->_propDict["system"], "Microsoft\Graph\Model\SystemFacet")) {
+                return $this->_propDict["system"];
+            } else {
+                $this->_propDict["system"] = new SystemFacet($this->_propDict["system"]);
+                return $this->_propDict["system"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the system
+    *
+    * @param SystemFacet $val The system
+    *
+    * @return Drive
+    */
+    public function setSystem($val)
+    {
+        $this->_propDict["system"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the items
@@ -179,6 +210,37 @@ class Drive extends BaseItem
     public function setItems($val)
     {
 		$this->_propDict["items"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the list
+    *
+    * @return GraphList The list
+    */
+    public function getList()
+    {
+        if (array_key_exists("list", $this->_propDict)) {
+            if (is_a($this->_propDict["list"], "Microsoft\Graph\Model\List")) {
+                return $this->_propDict["list"];
+            } else {
+                $this->_propDict["list"] = new GraphList($this->_propDict["list"]);
+                return $this->_propDict["list"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the list
+    *
+    * @param GraphList $val The list
+    *
+    * @return Drive
+    */
+    public function setList($val)
+    {
+        $this->_propDict["list"] = $val;
         return $this;
     }
     

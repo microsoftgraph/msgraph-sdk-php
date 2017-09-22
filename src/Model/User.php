@@ -1780,6 +1780,34 @@ class User extends DirectoryObject
     
 
      /** 
+     * Gets the people
+     *
+     * @return array The people
+     */
+    public function getPeople()
+    {
+        if (array_key_exists("people", $this->_propDict)) {
+           return $this->_propDict["people"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the people
+    *
+    * @param Person $val The people
+    *
+    * @return User
+    */
+    public function setPeople($val)
+    {
+		$this->_propDict["people"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the contacts
     * The user's contacts. Read-only. Nullable.
      *
