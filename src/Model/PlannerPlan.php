@@ -28,7 +28,7 @@ class PlannerPlan extends Entity
 {
     /**
     * Gets the createdBy
-    * Read-only. The user that created the Plan
+    * Read-only. The user who created the plan.
     *
     * @return IdentitySet The createdBy
     */
@@ -47,7 +47,7 @@ class PlannerPlan extends Entity
     
     /**
     * Sets the createdBy
-    * Read-only. The user that created the Plan
+    * Read-only. The user who created the plan.
     *
     * @param IdentitySet $val The createdBy
     *

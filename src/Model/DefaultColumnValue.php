@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* SettingValue File
+* DefaultColumnValue File
 * PHP version 7
 *
 * @category  Library
@@ -14,7 +14,7 @@
 */
 namespace Microsoft\Graph\Model;
 /**
-* SettingValue class
+* DefaultColumnValue class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -23,39 +23,36 @@ namespace Microsoft\Graph\Model;
 * @version   Release: 0.1.0
 * @link      https://graph.microsoft.io/
 */
-class SettingValue extends Entity
+class DefaultColumnValue extends Entity
 {
     /**
-    * Gets the name
-    * Name of the setting (as defined by the groupSettingTemplate).
+    * Gets the formula
     *
-    * @return string The name
+    * @return string The formula
     */
-    public function getName()
+    public function getFormula()
     {
-        if (array_key_exists("name", $this->_propDict)) {
-            return $this->_propDict["name"];
+        if (array_key_exists("formula", $this->_propDict)) {
+            return $this->_propDict["formula"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the name
-    * Name of the setting (as defined by the groupSettingTemplate).
+    * Sets the formula
     *
-    * @param string $val The value of the name
+    * @param string $val The value of the formula
     *
-    * @return SettingValue
+    * @return DefaultColumnValue
     */
-    public function setName($val)
+    public function setFormula($val)
     {
-        $this->_propDict["name"] = $val;
+        $this->_propDict["formula"] = $val;
         return $this;
     }
     /**
     * Gets the value
-    * Value of the setting.
     *
     * @return string The value
     */
@@ -70,11 +67,10 @@ class SettingValue extends Entity
 
     /**
     * Sets the value
-    * Value of the setting.
     *
     * @param string $val The value of the value
     *
-    * @return SettingValue
+    * @return DefaultColumnValue
     */
     public function setValue($val)
     {

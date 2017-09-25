@@ -647,6 +647,7 @@ class Group extends DirectoryObject
 
      /** 
      * Gets the settings
+    * Read-only. Nullable.
      *
      * @return array The settings
      */
@@ -661,6 +662,7 @@ class Group extends DirectoryObject
     
     /** 
     * Sets the settings
+    * Read-only. Nullable.
     *
     * @param GroupSetting $val The settings
     *

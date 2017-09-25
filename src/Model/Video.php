@@ -26,6 +26,110 @@ namespace Microsoft\Graph\Model;
 class Video extends Entity
 {
     /**
+    * Gets the audioBitsPerSample
+    *
+    * @return int The audioBitsPerSample
+    */
+    public function getAudioBitsPerSample()
+    {
+        if (array_key_exists("audioBitsPerSample", $this->_propDict)) {
+            return $this->_propDict["audioBitsPerSample"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the audioBitsPerSample
+    *
+    * @param int $val The value of the audioBitsPerSample
+    *
+    * @return Video
+    */
+    public function setAudioBitsPerSample($val)
+    {
+        $this->_propDict["audioBitsPerSample"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the audioChannels
+    *
+    * @return int The audioChannels
+    */
+    public function getAudioChannels()
+    {
+        if (array_key_exists("audioChannels", $this->_propDict)) {
+            return $this->_propDict["audioChannels"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the audioChannels
+    *
+    * @param int $val The value of the audioChannels
+    *
+    * @return Video
+    */
+    public function setAudioChannels($val)
+    {
+        $this->_propDict["audioChannels"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the audioFormat
+    *
+    * @return string The audioFormat
+    */
+    public function getAudioFormat()
+    {
+        if (array_key_exists("audioFormat", $this->_propDict)) {
+            return $this->_propDict["audioFormat"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the audioFormat
+    *
+    * @param string $val The value of the audioFormat
+    *
+    * @return Video
+    */
+    public function setAudioFormat($val)
+    {
+        $this->_propDict["audioFormat"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the audioSamplesPerSecond
+    *
+    * @return int The audioSamplesPerSecond
+    */
+    public function getAudioSamplesPerSecond()
+    {
+        if (array_key_exists("audioSamplesPerSecond", $this->_propDict)) {
+            return $this->_propDict["audioSamplesPerSecond"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the audioSamplesPerSecond
+    *
+    * @param int $val The value of the audioSamplesPerSecond
+    *
+    * @return Video
+    */
+    public function setAudioSamplesPerSecond($val)
+    {
+        $this->_propDict["audioSamplesPerSecond"] = $val;
+        return $this;
+    }
+    /**
     * Gets the bitrate
     * Bit rate of the video in bits per second.
     *
@@ -79,6 +183,58 @@ class Video extends Entity
     public function setDuration($val)
     {
         $this->_propDict["duration"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the fourCC
+    *
+    * @return string The fourCC
+    */
+    public function getFourCC()
+    {
+        if (array_key_exists("fourCC", $this->_propDict)) {
+            return $this->_propDict["fourCC"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the fourCC
+    *
+    * @param string $val The value of the fourCC
+    *
+    * @return Video
+    */
+    public function setFourCC($val)
+    {
+        $this->_propDict["fourCC"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the frameRate
+    *
+    * @return float The frameRate
+    */
+    public function getFrameRate()
+    {
+        if (array_key_exists("frameRate", $this->_propDict)) {
+            return $this->_propDict["frameRate"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the frameRate
+    *
+    * @param float $val The value of the frameRate
+    *
+    * @return Video
+    */
+    public function setFrameRate($val)
+    {
+        $this->_propDict["frameRate"] = $val;
         return $this;
     }
     /**
