@@ -99,10 +99,28 @@ class OnedriveTest extends TestCase
     */
     public function testSearchFile()
     {
-    	$driveItems = $this->_client->createRequest("GET", "/me/drive/search(q='employee services')")
+        $rareName = "zyxwvutsrqponmlkjihgfedcba";
+        $rareSearchItem = new Model\DriveItem();
+        $rareSearchItem->setName($rareName);
+
+        $folder = new Model\Folder();
+        $folder->setChildCount(0);
+        
+        $rareSearchItem->setFolder($folder);
+        $rareSearchItem = $this->_client->createRequest("POST", "/me/drive/root/children")
+                                ->attachBody($rareSearchItem)
+                                ->setReturnType(Model\DriveItem::class)
+                                ->execute();
+
+    	$driveItems = $this->_client->createRequest("GET", "/me/drive/search(q='" . $rareName . "')")
     						        ->setReturnType(Model\DriveItem::class)
     						        ->execute();
-    	$this->assertEquals(5, count($driveItems));
+        try {
+    	   $this->assertEquals(1, count($driveItems));
+        } finally {
+            $this->_client->createRequest("DELETE", "/me/drive/items/" . $rareSearchItem->getId())
+                          ->execute();
+        }
     }
 
     /**

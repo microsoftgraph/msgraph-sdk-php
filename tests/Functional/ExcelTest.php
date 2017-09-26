@@ -52,11 +52,11 @@ class ExcelTest extends TestCase
 
     private function uploadTestFileContent($fileId)
     {
-        $stream = GuzzleHttp\Psr7\stream_for(fopen(".\\tests\\Functional\\Resources\\excelTestResource.xlsx", "r"));
+        $stream = GuzzleHttp\Psr7\stream_for(fopen("./tests/Functional/Resources/excelTestResource.xlsx", "r"));
     	$excelDriveItem = $this->_client->createRequest("PUT", "/me/drive/items/" . $this->_fileId . "/content")
     							        ->addHeaders(array(
     							 	         "Content-Type" => "application/octet-stream", 
-    							 	         "Content-Length" => filesize(".\\tests\\Functional\\Resources\\excelTestResource.xlsx")
+    							 	         "Content-Length" => filesize("./tests/Functional/Resources/excelTestResource.xlsx")
     							        ))
     							        ->attachBody($stream)
     							        ->execute();
