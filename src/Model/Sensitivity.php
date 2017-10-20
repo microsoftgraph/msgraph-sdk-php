@@ -33,6 +33,6 @@ class Sensitivity extends Enum
     */
     const NORMAL = "normal";
     const PERSONAL = "personal";
-    const GRAPHPRIVATE = 2;
+    const GRAPHPRIVATE = "private";
     const CONFIDENTIAL = "confidential";
 }
