@@ -15,9 +15,4 @@ install:
     - composer update --prefer-source --no-interaction --no-progress --no-suggest $COMPOSER_FLAGS
 
 script:
-  - |
-    if [ $TRAVIS_PULL_REQUEST == "false" ] && [ $TRAVIS_BRANCH == "master" ]; then
-      vendor/bin/phpunit
-    else
-      vendor/bin/phpunit --exclude-group functional
-    fi
+  - vendor/bin/phpunit --exclude-group functional
