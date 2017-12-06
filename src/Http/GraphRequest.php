@@ -231,17 +231,17 @@ class GraphRequest
     public function execute($client = null)
     {
         if (is_null($client)) {
-            $client = $this->createGuzzleClient($this->proxyPort);
+            $client = new Client();
         }
 
         $result = $client->request(
             $this->requestType, 
             $this->_getRequestUrl(), 
-            [
+            array_merge($this->getGuzzleOptions($this->proxyPort), [
                 'body' => $this->requestBody,
                 'stream' =>  $this->returnsStream,
                 'timeout' => $this->timeout
-            ]
+            ])
         );
 
         // Wrap response in GraphResponse layer
@@ -272,17 +272,17 @@ class GraphRequest
     public function executeAsync($client = null)
     {
         if (is_null($client)) {
-            $client = $this->createGuzzleClient($this->proxyPort);
+            $client = new Client();
         }
 
         $promise = $client->requestAsync(
             $this->requestType,
             $this->_getRequestUrl(),
-            [
+            array_merge($this->getGuzzleOptions($this->proxyPort), [
                 'body' => $this->requestBody,
                 'stream' => $this->returnsStream,
                 'timeout' => $this->timeout
-            ]
+            ])
         )->then(
             // On success, return the result/response
             function ($result) {
@@ -322,8 +322,9 @@ class GraphRequest
     public function download($path, $client = null)
     {
         if (is_null($client)) {
-            $client = $this->createGuzzleClient();
+            $client = new Client();
         }
+
         try {
             if (file_exists($path) && is_writeable($path)) {
                 $file = fopen($path, 'w');
@@ -331,10 +332,10 @@ class GraphRequest
                 $client->request(
                     $this->requestType, 
                     $this->_getRequestUrl(), 
-                    [
+                    array_merge($this->getGuzzleOptions($this->proxyPort), [
                         'body' => $this->requestBody,
                         'sink' => $file
-                    ]
+                    ])
                 );
                 fclose($file);
             } else {
@@ -359,9 +360,6 @@ class GraphRequest
     */
     public function upload($path, $client = null)
     {
-        if (is_null($client)) {
-            $client = $this->createGuzzleClient();
-        }
         try {
             if (file_exists($path) && is_readable($path)) {
                 $file = fopen($path, 'r');
@@ -384,7 +382,6 @@ class GraphRequest
     private function _getDefaultHeaders()
     {
         $headers = [
-            'Host' => $this->baseUrl,
             'Content-Type' => 'application/json',
             'SdkVersion' => 'Graph-php-' . GraphConstants::SDK_VERSION,
             'Authorization' => 'Bearer ' . $this->accessToken
@@ -403,7 +400,7 @@ class GraphRequest
         if (stripos($this->endpoint, "http") !== FALSE) {
             return $this->endpoint;
         }
-        return $this->apiVersion . $this->endpoint;
+        return $this->baseUrl . $this->apiVersion . $this->endpoint;
     }
 
     /**
@@ -431,20 +428,18 @@ class GraphRequest
     * @param string $proxyPort The port to forward
     * requests through. If null, a proxy is not used
     *
-    * @return \GuzzleHttp\Client The new client
+    * @return array
     */
-    protected function createGuzzleClient($proxyPort = null)
+    protected function getGuzzleOptions($proxyPort = null)
     { 
         $clientSettings = [
-            'base_uri' => $this->baseUrl,
             'headers' => $this->headers
         ];
         if ($proxyPort != null) {
             $clientSettings['verify'] = false;
             $clientSettings['proxy'] = $proxyPort;
-        } 
-        $client = new Client($clientSettings);
+        }
         
-        return $client;
+        return $clientSettings;
     }
 }
