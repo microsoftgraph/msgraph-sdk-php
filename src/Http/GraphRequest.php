@@ -336,7 +336,9 @@ class GraphRequest
                         'sink' => $file
                     ]
                 );
-                fclose($file);
+                if(is_resource($file)){
+                    fclose($file);
+                }
             } else {
                 throw new GraphException(GraphConstants::INVALID_FILE);
             }
