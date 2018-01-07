@@ -147,6 +147,14 @@ class GraphResponse
         if (array_key_exists('value', $result)) {
             $objArray = array();
             $values = $result['value'];
+            
+            if (array_key_exists('@odata.context', $result)) {
+                $objArray['@odata.context'] = $result['@odata.context'];
+            }
+
+            if (array_key_exists('@odata.nextLink', $result)) {
+                $objArray['@odata.nextLink'] = $result['@odata.nextLink'];
+            }
 
             //Check that this is an object array instead of a value called "value"
             if ($values && is_array($values)) {
