@@ -325,22 +325,18 @@ class GraphRequest
             $client = $this->createGuzzleClient();
         }
         try {
-            if (file_exists($path) && is_writeable($path)) {
-                $file = fopen($path, 'w');
+            $file = fopen($path, 'w');
 
-                $client->request(
-                    $this->requestType, 
-                    $this->_getRequestUrl(), 
-                    [
-                        'body' => $this->requestBody,
-                        'sink' => $file
-                    ]
-                );
-                if(is_resource($file)){
-                    fclose($file);
-                }
-            } else {
-                throw new GraphException(GraphConstants::INVALID_FILE);
+            $client->request(
+                $this->requestType, 
+                $this->_getRequestUrl(), 
+                [
+                    'body' => $this->requestBody,
+                    'sink' => $file
+                ]
+            );
+            if(is_resource($file)){
+                fclose($file);
             }
             
         } catch(GraphException $e) {

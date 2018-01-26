@@ -56,6 +56,33 @@ class OnedriveTest extends TestCase
     /**
     * @group functional
     */
+    public function testDownloadFile()
+    {
+        $driveItems = $this->_client->createRequest("GET", "/me/drive/root/children")
+                                    ->setReturnType(Model\DriveItem::class)
+                                    ->execute();
+        foreach ($driveItems as $item)
+        {
+            //Find the first non-folder resource to download
+            if ($item->getFile())
+            {
+                $itemId = $item->getId();
+                $itemName = $item->getName();
+                $itemName = str_replace(" ", "_", $itemName);
+
+                $driveItemContent = $this->_client->createRequest("GET", "/me/drive/items/$itemId/content")
+                                                  ->download("D:\\".$itemName);
+                $this->assertTrue(file_exists("D:\\".$itemName));
+                unlink("D:\\".$itemName);
+                break;
+            }
+        }
+    }
+
+
+    /**
+    * @group functional
+    */
     public function testGetSetPermissions()
     {
     	$driveItems = $this->_client->createRequest("GET", "/me/drive/root/children")
