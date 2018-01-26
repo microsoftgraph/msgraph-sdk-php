@@ -321,11 +321,17 @@ class GraphRequest
     */
     public function download($path, $client = null)
     {
+        //Add custom error handler to catch file I/O warnings
+        set_error_handler(function() {});
+
         if (is_null($client)) {
             $client = $this->createGuzzleClient();
         }
         try {
             $file = fopen($path, 'w');
+            if (!$file) {
+                throw new GraphException(GraphConstants::INVALID_FILE);
+            }
 
             $client->request(
                 $this->requestType, 
@@ -342,6 +348,8 @@ class GraphRequest
         } catch(GraphException $e) {
             throw new GraphException(GraphConstants::INVALID_FILE);
         }
+        //Restore default error handler
+        restore_error_handler();
         return null;
     }
 
