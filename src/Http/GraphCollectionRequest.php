@@ -60,6 +60,12 @@ class GraphCollectionRequest extends GraphRequest
     * @var string
     */
     protected $originalEndpoint;
+    /**
+     * The return type that the user specified
+     *
+     * @var object
+     */
+    protected $originalReturnType;
 
     /**
     * Constructs a new GraphCollectionRequest object
