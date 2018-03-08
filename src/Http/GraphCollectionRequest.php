@@ -76,15 +76,17 @@ class GraphCollectionRequest extends GraphRequest
     * @param string $accessToken A valid access token
     * @param string $baseUrl     The base URL of the request
     * @param string $apiVersion  The version of the API to call
+    * @param string $proxyPort   The url where to proxy through
     */
-    public function __construct($requestType, $endpoint, $accessToken, $baseUrl, $apiVersion)
+    public function __construct($requestType, $endpoint, $accessToken, $baseUrl, $apiVersion, $proxyPort = null)
     {
         parent::__construct(
-            $requestType, 
-            $endpoint, 
-            $accessToken, 
-            $baseUrl, 
-            $apiVersion
+            $requestType,
+            $endpoint,
+            $accessToken,
+            $baseUrl,
+            $apiVersion,
+            $proxyPort
         );
         $this->end = false;
     }
@@ -102,7 +104,8 @@ class GraphCollectionRequest extends GraphRequest
             $this->endpoint . $this->getConcatenator() . $query, 
             $this->accessToken, 
             $this->baseUrl, 
-            $this->apiVersion
+            $this->apiVersion,
+            $this->proxyPort
         );
         $result = $request->execute()->getBody();
 
