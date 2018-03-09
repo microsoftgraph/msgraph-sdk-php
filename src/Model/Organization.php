@@ -85,6 +85,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the city
+    * City name of the address for the organization
     *
     * @return string The city
     */
@@ -99,6 +100,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the city
+    * City name of the address for the organization
     *
     * @param string $val The city
     *
@@ -112,6 +114,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the country
+    * Country/region name of the address for the organization
     *
     * @return string The country
     */
@@ -126,6 +129,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the country
+    * Country/region name of the address for the organization
     *
     * @param string $val The country
     *
@@ -139,6 +143,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the countryLetterCode
+    * Country/region abbreviation for the organization
     *
     * @return string The countryLetterCode
     */
@@ -153,6 +158,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the countryLetterCode
+    * Country/region abbreviation for the organization
     *
     * @param string $val The countryLetterCode
     *
@@ -282,6 +288,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the postalCode
+    * Postal code of the address for the organization
     *
     * @return string The postalCode
     */
@@ -296,6 +303,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the postalCode
+    * Postal code of the address for the organization
     *
     * @param string $val The postalCode
     *
@@ -309,6 +317,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the preferredLanguage
+    * The preferred language for the organization. Should follow ISO 639-1 Code; for example "en".
     *
     * @return string The preferredLanguage
     */
@@ -323,6 +332,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the preferredLanguage
+    * The preferred language for the organization. Should follow ISO 639-1 Code; for example "en".
     *
     * @param string $val The preferredLanguage
     *
@@ -420,6 +430,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the state
+    * State name of the address for the organization
     *
     * @return string The state
     */
@@ -434,6 +445,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the state
+    * State name of the address for the organization
     *
     * @param string $val The state
     *
@@ -447,6 +459,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the street
+    * Street name of the address for organization
     *
     * @return string The street
     */
@@ -461,6 +474,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the street
+    * Street name of the address for organization
     *
     * @param string $val The street
     *
@@ -528,6 +542,39 @@ class Organization extends DirectoryObject
     public function setVerifiedDomains($val)
     {
 		$this->_propDict["verifiedDomains"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the mobileDeviceManagementAuthority
+    * Mobile device management authority. Possible values are: unknown, intune, sccm, office365.
+    *
+    * @return MdmAuthority The mobileDeviceManagementAuthority
+    */
+    public function getMobileDeviceManagementAuthority()
+    {
+        if (array_key_exists("mobileDeviceManagementAuthority", $this->_propDict)) {
+            if (is_a($this->_propDict["mobileDeviceManagementAuthority"], "Microsoft\Graph\Model\MdmAuthority")) {
+                return $this->_propDict["mobileDeviceManagementAuthority"];
+            } else {
+                $this->_propDict["mobileDeviceManagementAuthority"] = new MdmAuthority($this->_propDict["mobileDeviceManagementAuthority"]);
+                return $this->_propDict["mobileDeviceManagementAuthority"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the mobileDeviceManagementAuthority
+    * Mobile device management authority. Possible values are: unknown, intune, sccm, office365.
+    *
+    * @param MdmAuthority $val The mobileDeviceManagementAuthority
+    *
+    * @return Organization
+    */
+    public function setMobileDeviceManagementAuthority($val)
+    {
+        $this->_propDict["mobileDeviceManagementAuthority"] = $val;
         return $this;
     }
     

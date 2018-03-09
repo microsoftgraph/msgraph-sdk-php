@@ -28,6 +28,7 @@ class GraphList extends BaseItem
 {
     /**
     * Gets the displayName
+    * The displayable title of the list.
     *
     * @return string The displayName
     */
@@ -42,6 +43,7 @@ class GraphList extends BaseItem
     
     /**
     * Sets the displayName
+    * The displayable title of the list.
     *
     * @param string $val The displayName
     *
@@ -55,6 +57,7 @@ class GraphList extends BaseItem
     
     /**
     * Gets the list
+    * Provides additional details about the list.
     *
     * @return ListInfo The list
     */
@@ -73,6 +76,7 @@ class GraphList extends BaseItem
     
     /**
     * Sets the list
+    * Provides additional details about the list.
     *
     * @param ListInfo $val The list
     *
@@ -117,6 +121,7 @@ class GraphList extends BaseItem
     
     /**
     * Gets the system
+    * If present, indicates that this is a system-managed list. Read-only.
     *
     * @return SystemFacet The system
     */
@@ -135,6 +140,7 @@ class GraphList extends BaseItem
     
     /**
     * Sets the system
+    * If present, indicates that this is a system-managed list. Read-only.
     *
     * @param SystemFacet $val The system
     *
@@ -204,6 +210,7 @@ class GraphList extends BaseItem
     
     /**
     * Gets the drive
+    * Only present on document libraries. Allows access to the list as a [drive][] resource with [driveItems][driveItem].
     *
     * @return Drive The drive
     */
@@ -222,6 +229,7 @@ class GraphList extends BaseItem
     
     /**
     * Sets the drive
+    * Only present on document libraries. Allows access to the list as a [drive][] resource with [driveItems][driveItem].
     *
     * @param Drive $val The drive
     *
@@ -236,6 +244,7 @@ class GraphList extends BaseItem
 
      /** 
      * Gets the items
+    * All items contained in the list.
      *
      * @return array The items
      */
@@ -250,6 +259,7 @@ class GraphList extends BaseItem
     
     /** 
     * Sets the items
+    * All items contained in the list.
     *
     * @param ListItem $val The items
     *

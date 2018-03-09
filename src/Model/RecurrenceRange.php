@@ -28,6 +28,7 @@ class RecurrenceRange extends Entity
 
     /**
     * Gets the type
+    * The recurrence range. Possible values are: endDate, noEnd, numbered. Required.
     *
     * @return RecurrenceRangeType The type
     */
@@ -46,6 +47,7 @@ class RecurrenceRange extends Entity
 
     /**
     * Sets the type
+    * The recurrence range. Possible values are: endDate, noEnd, numbered. Required.
     *
     * @param RecurrenceRangeType $val The value to assign to the type
     *
@@ -59,6 +61,7 @@ class RecurrenceRange extends Entity
 
     /**
     * Gets the startDate
+    * The date to start applying the recurrence pattern. The first occurrence of the meeting may be this date or later, depending on the recurrence pattern of the event. Must be the same value as the start property of the recurring event. Required.
     *
     * @return \DateTime The startDate
     */
@@ -77,6 +80,7 @@ class RecurrenceRange extends Entity
 
     /**
     * Sets the startDate
+    * The date to start applying the recurrence pattern. The first occurrence of the meeting may be this date or later, depending on the recurrence pattern of the event. Must be the same value as the start property of the recurring event. Required.
     *
     * @param \DateTime $val The value to assign to the startDate
     *
@@ -90,6 +94,7 @@ class RecurrenceRange extends Entity
 
     /**
     * Gets the endDate
+    * The date to stop applying the recurrence pattern. Depending on the recurrence pattern of the event, the last occurrence of the meeting may not be this date. Required if type is endDate.
     *
     * @return \DateTime The endDate
     */
@@ -108,6 +113,7 @@ class RecurrenceRange extends Entity
 
     /**
     * Sets the endDate
+    * The date to stop applying the recurrence pattern. Depending on the recurrence pattern of the event, the last occurrence of the meeting may not be this date. Required if type is endDate.
     *
     * @param \DateTime $val The value to assign to the endDate
     *
@@ -120,6 +126,7 @@ class RecurrenceRange extends Entity
     }
     /**
     * Gets the recurrenceTimeZone
+    * Time zone for the startDate and endDate properties. Optional. If not specified, the time zone of the event is used.
     *
     * @return string The recurrenceTimeZone
     */
@@ -134,6 +141,7 @@ class RecurrenceRange extends Entity
 
     /**
     * Sets the recurrenceTimeZone
+    * Time zone for the startDate and endDate properties. Optional. If not specified, the time zone of the event is used.
     *
     * @param string $val The value of the recurrenceTimeZone
     *
@@ -146,6 +154,7 @@ class RecurrenceRange extends Entity
     }
     /**
     * Gets the numberOfOccurrences
+    * The number of times to repeat the event. Required and must be positive if type is numbered.
     *
     * @return int The numberOfOccurrences
     */
@@ -160,6 +169,7 @@ class RecurrenceRange extends Entity
 
     /**
     * Sets the numberOfOccurrences
+    * The number of times to repeat the event. Required and must be positive if type is numbered.
     *
     * @param int $val The value of the numberOfOccurrences
     *

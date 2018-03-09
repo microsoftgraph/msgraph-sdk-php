@@ -326,7 +326,7 @@ class Event extends OutlookItem
     
     /**
     * Gets the importance
-    * The importance of the event: Low = 0, Normal = 1, High = 2. Possible values are: Low, Normal, High.
+    * The importance of the event. Possible values are: Low, Normal, High.
     *
     * @return Importance The importance
     */
@@ -345,7 +345,7 @@ class Event extends OutlookItem
     
     /**
     * Sets the importance
-    * The importance of the event: Low = 0, Normal = 1, High = 2. Possible values are: Low, Normal, High.
+    * The importance of the event. Possible values are: Low, Normal, High.
     *
     * @param Importance $val The importance
     *
@@ -702,7 +702,7 @@ class Event extends OutlookItem
     
     /**
     * Gets the showAs
-    * The status to show: Free = 0, Tentative = 1, Busy = 2, Oof = 3, WorkingElsewhere = 4, Unknown = -1. Possible values are: Free, Tentative, Busy, Oof, WorkingElsewhere, Unknown.
+    * The status to show. Possible values are: Free, Tentative, Busy, Oof, WorkingElsewhere, Unknown.
     *
     * @return FreeBusyStatus The showAs
     */
@@ -721,7 +721,7 @@ class Event extends OutlookItem
     
     /**
     * Sets the showAs
-    * The status to show: Free = 0, Tentative = 1, Busy = 2, Oof = 3, WorkingElsewhere = 4, Unknown = -1. Possible values are: Free, Tentative, Busy, Oof, WorkingElsewhere, Unknown.
+    * The status to show. Possible values are: Free, Tentative, Busy, Oof, WorkingElsewhere, Unknown.
     *
     * @param FreeBusyStatus $val The showAs
     *
@@ -735,7 +735,7 @@ class Event extends OutlookItem
     
     /**
     * Gets the type
-    * The event type: SingleInstance = 0, Occurrence = 1, Exception = 2, SeriesMaster = 3. Possible values are: SingleInstance, Occurrence, Exception, SeriesMaster.
+    * The event type. Possible values are: SingleInstance, Occurrence, Exception, SeriesMaster. Read-only.
     *
     * @return EventType The type
     */
@@ -754,7 +754,7 @@ class Event extends OutlookItem
     
     /**
     * Sets the type
-    * The event type: SingleInstance = 0, Occurrence = 1, Exception = 2, SeriesMaster = 3. Possible values are: SingleInstance, Occurrence, Exception, SeriesMaster.
+    * The event type. Possible values are: SingleInstance, Occurrence, Exception, SeriesMaster. Read-only.
     *
     * @param EventType $val The type
     *

@@ -27,6 +27,7 @@ class PersonOrGroupColumn extends Entity
 {
     /**
     * Gets the allowMultipleSelection
+    * Indicates whether multiple values can be selected from the source.
     *
     * @return bool The allowMultipleSelection
     */
@@ -41,6 +42,7 @@ class PersonOrGroupColumn extends Entity
 
     /**
     * Sets the allowMultipleSelection
+    * Indicates whether multiple values can be selected from the source.
     *
     * @param bool $val The value of the allowMultipleSelection
     *
@@ -53,6 +55,7 @@ class PersonOrGroupColumn extends Entity
     }
     /**
     * Gets the displayAs
+    * How to display the information about the person or group chosen. See below.
     *
     * @return string The displayAs
     */
@@ -67,6 +70,7 @@ class PersonOrGroupColumn extends Entity
 
     /**
     * Sets the displayAs
+    * How to display the information about the person or group chosen. See below.
     *
     * @param string $val The value of the displayAs
     *
@@ -79,6 +83,7 @@ class PersonOrGroupColumn extends Entity
     }
     /**
     * Gets the chooseFromType
+    * Whether to allow selection of people only, or people and groups. Must be one of peopleAndGroups or peopleOnly.
     *
     * @return string The chooseFromType
     */
@@ -93,6 +98,7 @@ class PersonOrGroupColumn extends Entity
 
     /**
     * Sets the chooseFromType
+    * Whether to allow selection of people only, or people and groups. Must be one of peopleAndGroups or peopleOnly.
     *
     * @param string $val The value of the chooseFromType
     *
