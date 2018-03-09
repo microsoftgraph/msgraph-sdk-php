@@ -113,8 +113,8 @@ class GraphRequest
     * @param string $accessToken A valid access token to validate the Graph call
     * @param string $baseUrl     The base URL to call
     * @param string $apiVersion  The API version to use
-     *
-     * @throws GraphException when no access token is provided
+    * @param string $proxyPort   The url where to proxy through
+    * @throws GraphException when no access token is provided
     */ 
     public function __construct($requestType, $endpoint, $accessToken, $baseUrl, $apiVersion, $proxyPort = null)
     {
