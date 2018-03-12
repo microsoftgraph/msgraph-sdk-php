@@ -1,6 +1,6 @@
 <?php
 use PHPUnit\Framework\TestCase;
-use Microsoft\Graph\Model;
+use Microsoft\Graph\Beta\Model;
 use Microsoft\Graph\Core\Enum;
 
 class ModelTest extends TestCase
@@ -15,13 +15,13 @@ class ModelTest extends TestCase
         $this->enums = array();
         $this->complexTypes = array();
 
-        $dir = new DirectoryIterator('src/Model');
+        $dir = new DirectoryIterator('src/Beta/Model');
         foreach ($dir as $fileInfo)
         {
             $filename = $fileInfo->getFileName();
             $classname = explode(".", $filename)[0];
             if ($classname != null) {
-                $class = "Microsoft\\Graph\\Model\\" . explode(".", $fileInfo->getFileName())[0];
+                $class = "Microsoft\\Graph\\Beta\\Model\\" . explode(".", $fileInfo->getFileName())[0];
                 switch(get_parent_class($class)) {
                     case Model\Entity::class:
                         $this->entities[] = $class;

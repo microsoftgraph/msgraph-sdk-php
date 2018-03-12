@@ -4,7 +4,7 @@ use Microsoft\Graph\Graph;
 use Microsoft\Graph\Http\GraphRequest;
 use Microsoft\Graph\Http\GraphResponse;
 use Microsoft\Graph\Exception\GraphException;
-use Microsoft\Graph\Model;
+use Microsoft\Graph\Beta\Model;
 
 class GraphResponseTest extends TestCase
 {

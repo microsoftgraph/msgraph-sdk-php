@@ -1,0 +1,2057 @@
+<?php
+/**
+* Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
+* 
+* Windows10EndpointProtectionConfiguration File
+* PHP version 7
+*
+* @category  Library
+* @package   Microsoft.Graph
+* @copyright 2016 Microsoft Corporation
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   GIT: 0.1.0
+* @link      https://graph.microsoft.io/
+*/
+namespace Microsoft\Graph\Beta\Model;
+
+/**
+* Windows10EndpointProtectionConfiguration class
+*
+* @category  Model
+* @package   Microsoft.Graph
+* @copyright 2016 Microsoft Corporation
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   Release: 0.1.0
+* @link      https://graph.microsoft.io/
+*/
+class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
+{
+    /**
+    * Gets the localSecurityOptionsBlockMicrosoftAccounts
+    *
+    * @return bool The localSecurityOptionsBlockMicrosoftAccounts
+    */
+    public function getLocalSecurityOptionsBlockMicrosoftAccounts()
+    {
+        if (array_key_exists("localSecurityOptionsBlockMicrosoftAccounts", $this->_propDict)) {
+            return $this->_propDict["localSecurityOptionsBlockMicrosoftAccounts"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the localSecurityOptionsBlockMicrosoftAccounts
+    *
+    * @param bool $val The localSecurityOptionsBlockMicrosoftAccounts
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setLocalSecurityOptionsBlockMicrosoftAccounts($val)
+    {
+        $this->_propDict["localSecurityOptionsBlockMicrosoftAccounts"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the localSecurityOptionsEnableAdministratorAccount
+    *
+    * @return bool The localSecurityOptionsEnableAdministratorAccount
+    */
+    public function getLocalSecurityOptionsEnableAdministratorAccount()
+    {
+        if (array_key_exists("localSecurityOptionsEnableAdministratorAccount", $this->_propDict)) {
+            return $this->_propDict["localSecurityOptionsEnableAdministratorAccount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the localSecurityOptionsEnableAdministratorAccount
+    *
+    * @param bool $val The localSecurityOptionsEnableAdministratorAccount
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setLocalSecurityOptionsEnableAdministratorAccount($val)
+    {
+        $this->_propDict["localSecurityOptionsEnableAdministratorAccount"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the defenderSecurityCenterDisableAppBrowserUI
+    *
+    * @return bool The defenderSecurityCenterDisableAppBrowserUI
+    */
+    public function getDefenderSecurityCenterDisableAppBrowserUI()
+    {
+        if (array_key_exists("defenderSecurityCenterDisableAppBrowserUI", $this->_propDict)) {
+            return $this->_propDict["defenderSecurityCenterDisableAppBrowserUI"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the defenderSecurityCenterDisableAppBrowserUI
+    *
+    * @param bool $val The defenderSecurityCenterDisableAppBrowserUI
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setDefenderSecurityCenterDisableAppBrowserUI($val)
+    {
+        $this->_propDict["defenderSecurityCenterDisableAppBrowserUI"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the defenderSecurityCenterDisableFamilyUI
+    *
+    * @return bool The defenderSecurityCenterDisableFamilyUI
+    */
+    public function getDefenderSecurityCenterDisableFamilyUI()
+    {
+        if (array_key_exists("defenderSecurityCenterDisableFamilyUI", $this->_propDict)) {
+            return $this->_propDict["defenderSecurityCenterDisableFamilyUI"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the defenderSecurityCenterDisableFamilyUI
+    *
+    * @param bool $val The defenderSecurityCenterDisableFamilyUI
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setDefenderSecurityCenterDisableFamilyUI($val)
+    {
+        $this->_propDict["defenderSecurityCenterDisableFamilyUI"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the defenderSecurityCenterDisableHealthUI
+    *
+    * @return bool The defenderSecurityCenterDisableHealthUI
+    */
+    public function getDefenderSecurityCenterDisableHealthUI()
+    {
+        if (array_key_exists("defenderSecurityCenterDisableHealthUI", $this->_propDict)) {
+            return $this->_propDict["defenderSecurityCenterDisableHealthUI"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the defenderSecurityCenterDisableHealthUI
+    *
+    * @param bool $val The defenderSecurityCenterDisableHealthUI
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setDefenderSecurityCenterDisableHealthUI($val)
+    {
+        $this->_propDict["defenderSecurityCenterDisableHealthUI"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the defenderSecurityCenterDisableNetworkUI
+    *
+    * @return bool The defenderSecurityCenterDisableNetworkUI
+    */
+    public function getDefenderSecurityCenterDisableNetworkUI()
+    {
+        if (array_key_exists("defenderSecurityCenterDisableNetworkUI", $this->_propDict)) {
+            return $this->_propDict["defenderSecurityCenterDisableNetworkUI"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the defenderSecurityCenterDisableNetworkUI
+    *
+    * @param bool $val The defenderSecurityCenterDisableNetworkUI
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setDefenderSecurityCenterDisableNetworkUI($val)
+    {
+        $this->_propDict["defenderSecurityCenterDisableNetworkUI"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the defenderSecurityCenterDisableVirusUI
+    *
+    * @return bool The defenderSecurityCenterDisableVirusUI
+    */
+    public function getDefenderSecurityCenterDisableVirusUI()
+    {
+        if (array_key_exists("defenderSecurityCenterDisableVirusUI", $this->_propDict)) {
+            return $this->_propDict["defenderSecurityCenterDisableVirusUI"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the defenderSecurityCenterDisableVirusUI
+    *
+    * @param bool $val The defenderSecurityCenterDisableVirusUI
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setDefenderSecurityCenterDisableVirusUI($val)
+    {
+        $this->_propDict["defenderSecurityCenterDisableVirusUI"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the defenderSecurityCenterOrganizationDisplayName
+    *
+    * @return string The defenderSecurityCenterOrganizationDisplayName
+    */
+    public function getDefenderSecurityCenterOrganizationDisplayName()
+    {
+        if (array_key_exists("defenderSecurityCenterOrganizationDisplayName", $this->_propDict)) {
+            return $this->_propDict["defenderSecurityCenterOrganizationDisplayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the defenderSecurityCenterOrganizationDisplayName
+    *
+    * @param string $val The defenderSecurityCenterOrganizationDisplayName
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setDefenderSecurityCenterOrganizationDisplayName($val)
+    {
+        $this->_propDict["defenderSecurityCenterOrganizationDisplayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the defenderSecurityCenterHelpEmail
+    *
+    * @return string The defenderSecurityCenterHelpEmail
+    */
+    public function getDefenderSecurityCenterHelpEmail()
+    {
+        if (array_key_exists("defenderSecurityCenterHelpEmail", $this->_propDict)) {
+            return $this->_propDict["defenderSecurityCenterHelpEmail"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the defenderSecurityCenterHelpEmail
+    *
+    * @param string $val The defenderSecurityCenterHelpEmail
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setDefenderSecurityCenterHelpEmail($val)
+    {
+        $this->_propDict["defenderSecurityCenterHelpEmail"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the defenderSecurityCenterHelpPhone
+    *
+    * @return string The defenderSecurityCenterHelpPhone
+    */
+    public function getDefenderSecurityCenterHelpPhone()
+    {
+        if (array_key_exists("defenderSecurityCenterHelpPhone", $this->_propDict)) {
+            return $this->_propDict["defenderSecurityCenterHelpPhone"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the defenderSecurityCenterHelpPhone
+    *
+    * @param string $val The defenderSecurityCenterHelpPhone
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setDefenderSecurityCenterHelpPhone($val)
+    {
+        $this->_propDict["defenderSecurityCenterHelpPhone"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the defenderSecurityCenterHelpURL
+    *
+    * @return string The defenderSecurityCenterHelpURL
+    */
+    public function getDefenderSecurityCenterHelpURL()
+    {
+        if (array_key_exists("defenderSecurityCenterHelpURL", $this->_propDict)) {
+            return $this->_propDict["defenderSecurityCenterHelpURL"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the defenderSecurityCenterHelpURL
+    *
+    * @param string $val The defenderSecurityCenterHelpURL
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setDefenderSecurityCenterHelpURL($val)
+    {
+        $this->_propDict["defenderSecurityCenterHelpURL"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the defenderSecurityCenterNotificationsFromApp
+    *
+    * @return DefenderSecurityCenterNotificationsFromAppType The defenderSecurityCenterNotificationsFromApp
+    */
+    public function getDefenderSecurityCenterNotificationsFromApp()
+    {
+        if (array_key_exists("defenderSecurityCenterNotificationsFromApp", $this->_propDict)) {
+            if (is_a($this->_propDict["defenderSecurityCenterNotificationsFromApp"], "Microsoft\Graph\Model\DefenderSecurityCenterNotificationsFromAppType")) {
+                return $this->_propDict["defenderSecurityCenterNotificationsFromApp"];
+            } else {
+                $this->_propDict["defenderSecurityCenterNotificationsFromApp"] = new DefenderSecurityCenterNotificationsFromAppType($this->_propDict["defenderSecurityCenterNotificationsFromApp"]);
+                return $this->_propDict["defenderSecurityCenterNotificationsFromApp"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the defenderSecurityCenterNotificationsFromApp
+    *
+    * @param DefenderSecurityCenterNotificationsFromAppType $val The defenderSecurityCenterNotificationsFromApp
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setDefenderSecurityCenterNotificationsFromApp($val)
+    {
+        $this->_propDict["defenderSecurityCenterNotificationsFromApp"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the defenderSecurityCenterITContactDisplay
+    *
+    * @return DefenderSecurityCenterITContactDisplayType The defenderSecurityCenterITContactDisplay
+    */
+    public function getDefenderSecurityCenterITContactDisplay()
+    {
+        if (array_key_exists("defenderSecurityCenterITContactDisplay", $this->_propDict)) {
+            if (is_a($this->_propDict["defenderSecurityCenterITContactDisplay"], "Microsoft\Graph\Model\DefenderSecurityCenterITContactDisplayType")) {
+                return $this->_propDict["defenderSecurityCenterITContactDisplay"];
+            } else {
+                $this->_propDict["defenderSecurityCenterITContactDisplay"] = new DefenderSecurityCenterITContactDisplayType($this->_propDict["defenderSecurityCenterITContactDisplay"]);
+                return $this->_propDict["defenderSecurityCenterITContactDisplay"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the defenderSecurityCenterITContactDisplay
+    *
+    * @param DefenderSecurityCenterITContactDisplayType $val The defenderSecurityCenterITContactDisplay
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setDefenderSecurityCenterITContactDisplay($val)
+    {
+        $this->_propDict["defenderSecurityCenterITContactDisplay"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the firewallBlockStatefulFTP
+    * Blocks stateful FTP connections to the device
+    *
+    * @return bool The firewallBlockStatefulFTP
+    */
+    public function getFirewallBlockStatefulFTP()
+    {
+        if (array_key_exists("firewallBlockStatefulFTP", $this->_propDict)) {
+            return $this->_propDict["firewallBlockStatefulFTP"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the firewallBlockStatefulFTP
+    * Blocks stateful FTP connections to the device
+    *
+    * @param bool $val The firewallBlockStatefulFTP
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setFirewallBlockStatefulFTP($val)
+    {
+        $this->_propDict["firewallBlockStatefulFTP"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the firewallIdleTimeoutForSecurityAssociationInSeconds
+    * Configures the idle timeout for security associations, in seconds, from 300 to 3600 inclusive. This is the period after which security associations will expire and be deleted. Valid values 300 to 3600
+    *
+    * @return int The firewallIdleTimeoutForSecurityAssociationInSeconds
+    */
+    public function getFirewallIdleTimeoutForSecurityAssociationInSeconds()
+    {
+        if (array_key_exists("firewallIdleTimeoutForSecurityAssociationInSeconds", $this->_propDict)) {
+            return $this->_propDict["firewallIdleTimeoutForSecurityAssociationInSeconds"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the firewallIdleTimeoutForSecurityAssociationInSeconds
+    * Configures the idle timeout for security associations, in seconds, from 300 to 3600 inclusive. This is the period after which security associations will expire and be deleted. Valid values 300 to 3600
+    *
+    * @param int $val The firewallIdleTimeoutForSecurityAssociationInSeconds
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setFirewallIdleTimeoutForSecurityAssociationInSeconds($val)
+    {
+        $this->_propDict["firewallIdleTimeoutForSecurityAssociationInSeconds"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the firewallPreSharedKeyEncodingMethod
+    * Select the preshared key encoding to be used Possible values are: deviceDefault, none, utF8.
+    *
+    * @return FirewallPreSharedKeyEncodingMethodType The firewallPreSharedKeyEncodingMethod
+    */
+    public function getFirewallPreSharedKeyEncodingMethod()
+    {
+        if (array_key_exists("firewallPreSharedKeyEncodingMethod", $this->_propDict)) {
+            if (is_a($this->_propDict["firewallPreSharedKeyEncodingMethod"], "Microsoft\Graph\Model\FirewallPreSharedKeyEncodingMethodType")) {
+                return $this->_propDict["firewallPreSharedKeyEncodingMethod"];
+            } else {
+                $this->_propDict["firewallPreSharedKeyEncodingMethod"] = new FirewallPreSharedKeyEncodingMethodType($this->_propDict["firewallPreSharedKeyEncodingMethod"]);
+                return $this->_propDict["firewallPreSharedKeyEncodingMethod"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the firewallPreSharedKeyEncodingMethod
+    * Select the preshared key encoding to be used Possible values are: deviceDefault, none, utF8.
+    *
+    * @param FirewallPreSharedKeyEncodingMethodType $val The firewallPreSharedKeyEncodingMethod
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setFirewallPreSharedKeyEncodingMethod($val)
+    {
+        $this->_propDict["firewallPreSharedKeyEncodingMethod"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the firewallIPSecExemptionsAllowNeighborDiscovery
+    * Configures IPSec exemptions to allow neighbor discovery IPv6 ICMP type-codes
+    *
+    * @return bool The firewallIPSecExemptionsAllowNeighborDiscovery
+    */
+    public function getFirewallIPSecExemptionsAllowNeighborDiscovery()
+    {
+        if (array_key_exists("firewallIPSecExemptionsAllowNeighborDiscovery", $this->_propDict)) {
+            return $this->_propDict["firewallIPSecExemptionsAllowNeighborDiscovery"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the firewallIPSecExemptionsAllowNeighborDiscovery
+    * Configures IPSec exemptions to allow neighbor discovery IPv6 ICMP type-codes
+    *
+    * @param bool $val The firewallIPSecExemptionsAllowNeighborDiscovery
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setFirewallIPSecExemptionsAllowNeighborDiscovery($val)
+    {
+        $this->_propDict["firewallIPSecExemptionsAllowNeighborDiscovery"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the firewallIPSecExemptionsAllowICMP
+    * Configures IPSec exemptions to allow ICMP
+    *
+    * @return bool The firewallIPSecExemptionsAllowICMP
+    */
+    public function getFirewallIPSecExemptionsAllowICMP()
+    {
+        if (array_key_exists("firewallIPSecExemptionsAllowICMP", $this->_propDict)) {
+            return $this->_propDict["firewallIPSecExemptionsAllowICMP"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the firewallIPSecExemptionsAllowICMP
+    * Configures IPSec exemptions to allow ICMP
+    *
+    * @param bool $val The firewallIPSecExemptionsAllowICMP
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setFirewallIPSecExemptionsAllowICMP($val)
+    {
+        $this->_propDict["firewallIPSecExemptionsAllowICMP"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the firewallIPSecExemptionsAllowRouterDiscovery
+    * Configures IPSec exemptions to allow router discovery IPv6 ICMP type-codes
+    *
+    * @return bool The firewallIPSecExemptionsAllowRouterDiscovery
+    */
+    public function getFirewallIPSecExemptionsAllowRouterDiscovery()
+    {
+        if (array_key_exists("firewallIPSecExemptionsAllowRouterDiscovery", $this->_propDict)) {
+            return $this->_propDict["firewallIPSecExemptionsAllowRouterDiscovery"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the firewallIPSecExemptionsAllowRouterDiscovery
+    * Configures IPSec exemptions to allow router discovery IPv6 ICMP type-codes
+    *
+    * @param bool $val The firewallIPSecExemptionsAllowRouterDiscovery
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setFirewallIPSecExemptionsAllowRouterDiscovery($val)
+    {
+        $this->_propDict["firewallIPSecExemptionsAllowRouterDiscovery"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the firewallIPSecExemptionsAllowDHCP
+    * Configures IPSec exemptions to allow both IPv4 and IPv6 DHCP traffic
+    *
+    * @return bool The firewallIPSecExemptionsAllowDHCP
+    */
+    public function getFirewallIPSecExemptionsAllowDHCP()
+    {
+        if (array_key_exists("firewallIPSecExemptionsAllowDHCP", $this->_propDict)) {
+            return $this->_propDict["firewallIPSecExemptionsAllowDHCP"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the firewallIPSecExemptionsAllowDHCP
+    * Configures IPSec exemptions to allow both IPv4 and IPv6 DHCP traffic
+    *
+    * @param bool $val The firewallIPSecExemptionsAllowDHCP
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setFirewallIPSecExemptionsAllowDHCP($val)
+    {
+        $this->_propDict["firewallIPSecExemptionsAllowDHCP"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the firewallCertificateRevocationListCheckMethod
+    * Specify how the certificate revocation list is to be enforced Possible values are: deviceDefault, none, attempt, require.
+    *
+    * @return FirewallCertificateRevocationListCheckMethodType The firewallCertificateRevocationListCheckMethod
+    */
+    public function getFirewallCertificateRevocationListCheckMethod()
+    {
+        if (array_key_exists("firewallCertificateRevocationListCheckMethod", $this->_propDict)) {
+            if (is_a($this->_propDict["firewallCertificateRevocationListCheckMethod"], "Microsoft\Graph\Model\FirewallCertificateRevocationListCheckMethodType")) {
+                return $this->_propDict["firewallCertificateRevocationListCheckMethod"];
+            } else {
+                $this->_propDict["firewallCertificateRevocationListCheckMethod"] = new FirewallCertificateRevocationListCheckMethodType($this->_propDict["firewallCertificateRevocationListCheckMethod"]);
+                return $this->_propDict["firewallCertificateRevocationListCheckMethod"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the firewallCertificateRevocationListCheckMethod
+    * Specify how the certificate revocation list is to be enforced Possible values are: deviceDefault, none, attempt, require.
+    *
+    * @param FirewallCertificateRevocationListCheckMethodType $val The firewallCertificateRevocationListCheckMethod
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setFirewallCertificateRevocationListCheckMethod($val)
+    {
+        $this->_propDict["firewallCertificateRevocationListCheckMethod"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the firewallMergeKeyingModuleSettings
+    * If an authentication set is not fully supported by a keying module, direct the module to ignore only unsupported authentication suites rather than the entire set
+    *
+    * @return bool The firewallMergeKeyingModuleSettings
+    */
+    public function getFirewallMergeKeyingModuleSettings()
+    {
+        if (array_key_exists("firewallMergeKeyingModuleSettings", $this->_propDict)) {
+            return $this->_propDict["firewallMergeKeyingModuleSettings"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the firewallMergeKeyingModuleSettings
+    * If an authentication set is not fully supported by a keying module, direct the module to ignore only unsupported authentication suites rather than the entire set
+    *
+    * @param bool $val The firewallMergeKeyingModuleSettings
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setFirewallMergeKeyingModuleSettings($val)
+    {
+        $this->_propDict["firewallMergeKeyingModuleSettings"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the firewallPacketQueueingMethod
+    * Configures how packet queueing should be applied in the tunnel gateway scenario Possible values are: deviceDefault, disabled, queueInbound, queueOutbound, queueBoth.
+    *
+    * @return FirewallPacketQueueingMethodType The firewallPacketQueueingMethod
+    */
+    public function getFirewallPacketQueueingMethod()
+    {
+        if (array_key_exists("firewallPacketQueueingMethod", $this->_propDict)) {
+            if (is_a($this->_propDict["firewallPacketQueueingMethod"], "Microsoft\Graph\Model\FirewallPacketQueueingMethodType")) {
+                return $this->_propDict["firewallPacketQueueingMethod"];
+            } else {
+                $this->_propDict["firewallPacketQueueingMethod"] = new FirewallPacketQueueingMethodType($this->_propDict["firewallPacketQueueingMethod"]);
+                return $this->_propDict["firewallPacketQueueingMethod"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the firewallPacketQueueingMethod
+    * Configures how packet queueing should be applied in the tunnel gateway scenario Possible values are: deviceDefault, disabled, queueInbound, queueOutbound, queueBoth.
+    *
+    * @param FirewallPacketQueueingMethodType $val The firewallPacketQueueingMethod
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setFirewallPacketQueueingMethod($val)
+    {
+        $this->_propDict["firewallPacketQueueingMethod"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the firewallProfileDomain
+    * Configures the firewall profile settings for domain networks
+    *
+    * @return WindowsFirewallNetworkProfile The firewallProfileDomain
+    */
+    public function getFirewallProfileDomain()
+    {
+        if (array_key_exists("firewallProfileDomain", $this->_propDict)) {
+            if (is_a($this->_propDict["firewallProfileDomain"], "Microsoft\Graph\Model\WindowsFirewallNetworkProfile")) {
+                return $this->_propDict["firewallProfileDomain"];
+            } else {
+                $this->_propDict["firewallProfileDomain"] = new WindowsFirewallNetworkProfile($this->_propDict["firewallProfileDomain"]);
+                return $this->_propDict["firewallProfileDomain"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the firewallProfileDomain
+    * Configures the firewall profile settings for domain networks
+    *
+    * @param WindowsFirewallNetworkProfile $val The firewallProfileDomain
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setFirewallProfileDomain($val)
+    {
+        $this->_propDict["firewallProfileDomain"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the firewallProfilePublic
+    * Configures the firewall profile settings for public networks
+    *
+    * @return WindowsFirewallNetworkProfile The firewallProfilePublic
+    */
+    public function getFirewallProfilePublic()
+    {
+        if (array_key_exists("firewallProfilePublic", $this->_propDict)) {
+            if (is_a($this->_propDict["firewallProfilePublic"], "Microsoft\Graph\Model\WindowsFirewallNetworkProfile")) {
+                return $this->_propDict["firewallProfilePublic"];
+            } else {
+                $this->_propDict["firewallProfilePublic"] = new WindowsFirewallNetworkProfile($this->_propDict["firewallProfilePublic"]);
+                return $this->_propDict["firewallProfilePublic"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the firewallProfilePublic
+    * Configures the firewall profile settings for public networks
+    *
+    * @param WindowsFirewallNetworkProfile $val The firewallProfilePublic
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setFirewallProfilePublic($val)
+    {
+        $this->_propDict["firewallProfilePublic"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the firewallProfilePrivate
+    * Configures the firewall profile settings for private networks
+    *
+    * @return WindowsFirewallNetworkProfile The firewallProfilePrivate
+    */
+    public function getFirewallProfilePrivate()
+    {
+        if (array_key_exists("firewallProfilePrivate", $this->_propDict)) {
+            if (is_a($this->_propDict["firewallProfilePrivate"], "Microsoft\Graph\Model\WindowsFirewallNetworkProfile")) {
+                return $this->_propDict["firewallProfilePrivate"];
+            } else {
+                $this->_propDict["firewallProfilePrivate"] = new WindowsFirewallNetworkProfile($this->_propDict["firewallProfilePrivate"]);
+                return $this->_propDict["firewallProfilePrivate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the firewallProfilePrivate
+    * Configures the firewall profile settings for private networks
+    *
+    * @param WindowsFirewallNetworkProfile $val The firewallProfilePrivate
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setFirewallProfilePrivate($val)
+    {
+        $this->_propDict["firewallProfilePrivate"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the defenderAttackSurfaceReductionExcludedPaths
+    * List of exe files and folders to be excluded from attack surface reduction rules
+    *
+    * @return string The defenderAttackSurfaceReductionExcludedPaths
+    */
+    public function getDefenderAttackSurfaceReductionExcludedPaths()
+    {
+        if (array_key_exists("defenderAttackSurfaceReductionExcludedPaths", $this->_propDict)) {
+            return $this->_propDict["defenderAttackSurfaceReductionExcludedPaths"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the defenderAttackSurfaceReductionExcludedPaths
+    * List of exe files and folders to be excluded from attack surface reduction rules
+    *
+    * @param string $val The defenderAttackSurfaceReductionExcludedPaths
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setDefenderAttackSurfaceReductionExcludedPaths($val)
+    {
+        $this->_propDict["defenderAttackSurfaceReductionExcludedPaths"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the defenderOfficeAppsOtherProcessInjectionType
+    *
+    * @return DefenderAttackSurfaceType The defenderOfficeAppsOtherProcessInjectionType
+    */
+    public function getDefenderOfficeAppsOtherProcessInjectionType()
+    {
+        if (array_key_exists("defenderOfficeAppsOtherProcessInjectionType", $this->_propDict)) {
+            if (is_a($this->_propDict["defenderOfficeAppsOtherProcessInjectionType"], "Microsoft\Graph\Model\DefenderAttackSurfaceType")) {
+                return $this->_propDict["defenderOfficeAppsOtherProcessInjectionType"];
+            } else {
+                $this->_propDict["defenderOfficeAppsOtherProcessInjectionType"] = new DefenderAttackSurfaceType($this->_propDict["defenderOfficeAppsOtherProcessInjectionType"]);
+                return $this->_propDict["defenderOfficeAppsOtherProcessInjectionType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the defenderOfficeAppsOtherProcessInjectionType
+    *
+    * @param DefenderAttackSurfaceType $val The defenderOfficeAppsOtherProcessInjectionType
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setDefenderOfficeAppsOtherProcessInjectionType($val)
+    {
+        $this->_propDict["defenderOfficeAppsOtherProcessInjectionType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the defenderOfficeAppsExecutableContentCreationOrLaunchType
+    *
+    * @return DefenderAttackSurfaceType The defenderOfficeAppsExecutableContentCreationOrLaunchType
+    */
+    public function getDefenderOfficeAppsExecutableContentCreationOrLaunchType()
+    {
+        if (array_key_exists("defenderOfficeAppsExecutableContentCreationOrLaunchType", $this->_propDict)) {
+            if (is_a($this->_propDict["defenderOfficeAppsExecutableContentCreationOrLaunchType"], "Microsoft\Graph\Model\DefenderAttackSurfaceType")) {
+                return $this->_propDict["defenderOfficeAppsExecutableContentCreationOrLaunchType"];
+            } else {
+                $this->_propDict["defenderOfficeAppsExecutableContentCreationOrLaunchType"] = new DefenderAttackSurfaceType($this->_propDict["defenderOfficeAppsExecutableContentCreationOrLaunchType"]);
+                return $this->_propDict["defenderOfficeAppsExecutableContentCreationOrLaunchType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the defenderOfficeAppsExecutableContentCreationOrLaunchType
+    *
+    * @param DefenderAttackSurfaceType $val The defenderOfficeAppsExecutableContentCreationOrLaunchType
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setDefenderOfficeAppsExecutableContentCreationOrLaunchType($val)
+    {
+        $this->_propDict["defenderOfficeAppsExecutableContentCreationOrLaunchType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the defenderOfficeAppsLaunchChildProcessType
+    *
+    * @return DefenderAttackSurfaceType The defenderOfficeAppsLaunchChildProcessType
+    */
+    public function getDefenderOfficeAppsLaunchChildProcessType()
+    {
+        if (array_key_exists("defenderOfficeAppsLaunchChildProcessType", $this->_propDict)) {
+            if (is_a($this->_propDict["defenderOfficeAppsLaunchChildProcessType"], "Microsoft\Graph\Model\DefenderAttackSurfaceType")) {
+                return $this->_propDict["defenderOfficeAppsLaunchChildProcessType"];
+            } else {
+                $this->_propDict["defenderOfficeAppsLaunchChildProcessType"] = new DefenderAttackSurfaceType($this->_propDict["defenderOfficeAppsLaunchChildProcessType"]);
+                return $this->_propDict["defenderOfficeAppsLaunchChildProcessType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the defenderOfficeAppsLaunchChildProcessType
+    *
+    * @param DefenderAttackSurfaceType $val The defenderOfficeAppsLaunchChildProcessType
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setDefenderOfficeAppsLaunchChildProcessType($val)
+    {
+        $this->_propDict["defenderOfficeAppsLaunchChildProcessType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the defenderOfficeMacroCodeAllowWin32ImportsType
+    *
+    * @return DefenderAttackSurfaceType The defenderOfficeMacroCodeAllowWin32ImportsType
+    */
+    public function getDefenderOfficeMacroCodeAllowWin32ImportsType()
+    {
+        if (array_key_exists("defenderOfficeMacroCodeAllowWin32ImportsType", $this->_propDict)) {
+            if (is_a($this->_propDict["defenderOfficeMacroCodeAllowWin32ImportsType"], "Microsoft\Graph\Model\DefenderAttackSurfaceType")) {
+                return $this->_propDict["defenderOfficeMacroCodeAllowWin32ImportsType"];
+            } else {
+                $this->_propDict["defenderOfficeMacroCodeAllowWin32ImportsType"] = new DefenderAttackSurfaceType($this->_propDict["defenderOfficeMacroCodeAllowWin32ImportsType"]);
+                return $this->_propDict["defenderOfficeMacroCodeAllowWin32ImportsType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the defenderOfficeMacroCodeAllowWin32ImportsType
+    *
+    * @param DefenderAttackSurfaceType $val The defenderOfficeMacroCodeAllowWin32ImportsType
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setDefenderOfficeMacroCodeAllowWin32ImportsType($val)
+    {
+        $this->_propDict["defenderOfficeMacroCodeAllowWin32ImportsType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the defenderScriptObfuscatedMacroCodeType
+    *
+    * @return DefenderAttackSurfaceType The defenderScriptObfuscatedMacroCodeType
+    */
+    public function getDefenderScriptObfuscatedMacroCodeType()
+    {
+        if (array_key_exists("defenderScriptObfuscatedMacroCodeType", $this->_propDict)) {
+            if (is_a($this->_propDict["defenderScriptObfuscatedMacroCodeType"], "Microsoft\Graph\Model\DefenderAttackSurfaceType")) {
+                return $this->_propDict["defenderScriptObfuscatedMacroCodeType"];
+            } else {
+                $this->_propDict["defenderScriptObfuscatedMacroCodeType"] = new DefenderAttackSurfaceType($this->_propDict["defenderScriptObfuscatedMacroCodeType"]);
+                return $this->_propDict["defenderScriptObfuscatedMacroCodeType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the defenderScriptObfuscatedMacroCodeType
+    *
+    * @param DefenderAttackSurfaceType $val The defenderScriptObfuscatedMacroCodeType
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setDefenderScriptObfuscatedMacroCodeType($val)
+    {
+        $this->_propDict["defenderScriptObfuscatedMacroCodeType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the defenderScriptDownloadedPayloadExecutionType
+    *
+    * @return DefenderAttackSurfaceType The defenderScriptDownloadedPayloadExecutionType
+    */
+    public function getDefenderScriptDownloadedPayloadExecutionType()
+    {
+        if (array_key_exists("defenderScriptDownloadedPayloadExecutionType", $this->_propDict)) {
+            if (is_a($this->_propDict["defenderScriptDownloadedPayloadExecutionType"], "Microsoft\Graph\Model\DefenderAttackSurfaceType")) {
+                return $this->_propDict["defenderScriptDownloadedPayloadExecutionType"];
+            } else {
+                $this->_propDict["defenderScriptDownloadedPayloadExecutionType"] = new DefenderAttackSurfaceType($this->_propDict["defenderScriptDownloadedPayloadExecutionType"]);
+                return $this->_propDict["defenderScriptDownloadedPayloadExecutionType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the defenderScriptDownloadedPayloadExecutionType
+    *
+    * @param DefenderAttackSurfaceType $val The defenderScriptDownloadedPayloadExecutionType
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setDefenderScriptDownloadedPayloadExecutionType($val)
+    {
+        $this->_propDict["defenderScriptDownloadedPayloadExecutionType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the defenderPreventCredentialStealingType
+    *
+    * @return DefenderProtectionType The defenderPreventCredentialStealingType
+    */
+    public function getDefenderPreventCredentialStealingType()
+    {
+        if (array_key_exists("defenderPreventCredentialStealingType", $this->_propDict)) {
+            if (is_a($this->_propDict["defenderPreventCredentialStealingType"], "Microsoft\Graph\Model\DefenderProtectionType")) {
+                return $this->_propDict["defenderPreventCredentialStealingType"];
+            } else {
+                $this->_propDict["defenderPreventCredentialStealingType"] = new DefenderProtectionType($this->_propDict["defenderPreventCredentialStealingType"]);
+                return $this->_propDict["defenderPreventCredentialStealingType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the defenderPreventCredentialStealingType
+    *
+    * @param DefenderProtectionType $val The defenderPreventCredentialStealingType
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setDefenderPreventCredentialStealingType($val)
+    {
+        $this->_propDict["defenderPreventCredentialStealingType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the defenderProcessCreationType
+    *
+    * @return DefenderAttackSurfaceType The defenderProcessCreationType
+    */
+    public function getDefenderProcessCreationType()
+    {
+        if (array_key_exists("defenderProcessCreationType", $this->_propDict)) {
+            if (is_a($this->_propDict["defenderProcessCreationType"], "Microsoft\Graph\Model\DefenderAttackSurfaceType")) {
+                return $this->_propDict["defenderProcessCreationType"];
+            } else {
+                $this->_propDict["defenderProcessCreationType"] = new DefenderAttackSurfaceType($this->_propDict["defenderProcessCreationType"]);
+                return $this->_propDict["defenderProcessCreationType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the defenderProcessCreationType
+    *
+    * @param DefenderAttackSurfaceType $val The defenderProcessCreationType
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setDefenderProcessCreationType($val)
+    {
+        $this->_propDict["defenderProcessCreationType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the defenderUntrustedUSBProcessType
+    *
+    * @return DefenderAttackSurfaceType The defenderUntrustedUSBProcessType
+    */
+    public function getDefenderUntrustedUSBProcessType()
+    {
+        if (array_key_exists("defenderUntrustedUSBProcessType", $this->_propDict)) {
+            if (is_a($this->_propDict["defenderUntrustedUSBProcessType"], "Microsoft\Graph\Model\DefenderAttackSurfaceType")) {
+                return $this->_propDict["defenderUntrustedUSBProcessType"];
+            } else {
+                $this->_propDict["defenderUntrustedUSBProcessType"] = new DefenderAttackSurfaceType($this->_propDict["defenderUntrustedUSBProcessType"]);
+                return $this->_propDict["defenderUntrustedUSBProcessType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the defenderUntrustedUSBProcessType
+    *
+    * @param DefenderAttackSurfaceType $val The defenderUntrustedUSBProcessType
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setDefenderUntrustedUSBProcessType($val)
+    {
+        $this->_propDict["defenderUntrustedUSBProcessType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the defenderUntrustedExecutableType
+    *
+    * @return DefenderAttackSurfaceType The defenderUntrustedExecutableType
+    */
+    public function getDefenderUntrustedExecutableType()
+    {
+        if (array_key_exists("defenderUntrustedExecutableType", $this->_propDict)) {
+            if (is_a($this->_propDict["defenderUntrustedExecutableType"], "Microsoft\Graph\Model\DefenderAttackSurfaceType")) {
+                return $this->_propDict["defenderUntrustedExecutableType"];
+            } else {
+                $this->_propDict["defenderUntrustedExecutableType"] = new DefenderAttackSurfaceType($this->_propDict["defenderUntrustedExecutableType"]);
+                return $this->_propDict["defenderUntrustedExecutableType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the defenderUntrustedExecutableType
+    *
+    * @param DefenderAttackSurfaceType $val The defenderUntrustedExecutableType
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setDefenderUntrustedExecutableType($val)
+    {
+        $this->_propDict["defenderUntrustedExecutableType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the defenderEmailContentExecutionType
+    *
+    * @return DefenderAttackSurfaceType The defenderEmailContentExecutionType
+    */
+    public function getDefenderEmailContentExecutionType()
+    {
+        if (array_key_exists("defenderEmailContentExecutionType", $this->_propDict)) {
+            if (is_a($this->_propDict["defenderEmailContentExecutionType"], "Microsoft\Graph\Model\DefenderAttackSurfaceType")) {
+                return $this->_propDict["defenderEmailContentExecutionType"];
+            } else {
+                $this->_propDict["defenderEmailContentExecutionType"] = new DefenderAttackSurfaceType($this->_propDict["defenderEmailContentExecutionType"]);
+                return $this->_propDict["defenderEmailContentExecutionType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the defenderEmailContentExecutionType
+    *
+    * @param DefenderAttackSurfaceType $val The defenderEmailContentExecutionType
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setDefenderEmailContentExecutionType($val)
+    {
+        $this->_propDict["defenderEmailContentExecutionType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the defenderPasswordProtectedEmailContentExecutionType
+    *
+    * @return DefenderAttackSurfaceType The defenderPasswordProtectedEmailContentExecutionType
+    */
+    public function getDefenderPasswordProtectedEmailContentExecutionType()
+    {
+        if (array_key_exists("defenderPasswordProtectedEmailContentExecutionType", $this->_propDict)) {
+            if (is_a($this->_propDict["defenderPasswordProtectedEmailContentExecutionType"], "Microsoft\Graph\Model\DefenderAttackSurfaceType")) {
+                return $this->_propDict["defenderPasswordProtectedEmailContentExecutionType"];
+            } else {
+                $this->_propDict["defenderPasswordProtectedEmailContentExecutionType"] = new DefenderAttackSurfaceType($this->_propDict["defenderPasswordProtectedEmailContentExecutionType"]);
+                return $this->_propDict["defenderPasswordProtectedEmailContentExecutionType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the defenderPasswordProtectedEmailContentExecutionType
+    *
+    * @param DefenderAttackSurfaceType $val The defenderPasswordProtectedEmailContentExecutionType
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setDefenderPasswordProtectedEmailContentExecutionType($val)
+    {
+        $this->_propDict["defenderPasswordProtectedEmailContentExecutionType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the defenderAdvancedRansomewareProtectionType
+    *
+    * @return DefenderProtectionType The defenderAdvancedRansomewareProtectionType
+    */
+    public function getDefenderAdvancedRansomewareProtectionType()
+    {
+        if (array_key_exists("defenderAdvancedRansomewareProtectionType", $this->_propDict)) {
+            if (is_a($this->_propDict["defenderAdvancedRansomewareProtectionType"], "Microsoft\Graph\Model\DefenderProtectionType")) {
+                return $this->_propDict["defenderAdvancedRansomewareProtectionType"];
+            } else {
+                $this->_propDict["defenderAdvancedRansomewareProtectionType"] = new DefenderProtectionType($this->_propDict["defenderAdvancedRansomewareProtectionType"]);
+                return $this->_propDict["defenderAdvancedRansomewareProtectionType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the defenderAdvancedRansomewareProtectionType
+    *
+    * @param DefenderProtectionType $val The defenderAdvancedRansomewareProtectionType
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setDefenderAdvancedRansomewareProtectionType($val)
+    {
+        $this->_propDict["defenderAdvancedRansomewareProtectionType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the defenderGuardMyFoldersType
+    *
+    * @return FolderProtectionType The defenderGuardMyFoldersType
+    */
+    public function getDefenderGuardMyFoldersType()
+    {
+        if (array_key_exists("defenderGuardMyFoldersType", $this->_propDict)) {
+            if (is_a($this->_propDict["defenderGuardMyFoldersType"], "Microsoft\Graph\Model\FolderProtectionType")) {
+                return $this->_propDict["defenderGuardMyFoldersType"];
+            } else {
+                $this->_propDict["defenderGuardMyFoldersType"] = new FolderProtectionType($this->_propDict["defenderGuardMyFoldersType"]);
+                return $this->_propDict["defenderGuardMyFoldersType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the defenderGuardMyFoldersType
+    *
+    * @param FolderProtectionType $val The defenderGuardMyFoldersType
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setDefenderGuardMyFoldersType($val)
+    {
+        $this->_propDict["defenderGuardMyFoldersType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the defenderGuardedFoldersAllowedAppPaths
+    * List of paths to exe that are allowed to access protected folders
+    *
+    * @return string The defenderGuardedFoldersAllowedAppPaths
+    */
+    public function getDefenderGuardedFoldersAllowedAppPaths()
+    {
+        if (array_key_exists("defenderGuardedFoldersAllowedAppPaths", $this->_propDict)) {
+            return $this->_propDict["defenderGuardedFoldersAllowedAppPaths"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the defenderGuardedFoldersAllowedAppPaths
+    * List of paths to exe that are allowed to access protected folders
+    *
+    * @param string $val The defenderGuardedFoldersAllowedAppPaths
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setDefenderGuardedFoldersAllowedAppPaths($val)
+    {
+        $this->_propDict["defenderGuardedFoldersAllowedAppPaths"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the defenderAdditionalGuardedFolders
+    * List of folder paths to be added to the list of protected folders
+    *
+    * @return string The defenderAdditionalGuardedFolders
+    */
+    public function getDefenderAdditionalGuardedFolders()
+    {
+        if (array_key_exists("defenderAdditionalGuardedFolders", $this->_propDict)) {
+            return $this->_propDict["defenderAdditionalGuardedFolders"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the defenderAdditionalGuardedFolders
+    * List of folder paths to be added to the list of protected folders
+    *
+    * @param string $val The defenderAdditionalGuardedFolders
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setDefenderAdditionalGuardedFolders($val)
+    {
+        $this->_propDict["defenderAdditionalGuardedFolders"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the defenderNetworkProtectionType
+    *
+    * @return DefenderProtectionType The defenderNetworkProtectionType
+    */
+    public function getDefenderNetworkProtectionType()
+    {
+        if (array_key_exists("defenderNetworkProtectionType", $this->_propDict)) {
+            if (is_a($this->_propDict["defenderNetworkProtectionType"], "Microsoft\Graph\Model\DefenderProtectionType")) {
+                return $this->_propDict["defenderNetworkProtectionType"];
+            } else {
+                $this->_propDict["defenderNetworkProtectionType"] = new DefenderProtectionType($this->_propDict["defenderNetworkProtectionType"]);
+                return $this->_propDict["defenderNetworkProtectionType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the defenderNetworkProtectionType
+    *
+    * @param DefenderProtectionType $val The defenderNetworkProtectionType
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setDefenderNetworkProtectionType($val)
+    {
+        $this->_propDict["defenderNetworkProtectionType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the defenderExploitProtectionXml
+    * Xml content containing information regarding exploit protection details.
+    *
+    * @return \GuzzleHttp\Psr7\Stream The defenderExploitProtectionXml
+    */
+    public function getDefenderExploitProtectionXml()
+    {
+        if (array_key_exists("defenderExploitProtectionXml", $this->_propDict)) {
+            if (is_a($this->_propDict["defenderExploitProtectionXml"], "\GuzzleHttp\Psr7\Stream")) {
+                return $this->_propDict["defenderExploitProtectionXml"];
+            } else {
+                $this->_propDict["defenderExploitProtectionXml"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["defenderExploitProtectionXml"]);
+                return $this->_propDict["defenderExploitProtectionXml"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the defenderExploitProtectionXml
+    * Xml content containing information regarding exploit protection details.
+    *
+    * @param \GuzzleHttp\Psr7\Stream $val The defenderExploitProtectionXml
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setDefenderExploitProtectionXml($val)
+    {
+        $this->_propDict["defenderExploitProtectionXml"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the defenderExploitProtectionXmlFileName
+    * Name of the file from which DefenderExploitProtectionXml was obtained.
+    *
+    * @return string The defenderExploitProtectionXmlFileName
+    */
+    public function getDefenderExploitProtectionXmlFileName()
+    {
+        if (array_key_exists("defenderExploitProtectionXmlFileName", $this->_propDict)) {
+            return $this->_propDict["defenderExploitProtectionXmlFileName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the defenderExploitProtectionXmlFileName
+    * Name of the file from which DefenderExploitProtectionXml was obtained.
+    *
+    * @param string $val The defenderExploitProtectionXmlFileName
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setDefenderExploitProtectionXmlFileName($val)
+    {
+        $this->_propDict["defenderExploitProtectionXmlFileName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the defenderSecurityCenterBlockExploitProtectionOverride
+    * Indicates whether or not to block user from overriding Exploit Protection settings.
+    *
+    * @return bool The defenderSecurityCenterBlockExploitProtectionOverride
+    */
+    public function getDefenderSecurityCenterBlockExploitProtectionOverride()
+    {
+        if (array_key_exists("defenderSecurityCenterBlockExploitProtectionOverride", $this->_propDict)) {
+            return $this->_propDict["defenderSecurityCenterBlockExploitProtectionOverride"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the defenderSecurityCenterBlockExploitProtectionOverride
+    * Indicates whether or not to block user from overriding Exploit Protection settings.
+    *
+    * @param bool $val The defenderSecurityCenterBlockExploitProtectionOverride
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setDefenderSecurityCenterBlockExploitProtectionOverride($val)
+    {
+        $this->_propDict["defenderSecurityCenterBlockExploitProtectionOverride"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the appLockerApplicationControl
+    * Enables the Admin to choose what types of app to allow on devices. Possible values are: notConfigured, enforceComponentsAndStoreApps, auditComponentsAndStoreApps, enforceComponentsStoreAppsAndSmartlocker, auditComponentsStoreAppsAndSmartlocker.
+    *
+    * @return AppLockerApplicationControlType The appLockerApplicationControl
+    */
+    public function getAppLockerApplicationControl()
+    {
+        if (array_key_exists("appLockerApplicationControl", $this->_propDict)) {
+            if (is_a($this->_propDict["appLockerApplicationControl"], "Microsoft\Graph\Model\AppLockerApplicationControlType")) {
+                return $this->_propDict["appLockerApplicationControl"];
+            } else {
+                $this->_propDict["appLockerApplicationControl"] = new AppLockerApplicationControlType($this->_propDict["appLockerApplicationControl"]);
+                return $this->_propDict["appLockerApplicationControl"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the appLockerApplicationControl
+    * Enables the Admin to choose what types of app to allow on devices. Possible values are: notConfigured, enforceComponentsAndStoreApps, auditComponentsAndStoreApps, enforceComponentsStoreAppsAndSmartlocker, auditComponentsStoreAppsAndSmartlocker.
+    *
+    * @param AppLockerApplicationControlType $val The appLockerApplicationControl
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setAppLockerApplicationControl($val)
+    {
+        $this->_propDict["appLockerApplicationControl"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the smartScreenEnableInShell
+    * Allows IT Admins to configure SmartScreen for Windows.
+    *
+    * @return bool The smartScreenEnableInShell
+    */
+    public function getSmartScreenEnableInShell()
+    {
+        if (array_key_exists("smartScreenEnableInShell", $this->_propDict)) {
+            return $this->_propDict["smartScreenEnableInShell"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the smartScreenEnableInShell
+    * Allows IT Admins to configure SmartScreen for Windows.
+    *
+    * @param bool $val The smartScreenEnableInShell
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setSmartScreenEnableInShell($val)
+    {
+        $this->_propDict["smartScreenEnableInShell"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the smartScreenBlockOverrideForFiles
+    * Allows IT Admins to control whether users can can ignore SmartScreen warnings and run malicious files.
+    *
+    * @return bool The smartScreenBlockOverrideForFiles
+    */
+    public function getSmartScreenBlockOverrideForFiles()
+    {
+        if (array_key_exists("smartScreenBlockOverrideForFiles", $this->_propDict)) {
+            return $this->_propDict["smartScreenBlockOverrideForFiles"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the smartScreenBlockOverrideForFiles
+    * Allows IT Admins to control whether users can can ignore SmartScreen warnings and run malicious files.
+    *
+    * @param bool $val The smartScreenBlockOverrideForFiles
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setSmartScreenBlockOverrideForFiles($val)
+    {
+        $this->_propDict["smartScreenBlockOverrideForFiles"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the applicationGuardEnabled
+    * Enable Windows Defender Application Guard
+    *
+    * @return bool The applicationGuardEnabled
+    */
+    public function getApplicationGuardEnabled()
+    {
+        if (array_key_exists("applicationGuardEnabled", $this->_propDict)) {
+            return $this->_propDict["applicationGuardEnabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the applicationGuardEnabled
+    * Enable Windows Defender Application Guard
+    *
+    * @param bool $val The applicationGuardEnabled
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setApplicationGuardEnabled($val)
+    {
+        $this->_propDict["applicationGuardEnabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the applicationGuardBlockFileTransfer
+    * Block clipboard to transfer image file, text file or neither of them Possible values are: notConfigured, blockImageAndTextFile, blockImageFile, blockNone, blockTextFile.
+    *
+    * @return ApplicationGuardBlockFileTransferType The applicationGuardBlockFileTransfer
+    */
+    public function getApplicationGuardBlockFileTransfer()
+    {
+        if (array_key_exists("applicationGuardBlockFileTransfer", $this->_propDict)) {
+            if (is_a($this->_propDict["applicationGuardBlockFileTransfer"], "Microsoft\Graph\Model\ApplicationGuardBlockFileTransferType")) {
+                return $this->_propDict["applicationGuardBlockFileTransfer"];
+            } else {
+                $this->_propDict["applicationGuardBlockFileTransfer"] = new ApplicationGuardBlockFileTransferType($this->_propDict["applicationGuardBlockFileTransfer"]);
+                return $this->_propDict["applicationGuardBlockFileTransfer"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the applicationGuardBlockFileTransfer
+    * Block clipboard to transfer image file, text file or neither of them Possible values are: notConfigured, blockImageAndTextFile, blockImageFile, blockNone, blockTextFile.
+    *
+    * @param ApplicationGuardBlockFileTransferType $val The applicationGuardBlockFileTransfer
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setApplicationGuardBlockFileTransfer($val)
+    {
+        $this->_propDict["applicationGuardBlockFileTransfer"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the applicationGuardBlockNonEnterpriseContent
+    * Block enterprise sites to load non-enterprise content, such as third party plug-ins
+    *
+    * @return bool The applicationGuardBlockNonEnterpriseContent
+    */
+    public function getApplicationGuardBlockNonEnterpriseContent()
+    {
+        if (array_key_exists("applicationGuardBlockNonEnterpriseContent", $this->_propDict)) {
+            return $this->_propDict["applicationGuardBlockNonEnterpriseContent"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the applicationGuardBlockNonEnterpriseContent
+    * Block enterprise sites to load non-enterprise content, such as third party plug-ins
+    *
+    * @param bool $val The applicationGuardBlockNonEnterpriseContent
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setApplicationGuardBlockNonEnterpriseContent($val)
+    {
+        $this->_propDict["applicationGuardBlockNonEnterpriseContent"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the applicationGuardAllowPersistence
+    * Allow persisting user generated data inside the App Guard Containter (favorites, cookies, web passwords, etc.)
+    *
+    * @return bool The applicationGuardAllowPersistence
+    */
+    public function getApplicationGuardAllowPersistence()
+    {
+        if (array_key_exists("applicationGuardAllowPersistence", $this->_propDict)) {
+            return $this->_propDict["applicationGuardAllowPersistence"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the applicationGuardAllowPersistence
+    * Allow persisting user generated data inside the App Guard Containter (favorites, cookies, web passwords, etc.)
+    *
+    * @param bool $val The applicationGuardAllowPersistence
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setApplicationGuardAllowPersistence($val)
+    {
+        $this->_propDict["applicationGuardAllowPersistence"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the applicationGuardForceAuditing
+    * Force auditing will persist Windows logs and events to meet security/compliance criteria (sample events are user login-logoff, use of privilege rights, software installation, system changes, etc.)
+    *
+    * @return bool The applicationGuardForceAuditing
+    */
+    public function getApplicationGuardForceAuditing()
+    {
+        if (array_key_exists("applicationGuardForceAuditing", $this->_propDict)) {
+            return $this->_propDict["applicationGuardForceAuditing"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the applicationGuardForceAuditing
+    * Force auditing will persist Windows logs and events to meet security/compliance criteria (sample events are user login-logoff, use of privilege rights, software installation, system changes, etc.)
+    *
+    * @param bool $val The applicationGuardForceAuditing
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setApplicationGuardForceAuditing($val)
+    {
+        $this->_propDict["applicationGuardForceAuditing"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the applicationGuardBlockClipboardSharing
+    * Block clipboard to share data from Host to Container, or from Container to Host, or both ways, or neither ways. Possible values are: notConfigured, blockBoth, blockHostToContainer, blockContainerToHost, blockNone.
+    *
+    * @return ApplicationGuardBlockClipboardSharingType The applicationGuardBlockClipboardSharing
+    */
+    public function getApplicationGuardBlockClipboardSharing()
+    {
+        if (array_key_exists("applicationGuardBlockClipboardSharing", $this->_propDict)) {
+            if (is_a($this->_propDict["applicationGuardBlockClipboardSharing"], "Microsoft\Graph\Model\ApplicationGuardBlockClipboardSharingType")) {
+                return $this->_propDict["applicationGuardBlockClipboardSharing"];
+            } else {
+                $this->_propDict["applicationGuardBlockClipboardSharing"] = new ApplicationGuardBlockClipboardSharingType($this->_propDict["applicationGuardBlockClipboardSharing"]);
+                return $this->_propDict["applicationGuardBlockClipboardSharing"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the applicationGuardBlockClipboardSharing
+    * Block clipboard to share data from Host to Container, or from Container to Host, or both ways, or neither ways. Possible values are: notConfigured, blockBoth, blockHostToContainer, blockContainerToHost, blockNone.
+    *
+    * @param ApplicationGuardBlockClipboardSharingType $val The applicationGuardBlockClipboardSharing
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setApplicationGuardBlockClipboardSharing($val)
+    {
+        $this->_propDict["applicationGuardBlockClipboardSharing"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the applicationGuardAllowPrintToPDF
+    * Allow printing to PDF from Container
+    *
+    * @return bool The applicationGuardAllowPrintToPDF
+    */
+    public function getApplicationGuardAllowPrintToPDF()
+    {
+        if (array_key_exists("applicationGuardAllowPrintToPDF", $this->_propDict)) {
+            return $this->_propDict["applicationGuardAllowPrintToPDF"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the applicationGuardAllowPrintToPDF
+    * Allow printing to PDF from Container
+    *
+    * @param bool $val The applicationGuardAllowPrintToPDF
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setApplicationGuardAllowPrintToPDF($val)
+    {
+        $this->_propDict["applicationGuardAllowPrintToPDF"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the applicationGuardAllowPrintToXPS
+    * Allow printing to XPS from Container
+    *
+    * @return bool The applicationGuardAllowPrintToXPS
+    */
+    public function getApplicationGuardAllowPrintToXPS()
+    {
+        if (array_key_exists("applicationGuardAllowPrintToXPS", $this->_propDict)) {
+            return $this->_propDict["applicationGuardAllowPrintToXPS"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the applicationGuardAllowPrintToXPS
+    * Allow printing to XPS from Container
+    *
+    * @param bool $val The applicationGuardAllowPrintToXPS
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setApplicationGuardAllowPrintToXPS($val)
+    {
+        $this->_propDict["applicationGuardAllowPrintToXPS"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the applicationGuardAllowPrintToLocalPrinters
+    * Allow printing to Local Printers from Container
+    *
+    * @return bool The applicationGuardAllowPrintToLocalPrinters
+    */
+    public function getApplicationGuardAllowPrintToLocalPrinters()
+    {
+        if (array_key_exists("applicationGuardAllowPrintToLocalPrinters", $this->_propDict)) {
+            return $this->_propDict["applicationGuardAllowPrintToLocalPrinters"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the applicationGuardAllowPrintToLocalPrinters
+    * Allow printing to Local Printers from Container
+    *
+    * @param bool $val The applicationGuardAllowPrintToLocalPrinters
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setApplicationGuardAllowPrintToLocalPrinters($val)
+    {
+        $this->_propDict["applicationGuardAllowPrintToLocalPrinters"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the applicationGuardAllowPrintToNetworkPrinters
+    * Allow printing to Network Printers from Container
+    *
+    * @return bool The applicationGuardAllowPrintToNetworkPrinters
+    */
+    public function getApplicationGuardAllowPrintToNetworkPrinters()
+    {
+        if (array_key_exists("applicationGuardAllowPrintToNetworkPrinters", $this->_propDict)) {
+            return $this->_propDict["applicationGuardAllowPrintToNetworkPrinters"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the applicationGuardAllowPrintToNetworkPrinters
+    * Allow printing to Network Printers from Container
+    *
+    * @param bool $val The applicationGuardAllowPrintToNetworkPrinters
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setApplicationGuardAllowPrintToNetworkPrinters($val)
+    {
+        $this->_propDict["applicationGuardAllowPrintToNetworkPrinters"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the applicationGuardAllowVirtualGPU
+    *
+    * @return bool The applicationGuardAllowVirtualGPU
+    */
+    public function getApplicationGuardAllowVirtualGPU()
+    {
+        if (array_key_exists("applicationGuardAllowVirtualGPU", $this->_propDict)) {
+            return $this->_propDict["applicationGuardAllowVirtualGPU"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the applicationGuardAllowVirtualGPU
+    *
+    * @param bool $val The applicationGuardAllowVirtualGPU
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setApplicationGuardAllowVirtualGPU($val)
+    {
+        $this->_propDict["applicationGuardAllowVirtualGPU"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the applicationGuardAllowFileSaveOnHost
+    *
+    * @return bool The applicationGuardAllowFileSaveOnHost
+    */
+    public function getApplicationGuardAllowFileSaveOnHost()
+    {
+        if (array_key_exists("applicationGuardAllowFileSaveOnHost", $this->_propDict)) {
+            return $this->_propDict["applicationGuardAllowFileSaveOnHost"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the applicationGuardAllowFileSaveOnHost
+    *
+    * @param bool $val The applicationGuardAllowFileSaveOnHost
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setApplicationGuardAllowFileSaveOnHost($val)
+    {
+        $this->_propDict["applicationGuardAllowFileSaveOnHost"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the bitLockerDisableWarningForOtherDiskEncryption
+    * Allows the Admin to disable the warning prompt for other disk encryption on the user machines.
+    *
+    * @return bool The bitLockerDisableWarningForOtherDiskEncryption
+    */
+    public function getBitLockerDisableWarningForOtherDiskEncryption()
+    {
+        if (array_key_exists("bitLockerDisableWarningForOtherDiskEncryption", $this->_propDict)) {
+            return $this->_propDict["bitLockerDisableWarningForOtherDiskEncryption"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the bitLockerDisableWarningForOtherDiskEncryption
+    * Allows the Admin to disable the warning prompt for other disk encryption on the user machines.
+    *
+    * @param bool $val The bitLockerDisableWarningForOtherDiskEncryption
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setBitLockerDisableWarningForOtherDiskEncryption($val)
+    {
+        $this->_propDict["bitLockerDisableWarningForOtherDiskEncryption"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the bitLockerEnableStorageCardEncryptionOnMobile
+    * Allows the admin to require encryption to be turned on using BitLocker. This policy is valid only for a mobile SKU.
+    *
+    * @return bool The bitLockerEnableStorageCardEncryptionOnMobile
+    */
+    public function getBitLockerEnableStorageCardEncryptionOnMobile()
+    {
+        if (array_key_exists("bitLockerEnableStorageCardEncryptionOnMobile", $this->_propDict)) {
+            return $this->_propDict["bitLockerEnableStorageCardEncryptionOnMobile"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the bitLockerEnableStorageCardEncryptionOnMobile
+    * Allows the admin to require encryption to be turned on using BitLocker. This policy is valid only for a mobile SKU.
+    *
+    * @param bool $val The bitLockerEnableStorageCardEncryptionOnMobile
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setBitLockerEnableStorageCardEncryptionOnMobile($val)
+    {
+        $this->_propDict["bitLockerEnableStorageCardEncryptionOnMobile"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the bitLockerEncryptDevice
+    * Allows the admin to require encryption to be turned on using BitLocker.
+    *
+    * @return bool The bitLockerEncryptDevice
+    */
+    public function getBitLockerEncryptDevice()
+    {
+        if (array_key_exists("bitLockerEncryptDevice", $this->_propDict)) {
+            return $this->_propDict["bitLockerEncryptDevice"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the bitLockerEncryptDevice
+    * Allows the admin to require encryption to be turned on using BitLocker.
+    *
+    * @param bool $val The bitLockerEncryptDevice
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setBitLockerEncryptDevice($val)
+    {
+        $this->_propDict["bitLockerEncryptDevice"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the bitLockerSystemDrivePolicy
+    *
+    * @return BitLockerSystemDrivePolicy The bitLockerSystemDrivePolicy
+    */
+    public function getBitLockerSystemDrivePolicy()
+    {
+        if (array_key_exists("bitLockerSystemDrivePolicy", $this->_propDict)) {
+            if (is_a($this->_propDict["bitLockerSystemDrivePolicy"], "Microsoft\Graph\Model\BitLockerSystemDrivePolicy")) {
+                return $this->_propDict["bitLockerSystemDrivePolicy"];
+            } else {
+                $this->_propDict["bitLockerSystemDrivePolicy"] = new BitLockerSystemDrivePolicy($this->_propDict["bitLockerSystemDrivePolicy"]);
+                return $this->_propDict["bitLockerSystemDrivePolicy"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the bitLockerSystemDrivePolicy
+    *
+    * @param BitLockerSystemDrivePolicy $val The bitLockerSystemDrivePolicy
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setBitLockerSystemDrivePolicy($val)
+    {
+        $this->_propDict["bitLockerSystemDrivePolicy"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the bitLockerFixedDrivePolicy
+    *
+    * @return BitLockerFixedDrivePolicy The bitLockerFixedDrivePolicy
+    */
+    public function getBitLockerFixedDrivePolicy()
+    {
+        if (array_key_exists("bitLockerFixedDrivePolicy", $this->_propDict)) {
+            if (is_a($this->_propDict["bitLockerFixedDrivePolicy"], "Microsoft\Graph\Model\BitLockerFixedDrivePolicy")) {
+                return $this->_propDict["bitLockerFixedDrivePolicy"];
+            } else {
+                $this->_propDict["bitLockerFixedDrivePolicy"] = new BitLockerFixedDrivePolicy($this->_propDict["bitLockerFixedDrivePolicy"]);
+                return $this->_propDict["bitLockerFixedDrivePolicy"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the bitLockerFixedDrivePolicy
+    *
+    * @param BitLockerFixedDrivePolicy $val The bitLockerFixedDrivePolicy
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setBitLockerFixedDrivePolicy($val)
+    {
+        $this->_propDict["bitLockerFixedDrivePolicy"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the bitLockerRemovableDrivePolicy
+    * BitLocker Removable Drive Policy.
+    *
+    * @return BitLockerRemovableDrivePolicy The bitLockerRemovableDrivePolicy
+    */
+    public function getBitLockerRemovableDrivePolicy()
+    {
+        if (array_key_exists("bitLockerRemovableDrivePolicy", $this->_propDict)) {
+            if (is_a($this->_propDict["bitLockerRemovableDrivePolicy"], "Microsoft\Graph\Model\BitLockerRemovableDrivePolicy")) {
+                return $this->_propDict["bitLockerRemovableDrivePolicy"];
+            } else {
+                $this->_propDict["bitLockerRemovableDrivePolicy"] = new BitLockerRemovableDrivePolicy($this->_propDict["bitLockerRemovableDrivePolicy"]);
+                return $this->_propDict["bitLockerRemovableDrivePolicy"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the bitLockerRemovableDrivePolicy
+    * BitLocker Removable Drive Policy.
+    *
+    * @param BitLockerRemovableDrivePolicy $val The bitLockerRemovableDrivePolicy
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setBitLockerRemovableDrivePolicy($val)
+    {
+        $this->_propDict["bitLockerRemovableDrivePolicy"] = $val;
+        return $this;
+    }
+    
+}

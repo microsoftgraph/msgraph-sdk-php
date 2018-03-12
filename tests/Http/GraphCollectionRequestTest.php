@@ -1,7 +1,7 @@
 <?php
 use PHPUnit\Framework\TestCase;
 use Microsoft\Graph\Http\GraphCollectionRequest;
-use Microsoft\Graph\Model;
+use Microsoft\Graph\Beta\Model;
 
 class GraphCollectionRequestTest extends TestCase
 {
@@ -54,7 +54,7 @@ class GraphCollectionRequestTest extends TestCase
         $this->collectionRequest->setPageCallInfo();
         $response = $this->collectionRequest->execute($this->client);
         $result = $this->collectionRequest->processPageCallReturn($response);
-        $this->assertInstanceOf(Microsoft\Graph\Model\User::class, $result);
+        $this->assertInstanceOf(Model\User::class, $result);
     }
 
     public function testEndpointManipulation()

@@ -3,6 +3,7 @@ use PHPUnit\Framework\TestCase;
 use Microsoft\Graph\Core\GraphConstants;
 use Microsoft\Graph\Graph;
 use Microsoft\Graph\Http\GraphRequest;
+use Microsoft\Graph\Beta\Model;
 
 class GraphRequestTest extends TestCase
 {
@@ -105,7 +106,7 @@ class GraphRequestTest extends TestCase
 
     public function testAttachPropertyDictionary()
     {
-        $model = new Microsoft\Graph\Model\User(array("id" => 1, "manager" => new Microsoft\Graph\Model\User(array("id" => 2))));
+        $model = new Model\User(array("id" => 1, "manager" => new Model\User(array("id" => 2))));
         $this->requests[0]->attachBody($model);
         $body = $this->requests[0]->getBody();
         $this->assertEquals('{"id":1,"manager":{"id":2}}', $body);

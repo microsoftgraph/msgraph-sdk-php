@@ -125,7 +125,7 @@ class HttpTest extends TestCase
 
     public function testSendObject()
     {
-        $user = new Microsoft\Graph\Model\User();
+        $user = new Microsoft\Graph\Beta\Model\User();
         $user->setDisplayName('Bob Barker');
         $request = $this->getRequest->attachBody($user);
         $this->assertInstanceOf(GraphRequest::class, $request);
