@@ -34,7 +34,7 @@ class DeviceGeoLocation extends Entity
     public function getLastCollectedDateTimeUtc()
     {
         if (array_key_exists("lastCollectedDateTimeUtc", $this->_propDict)) {
-            if (is_a($this->_propDict["lastCollectedDateTimeUtc"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["lastCollectedDateTimeUtc"], "Microsoft\Graph\Beta\Model\\DateTime")) {
                 return $this->_propDict["lastCollectedDateTimeUtc"];
             } else {
                 $this->_propDict["lastCollectedDateTimeUtc"] = new \DateTime($this->_propDict["lastCollectedDateTimeUtc"]);
@@ -66,7 +66,7 @@ class DeviceGeoLocation extends Entity
     public function getLastCollectedDateTime()
     {
         if (array_key_exists("lastCollectedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastCollectedDateTime"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["lastCollectedDateTime"], "Microsoft\Graph\Beta\Model\\DateTime")) {
                 return $this->_propDict["lastCollectedDateTime"];
             } else {
                 $this->_propDict["lastCollectedDateTime"] = new \DateTime($this->_propDict["lastCollectedDateTime"]);

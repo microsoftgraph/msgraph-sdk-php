@@ -62,7 +62,7 @@ class ChatThread extends Entity
     public function getRootMessage()
     {
         if (array_key_exists("rootMessage", $this->_propDict)) {
-            if (is_a($this->_propDict["rootMessage"], "Microsoft\Graph\Model\ChatMessage")) {
+            if (is_a($this->_propDict["rootMessage"], "Microsoft\Graph\Beta\Model\ChatMessage")) {
                 return $this->_propDict["rootMessage"];
             } else {
                 $this->_propDict["rootMessage"] = new ChatMessage($this->_propDict["rootMessage"]);

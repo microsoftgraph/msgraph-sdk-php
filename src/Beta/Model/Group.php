@@ -667,7 +667,7 @@ class Group extends DirectoryObject
     public function getAccessType()
     {
         if (array_key_exists("accessType", $this->_propDict)) {
-            if (is_a($this->_propDict["accessType"], "Microsoft\Graph\Model\GroupAccessType")) {
+            if (is_a($this->_propDict["accessType"], "Microsoft\Graph\Beta\Model\GroupAccessType")) {
                 return $this->_propDict["accessType"];
             } else {
                 $this->_propDict["accessType"] = new GroupAccessType($this->_propDict["accessType"]);
@@ -986,7 +986,7 @@ class Group extends DirectoryObject
     public function getCreatedOnBehalfOf()
     {
         if (array_key_exists("createdOnBehalfOf", $this->_propDict)) {
-            if (is_a($this->_propDict["createdOnBehalfOf"], "Microsoft\Graph\Model\DirectoryObject")) {
+            if (is_a($this->_propDict["createdOnBehalfOf"], "Microsoft\Graph\Beta\Model\DirectoryObject")) {
                 return $this->_propDict["createdOnBehalfOf"];
             } else {
                 $this->_propDict["createdOnBehalfOf"] = new DirectoryObject($this->_propDict["createdOnBehalfOf"]);
@@ -1137,7 +1137,7 @@ class Group extends DirectoryObject
     public function getCalendar()
     {
         if (array_key_exists("calendar", $this->_propDict)) {
-            if (is_a($this->_propDict["calendar"], "Microsoft\Graph\Model\Calendar")) {
+            if (is_a($this->_propDict["calendar"], "Microsoft\Graph\Beta\Model\Calendar")) {
                 return $this->_propDict["calendar"];
             } else {
                 $this->_propDict["calendar"] = new Calendar($this->_propDict["calendar"]);
@@ -1260,7 +1260,7 @@ class Group extends DirectoryObject
     public function getPhoto()
     {
         if (array_key_exists("photo", $this->_propDict)) {
-            if (is_a($this->_propDict["photo"], "Microsoft\Graph\Model\ProfilePhoto")) {
+            if (is_a($this->_propDict["photo"], "Microsoft\Graph\Beta\Model\ProfilePhoto")) {
                 return $this->_propDict["photo"];
             } else {
                 $this->_propDict["photo"] = new ProfilePhoto($this->_propDict["photo"]);
@@ -1383,7 +1383,7 @@ class Group extends DirectoryObject
     public function getDrive()
     {
         if (array_key_exists("drive", $this->_propDict)) {
-            if (is_a($this->_propDict["drive"], "Microsoft\Graph\Model\Drive")) {
+            if (is_a($this->_propDict["drive"], "Microsoft\Graph\Beta\Model\Drive")) {
                 return $this->_propDict["drive"];
             } else {
                 $this->_propDict["drive"] = new Drive($this->_propDict["drive"]);
@@ -1474,7 +1474,7 @@ class Group extends DirectoryObject
     public function getPlanner()
     {
         if (array_key_exists("planner", $this->_propDict)) {
-            if (is_a($this->_propDict["planner"], "Microsoft\Graph\Model\PlannerGroup")) {
+            if (is_a($this->_propDict["planner"], "Microsoft\Graph\Beta\Model\PlannerGroup")) {
                 return $this->_propDict["planner"];
             } else {
                 $this->_propDict["planner"] = new PlannerGroup($this->_propDict["planner"]);
@@ -1507,7 +1507,7 @@ class Group extends DirectoryObject
     public function getOnenote()
     {
         if (array_key_exists("onenote", $this->_propDict)) {
-            if (is_a($this->_propDict["onenote"], "Microsoft\Graph\Model\Onenote")) {
+            if (is_a($this->_propDict["onenote"], "Microsoft\Graph\Beta\Model\Onenote")) {
                 return $this->_propDict["onenote"];
             } else {
                 $this->_propDict["onenote"] = new Onenote($this->_propDict["onenote"]);
@@ -1539,7 +1539,7 @@ class Group extends DirectoryObject
     public function getTeam()
     {
         if (array_key_exists("team", $this->_propDict)) {
-            if (is_a($this->_propDict["team"], "Microsoft\Graph\Model\Team")) {
+            if (is_a($this->_propDict["team"], "Microsoft\Graph\Beta\Model\Team")) {
                 return $this->_propDict["team"];
             } else {
                 $this->_propDict["team"] = new Team($this->_propDict["team"]);

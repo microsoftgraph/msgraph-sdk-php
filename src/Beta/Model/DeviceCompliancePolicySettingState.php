@@ -119,7 +119,7 @@ class DeviceCompliancePolicySettingState extends Entity
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "Microsoft\Graph\Model\ComplianceStatus")) {
+            if (is_a($this->_propDict["state"], "Microsoft\Graph\Beta\Model\ComplianceStatus")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new ComplianceStatus($this->_propDict["state"]);
@@ -320,7 +320,7 @@ class DeviceCompliancePolicySettingState extends Entity
     public function getSources()
     {
         if (array_key_exists("sources", $this->_propDict)) {
-            if (is_a($this->_propDict["sources"], "Microsoft\Graph\Model\SettingSource")) {
+            if (is_a($this->_propDict["sources"], "Microsoft\Graph\Beta\Model\SettingSource")) {
                 return $this->_propDict["sources"];
             } else {
                 $this->_propDict["sources"] = new SettingSource($this->_propDict["sources"]);

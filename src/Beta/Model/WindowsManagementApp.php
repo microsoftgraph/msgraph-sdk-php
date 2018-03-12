@@ -61,7 +61,7 @@ class WindowsManagementApp extends Entity
     public function getHealthSummary()
     {
         if (array_key_exists("healthSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["healthSummary"], "Microsoft\Graph\Model\WindowsManagementAppHealthSummary")) {
+            if (is_a($this->_propDict["healthSummary"], "Microsoft\Graph\Beta\Model\WindowsManagementAppHealthSummary")) {
                 return $this->_propDict["healthSummary"];
             } else {
                 $this->_propDict["healthSummary"] = new WindowsManagementAppHealthSummary($this->_propDict["healthSummary"]);

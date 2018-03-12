@@ -34,7 +34,7 @@ class FollowupFlag extends Entity
     public function getCompletedDateTime()
     {
         if (array_key_exists("completedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["completedDateTime"], "Microsoft\Graph\Model\DateTimeTimeZone")) {
+            if (is_a($this->_propDict["completedDateTime"], "Microsoft\Graph\Beta\Model\DateTimeTimeZone")) {
                 return $this->_propDict["completedDateTime"];
             } else {
                 $this->_propDict["completedDateTime"] = new DateTimeTimeZone($this->_propDict["completedDateTime"]);
@@ -65,7 +65,7 @@ class FollowupFlag extends Entity
     public function getDueDateTime()
     {
         if (array_key_exists("dueDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["dueDateTime"], "Microsoft\Graph\Model\DateTimeTimeZone")) {
+            if (is_a($this->_propDict["dueDateTime"], "Microsoft\Graph\Beta\Model\DateTimeTimeZone")) {
                 return $this->_propDict["dueDateTime"];
             } else {
                 $this->_propDict["dueDateTime"] = new DateTimeTimeZone($this->_propDict["dueDateTime"]);
@@ -96,7 +96,7 @@ class FollowupFlag extends Entity
     public function getStartDateTime()
     {
         if (array_key_exists("startDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startDateTime"], "Microsoft\Graph\Model\DateTimeTimeZone")) {
+            if (is_a($this->_propDict["startDateTime"], "Microsoft\Graph\Beta\Model\DateTimeTimeZone")) {
                 return $this->_propDict["startDateTime"];
             } else {
                 $this->_propDict["startDateTime"] = new DateTimeTimeZone($this->_propDict["startDateTime"]);
@@ -127,7 +127,7 @@ class FollowupFlag extends Entity
     public function getFlagStatus()
     {
         if (array_key_exists("flagStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["flagStatus"], "Microsoft\Graph\Model\FollowupFlagStatus")) {
+            if (is_a($this->_propDict["flagStatus"], "Microsoft\Graph\Beta\Model\FollowupFlagStatus")) {
                 return $this->_propDict["flagStatus"];
             } else {
                 $this->_propDict["flagStatus"] = new FollowupFlagStatus($this->_propDict["flagStatus"]);

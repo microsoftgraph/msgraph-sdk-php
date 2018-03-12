@@ -35,7 +35,7 @@ class RecurrencePattern extends Entity
     public function getType()
     {
         if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "Microsoft\Graph\Model\RecurrencePatternType")) {
+            if (is_a($this->_propDict["type"], "Microsoft\Graph\Beta\Model\RecurrencePatternType")) {
                 return $this->_propDict["type"];
             } else {
                 $this->_propDict["type"] = new RecurrencePatternType($this->_propDict["type"]);
@@ -152,7 +152,7 @@ class RecurrencePattern extends Entity
     public function getDaysOfWeek()
     {
         if (array_key_exists("daysOfWeek", $this->_propDict)) {
-            if (is_a($this->_propDict["daysOfWeek"], "Microsoft\Graph\Model\DayOfWeek")) {
+            if (is_a($this->_propDict["daysOfWeek"], "Microsoft\Graph\Beta\Model\DayOfWeek")) {
                 return $this->_propDict["daysOfWeek"];
             } else {
                 $this->_propDict["daysOfWeek"] = new DayOfWeek($this->_propDict["daysOfWeek"]);
@@ -185,7 +185,7 @@ class RecurrencePattern extends Entity
     public function getFirstDayOfWeek()
     {
         if (array_key_exists("firstDayOfWeek", $this->_propDict)) {
-            if (is_a($this->_propDict["firstDayOfWeek"], "Microsoft\Graph\Model\DayOfWeek")) {
+            if (is_a($this->_propDict["firstDayOfWeek"], "Microsoft\Graph\Beta\Model\DayOfWeek")) {
                 return $this->_propDict["firstDayOfWeek"];
             } else {
                 $this->_propDict["firstDayOfWeek"] = new DayOfWeek($this->_propDict["firstDayOfWeek"]);
@@ -218,7 +218,7 @@ class RecurrencePattern extends Entity
     public function getIndex()
     {
         if (array_key_exists("index", $this->_propDict)) {
-            if (is_a($this->_propDict["index"], "Microsoft\Graph\Model\WeekIndex")) {
+            if (is_a($this->_propDict["index"], "Microsoft\Graph\Beta\Model\WeekIndex")) {
                 return $this->_propDict["index"];
             } else {
                 $this->_propDict["index"] = new WeekIndex($this->_propDict["index"]);

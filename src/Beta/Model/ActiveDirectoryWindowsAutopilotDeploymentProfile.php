@@ -34,7 +34,7 @@ class ActiveDirectoryWindowsAutopilotDeploymentProfile extends WindowsAutopilotD
     public function getDomainJoinConfiguration()
     {
         if (array_key_exists("domainJoinConfiguration", $this->_propDict)) {
-            if (is_a($this->_propDict["domainJoinConfiguration"], "Microsoft\Graph\Model\WindowsDomainJoinConfiguration")) {
+            if (is_a($this->_propDict["domainJoinConfiguration"], "Microsoft\Graph\Beta\Model\WindowsDomainJoinConfiguration")) {
                 return $this->_propDict["domainJoinConfiguration"];
             } else {
                 $this->_propDict["domainJoinConfiguration"] = new WindowsDomainJoinConfiguration($this->_propDict["domainJoinConfiguration"]);

@@ -196,7 +196,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     public function getITunesPairingMode()
     {
         if (array_key_exists("iTunesPairingMode", $this->_propDict)) {
-            if (is_a($this->_propDict["iTunesPairingMode"], "Microsoft\Graph\Model\ITunesPairingMode")) {
+            if (is_a($this->_propDict["iTunesPairingMode"], "Microsoft\Graph\Beta\Model\ITunesPairingMode")) {
                 return $this->_propDict["iTunesPairingMode"];
             } else {
                 $this->_propDict["iTunesPairingMode"] = new ITunesPairingMode($this->_propDict["iTunesPairingMode"]);

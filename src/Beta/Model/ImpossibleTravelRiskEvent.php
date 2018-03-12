@@ -146,7 +146,7 @@ class ImpossibleTravelRiskEvent extends LocatedRiskEvent
     public function getPreviousLocation()
     {
         if (array_key_exists("previousLocation", $this->_propDict)) {
-            if (is_a($this->_propDict["previousLocation"], "Microsoft\Graph\Model\SignInLocation")) {
+            if (is_a($this->_propDict["previousLocation"], "Microsoft\Graph\Beta\Model\SignInLocation")) {
                 return $this->_propDict["previousLocation"];
             } else {
                 $this->_propDict["previousLocation"] = new SignInLocation($this->_propDict["previousLocation"]);

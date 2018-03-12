@@ -203,7 +203,7 @@ class IosNotificationSettings extends Entity
     public function getAlertType()
     {
         if (array_key_exists("alertType", $this->_propDict)) {
-            if (is_a($this->_propDict["alertType"], "Microsoft\Graph\Model\IosNotificationAlertType")) {
+            if (is_a($this->_propDict["alertType"], "Microsoft\Graph\Beta\Model\IosNotificationAlertType")) {
                 return $this->_propDict["alertType"];
             } else {
                 $this->_propDict["alertType"] = new IosNotificationAlertType($this->_propDict["alertType"]);

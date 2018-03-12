@@ -164,7 +164,7 @@ class WorkbookFilterCriteria extends Entity
     public function getIcon()
     {
         if (array_key_exists("icon", $this->_propDict)) {
-            if (is_a($this->_propDict["icon"], "Microsoft\Graph\Model\WorkbookIcon")) {
+            if (is_a($this->_propDict["icon"], "Microsoft\Graph\Beta\Model\WorkbookIcon")) {
                 return $this->_propDict["icon"];
             } else {
                 $this->_propDict["icon"] = new WorkbookIcon($this->_propDict["icon"]);

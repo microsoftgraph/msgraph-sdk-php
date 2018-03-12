@@ -34,7 +34,7 @@ class WindowsManagementAppHealthState extends Entity
     public function getHealthState()
     {
         if (array_key_exists("healthState", $this->_propDict)) {
-            if (is_a($this->_propDict["healthState"], "Microsoft\Graph\Model\HealthState")) {
+            if (is_a($this->_propDict["healthState"], "Microsoft\Graph\Beta\Model\HealthState")) {
                 return $this->_propDict["healthState"];
             } else {
                 $this->_propDict["healthState"] = new HealthState($this->_propDict["healthState"]);

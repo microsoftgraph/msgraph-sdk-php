@@ -146,7 +146,7 @@ class IdentityRiskEvent extends Entity
     public function getRiskLevel()
     {
         if (array_key_exists("riskLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["riskLevel"], "Microsoft\Graph\Model\RiskLevel")) {
+            if (is_a($this->_propDict["riskLevel"], "Microsoft\Graph\Beta\Model\RiskLevel")) {
                 return $this->_propDict["riskLevel"];
             } else {
                 $this->_propDict["riskLevel"] = new RiskLevel($this->_propDict["riskLevel"]);
@@ -177,7 +177,7 @@ class IdentityRiskEvent extends Entity
     public function getRiskEventStatus()
     {
         if (array_key_exists("riskEventStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["riskEventStatus"], "Microsoft\Graph\Model\RiskEventStatus")) {
+            if (is_a($this->_propDict["riskEventStatus"], "Microsoft\Graph\Beta\Model\RiskEventStatus")) {
                 return $this->_propDict["riskEventStatus"];
             } else {
                 $this->_propDict["riskEventStatus"] = new RiskEventStatus($this->_propDict["riskEventStatus"]);
@@ -297,7 +297,7 @@ class IdentityRiskEvent extends Entity
     public function getImpactedUser()
     {
         if (array_key_exists("impactedUser", $this->_propDict)) {
-            if (is_a($this->_propDict["impactedUser"], "Microsoft\Graph\Model\User")) {
+            if (is_a($this->_propDict["impactedUser"], "Microsoft\Graph\Beta\Model\User")) {
                 return $this->_propDict["impactedUser"];
             } else {
                 $this->_propDict["impactedUser"] = new User($this->_propDict["impactedUser"]);

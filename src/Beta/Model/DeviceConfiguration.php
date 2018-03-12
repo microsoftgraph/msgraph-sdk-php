@@ -306,7 +306,7 @@ class DeviceConfiguration extends Entity
     public function getDeviceStatusOverview()
     {
         if (array_key_exists("deviceStatusOverview", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceStatusOverview"], "Microsoft\Graph\Model\DeviceConfigurationDeviceOverview")) {
+            if (is_a($this->_propDict["deviceStatusOverview"], "Microsoft\Graph\Beta\Model\DeviceConfigurationDeviceOverview")) {
                 return $this->_propDict["deviceStatusOverview"];
             } else {
                 $this->_propDict["deviceStatusOverview"] = new DeviceConfigurationDeviceOverview($this->_propDict["deviceStatusOverview"]);
@@ -339,7 +339,7 @@ class DeviceConfiguration extends Entity
     public function getUserStatusOverview()
     {
         if (array_key_exists("userStatusOverview", $this->_propDict)) {
-            if (is_a($this->_propDict["userStatusOverview"], "Microsoft\Graph\Model\DeviceConfigurationUserOverview")) {
+            if (is_a($this->_propDict["userStatusOverview"], "Microsoft\Graph\Beta\Model\DeviceConfigurationUserOverview")) {
                 return $this->_propDict["userStatusOverview"];
             } else {
                 $this->_propDict["userStatusOverview"] = new DeviceConfigurationUserOverview($this->_propDict["userStatusOverview"]);

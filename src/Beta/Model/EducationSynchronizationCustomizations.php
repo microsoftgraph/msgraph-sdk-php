@@ -34,7 +34,7 @@ class EducationSynchronizationCustomizations extends EducationSynchronizationCus
     public function getSchool()
     {
         if (array_key_exists("school", $this->_propDict)) {
-            if (is_a($this->_propDict["school"], "Microsoft\Graph\Model\EducationSynchronizationCustomization")) {
+            if (is_a($this->_propDict["school"], "Microsoft\Graph\Beta\Model\EducationSynchronizationCustomization")) {
                 return $this->_propDict["school"];
             } else {
                 $this->_propDict["school"] = new EducationSynchronizationCustomization($this->_propDict["school"]);
@@ -65,7 +65,7 @@ class EducationSynchronizationCustomizations extends EducationSynchronizationCus
     public function getSection()
     {
         if (array_key_exists("section", $this->_propDict)) {
-            if (is_a($this->_propDict["section"], "Microsoft\Graph\Model\EducationSynchronizationCustomization")) {
+            if (is_a($this->_propDict["section"], "Microsoft\Graph\Beta\Model\EducationSynchronizationCustomization")) {
                 return $this->_propDict["section"];
             } else {
                 $this->_propDict["section"] = new EducationSynchronizationCustomization($this->_propDict["section"]);
@@ -96,7 +96,7 @@ class EducationSynchronizationCustomizations extends EducationSynchronizationCus
     public function getStudent()
     {
         if (array_key_exists("student", $this->_propDict)) {
-            if (is_a($this->_propDict["student"], "Microsoft\Graph\Model\EducationSynchronizationCustomization")) {
+            if (is_a($this->_propDict["student"], "Microsoft\Graph\Beta\Model\EducationSynchronizationCustomization")) {
                 return $this->_propDict["student"];
             } else {
                 $this->_propDict["student"] = new EducationSynchronizationCustomization($this->_propDict["student"]);
@@ -127,7 +127,7 @@ class EducationSynchronizationCustomizations extends EducationSynchronizationCus
     public function getTeacher()
     {
         if (array_key_exists("teacher", $this->_propDict)) {
-            if (is_a($this->_propDict["teacher"], "Microsoft\Graph\Model\EducationSynchronizationCustomization")) {
+            if (is_a($this->_propDict["teacher"], "Microsoft\Graph\Beta\Model\EducationSynchronizationCustomization")) {
                 return $this->_propDict["teacher"];
             } else {
                 $this->_propDict["teacher"] = new EducationSynchronizationCustomization($this->_propDict["teacher"]);
@@ -158,7 +158,7 @@ class EducationSynchronizationCustomizations extends EducationSynchronizationCus
     public function getStudentEnrollment()
     {
         if (array_key_exists("studentEnrollment", $this->_propDict)) {
-            if (is_a($this->_propDict["studentEnrollment"], "Microsoft\Graph\Model\EducationSynchronizationCustomization")) {
+            if (is_a($this->_propDict["studentEnrollment"], "Microsoft\Graph\Beta\Model\EducationSynchronizationCustomization")) {
                 return $this->_propDict["studentEnrollment"];
             } else {
                 $this->_propDict["studentEnrollment"] = new EducationSynchronizationCustomization($this->_propDict["studentEnrollment"]);
@@ -189,7 +189,7 @@ class EducationSynchronizationCustomizations extends EducationSynchronizationCus
     public function getTeacherRoster()
     {
         if (array_key_exists("teacherRoster", $this->_propDict)) {
-            if (is_a($this->_propDict["teacherRoster"], "Microsoft\Graph\Model\EducationSynchronizationCustomization")) {
+            if (is_a($this->_propDict["teacherRoster"], "Microsoft\Graph\Beta\Model\EducationSynchronizationCustomization")) {
                 return $this->_propDict["teacherRoster"];
             } else {
                 $this->_propDict["teacherRoster"] = new EducationSynchronizationCustomization($this->_propDict["teacherRoster"]);

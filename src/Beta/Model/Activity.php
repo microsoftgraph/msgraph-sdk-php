@@ -34,7 +34,7 @@ class Activity extends Entity
     public function getVisualElements()
     {
         if (array_key_exists("visualElements", $this->_propDict)) {
-            if (is_a($this->_propDict["visualElements"], "Microsoft\Graph\Model\VisualInfo")) {
+            if (is_a($this->_propDict["visualElements"], "Microsoft\Graph\Beta\Model\VisualInfo")) {
                 return $this->_propDict["visualElements"];
             } else {
                 $this->_propDict["visualElements"] = new VisualInfo($this->_propDict["visualElements"]);

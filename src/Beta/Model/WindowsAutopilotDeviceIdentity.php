@@ -34,7 +34,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     public function getDeploymentProfileAssignmentStatus()
     {
         if (array_key_exists("deploymentProfileAssignmentStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["deploymentProfileAssignmentStatus"], "Microsoft\Graph\Model\WindowsAutopilotProfileAssignmentStatus")) {
+            if (is_a($this->_propDict["deploymentProfileAssignmentStatus"], "Microsoft\Graph\Beta\Model\WindowsAutopilotProfileAssignmentStatus")) {
                 return $this->_propDict["deploymentProfileAssignmentStatus"];
             } else {
                 $this->_propDict["deploymentProfileAssignmentStatus"] = new WindowsAutopilotProfileAssignmentStatus($this->_propDict["deploymentProfileAssignmentStatus"]);
@@ -231,7 +231,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     public function getEnrollmentState()
     {
         if (array_key_exists("enrollmentState", $this->_propDict)) {
-            if (is_a($this->_propDict["enrollmentState"], "Microsoft\Graph\Model\EnrollmentState")) {
+            if (is_a($this->_propDict["enrollmentState"], "Microsoft\Graph\Beta\Model\EnrollmentState")) {
                 return $this->_propDict["enrollmentState"];
             } else {
                 $this->_propDict["enrollmentState"] = new EnrollmentState($this->_propDict["enrollmentState"]);
@@ -293,7 +293,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     public function getDeploymentProfile()
     {
         if (array_key_exists("deploymentProfile", $this->_propDict)) {
-            if (is_a($this->_propDict["deploymentProfile"], "Microsoft\Graph\Model\WindowsAutopilotDeploymentProfile")) {
+            if (is_a($this->_propDict["deploymentProfile"], "Microsoft\Graph\Beta\Model\WindowsAutopilotDeploymentProfile")) {
                 return $this->_propDict["deploymentProfile"];
             } else {
                 $this->_propDict["deploymentProfile"] = new WindowsAutopilotDeploymentProfile($this->_propDict["deploymentProfile"]);

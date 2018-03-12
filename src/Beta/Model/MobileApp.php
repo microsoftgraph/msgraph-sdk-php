@@ -122,7 +122,7 @@ class MobileApp extends Entity
     public function getLargeIcon()
     {
         if (array_key_exists("largeIcon", $this->_propDict)) {
-            if (is_a($this->_propDict["largeIcon"], "Microsoft\Graph\Model\MimeContent")) {
+            if (is_a($this->_propDict["largeIcon"], "Microsoft\Graph\Beta\Model\MimeContent")) {
                 return $this->_propDict["largeIcon"];
             } else {
                 $this->_propDict["largeIcon"] = new MimeContent($this->_propDict["largeIcon"]);
@@ -422,7 +422,7 @@ class MobileApp extends Entity
     public function getPublishingState()
     {
         if (array_key_exists("publishingState", $this->_propDict)) {
-            if (is_a($this->_propDict["publishingState"], "Microsoft\Graph\Model\MobileAppPublishingState")) {
+            if (is_a($this->_propDict["publishingState"], "Microsoft\Graph\Beta\Model\MobileAppPublishingState")) {
                 return $this->_propDict["publishingState"];
             } else {
                 $this->_propDict["publishingState"] = new MobileAppPublishingState($this->_propDict["publishingState"]);
@@ -514,7 +514,7 @@ class MobileApp extends Entity
     public function getInstallSummary()
     {
         if (array_key_exists("installSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["installSummary"], "Microsoft\Graph\Model\MobileAppInstallSummary")) {
+            if (is_a($this->_propDict["installSummary"], "Microsoft\Graph\Beta\Model\MobileAppInstallSummary")) {
                 return $this->_propDict["installSummary"];
             } else {
                 $this->_propDict["installSummary"] = new MobileAppInstallSummary($this->_propDict["installSummary"]);

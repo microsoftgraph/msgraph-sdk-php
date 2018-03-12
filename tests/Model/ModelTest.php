@@ -80,7 +80,11 @@ class ModelTest extends TestCase
         $drive = new Model\Drive();
         $drive->setRoot(new Model\DriveItem());
         $results = $drive->getRoot();
+        print_r($results);
         $results2 = $drive->getRoot();
+        print_r($results2);
+        $results3 = $drive->getRoot();
+        print_r($results3);
         $this->assertInstanceOf(Model\DriveItem::class, $results);
         $this->assertInstanceOf(Model\DriveItem::class, $results2);
         $this->assertEquals($results, $results2);

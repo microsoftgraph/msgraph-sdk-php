@@ -64,7 +64,7 @@ class PlannerAssignedToTaskBoardTaskFormat extends Entity
     public function getOrderHintsByAssignee()
     {
         if (array_key_exists("orderHintsByAssignee", $this->_propDict)) {
-            if (is_a($this->_propDict["orderHintsByAssignee"], "Microsoft\Graph\Model\PlannerOrderHintsByAssignee")) {
+            if (is_a($this->_propDict["orderHintsByAssignee"], "Microsoft\Graph\Beta\Model\PlannerOrderHintsByAssignee")) {
                 return $this->_propDict["orderHintsByAssignee"];
             } else {
                 $this->_propDict["orderHintsByAssignee"] = new PlannerOrderHintsByAssignee($this->_propDict["orderHintsByAssignee"]);

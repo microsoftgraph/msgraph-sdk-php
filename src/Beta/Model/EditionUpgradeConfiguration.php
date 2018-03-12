@@ -35,7 +35,7 @@ class EditionUpgradeConfiguration extends DeviceConfiguration
     public function getLicenseType()
     {
         if (array_key_exists("licenseType", $this->_propDict)) {
-            if (is_a($this->_propDict["licenseType"], "Microsoft\Graph\Model\EditionUpgradeLicenseType")) {
+            if (is_a($this->_propDict["licenseType"], "Microsoft\Graph\Beta\Model\EditionUpgradeLicenseType")) {
                 return $this->_propDict["licenseType"];
             } else {
                 $this->_propDict["licenseType"] = new EditionUpgradeLicenseType($this->_propDict["licenseType"]);
@@ -68,7 +68,7 @@ class EditionUpgradeConfiguration extends DeviceConfiguration
     public function getTargetEdition()
     {
         if (array_key_exists("targetEdition", $this->_propDict)) {
-            if (is_a($this->_propDict["targetEdition"], "Microsoft\Graph\Model\Windows10EditionType")) {
+            if (is_a($this->_propDict["targetEdition"], "Microsoft\Graph\Beta\Model\Windows10EditionType")) {
                 return $this->_propDict["targetEdition"];
             } else {
                 $this->_propDict["targetEdition"] = new Windows10EditionType($this->_propDict["targetEdition"]);

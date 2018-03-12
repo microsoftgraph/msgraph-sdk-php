@@ -60,7 +60,7 @@ class EducationOneRosterApiDataProvider extends EducationSynchronizationDataProv
     public function getConnectionSettings()
     {
         if (array_key_exists("connectionSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["connectionSettings"], "Microsoft\Graph\Model\EducationSynchronizationConnectionSettings")) {
+            if (is_a($this->_propDict["connectionSettings"], "Microsoft\Graph\Beta\Model\EducationSynchronizationConnectionSettings")) {
                 return $this->_propDict["connectionSettings"];
             } else {
                 $this->_propDict["connectionSettings"] = new EducationSynchronizationConnectionSettings($this->_propDict["connectionSettings"]);
@@ -143,7 +143,7 @@ class EducationOneRosterApiDataProvider extends EducationSynchronizationDataProv
     public function getCustomizations()
     {
         if (array_key_exists("customizations", $this->_propDict)) {
-            if (is_a($this->_propDict["customizations"], "Microsoft\Graph\Model\EducationSynchronizationCustomizations")) {
+            if (is_a($this->_propDict["customizations"], "Microsoft\Graph\Beta\Model\EducationSynchronizationCustomizations")) {
                 return $this->_propDict["customizations"];
             } else {
                 $this->_propDict["customizations"] = new EducationSynchronizationCustomizations($this->_propDict["customizations"]);

@@ -34,7 +34,7 @@ class LocatedRiskEvent extends IdentityRiskEvent
     public function getLocation()
     {
         if (array_key_exists("location", $this->_propDict)) {
-            if (is_a($this->_propDict["location"], "Microsoft\Graph\Model\SignInLocation")) {
+            if (is_a($this->_propDict["location"], "Microsoft\Graph\Beta\Model\SignInLocation")) {
                 return $this->_propDict["location"];
             } else {
                 $this->_propDict["location"] = new SignInLocation($this->_propDict["location"]);

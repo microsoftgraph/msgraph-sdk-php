@@ -34,7 +34,7 @@ class MeetingTimeCandidatesResult extends Entity
     public function getMeetingTimeSlots()
     {
         if (array_key_exists("meetingTimeSlots", $this->_propDict)) {
-            if (is_a($this->_propDict["meetingTimeSlots"], "Microsoft\Graph\Model\MeetingTimeCandidate")) {
+            if (is_a($this->_propDict["meetingTimeSlots"], "Microsoft\Graph\Beta\Model\MeetingTimeCandidate")) {
                 return $this->_propDict["meetingTimeSlots"];
             } else {
                 $this->_propDict["meetingTimeSlots"] = new MeetingTimeCandidate($this->_propDict["meetingTimeSlots"]);

@@ -64,7 +64,7 @@ class Notebook extends OnenoteEntityHierarchyModel
     public function getUserRole()
     {
         if (array_key_exists("userRole", $this->_propDict)) {
-            if (is_a($this->_propDict["userRole"], "Microsoft\Graph\Model\OnenoteUserRole")) {
+            if (is_a($this->_propDict["userRole"], "Microsoft\Graph\Beta\Model\OnenoteUserRole")) {
                 return $this->_propDict["userRole"];
             } else {
                 $this->_propDict["userRole"] = new OnenoteUserRole($this->_propDict["userRole"]);
@@ -184,7 +184,7 @@ class Notebook extends OnenoteEntityHierarchyModel
     public function getLinks()
     {
         if (array_key_exists("links", $this->_propDict)) {
-            if (is_a($this->_propDict["links"], "Microsoft\Graph\Model\NotebookLinks")) {
+            if (is_a($this->_propDict["links"], "Microsoft\Graph\Beta\Model\NotebookLinks")) {
                 return $this->_propDict["links"];
             } else {
                 $this->_propDict["links"] = new NotebookLinks($this->_propDict["links"]);

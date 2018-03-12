@@ -35,7 +35,7 @@ class ManagedAppPolicyDeploymentSummaryPerApp extends Entity
     public function getMobileAppIdentifier()
     {
         if (array_key_exists("mobileAppIdentifier", $this->_propDict)) {
-            if (is_a($this->_propDict["mobileAppIdentifier"], "Microsoft\Graph\Model\MobileAppIdentifier")) {
+            if (is_a($this->_propDict["mobileAppIdentifier"], "Microsoft\Graph\Beta\Model\MobileAppIdentifier")) {
                 return $this->_propDict["mobileAppIdentifier"];
             } else {
                 $this->_propDict["mobileAppIdentifier"] = new MobileAppIdentifier($this->_propDict["mobileAppIdentifier"]);

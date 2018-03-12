@@ -88,7 +88,7 @@ class IosScepCertificateProfile extends IosCertificateProfileBase
     public function getKeyUsage()
     {
         if (array_key_exists("keyUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["keyUsage"], "Microsoft\Graph\Model\KeyUsages")) {
+            if (is_a($this->_propDict["keyUsage"], "Microsoft\Graph\Beta\Model\KeyUsages")) {
                 return $this->_propDict["keyUsage"];
             } else {
                 $this->_propDict["keyUsage"] = new KeyUsages($this->_propDict["keyUsage"]);
@@ -119,7 +119,7 @@ class IosScepCertificateProfile extends IosCertificateProfileBase
     public function getKeySize()
     {
         if (array_key_exists("keySize", $this->_propDict)) {
-            if (is_a($this->_propDict["keySize"], "Microsoft\Graph\Model\KeySize")) {
+            if (is_a($this->_propDict["keySize"], "Microsoft\Graph\Beta\Model\KeySize")) {
                 return $this->_propDict["keySize"];
             } else {
                 $this->_propDict["keySize"] = new KeySize($this->_propDict["keySize"]);
@@ -205,7 +205,7 @@ class IosScepCertificateProfile extends IosCertificateProfileBase
     public function getRootCertificate()
     {
         if (array_key_exists("rootCertificate", $this->_propDict)) {
-            if (is_a($this->_propDict["rootCertificate"], "Microsoft\Graph\Model\IosTrustedRootCertificate")) {
+            if (is_a($this->_propDict["rootCertificate"], "Microsoft\Graph\Beta\Model\IosTrustedRootCertificate")) {
                 return $this->_propDict["rootCertificate"];
             } else {
                 $this->_propDict["rootCertificate"] = new IosTrustedRootCertificate($this->_propDict["rootCertificate"]);

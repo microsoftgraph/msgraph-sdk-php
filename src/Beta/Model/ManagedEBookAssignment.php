@@ -35,7 +35,7 @@ class ManagedEBookAssignment extends Entity
     public function getTarget()
     {
         if (array_key_exists("target", $this->_propDict)) {
-            if (is_a($this->_propDict["target"], "Microsoft\Graph\Model\DeviceAndAppManagementAssignmentTarget")) {
+            if (is_a($this->_propDict["target"], "Microsoft\Graph\Beta\Model\DeviceAndAppManagementAssignmentTarget")) {
                 return $this->_propDict["target"];
             } else {
                 $this->_propDict["target"] = new DeviceAndAppManagementAssignmentTarget($this->_propDict["target"]);
@@ -68,7 +68,7 @@ class ManagedEBookAssignment extends Entity
     public function getInstallIntent()
     {
         if (array_key_exists("installIntent", $this->_propDict)) {
-            if (is_a($this->_propDict["installIntent"], "Microsoft\Graph\Model\InstallIntent")) {
+            if (is_a($this->_propDict["installIntent"], "Microsoft\Graph\Beta\Model\InstallIntent")) {
                 return $this->_propDict["installIntent"];
             } else {
                 $this->_propDict["installIntent"] = new InstallIntent($this->_propDict["installIntent"]);

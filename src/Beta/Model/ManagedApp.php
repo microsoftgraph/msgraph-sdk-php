@@ -35,7 +35,7 @@ class ManagedApp extends MobileApp
     public function getAppAvailability()
     {
         if (array_key_exists("appAvailability", $this->_propDict)) {
-            if (is_a($this->_propDict["appAvailability"], "Microsoft\Graph\Model\ManagedAppAvailability")) {
+            if (is_a($this->_propDict["appAvailability"], "Microsoft\Graph\Beta\Model\ManagedAppAvailability")) {
                 return $this->_propDict["appAvailability"];
             } else {
                 $this->_propDict["appAvailability"] = new ManagedAppAvailability($this->_propDict["appAvailability"]);

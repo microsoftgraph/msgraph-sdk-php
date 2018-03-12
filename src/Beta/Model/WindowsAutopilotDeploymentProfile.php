@@ -150,7 +150,7 @@ class WindowsAutopilotDeploymentProfile extends Entity
     public function getOutOfBoxExperienceSettings()
     {
         if (array_key_exists("outOfBoxExperienceSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["outOfBoxExperienceSettings"], "Microsoft\Graph\Model\OutOfBoxExperienceSettings")) {
+            if (is_a($this->_propDict["outOfBoxExperienceSettings"], "Microsoft\Graph\Beta\Model\OutOfBoxExperienceSettings")) {
                 return $this->_propDict["outOfBoxExperienceSettings"];
             } else {
                 $this->_propDict["outOfBoxExperienceSettings"] = new OutOfBoxExperienceSettings($this->_propDict["outOfBoxExperienceSettings"]);

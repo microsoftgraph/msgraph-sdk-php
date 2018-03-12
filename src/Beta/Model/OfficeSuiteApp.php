@@ -89,7 +89,7 @@ class OfficeSuiteApp extends MobileApp
     public function getExcludedApps()
     {
         if (array_key_exists("excludedApps", $this->_propDict)) {
-            if (is_a($this->_propDict["excludedApps"], "Microsoft\Graph\Model\ExcludedApps")) {
+            if (is_a($this->_propDict["excludedApps"], "Microsoft\Graph\Beta\Model\ExcludedApps")) {
                 return $this->_propDict["excludedApps"];
             } else {
                 $this->_propDict["excludedApps"] = new ExcludedApps($this->_propDict["excludedApps"]);
@@ -147,7 +147,7 @@ class OfficeSuiteApp extends MobileApp
     public function getUpdateChannel()
     {
         if (array_key_exists("updateChannel", $this->_propDict)) {
-            if (is_a($this->_propDict["updateChannel"], "Microsoft\Graph\Model\OfficeUpdateChannel")) {
+            if (is_a($this->_propDict["updateChannel"], "Microsoft\Graph\Beta\Model\OfficeUpdateChannel")) {
                 return $this->_propDict["updateChannel"];
             } else {
                 $this->_propDict["updateChannel"] = new OfficeUpdateChannel($this->_propDict["updateChannel"]);
@@ -178,7 +178,7 @@ class OfficeSuiteApp extends MobileApp
     public function getOfficePlatformArchitecture()
     {
         if (array_key_exists("officePlatformArchitecture", $this->_propDict)) {
-            if (is_a($this->_propDict["officePlatformArchitecture"], "Microsoft\Graph\Model\WindowsArchitecture")) {
+            if (is_a($this->_propDict["officePlatformArchitecture"], "Microsoft\Graph\Beta\Model\WindowsArchitecture")) {
                 return $this->_propDict["officePlatformArchitecture"];
             } else {
                 $this->_propDict["officePlatformArchitecture"] = new WindowsArchitecture($this->_propDict["officePlatformArchitecture"]);
@@ -236,7 +236,7 @@ class OfficeSuiteApp extends MobileApp
     public function getInstallProgressDisplayLevel()
     {
         if (array_key_exists("installProgressDisplayLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["installProgressDisplayLevel"], "Microsoft\Graph\Model\OfficeSuiteInstallProgressDisplayLevel")) {
+            if (is_a($this->_propDict["installProgressDisplayLevel"], "Microsoft\Graph\Beta\Model\OfficeSuiteInstallProgressDisplayLevel")) {
                 return $this->_propDict["installProgressDisplayLevel"];
             } else {
                 $this->_propDict["installProgressDisplayLevel"] = new OfficeSuiteInstallProgressDisplayLevel($this->_propDict["installProgressDisplayLevel"]);

@@ -34,7 +34,7 @@ class StandardTimeZoneOffset extends Entity
     public function getTime()
     {
         if (array_key_exists("time", $this->_propDict)) {
-            if (is_a($this->_propDict["time"], "Microsoft\Graph\Model\TimeOfDay")) {
+            if (is_a($this->_propDict["time"], "Microsoft\Graph\Beta\Model\TimeOfDay")) {
                 return $this->_propDict["time"];
             } else {
                 $this->_propDict["time"] = new TimeOfDay($this->_propDict["time"]);
@@ -91,7 +91,7 @@ class StandardTimeZoneOffset extends Entity
     public function getDayOfWeek()
     {
         if (array_key_exists("dayOfWeek", $this->_propDict)) {
-            if (is_a($this->_propDict["dayOfWeek"], "Microsoft\Graph\Model\DayOfWeek")) {
+            if (is_a($this->_propDict["dayOfWeek"], "Microsoft\Graph\Beta\Model\DayOfWeek")) {
                 return $this->_propDict["dayOfWeek"];
             } else {
                 $this->_propDict["dayOfWeek"] = new DayOfWeek($this->_propDict["dayOfWeek"]);

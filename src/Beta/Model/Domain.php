@@ -267,7 +267,7 @@ class Domain extends Entity
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "Microsoft\Graph\Model\DomainState")) {
+            if (is_a($this->_propDict["state"], "Microsoft\Graph\Beta\Model\DomainState")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new DomainState($this->_propDict["state"]);

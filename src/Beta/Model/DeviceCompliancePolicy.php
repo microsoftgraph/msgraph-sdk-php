@@ -278,7 +278,7 @@ class DeviceCompliancePolicy extends Entity
     public function getDeviceStatusOverview()
     {
         if (array_key_exists("deviceStatusOverview", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceStatusOverview"], "Microsoft\Graph\Model\DeviceComplianceDeviceOverview")) {
+            if (is_a($this->_propDict["deviceStatusOverview"], "Microsoft\Graph\Beta\Model\DeviceComplianceDeviceOverview")) {
                 return $this->_propDict["deviceStatusOverview"];
             } else {
                 $this->_propDict["deviceStatusOverview"] = new DeviceComplianceDeviceOverview($this->_propDict["deviceStatusOverview"]);
@@ -311,7 +311,7 @@ class DeviceCompliancePolicy extends Entity
     public function getUserStatusOverview()
     {
         if (array_key_exists("userStatusOverview", $this->_propDict)) {
-            if (is_a($this->_propDict["userStatusOverview"], "Microsoft\Graph\Model\DeviceComplianceUserOverview")) {
+            if (is_a($this->_propDict["userStatusOverview"], "Microsoft\Graph\Beta\Model\DeviceComplianceUserOverview")) {
                 return $this->_propDict["userStatusOverview"];
             } else {
                 $this->_propDict["userStatusOverview"] = new DeviceComplianceUserOverview($this->_propDict["userStatusOverview"]);

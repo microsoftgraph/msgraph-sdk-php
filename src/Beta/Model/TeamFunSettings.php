@@ -60,7 +60,7 @@ class TeamFunSettings extends Entity
     public function getGiphyContentRating()
     {
         if (array_key_exists("giphyContentRating", $this->_propDict)) {
-            if (is_a($this->_propDict["giphyContentRating"], "Microsoft\Graph\Model\GiphyRatingType")) {
+            if (is_a($this->_propDict["giphyContentRating"], "Microsoft\Graph\Beta\Model\GiphyRatingType")) {
                 return $this->_propDict["giphyContentRating"];
             } else {
                 $this->_propDict["giphyContentRating"] = new GiphyRatingType($this->_propDict["giphyContentRating"]);

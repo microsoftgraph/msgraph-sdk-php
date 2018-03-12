@@ -115,7 +115,7 @@ class PrivilegedApproval extends Entity
     public function getApprovalState()
     {
         if (array_key_exists("approvalState", $this->_propDict)) {
-            if (is_a($this->_propDict["approvalState"], "Microsoft\Graph\Model\ApprovalState")) {
+            if (is_a($this->_propDict["approvalState"], "Microsoft\Graph\Beta\Model\ApprovalState")) {
                 return $this->_propDict["approvalState"];
             } else {
                 $this->_propDict["approvalState"] = new ApprovalState($this->_propDict["approvalState"]);
@@ -146,7 +146,7 @@ class PrivilegedApproval extends Entity
     public function getApprovalDuration()
     {
         if (array_key_exists("approvalDuration", $this->_propDict)) {
-            if (is_a($this->_propDict["approvalDuration"], "Microsoft\Graph\Model\Duration")) {
+            if (is_a($this->_propDict["approvalDuration"], "Microsoft\Graph\Beta\Model\Duration")) {
                 return $this->_propDict["approvalDuration"];
             } else {
                 $this->_propDict["approvalDuration"] = new Duration($this->_propDict["approvalDuration"]);
@@ -293,7 +293,7 @@ class PrivilegedApproval extends Entity
     public function getRoleInfo()
     {
         if (array_key_exists("roleInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["roleInfo"], "Microsoft\Graph\Model\PrivilegedRole")) {
+            if (is_a($this->_propDict["roleInfo"], "Microsoft\Graph\Beta\Model\PrivilegedRole")) {
                 return $this->_propDict["roleInfo"];
             } else {
                 $this->_propDict["roleInfo"] = new PrivilegedRole($this->_propDict["roleInfo"]);

@@ -35,7 +35,7 @@ class PlannerTask extends Entity
     public function getCreatedBy()
     {
         if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["createdBy"], "Microsoft\Graph\Beta\Model\IdentitySet")) {
                 return $this->_propDict["createdBy"];
             } else {
                 $this->_propDict["createdBy"] = new IdentitySet($this->_propDict["createdBy"]);
@@ -370,7 +370,7 @@ class PlannerTask extends Entity
     public function getPreviewType()
     {
         if (array_key_exists("previewType", $this->_propDict)) {
-            if (is_a($this->_propDict["previewType"], "Microsoft\Graph\Model\PlannerPreviewType")) {
+            if (is_a($this->_propDict["previewType"], "Microsoft\Graph\Beta\Model\PlannerPreviewType")) {
                 return $this->_propDict["previewType"];
             } else {
                 $this->_propDict["previewType"] = new PlannerPreviewType($this->_propDict["previewType"]);
@@ -436,7 +436,7 @@ class PlannerTask extends Entity
     public function getCompletedBy()
     {
         if (array_key_exists("completedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["completedBy"], "Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["completedBy"], "Microsoft\Graph\Beta\Model\IdentitySet")) {
                 return $this->_propDict["completedBy"];
             } else {
                 $this->_propDict["completedBy"] = new IdentitySet($this->_propDict["completedBy"]);
@@ -556,7 +556,7 @@ class PlannerTask extends Entity
     public function getAppliedCategories()
     {
         if (array_key_exists("appliedCategories", $this->_propDict)) {
-            if (is_a($this->_propDict["appliedCategories"], "Microsoft\Graph\Model\PlannerAppliedCategories")) {
+            if (is_a($this->_propDict["appliedCategories"], "Microsoft\Graph\Beta\Model\PlannerAppliedCategories")) {
                 return $this->_propDict["appliedCategories"];
             } else {
                 $this->_propDict["appliedCategories"] = new PlannerAppliedCategories($this->_propDict["appliedCategories"]);
@@ -589,7 +589,7 @@ class PlannerTask extends Entity
     public function getAssignments()
     {
         if (array_key_exists("assignments", $this->_propDict)) {
-            if (is_a($this->_propDict["assignments"], "Microsoft\Graph\Model\PlannerAssignments")) {
+            if (is_a($this->_propDict["assignments"], "Microsoft\Graph\Beta\Model\PlannerAssignments")) {
                 return $this->_propDict["assignments"];
             } else {
                 $this->_propDict["assignments"] = new PlannerAssignments($this->_propDict["assignments"]);
@@ -651,7 +651,7 @@ class PlannerTask extends Entity
     public function getDetails()
     {
         if (array_key_exists("details", $this->_propDict)) {
-            if (is_a($this->_propDict["details"], "Microsoft\Graph\Model\PlannerTaskDetails")) {
+            if (is_a($this->_propDict["details"], "Microsoft\Graph\Beta\Model\PlannerTaskDetails")) {
                 return $this->_propDict["details"];
             } else {
                 $this->_propDict["details"] = new PlannerTaskDetails($this->_propDict["details"]);
@@ -684,7 +684,7 @@ class PlannerTask extends Entity
     public function getAssignedToTaskBoardFormat()
     {
         if (array_key_exists("assignedToTaskBoardFormat", $this->_propDict)) {
-            if (is_a($this->_propDict["assignedToTaskBoardFormat"], "Microsoft\Graph\Model\PlannerAssignedToTaskBoardTaskFormat")) {
+            if (is_a($this->_propDict["assignedToTaskBoardFormat"], "Microsoft\Graph\Beta\Model\PlannerAssignedToTaskBoardTaskFormat")) {
                 return $this->_propDict["assignedToTaskBoardFormat"];
             } else {
                 $this->_propDict["assignedToTaskBoardFormat"] = new PlannerAssignedToTaskBoardTaskFormat($this->_propDict["assignedToTaskBoardFormat"]);
@@ -717,7 +717,7 @@ class PlannerTask extends Entity
     public function getProgressTaskBoardFormat()
     {
         if (array_key_exists("progressTaskBoardFormat", $this->_propDict)) {
-            if (is_a($this->_propDict["progressTaskBoardFormat"], "Microsoft\Graph\Model\PlannerProgressTaskBoardTaskFormat")) {
+            if (is_a($this->_propDict["progressTaskBoardFormat"], "Microsoft\Graph\Beta\Model\PlannerProgressTaskBoardTaskFormat")) {
                 return $this->_propDict["progressTaskBoardFormat"];
             } else {
                 $this->_propDict["progressTaskBoardFormat"] = new PlannerProgressTaskBoardTaskFormat($this->_propDict["progressTaskBoardFormat"]);
@@ -750,7 +750,7 @@ class PlannerTask extends Entity
     public function getBucketTaskBoardFormat()
     {
         if (array_key_exists("bucketTaskBoardFormat", $this->_propDict)) {
-            if (is_a($this->_propDict["bucketTaskBoardFormat"], "Microsoft\Graph\Model\PlannerBucketTaskBoardTaskFormat")) {
+            if (is_a($this->_propDict["bucketTaskBoardFormat"], "Microsoft\Graph\Beta\Model\PlannerBucketTaskBoardTaskFormat")) {
                 return $this->_propDict["bucketTaskBoardFormat"];
             } else {
                 $this->_propDict["bucketTaskBoardFormat"] = new PlannerBucketTaskBoardTaskFormat($this->_propDict["bucketTaskBoardFormat"]);

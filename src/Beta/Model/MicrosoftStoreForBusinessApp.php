@@ -122,7 +122,7 @@ class MicrosoftStoreForBusinessApp extends MobileApp
     public function getLicenseType()
     {
         if (array_key_exists("licenseType", $this->_propDict)) {
-            if (is_a($this->_propDict["licenseType"], "Microsoft\Graph\Model\MicrosoftStoreForBusinessLicenseType")) {
+            if (is_a($this->_propDict["licenseType"], "Microsoft\Graph\Beta\Model\MicrosoftStoreForBusinessLicenseType")) {
                 return $this->_propDict["licenseType"];
             } else {
                 $this->_propDict["licenseType"] = new MicrosoftStoreForBusinessLicenseType($this->_propDict["licenseType"]);

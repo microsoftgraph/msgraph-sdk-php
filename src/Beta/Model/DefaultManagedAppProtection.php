@@ -35,7 +35,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     public function getAppDataEncryptionType()
     {
         if (array_key_exists("appDataEncryptionType", $this->_propDict)) {
-            if (is_a($this->_propDict["appDataEncryptionType"], "Microsoft\Graph\Model\ManagedAppDataEncryptionType")) {
+            if (is_a($this->_propDict["appDataEncryptionType"], "Microsoft\Graph\Beta\Model\ManagedAppDataEncryptionType")) {
                 return $this->_propDict["appDataEncryptionType"];
             } else {
                 $this->_propDict["appDataEncryptionType"] = new ManagedAppDataEncryptionType($this->_propDict["appDataEncryptionType"]);
@@ -416,7 +416,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     public function getDeploymentSummary()
     {
         if (array_key_exists("deploymentSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["deploymentSummary"], "Microsoft\Graph\Model\ManagedAppPolicyDeploymentSummary")) {
+            if (is_a($this->_propDict["deploymentSummary"], "Microsoft\Graph\Beta\Model\ManagedAppPolicyDeploymentSummary")) {
                 return $this->_propDict["deploymentSummary"];
             } else {
                 $this->_propDict["deploymentSummary"] = new ManagedAppPolicyDeploymentSummary($this->_propDict["deploymentSummary"]);

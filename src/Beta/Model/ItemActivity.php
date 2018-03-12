@@ -34,7 +34,7 @@ class ItemActivity extends Entity
     public function getAction()
     {
         if (array_key_exists("action", $this->_propDict)) {
-            if (is_a($this->_propDict["action"], "Microsoft\Graph\Model\ItemActionSet")) {
+            if (is_a($this->_propDict["action"], "Microsoft\Graph\Beta\Model\ItemActionSet")) {
                 return $this->_propDict["action"];
             } else {
                 $this->_propDict["action"] = new ItemActionSet($this->_propDict["action"]);
@@ -65,7 +65,7 @@ class ItemActivity extends Entity
     public function getActor()
     {
         if (array_key_exists("actor", $this->_propDict)) {
-            if (is_a($this->_propDict["actor"], "Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["actor"], "Microsoft\Graph\Beta\Model\IdentitySet")) {
                 return $this->_propDict["actor"];
             } else {
                 $this->_propDict["actor"] = new IdentitySet($this->_propDict["actor"]);
@@ -96,7 +96,7 @@ class ItemActivity extends Entity
     public function getTimes()
     {
         if (array_key_exists("times", $this->_propDict)) {
-            if (is_a($this->_propDict["times"], "Microsoft\Graph\Model\ItemActivityTimeSet")) {
+            if (is_a($this->_propDict["times"], "Microsoft\Graph\Beta\Model\ItemActivityTimeSet")) {
                 return $this->_propDict["times"];
             } else {
                 $this->_propDict["times"] = new ItemActivityTimeSet($this->_propDict["times"]);
@@ -127,7 +127,7 @@ class ItemActivity extends Entity
     public function getDriveItem()
     {
         if (array_key_exists("driveItem", $this->_propDict)) {
-            if (is_a($this->_propDict["driveItem"], "Microsoft\Graph\Model\DriveItem")) {
+            if (is_a($this->_propDict["driveItem"], "Microsoft\Graph\Beta\Model\DriveItem")) {
                 return $this->_propDict["driveItem"];
             } else {
                 $this->_propDict["driveItem"] = new DriveItem($this->_propDict["driveItem"]);
@@ -158,7 +158,7 @@ class ItemActivity extends Entity
     public function getListItem()
     {
         if (array_key_exists("listItem", $this->_propDict)) {
-            if (is_a($this->_propDict["listItem"], "Microsoft\Graph\Model\ListItem")) {
+            if (is_a($this->_propDict["listItem"], "Microsoft\Graph\Beta\Model\ListItem")) {
                 return $this->_propDict["listItem"];
             } else {
                 $this->_propDict["listItem"] = new ListItem($this->_propDict["listItem"]);

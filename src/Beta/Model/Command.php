@@ -169,7 +169,7 @@ class Command extends Entity
     public function getPayload()
     {
         if (array_key_exists("payload", $this->_propDict)) {
-            if (is_a($this->_propDict["payload"], "Microsoft\Graph\Model\PayloadRequest")) {
+            if (is_a($this->_propDict["payload"], "Microsoft\Graph\Beta\Model\PayloadRequest")) {
                 return $this->_propDict["payload"];
             } else {
                 $this->_propDict["payload"] = new PayloadRequest($this->_propDict["payload"]);
@@ -254,7 +254,7 @@ class Command extends Entity
     public function getResponsepayload()
     {
         if (array_key_exists("responsepayload", $this->_propDict)) {
-            if (is_a($this->_propDict["responsepayload"], "Microsoft\Graph\Model\PayloadResponse")) {
+            if (is_a($this->_propDict["responsepayload"], "Microsoft\Graph\Beta\Model\PayloadResponse")) {
                 return $this->_propDict["responsepayload"];
             } else {
                 $this->_propDict["responsepayload"] = new PayloadResponse($this->_propDict["responsepayload"]);

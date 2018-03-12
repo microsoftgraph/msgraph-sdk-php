@@ -34,7 +34,7 @@ class IosWebContentFilterSpecificWebsitesAccess extends IosWebContentFilterBase
     public function getSpecificWebsitesOnly()
     {
         if (array_key_exists("specificWebsitesOnly", $this->_propDict)) {
-            if (is_a($this->_propDict["specificWebsitesOnly"], "Microsoft\Graph\Model\IosBookmark")) {
+            if (is_a($this->_propDict["specificWebsitesOnly"], "Microsoft\Graph\Beta\Model\IosBookmark")) {
                 return $this->_propDict["specificWebsitesOnly"];
             } else {
                 $this->_propDict["specificWebsitesOnly"] = new IosBookmark($this->_propDict["specificWebsitesOnly"]);

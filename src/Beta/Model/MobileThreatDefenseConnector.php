@@ -68,7 +68,7 @@ class MobileThreatDefenseConnector extends Entity
     public function getPartnerState()
     {
         if (array_key_exists("partnerState", $this->_propDict)) {
-            if (is_a($this->_propDict["partnerState"], "Microsoft\Graph\Model\MobileThreatPartnerTenantState")) {
+            if (is_a($this->_propDict["partnerState"], "Microsoft\Graph\Beta\Model\MobileThreatPartnerTenantState")) {
                 return $this->_propDict["partnerState"];
             } else {
                 $this->_propDict["partnerState"] = new MobileThreatPartnerTenantState($this->_propDict["partnerState"]);

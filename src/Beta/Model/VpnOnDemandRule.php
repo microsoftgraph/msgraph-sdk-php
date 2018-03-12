@@ -112,7 +112,7 @@ class VpnOnDemandRule extends Entity
     public function getAction()
     {
         if (array_key_exists("action", $this->_propDict)) {
-            if (is_a($this->_propDict["action"], "Microsoft\Graph\Model\VpnOnDemandRuleConnectionAction")) {
+            if (is_a($this->_propDict["action"], "Microsoft\Graph\Beta\Model\VpnOnDemandRuleConnectionAction")) {
                 return $this->_propDict["action"];
             } else {
                 $this->_propDict["action"] = new VpnOnDemandRuleConnectionAction($this->_propDict["action"]);
@@ -143,7 +143,7 @@ class VpnOnDemandRule extends Entity
     public function getDomainAction()
     {
         if (array_key_exists("domainAction", $this->_propDict)) {
-            if (is_a($this->_propDict["domainAction"], "Microsoft\Graph\Model\VpnOnDemandRuleConnectionDomainAction")) {
+            if (is_a($this->_propDict["domainAction"], "Microsoft\Graph\Beta\Model\VpnOnDemandRuleConnectionDomainAction")) {
                 return $this->_propDict["domainAction"];
             } else {
                 $this->_propDict["domainAction"] = new VpnOnDemandRuleConnectionDomainAction($this->_propDict["domainAction"]);

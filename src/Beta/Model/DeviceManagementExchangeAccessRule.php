@@ -34,7 +34,7 @@ class DeviceManagementExchangeAccessRule extends Entity
     public function getDeviceClass()
     {
         if (array_key_exists("deviceClass", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceClass"], "Microsoft\Graph\Model\DeviceManagementExchangeDeviceClass")) {
+            if (is_a($this->_propDict["deviceClass"], "Microsoft\Graph\Beta\Model\DeviceManagementExchangeDeviceClass")) {
                 return $this->_propDict["deviceClass"];
             } else {
                 $this->_propDict["deviceClass"] = new DeviceManagementExchangeDeviceClass($this->_propDict["deviceClass"]);
@@ -65,7 +65,7 @@ class DeviceManagementExchangeAccessRule extends Entity
     public function getAccessLevel()
     {
         if (array_key_exists("accessLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["accessLevel"], "Microsoft\Graph\Model\DeviceManagementExchangeAccessLevel")) {
+            if (is_a($this->_propDict["accessLevel"], "Microsoft\Graph\Beta\Model\DeviceManagementExchangeAccessLevel")) {
                 return $this->_propDict["accessLevel"];
             } else {
                 $this->_propDict["accessLevel"] = new DeviceManagementExchangeAccessLevel($this->_propDict["accessLevel"]);

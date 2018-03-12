@@ -34,7 +34,7 @@ class WorkbookChartSeriesFormat extends Entity
     public function getFill()
     {
         if (array_key_exists("fill", $this->_propDict)) {
-            if (is_a($this->_propDict["fill"], "Microsoft\Graph\Model\WorkbookChartFill")) {
+            if (is_a($this->_propDict["fill"], "Microsoft\Graph\Beta\Model\WorkbookChartFill")) {
                 return $this->_propDict["fill"];
             } else {
                 $this->_propDict["fill"] = new WorkbookChartFill($this->_propDict["fill"]);
@@ -65,7 +65,7 @@ class WorkbookChartSeriesFormat extends Entity
     public function getLine()
     {
         if (array_key_exists("line", $this->_propDict)) {
-            if (is_a($this->_propDict["line"], "Microsoft\Graph\Model\WorkbookChartLineFormat")) {
+            if (is_a($this->_propDict["line"], "Microsoft\Graph\Beta\Model\WorkbookChartLineFormat")) {
                 return $this->_propDict["line"];
             } else {
                 $this->_propDict["line"] = new WorkbookChartLineFormat($this->_propDict["line"]);

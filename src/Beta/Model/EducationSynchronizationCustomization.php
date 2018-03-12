@@ -60,7 +60,7 @@ class EducationSynchronizationCustomization extends Entity
     public function getSynchronizationStartDate()
     {
         if (array_key_exists("synchronizationStartDate", $this->_propDict)) {
-            if (is_a($this->_propDict["synchronizationStartDate"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["synchronizationStartDate"], "Microsoft\Graph\Beta\Model\\DateTime")) {
                 return $this->_propDict["synchronizationStartDate"];
             } else {
                 $this->_propDict["synchronizationStartDate"] = new \DateTime($this->_propDict["synchronizationStartDate"]);

@@ -34,7 +34,7 @@ class ManagedDeviceCertificateState extends Entity
     public function getDevicePlatform()
     {
         if (array_key_exists("devicePlatform", $this->_propDict)) {
-            if (is_a($this->_propDict["devicePlatform"], "Microsoft\Graph\Model\DevicePlatformType")) {
+            if (is_a($this->_propDict["devicePlatform"], "Microsoft\Graph\Beta\Model\DevicePlatformType")) {
                 return $this->_propDict["devicePlatform"];
             } else {
                 $this->_propDict["devicePlatform"] = new DevicePlatformType($this->_propDict["devicePlatform"]);
@@ -65,7 +65,7 @@ class ManagedDeviceCertificateState extends Entity
     public function getCertificateKeyUsage()
     {
         if (array_key_exists("certificateKeyUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["certificateKeyUsage"], "Microsoft\Graph\Model\KeyUsages")) {
+            if (is_a($this->_propDict["certificateKeyUsage"], "Microsoft\Graph\Beta\Model\KeyUsages")) {
                 return $this->_propDict["certificateKeyUsage"];
             } else {
                 $this->_propDict["certificateKeyUsage"] = new KeyUsages($this->_propDict["certificateKeyUsage"]);

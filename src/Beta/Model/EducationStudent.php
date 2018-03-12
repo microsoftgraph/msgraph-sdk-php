@@ -91,7 +91,7 @@ class EducationStudent extends Entity
     public function getBirthDate()
     {
         if (array_key_exists("birthDate", $this->_propDict)) {
-            if (is_a($this->_propDict["birthDate"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["birthDate"], "Microsoft\Graph\Beta\Model\\DateTime")) {
                 return $this->_propDict["birthDate"];
             } else {
                 $this->_propDict["birthDate"] = new \DateTime($this->_propDict["birthDate"]);
@@ -124,7 +124,7 @@ class EducationStudent extends Entity
     public function getGender()
     {
         if (array_key_exists("gender", $this->_propDict)) {
-            if (is_a($this->_propDict["gender"], "Microsoft\Graph\Model\EducationGender")) {
+            if (is_a($this->_propDict["gender"], "Microsoft\Graph\Beta\Model\EducationGender")) {
                 return $this->_propDict["gender"];
             } else {
                 $this->_propDict["gender"] = new EducationGender($this->_propDict["gender"]);

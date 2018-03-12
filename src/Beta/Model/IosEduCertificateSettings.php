@@ -34,7 +34,7 @@ class IosEduCertificateSettings extends Entity
     public function getTrustedRootCertificate()
     {
         if (array_key_exists("trustedRootCertificate", $this->_propDict)) {
-            if (is_a($this->_propDict["trustedRootCertificate"], "Microsoft\Graph\Model\\GuzzleHttp\Psr7\Stream")) {
+            if (is_a($this->_propDict["trustedRootCertificate"], "Microsoft\Graph\Beta\Model\\GuzzleHttp\Psr7\Stream")) {
                 return $this->_propDict["trustedRootCertificate"];
             } else {
                 $this->_propDict["trustedRootCertificate"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["trustedRootCertificate"]);
@@ -221,7 +221,7 @@ class IosEduCertificateSettings extends Entity
     public function getCertificateValidityPeriodScale()
     {
         if (array_key_exists("certificateValidityPeriodScale", $this->_propDict)) {
-            if (is_a($this->_propDict["certificateValidityPeriodScale"], "Microsoft\Graph\Model\CertificateValidityPeriodScale")) {
+            if (is_a($this->_propDict["certificateValidityPeriodScale"], "Microsoft\Graph\Beta\Model\CertificateValidityPeriodScale")) {
                 return $this->_propDict["certificateValidityPeriodScale"];
             } else {
                 $this->_propDict["certificateValidityPeriodScale"] = new CertificateValidityPeriodScale($this->_propDict["certificateValidityPeriodScale"]);

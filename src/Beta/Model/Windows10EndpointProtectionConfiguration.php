@@ -331,7 +331,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     public function getDefenderSecurityCenterNotificationsFromApp()
     {
         if (array_key_exists("defenderSecurityCenterNotificationsFromApp", $this->_propDict)) {
-            if (is_a($this->_propDict["defenderSecurityCenterNotificationsFromApp"], "Microsoft\Graph\Model\DefenderSecurityCenterNotificationsFromAppType")) {
+            if (is_a($this->_propDict["defenderSecurityCenterNotificationsFromApp"], "Microsoft\Graph\Beta\Model\DefenderSecurityCenterNotificationsFromAppType")) {
                 return $this->_propDict["defenderSecurityCenterNotificationsFromApp"];
             } else {
                 $this->_propDict["defenderSecurityCenterNotificationsFromApp"] = new DefenderSecurityCenterNotificationsFromAppType($this->_propDict["defenderSecurityCenterNotificationsFromApp"]);
@@ -362,7 +362,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     public function getDefenderSecurityCenterITContactDisplay()
     {
         if (array_key_exists("defenderSecurityCenterITContactDisplay", $this->_propDict)) {
-            if (is_a($this->_propDict["defenderSecurityCenterITContactDisplay"], "Microsoft\Graph\Model\DefenderSecurityCenterITContactDisplayType")) {
+            if (is_a($this->_propDict["defenderSecurityCenterITContactDisplay"], "Microsoft\Graph\Beta\Model\DefenderSecurityCenterITContactDisplayType")) {
                 return $this->_propDict["defenderSecurityCenterITContactDisplay"];
             } else {
                 $this->_propDict["defenderSecurityCenterITContactDisplay"] = new DefenderSecurityCenterITContactDisplayType($this->_propDict["defenderSecurityCenterITContactDisplay"]);
@@ -452,7 +452,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     public function getFirewallPreSharedKeyEncodingMethod()
     {
         if (array_key_exists("firewallPreSharedKeyEncodingMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["firewallPreSharedKeyEncodingMethod"], "Microsoft\Graph\Model\FirewallPreSharedKeyEncodingMethodType")) {
+            if (is_a($this->_propDict["firewallPreSharedKeyEncodingMethod"], "Microsoft\Graph\Beta\Model\FirewallPreSharedKeyEncodingMethodType")) {
                 return $this->_propDict["firewallPreSharedKeyEncodingMethod"];
             } else {
                 $this->_propDict["firewallPreSharedKeyEncodingMethod"] = new FirewallPreSharedKeyEncodingMethodType($this->_propDict["firewallPreSharedKeyEncodingMethod"]);
@@ -601,7 +601,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     public function getFirewallCertificateRevocationListCheckMethod()
     {
         if (array_key_exists("firewallCertificateRevocationListCheckMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["firewallCertificateRevocationListCheckMethod"], "Microsoft\Graph\Model\FirewallCertificateRevocationListCheckMethodType")) {
+            if (is_a($this->_propDict["firewallCertificateRevocationListCheckMethod"], "Microsoft\Graph\Beta\Model\FirewallCertificateRevocationListCheckMethodType")) {
                 return $this->_propDict["firewallCertificateRevocationListCheckMethod"];
             } else {
                 $this->_propDict["firewallCertificateRevocationListCheckMethod"] = new FirewallCertificateRevocationListCheckMethodType($this->_propDict["firewallCertificateRevocationListCheckMethod"]);
@@ -663,7 +663,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     public function getFirewallPacketQueueingMethod()
     {
         if (array_key_exists("firewallPacketQueueingMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["firewallPacketQueueingMethod"], "Microsoft\Graph\Model\FirewallPacketQueueingMethodType")) {
+            if (is_a($this->_propDict["firewallPacketQueueingMethod"], "Microsoft\Graph\Beta\Model\FirewallPacketQueueingMethodType")) {
                 return $this->_propDict["firewallPacketQueueingMethod"];
             } else {
                 $this->_propDict["firewallPacketQueueingMethod"] = new FirewallPacketQueueingMethodType($this->_propDict["firewallPacketQueueingMethod"]);
@@ -696,7 +696,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     public function getFirewallProfileDomain()
     {
         if (array_key_exists("firewallProfileDomain", $this->_propDict)) {
-            if (is_a($this->_propDict["firewallProfileDomain"], "Microsoft\Graph\Model\WindowsFirewallNetworkProfile")) {
+            if (is_a($this->_propDict["firewallProfileDomain"], "Microsoft\Graph\Beta\Model\WindowsFirewallNetworkProfile")) {
                 return $this->_propDict["firewallProfileDomain"];
             } else {
                 $this->_propDict["firewallProfileDomain"] = new WindowsFirewallNetworkProfile($this->_propDict["firewallProfileDomain"]);
@@ -729,7 +729,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     public function getFirewallProfilePublic()
     {
         if (array_key_exists("firewallProfilePublic", $this->_propDict)) {
-            if (is_a($this->_propDict["firewallProfilePublic"], "Microsoft\Graph\Model\WindowsFirewallNetworkProfile")) {
+            if (is_a($this->_propDict["firewallProfilePublic"], "Microsoft\Graph\Beta\Model\WindowsFirewallNetworkProfile")) {
                 return $this->_propDict["firewallProfilePublic"];
             } else {
                 $this->_propDict["firewallProfilePublic"] = new WindowsFirewallNetworkProfile($this->_propDict["firewallProfilePublic"]);
@@ -762,7 +762,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     public function getFirewallProfilePrivate()
     {
         if (array_key_exists("firewallProfilePrivate", $this->_propDict)) {
-            if (is_a($this->_propDict["firewallProfilePrivate"], "Microsoft\Graph\Model\WindowsFirewallNetworkProfile")) {
+            if (is_a($this->_propDict["firewallProfilePrivate"], "Microsoft\Graph\Beta\Model\WindowsFirewallNetworkProfile")) {
                 return $this->_propDict["firewallProfilePrivate"];
             } else {
                 $this->_propDict["firewallProfilePrivate"] = new WindowsFirewallNetworkProfile($this->_propDict["firewallProfilePrivate"]);
@@ -823,7 +823,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     public function getDefenderOfficeAppsOtherProcessInjectionType()
     {
         if (array_key_exists("defenderOfficeAppsOtherProcessInjectionType", $this->_propDict)) {
-            if (is_a($this->_propDict["defenderOfficeAppsOtherProcessInjectionType"], "Microsoft\Graph\Model\DefenderAttackSurfaceType")) {
+            if (is_a($this->_propDict["defenderOfficeAppsOtherProcessInjectionType"], "Microsoft\Graph\Beta\Model\DefenderAttackSurfaceType")) {
                 return $this->_propDict["defenderOfficeAppsOtherProcessInjectionType"];
             } else {
                 $this->_propDict["defenderOfficeAppsOtherProcessInjectionType"] = new DefenderAttackSurfaceType($this->_propDict["defenderOfficeAppsOtherProcessInjectionType"]);
@@ -854,7 +854,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     public function getDefenderOfficeAppsExecutableContentCreationOrLaunchType()
     {
         if (array_key_exists("defenderOfficeAppsExecutableContentCreationOrLaunchType", $this->_propDict)) {
-            if (is_a($this->_propDict["defenderOfficeAppsExecutableContentCreationOrLaunchType"], "Microsoft\Graph\Model\DefenderAttackSurfaceType")) {
+            if (is_a($this->_propDict["defenderOfficeAppsExecutableContentCreationOrLaunchType"], "Microsoft\Graph\Beta\Model\DefenderAttackSurfaceType")) {
                 return $this->_propDict["defenderOfficeAppsExecutableContentCreationOrLaunchType"];
             } else {
                 $this->_propDict["defenderOfficeAppsExecutableContentCreationOrLaunchType"] = new DefenderAttackSurfaceType($this->_propDict["defenderOfficeAppsExecutableContentCreationOrLaunchType"]);
@@ -885,7 +885,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     public function getDefenderOfficeAppsLaunchChildProcessType()
     {
         if (array_key_exists("defenderOfficeAppsLaunchChildProcessType", $this->_propDict)) {
-            if (is_a($this->_propDict["defenderOfficeAppsLaunchChildProcessType"], "Microsoft\Graph\Model\DefenderAttackSurfaceType")) {
+            if (is_a($this->_propDict["defenderOfficeAppsLaunchChildProcessType"], "Microsoft\Graph\Beta\Model\DefenderAttackSurfaceType")) {
                 return $this->_propDict["defenderOfficeAppsLaunchChildProcessType"];
             } else {
                 $this->_propDict["defenderOfficeAppsLaunchChildProcessType"] = new DefenderAttackSurfaceType($this->_propDict["defenderOfficeAppsLaunchChildProcessType"]);
@@ -916,7 +916,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     public function getDefenderOfficeMacroCodeAllowWin32ImportsType()
     {
         if (array_key_exists("defenderOfficeMacroCodeAllowWin32ImportsType", $this->_propDict)) {
-            if (is_a($this->_propDict["defenderOfficeMacroCodeAllowWin32ImportsType"], "Microsoft\Graph\Model\DefenderAttackSurfaceType")) {
+            if (is_a($this->_propDict["defenderOfficeMacroCodeAllowWin32ImportsType"], "Microsoft\Graph\Beta\Model\DefenderAttackSurfaceType")) {
                 return $this->_propDict["defenderOfficeMacroCodeAllowWin32ImportsType"];
             } else {
                 $this->_propDict["defenderOfficeMacroCodeAllowWin32ImportsType"] = new DefenderAttackSurfaceType($this->_propDict["defenderOfficeMacroCodeAllowWin32ImportsType"]);
@@ -947,7 +947,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     public function getDefenderScriptObfuscatedMacroCodeType()
     {
         if (array_key_exists("defenderScriptObfuscatedMacroCodeType", $this->_propDict)) {
-            if (is_a($this->_propDict["defenderScriptObfuscatedMacroCodeType"], "Microsoft\Graph\Model\DefenderAttackSurfaceType")) {
+            if (is_a($this->_propDict["defenderScriptObfuscatedMacroCodeType"], "Microsoft\Graph\Beta\Model\DefenderAttackSurfaceType")) {
                 return $this->_propDict["defenderScriptObfuscatedMacroCodeType"];
             } else {
                 $this->_propDict["defenderScriptObfuscatedMacroCodeType"] = new DefenderAttackSurfaceType($this->_propDict["defenderScriptObfuscatedMacroCodeType"]);
@@ -978,7 +978,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     public function getDefenderScriptDownloadedPayloadExecutionType()
     {
         if (array_key_exists("defenderScriptDownloadedPayloadExecutionType", $this->_propDict)) {
-            if (is_a($this->_propDict["defenderScriptDownloadedPayloadExecutionType"], "Microsoft\Graph\Model\DefenderAttackSurfaceType")) {
+            if (is_a($this->_propDict["defenderScriptDownloadedPayloadExecutionType"], "Microsoft\Graph\Beta\Model\DefenderAttackSurfaceType")) {
                 return $this->_propDict["defenderScriptDownloadedPayloadExecutionType"];
             } else {
                 $this->_propDict["defenderScriptDownloadedPayloadExecutionType"] = new DefenderAttackSurfaceType($this->_propDict["defenderScriptDownloadedPayloadExecutionType"]);
@@ -1009,7 +1009,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     public function getDefenderPreventCredentialStealingType()
     {
         if (array_key_exists("defenderPreventCredentialStealingType", $this->_propDict)) {
-            if (is_a($this->_propDict["defenderPreventCredentialStealingType"], "Microsoft\Graph\Model\DefenderProtectionType")) {
+            if (is_a($this->_propDict["defenderPreventCredentialStealingType"], "Microsoft\Graph\Beta\Model\DefenderProtectionType")) {
                 return $this->_propDict["defenderPreventCredentialStealingType"];
             } else {
                 $this->_propDict["defenderPreventCredentialStealingType"] = new DefenderProtectionType($this->_propDict["defenderPreventCredentialStealingType"]);
@@ -1040,7 +1040,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     public function getDefenderProcessCreationType()
     {
         if (array_key_exists("defenderProcessCreationType", $this->_propDict)) {
-            if (is_a($this->_propDict["defenderProcessCreationType"], "Microsoft\Graph\Model\DefenderAttackSurfaceType")) {
+            if (is_a($this->_propDict["defenderProcessCreationType"], "Microsoft\Graph\Beta\Model\DefenderAttackSurfaceType")) {
                 return $this->_propDict["defenderProcessCreationType"];
             } else {
                 $this->_propDict["defenderProcessCreationType"] = new DefenderAttackSurfaceType($this->_propDict["defenderProcessCreationType"]);
@@ -1071,7 +1071,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     public function getDefenderUntrustedUSBProcessType()
     {
         if (array_key_exists("defenderUntrustedUSBProcessType", $this->_propDict)) {
-            if (is_a($this->_propDict["defenderUntrustedUSBProcessType"], "Microsoft\Graph\Model\DefenderAttackSurfaceType")) {
+            if (is_a($this->_propDict["defenderUntrustedUSBProcessType"], "Microsoft\Graph\Beta\Model\DefenderAttackSurfaceType")) {
                 return $this->_propDict["defenderUntrustedUSBProcessType"];
             } else {
                 $this->_propDict["defenderUntrustedUSBProcessType"] = new DefenderAttackSurfaceType($this->_propDict["defenderUntrustedUSBProcessType"]);
@@ -1102,7 +1102,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     public function getDefenderUntrustedExecutableType()
     {
         if (array_key_exists("defenderUntrustedExecutableType", $this->_propDict)) {
-            if (is_a($this->_propDict["defenderUntrustedExecutableType"], "Microsoft\Graph\Model\DefenderAttackSurfaceType")) {
+            if (is_a($this->_propDict["defenderUntrustedExecutableType"], "Microsoft\Graph\Beta\Model\DefenderAttackSurfaceType")) {
                 return $this->_propDict["defenderUntrustedExecutableType"];
             } else {
                 $this->_propDict["defenderUntrustedExecutableType"] = new DefenderAttackSurfaceType($this->_propDict["defenderUntrustedExecutableType"]);
@@ -1133,7 +1133,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     public function getDefenderEmailContentExecutionType()
     {
         if (array_key_exists("defenderEmailContentExecutionType", $this->_propDict)) {
-            if (is_a($this->_propDict["defenderEmailContentExecutionType"], "Microsoft\Graph\Model\DefenderAttackSurfaceType")) {
+            if (is_a($this->_propDict["defenderEmailContentExecutionType"], "Microsoft\Graph\Beta\Model\DefenderAttackSurfaceType")) {
                 return $this->_propDict["defenderEmailContentExecutionType"];
             } else {
                 $this->_propDict["defenderEmailContentExecutionType"] = new DefenderAttackSurfaceType($this->_propDict["defenderEmailContentExecutionType"]);
@@ -1164,7 +1164,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     public function getDefenderPasswordProtectedEmailContentExecutionType()
     {
         if (array_key_exists("defenderPasswordProtectedEmailContentExecutionType", $this->_propDict)) {
-            if (is_a($this->_propDict["defenderPasswordProtectedEmailContentExecutionType"], "Microsoft\Graph\Model\DefenderAttackSurfaceType")) {
+            if (is_a($this->_propDict["defenderPasswordProtectedEmailContentExecutionType"], "Microsoft\Graph\Beta\Model\DefenderAttackSurfaceType")) {
                 return $this->_propDict["defenderPasswordProtectedEmailContentExecutionType"];
             } else {
                 $this->_propDict["defenderPasswordProtectedEmailContentExecutionType"] = new DefenderAttackSurfaceType($this->_propDict["defenderPasswordProtectedEmailContentExecutionType"]);
@@ -1195,7 +1195,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     public function getDefenderAdvancedRansomewareProtectionType()
     {
         if (array_key_exists("defenderAdvancedRansomewareProtectionType", $this->_propDict)) {
-            if (is_a($this->_propDict["defenderAdvancedRansomewareProtectionType"], "Microsoft\Graph\Model\DefenderProtectionType")) {
+            if (is_a($this->_propDict["defenderAdvancedRansomewareProtectionType"], "Microsoft\Graph\Beta\Model\DefenderProtectionType")) {
                 return $this->_propDict["defenderAdvancedRansomewareProtectionType"];
             } else {
                 $this->_propDict["defenderAdvancedRansomewareProtectionType"] = new DefenderProtectionType($this->_propDict["defenderAdvancedRansomewareProtectionType"]);
@@ -1226,7 +1226,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     public function getDefenderGuardMyFoldersType()
     {
         if (array_key_exists("defenderGuardMyFoldersType", $this->_propDict)) {
-            if (is_a($this->_propDict["defenderGuardMyFoldersType"], "Microsoft\Graph\Model\FolderProtectionType")) {
+            if (is_a($this->_propDict["defenderGuardMyFoldersType"], "Microsoft\Graph\Beta\Model\FolderProtectionType")) {
                 return $this->_propDict["defenderGuardMyFoldersType"];
             } else {
                 $this->_propDict["defenderGuardMyFoldersType"] = new FolderProtectionType($this->_propDict["defenderGuardMyFoldersType"]);
@@ -1315,7 +1315,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     public function getDefenderNetworkProtectionType()
     {
         if (array_key_exists("defenderNetworkProtectionType", $this->_propDict)) {
-            if (is_a($this->_propDict["defenderNetworkProtectionType"], "Microsoft\Graph\Model\DefenderProtectionType")) {
+            if (is_a($this->_propDict["defenderNetworkProtectionType"], "Microsoft\Graph\Beta\Model\DefenderProtectionType")) {
                 return $this->_propDict["defenderNetworkProtectionType"];
             } else {
                 $this->_propDict["defenderNetworkProtectionType"] = new DefenderProtectionType($this->_propDict["defenderNetworkProtectionType"]);
@@ -1438,7 +1438,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     public function getAppLockerApplicationControl()
     {
         if (array_key_exists("appLockerApplicationControl", $this->_propDict)) {
-            if (is_a($this->_propDict["appLockerApplicationControl"], "Microsoft\Graph\Model\AppLockerApplicationControlType")) {
+            if (is_a($this->_propDict["appLockerApplicationControl"], "Microsoft\Graph\Beta\Model\AppLockerApplicationControlType")) {
                 return $this->_propDict["appLockerApplicationControl"];
             } else {
                 $this->_propDict["appLockerApplicationControl"] = new AppLockerApplicationControlType($this->_propDict["appLockerApplicationControl"]);
@@ -1558,7 +1558,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     public function getApplicationGuardBlockFileTransfer()
     {
         if (array_key_exists("applicationGuardBlockFileTransfer", $this->_propDict)) {
-            if (is_a($this->_propDict["applicationGuardBlockFileTransfer"], "Microsoft\Graph\Model\ApplicationGuardBlockFileTransferType")) {
+            if (is_a($this->_propDict["applicationGuardBlockFileTransfer"], "Microsoft\Graph\Beta\Model\ApplicationGuardBlockFileTransferType")) {
                 return $this->_propDict["applicationGuardBlockFileTransfer"];
             } else {
                 $this->_propDict["applicationGuardBlockFileTransfer"] = new ApplicationGuardBlockFileTransferType($this->_propDict["applicationGuardBlockFileTransfer"]);
@@ -1678,7 +1678,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     public function getApplicationGuardBlockClipboardSharing()
     {
         if (array_key_exists("applicationGuardBlockClipboardSharing", $this->_propDict)) {
-            if (is_a($this->_propDict["applicationGuardBlockClipboardSharing"], "Microsoft\Graph\Model\ApplicationGuardBlockClipboardSharingType")) {
+            if (is_a($this->_propDict["applicationGuardBlockClipboardSharing"], "Microsoft\Graph\Beta\Model\ApplicationGuardBlockClipboardSharingType")) {
                 return $this->_propDict["applicationGuardBlockClipboardSharing"];
             } else {
                 $this->_propDict["applicationGuardBlockClipboardSharing"] = new ApplicationGuardBlockClipboardSharingType($this->_propDict["applicationGuardBlockClipboardSharing"]);
@@ -1967,7 +1967,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     public function getBitLockerSystemDrivePolicy()
     {
         if (array_key_exists("bitLockerSystemDrivePolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["bitLockerSystemDrivePolicy"], "Microsoft\Graph\Model\BitLockerSystemDrivePolicy")) {
+            if (is_a($this->_propDict["bitLockerSystemDrivePolicy"], "Microsoft\Graph\Beta\Model\BitLockerSystemDrivePolicy")) {
                 return $this->_propDict["bitLockerSystemDrivePolicy"];
             } else {
                 $this->_propDict["bitLockerSystemDrivePolicy"] = new BitLockerSystemDrivePolicy($this->_propDict["bitLockerSystemDrivePolicy"]);
@@ -1998,7 +1998,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     public function getBitLockerFixedDrivePolicy()
     {
         if (array_key_exists("bitLockerFixedDrivePolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["bitLockerFixedDrivePolicy"], "Microsoft\Graph\Model\BitLockerFixedDrivePolicy")) {
+            if (is_a($this->_propDict["bitLockerFixedDrivePolicy"], "Microsoft\Graph\Beta\Model\BitLockerFixedDrivePolicy")) {
                 return $this->_propDict["bitLockerFixedDrivePolicy"];
             } else {
                 $this->_propDict["bitLockerFixedDrivePolicy"] = new BitLockerFixedDrivePolicy($this->_propDict["bitLockerFixedDrivePolicy"]);
@@ -2030,7 +2030,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     public function getBitLockerRemovableDrivePolicy()
     {
         if (array_key_exists("bitLockerRemovableDrivePolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["bitLockerRemovableDrivePolicy"], "Microsoft\Graph\Model\BitLockerRemovableDrivePolicy")) {
+            if (is_a($this->_propDict["bitLockerRemovableDrivePolicy"], "Microsoft\Graph\Beta\Model\BitLockerRemovableDrivePolicy")) {
                 return $this->_propDict["bitLockerRemovableDrivePolicy"];
             } else {
                 $this->_propDict["bitLockerRemovableDrivePolicy"] = new BitLockerRemovableDrivePolicy($this->_propDict["bitLockerRemovableDrivePolicy"]);

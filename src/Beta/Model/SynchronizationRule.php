@@ -86,7 +86,7 @@ class SynchronizationRule extends Entity
     public function getMetadata()
     {
         if (array_key_exists("metadata", $this->_propDict)) {
-            if (is_a($this->_propDict["metadata"], "Microsoft\Graph\Model\StringKeyStringValuePair")) {
+            if (is_a($this->_propDict["metadata"], "Microsoft\Graph\Beta\Model\StringKeyStringValuePair")) {
                 return $this->_propDict["metadata"];
             } else {
                 $this->_propDict["metadata"] = new StringKeyStringValuePair($this->_propDict["metadata"]);
@@ -143,7 +143,7 @@ class SynchronizationRule extends Entity
     public function getObjectMappings()
     {
         if (array_key_exists("objectMappings", $this->_propDict)) {
-            if (is_a($this->_propDict["objectMappings"], "Microsoft\Graph\Model\ObjectMapping")) {
+            if (is_a($this->_propDict["objectMappings"], "Microsoft\Graph\Beta\Model\ObjectMapping")) {
                 return $this->_propDict["objectMappings"];
             } else {
                 $this->_propDict["objectMappings"] = new ObjectMapping($this->_propDict["objectMappings"]);

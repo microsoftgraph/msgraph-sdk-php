@@ -61,7 +61,7 @@ class AppleVolumePurchaseProgramToken extends Entity
     public function getVolumePurchaseProgramTokenAccountType()
     {
         if (array_key_exists("volumePurchaseProgramTokenAccountType", $this->_propDict)) {
-            if (is_a($this->_propDict["volumePurchaseProgramTokenAccountType"], "Microsoft\Graph\Model\VolumePurchaseProgramTokenAccountType")) {
+            if (is_a($this->_propDict["volumePurchaseProgramTokenAccountType"], "Microsoft\Graph\Beta\Model\VolumePurchaseProgramTokenAccountType")) {
                 return $this->_propDict["volumePurchaseProgramTokenAccountType"];
             } else {
                 $this->_propDict["volumePurchaseProgramTokenAccountType"] = new VolumePurchaseProgramTokenAccountType($this->_propDict["volumePurchaseProgramTokenAccountType"]);
@@ -239,7 +239,7 @@ class AppleVolumePurchaseProgramToken extends Entity
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "Microsoft\Graph\Model\VolumePurchaseProgramTokenState")) {
+            if (is_a($this->_propDict["state"], "Microsoft\Graph\Beta\Model\VolumePurchaseProgramTokenState")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new VolumePurchaseProgramTokenState($this->_propDict["state"]);
@@ -270,7 +270,7 @@ class AppleVolumePurchaseProgramToken extends Entity
     public function getLastSyncStatus()
     {
         if (array_key_exists("lastSyncStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["lastSyncStatus"], "Microsoft\Graph\Model\VolumePurchaseProgramTokenSyncStatus")) {
+            if (is_a($this->_propDict["lastSyncStatus"], "Microsoft\Graph\Beta\Model\VolumePurchaseProgramTokenSyncStatus")) {
                 return $this->_propDict["lastSyncStatus"];
             } else {
                 $this->_propDict["lastSyncStatus"] = new VolumePurchaseProgramTokenSyncStatus($this->_propDict["lastSyncStatus"]);

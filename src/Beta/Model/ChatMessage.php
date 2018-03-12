@@ -34,7 +34,7 @@ class ChatMessage extends Entity
     public function getBody()
     {
         if (array_key_exists("body", $this->_propDict)) {
-            if (is_a($this->_propDict["body"], "Microsoft\Graph\Model\ItemBody")) {
+            if (is_a($this->_propDict["body"], "Microsoft\Graph\Beta\Model\ItemBody")) {
                 return $this->_propDict["body"];
             } else {
                 $this->_propDict["body"] = new ItemBody($this->_propDict["body"]);
@@ -65,7 +65,7 @@ class ChatMessage extends Entity
     public function getInReplyTo()
     {
         if (array_key_exists("inReplyTo", $this->_propDict)) {
-            if (is_a($this->_propDict["inReplyTo"], "Microsoft\Graph\Model\ChatMessage")) {
+            if (is_a($this->_propDict["inReplyTo"], "Microsoft\Graph\Beta\Model\ChatMessage")) {
                 return $this->_propDict["inReplyTo"];
             } else {
                 $this->_propDict["inReplyTo"] = new ChatMessage($this->_propDict["inReplyTo"]);
@@ -124,7 +124,7 @@ class ChatMessage extends Entity
     public function getFrom()
     {
         if (array_key_exists("from", $this->_propDict)) {
-            if (is_a($this->_propDict["from"], "Microsoft\Graph\Model\User")) {
+            if (is_a($this->_propDict["from"], "Microsoft\Graph\Beta\Model\User")) {
                 return $this->_propDict["from"];
             } else {
                 $this->_propDict["from"] = new User($this->_propDict["from"]);

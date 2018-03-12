@@ -86,7 +86,7 @@ class OutOfBoxExperienceSettings extends Entity
     public function getUserType()
     {
         if (array_key_exists("userType", $this->_propDict)) {
-            if (is_a($this->_propDict["userType"], "Microsoft\Graph\Model\WindowsUserType")) {
+            if (is_a($this->_propDict["userType"], "Microsoft\Graph\Beta\Model\WindowsUserType")) {
                 return $this->_propDict["userType"];
             } else {
                 $this->_propDict["userType"] = new WindowsUserType($this->_propDict["userType"]);

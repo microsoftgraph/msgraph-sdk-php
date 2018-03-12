@@ -164,7 +164,7 @@ class MessageRuleActions extends Entity
     public function getMarkImportance()
     {
         if (array_key_exists("markImportance", $this->_propDict)) {
-            if (is_a($this->_propDict["markImportance"], "Microsoft\Graph\Model\Importance")) {
+            if (is_a($this->_propDict["markImportance"], "Microsoft\Graph\Beta\Model\Importance")) {
                 return $this->_propDict["markImportance"];
             } else {
                 $this->_propDict["markImportance"] = new Importance($this->_propDict["markImportance"]);
@@ -195,7 +195,7 @@ class MessageRuleActions extends Entity
     public function getForwardTo()
     {
         if (array_key_exists("forwardTo", $this->_propDict)) {
-            if (is_a($this->_propDict["forwardTo"], "Microsoft\Graph\Model\Recipient")) {
+            if (is_a($this->_propDict["forwardTo"], "Microsoft\Graph\Beta\Model\Recipient")) {
                 return $this->_propDict["forwardTo"];
             } else {
                 $this->_propDict["forwardTo"] = new Recipient($this->_propDict["forwardTo"]);
@@ -226,7 +226,7 @@ class MessageRuleActions extends Entity
     public function getForwardAsAttachmentTo()
     {
         if (array_key_exists("forwardAsAttachmentTo", $this->_propDict)) {
-            if (is_a($this->_propDict["forwardAsAttachmentTo"], "Microsoft\Graph\Model\Recipient")) {
+            if (is_a($this->_propDict["forwardAsAttachmentTo"], "Microsoft\Graph\Beta\Model\Recipient")) {
                 return $this->_propDict["forwardAsAttachmentTo"];
             } else {
                 $this->_propDict["forwardAsAttachmentTo"] = new Recipient($this->_propDict["forwardAsAttachmentTo"]);
@@ -257,7 +257,7 @@ class MessageRuleActions extends Entity
     public function getRedirectTo()
     {
         if (array_key_exists("redirectTo", $this->_propDict)) {
-            if (is_a($this->_propDict["redirectTo"], "Microsoft\Graph\Model\Recipient")) {
+            if (is_a($this->_propDict["redirectTo"], "Microsoft\Graph\Beta\Model\Recipient")) {
                 return $this->_propDict["redirectTo"];
             } else {
                 $this->_propDict["redirectTo"] = new Recipient($this->_propDict["redirectTo"]);

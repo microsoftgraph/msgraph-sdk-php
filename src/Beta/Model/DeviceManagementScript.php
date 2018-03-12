@@ -88,7 +88,7 @@ class DeviceManagementScript extends Entity
     public function getRunSchedule()
     {
         if (array_key_exists("runSchedule", $this->_propDict)) {
-            if (is_a($this->_propDict["runSchedule"], "Microsoft\Graph\Model\RunSchedule")) {
+            if (is_a($this->_propDict["runSchedule"], "Microsoft\Graph\Beta\Model\RunSchedule")) {
                 return $this->_propDict["runSchedule"];
             } else {
                 $this->_propDict["runSchedule"] = new RunSchedule($this->_propDict["runSchedule"]);
@@ -212,7 +212,7 @@ class DeviceManagementScript extends Entity
     public function getRunAsAccount()
     {
         if (array_key_exists("runAsAccount", $this->_propDict)) {
-            if (is_a($this->_propDict["runAsAccount"], "Microsoft\Graph\Model\RunAsAccountType")) {
+            if (is_a($this->_propDict["runAsAccount"], "Microsoft\Graph\Beta\Model\RunAsAccountType")) {
                 return $this->_propDict["runAsAccount"];
             } else {
                 $this->_propDict["runAsAccount"] = new RunAsAccountType($this->_propDict["runAsAccount"]);
@@ -353,7 +353,7 @@ class DeviceManagementScript extends Entity
     public function getRunSummary()
     {
         if (array_key_exists("runSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["runSummary"], "Microsoft\Graph\Model\DeviceManagementScriptRunSummary")) {
+            if (is_a($this->_propDict["runSummary"], "Microsoft\Graph\Beta\Model\DeviceManagementScriptRunSummary")) {
                 return $this->_propDict["runSummary"];
             } else {
                 $this->_propDict["runSummary"] = new DeviceManagementScriptRunSummary($this->_propDict["runSummary"]);

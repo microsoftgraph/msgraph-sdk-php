@@ -34,7 +34,7 @@ class ClassificationJobResponse extends JobResponseBase
     public function getResult()
     {
         if (array_key_exists("result", $this->_propDict)) {
-            if (is_a($this->_propDict["result"], "Microsoft\Graph\Model\DetectedSensitiveContentWrapper")) {
+            if (is_a($this->_propDict["result"], "Microsoft\Graph\Beta\Model\DetectedSensitiveContentWrapper")) {
                 return $this->_propDict["result"];
             } else {
                 $this->_propDict["result"] = new DetectedSensitiveContentWrapper($this->_propDict["result"]);

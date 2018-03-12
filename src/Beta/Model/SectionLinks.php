@@ -35,7 +35,7 @@ class SectionLinks extends Entity
     public function getOneNoteClientUrl()
     {
         if (array_key_exists("oneNoteClientUrl", $this->_propDict)) {
-            if (is_a($this->_propDict["oneNoteClientUrl"], "Microsoft\Graph\Model\ExternalLink")) {
+            if (is_a($this->_propDict["oneNoteClientUrl"], "Microsoft\Graph\Beta\Model\ExternalLink")) {
                 return $this->_propDict["oneNoteClientUrl"];
             } else {
                 $this->_propDict["oneNoteClientUrl"] = new ExternalLink($this->_propDict["oneNoteClientUrl"]);
@@ -68,7 +68,7 @@ class SectionLinks extends Entity
     public function getOneNoteWebUrl()
     {
         if (array_key_exists("oneNoteWebUrl", $this->_propDict)) {
-            if (is_a($this->_propDict["oneNoteWebUrl"], "Microsoft\Graph\Model\ExternalLink")) {
+            if (is_a($this->_propDict["oneNoteWebUrl"], "Microsoft\Graph\Beta\Model\ExternalLink")) {
                 return $this->_propDict["oneNoteWebUrl"];
             } else {
                 $this->_propDict["oneNoteWebUrl"] = new ExternalLink($this->_propDict["oneNoteWebUrl"]);

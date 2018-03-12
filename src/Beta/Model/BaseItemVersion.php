@@ -34,7 +34,7 @@ class BaseItemVersion extends Entity
     public function getLastModifiedBy()
     {
         if (array_key_exists("lastModifiedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedBy"], "Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["lastModifiedBy"], "Microsoft\Graph\Beta\Model\IdentitySet")) {
                 return $this->_propDict["lastModifiedBy"];
             } else {
                 $this->_propDict["lastModifiedBy"] = new IdentitySet($this->_propDict["lastModifiedBy"]);
@@ -96,7 +96,7 @@ class BaseItemVersion extends Entity
     public function getPublication()
     {
         if (array_key_exists("publication", $this->_propDict)) {
-            if (is_a($this->_propDict["publication"], "Microsoft\Graph\Model\PublicationFacet")) {
+            if (is_a($this->_propDict["publication"], "Microsoft\Graph\Beta\Model\PublicationFacet")) {
                 return $this->_propDict["publication"];
             } else {
                 $this->_propDict["publication"] = new PublicationFacet($this->_propDict["publication"]);

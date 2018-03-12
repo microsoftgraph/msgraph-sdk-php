@@ -34,7 +34,7 @@ class WorkingHours extends Entity
     public function getDaysOfWeek()
     {
         if (array_key_exists("daysOfWeek", $this->_propDict)) {
-            if (is_a($this->_propDict["daysOfWeek"], "Microsoft\Graph\Model\DayOfWeek")) {
+            if (is_a($this->_propDict["daysOfWeek"], "Microsoft\Graph\Beta\Model\DayOfWeek")) {
                 return $this->_propDict["daysOfWeek"];
             } else {
                 $this->_propDict["daysOfWeek"] = new DayOfWeek($this->_propDict["daysOfWeek"]);
@@ -65,7 +65,7 @@ class WorkingHours extends Entity
     public function getStartTime()
     {
         if (array_key_exists("startTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startTime"], "Microsoft\Graph\Model\TimeOfDay")) {
+            if (is_a($this->_propDict["startTime"], "Microsoft\Graph\Beta\Model\TimeOfDay")) {
                 return $this->_propDict["startTime"];
             } else {
                 $this->_propDict["startTime"] = new TimeOfDay($this->_propDict["startTime"]);
@@ -96,7 +96,7 @@ class WorkingHours extends Entity
     public function getEndTime()
     {
         if (array_key_exists("endTime", $this->_propDict)) {
-            if (is_a($this->_propDict["endTime"], "Microsoft\Graph\Model\TimeOfDay")) {
+            if (is_a($this->_propDict["endTime"], "Microsoft\Graph\Beta\Model\TimeOfDay")) {
                 return $this->_propDict["endTime"];
             } else {
                 $this->_propDict["endTime"] = new TimeOfDay($this->_propDict["endTime"]);
@@ -127,7 +127,7 @@ class WorkingHours extends Entity
     public function getTimeZone()
     {
         if (array_key_exists("timeZone", $this->_propDict)) {
-            if (is_a($this->_propDict["timeZone"], "Microsoft\Graph\Model\TimeZoneBase")) {
+            if (is_a($this->_propDict["timeZone"], "Microsoft\Graph\Beta\Model\TimeZoneBase")) {
                 return $this->_propDict["timeZone"];
             } else {
                 $this->_propDict["timeZone"] = new TimeZoneBase($this->_propDict["timeZone"]);

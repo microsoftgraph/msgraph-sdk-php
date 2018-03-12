@@ -424,7 +424,7 @@ class HardwareInformation extends Entity
     public function getSharedDeviceCachedUsers()
     {
         if (array_key_exists("sharedDeviceCachedUsers", $this->_propDict)) {
-            if (is_a($this->_propDict["sharedDeviceCachedUsers"], "Microsoft\Graph\Model\SharedAppleDeviceUser")) {
+            if (is_a($this->_propDict["sharedDeviceCachedUsers"], "Microsoft\Graph\Beta\Model\SharedAppleDeviceUser")) {
                 return $this->_propDict["sharedDeviceCachedUsers"];
             } else {
                 $this->_propDict["sharedDeviceCachedUsers"] = new SharedAppleDeviceUser($this->_propDict["sharedDeviceCachedUsers"]);
@@ -533,7 +533,7 @@ class HardwareInformation extends Entity
     public function getDeviceGuardVirtualizationBasedSecurityHardwareRequirementState()
     {
         if (array_key_exists("deviceGuardVirtualizationBasedSecurityHardwareRequirementState", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceGuardVirtualizationBasedSecurityHardwareRequirementState"], "Microsoft\Graph\Model\DeviceGuardVirtualizationBasedSecurityHardwareRequirementState")) {
+            if (is_a($this->_propDict["deviceGuardVirtualizationBasedSecurityHardwareRequirementState"], "Microsoft\Graph\Beta\Model\DeviceGuardVirtualizationBasedSecurityHardwareRequirementState")) {
                 return $this->_propDict["deviceGuardVirtualizationBasedSecurityHardwareRequirementState"];
             } else {
                 $this->_propDict["deviceGuardVirtualizationBasedSecurityHardwareRequirementState"] = new DeviceGuardVirtualizationBasedSecurityHardwareRequirementState($this->_propDict["deviceGuardVirtualizationBasedSecurityHardwareRequirementState"]);
@@ -564,7 +564,7 @@ class HardwareInformation extends Entity
     public function getDeviceGuardVirtualizationBasedSecurityState()
     {
         if (array_key_exists("deviceGuardVirtualizationBasedSecurityState", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceGuardVirtualizationBasedSecurityState"], "Microsoft\Graph\Model\DeviceGuardVirtualizationBasedSecurityState")) {
+            if (is_a($this->_propDict["deviceGuardVirtualizationBasedSecurityState"], "Microsoft\Graph\Beta\Model\DeviceGuardVirtualizationBasedSecurityState")) {
                 return $this->_propDict["deviceGuardVirtualizationBasedSecurityState"];
             } else {
                 $this->_propDict["deviceGuardVirtualizationBasedSecurityState"] = new DeviceGuardVirtualizationBasedSecurityState($this->_propDict["deviceGuardVirtualizationBasedSecurityState"]);
@@ -595,7 +595,7 @@ class HardwareInformation extends Entity
     public function getDeviceGuardLocalSystemAuthorityCredentialGuardState()
     {
         if (array_key_exists("deviceGuardLocalSystemAuthorityCredentialGuardState", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceGuardLocalSystemAuthorityCredentialGuardState"], "Microsoft\Graph\Model\DeviceGuardLocalSystemAuthorityCredentialGuardState")) {
+            if (is_a($this->_propDict["deviceGuardLocalSystemAuthorityCredentialGuardState"], "Microsoft\Graph\Beta\Model\DeviceGuardLocalSystemAuthorityCredentialGuardState")) {
                 return $this->_propDict["deviceGuardLocalSystemAuthorityCredentialGuardState"];
             } else {
                 $this->_propDict["deviceGuardLocalSystemAuthorityCredentialGuardState"] = new DeviceGuardLocalSystemAuthorityCredentialGuardState($this->_propDict["deviceGuardLocalSystemAuthorityCredentialGuardState"]);

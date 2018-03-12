@@ -581,7 +581,7 @@ class Organization extends DirectoryObject
     public function getMobileDeviceManagementAuthority()
     {
         if (array_key_exists("mobileDeviceManagementAuthority", $this->_propDict)) {
-            if (is_a($this->_propDict["mobileDeviceManagementAuthority"], "Microsoft\Graph\Model\MdmAuthority")) {
+            if (is_a($this->_propDict["mobileDeviceManagementAuthority"], "Microsoft\Graph\Beta\Model\MdmAuthority")) {
                 return $this->_propDict["mobileDeviceManagementAuthority"];
             } else {
                 $this->_propDict["mobileDeviceManagementAuthority"] = new MdmAuthority($this->_propDict["mobileDeviceManagementAuthority"]);
@@ -613,7 +613,7 @@ class Organization extends DirectoryObject
     public function getCertificateConnectorSetting()
     {
         if (array_key_exists("certificateConnectorSetting", $this->_propDict)) {
-            if (is_a($this->_propDict["certificateConnectorSetting"], "Microsoft\Graph\Model\CertificateConnectorSetting")) {
+            if (is_a($this->_propDict["certificateConnectorSetting"], "Microsoft\Graph\Beta\Model\CertificateConnectorSetting")) {
                 return $this->_propDict["certificateConnectorSetting"];
             } else {
                 $this->_propDict["certificateConnectorSetting"] = new CertificateConnectorSetting($this->_propDict["certificateConnectorSetting"]);

@@ -34,7 +34,7 @@ class ObjectMapping extends Entity
     public function getAttributeMappings()
     {
         if (array_key_exists("attributeMappings", $this->_propDict)) {
-            if (is_a($this->_propDict["attributeMappings"], "Microsoft\Graph\Model\AttributeMapping")) {
+            if (is_a($this->_propDict["attributeMappings"], "Microsoft\Graph\Beta\Model\AttributeMapping")) {
                 return $this->_propDict["attributeMappings"];
             } else {
                 $this->_propDict["attributeMappings"] = new AttributeMapping($this->_propDict["attributeMappings"]);
@@ -91,7 +91,7 @@ class ObjectMapping extends Entity
     public function getFlowTypes()
     {
         if (array_key_exists("flowTypes", $this->_propDict)) {
-            if (is_a($this->_propDict["flowTypes"], "Microsoft\Graph\Model\ObjectFlowTypes")) {
+            if (is_a($this->_propDict["flowTypes"], "Microsoft\Graph\Beta\Model\ObjectFlowTypes")) {
                 return $this->_propDict["flowTypes"];
             } else {
                 $this->_propDict["flowTypes"] = new ObjectFlowTypes($this->_propDict["flowTypes"]);
@@ -122,7 +122,7 @@ class ObjectMapping extends Entity
     public function getMetadata()
     {
         if (array_key_exists("metadata", $this->_propDict)) {
-            if (is_a($this->_propDict["metadata"], "Microsoft\Graph\Model\MetadataEntry")) {
+            if (is_a($this->_propDict["metadata"], "Microsoft\Graph\Beta\Model\MetadataEntry")) {
                 return $this->_propDict["metadata"];
             } else {
                 $this->_propDict["metadata"] = new MetadataEntry($this->_propDict["metadata"]);
@@ -179,7 +179,7 @@ class ObjectMapping extends Entity
     public function getScope()
     {
         if (array_key_exists("scope", $this->_propDict)) {
-            if (is_a($this->_propDict["scope"], "Microsoft\Graph\Model\Filter")) {
+            if (is_a($this->_propDict["scope"], "Microsoft\Graph\Beta\Model\Filter")) {
                 return $this->_propDict["scope"];
             } else {
                 $this->_propDict["scope"] = new Filter($this->_propDict["scope"]);

@@ -60,7 +60,7 @@ class Api extends Entity
     public function getPublishedPermissionScopes()
     {
         if (array_key_exists("publishedPermissionScopes", $this->_propDict)) {
-            if (is_a($this->_propDict["publishedPermissionScopes"], "Microsoft\Graph\Model\PermissionScope")) {
+            if (is_a($this->_propDict["publishedPermissionScopes"], "Microsoft\Graph\Beta\Model\PermissionScope")) {
                 return $this->_propDict["publishedPermissionScopes"];
             } else {
                 $this->_propDict["publishedPermissionScopes"] = new PermissionScope($this->_propDict["publishedPermissionScopes"]);

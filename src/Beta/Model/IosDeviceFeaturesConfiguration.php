@@ -63,7 +63,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     public function getContentFilterSettings()
     {
         if (array_key_exists("contentFilterSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["contentFilterSettings"], "Microsoft\Graph\Model\IosWebContentFilterBase")) {
+            if (is_a($this->_propDict["contentFilterSettings"], "Microsoft\Graph\Beta\Model\IosWebContentFilterBase")) {
                 return $this->_propDict["contentFilterSettings"];
             } else {
                 $this->_propDict["contentFilterSettings"] = new IosWebContentFilterBase($this->_propDict["contentFilterSettings"]);
@@ -213,7 +213,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     public function getSingleSignOnSettings()
     {
         if (array_key_exists("singleSignOnSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["singleSignOnSettings"], "Microsoft\Graph\Model\IosSingleSignOnSettings")) {
+            if (is_a($this->_propDict["singleSignOnSettings"], "Microsoft\Graph\Beta\Model\IosSingleSignOnSettings")) {
                 return $this->_propDict["singleSignOnSettings"];
             } else {
                 $this->_propDict["singleSignOnSettings"] = new IosSingleSignOnSettings($this->_propDict["singleSignOnSettings"]);
@@ -244,7 +244,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     public function getIdentityCertificateForClientAuthentication()
     {
         if (array_key_exists("identityCertificateForClientAuthentication", $this->_propDict)) {
-            if (is_a($this->_propDict["identityCertificateForClientAuthentication"], "Microsoft\Graph\Model\IosCertificateProfileBase")) {
+            if (is_a($this->_propDict["identityCertificateForClientAuthentication"], "Microsoft\Graph\Beta\Model\IosCertificateProfileBase")) {
                 return $this->_propDict["identityCertificateForClientAuthentication"];
             } else {
                 $this->_propDict["identityCertificateForClientAuthentication"] = new IosCertificateProfileBase($this->_propDict["identityCertificateForClientAuthentication"]);

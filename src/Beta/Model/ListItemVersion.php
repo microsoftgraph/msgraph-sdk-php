@@ -34,7 +34,7 @@ class ListItemVersion extends BaseItemVersion
     public function getFields()
     {
         if (array_key_exists("fields", $this->_propDict)) {
-            if (is_a($this->_propDict["fields"], "Microsoft\Graph\Model\FieldValueSet")) {
+            if (is_a($this->_propDict["fields"], "Microsoft\Graph\Beta\Model\FieldValueSet")) {
                 return $this->_propDict["fields"];
             } else {
                 $this->_propDict["fields"] = new FieldValueSet($this->_propDict["fields"]);

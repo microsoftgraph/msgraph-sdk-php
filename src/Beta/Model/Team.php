@@ -34,7 +34,7 @@ class Team extends Entity
     public function getMemberSettings()
     {
         if (array_key_exists("memberSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["memberSettings"], "Microsoft\Graph\Model\TeamMemberSettings")) {
+            if (is_a($this->_propDict["memberSettings"], "Microsoft\Graph\Beta\Model\TeamMemberSettings")) {
                 return $this->_propDict["memberSettings"];
             } else {
                 $this->_propDict["memberSettings"] = new TeamMemberSettings($this->_propDict["memberSettings"]);
@@ -65,7 +65,7 @@ class Team extends Entity
     public function getMessagingSettings()
     {
         if (array_key_exists("messagingSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["messagingSettings"], "Microsoft\Graph\Model\TeamMessagingSettings")) {
+            if (is_a($this->_propDict["messagingSettings"], "Microsoft\Graph\Beta\Model\TeamMessagingSettings")) {
                 return $this->_propDict["messagingSettings"];
             } else {
                 $this->_propDict["messagingSettings"] = new TeamMessagingSettings($this->_propDict["messagingSettings"]);
@@ -96,7 +96,7 @@ class Team extends Entity
     public function getFunSettings()
     {
         if (array_key_exists("funSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["funSettings"], "Microsoft\Graph\Model\TeamFunSettings")) {
+            if (is_a($this->_propDict["funSettings"], "Microsoft\Graph\Beta\Model\TeamFunSettings")) {
                 return $this->_propDict["funSettings"];
             } else {
                 $this->_propDict["funSettings"] = new TeamFunSettings($this->_propDict["funSettings"]);
@@ -127,7 +127,7 @@ class Team extends Entity
     public function getGuestSettings()
     {
         if (array_key_exists("guestSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["guestSettings"], "Microsoft\Graph\Model\TeamGuestSettings")) {
+            if (is_a($this->_propDict["guestSettings"], "Microsoft\Graph\Beta\Model\TeamGuestSettings")) {
                 return $this->_propDict["guestSettings"];
             } else {
                 $this->_propDict["guestSettings"] = new TeamGuestSettings($this->_propDict["guestSettings"]);

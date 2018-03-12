@@ -34,7 +34,7 @@ class ImportedWindowsAutopilotDeviceIdentityState extends Entity
     public function getDeviceImportStatus()
     {
         if (array_key_exists("deviceImportStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceImportStatus"], "Microsoft\Graph\Model\ImportedWindowsAutopilotDeviceIdentityImportStatus")) {
+            if (is_a($this->_propDict["deviceImportStatus"], "Microsoft\Graph\Beta\Model\ImportedWindowsAutopilotDeviceIdentityImportStatus")) {
                 return $this->_propDict["deviceImportStatus"];
             } else {
                 $this->_propDict["deviceImportStatus"] = new ImportedWindowsAutopilotDeviceIdentityImportStatus($this->_propDict["deviceImportStatus"]);

@@ -35,7 +35,7 @@ class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleType
     public function getScheduledInstallDay()
     {
         if (array_key_exists("scheduledInstallDay", $this->_propDict)) {
-            if (is_a($this->_propDict["scheduledInstallDay"], "Microsoft\Graph\Model\WeeklySchedule")) {
+            if (is_a($this->_propDict["scheduledInstallDay"], "Microsoft\Graph\Beta\Model\WeeklySchedule")) {
                 return $this->_propDict["scheduledInstallDay"];
             } else {
                 $this->_propDict["scheduledInstallDay"] = new WeeklySchedule($this->_propDict["scheduledInstallDay"]);
@@ -68,7 +68,7 @@ class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleType
     public function getScheduledInstallTime()
     {
         if (array_key_exists("scheduledInstallTime", $this->_propDict)) {
-            if (is_a($this->_propDict["scheduledInstallTime"], "Microsoft\Graph\Model\TimeOfDay")) {
+            if (is_a($this->_propDict["scheduledInstallTime"], "Microsoft\Graph\Beta\Model\TimeOfDay")) {
                 return $this->_propDict["scheduledInstallTime"];
             } else {
                 $this->_propDict["scheduledInstallTime"] = new TimeOfDay($this->_propDict["scheduledInstallTime"]);
@@ -100,7 +100,7 @@ class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleType
     public function getRestartMode()
     {
         if (array_key_exists("restartMode", $this->_propDict)) {
-            if (is_a($this->_propDict["restartMode"], "Microsoft\Graph\Model\WindowsUpdateRestartMode")) {
+            if (is_a($this->_propDict["restartMode"], "Microsoft\Graph\Beta\Model\WindowsUpdateRestartMode")) {
                 return $this->_propDict["restartMode"];
             } else {
                 $this->_propDict["restartMode"] = new WindowsUpdateRestartMode($this->_propDict["restartMode"]);

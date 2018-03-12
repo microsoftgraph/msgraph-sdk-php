@@ -34,7 +34,7 @@ class EducationSubmission extends Entity
     public function getRecipient()
     {
         if (array_key_exists("recipient", $this->_propDict)) {
-            if (is_a($this->_propDict["recipient"], "Microsoft\Graph\Model\EducationSubmissionRecipient")) {
+            if (is_a($this->_propDict["recipient"], "Microsoft\Graph\Beta\Model\EducationSubmissionRecipient")) {
                 return $this->_propDict["recipient"];
             } else {
                 $this->_propDict["recipient"] = new EducationSubmissionRecipient($this->_propDict["recipient"]);
@@ -65,7 +65,7 @@ class EducationSubmission extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Microsoft\Graph\Model\EducationSubmissionStatus")) {
+            if (is_a($this->_propDict["status"], "Microsoft\Graph\Beta\Model\EducationSubmissionStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new EducationSubmissionStatus($this->_propDict["status"]);
@@ -96,7 +96,7 @@ class EducationSubmission extends Entity
     public function getSubmittedBy()
     {
         if (array_key_exists("submittedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["submittedBy"], "Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["submittedBy"], "Microsoft\Graph\Beta\Model\IdentitySet")) {
                 return $this->_propDict["submittedBy"];
             } else {
                 $this->_propDict["submittedBy"] = new IdentitySet($this->_propDict["submittedBy"]);
@@ -158,7 +158,7 @@ class EducationSubmission extends Entity
     public function getReleasedBy()
     {
         if (array_key_exists("releasedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["releasedBy"], "Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["releasedBy"], "Microsoft\Graph\Beta\Model\IdentitySet")) {
                 return $this->_propDict["releasedBy"];
             } else {
                 $this->_propDict["releasedBy"] = new IdentitySet($this->_propDict["releasedBy"]);
@@ -220,7 +220,7 @@ class EducationSubmission extends Entity
     public function getGrade()
     {
         if (array_key_exists("grade", $this->_propDict)) {
-            if (is_a($this->_propDict["grade"], "Microsoft\Graph\Model\EducationAssignmentGrade")) {
+            if (is_a($this->_propDict["grade"], "Microsoft\Graph\Beta\Model\EducationAssignmentGrade")) {
                 return $this->_propDict["grade"];
             } else {
                 $this->_propDict["grade"] = new EducationAssignmentGrade($this->_propDict["grade"]);
@@ -251,7 +251,7 @@ class EducationSubmission extends Entity
     public function getFeedback()
     {
         if (array_key_exists("feedback", $this->_propDict)) {
-            if (is_a($this->_propDict["feedback"], "Microsoft\Graph\Model\EducationFeedback")) {
+            if (is_a($this->_propDict["feedback"], "Microsoft\Graph\Beta\Model\EducationFeedback")) {
                 return $this->_propDict["feedback"];
             } else {
                 $this->_propDict["feedback"] = new EducationFeedback($this->_propDict["feedback"]);

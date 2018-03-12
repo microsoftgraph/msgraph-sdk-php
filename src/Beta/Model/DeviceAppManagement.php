@@ -158,7 +158,7 @@ class DeviceAppManagement extends Entity
     public function getWindowsManagementApp()
     {
         if (array_key_exists("windowsManagementApp", $this->_propDict)) {
-            if (is_a($this->_propDict["windowsManagementApp"], "Microsoft\Graph\Model\WindowsManagementApp")) {
+            if (is_a($this->_propDict["windowsManagementApp"], "Microsoft\Graph\Beta\Model\WindowsManagementApp")) {
                 return $this->_propDict["windowsManagementApp"];
             } else {
                 $this->_propDict["windowsManagementApp"] = new WindowsManagementApp($this->_propDict["windowsManagementApp"]);
@@ -305,7 +305,7 @@ class DeviceAppManagement extends Entity
     public function getSymantecCodeSigningCertificate()
     {
         if (array_key_exists("symantecCodeSigningCertificate", $this->_propDict)) {
-            if (is_a($this->_propDict["symantecCodeSigningCertificate"], "Microsoft\Graph\Model\SymantecCodeSigningCertificate")) {
+            if (is_a($this->_propDict["symantecCodeSigningCertificate"], "Microsoft\Graph\Beta\Model\SymantecCodeSigningCertificate")) {
                 return $this->_propDict["symantecCodeSigningCertificate"];
             } else {
                 $this->_propDict["symantecCodeSigningCertificate"] = new SymantecCodeSigningCertificate($this->_propDict["symantecCodeSigningCertificate"]);

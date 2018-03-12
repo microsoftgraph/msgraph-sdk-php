@@ -34,7 +34,7 @@ class EducationIdentityMatchingOptions extends Entity
     public function getAppliesTo()
     {
         if (array_key_exists("appliesTo", $this->_propDict)) {
-            if (is_a($this->_propDict["appliesTo"], "Microsoft\Graph\Model\EducationUserRole")) {
+            if (is_a($this->_propDict["appliesTo"], "Microsoft\Graph\Beta\Model\EducationUserRole")) {
                 return $this->_propDict["appliesTo"];
             } else {
                 $this->_propDict["appliesTo"] = new EducationUserRole($this->_propDict["appliesTo"]);

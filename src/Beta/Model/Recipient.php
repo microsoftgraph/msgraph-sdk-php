@@ -35,7 +35,7 @@ class Recipient extends Entity
     public function getEmailAddress()
     {
         if (array_key_exists("emailAddress", $this->_propDict)) {
-            if (is_a($this->_propDict["emailAddress"], "Microsoft\Graph\Model\EmailAddress")) {
+            if (is_a($this->_propDict["emailAddress"], "Microsoft\Graph\Beta\Model\EmailAddress")) {
                 return $this->_propDict["emailAddress"];
             } else {
                 $this->_propDict["emailAddress"] = new EmailAddress($this->_propDict["emailAddress"]);

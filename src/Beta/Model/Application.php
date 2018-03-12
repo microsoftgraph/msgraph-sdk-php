@@ -34,7 +34,7 @@ class Application extends DirectoryObject
     public function getApi()
     {
         if (array_key_exists("api", $this->_propDict)) {
-            if (is_a($this->_propDict["api"], "Microsoft\Graph\Model\Api")) {
+            if (is_a($this->_propDict["api"], "Microsoft\Graph\Beta\Model\Api")) {
                 return $this->_propDict["api"];
             } else {
                 $this->_propDict["api"] = new Api($this->_propDict["api"]);
@@ -178,7 +178,7 @@ class Application extends DirectoryObject
     public function getInstalledClients()
     {
         if (array_key_exists("installedClients", $this->_propDict)) {
-            if (is_a($this->_propDict["installedClients"], "Microsoft\Graph\Model\InstalledClient")) {
+            if (is_a($this->_propDict["installedClients"], "Microsoft\Graph\Beta\Model\InstalledClient")) {
                 return $this->_propDict["installedClients"];
             } else {
                 $this->_propDict["installedClients"] = new InstalledClient($this->_propDict["installedClients"]);
@@ -236,7 +236,7 @@ class Application extends DirectoryObject
     public function getInfo()
     {
         if (array_key_exists("info", $this->_propDict)) {
-            if (is_a($this->_propDict["info"], "Microsoft\Graph\Model\InformationalUrl")) {
+            if (is_a($this->_propDict["info"], "Microsoft\Graph\Beta\Model\InformationalUrl")) {
                 return $this->_propDict["info"];
             } else {
                 $this->_propDict["info"] = new InformationalUrl($this->_propDict["info"]);
@@ -464,7 +464,7 @@ class Application extends DirectoryObject
     public function getWeb()
     {
         if (array_key_exists("web", $this->_propDict)) {
-            if (is_a($this->_propDict["web"], "Microsoft\Graph\Model\Web")) {
+            if (is_a($this->_propDict["web"], "Microsoft\Graph\Beta\Model\Web")) {
                 return $this->_propDict["web"];
             } else {
                 $this->_propDict["web"] = new Web($this->_propDict["web"]);
@@ -523,7 +523,7 @@ class Application extends DirectoryObject
     public function getCreatedOnBehalfOf()
     {
         if (array_key_exists("createdOnBehalfOf", $this->_propDict)) {
-            if (is_a($this->_propDict["createdOnBehalfOf"], "Microsoft\Graph\Model\DirectoryObject")) {
+            if (is_a($this->_propDict["createdOnBehalfOf"], "Microsoft\Graph\Beta\Model\DirectoryObject")) {
                 return $this->_propDict["createdOnBehalfOf"];
             } else {
                 $this->_propDict["createdOnBehalfOf"] = new DirectoryObject($this->_propDict["createdOnBehalfOf"]);
@@ -610,7 +610,7 @@ class Application extends DirectoryObject
     public function getSynchronization()
     {
         if (array_key_exists("synchronization", $this->_propDict)) {
-            if (is_a($this->_propDict["synchronization"], "Microsoft\Graph\Model\Synchronization")) {
+            if (is_a($this->_propDict["synchronization"], "Microsoft\Graph\Beta\Model\Synchronization")) {
                 return $this->_propDict["synchronization"];
             } else {
                 $this->_propDict["synchronization"] = new Synchronization($this->_propDict["synchronization"]);

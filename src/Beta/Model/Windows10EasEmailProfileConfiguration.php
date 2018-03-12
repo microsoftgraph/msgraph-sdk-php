@@ -142,7 +142,7 @@ class Windows10EasEmailProfileConfiguration extends DeviceConfiguration
     public function getDurationOfEmailToSync()
     {
         if (array_key_exists("durationOfEmailToSync", $this->_propDict)) {
-            if (is_a($this->_propDict["durationOfEmailToSync"], "Microsoft\Graph\Model\EmailSyncDuration")) {
+            if (is_a($this->_propDict["durationOfEmailToSync"], "Microsoft\Graph\Beta\Model\EmailSyncDuration")) {
                 return $this->_propDict["durationOfEmailToSync"];
             } else {
                 $this->_propDict["durationOfEmailToSync"] = new EmailSyncDuration($this->_propDict["durationOfEmailToSync"]);
@@ -173,7 +173,7 @@ class Windows10EasEmailProfileConfiguration extends DeviceConfiguration
     public function getEmailAddressSource()
     {
         if (array_key_exists("emailAddressSource", $this->_propDict)) {
-            if (is_a($this->_propDict["emailAddressSource"], "Microsoft\Graph\Model\UserEmailSource")) {
+            if (is_a($this->_propDict["emailAddressSource"], "Microsoft\Graph\Beta\Model\UserEmailSource")) {
                 return $this->_propDict["emailAddressSource"];
             } else {
                 $this->_propDict["emailAddressSource"] = new UserEmailSource($this->_propDict["emailAddressSource"]);
@@ -204,7 +204,7 @@ class Windows10EasEmailProfileConfiguration extends DeviceConfiguration
     public function getEmailSyncSchedule()
     {
         if (array_key_exists("emailSyncSchedule", $this->_propDict)) {
-            if (is_a($this->_propDict["emailSyncSchedule"], "Microsoft\Graph\Model\EmailSyncSchedule")) {
+            if (is_a($this->_propDict["emailSyncSchedule"], "Microsoft\Graph\Beta\Model\EmailSyncSchedule")) {
                 return $this->_propDict["emailSyncSchedule"];
             } else {
                 $this->_propDict["emailSyncSchedule"] = new EmailSyncSchedule($this->_propDict["emailSyncSchedule"]);
@@ -289,7 +289,7 @@ class Windows10EasEmailProfileConfiguration extends DeviceConfiguration
     public function getUsernameSource()
     {
         if (array_key_exists("usernameSource", $this->_propDict)) {
-            if (is_a($this->_propDict["usernameSource"], "Microsoft\Graph\Model\UserEmailSource")) {
+            if (is_a($this->_propDict["usernameSource"], "Microsoft\Graph\Beta\Model\UserEmailSource")) {
                 return $this->_propDict["usernameSource"];
             } else {
                 $this->_propDict["usernameSource"] = new UserEmailSource($this->_propDict["usernameSource"]);

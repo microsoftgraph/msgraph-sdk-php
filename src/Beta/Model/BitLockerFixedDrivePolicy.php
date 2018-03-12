@@ -34,7 +34,7 @@ class BitLockerFixedDrivePolicy extends Entity
     public function getEncryptionMethod()
     {
         if (array_key_exists("encryptionMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["encryptionMethod"], "Microsoft\Graph\Model\BitLockerEncryptionMethod")) {
+            if (is_a($this->_propDict["encryptionMethod"], "Microsoft\Graph\Beta\Model\BitLockerEncryptionMethod")) {
                 return $this->_propDict["encryptionMethod"];
             } else {
                 $this->_propDict["encryptionMethod"] = new BitLockerEncryptionMethod($this->_propDict["encryptionMethod"]);
@@ -91,7 +91,7 @@ class BitLockerFixedDrivePolicy extends Entity
     public function getRecoveryOptions()
     {
         if (array_key_exists("recoveryOptions", $this->_propDict)) {
-            if (is_a($this->_propDict["recoveryOptions"], "Microsoft\Graph\Model\BitLockerRecoveryOptions")) {
+            if (is_a($this->_propDict["recoveryOptions"], "Microsoft\Graph\Beta\Model\BitLockerRecoveryOptions")) {
                 return $this->_propDict["recoveryOptions"];
             } else {
                 $this->_propDict["recoveryOptions"] = new BitLockerRecoveryOptions($this->_propDict["recoveryOptions"]);

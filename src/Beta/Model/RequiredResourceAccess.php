@@ -60,7 +60,7 @@ class RequiredResourceAccess extends Entity
     public function getResourceAccess()
     {
         if (array_key_exists("resourceAccess", $this->_propDict)) {
-            if (is_a($this->_propDict["resourceAccess"], "Microsoft\Graph\Model\ResourceAccess")) {
+            if (is_a($this->_propDict["resourceAccess"], "Microsoft\Graph\Beta\Model\ResourceAccess")) {
                 return $this->_propDict["resourceAccess"];
             } else {
                 $this->_propDict["resourceAccess"] = new ResourceAccess($this->_propDict["resourceAccess"]);

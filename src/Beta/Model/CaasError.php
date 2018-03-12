@@ -34,7 +34,7 @@ class CaasError extends CaasChildError
     public function getDetails()
     {
         if (array_key_exists("details", $this->_propDict)) {
-            if (is_a($this->_propDict["details"], "Microsoft\Graph\Model\CaasChildError")) {
+            if (is_a($this->_propDict["details"], "Microsoft\Graph\Beta\Model\CaasChildError")) {
                 return $this->_propDict["details"];
             } else {
                 $this->_propDict["details"] = new CaasChildError($this->_propDict["details"]);

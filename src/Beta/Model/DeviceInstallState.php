@@ -126,7 +126,7 @@ class DeviceInstallState extends Entity
     public function getInstallState()
     {
         if (array_key_exists("installState", $this->_propDict)) {
-            if (is_a($this->_propDict["installState"], "Microsoft\Graph\Model\InstallState")) {
+            if (is_a($this->_propDict["installState"], "Microsoft\Graph\Beta\Model\InstallState")) {
                 return $this->_propDict["installState"];
             } else {
                 $this->_propDict["installState"] = new InstallState($this->_propDict["installState"]);

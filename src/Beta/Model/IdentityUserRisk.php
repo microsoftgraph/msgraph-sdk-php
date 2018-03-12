@@ -34,7 +34,7 @@ class IdentityUserRisk extends Entity
     public function getLevel()
     {
         if (array_key_exists("level", $this->_propDict)) {
-            if (is_a($this->_propDict["level"], "Microsoft\Graph\Model\UserRiskLevel")) {
+            if (is_a($this->_propDict["level"], "Microsoft\Graph\Beta\Model\UserRiskLevel")) {
                 return $this->_propDict["level"];
             } else {
                 $this->_propDict["level"] = new UserRiskLevel($this->_propDict["level"]);
@@ -65,7 +65,7 @@ class IdentityUserRisk extends Entity
     public function getLastChangedDateTime()
     {
         if (array_key_exists("lastChangedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastChangedDateTime"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["lastChangedDateTime"], "Microsoft\Graph\Beta\Model\\DateTime")) {
                 return $this->_propDict["lastChangedDateTime"];
             } else {
                 $this->_propDict["lastChangedDateTime"] = new \DateTime($this->_propDict["lastChangedDateTime"]);

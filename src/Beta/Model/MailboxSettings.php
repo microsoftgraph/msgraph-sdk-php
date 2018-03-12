@@ -35,7 +35,7 @@ class MailboxSettings extends Entity
     public function getAutomaticRepliesSetting()
     {
         if (array_key_exists("automaticRepliesSetting", $this->_propDict)) {
-            if (is_a($this->_propDict["automaticRepliesSetting"], "Microsoft\Graph\Model\AutomaticRepliesSetting")) {
+            if (is_a($this->_propDict["automaticRepliesSetting"], "Microsoft\Graph\Beta\Model\AutomaticRepliesSetting")) {
                 return $this->_propDict["automaticRepliesSetting"];
             } else {
                 $this->_propDict["automaticRepliesSetting"] = new AutomaticRepliesSetting($this->_propDict["automaticRepliesSetting"]);
@@ -122,7 +122,7 @@ class MailboxSettings extends Entity
     public function getLanguage()
     {
         if (array_key_exists("language", $this->_propDict)) {
-            if (is_a($this->_propDict["language"], "Microsoft\Graph\Model\LocaleInfo")) {
+            if (is_a($this->_propDict["language"], "Microsoft\Graph\Beta\Model\LocaleInfo")) {
                 return $this->_propDict["language"];
             } else {
                 $this->_propDict["language"] = new LocaleInfo($this->_propDict["language"]);
@@ -154,7 +154,7 @@ class MailboxSettings extends Entity
     public function getWorkingHours()
     {
         if (array_key_exists("workingHours", $this->_propDict)) {
-            if (is_a($this->_propDict["workingHours"], "Microsoft\Graph\Model\WorkingHours")) {
+            if (is_a($this->_propDict["workingHours"], "Microsoft\Graph\Beta\Model\WorkingHours")) {
                 return $this->_propDict["workingHours"];
             } else {
                 $this->_propDict["workingHours"] = new WorkingHours($this->_propDict["workingHours"]);

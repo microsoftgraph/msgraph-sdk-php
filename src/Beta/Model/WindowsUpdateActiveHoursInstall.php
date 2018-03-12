@@ -35,7 +35,7 @@ class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallScheduleType
     public function getActiveHoursStart()
     {
         if (array_key_exists("activeHoursStart", $this->_propDict)) {
-            if (is_a($this->_propDict["activeHoursStart"], "Microsoft\Graph\Model\TimeOfDay")) {
+            if (is_a($this->_propDict["activeHoursStart"], "Microsoft\Graph\Beta\Model\TimeOfDay")) {
                 return $this->_propDict["activeHoursStart"];
             } else {
                 $this->_propDict["activeHoursStart"] = new TimeOfDay($this->_propDict["activeHoursStart"]);
@@ -68,7 +68,7 @@ class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallScheduleType
     public function getActiveHoursEnd()
     {
         if (array_key_exists("activeHoursEnd", $this->_propDict)) {
-            if (is_a($this->_propDict["activeHoursEnd"], "Microsoft\Graph\Model\TimeOfDay")) {
+            if (is_a($this->_propDict["activeHoursEnd"], "Microsoft\Graph\Beta\Model\TimeOfDay")) {
                 return $this->_propDict["activeHoursEnd"];
             } else {
                 $this->_propDict["activeHoursEnd"] = new TimeOfDay($this->_propDict["activeHoursEnd"]);

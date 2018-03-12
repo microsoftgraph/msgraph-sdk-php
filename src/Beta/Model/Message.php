@@ -216,7 +216,7 @@ class Message extends OutlookItem
     public function getBody()
     {
         if (array_key_exists("body", $this->_propDict)) {
-            if (is_a($this->_propDict["body"], "Microsoft\Graph\Model\ItemBody")) {
+            if (is_a($this->_propDict["body"], "Microsoft\Graph\Beta\Model\ItemBody")) {
                 return $this->_propDict["body"];
             } else {
                 $this->_propDict["body"] = new ItemBody($this->_propDict["body"]);
@@ -278,7 +278,7 @@ class Message extends OutlookItem
     public function getImportance()
     {
         if (array_key_exists("importance", $this->_propDict)) {
-            if (is_a($this->_propDict["importance"], "Microsoft\Graph\Model\Importance")) {
+            if (is_a($this->_propDict["importance"], "Microsoft\Graph\Beta\Model\Importance")) {
                 return $this->_propDict["importance"];
             } else {
                 $this->_propDict["importance"] = new Importance($this->_propDict["importance"]);
@@ -340,7 +340,7 @@ class Message extends OutlookItem
     public function getSender()
     {
         if (array_key_exists("sender", $this->_propDict)) {
-            if (is_a($this->_propDict["sender"], "Microsoft\Graph\Model\Recipient")) {
+            if (is_a($this->_propDict["sender"], "Microsoft\Graph\Beta\Model\Recipient")) {
                 return $this->_propDict["sender"];
             } else {
                 $this->_propDict["sender"] = new Recipient($this->_propDict["sender"]);
@@ -373,7 +373,7 @@ class Message extends OutlookItem
     public function getFrom()
     {
         if (array_key_exists("from", $this->_propDict)) {
-            if (is_a($this->_propDict["from"], "Microsoft\Graph\Model\Recipient")) {
+            if (is_a($this->_propDict["from"], "Microsoft\Graph\Beta\Model\Recipient")) {
                 return $this->_propDict["from"];
             } else {
                 $this->_propDict["from"] = new Recipient($this->_propDict["from"]);
@@ -586,7 +586,7 @@ class Message extends OutlookItem
     public function getUniqueBody()
     {
         if (array_key_exists("uniqueBody", $this->_propDict)) {
-            if (is_a($this->_propDict["uniqueBody"], "Microsoft\Graph\Model\ItemBody")) {
+            if (is_a($this->_propDict["uniqueBody"], "Microsoft\Graph\Beta\Model\ItemBody")) {
                 return $this->_propDict["uniqueBody"];
             } else {
                 $this->_propDict["uniqueBody"] = new ItemBody($this->_propDict["uniqueBody"]);
@@ -763,7 +763,7 @@ class Message extends OutlookItem
     public function getMentionsPreview()
     {
         if (array_key_exists("mentionsPreview", $this->_propDict)) {
-            if (is_a($this->_propDict["mentionsPreview"], "Microsoft\Graph\Model\MentionsPreview")) {
+            if (is_a($this->_propDict["mentionsPreview"], "Microsoft\Graph\Beta\Model\MentionsPreview")) {
                 return $this->_propDict["mentionsPreview"];
             } else {
                 $this->_propDict["mentionsPreview"] = new MentionsPreview($this->_propDict["mentionsPreview"]);
@@ -795,7 +795,7 @@ class Message extends OutlookItem
     public function getInferenceClassification()
     {
         if (array_key_exists("inferenceClassification", $this->_propDict)) {
-            if (is_a($this->_propDict["inferenceClassification"], "Microsoft\Graph\Model\InferenceClassificationType")) {
+            if (is_a($this->_propDict["inferenceClassification"], "Microsoft\Graph\Beta\Model\InferenceClassificationType")) {
                 return $this->_propDict["inferenceClassification"];
             } else {
                 $this->_propDict["inferenceClassification"] = new InferenceClassificationType($this->_propDict["inferenceClassification"]);
@@ -881,7 +881,7 @@ class Message extends OutlookItem
     public function getFlag()
     {
         if (array_key_exists("flag", $this->_propDict)) {
-            if (is_a($this->_propDict["flag"], "Microsoft\Graph\Model\FollowupFlag")) {
+            if (is_a($this->_propDict["flag"], "Microsoft\Graph\Beta\Model\FollowupFlag")) {
                 return $this->_propDict["flag"];
             } else {
                 $this->_propDict["flag"] = new FollowupFlag($this->_propDict["flag"]);
