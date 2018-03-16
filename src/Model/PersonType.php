@@ -27,6 +27,7 @@ class PersonType extends Entity
 {
     /**
     * Gets the class
+    * The type of data source, such as Person.
     *
     * @return string The class
     */
@@ -41,6 +42,7 @@ class PersonType extends Entity
 
     /**
     * Sets the class
+    * The type of data source, such as Person.
     *
     * @param string $val The value of the class
     *
@@ -53,6 +55,7 @@ class PersonType extends Entity
     }
     /**
     * Gets the subclass
+    * The secondary type of data source, such as OrganizationUser.
     *
     * @return string The subclass
     */
@@ -67,6 +70,7 @@ class PersonType extends Entity
 
     /**
     * Sets the subclass
+    * The secondary type of data source, such as OrganizationUser.
     *
     * @param string $val The value of the subclass
     *

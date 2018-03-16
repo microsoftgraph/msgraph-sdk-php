@@ -28,7 +28,7 @@ class ResponseStatus extends Entity
 
     /**
     * Gets the response
-    * The response type: None = 0, Organizer = 1, TentativelyAccepted = 2, Accepted = 3, Declined = 4, NotResponded = 5. Possible values are: None, Organizer, TentativelyAccepted, Accepted, Declined, NotResponded.
+    * The response type. Possible values are: None, Organizer, TentativelyAccepted, Accepted, Declined, NotResponded.
     *
     * @return ResponseType The response
     */
@@ -47,7 +47,7 @@ class ResponseStatus extends Entity
 
     /**
     * Sets the response
-    * The response type: None = 0, Organizer = 1, TentativelyAccepted = 2, Accepted = 3, Declined = 4, NotResponded = 5. Possible values are: None, Organizer, TentativelyAccepted, Accepted, Declined, NotResponded.
+    * The response type. Possible values are: None, Organizer, TentativelyAccepted, Accepted, Declined, NotResponded.
     *
     * @param ResponseType $val The value to assign to the response
     *

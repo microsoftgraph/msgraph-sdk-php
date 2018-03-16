@@ -157,6 +157,7 @@ class Site extends BaseItem
 
      /** 
      * Gets the columns
+    * The collection of column definitions reusable across lists under this site.
      *
      * @return array The columns
      */
@@ -171,6 +172,7 @@ class Site extends BaseItem
     
     /** 
     * Sets the columns
+    * The collection of column definitions reusable across lists under this site.
     *
     * @param ColumnDefinition $val The columns
     *
@@ -185,6 +187,7 @@ class Site extends BaseItem
 
      /** 
      * Gets the contentTypes
+    * The collection of content types defined for this site.
      *
      * @return array The contentTypes
      */
@@ -199,6 +202,7 @@ class Site extends BaseItem
     
     /** 
     * Sets the contentTypes
+    * The collection of content types defined for this site.
     *
     * @param ContentType $val The contentTypes
     *
@@ -306,6 +310,7 @@ class Site extends BaseItem
 
      /** 
      * Gets the lists
+    * The collection of lists under this site.
      *
      * @return array The lists
      */
@@ -320,6 +325,7 @@ class Site extends BaseItem
     
     /** 
     * Sets the lists
+    * The collection of lists under this site.
     *
     * @param GraphList $val The lists
     *

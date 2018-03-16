@@ -144,7 +144,7 @@ class Subscription extends Entity
     
     /**
     * Gets the expirationDateTime
-    * Specifies the date and time when the webhook subscription expires. The time is in UTC, and can be an amount of time from subscription creation that varies for the resource subscribed to.  See the table below for maximum values.
+    * Specifies the date and time when the webhook subscription expires. The time is in UTC, and can be an amount of time from subscription creation that varies for the resource subscribed to.  See the table below for maximum supported subscription length of time.
     *
     * @return \DateTime The expirationDateTime
     */
@@ -163,7 +163,7 @@ class Subscription extends Entity
     
     /**
     * Sets the expirationDateTime
-    * Specifies the date and time when the webhook subscription expires. The time is in UTC, and can be an amount of time from subscription creation that varies for the resource subscribed to.  See the table below for maximum values.
+    * Specifies the date and time when the webhook subscription expires. The time is in UTC, and can be an amount of time from subscription creation that varies for the resource subscribed to.  See the table below for maximum supported subscription length of time.
     *
     * @param \DateTime $val The expirationDateTime
     *

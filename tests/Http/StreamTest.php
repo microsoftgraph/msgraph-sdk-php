@@ -70,13 +70,18 @@ class StreamTest extends TestCase
 
     public function testInvalidDownload()
     {
-        $this->expectException(Microsoft\Graph\Exception\GraphException::class);
+        set_error_handler(function() {});
+        try {
+            $this->expectException(Microsoft\Graph\Exception\GraphException::class);
 
-        $file = new VfsStreamFile('foo.txt', 0000);
-        $this->root->addChild($file);
+            $file = new VfsStreamFile('foo.txt', 0000);
+            $this->root->addChild($file);
 
-        $request = new GraphRequest("GET", "/me", "token", "url", "/v1.0");
-        $request->download($file->url(), $this->client);
+            $request = new GraphRequest("GET", "/me", "token", "url", "/v1.0");
+            $request->download($file->url(), $this->client);
+        } finally {
+            restore_error_handler();
+        } 
     }
 
     public function testSetReturnStream()

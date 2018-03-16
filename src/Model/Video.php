@@ -27,6 +27,7 @@ class Video extends Entity
 {
     /**
     * Gets the audioBitsPerSample
+    * Number of audio bits per sample.
     *
     * @return int The audioBitsPerSample
     */
@@ -41,6 +42,7 @@ class Video extends Entity
 
     /**
     * Sets the audioBitsPerSample
+    * Number of audio bits per sample.
     *
     * @param int $val The value of the audioBitsPerSample
     *
@@ -53,6 +55,7 @@ class Video extends Entity
     }
     /**
     * Gets the audioChannels
+    * Number of audio channels.
     *
     * @return int The audioChannels
     */
@@ -67,6 +70,7 @@ class Video extends Entity
 
     /**
     * Sets the audioChannels
+    * Number of audio channels.
     *
     * @param int $val The value of the audioChannels
     *
@@ -79,6 +83,7 @@ class Video extends Entity
     }
     /**
     * Gets the audioFormat
+    * Name of the audio format (AAC, MP3, etc.).
     *
     * @return string The audioFormat
     */
@@ -93,6 +98,7 @@ class Video extends Entity
 
     /**
     * Sets the audioFormat
+    * Name of the audio format (AAC, MP3, etc.).
     *
     * @param string $val The value of the audioFormat
     *
@@ -105,6 +111,7 @@ class Video extends Entity
     }
     /**
     * Gets the audioSamplesPerSecond
+    * Number of audio samples per second.
     *
     * @return int The audioSamplesPerSecond
     */
@@ -119,6 +126,7 @@ class Video extends Entity
 
     /**
     * Sets the audioSamplesPerSecond
+    * Number of audio samples per second.
     *
     * @param int $val The value of the audioSamplesPerSecond
     *
@@ -187,6 +195,7 @@ class Video extends Entity
     }
     /**
     * Gets the fourCC
+    * "Four character code" name of the video format.
     *
     * @return string The fourCC
     */
@@ -201,6 +210,7 @@ class Video extends Entity
 
     /**
     * Sets the fourCC
+    * "Four character code" name of the video format.
     *
     * @param string $val The value of the fourCC
     *

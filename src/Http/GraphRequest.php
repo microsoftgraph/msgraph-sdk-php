@@ -113,8 +113,8 @@ class GraphRequest
     * @param string $accessToken A valid access token to validate the Graph call
     * @param string $baseUrl     The base URL to call
     * @param string $apiVersion  The API version to use
-     *
-     * @throws GraphException when no access token is provided
+    * @param string $proxyPort   The url where to proxy through
+    * @throws GraphException when no access token is provided
     */ 
     public function __construct($requestType, $endpoint, $accessToken, $baseUrl, $apiVersion, $proxyPort = null)
     {
@@ -325,25 +325,27 @@ class GraphRequest
             $client = $this->createGuzzleClient();
         }
         try {
-            if (file_exists($path) && is_writeable($path)) {
-                $file = fopen($path, 'w');
-
-                $client->request(
-                    $this->requestType, 
-                    $this->_getRequestUrl(), 
-                    [
-                        'body' => $this->requestBody,
-                        'sink' => $file
-                    ]
-                );
-                fclose($file);
-            } else {
+            $file = fopen($path, 'w');
+            if (!$file) {
                 throw new GraphException(GraphConstants::INVALID_FILE);
+            }
+
+            $client->request(
+                $this->requestType, 
+                $this->_getRequestUrl(), 
+                [
+                    'body' => $this->requestBody,
+                    'sink' => $file
+                ]
+            );
+            if(is_resource($file)){
+                fclose($file);
             }
             
         } catch(GraphException $e) {
             throw new GraphException(GraphConstants::INVALID_FILE);
         }
+
         return null;
     }
 
