@@ -54,6 +54,39 @@ class Group extends DirectoryObject
     }
     
     /**
+    * Gets the createdDateTime
+    * The date and time the group was created.
+    *
+    * @return \DateTime The createdDateTime
+    */
+    public function getCreatedDateTime()
+    {
+        if (array_key_exists("createdDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+                return $this->_propDict["createdDateTime"];
+            } else {
+                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
+                return $this->_propDict["createdDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the createdDateTime
+    * The date and time the group was created.
+    *
+    * @param \DateTime $val The createdDateTime
+    *
+    * @return Group
+    */
+    public function setCreatedDateTime($val)
+    {
+        $this->_propDict["createdDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the description
     * An optional description for the group.
     *
@@ -344,6 +377,37 @@ class Group extends DirectoryObject
     public function setProxyAddresses($val)
     {
         $this->_propDict["proxyAddresses"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the renewedDateTime
+    *
+    * @return \DateTime The renewedDateTime
+    */
+    public function getRenewedDateTime()
+    {
+        if (array_key_exists("renewedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["renewedDateTime"], "\DateTime")) {
+                return $this->_propDict["renewedDateTime"];
+            } else {
+                $this->_propDict["renewedDateTime"] = new \DateTime($this->_propDict["renewedDateTime"]);
+                return $this->_propDict["renewedDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the renewedDateTime
+    *
+    * @param \DateTime $val The renewedDateTime
+    *
+    * @return Group
+    */
+    public function setRenewedDateTime($val)
+    {
+        $this->_propDict["renewedDateTime"] = $val;
         return $this;
     }
     
@@ -1134,6 +1198,34 @@ class Group extends DirectoryObject
     public function setOnenote($val)
     {
         $this->_propDict["onenote"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the groupLifecyclePolicies
+     *
+     * @return array The groupLifecyclePolicies
+     */
+    public function getGroupLifecyclePolicies()
+    {
+        if (array_key_exists("groupLifecyclePolicies", $this->_propDict)) {
+           return $this->_propDict["groupLifecyclePolicies"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the groupLifecyclePolicies
+    *
+    * @param GroupLifecyclePolicy $val The groupLifecyclePolicies
+    *
+    * @return Group
+    */
+    public function setGroupLifecyclePolicies($val)
+    {
+		$this->_propDict["groupLifecyclePolicies"] = $val;
         return $this;
     }
     

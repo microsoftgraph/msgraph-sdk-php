@@ -60,7 +60,7 @@ class AssignedPlan extends Entity
     }
     /**
     * Gets the capabilityStatus
-    * For example, “Enabled”.
+    * For example, "Enabled".
     *
     * @return string The capabilityStatus
     */
@@ -75,7 +75,7 @@ class AssignedPlan extends Entity
 
     /**
     * Sets the capabilityStatus
-    * For example, “Enabled”.
+    * For example, "Enabled".
     *
     * @param string $val The value of the capabilityStatus
     *
@@ -88,7 +88,7 @@ class AssignedPlan extends Entity
     }
     /**
     * Gets the service
-    * The name of the service; for example, “Exchange”.
+    * The name of the service; for example, "Exchange".
     *
     * @return string The service
     */
@@ -103,7 +103,7 @@ class AssignedPlan extends Entity
 
     /**
     * Sets the service
-    * The name of the service; for example, “Exchange”.
+    * The name of the service; for example, "Exchange".
     *
     * @param string $val The value of the service
     *

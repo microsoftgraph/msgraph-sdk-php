@@ -83,7 +83,7 @@ class SharepointIds extends Entity
     }
     /**
     * Gets the listItemUniqueId
-    * The unique identifier (guid) for the item within OneDrive for Busienss or a SharePoint site.
+    * The unique identifier (guid) for the item within OneDrive for Business or a SharePoint site.
     *
     * @return string The listItemUniqueId
     */
@@ -98,7 +98,7 @@ class SharepointIds extends Entity
 
     /**
     * Sets the listItemUniqueId
-    * The unique identifier (guid) for the item within OneDrive for Busienss or a SharePoint site.
+    * The unique identifier (guid) for the item within OneDrive for Business or a SharePoint site.
     *
     * @param string $val The value of the listItemUniqueId
     *
