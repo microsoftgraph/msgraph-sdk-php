@@ -86,7 +86,7 @@ class FileAttachment extends Attachment
     
     /**
     * Gets the contentBytes
-    * The binary contents of the file.
+    * The base64-encoded contents of the file.
     *
     * @return \GuzzleHttp\Psr7\Stream The contentBytes
     */
@@ -105,7 +105,7 @@ class FileAttachment extends Attachment
     
     /**
     * Sets the contentBytes
-    * The binary contents of the file.
+    * The base64-encoded contents of the file.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The contentBytes
     *
