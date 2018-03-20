@@ -91,7 +91,7 @@ class EducationStudent extends Entity
     public function getBirthDate()
     {
         if (array_key_exists("birthDate", $this->_propDict)) {
-            if (is_a($this->_propDict["birthDate"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["birthDate"], \DateTime::class)) {
                 return $this->_propDict["birthDate"];
             } else {
                 $this->_propDict["birthDate"] = new \DateTime($this->_propDict["birthDate"]);

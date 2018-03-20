@@ -68,7 +68,7 @@ class ResponseStatus extends Entity
     public function getTime()
     {
         if (array_key_exists("time", $this->_propDict)) {
-            if (is_a($this->_propDict["time"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["time"], \DateTime::class)) {
                 return $this->_propDict["time"];
             } else {
                 $this->_propDict["time"] = new \DateTime($this->_propDict["time"]);

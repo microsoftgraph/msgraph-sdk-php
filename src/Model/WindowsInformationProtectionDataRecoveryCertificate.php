@@ -91,7 +91,7 @@ class WindowsInformationProtectionDataRecoveryCertificate extends Entity
     public function getExpirationDateTime()
     {
         if (array_key_exists("expirationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["expirationDateTime"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["expirationDateTime"], \DateTime::class)) {
                 return $this->_propDict["expirationDateTime"];
             } else {
                 $this->_propDict["expirationDateTime"] = new \DateTime($this->_propDict["expirationDateTime"]);

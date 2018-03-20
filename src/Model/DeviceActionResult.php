@@ -96,7 +96,7 @@ class DeviceActionResult extends Entity
     public function getStartDateTime()
     {
         if (array_key_exists("startDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startDateTime"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["startDateTime"], \DateTime::class)) {
                 return $this->_propDict["startDateTime"];
             } else {
                 $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);
@@ -129,7 +129,7 @@ class DeviceActionResult extends Entity
     public function getLastUpdatedDateTime()
     {
         if (array_key_exists("lastUpdatedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastUpdatedDateTime"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["lastUpdatedDateTime"], \DateTime::class)) {
                 return $this->_propDict["lastUpdatedDateTime"];
             } else {
                 $this->_propDict["lastUpdatedDateTime"] = new \DateTime($this->_propDict["lastUpdatedDateTime"]);
