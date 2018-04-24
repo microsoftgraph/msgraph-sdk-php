@@ -27,7 +27,6 @@ class IntuneBrand extends Entity
 {
     /**
     * Gets the displayName
-    * Company/organization name that is displayed to end users.
     *
     * @return string The displayName
     */
@@ -42,7 +41,6 @@ class IntuneBrand extends Entity
 
     /**
     * Sets the displayName
-    * Company/organization name that is displayed to end users.
     *
     * @param string $val The value of the displayName
     *
@@ -55,7 +53,6 @@ class IntuneBrand extends Entity
     }
     /**
     * Gets the contactITName
-    * Name of the person/organization responsible for IT support.
     *
     * @return string The contactITName
     */
@@ -70,7 +67,6 @@ class IntuneBrand extends Entity
 
     /**
     * Sets the contactITName
-    * Name of the person/organization responsible for IT support.
     *
     * @param string $val The value of the contactITName
     *
@@ -83,7 +79,6 @@ class IntuneBrand extends Entity
     }
     /**
     * Gets the contactITPhoneNumber
-    * Phone number of the person/organization responsible for IT support.
     *
     * @return string The contactITPhoneNumber
     */
@@ -98,7 +93,6 @@ class IntuneBrand extends Entity
 
     /**
     * Sets the contactITPhoneNumber
-    * Phone number of the person/organization responsible for IT support.
     *
     * @param string $val The value of the contactITPhoneNumber
     *
@@ -111,7 +105,6 @@ class IntuneBrand extends Entity
     }
     /**
     * Gets the contactITEmailAddress
-    * Email address of the person/organization responsible for IT support.
     *
     * @return string The contactITEmailAddress
     */
@@ -126,7 +119,6 @@ class IntuneBrand extends Entity
 
     /**
     * Sets the contactITEmailAddress
-    * Email address of the person/organization responsible for IT support.
     *
     * @param string $val The value of the contactITEmailAddress
     *
@@ -139,7 +131,6 @@ class IntuneBrand extends Entity
     }
     /**
     * Gets the contactITNotes
-    * Text comments regarding the person/organization responsible for IT support.
     *
     * @return string The contactITNotes
     */
@@ -154,7 +145,6 @@ class IntuneBrand extends Entity
 
     /**
     * Sets the contactITNotes
-    * Text comments regarding the person/organization responsible for IT support.
     *
     * @param string $val The value of the contactITNotes
     *
@@ -167,7 +157,6 @@ class IntuneBrand extends Entity
     }
     /**
     * Gets the privacyUrl
-    * URL to the company/organization’s privacy policy.
     *
     * @return string The privacyUrl
     */
@@ -182,7 +171,6 @@ class IntuneBrand extends Entity
 
     /**
     * Sets the privacyUrl
-    * URL to the company/organization’s privacy policy.
     *
     * @param string $val The value of the privacyUrl
     *
@@ -195,7 +183,6 @@ class IntuneBrand extends Entity
     }
     /**
     * Gets the onlineSupportSiteUrl
-    * URL to the company/organization’s IT helpdesk site.
     *
     * @return string The onlineSupportSiteUrl
     */
@@ -210,7 +197,6 @@ class IntuneBrand extends Entity
 
     /**
     * Sets the onlineSupportSiteUrl
-    * URL to the company/organization’s IT helpdesk site.
     *
     * @param string $val The value of the onlineSupportSiteUrl
     *
@@ -223,7 +209,6 @@ class IntuneBrand extends Entity
     }
     /**
     * Gets the onlineSupportSiteName
-    * Display name of the company/organization’s IT helpdesk site.
     *
     * @return string The onlineSupportSiteName
     */
@@ -238,7 +223,6 @@ class IntuneBrand extends Entity
 
     /**
     * Sets the onlineSupportSiteName
-    * Display name of the company/organization’s IT helpdesk site.
     *
     * @param string $val The value of the onlineSupportSiteName
     *
@@ -252,7 +236,6 @@ class IntuneBrand extends Entity
 
     /**
     * Gets the themeColor
-    * Primary theme color used in the Company Portal applications and web portal.
     *
     * @return RgbColor The themeColor
     */
@@ -271,7 +254,6 @@ class IntuneBrand extends Entity
 
     /**
     * Sets the themeColor
-    * Primary theme color used in the Company Portal applications and web portal.
     *
     * @param RgbColor $val The value to assign to the themeColor
     *
@@ -284,7 +266,6 @@ class IntuneBrand extends Entity
     }
     /**
     * Gets the showLogo
-    * Boolean that represents whether the administrator-supplied logo images are shown or not shown.
     *
     * @return bool The showLogo
     */
@@ -299,7 +280,6 @@ class IntuneBrand extends Entity
 
     /**
     * Sets the showLogo
-    * Boolean that represents whether the administrator-supplied logo images are shown or not shown.
     *
     * @param bool $val The value of the showLogo
     *
@@ -313,7 +293,6 @@ class IntuneBrand extends Entity
 
     /**
     * Gets the lightBackgroundLogo
-    * Logo image displayed in Company Portal apps which have a light background behind the logo.
     *
     * @return MimeContent The lightBackgroundLogo
     */
@@ -332,7 +311,6 @@ class IntuneBrand extends Entity
 
     /**
     * Sets the lightBackgroundLogo
-    * Logo image displayed in Company Portal apps which have a light background behind the logo.
     *
     * @param MimeContent $val The value to assign to the lightBackgroundLogo
     *
@@ -346,7 +324,6 @@ class IntuneBrand extends Entity
 
     /**
     * Gets the darkBackgroundLogo
-    * Logo image displayed in Company Portal apps which have a dark background behind the logo.
     *
     * @return MimeContent The darkBackgroundLogo
     */
@@ -365,7 +342,6 @@ class IntuneBrand extends Entity
 
     /**
     * Sets the darkBackgroundLogo
-    * Logo image displayed in Company Portal apps which have a dark background behind the logo.
     *
     * @param MimeContent $val The value to assign to the darkBackgroundLogo
     *
@@ -378,7 +354,6 @@ class IntuneBrand extends Entity
     }
     /**
     * Gets the showNameNextToLogo
-    * Boolean that represents whether the administrator-supplied display name will be shown next to the logo image.
     *
     * @return bool The showNameNextToLogo
     */
@@ -393,7 +368,6 @@ class IntuneBrand extends Entity
 
     /**
     * Sets the showNameNextToLogo
-    * Boolean that represents whether the administrator-supplied display name will be shown next to the logo image.
     *
     * @param bool $val The value of the showNameNextToLogo
     *
@@ -406,7 +380,6 @@ class IntuneBrand extends Entity
     }
     /**
     * Gets the showDisplayNameNextToLogo
-    * Boolean that represents whether the administrator-supplied display name will be shown next to the logo image.
     *
     * @return bool The showDisplayNameNextToLogo
     */
@@ -421,7 +394,6 @@ class IntuneBrand extends Entity
 
     /**
     * Sets the showDisplayNameNextToLogo
-    * Boolean that represents whether the administrator-supplied display name will be shown next to the logo image.
     *
     * @param bool $val The value of the showDisplayNameNextToLogo
     *

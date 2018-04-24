@@ -201,6 +201,37 @@ class Windows81SCEPCertificateProfile extends Windows81CertificateProfileBase
     }
     
     /**
+    * Gets the certificateStore
+    *
+    * @return CertificateStore The certificateStore
+    */
+    public function getCertificateStore()
+    {
+        if (array_key_exists("certificateStore", $this->_propDict)) {
+            if (is_a($this->_propDict["certificateStore"], "Microsoft\Graph\Beta\Model\CertificateStore")) {
+                return $this->_propDict["certificateStore"];
+            } else {
+                $this->_propDict["certificateStore"] = new CertificateStore($this->_propDict["certificateStore"]);
+                return $this->_propDict["certificateStore"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the certificateStore
+    *
+    * @param CertificateStore $val The certificateStore
+    *
+    * @return Windows81SCEPCertificateProfile
+    */
+    public function setCertificateStore($val)
+    {
+        $this->_propDict["certificateStore"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the rootCertificate
     *
     * @return Windows81TrustedRootCertificate The rootCertificate

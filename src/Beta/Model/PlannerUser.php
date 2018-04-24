@@ -91,7 +91,6 @@ class PlannerUser extends Entity
 
      /** 
      * Gets the tasks
-    * Read-only. Nullable. Returns the plannerPlans shared with the user.
      *
      * @return array The tasks
      */
@@ -106,7 +105,6 @@ class PlannerUser extends Entity
     
     /** 
     * Sets the tasks
-    * Read-only. Nullable. Returns the plannerPlans shared with the user.
     *
     * @param PlannerTask $val The tasks
     *
@@ -121,7 +119,6 @@ class PlannerUser extends Entity
 
      /** 
      * Gets the plans
-    * Read-only. Nullable. Returns the plannerTasks assigned to the user.
      *
      * @return array The plans
      */
@@ -136,7 +133,6 @@ class PlannerUser extends Entity
     
     /** 
     * Sets the plans
-    * Read-only. Nullable. Returns the plannerTasks assigned to the user.
     *
     * @param PlannerPlan $val The plans
     *
@@ -201,6 +197,34 @@ class PlannerUser extends Entity
     public function setRecentPlans($val)
     {
 		$this->_propDict["recentPlans"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the all
+     *
+     * @return array The all
+     */
+    public function getAll()
+    {
+        if (array_key_exists("all", $this->_propDict)) {
+           return $this->_propDict["all"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the all
+    *
+    * @param PlannerDelta $val The all
+    *
+    * @return PlannerUser
+    */
+    public function setAll($val)
+    {
+		$this->_propDict["all"] = $val;
         return $this;
     }
     

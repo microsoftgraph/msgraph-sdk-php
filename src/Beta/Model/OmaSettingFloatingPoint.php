@@ -28,7 +28,6 @@ class OmaSettingFloatingPoint extends OmaSetting
 
     /**
     * Gets the value
-    * Value.
     *
     * @return Single The value
     */
@@ -47,7 +46,6 @@ class OmaSettingFloatingPoint extends OmaSetting
 
     /**
     * Sets the value
-    * Value.
     *
     * @param Single $val The value to assign to the value
     *

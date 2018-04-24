@@ -275,7 +275,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the enterpriseCloudPrintDiscoveryEndPoint
-    * Endpoint for discovering cloud printers.
     *
     * @return string The enterpriseCloudPrintDiscoveryEndPoint
     */
@@ -290,7 +289,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the enterpriseCloudPrintDiscoveryEndPoint
-    * Endpoint for discovering cloud printers.
     *
     * @param string $val The enterpriseCloudPrintDiscoveryEndPoint
     *
@@ -304,7 +302,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the enterpriseCloudPrintOAuthAuthority
-    * Authentication endpoint for acquiring OAuth tokens.
     *
     * @return string The enterpriseCloudPrintOAuthAuthority
     */
@@ -319,7 +316,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the enterpriseCloudPrintOAuthAuthority
-    * Authentication endpoint for acquiring OAuth tokens.
     *
     * @param string $val The enterpriseCloudPrintOAuthAuthority
     *
@@ -333,7 +329,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the enterpriseCloudPrintOAuthClientIdentifier
-    * GUID of a client application authorized to retrieve OAuth tokens from the OAuth Authority.
     *
     * @return string The enterpriseCloudPrintOAuthClientIdentifier
     */
@@ -348,7 +343,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the enterpriseCloudPrintOAuthClientIdentifier
-    * GUID of a client application authorized to retrieve OAuth tokens from the OAuth Authority.
     *
     * @param string $val The enterpriseCloudPrintOAuthClientIdentifier
     *
@@ -362,7 +356,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the enterpriseCloudPrintResourceIdentifier
-    * OAuth resource URI for print service as configured in the Azure portal.
     *
     * @return string The enterpriseCloudPrintResourceIdentifier
     */
@@ -377,7 +370,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the enterpriseCloudPrintResourceIdentifier
-    * OAuth resource URI for print service as configured in the Azure portal.
     *
     * @param string $val The enterpriseCloudPrintResourceIdentifier
     *
@@ -391,7 +383,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the enterpriseCloudPrintDiscoveryMaxLimit
-    * Maximum number of printers that should be queried from a discovery endpoint. This is a mobile only setting. Valid values 1 to 65535
     *
     * @return int The enterpriseCloudPrintDiscoveryMaxLimit
     */
@@ -406,7 +397,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the enterpriseCloudPrintDiscoveryMaxLimit
-    * Maximum number of printers that should be queried from a discovery endpoint. This is a mobile only setting. Valid values 1 to 65535
     *
     * @param int $val The enterpriseCloudPrintDiscoveryMaxLimit
     *
@@ -420,7 +410,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the enterpriseCloudPrintMopriaDiscoveryResourceIdentifier
-    * OAuth resource URI for printer discovery service as configured in Azure portal.
     *
     * @return string The enterpriseCloudPrintMopriaDiscoveryResourceIdentifier
     */
@@ -435,7 +424,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the enterpriseCloudPrintMopriaDiscoveryResourceIdentifier
-    * OAuth resource URI for printer discovery service as configured in Azure portal.
     *
     * @param string $val The enterpriseCloudPrintMopriaDiscoveryResourceIdentifier
     *
@@ -530,7 +518,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the searchBlockDiacritics
-    * Specifies if search can use diacritics.
     *
     * @return bool The searchBlockDiacritics
     */
@@ -545,7 +532,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the searchBlockDiacritics
-    * Specifies if search can use diacritics.
     *
     * @param bool $val The searchBlockDiacritics
     *
@@ -559,7 +545,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the searchDisableAutoLanguageDetection
-    * Specifies whether to use automatic language detection when indexing content and properties.
     *
     * @return bool The searchDisableAutoLanguageDetection
     */
@@ -574,7 +559,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the searchDisableAutoLanguageDetection
-    * Specifies whether to use automatic language detection when indexing content and properties.
     *
     * @param bool $val The searchDisableAutoLanguageDetection
     *
@@ -588,7 +572,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the searchDisableIndexingEncryptedItems
-    * Indicates whether or not to block indexing of WIP-protected items to prevent them from appearing in search results for Cortana or Explorer.
     *
     * @return bool The searchDisableIndexingEncryptedItems
     */
@@ -603,7 +586,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the searchDisableIndexingEncryptedItems
-    * Indicates whether or not to block indexing of WIP-protected items to prevent them from appearing in search results for Cortana or Explorer.
     *
     * @param bool $val The searchDisableIndexingEncryptedItems
     *
@@ -617,7 +599,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the searchEnableRemoteQueries
-    * Indicates whether or not to block remote queries of this computer’s index.
     *
     * @return bool The searchEnableRemoteQueries
     */
@@ -632,7 +613,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the searchEnableRemoteQueries
-    * Indicates whether or not to block remote queries of this computer’s index.
     *
     * @param bool $val The searchEnableRemoteQueries
     *
@@ -673,7 +653,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the searchDisableIndexerBackoff
-    * Indicates whether or not to disable the search indexer backoff feature.
     *
     * @return bool The searchDisableIndexerBackoff
     */
@@ -688,7 +667,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the searchDisableIndexerBackoff
-    * Indicates whether or not to disable the search indexer backoff feature.
     *
     * @param bool $val The searchDisableIndexerBackoff
     *
@@ -702,7 +680,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the searchDisableIndexingRemovableDrive
-    * Indicates whether or not to allow users to add locations on removable drives to libraries and to be indexed.
     *
     * @return bool The searchDisableIndexingRemovableDrive
     */
@@ -717,7 +694,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the searchDisableIndexingRemovableDrive
-    * Indicates whether or not to allow users to add locations on removable drives to libraries and to be indexed.
     *
     * @param bool $val The searchDisableIndexingRemovableDrive
     *
@@ -731,7 +707,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the searchEnableAutomaticIndexSizeManangement
-    * Specifies minimum amount of hard drive space on the same drive as the index location before indexing stops.
     *
     * @return bool The searchEnableAutomaticIndexSizeManangement
     */
@@ -746,7 +721,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the searchEnableAutomaticIndexSizeManangement
-    * Specifies minimum amount of hard drive space on the same drive as the index location before indexing stops.
     *
     * @param bool $val The searchEnableAutomaticIndexSizeManangement
     *
@@ -787,7 +761,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the diagnosticsDataSubmissionMode
-    * Gets or sets a value allowing the device to send diagnostic and usage telemetry data, such as Watson. Possible values are: userDefined, none, basic, enhanced, full.
     *
     * @return DiagnosticDataSubmissionMode The diagnosticsDataSubmissionMode
     */
@@ -806,7 +779,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the diagnosticsDataSubmissionMode
-    * Gets or sets a value allowing the device to send diagnostic and usage telemetry data, such as Watson. Possible values are: userDefined, none, basic, enhanced, full.
     *
     * @param DiagnosticDataSubmissionMode $val The diagnosticsDataSubmissionMode
     *
@@ -820,7 +792,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the oneDriveDisableFileSync
-    * Gets or sets a value allowing IT admins to prevent apps and features from working with files on OneDrive.
     *
     * @return bool The oneDriveDisableFileSync
     */
@@ -835,7 +806,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the oneDriveDisableFileSync
-    * Gets or sets a value allowing IT admins to prevent apps and features from working with files on OneDrive.
     *
     * @param bool $val The oneDriveDisableFileSync
     *
@@ -934,7 +904,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the smartScreenEnableAppInstallControl
-    * Allows IT Admins to control whether users are allowed to install apps from places other than the Store.
     *
     * @return bool The smartScreenEnableAppInstallControl
     */
@@ -949,7 +918,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the smartScreenEnableAppInstallControl
-    * Allows IT Admins to control whether users are allowed to install apps from places other than the Store.
     *
     * @param bool $val The smartScreenEnableAppInstallControl
     *
@@ -963,7 +931,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the personalizationDesktopImageUrl
-    * A http or https Url to a jpg, jpeg or png image that needs to be downloaded and used as the Desktop Image or a file Url to a local image on the file system that needs to used as the Desktop Image.
     *
     * @return string The personalizationDesktopImageUrl
     */
@@ -978,7 +945,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the personalizationDesktopImageUrl
-    * A http or https Url to a jpg, jpeg or png image that needs to be downloaded and used as the Desktop Image or a file Url to a local image on the file system that needs to used as the Desktop Image.
     *
     * @param string $val The personalizationDesktopImageUrl
     *
@@ -992,7 +958,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the personalizationLockScreenImageUrl
-    * A http or https Url to a jpg, jpeg or png image that neeeds to be downloaded and used as the Lock Screen Image or a file Url to a local image on the file system that needs to be used as the Lock Screen Image.
     *
     * @return string The personalizationLockScreenImageUrl
     */
@@ -1007,7 +972,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the personalizationLockScreenImageUrl
-    * A http or https Url to a jpg, jpeg or png image that neeeds to be downloaded and used as the Lock Screen Image or a file Url to a local image on the file system that needs to be used as the Lock Screen Image.
     *
     * @param string $val The personalizationLockScreenImageUrl
     *
@@ -1021,7 +985,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the bluetoothAllowedServices
-    * Specify a list of allowed Bluetooth services and profiles in hex formatted strings.
     *
     * @return string The bluetoothAllowedServices
     */
@@ -1036,7 +999,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the bluetoothAllowedServices
-    * Specify a list of allowed Bluetooth services and profiles in hex formatted strings.
     *
     * @param string $val The bluetoothAllowedServices
     *
@@ -1050,7 +1012,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the bluetoothBlockAdvertising
-    * Whether or not to Block the user from using bluetooth advertising.
     *
     * @return bool The bluetoothBlockAdvertising
     */
@@ -1065,7 +1026,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the bluetoothBlockAdvertising
-    * Whether or not to Block the user from using bluetooth advertising.
     *
     * @param bool $val The bluetoothBlockAdvertising
     *
@@ -1079,7 +1039,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the bluetoothBlockDiscoverableMode
-    * Whether or not to Block the user from using bluetooth discoverable mode.
     *
     * @return bool The bluetoothBlockDiscoverableMode
     */
@@ -1094,7 +1053,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the bluetoothBlockDiscoverableMode
-    * Whether or not to Block the user from using bluetooth discoverable mode.
     *
     * @param bool $val The bluetoothBlockDiscoverableMode
     *
@@ -1108,7 +1066,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the bluetoothBlockPrePairing
-    * Whether or not to block specific bundled Bluetooth peripherals to automatically pair with the host device.
     *
     * @return bool The bluetoothBlockPrePairing
     */
@@ -1123,7 +1080,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the bluetoothBlockPrePairing
-    * Whether or not to block specific bundled Bluetooth peripherals to automatically pair with the host device.
     *
     * @param bool $val The bluetoothBlockPrePairing
     *
@@ -1137,7 +1093,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeBlockAutofill
-    * Indicates whether or not to block auto fill.
     *
     * @return bool The edgeBlockAutofill
     */
@@ -1152,7 +1107,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeBlockAutofill
-    * Indicates whether or not to block auto fill.
     *
     * @param bool $val The edgeBlockAutofill
     *
@@ -1166,7 +1120,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeBlocked
-    * Indicates whether or not to Block the user from using the Edge browser.
     *
     * @return bool The edgeBlocked
     */
@@ -1181,7 +1134,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeBlocked
-    * Indicates whether or not to Block the user from using the Edge browser.
     *
     * @param bool $val The edgeBlocked
     *
@@ -1195,7 +1147,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeCookiePolicy
-    * Indicates which cookies to block in the Edge browser. Possible values are: userDefined, allow, blockThirdParty, blockAll.
     *
     * @return EdgeCookiePolicy The edgeCookiePolicy
     */
@@ -1214,7 +1165,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeCookiePolicy
-    * Indicates which cookies to block in the Edge browser. Possible values are: userDefined, allow, blockThirdParty, blockAll.
     *
     * @param EdgeCookiePolicy $val The edgeCookiePolicy
     *
@@ -1228,7 +1178,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeBlockDeveloperTools
-    * Indicates whether or not to block developer tools in the Edge browser.
     *
     * @return bool The edgeBlockDeveloperTools
     */
@@ -1243,7 +1192,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeBlockDeveloperTools
-    * Indicates whether or not to block developer tools in the Edge browser.
     *
     * @param bool $val The edgeBlockDeveloperTools
     *
@@ -1257,7 +1205,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeBlockSendingDoNotTrackHeader
-    * Indicates whether or not to Block the user from sending the do not track header.
     *
     * @return bool The edgeBlockSendingDoNotTrackHeader
     */
@@ -1272,7 +1219,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeBlockSendingDoNotTrackHeader
-    * Indicates whether or not to Block the user from sending the do not track header.
     *
     * @param bool $val The edgeBlockSendingDoNotTrackHeader
     *
@@ -1286,7 +1232,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeBlockExtensions
-    * Indicates whether or not to block extensions in the Edge browser.
     *
     * @return bool The edgeBlockExtensions
     */
@@ -1301,7 +1246,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeBlockExtensions
-    * Indicates whether or not to block extensions in the Edge browser.
     *
     * @param bool $val The edgeBlockExtensions
     *
@@ -1315,7 +1259,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeBlockInPrivateBrowsing
-    * Indicates whether or not to block InPrivate browsing on corporate networks, in the Edge browser.
     *
     * @return bool The edgeBlockInPrivateBrowsing
     */
@@ -1330,7 +1273,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeBlockInPrivateBrowsing
-    * Indicates whether or not to block InPrivate browsing on corporate networks, in the Edge browser.
     *
     * @param bool $val The edgeBlockInPrivateBrowsing
     *
@@ -1344,7 +1286,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeBlockJavaScript
-    * Indicates whether or not to Block the user from using JavaScript.
     *
     * @return bool The edgeBlockJavaScript
     */
@@ -1359,7 +1300,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeBlockJavaScript
-    * Indicates whether or not to Block the user from using JavaScript.
     *
     * @param bool $val The edgeBlockJavaScript
     *
@@ -1373,7 +1313,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeBlockPasswordManager
-    * Indicates whether or not to Block password manager.
     *
     * @return bool The edgeBlockPasswordManager
     */
@@ -1388,7 +1327,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeBlockPasswordManager
-    * Indicates whether or not to Block password manager.
     *
     * @param bool $val The edgeBlockPasswordManager
     *
@@ -1402,7 +1340,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeBlockAddressBarDropdown
-    * Block the address bar dropdown functionality in Microsoft Edge. Disable this settings to minimize network connections from Microsoft Edge to Microsoft services.
     *
     * @return bool The edgeBlockAddressBarDropdown
     */
@@ -1417,7 +1354,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeBlockAddressBarDropdown
-    * Block the address bar dropdown functionality in Microsoft Edge. Disable this settings to minimize network connections from Microsoft Edge to Microsoft services.
     *
     * @param bool $val The edgeBlockAddressBarDropdown
     *
@@ -1431,7 +1367,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeBlockCompatibilityList
-    * Block Microsoft compatibility list in Microsoft Edge. This list from Microsoft helps Edge properly display sites with known compatibility issues.
     *
     * @return bool The edgeBlockCompatibilityList
     */
@@ -1446,7 +1381,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeBlockCompatibilityList
-    * Block Microsoft compatibility list in Microsoft Edge. This list from Microsoft helps Edge properly display sites with known compatibility issues.
     *
     * @param bool $val The edgeBlockCompatibilityList
     *
@@ -1460,7 +1394,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeClearBrowsingDataOnExit
-    * Clear browsing data on exiting Microsoft Edge.
     *
     * @return bool The edgeClearBrowsingDataOnExit
     */
@@ -1475,7 +1408,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeClearBrowsingDataOnExit
-    * Clear browsing data on exiting Microsoft Edge.
     *
     * @param bool $val The edgeClearBrowsingDataOnExit
     *
@@ -1489,7 +1421,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeAllowStartPagesModification
-    * Allow users to change Start pages on Edge. Use the EdgeHomepageUrls to specify the Start pages that the user would see by default when they open Edge.
     *
     * @return bool The edgeAllowStartPagesModification
     */
@@ -1504,7 +1435,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeAllowStartPagesModification
-    * Allow users to change Start pages on Edge. Use the EdgeHomepageUrls to specify the Start pages that the user would see by default when they open Edge.
     *
     * @param bool $val The edgeAllowStartPagesModification
     *
@@ -1518,7 +1448,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeDisableFirstRunPage
-    * Block the Microsoft web page that opens on the first use of Microsoft Edge. This policy allows enterprises, like those enrolled in zero emissions configurations, to block this page.
     *
     * @return bool The edgeDisableFirstRunPage
     */
@@ -1533,7 +1462,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeDisableFirstRunPage
-    * Block the Microsoft web page that opens on the first use of Microsoft Edge. This policy allows enterprises, like those enrolled in zero emissions configurations, to block this page.
     *
     * @param bool $val The edgeDisableFirstRunPage
     *
@@ -1547,7 +1475,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeBlockLiveTileDataCollection
-    * Block the collection of information by Microsoft for live tile creation when users pin a site to Start from Microsoft Edge.
     *
     * @return bool The edgeBlockLiveTileDataCollection
     */
@@ -1562,7 +1489,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeBlockLiveTileDataCollection
-    * Block the collection of information by Microsoft for live tile creation when users pin a site to Start from Microsoft Edge.
     *
     * @param bool $val The edgeBlockLiveTileDataCollection
     *
@@ -1576,7 +1502,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeSyncFavoritesWithInternetExplorer
-    * Enable favorites sync between Internet Explorer and Microsoft Edge. Additions, deletions, modifications and order changes to favorites are shared between browsers.
     *
     * @return bool The edgeSyncFavoritesWithInternetExplorer
     */
@@ -1591,7 +1516,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeSyncFavoritesWithInternetExplorer
-    * Enable favorites sync between Internet Explorer and Microsoft Edge. Additions, deletions, modifications and order changes to favorites are shared between browsers.
     *
     * @param bool $val The edgeSyncFavoritesWithInternetExplorer
     *
@@ -1659,7 +1583,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the cellularBlockDataWhenRoaming
-    * Whether or not to Block the user from using data over cellular while roaming.
     *
     * @return bool The cellularBlockDataWhenRoaming
     */
@@ -1674,7 +1597,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the cellularBlockDataWhenRoaming
-    * Whether or not to Block the user from using data over cellular while roaming.
     *
     * @param bool $val The cellularBlockDataWhenRoaming
     *
@@ -1688,7 +1610,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the cellularBlockVpn
-    * Whether or not to Block the user from using VPN over cellular.
     *
     * @return bool The cellularBlockVpn
     */
@@ -1703,7 +1624,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the cellularBlockVpn
-    * Whether or not to Block the user from using VPN over cellular.
     *
     * @param bool $val The cellularBlockVpn
     *
@@ -1717,7 +1637,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the cellularBlockVpnWhenRoaming
-    * Whether or not to Block the user from using VPN when roaming over cellular.
     *
     * @return bool The cellularBlockVpnWhenRoaming
     */
@@ -1732,7 +1651,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the cellularBlockVpnWhenRoaming
-    * Whether or not to Block the user from using VPN when roaming over cellular.
     *
     * @param bool $val The cellularBlockVpnWhenRoaming
     *
@@ -1777,7 +1695,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderBlockEndUserAccess
-    * Whether or not to block end user access to Defender.
     *
     * @return bool The defenderBlockEndUserAccess
     */
@@ -1792,7 +1709,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderBlockEndUserAccess
-    * Whether or not to block end user access to Defender.
     *
     * @param bool $val The defenderBlockEndUserAccess
     *
@@ -1806,7 +1722,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderDaysBeforeDeletingQuarantinedMalware
-    * Number of days before deleting quarantined malware. Valid values 0 to 90
     *
     * @return int The defenderDaysBeforeDeletingQuarantinedMalware
     */
@@ -1821,7 +1736,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderDaysBeforeDeletingQuarantinedMalware
-    * Number of days before deleting quarantined malware. Valid values 0 to 90
     *
     * @param int $val The defenderDaysBeforeDeletingQuarantinedMalware
     *
@@ -1835,7 +1749,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderDetectedMalwareActions
-    * Gets or sets Defender’s actions to take on detected Malware per threat level.
     *
     * @return DefenderDetectedMalwareActions The defenderDetectedMalwareActions
     */
@@ -1854,7 +1767,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderDetectedMalwareActions
-    * Gets or sets Defender’s actions to take on detected Malware per threat level.
     *
     * @param DefenderDetectedMalwareActions $val The defenderDetectedMalwareActions
     *
@@ -1868,7 +1780,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderSystemScanSchedule
-    * Defender day of the week for the system scan. Possible values are: userDefined, everyday, sunday, monday, tuesday, wednesday, thursday, friday, saturday.
     *
     * @return WeeklySchedule The defenderSystemScanSchedule
     */
@@ -1887,7 +1798,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderSystemScanSchedule
-    * Defender day of the week for the system scan. Possible values are: userDefined, everyday, sunday, monday, tuesday, wednesday, thursday, friday, saturday.
     *
     * @param WeeklySchedule $val The defenderSystemScanSchedule
     *
@@ -1901,7 +1811,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderFilesAndFoldersToExclude
-    * Files and folder to exclude from scans and real time protection.
     *
     * @return string The defenderFilesAndFoldersToExclude
     */
@@ -1916,7 +1825,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderFilesAndFoldersToExclude
-    * Files and folder to exclude from scans and real time protection.
     *
     * @param string $val The defenderFilesAndFoldersToExclude
     *
@@ -1930,7 +1838,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderFileExtensionsToExclude
-    * File extensions to exclude from scans and real time protection.
     *
     * @return string The defenderFileExtensionsToExclude
     */
@@ -1945,7 +1852,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderFileExtensionsToExclude
-    * File extensions to exclude from scans and real time protection.
     *
     * @param string $val The defenderFileExtensionsToExclude
     *
@@ -1959,7 +1865,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderScanMaxCpu
-    * Max CPU usage percentage during scan. Valid values 0 to 100
     *
     * @return int The defenderScanMaxCpu
     */
@@ -1974,7 +1879,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderScanMaxCpu
-    * Max CPU usage percentage during scan. Valid values 0 to 100
     *
     * @param int $val The defenderScanMaxCpu
     *
@@ -1988,7 +1892,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderMonitorFileActivity
-    * Value for monitoring file activity. Possible values are: userDefined, disable, monitorAllFiles, monitorIncomingFilesOnly, monitorOutgoingFilesOnly.
     *
     * @return DefenderMonitorFileActivity The defenderMonitorFileActivity
     */
@@ -2007,7 +1910,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderMonitorFileActivity
-    * Value for monitoring file activity. Possible values are: userDefined, disable, monitorAllFiles, monitorIncomingFilesOnly, monitorOutgoingFilesOnly.
     *
     * @param DefenderMonitorFileActivity $val The defenderMonitorFileActivity
     *
@@ -2052,7 +1954,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderProcessesToExclude
-    * Processes to exclude from scans and real time protection.
     *
     * @return string The defenderProcessesToExclude
     */
@@ -2067,7 +1968,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderProcessesToExclude
-    * Processes to exclude from scans and real time protection.
     *
     * @param string $val The defenderProcessesToExclude
     *
@@ -2081,7 +1981,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderPromptForSampleSubmission
-    * The configuration for how to prompt user for sample submission. Possible values are: userDefined, alwaysPrompt, promptBeforeSendingPersonalData, neverSendData, sendAllDataWithoutPrompting.
     *
     * @return DefenderPromptForSampleSubmission The defenderPromptForSampleSubmission
     */
@@ -2100,7 +1999,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderPromptForSampleSubmission
-    * The configuration for how to prompt user for sample submission. Possible values are: userDefined, alwaysPrompt, promptBeforeSendingPersonalData, neverSendData, sendAllDataWithoutPrompting.
     *
     * @param DefenderPromptForSampleSubmission $val The defenderPromptForSampleSubmission
     *
@@ -2114,7 +2012,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderRequireBehaviorMonitoring
-    * Indicates whether or not to require behavior monitoring.
     *
     * @return bool The defenderRequireBehaviorMonitoring
     */
@@ -2129,7 +2026,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderRequireBehaviorMonitoring
-    * Indicates whether or not to require behavior monitoring.
     *
     * @param bool $val The defenderRequireBehaviorMonitoring
     *
@@ -2143,7 +2039,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderRequireCloudProtection
-    * Indicates whether or not to require cloud protection.
     *
     * @return bool The defenderRequireCloudProtection
     */
@@ -2158,7 +2053,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderRequireCloudProtection
-    * Indicates whether or not to require cloud protection.
     *
     * @param bool $val The defenderRequireCloudProtection
     *
@@ -2172,7 +2066,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderRequireNetworkInspectionSystem
-    * Indicates whether or not to require network inspection system.
     *
     * @return bool The defenderRequireNetworkInspectionSystem
     */
@@ -2187,7 +2080,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderRequireNetworkInspectionSystem
-    * Indicates whether or not to require network inspection system.
     *
     * @param bool $val The defenderRequireNetworkInspectionSystem
     *
@@ -2201,7 +2093,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderRequireRealTimeMonitoring
-    * Indicates whether or not to require real time monitoring.
     *
     * @return bool The defenderRequireRealTimeMonitoring
     */
@@ -2216,7 +2107,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderRequireRealTimeMonitoring
-    * Indicates whether or not to require real time monitoring.
     *
     * @param bool $val The defenderRequireRealTimeMonitoring
     *
@@ -2230,7 +2120,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderScanArchiveFiles
-    * Indicates whether or not to scan archive files.
     *
     * @return bool The defenderScanArchiveFiles
     */
@@ -2245,7 +2134,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderScanArchiveFiles
-    * Indicates whether or not to scan archive files.
     *
     * @param bool $val The defenderScanArchiveFiles
     *
@@ -2259,7 +2147,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderScanDownloads
-    * Indicates whether or not to scan downloads.
     *
     * @return bool The defenderScanDownloads
     */
@@ -2274,7 +2161,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderScanDownloads
-    * Indicates whether or not to scan downloads.
     *
     * @param bool $val The defenderScanDownloads
     *
@@ -2288,7 +2174,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderScanNetworkFiles
-    * Indicates whether or not to scan files opened from a network folder.
     *
     * @return bool The defenderScanNetworkFiles
     */
@@ -2303,7 +2188,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderScanNetworkFiles
-    * Indicates whether or not to scan files opened from a network folder.
     *
     * @param bool $val The defenderScanNetworkFiles
     *
@@ -2317,7 +2201,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderScanIncomingMail
-    * Indicates whether or not to scan incoming mail messages.
     *
     * @return bool The defenderScanIncomingMail
     */
@@ -2332,7 +2215,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderScanIncomingMail
-    * Indicates whether or not to scan incoming mail messages.
     *
     * @param bool $val The defenderScanIncomingMail
     *
@@ -2346,7 +2228,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderScanMappedNetworkDrivesDuringFullScan
-    * Indicates whether or not to scan mapped network drives during full scan.
     *
     * @return bool The defenderScanMappedNetworkDrivesDuringFullScan
     */
@@ -2361,7 +2242,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderScanMappedNetworkDrivesDuringFullScan
-    * Indicates whether or not to scan mapped network drives during full scan.
     *
     * @param bool $val The defenderScanMappedNetworkDrivesDuringFullScan
     *
@@ -2375,7 +2255,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderScanRemovableDrivesDuringFullScan
-    * Indicates whether or not to scan removable drives during full scan.
     *
     * @return bool The defenderScanRemovableDrivesDuringFullScan
     */
@@ -2390,7 +2269,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderScanRemovableDrivesDuringFullScan
-    * Indicates whether or not to scan removable drives during full scan.
     *
     * @param bool $val The defenderScanRemovableDrivesDuringFullScan
     *
@@ -2404,7 +2282,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderScanScriptsLoadedInInternetExplorer
-    * Indicates whether or not to scan scripts loaded in Internet Explorer browser.
     *
     * @return bool The defenderScanScriptsLoadedInInternetExplorer
     */
@@ -2419,7 +2296,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderScanScriptsLoadedInInternetExplorer
-    * Indicates whether or not to scan scripts loaded in Internet Explorer browser.
     *
     * @param bool $val The defenderScanScriptsLoadedInInternetExplorer
     *
@@ -2433,7 +2309,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderSignatureUpdateIntervalInHours
-    * The signature update interval in hours. Specify 0 not to check. Valid values 0 to 24
     *
     * @return int The defenderSignatureUpdateIntervalInHours
     */
@@ -2448,7 +2323,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderSignatureUpdateIntervalInHours
-    * The signature update interval in hours. Specify 0 not to check. Valid values 0 to 24
     *
     * @param int $val The defenderSignatureUpdateIntervalInHours
     *
@@ -2462,7 +2336,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderScanType
-    * The defender system scan type. Possible values are: userDefined, disabled, quick, full.
     *
     * @return DefenderScanType The defenderScanType
     */
@@ -2481,7 +2354,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderScanType
-    * The defender system scan type. Possible values are: userDefined, disabled, quick, full.
     *
     * @param DefenderScanType $val The defenderScanType
     *
@@ -2495,7 +2367,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderScheduledScanTime
-    * The defender time for the system scan.
     *
     * @return TimeOfDay The defenderScheduledScanTime
     */
@@ -2514,7 +2385,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderScheduledScanTime
-    * The defender time for the system scan.
     *
     * @param TimeOfDay $val The defenderScheduledScanTime
     *
@@ -2528,7 +2398,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderScheduledQuickScanTime
-    * The time to perform a daily quick scan.
     *
     * @return TimeOfDay The defenderScheduledQuickScanTime
     */
@@ -2547,7 +2416,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderScheduledQuickScanTime
-    * The time to perform a daily quick scan.
     *
     * @param TimeOfDay $val The defenderScheduledQuickScanTime
     *
@@ -2561,7 +2429,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderCloudBlockLevel
-    * Specifies the level of cloud-delivered protection. Possible values are: notConfigured, high, highPlus, zeroTolerance.
     *
     * @return DefenderCloudBlockLevelType The defenderCloudBlockLevel
     */
@@ -2580,7 +2447,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderCloudBlockLevel
-    * Specifies the level of cloud-delivered protection. Possible values are: notConfigured, high, highPlus, zeroTolerance.
     *
     * @param DefenderCloudBlockLevelType $val The defenderCloudBlockLevel
     *
@@ -2621,7 +2487,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the lockScreenAllowTimeoutConfiguration
-    * Specify whether to show a user-configurable setting to control the screen timeout while on the lock screen of Windows 10 Mobile devices. If this policy is set to Allow, the value set by lockScreenTimeoutInSeconds is ignored.
     *
     * @return bool The lockScreenAllowTimeoutConfiguration
     */
@@ -2636,7 +2501,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the lockScreenAllowTimeoutConfiguration
-    * Specify whether to show a user-configurable setting to control the screen timeout while on the lock screen of Windows 10 Mobile devices. If this policy is set to Allow, the value set by lockScreenTimeoutInSeconds is ignored.
     *
     * @param bool $val The lockScreenAllowTimeoutConfiguration
     *
@@ -2650,7 +2514,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the lockScreenBlockActionCenterNotifications
-    * Indicates whether or not to block action center notifications over lock screen.
     *
     * @return bool The lockScreenBlockActionCenterNotifications
     */
@@ -2665,7 +2528,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the lockScreenBlockActionCenterNotifications
-    * Indicates whether or not to block action center notifications over lock screen.
     *
     * @param bool $val The lockScreenBlockActionCenterNotifications
     *
@@ -2679,7 +2541,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the lockScreenBlockCortana
-    * Indicates whether or not the user can interact with Cortana using speech while the system is locked.
     *
     * @return bool The lockScreenBlockCortana
     */
@@ -2694,7 +2555,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the lockScreenBlockCortana
-    * Indicates whether or not the user can interact with Cortana using speech while the system is locked.
     *
     * @param bool $val The lockScreenBlockCortana
     *
@@ -2708,7 +2568,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the lockScreenBlockToastNotifications
-    * Indicates whether to allow toast notifications above the device lock screen.
     *
     * @return bool The lockScreenBlockToastNotifications
     */
@@ -2723,7 +2582,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the lockScreenBlockToastNotifications
-    * Indicates whether to allow toast notifications above the device lock screen.
     *
     * @param bool $val The lockScreenBlockToastNotifications
     *
@@ -2737,7 +2595,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the lockScreenTimeoutInSeconds
-    * Set the duration (in seconds) from the screen locking to the screen turning off for Windows 10 Mobile devices. Supported values are 11-1800. Valid values 11 to 1800
     *
     * @return int The lockScreenTimeoutInSeconds
     */
@@ -2752,7 +2609,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the lockScreenTimeoutInSeconds
-    * Set the duration (in seconds) from the screen locking to the screen turning off for Windows 10 Mobile devices. Supported values are 11-1800. Valid values 11 to 1800
     *
     * @param int $val The lockScreenTimeoutInSeconds
     *
@@ -2766,7 +2622,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordBlockSimple
-    * Specify whether PINs or passwords such as "1111" or "1234" are allowed. For Windows 10 desktops, it also controls the use of picture passwords.
     *
     * @return bool The passwordBlockSimple
     */
@@ -2781,7 +2636,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordBlockSimple
-    * Specify whether PINs or passwords such as "1111" or "1234" are allowed. For Windows 10 desktops, it also controls the use of picture passwords.
     *
     * @param bool $val The passwordBlockSimple
     *
@@ -2795,7 +2649,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordExpirationDays
-    * The password expiration in days. Valid values 0 to 730
     *
     * @return int The passwordExpirationDays
     */
@@ -2810,7 +2663,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordExpirationDays
-    * The password expiration in days. Valid values 0 to 730
     *
     * @param int $val The passwordExpirationDays
     *
@@ -2824,7 +2676,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordMinimumLength
-    * The minimum password length. Valid values 4 to 16
     *
     * @return int The passwordMinimumLength
     */
@@ -2839,7 +2690,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordMinimumLength
-    * The minimum password length. Valid values 4 to 16
     *
     * @param int $val The passwordMinimumLength
     *
@@ -2853,7 +2703,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordMinutesOfInactivityBeforeScreenTimeout
-    * The minutes of inactivity before the screen times out.
     *
     * @return int The passwordMinutesOfInactivityBeforeScreenTimeout
     */
@@ -2868,7 +2717,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordMinutesOfInactivityBeforeScreenTimeout
-    * The minutes of inactivity before the screen times out.
     *
     * @param int $val The passwordMinutesOfInactivityBeforeScreenTimeout
     *
@@ -2882,7 +2730,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordMinimumCharacterSetCount
-    * The number of character sets required in the password.
     *
     * @return int The passwordMinimumCharacterSetCount
     */
@@ -2897,7 +2744,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordMinimumCharacterSetCount
-    * The number of character sets required in the password.
     *
     * @param int $val The passwordMinimumCharacterSetCount
     *
@@ -2911,7 +2757,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordPreviousPasswordBlockCount
-    * The number of previous passwords to prevent reuse of. Valid values 0 to 50
     *
     * @return int The passwordPreviousPasswordBlockCount
     */
@@ -2926,7 +2771,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordPreviousPasswordBlockCount
-    * The number of previous passwords to prevent reuse of. Valid values 0 to 50
     *
     * @param int $val The passwordPreviousPasswordBlockCount
     *
@@ -2940,7 +2784,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordRequired
-    * Indicates whether or not to require the user to have a password.
     *
     * @return bool The passwordRequired
     */
@@ -2955,7 +2798,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordRequired
-    * Indicates whether or not to require the user to have a password.
     *
     * @param bool $val The passwordRequired
     *
@@ -2969,7 +2811,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordRequireWhenResumeFromIdleState
-    * Indicates whether or not to require a password upon resuming from an idle state.
     *
     * @return bool The passwordRequireWhenResumeFromIdleState
     */
@@ -2984,7 +2825,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordRequireWhenResumeFromIdleState
-    * Indicates whether or not to require a password upon resuming from an idle state.
     *
     * @param bool $val The passwordRequireWhenResumeFromIdleState
     *
@@ -2998,7 +2838,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordRequiredType
-    * The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
     *
     * @return RequiredPasswordType The passwordRequiredType
     */
@@ -3017,7 +2856,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordRequiredType
-    * The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
     *
     * @param RequiredPasswordType $val The passwordRequiredType
     *
@@ -3031,7 +2869,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordSignInFailureCountBeforeFactoryReset
-    * The number of sign in failures before factory reset. Valid values 0 to 999
     *
     * @return int The passwordSignInFailureCountBeforeFactoryReset
     */
@@ -3046,7 +2883,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordSignInFailureCountBeforeFactoryReset
-    * The number of sign in failures before factory reset. Valid values 0 to 999
     *
     * @param int $val The passwordSignInFailureCountBeforeFactoryReset
     *
@@ -3060,7 +2896,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the privacyAdvertisingId
-    * Enables or disables the use of advertising ID. Added in Windows 10, version 1607. Possible values are: notConfigured, blocked, allowed.
     *
     * @return StateManagementSetting The privacyAdvertisingId
     */
@@ -3079,7 +2914,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the privacyAdvertisingId
-    * Enables or disables the use of advertising ID. Added in Windows 10, version 1607. Possible values are: notConfigured, blocked, allowed.
     *
     * @param StateManagementSetting $val The privacyAdvertisingId
     *
@@ -3093,7 +2927,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the privacyAutoAcceptPairingAndConsentPrompts
-    * Indicates whether or not to allow the automatic acceptance of the pairing and privacy user consent dialog when launching apps.
     *
     * @return bool The privacyAutoAcceptPairingAndConsentPrompts
     */
@@ -3108,7 +2941,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the privacyAutoAcceptPairingAndConsentPrompts
-    * Indicates whether or not to allow the automatic acceptance of the pairing and privacy user consent dialog when launching apps.
     *
     * @param bool $val The privacyAutoAcceptPairingAndConsentPrompts
     *
@@ -3122,7 +2954,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the privacyBlockInputPersonalization
-    * Indicates whether or not to block the usage of cloud based speech services for Cortana, Dictation, or Store applications.
     *
     * @return bool The privacyBlockInputPersonalization
     */
@@ -3137,7 +2968,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the privacyBlockInputPersonalization
-    * Indicates whether or not to block the usage of cloud based speech services for Cortana, Dictation, or Store applications.
     *
     * @param bool $val The privacyBlockInputPersonalization
     *
@@ -3205,7 +3035,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the startBlockUnpinningAppsFromTaskbar
-    * Indicates whether or not to block the user from unpinning apps from taskbar.
     *
     * @return bool The startBlockUnpinningAppsFromTaskbar
     */
@@ -3220,7 +3049,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the startBlockUnpinningAppsFromTaskbar
-    * Indicates whether or not to block the user from unpinning apps from taskbar.
     *
     * @param bool $val The startBlockUnpinningAppsFromTaskbar
     *
@@ -3234,7 +3062,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the startMenuAppListVisibility
-    * Setting the value of this collapses the app list, removes the app list entirely, or disables the corresponding toggle in the Settings app. Possible values are: userDefined, collapse, remove, disableSettingsApp.
     *
     * @return WindowsStartMenuAppListVisibilityType The startMenuAppListVisibility
     */
@@ -3253,7 +3080,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the startMenuAppListVisibility
-    * Setting the value of this collapses the app list, removes the app list entirely, or disables the corresponding toggle in the Settings app. Possible values are: userDefined, collapse, remove, disableSettingsApp.
     *
     * @param WindowsStartMenuAppListVisibilityType $val The startMenuAppListVisibility
     *
@@ -3267,7 +3093,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the startMenuHideChangeAccountSettings
-    * Enabling this policy hides the change account setting from appearing in the user tile in the start menu.
     *
     * @return bool The startMenuHideChangeAccountSettings
     */
@@ -3282,7 +3107,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the startMenuHideChangeAccountSettings
-    * Enabling this policy hides the change account setting from appearing in the user tile in the start menu.
     *
     * @param bool $val The startMenuHideChangeAccountSettings
     *
@@ -3296,7 +3120,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the startMenuHideFrequentlyUsedApps
-    * Enabling this policy hides the most used apps from appearing on the start menu and disables the corresponding toggle in the Settings app.
     *
     * @return bool The startMenuHideFrequentlyUsedApps
     */
@@ -3311,7 +3134,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the startMenuHideFrequentlyUsedApps
-    * Enabling this policy hides the most used apps from appearing on the start menu and disables the corresponding toggle in the Settings app.
     *
     * @param bool $val The startMenuHideFrequentlyUsedApps
     *
@@ -3325,7 +3147,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the startMenuHideHibernate
-    * Enabling this policy hides hibernate from appearing in the power button in the start menu.
     *
     * @return bool The startMenuHideHibernate
     */
@@ -3340,7 +3161,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the startMenuHideHibernate
-    * Enabling this policy hides hibernate from appearing in the power button in the start menu.
     *
     * @param bool $val The startMenuHideHibernate
     *
@@ -3354,7 +3174,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the startMenuHideLock
-    * Enabling this policy hides lock from appearing in the user tile in the start menu.
     *
     * @return bool The startMenuHideLock
     */
@@ -3369,7 +3188,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the startMenuHideLock
-    * Enabling this policy hides lock from appearing in the user tile in the start menu.
     *
     * @param bool $val The startMenuHideLock
     *
@@ -3383,7 +3201,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the startMenuHidePowerButton
-    * Enabling this policy hides the power button from appearing in the start menu.
     *
     * @return bool The startMenuHidePowerButton
     */
@@ -3398,7 +3215,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the startMenuHidePowerButton
-    * Enabling this policy hides the power button from appearing in the start menu.
     *
     * @param bool $val The startMenuHidePowerButton
     *
@@ -3412,7 +3228,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the startMenuHideRecentJumpLists
-    * Enabling this policy hides recent jump lists from appearing on the start menu/taskbar and disables the corresponding toggle in the Settings app.
     *
     * @return bool The startMenuHideRecentJumpLists
     */
@@ -3427,7 +3242,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the startMenuHideRecentJumpLists
-    * Enabling this policy hides recent jump lists from appearing on the start menu/taskbar and disables the corresponding toggle in the Settings app.
     *
     * @param bool $val The startMenuHideRecentJumpLists
     *
@@ -3441,7 +3255,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the startMenuHideRecentlyAddedApps
-    * Enabling this policy hides recently added apps from appearing on the start menu and disables the corresponding toggle in the Settings app.
     *
     * @return bool The startMenuHideRecentlyAddedApps
     */
@@ -3456,7 +3269,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the startMenuHideRecentlyAddedApps
-    * Enabling this policy hides recently added apps from appearing on the start menu and disables the corresponding toggle in the Settings app.
     *
     * @param bool $val The startMenuHideRecentlyAddedApps
     *
@@ -3470,7 +3282,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the startMenuHideRestartOptions
-    * Enabling this policy hides “Restart/Update and Restart” from appearing in the power button in the start menu.
     *
     * @return bool The startMenuHideRestartOptions
     */
@@ -3485,7 +3296,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the startMenuHideRestartOptions
-    * Enabling this policy hides “Restart/Update and Restart” from appearing in the power button in the start menu.
     *
     * @param bool $val The startMenuHideRestartOptions
     *
@@ -3499,7 +3309,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the startMenuHideShutDown
-    * Enabling this policy hides shut down/update and shut down from appearing in the power button in the start menu.
     *
     * @return bool The startMenuHideShutDown
     */
@@ -3514,7 +3323,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the startMenuHideShutDown
-    * Enabling this policy hides shut down/update and shut down from appearing in the power button in the start menu.
     *
     * @param bool $val The startMenuHideShutDown
     *
@@ -3528,7 +3336,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the startMenuHideSignOut
-    * Enabling this policy hides sign out from appearing in the user tile in the start menu.
     *
     * @return bool The startMenuHideSignOut
     */
@@ -3543,7 +3350,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the startMenuHideSignOut
-    * Enabling this policy hides sign out from appearing in the user tile in the start menu.
     *
     * @param bool $val The startMenuHideSignOut
     *
@@ -3557,7 +3363,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the startMenuHideSleep
-    * Enabling this policy hides sleep from appearing in the power button in the start menu.
     *
     * @return bool The startMenuHideSleep
     */
@@ -3572,7 +3377,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the startMenuHideSleep
-    * Enabling this policy hides sleep from appearing in the power button in the start menu.
     *
     * @param bool $val The startMenuHideSleep
     *
@@ -3586,7 +3390,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the startMenuHideSwitchAccount
-    * Enabling this policy hides switch account from appearing in the user tile in the start menu.
     *
     * @return bool The startMenuHideSwitchAccount
     */
@@ -3601,7 +3404,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the startMenuHideSwitchAccount
-    * Enabling this policy hides switch account from appearing in the user tile in the start menu.
     *
     * @param bool $val The startMenuHideSwitchAccount
     *
@@ -3615,7 +3417,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the startMenuHideUserTile
-    * Enabling this policy hides the user tile from appearing in the start menu.
     *
     * @return bool The startMenuHideUserTile
     */
@@ -3630,7 +3431,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the startMenuHideUserTile
-    * Enabling this policy hides the user tile from appearing in the start menu.
     *
     * @param bool $val The startMenuHideUserTile
     *
@@ -3644,7 +3444,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the startMenuLayoutEdgeAssetsXml
-    * This policy setting allows you to import Edge assets to be used with startMenuLayoutXml policy. Start layout can contain secondary tile from Edge app which looks for Edge local asset file. Edge local asset would not exist and cause Edge secondary tile to appear empty in this case. This policy only gets applied when startMenuLayoutXml policy is modified. The value should be a UTF-8 Base64 encoded byte array.
     *
     * @return \GuzzleHttp\Psr7\Stream The startMenuLayoutEdgeAssetsXml
     */
@@ -3663,7 +3462,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the startMenuLayoutEdgeAssetsXml
-    * This policy setting allows you to import Edge assets to be used with startMenuLayoutXml policy. Start layout can contain secondary tile from Edge app which looks for Edge local asset file. Edge local asset would not exist and cause Edge secondary tile to appear empty in this case. This policy only gets applied when startMenuLayoutXml policy is modified. The value should be a UTF-8 Base64 encoded byte array.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The startMenuLayoutEdgeAssetsXml
     *
@@ -3677,7 +3475,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the startMenuLayoutXml
-    * Allows admins to override the default Start menu layout and prevents the user from changing it. The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in a UTF8 encoded byte array format.
     *
     * @return \GuzzleHttp\Psr7\Stream The startMenuLayoutXml
     */
@@ -3696,7 +3493,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the startMenuLayoutXml
-    * Allows admins to override the default Start menu layout and prevents the user from changing it. The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in a UTF8 encoded byte array format.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The startMenuLayoutXml
     *
@@ -3710,7 +3506,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the startMenuMode
-    * Allows admins to decide how the Start menu is displayed. Possible values are: userDefined, fullScreen, nonFullScreen.
     *
     * @return WindowsStartMenuModeType The startMenuMode
     */
@@ -3729,7 +3524,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the startMenuMode
-    * Allows admins to decide how the Start menu is displayed. Possible values are: userDefined, fullScreen, nonFullScreen.
     *
     * @param WindowsStartMenuModeType $val The startMenuMode
     *
@@ -3743,7 +3537,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the startMenuPinnedFolderDocuments
-    * Enforces the visibility (Show/Hide) of the Documents folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
     *
     * @return VisibilitySetting The startMenuPinnedFolderDocuments
     */
@@ -3762,7 +3555,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the startMenuPinnedFolderDocuments
-    * Enforces the visibility (Show/Hide) of the Documents folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
     *
     * @param VisibilitySetting $val The startMenuPinnedFolderDocuments
     *
@@ -3776,7 +3568,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the startMenuPinnedFolderDownloads
-    * Enforces the visibility (Show/Hide) of the Downloads folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
     *
     * @return VisibilitySetting The startMenuPinnedFolderDownloads
     */
@@ -3795,7 +3586,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the startMenuPinnedFolderDownloads
-    * Enforces the visibility (Show/Hide) of the Downloads folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
     *
     * @param VisibilitySetting $val The startMenuPinnedFolderDownloads
     *
@@ -3809,7 +3599,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the startMenuPinnedFolderFileExplorer
-    * Enforces the visibility (Show/Hide) of the FileExplorer shortcut on the Start menu. Possible values are: notConfigured, hide, show.
     *
     * @return VisibilitySetting The startMenuPinnedFolderFileExplorer
     */
@@ -3828,7 +3617,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the startMenuPinnedFolderFileExplorer
-    * Enforces the visibility (Show/Hide) of the FileExplorer shortcut on the Start menu. Possible values are: notConfigured, hide, show.
     *
     * @param VisibilitySetting $val The startMenuPinnedFolderFileExplorer
     *
@@ -3842,7 +3630,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the startMenuPinnedFolderHomeGroup
-    * Enforces the visibility (Show/Hide) of the HomeGroup folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
     *
     * @return VisibilitySetting The startMenuPinnedFolderHomeGroup
     */
@@ -3861,7 +3648,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the startMenuPinnedFolderHomeGroup
-    * Enforces the visibility (Show/Hide) of the HomeGroup folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
     *
     * @param VisibilitySetting $val The startMenuPinnedFolderHomeGroup
     *
@@ -3875,7 +3661,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the startMenuPinnedFolderMusic
-    * Enforces the visibility (Show/Hide) of the Music folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
     *
     * @return VisibilitySetting The startMenuPinnedFolderMusic
     */
@@ -3894,7 +3679,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the startMenuPinnedFolderMusic
-    * Enforces the visibility (Show/Hide) of the Music folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
     *
     * @param VisibilitySetting $val The startMenuPinnedFolderMusic
     *
@@ -3908,7 +3692,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the startMenuPinnedFolderNetwork
-    * Enforces the visibility (Show/Hide) of the Network folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
     *
     * @return VisibilitySetting The startMenuPinnedFolderNetwork
     */
@@ -3927,7 +3710,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the startMenuPinnedFolderNetwork
-    * Enforces the visibility (Show/Hide) of the Network folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
     *
     * @param VisibilitySetting $val The startMenuPinnedFolderNetwork
     *
@@ -3941,7 +3723,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the startMenuPinnedFolderPersonalFolder
-    * Enforces the visibility (Show/Hide) of the PersonalFolder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
     *
     * @return VisibilitySetting The startMenuPinnedFolderPersonalFolder
     */
@@ -3960,7 +3741,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the startMenuPinnedFolderPersonalFolder
-    * Enforces the visibility (Show/Hide) of the PersonalFolder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
     *
     * @param VisibilitySetting $val The startMenuPinnedFolderPersonalFolder
     *
@@ -3974,7 +3754,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the startMenuPinnedFolderPictures
-    * Enforces the visibility (Show/Hide) of the Pictures folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
     *
     * @return VisibilitySetting The startMenuPinnedFolderPictures
     */
@@ -3993,7 +3772,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the startMenuPinnedFolderPictures
-    * Enforces the visibility (Show/Hide) of the Pictures folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
     *
     * @param VisibilitySetting $val The startMenuPinnedFolderPictures
     *
@@ -4007,7 +3785,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the startMenuPinnedFolderSettings
-    * Enforces the visibility (Show/Hide) of the Settings folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
     *
     * @return VisibilitySetting The startMenuPinnedFolderSettings
     */
@@ -4026,7 +3803,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the startMenuPinnedFolderSettings
-    * Enforces the visibility (Show/Hide) of the Settings folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
     *
     * @param VisibilitySetting $val The startMenuPinnedFolderSettings
     *
@@ -4040,7 +3816,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the startMenuPinnedFolderVideos
-    * Enforces the visibility (Show/Hide) of the Videos folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
     *
     * @return VisibilitySetting The startMenuPinnedFolderVideos
     */
@@ -4059,7 +3834,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the startMenuPinnedFolderVideos
-    * Enforces the visibility (Show/Hide) of the Videos folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
     *
     * @param VisibilitySetting $val The startMenuPinnedFolderVideos
     *
@@ -4073,7 +3847,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the settingsBlockSettingsApp
-    * Indicates whether or not to block access to Settings app.
     *
     * @return bool The settingsBlockSettingsApp
     */
@@ -4088,7 +3861,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the settingsBlockSettingsApp
-    * Indicates whether or not to block access to Settings app.
     *
     * @param bool $val The settingsBlockSettingsApp
     *
@@ -4102,7 +3874,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the settingsBlockSystemPage
-    * Indicates whether or not to block access to System in Settings app.
     *
     * @return bool The settingsBlockSystemPage
     */
@@ -4117,7 +3888,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the settingsBlockSystemPage
-    * Indicates whether or not to block access to System in Settings app.
     *
     * @param bool $val The settingsBlockSystemPage
     *
@@ -4131,7 +3901,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the settingsBlockDevicesPage
-    * Indicates whether or not to block access to Devices in Settings app.
     *
     * @return bool The settingsBlockDevicesPage
     */
@@ -4146,7 +3915,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the settingsBlockDevicesPage
-    * Indicates whether or not to block access to Devices in Settings app.
     *
     * @param bool $val The settingsBlockDevicesPage
     *
@@ -4160,7 +3928,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the settingsBlockNetworkInternetPage
-    * Indicates whether or not to block access to Network & Internet in Settings app.
     *
     * @return bool The settingsBlockNetworkInternetPage
     */
@@ -4175,7 +3942,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the settingsBlockNetworkInternetPage
-    * Indicates whether or not to block access to Network & Internet in Settings app.
     *
     * @param bool $val The settingsBlockNetworkInternetPage
     *
@@ -4189,7 +3955,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the settingsBlockPersonalizationPage
-    * Indicates whether or not to block access to Personalization in Settings app.
     *
     * @return bool The settingsBlockPersonalizationPage
     */
@@ -4204,7 +3969,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the settingsBlockPersonalizationPage
-    * Indicates whether or not to block access to Personalization in Settings app.
     *
     * @param bool $val The settingsBlockPersonalizationPage
     *
@@ -4218,7 +3982,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the settingsBlockAccountsPage
-    * Indicates whether or not to block access to Accounts in Settings app.
     *
     * @return bool The settingsBlockAccountsPage
     */
@@ -4233,7 +3996,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the settingsBlockAccountsPage
-    * Indicates whether or not to block access to Accounts in Settings app.
     *
     * @param bool $val The settingsBlockAccountsPage
     *
@@ -4247,7 +4009,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the settingsBlockTimeLanguagePage
-    * Indicates whether or not to block access to Time & Language in Settings app.
     *
     * @return bool The settingsBlockTimeLanguagePage
     */
@@ -4262,7 +4023,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the settingsBlockTimeLanguagePage
-    * Indicates whether or not to block access to Time & Language in Settings app.
     *
     * @param bool $val The settingsBlockTimeLanguagePage
     *
@@ -4276,7 +4036,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the settingsBlockEaseOfAccessPage
-    * Indicates whether or not to block access to Ease of Access in Settings app.
     *
     * @return bool The settingsBlockEaseOfAccessPage
     */
@@ -4291,7 +4050,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the settingsBlockEaseOfAccessPage
-    * Indicates whether or not to block access to Ease of Access in Settings app.
     *
     * @param bool $val The settingsBlockEaseOfAccessPage
     *
@@ -4305,7 +4063,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the settingsBlockPrivacyPage
-    * Indicates whether or not to block access to Privacy in Settings app.
     *
     * @return bool The settingsBlockPrivacyPage
     */
@@ -4320,7 +4077,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the settingsBlockPrivacyPage
-    * Indicates whether or not to block access to Privacy in Settings app.
     *
     * @param bool $val The settingsBlockPrivacyPage
     *
@@ -4334,7 +4090,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the settingsBlockUpdateSecurityPage
-    * Indicates whether or not to block access to Update & Security in Settings app.
     *
     * @return bool The settingsBlockUpdateSecurityPage
     */
@@ -4349,7 +4104,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the settingsBlockUpdateSecurityPage
-    * Indicates whether or not to block access to Update & Security in Settings app.
     *
     * @param bool $val The settingsBlockUpdateSecurityPage
     *
@@ -4363,7 +4117,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the settingsBlockAppsPage
-    * Indicates whether or not to block access to Apps in Settings app.
     *
     * @return bool The settingsBlockAppsPage
     */
@@ -4378,7 +4131,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the settingsBlockAppsPage
-    * Indicates whether or not to block access to Apps in Settings app.
     *
     * @param bool $val The settingsBlockAppsPage
     *
@@ -4392,7 +4144,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the settingsBlockGamingPage
-    * Indicates whether or not to block access to Gaming in Settings app.
     *
     * @return bool The settingsBlockGamingPage
     */
@@ -4407,7 +4158,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the settingsBlockGamingPage
-    * Indicates whether or not to block access to Gaming in Settings app.
     *
     * @param bool $val The settingsBlockGamingPage
     *
@@ -4421,7 +4171,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the windowsSpotlightBlockConsumerSpecificFeatures
-    * Allows IT admins to block experiences that are typically for consumers only, such as Start suggestions, Membership notifications, Post-OOBE app install and redirect tiles.
     *
     * @return bool The windowsSpotlightBlockConsumerSpecificFeatures
     */
@@ -4436,7 +4185,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the windowsSpotlightBlockConsumerSpecificFeatures
-    * Allows IT admins to block experiences that are typically for consumers only, such as Start suggestions, Membership notifications, Post-OOBE app install and redirect tiles.
     *
     * @param bool $val The windowsSpotlightBlockConsumerSpecificFeatures
     *
@@ -4450,7 +4198,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the windowsSpotlightBlocked
-    * Allows IT admins to turn off all Windows Spotlight features
     *
     * @return bool The windowsSpotlightBlocked
     */
@@ -4465,7 +4212,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the windowsSpotlightBlocked
-    * Allows IT admins to turn off all Windows Spotlight features
     *
     * @param bool $val The windowsSpotlightBlocked
     *
@@ -4479,7 +4225,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the windowsSpotlightBlockOnActionCenter
-    * Block suggestions from Microsoft that show after each OS clean install, upgrade or in an on-going basis to introduce users to what is new or changed
     *
     * @return bool The windowsSpotlightBlockOnActionCenter
     */
@@ -4494,7 +4239,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the windowsSpotlightBlockOnActionCenter
-    * Block suggestions from Microsoft that show after each OS clean install, upgrade or in an on-going basis to introduce users to what is new or changed
     *
     * @param bool $val The windowsSpotlightBlockOnActionCenter
     *
@@ -4508,7 +4252,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the windowsSpotlightBlockTailoredExperiences
-    * Block personalized content in Windows spotlight based on user’s device usage.
     *
     * @return bool The windowsSpotlightBlockTailoredExperiences
     */
@@ -4523,7 +4266,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the windowsSpotlightBlockTailoredExperiences
-    * Block personalized content in Windows spotlight based on user’s device usage.
     *
     * @param bool $val The windowsSpotlightBlockTailoredExperiences
     *
@@ -4537,7 +4279,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the windowsSpotlightBlockThirdPartyNotifications
-    * Block third party content delivered via Windows Spotlight
     *
     * @return bool The windowsSpotlightBlockThirdPartyNotifications
     */
@@ -4552,7 +4293,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the windowsSpotlightBlockThirdPartyNotifications
-    * Block third party content delivered via Windows Spotlight
     *
     * @param bool $val The windowsSpotlightBlockThirdPartyNotifications
     *
@@ -4566,7 +4306,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the windowsSpotlightBlockWelcomeExperience
-    * Block Windows Spotlight Windows welcome experience
     *
     * @return bool The windowsSpotlightBlockWelcomeExperience
     */
@@ -4581,7 +4320,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the windowsSpotlightBlockWelcomeExperience
-    * Block Windows Spotlight Windows welcome experience
     *
     * @param bool $val The windowsSpotlightBlockWelcomeExperience
     *
@@ -4595,7 +4333,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the windowsSpotlightBlockWindowsTips
-    * Allows IT admins to turn off the popup of Windows Tips.
     *
     * @return bool The windowsSpotlightBlockWindowsTips
     */
@@ -4610,7 +4347,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the windowsSpotlightBlockWindowsTips
-    * Allows IT admins to turn off the popup of Windows Tips.
     *
     * @param bool $val The windowsSpotlightBlockWindowsTips
     *
@@ -4624,7 +4360,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the windowsSpotlightConfigureOnLockScreen
-    * Specifies the type of Spotlight Possible values are: notConfigured, disabled, enabled.
     *
     * @return WindowsSpotlightEnablementSettings The windowsSpotlightConfigureOnLockScreen
     */
@@ -4643,7 +4378,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the windowsSpotlightConfigureOnLockScreen
-    * Specifies the type of Spotlight Possible values are: notConfigured, disabled, enabled.
     *
     * @param WindowsSpotlightEnablementSettings $val The windowsSpotlightConfigureOnLockScreen
     *
@@ -4657,7 +4391,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the networkProxyApplySettingsDeviceWide
-    * If set, proxy settings will be applied to all processes and accounts in the device. Otherwise, it will be applied to the user account that’s enrolled into MDM.
     *
     * @return bool The networkProxyApplySettingsDeviceWide
     */
@@ -4672,7 +4405,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the networkProxyApplySettingsDeviceWide
-    * If set, proxy settings will be applied to all processes and accounts in the device. Otherwise, it will be applied to the user account that’s enrolled into MDM.
     *
     * @param bool $val The networkProxyApplySettingsDeviceWide
     *
@@ -4686,7 +4418,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the networkProxyDisableAutoDetect
-    * Disable automatic detection of settings. If enabled, the system will try to find the path to a proxy auto-config (PAC) script.
     *
     * @return bool The networkProxyDisableAutoDetect
     */
@@ -4701,7 +4432,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the networkProxyDisableAutoDetect
-    * Disable automatic detection of settings. If enabled, the system will try to find the path to a proxy auto-config (PAC) script.
     *
     * @param bool $val The networkProxyDisableAutoDetect
     *
@@ -4715,7 +4445,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the networkProxyAutomaticConfigurationUrl
-    * Address to the proxy auto-config (PAC) script you want to use.
     *
     * @return string The networkProxyAutomaticConfigurationUrl
     */
@@ -4730,7 +4459,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the networkProxyAutomaticConfigurationUrl
-    * Address to the proxy auto-config (PAC) script you want to use.
     *
     * @param string $val The networkProxyAutomaticConfigurationUrl
     *
@@ -4744,7 +4472,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the networkProxyServer
-    * Specifies manual proxy server settings.
     *
     * @return Windows10NetworkProxyServer The networkProxyServer
     */
@@ -4763,7 +4490,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the networkProxyServer
-    * Specifies manual proxy server settings.
     *
     * @param Windows10NetworkProxyServer $val The networkProxyServer
     *
@@ -4777,7 +4503,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the accountsBlockAddingNonMicrosoftAccountEmail
-    * Indicates whether or not to Block the user from adding email accounts to the device that are not associated with a Microsoft account.
     *
     * @return bool The accountsBlockAddingNonMicrosoftAccountEmail
     */
@@ -4792,7 +4517,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the accountsBlockAddingNonMicrosoftAccountEmail
-    * Indicates whether or not to Block the user from adding email accounts to the device that are not associated with a Microsoft account.
     *
     * @param bool $val The accountsBlockAddingNonMicrosoftAccountEmail
     *
@@ -4806,7 +4530,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the antiTheftModeBlocked
-    * Indicates whether or not to block the user from selecting an AntiTheft mode preference (Windows 10 Mobile only).
     *
     * @return bool The antiTheftModeBlocked
     */
@@ -4821,7 +4544,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the antiTheftModeBlocked
-    * Indicates whether or not to block the user from selecting an AntiTheft mode preference (Windows 10 Mobile only).
     *
     * @param bool $val The antiTheftModeBlocked
     *
@@ -4835,7 +4557,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the bluetoothBlocked
-    * Whether or not to Block the user from using bluetooth.
     *
     * @return bool The bluetoothBlocked
     */
@@ -4850,7 +4571,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the bluetoothBlocked
-    * Whether or not to Block the user from using bluetooth.
     *
     * @param bool $val The bluetoothBlocked
     *
@@ -4864,7 +4584,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the cameraBlocked
-    * Whether or not to Block the user from accessing the camera of the device.
     *
     * @return bool The cameraBlocked
     */
@@ -4879,7 +4598,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the cameraBlocked
-    * Whether or not to Block the user from accessing the camera of the device.
     *
     * @param bool $val The cameraBlocked
     *
@@ -4893,7 +4611,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the connectedDevicesServiceBlocked
-    * Whether or not to block Connected Devices Service which enables discovery and connection to other devices, remote messaging, remote app sessions and other cross-device experiences.
     *
     * @return bool The connectedDevicesServiceBlocked
     */
@@ -4908,7 +4625,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the connectedDevicesServiceBlocked
-    * Whether or not to block Connected Devices Service which enables discovery and connection to other devices, remote messaging, remote app sessions and other cross-device experiences.
     *
     * @param bool $val The connectedDevicesServiceBlocked
     *
@@ -4922,7 +4638,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the certificatesBlockManualRootCertificateInstallation
-    * Whether or not to Block the user from doing manual root certificate installation.
     *
     * @return bool The certificatesBlockManualRootCertificateInstallation
     */
@@ -4937,7 +4652,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the certificatesBlockManualRootCertificateInstallation
-    * Whether or not to Block the user from doing manual root certificate installation.
     *
     * @param bool $val The certificatesBlockManualRootCertificateInstallation
     *
@@ -4951,7 +4665,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the copyPasteBlocked
-    * Whether or not to Block the user from using copy paste.
     *
     * @return bool The copyPasteBlocked
     */
@@ -4966,7 +4679,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the copyPasteBlocked
-    * Whether or not to Block the user from using copy paste.
     *
     * @param bool $val The copyPasteBlocked
     *
@@ -4980,7 +4692,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the cortanaBlocked
-    * Whether or not to Block the user from using Cortana.
     *
     * @return bool The cortanaBlocked
     */
@@ -4995,7 +4706,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the cortanaBlocked
-    * Whether or not to Block the user from using Cortana.
     *
     * @param bool $val The cortanaBlocked
     *
@@ -5009,7 +4719,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the deviceManagementBlockFactoryResetOnMobile
-    * Indicates whether or not to Block the user from resetting their phone.
     *
     * @return bool The deviceManagementBlockFactoryResetOnMobile
     */
@@ -5024,7 +4733,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the deviceManagementBlockFactoryResetOnMobile
-    * Indicates whether or not to Block the user from resetting their phone.
     *
     * @param bool $val The deviceManagementBlockFactoryResetOnMobile
     *
@@ -5038,7 +4746,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the deviceManagementBlockManualUnenroll
-    * Indicates whether or not to Block the user from doing manual un-enrollment from device management.
     *
     * @return bool The deviceManagementBlockManualUnenroll
     */
@@ -5053,7 +4760,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the deviceManagementBlockManualUnenroll
-    * Indicates whether or not to Block the user from doing manual un-enrollment from device management.
     *
     * @param bool $val The deviceManagementBlockManualUnenroll
     *
@@ -5067,7 +4773,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the safeSearchFilter
-    * Specifies what filter level of safe search is required. Possible values are: userDefined, strict, moderate.
     *
     * @return SafeSearchFilterType The safeSearchFilter
     */
@@ -5086,7 +4791,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the safeSearchFilter
-    * Specifies what filter level of safe search is required. Possible values are: userDefined, strict, moderate.
     *
     * @param SafeSearchFilterType $val The safeSearchFilter
     *
@@ -5100,7 +4804,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeBlockPopups
-    * Indicates whether or not to block popups.
     *
     * @return bool The edgeBlockPopups
     */
@@ -5115,7 +4818,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeBlockPopups
-    * Indicates whether or not to block popups.
     *
     * @param bool $val The edgeBlockPopups
     *
@@ -5129,7 +4831,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeBlockSearchSuggestions
-    * Indicates whether or not to Block the user from using the search suggestions in the address bar.
     *
     * @return bool The edgeBlockSearchSuggestions
     */
@@ -5144,7 +4845,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeBlockSearchSuggestions
-    * Indicates whether or not to Block the user from using the search suggestions in the address bar.
     *
     * @param bool $val The edgeBlockSearchSuggestions
     *
@@ -5158,7 +4858,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeBlockSendingIntranetTrafficToInternetExplorer
-    * Indicates whether or not to Block the user from sending Intranet traffic to Internet Explorer from Edge.
     *
     * @return bool The edgeBlockSendingIntranetTrafficToInternetExplorer
     */
@@ -5173,7 +4872,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeBlockSendingIntranetTrafficToInternetExplorer
-    * Indicates whether or not to Block the user from sending Intranet traffic to Internet Explorer from Edge.
     *
     * @param bool $val The edgeBlockSendingIntranetTrafficToInternetExplorer
     *
@@ -5187,7 +4885,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeRequireSmartScreen
-    * Indicates whether or not to Require the user to use the smart screen filter.
     *
     * @return bool The edgeRequireSmartScreen
     */
@@ -5202,7 +4899,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeRequireSmartScreen
-    * Indicates whether or not to Require the user to use the smart screen filter.
     *
     * @param bool $val The edgeRequireSmartScreen
     *
@@ -5216,7 +4912,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeEnterpriseModeSiteListLocation
-    * Indicates the enterprise mode site list location. Could be a local file, local network or http location.
     *
     * @return string The edgeEnterpriseModeSiteListLocation
     */
@@ -5231,7 +4926,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeEnterpriseModeSiteListLocation
-    * Indicates the enterprise mode site list location. Could be a local file, local network or http location.
     *
     * @param string $val The edgeEnterpriseModeSiteListLocation
     *
@@ -5245,7 +4939,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeFirstRunUrl
-    * The first run URL for when Edge browser is opened for the first time.
     *
     * @return string The edgeFirstRunUrl
     */
@@ -5260,7 +4953,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeFirstRunUrl
-    * The first run URL for when Edge browser is opened for the first time.
     *
     * @param string $val The edgeFirstRunUrl
     *
@@ -5274,7 +4966,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeSearchEngine
-    * Allows IT admins to set a default search engine for MDM-Controlled devices. Users can override this and change their default search engine provided the AllowSearchEngineCustomization policy is not set.
     *
     * @return EdgeSearchEngineBase The edgeSearchEngine
     */
@@ -5293,7 +4984,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeSearchEngine
-    * Allows IT admins to set a default search engine for MDM-Controlled devices. Users can override this and change their default search engine provided the AllowSearchEngineCustomization policy is not set.
     *
     * @param EdgeSearchEngineBase $val The edgeSearchEngine
     *
@@ -5307,7 +4997,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeHomepageUrls
-    * The list of URLs for homepages shodwn on MDM-enrolled devices on Edge browser.
     *
     * @return string The edgeHomepageUrls
     */
@@ -5322,7 +5011,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeHomepageUrls
-    * The list of URLs for homepages shodwn on MDM-enrolled devices on Edge browser.
     *
     * @param string $val The edgeHomepageUrls
     *
@@ -5336,7 +5024,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeBlockAccessToAboutFlags
-    * Indicates whether or not to prevent access to about flags on Edge browser.
     *
     * @return bool The edgeBlockAccessToAboutFlags
     */
@@ -5351,7 +5038,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeBlockAccessToAboutFlags
-    * Indicates whether or not to prevent access to about flags on Edge browser.
     *
     * @param bool $val The edgeBlockAccessToAboutFlags
     *
@@ -5365,7 +5051,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the smartScreenBlockPromptOverride
-    * Indicates whether or not users can override SmartScreen Filter warnings about potentially malicious websites.
     *
     * @return bool The smartScreenBlockPromptOverride
     */
@@ -5380,7 +5065,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the smartScreenBlockPromptOverride
-    * Indicates whether or not users can override SmartScreen Filter warnings about potentially malicious websites.
     *
     * @param bool $val The smartScreenBlockPromptOverride
     *
@@ -5394,7 +5078,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the smartScreenBlockPromptOverrideForFiles
-    * Indicates whether or not users can override the SmartScreen Filter warnings about downloading unverified files
     *
     * @return bool The smartScreenBlockPromptOverrideForFiles
     */
@@ -5409,7 +5092,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the smartScreenBlockPromptOverrideForFiles
-    * Indicates whether or not users can override the SmartScreen Filter warnings about downloading unverified files
     *
     * @param bool $val The smartScreenBlockPromptOverrideForFiles
     *
@@ -5423,7 +5105,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the webRtcBlockLocalhostIpAddress
-    * Indicates whether or not user's localhost IP address is displayed while making phone calls using the WebRTC
     *
     * @return bool The webRtcBlockLocalhostIpAddress
     */
@@ -5438,7 +5119,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the webRtcBlockLocalhostIpAddress
-    * Indicates whether or not user's localhost IP address is displayed while making phone calls using the WebRTC
     *
     * @param bool $val The webRtcBlockLocalhostIpAddress
     *
@@ -5452,7 +5132,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the internetSharingBlocked
-    * Indicates whether or not to Block the user from using internet sharing.
     *
     * @return bool The internetSharingBlocked
     */
@@ -5467,7 +5146,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the internetSharingBlocked
-    * Indicates whether or not to Block the user from using internet sharing.
     *
     * @param bool $val The internetSharingBlocked
     *
@@ -5481,7 +5159,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the settingsBlockAddProvisioningPackage
-    * Indicates whether or not to block the user from installing provisioning packages.
     *
     * @return bool The settingsBlockAddProvisioningPackage
     */
@@ -5496,7 +5173,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the settingsBlockAddProvisioningPackage
-    * Indicates whether or not to block the user from installing provisioning packages.
     *
     * @param bool $val The settingsBlockAddProvisioningPackage
     *
@@ -5510,7 +5186,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the settingsBlockRemoveProvisioningPackage
-    * Indicates whether or not to block the runtime configuration agent from removing provisioning packages.
     *
     * @return bool The settingsBlockRemoveProvisioningPackage
     */
@@ -5525,7 +5200,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the settingsBlockRemoveProvisioningPackage
-    * Indicates whether or not to block the runtime configuration agent from removing provisioning packages.
     *
     * @param bool $val The settingsBlockRemoveProvisioningPackage
     *
@@ -5539,7 +5213,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the settingsBlockChangeSystemTime
-    * Indicates whether or not to block the user from changing date and time settings.
     *
     * @return bool The settingsBlockChangeSystemTime
     */
@@ -5554,7 +5227,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the settingsBlockChangeSystemTime
-    * Indicates whether or not to block the user from changing date and time settings.
     *
     * @param bool $val The settingsBlockChangeSystemTime
     *
@@ -5568,7 +5240,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the settingsBlockEditDeviceName
-    * Indicates whether or not to block the user from editing the device name.
     *
     * @return bool The settingsBlockEditDeviceName
     */
@@ -5583,7 +5254,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the settingsBlockEditDeviceName
-    * Indicates whether or not to block the user from editing the device name.
     *
     * @param bool $val The settingsBlockEditDeviceName
     *
@@ -5597,7 +5267,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the settingsBlockChangeRegion
-    * Indicates whether or not to block the user from changing the region settings.
     *
     * @return bool The settingsBlockChangeRegion
     */
@@ -5612,7 +5281,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the settingsBlockChangeRegion
-    * Indicates whether or not to block the user from changing the region settings.
     *
     * @param bool $val The settingsBlockChangeRegion
     *
@@ -5626,7 +5294,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the settingsBlockChangeLanguage
-    * Indicates whether or not to block the user from changing the language settings.
     *
     * @return bool The settingsBlockChangeLanguage
     */
@@ -5641,7 +5308,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the settingsBlockChangeLanguage
-    * Indicates whether or not to block the user from changing the language settings.
     *
     * @param bool $val The settingsBlockChangeLanguage
     *
@@ -5655,7 +5321,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the settingsBlockChangePowerSleep
-    * Indicates whether or not to block the user from changing power and sleep settings.
     *
     * @return bool The settingsBlockChangePowerSleep
     */
@@ -5670,7 +5335,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the settingsBlockChangePowerSleep
-    * Indicates whether or not to block the user from changing power and sleep settings.
     *
     * @param bool $val The settingsBlockChangePowerSleep
     *
@@ -5684,7 +5348,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the locationServicesBlocked
-    * Indicates whether or not to Block the user from location services.
     *
     * @return bool The locationServicesBlocked
     */
@@ -5699,7 +5362,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the locationServicesBlocked
-    * Indicates whether or not to Block the user from location services.
     *
     * @param bool $val The locationServicesBlocked
     *
@@ -5713,7 +5375,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the microsoftAccountBlocked
-    * Indicates whether or not to Block a Microsoft account.
     *
     * @return bool The microsoftAccountBlocked
     */
@@ -5728,7 +5389,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the microsoftAccountBlocked
-    * Indicates whether or not to Block a Microsoft account.
     *
     * @param bool $val The microsoftAccountBlocked
     *
@@ -5742,7 +5402,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the microsoftAccountBlockSettingsSync
-    * Indicates whether or not to Block Microsoft account settings sync.
     *
     * @return bool The microsoftAccountBlockSettingsSync
     */
@@ -5757,7 +5416,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the microsoftAccountBlockSettingsSync
-    * Indicates whether or not to Block Microsoft account settings sync.
     *
     * @param bool $val The microsoftAccountBlockSettingsSync
     *
@@ -5771,7 +5429,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the nfcBlocked
-    * Indicates whether or not to Block the user from using near field communication.
     *
     * @return bool The nfcBlocked
     */
@@ -5786,7 +5443,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the nfcBlocked
-    * Indicates whether or not to Block the user from using near field communication.
     *
     * @param bool $val The nfcBlocked
     *
@@ -5800,7 +5456,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the resetProtectionModeBlocked
-    * Indicates whether or not to Block the user from reset protection mode.
     *
     * @return bool The resetProtectionModeBlocked
     */
@@ -5815,7 +5470,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the resetProtectionModeBlocked
-    * Indicates whether or not to Block the user from reset protection mode.
     *
     * @param bool $val The resetProtectionModeBlocked
     *
@@ -5829,7 +5483,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the screenCaptureBlocked
-    * Indicates whether or not to Block the user from taking Screenshots.
     *
     * @return bool The screenCaptureBlocked
     */
@@ -5844,7 +5497,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the screenCaptureBlocked
-    * Indicates whether or not to Block the user from taking Screenshots.
     *
     * @param bool $val The screenCaptureBlocked
     *
@@ -5858,7 +5510,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the storageBlockRemovableStorage
-    * Indicates whether or not to Block the user from using removable storage.
     *
     * @return bool The storageBlockRemovableStorage
     */
@@ -5873,7 +5524,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the storageBlockRemovableStorage
-    * Indicates whether or not to Block the user from using removable storage.
     *
     * @param bool $val The storageBlockRemovableStorage
     *
@@ -5887,7 +5537,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the storageRequireMobileDeviceEncryption
-    * Indicating whether or not to require encryption on a mobile device.
     *
     * @return bool The storageRequireMobileDeviceEncryption
     */
@@ -5902,7 +5551,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the storageRequireMobileDeviceEncryption
-    * Indicating whether or not to require encryption on a mobile device.
     *
     * @param bool $val The storageRequireMobileDeviceEncryption
     *
@@ -5916,7 +5564,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the usbBlocked
-    * Indicates whether or not to Block the user from USB connection.
     *
     * @return bool The usbBlocked
     */
@@ -5931,7 +5578,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the usbBlocked
-    * Indicates whether or not to Block the user from USB connection.
     *
     * @param bool $val The usbBlocked
     *
@@ -5945,7 +5591,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the voiceRecordingBlocked
-    * Indicates whether or not to Block the user from voice recording.
     *
     * @return bool The voiceRecordingBlocked
     */
@@ -5960,7 +5605,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the voiceRecordingBlocked
-    * Indicates whether or not to Block the user from voice recording.
     *
     * @param bool $val The voiceRecordingBlocked
     *
@@ -5974,7 +5618,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the wiFiBlockAutomaticConnectHotspots
-    * Indicating whether or not to block automatically connecting to Wi-Fi hotspots. Has no impact if Wi-Fi is blocked.
     *
     * @return bool The wiFiBlockAutomaticConnectHotspots
     */
@@ -5989,7 +5632,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the wiFiBlockAutomaticConnectHotspots
-    * Indicating whether or not to block automatically connecting to Wi-Fi hotspots. Has no impact if Wi-Fi is blocked.
     *
     * @param bool $val The wiFiBlockAutomaticConnectHotspots
     *
@@ -6003,7 +5645,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the wiFiBlocked
-    * Indicates whether or not to Block the user from using Wi-Fi.
     *
     * @return bool The wiFiBlocked
     */
@@ -6018,7 +5659,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the wiFiBlocked
-    * Indicates whether or not to Block the user from using Wi-Fi.
     *
     * @param bool $val The wiFiBlocked
     *
@@ -6032,7 +5672,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the wiFiBlockManualConfiguration
-    * Indicates whether or not to Block the user from using Wi-Fi manual configuration.
     *
     * @return bool The wiFiBlockManualConfiguration
     */
@@ -6047,7 +5686,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the wiFiBlockManualConfiguration
-    * Indicates whether or not to Block the user from using Wi-Fi manual configuration.
     *
     * @param bool $val The wiFiBlockManualConfiguration
     *
@@ -6061,7 +5699,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the wiFiScanInterval
-    * Specify how often devices scan for Wi-Fi networks. Supported values are 1-500, where 100 = default, and 500 = low frequency. Valid values 1 to 500
     *
     * @return int The wiFiScanInterval
     */
@@ -6076,7 +5713,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the wiFiScanInterval
-    * Specify how often devices scan for Wi-Fi networks. Supported values are 1-500, where 100 = default, and 500 = low frequency. Valid values 1 to 500
     *
     * @param int $val The wiFiScanInterval
     *
@@ -6090,7 +5726,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the wirelessDisplayBlockProjectionToThisDevice
-    * Indicates whether or not to allow other devices from discovering this PC for projection.
     *
     * @return bool The wirelessDisplayBlockProjectionToThisDevice
     */
@@ -6105,7 +5740,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the wirelessDisplayBlockProjectionToThisDevice
-    * Indicates whether or not to allow other devices from discovering this PC for projection.
     *
     * @param bool $val The wirelessDisplayBlockProjectionToThisDevice
     *
@@ -6119,7 +5753,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the wirelessDisplayBlockUserInputFromReceiver
-    * Indicates whether or not to allow user input from wireless display receiver.
     *
     * @return bool The wirelessDisplayBlockUserInputFromReceiver
     */
@@ -6134,7 +5767,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the wirelessDisplayBlockUserInputFromReceiver
-    * Indicates whether or not to allow user input from wireless display receiver.
     *
     * @param bool $val The wirelessDisplayBlockUserInputFromReceiver
     *
@@ -6148,7 +5780,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the wirelessDisplayRequirePinForPairing
-    * Indicates whether or not to require a PIN for new devices to initiate pairing.
     *
     * @return bool The wirelessDisplayRequirePinForPairing
     */
@@ -6163,7 +5794,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the wirelessDisplayRequirePinForPairing
-    * Indicates whether or not to require a PIN for new devices to initiate pairing.
     *
     * @param bool $val The wirelessDisplayRequirePinForPairing
     *
@@ -6177,7 +5807,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the windowsStoreBlocked
-    * Indicates whether or not to Block the user from using the Windows store.
     *
     * @return bool The windowsStoreBlocked
     */
@@ -6192,7 +5821,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the windowsStoreBlocked
-    * Indicates whether or not to Block the user from using the Windows store.
     *
     * @param bool $val The windowsStoreBlocked
     *
@@ -6206,7 +5834,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the appsAllowTrustedAppsSideloading
-    * Indicates whether apps from AppX packages signed with a trusted certificate can be side loaded. Possible values are: notConfigured, blocked, allowed.
     *
     * @return StateManagementSetting The appsAllowTrustedAppsSideloading
     */
@@ -6225,7 +5852,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the appsAllowTrustedAppsSideloading
-    * Indicates whether apps from AppX packages signed with a trusted certificate can be side loaded. Possible values are: notConfigured, blocked, allowed.
     *
     * @param StateManagementSetting $val The appsAllowTrustedAppsSideloading
     *
@@ -6239,7 +5865,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the windowsStoreBlockAutoUpdate
-    * Indicates whether or not to block automatic update of apps from Windows Store.
     *
     * @return bool The windowsStoreBlockAutoUpdate
     */
@@ -6254,7 +5879,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the windowsStoreBlockAutoUpdate
-    * Indicates whether or not to block automatic update of apps from Windows Store.
     *
     * @param bool $val The windowsStoreBlockAutoUpdate
     *
@@ -6268,7 +5892,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the developerUnlockSetting
-    * Indicates whether or not to allow developer unlock. Possible values are: notConfigured, blocked, allowed.
     *
     * @return StateManagementSetting The developerUnlockSetting
     */
@@ -6287,7 +5910,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the developerUnlockSetting
-    * Indicates whether or not to allow developer unlock. Possible values are: notConfigured, blocked, allowed.
     *
     * @param StateManagementSetting $val The developerUnlockSetting
     *
@@ -6301,7 +5923,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the sharedUserAppDataAllowed
-    * Indicates whether or not to block multiple users of the same app to share data.
     *
     * @return bool The sharedUserAppDataAllowed
     */
@@ -6316,7 +5937,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the sharedUserAppDataAllowed
-    * Indicates whether or not to block multiple users of the same app to share data.
     *
     * @param bool $val The sharedUserAppDataAllowed
     *
@@ -6330,7 +5950,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the appsBlockWindowsStoreOriginatedApps
-    * Indicates whether or not to disable the launch of all apps from Windows Store that came pre-installed or were downloaded.
     *
     * @return bool The appsBlockWindowsStoreOriginatedApps
     */
@@ -6345,7 +5964,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the appsBlockWindowsStoreOriginatedApps
-    * Indicates whether or not to disable the launch of all apps from Windows Store that came pre-installed or were downloaded.
     *
     * @param bool $val The appsBlockWindowsStoreOriginatedApps
     *
@@ -6359,7 +5977,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the windowsStoreEnablePrivateStoreOnly
-    * Indicates whether or not to enable Private Store Only.
     *
     * @return bool The windowsStoreEnablePrivateStoreOnly
     */
@@ -6374,7 +5991,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the windowsStoreEnablePrivateStoreOnly
-    * Indicates whether or not to enable Private Store Only.
     *
     * @param bool $val The windowsStoreEnablePrivateStoreOnly
     *
@@ -6388,7 +6004,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the storageRestrictAppDataToSystemVolume
-    * Indicates whether application data is restricted to the system drive.
     *
     * @return bool The storageRestrictAppDataToSystemVolume
     */
@@ -6403,7 +6018,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the storageRestrictAppDataToSystemVolume
-    * Indicates whether application data is restricted to the system drive.
     *
     * @param bool $val The storageRestrictAppDataToSystemVolume
     *
@@ -6417,7 +6031,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the storageRestrictAppInstallToSystemVolume
-    * Indicates whether the installation of applications is restricted to the system drive.
     *
     * @return bool The storageRestrictAppInstallToSystemVolume
     */
@@ -6432,7 +6045,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the storageRestrictAppInstallToSystemVolume
-    * Indicates whether the installation of applications is restricted to the system drive.
     *
     * @param bool $val The storageRestrictAppInstallToSystemVolume
     *
@@ -6446,7 +6058,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the gameDvrBlocked
-    * Indicates whether or not to block DVR and broadcasting.
     *
     * @return bool The gameDvrBlocked
     */
@@ -6461,7 +6072,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the gameDvrBlocked
-    * Indicates whether or not to block DVR and broadcasting.
     *
     * @param bool $val The gameDvrBlocked
     *
@@ -6475,7 +6085,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the experienceBlockDeviceDiscovery
-    * Indicates whether or not to enable device discovery UX.
     *
     * @return bool The experienceBlockDeviceDiscovery
     */
@@ -6490,7 +6099,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the experienceBlockDeviceDiscovery
-    * Indicates whether or not to enable device discovery UX.
     *
     * @param bool $val The experienceBlockDeviceDiscovery
     *
@@ -6504,7 +6112,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the experienceBlockErrorDialogWhenNoSIM
-    * Indicates whether or not to allow the error dialog from displaying if no SIM card is detected.
     *
     * @return bool The experienceBlockErrorDialogWhenNoSIM
     */
@@ -6519,7 +6126,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the experienceBlockErrorDialogWhenNoSIM
-    * Indicates whether or not to allow the error dialog from displaying if no SIM card is detected.
     *
     * @param bool $val The experienceBlockErrorDialogWhenNoSIM
     *
@@ -6533,7 +6139,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the experienceBlockTaskSwitcher
-    * Indicates whether or not to enable task switching on the device.
     *
     * @return bool The experienceBlockTaskSwitcher
     */
@@ -6548,7 +6153,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the experienceBlockTaskSwitcher
-    * Indicates whether or not to enable task switching on the device.
     *
     * @param bool $val The experienceBlockTaskSwitcher
     *
@@ -6562,7 +6166,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the logonBlockFastUserSwitching
-    * Disables the ability to quickly switch between users that are logged on simultaneously without logging off.
     *
     * @return bool The logonBlockFastUserSwitching
     */
@@ -6577,7 +6180,6 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the logonBlockFastUserSwitching
-    * Disables the ability to quickly switch between users that are logged on simultaneously without logging off.
     *
     * @param bool $val The logonBlockFastUserSwitching
     *

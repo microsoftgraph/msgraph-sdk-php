@@ -27,7 +27,6 @@ class IosLobAppAssignmentSettings extends MobileAppAssignmentSettings
 {
     /**
     * Gets the vpnConfigurationId
-    * The VPN Configuration Id to apply for this app.
     *
     * @return string The vpnConfigurationId
     */
@@ -42,7 +41,6 @@ class IosLobAppAssignmentSettings extends MobileAppAssignmentSettings
 
     /**
     * Sets the vpnConfigurationId
-    * The VPN Configuration Id to apply for this app.
     *
     * @param string $val The value of the vpnConfigurationId
     *

@@ -28,7 +28,6 @@ class DeviceAndAppManagementRoleAssignment extends RoleAssignment
 {
     /**
     * Gets the members
-    * The list of ids of role member security groups. These are IDs from Azure Active Directory.
     *
     * @return string The members
     */
@@ -43,7 +42,6 @@ class DeviceAndAppManagementRoleAssignment extends RoleAssignment
     
     /**
     * Sets the members
-    * The list of ids of role member security groups. These are IDs from Azure Active Directory.
     *
     * @param string $val The members
     *

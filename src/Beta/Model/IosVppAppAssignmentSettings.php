@@ -27,7 +27,6 @@ class IosVppAppAssignmentSettings extends MobileAppAssignmentSettings
 {
     /**
     * Gets the useDeviceLicensing
-    * Whether or not to use device licensing.
     *
     * @return bool The useDeviceLicensing
     */
@@ -42,7 +41,6 @@ class IosVppAppAssignmentSettings extends MobileAppAssignmentSettings
 
     /**
     * Sets the useDeviceLicensing
-    * Whether or not to use device licensing.
     *
     * @param bool $val The value of the useDeviceLicensing
     *
@@ -55,7 +53,6 @@ class IosVppAppAssignmentSettings extends MobileAppAssignmentSettings
     }
     /**
     * Gets the vpnConfigurationId
-    * The VPN Configuration Id to apply for this app.
     *
     * @return string The vpnConfigurationId
     */
@@ -70,7 +67,6 @@ class IosVppAppAssignmentSettings extends MobileAppAssignmentSettings
 
     /**
     * Sets the vpnConfigurationId
-    * The VPN Configuration Id to apply for this app.
     *
     * @param string $val The value of the vpnConfigurationId
     *

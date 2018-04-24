@@ -28,7 +28,6 @@ class EducationClass extends Entity
 {
     /**
     * Gets the displayName
-    * Name of the class.
     *
     * @return string The displayName
     */
@@ -43,7 +42,6 @@ class EducationClass extends Entity
     
     /**
     * Sets the displayName
-    * Name of the class.
     *
     * @param string $val The displayName
     *
@@ -57,7 +55,6 @@ class EducationClass extends Entity
     
     /**
     * Gets the mailNickname
-    * Mail name for sending email to all members, if this is enabled.
     *
     * @return string The mailNickname
     */
@@ -72,7 +69,6 @@ class EducationClass extends Entity
     
     /**
     * Sets the mailNickname
-    * Mail name for sending email to all members, if this is enabled.
     *
     * @param string $val The mailNickname
     *
@@ -86,7 +82,6 @@ class EducationClass extends Entity
     
     /**
     * Gets the description
-    * Description of the class.
     *
     * @return string The description
     */
@@ -101,7 +96,6 @@ class EducationClass extends Entity
     
     /**
     * Sets the description
-    * Description of the class.
     *
     * @param string $val The description
     *
@@ -115,7 +109,6 @@ class EducationClass extends Entity
     
     /**
     * Gets the createdBy
-    * Entity who created the class
     *
     * @return IdentitySet The createdBy
     */
@@ -134,7 +127,6 @@ class EducationClass extends Entity
     
     /**
     * Sets the createdBy
-    * Entity who created the class
     *
     * @param IdentitySet $val The createdBy
     *
@@ -148,7 +140,6 @@ class EducationClass extends Entity
     
     /**
     * Gets the classCode
-    * Class code used by the school to identify the class.
     *
     * @return string The classCode
     */
@@ -163,7 +154,6 @@ class EducationClass extends Entity
     
     /**
     * Sets the classCode
-    * Class code used by the school to identify the class.
     *
     * @param string $val The classCode
     *
@@ -177,7 +167,6 @@ class EducationClass extends Entity
     
     /**
     * Gets the externalName
-    * Name of the class in the syncing system.
     *
     * @return string The externalName
     */
@@ -192,7 +181,6 @@ class EducationClass extends Entity
     
     /**
     * Sets the externalName
-    * Name of the class in the syncing system.
     *
     * @param string $val The externalName
     *
@@ -206,7 +194,6 @@ class EducationClass extends Entity
     
     /**
     * Gets the externalId
-    * ID of the class from the syncing system.
     *
     * @return string The externalId
     */
@@ -221,7 +208,6 @@ class EducationClass extends Entity
     
     /**
     * Sets the externalId
-    * ID of the class from the syncing system.
     *
     * @param string $val The externalId
     *
@@ -235,7 +221,6 @@ class EducationClass extends Entity
     
     /**
     * Gets the externalSource
-    * How this class was created. Possible values are: sis, manual, unknownFutureValue.
     *
     * @return EducationExternalSource The externalSource
     */
@@ -254,7 +239,6 @@ class EducationClass extends Entity
     
     /**
     * Sets the externalSource
-    * How this class was created. Possible values are: sis, manual, unknownFutureValue.
     *
     * @param EducationExternalSource $val The externalSource
     *
@@ -268,7 +252,6 @@ class EducationClass extends Entity
     
     /**
     * Gets the term
-    * Term for this class.
     *
     * @return EducationTerm The term
     */
@@ -287,7 +270,6 @@ class EducationClass extends Entity
     
     /**
     * Sets the term
-    * Term for this class.
     *
     * @param EducationTerm $val The term
     *
@@ -302,7 +284,6 @@ class EducationClass extends Entity
 
      /** 
      * Gets the schools
-    * All schools that this class is associated with. Nullable.
      *
      * @return array The schools
      */
@@ -317,7 +298,6 @@ class EducationClass extends Entity
     
     /** 
     * Sets the schools
-    * All schools that this class is associated with. Nullable.
     *
     * @param EducationSchool $val The schools
     *
@@ -332,7 +312,6 @@ class EducationClass extends Entity
 
      /** 
      * Gets the members
-    * All users in the class. Nullable.
      *
      * @return array The members
      */
@@ -347,7 +326,6 @@ class EducationClass extends Entity
     
     /** 
     * Sets the members
-    * All users in the class. Nullable.
     *
     * @param EducationUser $val The members
     *
@@ -362,7 +340,6 @@ class EducationClass extends Entity
 
      /** 
      * Gets the teachers
-    * All teachers in the class. Nullable.
      *
      * @return array The teachers
      */
@@ -377,7 +354,6 @@ class EducationClass extends Entity
     
     /** 
     * Sets the teachers
-    * All teachers in the class. Nullable.
     *
     * @param EducationUser $val The teachers
     *

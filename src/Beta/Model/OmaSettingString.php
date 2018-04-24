@@ -27,7 +27,6 @@ class OmaSettingString extends OmaSetting
 {
     /**
     * Gets the value
-    * Value.
     *
     * @return string The value
     */
@@ -42,7 +41,6 @@ class OmaSettingString extends OmaSetting
 
     /**
     * Sets the value
-    * Value.
     *
     * @param string $val The value of the value
     *

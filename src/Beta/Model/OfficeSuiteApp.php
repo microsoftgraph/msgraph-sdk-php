@@ -259,4 +259,31 @@ class OfficeSuiteApp extends MobileApp
         return $this;
     }
     
+    /**
+    * Gets the shouldUninstallOlderVersionsOfOffice
+    *
+    * @return bool The shouldUninstallOlderVersionsOfOffice
+    */
+    public function getShouldUninstallOlderVersionsOfOffice()
+    {
+        if (array_key_exists("shouldUninstallOlderVersionsOfOffice", $this->_propDict)) {
+            return $this->_propDict["shouldUninstallOlderVersionsOfOffice"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the shouldUninstallOlderVersionsOfOffice
+    *
+    * @param bool $val The shouldUninstallOlderVersionsOfOffice
+    *
+    * @return OfficeSuiteApp
+    */
+    public function setShouldUninstallOlderVersionsOfOffice($val)
+    {
+        $this->_propDict["shouldUninstallOlderVersionsOfOffice"] = boolval($val);
+        return $this;
+    }
+    
 }

@@ -27,7 +27,6 @@ class WindowsDefenderScanActionResult extends DeviceActionResult
 {
     /**
     * Gets the scanType
-    * Scan type either full scan or quick scan
     *
     * @return string The scanType
     */
@@ -42,7 +41,6 @@ class WindowsDefenderScanActionResult extends DeviceActionResult
 
     /**
     * Sets the scanType
-    * Scan type either full scan or quick scan
     *
     * @param string $val The value of the scanType
     *

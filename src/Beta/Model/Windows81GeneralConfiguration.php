@@ -28,7 +28,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
 {
     /**
     * Gets the accountsBlockAddingNonMicrosoftAccountEmail
-    * Indicates whether or not to Block the user from adding email accounts to the device that are not associated with a Microsoft account.
     *
     * @return bool The accountsBlockAddingNonMicrosoftAccountEmail
     */
@@ -43,7 +42,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the accountsBlockAddingNonMicrosoftAccountEmail
-    * Indicates whether or not to Block the user from adding email accounts to the device that are not associated with a Microsoft account.
     *
     * @param bool $val The accountsBlockAddingNonMicrosoftAccountEmail
     *
@@ -57,7 +55,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the applyOnlyToWindows81
-    * Value indicating whether this policy only applies to Windows 8.1. This property is read-only.
     *
     * @return bool The applyOnlyToWindows81
     */
@@ -72,7 +69,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the applyOnlyToWindows81
-    * Value indicating whether this policy only applies to Windows 8.1. This property is read-only.
     *
     * @param bool $val The applyOnlyToWindows81
     *
@@ -86,7 +82,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the browserBlockAutofill
-    * Indicates whether or not to block auto fill.
     *
     * @return bool The browserBlockAutofill
     */
@@ -101,7 +96,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the browserBlockAutofill
-    * Indicates whether or not to block auto fill.
     *
     * @param bool $val The browserBlockAutofill
     *
@@ -115,7 +109,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the browserBlockAutomaticDetectionOfIntranetSites
-    * Indicates whether or not to block automatic detection of Intranet sites.
     *
     * @return bool The browserBlockAutomaticDetectionOfIntranetSites
     */
@@ -130,7 +123,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the browserBlockAutomaticDetectionOfIntranetSites
-    * Indicates whether or not to block automatic detection of Intranet sites.
     *
     * @param bool $val The browserBlockAutomaticDetectionOfIntranetSites
     *
@@ -144,7 +136,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the browserBlockEnterpriseModeAccess
-    * Indicates whether or not to block enterprise mode access.
     *
     * @return bool The browserBlockEnterpriseModeAccess
     */
@@ -159,7 +150,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the browserBlockEnterpriseModeAccess
-    * Indicates whether or not to block enterprise mode access.
     *
     * @param bool $val The browserBlockEnterpriseModeAccess
     *
@@ -173,7 +163,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the browserBlockJavaScript
-    * Indicates whether or not to Block the user from using JavaScript.
     *
     * @return bool The browserBlockJavaScript
     */
@@ -188,7 +177,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the browserBlockJavaScript
-    * Indicates whether or not to Block the user from using JavaScript.
     *
     * @param bool $val The browserBlockJavaScript
     *
@@ -202,7 +190,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the browserBlockPlugins
-    * Indicates whether or not to block plug-ins.
     *
     * @return bool The browserBlockPlugins
     */
@@ -217,7 +204,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the browserBlockPlugins
-    * Indicates whether or not to block plug-ins.
     *
     * @param bool $val The browserBlockPlugins
     *
@@ -231,7 +217,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the browserBlockPopups
-    * Indicates whether or not to block popups.
     *
     * @return bool The browserBlockPopups
     */
@@ -246,7 +231,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the browserBlockPopups
-    * Indicates whether or not to block popups.
     *
     * @param bool $val The browserBlockPopups
     *
@@ -260,7 +244,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the browserBlockSendingDoNotTrackHeader
-    * Indicates whether or not to Block the user from sending the do not track header.
     *
     * @return bool The browserBlockSendingDoNotTrackHeader
     */
@@ -275,7 +258,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the browserBlockSendingDoNotTrackHeader
-    * Indicates whether or not to Block the user from sending the do not track header.
     *
     * @param bool $val The browserBlockSendingDoNotTrackHeader
     *
@@ -289,7 +271,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the browserBlockSingleWordEntryOnIntranetSites
-    * Indicates whether or not to block a single word entry on Intranet sites.
     *
     * @return bool The browserBlockSingleWordEntryOnIntranetSites
     */
@@ -304,7 +285,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the browserBlockSingleWordEntryOnIntranetSites
-    * Indicates whether or not to block a single word entry on Intranet sites.
     *
     * @param bool $val The browserBlockSingleWordEntryOnIntranetSites
     *
@@ -318,7 +298,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the browserRequireSmartScreen
-    * Indicates whether or not to require the user to use the smart screen filter.
     *
     * @return bool The browserRequireSmartScreen
     */
@@ -333,7 +312,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the browserRequireSmartScreen
-    * Indicates whether or not to require the user to use the smart screen filter.
     *
     * @param bool $val The browserRequireSmartScreen
     *
@@ -347,7 +325,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the browserEnterpriseModeSiteListLocation
-    * The enterprise mode site list location. Could be a local file, local network or http location.
     *
     * @return string The browserEnterpriseModeSiteListLocation
     */
@@ -362,7 +339,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the browserEnterpriseModeSiteListLocation
-    * The enterprise mode site list location. Could be a local file, local network or http location.
     *
     * @param string $val The browserEnterpriseModeSiteListLocation
     *
@@ -376,7 +352,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the browserInternetSecurityLevel
-    * The internet security level. Possible values are: userDefined, medium, mediumHigh, high.
     *
     * @return InternetSiteSecurityLevel The browserInternetSecurityLevel
     */
@@ -395,7 +370,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the browserInternetSecurityLevel
-    * The internet security level. Possible values are: userDefined, medium, mediumHigh, high.
     *
     * @param InternetSiteSecurityLevel $val The browserInternetSecurityLevel
     *
@@ -409,7 +383,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the browserIntranetSecurityLevel
-    * The Intranet security level. Possible values are: userDefined, low, mediumLow, medium, mediumHigh, high.
     *
     * @return SiteSecurityLevel The browserIntranetSecurityLevel
     */
@@ -428,7 +401,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the browserIntranetSecurityLevel
-    * The Intranet security level. Possible values are: userDefined, low, mediumLow, medium, mediumHigh, high.
     *
     * @param SiteSecurityLevel $val The browserIntranetSecurityLevel
     *
@@ -442,7 +414,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the browserLoggingReportLocation
-    * The logging report location.
     *
     * @return string The browserLoggingReportLocation
     */
@@ -457,7 +428,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the browserLoggingReportLocation
-    * The logging report location.
     *
     * @param string $val The browserLoggingReportLocation
     *
@@ -471,7 +441,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the browserRequireHighSecurityForRestrictedSites
-    * Indicates whether or not to require high security for restricted sites.
     *
     * @return bool The browserRequireHighSecurityForRestrictedSites
     */
@@ -486,7 +455,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the browserRequireHighSecurityForRestrictedSites
-    * Indicates whether or not to require high security for restricted sites.
     *
     * @param bool $val The browserRequireHighSecurityForRestrictedSites
     *
@@ -500,7 +468,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the browserRequireFirewall
-    * Indicates whether or not to require a firewall.
     *
     * @return bool The browserRequireFirewall
     */
@@ -515,7 +482,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the browserRequireFirewall
-    * Indicates whether or not to require a firewall.
     *
     * @param bool $val The browserRequireFirewall
     *
@@ -529,7 +495,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the browserRequireFraudWarning
-    * Indicates whether or not to require fraud warning.
     *
     * @return bool The browserRequireFraudWarning
     */
@@ -544,7 +509,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the browserRequireFraudWarning
-    * Indicates whether or not to require fraud warning.
     *
     * @param bool $val The browserRequireFraudWarning
     *
@@ -558,7 +522,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the browserTrustedSitesSecurityLevel
-    * The trusted sites security level. Possible values are: userDefined, low, mediumLow, medium, mediumHigh, high.
     *
     * @return SiteSecurityLevel The browserTrustedSitesSecurityLevel
     */
@@ -577,7 +540,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the browserTrustedSitesSecurityLevel
-    * The trusted sites security level. Possible values are: userDefined, low, mediumLow, medium, mediumHigh, high.
     *
     * @param SiteSecurityLevel $val The browserTrustedSitesSecurityLevel
     *
@@ -591,7 +553,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the cellularBlockDataRoaming
-    * Indicates whether or not to block data roaming.
     *
     * @return bool The cellularBlockDataRoaming
     */
@@ -606,7 +567,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the cellularBlockDataRoaming
-    * Indicates whether or not to block data roaming.
     *
     * @param bool $val The cellularBlockDataRoaming
     *
@@ -620,7 +580,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the diagnosticsBlockDataSubmission
-    * Indicates whether or not to block diagnostic data submission.
     *
     * @return bool The diagnosticsBlockDataSubmission
     */
@@ -635,7 +594,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the diagnosticsBlockDataSubmission
-    * Indicates whether or not to block diagnostic data submission.
     *
     * @param bool $val The diagnosticsBlockDataSubmission
     *
@@ -649,7 +607,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordBlockPicturePasswordAndPin
-    * Indicates whether or not to Block the user from using a pictures password and pin.
     *
     * @return bool The passwordBlockPicturePasswordAndPin
     */
@@ -664,7 +621,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordBlockPicturePasswordAndPin
-    * Indicates whether or not to Block the user from using a pictures password and pin.
     *
     * @param bool $val The passwordBlockPicturePasswordAndPin
     *
@@ -678,7 +634,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordExpirationDays
-    * Password expiration in days.
     *
     * @return int The passwordExpirationDays
     */
@@ -693,7 +648,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordExpirationDays
-    * Password expiration in days.
     *
     * @param int $val The passwordExpirationDays
     *
@@ -707,7 +661,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordMinimumLength
-    * The minimum password length.
     *
     * @return int The passwordMinimumLength
     */
@@ -722,7 +675,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordMinimumLength
-    * The minimum password length.
     *
     * @param int $val The passwordMinimumLength
     *
@@ -736,7 +688,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordMinutesOfInactivityBeforeScreenTimeout
-    * The minutes of inactivity before the screen times out.
     *
     * @return int The passwordMinutesOfInactivityBeforeScreenTimeout
     */
@@ -751,7 +702,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordMinutesOfInactivityBeforeScreenTimeout
-    * The minutes of inactivity before the screen times out.
     *
     * @param int $val The passwordMinutesOfInactivityBeforeScreenTimeout
     *
@@ -765,7 +715,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordMinimumCharacterSetCount
-    * The number of character sets required in the password.
     *
     * @return int The passwordMinimumCharacterSetCount
     */
@@ -780,7 +729,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordMinimumCharacterSetCount
-    * The number of character sets required in the password.
     *
     * @param int $val The passwordMinimumCharacterSetCount
     *
@@ -794,7 +742,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordPreviousPasswordBlockCount
-    * The number of previous passwords to prevent re-use of. Valid values 0 to 24
     *
     * @return int The passwordPreviousPasswordBlockCount
     */
@@ -809,7 +756,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordPreviousPasswordBlockCount
-    * The number of previous passwords to prevent re-use of. Valid values 0 to 24
     *
     * @param int $val The passwordPreviousPasswordBlockCount
     *
@@ -823,7 +769,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordRequiredType
-    * The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
     *
     * @return RequiredPasswordType The passwordRequiredType
     */
@@ -842,7 +787,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordRequiredType
-    * The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
     *
     * @param RequiredPasswordType $val The passwordRequiredType
     *
@@ -856,7 +800,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordSignInFailureCountBeforeFactoryReset
-    * The number of sign in failures before factory reset.
     *
     * @return int The passwordSignInFailureCountBeforeFactoryReset
     */
@@ -871,7 +814,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordSignInFailureCountBeforeFactoryReset
-    * The number of sign in failures before factory reset.
     *
     * @param int $val The passwordSignInFailureCountBeforeFactoryReset
     *
@@ -885,7 +827,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the storageRequireDeviceEncryption
-    * Indicates whether or not to require encryption on a mobile device.
     *
     * @return bool The storageRequireDeviceEncryption
     */
@@ -900,7 +841,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the storageRequireDeviceEncryption
-    * Indicates whether or not to require encryption on a mobile device.
     *
     * @param bool $val The storageRequireDeviceEncryption
     *
@@ -945,7 +885,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the updatesRequireAutomaticUpdates
-    * Indicates whether or not to require automatic updates.
     *
     * @return bool The updatesRequireAutomaticUpdates
     */
@@ -960,7 +899,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the updatesRequireAutomaticUpdates
-    * Indicates whether or not to require automatic updates.
     *
     * @param bool $val The updatesRequireAutomaticUpdates
     *
@@ -974,7 +912,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the userAccountControlSettings
-    * The user account control settings. Possible values are: userDefined, alwaysNotify, notifyOnAppChanges, notifyOnAppChangesWithoutDimming, neverNotify.
     *
     * @return WindowsUserAccountControlSettings The userAccountControlSettings
     */
@@ -993,7 +930,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the userAccountControlSettings
-    * The user account control settings. Possible values are: userDefined, alwaysNotify, notifyOnAppChanges, notifyOnAppChangesWithoutDimming, neverNotify.
     *
     * @param WindowsUserAccountControlSettings $val The userAccountControlSettings
     *
@@ -1007,7 +943,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the workFoldersUrl
-    * The work folders url.
     *
     * @return string The workFoldersUrl
     */
@@ -1022,7 +957,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the workFoldersUrl
-    * The work folders url.
     *
     * @param string $val The workFoldersUrl
     *

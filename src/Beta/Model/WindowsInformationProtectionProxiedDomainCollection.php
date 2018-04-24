@@ -27,7 +27,6 @@ class WindowsInformationProtectionProxiedDomainCollection extends Entity
 {
     /**
     * Gets the displayName
-    * Display name
     *
     * @return string The displayName
     */
@@ -42,7 +41,6 @@ class WindowsInformationProtectionProxiedDomainCollection extends Entity
 
     /**
     * Sets the displayName
-    * Display name
     *
     * @param string $val The value of the displayName
     *
@@ -56,7 +54,6 @@ class WindowsInformationProtectionProxiedDomainCollection extends Entity
 
     /**
     * Gets the proxiedDomains
-    * Collection of proxied domains
     *
     * @return ProxiedDomain The proxiedDomains
     */
@@ -75,7 +72,6 @@ class WindowsInformationProtectionProxiedDomainCollection extends Entity
 
     /**
     * Sets the proxiedDomains
-    * Collection of proxied domains
     *
     * @param ProxiedDomain $val The value to assign to the proxiedDomains
     *

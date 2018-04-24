@@ -28,7 +28,6 @@ class IosVppEBook extends ManagedEBook
 {
     /**
     * Gets the vppTokenId
-    * The Vpp token ID.
     *
     * @return string The vppTokenId
     */
@@ -43,7 +42,6 @@ class IosVppEBook extends ManagedEBook
     
     /**
     * Sets the vppTokenId
-    * The Vpp token ID.
     *
     * @param string $val The vppTokenId
     *
@@ -57,7 +55,6 @@ class IosVppEBook extends ManagedEBook
     
     /**
     * Gets the appleId
-    * The Apple ID associated with Vpp token.
     *
     * @return string The appleId
     */
@@ -72,7 +69,6 @@ class IosVppEBook extends ManagedEBook
     
     /**
     * Sets the appleId
-    * The Apple ID associated with Vpp token.
     *
     * @param string $val The appleId
     *
@@ -86,7 +82,6 @@ class IosVppEBook extends ManagedEBook
     
     /**
     * Gets the vppOrganizationName
-    * The Vpp token's organization name.
     *
     * @return string The vppOrganizationName
     */
@@ -101,7 +96,6 @@ class IosVppEBook extends ManagedEBook
     
     /**
     * Sets the vppOrganizationName
-    * The Vpp token's organization name.
     *
     * @param string $val The vppOrganizationName
     *
@@ -115,7 +109,6 @@ class IosVppEBook extends ManagedEBook
     
     /**
     * Gets the genres
-    * Genres.
     *
     * @return string The genres
     */
@@ -130,7 +123,6 @@ class IosVppEBook extends ManagedEBook
     
     /**
     * Sets the genres
-    * Genres.
     *
     * @param string $val The genres
     *
@@ -144,7 +136,6 @@ class IosVppEBook extends ManagedEBook
     
     /**
     * Gets the language
-    * Language.
     *
     * @return string The language
     */
@@ -159,7 +150,6 @@ class IosVppEBook extends ManagedEBook
     
     /**
     * Sets the language
-    * Language.
     *
     * @param string $val The language
     *
@@ -173,7 +163,6 @@ class IosVppEBook extends ManagedEBook
     
     /**
     * Gets the seller
-    * Seller.
     *
     * @return string The seller
     */
@@ -188,7 +177,6 @@ class IosVppEBook extends ManagedEBook
     
     /**
     * Sets the seller
-    * Seller.
     *
     * @param string $val The seller
     *
@@ -202,7 +190,6 @@ class IosVppEBook extends ManagedEBook
     
     /**
     * Gets the totalLicenseCount
-    * Total license count.
     *
     * @return int The totalLicenseCount
     */
@@ -217,7 +204,6 @@ class IosVppEBook extends ManagedEBook
     
     /**
     * Sets the totalLicenseCount
-    * Total license count.
     *
     * @param int $val The totalLicenseCount
     *
@@ -231,7 +217,6 @@ class IosVppEBook extends ManagedEBook
     
     /**
     * Gets the usedLicenseCount
-    * Used license count.
     *
     * @return int The usedLicenseCount
     */
@@ -246,7 +231,6 @@ class IosVppEBook extends ManagedEBook
     
     /**
     * Sets the usedLicenseCount
-    * Used license count.
     *
     * @param int $val The usedLicenseCount
     *

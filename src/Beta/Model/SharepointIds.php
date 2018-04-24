@@ -27,7 +27,6 @@ class SharepointIds extends Entity
 {
     /**
     * Gets the listId
-    * The unique identifier (guid) for the item's list in SharePoint.
     *
     * @return string The listId
     */
@@ -42,7 +41,6 @@ class SharepointIds extends Entity
 
     /**
     * Sets the listId
-    * The unique identifier (guid) for the item's list in SharePoint.
     *
     * @param string $val The value of the listId
     *
@@ -55,7 +53,6 @@ class SharepointIds extends Entity
     }
     /**
     * Gets the listItemId
-    * An integer identifier for the item within the containing list.
     *
     * @return string The listItemId
     */
@@ -70,7 +67,6 @@ class SharepointIds extends Entity
 
     /**
     * Sets the listItemId
-    * An integer identifier for the item within the containing list.
     *
     * @param string $val The value of the listItemId
     *
@@ -83,7 +79,6 @@ class SharepointIds extends Entity
     }
     /**
     * Gets the listItemUniqueId
-    * The unique identifier (guid) for the item within OneDrive for Business or a SharePoint site.
     *
     * @return string The listItemUniqueId
     */
@@ -98,7 +93,6 @@ class SharepointIds extends Entity
 
     /**
     * Sets the listItemUniqueId
-    * The unique identifier (guid) for the item within OneDrive for Business or a SharePoint site.
     *
     * @param string $val The value of the listItemUniqueId
     *
@@ -111,7 +105,6 @@ class SharepointIds extends Entity
     }
     /**
     * Gets the siteId
-    * The unique identifier (guid) for the item's site collection (SPSite).
     *
     * @return string The siteId
     */
@@ -126,7 +119,6 @@ class SharepointIds extends Entity
 
     /**
     * Sets the siteId
-    * The unique identifier (guid) for the item's site collection (SPSite).
     *
     * @param string $val The value of the siteId
     *
@@ -139,7 +131,6 @@ class SharepointIds extends Entity
     }
     /**
     * Gets the siteUrl
-    * The SharePoint URL for the site that contains the item.
     *
     * @return string The siteUrl
     */
@@ -154,7 +145,6 @@ class SharepointIds extends Entity
 
     /**
     * Sets the siteUrl
-    * The SharePoint URL for the site that contains the item.
     *
     * @param string $val The value of the siteUrl
     *
@@ -166,8 +156,33 @@ class SharepointIds extends Entity
         return $this;
     }
     /**
+    * Gets the tenantId
+    *
+    * @return string The tenantId
+    */
+    public function getTenantId()
+    {
+        if (array_key_exists("tenantId", $this->_propDict)) {
+            return $this->_propDict["tenantId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the tenantId
+    *
+    * @param string $val The value of the tenantId
+    *
+    * @return SharepointIds
+    */
+    public function setTenantId($val)
+    {
+        $this->_propDict["tenantId"] = $val;
+        return $this;
+    }
+    /**
     * Gets the webId
-    * The unique identifier (guid) for the item's site (SPWeb).
     *
     * @return string The webId
     */
@@ -182,7 +197,6 @@ class SharepointIds extends Entity
 
     /**
     * Sets the webId
-    * The unique identifier (guid) for the item's site (SPWeb).
     *
     * @param string $val The value of the webId
     *

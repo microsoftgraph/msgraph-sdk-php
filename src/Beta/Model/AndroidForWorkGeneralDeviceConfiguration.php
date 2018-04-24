@@ -332,6 +332,33 @@ class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the workProfileBluetoothEnableContactSharing
+    *
+    * @return bool The workProfileBluetoothEnableContactSharing
+    */
+    public function getWorkProfileBluetoothEnableContactSharing()
+    {
+        if (array_key_exists("workProfileBluetoothEnableContactSharing", $this->_propDict)) {
+            return $this->_propDict["workProfileBluetoothEnableContactSharing"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the workProfileBluetoothEnableContactSharing
+    *
+    * @param bool $val The workProfileBluetoothEnableContactSharing
+    *
+    * @return AndroidForWorkGeneralDeviceConfiguration
+    */
+    public function setWorkProfileBluetoothEnableContactSharing($val)
+    {
+        $this->_propDict["workProfileBluetoothEnableContactSharing"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the workProfileBlockCrossProfileCopyPaste
     *
     * @return bool The workProfileBlockCrossProfileCopyPaste

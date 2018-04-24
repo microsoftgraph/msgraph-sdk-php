@@ -27,7 +27,6 @@ class DeleteUserFromSharedAppleDeviceActionResult extends DeviceActionResult
 {
     /**
     * Gets the userPrincipalName
-    * User principal name of the user to be deleted
     *
     * @return string The userPrincipalName
     */
@@ -42,7 +41,6 @@ class DeleteUserFromSharedAppleDeviceActionResult extends DeviceActionResult
 
     /**
     * Sets the userPrincipalName
-    * User principal name of the user to be deleted
     *
     * @param string $val The value of the userPrincipalName
     *

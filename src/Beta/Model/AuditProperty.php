@@ -27,7 +27,6 @@ class AuditProperty extends Entity
 {
     /**
     * Gets the displayName
-    * Display name.
     *
     * @return string The displayName
     */
@@ -42,7 +41,6 @@ class AuditProperty extends Entity
 
     /**
     * Sets the displayName
-    * Display name.
     *
     * @param string $val The value of the displayName
     *
@@ -55,7 +53,6 @@ class AuditProperty extends Entity
     }
     /**
     * Gets the oldValue
-    * Old value.
     *
     * @return string The oldValue
     */
@@ -70,7 +67,6 @@ class AuditProperty extends Entity
 
     /**
     * Sets the oldValue
-    * Old value.
     *
     * @param string $val The value of the oldValue
     *
@@ -83,7 +79,6 @@ class AuditProperty extends Entity
     }
     /**
     * Gets the newValue
-    * New value.
     *
     * @return string The newValue
     */
@@ -98,7 +93,6 @@ class AuditProperty extends Entity
 
     /**
     * Sets the newValue
-    * New value.
     *
     * @param string $val The value of the newValue
     *

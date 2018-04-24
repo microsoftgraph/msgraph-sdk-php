@@ -24,7 +24,7 @@ namespace Microsoft\Graph\Beta\Model;
 * @version   Release: 0.1.0
 * @link      https://graph.microsoft.io/
 */
-class WindowsDomainJoinConfiguration extends DeviceSetupConfiguration
+class WindowsDomainJoinConfiguration extends DeviceConfiguration
 {
     /**
     * Gets the computerNameStaticPrefix

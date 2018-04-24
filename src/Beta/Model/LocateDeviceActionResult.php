@@ -28,7 +28,6 @@ class LocateDeviceActionResult extends DeviceActionResult
 
     /**
     * Gets the deviceLocation
-    * device location
     *
     * @return DeviceGeoLocation The deviceLocation
     */
@@ -47,7 +46,6 @@ class LocateDeviceActionResult extends DeviceActionResult
 
     /**
     * Sets the deviceLocation
-    * device location
     *
     * @param DeviceGeoLocation $val The value to assign to the deviceLocation
     *

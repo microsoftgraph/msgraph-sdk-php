@@ -28,7 +28,6 @@ class RoleDefinition extends Entity
 {
     /**
     * Gets the displayName
-    * Display Name of the Role definition.
     *
     * @return string The displayName
     */
@@ -43,7 +42,6 @@ class RoleDefinition extends Entity
     
     /**
     * Sets the displayName
-    * Display Name of the Role definition.
     *
     * @param string $val The displayName
     *
@@ -57,7 +55,6 @@ class RoleDefinition extends Entity
     
     /**
     * Gets the description
-    * Description of the Role definition.
     *
     * @return string The description
     */
@@ -72,7 +69,6 @@ class RoleDefinition extends Entity
     
     /**
     * Sets the description
-    * Description of the Role definition.
     *
     * @param string $val The description
     *
@@ -115,7 +111,6 @@ class RoleDefinition extends Entity
 
      /** 
      * Gets the rolePermissions
-    * List of Role Permissions this role is allowed to perform. These must match the actionName that is defined as part of the rolePermission.
      *
      * @return array The rolePermissions
      */
@@ -130,7 +125,6 @@ class RoleDefinition extends Entity
     
     /** 
     * Sets the rolePermissions
-    * List of Role Permissions this role is allowed to perform. These must match the actionName that is defined as part of the rolePermission.
     *
     * @param RolePermission $val The rolePermissions
     *
@@ -171,7 +165,6 @@ class RoleDefinition extends Entity
     
     /**
     * Gets the isBuiltIn
-    * Type of Role. Set to True if it is built-in, or set to False if it is a custom role definition.
     *
     * @return bool The isBuiltIn
     */
@@ -186,7 +179,6 @@ class RoleDefinition extends Entity
     
     /**
     * Sets the isBuiltIn
-    * Type of Role. Set to True if it is built-in, or set to False if it is a custom role definition.
     *
     * @param bool $val The isBuiltIn
     *
@@ -201,7 +193,6 @@ class RoleDefinition extends Entity
 
      /** 
      * Gets the roleAssignments
-    * List of Role assignments for this role definition.
      *
      * @return array The roleAssignments
      */
@@ -216,7 +207,6 @@ class RoleDefinition extends Entity
     
     /** 
     * Sets the roleAssignments
-    * List of Role assignments for this role definition.
     *
     * @param RoleAssignment $val The roleAssignments
     *

@@ -28,7 +28,6 @@ class ManagedDeviceMobileAppConfigurationAssignment extends Entity
 {
     /**
     * Gets the target
-    * Assignment target that the T&C policy is assigned to.
     *
     * @return DeviceAndAppManagementAssignmentTarget The target
     */
@@ -47,7 +46,6 @@ class ManagedDeviceMobileAppConfigurationAssignment extends Entity
     
     /**
     * Sets the target
-    * Assignment target that the T&C policy is assigned to.
     *
     * @param DeviceAndAppManagementAssignmentTarget $val The target
     *

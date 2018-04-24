@@ -28,7 +28,6 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
 {
     /**
     * Gets the passwordRequired
-    * Require a password to unlock device.
     *
     * @return bool The passwordRequired
     */
@@ -43,7 +42,6 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passwordRequired
-    * Require a password to unlock device.
     *
     * @param bool $val The passwordRequired
     *
@@ -57,7 +55,6 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the passwordMinimumLength
-    * Minimum password length. Valid values 4 to 16
     *
     * @return int The passwordMinimumLength
     */
@@ -72,7 +69,6 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passwordMinimumLength
-    * Minimum password length. Valid values 4 to 16
     *
     * @param int $val The passwordMinimumLength
     *
@@ -86,7 +82,6 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the passwordRequiredType
-    * Type of characters in password Possible values are: deviceDefault, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, numeric, numericComplex, any.
     *
     * @return AndroidRequiredPasswordType The passwordRequiredType
     */
@@ -105,7 +100,6 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passwordRequiredType
-    * Type of characters in password Possible values are: deviceDefault, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, numeric, numericComplex, any.
     *
     * @param AndroidRequiredPasswordType $val The passwordRequiredType
     *
@@ -119,7 +113,6 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the passwordMinutesOfInactivityBeforeLock
-    * Minutes of inactivity before a password is required.
     *
     * @return int The passwordMinutesOfInactivityBeforeLock
     */
@@ -134,7 +127,6 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passwordMinutesOfInactivityBeforeLock
-    * Minutes of inactivity before a password is required.
     *
     * @param int $val The passwordMinutesOfInactivityBeforeLock
     *
@@ -148,7 +140,6 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the passwordExpirationDays
-    * Number of days before the password expires. Valid values 1 to 365
     *
     * @return int The passwordExpirationDays
     */
@@ -163,7 +154,6 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passwordExpirationDays
-    * Number of days before the password expires. Valid values 1 to 365
     *
     * @param int $val The passwordExpirationDays
     *
@@ -177,7 +167,6 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the passwordPreviousPasswordBlockCount
-    * Number of previous passwords to block.
     *
     * @return int The passwordPreviousPasswordBlockCount
     */
@@ -192,7 +181,6 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passwordPreviousPasswordBlockCount
-    * Number of previous passwords to block.
     *
     * @param int $val The passwordPreviousPasswordBlockCount
     *
@@ -206,7 +194,6 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the securityPreventInstallAppsFromUnknownSources
-    * Require that devices disallow installation of apps from unknown sources.
     *
     * @return bool The securityPreventInstallAppsFromUnknownSources
     */
@@ -221,7 +208,6 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the securityPreventInstallAppsFromUnknownSources
-    * Require that devices disallow installation of apps from unknown sources.
     *
     * @param bool $val The securityPreventInstallAppsFromUnknownSources
     *
@@ -235,7 +221,6 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the securityDisableUsbDebugging
-    * Disable USB debugging on Android devices.
     *
     * @return bool The securityDisableUsbDebugging
     */
@@ -250,7 +235,6 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the securityDisableUsbDebugging
-    * Disable USB debugging on Android devices.
     *
     * @param bool $val The securityDisableUsbDebugging
     *
@@ -264,7 +248,6 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the securityRequireVerifyApps
-    * Require the Android Verify apps feature is turned on.
     *
     * @return bool The securityRequireVerifyApps
     */
@@ -279,7 +262,6 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the securityRequireVerifyApps
-    * Require the Android Verify apps feature is turned on.
     *
     * @param bool $val The securityRequireVerifyApps
     *
@@ -293,7 +275,6 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the deviceThreatProtectionEnabled
-    * Require that devices have enabled device threat protection.
     *
     * @return bool The deviceThreatProtectionEnabled
     */
@@ -308,7 +289,6 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the deviceThreatProtectionEnabled
-    * Require that devices have enabled device threat protection.
     *
     * @param bool $val The deviceThreatProtectionEnabled
     *
@@ -322,7 +302,6 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the deviceThreatProtectionRequiredSecurityLevel
-    * Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
     *
     * @return DeviceThreatProtectionLevel The deviceThreatProtectionRequiredSecurityLevel
     */
@@ -341,7 +320,6 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the deviceThreatProtectionRequiredSecurityLevel
-    * Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
     *
     * @param DeviceThreatProtectionLevel $val The deviceThreatProtectionRequiredSecurityLevel
     *
@@ -355,7 +333,6 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the securityBlockJailbrokenDevices
-    * Devices must not be jailbroken or rooted.
     *
     * @return bool The securityBlockJailbrokenDevices
     */
@@ -370,7 +347,6 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the securityBlockJailbrokenDevices
-    * Devices must not be jailbroken or rooted.
     *
     * @param bool $val The securityBlockJailbrokenDevices
     *
@@ -384,7 +360,6 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the osMinimumVersion
-    * Minimum Android version.
     *
     * @return string The osMinimumVersion
     */
@@ -399,7 +374,6 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the osMinimumVersion
-    * Minimum Android version.
     *
     * @param string $val The osMinimumVersion
     *
@@ -413,7 +387,6 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the osMaximumVersion
-    * Maximum Android version.
     *
     * @return string The osMaximumVersion
     */
@@ -428,7 +401,6 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the osMaximumVersion
-    * Maximum Android version.
     *
     * @param string $val The osMaximumVersion
     *
@@ -442,7 +414,6 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the minAndroidSecurityPatchLevel
-    * Minimum Android security patch level.
     *
     * @return string The minAndroidSecurityPatchLevel
     */
@@ -457,7 +428,6 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the minAndroidSecurityPatchLevel
-    * Minimum Android security patch level.
     *
     * @param string $val The minAndroidSecurityPatchLevel
     *
@@ -471,7 +441,6 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the storageRequireEncryption
-    * Require encryption on Android devices.
     *
     * @return bool The storageRequireEncryption
     */
@@ -486,7 +455,6 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the storageRequireEncryption
-    * Require encryption on Android devices.
     *
     * @param bool $val The storageRequireEncryption
     *
@@ -500,7 +468,6 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the securityRequireSafetyNetAttestationBasicIntegrity
-    * Require the device to pass the SafetyNet basic integrity check.
     *
     * @return bool The securityRequireSafetyNetAttestationBasicIntegrity
     */
@@ -515,7 +482,6 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the securityRequireSafetyNetAttestationBasicIntegrity
-    * Require the device to pass the SafetyNet basic integrity check.
     *
     * @param bool $val The securityRequireSafetyNetAttestationBasicIntegrity
     *
@@ -529,7 +495,6 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the securityRequireSafetyNetAttestationCertifiedDevice
-    * Require the device to pass the SafetyNet certified device check.
     *
     * @return bool The securityRequireSafetyNetAttestationCertifiedDevice
     */
@@ -544,7 +509,6 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the securityRequireSafetyNetAttestationCertifiedDevice
-    * Require the device to pass the SafetyNet certified device check.
     *
     * @param bool $val The securityRequireSafetyNetAttestationCertifiedDevice
     *
@@ -558,7 +522,6 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the securityRequireGooglePlayServices
-    * Require Google Play Services to be installed and enabled on the device.
     *
     * @return bool The securityRequireGooglePlayServices
     */
@@ -573,7 +536,6 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the securityRequireGooglePlayServices
-    * Require Google Play Services to be installed and enabled on the device.
     *
     * @param bool $val The securityRequireGooglePlayServices
     *
@@ -587,7 +549,6 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the securityRequireUpToDateSecurityProviders
-    * Require the device to have up to date security providers. The device will require Google Play Services to be enabled and up to date.
     *
     * @return bool The securityRequireUpToDateSecurityProviders
     */
@@ -602,7 +563,6 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the securityRequireUpToDateSecurityProviders
-    * Require the device to have up to date security providers. The device will require Google Play Services to be enabled and up to date.
     *
     * @param bool $val The securityRequireUpToDateSecurityProviders
     *
@@ -616,7 +576,6 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the securityRequireCompanyPortalAppIntegrity
-    * Require the device to pass the Company Portal client app runtime integrity check.
     *
     * @return bool The securityRequireCompanyPortalAppIntegrity
     */
@@ -631,7 +590,6 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the securityRequireCompanyPortalAppIntegrity
-    * Require the device to pass the Company Portal client app runtime integrity check.
     *
     * @param bool $val The securityRequireCompanyPortalAppIntegrity
     *

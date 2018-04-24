@@ -28,7 +28,6 @@ class Phone extends Entity
 
     /**
     * Gets the type
-    * The type of phone number. Possible values are: home, business, mobile, other, assistant, homeFax, businessFax, otherFax, pager, radio.
     *
     * @return PhoneType The type
     */
@@ -47,7 +46,6 @@ class Phone extends Entity
 
     /**
     * Sets the type
-    * The type of phone number. Possible values are: home, business, mobile, other, assistant, homeFax, businessFax, otherFax, pager, radio.
     *
     * @param PhoneType $val The value to assign to the type
     *
@@ -60,7 +58,6 @@ class Phone extends Entity
     }
     /**
     * Gets the number
-    * The phone number.
     *
     * @return string The number
     */
@@ -75,7 +72,6 @@ class Phone extends Entity
 
     /**
     * Sets the number
-    * The phone number.
     *
     * @param string $val The value of the number
     *

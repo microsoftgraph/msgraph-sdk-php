@@ -27,7 +27,6 @@ class ResetPasscodeActionResult extends DeviceActionResult
 {
     /**
     * Gets the passcode
-    * Newly generated passcode for the device
     *
     * @return string The passcode
     */
@@ -42,7 +41,6 @@ class ResetPasscodeActionResult extends DeviceActionResult
 
     /**
     * Sets the passcode
-    * Newly generated passcode for the device
     *
     * @param string $val The value of the passcode
     *

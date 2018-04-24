@@ -28,7 +28,6 @@ class MobileLobApp extends MobileApp
 {
     /**
     * Gets the committedContentVersion
-    * The internal committed content version.
     *
     * @return string The committedContentVersion
     */
@@ -43,7 +42,6 @@ class MobileLobApp extends MobileApp
     
     /**
     * Sets the committedContentVersion
-    * The internal committed content version.
     *
     * @param string $val The committedContentVersion
     *
@@ -57,7 +55,6 @@ class MobileLobApp extends MobileApp
     
     /**
     * Gets the fileName
-    * The name of the main Lob application file.
     *
     * @return string The fileName
     */
@@ -72,7 +69,6 @@ class MobileLobApp extends MobileApp
     
     /**
     * Sets the fileName
-    * The name of the main Lob application file.
     *
     * @param string $val The fileName
     *
@@ -86,7 +82,6 @@ class MobileLobApp extends MobileApp
     
     /**
     * Gets the size
-    * The total size, including all uploaded files.
     *
     * @return int The size
     */
@@ -101,7 +96,6 @@ class MobileLobApp extends MobileApp
     
     /**
     * Sets the size
-    * The total size, including all uploaded files.
     *
     * @param int $val The size
     *
@@ -116,7 +110,6 @@ class MobileLobApp extends MobileApp
 
      /** 
      * Gets the contentVersions
-    * The list of content versions for this app.
      *
      * @return array The contentVersions
      */
@@ -131,7 +124,6 @@ class MobileLobApp extends MobileApp
     
     /** 
     * Sets the contentVersions
-    * The list of content versions for this app.
     *
     * @param MobileAppContent $val The contentVersions
     *

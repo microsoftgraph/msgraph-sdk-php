@@ -28,7 +28,6 @@ class EducationUser extends Entity
 {
     /**
     * Gets the primaryRole
-    * Default role for a user. The user's role might be different in an individual class. Possible values are: student, teacher, enum_sentinel. Supports $filter.
     *
     * @return EducationUserRole The primaryRole
     */
@@ -47,7 +46,6 @@ class EducationUser extends Entity
     
     /**
     * Sets the primaryRole
-    * Default role for a user. The user's role might be different in an individual class. Possible values are: student, teacher, enum_sentinel. Supports $filter.
     *
     * @param EducationUserRole $val The primaryRole
     *
@@ -61,7 +59,6 @@ class EducationUser extends Entity
     
     /**
     * Gets the middleName
-    * The middle name of user.
     *
     * @return string The middleName
     */
@@ -76,7 +73,6 @@ class EducationUser extends Entity
     
     /**
     * Sets the middleName
-    * The middle name of user.
     *
     * @param string $val The middleName
     *
@@ -90,7 +86,6 @@ class EducationUser extends Entity
     
     /**
     * Gets the externalSource
-    * Where this user was created from. Possible values are: sis, manual, unkownFutureValue.
     *
     * @return EducationExternalSource The externalSource
     */
@@ -109,7 +104,6 @@ class EducationUser extends Entity
     
     /**
     * Sets the externalSource
-    * Where this user was created from. Possible values are: sis, manual, unkownFutureValue.
     *
     * @param EducationExternalSource $val The externalSource
     *
@@ -123,7 +117,6 @@ class EducationUser extends Entity
     
     /**
     * Gets the residenceAddress
-    * Address where user lives.
     *
     * @return PhysicalAddress The residenceAddress
     */
@@ -142,7 +135,6 @@ class EducationUser extends Entity
     
     /**
     * Sets the residenceAddress
-    * Address where user lives.
     *
     * @param PhysicalAddress $val The residenceAddress
     *
@@ -156,7 +148,6 @@ class EducationUser extends Entity
     
     /**
     * Gets the mailingAddress
-    * Mail address of user.
     *
     * @return PhysicalAddress The mailingAddress
     */
@@ -175,7 +166,6 @@ class EducationUser extends Entity
     
     /**
     * Sets the mailingAddress
-    * Mail address of user.
     *
     * @param PhysicalAddress $val The mailingAddress
     *
@@ -189,7 +179,6 @@ class EducationUser extends Entity
     
     /**
     * Gets the student
-    * If the primary role is student, this block will contain student specific data.
     *
     * @return EducationStudent The student
     */
@@ -208,7 +197,6 @@ class EducationUser extends Entity
     
     /**
     * Sets the student
-    * If the primary role is student, this block will contain student specific data.
     *
     * @param EducationStudent $val The student
     *
@@ -222,7 +210,6 @@ class EducationUser extends Entity
     
     /**
     * Gets the teacher
-    * If the primary role is teacher, this block will conatin teacher specific data.
     *
     * @return EducationTeacher The teacher
     */
@@ -241,7 +228,6 @@ class EducationUser extends Entity
     
     /**
     * Sets the teacher
-    * If the primary role is teacher, this block will conatin teacher specific data.
     *
     * @param EducationTeacher $val The teacher
     *
@@ -255,7 +241,6 @@ class EducationUser extends Entity
     
     /**
     * Gets the createdBy
-    * Entity who created the user.
     *
     * @return IdentitySet The createdBy
     */
@@ -274,7 +259,6 @@ class EducationUser extends Entity
     
     /**
     * Sets the createdBy
-    * Entity who created the user.
     *
     * @param IdentitySet $val The createdBy
     *
@@ -425,7 +409,6 @@ class EducationUser extends Entity
     
     /**
     * Gets the displayName
-    * The name displayed in the address book for the user. This is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it cannot be cleared during updates. Supports $filter and $orderby.
     *
     * @return string The displayName
     */
@@ -440,7 +423,6 @@ class EducationUser extends Entity
     
     /**
     * Sets the displayName
-    * The name displayed in the address book for the user. This is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it cannot be cleared during updates. Supports $filter and $orderby.
     *
     * @param string $val The displayName
     *
@@ -454,7 +436,6 @@ class EducationUser extends Entity
     
     /**
     * Gets the givenName
-    * The given name (first name) of the user. Supports $filter.
     *
     * @return string The givenName
     */
@@ -469,7 +450,6 @@ class EducationUser extends Entity
     
     /**
     * Sets the givenName
-    * The given name (first name) of the user. Supports $filter.
     *
     * @param string $val The givenName
     *
@@ -483,7 +463,6 @@ class EducationUser extends Entity
     
     /**
     * Gets the mail
-    * The SMTP address for the user; for example, "jeff@contoso.onmicrosoft.com". Read-Only. Supports $filter.
     *
     * @return string The mail
     */
@@ -498,7 +477,6 @@ class EducationUser extends Entity
     
     /**
     * Sets the mail
-    * The SMTP address for the user; for example, "jeff@contoso.onmicrosoft.com". Read-Only. Supports $filter.
     *
     * @param string $val The mail
     *
@@ -539,7 +517,6 @@ class EducationUser extends Entity
     
     /**
     * Gets the mobilePhone
-    * The primary cellular telephone number for the user.
     *
     * @return string The mobilePhone
     */
@@ -554,7 +531,6 @@ class EducationUser extends Entity
     
     /**
     * Sets the mobilePhone
-    * The primary cellular telephone number for the user.
     *
     * @param string $val The mobilePhone
     *
@@ -766,7 +742,6 @@ class EducationUser extends Entity
     
     /**
     * Gets the surname
-    * The user's surname (family name or last name). Supports $filter.
     *
     * @return string The surname
     */
@@ -781,7 +756,6 @@ class EducationUser extends Entity
     
     /**
     * Sets the surname
-    * The user's surname (family name or last name). Supports $filter.
     *
     * @param string $val The surname
     *
@@ -877,7 +851,6 @@ class EducationUser extends Entity
 
      /** 
      * Gets the schools
-    * Schools to which the user belongs. Nullable.
      *
      * @return array The schools
      */
@@ -892,7 +865,6 @@ class EducationUser extends Entity
     
     /** 
     * Sets the schools
-    * Schools to which the user belongs. Nullable.
     *
     * @param EducationSchool $val The schools
     *
@@ -907,7 +879,6 @@ class EducationUser extends Entity
 
      /** 
      * Gets the classes
-    * Classes to which the user belongs. Nullable.
      *
      * @return array The classes
      */
@@ -922,7 +893,6 @@ class EducationUser extends Entity
     
     /** 
     * Sets the classes
-    * Classes to which the user belongs. Nullable.
     *
     * @param EducationClass $val The classes
     *
@@ -968,7 +938,6 @@ class EducationUser extends Entity
 
      /** 
      * Gets the assignments
-    * List of assignments for hte user. Nullable.
      *
      * @return array The assignments
      */
@@ -983,7 +952,6 @@ class EducationUser extends Entity
     
     /** 
     * Sets the assignments
-    * List of assignments for hte user. Nullable.
     *
     * @param EducationAssignment $val The assignments
     *

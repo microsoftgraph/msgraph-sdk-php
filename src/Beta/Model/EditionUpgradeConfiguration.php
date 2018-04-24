@@ -28,7 +28,6 @@ class EditionUpgradeConfiguration extends DeviceConfiguration
 {
     /**
     * Gets the licenseType
-    * Edition Upgrade License Type. Possible values are: productKey, licenseFile.
     *
     * @return EditionUpgradeLicenseType The licenseType
     */
@@ -47,7 +46,6 @@ class EditionUpgradeConfiguration extends DeviceConfiguration
     
     /**
     * Sets the licenseType
-    * Edition Upgrade License Type. Possible values are: productKey, licenseFile.
     *
     * @param EditionUpgradeLicenseType $val The licenseType
     *
@@ -61,7 +59,6 @@ class EditionUpgradeConfiguration extends DeviceConfiguration
     
     /**
     * Gets the targetEdition
-    * Edition Upgrade Target Edition. Possible values are: windows10Enterprise, windows10EnterpriseN, windows10Education, windows10EducationN, windows10MobileEnterprise, windows10HolographicEnterprise, windows10Professional, windows10ProfessionalN, windows10ProfessionalEducation, windows10ProfessionalEducationN, windows10ProfessionalWorkstation, windows10ProfessionalWorkstationN.
     *
     * @return Windows10EditionType The targetEdition
     */
@@ -80,7 +77,6 @@ class EditionUpgradeConfiguration extends DeviceConfiguration
     
     /**
     * Sets the targetEdition
-    * Edition Upgrade Target Edition. Possible values are: windows10Enterprise, windows10EnterpriseN, windows10Education, windows10EducationN, windows10MobileEnterprise, windows10HolographicEnterprise, windows10Professional, windows10ProfessionalN, windows10ProfessionalEducation, windows10ProfessionalEducationN, windows10ProfessionalWorkstation, windows10ProfessionalWorkstationN.
     *
     * @param Windows10EditionType $val The targetEdition
     *
@@ -94,7 +90,6 @@ class EditionUpgradeConfiguration extends DeviceConfiguration
     
     /**
     * Gets the license
-    * Edition Upgrade License File Content.
     *
     * @return string The license
     */
@@ -109,7 +104,6 @@ class EditionUpgradeConfiguration extends DeviceConfiguration
     
     /**
     * Sets the license
-    * Edition Upgrade License File Content.
     *
     * @param string $val The license
     *
@@ -123,7 +117,6 @@ class EditionUpgradeConfiguration extends DeviceConfiguration
     
     /**
     * Gets the productKey
-    * Edition Upgrade Product Key.
     *
     * @return string The productKey
     */
@@ -138,7 +131,6 @@ class EditionUpgradeConfiguration extends DeviceConfiguration
     
     /**
     * Sets the productKey
-    * Edition Upgrade Product Key.
     *
     * @param string $val The productKey
     *

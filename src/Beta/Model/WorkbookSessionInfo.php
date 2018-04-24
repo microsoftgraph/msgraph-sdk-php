@@ -27,7 +27,6 @@ class WorkbookSessionInfo extends Entity
 {
     /**
     * Gets the id
-    * Id of the workbook session.
     *
     * @return string The id
     */
@@ -42,7 +41,6 @@ class WorkbookSessionInfo extends Entity
 
     /**
     * Sets the id
-    * Id of the workbook session.
     *
     * @param string $val The value of the id
     *
@@ -55,7 +53,6 @@ class WorkbookSessionInfo extends Entity
     }
     /**
     * Gets the persistChanges
-    * true for persistent session. false for non-persistent session (view mode)
     *
     * @return bool The persistChanges
     */
@@ -70,7 +67,6 @@ class WorkbookSessionInfo extends Entity
 
     /**
     * Sets the persistChanges
-    * true for persistent session. false for non-persistent session (view mode)
     *
     * @param bool $val The value of the persistChanges
     *

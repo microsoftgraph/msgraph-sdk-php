@@ -27,7 +27,6 @@ class LocationConstraintItem extends Location
 {
     /**
     * Gets the resolveAvailability
-    * If set to true and the specified resource is busy, findMeetingTimes looks for another resource that is free. If set to false and the specified resource is busy, findMeetingTimes returns the resource best ranked in the user's cache without checking if it's free. Default is true.
     *
     * @return bool The resolveAvailability
     */
@@ -42,7 +41,6 @@ class LocationConstraintItem extends Location
 
     /**
     * Sets the resolveAvailability
-    * If set to true and the specified resource is busy, findMeetingTimes looks for another resource that is free. If set to false and the specified resource is busy, findMeetingTimes returns the resource best ranked in the user's cache without checking if it's free. Default is true.
     *
     * @param bool $val The value of the resolveAvailability
     *

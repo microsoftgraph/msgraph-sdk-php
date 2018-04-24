@@ -28,7 +28,6 @@ class AutomaticRepliesSetting extends Entity
 
     /**
     * Gets the status
-    * Configurations status for automatic replies. Possible values are: disabled, alwaysEnabled, scheduled.
     *
     * @return AutomaticRepliesStatus The status
     */
@@ -47,7 +46,6 @@ class AutomaticRepliesSetting extends Entity
 
     /**
     * Sets the status
-    * Configurations status for automatic replies. Possible values are: disabled, alwaysEnabled, scheduled.
     *
     * @param AutomaticRepliesStatus $val The value to assign to the status
     *
@@ -61,7 +59,6 @@ class AutomaticRepliesSetting extends Entity
 
     /**
     * Gets the externalAudience
-    * The set of audience external to the signed-in user's organization who will receive the ExternalReplyMessage, if Status is AlwaysEnabled or Scheduled. Possible values are: none, contactsOnly, all.
     *
     * @return ExternalAudienceScope The externalAudience
     */
@@ -80,7 +77,6 @@ class AutomaticRepliesSetting extends Entity
 
     /**
     * Sets the externalAudience
-    * The set of audience external to the signed-in user's organization who will receive the ExternalReplyMessage, if Status is AlwaysEnabled or Scheduled. Possible values are: none, contactsOnly, all.
     *
     * @param ExternalAudienceScope $val The value to assign to the externalAudience
     *
@@ -94,7 +90,6 @@ class AutomaticRepliesSetting extends Entity
 
     /**
     * Gets the scheduledStartDateTime
-    * The date and time that automatic replies are set to begin, if Status is set to Scheduled.
     *
     * @return DateTimeTimeZone The scheduledStartDateTime
     */
@@ -113,7 +108,6 @@ class AutomaticRepliesSetting extends Entity
 
     /**
     * Sets the scheduledStartDateTime
-    * The date and time that automatic replies are set to begin, if Status is set to Scheduled.
     *
     * @param DateTimeTimeZone $val The value to assign to the scheduledStartDateTime
     *
@@ -127,7 +121,6 @@ class AutomaticRepliesSetting extends Entity
 
     /**
     * Gets the scheduledEndDateTime
-    * The date and time that automatic replies are set to end, if Status is set to Scheduled.
     *
     * @return DateTimeTimeZone The scheduledEndDateTime
     */
@@ -146,7 +139,6 @@ class AutomaticRepliesSetting extends Entity
 
     /**
     * Sets the scheduledEndDateTime
-    * The date and time that automatic replies are set to end, if Status is set to Scheduled.
     *
     * @param DateTimeTimeZone $val The value to assign to the scheduledEndDateTime
     *
@@ -159,7 +151,6 @@ class AutomaticRepliesSetting extends Entity
     }
     /**
     * Gets the internalReplyMessage
-    * The automatic reply to send to the audience internal to the signed-in user's organization, if Status is AlwaysEnabled or Scheduled.
     *
     * @return string The internalReplyMessage
     */
@@ -174,7 +165,6 @@ class AutomaticRepliesSetting extends Entity
 
     /**
     * Sets the internalReplyMessage
-    * The automatic reply to send to the audience internal to the signed-in user's organization, if Status is AlwaysEnabled or Scheduled.
     *
     * @param string $val The value of the internalReplyMessage
     *
@@ -187,7 +177,6 @@ class AutomaticRepliesSetting extends Entity
     }
     /**
     * Gets the externalReplyMessage
-    * The automatic reply to send to the specified external audience, if Status is AlwaysEnabled or Scheduled.
     *
     * @return string The externalReplyMessage
     */
@@ -202,7 +191,6 @@ class AutomaticRepliesSetting extends Entity
 
     /**
     * Sets the externalReplyMessage
-    * The automatic reply to send to the specified external audience, if Status is AlwaysEnabled or Scheduled.
     *
     * @param string $val The value of the externalReplyMessage
     *

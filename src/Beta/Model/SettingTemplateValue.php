@@ -27,7 +27,6 @@ class SettingTemplateValue extends Entity
 {
     /**
     * Gets the name
-    * Name of the setting.
     *
     * @return string The name
     */
@@ -42,7 +41,6 @@ class SettingTemplateValue extends Entity
 
     /**
     * Sets the name
-    * Name of the setting.
     *
     * @param string $val The value of the name
     *
@@ -55,7 +53,6 @@ class SettingTemplateValue extends Entity
     }
     /**
     * Gets the type
-    * Type of the setting.
     *
     * @return string The type
     */
@@ -70,7 +67,6 @@ class SettingTemplateValue extends Entity
 
     /**
     * Sets the type
-    * Type of the setting.
     *
     * @param string $val The value of the type
     *
@@ -83,7 +79,6 @@ class SettingTemplateValue extends Entity
     }
     /**
     * Gets the defaultValue
-    * Default value for the setting.
     *
     * @return string The defaultValue
     */
@@ -98,7 +93,6 @@ class SettingTemplateValue extends Entity
 
     /**
     * Sets the defaultValue
-    * Default value for the setting.
     *
     * @param string $val The value of the defaultValue
     *
@@ -111,7 +105,6 @@ class SettingTemplateValue extends Entity
     }
     /**
     * Gets the description
-    * Description of the setting.
     *
     * @return string The description
     */
@@ -126,7 +119,6 @@ class SettingTemplateValue extends Entity
 
     /**
     * Sets the description
-    * Description of the setting.
     *
     * @param string $val The value of the description
     *

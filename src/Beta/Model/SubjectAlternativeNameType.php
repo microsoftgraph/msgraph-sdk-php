@@ -31,6 +31,7 @@ class SubjectAlternativeNameType extends Enum
     /**
     * The Enum SubjectAlternativeNameType
     */
+    const NONE = "none";
     const EMAIL_ADDRESS = "emailAddress";
     const USER_PRINCIPAL_NAME = "userPrincipalName";
     const CUSTOM_AZURE_AD_ATTRIBUTE = "customAzureADAttribute";

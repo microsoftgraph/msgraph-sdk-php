@@ -27,7 +27,6 @@ class WindowsDeviceAzureADAccount extends WindowsDeviceAccount
 {
     /**
     * Gets the userPrincipalName
-    * Not yet documented
     *
     * @return string The userPrincipalName
     */
@@ -42,7 +41,6 @@ class WindowsDeviceAzureADAccount extends WindowsDeviceAccount
 
     /**
     * Sets the userPrincipalName
-    * Not yet documented
     *
     * @param string $val The value of the userPrincipalName
     *

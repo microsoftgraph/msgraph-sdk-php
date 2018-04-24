@@ -29,7 +29,6 @@ class Planner extends Entity
 
      /** 
      * Gets the tasks
-    * Read-only. Nullable. Returns a collection of the specified tasks
      *
      * @return array The tasks
      */
@@ -44,7 +43,6 @@ class Planner extends Entity
     
     /** 
     * Sets the tasks
-    * Read-only. Nullable. Returns a collection of the specified tasks
     *
     * @param PlannerTask $val The tasks
     *
@@ -59,7 +57,6 @@ class Planner extends Entity
 
      /** 
      * Gets the plans
-    * Read-only. Nullable. Returns a collection of the specified plans
      *
      * @return array The plans
      */
@@ -74,7 +71,6 @@ class Planner extends Entity
     
     /** 
     * Sets the plans
-    * Read-only. Nullable. Returns a collection of the specified plans
     *
     * @param PlannerPlan $val The plans
     *
@@ -89,7 +85,6 @@ class Planner extends Entity
 
      /** 
      * Gets the buckets
-    * Read-only. Nullable. Returns a collection of the specified buckets
      *
      * @return array The buckets
      */
@@ -104,7 +99,6 @@ class Planner extends Entity
     
     /** 
     * Sets the buckets
-    * Read-only. Nullable. Returns a collection of the specified buckets
     *
     * @param PlannerBucket $val The buckets
     *

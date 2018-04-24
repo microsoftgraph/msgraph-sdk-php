@@ -78,6 +78,32 @@ class ImageInfo extends Entity
         return $this;
     }
     /**
+    * Gets the alternateText
+    *
+    * @return string The alternateText
+    */
+    public function getAlternateText()
+    {
+        if (array_key_exists("alternateText", $this->_propDict)) {
+            return $this->_propDict["alternateText"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the alternateText
+    *
+    * @param string $val The value of the alternateText
+    *
+    * @return ImageInfo
+    */
+    public function setAlternateText($val)
+    {
+        $this->_propDict["alternateText"] = $val;
+        return $this;
+    }
+    /**
     * Gets the addImageQuery
     *
     * @return bool The addImageQuery

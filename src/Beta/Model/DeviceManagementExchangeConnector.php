@@ -28,7 +28,6 @@ class DeviceManagementExchangeConnector extends Entity
 {
     /**
     * Gets the lastSyncDateTime
-    * Last sync time for the Exchange Connector
     *
     * @return \DateTime The lastSyncDateTime
     */
@@ -47,7 +46,6 @@ class DeviceManagementExchangeConnector extends Entity
     
     /**
     * Sets the lastSyncDateTime
-    * Last sync time for the Exchange Connector
     *
     * @param \DateTime $val The lastSyncDateTime
     *
@@ -61,7 +59,6 @@ class DeviceManagementExchangeConnector extends Entity
     
     /**
     * Gets the status
-    * Exchange Connector Status Possible values are: none, connectionPending, connected, disconnected.
     *
     * @return DeviceManagementExchangeConnectorStatus The status
     */
@@ -80,7 +77,6 @@ class DeviceManagementExchangeConnector extends Entity
     
     /**
     * Sets the status
-    * Exchange Connector Status Possible values are: none, connectionPending, connected, disconnected.
     *
     * @param DeviceManagementExchangeConnectorStatus $val The status
     *
@@ -94,7 +90,6 @@ class DeviceManagementExchangeConnector extends Entity
     
     /**
     * Gets the primarySmtpAddress
-    * Email address used to configure the Service To Service Exchange Connector.
     *
     * @return string The primarySmtpAddress
     */
@@ -109,7 +104,6 @@ class DeviceManagementExchangeConnector extends Entity
     
     /**
     * Sets the primarySmtpAddress
-    * Email address used to configure the Service To Service Exchange Connector.
     *
     * @param string $val The primarySmtpAddress
     *
@@ -123,7 +117,6 @@ class DeviceManagementExchangeConnector extends Entity
     
     /**
     * Gets the serverName
-    * The name of the server hosting the Exchange Connector.
     *
     * @return string The serverName
     */
@@ -138,7 +131,6 @@ class DeviceManagementExchangeConnector extends Entity
     
     /**
     * Sets the serverName
-    * The name of the server hosting the Exchange Connector.
     *
     * @param string $val The serverName
     *
@@ -152,7 +144,6 @@ class DeviceManagementExchangeConnector extends Entity
     
     /**
     * Gets the exchangeConnectorType
-    * The type of Exchange Connector Configured. Possible values are: onPremises, hosted, serviceToService, dedicated.
     *
     * @return DeviceManagementExchangeConnectorType The exchangeConnectorType
     */
@@ -171,7 +162,6 @@ class DeviceManagementExchangeConnector extends Entity
     
     /**
     * Sets the exchangeConnectorType
-    * The type of Exchange Connector Configured. Possible values are: onPremises, hosted, serviceToService, dedicated.
     *
     * @param DeviceManagementExchangeConnectorType $val The exchangeConnectorType
     *
@@ -185,7 +175,6 @@ class DeviceManagementExchangeConnector extends Entity
     
     /**
     * Gets the version
-    * The version of the ExchangeConnectorAgent
     *
     * @return string The version
     */
@@ -200,7 +189,6 @@ class DeviceManagementExchangeConnector extends Entity
     
     /**
     * Sets the version
-    * The version of the ExchangeConnectorAgent
     *
     * @param string $val The version
     *
@@ -214,7 +202,6 @@ class DeviceManagementExchangeConnector extends Entity
     
     /**
     * Gets the exchangeAlias
-    * An alias assigned to the Exchange server
     *
     * @return string The exchangeAlias
     */
@@ -229,7 +216,6 @@ class DeviceManagementExchangeConnector extends Entity
     
     /**
     * Sets the exchangeAlias
-    * An alias assigned to the Exchange server
     *
     * @param string $val The exchangeAlias
     *
@@ -243,7 +229,6 @@ class DeviceManagementExchangeConnector extends Entity
     
     /**
     * Gets the exchangeOrganization
-    * Exchange Organization to the Exchange server
     *
     * @return string The exchangeOrganization
     */
@@ -258,7 +243,6 @@ class DeviceManagementExchangeConnector extends Entity
     
     /**
     * Sets the exchangeOrganization
-    * Exchange Organization to the Exchange server
     *
     * @param string $val The exchangeOrganization
     *

@@ -27,7 +27,6 @@ class Folder extends Entity
 {
     /**
     * Gets the childCount
-    * Number of children contained immediately within this container.
     *
     * @return int The childCount
     */
@@ -42,7 +41,6 @@ class Folder extends Entity
 
     /**
     * Sets the childCount
-    * Number of children contained immediately within this container.
     *
     * @param int $val The value of the childCount
     *
@@ -56,7 +54,6 @@ class Folder extends Entity
 
     /**
     * Gets the view
-    * A collection of properties defining the recommended view for the folder.
     *
     * @return FolderView The view
     */
@@ -75,7 +72,6 @@ class Folder extends Entity
 
     /**
     * Sets the view
-    * A collection of properties defining the recommended view for the folder.
     *
     * @param FolderView $val The value to assign to the view
     *

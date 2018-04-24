@@ -116,6 +116,33 @@ class WindowsAutopilotDeviceIdentity extends Entity
     }
     
     /**
+    * Gets the purchaseOrderIdentifier
+    *
+    * @return string The purchaseOrderIdentifier
+    */
+    public function getPurchaseOrderIdentifier()
+    {
+        if (array_key_exists("purchaseOrderIdentifier", $this->_propDict)) {
+            return $this->_propDict["purchaseOrderIdentifier"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the purchaseOrderIdentifier
+    *
+    * @param string $val The purchaseOrderIdentifier
+    *
+    * @return WindowsAutopilotDeviceIdentity
+    */
+    public function setPurchaseOrderIdentifier($val)
+    {
+        $this->_propDict["purchaseOrderIdentifier"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the serialNumber
     *
     * @return string The serialNumber

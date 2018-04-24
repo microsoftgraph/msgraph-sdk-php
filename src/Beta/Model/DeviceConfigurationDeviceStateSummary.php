@@ -28,7 +28,6 @@ class DeviceConfigurationDeviceStateSummary extends Entity
 {
     /**
     * Gets the unknownDeviceCount
-    * Number of unknown devices
     *
     * @return int The unknownDeviceCount
     */
@@ -43,7 +42,6 @@ class DeviceConfigurationDeviceStateSummary extends Entity
     
     /**
     * Sets the unknownDeviceCount
-    * Number of unknown devices
     *
     * @param int $val The unknownDeviceCount
     *
@@ -57,7 +55,6 @@ class DeviceConfigurationDeviceStateSummary extends Entity
     
     /**
     * Gets the notApplicableDeviceCount
-    * Number of not applicable devices
     *
     * @return int The notApplicableDeviceCount
     */
@@ -72,7 +69,6 @@ class DeviceConfigurationDeviceStateSummary extends Entity
     
     /**
     * Sets the notApplicableDeviceCount
-    * Number of not applicable devices
     *
     * @param int $val The notApplicableDeviceCount
     *
@@ -86,7 +82,6 @@ class DeviceConfigurationDeviceStateSummary extends Entity
     
     /**
     * Gets the compliantDeviceCount
-    * Number of compliant devices
     *
     * @return int The compliantDeviceCount
     */
@@ -101,7 +96,6 @@ class DeviceConfigurationDeviceStateSummary extends Entity
     
     /**
     * Sets the compliantDeviceCount
-    * Number of compliant devices
     *
     * @param int $val The compliantDeviceCount
     *
@@ -115,7 +109,6 @@ class DeviceConfigurationDeviceStateSummary extends Entity
     
     /**
     * Gets the remediatedDeviceCount
-    * Number of remediated devices
     *
     * @return int The remediatedDeviceCount
     */
@@ -130,7 +123,6 @@ class DeviceConfigurationDeviceStateSummary extends Entity
     
     /**
     * Sets the remediatedDeviceCount
-    * Number of remediated devices
     *
     * @param int $val The remediatedDeviceCount
     *
@@ -144,7 +136,6 @@ class DeviceConfigurationDeviceStateSummary extends Entity
     
     /**
     * Gets the nonCompliantDeviceCount
-    * Number of NonCompliant devices
     *
     * @return int The nonCompliantDeviceCount
     */
@@ -159,7 +150,6 @@ class DeviceConfigurationDeviceStateSummary extends Entity
     
     /**
     * Sets the nonCompliantDeviceCount
-    * Number of NonCompliant devices
     *
     * @param int $val The nonCompliantDeviceCount
     *
@@ -173,7 +163,6 @@ class DeviceConfigurationDeviceStateSummary extends Entity
     
     /**
     * Gets the errorDeviceCount
-    * Number of error devices
     *
     * @return int The errorDeviceCount
     */
@@ -188,7 +177,6 @@ class DeviceConfigurationDeviceStateSummary extends Entity
     
     /**
     * Sets the errorDeviceCount
-    * Number of error devices
     *
     * @param int $val The errorDeviceCount
     *
@@ -202,7 +190,6 @@ class DeviceConfigurationDeviceStateSummary extends Entity
     
     /**
     * Gets the conflictDeviceCount
-    * Number of conflict devices
     *
     * @return int The conflictDeviceCount
     */
@@ -217,7 +204,6 @@ class DeviceConfigurationDeviceStateSummary extends Entity
     
     /**
     * Sets the conflictDeviceCount
-    * Number of conflict devices
     *
     * @param int $val The conflictDeviceCount
     *

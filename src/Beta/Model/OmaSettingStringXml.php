@@ -27,7 +27,6 @@ class OmaSettingStringXml extends OmaSetting
 {
     /**
     * Gets the fileName
-    * File name associated with the Value property (.xml).
     *
     * @return string The fileName
     */
@@ -42,7 +41,6 @@ class OmaSettingStringXml extends OmaSetting
 
     /**
     * Sets the fileName
-    * File name associated with the Value property (.xml).
     *
     * @param string $val The value of the fileName
     *
@@ -56,7 +54,6 @@ class OmaSettingStringXml extends OmaSetting
 
     /**
     * Gets the value
-    * Value. (UTF8 encoded byte array)
     *
     * @return \GuzzleHttp\Psr7\Stream The value
     */
@@ -75,7 +72,6 @@ class OmaSettingStringXml extends OmaSetting
 
     /**
     * Sets the value
-    * Value. (UTF8 encoded byte array)
     *
     * @param \GuzzleHttp\Psr7\Stream $val The value to assign to the value
     *

@@ -28,7 +28,6 @@ class SoftwareUpdateStatusSummary extends Entity
 {
     /**
     * Gets the displayName
-    * The name of the policy.
     *
     * @return string The displayName
     */
@@ -43,7 +42,6 @@ class SoftwareUpdateStatusSummary extends Entity
     
     /**
     * Sets the displayName
-    * The name of the policy.
     *
     * @param string $val The displayName
     *
@@ -57,7 +55,6 @@ class SoftwareUpdateStatusSummary extends Entity
     
     /**
     * Gets the compliantDeviceCount
-    * Number of compliant devices.
     *
     * @return int The compliantDeviceCount
     */
@@ -72,7 +69,6 @@ class SoftwareUpdateStatusSummary extends Entity
     
     /**
     * Sets the compliantDeviceCount
-    * Number of compliant devices.
     *
     * @param int $val The compliantDeviceCount
     *
@@ -86,7 +82,6 @@ class SoftwareUpdateStatusSummary extends Entity
     
     /**
     * Gets the nonCompliantDeviceCount
-    * Number of non compliant devices.
     *
     * @return int The nonCompliantDeviceCount
     */
@@ -101,7 +96,6 @@ class SoftwareUpdateStatusSummary extends Entity
     
     /**
     * Sets the nonCompliantDeviceCount
-    * Number of non compliant devices.
     *
     * @param int $val The nonCompliantDeviceCount
     *
@@ -115,7 +109,6 @@ class SoftwareUpdateStatusSummary extends Entity
     
     /**
     * Gets the remediatedDeviceCount
-    * Number of remediated devices.
     *
     * @return int The remediatedDeviceCount
     */
@@ -130,7 +123,6 @@ class SoftwareUpdateStatusSummary extends Entity
     
     /**
     * Sets the remediatedDeviceCount
-    * Number of remediated devices.
     *
     * @param int $val The remediatedDeviceCount
     *
@@ -144,7 +136,6 @@ class SoftwareUpdateStatusSummary extends Entity
     
     /**
     * Gets the errorDeviceCount
-    * Number of devices had error.
     *
     * @return int The errorDeviceCount
     */
@@ -159,7 +150,6 @@ class SoftwareUpdateStatusSummary extends Entity
     
     /**
     * Sets the errorDeviceCount
-    * Number of devices had error.
     *
     * @param int $val The errorDeviceCount
     *
@@ -173,7 +163,6 @@ class SoftwareUpdateStatusSummary extends Entity
     
     /**
     * Gets the unknownDeviceCount
-    * Number of unknown devices.
     *
     * @return int The unknownDeviceCount
     */
@@ -188,7 +177,6 @@ class SoftwareUpdateStatusSummary extends Entity
     
     /**
     * Sets the unknownDeviceCount
-    * Number of unknown devices.
     *
     * @param int $val The unknownDeviceCount
     *
@@ -202,7 +190,6 @@ class SoftwareUpdateStatusSummary extends Entity
     
     /**
     * Gets the conflictDeviceCount
-    * Number of conflict devices.
     *
     * @return int The conflictDeviceCount
     */
@@ -217,7 +204,6 @@ class SoftwareUpdateStatusSummary extends Entity
     
     /**
     * Sets the conflictDeviceCount
-    * Number of conflict devices.
     *
     * @param int $val The conflictDeviceCount
     *
@@ -231,7 +217,6 @@ class SoftwareUpdateStatusSummary extends Entity
     
     /**
     * Gets the notApplicableDeviceCount
-    * Number of not applicable devices.
     *
     * @return int The notApplicableDeviceCount
     */
@@ -246,7 +231,6 @@ class SoftwareUpdateStatusSummary extends Entity
     
     /**
     * Sets the notApplicableDeviceCount
-    * Number of not applicable devices.
     *
     * @param int $val The notApplicableDeviceCount
     *
@@ -260,7 +244,6 @@ class SoftwareUpdateStatusSummary extends Entity
     
     /**
     * Gets the compliantUserCount
-    * Number of compliant users.
     *
     * @return int The compliantUserCount
     */
@@ -275,7 +258,6 @@ class SoftwareUpdateStatusSummary extends Entity
     
     /**
     * Sets the compliantUserCount
-    * Number of compliant users.
     *
     * @param int $val The compliantUserCount
     *
@@ -289,7 +271,6 @@ class SoftwareUpdateStatusSummary extends Entity
     
     /**
     * Gets the nonCompliantUserCount
-    * Number of non compliant users.
     *
     * @return int The nonCompliantUserCount
     */
@@ -304,7 +285,6 @@ class SoftwareUpdateStatusSummary extends Entity
     
     /**
     * Sets the nonCompliantUserCount
-    * Number of non compliant users.
     *
     * @param int $val The nonCompliantUserCount
     *
@@ -318,7 +298,6 @@ class SoftwareUpdateStatusSummary extends Entity
     
     /**
     * Gets the remediatedUserCount
-    * Number of remediated users.
     *
     * @return int The remediatedUserCount
     */
@@ -333,7 +312,6 @@ class SoftwareUpdateStatusSummary extends Entity
     
     /**
     * Sets the remediatedUserCount
-    * Number of remediated users.
     *
     * @param int $val The remediatedUserCount
     *
@@ -347,7 +325,6 @@ class SoftwareUpdateStatusSummary extends Entity
     
     /**
     * Gets the errorUserCount
-    * Number of users had error.
     *
     * @return int The errorUserCount
     */
@@ -362,7 +339,6 @@ class SoftwareUpdateStatusSummary extends Entity
     
     /**
     * Sets the errorUserCount
-    * Number of users had error.
     *
     * @param int $val The errorUserCount
     *
@@ -376,7 +352,6 @@ class SoftwareUpdateStatusSummary extends Entity
     
     /**
     * Gets the unknownUserCount
-    * Number of unknown users.
     *
     * @return int The unknownUserCount
     */
@@ -391,7 +366,6 @@ class SoftwareUpdateStatusSummary extends Entity
     
     /**
     * Sets the unknownUserCount
-    * Number of unknown users.
     *
     * @param int $val The unknownUserCount
     *
@@ -405,7 +379,6 @@ class SoftwareUpdateStatusSummary extends Entity
     
     /**
     * Gets the conflictUserCount
-    * Number of conflict users.
     *
     * @return int The conflictUserCount
     */
@@ -420,7 +393,6 @@ class SoftwareUpdateStatusSummary extends Entity
     
     /**
     * Sets the conflictUserCount
-    * Number of conflict users.
     *
     * @param int $val The conflictUserCount
     *
@@ -434,7 +406,6 @@ class SoftwareUpdateStatusSummary extends Entity
     
     /**
     * Gets the notApplicableUserCount
-    * Number of not applicable users.
     *
     * @return int The notApplicableUserCount
     */
@@ -449,7 +420,6 @@ class SoftwareUpdateStatusSummary extends Entity
     
     /**
     * Sets the notApplicableUserCount
-    * Number of not applicable users.
     *
     * @param int $val The notApplicableUserCount
     *

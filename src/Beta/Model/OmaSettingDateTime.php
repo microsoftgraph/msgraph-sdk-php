@@ -28,7 +28,6 @@ class OmaSettingDateTime extends OmaSetting
 
     /**
     * Gets the value
-    * Value.
     *
     * @return \DateTime The value
     */
@@ -47,7 +46,6 @@ class OmaSettingDateTime extends OmaSetting
 
     /**
     * Sets the value
-    * Value.
     *
     * @param \DateTime $val The value to assign to the value
     *

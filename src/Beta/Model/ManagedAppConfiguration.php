@@ -29,7 +29,6 @@ class ManagedAppConfiguration extends ManagedAppPolicy
 
      /** 
      * Gets the customSettings
-    * A set of string key and string value pairs to be sent to apps for users to whom the configuration is scoped, unalterned by this service
      *
      * @return array The customSettings
      */
@@ -44,7 +43,6 @@ class ManagedAppConfiguration extends ManagedAppPolicy
     
     /** 
     * Sets the customSettings
-    * A set of string key and string value pairs to be sent to apps for users to whom the configuration is scoped, unalterned by this service
     *
     * @param KeyValuePair $val The customSettings
     *

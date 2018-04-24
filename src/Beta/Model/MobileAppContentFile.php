@@ -28,7 +28,6 @@ class MobileAppContentFile extends Entity
 {
     /**
     * Gets the azureStorageUri
-    * The Azure Storage URI.
     *
     * @return string The azureStorageUri
     */
@@ -43,7 +42,6 @@ class MobileAppContentFile extends Entity
     
     /**
     * Sets the azureStorageUri
-    * The Azure Storage URI.
     *
     * @param string $val The azureStorageUri
     *
@@ -57,7 +55,6 @@ class MobileAppContentFile extends Entity
     
     /**
     * Gets the isCommitted
-    * A value indicating whether the file is committed.
     *
     * @return bool The isCommitted
     */
@@ -72,7 +69,6 @@ class MobileAppContentFile extends Entity
     
     /**
     * Sets the isCommitted
-    * A value indicating whether the file is committed.
     *
     * @param bool $val The isCommitted
     *
@@ -86,7 +82,6 @@ class MobileAppContentFile extends Entity
     
     /**
     * Gets the createdDateTime
-    * The time the file was created.
     *
     * @return \DateTime The createdDateTime
     */
@@ -105,7 +100,6 @@ class MobileAppContentFile extends Entity
     
     /**
     * Sets the createdDateTime
-    * The time the file was created.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -119,7 +113,6 @@ class MobileAppContentFile extends Entity
     
     /**
     * Gets the name
-    * the file name.
     *
     * @return string The name
     */
@@ -134,7 +127,6 @@ class MobileAppContentFile extends Entity
     
     /**
     * Sets the name
-    * the file name.
     *
     * @param string $val The name
     *
@@ -148,7 +140,6 @@ class MobileAppContentFile extends Entity
     
     /**
     * Gets the size
-    * The size of the file prior to encryption.
     *
     * @return int The size
     */
@@ -163,7 +154,6 @@ class MobileAppContentFile extends Entity
     
     /**
     * Sets the size
-    * The size of the file prior to encryption.
     *
     * @param int $val The size
     *
@@ -177,7 +167,6 @@ class MobileAppContentFile extends Entity
     
     /**
     * Gets the sizeEncrypted
-    * The size of the file after encryption.
     *
     * @return int The sizeEncrypted
     */
@@ -192,7 +181,6 @@ class MobileAppContentFile extends Entity
     
     /**
     * Sets the sizeEncrypted
-    * The size of the file after encryption.
     *
     * @param int $val The sizeEncrypted
     *
@@ -206,7 +194,6 @@ class MobileAppContentFile extends Entity
     
     /**
     * Gets the azureStorageUriExpirationDateTime
-    * The time the Azure storage Uri expires.
     *
     * @return \DateTime The azureStorageUriExpirationDateTime
     */
@@ -225,7 +212,6 @@ class MobileAppContentFile extends Entity
     
     /**
     * Sets the azureStorageUriExpirationDateTime
-    * The time the Azure storage Uri expires.
     *
     * @param \DateTime $val The azureStorageUriExpirationDateTime
     *
@@ -239,7 +225,6 @@ class MobileAppContentFile extends Entity
     
     /**
     * Gets the manifest
-    * The manifest information.
     *
     * @return \GuzzleHttp\Psr7\Stream The manifest
     */
@@ -258,7 +243,6 @@ class MobileAppContentFile extends Entity
     
     /**
     * Sets the manifest
-    * The manifest information.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The manifest
     *
@@ -272,7 +256,6 @@ class MobileAppContentFile extends Entity
     
     /**
     * Gets the uploadState
-    * The state of the current upload request. Possible values are: success, transientError, error, unknown, azureStorageUriRequestSuccess, azureStorageUriRequestPending, azureStorageUriRequestFailed, azureStorageUriRequestTimedOut, azureStorageUriRenewalSuccess, azureStorageUriRenewalPending, azureStorageUriRenewalFailed, azureStorageUriRenewalTimedOut, commitFileSuccess, commitFilePending, commitFileFailed, commitFileTimedOut.
     *
     * @return MobileAppContentFileUploadState The uploadState
     */
@@ -291,7 +274,6 @@ class MobileAppContentFile extends Entity
     
     /**
     * Sets the uploadState
-    * The state of the current upload request. Possible values are: success, transientError, error, unknown, azureStorageUriRequestSuccess, azureStorageUriRequestPending, azureStorageUriRequestFailed, azureStorageUriRequestTimedOut, azureStorageUriRenewalSuccess, azureStorageUriRenewalPending, azureStorageUriRenewalFailed, azureStorageUriRenewalTimedOut, commitFileSuccess, commitFilePending, commitFileFailed, commitFileTimedOut.
     *
     * @param MobileAppContentFileUploadState $val The uploadState
     *
@@ -327,6 +309,33 @@ class MobileAppContentFile extends Entity
     public function setIsFrameworkFile($val)
     {
         $this->_propDict["isFrameworkFile"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the isDependency
+    *
+    * @return bool The isDependency
+    */
+    public function getIsDependency()
+    {
+        if (array_key_exists("isDependency", $this->_propDict)) {
+            return $this->_propDict["isDependency"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isDependency
+    *
+    * @param bool $val The isDependency
+    *
+    * @return MobileAppContentFile
+    */
+    public function setIsDependency($val)
+    {
+        $this->_propDict["isDependency"] = boolval($val);
         return $this;
     }
     

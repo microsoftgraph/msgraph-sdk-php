@@ -27,7 +27,6 @@ class Location extends Entity
 {
     /**
     * Gets the displayName
-    * The name associated with the location.
     *
     * @return string The displayName
     */
@@ -42,7 +41,6 @@ class Location extends Entity
 
     /**
     * Sets the displayName
-    * The name associated with the location.
     *
     * @param string $val The value of the displayName
     *
@@ -55,7 +53,6 @@ class Location extends Entity
     }
     /**
     * Gets the locationEmailAddress
-    * Optional email address of the location.
     *
     * @return string The locationEmailAddress
     */
@@ -70,7 +67,6 @@ class Location extends Entity
 
     /**
     * Sets the locationEmailAddress
-    * Optional email address of the location.
     *
     * @param string $val The value of the locationEmailAddress
     *
@@ -84,7 +80,6 @@ class Location extends Entity
 
     /**
     * Gets the address
-    * The street address of the location.
     *
     * @return PhysicalAddress The address
     */
@@ -103,7 +98,6 @@ class Location extends Entity
 
     /**
     * Sets the address
-    * The street address of the location.
     *
     * @param PhysicalAddress $val The value to assign to the address
     *

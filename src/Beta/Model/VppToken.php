@@ -375,4 +375,31 @@ class VppToken extends Entity
         return $this;
     }
     
+    /**
+    * Gets the dataSharingConsentGranted
+    *
+    * @return bool The dataSharingConsentGranted
+    */
+    public function getDataSharingConsentGranted()
+    {
+        if (array_key_exists("dataSharingConsentGranted", $this->_propDict)) {
+            return $this->_propDict["dataSharingConsentGranted"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the dataSharingConsentGranted
+    *
+    * @param bool $val The dataSharingConsentGranted
+    *
+    * @return VppToken
+    */
+    public function setDataSharingConsentGranted($val)
+    {
+        $this->_propDict["dataSharingConsentGranted"] = boolval($val);
+        return $this;
+    }
+    
 }

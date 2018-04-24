@@ -28,7 +28,6 @@ class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallScheduleType
 
     /**
     * Gets the activeHoursStart
-    * Active Hours Start
     *
     * @return TimeOfDay The activeHoursStart
     */
@@ -47,7 +46,6 @@ class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallScheduleType
 
     /**
     * Sets the activeHoursStart
-    * Active Hours Start
     *
     * @param TimeOfDay $val The value to assign to the activeHoursStart
     *
@@ -61,7 +59,6 @@ class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallScheduleType
 
     /**
     * Gets the activeHoursEnd
-    * Active Hours End
     *
     * @return TimeOfDay The activeHoursEnd
     */
@@ -80,7 +77,6 @@ class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallScheduleType
 
     /**
     * Sets the activeHoursEnd
-    * Active Hours End
     *
     * @param TimeOfDay $val The value to assign to the activeHoursEnd
     *

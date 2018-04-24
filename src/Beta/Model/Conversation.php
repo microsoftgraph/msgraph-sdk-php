@@ -28,7 +28,6 @@ class Conversation extends Entity
 {
     /**
     * Gets the topic
-    * The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated.
     *
     * @return string The topic
     */
@@ -43,7 +42,6 @@ class Conversation extends Entity
     
     /**
     * Sets the topic
-    * The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated.
     *
     * @param string $val The topic
     *
@@ -57,7 +55,6 @@ class Conversation extends Entity
     
     /**
     * Gets the hasAttachments
-    * Indicates whether any of the posts within this Conversation has at least one attachment.
     *
     * @return bool The hasAttachments
     */
@@ -72,7 +69,6 @@ class Conversation extends Entity
     
     /**
     * Sets the hasAttachments
-    * Indicates whether any of the posts within this Conversation has at least one attachment.
     *
     * @param bool $val The hasAttachments
     *
@@ -86,7 +82,6 @@ class Conversation extends Entity
     
     /**
     * Gets the lastDeliveredDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The lastDeliveredDateTime
     */
@@ -105,7 +100,6 @@ class Conversation extends Entity
     
     /**
     * Sets the lastDeliveredDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The lastDeliveredDateTime
     *
@@ -119,7 +113,6 @@ class Conversation extends Entity
     
     /**
     * Gets the uniqueSenders
-    * All the users that sent a message to this Conversation.
     *
     * @return string The uniqueSenders
     */
@@ -134,7 +127,6 @@ class Conversation extends Entity
     
     /**
     * Sets the uniqueSenders
-    * All the users that sent a message to this Conversation.
     *
     * @param string $val The uniqueSenders
     *
@@ -148,7 +140,6 @@ class Conversation extends Entity
     
     /**
     * Gets the preview
-    * A short summary from the body of the latest post in this converstaion.
     *
     * @return string The preview
     */
@@ -163,7 +154,6 @@ class Conversation extends Entity
     
     /**
     * Sets the preview
-    * A short summary from the body of the latest post in this converstaion.
     *
     * @param string $val The preview
     *
@@ -178,7 +168,6 @@ class Conversation extends Entity
 
      /** 
      * Gets the threads
-    * A collection of all the conversation threads in the conversation. A navigation property. Read-only. Nullable.
      *
      * @return array The threads
      */
@@ -193,7 +182,6 @@ class Conversation extends Entity
     
     /** 
     * Sets the threads
-    * A collection of all the conversation threads in the conversation. A navigation property. Read-only. Nullable.
     *
     * @param ConversationThread $val The threads
     *

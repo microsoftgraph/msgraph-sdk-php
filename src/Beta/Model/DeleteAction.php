@@ -51,4 +51,30 @@ class DeleteAction extends Entity
         $this->_propDict["name"] = $val;
         return $this;
     }
+    /**
+    * Gets the objectType
+    *
+    * @return string The objectType
+    */
+    public function getObjectType()
+    {
+        if (array_key_exists("objectType", $this->_propDict)) {
+            return $this->_propDict["objectType"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the objectType
+    *
+    * @param string $val The value of the objectType
+    *
+    * @return DeleteAction
+    */
+    public function setObjectType($val)
+    {
+        $this->_propDict["objectType"] = $val;
+        return $this;
+    }
 }

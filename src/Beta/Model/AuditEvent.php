@@ -28,7 +28,6 @@ class AuditEvent extends Entity
 {
     /**
     * Gets the displayName
-    * Event display name.
     *
     * @return string The displayName
     */
@@ -43,7 +42,6 @@ class AuditEvent extends Entity
     
     /**
     * Sets the displayName
-    * Event display name.
     *
     * @param string $val The displayName
     *
@@ -57,7 +55,6 @@ class AuditEvent extends Entity
     
     /**
     * Gets the componentName
-    * Component name.
     *
     * @return string The componentName
     */
@@ -72,7 +69,6 @@ class AuditEvent extends Entity
     
     /**
     * Sets the componentName
-    * Component name.
     *
     * @param string $val The componentName
     *
@@ -86,7 +82,6 @@ class AuditEvent extends Entity
     
     /**
     * Gets the actor
-    * AAD user and application that are associated with the audit event.
     *
     * @return AuditActor The actor
     */
@@ -105,7 +100,6 @@ class AuditEvent extends Entity
     
     /**
     * Sets the actor
-    * AAD user and application that are associated with the audit event.
     *
     * @param AuditActor $val The actor
     *
@@ -119,7 +113,6 @@ class AuditEvent extends Entity
     
     /**
     * Gets the activity
-    * Friendly name of the activity.
     *
     * @return string The activity
     */
@@ -134,7 +127,6 @@ class AuditEvent extends Entity
     
     /**
     * Sets the activity
-    * Friendly name of the activity.
     *
     * @param string $val The activity
     *
@@ -148,7 +140,6 @@ class AuditEvent extends Entity
     
     /**
     * Gets the activityDateTime
-    * The date time in UTC when the activity was performed.
     *
     * @return \DateTime The activityDateTime
     */
@@ -167,7 +158,6 @@ class AuditEvent extends Entity
     
     /**
     * Sets the activityDateTime
-    * The date time in UTC when the activity was performed.
     *
     * @param \DateTime $val The activityDateTime
     *
@@ -181,7 +171,6 @@ class AuditEvent extends Entity
     
     /**
     * Gets the activityType
-    * The type of activity that was being performed.
     *
     * @return string The activityType
     */
@@ -196,7 +185,6 @@ class AuditEvent extends Entity
     
     /**
     * Sets the activityType
-    * The type of activity that was being performed.
     *
     * @param string $val The activityType
     *
@@ -210,7 +198,6 @@ class AuditEvent extends Entity
     
     /**
     * Gets the activityOperationType
-    * The HTTP operation type of the activity.
     *
     * @return string The activityOperationType
     */
@@ -225,7 +212,6 @@ class AuditEvent extends Entity
     
     /**
     * Sets the activityOperationType
-    * The HTTP operation type of the activity.
     *
     * @param string $val The activityOperationType
     *
@@ -239,7 +225,6 @@ class AuditEvent extends Entity
     
     /**
     * Gets the activityResult
-    * The result of the activity.
     *
     * @return string The activityResult
     */
@@ -254,7 +239,6 @@ class AuditEvent extends Entity
     
     /**
     * Sets the activityResult
-    * The result of the activity.
     *
     * @param string $val The activityResult
     *
@@ -268,7 +252,6 @@ class AuditEvent extends Entity
     
     /**
     * Gets the correlationId
-    * The client request Id that is used to correlate activity within the system.
     *
     * @return string The correlationId
     */
@@ -283,7 +266,6 @@ class AuditEvent extends Entity
     
     /**
     * Sets the correlationId
-    * The client request Id that is used to correlate activity within the system.
     *
     * @param string $val The correlationId
     *
@@ -298,7 +280,6 @@ class AuditEvent extends Entity
 
      /** 
      * Gets the resources
-    * Resources being modified.
      *
      * @return array The resources
      */
@@ -313,7 +294,6 @@ class AuditEvent extends Entity
     
     /** 
     * Sets the resources
-    * Resources being modified.
     *
     * @param AuditResource $val The resources
     *
@@ -327,7 +307,6 @@ class AuditEvent extends Entity
     
     /**
     * Gets the category
-    * Audit category.
     *
     * @return string The category
     */
@@ -342,7 +321,6 @@ class AuditEvent extends Entity
     
     /**
     * Sets the category
-    * Audit category.
     *
     * @param string $val The category
     *

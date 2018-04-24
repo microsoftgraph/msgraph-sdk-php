@@ -27,7 +27,6 @@ class WindowsDeviceAccount extends Entity
 {
     /**
     * Gets the password
-    * Not yet documented
     *
     * @return string The password
     */
@@ -42,7 +41,6 @@ class WindowsDeviceAccount extends Entity
 
     /**
     * Sets the password
-    * Not yet documented
     *
     * @param string $val The value of the password
     *

@@ -56,7 +56,6 @@ class Entity implements \JsonSerializable
     
     /**
     * Gets the id
-    * Read-only.
     *
     * @return string The id
     */
@@ -71,7 +70,6 @@ class Entity implements \JsonSerializable
     
     /**
     * Sets the id
-    * Read-only.
     *
     * @param string $val The id
     *
@@ -118,7 +116,7 @@ class Entity implements \JsonSerializable
         foreach ($serializableProperties as $property => $val) {
             if (is_a($val, "\DateTime")) {
                 $serializableProperties[$property] = $val->format(\DateTime::RFC3339);
-            } else if (is_a($val, "\Microsoft\Graph\Core\Enum")) {
+            } else if (is_a($val, "\Microsoft\Graph\Beta\Core\Enum")) {
                 $serializableProperties[$property] = $val->value();
             }
         }

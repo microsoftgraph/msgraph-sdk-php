@@ -28,7 +28,6 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
 {
     /**
     * Gets the passwordRequired
-    * Require a password to unlock Windows Phone device.
     *
     * @return bool The passwordRequired
     */
@@ -43,7 +42,6 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passwordRequired
-    * Require a password to unlock Windows Phone device.
     *
     * @param bool $val The passwordRequired
     *
@@ -57,7 +55,6 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the passwordBlockSimple
-    * Whether or not to block syncing the calendar.
     *
     * @return bool The passwordBlockSimple
     */
@@ -72,7 +69,6 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passwordBlockSimple
-    * Whether or not to block syncing the calendar.
     *
     * @param bool $val The passwordBlockSimple
     *
@@ -86,7 +82,6 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the passwordMinimumLength
-    * Minimum password length. Valid values 4 to 16
     *
     * @return int The passwordMinimumLength
     */
@@ -101,7 +96,6 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passwordMinimumLength
-    * Minimum password length. Valid values 4 to 16
     *
     * @param int $val The passwordMinimumLength
     *
@@ -115,7 +109,6 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the passwordMinimumCharacterSetCount
-    * The number of character sets required in the password.
     *
     * @return int The passwordMinimumCharacterSetCount
     */
@@ -130,7 +123,6 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passwordMinimumCharacterSetCount
-    * The number of character sets required in the password.
     *
     * @param int $val The passwordMinimumCharacterSetCount
     *
@@ -144,7 +136,6 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the passwordRequiredType
-    * The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
     *
     * @return RequiredPasswordType The passwordRequiredType
     */
@@ -163,7 +154,6 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passwordRequiredType
-    * The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
     *
     * @param RequiredPasswordType $val The passwordRequiredType
     *
@@ -177,7 +167,6 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the passwordPreviousPasswordBlockCount
-    * The number of previous passwords to prevent re-use of.
     *
     * @return int The passwordPreviousPasswordBlockCount
     */
@@ -192,7 +181,6 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passwordPreviousPasswordBlockCount
-    * The number of previous passwords to prevent re-use of.
     *
     * @param int $val The passwordPreviousPasswordBlockCount
     *
@@ -206,7 +194,6 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the passwordExpirationDays
-    * Number of days before password expiration. Valid values 1 to 255
     *
     * @return int The passwordExpirationDays
     */
@@ -221,7 +208,6 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passwordExpirationDays
-    * Number of days before password expiration. Valid values 1 to 255
     *
     * @param int $val The passwordExpirationDays
     *
@@ -235,7 +221,6 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the passwordMinutesOfInactivityBeforeLock
-    * Minutes of inactivity before a password is required.
     *
     * @return int The passwordMinutesOfInactivityBeforeLock
     */
@@ -250,7 +235,6 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passwordMinutesOfInactivityBeforeLock
-    * Minutes of inactivity before a password is required.
     *
     * @param int $val The passwordMinutesOfInactivityBeforeLock
     *
@@ -264,7 +248,6 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the passwordRequireToUnlockFromIdle
-    * Require a password to unlock an idle device.
     *
     * @return bool The passwordRequireToUnlockFromIdle
     */
@@ -279,7 +262,6 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passwordRequireToUnlockFromIdle
-    * Require a password to unlock an idle device.
     *
     * @param bool $val The passwordRequireToUnlockFromIdle
     *
@@ -293,7 +275,6 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the osMinimumVersion
-    * Minimum Windows Phone version.
     *
     * @return string The osMinimumVersion
     */
@@ -308,7 +289,6 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the osMinimumVersion
-    * Minimum Windows Phone version.
     *
     * @param string $val The osMinimumVersion
     *
@@ -322,7 +302,6 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the osMaximumVersion
-    * Maximum Windows Phone version.
     *
     * @return string The osMaximumVersion
     */
@@ -337,7 +316,6 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the osMaximumVersion
-    * Maximum Windows Phone version.
     *
     * @param string $val The osMaximumVersion
     *
@@ -351,7 +329,6 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the earlyLaunchAntiMalwareDriverEnabled
-    * Require devices to be reported as healthy by Windows Device Health Attestation - early launch antimalware driver is enabled.
     *
     * @return bool The earlyLaunchAntiMalwareDriverEnabled
     */
@@ -366,7 +343,6 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the earlyLaunchAntiMalwareDriverEnabled
-    * Require devices to be reported as healthy by Windows Device Health Attestation - early launch antimalware driver is enabled.
     *
     * @param bool $val The earlyLaunchAntiMalwareDriverEnabled
     *
@@ -380,7 +356,6 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the bitLockerEnabled
-    * Require devices to be reported healthy by Windows Device Health Attestation - bit locker is enabled
     *
     * @return bool The bitLockerEnabled
     */
@@ -395,7 +370,6 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the bitLockerEnabled
-    * Require devices to be reported healthy by Windows Device Health Attestation - bit locker is enabled
     *
     * @param bool $val The bitLockerEnabled
     *
@@ -409,7 +383,6 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the secureBootEnabled
-    * Require devices to be reported as healthy by Windows Device Health Attestation - secure boot is enabled.
     *
     * @return bool The secureBootEnabled
     */
@@ -424,7 +397,6 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the secureBootEnabled
-    * Require devices to be reported as healthy by Windows Device Health Attestation - secure boot is enabled.
     *
     * @param bool $val The secureBootEnabled
     *
@@ -438,7 +410,6 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the codeIntegrityEnabled
-    * Require devices to be reported as healthy by Windows Device Health Attestation.
     *
     * @return bool The codeIntegrityEnabled
     */
@@ -453,7 +424,6 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the codeIntegrityEnabled
-    * Require devices to be reported as healthy by Windows Device Health Attestation.
     *
     * @param bool $val The codeIntegrityEnabled
     *
@@ -467,7 +437,6 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the storageRequireEncryption
-    * Require encryption on windows devices.
     *
     * @return bool The storageRequireEncryption
     */
@@ -482,7 +451,6 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the storageRequireEncryption
-    * Require encryption on windows devices.
     *
     * @param bool $val The storageRequireEncryption
     *

@@ -28,7 +28,6 @@ class RemoteAssistancePartner extends Entity
 {
     /**
     * Gets the displayName
-    * Display name of the partner.
     *
     * @return string The displayName
     */
@@ -43,7 +42,6 @@ class RemoteAssistancePartner extends Entity
     
     /**
     * Sets the displayName
-    * Display name of the partner.
     *
     * @param string $val The displayName
     *
@@ -57,7 +55,6 @@ class RemoteAssistancePartner extends Entity
     
     /**
     * Gets the onboardingUrl
-    * URL of the partner's onboarding portal, where an administrator can configure their Remote Assistance service.
     *
     * @return string The onboardingUrl
     */
@@ -72,7 +69,6 @@ class RemoteAssistancePartner extends Entity
     
     /**
     * Sets the onboardingUrl
-    * URL of the partner's onboarding portal, where an administrator can configure their Remote Assistance service.
     *
     * @param string $val The onboardingUrl
     *
@@ -86,7 +82,6 @@ class RemoteAssistancePartner extends Entity
     
     /**
     * Gets the onboardingStatus
-    * TBD Possible values are: notOnboarded, onboarding, onboarded.
     *
     * @return RemoteAssistanceOnboardingStatus The onboardingStatus
     */
@@ -105,7 +100,6 @@ class RemoteAssistancePartner extends Entity
     
     /**
     * Sets the onboardingStatus
-    * TBD Possible values are: notOnboarded, onboarding, onboarded.
     *
     * @param RemoteAssistanceOnboardingStatus $val The onboardingStatus
     *
@@ -119,7 +113,6 @@ class RemoteAssistancePartner extends Entity
     
     /**
     * Gets the lastConnectionDateTime
-    * Timestamp of the last request sent to Intune by the TEM partner.
     *
     * @return \DateTime The lastConnectionDateTime
     */
@@ -138,7 +131,6 @@ class RemoteAssistancePartner extends Entity
     
     /**
     * Sets the lastConnectionDateTime
-    * Timestamp of the last request sent to Intune by the TEM partner.
     *
     * @param \DateTime $val The lastConnectionDateTime
     *

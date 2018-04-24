@@ -27,7 +27,6 @@ class AndroidMinimumOperatingSystem extends Entity
 {
     /**
     * Gets the v4_0
-    * Version 4.0 or later.
     *
     * @return bool The v4_0
     */
@@ -42,7 +41,6 @@ class AndroidMinimumOperatingSystem extends Entity
 
     /**
     * Sets the v4_0
-    * Version 4.0 or later.
     *
     * @param bool $val The value of the v4_0
     *
@@ -55,7 +53,6 @@ class AndroidMinimumOperatingSystem extends Entity
     }
     /**
     * Gets the v4_0_3
-    * Version 4.0.3 or later.
     *
     * @return bool The v4_0_3
     */
@@ -70,7 +67,6 @@ class AndroidMinimumOperatingSystem extends Entity
 
     /**
     * Sets the v4_0_3
-    * Version 4.0.3 or later.
     *
     * @param bool $val The value of the v4_0_3
     *
@@ -83,7 +79,6 @@ class AndroidMinimumOperatingSystem extends Entity
     }
     /**
     * Gets the v4_1
-    * Version 4.1 or later.
     *
     * @return bool The v4_1
     */
@@ -98,7 +93,6 @@ class AndroidMinimumOperatingSystem extends Entity
 
     /**
     * Sets the v4_1
-    * Version 4.1 or later.
     *
     * @param bool $val The value of the v4_1
     *
@@ -111,7 +105,6 @@ class AndroidMinimumOperatingSystem extends Entity
     }
     /**
     * Gets the v4_2
-    * Version 4.2 or later.
     *
     * @return bool The v4_2
     */
@@ -126,7 +119,6 @@ class AndroidMinimumOperatingSystem extends Entity
 
     /**
     * Sets the v4_2
-    * Version 4.2 or later.
     *
     * @param bool $val The value of the v4_2
     *
@@ -139,7 +131,6 @@ class AndroidMinimumOperatingSystem extends Entity
     }
     /**
     * Gets the v4_3
-    * Version 4.3 or later.
     *
     * @return bool The v4_3
     */
@@ -154,7 +145,6 @@ class AndroidMinimumOperatingSystem extends Entity
 
     /**
     * Sets the v4_3
-    * Version 4.3 or later.
     *
     * @param bool $val The value of the v4_3
     *
@@ -167,7 +157,6 @@ class AndroidMinimumOperatingSystem extends Entity
     }
     /**
     * Gets the v4_4
-    * Version 4.4 or later.
     *
     * @return bool The v4_4
     */
@@ -182,7 +171,6 @@ class AndroidMinimumOperatingSystem extends Entity
 
     /**
     * Sets the v4_4
-    * Version 4.4 or later.
     *
     * @param bool $val The value of the v4_4
     *
@@ -195,7 +183,6 @@ class AndroidMinimumOperatingSystem extends Entity
     }
     /**
     * Gets the v5_0
-    * Version 5.0 or later.
     *
     * @return bool The v5_0
     */
@@ -210,7 +197,6 @@ class AndroidMinimumOperatingSystem extends Entity
 
     /**
     * Sets the v5_0
-    * Version 5.0 or later.
     *
     * @param bool $val The value of the v5_0
     *
@@ -223,7 +209,6 @@ class AndroidMinimumOperatingSystem extends Entity
     }
     /**
     * Gets the v5_1
-    * Version 5.1 or later.
     *
     * @return bool The v5_1
     */
@@ -238,7 +223,6 @@ class AndroidMinimumOperatingSystem extends Entity
 
     /**
     * Sets the v5_1
-    * Version 5.1 or later.
     *
     * @param bool $val The value of the v5_1
     *

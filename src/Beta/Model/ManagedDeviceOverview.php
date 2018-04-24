@@ -28,7 +28,6 @@ class ManagedDeviceOverview extends Entity
 {
     /**
     * Gets the enrolledDeviceCount
-    * Total enrolled device count. Does not include PC devices managed via Intune PC Agent
     *
     * @return int The enrolledDeviceCount
     */
@@ -43,7 +42,6 @@ class ManagedDeviceOverview extends Entity
     
     /**
     * Sets the enrolledDeviceCount
-    * Total enrolled device count. Does not include PC devices managed via Intune PC Agent
     *
     * @param int $val The enrolledDeviceCount
     *
@@ -57,7 +55,6 @@ class ManagedDeviceOverview extends Entity
     
     /**
     * Gets the mdmEnrolledCount
-    * The number of devices enrolled in MDM
     *
     * @return int The mdmEnrolledCount
     */
@@ -72,7 +69,6 @@ class ManagedDeviceOverview extends Entity
     
     /**
     * Sets the mdmEnrolledCount
-    * The number of devices enrolled in MDM
     *
     * @param int $val The mdmEnrolledCount
     *
@@ -86,7 +82,6 @@ class ManagedDeviceOverview extends Entity
     
     /**
     * Gets the dualEnrolledDeviceCount
-    * The number of devices enrolled in both MDM and EAS
     *
     * @return int The dualEnrolledDeviceCount
     */
@@ -101,7 +96,6 @@ class ManagedDeviceOverview extends Entity
     
     /**
     * Sets the dualEnrolledDeviceCount
-    * The number of devices enrolled in both MDM and EAS
     *
     * @param int $val The dualEnrolledDeviceCount
     *
@@ -115,7 +109,6 @@ class ManagedDeviceOverview extends Entity
     
     /**
     * Gets the deviceOperatingSystemSummary
-    * Device operating system summary.
     *
     * @return DeviceOperatingSystemSummary The deviceOperatingSystemSummary
     */
@@ -134,7 +127,6 @@ class ManagedDeviceOverview extends Entity
     
     /**
     * Sets the deviceOperatingSystemSummary
-    * Device operating system summary.
     *
     * @param DeviceOperatingSystemSummary $val The deviceOperatingSystemSummary
     *
@@ -148,7 +140,6 @@ class ManagedDeviceOverview extends Entity
     
     /**
     * Gets the deviceExchangeAccessStateSummary
-    * Distribution of Exchange Access State in Intune
     *
     * @return DeviceExchangeAccessStateSummary The deviceExchangeAccessStateSummary
     */
@@ -167,7 +158,6 @@ class ManagedDeviceOverview extends Entity
     
     /**
     * Sets the deviceExchangeAccessStateSummary
-    * Distribution of Exchange Access State in Intune
     *
     * @param DeviceExchangeAccessStateSummary $val The deviceExchangeAccessStateSummary
     *
@@ -176,6 +166,37 @@ class ManagedDeviceOverview extends Entity
     public function setDeviceExchangeAccessStateSummary($val)
     {
         $this->_propDict["deviceExchangeAccessStateSummary"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the lastModifiedDateTime
+    *
+    * @return \DateTime The lastModifiedDateTime
+    */
+    public function getLastModifiedDateTime()
+    {
+        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+                return $this->_propDict["lastModifiedDateTime"];
+            } else {
+                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
+                return $this->_propDict["lastModifiedDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the lastModifiedDateTime
+    *
+    * @param \DateTime $val The lastModifiedDateTime
+    *
+    * @return ManagedDeviceOverview
+    */
+    public function setLastModifiedDateTime($val)
+    {
+        $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
     

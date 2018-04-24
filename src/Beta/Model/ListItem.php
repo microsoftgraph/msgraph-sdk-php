@@ -28,7 +28,6 @@ class ListItem extends BaseItem
 {
     /**
     * Gets the contentType
-    * The content type of this list item
     *
     * @return ContentTypeInfo The contentType
     */
@@ -47,7 +46,6 @@ class ListItem extends BaseItem
     
     /**
     * Sets the contentType
-    * The content type of this list item
     *
     * @param ContentTypeInfo $val The contentType
     *
@@ -120,7 +118,6 @@ class ListItem extends BaseItem
     
     /**
     * Gets the driveItem
-    * For document libraries, the driveItem relationship exposes the listItem as a [driveItem][]
     *
     * @return DriveItem The driveItem
     */
@@ -139,7 +136,6 @@ class ListItem extends BaseItem
     
     /**
     * Sets the driveItem
-    * For document libraries, the driveItem relationship exposes the listItem as a [driveItem][]
     *
     * @param DriveItem $val The driveItem
     *

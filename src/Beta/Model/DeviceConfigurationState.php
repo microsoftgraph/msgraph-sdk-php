@@ -29,7 +29,6 @@ class DeviceConfigurationState extends Entity
 
      /** 
      * Gets the settingStates
-    * Not yet documented
      *
      * @return array The settingStates
      */
@@ -44,7 +43,6 @@ class DeviceConfigurationState extends Entity
     
     /** 
     * Sets the settingStates
-    * Not yet documented
     *
     * @param DeviceConfigurationSettingState $val The settingStates
     *
@@ -58,7 +56,6 @@ class DeviceConfigurationState extends Entity
     
     /**
     * Gets the displayName
-    * The name of the policy for this policyBase
     *
     * @return string The displayName
     */
@@ -73,7 +70,6 @@ class DeviceConfigurationState extends Entity
     
     /**
     * Sets the displayName
-    * The name of the policy for this policyBase
     *
     * @param string $val The displayName
     *
@@ -87,7 +83,6 @@ class DeviceConfigurationState extends Entity
     
     /**
     * Gets the version
-    * The version of the policy
     *
     * @return int The version
     */
@@ -102,7 +97,6 @@ class DeviceConfigurationState extends Entity
     
     /**
     * Sets the version
-    * The version of the policy
     *
     * @param int $val The version
     *
@@ -116,7 +110,6 @@ class DeviceConfigurationState extends Entity
     
     /**
     * Gets the platformType
-    * Platform type that the policy applies to Possible values are: android, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, all.
     *
     * @return PolicyPlatformType The platformType
     */
@@ -135,7 +128,6 @@ class DeviceConfigurationState extends Entity
     
     /**
     * Sets the platformType
-    * Platform type that the policy applies to Possible values are: android, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, all.
     *
     * @param PolicyPlatformType $val The platformType
     *
@@ -149,7 +141,6 @@ class DeviceConfigurationState extends Entity
     
     /**
     * Gets the state
-    * The compliance state of the policy Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict.
     *
     * @return ComplianceStatus The state
     */
@@ -168,7 +159,6 @@ class DeviceConfigurationState extends Entity
     
     /**
     * Sets the state
-    * The compliance state of the policy Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict.
     *
     * @param ComplianceStatus $val The state
     *
@@ -182,7 +172,6 @@ class DeviceConfigurationState extends Entity
     
     /**
     * Gets the settingCount
-    * Count of how many setting a policy holds
     *
     * @return int The settingCount
     */
@@ -197,7 +186,6 @@ class DeviceConfigurationState extends Entity
     
     /**
     * Sets the settingCount
-    * Count of how many setting a policy holds
     *
     * @param int $val The settingCount
     *

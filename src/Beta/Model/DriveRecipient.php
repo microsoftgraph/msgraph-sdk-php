@@ -27,7 +27,6 @@ class DriveRecipient extends Entity
 {
     /**
     * Gets the alias
-    * The alias of the domain object, for cases where an email address is unavailable (e.g. security groups).
     *
     * @return string The alias
     */
@@ -42,7 +41,6 @@ class DriveRecipient extends Entity
 
     /**
     * Sets the alias
-    * The alias of the domain object, for cases where an email address is unavailable (e.g. security groups).
     *
     * @param string $val The value of the alias
     *
@@ -55,7 +53,6 @@ class DriveRecipient extends Entity
     }
     /**
     * Gets the email
-    * The email address for the recipient, if the recipient has an associated email address.
     *
     * @return string The email
     */
@@ -70,7 +67,6 @@ class DriveRecipient extends Entity
 
     /**
     * Sets the email
-    * The email address for the recipient, if the recipient has an associated email address.
     *
     * @param string $val The value of the email
     *
@@ -83,7 +79,6 @@ class DriveRecipient extends Entity
     }
     /**
     * Gets the objectId
-    * The unique identifier for the recipient in the directory.
     *
     * @return string The objectId
     */
@@ -98,7 +93,6 @@ class DriveRecipient extends Entity
 
     /**
     * Sets the objectId
-    * The unique identifier for the recipient in the directory.
     *
     * @param string $val The value of the objectId
     *

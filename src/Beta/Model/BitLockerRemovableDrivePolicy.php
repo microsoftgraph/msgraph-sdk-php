@@ -28,7 +28,6 @@ class BitLockerRemovableDrivePolicy extends Entity
 
     /**
     * Gets the encryptionMethod
-    * Select the encryption method for removable  drives. Possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256.
     *
     * @return BitLockerEncryptionMethod The encryptionMethod
     */
@@ -47,7 +46,6 @@ class BitLockerRemovableDrivePolicy extends Entity
 
     /**
     * Sets the encryptionMethod
-    * Select the encryption method for removable  drives. Possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256.
     *
     * @param BitLockerEncryptionMethod $val The value to assign to the encryptionMethod
     *
@@ -60,7 +58,6 @@ class BitLockerRemovableDrivePolicy extends Entity
     }
     /**
     * Gets the requireEncryptionForWriteAccess
-    * Indicates whether to block write access to devices configured in another organization.  If requireEncryptionForWriteAccess is false, this value does not affect.
     *
     * @return bool The requireEncryptionForWriteAccess
     */
@@ -75,7 +72,6 @@ class BitLockerRemovableDrivePolicy extends Entity
 
     /**
     * Sets the requireEncryptionForWriteAccess
-    * Indicates whether to block write access to devices configured in another organization.  If requireEncryptionForWriteAccess is false, this value does not affect.
     *
     * @param bool $val The value of the requireEncryptionForWriteAccess
     *
@@ -88,7 +84,6 @@ class BitLockerRemovableDrivePolicy extends Entity
     }
     /**
     * Gets the blockCrossOrganizationWriteAccess
-    * This policy setting determines whether BitLocker protection is required for removable data drives to be writable on a computer.
     *
     * @return bool The blockCrossOrganizationWriteAccess
     */
@@ -103,7 +98,6 @@ class BitLockerRemovableDrivePolicy extends Entity
 
     /**
     * Sets the blockCrossOrganizationWriteAccess
-    * This policy setting determines whether BitLocker protection is required for removable data drives to be writable on a computer.
     *
     * @param bool $val The value of the blockCrossOrganizationWriteAccess
     *

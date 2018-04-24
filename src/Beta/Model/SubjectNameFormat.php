@@ -37,4 +37,7 @@ class SubjectNameFormat extends Enum
     const CUSTOM = "custom";
     const COMMON_NAME_AS_IMEI = "commonNameAsIMEI";
     const COMMON_NAME_AS_SERIAL_NUMBER = "commonNameAsSerialNumber";
+    const COMMON_NAME_AS_AAD_DEVICE_ID = "commonNameAsAadDeviceId";
+    const COMMON_NAME_AS_INTUNE_DEVICE_ID = "commonNameAsIntuneDeviceId";
+    const COMMON_NAME_AS_DURABLE_DEVICE_ID = "commonNameAsDurableDeviceId";
 }

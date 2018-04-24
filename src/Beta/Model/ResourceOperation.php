@@ -28,7 +28,6 @@ class ResourceOperation extends Entity
 {
     /**
     * Gets the resourceName
-    * Name of the Resource this operation is performed on.
     *
     * @return string The resourceName
     */
@@ -43,7 +42,6 @@ class ResourceOperation extends Entity
     
     /**
     * Sets the resourceName
-    * Name of the Resource this operation is performed on.
     *
     * @param string $val The resourceName
     *
@@ -57,7 +55,6 @@ class ResourceOperation extends Entity
     
     /**
     * Gets the actionName
-    * Type of action this operation is going to perform. The actionName should be concise and limited to as few words as possible.
     *
     * @return string The actionName
     */
@@ -72,7 +69,6 @@ class ResourceOperation extends Entity
     
     /**
     * Sets the actionName
-    * Type of action this operation is going to perform. The actionName should be concise and limited to as few words as possible.
     *
     * @param string $val The actionName
     *
@@ -86,7 +82,6 @@ class ResourceOperation extends Entity
     
     /**
     * Gets the description
-    * Description of the resource operation. The description is used in mouse-over text for the operation when shown in the Azure Portal.
     *
     * @return string The description
     */
@@ -101,7 +96,6 @@ class ResourceOperation extends Entity
     
     /**
     * Sets the description
-    * Description of the resource operation. The description is used in mouse-over text for the operation when shown in the Azure Portal.
     *
     * @param string $val The description
     *

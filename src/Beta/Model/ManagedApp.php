@@ -28,7 +28,6 @@ class ManagedApp extends MobileApp
 {
     /**
     * Gets the appAvailability
-    * The Application's availability. Possible values are: global, lineOfBusiness.
     *
     * @return ManagedAppAvailability The appAvailability
     */
@@ -47,7 +46,6 @@ class ManagedApp extends MobileApp
     
     /**
     * Sets the appAvailability
-    * The Application's availability. Possible values are: global, lineOfBusiness.
     *
     * @param ManagedAppAvailability $val The appAvailability
     *
@@ -61,7 +59,6 @@ class ManagedApp extends MobileApp
     
     /**
     * Gets the version
-    * The Application's version.
     *
     * @return string The version
     */
@@ -76,7 +73,6 @@ class ManagedApp extends MobileApp
     
     /**
     * Sets the version
-    * The Application's version.
     *
     * @param string $val The version
     *

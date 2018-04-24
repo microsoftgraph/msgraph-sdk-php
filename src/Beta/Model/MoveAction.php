@@ -26,9 +26,9 @@ namespace Microsoft\Graph\Beta\Model;
 class MoveAction extends Entity
 {
     /**
-    * Gets the From
+    * Gets the from
     *
-    * @return string The From
+    * @return string The from
     */
     public function getFrom()
     {
@@ -40,9 +40,9 @@ class MoveAction extends Entity
     }
 
     /**
-    * Sets the From
+    * Sets the from
     *
-    * @param string $val The value of the From
+    * @param string $val The value of the from
     *
     * @return MoveAction
     */

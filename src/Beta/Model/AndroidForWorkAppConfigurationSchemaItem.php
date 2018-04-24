@@ -27,7 +27,6 @@ class AndroidForWorkAppConfigurationSchemaItem extends Entity
 {
     /**
     * Gets the schemaItemKey
-    * Unique key the application uses to identify the item
     *
     * @return string The schemaItemKey
     */
@@ -42,7 +41,6 @@ class AndroidForWorkAppConfigurationSchemaItem extends Entity
 
     /**
     * Sets the schemaItemKey
-    * Unique key the application uses to identify the item
     *
     * @param string $val The value of the schemaItemKey
     *
@@ -55,7 +53,6 @@ class AndroidForWorkAppConfigurationSchemaItem extends Entity
     }
     /**
     * Gets the displayName
-    * Human readable name
     *
     * @return string The displayName
     */
@@ -70,7 +67,6 @@ class AndroidForWorkAppConfigurationSchemaItem extends Entity
 
     /**
     * Sets the displayName
-    * Human readable name
     *
     * @param string $val The value of the displayName
     *
@@ -83,7 +79,6 @@ class AndroidForWorkAppConfigurationSchemaItem extends Entity
     }
     /**
     * Gets the description
-    * Description of what the item controls within the application
     *
     * @return string The description
     */
@@ -98,7 +93,6 @@ class AndroidForWorkAppConfigurationSchemaItem extends Entity
 
     /**
     * Sets the description
-    * Description of what the item controls within the application
     *
     * @param string $val The value of the description
     *
@@ -111,7 +105,6 @@ class AndroidForWorkAppConfigurationSchemaItem extends Entity
     }
     /**
     * Gets the defaultBoolValue
-    * Default value for boolean type items, if specified by the app developer
     *
     * @return bool The defaultBoolValue
     */
@@ -126,7 +119,6 @@ class AndroidForWorkAppConfigurationSchemaItem extends Entity
 
     /**
     * Sets the defaultBoolValue
-    * Default value for boolean type items, if specified by the app developer
     *
     * @param bool $val The value of the defaultBoolValue
     *
@@ -139,7 +131,6 @@ class AndroidForWorkAppConfigurationSchemaItem extends Entity
     }
     /**
     * Gets the defaultIntValue
-    * Default value for integer type items, if specified by the app developer
     *
     * @return int The defaultIntValue
     */
@@ -154,7 +145,6 @@ class AndroidForWorkAppConfigurationSchemaItem extends Entity
 
     /**
     * Sets the defaultIntValue
-    * Default value for integer type items, if specified by the app developer
     *
     * @param int $val The value of the defaultIntValue
     *
@@ -167,7 +157,6 @@ class AndroidForWorkAppConfigurationSchemaItem extends Entity
     }
     /**
     * Gets the defaultStringValue
-    * Default value for string type items, if specified by the app developer
     *
     * @return string The defaultStringValue
     */
@@ -182,7 +171,6 @@ class AndroidForWorkAppConfigurationSchemaItem extends Entity
 
     /**
     * Sets the defaultStringValue
-    * Default value for string type items, if specified by the app developer
     *
     * @param string $val The value of the defaultStringValue
     *
@@ -195,7 +183,6 @@ class AndroidForWorkAppConfigurationSchemaItem extends Entity
     }
     /**
     * Gets the defaultStringArrayValue
-    * Default value for string array type items, if specified by the app developer
     *
     * @return string The defaultStringArrayValue
     */
@@ -210,7 +197,6 @@ class AndroidForWorkAppConfigurationSchemaItem extends Entity
 
     /**
     * Sets the defaultStringArrayValue
-    * Default value for string array type items, if specified by the app developer
     *
     * @param string $val The value of the defaultStringArrayValue
     *
@@ -224,7 +210,6 @@ class AndroidForWorkAppConfigurationSchemaItem extends Entity
 
     /**
     * Gets the dataType
-    * The type of value this item describes Possible values are: bool, integer, string, choice, multiselect, bundle, bundleArray, hidden.
     *
     * @return AndroidForWorkAppConfigurationSchemaItemDataType The dataType
     */
@@ -243,7 +228,6 @@ class AndroidForWorkAppConfigurationSchemaItem extends Entity
 
     /**
     * Sets the dataType
-    * The type of value this item describes Possible values are: bool, integer, string, choice, multiselect, bundle, bundleArray, hidden.
     *
     * @param AndroidForWorkAppConfigurationSchemaItemDataType $val The value to assign to the dataType
     *
@@ -257,7 +241,6 @@ class AndroidForWorkAppConfigurationSchemaItem extends Entity
 
     /**
     * Gets the selections
-    * List of human readable name/value pairs for the valid values that can be set for this item (Choice and Multiselect items only)
     *
     * @return KeyValuePair The selections
     */
@@ -276,7 +259,6 @@ class AndroidForWorkAppConfigurationSchemaItem extends Entity
 
     /**
     * Sets the selections
-    * List of human readable name/value pairs for the valid values that can be set for this item (Choice and Multiselect items only)
     *
     * @param KeyValuePair $val The value to assign to the selections
     *

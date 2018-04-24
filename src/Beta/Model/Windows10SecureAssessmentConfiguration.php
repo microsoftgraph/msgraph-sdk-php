@@ -28,7 +28,6 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration
 {
     /**
     * Gets the launchUri
-    * Url link to an assessment that's automatically loaded when the secure assessment browser is launched. It has to be a valid Url (http[s]://msdn.microsoft.com/).
     *
     * @return string The launchUri
     */
@@ -43,7 +42,6 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration
     
     /**
     * Sets the launchUri
-    * Url link to an assessment that's automatically loaded when the secure assessment browser is launched. It has to be a valid Url (http[s]://msdn.microsoft.com/).
     *
     * @param string $val The launchUri
     *
@@ -57,7 +55,6 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration
     
     /**
     * Gets the configurationAccount
-    * The account used to configure the Windows device for taking the test. The user can be a domain account (domain\user), an AAD account (username@tenant.com) or a local account (username).
     *
     * @return string The configurationAccount
     */
@@ -72,7 +69,6 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration
     
     /**
     * Sets the configurationAccount
-    * The account used to configure the Windows device for taking the test. The user can be a domain account (domain\user), an AAD account (username@tenant.com) or a local account (username).
     *
     * @param string $val The configurationAccount
     *
@@ -117,7 +113,6 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration
     
     /**
     * Gets the allowPrinting
-    * Indicates whether or not to allow the app from printing during the test.
     *
     * @return bool The allowPrinting
     */
@@ -132,7 +127,6 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration
     
     /**
     * Sets the allowPrinting
-    * Indicates whether or not to allow the app from printing during the test.
     *
     * @param bool $val The allowPrinting
     *
@@ -146,7 +140,6 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration
     
     /**
     * Gets the allowScreenCapture
-    * Indicates whether or not to allow screen capture capability during a test.
     *
     * @return bool The allowScreenCapture
     */
@@ -161,7 +154,6 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration
     
     /**
     * Sets the allowScreenCapture
-    * Indicates whether or not to allow screen capture capability during a test.
     *
     * @param bool $val The allowScreenCapture
     *
@@ -175,7 +167,6 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration
     
     /**
     * Gets the allowTextSuggestion
-    * Indicates whether or not to allow text suggestions during the test.
     *
     * @return bool The allowTextSuggestion
     */
@@ -190,7 +181,6 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration
     
     /**
     * Sets the allowTextSuggestion
-    * Indicates whether or not to allow text suggestions during the test.
     *
     * @param bool $val The allowTextSuggestion
     *
@@ -199,87 +189,6 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration
     public function setAllowTextSuggestion($val)
     {
         $this->_propDict["allowTextSuggestion"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the printerNames
-    *
-    * @return string The printerNames
-    */
-    public function getPrinterNames()
-    {
-        if (array_key_exists("printerNames", $this->_propDict)) {
-            return $this->_propDict["printerNames"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the printerNames
-    *
-    * @param string $val The printerNames
-    *
-    * @return Windows10SecureAssessmentConfiguration
-    */
-    public function setPrinterNames($val)
-    {
-        $this->_propDict["printerNames"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the defaultPrinterName
-    *
-    * @return string The defaultPrinterName
-    */
-    public function getDefaultPrinterName()
-    {
-        if (array_key_exists("defaultPrinterName", $this->_propDict)) {
-            return $this->_propDict["defaultPrinterName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the defaultPrinterName
-    *
-    * @param string $val The defaultPrinterName
-    *
-    * @return Windows10SecureAssessmentConfiguration
-    */
-    public function setDefaultPrinterName($val)
-    {
-        $this->_propDict["defaultPrinterName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the blockAddingNewPrinter
-    *
-    * @return bool The blockAddingNewPrinter
-    */
-    public function getBlockAddingNewPrinter()
-    {
-        if (array_key_exists("blockAddingNewPrinter", $this->_propDict)) {
-            return $this->_propDict["blockAddingNewPrinter"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the blockAddingNewPrinter
-    *
-    * @param bool $val The blockAddingNewPrinter
-    *
-    * @return Windows10SecureAssessmentConfiguration
-    */
-    public function setBlockAddingNewPrinter($val)
-    {
-        $this->_propDict["blockAddingNewPrinter"] = boolval($val);
         return $this;
     }
     

@@ -27,7 +27,6 @@ class MicrosoftStoreForBusinessAppAssignmentSettings extends MobileAppAssignment
 {
     /**
     * Gets the useDeviceContext
-    * Whether or not to use device execution context for Microsoft Store for Business mobile app.
     *
     * @return bool The useDeviceContext
     */
@@ -42,7 +41,6 @@ class MicrosoftStoreForBusinessAppAssignmentSettings extends MobileAppAssignment
 
     /**
     * Sets the useDeviceContext
-    * Whether or not to use device execution context for Microsoft Store for Business mobile app.
     *
     * @param bool $val The value of the useDeviceContext
     *

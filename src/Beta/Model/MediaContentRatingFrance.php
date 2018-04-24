@@ -28,7 +28,6 @@ class MediaContentRatingFrance extends Entity
 
     /**
     * Gets the movieRating
-    * Movies rating selected for France Possible values are: allAllowed, allBlocked, agesAbove10, agesAbove12, agesAbove16, agesAbove18.
     *
     * @return RatingFranceMoviesType The movieRating
     */
@@ -47,7 +46,6 @@ class MediaContentRatingFrance extends Entity
 
     /**
     * Sets the movieRating
-    * Movies rating selected for France Possible values are: allAllowed, allBlocked, agesAbove10, agesAbove12, agesAbove16, agesAbove18.
     *
     * @param RatingFranceMoviesType $val The value to assign to the movieRating
     *
@@ -61,7 +59,6 @@ class MediaContentRatingFrance extends Entity
 
     /**
     * Gets the tvRating
-    * TV rating selected for France Possible values are: allAllowed, allBlocked, agesAbove10, agesAbove12, agesAbove16, agesAbove18.
     *
     * @return RatingFranceTelevisionType The tvRating
     */
@@ -80,7 +77,6 @@ class MediaContentRatingFrance extends Entity
 
     /**
     * Sets the tvRating
-    * TV rating selected for France Possible values are: allAllowed, allBlocked, agesAbove10, agesAbove12, agesAbove16, agesAbove18.
     *
     * @param RatingFranceTelevisionType $val The value to assign to the tvRating
     *

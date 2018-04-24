@@ -28,7 +28,6 @@ class EnrollmentConfigurationAssignment extends Entity
 {
     /**
     * Gets the target
-    * Not yet documented
     *
     * @return DeviceAndAppManagementAssignmentTarget The target
     */
@@ -47,7 +46,6 @@ class EnrollmentConfigurationAssignment extends Entity
     
     /**
     * Sets the target
-    * Not yet documented
     *
     * @param DeviceAndAppManagementAssignmentTarget $val The target
     *

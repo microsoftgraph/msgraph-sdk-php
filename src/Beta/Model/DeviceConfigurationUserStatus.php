@@ -28,7 +28,6 @@ class DeviceConfigurationUserStatus extends Entity
 {
     /**
     * Gets the userDisplayName
-    * User name of the DevicePolicyStatus.
     *
     * @return string The userDisplayName
     */
@@ -43,7 +42,6 @@ class DeviceConfigurationUserStatus extends Entity
     
     /**
     * Sets the userDisplayName
-    * User name of the DevicePolicyStatus.
     *
     * @param string $val The userDisplayName
     *
@@ -57,7 +55,6 @@ class DeviceConfigurationUserStatus extends Entity
     
     /**
     * Gets the devicesCount
-    * Devices count for that user.
     *
     * @return int The devicesCount
     */
@@ -72,7 +69,6 @@ class DeviceConfigurationUserStatus extends Entity
     
     /**
     * Sets the devicesCount
-    * Devices count for that user.
     *
     * @param int $val The devicesCount
     *
@@ -86,7 +82,6 @@ class DeviceConfigurationUserStatus extends Entity
     
     /**
     * Gets the status
-    * Compliance status of the policy report. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict.
     *
     * @return ComplianceStatus The status
     */
@@ -105,7 +100,6 @@ class DeviceConfigurationUserStatus extends Entity
     
     /**
     * Sets the status
-    * Compliance status of the policy report. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict.
     *
     * @param ComplianceStatus $val The status
     *
@@ -119,7 +113,6 @@ class DeviceConfigurationUserStatus extends Entity
     
     /**
     * Gets the lastReportedDateTime
-    * Last modified date time of the policy report.
     *
     * @return \DateTime The lastReportedDateTime
     */
@@ -138,7 +131,6 @@ class DeviceConfigurationUserStatus extends Entity
     
     /**
     * Sets the lastReportedDateTime
-    * Last modified date time of the policy report.
     *
     * @param \DateTime $val The lastReportedDateTime
     *
@@ -152,7 +144,6 @@ class DeviceConfigurationUserStatus extends Entity
     
     /**
     * Gets the userPrincipalName
-    * UserPrincipalName.
     *
     * @return string The userPrincipalName
     */
@@ -167,7 +158,6 @@ class DeviceConfigurationUserStatus extends Entity
     
     /**
     * Sets the userPrincipalName
-    * UserPrincipalName.
     *
     * @param string $val The userPrincipalName
     *

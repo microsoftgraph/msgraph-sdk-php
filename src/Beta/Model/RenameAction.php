@@ -26,6 +26,32 @@ namespace Microsoft\Graph\Beta\Model;
 class RenameAction extends Entity
 {
     /**
+    * Gets the newName
+    *
+    * @return string The newName
+    */
+    public function getNewName()
+    {
+        if (array_key_exists("newName", $this->_propDict)) {
+            return $this->_propDict["newName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the newName
+    *
+    * @param string $val The value of the newName
+    *
+    * @return RenameAction
+    */
+    public function setNewName($val)
+    {
+        $this->_propDict["newName"] = $val;
+        return $this;
+    }
+    /**
     * Gets the oldName
     *
     * @return string The oldName

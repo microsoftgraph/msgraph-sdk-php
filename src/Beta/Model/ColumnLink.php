@@ -28,7 +28,6 @@ class ColumnLink extends Entity
 {
     /**
     * Gets the name
-    * The name of the column  in this content type.
     *
     * @return string The name
     */
@@ -43,7 +42,6 @@ class ColumnLink extends Entity
     
     /**
     * Sets the name
-    * The name of the column  in this content type.
     *
     * @param string $val The name
     *

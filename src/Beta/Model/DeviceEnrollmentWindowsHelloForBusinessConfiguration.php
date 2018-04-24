@@ -28,7 +28,6 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
 {
     /**
     * Gets the pinMinimumLength
-    * Not yet documented
     *
     * @return int The pinMinimumLength
     */
@@ -43,7 +42,6 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Sets the pinMinimumLength
-    * Not yet documented
     *
     * @param int $val The pinMinimumLength
     *
@@ -57,7 +55,6 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Gets the pinMaximumLength
-    * Not yet documented
     *
     * @return int The pinMaximumLength
     */
@@ -72,7 +69,6 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Sets the pinMaximumLength
-    * Not yet documented
     *
     * @param int $val The pinMaximumLength
     *
@@ -86,7 +82,6 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Gets the pinUppercaseCharactersUsage
-    * Not yet documented Possible values are: allowed, required, disallowed.
     *
     * @return WindowsHelloForBusinessPinUsage The pinUppercaseCharactersUsage
     */
@@ -105,7 +100,6 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Sets the pinUppercaseCharactersUsage
-    * Not yet documented Possible values are: allowed, required, disallowed.
     *
     * @param WindowsHelloForBusinessPinUsage $val The pinUppercaseCharactersUsage
     *
@@ -119,7 +113,6 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Gets the pinLowercaseCharactersUsage
-    * Not yet documented Possible values are: allowed, required, disallowed.
     *
     * @return WindowsHelloForBusinessPinUsage The pinLowercaseCharactersUsage
     */
@@ -138,7 +131,6 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Sets the pinLowercaseCharactersUsage
-    * Not yet documented Possible values are: allowed, required, disallowed.
     *
     * @param WindowsHelloForBusinessPinUsage $val The pinLowercaseCharactersUsage
     *
@@ -152,7 +144,6 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Gets the pinSpecialCharactersUsage
-    * Not yet documented Possible values are: allowed, required, disallowed.
     *
     * @return WindowsHelloForBusinessPinUsage The pinSpecialCharactersUsage
     */
@@ -171,7 +162,6 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Sets the pinSpecialCharactersUsage
-    * Not yet documented Possible values are: allowed, required, disallowed.
     *
     * @param WindowsHelloForBusinessPinUsage $val The pinSpecialCharactersUsage
     *
@@ -185,7 +175,6 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Gets the state
-    * Not yet documented Possible values are: notConfigured, enabled, disabled.
     *
     * @return Enablement The state
     */
@@ -204,7 +193,6 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Sets the state
-    * Not yet documented Possible values are: notConfigured, enabled, disabled.
     *
     * @param Enablement $val The state
     *
@@ -218,7 +206,6 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Gets the securityDeviceRequired
-    * Not yet documented
     *
     * @return bool The securityDeviceRequired
     */
@@ -233,7 +220,6 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Sets the securityDeviceRequired
-    * Not yet documented
     *
     * @param bool $val The securityDeviceRequired
     *
@@ -247,7 +233,6 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Gets the unlockWithBiometricsEnabled
-    * Not yet documented
     *
     * @return bool The unlockWithBiometricsEnabled
     */
@@ -262,7 +247,6 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Sets the unlockWithBiometricsEnabled
-    * Not yet documented
     *
     * @param bool $val The unlockWithBiometricsEnabled
     *
@@ -276,7 +260,6 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Gets the remotePassportEnabled
-    * Not yet documented
     *
     * @return bool The remotePassportEnabled
     */
@@ -291,7 +274,6 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Sets the remotePassportEnabled
-    * Not yet documented
     *
     * @param bool $val The remotePassportEnabled
     *
@@ -305,7 +287,6 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Gets the pinPreviousBlockCount
-    * Not yet documented
     *
     * @return int The pinPreviousBlockCount
     */
@@ -320,7 +301,6 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Sets the pinPreviousBlockCount
-    * Not yet documented
     *
     * @param int $val The pinPreviousBlockCount
     *
@@ -334,7 +314,6 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Gets the pinExpirationInDays
-    * Not yet documented
     *
     * @return int The pinExpirationInDays
     */
@@ -349,7 +328,6 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Sets the pinExpirationInDays
-    * Not yet documented
     *
     * @param int $val The pinExpirationInDays
     *
@@ -363,7 +341,6 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Gets the enhancedBiometricsState
-    * Not yet documented Possible values are: notConfigured, enabled, disabled.
     *
     * @return Enablement The enhancedBiometricsState
     */
@@ -382,7 +359,6 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Sets the enhancedBiometricsState
-    * Not yet documented Possible values are: notConfigured, enabled, disabled.
     *
     * @param Enablement $val The enhancedBiometricsState
     *

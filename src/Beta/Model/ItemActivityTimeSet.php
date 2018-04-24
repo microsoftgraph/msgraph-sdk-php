@@ -27,6 +27,37 @@ class ItemActivityTimeSet extends Entity
 {
 
     /**
+    * Gets the lastRecordedDateTime
+    *
+    * @return \DateTime The lastRecordedDateTime
+    */
+    public function getLastRecordedDateTime()
+    {
+        if (array_key_exists("lastRecordedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastRecordedDateTime"], "Microsoft\Graph\Beta\Model\\DateTime")) {
+                return $this->_propDict["lastRecordedDateTime"];
+            } else {
+                $this->_propDict["lastRecordedDateTime"] = new \DateTime($this->_propDict["lastRecordedDateTime"]);
+                return $this->_propDict["lastRecordedDateTime"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the lastRecordedDateTime
+    *
+    * @param \DateTime $val The value to assign to the lastRecordedDateTime
+    *
+    * @return ItemActivityTimeSet The ItemActivityTimeSet
+    */
+    public function setLastRecordedDateTime($val)
+    {
+        $this->_propDict["lastRecordedDateTime"] = $val;
+         return $this;
+    }
+
+    /**
     * Gets the observedDateTime
     *
     * @return \DateTime The observedDateTime

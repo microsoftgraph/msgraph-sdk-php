@@ -39,4 +39,5 @@ class AppleVpnConnectionType extends Enum
     const CUSTOM_VPN = "customVpn";
     const CISCO_IP_SEC = "ciscoIPSec";
     const CITRIX = "citrix";
+    const CISCO_ANY_CONNECT_V2 = "ciscoAnyConnectV2";
 }

@@ -27,7 +27,6 @@ class DefaultColumnValue extends Entity
 {
     /**
     * Gets the formula
-    * The formula used to compute the default value for this column.
     *
     * @return string The formula
     */
@@ -42,7 +41,6 @@ class DefaultColumnValue extends Entity
 
     /**
     * Sets the formula
-    * The formula used to compute the default value for this column.
     *
     * @param string $val The value of the formula
     *
@@ -55,7 +53,6 @@ class DefaultColumnValue extends Entity
     }
     /**
     * Gets the value
-    * The direct value to use as the default value for this column.
     *
     * @return string The value
     */
@@ -70,7 +67,6 @@ class DefaultColumnValue extends Entity
 
     /**
     * Sets the value
-    * The direct value to use as the default value for this column.
     *
     * @param string $val The value of the value
     *

@@ -27,7 +27,6 @@ class DeviceEnrollmentPlatformRestriction extends Entity
 {
     /**
     * Gets the platformBlocked
-    * Block the platform from enrolling
     *
     * @return bool The platformBlocked
     */
@@ -42,7 +41,6 @@ class DeviceEnrollmentPlatformRestriction extends Entity
 
     /**
     * Sets the platformBlocked
-    * Block the platform from enrolling
     *
     * @param bool $val The value of the platformBlocked
     *
@@ -55,7 +53,6 @@ class DeviceEnrollmentPlatformRestriction extends Entity
     }
     /**
     * Gets the personalDeviceEnrollmentBlocked
-    * Block personally owned devices from enrolling
     *
     * @return bool The personalDeviceEnrollmentBlocked
     */
@@ -70,7 +67,6 @@ class DeviceEnrollmentPlatformRestriction extends Entity
 
     /**
     * Sets the personalDeviceEnrollmentBlocked
-    * Block personally owned devices from enrolling
     *
     * @param bool $val The value of the personalDeviceEnrollmentBlocked
     *
@@ -83,7 +79,6 @@ class DeviceEnrollmentPlatformRestriction extends Entity
     }
     /**
     * Gets the osMinimumVersion
-    * Min OS version supported
     *
     * @return string The osMinimumVersion
     */
@@ -98,7 +93,6 @@ class DeviceEnrollmentPlatformRestriction extends Entity
 
     /**
     * Sets the osMinimumVersion
-    * Min OS version supported
     *
     * @param string $val The value of the osMinimumVersion
     *
@@ -111,7 +105,6 @@ class DeviceEnrollmentPlatformRestriction extends Entity
     }
     /**
     * Gets the osMaximumVersion
-    * Max OS version supported
     *
     * @return string The osMaximumVersion
     */
@@ -126,7 +119,6 @@ class DeviceEnrollmentPlatformRestriction extends Entity
 
     /**
     * Sets the osMaximumVersion
-    * Max OS version supported
     *
     * @param string $val The value of the osMaximumVersion
     *

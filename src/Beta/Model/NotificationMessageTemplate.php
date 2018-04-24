@@ -28,7 +28,6 @@ class NotificationMessageTemplate extends Entity
 {
     /**
     * Gets the lastModifiedDateTime
-    * DateTime the object was last modified.
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -47,7 +46,6 @@ class NotificationMessageTemplate extends Entity
     
     /**
     * Sets the lastModifiedDateTime
-    * DateTime the object was last modified.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -61,7 +59,6 @@ class NotificationMessageTemplate extends Entity
     
     /**
     * Gets the displayName
-    * Display name for the Notification Message Template.
     *
     * @return string The displayName
     */
@@ -76,7 +73,6 @@ class NotificationMessageTemplate extends Entity
     
     /**
     * Sets the displayName
-    * Display name for the Notification Message Template.
     *
     * @param string $val The displayName
     *
@@ -90,7 +86,6 @@ class NotificationMessageTemplate extends Entity
     
     /**
     * Gets the defaultLocale
-    * The default locale to fallback onto when the requested locale is not available.
     *
     * @return string The defaultLocale
     */
@@ -105,7 +100,6 @@ class NotificationMessageTemplate extends Entity
     
     /**
     * Sets the defaultLocale
-    * The default locale to fallback onto when the requested locale is not available.
     *
     * @param string $val The defaultLocale
     *
@@ -119,7 +113,6 @@ class NotificationMessageTemplate extends Entity
     
     /**
     * Gets the brandingOptions
-    * The Message Template Branding Options. Branding is defined in the Intune Admin Console. Possible values are: none, includeCompanyLogo, includeCompanyName, includeContactInformation.
     *
     * @return NotificationTemplateBrandingOptions The brandingOptions
     */
@@ -138,7 +131,6 @@ class NotificationMessageTemplate extends Entity
     
     /**
     * Sets the brandingOptions
-    * The Message Template Branding Options. Branding is defined in the Intune Admin Console. Possible values are: none, includeCompanyLogo, includeCompanyName, includeContactInformation.
     *
     * @param NotificationTemplateBrandingOptions $val The brandingOptions
     *
@@ -153,7 +145,6 @@ class NotificationMessageTemplate extends Entity
 
      /** 
      * Gets the localizedNotificationMessages
-    * The list of localized messages for this Notification Message Template.
      *
      * @return array The localizedNotificationMessages
      */
@@ -168,7 +159,6 @@ class NotificationMessageTemplate extends Entity
     
     /** 
     * Sets the localizedNotificationMessages
-    * The list of localized messages for this Notification Message Template.
     *
     * @param LocalizedNotificationMessage $val The localizedNotificationMessages
     *

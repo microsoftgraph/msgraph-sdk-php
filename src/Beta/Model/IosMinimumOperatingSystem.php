@@ -27,7 +27,6 @@ class IosMinimumOperatingSystem extends Entity
 {
     /**
     * Gets the v8_0
-    * Version 8.0 or later.
     *
     * @return bool The v8_0
     */
@@ -42,7 +41,6 @@ class IosMinimumOperatingSystem extends Entity
 
     /**
     * Sets the v8_0
-    * Version 8.0 or later.
     *
     * @param bool $val The value of the v8_0
     *
@@ -55,7 +53,6 @@ class IosMinimumOperatingSystem extends Entity
     }
     /**
     * Gets the v9_0
-    * Version 9.0 or later.
     *
     * @return bool The v9_0
     */
@@ -70,7 +67,6 @@ class IosMinimumOperatingSystem extends Entity
 
     /**
     * Sets the v9_0
-    * Version 9.0 or later.
     *
     * @param bool $val The value of the v9_0
     *
@@ -83,7 +79,6 @@ class IosMinimumOperatingSystem extends Entity
     }
     /**
     * Gets the v10_0
-    * Version 10.0 or later.
     *
     * @return bool The v10_0
     */
@@ -98,7 +93,6 @@ class IosMinimumOperatingSystem extends Entity
 
     /**
     * Sets the v10_0
-    * Version 10.0 or later.
     *
     * @param bool $val The value of the v10_0
     *
@@ -111,7 +105,6 @@ class IosMinimumOperatingSystem extends Entity
     }
     /**
     * Gets the v11_0
-    * Version 11.0 or later.
     *
     * @return bool The v11_0
     */
@@ -126,7 +119,6 @@ class IosMinimumOperatingSystem extends Entity
 
     /**
     * Sets the v11_0
-    * Version 11.0 or later.
     *
     * @param bool $val The value of the v11_0
     *

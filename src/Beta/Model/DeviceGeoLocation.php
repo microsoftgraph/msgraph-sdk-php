@@ -59,7 +59,6 @@ class DeviceGeoLocation extends Entity
 
     /**
     * Gets the lastCollectedDateTime
-    * Time at which location was recorded, relative to UTC
     *
     * @return \DateTime The lastCollectedDateTime
     */
@@ -78,7 +77,6 @@ class DeviceGeoLocation extends Entity
 
     /**
     * Sets the lastCollectedDateTime
-    * Time at which location was recorded, relative to UTC
     *
     * @param \DateTime $val The value to assign to the lastCollectedDateTime
     *
@@ -91,7 +89,6 @@ class DeviceGeoLocation extends Entity
     }
     /**
     * Gets the longitude
-    * Longitude coordinate of the device's location
     *
     * @return float The longitude
     */
@@ -106,7 +103,6 @@ class DeviceGeoLocation extends Entity
 
     /**
     * Sets the longitude
-    * Longitude coordinate of the device's location
     *
     * @param float $val The value of the longitude
     *
@@ -119,7 +115,6 @@ class DeviceGeoLocation extends Entity
     }
     /**
     * Gets the latitude
-    * Latitude coordinate of the device's location
     *
     * @return float The latitude
     */
@@ -134,7 +129,6 @@ class DeviceGeoLocation extends Entity
 
     /**
     * Sets the latitude
-    * Latitude coordinate of the device's location
     *
     * @param float $val The value of the latitude
     *
@@ -147,7 +141,6 @@ class DeviceGeoLocation extends Entity
     }
     /**
     * Gets the altitude
-    * Altitude, given in meters above sea level
     *
     * @return float The altitude
     */
@@ -162,7 +155,6 @@ class DeviceGeoLocation extends Entity
 
     /**
     * Sets the altitude
-    * Altitude, given in meters above sea level
     *
     * @param float $val The value of the altitude
     *
@@ -175,7 +167,6 @@ class DeviceGeoLocation extends Entity
     }
     /**
     * Gets the horizontalAccuracy
-    * Accuracy of longitude and latitude in meters
     *
     * @return float The horizontalAccuracy
     */
@@ -190,7 +181,6 @@ class DeviceGeoLocation extends Entity
 
     /**
     * Sets the horizontalAccuracy
-    * Accuracy of longitude and latitude in meters
     *
     * @param float $val The value of the horizontalAccuracy
     *
@@ -203,7 +193,6 @@ class DeviceGeoLocation extends Entity
     }
     /**
     * Gets the verticalAccuracy
-    * Accuracy of altitude in meters
     *
     * @return float The verticalAccuracy
     */
@@ -218,7 +207,6 @@ class DeviceGeoLocation extends Entity
 
     /**
     * Sets the verticalAccuracy
-    * Accuracy of altitude in meters
     *
     * @param float $val The value of the verticalAccuracy
     *
@@ -231,7 +219,6 @@ class DeviceGeoLocation extends Entity
     }
     /**
     * Gets the heading
-    * Heading in degrees from true north
     *
     * @return float The heading
     */
@@ -246,7 +233,6 @@ class DeviceGeoLocation extends Entity
 
     /**
     * Sets the heading
-    * Heading in degrees from true north
     *
     * @param float $val The value of the heading
     *
@@ -259,7 +245,6 @@ class DeviceGeoLocation extends Entity
     }
     /**
     * Gets the speed
-    * Speed the device is traveling in meters per second
     *
     * @return float The speed
     */
@@ -274,7 +259,6 @@ class DeviceGeoLocation extends Entity
 
     /**
     * Sets the speed
-    * Speed the device is traveling in meters per second
     *
     * @param float $val The value of the speed
     *

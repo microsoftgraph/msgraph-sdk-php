@@ -84,7 +84,6 @@ class PhysicalAddress extends Entity
     }
     /**
     * Gets the street
-    * The street.
     *
     * @return string The street
     */
@@ -99,7 +98,6 @@ class PhysicalAddress extends Entity
 
     /**
     * Sets the street
-    * The street.
     *
     * @param string $val The value of the street
     *
@@ -112,7 +110,6 @@ class PhysicalAddress extends Entity
     }
     /**
     * Gets the city
-    * The city.
     *
     * @return string The city
     */
@@ -127,7 +124,6 @@ class PhysicalAddress extends Entity
 
     /**
     * Sets the city
-    * The city.
     *
     * @param string $val The value of the city
     *
@@ -140,7 +136,6 @@ class PhysicalAddress extends Entity
     }
     /**
     * Gets the state
-    * The state.
     *
     * @return string The state
     */
@@ -155,7 +150,6 @@ class PhysicalAddress extends Entity
 
     /**
     * Sets the state
-    * The state.
     *
     * @param string $val The value of the state
     *
@@ -168,7 +162,6 @@ class PhysicalAddress extends Entity
     }
     /**
     * Gets the countryOrRegion
-    * The country or region. It's a free-format string value, for example, "United States".
     *
     * @return string The countryOrRegion
     */
@@ -183,7 +176,6 @@ class PhysicalAddress extends Entity
 
     /**
     * Sets the countryOrRegion
-    * The country or region. It's a free-format string value, for example, "United States".
     *
     * @param string $val The value of the countryOrRegion
     *
@@ -196,7 +188,6 @@ class PhysicalAddress extends Entity
     }
     /**
     * Gets the postalCode
-    * The postal code.
     *
     * @return string The postalCode
     */
@@ -211,7 +202,6 @@ class PhysicalAddress extends Entity
 
     /**
     * Sets the postalCode
-    * The postal code.
     *
     * @param string $val The value of the postalCode
     *

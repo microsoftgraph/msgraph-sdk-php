@@ -28,7 +28,6 @@ class SubscribedSku extends Entity
 {
     /**
     * Gets the capabilityStatus
-    * For example, "Enabled".
     *
     * @return string The capabilityStatus
     */
@@ -43,7 +42,6 @@ class SubscribedSku extends Entity
     
     /**
     * Sets the capabilityStatus
-    * For example, "Enabled".
     *
     * @param string $val The capabilityStatus
     *
@@ -57,7 +55,6 @@ class SubscribedSku extends Entity
     
     /**
     * Gets the consumedUnits
-    * The number of licenses that have been assigned.
     *
     * @return int The consumedUnits
     */
@@ -72,7 +69,6 @@ class SubscribedSku extends Entity
     
     /**
     * Sets the consumedUnits
-    * The number of licenses that have been assigned.
     *
     * @param int $val The consumedUnits
     *
@@ -86,7 +82,6 @@ class SubscribedSku extends Entity
     
     /**
     * Gets the prepaidUnits
-    * Information about the number and status of prepaid licenses.
     *
     * @return LicenseUnitsDetail The prepaidUnits
     */
@@ -105,7 +100,6 @@ class SubscribedSku extends Entity
     
     /**
     * Sets the prepaidUnits
-    * Information about the number and status of prepaid licenses.
     *
     * @param LicenseUnitsDetail $val The prepaidUnits
     *
@@ -120,7 +114,6 @@ class SubscribedSku extends Entity
 
      /** 
      * Gets the servicePlans
-    * Information about the service plans that are available with the SKU. Not nullable
      *
      * @return array The servicePlans
      */
@@ -135,7 +128,6 @@ class SubscribedSku extends Entity
     
     /** 
     * Sets the servicePlans
-    * Information about the service plans that are available with the SKU. Not nullable
     *
     * @param ServicePlanInfo $val The servicePlans
     *
@@ -149,7 +141,6 @@ class SubscribedSku extends Entity
     
     /**
     * Gets the skuId
-    * The unique identifier (GUID) for the service SKU.
     *
     * @return string The skuId
     */
@@ -164,7 +155,6 @@ class SubscribedSku extends Entity
     
     /**
     * Sets the skuId
-    * The unique identifier (GUID) for the service SKU.
     *
     * @param string $val The skuId
     *
@@ -178,7 +168,6 @@ class SubscribedSku extends Entity
     
     /**
     * Gets the skuPartNumber
-    * The SKU part number; for example: "AAD_PREMIUM" or "RMSBASIC".
     *
     * @return string The skuPartNumber
     */
@@ -193,7 +182,6 @@ class SubscribedSku extends Entity
     
     /**
     * Sets the skuPartNumber
-    * The SKU part number; for example: "AAD_PREMIUM" or "RMSBASIC".
     *
     * @param string $val The skuPartNumber
     *
@@ -207,7 +195,6 @@ class SubscribedSku extends Entity
     
     /**
     * Gets the appliesTo
-    * For example, "User" or "Company".
     *
     * @return string The appliesTo
     */
@@ -222,7 +209,6 @@ class SubscribedSku extends Entity
     
     /**
     * Sets the appliesTo
-    * For example, "User" or "Company".
     *
     * @param string $val The appliesTo
     *

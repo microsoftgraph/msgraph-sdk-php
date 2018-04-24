@@ -27,7 +27,6 @@ class KeyValuePair extends Entity
 {
     /**
     * Gets the name
-    * Name for this key-value pair
     *
     * @return string The name
     */
@@ -42,7 +41,6 @@ class KeyValuePair extends Entity
 
     /**
     * Sets the name
-    * Name for this key-value pair
     *
     * @param string $val The value of the name
     *
@@ -55,7 +53,6 @@ class KeyValuePair extends Entity
     }
     /**
     * Gets the value
-    * Value for this key-value pair
     *
     * @return string The value
     */
@@ -70,7 +67,6 @@ class KeyValuePair extends Entity
 
     /**
     * Sets the value
-    * Value for this key-value pair
     *
     * @param string $val The value of the value
     *

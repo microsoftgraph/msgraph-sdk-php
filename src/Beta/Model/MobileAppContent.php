@@ -29,7 +29,6 @@ class MobileAppContent extends Entity
 
      /** 
      * Gets the files
-    * The list of files for this app content version.
      *
      * @return array The files
      */
@@ -44,7 +43,6 @@ class MobileAppContent extends Entity
     
     /** 
     * Sets the files
-    * The list of files for this app content version.
     *
     * @param MobileAppContentFile $val The files
     *
@@ -53,6 +51,34 @@ class MobileAppContent extends Entity
     public function setFiles($val)
     {
 		$this->_propDict["files"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the containedApps
+     *
+     * @return array The containedApps
+     */
+    public function getContainedApps()
+    {
+        if (array_key_exists("containedApps", $this->_propDict)) {
+           return $this->_propDict["containedApps"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the containedApps
+    *
+    * @param MobileContainedApp $val The containedApps
+    *
+    * @return MobileAppContent
+    */
+    public function setContainedApps($val)
+    {
+		$this->_propDict["containedApps"] = $val;
         return $this;
     }
     

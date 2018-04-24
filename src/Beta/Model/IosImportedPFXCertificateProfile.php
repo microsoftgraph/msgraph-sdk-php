@@ -26,4 +26,35 @@ namespace Microsoft\Graph\Beta\Model;
 */
 class IosImportedPFXCertificateProfile extends IosCertificateProfile
 {
+    /**
+    * Gets the intendedPurpose
+    *
+    * @return IntendedPurpose The intendedPurpose
+    */
+    public function getIntendedPurpose()
+    {
+        if (array_key_exists("intendedPurpose", $this->_propDict)) {
+            if (is_a($this->_propDict["intendedPurpose"], "Microsoft\Graph\Beta\Model\IntendedPurpose")) {
+                return $this->_propDict["intendedPurpose"];
+            } else {
+                $this->_propDict["intendedPurpose"] = new IntendedPurpose($this->_propDict["intendedPurpose"]);
+                return $this->_propDict["intendedPurpose"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the intendedPurpose
+    *
+    * @param IntendedPurpose $val The intendedPurpose
+    *
+    * @return IosImportedPFXCertificateProfile
+    */
+    public function setIntendedPurpose($val)
+    {
+        $this->_propDict["intendedPurpose"] = $val;
+        return $this;
+    }
+    
 }

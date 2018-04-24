@@ -28,7 +28,6 @@ class DefaultManagedAppProtection extends ManagedAppProtection
 {
     /**
     * Gets the appDataEncryptionType
-    * Type of encryption which should be used for data in a managed app. (iOS Only) Possible values are: useDeviceSettings, afterDeviceRestart, whenDeviceLockedExceptOpenFiles, whenDeviceLocked.
     *
     * @return ManagedAppDataEncryptionType The appDataEncryptionType
     */
@@ -47,7 +46,6 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Sets the appDataEncryptionType
-    * Type of encryption which should be used for data in a managed app. (iOS Only) Possible values are: useDeviceSettings, afterDeviceRestart, whenDeviceLockedExceptOpenFiles, whenDeviceLocked.
     *
     * @param ManagedAppDataEncryptionType $val The appDataEncryptionType
     *
@@ -61,7 +59,6 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Gets the screenCaptureBlocked
-    * Indicates whether screen capture is blocked.
     *
     * @return bool The screenCaptureBlocked
     */
@@ -76,7 +73,6 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Sets the screenCaptureBlocked
-    * Indicates whether screen capture is blocked.
     *
     * @param bool $val The screenCaptureBlocked
     *
@@ -90,7 +86,6 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Gets the encryptAppData
-    * Indicates whether managed-app data should be encrypted. (Android only)
     *
     * @return bool The encryptAppData
     */
@@ -105,7 +100,6 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Sets the encryptAppData
-    * Indicates whether managed-app data should be encrypted. (Android only)
     *
     * @param bool $val The encryptAppData
     *
@@ -119,7 +113,6 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Gets the disableAppEncryptionIfDeviceEncryptionIsEnabled
-    * When this setting is enabled, app level encryption is disabled if device level encryption is enabled
     *
     * @return bool The disableAppEncryptionIfDeviceEncryptionIsEnabled
     */
@@ -134,7 +127,6 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Sets the disableAppEncryptionIfDeviceEncryptionIsEnabled
-    * When this setting is enabled, app level encryption is disabled if device level encryption is enabled
     *
     * @param bool $val The disableAppEncryptionIfDeviceEncryptionIsEnabled
     *
@@ -148,7 +140,6 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Gets the minimumRequiredSdkVersion
-    * Versions less than the specified version will block the managed app from accessing company data.
     *
     * @return string The minimumRequiredSdkVersion
     */
@@ -163,7 +154,6 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Sets the minimumRequiredSdkVersion
-    * Versions less than the specified version will block the managed app from accessing company data.
     *
     * @param string $val The minimumRequiredSdkVersion
     *
@@ -178,7 +168,6 @@ class DefaultManagedAppProtection extends ManagedAppProtection
 
      /** 
      * Gets the customSettings
-    * A set of string key and string value pairs to be sent to the affected users, unalterned by this service
      *
      * @return array The customSettings
      */
@@ -193,7 +182,6 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /** 
     * Sets the customSettings
-    * A set of string key and string value pairs to be sent to the affected users, unalterned by this service
     *
     * @param KeyValuePair $val The customSettings
     *
@@ -207,7 +195,6 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Gets the deployedAppCount
-    * Count of apps to which the current policy is deployed.
     *
     * @return int The deployedAppCount
     */
@@ -222,7 +209,6 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Sets the deployedAppCount
-    * Count of apps to which the current policy is deployed.
     *
     * @param int $val The deployedAppCount
     *
@@ -236,7 +222,6 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Gets the minimumRequiredPatchVersion
-    * Define the oldest required Android security patch level a user can have to gain secure access to the app.
     *
     * @return string The minimumRequiredPatchVersion
     */
@@ -251,7 +236,6 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Sets the minimumRequiredPatchVersion
-    * Define the oldest required Android security patch level a user can have to gain secure access to the app.
     *
     * @param string $val The minimumRequiredPatchVersion
     *
@@ -265,7 +249,6 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Gets the minimumWarningPatchVersion
-    * Define the oldest recommended Android security patch level a user can have for secure access to the app.
     *
     * @return string The minimumWarningPatchVersion
     */
@@ -280,7 +263,6 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Sets the minimumWarningPatchVersion
-    * Define the oldest recommended Android security patch level a user can have for secure access to the app.
     *
     * @param string $val The minimumWarningPatchVersion
     *
@@ -350,7 +332,6 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Gets the faceIdBlocked
-    * Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True.
     *
     * @return bool The faceIdBlocked
     */
@@ -365,7 +346,6 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Sets the faceIdBlocked
-    * Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True.
     *
     * @param bool $val The faceIdBlocked
     *
@@ -380,7 +360,6 @@ class DefaultManagedAppProtection extends ManagedAppProtection
 
      /** 
      * Gets the apps
-    * List of apps to which the policy is deployed.
      *
      * @return array The apps
      */
@@ -395,7 +374,6 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /** 
     * Sets the apps
-    * List of apps to which the policy is deployed.
     *
     * @param ManagedMobileApp $val The apps
     *
@@ -409,7 +387,6 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Gets the deploymentSummary
-    * Navigation property to deployment summary of the configuration.
     *
     * @return ManagedAppPolicyDeploymentSummary The deploymentSummary
     */
@@ -428,7 +405,6 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Sets the deploymentSummary
-    * Navigation property to deployment summary of the configuration.
     *
     * @param ManagedAppPolicyDeploymentSummary $val The deploymentSummary
     *

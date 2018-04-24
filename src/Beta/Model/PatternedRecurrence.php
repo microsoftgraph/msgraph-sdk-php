@@ -28,7 +28,6 @@ class PatternedRecurrence extends Entity
 
     /**
     * Gets the pattern
-    * The frequency of an event.
     *
     * @return RecurrencePattern The pattern
     */
@@ -47,7 +46,6 @@ class PatternedRecurrence extends Entity
 
     /**
     * Sets the pattern
-    * The frequency of an event.
     *
     * @param RecurrencePattern $val The value to assign to the pattern
     *
@@ -61,7 +59,6 @@ class PatternedRecurrence extends Entity
 
     /**
     * Gets the range
-    * The duration of an event.
     *
     * @return RecurrenceRange The range
     */
@@ -80,7 +77,6 @@ class PatternedRecurrence extends Entity
 
     /**
     * Sets the range
-    * The duration of an event.
     *
     * @param RecurrenceRange $val The value to assign to the range
     *

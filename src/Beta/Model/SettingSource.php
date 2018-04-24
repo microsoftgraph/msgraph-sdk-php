@@ -27,7 +27,6 @@ class SettingSource extends Entity
 {
     /**
     * Gets the id
-    * Not yet documented
     *
     * @return string The id
     */
@@ -42,7 +41,6 @@ class SettingSource extends Entity
 
     /**
     * Sets the id
-    * Not yet documented
     *
     * @param string $val The value of the id
     *
@@ -55,7 +53,6 @@ class SettingSource extends Entity
     }
     /**
     * Gets the displayName
-    * Not yet documented
     *
     * @return string The displayName
     */
@@ -70,7 +67,6 @@ class SettingSource extends Entity
 
     /**
     * Sets the displayName
-    * Not yet documented
     *
     * @param string $val The value of the displayName
     *

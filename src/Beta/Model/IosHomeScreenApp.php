@@ -27,7 +27,6 @@ class IosHomeScreenApp extends IosHomeScreenItem
 {
     /**
     * Gets the bundleID
-    * BundleID of app
     *
     * @return string The bundleID
     */
@@ -42,7 +41,6 @@ class IosHomeScreenApp extends IosHomeScreenItem
 
     /**
     * Sets the bundleID
-    * BundleID of app
     *
     * @param string $val The value of the bundleID
     *

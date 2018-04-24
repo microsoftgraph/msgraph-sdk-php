@@ -27,7 +27,6 @@ class IosHomeScreenPage extends Entity
 {
     /**
     * Gets the displayName
-    * Name of the page
     *
     * @return string The displayName
     */
@@ -42,7 +41,6 @@ class IosHomeScreenPage extends Entity
 
     /**
     * Sets the displayName
-    * Name of the page
     *
     * @param string $val The value of the displayName
     *
@@ -56,7 +54,6 @@ class IosHomeScreenPage extends Entity
 
     /**
     * Gets the icons
-    * A list of apps and folders to appear on a page. This collection can contain a maximum of 500 elements.
     *
     * @return IosHomeScreenItem The icons
     */
@@ -75,7 +72,6 @@ class IosHomeScreenPage extends Entity
 
     /**
     * Sets the icons
-    * A list of apps and folders to appear on a page. This collection can contain a maximum of 500 elements.
     *
     * @param IosHomeScreenItem $val The value to assign to the icons
     *

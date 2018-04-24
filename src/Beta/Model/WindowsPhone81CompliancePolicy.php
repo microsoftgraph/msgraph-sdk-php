@@ -28,7 +28,6 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
 {
     /**
     * Gets the passwordBlockSimple
-    * Whether or not to block syncing the calendar.
     *
     * @return bool The passwordBlockSimple
     */
@@ -43,7 +42,6 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passwordBlockSimple
-    * Whether or not to block syncing the calendar.
     *
     * @param bool $val The passwordBlockSimple
     *
@@ -57,7 +55,6 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the passwordExpirationDays
-    * Number of days before the password expires.
     *
     * @return int The passwordExpirationDays
     */
@@ -72,7 +69,6 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passwordExpirationDays
-    * Number of days before the password expires.
     *
     * @param int $val The passwordExpirationDays
     *
@@ -86,7 +82,6 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the passwordMinimumLength
-    * Minimum length of passwords.
     *
     * @return int The passwordMinimumLength
     */
@@ -101,7 +96,6 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passwordMinimumLength
-    * Minimum length of passwords.
     *
     * @param int $val The passwordMinimumLength
     *
@@ -115,7 +109,6 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the passwordMinutesOfInactivityBeforeLock
-    * Minutes of inactivity before a password is required.
     *
     * @return int The passwordMinutesOfInactivityBeforeLock
     */
@@ -130,7 +123,6 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passwordMinutesOfInactivityBeforeLock
-    * Minutes of inactivity before a password is required.
     *
     * @param int $val The passwordMinutesOfInactivityBeforeLock
     *
@@ -144,7 +136,6 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the passwordMinimumCharacterSetCount
-    * The number of character sets required in the password.
     *
     * @return int The passwordMinimumCharacterSetCount
     */
@@ -159,7 +150,6 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passwordMinimumCharacterSetCount
-    * The number of character sets required in the password.
     *
     * @param int $val The passwordMinimumCharacterSetCount
     *
@@ -173,7 +163,6 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the passwordRequiredType
-    * The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
     *
     * @return RequiredPasswordType The passwordRequiredType
     */
@@ -192,7 +181,6 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passwordRequiredType
-    * The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
     *
     * @param RequiredPasswordType $val The passwordRequiredType
     *
@@ -206,7 +194,6 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the passwordPreviousPasswordBlockCount
-    * Number of previous passwords to block. Valid values 0 to 24
     *
     * @return int The passwordPreviousPasswordBlockCount
     */
@@ -221,7 +208,6 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passwordPreviousPasswordBlockCount
-    * Number of previous passwords to block. Valid values 0 to 24
     *
     * @param int $val The passwordPreviousPasswordBlockCount
     *
@@ -235,7 +221,6 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the passwordRequired
-    * Whether or not to require a password.
     *
     * @return bool The passwordRequired
     */
@@ -250,7 +235,6 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passwordRequired
-    * Whether or not to require a password.
     *
     * @param bool $val The passwordRequired
     *
@@ -264,7 +248,6 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the osMinimumVersion
-    * Minimum Windows Phone version.
     *
     * @return string The osMinimumVersion
     */
@@ -279,7 +262,6 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the osMinimumVersion
-    * Minimum Windows Phone version.
     *
     * @param string $val The osMinimumVersion
     *
@@ -293,7 +275,6 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the osMaximumVersion
-    * Maximum Windows Phone version.
     *
     * @return string The osMaximumVersion
     */
@@ -308,7 +289,6 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the osMaximumVersion
-    * Maximum Windows Phone version.
     *
     * @param string $val The osMaximumVersion
     *
@@ -322,7 +302,6 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the storageRequireEncryption
-    * Require encryption on windows phone devices.
     *
     * @return bool The storageRequireEncryption
     */
@@ -337,7 +316,6 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the storageRequireEncryption
-    * Require encryption on windows phone devices.
     *
     * @param bool $val The storageRequireEncryption
     *

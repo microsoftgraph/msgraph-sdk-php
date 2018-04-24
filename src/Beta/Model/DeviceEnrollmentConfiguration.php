@@ -28,7 +28,6 @@ class DeviceEnrollmentConfiguration extends Entity
 {
     /**
     * Gets the displayName
-    * Not yet documented
     *
     * @return string The displayName
     */
@@ -43,7 +42,6 @@ class DeviceEnrollmentConfiguration extends Entity
     
     /**
     * Sets the displayName
-    * Not yet documented
     *
     * @param string $val The displayName
     *
@@ -57,7 +55,6 @@ class DeviceEnrollmentConfiguration extends Entity
     
     /**
     * Gets the description
-    * Not yet documented
     *
     * @return string The description
     */
@@ -72,7 +69,6 @@ class DeviceEnrollmentConfiguration extends Entity
     
     /**
     * Sets the description
-    * Not yet documented
     *
     * @param string $val The description
     *
@@ -86,7 +82,6 @@ class DeviceEnrollmentConfiguration extends Entity
     
     /**
     * Gets the priority
-    * Not yet documented
     *
     * @return int The priority
     */
@@ -101,7 +96,6 @@ class DeviceEnrollmentConfiguration extends Entity
     
     /**
     * Sets the priority
-    * Not yet documented
     *
     * @param int $val The priority
     *
@@ -115,7 +109,6 @@ class DeviceEnrollmentConfiguration extends Entity
     
     /**
     * Gets the createdDateTime
-    * Not yet documented
     *
     * @return \DateTime The createdDateTime
     */
@@ -134,7 +127,6 @@ class DeviceEnrollmentConfiguration extends Entity
     
     /**
     * Sets the createdDateTime
-    * Not yet documented
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -148,7 +140,6 @@ class DeviceEnrollmentConfiguration extends Entity
     
     /**
     * Gets the lastModifiedDateTime
-    * Not yet documented
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -167,7 +158,6 @@ class DeviceEnrollmentConfiguration extends Entity
     
     /**
     * Sets the lastModifiedDateTime
-    * Not yet documented
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -181,7 +171,6 @@ class DeviceEnrollmentConfiguration extends Entity
     
     /**
     * Gets the version
-    * Not yet documented
     *
     * @return int The version
     */
@@ -196,7 +185,6 @@ class DeviceEnrollmentConfiguration extends Entity
     
     /**
     * Sets the version
-    * Not yet documented
     *
     * @param int $val The version
     *
@@ -211,7 +199,6 @@ class DeviceEnrollmentConfiguration extends Entity
 
      /** 
      * Gets the assignments
-    * The list of group assignments for the device configuration profile.
      *
      * @return array The assignments
      */
@@ -226,7 +213,6 @@ class DeviceEnrollmentConfiguration extends Entity
     
     /** 
     * Sets the assignments
-    * The list of group assignments for the device configuration profile.
     *
     * @param EnrollmentConfigurationAssignment $val The assignments
     *

@@ -27,7 +27,6 @@ class WindowsInformationProtectionDesktopApp extends WindowsInformationProtectio
 {
     /**
     * Gets the binaryName
-    * The binary name.
     *
     * @return string The binaryName
     */
@@ -42,7 +41,6 @@ class WindowsInformationProtectionDesktopApp extends WindowsInformationProtectio
 
     /**
     * Sets the binaryName
-    * The binary name.
     *
     * @param string $val The value of the binaryName
     *
@@ -55,7 +53,6 @@ class WindowsInformationProtectionDesktopApp extends WindowsInformationProtectio
     }
     /**
     * Gets the binaryVersionLow
-    * The lower binary version.
     *
     * @return string The binaryVersionLow
     */
@@ -70,7 +67,6 @@ class WindowsInformationProtectionDesktopApp extends WindowsInformationProtectio
 
     /**
     * Sets the binaryVersionLow
-    * The lower binary version.
     *
     * @param string $val The value of the binaryVersionLow
     *
@@ -83,7 +79,6 @@ class WindowsInformationProtectionDesktopApp extends WindowsInformationProtectio
     }
     /**
     * Gets the binaryVersionHigh
-    * The high binary version.
     *
     * @return string The binaryVersionHigh
     */
@@ -98,7 +93,6 @@ class WindowsInformationProtectionDesktopApp extends WindowsInformationProtectio
 
     /**
     * Sets the binaryVersionHigh
-    * The high binary version.
     *
     * @param string $val The value of the binaryVersionHigh
     *

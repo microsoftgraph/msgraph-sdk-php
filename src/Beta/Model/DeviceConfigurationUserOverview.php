@@ -28,7 +28,6 @@ class DeviceConfigurationUserOverview extends Entity
 {
     /**
     * Gets the pendingCount
-    * Number of pending Users
     *
     * @return int The pendingCount
     */
@@ -43,7 +42,6 @@ class DeviceConfigurationUserOverview extends Entity
     
     /**
     * Sets the pendingCount
-    * Number of pending Users
     *
     * @param int $val The pendingCount
     *
@@ -57,7 +55,6 @@ class DeviceConfigurationUserOverview extends Entity
     
     /**
     * Gets the notApplicableCount
-    * Number of not applicable devices
     *
     * @return int The notApplicableCount
     */
@@ -72,7 +69,6 @@ class DeviceConfigurationUserOverview extends Entity
     
     /**
     * Sets the notApplicableCount
-    * Number of not applicable devices
     *
     * @param int $val The notApplicableCount
     *
@@ -86,7 +82,6 @@ class DeviceConfigurationUserOverview extends Entity
     
     /**
     * Gets the successCount
-    * Number of succeeded Users
     *
     * @return int The successCount
     */
@@ -101,7 +96,6 @@ class DeviceConfigurationUserOverview extends Entity
     
     /**
     * Sets the successCount
-    * Number of succeeded Users
     *
     * @param int $val The successCount
     *
@@ -115,7 +109,6 @@ class DeviceConfigurationUserOverview extends Entity
     
     /**
     * Gets the errorCount
-    * Number of error Users
     *
     * @return int The errorCount
     */
@@ -130,7 +123,6 @@ class DeviceConfigurationUserOverview extends Entity
     
     /**
     * Sets the errorCount
-    * Number of error Users
     *
     * @param int $val The errorCount
     *
@@ -144,7 +136,6 @@ class DeviceConfigurationUserOverview extends Entity
     
     /**
     * Gets the failedCount
-    * Number of failed Users
     *
     * @return int The failedCount
     */
@@ -159,7 +150,6 @@ class DeviceConfigurationUserOverview extends Entity
     
     /**
     * Sets the failedCount
-    * Number of failed Users
     *
     * @param int $val The failedCount
     *
@@ -173,7 +163,6 @@ class DeviceConfigurationUserOverview extends Entity
     
     /**
     * Gets the lastUpdateDateTime
-    * Last update time
     *
     * @return \DateTime The lastUpdateDateTime
     */
@@ -192,7 +181,6 @@ class DeviceConfigurationUserOverview extends Entity
     
     /**
     * Sets the lastUpdateDateTime
-    * Last update time
     *
     * @param \DateTime $val The lastUpdateDateTime
     *
@@ -206,7 +194,6 @@ class DeviceConfigurationUserOverview extends Entity
     
     /**
     * Gets the configurationVersion
-    * Version of the policy for that overview
     *
     * @return int The configurationVersion
     */
@@ -221,7 +208,6 @@ class DeviceConfigurationUserOverview extends Entity
     
     /**
     * Sets the configurationVersion
-    * Version of the policy for that overview
     *
     * @param int $val The configurationVersion
     *

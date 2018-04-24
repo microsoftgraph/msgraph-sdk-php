@@ -54,8 +54,34 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
     }
     
     /**
+    * Gets the advancedThreatProtectionOnboardingFilename
+    *
+    * @return string The advancedThreatProtectionOnboardingFilename
+    */
+    public function getAdvancedThreatProtectionOnboardingFilename()
+    {
+        if (array_key_exists("advancedThreatProtectionOnboardingFilename", $this->_propDict)) {
+            return $this->_propDict["advancedThreatProtectionOnboardingFilename"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the advancedThreatProtectionOnboardingFilename
+    *
+    * @param string $val The advancedThreatProtectionOnboardingFilename
+    *
+    * @return WindowsDefenderAdvancedThreatProtectionConfiguration
+    */
+    public function setAdvancedThreatProtectionOnboardingFilename($val)
+    {
+        $this->_propDict["advancedThreatProtectionOnboardingFilename"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the allowSampleSharing
-    * Windows Defender AdvancedThreatProtection "Allow Sample Sharing" Rule
     *
     * @return bool The allowSampleSharing
     */
@@ -70,7 +96,6 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
     
     /**
     * Sets the allowSampleSharing
-    * Windows Defender AdvancedThreatProtection "Allow Sample Sharing" Rule
     *
     * @param bool $val The allowSampleSharing
     *
@@ -84,7 +109,6 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
     
     /**
     * Gets the enableExpeditedTelemetryReporting
-    * Expedite Windows Defender Advanced Threat Protection telemetry reporting frequency.
     *
     * @return bool The enableExpeditedTelemetryReporting
     */
@@ -99,7 +123,6 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
     
     /**
     * Sets the enableExpeditedTelemetryReporting
-    * Expedite Windows Defender Advanced Threat Protection telemetry reporting frequency.
     *
     * @param bool $val The enableExpeditedTelemetryReporting
     *
@@ -135,6 +158,33 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
     public function setAdvancedThreatProtectionOffboardingBlob($val)
     {
         $this->_propDict["advancedThreatProtectionOffboardingBlob"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the advancedThreatProtectionOffboardingFilename
+    *
+    * @return string The advancedThreatProtectionOffboardingFilename
+    */
+    public function getAdvancedThreatProtectionOffboardingFilename()
+    {
+        if (array_key_exists("advancedThreatProtectionOffboardingFilename", $this->_propDict)) {
+            return $this->_propDict["advancedThreatProtectionOffboardingFilename"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the advancedThreatProtectionOffboardingFilename
+    *
+    * @param string $val The advancedThreatProtectionOffboardingFilename
+    *
+    * @return WindowsDefenderAdvancedThreatProtectionConfiguration
+    */
+    public function setAdvancedThreatProtectionOffboardingFilename($val)
+    {
+        $this->_propDict["advancedThreatProtectionOffboardingFilename"] = $val;
         return $this;
     }
     

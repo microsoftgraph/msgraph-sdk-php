@@ -28,7 +28,6 @@ class UploadSession extends Entity
 
     /**
     * Gets the expirationDateTime
-    * The date and time in UTC that the upload session will expire. The complete file must be uploaded before this expiration time is reached.
     *
     * @return \DateTime The expirationDateTime
     */
@@ -47,7 +46,6 @@ class UploadSession extends Entity
 
     /**
     * Sets the expirationDateTime
-    * The date and time in UTC that the upload session will expire. The complete file must be uploaded before this expiration time is reached.
     *
     * @param \DateTime $val The value to assign to the expirationDateTime
     *
@@ -60,7 +58,6 @@ class UploadSession extends Entity
     }
     /**
     * Gets the nextExpectedRanges
-    * A collection of byte ranges that the server is missing for the file. These ranges are zero indexed and of the format "start-end" (e.g. "0-26" to indicate the first 27 bytes of the file).
     *
     * @return string The nextExpectedRanges
     */
@@ -75,7 +72,6 @@ class UploadSession extends Entity
 
     /**
     * Sets the nextExpectedRanges
-    * A collection of byte ranges that the server is missing for the file. These ranges are zero indexed and of the format "start-end" (e.g. "0-26" to indicate the first 27 bytes of the file).
     *
     * @param string $val The value of the nextExpectedRanges
     *
@@ -88,7 +84,6 @@ class UploadSession extends Entity
     }
     /**
     * Gets the uploadUrl
-    * The URL endpoint that accepts PUT requests for byte ranges of the file.
     *
     * @return string The uploadUrl
     */
@@ -103,7 +98,6 @@ class UploadSession extends Entity
 
     /**
     * Sets the uploadUrl
-    * The URL endpoint that accepts PUT requests for byte ranges of the file.
     *
     * @param string $val The value of the uploadUrl
     *

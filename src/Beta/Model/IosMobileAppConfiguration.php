@@ -53,6 +53,37 @@ class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfiguration
         return $this;
     }
     
+    /**
+    * Gets the encodedSettingXml
+    *
+    * @return \GuzzleHttp\Psr7\Stream The encodedSettingXml
+    */
+    public function getEncodedSettingXml()
+    {
+        if (array_key_exists("encodedSettingXml", $this->_propDict)) {
+            if (is_a($this->_propDict["encodedSettingXml"], "\GuzzleHttp\Psr7\Stream")) {
+                return $this->_propDict["encodedSettingXml"];
+            } else {
+                $this->_propDict["encodedSettingXml"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["encodedSettingXml"]);
+                return $this->_propDict["encodedSettingXml"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the encodedSettingXml
+    *
+    * @param \GuzzleHttp\Psr7\Stream $val The encodedSettingXml
+    *
+    * @return IosMobileAppConfiguration
+    */
+    public function setEncodedSettingXml($val)
+    {
+        $this->_propDict["encodedSettingXml"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the settings

@@ -28,7 +28,6 @@ class Event extends OutlookItem
 {
     /**
     * Gets the originalStartTimeZone
-    * The start time zone that was set when the event was created. A value of tzone://Microsoft/Custom indicates that a legacy custom time zone was set in desktop Outlook.
     *
     * @return string The originalStartTimeZone
     */
@@ -43,7 +42,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the originalStartTimeZone
-    * The start time zone that was set when the event was created. A value of tzone://Microsoft/Custom indicates that a legacy custom time zone was set in desktop Outlook.
     *
     * @param string $val The originalStartTimeZone
     *
@@ -57,7 +55,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the originalEndTimeZone
-    * The end time zone that was set when the event was created. A value of tzone://Microsoft/Customindicates that a legacy custom time zone was set in desktop Outlook.
     *
     * @return string The originalEndTimeZone
     */
@@ -72,7 +69,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the originalEndTimeZone
-    * The end time zone that was set when the event was created. A value of tzone://Microsoft/Customindicates that a legacy custom time zone was set in desktop Outlook.
     *
     * @param string $val The originalEndTimeZone
     *
@@ -86,7 +82,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the responseStatus
-    * Indicates the type of response sent in response to an event message.
     *
     * @return ResponseStatus The responseStatus
     */
@@ -105,7 +100,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the responseStatus
-    * Indicates the type of response sent in response to an event message.
     *
     * @param ResponseStatus $val The responseStatus
     *
@@ -119,7 +113,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the iCalUId
-    * A unique identifier that is shared by all instances of an event across different calendars.
     *
     * @return string The iCalUId
     */
@@ -134,7 +127,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the iCalUId
-    * A unique identifier that is shared by all instances of an event across different calendars.
     *
     * @param string $val The iCalUId
     *
@@ -148,7 +140,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the reminderMinutesBeforeStart
-    * The number of minutes before the event start time that the reminder alert occurs.
     *
     * @return int The reminderMinutesBeforeStart
     */
@@ -163,7 +154,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the reminderMinutesBeforeStart
-    * The number of minutes before the event start time that the reminder alert occurs.
     *
     * @param int $val The reminderMinutesBeforeStart
     *
@@ -177,7 +167,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the isReminderOn
-    * Set to true if an alert is set to remind the user of the event.
     *
     * @return bool The isReminderOn
     */
@@ -192,7 +181,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the isReminderOn
-    * Set to true if an alert is set to remind the user of the event.
     *
     * @param bool $val The isReminderOn
     *
@@ -206,7 +194,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the hasAttachments
-    * Set to true if the event has attachments.
     *
     * @return bool The hasAttachments
     */
@@ -221,7 +208,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the hasAttachments
-    * Set to true if the event has attachments.
     *
     * @param bool $val The hasAttachments
     *
@@ -235,7 +221,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the subject
-    * The text of the event's subject line.
     *
     * @return string The subject
     */
@@ -250,7 +235,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the subject
-    * The text of the event's subject line.
     *
     * @param string $val The subject
     *
@@ -264,7 +248,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the body
-    * The body of the message associated with the event. It can be in HTML or text format.
     *
     * @return ItemBody The body
     */
@@ -283,7 +266,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the body
-    * The body of the message associated with the event. It can be in HTML or text format.
     *
     * @param ItemBody $val The body
     *
@@ -297,7 +279,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the bodyPreview
-    * The preview of the message associated with the event. It is in text format.
     *
     * @return string The bodyPreview
     */
@@ -312,7 +293,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the bodyPreview
-    * The preview of the message associated with the event. It is in text format.
     *
     * @param string $val The bodyPreview
     *
@@ -326,7 +306,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the importance
-    * The importance of the event. Possible values are: Low, Normal, High.
     *
     * @return Importance The importance
     */
@@ -345,7 +324,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the importance
-    * The importance of the event. Possible values are: Low, Normal, High.
     *
     * @param Importance $val The importance
     *
@@ -359,7 +337,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the sensitivity
-    * Possible values are: Normal, Personal, Private, Confidential.
     *
     * @return Sensitivity The sensitivity
     */
@@ -378,7 +355,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the sensitivity
-    * Possible values are: Normal, Personal, Private, Confidential.
     *
     * @param Sensitivity $val The sensitivity
     *
@@ -392,7 +368,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the start
-    * The date, time, and time zone that the event starts.
     *
     * @return DateTimeTimeZone The start
     */
@@ -411,7 +386,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the start
-    * The date, time, and time zone that the event starts.
     *
     * @param DateTimeTimeZone $val The start
     *
@@ -425,7 +399,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the originalStart
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The originalStart
     */
@@ -444,7 +417,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the originalStart
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The originalStart
     *
@@ -458,7 +430,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the end
-    * The date, time, and time zone that the event ends.
     *
     * @return DateTimeTimeZone The end
     */
@@ -477,7 +448,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the end
-    * The date, time, and time zone that the event ends.
     *
     * @param DateTimeTimeZone $val The end
     *
@@ -491,7 +461,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the location
-    * The location of the event.
     *
     * @return Location The location
     */
@@ -510,7 +479,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the location
-    * The location of the event.
     *
     * @param Location $val The location
     *
@@ -552,7 +520,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the isAllDay
-    * Set to true if the event lasts all day.
     *
     * @return bool The isAllDay
     */
@@ -567,7 +534,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the isAllDay
-    * Set to true if the event lasts all day.
     *
     * @param bool $val The isAllDay
     *
@@ -581,7 +547,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the isCancelled
-    * Set to true if the event has been canceled.
     *
     * @return bool The isCancelled
     */
@@ -596,7 +561,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the isCancelled
-    * Set to true if the event has been canceled.
     *
     * @param bool $val The isCancelled
     *
@@ -610,7 +574,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the isOrganizer
-    * Set to true if the message sender is also the organizer.
     *
     * @return bool The isOrganizer
     */
@@ -625,7 +588,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the isOrganizer
-    * Set to true if the message sender is also the organizer.
     *
     * @param bool $val The isOrganizer
     *
@@ -639,7 +601,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the recurrence
-    * The recurrence pattern for the event.
     *
     * @return PatternedRecurrence The recurrence
     */
@@ -658,7 +619,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the recurrence
-    * The recurrence pattern for the event.
     *
     * @param PatternedRecurrence $val The recurrence
     *
@@ -672,7 +632,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the responseRequested
-    * Set to true if the sender would like a response when the event is accepted or declined.
     *
     * @return bool The responseRequested
     */
@@ -687,7 +646,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the responseRequested
-    * Set to true if the sender would like a response when the event is accepted or declined.
     *
     * @param bool $val The responseRequested
     *
@@ -701,7 +659,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the seriesMasterId
-    * The categories assigned to the item.
     *
     * @return string The seriesMasterId
     */
@@ -716,7 +673,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the seriesMasterId
-    * The categories assigned to the item.
     *
     * @param string $val The seriesMasterId
     *
@@ -730,7 +686,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the showAs
-    * The status to show. Possible values are: Free, Tentative, Busy, Oof, WorkingElsewhere, Unknown.
     *
     * @return FreeBusyStatus The showAs
     */
@@ -749,7 +704,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the showAs
-    * The status to show. Possible values are: Free, Tentative, Busy, Oof, WorkingElsewhere, Unknown.
     *
     * @param FreeBusyStatus $val The showAs
     *
@@ -763,7 +717,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the type
-    * The event type. Possible values are: SingleInstance, Occurrence, Exception, SeriesMaster. Read-only.
     *
     * @return EventType The type
     */
@@ -782,7 +735,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the type
-    * The event type. Possible values are: SingleInstance, Occurrence, Exception, SeriesMaster. Read-only.
     *
     * @param EventType $val The type
     *
@@ -797,7 +749,6 @@ class Event extends OutlookItem
 
      /** 
      * Gets the attendees
-    * The collection of attendees for the event.
      *
      * @return array The attendees
      */
@@ -812,7 +763,6 @@ class Event extends OutlookItem
     
     /** 
     * Sets the attendees
-    * The collection of attendees for the event.
     *
     * @param Attendee $val The attendees
     *
@@ -826,7 +776,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the organizer
-    * The organizer of the event.
     *
     * @return Recipient The organizer
     */
@@ -845,7 +794,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the organizer
-    * The organizer of the event.
     *
     * @param Recipient $val The organizer
     *
@@ -859,7 +807,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the webLink
-    * The URL to open the event in Outlook Web App.The event will open in the browser if you are logged in to your mailbox via Outlook Web App. You will be prompted to login if you are not already logged in with the browser.This URL can be accessed from within an iFrame.
     *
     * @return string The webLink
     */
@@ -874,7 +821,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the webLink
-    * The URL to open the event in Outlook Web App.The event will open in the browser if you are logged in to your mailbox via Outlook Web App. You will be prompted to login if you are not already logged in with the browser.This URL can be accessed from within an iFrame.
     *
     * @param string $val The webLink
     *
@@ -888,7 +834,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the onlineMeetingUrl
-    * A URL for an online meeting.
     *
     * @return string The onlineMeetingUrl
     */
@@ -903,7 +848,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the onlineMeetingUrl
-    * A URL for an online meeting.
     *
     * @param string $val The onlineMeetingUrl
     *
@@ -948,7 +892,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the calendar
-    * The calendar that contains the event. Navigation property. Read-only.
     *
     * @return Calendar The calendar
     */
@@ -967,7 +910,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the calendar
-    * The calendar that contains the event. Navigation property. Read-only.
     *
     * @param Calendar $val The calendar
     *
@@ -982,7 +924,6 @@ class Event extends OutlookItem
 
      /** 
      * Gets the instances
-    * The instances of the event. Navigation property. Read-only. Nullable.
      *
      * @return array The instances
      */
@@ -997,7 +938,6 @@ class Event extends OutlookItem
     
     /** 
     * Sets the instances
-    * The instances of the event. Navigation property. Read-only. Nullable.
     *
     * @param Event $val The instances
     *
@@ -1012,7 +952,6 @@ class Event extends OutlookItem
 
      /** 
      * Gets the extensions
-    * The collection of open extensions defined for the event. Read-only. Nullable.
      *
      * @return array The extensions
      */
@@ -1027,7 +966,6 @@ class Event extends OutlookItem
     
     /** 
     * Sets the extensions
-    * The collection of open extensions defined for the event. Read-only. Nullable.
     *
     * @param Extension $val The extensions
     *
@@ -1042,7 +980,6 @@ class Event extends OutlookItem
 
      /** 
      * Gets the attachments
-    * The collection of fileAttachment and itemAttachment attachments for the event. Navigation property. Read-only. Nullable.
      *
      * @return array The attachments
      */
@@ -1057,7 +994,6 @@ class Event extends OutlookItem
     
     /** 
     * Sets the attachments
-    * The collection of fileAttachment and itemAttachment attachments for the event. Navigation property. Read-only. Nullable.
     *
     * @param Attachment $val The attachments
     *
@@ -1072,7 +1008,6 @@ class Event extends OutlookItem
 
      /** 
      * Gets the singleValueExtendedProperties
-    * The collection of single-value extended properties defined for the event. Read-only. Nullable.
      *
      * @return array The singleValueExtendedProperties
      */
@@ -1087,7 +1022,6 @@ class Event extends OutlookItem
     
     /** 
     * Sets the singleValueExtendedProperties
-    * The collection of single-value extended properties defined for the event. Read-only. Nullable.
     *
     * @param SingleValueLegacyExtendedProperty $val The singleValueExtendedProperties
     *
@@ -1102,7 +1036,6 @@ class Event extends OutlookItem
 
      /** 
      * Gets the multiValueExtendedProperties
-    * The collection of multi-value extended properties defined for the event. Read-only. Nullable.
      *
      * @return array The multiValueExtendedProperties
      */
@@ -1117,7 +1050,6 @@ class Event extends OutlookItem
     
     /** 
     * Sets the multiValueExtendedProperties
-    * The collection of multi-value extended properties defined for the event. Read-only. Nullable.
     *
     * @param MultiValueLegacyExtendedProperty $val The multiValueExtendedProperties
     *

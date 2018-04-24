@@ -27,7 +27,6 @@ class TextColumn extends Entity
 {
     /**
     * Gets the allowMultipleLines
-    * Whether to allow multiple lines of text.
     *
     * @return bool The allowMultipleLines
     */
@@ -42,7 +41,6 @@ class TextColumn extends Entity
 
     /**
     * Sets the allowMultipleLines
-    * Whether to allow multiple lines of text.
     *
     * @param bool $val The value of the allowMultipleLines
     *
@@ -55,7 +53,6 @@ class TextColumn extends Entity
     }
     /**
     * Gets the appendChangesToExistingText
-    * Whether updates to this column should replace existing text, or append to it.
     *
     * @return bool The appendChangesToExistingText
     */
@@ -70,7 +67,6 @@ class TextColumn extends Entity
 
     /**
     * Sets the appendChangesToExistingText
-    * Whether updates to this column should replace existing text, or append to it.
     *
     * @param bool $val The value of the appendChangesToExistingText
     *
@@ -83,7 +79,6 @@ class TextColumn extends Entity
     }
     /**
     * Gets the linesForEditing
-    * The size of the text box.
     *
     * @return int The linesForEditing
     */
@@ -98,7 +93,6 @@ class TextColumn extends Entity
 
     /**
     * Sets the linesForEditing
-    * The size of the text box.
     *
     * @param int $val The value of the linesForEditing
     *
@@ -111,7 +105,6 @@ class TextColumn extends Entity
     }
     /**
     * Gets the maxLength
-    * The maximum number of characters for the value.
     *
     * @return int The maxLength
     */
@@ -126,7 +119,6 @@ class TextColumn extends Entity
 
     /**
     * Sets the maxLength
-    * The maximum number of characters for the value.
     *
     * @param int $val The value of the maxLength
     *
@@ -139,7 +131,6 @@ class TextColumn extends Entity
     }
     /**
     * Gets the textType
-    * The type of text being stored. Must be one of plain or richText
     *
     * @return string The textType
     */
@@ -154,7 +145,6 @@ class TextColumn extends Entity
 
     /**
     * Sets the textType
-    * The type of text being stored. Must be one of plain or richText
     *
     * @param string $val The value of the textType
     *

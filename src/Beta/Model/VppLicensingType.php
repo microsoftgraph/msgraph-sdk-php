@@ -79,7 +79,6 @@ class VppLicensingType extends Entity
     }
     /**
     * Gets the supportsUserLicensing
-    * Whether the program supports the user licensing type.
     *
     * @return bool The supportsUserLicensing
     */
@@ -94,7 +93,6 @@ class VppLicensingType extends Entity
 
     /**
     * Sets the supportsUserLicensing
-    * Whether the program supports the user licensing type.
     *
     * @param bool $val The value of the supportsUserLicensing
     *
@@ -107,7 +105,6 @@ class VppLicensingType extends Entity
     }
     /**
     * Gets the supportsDeviceLicensing
-    * Whether the program supports the device licensing type.
     *
     * @return bool The supportsDeviceLicensing
     */
@@ -122,7 +119,6 @@ class VppLicensingType extends Entity
 
     /**
     * Sets the supportsDeviceLicensing
-    * Whether the program supports the device licensing type.
     *
     * @param bool $val The value of the supportsDeviceLicensing
     *

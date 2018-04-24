@@ -28,7 +28,6 @@ class MailboxSettings extends Entity
 
     /**
     * Gets the automaticRepliesSetting
-    * Configuration settings to automatically notify the sender of an incoming email with a message from the signed-in user.
     *
     * @return AutomaticRepliesSetting The automaticRepliesSetting
     */
@@ -47,7 +46,6 @@ class MailboxSettings extends Entity
 
     /**
     * Sets the automaticRepliesSetting
-    * Configuration settings to automatically notify the sender of an incoming email with a message from the signed-in user.
     *
     * @param AutomaticRepliesSetting $val The value to assign to the automaticRepliesSetting
     *
@@ -86,7 +84,6 @@ class MailboxSettings extends Entity
     }
     /**
     * Gets the timeZone
-    * The default time zone for the user's mailbox.
     *
     * @return string The timeZone
     */
@@ -101,7 +98,6 @@ class MailboxSettings extends Entity
 
     /**
     * Sets the timeZone
-    * The default time zone for the user's mailbox.
     *
     * @param string $val The value of the timeZone
     *
@@ -115,7 +111,6 @@ class MailboxSettings extends Entity
 
     /**
     * Gets the language
-    * The locale information for the user, including the preferred language and country/region.
     *
     * @return LocaleInfo The language
     */
@@ -134,7 +129,6 @@ class MailboxSettings extends Entity
 
     /**
     * Sets the language
-    * The locale information for the user, including the preferred language and country/region.
     *
     * @param LocaleInfo $val The value to assign to the language
     *

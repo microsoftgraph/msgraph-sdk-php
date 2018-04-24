@@ -28,7 +28,6 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
 {
     /**
     * Gets the appDataEncryptionType
-    * Type of encryption which should be used for data in a managed app. Possible values are: useDeviceSettings, afterDeviceRestart, whenDeviceLockedExceptOpenFiles, whenDeviceLocked.
     *
     * @return ManagedAppDataEncryptionType The appDataEncryptionType
     */
@@ -47,7 +46,6 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Sets the appDataEncryptionType
-    * Type of encryption which should be used for data in a managed app. Possible values are: useDeviceSettings, afterDeviceRestart, whenDeviceLockedExceptOpenFiles, whenDeviceLocked.
     *
     * @param ManagedAppDataEncryptionType $val The appDataEncryptionType
     *
@@ -61,7 +59,6 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Gets the minimumRequiredSdkVersion
-    * Versions less than the specified version will block the managed app from accessing company data.
     *
     * @return string The minimumRequiredSdkVersion
     */
@@ -76,7 +73,6 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Sets the minimumRequiredSdkVersion
-    * Versions less than the specified version will block the managed app from accessing company data.
     *
     * @param string $val The minimumRequiredSdkVersion
     *
@@ -90,7 +86,6 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Gets the deployedAppCount
-    * Count of apps to which the current policy is deployed.
     *
     * @return int The deployedAppCount
     */
@@ -105,7 +100,6 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Sets the deployedAppCount
-    * Count of apps to which the current policy is deployed.
     *
     * @param int $val The deployedAppCount
     *
@@ -119,7 +113,6 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Gets the faceIdBlocked
-    * Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True.
     *
     * @return bool The faceIdBlocked
     */
@@ -134,7 +127,6 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Sets the faceIdBlocked
-    * Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True.
     *
     * @param bool $val The faceIdBlocked
     *
@@ -177,7 +169,6 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
 
      /** 
      * Gets the apps
-    * List of apps to which the policy is deployed.
      *
      * @return array The apps
      */
@@ -192,7 +183,6 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     
     /** 
     * Sets the apps
-    * List of apps to which the policy is deployed.
     *
     * @param ManagedMobileApp $val The apps
     *
@@ -206,7 +196,6 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Gets the deploymentSummary
-    * Navigation property to deployment summary of the configuration.
     *
     * @return ManagedAppPolicyDeploymentSummary The deploymentSummary
     */
@@ -225,7 +214,6 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Sets the deploymentSummary
-    * Navigation property to deployment summary of the configuration.
     *
     * @param ManagedAppPolicyDeploymentSummary $val The deploymentSummary
     *

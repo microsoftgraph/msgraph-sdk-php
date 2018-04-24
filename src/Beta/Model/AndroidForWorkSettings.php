@@ -28,7 +28,6 @@ class AndroidForWorkSettings extends Entity
 {
     /**
     * Gets the bindStatus
-    * Bind status of the tenant with the Google EMM API Possible values are: notBound, bound, boundAndValidated, unbinding.
     *
     * @return AndroidForWorkBindStatus The bindStatus
     */
@@ -47,7 +46,6 @@ class AndroidForWorkSettings extends Entity
     
     /**
     * Sets the bindStatus
-    * Bind status of the tenant with the Google EMM API Possible values are: notBound, bound, boundAndValidated, unbinding.
     *
     * @param AndroidForWorkBindStatus $val The bindStatus
     *
@@ -61,7 +59,6 @@ class AndroidForWorkSettings extends Entity
     
     /**
     * Gets the lastAppSyncDateTime
-    * Last completion time for app sync
     *
     * @return \DateTime The lastAppSyncDateTime
     */
@@ -80,7 +77,6 @@ class AndroidForWorkSettings extends Entity
     
     /**
     * Sets the lastAppSyncDateTime
-    * Last completion time for app sync
     *
     * @param \DateTime $val The lastAppSyncDateTime
     *
@@ -94,7 +90,6 @@ class AndroidForWorkSettings extends Entity
     
     /**
     * Gets the lastAppSyncStatus
-    * Last application sync result Possible values are: success, credentialsNotValid, androidForWorkApiError, managementServiceError, unknownError, none.
     *
     * @return AndroidForWorkSyncStatus The lastAppSyncStatus
     */
@@ -113,7 +108,6 @@ class AndroidForWorkSettings extends Entity
     
     /**
     * Sets the lastAppSyncStatus
-    * Last application sync result Possible values are: success, credentialsNotValid, androidForWorkApiError, managementServiceError, unknownError, none.
     *
     * @param AndroidForWorkSyncStatus $val The lastAppSyncStatus
     *
@@ -127,7 +121,6 @@ class AndroidForWorkSettings extends Entity
     
     /**
     * Gets the ownerUserPrincipalName
-    * Owner UPN that created the enterprise
     *
     * @return string The ownerUserPrincipalName
     */
@@ -142,7 +135,6 @@ class AndroidForWorkSettings extends Entity
     
     /**
     * Sets the ownerUserPrincipalName
-    * Owner UPN that created the enterprise
     *
     * @param string $val The ownerUserPrincipalName
     *
@@ -156,7 +148,6 @@ class AndroidForWorkSettings extends Entity
     
     /**
     * Gets the ownerOrganizationName
-    * Organization name used when onboarding Android for Work
     *
     * @return string The ownerOrganizationName
     */
@@ -171,7 +162,6 @@ class AndroidForWorkSettings extends Entity
     
     /**
     * Sets the ownerOrganizationName
-    * Organization name used when onboarding Android for Work
     *
     * @param string $val The ownerOrganizationName
     *
@@ -185,7 +175,6 @@ class AndroidForWorkSettings extends Entity
     
     /**
     * Gets the lastModifiedDateTime
-    * Last modification time for Android for Work settings
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -204,7 +193,6 @@ class AndroidForWorkSettings extends Entity
     
     /**
     * Sets the lastModifiedDateTime
-    * Last modification time for Android for Work settings
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -218,7 +206,6 @@ class AndroidForWorkSettings extends Entity
     
     /**
     * Gets the enrollmentTarget
-    * Indicates which users can enroll devices in Android for Work device management Possible values are: none, all, targeted, targetedAsEnrollmentRestrictions.
     *
     * @return AndroidForWorkEnrollmentTarget The enrollmentTarget
     */
@@ -237,7 +224,6 @@ class AndroidForWorkSettings extends Entity
     
     /**
     * Sets the enrollmentTarget
-    * Indicates which users can enroll devices in Android for Work device management Possible values are: none, all, targeted, targetedAsEnrollmentRestrictions.
     *
     * @param AndroidForWorkEnrollmentTarget $val The enrollmentTarget
     *
@@ -251,7 +237,6 @@ class AndroidForWorkSettings extends Entity
     
     /**
     * Gets the targetGroupIds
-    * Specifies which AAD groups can enroll devices in Android for Work device management if enrollmentTarget is set to 'Targeted'
     *
     * @return string The targetGroupIds
     */
@@ -266,7 +251,6 @@ class AndroidForWorkSettings extends Entity
     
     /**
     * Sets the targetGroupIds
-    * Specifies which AAD groups can enroll devices in Android for Work device management if enrollmentTarget is set to 'Targeted'
     *
     * @param string $val The targetGroupIds
     *

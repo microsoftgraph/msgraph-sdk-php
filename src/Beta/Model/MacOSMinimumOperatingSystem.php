@@ -1,0 +1,210 @@
+<?php
+/**
+* Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
+* 
+* MacOSMinimumOperatingSystem File
+* PHP version 7
+*
+* @category  Library
+* @package   Microsoft.Graph
+* @copyright 2016 Microsoft Corporation
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   GIT: 0.1.0
+* @link      https://graph.microsoft.io/
+*/
+namespace Microsoft\Graph\Beta\Model;
+/**
+* MacOSMinimumOperatingSystem class
+*
+* @category  Model
+* @package   Microsoft.Graph
+* @copyright 2016 Microsoft Corporation
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   Release: 0.1.0
+* @link      https://graph.microsoft.io/
+*/
+class MacOSMinimumOperatingSystem extends Entity
+{
+    /**
+    * Gets the v10_7
+    *
+    * @return bool The v10_7
+    */
+    public function getV10_7()
+    {
+        if (array_key_exists("v107", $this->_propDict)) {
+            return $this->_propDict["v107"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the v10_7
+    *
+    * @param bool $val The value of the v10_7
+    *
+    * @return MacOSMinimumOperatingSystem
+    */
+    public function setV10_7($val)
+    {
+        $this->_propDict["v107"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the v10_8
+    *
+    * @return bool The v10_8
+    */
+    public function getV10_8()
+    {
+        if (array_key_exists("v108", $this->_propDict)) {
+            return $this->_propDict["v108"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the v10_8
+    *
+    * @param bool $val The value of the v10_8
+    *
+    * @return MacOSMinimumOperatingSystem
+    */
+    public function setV10_8($val)
+    {
+        $this->_propDict["v108"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the v10_9
+    *
+    * @return bool The v10_9
+    */
+    public function getV10_9()
+    {
+        if (array_key_exists("v109", $this->_propDict)) {
+            return $this->_propDict["v109"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the v10_9
+    *
+    * @param bool $val The value of the v10_9
+    *
+    * @return MacOSMinimumOperatingSystem
+    */
+    public function setV10_9($val)
+    {
+        $this->_propDict["v109"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the v10_10
+    *
+    * @return bool The v10_10
+    */
+    public function getV10_10()
+    {
+        if (array_key_exists("v1010", $this->_propDict)) {
+            return $this->_propDict["v1010"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the v10_10
+    *
+    * @param bool $val The value of the v10_10
+    *
+    * @return MacOSMinimumOperatingSystem
+    */
+    public function setV10_10($val)
+    {
+        $this->_propDict["v1010"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the v10_11
+    *
+    * @return bool The v10_11
+    */
+    public function getV10_11()
+    {
+        if (array_key_exists("v1011", $this->_propDict)) {
+            return $this->_propDict["v1011"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the v10_11
+    *
+    * @param bool $val The value of the v10_11
+    *
+    * @return MacOSMinimumOperatingSystem
+    */
+    public function setV10_11($val)
+    {
+        $this->_propDict["v1011"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the v10_12
+    *
+    * @return bool The v10_12
+    */
+    public function getV10_12()
+    {
+        if (array_key_exists("v1012", $this->_propDict)) {
+            return $this->_propDict["v1012"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the v10_12
+    *
+    * @param bool $val The value of the v10_12
+    *
+    * @return MacOSMinimumOperatingSystem
+    */
+    public function setV10_12($val)
+    {
+        $this->_propDict["v1012"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the v10_13
+    *
+    * @return bool The v10_13
+    */
+    public function getV10_13()
+    {
+        if (array_key_exists("v1013", $this->_propDict)) {
+            return $this->_propDict["v1013"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the v10_13
+    *
+    * @param bool $val The value of the v10_13
+    *
+    * @return MacOSMinimumOperatingSystem
+    */
+    public function setV10_13($val)
+    {
+        $this->_propDict["v1013"] = $val;
+        return $this;
+    }
+}

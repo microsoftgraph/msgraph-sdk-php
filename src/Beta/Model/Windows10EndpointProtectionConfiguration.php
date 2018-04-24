@@ -54,6 +54,33 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the localSecurityOptionsBlockRemoteLogonWithBlankPassword
+    *
+    * @return bool The localSecurityOptionsBlockRemoteLogonWithBlankPassword
+    */
+    public function getLocalSecurityOptionsBlockRemoteLogonWithBlankPassword()
+    {
+        if (array_key_exists("localSecurityOptionsBlockRemoteLogonWithBlankPassword", $this->_propDict)) {
+            return $this->_propDict["localSecurityOptionsBlockRemoteLogonWithBlankPassword"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the localSecurityOptionsBlockRemoteLogonWithBlankPassword
+    *
+    * @param bool $val The localSecurityOptionsBlockRemoteLogonWithBlankPassword
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setLocalSecurityOptionsBlockRemoteLogonWithBlankPassword($val)
+    {
+        $this->_propDict["localSecurityOptionsBlockRemoteLogonWithBlankPassword"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the localSecurityOptionsEnableAdministratorAccount
     *
     * @return bool The localSecurityOptionsEnableAdministratorAccount
@@ -77,6 +104,778 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     public function setLocalSecurityOptionsEnableAdministratorAccount($val)
     {
         $this->_propDict["localSecurityOptionsEnableAdministratorAccount"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the localSecurityOptionsAdministratorAccountName
+    *
+    * @return string The localSecurityOptionsAdministratorAccountName
+    */
+    public function getLocalSecurityOptionsAdministratorAccountName()
+    {
+        if (array_key_exists("localSecurityOptionsAdministratorAccountName", $this->_propDict)) {
+            return $this->_propDict["localSecurityOptionsAdministratorAccountName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the localSecurityOptionsAdministratorAccountName
+    *
+    * @param string $val The localSecurityOptionsAdministratorAccountName
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setLocalSecurityOptionsAdministratorAccountName($val)
+    {
+        $this->_propDict["localSecurityOptionsAdministratorAccountName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the localSecurityOptionsEnableGuestAccount
+    *
+    * @return bool The localSecurityOptionsEnableGuestAccount
+    */
+    public function getLocalSecurityOptionsEnableGuestAccount()
+    {
+        if (array_key_exists("localSecurityOptionsEnableGuestAccount", $this->_propDict)) {
+            return $this->_propDict["localSecurityOptionsEnableGuestAccount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the localSecurityOptionsEnableGuestAccount
+    *
+    * @param bool $val The localSecurityOptionsEnableGuestAccount
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setLocalSecurityOptionsEnableGuestAccount($val)
+    {
+        $this->_propDict["localSecurityOptionsEnableGuestAccount"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the localSecurityOptionsGuestAccountName
+    *
+    * @return string The localSecurityOptionsGuestAccountName
+    */
+    public function getLocalSecurityOptionsGuestAccountName()
+    {
+        if (array_key_exists("localSecurityOptionsGuestAccountName", $this->_propDict)) {
+            return $this->_propDict["localSecurityOptionsGuestAccountName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the localSecurityOptionsGuestAccountName
+    *
+    * @param string $val The localSecurityOptionsGuestAccountName
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setLocalSecurityOptionsGuestAccountName($val)
+    {
+        $this->_propDict["localSecurityOptionsGuestAccountName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the localSecurityOptionsAllowUndockWithoutHavingToLogon
+    *
+    * @return bool The localSecurityOptionsAllowUndockWithoutHavingToLogon
+    */
+    public function getLocalSecurityOptionsAllowUndockWithoutHavingToLogon()
+    {
+        if (array_key_exists("localSecurityOptionsAllowUndockWithoutHavingToLogon", $this->_propDict)) {
+            return $this->_propDict["localSecurityOptionsAllowUndockWithoutHavingToLogon"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the localSecurityOptionsAllowUndockWithoutHavingToLogon
+    *
+    * @param bool $val The localSecurityOptionsAllowUndockWithoutHavingToLogon
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setLocalSecurityOptionsAllowUndockWithoutHavingToLogon($val)
+    {
+        $this->_propDict["localSecurityOptionsAllowUndockWithoutHavingToLogon"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the localSecurityOptionsBlockUsersInstallingPrinterDrivers
+    *
+    * @return bool The localSecurityOptionsBlockUsersInstallingPrinterDrivers
+    */
+    public function getLocalSecurityOptionsBlockUsersInstallingPrinterDrivers()
+    {
+        if (array_key_exists("localSecurityOptionsBlockUsersInstallingPrinterDrivers", $this->_propDict)) {
+            return $this->_propDict["localSecurityOptionsBlockUsersInstallingPrinterDrivers"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the localSecurityOptionsBlockUsersInstallingPrinterDrivers
+    *
+    * @param bool $val The localSecurityOptionsBlockUsersInstallingPrinterDrivers
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setLocalSecurityOptionsBlockUsersInstallingPrinterDrivers($val)
+    {
+        $this->_propDict["localSecurityOptionsBlockUsersInstallingPrinterDrivers"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the localSecurityOptionsBlockRemoteOpticalDriveAccess
+    *
+    * @return bool The localSecurityOptionsBlockRemoteOpticalDriveAccess
+    */
+    public function getLocalSecurityOptionsBlockRemoteOpticalDriveAccess()
+    {
+        if (array_key_exists("localSecurityOptionsBlockRemoteOpticalDriveAccess", $this->_propDict)) {
+            return $this->_propDict["localSecurityOptionsBlockRemoteOpticalDriveAccess"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the localSecurityOptionsBlockRemoteOpticalDriveAccess
+    *
+    * @param bool $val The localSecurityOptionsBlockRemoteOpticalDriveAccess
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setLocalSecurityOptionsBlockRemoteOpticalDriveAccess($val)
+    {
+        $this->_propDict["localSecurityOptionsBlockRemoteOpticalDriveAccess"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the localSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser
+    *
+    * @return LocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUserType The localSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser
+    */
+    public function getLocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser()
+    {
+        if (array_key_exists("localSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser", $this->_propDict)) {
+            if (is_a($this->_propDict["localSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser"], "Microsoft\Graph\Beta\Model\LocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUserType")) {
+                return $this->_propDict["localSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser"];
+            } else {
+                $this->_propDict["localSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser"] = new LocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUserType($this->_propDict["localSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser"]);
+                return $this->_propDict["localSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the localSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser
+    *
+    * @param LocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUserType $val The localSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setLocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser($val)
+    {
+        $this->_propDict["localSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the localSecurityOptionsMachineInactivityLimit
+    *
+    * @return int The localSecurityOptionsMachineInactivityLimit
+    */
+    public function getLocalSecurityOptionsMachineInactivityLimit()
+    {
+        if (array_key_exists("localSecurityOptionsMachineInactivityLimit", $this->_propDict)) {
+            return $this->_propDict["localSecurityOptionsMachineInactivityLimit"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the localSecurityOptionsMachineInactivityLimit
+    *
+    * @param int $val The localSecurityOptionsMachineInactivityLimit
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setLocalSecurityOptionsMachineInactivityLimit($val)
+    {
+        $this->_propDict["localSecurityOptionsMachineInactivityLimit"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the localSecurityOptionsDoNotRequireCtrlAltDel
+    *
+    * @return bool The localSecurityOptionsDoNotRequireCtrlAltDel
+    */
+    public function getLocalSecurityOptionsDoNotRequireCtrlAltDel()
+    {
+        if (array_key_exists("localSecurityOptionsDoNotRequireCtrlAltDel", $this->_propDict)) {
+            return $this->_propDict["localSecurityOptionsDoNotRequireCtrlAltDel"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the localSecurityOptionsDoNotRequireCtrlAltDel
+    *
+    * @param bool $val The localSecurityOptionsDoNotRequireCtrlAltDel
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setLocalSecurityOptionsDoNotRequireCtrlAltDel($val)
+    {
+        $this->_propDict["localSecurityOptionsDoNotRequireCtrlAltDel"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the localSecurityOptionsInformationDisplayedOnLockScreen
+    *
+    * @return LocalSecurityOptionsInformationDisplayedOnLockScreenType The localSecurityOptionsInformationDisplayedOnLockScreen
+    */
+    public function getLocalSecurityOptionsInformationDisplayedOnLockScreen()
+    {
+        if (array_key_exists("localSecurityOptionsInformationDisplayedOnLockScreen", $this->_propDict)) {
+            if (is_a($this->_propDict["localSecurityOptionsInformationDisplayedOnLockScreen"], "Microsoft\Graph\Beta\Model\LocalSecurityOptionsInformationDisplayedOnLockScreenType")) {
+                return $this->_propDict["localSecurityOptionsInformationDisplayedOnLockScreen"];
+            } else {
+                $this->_propDict["localSecurityOptionsInformationDisplayedOnLockScreen"] = new LocalSecurityOptionsInformationDisplayedOnLockScreenType($this->_propDict["localSecurityOptionsInformationDisplayedOnLockScreen"]);
+                return $this->_propDict["localSecurityOptionsInformationDisplayedOnLockScreen"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the localSecurityOptionsInformationDisplayedOnLockScreen
+    *
+    * @param LocalSecurityOptionsInformationDisplayedOnLockScreenType $val The localSecurityOptionsInformationDisplayedOnLockScreen
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setLocalSecurityOptionsInformationDisplayedOnLockScreen($val)
+    {
+        $this->_propDict["localSecurityOptionsInformationDisplayedOnLockScreen"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the localSecurityOptionsHideLastSignedInUser
+    *
+    * @return bool The localSecurityOptionsHideLastSignedInUser
+    */
+    public function getLocalSecurityOptionsHideLastSignedInUser()
+    {
+        if (array_key_exists("localSecurityOptionsHideLastSignedInUser", $this->_propDict)) {
+            return $this->_propDict["localSecurityOptionsHideLastSignedInUser"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the localSecurityOptionsHideLastSignedInUser
+    *
+    * @param bool $val The localSecurityOptionsHideLastSignedInUser
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setLocalSecurityOptionsHideLastSignedInUser($val)
+    {
+        $this->_propDict["localSecurityOptionsHideLastSignedInUser"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the localSecurityOptionsHideUsernameAtSignIn
+    *
+    * @return bool The localSecurityOptionsHideUsernameAtSignIn
+    */
+    public function getLocalSecurityOptionsHideUsernameAtSignIn()
+    {
+        if (array_key_exists("localSecurityOptionsHideUsernameAtSignIn", $this->_propDict)) {
+            return $this->_propDict["localSecurityOptionsHideUsernameAtSignIn"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the localSecurityOptionsHideUsernameAtSignIn
+    *
+    * @param bool $val The localSecurityOptionsHideUsernameAtSignIn
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setLocalSecurityOptionsHideUsernameAtSignIn($val)
+    {
+        $this->_propDict["localSecurityOptionsHideUsernameAtSignIn"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the localSecurityOptionsLogOnMessageTitle
+    *
+    * @return string The localSecurityOptionsLogOnMessageTitle
+    */
+    public function getLocalSecurityOptionsLogOnMessageTitle()
+    {
+        if (array_key_exists("localSecurityOptionsLogOnMessageTitle", $this->_propDict)) {
+            return $this->_propDict["localSecurityOptionsLogOnMessageTitle"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the localSecurityOptionsLogOnMessageTitle
+    *
+    * @param string $val The localSecurityOptionsLogOnMessageTitle
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setLocalSecurityOptionsLogOnMessageTitle($val)
+    {
+        $this->_propDict["localSecurityOptionsLogOnMessageTitle"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the localSecurityOptionsLogOnMessageText
+    *
+    * @return string The localSecurityOptionsLogOnMessageText
+    */
+    public function getLocalSecurityOptionsLogOnMessageText()
+    {
+        if (array_key_exists("localSecurityOptionsLogOnMessageText", $this->_propDict)) {
+            return $this->_propDict["localSecurityOptionsLogOnMessageText"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the localSecurityOptionsLogOnMessageText
+    *
+    * @param string $val The localSecurityOptionsLogOnMessageText
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setLocalSecurityOptionsLogOnMessageText($val)
+    {
+        $this->_propDict["localSecurityOptionsLogOnMessageText"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the localSecurityOptionsAllowPKU2UAuthenticationRequests
+    *
+    * @return bool The localSecurityOptionsAllowPKU2UAuthenticationRequests
+    */
+    public function getLocalSecurityOptionsAllowPKU2UAuthenticationRequests()
+    {
+        if (array_key_exists("localSecurityOptionsAllowPKU2UAuthenticationRequests", $this->_propDict)) {
+            return $this->_propDict["localSecurityOptionsAllowPKU2UAuthenticationRequests"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the localSecurityOptionsAllowPKU2UAuthenticationRequests
+    *
+    * @param bool $val The localSecurityOptionsAllowPKU2UAuthenticationRequests
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setLocalSecurityOptionsAllowPKU2UAuthenticationRequests($val)
+    {
+        $this->_propDict["localSecurityOptionsAllowPKU2UAuthenticationRequests"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the localSecurityOptionsAllowRemoteCallsToSecurityAccountsManager
+    *
+    * @return string The localSecurityOptionsAllowRemoteCallsToSecurityAccountsManager
+    */
+    public function getLocalSecurityOptionsAllowRemoteCallsToSecurityAccountsManager()
+    {
+        if (array_key_exists("localSecurityOptionsAllowRemoteCallsToSecurityAccountsManager", $this->_propDict)) {
+            return $this->_propDict["localSecurityOptionsAllowRemoteCallsToSecurityAccountsManager"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the localSecurityOptionsAllowRemoteCallsToSecurityAccountsManager
+    *
+    * @param string $val The localSecurityOptionsAllowRemoteCallsToSecurityAccountsManager
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setLocalSecurityOptionsAllowRemoteCallsToSecurityAccountsManager($val)
+    {
+        $this->_propDict["localSecurityOptionsAllowRemoteCallsToSecurityAccountsManager"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the localSecurityOptionsClearVirtualMemoryPageFile
+    *
+    * @return bool The localSecurityOptionsClearVirtualMemoryPageFile
+    */
+    public function getLocalSecurityOptionsClearVirtualMemoryPageFile()
+    {
+        if (array_key_exists("localSecurityOptionsClearVirtualMemoryPageFile", $this->_propDict)) {
+            return $this->_propDict["localSecurityOptionsClearVirtualMemoryPageFile"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the localSecurityOptionsClearVirtualMemoryPageFile
+    *
+    * @param bool $val The localSecurityOptionsClearVirtualMemoryPageFile
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setLocalSecurityOptionsClearVirtualMemoryPageFile($val)
+    {
+        $this->_propDict["localSecurityOptionsClearVirtualMemoryPageFile"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the localSecurityOptionsAllowSystemToBeShutDownWithoutHavingToLogOn
+    *
+    * @return bool The localSecurityOptionsAllowSystemToBeShutDownWithoutHavingToLogOn
+    */
+    public function getLocalSecurityOptionsAllowSystemToBeShutDownWithoutHavingToLogOn()
+    {
+        if (array_key_exists("localSecurityOptionsAllowSystemToBeShutDownWithoutHavingToLogOn", $this->_propDict)) {
+            return $this->_propDict["localSecurityOptionsAllowSystemToBeShutDownWithoutHavingToLogOn"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the localSecurityOptionsAllowSystemToBeShutDownWithoutHavingToLogOn
+    *
+    * @param bool $val The localSecurityOptionsAllowSystemToBeShutDownWithoutHavingToLogOn
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setLocalSecurityOptionsAllowSystemToBeShutDownWithoutHavingToLogOn($val)
+    {
+        $this->_propDict["localSecurityOptionsAllowSystemToBeShutDownWithoutHavingToLogOn"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the localSecurityOptionsAllowUIAccessApplicationElevation
+    *
+    * @return bool The localSecurityOptionsAllowUIAccessApplicationElevation
+    */
+    public function getLocalSecurityOptionsAllowUIAccessApplicationElevation()
+    {
+        if (array_key_exists("localSecurityOptionsAllowUIAccessApplicationElevation", $this->_propDict)) {
+            return $this->_propDict["localSecurityOptionsAllowUIAccessApplicationElevation"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the localSecurityOptionsAllowUIAccessApplicationElevation
+    *
+    * @param bool $val The localSecurityOptionsAllowUIAccessApplicationElevation
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setLocalSecurityOptionsAllowUIAccessApplicationElevation($val)
+    {
+        $this->_propDict["localSecurityOptionsAllowUIAccessApplicationElevation"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the localSecurityOptionsVirtualizeFileAndRegistryWriteFailuresToPerUserLocations
+    *
+    * @return bool The localSecurityOptionsVirtualizeFileAndRegistryWriteFailuresToPerUserLocations
+    */
+    public function getLocalSecurityOptionsVirtualizeFileAndRegistryWriteFailuresToPerUserLocations()
+    {
+        if (array_key_exists("localSecurityOptionsVirtualizeFileAndRegistryWriteFailuresToPerUserLocations", $this->_propDict)) {
+            return $this->_propDict["localSecurityOptionsVirtualizeFileAndRegistryWriteFailuresToPerUserLocations"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the localSecurityOptionsVirtualizeFileAndRegistryWriteFailuresToPerUserLocations
+    *
+    * @param bool $val The localSecurityOptionsVirtualizeFileAndRegistryWriteFailuresToPerUserLocations
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setLocalSecurityOptionsVirtualizeFileAndRegistryWriteFailuresToPerUserLocations($val)
+    {
+        $this->_propDict["localSecurityOptionsVirtualizeFileAndRegistryWriteFailuresToPerUserLocations"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the localSecurityOptionsOnlyElevateSignedExecutables
+    *
+    * @return bool The localSecurityOptionsOnlyElevateSignedExecutables
+    */
+    public function getLocalSecurityOptionsOnlyElevateSignedExecutables()
+    {
+        if (array_key_exists("localSecurityOptionsOnlyElevateSignedExecutables", $this->_propDict)) {
+            return $this->_propDict["localSecurityOptionsOnlyElevateSignedExecutables"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the localSecurityOptionsOnlyElevateSignedExecutables
+    *
+    * @param bool $val The localSecurityOptionsOnlyElevateSignedExecutables
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setLocalSecurityOptionsOnlyElevateSignedExecutables($val)
+    {
+        $this->_propDict["localSecurityOptionsOnlyElevateSignedExecutables"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the localSecurityOptionsAdministratorElevationPromptBehavior
+    *
+    * @return LocalSecurityOptionsAdministratorElevationPromptBehaviorType The localSecurityOptionsAdministratorElevationPromptBehavior
+    */
+    public function getLocalSecurityOptionsAdministratorElevationPromptBehavior()
+    {
+        if (array_key_exists("localSecurityOptionsAdministratorElevationPromptBehavior", $this->_propDict)) {
+            if (is_a($this->_propDict["localSecurityOptionsAdministratorElevationPromptBehavior"], "Microsoft\Graph\Beta\Model\LocalSecurityOptionsAdministratorElevationPromptBehaviorType")) {
+                return $this->_propDict["localSecurityOptionsAdministratorElevationPromptBehavior"];
+            } else {
+                $this->_propDict["localSecurityOptionsAdministratorElevationPromptBehavior"] = new LocalSecurityOptionsAdministratorElevationPromptBehaviorType($this->_propDict["localSecurityOptionsAdministratorElevationPromptBehavior"]);
+                return $this->_propDict["localSecurityOptionsAdministratorElevationPromptBehavior"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the localSecurityOptionsAdministratorElevationPromptBehavior
+    *
+    * @param LocalSecurityOptionsAdministratorElevationPromptBehaviorType $val The localSecurityOptionsAdministratorElevationPromptBehavior
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setLocalSecurityOptionsAdministratorElevationPromptBehavior($val)
+    {
+        $this->_propDict["localSecurityOptionsAdministratorElevationPromptBehavior"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the localSecurityOptionsStandardUserElevationPromptBehavior
+    *
+    * @return LocalSecurityOptionsStandardUserElevationPromptBehaviorType The localSecurityOptionsStandardUserElevationPromptBehavior
+    */
+    public function getLocalSecurityOptionsStandardUserElevationPromptBehavior()
+    {
+        if (array_key_exists("localSecurityOptionsStandardUserElevationPromptBehavior", $this->_propDict)) {
+            if (is_a($this->_propDict["localSecurityOptionsStandardUserElevationPromptBehavior"], "Microsoft\Graph\Beta\Model\LocalSecurityOptionsStandardUserElevationPromptBehaviorType")) {
+                return $this->_propDict["localSecurityOptionsStandardUserElevationPromptBehavior"];
+            } else {
+                $this->_propDict["localSecurityOptionsStandardUserElevationPromptBehavior"] = new LocalSecurityOptionsStandardUserElevationPromptBehaviorType($this->_propDict["localSecurityOptionsStandardUserElevationPromptBehavior"]);
+                return $this->_propDict["localSecurityOptionsStandardUserElevationPromptBehavior"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the localSecurityOptionsStandardUserElevationPromptBehavior
+    *
+    * @param LocalSecurityOptionsStandardUserElevationPromptBehaviorType $val The localSecurityOptionsStandardUserElevationPromptBehavior
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setLocalSecurityOptionsStandardUserElevationPromptBehavior($val)
+    {
+        $this->_propDict["localSecurityOptionsStandardUserElevationPromptBehavior"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the localSecurityOptionsSwitchToSecureDesktopWhenPromptingForElevation
+    *
+    * @return bool The localSecurityOptionsSwitchToSecureDesktopWhenPromptingForElevation
+    */
+    public function getLocalSecurityOptionsSwitchToSecureDesktopWhenPromptingForElevation()
+    {
+        if (array_key_exists("localSecurityOptionsSwitchToSecureDesktopWhenPromptingForElevation", $this->_propDict)) {
+            return $this->_propDict["localSecurityOptionsSwitchToSecureDesktopWhenPromptingForElevation"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the localSecurityOptionsSwitchToSecureDesktopWhenPromptingForElevation
+    *
+    * @param bool $val The localSecurityOptionsSwitchToSecureDesktopWhenPromptingForElevation
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setLocalSecurityOptionsSwitchToSecureDesktopWhenPromptingForElevation($val)
+    {
+        $this->_propDict["localSecurityOptionsSwitchToSecureDesktopWhenPromptingForElevation"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the localSecurityOptionsDetectApplicationInstallationsAndPromptForElevation
+    *
+    * @return bool The localSecurityOptionsDetectApplicationInstallationsAndPromptForElevation
+    */
+    public function getLocalSecurityOptionsDetectApplicationInstallationsAndPromptForElevation()
+    {
+        if (array_key_exists("localSecurityOptionsDetectApplicationInstallationsAndPromptForElevation", $this->_propDict)) {
+            return $this->_propDict["localSecurityOptionsDetectApplicationInstallationsAndPromptForElevation"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the localSecurityOptionsDetectApplicationInstallationsAndPromptForElevation
+    *
+    * @param bool $val The localSecurityOptionsDetectApplicationInstallationsAndPromptForElevation
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setLocalSecurityOptionsDetectApplicationInstallationsAndPromptForElevation($val)
+    {
+        $this->_propDict["localSecurityOptionsDetectApplicationInstallationsAndPromptForElevation"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the localSecurityOptionsAllowUIAccessApplicationsForSecureLocations
+    *
+    * @return bool The localSecurityOptionsAllowUIAccessApplicationsForSecureLocations
+    */
+    public function getLocalSecurityOptionsAllowUIAccessApplicationsForSecureLocations()
+    {
+        if (array_key_exists("localSecurityOptionsAllowUIAccessApplicationsForSecureLocations", $this->_propDict)) {
+            return $this->_propDict["localSecurityOptionsAllowUIAccessApplicationsForSecureLocations"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the localSecurityOptionsAllowUIAccessApplicationsForSecureLocations
+    *
+    * @param bool $val The localSecurityOptionsAllowUIAccessApplicationsForSecureLocations
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setLocalSecurityOptionsAllowUIAccessApplicationsForSecureLocations($val)
+    {
+        $this->_propDict["localSecurityOptionsAllowUIAccessApplicationsForSecureLocations"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the localSecurityOptionsUseAdminApprovalMode
+    *
+    * @return bool The localSecurityOptionsUseAdminApprovalMode
+    */
+    public function getLocalSecurityOptionsUseAdminApprovalMode()
+    {
+        if (array_key_exists("localSecurityOptionsUseAdminApprovalMode", $this->_propDict)) {
+            return $this->_propDict["localSecurityOptionsUseAdminApprovalMode"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the localSecurityOptionsUseAdminApprovalMode
+    *
+    * @param bool $val The localSecurityOptionsUseAdminApprovalMode
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setLocalSecurityOptionsUseAdminApprovalMode($val)
+    {
+        $this->_propDict["localSecurityOptionsUseAdminApprovalMode"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the localSecurityOptionsUseAdminApprovalModeForAdministrators
+    *
+    * @return bool The localSecurityOptionsUseAdminApprovalModeForAdministrators
+    */
+    public function getLocalSecurityOptionsUseAdminApprovalModeForAdministrators()
+    {
+        if (array_key_exists("localSecurityOptionsUseAdminApprovalModeForAdministrators", $this->_propDict)) {
+            return $this->_propDict["localSecurityOptionsUseAdminApprovalModeForAdministrators"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the localSecurityOptionsUseAdminApprovalModeForAdministrators
+    *
+    * @param bool $val The localSecurityOptionsUseAdminApprovalModeForAdministrators
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setLocalSecurityOptionsUseAdminApprovalModeForAdministrators($val)
+    {
+        $this->_propDict["localSecurityOptionsUseAdminApprovalModeForAdministrators"] = boolval($val);
         return $this;
     }
     
@@ -387,7 +1186,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the firewallBlockStatefulFTP
-    * Blocks stateful FTP connections to the device
     *
     * @return bool The firewallBlockStatefulFTP
     */
@@ -402,7 +1200,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the firewallBlockStatefulFTP
-    * Blocks stateful FTP connections to the device
     *
     * @param bool $val The firewallBlockStatefulFTP
     *
@@ -416,7 +1213,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the firewallIdleTimeoutForSecurityAssociationInSeconds
-    * Configures the idle timeout for security associations, in seconds, from 300 to 3600 inclusive. This is the period after which security associations will expire and be deleted. Valid values 300 to 3600
     *
     * @return int The firewallIdleTimeoutForSecurityAssociationInSeconds
     */
@@ -431,7 +1227,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the firewallIdleTimeoutForSecurityAssociationInSeconds
-    * Configures the idle timeout for security associations, in seconds, from 300 to 3600 inclusive. This is the period after which security associations will expire and be deleted. Valid values 300 to 3600
     *
     * @param int $val The firewallIdleTimeoutForSecurityAssociationInSeconds
     *
@@ -445,7 +1240,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the firewallPreSharedKeyEncodingMethod
-    * Select the preshared key encoding to be used Possible values are: deviceDefault, none, utF8.
     *
     * @return FirewallPreSharedKeyEncodingMethodType The firewallPreSharedKeyEncodingMethod
     */
@@ -464,7 +1258,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the firewallPreSharedKeyEncodingMethod
-    * Select the preshared key encoding to be used Possible values are: deviceDefault, none, utF8.
     *
     * @param FirewallPreSharedKeyEncodingMethodType $val The firewallPreSharedKeyEncodingMethod
     *
@@ -478,7 +1271,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the firewallIPSecExemptionsAllowNeighborDiscovery
-    * Configures IPSec exemptions to allow neighbor discovery IPv6 ICMP type-codes
     *
     * @return bool The firewallIPSecExemptionsAllowNeighborDiscovery
     */
@@ -493,7 +1285,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the firewallIPSecExemptionsAllowNeighborDiscovery
-    * Configures IPSec exemptions to allow neighbor discovery IPv6 ICMP type-codes
     *
     * @param bool $val The firewallIPSecExemptionsAllowNeighborDiscovery
     *
@@ -507,7 +1298,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the firewallIPSecExemptionsAllowICMP
-    * Configures IPSec exemptions to allow ICMP
     *
     * @return bool The firewallIPSecExemptionsAllowICMP
     */
@@ -522,7 +1312,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the firewallIPSecExemptionsAllowICMP
-    * Configures IPSec exemptions to allow ICMP
     *
     * @param bool $val The firewallIPSecExemptionsAllowICMP
     *
@@ -536,7 +1325,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the firewallIPSecExemptionsAllowRouterDiscovery
-    * Configures IPSec exemptions to allow router discovery IPv6 ICMP type-codes
     *
     * @return bool The firewallIPSecExemptionsAllowRouterDiscovery
     */
@@ -551,7 +1339,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the firewallIPSecExemptionsAllowRouterDiscovery
-    * Configures IPSec exemptions to allow router discovery IPv6 ICMP type-codes
     *
     * @param bool $val The firewallIPSecExemptionsAllowRouterDiscovery
     *
@@ -565,7 +1352,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the firewallIPSecExemptionsAllowDHCP
-    * Configures IPSec exemptions to allow both IPv4 and IPv6 DHCP traffic
     *
     * @return bool The firewallIPSecExemptionsAllowDHCP
     */
@@ -580,7 +1366,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the firewallIPSecExemptionsAllowDHCP
-    * Configures IPSec exemptions to allow both IPv4 and IPv6 DHCP traffic
     *
     * @param bool $val The firewallIPSecExemptionsAllowDHCP
     *
@@ -594,7 +1379,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the firewallCertificateRevocationListCheckMethod
-    * Specify how the certificate revocation list is to be enforced Possible values are: deviceDefault, none, attempt, require.
     *
     * @return FirewallCertificateRevocationListCheckMethodType The firewallCertificateRevocationListCheckMethod
     */
@@ -613,7 +1397,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the firewallCertificateRevocationListCheckMethod
-    * Specify how the certificate revocation list is to be enforced Possible values are: deviceDefault, none, attempt, require.
     *
     * @param FirewallCertificateRevocationListCheckMethodType $val The firewallCertificateRevocationListCheckMethod
     *
@@ -627,7 +1410,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the firewallMergeKeyingModuleSettings
-    * If an authentication set is not fully supported by a keying module, direct the module to ignore only unsupported authentication suites rather than the entire set
     *
     * @return bool The firewallMergeKeyingModuleSettings
     */
@@ -642,7 +1424,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the firewallMergeKeyingModuleSettings
-    * If an authentication set is not fully supported by a keying module, direct the module to ignore only unsupported authentication suites rather than the entire set
     *
     * @param bool $val The firewallMergeKeyingModuleSettings
     *
@@ -656,7 +1437,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the firewallPacketQueueingMethod
-    * Configures how packet queueing should be applied in the tunnel gateway scenario Possible values are: deviceDefault, disabled, queueInbound, queueOutbound, queueBoth.
     *
     * @return FirewallPacketQueueingMethodType The firewallPacketQueueingMethod
     */
@@ -675,7 +1455,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the firewallPacketQueueingMethod
-    * Configures how packet queueing should be applied in the tunnel gateway scenario Possible values are: deviceDefault, disabled, queueInbound, queueOutbound, queueBoth.
     *
     * @param FirewallPacketQueueingMethodType $val The firewallPacketQueueingMethod
     *
@@ -689,7 +1468,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the firewallProfileDomain
-    * Configures the firewall profile settings for domain networks
     *
     * @return WindowsFirewallNetworkProfile The firewallProfileDomain
     */
@@ -708,7 +1486,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the firewallProfileDomain
-    * Configures the firewall profile settings for domain networks
     *
     * @param WindowsFirewallNetworkProfile $val The firewallProfileDomain
     *
@@ -722,7 +1499,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the firewallProfilePublic
-    * Configures the firewall profile settings for public networks
     *
     * @return WindowsFirewallNetworkProfile The firewallProfilePublic
     */
@@ -741,7 +1517,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the firewallProfilePublic
-    * Configures the firewall profile settings for public networks
     *
     * @param WindowsFirewallNetworkProfile $val The firewallProfilePublic
     *
@@ -755,7 +1530,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the firewallProfilePrivate
-    * Configures the firewall profile settings for private networks
     *
     * @return WindowsFirewallNetworkProfile The firewallProfilePrivate
     */
@@ -774,7 +1548,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the firewallProfilePrivate
-    * Configures the firewall profile settings for private networks
     *
     * @param WindowsFirewallNetworkProfile $val The firewallProfilePrivate
     *
@@ -788,7 +1561,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderAttackSurfaceReductionExcludedPaths
-    * List of exe files and folders to be excluded from attack surface reduction rules
     *
     * @return string The defenderAttackSurfaceReductionExcludedPaths
     */
@@ -803,7 +1575,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderAttackSurfaceReductionExcludedPaths
-    * List of exe files and folders to be excluded from attack surface reduction rules
     *
     * @param string $val The defenderAttackSurfaceReductionExcludedPaths
     *
@@ -1157,37 +1928,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     }
     
     /**
-    * Gets the defenderPasswordProtectedEmailContentExecutionType
-    *
-    * @return DefenderAttackSurfaceType The defenderPasswordProtectedEmailContentExecutionType
-    */
-    public function getDefenderPasswordProtectedEmailContentExecutionType()
-    {
-        if (array_key_exists("defenderPasswordProtectedEmailContentExecutionType", $this->_propDict)) {
-            if (is_a($this->_propDict["defenderPasswordProtectedEmailContentExecutionType"], "Microsoft\Graph\Beta\Model\DefenderAttackSurfaceType")) {
-                return $this->_propDict["defenderPasswordProtectedEmailContentExecutionType"];
-            } else {
-                $this->_propDict["defenderPasswordProtectedEmailContentExecutionType"] = new DefenderAttackSurfaceType($this->_propDict["defenderPasswordProtectedEmailContentExecutionType"]);
-                return $this->_propDict["defenderPasswordProtectedEmailContentExecutionType"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the defenderPasswordProtectedEmailContentExecutionType
-    *
-    * @param DefenderAttackSurfaceType $val The defenderPasswordProtectedEmailContentExecutionType
-    *
-    * @return Windows10EndpointProtectionConfiguration
-    */
-    public function setDefenderPasswordProtectedEmailContentExecutionType($val)
-    {
-        $this->_propDict["defenderPasswordProtectedEmailContentExecutionType"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the defenderAdvancedRansomewareProtectionType
     *
     * @return DefenderProtectionType The defenderAdvancedRansomewareProtectionType
@@ -1251,7 +1991,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderGuardedFoldersAllowedAppPaths
-    * List of paths to exe that are allowed to access protected folders
     *
     * @return string The defenderGuardedFoldersAllowedAppPaths
     */
@@ -1266,7 +2005,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderGuardedFoldersAllowedAppPaths
-    * List of paths to exe that are allowed to access protected folders
     *
     * @param string $val The defenderGuardedFoldersAllowedAppPaths
     *
@@ -1280,7 +2018,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderAdditionalGuardedFolders
-    * List of folder paths to be added to the list of protected folders
     *
     * @return string The defenderAdditionalGuardedFolders
     */
@@ -1295,7 +2032,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderAdditionalGuardedFolders
-    * List of folder paths to be added to the list of protected folders
     *
     * @param string $val The defenderAdditionalGuardedFolders
     *
@@ -1340,7 +2076,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderExploitProtectionXml
-    * Xml content containing information regarding exploit protection details.
     *
     * @return \GuzzleHttp\Psr7\Stream The defenderExploitProtectionXml
     */
@@ -1359,7 +2094,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderExploitProtectionXml
-    * Xml content containing information regarding exploit protection details.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The defenderExploitProtectionXml
     *
@@ -1373,7 +2107,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderExploitProtectionXmlFileName
-    * Name of the file from which DefenderExploitProtectionXml was obtained.
     *
     * @return string The defenderExploitProtectionXmlFileName
     */
@@ -1388,7 +2121,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderExploitProtectionXmlFileName
-    * Name of the file from which DefenderExploitProtectionXml was obtained.
     *
     * @param string $val The defenderExploitProtectionXmlFileName
     *
@@ -1402,7 +2134,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderSecurityCenterBlockExploitProtectionOverride
-    * Indicates whether or not to block user from overriding Exploit Protection settings.
     *
     * @return bool The defenderSecurityCenterBlockExploitProtectionOverride
     */
@@ -1417,7 +2148,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderSecurityCenterBlockExploitProtectionOverride
-    * Indicates whether or not to block user from overriding Exploit Protection settings.
     *
     * @param bool $val The defenderSecurityCenterBlockExploitProtectionOverride
     *
@@ -1431,7 +2161,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the appLockerApplicationControl
-    * Enables the Admin to choose what types of app to allow on devices. Possible values are: notConfigured, enforceComponentsAndStoreApps, auditComponentsAndStoreApps, enforceComponentsStoreAppsAndSmartlocker, auditComponentsStoreAppsAndSmartlocker.
     *
     * @return AppLockerApplicationControlType The appLockerApplicationControl
     */
@@ -1450,7 +2179,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the appLockerApplicationControl
-    * Enables the Admin to choose what types of app to allow on devices. Possible values are: notConfigured, enforceComponentsAndStoreApps, auditComponentsAndStoreApps, enforceComponentsStoreAppsAndSmartlocker, auditComponentsStoreAppsAndSmartlocker.
     *
     * @param AppLockerApplicationControlType $val The appLockerApplicationControl
     *
@@ -1463,8 +2191,92 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the deviceGuardLocalSystemAuthorityCredentialGuardSettings
+    *
+    * @return DeviceGuardLocalSystemAuthorityCredentialGuardType The deviceGuardLocalSystemAuthorityCredentialGuardSettings
+    */
+    public function getDeviceGuardLocalSystemAuthorityCredentialGuardSettings()
+    {
+        if (array_key_exists("deviceGuardLocalSystemAuthorityCredentialGuardSettings", $this->_propDict)) {
+            if (is_a($this->_propDict["deviceGuardLocalSystemAuthorityCredentialGuardSettings"], "Microsoft\Graph\Beta\Model\DeviceGuardLocalSystemAuthorityCredentialGuardType")) {
+                return $this->_propDict["deviceGuardLocalSystemAuthorityCredentialGuardSettings"];
+            } else {
+                $this->_propDict["deviceGuardLocalSystemAuthorityCredentialGuardSettings"] = new DeviceGuardLocalSystemAuthorityCredentialGuardType($this->_propDict["deviceGuardLocalSystemAuthorityCredentialGuardSettings"]);
+                return $this->_propDict["deviceGuardLocalSystemAuthorityCredentialGuardSettings"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the deviceGuardLocalSystemAuthorityCredentialGuardSettings
+    *
+    * @param DeviceGuardLocalSystemAuthorityCredentialGuardType $val The deviceGuardLocalSystemAuthorityCredentialGuardSettings
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setDeviceGuardLocalSystemAuthorityCredentialGuardSettings($val)
+    {
+        $this->_propDict["deviceGuardLocalSystemAuthorityCredentialGuardSettings"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the deviceGuardEnableVirtualizationBasedSecurity
+    *
+    * @return bool The deviceGuardEnableVirtualizationBasedSecurity
+    */
+    public function getDeviceGuardEnableVirtualizationBasedSecurity()
+    {
+        if (array_key_exists("deviceGuardEnableVirtualizationBasedSecurity", $this->_propDict)) {
+            return $this->_propDict["deviceGuardEnableVirtualizationBasedSecurity"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the deviceGuardEnableVirtualizationBasedSecurity
+    *
+    * @param bool $val The deviceGuardEnableVirtualizationBasedSecurity
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setDeviceGuardEnableVirtualizationBasedSecurity($val)
+    {
+        $this->_propDict["deviceGuardEnableVirtualizationBasedSecurity"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the deviceGuardEnableSecureBootWithDMA
+    *
+    * @return bool The deviceGuardEnableSecureBootWithDMA
+    */
+    public function getDeviceGuardEnableSecureBootWithDMA()
+    {
+        if (array_key_exists("deviceGuardEnableSecureBootWithDMA", $this->_propDict)) {
+            return $this->_propDict["deviceGuardEnableSecureBootWithDMA"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the deviceGuardEnableSecureBootWithDMA
+    *
+    * @param bool $val The deviceGuardEnableSecureBootWithDMA
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setDeviceGuardEnableSecureBootWithDMA($val)
+    {
+        $this->_propDict["deviceGuardEnableSecureBootWithDMA"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the smartScreenEnableInShell
-    * Allows IT Admins to configure SmartScreen for Windows.
     *
     * @return bool The smartScreenEnableInShell
     */
@@ -1479,7 +2291,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the smartScreenEnableInShell
-    * Allows IT Admins to configure SmartScreen for Windows.
     *
     * @param bool $val The smartScreenEnableInShell
     *
@@ -1493,7 +2304,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the smartScreenBlockOverrideForFiles
-    * Allows IT Admins to control whether users can can ignore SmartScreen warnings and run malicious files.
     *
     * @return bool The smartScreenBlockOverrideForFiles
     */
@@ -1508,7 +2318,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the smartScreenBlockOverrideForFiles
-    * Allows IT Admins to control whether users can can ignore SmartScreen warnings and run malicious files.
     *
     * @param bool $val The smartScreenBlockOverrideForFiles
     *
@@ -1522,7 +2331,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the applicationGuardEnabled
-    * Enable Windows Defender Application Guard
     *
     * @return bool The applicationGuardEnabled
     */
@@ -1537,7 +2345,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the applicationGuardEnabled
-    * Enable Windows Defender Application Guard
     *
     * @param bool $val The applicationGuardEnabled
     *
@@ -1551,7 +2358,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the applicationGuardBlockFileTransfer
-    * Block clipboard to transfer image file, text file or neither of them Possible values are: notConfigured, blockImageAndTextFile, blockImageFile, blockNone, blockTextFile.
     *
     * @return ApplicationGuardBlockFileTransferType The applicationGuardBlockFileTransfer
     */
@@ -1570,7 +2376,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the applicationGuardBlockFileTransfer
-    * Block clipboard to transfer image file, text file or neither of them Possible values are: notConfigured, blockImageAndTextFile, blockImageFile, blockNone, blockTextFile.
     *
     * @param ApplicationGuardBlockFileTransferType $val The applicationGuardBlockFileTransfer
     *
@@ -1584,7 +2389,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the applicationGuardBlockNonEnterpriseContent
-    * Block enterprise sites to load non-enterprise content, such as third party plug-ins
     *
     * @return bool The applicationGuardBlockNonEnterpriseContent
     */
@@ -1599,7 +2403,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the applicationGuardBlockNonEnterpriseContent
-    * Block enterprise sites to load non-enterprise content, such as third party plug-ins
     *
     * @param bool $val The applicationGuardBlockNonEnterpriseContent
     *
@@ -1613,7 +2416,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the applicationGuardAllowPersistence
-    * Allow persisting user generated data inside the App Guard Containter (favorites, cookies, web passwords, etc.)
     *
     * @return bool The applicationGuardAllowPersistence
     */
@@ -1628,7 +2430,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the applicationGuardAllowPersistence
-    * Allow persisting user generated data inside the App Guard Containter (favorites, cookies, web passwords, etc.)
     *
     * @param bool $val The applicationGuardAllowPersistence
     *
@@ -1642,7 +2443,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the applicationGuardForceAuditing
-    * Force auditing will persist Windows logs and events to meet security/compliance criteria (sample events are user login-logoff, use of privilege rights, software installation, system changes, etc.)
     *
     * @return bool The applicationGuardForceAuditing
     */
@@ -1657,7 +2457,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the applicationGuardForceAuditing
-    * Force auditing will persist Windows logs and events to meet security/compliance criteria (sample events are user login-logoff, use of privilege rights, software installation, system changes, etc.)
     *
     * @param bool $val The applicationGuardForceAuditing
     *
@@ -1671,7 +2470,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the applicationGuardBlockClipboardSharing
-    * Block clipboard to share data from Host to Container, or from Container to Host, or both ways, or neither ways. Possible values are: notConfigured, blockBoth, blockHostToContainer, blockContainerToHost, blockNone.
     *
     * @return ApplicationGuardBlockClipboardSharingType The applicationGuardBlockClipboardSharing
     */
@@ -1690,7 +2488,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the applicationGuardBlockClipboardSharing
-    * Block clipboard to share data from Host to Container, or from Container to Host, or both ways, or neither ways. Possible values are: notConfigured, blockBoth, blockHostToContainer, blockContainerToHost, blockNone.
     *
     * @param ApplicationGuardBlockClipboardSharingType $val The applicationGuardBlockClipboardSharing
     *
@@ -1704,7 +2501,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the applicationGuardAllowPrintToPDF
-    * Allow printing to PDF from Container
     *
     * @return bool The applicationGuardAllowPrintToPDF
     */
@@ -1719,7 +2515,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the applicationGuardAllowPrintToPDF
-    * Allow printing to PDF from Container
     *
     * @param bool $val The applicationGuardAllowPrintToPDF
     *
@@ -1733,7 +2528,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the applicationGuardAllowPrintToXPS
-    * Allow printing to XPS from Container
     *
     * @return bool The applicationGuardAllowPrintToXPS
     */
@@ -1748,7 +2542,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the applicationGuardAllowPrintToXPS
-    * Allow printing to XPS from Container
     *
     * @param bool $val The applicationGuardAllowPrintToXPS
     *
@@ -1762,7 +2555,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the applicationGuardAllowPrintToLocalPrinters
-    * Allow printing to Local Printers from Container
     *
     * @return bool The applicationGuardAllowPrintToLocalPrinters
     */
@@ -1777,7 +2569,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the applicationGuardAllowPrintToLocalPrinters
-    * Allow printing to Local Printers from Container
     *
     * @param bool $val The applicationGuardAllowPrintToLocalPrinters
     *
@@ -1791,7 +2582,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the applicationGuardAllowPrintToNetworkPrinters
-    * Allow printing to Network Printers from Container
     *
     * @return bool The applicationGuardAllowPrintToNetworkPrinters
     */
@@ -1806,7 +2596,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the applicationGuardAllowPrintToNetworkPrinters
-    * Allow printing to Network Printers from Container
     *
     * @param bool $val The applicationGuardAllowPrintToNetworkPrinters
     *
@@ -1874,7 +2663,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the bitLockerDisableWarningForOtherDiskEncryption
-    * Allows the Admin to disable the warning prompt for other disk encryption on the user machines.
     *
     * @return bool The bitLockerDisableWarningForOtherDiskEncryption
     */
@@ -1889,7 +2677,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the bitLockerDisableWarningForOtherDiskEncryption
-    * Allows the Admin to disable the warning prompt for other disk encryption on the user machines.
     *
     * @param bool $val The bitLockerDisableWarningForOtherDiskEncryption
     *
@@ -1903,7 +2690,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the bitLockerEnableStorageCardEncryptionOnMobile
-    * Allows the admin to require encryption to be turned on using BitLocker. This policy is valid only for a mobile SKU.
     *
     * @return bool The bitLockerEnableStorageCardEncryptionOnMobile
     */
@@ -1918,7 +2704,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the bitLockerEnableStorageCardEncryptionOnMobile
-    * Allows the admin to require encryption to be turned on using BitLocker. This policy is valid only for a mobile SKU.
     *
     * @param bool $val The bitLockerEnableStorageCardEncryptionOnMobile
     *
@@ -1932,7 +2717,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the bitLockerEncryptDevice
-    * Allows the admin to require encryption to be turned on using BitLocker.
     *
     * @return bool The bitLockerEncryptDevice
     */
@@ -1947,7 +2731,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the bitLockerEncryptDevice
-    * Allows the admin to require encryption to be turned on using BitLocker.
     *
     * @param bool $val The bitLockerEncryptDevice
     *
@@ -2023,7 +2806,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the bitLockerRemovableDrivePolicy
-    * BitLocker Removable Drive Policy.
     *
     * @return BitLockerRemovableDrivePolicy The bitLockerRemovableDrivePolicy
     */
@@ -2042,7 +2824,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the bitLockerRemovableDrivePolicy
-    * BitLocker Removable Drive Policy.
     *
     * @param BitLockerRemovableDrivePolicy $val The bitLockerRemovableDrivePolicy
     *

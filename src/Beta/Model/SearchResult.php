@@ -27,7 +27,6 @@ class SearchResult extends Entity
 {
     /**
     * Gets the onClickTelemetryUrl
-    * A callback URL that can be used to record telemetry information. The application should issue a GET on this URL if the user interacts with this item to improve the quality of results.
     *
     * @return string The onClickTelemetryUrl
     */
@@ -42,7 +41,6 @@ class SearchResult extends Entity
 
     /**
     * Sets the onClickTelemetryUrl
-    * A callback URL that can be used to record telemetry information. The application should issue a GET on this URL if the user interacts with this item to improve the quality of results.
     *
     * @param string $val The value of the onClickTelemetryUrl
     *

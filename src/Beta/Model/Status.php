@@ -35,4 +35,5 @@ class Status extends Enum
     const UPDATED = "updated";
     const DELETED = "deleted";
     const IGNORED = "ignored";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

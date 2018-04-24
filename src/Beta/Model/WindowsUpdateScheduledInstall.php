@@ -28,7 +28,6 @@ class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleType
 
     /**
     * Gets the scheduledInstallDay
-    * Scheduled Install Day in week Possible values are: userDefined, everyday, sunday, monday, tuesday, wednesday, thursday, friday, saturday.
     *
     * @return WeeklySchedule The scheduledInstallDay
     */
@@ -47,7 +46,6 @@ class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleType
 
     /**
     * Sets the scheduledInstallDay
-    * Scheduled Install Day in week Possible values are: userDefined, everyday, sunday, monday, tuesday, wednesday, thursday, friday, saturday.
     *
     * @param WeeklySchedule $val The value to assign to the scheduledInstallDay
     *
@@ -61,7 +59,6 @@ class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleType
 
     /**
     * Gets the scheduledInstallTime
-    * Scheduled Install Time during day
     *
     * @return TimeOfDay The scheduledInstallTime
     */
@@ -80,7 +77,6 @@ class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleType
 
     /**
     * Sets the scheduledInstallTime
-    * Scheduled Install Time during day
     *
     * @param TimeOfDay $val The value to assign to the scheduledInstallTime
     *
