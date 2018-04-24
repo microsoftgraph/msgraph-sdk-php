@@ -1616,26 +1616,6 @@ class User extends DirectoryObject
         return $this;
     }
     
-
-     /** 
-     * Gets the ownedDevices
-    * Devices that are owned by the user. Read-only. Nullable.
-     *
-     * @return array The ownedDevices
-     */
-    public function getOwnedDevices()
-    {
-        if (array_key_exists("identityUserRisk", $this->_propDict)) {
-            if (is_a($this->_propDict["identityUserRisk"], "Microsoft\Graph\Beta\Model\IdentityUserRisk")) {
-                return $this->_propDict["identityUserRisk"];
-            } else {
-                $this->_propDict["identityUserRisk"] = new IdentityUserRisk($this->_propDict["identityUserRisk"]);
-                return $this->_propDict["identityUserRisk"];
-            }
-        }
-        return null;
-    }
-    
     /**
     * Sets the identityUserRisk
     *
@@ -1648,34 +1628,6 @@ class User extends DirectoryObject
         $this->_propDict["identityUserRisk"] = $val;
         return $this;
     }
-    
-    /**
-    * Gets the deviceEnrollmentLimit
-    *
-    * @return int The deviceEnrollmentLimit
-    */
-    public function getDeviceEnrollmentLimit()
-    {
-        if (array_key_exists("deviceEnrollmentLimit", $this->_propDict)) {
-            return $this->_propDict["deviceEnrollmentLimit"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the deviceEnrollmentLimit
-    *
-    * @param int $val The deviceEnrollmentLimit
-    *
-    * @return User
-    */
-    public function setDeviceEnrollmentLimit($val)
-    {
-        $this->_propDict["deviceEnrollmentLimit"] = intval($val);
-        return $this;
-    }
-    
 
      /** 
      * Gets the extensions
