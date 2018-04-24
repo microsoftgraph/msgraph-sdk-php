@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* DirectoryObject File
+* ListItemVersion File
 * PHP version 7
 *
 * @category  Library
@@ -15,7 +15,7 @@
 namespace Microsoft\Graph\Model;
 
 /**
-* DirectoryObject class
+* ListItemVersion class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,36 +24,36 @@ namespace Microsoft\Graph\Model;
 * @version   Release: 0.1.0
 * @link      https://graph.microsoft.io/
 */
-class DirectoryObject extends Entity
+class ListItemVersion extends BaseItemVersion
 {
     /**
-    * Gets the deletedDateTime
+    * Gets the fields
     *
-    * @return \DateTime The deletedDateTime
+    * @return FieldValueSet The fields
     */
-    public function getDeletedDateTime()
+    public function getFields()
     {
-        if (array_key_exists("deletedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["deletedDateTime"], "\DateTime")) {
-                return $this->_propDict["deletedDateTime"];
+        if (array_key_exists("fields", $this->_propDict)) {
+            if (is_a($this->_propDict["fields"], "Microsoft\Graph\Model\FieldValueSet")) {
+                return $this->_propDict["fields"];
             } else {
-                $this->_propDict["deletedDateTime"] = new \DateTime($this->_propDict["deletedDateTime"]);
-                return $this->_propDict["deletedDateTime"];
+                $this->_propDict["fields"] = new FieldValueSet($this->_propDict["fields"]);
+                return $this->_propDict["fields"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the deletedDateTime
+    * Sets the fields
     *
-    * @param \DateTime $val The deletedDateTime
+    * @param FieldValueSet $val The fields
     *
-    * @return DirectoryObject
+    * @return ListItemVersion
     */
-    public function setDeletedDateTime($val)
+    public function setFields($val)
     {
-        $this->_propDict["deletedDateTime"] = $val;
+        $this->_propDict["fields"] = $val;
         return $this;
     }
     

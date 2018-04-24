@@ -173,7 +173,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the maintenanceWindowDurationInHours
-    * Maintenance window duration for device updates. Valid values 1 to 5
+    * Maintenance window duration for device updates. Valid values 0 to 5
     *
     * @return int The maintenanceWindowDurationInHours
     */
@@ -188,7 +188,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the maintenanceWindowDurationInHours
-    * Maintenance window duration for device updates. Valid values 1 to 5
+    * Maintenance window duration for device updates. Valid values 0 to 5
     *
     * @param int $val The maintenanceWindowDurationInHours
     *

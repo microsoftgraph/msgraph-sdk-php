@@ -81,4 +81,35 @@ class ScoredEmailAddress extends Entity
         $this->_propDict["relevanceScore"] = $val;
         return $this;
     }
+
+    /**
+    * Gets the selectionLikelihood
+    *
+    * @return SelectionLikelihoodInfo The selectionLikelihood
+    */
+    public function getSelectionLikelihood()
+    {
+        if (array_key_exists("selectionLikelihood", $this->_propDict)) {
+            if (is_a($this->_propDict["selectionLikelihood"], "Microsoft\Graph\Model\SelectionLikelihoodInfo")) {
+                return $this->_propDict["selectionLikelihood"];
+            } else {
+                $this->_propDict["selectionLikelihood"] = new SelectionLikelihoodInfo($this->_propDict["selectionLikelihood"]);
+                return $this->_propDict["selectionLikelihood"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the selectionLikelihood
+    *
+    * @param SelectionLikelihoodInfo $val The value to assign to the selectionLikelihood
+    *
+    * @return ScoredEmailAddress The ScoredEmailAddress
+    */
+    public function setSelectionLikelihood($val)
+    {
+        $this->_propDict["selectionLikelihood"] = $val;
+         return $this;
+    }
 }

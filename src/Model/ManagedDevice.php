@@ -84,6 +84,37 @@ class ManagedDevice extends Entity
         return $this;
     }
     
+    /**
+    * Gets the managedDeviceOwnerType
+    *
+    * @return ManagedDeviceOwnerType The managedDeviceOwnerType
+    */
+    public function getManagedDeviceOwnerType()
+    {
+        if (array_key_exists("managedDeviceOwnerType", $this->_propDict)) {
+            if (is_a($this->_propDict["managedDeviceOwnerType"], "Microsoft\Graph\Model\ManagedDeviceOwnerType")) {
+                return $this->_propDict["managedDeviceOwnerType"];
+            } else {
+                $this->_propDict["managedDeviceOwnerType"] = new ManagedDeviceOwnerType($this->_propDict["managedDeviceOwnerType"]);
+                return $this->_propDict["managedDeviceOwnerType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the managedDeviceOwnerType
+    *
+    * @param ManagedDeviceOwnerType $val The managedDeviceOwnerType
+    *
+    * @return ManagedDevice
+    */
+    public function setManagedDeviceOwnerType($val)
+    {
+        $this->_propDict["managedDeviceOwnerType"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the deviceActionResults

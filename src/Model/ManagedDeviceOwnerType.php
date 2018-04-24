@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* PolicyPlatformType File
+* ManagedDeviceOwnerType File
 * PHP version 7
 *
 * @category  Library
@@ -17,7 +17,7 @@ namespace Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* PolicyPlatformType class
+* ManagedDeviceOwnerType class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -26,17 +26,12 @@ use Microsoft\Graph\Core\Enum;
 * @version   Release: 0.1.0
 * @link      https://graph.microsoft.io/
 */
-class PolicyPlatformType extends Enum
+class ManagedDeviceOwnerType extends Enum
 {
     /**
-    * The Enum PolicyPlatformType
+    * The Enum ManagedDeviceOwnerType
     */
-    const ANDROID = "android";
-    const I_OS = "iOS";
-    const MAC_OS = "macOS";
-    const WINDOWS_PHONE81 = "windowsPhone81";
-    const WINDOWS81_AND_LATER = "windows81AndLater";
-    const WINDOWS10_AND_LATER = "windows10AndLater";
-    const ANDROID_WORK_PROFILE = "androidWorkProfile";
-    const ALL = "all";
+    const UNKNOWN = "unknown";
+    const COMPANY = "company";
+    const PERSONAL = "personal";
 }

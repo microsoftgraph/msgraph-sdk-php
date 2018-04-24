@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* PolicyPlatformType File
+* MessageActionFlag File
 * PHP version 7
 *
 * @category  Library
@@ -17,7 +17,7 @@ namespace Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* PolicyPlatformType class
+* MessageActionFlag class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -26,17 +26,20 @@ use Microsoft\Graph\Core\Enum;
 * @version   Release: 0.1.0
 * @link      https://graph.microsoft.io/
 */
-class PolicyPlatformType extends Enum
+class MessageActionFlag extends Enum
 {
     /**
-    * The Enum PolicyPlatformType
+    * The Enum MessageActionFlag
     */
-    const ANDROID = "android";
-    const I_OS = "iOS";
-    const MAC_OS = "macOS";
-    const WINDOWS_PHONE81 = "windowsPhone81";
-    const WINDOWS81_AND_LATER = "windows81AndLater";
-    const WINDOWS10_AND_LATER = "windows10AndLater";
-    const ANDROID_WORK_PROFILE = "androidWorkProfile";
-    const ALL = "all";
+    const ANY = "any";
+    const CALL = "call";
+    const DO_NOT_FORWARD = "doNotForward";
+    const FOLLOW_UP = "followUp";
+    const FYI = "fyi";
+    const FORWARD = "forward";
+    const NO_RESPONSE_NECESSARY = "noResponseNecessary";
+    const READ = "read";
+    const REPLY = "reply";
+    const REPLY_TO_ALL = "replyToAll";
+    const REVIEW = "review";
 }
