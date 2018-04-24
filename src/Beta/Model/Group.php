@@ -55,6 +55,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the createdDateTime
+    * The date and time the group was created.
     *
     * @return \DateTime The createdDateTime
     */
@@ -73,6 +74,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the createdDateTime
+    * The date and time the group was created.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -495,60 +497,6 @@ class Group extends DirectoryObject
     public function setRenewedDateTime($val)
     {
         $this->_propDict["renewedDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the resourceBehaviorOptions
-    *
-    * @return string The resourceBehaviorOptions
-    */
-    public function getResourceBehaviorOptions()
-    {
-        if (array_key_exists("resourceBehaviorOptions", $this->_propDict)) {
-            return $this->_propDict["resourceBehaviorOptions"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the resourceBehaviorOptions
-    *
-    * @param string $val The resourceBehaviorOptions
-    *
-    * @return Group
-    */
-    public function setResourceBehaviorOptions($val)
-    {
-        $this->_propDict["resourceBehaviorOptions"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the resourceProvisioningOptions
-    *
-    * @return string The resourceProvisioningOptions
-    */
-    public function getResourceProvisioningOptions()
-    {
-        if (array_key_exists("resourceProvisioningOptions", $this->_propDict)) {
-            return $this->_propDict["resourceProvisioningOptions"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the resourceProvisioningOptions
-    *
-    * @param string $val The resourceProvisioningOptions
-    *
-    * @return Group
-    */
-    public function setResourceProvisioningOptions($val)
-    {
-        $this->_propDict["resourceProvisioningOptions"] = $val;
         return $this;
     }
     
@@ -1456,65 +1404,6 @@ class Group extends DirectoryObject
     public function setOnenote($val)
     {
         $this->_propDict["onenote"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the team
-    *
-    * @return Team The team
-    */
-    public function getTeam()
-    {
-        if (array_key_exists("team", $this->_propDict)) {
-            if (is_a($this->_propDict["team"], "Microsoft\Graph\Beta\Model\Team")) {
-                return $this->_propDict["team"];
-            } else {
-                $this->_propDict["team"] = new Team($this->_propDict["team"]);
-                return $this->_propDict["team"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the team
-    *
-    * @param Team $val The team
-    *
-    * @return Group
-    */
-    public function setTeam($val)
-    {
-        $this->_propDict["team"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the channels
-     *
-     * @return array The channels
-     */
-    public function getChannels()
-    {
-        if (array_key_exists("channels", $this->_propDict)) {
-           return $this->_propDict["channels"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the channels
-    *
-    * @param Channel $val The channels
-    *
-    * @return Group
-    */
-    public function setChannels($val)
-    {
-		$this->_propDict["channels"] = $val;
         return $this;
     }
     

@@ -27,6 +27,7 @@ class CurrencyColumn extends Entity
 {
     /**
     * Gets the locale
+    * Specifies the locale from which to infer the currency symbol.
     *
     * @return string The locale
     */
@@ -41,6 +42,7 @@ class CurrencyColumn extends Entity
 
     /**
     * Sets the locale
+    * Specifies the locale from which to infer the currency symbol.
     *
     * @param string $val The value of the locale
     *

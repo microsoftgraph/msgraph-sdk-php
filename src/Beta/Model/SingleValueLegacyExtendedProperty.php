@@ -28,6 +28,7 @@ class SingleValueLegacyExtendedProperty extends Entity
 {
     /**
     * Gets the value
+    * A property value.
     *
     * @return string The value
     */
@@ -42,6 +43,7 @@ class SingleValueLegacyExtendedProperty extends Entity
     
     /**
     * Sets the value
+    * A property value.
     *
     * @param string $val The value
     *

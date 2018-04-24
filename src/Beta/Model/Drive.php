@@ -148,6 +148,7 @@ class Drive extends BaseItem
     
     /**
     * Gets the system
+    * If present, indicates that this is a system-managed drive. Read-only.
     *
     * @return SystemFacet The system
     */
@@ -166,6 +167,7 @@ class Drive extends BaseItem
     
     /**
     * Sets the system
+    * If present, indicates that this is a system-managed drive. Read-only.
     *
     * @param SystemFacet $val The system
     *

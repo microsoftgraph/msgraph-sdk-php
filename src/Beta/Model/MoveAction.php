@@ -26,7 +26,8 @@ namespace Microsoft\Graph\Beta\Model;
 class MoveAction extends Entity
 {
     /**
-    * Gets the from
+    * Gets the class
+    * The type of data source, such as Person.
     *
     * @return string The from
     */
@@ -40,7 +41,8 @@ class MoveAction extends Entity
     }
 
     /**
-    * Sets the from
+    * Sets the class
+    * The type of data source, such as Person.
     *
     * @param string $val The value of the from
     *
@@ -52,7 +54,8 @@ class MoveAction extends Entity
         return $this;
     }
     /**
-    * Gets the to
+    * Gets the subclass
+    * The secondary type of data source, such as OrganizationUser.
     *
     * @return string The to
     */
@@ -66,7 +69,8 @@ class MoveAction extends Entity
     }
 
     /**
-    * Sets the to
+    * Sets the subclass
+    * The secondary type of data source, such as OrganizationUser.
     *
     * @param string $val The value of the to
     *

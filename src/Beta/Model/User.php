@@ -192,6 +192,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the companyName
+    * The company name which the user is associated. Read-only.
     *
     * @return string The companyName
     */
@@ -206,6 +207,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the companyName
+    * The company name which the user is associated. Read-only.
     *
     * @param string $val The companyName
     *
@@ -246,6 +248,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the country
+    * The country/region in which the user is located; for example, "US" or "UK". Supports $filter.
     *
     * @return string The country
     */
@@ -260,6 +263,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the country
+    * The country/region in which the user is located; for example, "US" or "UK". Supports $filter.
     *
     * @param string $val The country
     *
@@ -436,6 +440,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the jobTitle
+    * The user's job title. Supports $filter.
     *
     * @return string The jobTitle
     */
@@ -450,6 +455,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the jobTitle
+    * The user's job title. Supports $filter.
     *
     * @param string $val The jobTitle
     *
@@ -602,6 +608,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the onPremisesImmutableId
+    * This property is used to associate an on-premises Active Directory user account to their Azure AD user object. This property must be specified when creating a new user account in the Graph if you are using a federated domain for the user's userPrincipalName (UPN) property. Important: The $ and  characters cannot be used when specifying this property. Supports $filter.
     *
     * @return string The onPremisesImmutableId
     */
@@ -616,6 +623,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the onPremisesImmutableId
+    * This property is used to associate an on-premises Active Directory user account to their Azure AD user object. This property must be specified when creating a new user account in the Graph if you are using a federated domain for the user's userPrincipalName (UPN) property. Important: The $ and  characters cannot be used when specifying this property. Supports $filter.
     *
     * @param string $val The onPremisesImmutableId
     *
@@ -823,6 +831,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the passwordPolicies
+    * Specifies password policies for the user. This value is an enumeration with one possible value being "DisableStrongPassword", which allows weaker passwords than the default policy to be specified. "DisablePasswordExpiration" can also be specified. The two may be specified together; for example: "DisablePasswordExpiration, DisableStrongPassword".
     *
     * @return string The passwordPolicies
     */
@@ -837,6 +846,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the passwordPolicies
+    * Specifies password policies for the user. This value is an enumeration with one possible value being "DisableStrongPassword", which allows weaker passwords than the default policy to be specified. "DisablePasswordExpiration" can also be specified. The two may be specified together; for example: "DisablePasswordExpiration, DisableStrongPassword".
     *
     * @param string $val The passwordPolicies
     *
@@ -850,6 +860,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the passwordProfile
+    * Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required.
     *
     * @return PasswordProfile The passwordProfile
     */
@@ -868,6 +879,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the passwordProfile
+    * Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required.
     *
     * @param PasswordProfile $val The passwordProfile
     *
@@ -1210,6 +1222,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the userPrincipalName
+    * The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant's collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization. Supports $filter and $orderby.
     *
     * @return string The userPrincipalName
     */
@@ -1224,6 +1237,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the userPrincipalName
+    * The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant's collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization. Supports $filter and $orderby.
     *
     * @param string $val The userPrincipalName
     *
@@ -1237,6 +1251,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the userType
+    * A string value that can be used to classify user types in your directory, such as "Member" and "Guest". Supports $filter.
     *
     * @return string The userType
     */
@@ -1251,6 +1266,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the userType
+    * A string value that can be used to classify user types in your directory, such as "Member" and "Guest". Supports $filter.
     *
     * @param string $val The userType
     *
@@ -1572,11 +1588,42 @@ class User extends DirectoryObject
     }
     
     /**
-    * Gets the identityUserRisk
+    * Gets the deviceEnrollmentLimit
+    * The limit on the maximum number of devices that the user is permitted to enroll. Allowed values are 5 or 1000.
     *
-    * @return IdentityUserRisk The identityUserRisk
+    * @return int The deviceEnrollmentLimit
     */
-    public function getIdentityUserRisk()
+    public function getDeviceEnrollmentLimit()
+    {
+        if (array_key_exists("deviceEnrollmentLimit", $this->_propDict)) {
+            return $this->_propDict["deviceEnrollmentLimit"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the deviceEnrollmentLimit
+    * The limit on the maximum number of devices that the user is permitted to enroll. Allowed values are 5 or 1000.
+    *
+    * @param int $val The deviceEnrollmentLimit
+    *
+    * @return User
+    */
+    public function setDeviceEnrollmentLimit($val)
+    {
+        $this->_propDict["deviceEnrollmentLimit"] = intval($val);
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the ownedDevices
+    * Devices that are owned by the user. Read-only. Nullable.
+     *
+     * @return array The ownedDevices
+     */
+    public function getOwnedDevices()
     {
         if (array_key_exists("identityUserRisk", $this->_propDict)) {
             if (is_a($this->_propDict["identityUserRisk"], "Microsoft\Graph\Beta\Model\IdentityUserRisk")) {
@@ -1715,6 +1762,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the manager
+    * The user or contact that is this user's manager. Read-only. (HTTP Methods: GET, PUT, DELETE.)
     *
     * @return DirectoryObject The manager
     */
@@ -1733,6 +1781,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the manager
+    * The user or contact that is this user's manager. Read-only. (HTTP Methods: GET, PUT, DELETE.)
     *
     * @param DirectoryObject $val The manager
     *
@@ -2527,6 +2576,7 @@ class User extends DirectoryObject
 
      /** 
      * Gets the managedDevices
+    * The managed devices associated with the user.
      *
      * @return array The managedDevices
      */
@@ -2541,6 +2591,7 @@ class User extends DirectoryObject
     
     /** 
     * Sets the managedDevices
+    * The managed devices associated with the user.
     *
     * @param ManagedDevice $val The managedDevices
     *
@@ -2554,37 +2605,8 @@ class User extends DirectoryObject
     
 
      /** 
-     * Gets the deviceEnrollmentConfigurations
-    * Get enrollment configurations targeted to the user
-     *
-     * @return array The deviceEnrollmentConfigurations
-     */
-    public function getDeviceEnrollmentConfigurations()
-    {
-        if (array_key_exists("deviceEnrollmentConfigurations", $this->_propDict)) {
-           return $this->_propDict["deviceEnrollmentConfigurations"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the deviceEnrollmentConfigurations
-    * Get enrollment configurations targeted to the user
-    *
-    * @param DeviceEnrollmentConfiguration $val The deviceEnrollmentConfigurations
-    *
-    * @return User
-    */
-    public function setDeviceEnrollmentConfigurations($val)
-    {
-		$this->_propDict["deviceEnrollmentConfigurations"] = $val;
-        return $this;
-    }
-    
-
-     /** 
      * Gets the managedAppRegistrations
+    * Zero or more managed app registrations that belong to the user.
      *
      * @return array The managedAppRegistrations
      */
@@ -2599,6 +2621,7 @@ class User extends DirectoryObject
     
     /** 
     * Sets the managedAppRegistrations
+    * Zero or more managed app registrations that belong to the user.
     *
     * @param ManagedAppRegistration $val The managedAppRegistrations
     *
@@ -2612,63 +2635,8 @@ class User extends DirectoryObject
     
 
      /** 
-     * Gets the devices
-     *
-     * @return array The devices
-     */
-    public function getDevices()
-    {
-        if (array_key_exists("devices", $this->_propDict)) {
-           return $this->_propDict["devices"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the devices
-    *
-    * @param Device $val The devices
-    *
-    * @return User
-    */
-    public function setDevices($val)
-    {
-		$this->_propDict["devices"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the joinedTeams
-     *
-     * @return array The joinedTeams
-     */
-    public function getJoinedTeams()
-    {
-        if (array_key_exists("joinedTeams", $this->_propDict)) {
-           return $this->_propDict["joinedTeams"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the joinedTeams
-    *
-    * @param Group $val The joinedTeams
-    *
-    * @return User
-    */
-    public function setJoinedTeams($val)
-    {
-		$this->_propDict["joinedTeams"] = $val;
-        return $this;
-    }
-    
-
-     /** 
      * Gets the deviceManagementTroubleshootingEvents
+    * The list of troubleshooting events for this user.
      *
      * @return array The deviceManagementTroubleshootingEvents
      */
@@ -2683,6 +2651,7 @@ class User extends DirectoryObject
     
     /** 
     * Sets the deviceManagementTroubleshootingEvents
+    * The list of troubleshooting events for this user.
     *
     * @param DeviceManagementTroubleshootingEvent $val The deviceManagementTroubleshootingEvents
     *
@@ -2691,34 +2660,6 @@ class User extends DirectoryObject
     public function setDeviceManagementTroubleshootingEvents($val)
     {
 		$this->_propDict["deviceManagementTroubleshootingEvents"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the agreementAcceptances
-     *
-     * @return array The agreementAcceptances
-     */
-    public function getAgreementAcceptances()
-    {
-        if (array_key_exists("agreementAcceptances", $this->_propDict)) {
-           return $this->_propDict["agreementAcceptances"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the agreementAcceptances
-    *
-    * @param AgreementAcceptance $val The agreementAcceptances
-    *
-    * @return User
-    */
-    public function setAgreementAcceptances($val)
-    {
-		$this->_propDict["agreementAcceptances"] = $val;
         return $this;
     }
     

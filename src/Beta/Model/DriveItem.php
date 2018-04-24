@@ -814,6 +814,7 @@ class DriveItem extends BaseItem
 
      /** 
      * Gets the thumbnails
+    * Collection containing [ThumbnailSet][] objects associated with the item. For more info, see [getting thumbnails][]. Read-only. Nullable.
      *
      * @return array The thumbnails
      */
@@ -828,6 +829,7 @@ class DriveItem extends BaseItem
     
     /** 
     * Sets the thumbnails
+    * Collection containing [ThumbnailSet][] objects associated with the item. For more info, see [getting thumbnails][]. Read-only. Nullable.
     *
     * @param ThumbnailSet $val The thumbnails
     *

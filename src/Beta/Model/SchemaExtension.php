@@ -137,6 +137,7 @@ class SchemaExtension extends Entity
     
     /**
     * Gets the owner
+    * The appId of the application that is the owner of the schema extension. This property can be supplied on creation, to set the owner.  If not supplied, then the calling application's appId will be set as the owner. In either case, the signed-in user must be the owner of the application. Once set, this property is read-only and cannot be changed.
     *
     * @return string The owner
     */
@@ -151,6 +152,7 @@ class SchemaExtension extends Entity
     
     /**
     * Sets the owner
+    * The appId of the application that is the owner of the schema extension. This property can be supplied on creation, to set the owner.  If not supplied, then the calling application's appId will be set as the owner. In either case, the signed-in user must be the owner of the application. Once set, this property is read-only and cannot be changed.
     *
     * @param string $val The owner
     *

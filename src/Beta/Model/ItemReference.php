@@ -53,6 +53,7 @@ class ItemReference extends Entity
     }
     /**
     * Gets the driveType
+    * Identifies the type of drive. See [drive][] resource for values.
     *
     * @return string The driveType
     */
@@ -67,6 +68,7 @@ class ItemReference extends Entity
 
     /**
     * Sets the driveType
+    * Identifies the type of drive. See [drive][] resource for values.
     *
     * @param string $val The value of the driveType
     *
@@ -157,6 +159,7 @@ class ItemReference extends Entity
     }
     /**
     * Gets the shareId
+    * A unique identifier for a shared resource that can be accessed via the [Shares][] API.
     *
     * @return string The shareId
     */
@@ -171,6 +174,7 @@ class ItemReference extends Entity
 
     /**
     * Sets the shareId
+    * A unique identifier for a shared resource that can be accessed via the [Shares][] API.
     *
     * @param string $val The value of the shareId
     *

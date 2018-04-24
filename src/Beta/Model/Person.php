@@ -136,6 +136,7 @@ class Person extends Entity
     
     /**
     * Gets the personNotes
+    * Free-form notes that the user has taken about this person.
     *
     * @return string The personNotes
     */
@@ -150,6 +151,7 @@ class Person extends Entity
     
     /**
     * Sets the personNotes
+    * Free-form notes that the user has taken about this person.
     *
     * @param string $val The personNotes
     *
@@ -545,7 +547,8 @@ class Person extends Entity
     }
     
     /**
-    * Gets the userPrincipalName
+    * Gets the imAddress
+    * The instant message voice over IP (VOIP) session initiation protocol (SIP) address for the user. Read-only.
     *
     * @return string The userPrincipalName
     */
@@ -559,7 +562,8 @@ class Person extends Entity
     }
     
     /**
-    * Sets the userPrincipalName
+    * Sets the imAddress
+    * The instant message voice over IP (VOIP) session initiation protocol (SIP) address for the user. Read-only.
     *
     * @param string $val The userPrincipalName
     *

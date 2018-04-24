@@ -493,6 +493,7 @@ class Contact extends OutlookItem
     
     /**
     * Gets the jobTitle
+    * The contact's job title.
     *
     * @return string The jobTitle
     */
@@ -507,6 +508,7 @@ class Contact extends OutlookItem
     
     /**
     * Sets the jobTitle
+    * The contact's job title.
     *
     * @param string $val The jobTitle
     *

@@ -59,6 +59,7 @@ class SharedDriveItem extends BaseItem
     
     /**
     * Gets the driveItem
+    * Used to access the underlying driveItem
     *
     * @return DriveItem The driveItem
     */
@@ -77,6 +78,7 @@ class SharedDriveItem extends BaseItem
     
     /**
     * Sets the driveItem
+    * Used to access the underlying driveItem
     *
     * @param DriveItem $val The driveItem
     *
@@ -91,6 +93,7 @@ class SharedDriveItem extends BaseItem
 
      /** 
      * Gets the items
+    * All driveItems contained in the sharing root. This collection cannot be enumerated.
      *
      * @return array The items
      */
@@ -105,6 +108,7 @@ class SharedDriveItem extends BaseItem
     
     /** 
     * Sets the items
+    * All driveItems contained in the sharing root. This collection cannot be enumerated.
     *
     * @param DriveItem $val The items
     *
@@ -118,6 +122,7 @@ class SharedDriveItem extends BaseItem
     
     /**
     * Gets the list
+    * Used to access the underlying list
     *
     * @return GraphList The list
     */
@@ -136,6 +141,7 @@ class SharedDriveItem extends BaseItem
     
     /**
     * Sets the list
+    * Used to access the underlying list
     *
     * @param GraphList $val The list
     *
@@ -149,6 +155,7 @@ class SharedDriveItem extends BaseItem
     
     /**
     * Gets the listItem
+    * Used to access the underlying listItem
     *
     * @return ListItem The listItem
     */
@@ -167,6 +174,7 @@ class SharedDriveItem extends BaseItem
     
     /**
     * Sets the listItem
+    * Used to access the underlying listItem
     *
     * @param ListItem $val The listItem
     *
@@ -211,6 +219,7 @@ class SharedDriveItem extends BaseItem
     
     /**
     * Gets the site
+    * Used to access the underlying site
     *
     * @return Site The site
     */
@@ -229,6 +238,7 @@ class SharedDriveItem extends BaseItem
     
     /**
     * Sets the site
+    * Used to access the underlying site
     *
     * @param Site $val The site
     *

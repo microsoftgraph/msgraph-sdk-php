@@ -27,6 +27,7 @@ class NumberColumn extends Entity
 {
     /**
     * Gets the decimalPlaces
+    * How many decimal places to display. See below for information about the possible values.
     *
     * @return string The decimalPlaces
     */
@@ -41,6 +42,7 @@ class NumberColumn extends Entity
 
     /**
     * Sets the decimalPlaces
+    * How many decimal places to display. See below for information about the possible values.
     *
     * @param string $val The value of the decimalPlaces
     *
@@ -53,6 +55,7 @@ class NumberColumn extends Entity
     }
     /**
     * Gets the displayAs
+    * How the value should be presented in the UX. Must be one of number or percentage. If unspecified, treated as number.
     *
     * @return string The displayAs
     */
@@ -67,6 +70,7 @@ class NumberColumn extends Entity
 
     /**
     * Sets the displayAs
+    * How the value should be presented in the UX. Must be one of number or percentage. If unspecified, treated as number.
     *
     * @param string $val The value of the displayAs
     *
@@ -79,6 +83,7 @@ class NumberColumn extends Entity
     }
     /**
     * Gets the maximum
+    * The maximum permitted value.
     *
     * @return float The maximum
     */
@@ -93,6 +98,7 @@ class NumberColumn extends Entity
 
     /**
     * Sets the maximum
+    * The maximum permitted value.
     *
     * @param float $val The value of the maximum
     *
@@ -105,6 +111,7 @@ class NumberColumn extends Entity
     }
     /**
     * Gets the minimum
+    * The minimum permitted value.
     *
     * @return float The minimum
     */
@@ -119,6 +126,7 @@ class NumberColumn extends Entity
 
     /**
     * Sets the minimum
+    * The minimum permitted value.
     *
     * @param float $val The value of the minimum
     *
