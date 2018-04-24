@@ -242,6 +242,36 @@ class DeviceAppManagement extends Entity
     
 
      /** 
+     * Gets the vppTokens
+    * List of Vpp tokens for this organization.
+     *
+     * @return array The vppTokens
+     */
+    public function getVppTokens()
+    {
+        if (array_key_exists("vppTokens", $this->_propDict)) {
+           return $this->_propDict["vppTokens"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the vppTokens
+    * List of Vpp tokens for this organization.
+    *
+    * @param VppToken $val The vppTokens
+    *
+    * @return DeviceAppManagement
+    */
+    public function setVppTokens($val)
+    {
+		$this->_propDict["vppTokens"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the managedAppPolicies
     * Managed app policies.
      *

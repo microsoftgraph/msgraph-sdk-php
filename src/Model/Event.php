@@ -57,7 +57,7 @@ class Event extends OutlookItem
     
     /**
     * Gets the originalEndTimeZone
-    * The end time zone that was set when the event was created. A value of tzone://Microsoft/Customindicates that a legacy custom time zone was set in desktop Outlook.
+    * The end time zone that was set when the event was created. A value of tzone://Microsoft/Custom indicates that a legacy custom time zone was set in desktop Outlook.
     *
     * @return string The originalEndTimeZone
     */
@@ -72,7 +72,7 @@ class Event extends OutlookItem
     
     /**
     * Sets the originalEndTimeZone
-    * The end time zone that was set when the event was created. A value of tzone://Microsoft/Customindicates that a legacy custom time zone was set in desktop Outlook.
+    * The end time zone that was set when the event was created. A value of tzone://Microsoft/Custom indicates that a legacy custom time zone was set in desktop Outlook.
     *
     * @param string $val The originalEndTimeZone
     *
@@ -326,7 +326,7 @@ class Event extends OutlookItem
     
     /**
     * Gets the importance
-    * The importance of the event. Possible values are: Low, Normal, High.
+    * The importance of the event. Possible values are: low, normal, high.
     *
     * @return Importance The importance
     */
@@ -345,7 +345,7 @@ class Event extends OutlookItem
     
     /**
     * Sets the importance
-    * The importance of the event. Possible values are: Low, Normal, High.
+    * The importance of the event. Possible values are: low, normal, high.
     *
     * @param Importance $val The importance
     *
@@ -359,7 +359,7 @@ class Event extends OutlookItem
     
     /**
     * Gets the sensitivity
-    * Possible values are: Normal, Personal, Private, Confidential.
+    * Possible values are: normal, personal, private, confidential.
     *
     * @return Sensitivity The sensitivity
     */
@@ -378,7 +378,7 @@ class Event extends OutlookItem
     
     /**
     * Sets the sensitivity
-    * Possible values are: Normal, Personal, Private, Confidential.
+    * Possible values are: normal, personal, private, confidential.
     *
     * @param Sensitivity $val The sensitivity
     *
@@ -519,6 +519,36 @@ class Event extends OutlookItem
     public function setLocation($val)
     {
         $this->_propDict["location"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the locations
+    * The locations where the event is held or attended from. The location and locations properties always correspond with each other. If you update the location property, any prior locations in the locations collection would be removed and replaced by the new location value.
+     *
+     * @return array The locations
+     */
+    public function getLocations()
+    {
+        if (array_key_exists("locations", $this->_propDict)) {
+           return $this->_propDict["locations"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the locations
+    * The locations where the event is held or attended from. The location and locations properties always correspond with each other. If you update the location property, any prior locations in the locations collection would be removed and replaced by the new location value.
+    *
+    * @param Location $val The locations
+    *
+    * @return Event
+    */
+    public function setLocations($val)
+    {
+		$this->_propDict["locations"] = $val;
         return $this;
     }
     
@@ -702,7 +732,7 @@ class Event extends OutlookItem
     
     /**
     * Gets the showAs
-    * The status to show. Possible values are: Free, Tentative, Busy, Oof, WorkingElsewhere, Unknown.
+    * The status to show. Possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
     *
     * @return FreeBusyStatus The showAs
     */
@@ -721,7 +751,7 @@ class Event extends OutlookItem
     
     /**
     * Sets the showAs
-    * The status to show. Possible values are: Free, Tentative, Busy, Oof, WorkingElsewhere, Unknown.
+    * The status to show. Possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
     *
     * @param FreeBusyStatus $val The showAs
     *
@@ -735,7 +765,7 @@ class Event extends OutlookItem
     
     /**
     * Gets the type
-    * The event type. Possible values are: SingleInstance, Occurrence, Exception, SeriesMaster. Read-only.
+    * The event type. Possible values are: singleInstance, occurrence, exception, seriesMaster. Read-only.
     *
     * @return EventType The type
     */
@@ -754,7 +784,7 @@ class Event extends OutlookItem
     
     /**
     * Sets the type
-    * The event type. Possible values are: SingleInstance, Occurrence, Exception, SeriesMaster. Read-only.
+    * The event type. Possible values are: singleInstance, occurrence, exception, seriesMaster. Read-only.
     *
     * @param EventType $val The type
     *

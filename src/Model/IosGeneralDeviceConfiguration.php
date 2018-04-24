@@ -1431,7 +1431,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the iCloudBlockActivityContinuation
-    * Indicates whether or not to block  the user from continuing work they started on iOS device to another iOS or macOS device.
+    * Indicates whether or not to block  the the user from continuing work they started on iOS device to another iOS or macOS device.
     *
     * @return bool The iCloudBlockActivityContinuation
     */
@@ -1446,7 +1446,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the iCloudBlockActivityContinuation
-    * Indicates whether or not to block  the user from continuing work they started on iOS device to another iOS or macOS device.
+    * Indicates whether or not to block  the the user from continuing work they started on iOS device to another iOS or macOS device.
     *
     * @param bool $val The iCloudBlockActivityContinuation
     *

@@ -53,4 +53,35 @@ class SiteCollection extends Entity
         $this->_propDict["hostname"] = $val;
         return $this;
     }
+
+    /**
+    * Gets the root
+    *
+    * @return Root The root
+    */
+    public function getRoot()
+    {
+        if (array_key_exists("root", $this->_propDict)) {
+            if (is_a($this->_propDict["root"], "Microsoft\Graph\Model\Root")) {
+                return $this->_propDict["root"];
+            } else {
+                $this->_propDict["root"] = new Root($this->_propDict["root"]);
+                return $this->_propDict["root"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the root
+    *
+    * @param Root $val The value to assign to the root
+    *
+    * @return SiteCollection The SiteCollection
+    */
+    public function setRoot($val)
+    {
+        $this->_propDict["root"] = $val;
+         return $this;
+    }
 }

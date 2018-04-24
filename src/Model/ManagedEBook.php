@@ -214,7 +214,7 @@ class ManagedEBook extends Entity
     
     /**
     * Gets the lastModifiedDateTime
-    * The date and time when teh eBook was last modified.
+    * The date and time when the eBook was last modified.
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -233,7 +233,7 @@ class ManagedEBook extends Entity
     
     /**
     * Sets the lastModifiedDateTime
-    * The date and time when teh eBook was last modified.
+    * The date and time when the eBook was last modified.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
