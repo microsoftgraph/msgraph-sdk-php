@@ -150,6 +150,36 @@ class Message extends OutlookItem
         return $this;
     }
     
+
+     /** 
+     * Gets the internetMessageHeaders
+    * The collection of message headers, defined by RFC5322, that provide details of the network path taken by a message from the sender to the recipient. Read-only.
+     *
+     * @return array The internetMessageHeaders
+     */
+    public function getInternetMessageHeaders()
+    {
+        if (array_key_exists("internetMessageHeaders", $this->_propDict)) {
+           return $this->_propDict["internetMessageHeaders"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the internetMessageHeaders
+    * The collection of message headers, defined by RFC5322, that provide details of the network path taken by a message from the sender to the recipient. Read-only.
+    *
+    * @param InternetMessageHeader $val The internetMessageHeaders
+    *
+    * @return Message
+    */
+    public function setInternetMessageHeaders($val)
+    {
+		$this->_propDict["internetMessageHeaders"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the subject
     * The subject of the message.
@@ -726,6 +756,39 @@ class Message extends OutlookItem
     public function setInferenceClassification($val)
     {
         $this->_propDict["inferenceClassification"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the flag
+    * The flag value that indicates the status, start date, due date, or completion date for the message.
+    *
+    * @return FollowupFlag The flag
+    */
+    public function getFlag()
+    {
+        if (array_key_exists("flag", $this->_propDict)) {
+            if (is_a($this->_propDict["flag"], "Microsoft\Graph\Model\FollowupFlag")) {
+                return $this->_propDict["flag"];
+            } else {
+                $this->_propDict["flag"] = new FollowupFlag($this->_propDict["flag"]);
+                return $this->_propDict["flag"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the flag
+    * The flag value that indicates the status, start date, due date, or completion date for the message.
+    *
+    * @param FollowupFlag $val The flag
+    *
+    * @return Message
+    */
+    public function setFlag($val)
+    {
+        $this->_propDict["flag"] = $val;
         return $this;
     }
     

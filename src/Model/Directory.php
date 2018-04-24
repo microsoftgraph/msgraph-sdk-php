@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* PolicyPlatformType File
+* Directory File
 * PHP version 7
 *
 * @category  Library
@@ -14,10 +14,8 @@
 */
 namespace Microsoft\Graph\Model;
 
-use Microsoft\Graph\Core\Enum;
-
 /**
-* PolicyPlatformType class
+* Directory class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -26,17 +24,34 @@ use Microsoft\Graph\Core\Enum;
 * @version   Release: 0.1.0
 * @link      https://graph.microsoft.io/
 */
-class PolicyPlatformType extends Enum
+class Directory extends Entity
 {
-    /**
-    * The Enum PolicyPlatformType
+
+     /** 
+     * Gets the deletedItems
+     *
+     * @return array The deletedItems
+     */
+    public function getDeletedItems()
+    {
+        if (array_key_exists("deletedItems", $this->_propDict)) {
+           return $this->_propDict["deletedItems"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the deletedItems
+    *
+    * @param DirectoryObject $val The deletedItems
+    *
+    * @return Directory
     */
-    const ANDROID = "android";
-    const I_OS = "iOS";
-    const MAC_OS = "macOS";
-    const WINDOWS_PHONE81 = "windowsPhone81";
-    const WINDOWS81_AND_LATER = "windows81AndLater";
-    const WINDOWS10_AND_LATER = "windows10AndLater";
-    const ANDROID_WORK_PROFILE = "androidWorkProfile";
-    const ALL = "all";
+    public function setDeletedItems($val)
+    {
+		$this->_propDict["deletedItems"] = $val;
+        return $this;
+    }
+    
 }

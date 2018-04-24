@@ -1594,6 +1594,37 @@ class User extends DirectoryObject
         return $this;
     }
     
+    /**
+    * Gets the outlook
+    *
+    * @return OutlookUser The outlook
+    */
+    public function getOutlook()
+    {
+        if (array_key_exists("outlook", $this->_propDict)) {
+            if (is_a($this->_propDict["outlook"], "Microsoft\Graph\Model\OutlookUser")) {
+                return $this->_propDict["outlook"];
+            } else {
+                $this->_propDict["outlook"] = new OutlookUser($this->_propDict["outlook"]);
+                return $this->_propDict["outlook"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the outlook
+    *
+    * @param OutlookUser $val The outlook
+    *
+    * @return User
+    */
+    public function setOutlook($val)
+    {
+        $this->_propDict["outlook"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the messages
@@ -2203,6 +2234,34 @@ class User extends DirectoryObject
     public function setDeviceManagementTroubleshootingEvents($val)
     {
 		$this->_propDict["deviceManagementTroubleshootingEvents"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the activities
+     *
+     * @return array The activities
+     */
+    public function getActivities()
+    {
+        if (array_key_exists("activities", $this->_propDict)) {
+           return $this->_propDict["activities"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the activities
+    *
+    * @param UserActivity $val The activities
+    *
+    * @return User
+    */
+    public function setActivities($val)
+    {
+		$this->_propDict["activities"] = $val;
         return $this;
     }
     

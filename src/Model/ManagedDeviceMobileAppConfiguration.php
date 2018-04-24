@@ -240,6 +240,34 @@ class ManagedDeviceMobileAppConfiguration extends Entity
     
 
      /** 
+     * Gets the deviceStatuses
+     *
+     * @return array The deviceStatuses
+     */
+    public function getDeviceStatuses()
+    {
+        if (array_key_exists("deviceStatuses", $this->_propDict)) {
+           return $this->_propDict["deviceStatuses"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the deviceStatuses
+    *
+    * @param ManagedDeviceMobileAppConfigurationDeviceStatus $val The deviceStatuses
+    *
+    * @return ManagedDeviceMobileAppConfiguration
+    */
+    public function setDeviceStatuses($val)
+    {
+		$this->_propDict["deviceStatuses"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the userStatuses
     * List of ManagedDeviceMobileAppConfigurationUserStatus.
      *

@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* PolicyPlatformType File
+* LocationType File
 * PHP version 7
 *
 * @category  Library
@@ -17,7 +17,7 @@ namespace Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* PolicyPlatformType class
+* LocationType class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -26,17 +26,19 @@ use Microsoft\Graph\Core\Enum;
 * @version   Release: 0.1.0
 * @link      https://graph.microsoft.io/
 */
-class PolicyPlatformType extends Enum
+class LocationType extends Enum
 {
     /**
-    * The Enum PolicyPlatformType
+    * The Enum LocationType
     */
-    const ANDROID = "android";
-    const I_OS = "iOS";
-    const MAC_OS = "macOS";
-    const WINDOWS_PHONE81 = "windowsPhone81";
-    const WINDOWS81_AND_LATER = "windows81AndLater";
-    const WINDOWS10_AND_LATER = "windows10AndLater";
-    const ANDROID_WORK_PROFILE = "androidWorkProfile";
-    const ALL = "all";
+    const GRAPHDEFAULT = "default";
+    const CONFERENCE_ROOM = "conferenceRoom";
+    const HOME_ADDRESS = "homeAddress";
+    const BUSINESS_ADDRESS = "businessAddress";
+    const GEO_COORDINATES = "geoCoordinates";
+    const STREET_ADDRESS = "streetAddress";
+    const HOTEL = "hotel";
+    const RESTAURANT = "restaurant";
+    const LOCAL_BUSINESS = "localBusiness";
+    const POSTAL_ADDRESS = "postalAddress";
 }

@@ -384,6 +384,37 @@ class DriveItem extends BaseItem
     }
     
     /**
+    * Gets the publication
+    *
+    * @return PublicationFacet The publication
+    */
+    public function getPublication()
+    {
+        if (array_key_exists("publication", $this->_propDict)) {
+            if (is_a($this->_propDict["publication"], "Microsoft\Graph\Model\PublicationFacet")) {
+                return $this->_propDict["publication"];
+            } else {
+                $this->_propDict["publication"] = new PublicationFacet($this->_propDict["publication"]);
+                return $this->_propDict["publication"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the publication
+    *
+    * @param PublicationFacet $val The publication
+    *
+    * @return DriveItem
+    */
+    public function setPublication($val)
+    {
+        $this->_propDict["publication"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the remoteItem
     * Remote item data, if the item is shared from a drive other than the one being accessed. Read-only.
     *
@@ -790,6 +821,34 @@ class DriveItem extends BaseItem
     public function setThumbnails($val)
     {
 		$this->_propDict["thumbnails"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the versions
+     *
+     * @return array The versions
+     */
+    public function getVersions()
+    {
+        if (array_key_exists("versions", $this->_propDict)) {
+           return $this->_propDict["versions"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the versions
+    *
+    * @param DriveItemVersion $val The versions
+    *
+    * @return DriveItem
+    */
+    public function setVersions($val)
+    {
+		$this->_propDict["versions"] = $val;
         return $this;
     }
     
