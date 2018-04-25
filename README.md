@@ -30,7 +30,7 @@ supported authentication portals:
 
 ### Authenticate with the Microsoft Graph service
 
-The Microsoft Graph SDK for PHP does not include any default authentication implementations. The [`thenetworg/oauth2-azure`](https://github.com/thenetworg/oauth2-azure) library will handle standard Oauth2 for you, and provide a usable token for querying the Graph.
+The Microsoft Graph SDK for PHP does not include any default authentication implementations. The [`thephpleague/oauth2-client`](https://github.com/thephpleague/oauth2-client) library will handle the OAuth2 flow for you and provide a usable token for querying the Graph.
 
 To authenticate as an application you can use the [Guzzle HTTP client](http://docs.guzzlephp.org/en/stable/), which comes preinstalled with this library, for example like this:
 ```php
