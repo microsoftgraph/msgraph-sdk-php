@@ -12,6 +12,7 @@ namespace Microsoft\Graph\Test;
 * possible.
 */
 define("CLIENT_ID", getenv("client_id"));
+define("CLIENT_SECRET", getenv("client_secret"));
 define ("USERNAME", getenv("test_username"));
 define("PASSWORD", getenv("test_password"));
 
