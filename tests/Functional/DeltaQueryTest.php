@@ -6,11 +6,12 @@ use Microsoft\Graph\Model;
 class DeltaQueryTest extends TestCase
 {
     private $_client;
+    private $graphTestBase;
 
     protected function setUp()
     {
-        $graphTestBase = new GraphTestBase();
-        $this->_client = $graphTestBase->graphClient;
+        $this->graphTestBase = new GraphTestBase();
+        $this->_client = $this->graphTestBase->graphClient;
     }
 
     /**
@@ -45,5 +46,30 @@ class DeltaQueryTest extends TestCase
 
         // Count is likely 0 but collection should not be null
         $this->assertNotNull($groups);
+    }
+
+    /**
+    * @group functional
+    */
+    public function testSetAccessToken()
+    {
+        $this->_client->setApiVersion("beta");
+        $deltaPageRequest = $this->_client->createCollectionRequest("GET", "/groups/delta")
+            ->setReturnType(Model\Group::class);
+
+        // Test if we can change the accessToken
+        while (!$deltaPageRequest->isEnd()) {
+            // Store authentication-header
+            $oldAuthenticationHeader = $deltaPageRequest->getHeaders()['Authorization'];
+            // Set a new delta-token
+            $deltaPageRequest->setAccessToken($this->graphTestBase->getAccessToken());
+            // Get the new authentication-header
+            $newAuthenticationHeader = $deltaPageRequest->getHeaders()['Authorization'];
+            // Do the actual request
+            $groups = $deltaPageRequest->getPage();
+
+            $this->assertNotSame($oldAuthenticationHeader,$newAuthenticationHeader);
+            $this->assertNotNull($groups);
+        }
     }
 }
