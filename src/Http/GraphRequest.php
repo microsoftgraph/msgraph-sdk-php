@@ -134,20 +134,6 @@ class GraphRequest
     }
 
     /**
-    * Sets a new accessToken
-    *
-    * @param string $accessToken A valid access token to validate the Graph call
-    *
-    * @return GraphRequest object
-    */
-    public function setAccessToken($accessToken)
-    {
-        $this->accessToken = $accessToken;
-        $this->headers['Authorization'] = 'Bearer ' . $this->accessToken;
-        return $this;
-    }
-
-    /**
     * Sets the return type of the response object
     *
     * @param mixed $returnClass The object class to use
