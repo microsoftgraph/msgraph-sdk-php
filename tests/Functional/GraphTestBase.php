@@ -7,7 +7,6 @@ include_once("TestConstants.php");
 class GraphTestBase
 {
     private $clientId;
-    private $clientSecret;
     private $username;
     private $password;
     private $contentType = "application/x-www-form-urlencoded";
