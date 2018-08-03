@@ -415,6 +415,11 @@ class GraphRequest
     */
     private function _getRequestUrl()
     {
+        //Send request with opaque URL
+        if (stripos($this->endpoint, "http") === 0) {
+            return $this->endpoint;
+        }
+
         return $this->apiVersion . $this->endpoint;
     }
 
