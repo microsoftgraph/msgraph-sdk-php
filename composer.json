@@ -6,8 +6,8 @@
 	"license": "MIT",
 	"authors": [
 		{
-			"name": "Caitlin Bales",
-			"email": "caitlin.bales@microsoft.com",
+			"name": "Michael Mainer",
+			"email": "mmainer@microsoft.com",
 			"role": "Developer"
 		}
 	],
@@ -21,8 +21,9 @@
 		"mikey179/vfsStream": "^1.2"
 	},
 	"autoload": {
-		"psr-4": { "Microsoft\\Graph\\": "src/",
+		"psr-4": {
+			"Microsoft\\Graph\\": "src/",
 			"Microsoft\\Graph\\Test\\": "tests/Functional/"
-	 	}
+		}
 	}
 }
