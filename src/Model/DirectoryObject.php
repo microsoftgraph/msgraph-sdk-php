@@ -26,4 +26,35 @@ namespace Microsoft\Graph\Model;
 */
 class DirectoryObject extends Entity
 {
+    /**
+    * Gets the deletedDateTime
+    *
+    * @return \DateTime The deletedDateTime
+    */
+    public function getDeletedDateTime()
+    {
+        if (array_key_exists("deletedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["deletedDateTime"], "\DateTime")) {
+                return $this->_propDict["deletedDateTime"];
+            } else {
+                $this->_propDict["deletedDateTime"] = new \DateTime($this->_propDict["deletedDateTime"]);
+                return $this->_propDict["deletedDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the deletedDateTime
+    *
+    * @param \DateTime $val The deletedDateTime
+    *
+    * @return DirectoryObject
+    */
+    public function setDeletedDateTime($val)
+    {
+        $this->_propDict["deletedDateTime"] = $val;
+        return $this;
+    }
+    
 }

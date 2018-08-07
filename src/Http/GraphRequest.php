@@ -134,6 +134,20 @@ class GraphRequest
     }
 
     /**
+    * Sets a new accessToken
+    *
+    * @param string $accessToken A valid access token to validate the Graph call
+    *
+    * @return GraphRequest object
+    */
+    public function setAccessToken($accessToken)
+    {
+        $this->accessToken = $accessToken;
+        $this->headers['Authorization'] = 'Bearer ' . $this->accessToken;
+        return $this;
+    }
+
+    /**
     * Sets the return type of the response object
     *
     * @param mixed $returnClass The object class to use
@@ -402,9 +416,10 @@ class GraphRequest
     private function _getRequestUrl()
     {
         //Send request with opaque URL
-        if (stripos($this->endpoint, "http") !== FALSE) {
+        if (stripos($this->endpoint, "http") === 0) {
             return $this->endpoint;
         }
+
         return $this->apiVersion . $this->endpoint;
     }
 

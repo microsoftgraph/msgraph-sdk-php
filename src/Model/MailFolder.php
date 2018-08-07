@@ -203,6 +203,36 @@ class MailFolder extends Entity
     
 
      /** 
+     * Gets the messageRules
+    * The collection of rules that apply to the user's Inbox folder.
+     *
+     * @return array The messageRules
+     */
+    public function getMessageRules()
+    {
+        if (array_key_exists("messageRules", $this->_propDict)) {
+           return $this->_propDict["messageRules"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the messageRules
+    * The collection of rules that apply to the user's Inbox folder.
+    *
+    * @param MessageRule $val The messageRules
+    *
+    * @return MailFolder
+    */
+    public function setMessageRules($val)
+    {
+		$this->_propDict["messageRules"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the childFolders
     * The collection of child folders in the mailFolder.
      *

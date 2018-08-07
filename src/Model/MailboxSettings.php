@@ -60,6 +60,7 @@ class MailboxSettings extends Entity
     }
     /**
     * Gets the archiveFolder
+    * Folder ID of an archive folder for the user.
     *
     * @return string The archiveFolder
     */
@@ -74,6 +75,7 @@ class MailboxSettings extends Entity
 
     /**
     * Sets the archiveFolder
+    * Folder ID of an archive folder for the user.
     *
     * @param string $val The value of the archiveFolder
     *
@@ -143,6 +145,39 @@ class MailboxSettings extends Entity
     public function setLanguage($val)
     {
         $this->_propDict["language"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the workingHours
+    * The days of the week and hours in a specific time zone that the user works.
+    *
+    * @return WorkingHours The workingHours
+    */
+    public function getWorkingHours()
+    {
+        if (array_key_exists("workingHours", $this->_propDict)) {
+            if (is_a($this->_propDict["workingHours"], "Microsoft\Graph\Model\WorkingHours")) {
+                return $this->_propDict["workingHours"];
+            } else {
+                $this->_propDict["workingHours"] = new WorkingHours($this->_propDict["workingHours"]);
+                return $this->_propDict["workingHours"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the workingHours
+    * The days of the week and hours in a specific time zone that the user works.
+    *
+    * @param WorkingHours $val The value to assign to the workingHours
+    *
+    * @return MailboxSettings The MailboxSettings
+    */
+    public function setWorkingHours($val)
+    {
+        $this->_propDict["workingHours"] = $val;
          return $this;
     }
 }
