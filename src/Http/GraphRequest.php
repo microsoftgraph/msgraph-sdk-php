@@ -245,7 +245,7 @@ class GraphRequest
     public function execute($client = null)
     {
         if (is_null($client)) {
-            $client = $this->createGuzzleClient($this->proxyPort);
+            $client = $this->createGuzzleClient();
         }
 
         $result = $client->request(
@@ -286,7 +286,7 @@ class GraphRequest
     public function executeAsync($client = null)
     {
         if (is_null($client)) {
-            $client = $this->createGuzzleClient($this->proxyPort);
+            $client = $this->createGuzzleClient();
         }
 
         $promise = $client->requestAsync(
@@ -444,21 +444,21 @@ class GraphRequest
     * client is not reused. This allows the user
     * to set and change headers on a per-request
     * basis
-    * 
-    * @param string $proxyPort The port to forward
-    * requests through. If null, a proxy is not used
+    *
+    * If a proxyPort was passed in the constructor, all
+    * requests will be forwared through this proxy.
     *
     * @return \GuzzleHttp\Client The new client
     */
-    protected function createGuzzleClient($proxyPort = null)
+    protected function createGuzzleClient()
     { 
         $clientSettings = [
             'base_uri' => $this->baseUrl,
             'headers' => $this->headers
         ];
-        if ($proxyPort != null) {
+        if ($this->proxyPort !== null) {
             $clientSettings['verify'] = false;
-            $clientSettings['proxy'] = $proxyPort;
+            $clientSettings['proxy'] = $this->proxyPort;
         } 
         $client = new Client($clientSettings);
         
