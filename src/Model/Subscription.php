@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Model;
@@ -19,16 +19,16 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class Subscription extends Entity
 {
     /**
     * Gets the resource
-    * Specifies the resource that will be monitored for changes. Do not include the base URL ("https://graph.microsoft.com/v1.0/").
+    * Specifies the resource that will be monitored for changes. Do not include the base URL (https://graph.microsoft.com/{version}/).
     *
     * @return string The resource
     */
@@ -43,7 +43,7 @@ class Subscription extends Entity
     
     /**
     * Sets the resource
-    * Specifies the resource that will be monitored for changes. Do not include the base URL ("https://graph.microsoft.com/v1.0/").
+    * Specifies the resource that will be monitored for changes. Do not include the base URL (https://graph.microsoft.com/{version}/).
     *
     * @param string $val The resource
     *
@@ -57,7 +57,7 @@ class Subscription extends Entity
     
     /**
     * Gets the changeType
-    * Indicates the type of change in the subscribed resource that will raise a notification. The supported values are: created, updated, deleted. Multiple values can be combined using a comma-separated list.
+    * Indicates the type of change in the subscribed resource that will raise a notification. The supported values are: created, updated, deleted. Multiple values can be combined using a comma-separated list. Drive root Item notifications require the use of updated only.
     *
     * @return string The changeType
     */
@@ -72,7 +72,7 @@ class Subscription extends Entity
     
     /**
     * Sets the changeType
-    * Indicates the type of change in the subscribed resource that will raise a notification. The supported values are: created, updated, deleted. Multiple values can be combined using a comma-separated list.
+    * Indicates the type of change in the subscribed resource that will raise a notification. The supported values are: created, updated, deleted. Multiple values can be combined using a comma-separated list. Drive root Item notifications require the use of updated only.
     *
     * @param string $val The changeType
     *
@@ -86,7 +86,7 @@ class Subscription extends Entity
     
     /**
     * Gets the clientState
-    * Specifies the value of the clientState property sent by the service in each notification. The maximum length is 128 characters. The client can check that the notification came from the service by comparing the value of the clientState property sent with the subscription with the value of the clientState property received with each notification.
+    * Specifies the value of the clientState property sent by the service in each notification. The maximum length is 255 characters. The client can check that the notification came from the service by comparing the value of the clientState property sent with the subscription with the value of the clientState property received with each notification.
     *
     * @return string The clientState
     */
@@ -101,7 +101,7 @@ class Subscription extends Entity
     
     /**
     * Sets the clientState
-    * Specifies the value of the clientState property sent by the service in each notification. The maximum length is 128 characters. The client can check that the notification came from the service by comparing the value of the clientState property sent with the subscription with the value of the clientState property received with each notification.
+    * Specifies the value of the clientState property sent by the service in each notification. The maximum length is 255 characters. The client can check that the notification came from the service by comparing the value of the clientState property sent with the subscription with the value of the clientState property received with each notification.
     *
     * @param string $val The clientState
     *
@@ -172,6 +172,64 @@ class Subscription extends Entity
     public function setExpirationDateTime($val)
     {
         $this->_propDict["expirationDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the applicationId
+    * Identifier of the application used to create the subscription.
+    *
+    * @return string The applicationId
+    */
+    public function getApplicationId()
+    {
+        if (array_key_exists("applicationId", $this->_propDict)) {
+            return $this->_propDict["applicationId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the applicationId
+    * Identifier of the application used to create the subscription.
+    *
+    * @param string $val The applicationId
+    *
+    * @return Subscription
+    */
+    public function setApplicationId($val)
+    {
+        $this->_propDict["applicationId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the creatorId
+    * Identifier of the user or service principal that created the subscription.If the app used delegated permissions to create the subscription, this field contains the id of the signed-in user the app called on behalf of.If the app used application permissions, this field contains the id of the service principal corresponding to the app.
+    *
+    * @return string The creatorId
+    */
+    public function getCreatorId()
+    {
+        if (array_key_exists("creatorId", $this->_propDict)) {
+            return $this->_propDict["creatorId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the creatorId
+    * Identifier of the user or service principal that created the subscription.If the app used delegated permissions to create the subscription, this field contains the id of the signed-in user the app called on behalf of.If the app used application permissions, this field contains the id of the service principal corresponding to the app.
+    *
+    * @param string $val The creatorId
+    *
+    * @return Subscription
+    */
+    public function setCreatorId($val)
+    {
+        $this->_propDict["creatorId"] = $val;
         return $this;
     }
     

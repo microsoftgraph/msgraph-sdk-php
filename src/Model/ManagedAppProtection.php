@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class ManagedAppProtection extends ManagedAppPolicy
@@ -400,7 +400,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     
     /**
     * Gets the maximumPinRetries
-    * Maximum number of incorrect pin retry attempts before the managed app is wiped.
+    * Maximum number of incorrect pin retry attempts before the managed app is either blocked or wiped.
     *
     * @return int The maximumPinRetries
     */
@@ -415,7 +415,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     
     /**
     * Sets the maximumPinRetries
-    * Maximum number of incorrect pin retry attempts before the managed app is wiped.
+    * Maximum number of incorrect pin retry attempts before the managed app is either blocked or wiped.
     *
     * @param int $val The maximumPinRetries
     *

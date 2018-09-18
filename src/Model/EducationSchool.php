@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class EducationSchool extends EducationOrganization
@@ -410,37 +410,6 @@ class EducationSchool extends EducationOrganization
     public function setUsers($val)
     {
 		$this->_propDict["users"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the administrativeUnit
-    *
-    * @return AdministrativeUnit The administrativeUnit
-    */
-    public function getAdministrativeUnit()
-    {
-        if (array_key_exists("administrativeUnit", $this->_propDict)) {
-            if (is_a($this->_propDict["administrativeUnit"], "Microsoft\Graph\Model\AdministrativeUnit")) {
-                return $this->_propDict["administrativeUnit"];
-            } else {
-                $this->_propDict["administrativeUnit"] = new AdministrativeUnit($this->_propDict["administrativeUnit"]);
-                return $this->_propDict["administrativeUnit"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the administrativeUnit
-    *
-    * @param AdministrativeUnit $val The administrativeUnit
-    *
-    * @return EducationSchool
-    */
-    public function setAdministrativeUnit($val)
-    {
-        $this->_propDict["administrativeUnit"] = $val;
         return $this;
     }
     

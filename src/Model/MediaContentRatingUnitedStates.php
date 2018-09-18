@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Model;
@@ -18,9 +18,9 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class MediaContentRatingUnitedStates extends Entity
@@ -28,7 +28,7 @@ class MediaContentRatingUnitedStates extends Entity
 
     /**
     * Gets the movieRating
-    * Movies rating selected for United States Possible values are: allAllowed, allBlocked, general, parentalGuidance, parentalGuidance13, restricted, adults.
+    * Movies rating selected for United States. Possible values are: allAllowed, allBlocked, general, parentalGuidance, parentalGuidance13, restricted, adults.
     *
     * @return RatingUnitedStatesMoviesType The movieRating
     */
@@ -47,7 +47,7 @@ class MediaContentRatingUnitedStates extends Entity
 
     /**
     * Sets the movieRating
-    * Movies rating selected for United States Possible values are: allAllowed, allBlocked, general, parentalGuidance, parentalGuidance13, restricted, adults.
+    * Movies rating selected for United States. Possible values are: allAllowed, allBlocked, general, parentalGuidance, parentalGuidance13, restricted, adults.
     *
     * @param RatingUnitedStatesMoviesType $val The value to assign to the movieRating
     *
@@ -61,7 +61,7 @@ class MediaContentRatingUnitedStates extends Entity
 
     /**
     * Gets the tvRating
-    * TV rating selected for United States Possible values are: allAllowed, allBlocked, childrenAll, childrenAbove7, general, parentalGuidance, childrenAbove14, adults.
+    * TV rating selected for United States. Possible values are: allAllowed, allBlocked, childrenAll, childrenAbove7, general, parentalGuidance, childrenAbove14, adults.
     *
     * @return RatingUnitedStatesTelevisionType The tvRating
     */
@@ -80,7 +80,7 @@ class MediaContentRatingUnitedStates extends Entity
 
     /**
     * Sets the tvRating
-    * TV rating selected for United States Possible values are: allAllowed, allBlocked, childrenAll, childrenAbove7, general, parentalGuidance, childrenAbove14, adults.
+    * TV rating selected for United States. Possible values are: allAllowed, allBlocked, childrenAll, childrenAbove7, general, parentalGuidance, childrenAbove14, adults.
     *
     * @param RatingUnitedStatesTelevisionType $val The value to assign to the tvRating
     *

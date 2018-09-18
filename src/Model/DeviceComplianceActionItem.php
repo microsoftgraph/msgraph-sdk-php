@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class DeviceComplianceActionItem extends Entity
@@ -57,7 +57,7 @@ class DeviceComplianceActionItem extends Entity
     
     /**
     * Gets the actionType
-    * What action to take Possible values are: noAction, notification, block, retire, wipe, removeResourceAccessProfiles.
+    * What action to take. Possible values are: noAction, notification, block, retire, wipe, removeResourceAccessProfiles.
     *
     * @return DeviceComplianceActionType The actionType
     */
@@ -76,7 +76,7 @@ class DeviceComplianceActionItem extends Entity
     
     /**
     * Sets the actionType
-    * What action to take Possible values are: noAction, notification, block, retire, wipe, removeResourceAccessProfiles.
+    * What action to take. Possible values are: noAction, notification, block, retire, wipe, removeResourceAccessProfiles.
     *
     * @param DeviceComplianceActionType $val The actionType
     *

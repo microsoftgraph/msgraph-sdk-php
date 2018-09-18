@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class Group extends DirectoryObject
@@ -290,6 +290,34 @@ class Group extends DirectoryObject
     public function setOnPremisesLastSyncDateTime($val)
     {
         $this->_propDict["onPremisesLastSyncDateTime"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the onPremisesProvisioningErrors
+     *
+     * @return array The onPremisesProvisioningErrors
+     */
+    public function getOnPremisesProvisioningErrors()
+    {
+        if (array_key_exists("onPremisesProvisioningErrors", $this->_propDict)) {
+           return $this->_propDict["onPremisesProvisioningErrors"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the onPremisesProvisioningErrors
+    *
+    * @param OnPremisesProvisioningError $val The onPremisesProvisioningErrors
+    *
+    * @return Group
+    */
+    public function setOnPremisesProvisioningErrors($val)
+    {
+		$this->_propDict["onPremisesProvisioningErrors"] = $val;
         return $this;
     }
     

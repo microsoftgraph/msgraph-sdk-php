@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class Windows10GeneralConfiguration extends DeviceConfiguration
@@ -699,7 +699,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeBlocked
-    * Indicates whether or not to Block the user from using the Edge browser.
+    * Indicates whether or not to Block the user from using the Microsoft Edge browser.
     *
     * @return bool The edgeBlocked
     */
@@ -714,7 +714,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeBlocked
-    * Indicates whether or not to Block the user from using the Edge browser.
+    * Indicates whether or not to Block the user from using the Microsoft Edge browser.
     *
     * @param bool $val The edgeBlocked
     *
@@ -728,7 +728,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeCookiePolicy
-    * Indicates which cookies to block in the Edge browser. Possible values are: userDefined, allow, blockThirdParty, blockAll.
+    * Indicates which cookies to block in the Microsoft Edge browser. Possible values are: userDefined, allow, blockThirdParty, blockAll.
     *
     * @return EdgeCookiePolicy The edgeCookiePolicy
     */
@@ -747,7 +747,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeCookiePolicy
-    * Indicates which cookies to block in the Edge browser. Possible values are: userDefined, allow, blockThirdParty, blockAll.
+    * Indicates which cookies to block in the Microsoft Edge browser. Possible values are: userDefined, allow, blockThirdParty, blockAll.
     *
     * @param EdgeCookiePolicy $val The edgeCookiePolicy
     *
@@ -761,7 +761,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeBlockDeveloperTools
-    * Indicates whether or not to block developer tools in the Edge browser.
+    * Indicates whether or not to block developer tools in the Microsoft Edge browser.
     *
     * @return bool The edgeBlockDeveloperTools
     */
@@ -776,7 +776,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeBlockDeveloperTools
-    * Indicates whether or not to block developer tools in the Edge browser.
+    * Indicates whether or not to block developer tools in the Microsoft Edge browser.
     *
     * @param bool $val The edgeBlockDeveloperTools
     *
@@ -819,7 +819,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeBlockExtensions
-    * Indicates whether or not to block extensions in the Edge browser.
+    * Indicates whether or not to block extensions in the Microsoft Edge browser.
     *
     * @return bool The edgeBlockExtensions
     */
@@ -834,7 +834,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeBlockExtensions
-    * Indicates whether or not to block extensions in the Edge browser.
+    * Indicates whether or not to block extensions in the Microsoft Edge browser.
     *
     * @param bool $val The edgeBlockExtensions
     *
@@ -848,7 +848,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeBlockInPrivateBrowsing
-    * Indicates whether or not to block InPrivate browsing on corporate networks, in the Edge browser.
+    * Indicates whether or not to block InPrivate browsing on corporate networks, in the Microsoft Edge browser.
     *
     * @return bool The edgeBlockInPrivateBrowsing
     */
@@ -863,7 +863,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeBlockInPrivateBrowsing
-    * Indicates whether or not to block InPrivate browsing on corporate networks, in the Edge browser.
+    * Indicates whether or not to block InPrivate browsing on corporate networks, in the Microsoft Edge browser.
     *
     * @param bool $val The edgeBlockInPrivateBrowsing
     *
@@ -1022,7 +1022,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeAllowStartPagesModification
-    * Allow users to change Start pages on Edge. Use the EdgeHomepageUrls to specify the Start pages that the user would see by default when they open Edge.
+    * Allow users to change Start pages on Microsoft Edge. Use the EdgeHomepageUrls to specify the Start pages that the user would see by default when they open Microsoft Edge.
     *
     * @return bool The edgeAllowStartPagesModification
     */
@@ -1037,7 +1037,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeAllowStartPagesModification
-    * Allow users to change Start pages on Edge. Use the EdgeHomepageUrls to specify the Start pages that the user would see by default when they open Edge.
+    * Allow users to change Start pages on Microsoft Edge. Use the EdgeHomepageUrls to specify the Start pages that the user would see by default when they open Microsoft Edge.
     *
     * @param bool $val The edgeAllowStartPagesModification
     *
@@ -2980,7 +2980,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the startMenuLayoutEdgeAssetsXml
-    * This policy setting allows you to import Edge assets to be used with startMenuLayoutXml policy. Start layout can contain secondary tile from Edge app which looks for Edge local asset file. Edge local asset would not exist and cause Edge secondary tile to appear empty in this case. This policy only gets applied when startMenuLayoutXml policy is modified. The value should be a UTF-8 Base64 encoded byte array.
+    * This policy setting allows you to import Microsoft Edge assets to be used with startMenuLayoutXml policy. Start layout can contain secondary tile from Microsoft Edge app which looks for Microsoft Edge local asset file. Microsoft Edge local asset would not exist and cause Microsoft Edge secondary tile to appear empty in this case. This policy only gets applied when startMenuLayoutXml policy is modified. The value should be a UTF-8 Base64 encoded byte array.
     *
     * @return \GuzzleHttp\Psr7\Stream The startMenuLayoutEdgeAssetsXml
     */
@@ -2999,7 +2999,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the startMenuLayoutEdgeAssetsXml
-    * This policy setting allows you to import Edge assets to be used with startMenuLayoutXml policy. Start layout can contain secondary tile from Edge app which looks for Edge local asset file. Edge local asset would not exist and cause Edge secondary tile to appear empty in this case. This policy only gets applied when startMenuLayoutXml policy is modified. The value should be a UTF-8 Base64 encoded byte array.
+    * This policy setting allows you to import Microsoft Edge assets to be used with startMenuLayoutXml policy. Start layout can contain secondary tile from Microsoft Edge app which looks for Microsoft Edge local asset file. Microsoft Edge local asset would not exist and cause Microsoft Edge secondary tile to appear empty in this case. This policy only gets applied when startMenuLayoutXml policy is modified. The value should be a UTF-8 Base64 encoded byte array.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The startMenuLayoutEdgeAssetsXml
     *
@@ -3960,7 +3960,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the windowsSpotlightConfigureOnLockScreen
-    * Specifies the type of Spotlight Possible values are: notConfigured, disabled, enabled.
+    * Specifies the type of Spotlight. Possible values are: notConfigured, disabled, enabled.
     *
     * @return WindowsSpotlightEnablementSettings The windowsSpotlightConfigureOnLockScreen
     */
@@ -3979,7 +3979,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the windowsSpotlightConfigureOnLockScreen
-    * Specifies the type of Spotlight Possible values are: notConfigured, disabled, enabled.
+    * Specifies the type of Spotlight. Possible values are: notConfigured, disabled, enabled.
     *
     * @param WindowsSpotlightEnablementSettings $val The windowsSpotlightConfigureOnLockScreen
     *
@@ -4494,7 +4494,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeBlockSendingIntranetTrafficToInternetExplorer
-    * Indicates whether or not to Block the user from sending Intranet traffic to Internet Explorer from Edge.
+    * Indicates whether or not to Block the user from sending Intranet traffic to Internet Explorer from Microsoft Edge.
     *
     * @return bool The edgeBlockSendingIntranetTrafficToInternetExplorer
     */
@@ -4509,7 +4509,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeBlockSendingIntranetTrafficToInternetExplorer
-    * Indicates whether or not to Block the user from sending Intranet traffic to Internet Explorer from Edge.
+    * Indicates whether or not to Block the user from sending Intranet traffic to Internet Explorer from Microsoft Edge.
     *
     * @param bool $val The edgeBlockSendingIntranetTrafficToInternetExplorer
     *
@@ -4581,7 +4581,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeFirstRunUrl
-    * The first run URL for when Edge browser is opened for the first time.
+    * The first run URL for when Microsoft Edge browser is opened for the first time.
     *
     * @return string The edgeFirstRunUrl
     */
@@ -4596,7 +4596,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeFirstRunUrl
-    * The first run URL for when Edge browser is opened for the first time.
+    * The first run URL for when Microsoft Edge browser is opened for the first time.
     *
     * @param string $val The edgeFirstRunUrl
     *
@@ -4643,7 +4643,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeHomepageUrls
-    * The list of URLs for homepages shodwn on MDM-enrolled devices on Edge browser.
+    * The list of URLs for homepages shodwn on MDM-enrolled devices on Microsoft Edge browser.
     *
     * @return string The edgeHomepageUrls
     */
@@ -4658,7 +4658,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeHomepageUrls
-    * The list of URLs for homepages shodwn on MDM-enrolled devices on Edge browser.
+    * The list of URLs for homepages shodwn on MDM-enrolled devices on Microsoft Edge browser.
     *
     * @param string $val The edgeHomepageUrls
     *
@@ -4672,7 +4672,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeBlockAccessToAboutFlags
-    * Indicates whether or not to prevent access to about flags on Edge browser.
+    * Indicates whether or not to prevent access to about flags on Microsoft Edge browser.
     *
     * @return bool The edgeBlockAccessToAboutFlags
     */
@@ -4687,7 +4687,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeBlockAccessToAboutFlags
-    * Indicates whether or not to prevent access to about flags on Edge browser.
+    * Indicates whether or not to prevent access to about flags on Microsoft Edge browser.
     *
     * @param bool $val The edgeBlockAccessToAboutFlags
     *

@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Model;
@@ -19,15 +19,16 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class BaseItemVersion extends Entity
 {
     /**
     * Gets the lastModifiedBy
+    * Identity of the user which last modified the version. Read-only.
     *
     * @return IdentitySet The lastModifiedBy
     */
@@ -46,6 +47,7 @@ class BaseItemVersion extends Entity
     
     /**
     * Sets the lastModifiedBy
+    * Identity of the user which last modified the version. Read-only.
     *
     * @param IdentitySet $val The lastModifiedBy
     *
@@ -59,6 +61,7 @@ class BaseItemVersion extends Entity
     
     /**
     * Gets the lastModifiedDateTime
+    * Date and time the version was last modified. Read-only.
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -77,6 +80,7 @@ class BaseItemVersion extends Entity
     
     /**
     * Sets the lastModifiedDateTime
+    * Date and time the version was last modified. Read-only.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -90,6 +94,7 @@ class BaseItemVersion extends Entity
     
     /**
     * Gets the publication
+    * Indicates the publication status of this particular version. Read-only.
     *
     * @return PublicationFacet The publication
     */
@@ -108,6 +113,7 @@ class BaseItemVersion extends Entity
     
     /**
     * Sets the publication
+    * Indicates the publication status of this particular version. Read-only.
     *
     * @param PublicationFacet $val The publication
     *

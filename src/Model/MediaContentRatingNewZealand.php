@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Model;
@@ -18,9 +18,9 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class MediaContentRatingNewZealand extends Entity
@@ -28,7 +28,7 @@ class MediaContentRatingNewZealand extends Entity
 
     /**
     * Gets the movieRating
-    * Movies rating selected for New Zealand Possible values are: allAllowed, allBlocked, general, parentalGuidance, mature, agesAbove13, agesAbove15, agesAbove16, agesAbove18, restricted, agesAbove16Restricted.
+    * Movies rating selected for New Zealand. Possible values are: allAllowed, allBlocked, general, parentalGuidance, mature, agesAbove13, agesAbove15, agesAbove16, agesAbove18, restricted, agesAbove16Restricted.
     *
     * @return RatingNewZealandMoviesType The movieRating
     */
@@ -47,7 +47,7 @@ class MediaContentRatingNewZealand extends Entity
 
     /**
     * Sets the movieRating
-    * Movies rating selected for New Zealand Possible values are: allAllowed, allBlocked, general, parentalGuidance, mature, agesAbove13, agesAbove15, agesAbove16, agesAbove18, restricted, agesAbove16Restricted.
+    * Movies rating selected for New Zealand. Possible values are: allAllowed, allBlocked, general, parentalGuidance, mature, agesAbove13, agesAbove15, agesAbove16, agesAbove18, restricted, agesAbove16Restricted.
     *
     * @param RatingNewZealandMoviesType $val The value to assign to the movieRating
     *
@@ -61,7 +61,7 @@ class MediaContentRatingNewZealand extends Entity
 
     /**
     * Gets the tvRating
-    * TV rating selected for New Zealand Possible values are: allAllowed, allBlocked, general, parentalGuidance, adults.
+    * TV rating selected for New Zealand. Possible values are: allAllowed, allBlocked, general, parentalGuidance, adults.
     *
     * @return RatingNewZealandTelevisionType The tvRating
     */
@@ -80,7 +80,7 @@ class MediaContentRatingNewZealand extends Entity
 
     /**
     * Sets the tvRating
-    * TV rating selected for New Zealand Possible values are: allAllowed, allBlocked, general, parentalGuidance, adults.
+    * TV rating selected for New Zealand. Possible values are: allAllowed, allBlocked, general, parentalGuidance, adults.
     *
     * @param RatingNewZealandTelevisionType $val The value to assign to the tvRating
     *
