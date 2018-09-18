@@ -54,8 +54,8 @@ class PersonOrGroupColumn extends Entity
         return $this;
     }
     /**
-    * Gets the displayAs
-    * How to display the information about the person or group chosen. See below.
+    * Gets the chooseFromType
+    * Whether to allow selection of people only, or people and groups. Must be one of peopleAndGroups or peopleOnly.
     *
     * @return string The chooseFromType
     */
@@ -69,8 +69,8 @@ class PersonOrGroupColumn extends Entity
     }
 
     /**
-    * Sets the displayAs
-    * How to display the information about the person or group chosen. See below.
+    * Sets the chooseFromType
+    * Whether to allow selection of people only, or people and groups. Must be one of peopleAndGroups or peopleOnly.
     *
     * @param string $val The value of the chooseFromType
     *
@@ -82,8 +82,8 @@ class PersonOrGroupColumn extends Entity
         return $this;
     }
     /**
-    * Gets the chooseFromType
-    * Whether to allow selection of people only, or people and groups. Must be one of peopleAndGroups or peopleOnly.
+    * Gets the displayAs
+    * How to display the information about the person or group chosen. See below.
     *
     * @return string The displayAs
     */
@@ -97,8 +97,8 @@ class PersonOrGroupColumn extends Entity
     }
 
     /**
-    * Sets the chooseFromType
-    * Whether to allow selection of people only, or people and groups. Must be one of peopleAndGroups or peopleOnly.
+    * Sets the displayAs
+    * How to display the information about the person or group chosen. See below.
     *
     * @param string $val The value of the displayAs
     *

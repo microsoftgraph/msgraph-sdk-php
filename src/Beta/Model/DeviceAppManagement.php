@@ -346,6 +346,7 @@ class DeviceAppManagement extends Entity
     
 
      /** 
+
      * Gets the sideLoadingKeys
      *
      * @return array The sideLoadingKeys
@@ -375,6 +376,7 @@ class DeviceAppManagement extends Entity
 
      /** 
      * Gets the vppTokens
+     * List of Vpp tokens for this organization.
      *
      * @return array The vppTokens
      */

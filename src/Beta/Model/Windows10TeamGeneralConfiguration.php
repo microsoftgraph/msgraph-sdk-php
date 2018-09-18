@@ -163,6 +163,10 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the maintenanceWindowDurationInHours
+<<<<<<< HEAD:src/Beta/Model/Windows10TeamGeneralConfiguration.php
+=======
+    * Maintenance window duration for device updates. Valid values 0 to 5
+>>>>>>> dev:src/Model/Windows10TeamGeneralConfiguration.php
     *
     * @return int The maintenanceWindowDurationInHours
     */
@@ -177,6 +181,10 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the maintenanceWindowDurationInHours
+<<<<<<< HEAD:src/Beta/Model/Windows10TeamGeneralConfiguration.php
+=======
+    * Maintenance window duration for device updates. Valid values 0 to 5
+>>>>>>> dev:src/Model/Windows10TeamGeneralConfiguration.php
     *
     * @param int $val The maintenanceWindowDurationInHours
     *

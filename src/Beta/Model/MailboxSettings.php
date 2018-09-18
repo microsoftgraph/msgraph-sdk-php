@@ -58,6 +58,7 @@ class MailboxSettings extends Entity
     }
     /**
     * Gets the archiveFolder
+    * Folder ID of an archive folder for the user.
     *
     * @return string The archiveFolder
     */
@@ -72,6 +73,7 @@ class MailboxSettings extends Entity
 
     /**
     * Sets the archiveFolder
+    * Folder ID of an archive folder for the user.
     *
     * @param string $val The value of the archiveFolder
     *
