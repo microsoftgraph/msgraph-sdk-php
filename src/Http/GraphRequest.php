@@ -56,12 +56,6 @@ class GraphRequest
     */
     protected $endpoint;
     /**
-    * The Guzzle client used to make the HTTP request
-    *
-    * @var Client
-    */
-    protected $guzzleClient;
-    /**
     * An array of headers to send with the request
     *
     * @var array(string => string)
