@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Model;
@@ -19,16 +19,16 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
 {
     /**
     * Gets the deliveryOptimizationMode
-    * Delivery Optimization Mode Possible values are: userDefined, httpOnly, httpWithPeeringNat, httpWithPeeringPrivateGroup, httpWithInternetPeering, simpleDownload, bypassMode.
+    * Delivery Optimization Mode. Possible values are: userDefined, httpOnly, httpWithPeeringNat, httpWithPeeringPrivateGroup, httpWithInternetPeering, simpleDownload, bypassMode.
     *
     * @return WindowsDeliveryOptimizationMode The deliveryOptimizationMode
     */
@@ -47,7 +47,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     
     /**
     * Sets the deliveryOptimizationMode
-    * Delivery Optimization Mode Possible values are: userDefined, httpOnly, httpWithPeeringNat, httpWithPeeringPrivateGroup, httpWithInternetPeering, simpleDownload, bypassMode.
+    * Delivery Optimization Mode. Possible values are: userDefined, httpOnly, httpWithPeeringNat, httpWithPeeringPrivateGroup, httpWithInternetPeering, simpleDownload, bypassMode.
     *
     * @param WindowsDeliveryOptimizationMode $val The deliveryOptimizationMode
     *
@@ -400,7 +400,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     
     /**
     * Gets the businessReadyUpdatesOnly
-    * Determines which branch devices will receive their updates from Possible values are: userDefined, all, businessReadyOnly.
+    * Determines which branch devices will receive their updates from. Possible values are: userDefined, all, businessReadyOnly.
     *
     * @return WindowsUpdateType The businessReadyUpdatesOnly
     */
@@ -419,7 +419,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     
     /**
     * Sets the businessReadyUpdatesOnly
-    * Determines which branch devices will receive their updates from Possible values are: userDefined, all, businessReadyOnly.
+    * Determines which branch devices will receive their updates from. Possible values are: userDefined, all, businessReadyOnly.
     *
     * @param WindowsUpdateType $val The businessReadyUpdatesOnly
     *

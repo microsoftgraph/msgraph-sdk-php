@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class User extends DirectoryObject
@@ -52,6 +52,33 @@ class User extends DirectoryObject
     public function setAccountEnabled($val)
     {
         $this->_propDict["accountEnabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the ageGroup
+    *
+    * @return string The ageGroup
+    */
+    public function getAgeGroup()
+    {
+        if (array_key_exists("ageGroup", $this->_propDict)) {
+            return $this->_propDict["ageGroup"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the ageGroup
+    *
+    * @param string $val The ageGroup
+    *
+    * @return User
+    */
+    public function setAgeGroup($val)
+    {
+        $this->_propDict["ageGroup"] = $val;
         return $this;
     }
     
@@ -199,6 +226,33 @@ class User extends DirectoryObject
     public function setCompanyName($val)
     {
         $this->_propDict["companyName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the consentProvidedForMinor
+    *
+    * @return string The consentProvidedForMinor
+    */
+    public function getConsentProvidedForMinor()
+    {
+        if (array_key_exists("consentProvidedForMinor", $this->_propDict)) {
+            return $this->_propDict["consentProvidedForMinor"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the consentProvidedForMinor
+    *
+    * @param string $val The consentProvidedForMinor
+    *
+    * @return User
+    */
+    public function setConsentProvidedForMinor($val)
+    {
+        $this->_propDict["consentProvidedForMinor"] = $val;
         return $this;
     }
     
@@ -375,6 +429,33 @@ class User extends DirectoryObject
     }
     
     /**
+    * Gets the legalAgeGroupClassification
+    *
+    * @return string The legalAgeGroupClassification
+    */
+    public function getLegalAgeGroupClassification()
+    {
+        if (array_key_exists("legalAgeGroupClassification", $this->_propDict)) {
+            return $this->_propDict["legalAgeGroupClassification"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the legalAgeGroupClassification
+    *
+    * @param string $val The legalAgeGroupClassification
+    *
+    * @return User
+    */
+    public function setLegalAgeGroupClassification($val)
+    {
+        $this->_propDict["legalAgeGroupClassification"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the mail
     * The SMTP address for the user, for example, "jeff@contoso.onmicrosoft.com". Read-Only. Supports $filter.
     *
@@ -462,6 +543,37 @@ class User extends DirectoryObject
     }
     
     /**
+    * Gets the onPremisesExtensionAttributes
+    *
+    * @return OnPremisesExtensionAttributes The onPremisesExtensionAttributes
+    */
+    public function getOnPremisesExtensionAttributes()
+    {
+        if (array_key_exists("onPremisesExtensionAttributes", $this->_propDict)) {
+            if (is_a($this->_propDict["onPremisesExtensionAttributes"], "Microsoft\Graph\Model\OnPremisesExtensionAttributes")) {
+                return $this->_propDict["onPremisesExtensionAttributes"];
+            } else {
+                $this->_propDict["onPremisesExtensionAttributes"] = new OnPremisesExtensionAttributes($this->_propDict["onPremisesExtensionAttributes"]);
+                return $this->_propDict["onPremisesExtensionAttributes"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the onPremisesExtensionAttributes
+    *
+    * @param OnPremisesExtensionAttributes $val The onPremisesExtensionAttributes
+    *
+    * @return User
+    */
+    public function setOnPremisesExtensionAttributes($val)
+    {
+        $this->_propDict["onPremisesExtensionAttributes"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the onPremisesImmutableId
     * This property is used to associate an on-premises Active Directory user account to their Azure AD user object. This property must be specified when creating a new user account in the Graph if you are using a federated domain for the user's userPrincipalName (UPN) property. Important: The $ and  characters cannot be used when specifying this property. Supports $filter.
     *
@@ -523,6 +635,34 @@ class User extends DirectoryObject
         return $this;
     }
     
+
+     /** 
+     * Gets the onPremisesProvisioningErrors
+     *
+     * @return array The onPremisesProvisioningErrors
+     */
+    public function getOnPremisesProvisioningErrors()
+    {
+        if (array_key_exists("onPremisesProvisioningErrors", $this->_propDict)) {
+           return $this->_propDict["onPremisesProvisioningErrors"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the onPremisesProvisioningErrors
+    *
+    * @param OnPremisesProvisioningError $val The onPremisesProvisioningErrors
+    *
+    * @return User
+    */
+    public function setOnPremisesProvisioningErrors($val)
+    {
+		$this->_propDict["onPremisesProvisioningErrors"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the onPremisesSecurityIdentifier
     * Contains the on-premises security identifier (SID) for the user that was synchronized from on-premises to the cloud. Read-only.
@@ -578,6 +718,87 @@ class User extends DirectoryObject
     public function setOnPremisesSyncEnabled($val)
     {
         $this->_propDict["onPremisesSyncEnabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the onPremisesDomainName
+    *
+    * @return string The onPremisesDomainName
+    */
+    public function getOnPremisesDomainName()
+    {
+        if (array_key_exists("onPremisesDomainName", $this->_propDict)) {
+            return $this->_propDict["onPremisesDomainName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the onPremisesDomainName
+    *
+    * @param string $val The onPremisesDomainName
+    *
+    * @return User
+    */
+    public function setOnPremisesDomainName($val)
+    {
+        $this->_propDict["onPremisesDomainName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the onPremisesSamAccountName
+    *
+    * @return string The onPremisesSamAccountName
+    */
+    public function getOnPremisesSamAccountName()
+    {
+        if (array_key_exists("onPremisesSamAccountName", $this->_propDict)) {
+            return $this->_propDict["onPremisesSamAccountName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the onPremisesSamAccountName
+    *
+    * @param string $val The onPremisesSamAccountName
+    *
+    * @return User
+    */
+    public function setOnPremisesSamAccountName($val)
+    {
+        $this->_propDict["onPremisesSamAccountName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the onPremisesUserPrincipalName
+    *
+    * @return string The onPremisesUserPrincipalName
+    */
+    public function getOnPremisesUserPrincipalName()
+    {
+        if (array_key_exists("onPremisesUserPrincipalName", $this->_propDict)) {
+            return $this->_propDict["onPremisesUserPrincipalName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the onPremisesUserPrincipalName
+    *
+    * @param string $val The onPremisesUserPrincipalName
+    *
+    * @return User
+    */
+    public function setOnPremisesUserPrincipalName($val)
+    {
+        $this->_propDict["onPremisesUserPrincipalName"] = $val;
         return $this;
     }
     
@@ -1296,7 +1517,6 @@ class User extends DirectoryObject
     
     /**
     * Gets the deviceEnrollmentLimit
-    * The limit on the maximum number of devices that the user is permitted to enroll. Allowed values are 5 or 1000.
     *
     * @return int The deviceEnrollmentLimit
     */
@@ -1311,7 +1531,6 @@ class User extends DirectoryObject
     
     /**
     * Sets the deviceEnrollmentLimit
-    * The limit on the maximum number of devices that the user is permitted to enroll. Allowed values are 5 or 1000.
     *
     * @param int $val The deviceEnrollmentLimit
     *
@@ -2262,6 +2481,68 @@ class User extends DirectoryObject
     public function setActivities($val)
     {
 		$this->_propDict["activities"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the insights
+    *
+    * @return OfficeGraphInsights The insights
+    */
+    public function getInsights()
+    {
+        if (array_key_exists("insights", $this->_propDict)) {
+            if (is_a($this->_propDict["insights"], "Microsoft\Graph\Model\OfficeGraphInsights")) {
+                return $this->_propDict["insights"];
+            } else {
+                $this->_propDict["insights"] = new OfficeGraphInsights($this->_propDict["insights"]);
+                return $this->_propDict["insights"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the insights
+    *
+    * @param OfficeGraphInsights $val The insights
+    *
+    * @return User
+    */
+    public function setInsights($val)
+    {
+        $this->_propDict["insights"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the settings
+    *
+    * @return UserSettings The settings
+    */
+    public function getSettings()
+    {
+        if (array_key_exists("settings", $this->_propDict)) {
+            if (is_a($this->_propDict["settings"], "Microsoft\Graph\Model\UserSettings")) {
+                return $this->_propDict["settings"];
+            } else {
+                $this->_propDict["settings"] = new UserSettings($this->_propDict["settings"]);
+                return $this->_propDict["settings"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the settings
+    *
+    * @param UserSettings $val The settings
+    *
+    * @return User
+    */
+    public function setSettings($val)
+    {
+        $this->_propDict["settings"] = $val;
         return $this;
     }
     

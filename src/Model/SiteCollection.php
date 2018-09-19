@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Model;
@@ -18,9 +18,9 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class SiteCollection extends Entity
@@ -56,6 +56,7 @@ class SiteCollection extends Entity
 
     /**
     * Gets the root
+    * If present, indicates that this is a root site collection in SharePoint. Read-only.
     *
     * @return Root The root
     */
@@ -74,6 +75,7 @@ class SiteCollection extends Entity
 
     /**
     * Sets the root
+    * If present, indicates that this is a root site collection in SharePoint. Read-only.
     *
     * @param Root $val The value to assign to the root
     *

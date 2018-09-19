@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollmentConfiguration
@@ -86,7 +86,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Gets the pinUppercaseCharactersUsage
-    * Not yet documented Possible values are: allowed, required, disallowed.
+    * Not yet documented. Possible values are: allowed, required, disallowed.
     *
     * @return WindowsHelloForBusinessPinUsage The pinUppercaseCharactersUsage
     */
@@ -105,7 +105,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Sets the pinUppercaseCharactersUsage
-    * Not yet documented Possible values are: allowed, required, disallowed.
+    * Not yet documented. Possible values are: allowed, required, disallowed.
     *
     * @param WindowsHelloForBusinessPinUsage $val The pinUppercaseCharactersUsage
     *
@@ -119,7 +119,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Gets the pinLowercaseCharactersUsage
-    * Not yet documented Possible values are: allowed, required, disallowed.
+    * Not yet documented. Possible values are: allowed, required, disallowed.
     *
     * @return WindowsHelloForBusinessPinUsage The pinLowercaseCharactersUsage
     */
@@ -138,7 +138,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Sets the pinLowercaseCharactersUsage
-    * Not yet documented Possible values are: allowed, required, disallowed.
+    * Not yet documented. Possible values are: allowed, required, disallowed.
     *
     * @param WindowsHelloForBusinessPinUsage $val The pinLowercaseCharactersUsage
     *
@@ -152,7 +152,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Gets the pinSpecialCharactersUsage
-    * Not yet documented Possible values are: allowed, required, disallowed.
+    * Not yet documented. Possible values are: allowed, required, disallowed.
     *
     * @return WindowsHelloForBusinessPinUsage The pinSpecialCharactersUsage
     */
@@ -171,7 +171,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Sets the pinSpecialCharactersUsage
-    * Not yet documented Possible values are: allowed, required, disallowed.
+    * Not yet documented. Possible values are: allowed, required, disallowed.
     *
     * @param WindowsHelloForBusinessPinUsage $val The pinSpecialCharactersUsage
     *
@@ -185,7 +185,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Gets the state
-    * Not yet documented Possible values are: notConfigured, enabled, disabled.
+    * Not yet documented. Possible values are: notConfigured, enabled, disabled.
     *
     * @return Enablement The state
     */
@@ -204,7 +204,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Sets the state
-    * Not yet documented Possible values are: notConfigured, enabled, disabled.
+    * Not yet documented. Possible values are: notConfigured, enabled, disabled.
     *
     * @param Enablement $val The state
     *
@@ -363,7 +363,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Gets the enhancedBiometricsState
-    * Not yet documented Possible values are: notConfigured, enabled, disabled.
+    * Not yet documented. Possible values are: notConfigured, enabled, disabled.
     *
     * @return Enablement The enhancedBiometricsState
     */
@@ -382,7 +382,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Sets the enhancedBiometricsState
-    * Not yet documented Possible values are: notConfigured, enabled, disabled.
+    * Not yet documented. Possible values are: notConfigured, enabled, disabled.
     *
     * @param Enablement $val The enhancedBiometricsState
     *

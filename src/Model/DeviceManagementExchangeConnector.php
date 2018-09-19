@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class DeviceManagementExchangeConnector extends Entity
@@ -61,7 +61,7 @@ class DeviceManagementExchangeConnector extends Entity
     
     /**
     * Gets the status
-    * Exchange Connector Status Possible values are: none, connectionPending, connected, disconnected.
+    * Exchange Connector Status. Possible values are: none, connectionPending, connected, disconnected.
     *
     * @return DeviceManagementExchangeConnectorStatus The status
     */
@@ -80,7 +80,7 @@ class DeviceManagementExchangeConnector extends Entity
     
     /**
     * Sets the status
-    * Exchange Connector Status Possible values are: none, connectionPending, connected, disconnected.
+    * Exchange Connector Status. Possible values are: none, connectionPending, connected, disconnected.
     *
     * @param DeviceManagementExchangeConnectorStatus $val The status
     *
@@ -147,6 +147,33 @@ class DeviceManagementExchangeConnector extends Entity
     public function setServerName($val)
     {
         $this->_propDict["serverName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the connectorServerName
+    *
+    * @return string The connectorServerName
+    */
+    public function getConnectorServerName()
+    {
+        if (array_key_exists("connectorServerName", $this->_propDict)) {
+            return $this->_propDict["connectorServerName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the connectorServerName
+    *
+    * @param string $val The connectorServerName
+    *
+    * @return DeviceManagementExchangeConnector
+    */
+    public function setConnectorServerName($val)
+    {
+        $this->_propDict["connectorServerName"] = $val;
         return $this;
     }
     

@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Model;
@@ -18,9 +18,9 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleType
@@ -28,7 +28,7 @@ class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleType
 
     /**
     * Gets the scheduledInstallDay
-    * Scheduled Install Day in week Possible values are: userDefined, everyday, sunday, monday, tuesday, wednesday, thursday, friday, saturday.
+    * Scheduled Install Day in week. Possible values are: userDefined, everyday, sunday, monday, tuesday, wednesday, thursday, friday, saturday.
     *
     * @return WeeklySchedule The scheduledInstallDay
     */
@@ -47,7 +47,7 @@ class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleType
 
     /**
     * Sets the scheduledInstallDay
-    * Scheduled Install Day in week Possible values are: userDefined, everyday, sunday, monday, tuesday, wednesday, thursday, friday, saturday.
+    * Scheduled Install Day in week. Possible values are: userDefined, everyday, sunday, monday, tuesday, wednesday, thursday, friday, saturday.
     *
     * @param WeeklySchedule $val The value to assign to the scheduledInstallDay
     *
