@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class ManagedDevice extends Entity
@@ -86,6 +86,7 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the managedDeviceOwnerType
+    * Ownership of the device. Can be 'company' or 'personal'. Possible values are: unknown, company, personal.
     *
     * @return ManagedDeviceOwnerType The managedDeviceOwnerType
     */
@@ -104,6 +105,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the managedDeviceOwnerType
+    * Ownership of the device. Can be 'company' or 'personal'. Possible values are: unknown, company, personal.
     *
     * @param ManagedDeviceOwnerType $val The managedDeviceOwnerType
     *
@@ -1422,7 +1424,6 @@ class ManagedDevice extends Entity
 
      /** 
      * Gets the deviceConfigurationStates
-    * Device configuration states for this device.
      *
      * @return array The deviceConfigurationStates
      */
@@ -1437,7 +1438,6 @@ class ManagedDevice extends Entity
     
     /** 
     * Sets the deviceConfigurationStates
-    * Device configuration states for this device.
     *
     * @param DeviceConfigurationState $val The deviceConfigurationStates
     *
@@ -1485,7 +1485,6 @@ class ManagedDevice extends Entity
 
      /** 
      * Gets the deviceCompliancePolicyStates
-    * Device compliance policy states for this device.
      *
      * @return array The deviceCompliancePolicyStates
      */
@@ -1500,7 +1499,6 @@ class ManagedDevice extends Entity
     
     /** 
     * Sets the deviceCompliancePolicyStates
-    * Device compliance policy states for this device.
     *
     * @param DeviceCompliancePolicyState $val The deviceCompliancePolicyStates
     *

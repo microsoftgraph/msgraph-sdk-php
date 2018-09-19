@@ -77,6 +77,7 @@ class GraphCollectionRequest extends GraphRequest
     * @param string $baseUrl     The base URL of the request
     * @param string $apiVersion  The version of the API to call
     * @param string $proxyPort   The url where to proxy through
+    * @throws GraphException when no access token is provided
     */
     public function __construct($requestType, $endpoint, $accessToken, $baseUrl, $apiVersion, $proxyPort = null)
     {

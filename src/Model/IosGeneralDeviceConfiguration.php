@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class IosGeneralDeviceConfiguration extends DeviceConfiguration
@@ -2242,6 +2242,33 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the kioskModeBuiltInAppId
+    *
+    * @return string The kioskModeBuiltInAppId
+    */
+    public function getKioskModeBuiltInAppId()
+    {
+        if (array_key_exists("kioskModeBuiltInAppId", $this->_propDict)) {
+            return $this->_propDict["kioskModeBuiltInAppId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the kioskModeBuiltInAppId
+    *
+    * @param string $val The kioskModeBuiltInAppId
+    *
+    * @return IosGeneralDeviceConfiguration
+    */
+    public function setKioskModeBuiltInAppId($val)
+    {
+        $this->_propDict["kioskModeBuiltInAppId"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the kioskModeRequireAssistiveTouch
     * Indicates whether or not to require assistive touch while in kiosk mode.
     *
@@ -2860,7 +2887,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the mediaContentRatingApps
-    * Media content rating settings for Apps Possible values are: allAllowed, allBlocked, agesAbove4, agesAbove9, agesAbove12, agesAbove17.
+    * Media content rating settings for Apps. Possible values are: allAllowed, allBlocked, agesAbove4, agesAbove9, agesAbove12, agesAbove17.
     *
     * @return RatingAppsType The mediaContentRatingApps
     */
@@ -2879,7 +2906,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the mediaContentRatingApps
-    * Media content rating settings for Apps Possible values are: allAllowed, allBlocked, agesAbove4, agesAbove9, agesAbove12, agesAbove17.
+    * Media content rating settings for Apps. Possible values are: allAllowed, allBlocked, agesAbove4, agesAbove9, agesAbove12, agesAbove17.
     *
     * @param RatingAppsType $val The mediaContentRatingApps
     *

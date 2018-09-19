@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class DeviceManagementPartner extends Entity
@@ -61,7 +61,7 @@ class DeviceManagementPartner extends Entity
     
     /**
     * Gets the partnerState
-    * Partner state of this tenant Possible values are: unknown, unavailable, enabled, terminated, rejected, unresponsive.
+    * Partner state of this tenant. Possible values are: unknown, unavailable, enabled, terminated, rejected, unresponsive.
     *
     * @return DeviceManagementPartnerTenantState The partnerState
     */
@@ -80,7 +80,7 @@ class DeviceManagementPartner extends Entity
     
     /**
     * Sets the partnerState
-    * Partner state of this tenant Possible values are: unknown, unavailable, enabled, terminated, rejected, unresponsive.
+    * Partner state of this tenant. Possible values are: unknown, unavailable, enabled, terminated, rejected, unresponsive.
     *
     * @param DeviceManagementPartnerTenantState $val The partnerState
     *
@@ -94,7 +94,7 @@ class DeviceManagementPartner extends Entity
     
     /**
     * Gets the partnerAppType
-    * Partner App type Possible values are: unknown, singleTenantApp, multiTenantApp.
+    * Partner App type. Possible values are: unknown, singleTenantApp, multiTenantApp.
     *
     * @return DeviceManagementPartnerAppType The partnerAppType
     */
@@ -113,7 +113,7 @@ class DeviceManagementPartner extends Entity
     
     /**
     * Sets the partnerAppType
-    * Partner App type Possible values are: unknown, singleTenantApp, multiTenantApp.
+    * Partner App type. Possible values are: unknown, singleTenantApp, multiTenantApp.
     *
     * @param DeviceManagementPartnerAppType $val The partnerAppType
     *

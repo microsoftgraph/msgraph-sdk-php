@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Model;
@@ -18,9 +18,9 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class VisualInfo extends Entity
@@ -60,7 +60,7 @@ class VisualInfo extends Entity
     }
     /**
     * Gets the backgroundColor
-    * Optional. Background color used to render the activity in the UI - brand color for the application source of the activity
+    * Optional. Background color used to render the activity in the UI - brand color for the application source of the activity. Must be a valid hex color
     *
     * @return string The backgroundColor
     */
@@ -75,7 +75,7 @@ class VisualInfo extends Entity
 
     /**
     * Sets the backgroundColor
-    * Optional. Background color used to render the activity in the UI - brand color for the application source of the activity
+    * Optional. Background color used to render the activity in the UI - brand color for the application source of the activity. Must be a valid hex color
     *
     * @param string $val The value of the backgroundColor
     *
@@ -116,7 +116,7 @@ class VisualInfo extends Entity
     }
     /**
     * Gets the displayText
-    * Rquired. Short text description of the user's unique activity (for example, document name in cases where an activity refers to document creation)
+    * Required. Short text description of the user's unique activity (for example, document name in cases where an activity refers to document creation)
     *
     * @return string The displayText
     */
@@ -131,7 +131,7 @@ class VisualInfo extends Entity
 
     /**
     * Sets the displayText
-    * Rquired. Short text description of the user's unique activity (for example, document name in cases where an activity refers to document creation)
+    * Required. Short text description of the user's unique activity (for example, document name in cases where an activity refers to document creation)
     *
     * @param string $val The value of the displayText
     *
