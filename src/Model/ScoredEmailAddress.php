@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Model;
@@ -18,9 +18,9 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class ScoredEmailAddress extends Entity
@@ -111,5 +111,31 @@ class ScoredEmailAddress extends Entity
     {
         $this->_propDict["selectionLikelihood"] = $val;
          return $this;
+    }
+    /**
+    * Gets the ItemId
+    *
+    * @return string The ItemId
+    */
+    public function getItemId()
+    {
+        if (array_key_exists("itemId", $this->_propDict)) {
+            return $this->_propDict["itemId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the ItemId
+    *
+    * @param string $val The value of the ItemId
+    *
+    * @return ScoredEmailAddress
+    */
+    public function setItemId($val)
+    {
+        $this->_propDict["itemId"] = $val;
+        return $this;
     }
 }

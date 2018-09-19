@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Model;
@@ -21,9 +21,9 @@ use Microsoft\Graph\Core\Enum;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class WindowsUpdateType extends Enum
@@ -34,4 +34,7 @@ class WindowsUpdateType extends Enum
     const USER_DEFINED = "userDefined";
     const ALL = "all";
     const BUSINESS_READY_ONLY = "businessReadyOnly";
+    const WINDOWS_INSIDER_BUILD_FAST = "windowsInsiderBuildFast";
+    const WINDOWS_INSIDER_BUILD_SLOW = "windowsInsiderBuildSlow";
+    const WINDOWS_INSIDER_BUILD_RELEASE = "windowsInsiderBuildRelease";
 }

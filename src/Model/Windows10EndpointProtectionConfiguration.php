@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
@@ -86,7 +86,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the firewallPreSharedKeyEncodingMethod
-    * Select the preshared key encoding to be used Possible values are: deviceDefault, none, utF8.
+    * Select the preshared key encoding to be used. Possible values are: deviceDefault, none, utF8.
     *
     * @return FirewallPreSharedKeyEncodingMethodType The firewallPreSharedKeyEncodingMethod
     */
@@ -105,7 +105,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the firewallPreSharedKeyEncodingMethod
-    * Select the preshared key encoding to be used Possible values are: deviceDefault, none, utF8.
+    * Select the preshared key encoding to be used. Possible values are: deviceDefault, none, utF8.
     *
     * @param FirewallPreSharedKeyEncodingMethodType $val The firewallPreSharedKeyEncodingMethod
     *
@@ -235,7 +235,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the firewallCertificateRevocationListCheckMethod
-    * Specify how the certificate revocation list is to be enforced Possible values are: deviceDefault, none, attempt, require.
+    * Specify how the certificate revocation list is to be enforced. Possible values are: deviceDefault, none, attempt, require.
     *
     * @return FirewallCertificateRevocationListCheckMethodType The firewallCertificateRevocationListCheckMethod
     */
@@ -254,7 +254,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the firewallCertificateRevocationListCheckMethod
-    * Specify how the certificate revocation list is to be enforced Possible values are: deviceDefault, none, attempt, require.
+    * Specify how the certificate revocation list is to be enforced. Possible values are: deviceDefault, none, attempt, require.
     *
     * @param FirewallCertificateRevocationListCheckMethodType $val The firewallCertificateRevocationListCheckMethod
     *
@@ -297,7 +297,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the firewallPacketQueueingMethod
-    * Configures how packet queueing should be applied in the tunnel gateway scenario Possible values are: deviceDefault, disabled, queueInbound, queueOutbound, queueBoth.
+    * Configures how packet queueing should be applied in the tunnel gateway scenario. Possible values are: deviceDefault, disabled, queueInbound, queueOutbound, queueBoth.
     *
     * @return FirewallPacketQueueingMethodType The firewallPacketQueueingMethod
     */
@@ -316,7 +316,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the firewallPacketQueueingMethod
-    * Configures how packet queueing should be applied in the tunnel gateway scenario Possible values are: deviceDefault, disabled, queueInbound, queueOutbound, queueBoth.
+    * Configures how packet queueing should be applied in the tunnel gateway scenario. Possible values are: deviceDefault, disabled, queueInbound, queueOutbound, queueBoth.
     *
     * @param FirewallPacketQueueingMethodType $val The firewallPacketQueueingMethod
     *
@@ -727,7 +727,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the applicationGuardBlockFileTransfer
-    * Block clipboard to transfer image file, text file or neither of them Possible values are: notConfigured, blockImageAndTextFile, blockImageFile, blockNone, blockTextFile.
+    * Block clipboard to transfer image file, text file or neither of them. Possible values are: notConfigured, blockImageAndTextFile, blockImageFile, blockNone, blockTextFile.
     *
     * @return ApplicationGuardBlockFileTransferType The applicationGuardBlockFileTransfer
     */
@@ -746,7 +746,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the applicationGuardBlockFileTransfer
-    * Block clipboard to transfer image file, text file or neither of them Possible values are: notConfigured, blockImageAndTextFile, blockImageFile, blockNone, blockTextFile.
+    * Block clipboard to transfer image file, text file or neither of them. Possible values are: notConfigured, blockImageAndTextFile, blockImageFile, blockNone, blockTextFile.
     *
     * @param ApplicationGuardBlockFileTransferType $val The applicationGuardBlockFileTransfer
     *

@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class AndroidCompliancePolicy extends DeviceCompliancePolicy
@@ -86,7 +86,7 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the passwordRequiredType
-    * Type of characters in password Possible values are: deviceDefault, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, numeric, numericComplex, any.
+    * Type of characters in password. Possible values are: deviceDefault, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, numeric, numericComplex, any.
     *
     * @return AndroidRequiredPasswordType The passwordRequiredType
     */
@@ -105,7 +105,7 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passwordRequiredType
-    * Type of characters in password Possible values are: deviceDefault, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, numeric, numericComplex, any.
+    * Type of characters in password. Possible values are: deviceDefault, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, numeric, numericComplex, any.
     *
     * @param AndroidRequiredPasswordType $val The passwordRequiredType
     *
