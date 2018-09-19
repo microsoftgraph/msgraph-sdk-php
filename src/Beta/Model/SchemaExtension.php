@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class SchemaExtension extends Entity
@@ -137,7 +137,6 @@ class SchemaExtension extends Entity
     
     /**
     * Gets the owner
-    * The appId of the application that is the owner of the schema extension. This property can be supplied on creation, to set the owner.  If not supplied, then the calling application's appId will be set as the owner. In either case, the signed-in user must be the owner of the application. Once set, this property is read-only and cannot be changed.
     *
     * @return string The owner
     */
@@ -152,7 +151,6 @@ class SchemaExtension extends Entity
     
     /**
     * Sets the owner
-    * The appId of the application that is the owner of the schema extension. This property can be supplied on creation, to set the owner.  If not supplied, then the calling application's appId will be set as the owner. In either case, the signed-in user must be the owner of the application. Once set, this property is read-only and cannot be changed.
     *
     * @param string $val The owner
     *

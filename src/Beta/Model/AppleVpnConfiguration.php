@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class AppleVpnConfiguration extends DeviceConfiguration
@@ -251,6 +251,34 @@ class AppleVpnConfiguration extends DeviceConfiguration
         return $this;
     }
     
+
+     /** 
+     * Gets the customKeyValueData
+     *
+     * @return array The customKeyValueData
+     */
+    public function getCustomKeyValueData()
+    {
+        if (array_key_exists("customKeyValueData", $this->_propDict)) {
+           return $this->_propDict["customKeyValueData"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the customKeyValueData
+    *
+    * @param KeyValuePair $val The customKeyValueData
+    *
+    * @return AppleVpnConfiguration
+    */
+    public function setCustomKeyValueData($val)
+    {
+		$this->_propDict["customKeyValueData"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the enableSplitTunneling
     *
@@ -419,6 +447,33 @@ class AppleVpnConfiguration extends DeviceConfiguration
     public function setProxyServer($val)
     {
         $this->_propDict["proxyServer"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the optInToDeviceIdSharing
+    *
+    * @return bool The optInToDeviceIdSharing
+    */
+    public function getOptInToDeviceIdSharing()
+    {
+        if (array_key_exists("optInToDeviceIdSharing", $this->_propDict)) {
+            return $this->_propDict["optInToDeviceIdSharing"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the optInToDeviceIdSharing
+    *
+    * @param bool $val The optInToDeviceIdSharing
+    *
+    * @return AppleVpnConfiguration
+    */
+    public function setOptInToDeviceIdSharing($val)
+    {
+        $this->_propDict["optInToDeviceIdSharing"] = boolval($val);
         return $this;
     }
     

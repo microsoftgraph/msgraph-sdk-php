@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class Security extends Entity
@@ -56,29 +56,57 @@ class Security extends Entity
     
 
      /** 
-     * Gets the applicationSecurityProfiles
+     * Gets the cloudAppSecurityProfiles
      *
-     * @return array The applicationSecurityProfiles
+     * @return array The cloudAppSecurityProfiles
      */
-    public function getApplicationSecurityProfiles()
+    public function getCloudAppSecurityProfiles()
     {
-        if (array_key_exists("applicationSecurityProfiles", $this->_propDict)) {
-           return $this->_propDict["applicationSecurityProfiles"];
+        if (array_key_exists("cloudAppSecurityProfiles", $this->_propDict)) {
+           return $this->_propDict["cloudAppSecurityProfiles"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the applicationSecurityProfiles
+    * Sets the cloudAppSecurityProfiles
     *
-    * @param ApplicationSecurityProfile $val The applicationSecurityProfiles
+    * @param CloudAppSecurityProfile $val The cloudAppSecurityProfiles
     *
     * @return Security
     */
-    public function setApplicationSecurityProfiles($val)
+    public function setCloudAppSecurityProfiles($val)
     {
-		$this->_propDict["applicationSecurityProfiles"] = $val;
+		$this->_propDict["cloudAppSecurityProfiles"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the domainSecurityProfiles
+     *
+     * @return array The domainSecurityProfiles
+     */
+    public function getDomainSecurityProfiles()
+    {
+        if (array_key_exists("domainSecurityProfiles", $this->_propDict)) {
+           return $this->_propDict["domainSecurityProfiles"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the domainSecurityProfiles
+    *
+    * @param DomainSecurityProfile $val The domainSecurityProfiles
+    *
+    * @return Security
+    */
+    public function setDomainSecurityProfiles($val)
+    {
+		$this->_propDict["domainSecurityProfiles"] = $val;
         return $this;
     }
     
@@ -163,6 +191,118 @@ class Security extends Entity
     public function setIpSecurityProfiles($val)
     {
 		$this->_propDict["ipSecurityProfiles"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the providerTenantSettings
+     *
+     * @return array The providerTenantSettings
+     */
+    public function getProviderTenantSettings()
+    {
+        if (array_key_exists("providerTenantSettings", $this->_propDict)) {
+           return $this->_propDict["providerTenantSettings"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the providerTenantSettings
+    *
+    * @param ProviderTenantSetting $val The providerTenantSettings
+    *
+    * @return Security
+    */
+    public function setProviderTenantSettings($val)
+    {
+		$this->_propDict["providerTenantSettings"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the secureScoreControlProfiles
+     *
+     * @return array The secureScoreControlProfiles
+     */
+    public function getSecureScoreControlProfiles()
+    {
+        if (array_key_exists("secureScoreControlProfiles", $this->_propDict)) {
+           return $this->_propDict["secureScoreControlProfiles"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the secureScoreControlProfiles
+    *
+    * @param SecureScoreControlProfile $val The secureScoreControlProfiles
+    *
+    * @return Security
+    */
+    public function setSecureScoreControlProfiles($val)
+    {
+		$this->_propDict["secureScoreControlProfiles"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the secureScores
+     *
+     * @return array The secureScores
+     */
+    public function getSecureScores()
+    {
+        if (array_key_exists("secureScores", $this->_propDict)) {
+           return $this->_propDict["secureScores"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the secureScores
+    *
+    * @param SecureScore $val The secureScores
+    *
+    * @return Security
+    */
+    public function setSecureScores($val)
+    {
+		$this->_propDict["secureScores"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the tiIndicators
+     *
+     * @return array The tiIndicators
+     */
+    public function getTiIndicators()
+    {
+        if (array_key_exists("tiIndicators", $this->_propDict)) {
+           return $this->_propDict["tiIndicators"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the tiIndicators
+    *
+    * @param TiIndicator $val The tiIndicators
+    *
+    * @return Security
+    */
+    public function setTiIndicators($val)
+    {
+		$this->_propDict["tiIndicators"] = $val;
         return $this;
     }
     

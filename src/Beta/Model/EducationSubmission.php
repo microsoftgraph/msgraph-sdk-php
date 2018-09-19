@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class EducationSubmission extends Entity
@@ -151,6 +151,68 @@ class EducationSubmission extends Entity
     }
     
     /**
+    * Gets the unsubmittedBy
+    *
+    * @return IdentitySet The unsubmittedBy
+    */
+    public function getUnsubmittedBy()
+    {
+        if (array_key_exists("unsubmittedBy", $this->_propDict)) {
+            if (is_a($this->_propDict["unsubmittedBy"], "Microsoft\Graph\Beta\Model\IdentitySet")) {
+                return $this->_propDict["unsubmittedBy"];
+            } else {
+                $this->_propDict["unsubmittedBy"] = new IdentitySet($this->_propDict["unsubmittedBy"]);
+                return $this->_propDict["unsubmittedBy"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the unsubmittedBy
+    *
+    * @param IdentitySet $val The unsubmittedBy
+    *
+    * @return EducationSubmission
+    */
+    public function setUnsubmittedBy($val)
+    {
+        $this->_propDict["unsubmittedBy"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the unsubmittedDateTime
+    *
+    * @return \DateTime The unsubmittedDateTime
+    */
+    public function getUnsubmittedDateTime()
+    {
+        if (array_key_exists("unsubmittedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["unsubmittedDateTime"], "\DateTime")) {
+                return $this->_propDict["unsubmittedDateTime"];
+            } else {
+                $this->_propDict["unsubmittedDateTime"] = new \DateTime($this->_propDict["unsubmittedDateTime"]);
+                return $this->_propDict["unsubmittedDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the unsubmittedDateTime
+    *
+    * @param \DateTime $val The unsubmittedDateTime
+    *
+    * @return EducationSubmission
+    */
+    public function setUnsubmittedDateTime($val)
+    {
+        $this->_propDict["unsubmittedDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the releasedBy
     *
     * @return IdentitySet The releasedBy
@@ -209,6 +271,68 @@ class EducationSubmission extends Entity
     public function setReleasedDateTime($val)
     {
         $this->_propDict["releasedDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the returnedBy
+    *
+    * @return IdentitySet The returnedBy
+    */
+    public function getReturnedBy()
+    {
+        if (array_key_exists("returnedBy", $this->_propDict)) {
+            if (is_a($this->_propDict["returnedBy"], "Microsoft\Graph\Beta\Model\IdentitySet")) {
+                return $this->_propDict["returnedBy"];
+            } else {
+                $this->_propDict["returnedBy"] = new IdentitySet($this->_propDict["returnedBy"]);
+                return $this->_propDict["returnedBy"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the returnedBy
+    *
+    * @param IdentitySet $val The returnedBy
+    *
+    * @return EducationSubmission
+    */
+    public function setReturnedBy($val)
+    {
+        $this->_propDict["returnedBy"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the returnedDateTime
+    *
+    * @return \DateTime The returnedDateTime
+    */
+    public function getReturnedDateTime()
+    {
+        if (array_key_exists("returnedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["returnedDateTime"], "\DateTime")) {
+                return $this->_propDict["returnedDateTime"];
+            } else {
+                $this->_propDict["returnedDateTime"] = new \DateTime($this->_propDict["returnedDateTime"]);
+                return $this->_propDict["returnedDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the returnedDateTime
+    *
+    * @param \DateTime $val The returnedDateTime
+    *
+    * @return EducationSubmission
+    */
+    public function setReturnedDateTime($val)
+    {
+        $this->_propDict["returnedDateTime"] = $val;
         return $this;
     }
     

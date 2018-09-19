@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,13 +19,40 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class ResourceOperation extends Entity
 {
+    /**
+    * Gets the resource
+    *
+    * @return string The resource
+    */
+    public function getResource()
+    {
+        if (array_key_exists("resource", $this->_propDict)) {
+            return $this->_propDict["resource"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the resource
+    *
+    * @param string $val The resource
+    *
+    * @return ResourceOperation
+    */
+    public function setResource($val)
+    {
+        $this->_propDict["resource"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the resourceName
     *

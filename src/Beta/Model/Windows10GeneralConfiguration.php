@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class Windows10GeneralConfiguration extends DeviceConfiguration
@@ -517,6 +517,87 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the printerNames
+    *
+    * @return string The printerNames
+    */
+    public function getPrinterNames()
+    {
+        if (array_key_exists("printerNames", $this->_propDict)) {
+            return $this->_propDict["printerNames"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the printerNames
+    *
+    * @param string $val The printerNames
+    *
+    * @return Windows10GeneralConfiguration
+    */
+    public function setPrinterNames($val)
+    {
+        $this->_propDict["printerNames"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the printerDefaultName
+    *
+    * @return string The printerDefaultName
+    */
+    public function getPrinterDefaultName()
+    {
+        if (array_key_exists("printerDefaultName", $this->_propDict)) {
+            return $this->_propDict["printerDefaultName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the printerDefaultName
+    *
+    * @param string $val The printerDefaultName
+    *
+    * @return Windows10GeneralConfiguration
+    */
+    public function setPrinterDefaultName($val)
+    {
+        $this->_propDict["printerDefaultName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the printerBlockAddition
+    *
+    * @return bool The printerBlockAddition
+    */
+    public function getPrinterBlockAddition()
+    {
+        if (array_key_exists("printerBlockAddition", $this->_propDict)) {
+            return $this->_propDict["printerBlockAddition"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the printerBlockAddition
+    *
+    * @param bool $val The printerBlockAddition
+    *
+    * @return Windows10GeneralConfiguration
+    */
+    public function setPrinterBlockAddition($val)
+    {
+        $this->_propDict["printerBlockAddition"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the searchBlockDiacritics
     *
     * @return bool The searchBlockDiacritics
@@ -652,6 +733,33 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the searchDisableLocation
+    *
+    * @return bool The searchDisableLocation
+    */
+    public function getSearchDisableLocation()
+    {
+        if (array_key_exists("searchDisableLocation", $this->_propDict)) {
+            return $this->_propDict["searchDisableLocation"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the searchDisableLocation
+    *
+    * @param bool $val The searchDisableLocation
+    *
+    * @return Windows10GeneralConfiguration
+    */
+    public function setSearchDisableLocation($val)
+    {
+        $this->_propDict["searchDisableLocation"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the searchDisableIndexerBackoff
     *
     * @return bool The searchDisableIndexerBackoff
@@ -729,6 +837,33 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     public function setSearchEnableAutomaticIndexSizeManangement($val)
     {
         $this->_propDict["searchEnableAutomaticIndexSizeManangement"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the searchBlockWebResults
+    *
+    * @return bool The searchBlockWebResults
+    */
+    public function getSearchBlockWebResults()
+    {
+        if (array_key_exists("searchBlockWebResults", $this->_propDict)) {
+            return $this->_propDict["searchBlockWebResults"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the searchBlockWebResults
+    *
+    * @param bool $val The searchBlockWebResults
+    *
+    * @return Windows10GeneralConfiguration
+    */
+    public function setSearchBlockWebResults($val)
+    {
+        $this->_propDict["searchBlockWebResults"] = boolval($val);
         return $this;
     }
     
@@ -872,6 +1007,37 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     public function setInkWorkspaceAccess($val)
     {
         $this->_propDict["inkWorkspaceAccess"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the inkWorkspaceAccessState
+    *
+    * @return StateManagementSetting The inkWorkspaceAccessState
+    */
+    public function getInkWorkspaceAccessState()
+    {
+        if (array_key_exists("inkWorkspaceAccessState", $this->_propDict)) {
+            if (is_a($this->_propDict["inkWorkspaceAccessState"], "Microsoft\Graph\Beta\Model\StateManagementSetting")) {
+                return $this->_propDict["inkWorkspaceAccessState"];
+            } else {
+                $this->_propDict["inkWorkspaceAccessState"] = new StateManagementSetting($this->_propDict["inkWorkspaceAccessState"]);
+                return $this->_propDict["inkWorkspaceAccessState"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the inkWorkspaceAccessState
+    *
+    * @param StateManagementSetting $val The inkWorkspaceAccessState
+    *
+    * @return Windows10GeneralConfiguration
+    */
+    public function setInkWorkspaceAccessState($val)
+    {
+        $this->_propDict["inkWorkspaceAccessState"] = $val;
         return $this;
     }
     
@@ -1953,6 +2119,37 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the defenderPotentiallyUnwantedAppActionSetting
+    *
+    * @return DefenderProtectionType The defenderPotentiallyUnwantedAppActionSetting
+    */
+    public function getDefenderPotentiallyUnwantedAppActionSetting()
+    {
+        if (array_key_exists("defenderPotentiallyUnwantedAppActionSetting", $this->_propDict)) {
+            if (is_a($this->_propDict["defenderPotentiallyUnwantedAppActionSetting"], "Microsoft\Graph\Beta\Model\DefenderProtectionType")) {
+                return $this->_propDict["defenderPotentiallyUnwantedAppActionSetting"];
+            } else {
+                $this->_propDict["defenderPotentiallyUnwantedAppActionSetting"] = new DefenderProtectionType($this->_propDict["defenderPotentiallyUnwantedAppActionSetting"]);
+                return $this->_propDict["defenderPotentiallyUnwantedAppActionSetting"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the defenderPotentiallyUnwantedAppActionSetting
+    *
+    * @param DefenderProtectionType $val The defenderPotentiallyUnwantedAppActionSetting
+    *
+    * @return Windows10GeneralConfiguration
+    */
+    public function setDefenderPotentiallyUnwantedAppActionSetting($val)
+    {
+        $this->_propDict["defenderPotentiallyUnwantedAppActionSetting"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the defenderProcessesToExclude
     *
     * @return string The defenderProcessesToExclude
@@ -2486,6 +2683,122 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the defenderCloudExtendedTimeoutInSeconds
+    *
+    * @return int The defenderCloudExtendedTimeoutInSeconds
+    */
+    public function getDefenderCloudExtendedTimeoutInSeconds()
+    {
+        if (array_key_exists("defenderCloudExtendedTimeoutInSeconds", $this->_propDict)) {
+            return $this->_propDict["defenderCloudExtendedTimeoutInSeconds"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the defenderCloudExtendedTimeoutInSeconds
+    *
+    * @param int $val The defenderCloudExtendedTimeoutInSeconds
+    *
+    * @return Windows10GeneralConfiguration
+    */
+    public function setDefenderCloudExtendedTimeoutInSeconds($val)
+    {
+        $this->_propDict["defenderCloudExtendedTimeoutInSeconds"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the defenderBlockOnAccessProtection
+    *
+    * @return bool The defenderBlockOnAccessProtection
+    */
+    public function getDefenderBlockOnAccessProtection()
+    {
+        if (array_key_exists("defenderBlockOnAccessProtection", $this->_propDict)) {
+            return $this->_propDict["defenderBlockOnAccessProtection"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the defenderBlockOnAccessProtection
+    *
+    * @param bool $val The defenderBlockOnAccessProtection
+    *
+    * @return Windows10GeneralConfiguration
+    */
+    public function setDefenderBlockOnAccessProtection($val)
+    {
+        $this->_propDict["defenderBlockOnAccessProtection"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the defenderScheduleScanDay
+    *
+    * @return DefenderScheduleScanDay The defenderScheduleScanDay
+    */
+    public function getDefenderScheduleScanDay()
+    {
+        if (array_key_exists("defenderScheduleScanDay", $this->_propDict)) {
+            if (is_a($this->_propDict["defenderScheduleScanDay"], "Microsoft\Graph\Beta\Model\DefenderScheduleScanDay")) {
+                return $this->_propDict["defenderScheduleScanDay"];
+            } else {
+                $this->_propDict["defenderScheduleScanDay"] = new DefenderScheduleScanDay($this->_propDict["defenderScheduleScanDay"]);
+                return $this->_propDict["defenderScheduleScanDay"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the defenderScheduleScanDay
+    *
+    * @param DefenderScheduleScanDay $val The defenderScheduleScanDay
+    *
+    * @return Windows10GeneralConfiguration
+    */
+    public function setDefenderScheduleScanDay($val)
+    {
+        $this->_propDict["defenderScheduleScanDay"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the defenderSubmitSamplesConsentType
+    *
+    * @return DefenderSubmitSamplesConsentType The defenderSubmitSamplesConsentType
+    */
+    public function getDefenderSubmitSamplesConsentType()
+    {
+        if (array_key_exists("defenderSubmitSamplesConsentType", $this->_propDict)) {
+            if (is_a($this->_propDict["defenderSubmitSamplesConsentType"], "Microsoft\Graph\Beta\Model\DefenderSubmitSamplesConsentType")) {
+                return $this->_propDict["defenderSubmitSamplesConsentType"];
+            } else {
+                $this->_propDict["defenderSubmitSamplesConsentType"] = new DefenderSubmitSamplesConsentType($this->_propDict["defenderSubmitSamplesConsentType"]);
+                return $this->_propDict["defenderSubmitSamplesConsentType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the defenderSubmitSamplesConsentType
+    *
+    * @param DefenderSubmitSamplesConsentType $val The defenderSubmitSamplesConsentType
+    *
+    * @return Windows10GeneralConfiguration
+    */
+    public function setDefenderSubmitSamplesConsentType($val)
+    {
+        $this->_propDict["defenderSubmitSamplesConsentType"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the lockScreenAllowTimeoutConfiguration
     *
     * @return bool The lockScreenAllowTimeoutConfiguration
@@ -2891,6 +3204,33 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     public function setPasswordSignInFailureCountBeforeFactoryReset($val)
     {
         $this->_propDict["passwordSignInFailureCountBeforeFactoryReset"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the passwordMinimumAgeInDays
+    *
+    * @return int The passwordMinimumAgeInDays
+    */
+    public function getPasswordMinimumAgeInDays()
+    {
+        if (array_key_exists("passwordMinimumAgeInDays", $this->_propDict)) {
+            return $this->_propDict["passwordMinimumAgeInDays"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the passwordMinimumAgeInDays
+    *
+    * @param int $val The passwordMinimumAgeInDays
+    *
+    * @return Windows10GeneralConfiguration
+    */
+    public function setPasswordMinimumAgeInDays($val)
+    {
+        $this->_propDict["passwordMinimumAgeInDays"] = intval($val);
         return $this;
     }
     
@@ -6188,6 +6528,114 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     public function setLogonBlockFastUserSwitching($val)
     {
         $this->_propDict["logonBlockFastUserSwitching"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the tenantLockdownRequireNetworkDuringOutOfBoxExperience
+    *
+    * @return bool The tenantLockdownRequireNetworkDuringOutOfBoxExperience
+    */
+    public function getTenantLockdownRequireNetworkDuringOutOfBoxExperience()
+    {
+        if (array_key_exists("tenantLockdownRequireNetworkDuringOutOfBoxExperience", $this->_propDict)) {
+            return $this->_propDict["tenantLockdownRequireNetworkDuringOutOfBoxExperience"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the tenantLockdownRequireNetworkDuringOutOfBoxExperience
+    *
+    * @param bool $val The tenantLockdownRequireNetworkDuringOutOfBoxExperience
+    *
+    * @return Windows10GeneralConfiguration
+    */
+    public function setTenantLockdownRequireNetworkDuringOutOfBoxExperience($val)
+    {
+        $this->_propDict["tenantLockdownRequireNetworkDuringOutOfBoxExperience"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the appManagementMSIAllowUserControlOverInstall
+    *
+    * @return bool The appManagementMSIAllowUserControlOverInstall
+    */
+    public function getAppManagementMSIAllowUserControlOverInstall()
+    {
+        if (array_key_exists("appManagementMSIAllowUserControlOverInstall", $this->_propDict)) {
+            return $this->_propDict["appManagementMSIAllowUserControlOverInstall"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the appManagementMSIAllowUserControlOverInstall
+    *
+    * @param bool $val The appManagementMSIAllowUserControlOverInstall
+    *
+    * @return Windows10GeneralConfiguration
+    */
+    public function setAppManagementMSIAllowUserControlOverInstall($val)
+    {
+        $this->_propDict["appManagementMSIAllowUserControlOverInstall"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the appManagementMSIAlwaysInstallWithElevatedPrivileges
+    *
+    * @return bool The appManagementMSIAlwaysInstallWithElevatedPrivileges
+    */
+    public function getAppManagementMSIAlwaysInstallWithElevatedPrivileges()
+    {
+        if (array_key_exists("appManagementMSIAlwaysInstallWithElevatedPrivileges", $this->_propDict)) {
+            return $this->_propDict["appManagementMSIAlwaysInstallWithElevatedPrivileges"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the appManagementMSIAlwaysInstallWithElevatedPrivileges
+    *
+    * @param bool $val The appManagementMSIAlwaysInstallWithElevatedPrivileges
+    *
+    * @return Windows10GeneralConfiguration
+    */
+    public function setAppManagementMSIAlwaysInstallWithElevatedPrivileges($val)
+    {
+        $this->_propDict["appManagementMSIAlwaysInstallWithElevatedPrivileges"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the dataProtectionBlockDirectMemoryAccess
+    *
+    * @return bool The dataProtectionBlockDirectMemoryAccess
+    */
+    public function getDataProtectionBlockDirectMemoryAccess()
+    {
+        if (array_key_exists("dataProtectionBlockDirectMemoryAccess", $this->_propDict)) {
+            return $this->_propDict["dataProtectionBlockDirectMemoryAccess"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the dataProtectionBlockDirectMemoryAccess
+    *
+    * @param bool $val The dataProtectionBlockDirectMemoryAccess
+    *
+    * @return Windows10GeneralConfiguration
+    */
+    public function setDataProtectionBlockDirectMemoryAccess($val)
+    {
+        $this->_propDict["dataProtectionBlockDirectMemoryAccess"] = boolval($val);
         return $this;
     }
     

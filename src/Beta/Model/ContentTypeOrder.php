@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -18,16 +18,15 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class ContentTypeOrder extends Entity
 {
     /**
     * Gets the default
-    * Whether this is the default Content Type
     *
     * @return bool The default
     */
@@ -42,7 +41,6 @@ class ContentTypeOrder extends Entity
 
     /**
     * Sets the default
-    * Whether this is the default Content Type
     *
     * @param bool $val The value of the default
     *
@@ -55,7 +53,6 @@ class ContentTypeOrder extends Entity
     }
     /**
     * Gets the position
-    * Specifies the position in which the Content Type appears in the selection UI.
     *
     * @return int The position
     */
@@ -70,7 +67,6 @@ class ContentTypeOrder extends Entity
 
     /**
     * Sets the position
-    * Specifies the position in which the Content Type appears in the selection UI.
     *
     * @param int $val The value of the position
     *

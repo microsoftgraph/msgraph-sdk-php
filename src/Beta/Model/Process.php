@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -18,37 +18,37 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class Process extends Entity
 {
     /**
-    * Gets the authenticodeHash256
+    * Gets the accountName
     *
-    * @return string The authenticodeHash256
+    * @return string The accountName
     */
-    public function getAuthenticodeHash256()
+    public function getAccountName()
     {
-        if (array_key_exists("authenticodeHash256", $this->_propDict)) {
-            return $this->_propDict["authenticodeHash256"];
+        if (array_key_exists("accountName", $this->_propDict)) {
+            return $this->_propDict["accountName"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the authenticodeHash256
+    * Sets the accountName
     *
-    * @param string $val The value of the authenticodeHash256
+    * @param string $val The value of the accountName
     *
     * @return Process
     */
-    public function setAuthenticodeHash256($val)
+    public function setAccountName($val)
     {
-        $this->_propDict["authenticodeHash256"] = $val;
+        $this->_propDict["accountName"] = $val;
         return $this;
     }
     /**
@@ -106,6 +106,37 @@ class Process extends Entity
     public function setCreatedDateTime($val)
     {
         $this->_propDict["createdDateTime"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the fileHash
+    *
+    * @return FileHash The fileHash
+    */
+    public function getFileHash()
+    {
+        if (array_key_exists("fileHash", $this->_propDict)) {
+            if (is_a($this->_propDict["fileHash"], "Microsoft\Graph\Beta\Model\FileHash")) {
+                return $this->_propDict["fileHash"];
+            } else {
+                $this->_propDict["fileHash"] = new FileHash($this->_propDict["fileHash"]);
+                return $this->_propDict["fileHash"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the fileHash
+    *
+    * @param FileHash $val The value to assign to the fileHash
+    *
+    * @return Process The Process
+    */
+    public function setFileHash($val)
+    {
+        $this->_propDict["fileHash"] = $val;
          return $this;
     }
 
@@ -324,58 +355,6 @@ class Process extends Entity
     public function setProcessId($val)
     {
         $this->_propDict["processId"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the sha256
-    *
-    * @return string The sha256
-    */
-    public function getSha256()
-    {
-        if (array_key_exists("sha256", $this->_propDict)) {
-            return $this->_propDict["sha256"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the sha256
-    *
-    * @param string $val The value of the sha256
-    *
-    * @return Process
-    */
-    public function setSha256($val)
-    {
-        $this->_propDict["sha256"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the accountName
-    *
-    * @return string The accountName
-    */
-    public function getAccountName()
-    {
-        if (array_key_exists("accountName", $this->_propDict)) {
-            return $this->_propDict["accountName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the accountName
-    *
-    * @param string $val The value of the accountName
-    *
-    * @return Process
-    */
-    public function setAccountName($val)
-    {
-        $this->_propDict["accountName"] = $val;
         return $this;
     }
 }

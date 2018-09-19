@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class Application extends DirectoryObject
@@ -29,15 +29,15 @@ class Application extends DirectoryObject
     /**
     * Gets the api
     *
-    * @return Api The api
+    * @return ApiApplication The api
     */
     public function getApi()
     {
         if (array_key_exists("api", $this->_propDict)) {
-            if (is_a($this->_propDict["api"], "Microsoft\Graph\Beta\Model\Api")) {
+            if (is_a($this->_propDict["api"], "Microsoft\Graph\Beta\Model\ApiApplication")) {
                 return $this->_propDict["api"];
             } else {
-                $this->_propDict["api"] = new Api($this->_propDict["api"]);
+                $this->_propDict["api"] = new ApiApplication($this->_propDict["api"]);
                 return $this->_propDict["api"];
             }
         }
@@ -47,7 +47,7 @@ class Application extends DirectoryObject
     /**
     * Sets the api
     *
-    * @param Api $val The api
+    * @param ApiApplication $val The api
     *
     * @return Application
     */
@@ -58,56 +58,29 @@ class Application extends DirectoryObject
     }
     
     /**
-    * Gets the allowPublicClient
+    * Gets the appId
     *
-    * @return bool The allowPublicClient
+    * @return string The appId
     */
-    public function getAllowPublicClient()
+    public function getAppId()
     {
-        if (array_key_exists("allowPublicClient", $this->_propDict)) {
-            return $this->_propDict["allowPublicClient"];
+        if (array_key_exists("appId", $this->_propDict)) {
+            return $this->_propDict["appId"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the allowPublicClient
+    * Sets the appId
     *
-    * @param bool $val The allowPublicClient
-    *
-    * @return Application
-    */
-    public function setAllowPublicClient($val)
-    {
-        $this->_propDict["allowPublicClient"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the applicationAliases
-    *
-    * @return string The applicationAliases
-    */
-    public function getApplicationAliases()
-    {
-        if (array_key_exists("applicationAliases", $this->_propDict)) {
-            return $this->_propDict["applicationAliases"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the applicationAliases
-    *
-    * @param string $val The applicationAliases
+    * @param string $val The appId
     *
     * @return Application
     */
-    public function setApplicationAliases($val)
+    public function setAppId($val)
     {
-        $this->_propDict["applicationAliases"] = $val;
+        $this->_propDict["appId"] = $val;
         return $this;
     }
     
@@ -171,33 +144,56 @@ class Application extends DirectoryObject
     }
     
     /**
-    * Gets the installedClients
+    * Gets the isFallbackPublicClient
     *
-    * @return InstalledClient The installedClients
+    * @return bool The isFallbackPublicClient
     */
-    public function getInstalledClients()
+    public function getIsFallbackPublicClient()
     {
-        if (array_key_exists("installedClients", $this->_propDict)) {
-            if (is_a($this->_propDict["installedClients"], "Microsoft\Graph\Beta\Model\InstalledClient")) {
-                return $this->_propDict["installedClients"];
-            } else {
-                $this->_propDict["installedClients"] = new InstalledClient($this->_propDict["installedClients"]);
-                return $this->_propDict["installedClients"];
-            }
+        if (array_key_exists("isFallbackPublicClient", $this->_propDict)) {
+            return $this->_propDict["isFallbackPublicClient"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the installedClients
+    * Sets the isFallbackPublicClient
     *
-    * @param InstalledClient $val The installedClients
+    * @param bool $val The isFallbackPublicClient
     *
     * @return Application
     */
-    public function setInstalledClients($val)
+    public function setIsFallbackPublicClient($val)
     {
-        $this->_propDict["installedClients"] = $val;
+        $this->_propDict["isFallbackPublicClient"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the identifierUris
+    *
+    * @return string The identifierUris
+    */
+    public function getIdentifierUris()
+    {
+        if (array_key_exists("identifierUris", $this->_propDict)) {
+            return $this->_propDict["identifierUris"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the identifierUris
+    *
+    * @param string $val The identifierUris
+    *
+    * @return Application
+    */
+    public function setIdentifierUris($val)
+    {
+        $this->_propDict["identifierUris"] = $val;
         return $this;
     }
     
@@ -319,6 +315,37 @@ class Application extends DirectoryObject
     }
     
     /**
+    * Gets the optionalClaims
+    *
+    * @return OptionalClaims The optionalClaims
+    */
+    public function getOptionalClaims()
+    {
+        if (array_key_exists("optionalClaims", $this->_propDict)) {
+            if (is_a($this->_propDict["optionalClaims"], "Microsoft\Graph\Beta\Model\OptionalClaims")) {
+                return $this->_propDict["optionalClaims"];
+            } else {
+                $this->_propDict["optionalClaims"] = new OptionalClaims($this->_propDict["optionalClaims"]);
+                return $this->_propDict["optionalClaims"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the optionalClaims
+    *
+    * @param OptionalClaims $val The optionalClaims
+    *
+    * @return Application
+    */
+    public function setOptionalClaims($val)
+    {
+        $this->_propDict["optionalClaims"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the orgRestrictions
     *
     * @return string The orgRestrictions
@@ -342,6 +369,37 @@ class Application extends DirectoryObject
     public function setOrgRestrictions($val)
     {
         $this->_propDict["orgRestrictions"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the parentalControlSettings
+    *
+    * @return ParentalControlSettings The parentalControlSettings
+    */
+    public function getParentalControlSettings()
+    {
+        if (array_key_exists("parentalControlSettings", $this->_propDict)) {
+            if (is_a($this->_propDict["parentalControlSettings"], "Microsoft\Graph\Beta\Model\ParentalControlSettings")) {
+                return $this->_propDict["parentalControlSettings"];
+            } else {
+                $this->_propDict["parentalControlSettings"] = new ParentalControlSettings($this->_propDict["parentalControlSettings"]);
+                return $this->_propDict["parentalControlSettings"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the parentalControlSettings
+    *
+    * @param ParentalControlSettings $val The parentalControlSettings
+    *
+    * @return Application
+    */
+    public function setParentalControlSettings($val)
+    {
+        $this->_propDict["parentalControlSettings"] = $val;
         return $this;
     }
     
@@ -373,31 +431,61 @@ class Application extends DirectoryObject
         return $this;
     }
     
-
-     /** 
-     * Gets the preAuthorizedApplications
-     *
-     * @return array The preAuthorizedApplications
-     */
-    public function getPreAuthorizedApplications()
+    /**
+    * Gets the publicClient
+    *
+    * @return PublicClientApplication The publicClient
+    */
+    public function getPublicClient()
     {
-        if (array_key_exists("preAuthorizedApplications", $this->_propDict)) {
-           return $this->_propDict["preAuthorizedApplications"];
+        if (array_key_exists("publicClient", $this->_propDict)) {
+            if (is_a($this->_propDict["publicClient"], "Microsoft\Graph\Beta\Model\PublicClientApplication")) {
+                return $this->_propDict["publicClient"];
+            } else {
+                $this->_propDict["publicClient"] = new PublicClientApplication($this->_propDict["publicClient"]);
+                return $this->_propDict["publicClient"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the publicClient
+    *
+    * @param PublicClientApplication $val The publicClient
+    *
+    * @return Application
+    */
+    public function setPublicClient($val)
+    {
+        $this->_propDict["publicClient"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the publisherDomain
+    *
+    * @return string The publisherDomain
+    */
+    public function getPublisherDomain()
+    {
+        if (array_key_exists("publisherDomain", $this->_propDict)) {
+            return $this->_propDict["publisherDomain"];
         } else {
             return null;
         }
     }
     
-    /** 
-    * Sets the preAuthorizedApplications
+    /**
+    * Sets the publisherDomain
     *
-    * @param PreAuthorizedApplication $val The preAuthorizedApplications
+    * @param string $val The publisherDomain
     *
     * @return Application
     */
-    public function setPreAuthorizedApplications($val)
+    public function setPublisherDomain($val)
     {
-		$this->_propDict["preAuthorizedApplications"] = $val;
+        $this->_propDict["publisherDomain"] = $val;
         return $this;
     }
     
@@ -430,6 +518,33 @@ class Application extends DirectoryObject
     }
     
     /**
+    * Gets the signInAudience
+    *
+    * @return string The signInAudience
+    */
+    public function getSignInAudience()
+    {
+        if (array_key_exists("signInAudience", $this->_propDict)) {
+            return $this->_propDict["signInAudience"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the signInAudience
+    *
+    * @param string $val The signInAudience
+    *
+    * @return Application
+    */
+    public function setSignInAudience($val)
+    {
+        $this->_propDict["signInAudience"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the tags
     *
     * @return string The tags
@@ -457,17 +572,44 @@ class Application extends DirectoryObject
     }
     
     /**
+    * Gets the tokenEncryptionKeyId
+    *
+    * @return string The tokenEncryptionKeyId
+    */
+    public function getTokenEncryptionKeyId()
+    {
+        if (array_key_exists("tokenEncryptionKeyId", $this->_propDict)) {
+            return $this->_propDict["tokenEncryptionKeyId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the tokenEncryptionKeyId
+    *
+    * @param string $val The tokenEncryptionKeyId
+    *
+    * @return Application
+    */
+    public function setTokenEncryptionKeyId($val)
+    {
+        $this->_propDict["tokenEncryptionKeyId"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the web
     *
-    * @return Web The web
+    * @return WebApplication The web
     */
     public function getWeb()
     {
         if (array_key_exists("web", $this->_propDict)) {
-            if (is_a($this->_propDict["web"], "Microsoft\Graph\Beta\Model\Web")) {
+            if (is_a($this->_propDict["web"], "Microsoft\Graph\Beta\Model\WebApplication")) {
                 return $this->_propDict["web"];
             } else {
-                $this->_propDict["web"] = new Web($this->_propDict["web"]);
+                $this->_propDict["web"] = new WebApplication($this->_propDict["web"]);
                 return $this->_propDict["web"];
             }
         }
@@ -477,7 +619,7 @@ class Application extends DirectoryObject
     /**
     * Sets the web
     *
-    * @param Web $val The web
+    * @param WebApplication $val The web
     *
     * @return Application
     */

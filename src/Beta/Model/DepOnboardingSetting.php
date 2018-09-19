@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class DepOnboardingSetting extends Entity
@@ -228,6 +228,263 @@ class DepOnboardingSetting extends Entity
     public function setLastSyncErrorCode($val)
     {
         $this->_propDict["lastSyncErrorCode"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the tokenType
+    *
+    * @return DepTokenType The tokenType
+    */
+    public function getTokenType()
+    {
+        if (array_key_exists("tokenType", $this->_propDict)) {
+            if (is_a($this->_propDict["tokenType"], "Microsoft\Graph\Beta\Model\DepTokenType")) {
+                return $this->_propDict["tokenType"];
+            } else {
+                $this->_propDict["tokenType"] = new DepTokenType($this->_propDict["tokenType"]);
+                return $this->_propDict["tokenType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the tokenType
+    *
+    * @param DepTokenType $val The tokenType
+    *
+    * @return DepOnboardingSetting
+    */
+    public function setTokenType($val)
+    {
+        $this->_propDict["tokenType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the tokenName
+    *
+    * @return string The tokenName
+    */
+    public function getTokenName()
+    {
+        if (array_key_exists("tokenName", $this->_propDict)) {
+            return $this->_propDict["tokenName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the tokenName
+    *
+    * @param string $val The tokenName
+    *
+    * @return DepOnboardingSetting
+    */
+    public function setTokenName($val)
+    {
+        $this->_propDict["tokenName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the syncedDeviceCount
+    *
+    * @return int The syncedDeviceCount
+    */
+    public function getSyncedDeviceCount()
+    {
+        if (array_key_exists("syncedDeviceCount", $this->_propDict)) {
+            return $this->_propDict["syncedDeviceCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the syncedDeviceCount
+    *
+    * @param int $val The syncedDeviceCount
+    *
+    * @return DepOnboardingSetting
+    */
+    public function setSyncedDeviceCount($val)
+    {
+        $this->_propDict["syncedDeviceCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the defaultProfileDisplayName
+    *
+    * @return string The defaultProfileDisplayName
+    */
+    public function getDefaultProfileDisplayName()
+    {
+        if (array_key_exists("defaultProfileDisplayName", $this->_propDict)) {
+            return $this->_propDict["defaultProfileDisplayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the defaultProfileDisplayName
+    *
+    * @param string $val The defaultProfileDisplayName
+    *
+    * @return DepOnboardingSetting
+    */
+    public function setDefaultProfileDisplayName($val)
+    {
+        $this->_propDict["defaultProfileDisplayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the dataSharingConsentGranted
+    *
+    * @return bool The dataSharingConsentGranted
+    */
+    public function getDataSharingConsentGranted()
+    {
+        if (array_key_exists("dataSharingConsentGranted", $this->_propDict)) {
+            return $this->_propDict["dataSharingConsentGranted"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the dataSharingConsentGranted
+    *
+    * @param bool $val The dataSharingConsentGranted
+    *
+    * @return DepOnboardingSetting
+    */
+    public function setDataSharingConsentGranted($val)
+    {
+        $this->_propDict["dataSharingConsentGranted"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the defaultIosEnrollmentProfile
+    *
+    * @return DepIOSEnrollmentProfile The defaultIosEnrollmentProfile
+    */
+    public function getDefaultIosEnrollmentProfile()
+    {
+        if (array_key_exists("defaultIosEnrollmentProfile", $this->_propDict)) {
+            if (is_a($this->_propDict["defaultIosEnrollmentProfile"], "Microsoft\Graph\Beta\Model\DepIOSEnrollmentProfile")) {
+                return $this->_propDict["defaultIosEnrollmentProfile"];
+            } else {
+                $this->_propDict["defaultIosEnrollmentProfile"] = new DepIOSEnrollmentProfile($this->_propDict["defaultIosEnrollmentProfile"]);
+                return $this->_propDict["defaultIosEnrollmentProfile"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the defaultIosEnrollmentProfile
+    *
+    * @param DepIOSEnrollmentProfile $val The defaultIosEnrollmentProfile
+    *
+    * @return DepOnboardingSetting
+    */
+    public function setDefaultIosEnrollmentProfile($val)
+    {
+        $this->_propDict["defaultIosEnrollmentProfile"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the defaultMacOsEnrollmentProfile
+    *
+    * @return DepMacOSEnrollmentProfile The defaultMacOsEnrollmentProfile
+    */
+    public function getDefaultMacOsEnrollmentProfile()
+    {
+        if (array_key_exists("defaultMacOsEnrollmentProfile", $this->_propDict)) {
+            if (is_a($this->_propDict["defaultMacOsEnrollmentProfile"], "Microsoft\Graph\Beta\Model\DepMacOSEnrollmentProfile")) {
+                return $this->_propDict["defaultMacOsEnrollmentProfile"];
+            } else {
+                $this->_propDict["defaultMacOsEnrollmentProfile"] = new DepMacOSEnrollmentProfile($this->_propDict["defaultMacOsEnrollmentProfile"]);
+                return $this->_propDict["defaultMacOsEnrollmentProfile"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the defaultMacOsEnrollmentProfile
+    *
+    * @param DepMacOSEnrollmentProfile $val The defaultMacOsEnrollmentProfile
+    *
+    * @return DepOnboardingSetting
+    */
+    public function setDefaultMacOsEnrollmentProfile($val)
+    {
+        $this->_propDict["defaultMacOsEnrollmentProfile"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the enrollmentProfiles
+     *
+     * @return array The enrollmentProfiles
+     */
+    public function getEnrollmentProfiles()
+    {
+        if (array_key_exists("enrollmentProfiles", $this->_propDict)) {
+           return $this->_propDict["enrollmentProfiles"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the enrollmentProfiles
+    *
+    * @param EnrollmentProfile $val The enrollmentProfiles
+    *
+    * @return DepOnboardingSetting
+    */
+    public function setEnrollmentProfiles($val)
+    {
+		$this->_propDict["enrollmentProfiles"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the importedAppleDeviceIdentities
+     *
+     * @return array The importedAppleDeviceIdentities
+     */
+    public function getImportedAppleDeviceIdentities()
+    {
+        if (array_key_exists("importedAppleDeviceIdentities", $this->_propDict)) {
+           return $this->_propDict["importedAppleDeviceIdentities"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the importedAppleDeviceIdentities
+    *
+    * @param ImportedAppleDeviceIdentity $val The importedAppleDeviceIdentities
+    *
+    * @return DepOnboardingSetting
+    */
+    public function setImportedAppleDeviceIdentities($val)
+    {
+		$this->_propDict["importedAppleDeviceIdentities"] = $val;
         return $this;
     }
     

@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class Subscription extends Entity
@@ -136,7 +136,6 @@ class Subscription extends Entity
     
     /**
     * Gets the expirationDateTime
-    * Specifies the date and time when the webhook subscription expires. The time is in UTC, and can be an amount of time from subscription creation that varies for the resource subscribed to.  See the table below for maximum supported subscription length of time.
     *
     * @return \DateTime The expirationDateTime
     */
@@ -155,7 +154,6 @@ class Subscription extends Entity
     
     /**
     * Sets the expirationDateTime
-    * Specifies the date and time when the webhook subscription expires. The time is in UTC, and can be an amount of time from subscription creation that varies for the resource subscribed to.  See the table below for maximum supported subscription length of time.
     *
     * @param \DateTime $val The expirationDateTime
     *
@@ -195,29 +193,29 @@ class Subscription extends Entity
     }
     
     /**
-    * Gets the creatorUserId
+    * Gets the creatorId
     *
-    * @return string The creatorUserId
+    * @return string The creatorId
     */
-    public function getCreatorUserId()
+    public function getCreatorId()
     {
-        if (array_key_exists("creatorUserId", $this->_propDict)) {
-            return $this->_propDict["creatorUserId"];
+        if (array_key_exists("creatorId", $this->_propDict)) {
+            return $this->_propDict["creatorId"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the creatorUserId
+    * Sets the creatorId
     *
-    * @param string $val The creatorUserId
+    * @param string $val The creatorId
     *
     * @return Subscription
     */
-    public function setCreatorUserId($val)
+    public function setCreatorId($val)
     {
-        $this->_propDict["creatorUserId"] = $val;
+        $this->_propDict["creatorId"] = $val;
         return $this;
     }
     

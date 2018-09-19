@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,12 +19,12 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-class IosEasEmailProfileConfiguration extends DeviceConfiguration
+class IosEasEmailProfileConfiguration extends EasEmailProfileConfigurationBase
 {
     /**
     * Gets the accountName
@@ -332,37 +332,6 @@ class IosEasEmailProfileConfiguration extends DeviceConfiguration
     public function setRequireSsl($val)
     {
         $this->_propDict["requireSsl"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the usernameSource
-    *
-    * @return UserEmailSource The usernameSource
-    */
-    public function getUsernameSource()
-    {
-        if (array_key_exists("usernameSource", $this->_propDict)) {
-            if (is_a($this->_propDict["usernameSource"], "Microsoft\Graph\Beta\Model\UserEmailSource")) {
-                return $this->_propDict["usernameSource"];
-            } else {
-                $this->_propDict["usernameSource"] = new UserEmailSource($this->_propDict["usernameSource"]);
-                return $this->_propDict["usernameSource"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the usernameSource
-    *
-    * @param UserEmailSource $val The usernameSource
-    *
-    * @return IosEasEmailProfileConfiguration
-    */
-    public function setUsernameSource($val)
-    {
-        $this->_propDict["usernameSource"] = $val;
         return $this;
     }
     

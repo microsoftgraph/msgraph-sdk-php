@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -18,13 +18,39 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class UserSecurityState extends Entity
 {
+    /**
+    * Gets the aadUserId
+    *
+    * @return string The aadUserId
+    */
+    public function getAadUserId()
+    {
+        if (array_key_exists("aadUserId", $this->_propDict)) {
+            return $this->_propDict["aadUserId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the aadUserId
+    *
+    * @param string $val The value of the aadUserId
+    *
+    * @return UserSecurityState
+    */
+    public function setAadUserId($val)
+    {
+        $this->_propDict["aadUserId"] = $val;
+        return $this;
+    }
     /**
     * Gets the accountName
     *
@@ -75,6 +101,63 @@ class UserSecurityState extends Entity
     public function setDomainName($val)
     {
         $this->_propDict["domainName"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the emailRole
+    *
+    * @return EmailRole The emailRole
+    */
+    public function getEmailRole()
+    {
+        if (array_key_exists("emailRole", $this->_propDict)) {
+            if (is_a($this->_propDict["emailRole"], "Microsoft\Graph\Beta\Model\EmailRole")) {
+                return $this->_propDict["emailRole"];
+            } else {
+                $this->_propDict["emailRole"] = new EmailRole($this->_propDict["emailRole"]);
+                return $this->_propDict["emailRole"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the emailRole
+    *
+    * @param EmailRole $val The value to assign to the emailRole
+    *
+    * @return UserSecurityState The UserSecurityState
+    */
+    public function setEmailRole($val)
+    {
+        $this->_propDict["emailRole"] = $val;
+         return $this;
+    }
+    /**
+    * Gets the isVpn
+    *
+    * @return bool The isVpn
+    */
+    public function getIsVpn()
+    {
+        if (array_key_exists("isVpn", $this->_propDict)) {
+            return $this->_propDict["isVpn"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isVpn
+    *
+    * @param bool $val The value of the isVpn
+    *
+    * @return UserSecurityState
+    */
+    public function setIsVpn($val)
+    {
+        $this->_propDict["isVpn"] = $val;
         return $this;
     }
 
@@ -135,29 +218,29 @@ class UserSecurityState extends Entity
         return $this;
     }
     /**
-    * Gets the logonIpAddress
+    * Gets the logonIp
     *
-    * @return string The logonIpAddress
+    * @return string The logonIp
     */
-    public function getLogonIpAddress()
+    public function getLogonIp()
     {
-        if (array_key_exists("logonIpAddress", $this->_propDict)) {
-            return $this->_propDict["logonIpAddress"];
+        if (array_key_exists("logonIp", $this->_propDict)) {
+            return $this->_propDict["logonIp"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the logonIpAddress
+    * Sets the logonIp
     *
-    * @param string $val The value of the logonIpAddress
+    * @param string $val The value of the logonIp
     *
     * @return UserSecurityState
     */
-    public function setLogonIpAddress($val)
+    public function setLogonIp($val)
     {
-        $this->_propDict["logonIpAddress"] = $val;
+        $this->_propDict["logonIp"] = $val;
         return $this;
     }
     /**

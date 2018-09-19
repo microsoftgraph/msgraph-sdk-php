@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class SharedPCConfiguration extends DeviceConfiguration
@@ -89,6 +89,37 @@ class SharedPCConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the localStorage
+    *
+    * @return Enablement The localStorage
+    */
+    public function getLocalStorage()
+    {
+        if (array_key_exists("localStorage", $this->_propDict)) {
+            if (is_a($this->_propDict["localStorage"], "Microsoft\Graph\Beta\Model\Enablement")) {
+                return $this->_propDict["localStorage"];
+            } else {
+                $this->_propDict["localStorage"] = new Enablement($this->_propDict["localStorage"]);
+                return $this->_propDict["localStorage"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the localStorage
+    *
+    * @param Enablement $val The localStorage
+    *
+    * @return SharedPCConfiguration
+    */
+    public function setLocalStorage($val)
+    {
+        $this->_propDict["localStorage"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the allowLocalStorage
     *
     * @return bool The allowLocalStorage
@@ -112,6 +143,37 @@ class SharedPCConfiguration extends DeviceConfiguration
     public function setAllowLocalStorage($val)
     {
         $this->_propDict["allowLocalStorage"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the setAccountManager
+    *
+    * @return Enablement The setAccountManager
+    */
+    public function getSetAccountManager()
+    {
+        if (array_key_exists("setAccountManager", $this->_propDict)) {
+            if (is_a($this->_propDict["setAccountManager"], "Microsoft\Graph\Beta\Model\Enablement")) {
+                return $this->_propDict["setAccountManager"];
+            } else {
+                $this->_propDict["setAccountManager"] = new Enablement($this->_propDict["setAccountManager"]);
+                return $this->_propDict["setAccountManager"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the setAccountManager
+    *
+    * @param Enablement $val The setAccountManager
+    *
+    * @return SharedPCConfiguration
+    */
+    public function setSetAccountManager($val)
+    {
+        $this->_propDict["setAccountManager"] = $val;
         return $this;
     }
     
@@ -143,6 +205,37 @@ class SharedPCConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the setEduPolicies
+    *
+    * @return Enablement The setEduPolicies
+    */
+    public function getSetEduPolicies()
+    {
+        if (array_key_exists("setEduPolicies", $this->_propDict)) {
+            if (is_a($this->_propDict["setEduPolicies"], "Microsoft\Graph\Beta\Model\Enablement")) {
+                return $this->_propDict["setEduPolicies"];
+            } else {
+                $this->_propDict["setEduPolicies"] = new Enablement($this->_propDict["setEduPolicies"]);
+                return $this->_propDict["setEduPolicies"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the setEduPolicies
+    *
+    * @param Enablement $val The setEduPolicies
+    *
+    * @return SharedPCConfiguration
+    */
+    public function setSetEduPolicies($val)
+    {
+        $this->_propDict["setEduPolicies"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the disableEduPolicies
     *
     * @return bool The disableEduPolicies
@@ -170,6 +263,37 @@ class SharedPCConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the setPowerPolicies
+    *
+    * @return Enablement The setPowerPolicies
+    */
+    public function getSetPowerPolicies()
+    {
+        if (array_key_exists("setPowerPolicies", $this->_propDict)) {
+            if (is_a($this->_propDict["setPowerPolicies"], "Microsoft\Graph\Beta\Model\Enablement")) {
+                return $this->_propDict["setPowerPolicies"];
+            } else {
+                $this->_propDict["setPowerPolicies"] = new Enablement($this->_propDict["setPowerPolicies"]);
+                return $this->_propDict["setPowerPolicies"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the setPowerPolicies
+    *
+    * @param Enablement $val The setPowerPolicies
+    *
+    * @return SharedPCConfiguration
+    */
+    public function setSetPowerPolicies($val)
+    {
+        $this->_propDict["setPowerPolicies"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the disablePowerPolicies
     *
     * @return bool The disablePowerPolicies
@@ -193,6 +317,37 @@ class SharedPCConfiguration extends DeviceConfiguration
     public function setDisablePowerPolicies($val)
     {
         $this->_propDict["disablePowerPolicies"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the signInOnResume
+    *
+    * @return Enablement The signInOnResume
+    */
+    public function getSignInOnResume()
+    {
+        if (array_key_exists("signInOnResume", $this->_propDict)) {
+            if (is_a($this->_propDict["signInOnResume"], "Microsoft\Graph\Beta\Model\Enablement")) {
+                return $this->_propDict["signInOnResume"];
+            } else {
+                $this->_propDict["signInOnResume"] = new Enablement($this->_propDict["signInOnResume"]);
+                return $this->_propDict["signInOnResume"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the signInOnResume
+    *
+    * @param Enablement $val The signInOnResume
+    *
+    * @return SharedPCConfiguration
+    */
+    public function setSignInOnResume($val)
+    {
+        $this->_propDict["signInOnResume"] = $val;
         return $this;
     }
     

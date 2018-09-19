@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class ManagedDeviceCertificateState extends Entity
@@ -85,6 +85,192 @@ class ManagedDeviceCertificateState extends Entity
     public function setCertificateKeyUsage($val)
     {
         $this->_propDict["certificateKeyUsage"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the certificateValidityPeriodUnits
+    *
+    * @return CertificateValidityPeriodScale The certificateValidityPeriodUnits
+    */
+    public function getCertificateValidityPeriodUnits()
+    {
+        if (array_key_exists("certificateValidityPeriodUnits", $this->_propDict)) {
+            if (is_a($this->_propDict["certificateValidityPeriodUnits"], "Microsoft\Graph\Beta\Model\CertificateValidityPeriodScale")) {
+                return $this->_propDict["certificateValidityPeriodUnits"];
+            } else {
+                $this->_propDict["certificateValidityPeriodUnits"] = new CertificateValidityPeriodScale($this->_propDict["certificateValidityPeriodUnits"]);
+                return $this->_propDict["certificateValidityPeriodUnits"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the certificateValidityPeriodUnits
+    *
+    * @param CertificateValidityPeriodScale $val The certificateValidityPeriodUnits
+    *
+    * @return ManagedDeviceCertificateState
+    */
+    public function setCertificateValidityPeriodUnits($val)
+    {
+        $this->_propDict["certificateValidityPeriodUnits"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the certificateIssuanceState
+    *
+    * @return CertificateIssuanceStates The certificateIssuanceState
+    */
+    public function getCertificateIssuanceState()
+    {
+        if (array_key_exists("certificateIssuanceState", $this->_propDict)) {
+            if (is_a($this->_propDict["certificateIssuanceState"], "Microsoft\Graph\Beta\Model\CertificateIssuanceStates")) {
+                return $this->_propDict["certificateIssuanceState"];
+            } else {
+                $this->_propDict["certificateIssuanceState"] = new CertificateIssuanceStates($this->_propDict["certificateIssuanceState"]);
+                return $this->_propDict["certificateIssuanceState"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the certificateIssuanceState
+    *
+    * @param CertificateIssuanceStates $val The certificateIssuanceState
+    *
+    * @return ManagedDeviceCertificateState
+    */
+    public function setCertificateIssuanceState($val)
+    {
+        $this->_propDict["certificateIssuanceState"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the certificateKeyStorageProvider
+    *
+    * @return KeyStorageProviderOption The certificateKeyStorageProvider
+    */
+    public function getCertificateKeyStorageProvider()
+    {
+        if (array_key_exists("certificateKeyStorageProvider", $this->_propDict)) {
+            if (is_a($this->_propDict["certificateKeyStorageProvider"], "Microsoft\Graph\Beta\Model\KeyStorageProviderOption")) {
+                return $this->_propDict["certificateKeyStorageProvider"];
+            } else {
+                $this->_propDict["certificateKeyStorageProvider"] = new KeyStorageProviderOption($this->_propDict["certificateKeyStorageProvider"]);
+                return $this->_propDict["certificateKeyStorageProvider"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the certificateKeyStorageProvider
+    *
+    * @param KeyStorageProviderOption $val The certificateKeyStorageProvider
+    *
+    * @return ManagedDeviceCertificateState
+    */
+    public function setCertificateKeyStorageProvider($val)
+    {
+        $this->_propDict["certificateKeyStorageProvider"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the certificateSubjectNameFormat
+    *
+    * @return SubjectNameFormat The certificateSubjectNameFormat
+    */
+    public function getCertificateSubjectNameFormat()
+    {
+        if (array_key_exists("certificateSubjectNameFormat", $this->_propDict)) {
+            if (is_a($this->_propDict["certificateSubjectNameFormat"], "Microsoft\Graph\Beta\Model\SubjectNameFormat")) {
+                return $this->_propDict["certificateSubjectNameFormat"];
+            } else {
+                $this->_propDict["certificateSubjectNameFormat"] = new SubjectNameFormat($this->_propDict["certificateSubjectNameFormat"]);
+                return $this->_propDict["certificateSubjectNameFormat"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the certificateSubjectNameFormat
+    *
+    * @param SubjectNameFormat $val The certificateSubjectNameFormat
+    *
+    * @return ManagedDeviceCertificateState
+    */
+    public function setCertificateSubjectNameFormat($val)
+    {
+        $this->_propDict["certificateSubjectNameFormat"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the certificateSubjectAlternativeNameFormat
+    *
+    * @return SubjectAlternativeNameType The certificateSubjectAlternativeNameFormat
+    */
+    public function getCertificateSubjectAlternativeNameFormat()
+    {
+        if (array_key_exists("certificateSubjectAlternativeNameFormat", $this->_propDict)) {
+            if (is_a($this->_propDict["certificateSubjectAlternativeNameFormat"], "Microsoft\Graph\Beta\Model\SubjectAlternativeNameType")) {
+                return $this->_propDict["certificateSubjectAlternativeNameFormat"];
+            } else {
+                $this->_propDict["certificateSubjectAlternativeNameFormat"] = new SubjectAlternativeNameType($this->_propDict["certificateSubjectAlternativeNameFormat"]);
+                return $this->_propDict["certificateSubjectAlternativeNameFormat"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the certificateSubjectAlternativeNameFormat
+    *
+    * @param SubjectAlternativeNameType $val The certificateSubjectAlternativeNameFormat
+    *
+    * @return ManagedDeviceCertificateState
+    */
+    public function setCertificateSubjectAlternativeNameFormat($val)
+    {
+        $this->_propDict["certificateSubjectAlternativeNameFormat"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the certificateRevokeStatus
+    *
+    * @return CertificateRevocationStatus The certificateRevokeStatus
+    */
+    public function getCertificateRevokeStatus()
+    {
+        if (array_key_exists("certificateRevokeStatus", $this->_propDict)) {
+            if (is_a($this->_propDict["certificateRevokeStatus"], "Microsoft\Graph\Beta\Model\CertificateRevocationStatus")) {
+                return $this->_propDict["certificateRevokeStatus"];
+            } else {
+                $this->_propDict["certificateRevokeStatus"] = new CertificateRevocationStatus($this->_propDict["certificateRevokeStatus"]);
+                return $this->_propDict["certificateRevokeStatus"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the certificateRevokeStatus
+    *
+    * @param CertificateRevocationStatus $val The certificateRevokeStatus
+    *
+    * @return ManagedDeviceCertificateState
+    */
+    public function setCertificateRevokeStatus($val)
+    {
+        $this->_propDict["certificateRevokeStatus"] = $val;
         return $this;
     }
     
@@ -170,33 +356,6 @@ class ManagedDeviceCertificateState extends Entity
     }
     
     /**
-    * Gets the serverUrl
-    *
-    * @return string The serverUrl
-    */
-    public function getServerUrl()
-    {
-        if (array_key_exists("serverUrl", $this->_propDict)) {
-            return $this->_propDict["serverUrl"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the serverUrl
-    *
-    * @param string $val The serverUrl
-    *
-    * @return ManagedDeviceCertificateState
-    */
-    public function setServerUrl($val)
-    {
-        $this->_propDict["serverUrl"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the certificateExpirationDateTime
     *
     * @return \DateTime The certificateExpirationDateTime
@@ -224,6 +383,37 @@ class ManagedDeviceCertificateState extends Entity
     public function setCertificateExpirationDateTime($val)
     {
         $this->_propDict["certificateExpirationDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the certificateLastIssuanceStateChangedDateTime
+    *
+    * @return \DateTime The certificateLastIssuanceStateChangedDateTime
+    */
+    public function getCertificateLastIssuanceStateChangedDateTime()
+    {
+        if (array_key_exists("certificateLastIssuanceStateChangedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["certificateLastIssuanceStateChangedDateTime"], "\DateTime")) {
+                return $this->_propDict["certificateLastIssuanceStateChangedDateTime"];
+            } else {
+                $this->_propDict["certificateLastIssuanceStateChangedDateTime"] = new \DateTime($this->_propDict["certificateLastIssuanceStateChangedDateTime"]);
+                return $this->_propDict["certificateLastIssuanceStateChangedDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the certificateLastIssuanceStateChangedDateTime
+    *
+    * @param \DateTime $val The certificateLastIssuanceStateChangedDateTime
+    *
+    * @return ManagedDeviceCertificateState
+    */
+    public function setCertificateLastIssuanceStateChangedDateTime($val)
+    {
+        $this->_propDict["certificateLastIssuanceStateChangedDateTime"] = $val;
         return $this;
     }
     
@@ -367,29 +557,168 @@ class ManagedDeviceCertificateState extends Entity
     }
     
     /**
-    * Gets the enhancedKeyUsage
+    * Gets the certificateEnhancedKeyUsage
     *
-    * @return string The enhancedKeyUsage
+    * @return string The certificateEnhancedKeyUsage
     */
-    public function getEnhancedKeyUsage()
+    public function getCertificateEnhancedKeyUsage()
     {
-        if (array_key_exists("enhancedKeyUsage", $this->_propDict)) {
-            return $this->_propDict["enhancedKeyUsage"];
+        if (array_key_exists("certificateEnhancedKeyUsage", $this->_propDict)) {
+            return $this->_propDict["certificateEnhancedKeyUsage"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the enhancedKeyUsage
+    * Sets the certificateEnhancedKeyUsage
     *
-    * @param string $val The enhancedKeyUsage
+    * @param string $val The certificateEnhancedKeyUsage
     *
     * @return ManagedDeviceCertificateState
     */
-    public function setEnhancedKeyUsage($val)
+    public function setCertificateEnhancedKeyUsage($val)
     {
-        $this->_propDict["enhancedKeyUsage"] = $val;
+        $this->_propDict["certificateEnhancedKeyUsage"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the certificateValidityPeriod
+    *
+    * @return int The certificateValidityPeriod
+    */
+    public function getCertificateValidityPeriod()
+    {
+        if (array_key_exists("certificateValidityPeriod", $this->_propDict)) {
+            return $this->_propDict["certificateValidityPeriod"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the certificateValidityPeriod
+    *
+    * @param int $val The certificateValidityPeriod
+    *
+    * @return ManagedDeviceCertificateState
+    */
+    public function setCertificateValidityPeriod($val)
+    {
+        $this->_propDict["certificateValidityPeriod"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the certificateSubjectNameFormatString
+    *
+    * @return string The certificateSubjectNameFormatString
+    */
+    public function getCertificateSubjectNameFormatString()
+    {
+        if (array_key_exists("certificateSubjectNameFormatString", $this->_propDict)) {
+            return $this->_propDict["certificateSubjectNameFormatString"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the certificateSubjectNameFormatString
+    *
+    * @param string $val The certificateSubjectNameFormatString
+    *
+    * @return ManagedDeviceCertificateState
+    */
+    public function setCertificateSubjectNameFormatString($val)
+    {
+        $this->_propDict["certificateSubjectNameFormatString"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the certificateSubjectAlternativeNameFormatString
+    *
+    * @return string The certificateSubjectAlternativeNameFormatString
+    */
+    public function getCertificateSubjectAlternativeNameFormatString()
+    {
+        if (array_key_exists("certificateSubjectAlternativeNameFormatString", $this->_propDict)) {
+            return $this->_propDict["certificateSubjectAlternativeNameFormatString"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the certificateSubjectAlternativeNameFormatString
+    *
+    * @param string $val The certificateSubjectAlternativeNameFormatString
+    *
+    * @return ManagedDeviceCertificateState
+    */
+    public function setCertificateSubjectAlternativeNameFormatString($val)
+    {
+        $this->_propDict["certificateSubjectAlternativeNameFormatString"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the certificateIssuanceDateTime
+    *
+    * @return \DateTime The certificateIssuanceDateTime
+    */
+    public function getCertificateIssuanceDateTime()
+    {
+        if (array_key_exists("certificateIssuanceDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["certificateIssuanceDateTime"], "\DateTime")) {
+                return $this->_propDict["certificateIssuanceDateTime"];
+            } else {
+                $this->_propDict["certificateIssuanceDateTime"] = new \DateTime($this->_propDict["certificateIssuanceDateTime"]);
+                return $this->_propDict["certificateIssuanceDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the certificateIssuanceDateTime
+    *
+    * @param \DateTime $val The certificateIssuanceDateTime
+    *
+    * @return ManagedDeviceCertificateState
+    */
+    public function setCertificateIssuanceDateTime($val)
+    {
+        $this->_propDict["certificateIssuanceDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the certificateErrorCode
+    *
+    * @return int The certificateErrorCode
+    */
+    public function getCertificateErrorCode()
+    {
+        if (array_key_exists("certificateErrorCode", $this->_propDict)) {
+            return $this->_propDict["certificateErrorCode"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the certificateErrorCode
+    *
+    * @param int $val The certificateErrorCode
+    *
+    * @return ManagedDeviceCertificateState
+    */
+    public function setCertificateErrorCode($val)
+    {
+        $this->_propDict["certificateErrorCode"] = intval($val);
         return $this;
     }
     

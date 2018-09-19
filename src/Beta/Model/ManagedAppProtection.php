@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class ManagedAppProtection extends ManagedAppPolicy
@@ -758,6 +758,180 @@ class ManagedAppProtection extends ManagedAppPolicy
     public function setMinimumWarningAppVersion($val)
     {
         $this->_propDict["minimumWarningAppVersion"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the minimumWipeOsVersion
+    *
+    * @return string The minimumWipeOsVersion
+    */
+    public function getMinimumWipeOsVersion()
+    {
+        if (array_key_exists("minimumWipeOsVersion", $this->_propDict)) {
+            return $this->_propDict["minimumWipeOsVersion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the minimumWipeOsVersion
+    *
+    * @param string $val The minimumWipeOsVersion
+    *
+    * @return ManagedAppProtection
+    */
+    public function setMinimumWipeOsVersion($val)
+    {
+        $this->_propDict["minimumWipeOsVersion"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the minimumWipeAppVersion
+    *
+    * @return string The minimumWipeAppVersion
+    */
+    public function getMinimumWipeAppVersion()
+    {
+        if (array_key_exists("minimumWipeAppVersion", $this->_propDict)) {
+            return $this->_propDict["minimumWipeAppVersion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the minimumWipeAppVersion
+    *
+    * @param string $val The minimumWipeAppVersion
+    *
+    * @return ManagedAppProtection
+    */
+    public function setMinimumWipeAppVersion($val)
+    {
+        $this->_propDict["minimumWipeAppVersion"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the appActionIfDeviceComplianceRequired
+    *
+    * @return ManagedAppRemediationAction The appActionIfDeviceComplianceRequired
+    */
+    public function getAppActionIfDeviceComplianceRequired()
+    {
+        if (array_key_exists("appActionIfDeviceComplianceRequired", $this->_propDict)) {
+            if (is_a($this->_propDict["appActionIfDeviceComplianceRequired"], "Microsoft\Graph\Beta\Model\ManagedAppRemediationAction")) {
+                return $this->_propDict["appActionIfDeviceComplianceRequired"];
+            } else {
+                $this->_propDict["appActionIfDeviceComplianceRequired"] = new ManagedAppRemediationAction($this->_propDict["appActionIfDeviceComplianceRequired"]);
+                return $this->_propDict["appActionIfDeviceComplianceRequired"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the appActionIfDeviceComplianceRequired
+    *
+    * @param ManagedAppRemediationAction $val The appActionIfDeviceComplianceRequired
+    *
+    * @return ManagedAppProtection
+    */
+    public function setAppActionIfDeviceComplianceRequired($val)
+    {
+        $this->_propDict["appActionIfDeviceComplianceRequired"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the appActionIfMaximumPinRetriesExceeded
+    *
+    * @return ManagedAppRemediationAction The appActionIfMaximumPinRetriesExceeded
+    */
+    public function getAppActionIfMaximumPinRetriesExceeded()
+    {
+        if (array_key_exists("appActionIfMaximumPinRetriesExceeded", $this->_propDict)) {
+            if (is_a($this->_propDict["appActionIfMaximumPinRetriesExceeded"], "Microsoft\Graph\Beta\Model\ManagedAppRemediationAction")) {
+                return $this->_propDict["appActionIfMaximumPinRetriesExceeded"];
+            } else {
+                $this->_propDict["appActionIfMaximumPinRetriesExceeded"] = new ManagedAppRemediationAction($this->_propDict["appActionIfMaximumPinRetriesExceeded"]);
+                return $this->_propDict["appActionIfMaximumPinRetriesExceeded"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the appActionIfMaximumPinRetriesExceeded
+    *
+    * @param ManagedAppRemediationAction $val The appActionIfMaximumPinRetriesExceeded
+    *
+    * @return ManagedAppProtection
+    */
+    public function setAppActionIfMaximumPinRetriesExceeded($val)
+    {
+        $this->_propDict["appActionIfMaximumPinRetriesExceeded"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the pinRequiredOnLaunchInsteadOfBiometric
+    *
+    * @return bool The pinRequiredOnLaunchInsteadOfBiometric
+    */
+    public function getPinRequiredOnLaunchInsteadOfBiometric()
+    {
+        if (array_key_exists("pinRequiredOnLaunchInsteadOfBiometric", $this->_propDict)) {
+            return $this->_propDict["pinRequiredOnLaunchInsteadOfBiometric"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the pinRequiredOnLaunchInsteadOfBiometric
+    *
+    * @param bool $val The pinRequiredOnLaunchInsteadOfBiometric
+    *
+    * @return ManagedAppProtection
+    */
+    public function setPinRequiredOnLaunchInsteadOfBiometric($val)
+    {
+        $this->_propDict["pinRequiredOnLaunchInsteadOfBiometric"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the pinRequiredInsteadOfBiometricTimeout
+    *
+    * @return Duration The pinRequiredInsteadOfBiometricTimeout
+    */
+    public function getPinRequiredInsteadOfBiometricTimeout()
+    {
+        if (array_key_exists("pinRequiredInsteadOfBiometricTimeout", $this->_propDict)) {
+            if (is_a($this->_propDict["pinRequiredInsteadOfBiometricTimeout"], "Microsoft\Graph\Beta\Model\Duration")) {
+                return $this->_propDict["pinRequiredInsteadOfBiometricTimeout"];
+            } else {
+                $this->_propDict["pinRequiredInsteadOfBiometricTimeout"] = new Duration($this->_propDict["pinRequiredInsteadOfBiometricTimeout"]);
+                return $this->_propDict["pinRequiredInsteadOfBiometricTimeout"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the pinRequiredInsteadOfBiometricTimeout
+    *
+    * @param Duration $val The pinRequiredInsteadOfBiometricTimeout
+    *
+    * @return ManagedAppProtection
+    */
+    public function setPinRequiredInsteadOfBiometricTimeout($val)
+    {
+        $this->_propDict["pinRequiredInsteadOfBiometricTimeout"] = $val;
         return $this;
     }
     

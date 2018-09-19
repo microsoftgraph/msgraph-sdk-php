@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -18,9 +18,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class OutOfBoxExperienceSettings extends Entity
@@ -107,5 +107,88 @@ class OutOfBoxExperienceSettings extends Entity
     {
         $this->_propDict["userType"] = $val;
          return $this;
+    }
+
+    /**
+    * Gets the deviceUsageType
+    *
+    * @return WindowsDeviceUsageType The deviceUsageType
+    */
+    public function getDeviceUsageType()
+    {
+        if (array_key_exists("deviceUsageType", $this->_propDict)) {
+            if (is_a($this->_propDict["deviceUsageType"], "Microsoft\Graph\Beta\Model\WindowsDeviceUsageType")) {
+                return $this->_propDict["deviceUsageType"];
+            } else {
+                $this->_propDict["deviceUsageType"] = new WindowsDeviceUsageType($this->_propDict["deviceUsageType"]);
+                return $this->_propDict["deviceUsageType"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the deviceUsageType
+    *
+    * @param WindowsDeviceUsageType $val The value to assign to the deviceUsageType
+    *
+    * @return OutOfBoxExperienceSettings The OutOfBoxExperienceSettings
+    */
+    public function setDeviceUsageType($val)
+    {
+        $this->_propDict["deviceUsageType"] = $val;
+         return $this;
+    }
+    /**
+    * Gets the skipKeyboardSelectionPage
+    *
+    * @return bool The skipKeyboardSelectionPage
+    */
+    public function getSkipKeyboardSelectionPage()
+    {
+        if (array_key_exists("skipKeyboardSelectionPage", $this->_propDict)) {
+            return $this->_propDict["skipKeyboardSelectionPage"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the skipKeyboardSelectionPage
+    *
+    * @param bool $val The value of the skipKeyboardSelectionPage
+    *
+    * @return OutOfBoxExperienceSettings
+    */
+    public function setSkipKeyboardSelectionPage($val)
+    {
+        $this->_propDict["skipKeyboardSelectionPage"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the hideEscapeLink
+    *
+    * @return bool The hideEscapeLink
+    */
+    public function getHideEscapeLink()
+    {
+        if (array_key_exists("hideEscapeLink", $this->_propDict)) {
+            return $this->_propDict["hideEscapeLink"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the hideEscapeLink
+    *
+    * @param bool $val The value of the hideEscapeLink
+    *
+    * @return OutOfBoxExperienceSettings
+    */
+    public function setHideEscapeLink($val)
+    {
+        $this->_propDict["hideEscapeLink"] = $val;
+        return $this;
     }
 }

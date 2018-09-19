@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class Organization extends DirectoryObject
@@ -83,7 +83,6 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the city
-    * City name of the address for the organization
     *
     * @return string The city
     */
@@ -98,7 +97,6 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the city
-    * City name of the address for the organization
     *
     * @param string $val The city
     *
@@ -112,7 +110,6 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the country
-    * Country/region name of the address for the organization
     *
     * @return string The country
     */
@@ -127,7 +124,6 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the country
-    * Country/region name of the address for the organization
     *
     * @param string $val The country
     *
@@ -141,7 +137,6 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the countryLetterCode
-    * Country/region abbreviation for the organization
     *
     * @return string The countryLetterCode
     */
@@ -156,7 +151,6 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the countryLetterCode
-    * Country/region abbreviation for the organization
     *
     * @param string $val The countryLetterCode
     *
@@ -309,7 +303,6 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the postalCode
-    * Postal code of the address for the organization
     *
     * @return string The postalCode
     */
@@ -324,7 +317,6 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the postalCode
-    * Postal code of the address for the organization
     *
     * @param string $val The postalCode
     *
@@ -338,7 +330,6 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the preferredLanguage
-    * The preferred language for the organization. Should follow ISO 639-1 Code; for example "en".
     *
     * @return string The preferredLanguage
     */
@@ -353,7 +344,6 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the preferredLanguage
-    * The preferred language for the organization. Should follow ISO 639-1 Code; for example "en".
     *
     * @param string $val The preferredLanguage
     *
@@ -480,7 +470,6 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the state
-    * State name of the address for the organization
     *
     * @return string The state
     */
@@ -495,7 +484,6 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the state
-    * State name of the address for the organization
     *
     * @param string $val The state
     *
@@ -509,7 +497,6 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the street
-    * Street name of the address for organization
     *
     * @return string The street
     */
@@ -524,7 +511,6 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the street
-    * Street name of the address for organization
     *
     * @param string $val The street
     *
@@ -593,14 +579,13 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the mobileDeviceManagementAuthority
-    * Mobile device management authority. Possible values are: unknown, intune, sccm, office365.
     *
     * @return MdmAuthority The mobileDeviceManagementAuthority
     */
     public function getMobileDeviceManagementAuthority()
     {
         if (array_key_exists("mobileDeviceManagementAuthority", $this->_propDict)) {
-            if (is_a($this->_propDict["mobileDeviceManagementAuthority"], "Microsoft\Graph\Model\MdmAuthority")) {
+            if (is_a($this->_propDict["mobileDeviceManagementAuthority"], "Microsoft\Graph\Beta\Model\MdmAuthority")) {
                 return $this->_propDict["mobileDeviceManagementAuthority"];
             } else {
                 $this->_propDict["mobileDeviceManagementAuthority"] = new MdmAuthority($this->_propDict["mobileDeviceManagementAuthority"]);
@@ -612,7 +597,6 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the mobileDeviceManagementAuthority
-    * Mobile device management authority. Possible values are: unknown, intune, sccm, office365.
     *
     * @param MdmAuthority $val The mobileDeviceManagementAuthority
     *
@@ -621,6 +605,37 @@ class Organization extends DirectoryObject
     public function setMobileDeviceManagementAuthority($val)
     {
         $this->_propDict["mobileDeviceManagementAuthority"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the certificateConnectorSetting
+    *
+    * @return CertificateConnectorSetting The certificateConnectorSetting
+    */
+    public function getCertificateConnectorSetting()
+    {
+        if (array_key_exists("certificateConnectorSetting", $this->_propDict)) {
+            if (is_a($this->_propDict["certificateConnectorSetting"], "Microsoft\Graph\Beta\Model\CertificateConnectorSetting")) {
+                return $this->_propDict["certificateConnectorSetting"];
+            } else {
+                $this->_propDict["certificateConnectorSetting"] = new CertificateConnectorSetting($this->_propDict["certificateConnectorSetting"]);
+                return $this->_propDict["certificateConnectorSetting"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the certificateConnectorSetting
+    *
+    * @param CertificateConnectorSetting $val The certificateConnectorSetting
+    *
+    * @return Organization
+    */
+    public function setCertificateConnectorSetting($val)
+    {
+        $this->_propDict["certificateConnectorSetting"] = $val;
         return $this;
     }
     

@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class HostSecurityProfile extends Entity
@@ -81,33 +81,33 @@ class HostSecurityProfile extends Entity
     }
     
     /**
-    * Gets the createdDateTime
+    * Gets the firstSeenDateTime
     *
-    * @return \DateTime The createdDateTime
+    * @return \DateTime The firstSeenDateTime
     */
-    public function getCreatedDateTime()
+    public function getFirstSeenDateTime()
     {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
-                return $this->_propDict["createdDateTime"];
+        if (array_key_exists("firstSeenDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["firstSeenDateTime"], "\DateTime")) {
+                return $this->_propDict["firstSeenDateTime"];
             } else {
-                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
-                return $this->_propDict["createdDateTime"];
+                $this->_propDict["firstSeenDateTime"] = new \DateTime($this->_propDict["firstSeenDateTime"]);
+                return $this->_propDict["firstSeenDateTime"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the createdDateTime
+    * Sets the firstSeenDateTime
     *
-    * @param \DateTime $val The createdDateTime
+    * @param \DateTime $val The firstSeenDateTime
     *
     * @return HostSecurityProfile
     */
-    public function setCreatedDateTime($val)
+    public function setFirstSeenDateTime($val)
     {
-        $this->_propDict["createdDateTime"] = $val;
+        $this->_propDict["firstSeenDateTime"] = $val;
         return $this;
     }
     
@@ -220,60 +220,33 @@ class HostSecurityProfile extends Entity
     }
     
     /**
-    * Gets the lastModifiedDateTime
+    * Gets the lastSeenDateTime
     *
-    * @return \DateTime The lastModifiedDateTime
+    * @return \DateTime The lastSeenDateTime
     */
-    public function getLastModifiedDateTime()
+    public function getLastSeenDateTime()
     {
-        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
-                return $this->_propDict["lastModifiedDateTime"];
+        if (array_key_exists("lastSeenDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastSeenDateTime"], "\DateTime")) {
+                return $this->_propDict["lastSeenDateTime"];
             } else {
-                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
-                return $this->_propDict["lastModifiedDateTime"];
+                $this->_propDict["lastSeenDateTime"] = new \DateTime($this->_propDict["lastSeenDateTime"]);
+                return $this->_propDict["lastSeenDateTime"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the lastModifiedDateTime
+    * Sets the lastSeenDateTime
     *
-    * @param \DateTime $val The lastModifiedDateTime
-    *
-    * @return HostSecurityProfile
-    */
-    public function setLastModifiedDateTime($val)
-    {
-        $this->_propDict["lastModifiedDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the logicalName
-    *
-    * @return string The logicalName
-    */
-    public function getLogicalName()
-    {
-        if (array_key_exists("logicalName", $this->_propDict)) {
-            return $this->_propDict["logicalName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the logicalName
-    *
-    * @param string $val The logicalName
+    * @param \DateTime $val The lastSeenDateTime
     *
     * @return HostSecurityProfile
     */
-    public function setLogicalName($val)
+    public function setLastSeenDateTime($val)
     {
-        $this->_propDict["logicalName"] = $val;
+        $this->_propDict["lastSeenDateTime"] = $val;
         return $this;
     }
     
@@ -361,6 +334,33 @@ class HostSecurityProfile extends Entity
     }
     
     /**
+    * Gets the os
+    *
+    * @return string The os
+    */
+    public function getOs()
+    {
+        if (array_key_exists("os", $this->_propDict)) {
+            return $this->_propDict["os"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the os
+    *
+    * @param string $val The os
+    *
+    * @return HostSecurityProfile
+    */
+    public function setOs($val)
+    {
+        $this->_propDict["os"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the osVersion
     *
     * @return string The osVersion
@@ -415,29 +415,29 @@ class HostSecurityProfile extends Entity
     }
     
     /**
-    * Gets the platform
+    * Gets the relatedHostIds
     *
-    * @return string The platform
+    * @return string The relatedHostIds
     */
-    public function getPlatform()
+    public function getRelatedHostIds()
     {
-        if (array_key_exists("platform", $this->_propDict)) {
-            return $this->_propDict["platform"];
+        if (array_key_exists("relatedHostIds", $this->_propDict)) {
+            return $this->_propDict["relatedHostIds"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the platform
+    * Sets the relatedHostIds
     *
-    * @param string $val The platform
+    * @param string $val The relatedHostIds
     *
     * @return HostSecurityProfile
     */
-    public function setPlatform($val)
+    public function setRelatedHostIds($val)
     {
-        $this->_propDict["platform"] = $val;
+        $this->_propDict["relatedHostIds"] = $val;
         return $this;
     }
     

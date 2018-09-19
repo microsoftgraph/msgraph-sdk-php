@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -18,16 +18,15 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class LookupColumn extends Entity
 {
     /**
     * Gets the allowMultipleValues
-    * Indicates whether multiple values can be selected from the source.
     *
     * @return bool The allowMultipleValues
     */
@@ -42,7 +41,6 @@ class LookupColumn extends Entity
 
     /**
     * Sets the allowMultipleValues
-    * Indicates whether multiple values can be selected from the source.
     *
     * @param bool $val The value of the allowMultipleValues
     *
@@ -55,7 +53,6 @@ class LookupColumn extends Entity
     }
     /**
     * Gets the allowUnlimitedLength
-    * Indicates whether values in the column should be able to exceed the standard limit of 255 characters.
     *
     * @return bool The allowUnlimitedLength
     */
@@ -70,7 +67,6 @@ class LookupColumn extends Entity
 
     /**
     * Sets the allowUnlimitedLength
-    * Indicates whether values in the column should be able to exceed the standard limit of 255 characters.
     *
     * @param bool $val The value of the allowUnlimitedLength
     *
@@ -83,7 +79,6 @@ class LookupColumn extends Entity
     }
     /**
     * Gets the columnName
-    * The name of the lookup source column.
     *
     * @return string The columnName
     */
@@ -98,7 +93,6 @@ class LookupColumn extends Entity
 
     /**
     * Sets the columnName
-    * The name of the lookup source column.
     *
     * @param string $val The value of the columnName
     *
@@ -111,7 +105,6 @@ class LookupColumn extends Entity
     }
     /**
     * Gets the listId
-    * The unique identifier of the lookup source list.
     *
     * @return string The listId
     */
@@ -126,7 +119,6 @@ class LookupColumn extends Entity
 
     /**
     * Sets the listId
-    * The unique identifier of the lookup source list.
     *
     * @param string $val The value of the listId
     *
@@ -139,7 +131,6 @@ class LookupColumn extends Entity
     }
     /**
     * Gets the primaryLookupColumnId
-    * If specified, this column is a secondary lookup, pulling an additional field from the list item looked up by the primary lookup. Use the list item looked up by the primary as the source for the column named here.
     *
     * @return string The primaryLookupColumnId
     */
@@ -154,7 +145,6 @@ class LookupColumn extends Entity
 
     /**
     * Sets the primaryLookupColumnId
-    * If specified, this column is a secondary lookup, pulling an additional field from the list item looked up by the primary lookup. Use the list item looked up by the primary as the source for the column named here.
     *
     * @param string $val The value of the primaryLookupColumnId
     *

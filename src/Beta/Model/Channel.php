@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class Channel extends Entity
@@ -77,6 +77,34 @@ class Channel extends Entity
     public function setDescription($val)
     {
         $this->_propDict["description"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the messages
+     *
+     * @return array The messages
+     */
+    public function getMessages()
+    {
+        if (array_key_exists("messages", $this->_propDict)) {
+           return $this->_propDict["messages"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the messages
+    *
+    * @param ChatMessage $val The messages
+    *
+    * @return Channel
+    */
+    public function setMessages($val)
+    {
+		$this->_propDict["messages"] = $val;
         return $this;
     }
     

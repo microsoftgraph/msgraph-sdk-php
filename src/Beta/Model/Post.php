@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class Post extends OutlookItem
@@ -256,6 +256,37 @@ class Post extends OutlookItem
     public function setConversationId($val)
     {
         $this->_propDict["conversationId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the importance
+    *
+    * @return Importance The importance
+    */
+    public function getImportance()
+    {
+        if (array_key_exists("importance", $this->_propDict)) {
+            if (is_a($this->_propDict["importance"], "Microsoft\Graph\Beta\Model\Importance")) {
+                return $this->_propDict["importance"];
+            } else {
+                $this->_propDict["importance"] = new Importance($this->_propDict["importance"]);
+                return $this->_propDict["importance"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the importance
+    *
+    * @param Importance $val The importance
+    *
+    * @return Post
+    */
+    public function setImportance($val)
+    {
+        $this->_propDict["importance"] = $val;
         return $this;
     }
     

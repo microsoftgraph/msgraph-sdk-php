@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class DriveItem extends BaseItem
@@ -813,8 +813,35 @@ class DriveItem extends BaseItem
     
 
      /** 
+     * Gets the subscriptions
+     *
+     * @return array The subscriptions
+     */
+    public function getSubscriptions()
+    {
+        if (array_key_exists("subscriptions", $this->_propDict)) {
+           return $this->_propDict["subscriptions"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the subscriptions
+    *
+    * @param Subscription $val The subscriptions
+    *
+    * @return DriveItem
+    */
+    public function setSubscriptions($val)
+    {
+		$this->_propDict["subscriptions"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the thumbnails
-    * Collection containing [ThumbnailSet][] objects associated with the item. For more info, see [getting thumbnails][]. Read-only. Nullable.
      *
      * @return array The thumbnails
      */
@@ -829,7 +856,6 @@ class DriveItem extends BaseItem
     
     /** 
     * Sets the thumbnails
-    * Collection containing [ThumbnailSet][] objects associated with the item. For more info, see [getting thumbnails][]. Read-only. Nullable.
     *
     * @param ThumbnailSet $val The thumbnails
     *
@@ -855,7 +881,6 @@ class DriveItem extends BaseItem
             return null;
         }
     }
-
     
     /** 
     * Sets the versions

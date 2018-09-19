@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
@@ -406,37 +406,6 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     }
     
     /**
-    * Gets the previewBuildSetting
-    *
-    * @return WindowsUpdateInsiderBuildControl The previewBuildSetting
-    */
-    public function getPreviewBuildSetting()
-    {
-        if (array_key_exists("previewBuildSetting", $this->_propDict)) {
-            if (is_a($this->_propDict["previewBuildSetting"], "Microsoft\Graph\Beta\Model\WindowsUpdateInsiderBuildControl")) {
-                return $this->_propDict["previewBuildSetting"];
-            } else {
-                $this->_propDict["previewBuildSetting"] = new WindowsUpdateInsiderBuildControl($this->_propDict["previewBuildSetting"]);
-                return $this->_propDict["previewBuildSetting"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the previewBuildSetting
-    *
-    * @param WindowsUpdateInsiderBuildControl $val The previewBuildSetting
-    *
-    * @return WindowsUpdateForBusinessConfiguration
-    */
-    public function setPreviewBuildSetting($val)
-    {
-        $this->_propDict["previewBuildSetting"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the skipChecksBeforeRestart
     *
     * @return bool The skipChecksBeforeRestart
@@ -491,6 +460,203 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     public function setUpdateWeeks($val)
     {
         $this->_propDict["updateWeeks"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the qualityUpdatesPauseStartDateTime
+    *
+    * @return string The qualityUpdatesPauseStartDateTime
+    */
+    public function getQualityUpdatesPauseStartDateTime()
+    {
+        if (array_key_exists("qualityUpdatesPauseStartDateTime", $this->_propDict)) {
+            return $this->_propDict["qualityUpdatesPauseStartDateTime"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the qualityUpdatesPauseStartDateTime
+    *
+    * @param string $val The qualityUpdatesPauseStartDateTime
+    *
+    * @return WindowsUpdateForBusinessConfiguration
+    */
+    public function setQualityUpdatesPauseStartDateTime($val)
+    {
+        $this->_propDict["qualityUpdatesPauseStartDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the featureUpdatesPauseStartDateTime
+    *
+    * @return string The featureUpdatesPauseStartDateTime
+    */
+    public function getFeatureUpdatesPauseStartDateTime()
+    {
+        if (array_key_exists("featureUpdatesPauseStartDateTime", $this->_propDict)) {
+            return $this->_propDict["featureUpdatesPauseStartDateTime"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the featureUpdatesPauseStartDateTime
+    *
+    * @param string $val The featureUpdatesPauseStartDateTime
+    *
+    * @return WindowsUpdateForBusinessConfiguration
+    */
+    public function setFeatureUpdatesPauseStartDateTime($val)
+    {
+        $this->_propDict["featureUpdatesPauseStartDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the featureUpdatesRollbackWindowInDays
+    *
+    * @return int The featureUpdatesRollbackWindowInDays
+    */
+    public function getFeatureUpdatesRollbackWindowInDays()
+    {
+        if (array_key_exists("featureUpdatesRollbackWindowInDays", $this->_propDict)) {
+            return $this->_propDict["featureUpdatesRollbackWindowInDays"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the featureUpdatesRollbackWindowInDays
+    *
+    * @param int $val The featureUpdatesRollbackWindowInDays
+    *
+    * @return WindowsUpdateForBusinessConfiguration
+    */
+    public function setFeatureUpdatesRollbackWindowInDays($val)
+    {
+        $this->_propDict["featureUpdatesRollbackWindowInDays"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the qualityUpdatesWillBeRolledBack
+    *
+    * @return bool The qualityUpdatesWillBeRolledBack
+    */
+    public function getQualityUpdatesWillBeRolledBack()
+    {
+        if (array_key_exists("qualityUpdatesWillBeRolledBack", $this->_propDict)) {
+            return $this->_propDict["qualityUpdatesWillBeRolledBack"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the qualityUpdatesWillBeRolledBack
+    *
+    * @param bool $val The qualityUpdatesWillBeRolledBack
+    *
+    * @return WindowsUpdateForBusinessConfiguration
+    */
+    public function setQualityUpdatesWillBeRolledBack($val)
+    {
+        $this->_propDict["qualityUpdatesWillBeRolledBack"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the featureUpdatesWillBeRolledBack
+    *
+    * @return bool The featureUpdatesWillBeRolledBack
+    */
+    public function getFeatureUpdatesWillBeRolledBack()
+    {
+        if (array_key_exists("featureUpdatesWillBeRolledBack", $this->_propDict)) {
+            return $this->_propDict["featureUpdatesWillBeRolledBack"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the featureUpdatesWillBeRolledBack
+    *
+    * @param bool $val The featureUpdatesWillBeRolledBack
+    *
+    * @return WindowsUpdateForBusinessConfiguration
+    */
+    public function setFeatureUpdatesWillBeRolledBack($val)
+    {
+        $this->_propDict["featureUpdatesWillBeRolledBack"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the qualityUpdatesRollbackStartDateTime
+    *
+    * @return \DateTime The qualityUpdatesRollbackStartDateTime
+    */
+    public function getQualityUpdatesRollbackStartDateTime()
+    {
+        if (array_key_exists("qualityUpdatesRollbackStartDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["qualityUpdatesRollbackStartDateTime"], "\DateTime")) {
+                return $this->_propDict["qualityUpdatesRollbackStartDateTime"];
+            } else {
+                $this->_propDict["qualityUpdatesRollbackStartDateTime"] = new \DateTime($this->_propDict["qualityUpdatesRollbackStartDateTime"]);
+                return $this->_propDict["qualityUpdatesRollbackStartDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the qualityUpdatesRollbackStartDateTime
+    *
+    * @param \DateTime $val The qualityUpdatesRollbackStartDateTime
+    *
+    * @return WindowsUpdateForBusinessConfiguration
+    */
+    public function setQualityUpdatesRollbackStartDateTime($val)
+    {
+        $this->_propDict["qualityUpdatesRollbackStartDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the featureUpdatesRollbackStartDateTime
+    *
+    * @return \DateTime The featureUpdatesRollbackStartDateTime
+    */
+    public function getFeatureUpdatesRollbackStartDateTime()
+    {
+        if (array_key_exists("featureUpdatesRollbackStartDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["featureUpdatesRollbackStartDateTime"], "\DateTime")) {
+                return $this->_propDict["featureUpdatesRollbackStartDateTime"];
+            } else {
+                $this->_propDict["featureUpdatesRollbackStartDateTime"] = new \DateTime($this->_propDict["featureUpdatesRollbackStartDateTime"]);
+                return $this->_propDict["featureUpdatesRollbackStartDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the featureUpdatesRollbackStartDateTime
+    *
+    * @param \DateTime $val The featureUpdatesRollbackStartDateTime
+    *
+    * @return WindowsUpdateForBusinessConfiguration
+    */
+    public function setFeatureUpdatesRollbackStartDateTime($val)
+    {
+        $this->_propDict["featureUpdatesRollbackStartDateTime"] = $val;
         return $this;
     }
     

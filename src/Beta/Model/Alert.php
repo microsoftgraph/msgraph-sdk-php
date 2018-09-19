@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,66 +19,37 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class Alert extends Entity
 {
-
-     /** 
-     * Gets the activityGroupStates
-     *
-     * @return array The activityGroupStates
-     */
-    public function getActivityGroupStates()
+    /**
+    * Gets the activityGroupName
+    *
+    * @return string The activityGroupName
+    */
+    public function getActivityGroupName()
     {
-        if (array_key_exists("activityGroupStates", $this->_propDict)) {
-           return $this->_propDict["activityGroupStates"];
+        if (array_key_exists("activityGroupName", $this->_propDict)) {
+            return $this->_propDict["activityGroupName"];
         } else {
             return null;
         }
     }
     
-    /** 
-    * Sets the activityGroupStates
+    /**
+    * Sets the activityGroupName
     *
-    * @param ActivityGroupState $val The activityGroupStates
-    *
-    * @return Alert
-    */
-    public function setActivityGroupStates($val)
-    {
-		$this->_propDict["activityGroupStates"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the applicationStates
-     *
-     * @return array The applicationStates
-     */
-    public function getApplicationStates()
-    {
-        if (array_key_exists("applicationStates", $this->_propDict)) {
-           return $this->_propDict["applicationStates"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the applicationStates
-    *
-    * @param ApplicationSecurityState $val The applicationStates
+    * @param string $val The activityGroupName
     *
     * @return Alert
     */
-    public function setApplicationStates($val)
+    public function setActivityGroupName($val)
     {
-		$this->_propDict["applicationStates"] = $val;
+        $this->_propDict["activityGroupName"] = $val;
         return $this;
     }
     
@@ -133,6 +104,33 @@ class Alert extends Entity
     public function setAzureSubscriptionId($val)
     {
         $this->_propDict["azureSubscriptionId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the azureTenantId
+    *
+    * @return string The azureTenantId
+    */
+    public function getAzureTenantId()
+    {
+        if (array_key_exists("azureTenantId", $this->_propDict)) {
+            return $this->_propDict["azureTenantId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the azureTenantId
+    *
+    * @param string $val The azureTenantId
+    *
+    * @return Alert
+    */
+    public function setAzureTenantId($val)
+    {
+        $this->_propDict["azureTenantId"] = $val;
         return $this;
     }
     
@@ -194,6 +192,34 @@ class Alert extends Entity
         return $this;
     }
     
+
+     /** 
+     * Gets the cloudAppStates
+     *
+     * @return array The cloudAppStates
+     */
+    public function getCloudAppStates()
+    {
+        if (array_key_exists("cloudAppStates", $this->_propDict)) {
+           return $this->_propDict["cloudAppStates"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the cloudAppStates
+    *
+    * @param CloudAppSecurityState $val The cloudAppStates
+    *
+    * @return Alert
+    */
+    public function setCloudAppStates($val)
+    {
+		$this->_propDict["cloudAppStates"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the comments
     *
@@ -218,6 +244,33 @@ class Alert extends Entity
     public function setComments($val)
     {
         $this->_propDict["comments"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the confidence
+    *
+    * @return int The confidence
+    */
+    public function getConfidence()
+    {
+        if (array_key_exists("confidence", $this->_propDict)) {
+            return $this->_propDict["confidence"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the confidence
+    *
+    * @param int $val The confidence
+    *
+    * @return Alert
+    */
+    public function setConfidence($val)
+    {
+        $this->_propDict["confidence"] = intval($val);
         return $this;
     }
     
@@ -483,33 +536,6 @@ class Alert extends Entity
         return $this;
     }
     
-    /**
-    * Gets the malwareWasRunning
-    *
-    * @return bool The malwareWasRunning
-    */
-    public function getMalwareWasRunning()
-    {
-        if (array_key_exists("malwareWasRunning", $this->_propDict)) {
-            return $this->_propDict["malwareWasRunning"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the malwareWasRunning
-    *
-    * @param bool $val The malwareWasRunning
-    *
-    * @return Alert
-    */
-    public function setMalwareWasRunning($val)
-    {
-        $this->_propDict["malwareWasRunning"] = boolval($val);
-        return $this;
-    }
-    
 
      /** 
      * Gets the networkConnections
@@ -593,78 +619,56 @@ class Alert extends Entity
         return $this;
     }
     
-    /**
-    * Gets the riskScore
-    *
-    * @return string The riskScore
-    */
-    public function getRiskScore()
+
+     /** 
+     * Gets the registryKeyStates
+     *
+     * @return array The registryKeyStates
+     */
+    public function getRegistryKeyStates()
     {
-        if (array_key_exists("riskScore", $this->_propDict)) {
-            return $this->_propDict["riskScore"];
+        if (array_key_exists("registryKeyStates", $this->_propDict)) {
+           return $this->_propDict["registryKeyStates"];
         } else {
             return null;
         }
     }
     
-    /**
-    * Sets the riskScore
+    /** 
+    * Sets the registryKeyStates
     *
-    * @param string $val The riskScore
-    *
-    * @return Alert
-    */
-    public function setRiskScore($val)
-    {
-        $this->_propDict["riskScore"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the tags
-    *
-    * @return string The tags
-    */
-    public function getTags()
-    {
-        if (array_key_exists("tags", $this->_propDict)) {
-            return $this->_propDict["tags"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the tags
-    *
-    * @param string $val The tags
+    * @param RegistryKeyState $val The registryKeyStates
     *
     * @return Alert
     */
-    public function setTags($val)
+    public function setRegistryKeyStates($val)
     {
-        $this->_propDict["tags"] = $val;
+		$this->_propDict["registryKeyStates"] = $val;
         return $this;
     }
     
     /**
     * Gets the severity
     *
-    * @return string The severity
+    * @return AlertSeverity The severity
     */
     public function getSeverity()
     {
         if (array_key_exists("severity", $this->_propDict)) {
-            return $this->_propDict["severity"];
-        } else {
-            return null;
+            if (is_a($this->_propDict["severity"], "Microsoft\Graph\Beta\Model\AlertSeverity")) {
+                return $this->_propDict["severity"];
+            } else {
+                $this->_propDict["severity"] = new AlertSeverity($this->_propDict["severity"]);
+                return $this->_propDict["severity"];
+            }
         }
+        return null;
     }
     
     /**
     * Sets the severity
     *
-    * @param string $val The severity
+    * @param AlertSeverity $val The severity
     *
     * @return Alert
     */
@@ -733,29 +737,29 @@ class Alert extends Entity
     }
     
     /**
-    * Gets the azureTenantId
+    * Gets the tags
     *
-    * @return string The azureTenantId
+    * @return string The tags
     */
-    public function getAzureTenantId()
+    public function getTags()
     {
-        if (array_key_exists("azureTenantId", $this->_propDict)) {
-            return $this->_propDict["azureTenantId"];
+        if (array_key_exists("tags", $this->_propDict)) {
+            return $this->_propDict["tags"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the azureTenantId
+    * Sets the tags
     *
-    * @param string $val The azureTenantId
+    * @param string $val The tags
     *
     * @return Alert
     */
-    public function setAzureTenantId($val)
+    public function setTags($val)
     {
-        $this->_propDict["azureTenantId"] = $val;
+        $this->_propDict["tags"] = $val;
         return $this;
     }
     
@@ -811,37 +815,6 @@ class Alert extends Entity
     public function setTriggers($val)
     {
 		$this->_propDict["triggers"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the type
-    *
-    * @return AlertType The type
-    */
-    public function getType()
-    {
-        if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "Microsoft\Graph\Beta\Model\AlertType")) {
-                return $this->_propDict["type"];
-            } else {
-                $this->_propDict["type"] = new AlertType($this->_propDict["type"]);
-                return $this->_propDict["type"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the type
-    *
-    * @param AlertType $val The type
-    *
-    * @return Alert
-    */
-    public function setType($val)
-    {
-        $this->_propDict["type"] = $val;
         return $this;
     }
     

@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class User extends DirectoryObject
@@ -192,7 +192,6 @@ class User extends DirectoryObject
     
     /**
     * Gets the companyName
-    * The company name which the user is associated. Read-only.
     *
     * @return string The companyName
     */
@@ -207,7 +206,6 @@ class User extends DirectoryObject
     
     /**
     * Sets the companyName
-    * The company name which the user is associated. Read-only.
     *
     * @param string $val The companyName
     *
@@ -248,7 +246,6 @@ class User extends DirectoryObject
     
     /**
     * Gets the country
-    * The country/region in which the user is located; for example, "US" or "UK". Supports $filter.
     *
     * @return string The country
     */
@@ -263,7 +260,6 @@ class User extends DirectoryObject
     
     /**
     * Sets the country
-    * The country/region in which the user is located; for example, "US" or "UK". Supports $filter.
     *
     * @param string $val The country
     *
@@ -439,8 +435,34 @@ class User extends DirectoryObject
     }
     
     /**
+    * Gets the isResourceAccount
+    *
+    * @return bool The isResourceAccount
+    */
+    public function getIsResourceAccount()
+    {
+        if (array_key_exists("isResourceAccount", $this->_propDict)) {
+            return $this->_propDict["isResourceAccount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isResourceAccount
+    *
+    * @param bool $val The isResourceAccount
+    *
+    * @return User
+    */
+    public function setIsResourceAccount($val)
+    {
+        $this->_propDict["isResourceAccount"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the jobTitle
-    * The user's job title. Supports $filter.
     *
     * @return string The jobTitle
     */
@@ -455,7 +477,6 @@ class User extends DirectoryObject
     
     /**
     * Sets the jobTitle
-    * The user's job title. Supports $filter.
     *
     * @param string $val The jobTitle
     *
@@ -608,7 +629,6 @@ class User extends DirectoryObject
     
     /**
     * Gets the onPremisesImmutableId
-    * This property is used to associate an on-premises Active Directory user account to their Azure AD user object. This property must be specified when creating a new user account in the Graph if you are using a federated domain for the user's userPrincipalName (UPN) property. Important: The $ and  characters cannot be used when specifying this property. Supports $filter.
     *
     * @return string The onPremisesImmutableId
     */
@@ -623,7 +643,6 @@ class User extends DirectoryObject
     
     /**
     * Sets the onPremisesImmutableId
-    * This property is used to associate an on-premises Active Directory user account to their Azure AD user object. This property must be specified when creating a new user account in the Graph if you are using a federated domain for the user's userPrincipalName (UPN) property. Important: The $ and  characters cannot be used when specifying this property. Supports $filter.
     *
     * @param string $val The onPremisesImmutableId
     *
@@ -831,7 +850,6 @@ class User extends DirectoryObject
     
     /**
     * Gets the passwordPolicies
-    * Specifies password policies for the user. This value is an enumeration with one possible value being "DisableStrongPassword", which allows weaker passwords than the default policy to be specified. "DisablePasswordExpiration" can also be specified. The two may be specified together; for example: "DisablePasswordExpiration, DisableStrongPassword".
     *
     * @return string The passwordPolicies
     */
@@ -846,7 +864,6 @@ class User extends DirectoryObject
     
     /**
     * Sets the passwordPolicies
-    * Specifies password policies for the user. This value is an enumeration with one possible value being "DisableStrongPassword", which allows weaker passwords than the default policy to be specified. "DisablePasswordExpiration" can also be specified. The two may be specified together; for example: "DisablePasswordExpiration, DisableStrongPassword".
     *
     * @param string $val The passwordPolicies
     *
@@ -860,7 +877,6 @@ class User extends DirectoryObject
     
     /**
     * Gets the passwordProfile
-    * Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required.
     *
     * @return PasswordProfile The passwordProfile
     */
@@ -879,7 +895,6 @@ class User extends DirectoryObject
     
     /**
     * Sets the passwordProfile
-    * Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required.
     *
     * @param PasswordProfile $val The passwordProfile
     *
@@ -1222,7 +1237,6 @@ class User extends DirectoryObject
     
     /**
     * Gets the userPrincipalName
-    * The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant's collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization. Supports $filter and $orderby.
     *
     * @return string The userPrincipalName
     */
@@ -1237,7 +1251,6 @@ class User extends DirectoryObject
     
     /**
     * Sets the userPrincipalName
-    * The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant's collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization. Supports $filter and $orderby.
     *
     * @param string $val The userPrincipalName
     *
@@ -1251,7 +1264,6 @@ class User extends DirectoryObject
     
     /**
     * Gets the userType
-    * A string value that can be used to classify user types in your directory, such as "Member" and "Guest". Supports $filter.
     *
     * @return string The userType
     */
@@ -1266,7 +1278,6 @@ class User extends DirectoryObject
     
     /**
     * Sets the userType
-    * A string value that can be used to classify user types in your directory, such as "Member" and "Guest". Supports $filter.
     *
     * @param string $val The userType
     *
@@ -1588,32 +1599,21 @@ class User extends DirectoryObject
     }
     
     /**
-    * Gets the deviceEnrollmentLimit
-    * The limit on the maximum number of devices that the user is permitted to enroll. Allowed values are 5 or 1000.
+    * Gets the identityUserRisk
     *
-    * @return int The deviceEnrollmentLimit
+    * @return IdentityUserRisk The identityUserRisk
     */
-    public function getDeviceEnrollmentLimit()
+    public function getIdentityUserRisk()
     {
-        if (array_key_exists("deviceEnrollmentLimit", $this->_propDict)) {
-            return $this->_propDict["deviceEnrollmentLimit"];
-        } else {
-            return null;
+        if (array_key_exists("identityUserRisk", $this->_propDict)) {
+            if (is_a($this->_propDict["identityUserRisk"], "Microsoft\Graph\Beta\Model\IdentityUserRisk")) {
+                return $this->_propDict["identityUserRisk"];
+            } else {
+                $this->_propDict["identityUserRisk"] = new IdentityUserRisk($this->_propDict["identityUserRisk"]);
+                return $this->_propDict["identityUserRisk"];
+            }
         }
-    }
-    
-    /**
-    * Sets the deviceEnrollmentLimit
-    * The limit on the maximum number of devices that the user is permitted to enroll. Allowed values are 5 or 1000.
-    *
-    * @param int $val The deviceEnrollmentLimit
-    *
-    * @return User
-    */
-    public function setDeviceEnrollmentLimit($val)
-    {
-        $this->_propDict["deviceEnrollmentLimit"] = intval($val);
-        return $this;
+        return null;
     }
     
     /**
@@ -1628,6 +1628,34 @@ class User extends DirectoryObject
         $this->_propDict["identityUserRisk"] = $val;
         return $this;
     }
+    
+    /**
+    * Gets the deviceEnrollmentLimit
+    *
+    * @return int The deviceEnrollmentLimit
+    */
+    public function getDeviceEnrollmentLimit()
+    {
+        if (array_key_exists("deviceEnrollmentLimit", $this->_propDict)) {
+            return $this->_propDict["deviceEnrollmentLimit"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the deviceEnrollmentLimit
+    *
+    * @param int $val The deviceEnrollmentLimit
+    *
+    * @return User
+    */
+    public function setDeviceEnrollmentLimit($val)
+    {
+        $this->_propDict["deviceEnrollmentLimit"] = intval($val);
+        return $this;
+    }
+    
 
      /** 
      * Gets the extensions
@@ -1653,6 +1681,34 @@ class User extends DirectoryObject
     public function setExtensions($val)
     {
 		$this->_propDict["extensions"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the appRoleAssignments
+     *
+     * @return array The appRoleAssignments
+     */
+    public function getAppRoleAssignments()
+    {
+        if (array_key_exists("appRoleAssignments", $this->_propDict)) {
+           return $this->_propDict["appRoleAssignments"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the appRoleAssignments
+    *
+    * @param AppRoleAssignment $val The appRoleAssignments
+    *
+    * @return User
+    */
+    public function setAppRoleAssignments($val)
+    {
+		$this->_propDict["appRoleAssignments"] = $val;
         return $this;
     }
     
@@ -1714,7 +1770,6 @@ class User extends DirectoryObject
     
     /**
     * Gets the manager
-    * The user or contact that is this user's manager. Read-only. (HTTP Methods: GET, PUT, DELETE.)
     *
     * @return DirectoryObject The manager
     */
@@ -1733,7 +1788,6 @@ class User extends DirectoryObject
     
     /**
     * Sets the manager
-    * The user or contact that is this user's manager. Read-only. (HTTP Methods: GET, PUT, DELETE.)
     *
     * @param DirectoryObject $val The manager
     *
@@ -1950,37 +2004,6 @@ class User extends DirectoryObject
     {
         if (array_key_exists("outlook", $this->_propDict)) {
             if (is_a($this->_propDict["outlook"], "Microsoft\Graph\Beta\Model\OutlookUser")) {
-                return $this->_propDict["outlook"];
-            } else {
-                $this->_propDict["outlook"] = new OutlookUser($this->_propDict["outlook"]);
-                return $this->_propDict["outlook"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the outlook
-    *
-    * @param OutlookUser $val The outlook
-    *
-    * @return User
-    */
-    public function setOutlook($val)
-    {
-        $this->_propDict["outlook"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the outlook
-    *
-    * @return OutlookUser The outlook
-    */
-    public function getOutlook()
-    {
-        if (array_key_exists("outlook", $this->_propDict)) {
-            if (is_a($this->_propDict["outlook"], "Microsoft\Graph\Model\OutlookUser")) {
                 return $this->_propDict["outlook"];
             } else {
                 $this->_propDict["outlook"] = new OutlookUser($this->_propDict["outlook"]);
@@ -2495,6 +2518,37 @@ class User extends DirectoryObject
     }
     
     /**
+    * Gets the settings
+    *
+    * @return UserSettings The settings
+    */
+    public function getSettings()
+    {
+        if (array_key_exists("settings", $this->_propDict)) {
+            if (is_a($this->_propDict["settings"], "Microsoft\Graph\Beta\Model\UserSettings")) {
+                return $this->_propDict["settings"];
+            } else {
+                $this->_propDict["settings"] = new UserSettings($this->_propDict["settings"]);
+                return $this->_propDict["settings"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the settings
+    *
+    * @param UserSettings $val The settings
+    *
+    * @return User
+    */
+    public function setSettings($val)
+    {
+        $this->_propDict["settings"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the planner
     *
     * @return PlannerUser The planner
@@ -2559,7 +2613,6 @@ class User extends DirectoryObject
 
      /** 
      * Gets the managedDevices
-    * The managed devices associated with the user.
      *
      * @return array The managedDevices
      */
@@ -2574,7 +2627,6 @@ class User extends DirectoryObject
     
     /** 
     * Sets the managedDevices
-    * The managed devices associated with the user.
     *
     * @param ManagedDevice $val The managedDevices
     *
@@ -2588,8 +2640,35 @@ class User extends DirectoryObject
     
 
      /** 
+     * Gets the deviceEnrollmentConfigurations
+     *
+     * @return array The deviceEnrollmentConfigurations
+     */
+    public function getDeviceEnrollmentConfigurations()
+    {
+        if (array_key_exists("deviceEnrollmentConfigurations", $this->_propDict)) {
+           return $this->_propDict["deviceEnrollmentConfigurations"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the deviceEnrollmentConfigurations
+    *
+    * @param DeviceEnrollmentConfiguration $val The deviceEnrollmentConfigurations
+    *
+    * @return User
+    */
+    public function setDeviceEnrollmentConfigurations($val)
+    {
+		$this->_propDict["deviceEnrollmentConfigurations"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the managedAppRegistrations
-    * Zero or more managed app registrations that belong to the user.
      *
      * @return array The managedAppRegistrations
      */
@@ -2604,7 +2683,6 @@ class User extends DirectoryObject
     
     /** 
     * Sets the managedAppRegistrations
-    * Zero or more managed app registrations that belong to the user.
     *
     * @param ManagedAppRegistration $val The managedAppRegistrations
     *
@@ -2618,8 +2696,63 @@ class User extends DirectoryObject
     
 
      /** 
+     * Gets the devices
+     *
+     * @return array The devices
+     */
+    public function getDevices()
+    {
+        if (array_key_exists("devices", $this->_propDict)) {
+           return $this->_propDict["devices"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the devices
+    *
+    * @param Device $val The devices
+    *
+    * @return User
+    */
+    public function setDevices($val)
+    {
+		$this->_propDict["devices"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the joinedTeams
+     *
+     * @return array The joinedTeams
+     */
+    public function getJoinedTeams()
+    {
+        if (array_key_exists("joinedTeams", $this->_propDict)) {
+           return $this->_propDict["joinedTeams"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the joinedTeams
+    *
+    * @param Group $val The joinedTeams
+    *
+    * @return User
+    */
+    public function setJoinedTeams($val)
+    {
+		$this->_propDict["joinedTeams"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the deviceManagementTroubleshootingEvents
-    * The list of troubleshooting events for this user.
      *
      * @return array The deviceManagementTroubleshootingEvents
      */
@@ -2634,7 +2767,6 @@ class User extends DirectoryObject
     
     /** 
     * Sets the deviceManagementTroubleshootingEvents
-    * The list of troubleshooting events for this user.
     *
     * @param DeviceManagementTroubleshootingEvent $val The deviceManagementTroubleshootingEvents
     *
@@ -2648,29 +2780,113 @@ class User extends DirectoryObject
     
 
      /** 
-     * Gets the activities
+     * Gets the mobileAppIntentAndStates
      *
-     * @return array The activities
+     * @return array The mobileAppIntentAndStates
      */
-    public function getActivities()
+    public function getMobileAppIntentAndStates()
     {
-        if (array_key_exists("activities", $this->_propDict)) {
-           return $this->_propDict["activities"];
+        if (array_key_exists("mobileAppIntentAndStates", $this->_propDict)) {
+           return $this->_propDict["mobileAppIntentAndStates"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the activities
+    * Sets the mobileAppIntentAndStates
     *
-    * @param UserActivity $val The activities
+    * @param MobileAppIntentAndState $val The mobileAppIntentAndStates
     *
     * @return User
     */
-    public function setActivities($val)
+    public function setMobileAppIntentAndStates($val)
     {
-		$this->_propDict["activities"] = $val;
+		$this->_propDict["mobileAppIntentAndStates"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the mobileAppTroubleshootingEvents
+     *
+     * @return array The mobileAppTroubleshootingEvents
+     */
+    public function getMobileAppTroubleshootingEvents()
+    {
+        if (array_key_exists("mobileAppTroubleshootingEvents", $this->_propDict)) {
+           return $this->_propDict["mobileAppTroubleshootingEvents"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the mobileAppTroubleshootingEvents
+    *
+    * @param MobileAppTroubleshootingEvent $val The mobileAppTroubleshootingEvents
+    *
+    * @return User
+    */
+    public function setMobileAppTroubleshootingEvents($val)
+    {
+		$this->_propDict["mobileAppTroubleshootingEvents"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the agreementAcceptances
+     *
+     * @return array The agreementAcceptances
+     */
+    public function getAgreementAcceptances()
+    {
+        if (array_key_exists("agreementAcceptances", $this->_propDict)) {
+           return $this->_propDict["agreementAcceptances"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the agreementAcceptances
+    *
+    * @param AgreementAcceptance $val The agreementAcceptances
+    *
+    * @return User
+    */
+    public function setAgreementAcceptances($val)
+    {
+		$this->_propDict["agreementAcceptances"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the notifications
+     *
+     * @return array The notifications
+     */
+    public function getNotifications()
+    {
+        if (array_key_exists("notifications", $this->_propDict)) {
+           return $this->_propDict["notifications"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the notifications
+    *
+    * @param Notification $val The notifications
+    *
+    * @return User
+    */
+    public function setNotifications($val)
+    {
+		$this->_propDict["notifications"] = $val;
         return $this;
     }
     

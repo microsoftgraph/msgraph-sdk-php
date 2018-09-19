@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class IosVppApp extends MobileApp
@@ -309,6 +309,89 @@ class IosVppApp extends MobileApp
     public function setBundleId($val)
     {
         $this->_propDict["bundleId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the vppTokenId
+    *
+    * @return string The vppTokenId
+    */
+    public function getVppTokenId()
+    {
+        if (array_key_exists("vppTokenId", $this->_propDict)) {
+            return $this->_propDict["vppTokenId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the vppTokenId
+    *
+    * @param string $val The vppTokenId
+    *
+    * @return IosVppApp
+    */
+    public function setVppTokenId($val)
+    {
+        $this->_propDict["vppTokenId"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the revokeLicenseActionResults
+     *
+     * @return array The revokeLicenseActionResults
+     */
+    public function getRevokeLicenseActionResults()
+    {
+        if (array_key_exists("revokeLicenseActionResults", $this->_propDict)) {
+           return $this->_propDict["revokeLicenseActionResults"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the revokeLicenseActionResults
+    *
+    * @param IosVppAppRevokeLicensesActionResult $val The revokeLicenseActionResults
+    *
+    * @return IosVppApp
+    */
+    public function setRevokeLicenseActionResults($val)
+    {
+		$this->_propDict["revokeLicenseActionResults"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the assignedLicenses
+     *
+     * @return array The assignedLicenses
+     */
+    public function getAssignedLicenses()
+    {
+        if (array_key_exists("assignedLicenses", $this->_propDict)) {
+           return $this->_propDict["assignedLicenses"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the assignedLicenses
+    *
+    * @param IosVppAppAssignedLicense $val The assignedLicenses
+    *
+    * @return IosVppApp
+    */
+    public function setAssignedLicenses($val)
+    {
+		$this->_propDict["assignedLicenses"] = $val;
         return $this;
     }
     

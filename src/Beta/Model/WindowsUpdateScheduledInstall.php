@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -18,9 +18,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleType
@@ -85,37 +85,6 @@ class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleType
     public function setScheduledInstallTime($val)
     {
         $this->_propDict["scheduledInstallTime"] = $val;
-         return $this;
-    }
-
-    /**
-    * Gets the restartMode
-    *
-    * @return WindowsUpdateRestartMode The restartMode
-    */
-    public function getRestartMode()
-    {
-        if (array_key_exists("restartMode", $this->_propDict)) {
-            if (is_a($this->_propDict["restartMode"], "Microsoft\Graph\Beta\Model\WindowsUpdateRestartMode")) {
-                return $this->_propDict["restartMode"];
-            } else {
-                $this->_propDict["restartMode"] = new WindowsUpdateRestartMode($this->_propDict["restartMode"]);
-                return $this->_propDict["restartMode"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the restartMode
-    *
-    * @param WindowsUpdateRestartMode $val The value to assign to the restartMode
-    *
-    * @return WindowsUpdateScheduledInstall The WindowsUpdateScheduledInstall
-    */
-    public function setRestartMode($val)
-    {
-        $this->_propDict["restartMode"] = $val;
          return $this;
     }
 }

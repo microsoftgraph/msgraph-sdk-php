@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class AndroidManagedAppProtection extends TargetedManagedAppProtection
@@ -213,6 +213,91 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     public function setExemptedAppPackages($val)
     {
 		$this->_propDict["exemptedAppPackages"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the minimumWipePatchVersion
+    *
+    * @return string The minimumWipePatchVersion
+    */
+    public function getMinimumWipePatchVersion()
+    {
+        if (array_key_exists("minimumWipePatchVersion", $this->_propDict)) {
+            return $this->_propDict["minimumWipePatchVersion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the minimumWipePatchVersion
+    *
+    * @param string $val The minimumWipePatchVersion
+    *
+    * @return AndroidManagedAppProtection
+    */
+    public function setMinimumWipePatchVersion($val)
+    {
+        $this->_propDict["minimumWipePatchVersion"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the allowedAndroidDeviceManufacturers
+    *
+    * @return string The allowedAndroidDeviceManufacturers
+    */
+    public function getAllowedAndroidDeviceManufacturers()
+    {
+        if (array_key_exists("allowedAndroidDeviceManufacturers", $this->_propDict)) {
+            return $this->_propDict["allowedAndroidDeviceManufacturers"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the allowedAndroidDeviceManufacturers
+    *
+    * @param string $val The allowedAndroidDeviceManufacturers
+    *
+    * @return AndroidManagedAppProtection
+    */
+    public function setAllowedAndroidDeviceManufacturers($val)
+    {
+        $this->_propDict["allowedAndroidDeviceManufacturers"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the appActionIfAndroidDeviceManufacturerNotAllowed
+    *
+    * @return ManagedAppRemediationAction The appActionIfAndroidDeviceManufacturerNotAllowed
+    */
+    public function getAppActionIfAndroidDeviceManufacturerNotAllowed()
+    {
+        if (array_key_exists("appActionIfAndroidDeviceManufacturerNotAllowed", $this->_propDict)) {
+            if (is_a($this->_propDict["appActionIfAndroidDeviceManufacturerNotAllowed"], "Microsoft\Graph\Beta\Model\ManagedAppRemediationAction")) {
+                return $this->_propDict["appActionIfAndroidDeviceManufacturerNotAllowed"];
+            } else {
+                $this->_propDict["appActionIfAndroidDeviceManufacturerNotAllowed"] = new ManagedAppRemediationAction($this->_propDict["appActionIfAndroidDeviceManufacturerNotAllowed"]);
+                return $this->_propDict["appActionIfAndroidDeviceManufacturerNotAllowed"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the appActionIfAndroidDeviceManufacturerNotAllowed
+    *
+    * @param ManagedAppRemediationAction $val The appActionIfAndroidDeviceManufacturerNotAllowed
+    *
+    * @return AndroidManagedAppProtection
+    */
+    public function setAppActionIfAndroidDeviceManufacturerNotAllowed($val)
+    {
+        $this->_propDict["appActionIfAndroidDeviceManufacturerNotAllowed"] = $val;
         return $this;
     }
     

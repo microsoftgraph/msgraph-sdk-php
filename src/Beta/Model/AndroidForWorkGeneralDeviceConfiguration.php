@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguration
@@ -359,6 +359,114 @@ class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the workProfileBlockScreenCapture
+    *
+    * @return bool The workProfileBlockScreenCapture
+    */
+    public function getWorkProfileBlockScreenCapture()
+    {
+        if (array_key_exists("workProfileBlockScreenCapture", $this->_propDict)) {
+            return $this->_propDict["workProfileBlockScreenCapture"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the workProfileBlockScreenCapture
+    *
+    * @param bool $val The workProfileBlockScreenCapture
+    *
+    * @return AndroidForWorkGeneralDeviceConfiguration
+    */
+    public function setWorkProfileBlockScreenCapture($val)
+    {
+        $this->_propDict["workProfileBlockScreenCapture"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the workProfileBlockCrossProfileCallerId
+    *
+    * @return bool The workProfileBlockCrossProfileCallerId
+    */
+    public function getWorkProfileBlockCrossProfileCallerId()
+    {
+        if (array_key_exists("workProfileBlockCrossProfileCallerId", $this->_propDict)) {
+            return $this->_propDict["workProfileBlockCrossProfileCallerId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the workProfileBlockCrossProfileCallerId
+    *
+    * @param bool $val The workProfileBlockCrossProfileCallerId
+    *
+    * @return AndroidForWorkGeneralDeviceConfiguration
+    */
+    public function setWorkProfileBlockCrossProfileCallerId($val)
+    {
+        $this->_propDict["workProfileBlockCrossProfileCallerId"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the workProfileBlockCamera
+    *
+    * @return bool The workProfileBlockCamera
+    */
+    public function getWorkProfileBlockCamera()
+    {
+        if (array_key_exists("workProfileBlockCamera", $this->_propDict)) {
+            return $this->_propDict["workProfileBlockCamera"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the workProfileBlockCamera
+    *
+    * @param bool $val The workProfileBlockCamera
+    *
+    * @return AndroidForWorkGeneralDeviceConfiguration
+    */
+    public function setWorkProfileBlockCamera($val)
+    {
+        $this->_propDict["workProfileBlockCamera"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the workProfileBlockCrossProfileContactsSearch
+    *
+    * @return bool The workProfileBlockCrossProfileContactsSearch
+    */
+    public function getWorkProfileBlockCrossProfileContactsSearch()
+    {
+        if (array_key_exists("workProfileBlockCrossProfileContactsSearch", $this->_propDict)) {
+            return $this->_propDict["workProfileBlockCrossProfileContactsSearch"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the workProfileBlockCrossProfileContactsSearch
+    *
+    * @param bool $val The workProfileBlockCrossProfileContactsSearch
+    *
+    * @return AndroidForWorkGeneralDeviceConfiguration
+    */
+    public function setWorkProfileBlockCrossProfileContactsSearch($val)
+    {
+        $this->_propDict["workProfileBlockCrossProfileContactsSearch"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the workProfileBlockCrossProfileCopyPaste
     *
     * @return bool The workProfileBlockCrossProfileCopyPaste
@@ -525,6 +633,168 @@ class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the workProfilePasswordMinNumericCharacters
+    *
+    * @return int The workProfilePasswordMinNumericCharacters
+    */
+    public function getWorkProfilePasswordMinNumericCharacters()
+    {
+        if (array_key_exists("workProfilePasswordMinNumericCharacters", $this->_propDict)) {
+            return $this->_propDict["workProfilePasswordMinNumericCharacters"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the workProfilePasswordMinNumericCharacters
+    *
+    * @param int $val The workProfilePasswordMinNumericCharacters
+    *
+    * @return AndroidForWorkGeneralDeviceConfiguration
+    */
+    public function setWorkProfilePasswordMinNumericCharacters($val)
+    {
+        $this->_propDict["workProfilePasswordMinNumericCharacters"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the workProfilePasswordMinNonLetterCharacters
+    *
+    * @return int The workProfilePasswordMinNonLetterCharacters
+    */
+    public function getWorkProfilePasswordMinNonLetterCharacters()
+    {
+        if (array_key_exists("workProfilePasswordMinNonLetterCharacters", $this->_propDict)) {
+            return $this->_propDict["workProfilePasswordMinNonLetterCharacters"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the workProfilePasswordMinNonLetterCharacters
+    *
+    * @param int $val The workProfilePasswordMinNonLetterCharacters
+    *
+    * @return AndroidForWorkGeneralDeviceConfiguration
+    */
+    public function setWorkProfilePasswordMinNonLetterCharacters($val)
+    {
+        $this->_propDict["workProfilePasswordMinNonLetterCharacters"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the workProfilePasswordMinLetterCharacters
+    *
+    * @return int The workProfilePasswordMinLetterCharacters
+    */
+    public function getWorkProfilePasswordMinLetterCharacters()
+    {
+        if (array_key_exists("workProfilePasswordMinLetterCharacters", $this->_propDict)) {
+            return $this->_propDict["workProfilePasswordMinLetterCharacters"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the workProfilePasswordMinLetterCharacters
+    *
+    * @param int $val The workProfilePasswordMinLetterCharacters
+    *
+    * @return AndroidForWorkGeneralDeviceConfiguration
+    */
+    public function setWorkProfilePasswordMinLetterCharacters($val)
+    {
+        $this->_propDict["workProfilePasswordMinLetterCharacters"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the workProfilePasswordMinLowerCaseCharacters
+    *
+    * @return int The workProfilePasswordMinLowerCaseCharacters
+    */
+    public function getWorkProfilePasswordMinLowerCaseCharacters()
+    {
+        if (array_key_exists("workProfilePasswordMinLowerCaseCharacters", $this->_propDict)) {
+            return $this->_propDict["workProfilePasswordMinLowerCaseCharacters"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the workProfilePasswordMinLowerCaseCharacters
+    *
+    * @param int $val The workProfilePasswordMinLowerCaseCharacters
+    *
+    * @return AndroidForWorkGeneralDeviceConfiguration
+    */
+    public function setWorkProfilePasswordMinLowerCaseCharacters($val)
+    {
+        $this->_propDict["workProfilePasswordMinLowerCaseCharacters"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the workProfilePasswordMinUpperCaseCharacters
+    *
+    * @return int The workProfilePasswordMinUpperCaseCharacters
+    */
+    public function getWorkProfilePasswordMinUpperCaseCharacters()
+    {
+        if (array_key_exists("workProfilePasswordMinUpperCaseCharacters", $this->_propDict)) {
+            return $this->_propDict["workProfilePasswordMinUpperCaseCharacters"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the workProfilePasswordMinUpperCaseCharacters
+    *
+    * @param int $val The workProfilePasswordMinUpperCaseCharacters
+    *
+    * @return AndroidForWorkGeneralDeviceConfiguration
+    */
+    public function setWorkProfilePasswordMinUpperCaseCharacters($val)
+    {
+        $this->_propDict["workProfilePasswordMinUpperCaseCharacters"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the workProfilePasswordMinSymbolCharacters
+    *
+    * @return int The workProfilePasswordMinSymbolCharacters
+    */
+    public function getWorkProfilePasswordMinSymbolCharacters()
+    {
+        if (array_key_exists("workProfilePasswordMinSymbolCharacters", $this->_propDict)) {
+            return $this->_propDict["workProfilePasswordMinSymbolCharacters"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the workProfilePasswordMinSymbolCharacters
+    *
+    * @param int $val The workProfilePasswordMinSymbolCharacters
+    *
+    * @return AndroidForWorkGeneralDeviceConfiguration
+    */
+    public function setWorkProfilePasswordMinSymbolCharacters($val)
+    {
+        $this->_propDict["workProfilePasswordMinSymbolCharacters"] = intval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the workProfilePasswordMinutesOfInactivityBeforeScreenTimeout
     *
     * @return int The workProfilePasswordMinutesOfInactivityBeforeScreenTimeout
@@ -687,6 +957,60 @@ class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguration
     public function setSecurityRequireVerifyApps($val)
     {
         $this->_propDict["securityRequireVerifyApps"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the vpnAlwaysOnPackageIdentifier
+    *
+    * @return string The vpnAlwaysOnPackageIdentifier
+    */
+    public function getVpnAlwaysOnPackageIdentifier()
+    {
+        if (array_key_exists("vpnAlwaysOnPackageIdentifier", $this->_propDict)) {
+            return $this->_propDict["vpnAlwaysOnPackageIdentifier"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the vpnAlwaysOnPackageIdentifier
+    *
+    * @param string $val The vpnAlwaysOnPackageIdentifier
+    *
+    * @return AndroidForWorkGeneralDeviceConfiguration
+    */
+    public function setVpnAlwaysOnPackageIdentifier($val)
+    {
+        $this->_propDict["vpnAlwaysOnPackageIdentifier"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the vpnEnableAlwaysOnLockdownMode
+    *
+    * @return bool The vpnEnableAlwaysOnLockdownMode
+    */
+    public function getVpnEnableAlwaysOnLockdownMode()
+    {
+        if (array_key_exists("vpnEnableAlwaysOnLockdownMode", $this->_propDict)) {
+            return $this->_propDict["vpnEnableAlwaysOnLockdownMode"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the vpnEnableAlwaysOnLockdownMode
+    *
+    * @param bool $val The vpnEnableAlwaysOnLockdownMode
+    *
+    * @return AndroidForWorkGeneralDeviceConfiguration
+    */
+    public function setVpnEnableAlwaysOnLockdownMode($val)
+    {
+        $this->_propDict["vpnEnableAlwaysOnLockdownMode"] = boolval($val);
         return $this;
     }
     

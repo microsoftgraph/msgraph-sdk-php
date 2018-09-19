@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -18,13 +18,65 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class LogonUser extends Entity
 {
+    /**
+    * Gets the accountDomain
+    *
+    * @return string The accountDomain
+    */
+    public function getAccountDomain()
+    {
+        if (array_key_exists("accountDomain", $this->_propDict)) {
+            return $this->_propDict["accountDomain"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the accountDomain
+    *
+    * @param string $val The value of the accountDomain
+    *
+    * @return LogonUser
+    */
+    public function setAccountDomain($val)
+    {
+        $this->_propDict["accountDomain"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the accountName
+    *
+    * @return string The accountName
+    */
+    public function getAccountName()
+    {
+        if (array_key_exists("accountName", $this->_propDict)) {
+            return $this->_propDict["accountName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the accountName
+    *
+    * @param string $val The value of the accountName
+    *
+    * @return LogonUser
+    */
+    public function setAccountName($val)
+    {
+        $this->_propDict["accountName"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the accountType
@@ -117,58 +169,6 @@ class LogonUser extends Entity
     {
         $this->_propDict["lastSeenDateTime"] = $val;
          return $this;
-    }
-    /**
-    * Gets the accountName
-    *
-    * @return string The accountName
-    */
-    public function getAccountName()
-    {
-        if (array_key_exists("accountName", $this->_propDict)) {
-            return $this->_propDict["accountName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the accountName
-    *
-    * @param string $val The value of the accountName
-    *
-    * @return LogonUser
-    */
-    public function setAccountName($val)
-    {
-        $this->_propDict["accountName"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the accountDomain
-    *
-    * @return string The accountDomain
-    */
-    public function getAccountDomain()
-    {
-        if (array_key_exists("accountDomain", $this->_propDict)) {
-            return $this->_propDict["accountDomain"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the accountDomain
-    *
-    * @param string $val The value of the accountDomain
-    *
-    * @return LogonUser
-    */
-    public function setAccountDomain($val)
-    {
-        $this->_propDict["accountDomain"] = $val;
-        return $this;
     }
     /**
     * Gets the logonId

@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class Person extends Entity
@@ -136,7 +136,6 @@ class Person extends Entity
     
     /**
     * Gets the personNotes
-    * Free-form notes that the user has taken about this person.
     *
     * @return string The personNotes
     */
@@ -151,7 +150,6 @@ class Person extends Entity
     
     /**
     * Sets the personNotes
-    * Free-form notes that the user has taken about this person.
     *
     * @param string $val The personNotes
     *
@@ -547,8 +545,7 @@ class Person extends Entity
     }
     
     /**
-    * Gets the imAddress
-    * The instant message voice over IP (VOIP) session initiation protocol (SIP) address for the user. Read-only.
+    * Gets the userPrincipalName
     *
     * @return string The userPrincipalName
     */
@@ -562,8 +559,7 @@ class Person extends Entity
     }
     
     /**
-    * Sets the imAddress
-    * The instant message voice over IP (VOIP) session initiation protocol (SIP) address for the user. Read-only.
+    * Sets the userPrincipalName
     *
     * @param string $val The userPrincipalName
     *

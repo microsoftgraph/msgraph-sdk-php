@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,118 +19,199 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentConfiguration
 {
     /**
-    * Gets the title
+    * Gets the showInstallationProgress
     *
-    * @return string The title
+    * @return bool The showInstallationProgress
     */
-    public function getTitle()
+    public function getShowInstallationProgress()
     {
-        if (array_key_exists("title", $this->_propDict)) {
-            return $this->_propDict["title"];
+        if (array_key_exists("showInstallationProgress", $this->_propDict)) {
+            return $this->_propDict["showInstallationProgress"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the title
+    * Sets the showInstallationProgress
     *
-    * @param string $val The title
+    * @param bool $val The showInstallationProgress
     *
     * @return Windows10EnrollmentCompletionPageConfiguration
     */
-    public function setTitle($val)
+    public function setShowInstallationProgress($val)
     {
-        $this->_propDict["title"] = $val;
+        $this->_propDict["showInstallationProgress"] = boolval($val);
         return $this;
     }
     
     /**
-    * Gets the bodyText
+    * Gets the blockDeviceSetupRetryByUser
     *
-    * @return string The bodyText
+    * @return bool The blockDeviceSetupRetryByUser
     */
-    public function getBodyText()
+    public function getBlockDeviceSetupRetryByUser()
     {
-        if (array_key_exists("bodyText", $this->_propDict)) {
-            return $this->_propDict["bodyText"];
+        if (array_key_exists("blockDeviceSetupRetryByUser", $this->_propDict)) {
+            return $this->_propDict["blockDeviceSetupRetryByUser"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the bodyText
+    * Sets the blockDeviceSetupRetryByUser
     *
-    * @param string $val The bodyText
+    * @param bool $val The blockDeviceSetupRetryByUser
     *
     * @return Windows10EnrollmentCompletionPageConfiguration
     */
-    public function setBodyText($val)
+    public function setBlockDeviceSetupRetryByUser($val)
     {
-        $this->_propDict["bodyText"] = $val;
+        $this->_propDict["blockDeviceSetupRetryByUser"] = boolval($val);
         return $this;
     }
     
     /**
-    * Gets the moreInfoUrl
+    * Gets the allowDeviceResetOnInstallFailure
     *
-    * @return string The moreInfoUrl
+    * @return bool The allowDeviceResetOnInstallFailure
     */
-    public function getMoreInfoUrl()
+    public function getAllowDeviceResetOnInstallFailure()
     {
-        if (array_key_exists("moreInfoUrl", $this->_propDict)) {
-            return $this->_propDict["moreInfoUrl"];
+        if (array_key_exists("allowDeviceResetOnInstallFailure", $this->_propDict)) {
+            return $this->_propDict["allowDeviceResetOnInstallFailure"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the moreInfoUrl
+    * Sets the allowDeviceResetOnInstallFailure
     *
-    * @param string $val The moreInfoUrl
+    * @param bool $val The allowDeviceResetOnInstallFailure
     *
     * @return Windows10EnrollmentCompletionPageConfiguration
     */
-    public function setMoreInfoUrl($val)
+    public function setAllowDeviceResetOnInstallFailure($val)
     {
-        $this->_propDict["moreInfoUrl"] = $val;
+        $this->_propDict["allowDeviceResetOnInstallFailure"] = boolval($val);
         return $this;
     }
     
     /**
-    * Gets the moreInfoText
+    * Gets the allowLogCollectionOnInstallFailure
     *
-    * @return string The moreInfoText
+    * @return bool The allowLogCollectionOnInstallFailure
     */
-    public function getMoreInfoText()
+    public function getAllowLogCollectionOnInstallFailure()
     {
-        if (array_key_exists("moreInfoText", $this->_propDict)) {
-            return $this->_propDict["moreInfoText"];
+        if (array_key_exists("allowLogCollectionOnInstallFailure", $this->_propDict)) {
+            return $this->_propDict["allowLogCollectionOnInstallFailure"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the moreInfoText
+    * Sets the allowLogCollectionOnInstallFailure
     *
-    * @param string $val The moreInfoText
+    * @param bool $val The allowLogCollectionOnInstallFailure
     *
     * @return Windows10EnrollmentCompletionPageConfiguration
     */
-    public function setMoreInfoText($val)
+    public function setAllowLogCollectionOnInstallFailure($val)
     {
-        $this->_propDict["moreInfoText"] = $val;
+        $this->_propDict["allowLogCollectionOnInstallFailure"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the customErrorMessage
+    *
+    * @return string The customErrorMessage
+    */
+    public function getCustomErrorMessage()
+    {
+        if (array_key_exists("customErrorMessage", $this->_propDict)) {
+            return $this->_propDict["customErrorMessage"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the customErrorMessage
+    *
+    * @param string $val The customErrorMessage
+    *
+    * @return Windows10EnrollmentCompletionPageConfiguration
+    */
+    public function setCustomErrorMessage($val)
+    {
+        $this->_propDict["customErrorMessage"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the installProgressTimeoutInMinutes
+    *
+    * @return int The installProgressTimeoutInMinutes
+    */
+    public function getInstallProgressTimeoutInMinutes()
+    {
+        if (array_key_exists("installProgressTimeoutInMinutes", $this->_propDict)) {
+            return $this->_propDict["installProgressTimeoutInMinutes"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the installProgressTimeoutInMinutes
+    *
+    * @param int $val The installProgressTimeoutInMinutes
+    *
+    * @return Windows10EnrollmentCompletionPageConfiguration
+    */
+    public function setInstallProgressTimeoutInMinutes($val)
+    {
+        $this->_propDict["installProgressTimeoutInMinutes"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the allowDeviceUseOnInstallFailure
+    *
+    * @return bool The allowDeviceUseOnInstallFailure
+    */
+    public function getAllowDeviceUseOnInstallFailure()
+    {
+        if (array_key_exists("allowDeviceUseOnInstallFailure", $this->_propDict)) {
+            return $this->_propDict["allowDeviceUseOnInstallFailure"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the allowDeviceUseOnInstallFailure
+    *
+    * @param bool $val The allowDeviceUseOnInstallFailure
+    *
+    * @return Windows10EnrollmentCompletionPageConfiguration
+    */
+    public function setAllowDeviceUseOnInstallFailure($val)
+    {
+        $this->_propDict["allowDeviceUseOnInstallFailure"] = boolval($val);
         return $this;
     }
     

@@ -1,0 +1,238 @@
+<?php
+/**
+* Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
+* 
+* AndroidWorkProfileEasEmailProfileBase File
+* PHP version 7
+*
+* @category  Library
+* @package   Microsoft.Graph
+* @copyright © Microsoft Corporation. All rights reserved.
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   GIT: 1.4.0
+* @link      https://graph.microsoft.io/
+*/
+namespace Microsoft\Graph\Beta\Model;
+
+/**
+* AndroidWorkProfileEasEmailProfileBase class
+*
+* @category  Model
+* @package   Microsoft.Graph
+* @copyright © Microsoft Corporation. All rights reserved.
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   Release: 1.4.0
+* @link      https://graph.microsoft.io/
+*/
+class AndroidWorkProfileEasEmailProfileBase extends DeviceConfiguration
+{
+    /**
+    * Gets the authenticationMethod
+    *
+    * @return EasAuthenticationMethod The authenticationMethod
+    */
+    public function getAuthenticationMethod()
+    {
+        if (array_key_exists("authenticationMethod", $this->_propDict)) {
+            if (is_a($this->_propDict["authenticationMethod"], "Microsoft\Graph\Beta\Model\EasAuthenticationMethod")) {
+                return $this->_propDict["authenticationMethod"];
+            } else {
+                $this->_propDict["authenticationMethod"] = new EasAuthenticationMethod($this->_propDict["authenticationMethod"]);
+                return $this->_propDict["authenticationMethod"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the authenticationMethod
+    *
+    * @param EasAuthenticationMethod $val The authenticationMethod
+    *
+    * @return AndroidWorkProfileEasEmailProfileBase
+    */
+    public function setAuthenticationMethod($val)
+    {
+        $this->_propDict["authenticationMethod"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the durationOfEmailToSync
+    *
+    * @return EmailSyncDuration The durationOfEmailToSync
+    */
+    public function getDurationOfEmailToSync()
+    {
+        if (array_key_exists("durationOfEmailToSync", $this->_propDict)) {
+            if (is_a($this->_propDict["durationOfEmailToSync"], "Microsoft\Graph\Beta\Model\EmailSyncDuration")) {
+                return $this->_propDict["durationOfEmailToSync"];
+            } else {
+                $this->_propDict["durationOfEmailToSync"] = new EmailSyncDuration($this->_propDict["durationOfEmailToSync"]);
+                return $this->_propDict["durationOfEmailToSync"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the durationOfEmailToSync
+    *
+    * @param EmailSyncDuration $val The durationOfEmailToSync
+    *
+    * @return AndroidWorkProfileEasEmailProfileBase
+    */
+    public function setDurationOfEmailToSync($val)
+    {
+        $this->_propDict["durationOfEmailToSync"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the emailAddressSource
+    *
+    * @return UserEmailSource The emailAddressSource
+    */
+    public function getEmailAddressSource()
+    {
+        if (array_key_exists("emailAddressSource", $this->_propDict)) {
+            if (is_a($this->_propDict["emailAddressSource"], "Microsoft\Graph\Beta\Model\UserEmailSource")) {
+                return $this->_propDict["emailAddressSource"];
+            } else {
+                $this->_propDict["emailAddressSource"] = new UserEmailSource($this->_propDict["emailAddressSource"]);
+                return $this->_propDict["emailAddressSource"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the emailAddressSource
+    *
+    * @param UserEmailSource $val The emailAddressSource
+    *
+    * @return AndroidWorkProfileEasEmailProfileBase
+    */
+    public function setEmailAddressSource($val)
+    {
+        $this->_propDict["emailAddressSource"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the hostName
+    *
+    * @return string The hostName
+    */
+    public function getHostName()
+    {
+        if (array_key_exists("hostName", $this->_propDict)) {
+            return $this->_propDict["hostName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the hostName
+    *
+    * @param string $val The hostName
+    *
+    * @return AndroidWorkProfileEasEmailProfileBase
+    */
+    public function setHostName($val)
+    {
+        $this->_propDict["hostName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the requireSsl
+    *
+    * @return bool The requireSsl
+    */
+    public function getRequireSsl()
+    {
+        if (array_key_exists("requireSsl", $this->_propDict)) {
+            return $this->_propDict["requireSsl"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the requireSsl
+    *
+    * @param bool $val The requireSsl
+    *
+    * @return AndroidWorkProfileEasEmailProfileBase
+    */
+    public function setRequireSsl($val)
+    {
+        $this->_propDict["requireSsl"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the usernameSource
+    *
+    * @return AndroidUsernameSource The usernameSource
+    */
+    public function getUsernameSource()
+    {
+        if (array_key_exists("usernameSource", $this->_propDict)) {
+            if (is_a($this->_propDict["usernameSource"], "Microsoft\Graph\Beta\Model\AndroidUsernameSource")) {
+                return $this->_propDict["usernameSource"];
+            } else {
+                $this->_propDict["usernameSource"] = new AndroidUsernameSource($this->_propDict["usernameSource"]);
+                return $this->_propDict["usernameSource"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the usernameSource
+    *
+    * @param AndroidUsernameSource $val The usernameSource
+    *
+    * @return AndroidWorkProfileEasEmailProfileBase
+    */
+    public function setUsernameSource($val)
+    {
+        $this->_propDict["usernameSource"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the identityCertificate
+    *
+    * @return AndroidWorkProfileCertificateProfileBase The identityCertificate
+    */
+    public function getIdentityCertificate()
+    {
+        if (array_key_exists("identityCertificate", $this->_propDict)) {
+            if (is_a($this->_propDict["identityCertificate"], "Microsoft\Graph\Beta\Model\AndroidWorkProfileCertificateProfileBase")) {
+                return $this->_propDict["identityCertificate"];
+            } else {
+                $this->_propDict["identityCertificate"] = new AndroidWorkProfileCertificateProfileBase($this->_propDict["identityCertificate"]);
+                return $this->_propDict["identityCertificate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the identityCertificate
+    *
+    * @param AndroidWorkProfileCertificateProfileBase $val The identityCertificate
+    *
+    * @return AndroidWorkProfileEasEmailProfileBase
+    */
+    public function setIdentityCertificate($val)
+    {
+        $this->_propDict["identityCertificate"] = $val;
+        return $this;
+    }
+    
+}

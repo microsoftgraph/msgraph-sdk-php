@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class IosCompliancePolicy extends DeviceCompliancePolicy
@@ -409,6 +409,34 @@ class IosCompliancePolicy extends DeviceCompliancePolicy
     public function setManagedEmailProfileRequired($val)
     {
         $this->_propDict["managedEmailProfileRequired"] = boolval($val);
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the restrictedApps
+     *
+     * @return array The restrictedApps
+     */
+    public function getRestrictedApps()
+    {
+        if (array_key_exists("restrictedApps", $this->_propDict)) {
+           return $this->_propDict["restrictedApps"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the restrictedApps
+    *
+    * @param AppListItem $val The restrictedApps
+    *
+    * @return IosCompliancePolicy
+    */
+    public function setRestrictedApps($val)
+    {
+		$this->_propDict["restrictedApps"] = $val;
         return $this;
     }
     

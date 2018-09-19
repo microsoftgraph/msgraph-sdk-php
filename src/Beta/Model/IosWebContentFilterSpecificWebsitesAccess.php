@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -18,9 +18,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class IosWebContentFilterSpecificWebsitesAccess extends IosWebContentFilterBase
@@ -54,6 +54,37 @@ class IosWebContentFilterSpecificWebsitesAccess extends IosWebContentFilterBase
     public function setSpecificWebsitesOnly($val)
     {
         $this->_propDict["specificWebsitesOnly"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the websiteList
+    *
+    * @return IosBookmark The websiteList
+    */
+    public function getWebsiteList()
+    {
+        if (array_key_exists("websiteList", $this->_propDict)) {
+            if (is_a($this->_propDict["websiteList"], "Microsoft\Graph\Beta\Model\IosBookmark")) {
+                return $this->_propDict["websiteList"];
+            } else {
+                $this->_propDict["websiteList"] = new IosBookmark($this->_propDict["websiteList"]);
+                return $this->_propDict["websiteList"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the websiteList
+    *
+    * @param IosBookmark $val The value to assign to the websiteList
+    *
+    * @return IosWebContentFilterSpecificWebsitesAccess The IosWebContentFilterSpecificWebsitesAccess
+    */
+    public function setWebsiteList($val)
+    {
+        $this->_propDict["websiteList"] = $val;
          return $this;
     }
 }

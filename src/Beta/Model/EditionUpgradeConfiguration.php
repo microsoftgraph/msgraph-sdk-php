@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class EditionUpgradeConfiguration extends DeviceConfiguration
@@ -139,6 +139,37 @@ class EditionUpgradeConfiguration extends DeviceConfiguration
     public function setProductKey($val)
     {
         $this->_propDict["productKey"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the windowsSMode
+    *
+    * @return WindowsSModeConfiguration The windowsSMode
+    */
+    public function getWindowsSMode()
+    {
+        if (array_key_exists("windowsSMode", $this->_propDict)) {
+            if (is_a($this->_propDict["windowsSMode"], "Microsoft\Graph\Beta\Model\WindowsSModeConfiguration")) {
+                return $this->_propDict["windowsSMode"];
+            } else {
+                $this->_propDict["windowsSMode"] = new WindowsSModeConfiguration($this->_propDict["windowsSMode"]);
+                return $this->_propDict["windowsSMode"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the windowsSMode
+    *
+    * @param WindowsSModeConfiguration $val The windowsSMode
+    *
+    * @return EditionUpgradeConfiguration
+    */
+    public function setWindowsSMode($val)
+    {
+        $this->_propDict["windowsSMode"] = $val;
         return $this;
     }
     

@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -18,9 +18,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class DeviceManagementSettings extends Entity
@@ -127,6 +127,32 @@ class DeviceManagementSettings extends Entity
     public function setEnhancedJailBreak($val)
     {
         $this->_propDict["enhancedJailBreak"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the deviceInactivityBeforeRetirementInDay
+    *
+    * @return int The deviceInactivityBeforeRetirementInDay
+    */
+    public function getDeviceInactivityBeforeRetirementInDay()
+    {
+        if (array_key_exists("deviceInactivityBeforeRetirementInDay", $this->_propDict)) {
+            return $this->_propDict["deviceInactivityBeforeRetirementInDay"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the deviceInactivityBeforeRetirementInDay
+    *
+    * @param int $val The value of the deviceInactivityBeforeRetirementInDay
+    *
+    * @return DeviceManagementSettings
+    */
+    public function setDeviceInactivityBeforeRetirementInDay($val)
+    {
+        $this->_propDict["deviceInactivityBeforeRetirementInDay"] = $val;
         return $this;
     }
 }

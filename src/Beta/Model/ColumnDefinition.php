@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,16 +19,15 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class ColumnDefinition extends Entity
 {
     /**
     * Gets the boolean
-    * This column stores boolean values.
     *
     * @return BooleanColumn The boolean
     */
@@ -47,7 +46,6 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the boolean
-    * This column stores boolean values.
     *
     * @param BooleanColumn $val The boolean
     *
@@ -61,7 +59,6 @@ class ColumnDefinition extends Entity
     
     /**
     * Gets the calculated
-    * This column's data is calculated based on other columns.
     *
     * @return CalculatedColumn The calculated
     */
@@ -80,7 +77,6 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the calculated
-    * This column's data is calculated based on other columns.
     *
     * @param CalculatedColumn $val The calculated
     *
@@ -94,7 +90,6 @@ class ColumnDefinition extends Entity
     
     /**
     * Gets the choice
-    * This column stores data from a list of choices.
     *
     * @return ChoiceColumn The choice
     */
@@ -113,7 +108,6 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the choice
-    * This column stores data from a list of choices.
     *
     * @param ChoiceColumn $val The choice
     *
@@ -127,7 +121,6 @@ class ColumnDefinition extends Entity
     
     /**
     * Gets the columnGroup
-    * For site columns, the name of the group this column belongs to. Helps organize related columns.
     *
     * @return string The columnGroup
     */
@@ -142,7 +135,6 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the columnGroup
-    * For site columns, the name of the group this column belongs to. Helps organize related columns.
     *
     * @param string $val The columnGroup
     *
@@ -156,7 +148,6 @@ class ColumnDefinition extends Entity
     
     /**
     * Gets the currency
-    * This column stores currency values.
     *
     * @return CurrencyColumn The currency
     */
@@ -175,7 +166,6 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the currency
-    * This column stores currency values.
     *
     * @param CurrencyColumn $val The currency
     *
@@ -189,7 +179,6 @@ class ColumnDefinition extends Entity
     
     /**
     * Gets the dateTime
-    * This column stores DateTime values.
     *
     * @return DateTimeColumn The dateTime
     */
@@ -208,7 +197,6 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the dateTime
-    * This column stores DateTime values.
     *
     * @param DateTimeColumn $val The dateTime
     *
@@ -222,7 +210,6 @@ class ColumnDefinition extends Entity
     
     /**
     * Gets the defaultValue
-    * The default value for this column.
     *
     * @return DefaultColumnValue The defaultValue
     */
@@ -241,7 +228,6 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the defaultValue
-    * The default value for this column.
     *
     * @param DefaultColumnValue $val The defaultValue
     *
@@ -255,7 +241,6 @@ class ColumnDefinition extends Entity
     
     /**
     * Gets the description
-    * The user-facing description of the column.
     *
     * @return string The description
     */
@@ -270,7 +255,6 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the description
-    * The user-facing description of the column.
     *
     * @param string $val The description
     *
@@ -284,7 +268,6 @@ class ColumnDefinition extends Entity
     
     /**
     * Gets the displayName
-    * The user-facing name of the column.
     *
     * @return string The displayName
     */
@@ -299,7 +282,6 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the displayName
-    * The user-facing name of the column.
     *
     * @param string $val The displayName
     *
@@ -313,7 +295,6 @@ class ColumnDefinition extends Entity
     
     /**
     * Gets the enforceUniqueValues
-    * If true, no two list items may have the same value for this column.
     *
     * @return bool The enforceUniqueValues
     */
@@ -328,7 +309,6 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the enforceUniqueValues
-    * If true, no two list items may have the same value for this column.
     *
     * @param bool $val The enforceUniqueValues
     *
@@ -342,7 +322,6 @@ class ColumnDefinition extends Entity
     
     /**
     * Gets the hidden
-    * Specifies whether the column is displayed in the user interface.
     *
     * @return bool The hidden
     */
@@ -357,7 +336,6 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the hidden
-    * Specifies whether the column is displayed in the user interface.
     *
     * @param bool $val The hidden
     *
@@ -371,7 +349,6 @@ class ColumnDefinition extends Entity
     
     /**
     * Gets the indexed
-    * Specifies whether the column values can used for sorting and searching.
     *
     * @return bool The indexed
     */
@@ -386,7 +363,6 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the indexed
-    * Specifies whether the column values can used for sorting and searching.
     *
     * @param bool $val The indexed
     *
@@ -400,7 +376,6 @@ class ColumnDefinition extends Entity
     
     /**
     * Gets the lookup
-    * This column's data is looked up from another source in the site.
     *
     * @return LookupColumn The lookup
     */
@@ -419,7 +394,6 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the lookup
-    * This column's data is looked up from another source in the site.
     *
     * @param LookupColumn $val The lookup
     *
@@ -433,7 +407,6 @@ class ColumnDefinition extends Entity
     
     /**
     * Gets the name
-    * The API-facing name of the column as it appears in the [fields][] on a [listItem][]. For the user-facing name, see displayName.
     *
     * @return string The name
     */
@@ -448,7 +421,6 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the name
-    * The API-facing name of the column as it appears in the [fields][] on a [listItem][]. For the user-facing name, see displayName.
     *
     * @param string $val The name
     *
@@ -462,7 +434,6 @@ class ColumnDefinition extends Entity
     
     /**
     * Gets the number
-    * This column stores number values.
     *
     * @return NumberColumn The number
     */
@@ -481,7 +452,6 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the number
-    * This column stores number values.
     *
     * @param NumberColumn $val The number
     *
@@ -495,7 +465,6 @@ class ColumnDefinition extends Entity
     
     /**
     * Gets the personOrGroup
-    * This column stores Person or Group values.
     *
     * @return PersonOrGroupColumn The personOrGroup
     */
@@ -514,7 +483,6 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the personOrGroup
-    * This column stores Person or Group values.
     *
     * @param PersonOrGroupColumn $val The personOrGroup
     *
@@ -528,7 +496,6 @@ class ColumnDefinition extends Entity
     
     /**
     * Gets the readOnly
-    * Specifies whether the column values can be modified.
     *
     * @return bool The readOnly
     */
@@ -543,7 +510,6 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the readOnly
-    * Specifies whether the column values can be modified.
     *
     * @param bool $val The readOnly
     *
@@ -557,7 +523,6 @@ class ColumnDefinition extends Entity
     
     /**
     * Gets the required
-    * Specifies whether the column value is not optional.
     *
     * @return bool The required
     */
@@ -572,7 +537,6 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the required
-    * Specifies whether the column value is not optional.
     *
     * @param bool $val The required
     *
@@ -586,7 +550,6 @@ class ColumnDefinition extends Entity
     
     /**
     * Gets the text
-    * This column stores text values.
     *
     * @return TextColumn The text
     */
@@ -605,7 +568,6 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the text
-    * This column stores text values.
     *
     * @param TextColumn $val The text
     *

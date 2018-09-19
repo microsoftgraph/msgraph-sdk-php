@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -18,38 +18,43 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class FileSecurityState extends Entity
 {
+
     /**
-    * Gets the authenticodeHash256
+    * Gets the fileHash
     *
-    * @return string The authenticodeHash256
+    * @return FileHash The fileHash
     */
-    public function getAuthenticodeHash256()
+    public function getFileHash()
     {
-        if (array_key_exists("authenticodeHash256", $this->_propDict)) {
-            return $this->_propDict["authenticodeHash256"];
-        } else {
-            return null;
+        if (array_key_exists("fileHash", $this->_propDict)) {
+            if (is_a($this->_propDict["fileHash"], "Microsoft\Graph\Beta\Model\FileHash")) {
+                return $this->_propDict["fileHash"];
+            } else {
+                $this->_propDict["fileHash"] = new FileHash($this->_propDict["fileHash"]);
+                return $this->_propDict["fileHash"];
+            }
         }
+        return null;
     }
 
     /**
-    * Sets the authenticodeHash256
+    * Sets the fileHash
     *
-    * @param string $val The value of the authenticodeHash256
+    * @param FileHash $val The value to assign to the fileHash
     *
-    * @return FileSecurityState
+    * @return FileSecurityState The FileSecurityState
     */
-    public function setAuthenticodeHash256($val)
+    public function setFileHash($val)
     {
-        $this->_propDict["authenticodeHash256"] = $val;
-        return $this;
+        $this->_propDict["fileHash"] = $val;
+         return $this;
     }
     /**
     * Gets the name
@@ -127,32 +132,6 @@ class FileSecurityState extends Entity
     public function setRiskScore($val)
     {
         $this->_propDict["riskScore"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the sha256
-    *
-    * @return string The sha256
-    */
-    public function getSha256()
-    {
-        if (array_key_exists("sha256", $this->_propDict)) {
-            return $this->_propDict["sha256"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the sha256
-    *
-    * @param string $val The value of the sha256
-    *
-    * @return FileSecurityState
-    */
-    public function setSha256($val)
-    {
-        $this->_propDict["sha256"] = $val;
         return $this;
     }
 }

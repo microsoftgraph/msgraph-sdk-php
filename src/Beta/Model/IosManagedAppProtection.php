@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class IosManagedAppProtection extends TargetedManagedAppProtection
@@ -163,6 +163,145 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     public function setExemptedAppProtocols($val)
     {
 		$this->_propDict["exemptedAppProtocols"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the minimumWipeSdkVersion
+    *
+    * @return string The minimumWipeSdkVersion
+    */
+    public function getMinimumWipeSdkVersion()
+    {
+        if (array_key_exists("minimumWipeSdkVersion", $this->_propDict)) {
+            return $this->_propDict["minimumWipeSdkVersion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the minimumWipeSdkVersion
+    *
+    * @param string $val The minimumWipeSdkVersion
+    *
+    * @return IosManagedAppProtection
+    */
+    public function setMinimumWipeSdkVersion($val)
+    {
+        $this->_propDict["minimumWipeSdkVersion"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the allowedIosDeviceModels
+    *
+    * @return string The allowedIosDeviceModels
+    */
+    public function getAllowedIosDeviceModels()
+    {
+        if (array_key_exists("allowedIosDeviceModels", $this->_propDict)) {
+            return $this->_propDict["allowedIosDeviceModels"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the allowedIosDeviceModels
+    *
+    * @param string $val The allowedIosDeviceModels
+    *
+    * @return IosManagedAppProtection
+    */
+    public function setAllowedIosDeviceModels($val)
+    {
+        $this->_propDict["allowedIosDeviceModels"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the appActionIfIosDeviceModelNotAllowed
+    *
+    * @return ManagedAppRemediationAction The appActionIfIosDeviceModelNotAllowed
+    */
+    public function getAppActionIfIosDeviceModelNotAllowed()
+    {
+        if (array_key_exists("appActionIfIosDeviceModelNotAllowed", $this->_propDict)) {
+            if (is_a($this->_propDict["appActionIfIosDeviceModelNotAllowed"], "Microsoft\Graph\Beta\Model\ManagedAppRemediationAction")) {
+                return $this->_propDict["appActionIfIosDeviceModelNotAllowed"];
+            } else {
+                $this->_propDict["appActionIfIosDeviceModelNotAllowed"] = new ManagedAppRemediationAction($this->_propDict["appActionIfIosDeviceModelNotAllowed"]);
+                return $this->_propDict["appActionIfIosDeviceModelNotAllowed"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the appActionIfIosDeviceModelNotAllowed
+    *
+    * @param ManagedAppRemediationAction $val The appActionIfIosDeviceModelNotAllowed
+    *
+    * @return IosManagedAppProtection
+    */
+    public function setAppActionIfIosDeviceModelNotAllowed($val)
+    {
+        $this->_propDict["appActionIfIosDeviceModelNotAllowed"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the thirdPartyKeyboardsBlocked
+    *
+    * @return bool The thirdPartyKeyboardsBlocked
+    */
+    public function getThirdPartyKeyboardsBlocked()
+    {
+        if (array_key_exists("thirdPartyKeyboardsBlocked", $this->_propDict)) {
+            return $this->_propDict["thirdPartyKeyboardsBlocked"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the thirdPartyKeyboardsBlocked
+    *
+    * @param bool $val The thirdPartyKeyboardsBlocked
+    *
+    * @return IosManagedAppProtection
+    */
+    public function setThirdPartyKeyboardsBlocked($val)
+    {
+        $this->_propDict["thirdPartyKeyboardsBlocked"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the filterOpenInToOnlyManagedApps
+    *
+    * @return bool The filterOpenInToOnlyManagedApps
+    */
+    public function getFilterOpenInToOnlyManagedApps()
+    {
+        if (array_key_exists("filterOpenInToOnlyManagedApps", $this->_propDict)) {
+            return $this->_propDict["filterOpenInToOnlyManagedApps"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the filterOpenInToOnlyManagedApps
+    *
+    * @param bool $val The filterOpenInToOnlyManagedApps
+    *
+    * @return IosManagedAppProtection
+    */
+    public function setFilterOpenInToOnlyManagedApps($val)
+    {
+        $this->_propDict["filterOpenInToOnlyManagedApps"] = boolval($val);
         return $this;
     }
     

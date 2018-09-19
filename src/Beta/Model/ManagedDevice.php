@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class ManagedDevice extends Entity
@@ -139,6 +139,37 @@ class ManagedDevice extends Entity
     public function setOwnerType($val)
     {
         $this->_propDict["ownerType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the managedDeviceOwnerType
+    *
+    * @return ManagedDeviceOwnerType The managedDeviceOwnerType
+    */
+    public function getManagedDeviceOwnerType()
+    {
+        if (array_key_exists("managedDeviceOwnerType", $this->_propDict)) {
+            if (is_a($this->_propDict["managedDeviceOwnerType"], "Microsoft\Graph\Beta\Model\ManagedDeviceOwnerType")) {
+                return $this->_propDict["managedDeviceOwnerType"];
+            } else {
+                $this->_propDict["managedDeviceOwnerType"] = new ManagedDeviceOwnerType($this->_propDict["managedDeviceOwnerType"]);
+                return $this->_propDict["managedDeviceOwnerType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the managedDeviceOwnerType
+    *
+    * @param ManagedDeviceOwnerType $val The managedDeviceOwnerType
+    *
+    * @return ManagedDevice
+    */
+    public function setManagedDeviceOwnerType($val)
+    {
+        $this->_propDict["managedDeviceOwnerType"] = $val;
         return $this;
     }
     
@@ -983,33 +1014,6 @@ class ManagedDevice extends Entity
     }
     
     /**
-    * Gets the remoteAssistanceSessionErrorString
-    *
-    * @return string The remoteAssistanceSessionErrorString
-    */
-    public function getRemoteAssistanceSessionErrorString()
-    {
-        if (array_key_exists("remoteAssistanceSessionErrorString", $this->_propDict)) {
-            return $this->_propDict["remoteAssistanceSessionErrorString"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the remoteAssistanceSessionErrorString
-    *
-    * @param string $val The remoteAssistanceSessionErrorString
-    *
-    * @return ManagedDevice
-    */
-    public function setRemoteAssistanceSessionErrorString($val)
-    {
-        $this->_propDict["remoteAssistanceSessionErrorString"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the remoteAssistanceSessionErrorDetails
     *
     * @return string The remoteAssistanceSessionErrorDetails
@@ -1594,6 +1598,91 @@ class ManagedDevice extends Entity
     }
     
     /**
+    * Gets the preferMdmOverGroupPolicyAppliedDateTime
+    *
+    * @return \DateTime The preferMdmOverGroupPolicyAppliedDateTime
+    */
+    public function getPreferMdmOverGroupPolicyAppliedDateTime()
+    {
+        if (array_key_exists("preferMdmOverGroupPolicyAppliedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["preferMdmOverGroupPolicyAppliedDateTime"], "\DateTime")) {
+                return $this->_propDict["preferMdmOverGroupPolicyAppliedDateTime"];
+            } else {
+                $this->_propDict["preferMdmOverGroupPolicyAppliedDateTime"] = new \DateTime($this->_propDict["preferMdmOverGroupPolicyAppliedDateTime"]);
+                return $this->_propDict["preferMdmOverGroupPolicyAppliedDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the preferMdmOverGroupPolicyAppliedDateTime
+    *
+    * @param \DateTime $val The preferMdmOverGroupPolicyAppliedDateTime
+    *
+    * @return ManagedDevice
+    */
+    public function setPreferMdmOverGroupPolicyAppliedDateTime($val)
+    {
+        $this->_propDict["preferMdmOverGroupPolicyAppliedDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the autopilotEnrolled
+    *
+    * @return bool The autopilotEnrolled
+    */
+    public function getAutopilotEnrolled()
+    {
+        if (array_key_exists("autopilotEnrolled", $this->_propDict)) {
+            return $this->_propDict["autopilotEnrolled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the autopilotEnrolled
+    *
+    * @param bool $val The autopilotEnrolled
+    *
+    * @return ManagedDevice
+    */
+    public function setAutopilotEnrolled($val)
+    {
+        $this->_propDict["autopilotEnrolled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the requireUserEnrollmentApproval
+    *
+    * @return bool The requireUserEnrollmentApproval
+    */
+    public function getRequireUserEnrollmentApproval()
+    {
+        if (array_key_exists("requireUserEnrollmentApproval", $this->_propDict)) {
+            return $this->_propDict["requireUserEnrollmentApproval"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the requireUserEnrollmentApproval
+    *
+    * @param bool $val The requireUserEnrollmentApproval
+    *
+    * @return ManagedDevice
+    */
+    public function setRequireUserEnrollmentApproval($val)
+    {
+        $this->_propDict["requireUserEnrollmentApproval"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the managementCertificateExpirationDate
     *
     * @return \DateTime The managementCertificateExpirationDate
@@ -1621,6 +1710,199 @@ class ManagedDevice extends Entity
     public function setManagementCertificateExpirationDate($val)
     {
         $this->_propDict["managementCertificateExpirationDate"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the iccid
+    *
+    * @return string The iccid
+    */
+    public function getIccid()
+    {
+        if (array_key_exists("iccid", $this->_propDict)) {
+            return $this->_propDict["iccid"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the iccid
+    *
+    * @param string $val The iccid
+    *
+    * @return ManagedDevice
+    */
+    public function setIccid($val)
+    {
+        $this->_propDict["iccid"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the udid
+    *
+    * @return string The udid
+    */
+    public function getUdid()
+    {
+        if (array_key_exists("udid", $this->_propDict)) {
+            return $this->_propDict["udid"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the udid
+    *
+    * @param string $val The udid
+    *
+    * @return ManagedDevice
+    */
+    public function setUdid($val)
+    {
+        $this->_propDict["udid"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the roleScopeTagIds
+    *
+    * @return string The roleScopeTagIds
+    */
+    public function getRoleScopeTagIds()
+    {
+        if (array_key_exists("roleScopeTagIds", $this->_propDict)) {
+            return $this->_propDict["roleScopeTagIds"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the roleScopeTagIds
+    *
+    * @param string $val The roleScopeTagIds
+    *
+    * @return ManagedDevice
+    */
+    public function setRoleScopeTagIds($val)
+    {
+        $this->_propDict["roleScopeTagIds"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the windowsActiveMalwareCount
+    *
+    * @return int The windowsActiveMalwareCount
+    */
+    public function getWindowsActiveMalwareCount()
+    {
+        if (array_key_exists("windowsActiveMalwareCount", $this->_propDict)) {
+            return $this->_propDict["windowsActiveMalwareCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the windowsActiveMalwareCount
+    *
+    * @param int $val The windowsActiveMalwareCount
+    *
+    * @return ManagedDevice
+    */
+    public function setWindowsActiveMalwareCount($val)
+    {
+        $this->_propDict["windowsActiveMalwareCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the windowsRemediatedMalwareCount
+    *
+    * @return int The windowsRemediatedMalwareCount
+    */
+    public function getWindowsRemediatedMalwareCount()
+    {
+        if (array_key_exists("windowsRemediatedMalwareCount", $this->_propDict)) {
+            return $this->_propDict["windowsRemediatedMalwareCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the windowsRemediatedMalwareCount
+    *
+    * @param int $val The windowsRemediatedMalwareCount
+    *
+    * @return ManagedDevice
+    */
+    public function setWindowsRemediatedMalwareCount($val)
+    {
+        $this->_propDict["windowsRemediatedMalwareCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the notes
+    *
+    * @return string The notes
+    */
+    public function getNotes()
+    {
+        if (array_key_exists("notes", $this->_propDict)) {
+            return $this->_propDict["notes"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the notes
+    *
+    * @param string $val The notes
+    *
+    * @return ManagedDevice
+    */
+    public function setNotes($val)
+    {
+        $this->_propDict["notes"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the configurationManagerClientHealthState
+    *
+    * @return ConfigurationManagerClientHealthState The configurationManagerClientHealthState
+    */
+    public function getConfigurationManagerClientHealthState()
+    {
+        if (array_key_exists("configurationManagerClientHealthState", $this->_propDict)) {
+            if (is_a($this->_propDict["configurationManagerClientHealthState"], "Microsoft\Graph\Beta\Model\ConfigurationManagerClientHealthState")) {
+                return $this->_propDict["configurationManagerClientHealthState"];
+            } else {
+                $this->_propDict["configurationManagerClientHealthState"] = new ConfigurationManagerClientHealthState($this->_propDict["configurationManagerClientHealthState"]);
+                return $this->_propDict["configurationManagerClientHealthState"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the configurationManagerClientHealthState
+    *
+    * @param ConfigurationManagerClientHealthState $val The configurationManagerClientHealthState
+    *
+    * @return ManagedDevice
+    */
+    public function setConfigurationManagerClientHealthState($val)
+    {
+        $this->_propDict["configurationManagerClientHealthState"] = $val;
         return $this;
     }
     
@@ -1767,6 +2049,34 @@ class ManagedDevice extends Entity
     public function setDeviceCompliancePolicyStates($val)
     {
 		$this->_propDict["deviceCompliancePolicyStates"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the managedDeviceMobileAppConfigurationStates
+     *
+     * @return array The managedDeviceMobileAppConfigurationStates
+     */
+    public function getManagedDeviceMobileAppConfigurationStates()
+    {
+        if (array_key_exists("managedDeviceMobileAppConfigurationStates", $this->_propDict)) {
+           return $this->_propDict["managedDeviceMobileAppConfigurationStates"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the managedDeviceMobileAppConfigurationStates
+    *
+    * @param ManagedDeviceMobileAppConfigurationState $val The managedDeviceMobileAppConfigurationStates
+    *
+    * @return ManagedDevice
+    */
+    public function setManagedDeviceMobileAppConfigurationStates($val)
+    {
+		$this->_propDict["managedDeviceMobileAppConfigurationStates"] = $val;
         return $this;
     }
     

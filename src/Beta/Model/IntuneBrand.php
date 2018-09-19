@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -18,9 +18,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class IntuneBrand extends Entity
@@ -377,6 +377,37 @@ class IntuneBrand extends Entity
     {
         $this->_propDict["showNameNextToLogo"] = $val;
         return $this;
+    }
+
+    /**
+    * Gets the landingPageCustomizedImage
+    *
+    * @return MimeContent The landingPageCustomizedImage
+    */
+    public function getLandingPageCustomizedImage()
+    {
+        if (array_key_exists("landingPageCustomizedImage", $this->_propDict)) {
+            if (is_a($this->_propDict["landingPageCustomizedImage"], "Microsoft\Graph\Beta\Model\MimeContent")) {
+                return $this->_propDict["landingPageCustomizedImage"];
+            } else {
+                $this->_propDict["landingPageCustomizedImage"] = new MimeContent($this->_propDict["landingPageCustomizedImage"]);
+                return $this->_propDict["landingPageCustomizedImage"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the landingPageCustomizedImage
+    *
+    * @param MimeContent $val The value to assign to the landingPageCustomizedImage
+    *
+    * @return IntuneBrand The IntuneBrand
+    */
+    public function setLandingPageCustomizedImage($val)
+    {
+        $this->_propDict["landingPageCustomizedImage"] = $val;
+         return $this;
     }
     /**
     * Gets the showDisplayNameNextToLogo

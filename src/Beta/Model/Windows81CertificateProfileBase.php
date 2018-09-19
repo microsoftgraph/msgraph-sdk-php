@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class Windows81CertificateProfileBase extends WindowsCertificateProfileBase
@@ -51,6 +51,34 @@ class Windows81CertificateProfileBase extends WindowsCertificateProfileBase
     public function setExtendedKeyUsages($val)
     {
 		$this->_propDict["extendedKeyUsages"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the customSubjectAlternativeNames
+     *
+     * @return array The customSubjectAlternativeNames
+     */
+    public function getCustomSubjectAlternativeNames()
+    {
+        if (array_key_exists("customSubjectAlternativeNames", $this->_propDict)) {
+           return $this->_propDict["customSubjectAlternativeNames"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the customSubjectAlternativeNames
+    *
+    * @param CustomSubjectAlternativeName $val The customSubjectAlternativeNames
+    *
+    * @return Windows81CertificateProfileBase
+    */
+    public function setCustomSubjectAlternativeNames($val)
+    {
+		$this->_propDict["customSubjectAlternativeNames"] = $val;
         return $this;
     }
     

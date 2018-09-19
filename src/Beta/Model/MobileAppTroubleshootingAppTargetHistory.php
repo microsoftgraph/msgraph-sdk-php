@@ -1,0 +1,111 @@
+<?php
+/**
+* Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
+* 
+* MobileAppTroubleshootingAppTargetHistory File
+* PHP version 7
+*
+* @category  Library
+* @package   Microsoft.Graph
+* @copyright © Microsoft Corporation. All rights reserved.
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   GIT: 1.4.0
+* @link      https://graph.microsoft.io/
+*/
+namespace Microsoft\Graph\Beta\Model;
+/**
+* MobileAppTroubleshootingAppTargetHistory class
+*
+* @category  Model
+* @package   Microsoft.Graph
+* @copyright © Microsoft Corporation. All rights reserved.
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   Release: 1.4.0
+* @link      https://graph.microsoft.io/
+*/
+class MobileAppTroubleshootingAppTargetHistory extends MobileAppTroubleshootingHistoryItem
+{
+    /**
+    * Gets the securityGroupId
+    *
+    * @return string The securityGroupId
+    */
+    public function getSecurityGroupId()
+    {
+        if (array_key_exists("securityGroupId", $this->_propDict)) {
+            return $this->_propDict["securityGroupId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the securityGroupId
+    *
+    * @param string $val The value of the securityGroupId
+    *
+    * @return MobileAppTroubleshootingAppTargetHistory
+    */
+    public function setSecurityGroupId($val)
+    {
+        $this->_propDict["securityGroupId"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the runState
+    *
+    * @return RunState The runState
+    */
+    public function getRunState()
+    {
+        if (array_key_exists("runState", $this->_propDict)) {
+            if (is_a($this->_propDict["runState"], "Microsoft\Graph\Beta\Model\RunState")) {
+                return $this->_propDict["runState"];
+            } else {
+                $this->_propDict["runState"] = new RunState($this->_propDict["runState"]);
+                return $this->_propDict["runState"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the runState
+    *
+    * @param RunState $val The value to assign to the runState
+    *
+    * @return MobileAppTroubleshootingAppTargetHistory The MobileAppTroubleshootingAppTargetHistory
+    */
+    public function setRunState($val)
+    {
+        $this->_propDict["runState"] = $val;
+         return $this;
+    }
+    /**
+    * Gets the errorCode
+    *
+    * @return string The errorCode
+    */
+    public function getErrorCode()
+    {
+        if (array_key_exists("errorCode", $this->_propDict)) {
+            return $this->_propDict["errorCode"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the errorCode
+    *
+    * @param string $val The value of the errorCode
+    *
+    * @return MobileAppTroubleshootingAppTargetHistory
+    */
+    public function setErrorCode($val)
+    {
+        $this->_propDict["errorCode"] = $val;
+        return $this;
+    }
+}

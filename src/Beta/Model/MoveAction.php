@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -18,16 +18,15 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class MoveAction extends Entity
 {
     /**
-    * Gets the class
-    * The type of data source, such as Person.
+    * Gets the from
     *
     * @return string The from
     */
@@ -41,8 +40,7 @@ class MoveAction extends Entity
     }
 
     /**
-    * Sets the class
-    * The type of data source, such as Person.
+    * Sets the from
     *
     * @param string $val The value of the from
     *
@@ -54,8 +52,7 @@ class MoveAction extends Entity
         return $this;
     }
     /**
-    * Gets the subclass
-    * The secondary type of data source, such as OrganizationUser.
+    * Gets the to
     *
     * @return string The to
     */
@@ -69,8 +66,7 @@ class MoveAction extends Entity
     }
 
     /**
-    * Sets the subclass
-    * The secondary type of data source, such as OrganizationUser.
+    * Sets the to
     *
     * @param string $val The value of the to
     *

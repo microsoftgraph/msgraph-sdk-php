@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class Windows10PkcsCertificateProfile extends Windows10CertificateProfileBase
@@ -131,6 +131,62 @@ class Windows10PkcsCertificateProfile extends Windows10CertificateProfileBase
     public function setSubjectAlternativeNameFormatString($val)
     {
         $this->_propDict["subjectAlternativeNameFormatString"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the extendedKeyUsages
+     *
+     * @return array The extendedKeyUsages
+     */
+    public function getExtendedKeyUsages()
+    {
+        if (array_key_exists("extendedKeyUsages", $this->_propDict)) {
+           return $this->_propDict["extendedKeyUsages"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the extendedKeyUsages
+    *
+    * @param ExtendedKeyUsage $val The extendedKeyUsages
+    *
+    * @return Windows10PkcsCertificateProfile
+    */
+    public function setExtendedKeyUsages($val)
+    {
+		$this->_propDict["extendedKeyUsages"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the managedDeviceCertificateStates
+     *
+     * @return array The managedDeviceCertificateStates
+     */
+    public function getManagedDeviceCertificateStates()
+    {
+        if (array_key_exists("managedDeviceCertificateStates", $this->_propDict)) {
+           return $this->_propDict["managedDeviceCertificateStates"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the managedDeviceCertificateStates
+    *
+    * @param ManagedDeviceCertificateState $val The managedDeviceCertificateStates
+    *
+    * @return Windows10PkcsCertificateProfile
+    */
+    public function setManagedDeviceCertificateStates($val)
+    {
+		$this->_propDict["managedDeviceCertificateStates"] = $val;
         return $this;
     }
     

@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
@@ -486,33 +486,6 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     public function setActiveFirewallRequired($val)
     {
         $this->_propDict["activeFirewallRequired"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the uacRequired
-    *
-    * @return bool The uacRequired
-    */
-    public function getUacRequired()
-    {
-        if (array_key_exists("uacRequired", $this->_propDict)) {
-            return $this->_propDict["uacRequired"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the uacRequired
-    *
-    * @param bool $val The uacRequired
-    *
-    * @return Windows10MobileCompliancePolicy
-    */
-    public function setUacRequired($val)
-    {
-        $this->_propDict["uacRequired"] = boolval($val);
         return $this;
     }
     

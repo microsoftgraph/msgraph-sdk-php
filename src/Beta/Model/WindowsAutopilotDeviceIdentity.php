@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class WindowsAutopilotDeviceIdentity extends Entity
@@ -309,6 +309,60 @@ class WindowsAutopilotDeviceIdentity extends Entity
     public function setLastContactedDateTime($val)
     {
         $this->_propDict["lastContactedDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the addressableUserName
+    *
+    * @return string The addressableUserName
+    */
+    public function getAddressableUserName()
+    {
+        if (array_key_exists("addressableUserName", $this->_propDict)) {
+            return $this->_propDict["addressableUserName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the addressableUserName
+    *
+    * @param string $val The addressableUserName
+    *
+    * @return WindowsAutopilotDeviceIdentity
+    */
+    public function setAddressableUserName($val)
+    {
+        $this->_propDict["addressableUserName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userPrincipalName
+    *
+    * @return string The userPrincipalName
+    */
+    public function getUserPrincipalName()
+    {
+        if (array_key_exists("userPrincipalName", $this->_propDict)) {
+            return $this->_propDict["userPrincipalName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the userPrincipalName
+    *
+    * @param string $val The userPrincipalName
+    *
+    * @return WindowsAutopilotDeviceIdentity
+    */
+    public function setUserPrincipalName($val)
+    {
+        $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
     

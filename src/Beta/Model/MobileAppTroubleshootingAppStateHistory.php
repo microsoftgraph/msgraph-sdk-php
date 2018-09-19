@@ -1,0 +1,116 @@
+<?php
+/**
+* Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
+* 
+* MobileAppTroubleshootingAppStateHistory File
+* PHP version 7
+*
+* @category  Library
+* @package   Microsoft.Graph
+* @copyright © Microsoft Corporation. All rights reserved.
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   GIT: 1.4.0
+* @link      https://graph.microsoft.io/
+*/
+namespace Microsoft\Graph\Beta\Model;
+/**
+* MobileAppTroubleshootingAppStateHistory class
+*
+* @category  Model
+* @package   Microsoft.Graph
+* @copyright © Microsoft Corporation. All rights reserved.
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   Release: 1.4.0
+* @link      https://graph.microsoft.io/
+*/
+class MobileAppTroubleshootingAppStateHistory extends MobileAppTroubleshootingHistoryItem
+{
+
+    /**
+    * Gets the actionType
+    *
+    * @return MobileAppActionType The actionType
+    */
+    public function getActionType()
+    {
+        if (array_key_exists("actionType", $this->_propDict)) {
+            if (is_a($this->_propDict["actionType"], "Microsoft\Graph\Beta\Model\MobileAppActionType")) {
+                return $this->_propDict["actionType"];
+            } else {
+                $this->_propDict["actionType"] = new MobileAppActionType($this->_propDict["actionType"]);
+                return $this->_propDict["actionType"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the actionType
+    *
+    * @param MobileAppActionType $val The value to assign to the actionType
+    *
+    * @return MobileAppTroubleshootingAppStateHistory The MobileAppTroubleshootingAppStateHistory
+    */
+    public function setActionType($val)
+    {
+        $this->_propDict["actionType"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the runState
+    *
+    * @return RunState The runState
+    */
+    public function getRunState()
+    {
+        if (array_key_exists("runState", $this->_propDict)) {
+            if (is_a($this->_propDict["runState"], "Microsoft\Graph\Beta\Model\RunState")) {
+                return $this->_propDict["runState"];
+            } else {
+                $this->_propDict["runState"] = new RunState($this->_propDict["runState"]);
+                return $this->_propDict["runState"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the runState
+    *
+    * @param RunState $val The value to assign to the runState
+    *
+    * @return MobileAppTroubleshootingAppStateHistory The MobileAppTroubleshootingAppStateHistory
+    */
+    public function setRunState($val)
+    {
+        $this->_propDict["runState"] = $val;
+         return $this;
+    }
+    /**
+    * Gets the errorCode
+    *
+    * @return string The errorCode
+    */
+    public function getErrorCode()
+    {
+        if (array_key_exists("errorCode", $this->_propDict)) {
+            return $this->_propDict["errorCode"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the errorCode
+    *
+    * @param string $val The value of the errorCode
+    *
+    * @return MobileAppTroubleshootingAppStateHistory
+    */
+    public function setErrorCode($val)
+    {
+        $this->_propDict["errorCode"] = $val;
+        return $this;
+    }
+}

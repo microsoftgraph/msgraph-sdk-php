@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class Windows10TeamGeneralConfiguration extends DeviceConfiguration
@@ -163,10 +163,6 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the maintenanceWindowDurationInHours
-<<<<<<< HEAD:src/Beta/Model/Windows10TeamGeneralConfiguration.php
-=======
-    * Maintenance window duration for device updates. Valid values 0 to 5
->>>>>>> dev:src/Model/Windows10TeamGeneralConfiguration.php
     *
     * @return int The maintenanceWindowDurationInHours
     */
@@ -181,10 +177,6 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the maintenanceWindowDurationInHours
-<<<<<<< HEAD:src/Beta/Model/Windows10TeamGeneralConfiguration.php
-=======
-    * Maintenance window duration for device updates. Valid values 0 to 5
->>>>>>> dev:src/Model/Windows10TeamGeneralConfiguration.php
     *
     * @param int $val The maintenanceWindowDurationInHours
     *

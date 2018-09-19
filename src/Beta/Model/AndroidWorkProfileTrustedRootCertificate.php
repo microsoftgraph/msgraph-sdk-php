@@ -1,0 +1,87 @@
+<?php
+/**
+* Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
+* 
+* AndroidWorkProfileTrustedRootCertificate File
+* PHP version 7
+*
+* @category  Library
+* @package   Microsoft.Graph
+* @copyright © Microsoft Corporation. All rights reserved.
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   GIT: 1.4.0
+* @link      https://graph.microsoft.io/
+*/
+namespace Microsoft\Graph\Beta\Model;
+
+/**
+* AndroidWorkProfileTrustedRootCertificate class
+*
+* @category  Model
+* @package   Microsoft.Graph
+* @copyright © Microsoft Corporation. All rights reserved.
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   Release: 1.4.0
+* @link      https://graph.microsoft.io/
+*/
+class AndroidWorkProfileTrustedRootCertificate extends DeviceConfiguration
+{
+    /**
+    * Gets the trustedRootCertificate
+    *
+    * @return \GuzzleHttp\Psr7\Stream The trustedRootCertificate
+    */
+    public function getTrustedRootCertificate()
+    {
+        if (array_key_exists("trustedRootCertificate", $this->_propDict)) {
+            if (is_a($this->_propDict["trustedRootCertificate"], "\GuzzleHttp\Psr7\Stream")) {
+                return $this->_propDict["trustedRootCertificate"];
+            } else {
+                $this->_propDict["trustedRootCertificate"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["trustedRootCertificate"]);
+                return $this->_propDict["trustedRootCertificate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the trustedRootCertificate
+    *
+    * @param \GuzzleHttp\Psr7\Stream $val The trustedRootCertificate
+    *
+    * @return AndroidWorkProfileTrustedRootCertificate
+    */
+    public function setTrustedRootCertificate($val)
+    {
+        $this->_propDict["trustedRootCertificate"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the certFileName
+    *
+    * @return string The certFileName
+    */
+    public function getCertFileName()
+    {
+        if (array_key_exists("certFileName", $this->_propDict)) {
+            return $this->_propDict["certFileName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the certFileName
+    *
+    * @param string $val The certFileName
+    *
+    * @return AndroidWorkProfileTrustedRootCertificate
+    */
+    public function setCertFileName($val)
+    {
+        $this->_propDict["certFileName"] = $val;
+        return $this;
+    }
+    
+}

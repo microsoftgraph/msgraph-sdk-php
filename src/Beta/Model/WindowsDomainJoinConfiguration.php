@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class WindowsDomainJoinConfiguration extends DeviceConfiguration
@@ -104,6 +104,61 @@ class WindowsDomainJoinConfiguration extends DeviceConfiguration
     public function setActiveDirectoryDomainName($val)
     {
         $this->_propDict["activeDirectoryDomainName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the organizationalUnit
+    *
+    * @return string The organizationalUnit
+    */
+    public function getOrganizationalUnit()
+    {
+        if (array_key_exists("organizationalUnit", $this->_propDict)) {
+            return $this->_propDict["organizationalUnit"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the organizationalUnit
+    *
+    * @param string $val The organizationalUnit
+    *
+    * @return WindowsDomainJoinConfiguration
+    */
+    public function setOrganizationalUnit($val)
+    {
+        $this->_propDict["organizationalUnit"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the networkAccessConfigurations
+     *
+     * @return array The networkAccessConfigurations
+     */
+    public function getNetworkAccessConfigurations()
+    {
+        if (array_key_exists("networkAccessConfigurations", $this->_propDict)) {
+           return $this->_propDict["networkAccessConfigurations"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the networkAccessConfigurations
+    *
+    * @param DeviceConfiguration $val The networkAccessConfigurations
+    *
+    * @return WindowsDomainJoinConfiguration
+    */
+    public function setNetworkAccessConfigurations($val)
+    {
+		$this->_propDict["networkAccessConfigurations"] = $val;
         return $this;
     }
     

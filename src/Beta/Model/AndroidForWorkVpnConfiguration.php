@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class AndroidForWorkVpnConfiguration extends DeviceConfiguration
@@ -218,6 +218,34 @@ class AndroidForWorkVpnConfiguration extends DeviceConfiguration
     public function setCustomData($val)
     {
 		$this->_propDict["customData"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the customKeyValueData
+     *
+     * @return array The customKeyValueData
+     */
+    public function getCustomKeyValueData()
+    {
+        if (array_key_exists("customKeyValueData", $this->_propDict)) {
+           return $this->_propDict["customKeyValueData"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the customKeyValueData
+    *
+    * @param KeyValuePair $val The customKeyValueData
+    *
+    * @return AndroidForWorkVpnConfiguration
+    */
+    public function setCustomKeyValueData($val)
+    {
+		$this->_propDict["customKeyValueData"] = $val;
         return $this;
     }
     

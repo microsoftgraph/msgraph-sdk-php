@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class Event extends OutlookItem
@@ -306,7 +306,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the importance
-    * The importance of the event. Possible values are: low, normal, high.
     *
     * @return Importance The importance
     */
@@ -325,7 +324,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the importance
-    * The importance of the event. Possible values are: low, normal, high.
     *
     * @param Importance $val The importance
     *
@@ -495,10 +493,6 @@ class Event extends OutlookItem
 
      /** 
      * Gets the locations
-<<<<<<< HEAD:src/Beta/Model/Event.php
-=======
-    * The locations where the event is held or attended from. The location and locations properties always correspond with each other. If you update the location property, any prior locations in the locations collection would be removed and replaced by the new location value.
->>>>>>> dev:src/Model/Event.php
      *
      * @return array The locations
      */
@@ -513,10 +507,6 @@ class Event extends OutlookItem
     
     /** 
     * Sets the locations
-<<<<<<< HEAD:src/Beta/Model/Event.php
-=======
-    * The locations where the event is held or attended from. The location and locations properties always correspond with each other. If you update the location property, any prior locations in the locations collection would be removed and replaced by the new location value.
->>>>>>> dev:src/Model/Event.php
     *
     * @param Location $val The locations
     *
@@ -696,7 +686,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the showAs
-    * The status to show. Possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
     *
     * @return FreeBusyStatus The showAs
     */
@@ -715,7 +704,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the showAs
-    * The status to show. Possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
     *
     * @param FreeBusyStatus $val The showAs
     *
@@ -729,7 +717,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the type
-    * The event type. Possible values are: singleInstance, occurrence, exception, seriesMaster. Read-only.
     *
     * @return EventType The type
     */
@@ -748,7 +735,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the type
-    * The event type. Possible values are: singleInstance, occurrence, exception, seriesMaster. Read-only.
     *
     * @param EventType $val The type
     *

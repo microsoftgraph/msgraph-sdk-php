@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class Group extends DirectoryObject
@@ -55,7 +55,6 @@ class Group extends DirectoryObject
     
     /**
     * Gets the createdDateTime
-    * Timestamp of when the group was created. The value cannot be modified and is automatically populated when the group is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
     *
     * @return \DateTime The createdDateTime
     */
@@ -74,7 +73,6 @@ class Group extends DirectoryObject
     
     /**
     * Sets the createdDateTime
-    * Timestamp of when the group was created. The value cannot be modified and is automatically populated when the group is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -416,6 +414,33 @@ class Group extends DirectoryObject
     }
     
     /**
+    * Gets the preferredDataLocation
+    *
+    * @return string The preferredDataLocation
+    */
+    public function getPreferredDataLocation()
+    {
+        if (array_key_exists("preferredDataLocation", $this->_propDict)) {
+            return $this->_propDict["preferredDataLocation"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the preferredDataLocation
+    *
+    * @param string $val The preferredDataLocation
+    *
+    * @return Group
+    */
+    public function setPreferredDataLocation($val)
+    {
+        $this->_propDict["preferredDataLocation"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the preferredLanguage
     *
     * @return string The preferredLanguage
@@ -471,7 +496,6 @@ class Group extends DirectoryObject
     
     /**
     * Gets the renewedDateTime
-    * Timestamp of when the group was last renewed. This cannot be modified directly and is only updated via the renew service action. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
     *
     * @return \DateTime The renewedDateTime
     */
@@ -490,7 +514,6 @@ class Group extends DirectoryObject
     
     /**
     * Sets the renewedDateTime
-    * Timestamp of when the group was last renewed. This cannot be modified directly and is only updated via the renew service action. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
     *
     * @param \DateTime $val The renewedDateTime
     *
@@ -499,6 +522,60 @@ class Group extends DirectoryObject
     public function setRenewedDateTime($val)
     {
         $this->_propDict["renewedDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the resourceBehaviorOptions
+    *
+    * @return string The resourceBehaviorOptions
+    */
+    public function getResourceBehaviorOptions()
+    {
+        if (array_key_exists("resourceBehaviorOptions", $this->_propDict)) {
+            return $this->_propDict["resourceBehaviorOptions"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the resourceBehaviorOptions
+    *
+    * @param string $val The resourceBehaviorOptions
+    *
+    * @return Group
+    */
+    public function setResourceBehaviorOptions($val)
+    {
+        $this->_propDict["resourceBehaviorOptions"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the resourceProvisioningOptions
+    *
+    * @return string The resourceProvisioningOptions
+    */
+    public function getResourceProvisioningOptions()
+    {
+        if (array_key_exists("resourceProvisioningOptions", $this->_propDict)) {
+            return $this->_propDict["resourceProvisioningOptions"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the resourceProvisioningOptions
+    *
+    * @param string $val The resourceProvisioningOptions
+    *
+    * @return Group
+    */
+    public function setResourceProvisioningOptions($val)
+    {
+        $this->_propDict["resourceProvisioningOptions"] = $val;
         return $this;
     }
     
@@ -803,6 +880,33 @@ class Group extends DirectoryObject
         return $this;
     }
     
+    /**
+    * Gets the isArchived
+    *
+    * @return bool The isArchived
+    */
+    public function getIsArchived()
+    {
+        if (array_key_exists("isArchived", $this->_propDict)) {
+            return $this->_propDict["isArchived"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isArchived
+    *
+    * @param bool $val The isArchived
+    *
+    * @return Group
+    */
+    public function setIsArchived($val)
+    {
+        $this->_propDict["isArchived"] = boolval($val);
+        return $this;
+    }
+    
 
      /** 
      * Gets the extensions
@@ -828,6 +932,34 @@ class Group extends DirectoryObject
     public function setExtensions($val)
     {
 		$this->_propDict["extensions"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the appRoleAssignments
+     *
+     * @return array The appRoleAssignments
+     */
+    public function getAppRoleAssignments()
+    {
+        if (array_key_exists("appRoleAssignments", $this->_propDict)) {
+           return $this->_propDict["appRoleAssignments"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the appRoleAssignments
+    *
+    * @param AppRoleAssignment $val The appRoleAssignments
+    *
+    * @return Group
+    */
+    public function setAppRoleAssignments($val)
+    {
+		$this->_propDict["appRoleAssignments"] = $val;
         return $this;
     }
     
@@ -1406,6 +1538,65 @@ class Group extends DirectoryObject
     public function setOnenote($val)
     {
         $this->_propDict["onenote"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the team
+    *
+    * @return Team The team
+    */
+    public function getTeam()
+    {
+        if (array_key_exists("team", $this->_propDict)) {
+            if (is_a($this->_propDict["team"], "Microsoft\Graph\Beta\Model\Team")) {
+                return $this->_propDict["team"];
+            } else {
+                $this->_propDict["team"] = new Team($this->_propDict["team"]);
+                return $this->_propDict["team"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the team
+    *
+    * @param Team $val The team
+    *
+    * @return Group
+    */
+    public function setTeam($val)
+    {
+        $this->_propDict["team"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the channels
+     *
+     * @return array The channels
+     */
+    public function getChannels()
+    {
+        if (array_key_exists("channels", $this->_propDict)) {
+           return $this->_propDict["channels"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the channels
+    *
+    * @param Channel $val The channels
+    *
+    * @return Group
+    */
+    public function setChannels($val)
+    {
+		$this->_propDict["channels"] = $val;
         return $this;
     }
     

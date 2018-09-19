@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class MacOSCompliancePolicy extends DeviceCompliancePolicy
@@ -409,6 +409,87 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     public function setStorageRequireEncryption($val)
     {
         $this->_propDict["storageRequireEncryption"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the firewallEnabled
+    *
+    * @return bool The firewallEnabled
+    */
+    public function getFirewallEnabled()
+    {
+        if (array_key_exists("firewallEnabled", $this->_propDict)) {
+            return $this->_propDict["firewallEnabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the firewallEnabled
+    *
+    * @param bool $val The firewallEnabled
+    *
+    * @return MacOSCompliancePolicy
+    */
+    public function setFirewallEnabled($val)
+    {
+        $this->_propDict["firewallEnabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the firewallBlockAllIncoming
+    *
+    * @return bool The firewallBlockAllIncoming
+    */
+    public function getFirewallBlockAllIncoming()
+    {
+        if (array_key_exists("firewallBlockAllIncoming", $this->_propDict)) {
+            return $this->_propDict["firewallBlockAllIncoming"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the firewallBlockAllIncoming
+    *
+    * @param bool $val The firewallBlockAllIncoming
+    *
+    * @return MacOSCompliancePolicy
+    */
+    public function setFirewallBlockAllIncoming($val)
+    {
+        $this->_propDict["firewallBlockAllIncoming"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the firewallEnableStealthMode
+    *
+    * @return bool The firewallEnableStealthMode
+    */
+    public function getFirewallEnableStealthMode()
+    {
+        if (array_key_exists("firewallEnableStealthMode", $this->_propDict)) {
+            return $this->_propDict["firewallEnableStealthMode"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the firewallEnableStealthMode
+    *
+    * @param bool $val The firewallEnableStealthMode
+    *
+    * @return MacOSCompliancePolicy
+    */
+    public function setFirewallEnableStealthMode($val)
+    {
+        $this->_propDict["firewallEnableStealthMode"] = boolval($val);
         return $this;
     }
     

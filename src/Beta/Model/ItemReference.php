@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -18,9 +18,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class ItemReference extends Entity
@@ -53,7 +53,6 @@ class ItemReference extends Entity
     }
     /**
     * Gets the driveType
-    * Identifies the type of drive. See [drive][] resource for values.
     *
     * @return string The driveType
     */
@@ -68,7 +67,6 @@ class ItemReference extends Entity
 
     /**
     * Sets the driveType
-    * Identifies the type of drive. See [drive][] resource for values.
     *
     * @param string $val The value of the driveType
     *
@@ -131,6 +129,37 @@ class ItemReference extends Entity
         $this->_propDict["name"] = $val;
         return $this;
     }
+
+    /**
+    * Gets the parent
+    *
+    * @return ItemReference The parent
+    */
+    public function getParent()
+    {
+        if (array_key_exists("parent", $this->_propDict)) {
+            if (is_a($this->_propDict["parent"], "Microsoft\Graph\Beta\Model\ItemReference")) {
+                return $this->_propDict["parent"];
+            } else {
+                $this->_propDict["parent"] = new ItemReference($this->_propDict["parent"]);
+                return $this->_propDict["parent"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the parent
+    *
+    * @param ItemReference $val The value to assign to the parent
+    *
+    * @return ItemReference The ItemReference
+    */
+    public function setParent($val)
+    {
+        $this->_propDict["parent"] = $val;
+         return $this;
+    }
     /**
     * Gets the path
     *
@@ -159,7 +188,6 @@ class ItemReference extends Entity
     }
     /**
     * Gets the shareId
-    * A unique identifier for a shared resource that can be accessed via the [Shares][] API.
     *
     * @return string The shareId
     */
@@ -174,7 +202,6 @@ class ItemReference extends Entity
 
     /**
     * Sets the shareId
-    * A unique identifier for a shared resource that can be accessed via the [Shares][] API.
     *
     * @param string $val The value of the shareId
     *

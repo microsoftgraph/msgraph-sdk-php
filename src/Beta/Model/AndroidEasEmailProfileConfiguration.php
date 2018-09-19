@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
@@ -394,6 +394,64 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
     public function setUsernameSource($val)
     {
         $this->_propDict["usernameSource"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userDomainNameSource
+    *
+    * @return DomainNameSource The userDomainNameSource
+    */
+    public function getUserDomainNameSource()
+    {
+        if (array_key_exists("userDomainNameSource", $this->_propDict)) {
+            if (is_a($this->_propDict["userDomainNameSource"], "Microsoft\Graph\Beta\Model\DomainNameSource")) {
+                return $this->_propDict["userDomainNameSource"];
+            } else {
+                $this->_propDict["userDomainNameSource"] = new DomainNameSource($this->_propDict["userDomainNameSource"]);
+                return $this->_propDict["userDomainNameSource"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the userDomainNameSource
+    *
+    * @param DomainNameSource $val The userDomainNameSource
+    *
+    * @return AndroidEasEmailProfileConfiguration
+    */
+    public function setUserDomainNameSource($val)
+    {
+        $this->_propDict["userDomainNameSource"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the customDomainName
+    *
+    * @return string The customDomainName
+    */
+    public function getCustomDomainName()
+    {
+        if (array_key_exists("customDomainName", $this->_propDict)) {
+            return $this->_propDict["customDomainName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the customDomainName
+    *
+    * @param string $val The customDomainName
+    *
+    * @return AndroidEasEmailProfileConfiguration
+    */
+    public function setCustomDomainName($val)
+    {
+        $this->_propDict["customDomainName"] = $val;
         return $this;
     }
     

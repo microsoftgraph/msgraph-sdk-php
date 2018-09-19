@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class Windows10CompliancePolicy extends DeviceCompliancePolicy
@@ -571,33 +571,6 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy
     }
     
     /**
-    * Gets the uacRequired
-    *
-    * @return bool The uacRequired
-    */
-    public function getUacRequired()
-    {
-        if (array_key_exists("uacRequired", $this->_propDict)) {
-            return $this->_propDict["uacRequired"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the uacRequired
-    *
-    * @param bool $val The uacRequired
-    *
-    * @return Windows10CompliancePolicy
-    */
-    public function setUacRequired($val)
-    {
-        $this->_propDict["uacRequired"] = boolval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the defenderEnabled
     *
     * @return bool The defenderEnabled
@@ -705,6 +678,60 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy
         return $this;
     }
     
+    /**
+    * Gets the antivirusRequired
+    *
+    * @return bool The antivirusRequired
+    */
+    public function getAntivirusRequired()
+    {
+        if (array_key_exists("antivirusRequired", $this->_propDict)) {
+            return $this->_propDict["antivirusRequired"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the antivirusRequired
+    *
+    * @param bool $val The antivirusRequired
+    *
+    * @return Windows10CompliancePolicy
+    */
+    public function setAntivirusRequired($val)
+    {
+        $this->_propDict["antivirusRequired"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the antiSpywareRequired
+    *
+    * @return bool The antiSpywareRequired
+    */
+    public function getAntiSpywareRequired()
+    {
+        if (array_key_exists("antiSpywareRequired", $this->_propDict)) {
+            return $this->_propDict["antiSpywareRequired"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the antiSpywareRequired
+    *
+    * @param bool $val The antiSpywareRequired
+    *
+    * @return Windows10CompliancePolicy
+    */
+    public function setAntiSpywareRequired($val)
+    {
+        $this->_propDict["antiSpywareRequired"] = boolval($val);
+        return $this;
+    }
+    
 
      /** 
      * Gets the validOperatingSystemBuildRanges
@@ -788,6 +815,33 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy
     public function setDeviceThreatProtectionRequiredSecurityLevel($val)
     {
         $this->_propDict["deviceThreatProtectionRequiredSecurityLevel"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the configurationManagerComplianceRequired
+    *
+    * @return bool The configurationManagerComplianceRequired
+    */
+    public function getConfigurationManagerComplianceRequired()
+    {
+        if (array_key_exists("configurationManagerComplianceRequired", $this->_propDict)) {
+            return $this->_propDict["configurationManagerComplianceRequired"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the configurationManagerComplianceRequired
+    *
+    * @param bool $val The configurationManagerComplianceRequired
+    *
+    * @return Windows10CompliancePolicy
+    */
+    public function setConfigurationManagerComplianceRequired($val)
+    {
+        $this->_propDict["configurationManagerComplianceRequired"] = boolval($val);
         return $this;
     }
     

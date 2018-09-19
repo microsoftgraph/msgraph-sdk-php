@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,64 +19,177 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class UserSecurityProfile extends Entity
 {
     /**
-    * Gets the accountName
+    * Gets the aadUserDisplayName
     *
-    * @return string The accountName
+    * @return string The aadUserDisplayName
     */
-    public function getAccountName()
+    public function getAadUserDisplayName()
     {
-        if (array_key_exists("accountName", $this->_propDict)) {
-            return $this->_propDict["accountName"];
+        if (array_key_exists("aadUserDisplayName", $this->_propDict)) {
+            return $this->_propDict["aadUserDisplayName"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the accountName
+    * Sets the aadUserDisplayName
     *
-    * @param string $val The accountName
+    * @param string $val The aadUserDisplayName
     *
     * @return UserSecurityProfile
     */
-    public function setAccountName($val)
+    public function setAadUserDisplayName($val)
     {
-        $this->_propDict["accountName"] = $val;
+        $this->_propDict["aadUserDisplayName"] = $val;
         return $this;
     }
     
     /**
-    * Gets the azureTenantId
+    * Gets the aadUserId
     *
-    * @return string The azureTenantId
+    * @return string The aadUserId
     */
-    public function getAzureTenantId()
+    public function getAadUserId()
     {
-        if (array_key_exists("azureTenantId", $this->_propDict)) {
-            return $this->_propDict["azureTenantId"];
+        if (array_key_exists("aadUserId", $this->_propDict)) {
+            return $this->_propDict["aadUserId"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the azureTenantId
+    * Sets the aadUserId
     *
-    * @param string $val The azureTenantId
+    * @param string $val The aadUserId
     *
     * @return UserSecurityProfile
     */
-    public function setAzureTenantId($val)
+    public function setAadUserId($val)
     {
-        $this->_propDict["azureTenantId"] = $val;
+        $this->_propDict["aadUserId"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the accountAliases
+     *
+     * @return array The accountAliases
+     */
+    public function getAccountAliases()
+    {
+        if (array_key_exists("accountAliases", $this->_propDict)) {
+           return $this->_propDict["accountAliases"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the accountAliases
+    *
+    * @param AccountAlias $val The accountAliases
+    *
+    * @return UserSecurityProfile
+    */
+    public function setAccountAliases($val)
+    {
+		$this->_propDict["accountAliases"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the accountInstance
+    *
+    * @return int The accountInstance
+    */
+    public function getAccountInstance()
+    {
+        if (array_key_exists("accountInstance", $this->_propDict)) {
+            return $this->_propDict["accountInstance"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the accountInstance
+    *
+    * @param int $val The accountInstance
+    *
+    * @return UserSecurityProfile
+    */
+    public function setAccountInstance($val)
+    {
+        $this->_propDict["accountInstance"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the accountService
+    *
+    * @return string The accountService
+    */
+    public function getAccountService()
+    {
+        if (array_key_exists("accountService", $this->_propDict)) {
+            return $this->_propDict["accountService"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the accountService
+    *
+    * @param string $val The accountService
+    *
+    * @return UserSecurityProfile
+    */
+    public function setAccountService($val)
+    {
+        $this->_propDict["accountService"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the accountStatus
+    *
+    * @return AccountStatus The accountStatus
+    */
+    public function getAccountStatus()
+    {
+        if (array_key_exists("accountStatus", $this->_propDict)) {
+            if (is_a($this->_propDict["accountStatus"], "Microsoft\Graph\Beta\Model\AccountStatus")) {
+                return $this->_propDict["accountStatus"];
+            } else {
+                $this->_propDict["accountStatus"] = new AccountStatus($this->_propDict["accountStatus"]);
+                return $this->_propDict["accountStatus"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the accountStatus
+    *
+    * @param AccountStatus $val The accountStatus
+    *
+    * @return UserSecurityProfile
+    */
+    public function setAccountStatus($val)
+    {
+        $this->_propDict["accountStatus"] = $val;
         return $this;
     }
     
@@ -108,33 +221,29 @@ class UserSecurityProfile extends Entity
     }
     
     /**
-    * Gets the createdDateTime
+    * Gets the azureTenantId
     *
-    * @return \DateTime The createdDateTime
+    * @return string The azureTenantId
     */
-    public function getCreatedDateTime()
+    public function getAzureTenantId()
     {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
-                return $this->_propDict["createdDateTime"];
-            } else {
-                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
-                return $this->_propDict["createdDateTime"];
-            }
+        if (array_key_exists("azureTenantId", $this->_propDict)) {
+            return $this->_propDict["azureTenantId"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the createdDateTime
+    * Sets the azureTenantId
     *
-    * @param \DateTime $val The createdDateTime
+    * @param string $val The azureTenantId
     *
     * @return UserSecurityProfile
     */
-    public function setCreatedDateTime($val)
+    public function setAzureTenantId($val)
     {
-        $this->_propDict["createdDateTime"] = $val;
+        $this->_propDict["azureTenantId"] = $val;
         return $this;
     }
     
@@ -166,60 +275,118 @@ class UserSecurityProfile extends Entity
     }
     
     /**
-    * Gets the lastModifiedDateTime
+    * Gets the firstSeenDateTime
     *
-    * @return \DateTime The lastModifiedDateTime
+    * @return \DateTime The firstSeenDateTime
     */
-    public function getLastModifiedDateTime()
+    public function getFirstSeenDateTime()
     {
-        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
-                return $this->_propDict["lastModifiedDateTime"];
+        if (array_key_exists("firstSeenDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["firstSeenDateTime"], "\DateTime")) {
+                return $this->_propDict["firstSeenDateTime"];
             } else {
-                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
-                return $this->_propDict["lastModifiedDateTime"];
+                $this->_propDict["firstSeenDateTime"] = new \DateTime($this->_propDict["firstSeenDateTime"]);
+                return $this->_propDict["firstSeenDateTime"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the lastModifiedDateTime
+    * Sets the firstSeenDateTime
     *
-    * @param \DateTime $val The lastModifiedDateTime
+    * @param \DateTime $val The firstSeenDateTime
     *
     * @return UserSecurityProfile
     */
-    public function setLastModifiedDateTime($val)
+    public function setFirstSeenDateTime($val)
     {
-        $this->_propDict["lastModifiedDateTime"] = $val;
+        $this->_propDict["firstSeenDateTime"] = $val;
         return $this;
     }
     
     /**
-    * Gets the onPremisesSecurityIdentifier
+    * Gets the lastSeenDateTime
     *
-    * @return string The onPremisesSecurityIdentifier
+    * @return \DateTime The lastSeenDateTime
     */
-    public function getOnPremisesSecurityIdentifier()
+    public function getLastSeenDateTime()
     {
-        if (array_key_exists("onPremisesSecurityIdentifier", $this->_propDict)) {
-            return $this->_propDict["onPremisesSecurityIdentifier"];
+        if (array_key_exists("lastSeenDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastSeenDateTime"], "\DateTime")) {
+                return $this->_propDict["lastSeenDateTime"];
+            } else {
+                $this->_propDict["lastSeenDateTime"] = new \DateTime($this->_propDict["lastSeenDateTime"]);
+                return $this->_propDict["lastSeenDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the lastSeenDateTime
+    *
+    * @param \DateTime $val The lastSeenDateTime
+    *
+    * @return UserSecurityProfile
+    */
+    public function setLastSeenDateTime($val)
+    {
+        $this->_propDict["lastSeenDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the lastVpnClientIp
+    *
+    * @return string The lastVpnClientIp
+    */
+    public function getLastVpnClientIp()
+    {
+        if (array_key_exists("lastVpnClientIp", $this->_propDict)) {
+            return $this->_propDict["lastVpnClientIp"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the onPremisesSecurityIdentifier
+    * Sets the lastVpnClientIp
     *
-    * @param string $val The onPremisesSecurityIdentifier
+    * @param string $val The lastVpnClientIp
     *
     * @return UserSecurityProfile
     */
-    public function setOnPremisesSecurityIdentifier($val)
+    public function setLastVpnClientIp($val)
     {
-        $this->_propDict["onPremisesSecurityIdentifier"] = $val;
+        $this->_propDict["lastVpnClientIp"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the mfaEnabled
+    *
+    * @return bool The mfaEnabled
+    */
+    public function getMfaEnabled()
+    {
+        if (array_key_exists("mfaEnabled", $this->_propDict)) {
+            return $this->_propDict["mfaEnabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the mfaEnabled
+    *
+    * @param bool $val The mfaEnabled
+    *
+    * @return UserSecurityProfile
+    */
+    public function setMfaEnabled($val)
+    {
+        $this->_propDict["mfaEnabled"] = boolval($val);
         return $this;
     }
     
@@ -332,6 +499,33 @@ class UserSecurityProfile extends Entity
     public function setVendorInformation($val)
     {
         $this->_propDict["vendorInformation"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the vpnClientId
+    *
+    * @return string The vpnClientId
+    */
+    public function getVpnClientId()
+    {
+        if (array_key_exists("vpnClientId", $this->_propDict)) {
+            return $this->_propDict["vpnClientId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the vpnClientId
+    *
+    * @param string $val The vpnClientId
+    *
+    * @return UserSecurityProfile
+    */
+    public function setVpnClientId($val)
+    {
+        $this->_propDict["vpnClientId"] = $val;
         return $this;
     }
     

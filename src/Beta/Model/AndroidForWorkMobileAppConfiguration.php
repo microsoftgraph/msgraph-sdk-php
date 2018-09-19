@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,37 +19,37 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class AndroidForWorkMobileAppConfiguration extends ManagedDeviceMobileAppConfiguration
 {
     /**
-    * Gets the packageName
+    * Gets the packageId
     *
-    * @return string The packageName
+    * @return string The packageId
     */
-    public function getPackageName()
+    public function getPackageId()
     {
-        if (array_key_exists("packageName", $this->_propDict)) {
-            return $this->_propDict["packageName"];
+        if (array_key_exists("packageId", $this->_propDict)) {
+            return $this->_propDict["packageId"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the packageName
+    * Sets the packageId
     *
-    * @param string $val The packageName
+    * @param string $val The packageId
     *
     * @return AndroidForWorkMobileAppConfiguration
     */
-    public function setPackageName($val)
+    public function setPackageId($val)
     {
-        $this->_propDict["packageName"] = $val;
+        $this->_propDict["packageId"] = $val;
         return $this;
     }
     

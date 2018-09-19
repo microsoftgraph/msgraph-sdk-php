@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -21,9 +21,9 @@ use Microsoft\Graph\Core\Enum;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class SecurityNetworkProtocol extends Enum
@@ -31,7 +31,6 @@ class SecurityNetworkProtocol extends Enum
     /**
     * The Enum SecurityNetworkProtocol
     */
-    const UNKNOWN = "unknown";
     const IP = "ip";
     const ICMP = "icmp";
     const IGMP = "igmp";
@@ -55,4 +54,5 @@ class SecurityNetworkProtocol extends Enum
     const SPX = "spx";
     const SPX_II = "spxII";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
+    const UNKNOWN = "unknown";
 }

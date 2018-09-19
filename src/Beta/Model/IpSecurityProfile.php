@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,38 +19,37 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class IpSecurityProfile extends Entity
 {
-
-     /** 
-     * Gets the activityGroupStates
-     *
-     * @return array The activityGroupStates
-     */
-    public function getActivityGroupStates()
+    /**
+    * Gets the activityGroupNames
+    *
+    * @return string The activityGroupNames
+    */
+    public function getActivityGroupNames()
     {
-        if (array_key_exists("activityGroupStates", $this->_propDict)) {
-           return $this->_propDict["activityGroupStates"];
+        if (array_key_exists("activityGroupNames", $this->_propDict)) {
+            return $this->_propDict["activityGroupNames"];
         } else {
             return null;
         }
     }
     
-    /** 
-    * Sets the activityGroupStates
+    /**
+    * Sets the activityGroupNames
     *
-    * @param ActivityGroupState $val The activityGroupStates
+    * @param string $val The activityGroupNames
     *
     * @return IpSecurityProfile
     */
-    public function setActivityGroupStates($val)
+    public function setActivityGroupNames($val)
     {
-		$this->_propDict["activityGroupStates"] = $val;
+        $this->_propDict["activityGroupNames"] = $val;
         return $this;
     }
     
@@ -78,33 +77,6 @@ class IpSecurityProfile extends Entity
     public function setAddress($val)
     {
         $this->_propDict["address"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the asn
-    *
-    * @return int The asn
-    */
-    public function getAsn()
-    {
-        if (array_key_exists("asn", $this->_propDict)) {
-            return $this->_propDict["asn"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the asn
-    *
-    * @param int $val The asn
-    *
-    * @return IpSecurityProfile
-    */
-    public function setAsn($val)
-    {
-        $this->_propDict["asn"] = intval($val);
         return $this;
     }
     
@@ -163,145 +135,174 @@ class IpSecurityProfile extends Entity
     }
     
     /**
-    * Gets the city
+    * Gets the countHits
     *
-    * @return string The city
+    * @return int The countHits
     */
-    public function getCity()
+    public function getCountHits()
     {
-        if (array_key_exists("city", $this->_propDict)) {
-            return $this->_propDict["city"];
+        if (array_key_exists("countHits", $this->_propDict)) {
+            return $this->_propDict["countHits"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the city
+    * Sets the countHits
     *
-    * @param string $val The city
+    * @param int $val The countHits
     *
     * @return IpSecurityProfile
     */
-    public function setCity($val)
+    public function setCountHits($val)
     {
-        $this->_propDict["city"] = $val;
+        $this->_propDict["countHits"] = intval($val);
         return $this;
     }
     
     /**
-    * Gets the countryOrRegionCode
+    * Gets the countHosts
     *
-    * @return string The countryOrRegionCode
+    * @return int The countHosts
     */
-    public function getCountryOrRegionCode()
+    public function getCountHosts()
     {
-        if (array_key_exists("countryOrRegionCode", $this->_propDict)) {
-            return $this->_propDict["countryOrRegionCode"];
+        if (array_key_exists("countHosts", $this->_propDict)) {
+            return $this->_propDict["countHosts"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the countryOrRegionCode
+    * Sets the countHosts
     *
-    * @param string $val The countryOrRegionCode
+    * @param int $val The countHosts
     *
     * @return IpSecurityProfile
     */
-    public function setCountryOrRegionCode($val)
+    public function setCountHosts($val)
     {
-        $this->_propDict["countryOrRegionCode"] = $val;
+        $this->_propDict["countHosts"] = intval($val);
         return $this;
     }
     
     /**
-    * Gets the createdDateTime
+    * Gets the firstSeenDateTime
     *
-    * @return \DateTime The createdDateTime
+    * @return \DateTime The firstSeenDateTime
     */
-    public function getCreatedDateTime()
+    public function getFirstSeenDateTime()
     {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
-                return $this->_propDict["createdDateTime"];
+        if (array_key_exists("firstSeenDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["firstSeenDateTime"], "\DateTime")) {
+                return $this->_propDict["firstSeenDateTime"];
             } else {
-                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
-                return $this->_propDict["createdDateTime"];
+                $this->_propDict["firstSeenDateTime"] = new \DateTime($this->_propDict["firstSeenDateTime"]);
+                return $this->_propDict["firstSeenDateTime"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the createdDateTime
+    * Sets the firstSeenDateTime
     *
-    * @param \DateTime $val The createdDateTime
+    * @param \DateTime $val The firstSeenDateTime
     *
     * @return IpSecurityProfile
     */
-    public function setCreatedDateTime($val)
+    public function setFirstSeenDateTime($val)
     {
-        $this->_propDict["createdDateTime"] = $val;
+        $this->_propDict["firstSeenDateTime"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the ipCategories
+     *
+     * @return array The ipCategories
+     */
+    public function getIpCategories()
+    {
+        if (array_key_exists("ipCategories", $this->_propDict)) {
+           return $this->_propDict["ipCategories"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the ipCategories
+    *
+    * @param IpCategory $val The ipCategories
+    *
+    * @return IpSecurityProfile
+    */
+    public function setIpCategories($val)
+    {
+		$this->_propDict["ipCategories"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the ipReferenceData
+     *
+     * @return array The ipReferenceData
+     */
+    public function getIpReferenceData()
+    {
+        if (array_key_exists("ipReferenceData", $this->_propDict)) {
+           return $this->_propDict["ipReferenceData"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the ipReferenceData
+    *
+    * @param IpReferenceData $val The ipReferenceData
+    *
+    * @return IpSecurityProfile
+    */
+    public function setIpReferenceData($val)
+    {
+		$this->_propDict["ipReferenceData"] = $val;
         return $this;
     }
     
     /**
-    * Gets the lastModifiedDateTime
+    * Gets the lastSeenDateTime
     *
-    * @return \DateTime The lastModifiedDateTime
+    * @return \DateTime The lastSeenDateTime
     */
-    public function getLastModifiedDateTime()
+    public function getLastSeenDateTime()
     {
-        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
-                return $this->_propDict["lastModifiedDateTime"];
+        if (array_key_exists("lastSeenDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastSeenDateTime"], "\DateTime")) {
+                return $this->_propDict["lastSeenDateTime"];
             } else {
-                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
-                return $this->_propDict["lastModifiedDateTime"];
+                $this->_propDict["lastSeenDateTime"] = new \DateTime($this->_propDict["lastSeenDateTime"]);
+                return $this->_propDict["lastSeenDateTime"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the lastModifiedDateTime
+    * Sets the lastSeenDateTime
     *
-    * @param \DateTime $val The lastModifiedDateTime
-    *
-    * @return IpSecurityProfile
-    */
-    public function setLastModifiedDateTime($val)
-    {
-        $this->_propDict["lastModifiedDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the organization
-    *
-    * @return string The organization
-    */
-    public function getOrganization()
-    {
-        if (array_key_exists("organization", $this->_propDict)) {
-            return $this->_propDict["organization"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the organization
-    *
-    * @param string $val The organization
+    * @param \DateTime $val The lastSeenDateTime
     *
     * @return IpSecurityProfile
     */
-    public function setOrganization($val)
+    public function setLastSeenDateTime($val)
     {
-        $this->_propDict["organization"] = $val;
+        $this->_propDict["lastSeenDateTime"] = $val;
         return $this;
     }
     
@@ -329,33 +330,6 @@ class IpSecurityProfile extends Entity
     public function setRiskScore($val)
     {
         $this->_propDict["riskScore"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the state
-    *
-    * @return string The state
-    */
-    public function getState()
-    {
-        if (array_key_exists("state", $this->_propDict)) {
-            return $this->_propDict["state"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the state
-    *
-    * @param string $val The state
-    *
-    * @return IpSecurityProfile
-    */
-    public function setState($val)
-    {
-        $this->_propDict["state"] = $val;
         return $this;
     }
     

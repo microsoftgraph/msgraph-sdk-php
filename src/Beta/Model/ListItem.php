@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,16 +19,15 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class ListItem extends BaseItem
 {
     /**
     * Gets the contentType
-    * The content type of this list item
     *
     * @return ContentTypeInfo The contentType
     */
@@ -47,7 +46,6 @@ class ListItem extends BaseItem
     
     /**
     * Sets the contentType
-    * The content type of this list item
     *
     * @param ContentTypeInfo $val The contentType
     *
@@ -120,7 +118,6 @@ class ListItem extends BaseItem
     
     /**
     * Gets the driveItem
-    * For document libraries, the driveItem relationship exposes the listItem as a [driveItem][]
     *
     * @return DriveItem The driveItem
     */
@@ -139,7 +136,6 @@ class ListItem extends BaseItem
     
     /**
     * Sets the driveItem
-    * For document libraries, the driveItem relationship exposes the listItem as a [driveItem][]
     *
     * @param DriveItem $val The driveItem
     *

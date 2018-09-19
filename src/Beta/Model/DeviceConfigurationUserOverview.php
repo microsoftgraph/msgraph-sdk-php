@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class DeviceConfigurationUserOverview extends Entity
@@ -158,6 +158,33 @@ class DeviceConfigurationUserOverview extends Entity
     public function setFailedCount($val)
     {
         $this->_propDict["failedCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the conflictCount
+    *
+    * @return int The conflictCount
+    */
+    public function getConflictCount()
+    {
+        if (array_key_exists("conflictCount", $this->_propDict)) {
+            return $this->_propDict["conflictCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the conflictCount
+    *
+    * @param int $val The conflictCount
+    *
+    * @return DeviceConfigurationUserOverview
+    */
+    public function setConflictCount($val)
+    {
+        $this->_propDict["conflictCount"] = intval($val);
         return $this;
     }
     

@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class MobileAppInstallStatus extends Entity
@@ -170,6 +170,37 @@ class MobileAppInstallStatus extends Entity
     public function setInstallState($val)
     {
         $this->_propDict["installState"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the installStateDetail
+    *
+    * @return ResultantAppStateDetail The installStateDetail
+    */
+    public function getInstallStateDetail()
+    {
+        if (array_key_exists("installStateDetail", $this->_propDict)) {
+            if (is_a($this->_propDict["installStateDetail"], "Microsoft\Graph\Beta\Model\ResultantAppStateDetail")) {
+                return $this->_propDict["installStateDetail"];
+            } else {
+                $this->_propDict["installStateDetail"] = new ResultantAppStateDetail($this->_propDict["installStateDetail"]);
+                return $this->_propDict["installStateDetail"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the installStateDetail
+    *
+    * @param ResultantAppStateDetail $val The installStateDetail
+    *
+    * @return MobileAppInstallStatus
+    */
+    public function setInstallStateDetail($val)
+    {
+        $this->_propDict["installStateDetail"] = $val;
         return $this;
     }
     

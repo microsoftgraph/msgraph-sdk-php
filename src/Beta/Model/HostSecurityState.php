@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -18,9 +18,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class HostSecurityState extends Entity
@@ -52,55 +52,55 @@ class HostSecurityState extends Entity
         return $this;
     }
     /**
-    * Gets the isAzureAadJoined
+    * Gets the isAzureAdJoined
     *
-    * @return bool The isAzureAadJoined
+    * @return bool The isAzureAdJoined
     */
-    public function getIsAzureAadJoined()
+    public function getIsAzureAdJoined()
     {
-        if (array_key_exists("isAzureAadJoined", $this->_propDict)) {
-            return $this->_propDict["isAzureAadJoined"];
+        if (array_key_exists("isAzureAdJoined", $this->_propDict)) {
+            return $this->_propDict["isAzureAdJoined"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the isAzureAadJoined
+    * Sets the isAzureAdJoined
     *
-    * @param bool $val The value of the isAzureAadJoined
+    * @param bool $val The value of the isAzureAdJoined
     *
     * @return HostSecurityState
     */
-    public function setIsAzureAadJoined($val)
+    public function setIsAzureAdJoined($val)
     {
-        $this->_propDict["isAzureAadJoined"] = $val;
+        $this->_propDict["isAzureAdJoined"] = $val;
         return $this;
     }
     /**
-    * Gets the isAzureAadRegistered
+    * Gets the isAzureAdRegistered
     *
-    * @return bool The isAzureAadRegistered
+    * @return bool The isAzureAdRegistered
     */
-    public function getIsAzureAadRegistered()
+    public function getIsAzureAdRegistered()
     {
-        if (array_key_exists("isAzureAadRegistered", $this->_propDict)) {
-            return $this->_propDict["isAzureAadRegistered"];
+        if (array_key_exists("isAzureAdRegistered", $this->_propDict)) {
+            return $this->_propDict["isAzureAdRegistered"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the isAzureAadRegistered
+    * Sets the isAzureAdRegistered
     *
-    * @param bool $val The value of the isAzureAadRegistered
+    * @param bool $val The value of the isAzureAdRegistered
     *
     * @return HostSecurityState
     */
-    public function setIsAzureAadRegistered($val)
+    public function setIsAzureAdRegistered($val)
     {
-        $this->_propDict["isAzureAadRegistered"] = $val;
+        $this->_propDict["isAzureAdRegistered"] = $val;
         return $this;
     }
     /**
@@ -153,6 +153,32 @@ class HostSecurityState extends Entity
     public function setNetBiosName($val)
     {
         $this->_propDict["netBiosName"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the os
+    *
+    * @return string The os
+    */
+    public function getOs()
+    {
+        if (array_key_exists("os", $this->_propDict)) {
+            return $this->_propDict["os"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the os
+    *
+    * @param string $val The value of the os
+    *
+    * @return HostSecurityState
+    */
+    public function setOs($val)
+    {
+        $this->_propDict["os"] = $val;
         return $this;
     }
     /**

@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -18,9 +18,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class RecurrencePattern extends Entity
@@ -28,7 +28,6 @@ class RecurrencePattern extends Entity
 
     /**
     * Gets the type
-    * The recurrence pattern type: daily, weekly, absoluteMonthly, relativeMonthly, absoluteYearly, relativeYearly. Required.
     *
     * @return RecurrencePatternType The type
     */
@@ -47,7 +46,6 @@ class RecurrencePattern extends Entity
 
     /**
     * Sets the type
-    * The recurrence pattern type: daily, weekly, absoluteMonthly, relativeMonthly, absoluteYearly, relativeYearly. Required.
     *
     * @param RecurrencePatternType $val The value to assign to the type
     *
@@ -60,7 +58,6 @@ class RecurrencePattern extends Entity
     }
     /**
     * Gets the interval
-    * The number of units between occurrences, where units can be in days, weeks, months, or years, depending on the type. Required.
     *
     * @return int The interval
     */
@@ -75,7 +72,6 @@ class RecurrencePattern extends Entity
 
     /**
     * Sets the interval
-    * The number of units between occurrences, where units can be in days, weeks, months, or years, depending on the type. Required.
     *
     * @param int $val The value of the interval
     *
@@ -88,7 +84,6 @@ class RecurrencePattern extends Entity
     }
     /**
     * Gets the month
-    * The month in which the event occurs.  This is a number from 1 to 12.
     *
     * @return int The month
     */
@@ -103,7 +98,6 @@ class RecurrencePattern extends Entity
 
     /**
     * Sets the month
-    * The month in which the event occurs.  This is a number from 1 to 12.
     *
     * @param int $val The value of the month
     *
@@ -116,7 +110,6 @@ class RecurrencePattern extends Entity
     }
     /**
     * Gets the dayOfMonth
-    * The day of the month on which the event occurs. Required if type is absoluteMonthly or absoluteYearly.
     *
     * @return int The dayOfMonth
     */
@@ -131,7 +124,6 @@ class RecurrencePattern extends Entity
 
     /**
     * Sets the dayOfMonth
-    * The day of the month on which the event occurs. Required if type is absoluteMonthly or absoluteYearly.
     *
     * @param int $val The value of the dayOfMonth
     *
@@ -145,7 +137,6 @@ class RecurrencePattern extends Entity
 
     /**
     * Gets the daysOfWeek
-    * A collection of the days of the week on which the event occurs. Possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday. If type is relativeMonthly or relativeYearly, and daysOfWeek specifies more than one day, the event falls on the first day that satisfies the pattern.  Required if type is weekly, relativeMonthly, or relativeYearly.
     *
     * @return DayOfWeek The daysOfWeek
     */
@@ -164,7 +155,6 @@ class RecurrencePattern extends Entity
 
     /**
     * Sets the daysOfWeek
-    * A collection of the days of the week on which the event occurs. Possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday. If type is relativeMonthly or relativeYearly, and daysOfWeek specifies more than one day, the event falls on the first day that satisfies the pattern.  Required if type is weekly, relativeMonthly, or relativeYearly.
     *
     * @param DayOfWeek $val The value to assign to the daysOfWeek
     *
@@ -178,7 +168,6 @@ class RecurrencePattern extends Entity
 
     /**
     * Gets the firstDayOfWeek
-    * The first day of the week. Possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday. Default is sunday. Required if type is weekly.
     *
     * @return DayOfWeek The firstDayOfWeek
     */
@@ -197,7 +186,6 @@ class RecurrencePattern extends Entity
 
     /**
     * Sets the firstDayOfWeek
-    * The first day of the week. Possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday. Default is sunday. Required if type is weekly.
     *
     * @param DayOfWeek $val The value to assign to the firstDayOfWeek
     *
@@ -211,7 +199,6 @@ class RecurrencePattern extends Entity
 
     /**
     * Gets the index
-    * Specifies on which instance of the allowed days specified in daysOfsWeek the event occurs, counted from the first instance in the month. Possible values are: first, second, third, fourth, last. Default is first. Optional and used if type is relativeMonthly or relativeYearly.
     *
     * @return WeekIndex The index
     */
@@ -230,7 +217,6 @@ class RecurrencePattern extends Entity
 
     /**
     * Sets the index
-    * Specifies on which instance of the allowed days specified in daysOfsWeek the event occurs, counted from the first instance in the month. Possible values are: first, second, third, fourth, last. Default is first. Optional and used if type is relativeMonthly or relativeYearly.
     *
     * @param WeekIndex $val The value to assign to the index
     *

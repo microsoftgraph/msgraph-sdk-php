@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
@@ -81,6 +81,37 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the appsAutoUpdatePolicy
+    *
+    * @return AndroidDeviceOwnerAppAutoUpdatePolicyType The appsAutoUpdatePolicy
+    */
+    public function getAppsAutoUpdatePolicy()
+    {
+        if (array_key_exists("appsAutoUpdatePolicy", $this->_propDict)) {
+            if (is_a($this->_propDict["appsAutoUpdatePolicy"], "Microsoft\Graph\Beta\Model\AndroidDeviceOwnerAppAutoUpdatePolicyType")) {
+                return $this->_propDict["appsAutoUpdatePolicy"];
+            } else {
+                $this->_propDict["appsAutoUpdatePolicy"] = new AndroidDeviceOwnerAppAutoUpdatePolicyType($this->_propDict["appsAutoUpdatePolicy"]);
+                return $this->_propDict["appsAutoUpdatePolicy"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the appsAutoUpdatePolicy
+    *
+    * @param AndroidDeviceOwnerAppAutoUpdatePolicyType $val The appsAutoUpdatePolicy
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setAppsAutoUpdatePolicy($val)
+    {
+        $this->_propDict["appsAutoUpdatePolicy"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the appsDefaultPermissionPolicy
     *
     * @return AndroidDeviceOwnerDefaultAppPermissionPolicyType The appsDefaultPermissionPolicy
@@ -112,6 +143,60 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the bluetoothBlockConfiguration
+    *
+    * @return bool The bluetoothBlockConfiguration
+    */
+    public function getBluetoothBlockConfiguration()
+    {
+        if (array_key_exists("bluetoothBlockConfiguration", $this->_propDict)) {
+            return $this->_propDict["bluetoothBlockConfiguration"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the bluetoothBlockConfiguration
+    *
+    * @param bool $val The bluetoothBlockConfiguration
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setBluetoothBlockConfiguration($val)
+    {
+        $this->_propDict["bluetoothBlockConfiguration"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the bluetoothBlockContactSharing
+    *
+    * @return bool The bluetoothBlockContactSharing
+    */
+    public function getBluetoothBlockContactSharing()
+    {
+        if (array_key_exists("bluetoothBlockContactSharing", $this->_propDict)) {
+            return $this->_propDict["bluetoothBlockContactSharing"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the bluetoothBlockContactSharing
+    *
+    * @param bool $val The bluetoothBlockContactSharing
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setBluetoothBlockContactSharing($val)
+    {
+        $this->_propDict["bluetoothBlockContactSharing"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the cameraBlocked
     *
     * @return bool The cameraBlocked
@@ -135,6 +220,87 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     public function setCameraBlocked($val)
     {
         $this->_propDict["cameraBlocked"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the cellularBlockWiFiTethering
+    *
+    * @return bool The cellularBlockWiFiTethering
+    */
+    public function getCellularBlockWiFiTethering()
+    {
+        if (array_key_exists("cellularBlockWiFiTethering", $this->_propDict)) {
+            return $this->_propDict["cellularBlockWiFiTethering"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the cellularBlockWiFiTethering
+    *
+    * @param bool $val The cellularBlockWiFiTethering
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setCellularBlockWiFiTethering($val)
+    {
+        $this->_propDict["cellularBlockWiFiTethering"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the dataRoamingBlocked
+    *
+    * @return bool The dataRoamingBlocked
+    */
+    public function getDataRoamingBlocked()
+    {
+        if (array_key_exists("dataRoamingBlocked", $this->_propDict)) {
+            return $this->_propDict["dataRoamingBlocked"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the dataRoamingBlocked
+    *
+    * @param bool $val The dataRoamingBlocked
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setDataRoamingBlocked($val)
+    {
+        $this->_propDict["dataRoamingBlocked"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the dateTimeConfigurationBlocked
+    *
+    * @return bool The dateTimeConfigurationBlocked
+    */
+    public function getDateTimeConfigurationBlocked()
+    {
+        if (array_key_exists("dateTimeConfigurationBlocked", $this->_propDict)) {
+            return $this->_propDict["dateTimeConfigurationBlocked"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the dateTimeConfigurationBlocked
+    *
+    * @param bool $val The dateTimeConfigurationBlocked
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setDateTimeConfigurationBlocked($val)
+    {
+        $this->_propDict["dateTimeConfigurationBlocked"] = boolval($val);
         return $this;
     }
     
@@ -271,6 +437,33 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     public function setNetworkEscapeHatchAllowed($val)
     {
         $this->_propDict["networkEscapeHatchAllowed"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the nfcBlockOutgoingBeam
+    *
+    * @return bool The nfcBlockOutgoingBeam
+    */
+    public function getNfcBlockOutgoingBeam()
+    {
+        if (array_key_exists("nfcBlockOutgoingBeam", $this->_propDict)) {
+            return $this->_propDict["nfcBlockOutgoingBeam"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the nfcBlockOutgoingBeam
+    *
+    * @param bool $val The nfcBlockOutgoingBeam
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setNfcBlockOutgoingBeam($val)
+    {
+        $this->_propDict["nfcBlockOutgoingBeam"] = boolval($val);
         return $this;
     }
     
@@ -549,6 +742,33 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the securityRequireVerifyApps
+    *
+    * @return bool The securityRequireVerifyApps
+    */
+    public function getSecurityRequireVerifyApps()
+    {
+        if (array_key_exists("securityRequireVerifyApps", $this->_propDict)) {
+            return $this->_propDict["securityRequireVerifyApps"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the securityRequireVerifyApps
+    *
+    * @param bool $val The securityRequireVerifyApps
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setSecurityRequireVerifyApps($val)
+    {
+        $this->_propDict["securityRequireVerifyApps"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the statusBarBlocked
     *
     * @return bool The statusBarBlocked
@@ -600,6 +820,172 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     public function setStayOnModes($val)
     {
 		$this->_propDict["stayOnModes"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the storageAllowUsb
+    *
+    * @return bool The storageAllowUsb
+    */
+    public function getStorageAllowUsb()
+    {
+        if (array_key_exists("storageAllowUsb", $this->_propDict)) {
+            return $this->_propDict["storageAllowUsb"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the storageAllowUsb
+    *
+    * @param bool $val The storageAllowUsb
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setStorageAllowUsb($val)
+    {
+        $this->_propDict["storageAllowUsb"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the storageBlockExternalMedia
+    *
+    * @return bool The storageBlockExternalMedia
+    */
+    public function getStorageBlockExternalMedia()
+    {
+        if (array_key_exists("storageBlockExternalMedia", $this->_propDict)) {
+            return $this->_propDict["storageBlockExternalMedia"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the storageBlockExternalMedia
+    *
+    * @param bool $val The storageBlockExternalMedia
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setStorageBlockExternalMedia($val)
+    {
+        $this->_propDict["storageBlockExternalMedia"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the storageBlockUsbFileTransfer
+    *
+    * @return bool The storageBlockUsbFileTransfer
+    */
+    public function getStorageBlockUsbFileTransfer()
+    {
+        if (array_key_exists("storageBlockUsbFileTransfer", $this->_propDict)) {
+            return $this->_propDict["storageBlockUsbFileTransfer"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the storageBlockUsbFileTransfer
+    *
+    * @param bool $val The storageBlockUsbFileTransfer
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setStorageBlockUsbFileTransfer($val)
+    {
+        $this->_propDict["storageBlockUsbFileTransfer"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the systemUpdateWindowStartMinutesAfterMidnight
+    *
+    * @return int The systemUpdateWindowStartMinutesAfterMidnight
+    */
+    public function getSystemUpdateWindowStartMinutesAfterMidnight()
+    {
+        if (array_key_exists("systemUpdateWindowStartMinutesAfterMidnight", $this->_propDict)) {
+            return $this->_propDict["systemUpdateWindowStartMinutesAfterMidnight"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the systemUpdateWindowStartMinutesAfterMidnight
+    *
+    * @param int $val The systemUpdateWindowStartMinutesAfterMidnight
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setSystemUpdateWindowStartMinutesAfterMidnight($val)
+    {
+        $this->_propDict["systemUpdateWindowStartMinutesAfterMidnight"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the systemUpdateWindowEndMinutesAfterMidnight
+    *
+    * @return int The systemUpdateWindowEndMinutesAfterMidnight
+    */
+    public function getSystemUpdateWindowEndMinutesAfterMidnight()
+    {
+        if (array_key_exists("systemUpdateWindowEndMinutesAfterMidnight", $this->_propDict)) {
+            return $this->_propDict["systemUpdateWindowEndMinutesAfterMidnight"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the systemUpdateWindowEndMinutesAfterMidnight
+    *
+    * @param int $val The systemUpdateWindowEndMinutesAfterMidnight
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setSystemUpdateWindowEndMinutesAfterMidnight($val)
+    {
+        $this->_propDict["systemUpdateWindowEndMinutesAfterMidnight"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the systemUpdateInstallType
+    *
+    * @return AndroidDeviceOwnerSystemUpdateInstallType The systemUpdateInstallType
+    */
+    public function getSystemUpdateInstallType()
+    {
+        if (array_key_exists("systemUpdateInstallType", $this->_propDict)) {
+            if (is_a($this->_propDict["systemUpdateInstallType"], "Microsoft\Graph\Beta\Model\AndroidDeviceOwnerSystemUpdateInstallType")) {
+                return $this->_propDict["systemUpdateInstallType"];
+            } else {
+                $this->_propDict["systemUpdateInstallType"] = new AndroidDeviceOwnerSystemUpdateInstallType($this->_propDict["systemUpdateInstallType"]);
+                return $this->_propDict["systemUpdateInstallType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the systemUpdateInstallType
+    *
+    * @param AndroidDeviceOwnerSystemUpdateInstallType $val The systemUpdateInstallType
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setSystemUpdateInstallType($val)
+    {
+        $this->_propDict["systemUpdateInstallType"] = $val;
         return $this;
     }
     

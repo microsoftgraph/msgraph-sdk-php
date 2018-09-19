@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class ManagedDeviceOverview extends Entity
@@ -166,6 +166,37 @@ class ManagedDeviceOverview extends Entity
     public function setDeviceExchangeAccessStateSummary($val)
     {
         $this->_propDict["deviceExchangeAccessStateSummary"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the managedDeviceModelsAndManufacturers
+    *
+    * @return ManagedDeviceModelsAndManufacturers The managedDeviceModelsAndManufacturers
+    */
+    public function getManagedDeviceModelsAndManufacturers()
+    {
+        if (array_key_exists("managedDeviceModelsAndManufacturers", $this->_propDict)) {
+            if (is_a($this->_propDict["managedDeviceModelsAndManufacturers"], "Microsoft\Graph\Beta\Model\ManagedDeviceModelsAndManufacturers")) {
+                return $this->_propDict["managedDeviceModelsAndManufacturers"];
+            } else {
+                $this->_propDict["managedDeviceModelsAndManufacturers"] = new ManagedDeviceModelsAndManufacturers($this->_propDict["managedDeviceModelsAndManufacturers"]);
+                return $this->_propDict["managedDeviceModelsAndManufacturers"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the managedDeviceModelsAndManufacturers
+    *
+    * @param ManagedDeviceModelsAndManufacturers $val The managedDeviceModelsAndManufacturers
+    *
+    * @return ManagedDeviceOverview
+    */
+    public function setManagedDeviceModelsAndManufacturers($val)
+    {
+        $this->_propDict["managedDeviceModelsAndManufacturers"] = $val;
         return $this;
     }
     

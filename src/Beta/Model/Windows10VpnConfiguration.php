@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,13 +19,44 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class Windows10VpnConfiguration extends WindowsVpnConfiguration
 {
+    /**
+    * Gets the profileTarget
+    *
+    * @return Windows10VpnProfileTarget The profileTarget
+    */
+    public function getProfileTarget()
+    {
+        if (array_key_exists("profileTarget", $this->_propDict)) {
+            if (is_a($this->_propDict["profileTarget"], "Microsoft\Graph\Beta\Model\Windows10VpnProfileTarget")) {
+                return $this->_propDict["profileTarget"];
+            } else {
+                $this->_propDict["profileTarget"] = new Windows10VpnProfileTarget($this->_propDict["profileTarget"]);
+                return $this->_propDict["profileTarget"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the profileTarget
+    *
+    * @param Windows10VpnProfileTarget $val The profileTarget
+    *
+    * @return Windows10VpnConfiguration
+    */
+    public function setProfileTarget($val)
+    {
+        $this->_propDict["profileTarget"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the connectionType
     *
@@ -81,6 +112,114 @@ class Windows10VpnConfiguration extends WindowsVpnConfiguration
     public function setEnableSplitTunneling($val)
     {
         $this->_propDict["enableSplitTunneling"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the enableAlwaysOn
+    *
+    * @return bool The enableAlwaysOn
+    */
+    public function getEnableAlwaysOn()
+    {
+        if (array_key_exists("enableAlwaysOn", $this->_propDict)) {
+            return $this->_propDict["enableAlwaysOn"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the enableAlwaysOn
+    *
+    * @param bool $val The enableAlwaysOn
+    *
+    * @return Windows10VpnConfiguration
+    */
+    public function setEnableAlwaysOn($val)
+    {
+        $this->_propDict["enableAlwaysOn"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the enableDeviceTunnel
+    *
+    * @return bool The enableDeviceTunnel
+    */
+    public function getEnableDeviceTunnel()
+    {
+        if (array_key_exists("enableDeviceTunnel", $this->_propDict)) {
+            return $this->_propDict["enableDeviceTunnel"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the enableDeviceTunnel
+    *
+    * @param bool $val The enableDeviceTunnel
+    *
+    * @return Windows10VpnConfiguration
+    */
+    public function setEnableDeviceTunnel($val)
+    {
+        $this->_propDict["enableDeviceTunnel"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the enableDnsRegistration
+    *
+    * @return bool The enableDnsRegistration
+    */
+    public function getEnableDnsRegistration()
+    {
+        if (array_key_exists("enableDnsRegistration", $this->_propDict)) {
+            return $this->_propDict["enableDnsRegistration"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the enableDnsRegistration
+    *
+    * @param bool $val The enableDnsRegistration
+    *
+    * @return Windows10VpnConfiguration
+    */
+    public function setEnableDnsRegistration($val)
+    {
+        $this->_propDict["enableDnsRegistration"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the dnsSuffixes
+    *
+    * @return string The dnsSuffixes
+    */
+    public function getDnsSuffixes()
+    {
+        if (array_key_exists("dnsSuffixes", $this->_propDict)) {
+            return $this->_propDict["dnsSuffixes"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the dnsSuffixes
+    *
+    * @param string $val The dnsSuffixes
+    *
+    * @return Windows10VpnConfiguration
+    */
+    public function setDnsSuffixes($val)
+    {
+        $this->_propDict["dnsSuffixes"] = $val;
         return $this;
     }
     

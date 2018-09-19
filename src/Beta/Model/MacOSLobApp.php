@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class MacOSLobApp extends MobileLobApp
@@ -244,6 +244,33 @@ class MacOSLobApp extends MobileLobApp
     public function setMd5Hash($val)
     {
         $this->_propDict["md5Hash"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the ignoreVersionDetection
+    *
+    * @return bool The ignoreVersionDetection
+    */
+    public function getIgnoreVersionDetection()
+    {
+        if (array_key_exists("ignoreVersionDetection", $this->_propDict)) {
+            return $this->_propDict["ignoreVersionDetection"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the ignoreVersionDetection
+    *
+    * @param bool $val The ignoreVersionDetection
+    *
+    * @return MacOSLobApp
+    */
+    public function setIgnoreVersionDetection($val)
+    {
+        $this->_propDict["ignoreVersionDetection"] = boolval($val);
         return $this;
     }
     

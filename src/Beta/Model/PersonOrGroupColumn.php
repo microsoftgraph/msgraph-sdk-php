@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -18,16 +18,15 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class PersonOrGroupColumn extends Entity
 {
     /**
     * Gets the allowMultipleSelection
-    * Indicates whether multiple values can be selected from the source.
     *
     * @return bool The allowMultipleSelection
     */
@@ -42,7 +41,6 @@ class PersonOrGroupColumn extends Entity
 
     /**
     * Sets the allowMultipleSelection
-    * Indicates whether multiple values can be selected from the source.
     *
     * @param bool $val The value of the allowMultipleSelection
     *
@@ -55,7 +53,6 @@ class PersonOrGroupColumn extends Entity
     }
     /**
     * Gets the chooseFromType
-    * Whether to allow selection of people only, or people and groups. Must be one of peopleAndGroups or peopleOnly.
     *
     * @return string The chooseFromType
     */
@@ -70,7 +67,6 @@ class PersonOrGroupColumn extends Entity
 
     /**
     * Sets the chooseFromType
-    * Whether to allow selection of people only, or people and groups. Must be one of peopleAndGroups or peopleOnly.
     *
     * @param string $val The value of the chooseFromType
     *
@@ -83,7 +79,6 @@ class PersonOrGroupColumn extends Entity
     }
     /**
     * Gets the displayAs
-    * How to display the information about the person or group chosen. See below.
     *
     * @return string The displayAs
     */
@@ -98,7 +93,6 @@ class PersonOrGroupColumn extends Entity
 
     /**
     * Sets the displayAs
-    * How to display the information about the person or group chosen. See below.
     *
     * @param string $val The value of the displayAs
     *

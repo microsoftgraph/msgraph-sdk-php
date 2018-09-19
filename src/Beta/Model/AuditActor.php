@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -18,9 +18,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class AuditActor extends Entity
@@ -49,32 +49,6 @@ class AuditActor extends Entity
     public function setType($val)
     {
         $this->_propDict["type"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the permissions
-    *
-    * @return string The permissions
-    */
-    public function getPermissions()
-    {
-        if (array_key_exists("permissions", $this->_propDict)) {
-            return $this->_propDict["permissions"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the permissions
-    *
-    * @param string $val The value of the permissions
-    *
-    * @return AuditActor
-    */
-    public function setPermissions($val)
-    {
-        $this->_propDict["permissions"] = $val;
         return $this;
     }
     /**

@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class SensitiveType extends Entity
@@ -158,6 +158,33 @@ class SensitiveType extends Entity
     public function setPublisherName($val)
     {
         $this->_propDict["publisherName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the state
+    *
+    * @return string The state
+    */
+    public function getState()
+    {
+        if (array_key_exists("state", $this->_propDict)) {
+            return $this->_propDict["state"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the state
+    *
+    * @param string $val The state
+    *
+    * @return SensitiveType
+    */
+    public function setState($val)
+    {
+        $this->_propDict["state"] = $val;
         return $this;
     }
     

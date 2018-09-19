@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -18,16 +18,15 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class FolderView extends Entity
 {
     /**
     * Gets the sortBy
-    * The method by which the folder should be sorted.
     *
     * @return string The sortBy
     */
@@ -42,7 +41,6 @@ class FolderView extends Entity
 
     /**
     * Sets the sortBy
-    * The method by which the folder should be sorted.
     *
     * @param string $val The value of the sortBy
     *
@@ -81,7 +79,6 @@ class FolderView extends Entity
     }
     /**
     * Gets the viewType
-    * The type of view that should be used to represent the folder.
     *
     * @return string The viewType
     */
@@ -96,7 +93,6 @@ class FolderView extends Entity
 
     /**
     * Sets the viewType
-    * The type of view that should be used to represent the folder.
     *
     * @param string $val The value of the viewType
     *

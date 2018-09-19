@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class Contact extends OutlookItem
@@ -426,7 +426,7 @@ class Contact extends OutlookItem
     /** 
     * Sets the emailAddresses
     *
-    * @param EmailAddress $val The emailAddresses
+    * @param TypedEmailAddress $val The emailAddresses
     *
     * @return Contact
     */
@@ -493,7 +493,6 @@ class Contact extends OutlookItem
     
     /**
     * Gets the jobTitle
-    * The contact's job title.
     *
     * @return string The jobTitle
     */
@@ -508,7 +507,6 @@ class Contact extends OutlookItem
     
     /**
     * Sets the jobTitle
-    * The contact's job title.
     *
     * @param string $val The jobTitle
     *

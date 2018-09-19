@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -21,9 +21,9 @@ use Microsoft\Graph\Core\Enum;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class DevicePlatformType extends Enum
@@ -38,4 +38,5 @@ class DevicePlatformType extends Enum
     const WINDOWS_PHONE81 = "windowsPhone81";
     const WINDOWS81_AND_LATER = "windows81AndLater";
     const WINDOWS10_AND_LATER = "windows10AndLater";
+    const ANDROID_WORK_PROFILE = "androidWorkProfile";
 }

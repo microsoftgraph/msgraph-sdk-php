@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -18,16 +18,15 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class WorkbookSessionInfo extends Entity
 {
     /**
     * Gets the id
-    * Id of the workbook session.
     *
     * @return string The id
     */
@@ -42,7 +41,6 @@ class WorkbookSessionInfo extends Entity
 
     /**
     * Sets the id
-    * Id of the workbook session.
     *
     * @param string $val The value of the id
     *
@@ -55,7 +53,6 @@ class WorkbookSessionInfo extends Entity
     }
     /**
     * Gets the persistChanges
-    * true for persistent session. false for non-persistent session (view mode)
     *
     * @return bool The persistChanges
     */
@@ -70,7 +67,6 @@ class WorkbookSessionInfo extends Entity
 
     /**
     * Sets the persistChanges
-    * true for persistent session. false for non-persistent session (view mode)
     *
     * @param bool $val The value of the persistChanges
     *

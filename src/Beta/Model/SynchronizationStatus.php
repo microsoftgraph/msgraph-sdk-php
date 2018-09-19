@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -18,9 +18,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class SynchronizationStatus extends Entity
@@ -76,37 +76,6 @@ class SynchronizationStatus extends Entity
     {
         $this->_propDict["escrowsPruned"] = $val;
         return $this;
-    }
-
-    /**
-    * Gets the synchronizedEntryCountByType
-    *
-    * @return StringKeyLongValuePair The synchronizedEntryCountByType
-    */
-    public function getSynchronizedEntryCountByType()
-    {
-        if (array_key_exists("synchronizedEntryCountByType", $this->_propDict)) {
-            if (is_a($this->_propDict["synchronizedEntryCountByType"], "Microsoft\Graph\Beta\Model\StringKeyLongValuePair")) {
-                return $this->_propDict["synchronizedEntryCountByType"];
-            } else {
-                $this->_propDict["synchronizedEntryCountByType"] = new StringKeyLongValuePair($this->_propDict["synchronizedEntryCountByType"]);
-                return $this->_propDict["synchronizedEntryCountByType"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the synchronizedEntryCountByType
-    *
-    * @param StringKeyLongValuePair $val The value to assign to the synchronizedEntryCountByType
-    *
-    * @return SynchronizationStatus The SynchronizationStatus
-    */
-    public function setSynchronizedEntryCountByType($val)
-    {
-        $this->_propDict["synchronizedEntryCountByType"] = $val;
-         return $this;
     }
 
     /**
@@ -234,6 +203,68 @@ class SynchronizationStatus extends Entity
     }
 
     /**
+    * Gets the progress
+    *
+    * @return SynchronizationProgress The progress
+    */
+    public function getProgress()
+    {
+        if (array_key_exists("progress", $this->_propDict)) {
+            if (is_a($this->_propDict["progress"], "Microsoft\Graph\Beta\Model\SynchronizationProgress")) {
+                return $this->_propDict["progress"];
+            } else {
+                $this->_propDict["progress"] = new SynchronizationProgress($this->_propDict["progress"]);
+                return $this->_propDict["progress"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the progress
+    *
+    * @param SynchronizationProgress $val The value to assign to the progress
+    *
+    * @return SynchronizationStatus The SynchronizationStatus
+    */
+    public function setProgress($val)
+    {
+        $this->_propDict["progress"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the quarantine
+    *
+    * @return SynchronizationQuarantine The quarantine
+    */
+    public function getQuarantine()
+    {
+        if (array_key_exists("quarantine", $this->_propDict)) {
+            if (is_a($this->_propDict["quarantine"], "Microsoft\Graph\Beta\Model\SynchronizationQuarantine")) {
+                return $this->_propDict["quarantine"];
+            } else {
+                $this->_propDict["quarantine"] = new SynchronizationQuarantine($this->_propDict["quarantine"]);
+                return $this->_propDict["quarantine"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the quarantine
+    *
+    * @param SynchronizationQuarantine $val The value to assign to the quarantine
+    *
+    * @return SynchronizationStatus The SynchronizationStatus
+    */
+    public function setQuarantine($val)
+    {
+        $this->_propDict["quarantine"] = $val;
+         return $this;
+    }
+
+    /**
     * Gets the steadyStateFirstAchievedTime
     *
     * @return \DateTime The steadyStateFirstAchievedTime
@@ -296,33 +327,33 @@ class SynchronizationStatus extends Entity
     }
 
     /**
-    * Gets the quarantine
+    * Gets the synchronizedEntryCountByType
     *
-    * @return SynchronizationQuarantine The quarantine
+    * @return StringKeyLongValuePair The synchronizedEntryCountByType
     */
-    public function getQuarantine()
+    public function getSynchronizedEntryCountByType()
     {
-        if (array_key_exists("quarantine", $this->_propDict)) {
-            if (is_a($this->_propDict["quarantine"], "Microsoft\Graph\Beta\Model\SynchronizationQuarantine")) {
-                return $this->_propDict["quarantine"];
+        if (array_key_exists("synchronizedEntryCountByType", $this->_propDict)) {
+            if (is_a($this->_propDict["synchronizedEntryCountByType"], "Microsoft\Graph\Beta\Model\StringKeyLongValuePair")) {
+                return $this->_propDict["synchronizedEntryCountByType"];
             } else {
-                $this->_propDict["quarantine"] = new SynchronizationQuarantine($this->_propDict["quarantine"]);
-                return $this->_propDict["quarantine"];
+                $this->_propDict["synchronizedEntryCountByType"] = new StringKeyLongValuePair($this->_propDict["synchronizedEntryCountByType"]);
+                return $this->_propDict["synchronizedEntryCountByType"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the quarantine
+    * Sets the synchronizedEntryCountByType
     *
-    * @param SynchronizationQuarantine $val The value to assign to the quarantine
+    * @param StringKeyLongValuePair $val The value to assign to the synchronizedEntryCountByType
     *
     * @return SynchronizationStatus The SynchronizationStatus
     */
-    public function setQuarantine($val)
+    public function setSynchronizedEntryCountByType($val)
     {
-        $this->_propDict["quarantine"] = $val;
+        $this->_propDict["synchronizedEntryCountByType"] = $val;
          return $this;
     }
     /**

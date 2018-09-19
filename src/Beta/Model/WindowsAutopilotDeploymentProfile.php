@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class WindowsAutopilotDeploymentProfile extends Entity
@@ -77,6 +77,33 @@ class WindowsAutopilotDeploymentProfile extends Entity
     public function setDescription($val)
     {
         $this->_propDict["description"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the language
+    *
+    * @return string The language
+    */
+    public function getLanguage()
+    {
+        if (array_key_exists("language", $this->_propDict)) {
+            return $this->_propDict["language"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the language
+    *
+    * @param string $val The language
+    *
+    * @return WindowsAutopilotDeploymentProfile
+    */
+    public function setLanguage($val)
+    {
+        $this->_propDict["language"] = $val;
         return $this;
     }
     
@@ -173,6 +200,91 @@ class WindowsAutopilotDeploymentProfile extends Entity
         return $this;
     }
     
+    /**
+    * Gets the enrollmentStatusScreenSettings
+    *
+    * @return WindowsEnrollmentStatusScreenSettings The enrollmentStatusScreenSettings
+    */
+    public function getEnrollmentStatusScreenSettings()
+    {
+        if (array_key_exists("enrollmentStatusScreenSettings", $this->_propDict)) {
+            if (is_a($this->_propDict["enrollmentStatusScreenSettings"], "Microsoft\Graph\Beta\Model\WindowsEnrollmentStatusScreenSettings")) {
+                return $this->_propDict["enrollmentStatusScreenSettings"];
+            } else {
+                $this->_propDict["enrollmentStatusScreenSettings"] = new WindowsEnrollmentStatusScreenSettings($this->_propDict["enrollmentStatusScreenSettings"]);
+                return $this->_propDict["enrollmentStatusScreenSettings"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the enrollmentStatusScreenSettings
+    *
+    * @param WindowsEnrollmentStatusScreenSettings $val The enrollmentStatusScreenSettings
+    *
+    * @return WindowsAutopilotDeploymentProfile
+    */
+    public function setEnrollmentStatusScreenSettings($val)
+    {
+        $this->_propDict["enrollmentStatusScreenSettings"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the extractHardwareHash
+    *
+    * @return bool The extractHardwareHash
+    */
+    public function getExtractHardwareHash()
+    {
+        if (array_key_exists("extractHardwareHash", $this->_propDict)) {
+            return $this->_propDict["extractHardwareHash"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the extractHardwareHash
+    *
+    * @param bool $val The extractHardwareHash
+    *
+    * @return WindowsAutopilotDeploymentProfile
+    */
+    public function setExtractHardwareHash($val)
+    {
+        $this->_propDict["extractHardwareHash"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the deviceNameTemplate
+    *
+    * @return string The deviceNameTemplate
+    */
+    public function getDeviceNameTemplate()
+    {
+        if (array_key_exists("deviceNameTemplate", $this->_propDict)) {
+            return $this->_propDict["deviceNameTemplate"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the deviceNameTemplate
+    *
+    * @param string $val The deviceNameTemplate
+    *
+    * @return WindowsAutopilotDeploymentProfile
+    */
+    public function setDeviceNameTemplate($val)
+    {
+        $this->_propDict["deviceNameTemplate"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the assignedDevices
@@ -198,6 +310,34 @@ class WindowsAutopilotDeploymentProfile extends Entity
     public function setAssignedDevices($val)
     {
 		$this->_propDict["assignedDevices"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the assignments
+     *
+     * @return array The assignments
+     */
+    public function getAssignments()
+    {
+        if (array_key_exists("assignments", $this->_propDict)) {
+           return $this->_propDict["assignments"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the assignments
+    *
+    * @param WindowsAutopilotDeploymentProfileAssignment $val The assignments
+    *
+    * @return WindowsAutopilotDeploymentProfile
+    */
+    public function setAssignments($val)
+    {
+		$this->_propDict["assignments"] = $val;
         return $this;
     }
     

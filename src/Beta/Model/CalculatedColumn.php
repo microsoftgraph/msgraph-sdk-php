@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -18,16 +18,15 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class CalculatedColumn extends Entity
 {
     /**
     * Gets the format
-    * For dateTime output types, the format of the value. Must be one of dateOnly or dateTime.
     *
     * @return string The format
     */
@@ -42,7 +41,6 @@ class CalculatedColumn extends Entity
 
     /**
     * Sets the format
-    * For dateTime output types, the format of the value. Must be one of dateOnly or dateTime.
     *
     * @param string $val The value of the format
     *
@@ -55,7 +53,6 @@ class CalculatedColumn extends Entity
     }
     /**
     * Gets the formula
-    * The formula used to compute the value for this column.
     *
     * @return string The formula
     */
@@ -70,7 +67,6 @@ class CalculatedColumn extends Entity
 
     /**
     * Sets the formula
-    * The formula used to compute the value for this column.
     *
     * @param string $val The value of the formula
     *
@@ -83,7 +79,6 @@ class CalculatedColumn extends Entity
     }
     /**
     * Gets the outputType
-    * The output type used to format values in this column. Must be one of boolean, currency, dateTime, number, or text.
     *
     * @return string The outputType
     */
@@ -98,7 +93,6 @@ class CalculatedColumn extends Entity
 
     /**
     * Sets the outputType
-    * The output type used to format values in this column. Must be one of boolean, currency, dateTime, number, or text.
     *
     * @param string $val The value of the outputType
     *

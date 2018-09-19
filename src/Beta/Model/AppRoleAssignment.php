@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,13 +19,40 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class AppRoleAssignment extends Entity
 {
+    /**
+    * Gets the appRoleId
+    *
+    * @return string The appRoleId
+    */
+    public function getAppRoleId()
+    {
+        if (array_key_exists("appRoleId", $this->_propDict)) {
+            return $this->_propDict["appRoleId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the appRoleId
+    *
+    * @param string $val The appRoleId
+    *
+    * @return AppRoleAssignment
+    */
+    public function setAppRoleId($val)
+    {
+        $this->_propDict["appRoleId"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the creationTimestamp
     *

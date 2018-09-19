@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -18,9 +18,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class WindowsFirewallNetworkProfile extends Entity
@@ -57,6 +57,32 @@ class WindowsFirewallNetworkProfile extends Entity
          return $this;
     }
     /**
+    * Gets the stealthModeRequired
+    *
+    * @return bool The stealthModeRequired
+    */
+    public function getStealthModeRequired()
+    {
+        if (array_key_exists("stealthModeRequired", $this->_propDict)) {
+            return $this->_propDict["stealthModeRequired"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the stealthModeRequired
+    *
+    * @param bool $val The value of the stealthModeRequired
+    *
+    * @return WindowsFirewallNetworkProfile
+    */
+    public function setStealthModeRequired($val)
+    {
+        $this->_propDict["stealthModeRequired"] = $val;
+        return $this;
+    }
+    /**
     * Gets the stealthModeBlocked
     *
     * @return bool The stealthModeBlocked
@@ -80,6 +106,32 @@ class WindowsFirewallNetworkProfile extends Entity
     public function setStealthModeBlocked($val)
     {
         $this->_propDict["stealthModeBlocked"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the incomingTrafficRequired
+    *
+    * @return bool The incomingTrafficRequired
+    */
+    public function getIncomingTrafficRequired()
+    {
+        if (array_key_exists("incomingTrafficRequired", $this->_propDict)) {
+            return $this->_propDict["incomingTrafficRequired"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the incomingTrafficRequired
+    *
+    * @param bool $val The value of the incomingTrafficRequired
+    *
+    * @return WindowsFirewallNetworkProfile
+    */
+    public function setIncomingTrafficRequired($val)
+    {
+        $this->_propDict["incomingTrafficRequired"] = $val;
         return $this;
     }
     /**
@@ -109,6 +161,32 @@ class WindowsFirewallNetworkProfile extends Entity
         return $this;
     }
     /**
+    * Gets the unicastResponsesToMulticastBroadcastsRequired
+    *
+    * @return bool The unicastResponsesToMulticastBroadcastsRequired
+    */
+    public function getUnicastResponsesToMulticastBroadcastsRequired()
+    {
+        if (array_key_exists("unicastResponsesToMulticastBroadcastsRequired", $this->_propDict)) {
+            return $this->_propDict["unicastResponsesToMulticastBroadcastsRequired"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the unicastResponsesToMulticastBroadcastsRequired
+    *
+    * @param bool $val The value of the unicastResponsesToMulticastBroadcastsRequired
+    *
+    * @return WindowsFirewallNetworkProfile
+    */
+    public function setUnicastResponsesToMulticastBroadcastsRequired($val)
+    {
+        $this->_propDict["unicastResponsesToMulticastBroadcastsRequired"] = $val;
+        return $this;
+    }
+    /**
     * Gets the unicastResponsesToMulticastBroadcastsBlocked
     *
     * @return bool The unicastResponsesToMulticastBroadcastsBlocked
@@ -132,6 +210,32 @@ class WindowsFirewallNetworkProfile extends Entity
     public function setUnicastResponsesToMulticastBroadcastsBlocked($val)
     {
         $this->_propDict["unicastResponsesToMulticastBroadcastsBlocked"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the inboundNotificationsRequired
+    *
+    * @return bool The inboundNotificationsRequired
+    */
+    public function getInboundNotificationsRequired()
+    {
+        if (array_key_exists("inboundNotificationsRequired", $this->_propDict)) {
+            return $this->_propDict["inboundNotificationsRequired"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the inboundNotificationsRequired
+    *
+    * @param bool $val The value of the inboundNotificationsRequired
+    *
+    * @return WindowsFirewallNetworkProfile
+    */
+    public function setInboundNotificationsRequired($val)
+    {
+        $this->_propDict["inboundNotificationsRequired"] = $val;
         return $this;
     }
     /**
@@ -187,6 +291,32 @@ class WindowsFirewallNetworkProfile extends Entity
         return $this;
     }
     /**
+    * Gets the authorizedApplicationRulesFromGroupPolicyNotMerged
+    *
+    * @return bool The authorizedApplicationRulesFromGroupPolicyNotMerged
+    */
+    public function getAuthorizedApplicationRulesFromGroupPolicyNotMerged()
+    {
+        if (array_key_exists("authorizedApplicationRulesFromGroupPolicyNotMerged", $this->_propDict)) {
+            return $this->_propDict["authorizedApplicationRulesFromGroupPolicyNotMerged"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the authorizedApplicationRulesFromGroupPolicyNotMerged
+    *
+    * @param bool $val The value of the authorizedApplicationRulesFromGroupPolicyNotMerged
+    *
+    * @return WindowsFirewallNetworkProfile
+    */
+    public function setAuthorizedApplicationRulesFromGroupPolicyNotMerged($val)
+    {
+        $this->_propDict["authorizedApplicationRulesFromGroupPolicyNotMerged"] = $val;
+        return $this;
+    }
+    /**
     * Gets the globalPortRulesFromGroupPolicyMerged
     *
     * @return bool The globalPortRulesFromGroupPolicyMerged
@@ -210,6 +340,32 @@ class WindowsFirewallNetworkProfile extends Entity
     public function setGlobalPortRulesFromGroupPolicyMerged($val)
     {
         $this->_propDict["globalPortRulesFromGroupPolicyMerged"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the globalPortRulesFromGroupPolicyNotMerged
+    *
+    * @return bool The globalPortRulesFromGroupPolicyNotMerged
+    */
+    public function getGlobalPortRulesFromGroupPolicyNotMerged()
+    {
+        if (array_key_exists("globalPortRulesFromGroupPolicyNotMerged", $this->_propDict)) {
+            return $this->_propDict["globalPortRulesFromGroupPolicyNotMerged"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the globalPortRulesFromGroupPolicyNotMerged
+    *
+    * @param bool $val The value of the globalPortRulesFromGroupPolicyNotMerged
+    *
+    * @return WindowsFirewallNetworkProfile
+    */
+    public function setGlobalPortRulesFromGroupPolicyNotMerged($val)
+    {
+        $this->_propDict["globalPortRulesFromGroupPolicyNotMerged"] = $val;
         return $this;
     }
     /**
@@ -239,6 +395,58 @@ class WindowsFirewallNetworkProfile extends Entity
         return $this;
     }
     /**
+    * Gets the connectionSecurityRulesFromGroupPolicyNotMerged
+    *
+    * @return bool The connectionSecurityRulesFromGroupPolicyNotMerged
+    */
+    public function getConnectionSecurityRulesFromGroupPolicyNotMerged()
+    {
+        if (array_key_exists("connectionSecurityRulesFromGroupPolicyNotMerged", $this->_propDict)) {
+            return $this->_propDict["connectionSecurityRulesFromGroupPolicyNotMerged"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the connectionSecurityRulesFromGroupPolicyNotMerged
+    *
+    * @param bool $val The value of the connectionSecurityRulesFromGroupPolicyNotMerged
+    *
+    * @return WindowsFirewallNetworkProfile
+    */
+    public function setConnectionSecurityRulesFromGroupPolicyNotMerged($val)
+    {
+        $this->_propDict["connectionSecurityRulesFromGroupPolicyNotMerged"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the outboundConnectionsRequired
+    *
+    * @return bool The outboundConnectionsRequired
+    */
+    public function getOutboundConnectionsRequired()
+    {
+        if (array_key_exists("outboundConnectionsRequired", $this->_propDict)) {
+            return $this->_propDict["outboundConnectionsRequired"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the outboundConnectionsRequired
+    *
+    * @param bool $val The value of the outboundConnectionsRequired
+    *
+    * @return WindowsFirewallNetworkProfile
+    */
+    public function setOutboundConnectionsRequired($val)
+    {
+        $this->_propDict["outboundConnectionsRequired"] = $val;
+        return $this;
+    }
+    /**
     * Gets the outboundConnectionsBlocked
     *
     * @return bool The outboundConnectionsBlocked
@@ -262,6 +470,32 @@ class WindowsFirewallNetworkProfile extends Entity
     public function setOutboundConnectionsBlocked($val)
     {
         $this->_propDict["outboundConnectionsBlocked"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the inboundConnectionsRequired
+    *
+    * @return bool The inboundConnectionsRequired
+    */
+    public function getInboundConnectionsRequired()
+    {
+        if (array_key_exists("inboundConnectionsRequired", $this->_propDict)) {
+            return $this->_propDict["inboundConnectionsRequired"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the inboundConnectionsRequired
+    *
+    * @param bool $val The value of the inboundConnectionsRequired
+    *
+    * @return WindowsFirewallNetworkProfile
+    */
+    public function setInboundConnectionsRequired($val)
+    {
+        $this->_propDict["inboundConnectionsRequired"] = $val;
         return $this;
     }
     /**
@@ -317,6 +551,32 @@ class WindowsFirewallNetworkProfile extends Entity
         return $this;
     }
     /**
+    * Gets the securedPacketExemptionBlocked
+    *
+    * @return bool The securedPacketExemptionBlocked
+    */
+    public function getSecuredPacketExemptionBlocked()
+    {
+        if (array_key_exists("securedPacketExemptionBlocked", $this->_propDict)) {
+            return $this->_propDict["securedPacketExemptionBlocked"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the securedPacketExemptionBlocked
+    *
+    * @param bool $val The value of the securedPacketExemptionBlocked
+    *
+    * @return WindowsFirewallNetworkProfile
+    */
+    public function setSecuredPacketExemptionBlocked($val)
+    {
+        $this->_propDict["securedPacketExemptionBlocked"] = $val;
+        return $this;
+    }
+    /**
     * Gets the policyRulesFromGroupPolicyMerged
     *
     * @return bool The policyRulesFromGroupPolicyMerged
@@ -340,6 +600,32 @@ class WindowsFirewallNetworkProfile extends Entity
     public function setPolicyRulesFromGroupPolicyMerged($val)
     {
         $this->_propDict["policyRulesFromGroupPolicyMerged"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the policyRulesFromGroupPolicyNotMerged
+    *
+    * @return bool The policyRulesFromGroupPolicyNotMerged
+    */
+    public function getPolicyRulesFromGroupPolicyNotMerged()
+    {
+        if (array_key_exists("policyRulesFromGroupPolicyNotMerged", $this->_propDict)) {
+            return $this->_propDict["policyRulesFromGroupPolicyNotMerged"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the policyRulesFromGroupPolicyNotMerged
+    *
+    * @param bool $val The value of the policyRulesFromGroupPolicyNotMerged
+    *
+    * @return WindowsFirewallNetworkProfile
+    */
+    public function setPolicyRulesFromGroupPolicyNotMerged($val)
+    {
+        $this->_propDict["policyRulesFromGroupPolicyNotMerged"] = $val;
         return $this;
     }
 }

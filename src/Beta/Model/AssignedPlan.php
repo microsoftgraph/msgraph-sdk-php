@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -18,9 +18,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class AssignedPlan extends Entity
@@ -58,8 +58,6 @@ class AssignedPlan extends Entity
     }
     /**
     * Gets the capabilityStatus
-    * For example, "Enabled".
-
     *
     * @return string The capabilityStatus
     */
@@ -74,7 +72,6 @@ class AssignedPlan extends Entity
 
     /**
     * Sets the capabilityStatus
-    * For example, "Enabled".
     *
     * @param string $val The value of the capabilityStatus
     *
@@ -87,7 +84,6 @@ class AssignedPlan extends Entity
     }
     /**
     * Gets the service
-    * The name of the service; for example, "Exchange".
     *
     * @return string The service
     */
@@ -102,7 +98,6 @@ class AssignedPlan extends Entity
 
     /**
     * Sets the service
-    * The name of the service; for example, "Exchange".
     *
     * @param string $val The value of the service
     *

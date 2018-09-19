@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class IosScepCertificateProfile extends IosCertificateProfileBase
@@ -194,6 +194,65 @@ class IosScepCertificateProfile extends IosCertificateProfileBase
     public function setSubjectAlternativeNameFormatString($val)
     {
         $this->_propDict["subjectAlternativeNameFormatString"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the certificateStore
+    *
+    * @return CertificateStore The certificateStore
+    */
+    public function getCertificateStore()
+    {
+        if (array_key_exists("certificateStore", $this->_propDict)) {
+            if (is_a($this->_propDict["certificateStore"], "Microsoft\Graph\Beta\Model\CertificateStore")) {
+                return $this->_propDict["certificateStore"];
+            } else {
+                $this->_propDict["certificateStore"] = new CertificateStore($this->_propDict["certificateStore"]);
+                return $this->_propDict["certificateStore"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the certificateStore
+    *
+    * @param CertificateStore $val The certificateStore
+    *
+    * @return IosScepCertificateProfile
+    */
+    public function setCertificateStore($val)
+    {
+        $this->_propDict["certificateStore"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the customSubjectAlternativeNames
+     *
+     * @return array The customSubjectAlternativeNames
+     */
+    public function getCustomSubjectAlternativeNames()
+    {
+        if (array_key_exists("customSubjectAlternativeNames", $this->_propDict)) {
+           return $this->_propDict["customSubjectAlternativeNames"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the customSubjectAlternativeNames
+    *
+    * @param CustomSubjectAlternativeName $val The customSubjectAlternativeNames
+    *
+    * @return IosScepCertificateProfile
+    */
+    public function setCustomSubjectAlternativeNames($val)
+    {
+		$this->_propDict["customSubjectAlternativeNames"] = $val;
         return $this;
     }
     

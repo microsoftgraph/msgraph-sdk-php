@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,13 +19,1063 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
 {
+    /**
+    * Gets the userRightsAccessCredentialManagerAsTrustedCaller
+    *
+    * @return DeviceManagementUserRightsSetting The userRightsAccessCredentialManagerAsTrustedCaller
+    */
+    public function getUserRightsAccessCredentialManagerAsTrustedCaller()
+    {
+        if (array_key_exists("userRightsAccessCredentialManagerAsTrustedCaller", $this->_propDict)) {
+            if (is_a($this->_propDict["userRightsAccessCredentialManagerAsTrustedCaller"], "Microsoft\Graph\Beta\Model\DeviceManagementUserRightsSetting")) {
+                return $this->_propDict["userRightsAccessCredentialManagerAsTrustedCaller"];
+            } else {
+                $this->_propDict["userRightsAccessCredentialManagerAsTrustedCaller"] = new DeviceManagementUserRightsSetting($this->_propDict["userRightsAccessCredentialManagerAsTrustedCaller"]);
+                return $this->_propDict["userRightsAccessCredentialManagerAsTrustedCaller"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the userRightsAccessCredentialManagerAsTrustedCaller
+    *
+    * @param DeviceManagementUserRightsSetting $val The userRightsAccessCredentialManagerAsTrustedCaller
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setUserRightsAccessCredentialManagerAsTrustedCaller($val)
+    {
+        $this->_propDict["userRightsAccessCredentialManagerAsTrustedCaller"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userRightsAllowAccessFromNetwork
+    *
+    * @return DeviceManagementUserRightsSetting The userRightsAllowAccessFromNetwork
+    */
+    public function getUserRightsAllowAccessFromNetwork()
+    {
+        if (array_key_exists("userRightsAllowAccessFromNetwork", $this->_propDict)) {
+            if (is_a($this->_propDict["userRightsAllowAccessFromNetwork"], "Microsoft\Graph\Beta\Model\DeviceManagementUserRightsSetting")) {
+                return $this->_propDict["userRightsAllowAccessFromNetwork"];
+            } else {
+                $this->_propDict["userRightsAllowAccessFromNetwork"] = new DeviceManagementUserRightsSetting($this->_propDict["userRightsAllowAccessFromNetwork"]);
+                return $this->_propDict["userRightsAllowAccessFromNetwork"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the userRightsAllowAccessFromNetwork
+    *
+    * @param DeviceManagementUserRightsSetting $val The userRightsAllowAccessFromNetwork
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setUserRightsAllowAccessFromNetwork($val)
+    {
+        $this->_propDict["userRightsAllowAccessFromNetwork"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userRightsBlockAccessFromNetwork
+    *
+    * @return DeviceManagementUserRightsSetting The userRightsBlockAccessFromNetwork
+    */
+    public function getUserRightsBlockAccessFromNetwork()
+    {
+        if (array_key_exists("userRightsBlockAccessFromNetwork", $this->_propDict)) {
+            if (is_a($this->_propDict["userRightsBlockAccessFromNetwork"], "Microsoft\Graph\Beta\Model\DeviceManagementUserRightsSetting")) {
+                return $this->_propDict["userRightsBlockAccessFromNetwork"];
+            } else {
+                $this->_propDict["userRightsBlockAccessFromNetwork"] = new DeviceManagementUserRightsSetting($this->_propDict["userRightsBlockAccessFromNetwork"]);
+                return $this->_propDict["userRightsBlockAccessFromNetwork"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the userRightsBlockAccessFromNetwork
+    *
+    * @param DeviceManagementUserRightsSetting $val The userRightsBlockAccessFromNetwork
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setUserRightsBlockAccessFromNetwork($val)
+    {
+        $this->_propDict["userRightsBlockAccessFromNetwork"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userRightsActAsPartOfTheOperatingSystem
+    *
+    * @return DeviceManagementUserRightsSetting The userRightsActAsPartOfTheOperatingSystem
+    */
+    public function getUserRightsActAsPartOfTheOperatingSystem()
+    {
+        if (array_key_exists("userRightsActAsPartOfTheOperatingSystem", $this->_propDict)) {
+            if (is_a($this->_propDict["userRightsActAsPartOfTheOperatingSystem"], "Microsoft\Graph\Beta\Model\DeviceManagementUserRightsSetting")) {
+                return $this->_propDict["userRightsActAsPartOfTheOperatingSystem"];
+            } else {
+                $this->_propDict["userRightsActAsPartOfTheOperatingSystem"] = new DeviceManagementUserRightsSetting($this->_propDict["userRightsActAsPartOfTheOperatingSystem"]);
+                return $this->_propDict["userRightsActAsPartOfTheOperatingSystem"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the userRightsActAsPartOfTheOperatingSystem
+    *
+    * @param DeviceManagementUserRightsSetting $val The userRightsActAsPartOfTheOperatingSystem
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setUserRightsActAsPartOfTheOperatingSystem($val)
+    {
+        $this->_propDict["userRightsActAsPartOfTheOperatingSystem"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userRightsLocalLogOn
+    *
+    * @return DeviceManagementUserRightsSetting The userRightsLocalLogOn
+    */
+    public function getUserRightsLocalLogOn()
+    {
+        if (array_key_exists("userRightsLocalLogOn", $this->_propDict)) {
+            if (is_a($this->_propDict["userRightsLocalLogOn"], "Microsoft\Graph\Beta\Model\DeviceManagementUserRightsSetting")) {
+                return $this->_propDict["userRightsLocalLogOn"];
+            } else {
+                $this->_propDict["userRightsLocalLogOn"] = new DeviceManagementUserRightsSetting($this->_propDict["userRightsLocalLogOn"]);
+                return $this->_propDict["userRightsLocalLogOn"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the userRightsLocalLogOn
+    *
+    * @param DeviceManagementUserRightsSetting $val The userRightsLocalLogOn
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setUserRightsLocalLogOn($val)
+    {
+        $this->_propDict["userRightsLocalLogOn"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userRightsBackupData
+    *
+    * @return DeviceManagementUserRightsSetting The userRightsBackupData
+    */
+    public function getUserRightsBackupData()
+    {
+        if (array_key_exists("userRightsBackupData", $this->_propDict)) {
+            if (is_a($this->_propDict["userRightsBackupData"], "Microsoft\Graph\Beta\Model\DeviceManagementUserRightsSetting")) {
+                return $this->_propDict["userRightsBackupData"];
+            } else {
+                $this->_propDict["userRightsBackupData"] = new DeviceManagementUserRightsSetting($this->_propDict["userRightsBackupData"]);
+                return $this->_propDict["userRightsBackupData"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the userRightsBackupData
+    *
+    * @param DeviceManagementUserRightsSetting $val The userRightsBackupData
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setUserRightsBackupData($val)
+    {
+        $this->_propDict["userRightsBackupData"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userRightsChangeSystemTime
+    *
+    * @return DeviceManagementUserRightsSetting The userRightsChangeSystemTime
+    */
+    public function getUserRightsChangeSystemTime()
+    {
+        if (array_key_exists("userRightsChangeSystemTime", $this->_propDict)) {
+            if (is_a($this->_propDict["userRightsChangeSystemTime"], "Microsoft\Graph\Beta\Model\DeviceManagementUserRightsSetting")) {
+                return $this->_propDict["userRightsChangeSystemTime"];
+            } else {
+                $this->_propDict["userRightsChangeSystemTime"] = new DeviceManagementUserRightsSetting($this->_propDict["userRightsChangeSystemTime"]);
+                return $this->_propDict["userRightsChangeSystemTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the userRightsChangeSystemTime
+    *
+    * @param DeviceManagementUserRightsSetting $val The userRightsChangeSystemTime
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setUserRightsChangeSystemTime($val)
+    {
+        $this->_propDict["userRightsChangeSystemTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userRightsCreateGlobalObjects
+    *
+    * @return DeviceManagementUserRightsSetting The userRightsCreateGlobalObjects
+    */
+    public function getUserRightsCreateGlobalObjects()
+    {
+        if (array_key_exists("userRightsCreateGlobalObjects", $this->_propDict)) {
+            if (is_a($this->_propDict["userRightsCreateGlobalObjects"], "Microsoft\Graph\Beta\Model\DeviceManagementUserRightsSetting")) {
+                return $this->_propDict["userRightsCreateGlobalObjects"];
+            } else {
+                $this->_propDict["userRightsCreateGlobalObjects"] = new DeviceManagementUserRightsSetting($this->_propDict["userRightsCreateGlobalObjects"]);
+                return $this->_propDict["userRightsCreateGlobalObjects"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the userRightsCreateGlobalObjects
+    *
+    * @param DeviceManagementUserRightsSetting $val The userRightsCreateGlobalObjects
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setUserRightsCreateGlobalObjects($val)
+    {
+        $this->_propDict["userRightsCreateGlobalObjects"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userRightsCreatePageFile
+    *
+    * @return DeviceManagementUserRightsSetting The userRightsCreatePageFile
+    */
+    public function getUserRightsCreatePageFile()
+    {
+        if (array_key_exists("userRightsCreatePageFile", $this->_propDict)) {
+            if (is_a($this->_propDict["userRightsCreatePageFile"], "Microsoft\Graph\Beta\Model\DeviceManagementUserRightsSetting")) {
+                return $this->_propDict["userRightsCreatePageFile"];
+            } else {
+                $this->_propDict["userRightsCreatePageFile"] = new DeviceManagementUserRightsSetting($this->_propDict["userRightsCreatePageFile"]);
+                return $this->_propDict["userRightsCreatePageFile"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the userRightsCreatePageFile
+    *
+    * @param DeviceManagementUserRightsSetting $val The userRightsCreatePageFile
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setUserRightsCreatePageFile($val)
+    {
+        $this->_propDict["userRightsCreatePageFile"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userRightsCreatePermanentSharedObjects
+    *
+    * @return DeviceManagementUserRightsSetting The userRightsCreatePermanentSharedObjects
+    */
+    public function getUserRightsCreatePermanentSharedObjects()
+    {
+        if (array_key_exists("userRightsCreatePermanentSharedObjects", $this->_propDict)) {
+            if (is_a($this->_propDict["userRightsCreatePermanentSharedObjects"], "Microsoft\Graph\Beta\Model\DeviceManagementUserRightsSetting")) {
+                return $this->_propDict["userRightsCreatePermanentSharedObjects"];
+            } else {
+                $this->_propDict["userRightsCreatePermanentSharedObjects"] = new DeviceManagementUserRightsSetting($this->_propDict["userRightsCreatePermanentSharedObjects"]);
+                return $this->_propDict["userRightsCreatePermanentSharedObjects"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the userRightsCreatePermanentSharedObjects
+    *
+    * @param DeviceManagementUserRightsSetting $val The userRightsCreatePermanentSharedObjects
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setUserRightsCreatePermanentSharedObjects($val)
+    {
+        $this->_propDict["userRightsCreatePermanentSharedObjects"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userRightsCreateSymbolicLinks
+    *
+    * @return DeviceManagementUserRightsSetting The userRightsCreateSymbolicLinks
+    */
+    public function getUserRightsCreateSymbolicLinks()
+    {
+        if (array_key_exists("userRightsCreateSymbolicLinks", $this->_propDict)) {
+            if (is_a($this->_propDict["userRightsCreateSymbolicLinks"], "Microsoft\Graph\Beta\Model\DeviceManagementUserRightsSetting")) {
+                return $this->_propDict["userRightsCreateSymbolicLinks"];
+            } else {
+                $this->_propDict["userRightsCreateSymbolicLinks"] = new DeviceManagementUserRightsSetting($this->_propDict["userRightsCreateSymbolicLinks"]);
+                return $this->_propDict["userRightsCreateSymbolicLinks"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the userRightsCreateSymbolicLinks
+    *
+    * @param DeviceManagementUserRightsSetting $val The userRightsCreateSymbolicLinks
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setUserRightsCreateSymbolicLinks($val)
+    {
+        $this->_propDict["userRightsCreateSymbolicLinks"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userRightsCreateToken
+    *
+    * @return DeviceManagementUserRightsSetting The userRightsCreateToken
+    */
+    public function getUserRightsCreateToken()
+    {
+        if (array_key_exists("userRightsCreateToken", $this->_propDict)) {
+            if (is_a($this->_propDict["userRightsCreateToken"], "Microsoft\Graph\Beta\Model\DeviceManagementUserRightsSetting")) {
+                return $this->_propDict["userRightsCreateToken"];
+            } else {
+                $this->_propDict["userRightsCreateToken"] = new DeviceManagementUserRightsSetting($this->_propDict["userRightsCreateToken"]);
+                return $this->_propDict["userRightsCreateToken"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the userRightsCreateToken
+    *
+    * @param DeviceManagementUserRightsSetting $val The userRightsCreateToken
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setUserRightsCreateToken($val)
+    {
+        $this->_propDict["userRightsCreateToken"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userRightsDebugPrograms
+    *
+    * @return DeviceManagementUserRightsSetting The userRightsDebugPrograms
+    */
+    public function getUserRightsDebugPrograms()
+    {
+        if (array_key_exists("userRightsDebugPrograms", $this->_propDict)) {
+            if (is_a($this->_propDict["userRightsDebugPrograms"], "Microsoft\Graph\Beta\Model\DeviceManagementUserRightsSetting")) {
+                return $this->_propDict["userRightsDebugPrograms"];
+            } else {
+                $this->_propDict["userRightsDebugPrograms"] = new DeviceManagementUserRightsSetting($this->_propDict["userRightsDebugPrograms"]);
+                return $this->_propDict["userRightsDebugPrograms"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the userRightsDebugPrograms
+    *
+    * @param DeviceManagementUserRightsSetting $val The userRightsDebugPrograms
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setUserRightsDebugPrograms($val)
+    {
+        $this->_propDict["userRightsDebugPrograms"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userRightsRemoteDesktopServicesLogOn
+    *
+    * @return DeviceManagementUserRightsSetting The userRightsRemoteDesktopServicesLogOn
+    */
+    public function getUserRightsRemoteDesktopServicesLogOn()
+    {
+        if (array_key_exists("userRightsRemoteDesktopServicesLogOn", $this->_propDict)) {
+            if (is_a($this->_propDict["userRightsRemoteDesktopServicesLogOn"], "Microsoft\Graph\Beta\Model\DeviceManagementUserRightsSetting")) {
+                return $this->_propDict["userRightsRemoteDesktopServicesLogOn"];
+            } else {
+                $this->_propDict["userRightsRemoteDesktopServicesLogOn"] = new DeviceManagementUserRightsSetting($this->_propDict["userRightsRemoteDesktopServicesLogOn"]);
+                return $this->_propDict["userRightsRemoteDesktopServicesLogOn"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the userRightsRemoteDesktopServicesLogOn
+    *
+    * @param DeviceManagementUserRightsSetting $val The userRightsRemoteDesktopServicesLogOn
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setUserRightsRemoteDesktopServicesLogOn($val)
+    {
+        $this->_propDict["userRightsRemoteDesktopServicesLogOn"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userRightsDelegation
+    *
+    * @return DeviceManagementUserRightsSetting The userRightsDelegation
+    */
+    public function getUserRightsDelegation()
+    {
+        if (array_key_exists("userRightsDelegation", $this->_propDict)) {
+            if (is_a($this->_propDict["userRightsDelegation"], "Microsoft\Graph\Beta\Model\DeviceManagementUserRightsSetting")) {
+                return $this->_propDict["userRightsDelegation"];
+            } else {
+                $this->_propDict["userRightsDelegation"] = new DeviceManagementUserRightsSetting($this->_propDict["userRightsDelegation"]);
+                return $this->_propDict["userRightsDelegation"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the userRightsDelegation
+    *
+    * @param DeviceManagementUserRightsSetting $val The userRightsDelegation
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setUserRightsDelegation($val)
+    {
+        $this->_propDict["userRightsDelegation"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userRightsGenerateSecurityAudits
+    *
+    * @return DeviceManagementUserRightsSetting The userRightsGenerateSecurityAudits
+    */
+    public function getUserRightsGenerateSecurityAudits()
+    {
+        if (array_key_exists("userRightsGenerateSecurityAudits", $this->_propDict)) {
+            if (is_a($this->_propDict["userRightsGenerateSecurityAudits"], "Microsoft\Graph\Beta\Model\DeviceManagementUserRightsSetting")) {
+                return $this->_propDict["userRightsGenerateSecurityAudits"];
+            } else {
+                $this->_propDict["userRightsGenerateSecurityAudits"] = new DeviceManagementUserRightsSetting($this->_propDict["userRightsGenerateSecurityAudits"]);
+                return $this->_propDict["userRightsGenerateSecurityAudits"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the userRightsGenerateSecurityAudits
+    *
+    * @param DeviceManagementUserRightsSetting $val The userRightsGenerateSecurityAudits
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setUserRightsGenerateSecurityAudits($val)
+    {
+        $this->_propDict["userRightsGenerateSecurityAudits"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userRightsImpersonateClient
+    *
+    * @return DeviceManagementUserRightsSetting The userRightsImpersonateClient
+    */
+    public function getUserRightsImpersonateClient()
+    {
+        if (array_key_exists("userRightsImpersonateClient", $this->_propDict)) {
+            if (is_a($this->_propDict["userRightsImpersonateClient"], "Microsoft\Graph\Beta\Model\DeviceManagementUserRightsSetting")) {
+                return $this->_propDict["userRightsImpersonateClient"];
+            } else {
+                $this->_propDict["userRightsImpersonateClient"] = new DeviceManagementUserRightsSetting($this->_propDict["userRightsImpersonateClient"]);
+                return $this->_propDict["userRightsImpersonateClient"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the userRightsImpersonateClient
+    *
+    * @param DeviceManagementUserRightsSetting $val The userRightsImpersonateClient
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setUserRightsImpersonateClient($val)
+    {
+        $this->_propDict["userRightsImpersonateClient"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userRightsIncreaseSchedulingPriority
+    *
+    * @return DeviceManagementUserRightsSetting The userRightsIncreaseSchedulingPriority
+    */
+    public function getUserRightsIncreaseSchedulingPriority()
+    {
+        if (array_key_exists("userRightsIncreaseSchedulingPriority", $this->_propDict)) {
+            if (is_a($this->_propDict["userRightsIncreaseSchedulingPriority"], "Microsoft\Graph\Beta\Model\DeviceManagementUserRightsSetting")) {
+                return $this->_propDict["userRightsIncreaseSchedulingPriority"];
+            } else {
+                $this->_propDict["userRightsIncreaseSchedulingPriority"] = new DeviceManagementUserRightsSetting($this->_propDict["userRightsIncreaseSchedulingPriority"]);
+                return $this->_propDict["userRightsIncreaseSchedulingPriority"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the userRightsIncreaseSchedulingPriority
+    *
+    * @param DeviceManagementUserRightsSetting $val The userRightsIncreaseSchedulingPriority
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setUserRightsIncreaseSchedulingPriority($val)
+    {
+        $this->_propDict["userRightsIncreaseSchedulingPriority"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userRightsLoadUnloadDrivers
+    *
+    * @return DeviceManagementUserRightsSetting The userRightsLoadUnloadDrivers
+    */
+    public function getUserRightsLoadUnloadDrivers()
+    {
+        if (array_key_exists("userRightsLoadUnloadDrivers", $this->_propDict)) {
+            if (is_a($this->_propDict["userRightsLoadUnloadDrivers"], "Microsoft\Graph\Beta\Model\DeviceManagementUserRightsSetting")) {
+                return $this->_propDict["userRightsLoadUnloadDrivers"];
+            } else {
+                $this->_propDict["userRightsLoadUnloadDrivers"] = new DeviceManagementUserRightsSetting($this->_propDict["userRightsLoadUnloadDrivers"]);
+                return $this->_propDict["userRightsLoadUnloadDrivers"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the userRightsLoadUnloadDrivers
+    *
+    * @param DeviceManagementUserRightsSetting $val The userRightsLoadUnloadDrivers
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setUserRightsLoadUnloadDrivers($val)
+    {
+        $this->_propDict["userRightsLoadUnloadDrivers"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userRightsLockMemory
+    *
+    * @return DeviceManagementUserRightsSetting The userRightsLockMemory
+    */
+    public function getUserRightsLockMemory()
+    {
+        if (array_key_exists("userRightsLockMemory", $this->_propDict)) {
+            if (is_a($this->_propDict["userRightsLockMemory"], "Microsoft\Graph\Beta\Model\DeviceManagementUserRightsSetting")) {
+                return $this->_propDict["userRightsLockMemory"];
+            } else {
+                $this->_propDict["userRightsLockMemory"] = new DeviceManagementUserRightsSetting($this->_propDict["userRightsLockMemory"]);
+                return $this->_propDict["userRightsLockMemory"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the userRightsLockMemory
+    *
+    * @param DeviceManagementUserRightsSetting $val The userRightsLockMemory
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setUserRightsLockMemory($val)
+    {
+        $this->_propDict["userRightsLockMemory"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userRightsManageAuditingAndSecurityLogs
+    *
+    * @return DeviceManagementUserRightsSetting The userRightsManageAuditingAndSecurityLogs
+    */
+    public function getUserRightsManageAuditingAndSecurityLogs()
+    {
+        if (array_key_exists("userRightsManageAuditingAndSecurityLogs", $this->_propDict)) {
+            if (is_a($this->_propDict["userRightsManageAuditingAndSecurityLogs"], "Microsoft\Graph\Beta\Model\DeviceManagementUserRightsSetting")) {
+                return $this->_propDict["userRightsManageAuditingAndSecurityLogs"];
+            } else {
+                $this->_propDict["userRightsManageAuditingAndSecurityLogs"] = new DeviceManagementUserRightsSetting($this->_propDict["userRightsManageAuditingAndSecurityLogs"]);
+                return $this->_propDict["userRightsManageAuditingAndSecurityLogs"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the userRightsManageAuditingAndSecurityLogs
+    *
+    * @param DeviceManagementUserRightsSetting $val The userRightsManageAuditingAndSecurityLogs
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setUserRightsManageAuditingAndSecurityLogs($val)
+    {
+        $this->_propDict["userRightsManageAuditingAndSecurityLogs"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userRightsManageVolumes
+    *
+    * @return DeviceManagementUserRightsSetting The userRightsManageVolumes
+    */
+    public function getUserRightsManageVolumes()
+    {
+        if (array_key_exists("userRightsManageVolumes", $this->_propDict)) {
+            if (is_a($this->_propDict["userRightsManageVolumes"], "Microsoft\Graph\Beta\Model\DeviceManagementUserRightsSetting")) {
+                return $this->_propDict["userRightsManageVolumes"];
+            } else {
+                $this->_propDict["userRightsManageVolumes"] = new DeviceManagementUserRightsSetting($this->_propDict["userRightsManageVolumes"]);
+                return $this->_propDict["userRightsManageVolumes"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the userRightsManageVolumes
+    *
+    * @param DeviceManagementUserRightsSetting $val The userRightsManageVolumes
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setUserRightsManageVolumes($val)
+    {
+        $this->_propDict["userRightsManageVolumes"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userRightsModifyFirmwareEnvironment
+    *
+    * @return DeviceManagementUserRightsSetting The userRightsModifyFirmwareEnvironment
+    */
+    public function getUserRightsModifyFirmwareEnvironment()
+    {
+        if (array_key_exists("userRightsModifyFirmwareEnvironment", $this->_propDict)) {
+            if (is_a($this->_propDict["userRightsModifyFirmwareEnvironment"], "Microsoft\Graph\Beta\Model\DeviceManagementUserRightsSetting")) {
+                return $this->_propDict["userRightsModifyFirmwareEnvironment"];
+            } else {
+                $this->_propDict["userRightsModifyFirmwareEnvironment"] = new DeviceManagementUserRightsSetting($this->_propDict["userRightsModifyFirmwareEnvironment"]);
+                return $this->_propDict["userRightsModifyFirmwareEnvironment"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the userRightsModifyFirmwareEnvironment
+    *
+    * @param DeviceManagementUserRightsSetting $val The userRightsModifyFirmwareEnvironment
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setUserRightsModifyFirmwareEnvironment($val)
+    {
+        $this->_propDict["userRightsModifyFirmwareEnvironment"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userRightsModifyObjectLabels
+    *
+    * @return DeviceManagementUserRightsSetting The userRightsModifyObjectLabels
+    */
+    public function getUserRightsModifyObjectLabels()
+    {
+        if (array_key_exists("userRightsModifyObjectLabels", $this->_propDict)) {
+            if (is_a($this->_propDict["userRightsModifyObjectLabels"], "Microsoft\Graph\Beta\Model\DeviceManagementUserRightsSetting")) {
+                return $this->_propDict["userRightsModifyObjectLabels"];
+            } else {
+                $this->_propDict["userRightsModifyObjectLabels"] = new DeviceManagementUserRightsSetting($this->_propDict["userRightsModifyObjectLabels"]);
+                return $this->_propDict["userRightsModifyObjectLabels"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the userRightsModifyObjectLabels
+    *
+    * @param DeviceManagementUserRightsSetting $val The userRightsModifyObjectLabels
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setUserRightsModifyObjectLabels($val)
+    {
+        $this->_propDict["userRightsModifyObjectLabels"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userRightsProfileSingleProcess
+    *
+    * @return DeviceManagementUserRightsSetting The userRightsProfileSingleProcess
+    */
+    public function getUserRightsProfileSingleProcess()
+    {
+        if (array_key_exists("userRightsProfileSingleProcess", $this->_propDict)) {
+            if (is_a($this->_propDict["userRightsProfileSingleProcess"], "Microsoft\Graph\Beta\Model\DeviceManagementUserRightsSetting")) {
+                return $this->_propDict["userRightsProfileSingleProcess"];
+            } else {
+                $this->_propDict["userRightsProfileSingleProcess"] = new DeviceManagementUserRightsSetting($this->_propDict["userRightsProfileSingleProcess"]);
+                return $this->_propDict["userRightsProfileSingleProcess"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the userRightsProfileSingleProcess
+    *
+    * @param DeviceManagementUserRightsSetting $val The userRightsProfileSingleProcess
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setUserRightsProfileSingleProcess($val)
+    {
+        $this->_propDict["userRightsProfileSingleProcess"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userRightsRemoteShutdown
+    *
+    * @return DeviceManagementUserRightsSetting The userRightsRemoteShutdown
+    */
+    public function getUserRightsRemoteShutdown()
+    {
+        if (array_key_exists("userRightsRemoteShutdown", $this->_propDict)) {
+            if (is_a($this->_propDict["userRightsRemoteShutdown"], "Microsoft\Graph\Beta\Model\DeviceManagementUserRightsSetting")) {
+                return $this->_propDict["userRightsRemoteShutdown"];
+            } else {
+                $this->_propDict["userRightsRemoteShutdown"] = new DeviceManagementUserRightsSetting($this->_propDict["userRightsRemoteShutdown"]);
+                return $this->_propDict["userRightsRemoteShutdown"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the userRightsRemoteShutdown
+    *
+    * @param DeviceManagementUserRightsSetting $val The userRightsRemoteShutdown
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setUserRightsRemoteShutdown($val)
+    {
+        $this->_propDict["userRightsRemoteShutdown"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userRightsRestoreData
+    *
+    * @return DeviceManagementUserRightsSetting The userRightsRestoreData
+    */
+    public function getUserRightsRestoreData()
+    {
+        if (array_key_exists("userRightsRestoreData", $this->_propDict)) {
+            if (is_a($this->_propDict["userRightsRestoreData"], "Microsoft\Graph\Beta\Model\DeviceManagementUserRightsSetting")) {
+                return $this->_propDict["userRightsRestoreData"];
+            } else {
+                $this->_propDict["userRightsRestoreData"] = new DeviceManagementUserRightsSetting($this->_propDict["userRightsRestoreData"]);
+                return $this->_propDict["userRightsRestoreData"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the userRightsRestoreData
+    *
+    * @param DeviceManagementUserRightsSetting $val The userRightsRestoreData
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setUserRightsRestoreData($val)
+    {
+        $this->_propDict["userRightsRestoreData"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userRightsTakeOwnership
+    *
+    * @return DeviceManagementUserRightsSetting The userRightsTakeOwnership
+    */
+    public function getUserRightsTakeOwnership()
+    {
+        if (array_key_exists("userRightsTakeOwnership", $this->_propDict)) {
+            if (is_a($this->_propDict["userRightsTakeOwnership"], "Microsoft\Graph\Beta\Model\DeviceManagementUserRightsSetting")) {
+                return $this->_propDict["userRightsTakeOwnership"];
+            } else {
+                $this->_propDict["userRightsTakeOwnership"] = new DeviceManagementUserRightsSetting($this->_propDict["userRightsTakeOwnership"]);
+                return $this->_propDict["userRightsTakeOwnership"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the userRightsTakeOwnership
+    *
+    * @param DeviceManagementUserRightsSetting $val The userRightsTakeOwnership
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setUserRightsTakeOwnership($val)
+    {
+        $this->_propDict["userRightsTakeOwnership"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userRightsRegisterProcessAsService
+    *
+    * @return DeviceManagementUserRightsSetting The userRightsRegisterProcessAsService
+    */
+    public function getUserRightsRegisterProcessAsService()
+    {
+        if (array_key_exists("userRightsRegisterProcessAsService", $this->_propDict)) {
+            if (is_a($this->_propDict["userRightsRegisterProcessAsService"], "Microsoft\Graph\Beta\Model\DeviceManagementUserRightsSetting")) {
+                return $this->_propDict["userRightsRegisterProcessAsService"];
+            } else {
+                $this->_propDict["userRightsRegisterProcessAsService"] = new DeviceManagementUserRightsSetting($this->_propDict["userRightsRegisterProcessAsService"]);
+                return $this->_propDict["userRightsRegisterProcessAsService"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the userRightsRegisterProcessAsService
+    *
+    * @param DeviceManagementUserRightsSetting $val The userRightsRegisterProcessAsService
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setUserRightsRegisterProcessAsService($val)
+    {
+        $this->_propDict["userRightsRegisterProcessAsService"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the xboxServicesEnableXboxGameSaveTask
+    *
+    * @return bool The xboxServicesEnableXboxGameSaveTask
+    */
+    public function getXboxServicesEnableXboxGameSaveTask()
+    {
+        if (array_key_exists("xboxServicesEnableXboxGameSaveTask", $this->_propDict)) {
+            return $this->_propDict["xboxServicesEnableXboxGameSaveTask"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the xboxServicesEnableXboxGameSaveTask
+    *
+    * @param bool $val The xboxServicesEnableXboxGameSaveTask
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setXboxServicesEnableXboxGameSaveTask($val)
+    {
+        $this->_propDict["xboxServicesEnableXboxGameSaveTask"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the xboxServicesAccessoryManagementServiceStartupMode
+    *
+    * @return ServiceStartType The xboxServicesAccessoryManagementServiceStartupMode
+    */
+    public function getXboxServicesAccessoryManagementServiceStartupMode()
+    {
+        if (array_key_exists("xboxServicesAccessoryManagementServiceStartupMode", $this->_propDict)) {
+            if (is_a($this->_propDict["xboxServicesAccessoryManagementServiceStartupMode"], "Microsoft\Graph\Beta\Model\ServiceStartType")) {
+                return $this->_propDict["xboxServicesAccessoryManagementServiceStartupMode"];
+            } else {
+                $this->_propDict["xboxServicesAccessoryManagementServiceStartupMode"] = new ServiceStartType($this->_propDict["xboxServicesAccessoryManagementServiceStartupMode"]);
+                return $this->_propDict["xboxServicesAccessoryManagementServiceStartupMode"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the xboxServicesAccessoryManagementServiceStartupMode
+    *
+    * @param ServiceStartType $val The xboxServicesAccessoryManagementServiceStartupMode
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setXboxServicesAccessoryManagementServiceStartupMode($val)
+    {
+        $this->_propDict["xboxServicesAccessoryManagementServiceStartupMode"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the xboxServicesLiveAuthManagerServiceStartupMode
+    *
+    * @return ServiceStartType The xboxServicesLiveAuthManagerServiceStartupMode
+    */
+    public function getXboxServicesLiveAuthManagerServiceStartupMode()
+    {
+        if (array_key_exists("xboxServicesLiveAuthManagerServiceStartupMode", $this->_propDict)) {
+            if (is_a($this->_propDict["xboxServicesLiveAuthManagerServiceStartupMode"], "Microsoft\Graph\Beta\Model\ServiceStartType")) {
+                return $this->_propDict["xboxServicesLiveAuthManagerServiceStartupMode"];
+            } else {
+                $this->_propDict["xboxServicesLiveAuthManagerServiceStartupMode"] = new ServiceStartType($this->_propDict["xboxServicesLiveAuthManagerServiceStartupMode"]);
+                return $this->_propDict["xboxServicesLiveAuthManagerServiceStartupMode"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the xboxServicesLiveAuthManagerServiceStartupMode
+    *
+    * @param ServiceStartType $val The xboxServicesLiveAuthManagerServiceStartupMode
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setXboxServicesLiveAuthManagerServiceStartupMode($val)
+    {
+        $this->_propDict["xboxServicesLiveAuthManagerServiceStartupMode"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the xboxServicesLiveGameSaveServiceStartupMode
+    *
+    * @return ServiceStartType The xboxServicesLiveGameSaveServiceStartupMode
+    */
+    public function getXboxServicesLiveGameSaveServiceStartupMode()
+    {
+        if (array_key_exists("xboxServicesLiveGameSaveServiceStartupMode", $this->_propDict)) {
+            if (is_a($this->_propDict["xboxServicesLiveGameSaveServiceStartupMode"], "Microsoft\Graph\Beta\Model\ServiceStartType")) {
+                return $this->_propDict["xboxServicesLiveGameSaveServiceStartupMode"];
+            } else {
+                $this->_propDict["xboxServicesLiveGameSaveServiceStartupMode"] = new ServiceStartType($this->_propDict["xboxServicesLiveGameSaveServiceStartupMode"]);
+                return $this->_propDict["xboxServicesLiveGameSaveServiceStartupMode"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the xboxServicesLiveGameSaveServiceStartupMode
+    *
+    * @param ServiceStartType $val The xboxServicesLiveGameSaveServiceStartupMode
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setXboxServicesLiveGameSaveServiceStartupMode($val)
+    {
+        $this->_propDict["xboxServicesLiveGameSaveServiceStartupMode"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the xboxServicesLiveNetworkingServiceStartupMode
+    *
+    * @return ServiceStartType The xboxServicesLiveNetworkingServiceStartupMode
+    */
+    public function getXboxServicesLiveNetworkingServiceStartupMode()
+    {
+        if (array_key_exists("xboxServicesLiveNetworkingServiceStartupMode", $this->_propDict)) {
+            if (is_a($this->_propDict["xboxServicesLiveNetworkingServiceStartupMode"], "Microsoft\Graph\Beta\Model\ServiceStartType")) {
+                return $this->_propDict["xboxServicesLiveNetworkingServiceStartupMode"];
+            } else {
+                $this->_propDict["xboxServicesLiveNetworkingServiceStartupMode"] = new ServiceStartType($this->_propDict["xboxServicesLiveNetworkingServiceStartupMode"]);
+                return $this->_propDict["xboxServicesLiveNetworkingServiceStartupMode"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the xboxServicesLiveNetworkingServiceStartupMode
+    *
+    * @param ServiceStartType $val The xboxServicesLiveNetworkingServiceStartupMode
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setXboxServicesLiveNetworkingServiceStartupMode($val)
+    {
+        $this->_propDict["xboxServicesLiveNetworkingServiceStartupMode"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the localSecurityOptionsBlockMicrosoftAccounts
     *
@@ -328,6 +1378,33 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the localSecurityOptionsMachineInactivityLimitInMinutes
+    *
+    * @return int The localSecurityOptionsMachineInactivityLimitInMinutes
+    */
+    public function getLocalSecurityOptionsMachineInactivityLimitInMinutes()
+    {
+        if (array_key_exists("localSecurityOptionsMachineInactivityLimitInMinutes", $this->_propDict)) {
+            return $this->_propDict["localSecurityOptionsMachineInactivityLimitInMinutes"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the localSecurityOptionsMachineInactivityLimitInMinutes
+    *
+    * @param int $val The localSecurityOptionsMachineInactivityLimitInMinutes
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setLocalSecurityOptionsMachineInactivityLimitInMinutes($val)
+    {
+        $this->_propDict["localSecurityOptionsMachineInactivityLimitInMinutes"] = intval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the localSecurityOptionsDoNotRequireCtrlAltDel
     *
     * @return bool The localSecurityOptionsDoNotRequireCtrlAltDel
@@ -351,37 +1428,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     public function setLocalSecurityOptionsDoNotRequireCtrlAltDel($val)
     {
         $this->_propDict["localSecurityOptionsDoNotRequireCtrlAltDel"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the localSecurityOptionsInformationDisplayedOnLockScreen
-    *
-    * @return LocalSecurityOptionsInformationDisplayedOnLockScreenType The localSecurityOptionsInformationDisplayedOnLockScreen
-    */
-    public function getLocalSecurityOptionsInformationDisplayedOnLockScreen()
-    {
-        if (array_key_exists("localSecurityOptionsInformationDisplayedOnLockScreen", $this->_propDict)) {
-            if (is_a($this->_propDict["localSecurityOptionsInformationDisplayedOnLockScreen"], "Microsoft\Graph\Beta\Model\LocalSecurityOptionsInformationDisplayedOnLockScreenType")) {
-                return $this->_propDict["localSecurityOptionsInformationDisplayedOnLockScreen"];
-            } else {
-                $this->_propDict["localSecurityOptionsInformationDisplayedOnLockScreen"] = new LocalSecurityOptionsInformationDisplayedOnLockScreenType($this->_propDict["localSecurityOptionsInformationDisplayedOnLockScreen"]);
-                return $this->_propDict["localSecurityOptionsInformationDisplayedOnLockScreen"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the localSecurityOptionsInformationDisplayedOnLockScreen
-    *
-    * @param LocalSecurityOptionsInformationDisplayedOnLockScreenType $val The localSecurityOptionsInformationDisplayedOnLockScreen
-    *
-    * @return Windows10EndpointProtectionConfiguration
-    */
-    public function setLocalSecurityOptionsInformationDisplayedOnLockScreen($val)
-    {
-        $this->_propDict["localSecurityOptionsInformationDisplayedOnLockScreen"] = $val;
         return $this;
     }
     
@@ -521,6 +1567,33 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the localSecurityOptionsAllowRemoteCallsToSecurityAccountsManagerHelperBool
+    *
+    * @return bool The localSecurityOptionsAllowRemoteCallsToSecurityAccountsManagerHelperBool
+    */
+    public function getLocalSecurityOptionsAllowRemoteCallsToSecurityAccountsManagerHelperBool()
+    {
+        if (array_key_exists("localSecurityOptionsAllowRemoteCallsToSecurityAccountsManagerHelperBool", $this->_propDict)) {
+            return $this->_propDict["localSecurityOptionsAllowRemoteCallsToSecurityAccountsManagerHelperBool"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the localSecurityOptionsAllowRemoteCallsToSecurityAccountsManagerHelperBool
+    *
+    * @param bool $val The localSecurityOptionsAllowRemoteCallsToSecurityAccountsManagerHelperBool
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setLocalSecurityOptionsAllowRemoteCallsToSecurityAccountsManagerHelperBool($val)
+    {
+        $this->_propDict["localSecurityOptionsAllowRemoteCallsToSecurityAccountsManagerHelperBool"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the localSecurityOptionsAllowRemoteCallsToSecurityAccountsManager
     *
     * @return string The localSecurityOptionsAllowRemoteCallsToSecurityAccountsManager
@@ -544,6 +1617,126 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     public function setLocalSecurityOptionsAllowRemoteCallsToSecurityAccountsManager($val)
     {
         $this->_propDict["localSecurityOptionsAllowRemoteCallsToSecurityAccountsManager"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedClients
+    *
+    * @return LocalSecurityOptionsMinimumSessionSecurity The localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedClients
+    */
+    public function getLocalSecurityOptionsMinimumSessionSecurityForNtlmSspBasedClients()
+    {
+        if (array_key_exists("localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedClients", $this->_propDict)) {
+            if (is_a($this->_propDict["localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedClients"], "Microsoft\Graph\Beta\Model\LocalSecurityOptionsMinimumSessionSecurity")) {
+                return $this->_propDict["localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedClients"];
+            } else {
+                $this->_propDict["localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedClients"] = new LocalSecurityOptionsMinimumSessionSecurity($this->_propDict["localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedClients"]);
+                return $this->_propDict["localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedClients"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedClients
+    *
+    * @param LocalSecurityOptionsMinimumSessionSecurity $val The localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedClients
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setLocalSecurityOptionsMinimumSessionSecurityForNtlmSspBasedClients($val)
+    {
+        $this->_propDict["localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedClients"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedServers
+    *
+    * @return LocalSecurityOptionsMinimumSessionSecurity The localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedServers
+    */
+    public function getLocalSecurityOptionsMinimumSessionSecurityForNtlmSspBasedServers()
+    {
+        if (array_key_exists("localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedServers", $this->_propDict)) {
+            if (is_a($this->_propDict["localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedServers"], "Microsoft\Graph\Beta\Model\LocalSecurityOptionsMinimumSessionSecurity")) {
+                return $this->_propDict["localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedServers"];
+            } else {
+                $this->_propDict["localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedServers"] = new LocalSecurityOptionsMinimumSessionSecurity($this->_propDict["localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedServers"]);
+                return $this->_propDict["localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedServers"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedServers
+    *
+    * @param LocalSecurityOptionsMinimumSessionSecurity $val The localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedServers
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setLocalSecurityOptionsMinimumSessionSecurityForNtlmSspBasedServers($val)
+    {
+        $this->_propDict["localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedServers"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the lanManagerAuthenticationLevel
+    *
+    * @return LanManagerAuthenticationLevel The lanManagerAuthenticationLevel
+    */
+    public function getLanManagerAuthenticationLevel()
+    {
+        if (array_key_exists("lanManagerAuthenticationLevel", $this->_propDict)) {
+            if (is_a($this->_propDict["lanManagerAuthenticationLevel"], "Microsoft\Graph\Beta\Model\LanManagerAuthenticationLevel")) {
+                return $this->_propDict["lanManagerAuthenticationLevel"];
+            } else {
+                $this->_propDict["lanManagerAuthenticationLevel"] = new LanManagerAuthenticationLevel($this->_propDict["lanManagerAuthenticationLevel"]);
+                return $this->_propDict["lanManagerAuthenticationLevel"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the lanManagerAuthenticationLevel
+    *
+    * @param LanManagerAuthenticationLevel $val The lanManagerAuthenticationLevel
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setLanManagerAuthenticationLevel($val)
+    {
+        $this->_propDict["lanManagerAuthenticationLevel"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the lanManagerWorkstationEnableInsecureGuestLogons
+    *
+    * @return bool The lanManagerWorkstationEnableInsecureGuestLogons
+    */
+    public function getLanManagerWorkstationEnableInsecureGuestLogons()
+    {
+        if (array_key_exists("lanManagerWorkstationEnableInsecureGuestLogons", $this->_propDict)) {
+            return $this->_propDict["lanManagerWorkstationEnableInsecureGuestLogons"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the lanManagerWorkstationEnableInsecureGuestLogons
+    *
+    * @param bool $val The lanManagerWorkstationEnableInsecureGuestLogons
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setLanManagerWorkstationEnableInsecureGuestLogons($val)
+    {
+        $this->_propDict["lanManagerWorkstationEnableInsecureGuestLogons"] = boolval($val);
         return $this;
     }
     
@@ -880,6 +2073,342 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the localSecurityOptionsInformationShownOnLockScreen
+    *
+    * @return LocalSecurityOptionsInformationShownOnLockScreenType The localSecurityOptionsInformationShownOnLockScreen
+    */
+    public function getLocalSecurityOptionsInformationShownOnLockScreen()
+    {
+        if (array_key_exists("localSecurityOptionsInformationShownOnLockScreen", $this->_propDict)) {
+            if (is_a($this->_propDict["localSecurityOptionsInformationShownOnLockScreen"], "Microsoft\Graph\Beta\Model\LocalSecurityOptionsInformationShownOnLockScreenType")) {
+                return $this->_propDict["localSecurityOptionsInformationShownOnLockScreen"];
+            } else {
+                $this->_propDict["localSecurityOptionsInformationShownOnLockScreen"] = new LocalSecurityOptionsInformationShownOnLockScreenType($this->_propDict["localSecurityOptionsInformationShownOnLockScreen"]);
+                return $this->_propDict["localSecurityOptionsInformationShownOnLockScreen"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the localSecurityOptionsInformationShownOnLockScreen
+    *
+    * @param LocalSecurityOptionsInformationShownOnLockScreenType $val The localSecurityOptionsInformationShownOnLockScreen
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setLocalSecurityOptionsInformationShownOnLockScreen($val)
+    {
+        $this->_propDict["localSecurityOptionsInformationShownOnLockScreen"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the localSecurityOptionsInformationDisplayedOnLockScreen
+    *
+    * @return LocalSecurityOptionsInformationDisplayedOnLockScreenType The localSecurityOptionsInformationDisplayedOnLockScreen
+    */
+    public function getLocalSecurityOptionsInformationDisplayedOnLockScreen()
+    {
+        if (array_key_exists("localSecurityOptionsInformationDisplayedOnLockScreen", $this->_propDict)) {
+            if (is_a($this->_propDict["localSecurityOptionsInformationDisplayedOnLockScreen"], "Microsoft\Graph\Beta\Model\LocalSecurityOptionsInformationDisplayedOnLockScreenType")) {
+                return $this->_propDict["localSecurityOptionsInformationDisplayedOnLockScreen"];
+            } else {
+                $this->_propDict["localSecurityOptionsInformationDisplayedOnLockScreen"] = new LocalSecurityOptionsInformationDisplayedOnLockScreenType($this->_propDict["localSecurityOptionsInformationDisplayedOnLockScreen"]);
+                return $this->_propDict["localSecurityOptionsInformationDisplayedOnLockScreen"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the localSecurityOptionsInformationDisplayedOnLockScreen
+    *
+    * @param LocalSecurityOptionsInformationDisplayedOnLockScreenType $val The localSecurityOptionsInformationDisplayedOnLockScreen
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setLocalSecurityOptionsInformationDisplayedOnLockScreen($val)
+    {
+        $this->_propDict["localSecurityOptionsInformationDisplayedOnLockScreen"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the localSecurityOptionsDisableClientDigitallySignCommunicationsIfServerAgrees
+    *
+    * @return bool The localSecurityOptionsDisableClientDigitallySignCommunicationsIfServerAgrees
+    */
+    public function getLocalSecurityOptionsDisableClientDigitallySignCommunicationsIfServerAgrees()
+    {
+        if (array_key_exists("localSecurityOptionsDisableClientDigitallySignCommunicationsIfServerAgrees", $this->_propDict)) {
+            return $this->_propDict["localSecurityOptionsDisableClientDigitallySignCommunicationsIfServerAgrees"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the localSecurityOptionsDisableClientDigitallySignCommunicationsIfServerAgrees
+    *
+    * @param bool $val The localSecurityOptionsDisableClientDigitallySignCommunicationsIfServerAgrees
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setLocalSecurityOptionsDisableClientDigitallySignCommunicationsIfServerAgrees($val)
+    {
+        $this->_propDict["localSecurityOptionsDisableClientDigitallySignCommunicationsIfServerAgrees"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the localSecurityOptionsClientDigitallySignCommunicationsAlways
+    *
+    * @return bool The localSecurityOptionsClientDigitallySignCommunicationsAlways
+    */
+    public function getLocalSecurityOptionsClientDigitallySignCommunicationsAlways()
+    {
+        if (array_key_exists("localSecurityOptionsClientDigitallySignCommunicationsAlways", $this->_propDict)) {
+            return $this->_propDict["localSecurityOptionsClientDigitallySignCommunicationsAlways"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the localSecurityOptionsClientDigitallySignCommunicationsAlways
+    *
+    * @param bool $val The localSecurityOptionsClientDigitallySignCommunicationsAlways
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setLocalSecurityOptionsClientDigitallySignCommunicationsAlways($val)
+    {
+        $this->_propDict["localSecurityOptionsClientDigitallySignCommunicationsAlways"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the localSecurityOptionsClientSendUnencryptedPasswordToThirdPartySMBServers
+    *
+    * @return bool The localSecurityOptionsClientSendUnencryptedPasswordToThirdPartySMBServers
+    */
+    public function getLocalSecurityOptionsClientSendUnencryptedPasswordToThirdPartySMBServers()
+    {
+        if (array_key_exists("localSecurityOptionsClientSendUnencryptedPasswordToThirdPartySMBServers", $this->_propDict)) {
+            return $this->_propDict["localSecurityOptionsClientSendUnencryptedPasswordToThirdPartySMBServers"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the localSecurityOptionsClientSendUnencryptedPasswordToThirdPartySMBServers
+    *
+    * @param bool $val The localSecurityOptionsClientSendUnencryptedPasswordToThirdPartySMBServers
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setLocalSecurityOptionsClientSendUnencryptedPasswordToThirdPartySMBServers($val)
+    {
+        $this->_propDict["localSecurityOptionsClientSendUnencryptedPasswordToThirdPartySMBServers"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the localSecurityOptionsDisableServerDigitallySignCommunicationsAlways
+    *
+    * @return bool The localSecurityOptionsDisableServerDigitallySignCommunicationsAlways
+    */
+    public function getLocalSecurityOptionsDisableServerDigitallySignCommunicationsAlways()
+    {
+        if (array_key_exists("localSecurityOptionsDisableServerDigitallySignCommunicationsAlways", $this->_propDict)) {
+            return $this->_propDict["localSecurityOptionsDisableServerDigitallySignCommunicationsAlways"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the localSecurityOptionsDisableServerDigitallySignCommunicationsAlways
+    *
+    * @param bool $val The localSecurityOptionsDisableServerDigitallySignCommunicationsAlways
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setLocalSecurityOptionsDisableServerDigitallySignCommunicationsAlways($val)
+    {
+        $this->_propDict["localSecurityOptionsDisableServerDigitallySignCommunicationsAlways"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the localSecurityOptionsDisableServerDigitallySignCommunicationsIfClientAgrees
+    *
+    * @return bool The localSecurityOptionsDisableServerDigitallySignCommunicationsIfClientAgrees
+    */
+    public function getLocalSecurityOptionsDisableServerDigitallySignCommunicationsIfClientAgrees()
+    {
+        if (array_key_exists("localSecurityOptionsDisableServerDigitallySignCommunicationsIfClientAgrees", $this->_propDict)) {
+            return $this->_propDict["localSecurityOptionsDisableServerDigitallySignCommunicationsIfClientAgrees"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the localSecurityOptionsDisableServerDigitallySignCommunicationsIfClientAgrees
+    *
+    * @param bool $val The localSecurityOptionsDisableServerDigitallySignCommunicationsIfClientAgrees
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setLocalSecurityOptionsDisableServerDigitallySignCommunicationsIfClientAgrees($val)
+    {
+        $this->_propDict["localSecurityOptionsDisableServerDigitallySignCommunicationsIfClientAgrees"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the localSecurityOptionsRestrictAnonymousAccessToNamedPipesAndShares
+    *
+    * @return bool The localSecurityOptionsRestrictAnonymousAccessToNamedPipesAndShares
+    */
+    public function getLocalSecurityOptionsRestrictAnonymousAccessToNamedPipesAndShares()
+    {
+        if (array_key_exists("localSecurityOptionsRestrictAnonymousAccessToNamedPipesAndShares", $this->_propDict)) {
+            return $this->_propDict["localSecurityOptionsRestrictAnonymousAccessToNamedPipesAndShares"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the localSecurityOptionsRestrictAnonymousAccessToNamedPipesAndShares
+    *
+    * @param bool $val The localSecurityOptionsRestrictAnonymousAccessToNamedPipesAndShares
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setLocalSecurityOptionsRestrictAnonymousAccessToNamedPipesAndShares($val)
+    {
+        $this->_propDict["localSecurityOptionsRestrictAnonymousAccessToNamedPipesAndShares"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the localSecurityOptionsDoNotAllowAnonymousEnumerationOfSAMAccounts
+    *
+    * @return bool The localSecurityOptionsDoNotAllowAnonymousEnumerationOfSAMAccounts
+    */
+    public function getLocalSecurityOptionsDoNotAllowAnonymousEnumerationOfSAMAccounts()
+    {
+        if (array_key_exists("localSecurityOptionsDoNotAllowAnonymousEnumerationOfSAMAccounts", $this->_propDict)) {
+            return $this->_propDict["localSecurityOptionsDoNotAllowAnonymousEnumerationOfSAMAccounts"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the localSecurityOptionsDoNotAllowAnonymousEnumerationOfSAMAccounts
+    *
+    * @param bool $val The localSecurityOptionsDoNotAllowAnonymousEnumerationOfSAMAccounts
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setLocalSecurityOptionsDoNotAllowAnonymousEnumerationOfSAMAccounts($val)
+    {
+        $this->_propDict["localSecurityOptionsDoNotAllowAnonymousEnumerationOfSAMAccounts"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the localSecurityOptionsAllowAnonymousEnumerationOfSAMAccountsAndShares
+    *
+    * @return bool The localSecurityOptionsAllowAnonymousEnumerationOfSAMAccountsAndShares
+    */
+    public function getLocalSecurityOptionsAllowAnonymousEnumerationOfSAMAccountsAndShares()
+    {
+        if (array_key_exists("localSecurityOptionsAllowAnonymousEnumerationOfSAMAccountsAndShares", $this->_propDict)) {
+            return $this->_propDict["localSecurityOptionsAllowAnonymousEnumerationOfSAMAccountsAndShares"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the localSecurityOptionsAllowAnonymousEnumerationOfSAMAccountsAndShares
+    *
+    * @param bool $val The localSecurityOptionsAllowAnonymousEnumerationOfSAMAccountsAndShares
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setLocalSecurityOptionsAllowAnonymousEnumerationOfSAMAccountsAndShares($val)
+    {
+        $this->_propDict["localSecurityOptionsAllowAnonymousEnumerationOfSAMAccountsAndShares"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the localSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange
+    *
+    * @return bool The localSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange
+    */
+    public function getLocalSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange()
+    {
+        if (array_key_exists("localSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange", $this->_propDict)) {
+            return $this->_propDict["localSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the localSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange
+    *
+    * @param bool $val The localSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setLocalSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange($val)
+    {
+        $this->_propDict["localSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the localSecurityOptionsSmartCardRemovalBehavior
+    *
+    * @return LocalSecurityOptionsSmartCardRemovalBehaviorType The localSecurityOptionsSmartCardRemovalBehavior
+    */
+    public function getLocalSecurityOptionsSmartCardRemovalBehavior()
+    {
+        if (array_key_exists("localSecurityOptionsSmartCardRemovalBehavior", $this->_propDict)) {
+            if (is_a($this->_propDict["localSecurityOptionsSmartCardRemovalBehavior"], "Microsoft\Graph\Beta\Model\LocalSecurityOptionsSmartCardRemovalBehaviorType")) {
+                return $this->_propDict["localSecurityOptionsSmartCardRemovalBehavior"];
+            } else {
+                $this->_propDict["localSecurityOptionsSmartCardRemovalBehavior"] = new LocalSecurityOptionsSmartCardRemovalBehaviorType($this->_propDict["localSecurityOptionsSmartCardRemovalBehavior"]);
+                return $this->_propDict["localSecurityOptionsSmartCardRemovalBehavior"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the localSecurityOptionsSmartCardRemovalBehavior
+    *
+    * @param LocalSecurityOptionsSmartCardRemovalBehaviorType $val The localSecurityOptionsSmartCardRemovalBehavior
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setLocalSecurityOptionsSmartCardRemovalBehavior($val)
+    {
+        $this->_propDict["localSecurityOptionsSmartCardRemovalBehavior"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the defenderSecurityCenterDisableAppBrowserUI
     *
     * @return bool The defenderSecurityCenterDisableAppBrowserUI
@@ -1011,6 +2540,141 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     public function setDefenderSecurityCenterDisableVirusUI($val)
     {
         $this->_propDict["defenderSecurityCenterDisableVirusUI"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the defenderSecurityCenterDisableAccountUI
+    *
+    * @return bool The defenderSecurityCenterDisableAccountUI
+    */
+    public function getDefenderSecurityCenterDisableAccountUI()
+    {
+        if (array_key_exists("defenderSecurityCenterDisableAccountUI", $this->_propDict)) {
+            return $this->_propDict["defenderSecurityCenterDisableAccountUI"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the defenderSecurityCenterDisableAccountUI
+    *
+    * @param bool $val The defenderSecurityCenterDisableAccountUI
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setDefenderSecurityCenterDisableAccountUI($val)
+    {
+        $this->_propDict["defenderSecurityCenterDisableAccountUI"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the defenderSecurityCenterDisableHardwareUI
+    *
+    * @return bool The defenderSecurityCenterDisableHardwareUI
+    */
+    public function getDefenderSecurityCenterDisableHardwareUI()
+    {
+        if (array_key_exists("defenderSecurityCenterDisableHardwareUI", $this->_propDict)) {
+            return $this->_propDict["defenderSecurityCenterDisableHardwareUI"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the defenderSecurityCenterDisableHardwareUI
+    *
+    * @param bool $val The defenderSecurityCenterDisableHardwareUI
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setDefenderSecurityCenterDisableHardwareUI($val)
+    {
+        $this->_propDict["defenderSecurityCenterDisableHardwareUI"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the defenderSecurityCenterDisableRansomwareUI
+    *
+    * @return bool The defenderSecurityCenterDisableRansomwareUI
+    */
+    public function getDefenderSecurityCenterDisableRansomwareUI()
+    {
+        if (array_key_exists("defenderSecurityCenterDisableRansomwareUI", $this->_propDict)) {
+            return $this->_propDict["defenderSecurityCenterDisableRansomwareUI"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the defenderSecurityCenterDisableRansomwareUI
+    *
+    * @param bool $val The defenderSecurityCenterDisableRansomwareUI
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setDefenderSecurityCenterDisableRansomwareUI($val)
+    {
+        $this->_propDict["defenderSecurityCenterDisableRansomwareUI"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the defenderSecurityCenterDisableSecureBootUI
+    *
+    * @return bool The defenderSecurityCenterDisableSecureBootUI
+    */
+    public function getDefenderSecurityCenterDisableSecureBootUI()
+    {
+        if (array_key_exists("defenderSecurityCenterDisableSecureBootUI", $this->_propDict)) {
+            return $this->_propDict["defenderSecurityCenterDisableSecureBootUI"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the defenderSecurityCenterDisableSecureBootUI
+    *
+    * @param bool $val The defenderSecurityCenterDisableSecureBootUI
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setDefenderSecurityCenterDisableSecureBootUI($val)
+    {
+        $this->_propDict["defenderSecurityCenterDisableSecureBootUI"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the defenderSecurityCenterDisableTroubleshootingUI
+    *
+    * @return bool The defenderSecurityCenterDisableTroubleshootingUI
+    */
+    public function getDefenderSecurityCenterDisableTroubleshootingUI()
+    {
+        if (array_key_exists("defenderSecurityCenterDisableTroubleshootingUI", $this->_propDict)) {
+            return $this->_propDict["defenderSecurityCenterDisableTroubleshootingUI"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the defenderSecurityCenterDisableTroubleshootingUI
+    *
+    * @param bool $val The defenderSecurityCenterDisableTroubleshootingUI
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setDefenderSecurityCenterDisableTroubleshootingUI($val)
+    {
+        $this->_propDict["defenderSecurityCenterDisableTroubleshootingUI"] = boolval($val);
         return $this;
     }
     
@@ -1618,6 +3282,37 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the defenderOfficeAppsOtherProcessInjection
+    *
+    * @return DefenderProtectionType The defenderOfficeAppsOtherProcessInjection
+    */
+    public function getDefenderOfficeAppsOtherProcessInjection()
+    {
+        if (array_key_exists("defenderOfficeAppsOtherProcessInjection", $this->_propDict)) {
+            if (is_a($this->_propDict["defenderOfficeAppsOtherProcessInjection"], "Microsoft\Graph\Beta\Model\DefenderProtectionType")) {
+                return $this->_propDict["defenderOfficeAppsOtherProcessInjection"];
+            } else {
+                $this->_propDict["defenderOfficeAppsOtherProcessInjection"] = new DefenderProtectionType($this->_propDict["defenderOfficeAppsOtherProcessInjection"]);
+                return $this->_propDict["defenderOfficeAppsOtherProcessInjection"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the defenderOfficeAppsOtherProcessInjection
+    *
+    * @param DefenderProtectionType $val The defenderOfficeAppsOtherProcessInjection
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setDefenderOfficeAppsOtherProcessInjection($val)
+    {
+        $this->_propDict["defenderOfficeAppsOtherProcessInjection"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the defenderOfficeAppsExecutableContentCreationOrLaunchType
     *
     * @return DefenderAttackSurfaceType The defenderOfficeAppsExecutableContentCreationOrLaunchType
@@ -1645,6 +3340,37 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     public function setDefenderOfficeAppsExecutableContentCreationOrLaunchType($val)
     {
         $this->_propDict["defenderOfficeAppsExecutableContentCreationOrLaunchType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the defenderOfficeAppsExecutableContentCreationOrLaunch
+    *
+    * @return DefenderProtectionType The defenderOfficeAppsExecutableContentCreationOrLaunch
+    */
+    public function getDefenderOfficeAppsExecutableContentCreationOrLaunch()
+    {
+        if (array_key_exists("defenderOfficeAppsExecutableContentCreationOrLaunch", $this->_propDict)) {
+            if (is_a($this->_propDict["defenderOfficeAppsExecutableContentCreationOrLaunch"], "Microsoft\Graph\Beta\Model\DefenderProtectionType")) {
+                return $this->_propDict["defenderOfficeAppsExecutableContentCreationOrLaunch"];
+            } else {
+                $this->_propDict["defenderOfficeAppsExecutableContentCreationOrLaunch"] = new DefenderProtectionType($this->_propDict["defenderOfficeAppsExecutableContentCreationOrLaunch"]);
+                return $this->_propDict["defenderOfficeAppsExecutableContentCreationOrLaunch"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the defenderOfficeAppsExecutableContentCreationOrLaunch
+    *
+    * @param DefenderProtectionType $val The defenderOfficeAppsExecutableContentCreationOrLaunch
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setDefenderOfficeAppsExecutableContentCreationOrLaunch($val)
+    {
+        $this->_propDict["defenderOfficeAppsExecutableContentCreationOrLaunch"] = $val;
         return $this;
     }
     
@@ -1680,6 +3406,37 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the defenderOfficeAppsLaunchChildProcess
+    *
+    * @return DefenderProtectionType The defenderOfficeAppsLaunchChildProcess
+    */
+    public function getDefenderOfficeAppsLaunchChildProcess()
+    {
+        if (array_key_exists("defenderOfficeAppsLaunchChildProcess", $this->_propDict)) {
+            if (is_a($this->_propDict["defenderOfficeAppsLaunchChildProcess"], "Microsoft\Graph\Beta\Model\DefenderProtectionType")) {
+                return $this->_propDict["defenderOfficeAppsLaunchChildProcess"];
+            } else {
+                $this->_propDict["defenderOfficeAppsLaunchChildProcess"] = new DefenderProtectionType($this->_propDict["defenderOfficeAppsLaunchChildProcess"]);
+                return $this->_propDict["defenderOfficeAppsLaunchChildProcess"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the defenderOfficeAppsLaunchChildProcess
+    *
+    * @param DefenderProtectionType $val The defenderOfficeAppsLaunchChildProcess
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setDefenderOfficeAppsLaunchChildProcess($val)
+    {
+        $this->_propDict["defenderOfficeAppsLaunchChildProcess"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the defenderOfficeMacroCodeAllowWin32ImportsType
     *
     * @return DefenderAttackSurfaceType The defenderOfficeMacroCodeAllowWin32ImportsType
@@ -1707,6 +3464,37 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     public function setDefenderOfficeMacroCodeAllowWin32ImportsType($val)
     {
         $this->_propDict["defenderOfficeMacroCodeAllowWin32ImportsType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the defenderOfficeMacroCodeAllowWin32Imports
+    *
+    * @return DefenderProtectionType The defenderOfficeMacroCodeAllowWin32Imports
+    */
+    public function getDefenderOfficeMacroCodeAllowWin32Imports()
+    {
+        if (array_key_exists("defenderOfficeMacroCodeAllowWin32Imports", $this->_propDict)) {
+            if (is_a($this->_propDict["defenderOfficeMacroCodeAllowWin32Imports"], "Microsoft\Graph\Beta\Model\DefenderProtectionType")) {
+                return $this->_propDict["defenderOfficeMacroCodeAllowWin32Imports"];
+            } else {
+                $this->_propDict["defenderOfficeMacroCodeAllowWin32Imports"] = new DefenderProtectionType($this->_propDict["defenderOfficeMacroCodeAllowWin32Imports"]);
+                return $this->_propDict["defenderOfficeMacroCodeAllowWin32Imports"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the defenderOfficeMacroCodeAllowWin32Imports
+    *
+    * @param DefenderProtectionType $val The defenderOfficeMacroCodeAllowWin32Imports
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setDefenderOfficeMacroCodeAllowWin32Imports($val)
+    {
+        $this->_propDict["defenderOfficeMacroCodeAllowWin32Imports"] = $val;
         return $this;
     }
     
@@ -1742,6 +3530,37 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the defenderScriptObfuscatedMacroCode
+    *
+    * @return DefenderProtectionType The defenderScriptObfuscatedMacroCode
+    */
+    public function getDefenderScriptObfuscatedMacroCode()
+    {
+        if (array_key_exists("defenderScriptObfuscatedMacroCode", $this->_propDict)) {
+            if (is_a($this->_propDict["defenderScriptObfuscatedMacroCode"], "Microsoft\Graph\Beta\Model\DefenderProtectionType")) {
+                return $this->_propDict["defenderScriptObfuscatedMacroCode"];
+            } else {
+                $this->_propDict["defenderScriptObfuscatedMacroCode"] = new DefenderProtectionType($this->_propDict["defenderScriptObfuscatedMacroCode"]);
+                return $this->_propDict["defenderScriptObfuscatedMacroCode"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the defenderScriptObfuscatedMacroCode
+    *
+    * @param DefenderProtectionType $val The defenderScriptObfuscatedMacroCode
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setDefenderScriptObfuscatedMacroCode($val)
+    {
+        $this->_propDict["defenderScriptObfuscatedMacroCode"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the defenderScriptDownloadedPayloadExecutionType
     *
     * @return DefenderAttackSurfaceType The defenderScriptDownloadedPayloadExecutionType
@@ -1769,6 +3588,37 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     public function setDefenderScriptDownloadedPayloadExecutionType($val)
     {
         $this->_propDict["defenderScriptDownloadedPayloadExecutionType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the defenderScriptDownloadedPayloadExecution
+    *
+    * @return DefenderProtectionType The defenderScriptDownloadedPayloadExecution
+    */
+    public function getDefenderScriptDownloadedPayloadExecution()
+    {
+        if (array_key_exists("defenderScriptDownloadedPayloadExecution", $this->_propDict)) {
+            if (is_a($this->_propDict["defenderScriptDownloadedPayloadExecution"], "Microsoft\Graph\Beta\Model\DefenderProtectionType")) {
+                return $this->_propDict["defenderScriptDownloadedPayloadExecution"];
+            } else {
+                $this->_propDict["defenderScriptDownloadedPayloadExecution"] = new DefenderProtectionType($this->_propDict["defenderScriptDownloadedPayloadExecution"]);
+                return $this->_propDict["defenderScriptDownloadedPayloadExecution"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the defenderScriptDownloadedPayloadExecution
+    *
+    * @param DefenderProtectionType $val The defenderScriptDownloadedPayloadExecution
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setDefenderScriptDownloadedPayloadExecution($val)
+    {
+        $this->_propDict["defenderScriptDownloadedPayloadExecution"] = $val;
         return $this;
     }
     
@@ -1835,6 +3685,37 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the defenderProcessCreation
+    *
+    * @return DefenderProtectionType The defenderProcessCreation
+    */
+    public function getDefenderProcessCreation()
+    {
+        if (array_key_exists("defenderProcessCreation", $this->_propDict)) {
+            if (is_a($this->_propDict["defenderProcessCreation"], "Microsoft\Graph\Beta\Model\DefenderProtectionType")) {
+                return $this->_propDict["defenderProcessCreation"];
+            } else {
+                $this->_propDict["defenderProcessCreation"] = new DefenderProtectionType($this->_propDict["defenderProcessCreation"]);
+                return $this->_propDict["defenderProcessCreation"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the defenderProcessCreation
+    *
+    * @param DefenderProtectionType $val The defenderProcessCreation
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setDefenderProcessCreation($val)
+    {
+        $this->_propDict["defenderProcessCreation"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the defenderUntrustedUSBProcessType
     *
     * @return DefenderAttackSurfaceType The defenderUntrustedUSBProcessType
@@ -1862,6 +3743,37 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     public function setDefenderUntrustedUSBProcessType($val)
     {
         $this->_propDict["defenderUntrustedUSBProcessType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the defenderUntrustedUSBProcess
+    *
+    * @return DefenderProtectionType The defenderUntrustedUSBProcess
+    */
+    public function getDefenderUntrustedUSBProcess()
+    {
+        if (array_key_exists("defenderUntrustedUSBProcess", $this->_propDict)) {
+            if (is_a($this->_propDict["defenderUntrustedUSBProcess"], "Microsoft\Graph\Beta\Model\DefenderProtectionType")) {
+                return $this->_propDict["defenderUntrustedUSBProcess"];
+            } else {
+                $this->_propDict["defenderUntrustedUSBProcess"] = new DefenderProtectionType($this->_propDict["defenderUntrustedUSBProcess"]);
+                return $this->_propDict["defenderUntrustedUSBProcess"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the defenderUntrustedUSBProcess
+    *
+    * @param DefenderProtectionType $val The defenderUntrustedUSBProcess
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setDefenderUntrustedUSBProcess($val)
+    {
+        $this->_propDict["defenderUntrustedUSBProcess"] = $val;
         return $this;
     }
     
@@ -1897,6 +3809,37 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the defenderUntrustedExecutable
+    *
+    * @return DefenderProtectionType The defenderUntrustedExecutable
+    */
+    public function getDefenderUntrustedExecutable()
+    {
+        if (array_key_exists("defenderUntrustedExecutable", $this->_propDict)) {
+            if (is_a($this->_propDict["defenderUntrustedExecutable"], "Microsoft\Graph\Beta\Model\DefenderProtectionType")) {
+                return $this->_propDict["defenderUntrustedExecutable"];
+            } else {
+                $this->_propDict["defenderUntrustedExecutable"] = new DefenderProtectionType($this->_propDict["defenderUntrustedExecutable"]);
+                return $this->_propDict["defenderUntrustedExecutable"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the defenderUntrustedExecutable
+    *
+    * @param DefenderProtectionType $val The defenderUntrustedExecutable
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setDefenderUntrustedExecutable($val)
+    {
+        $this->_propDict["defenderUntrustedExecutable"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the defenderEmailContentExecutionType
     *
     * @return DefenderAttackSurfaceType The defenderEmailContentExecutionType
@@ -1924,6 +3867,37 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     public function setDefenderEmailContentExecutionType($val)
     {
         $this->_propDict["defenderEmailContentExecutionType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the defenderEmailContentExecution
+    *
+    * @return DefenderProtectionType The defenderEmailContentExecution
+    */
+    public function getDefenderEmailContentExecution()
+    {
+        if (array_key_exists("defenderEmailContentExecution", $this->_propDict)) {
+            if (is_a($this->_propDict["defenderEmailContentExecution"], "Microsoft\Graph\Beta\Model\DefenderProtectionType")) {
+                return $this->_propDict["defenderEmailContentExecution"];
+            } else {
+                $this->_propDict["defenderEmailContentExecution"] = new DefenderProtectionType($this->_propDict["defenderEmailContentExecution"]);
+                return $this->_propDict["defenderEmailContentExecution"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the defenderEmailContentExecution
+    *
+    * @param DefenderProtectionType $val The defenderEmailContentExecution
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setDefenderEmailContentExecution($val)
+    {
+        $this->_propDict["defenderEmailContentExecution"] = $val;
         return $this;
     }
     

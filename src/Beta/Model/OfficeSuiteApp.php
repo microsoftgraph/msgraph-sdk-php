@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class OfficeSuiteApp extends MobileApp
@@ -283,6 +283,60 @@ class OfficeSuiteApp extends MobileApp
     public function setShouldUninstallOlderVersionsOfOffice($val)
     {
         $this->_propDict["shouldUninstallOlderVersionsOfOffice"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the targetVersion
+    *
+    * @return string The targetVersion
+    */
+    public function getTargetVersion()
+    {
+        if (array_key_exists("targetVersion", $this->_propDict)) {
+            return $this->_propDict["targetVersion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the targetVersion
+    *
+    * @param string $val The targetVersion
+    *
+    * @return OfficeSuiteApp
+    */
+    public function setTargetVersion($val)
+    {
+        $this->_propDict["targetVersion"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the updateVersion
+    *
+    * @return string The updateVersion
+    */
+    public function getUpdateVersion()
+    {
+        if (array_key_exists("updateVersion", $this->_propDict)) {
+            return $this->_propDict["updateVersion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the updateVersion
+    *
+    * @param string $val The updateVersion
+    *
+    * @return OfficeSuiteApp
+    */
+    public function setUpdateVersion($val)
+    {
+        $this->_propDict["updateVersion"] = $val;
         return $this;
     }
     

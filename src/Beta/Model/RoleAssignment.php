@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class RoleAssignment extends Entity
@@ -104,6 +104,37 @@ class RoleAssignment extends Entity
     public function setScopeMembers($val)
     {
         $this->_propDict["scopeMembers"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the scopeType
+    *
+    * @return RoleAssignmentScopeType The scopeType
+    */
+    public function getScopeType()
+    {
+        if (array_key_exists("scopeType", $this->_propDict)) {
+            if (is_a($this->_propDict["scopeType"], "Microsoft\Graph\Beta\Model\RoleAssignmentScopeType")) {
+                return $this->_propDict["scopeType"];
+            } else {
+                $this->_propDict["scopeType"] = new RoleAssignmentScopeType($this->_propDict["scopeType"]);
+                return $this->_propDict["scopeType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the scopeType
+    *
+    * @param RoleAssignmentScopeType $val The scopeType
+    *
+    * @return RoleAssignment
+    */
+    public function setScopeType($val)
+    {
+        $this->_propDict["scopeType"] = $val;
         return $this;
     }
     

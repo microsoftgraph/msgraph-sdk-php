@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -18,9 +18,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class BitLockerRecoveryOptions extends Entity
@@ -169,15 +169,15 @@ class BitLockerRecoveryOptions extends Entity
     /**
     * Gets the recoveryInformationToStore
     *
-    * @return BitLockerRecoveryinformationType The recoveryInformationToStore
+    * @return BitLockerRecoveryInformationType The recoveryInformationToStore
     */
     public function getRecoveryInformationToStore()
     {
         if (array_key_exists("recoveryInformationToStore", $this->_propDict)) {
-            if (is_a($this->_propDict["recoveryInformationToStore"], "Microsoft\Graph\Beta\Model\BitLockerRecoveryinformationType")) {
+            if (is_a($this->_propDict["recoveryInformationToStore"], "Microsoft\Graph\Beta\Model\BitLockerRecoveryInformationType")) {
                 return $this->_propDict["recoveryInformationToStore"];
             } else {
-                $this->_propDict["recoveryInformationToStore"] = new BitLockerRecoveryinformationType($this->_propDict["recoveryInformationToStore"]);
+                $this->_propDict["recoveryInformationToStore"] = new BitLockerRecoveryInformationType($this->_propDict["recoveryInformationToStore"]);
                 return $this->_propDict["recoveryInformationToStore"];
             }
         }
@@ -187,7 +187,7 @@ class BitLockerRecoveryOptions extends Entity
     /**
     * Sets the recoveryInformationToStore
     *
-    * @param BitLockerRecoveryinformationType $val The value to assign to the recoveryInformationToStore
+    * @param BitLockerRecoveryInformationType $val The value to assign to the recoveryInformationToStore
     *
     * @return BitLockerRecoveryOptions The BitLockerRecoveryOptions
     */

@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -18,9 +18,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class MailboxSettings extends Entity
@@ -58,7 +58,6 @@ class MailboxSettings extends Entity
     }
     /**
     * Gets the archiveFolder
-    * Folder ID of an archive folder for the user.
     *
     * @return string The archiveFolder
     */
@@ -73,7 +72,6 @@ class MailboxSettings extends Entity
 
     /**
     * Sets the archiveFolder
-    * Folder ID of an archive folder for the user.
     *
     * @param string $val The value of the archiveFolder
     *

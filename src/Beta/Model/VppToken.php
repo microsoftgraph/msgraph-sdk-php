@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,9 +19,9 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class VppToken extends Entity
@@ -399,6 +399,60 @@ class VppToken extends Entity
     public function setDataSharingConsentGranted($val)
     {
         $this->_propDict["dataSharingConsentGranted"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the displayName
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the displayName
+    *
+    * @param string $val The displayName
+    *
+    * @return VppToken
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the locationName
+    *
+    * @return string The locationName
+    */
+    public function getLocationName()
+    {
+        if (array_key_exists("locationName", $this->_propDict)) {
+            return $this->_propDict["locationName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the locationName
+    *
+    * @param string $val The locationName
+    *
+    * @return VppToken
+    */
+    public function setLocationName($val)
+    {
+        $this->_propDict["locationName"] = $val;
         return $this;
     }
     

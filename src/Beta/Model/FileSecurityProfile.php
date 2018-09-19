@@ -7,9 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Beta\Model;
@@ -19,65 +19,37 @@ namespace Microsoft\Graph\Beta\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 0.1.0
+* @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
 class FileSecurityProfile extends Entity
 {
-
-     /** 
-     * Gets the activityGroupStates
-     *
-     * @return array The activityGroupStates
-     */
-    public function getActivityGroupStates()
-    {
-        if (array_key_exists("activityGroupStates", $this->_propDict)) {
-           return $this->_propDict["activityGroupStates"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the activityGroupStates
-    *
-    * @param ActivityGroupState $val The activityGroupStates
-    *
-    * @return FileSecurityProfile
-    */
-    public function setActivityGroupStates($val)
-    {
-		$this->_propDict["activityGroupStates"] = $val;
-        return $this;
-    }
-    
     /**
-    * Gets the authenticodeHash256
+    * Gets the activityGroupNames
     *
-    * @return string The authenticodeHash256
+    * @return string The activityGroupNames
     */
-    public function getAuthenticodeHash256()
+    public function getActivityGroupNames()
     {
-        if (array_key_exists("authenticodeHash256", $this->_propDict)) {
-            return $this->_propDict["authenticodeHash256"];
+        if (array_key_exists("activityGroupNames", $this->_propDict)) {
+            return $this->_propDict["activityGroupNames"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the authenticodeHash256
+    * Sets the activityGroupNames
     *
-    * @param string $val The authenticodeHash256
+    * @param string $val The activityGroupNames
     *
     * @return FileSecurityProfile
     */
-    public function setAuthenticodeHash256($val)
+    public function setActivityGroupNames($val)
     {
-        $this->_propDict["authenticodeHash256"] = $val;
+        $this->_propDict["activityGroupNames"] = $val;
         return $this;
     }
     
@@ -163,64 +135,146 @@ class FileSecurityProfile extends Entity
     }
     
     /**
-    * Gets the createdDateTime
+    * Gets the extensions
     *
-    * @return \DateTime The createdDateTime
+    * @return string The extensions
     */
-    public function getCreatedDateTime()
+    public function getExtensions()
     {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
-                return $this->_propDict["createdDateTime"];
-            } else {
-                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
-                return $this->_propDict["createdDateTime"];
-            }
+        if (array_key_exists("extensions", $this->_propDict)) {
+            return $this->_propDict["extensions"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the createdDateTime
+    * Sets the extensions
     *
-    * @param \DateTime $val The createdDateTime
+    * @param string $val The extensions
     *
     * @return FileSecurityProfile
     */
-    public function setCreatedDateTime($val)
+    public function setExtensions($val)
     {
-        $this->_propDict["createdDateTime"] = $val;
+        $this->_propDict["extensions"] = $val;
         return $this;
     }
     
     /**
-    * Gets the lastModifiedDateTime
+    * Gets the fileType
     *
-    * @return \DateTime The lastModifiedDateTime
+    * @return string The fileType
     */
-    public function getLastModifiedDateTime()
+    public function getFileType()
     {
-        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
-                return $this->_propDict["lastModifiedDateTime"];
+        if (array_key_exists("fileType", $this->_propDict)) {
+            return $this->_propDict["fileType"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the fileType
+    *
+    * @param string $val The fileType
+    *
+    * @return FileSecurityProfile
+    */
+    public function setFileType($val)
+    {
+        $this->_propDict["fileType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the firstSeenDateTime
+    *
+    * @return \DateTime The firstSeenDateTime
+    */
+    public function getFirstSeenDateTime()
+    {
+        if (array_key_exists("firstSeenDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["firstSeenDateTime"], "\DateTime")) {
+                return $this->_propDict["firstSeenDateTime"];
             } else {
-                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
-                return $this->_propDict["lastModifiedDateTime"];
+                $this->_propDict["firstSeenDateTime"] = new \DateTime($this->_propDict["firstSeenDateTime"]);
+                return $this->_propDict["firstSeenDateTime"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the lastModifiedDateTime
+    * Sets the firstSeenDateTime
     *
-    * @param \DateTime $val The lastModifiedDateTime
+    * @param \DateTime $val The firstSeenDateTime
     *
     * @return FileSecurityProfile
     */
-    public function setLastModifiedDateTime($val)
+    public function setFirstSeenDateTime($val)
     {
-        $this->_propDict["lastModifiedDateTime"] = $val;
+        $this->_propDict["firstSeenDateTime"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the hashes
+     *
+     * @return array The hashes
+     */
+    public function getHashes()
+    {
+        if (array_key_exists("hashes", $this->_propDict)) {
+           return $this->_propDict["hashes"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the hashes
+    *
+    * @param FileHash $val The hashes
+    *
+    * @return FileSecurityProfile
+    */
+    public function setHashes($val)
+    {
+		$this->_propDict["hashes"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the lastSeenDateTime
+    *
+    * @return \DateTime The lastSeenDateTime
+    */
+    public function getLastSeenDateTime()
+    {
+        if (array_key_exists("lastSeenDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastSeenDateTime"], "\DateTime")) {
+                return $this->_propDict["lastSeenDateTime"];
+            } else {
+                $this->_propDict["lastSeenDateTime"] = new \DateTime($this->_propDict["lastSeenDateTime"]);
+                return $this->_propDict["lastSeenDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the lastSeenDateTime
+    *
+    * @param \DateTime $val The lastSeenDateTime
+    *
+    * @return FileSecurityProfile
+    */
+    public function setLastSeenDateTime($val)
+    {
+        $this->_propDict["lastSeenDateTime"] = $val;
         return $this;
     }
     
@@ -253,83 +307,29 @@ class FileSecurityProfile extends Entity
     }
     
     /**
-    * Gets the md5
+    * Gets the names
     *
-    * @return string The md5
+    * @return string The names
     */
-    public function getMd5()
+    public function getNames()
     {
-        if (array_key_exists("md5", $this->_propDict)) {
-            return $this->_propDict["md5"];
+        if (array_key_exists("names", $this->_propDict)) {
+            return $this->_propDict["names"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the md5
+    * Sets the names
     *
-    * @param string $val The md5
-    *
-    * @return FileSecurityProfile
-    */
-    public function setMd5($val)
-    {
-        $this->_propDict["md5"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the name
-    *
-    * @return string The name
-    */
-    public function getName()
-    {
-        if (array_key_exists("name", $this->_propDict)) {
-            return $this->_propDict["name"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the name
-    *
-    * @param string $val The name
+    * @param string $val The names
     *
     * @return FileSecurityProfile
     */
-    public function setName($val)
+    public function setNames($val)
     {
-        $this->_propDict["name"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the path
-    *
-    * @return string The path
-    */
-    public function getPath()
-    {
-        if (array_key_exists("path", $this->_propDict)) {
-            return $this->_propDict["path"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the path
-    *
-    * @param string $val The path
-    *
-    * @return FileSecurityProfile
-    */
-    public function setPath($val)
-    {
-        $this->_propDict["path"] = $val;
+        $this->_propDict["names"] = $val;
         return $this;
     }
     
@@ -357,60 +357,6 @@ class FileSecurityProfile extends Entity
     public function setRiskScore($val)
     {
         $this->_propDict["riskScore"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the sha1
-    *
-    * @return string The sha1
-    */
-    public function getSha1()
-    {
-        if (array_key_exists("sha1", $this->_propDict)) {
-            return $this->_propDict["sha1"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the sha1
-    *
-    * @param string $val The sha1
-    *
-    * @return FileSecurityProfile
-    */
-    public function setSha1($val)
-    {
-        $this->_propDict["sha1"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the sha256
-    *
-    * @return string The sha256
-    */
-    public function getSha256()
-    {
-        if (array_key_exists("sha256", $this->_propDict)) {
-            return $this->_propDict["sha256"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the sha256
-    *
-    * @param string $val The sha256
-    *
-    * @return FileSecurityProfile
-    */
-    public function setSha256($val)
-    {
-        $this->_propDict["sha256"] = $val;
         return $this;
     }
     
@@ -496,6 +442,34 @@ class FileSecurityProfile extends Entity
     public function setVendorInformation($val)
     {
         $this->_propDict["vendorInformation"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the vulnerabilityStates
+     *
+     * @return array The vulnerabilityStates
+     */
+    public function getVulnerabilityStates()
+    {
+        if (array_key_exists("vulnerabilityStates", $this->_propDict)) {
+           return $this->_propDict["vulnerabilityStates"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the vulnerabilityStates
+    *
+    * @param VulnerabilityState $val The vulnerabilityStates
+    *
+    * @return FileSecurityProfile
+    */
+    public function setVulnerabilityStates($val)
+    {
+		$this->_propDict["vulnerabilityStates"] = $val;
         return $this;
     }
     
