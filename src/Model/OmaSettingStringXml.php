@@ -26,6 +26,15 @@ namespace Microsoft\Graph\Model;
 class OmaSettingStringXml extends OmaSetting
 {
     /**
+    * Set the @odata.type since this type is immediately descended from an abstract
+    * type that is referenced as the type in an entity.
+    */
+    public function __construct()
+    {
+        $this->setODataType("#microsoft.graph.omaSettingStringXml");
+    }
+
+    /**
     * Gets the fileName
     * File name associated with the Value property (.xml).
     *

@@ -26,6 +26,15 @@ namespace Microsoft\Graph\Model;
 class AndroidMobileAppIdentifier extends MobileAppIdentifier
 {
     /**
+    * Set the @odata.type since this type is immediately descended from an abstract
+    * type that is referenced as the type in an entity.
+    */
+    public function __construct()
+    {
+        $this->setODataType("#microsoft.graph.androidMobileAppIdentifier");
+    }
+
+    /**
     * Gets the packageId
     * The identifier for an app, as specified in the play store.
     *
