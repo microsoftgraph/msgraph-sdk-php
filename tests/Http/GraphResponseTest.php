@@ -131,6 +131,6 @@ class GraphResponseTest extends TestCase
         $this->request->execute($this->client);
         $response = $this->request->setReturnType(Model\User::class)->execute($this->client);
 
-        $this->assertInstanceOf(Model\User::class, $response);
+        $this->assertContainsOnlyInstancesOf(Model\User::class, $response);
     }
 }
