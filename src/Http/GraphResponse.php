@@ -153,9 +153,8 @@ class GraphResponse
                 foreach ($values as $obj) {
                     $objArray[] = new $class($obj);
                 }
-            } else {
-                return new $class($result);
             }
+            
             return $objArray;
         } else {
             return new $class($result);
