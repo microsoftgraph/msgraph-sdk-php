@@ -1,9 +1,9 @@
 <?php
 /**
-* Copyright (c) Microsoft Corporation.  All Rights Reserved.  
-* Licensed under the MIT License.  See License in the project root 
+* Copyright (c) Microsoft Corporation.  All Rights Reserved.
+* Licensed under the MIT License.  See License in the project root
 * for license information.
-* 
+*
 * Enum File
 * PHP version 7
 *
@@ -74,11 +74,12 @@ abstract class Enum
         return $this->_value === $value;
     }
 
-    /**
-     * Create a new class for the enum in question
-     *
-     * @return mixed
-     */
+	/**
+	 * Create a new class for the enum in question
+	 *
+	 * @return mixed
+	 * @throws \ReflectionException
+	 */
     public function toArray()
     {
         $class = get_called_class();

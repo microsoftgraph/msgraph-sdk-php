@@ -1,9 +1,9 @@
-<?php 
+<?php
 /**
-* Copyright (c) Microsoft Corporation.  All Rights Reserved.  
-* Licensed under the MIT License.  See License in the project root 
+* Copyright (c) Microsoft Corporation.  All Rights Reserved.
+* Licensed under the MIT License.  See License in the project root
 * for license information.
-* 
+*
 * GraphCollectionRequest File
 * PHP version 7
 *
@@ -70,7 +70,7 @@ class GraphCollectionRequest extends GraphRequest
     /**
     * Constructs a new GraphCollectionRequest object
     *
-    * @param string $requestType The HTTP verb for the 
+    * @param string $requestType The HTTP verb for the
     *                            request ("GET", "POST", "PUT", etc.)
     * @param string $endpoint    The URI of the endpoint to hit
     * @param string $accessToken A valid access token
@@ -92,19 +92,20 @@ class GraphCollectionRequest extends GraphRequest
         $this->end = false;
     }
 
-    /**
-    * Gets the number of entries in the collection
-    *
-    * @return int the number of entries
-    */
+	/**
+	 * Gets the number of entries in the collection
+	 *
+	 * @return int the number of entries
+	 * @throws GraphException
+	 */
     public function count()
     {
         $query = '$count=true';
         $request = new GraphRequest(
-            $this->requestType, 
-            $this->endpoint . $this->getConcatenator() . $query, 
-            $this->accessToken, 
-            $this->baseUrl, 
+            $this->requestType,
+            $this->endpoint . $this->getConcatenator() . $query,
+            $this->accessToken,
+            $this->baseUrl,
             $this->apiVersion,
             $this->proxyPort
         );
@@ -138,13 +139,14 @@ class GraphCollectionRequest extends GraphRequest
         return $this;
     }
 
-    /**
-    * Gets the next page of results
-    *
-    * @param bool $prev When true, get the previous page
-    *
-    * @return array of objects of class $returnType
-    */
+	/**
+	 * Gets the next page of results
+	 *
+	 * @param bool $prev When true, get the previous page
+	 *
+	 * @return array of objects of class $returnType
+	 * @throws GraphException
+	 */
     public function getPage()
     {
         $this->setPageCallInfo();
@@ -155,12 +157,12 @@ class GraphCollectionRequest extends GraphRequest
 
     /**
     * Sets the required query information to get a new page
-    * 
+    *
     * @param bool $prev Set to true for the previous page
     *
     * @return GraphCollectionRequest
     */
-    public function setPageCallInfo() 
+    public function setPageCallInfo()
     {
         // Store these to add temporary query data to request
         $this->originalReturnType = $this->returnType;
