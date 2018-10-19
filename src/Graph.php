@@ -1,9 +1,9 @@
-<?php 
+<?php
 /**
-* Copyright (c) Microsoft Corporation.  All Rights Reserved.  
-* Licensed under the MIT License.  See License in the project root 
+* Copyright (c) Microsoft Corporation.  All Rights Reserved.
+* Licensed under the MIT License.  See License in the project root
 * for license information.
-* 
+*
 * Graph File
 * PHP version 7
 *
@@ -99,7 +99,7 @@ class Graph
     * Sets the access token. A valid access token is required
     * to run queries against Graph
     *
-    * @param string $accessToken The user's access token, retrieved from 
+    * @param string $accessToken The user's access token, retrieved from
     *                     MS auth
     *
     * @return Graph object
@@ -111,7 +111,7 @@ class Graph
     }
 
     /**
-    * Sets the proxy port. This allows you 
+    * Sets the proxy port. This allows you
     * to use tools such as Fiddler to view
     * requests and responses made with Guzzle
     *
@@ -125,44 +125,46 @@ class Graph
         return $this;
     }
 
-    /**
-    * Creates a new request object with the given Graph information
-    *
-    * @param string $requestType The HTTP method to use, e.g. "GET" or "POST"
-    * @param string $endpoint    The Graph endpoint to call
-    *
-    * @return GraphRequest The request object, which can be used to 
-    *                      make queries against Graph
-    */
+	/**
+	 * Creates a new request object with the given Graph information
+	 *
+	 * @param string $requestType The HTTP method to use, e.g. "GET" or "POST"
+	 * @param string $endpoint    The Graph endpoint to call
+	 *
+	 * @return GraphRequest The request object, which can be used to
+	 *                      make queries against Graph
+	 * @throws Exception\GraphException
+	 */
     public function createRequest($requestType, $endpoint)
     {
         return new GraphRequest(
-            $requestType, 
-            $endpoint, 
-            $this->_accessToken, 
-            $this->_baseUrl, 
+            $requestType,
+            $endpoint,
+            $this->_accessToken,
+            $this->_baseUrl,
             $this->_apiVersion,
             $this->_proxyPort
         );
     }
 
-    /**
-    * Creates a new collection request object with the given 
-    * Graph information
-    * 
-    * @param string $requestType The HTTP method to use, e.g. "GET" or "POST"
-    * @param string $endpoint    The Graph endpoint to call
-    * 
-    * @return GraphCollectionRequest The request object, which can be
-    *                                used to make queries against Graph
-    */
+	/**
+	 * Creates a new collection request object with the given
+	 * Graph information
+	 *
+	 * @param string $requestType The HTTP method to use, e.g. "GET" or "POST"
+	 * @param string $endpoint    The Graph endpoint to call
+	 *
+	 * @return GraphCollectionRequest The request object, which can be
+	 *                                used to make queries against Graph
+	 * @throws Exception\GraphException
+	 */
     public function createCollectionRequest($requestType, $endpoint)
     {
         return new GraphCollectionRequest(
-            $requestType, 
-            $endpoint, 
-            $this->_accessToken, 
-            $this->_baseUrl, 
+            $requestType,
+            $endpoint,
+            $this->_accessToken,
+            $this->_baseUrl,
             $this->_apiVersion,
             $this->_proxyPort
         );
