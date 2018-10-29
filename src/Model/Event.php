@@ -116,7 +116,22 @@ class Event extends OutlookItem
         $this->_propDict["responseStatus"] = $val;
         return $this;
     }
-    
+	
+    /**
+    * Gets the id
+    * A unique identifier that is shared by all instances of an event across different calendars.
+    *
+    * @return string The id
+    */
+    public function getId()
+    {
+        if (array_key_exists("id", $this->_propDict)) {
+            return $this->_propDict["id"];
+        } else {
+            return null;
+        }
+    }
+	
     /**
     * Gets the iCalUId
     * A unique identifier that is shared by all instances of an event across different calendars.
