@@ -41,7 +41,7 @@ class Entity implements \JsonSerializable
     */
     function __construct($propDict = array())
     {
-		$this->_propDict = $propDict;
+	$this->_propDict = $propDict;
     }
 
     /**
@@ -78,6 +78,81 @@ class Entity implements \JsonSerializable
     public function setId($val)
     {
         $this->_propDict["id"] = $val;
+        return $this;
+    }
+
+    /**
+     * Gets the drive id
+     * @return string
+     */
+    public function getDriveId(){
+        if (array_key_exists("driveId", $this->_propDict)) {
+            return $this->_propDict["driveId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+     * Sets the driveId
+     *
+     * @param string $val drive id
+     *
+     * @return Entity
+     */
+    public function setDriveId($val)
+    {
+        $this->_propDict["driveId"] = $val;
+        return $this;
+    }
+
+    /**
+     * Gets the drive type
+     * @return string
+     */
+    public function getDriveType(){
+        if (array_key_exists("driveType", $this->_propDict)) {
+            return $this->_propDict["driveType"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+     * Sets the driveType
+     *
+     * @param string $val drive type
+     *
+     * @return Entity
+     */
+    public function setDriveType($val)
+    {
+        $this->_propDict["driveType"] = $val;
+        return $this;
+    }
+
+    /**
+     * Gets the path
+     * @return string
+     */
+    public function getPath(){
+        if (array_key_exists("path", $this->_propDict)) {
+            return $this->_propDict["path"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+     * Sets the driveId
+     *
+     * @param string $val the path
+     *
+     * @return Entity
+     */
+    public function setPath($val)
+    {
+        $this->_propDict["path"] = $val;
         return $this;
     }
     
