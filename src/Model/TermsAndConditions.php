@@ -28,7 +28,6 @@ class TermsAndConditions extends Entity
 {
     /**
     * Gets the createdDateTime
-    * DateTime the object was created.
     *
     * @return \DateTime The createdDateTime
     */
@@ -47,7 +46,6 @@ class TermsAndConditions extends Entity
     
     /**
     * Sets the createdDateTime
-    * DateTime the object was created.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -61,7 +59,6 @@ class TermsAndConditions extends Entity
     
     /**
     * Gets the lastModifiedDateTime
-    * DateTime the object was last modified.
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -80,7 +77,6 @@ class TermsAndConditions extends Entity
     
     /**
     * Sets the lastModifiedDateTime
-    * DateTime the object was last modified.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -94,7 +90,6 @@ class TermsAndConditions extends Entity
     
     /**
     * Gets the displayName
-    * Administrator-supplied name for the T&C policy.
     *
     * @return string The displayName
     */
@@ -109,7 +104,6 @@ class TermsAndConditions extends Entity
     
     /**
     * Sets the displayName
-    * Administrator-supplied name for the T&C policy.
     *
     * @param string $val The displayName
     *
@@ -123,7 +117,6 @@ class TermsAndConditions extends Entity
     
     /**
     * Gets the description
-    * Administrator-supplied description of the T&C policy.
     *
     * @return string The description
     */
@@ -138,7 +131,6 @@ class TermsAndConditions extends Entity
     
     /**
     * Sets the description
-    * Administrator-supplied description of the T&C policy.
     *
     * @param string $val The description
     *
@@ -152,7 +144,6 @@ class TermsAndConditions extends Entity
     
     /**
     * Gets the title
-    * Administrator-supplied title of the terms and conditions. This is shown to the user on prompts to accept the T&C policy.
     *
     * @return string The title
     */
@@ -167,7 +158,6 @@ class TermsAndConditions extends Entity
     
     /**
     * Sets the title
-    * Administrator-supplied title of the terms and conditions. This is shown to the user on prompts to accept the T&C policy.
     *
     * @param string $val The title
     *
@@ -181,7 +171,6 @@ class TermsAndConditions extends Entity
     
     /**
     * Gets the bodyText
-    * Administrator-supplied body text of the terms and conditions, typically the terms themselves. This is shown to the user on prompts to accept the T&C policy.
     *
     * @return string The bodyText
     */
@@ -196,7 +185,6 @@ class TermsAndConditions extends Entity
     
     /**
     * Sets the bodyText
-    * Administrator-supplied body text of the terms and conditions, typically the terms themselves. This is shown to the user on prompts to accept the T&C policy.
     *
     * @param string $val The bodyText
     *
@@ -210,7 +198,6 @@ class TermsAndConditions extends Entity
     
     /**
     * Gets the acceptanceStatement
-    * Administrator-supplied explanation of the terms and conditions, typically describing what it means to accept the terms and conditions set out in the T&C policy. This is shown to the user on prompts to accept the T&C policy.
     *
     * @return string The acceptanceStatement
     */
@@ -225,7 +212,6 @@ class TermsAndConditions extends Entity
     
     /**
     * Sets the acceptanceStatement
-    * Administrator-supplied explanation of the terms and conditions, typically describing what it means to accept the terms and conditions set out in the T&C policy. This is shown to the user on prompts to accept the T&C policy.
     *
     * @param string $val The acceptanceStatement
     *
@@ -239,7 +225,6 @@ class TermsAndConditions extends Entity
     
     /**
     * Gets the version
-    * Integer indicating the current version of the terms. Incremented when an administrator makes a change to the terms and wishes to require users to re-accept the modified T&C policy.
     *
     * @return int The version
     */
@@ -254,7 +239,6 @@ class TermsAndConditions extends Entity
     
     /**
     * Sets the version
-    * Integer indicating the current version of the terms. Incremented when an administrator makes a change to the terms and wishes to require users to re-accept the modified T&C policy.
     *
     * @param int $val The version
     *
@@ -269,7 +253,6 @@ class TermsAndConditions extends Entity
 
      /** 
      * Gets the assignments
-    * The list of assignments for this T&C policy.
      *
      * @return array The assignments
      */
@@ -284,7 +267,6 @@ class TermsAndConditions extends Entity
     
     /** 
     * Sets the assignments
-    * The list of assignments for this T&C policy.
     *
     * @param TermsAndConditionsAssignment $val The assignments
     *
@@ -299,7 +281,6 @@ class TermsAndConditions extends Entity
 
      /** 
      * Gets the acceptanceStatuses
-    * The list of acceptance statuses for this T&C policy.
      *
      * @return array The acceptanceStatuses
      */
@@ -314,7 +295,6 @@ class TermsAndConditions extends Entity
     
     /** 
     * Sets the acceptanceStatuses
-    * The list of acceptance statuses for this T&C policy.
     *
     * @param TermsAndConditionsAcceptanceStatus $val The acceptanceStatuses
     *

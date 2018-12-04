@@ -28,7 +28,6 @@ class IosUpdateDeviceStatus extends Entity
 {
     /**
     * Gets the installStatus
-    * The installation status of the policy report. Possible values are: success, available, idle, downloading, downloadFailed, downloadRequiresComputer, downloadInsufficientSpace, downloadInsufficientPower, downloadInsufficientNetwork, installing, installInsufficientSpace, installInsufficientPower, installPhoneCallInProgress, installFailed, notSupportedOperation, sharedDeviceUserLoggedInError.
     *
     * @return IosUpdatesInstallStatus The installStatus
     */
@@ -47,7 +46,6 @@ class IosUpdateDeviceStatus extends Entity
     
     /**
     * Sets the installStatus
-    * The installation status of the policy report. Possible values are: success, available, idle, downloading, downloadFailed, downloadRequiresComputer, downloadInsufficientSpace, downloadInsufficientPower, downloadInsufficientNetwork, installing, installInsufficientSpace, installInsufficientPower, installPhoneCallInProgress, installFailed, notSupportedOperation, sharedDeviceUserLoggedInError.
     *
     * @param IosUpdatesInstallStatus $val The installStatus
     *
@@ -61,7 +59,6 @@ class IosUpdateDeviceStatus extends Entity
     
     /**
     * Gets the osVersion
-    * The device version that is being reported.
     *
     * @return string The osVersion
     */
@@ -76,7 +73,6 @@ class IosUpdateDeviceStatus extends Entity
     
     /**
     * Sets the osVersion
-    * The device version that is being reported.
     *
     * @param string $val The osVersion
     *
@@ -90,7 +86,6 @@ class IosUpdateDeviceStatus extends Entity
     
     /**
     * Gets the deviceId
-    * The device id that is being reported.
     *
     * @return string The deviceId
     */
@@ -105,7 +100,6 @@ class IosUpdateDeviceStatus extends Entity
     
     /**
     * Sets the deviceId
-    * The device id that is being reported.
     *
     * @param string $val The deviceId
     *
@@ -119,7 +113,6 @@ class IosUpdateDeviceStatus extends Entity
     
     /**
     * Gets the userId
-    * The User id that is being reported.
     *
     * @return string The userId
     */
@@ -134,7 +127,6 @@ class IosUpdateDeviceStatus extends Entity
     
     /**
     * Sets the userId
-    * The User id that is being reported.
     *
     * @param string $val The userId
     *
@@ -148,7 +140,6 @@ class IosUpdateDeviceStatus extends Entity
     
     /**
     * Gets the deviceDisplayName
-    * Device name of the DevicePolicyStatus.
     *
     * @return string The deviceDisplayName
     */
@@ -163,7 +154,6 @@ class IosUpdateDeviceStatus extends Entity
     
     /**
     * Sets the deviceDisplayName
-    * Device name of the DevicePolicyStatus.
     *
     * @param string $val The deviceDisplayName
     *
@@ -177,7 +167,6 @@ class IosUpdateDeviceStatus extends Entity
     
     /**
     * Gets the userName
-    * The User Name that is being reported
     *
     * @return string The userName
     */
@@ -192,7 +181,6 @@ class IosUpdateDeviceStatus extends Entity
     
     /**
     * Sets the userName
-    * The User Name that is being reported
     *
     * @param string $val The userName
     *
@@ -206,7 +194,6 @@ class IosUpdateDeviceStatus extends Entity
     
     /**
     * Gets the deviceModel
-    * The device model that is being reported
     *
     * @return string The deviceModel
     */
@@ -221,7 +208,6 @@ class IosUpdateDeviceStatus extends Entity
     
     /**
     * Sets the deviceModel
-    * The device model that is being reported
     *
     * @param string $val The deviceModel
     *
@@ -235,7 +221,6 @@ class IosUpdateDeviceStatus extends Entity
     
     /**
     * Gets the complianceGracePeriodExpirationDateTime
-    * The DateTime when device compliance grace period expires
     *
     * @return \DateTime The complianceGracePeriodExpirationDateTime
     */
@@ -254,7 +239,6 @@ class IosUpdateDeviceStatus extends Entity
     
     /**
     * Sets the complianceGracePeriodExpirationDateTime
-    * The DateTime when device compliance grace period expires
     *
     * @param \DateTime $val The complianceGracePeriodExpirationDateTime
     *
@@ -268,7 +252,6 @@ class IosUpdateDeviceStatus extends Entity
     
     /**
     * Gets the status
-    * Compliance status of the policy report. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict.
     *
     * @return ComplianceStatus The status
     */
@@ -287,7 +270,6 @@ class IosUpdateDeviceStatus extends Entity
     
     /**
     * Sets the status
-    * Compliance status of the policy report. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict.
     *
     * @param ComplianceStatus $val The status
     *
@@ -301,7 +283,6 @@ class IosUpdateDeviceStatus extends Entity
     
     /**
     * Gets the lastReportedDateTime
-    * Last modified date time of the policy report.
     *
     * @return \DateTime The lastReportedDateTime
     */
@@ -320,7 +301,6 @@ class IosUpdateDeviceStatus extends Entity
     
     /**
     * Sets the lastReportedDateTime
-    * Last modified date time of the policy report.
     *
     * @param \DateTime $val The lastReportedDateTime
     *
@@ -334,7 +314,6 @@ class IosUpdateDeviceStatus extends Entity
     
     /**
     * Gets the userPrincipalName
-    * UserPrincipalName.
     *
     * @return string The userPrincipalName
     */
@@ -349,7 +328,6 @@ class IosUpdateDeviceStatus extends Entity
     
     /**
     * Sets the userPrincipalName
-    * UserPrincipalName.
     *
     * @param string $val The userPrincipalName
     *

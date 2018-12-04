@@ -27,7 +27,6 @@ class Quota extends Entity
 {
     /**
     * Gets the deleted
-    * Total space consumed by files in the recycle bin, in bytes. Read-only.
     *
     * @return int The deleted
     */
@@ -42,7 +41,6 @@ class Quota extends Entity
 
     /**
     * Sets the deleted
-    * Total space consumed by files in the recycle bin, in bytes. Read-only.
     *
     * @param int $val The value of the deleted
     *
@@ -55,7 +53,6 @@ class Quota extends Entity
     }
     /**
     * Gets the remaining
-    * Total space remaining before reaching the quota limit, in bytes. Read-only.
     *
     * @return int The remaining
     */
@@ -70,7 +67,6 @@ class Quota extends Entity
 
     /**
     * Sets the remaining
-    * Total space remaining before reaching the quota limit, in bytes. Read-only.
     *
     * @param int $val The value of the remaining
     *
@@ -83,7 +79,6 @@ class Quota extends Entity
     }
     /**
     * Gets the state
-    * Enumeration value that indicates the state of the storage space. Read-only.
     *
     * @return string The state
     */
@@ -98,7 +93,6 @@ class Quota extends Entity
 
     /**
     * Sets the state
-    * Enumeration value that indicates the state of the storage space. Read-only.
     *
     * @param string $val The value of the state
     *
@@ -111,7 +105,6 @@ class Quota extends Entity
     }
     /**
     * Gets the total
-    * Total allowed storage space, in bytes. Read-only.
     *
     * @return int The total
     */
@@ -126,7 +119,6 @@ class Quota extends Entity
 
     /**
     * Sets the total
-    * Total allowed storage space, in bytes. Read-only.
     *
     * @param int $val The value of the total
     *
@@ -139,7 +131,6 @@ class Quota extends Entity
     }
     /**
     * Gets the used
-    * Total space used, in bytes. Read-only.
     *
     * @return int The used
     */
@@ -154,7 +145,6 @@ class Quota extends Entity
 
     /**
     * Sets the used
-    * Total space used, in bytes. Read-only.
     *
     * @param int $val The value of the used
     *

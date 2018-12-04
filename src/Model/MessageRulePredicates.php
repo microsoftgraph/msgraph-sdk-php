@@ -27,7 +27,6 @@ class MessageRulePredicates extends Entity
 {
     /**
     * Gets the categories
-    * Represents the categories that an incoming message should be labeled with in order for the condition or exception to apply.
     *
     * @return string The categories
     */
@@ -42,7 +41,6 @@ class MessageRulePredicates extends Entity
 
     /**
     * Sets the categories
-    * Represents the categories that an incoming message should be labeled with in order for the condition or exception to apply.
     *
     * @param string $val The value of the categories
     *
@@ -55,7 +53,6 @@ class MessageRulePredicates extends Entity
     }
     /**
     * Gets the subjectContains
-    * Represents the strings that appear in the subject of an incoming message in order for the condition or exception to apply.
     *
     * @return string The subjectContains
     */
@@ -70,7 +67,6 @@ class MessageRulePredicates extends Entity
 
     /**
     * Sets the subjectContains
-    * Represents the strings that appear in the subject of an incoming message in order for the condition or exception to apply.
     *
     * @param string $val The value of the subjectContains
     *
@@ -83,7 +79,6 @@ class MessageRulePredicates extends Entity
     }
     /**
     * Gets the bodyContains
-    * Represents the strings that should appear in the body of an incoming message in order for the condition or exception to apply.
     *
     * @return string The bodyContains
     */
@@ -98,7 +93,6 @@ class MessageRulePredicates extends Entity
 
     /**
     * Sets the bodyContains
-    * Represents the strings that should appear in the body of an incoming message in order for the condition or exception to apply.
     *
     * @param string $val The value of the bodyContains
     *
@@ -111,7 +105,6 @@ class MessageRulePredicates extends Entity
     }
     /**
     * Gets the bodyOrSubjectContains
-    * Represents the strings that should appear in the body or subject of an incoming message in order for the condition or exception to apply.
     *
     * @return string The bodyOrSubjectContains
     */
@@ -126,7 +119,6 @@ class MessageRulePredicates extends Entity
 
     /**
     * Sets the bodyOrSubjectContains
-    * Represents the strings that should appear in the body or subject of an incoming message in order for the condition or exception to apply.
     *
     * @param string $val The value of the bodyOrSubjectContains
     *
@@ -139,7 +131,6 @@ class MessageRulePredicates extends Entity
     }
     /**
     * Gets the senderContains
-    * Represents the strings that appear in the from property of an incoming message in order for the condition or exception to apply.
     *
     * @return string The senderContains
     */
@@ -154,7 +145,6 @@ class MessageRulePredicates extends Entity
 
     /**
     * Sets the senderContains
-    * Represents the strings that appear in the from property of an incoming message in order for the condition or exception to apply.
     *
     * @param string $val The value of the senderContains
     *
@@ -167,7 +157,6 @@ class MessageRulePredicates extends Entity
     }
     /**
     * Gets the recipientContains
-    * Represents the strings that appear in either the toRecipients or ccRecipients properties of an incoming message in order for the condition or exception to apply.
     *
     * @return string The recipientContains
     */
@@ -182,7 +171,6 @@ class MessageRulePredicates extends Entity
 
     /**
     * Sets the recipientContains
-    * Represents the strings that appear in either the toRecipients or ccRecipients properties of an incoming message in order for the condition or exception to apply.
     *
     * @param string $val The value of the recipientContains
     *
@@ -195,7 +183,6 @@ class MessageRulePredicates extends Entity
     }
     /**
     * Gets the headerContains
-    * Represents the strings that appear in the headers of an incoming message in order for the condition or exception to apply.
     *
     * @return string The headerContains
     */
@@ -210,7 +197,6 @@ class MessageRulePredicates extends Entity
 
     /**
     * Sets the headerContains
-    * Represents the strings that appear in the headers of an incoming message in order for the condition or exception to apply.
     *
     * @param string $val The value of the headerContains
     *
@@ -224,7 +210,6 @@ class MessageRulePredicates extends Entity
 
     /**
     * Gets the messageActionFlag
-    * Represents the flag-for-action value that appears on an incoming message in order for the condition or exception to apply. Possible values are: any, call, doNotForward, followUp, fyi, forward, noResponseNecessary, read, reply, replyToAll, review.
     *
     * @return MessageActionFlag The messageActionFlag
     */
@@ -243,7 +228,6 @@ class MessageRulePredicates extends Entity
 
     /**
     * Sets the messageActionFlag
-    * Represents the flag-for-action value that appears on an incoming message in order for the condition or exception to apply. Possible values are: any, call, doNotForward, followUp, fyi, forward, noResponseNecessary, read, reply, replyToAll, review.
     *
     * @param MessageActionFlag $val The value to assign to the messageActionFlag
     *
@@ -257,7 +241,6 @@ class MessageRulePredicates extends Entity
 
     /**
     * Gets the importance
-    * The importance that is stamped on an incoming message in order for the condition or exception to apply: low, normal, high.
     *
     * @return Importance The importance
     */
@@ -276,7 +259,6 @@ class MessageRulePredicates extends Entity
 
     /**
     * Sets the importance
-    * The importance that is stamped on an incoming message in order for the condition or exception to apply: low, normal, high.
     *
     * @param Importance $val The value to assign to the importance
     *
@@ -290,7 +272,6 @@ class MessageRulePredicates extends Entity
 
     /**
     * Gets the sensitivity
-    * Represents the sensitivity level that must be stamped on an incoming message in order for the condition or exception to apply. Possible values are: normal, personal, private, confidential.
     *
     * @return Sensitivity The sensitivity
     */
@@ -309,7 +290,6 @@ class MessageRulePredicates extends Entity
 
     /**
     * Sets the sensitivity
-    * Represents the sensitivity level that must be stamped on an incoming message in order for the condition or exception to apply. Possible values are: normal, personal, private, confidential.
     *
     * @param Sensitivity $val The value to assign to the sensitivity
     *
@@ -323,7 +303,6 @@ class MessageRulePredicates extends Entity
 
     /**
     * Gets the fromAddresses
-    * Represents the specific sender email addresses of an incoming message in order for the condition or exception to apply.
     *
     * @return Recipient The fromAddresses
     */
@@ -342,7 +321,6 @@ class MessageRulePredicates extends Entity
 
     /**
     * Sets the fromAddresses
-    * Represents the specific sender email addresses of an incoming message in order for the condition or exception to apply.
     *
     * @param Recipient $val The value to assign to the fromAddresses
     *
@@ -356,7 +334,6 @@ class MessageRulePredicates extends Entity
 
     /**
     * Gets the sentToAddresses
-    * Represents the email addresses that an incoming message must have been sent to in order for the condition or exception to apply.
     *
     * @return Recipient The sentToAddresses
     */
@@ -375,7 +352,6 @@ class MessageRulePredicates extends Entity
 
     /**
     * Sets the sentToAddresses
-    * Represents the email addresses that an incoming message must have been sent to in order for the condition or exception to apply.
     *
     * @param Recipient $val The value to assign to the sentToAddresses
     *
@@ -388,7 +364,6 @@ class MessageRulePredicates extends Entity
     }
     /**
     * Gets the sentToMe
-    * Indicates whether the owner of the mailbox must be in the toRecipients property of an incoming message in order for the condition or exception to apply.
     *
     * @return bool The sentToMe
     */
@@ -403,7 +378,6 @@ class MessageRulePredicates extends Entity
 
     /**
     * Sets the sentToMe
-    * Indicates whether the owner of the mailbox must be in the toRecipients property of an incoming message in order for the condition or exception to apply.
     *
     * @param bool $val The value of the sentToMe
     *
@@ -416,7 +390,6 @@ class MessageRulePredicates extends Entity
     }
     /**
     * Gets the sentOnlyToMe
-    * Indicates whether the owner of the mailbox must be the only recipient in an incoming message in order for the condition or exception to apply.
     *
     * @return bool The sentOnlyToMe
     */
@@ -431,7 +404,6 @@ class MessageRulePredicates extends Entity
 
     /**
     * Sets the sentOnlyToMe
-    * Indicates whether the owner of the mailbox must be the only recipient in an incoming message in order for the condition or exception to apply.
     *
     * @param bool $val The value of the sentOnlyToMe
     *
@@ -444,7 +416,6 @@ class MessageRulePredicates extends Entity
     }
     /**
     * Gets the sentCcMe
-    * Indicates whether the owner of the mailbox must be in the ccRecipients property of an incoming message in order for the condition or exception to apply.
     *
     * @return bool The sentCcMe
     */
@@ -459,7 +430,6 @@ class MessageRulePredicates extends Entity
 
     /**
     * Sets the sentCcMe
-    * Indicates whether the owner of the mailbox must be in the ccRecipients property of an incoming message in order for the condition or exception to apply.
     *
     * @param bool $val The value of the sentCcMe
     *
@@ -472,7 +442,6 @@ class MessageRulePredicates extends Entity
     }
     /**
     * Gets the sentToOrCcMe
-    * Indicates whether the owner of the mailbox must be in either a toRecipients or ccRecipients property of an incoming message in order for the condition or exception to apply.
     *
     * @return bool The sentToOrCcMe
     */
@@ -487,7 +456,6 @@ class MessageRulePredicates extends Entity
 
     /**
     * Sets the sentToOrCcMe
-    * Indicates whether the owner of the mailbox must be in either a toRecipients or ccRecipients property of an incoming message in order for the condition or exception to apply.
     *
     * @param bool $val The value of the sentToOrCcMe
     *
@@ -500,7 +468,6 @@ class MessageRulePredicates extends Entity
     }
     /**
     * Gets the notSentToMe
-    * Indicates whether the owner of the mailbox must not be a recipient of an incoming message in order for the condition or exception to apply.
     *
     * @return bool The notSentToMe
     */
@@ -515,7 +482,6 @@ class MessageRulePredicates extends Entity
 
     /**
     * Sets the notSentToMe
-    * Indicates whether the owner of the mailbox must not be a recipient of an incoming message in order for the condition or exception to apply.
     *
     * @param bool $val The value of the notSentToMe
     *
@@ -528,7 +494,6 @@ class MessageRulePredicates extends Entity
     }
     /**
     * Gets the hasAttachments
-    * Indicates whether an incoming message must have attachments in order for the condition or exception to apply.
     *
     * @return bool The hasAttachments
     */
@@ -543,7 +508,6 @@ class MessageRulePredicates extends Entity
 
     /**
     * Sets the hasAttachments
-    * Indicates whether an incoming message must have attachments in order for the condition or exception to apply.
     *
     * @param bool $val The value of the hasAttachments
     *
@@ -556,7 +520,6 @@ class MessageRulePredicates extends Entity
     }
     /**
     * Gets the isApprovalRequest
-    * Indicates whether an incoming message must be an approval request in order for the condition or exception to apply.
     *
     * @return bool The isApprovalRequest
     */
@@ -571,7 +534,6 @@ class MessageRulePredicates extends Entity
 
     /**
     * Sets the isApprovalRequest
-    * Indicates whether an incoming message must be an approval request in order for the condition or exception to apply.
     *
     * @param bool $val The value of the isApprovalRequest
     *
@@ -584,7 +546,6 @@ class MessageRulePredicates extends Entity
     }
     /**
     * Gets the isAutomaticForward
-    * Indicates whether an incoming message must be automatically forwarded in order for the condition or exception to apply.
     *
     * @return bool The isAutomaticForward
     */
@@ -599,7 +560,6 @@ class MessageRulePredicates extends Entity
 
     /**
     * Sets the isAutomaticForward
-    * Indicates whether an incoming message must be automatically forwarded in order for the condition or exception to apply.
     *
     * @param bool $val The value of the isAutomaticForward
     *
@@ -612,7 +572,6 @@ class MessageRulePredicates extends Entity
     }
     /**
     * Gets the isAutomaticReply
-    * Indicates whether an incoming message must be an auto reply in order for the condition or exception to apply.
     *
     * @return bool The isAutomaticReply
     */
@@ -627,7 +586,6 @@ class MessageRulePredicates extends Entity
 
     /**
     * Sets the isAutomaticReply
-    * Indicates whether an incoming message must be an auto reply in order for the condition or exception to apply.
     *
     * @param bool $val The value of the isAutomaticReply
     *
@@ -640,7 +598,6 @@ class MessageRulePredicates extends Entity
     }
     /**
     * Gets the isEncrypted
-    * Indicates whether an incoming message must be encrypted in order for the condition or exception to apply.
     *
     * @return bool The isEncrypted
     */
@@ -655,7 +612,6 @@ class MessageRulePredicates extends Entity
 
     /**
     * Sets the isEncrypted
-    * Indicates whether an incoming message must be encrypted in order for the condition or exception to apply.
     *
     * @param bool $val The value of the isEncrypted
     *
@@ -668,7 +624,6 @@ class MessageRulePredicates extends Entity
     }
     /**
     * Gets the isMeetingRequest
-    * Indicates whether an incoming message must be a meeting request in order for the condition or exception to apply.
     *
     * @return bool The isMeetingRequest
     */
@@ -683,7 +638,6 @@ class MessageRulePredicates extends Entity
 
     /**
     * Sets the isMeetingRequest
-    * Indicates whether an incoming message must be a meeting request in order for the condition or exception to apply.
     *
     * @param bool $val The value of the isMeetingRequest
     *
@@ -696,7 +650,6 @@ class MessageRulePredicates extends Entity
     }
     /**
     * Gets the isMeetingResponse
-    * Indicates whether an incoming message must be a meeting response in order for the condition or exception to apply.
     *
     * @return bool The isMeetingResponse
     */
@@ -711,7 +664,6 @@ class MessageRulePredicates extends Entity
 
     /**
     * Sets the isMeetingResponse
-    * Indicates whether an incoming message must be a meeting response in order for the condition or exception to apply.
     *
     * @param bool $val The value of the isMeetingResponse
     *
@@ -724,7 +676,6 @@ class MessageRulePredicates extends Entity
     }
     /**
     * Gets the isNonDeliveryReport
-    * Indicates whether an incoming message must be a non-delivery report in order for the condition or exception to apply.
     *
     * @return bool The isNonDeliveryReport
     */
@@ -739,7 +690,6 @@ class MessageRulePredicates extends Entity
 
     /**
     * Sets the isNonDeliveryReport
-    * Indicates whether an incoming message must be a non-delivery report in order for the condition or exception to apply.
     *
     * @param bool $val The value of the isNonDeliveryReport
     *
@@ -752,7 +702,6 @@ class MessageRulePredicates extends Entity
     }
     /**
     * Gets the isPermissionControlled
-    * Indicates whether an incoming message must be permission controlled (RMS-protected) in order for the condition or exception to apply.
     *
     * @return bool The isPermissionControlled
     */
@@ -767,7 +716,6 @@ class MessageRulePredicates extends Entity
 
     /**
     * Sets the isPermissionControlled
-    * Indicates whether an incoming message must be permission controlled (RMS-protected) in order for the condition or exception to apply.
     *
     * @param bool $val The value of the isPermissionControlled
     *
@@ -780,7 +728,6 @@ class MessageRulePredicates extends Entity
     }
     /**
     * Gets the isReadReceipt
-    * Indicates whether an incoming message must be a read receipt in order for the condition or exception to apply.
     *
     * @return bool The isReadReceipt
     */
@@ -795,7 +742,6 @@ class MessageRulePredicates extends Entity
 
     /**
     * Sets the isReadReceipt
-    * Indicates whether an incoming message must be a read receipt in order for the condition or exception to apply.
     *
     * @param bool $val The value of the isReadReceipt
     *
@@ -808,7 +754,6 @@ class MessageRulePredicates extends Entity
     }
     /**
     * Gets the isSigned
-    * Indicates whether an incoming message must be S/MIME-signed in order for the condition or exception to apply.
     *
     * @return bool The isSigned
     */
@@ -823,7 +768,6 @@ class MessageRulePredicates extends Entity
 
     /**
     * Sets the isSigned
-    * Indicates whether an incoming message must be S/MIME-signed in order for the condition or exception to apply.
     *
     * @param bool $val The value of the isSigned
     *
@@ -836,7 +780,6 @@ class MessageRulePredicates extends Entity
     }
     /**
     * Gets the isVoicemail
-    * Indicates whether an incoming message must be a voice mail in order for the condition or exception to apply.
     *
     * @return bool The isVoicemail
     */
@@ -851,7 +794,6 @@ class MessageRulePredicates extends Entity
 
     /**
     * Sets the isVoicemail
-    * Indicates whether an incoming message must be a voice mail in order for the condition or exception to apply.
     *
     * @param bool $val The value of the isVoicemail
     *
@@ -865,7 +807,6 @@ class MessageRulePredicates extends Entity
 
     /**
     * Gets the withinSizeRange
-    * Represents the minimum and maximum sizes (in kilobytes) that an incoming message must fall in between in order for the condition or exception to apply.
     *
     * @return SizeRange The withinSizeRange
     */
@@ -884,7 +825,6 @@ class MessageRulePredicates extends Entity
 
     /**
     * Sets the withinSizeRange
-    * Represents the minimum and maximum sizes (in kilobytes) that an incoming message must fall in between in order for the condition or exception to apply.
     *
     * @param SizeRange $val The value to assign to the withinSizeRange
     *

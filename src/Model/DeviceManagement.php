@@ -28,7 +28,6 @@ class DeviceManagement extends Entity
 {
     /**
     * Gets the subscriptionState
-    * Tenant mobile device management subscription state. Possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
     *
     * @return DeviceManagementSubscriptionState The subscriptionState
     */
@@ -47,7 +46,6 @@ class DeviceManagement extends Entity
     
     /**
     * Sets the subscriptionState
-    * Tenant mobile device management subscription state. Possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
     *
     * @param DeviceManagementSubscriptionState $val The subscriptionState
     *

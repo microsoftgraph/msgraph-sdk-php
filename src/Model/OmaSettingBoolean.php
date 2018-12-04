@@ -36,7 +36,6 @@ class OmaSettingBoolean extends OmaSetting
 
     /**
     * Gets the value
-    * Value.
     *
     * @return bool The value
     */
@@ -51,7 +50,6 @@ class OmaSettingBoolean extends OmaSetting
 
     /**
     * Sets the value
-    * Value.
     *
     * @param bool $val The value of the value
     *

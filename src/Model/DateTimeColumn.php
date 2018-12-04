@@ -27,7 +27,6 @@ class DateTimeColumn extends Entity
 {
     /**
     * Gets the displayAs
-    * How the value should be presented in the UX. Must be one of default, friendly, or standard. See below for more details. If unspecified, treated as default.
     *
     * @return string The displayAs
     */
@@ -42,7 +41,6 @@ class DateTimeColumn extends Entity
 
     /**
     * Sets the displayAs
-    * How the value should be presented in the UX. Must be one of default, friendly, or standard. See below for more details. If unspecified, treated as default.
     *
     * @param string $val The value of the displayAs
     *
@@ -55,7 +53,6 @@ class DateTimeColumn extends Entity
     }
     /**
     * Gets the format
-    * Indicates whether the value should be presented as a date only or a date and time. Must be one of dateOnly or dateTime
     *
     * @return string The format
     */
@@ -70,7 +67,6 @@ class DateTimeColumn extends Entity
 
     /**
     * Sets the format
-    * Indicates whether the value should be presented as a date only or a date and time. Must be one of dateOnly or dateTime
     *
     * @param string $val The value of the format
     *

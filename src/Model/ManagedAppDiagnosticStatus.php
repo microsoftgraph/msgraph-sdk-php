@@ -27,7 +27,6 @@ class ManagedAppDiagnosticStatus extends Entity
 {
     /**
     * Gets the validationName
-    * The validation friendly name
     *
     * @return string The validationName
     */
@@ -42,7 +41,6 @@ class ManagedAppDiagnosticStatus extends Entity
 
     /**
     * Sets the validationName
-    * The validation friendly name
     *
     * @param string $val The value of the validationName
     *
@@ -55,7 +53,6 @@ class ManagedAppDiagnosticStatus extends Entity
     }
     /**
     * Gets the state
-    * The state of the operation
     *
     * @return string The state
     */
@@ -70,7 +67,6 @@ class ManagedAppDiagnosticStatus extends Entity
 
     /**
     * Sets the state
-    * The state of the operation
     *
     * @param string $val The value of the state
     *
@@ -83,7 +79,6 @@ class ManagedAppDiagnosticStatus extends Entity
     }
     /**
     * Gets the mitigationInstruction
-    * Instruction on how to mitigate a failed validation
     *
     * @return string The mitigationInstruction
     */
@@ -98,7 +93,6 @@ class ManagedAppDiagnosticStatus extends Entity
 
     /**
     * Sets the mitigationInstruction
-    * Instruction on how to mitigate a failed validation
     *
     * @param string $val The value of the mitigationInstruction
     *

@@ -28,7 +28,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
 {
     /**
     * Gets the firewallBlockStatefulFTP
-    * Blocks stateful FTP connections to the device
     *
     * @return bool The firewallBlockStatefulFTP
     */
@@ -43,7 +42,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the firewallBlockStatefulFTP
-    * Blocks stateful FTP connections to the device
     *
     * @param bool $val The firewallBlockStatefulFTP
     *
@@ -57,7 +55,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the firewallIdleTimeoutForSecurityAssociationInSeconds
-    * Configures the idle timeout for security associations, in seconds, from 300 to 3600 inclusive. This is the period after which security associations will expire and be deleted. Valid values 300 to 3600
     *
     * @return int The firewallIdleTimeoutForSecurityAssociationInSeconds
     */
@@ -72,7 +69,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the firewallIdleTimeoutForSecurityAssociationInSeconds
-    * Configures the idle timeout for security associations, in seconds, from 300 to 3600 inclusive. This is the period after which security associations will expire and be deleted. Valid values 300 to 3600
     *
     * @param int $val The firewallIdleTimeoutForSecurityAssociationInSeconds
     *
@@ -86,7 +82,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the firewallPreSharedKeyEncodingMethod
-    * Select the preshared key encoding to be used. Possible values are: deviceDefault, none, utF8.
     *
     * @return FirewallPreSharedKeyEncodingMethodType The firewallPreSharedKeyEncodingMethod
     */
@@ -105,7 +100,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the firewallPreSharedKeyEncodingMethod
-    * Select the preshared key encoding to be used. Possible values are: deviceDefault, none, utF8.
     *
     * @param FirewallPreSharedKeyEncodingMethodType $val The firewallPreSharedKeyEncodingMethod
     *
@@ -119,7 +113,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the firewallIPSecExemptionsAllowNeighborDiscovery
-    * Configures IPSec exemptions to allow neighbor discovery IPv6 ICMP type-codes
     *
     * @return bool The firewallIPSecExemptionsAllowNeighborDiscovery
     */
@@ -134,7 +127,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the firewallIPSecExemptionsAllowNeighborDiscovery
-    * Configures IPSec exemptions to allow neighbor discovery IPv6 ICMP type-codes
     *
     * @param bool $val The firewallIPSecExemptionsAllowNeighborDiscovery
     *
@@ -148,7 +140,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the firewallIPSecExemptionsAllowICMP
-    * Configures IPSec exemptions to allow ICMP
     *
     * @return bool The firewallIPSecExemptionsAllowICMP
     */
@@ -163,7 +154,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the firewallIPSecExemptionsAllowICMP
-    * Configures IPSec exemptions to allow ICMP
     *
     * @param bool $val The firewallIPSecExemptionsAllowICMP
     *
@@ -177,7 +167,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the firewallIPSecExemptionsAllowRouterDiscovery
-    * Configures IPSec exemptions to allow router discovery IPv6 ICMP type-codes
     *
     * @return bool The firewallIPSecExemptionsAllowRouterDiscovery
     */
@@ -192,7 +181,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the firewallIPSecExemptionsAllowRouterDiscovery
-    * Configures IPSec exemptions to allow router discovery IPv6 ICMP type-codes
     *
     * @param bool $val The firewallIPSecExemptionsAllowRouterDiscovery
     *
@@ -206,7 +194,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the firewallIPSecExemptionsAllowDHCP
-    * Configures IPSec exemptions to allow both IPv4 and IPv6 DHCP traffic
     *
     * @return bool The firewallIPSecExemptionsAllowDHCP
     */
@@ -221,7 +208,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the firewallIPSecExemptionsAllowDHCP
-    * Configures IPSec exemptions to allow both IPv4 and IPv6 DHCP traffic
     *
     * @param bool $val The firewallIPSecExemptionsAllowDHCP
     *
@@ -235,7 +221,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the firewallCertificateRevocationListCheckMethod
-    * Specify how the certificate revocation list is to be enforced. Possible values are: deviceDefault, none, attempt, require.
     *
     * @return FirewallCertificateRevocationListCheckMethodType The firewallCertificateRevocationListCheckMethod
     */
@@ -254,7 +239,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the firewallCertificateRevocationListCheckMethod
-    * Specify how the certificate revocation list is to be enforced. Possible values are: deviceDefault, none, attempt, require.
     *
     * @param FirewallCertificateRevocationListCheckMethodType $val The firewallCertificateRevocationListCheckMethod
     *
@@ -268,7 +252,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the firewallMergeKeyingModuleSettings
-    * If an authentication set is not fully supported by a keying module, direct the module to ignore only unsupported authentication suites rather than the entire set
     *
     * @return bool The firewallMergeKeyingModuleSettings
     */
@@ -283,7 +266,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the firewallMergeKeyingModuleSettings
-    * If an authentication set is not fully supported by a keying module, direct the module to ignore only unsupported authentication suites rather than the entire set
     *
     * @param bool $val The firewallMergeKeyingModuleSettings
     *
@@ -297,7 +279,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the firewallPacketQueueingMethod
-    * Configures how packet queueing should be applied in the tunnel gateway scenario. Possible values are: deviceDefault, disabled, queueInbound, queueOutbound, queueBoth.
     *
     * @return FirewallPacketQueueingMethodType The firewallPacketQueueingMethod
     */
@@ -316,7 +297,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the firewallPacketQueueingMethod
-    * Configures how packet queueing should be applied in the tunnel gateway scenario. Possible values are: deviceDefault, disabled, queueInbound, queueOutbound, queueBoth.
     *
     * @param FirewallPacketQueueingMethodType $val The firewallPacketQueueingMethod
     *
@@ -330,7 +310,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the firewallProfileDomain
-    * Configures the firewall profile settings for domain networks
     *
     * @return WindowsFirewallNetworkProfile The firewallProfileDomain
     */
@@ -349,7 +328,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the firewallProfileDomain
-    * Configures the firewall profile settings for domain networks
     *
     * @param WindowsFirewallNetworkProfile $val The firewallProfileDomain
     *
@@ -363,7 +341,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the firewallProfilePublic
-    * Configures the firewall profile settings for public networks
     *
     * @return WindowsFirewallNetworkProfile The firewallProfilePublic
     */
@@ -382,7 +359,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the firewallProfilePublic
-    * Configures the firewall profile settings for public networks
     *
     * @param WindowsFirewallNetworkProfile $val The firewallProfilePublic
     *
@@ -396,7 +372,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the firewallProfilePrivate
-    * Configures the firewall profile settings for private networks
     *
     * @return WindowsFirewallNetworkProfile The firewallProfilePrivate
     */
@@ -415,7 +390,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the firewallProfilePrivate
-    * Configures the firewall profile settings for private networks
     *
     * @param WindowsFirewallNetworkProfile $val The firewallProfilePrivate
     *
@@ -429,7 +403,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderAttackSurfaceReductionExcludedPaths
-    * List of exe files and folders to be excluded from attack surface reduction rules
     *
     * @return string The defenderAttackSurfaceReductionExcludedPaths
     */
@@ -444,7 +417,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderAttackSurfaceReductionExcludedPaths
-    * List of exe files and folders to be excluded from attack surface reduction rules
     *
     * @param string $val The defenderAttackSurfaceReductionExcludedPaths
     *
@@ -458,7 +430,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderGuardedFoldersAllowedAppPaths
-    * List of paths to exe that are allowed to access protected folders
     *
     * @return string The defenderGuardedFoldersAllowedAppPaths
     */
@@ -473,7 +444,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderGuardedFoldersAllowedAppPaths
-    * List of paths to exe that are allowed to access protected folders
     *
     * @param string $val The defenderGuardedFoldersAllowedAppPaths
     *
@@ -487,7 +457,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderAdditionalGuardedFolders
-    * List of folder paths to be added to the list of protected folders
     *
     * @return string The defenderAdditionalGuardedFolders
     */
@@ -502,7 +471,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderAdditionalGuardedFolders
-    * List of folder paths to be added to the list of protected folders
     *
     * @param string $val The defenderAdditionalGuardedFolders
     *
@@ -516,7 +484,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderExploitProtectionXml
-    * Xml content containing information regarding exploit protection details.
     *
     * @return \GuzzleHttp\Psr7\Stream The defenderExploitProtectionXml
     */
@@ -535,7 +502,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderExploitProtectionXml
-    * Xml content containing information regarding exploit protection details.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The defenderExploitProtectionXml
     *
@@ -549,7 +515,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderExploitProtectionXmlFileName
-    * Name of the file from which DefenderExploitProtectionXml was obtained.
     *
     * @return string The defenderExploitProtectionXmlFileName
     */
@@ -564,7 +529,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderExploitProtectionXmlFileName
-    * Name of the file from which DefenderExploitProtectionXml was obtained.
     *
     * @param string $val The defenderExploitProtectionXmlFileName
     *
@@ -578,7 +542,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderSecurityCenterBlockExploitProtectionOverride
-    * Indicates whether or not to block user from overriding Exploit Protection settings.
     *
     * @return bool The defenderSecurityCenterBlockExploitProtectionOverride
     */
@@ -593,7 +556,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderSecurityCenterBlockExploitProtectionOverride
-    * Indicates whether or not to block user from overriding Exploit Protection settings.
     *
     * @param bool $val The defenderSecurityCenterBlockExploitProtectionOverride
     *
@@ -607,7 +569,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the appLockerApplicationControl
-    * Enables the Admin to choose what types of app to allow on devices. Possible values are: notConfigured, enforceComponentsAndStoreApps, auditComponentsAndStoreApps, enforceComponentsStoreAppsAndSmartlocker, auditComponentsStoreAppsAndSmartlocker.
     *
     * @return AppLockerApplicationControlType The appLockerApplicationControl
     */
@@ -626,7 +587,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the appLockerApplicationControl
-    * Enables the Admin to choose what types of app to allow on devices. Possible values are: notConfigured, enforceComponentsAndStoreApps, auditComponentsAndStoreApps, enforceComponentsStoreAppsAndSmartlocker, auditComponentsStoreAppsAndSmartlocker.
     *
     * @param AppLockerApplicationControlType $val The appLockerApplicationControl
     *
@@ -640,7 +600,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the smartScreenEnableInShell
-    * Allows IT Admins to configure SmartScreen for Windows.
     *
     * @return bool The smartScreenEnableInShell
     */
@@ -655,7 +614,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the smartScreenEnableInShell
-    * Allows IT Admins to configure SmartScreen for Windows.
     *
     * @param bool $val The smartScreenEnableInShell
     *
@@ -669,7 +627,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the smartScreenBlockOverrideForFiles
-    * Allows IT Admins to control whether users can can ignore SmartScreen warnings and run malicious files.
     *
     * @return bool The smartScreenBlockOverrideForFiles
     */
@@ -684,7 +641,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the smartScreenBlockOverrideForFiles
-    * Allows IT Admins to control whether users can can ignore SmartScreen warnings and run malicious files.
     *
     * @param bool $val The smartScreenBlockOverrideForFiles
     *
@@ -698,7 +654,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the applicationGuardEnabled
-    * Enable Windows Defender Application Guard
     *
     * @return bool The applicationGuardEnabled
     */
@@ -713,7 +668,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the applicationGuardEnabled
-    * Enable Windows Defender Application Guard
     *
     * @param bool $val The applicationGuardEnabled
     *
@@ -727,7 +681,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the applicationGuardBlockFileTransfer
-    * Block clipboard to transfer image file, text file or neither of them. Possible values are: notConfigured, blockImageAndTextFile, blockImageFile, blockNone, blockTextFile.
     *
     * @return ApplicationGuardBlockFileTransferType The applicationGuardBlockFileTransfer
     */
@@ -746,7 +699,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the applicationGuardBlockFileTransfer
-    * Block clipboard to transfer image file, text file or neither of them. Possible values are: notConfigured, blockImageAndTextFile, blockImageFile, blockNone, blockTextFile.
     *
     * @param ApplicationGuardBlockFileTransferType $val The applicationGuardBlockFileTransfer
     *
@@ -760,7 +712,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the applicationGuardBlockNonEnterpriseContent
-    * Block enterprise sites to load non-enterprise content, such as third party plug-ins
     *
     * @return bool The applicationGuardBlockNonEnterpriseContent
     */
@@ -775,7 +726,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the applicationGuardBlockNonEnterpriseContent
-    * Block enterprise sites to load non-enterprise content, such as third party plug-ins
     *
     * @param bool $val The applicationGuardBlockNonEnterpriseContent
     *
@@ -789,7 +739,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the applicationGuardAllowPersistence
-    * Allow persisting user generated data inside the App Guard Containter (favorites, cookies, web passwords, etc.)
     *
     * @return bool The applicationGuardAllowPersistence
     */
@@ -804,7 +753,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the applicationGuardAllowPersistence
-    * Allow persisting user generated data inside the App Guard Containter (favorites, cookies, web passwords, etc.)
     *
     * @param bool $val The applicationGuardAllowPersistence
     *
@@ -818,7 +766,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the applicationGuardForceAuditing
-    * Force auditing will persist Windows logs and events to meet security/compliance criteria (sample events are user login-logoff, use of privilege rights, software installation, system changes, etc.)
     *
     * @return bool The applicationGuardForceAuditing
     */
@@ -833,7 +780,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the applicationGuardForceAuditing
-    * Force auditing will persist Windows logs and events to meet security/compliance criteria (sample events are user login-logoff, use of privilege rights, software installation, system changes, etc.)
     *
     * @param bool $val The applicationGuardForceAuditing
     *
@@ -847,7 +793,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the applicationGuardBlockClipboardSharing
-    * Block clipboard to share data from Host to Container, or from Container to Host, or both ways, or neither ways. Possible values are: notConfigured, blockBoth, blockHostToContainer, blockContainerToHost, blockNone.
     *
     * @return ApplicationGuardBlockClipboardSharingType The applicationGuardBlockClipboardSharing
     */
@@ -866,7 +811,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the applicationGuardBlockClipboardSharing
-    * Block clipboard to share data from Host to Container, or from Container to Host, or both ways, or neither ways. Possible values are: notConfigured, blockBoth, blockHostToContainer, blockContainerToHost, blockNone.
     *
     * @param ApplicationGuardBlockClipboardSharingType $val The applicationGuardBlockClipboardSharing
     *
@@ -880,7 +824,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the applicationGuardAllowPrintToPDF
-    * Allow printing to PDF from Container
     *
     * @return bool The applicationGuardAllowPrintToPDF
     */
@@ -895,7 +838,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the applicationGuardAllowPrintToPDF
-    * Allow printing to PDF from Container
     *
     * @param bool $val The applicationGuardAllowPrintToPDF
     *
@@ -909,7 +851,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the applicationGuardAllowPrintToXPS
-    * Allow printing to XPS from Container
     *
     * @return bool The applicationGuardAllowPrintToXPS
     */
@@ -924,7 +865,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the applicationGuardAllowPrintToXPS
-    * Allow printing to XPS from Container
     *
     * @param bool $val The applicationGuardAllowPrintToXPS
     *
@@ -938,7 +878,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the applicationGuardAllowPrintToLocalPrinters
-    * Allow printing to Local Printers from Container
     *
     * @return bool The applicationGuardAllowPrintToLocalPrinters
     */
@@ -953,7 +892,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the applicationGuardAllowPrintToLocalPrinters
-    * Allow printing to Local Printers from Container
     *
     * @param bool $val The applicationGuardAllowPrintToLocalPrinters
     *
@@ -967,7 +905,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the applicationGuardAllowPrintToNetworkPrinters
-    * Allow printing to Network Printers from Container
     *
     * @return bool The applicationGuardAllowPrintToNetworkPrinters
     */
@@ -982,7 +919,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the applicationGuardAllowPrintToNetworkPrinters
-    * Allow printing to Network Printers from Container
     *
     * @param bool $val The applicationGuardAllowPrintToNetworkPrinters
     *
@@ -996,7 +932,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the bitLockerDisableWarningForOtherDiskEncryption
-    * Allows the Admin to disable the warning prompt for other disk encryption on the user machines.
     *
     * @return bool The bitLockerDisableWarningForOtherDiskEncryption
     */
@@ -1011,7 +946,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the bitLockerDisableWarningForOtherDiskEncryption
-    * Allows the Admin to disable the warning prompt for other disk encryption on the user machines.
     *
     * @param bool $val The bitLockerDisableWarningForOtherDiskEncryption
     *
@@ -1025,7 +959,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the bitLockerEnableStorageCardEncryptionOnMobile
-    * Allows the admin to require encryption to be turned on using BitLocker. This policy is valid only for a mobile SKU.
     *
     * @return bool The bitLockerEnableStorageCardEncryptionOnMobile
     */
@@ -1040,7 +973,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the bitLockerEnableStorageCardEncryptionOnMobile
-    * Allows the admin to require encryption to be turned on using BitLocker. This policy is valid only for a mobile SKU.
     *
     * @param bool $val The bitLockerEnableStorageCardEncryptionOnMobile
     *
@@ -1054,7 +986,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the bitLockerEncryptDevice
-    * Allows the admin to require encryption to be turned on using BitLocker.
     *
     * @return bool The bitLockerEncryptDevice
     */
@@ -1069,7 +1000,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the bitLockerEncryptDevice
-    * Allows the admin to require encryption to be turned on using BitLocker.
     *
     * @param bool $val The bitLockerEncryptDevice
     *
@@ -1083,7 +1013,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the bitLockerRemovableDrivePolicy
-    * BitLocker Removable Drive Policy.
     *
     * @return BitLockerRemovableDrivePolicy The bitLockerRemovableDrivePolicy
     */
@@ -1102,7 +1031,6 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the bitLockerRemovableDrivePolicy
-    * BitLocker Removable Drive Policy.
     *
     * @param BitLockerRemovableDrivePolicy $val The bitLockerRemovableDrivePolicy
     *

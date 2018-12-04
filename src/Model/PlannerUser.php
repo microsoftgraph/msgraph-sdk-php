@@ -29,7 +29,6 @@ class PlannerUser extends Entity
 
      /** 
      * Gets the tasks
-    * Read-only. Nullable. Returns the plannerPlans shared with the user.
      *
      * @return array The tasks
      */
@@ -44,7 +43,6 @@ class PlannerUser extends Entity
     
     /** 
     * Sets the tasks
-    * Read-only. Nullable. Returns the plannerPlans shared with the user.
     *
     * @param PlannerTask $val The tasks
     *
@@ -59,7 +57,6 @@ class PlannerUser extends Entity
 
      /** 
      * Gets the plans
-    * Read-only. Nullable. Returns the plannerTasks assigned to the user.
      *
      * @return array The plans
      */
@@ -74,7 +71,6 @@ class PlannerUser extends Entity
     
     /** 
     * Sets the plans
-    * Read-only. Nullable. Returns the plannerTasks assigned to the user.
     *
     * @param PlannerPlan $val The plans
     *

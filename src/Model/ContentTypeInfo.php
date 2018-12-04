@@ -27,7 +27,6 @@ class ContentTypeInfo extends Entity
 {
     /**
     * Gets the id
-    * The id of the content type.
     *
     * @return string The id
     */
@@ -42,7 +41,6 @@ class ContentTypeInfo extends Entity
 
     /**
     * Sets the id
-    * The id of the content type.
     *
     * @param string $val The value of the id
     *

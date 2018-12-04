@@ -28,7 +28,6 @@ class ManagedIOSLobApp extends ManagedMobileLobApp
 {
     /**
     * Gets the bundleId
-    * The Identity Name.
     *
     * @return string The bundleId
     */
@@ -43,7 +42,6 @@ class ManagedIOSLobApp extends ManagedMobileLobApp
     
     /**
     * Sets the bundleId
-    * The Identity Name.
     *
     * @param string $val The bundleId
     *
@@ -57,7 +55,6 @@ class ManagedIOSLobApp extends ManagedMobileLobApp
     
     /**
     * Gets the applicableDeviceType
-    * The iOS architecture for which this app can run on.
     *
     * @return IosDeviceType The applicableDeviceType
     */
@@ -76,7 +73,6 @@ class ManagedIOSLobApp extends ManagedMobileLobApp
     
     /**
     * Sets the applicableDeviceType
-    * The iOS architecture for which this app can run on.
     *
     * @param IosDeviceType $val The applicableDeviceType
     *
@@ -90,7 +86,6 @@ class ManagedIOSLobApp extends ManagedMobileLobApp
     
     /**
     * Gets the minimumSupportedOperatingSystem
-    * The value for the minimum applicable operating system.
     *
     * @return IosMinimumOperatingSystem The minimumSupportedOperatingSystem
     */
@@ -109,7 +104,6 @@ class ManagedIOSLobApp extends ManagedMobileLobApp
     
     /**
     * Sets the minimumSupportedOperatingSystem
-    * The value for the minimum applicable operating system.
     *
     * @param IosMinimumOperatingSystem $val The minimumSupportedOperatingSystem
     *
@@ -123,7 +117,6 @@ class ManagedIOSLobApp extends ManagedMobileLobApp
     
     /**
     * Gets the expirationDateTime
-    * The expiration time.
     *
     * @return \DateTime The expirationDateTime
     */
@@ -142,7 +135,6 @@ class ManagedIOSLobApp extends ManagedMobileLobApp
     
     /**
     * Sets the expirationDateTime
-    * The expiration time.
     *
     * @param \DateTime $val The expirationDateTime
     *
@@ -156,7 +148,6 @@ class ManagedIOSLobApp extends ManagedMobileLobApp
     
     /**
     * Gets the versionNumber
-    * The version number of managed iOS Line of Business (LoB) app.
     *
     * @return string The versionNumber
     */
@@ -171,7 +162,6 @@ class ManagedIOSLobApp extends ManagedMobileLobApp
     
     /**
     * Sets the versionNumber
-    * The version number of managed iOS Line of Business (LoB) app.
     *
     * @param string $val The versionNumber
     *
@@ -185,7 +175,6 @@ class ManagedIOSLobApp extends ManagedMobileLobApp
     
     /**
     * Gets the buildNumber
-    * The build number of managed iOS Line of Business (LoB) app.
     *
     * @return string The buildNumber
     */
@@ -200,7 +189,6 @@ class ManagedIOSLobApp extends ManagedMobileLobApp
     
     /**
     * Sets the buildNumber
-    * The build number of managed iOS Line of Business (LoB) app.
     *
     * @param string $val The buildNumber
     *

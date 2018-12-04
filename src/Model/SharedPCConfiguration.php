@@ -28,7 +28,6 @@ class SharedPCConfiguration extends DeviceConfiguration
 {
     /**
     * Gets the accountManagerPolicy
-    * Specifies how accounts are managed on a shared PC. Only applies when disableAccountManager is false.
     *
     * @return SharedPCAccountManagerPolicy The accountManagerPolicy
     */
@@ -47,7 +46,6 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Sets the accountManagerPolicy
-    * Specifies how accounts are managed on a shared PC. Only applies when disableAccountManager is false.
     *
     * @param SharedPCAccountManagerPolicy $val The accountManagerPolicy
     *
@@ -61,7 +59,6 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Gets the allowedAccounts
-    * Indicates which type of accounts are allowed to use on a shared PC. Possible values are: guest, domain.
     *
     * @return SharedPCAllowedAccountType The allowedAccounts
     */
@@ -80,7 +77,6 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Sets the allowedAccounts
-    * Indicates which type of accounts are allowed to use on a shared PC. Possible values are: guest, domain.
     *
     * @param SharedPCAllowedAccountType $val The allowedAccounts
     *
@@ -94,7 +90,6 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Gets the allowLocalStorage
-    * Specifies whether local storage is allowed on a shared PC.
     *
     * @return bool The allowLocalStorage
     */
@@ -109,7 +104,6 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Sets the allowLocalStorage
-    * Specifies whether local storage is allowed on a shared PC.
     *
     * @param bool $val The allowLocalStorage
     *
@@ -123,7 +117,6 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Gets the disableAccountManager
-    * Disables the account manager for shared PC mode.
     *
     * @return bool The disableAccountManager
     */
@@ -138,7 +131,6 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Sets the disableAccountManager
-    * Disables the account manager for shared PC mode.
     *
     * @param bool $val The disableAccountManager
     *
@@ -152,7 +144,6 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Gets the disableEduPolicies
-    * Specifies whether the default shared PC education environment policies should be disabled. For Windows 10 RS2 and later, this policy will be applied without setting Enabled to true.
     *
     * @return bool The disableEduPolicies
     */
@@ -167,7 +158,6 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Sets the disableEduPolicies
-    * Specifies whether the default shared PC education environment policies should be disabled. For Windows 10 RS2 and later, this policy will be applied without setting Enabled to true.
     *
     * @param bool $val The disableEduPolicies
     *
@@ -181,7 +171,6 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Gets the disablePowerPolicies
-    * Specifies whether the default shared PC power policies should be disabled.
     *
     * @return bool The disablePowerPolicies
     */
@@ -196,7 +185,6 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Sets the disablePowerPolicies
-    * Specifies whether the default shared PC power policies should be disabled.
     *
     * @param bool $val The disablePowerPolicies
     *
@@ -210,7 +198,6 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Gets the disableSignInOnResume
-    * Disables the requirement to sign in whenever the device wakes up from sleep mode.
     *
     * @return bool The disableSignInOnResume
     */
@@ -225,7 +212,6 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Sets the disableSignInOnResume
-    * Disables the requirement to sign in whenever the device wakes up from sleep mode.
     *
     * @param bool $val The disableSignInOnResume
     *
@@ -239,7 +225,6 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Gets the enabled
-    * Enables shared PC mode and applies the shared pc policies.
     *
     * @return bool The enabled
     */
@@ -254,7 +239,6 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Sets the enabled
-    * Enables shared PC mode and applies the shared pc policies.
     *
     * @param bool $val The enabled
     *
@@ -268,7 +252,6 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Gets the idleTimeBeforeSleepInSeconds
-    * Specifies the time in seconds that a device must sit idle before the PC goes to sleep. Setting this value to 0 prevents the sleep timeout from occurring.
     *
     * @return int The idleTimeBeforeSleepInSeconds
     */
@@ -283,7 +266,6 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Sets the idleTimeBeforeSleepInSeconds
-    * Specifies the time in seconds that a device must sit idle before the PC goes to sleep. Setting this value to 0 prevents the sleep timeout from occurring.
     *
     * @param int $val The idleTimeBeforeSleepInSeconds
     *
@@ -297,7 +279,6 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Gets the kioskAppDisplayName
-    * Specifies the display text for the account shown on the sign-in screen which launches the app specified by SetKioskAppUserModelId. Only applies when KioskAppUserModelId is set.
     *
     * @return string The kioskAppDisplayName
     */
@@ -312,7 +293,6 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Sets the kioskAppDisplayName
-    * Specifies the display text for the account shown on the sign-in screen which launches the app specified by SetKioskAppUserModelId. Only applies when KioskAppUserModelId is set.
     *
     * @param string $val The kioskAppDisplayName
     *
@@ -326,7 +306,6 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Gets the kioskAppUserModelId
-    * Specifies the application user model ID of the app to use with assigned access.
     *
     * @return string The kioskAppUserModelId
     */
@@ -341,7 +320,6 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Sets the kioskAppUserModelId
-    * Specifies the application user model ID of the app to use with assigned access.
     *
     * @param string $val The kioskAppUserModelId
     *
@@ -355,7 +333,6 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Gets the maintenanceStartTime
-    * Specifies the daily start time of maintenance hour.
     *
     * @return TimeOfDay The maintenanceStartTime
     */
@@ -374,7 +351,6 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Sets the maintenanceStartTime
-    * Specifies the daily start time of maintenance hour.
     *
     * @param TimeOfDay $val The maintenanceStartTime
     *

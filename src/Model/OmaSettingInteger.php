@@ -36,7 +36,6 @@ class OmaSettingInteger extends OmaSetting
 
     /**
     * Gets the value
-    * Value.
     *
     * @return int The value
     */
@@ -51,7 +50,6 @@ class OmaSettingInteger extends OmaSetting
 
     /**
     * Sets the value
-    * Value.
     *
     * @param int $val The value of the value
     *

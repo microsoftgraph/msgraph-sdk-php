@@ -28,7 +28,6 @@ class TargetedManagedAppProtection extends ManagedAppProtection
 {
     /**
     * Gets the isAssigned
-    * Indicates if the policy is deployed to any inclusion groups or not.
     *
     * @return bool The isAssigned
     */
@@ -43,7 +42,6 @@ class TargetedManagedAppProtection extends ManagedAppProtection
     
     /**
     * Sets the isAssigned
-    * Indicates if the policy is deployed to any inclusion groups or not.
     *
     * @param bool $val The isAssigned
     *
@@ -58,7 +56,6 @@ class TargetedManagedAppProtection extends ManagedAppProtection
 
      /** 
      * Gets the assignments
-    * Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
      *
      * @return array The assignments
      */
@@ -73,7 +70,6 @@ class TargetedManagedAppProtection extends ManagedAppProtection
     
     /** 
     * Sets the assignments
-    * Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
     *
     * @param TargetedManagedAppPolicyAssignment $val The assignments
     *

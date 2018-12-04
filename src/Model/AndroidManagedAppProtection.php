@@ -28,7 +28,6 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
 {
     /**
     * Gets the screenCaptureBlocked
-    * Indicates whether a managed user can take screen captures of managed apps
     *
     * @return bool The screenCaptureBlocked
     */
@@ -43,7 +42,6 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Sets the screenCaptureBlocked
-    * Indicates whether a managed user can take screen captures of managed apps
     *
     * @param bool $val The screenCaptureBlocked
     *
@@ -57,7 +55,6 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Gets the disableAppEncryptionIfDeviceEncryptionIsEnabled
-    * When this setting is enabled, app level encryption is disabled if device level encryption is enabled
     *
     * @return bool The disableAppEncryptionIfDeviceEncryptionIsEnabled
     */
@@ -72,7 +69,6 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Sets the disableAppEncryptionIfDeviceEncryptionIsEnabled
-    * When this setting is enabled, app level encryption is disabled if device level encryption is enabled
     *
     * @param bool $val The disableAppEncryptionIfDeviceEncryptionIsEnabled
     *
@@ -86,7 +82,6 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Gets the encryptAppData
-    * Indicates whether application data for managed apps should be encrypted
     *
     * @return bool The encryptAppData
     */
@@ -101,7 +96,6 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Sets the encryptAppData
-    * Indicates whether application data for managed apps should be encrypted
     *
     * @param bool $val The encryptAppData
     *
@@ -115,7 +109,6 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Gets the deployedAppCount
-    * Count of apps to which the current policy is deployed.
     *
     * @return int The deployedAppCount
     */
@@ -130,7 +123,6 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Sets the deployedAppCount
-    * Count of apps to which the current policy is deployed.
     *
     * @param int $val The deployedAppCount
     *
@@ -144,7 +136,6 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Gets the minimumRequiredPatchVersion
-    * Define the oldest required Android security patch level a user can have to gain secure access to the app.
     *
     * @return string The minimumRequiredPatchVersion
     */
@@ -159,7 +150,6 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Sets the minimumRequiredPatchVersion
-    * Define the oldest required Android security patch level a user can have to gain secure access to the app.
     *
     * @param string $val The minimumRequiredPatchVersion
     *
@@ -173,7 +163,6 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Gets the minimumWarningPatchVersion
-    * Define the oldest recommended Android security patch level a user can have for secure access to the app.
     *
     * @return string The minimumWarningPatchVersion
     */
@@ -188,7 +177,6 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Sets the minimumWarningPatchVersion
-    * Define the oldest recommended Android security patch level a user can have for secure access to the app.
     *
     * @param string $val The minimumWarningPatchVersion
     *
@@ -203,7 +191,6 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
 
      /** 
      * Gets the apps
-    * List of apps to which the policy is deployed.
      *
      * @return array The apps
      */
@@ -218,7 +205,6 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     
     /** 
     * Sets the apps
-    * List of apps to which the policy is deployed.
     *
     * @param ManagedMobileApp $val The apps
     *
@@ -232,7 +218,6 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Gets the deploymentSummary
-    * Navigation property to deployment summary of the configuration.
     *
     * @return ManagedAppPolicyDeploymentSummary The deploymentSummary
     */
@@ -251,7 +236,6 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Sets the deploymentSummary
-    * Navigation property to deployment summary of the configuration.
     *
     * @param ManagedAppPolicyDeploymentSummary $val The deploymentSummary
     *

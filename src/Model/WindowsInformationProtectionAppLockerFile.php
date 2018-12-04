@@ -28,7 +28,6 @@ class WindowsInformationProtectionAppLockerFile extends Entity
 {
     /**
     * Gets the displayName
-    * The friendly name
     *
     * @return string The displayName
     */
@@ -43,7 +42,6 @@ class WindowsInformationProtectionAppLockerFile extends Entity
     
     /**
     * Sets the displayName
-    * The friendly name
     *
     * @param string $val The displayName
     *
@@ -57,7 +55,6 @@ class WindowsInformationProtectionAppLockerFile extends Entity
     
     /**
     * Gets the fileHash
-    * SHA256 hash of the file
     *
     * @return string The fileHash
     */
@@ -72,7 +69,6 @@ class WindowsInformationProtectionAppLockerFile extends Entity
     
     /**
     * Sets the fileHash
-    * SHA256 hash of the file
     *
     * @param string $val The fileHash
     *
@@ -86,7 +82,6 @@ class WindowsInformationProtectionAppLockerFile extends Entity
     
     /**
     * Gets the file
-    * File as a byte array
     *
     * @return \GuzzleHttp\Psr7\Stream The file
     */
@@ -105,7 +100,6 @@ class WindowsInformationProtectionAppLockerFile extends Entity
     
     /**
     * Sets the file
-    * File as a byte array
     *
     * @param \GuzzleHttp\Psr7\Stream $val The file
     *
@@ -119,7 +113,6 @@ class WindowsInformationProtectionAppLockerFile extends Entity
     
     /**
     * Gets the version
-    * Version of the entity.
     *
     * @return string The version
     */
@@ -134,7 +127,6 @@ class WindowsInformationProtectionAppLockerFile extends Entity
     
     /**
     * Sets the version
-    * Version of the entity.
     *
     * @param string $val The version
     *

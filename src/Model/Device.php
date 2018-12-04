@@ -28,7 +28,6 @@ class Device extends DirectoryObject
 {
     /**
     * Gets the accountEnabled
-    * true if the account is enabled; otherwise, false. Required.
     *
     * @return bool The accountEnabled
     */
@@ -43,7 +42,6 @@ class Device extends DirectoryObject
     
     /**
     * Sets the accountEnabled
-    * true if the account is enabled; otherwise, false. Required.
     *
     * @param bool $val The accountEnabled
     *
@@ -85,7 +83,6 @@ class Device extends DirectoryObject
     
     /**
     * Gets the approximateLastSignInDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z' Read-only.
     *
     * @return \DateTime The approximateLastSignInDateTime
     */
@@ -104,7 +101,6 @@ class Device extends DirectoryObject
     
     /**
     * Sets the approximateLastSignInDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z' Read-only.
     *
     * @param \DateTime $val The approximateLastSignInDateTime
     *
@@ -118,7 +114,6 @@ class Device extends DirectoryObject
     
     /**
     * Gets the deviceId
-    * Unique identifier set by Azure Device Registration Service at the time of registration.
     *
     * @return string The deviceId
     */
@@ -133,7 +128,6 @@ class Device extends DirectoryObject
     
     /**
     * Sets the deviceId
-    * Unique identifier set by Azure Device Registration Service at the time of registration.
     *
     * @param string $val The deviceId
     *
@@ -147,7 +141,6 @@ class Device extends DirectoryObject
     
     /**
     * Gets the deviceMetadata
-    * For interal use only. Set to null.
     *
     * @return string The deviceMetadata
     */
@@ -162,7 +155,6 @@ class Device extends DirectoryObject
     
     /**
     * Sets the deviceMetadata
-    * For interal use only. Set to null.
     *
     * @param string $val The deviceMetadata
     *
@@ -176,7 +168,6 @@ class Device extends DirectoryObject
     
     /**
     * Gets the deviceVersion
-    * For interal use only.
     *
     * @return int The deviceVersion
     */
@@ -191,7 +182,6 @@ class Device extends DirectoryObject
     
     /**
     * Sets the deviceVersion
-    * For interal use only.
     *
     * @param int $val The deviceVersion
     *
@@ -205,7 +195,6 @@ class Device extends DirectoryObject
     
     /**
     * Gets the displayName
-    * The display name for the device. Required.
     *
     * @return string The displayName
     */
@@ -220,7 +209,6 @@ class Device extends DirectoryObject
     
     /**
     * Sets the displayName
-    * The display name for the device. Required.
     *
     * @param string $val The displayName
     *
@@ -234,7 +222,6 @@ class Device extends DirectoryObject
     
     /**
     * Gets the isCompliant
-    * true if the device complies with Mobile Device Management (MDM) policies; otherwise, false. Read-only.
     *
     * @return bool The isCompliant
     */
@@ -249,7 +236,6 @@ class Device extends DirectoryObject
     
     /**
     * Sets the isCompliant
-    * true if the device complies with Mobile Device Management (MDM) policies; otherwise, false. Read-only.
     *
     * @param bool $val The isCompliant
     *
@@ -263,7 +249,6 @@ class Device extends DirectoryObject
     
     /**
     * Gets the isManaged
-    * true if the device is managed by a Mobile Device Management (MDM) app; otherwise, false.
     *
     * @return bool The isManaged
     */
@@ -278,7 +263,6 @@ class Device extends DirectoryObject
     
     /**
     * Sets the isManaged
-    * true if the device is managed by a Mobile Device Management (MDM) app; otherwise, false.
     *
     * @param bool $val The isManaged
     *
@@ -292,7 +276,6 @@ class Device extends DirectoryObject
     
     /**
     * Gets the onPremisesLastSyncDateTime
-    * The last time at which the object was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z' Read-only.
     *
     * @return \DateTime The onPremisesLastSyncDateTime
     */
@@ -311,7 +294,6 @@ class Device extends DirectoryObject
     
     /**
     * Sets the onPremisesLastSyncDateTime
-    * The last time at which the object was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z' Read-only.
     *
     * @param \DateTime $val The onPremisesLastSyncDateTime
     *
@@ -325,7 +307,6 @@ class Device extends DirectoryObject
     
     /**
     * Gets the onPremisesSyncEnabled
-    * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Read-only.
     *
     * @return bool The onPremisesSyncEnabled
     */
@@ -340,7 +321,6 @@ class Device extends DirectoryObject
     
     /**
     * Sets the onPremisesSyncEnabled
-    * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Read-only.
     *
     * @param bool $val The onPremisesSyncEnabled
     *
@@ -354,7 +334,6 @@ class Device extends DirectoryObject
     
     /**
     * Gets the operatingSystem
-    * The type of operating system on the device. Required.
     *
     * @return string The operatingSystem
     */
@@ -369,7 +348,6 @@ class Device extends DirectoryObject
     
     /**
     * Sets the operatingSystem
-    * The type of operating system on the device. Required.
     *
     * @param string $val The operatingSystem
     *
@@ -383,7 +361,6 @@ class Device extends DirectoryObject
     
     /**
     * Gets the operatingSystemVersion
-    * The version of the operating system on the device. Required.
     *
     * @return string The operatingSystemVersion
     */
@@ -398,7 +375,6 @@ class Device extends DirectoryObject
     
     /**
     * Sets the operatingSystemVersion
-    * The version of the operating system on the device. Required.
     *
     * @param string $val The operatingSystemVersion
     *
@@ -412,7 +388,6 @@ class Device extends DirectoryObject
     
     /**
     * Gets the physicalIds
-    * For interal use only. Not nullable.
     *
     * @return string The physicalIds
     */
@@ -427,7 +402,6 @@ class Device extends DirectoryObject
     
     /**
     * Sets the physicalIds
-    * For interal use only. Not nullable.
     *
     * @param string $val The physicalIds
     *
@@ -441,7 +415,6 @@ class Device extends DirectoryObject
     
     /**
     * Gets the trustType
-    * Type of trust for the joined device. Read-only. Possible values: Workplace - indicates bring your own personal devicesAzureAd - Cloud only joined devicesServerAd - on-premises domain joined devices joined to Azure AD. For more details, see Introduction to device management in Azure Active Directory
     *
     * @return string The trustType
     */
@@ -456,7 +429,6 @@ class Device extends DirectoryObject
     
     /**
     * Sets the trustType
-    * Type of trust for the joined device. Read-only. Possible values: Workplace - indicates bring your own personal devicesAzureAd - Cloud only joined devicesServerAd - on-premises domain joined devices joined to Azure AD. For more details, see Introduction to device management in Azure Active Directory
     *
     * @param string $val The trustType
     *
@@ -471,7 +443,6 @@ class Device extends DirectoryObject
 
      /** 
      * Gets the registeredOwners
-    * The user that cloud joined the device or registered their personal device. The registered owner is set at the time of registration. Currently, there can be only one owner. Read-only. Nullable.
      *
      * @return array The registeredOwners
      */
@@ -486,7 +457,6 @@ class Device extends DirectoryObject
     
     /** 
     * Sets the registeredOwners
-    * The user that cloud joined the device or registered their personal device. The registered owner is set at the time of registration. Currently, there can be only one owner. Read-only. Nullable.
     *
     * @param DirectoryObject $val The registeredOwners
     *
@@ -501,7 +471,6 @@ class Device extends DirectoryObject
 
      /** 
      * Gets the registeredUsers
-    * Collection of registered users of the device. For cloud joined devices and registered personal devices, registered users are set to the same value as registered owners at the time of registration. Read-only. Nullable.
      *
      * @return array The registeredUsers
      */
@@ -516,7 +485,6 @@ class Device extends DirectoryObject
     
     /** 
     * Sets the registeredUsers
-    * Collection of registered users of the device. For cloud joined devices and registered personal devices, registered users are set to the same value as registered owners at the time of registration. Read-only. Nullable.
     *
     * @param DirectoryObject $val The registeredUsers
     *
@@ -531,7 +499,6 @@ class Device extends DirectoryObject
 
      /** 
      * Gets the extensions
-    * The collection of open extensions defined for the device. Read-only. Nullable.
      *
      * @return array The extensions
      */
@@ -546,7 +513,6 @@ class Device extends DirectoryObject
     
     /** 
     * Sets the extensions
-    * The collection of open extensions defined for the device. Read-only. Nullable.
     *
     * @param Extension $val The extensions
     *

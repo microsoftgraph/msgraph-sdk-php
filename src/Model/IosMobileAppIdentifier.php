@@ -36,7 +36,6 @@ class IosMobileAppIdentifier extends MobileAppIdentifier
 
     /**
     * Gets the bundleId
-    * The identifier for an app, as specified in the app store.
     *
     * @return string The bundleId
     */
@@ -51,7 +50,6 @@ class IosMobileAppIdentifier extends MobileAppIdentifier
 
     /**
     * Sets the bundleId
-    * The identifier for an app, as specified in the app store.
     *
     * @param string $val The value of the bundleId
     *

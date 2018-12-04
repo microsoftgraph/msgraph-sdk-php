@@ -29,7 +29,6 @@ class Organization extends DirectoryObject
 
      /** 
      * Gets the assignedPlans
-    * The collection of service plans associated with the tenant. Not nullable.
      *
      * @return array The assignedPlans
      */
@@ -44,7 +43,6 @@ class Organization extends DirectoryObject
     
     /** 
     * Sets the assignedPlans
-    * The collection of service plans associated with the tenant. Not nullable.
     *
     * @param AssignedPlan $val The assignedPlans
     *
@@ -85,7 +83,6 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the city
-    * City name of the address for the organization
     *
     * @return string The city
     */
@@ -100,7 +97,6 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the city
-    * City name of the address for the organization
     *
     * @param string $val The city
     *
@@ -114,7 +110,6 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the country
-    * Country/region name of the address for the organization
     *
     * @return string The country
     */
@@ -129,7 +124,6 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the country
-    * Country/region name of the address for the organization
     *
     * @param string $val The country
     *
@@ -143,7 +137,6 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the countryLetterCode
-    * Country/region abbreviation for the organization
     *
     * @return string The countryLetterCode
     */
@@ -158,7 +151,6 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the countryLetterCode
-    * Country/region abbreviation for the organization
     *
     * @param string $val The countryLetterCode
     *
@@ -172,7 +164,6 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the displayName
-    * The display name for the tenant.
     *
     * @return string The displayName
     */
@@ -187,7 +178,6 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the displayName
-    * The display name for the tenant.
     *
     * @param string $val The displayName
     *
@@ -201,7 +191,6 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the marketingNotificationEmails
-    * Not nullable.
     *
     * @return string The marketingNotificationEmails
     */
@@ -216,7 +205,6 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the marketingNotificationEmails
-    * Not nullable.
     *
     * @param string $val The marketingNotificationEmails
     *
@@ -288,7 +276,6 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the postalCode
-    * Postal code of the address for the organization
     *
     * @return string The postalCode
     */
@@ -303,7 +290,6 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the postalCode
-    * Postal code of the address for the organization
     *
     * @param string $val The postalCode
     *
@@ -317,7 +303,6 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the preferredLanguage
-    * The preferred language for the organization. Should follow ISO 639-1 Code; for example "en".
     *
     * @return string The preferredLanguage
     */
@@ -332,7 +317,6 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the preferredLanguage
-    * The preferred language for the organization. Should follow ISO 639-1 Code; for example "en".
     *
     * @param string $val The preferredLanguage
     *
@@ -346,7 +330,6 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the privacyProfile
-    * The privacy profile of an organization.
     *
     * @return PrivacyProfile The privacyProfile
     */
@@ -365,7 +348,6 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the privacyProfile
-    * The privacy profile of an organization.
     *
     * @param PrivacyProfile $val The privacyProfile
     *
@@ -380,7 +362,6 @@ class Organization extends DirectoryObject
 
      /** 
      * Gets the provisionedPlans
-    * Not nullable.
      *
      * @return array The provisionedPlans
      */
@@ -395,7 +376,6 @@ class Organization extends DirectoryObject
     
     /** 
     * Sets the provisionedPlans
-    * Not nullable.
     *
     * @param ProvisionedPlan $val The provisionedPlans
     *
@@ -463,7 +443,6 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the state
-    * State name of the address for the organization
     *
     * @return string The state
     */
@@ -478,7 +457,6 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the state
-    * State name of the address for the organization
     *
     * @param string $val The state
     *
@@ -492,7 +470,6 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the street
-    * Street name of the address for organization
     *
     * @return string The street
     */
@@ -507,7 +484,6 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the street
-    * Street name of the address for organization
     *
     * @param string $val The street
     *
@@ -521,7 +497,6 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the technicalNotificationMails
-    * Not nullable.
     *
     * @return string The technicalNotificationMails
     */
@@ -536,7 +511,6 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the technicalNotificationMails
-    * Not nullable.
     *
     * @param string $val The technicalNotificationMails
     *
@@ -551,7 +525,6 @@ class Organization extends DirectoryObject
 
      /** 
      * Gets the verifiedDomains
-    * The collection of domains associated with this tenant. Not nullable.
      *
      * @return array The verifiedDomains
      */
@@ -566,7 +539,6 @@ class Organization extends DirectoryObject
     
     /** 
     * Sets the verifiedDomains
-    * The collection of domains associated with this tenant. Not nullable.
     *
     * @param VerifiedDomain $val The verifiedDomains
     *
@@ -580,7 +552,6 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the mobileDeviceManagementAuthority
-    * Mobile device management authority. Possible values are: unknown, intune, sccm, office365.
     *
     * @return MdmAuthority The mobileDeviceManagementAuthority
     */
@@ -599,7 +570,6 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the mobileDeviceManagementAuthority
-    * Mobile device management authority. Possible values are: unknown, intune, sccm, office365.
     *
     * @param MdmAuthority $val The mobileDeviceManagementAuthority
     *
@@ -614,7 +584,6 @@ class Organization extends DirectoryObject
 
      /** 
      * Gets the extensions
-    * The collection of open extensions defined for the organization. Read-only. Nullable.
      *
      * @return array The extensions
      */
@@ -629,7 +598,6 @@ class Organization extends DirectoryObject
     
     /** 
     * Sets the extensions
-    * The collection of open extensions defined for the organization. Read-only. Nullable.
     *
     * @param Extension $val The extensions
     *

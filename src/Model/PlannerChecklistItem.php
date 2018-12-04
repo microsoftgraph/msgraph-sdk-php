@@ -27,7 +27,6 @@ class PlannerChecklistItem extends Entity
 {
     /**
     * Gets the isChecked
-    * Value is true if the item is checked and false otherwise.
     *
     * @return bool The isChecked
     */
@@ -42,7 +41,6 @@ class PlannerChecklistItem extends Entity
 
     /**
     * Sets the isChecked
-    * Value is true if the item is checked and false otherwise.
     *
     * @param bool $val The value of the isChecked
     *
@@ -55,7 +53,6 @@ class PlannerChecklistItem extends Entity
     }
     /**
     * Gets the title
-    * Title of the checklist item
     *
     * @return string The title
     */
@@ -70,7 +67,6 @@ class PlannerChecklistItem extends Entity
 
     /**
     * Sets the title
-    * Title of the checklist item
     *
     * @param string $val The value of the title
     *
@@ -83,7 +79,6 @@ class PlannerChecklistItem extends Entity
     }
     /**
     * Gets the orderHint
-    * Used to set the relative order of items in the checklist. The format is defined as outlined here.
     *
     * @return string The orderHint
     */
@@ -98,7 +93,6 @@ class PlannerChecklistItem extends Entity
 
     /**
     * Sets the orderHint
-    * Used to set the relative order of items in the checklist. The format is defined as outlined here.
     *
     * @param string $val The value of the orderHint
     *
@@ -112,7 +106,6 @@ class PlannerChecklistItem extends Entity
 
     /**
     * Gets the lastModifiedBy
-    * Read-only. User ID by which this is last modified.
     *
     * @return IdentitySet The lastModifiedBy
     */
@@ -131,7 +124,6 @@ class PlannerChecklistItem extends Entity
 
     /**
     * Sets the lastModifiedBy
-    * Read-only. User ID by which this is last modified.
     *
     * @param IdentitySet $val The value to assign to the lastModifiedBy
     *
@@ -145,7 +137,6 @@ class PlannerChecklistItem extends Entity
 
     /**
     * Gets the lastModifiedDateTime
-    * Read-only. Date and time at which this is last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -164,7 +155,6 @@ class PlannerChecklistItem extends Entity
 
     /**
     * Sets the lastModifiedDateTime
-    * Read-only. Date and time at which this is last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The value to assign to the lastModifiedDateTime
     *

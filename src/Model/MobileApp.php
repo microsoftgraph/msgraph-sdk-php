@@ -28,7 +28,6 @@ class MobileApp extends Entity
 {
     /**
     * Gets the displayName
-    * The admin provided or imported title of the app.
     *
     * @return string The displayName
     */
@@ -43,7 +42,6 @@ class MobileApp extends Entity
     
     /**
     * Sets the displayName
-    * The admin provided or imported title of the app.
     *
     * @param string $val The displayName
     *
@@ -57,7 +55,6 @@ class MobileApp extends Entity
     
     /**
     * Gets the description
-    * The description of the app.
     *
     * @return string The description
     */
@@ -72,7 +69,6 @@ class MobileApp extends Entity
     
     /**
     * Sets the description
-    * The description of the app.
     *
     * @param string $val The description
     *
@@ -86,7 +82,6 @@ class MobileApp extends Entity
     
     /**
     * Gets the publisher
-    * The publisher of the app.
     *
     * @return string The publisher
     */
@@ -101,7 +96,6 @@ class MobileApp extends Entity
     
     /**
     * Sets the publisher
-    * The publisher of the app.
     *
     * @param string $val The publisher
     *
@@ -115,7 +109,6 @@ class MobileApp extends Entity
     
     /**
     * Gets the largeIcon
-    * The large icon, to be displayed in the app details and used for upload of the icon.
     *
     * @return MimeContent The largeIcon
     */
@@ -134,7 +127,6 @@ class MobileApp extends Entity
     
     /**
     * Sets the largeIcon
-    * The large icon, to be displayed in the app details and used for upload of the icon.
     *
     * @param MimeContent $val The largeIcon
     *
@@ -148,7 +140,6 @@ class MobileApp extends Entity
     
     /**
     * Gets the createdDateTime
-    * The date and time the app was created.
     *
     * @return \DateTime The createdDateTime
     */
@@ -167,7 +158,6 @@ class MobileApp extends Entity
     
     /**
     * Sets the createdDateTime
-    * The date and time the app was created.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -181,7 +171,6 @@ class MobileApp extends Entity
     
     /**
     * Gets the lastModifiedDateTime
-    * The date and time the app was last modified.
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -200,7 +189,6 @@ class MobileApp extends Entity
     
     /**
     * Sets the lastModifiedDateTime
-    * The date and time the app was last modified.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -214,7 +202,6 @@ class MobileApp extends Entity
     
     /**
     * Gets the isFeatured
-    * The value indicating whether the app is marked as featured by the admin.
     *
     * @return bool The isFeatured
     */
@@ -229,7 +216,6 @@ class MobileApp extends Entity
     
     /**
     * Sets the isFeatured
-    * The value indicating whether the app is marked as featured by the admin.
     *
     * @param bool $val The isFeatured
     *
@@ -243,7 +229,6 @@ class MobileApp extends Entity
     
     /**
     * Gets the privacyInformationUrl
-    * The privacy statement Url.
     *
     * @return string The privacyInformationUrl
     */
@@ -258,7 +243,6 @@ class MobileApp extends Entity
     
     /**
     * Sets the privacyInformationUrl
-    * The privacy statement Url.
     *
     * @param string $val The privacyInformationUrl
     *
@@ -272,7 +256,6 @@ class MobileApp extends Entity
     
     /**
     * Gets the informationUrl
-    * The more information Url.
     *
     * @return string The informationUrl
     */
@@ -287,7 +270,6 @@ class MobileApp extends Entity
     
     /**
     * Sets the informationUrl
-    * The more information Url.
     *
     * @param string $val The informationUrl
     *
@@ -301,7 +283,6 @@ class MobileApp extends Entity
     
     /**
     * Gets the owner
-    * The owner of the app.
     *
     * @return string The owner
     */
@@ -316,7 +297,6 @@ class MobileApp extends Entity
     
     /**
     * Sets the owner
-    * The owner of the app.
     *
     * @param string $val The owner
     *
@@ -330,7 +310,6 @@ class MobileApp extends Entity
     
     /**
     * Gets the developer
-    * The developer of the app.
     *
     * @return string The developer
     */
@@ -345,7 +324,6 @@ class MobileApp extends Entity
     
     /**
     * Sets the developer
-    * The developer of the app.
     *
     * @param string $val The developer
     *
@@ -359,7 +337,6 @@ class MobileApp extends Entity
     
     /**
     * Gets the notes
-    * Notes for the app.
     *
     * @return string The notes
     */
@@ -374,7 +351,6 @@ class MobileApp extends Entity
     
     /**
     * Sets the notes
-    * Notes for the app.
     *
     * @param string $val The notes
     *
@@ -388,7 +364,6 @@ class MobileApp extends Entity
     
     /**
     * Gets the publishingState
-    * The publishing state for the app. The app cannot be assigned unless the app is published. Possible values are: notPublished, processing, published.
     *
     * @return MobileAppPublishingState The publishingState
     */
@@ -407,7 +382,6 @@ class MobileApp extends Entity
     
     /**
     * Sets the publishingState
-    * The publishing state for the app. The app cannot be assigned unless the app is published. Possible values are: notPublished, processing, published.
     *
     * @param MobileAppPublishingState $val The publishingState
     *
@@ -422,7 +396,6 @@ class MobileApp extends Entity
 
      /** 
      * Gets the categories
-    * The list of categories for this app.
      *
      * @return array The categories
      */
@@ -437,7 +410,6 @@ class MobileApp extends Entity
     
     /** 
     * Sets the categories
-    * The list of categories for this app.
     *
     * @param MobileAppCategory $val The categories
     *
@@ -452,7 +424,6 @@ class MobileApp extends Entity
 
      /** 
      * Gets the assignments
-    * The list of group assignments for this mobile app.
      *
      * @return array The assignments
      */
@@ -467,7 +438,6 @@ class MobileApp extends Entity
     
     /** 
     * Sets the assignments
-    * The list of group assignments for this mobile app.
     *
     * @param MobileAppAssignment $val The assignments
     *

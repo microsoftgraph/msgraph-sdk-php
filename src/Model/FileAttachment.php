@@ -28,7 +28,6 @@ class FileAttachment extends Attachment
 {
     /**
     * Gets the contentId
-    * The ID of the attachment in the Exchange store.
     *
     * @return string The contentId
     */
@@ -43,7 +42,6 @@ class FileAttachment extends Attachment
     
     /**
     * Sets the contentId
-    * The ID of the attachment in the Exchange store.
     *
     * @param string $val The contentId
     *
@@ -57,7 +55,6 @@ class FileAttachment extends Attachment
     
     /**
     * Gets the contentLocation
-    * The Uniform Resource Identifier (URI) that corresponds to the location of the content of the attachment.
     *
     * @return string The contentLocation
     */
@@ -72,7 +69,6 @@ class FileAttachment extends Attachment
     
     /**
     * Sets the contentLocation
-    * The Uniform Resource Identifier (URI) that corresponds to the location of the content of the attachment.
     *
     * @param string $val The contentLocation
     *
@@ -86,7 +82,6 @@ class FileAttachment extends Attachment
     
     /**
     * Gets the contentBytes
-    * The base64-encoded contents of the file.
     *
     * @return \GuzzleHttp\Psr7\Stream The contentBytes
     */
@@ -105,7 +100,6 @@ class FileAttachment extends Attachment
     
     /**
     * Sets the contentBytes
-    * The base64-encoded contents of the file.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The contentBytes
     *

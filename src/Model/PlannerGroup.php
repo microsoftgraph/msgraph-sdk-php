@@ -29,7 +29,6 @@ class PlannerGroup extends Entity
 
      /** 
      * Gets the plans
-    * Read-only. Nullable. Returns the plannerPlans owned by the group.
      *
      * @return array The plans
      */
@@ -44,7 +43,6 @@ class PlannerGroup extends Entity
     
     /** 
     * Sets the plans
-    * Read-only. Nullable. Returns the plannerPlans owned by the group.
     *
     * @param PlannerPlan $val The plans
     *

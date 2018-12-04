@@ -28,7 +28,6 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
 {
     /**
     * Gets the passwordRequired
-    * Whether or not to require a password.
     *
     * @return bool The passwordRequired
     */
@@ -43,7 +42,6 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passwordRequired
-    * Whether or not to require a password.
     *
     * @param bool $val The passwordRequired
     *
@@ -57,7 +55,6 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the passwordBlockSimple
-    * Indicates whether or not to block simple passwords.
     *
     * @return bool The passwordBlockSimple
     */
@@ -72,7 +69,6 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passwordBlockSimple
-    * Indicates whether or not to block simple passwords.
     *
     * @param bool $val The passwordBlockSimple
     *
@@ -86,7 +82,6 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the passwordExpirationDays
-    * Number of days before the password expires. Valid values 1 to 65535
     *
     * @return int The passwordExpirationDays
     */
@@ -101,7 +96,6 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passwordExpirationDays
-    * Number of days before the password expires. Valid values 1 to 65535
     *
     * @param int $val The passwordExpirationDays
     *
@@ -115,7 +109,6 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the passwordMinimumLength
-    * Minimum length of password. Valid values 4 to 14
     *
     * @return int The passwordMinimumLength
     */
@@ -130,7 +123,6 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passwordMinimumLength
-    * Minimum length of password. Valid values 4 to 14
     *
     * @param int $val The passwordMinimumLength
     *
@@ -144,7 +136,6 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the passwordMinutesOfInactivityBeforeLock
-    * Minutes of inactivity before a password is required.
     *
     * @return int The passwordMinutesOfInactivityBeforeLock
     */
@@ -159,7 +150,6 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passwordMinutesOfInactivityBeforeLock
-    * Minutes of inactivity before a password is required.
     *
     * @param int $val The passwordMinutesOfInactivityBeforeLock
     *
@@ -173,7 +163,6 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the passwordPreviousPasswordBlockCount
-    * Number of previous passwords to block. Valid values 1 to 24
     *
     * @return int The passwordPreviousPasswordBlockCount
     */
@@ -188,7 +177,6 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passwordPreviousPasswordBlockCount
-    * Number of previous passwords to block. Valid values 1 to 24
     *
     * @param int $val The passwordPreviousPasswordBlockCount
     *
@@ -202,7 +190,6 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the passwordMinimumCharacterSetCount
-    * The number of character sets required in the password.
     *
     * @return int The passwordMinimumCharacterSetCount
     */
@@ -217,7 +204,6 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passwordMinimumCharacterSetCount
-    * The number of character sets required in the password.
     *
     * @param int $val The passwordMinimumCharacterSetCount
     *
@@ -231,7 +217,6 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the passwordRequiredType
-    * The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
     *
     * @return RequiredPasswordType The passwordRequiredType
     */
@@ -250,7 +235,6 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passwordRequiredType
-    * The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
     *
     * @param RequiredPasswordType $val The passwordRequiredType
     *
@@ -264,7 +248,6 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the osMinimumVersion
-    * Minimum IOS version.
     *
     * @return string The osMinimumVersion
     */
@@ -279,7 +262,6 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the osMinimumVersion
-    * Minimum IOS version.
     *
     * @param string $val The osMinimumVersion
     *
@@ -293,7 +275,6 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the osMaximumVersion
-    * Maximum IOS version.
     *
     * @return string The osMaximumVersion
     */
@@ -308,7 +289,6 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the osMaximumVersion
-    * Maximum IOS version.
     *
     * @param string $val The osMaximumVersion
     *
@@ -322,7 +302,6 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the systemIntegrityProtectionEnabled
-    * Require that devices have enabled system integrity protection.
     *
     * @return bool The systemIntegrityProtectionEnabled
     */
@@ -337,7 +316,6 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the systemIntegrityProtectionEnabled
-    * Require that devices have enabled system integrity protection.
     *
     * @param bool $val The systemIntegrityProtectionEnabled
     *
@@ -351,7 +329,6 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the deviceThreatProtectionEnabled
-    * Require that devices have enabled device threat protection .
     *
     * @return bool The deviceThreatProtectionEnabled
     */
@@ -366,7 +343,6 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the deviceThreatProtectionEnabled
-    * Require that devices have enabled device threat protection .
     *
     * @param bool $val The deviceThreatProtectionEnabled
     *
@@ -380,7 +356,6 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the deviceThreatProtectionRequiredSecurityLevel
-    * Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
     *
     * @return DeviceThreatProtectionLevel The deviceThreatProtectionRequiredSecurityLevel
     */
@@ -399,7 +374,6 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the deviceThreatProtectionRequiredSecurityLevel
-    * Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
     *
     * @param DeviceThreatProtectionLevel $val The deviceThreatProtectionRequiredSecurityLevel
     *
@@ -413,7 +387,6 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the storageRequireEncryption
-    * Require encryption on Mac OS devices.
     *
     * @return bool The storageRequireEncryption
     */
@@ -428,7 +401,6 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the storageRequireEncryption
-    * Require encryption on Mac OS devices.
     *
     * @param bool $val The storageRequireEncryption
     *

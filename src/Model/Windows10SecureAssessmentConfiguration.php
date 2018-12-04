@@ -28,7 +28,6 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration
 {
     /**
     * Gets the launchUri
-    * Url link to an assessment that's automatically loaded when the secure assessment browser is launched. It has to be a valid Url (http[s]://msdn.microsoft.com/).
     *
     * @return string The launchUri
     */
@@ -43,7 +42,6 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration
     
     /**
     * Sets the launchUri
-    * Url link to an assessment that's automatically loaded when the secure assessment browser is launched. It has to be a valid Url (http[s]://msdn.microsoft.com/).
     *
     * @param string $val The launchUri
     *
@@ -57,7 +55,6 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration
     
     /**
     * Gets the configurationAccount
-    * The account used to configure the Windows device for taking the test. The user can be a domain account (domain\user), an AAD account (username@tenant.com) or a local account (username).
     *
     * @return string The configurationAccount
     */
@@ -72,7 +69,6 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration
     
     /**
     * Sets the configurationAccount
-    * The account used to configure the Windows device for taking the test. The user can be a domain account (domain\user), an AAD account (username@tenant.com) or a local account (username).
     *
     * @param string $val The configurationAccount
     *
@@ -86,7 +82,6 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration
     
     /**
     * Gets the allowPrinting
-    * Indicates whether or not to allow the app from printing during the test.
     *
     * @return bool The allowPrinting
     */
@@ -101,7 +96,6 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration
     
     /**
     * Sets the allowPrinting
-    * Indicates whether or not to allow the app from printing during the test.
     *
     * @param bool $val The allowPrinting
     *
@@ -115,7 +109,6 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration
     
     /**
     * Gets the allowScreenCapture
-    * Indicates whether or not to allow screen capture capability during a test.
     *
     * @return bool The allowScreenCapture
     */
@@ -130,7 +123,6 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration
     
     /**
     * Sets the allowScreenCapture
-    * Indicates whether or not to allow screen capture capability during a test.
     *
     * @param bool $val The allowScreenCapture
     *
@@ -144,7 +136,6 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration
     
     /**
     * Gets the allowTextSuggestion
-    * Indicates whether or not to allow text suggestions during the test.
     *
     * @return bool The allowTextSuggestion
     */
@@ -159,7 +150,6 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration
     
     /**
     * Sets the allowTextSuggestion
-    * Indicates whether or not to allow text suggestions during the test.
     *
     * @param bool $val The allowTextSuggestion
     *

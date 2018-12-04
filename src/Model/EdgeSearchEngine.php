@@ -37,7 +37,6 @@ class EdgeSearchEngine extends EdgeSearchEngineBase
 
     /**
     * Gets the edgeSearchEngineType
-    * Allows IT admins to set a predefined default search engine for MDM-Controlled devices. Possible values are: default, bing.
     *
     * @return EdgeSearchEngineType The edgeSearchEngineType
     */
@@ -56,7 +55,6 @@ class EdgeSearchEngine extends EdgeSearchEngineBase
 
     /**
     * Sets the edgeSearchEngineType
-    * Allows IT admins to set a predefined default search engine for MDM-Controlled devices. Possible values are: default, bing.
     *
     * @param EdgeSearchEngineType $val The value to assign to the edgeSearchEngineType
     *

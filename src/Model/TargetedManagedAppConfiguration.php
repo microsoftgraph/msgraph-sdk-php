@@ -28,7 +28,6 @@ class TargetedManagedAppConfiguration extends ManagedAppConfiguration
 {
     /**
     * Gets the deployedAppCount
-    * Count of apps to which the current policy is deployed.
     *
     * @return int The deployedAppCount
     */
@@ -43,7 +42,6 @@ class TargetedManagedAppConfiguration extends ManagedAppConfiguration
     
     /**
     * Sets the deployedAppCount
-    * Count of apps to which the current policy is deployed.
     *
     * @param int $val The deployedAppCount
     *
@@ -57,7 +55,6 @@ class TargetedManagedAppConfiguration extends ManagedAppConfiguration
     
     /**
     * Gets the isAssigned
-    * Indicates if the policy is deployed to any inclusion groups or not.
     *
     * @return bool The isAssigned
     */
@@ -72,7 +69,6 @@ class TargetedManagedAppConfiguration extends ManagedAppConfiguration
     
     /**
     * Sets the isAssigned
-    * Indicates if the policy is deployed to any inclusion groups or not.
     *
     * @param bool $val The isAssigned
     *
@@ -87,7 +83,6 @@ class TargetedManagedAppConfiguration extends ManagedAppConfiguration
 
      /** 
      * Gets the apps
-    * List of apps to which the policy is deployed.
      *
      * @return array The apps
      */
@@ -102,7 +97,6 @@ class TargetedManagedAppConfiguration extends ManagedAppConfiguration
     
     /** 
     * Sets the apps
-    * List of apps to which the policy is deployed.
     *
     * @param ManagedMobileApp $val The apps
     *
@@ -116,7 +110,6 @@ class TargetedManagedAppConfiguration extends ManagedAppConfiguration
     
     /**
     * Gets the deploymentSummary
-    * Navigation property to deployment summary of the configuration.
     *
     * @return ManagedAppPolicyDeploymentSummary The deploymentSummary
     */
@@ -135,7 +128,6 @@ class TargetedManagedAppConfiguration extends ManagedAppConfiguration
     
     /**
     * Sets the deploymentSummary
-    * Navigation property to deployment summary of the configuration.
     *
     * @param ManagedAppPolicyDeploymentSummary $val The deploymentSummary
     *
@@ -150,7 +142,6 @@ class TargetedManagedAppConfiguration extends ManagedAppConfiguration
 
      /** 
      * Gets the assignments
-    * Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
      *
      * @return array The assignments
      */
@@ -165,7 +156,6 @@ class TargetedManagedAppConfiguration extends ManagedAppConfiguration
     
     /** 
     * Sets the assignments
-    * Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
     *
     * @param TargetedManagedAppPolicyAssignment $val The assignments
     *

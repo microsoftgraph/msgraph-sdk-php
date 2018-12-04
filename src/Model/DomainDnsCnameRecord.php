@@ -28,7 +28,6 @@ class DomainDnsCnameRecord extends DomainDnsRecord
 {
     /**
     * Gets the canonicalName
-    * The canonical name of the CNAME record. Used to configure the CNAME record at the DNS host.
     *
     * @return string The canonicalName
     */
@@ -43,7 +42,6 @@ class DomainDnsCnameRecord extends DomainDnsRecord
     
     /**
     * Sets the canonicalName
-    * The canonical name of the CNAME record. Used to configure the CNAME record at the DNS host.
     *
     * @param string $val The canonicalName
     *

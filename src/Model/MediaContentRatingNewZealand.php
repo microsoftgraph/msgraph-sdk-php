@@ -28,7 +28,6 @@ class MediaContentRatingNewZealand extends Entity
 
     /**
     * Gets the movieRating
-    * Movies rating selected for New Zealand. Possible values are: allAllowed, allBlocked, general, parentalGuidance, mature, agesAbove13, agesAbove15, agesAbove16, agesAbove18, restricted, agesAbove16Restricted.
     *
     * @return RatingNewZealandMoviesType The movieRating
     */
@@ -47,7 +46,6 @@ class MediaContentRatingNewZealand extends Entity
 
     /**
     * Sets the movieRating
-    * Movies rating selected for New Zealand. Possible values are: allAllowed, allBlocked, general, parentalGuidance, mature, agesAbove13, agesAbove15, agesAbove16, agesAbove18, restricted, agesAbove16Restricted.
     *
     * @param RatingNewZealandMoviesType $val The value to assign to the movieRating
     *
@@ -61,7 +59,6 @@ class MediaContentRatingNewZealand extends Entity
 
     /**
     * Gets the tvRating
-    * TV rating selected for New Zealand. Possible values are: allAllowed, allBlocked, general, parentalGuidance, adults.
     *
     * @return RatingNewZealandTelevisionType The tvRating
     */
@@ -80,7 +77,6 @@ class MediaContentRatingNewZealand extends Entity
 
     /**
     * Sets the tvRating
-    * TV rating selected for New Zealand. Possible values are: allAllowed, allBlocked, general, parentalGuidance, adults.
     *
     * @param RatingNewZealandTelevisionType $val The value to assign to the tvRating
     *

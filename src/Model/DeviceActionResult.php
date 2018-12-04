@@ -27,7 +27,6 @@ class DeviceActionResult extends Entity
 {
     /**
     * Gets the actionName
-    * Action name
     *
     * @return string The actionName
     */
@@ -42,7 +41,6 @@ class DeviceActionResult extends Entity
 
     /**
     * Sets the actionName
-    * Action name
     *
     * @param string $val The value of the actionName
     *
@@ -56,7 +54,6 @@ class DeviceActionResult extends Entity
 
     /**
     * Gets the actionState
-    * State of the action. Possible values are: none, pending, canceled, active, done, failed, notSupported.
     *
     * @return ActionState The actionState
     */
@@ -75,7 +72,6 @@ class DeviceActionResult extends Entity
 
     /**
     * Sets the actionState
-    * State of the action. Possible values are: none, pending, canceled, active, done, failed, notSupported.
     *
     * @param ActionState $val The value to assign to the actionState
     *
@@ -89,7 +85,6 @@ class DeviceActionResult extends Entity
 
     /**
     * Gets the startDateTime
-    * Time the action was initiated
     *
     * @return \DateTime The startDateTime
     */
@@ -108,7 +103,6 @@ class DeviceActionResult extends Entity
 
     /**
     * Sets the startDateTime
-    * Time the action was initiated
     *
     * @param \DateTime $val The value to assign to the startDateTime
     *
@@ -122,7 +116,6 @@ class DeviceActionResult extends Entity
 
     /**
     * Gets the lastUpdatedDateTime
-    * Time the action state was last updated
     *
     * @return \DateTime The lastUpdatedDateTime
     */
@@ -141,7 +134,6 @@ class DeviceActionResult extends Entity
 
     /**
     * Sets the lastUpdatedDateTime
-    * Time the action state was last updated
     *
     * @param \DateTime $val The value to assign to the lastUpdatedDateTime
     *

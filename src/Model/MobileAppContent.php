@@ -29,7 +29,6 @@ class MobileAppContent extends Entity
 
      /** 
      * Gets the files
-    * The list of files for this app content version.
      *
      * @return array The files
      */
@@ -44,7 +43,6 @@ class MobileAppContent extends Entity
     
     /** 
     * Sets the files
-    * The list of files for this app content version.
     *
     * @param MobileAppContentFile $val The files
     *

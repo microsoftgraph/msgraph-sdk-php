@@ -28,7 +28,6 @@ class AndroidLobApp extends MobileLobApp
 {
     /**
     * Gets the packageId
-    * The package identifier.
     *
     * @return string The packageId
     */
@@ -43,7 +42,6 @@ class AndroidLobApp extends MobileLobApp
     
     /**
     * Sets the packageId
-    * The package identifier.
     *
     * @param string $val The packageId
     *
@@ -57,7 +55,6 @@ class AndroidLobApp extends MobileLobApp
     
     /**
     * Gets the minimumSupportedOperatingSystem
-    * The value for the minimum applicable operating system.
     *
     * @return AndroidMinimumOperatingSystem The minimumSupportedOperatingSystem
     */
@@ -76,7 +73,6 @@ class AndroidLobApp extends MobileLobApp
     
     /**
     * Sets the minimumSupportedOperatingSystem
-    * The value for the minimum applicable operating system.
     *
     * @param AndroidMinimumOperatingSystem $val The minimumSupportedOperatingSystem
     *
@@ -90,7 +86,6 @@ class AndroidLobApp extends MobileLobApp
     
     /**
     * Gets the versionName
-    * The version name of Android Line of Business (LoB) app.
     *
     * @return string The versionName
     */
@@ -105,7 +100,6 @@ class AndroidLobApp extends MobileLobApp
     
     /**
     * Sets the versionName
-    * The version name of Android Line of Business (LoB) app.
     *
     * @param string $val The versionName
     *
@@ -119,7 +113,6 @@ class AndroidLobApp extends MobileLobApp
     
     /**
     * Gets the versionCode
-    * The version code of Android Line of Business (LoB) app.
     *
     * @return string The versionCode
     */
@@ -134,7 +127,6 @@ class AndroidLobApp extends MobileLobApp
     
     /**
     * Sets the versionCode
-    * The version code of Android Line of Business (LoB) app.
     *
     * @param string $val The versionCode
     *

@@ -27,7 +27,6 @@ class DeviceHealthAttestationState extends Entity
 {
     /**
     * Gets the lastUpdateDateTime
-    * The Timestamp of the last update.
     *
     * @return string The lastUpdateDateTime
     */
@@ -42,7 +41,6 @@ class DeviceHealthAttestationState extends Entity
 
     /**
     * Sets the lastUpdateDateTime
-    * The Timestamp of the last update.
     *
     * @param string $val The value of the lastUpdateDateTime
     *
@@ -55,7 +53,6 @@ class DeviceHealthAttestationState extends Entity
     }
     /**
     * Gets the contentNamespaceUrl
-    * The DHA report version. (Namespace version)
     *
     * @return string The contentNamespaceUrl
     */
@@ -70,7 +67,6 @@ class DeviceHealthAttestationState extends Entity
 
     /**
     * Sets the contentNamespaceUrl
-    * The DHA report version. (Namespace version)
     *
     * @param string $val The value of the contentNamespaceUrl
     *
@@ -83,7 +79,6 @@ class DeviceHealthAttestationState extends Entity
     }
     /**
     * Gets the deviceHealthAttestationStatus
-    * The DHA report version. (Namespace version)
     *
     * @return string The deviceHealthAttestationStatus
     */
@@ -98,7 +93,6 @@ class DeviceHealthAttestationState extends Entity
 
     /**
     * Sets the deviceHealthAttestationStatus
-    * The DHA report version. (Namespace version)
     *
     * @param string $val The value of the deviceHealthAttestationStatus
     *
@@ -111,7 +105,6 @@ class DeviceHealthAttestationState extends Entity
     }
     /**
     * Gets the contentVersion
-    * The HealthAttestation state schema version
     *
     * @return string The contentVersion
     */
@@ -126,7 +119,6 @@ class DeviceHealthAttestationState extends Entity
 
     /**
     * Sets the contentVersion
-    * The HealthAttestation state schema version
     *
     * @param string $val The value of the contentVersion
     *
@@ -140,7 +132,6 @@ class DeviceHealthAttestationState extends Entity
 
     /**
     * Gets the issuedDateTime
-    * The DateTime when device was evaluated or issued to MDM
     *
     * @return \DateTime The issuedDateTime
     */
@@ -159,7 +150,6 @@ class DeviceHealthAttestationState extends Entity
 
     /**
     * Sets the issuedDateTime
-    * The DateTime when device was evaluated or issued to MDM
     *
     * @param \DateTime $val The value to assign to the issuedDateTime
     *
@@ -172,7 +162,6 @@ class DeviceHealthAttestationState extends Entity
     }
     /**
     * Gets the attestationIdentityKey
-    * TWhen an Attestation Identity Key (AIK) is present on a device, it indicates that the device has an endorsement key (EK) certificate.
     *
     * @return string The attestationIdentityKey
     */
@@ -187,7 +176,6 @@ class DeviceHealthAttestationState extends Entity
 
     /**
     * Sets the attestationIdentityKey
-    * TWhen an Attestation Identity Key (AIK) is present on a device, it indicates that the device has an endorsement key (EK) certificate.
     *
     * @param string $val The value of the attestationIdentityKey
     *
@@ -200,7 +188,6 @@ class DeviceHealthAttestationState extends Entity
     }
     /**
     * Gets the resetCount
-    * The number of times a PC device has hibernated or resumed
     *
     * @return int The resetCount
     */
@@ -215,7 +202,6 @@ class DeviceHealthAttestationState extends Entity
 
     /**
     * Sets the resetCount
-    * The number of times a PC device has hibernated or resumed
     *
     * @param int $val The value of the resetCount
     *
@@ -228,7 +214,6 @@ class DeviceHealthAttestationState extends Entity
     }
     /**
     * Gets the restartCount
-    * The number of times a PC device has rebooted
     *
     * @return int The restartCount
     */
@@ -243,7 +228,6 @@ class DeviceHealthAttestationState extends Entity
 
     /**
     * Sets the restartCount
-    * The number of times a PC device has rebooted
     *
     * @param int $val The value of the restartCount
     *
@@ -256,7 +240,6 @@ class DeviceHealthAttestationState extends Entity
     }
     /**
     * Gets the dataExcutionPolicy
-    * DEP Policy defines a set of hardware and software technologies that perform additional checks on memory
     *
     * @return string The dataExcutionPolicy
     */
@@ -271,7 +254,6 @@ class DeviceHealthAttestationState extends Entity
 
     /**
     * Sets the dataExcutionPolicy
-    * DEP Policy defines a set of hardware and software technologies that perform additional checks on memory
     *
     * @param string $val The value of the dataExcutionPolicy
     *
@@ -284,7 +266,6 @@ class DeviceHealthAttestationState extends Entity
     }
     /**
     * Gets the bitLockerStatus
-    * On or Off of BitLocker Drive Encryption
     *
     * @return string The bitLockerStatus
     */
@@ -299,7 +280,6 @@ class DeviceHealthAttestationState extends Entity
 
     /**
     * Sets the bitLockerStatus
-    * On or Off of BitLocker Drive Encryption
     *
     * @param string $val The value of the bitLockerStatus
     *
@@ -312,7 +292,6 @@ class DeviceHealthAttestationState extends Entity
     }
     /**
     * Gets the bootManagerVersion
-    * The version of the Boot Manager
     *
     * @return string The bootManagerVersion
     */
@@ -327,7 +306,6 @@ class DeviceHealthAttestationState extends Entity
 
     /**
     * Sets the bootManagerVersion
-    * The version of the Boot Manager
     *
     * @param string $val The value of the bootManagerVersion
     *
@@ -340,7 +318,6 @@ class DeviceHealthAttestationState extends Entity
     }
     /**
     * Gets the codeIntegrityCheckVersion
-    * The version of the Boot Manager
     *
     * @return string The codeIntegrityCheckVersion
     */
@@ -355,7 +332,6 @@ class DeviceHealthAttestationState extends Entity
 
     /**
     * Sets the codeIntegrityCheckVersion
-    * The version of the Boot Manager
     *
     * @param string $val The value of the codeIntegrityCheckVersion
     *
@@ -368,7 +344,6 @@ class DeviceHealthAttestationState extends Entity
     }
     /**
     * Gets the secureBoot
-    * When Secure Boot is enabled, the core components must have the correct cryptographic signatures
     *
     * @return string The secureBoot
     */
@@ -383,7 +358,6 @@ class DeviceHealthAttestationState extends Entity
 
     /**
     * Sets the secureBoot
-    * When Secure Boot is enabled, the core components must have the correct cryptographic signatures
     *
     * @param string $val The value of the secureBoot
     *
@@ -396,7 +370,6 @@ class DeviceHealthAttestationState extends Entity
     }
     /**
     * Gets the bootDebugging
-    * When bootDebugging is enabled, the device is used in development and testing
     *
     * @return string The bootDebugging
     */
@@ -411,7 +384,6 @@ class DeviceHealthAttestationState extends Entity
 
     /**
     * Sets the bootDebugging
-    * When bootDebugging is enabled, the device is used in development and testing
     *
     * @param string $val The value of the bootDebugging
     *
@@ -424,7 +396,6 @@ class DeviceHealthAttestationState extends Entity
     }
     /**
     * Gets the operatingSystemKernelDebugging
-    * When operatingSystemKernelDebugging is enabled, the device is used in development and testing
     *
     * @return string The operatingSystemKernelDebugging
     */
@@ -439,7 +410,6 @@ class DeviceHealthAttestationState extends Entity
 
     /**
     * Sets the operatingSystemKernelDebugging
-    * When operatingSystemKernelDebugging is enabled, the device is used in development and testing
     *
     * @param string $val The value of the operatingSystemKernelDebugging
     *
@@ -452,7 +422,6 @@ class DeviceHealthAttestationState extends Entity
     }
     /**
     * Gets the codeIntegrity
-    * When code integrity is enabled, code execution is restricted to integrity verified code
     *
     * @return string The codeIntegrity
     */
@@ -467,7 +436,6 @@ class DeviceHealthAttestationState extends Entity
 
     /**
     * Sets the codeIntegrity
-    * When code integrity is enabled, code execution is restricted to integrity verified code
     *
     * @param string $val The value of the codeIntegrity
     *
@@ -480,7 +448,6 @@ class DeviceHealthAttestationState extends Entity
     }
     /**
     * Gets the testSigning
-    * When test signing is allowed, the device does not enforce signature validation during boot
     *
     * @return string The testSigning
     */
@@ -495,7 +462,6 @@ class DeviceHealthAttestationState extends Entity
 
     /**
     * Sets the testSigning
-    * When test signing is allowed, the device does not enforce signature validation during boot
     *
     * @param string $val The value of the testSigning
     *
@@ -508,7 +474,6 @@ class DeviceHealthAttestationState extends Entity
     }
     /**
     * Gets the safeMode
-    * Safe mode is a troubleshooting option for Windows that starts your computer in a limited state
     *
     * @return string The safeMode
     */
@@ -523,7 +488,6 @@ class DeviceHealthAttestationState extends Entity
 
     /**
     * Sets the safeMode
-    * Safe mode is a troubleshooting option for Windows that starts your computer in a limited state
     *
     * @param string $val The value of the safeMode
     *
@@ -536,7 +500,6 @@ class DeviceHealthAttestationState extends Entity
     }
     /**
     * Gets the windowsPE
-    * Operating system running with limited services that is used to prepare a computer for Windows
     *
     * @return string The windowsPE
     */
@@ -551,7 +514,6 @@ class DeviceHealthAttestationState extends Entity
 
     /**
     * Sets the windowsPE
-    * Operating system running with limited services that is used to prepare a computer for Windows
     *
     * @param string $val The value of the windowsPE
     *
@@ -564,7 +526,6 @@ class DeviceHealthAttestationState extends Entity
     }
     /**
     * Gets the earlyLaunchAntiMalwareDriverProtection
-    * ELAM provides protection for the computers in your network when they start up
     *
     * @return string The earlyLaunchAntiMalwareDriverProtection
     */
@@ -579,7 +540,6 @@ class DeviceHealthAttestationState extends Entity
 
     /**
     * Sets the earlyLaunchAntiMalwareDriverProtection
-    * ELAM provides protection for the computers in your network when they start up
     *
     * @param string $val The value of the earlyLaunchAntiMalwareDriverProtection
     *
@@ -592,7 +552,6 @@ class DeviceHealthAttestationState extends Entity
     }
     /**
     * Gets the virtualSecureMode
-    * VSM is a container that protects high value assets from a compromised kernel
     *
     * @return string The virtualSecureMode
     */
@@ -607,7 +566,6 @@ class DeviceHealthAttestationState extends Entity
 
     /**
     * Sets the virtualSecureMode
-    * VSM is a container that protects high value assets from a compromised kernel
     *
     * @param string $val The value of the virtualSecureMode
     *
@@ -620,7 +578,6 @@ class DeviceHealthAttestationState extends Entity
     }
     /**
     * Gets the pcrHashAlgorithm
-    * Informational attribute that identifies the HASH algorithm that was used by TPM
     *
     * @return string The pcrHashAlgorithm
     */
@@ -635,7 +592,6 @@ class DeviceHealthAttestationState extends Entity
 
     /**
     * Sets the pcrHashAlgorithm
-    * Informational attribute that identifies the HASH algorithm that was used by TPM
     *
     * @param string $val The value of the pcrHashAlgorithm
     *
@@ -648,7 +604,6 @@ class DeviceHealthAttestationState extends Entity
     }
     /**
     * Gets the bootAppSecurityVersion
-    * The security version number of the Boot Application
     *
     * @return string The bootAppSecurityVersion
     */
@@ -663,7 +618,6 @@ class DeviceHealthAttestationState extends Entity
 
     /**
     * Sets the bootAppSecurityVersion
-    * The security version number of the Boot Application
     *
     * @param string $val The value of the bootAppSecurityVersion
     *
@@ -676,7 +630,6 @@ class DeviceHealthAttestationState extends Entity
     }
     /**
     * Gets the bootManagerSecurityVersion
-    * The security version number of the Boot Application
     *
     * @return string The bootManagerSecurityVersion
     */
@@ -691,7 +644,6 @@ class DeviceHealthAttestationState extends Entity
 
     /**
     * Sets the bootManagerSecurityVersion
-    * The security version number of the Boot Application
     *
     * @param string $val The value of the bootManagerSecurityVersion
     *
@@ -704,7 +656,6 @@ class DeviceHealthAttestationState extends Entity
     }
     /**
     * Gets the tpmVersion
-    * The security version number of the Boot Application
     *
     * @return string The tpmVersion
     */
@@ -719,7 +670,6 @@ class DeviceHealthAttestationState extends Entity
 
     /**
     * Sets the tpmVersion
-    * The security version number of the Boot Application
     *
     * @param string $val The value of the tpmVersion
     *
@@ -732,7 +682,6 @@ class DeviceHealthAttestationState extends Entity
     }
     /**
     * Gets the pcr0
-    * The measurement that is captured in PCR[0]
     *
     * @return string The pcr0
     */
@@ -747,7 +696,6 @@ class DeviceHealthAttestationState extends Entity
 
     /**
     * Sets the pcr0
-    * The measurement that is captured in PCR[0]
     *
     * @param string $val The value of the pcr0
     *
@@ -760,7 +708,6 @@ class DeviceHealthAttestationState extends Entity
     }
     /**
     * Gets the secureBootConfigurationPolicyFingerPrint
-    * Fingerprint of the Custom Secure Boot Configuration Policy
     *
     * @return string The secureBootConfigurationPolicyFingerPrint
     */
@@ -775,7 +722,6 @@ class DeviceHealthAttestationState extends Entity
 
     /**
     * Sets the secureBootConfigurationPolicyFingerPrint
-    * Fingerprint of the Custom Secure Boot Configuration Policy
     *
     * @param string $val The value of the secureBootConfigurationPolicyFingerPrint
     *
@@ -788,7 +734,6 @@ class DeviceHealthAttestationState extends Entity
     }
     /**
     * Gets the codeIntegrityPolicy
-    * The Code Integrity policy that is controlling the security of the boot environment
     *
     * @return string The codeIntegrityPolicy
     */
@@ -803,7 +748,6 @@ class DeviceHealthAttestationState extends Entity
 
     /**
     * Sets the codeIntegrityPolicy
-    * The Code Integrity policy that is controlling the security of the boot environment
     *
     * @param string $val The value of the codeIntegrityPolicy
     *
@@ -816,7 +760,6 @@ class DeviceHealthAttestationState extends Entity
     }
     /**
     * Gets the bootRevisionListInfo
-    * The Boot Revision List that was loaded during initial boot on the attested device
     *
     * @return string The bootRevisionListInfo
     */
@@ -831,7 +774,6 @@ class DeviceHealthAttestationState extends Entity
 
     /**
     * Sets the bootRevisionListInfo
-    * The Boot Revision List that was loaded during initial boot on the attested device
     *
     * @param string $val The value of the bootRevisionListInfo
     *
@@ -844,7 +786,6 @@ class DeviceHealthAttestationState extends Entity
     }
     /**
     * Gets the operatingSystemRevListInfo
-    * The Operating System Revision List that was loaded during initial boot on the attested device
     *
     * @return string The operatingSystemRevListInfo
     */
@@ -859,7 +800,6 @@ class DeviceHealthAttestationState extends Entity
 
     /**
     * Sets the operatingSystemRevListInfo
-    * The Operating System Revision List that was loaded during initial boot on the attested device
     *
     * @param string $val The value of the operatingSystemRevListInfo
     *
@@ -872,7 +812,6 @@ class DeviceHealthAttestationState extends Entity
     }
     /**
     * Gets the healthStatusMismatchInfo
-    * This attribute appears if DHA-Service detects an integrity issue
     *
     * @return string The healthStatusMismatchInfo
     */
@@ -887,7 +826,6 @@ class DeviceHealthAttestationState extends Entity
 
     /**
     * Sets the healthStatusMismatchInfo
-    * This attribute appears if DHA-Service detects an integrity issue
     *
     * @param string $val The value of the healthStatusMismatchInfo
     *
@@ -900,7 +838,6 @@ class DeviceHealthAttestationState extends Entity
     }
     /**
     * Gets the healthAttestationSupportedStatus
-    * This attribute indicates if DHA is supported for the device
     *
     * @return string The healthAttestationSupportedStatus
     */
@@ -915,7 +852,6 @@ class DeviceHealthAttestationState extends Entity
 
     /**
     * Sets the healthAttestationSupportedStatus
-    * This attribute indicates if DHA is supported for the device
     *
     * @param string $val The value of the healthAttestationSupportedStatus
     *

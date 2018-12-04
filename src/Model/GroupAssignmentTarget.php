@@ -36,7 +36,6 @@ class GroupAssignmentTarget extends DeviceAndAppManagementAssignmentTarget
 
     /**
     * Gets the groupId
-    * The group Id that is the target of the assignment.
     *
     * @return string The groupId
     */
@@ -51,7 +50,6 @@ class GroupAssignmentTarget extends DeviceAndAppManagementAssignmentTarget
 
     /**
     * Sets the groupId
-    * The group Id that is the target of the assignment.
     *
     * @param string $val The value of the groupId
     *

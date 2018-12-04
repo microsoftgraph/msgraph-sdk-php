@@ -28,7 +28,6 @@ class EventMessage extends Message
 {
     /**
     * Gets the meetingMessageType
-    * The type of event message: none, meetingRequest, meetingCancelled, meetingAccepted, meetingTenativelyAccepted, meetingDeclined.
     *
     * @return MeetingMessageType The meetingMessageType
     */
@@ -47,7 +46,6 @@ class EventMessage extends Message
     
     /**
     * Sets the meetingMessageType
-    * The type of event message: none, meetingRequest, meetingCancelled, meetingAccepted, meetingTenativelyAccepted, meetingDeclined.
     *
     * @param MeetingMessageType $val The meetingMessageType
     *
@@ -61,7 +59,6 @@ class EventMessage extends Message
     
     /**
     * Gets the event
-    * The event associated with the event message. The assumption for attendees or room resources is that the Calendar Attendant is set to automatically update the calendar with an event when meeting request event messages arrive. Navigation property.  Read-only.
     *
     * @return Event The event
     */
@@ -80,7 +77,6 @@ class EventMessage extends Message
     
     /**
     * Sets the event
-    * The event associated with the event message. The assumption for attendees or room resources is that the Calendar Attendant is set to automatically update the calendar with an event when meeting request event messages arrive. Navigation property.  Read-only.
     *
     * @param Event $val The event
     *

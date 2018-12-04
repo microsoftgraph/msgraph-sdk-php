@@ -28,7 +28,6 @@ class FollowupFlag extends Entity
 
     /**
     * Gets the completedDateTime
-    * The date and time that the follow-up was finished.
     *
     * @return DateTimeTimeZone The completedDateTime
     */
@@ -47,7 +46,6 @@ class FollowupFlag extends Entity
 
     /**
     * Sets the completedDateTime
-    * The date and time that the follow-up was finished.
     *
     * @param DateTimeTimeZone $val The value to assign to the completedDateTime
     *
@@ -61,7 +59,6 @@ class FollowupFlag extends Entity
 
     /**
     * Gets the dueDateTime
-    * The date and time that the follow-up is to be finished.
     *
     * @return DateTimeTimeZone The dueDateTime
     */
@@ -80,7 +77,6 @@ class FollowupFlag extends Entity
 
     /**
     * Sets the dueDateTime
-    * The date and time that the follow-up is to be finished.
     *
     * @param DateTimeTimeZone $val The value to assign to the dueDateTime
     *
@@ -94,7 +90,6 @@ class FollowupFlag extends Entity
 
     /**
     * Gets the startDateTime
-    * The date and time that the follow-up is to begin.
     *
     * @return DateTimeTimeZone The startDateTime
     */
@@ -113,7 +108,6 @@ class FollowupFlag extends Entity
 
     /**
     * Sets the startDateTime
-    * The date and time that the follow-up is to begin.
     *
     * @param DateTimeTimeZone $val The value to assign to the startDateTime
     *
@@ -127,7 +121,6 @@ class FollowupFlag extends Entity
 
     /**
     * Gets the flagStatus
-    * The status for follow-up for an item. Possible values are notFlagged, complete, and flagged.
     *
     * @return FollowupFlagStatus The flagStatus
     */
@@ -146,7 +139,6 @@ class FollowupFlag extends Entity
 
     /**
     * Sets the flagStatus
-    * The status for follow-up for an item. Possible values are notFlagged, complete, and flagged.
     *
     * @param FollowupFlagStatus $val The value to assign to the flagStatus
     *

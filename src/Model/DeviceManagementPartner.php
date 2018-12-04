@@ -28,7 +28,6 @@ class DeviceManagementPartner extends Entity
 {
     /**
     * Gets the lastHeartbeatDateTime
-    * Timestamp of last heartbeat after admin enabled option Connect to Device management Partner
     *
     * @return \DateTime The lastHeartbeatDateTime
     */
@@ -47,7 +46,6 @@ class DeviceManagementPartner extends Entity
     
     /**
     * Sets the lastHeartbeatDateTime
-    * Timestamp of last heartbeat after admin enabled option Connect to Device management Partner
     *
     * @param \DateTime $val The lastHeartbeatDateTime
     *
@@ -61,7 +59,6 @@ class DeviceManagementPartner extends Entity
     
     /**
     * Gets the partnerState
-    * Partner state of this tenant. Possible values are: unknown, unavailable, enabled, terminated, rejected, unresponsive.
     *
     * @return DeviceManagementPartnerTenantState The partnerState
     */
@@ -80,7 +77,6 @@ class DeviceManagementPartner extends Entity
     
     /**
     * Sets the partnerState
-    * Partner state of this tenant. Possible values are: unknown, unavailable, enabled, terminated, rejected, unresponsive.
     *
     * @param DeviceManagementPartnerTenantState $val The partnerState
     *
@@ -94,7 +90,6 @@ class DeviceManagementPartner extends Entity
     
     /**
     * Gets the partnerAppType
-    * Partner App type. Possible values are: unknown, singleTenantApp, multiTenantApp.
     *
     * @return DeviceManagementPartnerAppType The partnerAppType
     */
@@ -113,7 +108,6 @@ class DeviceManagementPartner extends Entity
     
     /**
     * Sets the partnerAppType
-    * Partner App type. Possible values are: unknown, singleTenantApp, multiTenantApp.
     *
     * @param DeviceManagementPartnerAppType $val The partnerAppType
     *
@@ -127,7 +121,6 @@ class DeviceManagementPartner extends Entity
     
     /**
     * Gets the singleTenantAppId
-    * Partner Single tenant App id
     *
     * @return string The singleTenantAppId
     */
@@ -142,7 +135,6 @@ class DeviceManagementPartner extends Entity
     
     /**
     * Sets the singleTenantAppId
-    * Partner Single tenant App id
     *
     * @param string $val The singleTenantAppId
     *
@@ -156,7 +148,6 @@ class DeviceManagementPartner extends Entity
     
     /**
     * Gets the displayName
-    * Partner display name
     *
     * @return string The displayName
     */
@@ -171,7 +162,6 @@ class DeviceManagementPartner extends Entity
     
     /**
     * Sets the displayName
-    * Partner display name
     *
     * @param string $val The displayName
     *
@@ -185,7 +175,6 @@ class DeviceManagementPartner extends Entity
     
     /**
     * Gets the isConfigured
-    * Whether device management partner is configured or not
     *
     * @return bool The isConfigured
     */
@@ -200,7 +189,6 @@ class DeviceManagementPartner extends Entity
     
     /**
     * Sets the isConfigured
-    * Whether device management partner is configured or not
     *
     * @param bool $val The isConfigured
     *
@@ -214,7 +202,6 @@ class DeviceManagementPartner extends Entity
     
     /**
     * Gets the whenPartnerDevicesWillBeRemovedDateTime
-    * DateTime in UTC when PartnerDevices will be removed
     *
     * @return \DateTime The whenPartnerDevicesWillBeRemovedDateTime
     */
@@ -233,7 +220,6 @@ class DeviceManagementPartner extends Entity
     
     /**
     * Sets the whenPartnerDevicesWillBeRemovedDateTime
-    * DateTime in UTC when PartnerDevices will be removed
     *
     * @param \DateTime $val The whenPartnerDevicesWillBeRemovedDateTime
     *
@@ -247,7 +233,6 @@ class DeviceManagementPartner extends Entity
     
     /**
     * Gets the whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime
-    * DateTime in UTC when PartnerDevices will be marked as NonCompliant
     *
     * @return \DateTime The whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime
     */
@@ -266,7 +251,6 @@ class DeviceManagementPartner extends Entity
     
     /**
     * Sets the whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime
-    * DateTime in UTC when PartnerDevices will be marked as NonCompliant
     *
     * @param \DateTime $val The whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime
     *

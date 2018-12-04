@@ -29,7 +29,6 @@ class LicenseDetails extends Entity
 
      /** 
      * Gets the servicePlans
-    * Information about the service plans assigned with the license. Read-only, Not nullable
      *
      * @return array The servicePlans
      */
@@ -44,7 +43,6 @@ class LicenseDetails extends Entity
     
     /** 
     * Sets the servicePlans
-    * Information about the service plans assigned with the license. Read-only, Not nullable
     *
     * @param ServicePlanInfo $val The servicePlans
     *
@@ -58,7 +56,6 @@ class LicenseDetails extends Entity
     
     /**
     * Gets the skuId
-    * Unique identifier (GUID) for the service SKU. Equal to the skuId property on the related SubscribedSku object. Read-only
     *
     * @return string The skuId
     */
@@ -73,7 +70,6 @@ class LicenseDetails extends Entity
     
     /**
     * Sets the skuId
-    * Unique identifier (GUID) for the service SKU. Equal to the skuId property on the related SubscribedSku object. Read-only
     *
     * @param string $val The skuId
     *
@@ -87,7 +83,6 @@ class LicenseDetails extends Entity
     
     /**
     * Gets the skuPartNumber
-    * Unique SKU display name. Equal to the skuPartNumber on the related SubscribedSku object; for example: "AAD_Premium". Read-only
     *
     * @return string The skuPartNumber
     */
@@ -102,7 +97,6 @@ class LicenseDetails extends Entity
     
     /**
     * Sets the skuPartNumber
-    * Unique SKU display name. Equal to the skuPartNumber on the related SubscribedSku object; for example: "AAD_Premium". Read-only
     *
     * @param string $val The skuPartNumber
     *

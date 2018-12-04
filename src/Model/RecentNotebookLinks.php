@@ -28,7 +28,6 @@ class RecentNotebookLinks extends Entity
 
     /**
     * Gets the oneNoteClientUrl
-    * Opens the notebook in the OneNote native client if it's installed.
     *
     * @return ExternalLink The oneNoteClientUrl
     */
@@ -47,7 +46,6 @@ class RecentNotebookLinks extends Entity
 
     /**
     * Sets the oneNoteClientUrl
-    * Opens the notebook in the OneNote native client if it's installed.
     *
     * @param ExternalLink $val The value to assign to the oneNoteClientUrl
     *
@@ -61,7 +59,6 @@ class RecentNotebookLinks extends Entity
 
     /**
     * Gets the oneNoteWebUrl
-    * Opens the notebook in OneNote Online.
     *
     * @return ExternalLink The oneNoteWebUrl
     */
@@ -80,7 +77,6 @@ class RecentNotebookLinks extends Entity
 
     /**
     * Sets the oneNoteWebUrl
-    * Opens the notebook in OneNote Online.
     *
     * @param ExternalLink $val The value to assign to the oneNoteWebUrl
     *

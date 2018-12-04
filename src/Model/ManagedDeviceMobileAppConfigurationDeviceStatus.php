@@ -28,7 +28,6 @@ class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity
 {
     /**
     * Gets the deviceDisplayName
-    * Device name of the DevicePolicyStatus.
     *
     * @return string The deviceDisplayName
     */
@@ -43,7 +42,6 @@ class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity
     
     /**
     * Sets the deviceDisplayName
-    * Device name of the DevicePolicyStatus.
     *
     * @param string $val The deviceDisplayName
     *
@@ -57,7 +55,6 @@ class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity
     
     /**
     * Gets the userName
-    * The User Name that is being reported
     *
     * @return string The userName
     */
@@ -72,7 +69,6 @@ class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity
     
     /**
     * Sets the userName
-    * The User Name that is being reported
     *
     * @param string $val The userName
     *
@@ -86,7 +82,6 @@ class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity
     
     /**
     * Gets the deviceModel
-    * The device model that is being reported
     *
     * @return string The deviceModel
     */
@@ -101,7 +96,6 @@ class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity
     
     /**
     * Sets the deviceModel
-    * The device model that is being reported
     *
     * @param string $val The deviceModel
     *
@@ -115,7 +109,6 @@ class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity
     
     /**
     * Gets the complianceGracePeriodExpirationDateTime
-    * The DateTime when device compliance grace period expires
     *
     * @return \DateTime The complianceGracePeriodExpirationDateTime
     */
@@ -134,7 +127,6 @@ class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity
     
     /**
     * Sets the complianceGracePeriodExpirationDateTime
-    * The DateTime when device compliance grace period expires
     *
     * @param \DateTime $val The complianceGracePeriodExpirationDateTime
     *
@@ -148,7 +140,6 @@ class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity
     
     /**
     * Gets the status
-    * Compliance status of the policy report. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict.
     *
     * @return ComplianceStatus The status
     */
@@ -167,7 +158,6 @@ class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity
     
     /**
     * Sets the status
-    * Compliance status of the policy report. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict.
     *
     * @param ComplianceStatus $val The status
     *
@@ -181,7 +171,6 @@ class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity
     
     /**
     * Gets the lastReportedDateTime
-    * Last modified date time of the policy report.
     *
     * @return \DateTime The lastReportedDateTime
     */
@@ -200,7 +189,6 @@ class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity
     
     /**
     * Sets the lastReportedDateTime
-    * Last modified date time of the policy report.
     *
     * @param \DateTime $val The lastReportedDateTime
     *
@@ -214,7 +202,6 @@ class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity
     
     /**
     * Gets the userPrincipalName
-    * UserPrincipalName.
     *
     * @return string The userPrincipalName
     */
@@ -229,7 +216,6 @@ class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity
     
     /**
     * Sets the userPrincipalName
-    * UserPrincipalName.
     *
     * @param string $val The userPrincipalName
     *

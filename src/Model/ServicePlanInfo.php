@@ -27,7 +27,6 @@ class ServicePlanInfo extends Entity
 {
     /**
     * Gets the servicePlanId
-    * The unique identifier of the service plan.
     *
     * @return string The servicePlanId
     */
@@ -42,7 +41,6 @@ class ServicePlanInfo extends Entity
 
     /**
     * Sets the servicePlanId
-    * The unique identifier of the service plan.
     *
     * @param string $val The value of the servicePlanId
     *
@@ -55,7 +53,6 @@ class ServicePlanInfo extends Entity
     }
     /**
     * Gets the servicePlanName
-    * The name of the service plan.
     *
     * @return string The servicePlanName
     */
@@ -70,7 +67,6 @@ class ServicePlanInfo extends Entity
 
     /**
     * Sets the servicePlanName
-    * The name of the service plan.
     *
     * @param string $val The value of the servicePlanName
     *
@@ -83,7 +79,6 @@ class ServicePlanInfo extends Entity
     }
     /**
     * Gets the provisioningStatus
-    * The provisioning status of the service plan. Possible values:"Success" - Service is fully provisioned."Disabled" - Service has been disabled."PendingInput" - Service is not yet provisioned; awaiting service confirmation."PendingActivation" - Service is provisioned but requires explicit activation by administrator (for example, Intune_O365 service plan)"PendingProvisioning" - Microsoft has added a new service to the product SKU and it has not been activated in the tenant, yet.
     *
     * @return string The provisioningStatus
     */
@@ -98,7 +93,6 @@ class ServicePlanInfo extends Entity
 
     /**
     * Sets the provisioningStatus
-    * The provisioning status of the service plan. Possible values:"Success" - Service is fully provisioned."Disabled" - Service has been disabled."PendingInput" - Service is not yet provisioned; awaiting service confirmation."PendingActivation" - Service is provisioned but requires explicit activation by administrator (for example, Intune_O365 service plan)"PendingProvisioning" - Microsoft has added a new service to the product SKU and it has not been activated in the tenant, yet.
     *
     * @param string $val The value of the provisioningStatus
     *
@@ -111,7 +105,6 @@ class ServicePlanInfo extends Entity
     }
     /**
     * Gets the appliesTo
-    * The object the service plan can be assigned to. Possible values:"User" - service plan can be assigned to individual users."Company" - service plan can be assigned to the entire tenant.
     *
     * @return string The appliesTo
     */
@@ -126,7 +119,6 @@ class ServicePlanInfo extends Entity
 
     /**
     * Sets the appliesTo
-    * The object the service plan can be assigned to. Possible values:"User" - service plan can be assigned to individual users."Company" - service plan can be assigned to the entire tenant.
     *
     * @param string $val The value of the appliesTo
     *

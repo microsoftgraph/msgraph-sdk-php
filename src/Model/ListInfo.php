@@ -27,7 +27,6 @@ class ListInfo extends Entity
 {
     /**
     * Gets the contentTypesEnabled
-    * If true, indicates that content types are enabled for this list.
     *
     * @return bool The contentTypesEnabled
     */
@@ -42,7 +41,6 @@ class ListInfo extends Entity
 
     /**
     * Sets the contentTypesEnabled
-    * If true, indicates that content types are enabled for this list.
     *
     * @param bool $val The value of the contentTypesEnabled
     *
@@ -55,7 +53,6 @@ class ListInfo extends Entity
     }
     /**
     * Gets the hidden
-    * If true, indicates that the list is not normally visible in the SharePoint user experience.
     *
     * @return bool The hidden
     */
@@ -70,7 +67,6 @@ class ListInfo extends Entity
 
     /**
     * Sets the hidden
-    * If true, indicates that the list is not normally visible in the SharePoint user experience.
     *
     * @param bool $val The value of the hidden
     *
@@ -83,7 +79,6 @@ class ListInfo extends Entity
     }
     /**
     * Gets the template
-    * An enumerated value that represents the base list template used in creating the list. Possible values include documentLibrary, genericList, task, survey, announcements, contacts, and more.
     *
     * @return string The template
     */
@@ -98,7 +93,6 @@ class ListInfo extends Entity
 
     /**
     * Sets the template
-    * An enumerated value that represents the base list template used in creating the list. Possible values include documentLibrary, genericList, task, survey, announcements, contacts, and more.
     *
     * @param string $val The value of the template
     *

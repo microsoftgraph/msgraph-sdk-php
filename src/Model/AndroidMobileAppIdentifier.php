@@ -36,7 +36,6 @@ class AndroidMobileAppIdentifier extends MobileAppIdentifier
 
     /**
     * Gets the packageId
-    * The identifier for an app, as specified in the play store.
     *
     * @return string The packageId
     */
@@ -51,7 +50,6 @@ class AndroidMobileAppIdentifier extends MobileAppIdentifier
 
     /**
     * Sets the packageId
-    * The identifier for an app, as specified in the play store.
     *
     * @param string $val The value of the packageId
     *

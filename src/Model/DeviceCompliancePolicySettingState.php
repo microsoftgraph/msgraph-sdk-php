@@ -27,7 +27,6 @@ class DeviceCompliancePolicySettingState extends Entity
 {
     /**
     * Gets the setting
-    * The setting that is being reported
     *
     * @return string The setting
     */
@@ -42,7 +41,6 @@ class DeviceCompliancePolicySettingState extends Entity
 
     /**
     * Sets the setting
-    * The setting that is being reported
     *
     * @param string $val The value of the setting
     *
@@ -55,7 +53,6 @@ class DeviceCompliancePolicySettingState extends Entity
     }
     /**
     * Gets the settingName
-    * Localized/user friendly setting name that is being reported
     *
     * @return string The settingName
     */
@@ -70,7 +67,6 @@ class DeviceCompliancePolicySettingState extends Entity
 
     /**
     * Sets the settingName
-    * Localized/user friendly setting name that is being reported
     *
     * @param string $val The value of the settingName
     *
@@ -83,7 +79,6 @@ class DeviceCompliancePolicySettingState extends Entity
     }
     /**
     * Gets the instanceDisplayName
-    * Name of setting instance that is being reported.
     *
     * @return string The instanceDisplayName
     */
@@ -98,7 +93,6 @@ class DeviceCompliancePolicySettingState extends Entity
 
     /**
     * Sets the instanceDisplayName
-    * Name of setting instance that is being reported.
     *
     * @param string $val The value of the instanceDisplayName
     *
@@ -112,7 +106,6 @@ class DeviceCompliancePolicySettingState extends Entity
 
     /**
     * Gets the state
-    * The compliance state of the setting. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict.
     *
     * @return ComplianceStatus The state
     */
@@ -131,7 +124,6 @@ class DeviceCompliancePolicySettingState extends Entity
 
     /**
     * Sets the state
-    * The compliance state of the setting. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict.
     *
     * @param ComplianceStatus $val The value to assign to the state
     *
@@ -144,7 +136,6 @@ class DeviceCompliancePolicySettingState extends Entity
     }
     /**
     * Gets the errorCode
-    * Error code for the setting
     *
     * @return int The errorCode
     */
@@ -159,7 +150,6 @@ class DeviceCompliancePolicySettingState extends Entity
 
     /**
     * Sets the errorCode
-    * Error code for the setting
     *
     * @param int $val The value of the errorCode
     *
@@ -172,7 +162,6 @@ class DeviceCompliancePolicySettingState extends Entity
     }
     /**
     * Gets the errorDescription
-    * Error description
     *
     * @return string The errorDescription
     */
@@ -187,7 +176,6 @@ class DeviceCompliancePolicySettingState extends Entity
 
     /**
     * Sets the errorDescription
-    * Error description
     *
     * @param string $val The value of the errorDescription
     *
@@ -200,7 +188,6 @@ class DeviceCompliancePolicySettingState extends Entity
     }
     /**
     * Gets the userId
-    * UserId
     *
     * @return string The userId
     */
@@ -215,7 +202,6 @@ class DeviceCompliancePolicySettingState extends Entity
 
     /**
     * Sets the userId
-    * UserId
     *
     * @param string $val The value of the userId
     *
@@ -228,7 +214,6 @@ class DeviceCompliancePolicySettingState extends Entity
     }
     /**
     * Gets the userName
-    * UserName
     *
     * @return string The userName
     */
@@ -243,7 +228,6 @@ class DeviceCompliancePolicySettingState extends Entity
 
     /**
     * Sets the userName
-    * UserName
     *
     * @param string $val The value of the userName
     *
@@ -256,7 +240,6 @@ class DeviceCompliancePolicySettingState extends Entity
     }
     /**
     * Gets the userEmail
-    * UserEmail
     *
     * @return string The userEmail
     */
@@ -271,7 +254,6 @@ class DeviceCompliancePolicySettingState extends Entity
 
     /**
     * Sets the userEmail
-    * UserEmail
     *
     * @param string $val The value of the userEmail
     *
@@ -284,7 +266,6 @@ class DeviceCompliancePolicySettingState extends Entity
     }
     /**
     * Gets the userPrincipalName
-    * UserPrincipalName.
     *
     * @return string The userPrincipalName
     */
@@ -299,7 +280,6 @@ class DeviceCompliancePolicySettingState extends Entity
 
     /**
     * Sets the userPrincipalName
-    * UserPrincipalName.
     *
     * @param string $val The value of the userPrincipalName
     *
@@ -313,7 +293,6 @@ class DeviceCompliancePolicySettingState extends Entity
 
     /**
     * Gets the sources
-    * Contributing policies
     *
     * @return SettingSource The sources
     */
@@ -332,7 +311,6 @@ class DeviceCompliancePolicySettingState extends Entity
 
     /**
     * Sets the sources
-    * Contributing policies
     *
     * @param SettingSource $val The value to assign to the sources
     *
@@ -345,7 +323,6 @@ class DeviceCompliancePolicySettingState extends Entity
     }
     /**
     * Gets the currentValue
-    * Current value of setting on device
     *
     * @return string The currentValue
     */
@@ -360,7 +337,6 @@ class DeviceCompliancePolicySettingState extends Entity
 
     /**
     * Sets the currentValue
-    * Current value of setting on device
     *
     * @param string $val The value of the currentValue
     *

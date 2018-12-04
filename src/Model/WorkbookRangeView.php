@@ -55,7 +55,6 @@ class WorkbookRangeView extends Entity
     
     /**
     * Gets the columnCount
-    * Returns the number of visible columns. Read-only.
     *
     * @return int The columnCount
     */
@@ -70,7 +69,6 @@ class WorkbookRangeView extends Entity
     
     /**
     * Sets the columnCount
-    * Returns the number of visible columns. Read-only.
     *
     * @param int $val The columnCount
     *
@@ -84,7 +82,6 @@ class WorkbookRangeView extends Entity
     
     /**
     * Gets the formulas
-    * Represents the formula in A1-style notation.
     *
     * @return string The formulas
     */
@@ -99,7 +96,6 @@ class WorkbookRangeView extends Entity
     
     /**
     * Sets the formulas
-    * Represents the formula in A1-style notation.
     *
     * @param string $val The formulas
     *
@@ -113,7 +109,6 @@ class WorkbookRangeView extends Entity
     
     /**
     * Gets the formulasLocal
-    * Represents the formula in A1-style notation, in the user's language and number-formatting locale. For example, the English "=SUM(A1, 1.5)" formula would become "=SUMME(A1; 1,5)" in German.
     *
     * @return string The formulasLocal
     */
@@ -128,7 +123,6 @@ class WorkbookRangeView extends Entity
     
     /**
     * Sets the formulasLocal
-    * Represents the formula in A1-style notation, in the user's language and number-formatting locale. For example, the English "=SUM(A1, 1.5)" formula would become "=SUMME(A1; 1,5)" in German.
     *
     * @param string $val The formulasLocal
     *
@@ -142,7 +136,6 @@ class WorkbookRangeView extends Entity
     
     /**
     * Gets the formulasR1C1
-    * Represents the formula in R1C1-style notation.
     *
     * @return string The formulasR1C1
     */
@@ -157,7 +150,6 @@ class WorkbookRangeView extends Entity
     
     /**
     * Sets the formulasR1C1
-    * Represents the formula in R1C1-style notation.
     *
     * @param string $val The formulasR1C1
     *
@@ -171,7 +163,6 @@ class WorkbookRangeView extends Entity
     
     /**
     * Gets the index
-    * Index of the range.
     *
     * @return int The index
     */
@@ -186,7 +177,6 @@ class WorkbookRangeView extends Entity
     
     /**
     * Sets the index
-    * Index of the range.
     *
     * @param int $val The index
     *
@@ -200,7 +190,6 @@ class WorkbookRangeView extends Entity
     
     /**
     * Gets the numberFormat
-    * Represents Excel's number format code for the given cell. Read-only.
     *
     * @return string The numberFormat
     */
@@ -215,7 +204,6 @@ class WorkbookRangeView extends Entity
     
     /**
     * Sets the numberFormat
-    * Represents Excel's number format code for the given cell. Read-only.
     *
     * @param string $val The numberFormat
     *
@@ -229,7 +217,6 @@ class WorkbookRangeView extends Entity
     
     /**
     * Gets the rowCount
-    * Returns the number of visible rows. Read-only.
     *
     * @return int The rowCount
     */
@@ -244,7 +231,6 @@ class WorkbookRangeView extends Entity
     
     /**
     * Sets the rowCount
-    * Returns the number of visible rows. Read-only.
     *
     * @param int $val The rowCount
     *
@@ -258,7 +244,6 @@ class WorkbookRangeView extends Entity
     
     /**
     * Gets the text
-    * Text values of the specified range. The Text value will not depend on the cell width. The # sign substitution that happens in Excel UI will not affect the text value returned by the API. Read-only.
     *
     * @return string The text
     */
@@ -273,7 +258,6 @@ class WorkbookRangeView extends Entity
     
     /**
     * Sets the text
-    * Text values of the specified range. The Text value will not depend on the cell width. The # sign substitution that happens in Excel UI will not affect the text value returned by the API. Read-only.
     *
     * @param string $val The text
     *
@@ -287,7 +271,6 @@ class WorkbookRangeView extends Entity
     
     /**
     * Gets the valueTypes
-    * Represents the type of data of each cell. Read-only. Possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error.
     *
     * @return string The valueTypes
     */
@@ -302,7 +285,6 @@ class WorkbookRangeView extends Entity
     
     /**
     * Sets the valueTypes
-    * Represents the type of data of each cell. Read-only. Possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error.
     *
     * @param string $val The valueTypes
     *
@@ -316,7 +298,6 @@ class WorkbookRangeView extends Entity
     
     /**
     * Gets the values
-    * Represents the raw values of the specified range view. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
     *
     * @return string The values
     */
@@ -331,7 +312,6 @@ class WorkbookRangeView extends Entity
     
     /**
     * Sets the values
-    * Represents the raw values of the specified range view. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
     *
     * @param string $val The values
     *
@@ -346,7 +326,6 @@ class WorkbookRangeView extends Entity
 
      /** 
      * Gets the rows
-    * Represents a collection of range views associated with the range. Read-only. Read-only.
      *
      * @return array The rows
      */
@@ -361,7 +340,6 @@ class WorkbookRangeView extends Entity
     
     /** 
     * Sets the rows
-    * Represents a collection of range views associated with the range. Read-only. Read-only.
     *
     * @param WorkbookRangeView $val The rows
     *

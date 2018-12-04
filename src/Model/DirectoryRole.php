@@ -28,7 +28,6 @@ class DirectoryRole extends DirectoryObject
 {
     /**
     * Gets the description
-    * The description for the directory role. Read-only.
     *
     * @return string The description
     */
@@ -43,7 +42,6 @@ class DirectoryRole extends DirectoryObject
     
     /**
     * Sets the description
-    * The description for the directory role. Read-only.
     *
     * @param string $val The description
     *
@@ -57,7 +55,6 @@ class DirectoryRole extends DirectoryObject
     
     /**
     * Gets the displayName
-    * The display name for the directory role. Read-only.
     *
     * @return string The displayName
     */
@@ -72,7 +69,6 @@ class DirectoryRole extends DirectoryObject
     
     /**
     * Sets the displayName
-    * The display name for the directory role. Read-only.
     *
     * @param string $val The displayName
     *
@@ -86,7 +82,6 @@ class DirectoryRole extends DirectoryObject
     
     /**
     * Gets the roleTemplateId
-    * The id of the directoryRoleTemplate that this role is based on. The property must be specified when activating a directory role in a tenant with a POST operation. After the directory role has been activated, the property is read only.
     *
     * @return string The roleTemplateId
     */
@@ -101,7 +96,6 @@ class DirectoryRole extends DirectoryObject
     
     /**
     * Sets the roleTemplateId
-    * The id of the directoryRoleTemplate that this role is based on. The property must be specified when activating a directory role in a tenant with a POST operation. After the directory role has been activated, the property is read only.
     *
     * @param string $val The roleTemplateId
     *
@@ -116,7 +110,6 @@ class DirectoryRole extends DirectoryObject
 
      /** 
      * Gets the members
-    * Users that are members of this directory role. HTTP Methods: GET, POST, DELETE. Read-only. Nullable.
      *
      * @return array The members
      */
@@ -131,7 +124,6 @@ class DirectoryRole extends DirectoryObject
     
     /** 
     * Sets the members
-    * Users that are members of this directory role. HTTP Methods: GET, POST, DELETE. Read-only. Nullable.
     *
     * @param DirectoryObject $val The members
     *

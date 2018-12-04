@@ -28,7 +28,6 @@ class OnPremisesConditionalAccessSettings extends Entity
 {
     /**
     * Gets the enabled
-    * Indicates if on premises conditional access is enabled for this organization
     *
     * @return bool The enabled
     */
@@ -43,7 +42,6 @@ class OnPremisesConditionalAccessSettings extends Entity
     
     /**
     * Sets the enabled
-    * Indicates if on premises conditional access is enabled for this organization
     *
     * @param bool $val The enabled
     *
@@ -57,7 +55,6 @@ class OnPremisesConditionalAccessSettings extends Entity
     
     /**
     * Gets the includedGroups
-    * User groups that will be targeted by on premises conditional access. All users in these groups will be required to have mobile device managed and compliant for mail access.
     *
     * @return string The includedGroups
     */
@@ -72,7 +69,6 @@ class OnPremisesConditionalAccessSettings extends Entity
     
     /**
     * Sets the includedGroups
-    * User groups that will be targeted by on premises conditional access. All users in these groups will be required to have mobile device managed and compliant for mail access.
     *
     * @param string $val The includedGroups
     *
@@ -86,7 +82,6 @@ class OnPremisesConditionalAccessSettings extends Entity
     
     /**
     * Gets the excludedGroups
-    * User groups that will be exempt by on premises conditional access. All users in these groups will be exempt from the conditional access policy.
     *
     * @return string The excludedGroups
     */
@@ -101,7 +96,6 @@ class OnPremisesConditionalAccessSettings extends Entity
     
     /**
     * Sets the excludedGroups
-    * User groups that will be exempt by on premises conditional access. All users in these groups will be exempt from the conditional access policy.
     *
     * @param string $val The excludedGroups
     *
@@ -115,7 +109,6 @@ class OnPremisesConditionalAccessSettings extends Entity
     
     /**
     * Gets the overrideDefaultRule
-    * Override the default access rule when allowing a device to ensure access is granted.
     *
     * @return bool The overrideDefaultRule
     */
@@ -130,7 +123,6 @@ class OnPremisesConditionalAccessSettings extends Entity
     
     /**
     * Sets the overrideDefaultRule
-    * Override the default access rule when allowing a device to ensure access is granted.
     *
     * @param bool $val The overrideDefaultRule
     *

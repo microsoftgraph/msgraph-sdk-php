@@ -58,7 +58,6 @@ class Thumbnail extends Entity
     }
     /**
     * Gets the height
-    * The height of the thumbnail, in pixels.
     *
     * @return int The height
     */
@@ -73,7 +72,6 @@ class Thumbnail extends Entity
 
     /**
     * Sets the height
-    * The height of the thumbnail, in pixels.
     *
     * @param int $val The value of the height
     *
@@ -86,7 +84,6 @@ class Thumbnail extends Entity
     }
     /**
     * Gets the sourceItemId
-    * The unique identifier of the item that provided the thumbnail. This is only available when a folder thumbnail is requested.
     *
     * @return string The sourceItemId
     */
@@ -101,7 +98,6 @@ class Thumbnail extends Entity
 
     /**
     * Sets the sourceItemId
-    * The unique identifier of the item that provided the thumbnail. This is only available when a folder thumbnail is requested.
     *
     * @param string $val The value of the sourceItemId
     *
@@ -114,7 +110,6 @@ class Thumbnail extends Entity
     }
     /**
     * Gets the url
-    * The URL used to fetch the thumbnail content.
     *
     * @return string The url
     */
@@ -129,7 +124,6 @@ class Thumbnail extends Entity
 
     /**
     * Sets the url
-    * The URL used to fetch the thumbnail content.
     *
     * @param string $val The value of the url
     *
@@ -142,7 +136,6 @@ class Thumbnail extends Entity
     }
     /**
     * Gets the width
-    * The width of the thumbnail, in pixels.
     *
     * @return int The width
     */
@@ -157,7 +150,6 @@ class Thumbnail extends Entity
 
     /**
     * Sets the width
-    * The width of the thumbnail, in pixels.
     *
     * @param int $val The value of the width
     *

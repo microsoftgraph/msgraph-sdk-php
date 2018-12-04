@@ -28,7 +28,6 @@ class DeviceAppManagement extends Entity
 {
     /**
     * Gets the microsoftStoreForBusinessLastSuccessfulSyncDateTime
-    * The last time the apps from the Microsoft Store for Business were synced successfully for the account.
     *
     * @return \DateTime The microsoftStoreForBusinessLastSuccessfulSyncDateTime
     */
@@ -47,7 +46,6 @@ class DeviceAppManagement extends Entity
     
     /**
     * Sets the microsoftStoreForBusinessLastSuccessfulSyncDateTime
-    * The last time the apps from the Microsoft Store for Business were synced successfully for the account.
     *
     * @param \DateTime $val The microsoftStoreForBusinessLastSuccessfulSyncDateTime
     *
@@ -61,7 +59,6 @@ class DeviceAppManagement extends Entity
     
     /**
     * Gets the isEnabledForMicrosoftStoreForBusiness
-    * Whether the account is enabled for syncing applications from the Microsoft Store for Business.
     *
     * @return bool The isEnabledForMicrosoftStoreForBusiness
     */
@@ -76,7 +73,6 @@ class DeviceAppManagement extends Entity
     
     /**
     * Sets the isEnabledForMicrosoftStoreForBusiness
-    * Whether the account is enabled for syncing applications from the Microsoft Store for Business.
     *
     * @param bool $val The isEnabledForMicrosoftStoreForBusiness
     *
@@ -90,7 +86,6 @@ class DeviceAppManagement extends Entity
     
     /**
     * Gets the microsoftStoreForBusinessLanguage
-    * The locale information used to sync applications from the Microsoft Store for Business. Cultures that are specific to a country/region. The names of these cultures follow RFC 4646 (Windows Vista and later). The format is -<country/regioncode2>, where  is a lowercase two-letter code derived from ISO 639-1 and <country/regioncode2> is an uppercase two-letter code derived from ISO 3166. For example, en-US for English (United States) is a specific culture.
     *
     * @return string The microsoftStoreForBusinessLanguage
     */
@@ -105,7 +100,6 @@ class DeviceAppManagement extends Entity
     
     /**
     * Sets the microsoftStoreForBusinessLanguage
-    * The locale information used to sync applications from the Microsoft Store for Business. Cultures that are specific to a country/region. The names of these cultures follow RFC 4646 (Windows Vista and later). The format is -<country/regioncode2>, where  is a lowercase two-letter code derived from ISO 639-1 and <country/regioncode2> is an uppercase two-letter code derived from ISO 3166. For example, en-US for English (United States) is a specific culture.
     *
     * @param string $val The microsoftStoreForBusinessLanguage
     *
@@ -119,7 +113,6 @@ class DeviceAppManagement extends Entity
     
     /**
     * Gets the microsoftStoreForBusinessLastCompletedApplicationSyncTime
-    * The last time an application sync from the Microsoft Store for Business was completed.
     *
     * @return \DateTime The microsoftStoreForBusinessLastCompletedApplicationSyncTime
     */
@@ -138,7 +131,6 @@ class DeviceAppManagement extends Entity
     
     /**
     * Sets the microsoftStoreForBusinessLastCompletedApplicationSyncTime
-    * The last time an application sync from the Microsoft Store for Business was completed.
     *
     * @param \DateTime $val The microsoftStoreForBusinessLastCompletedApplicationSyncTime
     *
@@ -153,7 +145,6 @@ class DeviceAppManagement extends Entity
 
      /** 
      * Gets the mobileApps
-    * The mobile apps.
      *
      * @return array The mobileApps
      */
@@ -168,7 +159,6 @@ class DeviceAppManagement extends Entity
     
     /** 
     * Sets the mobileApps
-    * The mobile apps.
     *
     * @param MobileApp $val The mobileApps
     *
@@ -183,7 +173,6 @@ class DeviceAppManagement extends Entity
 
      /** 
      * Gets the mobileAppCategories
-    * The mobile app categories.
      *
      * @return array The mobileAppCategories
      */
@@ -198,7 +187,6 @@ class DeviceAppManagement extends Entity
     
     /** 
     * Sets the mobileAppCategories
-    * The mobile app categories.
     *
     * @param MobileAppCategory $val The mobileAppCategories
     *
@@ -213,7 +201,6 @@ class DeviceAppManagement extends Entity
 
      /** 
      * Gets the mobileAppConfigurations
-    * The Managed Device Mobile Application Configurations.
      *
      * @return array The mobileAppConfigurations
      */
@@ -228,7 +215,6 @@ class DeviceAppManagement extends Entity
     
     /** 
     * Sets the mobileAppConfigurations
-    * The Managed Device Mobile Application Configurations.
     *
     * @param ManagedDeviceMobileAppConfiguration $val The mobileAppConfigurations
     *
@@ -243,7 +229,6 @@ class DeviceAppManagement extends Entity
 
      /** 
      * Gets the vppTokens
-    * List of Vpp tokens for this organization.
      *
      * @return array The vppTokens
      */
@@ -258,7 +243,6 @@ class DeviceAppManagement extends Entity
     
     /** 
     * Sets the vppTokens
-    * List of Vpp tokens for this organization.
     *
     * @param VppToken $val The vppTokens
     *
@@ -273,7 +257,6 @@ class DeviceAppManagement extends Entity
 
      /** 
      * Gets the managedAppPolicies
-    * Managed app policies.
      *
      * @return array The managedAppPolicies
      */
@@ -288,7 +271,6 @@ class DeviceAppManagement extends Entity
     
     /** 
     * Sets the managedAppPolicies
-    * Managed app policies.
     *
     * @param ManagedAppPolicy $val The managedAppPolicies
     *
@@ -331,7 +313,6 @@ class DeviceAppManagement extends Entity
 
      /** 
      * Gets the androidManagedAppProtections
-    * Android managed app policies.
      *
      * @return array The androidManagedAppProtections
      */
@@ -346,7 +327,6 @@ class DeviceAppManagement extends Entity
     
     /** 
     * Sets the androidManagedAppProtections
-    * Android managed app policies.
     *
     * @param AndroidManagedAppProtection $val The androidManagedAppProtections
     *
@@ -361,7 +341,6 @@ class DeviceAppManagement extends Entity
 
      /** 
      * Gets the defaultManagedAppProtections
-    * Default managed app policies.
      *
      * @return array The defaultManagedAppProtections
      */
@@ -376,7 +355,6 @@ class DeviceAppManagement extends Entity
     
     /** 
     * Sets the defaultManagedAppProtections
-    * Default managed app policies.
     *
     * @param DefaultManagedAppProtection $val The defaultManagedAppProtections
     *
@@ -391,7 +369,6 @@ class DeviceAppManagement extends Entity
 
      /** 
      * Gets the targetedManagedAppConfigurations
-    * Targeted managed app configurations.
      *
      * @return array The targetedManagedAppConfigurations
      */
@@ -406,7 +383,6 @@ class DeviceAppManagement extends Entity
     
     /** 
     * Sets the targetedManagedAppConfigurations
-    * Targeted managed app configurations.
     *
     * @param TargetedManagedAppConfiguration $val The targetedManagedAppConfigurations
     *
@@ -421,7 +397,6 @@ class DeviceAppManagement extends Entity
 
      /** 
      * Gets the mdmWindowsInformationProtectionPolicies
-    * Windows information protection for apps running on devices which are MDM enrolled.
      *
      * @return array The mdmWindowsInformationProtectionPolicies
      */
@@ -436,7 +411,6 @@ class DeviceAppManagement extends Entity
     
     /** 
     * Sets the mdmWindowsInformationProtectionPolicies
-    * Windows information protection for apps running on devices which are MDM enrolled.
     *
     * @param MdmWindowsInformationProtectionPolicy $val The mdmWindowsInformationProtectionPolicies
     *
@@ -451,7 +425,6 @@ class DeviceAppManagement extends Entity
 
      /** 
      * Gets the windowsInformationProtectionPolicies
-    * Windows information protection for apps running on devices which are not MDM enrolled.
      *
      * @return array The windowsInformationProtectionPolicies
      */
@@ -466,7 +439,6 @@ class DeviceAppManagement extends Entity
     
     /** 
     * Sets the windowsInformationProtectionPolicies
-    * Windows information protection for apps running on devices which are not MDM enrolled.
     *
     * @param WindowsInformationProtectionPolicy $val The windowsInformationProtectionPolicies
     *
@@ -481,7 +453,6 @@ class DeviceAppManagement extends Entity
 
      /** 
      * Gets the managedAppRegistrations
-    * The managed app registrations.
      *
      * @return array The managedAppRegistrations
      */
@@ -496,7 +467,6 @@ class DeviceAppManagement extends Entity
     
     /** 
     * Sets the managedAppRegistrations
-    * The managed app registrations.
     *
     * @param ManagedAppRegistration $val The managedAppRegistrations
     *
@@ -511,7 +481,6 @@ class DeviceAppManagement extends Entity
 
      /** 
      * Gets the managedAppStatuses
-    * The managed app statuses.
      *
      * @return array The managedAppStatuses
      */
@@ -526,7 +495,6 @@ class DeviceAppManagement extends Entity
     
     /** 
     * Sets the managedAppStatuses
-    * The managed app statuses.
     *
     * @param ManagedAppStatus $val The managedAppStatuses
     *
@@ -541,7 +509,6 @@ class DeviceAppManagement extends Entity
 
      /** 
      * Gets the managedEBooks
-    * The Managed eBook.
      *
      * @return array The managedEBooks
      */
@@ -556,7 +523,6 @@ class DeviceAppManagement extends Entity
     
     /** 
     * Sets the managedEBooks
-    * The Managed eBook.
     *
     * @param ManagedEBook $val The managedEBooks
     *

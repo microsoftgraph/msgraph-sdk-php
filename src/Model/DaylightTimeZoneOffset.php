@@ -27,7 +27,6 @@ class DaylightTimeZoneOffset extends StandardTimeZoneOffset
 {
     /**
     * Gets the daylightBias
-    * The time offset from Coordinated Universal Time (UTC) for daylight saving time. This value is in minutes.
     *
     * @return int The daylightBias
     */
@@ -42,7 +41,6 @@ class DaylightTimeZoneOffset extends StandardTimeZoneOffset
 
     /**
     * Sets the daylightBias
-    * The time offset from Coordinated Universal Time (UTC) for daylight saving time. This value is in minutes.
     *
     * @param int $val The value of the daylightBias
     *

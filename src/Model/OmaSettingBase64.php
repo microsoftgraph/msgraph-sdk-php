@@ -36,7 +36,6 @@ class OmaSettingBase64 extends OmaSetting
 
     /**
     * Gets the fileName
-    * File name associated with the Value property (.cer
     *
     * @return string The fileName
     */
@@ -51,7 +50,6 @@ class OmaSettingBase64 extends OmaSetting
 
     /**
     * Sets the fileName
-    * File name associated with the Value property (.cer
     *
     * @param string $val The value of the fileName
     *
@@ -64,7 +62,6 @@ class OmaSettingBase64 extends OmaSetting
     }
     /**
     * Gets the value
-    * Value. (Base64 encoded string)
     *
     * @return string The value
     */
@@ -79,7 +76,6 @@ class OmaSettingBase64 extends OmaSetting
 
     /**
     * Sets the value
-    * Value. (Base64 encoded string)
     *
     * @param string $val The value of the value
     *

@@ -27,7 +27,6 @@ class SpecialFolder extends Entity
 {
     /**
     * Gets the name
-    * The unique identifier for this item in the /drive/special collection
     *
     * @return string The name
     */
@@ -42,7 +41,6 @@ class SpecialFolder extends Entity
 
     /**
     * Sets the name
-    * The unique identifier for this item in the /drive/special collection
     *
     * @param string $val The value of the name
     *

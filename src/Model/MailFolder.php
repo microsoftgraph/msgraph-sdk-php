@@ -28,7 +28,6 @@ class MailFolder extends Entity
 {
     /**
     * Gets the displayName
-    * The mailFolder's display name.
     *
     * @return string The displayName
     */
@@ -43,7 +42,6 @@ class MailFolder extends Entity
     
     /**
     * Sets the displayName
-    * The mailFolder's display name.
     *
     * @param string $val The displayName
     *
@@ -57,7 +55,6 @@ class MailFolder extends Entity
     
     /**
     * Gets the parentFolderId
-    * The unique identifier for the mailFolder's parent mailFolder.
     *
     * @return string The parentFolderId
     */
@@ -72,7 +69,6 @@ class MailFolder extends Entity
     
     /**
     * Sets the parentFolderId
-    * The unique identifier for the mailFolder's parent mailFolder.
     *
     * @param string $val The parentFolderId
     *
@@ -86,7 +82,6 @@ class MailFolder extends Entity
     
     /**
     * Gets the childFolderCount
-    * The number of immediate child mailFolders in the current mailFolder.
     *
     * @return int The childFolderCount
     */
@@ -101,7 +96,6 @@ class MailFolder extends Entity
     
     /**
     * Sets the childFolderCount
-    * The number of immediate child mailFolders in the current mailFolder.
     *
     * @param int $val The childFolderCount
     *
@@ -115,7 +109,6 @@ class MailFolder extends Entity
     
     /**
     * Gets the unreadItemCount
-    * The number of items in the mailFolder marked as unread.
     *
     * @return int The unreadItemCount
     */
@@ -130,7 +123,6 @@ class MailFolder extends Entity
     
     /**
     * Sets the unreadItemCount
-    * The number of items in the mailFolder marked as unread.
     *
     * @param int $val The unreadItemCount
     *
@@ -144,7 +136,6 @@ class MailFolder extends Entity
     
     /**
     * Gets the totalItemCount
-    * The number of items in the mailFolder.
     *
     * @return int The totalItemCount
     */
@@ -159,7 +150,6 @@ class MailFolder extends Entity
     
     /**
     * Sets the totalItemCount
-    * The number of items in the mailFolder.
     *
     * @param int $val The totalItemCount
     *
@@ -174,7 +164,6 @@ class MailFolder extends Entity
 
      /** 
      * Gets the messages
-    * The collection of messages in the mailFolder.
      *
      * @return array The messages
      */
@@ -189,7 +178,6 @@ class MailFolder extends Entity
     
     /** 
     * Sets the messages
-    * The collection of messages in the mailFolder.
     *
     * @param Message $val The messages
     *
@@ -204,7 +192,6 @@ class MailFolder extends Entity
 
      /** 
      * Gets the messageRules
-    * The collection of rules that apply to the user's Inbox folder.
      *
      * @return array The messageRules
      */
@@ -219,7 +206,6 @@ class MailFolder extends Entity
     
     /** 
     * Sets the messageRules
-    * The collection of rules that apply to the user's Inbox folder.
     *
     * @param MessageRule $val The messageRules
     *
@@ -234,7 +220,6 @@ class MailFolder extends Entity
 
      /** 
      * Gets the childFolders
-    * The collection of child folders in the mailFolder.
      *
      * @return array The childFolders
      */
@@ -249,7 +234,6 @@ class MailFolder extends Entity
     
     /** 
     * Sets the childFolders
-    * The collection of child folders in the mailFolder.
     *
     * @param MailFolder $val The childFolders
     *
@@ -264,7 +248,6 @@ class MailFolder extends Entity
 
      /** 
      * Gets the singleValueExtendedProperties
-    * The collection of single-value extended properties defined for the mailFolder. Read-only. Nullable.
      *
      * @return array The singleValueExtendedProperties
      */
@@ -279,7 +262,6 @@ class MailFolder extends Entity
     
     /** 
     * Sets the singleValueExtendedProperties
-    * The collection of single-value extended properties defined for the mailFolder. Read-only. Nullable.
     *
     * @param SingleValueLegacyExtendedProperty $val The singleValueExtendedProperties
     *
@@ -294,7 +276,6 @@ class MailFolder extends Entity
 
      /** 
      * Gets the multiValueExtendedProperties
-    * The collection of multi-value extended properties defined for the mailFolder. Read-only. Nullable.
      *
      * @return array The multiValueExtendedProperties
      */
@@ -309,7 +290,6 @@ class MailFolder extends Entity
     
     /** 
     * Sets the multiValueExtendedProperties
-    * The collection of multi-value extended properties defined for the mailFolder. Read-only. Nullable.
     *
     * @param MultiValueLegacyExtendedProperty $val The multiValueExtendedProperties
     *

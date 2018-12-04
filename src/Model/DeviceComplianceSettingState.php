@@ -28,7 +28,6 @@ class DeviceComplianceSettingState extends Entity
 {
     /**
     * Gets the setting
-    * The setting class name and property name.
     *
     * @return string The setting
     */
@@ -43,7 +42,6 @@ class DeviceComplianceSettingState extends Entity
     
     /**
     * Sets the setting
-    * The setting class name and property name.
     *
     * @param string $val The setting
     *
@@ -57,7 +55,6 @@ class DeviceComplianceSettingState extends Entity
     
     /**
     * Gets the settingName
-    * The Setting Name that is being reported
     *
     * @return string The settingName
     */
@@ -72,7 +69,6 @@ class DeviceComplianceSettingState extends Entity
     
     /**
     * Sets the settingName
-    * The Setting Name that is being reported
     *
     * @param string $val The settingName
     *
@@ -86,7 +82,6 @@ class DeviceComplianceSettingState extends Entity
     
     /**
     * Gets the deviceId
-    * The Device Id that is being reported
     *
     * @return string The deviceId
     */
@@ -101,7 +96,6 @@ class DeviceComplianceSettingState extends Entity
     
     /**
     * Sets the deviceId
-    * The Device Id that is being reported
     *
     * @param string $val The deviceId
     *
@@ -115,7 +109,6 @@ class DeviceComplianceSettingState extends Entity
     
     /**
     * Gets the deviceName
-    * The Device Name that is being reported
     *
     * @return string The deviceName
     */
@@ -130,7 +123,6 @@ class DeviceComplianceSettingState extends Entity
     
     /**
     * Sets the deviceName
-    * The Device Name that is being reported
     *
     * @param string $val The deviceName
     *
@@ -144,7 +136,6 @@ class DeviceComplianceSettingState extends Entity
     
     /**
     * Gets the userId
-    * The user Id that is being reported
     *
     * @return string The userId
     */
@@ -159,7 +150,6 @@ class DeviceComplianceSettingState extends Entity
     
     /**
     * Sets the userId
-    * The user Id that is being reported
     *
     * @param string $val The userId
     *
@@ -173,7 +163,6 @@ class DeviceComplianceSettingState extends Entity
     
     /**
     * Gets the userEmail
-    * The User email address that is being reported
     *
     * @return string The userEmail
     */
@@ -188,7 +177,6 @@ class DeviceComplianceSettingState extends Entity
     
     /**
     * Sets the userEmail
-    * The User email address that is being reported
     *
     * @param string $val The userEmail
     *
@@ -202,7 +190,6 @@ class DeviceComplianceSettingState extends Entity
     
     /**
     * Gets the userName
-    * The User Name that is being reported
     *
     * @return string The userName
     */
@@ -217,7 +204,6 @@ class DeviceComplianceSettingState extends Entity
     
     /**
     * Sets the userName
-    * The User Name that is being reported
     *
     * @param string $val The userName
     *
@@ -231,7 +217,6 @@ class DeviceComplianceSettingState extends Entity
     
     /**
     * Gets the userPrincipalName
-    * The User PrincipalName that is being reported
     *
     * @return string The userPrincipalName
     */
@@ -246,7 +231,6 @@ class DeviceComplianceSettingState extends Entity
     
     /**
     * Sets the userPrincipalName
-    * The User PrincipalName that is being reported
     *
     * @param string $val The userPrincipalName
     *
@@ -260,7 +244,6 @@ class DeviceComplianceSettingState extends Entity
     
     /**
     * Gets the deviceModel
-    * The device model that is being reported
     *
     * @return string The deviceModel
     */
@@ -275,7 +258,6 @@ class DeviceComplianceSettingState extends Entity
     
     /**
     * Sets the deviceModel
-    * The device model that is being reported
     *
     * @param string $val The deviceModel
     *
@@ -289,7 +271,6 @@ class DeviceComplianceSettingState extends Entity
     
     /**
     * Gets the state
-    * The compliance state of the setting. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict.
     *
     * @return ComplianceStatus The state
     */
@@ -308,7 +289,6 @@ class DeviceComplianceSettingState extends Entity
     
     /**
     * Sets the state
-    * The compliance state of the setting. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict.
     *
     * @param ComplianceStatus $val The state
     *
@@ -322,7 +302,6 @@ class DeviceComplianceSettingState extends Entity
     
     /**
     * Gets the complianceGracePeriodExpirationDateTime
-    * The DateTime when device compliance grace period expires
     *
     * @return \DateTime The complianceGracePeriodExpirationDateTime
     */
@@ -341,7 +320,6 @@ class DeviceComplianceSettingState extends Entity
     
     /**
     * Sets the complianceGracePeriodExpirationDateTime
-    * The DateTime when device compliance grace period expires
     *
     * @param \DateTime $val The complianceGracePeriodExpirationDateTime
     *

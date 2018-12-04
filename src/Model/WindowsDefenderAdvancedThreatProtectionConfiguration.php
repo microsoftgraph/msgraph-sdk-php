@@ -28,7 +28,6 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
 {
     /**
     * Gets the allowSampleSharing
-    * Windows Defender AdvancedThreatProtection "Allow Sample Sharing" Rule
     *
     * @return bool The allowSampleSharing
     */
@@ -43,7 +42,6 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
     
     /**
     * Sets the allowSampleSharing
-    * Windows Defender AdvancedThreatProtection "Allow Sample Sharing" Rule
     *
     * @param bool $val The allowSampleSharing
     *
@@ -57,7 +55,6 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
     
     /**
     * Gets the enableExpeditedTelemetryReporting
-    * Expedite Windows Defender Advanced Threat Protection telemetry reporting frequency.
     *
     * @return bool The enableExpeditedTelemetryReporting
     */
@@ -72,7 +69,6 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
     
     /**
     * Sets the enableExpeditedTelemetryReporting
-    * Expedite Windows Defender Advanced Threat Protection telemetry reporting frequency.
     *
     * @param bool $val The enableExpeditedTelemetryReporting
     *

@@ -28,7 +28,6 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
 {
     /**
     * Gets the iosRestriction
-    * Not yet documented
     *
     * @return DeviceEnrollmentPlatformRestriction The iosRestriction
     */
@@ -47,7 +46,6 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
     
     /**
     * Sets the iosRestriction
-    * Not yet documented
     *
     * @param DeviceEnrollmentPlatformRestriction $val The iosRestriction
     *
@@ -61,7 +59,6 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
     
     /**
     * Gets the windowsRestriction
-    * Not yet documented
     *
     * @return DeviceEnrollmentPlatformRestriction The windowsRestriction
     */
@@ -80,7 +77,6 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
     
     /**
     * Sets the windowsRestriction
-    * Not yet documented
     *
     * @param DeviceEnrollmentPlatformRestriction $val The windowsRestriction
     *
@@ -94,7 +90,6 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
     
     /**
     * Gets the windowsMobileRestriction
-    * Not yet documented
     *
     * @return DeviceEnrollmentPlatformRestriction The windowsMobileRestriction
     */
@@ -113,7 +108,6 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
     
     /**
     * Sets the windowsMobileRestriction
-    * Not yet documented
     *
     * @param DeviceEnrollmentPlatformRestriction $val The windowsMobileRestriction
     *
@@ -127,7 +121,6 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
     
     /**
     * Gets the androidRestriction
-    * Not yet documented
     *
     * @return DeviceEnrollmentPlatformRestriction The androidRestriction
     */
@@ -146,7 +139,6 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
     
     /**
     * Sets the androidRestriction
-    * Not yet documented
     *
     * @param DeviceEnrollmentPlatformRestriction $val The androidRestriction
     *
@@ -160,7 +152,6 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
     
     /**
     * Gets the macOSRestriction
-    * Not yet documented
     *
     * @return DeviceEnrollmentPlatformRestriction The macOSRestriction
     */
@@ -179,7 +170,6 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
     
     /**
     * Sets the macOSRestriction
-    * Not yet documented
     *
     * @param DeviceEnrollmentPlatformRestriction $val The macOSRestriction
     *

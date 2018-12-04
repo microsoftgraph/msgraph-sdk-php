@@ -28,7 +28,6 @@ class ApplePushNotificationCertificate extends Entity
 {
     /**
     * Gets the appleIdentifier
-    * Apple Id of the account used to create the MDM push certificate.
     *
     * @return string The appleIdentifier
     */
@@ -43,7 +42,6 @@ class ApplePushNotificationCertificate extends Entity
     
     /**
     * Sets the appleIdentifier
-    * Apple Id of the account used to create the MDM push certificate.
     *
     * @param string $val The appleIdentifier
     *
@@ -57,7 +55,6 @@ class ApplePushNotificationCertificate extends Entity
     
     /**
     * Gets the topicIdentifier
-    * Topic Id.
     *
     * @return string The topicIdentifier
     */
@@ -72,7 +69,6 @@ class ApplePushNotificationCertificate extends Entity
     
     /**
     * Sets the topicIdentifier
-    * Topic Id.
     *
     * @param string $val The topicIdentifier
     *
@@ -86,7 +82,6 @@ class ApplePushNotificationCertificate extends Entity
     
     /**
     * Gets the lastModifiedDateTime
-    * Last modified date and time for Apple push notification certificate.
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -105,7 +100,6 @@ class ApplePushNotificationCertificate extends Entity
     
     /**
     * Sets the lastModifiedDateTime
-    * Last modified date and time for Apple push notification certificate.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -119,7 +113,6 @@ class ApplePushNotificationCertificate extends Entity
     
     /**
     * Gets the expirationDateTime
-    * The expiration date and time for Apple push notification certificate.
     *
     * @return \DateTime The expirationDateTime
     */
@@ -138,7 +131,6 @@ class ApplePushNotificationCertificate extends Entity
     
     /**
     * Sets the expirationDateTime
-    * The expiration date and time for Apple push notification certificate.
     *
     * @param \DateTime $val The expirationDateTime
     *
@@ -152,7 +144,6 @@ class ApplePushNotificationCertificate extends Entity
     
     /**
     * Gets the certificate
-    * Not yet documented
     *
     * @return string The certificate
     */
@@ -167,7 +158,6 @@ class ApplePushNotificationCertificate extends Entity
     
     /**
     * Sets the certificate
-    * Not yet documented
     *
     * @param string $val The certificate
     *

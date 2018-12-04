@@ -28,7 +28,6 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
 {
     /**
     * Gets the assetTagTemplate
-    * Asset tag information for the device, displayed on the login window and lock screen.
     *
     * @return string The assetTagTemplate
     */
@@ -43,7 +42,6 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     
     /**
     * Sets the assetTagTemplate
-    * Asset tag information for the device, displayed on the login window and lock screen.
     *
     * @param string $val The assetTagTemplate
     *
@@ -57,7 +55,6 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     
     /**
     * Gets the lockScreenFootnote
-    * A footnote displayed on the login window and lock screen. Available in iOS 9.3.1 and later.
     *
     * @return string The lockScreenFootnote
     */
@@ -72,7 +69,6 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     
     /**
     * Sets the lockScreenFootnote
-    * A footnote displayed on the login window and lock screen. Available in iOS 9.3.1 and later.
     *
     * @param string $val The lockScreenFootnote
     *
@@ -87,7 +83,6 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
 
      /** 
      * Gets the homeScreenDockIcons
-    * A list of app and folders to appear on the Home Screen Dock. This collection can contain a maximum of 500 elements.
      *
      * @return array The homeScreenDockIcons
      */
@@ -102,7 +97,6 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     
     /** 
     * Sets the homeScreenDockIcons
-    * A list of app and folders to appear on the Home Screen Dock. This collection can contain a maximum of 500 elements.
     *
     * @param IosHomeScreenItem $val The homeScreenDockIcons
     *
@@ -117,7 +111,6 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
 
      /** 
      * Gets the homeScreenPages
-    * A list of pages on the Home Screen. This collection can contain a maximum of 500 elements.
      *
      * @return array The homeScreenPages
      */
@@ -132,7 +125,6 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     
     /** 
     * Sets the homeScreenPages
-    * A list of pages on the Home Screen. This collection can contain a maximum of 500 elements.
     *
     * @param IosHomeScreenPage $val The homeScreenPages
     *
@@ -147,7 +139,6 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
 
      /** 
      * Gets the notificationSettings
-    * Notification settings for each bundle id. Applicable to devices in supervised mode only (iOS 9.3 and later). This collection can contain a maximum of 500 elements.
      *
      * @return array The notificationSettings
      */
@@ -162,7 +153,6 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     
     /** 
     * Sets the notificationSettings
-    * Notification settings for each bundle id. Applicable to devices in supervised mode only (iOS 9.3 and later). This collection can contain a maximum of 500 elements.
     *
     * @param IosNotificationSettings $val The notificationSettings
     *

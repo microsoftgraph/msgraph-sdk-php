@@ -28,7 +28,6 @@ class ManagedAppPolicyDeploymentSummary extends Entity
 {
     /**
     * Gets the displayName
-    * Not yet documented
     *
     * @return string The displayName
     */
@@ -43,7 +42,6 @@ class ManagedAppPolicyDeploymentSummary extends Entity
     
     /**
     * Sets the displayName
-    * Not yet documented
     *
     * @param string $val The displayName
     *
@@ -57,7 +55,6 @@ class ManagedAppPolicyDeploymentSummary extends Entity
     
     /**
     * Gets the configurationDeployedUserCount
-    * Not yet documented
     *
     * @return int The configurationDeployedUserCount
     */
@@ -72,7 +69,6 @@ class ManagedAppPolicyDeploymentSummary extends Entity
     
     /**
     * Sets the configurationDeployedUserCount
-    * Not yet documented
     *
     * @param int $val The configurationDeployedUserCount
     *
@@ -86,7 +82,6 @@ class ManagedAppPolicyDeploymentSummary extends Entity
     
     /**
     * Gets the lastRefreshTime
-    * Not yet documented
     *
     * @return \DateTime The lastRefreshTime
     */
@@ -105,7 +100,6 @@ class ManagedAppPolicyDeploymentSummary extends Entity
     
     /**
     * Sets the lastRefreshTime
-    * Not yet documented
     *
     * @param \DateTime $val The lastRefreshTime
     *
@@ -120,7 +114,6 @@ class ManagedAppPolicyDeploymentSummary extends Entity
 
      /** 
      * Gets the configurationDeploymentSummaryPerApp
-    * Not yet documented
      *
      * @return array The configurationDeploymentSummaryPerApp
      */
@@ -135,7 +128,6 @@ class ManagedAppPolicyDeploymentSummary extends Entity
     
     /** 
     * Sets the configurationDeploymentSummaryPerApp
-    * Not yet documented
     *
     * @param ManagedAppPolicyDeploymentSummaryPerApp $val The configurationDeploymentSummaryPerApp
     *
@@ -149,7 +141,6 @@ class ManagedAppPolicyDeploymentSummary extends Entity
     
     /**
     * Gets the version
-    * Version of the entity.
     *
     * @return string The version
     */
@@ -164,7 +155,6 @@ class ManagedAppPolicyDeploymentSummary extends Entity
     
     /**
     * Sets the version
-    * Version of the entity.
     *
     * @param string $val The version
     *

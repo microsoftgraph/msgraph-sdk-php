@@ -28,7 +28,6 @@ class TelecomExpenseManagementPartner extends Entity
 {
     /**
     * Gets the displayName
-    * Display name of the TEM partner.
     *
     * @return string The displayName
     */
@@ -43,7 +42,6 @@ class TelecomExpenseManagementPartner extends Entity
     
     /**
     * Sets the displayName
-    * Display name of the TEM partner.
     *
     * @param string $val The displayName
     *
@@ -57,7 +55,6 @@ class TelecomExpenseManagementPartner extends Entity
     
     /**
     * Gets the url
-    * URL of the TEM partner's administrative control panel, where an administrator can configure their TEM service.
     *
     * @return string The url
     */
@@ -72,7 +69,6 @@ class TelecomExpenseManagementPartner extends Entity
     
     /**
     * Sets the url
-    * URL of the TEM partner's administrative control panel, where an administrator can configure their TEM service.
     *
     * @param string $val The url
     *
@@ -86,7 +82,6 @@ class TelecomExpenseManagementPartner extends Entity
     
     /**
     * Gets the appAuthorized
-    * Whether the partner's AAD app has been authorized to access Intune.
     *
     * @return bool The appAuthorized
     */
@@ -101,7 +96,6 @@ class TelecomExpenseManagementPartner extends Entity
     
     /**
     * Sets the appAuthorized
-    * Whether the partner's AAD app has been authorized to access Intune.
     *
     * @param bool $val The appAuthorized
     *
@@ -115,7 +109,6 @@ class TelecomExpenseManagementPartner extends Entity
     
     /**
     * Gets the enabled
-    * Whether Intune's connection to the TEM service is currently enabled or disabled.
     *
     * @return bool The enabled
     */
@@ -130,7 +123,6 @@ class TelecomExpenseManagementPartner extends Entity
     
     /**
     * Sets the enabled
-    * Whether Intune's connection to the TEM service is currently enabled or disabled.
     *
     * @param bool $val The enabled
     *
@@ -144,7 +136,6 @@ class TelecomExpenseManagementPartner extends Entity
     
     /**
     * Gets the lastConnectionDateTime
-    * Timestamp of the last request sent to Intune by the TEM partner.
     *
     * @return \DateTime The lastConnectionDateTime
     */
@@ -163,7 +154,6 @@ class TelecomExpenseManagementPartner extends Entity
     
     /**
     * Sets the lastConnectionDateTime
-    * Timestamp of the last request sent to Intune by the TEM partner.
     *
     * @param \DateTime $val The lastConnectionDateTime
     *

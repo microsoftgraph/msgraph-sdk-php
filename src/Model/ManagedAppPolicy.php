@@ -28,7 +28,6 @@ class ManagedAppPolicy extends Entity
 {
     /**
     * Gets the displayName
-    * Policy display name.
     *
     * @return string The displayName
     */
@@ -43,7 +42,6 @@ class ManagedAppPolicy extends Entity
     
     /**
     * Sets the displayName
-    * Policy display name.
     *
     * @param string $val The displayName
     *
@@ -57,7 +55,6 @@ class ManagedAppPolicy extends Entity
     
     /**
     * Gets the description
-    * The policy's description.
     *
     * @return string The description
     */
@@ -72,7 +69,6 @@ class ManagedAppPolicy extends Entity
     
     /**
     * Sets the description
-    * The policy's description.
     *
     * @param string $val The description
     *
@@ -86,7 +82,6 @@ class ManagedAppPolicy extends Entity
     
     /**
     * Gets the createdDateTime
-    * The date and time the policy was created.
     *
     * @return \DateTime The createdDateTime
     */
@@ -105,7 +100,6 @@ class ManagedAppPolicy extends Entity
     
     /**
     * Sets the createdDateTime
-    * The date and time the policy was created.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -119,7 +113,6 @@ class ManagedAppPolicy extends Entity
     
     /**
     * Gets the lastModifiedDateTime
-    * Last time the policy was modified.
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -138,7 +131,6 @@ class ManagedAppPolicy extends Entity
     
     /**
     * Sets the lastModifiedDateTime
-    * Last time the policy was modified.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -152,7 +144,6 @@ class ManagedAppPolicy extends Entity
     
     /**
     * Gets the version
-    * Version of the entity.
     *
     * @return string The version
     */
@@ -167,7 +158,6 @@ class ManagedAppPolicy extends Entity
     
     /**
     * Sets the version
-    * Version of the entity.
     *
     * @param string $val The version
     *

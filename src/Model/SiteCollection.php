@@ -27,7 +27,6 @@ class SiteCollection extends Entity
 {
     /**
     * Gets the hostname
-    * The hostname for the site collection. Read-only.
     *
     * @return string The hostname
     */
@@ -42,7 +41,6 @@ class SiteCollection extends Entity
 
     /**
     * Sets the hostname
-    * The hostname for the site collection. Read-only.
     *
     * @param string $val The value of the hostname
     *
@@ -56,7 +54,6 @@ class SiteCollection extends Entity
 
     /**
     * Gets the root
-    * If present, indicates that this is a root site collection in SharePoint. Read-only.
     *
     * @return Root The root
     */
@@ -75,7 +72,6 @@ class SiteCollection extends Entity
 
     /**
     * Sets the root
-    * If present, indicates that this is a root site collection in SharePoint. Read-only.
     *
     * @param Root $val The value to assign to the root
     *

@@ -29,7 +29,6 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
 
      /** 
      * Gets the compliantAppsList
-    * List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
      *
      * @return array The compliantAppsList
      */
@@ -44,7 +43,6 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /** 
     * Sets the compliantAppsList
-    * List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
     *
     * @param AppListItem $val The compliantAppsList
     *
@@ -58,7 +56,6 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the compliantAppListType
-    * List that is in the CompliantAppsList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
     *
     * @return AppListType The compliantAppListType
     */
@@ -77,7 +74,6 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the compliantAppListType
-    * List that is in the CompliantAppsList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
     *
     * @param AppListType $val The compliantAppListType
     *
@@ -91,7 +87,6 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the emailInDomainSuffixes
-    * An email address lacking a suffix that matches any of these strings will be considered out-of-domain.
     *
     * @return string The emailInDomainSuffixes
     */
@@ -106,7 +101,6 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the emailInDomainSuffixes
-    * An email address lacking a suffix that matches any of these strings will be considered out-of-domain.
     *
     * @param string $val The emailInDomainSuffixes
     *
@@ -120,7 +114,6 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordBlockSimple
-    * Block simple passwords.
     *
     * @return bool The passwordBlockSimple
     */
@@ -135,7 +128,6 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordBlockSimple
-    * Block simple passwords.
     *
     * @param bool $val The passwordBlockSimple
     *
@@ -149,7 +141,6 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordExpirationDays
-    * Number of days before the password expires.
     *
     * @return int The passwordExpirationDays
     */
@@ -164,7 +155,6 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordExpirationDays
-    * Number of days before the password expires.
     *
     * @param int $val The passwordExpirationDays
     *
@@ -178,7 +168,6 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordMinimumCharacterSetCount
-    * Number of character sets a password must contain. Valid values 0 to 4
     *
     * @return int The passwordMinimumCharacterSetCount
     */
@@ -193,7 +182,6 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordMinimumCharacterSetCount
-    * Number of character sets a password must contain. Valid values 0 to 4
     *
     * @param int $val The passwordMinimumCharacterSetCount
     *
@@ -207,7 +195,6 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordMinimumLength
-    * Minimum length of passwords.
     *
     * @return int The passwordMinimumLength
     */
@@ -222,7 +209,6 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordMinimumLength
-    * Minimum length of passwords.
     *
     * @param int $val The passwordMinimumLength
     *
@@ -236,7 +222,6 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordMinutesOfInactivityBeforeLock
-    * Minutes of inactivity required before a password is required.
     *
     * @return int The passwordMinutesOfInactivityBeforeLock
     */
@@ -251,7 +236,6 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordMinutesOfInactivityBeforeLock
-    * Minutes of inactivity required before a password is required.
     *
     * @param int $val The passwordMinutesOfInactivityBeforeLock
     *
@@ -265,7 +249,6 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordMinutesOfInactivityBeforeScreenTimeout
-    * Minutes of inactivity required before the screen times out.
     *
     * @return int The passwordMinutesOfInactivityBeforeScreenTimeout
     */
@@ -280,7 +263,6 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordMinutesOfInactivityBeforeScreenTimeout
-    * Minutes of inactivity required before the screen times out.
     *
     * @param int $val The passwordMinutesOfInactivityBeforeScreenTimeout
     *
@@ -294,7 +276,6 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordPreviousPasswordBlockCount
-    * Number of previous passwords to block.
     *
     * @return int The passwordPreviousPasswordBlockCount
     */
@@ -309,7 +290,6 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordPreviousPasswordBlockCount
-    * Number of previous passwords to block.
     *
     * @param int $val The passwordPreviousPasswordBlockCount
     *
@@ -323,7 +303,6 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordRequiredType
-    * Type of password that is required. Possible values are: deviceDefault, alphanumeric, numeric.
     *
     * @return RequiredPasswordType The passwordRequiredType
     */
@@ -342,7 +321,6 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordRequiredType
-    * Type of password that is required. Possible values are: deviceDefault, alphanumeric, numeric.
     *
     * @param RequiredPasswordType $val The passwordRequiredType
     *
@@ -356,7 +334,6 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordRequired
-    * Whether or not to require a password.
     *
     * @return bool The passwordRequired
     */
@@ -371,7 +348,6 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordRequired
-    * Whether or not to require a password.
     *
     * @param bool $val The passwordRequired
     *

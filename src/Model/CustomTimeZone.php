@@ -27,7 +27,6 @@ class CustomTimeZone extends TimeZoneBase
 {
     /**
     * Gets the bias
-    * The time offset of the time zone from Coordinated Universal Time (UTC). This value is in minutes. Time zones that are ahead of UTC have a positive offset; time zones that are behind UTC have a negative offset.
     *
     * @return int The bias
     */
@@ -42,7 +41,6 @@ class CustomTimeZone extends TimeZoneBase
 
     /**
     * Sets the bias
-    * The time offset of the time zone from Coordinated Universal Time (UTC). This value is in minutes. Time zones that are ahead of UTC have a positive offset; time zones that are behind UTC have a negative offset.
     *
     * @param int $val The value of the bias
     *
@@ -56,7 +54,6 @@ class CustomTimeZone extends TimeZoneBase
 
     /**
     * Gets the standardOffset
-    * Specifies when the time zone switches from daylight saving time to standard time.
     *
     * @return StandardTimeZoneOffset The standardOffset
     */
@@ -75,7 +72,6 @@ class CustomTimeZone extends TimeZoneBase
 
     /**
     * Sets the standardOffset
-    * Specifies when the time zone switches from daylight saving time to standard time.
     *
     * @param StandardTimeZoneOffset $val The value to assign to the standardOffset
     *
@@ -89,7 +85,6 @@ class CustomTimeZone extends TimeZoneBase
 
     /**
     * Gets the daylightOffset
-    * Specifies when the time zone switches from standard time to daylight saving time.
     *
     * @return DaylightTimeZoneOffset The daylightOffset
     */
@@ -108,7 +103,6 @@ class CustomTimeZone extends TimeZoneBase
 
     /**
     * Sets the daylightOffset
-    * Specifies when the time zone switches from standard time to daylight saving time.
     *
     * @param DaylightTimeZoneOffset $val The value to assign to the daylightOffset
     *

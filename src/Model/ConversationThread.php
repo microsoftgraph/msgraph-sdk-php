@@ -29,7 +29,6 @@ class ConversationThread extends Entity
 
      /** 
      * Gets the toRecipients
-    * The To: recipients for the thread.
      *
      * @return array The toRecipients
      */
@@ -44,7 +43,6 @@ class ConversationThread extends Entity
     
     /** 
     * Sets the toRecipients
-    * The To: recipients for the thread.
     *
     * @param Recipient $val The toRecipients
     *
@@ -58,7 +56,6 @@ class ConversationThread extends Entity
     
     /**
     * Gets the topic
-    * The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated.
     *
     * @return string The topic
     */
@@ -73,7 +70,6 @@ class ConversationThread extends Entity
     
     /**
     * Sets the topic
-    * The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated.
     *
     * @param string $val The topic
     *
@@ -87,7 +83,6 @@ class ConversationThread extends Entity
     
     /**
     * Gets the hasAttachments
-    * Indicates whether any of the posts within this thread has at least one attachment.
     *
     * @return bool The hasAttachments
     */
@@ -102,7 +97,6 @@ class ConversationThread extends Entity
     
     /**
     * Sets the hasAttachments
-    * Indicates whether any of the posts within this thread has at least one attachment.
     *
     * @param bool $val The hasAttachments
     *
@@ -116,7 +110,6 @@ class ConversationThread extends Entity
     
     /**
     * Gets the lastDeliveredDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The lastDeliveredDateTime
     */
@@ -135,7 +128,6 @@ class ConversationThread extends Entity
     
     /**
     * Sets the lastDeliveredDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The lastDeliveredDateTime
     *
@@ -149,7 +141,6 @@ class ConversationThread extends Entity
     
     /**
     * Gets the uniqueSenders
-    * All the users that sent a message to this thread.
     *
     * @return string The uniqueSenders
     */
@@ -164,7 +155,6 @@ class ConversationThread extends Entity
     
     /**
     * Sets the uniqueSenders
-    * All the users that sent a message to this thread.
     *
     * @param string $val The uniqueSenders
     *
@@ -179,7 +169,6 @@ class ConversationThread extends Entity
 
      /** 
      * Gets the ccRecipients
-    * The Cc: recipients for the thread.
      *
      * @return array The ccRecipients
      */
@@ -194,7 +183,6 @@ class ConversationThread extends Entity
     
     /** 
     * Sets the ccRecipients
-    * The Cc: recipients for the thread.
     *
     * @param Recipient $val The ccRecipients
     *
@@ -208,7 +196,6 @@ class ConversationThread extends Entity
     
     /**
     * Gets the preview
-    * A short summary from the body of the latest post in this converstaion.
     *
     * @return string The preview
     */
@@ -223,7 +210,6 @@ class ConversationThread extends Entity
     
     /**
     * Sets the preview
-    * A short summary from the body of the latest post in this converstaion.
     *
     * @param string $val The preview
     *
@@ -237,7 +223,6 @@ class ConversationThread extends Entity
     
     /**
     * Gets the isLocked
-    * Indicates if the thread is locked.
     *
     * @return bool The isLocked
     */
@@ -252,7 +237,6 @@ class ConversationThread extends Entity
     
     /**
     * Sets the isLocked
-    * Indicates if the thread is locked.
     *
     * @param bool $val The isLocked
     *
@@ -267,7 +251,6 @@ class ConversationThread extends Entity
 
      /** 
      * Gets the posts
-    * Read-only. Nullable.
      *
      * @return array The posts
      */
@@ -282,7 +265,6 @@ class ConversationThread extends Entity
     
     /** 
     * Sets the posts
-    * Read-only. Nullable.
     *
     * @param Post $val The posts
     *

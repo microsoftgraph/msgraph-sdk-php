@@ -28,7 +28,6 @@ class ManagedEBookAssignment extends Entity
 {
     /**
     * Gets the target
-    * The assignment target for eBook.
     *
     * @return DeviceAndAppManagementAssignmentTarget The target
     */
@@ -47,7 +46,6 @@ class ManagedEBookAssignment extends Entity
     
     /**
     * Sets the target
-    * The assignment target for eBook.
     *
     * @param DeviceAndAppManagementAssignmentTarget $val The target
     *
@@ -61,7 +59,6 @@ class ManagedEBookAssignment extends Entity
     
     /**
     * Gets the installIntent
-    * The install intent for eBook. Possible values are: available, required, uninstall, availableWithoutEnrollment.
     *
     * @return InstallIntent The installIntent
     */
@@ -80,7 +77,6 @@ class ManagedEBookAssignment extends Entity
     
     /**
     * Sets the installIntent
-    * The install intent for eBook. Possible values are: available, required, uninstall, availableWithoutEnrollment.
     *
     * @param InstallIntent $val The installIntent
     *

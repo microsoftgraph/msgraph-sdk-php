@@ -28,7 +28,6 @@ class DeviceComplianceActionItem extends Entity
 {
     /**
     * Gets the gracePeriodHours
-    * Number of hours to wait till the action will be enforced. Valid values 0 to 8760
     *
     * @return int The gracePeriodHours
     */
@@ -43,7 +42,6 @@ class DeviceComplianceActionItem extends Entity
     
     /**
     * Sets the gracePeriodHours
-    * Number of hours to wait till the action will be enforced. Valid values 0 to 8760
     *
     * @param int $val The gracePeriodHours
     *
@@ -57,7 +55,6 @@ class DeviceComplianceActionItem extends Entity
     
     /**
     * Gets the actionType
-    * What action to take. Possible values are: noAction, notification, block, retire, wipe, removeResourceAccessProfiles.
     *
     * @return DeviceComplianceActionType The actionType
     */
@@ -76,7 +73,6 @@ class DeviceComplianceActionItem extends Entity
     
     /**
     * Sets the actionType
-    * What action to take. Possible values are: noAction, notification, block, retire, wipe, removeResourceAccessProfiles.
     *
     * @param DeviceComplianceActionType $val The actionType
     *
@@ -90,7 +86,6 @@ class DeviceComplianceActionItem extends Entity
     
     /**
     * Gets the notificationTemplateId
-    * What notification Message template to use
     *
     * @return string The notificationTemplateId
     */
@@ -105,7 +100,6 @@ class DeviceComplianceActionItem extends Entity
     
     /**
     * Sets the notificationTemplateId
-    * What notification Message template to use
     *
     * @param string $val The notificationTemplateId
     *
@@ -119,7 +113,6 @@ class DeviceComplianceActionItem extends Entity
     
     /**
     * Gets the notificationMessageCCList
-    * A list of group IDs to speicify who to CC this notification message to.
     *
     * @return string The notificationMessageCCList
     */
@@ -134,7 +127,6 @@ class DeviceComplianceActionItem extends Entity
     
     /**
     * Sets the notificationMessageCCList
-    * A list of group IDs to speicify who to CC this notification message to.
     *
     * @param string $val The notificationMessageCCList
     *

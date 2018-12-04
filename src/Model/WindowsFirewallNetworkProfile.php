@@ -28,7 +28,6 @@ class WindowsFirewallNetworkProfile extends Entity
 
     /**
     * Gets the firewallEnabled
-    * Turn on the firewall and advanced security enforcement. Possible values are: notConfigured, blocked, allowed.
     *
     * @return StateManagementSetting The firewallEnabled
     */
@@ -47,7 +46,6 @@ class WindowsFirewallNetworkProfile extends Entity
 
     /**
     * Sets the firewallEnabled
-    * Turn on the firewall and advanced security enforcement. Possible values are: notConfigured, blocked, allowed.
     *
     * @param StateManagementSetting $val The value to assign to the firewallEnabled
     *
@@ -60,7 +58,6 @@ class WindowsFirewallNetworkProfile extends Entity
     }
     /**
     * Gets the stealthModeBlocked
-    * Prevent the server from operating in stealth mode
     *
     * @return bool The stealthModeBlocked
     */
@@ -75,7 +72,6 @@ class WindowsFirewallNetworkProfile extends Entity
 
     /**
     * Sets the stealthModeBlocked
-    * Prevent the server from operating in stealth mode
     *
     * @param bool $val The value of the stealthModeBlocked
     *
@@ -88,7 +84,6 @@ class WindowsFirewallNetworkProfile extends Entity
     }
     /**
     * Gets the incomingTrafficBlocked
-    * Configures the firewall to block all incoming traffic regardless of other policy settings
     *
     * @return bool The incomingTrafficBlocked
     */
@@ -103,7 +98,6 @@ class WindowsFirewallNetworkProfile extends Entity
 
     /**
     * Sets the incomingTrafficBlocked
-    * Configures the firewall to block all incoming traffic regardless of other policy settings
     *
     * @param bool $val The value of the incomingTrafficBlocked
     *
@@ -116,7 +110,6 @@ class WindowsFirewallNetworkProfile extends Entity
     }
     /**
     * Gets the unicastResponsesToMulticastBroadcastsBlocked
-    * Configures the firewall to block unicast responses to multicast broadcast traffic
     *
     * @return bool The unicastResponsesToMulticastBroadcastsBlocked
     */
@@ -131,7 +124,6 @@ class WindowsFirewallNetworkProfile extends Entity
 
     /**
     * Sets the unicastResponsesToMulticastBroadcastsBlocked
-    * Configures the firewall to block unicast responses to multicast broadcast traffic
     *
     * @param bool $val The value of the unicastResponsesToMulticastBroadcastsBlocked
     *
@@ -144,7 +136,6 @@ class WindowsFirewallNetworkProfile extends Entity
     }
     /**
     * Gets the inboundNotificationsBlocked
-    * Prevents the firewall from displaying notifications when an application is blocked from listening on a port
     *
     * @return bool The inboundNotificationsBlocked
     */
@@ -159,7 +150,6 @@ class WindowsFirewallNetworkProfile extends Entity
 
     /**
     * Sets the inboundNotificationsBlocked
-    * Prevents the firewall from displaying notifications when an application is blocked from listening on a port
     *
     * @param bool $val The value of the inboundNotificationsBlocked
     *
@@ -172,7 +162,6 @@ class WindowsFirewallNetworkProfile extends Entity
     }
     /**
     * Gets the authorizedApplicationRulesFromGroupPolicyMerged
-    * Configures the firewall to merge authorized application rules from group policy with those from local store instead of ignoring the local store rules
     *
     * @return bool The authorizedApplicationRulesFromGroupPolicyMerged
     */
@@ -187,7 +176,6 @@ class WindowsFirewallNetworkProfile extends Entity
 
     /**
     * Sets the authorizedApplicationRulesFromGroupPolicyMerged
-    * Configures the firewall to merge authorized application rules from group policy with those from local store instead of ignoring the local store rules
     *
     * @param bool $val The value of the authorizedApplicationRulesFromGroupPolicyMerged
     *
@@ -200,7 +188,6 @@ class WindowsFirewallNetworkProfile extends Entity
     }
     /**
     * Gets the globalPortRulesFromGroupPolicyMerged
-    * Configures the firewall to merge global port rules from group policy with those from local store instead of ignoring the local store rules
     *
     * @return bool The globalPortRulesFromGroupPolicyMerged
     */
@@ -215,7 +202,6 @@ class WindowsFirewallNetworkProfile extends Entity
 
     /**
     * Sets the globalPortRulesFromGroupPolicyMerged
-    * Configures the firewall to merge global port rules from group policy with those from local store instead of ignoring the local store rules
     *
     * @param bool $val The value of the globalPortRulesFromGroupPolicyMerged
     *
@@ -228,7 +214,6 @@ class WindowsFirewallNetworkProfile extends Entity
     }
     /**
     * Gets the connectionSecurityRulesFromGroupPolicyMerged
-    * Configures the firewall to merge connection security rules from group policy with those from local store instead of ignoring the local store rules
     *
     * @return bool The connectionSecurityRulesFromGroupPolicyMerged
     */
@@ -243,7 +228,6 @@ class WindowsFirewallNetworkProfile extends Entity
 
     /**
     * Sets the connectionSecurityRulesFromGroupPolicyMerged
-    * Configures the firewall to merge connection security rules from group policy with those from local store instead of ignoring the local store rules
     *
     * @param bool $val The value of the connectionSecurityRulesFromGroupPolicyMerged
     *
@@ -256,7 +240,6 @@ class WindowsFirewallNetworkProfile extends Entity
     }
     /**
     * Gets the outboundConnectionsBlocked
-    * Configures the firewall to block all outgoing connections by default
     *
     * @return bool The outboundConnectionsBlocked
     */
@@ -271,7 +254,6 @@ class WindowsFirewallNetworkProfile extends Entity
 
     /**
     * Sets the outboundConnectionsBlocked
-    * Configures the firewall to block all outgoing connections by default
     *
     * @param bool $val The value of the outboundConnectionsBlocked
     *
@@ -284,7 +266,6 @@ class WindowsFirewallNetworkProfile extends Entity
     }
     /**
     * Gets the inboundConnectionsBlocked
-    * Configures the firewall to block all incoming connections by default
     *
     * @return bool The inboundConnectionsBlocked
     */
@@ -299,7 +280,6 @@ class WindowsFirewallNetworkProfile extends Entity
 
     /**
     * Sets the inboundConnectionsBlocked
-    * Configures the firewall to block all incoming connections by default
     *
     * @param bool $val The value of the inboundConnectionsBlocked
     *
@@ -312,7 +292,6 @@ class WindowsFirewallNetworkProfile extends Entity
     }
     /**
     * Gets the securedPacketExemptionAllowed
-    * Configures the firewall to allow the host computer to respond to unsolicited network traffic of that traffic is secured by IPSec even when stealthModeBlocked is set to true
     *
     * @return bool The securedPacketExemptionAllowed
     */
@@ -327,7 +306,6 @@ class WindowsFirewallNetworkProfile extends Entity
 
     /**
     * Sets the securedPacketExemptionAllowed
-    * Configures the firewall to allow the host computer to respond to unsolicited network traffic of that traffic is secured by IPSec even when stealthModeBlocked is set to true
     *
     * @param bool $val The value of the securedPacketExemptionAllowed
     *
@@ -340,7 +318,6 @@ class WindowsFirewallNetworkProfile extends Entity
     }
     /**
     * Gets the policyRulesFromGroupPolicyMerged
-    * Configures the firewall to merge Firewall Rule policies from group policy with those from local store instead of ignoring the local store rules
     *
     * @return bool The policyRulesFromGroupPolicyMerged
     */
@@ -355,7 +332,6 @@ class WindowsFirewallNetworkProfile extends Entity
 
     /**
     * Sets the policyRulesFromGroupPolicyMerged
-    * Configures the firewall to merge Firewall Rule policies from group policy with those from local store instead of ignoring the local store rules
     *
     * @param bool $val The value of the policyRulesFromGroupPolicyMerged
     *

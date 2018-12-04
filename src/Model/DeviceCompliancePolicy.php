@@ -28,7 +28,6 @@ class DeviceCompliancePolicy extends Entity
 {
     /**
     * Gets the createdDateTime
-    * DateTime the object was created.
     *
     * @return \DateTime The createdDateTime
     */
@@ -47,7 +46,6 @@ class DeviceCompliancePolicy extends Entity
     
     /**
     * Sets the createdDateTime
-    * DateTime the object was created.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -61,7 +59,6 @@ class DeviceCompliancePolicy extends Entity
     
     /**
     * Gets the description
-    * Admin provided description of the Device Configuration.
     *
     * @return string The description
     */
@@ -76,7 +73,6 @@ class DeviceCompliancePolicy extends Entity
     
     /**
     * Sets the description
-    * Admin provided description of the Device Configuration.
     *
     * @param string $val The description
     *
@@ -90,7 +86,6 @@ class DeviceCompliancePolicy extends Entity
     
     /**
     * Gets the lastModifiedDateTime
-    * DateTime the object was last modified.
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -109,7 +104,6 @@ class DeviceCompliancePolicy extends Entity
     
     /**
     * Sets the lastModifiedDateTime
-    * DateTime the object was last modified.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -123,7 +117,6 @@ class DeviceCompliancePolicy extends Entity
     
     /**
     * Gets the displayName
-    * Admin provided name of the device configuration.
     *
     * @return string The displayName
     */
@@ -138,7 +131,6 @@ class DeviceCompliancePolicy extends Entity
     
     /**
     * Sets the displayName
-    * Admin provided name of the device configuration.
     *
     * @param string $val The displayName
     *
@@ -152,7 +144,6 @@ class DeviceCompliancePolicy extends Entity
     
     /**
     * Gets the version
-    * Version of the device configuration.
     *
     * @return int The version
     */
@@ -167,7 +158,6 @@ class DeviceCompliancePolicy extends Entity
     
     /**
     * Sets the version
-    * Version of the device configuration.
     *
     * @param int $val The version
     *
@@ -182,7 +172,6 @@ class DeviceCompliancePolicy extends Entity
 
      /** 
      * Gets the scheduledActionsForRule
-    * The list of scheduled action for this rule
      *
      * @return array The scheduledActionsForRule
      */
@@ -197,7 +186,6 @@ class DeviceCompliancePolicy extends Entity
     
     /** 
     * Sets the scheduledActionsForRule
-    * The list of scheduled action for this rule
     *
     * @param DeviceComplianceScheduledActionForRule $val The scheduledActionsForRule
     *
@@ -212,7 +200,6 @@ class DeviceCompliancePolicy extends Entity
 
      /** 
      * Gets the deviceStatuses
-    * List of DeviceComplianceDeviceStatus.
      *
      * @return array The deviceStatuses
      */
@@ -227,7 +214,6 @@ class DeviceCompliancePolicy extends Entity
     
     /** 
     * Sets the deviceStatuses
-    * List of DeviceComplianceDeviceStatus.
     *
     * @param DeviceComplianceDeviceStatus $val The deviceStatuses
     *
@@ -242,7 +228,6 @@ class DeviceCompliancePolicy extends Entity
 
      /** 
      * Gets the userStatuses
-    * List of DeviceComplianceUserStatus.
      *
      * @return array The userStatuses
      */
@@ -257,7 +242,6 @@ class DeviceCompliancePolicy extends Entity
     
     /** 
     * Sets the userStatuses
-    * List of DeviceComplianceUserStatus.
     *
     * @param DeviceComplianceUserStatus $val The userStatuses
     *
@@ -271,7 +255,6 @@ class DeviceCompliancePolicy extends Entity
     
     /**
     * Gets the deviceStatusOverview
-    * Device compliance devices status overview
     *
     * @return DeviceComplianceDeviceOverview The deviceStatusOverview
     */
@@ -290,7 +273,6 @@ class DeviceCompliancePolicy extends Entity
     
     /**
     * Sets the deviceStatusOverview
-    * Device compliance devices status overview
     *
     * @param DeviceComplianceDeviceOverview $val The deviceStatusOverview
     *
@@ -304,7 +286,6 @@ class DeviceCompliancePolicy extends Entity
     
     /**
     * Gets the userStatusOverview
-    * Device compliance users status overview
     *
     * @return DeviceComplianceUserOverview The userStatusOverview
     */
@@ -323,7 +304,6 @@ class DeviceCompliancePolicy extends Entity
     
     /**
     * Sets the userStatusOverview
-    * Device compliance users status overview
     *
     * @param DeviceComplianceUserOverview $val The userStatusOverview
     *
@@ -338,7 +318,6 @@ class DeviceCompliancePolicy extends Entity
 
      /** 
      * Gets the deviceSettingStateSummaries
-    * Compliance Setting State Device Summary
      *
      * @return array The deviceSettingStateSummaries
      */
@@ -353,7 +332,6 @@ class DeviceCompliancePolicy extends Entity
     
     /** 
     * Sets the deviceSettingStateSummaries
-    * Compliance Setting State Device Summary
     *
     * @param SettingStateDeviceSummary $val The deviceSettingStateSummaries
     *
@@ -368,7 +346,6 @@ class DeviceCompliancePolicy extends Entity
 
      /** 
      * Gets the assignments
-    * The collection of assignments for this compliance policy.
      *
      * @return array The assignments
      */
@@ -383,7 +360,6 @@ class DeviceCompliancePolicy extends Entity
     
     /** 
     * Sets the assignments
-    * The collection of assignments for this compliance policy.
     *
     * @param DeviceCompliancePolicyAssignment $val The assignments
     *

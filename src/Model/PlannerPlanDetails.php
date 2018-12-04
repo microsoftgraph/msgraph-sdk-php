@@ -28,7 +28,6 @@ class PlannerPlanDetails extends Entity
 {
     /**
     * Gets the sharedWith
-    * Set of user ids that this plan is shared with. If you are leveraging Office 365 Groups, use the Groups API to manage group membership to share the group's plan. You can also add existing members of the group to this collection though it is not required for them to access the plan owned by the group.
     *
     * @return PlannerUserIds The sharedWith
     */
@@ -47,7 +46,6 @@ class PlannerPlanDetails extends Entity
     
     /**
     * Sets the sharedWith
-    * Set of user ids that this plan is shared with. If you are leveraging Office 365 Groups, use the Groups API to manage group membership to share the group's plan. You can also add existing members of the group to this collection though it is not required for them to access the plan owned by the group.
     *
     * @param PlannerUserIds $val The sharedWith
     *
@@ -61,7 +59,6 @@ class PlannerPlanDetails extends Entity
     
     /**
     * Gets the categoryDescriptions
-    * An object that specifies the descriptions of the six categories that can be associated with tasks in the plan
     *
     * @return PlannerCategoryDescriptions The categoryDescriptions
     */
@@ -80,7 +77,6 @@ class PlannerPlanDetails extends Entity
     
     /**
     * Sets the categoryDescriptions
-    * An object that specifies the descriptions of the six categories that can be associated with tasks in the plan
     *
     * @param PlannerCategoryDescriptions $val The categoryDescriptions
     *

@@ -27,7 +27,6 @@ class WindowsMinimumOperatingSystem extends Entity
 {
     /**
     * Gets the v8_0
-    * Windows version 8.0 or later.
     *
     * @return bool The v8_0
     */
@@ -42,7 +41,6 @@ class WindowsMinimumOperatingSystem extends Entity
 
     /**
     * Sets the v8_0
-    * Windows version 8.0 or later.
     *
     * @param bool $val The value of the v8_0
     *
@@ -55,7 +53,6 @@ class WindowsMinimumOperatingSystem extends Entity
     }
     /**
     * Gets the v8_1
-    * Windows version 8.1 or later.
     *
     * @return bool The v8_1
     */
@@ -70,7 +67,6 @@ class WindowsMinimumOperatingSystem extends Entity
 
     /**
     * Sets the v8_1
-    * Windows version 8.1 or later.
     *
     * @param bool $val The value of the v8_1
     *
@@ -83,7 +79,6 @@ class WindowsMinimumOperatingSystem extends Entity
     }
     /**
     * Gets the v10_0
-    * Windows version 10.0 or later.
     *
     * @return bool The v10_0
     */
@@ -98,7 +93,6 @@ class WindowsMinimumOperatingSystem extends Entity
 
     /**
     * Sets the v10_0
-    * Windows version 10.0 or later.
     *
     * @param bool $val The value of the v10_0
     *

@@ -28,7 +28,6 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
 {
     /**
     * Gets the deliveryOptimizationMode
-    * Delivery Optimization Mode. Possible values are: userDefined, httpOnly, httpWithPeeringNat, httpWithPeeringPrivateGroup, httpWithInternetPeering, simpleDownload, bypassMode.
     *
     * @return WindowsDeliveryOptimizationMode The deliveryOptimizationMode
     */
@@ -47,7 +46,6 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     
     /**
     * Sets the deliveryOptimizationMode
-    * Delivery Optimization Mode. Possible values are: userDefined, httpOnly, httpWithPeeringNat, httpWithPeeringPrivateGroup, httpWithInternetPeering, simpleDownload, bypassMode.
     *
     * @param WindowsDeliveryOptimizationMode $val The deliveryOptimizationMode
     *
@@ -61,7 +59,6 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     
     /**
     * Gets the prereleaseFeatures
-    * The pre-release features. Possible values are: userDefined, settingsOnly, settingsAndExperimentations, notAllowed.
     *
     * @return PrereleaseFeatures The prereleaseFeatures
     */
@@ -80,7 +77,6 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     
     /**
     * Sets the prereleaseFeatures
-    * The pre-release features. Possible values are: userDefined, settingsOnly, settingsAndExperimentations, notAllowed.
     *
     * @param PrereleaseFeatures $val The prereleaseFeatures
     *
@@ -94,7 +90,6 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     
     /**
     * Gets the automaticUpdateMode
-    * Automatic update mode. Possible values are: userDefined, notifyDownload, autoInstallAtMaintenanceTime, autoInstallAndRebootAtMaintenanceTime, autoInstallAndRebootAtScheduledTime, autoInstallAndRebootWithoutEndUserControl.
     *
     * @return AutomaticUpdateMode The automaticUpdateMode
     */
@@ -113,7 +108,6 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     
     /**
     * Sets the automaticUpdateMode
-    * Automatic update mode. Possible values are: userDefined, notifyDownload, autoInstallAtMaintenanceTime, autoInstallAndRebootAtMaintenanceTime, autoInstallAndRebootAtScheduledTime, autoInstallAndRebootWithoutEndUserControl.
     *
     * @param AutomaticUpdateMode $val The automaticUpdateMode
     *
@@ -127,7 +121,6 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     
     /**
     * Gets the microsoftUpdateServiceAllowed
-    * Allow Microsoft Update Service
     *
     * @return bool The microsoftUpdateServiceAllowed
     */
@@ -142,7 +135,6 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     
     /**
     * Sets the microsoftUpdateServiceAllowed
-    * Allow Microsoft Update Service
     *
     * @param bool $val The microsoftUpdateServiceAllowed
     *
@@ -156,7 +148,6 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     
     /**
     * Gets the driversExcluded
-    * Exclude Windows update Drivers
     *
     * @return bool The driversExcluded
     */
@@ -171,7 +162,6 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     
     /**
     * Sets the driversExcluded
-    * Exclude Windows update Drivers
     *
     * @param bool $val The driversExcluded
     *
@@ -185,7 +175,6 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     
     /**
     * Gets the installationSchedule
-    * Installation schedule
     *
     * @return WindowsUpdateInstallScheduleType The installationSchedule
     */
@@ -204,7 +193,6 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     
     /**
     * Sets the installationSchedule
-    * Installation schedule
     *
     * @param WindowsUpdateInstallScheduleType $val The installationSchedule
     *
@@ -218,7 +206,6 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     
     /**
     * Gets the qualityUpdatesDeferralPeriodInDays
-    * Defer Quality Updates by these many days
     *
     * @return int The qualityUpdatesDeferralPeriodInDays
     */
@@ -233,7 +220,6 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     
     /**
     * Sets the qualityUpdatesDeferralPeriodInDays
-    * Defer Quality Updates by these many days
     *
     * @param int $val The qualityUpdatesDeferralPeriodInDays
     *
@@ -247,7 +233,6 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     
     /**
     * Gets the featureUpdatesDeferralPeriodInDays
-    * Defer Feature Updates by these many days
     *
     * @return int The featureUpdatesDeferralPeriodInDays
     */
@@ -262,7 +247,6 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     
     /**
     * Sets the featureUpdatesDeferralPeriodInDays
-    * Defer Feature Updates by these many days
     *
     * @param int $val The featureUpdatesDeferralPeriodInDays
     *
@@ -276,7 +260,6 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     
     /**
     * Gets the qualityUpdatesPaused
-    * Pause Quality Updates
     *
     * @return bool The qualityUpdatesPaused
     */
@@ -291,7 +274,6 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     
     /**
     * Sets the qualityUpdatesPaused
-    * Pause Quality Updates
     *
     * @param bool $val The qualityUpdatesPaused
     *
@@ -305,7 +287,6 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     
     /**
     * Gets the featureUpdatesPaused
-    * Pause Feature Updates
     *
     * @return bool The featureUpdatesPaused
     */
@@ -320,7 +301,6 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     
     /**
     * Sets the featureUpdatesPaused
-    * Pause Feature Updates
     *
     * @param bool $val The featureUpdatesPaused
     *
@@ -334,7 +314,6 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     
     /**
     * Gets the qualityUpdatesPauseExpiryDateTime
-    * Quality Updates Pause Expiry datetime
     *
     * @return \DateTime The qualityUpdatesPauseExpiryDateTime
     */
@@ -353,7 +332,6 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     
     /**
     * Sets the qualityUpdatesPauseExpiryDateTime
-    * Quality Updates Pause Expiry datetime
     *
     * @param \DateTime $val The qualityUpdatesPauseExpiryDateTime
     *
@@ -367,7 +345,6 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     
     /**
     * Gets the featureUpdatesPauseExpiryDateTime
-    * Feature Updates Pause Expiry datetime
     *
     * @return \DateTime The featureUpdatesPauseExpiryDateTime
     */
@@ -386,7 +363,6 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     
     /**
     * Sets the featureUpdatesPauseExpiryDateTime
-    * Feature Updates Pause Expiry datetime
     *
     * @param \DateTime $val The featureUpdatesPauseExpiryDateTime
     *
@@ -400,7 +376,6 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     
     /**
     * Gets the businessReadyUpdatesOnly
-    * Determines which branch devices will receive their updates from. Possible values are: userDefined, all, businessReadyOnly.
     *
     * @return WindowsUpdateType The businessReadyUpdatesOnly
     */
@@ -419,7 +394,6 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     
     /**
     * Sets the businessReadyUpdatesOnly
-    * Determines which branch devices will receive their updates from. Possible values are: userDefined, all, businessReadyOnly.
     *
     * @param WindowsUpdateType $val The businessReadyUpdatesOnly
     *

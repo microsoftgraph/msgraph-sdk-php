@@ -28,7 +28,6 @@ class BaseItemVersion extends Entity
 {
     /**
     * Gets the lastModifiedBy
-    * Identity of the user which last modified the version. Read-only.
     *
     * @return IdentitySet The lastModifiedBy
     */
@@ -47,7 +46,6 @@ class BaseItemVersion extends Entity
     
     /**
     * Sets the lastModifiedBy
-    * Identity of the user which last modified the version. Read-only.
     *
     * @param IdentitySet $val The lastModifiedBy
     *
@@ -61,7 +59,6 @@ class BaseItemVersion extends Entity
     
     /**
     * Gets the lastModifiedDateTime
-    * Date and time the version was last modified. Read-only.
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -80,7 +77,6 @@ class BaseItemVersion extends Entity
     
     /**
     * Sets the lastModifiedDateTime
-    * Date and time the version was last modified. Read-only.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -94,7 +90,6 @@ class BaseItemVersion extends Entity
     
     /**
     * Gets the publication
-    * Indicates the publication status of this particular version. Read-only.
     *
     * @return PublicationFacet The publication
     */
@@ -113,7 +108,6 @@ class BaseItemVersion extends Entity
     
     /**
     * Sets the publication
-    * Indicates the publication status of this particular version. Read-only.
     *
     * @param PublicationFacet $val The publication
     *

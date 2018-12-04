@@ -28,7 +28,6 @@ class UpdateWindowsDeviceAccountActionParameter extends Entity
 
     /**
     * Gets the deviceAccount
-    * Not yet documented
     *
     * @return WindowsDeviceAccount The deviceAccount
     */
@@ -47,7 +46,6 @@ class UpdateWindowsDeviceAccountActionParameter extends Entity
 
     /**
     * Sets the deviceAccount
-    * Not yet documented
     *
     * @param WindowsDeviceAccount $val The value to assign to the deviceAccount
     *
@@ -60,7 +58,6 @@ class UpdateWindowsDeviceAccountActionParameter extends Entity
     }
     /**
     * Gets the passwordRotationEnabled
-    * Not yet documented
     *
     * @return bool The passwordRotationEnabled
     */
@@ -75,7 +72,6 @@ class UpdateWindowsDeviceAccountActionParameter extends Entity
 
     /**
     * Sets the passwordRotationEnabled
-    * Not yet documented
     *
     * @param bool $val The value of the passwordRotationEnabled
     *
@@ -88,7 +84,6 @@ class UpdateWindowsDeviceAccountActionParameter extends Entity
     }
     /**
     * Gets the calendarSyncEnabled
-    * Not yet documented
     *
     * @return bool The calendarSyncEnabled
     */
@@ -103,7 +98,6 @@ class UpdateWindowsDeviceAccountActionParameter extends Entity
 
     /**
     * Sets the calendarSyncEnabled
-    * Not yet documented
     *
     * @param bool $val The value of the calendarSyncEnabled
     *
@@ -116,7 +110,6 @@ class UpdateWindowsDeviceAccountActionParameter extends Entity
     }
     /**
     * Gets the deviceAccountEmail
-    * Not yet documented
     *
     * @return string The deviceAccountEmail
     */
@@ -131,7 +124,6 @@ class UpdateWindowsDeviceAccountActionParameter extends Entity
 
     /**
     * Sets the deviceAccountEmail
-    * Not yet documented
     *
     * @param string $val The value of the deviceAccountEmail
     *
@@ -144,7 +136,6 @@ class UpdateWindowsDeviceAccountActionParameter extends Entity
     }
     /**
     * Gets the exchangeServer
-    * Not yet documented
     *
     * @return string The exchangeServer
     */
@@ -159,7 +150,6 @@ class UpdateWindowsDeviceAccountActionParameter extends Entity
 
     /**
     * Sets the exchangeServer
-    * Not yet documented
     *
     * @param string $val The value of the exchangeServer
     *
@@ -172,7 +162,6 @@ class UpdateWindowsDeviceAccountActionParameter extends Entity
     }
     /**
     * Gets the sessionInitiationProtocalAddress
-    * Not yet documented
     *
     * @return string The sessionInitiationProtocalAddress
     */
@@ -187,7 +176,6 @@ class UpdateWindowsDeviceAccountActionParameter extends Entity
 
     /**
     * Sets the sessionInitiationProtocalAddress
-    * Not yet documented
     *
     * @param string $val The value of the sessionInitiationProtocalAddress
     *

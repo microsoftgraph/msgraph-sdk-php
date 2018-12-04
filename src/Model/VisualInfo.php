@@ -28,7 +28,6 @@ class VisualInfo extends Entity
 
     /**
     * Gets the attribution
-    * Optional. JSON object used to represent an icon which represents the application used to generate the activity
     *
     * @return ImageInfo The attribution
     */
@@ -47,7 +46,6 @@ class VisualInfo extends Entity
 
     /**
     * Sets the attribution
-    * Optional. JSON object used to represent an icon which represents the application used to generate the activity
     *
     * @param ImageInfo $val The value to assign to the attribution
     *
@@ -60,7 +58,6 @@ class VisualInfo extends Entity
     }
     /**
     * Gets the backgroundColor
-    * Optional. Background color used to render the activity in the UI - brand color for the application source of the activity. Must be a valid hex color
     *
     * @return string The backgroundColor
     */
@@ -75,7 +72,6 @@ class VisualInfo extends Entity
 
     /**
     * Sets the backgroundColor
-    * Optional. Background color used to render the activity in the UI - brand color for the application source of the activity. Must be a valid hex color
     *
     * @param string $val The value of the backgroundColor
     *
@@ -88,7 +84,6 @@ class VisualInfo extends Entity
     }
     /**
     * Gets the description
-    * Optional. Longer text description of the user's unique activity (example: document name, first sentence, and/or metadata)
     *
     * @return string The description
     */
@@ -103,7 +98,6 @@ class VisualInfo extends Entity
 
     /**
     * Sets the description
-    * Optional. Longer text description of the user's unique activity (example: document name, first sentence, and/or metadata)
     *
     * @param string $val The value of the description
     *
@@ -116,7 +110,6 @@ class VisualInfo extends Entity
     }
     /**
     * Gets the displayText
-    * Required. Short text description of the user's unique activity (for example, document name in cases where an activity refers to document creation)
     *
     * @return string The displayText
     */
@@ -131,7 +124,6 @@ class VisualInfo extends Entity
 
     /**
     * Sets the displayText
-    * Required. Short text description of the user's unique activity (for example, document name in cases where an activity refers to document creation)
     *
     * @param string $val The value of the displayText
     *
@@ -144,7 +136,6 @@ class VisualInfo extends Entity
     }
     /**
     * Gets the content
-    * Optional. Custom piece of data - JSON object used to provide custom content to render the activity in the Windows Shell UI
     *
     * @return string The content
     */
@@ -159,7 +150,6 @@ class VisualInfo extends Entity
 
     /**
     * Sets the content
-    * Optional. Custom piece of data - JSON object used to provide custom content to render the activity in the Windows Shell UI
     *
     * @param string $val The value of the content
     *

@@ -27,7 +27,6 @@ class WindowsInformationProtectionDataRecoveryCertificate extends Entity
 {
     /**
     * Gets the subjectName
-    * Data recovery Certificate subject name
     *
     * @return string The subjectName
     */
@@ -42,7 +41,6 @@ class WindowsInformationProtectionDataRecoveryCertificate extends Entity
 
     /**
     * Sets the subjectName
-    * Data recovery Certificate subject name
     *
     * @param string $val The value of the subjectName
     *
@@ -55,7 +53,6 @@ class WindowsInformationProtectionDataRecoveryCertificate extends Entity
     }
     /**
     * Gets the description
-    * Data recovery Certificate description
     *
     * @return string The description
     */
@@ -70,7 +67,6 @@ class WindowsInformationProtectionDataRecoveryCertificate extends Entity
 
     /**
     * Sets the description
-    * Data recovery Certificate description
     *
     * @param string $val The value of the description
     *
@@ -84,7 +80,6 @@ class WindowsInformationProtectionDataRecoveryCertificate extends Entity
 
     /**
     * Gets the expirationDateTime
-    * Data recovery Certificate expiration datetime
     *
     * @return \DateTime The expirationDateTime
     */
@@ -103,7 +98,6 @@ class WindowsInformationProtectionDataRecoveryCertificate extends Entity
 
     /**
     * Sets the expirationDateTime
-    * Data recovery Certificate expiration datetime
     *
     * @param \DateTime $val The value to assign to the expirationDateTime
     *
@@ -117,7 +111,6 @@ class WindowsInformationProtectionDataRecoveryCertificate extends Entity
 
     /**
     * Gets the certificate
-    * Data recovery Certificate
     *
     * @return \GuzzleHttp\Psr7\Stream The certificate
     */
@@ -136,7 +129,6 @@ class WindowsInformationProtectionDataRecoveryCertificate extends Entity
 
     /**
     * Sets the certificate
-    * Data recovery Certificate
     *
     * @param \GuzzleHttp\Psr7\Stream $val The value to assign to the certificate
     *

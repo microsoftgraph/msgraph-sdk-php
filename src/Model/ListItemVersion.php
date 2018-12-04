@@ -28,7 +28,6 @@ class ListItemVersion extends BaseItemVersion
 {
     /**
     * Gets the fields
-    * A collection of the fields and values for this version of the list item.
     *
     * @return FieldValueSet The fields
     */
@@ -47,7 +46,6 @@ class ListItemVersion extends BaseItemVersion
     
     /**
     * Sets the fields
-    * A collection of the fields and values for this version of the list item.
     *
     * @param FieldValueSet $val The fields
     *

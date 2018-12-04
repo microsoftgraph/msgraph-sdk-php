@@ -28,7 +28,6 @@ class VppToken extends Entity
 {
     /**
     * Gets the organizationName
-    * The organization associated with the Apple Volume Purchase Program Token
     *
     * @return string The organizationName
     */
@@ -43,7 +42,6 @@ class VppToken extends Entity
     
     /**
     * Sets the organizationName
-    * The organization associated with the Apple Volume Purchase Program Token
     *
     * @param string $val The organizationName
     *
@@ -57,7 +55,6 @@ class VppToken extends Entity
     
     /**
     * Gets the vppTokenAccountType
-    * The type of volume purchase program which the given Apple Volume Purchase Program Token is associated with. Possible values are: business, education. Possible values are: business, education.
     *
     * @return VppTokenAccountType The vppTokenAccountType
     */
@@ -76,7 +73,6 @@ class VppToken extends Entity
     
     /**
     * Sets the vppTokenAccountType
-    * The type of volume purchase program which the given Apple Volume Purchase Program Token is associated with. Possible values are: business, education. Possible values are: business, education.
     *
     * @param VppTokenAccountType $val The vppTokenAccountType
     *
@@ -90,7 +86,6 @@ class VppToken extends Entity
     
     /**
     * Gets the appleId
-    * The apple Id associated with the given Apple Volume Purchase Program Token.
     *
     * @return string The appleId
     */
@@ -105,7 +100,6 @@ class VppToken extends Entity
     
     /**
     * Sets the appleId
-    * The apple Id associated with the given Apple Volume Purchase Program Token.
     *
     * @param string $val The appleId
     *
@@ -119,7 +113,6 @@ class VppToken extends Entity
     
     /**
     * Gets the expirationDateTime
-    * The expiration date time of the Apple Volume Purchase Program Token.
     *
     * @return \DateTime The expirationDateTime
     */
@@ -138,7 +131,6 @@ class VppToken extends Entity
     
     /**
     * Sets the expirationDateTime
-    * The expiration date time of the Apple Volume Purchase Program Token.
     *
     * @param \DateTime $val The expirationDateTime
     *
@@ -152,7 +144,6 @@ class VppToken extends Entity
     
     /**
     * Gets the lastSyncDateTime
-    * The last time when an application sync was done with the Apple volume purchase program service using the the Apple Volume Purchase Program Token.
     *
     * @return \DateTime The lastSyncDateTime
     */
@@ -171,7 +162,6 @@ class VppToken extends Entity
     
     /**
     * Sets the lastSyncDateTime
-    * The last time when an application sync was done with the Apple volume purchase program service using the the Apple Volume Purchase Program Token.
     *
     * @param \DateTime $val The lastSyncDateTime
     *
@@ -185,7 +175,6 @@ class VppToken extends Entity
     
     /**
     * Gets the token
-    * The Apple Volume Purchase Program Token string downloaded from the Apple Volume Purchase Program.
     *
     * @return string The token
     */
@@ -200,7 +189,6 @@ class VppToken extends Entity
     
     /**
     * Sets the token
-    * The Apple Volume Purchase Program Token string downloaded from the Apple Volume Purchase Program.
     *
     * @param string $val The token
     *
@@ -214,7 +202,6 @@ class VppToken extends Entity
     
     /**
     * Gets the lastModifiedDateTime
-    * Last modification date time associated with the Apple Volume Purchase Program Token.
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -233,7 +220,6 @@ class VppToken extends Entity
     
     /**
     * Sets the lastModifiedDateTime
-    * Last modification date time associated with the Apple Volume Purchase Program Token.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -247,7 +233,6 @@ class VppToken extends Entity
     
     /**
     * Gets the state
-    * Current state of the Apple Volume Purchase Program Token. Possible values are: unknown, valid, expired, invalid. Possible values are: unknown, valid, expired, invalid.
     *
     * @return VppTokenState The state
     */
@@ -266,7 +251,6 @@ class VppToken extends Entity
     
     /**
     * Sets the state
-    * Current state of the Apple Volume Purchase Program Token. Possible values are: unknown, valid, expired, invalid. Possible values are: unknown, valid, expired, invalid.
     *
     * @param VppTokenState $val The state
     *
@@ -280,7 +264,6 @@ class VppToken extends Entity
     
     /**
     * Gets the lastSyncStatus
-    * Current sync status of the last application sync which was triggered using the Apple Volume Purchase Program Token. Possible values are: none, inProgress, completed, failed. Possible values are: none, inProgress, completed, failed.
     *
     * @return VppTokenSyncStatus The lastSyncStatus
     */
@@ -299,7 +282,6 @@ class VppToken extends Entity
     
     /**
     * Sets the lastSyncStatus
-    * Current sync status of the last application sync which was triggered using the Apple Volume Purchase Program Token. Possible values are: none, inProgress, completed, failed. Possible values are: none, inProgress, completed, failed.
     *
     * @param VppTokenSyncStatus $val The lastSyncStatus
     *
@@ -313,7 +295,6 @@ class VppToken extends Entity
     
     /**
     * Gets the automaticallyUpdateApps
-    * Whether or not apps for the VPP token will be automatically updated.
     *
     * @return bool The automaticallyUpdateApps
     */
@@ -328,7 +309,6 @@ class VppToken extends Entity
     
     /**
     * Sets the automaticallyUpdateApps
-    * Whether or not apps for the VPP token will be automatically updated.
     *
     * @param bool $val The automaticallyUpdateApps
     *
@@ -342,7 +322,6 @@ class VppToken extends Entity
     
     /**
     * Gets the countryOrRegion
-    * Whether or not apps for the VPP token will be automatically updated.
     *
     * @return string The countryOrRegion
     */
@@ -357,7 +336,6 @@ class VppToken extends Entity
     
     /**
     * Sets the countryOrRegion
-    * Whether or not apps for the VPP token will be automatically updated.
     *
     * @param string $val The countryOrRegion
     *

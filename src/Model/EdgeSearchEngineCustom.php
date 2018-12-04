@@ -36,7 +36,6 @@ class EdgeSearchEngineCustom extends EdgeSearchEngineBase
 
     /**
     * Gets the edgeSearchEngineOpenSearchXmlUrl
-    * Points to a https link containing the OpenSearch xml file that contains, at minimum, the short name and the URL to the search Engine.
     *
     * @return string The edgeSearchEngineOpenSearchXmlUrl
     */
@@ -51,7 +50,6 @@ class EdgeSearchEngineCustom extends EdgeSearchEngineBase
 
     /**
     * Sets the edgeSearchEngineOpenSearchXmlUrl
-    * Points to a https link containing the OpenSearch xml file that contains, at minimum, the short name and the URL to the search Engine.
     *
     * @param string $val The value of the edgeSearchEngineOpenSearchXmlUrl
     *

@@ -28,7 +28,6 @@ class IosUpdateConfiguration extends DeviceConfiguration
 {
     /**
     * Gets the activeHoursStart
-    * Active Hours Start (active hours mean the time window when updates install should not happen)
     *
     * @return TimeOfDay The activeHoursStart
     */
@@ -47,7 +46,6 @@ class IosUpdateConfiguration extends DeviceConfiguration
     
     /**
     * Sets the activeHoursStart
-    * Active Hours Start (active hours mean the time window when updates install should not happen)
     *
     * @param TimeOfDay $val The activeHoursStart
     *
@@ -61,7 +59,6 @@ class IosUpdateConfiguration extends DeviceConfiguration
     
     /**
     * Gets the activeHoursEnd
-    * Active Hours End (active hours mean the time window when updates install should not happen)
     *
     * @return TimeOfDay The activeHoursEnd
     */
@@ -80,7 +77,6 @@ class IosUpdateConfiguration extends DeviceConfiguration
     
     /**
     * Sets the activeHoursEnd
-    * Active Hours End (active hours mean the time window when updates install should not happen)
     *
     * @param TimeOfDay $val The activeHoursEnd
     *
@@ -95,7 +91,6 @@ class IosUpdateConfiguration extends DeviceConfiguration
 
      /** 
      * Gets the scheduledInstallDays
-    * Days in week for which active hours are configured. This collection can contain a maximum of 7 elements.
      *
      * @return array The scheduledInstallDays
      */
@@ -110,7 +105,6 @@ class IosUpdateConfiguration extends DeviceConfiguration
     
     /** 
     * Sets the scheduledInstallDays
-    * Days in week for which active hours are configured. This collection can contain a maximum of 7 elements.
     *
     * @param DayOfWeek $val The scheduledInstallDays
     *
@@ -124,7 +118,6 @@ class IosUpdateConfiguration extends DeviceConfiguration
     
     /**
     * Gets the utcTimeOffsetInMinutes
-    * UTC Time Offset indicated in minutes
     *
     * @return int The utcTimeOffsetInMinutes
     */
@@ -139,7 +132,6 @@ class IosUpdateConfiguration extends DeviceConfiguration
     
     /**
     * Sets the utcTimeOffsetInMinutes
-    * UTC Time Offset indicated in minutes
     *
     * @param int $val The utcTimeOffsetInMinutes
     *

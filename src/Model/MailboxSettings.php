@@ -28,7 +28,6 @@ class MailboxSettings extends Entity
 
     /**
     * Gets the automaticRepliesSetting
-    * Configuration settings to automatically notify the sender of an incoming email with a message from the signed-in user.
     *
     * @return AutomaticRepliesSetting The automaticRepliesSetting
     */
@@ -47,7 +46,6 @@ class MailboxSettings extends Entity
 
     /**
     * Sets the automaticRepliesSetting
-    * Configuration settings to automatically notify the sender of an incoming email with a message from the signed-in user.
     *
     * @param AutomaticRepliesSetting $val The value to assign to the automaticRepliesSetting
     *
@@ -60,7 +58,6 @@ class MailboxSettings extends Entity
     }
     /**
     * Gets the archiveFolder
-    * Folder ID of an archive folder for the user.
     *
     * @return string The archiveFolder
     */
@@ -75,7 +72,6 @@ class MailboxSettings extends Entity
 
     /**
     * Sets the archiveFolder
-    * Folder ID of an archive folder for the user.
     *
     * @param string $val The value of the archiveFolder
     *
@@ -88,7 +84,6 @@ class MailboxSettings extends Entity
     }
     /**
     * Gets the timeZone
-    * The default time zone for the user's mailbox.
     *
     * @return string The timeZone
     */
@@ -103,7 +98,6 @@ class MailboxSettings extends Entity
 
     /**
     * Sets the timeZone
-    * The default time zone for the user's mailbox.
     *
     * @param string $val The value of the timeZone
     *
@@ -117,7 +111,6 @@ class MailboxSettings extends Entity
 
     /**
     * Gets the language
-    * The locale information for the user, including the preferred language and country/region.
     *
     * @return LocaleInfo The language
     */
@@ -136,7 +129,6 @@ class MailboxSettings extends Entity
 
     /**
     * Sets the language
-    * The locale information for the user, including the preferred language and country/region.
     *
     * @param LocaleInfo $val The value to assign to the language
     *
@@ -150,7 +142,6 @@ class MailboxSettings extends Entity
 
     /**
     * Gets the workingHours
-    * The days of the week and hours in a specific time zone that the user works.
     *
     * @return WorkingHours The workingHours
     */
@@ -169,7 +160,6 @@ class MailboxSettings extends Entity
 
     /**
     * Sets the workingHours
-    * The days of the week and hours in a specific time zone that the user works.
     *
     * @param WorkingHours $val The value to assign to the workingHours
     *

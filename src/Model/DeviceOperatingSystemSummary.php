@@ -27,7 +27,6 @@ class DeviceOperatingSystemSummary extends Entity
 {
     /**
     * Gets the androidCount
-    * Number of android device count.
     *
     * @return int The androidCount
     */
@@ -42,7 +41,6 @@ class DeviceOperatingSystemSummary extends Entity
 
     /**
     * Sets the androidCount
-    * Number of android device count.
     *
     * @param int $val The value of the androidCount
     *
@@ -55,7 +53,6 @@ class DeviceOperatingSystemSummary extends Entity
     }
     /**
     * Gets the iosCount
-    * Number of iOS device count.
     *
     * @return int The iosCount
     */
@@ -70,7 +67,6 @@ class DeviceOperatingSystemSummary extends Entity
 
     /**
     * Sets the iosCount
-    * Number of iOS device count.
     *
     * @param int $val The value of the iosCount
     *
@@ -83,7 +79,6 @@ class DeviceOperatingSystemSummary extends Entity
     }
     /**
     * Gets the macOSCount
-    * Number of Mac OS X device count.
     *
     * @return int The macOSCount
     */
@@ -98,7 +93,6 @@ class DeviceOperatingSystemSummary extends Entity
 
     /**
     * Sets the macOSCount
-    * Number of Mac OS X device count.
     *
     * @param int $val The value of the macOSCount
     *
@@ -111,7 +105,6 @@ class DeviceOperatingSystemSummary extends Entity
     }
     /**
     * Gets the windowsMobileCount
-    * Number of Windows mobile device count.
     *
     * @return int The windowsMobileCount
     */
@@ -126,7 +119,6 @@ class DeviceOperatingSystemSummary extends Entity
 
     /**
     * Sets the windowsMobileCount
-    * Number of Windows mobile device count.
     *
     * @param int $val The value of the windowsMobileCount
     *
@@ -139,7 +131,6 @@ class DeviceOperatingSystemSummary extends Entity
     }
     /**
     * Gets the windowsCount
-    * Number of Windows device count.
     *
     * @return int The windowsCount
     */
@@ -154,7 +145,6 @@ class DeviceOperatingSystemSummary extends Entity
 
     /**
     * Sets the windowsCount
-    * Number of Windows device count.
     *
     * @param int $val The value of the windowsCount
     *
@@ -167,7 +157,6 @@ class DeviceOperatingSystemSummary extends Entity
     }
     /**
     * Gets the unknownCount
-    * Number of unknown device count.
     *
     * @return int The unknownCount
     */
@@ -182,7 +171,6 @@ class DeviceOperatingSystemSummary extends Entity
 
     /**
     * Sets the unknownCount
-    * Number of unknown device count.
     *
     * @param int $val The value of the unknownCount
     *

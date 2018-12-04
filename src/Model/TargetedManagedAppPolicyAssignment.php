@@ -28,7 +28,6 @@ class TargetedManagedAppPolicyAssignment extends Entity
 {
     /**
     * Gets the target
-    * Identifier for deployment of a group or app
     *
     * @return DeviceAndAppManagementAssignmentTarget The target
     */
@@ -47,7 +46,6 @@ class TargetedManagedAppPolicyAssignment extends Entity
     
     /**
     * Sets the target
-    * Identifier for deployment of a group or app
     *
     * @param DeviceAndAppManagementAssignmentTarget $val The target
     *

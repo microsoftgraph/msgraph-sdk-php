@@ -27,7 +27,6 @@ class EducationStudent extends Entity
 {
     /**
     * Gets the graduationYear
-    * Year the student is graduating from the school.
     *
     * @return string The graduationYear
     */
@@ -42,7 +41,6 @@ class EducationStudent extends Entity
 
     /**
     * Sets the graduationYear
-    * Year the student is graduating from the school.
     *
     * @param string $val The value of the graduationYear
     *
@@ -55,7 +53,6 @@ class EducationStudent extends Entity
     }
     /**
     * Gets the grade
-    * Current grade level of the student.
     *
     * @return string The grade
     */
@@ -70,7 +67,6 @@ class EducationStudent extends Entity
 
     /**
     * Sets the grade
-    * Current grade level of the student.
     *
     * @param string $val The value of the grade
     *
@@ -84,7 +80,6 @@ class EducationStudent extends Entity
 
     /**
     * Gets the birthDate
-    * Birth date of the student.
     *
     * @return \DateTime The birthDate
     */
@@ -103,7 +98,6 @@ class EducationStudent extends Entity
 
     /**
     * Sets the birthDate
-    * Birth date of the student.
     *
     * @param \DateTime $val The value to assign to the birthDate
     *
@@ -117,7 +111,6 @@ class EducationStudent extends Entity
 
     /**
     * Gets the gender
-    * Possible values are: female, male, other, unkownFutureValue.
     *
     * @return EducationGender The gender
     */
@@ -136,7 +129,6 @@ class EducationStudent extends Entity
 
     /**
     * Sets the gender
-    * Possible values are: female, male, other, unkownFutureValue.
     *
     * @param EducationGender $val The value to assign to the gender
     *
@@ -149,7 +141,6 @@ class EducationStudent extends Entity
     }
     /**
     * Gets the studentNumber
-    * Student Number.
     *
     * @return string The studentNumber
     */
@@ -164,7 +155,6 @@ class EducationStudent extends Entity
 
     /**
     * Sets the studentNumber
-    * Student Number.
     *
     * @param string $val The value of the studentNumber
     *
@@ -177,7 +167,6 @@ class EducationStudent extends Entity
     }
     /**
     * Gets the externalId
-    * ID of the student in the source system.
     *
     * @return string The externalId
     */
@@ -192,7 +181,6 @@ class EducationStudent extends Entity
 
     /**
     * Sets the externalId
-    * ID of the student in the source system.
     *
     * @param string $val The value of the externalId
     *

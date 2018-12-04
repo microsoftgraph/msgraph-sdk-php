@@ -28,7 +28,6 @@ class DeviceComplianceScheduledActionForRule extends Entity
 {
     /**
     * Gets the ruleName
-    * Name of the rule which this scheduled action applies to.
     *
     * @return string The ruleName
     */
@@ -43,7 +42,6 @@ class DeviceComplianceScheduledActionForRule extends Entity
     
     /**
     * Sets the ruleName
-    * Name of the rule which this scheduled action applies to.
     *
     * @param string $val The ruleName
     *
@@ -58,7 +56,6 @@ class DeviceComplianceScheduledActionForRule extends Entity
 
      /** 
      * Gets the scheduledActionConfigurations
-    * The list of scheduled action configurations for this compliance policy.
      *
      * @return array The scheduledActionConfigurations
      */
@@ -73,7 +70,6 @@ class DeviceComplianceScheduledActionForRule extends Entity
     
     /** 
     * Sets the scheduledActionConfigurations
-    * The list of scheduled action configurations for this compliance policy.
     *
     * @param DeviceComplianceActionItem $val The scheduledActionConfigurations
     *

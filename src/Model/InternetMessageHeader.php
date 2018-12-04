@@ -27,7 +27,6 @@ class InternetMessageHeader extends Entity
 {
     /**
     * Gets the name
-    * Represents the key in a key-value pair.
     *
     * @return string The name
     */
@@ -42,7 +41,6 @@ class InternetMessageHeader extends Entity
 
     /**
     * Sets the name
-    * Represents the key in a key-value pair.
     *
     * @param string $val The value of the name
     *
@@ -55,7 +53,6 @@ class InternetMessageHeader extends Entity
     }
     /**
     * Gets the value
-    * The value in a key-value pair.
     *
     * @return string The value
     */
@@ -70,7 +67,6 @@ class InternetMessageHeader extends Entity
 
     /**
     * Sets the value
-    * The value in a key-value pair.
     *
     * @param string $val The value of the value
     *

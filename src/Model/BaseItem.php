@@ -28,7 +28,6 @@ class BaseItem extends Entity
 {
     /**
     * Gets the createdBy
-    * Identity of the user, device, or application which created the item. Read-only.
     *
     * @return IdentitySet The createdBy
     */
@@ -47,7 +46,6 @@ class BaseItem extends Entity
     
     /**
     * Sets the createdBy
-    * Identity of the user, device, or application which created the item. Read-only.
     *
     * @param IdentitySet $val The createdBy
     *
@@ -61,7 +59,6 @@ class BaseItem extends Entity
     
     /**
     * Gets the createdDateTime
-    * Date and time of item creation. Read-only.
     *
     * @return \DateTime The createdDateTime
     */
@@ -80,7 +77,6 @@ class BaseItem extends Entity
     
     /**
     * Sets the createdDateTime
-    * Date and time of item creation. Read-only.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -121,7 +117,6 @@ class BaseItem extends Entity
     
     /**
     * Gets the eTag
-    * ETag for the item. Read-only.
     *
     * @return string The eTag
     */
@@ -136,7 +131,6 @@ class BaseItem extends Entity
     
     /**
     * Sets the eTag
-    * ETag for the item. Read-only.
     *
     * @param string $val The eTag
     *
@@ -150,7 +144,6 @@ class BaseItem extends Entity
     
     /**
     * Gets the lastModifiedBy
-    * Identity of the user, device, and application which last modified the item. Read-only.
     *
     * @return IdentitySet The lastModifiedBy
     */
@@ -169,7 +162,6 @@ class BaseItem extends Entity
     
     /**
     * Sets the lastModifiedBy
-    * Identity of the user, device, and application which last modified the item. Read-only.
     *
     * @param IdentitySet $val The lastModifiedBy
     *
@@ -183,7 +175,6 @@ class BaseItem extends Entity
     
     /**
     * Gets the lastModifiedDateTime
-    * Date and time the item was last modified. Read-only.
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -202,7 +193,6 @@ class BaseItem extends Entity
     
     /**
     * Sets the lastModifiedDateTime
-    * Date and time the item was last modified. Read-only.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -216,7 +206,6 @@ class BaseItem extends Entity
     
     /**
     * Gets the name
-    * The name of the item. Read-write.
     *
     * @return string The name
     */
@@ -231,7 +220,6 @@ class BaseItem extends Entity
     
     /**
     * Sets the name
-    * The name of the item. Read-write.
     *
     * @param string $val The name
     *
@@ -245,7 +233,6 @@ class BaseItem extends Entity
     
     /**
     * Gets the parentReference
-    * Parent information, if the item has a parent. Read-write.
     *
     * @return ItemReference The parentReference
     */
@@ -264,7 +251,6 @@ class BaseItem extends Entity
     
     /**
     * Sets the parentReference
-    * Parent information, if the item has a parent. Read-write.
     *
     * @param ItemReference $val The parentReference
     *
@@ -278,7 +264,6 @@ class BaseItem extends Entity
     
     /**
     * Gets the webUrl
-    * URL that displays the resource in the browser. Read-only.
     *
     * @return string The webUrl
     */
@@ -293,7 +278,6 @@ class BaseItem extends Entity
     
     /**
     * Sets the webUrl
-    * URL that displays the resource in the browser. Read-only.
     *
     * @param string $val The webUrl
     *

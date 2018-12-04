@@ -28,7 +28,6 @@ class GroupLifecyclePolicy extends Entity
 {
     /**
     * Gets the groupLifetimeInDays
-    * Number of days before a group expires and needs to be renewed. Once renewed, the group expiration is extended by the number of days defined.
     *
     * @return int The groupLifetimeInDays
     */
@@ -43,7 +42,6 @@ class GroupLifecyclePolicy extends Entity
     
     /**
     * Sets the groupLifetimeInDays
-    * Number of days before a group expires and needs to be renewed. Once renewed, the group expiration is extended by the number of days defined.
     *
     * @param int $val The groupLifetimeInDays
     *
@@ -57,7 +55,6 @@ class GroupLifecyclePolicy extends Entity
     
     /**
     * Gets the managedGroupTypes
-    * The group type for which the expiration policy applies. Possible values are All, Selected or None.
     *
     * @return string The managedGroupTypes
     */
@@ -72,7 +69,6 @@ class GroupLifecyclePolicy extends Entity
     
     /**
     * Sets the managedGroupTypes
-    * The group type for which the expiration policy applies. Possible values are All, Selected or None.
     *
     * @param string $val The managedGroupTypes
     *
@@ -86,7 +82,6 @@ class GroupLifecyclePolicy extends Entity
     
     /**
     * Gets the alternateNotificationEmails
-    * List of email address to send notifications for groups without owners. Multiple email address can be defined by separating email address with a semicolon.
     *
     * @return string The alternateNotificationEmails
     */
@@ -101,7 +96,6 @@ class GroupLifecyclePolicy extends Entity
     
     /**
     * Sets the alternateNotificationEmails
-    * List of email address to send notifications for groups without owners. Multiple email address can be defined by separating email address with a semicolon.
     *
     * @param string $val The alternateNotificationEmails
     *

@@ -27,7 +27,6 @@ class Image extends Entity
 {
     /**
     * Gets the height
-    * Optional. Height of the image, in pixels. Read-only.
     *
     * @return int The height
     */
@@ -42,7 +41,6 @@ class Image extends Entity
 
     /**
     * Sets the height
-    * Optional. Height of the image, in pixels. Read-only.
     *
     * @param int $val The value of the height
     *
@@ -55,7 +53,6 @@ class Image extends Entity
     }
     /**
     * Gets the width
-    * Optional. Width of the image, in pixels. Read-only.
     *
     * @return int The width
     */
@@ -70,7 +67,6 @@ class Image extends Entity
 
     /**
     * Sets the width
-    * Optional. Width of the image, in pixels. Read-only.
     *
     * @param int $val The value of the width
     *
