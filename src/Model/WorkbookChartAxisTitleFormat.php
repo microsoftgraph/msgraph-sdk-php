@@ -28,6 +28,7 @@ class WorkbookChartAxisTitleFormat extends Entity
 {
     /**
     * Gets the font
+    * Represents the font attributes, such as font name, font size, color, etc. of chart axis title object. Read-only.
     *
     * @return WorkbookChartFont The font
     */
@@ -46,6 +47,7 @@ class WorkbookChartAxisTitleFormat extends Entity
     
     /**
     * Sets the font
+    * Represents the font attributes, such as font name, font size, color, etc. of chart axis title object. Read-only.
     *
     * @param WorkbookChartFont $val The font
     *

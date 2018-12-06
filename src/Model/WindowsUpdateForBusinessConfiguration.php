@@ -400,7 +400,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     
     /**
     * Gets the businessReadyUpdatesOnly
-    * Determines which branch devices will receive their updates from. Possible values are: userDefined, all, businessReadyOnly.
+    * Determines which branch devices will receive their updates from. Possible values are: userDefined, all, businessReadyOnly, windowsInsiderBuildFast, windowsInsiderBuildSlow, windowsInsiderBuildRelease.
     *
     * @return WindowsUpdateType The businessReadyUpdatesOnly
     */
@@ -419,7 +419,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     
     /**
     * Sets the businessReadyUpdatesOnly
-    * Determines which branch devices will receive their updates from. Possible values are: userDefined, all, businessReadyOnly.
+    * Determines which branch devices will receive their updates from. Possible values are: userDefined, all, businessReadyOnly, windowsInsiderBuildFast, windowsInsiderBuildSlow, windowsInsiderBuildRelease.
     *
     * @param WindowsUpdateType $val The businessReadyUpdatesOnly
     *

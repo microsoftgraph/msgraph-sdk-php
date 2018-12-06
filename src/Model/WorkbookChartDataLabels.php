@@ -28,6 +28,7 @@ class WorkbookChartDataLabels extends Entity
 {
     /**
     * Gets the position
+    * DataLabelPosition value that represents the position of the data label. The possible values are: None, Center, InsideEnd, InsideBase, OutsideEnd, Left, Right, Top, Bottom, BestFit, Callout.
     *
     * @return string The position
     */
@@ -42,6 +43,7 @@ class WorkbookChartDataLabels extends Entity
     
     /**
     * Sets the position
+    * DataLabelPosition value that represents the position of the data label. The possible values are: None, Center, InsideEnd, InsideBase, OutsideEnd, Left, Right, Top, Bottom, BestFit, Callout.
     *
     * @param string $val The position
     *
@@ -55,6 +57,7 @@ class WorkbookChartDataLabels extends Entity
     
     /**
     * Gets the separator
+    * String representing the separator used for the data labels on a chart.
     *
     * @return string The separator
     */
@@ -69,6 +72,7 @@ class WorkbookChartDataLabels extends Entity
     
     /**
     * Sets the separator
+    * String representing the separator used for the data labels on a chart.
     *
     * @param string $val The separator
     *
@@ -82,6 +86,7 @@ class WorkbookChartDataLabels extends Entity
     
     /**
     * Gets the showBubbleSize
+    * Boolean value representing if the data label bubble size is visible or not.
     *
     * @return bool The showBubbleSize
     */
@@ -96,6 +101,7 @@ class WorkbookChartDataLabels extends Entity
     
     /**
     * Sets the showBubbleSize
+    * Boolean value representing if the data label bubble size is visible or not.
     *
     * @param bool $val The showBubbleSize
     *
@@ -109,6 +115,7 @@ class WorkbookChartDataLabels extends Entity
     
     /**
     * Gets the showCategoryName
+    * Boolean value representing if the data label category name is visible or not.
     *
     * @return bool The showCategoryName
     */
@@ -123,6 +130,7 @@ class WorkbookChartDataLabels extends Entity
     
     /**
     * Sets the showCategoryName
+    * Boolean value representing if the data label category name is visible or not.
     *
     * @param bool $val The showCategoryName
     *
@@ -136,6 +144,7 @@ class WorkbookChartDataLabels extends Entity
     
     /**
     * Gets the showLegendKey
+    * Boolean value representing if the data label legend key is visible or not.
     *
     * @return bool The showLegendKey
     */
@@ -150,6 +159,7 @@ class WorkbookChartDataLabels extends Entity
     
     /**
     * Sets the showLegendKey
+    * Boolean value representing if the data label legend key is visible or not.
     *
     * @param bool $val The showLegendKey
     *
@@ -163,6 +173,7 @@ class WorkbookChartDataLabels extends Entity
     
     /**
     * Gets the showPercentage
+    * Boolean value representing if the data label percentage is visible or not.
     *
     * @return bool The showPercentage
     */
@@ -177,6 +188,7 @@ class WorkbookChartDataLabels extends Entity
     
     /**
     * Sets the showPercentage
+    * Boolean value representing if the data label percentage is visible or not.
     *
     * @param bool $val The showPercentage
     *
@@ -190,6 +202,7 @@ class WorkbookChartDataLabels extends Entity
     
     /**
     * Gets the showSeriesName
+    * Boolean value representing if the data label series name is visible or not.
     *
     * @return bool The showSeriesName
     */
@@ -204,6 +217,7 @@ class WorkbookChartDataLabels extends Entity
     
     /**
     * Sets the showSeriesName
+    * Boolean value representing if the data label series name is visible or not.
     *
     * @param bool $val The showSeriesName
     *
@@ -217,6 +231,7 @@ class WorkbookChartDataLabels extends Entity
     
     /**
     * Gets the showValue
+    * Boolean value representing if the data label value is visible or not.
     *
     * @return bool The showValue
     */
@@ -231,6 +246,7 @@ class WorkbookChartDataLabels extends Entity
     
     /**
     * Sets the showValue
+    * Boolean value representing if the data label value is visible or not.
     *
     * @param bool $val The showValue
     *
@@ -244,6 +260,7 @@ class WorkbookChartDataLabels extends Entity
     
     /**
     * Gets the format
+    * Represents the format of chart data labels, which includes fill and font formatting. Read-only.
     *
     * @return WorkbookChartDataLabelFormat The format
     */
@@ -262,6 +279,7 @@ class WorkbookChartDataLabels extends Entity
     
     /**
     * Sets the format
+    * Represents the format of chart data labels, which includes fill and font formatting. Read-only.
     *
     * @param WorkbookChartDataLabelFormat $val The format
     *

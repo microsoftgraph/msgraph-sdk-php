@@ -123,7 +123,7 @@ class DeviceManagementExchangeConnector extends Entity
     
     /**
     * Gets the serverName
-    * The name of the server hosting the Exchange Connector.
+    * The name of the Exchange server.
     *
     * @return string The serverName
     */
@@ -138,7 +138,7 @@ class DeviceManagementExchangeConnector extends Entity
     
     /**
     * Sets the serverName
-    * The name of the server hosting the Exchange Connector.
+    * The name of the Exchange server.
     *
     * @param string $val The serverName
     *
@@ -152,6 +152,7 @@ class DeviceManagementExchangeConnector extends Entity
     
     /**
     * Gets the connectorServerName
+    * The name of the server hosting the Exchange Connector.
     *
     * @return string The connectorServerName
     */
@@ -166,6 +167,7 @@ class DeviceManagementExchangeConnector extends Entity
     
     /**
     * Sets the connectorServerName
+    * The name of the server hosting the Exchange Connector.
     *
     * @param string $val The connectorServerName
     *

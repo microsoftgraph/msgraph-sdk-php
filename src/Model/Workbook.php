@@ -60,6 +60,7 @@ class Workbook extends Entity
 
      /** 
      * Gets the names
+    * Represents a collection of workbook scoped named items (named ranges and constants). Read-only.
      *
      * @return array The names
      */
@@ -74,6 +75,7 @@ class Workbook extends Entity
     
     /** 
     * Sets the names
+    * Represents a collection of workbook scoped named items (named ranges and constants). Read-only.
     *
     * @param WorkbookNamedItem $val The names
     *
@@ -88,6 +90,7 @@ class Workbook extends Entity
 
      /** 
      * Gets the tables
+    * Represents a collection of tables associated with the workbook. Read-only.
      *
      * @return array The tables
      */
@@ -102,6 +105,7 @@ class Workbook extends Entity
     
     /** 
     * Sets the tables
+    * Represents a collection of tables associated with the workbook. Read-only.
     *
     * @param WorkbookTable $val The tables
     *
@@ -116,6 +120,7 @@ class Workbook extends Entity
 
      /** 
      * Gets the worksheets
+    * Represents a collection of worksheets associated with the workbook. Read-only.
      *
      * @return array The worksheets
      */
@@ -130,6 +135,7 @@ class Workbook extends Entity
     
     /** 
     * Sets the worksheets
+    * Represents a collection of worksheets associated with the workbook. Read-only.
     *
     * @param WorkbookWorksheet $val The worksheets
     *

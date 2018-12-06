@@ -28,6 +28,7 @@ class WorkbookChartLegend extends Entity
 {
     /**
     * Gets the overlay
+    * Boolean value for whether the chart legend should overlap with the main body of the chart.
     *
     * @return bool The overlay
     */
@@ -42,6 +43,7 @@ class WorkbookChartLegend extends Entity
     
     /**
     * Sets the overlay
+    * Boolean value for whether the chart legend should overlap with the main body of the chart.
     *
     * @param bool $val The overlay
     *
@@ -55,6 +57,7 @@ class WorkbookChartLegend extends Entity
     
     /**
     * Gets the position
+    * Represents the position of the legend on the chart. The possible values are: Top, Bottom, Left, Right, Corner, Custom.
     *
     * @return string The position
     */
@@ -69,6 +72,7 @@ class WorkbookChartLegend extends Entity
     
     /**
     * Sets the position
+    * Represents the position of the legend on the chart. The possible values are: Top, Bottom, Left, Right, Corner, Custom.
     *
     * @param string $val The position
     *
@@ -82,6 +86,7 @@ class WorkbookChartLegend extends Entity
     
     /**
     * Gets the visible
+    * A boolean value the represents the visibility of a ChartLegend object.
     *
     * @return bool The visible
     */
@@ -96,6 +101,7 @@ class WorkbookChartLegend extends Entity
     
     /**
     * Sets the visible
+    * A boolean value the represents the visibility of a ChartLegend object.
     *
     * @param bool $val The visible
     *
@@ -109,6 +115,7 @@ class WorkbookChartLegend extends Entity
     
     /**
     * Gets the format
+    * Represents the formatting of a chart legend, which includes fill and font formatting. Read-only.
     *
     * @return WorkbookChartLegendFormat The format
     */
@@ -127,6 +134,7 @@ class WorkbookChartLegend extends Entity
     
     /**
     * Sets the format
+    * Represents the formatting of a chart legend, which includes fill and font formatting. Read-only.
     *
     * @param WorkbookChartLegendFormat $val The format
     *

@@ -57,7 +57,7 @@ class ManagedDeviceMobileAppConfigurationUserSummary extends Entity
     
     /**
     * Gets the notApplicableCount
-    * Number of not applicable devices
+    * Number of not applicable users
     *
     * @return int The notApplicableCount
     */
@@ -72,7 +72,7 @@ class ManagedDeviceMobileAppConfigurationUserSummary extends Entity
     
     /**
     * Sets the notApplicableCount
-    * Number of not applicable devices
+    * Number of not applicable users
     *
     * @param int $val The notApplicableCount
     *

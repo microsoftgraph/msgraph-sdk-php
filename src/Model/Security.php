@@ -29,6 +29,7 @@ class Security extends Entity
 
      /** 
      * Gets the alerts
+    * Read-only. Nullable.
      *
      * @return array The alerts
      */
@@ -43,6 +44,7 @@ class Security extends Entity
     
     /** 
     * Sets the alerts
+    * Read-only. Nullable.
     *
     * @param Alert $val The alerts
     *

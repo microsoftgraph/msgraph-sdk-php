@@ -28,7 +28,7 @@ class Permission extends Entity
 {
     /**
     * Gets the grantedTo
-    * For user type permissions, the details of the users & applications for this permission. Read-only.
+    * For user type permissions, the details of the users &amp; applications for this permission. Read-only.
     *
     * @return IdentitySet The grantedTo
     */
@@ -47,7 +47,7 @@ class Permission extends Entity
     
     /**
     * Sets the grantedTo
-    * For user type permissions, the details of the users & applications for this permission. Read-only.
+    * For user type permissions, the details of the users &amp; applications for this permission. Read-only.
     *
     * @param IdentitySet $val The grantedTo
     *
@@ -160,6 +160,7 @@ class Permission extends Entity
     
     /**
     * Gets the roles
+    * The type of permission, e.g. read. See below for the full list of roles. Read-only.
     *
     * @return string The roles
     */
@@ -174,6 +175,7 @@ class Permission extends Entity
     
     /**
     * Sets the roles
+    * The type of permission, e.g. read. See below for the full list of roles. Read-only.
     *
     * @param string $val The roles
     *

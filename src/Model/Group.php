@@ -28,6 +28,7 @@ class Group extends DirectoryObject
 {
     /**
     * Gets the classification
+    * Describes a classification for the group (such as low, medium or high business impact). Valid values for this property are defined by creating a ClassificationList setting value, based on the template definition.
     *
     * @return string The classification
     */
@@ -42,6 +43,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the classification
+    * Describes a classification for the group (such as low, medium or high business impact). Valid values for this property are defined by creating a ClassificationList setting value, based on the template definition.
     *
     * @param string $val The classification
     *
@@ -175,7 +177,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the mail
-    * The SMTP address for the group, for example, "serviceadmins@contoso.onmicrosoft.com". Read-only. Supports $filter.
+    * The SMTP address for the group, for example, 'serviceadmins@contoso.onmicrosoft.com'. Read-only. Supports $filter.
     *
     * @return string The mail
     */
@@ -190,7 +192,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the mail
-    * The SMTP address for the group, for example, "serviceadmins@contoso.onmicrosoft.com". Read-only. Supports $filter.
+    * The SMTP address for the group, for example, 'serviceadmins@contoso.onmicrosoft.com'. Read-only. Supports $filter.
     *
     * @param string $val The mail
     *
@@ -296,6 +298,7 @@ class Group extends DirectoryObject
 
      /** 
      * Gets the onPremisesProvisioningErrors
+    * Errors when using Microsoft synchronization product during provisioning.
      *
      * @return array The onPremisesProvisioningErrors
      */
@@ -310,6 +313,7 @@ class Group extends DirectoryObject
     
     /** 
     * Sets the onPremisesProvisioningErrors
+    * Errors when using Microsoft synchronization product during provisioning.
     *
     * @param OnPremisesProvisioningError $val The onPremisesProvisioningErrors
     *
@@ -472,7 +476,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the visibility
-    * Specifies the visibility of an Office 365 group. Possible values are: Private, Public, or empty (which is interpreted as Public).
+    * Specifies the visibility of an Office 365 group. Possible values are: private, public, or hiddenmembership; blank values are treated as public.  See Group visibility options to learn more.Visibility can be set only when a group is created; it is not editable.Visibility is supported only for unified groups; it is not supported for security groups.
     *
     * @return string The visibility
     */
@@ -487,7 +491,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the visibility
-    * Specifies the visibility of an Office 365 group. Possible values are: Private, Public, or empty (which is interpreted as Public).
+    * Specifies the visibility of an Office 365 group. Possible values are: private, public, or hiddenmembership; blank values are treated as public.  See Group visibility options to learn more.Visibility can be set only when a group is created; it is not editable.Visibility is supported only for unified groups; it is not supported for security groups.
     *
     * @param string $val The visibility
     *
@@ -588,7 +592,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the unseenCount
-    * Count of posts that the current  user has not seen since his last visit.
+    * Count of conversations that have been delivered one or more new posts since the signed-in user's last visit to the group.
     *
     * @return int The unseenCount
     */
@@ -603,7 +607,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the unseenCount
-    * Count of posts that the current  user has not seen since his last visit.
+    * Count of conversations that have been delivered one or more new posts since the signed-in user's last visit to the group.
     *
     * @param int $val The unseenCount
     *
@@ -612,6 +616,33 @@ class Group extends DirectoryObject
     public function setUnseenCount($val)
     {
         $this->_propDict["unseenCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the isArchived
+    *
+    * @return bool The isArchived
+    */
+    public function getIsArchived()
+    {
+        if (array_key_exists("isArchived", $this->_propDict)) {
+            return $this->_propDict["isArchived"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isArchived
+    *
+    * @param bool $val The isArchived
+    *
+    * @return Group
+    */
+    public function setIsArchived($val)
+    {
+        $this->_propDict["isArchived"] = boolval($val);
         return $this;
     }
     
@@ -1076,7 +1107,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the drive
-    * The group's drive. Read-only.
+    * The group's default drive. Read-only.
     *
     * @return Drive The drive
     */
@@ -1095,7 +1126,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the drive
-    * The group's drive. Read-only.
+    * The group's default drive. Read-only.
     *
     * @param Drive $val The drive
     *
@@ -1110,6 +1141,7 @@ class Group extends DirectoryObject
 
      /** 
      * Gets the drives
+    * The group's drives. Read-only.
      *
      * @return array The drives
      */
@@ -1124,6 +1156,7 @@ class Group extends DirectoryObject
     
     /** 
     * Sets the drives
+    * The group's drives. Read-only.
     *
     * @param Drive $val The drives
     *
@@ -1234,6 +1267,7 @@ class Group extends DirectoryObject
 
      /** 
      * Gets the groupLifecyclePolicies
+    * The collection of lifecycle policies for this group. Read-only. Nullable.
      *
      * @return array The groupLifecyclePolicies
      */
@@ -1248,6 +1282,7 @@ class Group extends DirectoryObject
     
     /** 
     * Sets the groupLifecyclePolicies
+    * The collection of lifecycle policies for this group. Read-only. Nullable.
     *
     * @param GroupLifecyclePolicy $val The groupLifecyclePolicies
     *
@@ -1256,6 +1291,37 @@ class Group extends DirectoryObject
     public function setGroupLifecyclePolicies($val)
     {
 		$this->_propDict["groupLifecyclePolicies"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the team
+    *
+    * @return Team The team
+    */
+    public function getTeam()
+    {
+        if (array_key_exists("team", $this->_propDict)) {
+            if (is_a($this->_propDict["team"], "Microsoft\Graph\Model\Team")) {
+                return $this->_propDict["team"];
+            } else {
+                $this->_propDict["team"] = new Team($this->_propDict["team"]);
+                return $this->_propDict["team"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the team
+    *
+    * @param Team $val The team
+    *
+    * @return Group
+    */
+    public function setTeam($val)
+    {
+        $this->_propDict["team"] = $val;
         return $this;
     }
     

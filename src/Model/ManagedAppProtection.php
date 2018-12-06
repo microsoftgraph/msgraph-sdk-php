@@ -309,7 +309,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     
     /**
     * Gets the saveAsBlocked
-    * Indicates whether users may use the "Save As" menu item to save a copy of protected files.
+    * Indicates whether users may use the 'Save As' menu item to save a copy of protected files.
     *
     * @return bool The saveAsBlocked
     */
@@ -324,7 +324,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     
     /**
     * Sets the saveAsBlocked
-    * Indicates whether users may use the "Save As" menu item to save a copy of protected files.
+    * Indicates whether users may use the 'Save As' menu item to save a copy of protected files.
     *
     * @param bool $val The saveAsBlocked
     *

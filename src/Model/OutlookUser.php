@@ -29,6 +29,7 @@ class OutlookUser extends Entity
 
      /** 
      * Gets the masterCategories
+    * A list of categories defined for the user.
      *
      * @return array The masterCategories
      */
@@ -43,6 +44,7 @@ class OutlookUser extends Entity
     
     /** 
     * Sets the masterCategories
+    * A list of categories defined for the user.
     *
     * @param OutlookCategory $val The masterCategories
     *

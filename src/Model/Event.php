@@ -119,7 +119,7 @@ class Event extends OutlookItem
     
     /**
     * Gets the iCalUId
-    * A unique identifier that is shared by all instances of an event across different calendars.
+    * A unique identifier that is shared by all instances of an event across different calendars. Read-only.
     *
     * @return string The iCalUId
     */
@@ -134,7 +134,7 @@ class Event extends OutlookItem
     
     /**
     * Sets the iCalUId
-    * A unique identifier that is shared by all instances of an event across different calendars.
+    * A unique identifier that is shared by all instances of an event across different calendars. Read-only.
     *
     * @param string $val The iCalUId
     *
@@ -326,7 +326,7 @@ class Event extends OutlookItem
     
     /**
     * Gets the importance
-    * The importance of the event. Possible values are: low, normal, high.
+    * The importance of the event. The possible values are: low, normal, high.
     *
     * @return Importance The importance
     */
@@ -345,7 +345,7 @@ class Event extends OutlookItem
     
     /**
     * Sets the importance
-    * The importance of the event. Possible values are: low, normal, high.
+    * The importance of the event. The possible values are: low, normal, high.
     *
     * @param Importance $val The importance
     *
@@ -359,7 +359,7 @@ class Event extends OutlookItem
     
     /**
     * Gets the sensitivity
-    * Possible values are: normal, personal, private, confidential.
+    * The possible values are: normal, personal, private, confidential.
     *
     * @return Sensitivity The sensitivity
     */
@@ -378,7 +378,7 @@ class Event extends OutlookItem
     
     /**
     * Sets the sensitivity
-    * Possible values are: normal, personal, private, confidential.
+    * The possible values are: normal, personal, private, confidential.
     *
     * @param Sensitivity $val The sensitivity
     *
@@ -732,7 +732,7 @@ class Event extends OutlookItem
     
     /**
     * Gets the showAs
-    * The status to show. Possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
+    * The status to show. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
     *
     * @return FreeBusyStatus The showAs
     */
@@ -751,7 +751,7 @@ class Event extends OutlookItem
     
     /**
     * Sets the showAs
-    * The status to show. Possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
+    * The status to show. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
     *
     * @param FreeBusyStatus $val The showAs
     *
@@ -765,7 +765,7 @@ class Event extends OutlookItem
     
     /**
     * Gets the type
-    * The event type. Possible values are: singleInstance, occurrence, exception, seriesMaster. Read-only.
+    * The event type. The possible values are: singleInstance, occurrence, exception, seriesMaster. Read-only.
     *
     * @return EventType The type
     */
@@ -784,7 +784,7 @@ class Event extends OutlookItem
     
     /**
     * Sets the type
-    * The event type. Possible values are: singleInstance, occurrence, exception, seriesMaster. Read-only.
+    * The event type. The possible values are: singleInstance, occurrence, exception, seriesMaster. Read-only.
     *
     * @param EventType $val The type
     *
@@ -890,7 +890,7 @@ class Event extends OutlookItem
     
     /**
     * Gets the onlineMeetingUrl
-    * A URL for an online meeting.
+    * A URL for an online meeting. The property is set only when an organizer specifies an event as an online meeting such as a Skype meeting. Read-only.
     *
     * @return string The onlineMeetingUrl
     */
@@ -905,7 +905,7 @@ class Event extends OutlookItem
     
     /**
     * Sets the onlineMeetingUrl
-    * A URL for an online meeting.
+    * A URL for an online meeting. The property is set only when an organizer specifies an event as an online meeting such as a Skype meeting. Read-only.
     *
     * @param string $val The onlineMeetingUrl
     *

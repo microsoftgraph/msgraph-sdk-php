@@ -28,6 +28,7 @@ class Operation extends Entity
 {
     /**
     * Gets the status
+    * The current status of the operation: notStarted, running, completed, failed
     *
     * @return OperationStatus The status
     */
@@ -46,6 +47,7 @@ class Operation extends Entity
     
     /**
     * Sets the status
+    * The current status of the operation: notStarted, running, completed, failed
     *
     * @param OperationStatus $val The status
     *
@@ -59,6 +61,7 @@ class Operation extends Entity
     
     /**
     * Gets the createdDateTime
+    * The start time of the operation.
     *
     * @return \DateTime The createdDateTime
     */
@@ -77,6 +80,7 @@ class Operation extends Entity
     
     /**
     * Sets the createdDateTime
+    * The start time of the operation.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -90,6 +94,7 @@ class Operation extends Entity
     
     /**
     * Gets the lastActionDateTime
+    * The time of the last action of the operation.
     *
     * @return \DateTime The lastActionDateTime
     */
@@ -108,6 +113,7 @@ class Operation extends Entity
     
     /**
     * Sets the lastActionDateTime
+    * The time of the last action of the operation.
     *
     * @param \DateTime $val The lastActionDateTime
     *

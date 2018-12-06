@@ -28,6 +28,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
 {
     /**
     * Gets the passwordBlockFingerprintUnlock
+    * Indicates whether or not to block fingerprint unlock.
     *
     * @return bool The passwordBlockFingerprintUnlock
     */
@@ -42,6 +43,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordBlockFingerprintUnlock
+    * Indicates whether or not to block fingerprint unlock.
     *
     * @param bool $val The passwordBlockFingerprintUnlock
     *
@@ -55,6 +57,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordBlockTrustAgents
+    * Indicates whether or not to block Smart Lock and other trust agents.
     *
     * @return bool The passwordBlockTrustAgents
     */
@@ -69,6 +72,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordBlockTrustAgents
+    * Indicates whether or not to block Smart Lock and other trust agents.
     *
     * @param bool $val The passwordBlockTrustAgents
     *
@@ -82,6 +86,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordExpirationDays
+    * Number of days before the password expires. Valid values 1 to 365
     *
     * @return int The passwordExpirationDays
     */
@@ -96,6 +101,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordExpirationDays
+    * Number of days before the password expires. Valid values 1 to 365
     *
     * @param int $val The passwordExpirationDays
     *
@@ -109,6 +115,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordMinimumLength
+    * Minimum length of passwords. Valid values 4 to 16
     *
     * @return int The passwordMinimumLength
     */
@@ -123,6 +130,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordMinimumLength
+    * Minimum length of passwords. Valid values 4 to 16
     *
     * @param int $val The passwordMinimumLength
     *
@@ -136,6 +144,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordMinutesOfInactivityBeforeScreenTimeout
+    * Minutes of inactivity before the screen times out.
     *
     * @return int The passwordMinutesOfInactivityBeforeScreenTimeout
     */
@@ -150,6 +159,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordMinutesOfInactivityBeforeScreenTimeout
+    * Minutes of inactivity before the screen times out.
     *
     * @param int $val The passwordMinutesOfInactivityBeforeScreenTimeout
     *
@@ -163,6 +173,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordPreviousPasswordBlockCount
+    * Number of previous passwords to block. Valid values 0 to 24
     *
     * @return int The passwordPreviousPasswordBlockCount
     */
@@ -177,6 +188,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordPreviousPasswordBlockCount
+    * Number of previous passwords to block. Valid values 0 to 24
     *
     * @param int $val The passwordPreviousPasswordBlockCount
     *
@@ -190,6 +202,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordSignInFailureCountBeforeFactoryReset
+    * Number of sign in failures allowed before factory reset. Valid values 4 to 11
     *
     * @return int The passwordSignInFailureCountBeforeFactoryReset
     */
@@ -204,6 +217,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordSignInFailureCountBeforeFactoryReset
+    * Number of sign in failures allowed before factory reset. Valid values 4 to 11
     *
     * @param int $val The passwordSignInFailureCountBeforeFactoryReset
     *
@@ -217,6 +231,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordRequiredType
+    * Type of password that is required. Possible values are: deviceDefault, lowSecurityBiometric, required, atLeastNumeric, numericComplex, atLeastAlphabetic, atLeastAlphanumeric, alphanumericWithSymbols.
     *
     * @return AndroidWorkProfileRequiredPasswordType The passwordRequiredType
     */
@@ -235,6 +250,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordRequiredType
+    * Type of password that is required. Possible values are: deviceDefault, lowSecurityBiometric, required, atLeastNumeric, numericComplex, atLeastAlphabetic, atLeastAlphanumeric, alphanumericWithSymbols.
     *
     * @param AndroidWorkProfileRequiredPasswordType $val The passwordRequiredType
     *
@@ -248,6 +264,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the workProfileDataSharingType
+    * Type of data sharing that is allowed. Possible values are: deviceDefault, preventAny, allowPersonalToWork, noRestrictions.
     *
     * @return AndroidWorkProfileCrossProfileDataSharingType The workProfileDataSharingType
     */
@@ -266,6 +283,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the workProfileDataSharingType
+    * Type of data sharing that is allowed. Possible values are: deviceDefault, preventAny, allowPersonalToWork, noRestrictions.
     *
     * @param AndroidWorkProfileCrossProfileDataSharingType $val The workProfileDataSharingType
     *
@@ -279,6 +297,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the workProfileBlockNotificationsWhileDeviceLocked
+    * Indicates whether or not to block notifications while device locked.
     *
     * @return bool The workProfileBlockNotificationsWhileDeviceLocked
     */
@@ -293,6 +312,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the workProfileBlockNotificationsWhileDeviceLocked
+    * Indicates whether or not to block notifications while device locked.
     *
     * @param bool $val The workProfileBlockNotificationsWhileDeviceLocked
     *
@@ -306,6 +326,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the workProfileBlockAddingAccounts
+    * Block users from adding/removing accounts in work profile.
     *
     * @return bool The workProfileBlockAddingAccounts
     */
@@ -320,6 +341,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the workProfileBlockAddingAccounts
+    * Block users from adding/removing accounts in work profile.
     *
     * @param bool $val The workProfileBlockAddingAccounts
     *
@@ -333,6 +355,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the workProfileBluetoothEnableContactSharing
+    * Allow bluetooth devices to access enterprise contacts.
     *
     * @return bool The workProfileBluetoothEnableContactSharing
     */
@@ -347,6 +370,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the workProfileBluetoothEnableContactSharing
+    * Allow bluetooth devices to access enterprise contacts.
     *
     * @param bool $val The workProfileBluetoothEnableContactSharing
     *
@@ -360,6 +384,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the workProfileBlockScreenCapture
+    * Block screen capture in work profile.
     *
     * @return bool The workProfileBlockScreenCapture
     */
@@ -374,6 +399,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the workProfileBlockScreenCapture
+    * Block screen capture in work profile.
     *
     * @param bool $val The workProfileBlockScreenCapture
     *
@@ -387,6 +413,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the workProfileBlockCrossProfileCallerId
+    * Block display work profile caller ID in personal profile.
     *
     * @return bool The workProfileBlockCrossProfileCallerId
     */
@@ -401,6 +428,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the workProfileBlockCrossProfileCallerId
+    * Block display work profile caller ID in personal profile.
     *
     * @param bool $val The workProfileBlockCrossProfileCallerId
     *
@@ -414,6 +442,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the workProfileBlockCamera
+    * Block work profile camera.
     *
     * @return bool The workProfileBlockCamera
     */
@@ -428,6 +457,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the workProfileBlockCamera
+    * Block work profile camera.
     *
     * @param bool $val The workProfileBlockCamera
     *
@@ -441,6 +471,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the workProfileBlockCrossProfileContactsSearch
+    * Block work profile contacts availability in personal profile.
     *
     * @return bool The workProfileBlockCrossProfileContactsSearch
     */
@@ -455,6 +486,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the workProfileBlockCrossProfileContactsSearch
+    * Block work profile contacts availability in personal profile.
     *
     * @param bool $val The workProfileBlockCrossProfileContactsSearch
     *
@@ -468,6 +500,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the workProfileBlockCrossProfileCopyPaste
+    * Boolean that indicates if the setting disallow cross profile copy/paste is enabled.
     *
     * @return bool The workProfileBlockCrossProfileCopyPaste
     */
@@ -482,6 +515,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the workProfileBlockCrossProfileCopyPaste
+    * Boolean that indicates if the setting disallow cross profile copy/paste is enabled.
     *
     * @param bool $val The workProfileBlockCrossProfileCopyPaste
     *
@@ -495,6 +529,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the workProfileDefaultAppPermissionPolicy
+    * Type of password that is required. Possible values are: deviceDefault, prompt, autoGrant, autoDeny.
     *
     * @return AndroidWorkProfileDefaultAppPermissionPolicyType The workProfileDefaultAppPermissionPolicy
     */
@@ -513,6 +548,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the workProfileDefaultAppPermissionPolicy
+    * Type of password that is required. Possible values are: deviceDefault, prompt, autoGrant, autoDeny.
     *
     * @param AndroidWorkProfileDefaultAppPermissionPolicyType $val The workProfileDefaultAppPermissionPolicy
     *
@@ -526,6 +562,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the workProfilePasswordBlockFingerprintUnlock
+    * Indicates whether or not to block fingerprint unlock for work profile.
     *
     * @return bool The workProfilePasswordBlockFingerprintUnlock
     */
@@ -540,6 +577,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the workProfilePasswordBlockFingerprintUnlock
+    * Indicates whether or not to block fingerprint unlock for work profile.
     *
     * @param bool $val The workProfilePasswordBlockFingerprintUnlock
     *
@@ -553,6 +591,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the workProfilePasswordBlockTrustAgents
+    * Indicates whether or not to block Smart Lock and other trust agents for work profile.
     *
     * @return bool The workProfilePasswordBlockTrustAgents
     */
@@ -567,6 +606,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the workProfilePasswordBlockTrustAgents
+    * Indicates whether or not to block Smart Lock and other trust agents for work profile.
     *
     * @param bool $val The workProfilePasswordBlockTrustAgents
     *
@@ -580,6 +620,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the workProfilePasswordExpirationDays
+    * Number of days before the work profile password expires. Valid values 1 to 365
     *
     * @return int The workProfilePasswordExpirationDays
     */
@@ -594,6 +635,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the workProfilePasswordExpirationDays
+    * Number of days before the work profile password expires. Valid values 1 to 365
     *
     * @param int $val The workProfilePasswordExpirationDays
     *
@@ -607,6 +649,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the workProfilePasswordMinimumLength
+    * Minimum length of work profile password. Valid values 4 to 16
     *
     * @return int The workProfilePasswordMinimumLength
     */
@@ -621,6 +664,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the workProfilePasswordMinimumLength
+    * Minimum length of work profile password. Valid values 4 to 16
     *
     * @param int $val The workProfilePasswordMinimumLength
     *
@@ -634,6 +678,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the workProfilePasswordMinNumericCharacters
+    * Minimum # of numeric characters required in work profile password. Valid values 1 to 10
     *
     * @return int The workProfilePasswordMinNumericCharacters
     */
@@ -648,6 +693,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the workProfilePasswordMinNumericCharacters
+    * Minimum # of numeric characters required in work profile password. Valid values 1 to 10
     *
     * @param int $val The workProfilePasswordMinNumericCharacters
     *
@@ -661,6 +707,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the workProfilePasswordMinNonLetterCharacters
+    * Minimum # of non-letter characters required in work profile password. Valid values 1 to 10
     *
     * @return int The workProfilePasswordMinNonLetterCharacters
     */
@@ -675,6 +722,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the workProfilePasswordMinNonLetterCharacters
+    * Minimum # of non-letter characters required in work profile password. Valid values 1 to 10
     *
     * @param int $val The workProfilePasswordMinNonLetterCharacters
     *
@@ -688,6 +736,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the workProfilePasswordMinLetterCharacters
+    * Minimum # of letter characters required in work profile password. Valid values 1 to 10
     *
     * @return int The workProfilePasswordMinLetterCharacters
     */
@@ -702,6 +751,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the workProfilePasswordMinLetterCharacters
+    * Minimum # of letter characters required in work profile password. Valid values 1 to 10
     *
     * @param int $val The workProfilePasswordMinLetterCharacters
     *
@@ -715,6 +765,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the workProfilePasswordMinLowerCaseCharacters
+    * Minimum # of lower-case characters required in work profile password. Valid values 1 to 10
     *
     * @return int The workProfilePasswordMinLowerCaseCharacters
     */
@@ -729,6 +780,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the workProfilePasswordMinLowerCaseCharacters
+    * Minimum # of lower-case characters required in work profile password. Valid values 1 to 10
     *
     * @param int $val The workProfilePasswordMinLowerCaseCharacters
     *
@@ -742,6 +794,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the workProfilePasswordMinUpperCaseCharacters
+    * Minimum # of upper-case characters required in work profile password. Valid values 1 to 10
     *
     * @return int The workProfilePasswordMinUpperCaseCharacters
     */
@@ -756,6 +809,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the workProfilePasswordMinUpperCaseCharacters
+    * Minimum # of upper-case characters required in work profile password. Valid values 1 to 10
     *
     * @param int $val The workProfilePasswordMinUpperCaseCharacters
     *
@@ -769,6 +823,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the workProfilePasswordMinSymbolCharacters
+    * Minimum # of symbols required in work profile password. Valid values 1 to 10
     *
     * @return int The workProfilePasswordMinSymbolCharacters
     */
@@ -783,6 +838,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the workProfilePasswordMinSymbolCharacters
+    * Minimum # of symbols required in work profile password. Valid values 1 to 10
     *
     * @param int $val The workProfilePasswordMinSymbolCharacters
     *
@@ -796,6 +852,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the workProfilePasswordMinutesOfInactivityBeforeScreenTimeout
+    * Minutes of inactivity before the screen times out.
     *
     * @return int The workProfilePasswordMinutesOfInactivityBeforeScreenTimeout
     */
@@ -810,6 +867,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the workProfilePasswordMinutesOfInactivityBeforeScreenTimeout
+    * Minutes of inactivity before the screen times out.
     *
     * @param int $val The workProfilePasswordMinutesOfInactivityBeforeScreenTimeout
     *
@@ -823,6 +881,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the workProfilePasswordPreviousPasswordBlockCount
+    * Number of previous work profile passwords to block. Valid values 0 to 24
     *
     * @return int The workProfilePasswordPreviousPasswordBlockCount
     */
@@ -837,6 +896,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the workProfilePasswordPreviousPasswordBlockCount
+    * Number of previous work profile passwords to block. Valid values 0 to 24
     *
     * @param int $val The workProfilePasswordPreviousPasswordBlockCount
     *
@@ -850,6 +910,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the workProfilePasswordSignInFailureCountBeforeFactoryReset
+    * Number of sign in failures allowed before work profile is removed and all corporate data deleted. Valid values 4 to 11
     *
     * @return int The workProfilePasswordSignInFailureCountBeforeFactoryReset
     */
@@ -864,6 +925,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the workProfilePasswordSignInFailureCountBeforeFactoryReset
+    * Number of sign in failures allowed before work profile is removed and all corporate data deleted. Valid values 4 to 11
     *
     * @param int $val The workProfilePasswordSignInFailureCountBeforeFactoryReset
     *
@@ -877,6 +939,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the workProfilePasswordRequiredType
+    * Type of work profile password that is required. Possible values are: deviceDefault, lowSecurityBiometric, required, atLeastNumeric, numericComplex, atLeastAlphabetic, atLeastAlphanumeric, alphanumericWithSymbols.
     *
     * @return AndroidWorkProfileRequiredPasswordType The workProfilePasswordRequiredType
     */
@@ -895,6 +958,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the workProfilePasswordRequiredType
+    * Type of work profile password that is required. Possible values are: deviceDefault, lowSecurityBiometric, required, atLeastNumeric, numericComplex, atLeastAlphabetic, atLeastAlphanumeric, alphanumericWithSymbols.
     *
     * @param AndroidWorkProfileRequiredPasswordType $val The workProfilePasswordRequiredType
     *
@@ -908,6 +972,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the workProfileRequirePassword
+    * Password is required or not for work profile
     *
     * @return bool The workProfileRequirePassword
     */
@@ -922,6 +987,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the workProfileRequirePassword
+    * Password is required or not for work profile
     *
     * @param bool $val The workProfileRequirePassword
     *
@@ -935,6 +1001,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the securityRequireVerifyApps
+    * Require the Android Verify apps feature is turned on.
     *
     * @return bool The securityRequireVerifyApps
     */
@@ -949,6 +1016,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the securityRequireVerifyApps
+    * Require the Android Verify apps feature is turned on.
     *
     * @param bool $val The securityRequireVerifyApps
     *

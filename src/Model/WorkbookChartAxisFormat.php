@@ -28,6 +28,7 @@ class WorkbookChartAxisFormat extends Entity
 {
     /**
     * Gets the font
+    * Represents the font attributes (font name, font size, color, etc.) for a chart axis element. Read-only.
     *
     * @return WorkbookChartFont The font
     */
@@ -46,6 +47,7 @@ class WorkbookChartAxisFormat extends Entity
     
     /**
     * Sets the font
+    * Represents the font attributes (font name, font size, color, etc.) for a chart axis element. Read-only.
     *
     * @param WorkbookChartFont $val The font
     *
@@ -59,6 +61,7 @@ class WorkbookChartAxisFormat extends Entity
     
     /**
     * Gets the line
+    * Represents chart line formatting. Read-only.
     *
     * @return WorkbookChartLineFormat The line
     */
@@ -77,6 +80,7 @@ class WorkbookChartAxisFormat extends Entity
     
     /**
     * Sets the line
+    * Represents chart line formatting. Read-only.
     *
     * @param WorkbookChartLineFormat $val The line
     *

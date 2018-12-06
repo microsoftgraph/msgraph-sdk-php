@@ -27,6 +27,7 @@ class UserSecurityState extends Entity
 {
     /**
     * Gets the aadUserId
+    * AAD User object identifier (GUID) - represents the physical/multi-account user entity.
     *
     * @return string The aadUserId
     */
@@ -41,6 +42,7 @@ class UserSecurityState extends Entity
 
     /**
     * Sets the aadUserId
+    * AAD User object identifier (GUID) - represents the physical/multi-account user entity.
     *
     * @param string $val The value of the aadUserId
     *
@@ -53,6 +55,7 @@ class UserSecurityState extends Entity
     }
     /**
     * Gets the accountName
+    * Account name of user account (without Active Directory domain or DNS domain) - (also called mailNickName).
     *
     * @return string The accountName
     */
@@ -67,6 +70,7 @@ class UserSecurityState extends Entity
 
     /**
     * Sets the accountName
+    * Account name of user account (without Active Directory domain or DNS domain) - (also called mailNickName).
     *
     * @param string $val The value of the accountName
     *
@@ -79,6 +83,7 @@ class UserSecurityState extends Entity
     }
     /**
     * Gets the domainName
+    * NetBIOS/Active Directory domain of user account (that is, domain/account format).
     *
     * @return string The domainName
     */
@@ -93,6 +98,7 @@ class UserSecurityState extends Entity
 
     /**
     * Sets the domainName
+    * NetBIOS/Active Directory domain of user account (that is, domain/account format).
     *
     * @param string $val The value of the domainName
     *
@@ -106,6 +112,7 @@ class UserSecurityState extends Entity
 
     /**
     * Gets the emailRole
+    * For email-related alerts - user account's email 'role'. Possible values are: unknown, sender, recipient.
     *
     * @return EmailRole The emailRole
     */
@@ -124,6 +131,7 @@ class UserSecurityState extends Entity
 
     /**
     * Sets the emailRole
+    * For email-related alerts - user account's email 'role'. Possible values are: unknown, sender, recipient.
     *
     * @param EmailRole $val The value to assign to the emailRole
     *
@@ -136,6 +144,7 @@ class UserSecurityState extends Entity
     }
     /**
     * Gets the isVpn
+    * Indicates whether the user logged on through a VPN.
     *
     * @return bool The isVpn
     */
@@ -150,6 +159,7 @@ class UserSecurityState extends Entity
 
     /**
     * Sets the isVpn
+    * Indicates whether the user logged on through a VPN.
     *
     * @param bool $val The value of the isVpn
     *
@@ -163,6 +173,7 @@ class UserSecurityState extends Entity
 
     /**
     * Gets the logonDateTime
+    * Time at which the sign-in occurred. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @return \DateTime The logonDateTime
     */
@@ -181,6 +192,7 @@ class UserSecurityState extends Entity
 
     /**
     * Sets the logonDateTime
+    * Time at which the sign-in occurred. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @param \DateTime $val The value to assign to the logonDateTime
     *
@@ -193,6 +205,7 @@ class UserSecurityState extends Entity
     }
     /**
     * Gets the logonId
+    * User sign-in ID.
     *
     * @return string The logonId
     */
@@ -207,6 +220,7 @@ class UserSecurityState extends Entity
 
     /**
     * Sets the logonId
+    * User sign-in ID.
     *
     * @param string $val The value of the logonId
     *
@@ -219,6 +233,7 @@ class UserSecurityState extends Entity
     }
     /**
     * Gets the logonIp
+    * IP Address the sign-in request originated from.
     *
     * @return string The logonIp
     */
@@ -233,6 +248,7 @@ class UserSecurityState extends Entity
 
     /**
     * Sets the logonIp
+    * IP Address the sign-in request originated from.
     *
     * @param string $val The value of the logonIp
     *
@@ -245,6 +261,7 @@ class UserSecurityState extends Entity
     }
     /**
     * Gets the logonLocation
+    * Location (by IP address mapping) associated with a user sign-in event by this user.
     *
     * @return string The logonLocation
     */
@@ -259,6 +276,7 @@ class UserSecurityState extends Entity
 
     /**
     * Sets the logonLocation
+    * Location (by IP address mapping) associated with a user sign-in event by this user.
     *
     * @param string $val The value of the logonLocation
     *
@@ -272,6 +290,7 @@ class UserSecurityState extends Entity
 
     /**
     * Gets the logonType
+    * Method of user sign in. Possible values are: unknown, interactive, remoteInteractive, network, batch, service.
     *
     * @return LogonType The logonType
     */
@@ -290,6 +309,7 @@ class UserSecurityState extends Entity
 
     /**
     * Sets the logonType
+    * Method of user sign in. Possible values are: unknown, interactive, remoteInteractive, network, batch, service.
     *
     * @param LogonType $val The value to assign to the logonType
     *
@@ -302,6 +322,7 @@ class UserSecurityState extends Entity
     }
     /**
     * Gets the onPremisesSecurityIdentifier
+    * Active Directory (on-premises) Security Identifier (SID) of the user.
     *
     * @return string The onPremisesSecurityIdentifier
     */
@@ -316,6 +337,7 @@ class UserSecurityState extends Entity
 
     /**
     * Sets the onPremisesSecurityIdentifier
+    * Active Directory (on-premises) Security Identifier (SID) of the user.
     *
     * @param string $val The value of the onPremisesSecurityIdentifier
     *
@@ -328,6 +350,7 @@ class UserSecurityState extends Entity
     }
     /**
     * Gets the riskScore
+    * Provider-generated/calculated risk score of the user account. Recommended value range of 0-1, which equates to a percentage.
     *
     * @return string The riskScore
     */
@@ -342,6 +365,7 @@ class UserSecurityState extends Entity
 
     /**
     * Sets the riskScore
+    * Provider-generated/calculated risk score of the user account. Recommended value range of 0-1, which equates to a percentage.
     *
     * @param string $val The value of the riskScore
     *
@@ -355,6 +379,7 @@ class UserSecurityState extends Entity
 
     /**
     * Gets the userAccountType
+    * User account type (group membership), per Windows definition. Possible values are: unknown, standard, power, administrator.
     *
     * @return UserAccountSecurityType The userAccountType
     */
@@ -373,6 +398,7 @@ class UserSecurityState extends Entity
 
     /**
     * Sets the userAccountType
+    * User account type (group membership), per Windows definition. Possible values are: unknown, standard, power, administrator.
     *
     * @param UserAccountSecurityType $val The value to assign to the userAccountType
     *
@@ -385,6 +411,7 @@ class UserSecurityState extends Entity
     }
     /**
     * Gets the userPrincipalName
+    * User sign-in name - internet format: (user account name)@(user account DNS domain name).
     *
     * @return string The userPrincipalName
     */
@@ -399,6 +426,7 @@ class UserSecurityState extends Entity
 
     /**
     * Sets the userPrincipalName
+    * User sign-in name - internet format: (user account name)@(user account DNS domain name).
     *
     * @param string $val The value of the userPrincipalName
     *

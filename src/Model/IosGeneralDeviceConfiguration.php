@@ -2243,6 +2243,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the kioskModeBuiltInAppId
+    * ID for built-in apps to use for kiosk mode. Used when KioskModeManagedAppId and KioskModeAppStoreUrl are not set.
     *
     * @return string The kioskModeBuiltInAppId
     */
@@ -2257,6 +2258,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the kioskModeBuiltInAppId
+    * ID for built-in apps to use for kiosk mode. Used when KioskModeManagedAppId and KioskModeAppStoreUrl are not set.
     *
     * @param string $val The kioskModeBuiltInAppId
     *

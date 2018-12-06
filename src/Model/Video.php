@@ -195,7 +195,7 @@ class Video extends Entity
     }
     /**
     * Gets the fourCC
-    * "Four character code" name of the video format.
+    * 'Four character code' name of the video format.
     *
     * @return string The fourCC
     */
@@ -210,7 +210,7 @@ class Video extends Entity
 
     /**
     * Sets the fourCC
-    * "Four character code" name of the video format.
+    * 'Four character code' name of the video format.
     *
     * @param string $val The value of the fourCC
     *
@@ -223,6 +223,7 @@ class Video extends Entity
     }
     /**
     * Gets the frameRate
+    * Frame rate of the video.
     *
     * @return float The frameRate
     */
@@ -237,6 +238,7 @@ class Video extends Entity
 
     /**
     * Sets the frameRate
+    * Frame rate of the video.
     *
     * @param float $val The value of the frameRate
     *

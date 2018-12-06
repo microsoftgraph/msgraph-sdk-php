@@ -27,6 +27,7 @@ class AlertTrigger extends Entity
 {
     /**
     * Gets the name
+    * Name of the property serving as a detection trigger.
     *
     * @return string The name
     */
@@ -41,6 +42,7 @@ class AlertTrigger extends Entity
 
     /**
     * Sets the name
+    * Name of the property serving as a detection trigger.
     *
     * @param string $val The value of the name
     *
@@ -53,6 +55,7 @@ class AlertTrigger extends Entity
     }
     /**
     * Gets the type
+    * Type of the property in the key:value pair for interpretation. For example, String, Boolean, etc.
     *
     * @return string The type
     */
@@ -67,6 +70,7 @@ class AlertTrigger extends Entity
 
     /**
     * Sets the type
+    * Type of the property in the key:value pair for interpretation. For example, String, Boolean, etc.
     *
     * @param string $val The value of the type
     *
@@ -79,6 +83,7 @@ class AlertTrigger extends Entity
     }
     /**
     * Gets the value
+    * Value of the property serving as a detection trigger.
     *
     * @return string The value
     */
@@ -93,6 +98,7 @@ class AlertTrigger extends Entity
 
     /**
     * Sets the value
+    * Value of the property serving as a detection trigger.
     *
     * @param string $val The value of the value
     *

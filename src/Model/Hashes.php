@@ -27,7 +27,7 @@ class Hashes extends Entity
 {
     /**
     * Gets the crc32Hash
-    * The CRC32 value of the file (if available). Read-only.
+    * The CRC32 value of the file in little endian (if available). Read-only.
     *
     * @return string The crc32Hash
     */
@@ -42,7 +42,7 @@ class Hashes extends Entity
 
     /**
     * Sets the crc32Hash
-    * The CRC32 value of the file (if available). Read-only.
+    * The CRC32 value of the file in little endian (if available). Read-only.
     *
     * @param string $val The value of the crc32Hash
     *

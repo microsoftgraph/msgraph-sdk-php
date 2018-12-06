@@ -61,7 +61,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Gets the screenCaptureBlocked
-    * Indicates whether screen capture is blocked.
+    * Indicates whether screen capture is blocked. (Android only)
     *
     * @return bool The screenCaptureBlocked
     */
@@ -76,7 +76,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Sets the screenCaptureBlocked
-    * Indicates whether screen capture is blocked.
+    * Indicates whether screen capture is blocked. (Android only)
     *
     * @param bool $val The screenCaptureBlocked
     *
@@ -119,7 +119,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Gets the disableAppEncryptionIfDeviceEncryptionIsEnabled
-    * When this setting is enabled, app level encryption is disabled if device level encryption is enabled
+    * When this setting is enabled, app level encryption is disabled if device level encryption is enabled. (Android only)
     *
     * @return bool The disableAppEncryptionIfDeviceEncryptionIsEnabled
     */
@@ -134,7 +134,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Sets the disableAppEncryptionIfDeviceEncryptionIsEnabled
-    * When this setting is enabled, app level encryption is disabled if device level encryption is enabled
+    * When this setting is enabled, app level encryption is disabled if device level encryption is enabled. (Android only)
     *
     * @param bool $val The disableAppEncryptionIfDeviceEncryptionIsEnabled
     *
@@ -148,7 +148,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Gets the minimumRequiredSdkVersion
-    * Versions less than the specified version will block the managed app from accessing company data.
+    * Versions less than the specified version will block the managed app from accessing company data. (iOS Only)
     *
     * @return string The minimumRequiredSdkVersion
     */
@@ -163,7 +163,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Sets the minimumRequiredSdkVersion
-    * Versions less than the specified version will block the managed app from accessing company data.
+    * Versions less than the specified version will block the managed app from accessing company data. (iOS Only)
     *
     * @param string $val The minimumRequiredSdkVersion
     *
@@ -236,7 +236,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Gets the minimumRequiredPatchVersion
-    * Define the oldest required Android security patch level a user can have to gain secure access to the app.
+    * Define the oldest required Android security patch level a user can have to gain secure access to the app. (Android only)
     *
     * @return string The minimumRequiredPatchVersion
     */
@@ -251,7 +251,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Sets the minimumRequiredPatchVersion
-    * Define the oldest required Android security patch level a user can have to gain secure access to the app.
+    * Define the oldest required Android security patch level a user can have to gain secure access to the app. (Android only)
     *
     * @param string $val The minimumRequiredPatchVersion
     *
@@ -265,7 +265,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Gets the minimumWarningPatchVersion
-    * Define the oldest recommended Android security patch level a user can have for secure access to the app.
+    * Define the oldest recommended Android security patch level a user can have for secure access to the app. (Android only)
     *
     * @return string The minimumWarningPatchVersion
     */
@@ -280,7 +280,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Sets the minimumWarningPatchVersion
-    * Define the oldest recommended Android security patch level a user can have for secure access to the app.
+    * Define the oldest recommended Android security patch level a user can have for secure access to the app. (Android only)
     *
     * @param string $val The minimumWarningPatchVersion
     *
@@ -294,7 +294,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Gets the faceIdBlocked
-    * Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True.
+    * Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True. (iOS Only)
     *
     * @return bool The faceIdBlocked
     */
@@ -309,7 +309,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Sets the faceIdBlocked
-    * Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True.
+    * Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True. (iOS Only)
     *
     * @param bool $val The faceIdBlocked
     *

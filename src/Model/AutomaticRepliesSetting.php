@@ -28,7 +28,7 @@ class AutomaticRepliesSetting extends Entity
 
     /**
     * Gets the status
-    * Configurations status for automatic replies. Possible values are: disabled, alwaysEnabled, scheduled.
+    * Configurations status for automatic replies. The possible values are: disabled, alwaysEnabled, scheduled.
     *
     * @return AutomaticRepliesStatus The status
     */
@@ -47,7 +47,7 @@ class AutomaticRepliesSetting extends Entity
 
     /**
     * Sets the status
-    * Configurations status for automatic replies. Possible values are: disabled, alwaysEnabled, scheduled.
+    * Configurations status for automatic replies. The possible values are: disabled, alwaysEnabled, scheduled.
     *
     * @param AutomaticRepliesStatus $val The value to assign to the status
     *
@@ -61,7 +61,7 @@ class AutomaticRepliesSetting extends Entity
 
     /**
     * Gets the externalAudience
-    * The set of audience external to the signed-in user's organization who will receive the ExternalReplyMessage, if Status is AlwaysEnabled or Scheduled. Possible values are: none, contactsOnly, all.
+    * The set of audience external to the signed-in user's organization who will receive the ExternalReplyMessage, if Status is AlwaysEnabled or Scheduled. The possible values are: none, contactsOnly, all.
     *
     * @return ExternalAudienceScope The externalAudience
     */
@@ -80,7 +80,7 @@ class AutomaticRepliesSetting extends Entity
 
     /**
     * Sets the externalAudience
-    * The set of audience external to the signed-in user's organization who will receive the ExternalReplyMessage, if Status is AlwaysEnabled or Scheduled. Possible values are: none, contactsOnly, all.
+    * The set of audience external to the signed-in user's organization who will receive the ExternalReplyMessage, if Status is AlwaysEnabled or Scheduled. The possible values are: none, contactsOnly, all.
     *
     * @param ExternalAudienceScope $val The value to assign to the externalAudience
     *

@@ -28,6 +28,7 @@ class WorkbookChartGridlinesFormat extends Entity
 {
     /**
     * Gets the line
+    * Represents chart line formatting. Read-only.
     *
     * @return WorkbookChartLineFormat The line
     */
@@ -46,6 +47,7 @@ class WorkbookChartGridlinesFormat extends Entity
     
     /**
     * Sets the line
+    * Represents chart line formatting. Read-only.
     *
     * @param WorkbookChartLineFormat $val The line
     *

@@ -28,6 +28,7 @@ class WorkbookRangeFill extends Entity
 {
     /**
     * Gets the color
+    * HTML color code representing the color of the border line, of the form #RRGGBB (e.g. 'FFA500') or as a named HTML color (e.g. 'orange')
     *
     * @return string The color
     */
@@ -42,6 +43,7 @@ class WorkbookRangeFill extends Entity
     
     /**
     * Sets the color
+    * HTML color code representing the color of the border line, of the form #RRGGBB (e.g. 'FFA500') or as a named HTML color (e.g. 'orange')
     *
     * @param string $val The color
     *
