@@ -61,6 +61,7 @@ class DriveItem extends BaseItem
     
     /**
     * Gets the content
+    * The content stream, if the item represents a file.
     *
     * @return \GuzzleHttp\Psr7\Stream The content
     */
@@ -79,6 +80,7 @@ class DriveItem extends BaseItem
     
     /**
     * Sets the content
+    * The content stream, if the item represents a file.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The content
     *
@@ -385,6 +387,7 @@ class DriveItem extends BaseItem
     
     /**
     * Gets the publication
+    * Provides information about the published or checked-out state of an item, in locations that support such actions. This property is not returned by default. Read-only.
     *
     * @return PublicationFacet The publication
     */
@@ -403,6 +406,7 @@ class DriveItem extends BaseItem
     
     /**
     * Sets the publication
+    * Provides information about the published or checked-out state of an item, in locations that support such actions. This property is not returned by default. Read-only.
     *
     * @param PublicationFacet $val The publication
     *
@@ -735,6 +739,7 @@ class DriveItem extends BaseItem
     
     /**
     * Gets the listItem
+    * For drives in SharePoint, the associated document library list item. Read-only. Nullable.
     *
     * @return ListItem The listItem
     */
@@ -753,6 +758,7 @@ class DriveItem extends BaseItem
     
     /**
     * Sets the listItem
+    * For drives in SharePoint, the associated document library list item. Read-only. Nullable.
     *
     * @param ListItem $val The listItem
     *
@@ -856,6 +862,7 @@ class DriveItem extends BaseItem
     
     /**
     * Gets the workbook
+    * For files that are Excel spreadsheets, accesses the workbook API to work with the spreadsheet's contents. Nullable.
     *
     * @return Workbook The workbook
     */
@@ -874,6 +881,7 @@ class DriveItem extends BaseItem
     
     /**
     * Sets the workbook
+    * For files that are Excel spreadsheets, accesses the workbook API to work with the spreadsheet's contents. Nullable.
     *
     * @param Workbook $val The workbook
     *

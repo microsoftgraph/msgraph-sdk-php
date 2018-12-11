@@ -27,6 +27,7 @@ class RecentNotebook extends Entity
 {
     /**
     * Gets the displayName
+    * The name of the notebook.
     *
     * @return string The displayName
     */
@@ -41,6 +42,7 @@ class RecentNotebook extends Entity
 
     /**
     * Sets the displayName
+    * The name of the notebook.
     *
     * @param string $val The value of the displayName
     *

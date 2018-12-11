@@ -57,7 +57,7 @@ class TermsAndConditionsAcceptanceStatus extends Entity
     
     /**
     * Gets the acceptedVersion
-    * Most recent version number of the T&C accepted by the user.
+    * Most recent version number of the T&amp;C accepted by the user.
     *
     * @return int The acceptedVersion
     */
@@ -72,7 +72,7 @@ class TermsAndConditionsAcceptanceStatus extends Entity
     
     /**
     * Sets the acceptedVersion
-    * Most recent version number of the T&C accepted by the user.
+    * Most recent version number of the T&amp;C accepted by the user.
     *
     * @param int $val The acceptedVersion
     *

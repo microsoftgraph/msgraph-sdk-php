@@ -28,6 +28,7 @@ class WorkbookWorksheetProtection extends Entity
 {
     /**
     * Gets the options
+    * Sheet protection options. Read-only.
     *
     * @return WorkbookWorksheetProtectionOptions The options
     */
@@ -46,6 +47,7 @@ class WorkbookWorksheetProtection extends Entity
     
     /**
     * Sets the options
+    * Sheet protection options. Read-only.
     *
     * @param WorkbookWorksheetProtectionOptions $val The options
     *
@@ -59,6 +61,7 @@ class WorkbookWorksheetProtection extends Entity
     
     /**
     * Gets the protected
+    * Indicates if the worksheet is protected.  Read-only.
     *
     * @return bool The protected
     */
@@ -73,6 +76,7 @@ class WorkbookWorksheetProtection extends Entity
     
     /**
     * Sets the protected
+    * Indicates if the worksheet is protected.  Read-only.
     *
     * @param bool $val The protected
     *

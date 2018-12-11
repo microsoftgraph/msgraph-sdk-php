@@ -442,6 +442,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the firewallEnabled
+    * Whether the firewall should be enabled or not.
     *
     * @return bool The firewallEnabled
     */
@@ -456,6 +457,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the firewallEnabled
+    * Whether the firewall should be enabled or not.
     *
     * @param bool $val The firewallEnabled
     *
@@ -469,6 +471,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the firewallBlockAllIncoming
+    * Corresponds to the 'Block all incoming connections' option.
     *
     * @return bool The firewallBlockAllIncoming
     */
@@ -483,6 +486,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the firewallBlockAllIncoming
+    * Corresponds to the 'Block all incoming connections' option.
     *
     * @param bool $val The firewallBlockAllIncoming
     *
@@ -496,6 +500,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the firewallEnableStealthMode
+    * Corresponds to 'Enable stealth mode.'
     *
     * @return bool The firewallEnableStealthMode
     */
@@ -510,6 +515,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the firewallEnableStealthMode
+    * Corresponds to 'Enable stealth mode.'
     *
     * @param bool $val The firewallEnableStealthMode
     *

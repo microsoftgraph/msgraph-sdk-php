@@ -28,6 +28,7 @@ class EducationOrganization extends Entity
 {
     /**
     * Gets the displayName
+    * Organization display name.
     *
     * @return string The displayName
     */
@@ -42,6 +43,7 @@ class EducationOrganization extends Entity
     
     /**
     * Sets the displayName
+    * Organization display name.
     *
     * @param string $val The displayName
     *
@@ -55,6 +57,7 @@ class EducationOrganization extends Entity
     
     /**
     * Gets the description
+    * Organization description.
     *
     * @return string The description
     */
@@ -69,6 +72,7 @@ class EducationOrganization extends Entity
     
     /**
     * Sets the description
+    * Organization description.
     *
     * @param string $val The description
     *
@@ -82,6 +86,7 @@ class EducationOrganization extends Entity
     
     /**
     * Gets the externalSource
+    * Source where this organization was created from. The possible values are: sis, manual, unknownFutureValue.
     *
     * @return EducationExternalSource The externalSource
     */
@@ -100,6 +105,7 @@ class EducationOrganization extends Entity
     
     /**
     * Sets the externalSource
+    * Source where this organization was created from. The possible values are: sis, manual, unknownFutureValue.
     *
     * @param EducationExternalSource $val The externalSource
     *

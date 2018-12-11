@@ -27,6 +27,7 @@ class PasswordProfile extends Entity
 {
     /**
     * Gets the password
+    * The password for the user. This property is required when a user is created. It can be updated, but the user will be required to change the password on the next login. The password must satisfy minimum requirements as specified by the user’s passwordPolicies property. By default, a strong password is required.
     *
     * @return string The password
     */
@@ -41,6 +42,7 @@ class PasswordProfile extends Entity
 
     /**
     * Sets the password
+    * The password for the user. This property is required when a user is created. It can be updated, but the user will be required to change the password on the next login. The password must satisfy minimum requirements as specified by the user’s passwordPolicies property. By default, a strong password is required.
     *
     * @param string $val The value of the password
     *
@@ -53,6 +55,7 @@ class PasswordProfile extends Entity
     }
     /**
     * Gets the forceChangePasswordNextSignIn
+    * true if the user must change her password on the next login; otherwise false.
     *
     * @return bool The forceChangePasswordNextSignIn
     */
@@ -67,6 +70,7 @@ class PasswordProfile extends Entity
 
     /**
     * Sets the forceChangePasswordNextSignIn
+    * true if the user must change her password on the next login; otherwise false.
     *
     * @param bool $val The value of the forceChangePasswordNextSignIn
     *

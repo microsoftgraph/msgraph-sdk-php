@@ -28,6 +28,7 @@ class WorkbookChartPoint extends Entity
 {
     /**
     * Gets the value
+    * Returns the value of a chart point. Read-only.
     *
     * @return string The value
     */
@@ -42,6 +43,7 @@ class WorkbookChartPoint extends Entity
     
     /**
     * Sets the value
+    * Returns the value of a chart point. Read-only.
     *
     * @param string $val The value
     *
@@ -55,6 +57,7 @@ class WorkbookChartPoint extends Entity
     
     /**
     * Gets the format
+    * Encapsulates the format properties chart point. Read-only.
     *
     * @return WorkbookChartPointFormat The format
     */
@@ -73,6 +76,7 @@ class WorkbookChartPoint extends Entity
     
     /**
     * Sets the format
+    * Encapsulates the format properties chart point. Read-only.
     *
     * @param WorkbookChartPointFormat $val The format
     *

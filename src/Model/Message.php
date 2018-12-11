@@ -94,7 +94,7 @@ class Message extends OutlookItem
     
     /**
     * Gets the hasAttachments
-    * Indicates whether the message has attachments. This property doesn't include inline attachments, so if a message contains only inline attachments, this property is false. To verify the existence of inline attachments, parse the body property to look for a src attribute, such as <IMG src="cid:image001.jpg@01D26CD8.6C05F070">.
+    * Indicates whether the message has attachments. This property doesn't include inline attachments, so if a message contains only inline attachments, this property is false. To verify the existence of inline attachments, parse the body property to look for a src attribute, such as &amp;lt;IMG src='cid:image001.jpg@01D26CD8.6C05F070'&amp;gt;.
     *
     * @return bool The hasAttachments
     */
@@ -109,7 +109,7 @@ class Message extends OutlookItem
     
     /**
     * Sets the hasAttachments
-    * Indicates whether the message has attachments. This property doesn't include inline attachments, so if a message contains only inline attachments, this property is false. To verify the existence of inline attachments, parse the body property to look for a src attribute, such as <IMG src="cid:image001.jpg@01D26CD8.6C05F070">.
+    * Indicates whether the message has attachments. This property doesn't include inline attachments, so if a message contains only inline attachments, this property is false. To verify the existence of inline attachments, parse the body property to look for a src attribute, such as &amp;lt;IMG src='cid:image001.jpg@01D26CD8.6C05F070'&amp;gt;.
     *
     * @param bool $val The hasAttachments
     *
@@ -153,7 +153,7 @@ class Message extends OutlookItem
 
      /** 
      * Gets the internetMessageHeaders
-    * The collection of message headers, defined by RFC5322, that provide details of the network path taken by a message from the sender to the recipient. Read-only.
+    * A collection of message headers defined by RFC5322. The set includes message headers indicating the network path taken by a message from the sender to the recipient. It can also contain custom message headers that hold app data for the message.
      *
      * @return array The internetMessageHeaders
      */
@@ -168,7 +168,7 @@ class Message extends OutlookItem
     
     /** 
     * Sets the internetMessageHeaders
-    * The collection of message headers, defined by RFC5322, that provide details of the network path taken by a message from the sender to the recipient. Read-only.
+    * A collection of message headers defined by RFC5322. The set includes message headers indicating the network path taken by a message from the sender to the recipient. It can also contain custom message headers that hold app data for the message.
     *
     * @param InternetMessageHeader $val The internetMessageHeaders
     *
@@ -335,7 +335,7 @@ class Message extends OutlookItem
     
     /**
     * Gets the sender
-    * The account that is actually used to generate the message.
+    * The account that is actually used to generate the message. In most cases, this value is the same as the from property. You can set this property to a different value when sending a message from a shared mailbox, or sending a message as a delegate. In any case, the value must correspond to the actual mailbox used.
     *
     * @return Recipient The sender
     */
@@ -354,7 +354,7 @@ class Message extends OutlookItem
     
     /**
     * Sets the sender
-    * The account that is actually used to generate the message.
+    * The account that is actually used to generate the message. In most cases, this value is the same as the from property. You can set this property to a different value when sending a message from a shared mailbox, or sending a message as a delegate. In any case, the value must correspond to the actual mailbox used.
     *
     * @param Recipient $val The sender
     *
@@ -368,7 +368,7 @@ class Message extends OutlookItem
     
     /**
     * Gets the from
-    * The mailbox owner and sender of the message.
+    * The mailbox owner and sender of the message. The value must correspond to the actual mailbox used.
     *
     * @return Recipient The from
     */
@@ -387,7 +387,7 @@ class Message extends OutlookItem
     
     /**
     * Sets the from
-    * The mailbox owner and sender of the message.
+    * The mailbox owner and sender of the message. The value must correspond to the actual mailbox used.
     *
     * @param Recipient $val The from
     *
@@ -728,7 +728,7 @@ class Message extends OutlookItem
     
     /**
     * Gets the inferenceClassification
-    * The classification of the message for the user, based on inferred relevance or importance, or on an explicit override. Possible values are: focused or other.
+    * The classification of the message for the user, based on inferred relevance or importance, or on an explicit override. The possible values are: focused or other.
     *
     * @return InferenceClassificationType The inferenceClassification
     */
@@ -747,7 +747,7 @@ class Message extends OutlookItem
     
     /**
     * Sets the inferenceClassification
-    * The classification of the message for the user, based on inferred relevance or importance, or on an explicit override. Possible values are: focused or other.
+    * The classification of the message for the user, based on inferred relevance or importance, or on an explicit override. The possible values are: focused or other.
     *
     * @param InferenceClassificationType $val The inferenceClassification
     *

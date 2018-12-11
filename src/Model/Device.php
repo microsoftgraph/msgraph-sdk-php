@@ -58,6 +58,7 @@ class Device extends DirectoryObject
 
      /** 
      * Gets the alternativeSecurityIds
+    * For internal use only. Not nullable.
      *
      * @return array The alternativeSecurityIds
      */
@@ -72,6 +73,7 @@ class Device extends DirectoryObject
     
     /** 
     * Sets the alternativeSecurityIds
+    * For internal use only. Not nullable.
     *
     * @param AlternativeSecurityId $val The alternativeSecurityIds
     *
@@ -234,7 +236,7 @@ class Device extends DirectoryObject
     
     /**
     * Gets the isCompliant
-    * true if the device complies with Mobile Device Management (MDM) policies; otherwise, false. Read-only.
+    * true if the device complies with Mobile Device Management (MDM) policies; otherwise, false. Read-only. This can only be updated by Intune for any device OS type or by an approved MDM app for Windows OS devices.
     *
     * @return bool The isCompliant
     */
@@ -249,7 +251,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the isCompliant
-    * true if the device complies with Mobile Device Management (MDM) policies; otherwise, false. Read-only.
+    * true if the device complies with Mobile Device Management (MDM) policies; otherwise, false. Read-only. This can only be updated by Intune for any device OS type or by an approved MDM app for Windows OS devices.
     *
     * @param bool $val The isCompliant
     *
@@ -263,7 +265,7 @@ class Device extends DirectoryObject
     
     /**
     * Gets the isManaged
-    * true if the device is managed by a Mobile Device Management (MDM) app; otherwise, false.
+    * true if the device is managed by a Mobile Device Management (MDM) app; otherwise, false. This can only be updated by Intune for any device OS type or by an approved MDM app for Windows OS devices.
     *
     * @return bool The isManaged
     */
@@ -278,7 +280,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the isManaged
-    * true if the device is managed by a Mobile Device Management (MDM) app; otherwise, false.
+    * true if the device is managed by a Mobile Device Management (MDM) app; otherwise, false. This can only be updated by Intune for any device OS type or by an approved MDM app for Windows OS devices.
     *
     * @param bool $val The isManaged
     *
@@ -465,6 +467,36 @@ class Device extends DirectoryObject
     public function setTrustType($val)
     {
         $this->_propDict["trustType"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the memberOf
+    * Groups that this group is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable.
+     *
+     * @return array The memberOf
+     */
+    public function getMemberOf()
+    {
+        if (array_key_exists("memberOf", $this->_propDict)) {
+           return $this->_propDict["memberOf"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the memberOf
+    * Groups that this group is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable.
+    *
+    * @param DirectoryObject $val The memberOf
+    *
+    * @return Device
+    */
+    public function setMemberOf($val)
+    {
+		$this->_propDict["memberOf"] = $val;
         return $this;
     }
     

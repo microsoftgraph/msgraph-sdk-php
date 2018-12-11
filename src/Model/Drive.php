@@ -217,6 +217,7 @@ class Drive extends BaseItem
     
     /**
     * Gets the list
+    * For drives in SharePoint, the underlying document library list. Read-only. Nullable.
     *
     * @return GraphList The list
     */
@@ -235,6 +236,7 @@ class Drive extends BaseItem
     
     /**
     * Sets the list
+    * For drives in SharePoint, the underlying document library list. Read-only. Nullable.
     *
     * @param GraphList $val The list
     *

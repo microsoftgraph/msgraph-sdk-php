@@ -28,6 +28,7 @@ class WorkbookChartAxes extends Entity
 {
     /**
     * Gets the categoryAxis
+    * Represents the category axis in a chart. Read-only.
     *
     * @return WorkbookChartAxis The categoryAxis
     */
@@ -46,6 +47,7 @@ class WorkbookChartAxes extends Entity
     
     /**
     * Sets the categoryAxis
+    * Represents the category axis in a chart. Read-only.
     *
     * @param WorkbookChartAxis $val The categoryAxis
     *
@@ -59,6 +61,7 @@ class WorkbookChartAxes extends Entity
     
     /**
     * Gets the seriesAxis
+    * Represents the series axis of a 3-dimensional chart. Read-only.
     *
     * @return WorkbookChartAxis The seriesAxis
     */
@@ -77,6 +80,7 @@ class WorkbookChartAxes extends Entity
     
     /**
     * Sets the seriesAxis
+    * Represents the series axis of a 3-dimensional chart. Read-only.
     *
     * @param WorkbookChartAxis $val The seriesAxis
     *
@@ -90,6 +94,7 @@ class WorkbookChartAxes extends Entity
     
     /**
     * Gets the valueAxis
+    * Represents the value axis in an axis. Read-only.
     *
     * @return WorkbookChartAxis The valueAxis
     */
@@ -108,6 +113,7 @@ class WorkbookChartAxes extends Entity
     
     /**
     * Sets the valueAxis
+    * Represents the value axis in an axis. Read-only.
     *
     * @param WorkbookChartAxis $val The valueAxis
     *

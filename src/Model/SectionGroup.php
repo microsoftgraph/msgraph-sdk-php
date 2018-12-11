@@ -28,6 +28,7 @@ class SectionGroup extends OnenoteEntityHierarchyModel
 {
     /**
     * Gets the sectionsUrl
+    * The URL for the sections navigation property, which returns all the sections in the section group. Read-only.
     *
     * @return string The sectionsUrl
     */
@@ -42,6 +43,7 @@ class SectionGroup extends OnenoteEntityHierarchyModel
     
     /**
     * Sets the sectionsUrl
+    * The URL for the sections navigation property, which returns all the sections in the section group. Read-only.
     *
     * @param string $val The sectionsUrl
     *
@@ -55,6 +57,7 @@ class SectionGroup extends OnenoteEntityHierarchyModel
     
     /**
     * Gets the sectionGroupsUrl
+    * The URL for the sectionGroups navigation property, which returns all the section groups in the section group. Read-only.
     *
     * @return string The sectionGroupsUrl
     */
@@ -69,6 +72,7 @@ class SectionGroup extends OnenoteEntityHierarchyModel
     
     /**
     * Sets the sectionGroupsUrl
+    * The URL for the sectionGroups navigation property, which returns all the section groups in the section group. Read-only.
     *
     * @param string $val The sectionGroupsUrl
     *
@@ -82,6 +86,7 @@ class SectionGroup extends OnenoteEntityHierarchyModel
     
     /**
     * Gets the parentNotebook
+    * The notebook that contains the section group. Read-only.
     *
     * @return Notebook The parentNotebook
     */
@@ -100,6 +105,7 @@ class SectionGroup extends OnenoteEntityHierarchyModel
     
     /**
     * Sets the parentNotebook
+    * The notebook that contains the section group. Read-only.
     *
     * @param Notebook $val The parentNotebook
     *
@@ -113,6 +119,7 @@ class SectionGroup extends OnenoteEntityHierarchyModel
     
     /**
     * Gets the parentSectionGroup
+    * The section group that contains the section group. Read-only.
     *
     * @return SectionGroup The parentSectionGroup
     */
@@ -131,6 +138,7 @@ class SectionGroup extends OnenoteEntityHierarchyModel
     
     /**
     * Sets the parentSectionGroup
+    * The section group that contains the section group. Read-only.
     *
     * @param SectionGroup $val The parentSectionGroup
     *
@@ -145,6 +153,7 @@ class SectionGroup extends OnenoteEntityHierarchyModel
 
      /** 
      * Gets the sections
+    * The sections in the section group. Read-only. Nullable.
      *
      * @return array The sections
      */
@@ -159,6 +168,7 @@ class SectionGroup extends OnenoteEntityHierarchyModel
     
     /** 
     * Sets the sections
+    * The sections in the section group. Read-only. Nullable.
     *
     * @param OnenoteSection $val The sections
     *
@@ -173,6 +183,7 @@ class SectionGroup extends OnenoteEntityHierarchyModel
 
      /** 
      * Gets the sectionGroups
+    * The section groups in the section. Read-only. Nullable.
      *
      * @return array The sectionGroups
      */
@@ -187,6 +198,7 @@ class SectionGroup extends OnenoteEntityHierarchyModel
     
     /** 
     * Sets the sectionGroups
+    * The section groups in the section. Read-only. Nullable.
     *
     * @param SectionGroup $val The sectionGroups
     *

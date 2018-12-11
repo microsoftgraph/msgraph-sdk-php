@@ -289,7 +289,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the searchEnableRemoteQueries
-    * Indicates whether or not to block remote queries of this computer's index.
+    * Indicates whether or not to block remote queries of this computer’s index.
     *
     * @return bool The searchEnableRemoteQueries
     */
@@ -304,7 +304,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the searchEnableRemoteQueries
-    * Indicates whether or not to block remote queries of this computer's index.
+    * Indicates whether or not to block remote queries of this computer’s index.
     *
     * @param bool $val The searchEnableRemoteQueries
     *
@@ -699,7 +699,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeBlocked
-    * Indicates whether or not to Block the user from using the Microsoft Edge browser.
+    * Indicates whether or not to Block the user from using the Edge browser.
     *
     * @return bool The edgeBlocked
     */
@@ -714,7 +714,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeBlocked
-    * Indicates whether or not to Block the user from using the Microsoft Edge browser.
+    * Indicates whether or not to Block the user from using the Edge browser.
     *
     * @param bool $val The edgeBlocked
     *
@@ -728,7 +728,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeCookiePolicy
-    * Indicates which cookies to block in the Microsoft Edge browser. Possible values are: userDefined, allow, blockThirdParty, blockAll.
+    * Indicates which cookies to block in the Edge browser. Possible values are: userDefined, allow, blockThirdParty, blockAll.
     *
     * @return EdgeCookiePolicy The edgeCookiePolicy
     */
@@ -747,7 +747,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeCookiePolicy
-    * Indicates which cookies to block in the Microsoft Edge browser. Possible values are: userDefined, allow, blockThirdParty, blockAll.
+    * Indicates which cookies to block in the Edge browser. Possible values are: userDefined, allow, blockThirdParty, blockAll.
     *
     * @param EdgeCookiePolicy $val The edgeCookiePolicy
     *
@@ -761,7 +761,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeBlockDeveloperTools
-    * Indicates whether or not to block developer tools in the Microsoft Edge browser.
+    * Indicates whether or not to block developer tools in the Edge browser.
     *
     * @return bool The edgeBlockDeveloperTools
     */
@@ -776,7 +776,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeBlockDeveloperTools
-    * Indicates whether or not to block developer tools in the Microsoft Edge browser.
+    * Indicates whether or not to block developer tools in the Edge browser.
     *
     * @param bool $val The edgeBlockDeveloperTools
     *
@@ -819,7 +819,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeBlockExtensions
-    * Indicates whether or not to block extensions in the Microsoft Edge browser.
+    * Indicates whether or not to block extensions in the Edge browser.
     *
     * @return bool The edgeBlockExtensions
     */
@@ -834,7 +834,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeBlockExtensions
-    * Indicates whether or not to block extensions in the Microsoft Edge browser.
+    * Indicates whether or not to block extensions in the Edge browser.
     *
     * @param bool $val The edgeBlockExtensions
     *
@@ -848,7 +848,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeBlockInPrivateBrowsing
-    * Indicates whether or not to block InPrivate browsing on corporate networks, in the Microsoft Edge browser.
+    * Indicates whether or not to block InPrivate browsing on corporate networks, in the Edge browser.
     *
     * @return bool The edgeBlockInPrivateBrowsing
     */
@@ -863,7 +863,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeBlockInPrivateBrowsing
-    * Indicates whether or not to block InPrivate browsing on corporate networks, in the Microsoft Edge browser.
+    * Indicates whether or not to block InPrivate browsing on corporate networks, in the Edge browser.
     *
     * @param bool $val The edgeBlockInPrivateBrowsing
     *
@@ -1022,7 +1022,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeAllowStartPagesModification
-    * Allow users to change Start pages on Microsoft Edge. Use the EdgeHomepageUrls to specify the Start pages that the user would see by default when they open Microsoft Edge.
+    * Allow users to change Start pages on Edge. Use the EdgeHomepageUrls to specify the Start pages that the user would see by default when they open Edge.
     *
     * @return bool The edgeAllowStartPagesModification
     */
@@ -1037,7 +1037,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeAllowStartPagesModification
-    * Allow users to change Start pages on Microsoft Edge. Use the EdgeHomepageUrls to specify the Start pages that the user would see by default when they open Microsoft Edge.
+    * Allow users to change Start pages on Edge. Use the EdgeHomepageUrls to specify the Start pages that the user would see by default when they open Edge.
     *
     * @param bool $val The edgeAllowStartPagesModification
     *
@@ -1283,7 +1283,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderDetectedMalwareActions
-    * Gets or sets Defender's actions to take on detected Malware per threat level.
+    * Gets or sets Defender’s actions to take on detected Malware per threat level.
     *
     * @return DefenderDetectedMalwareActions The defenderDetectedMalwareActions
     */
@@ -1302,7 +1302,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderDetectedMalwareActions
-    * Gets or sets Defender's actions to take on detected Malware per threat level.
+    * Gets or sets Defender’s actions to take on detected Malware per threat level.
     *
     * @param DefenderDetectedMalwareActions $val The defenderDetectedMalwareActions
     *
@@ -2156,7 +2156,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordBlockSimple
-    * Specify whether PINs or passwords such as "1111" or "1234" are allowed. For Windows 10 desktops, it also controls the use of picture passwords.
+    * Specify whether PINs or passwords such as '1111' or '1234' are allowed. For Windows 10 desktops, it also controls the use of picture passwords.
     *
     * @return bool The passwordBlockSimple
     */
@@ -2171,7 +2171,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordBlockSimple
-    * Specify whether PINs or passwords such as "1111" or "1234" are allowed. For Windows 10 desktops, it also controls the use of picture passwords.
+    * Specify whether PINs or passwords such as '1111' or '1234' are allowed. For Windows 10 desktops, it also controls the use of picture passwords.
     *
     * @param bool $val The passwordBlockSimple
     *
@@ -2806,7 +2806,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the startMenuHideRestartOptions
-    * Enabling this policy hides "Restart/Update and Restart" from appearing in the power button in the start menu.
+    * Enabling this policy hides 'Restart/Update and Restart' from appearing in the power button in the start menu.
     *
     * @return bool The startMenuHideRestartOptions
     */
@@ -2821,7 +2821,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the startMenuHideRestartOptions
-    * Enabling this policy hides "Restart/Update and Restart" from appearing in the power button in the start menu.
+    * Enabling this policy hides 'Restart/Update and Restart' from appearing in the power button in the start menu.
     *
     * @param bool $val The startMenuHideRestartOptions
     *
@@ -2980,7 +2980,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the startMenuLayoutEdgeAssetsXml
-    * This policy setting allows you to import Microsoft Edge assets to be used with startMenuLayoutXml policy. Start layout can contain secondary tile from Microsoft Edge app which looks for Microsoft Edge local asset file. Microsoft Edge local asset would not exist and cause Microsoft Edge secondary tile to appear empty in this case. This policy only gets applied when startMenuLayoutXml policy is modified. The value should be a UTF-8 Base64 encoded byte array.
+    * This policy setting allows you to import Edge assets to be used with startMenuLayoutXml policy. Start layout can contain secondary tile from Edge app which looks for Edge local asset file. Edge local asset would not exist and cause Edge secondary tile to appear empty in this case. This policy only gets applied when startMenuLayoutXml policy is modified. The value should be a UTF-8 Base64 encoded byte array.
     *
     * @return \GuzzleHttp\Psr7\Stream The startMenuLayoutEdgeAssetsXml
     */
@@ -2999,7 +2999,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the startMenuLayoutEdgeAssetsXml
-    * This policy setting allows you to import Microsoft Edge assets to be used with startMenuLayoutXml policy. Start layout can contain secondary tile from Microsoft Edge app which looks for Microsoft Edge local asset file. Microsoft Edge local asset would not exist and cause Microsoft Edge secondary tile to appear empty in this case. This policy only gets applied when startMenuLayoutXml policy is modified. The value should be a UTF-8 Base64 encoded byte array.
+    * This policy setting allows you to import Edge assets to be used with startMenuLayoutXml policy. Start layout can contain secondary tile from Edge app which looks for Edge local asset file. Edge local asset would not exist and cause Edge secondary tile to appear empty in this case. This policy only gets applied when startMenuLayoutXml policy is modified. The value should be a UTF-8 Base64 encoded byte array.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The startMenuLayoutEdgeAssetsXml
     *
@@ -3496,7 +3496,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the settingsBlockNetworkInternetPage
-    * Indicates whether or not to block access to Network & Internet in Settings app.
+    * Indicates whether or not to block access to Network &amp; Internet in Settings app.
     *
     * @return bool The settingsBlockNetworkInternetPage
     */
@@ -3511,7 +3511,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the settingsBlockNetworkInternetPage
-    * Indicates whether or not to block access to Network & Internet in Settings app.
+    * Indicates whether or not to block access to Network &amp; Internet in Settings app.
     *
     * @param bool $val The settingsBlockNetworkInternetPage
     *
@@ -3583,7 +3583,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the settingsBlockTimeLanguagePage
-    * Indicates whether or not to block access to Time & Language in Settings app.
+    * Indicates whether or not to block access to Time &amp; Language in Settings app.
     *
     * @return bool The settingsBlockTimeLanguagePage
     */
@@ -3598,7 +3598,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the settingsBlockTimeLanguagePage
-    * Indicates whether or not to block access to Time & Language in Settings app.
+    * Indicates whether or not to block access to Time &amp; Language in Settings app.
     *
     * @param bool $val The settingsBlockTimeLanguagePage
     *
@@ -3670,7 +3670,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the settingsBlockUpdateSecurityPage
-    * Indicates whether or not to block access to Update & Security in Settings app.
+    * Indicates whether or not to block access to Update &amp; Security in Settings app.
     *
     * @return bool The settingsBlockUpdateSecurityPage
     */
@@ -3685,7 +3685,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the settingsBlockUpdateSecurityPage
-    * Indicates whether or not to block access to Update & Security in Settings app.
+    * Indicates whether or not to block access to Update &amp; Security in Settings app.
     *
     * @param bool $val The settingsBlockUpdateSecurityPage
     *
@@ -3844,7 +3844,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the windowsSpotlightBlockTailoredExperiences
-    * Block personalized content in Windows spotlight based on user's device usage.
+    * Block personalized content in Windows spotlight based on user’s device usage.
     *
     * @return bool The windowsSpotlightBlockTailoredExperiences
     */
@@ -3859,7 +3859,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the windowsSpotlightBlockTailoredExperiences
-    * Block personalized content in Windows spotlight based on user's device usage.
+    * Block personalized content in Windows spotlight based on user’s device usage.
     *
     * @param bool $val The windowsSpotlightBlockTailoredExperiences
     *
@@ -3993,7 +3993,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the networkProxyApplySettingsDeviceWide
-    * If set, proxy settings will be applied to all processes and accounts in the device. Otherwise, it will be applied to the user account that's enrolled into MDM.
+    * If set, proxy settings will be applied to all processes and accounts in the device. Otherwise, it will be applied to the user account that’s enrolled into MDM.
     *
     * @return bool The networkProxyApplySettingsDeviceWide
     */
@@ -4008,7 +4008,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the networkProxyApplySettingsDeviceWide
-    * If set, proxy settings will be applied to all processes and accounts in the device. Otherwise, it will be applied to the user account that's enrolled into MDM.
+    * If set, proxy settings will be applied to all processes and accounts in the device. Otherwise, it will be applied to the user account that’s enrolled into MDM.
     *
     * @param bool $val The networkProxyApplySettingsDeviceWide
     *
@@ -4494,7 +4494,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeBlockSendingIntranetTrafficToInternetExplorer
-    * Indicates whether or not to Block the user from sending Intranet traffic to Internet Explorer from Microsoft Edge.
+    * Indicates whether or not to Block the user from sending Intranet traffic to Internet Explorer from Edge.
     *
     * @return bool The edgeBlockSendingIntranetTrafficToInternetExplorer
     */
@@ -4509,7 +4509,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeBlockSendingIntranetTrafficToInternetExplorer
-    * Indicates whether or not to Block the user from sending Intranet traffic to Internet Explorer from Microsoft Edge.
+    * Indicates whether or not to Block the user from sending Intranet traffic to Internet Explorer from Edge.
     *
     * @param bool $val The edgeBlockSendingIntranetTrafficToInternetExplorer
     *
@@ -4581,7 +4581,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeFirstRunUrl
-    * The first run URL for when Microsoft Edge browser is opened for the first time.
+    * The first run URL for when Edge browser is opened for the first time.
     *
     * @return string The edgeFirstRunUrl
     */
@@ -4596,7 +4596,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeFirstRunUrl
-    * The first run URL for when Microsoft Edge browser is opened for the first time.
+    * The first run URL for when Edge browser is opened for the first time.
     *
     * @param string $val The edgeFirstRunUrl
     *
@@ -4643,7 +4643,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeHomepageUrls
-    * The list of URLs for homepages shodwn on MDM-enrolled devices on Microsoft Edge browser.
+    * The list of URLs for homepages shodwn on MDM-enrolled devices on Edge browser.
     *
     * @return string The edgeHomepageUrls
     */
@@ -4658,7 +4658,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeHomepageUrls
-    * The list of URLs for homepages shodwn on MDM-enrolled devices on Microsoft Edge browser.
+    * The list of URLs for homepages shodwn on MDM-enrolled devices on Edge browser.
     *
     * @param string $val The edgeHomepageUrls
     *
@@ -4672,7 +4672,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeBlockAccessToAboutFlags
-    * Indicates whether or not to prevent access to about flags on Microsoft Edge browser.
+    * Indicates whether or not to prevent access to about flags on Edge browser.
     *
     * @return bool The edgeBlockAccessToAboutFlags
     */
@@ -4687,7 +4687,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeBlockAccessToAboutFlags
-    * Indicates whether or not to prevent access to about flags on Microsoft Edge browser.
+    * Indicates whether or not to prevent access to about flags on Edge browser.
     *
     * @param bool $val The edgeBlockAccessToAboutFlags
     *
@@ -5922,6 +5922,35 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     public function setLogonBlockFastUserSwitching($val)
     {
         $this->_propDict["logonBlockFastUserSwitching"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the tenantLockdownRequireNetworkDuringOutOfBoxExperience
+    * Whether the device is required to connect to the network.
+    *
+    * @return bool The tenantLockdownRequireNetworkDuringOutOfBoxExperience
+    */
+    public function getTenantLockdownRequireNetworkDuringOutOfBoxExperience()
+    {
+        if (array_key_exists("tenantLockdownRequireNetworkDuringOutOfBoxExperience", $this->_propDict)) {
+            return $this->_propDict["tenantLockdownRequireNetworkDuringOutOfBoxExperience"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the tenantLockdownRequireNetworkDuringOutOfBoxExperience
+    * Whether the device is required to connect to the network.
+    *
+    * @param bool $val The tenantLockdownRequireNetworkDuringOutOfBoxExperience
+    *
+    * @return Windows10GeneralConfiguration
+    */
+    public function setTenantLockdownRequireNetworkDuringOutOfBoxExperience($val)
+    {
+        $this->_propDict["tenantLockdownRequireNetworkDuringOutOfBoxExperience"] = boolval($val);
         return $this;
     }
     
