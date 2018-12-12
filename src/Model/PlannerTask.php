@@ -90,7 +90,7 @@ class PlannerTask extends Entity
     
     /**
     * Gets the bucketId
-    * Bucket ID to which the task belongs. The bucket needs to be in the plan that the task is in. It is 28 characters long and case sensitive. Format validation is done on the service.
+    * Bucket ID to which the task belongs. The bucket needs to be in the plan that the task is in. It is 28 characters long and case-sensitive. Format validation is done on the service.
     *
     * @return string The bucketId
     */
@@ -105,7 +105,7 @@ class PlannerTask extends Entity
     
     /**
     * Sets the bucketId
-    * Bucket ID to which the task belongs. The bucket needs to be in the plan that the task is in. It is 28 characters long and case sensitive. Format validation is done on the service.
+    * Bucket ID to which the task belongs. The bucket needs to be in the plan that the task is in. It is 28 characters long and case-sensitive. Format validation is done on the service.
     *
     * @param string $val The bucketId
     *
@@ -363,7 +363,7 @@ class PlannerTask extends Entity
     
     /**
     * Gets the previewType
-    * This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference.
+    * This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference.
     *
     * @return PlannerPreviewType The previewType
     */
@@ -382,7 +382,7 @@ class PlannerTask extends Entity
     
     /**
     * Sets the previewType
-    * This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference.
+    * This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference.
     *
     * @param PlannerPreviewType $val The previewType
     *

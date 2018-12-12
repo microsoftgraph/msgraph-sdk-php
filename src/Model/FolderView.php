@@ -55,6 +55,7 @@ class FolderView extends Entity
     }
     /**
     * Gets the sortOrder
+    * If true, indicates that items should be sorted in descending order. Otherwise, items should be sorted ascending.
     *
     * @return string The sortOrder
     */
@@ -69,6 +70,7 @@ class FolderView extends Entity
 
     /**
     * Sets the sortOrder
+    * If true, indicates that items should be sorted in descending order. Otherwise, items should be sorted ascending.
     *
     * @param string $val The value of the sortOrder
     *

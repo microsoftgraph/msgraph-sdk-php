@@ -235,7 +235,7 @@ class EducationClass extends Entity
     
     /**
     * Gets the externalSource
-    * How this class was created. Possible values are: sis, manual, unknownFutureValue.
+    * How this class was created. The possible values are: sis, manual, unknownFutureValue.
     *
     * @return EducationExternalSource The externalSource
     */
@@ -254,7 +254,7 @@ class EducationClass extends Entity
     
     /**
     * Sets the externalSource
-    * How this class was created. Possible values are: sis, manual, unknownFutureValue.
+    * How this class was created. The possible values are: sis, manual, unknownFutureValue.
     *
     * @param EducationExternalSource $val The externalSource
     *
@@ -391,6 +391,7 @@ class EducationClass extends Entity
     
     /**
     * Gets the group
+    * The directory group corresponding to this class.
     *
     * @return Group The group
     */
@@ -409,6 +410,7 @@ class EducationClass extends Entity
     
     /**
     * Sets the group
+    * The directory group corresponding to this class.
     *
     * @param Group $val The group
     *

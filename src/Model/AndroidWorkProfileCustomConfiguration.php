@@ -29,6 +29,7 @@ class AndroidWorkProfileCustomConfiguration extends DeviceConfiguration
 
      /** 
      * Gets the omaSettings
+    * OMA settings. This collection can contain a maximum of 500 elements.
      *
      * @return array The omaSettings
      */
@@ -43,6 +44,7 @@ class AndroidWorkProfileCustomConfiguration extends DeviceConfiguration
     
     /** 
     * Sets the omaSettings
+    * OMA settings. This collection can contain a maximum of 500 elements.
     *
     * @param OmaSetting $val The omaSettings
     *

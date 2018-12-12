@@ -55,7 +55,7 @@ class ScoredEmailAddress extends Entity
     }
     /**
     * Gets the relevanceScore
-    * The relevance score of the email address. A relevance score is used as a sort key, in relation to the other returned results. A higher relevance score value corresponds to a more relevant result. Relevance is determined by the user's communication and collaboration patterns and business relationships.
+    * The relevance score of the email address. A relevance score is used as a sort key, in relation to the other returned results. A higher relevance score value corresponds to a more relevant result. Relevance is determined by the user’s communication and collaboration patterns and business relationships.
     *
     * @return float The relevanceScore
     */
@@ -70,7 +70,7 @@ class ScoredEmailAddress extends Entity
 
     /**
     * Sets the relevanceScore
-    * The relevance score of the email address. A relevance score is used as a sort key, in relation to the other returned results. A higher relevance score value corresponds to a more relevant result. Relevance is determined by the user's communication and collaboration patterns and business relationships.
+    * The relevance score of the email address. A relevance score is used as a sort key, in relation to the other returned results. A higher relevance score value corresponds to a more relevant result. Relevance is determined by the user’s communication and collaboration patterns and business relationships.
     *
     * @param float $val The value of the relevanceScore
     *

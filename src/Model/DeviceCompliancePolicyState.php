@@ -56,6 +56,7 @@ class DeviceCompliancePolicyState extends Entity
     
     /**
     * Gets the displayName
+    * The name of the policy for this policyBase
     *
     * @return string The displayName
     */
@@ -70,6 +71,7 @@ class DeviceCompliancePolicyState extends Entity
     
     /**
     * Sets the displayName
+    * The name of the policy for this policyBase
     *
     * @param string $val The displayName
     *
@@ -83,6 +85,7 @@ class DeviceCompliancePolicyState extends Entity
     
     /**
     * Gets the version
+    * The version of the policy
     *
     * @return int The version
     */
@@ -97,6 +100,7 @@ class DeviceCompliancePolicyState extends Entity
     
     /**
     * Sets the version
+    * The version of the policy
     *
     * @param int $val The version
     *
@@ -110,6 +114,7 @@ class DeviceCompliancePolicyState extends Entity
     
     /**
     * Gets the platformType
+    * Platform type that the policy applies to
     *
     * @return PolicyPlatformType The platformType
     */
@@ -128,6 +133,7 @@ class DeviceCompliancePolicyState extends Entity
     
     /**
     * Sets the platformType
+    * Platform type that the policy applies to
     *
     * @param PolicyPlatformType $val The platformType
     *
@@ -141,6 +147,7 @@ class DeviceCompliancePolicyState extends Entity
     
     /**
     * Gets the state
+    * The compliance state of the policy
     *
     * @return ComplianceStatus The state
     */
@@ -159,6 +166,7 @@ class DeviceCompliancePolicyState extends Entity
     
     /**
     * Sets the state
+    * The compliance state of the policy
     *
     * @param ComplianceStatus $val The state
     *
@@ -172,6 +180,7 @@ class DeviceCompliancePolicyState extends Entity
     
     /**
     * Gets the settingCount
+    * Count of how many setting a policy holds
     *
     * @return int The settingCount
     */
@@ -186,6 +195,7 @@ class DeviceCompliancePolicyState extends Entity
     
     /**
     * Sets the settingCount
+    * Count of how many setting a policy holds
     *
     * @param int $val The settingCount
     *

@@ -119,7 +119,7 @@ class Contact extends OutlookItem
     
     /**
     * Gets the displayName
-    * The contact's display name.
+    * The contact's display name. You can specify the display name in a create or update operation. Note that later updates to other properties may cause an automatically generated value to overwrite the displayName value you have specified. To preserve a pre-existing value, always include it as displayName in an update operation.
     *
     * @return string The displayName
     */
@@ -134,7 +134,7 @@ class Contact extends OutlookItem
     
     /**
     * Sets the displayName
-    * The contact's display name.
+    * The contact's display name. You can specify the display name in a create or update operation. Note that later updates to other properties may cause an automatically generated value to overwrite the displayName value you have specified. To preserve a pre-existing value, always include it as displayName in an update operation.
     *
     * @param string $val The displayName
     *
@@ -497,7 +497,7 @@ class Contact extends OutlookItem
     
     /**
     * Gets the jobTitle
-    * The contact's job title.
+    * The contact’s job title.
     *
     * @return string The jobTitle
     */
@@ -512,7 +512,7 @@ class Contact extends OutlookItem
     
     /**
     * Sets the jobTitle
-    * The contact's job title.
+    * The contact’s job title.
     *
     * @param string $val The jobTitle
     *

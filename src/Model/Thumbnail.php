@@ -28,6 +28,7 @@ class Thumbnail extends Entity
 
     /**
     * Gets the content
+    * The content stream for the thumbnail.
     *
     * @return \GuzzleHttp\Psr7\Stream The content
     */
@@ -46,6 +47,7 @@ class Thumbnail extends Entity
 
     /**
     * Sets the content
+    * The content stream for the thumbnail.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The value to assign to the content
     *

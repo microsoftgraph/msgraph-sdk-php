@@ -1390,7 +1390,7 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the partnerReportedThreatState
-    * Indicates the threat state of a device when a Mobile Threat Defense partner is in use by the account and device. Read Only. Possible values are: unknown, activated, deactivated, secured, lowSeverity, mediumSeverity, highSeverity, unresponsive.
+    * Indicates the threat state of a device when a Mobile Threat Defense partner is in use by the account and device. Read Only. Possible values are: unknown, activated, deactivated, secured, lowSeverity, mediumSeverity, highSeverity, unresponsive, compromised, misconfigured.
     *
     * @return ManagedDevicePartnerReportedHealthState The partnerReportedThreatState
     */
@@ -1409,7 +1409,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the partnerReportedThreatState
-    * Indicates the threat state of a device when a Mobile Threat Defense partner is in use by the account and device. Read Only. Possible values are: unknown, activated, deactivated, secured, lowSeverity, mediumSeverity, highSeverity, unresponsive.
+    * Indicates the threat state of a device when a Mobile Threat Defense partner is in use by the account and device. Read Only. Possible values are: unknown, activated, deactivated, secured, lowSeverity, mediumSeverity, highSeverity, unresponsive, compromised, misconfigured.
     *
     * @param ManagedDevicePartnerReportedHealthState $val The partnerReportedThreatState
     *
@@ -1424,6 +1424,7 @@ class ManagedDevice extends Entity
 
      /** 
      * Gets the deviceConfigurationStates
+    * Device configuration states for this device.
      *
      * @return array The deviceConfigurationStates
      */
@@ -1438,6 +1439,7 @@ class ManagedDevice extends Entity
     
     /** 
     * Sets the deviceConfigurationStates
+    * Device configuration states for this device.
     *
     * @param DeviceConfigurationState $val The deviceConfigurationStates
     *
@@ -1485,6 +1487,7 @@ class ManagedDevice extends Entity
 
      /** 
      * Gets the deviceCompliancePolicyStates
+    * Device compliance policy states for this device.
      *
      * @return array The deviceCompliancePolicyStates
      */
@@ -1499,6 +1502,7 @@ class ManagedDevice extends Entity
     
     /** 
     * Sets the deviceCompliancePolicyStates
+    * Device compliance policy states for this device.
     *
     * @param DeviceCompliancePolicyState $val The deviceCompliancePolicyStates
     *

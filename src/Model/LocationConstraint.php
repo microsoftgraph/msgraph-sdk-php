@@ -27,6 +27,7 @@ class LocationConstraint extends Entity
 {
     /**
     * Gets the isRequired
+    * The client requests the service to include in the response a meeting location for the meeting. If this is true and all the resources are busy, findMeetingTimes will not return any meeting time suggestions. If this is false and all the resources are busy, findMeetingTimes would still look for meeting times without locations.
     *
     * @return bool The isRequired
     */
@@ -41,6 +42,7 @@ class LocationConstraint extends Entity
 
     /**
     * Sets the isRequired
+    * The client requests the service to include in the response a meeting location for the meeting. If this is true and all the resources are busy, findMeetingTimes will not return any meeting time suggestions. If this is false and all the resources are busy, findMeetingTimes would still look for meeting times without locations.
     *
     * @param bool $val The value of the isRequired
     *
@@ -53,6 +55,7 @@ class LocationConstraint extends Entity
     }
     /**
     * Gets the suggestLocation
+    * The client requests the service to suggest one or more meeting locations.
     *
     * @return bool The suggestLocation
     */
@@ -67,6 +70,7 @@ class LocationConstraint extends Entity
 
     /**
     * Sets the suggestLocation
+    * The client requests the service to suggest one or more meeting locations.
     *
     * @param bool $val The value of the suggestLocation
     *
@@ -80,6 +84,7 @@ class LocationConstraint extends Entity
 
     /**
     * Gets the locations
+    * Constraint information for one or more locations that the client requests for the meeting.
     *
     * @return LocationConstraintItem The locations
     */
@@ -98,6 +103,7 @@ class LocationConstraint extends Entity
 
     /**
     * Sets the locations
+    * Constraint information for one or more locations that the client requests for the meeting.
     *
     * @param LocationConstraintItem $val The value to assign to the locations
     *

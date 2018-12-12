@@ -27,6 +27,7 @@ class HostSecurityState extends Entity
 {
     /**
     * Gets the fqdn
+    * Host FQDN (Fully Qualified Domain Name) (for example, machine.company.com).
     *
     * @return string The fqdn
     */
@@ -41,6 +42,7 @@ class HostSecurityState extends Entity
 
     /**
     * Sets the fqdn
+    * Host FQDN (Fully Qualified Domain Name) (for example, machine.company.com).
     *
     * @param string $val The value of the fqdn
     *
@@ -105,6 +107,7 @@ class HostSecurityState extends Entity
     }
     /**
     * Gets the isHybridAzureDomainJoined
+    * True if the host is domain joined to an on-premises Active Directory domain.
     *
     * @return bool The isHybridAzureDomainJoined
     */
@@ -119,6 +122,7 @@ class HostSecurityState extends Entity
 
     /**
     * Sets the isHybridAzureDomainJoined
+    * True if the host is domain joined to an on-premises Active Directory domain.
     *
     * @param bool $val The value of the isHybridAzureDomainJoined
     *
@@ -131,6 +135,7 @@ class HostSecurityState extends Entity
     }
     /**
     * Gets the netBiosName
+    * The local host name, without the DNS domain name.
     *
     * @return string The netBiosName
     */
@@ -145,6 +150,7 @@ class HostSecurityState extends Entity
 
     /**
     * Sets the netBiosName
+    * The local host name, without the DNS domain name.
     *
     * @param string $val The value of the netBiosName
     *
@@ -157,6 +163,7 @@ class HostSecurityState extends Entity
     }
     /**
     * Gets the os
+    * Host Operating System. (For example, Windows10, MacOS, RHEL, etc.).
     *
     * @return string The os
     */
@@ -171,6 +178,7 @@ class HostSecurityState extends Entity
 
     /**
     * Sets the os
+    * Host Operating System. (For example, Windows10, MacOS, RHEL, etc.).
     *
     * @param string $val The value of the os
     *
@@ -183,6 +191,7 @@ class HostSecurityState extends Entity
     }
     /**
     * Gets the privateIpAddress
+    * Private (not routable) IPv4 or IPv6 address (see RFC 1918) at the time of the alert.
     *
     * @return string The privateIpAddress
     */
@@ -197,6 +206,7 @@ class HostSecurityState extends Entity
 
     /**
     * Sets the privateIpAddress
+    * Private (not routable) IPv4 or IPv6 address (see RFC 1918) at the time of the alert.
     *
     * @param string $val The value of the privateIpAddress
     *
@@ -209,6 +219,7 @@ class HostSecurityState extends Entity
     }
     /**
     * Gets the publicIpAddress
+    * Publicly routable IPv4 or IPv6 address (see RFC 1918) at time of the alert.
     *
     * @return string The publicIpAddress
     */
@@ -223,6 +234,7 @@ class HostSecurityState extends Entity
 
     /**
     * Sets the publicIpAddress
+    * Publicly routable IPv4 or IPv6 address (see RFC 1918) at time of the alert.
     *
     * @param string $val The value of the publicIpAddress
     *
@@ -235,6 +247,7 @@ class HostSecurityState extends Entity
     }
     /**
     * Gets the riskScore
+    * Provider-generated/calculated risk score of the host.  Recommended value range of 0-1, which equates to a percentage.
     *
     * @return string The riskScore
     */
@@ -249,6 +262,7 @@ class HostSecurityState extends Entity
 
     /**
     * Sets the riskScore
+    * Provider-generated/calculated risk score of the host.  Recommended value range of 0-1, which equates to a percentage.
     *
     * @param string $val The value of the riskScore
     *

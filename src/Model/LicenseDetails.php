@@ -87,7 +87,7 @@ class LicenseDetails extends Entity
     
     /**
     * Gets the skuPartNumber
-    * Unique SKU display name. Equal to the skuPartNumber on the related SubscribedSku object; for example: "AAD_Premium". Read-only
+    * Unique SKU display name. Equal to the skuPartNumber on the related SubscribedSku object; for example: 'AAD_Premium'. Read-only
     *
     * @return string The skuPartNumber
     */
@@ -102,7 +102,7 @@ class LicenseDetails extends Entity
     
     /**
     * Sets the skuPartNumber
-    * Unique SKU display name. Equal to the skuPartNumber on the related SubscribedSku object; for example: "AAD_Premium". Read-only
+    * Unique SKU display name. Equal to the skuPartNumber on the related SubscribedSku object; for example: 'AAD_Premium'. Read-only
     *
     * @param string $val The skuPartNumber
     *

@@ -28,6 +28,7 @@ class FileHash extends Entity
 
     /**
     * Gets the hashType
+    * File hash type. Possible values are: unknown, sha1, sha256, md5, authenticodeHash256, lsHash, ctph, peSha1, peSha256.
     *
     * @return FileHashType The hashType
     */
@@ -46,6 +47,7 @@ class FileHash extends Entity
 
     /**
     * Sets the hashType
+    * File hash type. Possible values are: unknown, sha1, sha256, md5, authenticodeHash256, lsHash, ctph, peSha1, peSha256.
     *
     * @param FileHashType $val The value to assign to the hashType
     *
@@ -58,6 +60,7 @@ class FileHash extends Entity
     }
     /**
     * Gets the hashValue
+    * Value of the file hash.
     *
     * @return string The hashValue
     */
@@ -72,6 +75,7 @@ class FileHash extends Entity
 
     /**
     * Sets the hashValue
+    * Value of the file hash.
     *
     * @param string $val The value of the hashValue
     *

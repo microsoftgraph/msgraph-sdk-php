@@ -326,7 +326,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the settingsBlockMyMeetingsAndFiles
-    * Specifies whether to disable the "My meetings and files" feature in the Start menu, which shows the signed-in user's meetings and files from Office 365.
+    * Specifies whether to disable the 'My meetings and files' feature in the Start menu, which shows the signed-in user's meetings and files from Office 365.
     *
     * @return bool The settingsBlockMyMeetingsAndFiles
     */
@@ -341,7 +341,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the settingsBlockMyMeetingsAndFiles
-    * Specifies whether to disable the "My meetings and files" feature in the Start menu, which shows the signed-in user's meetings and files from Office 365.
+    * Specifies whether to disable the 'My meetings and files' feature in the Start menu, which shows the signed-in user's meetings and files from Office 365.
     *
     * @param bool $val The settingsBlockMyMeetingsAndFiles
     *

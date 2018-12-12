@@ -475,6 +475,7 @@ class RemoteItem extends Entity
 
     /**
     * Gets the specialFolder
+    * If the current item is also available as a special folder, this facet is returned. Read-only.
     *
     * @return SpecialFolder The specialFolder
     */
@@ -493,6 +494,7 @@ class RemoteItem extends Entity
 
     /**
     * Sets the specialFolder
+    * If the current item is also available as a special folder, this facet is returned. Read-only.
     *
     * @param SpecialFolder $val The value to assign to the specialFolder
     *

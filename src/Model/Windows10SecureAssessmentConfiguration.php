@@ -57,7 +57,7 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration
     
     /**
     * Gets the configurationAccount
-    * The account used to configure the Windows device for taking the test. The user can be a domain account (domain\user), an AAD account (username@tenant.com) or a local account (username).
+    * The account used to configure the Windows device for taking the test. The user can be a domain account (domain/user), an AAD account (username@tenant.com) or a local account (username).
     *
     * @return string The configurationAccount
     */
@@ -72,7 +72,7 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration
     
     /**
     * Sets the configurationAccount
-    * The account used to configure the Windows device for taking the test. The user can be a domain account (domain\user), an AAD account (username@tenant.com) or a local account (username).
+    * The account used to configure the Windows device for taking the test. The user can be a domain account (domain/user), an AAD account (username@tenant.com) or a local account (username).
     *
     * @param string $val The configurationAccount
     *

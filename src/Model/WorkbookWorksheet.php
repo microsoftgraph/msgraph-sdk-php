@@ -28,6 +28,7 @@ class WorkbookWorksheet extends Entity
 {
     /**
     * Gets the name
+    * The display name of the worksheet.
     *
     * @return string The name
     */
@@ -42,6 +43,7 @@ class WorkbookWorksheet extends Entity
     
     /**
     * Sets the name
+    * The display name of the worksheet.
     *
     * @param string $val The name
     *
@@ -55,6 +57,7 @@ class WorkbookWorksheet extends Entity
     
     /**
     * Gets the position
+    * The zero-based position of the worksheet within the workbook.
     *
     * @return int The position
     */
@@ -69,6 +72,7 @@ class WorkbookWorksheet extends Entity
     
     /**
     * Sets the position
+    * The zero-based position of the worksheet within the workbook.
     *
     * @param int $val The position
     *
@@ -82,6 +86,7 @@ class WorkbookWorksheet extends Entity
     
     /**
     * Gets the visibility
+    * The Visibility of the worksheet. The possible values are: Visible, Hidden, VeryHidden.
     *
     * @return string The visibility
     */
@@ -96,6 +101,7 @@ class WorkbookWorksheet extends Entity
     
     /**
     * Sets the visibility
+    * The Visibility of the worksheet. The possible values are: Visible, Hidden, VeryHidden.
     *
     * @param string $val The visibility
     *
@@ -110,6 +116,7 @@ class WorkbookWorksheet extends Entity
 
      /** 
      * Gets the charts
+    * Returns collection of charts that are part of the worksheet. Read-only.
      *
      * @return array The charts
      */
@@ -124,6 +131,7 @@ class WorkbookWorksheet extends Entity
     
     /** 
     * Sets the charts
+    * Returns collection of charts that are part of the worksheet. Read-only.
     *
     * @param WorkbookChart $val The charts
     *
@@ -138,6 +146,7 @@ class WorkbookWorksheet extends Entity
 
      /** 
      * Gets the names
+    * Returns collection of names that are associated with the worksheet. Read-only.
      *
      * @return array The names
      */
@@ -152,6 +161,7 @@ class WorkbookWorksheet extends Entity
     
     /** 
     * Sets the names
+    * Returns collection of names that are associated with the worksheet. Read-only.
     *
     * @param WorkbookNamedItem $val The names
     *
@@ -166,6 +176,7 @@ class WorkbookWorksheet extends Entity
 
      /** 
      * Gets the pivotTables
+    * Collection of PivotTables that are part of the worksheet.
      *
      * @return array The pivotTables
      */
@@ -180,6 +191,7 @@ class WorkbookWorksheet extends Entity
     
     /** 
     * Sets the pivotTables
+    * Collection of PivotTables that are part of the worksheet.
     *
     * @param WorkbookPivotTable $val The pivotTables
     *
@@ -193,6 +205,7 @@ class WorkbookWorksheet extends Entity
     
     /**
     * Gets the protection
+    * Returns sheet protection object for a worksheet. Read-only.
     *
     * @return WorkbookWorksheetProtection The protection
     */
@@ -211,6 +224,7 @@ class WorkbookWorksheet extends Entity
     
     /**
     * Sets the protection
+    * Returns sheet protection object for a worksheet. Read-only.
     *
     * @param WorkbookWorksheetProtection $val The protection
     *
@@ -225,6 +239,7 @@ class WorkbookWorksheet extends Entity
 
      /** 
      * Gets the tables
+    * Collection of tables that are part of the worksheet. Read-only.
      *
      * @return array The tables
      */
@@ -239,6 +254,7 @@ class WorkbookWorksheet extends Entity
     
     /** 
     * Sets the tables
+    * Collection of tables that are part of the worksheet. Read-only.
     *
     * @param WorkbookTable $val The tables
     *

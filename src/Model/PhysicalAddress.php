@@ -111,7 +111,7 @@ class PhysicalAddress extends Entity
     }
     /**
     * Gets the countryOrRegion
-    * The country or region. It's a free-format string value, for example, "United States".
+    * The country or region. It's a free-format string value, for example, 'United States'.
     *
     * @return string The countryOrRegion
     */
@@ -126,7 +126,7 @@ class PhysicalAddress extends Entity
 
     /**
     * Sets the countryOrRegion
-    * The country or region. It's a free-format string value, for example, "United States".
+    * The country or region. It's a free-format string value, for example, 'United States'.
     *
     * @param string $val The value of the countryOrRegion
     *
