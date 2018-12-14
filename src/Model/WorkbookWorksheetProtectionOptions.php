@@ -27,6 +27,7 @@ class WorkbookWorksheetProtectionOptions extends Entity
 {
     /**
     * Gets the allowAutoFilter
+    * Represents the worksheet protection option of allowing using auto filter feature.
     *
     * @return bool The allowAutoFilter
     */
@@ -41,6 +42,7 @@ class WorkbookWorksheetProtectionOptions extends Entity
 
     /**
     * Sets the allowAutoFilter
+    * Represents the worksheet protection option of allowing using auto filter feature.
     *
     * @param bool $val The value of the allowAutoFilter
     *
@@ -53,6 +55,7 @@ class WorkbookWorksheetProtectionOptions extends Entity
     }
     /**
     * Gets the allowDeleteColumns
+    * Represents the worksheet protection option of allowing deleting columns.
     *
     * @return bool The allowDeleteColumns
     */
@@ -67,6 +70,7 @@ class WorkbookWorksheetProtectionOptions extends Entity
 
     /**
     * Sets the allowDeleteColumns
+    * Represents the worksheet protection option of allowing deleting columns.
     *
     * @param bool $val The value of the allowDeleteColumns
     *
@@ -79,6 +83,7 @@ class WorkbookWorksheetProtectionOptions extends Entity
     }
     /**
     * Gets the allowDeleteRows
+    * Represents the worksheet protection option of allowing deleting rows.
     *
     * @return bool The allowDeleteRows
     */
@@ -93,6 +98,7 @@ class WorkbookWorksheetProtectionOptions extends Entity
 
     /**
     * Sets the allowDeleteRows
+    * Represents the worksheet protection option of allowing deleting rows.
     *
     * @param bool $val The value of the allowDeleteRows
     *
@@ -105,6 +111,7 @@ class WorkbookWorksheetProtectionOptions extends Entity
     }
     /**
     * Gets the allowFormatCells
+    * Represents the worksheet protection option of allowing formatting cells.
     *
     * @return bool The allowFormatCells
     */
@@ -119,6 +126,7 @@ class WorkbookWorksheetProtectionOptions extends Entity
 
     /**
     * Sets the allowFormatCells
+    * Represents the worksheet protection option of allowing formatting cells.
     *
     * @param bool $val The value of the allowFormatCells
     *
@@ -131,6 +139,7 @@ class WorkbookWorksheetProtectionOptions extends Entity
     }
     /**
     * Gets the allowFormatColumns
+    * Represents the worksheet protection option of allowing formatting columns.
     *
     * @return bool The allowFormatColumns
     */
@@ -145,6 +154,7 @@ class WorkbookWorksheetProtectionOptions extends Entity
 
     /**
     * Sets the allowFormatColumns
+    * Represents the worksheet protection option of allowing formatting columns.
     *
     * @param bool $val The value of the allowFormatColumns
     *
@@ -157,6 +167,7 @@ class WorkbookWorksheetProtectionOptions extends Entity
     }
     /**
     * Gets the allowFormatRows
+    * Represents the worksheet protection option of allowing formatting rows.
     *
     * @return bool The allowFormatRows
     */
@@ -171,6 +182,7 @@ class WorkbookWorksheetProtectionOptions extends Entity
 
     /**
     * Sets the allowFormatRows
+    * Represents the worksheet protection option of allowing formatting rows.
     *
     * @param bool $val The value of the allowFormatRows
     *
@@ -183,6 +195,7 @@ class WorkbookWorksheetProtectionOptions extends Entity
     }
     /**
     * Gets the allowInsertColumns
+    * Represents the worksheet protection option of allowing inserting columns.
     *
     * @return bool The allowInsertColumns
     */
@@ -197,6 +210,7 @@ class WorkbookWorksheetProtectionOptions extends Entity
 
     /**
     * Sets the allowInsertColumns
+    * Represents the worksheet protection option of allowing inserting columns.
     *
     * @param bool $val The value of the allowInsertColumns
     *
@@ -209,6 +223,7 @@ class WorkbookWorksheetProtectionOptions extends Entity
     }
     /**
     * Gets the allowInsertHyperlinks
+    * Represents the worksheet protection option of allowing inserting hyperlinks.
     *
     * @return bool The allowInsertHyperlinks
     */
@@ -223,6 +238,7 @@ class WorkbookWorksheetProtectionOptions extends Entity
 
     /**
     * Sets the allowInsertHyperlinks
+    * Represents the worksheet protection option of allowing inserting hyperlinks.
     *
     * @param bool $val The value of the allowInsertHyperlinks
     *
@@ -235,6 +251,7 @@ class WorkbookWorksheetProtectionOptions extends Entity
     }
     /**
     * Gets the allowInsertRows
+    * Represents the worksheet protection option of allowing inserting rows.
     *
     * @return bool The allowInsertRows
     */
@@ -249,6 +266,7 @@ class WorkbookWorksheetProtectionOptions extends Entity
 
     /**
     * Sets the allowInsertRows
+    * Represents the worksheet protection option of allowing inserting rows.
     *
     * @param bool $val The value of the allowInsertRows
     *
@@ -261,6 +279,7 @@ class WorkbookWorksheetProtectionOptions extends Entity
     }
     /**
     * Gets the allowPivotTables
+    * Represents the worksheet protection option of allowing using pivot table feature.
     *
     * @return bool The allowPivotTables
     */
@@ -275,6 +294,7 @@ class WorkbookWorksheetProtectionOptions extends Entity
 
     /**
     * Sets the allowPivotTables
+    * Represents the worksheet protection option of allowing using pivot table feature.
     *
     * @param bool $val The value of the allowPivotTables
     *
@@ -287,6 +307,7 @@ class WorkbookWorksheetProtectionOptions extends Entity
     }
     /**
     * Gets the allowSort
+    * Represents the worksheet protection option of allowing using sort feature.
     *
     * @return bool The allowSort
     */
@@ -301,6 +322,7 @@ class WorkbookWorksheetProtectionOptions extends Entity
 
     /**
     * Sets the allowSort
+    * Represents the worksheet protection option of allowing using sort feature.
     *
     * @param bool $val The value of the allowSort
     *

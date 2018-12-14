@@ -242,7 +242,7 @@ class DeviceConfiguration extends Entity
 
      /** 
      * Gets the userStatuses
-    * Device configuration installation stauts by user.
+    * Device configuration installation status by user.
      *
      * @return array The userStatuses
      */
@@ -257,7 +257,7 @@ class DeviceConfiguration extends Entity
     
     /** 
     * Sets the userStatuses
-    * Device configuration installation stauts by user.
+    * Device configuration installation status by user.
     *
     * @param DeviceConfigurationUserStatus $val The userStatuses
     *

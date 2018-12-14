@@ -28,6 +28,7 @@ class WorkbookChartLegendFormat extends Entity
 {
     /**
     * Gets the fill
+    * Represents the fill format of an object, which includes background formating information. Read-only.
     *
     * @return WorkbookChartFill The fill
     */
@@ -46,6 +47,7 @@ class WorkbookChartLegendFormat extends Entity
     
     /**
     * Sets the fill
+    * Represents the fill format of an object, which includes background formating information. Read-only.
     *
     * @param WorkbookChartFill $val The fill
     *
@@ -59,6 +61,7 @@ class WorkbookChartLegendFormat extends Entity
     
     /**
     * Gets the font
+    * Represents the font attributes such as font name, font size, color, etc. of a chart legend. Read-only.
     *
     * @return WorkbookChartFont The font
     */
@@ -77,6 +80,7 @@ class WorkbookChartLegendFormat extends Entity
     
     /**
     * Sets the font
+    * Represents the font attributes such as font name, font size, color, etc. of a chart legend. Read-only.
     *
     * @param WorkbookChartFont $val The font
     *

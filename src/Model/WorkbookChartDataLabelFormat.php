@@ -28,6 +28,7 @@ class WorkbookChartDataLabelFormat extends Entity
 {
     /**
     * Gets the fill
+    * Represents the fill format of the current chart data label. Read-only.
     *
     * @return WorkbookChartFill The fill
     */
@@ -46,6 +47,7 @@ class WorkbookChartDataLabelFormat extends Entity
     
     /**
     * Sets the fill
+    * Represents the fill format of the current chart data label. Read-only.
     *
     * @param WorkbookChartFill $val The fill
     *
@@ -59,6 +61,7 @@ class WorkbookChartDataLabelFormat extends Entity
     
     /**
     * Gets the font
+    * Represents the font attributes (font name, font size, color, etc.) for a chart data label. Read-only.
     *
     * @return WorkbookChartFont The font
     */
@@ -77,6 +80,7 @@ class WorkbookChartDataLabelFormat extends Entity
     
     /**
     * Sets the font
+    * Represents the font attributes (font name, font size, color, etc.) for a chart data label. Read-only.
     *
     * @param WorkbookChartFont $val The font
     *

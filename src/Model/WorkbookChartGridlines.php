@@ -28,6 +28,7 @@ class WorkbookChartGridlines extends Entity
 {
     /**
     * Gets the visible
+    * Boolean value representing if the axis gridlines are visible or not.
     *
     * @return bool The visible
     */
@@ -42,6 +43,7 @@ class WorkbookChartGridlines extends Entity
     
     /**
     * Sets the visible
+    * Boolean value representing if the axis gridlines are visible or not.
     *
     * @param bool $val The visible
     *
@@ -55,6 +57,7 @@ class WorkbookChartGridlines extends Entity
     
     /**
     * Gets the format
+    * Represents the formatting of chart gridlines. Read-only.
     *
     * @return WorkbookChartGridlinesFormat The format
     */
@@ -73,6 +76,7 @@ class WorkbookChartGridlines extends Entity
     
     /**
     * Sets the format
+    * Represents the formatting of chart gridlines. Read-only.
     *
     * @param WorkbookChartGridlinesFormat $val The format
     *

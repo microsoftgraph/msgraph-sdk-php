@@ -167,7 +167,7 @@ class IntuneBrand extends Entity
     }
     /**
     * Gets the privacyUrl
-    * URL to the company/organization's privacy policy.
+    * URL to the company/organization’s privacy policy.
     *
     * @return string The privacyUrl
     */
@@ -182,7 +182,7 @@ class IntuneBrand extends Entity
 
     /**
     * Sets the privacyUrl
-    * URL to the company/organization's privacy policy.
+    * URL to the company/organization’s privacy policy.
     *
     * @param string $val The value of the privacyUrl
     *
@@ -195,7 +195,7 @@ class IntuneBrand extends Entity
     }
     /**
     * Gets the onlineSupportSiteUrl
-    * URL to the company/organization's IT helpdesk site.
+    * URL to the company/organization’s IT helpdesk site.
     *
     * @return string The onlineSupportSiteUrl
     */
@@ -210,7 +210,7 @@ class IntuneBrand extends Entity
 
     /**
     * Sets the onlineSupportSiteUrl
-    * URL to the company/organization's IT helpdesk site.
+    * URL to the company/organization’s IT helpdesk site.
     *
     * @param string $val The value of the onlineSupportSiteUrl
     *
@@ -223,7 +223,7 @@ class IntuneBrand extends Entity
     }
     /**
     * Gets the onlineSupportSiteName
-    * Display name of the company/organization's IT helpdesk site.
+    * Display name of the company/organization’s IT helpdesk site.
     *
     * @return string The onlineSupportSiteName
     */
@@ -238,7 +238,7 @@ class IntuneBrand extends Entity
 
     /**
     * Sets the onlineSupportSiteName
-    * Display name of the company/organization's IT helpdesk site.
+    * Display name of the company/organization’s IT helpdesk site.
     *
     * @param string $val The value of the onlineSupportSiteName
     *

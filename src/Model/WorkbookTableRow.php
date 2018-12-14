@@ -28,6 +28,7 @@ class WorkbookTableRow extends Entity
 {
     /**
     * Gets the index
+    * Returns the index number of the row within the rows collection of the table. Zero-indexed. Read-only.
     *
     * @return int The index
     */
@@ -42,6 +43,7 @@ class WorkbookTableRow extends Entity
     
     /**
     * Sets the index
+    * Returns the index number of the row within the rows collection of the table. Zero-indexed. Read-only.
     *
     * @param int $val The index
     *
@@ -55,6 +57,7 @@ class WorkbookTableRow extends Entity
     
     /**
     * Gets the values
+    * Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
     *
     * @return string The values
     */
@@ -69,6 +72,7 @@ class WorkbookTableRow extends Entity
     
     /**
     * Sets the values
+    * Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
     *
     * @param string $val The values
     *

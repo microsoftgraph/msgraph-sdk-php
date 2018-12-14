@@ -317,7 +317,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the preferredLanguage
-    * The preferred language for the organization. Should follow ISO 639-1 Code; for example "en".
+    * The preferred language for the organization. Should follow ISO 639-1 Code; for example 'en'.
     *
     * @return string The preferredLanguage
     */
@@ -332,7 +332,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the preferredLanguage
-    * The preferred language for the organization. Should follow ISO 639-1 Code; for example "en".
+    * The preferred language for the organization. Should follow ISO 639-1 Code; for example 'en'.
     *
     * @param string $val The preferredLanguage
     *

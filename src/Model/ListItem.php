@@ -61,6 +61,7 @@ class ListItem extends BaseItem
     
     /**
     * Gets the sharepointIds
+    * Returns identifiers useful for SharePoint REST compatibility. Read-only.
     *
     * @return SharepointIds The sharepointIds
     */
@@ -79,6 +80,7 @@ class ListItem extends BaseItem
     
     /**
     * Sets the sharepointIds
+    * Returns identifiers useful for SharePoint REST compatibility. Read-only.
     *
     * @param SharepointIds $val The sharepointIds
     *
@@ -125,6 +127,7 @@ class ListItem extends BaseItem
     
     /**
     * Gets the fields
+    * The values of the columns set on this list item.
     *
     * @return FieldValueSet The fields
     */
@@ -143,6 +146,7 @@ class ListItem extends BaseItem
     
     /**
     * Sets the fields
+    * The values of the columns set on this list item.
     *
     * @param FieldValueSet $val The fields
     *

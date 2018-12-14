@@ -224,7 +224,7 @@ class MessageRulePredicates extends Entity
 
     /**
     * Gets the messageActionFlag
-    * Represents the flag-for-action value that appears on an incoming message in order for the condition or exception to apply. Possible values are: any, call, doNotForward, followUp, fyi, forward, noResponseNecessary, read, reply, replyToAll, review.
+    * Represents the flag-for-action value that appears on an incoming message in order for the condition or exception to apply. The possible values are: any, call, doNotForward, followUp, fyi, forward, noResponseNecessary, read, reply, replyToAll, review.
     *
     * @return MessageActionFlag The messageActionFlag
     */
@@ -243,7 +243,7 @@ class MessageRulePredicates extends Entity
 
     /**
     * Sets the messageActionFlag
-    * Represents the flag-for-action value that appears on an incoming message in order for the condition or exception to apply. Possible values are: any, call, doNotForward, followUp, fyi, forward, noResponseNecessary, read, reply, replyToAll, review.
+    * Represents the flag-for-action value that appears on an incoming message in order for the condition or exception to apply. The possible values are: any, call, doNotForward, followUp, fyi, forward, noResponseNecessary, read, reply, replyToAll, review.
     *
     * @param MessageActionFlag $val The value to assign to the messageActionFlag
     *
@@ -290,7 +290,7 @@ class MessageRulePredicates extends Entity
 
     /**
     * Gets the sensitivity
-    * Represents the sensitivity level that must be stamped on an incoming message in order for the condition or exception to apply. Possible values are: normal, personal, private, confidential.
+    * Represents the sensitivity level that must be stamped on an incoming message in order for the condition or exception to apply. The possible values are: normal, personal, private, confidential.
     *
     * @return Sensitivity The sensitivity
     */
@@ -309,7 +309,7 @@ class MessageRulePredicates extends Entity
 
     /**
     * Sets the sensitivity
-    * Represents the sensitivity level that must be stamped on an incoming message in order for the condition or exception to apply. Possible values are: normal, personal, private, confidential.
+    * Represents the sensitivity level that must be stamped on an incoming message in order for the condition or exception to apply. The possible values are: normal, personal, private, confidential.
     *
     * @param Sensitivity $val The value to assign to the sensitivity
     *

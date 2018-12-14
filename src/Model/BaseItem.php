@@ -94,6 +94,7 @@ class BaseItem extends Entity
     
     /**
     * Gets the description
+    * Provides a user-visible description of the item. Optional.
     *
     * @return string The description
     */
@@ -108,6 +109,7 @@ class BaseItem extends Entity
     
     /**
     * Sets the description
+    * Provides a user-visible description of the item. Optional.
     *
     * @param string $val The description
     *
@@ -307,6 +309,7 @@ class BaseItem extends Entity
     
     /**
     * Gets the createdByUser
+    * Identity of the user who created the item. Read-only.
     *
     * @return User The createdByUser
     */
@@ -325,6 +328,7 @@ class BaseItem extends Entity
     
     /**
     * Sets the createdByUser
+    * Identity of the user who created the item. Read-only.
     *
     * @param User $val The createdByUser
     *
@@ -338,6 +342,7 @@ class BaseItem extends Entity
     
     /**
     * Gets the lastModifiedByUser
+    * Identity of the user who last modified the item. Read-only.
     *
     * @return User The lastModifiedByUser
     */
@@ -356,6 +361,7 @@ class BaseItem extends Entity
     
     /**
     * Sets the lastModifiedByUser
+    * Identity of the user who last modified the item. Read-only.
     *
     * @param User $val The lastModifiedByUser
     *

@@ -28,6 +28,7 @@ class WorkbookChartAreaFormat extends Entity
 {
     /**
     * Gets the fill
+    * Represents the fill format of an object, which includes background formatting information. Read-only.
     *
     * @return WorkbookChartFill The fill
     */
@@ -46,6 +47,7 @@ class WorkbookChartAreaFormat extends Entity
     
     /**
     * Sets the fill
+    * Represents the fill format of an object, which includes background formatting information. Read-only.
     *
     * @param WorkbookChartFill $val The fill
     *
@@ -59,6 +61,7 @@ class WorkbookChartAreaFormat extends Entity
     
     /**
     * Gets the font
+    * Represents the font attributes (font name, font size, color, etc.) for the current object. Read-only.
     *
     * @return WorkbookChartFont The font
     */
@@ -77,6 +80,7 @@ class WorkbookChartAreaFormat extends Entity
     
     /**
     * Sets the font
+    * Represents the font attributes (font name, font size, color, etc.) for the current object. Read-only.
     *
     * @param WorkbookChartFont $val The font
     *

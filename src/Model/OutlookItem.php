@@ -28,6 +28,7 @@ class OutlookItem extends Entity
 {
     /**
     * Gets the createdDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The createdDateTime
     */
@@ -46,6 +47,7 @@ class OutlookItem extends Entity
     
     /**
     * Sets the createdDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -59,6 +61,7 @@ class OutlookItem extends Entity
     
     /**
     * Gets the lastModifiedDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -77,6 +80,7 @@ class OutlookItem extends Entity
     
     /**
     * Sets the lastModifiedDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -90,6 +94,7 @@ class OutlookItem extends Entity
     
     /**
     * Gets the changeKey
+    * Identifies the version of the item. Every time the item is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
     *
     * @return string The changeKey
     */
@@ -104,6 +109,7 @@ class OutlookItem extends Entity
     
     /**
     * Sets the changeKey
+    * Identifies the version of the item. Every time the item is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
     *
     * @param string $val The changeKey
     *
@@ -117,6 +123,7 @@ class OutlookItem extends Entity
     
     /**
     * Gets the categories
+    * The categories associated with the item
     *
     * @return string The categories
     */
@@ -131,6 +138,7 @@ class OutlookItem extends Entity
     
     /**
     * Sets the categories
+    * The categories associated with the item
     *
     * @param string $val The categories
     *
