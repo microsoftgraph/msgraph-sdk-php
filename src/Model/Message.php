@@ -211,7 +211,7 @@ class Message extends OutlookItem
     
     /**
     * Gets the body
-    * The body of the message. It can be in HTML or text format.
+    * The body of the message. It can be in HTML or text format. Find out about safe HTML in a message body.
     *
     * @return ItemBody The body
     */
@@ -230,7 +230,7 @@ class Message extends OutlookItem
     
     /**
     * Sets the body
-    * The body of the message. It can be in HTML or text format.
+    * The body of the message. It can be in HTML or text format. Find out about safe HTML in a message body.
     *
     * @param ItemBody $val The body
     *
@@ -335,7 +335,7 @@ class Message extends OutlookItem
     
     /**
     * Gets the sender
-    * The account that is actually used to generate the message. In most cases, this value is the same as the from property. You can set this property to a different value when sending a message from a shared mailbox, or sending a message as a delegate. In any case, the value must correspond to the actual mailbox used.
+    * The account that is actually used to generate the message. In most cases, this value is the same as the from property. You can set this property to a different value when sending a message from a shared mailbox, or sending a message as a delegate. In any case, the value must correspond to the actual mailbox used. Find out more about setting the from and sender properties of a message.
     *
     * @return Recipient The sender
     */
@@ -354,7 +354,7 @@ class Message extends OutlookItem
     
     /**
     * Sets the sender
-    * The account that is actually used to generate the message. In most cases, this value is the same as the from property. You can set this property to a different value when sending a message from a shared mailbox, or sending a message as a delegate. In any case, the value must correspond to the actual mailbox used.
+    * The account that is actually used to generate the message. In most cases, this value is the same as the from property. You can set this property to a different value when sending a message from a shared mailbox, or sending a message as a delegate. In any case, the value must correspond to the actual mailbox used. Find out more about setting the from and sender properties of a message.
     *
     * @param Recipient $val The sender
     *
@@ -368,7 +368,7 @@ class Message extends OutlookItem
     
     /**
     * Gets the from
-    * The mailbox owner and sender of the message. The value must correspond to the actual mailbox used.
+    * The mailbox owner and sender of the message. The value must correspond to the actual mailbox used. Find out more about setting the from and sender properties of a message.
     *
     * @return Recipient The from
     */
@@ -387,7 +387,7 @@ class Message extends OutlookItem
     
     /**
     * Sets the from
-    * The mailbox owner and sender of the message. The value must correspond to the actual mailbox used.
+    * The mailbox owner and sender of the message. The value must correspond to the actual mailbox used. Find out more about setting the from and sender properties of a message.
     *
     * @param Recipient $val The from
     *
@@ -825,7 +825,7 @@ class Message extends OutlookItem
 
      /** 
      * Gets the extensions
-    * The collection of open extensions defined for the message. Read-only. Nullable.
+    * The collection of open extensions defined for the message. Nullable.
      *
      * @return array The extensions
      */
@@ -840,7 +840,7 @@ class Message extends OutlookItem
     
     /** 
     * Sets the extensions
-    * The collection of open extensions defined for the message. Read-only. Nullable.
+    * The collection of open extensions defined for the message. Nullable.
     *
     * @param Extension $val The extensions
     *
@@ -855,7 +855,7 @@ class Message extends OutlookItem
 
      /** 
      * Gets the singleValueExtendedProperties
-    * The collection of single-value extended properties defined for the message. Read-only. Nullable.
+    * The collection of single-value extended properties defined for the message. Nullable.
      *
      * @return array The singleValueExtendedProperties
      */
@@ -870,7 +870,7 @@ class Message extends OutlookItem
     
     /** 
     * Sets the singleValueExtendedProperties
-    * The collection of single-value extended properties defined for the message. Read-only. Nullable.
+    * The collection of single-value extended properties defined for the message. Nullable.
     *
     * @param SingleValueLegacyExtendedProperty $val The singleValueExtendedProperties
     *
@@ -885,7 +885,7 @@ class Message extends OutlookItem
 
      /** 
      * Gets the multiValueExtendedProperties
-    * The collection of multi-value extended properties defined for the message. Read-only. Nullable.
+    * The collection of multi-value extended properties defined for the message. Nullable.
      *
      * @return array The multiValueExtendedProperties
      */
@@ -900,7 +900,7 @@ class Message extends OutlookItem
     
     /** 
     * Sets the multiValueExtendedProperties
-    * The collection of multi-value extended properties defined for the message. Read-only. Nullable.
+    * The collection of multi-value extended properties defined for the message. Nullable.
     *
     * @param MultiValueLegacyExtendedProperty $val The multiValueExtendedProperties
     *

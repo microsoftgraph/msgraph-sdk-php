@@ -706,6 +706,62 @@ class Group extends DirectoryObject
         return $this;
     }
     
+
+     /** 
+     * Gets the transitiveMembers
+     *
+     * @return array The transitiveMembers
+     */
+    public function getTransitiveMembers()
+    {
+        if (array_key_exists("transitiveMembers", $this->_propDict)) {
+           return $this->_propDict["transitiveMembers"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the transitiveMembers
+    *
+    * @param DirectoryObject $val The transitiveMembers
+    *
+    * @return Group
+    */
+    public function setTransitiveMembers($val)
+    {
+		$this->_propDict["transitiveMembers"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the transitiveMemberOf
+     *
+     * @return array The transitiveMemberOf
+     */
+    public function getTransitiveMemberOf()
+    {
+        if (array_key_exists("transitiveMemberOf", $this->_propDict)) {
+           return $this->_propDict["transitiveMemberOf"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the transitiveMemberOf
+    *
+    * @param DirectoryObject $val The transitiveMemberOf
+    *
+    * @return Group
+    */
+    public function setTransitiveMemberOf($val)
+    {
+		$this->_propDict["transitiveMemberOf"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the createdOnBehalfOf
     * The user (or application) that created the group. NOTE: This is not set if the user is an administrator. Read-only.

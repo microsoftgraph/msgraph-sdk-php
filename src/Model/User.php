@@ -348,6 +348,60 @@ class User extends DirectoryObject
     }
     
     /**
+    * Gets the employeeId
+    *
+    * @return string The employeeId
+    */
+    public function getEmployeeId()
+    {
+        if (array_key_exists("employeeId", $this->_propDict)) {
+            return $this->_propDict["employeeId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the employeeId
+    *
+    * @param string $val The employeeId
+    *
+    * @return User
+    */
+    public function setEmployeeId($val)
+    {
+        $this->_propDict["employeeId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the faxNumber
+    *
+    * @return string The faxNumber
+    */
+    public function getFaxNumber()
+    {
+        if (array_key_exists("faxNumber", $this->_propDict)) {
+            return $this->_propDict["faxNumber"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the faxNumber
+    *
+    * @param string $val The faxNumber
+    *
+    * @return User
+    */
+    public function setFaxNumber($val)
+    {
+        $this->_propDict["faxNumber"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the givenName
     * The given name (first name) of the user. Supports $filter.
     *
@@ -547,6 +601,33 @@ class User extends DirectoryObject
     public function setMobilePhone($val)
     {
         $this->_propDict["mobilePhone"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the onPremisesDistinguishedName
+    *
+    * @return string The onPremisesDistinguishedName
+    */
+    public function getOnPremisesDistinguishedName()
+    {
+        if (array_key_exists("onPremisesDistinguishedName", $this->_propDict)) {
+            return $this->_propDict["onPremisesDistinguishedName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the onPremisesDistinguishedName
+    *
+    * @param string $val The onPremisesDistinguishedName
+    *
+    * @return User
+    */
+    public function setOnPremisesDistinguishedName($val)
+    {
+        $this->_propDict["onPremisesDistinguishedName"] = $val;
         return $this;
     }
     
@@ -821,6 +902,33 @@ class User extends DirectoryObject
     }
     
     /**
+    * Gets the otherMails
+    *
+    * @return string The otherMails
+    */
+    public function getOtherMails()
+    {
+        if (array_key_exists("otherMails", $this->_propDict)) {
+            return $this->_propDict["otherMails"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the otherMails
+    *
+    * @param string $val The otherMails
+    *
+    * @return User
+    */
+    public function setOtherMails($val)
+    {
+        $this->_propDict["otherMails"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the passwordPolicies
     * Specifies password policies for the user. This value is an enumeration with one possible value being 'DisableStrongPassword', which allows weaker passwords than the default policy to be specified. 'DisablePasswordExpiration' can also be specified. The two may be specified together; for example: 'DisablePasswordExpiration, DisableStrongPassword'.
     *
@@ -1025,6 +1133,33 @@ class User extends DirectoryObject
     public function setProxyAddresses($val)
     {
         $this->_propDict["proxyAddresses"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the showInAddressList
+    *
+    * @return bool The showInAddressList
+    */
+    public function getShowInAddressList()
+    {
+        if (array_key_exists("showInAddressList", $this->_propDict)) {
+            return $this->_propDict["showInAddressList"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the showInAddressList
+    *
+    * @param bool $val The showInAddressList
+    *
+    * @return User
+    */
+    public function setShowInAddressList($val)
+    {
+        $this->_propDict["showInAddressList"] = boolval($val);
         return $this;
     }
     
@@ -1802,6 +1937,34 @@ class User extends DirectoryObject
     public function setLicenseDetails($val)
     {
 		$this->_propDict["licenseDetails"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the transitiveMemberOf
+     *
+     * @return array The transitiveMemberOf
+     */
+    public function getTransitiveMemberOf()
+    {
+        if (array_key_exists("transitiveMemberOf", $this->_propDict)) {
+           return $this->_propDict["transitiveMemberOf"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the transitiveMemberOf
+    *
+    * @param DirectoryObject $val The transitiveMemberOf
+    *
+    * @return User
+    */
+    public function setTransitiveMemberOf($val)
+    {
+		$this->_propDict["transitiveMemberOf"] = $val;
         return $this;
     }
     
