@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * AppleVpnConfiguration class
@@ -28,6 +28,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
 {
     /**
     * Gets the connectionName
+    * Connection name displayed to the user.
     *
     * @return string The connectionName
     */
@@ -42,6 +43,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
     
     /**
     * Sets the connectionName
+    * Connection name displayed to the user.
     *
     * @param string $val The connectionName
     *
@@ -55,13 +57,14 @@ class AppleVpnConfiguration extends DeviceConfiguration
     
     /**
     * Gets the connectionType
+    * Connection type.
     *
     * @return AppleVpnConnectionType The connectionType
     */
     public function getConnectionType()
     {
         if (array_key_exists("connectionType", $this->_propDict)) {
-            if (is_a($this->_propDict["connectionType"], "Microsoft\Graph\Beta\Model\AppleVpnConnectionType")) {
+            if (is_a($this->_propDict["connectionType"], "Microsoft\Graph\Model\AppleVpnConnectionType")) {
                 return $this->_propDict["connectionType"];
             } else {
                 $this->_propDict["connectionType"] = new AppleVpnConnectionType($this->_propDict["connectionType"]);
@@ -73,6 +76,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
     
     /**
     * Sets the connectionType
+    * Connection type.
     *
     * @param AppleVpnConnectionType $val The connectionType
     *
@@ -86,6 +90,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
     
     /**
     * Gets the loginGroupOrDomain
+    * Login group or domain when connection type is set to Dell SonicWALL Mobile Connection.
     *
     * @return string The loginGroupOrDomain
     */
@@ -100,6 +105,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
     
     /**
     * Sets the loginGroupOrDomain
+    * Login group or domain when connection type is set to Dell SonicWALL Mobile Connection.
     *
     * @param string $val The loginGroupOrDomain
     *
@@ -113,6 +119,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
     
     /**
     * Gets the role
+    * Role when connection type is set to Pulse Secure.
     *
     * @return string The role
     */
@@ -127,6 +134,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
     
     /**
     * Sets the role
+    * Role when connection type is set to Pulse Secure.
     *
     * @param string $val The role
     *
@@ -140,6 +148,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
     
     /**
     * Gets the realm
+    * Realm when connection type is set to Pulse Secure.
     *
     * @return string The realm
     */
@@ -154,6 +163,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
     
     /**
     * Sets the realm
+    * Realm when connection type is set to Pulse Secure.
     *
     * @param string $val The realm
     *
@@ -167,13 +177,14 @@ class AppleVpnConfiguration extends DeviceConfiguration
     
     /**
     * Gets the server
+    * VPN Server on the network. Make sure end users can access this network location.
     *
     * @return VpnServer The server
     */
     public function getServer()
     {
         if (array_key_exists("server", $this->_propDict)) {
-            if (is_a($this->_propDict["server"], "Microsoft\Graph\Beta\Model\VpnServer")) {
+            if (is_a($this->_propDict["server"], "Microsoft\Graph\Model\VpnServer")) {
                 return $this->_propDict["server"];
             } else {
                 $this->_propDict["server"] = new VpnServer($this->_propDict["server"]);
@@ -185,6 +196,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
     
     /**
     * Sets the server
+    * VPN Server on the network. Make sure end users can access this network location.
     *
     * @param VpnServer $val The server
     *
@@ -198,6 +210,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
     
     /**
     * Gets the identifier
+    * Identifier provided by VPN vendor when connection type is set to Custom VPN. For example: Cisco AnyConnect uses an identifier of the form com.cisco.anyconnect.applevpn.plugin
     *
     * @return string The identifier
     */
@@ -212,6 +225,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
     
     /**
     * Sets the identifier
+    * Identifier provided by VPN vendor when connection type is set to Custom VPN. For example: Cisco AnyConnect uses an identifier of the form com.cisco.anyconnect.applevpn.plugin
     *
     * @param string $val The identifier
     *
@@ -226,6 +240,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
 
      /** 
      * Gets the customData
+    * Custom data when connection type is set to Custom VPN. Use this field to enable functionality not supported by Intune, but available in your VPN solution. Contact your VPN vendor to learn how to add these key/value pairs. This collection can contain a maximum of 25 elements.
      *
      * @return array The customData
      */
@@ -240,6 +255,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
     
     /** 
     * Sets the customData
+    * Custom data when connection type is set to Custom VPN. Use this field to enable functionality not supported by Intune, but available in your VPN solution. Contact your VPN vendor to learn how to add these key/value pairs. This collection can contain a maximum of 25 elements.
     *
     * @param KeyValue $val The customData
     *
@@ -254,6 +270,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
 
      /** 
      * Gets the customKeyValueData
+    * Custom data when connection type is set to Custom VPN. Use this field to enable functionality not supported by Intune, but available in your VPN solution. Contact your VPN vendor to learn how to add these key/value pairs. This collection can contain a maximum of 25 elements.
      *
      * @return array The customKeyValueData
      */
@@ -268,6 +285,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
     
     /** 
     * Sets the customKeyValueData
+    * Custom data when connection type is set to Custom VPN. Use this field to enable functionality not supported by Intune, but available in your VPN solution. Contact your VPN vendor to learn how to add these key/value pairs. This collection can contain a maximum of 25 elements.
     *
     * @param KeyValuePair $val The customKeyValueData
     *
@@ -281,6 +299,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
     
     /**
     * Gets the enableSplitTunneling
+    * Send all network traffic through VPN.
     *
     * @return bool The enableSplitTunneling
     */
@@ -295,6 +314,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
     
     /**
     * Sets the enableSplitTunneling
+    * Send all network traffic through VPN.
     *
     * @param bool $val The enableSplitTunneling
     *
@@ -308,13 +328,14 @@ class AppleVpnConfiguration extends DeviceConfiguration
     
     /**
     * Gets the authenticationMethod
+    * Authentication method for this VPN connection.
     *
     * @return VpnAuthenticationMethod The authenticationMethod
     */
     public function getAuthenticationMethod()
     {
         if (array_key_exists("authenticationMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["authenticationMethod"], "Microsoft\Graph\Beta\Model\VpnAuthenticationMethod")) {
+            if (is_a($this->_propDict["authenticationMethod"], "Microsoft\Graph\Model\VpnAuthenticationMethod")) {
                 return $this->_propDict["authenticationMethod"];
             } else {
                 $this->_propDict["authenticationMethod"] = new VpnAuthenticationMethod($this->_propDict["authenticationMethod"]);
@@ -326,6 +347,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
     
     /**
     * Sets the authenticationMethod
+    * Authentication method for this VPN connection.
     *
     * @param VpnAuthenticationMethod $val The authenticationMethod
     *
@@ -339,6 +361,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
     
     /**
     * Gets the enablePerApp
+    * Setting this to true creates Per-App VPN payload which can later be associated with Apps that can trigger this VPN conneciton on the end user's iOS device.
     *
     * @return bool The enablePerApp
     */
@@ -353,6 +376,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
     
     /**
     * Sets the enablePerApp
+    * Setting this to true creates Per-App VPN payload which can later be associated with Apps that can trigger this VPN conneciton on the end user's iOS device.
     *
     * @param bool $val The enablePerApp
     *
@@ -366,6 +390,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
     
     /**
     * Gets the safariDomains
+    * Safari domains when this VPN per App setting is enabled. In addition to the apps associated with this VPN, Safari domains specified here will also be able to trigger this VPN connection.
     *
     * @return string The safariDomains
     */
@@ -380,6 +405,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
     
     /**
     * Sets the safariDomains
+    * Safari domains when this VPN per App setting is enabled. In addition to the apps associated with this VPN, Safari domains specified here will also be able to trigger this VPN connection.
     *
     * @param string $val The safariDomains
     *
@@ -394,6 +420,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
 
      /** 
      * Gets the onDemandRules
+    * On-Demand Rules. This collection can contain a maximum of 500 elements.
      *
      * @return array The onDemandRules
      */
@@ -408,6 +435,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
     
     /** 
     * Sets the onDemandRules
+    * On-Demand Rules. This collection can contain a maximum of 500 elements.
     *
     * @param VpnOnDemandRule $val The onDemandRules
     *
@@ -421,13 +449,14 @@ class AppleVpnConfiguration extends DeviceConfiguration
     
     /**
     * Gets the proxyServer
+    * Proxy Server.
     *
     * @return VpnProxyServer The proxyServer
     */
     public function getProxyServer()
     {
         if (array_key_exists("proxyServer", $this->_propDict)) {
-            if (is_a($this->_propDict["proxyServer"], "Microsoft\Graph\Beta\Model\VpnProxyServer")) {
+            if (is_a($this->_propDict["proxyServer"], "Microsoft\Graph\Model\VpnProxyServer")) {
                 return $this->_propDict["proxyServer"];
             } else {
                 $this->_propDict["proxyServer"] = new VpnProxyServer($this->_propDict["proxyServer"]);
@@ -439,6 +468,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
     
     /**
     * Sets the proxyServer
+    * Proxy Server.
     *
     * @param VpnProxyServer $val The proxyServer
     *
@@ -452,6 +482,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
     
     /**
     * Gets the optInToDeviceIdSharing
+    * Opt-In to sharing the device's Id to third-party vpn clients for use during network access control validation.
     *
     * @return bool The optInToDeviceIdSharing
     */
@@ -466,6 +497,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
     
     /**
     * Sets the optInToDeviceIdSharing
+    * Opt-In to sharing the device's Id to third-party vpn clients for use during network access control validation.
     *
     * @param bool $val The optInToDeviceIdSharing
     *

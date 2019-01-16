@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * IosVppEBook class
@@ -28,6 +28,7 @@ class IosVppEBook extends ManagedEBook
 {
     /**
     * Gets the vppTokenId
+    * The Vpp token ID.
     *
     * @return string The vppTokenId
     */
@@ -42,6 +43,7 @@ class IosVppEBook extends ManagedEBook
     
     /**
     * Sets the vppTokenId
+    * The Vpp token ID.
     *
     * @param string $val The vppTokenId
     *
@@ -55,6 +57,7 @@ class IosVppEBook extends ManagedEBook
     
     /**
     * Gets the appleId
+    * The Apple ID associated with Vpp token.
     *
     * @return string The appleId
     */
@@ -69,6 +72,7 @@ class IosVppEBook extends ManagedEBook
     
     /**
     * Sets the appleId
+    * The Apple ID associated with Vpp token.
     *
     * @param string $val The appleId
     *
@@ -82,6 +86,7 @@ class IosVppEBook extends ManagedEBook
     
     /**
     * Gets the vppOrganizationName
+    * The Vpp token's organization name.
     *
     * @return string The vppOrganizationName
     */
@@ -96,6 +101,7 @@ class IosVppEBook extends ManagedEBook
     
     /**
     * Sets the vppOrganizationName
+    * The Vpp token's organization name.
     *
     * @param string $val The vppOrganizationName
     *
@@ -109,6 +115,7 @@ class IosVppEBook extends ManagedEBook
     
     /**
     * Gets the genres
+    * Genres.
     *
     * @return string The genres
     */
@@ -123,6 +130,7 @@ class IosVppEBook extends ManagedEBook
     
     /**
     * Sets the genres
+    * Genres.
     *
     * @param string $val The genres
     *
@@ -136,6 +144,7 @@ class IosVppEBook extends ManagedEBook
     
     /**
     * Gets the language
+    * Language.
     *
     * @return string The language
     */
@@ -150,6 +159,7 @@ class IosVppEBook extends ManagedEBook
     
     /**
     * Sets the language
+    * Language.
     *
     * @param string $val The language
     *
@@ -163,6 +173,7 @@ class IosVppEBook extends ManagedEBook
     
     /**
     * Gets the seller
+    * Seller.
     *
     * @return string The seller
     */
@@ -177,6 +188,7 @@ class IosVppEBook extends ManagedEBook
     
     /**
     * Sets the seller
+    * Seller.
     *
     * @param string $val The seller
     *
@@ -190,6 +202,7 @@ class IosVppEBook extends ManagedEBook
     
     /**
     * Gets the totalLicenseCount
+    * Total license count.
     *
     * @return int The totalLicenseCount
     */
@@ -204,6 +217,7 @@ class IosVppEBook extends ManagedEBook
     
     /**
     * Sets the totalLicenseCount
+    * Total license count.
     *
     * @param int $val The totalLicenseCount
     *
@@ -217,6 +231,7 @@ class IosVppEBook extends ManagedEBook
     
     /**
     * Gets the usedLicenseCount
+    * Used license count.
     *
     * @return int The usedLicenseCount
     */
@@ -231,6 +246,7 @@ class IosVppEBook extends ManagedEBook
     
     /**
     * Sets the usedLicenseCount
+    * Used license count.
     *
     * @param int $val The usedLicenseCount
     *
@@ -239,6 +255,35 @@ class IosVppEBook extends ManagedEBook
     public function setUsedLicenseCount($val)
     {
         $this->_propDict["usedLicenseCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the roleScopeTagIds
+    * List of Scope Tags for this Entity instance.
+    *
+    * @return string The roleScopeTagIds
+    */
+    public function getRoleScopeTagIds()
+    {
+        if (array_key_exists("roleScopeTagIds", $this->_propDict)) {
+            return $this->_propDict["roleScopeTagIds"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the roleScopeTagIds
+    * List of Scope Tags for this Entity instance.
+    *
+    * @param string $val The roleScopeTagIds
+    *
+    * @return IosVppEBook
+    */
+    public function setRoleScopeTagIds($val)
+    {
+        $this->_propDict["roleScopeTagIds"] = $val;
         return $this;
     }
     

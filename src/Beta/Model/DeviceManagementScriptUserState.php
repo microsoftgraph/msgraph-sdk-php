@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * DeviceManagementScriptUserState class
@@ -28,6 +28,7 @@ class DeviceManagementScriptUserState extends Entity
 {
     /**
     * Gets the successDeviceCount
+    * Success device count for specific user.
     *
     * @return int The successDeviceCount
     */
@@ -42,6 +43,7 @@ class DeviceManagementScriptUserState extends Entity
     
     /**
     * Sets the successDeviceCount
+    * Success device count for specific user.
     *
     * @param int $val The successDeviceCount
     *
@@ -55,6 +57,7 @@ class DeviceManagementScriptUserState extends Entity
     
     /**
     * Gets the errorDeviceCount
+    * Error device count for specific user.
     *
     * @return int The errorDeviceCount
     */
@@ -69,6 +72,7 @@ class DeviceManagementScriptUserState extends Entity
     
     /**
     * Sets the errorDeviceCount
+    * Error device count for specific user.
     *
     * @param int $val The errorDeviceCount
     *
@@ -82,6 +86,7 @@ class DeviceManagementScriptUserState extends Entity
     
     /**
     * Gets the userPrincipalName
+    * User principle name of specific user.
     *
     * @return string The userPrincipalName
     */
@@ -96,6 +101,7 @@ class DeviceManagementScriptUserState extends Entity
     
     /**
     * Sets the userPrincipalName
+    * User principle name of specific user.
     *
     * @param string $val The userPrincipalName
     *
@@ -110,6 +116,7 @@ class DeviceManagementScriptUserState extends Entity
 
      /** 
      * Gets the deviceRunStates
+    * List of run states for this script across all devices of specific user.
      *
      * @return array The deviceRunStates
      */
@@ -124,6 +131,7 @@ class DeviceManagementScriptUserState extends Entity
     
     /** 
     * Sets the deviceRunStates
+    * List of run states for this script across all devices of specific user.
     *
     * @param DeviceManagementScriptDeviceState $val The deviceRunStates
     *

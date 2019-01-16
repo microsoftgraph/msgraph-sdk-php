@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * WindowsDeviceAzureADAccount class
 *
@@ -27,6 +27,7 @@ class WindowsDeviceAzureADAccount extends WindowsDeviceAccount
 {
     /**
     * Gets the userPrincipalName
+    * Not yet documented
     *
     * @return string The userPrincipalName
     */
@@ -41,6 +42,7 @@ class WindowsDeviceAzureADAccount extends WindowsDeviceAccount
 
     /**
     * Sets the userPrincipalName
+    * Not yet documented
     *
     * @param string $val The value of the userPrincipalName
     *

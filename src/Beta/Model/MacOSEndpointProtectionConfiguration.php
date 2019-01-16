@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * MacOSEndpointProtectionConfiguration class
@@ -28,13 +28,14 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
 {
     /**
     * Gets the gatekeeperAllowedAppSource
+    * System and Privacy setting that determines which download locations apps can be run from on a macOS device.
     *
     * @return MacOSGatekeeperAppSources The gatekeeperAllowedAppSource
     */
     public function getGatekeeperAllowedAppSource()
     {
         if (array_key_exists("gatekeeperAllowedAppSource", $this->_propDict)) {
-            if (is_a($this->_propDict["gatekeeperAllowedAppSource"], "Microsoft\Graph\Beta\Model\MacOSGatekeeperAppSources")) {
+            if (is_a($this->_propDict["gatekeeperAllowedAppSource"], "Microsoft\Graph\Model\MacOSGatekeeperAppSources")) {
                 return $this->_propDict["gatekeeperAllowedAppSource"];
             } else {
                 $this->_propDict["gatekeeperAllowedAppSource"] = new MacOSGatekeeperAppSources($this->_propDict["gatekeeperAllowedAppSource"]);
@@ -46,6 +47,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the gatekeeperAllowedAppSource
+    * System and Privacy setting that determines which download locations apps can be run from on a macOS device.
     *
     * @param MacOSGatekeeperAppSources $val The gatekeeperAllowedAppSource
     *
@@ -59,6 +61,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the gatekeeperBlockOverride
+    * If set to true, the user override for Gatekeeper will be disabled.
     *
     * @return bool The gatekeeperBlockOverride
     */
@@ -73,6 +76,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the gatekeeperBlockOverride
+    * If set to true, the user override for Gatekeeper will be disabled.
     *
     * @param bool $val The gatekeeperBlockOverride
     *
@@ -86,6 +90,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the firewallEnabled
+    * Whether the firewall should be enabled or not.
     *
     * @return bool The firewallEnabled
     */
@@ -100,6 +105,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the firewallEnabled
+    * Whether the firewall should be enabled or not.
     *
     * @param bool $val The firewallEnabled
     *
@@ -113,6 +119,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the firewallBlockAllIncoming
+    * Corresponds to the â€œBlock all incoming connectionsâ€ option.
     *
     * @return bool The firewallBlockAllIncoming
     */
@@ -127,6 +134,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the firewallBlockAllIncoming
+    * Corresponds to the â€œBlock all incoming connectionsâ€ option.
     *
     * @param bool $val The firewallBlockAllIncoming
     *
@@ -140,6 +148,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the firewallEnableStealthMode
+    * Corresponds to â€œEnable stealth mode.â€
     *
     * @return bool The firewallEnableStealthMode
     */
@@ -154,6 +163,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the firewallEnableStealthMode
+    * Corresponds to â€œEnable stealth mode.â€
     *
     * @param bool $val The firewallEnableStealthMode
     *
@@ -168,6 +178,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
 
      /** 
      * Gets the firewallApplications
+    * List of applications with firewall settings. Firewall settings for applications not on this list are determined by the user. This collection can contain a maximum of 500 elements.
      *
      * @return array The firewallApplications
      */
@@ -182,6 +193,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     
     /** 
     * Sets the firewallApplications
+    * List of applications with firewall settings. Firewall settings for applications not on this list are determined by the user. This collection can contain a maximum of 500 elements.
     *
     * @param MacOSFirewallApplication $val The firewallApplications
     *

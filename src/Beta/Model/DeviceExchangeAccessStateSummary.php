@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * DeviceExchangeAccessStateSummary class
 *
@@ -27,6 +27,7 @@ class DeviceExchangeAccessStateSummary extends Entity
 {
     /**
     * Gets the allowedDeviceCount
+    * Total count of devices with Exchange Access State: Allowed.
     *
     * @return int The allowedDeviceCount
     */
@@ -41,6 +42,7 @@ class DeviceExchangeAccessStateSummary extends Entity
 
     /**
     * Sets the allowedDeviceCount
+    * Total count of devices with Exchange Access State: Allowed.
     *
     * @param int $val The value of the allowedDeviceCount
     *
@@ -53,6 +55,7 @@ class DeviceExchangeAccessStateSummary extends Entity
     }
     /**
     * Gets the blockedDeviceCount
+    * Total count of devices with Exchange Access State: Blocked.
     *
     * @return int The blockedDeviceCount
     */
@@ -67,6 +70,7 @@ class DeviceExchangeAccessStateSummary extends Entity
 
     /**
     * Sets the blockedDeviceCount
+    * Total count of devices with Exchange Access State: Blocked.
     *
     * @param int $val The value of the blockedDeviceCount
     *
@@ -79,6 +83,7 @@ class DeviceExchangeAccessStateSummary extends Entity
     }
     /**
     * Gets the quarantinedDeviceCount
+    * Total count of devices with Exchange Access State: Quarantined.
     *
     * @return int The quarantinedDeviceCount
     */
@@ -93,6 +98,7 @@ class DeviceExchangeAccessStateSummary extends Entity
 
     /**
     * Sets the quarantinedDeviceCount
+    * Total count of devices with Exchange Access State: Quarantined.
     *
     * @param int $val The value of the quarantinedDeviceCount
     *
@@ -105,6 +111,7 @@ class DeviceExchangeAccessStateSummary extends Entity
     }
     /**
     * Gets the unknownDeviceCount
+    * Total count of devices with Exchange Access State: Unknown.
     *
     * @return int The unknownDeviceCount
     */
@@ -119,6 +126,7 @@ class DeviceExchangeAccessStateSummary extends Entity
 
     /**
     * Sets the unknownDeviceCount
+    * Total count of devices with Exchange Access State: Unknown.
     *
     * @param int $val The value of the unknownDeviceCount
     *
@@ -131,6 +139,7 @@ class DeviceExchangeAccessStateSummary extends Entity
     }
     /**
     * Gets the unavailableDeviceCount
+    * Total count of devices for which no Exchange Access State could be found.
     *
     * @return int The unavailableDeviceCount
     */
@@ -145,6 +154,7 @@ class DeviceExchangeAccessStateSummary extends Entity
 
     /**
     * Sets the unavailableDeviceCount
+    * Total count of devices for which no Exchange Access State could be found.
     *
     * @param int $val The value of the unavailableDeviceCount
     *

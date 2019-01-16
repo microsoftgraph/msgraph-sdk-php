@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * DeviceEnrollmentLimitConfiguration class
@@ -28,6 +28,7 @@ class DeviceEnrollmentLimitConfiguration extends DeviceEnrollmentConfiguration
 {
     /**
     * Gets the limit
+    * Not yet documented
     *
     * @return int The limit
     */
@@ -42,6 +43,7 @@ class DeviceEnrollmentLimitConfiguration extends DeviceEnrollmentConfiguration
     
     /**
     * Sets the limit
+    * Not yet documented
     *
     * @param int $val The limit
     *

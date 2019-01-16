@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * IosHomeScreenFolderPage class
 *
@@ -27,6 +27,7 @@ class IosHomeScreenFolderPage extends Entity
 {
     /**
     * Gets the displayName
+    * Name of the folder page
     *
     * @return string The displayName
     */
@@ -41,6 +42,7 @@ class IosHomeScreenFolderPage extends Entity
 
     /**
     * Sets the displayName
+    * Name of the folder page
     *
     * @param string $val The value of the displayName
     *
@@ -54,13 +56,14 @@ class IosHomeScreenFolderPage extends Entity
 
     /**
     * Gets the apps
+    * A list of apps to appear on a page within a folder. This collection can contain a maximum of 500 elements.
     *
     * @return IosHomeScreenApp The apps
     */
     public function getApps()
     {
         if (array_key_exists("apps", $this->_propDict)) {
-            if (is_a($this->_propDict["apps"], "Microsoft\Graph\Beta\Model\IosHomeScreenApp")) {
+            if (is_a($this->_propDict["apps"], "Microsoft\Graph\Model\IosHomeScreenApp")) {
                 return $this->_propDict["apps"];
             } else {
                 $this->_propDict["apps"] = new IosHomeScreenApp($this->_propDict["apps"]);
@@ -72,6 +75,7 @@ class IosHomeScreenFolderPage extends Entity
 
     /**
     * Sets the apps
+    * A list of apps to appear on a page within a folder. This collection can contain a maximum of 500 elements.
     *
     * @param IosHomeScreenApp $val The value to assign to the apps
     *

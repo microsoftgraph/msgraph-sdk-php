@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * WorkbookChartGridlines class
@@ -28,6 +28,7 @@ class WorkbookChartGridlines extends Entity
 {
     /**
     * Gets the visible
+    * Boolean value representing if the axis gridlines are visible or not.
     *
     * @return bool The visible
     */
@@ -42,6 +43,7 @@ class WorkbookChartGridlines extends Entity
     
     /**
     * Sets the visible
+    * Boolean value representing if the axis gridlines are visible or not.
     *
     * @param bool $val The visible
     *
@@ -55,13 +57,14 @@ class WorkbookChartGridlines extends Entity
     
     /**
     * Gets the format
+    * Represents the formatting of chart gridlines. Read-only.
     *
     * @return WorkbookChartGridlinesFormat The format
     */
     public function getFormat()
     {
         if (array_key_exists("format", $this->_propDict)) {
-            if (is_a($this->_propDict["format"], "Microsoft\Graph\Beta\Model\WorkbookChartGridlinesFormat")) {
+            if (is_a($this->_propDict["format"], "Microsoft\Graph\Model\WorkbookChartGridlinesFormat")) {
                 return $this->_propDict["format"];
             } else {
                 $this->_propDict["format"] = new WorkbookChartGridlinesFormat($this->_propDict["format"]);
@@ -73,6 +76,7 @@ class WorkbookChartGridlines extends Entity
     
     /**
     * Sets the format
+    * Represents the formatting of chart gridlines. Read-only.
     *
     * @param WorkbookChartGridlinesFormat $val The format
     *

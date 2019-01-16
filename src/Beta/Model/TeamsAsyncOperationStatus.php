@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 use Microsoft\Graph\Core\Enum;
 
@@ -36,4 +36,5 @@ class TeamsAsyncOperationStatus extends Enum
     const IN_PROGRESS = "inProgress";
     const SUCCEEDED = "succeeded";
     const FAILED = "failed";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

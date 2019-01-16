@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * WindowsKioskAzureADGroup class
 *
@@ -27,6 +27,7 @@ class WindowsKioskAzureADGroup extends WindowsKioskUser
 {
     /**
     * Gets the displayName
+    * The display name of the AzureAD group that will be locked to this kiosk configuration
     *
     * @return string The displayName
     */
@@ -41,6 +42,7 @@ class WindowsKioskAzureADGroup extends WindowsKioskUser
 
     /**
     * Sets the displayName
+    * The display name of the AzureAD group that will be locked to this kiosk configuration
     *
     * @param string $val The value of the displayName
     *
@@ -53,6 +55,7 @@ class WindowsKioskAzureADGroup extends WindowsKioskUser
     }
     /**
     * Gets the groupId
+    * The ID of the AzureAD group that will be locked to this kiosk configuration
     *
     * @return string The groupId
     */
@@ -67,6 +70,7 @@ class WindowsKioskAzureADGroup extends WindowsKioskUser
 
     /**
     * Sets the groupId
+    * The ID of the AzureAD group that will be locked to this kiosk configuration
     *
     * @param string $val The value of the groupId
     *

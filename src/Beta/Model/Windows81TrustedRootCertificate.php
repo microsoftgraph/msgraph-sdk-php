@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * Windows81TrustedRootCertificate class
@@ -28,6 +28,7 @@ class Windows81TrustedRootCertificate extends DeviceConfiguration
 {
     /**
     * Gets the trustedRootCertificate
+    * Trusted Root Certificate
     *
     * @return \GuzzleHttp\Psr7\Stream The trustedRootCertificate
     */
@@ -46,6 +47,7 @@ class Windows81TrustedRootCertificate extends DeviceConfiguration
     
     /**
     * Sets the trustedRootCertificate
+    * Trusted Root Certificate
     *
     * @param \GuzzleHttp\Psr7\Stream $val The trustedRootCertificate
     *
@@ -59,6 +61,7 @@ class Windows81TrustedRootCertificate extends DeviceConfiguration
     
     /**
     * Gets the certFileName
+    * File name to display in UI.
     *
     * @return string The certFileName
     */
@@ -73,6 +76,7 @@ class Windows81TrustedRootCertificate extends DeviceConfiguration
     
     /**
     * Sets the certFileName
+    * File name to display in UI.
     *
     * @param string $val The certFileName
     *
@@ -86,13 +90,14 @@ class Windows81TrustedRootCertificate extends DeviceConfiguration
     
     /**
     * Gets the destinationStore
+    * Destination store location for the Trusted Root Certificate.
     *
     * @return CertificateDestinationStore The destinationStore
     */
     public function getDestinationStore()
     {
         if (array_key_exists("destinationStore", $this->_propDict)) {
-            if (is_a($this->_propDict["destinationStore"], "Microsoft\Graph\Beta\Model\CertificateDestinationStore")) {
+            if (is_a($this->_propDict["destinationStore"], "Microsoft\Graph\Model\CertificateDestinationStore")) {
                 return $this->_propDict["destinationStore"];
             } else {
                 $this->_propDict["destinationStore"] = new CertificateDestinationStore($this->_propDict["destinationStore"]);
@@ -104,6 +109,7 @@ class Windows81TrustedRootCertificate extends DeviceConfiguration
     
     /**
     * Sets the destinationStore
+    * Destination store location for the Trusted Root Certificate.
     *
     * @param CertificateDestinationStore $val The destinationStore
     *

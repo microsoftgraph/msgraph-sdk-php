@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * WebApp class
@@ -28,6 +28,7 @@ class WebApp extends MobileApp
 {
     /**
     * Gets the appUrl
+    * The web app URL.
     *
     * @return string The appUrl
     */
@@ -42,6 +43,7 @@ class WebApp extends MobileApp
     
     /**
     * Sets the appUrl
+    * The web app URL.
     *
     * @param string $val The appUrl
     *
@@ -55,6 +57,7 @@ class WebApp extends MobileApp
     
     /**
     * Gets the useManagedBrowser
+    * Whether or not to use managed browser. This property is only applicable for Android and IOS.
     *
     * @return bool The useManagedBrowser
     */
@@ -69,6 +72,7 @@ class WebApp extends MobileApp
     
     /**
     * Sets the useManagedBrowser
+    * Whether or not to use managed browser. This property is only applicable for Android and IOS.
     *
     * @param bool $val The useManagedBrowser
     *

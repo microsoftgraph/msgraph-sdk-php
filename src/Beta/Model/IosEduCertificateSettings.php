@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * IosEduCertificateSettings class
 *
@@ -28,13 +28,14 @@ class IosEduCertificateSettings extends Entity
 
     /**
     * Gets the trustedRootCertificate
+    * Trusted Root Certificate.
     *
     * @return \GuzzleHttp\Psr7\Stream The trustedRootCertificate
     */
     public function getTrustedRootCertificate()
     {
         if (array_key_exists("trustedRootCertificate", $this->_propDict)) {
-            if (is_a($this->_propDict["trustedRootCertificate"], "Microsoft\Graph\Beta\Model\\GuzzleHttp\Psr7\Stream")) {
+            if (is_a($this->_propDict["trustedRootCertificate"], "Microsoft\Graph\Model\\GuzzleHttp\Psr7\Stream")) {
                 return $this->_propDict["trustedRootCertificate"];
             } else {
                 $this->_propDict["trustedRootCertificate"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["trustedRootCertificate"]);
@@ -46,6 +47,7 @@ class IosEduCertificateSettings extends Entity
 
     /**
     * Sets the trustedRootCertificate
+    * Trusted Root Certificate.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The value to assign to the trustedRootCertificate
     *
@@ -58,6 +60,7 @@ class IosEduCertificateSettings extends Entity
     }
     /**
     * Gets the certFileName
+    * File name to display in UI.
     *
     * @return string The certFileName
     */
@@ -72,6 +75,7 @@ class IosEduCertificateSettings extends Entity
 
     /**
     * Sets the certFileName
+    * File name to display in UI.
     *
     * @param string $val The value of the certFileName
     *
@@ -84,6 +88,7 @@ class IosEduCertificateSettings extends Entity
     }
     /**
     * Gets the certificationAuthority
+    * PKCS Certification Authority.
     *
     * @return string The certificationAuthority
     */
@@ -98,6 +103,7 @@ class IosEduCertificateSettings extends Entity
 
     /**
     * Sets the certificationAuthority
+    * PKCS Certification Authority.
     *
     * @param string $val The value of the certificationAuthority
     *
@@ -110,6 +116,7 @@ class IosEduCertificateSettings extends Entity
     }
     /**
     * Gets the certificationAuthorityName
+    * PKCS Certification Authority Name.
     *
     * @return string The certificationAuthorityName
     */
@@ -124,6 +131,7 @@ class IosEduCertificateSettings extends Entity
 
     /**
     * Sets the certificationAuthorityName
+    * PKCS Certification Authority Name.
     *
     * @param string $val The value of the certificationAuthorityName
     *
@@ -136,6 +144,7 @@ class IosEduCertificateSettings extends Entity
     }
     /**
     * Gets the certificateTemplateName
+    * PKCS Certificate Template Name.
     *
     * @return string The certificateTemplateName
     */
@@ -150,6 +159,7 @@ class IosEduCertificateSettings extends Entity
 
     /**
     * Sets the certificateTemplateName
+    * PKCS Certificate Template Name.
     *
     * @param string $val The value of the certificateTemplateName
     *
@@ -162,6 +172,7 @@ class IosEduCertificateSettings extends Entity
     }
     /**
     * Gets the renewalThresholdPercentage
+    * Certificate renewal threshold percentage. Valid values 1 to 99
     *
     * @return int The renewalThresholdPercentage
     */
@@ -176,6 +187,7 @@ class IosEduCertificateSettings extends Entity
 
     /**
     * Sets the renewalThresholdPercentage
+    * Certificate renewal threshold percentage. Valid values 1 to 99
     *
     * @param int $val The value of the renewalThresholdPercentage
     *
@@ -188,6 +200,7 @@ class IosEduCertificateSettings extends Entity
     }
     /**
     * Gets the certificateValidityPeriodValue
+    * Value for the Certificate Validity Period.
     *
     * @return int The certificateValidityPeriodValue
     */
@@ -202,6 +215,7 @@ class IosEduCertificateSettings extends Entity
 
     /**
     * Sets the certificateValidityPeriodValue
+    * Value for the Certificate Validity Period.
     *
     * @param int $val The value of the certificateValidityPeriodValue
     *
@@ -215,13 +229,14 @@ class IosEduCertificateSettings extends Entity
 
     /**
     * Gets the certificateValidityPeriodScale
+    * Scale for the Certificate Validity Period.
     *
     * @return CertificateValidityPeriodScale The certificateValidityPeriodScale
     */
     public function getCertificateValidityPeriodScale()
     {
         if (array_key_exists("certificateValidityPeriodScale", $this->_propDict)) {
-            if (is_a($this->_propDict["certificateValidityPeriodScale"], "Microsoft\Graph\Beta\Model\CertificateValidityPeriodScale")) {
+            if (is_a($this->_propDict["certificateValidityPeriodScale"], "Microsoft\Graph\Model\CertificateValidityPeriodScale")) {
                 return $this->_propDict["certificateValidityPeriodScale"];
             } else {
                 $this->_propDict["certificateValidityPeriodScale"] = new CertificateValidityPeriodScale($this->_propDict["certificateValidityPeriodScale"]);
@@ -233,6 +248,7 @@ class IosEduCertificateSettings extends Entity
 
     /**
     * Sets the certificateValidityPeriodScale
+    * Scale for the Certificate Validity Period.
     *
     * @param CertificateValidityPeriodScale $val The value to assign to the certificateValidityPeriodScale
     *

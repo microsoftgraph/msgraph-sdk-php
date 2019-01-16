@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * AndroidForWorkPkcsCertificateProfile class
@@ -28,6 +28,7 @@ class AndroidForWorkPkcsCertificateProfile extends AndroidForWorkCertificateProf
 {
     /**
     * Gets the certificationAuthority
+    * PKCS Certification Authority
     *
     * @return string The certificationAuthority
     */
@@ -42,6 +43,7 @@ class AndroidForWorkPkcsCertificateProfile extends AndroidForWorkCertificateProf
     
     /**
     * Sets the certificationAuthority
+    * PKCS Certification Authority
     *
     * @param string $val The certificationAuthority
     *
@@ -55,6 +57,7 @@ class AndroidForWorkPkcsCertificateProfile extends AndroidForWorkCertificateProf
     
     /**
     * Gets the certificationAuthorityName
+    * PKCS Certification Authority Name
     *
     * @return string The certificationAuthorityName
     */
@@ -69,6 +72,7 @@ class AndroidForWorkPkcsCertificateProfile extends AndroidForWorkCertificateProf
     
     /**
     * Sets the certificationAuthorityName
+    * PKCS Certification Authority Name
     *
     * @param string $val The certificationAuthorityName
     *
@@ -82,6 +86,7 @@ class AndroidForWorkPkcsCertificateProfile extends AndroidForWorkCertificateProf
     
     /**
     * Gets the certificateTemplateName
+    * PKCS Certificate Template Name
     *
     * @return string The certificateTemplateName
     */
@@ -96,6 +101,7 @@ class AndroidForWorkPkcsCertificateProfile extends AndroidForWorkCertificateProf
     
     /**
     * Sets the certificateTemplateName
+    * PKCS Certificate Template Name
     *
     * @param string $val The certificateTemplateName
     *
@@ -109,6 +115,7 @@ class AndroidForWorkPkcsCertificateProfile extends AndroidForWorkCertificateProf
     
     /**
     * Gets the subjectAlternativeNameFormatString
+    * Custom String that defines the AAD Attribute.
     *
     * @return string The subjectAlternativeNameFormatString
     */
@@ -123,6 +130,7 @@ class AndroidForWorkPkcsCertificateProfile extends AndroidForWorkCertificateProf
     
     /**
     * Sets the subjectAlternativeNameFormatString
+    * Custom String that defines the AAD Attribute.
     *
     * @param string $val The subjectAlternativeNameFormatString
     *
@@ -134,9 +142,43 @@ class AndroidForWorkPkcsCertificateProfile extends AndroidForWorkCertificateProf
         return $this;
     }
     
+    /**
+    * Gets the subjectAlternativeNameType
+    * Certificate Subject Alternative Name Type.
+    *
+    * @return SubjectAlternativeNameType The subjectAlternativeNameType
+    */
+    public function getSubjectAlternativeNameType()
+    {
+        if (array_key_exists("subjectAlternativeNameType", $this->_propDict)) {
+            if (is_a($this->_propDict["subjectAlternativeNameType"], "Microsoft\Graph\Model\SubjectAlternativeNameType")) {
+                return $this->_propDict["subjectAlternativeNameType"];
+            } else {
+                $this->_propDict["subjectAlternativeNameType"] = new SubjectAlternativeNameType($this->_propDict["subjectAlternativeNameType"]);
+                return $this->_propDict["subjectAlternativeNameType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the subjectAlternativeNameType
+    * Certificate Subject Alternative Name Type.
+    *
+    * @param SubjectAlternativeNameType $val The subjectAlternativeNameType
+    *
+    * @return AndroidForWorkPkcsCertificateProfile
+    */
+    public function setSubjectAlternativeNameType($val)
+    {
+        $this->_propDict["subjectAlternativeNameType"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the managedDeviceCertificateStates
+    * Certificate state for devices
      *
      * @return array The managedDeviceCertificateStates
      */
@@ -151,6 +193,7 @@ class AndroidForWorkPkcsCertificateProfile extends AndroidForWorkCertificateProf
     
     /** 
     * Sets the managedDeviceCertificateStates
+    * Certificate state for devices
     *
     * @param ManagedDeviceCertificateState $val The managedDeviceCertificateStates
     *

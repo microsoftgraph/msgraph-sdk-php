@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * MacOSFirewallApplication class
 *
@@ -27,6 +27,7 @@ class MacOSFirewallApplication extends Entity
 {
     /**
     * Gets the bundleId
+    * BundleId of the application.
     *
     * @return string The bundleId
     */
@@ -41,6 +42,7 @@ class MacOSFirewallApplication extends Entity
 
     /**
     * Sets the bundleId
+    * BundleId of the application.
     *
     * @param string $val The value of the bundleId
     *
@@ -53,6 +55,7 @@ class MacOSFirewallApplication extends Entity
     }
     /**
     * Gets the allowsIncomingConnections
+    * Whether or not incoming connections are allowed.
     *
     * @return bool The allowsIncomingConnections
     */
@@ -67,6 +70,7 @@ class MacOSFirewallApplication extends Entity
 
     /**
     * Sets the allowsIncomingConnections
+    * Whether or not incoming connections are allowed.
     *
     * @param bool $val The value of the allowsIncomingConnections
     *

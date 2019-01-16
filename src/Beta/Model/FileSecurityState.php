@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * FileSecurityState class
 *
@@ -28,13 +28,14 @@ class FileSecurityState extends Entity
 
     /**
     * Gets the fileHash
+    * Complex type containing file hashes (cryptographic and location-sensitive).
     *
     * @return FileHash The fileHash
     */
     public function getFileHash()
     {
         if (array_key_exists("fileHash", $this->_propDict)) {
-            if (is_a($this->_propDict["fileHash"], "Microsoft\Graph\Beta\Model\FileHash")) {
+            if (is_a($this->_propDict["fileHash"], "Microsoft\Graph\Model\FileHash")) {
                 return $this->_propDict["fileHash"];
             } else {
                 $this->_propDict["fileHash"] = new FileHash($this->_propDict["fileHash"]);
@@ -46,6 +47,7 @@ class FileSecurityState extends Entity
 
     /**
     * Sets the fileHash
+    * Complex type containing file hashes (cryptographic and location-sensitive).
     *
     * @param FileHash $val The value to assign to the fileHash
     *
@@ -58,6 +60,7 @@ class FileSecurityState extends Entity
     }
     /**
     * Gets the name
+    * File name (without path).
     *
     * @return string The name
     */
@@ -72,6 +75,7 @@ class FileSecurityState extends Entity
 
     /**
     * Sets the name
+    * File name (without path).
     *
     * @param string $val The value of the name
     *
@@ -84,6 +88,7 @@ class FileSecurityState extends Entity
     }
     /**
     * Gets the path
+    * Full file path of the file/imageFile.
     *
     * @return string The path
     */
@@ -98,6 +103,7 @@ class FileSecurityState extends Entity
 
     /**
     * Sets the path
+    * Full file path of the file/imageFile.
     *
     * @param string $val The value of the path
     *
@@ -110,6 +116,7 @@ class FileSecurityState extends Entity
     }
     /**
     * Gets the riskScore
+    * Provider generated/calculated risk score of the alert file. Recommended value range of 0-1, which equates to a percentage.
     *
     * @return string The riskScore
     */
@@ -124,6 +131,7 @@ class FileSecurityState extends Entity
 
     /**
     * Sets the riskScore
+    * Provider generated/calculated risk score of the alert file. Recommended value range of 0-1, which equates to a percentage.
     *
     * @param string $val The value of the riskScore
     *

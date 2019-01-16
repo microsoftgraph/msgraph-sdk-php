@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * TiIndicator class
@@ -26,6 +26,37 @@ namespace Microsoft\Graph\Beta\Model;
 */
 class TiIndicator extends Entity
 {
+    /**
+    * Gets the action
+    *
+    * @return TiAction The action
+    */
+    public function getAction()
+    {
+        if (array_key_exists("action", $this->_propDict)) {
+            if (is_a($this->_propDict["action"], "Microsoft\Graph\Model\TiAction")) {
+                return $this->_propDict["action"];
+            } else {
+                $this->_propDict["action"] = new TiAction($this->_propDict["action"]);
+                return $this->_propDict["action"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the action
+    *
+    * @param TiAction $val The action
+    *
+    * @return TiIndicator
+    */
+    public function setAction($val)
+    {
+        $this->_propDict["action"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the activityGroupNames
     *
@@ -54,6 +85,33 @@ class TiIndicator extends Entity
     }
     
     /**
+    * Gets the additionalInformation
+    *
+    * @return string The additionalInformation
+    */
+    public function getAdditionalInformation()
+    {
+        if (array_key_exists("additionalInformation", $this->_propDict)) {
+            return $this->_propDict["additionalInformation"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the additionalInformation
+    *
+    * @param string $val The additionalInformation
+    *
+    * @return TiIndicator
+    */
+    public function setAdditionalInformation($val)
+    {
+        $this->_propDict["additionalInformation"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the azureTenantId
     *
     * @return string The azureTenantId
@@ -77,37 +135,6 @@ class TiIndicator extends Entity
     public function setAzureTenantId($val)
     {
         $this->_propDict["azureTenantId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the certificateObservable
-    *
-    * @return CertificateObservable The certificateObservable
-    */
-    public function getCertificateObservable()
-    {
-        if (array_key_exists("certificateObservable", $this->_propDict)) {
-            if (is_a($this->_propDict["certificateObservable"], "Microsoft\Graph\Beta\Model\CertificateObservable")) {
-                return $this->_propDict["certificateObservable"];
-            } else {
-                $this->_propDict["certificateObservable"] = new CertificateObservable($this->_propDict["certificateObservable"]);
-                return $this->_propDict["certificateObservable"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the certificateObservable
-    *
-    * @param CertificateObservable $val The certificateObservable
-    *
-    * @return TiIndicator
-    */
-    public function setCertificateObservable($val)
-    {
-        $this->_propDict["certificateObservable"] = $val;
         return $this;
     }
     
@@ -166,114 +193,6 @@ class TiIndicator extends Entity
     }
     
     /**
-    * Gets the detectionProduct
-    *
-    * @return string The detectionProduct
-    */
-    public function getDetectionProduct()
-    {
-        if (array_key_exists("detectionProduct", $this->_propDict)) {
-            return $this->_propDict["detectionProduct"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the detectionProduct
-    *
-    * @param string $val The detectionProduct
-    *
-    * @return TiIndicator
-    */
-    public function setDetectionProduct($val)
-    {
-        $this->_propDict["detectionProduct"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the detectionSignatureId
-    *
-    * @return string The detectionSignatureId
-    */
-    public function getDetectionSignatureId()
-    {
-        if (array_key_exists("detectionSignatureId", $this->_propDict)) {
-            return $this->_propDict["detectionSignatureId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the detectionSignatureId
-    *
-    * @param string $val The detectionSignatureId
-    *
-    * @return TiIndicator
-    */
-    public function setDetectionSignatureId($val)
-    {
-        $this->_propDict["detectionSignatureId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the detectionSignatureName
-    *
-    * @return string The detectionSignatureName
-    */
-    public function getDetectionSignatureName()
-    {
-        if (array_key_exists("detectionSignatureName", $this->_propDict)) {
-            return $this->_propDict["detectionSignatureName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the detectionSignatureName
-    *
-    * @param string $val The detectionSignatureName
-    *
-    * @return TiIndicator
-    */
-    public function setDetectionSignatureName($val)
-    {
-        $this->_propDict["detectionSignatureName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the detectionVendor
-    *
-    * @return string The detectionVendor
-    */
-    public function getDetectionVendor()
-    {
-        if (array_key_exists("detectionVendor", $this->_propDict)) {
-            return $this->_propDict["detectionVendor"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the detectionVendor
-    *
-    * @param string $val The detectionVendor
-    *
-    * @return TiIndicator
-    */
-    public function setDetectionVendor($val)
-    {
-        $this->_propDict["detectionVendor"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the diamondModel
     *
     * @return DiamondModel The diamondModel
@@ -281,7 +200,7 @@ class TiIndicator extends Entity
     public function getDiamondModel()
     {
         if (array_key_exists("diamondModel", $this->_propDict)) {
-            if (is_a($this->_propDict["diamondModel"], "Microsoft\Graph\Beta\Model\DiamondModel")) {
+            if (is_a($this->_propDict["diamondModel"], "Microsoft\Graph\Model\DiamondModel")) {
                 return $this->_propDict["diamondModel"];
             } else {
                 $this->_propDict["diamondModel"] = new DiamondModel($this->_propDict["diamondModel"]);
@@ -305,33 +224,245 @@ class TiIndicator extends Entity
     }
     
     /**
-    * Gets the emailObservable
+    * Gets the emailEncoding
     *
-    * @return EmailObservable The emailObservable
+    * @return string The emailEncoding
     */
-    public function getEmailObservable()
+    public function getEmailEncoding()
     {
-        if (array_key_exists("emailObservable", $this->_propDict)) {
-            if (is_a($this->_propDict["emailObservable"], "Microsoft\Graph\Beta\Model\EmailObservable")) {
-                return $this->_propDict["emailObservable"];
-            } else {
-                $this->_propDict["emailObservable"] = new EmailObservable($this->_propDict["emailObservable"]);
-                return $this->_propDict["emailObservable"];
-            }
+        if (array_key_exists("emailEncoding", $this->_propDict)) {
+            return $this->_propDict["emailEncoding"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the emailObservable
+    * Sets the emailEncoding
     *
-    * @param EmailObservable $val The emailObservable
+    * @param string $val The emailEncoding
     *
     * @return TiIndicator
     */
-    public function setEmailObservable($val)
+    public function setEmailEncoding($val)
     {
-        $this->_propDict["emailObservable"] = $val;
+        $this->_propDict["emailEncoding"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the emailLanguage
+    *
+    * @return string The emailLanguage
+    */
+    public function getEmailLanguage()
+    {
+        if (array_key_exists("emailLanguage", $this->_propDict)) {
+            return $this->_propDict["emailLanguage"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the emailLanguage
+    *
+    * @param string $val The emailLanguage
+    *
+    * @return TiIndicator
+    */
+    public function setEmailLanguage($val)
+    {
+        $this->_propDict["emailLanguage"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the emailRecipient
+    *
+    * @return string The emailRecipient
+    */
+    public function getEmailRecipient()
+    {
+        if (array_key_exists("emailRecipient", $this->_propDict)) {
+            return $this->_propDict["emailRecipient"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the emailRecipient
+    *
+    * @param string $val The emailRecipient
+    *
+    * @return TiIndicator
+    */
+    public function setEmailRecipient($val)
+    {
+        $this->_propDict["emailRecipient"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the emailSenderAddress
+    *
+    * @return string The emailSenderAddress
+    */
+    public function getEmailSenderAddress()
+    {
+        if (array_key_exists("emailSenderAddress", $this->_propDict)) {
+            return $this->_propDict["emailSenderAddress"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the emailSenderAddress
+    *
+    * @param string $val The emailSenderAddress
+    *
+    * @return TiIndicator
+    */
+    public function setEmailSenderAddress($val)
+    {
+        $this->_propDict["emailSenderAddress"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the emailSenderName
+    *
+    * @return string The emailSenderName
+    */
+    public function getEmailSenderName()
+    {
+        if (array_key_exists("emailSenderName", $this->_propDict)) {
+            return $this->_propDict["emailSenderName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the emailSenderName
+    *
+    * @param string $val The emailSenderName
+    *
+    * @return TiIndicator
+    */
+    public function setEmailSenderName($val)
+    {
+        $this->_propDict["emailSenderName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the emailSourceDomain
+    *
+    * @return string The emailSourceDomain
+    */
+    public function getEmailSourceDomain()
+    {
+        if (array_key_exists("emailSourceDomain", $this->_propDict)) {
+            return $this->_propDict["emailSourceDomain"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the emailSourceDomain
+    *
+    * @param string $val The emailSourceDomain
+    *
+    * @return TiIndicator
+    */
+    public function setEmailSourceDomain($val)
+    {
+        $this->_propDict["emailSourceDomain"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the emailSourceIpAddress
+    *
+    * @return string The emailSourceIpAddress
+    */
+    public function getEmailSourceIpAddress()
+    {
+        if (array_key_exists("emailSourceIpAddress", $this->_propDict)) {
+            return $this->_propDict["emailSourceIpAddress"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the emailSourceIpAddress
+    *
+    * @param string $val The emailSourceIpAddress
+    *
+    * @return TiIndicator
+    */
+    public function setEmailSourceIpAddress($val)
+    {
+        $this->_propDict["emailSourceIpAddress"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the emailSubject
+    *
+    * @return string The emailSubject
+    */
+    public function getEmailSubject()
+    {
+        if (array_key_exists("emailSubject", $this->_propDict)) {
+            return $this->_propDict["emailSubject"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the emailSubject
+    *
+    * @param string $val The emailSubject
+    *
+    * @return TiIndicator
+    */
+    public function setEmailSubject($val)
+    {
+        $this->_propDict["emailSubject"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the emailXMailer
+    *
+    * @return string The emailXMailer
+    */
+    public function getEmailXMailer()
+    {
+        if (array_key_exists("emailXMailer", $this->_propDict)) {
+            return $this->_propDict["emailXMailer"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the emailXMailer
+    *
+    * @param string $val The emailXMailer
+    *
+    * @return TiIndicator
+    */
+    public function setEmailXMailer($val)
+    {
+        $this->_propDict["emailXMailer"] = $val;
         return $this;
     }
     
@@ -394,126 +525,311 @@ class TiIndicator extends Entity
     }
     
     /**
-    * Gets the fileObservable
+    * Gets the fileCompileDateTime
     *
-    * @return FileObservable The fileObservable
+    * @return \DateTime The fileCompileDateTime
     */
-    public function getFileObservable()
+    public function getFileCompileDateTime()
     {
-        if (array_key_exists("fileObservable", $this->_propDict)) {
-            if (is_a($this->_propDict["fileObservable"], "Microsoft\Graph\Beta\Model\FileObservable")) {
-                return $this->_propDict["fileObservable"];
+        if (array_key_exists("fileCompileDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["fileCompileDateTime"], "\DateTime")) {
+                return $this->_propDict["fileCompileDateTime"];
             } else {
-                $this->_propDict["fileObservable"] = new FileObservable($this->_propDict["fileObservable"]);
-                return $this->_propDict["fileObservable"];
+                $this->_propDict["fileCompileDateTime"] = new \DateTime($this->_propDict["fileCompileDateTime"]);
+                return $this->_propDict["fileCompileDateTime"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the fileObservable
+    * Sets the fileCompileDateTime
     *
-    * @param FileObservable $val The fileObservable
+    * @param \DateTime $val The fileCompileDateTime
     *
     * @return TiIndicator
     */
-    public function setFileObservable($val)
+    public function setFileCompileDateTime($val)
     {
-        $this->_propDict["fileObservable"] = $val;
+        $this->_propDict["fileCompileDateTime"] = $val;
         return $this;
     }
     
     /**
-    * Gets the firstReportedDateTime
+    * Gets the fileCreatedDateTime
     *
-    * @return \DateTime The firstReportedDateTime
+    * @return \DateTime The fileCreatedDateTime
     */
-    public function getFirstReportedDateTime()
+    public function getFileCreatedDateTime()
     {
-        if (array_key_exists("firstReportedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["firstReportedDateTime"], "\DateTime")) {
-                return $this->_propDict["firstReportedDateTime"];
+        if (array_key_exists("fileCreatedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["fileCreatedDateTime"], "\DateTime")) {
+                return $this->_propDict["fileCreatedDateTime"];
             } else {
-                $this->_propDict["firstReportedDateTime"] = new \DateTime($this->_propDict["firstReportedDateTime"]);
-                return $this->_propDict["firstReportedDateTime"];
+                $this->_propDict["fileCreatedDateTime"] = new \DateTime($this->_propDict["fileCreatedDateTime"]);
+                return $this->_propDict["fileCreatedDateTime"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the firstReportedDateTime
+    * Sets the fileCreatedDateTime
     *
-    * @param \DateTime $val The firstReportedDateTime
+    * @param \DateTime $val The fileCreatedDateTime
     *
     * @return TiIndicator
     */
-    public function setFirstReportedDateTime($val)
+    public function setFileCreatedDateTime($val)
     {
-        $this->_propDict["firstReportedDateTime"] = $val;
+        $this->_propDict["fileCreatedDateTime"] = $val;
         return $this;
     }
     
     /**
-    * Gets the hostObservable
+    * Gets the fileHashType
     *
-    * @return HostObservable The hostObservable
+    * @return FileHashType The fileHashType
     */
-    public function getHostObservable()
+    public function getFileHashType()
     {
-        if (array_key_exists("hostObservable", $this->_propDict)) {
-            if (is_a($this->_propDict["hostObservable"], "Microsoft\Graph\Beta\Model\HostObservable")) {
-                return $this->_propDict["hostObservable"];
+        if (array_key_exists("fileHashType", $this->_propDict)) {
+            if (is_a($this->_propDict["fileHashType"], "Microsoft\Graph\Model\FileHashType")) {
+                return $this->_propDict["fileHashType"];
             } else {
-                $this->_propDict["hostObservable"] = new HostObservable($this->_propDict["hostObservable"]);
-                return $this->_propDict["hostObservable"];
+                $this->_propDict["fileHashType"] = new FileHashType($this->_propDict["fileHashType"]);
+                return $this->_propDict["fileHashType"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the hostObservable
+    * Sets the fileHashType
     *
-    * @param HostObservable $val The hostObservable
+    * @param FileHashType $val The fileHashType
     *
     * @return TiIndicator
     */
-    public function setHostObservable($val)
+    public function setFileHashType($val)
     {
-        $this->_propDict["hostObservable"] = $val;
+        $this->_propDict["fileHashType"] = $val;
         return $this;
     }
     
     /**
-    * Gets the identityObservable
+    * Gets the fileHashValue
     *
-    * @return IdentityObservable The identityObservable
+    * @return string The fileHashValue
     */
-    public function getIdentityObservable()
+    public function getFileHashValue()
     {
-        if (array_key_exists("identityObservable", $this->_propDict)) {
-            if (is_a($this->_propDict["identityObservable"], "Microsoft\Graph\Beta\Model\IdentityObservable")) {
-                return $this->_propDict["identityObservable"];
-            } else {
-                $this->_propDict["identityObservable"] = new IdentityObservable($this->_propDict["identityObservable"]);
-                return $this->_propDict["identityObservable"];
-            }
+        if (array_key_exists("fileHashValue", $this->_propDict)) {
+            return $this->_propDict["fileHashValue"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the identityObservable
+    * Sets the fileHashValue
     *
-    * @param IdentityObservable $val The identityObservable
+    * @param string $val The fileHashValue
     *
     * @return TiIndicator
     */
-    public function setIdentityObservable($val)
+    public function setFileHashValue($val)
     {
-        $this->_propDict["identityObservable"] = $val;
+        $this->_propDict["fileHashValue"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the fileMutexName
+    *
+    * @return string The fileMutexName
+    */
+    public function getFileMutexName()
+    {
+        if (array_key_exists("fileMutexName", $this->_propDict)) {
+            return $this->_propDict["fileMutexName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the fileMutexName
+    *
+    * @param string $val The fileMutexName
+    *
+    * @return TiIndicator
+    */
+    public function setFileMutexName($val)
+    {
+        $this->_propDict["fileMutexName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the fileName
+    *
+    * @return string The fileName
+    */
+    public function getFileName()
+    {
+        if (array_key_exists("fileName", $this->_propDict)) {
+            return $this->_propDict["fileName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the fileName
+    *
+    * @param string $val The fileName
+    *
+    * @return TiIndicator
+    */
+    public function setFileName($val)
+    {
+        $this->_propDict["fileName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the filePacker
+    *
+    * @return string The filePacker
+    */
+    public function getFilePacker()
+    {
+        if (array_key_exists("filePacker", $this->_propDict)) {
+            return $this->_propDict["filePacker"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the filePacker
+    *
+    * @param string $val The filePacker
+    *
+    * @return TiIndicator
+    */
+    public function setFilePacker($val)
+    {
+        $this->_propDict["filePacker"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the filePath
+    *
+    * @return string The filePath
+    */
+    public function getFilePath()
+    {
+        if (array_key_exists("filePath", $this->_propDict)) {
+            return $this->_propDict["filePath"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the filePath
+    *
+    * @param string $val The filePath
+    *
+    * @return TiIndicator
+    */
+    public function setFilePath($val)
+    {
+        $this->_propDict["filePath"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the fileSize
+    *
+    * @return int The fileSize
+    */
+    public function getFileSize()
+    {
+        if (array_key_exists("fileSize", $this->_propDict)) {
+            return $this->_propDict["fileSize"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the fileSize
+    *
+    * @param int $val The fileSize
+    *
+    * @return TiIndicator
+    */
+    public function setFileSize($val)
+    {
+        $this->_propDict["fileSize"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the fileType
+    *
+    * @return string The fileType
+    */
+    public function getFileType()
+    {
+        if (array_key_exists("fileType", $this->_propDict)) {
+            return $this->_propDict["fileType"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the fileType
+    *
+    * @param string $val The fileType
+    *
+    * @return TiIndicator
+    */
+    public function setFileType($val)
+    {
+        $this->_propDict["fileType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the hostName
+    *
+    * @return string The hostName
+    */
+    public function getHostName()
+    {
+        if (array_key_exists("hostName", $this->_propDict)) {
+            return $this->_propDict["hostName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the hostName
+    *
+    * @param string $val The hostName
+    *
+    * @return TiIndicator
+    */
+    public function setHostName($val)
+    {
+        $this->_propDict["hostName"] = $val;
         return $this;
     }
     
@@ -630,37 +946,6 @@ class TiIndicator extends Entity
     }
     
     /**
-    * Gets the lastModifiedDateTime
-    *
-    * @return \DateTime The lastModifiedDateTime
-    */
-    public function getLastModifiedDateTime()
-    {
-        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
-                return $this->_propDict["lastModifiedDateTime"];
-            } else {
-                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
-                return $this->_propDict["lastModifiedDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the lastModifiedDateTime
-    *
-    * @param \DateTime $val The lastModifiedDateTime
-    *
-    * @return TiIndicator
-    */
-    public function setLastModifiedDateTime($val)
-    {
-        $this->_propDict["lastModifiedDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the lastReportedDateTime
     *
     * @return \DateTime The lastReportedDateTime
@@ -719,33 +1004,407 @@ class TiIndicator extends Entity
     }
     
     /**
-    * Gets the networkObservable
+    * Gets the networkCidrBlock
     *
-    * @return NetworkObservable The networkObservable
+    * @return string The networkCidrBlock
     */
-    public function getNetworkObservable()
+    public function getNetworkCidrBlock()
     {
-        if (array_key_exists("networkObservable", $this->_propDict)) {
-            if (is_a($this->_propDict["networkObservable"], "Microsoft\Graph\Beta\Model\NetworkObservable")) {
-                return $this->_propDict["networkObservable"];
-            } else {
-                $this->_propDict["networkObservable"] = new NetworkObservable($this->_propDict["networkObservable"]);
-                return $this->_propDict["networkObservable"];
-            }
+        if (array_key_exists("networkCidrBlock", $this->_propDict)) {
+            return $this->_propDict["networkCidrBlock"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the networkObservable
+    * Sets the networkCidrBlock
     *
-    * @param NetworkObservable $val The networkObservable
+    * @param string $val The networkCidrBlock
     *
     * @return TiIndicator
     */
-    public function setNetworkObservable($val)
+    public function setNetworkCidrBlock($val)
     {
-        $this->_propDict["networkObservable"] = $val;
+        $this->_propDict["networkCidrBlock"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the networkDestinationAsn
+    *
+    * @return int The networkDestinationAsn
+    */
+    public function getNetworkDestinationAsn()
+    {
+        if (array_key_exists("networkDestinationAsn", $this->_propDict)) {
+            return $this->_propDict["networkDestinationAsn"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the networkDestinationAsn
+    *
+    * @param int $val The networkDestinationAsn
+    *
+    * @return TiIndicator
+    */
+    public function setNetworkDestinationAsn($val)
+    {
+        $this->_propDict["networkDestinationAsn"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the networkDestinationCidrBlock
+    *
+    * @return string The networkDestinationCidrBlock
+    */
+    public function getNetworkDestinationCidrBlock()
+    {
+        if (array_key_exists("networkDestinationCidrBlock", $this->_propDict)) {
+            return $this->_propDict["networkDestinationCidrBlock"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the networkDestinationCidrBlock
+    *
+    * @param string $val The networkDestinationCidrBlock
+    *
+    * @return TiIndicator
+    */
+    public function setNetworkDestinationCidrBlock($val)
+    {
+        $this->_propDict["networkDestinationCidrBlock"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the networkDestinationIPv4
+    *
+    * @return string The networkDestinationIPv4
+    */
+    public function getNetworkDestinationIPv4()
+    {
+        if (array_key_exists("networkDestinationIPv4", $this->_propDict)) {
+            return $this->_propDict["networkDestinationIPv4"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the networkDestinationIPv4
+    *
+    * @param string $val The networkDestinationIPv4
+    *
+    * @return TiIndicator
+    */
+    public function setNetworkDestinationIPv4($val)
+    {
+        $this->_propDict["networkDestinationIPv4"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the networkDestinationIPv6
+    *
+    * @return string The networkDestinationIPv6
+    */
+    public function getNetworkDestinationIPv6()
+    {
+        if (array_key_exists("networkDestinationIPv6", $this->_propDict)) {
+            return $this->_propDict["networkDestinationIPv6"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the networkDestinationIPv6
+    *
+    * @param string $val The networkDestinationIPv6
+    *
+    * @return TiIndicator
+    */
+    public function setNetworkDestinationIPv6($val)
+    {
+        $this->_propDict["networkDestinationIPv6"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the networkDestinationPort
+    *
+    * @return int The networkDestinationPort
+    */
+    public function getNetworkDestinationPort()
+    {
+        if (array_key_exists("networkDestinationPort", $this->_propDict)) {
+            return $this->_propDict["networkDestinationPort"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the networkDestinationPort
+    *
+    * @param int $val The networkDestinationPort
+    *
+    * @return TiIndicator
+    */
+    public function setNetworkDestinationPort($val)
+    {
+        $this->_propDict["networkDestinationPort"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the networkIPv4
+    *
+    * @return string The networkIPv4
+    */
+    public function getNetworkIPv4()
+    {
+        if (array_key_exists("networkIPv4", $this->_propDict)) {
+            return $this->_propDict["networkIPv4"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the networkIPv4
+    *
+    * @param string $val The networkIPv4
+    *
+    * @return TiIndicator
+    */
+    public function setNetworkIPv4($val)
+    {
+        $this->_propDict["networkIPv4"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the networkIPv6
+    *
+    * @return string The networkIPv6
+    */
+    public function getNetworkIPv6()
+    {
+        if (array_key_exists("networkIPv6", $this->_propDict)) {
+            return $this->_propDict["networkIPv6"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the networkIPv6
+    *
+    * @param string $val The networkIPv6
+    *
+    * @return TiIndicator
+    */
+    public function setNetworkIPv6($val)
+    {
+        $this->_propDict["networkIPv6"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the networkPort
+    *
+    * @return int The networkPort
+    */
+    public function getNetworkPort()
+    {
+        if (array_key_exists("networkPort", $this->_propDict)) {
+            return $this->_propDict["networkPort"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the networkPort
+    *
+    * @param int $val The networkPort
+    *
+    * @return TiIndicator
+    */
+    public function setNetworkPort($val)
+    {
+        $this->_propDict["networkPort"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the networkProtocol
+    *
+    * @return int The networkProtocol
+    */
+    public function getNetworkProtocol()
+    {
+        if (array_key_exists("networkProtocol", $this->_propDict)) {
+            return $this->_propDict["networkProtocol"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the networkProtocol
+    *
+    * @param int $val The networkProtocol
+    *
+    * @return TiIndicator
+    */
+    public function setNetworkProtocol($val)
+    {
+        $this->_propDict["networkProtocol"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the networkSourceAsn
+    *
+    * @return int The networkSourceAsn
+    */
+    public function getNetworkSourceAsn()
+    {
+        if (array_key_exists("networkSourceAsn", $this->_propDict)) {
+            return $this->_propDict["networkSourceAsn"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the networkSourceAsn
+    *
+    * @param int $val The networkSourceAsn
+    *
+    * @return TiIndicator
+    */
+    public function setNetworkSourceAsn($val)
+    {
+        $this->_propDict["networkSourceAsn"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the networkSourceCidrBlock
+    *
+    * @return string The networkSourceCidrBlock
+    */
+    public function getNetworkSourceCidrBlock()
+    {
+        if (array_key_exists("networkSourceCidrBlock", $this->_propDict)) {
+            return $this->_propDict["networkSourceCidrBlock"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the networkSourceCidrBlock
+    *
+    * @param string $val The networkSourceCidrBlock
+    *
+    * @return TiIndicator
+    */
+    public function setNetworkSourceCidrBlock($val)
+    {
+        $this->_propDict["networkSourceCidrBlock"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the networkSourceIPv4
+    *
+    * @return string The networkSourceIPv4
+    */
+    public function getNetworkSourceIPv4()
+    {
+        if (array_key_exists("networkSourceIPv4", $this->_propDict)) {
+            return $this->_propDict["networkSourceIPv4"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the networkSourceIPv4
+    *
+    * @param string $val The networkSourceIPv4
+    *
+    * @return TiIndicator
+    */
+    public function setNetworkSourceIPv4($val)
+    {
+        $this->_propDict["networkSourceIPv4"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the networkSourceIPv6
+    *
+    * @return string The networkSourceIPv6
+    */
+    public function getNetworkSourceIPv6()
+    {
+        if (array_key_exists("networkSourceIPv6", $this->_propDict)) {
+            return $this->_propDict["networkSourceIPv6"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the networkSourceIPv6
+    *
+    * @param string $val The networkSourceIPv6
+    *
+    * @return TiIndicator
+    */
+    public function setNetworkSourceIPv6($val)
+    {
+        $this->_propDict["networkSourceIPv6"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the networkSourcePort
+    *
+    * @return int The networkSourcePort
+    */
+    public function getNetworkSourcePort()
+    {
+        if (array_key_exists("networkSourcePort", $this->_propDict)) {
+            return $this->_propDict["networkSourcePort"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the networkSourcePort
+    *
+    * @param int $val The networkSourcePort
+    *
+    * @return TiIndicator
+    */
+    public function setNetworkSourcePort($val)
+    {
+        $this->_propDict["networkSourcePort"] = intval($val);
         return $this;
     }
     
@@ -779,7 +1438,7 @@ class TiIndicator extends Entity
     /**
     * Gets the severity
     *
-    * @return string The severity
+    * @return int The severity
     */
     public function getSeverity()
     {
@@ -793,13 +1452,13 @@ class TiIndicator extends Entity
     /**
     * Sets the severity
     *
-    * @param string $val The severity
+    * @param int $val The severity
     *
     * @return TiIndicator
     */
     public function setSeverity($val)
     {
-        $this->_propDict["severity"] = $val;
+        $this->_propDict["severity"] = intval($val);
         return $this;
     }
     
@@ -831,27 +1490,50 @@ class TiIndicator extends Entity
     }
     
     /**
+    * Gets the targetProduct
+    *
+    * @return string The targetProduct
+    */
+    public function getTargetProduct()
+    {
+        if (array_key_exists("targetProduct", $this->_propDict)) {
+            return $this->_propDict["targetProduct"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the targetProduct
+    *
+    * @param string $val The targetProduct
+    *
+    * @return TiIndicator
+    */
+    public function setTargetProduct($val)
+    {
+        $this->_propDict["targetProduct"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the threatType
     *
-    * @return ThreatType The threatType
+    * @return string The threatType
     */
     public function getThreatType()
     {
         if (array_key_exists("threatType", $this->_propDict)) {
-            if (is_a($this->_propDict["threatType"], "Microsoft\Graph\Beta\Model\ThreatType")) {
-                return $this->_propDict["threatType"];
-            } else {
-                $this->_propDict["threatType"] = new ThreatType($this->_propDict["threatType"]);
-                return $this->_propDict["threatType"];
-            }
+            return $this->_propDict["threatType"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
     * Sets the threatType
     *
-    * @param ThreatType $val The threatType
+    * @param string $val The threatType
     *
     * @return TiIndicator
     */
@@ -869,7 +1551,7 @@ class TiIndicator extends Entity
     public function getTlpLevel()
     {
         if (array_key_exists("tlpLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["tlpLevel"], "Microsoft\Graph\Beta\Model\TlpLevel")) {
+            if (is_a($this->_propDict["tlpLevel"], "Microsoft\Graph\Model\TlpLevel")) {
                 return $this->_propDict["tlpLevel"];
             } else {
                 $this->_propDict["tlpLevel"] = new TlpLevel($this->_propDict["tlpLevel"]);
@@ -893,61 +1575,56 @@ class TiIndicator extends Entity
     }
     
     /**
-    * Gets the vendorInformation
+    * Gets the url
     *
-    * @return SecurityVendorInformation The vendorInformation
+    * @return string The url
     */
-    public function getVendorInformation()
+    public function getUrl()
     {
-        if (array_key_exists("vendorInformation", $this->_propDict)) {
-            if (is_a($this->_propDict["vendorInformation"], "Microsoft\Graph\Beta\Model\SecurityVendorInformation")) {
-                return $this->_propDict["vendorInformation"];
-            } else {
-                $this->_propDict["vendorInformation"] = new SecurityVendorInformation($this->_propDict["vendorInformation"]);
-                return $this->_propDict["vendorInformation"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the vendorInformation
-    *
-    * @param SecurityVendorInformation $val The vendorInformation
-    *
-    * @return TiIndicator
-    */
-    public function setVendorInformation($val)
-    {
-        $this->_propDict["vendorInformation"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the vulnerabilityStates
-     *
-     * @return array The vulnerabilityStates
-     */
-    public function getVulnerabilityStates()
-    {
-        if (array_key_exists("vulnerabilityStates", $this->_propDict)) {
-           return $this->_propDict["vulnerabilityStates"];
+        if (array_key_exists("url", $this->_propDict)) {
+            return $this->_propDict["url"];
         } else {
             return null;
         }
     }
     
-    /** 
-    * Sets the vulnerabilityStates
+    /**
+    * Sets the url
     *
-    * @param VulnerabilityState $val The vulnerabilityStates
+    * @param string $val The url
     *
     * @return TiIndicator
     */
-    public function setVulnerabilityStates($val)
+    public function setUrl($val)
     {
-		$this->_propDict["vulnerabilityStates"] = $val;
+        $this->_propDict["url"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userAgent
+    *
+    * @return string The userAgent
+    */
+    public function getUserAgent()
+    {
+        if (array_key_exists("userAgent", $this->_propDict)) {
+            return $this->_propDict["userAgent"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the userAgent
+    *
+    * @param string $val The userAgent
+    *
+    * @return TiIndicator
+    */
+    public function setUserAgent($val)
+    {
+        $this->_propDict["userAgent"] = $val;
         return $this;
     }
     

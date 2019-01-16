@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * ObjectDefinition class
 *
@@ -34,7 +34,7 @@ class ObjectDefinition extends Entity
     public function getAttributes()
     {
         if (array_key_exists("attributes", $this->_propDict)) {
-            if (is_a($this->_propDict["attributes"], "Microsoft\Graph\Beta\Model\AttributeDefinition")) {
+            if (is_a($this->_propDict["attributes"], "Microsoft\Graph\Model\AttributeDefinition")) {
                 return $this->_propDict["attributes"];
             } else {
                 $this->_propDict["attributes"] = new AttributeDefinition($this->_propDict["attributes"]);
@@ -65,7 +65,7 @@ class ObjectDefinition extends Entity
     public function getMetadata()
     {
         if (array_key_exists("metadata", $this->_propDict)) {
-            if (is_a($this->_propDict["metadata"], "Microsoft\Graph\Beta\Model\MetadataEntry")) {
+            if (is_a($this->_propDict["metadata"], "Microsoft\Graph\Model\MetadataEntry")) {
                 return $this->_propDict["metadata"];
             } else {
                 $this->_propDict["metadata"] = new MetadataEntry($this->_propDict["metadata"]);

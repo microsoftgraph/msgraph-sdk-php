@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * WindowsDefenderAdvancedThreatProtectionConfiguration class
@@ -28,6 +28,7 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
 {
     /**
     * Gets the advancedThreatProtectionOnboardingBlob
+    * Windows Defender AdvancedThreatProtection Onboarding Blob.
     *
     * @return string The advancedThreatProtectionOnboardingBlob
     */
@@ -42,6 +43,7 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
     
     /**
     * Sets the advancedThreatProtectionOnboardingBlob
+    * Windows Defender AdvancedThreatProtection Onboarding Blob.
     *
     * @param string $val The advancedThreatProtectionOnboardingBlob
     *
@@ -55,6 +57,7 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
     
     /**
     * Gets the advancedThreatProtectionOnboardingFilename
+    * Name of the file from which AdvancedThreatProtectionOnboardingBlob was obtained.
     *
     * @return string The advancedThreatProtectionOnboardingFilename
     */
@@ -69,6 +72,7 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
     
     /**
     * Sets the advancedThreatProtectionOnboardingFilename
+    * Name of the file from which AdvancedThreatProtectionOnboardingBlob was obtained.
     *
     * @param string $val The advancedThreatProtectionOnboardingFilename
     *
@@ -82,6 +86,7 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
     
     /**
     * Gets the advancedThreatProtectionAutoPopulateOnboardingBlob
+    * Auto populate onboarding blob programmatically from Advanced Threat protection service
     *
     * @return bool The advancedThreatProtectionAutoPopulateOnboardingBlob
     */
@@ -96,6 +101,7 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
     
     /**
     * Sets the advancedThreatProtectionAutoPopulateOnboardingBlob
+    * Auto populate onboarding blob programmatically from Advanced Threat protection service
     *
     * @param bool $val The advancedThreatProtectionAutoPopulateOnboardingBlob
     *
@@ -109,6 +115,7 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
     
     /**
     * Gets the allowSampleSharing
+    * Windows Defender AdvancedThreatProtection 'Allow Sample Sharing' Rule
     *
     * @return bool The allowSampleSharing
     */
@@ -123,6 +130,7 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
     
     /**
     * Sets the allowSampleSharing
+    * Windows Defender AdvancedThreatProtection 'Allow Sample Sharing' Rule
     *
     * @param bool $val The allowSampleSharing
     *
@@ -136,6 +144,7 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
     
     /**
     * Gets the enableExpeditedTelemetryReporting
+    * Expedite Windows Defender Advanced Threat Protection telemetry reporting frequency.
     *
     * @return bool The enableExpeditedTelemetryReporting
     */
@@ -150,6 +159,7 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
     
     /**
     * Sets the enableExpeditedTelemetryReporting
+    * Expedite Windows Defender Advanced Threat Protection telemetry reporting frequency.
     *
     * @param bool $val The enableExpeditedTelemetryReporting
     *
@@ -163,6 +173,7 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
     
     /**
     * Gets the advancedThreatProtectionOffboardingBlob
+    * Windows Defender AdvancedThreatProtection Offboarding Blob.
     *
     * @return string The advancedThreatProtectionOffboardingBlob
     */
@@ -177,6 +188,7 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
     
     /**
     * Sets the advancedThreatProtectionOffboardingBlob
+    * Windows Defender AdvancedThreatProtection Offboarding Blob.
     *
     * @param string $val The advancedThreatProtectionOffboardingBlob
     *
@@ -190,6 +202,7 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
     
     /**
     * Gets the advancedThreatProtectionOffboardingFilename
+    * Name of the file from which AdvancedThreatProtectionOffboardingBlob was obtained.
     *
     * @return string The advancedThreatProtectionOffboardingFilename
     */
@@ -204,6 +217,7 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
     
     /**
     * Sets the advancedThreatProtectionOffboardingFilename
+    * Name of the file from which AdvancedThreatProtectionOffboardingBlob was obtained.
     *
     * @param string $val The advancedThreatProtectionOffboardingFilename
     *

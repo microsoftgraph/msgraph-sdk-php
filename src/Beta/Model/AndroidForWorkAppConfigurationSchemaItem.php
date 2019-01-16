@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * AndroidForWorkAppConfigurationSchemaItem class
 *
@@ -27,6 +27,7 @@ class AndroidForWorkAppConfigurationSchemaItem extends Entity
 {
     /**
     * Gets the schemaItemKey
+    * Unique key the application uses to identify the item
     *
     * @return string The schemaItemKey
     */
@@ -41,6 +42,7 @@ class AndroidForWorkAppConfigurationSchemaItem extends Entity
 
     /**
     * Sets the schemaItemKey
+    * Unique key the application uses to identify the item
     *
     * @param string $val The value of the schemaItemKey
     *
@@ -53,6 +55,7 @@ class AndroidForWorkAppConfigurationSchemaItem extends Entity
     }
     /**
     * Gets the displayName
+    * Human readable name
     *
     * @return string The displayName
     */
@@ -67,6 +70,7 @@ class AndroidForWorkAppConfigurationSchemaItem extends Entity
 
     /**
     * Sets the displayName
+    * Human readable name
     *
     * @param string $val The value of the displayName
     *
@@ -79,6 +83,7 @@ class AndroidForWorkAppConfigurationSchemaItem extends Entity
     }
     /**
     * Gets the description
+    * Description of what the item controls within the application
     *
     * @return string The description
     */
@@ -93,6 +98,7 @@ class AndroidForWorkAppConfigurationSchemaItem extends Entity
 
     /**
     * Sets the description
+    * Description of what the item controls within the application
     *
     * @param string $val The value of the description
     *
@@ -105,6 +111,7 @@ class AndroidForWorkAppConfigurationSchemaItem extends Entity
     }
     /**
     * Gets the defaultBoolValue
+    * Default value for boolean type items, if specified by the app developer
     *
     * @return bool The defaultBoolValue
     */
@@ -119,6 +126,7 @@ class AndroidForWorkAppConfigurationSchemaItem extends Entity
 
     /**
     * Sets the defaultBoolValue
+    * Default value for boolean type items, if specified by the app developer
     *
     * @param bool $val The value of the defaultBoolValue
     *
@@ -131,6 +139,7 @@ class AndroidForWorkAppConfigurationSchemaItem extends Entity
     }
     /**
     * Gets the defaultIntValue
+    * Default value for integer type items, if specified by the app developer
     *
     * @return int The defaultIntValue
     */
@@ -145,6 +154,7 @@ class AndroidForWorkAppConfigurationSchemaItem extends Entity
 
     /**
     * Sets the defaultIntValue
+    * Default value for integer type items, if specified by the app developer
     *
     * @param int $val The value of the defaultIntValue
     *
@@ -157,6 +167,7 @@ class AndroidForWorkAppConfigurationSchemaItem extends Entity
     }
     /**
     * Gets the defaultStringValue
+    * Default value for string type items, if specified by the app developer
     *
     * @return string The defaultStringValue
     */
@@ -171,6 +182,7 @@ class AndroidForWorkAppConfigurationSchemaItem extends Entity
 
     /**
     * Sets the defaultStringValue
+    * Default value for string type items, if specified by the app developer
     *
     * @param string $val The value of the defaultStringValue
     *
@@ -183,6 +195,7 @@ class AndroidForWorkAppConfigurationSchemaItem extends Entity
     }
     /**
     * Gets the defaultStringArrayValue
+    * Default value for string array type items, if specified by the app developer
     *
     * @return string The defaultStringArrayValue
     */
@@ -197,6 +210,7 @@ class AndroidForWorkAppConfigurationSchemaItem extends Entity
 
     /**
     * Sets the defaultStringArrayValue
+    * Default value for string array type items, if specified by the app developer
     *
     * @param string $val The value of the defaultStringArrayValue
     *
@@ -210,13 +224,14 @@ class AndroidForWorkAppConfigurationSchemaItem extends Entity
 
     /**
     * Gets the dataType
+    * The type of value this item describes
     *
     * @return AndroidForWorkAppConfigurationSchemaItemDataType The dataType
     */
     public function getDataType()
     {
         if (array_key_exists("dataType", $this->_propDict)) {
-            if (is_a($this->_propDict["dataType"], "Microsoft\Graph\Beta\Model\AndroidForWorkAppConfigurationSchemaItemDataType")) {
+            if (is_a($this->_propDict["dataType"], "Microsoft\Graph\Model\AndroidForWorkAppConfigurationSchemaItemDataType")) {
                 return $this->_propDict["dataType"];
             } else {
                 $this->_propDict["dataType"] = new AndroidForWorkAppConfigurationSchemaItemDataType($this->_propDict["dataType"]);
@@ -228,6 +243,7 @@ class AndroidForWorkAppConfigurationSchemaItem extends Entity
 
     /**
     * Sets the dataType
+    * The type of value this item describes
     *
     * @param AndroidForWorkAppConfigurationSchemaItemDataType $val The value to assign to the dataType
     *
@@ -241,13 +257,14 @@ class AndroidForWorkAppConfigurationSchemaItem extends Entity
 
     /**
     * Gets the selections
+    * List of human readable name/value pairs for the valid values that can be set for this item (Choice and Multiselect items only)
     *
     * @return KeyValuePair The selections
     */
     public function getSelections()
     {
         if (array_key_exists("selections", $this->_propDict)) {
-            if (is_a($this->_propDict["selections"], "Microsoft\Graph\Beta\Model\KeyValuePair")) {
+            if (is_a($this->_propDict["selections"], "Microsoft\Graph\Model\KeyValuePair")) {
                 return $this->_propDict["selections"];
             } else {
                 $this->_propDict["selections"] = new KeyValuePair($this->_propDict["selections"]);
@@ -259,6 +276,7 @@ class AndroidForWorkAppConfigurationSchemaItem extends Entity
 
     /**
     * Sets the selections
+    * List of human readable name/value pairs for the valid values that can be set for this item (Choice and Multiselect items only)
     *
     * @param KeyValuePair $val The value to assign to the selections
     *

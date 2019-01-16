@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * SizeRange class
 *
@@ -27,6 +27,7 @@ class SizeRange extends Entity
 {
     /**
     * Gets the minimumSize
+    * The minimum size (in kilobytes) that an incoming message must have in order for a condition or exception to apply.
     *
     * @return int The minimumSize
     */
@@ -41,6 +42,7 @@ class SizeRange extends Entity
 
     /**
     * Sets the minimumSize
+    * The minimum size (in kilobytes) that an incoming message must have in order for a condition or exception to apply.
     *
     * @param int $val The value of the minimumSize
     *
@@ -53,6 +55,7 @@ class SizeRange extends Entity
     }
     /**
     * Gets the maximumSize
+    * The maximum size (in kilobytes) that an incoming message must have in order for a condition or exception to apply.
     *
     * @return int The maximumSize
     */
@@ -67,6 +70,7 @@ class SizeRange extends Entity
 
     /**
     * Sets the maximumSize
+    * The maximum size (in kilobytes) that an incoming message must have in order for a condition or exception to apply.
     *
     * @param int $val The value of the maximumSize
     *

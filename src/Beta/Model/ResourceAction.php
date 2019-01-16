@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * ResourceAction class
 *
@@ -27,6 +27,7 @@ class ResourceAction extends Entity
 {
     /**
     * Gets the allowedResourceActions
+    * Allowed Actions
     *
     * @return string The allowedResourceActions
     */
@@ -41,6 +42,7 @@ class ResourceAction extends Entity
 
     /**
     * Sets the allowedResourceActions
+    * Allowed Actions
     *
     * @param string $val The value of the allowedResourceActions
     *
@@ -53,6 +55,7 @@ class ResourceAction extends Entity
     }
     /**
     * Gets the notAllowedResourceActions
+    * Not Allowed Actions
     *
     * @return string The notAllowedResourceActions
     */
@@ -67,6 +70,7 @@ class ResourceAction extends Entity
 
     /**
     * Sets the notAllowedResourceActions
+    * Not Allowed Actions
     *
     * @param string $val The value of the notAllowedResourceActions
     *

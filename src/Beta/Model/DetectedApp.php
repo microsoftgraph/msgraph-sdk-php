@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * DetectedApp class
@@ -28,6 +28,7 @@ class DetectedApp extends Entity
 {
     /**
     * Gets the displayName
+    * Name of the discovered application. Read-only
     *
     * @return string The displayName
     */
@@ -42,6 +43,7 @@ class DetectedApp extends Entity
     
     /**
     * Sets the displayName
+    * Name of the discovered application. Read-only
     *
     * @param string $val The displayName
     *
@@ -55,6 +57,7 @@ class DetectedApp extends Entity
     
     /**
     * Gets the version
+    * Version of the discovered application. Read-only
     *
     * @return string The version
     */
@@ -69,6 +72,7 @@ class DetectedApp extends Entity
     
     /**
     * Sets the version
+    * Version of the discovered application. Read-only
     *
     * @param string $val The version
     *
@@ -82,6 +86,7 @@ class DetectedApp extends Entity
     
     /**
     * Gets the sizeInByte
+    * Discovered application size in bytes. Read-only
     *
     * @return int The sizeInByte
     */
@@ -96,6 +101,7 @@ class DetectedApp extends Entity
     
     /**
     * Sets the sizeInByte
+    * Discovered application size in bytes. Read-only
     *
     * @param int $val The sizeInByte
     *
@@ -109,6 +115,7 @@ class DetectedApp extends Entity
     
     /**
     * Gets the deviceCount
+    * The number of devices that have installed this application
     *
     * @return int The deviceCount
     */
@@ -123,6 +130,7 @@ class DetectedApp extends Entity
     
     /**
     * Sets the deviceCount
+    * The number of devices that have installed this application
     *
     * @param int $val The deviceCount
     *
@@ -137,6 +145,7 @@ class DetectedApp extends Entity
 
      /** 
      * Gets the managedDevices
+    * The devices that have the discovered application installed
      *
      * @return array The managedDevices
      */
@@ -151,6 +160,7 @@ class DetectedApp extends Entity
     
     /** 
     * Sets the managedDevices
+    * The devices that have the discovered application installed
     *
     * @param ManagedDevice $val The managedDevices
     *

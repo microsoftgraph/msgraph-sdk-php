@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * DataSharingConsent class
@@ -28,6 +28,7 @@ class DataSharingConsent extends Entity
 {
     /**
     * Gets the serviceDisplayName
+    * The display name of the service work flow
     *
     * @return string The serviceDisplayName
     */
@@ -42,6 +43,7 @@ class DataSharingConsent extends Entity
     
     /**
     * Sets the serviceDisplayName
+    * The display name of the service work flow
     *
     * @param string $val The serviceDisplayName
     *
@@ -55,6 +57,7 @@ class DataSharingConsent extends Entity
     
     /**
     * Gets the termsUrl
+    * The TermsUrl for the data sharing consent
     *
     * @return string The termsUrl
     */
@@ -69,6 +72,7 @@ class DataSharingConsent extends Entity
     
     /**
     * Sets the termsUrl
+    * The TermsUrl for the data sharing consent
     *
     * @param string $val The termsUrl
     *
@@ -82,6 +86,7 @@ class DataSharingConsent extends Entity
     
     /**
     * Gets the granted
+    * The granted state for the data sharing consent
     *
     * @return bool The granted
     */
@@ -96,6 +101,7 @@ class DataSharingConsent extends Entity
     
     /**
     * Sets the granted
+    * The granted state for the data sharing consent
     *
     * @param bool $val The granted
     *
@@ -109,6 +115,7 @@ class DataSharingConsent extends Entity
     
     /**
     * Gets the grantDateTime
+    * The time consent was granted for this account
     *
     * @return \DateTime The grantDateTime
     */
@@ -127,6 +134,7 @@ class DataSharingConsent extends Entity
     
     /**
     * Sets the grantDateTime
+    * The time consent was granted for this account
     *
     * @param \DateTime $val The grantDateTime
     *
@@ -140,6 +148,7 @@ class DataSharingConsent extends Entity
     
     /**
     * Gets the grantedByUpn
+    * The Upn of the user that granted consent for this account
     *
     * @return string The grantedByUpn
     */
@@ -154,6 +163,7 @@ class DataSharingConsent extends Entity
     
     /**
     * Sets the grantedByUpn
+    * The Upn of the user that granted consent for this account
     *
     * @param string $val The grantedByUpn
     *
@@ -167,6 +177,7 @@ class DataSharingConsent extends Entity
     
     /**
     * Gets the grantedByUserId
+    * The UserId of the user that granted consent for this account
     *
     * @return string The grantedByUserId
     */
@@ -181,6 +192,7 @@ class DataSharingConsent extends Entity
     
     /**
     * Sets the grantedByUserId
+    * The UserId of the user that granted consent for this account
     *
     * @param string $val The grantedByUserId
     *

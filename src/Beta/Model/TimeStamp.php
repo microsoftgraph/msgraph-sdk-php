@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * TimeStamp class
 *
@@ -28,13 +28,14 @@ class TimeStamp extends Entity
 
     /**
     * Gets the date
+    * The date portion of the timestamp.
     *
     * @return \DateTime The date
     */
     public function getDate()
     {
         if (array_key_exists("date", $this->_propDict)) {
-            if (is_a($this->_propDict["date"], "Microsoft\Graph\Beta\Model\\DateTime")) {
+            if (is_a($this->_propDict["date"], "Microsoft\Graph\Model\\DateTime")) {
                 return $this->_propDict["date"];
             } else {
                 $this->_propDict["date"] = new \DateTime($this->_propDict["date"]);
@@ -46,6 +47,7 @@ class TimeStamp extends Entity
 
     /**
     * Sets the date
+    * The date portion of the timestamp.
     *
     * @param \DateTime $val The value to assign to the date
     *
@@ -59,13 +61,14 @@ class TimeStamp extends Entity
 
     /**
     * Gets the time
+    * The time portion of the timestamp.
     *
     * @return TimeOfDay The time
     */
     public function getTime()
     {
         if (array_key_exists("time", $this->_propDict)) {
-            if (is_a($this->_propDict["time"], "Microsoft\Graph\Beta\Model\TimeOfDay")) {
+            if (is_a($this->_propDict["time"], "Microsoft\Graph\Model\TimeOfDay")) {
                 return $this->_propDict["time"];
             } else {
                 $this->_propDict["time"] = new TimeOfDay($this->_propDict["time"]);
@@ -77,6 +80,7 @@ class TimeStamp extends Entity
 
     /**
     * Sets the time
+    * The time portion of the timestamp.
     *
     * @param TimeOfDay $val The value to assign to the time
     *
@@ -89,6 +93,7 @@ class TimeStamp extends Entity
     }
     /**
     * Gets the timeZone
+    * The timezone portion of the timestamp, which is one of the 24 longitudinal areas in the world.
     *
     * @return string The timeZone
     */
@@ -103,6 +108,7 @@ class TimeStamp extends Entity
 
     /**
     * Sets the timeZone
+    * The timezone portion of the timestamp, which is one of the 24 longitudinal areas in the world.
     *
     * @param string $val The value of the timeZone
     *

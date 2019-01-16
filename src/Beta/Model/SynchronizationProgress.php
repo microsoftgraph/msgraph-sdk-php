@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * SynchronizationProgress class
 *
@@ -60,7 +60,7 @@ class SynchronizationProgress extends Entity
     public function getProgressObservationDateTime()
     {
         if (array_key_exists("progressObservationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["progressObservationDateTime"], "Microsoft\Graph\Beta\Model\\DateTime")) {
+            if (is_a($this->_propDict["progressObservationDateTime"], "Microsoft\Graph\Model\\DateTime")) {
                 return $this->_propDict["progressObservationDateTime"];
             } else {
                 $this->_propDict["progressObservationDateTime"] = new \DateTime($this->_propDict["progressObservationDateTime"]);

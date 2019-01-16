@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * Windows10PFXImportCertificateProfile class
@@ -34,7 +34,7 @@ class Windows10PFXImportCertificateProfile extends DeviceConfiguration
     public function getKeyStorageProvider()
     {
         if (array_key_exists("keyStorageProvider", $this->_propDict)) {
-            if (is_a($this->_propDict["keyStorageProvider"], "Microsoft\Graph\Beta\Model\KeyStorageProviderOption")) {
+            if (is_a($this->_propDict["keyStorageProvider"], "Microsoft\Graph\Model\KeyStorageProviderOption")) {
                 return $this->_propDict["keyStorageProvider"];
             } else {
                 $this->_propDict["keyStorageProvider"] = new KeyStorageProviderOption($this->_propDict["keyStorageProvider"]);

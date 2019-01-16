@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * AndroidForWorkCustomConfiguration class
@@ -29,6 +29,7 @@ class AndroidForWorkCustomConfiguration extends DeviceConfiguration
 
      /** 
      * Gets the omaSettings
+    * OMA settings. This collection can contain a maximum of 500 elements.
      *
      * @return array The omaSettings
      */
@@ -43,6 +44,7 @@ class AndroidForWorkCustomConfiguration extends DeviceConfiguration
     
     /** 
     * Sets the omaSettings
+    * OMA settings. This collection can contain a maximum of 500 elements.
     *
     * @param OmaSetting $val The omaSettings
     *

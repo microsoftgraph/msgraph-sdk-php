@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * Invitation class
@@ -28,6 +28,7 @@ class Invitation extends Entity
 {
     /**
     * Gets the invitedUserDisplayName
+    * The display name of the user being invited.
     *
     * @return string The invitedUserDisplayName
     */
@@ -42,6 +43,7 @@ class Invitation extends Entity
     
     /**
     * Sets the invitedUserDisplayName
+    * The display name of the user being invited.
     *
     * @param string $val The invitedUserDisplayName
     *
@@ -55,6 +57,7 @@ class Invitation extends Entity
     
     /**
     * Gets the invitedUserType
+    * The userType of the user being invited. By default, this is Guest. You can invite as Member if you are a company administrator.
     *
     * @return string The invitedUserType
     */
@@ -69,6 +72,7 @@ class Invitation extends Entity
     
     /**
     * Sets the invitedUserType
+    * The userType of the user being invited. By default, this is Guest. You can invite as Member if you are a company administrator.
     *
     * @param string $val The invitedUserType
     *
@@ -82,6 +86,7 @@ class Invitation extends Entity
     
     /**
     * Gets the invitedUserEmailAddress
+    * The email address of the user being invited. Required.
     *
     * @return string The invitedUserEmailAddress
     */
@@ -96,6 +101,7 @@ class Invitation extends Entity
     
     /**
     * Sets the invitedUserEmailAddress
+    * The email address of the user being invited. Required.
     *
     * @param string $val The invitedUserEmailAddress
     *
@@ -109,13 +115,14 @@ class Invitation extends Entity
     
     /**
     * Gets the invitedUserMessageInfo
+    * Additional configuration for the message being sent to the invited user, including customizing message text, language and cc recipient list.
     *
     * @return InvitedUserMessageInfo The invitedUserMessageInfo
     */
     public function getInvitedUserMessageInfo()
     {
         if (array_key_exists("invitedUserMessageInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["invitedUserMessageInfo"], "Microsoft\Graph\Beta\Model\InvitedUserMessageInfo")) {
+            if (is_a($this->_propDict["invitedUserMessageInfo"], "Microsoft\Graph\Model\InvitedUserMessageInfo")) {
                 return $this->_propDict["invitedUserMessageInfo"];
             } else {
                 $this->_propDict["invitedUserMessageInfo"] = new InvitedUserMessageInfo($this->_propDict["invitedUserMessageInfo"]);
@@ -127,6 +134,7 @@ class Invitation extends Entity
     
     /**
     * Sets the invitedUserMessageInfo
+    * Additional configuration for the message being sent to the invited user, including customizing message text, language and cc recipient list.
     *
     * @param InvitedUserMessageInfo $val The invitedUserMessageInfo
     *
@@ -140,6 +148,7 @@ class Invitation extends Entity
     
     /**
     * Gets the sendInvitationMessage
+    * Indicates whether an email should be sent to the user being invited or not. The default is false.
     *
     * @return bool The sendInvitationMessage
     */
@@ -154,6 +163,7 @@ class Invitation extends Entity
     
     /**
     * Sets the sendInvitationMessage
+    * Indicates whether an email should be sent to the user being invited or not. The default is false.
     *
     * @param bool $val The sendInvitationMessage
     *
@@ -167,6 +177,7 @@ class Invitation extends Entity
     
     /**
     * Gets the inviteRedirectUrl
+    * The URL user should be redirected to once the invitation is redeemed. Required.
     *
     * @return string The inviteRedirectUrl
     */
@@ -181,6 +192,7 @@ class Invitation extends Entity
     
     /**
     * Sets the inviteRedirectUrl
+    * The URL user should be redirected to once the invitation is redeemed. Required.
     *
     * @param string $val The inviteRedirectUrl
     *
@@ -194,6 +206,7 @@ class Invitation extends Entity
     
     /**
     * Gets the inviteRedeemUrl
+    * The URL user can use to redeem his invitation. Read-Only
     *
     * @return string The inviteRedeemUrl
     */
@@ -208,6 +221,7 @@ class Invitation extends Entity
     
     /**
     * Sets the inviteRedeemUrl
+    * The URL user can use to redeem his invitation. Read-Only
     *
     * @param string $val The inviteRedeemUrl
     *
@@ -221,6 +235,7 @@ class Invitation extends Entity
     
     /**
     * Gets the status
+    * The status of the invitation. Possible values: PendingAcceptance, Completed, InProgress, and Error
     *
     * @return string The status
     */
@@ -235,6 +250,7 @@ class Invitation extends Entity
     
     /**
     * Sets the status
+    * The status of the invitation. Possible values: PendingAcceptance, Completed, InProgress, and Error
     *
     * @param string $val The status
     *
@@ -248,13 +264,14 @@ class Invitation extends Entity
     
     /**
     * Gets the invitedUser
+    * The user created as part of the invitation creation. Read-Only
     *
     * @return User The invitedUser
     */
     public function getInvitedUser()
     {
         if (array_key_exists("invitedUser", $this->_propDict)) {
-            if (is_a($this->_propDict["invitedUser"], "Microsoft\Graph\Beta\Model\User")) {
+            if (is_a($this->_propDict["invitedUser"], "Microsoft\Graph\Model\User")) {
                 return $this->_propDict["invitedUser"];
             } else {
                 $this->_propDict["invitedUser"] = new User($this->_propDict["invitedUser"]);
@@ -266,6 +283,7 @@ class Invitation extends Entity
     
     /**
     * Sets the invitedUser
+    * The user created as part of the invitation creation. Read-Only
     *
     * @param User $val The invitedUser
     *

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * MeetingTimeSuggestionsResult class
 *
@@ -28,13 +28,14 @@ class MeetingTimeSuggestionsResult extends Entity
 
     /**
     * Gets the meetingTimeSuggestions
+    * An array of meeting suggestions.
     *
     * @return MeetingTimeSuggestion The meetingTimeSuggestions
     */
     public function getMeetingTimeSuggestions()
     {
         if (array_key_exists("meetingTimeSuggestions", $this->_propDict)) {
-            if (is_a($this->_propDict["meetingTimeSuggestions"], "Microsoft\Graph\Beta\Model\MeetingTimeSuggestion")) {
+            if (is_a($this->_propDict["meetingTimeSuggestions"], "Microsoft\Graph\Model\MeetingTimeSuggestion")) {
                 return $this->_propDict["meetingTimeSuggestions"];
             } else {
                 $this->_propDict["meetingTimeSuggestions"] = new MeetingTimeSuggestion($this->_propDict["meetingTimeSuggestions"]);
@@ -46,6 +47,7 @@ class MeetingTimeSuggestionsResult extends Entity
 
     /**
     * Sets the meetingTimeSuggestions
+    * An array of meeting suggestions.
     *
     * @param MeetingTimeSuggestion $val The value to assign to the meetingTimeSuggestions
     *
@@ -58,6 +60,7 @@ class MeetingTimeSuggestionsResult extends Entity
     }
     /**
     * Gets the emptySuggestionsReason
+    * A reason for not returning any meeting suggestions. The possible values are: attendeesUnavailable, attendeesUnavailableOrUnknown, locationsUnavailable, organizerUnavailable, or unknown. This property is an empty string if the meetingTimeSuggestions property does include any meeting suggestions.
     *
     * @return string The emptySuggestionsReason
     */
@@ -72,6 +75,7 @@ class MeetingTimeSuggestionsResult extends Entity
 
     /**
     * Sets the emptySuggestionsReason
+    * A reason for not returning any meeting suggestions. The possible values are: attendeesUnavailable, attendeesUnavailableOrUnknown, locationsUnavailable, organizerUnavailable, or unknown. This property is an empty string if the meetingTimeSuggestions property does include any meeting suggestions.
     *
     * @param string $val The value of the emptySuggestionsReason
     *

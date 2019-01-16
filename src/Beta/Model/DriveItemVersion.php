@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * DriveItemVersion class
@@ -28,6 +28,7 @@ class DriveItemVersion extends BaseItemVersion
 {
     /**
     * Gets the content
+    * The content stream for this version of the item.
     *
     * @return \GuzzleHttp\Psr7\Stream The content
     */
@@ -46,6 +47,7 @@ class DriveItemVersion extends BaseItemVersion
     
     /**
     * Sets the content
+    * The content stream for this version of the item.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The content
     *
@@ -59,6 +61,7 @@ class DriveItemVersion extends BaseItemVersion
     
     /**
     * Gets the size
+    * Indicates the size of the content stream for this version of the item.
     *
     * @return int The size
     */
@@ -73,6 +76,7 @@ class DriveItemVersion extends BaseItemVersion
     
     /**
     * Sets the size
+    * Indicates the size of the content stream for this version of the item.
     *
     * @param int $val The size
     *

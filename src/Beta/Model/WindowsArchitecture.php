@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 use Microsoft\Graph\Core\Enum;
 
@@ -36,4 +36,5 @@ class WindowsArchitecture extends Enum
     const X64 = "x64";
     const ARM = "arm";
     const NEUTRAL = "neutral";
+    const ARM64 = "arm64";
 }

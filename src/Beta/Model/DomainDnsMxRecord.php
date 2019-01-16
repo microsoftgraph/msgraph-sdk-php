@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * DomainDnsMxRecord class
@@ -28,6 +28,7 @@ class DomainDnsMxRecord extends DomainDnsRecord
 {
     /**
     * Gets the mailExchange
+    * Value used when configuring the answer/destination/value of the MX record at the DNS host.
     *
     * @return string The mailExchange
     */
@@ -42,6 +43,7 @@ class DomainDnsMxRecord extends DomainDnsRecord
     
     /**
     * Sets the mailExchange
+    * Value used when configuring the answer/destination/value of the MX record at the DNS host.
     *
     * @param string $val The mailExchange
     *
@@ -55,6 +57,7 @@ class DomainDnsMxRecord extends DomainDnsRecord
     
     /**
     * Gets the preference
+    * Value used when configuring the Preference/Priority property of the MX record at the DNS host.
     *
     * @return int The preference
     */
@@ -69,6 +72,7 @@ class DomainDnsMxRecord extends DomainDnsRecord
     
     /**
     * Sets the preference
+    * Value used when configuring the Preference/Priority property of the MX record at the DNS host.
     *
     * @param int $val The preference
     *

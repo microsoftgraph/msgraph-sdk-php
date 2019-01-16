@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * Windows81WifiImportConfiguration class
@@ -28,6 +28,7 @@ class Windows81WifiImportConfiguration extends DeviceConfiguration
 {
     /**
     * Gets the payloadFileName
+    * Payload file name (*.xml).
     *
     * @return string The payloadFileName
     */
@@ -42,6 +43,7 @@ class Windows81WifiImportConfiguration extends DeviceConfiguration
     
     /**
     * Sets the payloadFileName
+    * Payload file name (*.xml).
     *
     * @param string $val The payloadFileName
     *
@@ -55,6 +57,7 @@ class Windows81WifiImportConfiguration extends DeviceConfiguration
     
     /**
     * Gets the profileName
+    * Profile name displayed in the UI.
     *
     * @return string The profileName
     */
@@ -69,6 +72,7 @@ class Windows81WifiImportConfiguration extends DeviceConfiguration
     
     /**
     * Sets the profileName
+    * Profile name displayed in the UI.
     *
     * @param string $val The profileName
     *
@@ -82,6 +86,7 @@ class Windows81WifiImportConfiguration extends DeviceConfiguration
     
     /**
     * Gets the payload
+    * Payload. (UTF8 encoded byte array). This is the XML file saved on the device you used to connect to the Wi-Fi endpoint.
     *
     * @return \GuzzleHttp\Psr7\Stream The payload
     */
@@ -100,6 +105,7 @@ class Windows81WifiImportConfiguration extends DeviceConfiguration
     
     /**
     * Sets the payload
+    * Payload. (UTF8 encoded byte array). This is the XML file saved on the device you used to connect to the Wi-Fi endpoint.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The payload
     *

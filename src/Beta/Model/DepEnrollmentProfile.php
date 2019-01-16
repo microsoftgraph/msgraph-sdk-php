@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * DepEnrollmentProfile class
@@ -28,6 +28,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
 {
     /**
     * Gets the isDefault
+    * Indicates if this is the default profile
     *
     * @return bool The isDefault
     */
@@ -42,6 +43,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     
     /**
     * Sets the isDefault
+    * Indicates if this is the default profile
     *
     * @param bool $val The isDefault
     *
@@ -55,6 +57,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     
     /**
     * Gets the supervisedModeEnabled
+    * Supervised mode, True to enable, false otherwise. See https://docs.microsoft.com/en-us/intune/deploy-use/enroll-devices-in-microsoft-intune for additional information.
     *
     * @return bool The supervisedModeEnabled
     */
@@ -69,6 +72,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     
     /**
     * Sets the supervisedModeEnabled
+    * Supervised mode, True to enable, false otherwise. See https://docs.microsoft.com/en-us/intune/deploy-use/enroll-devices-in-microsoft-intune for additional information.
     *
     * @param bool $val The supervisedModeEnabled
     *
@@ -82,6 +86,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     
     /**
     * Gets the supportDepartment
+    * Support department information
     *
     * @return string The supportDepartment
     */
@@ -96,6 +101,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     
     /**
     * Sets the supportDepartment
+    * Support department information
     *
     * @param string $val The supportDepartment
     *
@@ -109,6 +115,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     
     /**
     * Gets the passCodeDisabled
+    * Indicates if Passcode setup pane is disabled
     *
     * @return bool The passCodeDisabled
     */
@@ -123,6 +130,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     
     /**
     * Sets the passCodeDisabled
+    * Indicates if Passcode setup pane is disabled
     *
     * @param bool $val The passCodeDisabled
     *
@@ -136,6 +144,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     
     /**
     * Gets the isMandatory
+    * Indicates if the profile is mandatory
     *
     * @return bool The isMandatory
     */
@@ -150,6 +159,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     
     /**
     * Sets the isMandatory
+    * Indicates if the profile is mandatory
     *
     * @param bool $val The isMandatory
     *
@@ -163,6 +173,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     
     /**
     * Gets the locationDisabled
+    * Indicates if Location service setup pane is disabled
     *
     * @return bool The locationDisabled
     */
@@ -177,6 +188,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     
     /**
     * Sets the locationDisabled
+    * Indicates if Location service setup pane is disabled
     *
     * @param bool $val The locationDisabled
     *
@@ -190,6 +202,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     
     /**
     * Gets the supportPhoneNumber
+    * Support phone number
     *
     * @return string The supportPhoneNumber
     */
@@ -204,6 +217,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     
     /**
     * Sets the supportPhoneNumber
+    * Support phone number
     *
     * @param string $val The supportPhoneNumber
     *
@@ -217,13 +231,14 @@ class DepEnrollmentProfile extends EnrollmentProfile
     
     /**
     * Gets the iTunesPairingMode
+    * Indicates the iTunes pairing mode
     *
     * @return ITunesPairingMode The iTunesPairingMode
     */
     public function getITunesPairingMode()
     {
         if (array_key_exists("iTunesPairingMode", $this->_propDict)) {
-            if (is_a($this->_propDict["iTunesPairingMode"], "Microsoft\Graph\Beta\Model\ITunesPairingMode")) {
+            if (is_a($this->_propDict["iTunesPairingMode"], "Microsoft\Graph\Model\ITunesPairingMode")) {
                 return $this->_propDict["iTunesPairingMode"];
             } else {
                 $this->_propDict["iTunesPairingMode"] = new ITunesPairingMode($this->_propDict["iTunesPairingMode"]);
@@ -235,6 +250,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     
     /**
     * Sets the iTunesPairingMode
+    * Indicates the iTunes pairing mode
     *
     * @param ITunesPairingMode $val The iTunesPairingMode
     *
@@ -248,6 +264,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     
     /**
     * Gets the profileRemovalDisabled
+    * Indicates if the profile removal option is disabled
     *
     * @return bool The profileRemovalDisabled
     */
@@ -262,6 +279,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     
     /**
     * Sets the profileRemovalDisabled
+    * Indicates if the profile removal option is disabled
     *
     * @param bool $val The profileRemovalDisabled
     *
@@ -276,6 +294,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
 
      /** 
      * Gets the managementCertificates
+    * Management certificates for Apple Configurator
      *
      * @return array The managementCertificates
      */
@@ -290,6 +309,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     
     /** 
     * Sets the managementCertificates
+    * Management certificates for Apple Configurator
     *
     * @param ManagementCertificateWithThumbprint $val The managementCertificates
     *
@@ -303,6 +323,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     
     /**
     * Gets the restoreBlocked
+    * Indicates if Restore setup pane is blocked
     *
     * @return bool The restoreBlocked
     */
@@ -317,6 +338,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     
     /**
     * Sets the restoreBlocked
+    * Indicates if Restore setup pane is blocked
     *
     * @param bool $val The restoreBlocked
     *
@@ -330,6 +352,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     
     /**
     * Gets the restoreFromAndroidDisabled
+    * Indicates if Restore from Android is disabled
     *
     * @return bool The restoreFromAndroidDisabled
     */
@@ -344,6 +367,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     
     /**
     * Sets the restoreFromAndroidDisabled
+    * Indicates if Restore from Android is disabled
     *
     * @param bool $val The restoreFromAndroidDisabled
     *
@@ -357,6 +381,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     
     /**
     * Gets the appleIdDisabled
+    * Indicates if Apple id setup pane is disabled
     *
     * @return bool The appleIdDisabled
     */
@@ -371,6 +396,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     
     /**
     * Sets the appleIdDisabled
+    * Indicates if Apple id setup pane is disabled
     *
     * @param bool $val The appleIdDisabled
     *
@@ -384,6 +410,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     
     /**
     * Gets the termsAndConditionsDisabled
+    * Indicates if 'Terms and Conditions' setup pane is disabled
     *
     * @return bool The termsAndConditionsDisabled
     */
@@ -398,6 +425,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     
     /**
     * Sets the termsAndConditionsDisabled
+    * Indicates if 'Terms and Conditions' setup pane is disabled
     *
     * @param bool $val The termsAndConditionsDisabled
     *
@@ -411,6 +439,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     
     /**
     * Gets the touchIdDisabled
+    * Indicates if touch id setup pane is disabled
     *
     * @return bool The touchIdDisabled
     */
@@ -425,6 +454,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     
     /**
     * Sets the touchIdDisabled
+    * Indicates if touch id setup pane is disabled
     *
     * @param bool $val The touchIdDisabled
     *
@@ -438,6 +468,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     
     /**
     * Gets the applePayDisabled
+    * Indicates if Apple pay setup pane is disabled
     *
     * @return bool The applePayDisabled
     */
@@ -452,6 +483,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     
     /**
     * Sets the applePayDisabled
+    * Indicates if Apple pay setup pane is disabled
     *
     * @param bool $val The applePayDisabled
     *
@@ -465,6 +497,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     
     /**
     * Gets the zoomDisabled
+    * Indicates if zoom setup pane is disabled
     *
     * @return bool The zoomDisabled
     */
@@ -479,6 +512,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     
     /**
     * Sets the zoomDisabled
+    * Indicates if zoom setup pane is disabled
     *
     * @param bool $val The zoomDisabled
     *
@@ -492,6 +526,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     
     /**
     * Gets the siriDisabled
+    * Indicates if siri setup pane is disabled
     *
     * @return bool The siriDisabled
     */
@@ -506,6 +541,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     
     /**
     * Sets the siriDisabled
+    * Indicates if siri setup pane is disabled
     *
     * @param bool $val The siriDisabled
     *
@@ -519,6 +555,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     
     /**
     * Gets the diagnosticsDisabled
+    * Indicates if diagnostics setup pane is disabled
     *
     * @return bool The diagnosticsDisabled
     */
@@ -533,6 +570,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     
     /**
     * Sets the diagnosticsDisabled
+    * Indicates if diagnostics setup pane is disabled
     *
     * @param bool $val The diagnosticsDisabled
     *
@@ -546,6 +584,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     
     /**
     * Gets the macOSRegistrationDisabled
+    * Indicates if Mac OS registration is disabled
     *
     * @return bool The macOSRegistrationDisabled
     */
@@ -560,6 +599,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     
     /**
     * Sets the macOSRegistrationDisabled
+    * Indicates if Mac OS registration is disabled
     *
     * @param bool $val The macOSRegistrationDisabled
     *
@@ -573,6 +613,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     
     /**
     * Gets the macOSFileVaultDisabled
+    * Indicates if Mac OS file vault is disabled
     *
     * @return bool The macOSFileVaultDisabled
     */
@@ -587,6 +628,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     
     /**
     * Sets the macOSFileVaultDisabled
+    * Indicates if Mac OS file vault is disabled
     *
     * @param bool $val The macOSFileVaultDisabled
     *
@@ -600,6 +642,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     
     /**
     * Gets the awaitDeviceConfiguredConfirmation
+    * Indicates if the device will need to wait for configured confirmation
     *
     * @return bool The awaitDeviceConfiguredConfirmation
     */
@@ -614,6 +657,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     
     /**
     * Sets the awaitDeviceConfiguredConfirmation
+    * Indicates if the device will need to wait for configured confirmation
     *
     * @param bool $val The awaitDeviceConfiguredConfirmation
     *
@@ -627,6 +671,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     
     /**
     * Gets the sharedIPadMaximumUserCount
+    * This specifies the maximum number of users that can use a shared iPad. Only applicable in shared iPad mode.
     *
     * @return int The sharedIPadMaximumUserCount
     */
@@ -641,6 +686,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     
     /**
     * Sets the sharedIPadMaximumUserCount
+    * This specifies the maximum number of users that can use a shared iPad. Only applicable in shared iPad mode.
     *
     * @param int $val The sharedIPadMaximumUserCount
     *
@@ -654,6 +700,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     
     /**
     * Gets the enableSharedIPad
+    * This indicates whether the device is to be enrolled in a mode which enables multi user scenarios. Only applicable in shared iPads.
     *
     * @return bool The enableSharedIPad
     */
@@ -668,6 +715,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     
     /**
     * Sets the enableSharedIPad
+    * This indicates whether the device is to be enrolled in a mode which enables multi user scenarios. Only applicable in shared iPads.
     *
     * @param bool $val The enableSharedIPad
     *

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * ManagedApp class
@@ -28,13 +28,14 @@ class ManagedApp extends MobileApp
 {
     /**
     * Gets the appAvailability
+    * The Application's availability. Possible values are: global, lineOfBusiness.
     *
     * @return ManagedAppAvailability The appAvailability
     */
     public function getAppAvailability()
     {
         if (array_key_exists("appAvailability", $this->_propDict)) {
-            if (is_a($this->_propDict["appAvailability"], "Microsoft\Graph\Beta\Model\ManagedAppAvailability")) {
+            if (is_a($this->_propDict["appAvailability"], "Microsoft\Graph\Model\ManagedAppAvailability")) {
                 return $this->_propDict["appAvailability"];
             } else {
                 $this->_propDict["appAvailability"] = new ManagedAppAvailability($this->_propDict["appAvailability"]);
@@ -46,6 +47,7 @@ class ManagedApp extends MobileApp
     
     /**
     * Sets the appAvailability
+    * The Application's availability. Possible values are: global, lineOfBusiness.
     *
     * @param ManagedAppAvailability $val The appAvailability
     *
@@ -59,6 +61,7 @@ class ManagedApp extends MobileApp
     
     /**
     * Gets the version
+    * The Application's version.
     *
     * @return string The version
     */
@@ -73,6 +76,7 @@ class ManagedApp extends MobileApp
     
     /**
     * Sets the version
+    * The Application's version.
     *
     * @param string $val The version
     *

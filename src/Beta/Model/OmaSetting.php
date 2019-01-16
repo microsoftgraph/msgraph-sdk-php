@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * OmaSetting class
 *
@@ -27,6 +27,7 @@ class OmaSetting extends Entity
 {
     /**
     * Gets the displayName
+    * Display Name.
     *
     * @return string The displayName
     */
@@ -41,6 +42,7 @@ class OmaSetting extends Entity
 
     /**
     * Sets the displayName
+    * Display Name.
     *
     * @param string $val The value of the displayName
     *
@@ -53,6 +55,7 @@ class OmaSetting extends Entity
     }
     /**
     * Gets the description
+    * Description.
     *
     * @return string The description
     */
@@ -67,6 +70,7 @@ class OmaSetting extends Entity
 
     /**
     * Sets the description
+    * Description.
     *
     * @param string $val The value of the description
     *
@@ -79,6 +83,7 @@ class OmaSetting extends Entity
     }
     /**
     * Gets the omaUri
+    * OMA.
     *
     * @return string The omaUri
     */
@@ -93,6 +98,7 @@ class OmaSetting extends Entity
 
     /**
     * Sets the omaUri
+    * OMA.
     *
     * @param string $val The value of the omaUri
     *

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * BookingSchedulingPolicy class
 *
@@ -28,13 +28,14 @@ class BookingSchedulingPolicy extends Entity
 
     /**
     * Gets the timeSlotInterval
+    * Duration of each time slot.
     *
     * @return Duration The timeSlotInterval
     */
     public function getTimeSlotInterval()
     {
         if (array_key_exists("timeSlotInterval", $this->_propDict)) {
-            if (is_a($this->_propDict["timeSlotInterval"], "Microsoft\Graph\Beta\Model\Duration")) {
+            if (is_a($this->_propDict["timeSlotInterval"], "Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["timeSlotInterval"];
             } else {
                 $this->_propDict["timeSlotInterval"] = new Duration($this->_propDict["timeSlotInterval"]);
@@ -46,6 +47,7 @@ class BookingSchedulingPolicy extends Entity
 
     /**
     * Sets the timeSlotInterval
+    * Duration of each time slot.
     *
     * @param Duration $val The value to assign to the timeSlotInterval
     *
@@ -59,13 +61,14 @@ class BookingSchedulingPolicy extends Entity
 
     /**
     * Gets the minimumLeadTime
+    * Minimum lead time for bookings and cancellations.
     *
     * @return Duration The minimumLeadTime
     */
     public function getMinimumLeadTime()
     {
         if (array_key_exists("minimumLeadTime", $this->_propDict)) {
-            if (is_a($this->_propDict["minimumLeadTime"], "Microsoft\Graph\Beta\Model\Duration")) {
+            if (is_a($this->_propDict["minimumLeadTime"], "Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["minimumLeadTime"];
             } else {
                 $this->_propDict["minimumLeadTime"] = new Duration($this->_propDict["minimumLeadTime"]);
@@ -77,6 +80,7 @@ class BookingSchedulingPolicy extends Entity
 
     /**
     * Sets the minimumLeadTime
+    * Minimum lead time for bookings and cancellations.
     *
     * @param Duration $val The value to assign to the minimumLeadTime
     *
@@ -90,13 +94,14 @@ class BookingSchedulingPolicy extends Entity
 
     /**
     * Gets the maximumAdvance
+    * Maximum number of days in advance that a booking can be made.
     *
     * @return Duration The maximumAdvance
     */
     public function getMaximumAdvance()
     {
         if (array_key_exists("maximumAdvance", $this->_propDict)) {
-            if (is_a($this->_propDict["maximumAdvance"], "Microsoft\Graph\Beta\Model\Duration")) {
+            if (is_a($this->_propDict["maximumAdvance"], "Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["maximumAdvance"];
             } else {
                 $this->_propDict["maximumAdvance"] = new Duration($this->_propDict["maximumAdvance"]);
@@ -108,6 +113,7 @@ class BookingSchedulingPolicy extends Entity
 
     /**
     * Sets the maximumAdvance
+    * Maximum number of days in advance that a booking can be made.
     *
     * @param Duration $val The value to assign to the maximumAdvance
     *
@@ -120,6 +126,7 @@ class BookingSchedulingPolicy extends Entity
     }
     /**
     * Gets the sendConfirmationsToOwner
+    * Notify the business via email when a booking is created or changed.
     *
     * @return bool The sendConfirmationsToOwner
     */
@@ -134,6 +141,7 @@ class BookingSchedulingPolicy extends Entity
 
     /**
     * Sets the sendConfirmationsToOwner
+    * Notify the business via email when a booking is created or changed.
     *
     * @param bool $val The value of the sendConfirmationsToOwner
     *
@@ -146,6 +154,7 @@ class BookingSchedulingPolicy extends Entity
     }
     /**
     * Gets the allowStaffSelection
+    * Allow customers to choose a specific person for the booking.
     *
     * @return bool The allowStaffSelection
     */
@@ -160,6 +169,7 @@ class BookingSchedulingPolicy extends Entity
 
     /**
     * Sets the allowStaffSelection
+    * Allow customers to choose a specific person for the booking.
     *
     * @param bool $val The value of the allowStaffSelection
     *

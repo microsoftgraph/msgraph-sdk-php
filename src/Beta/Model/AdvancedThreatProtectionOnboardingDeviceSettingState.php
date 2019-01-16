@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * AdvancedThreatProtectionOnboardingDeviceSettingState class
@@ -28,13 +28,14 @@ class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
 {
     /**
     * Gets the platformType
+    * Device platform type
     *
     * @return DeviceType The platformType
     */
     public function getPlatformType()
     {
         if (array_key_exists("platformType", $this->_propDict)) {
-            if (is_a($this->_propDict["platformType"], "Microsoft\Graph\Beta\Model\DeviceType")) {
+            if (is_a($this->_propDict["platformType"], "Microsoft\Graph\Model\DeviceType")) {
                 return $this->_propDict["platformType"];
             } else {
                 $this->_propDict["platformType"] = new DeviceType($this->_propDict["platformType"]);
@@ -46,6 +47,7 @@ class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
     
     /**
     * Sets the platformType
+    * Device platform type
     *
     * @param DeviceType $val The platformType
     *
@@ -59,6 +61,7 @@ class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
     
     /**
     * Gets the setting
+    * The setting class name and property name.
     *
     * @return string The setting
     */
@@ -73,6 +76,7 @@ class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
     
     /**
     * Sets the setting
+    * The setting class name and property name.
     *
     * @param string $val The setting
     *
@@ -86,6 +90,7 @@ class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
     
     /**
     * Gets the settingName
+    * The Setting Name that is being reported
     *
     * @return string The settingName
     */
@@ -100,6 +105,7 @@ class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
     
     /**
     * Sets the settingName
+    * The Setting Name that is being reported
     *
     * @param string $val The settingName
     *
@@ -113,6 +119,7 @@ class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
     
     /**
     * Gets the deviceId
+    * The Device Id that is being reported
     *
     * @return string The deviceId
     */
@@ -127,6 +134,7 @@ class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
     
     /**
     * Sets the deviceId
+    * The Device Id that is being reported
     *
     * @param string $val The deviceId
     *
@@ -140,6 +148,7 @@ class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
     
     /**
     * Gets the deviceName
+    * The Device Name that is being reported
     *
     * @return string The deviceName
     */
@@ -154,6 +163,7 @@ class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
     
     /**
     * Sets the deviceName
+    * The Device Name that is being reported
     *
     * @param string $val The deviceName
     *
@@ -167,6 +177,7 @@ class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
     
     /**
     * Gets the userId
+    * The user Id that is being reported
     *
     * @return string The userId
     */
@@ -181,6 +192,7 @@ class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
     
     /**
     * Sets the userId
+    * The user Id that is being reported
     *
     * @param string $val The userId
     *
@@ -194,6 +206,7 @@ class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
     
     /**
     * Gets the userEmail
+    * The User email address that is being reported
     *
     * @return string The userEmail
     */
@@ -208,6 +221,7 @@ class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
     
     /**
     * Sets the userEmail
+    * The User email address that is being reported
     *
     * @param string $val The userEmail
     *
@@ -221,6 +235,7 @@ class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
     
     /**
     * Gets the userName
+    * The User Name that is being reported
     *
     * @return string The userName
     */
@@ -235,6 +250,7 @@ class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
     
     /**
     * Sets the userName
+    * The User Name that is being reported
     *
     * @param string $val The userName
     *
@@ -248,6 +264,7 @@ class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
     
     /**
     * Gets the userPrincipalName
+    * The User PrincipalName that is being reported
     *
     * @return string The userPrincipalName
     */
@@ -262,6 +279,7 @@ class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
     
     /**
     * Sets the userPrincipalName
+    * The User PrincipalName that is being reported
     *
     * @param string $val The userPrincipalName
     *
@@ -275,6 +293,7 @@ class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
     
     /**
     * Gets the deviceModel
+    * The device model that is being reported
     *
     * @return string The deviceModel
     */
@@ -289,6 +308,7 @@ class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
     
     /**
     * Sets the deviceModel
+    * The device model that is being reported
     *
     * @param string $val The deviceModel
     *
@@ -302,13 +322,14 @@ class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
     
     /**
     * Gets the state
+    * The compliance state of the setting
     *
     * @return ComplianceStatus The state
     */
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "Microsoft\Graph\Beta\Model\ComplianceStatus")) {
+            if (is_a($this->_propDict["state"], "Microsoft\Graph\Model\ComplianceStatus")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new ComplianceStatus($this->_propDict["state"]);
@@ -320,6 +341,7 @@ class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
     
     /**
     * Sets the state
+    * The compliance state of the setting
     *
     * @param ComplianceStatus $val The state
     *
@@ -333,6 +355,7 @@ class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
     
     /**
     * Gets the complianceGracePeriodExpirationDateTime
+    * The DateTime when device compliance grace period expires
     *
     * @return \DateTime The complianceGracePeriodExpirationDateTime
     */
@@ -351,6 +374,7 @@ class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
     
     /**
     * Sets the complianceGracePeriodExpirationDateTime
+    * The DateTime when device compliance grace period expires
     *
     * @param \DateTime $val The complianceGracePeriodExpirationDateTime
     *

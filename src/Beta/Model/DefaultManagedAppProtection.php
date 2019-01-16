@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * DefaultManagedAppProtection class
@@ -28,13 +28,14 @@ class DefaultManagedAppProtection extends ManagedAppProtection
 {
     /**
     * Gets the appDataEncryptionType
+    * Type of encryption which should be used for data in a managed app. (iOS Only). Possible values are: useDeviceSettings, afterDeviceRestart, whenDeviceLockedExceptOpenFiles, whenDeviceLocked.
     *
     * @return ManagedAppDataEncryptionType The appDataEncryptionType
     */
     public function getAppDataEncryptionType()
     {
         if (array_key_exists("appDataEncryptionType", $this->_propDict)) {
-            if (is_a($this->_propDict["appDataEncryptionType"], "Microsoft\Graph\Beta\Model\ManagedAppDataEncryptionType")) {
+            if (is_a($this->_propDict["appDataEncryptionType"], "Microsoft\Graph\Model\ManagedAppDataEncryptionType")) {
                 return $this->_propDict["appDataEncryptionType"];
             } else {
                 $this->_propDict["appDataEncryptionType"] = new ManagedAppDataEncryptionType($this->_propDict["appDataEncryptionType"]);
@@ -46,6 +47,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Sets the appDataEncryptionType
+    * Type of encryption which should be used for data in a managed app. (iOS Only). Possible values are: useDeviceSettings, afterDeviceRestart, whenDeviceLockedExceptOpenFiles, whenDeviceLocked.
     *
     * @param ManagedAppDataEncryptionType $val The appDataEncryptionType
     *
@@ -59,6 +61,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Gets the screenCaptureBlocked
+    * Indicates whether screen capture is blocked. (Android only)
     *
     * @return bool The screenCaptureBlocked
     */
@@ -73,6 +76,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Sets the screenCaptureBlocked
+    * Indicates whether screen capture is blocked. (Android only)
     *
     * @param bool $val The screenCaptureBlocked
     *
@@ -86,6 +90,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Gets the encryptAppData
+    * Indicates whether managed-app data should be encrypted. (Android only)
     *
     * @return bool The encryptAppData
     */
@@ -100,6 +105,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Sets the encryptAppData
+    * Indicates whether managed-app data should be encrypted. (Android only)
     *
     * @param bool $val The encryptAppData
     *
@@ -113,6 +119,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Gets the disableAppEncryptionIfDeviceEncryptionIsEnabled
+    * When this setting is enabled, app level encryption is disabled if device level encryption is enabled. (Android only)
     *
     * @return bool The disableAppEncryptionIfDeviceEncryptionIsEnabled
     */
@@ -127,6 +134,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Sets the disableAppEncryptionIfDeviceEncryptionIsEnabled
+    * When this setting is enabled, app level encryption is disabled if device level encryption is enabled. (Android only)
     *
     * @param bool $val The disableAppEncryptionIfDeviceEncryptionIsEnabled
     *
@@ -140,6 +148,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Gets the minimumRequiredSdkVersion
+    * Versions less than the specified version will block the managed app from accessing company data. (iOS Only)
     *
     * @return string The minimumRequiredSdkVersion
     */
@@ -154,6 +163,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Sets the minimumRequiredSdkVersion
+    * Versions less than the specified version will block the managed app from accessing company data. (iOS Only)
     *
     * @param string $val The minimumRequiredSdkVersion
     *
@@ -168,6 +178,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
 
      /** 
      * Gets the customSettings
+    * A set of string key and string value pairs to be sent to the affected users, unalterned by this service
      *
      * @return array The customSettings
      */
@@ -182,6 +193,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /** 
     * Sets the customSettings
+    * A set of string key and string value pairs to be sent to the affected users, unalterned by this service
     *
     * @param KeyValuePair $val The customSettings
     *
@@ -195,6 +207,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Gets the deployedAppCount
+    * Count of apps to which the current policy is deployed.
     *
     * @return int The deployedAppCount
     */
@@ -209,6 +222,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Sets the deployedAppCount
+    * Count of apps to which the current policy is deployed.
     *
     * @param int $val The deployedAppCount
     *
@@ -222,6 +236,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Gets the minimumRequiredPatchVersion
+    * Define the oldest required Android security patch level a user can have to gain secure access to the app. (Android only)
     *
     * @return string The minimumRequiredPatchVersion
     */
@@ -236,6 +251,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Sets the minimumRequiredPatchVersion
+    * Define the oldest required Android security patch level a user can have to gain secure access to the app. (Android only)
     *
     * @param string $val The minimumRequiredPatchVersion
     *
@@ -249,6 +265,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Gets the minimumWarningPatchVersion
+    * Define the oldest recommended Android security patch level a user can have for secure access to the app. (Android only)
     *
     * @return string The minimumWarningPatchVersion
     */
@@ -263,6 +280,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Sets the minimumWarningPatchVersion
+    * Define the oldest recommended Android security patch level a user can have for secure access to the app. (Android only)
     *
     * @param string $val The minimumWarningPatchVersion
     *
@@ -277,6 +295,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
 
      /** 
      * Gets the exemptedAppProtocols
+    * iOS Apps in this list will be exempt from the policy and will be able to receive data from managed apps. (iOS Only)
      *
      * @return array The exemptedAppProtocols
      */
@@ -291,6 +310,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /** 
     * Sets the exemptedAppProtocols
+    * iOS Apps in this list will be exempt from the policy and will be able to receive data from managed apps. (iOS Only)
     *
     * @param KeyValuePair $val The exemptedAppProtocols
     *
@@ -305,6 +325,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
 
      /** 
      * Gets the exemptedAppPackages
+    * Android App packages in this list will be exempt from the policy and will be able to receive data from managed apps. (Android only)
      *
      * @return array The exemptedAppPackages
      */
@@ -319,6 +340,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /** 
     * Sets the exemptedAppPackages
+    * Android App packages in this list will be exempt from the policy and will be able to receive data from managed apps. (Android only)
     *
     * @param KeyValuePair $val The exemptedAppPackages
     *
@@ -332,6 +354,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Gets the faceIdBlocked
+    * Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True. (iOS Only)
     *
     * @return bool The faceIdBlocked
     */
@@ -346,6 +369,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Sets the faceIdBlocked
+    * Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True. (iOS Only)
     *
     * @param bool $val The faceIdBlocked
     *
@@ -359,6 +383,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Gets the minimumWipeSdkVersion
+    * Versions less than the specified version will block the managed app from accessing company data.
     *
     * @return string The minimumWipeSdkVersion
     */
@@ -373,6 +398,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Sets the minimumWipeSdkVersion
+    * Versions less than the specified version will block the managed app from accessing company data.
     *
     * @param string $val The minimumWipeSdkVersion
     *
@@ -386,6 +412,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Gets the minimumWipePatchVersion
+    * Android security patch level  less than or equal to the specified value will wipe the managed app and the associated company data. (Android only)
     *
     * @return string The minimumWipePatchVersion
     */
@@ -400,6 +427,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Sets the minimumWipePatchVersion
+    * Android security patch level  less than or equal to the specified value will wipe the managed app and the associated company data. (Android only)
     *
     * @param string $val The minimumWipePatchVersion
     *
@@ -413,6 +441,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Gets the allowedIosDeviceModels
+    * Semicolon seperated list of device models allowed, as a string, for the managed app to work. (iOS Only)
     *
     * @return string The allowedIosDeviceModels
     */
@@ -427,6 +456,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Sets the allowedIosDeviceModels
+    * Semicolon seperated list of device models allowed, as a string, for the managed app to work. (iOS Only)
     *
     * @param string $val The allowedIosDeviceModels
     *
@@ -440,13 +470,14 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Gets the appActionIfIosDeviceModelNotAllowed
+    * Defines a managed app behavior, either block or wipe, if the specified device model is not allowed. (iOS Only)
     *
     * @return ManagedAppRemediationAction The appActionIfIosDeviceModelNotAllowed
     */
     public function getAppActionIfIosDeviceModelNotAllowed()
     {
         if (array_key_exists("appActionIfIosDeviceModelNotAllowed", $this->_propDict)) {
-            if (is_a($this->_propDict["appActionIfIosDeviceModelNotAllowed"], "Microsoft\Graph\Beta\Model\ManagedAppRemediationAction")) {
+            if (is_a($this->_propDict["appActionIfIosDeviceModelNotAllowed"], "Microsoft\Graph\Model\ManagedAppRemediationAction")) {
                 return $this->_propDict["appActionIfIosDeviceModelNotAllowed"];
             } else {
                 $this->_propDict["appActionIfIosDeviceModelNotAllowed"] = new ManagedAppRemediationAction($this->_propDict["appActionIfIosDeviceModelNotAllowed"]);
@@ -458,6 +489,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Sets the appActionIfIosDeviceModelNotAllowed
+    * Defines a managed app behavior, either block or wipe, if the specified device model is not allowed. (iOS Only)
     *
     * @param ManagedAppRemediationAction $val The appActionIfIosDeviceModelNotAllowed
     *
@@ -471,6 +503,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Gets the allowedAndroidDeviceManufacturers
+    * Semicolon seperated list of device manufacturers allowed, as a string, for the managed app to work. (Android only)
     *
     * @return string The allowedAndroidDeviceManufacturers
     */
@@ -485,6 +518,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Sets the allowedAndroidDeviceManufacturers
+    * Semicolon seperated list of device manufacturers allowed, as a string, for the managed app to work. (Android only)
     *
     * @param string $val The allowedAndroidDeviceManufacturers
     *
@@ -498,13 +532,14 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Gets the appActionIfAndroidDeviceManufacturerNotAllowed
+    * Defines a managed app behavior, either block or wipe, if the specified device manufacturer is not allowed. (Android only)
     *
     * @return ManagedAppRemediationAction The appActionIfAndroidDeviceManufacturerNotAllowed
     */
     public function getAppActionIfAndroidDeviceManufacturerNotAllowed()
     {
         if (array_key_exists("appActionIfAndroidDeviceManufacturerNotAllowed", $this->_propDict)) {
-            if (is_a($this->_propDict["appActionIfAndroidDeviceManufacturerNotAllowed"], "Microsoft\Graph\Beta\Model\ManagedAppRemediationAction")) {
+            if (is_a($this->_propDict["appActionIfAndroidDeviceManufacturerNotAllowed"], "Microsoft\Graph\Model\ManagedAppRemediationAction")) {
                 return $this->_propDict["appActionIfAndroidDeviceManufacturerNotAllowed"];
             } else {
                 $this->_propDict["appActionIfAndroidDeviceManufacturerNotAllowed"] = new ManagedAppRemediationAction($this->_propDict["appActionIfAndroidDeviceManufacturerNotAllowed"]);
@@ -516,6 +551,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Sets the appActionIfAndroidDeviceManufacturerNotAllowed
+    * Defines a managed app behavior, either block or wipe, if the specified device manufacturer is not allowed. (Android only)
     *
     * @param ManagedAppRemediationAction $val The appActionIfAndroidDeviceManufacturerNotAllowed
     *
@@ -529,6 +565,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Gets the thirdPartyKeyboardsBlocked
+    * Defines if third party keyboards are allowed while accessing a managed app. (iOS Only)
     *
     * @return bool The thirdPartyKeyboardsBlocked
     */
@@ -543,6 +580,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Sets the thirdPartyKeyboardsBlocked
+    * Defines if third party keyboards are allowed while accessing a managed app. (iOS Only)
     *
     * @param bool $val The thirdPartyKeyboardsBlocked
     *
@@ -556,6 +594,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Gets the filterOpenInToOnlyManagedApps
+    * Defines if open-in operation is supported from the managed app to the filesharing locations selected. This setting only applies when AllowedOutboundDataTransferDestinations is set to ManagedApps and DisableProtectionOfManagedOutboundOpenInData is set to False. (iOS Only)
     *
     * @return bool The filterOpenInToOnlyManagedApps
     */
@@ -570,6 +609,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Sets the filterOpenInToOnlyManagedApps
+    * Defines if open-in operation is supported from the managed app to the filesharing locations selected. This setting only applies when AllowedOutboundDataTransferDestinations is set to ManagedApps and DisableProtectionOfManagedOutboundOpenInData is set to False. (iOS Only)
     *
     * @param bool $val The filterOpenInToOnlyManagedApps
     *
@@ -581,9 +621,68 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         return $this;
     }
     
+    /**
+    * Gets the disableProtectionOfManagedOutboundOpenInData
+    * Disable protection of data transferred to other apps through IOS OpenIn option. This setting is only allowed to be True when AllowedOutboundDataTransferDestinations is set to ManagedApps. (iOS Only)
+    *
+    * @return bool The disableProtectionOfManagedOutboundOpenInData
+    */
+    public function getDisableProtectionOfManagedOutboundOpenInData()
+    {
+        if (array_key_exists("disableProtectionOfManagedOutboundOpenInData", $this->_propDict)) {
+            return $this->_propDict["disableProtectionOfManagedOutboundOpenInData"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the disableProtectionOfManagedOutboundOpenInData
+    * Disable protection of data transferred to other apps through IOS OpenIn option. This setting is only allowed to be True when AllowedOutboundDataTransferDestinations is set to ManagedApps. (iOS Only)
+    *
+    * @param bool $val The disableProtectionOfManagedOutboundOpenInData
+    *
+    * @return DefaultManagedAppProtection
+    */
+    public function setDisableProtectionOfManagedOutboundOpenInData($val)
+    {
+        $this->_propDict["disableProtectionOfManagedOutboundOpenInData"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the protectInboundDataFromUnknownSources
+    * Protect incoming data from unknown source. This setting is only allowed to be True when AllowedInboundDataTransferSources is set to AllApps. (iOS Only)
+    *
+    * @return bool The protectInboundDataFromUnknownSources
+    */
+    public function getProtectInboundDataFromUnknownSources()
+    {
+        if (array_key_exists("protectInboundDataFromUnknownSources", $this->_propDict)) {
+            return $this->_propDict["protectInboundDataFromUnknownSources"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the protectInboundDataFromUnknownSources
+    * Protect incoming data from unknown source. This setting is only allowed to be True when AllowedInboundDataTransferSources is set to AllApps. (iOS Only)
+    *
+    * @param bool $val The protectInboundDataFromUnknownSources
+    *
+    * @return DefaultManagedAppProtection
+    */
+    public function setProtectInboundDataFromUnknownSources($val)
+    {
+        $this->_propDict["protectInboundDataFromUnknownSources"] = boolval($val);
+        return $this;
+    }
+    
 
      /** 
      * Gets the apps
+    * List of apps to which the policy is deployed.
      *
      * @return array The apps
      */
@@ -598,6 +697,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /** 
     * Sets the apps
+    * List of apps to which the policy is deployed.
     *
     * @param ManagedMobileApp $val The apps
     *
@@ -611,13 +711,14 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Gets the deploymentSummary
+    * Navigation property to deployment summary of the configuration.
     *
     * @return ManagedAppPolicyDeploymentSummary The deploymentSummary
     */
     public function getDeploymentSummary()
     {
         if (array_key_exists("deploymentSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["deploymentSummary"], "Microsoft\Graph\Beta\Model\ManagedAppPolicyDeploymentSummary")) {
+            if (is_a($this->_propDict["deploymentSummary"], "Microsoft\Graph\Model\ManagedAppPolicyDeploymentSummary")) {
                 return $this->_propDict["deploymentSummary"];
             } else {
                 $this->_propDict["deploymentSummary"] = new ManagedAppPolicyDeploymentSummary($this->_propDict["deploymentSummary"]);
@@ -629,6 +730,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Sets the deploymentSummary
+    * Navigation property to deployment summary of the configuration.
     *
     * @param ManagedAppPolicyDeploymentSummary $val The deploymentSummary
     *

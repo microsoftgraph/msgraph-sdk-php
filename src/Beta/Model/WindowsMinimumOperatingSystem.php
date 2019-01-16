@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * WindowsMinimumOperatingSystem class
 *
@@ -27,6 +27,7 @@ class WindowsMinimumOperatingSystem extends Entity
 {
     /**
     * Gets the v8_0
+    * Windows version 8.0 or later.
     *
     * @return bool The v8_0
     */
@@ -41,6 +42,7 @@ class WindowsMinimumOperatingSystem extends Entity
 
     /**
     * Sets the v8_0
+    * Windows version 8.0 or later.
     *
     * @param bool $val The value of the v8_0
     *
@@ -53,6 +55,7 @@ class WindowsMinimumOperatingSystem extends Entity
     }
     /**
     * Gets the v8_1
+    * Windows version 8.1 or later.
     *
     * @return bool The v8_1
     */
@@ -67,6 +70,7 @@ class WindowsMinimumOperatingSystem extends Entity
 
     /**
     * Sets the v8_1
+    * Windows version 8.1 or later.
     *
     * @param bool $val The value of the v8_1
     *
@@ -79,6 +83,7 @@ class WindowsMinimumOperatingSystem extends Entity
     }
     /**
     * Gets the v10_0
+    * Windows version 10.0 or later.
     *
     * @return bool The v10_0
     */
@@ -93,6 +98,7 @@ class WindowsMinimumOperatingSystem extends Entity
 
     /**
     * Sets the v10_0
+    * Windows version 10.0 or later.
     *
     * @param bool $val The value of the v10_0
     *
@@ -101,6 +107,118 @@ class WindowsMinimumOperatingSystem extends Entity
     public function setV10_0($val)
     {
         $this->_propDict["v100"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the v10_1607
+    * Windows 10 1607 or later.
+    *
+    * @return bool The v10_1607
+    */
+    public function getV10_1607()
+    {
+        if (array_key_exists("v101607", $this->_propDict)) {
+            return $this->_propDict["v101607"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the v10_1607
+    * Windows 10 1607 or later.
+    *
+    * @param bool $val The value of the v10_1607
+    *
+    * @return WindowsMinimumOperatingSystem
+    */
+    public function setV10_1607($val)
+    {
+        $this->_propDict["v101607"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the v10_1703
+    * Windows 10 1703 or later.
+    *
+    * @return bool The v10_1703
+    */
+    public function getV10_1703()
+    {
+        if (array_key_exists("v101703", $this->_propDict)) {
+            return $this->_propDict["v101703"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the v10_1703
+    * Windows 10 1703 or later.
+    *
+    * @param bool $val The value of the v10_1703
+    *
+    * @return WindowsMinimumOperatingSystem
+    */
+    public function setV10_1703($val)
+    {
+        $this->_propDict["v101703"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the v10_1709
+    * Windows 10 1709 or later.
+    *
+    * @return bool The v10_1709
+    */
+    public function getV10_1709()
+    {
+        if (array_key_exists("v101709", $this->_propDict)) {
+            return $this->_propDict["v101709"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the v10_1709
+    * Windows 10 1709 or later.
+    *
+    * @param bool $val The value of the v10_1709
+    *
+    * @return WindowsMinimumOperatingSystem
+    */
+    public function setV10_1709($val)
+    {
+        $this->_propDict["v101709"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the v10_1803
+    * Windows 10 1803 or later.
+    *
+    * @return bool The v10_1803
+    */
+    public function getV10_1803()
+    {
+        if (array_key_exists("v101803", $this->_propDict)) {
+            return $this->_propDict["v101803"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the v10_1803
+    * Windows 10 1803 or later.
+    *
+    * @param bool $val The value of the v10_1803
+    *
+    * @return WindowsMinimumOperatingSystem
+    */
+    public function setV10_1803($val)
+    {
+        $this->_propDict["v101803"] = $val;
         return $this;
     }
 }

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * ManagementConditionStatement class
@@ -28,6 +28,7 @@ class ManagementConditionStatement extends Entity
 {
     /**
     * Gets the displayName
+    * The admin defined name of the management condition statement.
     *
     * @return string The displayName
     */
@@ -42,6 +43,7 @@ class ManagementConditionStatement extends Entity
     
     /**
     * Sets the displayName
+    * The admin defined name of the management condition statement.
     *
     * @param string $val The displayName
     *
@@ -55,6 +57,7 @@ class ManagementConditionStatement extends Entity
     
     /**
     * Gets the description
+    * The admin defined description of the management condition statement.
     *
     * @return string The description
     */
@@ -69,6 +72,7 @@ class ManagementConditionStatement extends Entity
     
     /**
     * Sets the description
+    * The admin defined description of the management condition statement.
     *
     * @param string $val The description
     *
@@ -82,6 +86,7 @@ class ManagementConditionStatement extends Entity
     
     /**
     * Gets the createdDateTime
+    * The time the management condition statement was created. Generated service side.
     *
     * @return \DateTime The createdDateTime
     */
@@ -100,6 +105,7 @@ class ManagementConditionStatement extends Entity
     
     /**
     * Sets the createdDateTime
+    * The time the management condition statement was created. Generated service side.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -113,6 +119,7 @@ class ManagementConditionStatement extends Entity
     
     /**
     * Gets the modifiedDateTime
+    * The time the management condition statement was last modified. Updated service side.
     *
     * @return \DateTime The modifiedDateTime
     */
@@ -131,6 +138,7 @@ class ManagementConditionStatement extends Entity
     
     /**
     * Sets the modifiedDateTime
+    * The time the management condition statement was last modified. Updated service side.
     *
     * @param \DateTime $val The modifiedDateTime
     *
@@ -144,13 +152,14 @@ class ManagementConditionStatement extends Entity
     
     /**
     * Gets the expression
+    * The management condition statement expression used to evaluate if a management condition statement was activated/deactivated.
     *
     * @return ManagementConditionExpression The expression
     */
     public function getExpression()
     {
         if (array_key_exists("expression", $this->_propDict)) {
-            if (is_a($this->_propDict["expression"], "Microsoft\Graph\Beta\Model\ManagementConditionExpression")) {
+            if (is_a($this->_propDict["expression"], "Microsoft\Graph\Model\ManagementConditionExpression")) {
                 return $this->_propDict["expression"];
             } else {
                 $this->_propDict["expression"] = new ManagementConditionExpression($this->_propDict["expression"]);
@@ -162,6 +171,7 @@ class ManagementConditionStatement extends Entity
     
     /**
     * Sets the expression
+    * The management condition statement expression used to evaluate if a management condition statement was activated/deactivated.
     *
     * @param ManagementConditionExpression $val The expression
     *
@@ -175,6 +185,7 @@ class ManagementConditionStatement extends Entity
     
     /**
     * Gets the eTag
+    * ETag of the management condition statement. Updated service side.
     *
     * @return string The eTag
     */
@@ -189,6 +200,7 @@ class ManagementConditionStatement extends Entity
     
     /**
     * Sets the eTag
+    * ETag of the management condition statement. Updated service side.
     *
     * @param string $val The eTag
     *
@@ -233,6 +245,7 @@ class ManagementConditionStatement extends Entity
 
      /** 
      * Gets the managementConditions
+    * The management conditions associated to the management condition statement.
      *
      * @return array The managementConditions
      */
@@ -247,6 +260,7 @@ class ManagementConditionStatement extends Entity
     
     /** 
     * Sets the managementConditions
+    * The management conditions associated to the management condition statement.
     *
     * @param ManagementCondition $val The managementConditions
     *

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * PlannerBucketTaskBoardTaskFormat class
@@ -28,6 +28,7 @@ class PlannerBucketTaskBoardTaskFormat extends Entity
 {
     /**
     * Gets the orderHint
+    * Hint used to order tasks in the Bucket view of the Task Board. The format is defined as outlined here.
     *
     * @return string The orderHint
     */
@@ -42,6 +43,7 @@ class PlannerBucketTaskBoardTaskFormat extends Entity
     
     /**
     * Sets the orderHint
+    * Hint used to order tasks in the Bucket view of the Task Board. The format is defined as outlined here.
     *
     * @param string $val The orderHint
     *

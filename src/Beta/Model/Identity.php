@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * Identity class
 *
@@ -27,6 +27,7 @@ class Identity extends Entity
 {
     /**
     * Gets the id
+    * Unique identifier for the identity.
     *
     * @return string The id
     */
@@ -41,6 +42,7 @@ class Identity extends Entity
 
     /**
     * Sets the id
+    * Unique identifier for the identity.
     *
     * @param string $val The value of the id
     *
@@ -53,6 +55,7 @@ class Identity extends Entity
     }
     /**
     * Gets the displayName
+    * The identity's display name. Note that this may not always be available or up to date. For example, if a user changes their display name, the API may show the new value in a future response, but the items associated with the user won't show up as having changed when using delta.
     *
     * @return string The displayName
     */
@@ -67,6 +70,7 @@ class Identity extends Entity
 
     /**
     * Sets the displayName
+    * The identity's display name. Note that this may not always be available or up to date. For example, if a user changes their display name, the API may show the new value in a future response, but the items associated with the user won't show up as having changed when using delta.
     *
     * @param string $val The value of the displayName
     *

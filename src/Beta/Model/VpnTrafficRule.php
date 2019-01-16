@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * VpnTrafficRule class
 *
@@ -27,6 +27,7 @@ class VpnTrafficRule extends Entity
 {
     /**
     * Gets the name
+    * Name.
     *
     * @return string The name
     */
@@ -41,6 +42,7 @@ class VpnTrafficRule extends Entity
 
     /**
     * Sets the name
+    * Name.
     *
     * @param string $val The value of the name
     *
@@ -53,6 +55,7 @@ class VpnTrafficRule extends Entity
     }
     /**
     * Gets the protocols
+    * Protocols (0-255). Valid values 0 to 255
     *
     * @return int The protocols
     */
@@ -67,6 +70,7 @@ class VpnTrafficRule extends Entity
 
     /**
     * Sets the protocols
+    * Protocols (0-255). Valid values 0 to 255
     *
     * @param int $val The value of the protocols
     *
@@ -80,13 +84,14 @@ class VpnTrafficRule extends Entity
 
     /**
     * Gets the localPortRanges
+    * Local port range can be set only when protocol is either TCP or UDP (6 or 17). This collection can contain a maximum of 500 elements.
     *
     * @return NumberRange The localPortRanges
     */
     public function getLocalPortRanges()
     {
         if (array_key_exists("localPortRanges", $this->_propDict)) {
-            if (is_a($this->_propDict["localPortRanges"], "Microsoft\Graph\Beta\Model\NumberRange")) {
+            if (is_a($this->_propDict["localPortRanges"], "Microsoft\Graph\Model\NumberRange")) {
                 return $this->_propDict["localPortRanges"];
             } else {
                 $this->_propDict["localPortRanges"] = new NumberRange($this->_propDict["localPortRanges"]);
@@ -98,6 +103,7 @@ class VpnTrafficRule extends Entity
 
     /**
     * Sets the localPortRanges
+    * Local port range can be set only when protocol is either TCP or UDP (6 or 17). This collection can contain a maximum of 500 elements.
     *
     * @param NumberRange $val The value to assign to the localPortRanges
     *
@@ -111,13 +117,14 @@ class VpnTrafficRule extends Entity
 
     /**
     * Gets the remotePortRanges
+    * Remote port range can be set only when protocol is either TCP or UDP (6 or 17). This collection can contain a maximum of 500 elements.
     *
     * @return NumberRange The remotePortRanges
     */
     public function getRemotePortRanges()
     {
         if (array_key_exists("remotePortRanges", $this->_propDict)) {
-            if (is_a($this->_propDict["remotePortRanges"], "Microsoft\Graph\Beta\Model\NumberRange")) {
+            if (is_a($this->_propDict["remotePortRanges"], "Microsoft\Graph\Model\NumberRange")) {
                 return $this->_propDict["remotePortRanges"];
             } else {
                 $this->_propDict["remotePortRanges"] = new NumberRange($this->_propDict["remotePortRanges"]);
@@ -129,6 +136,7 @@ class VpnTrafficRule extends Entity
 
     /**
     * Sets the remotePortRanges
+    * Remote port range can be set only when protocol is either TCP or UDP (6 or 17). This collection can contain a maximum of 500 elements.
     *
     * @param NumberRange $val The value to assign to the remotePortRanges
     *
@@ -142,13 +150,14 @@ class VpnTrafficRule extends Entity
 
     /**
     * Gets the localAddressRanges
+    * Local address range. This collection can contain a maximum of 500 elements.
     *
     * @return IPv4Range The localAddressRanges
     */
     public function getLocalAddressRanges()
     {
         if (array_key_exists("localAddressRanges", $this->_propDict)) {
-            if (is_a($this->_propDict["localAddressRanges"], "Microsoft\Graph\Beta\Model\IPv4Range")) {
+            if (is_a($this->_propDict["localAddressRanges"], "Microsoft\Graph\Model\IPv4Range")) {
                 return $this->_propDict["localAddressRanges"];
             } else {
                 $this->_propDict["localAddressRanges"] = new IPv4Range($this->_propDict["localAddressRanges"]);
@@ -160,6 +169,7 @@ class VpnTrafficRule extends Entity
 
     /**
     * Sets the localAddressRanges
+    * Local address range. This collection can contain a maximum of 500 elements.
     *
     * @param IPv4Range $val The value to assign to the localAddressRanges
     *
@@ -173,13 +183,14 @@ class VpnTrafficRule extends Entity
 
     /**
     * Gets the remoteAddressRanges
+    * Remote address range. This collection can contain a maximum of 500 elements.
     *
     * @return IPv4Range The remoteAddressRanges
     */
     public function getRemoteAddressRanges()
     {
         if (array_key_exists("remoteAddressRanges", $this->_propDict)) {
-            if (is_a($this->_propDict["remoteAddressRanges"], "Microsoft\Graph\Beta\Model\IPv4Range")) {
+            if (is_a($this->_propDict["remoteAddressRanges"], "Microsoft\Graph\Model\IPv4Range")) {
                 return $this->_propDict["remoteAddressRanges"];
             } else {
                 $this->_propDict["remoteAddressRanges"] = new IPv4Range($this->_propDict["remoteAddressRanges"]);
@@ -191,6 +202,7 @@ class VpnTrafficRule extends Entity
 
     /**
     * Sets the remoteAddressRanges
+    * Remote address range. This collection can contain a maximum of 500 elements.
     *
     * @param IPv4Range $val The value to assign to the remoteAddressRanges
     *
@@ -203,6 +215,7 @@ class VpnTrafficRule extends Entity
     }
     /**
     * Gets the appId
+    * App identifier, if this traffic rule is triggered by an app.
     *
     * @return string The appId
     */
@@ -217,6 +230,7 @@ class VpnTrafficRule extends Entity
 
     /**
     * Sets the appId
+    * App identifier, if this traffic rule is triggered by an app.
     *
     * @param string $val The value of the appId
     *
@@ -230,13 +244,14 @@ class VpnTrafficRule extends Entity
 
     /**
     * Gets the appType
+    * App type, if this traffic rule is triggered by an app.
     *
     * @return VpnTrafficRuleAppType The appType
     */
     public function getAppType()
     {
         if (array_key_exists("appType", $this->_propDict)) {
-            if (is_a($this->_propDict["appType"], "Microsoft\Graph\Beta\Model\VpnTrafficRuleAppType")) {
+            if (is_a($this->_propDict["appType"], "Microsoft\Graph\Model\VpnTrafficRuleAppType")) {
                 return $this->_propDict["appType"];
             } else {
                 $this->_propDict["appType"] = new VpnTrafficRuleAppType($this->_propDict["appType"]);
@@ -248,6 +263,7 @@ class VpnTrafficRule extends Entity
 
     /**
     * Sets the appType
+    * App type, if this traffic rule is triggered by an app.
     *
     * @param VpnTrafficRuleAppType $val The value to assign to the appType
     *
@@ -261,13 +277,14 @@ class VpnTrafficRule extends Entity
 
     /**
     * Gets the routingPolicyType
+    * When app triggered, indicates whether to enable split tunneling along this route.
     *
     * @return VpnTrafficRuleRoutingPolicyType The routingPolicyType
     */
     public function getRoutingPolicyType()
     {
         if (array_key_exists("routingPolicyType", $this->_propDict)) {
-            if (is_a($this->_propDict["routingPolicyType"], "Microsoft\Graph\Beta\Model\VpnTrafficRuleRoutingPolicyType")) {
+            if (is_a($this->_propDict["routingPolicyType"], "Microsoft\Graph\Model\VpnTrafficRuleRoutingPolicyType")) {
                 return $this->_propDict["routingPolicyType"];
             } else {
                 $this->_propDict["routingPolicyType"] = new VpnTrafficRuleRoutingPolicyType($this->_propDict["routingPolicyType"]);
@@ -279,6 +296,7 @@ class VpnTrafficRule extends Entity
 
     /**
     * Sets the routingPolicyType
+    * When app triggered, indicates whether to enable split tunneling along this route.
     *
     * @param VpnTrafficRuleRoutingPolicyType $val The value to assign to the routingPolicyType
     *
@@ -291,6 +309,7 @@ class VpnTrafficRule extends Entity
     }
     /**
     * Gets the claims
+    * Claims associated with this traffic rule.
     *
     * @return string The claims
     */
@@ -305,6 +324,7 @@ class VpnTrafficRule extends Entity
 
     /**
     * Sets the claims
+    * Claims associated with this traffic rule.
     *
     * @param string $val The value of the claims
     *

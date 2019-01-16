@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * DeviceManagementSettings class
 *
@@ -27,6 +27,7 @@ class DeviceManagementSettings extends Entity
 {
     /**
     * Gets the deviceComplianceCheckinThresholdDays
+    * The number of days a device is allowed to go without checking in to remain compliant. Valid values 0 to 120
     *
     * @return int The deviceComplianceCheckinThresholdDays
     */
@@ -41,6 +42,7 @@ class DeviceManagementSettings extends Entity
 
     /**
     * Sets the deviceComplianceCheckinThresholdDays
+    * The number of days a device is allowed to go without checking in to remain compliant. Valid values 0 to 120
     *
     * @param int $val The value of the deviceComplianceCheckinThresholdDays
     *
@@ -53,6 +55,7 @@ class DeviceManagementSettings extends Entity
     }
     /**
     * Gets the isScheduledActionEnabled
+    * Is feature enabled or not for scheduled action for rule.
     *
     * @return bool The isScheduledActionEnabled
     */
@@ -67,6 +70,7 @@ class DeviceManagementSettings extends Entity
 
     /**
     * Sets the isScheduledActionEnabled
+    * Is feature enabled or not for scheduled action for rule.
     *
     * @param bool $val The value of the isScheduledActionEnabled
     *
@@ -79,6 +83,7 @@ class DeviceManagementSettings extends Entity
     }
     /**
     * Gets the secureByDefault
+    * Device should be noncompliant when there is no compliance policy targeted when this is true
     *
     * @return bool The secureByDefault
     */
@@ -93,6 +98,7 @@ class DeviceManagementSettings extends Entity
 
     /**
     * Sets the secureByDefault
+    * Device should be noncompliant when there is no compliance policy targeted when this is true
     *
     * @param bool $val The value of the secureByDefault
     *
@@ -105,6 +111,7 @@ class DeviceManagementSettings extends Entity
     }
     /**
     * Gets the enhancedJailBreak
+    * Is feature enabled or not for enhanced jailbreak detection.
     *
     * @return bool The enhancedJailBreak
     */
@@ -119,6 +126,7 @@ class DeviceManagementSettings extends Entity
 
     /**
     * Sets the enhancedJailBreak
+    * Is feature enabled or not for enhanced jailbreak detection.
     *
     * @param bool $val The value of the enhancedJailBreak
     *
@@ -131,6 +139,7 @@ class DeviceManagementSettings extends Entity
     }
     /**
     * Gets the deviceInactivityBeforeRetirementInDay
+    * When the device does not check in for specified number of days, the company data might be removed and the device will not be under management. Valid values 30 to 270
     *
     * @return int The deviceInactivityBeforeRetirementInDay
     */
@@ -145,6 +154,7 @@ class DeviceManagementSettings extends Entity
 
     /**
     * Sets the deviceInactivityBeforeRetirementInDay
+    * When the device does not check in for specified number of days, the company data might be removed and the device will not be under management. Valid values 30 to 270
     *
     * @param int $val The value of the deviceInactivityBeforeRetirementInDay
     *
@@ -153,6 +163,67 @@ class DeviceManagementSettings extends Entity
     public function setDeviceInactivityBeforeRetirementInDay($val)
     {
         $this->_propDict["deviceInactivityBeforeRetirementInDay"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the derivedCredentialProvider
+    * The Derived Credential Provider to use for this account.
+    *
+    * @return DerivedCredentialProviderType The derivedCredentialProvider
+    */
+    public function getDerivedCredentialProvider()
+    {
+        if (array_key_exists("derivedCredentialProvider", $this->_propDict)) {
+            if (is_a($this->_propDict["derivedCredentialProvider"], "Microsoft\Graph\Model\DerivedCredentialProviderType")) {
+                return $this->_propDict["derivedCredentialProvider"];
+            } else {
+                $this->_propDict["derivedCredentialProvider"] = new DerivedCredentialProviderType($this->_propDict["derivedCredentialProvider"]);
+                return $this->_propDict["derivedCredentialProvider"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the derivedCredentialProvider
+    * The Derived Credential Provider to use for this account.
+    *
+    * @param DerivedCredentialProviderType $val The value to assign to the derivedCredentialProvider
+    *
+    * @return DeviceManagementSettings The DeviceManagementSettings
+    */
+    public function setDerivedCredentialProvider($val)
+    {
+        $this->_propDict["derivedCredentialProvider"] = $val;
+         return $this;
+    }
+    /**
+    * Gets the derivedCredentialUrl
+    * The Derived Credential Provider self-service URI.
+    *
+    * @return string The derivedCredentialUrl
+    */
+    public function getDerivedCredentialUrl()
+    {
+        if (array_key_exists("derivedCredentialUrl", $this->_propDict)) {
+            return $this->_propDict["derivedCredentialUrl"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the derivedCredentialUrl
+    * The Derived Credential Provider self-service URI.
+    *
+    * @param string $val The value of the derivedCredentialUrl
+    *
+    * @return DeviceManagementSettings
+    */
+    public function setDerivedCredentialUrl($val)
+    {
+        $this->_propDict["derivedCredentialUrl"] = $val;
         return $this;
     }
 }

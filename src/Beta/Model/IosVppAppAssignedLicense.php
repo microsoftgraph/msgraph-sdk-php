@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * IosVppAppAssignedLicense class
@@ -28,6 +28,7 @@ class IosVppAppAssignedLicense extends Entity
 {
     /**
     * Gets the userEmailAddress
+    * The user email address.
     *
     * @return string The userEmailAddress
     */
@@ -42,6 +43,7 @@ class IosVppAppAssignedLicense extends Entity
     
     /**
     * Sets the userEmailAddress
+    * The user email address.
     *
     * @param string $val The userEmailAddress
     *
@@ -55,6 +57,7 @@ class IosVppAppAssignedLicense extends Entity
     
     /**
     * Gets the userId
+    * The user ID.
     *
     * @return string The userId
     */
@@ -69,6 +72,7 @@ class IosVppAppAssignedLicense extends Entity
     
     /**
     * Sets the userId
+    * The user ID.
     *
     * @param string $val The userId
     *
@@ -82,6 +86,7 @@ class IosVppAppAssignedLicense extends Entity
     
     /**
     * Gets the userName
+    * The user name.
     *
     * @return string The userName
     */
@@ -96,6 +101,7 @@ class IosVppAppAssignedLicense extends Entity
     
     /**
     * Sets the userName
+    * The user name.
     *
     * @param string $val The userName
     *
@@ -109,6 +115,7 @@ class IosVppAppAssignedLicense extends Entity
     
     /**
     * Gets the userPrincipalName
+    * The user principal name.
     *
     * @return string The userPrincipalName
     */
@@ -123,6 +130,7 @@ class IosVppAppAssignedLicense extends Entity
     
     /**
     * Sets the userPrincipalName
+    * The user principal name.
     *
     * @param string $val The userPrincipalName
     *

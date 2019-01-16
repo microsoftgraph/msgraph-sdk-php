@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * IosCompliancePolicy class
@@ -28,6 +28,7 @@ class IosCompliancePolicy extends DeviceCompliancePolicy
 {
     /**
     * Gets the passcodeBlockSimple
+    * Indicates whether or not to block simple passcodes.
     *
     * @return bool The passcodeBlockSimple
     */
@@ -42,6 +43,7 @@ class IosCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passcodeBlockSimple
+    * Indicates whether or not to block simple passcodes.
     *
     * @param bool $val The passcodeBlockSimple
     *
@@ -55,6 +57,7 @@ class IosCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the passcodeExpirationDays
+    * Number of days before the passcode expires. Valid values 1 to 65535
     *
     * @return int The passcodeExpirationDays
     */
@@ -69,6 +72,7 @@ class IosCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passcodeExpirationDays
+    * Number of days before the passcode expires. Valid values 1 to 65535
     *
     * @param int $val The passcodeExpirationDays
     *
@@ -82,6 +86,7 @@ class IosCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the passcodeMinimumLength
+    * Minimum length of passcode. Valid values 4 to 14
     *
     * @return int The passcodeMinimumLength
     */
@@ -96,6 +101,7 @@ class IosCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passcodeMinimumLength
+    * Minimum length of passcode. Valid values 4 to 14
     *
     * @param int $val The passcodeMinimumLength
     *
@@ -109,6 +115,7 @@ class IosCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the passcodeMinutesOfInactivityBeforeLock
+    * Minutes of inactivity before a passcode is required.
     *
     * @return int The passcodeMinutesOfInactivityBeforeLock
     */
@@ -123,6 +130,7 @@ class IosCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passcodeMinutesOfInactivityBeforeLock
+    * Minutes of inactivity before a passcode is required.
     *
     * @param int $val The passcodeMinutesOfInactivityBeforeLock
     *
@@ -135,7 +143,37 @@ class IosCompliancePolicy extends DeviceCompliancePolicy
     }
     
     /**
+    * Gets the passcodeMinutesOfInactivityBeforeScreenTimeout
+    * Minutes of inactivity before the screen times out.
+    *
+    * @return int The passcodeMinutesOfInactivityBeforeScreenTimeout
+    */
+    public function getPasscodeMinutesOfInactivityBeforeScreenTimeout()
+    {
+        if (array_key_exists("passcodeMinutesOfInactivityBeforeScreenTimeout", $this->_propDict)) {
+            return $this->_propDict["passcodeMinutesOfInactivityBeforeScreenTimeout"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the passcodeMinutesOfInactivityBeforeScreenTimeout
+    * Minutes of inactivity before the screen times out.
+    *
+    * @param int $val The passcodeMinutesOfInactivityBeforeScreenTimeout
+    *
+    * @return IosCompliancePolicy
+    */
+    public function setPasscodeMinutesOfInactivityBeforeScreenTimeout($val)
+    {
+        $this->_propDict["passcodeMinutesOfInactivityBeforeScreenTimeout"] = intval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the passcodePreviousPasscodeBlockCount
+    * Number of previous passcodes to block. Valid values 1 to 24
     *
     * @return int The passcodePreviousPasscodeBlockCount
     */
@@ -150,6 +188,7 @@ class IosCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passcodePreviousPasscodeBlockCount
+    * Number of previous passcodes to block. Valid values 1 to 24
     *
     * @param int $val The passcodePreviousPasscodeBlockCount
     *
@@ -163,6 +202,7 @@ class IosCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the passcodeMinimumCharacterSetCount
+    * The number of character sets required in the password.
     *
     * @return int The passcodeMinimumCharacterSetCount
     */
@@ -177,6 +217,7 @@ class IosCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passcodeMinimumCharacterSetCount
+    * The number of character sets required in the password.
     *
     * @param int $val The passcodeMinimumCharacterSetCount
     *
@@ -190,13 +231,14 @@ class IosCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the passcodeRequiredType
+    * The required passcode type. Possible values are: deviceDefault, alphanumeric, numeric.
     *
     * @return RequiredPasswordType The passcodeRequiredType
     */
     public function getPasscodeRequiredType()
     {
         if (array_key_exists("passcodeRequiredType", $this->_propDict)) {
-            if (is_a($this->_propDict["passcodeRequiredType"], "Microsoft\Graph\Beta\Model\RequiredPasswordType")) {
+            if (is_a($this->_propDict["passcodeRequiredType"], "Microsoft\Graph\Model\RequiredPasswordType")) {
                 return $this->_propDict["passcodeRequiredType"];
             } else {
                 $this->_propDict["passcodeRequiredType"] = new RequiredPasswordType($this->_propDict["passcodeRequiredType"]);
@@ -208,6 +250,7 @@ class IosCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passcodeRequiredType
+    * The required passcode type. Possible values are: deviceDefault, alphanumeric, numeric.
     *
     * @param RequiredPasswordType $val The passcodeRequiredType
     *
@@ -221,6 +264,7 @@ class IosCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the passcodeRequired
+    * Indicates whether or not to require a passcode.
     *
     * @return bool The passcodeRequired
     */
@@ -235,6 +279,7 @@ class IosCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passcodeRequired
+    * Indicates whether or not to require a passcode.
     *
     * @param bool $val The passcodeRequired
     *
@@ -248,6 +293,7 @@ class IosCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the osMinimumVersion
+    * Minimum IOS version.
     *
     * @return string The osMinimumVersion
     */
@@ -262,6 +308,7 @@ class IosCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the osMinimumVersion
+    * Minimum IOS version.
     *
     * @param string $val The osMinimumVersion
     *
@@ -275,6 +322,7 @@ class IosCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the osMaximumVersion
+    * Maximum IOS version.
     *
     * @return string The osMaximumVersion
     */
@@ -289,6 +337,7 @@ class IosCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the osMaximumVersion
+    * Maximum IOS version.
     *
     * @param string $val The osMaximumVersion
     *
@@ -301,7 +350,66 @@ class IosCompliancePolicy extends DeviceCompliancePolicy
     }
     
     /**
+    * Gets the osMinimumBuildVersion
+    * Minimum IOS build version.
+    *
+    * @return string The osMinimumBuildVersion
+    */
+    public function getOsMinimumBuildVersion()
+    {
+        if (array_key_exists("osMinimumBuildVersion", $this->_propDict)) {
+            return $this->_propDict["osMinimumBuildVersion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the osMinimumBuildVersion
+    * Minimum IOS build version.
+    *
+    * @param string $val The osMinimumBuildVersion
+    *
+    * @return IosCompliancePolicy
+    */
+    public function setOsMinimumBuildVersion($val)
+    {
+        $this->_propDict["osMinimumBuildVersion"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the osMaximumBuildVersion
+    * Maximum IOS build version.
+    *
+    * @return string The osMaximumBuildVersion
+    */
+    public function getOsMaximumBuildVersion()
+    {
+        if (array_key_exists("osMaximumBuildVersion", $this->_propDict)) {
+            return $this->_propDict["osMaximumBuildVersion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the osMaximumBuildVersion
+    * Maximum IOS build version.
+    *
+    * @param string $val The osMaximumBuildVersion
+    *
+    * @return IosCompliancePolicy
+    */
+    public function setOsMaximumBuildVersion($val)
+    {
+        $this->_propDict["osMaximumBuildVersion"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the securityBlockJailbrokenDevices
+    * Devices must not be jailbroken or rooted.
     *
     * @return bool The securityBlockJailbrokenDevices
     */
@@ -316,6 +424,7 @@ class IosCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the securityBlockJailbrokenDevices
+    * Devices must not be jailbroken or rooted.
     *
     * @param bool $val The securityBlockJailbrokenDevices
     *
@@ -329,6 +438,7 @@ class IosCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the deviceThreatProtectionEnabled
+    * Require that devices have enabled device threat protection .
     *
     * @return bool The deviceThreatProtectionEnabled
     */
@@ -343,6 +453,7 @@ class IosCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the deviceThreatProtectionEnabled
+    * Require that devices have enabled device threat protection .
     *
     * @param bool $val The deviceThreatProtectionEnabled
     *
@@ -356,13 +467,14 @@ class IosCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the deviceThreatProtectionRequiredSecurityLevel
+    * Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
     *
     * @return DeviceThreatProtectionLevel The deviceThreatProtectionRequiredSecurityLevel
     */
     public function getDeviceThreatProtectionRequiredSecurityLevel()
     {
         if (array_key_exists("deviceThreatProtectionRequiredSecurityLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceThreatProtectionRequiredSecurityLevel"], "Microsoft\Graph\Beta\Model\DeviceThreatProtectionLevel")) {
+            if (is_a($this->_propDict["deviceThreatProtectionRequiredSecurityLevel"], "Microsoft\Graph\Model\DeviceThreatProtectionLevel")) {
                 return $this->_propDict["deviceThreatProtectionRequiredSecurityLevel"];
             } else {
                 $this->_propDict["deviceThreatProtectionRequiredSecurityLevel"] = new DeviceThreatProtectionLevel($this->_propDict["deviceThreatProtectionRequiredSecurityLevel"]);
@@ -374,6 +486,7 @@ class IosCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the deviceThreatProtectionRequiredSecurityLevel
+    * Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
     *
     * @param DeviceThreatProtectionLevel $val The deviceThreatProtectionRequiredSecurityLevel
     *
@@ -387,6 +500,7 @@ class IosCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the managedEmailProfileRequired
+    * Indicates whether or not to require a managed email profile.
     *
     * @return bool The managedEmailProfileRequired
     */
@@ -401,6 +515,7 @@ class IosCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the managedEmailProfileRequired
+    * Indicates whether or not to require a managed email profile.
     *
     * @param bool $val The managedEmailProfileRequired
     *
@@ -415,6 +530,7 @@ class IosCompliancePolicy extends DeviceCompliancePolicy
 
      /** 
      * Gets the restrictedApps
+    * Require the device to not have the specified apps installed. This collection can contain a maximum of 100 elements.
      *
      * @return array The restrictedApps
      */
@@ -429,6 +545,7 @@ class IosCompliancePolicy extends DeviceCompliancePolicy
     
     /** 
     * Sets the restrictedApps
+    * Require the device to not have the specified apps installed. This collection can contain a maximum of 100 elements.
     *
     * @param AppListItem $val The restrictedApps
     *

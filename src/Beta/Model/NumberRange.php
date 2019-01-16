@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * NumberRange class
 *
@@ -27,6 +27,7 @@ class NumberRange extends Entity
 {
     /**
     * Gets the lowerNumber
+    * Lower number.
     *
     * @return int The lowerNumber
     */
@@ -41,6 +42,7 @@ class NumberRange extends Entity
 
     /**
     * Sets the lowerNumber
+    * Lower number.
     *
     * @param int $val The value of the lowerNumber
     *
@@ -53,6 +55,7 @@ class NumberRange extends Entity
     }
     /**
     * Gets the upperNumber
+    * Upper number.
     *
     * @return int The upperNumber
     */
@@ -67,6 +70,7 @@ class NumberRange extends Entity
 
     /**
     * Sets the upperNumber
+    * Upper number.
     *
     * @param int $val The value of the upperNumber
     *

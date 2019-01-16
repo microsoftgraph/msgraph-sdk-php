@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * UserPFXCertificate class
@@ -28,6 +28,7 @@ class UserPFXCertificate extends Entity
 {
     /**
     * Gets the thumbprint
+    * SHA-1 thumbprint of the PFX certificate.
     *
     * @return string The thumbprint
     */
@@ -42,6 +43,7 @@ class UserPFXCertificate extends Entity
     
     /**
     * Sets the thumbprint
+    * SHA-1 thumbprint of the PFX certificate.
     *
     * @param string $val The thumbprint
     *
@@ -55,13 +57,14 @@ class UserPFXCertificate extends Entity
     
     /**
     * Gets the intendedPurpose
+    * Certificate's intended purpose from the point-of-view of deployment.
     *
     * @return UserPfxIntendedPurpose The intendedPurpose
     */
     public function getIntendedPurpose()
     {
         if (array_key_exists("intendedPurpose", $this->_propDict)) {
-            if (is_a($this->_propDict["intendedPurpose"], "Microsoft\Graph\Beta\Model\UserPfxIntendedPurpose")) {
+            if (is_a($this->_propDict["intendedPurpose"], "Microsoft\Graph\Model\UserPfxIntendedPurpose")) {
                 return $this->_propDict["intendedPurpose"];
             } else {
                 $this->_propDict["intendedPurpose"] = new UserPfxIntendedPurpose($this->_propDict["intendedPurpose"]);
@@ -73,6 +76,7 @@ class UserPFXCertificate extends Entity
     
     /**
     * Sets the intendedPurpose
+    * Certificate's intended purpose from the point-of-view of deployment.
     *
     * @param UserPfxIntendedPurpose $val The intendedPurpose
     *
@@ -86,6 +90,7 @@ class UserPFXCertificate extends Entity
     
     /**
     * Gets the userPrincipalName
+    * User Principal Name of the PFX certificate.
     *
     * @return string The userPrincipalName
     */
@@ -100,6 +105,7 @@ class UserPFXCertificate extends Entity
     
     /**
     * Sets the userPrincipalName
+    * User Principal Name of the PFX certificate.
     *
     * @param string $val The userPrincipalName
     *
@@ -113,6 +119,7 @@ class UserPFXCertificate extends Entity
     
     /**
     * Gets the startDateTime
+    * Certificate's validity start date/time.
     *
     * @return \DateTime The startDateTime
     */
@@ -131,6 +138,7 @@ class UserPFXCertificate extends Entity
     
     /**
     * Sets the startDateTime
+    * Certificate's validity start date/time.
     *
     * @param \DateTime $val The startDateTime
     *
@@ -144,6 +152,7 @@ class UserPFXCertificate extends Entity
     
     /**
     * Gets the expirationDateTime
+    * Certificate's validity expiration date/time.
     *
     * @return \DateTime The expirationDateTime
     */
@@ -162,6 +171,7 @@ class UserPFXCertificate extends Entity
     
     /**
     * Sets the expirationDateTime
+    * Certificate's validity expiration date/time.
     *
     * @param \DateTime $val The expirationDateTime
     *
@@ -175,6 +185,7 @@ class UserPFXCertificate extends Entity
     
     /**
     * Gets the providerName
+    * Crypto provider used to encrypt this blob.
     *
     * @return string The providerName
     */
@@ -189,6 +200,7 @@ class UserPFXCertificate extends Entity
     
     /**
     * Sets the providerName
+    * Crypto provider used to encrypt this blob.
     *
     * @param string $val The providerName
     *
@@ -202,6 +214,7 @@ class UserPFXCertificate extends Entity
     
     /**
     * Gets the keyName
+    * Name of the key (within the provider) used to encrypt the blob.
     *
     * @return string The keyName
     */
@@ -216,6 +229,7 @@ class UserPFXCertificate extends Entity
     
     /**
     * Sets the keyName
+    * Name of the key (within the provider) used to encrypt the blob.
     *
     * @param string $val The keyName
     *
@@ -229,13 +243,14 @@ class UserPFXCertificate extends Entity
     
     /**
     * Gets the paddingScheme
+    * Padding scheme used by the provider during encryption/decryption.
     *
     * @return UserPfxPaddingScheme The paddingScheme
     */
     public function getPaddingScheme()
     {
         if (array_key_exists("paddingScheme", $this->_propDict)) {
-            if (is_a($this->_propDict["paddingScheme"], "Microsoft\Graph\Beta\Model\UserPfxPaddingScheme")) {
+            if (is_a($this->_propDict["paddingScheme"], "Microsoft\Graph\Model\UserPfxPaddingScheme")) {
                 return $this->_propDict["paddingScheme"];
             } else {
                 $this->_propDict["paddingScheme"] = new UserPfxPaddingScheme($this->_propDict["paddingScheme"]);
@@ -247,6 +262,7 @@ class UserPFXCertificate extends Entity
     
     /**
     * Sets the paddingScheme
+    * Padding scheme used by the provider during encryption/decryption.
     *
     * @param UserPfxPaddingScheme $val The paddingScheme
     *
@@ -260,6 +276,7 @@ class UserPFXCertificate extends Entity
     
     /**
     * Gets the encryptedPfxBlob
+    * Encrypted PFX blob.
     *
     * @return \GuzzleHttp\Psr7\Stream The encryptedPfxBlob
     */
@@ -278,6 +295,7 @@ class UserPFXCertificate extends Entity
     
     /**
     * Sets the encryptedPfxBlob
+    * Encrypted PFX blob.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The encryptedPfxBlob
     *
@@ -291,6 +309,7 @@ class UserPFXCertificate extends Entity
     
     /**
     * Gets the encryptedPfxPassword
+    * Encrypted PFX password.
     *
     * @return string The encryptedPfxPassword
     */
@@ -305,6 +324,7 @@ class UserPFXCertificate extends Entity
     
     /**
     * Sets the encryptedPfxPassword
+    * Encrypted PFX password.
     *
     * @param string $val The encryptedPfxPassword
     *
@@ -318,6 +338,7 @@ class UserPFXCertificate extends Entity
     
     /**
     * Gets the createdDateTime
+    * Date/time when this PFX certificate was imported.
     *
     * @return \DateTime The createdDateTime
     */
@@ -336,6 +357,7 @@ class UserPFXCertificate extends Entity
     
     /**
     * Sets the createdDateTime
+    * Date/time when this PFX certificate was imported.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -349,6 +371,7 @@ class UserPFXCertificate extends Entity
     
     /**
     * Gets the lastModifiedDateTime
+    * Date/time when this PFX certificate was last modified.
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -367,6 +390,7 @@ class UserPFXCertificate extends Entity
     
     /**
     * Sets the lastModifiedDateTime
+    * Date/time when this PFX certificate was last modified.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *

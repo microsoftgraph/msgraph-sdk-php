@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * EducationStudent class
 *
@@ -27,6 +27,7 @@ class EducationStudent extends Entity
 {
     /**
     * Gets the graduationYear
+    * Year the student is graduating from the school.
     *
     * @return string The graduationYear
     */
@@ -41,6 +42,7 @@ class EducationStudent extends Entity
 
     /**
     * Sets the graduationYear
+    * Year the student is graduating from the school.
     *
     * @param string $val The value of the graduationYear
     *
@@ -53,6 +55,7 @@ class EducationStudent extends Entity
     }
     /**
     * Gets the grade
+    * Current grade level of the student.
     *
     * @return string The grade
     */
@@ -67,6 +70,7 @@ class EducationStudent extends Entity
 
     /**
     * Sets the grade
+    * Current grade level of the student.
     *
     * @param string $val The value of the grade
     *
@@ -80,13 +84,14 @@ class EducationStudent extends Entity
 
     /**
     * Gets the birthDate
+    * Birth date of the student.
     *
     * @return \DateTime The birthDate
     */
     public function getBirthDate()
     {
         if (array_key_exists("birthDate", $this->_propDict)) {
-            if (is_a($this->_propDict["birthDate"], "Microsoft\Graph\Beta\Model\\DateTime")) {
+            if (is_a($this->_propDict["birthDate"], "Microsoft\Graph\Model\\DateTime")) {
                 return $this->_propDict["birthDate"];
             } else {
                 $this->_propDict["birthDate"] = new \DateTime($this->_propDict["birthDate"]);
@@ -98,6 +103,7 @@ class EducationStudent extends Entity
 
     /**
     * Sets the birthDate
+    * Birth date of the student.
     *
     * @param \DateTime $val The value to assign to the birthDate
     *
@@ -111,13 +117,14 @@ class EducationStudent extends Entity
 
     /**
     * Gets the gender
+    * The possible values are: female, male, other, unknownFutureValue.
     *
     * @return EducationGender The gender
     */
     public function getGender()
     {
         if (array_key_exists("gender", $this->_propDict)) {
-            if (is_a($this->_propDict["gender"], "Microsoft\Graph\Beta\Model\EducationGender")) {
+            if (is_a($this->_propDict["gender"], "Microsoft\Graph\Model\EducationGender")) {
                 return $this->_propDict["gender"];
             } else {
                 $this->_propDict["gender"] = new EducationGender($this->_propDict["gender"]);
@@ -129,6 +136,7 @@ class EducationStudent extends Entity
 
     /**
     * Sets the gender
+    * The possible values are: female, male, other, unknownFutureValue.
     *
     * @param EducationGender $val The value to assign to the gender
     *
@@ -141,6 +149,7 @@ class EducationStudent extends Entity
     }
     /**
     * Gets the studentNumber
+    * Student Number.
     *
     * @return string The studentNumber
     */
@@ -155,6 +164,7 @@ class EducationStudent extends Entity
 
     /**
     * Sets the studentNumber
+    * Student Number.
     *
     * @param string $val The value of the studentNumber
     *
@@ -167,6 +177,7 @@ class EducationStudent extends Entity
     }
     /**
     * Gets the externalId
+    * ID of the student in the source system.
     *
     * @return string The externalId
     */
@@ -181,6 +192,7 @@ class EducationStudent extends Entity
 
     /**
     * Sets the externalId
+    * ID of the student in the source system.
     *
     * @param string $val The value of the externalId
     *

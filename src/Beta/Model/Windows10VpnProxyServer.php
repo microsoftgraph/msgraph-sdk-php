@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * Windows10VpnProxyServer class
 *
@@ -27,6 +27,7 @@ class Windows10VpnProxyServer extends VpnProxyServer
 {
     /**
     * Gets the bypassProxyServerForLocalAddress
+    * Bypass proxy server for local address.
     *
     * @return bool The bypassProxyServerForLocalAddress
     */
@@ -41,6 +42,7 @@ class Windows10VpnProxyServer extends VpnProxyServer
 
     /**
     * Sets the bypassProxyServerForLocalAddress
+    * Bypass proxy server for local address.
     *
     * @param bool $val The value of the bypassProxyServerForLocalAddress
     *

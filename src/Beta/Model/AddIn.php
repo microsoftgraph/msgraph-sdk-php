@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * AddIn class
 *
@@ -86,7 +86,7 @@ class AddIn extends Entity
     public function getAddInProperties()
     {
         if (array_key_exists("properties", $this->_propDict)) {
-            if (is_a($this->_propDict["properties"], "Microsoft\Graph\Beta\Model\KeyValue")) {
+            if (is_a($this->_propDict["properties"], "Microsoft\Graph\Model\KeyValue")) {
                 return $this->_propDict["properties"];
             } else {
                 $this->_propDict["properties"] = new KeyValue($this->_propDict["properties"]);

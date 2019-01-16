@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * UnsupportedDeviceConfiguration class
@@ -28,6 +28,7 @@ class UnsupportedDeviceConfiguration extends DeviceConfiguration
 {
     /**
     * Gets the originalEntityTypeName
+    * The type of entity that would be returned otherwise.
     *
     * @return string The originalEntityTypeName
     */
@@ -42,6 +43,7 @@ class UnsupportedDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the originalEntityTypeName
+    * The type of entity that would be returned otherwise.
     *
     * @param string $val The originalEntityTypeName
     *
@@ -56,6 +58,7 @@ class UnsupportedDeviceConfiguration extends DeviceConfiguration
 
      /** 
      * Gets the details
+    * Details describing why the entity is unsupported. This collection can contain a maximum of 1000 elements.
      *
      * @return array The details
      */
@@ -70,6 +73,7 @@ class UnsupportedDeviceConfiguration extends DeviceConfiguration
     
     /** 
     * Sets the details
+    * Details describing why the entity is unsupported. This collection can contain a maximum of 1000 elements.
     *
     * @param UnsupportedDeviceConfigurationDetail $val The details
     *

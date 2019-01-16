@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * BookingBusiness class
@@ -61,7 +61,7 @@ class BookingBusiness extends BookingNamedEntity
     public function getAddress()
     {
         if (array_key_exists("address", $this->_propDict)) {
-            if (is_a($this->_propDict["address"], "Microsoft\Graph\Beta\Model\PhysicalAddress")) {
+            if (is_a($this->_propDict["address"], "Microsoft\Graph\Model\PhysicalAddress")) {
                 return $this->_propDict["address"];
             } else {
                 $this->_propDict["address"] = new PhysicalAddress($this->_propDict["address"]);
@@ -230,7 +230,7 @@ class BookingBusiness extends BookingNamedEntity
     public function getSchedulingPolicy()
     {
         if (array_key_exists("schedulingPolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["schedulingPolicy"], "Microsoft\Graph\Beta\Model\BookingSchedulingPolicy")) {
+            if (is_a($this->_propDict["schedulingPolicy"], "Microsoft\Graph\Model\BookingSchedulingPolicy")) {
                 return $this->_propDict["schedulingPolicy"];
             } else {
                 $this->_propDict["schedulingPolicy"] = new BookingSchedulingPolicy($this->_propDict["schedulingPolicy"]);
@@ -310,6 +310,7 @@ class BookingBusiness extends BookingNamedEntity
 
      /** 
      * Gets the appointments
+    * All appointments in this business.
      *
      * @return array The appointments
      */
@@ -324,6 +325,7 @@ class BookingBusiness extends BookingNamedEntity
     
     /** 
     * Sets the appointments
+    * All appointments in this business.
     *
     * @param BookingAppointment $val The appointments
     *
@@ -338,6 +340,7 @@ class BookingBusiness extends BookingNamedEntity
 
      /** 
      * Gets the calendarView
+    * A calendar view of appointments in this business.
      *
      * @return array The calendarView
      */
@@ -352,6 +355,7 @@ class BookingBusiness extends BookingNamedEntity
     
     /** 
     * Sets the calendarView
+    * A calendar view of appointments in this business.
     *
     * @param BookingAppointment $val The calendarView
     *
@@ -366,6 +370,7 @@ class BookingBusiness extends BookingNamedEntity
 
      /** 
      * Gets the customers
+    * All customers of this business.
      *
      * @return array The customers
      */
@@ -380,6 +385,7 @@ class BookingBusiness extends BookingNamedEntity
     
     /** 
     * Sets the customers
+    * All customers of this business.
     *
     * @param BookingCustomer $val The customers
     *
@@ -394,6 +400,7 @@ class BookingBusiness extends BookingNamedEntity
 
      /** 
      * Gets the services
+    * All services offered by this business.
      *
      * @return array The services
      */
@@ -408,6 +415,7 @@ class BookingBusiness extends BookingNamedEntity
     
     /** 
     * Sets the services
+    * All services offered by this business.
     *
     * @param BookingService $val The services
     *
@@ -422,6 +430,7 @@ class BookingBusiness extends BookingNamedEntity
 
      /** 
      * Gets the staffMembers
+    * All staff members that provides services in this business.
      *
      * @return array The staffMembers
      */
@@ -436,6 +445,7 @@ class BookingBusiness extends BookingNamedEntity
     
     /** 
     * Sets the staffMembers
+    * All staff members that provides services in this business.
     *
     * @param BookingStaffMember $val The staffMembers
     *

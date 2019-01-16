@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * SymantecCodeSigningCertificate class
@@ -28,6 +28,7 @@ class SymantecCodeSigningCertificate extends Entity
 {
     /**
     * Gets the content
+    * The Windows Symantec Code-Signing Certificate in the raw data format.
     *
     * @return \GuzzleHttp\Psr7\Stream The content
     */
@@ -46,6 +47,7 @@ class SymantecCodeSigningCertificate extends Entity
     
     /**
     * Sets the content
+    * The Windows Symantec Code-Signing Certificate in the raw data format.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The content
     *
@@ -59,13 +61,14 @@ class SymantecCodeSigningCertificate extends Entity
     
     /**
     * Gets the status
+    * The Cert Status Provisioned or not Provisioned.
     *
     * @return CertificateStatus The status
     */
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Microsoft\Graph\Beta\Model\CertificateStatus")) {
+            if (is_a($this->_propDict["status"], "Microsoft\Graph\Model\CertificateStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new CertificateStatus($this->_propDict["status"]);
@@ -77,6 +80,7 @@ class SymantecCodeSigningCertificate extends Entity
     
     /**
     * Sets the status
+    * The Cert Status Provisioned or not Provisioned.
     *
     * @param CertificateStatus $val The status
     *
@@ -90,6 +94,7 @@ class SymantecCodeSigningCertificate extends Entity
     
     /**
     * Gets the password
+    * The Password required for .pfx file.
     *
     * @return string The password
     */
@@ -104,6 +109,7 @@ class SymantecCodeSigningCertificate extends Entity
     
     /**
     * Sets the password
+    * The Password required for .pfx file.
     *
     * @param string $val The password
     *
@@ -117,6 +123,7 @@ class SymantecCodeSigningCertificate extends Entity
     
     /**
     * Gets the subjectName
+    * The Subject Name for the cert.
     *
     * @return string The subjectName
     */
@@ -131,6 +138,7 @@ class SymantecCodeSigningCertificate extends Entity
     
     /**
     * Sets the subjectName
+    * The Subject Name for the cert.
     *
     * @param string $val The subjectName
     *
@@ -144,6 +152,7 @@ class SymantecCodeSigningCertificate extends Entity
     
     /**
     * Gets the subject
+    * The Subject value for the cert.
     *
     * @return string The subject
     */
@@ -158,6 +167,7 @@ class SymantecCodeSigningCertificate extends Entity
     
     /**
     * Sets the subject
+    * The Subject value for the cert.
     *
     * @param string $val The subject
     *
@@ -171,6 +181,7 @@ class SymantecCodeSigningCertificate extends Entity
     
     /**
     * Gets the issuerName
+    * The Issuer Name for the cert.
     *
     * @return string The issuerName
     */
@@ -185,6 +196,7 @@ class SymantecCodeSigningCertificate extends Entity
     
     /**
     * Sets the issuerName
+    * The Issuer Name for the cert.
     *
     * @param string $val The issuerName
     *
@@ -198,6 +210,7 @@ class SymantecCodeSigningCertificate extends Entity
     
     /**
     * Gets the issuer
+    * The Issuer value for the cert.
     *
     * @return string The issuer
     */
@@ -212,6 +225,7 @@ class SymantecCodeSigningCertificate extends Entity
     
     /**
     * Sets the issuer
+    * The Issuer value for the cert.
     *
     * @param string $val The issuer
     *
@@ -225,6 +239,7 @@ class SymantecCodeSigningCertificate extends Entity
     
     /**
     * Gets the expirationDateTime
+    * The Cert Expiration Date.
     *
     * @return \DateTime The expirationDateTime
     */
@@ -243,6 +258,7 @@ class SymantecCodeSigningCertificate extends Entity
     
     /**
     * Sets the expirationDateTime
+    * The Cert Expiration Date.
     *
     * @param \DateTime $val The expirationDateTime
     *
@@ -256,6 +272,7 @@ class SymantecCodeSigningCertificate extends Entity
     
     /**
     * Gets the uploadDateTime
+    * The Type of the CodeSigning Cert as Symantec Cert.
     *
     * @return \DateTime The uploadDateTime
     */
@@ -274,6 +291,7 @@ class SymantecCodeSigningCertificate extends Entity
     
     /**
     * Sets the uploadDateTime
+    * The Type of the CodeSigning Cert as Symantec Cert.
     *
     * @param \DateTime $val The uploadDateTime
     *

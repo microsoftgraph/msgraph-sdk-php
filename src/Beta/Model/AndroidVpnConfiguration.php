@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * AndroidVpnConfiguration class
@@ -28,6 +28,7 @@ class AndroidVpnConfiguration extends DeviceConfiguration
 {
     /**
     * Gets the connectionName
+    * Connection name displayed to the user.
     *
     * @return string The connectionName
     */
@@ -42,6 +43,7 @@ class AndroidVpnConfiguration extends DeviceConfiguration
     
     /**
     * Sets the connectionName
+    * Connection name displayed to the user.
     *
     * @param string $val The connectionName
     *
@@ -55,13 +57,14 @@ class AndroidVpnConfiguration extends DeviceConfiguration
     
     /**
     * Gets the connectionType
+    * Connection type.
     *
     * @return AndroidVpnConnectionType The connectionType
     */
     public function getConnectionType()
     {
         if (array_key_exists("connectionType", $this->_propDict)) {
-            if (is_a($this->_propDict["connectionType"], "Microsoft\Graph\Beta\Model\AndroidVpnConnectionType")) {
+            if (is_a($this->_propDict["connectionType"], "Microsoft\Graph\Model\AndroidVpnConnectionType")) {
                 return $this->_propDict["connectionType"];
             } else {
                 $this->_propDict["connectionType"] = new AndroidVpnConnectionType($this->_propDict["connectionType"]);
@@ -73,6 +76,7 @@ class AndroidVpnConfiguration extends DeviceConfiguration
     
     /**
     * Sets the connectionType
+    * Connection type.
     *
     * @param AndroidVpnConnectionType $val The connectionType
     *
@@ -86,6 +90,7 @@ class AndroidVpnConfiguration extends DeviceConfiguration
     
     /**
     * Gets the role
+    * Role when connection type is set to Pulse Secure.
     *
     * @return string The role
     */
@@ -100,6 +105,7 @@ class AndroidVpnConfiguration extends DeviceConfiguration
     
     /**
     * Sets the role
+    * Role when connection type is set to Pulse Secure.
     *
     * @param string $val The role
     *
@@ -113,6 +119,7 @@ class AndroidVpnConfiguration extends DeviceConfiguration
     
     /**
     * Gets the realm
+    * Realm when connection type is set to Pulse Secure.
     *
     * @return string The realm
     */
@@ -127,6 +134,7 @@ class AndroidVpnConfiguration extends DeviceConfiguration
     
     /**
     * Sets the realm
+    * Realm when connection type is set to Pulse Secure.
     *
     * @param string $val The realm
     *
@@ -141,6 +149,7 @@ class AndroidVpnConfiguration extends DeviceConfiguration
 
      /** 
      * Gets the servers
+    * List of VPN Servers on the network. Make sure end users can access these network locations. This collection can contain a maximum of 500 elements.
      *
      * @return array The servers
      */
@@ -155,6 +164,7 @@ class AndroidVpnConfiguration extends DeviceConfiguration
     
     /** 
     * Sets the servers
+    * List of VPN Servers on the network. Make sure end users can access these network locations. This collection can contain a maximum of 500 elements.
     *
     * @param VpnServer $val The servers
     *
@@ -168,6 +178,7 @@ class AndroidVpnConfiguration extends DeviceConfiguration
     
     /**
     * Gets the fingerprint
+    * Fingerprint is a string that will be used to verify the VPN server can be trusted, which is only applicable when connection type is Check Point Capsule VPN.
     *
     * @return string The fingerprint
     */
@@ -182,6 +193,7 @@ class AndroidVpnConfiguration extends DeviceConfiguration
     
     /**
     * Sets the fingerprint
+    * Fingerprint is a string that will be used to verify the VPN server can be trusted, which is only applicable when connection type is Check Point Capsule VPN.
     *
     * @param string $val The fingerprint
     *
@@ -196,6 +208,7 @@ class AndroidVpnConfiguration extends DeviceConfiguration
 
      /** 
      * Gets the customData
+    * Custom data when connection type is set to Citrix. This collection can contain a maximum of 25 elements.
      *
      * @return array The customData
      */
@@ -210,6 +223,7 @@ class AndroidVpnConfiguration extends DeviceConfiguration
     
     /** 
     * Sets the customData
+    * Custom data when connection type is set to Citrix. This collection can contain a maximum of 25 elements.
     *
     * @param KeyValue $val The customData
     *
@@ -224,6 +238,7 @@ class AndroidVpnConfiguration extends DeviceConfiguration
 
      /** 
      * Gets the customKeyValueData
+    * Custom data when connection type is set to Citrix. This collection can contain a maximum of 25 elements.
      *
      * @return array The customKeyValueData
      */
@@ -238,6 +253,7 @@ class AndroidVpnConfiguration extends DeviceConfiguration
     
     /** 
     * Sets the customKeyValueData
+    * Custom data when connection type is set to Citrix. This collection can contain a maximum of 25 elements.
     *
     * @param KeyValuePair $val The customKeyValueData
     *
@@ -251,13 +267,14 @@ class AndroidVpnConfiguration extends DeviceConfiguration
     
     /**
     * Gets the authenticationMethod
+    * Authentication method.
     *
     * @return VpnAuthenticationMethod The authenticationMethod
     */
     public function getAuthenticationMethod()
     {
         if (array_key_exists("authenticationMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["authenticationMethod"], "Microsoft\Graph\Beta\Model\VpnAuthenticationMethod")) {
+            if (is_a($this->_propDict["authenticationMethod"], "Microsoft\Graph\Model\VpnAuthenticationMethod")) {
                 return $this->_propDict["authenticationMethod"];
             } else {
                 $this->_propDict["authenticationMethod"] = new VpnAuthenticationMethod($this->_propDict["authenticationMethod"]);
@@ -269,6 +286,7 @@ class AndroidVpnConfiguration extends DeviceConfiguration
     
     /**
     * Sets the authenticationMethod
+    * Authentication method.
     *
     * @param VpnAuthenticationMethod $val The authenticationMethod
     *
@@ -282,13 +300,14 @@ class AndroidVpnConfiguration extends DeviceConfiguration
     
     /**
     * Gets the identityCertificate
+    * Identity certificate for client authentication when authentication method is certificate.
     *
     * @return AndroidCertificateProfileBase The identityCertificate
     */
     public function getIdentityCertificate()
     {
         if (array_key_exists("identityCertificate", $this->_propDict)) {
-            if (is_a($this->_propDict["identityCertificate"], "Microsoft\Graph\Beta\Model\AndroidCertificateProfileBase")) {
+            if (is_a($this->_propDict["identityCertificate"], "Microsoft\Graph\Model\AndroidCertificateProfileBase")) {
                 return $this->_propDict["identityCertificate"];
             } else {
                 $this->_propDict["identityCertificate"] = new AndroidCertificateProfileBase($this->_propDict["identityCertificate"]);
@@ -300,6 +319,7 @@ class AndroidVpnConfiguration extends DeviceConfiguration
     
     /**
     * Sets the identityCertificate
+    * Identity certificate for client authentication when authentication method is certificate.
     *
     * @param AndroidCertificateProfileBase $val The identityCertificate
     *

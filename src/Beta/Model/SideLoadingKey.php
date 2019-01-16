@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * SideLoadingKey class
@@ -28,6 +28,7 @@ class SideLoadingKey extends Entity
 {
     /**
     * Gets the value
+    * Side Loading Key Value, it is 5x5 value, seperated by hiphens.
     *
     * @return string The value
     */
@@ -42,6 +43,7 @@ class SideLoadingKey extends Entity
     
     /**
     * Sets the value
+    * Side Loading Key Value, it is 5x5 value, seperated by hiphens.
     *
     * @param string $val The value
     *
@@ -55,6 +57,7 @@ class SideLoadingKey extends Entity
     
     /**
     * Gets the displayName
+    * Side Loading Key Name displayed to the ITPro Admins.
     *
     * @return string The displayName
     */
@@ -69,6 +72,7 @@ class SideLoadingKey extends Entity
     
     /**
     * Sets the displayName
+    * Side Loading Key Name displayed to the ITPro Admins.
     *
     * @param string $val The displayName
     *
@@ -82,6 +86,7 @@ class SideLoadingKey extends Entity
     
     /**
     * Gets the description
+    * Side Loading Key description displayed to the ITPro Admins..
     *
     * @return string The description
     */
@@ -96,6 +101,7 @@ class SideLoadingKey extends Entity
     
     /**
     * Sets the description
+    * Side Loading Key description displayed to the ITPro Admins..
     *
     * @param string $val The description
     *
@@ -109,6 +115,7 @@ class SideLoadingKey extends Entity
     
     /**
     * Gets the totalActivation
+    * Side Loading Key Total Activation displayed to the ITPro Admins.
     *
     * @return int The totalActivation
     */
@@ -123,6 +130,7 @@ class SideLoadingKey extends Entity
     
     /**
     * Sets the totalActivation
+    * Side Loading Key Total Activation displayed to the ITPro Admins.
     *
     * @param int $val The totalActivation
     *
@@ -136,6 +144,7 @@ class SideLoadingKey extends Entity
     
     /**
     * Gets the lastUpdatedDateTime
+    * Side Loading Key Last Updated Date displayed to the ITPro Admins.
     *
     * @return string The lastUpdatedDateTime
     */
@@ -150,6 +159,7 @@ class SideLoadingKey extends Entity
     
     /**
     * Sets the lastUpdatedDateTime
+    * Side Loading Key Last Updated Date displayed to the ITPro Admins.
     *
     * @param string $val The lastUpdatedDateTime
     *

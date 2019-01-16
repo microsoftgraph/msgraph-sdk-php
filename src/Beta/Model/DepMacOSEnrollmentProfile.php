@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * DepMacOSEnrollmentProfile class
@@ -28,6 +28,7 @@ class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile
 {
     /**
     * Gets the registrationDisabled
+    * Indicates if registration is disabled
     *
     * @return bool The registrationDisabled
     */
@@ -42,6 +43,7 @@ class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile
     
     /**
     * Sets the registrationDisabled
+    * Indicates if registration is disabled
     *
     * @param bool $val The registrationDisabled
     *
@@ -55,6 +57,7 @@ class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile
     
     /**
     * Gets the fileVaultDisabled
+    * Indicates if file vault is disabled
     *
     * @return bool The fileVaultDisabled
     */
@@ -69,6 +72,7 @@ class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile
     
     /**
     * Sets the fileVaultDisabled
+    * Indicates if file vault is disabled
     *
     * @param bool $val The fileVaultDisabled
     *
@@ -82,6 +86,7 @@ class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile
     
     /**
     * Gets the iCloudDiagnosticsDisabled
+    * Indicates if iCloud Analytics screen is disabled
     *
     * @return bool The iCloudDiagnosticsDisabled
     */
@@ -96,6 +101,7 @@ class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile
     
     /**
     * Sets the iCloudDiagnosticsDisabled
+    * Indicates if iCloud Analytics screen is disabled
     *
     * @param bool $val The iCloudDiagnosticsDisabled
     *

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * SharingLink class
 *
@@ -28,13 +28,14 @@ class SharingLink extends Entity
 
     /**
     * Gets the application
+    * The app the link is associated with.
     *
     * @return Identity The application
     */
     public function getApplication()
     {
         if (array_key_exists("application", $this->_propDict)) {
-            if (is_a($this->_propDict["application"], "Microsoft\Graph\Beta\Model\Identity")) {
+            if (is_a($this->_propDict["application"], "Microsoft\Graph\Model\Identity")) {
                 return $this->_propDict["application"];
             } else {
                 $this->_propDict["application"] = new Identity($this->_propDict["application"]);
@@ -46,6 +47,7 @@ class SharingLink extends Entity
 
     /**
     * Sets the application
+    * The app the link is associated with.
     *
     * @param Identity $val The value to assign to the application
     *
@@ -55,6 +57,32 @@ class SharingLink extends Entity
     {
         $this->_propDict["application"] = $val;
          return $this;
+    }
+    /**
+    * Gets the preventsDownload
+    *
+    * @return bool The preventsDownload
+    */
+    public function getPreventsDownload()
+    {
+        if (array_key_exists("preventsDownload", $this->_propDict)) {
+            return $this->_propDict["preventsDownload"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the preventsDownload
+    *
+    * @param bool $val The value of the preventsDownload
+    *
+    * @return SharingLink
+    */
+    public function setPreventsDownload($val)
+    {
+        $this->_propDict["preventsDownload"] = $val;
+        return $this;
     }
     /**
     * Gets the configuratorUrl
@@ -84,6 +112,7 @@ class SharingLink extends Entity
     }
     /**
     * Gets the scope
+    * The scope of the link represented by this permission. Value anonymous indicates the link is usable by anyone, organization indicates the link is only usable for users signed into the same tenant.
     *
     * @return string The scope
     */
@@ -98,6 +127,7 @@ class SharingLink extends Entity
 
     /**
     * Sets the scope
+    * The scope of the link represented by this permission. Value anonymous indicates the link is usable by anyone, organization indicates the link is only usable for users signed into the same tenant.
     *
     * @param string $val The value of the scope
     *
@@ -110,6 +140,7 @@ class SharingLink extends Entity
     }
     /**
     * Gets the type
+    * The type of the link created.
     *
     * @return string The type
     */
@@ -124,6 +155,7 @@ class SharingLink extends Entity
 
     /**
     * Sets the type
+    * The type of the link created.
     *
     * @param string $val The value of the type
     *
@@ -136,6 +168,7 @@ class SharingLink extends Entity
     }
     /**
     * Gets the webHtml
+    * For embed links, this property contains the HTML code for an &amp;lt;iframe&amp;gt; element that will embed the item in a webpage.
     *
     * @return string The webHtml
     */
@@ -150,6 +183,7 @@ class SharingLink extends Entity
 
     /**
     * Sets the webHtml
+    * For embed links, this property contains the HTML code for an &amp;lt;iframe&amp;gt; element that will embed the item in a webpage.
     *
     * @param string $val The value of the webHtml
     *
@@ -162,6 +196,7 @@ class SharingLink extends Entity
     }
     /**
     * Gets the webUrl
+    * A URL that opens the item in the browser on the OneDrive website.
     *
     * @return string The webUrl
     */
@@ -176,6 +211,7 @@ class SharingLink extends Entity
 
     /**
     * Sets the webUrl
+    * A URL that opens the item in the browser on the OneDrive website.
     *
     * @param string $val The value of the webUrl
     *

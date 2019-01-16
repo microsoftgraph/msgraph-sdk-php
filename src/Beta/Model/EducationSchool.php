@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * EducationSchool class
@@ -28,6 +28,7 @@ class EducationSchool extends EducationOrganization
 {
     /**
     * Gets the principalEmail
+    * Email address of the principal.
     *
     * @return string The principalEmail
     */
@@ -42,6 +43,7 @@ class EducationSchool extends EducationOrganization
     
     /**
     * Sets the principalEmail
+    * Email address of the principal.
     *
     * @param string $val The principalEmail
     *
@@ -55,6 +57,7 @@ class EducationSchool extends EducationOrganization
     
     /**
     * Gets the principalName
+    * Name of the principal.
     *
     * @return string The principalName
     */
@@ -69,6 +72,7 @@ class EducationSchool extends EducationOrganization
     
     /**
     * Sets the principalName
+    * Name of the principal.
     *
     * @param string $val The principalName
     *
@@ -82,6 +86,7 @@ class EducationSchool extends EducationOrganization
     
     /**
     * Gets the externalPrincipalId
+    * ID of principal in syncing system.
     *
     * @return string The externalPrincipalId
     */
@@ -96,6 +101,7 @@ class EducationSchool extends EducationOrganization
     
     /**
     * Sets the externalPrincipalId
+    * ID of principal in syncing system.
     *
     * @param string $val The externalPrincipalId
     *
@@ -109,6 +115,7 @@ class EducationSchool extends EducationOrganization
     
     /**
     * Gets the lowestGrade
+    * Lowest grade taught.
     *
     * @return string The lowestGrade
     */
@@ -123,6 +130,7 @@ class EducationSchool extends EducationOrganization
     
     /**
     * Sets the lowestGrade
+    * Lowest grade taught.
     *
     * @param string $val The lowestGrade
     *
@@ -136,6 +144,7 @@ class EducationSchool extends EducationOrganization
     
     /**
     * Gets the highestGrade
+    * Highest grade taught.
     *
     * @return string The highestGrade
     */
@@ -150,6 +159,7 @@ class EducationSchool extends EducationOrganization
     
     /**
     * Sets the highestGrade
+    * Highest grade taught.
     *
     * @param string $val The highestGrade
     *
@@ -163,6 +173,7 @@ class EducationSchool extends EducationOrganization
     
     /**
     * Gets the schoolNumber
+    * School Number.
     *
     * @return string The schoolNumber
     */
@@ -177,6 +188,7 @@ class EducationSchool extends EducationOrganization
     
     /**
     * Sets the schoolNumber
+    * School Number.
     *
     * @param string $val The schoolNumber
     *
@@ -190,6 +202,7 @@ class EducationSchool extends EducationOrganization
     
     /**
     * Gets the externalId
+    * ID of school in syncing system.
     *
     * @return string The externalId
     */
@@ -204,6 +217,7 @@ class EducationSchool extends EducationOrganization
     
     /**
     * Sets the externalId
+    * ID of school in syncing system.
     *
     * @param string $val The externalId
     *
@@ -217,6 +231,7 @@ class EducationSchool extends EducationOrganization
     
     /**
     * Gets the phone
+    * Phone number of school.
     *
     * @return string The phone
     */
@@ -231,6 +246,7 @@ class EducationSchool extends EducationOrganization
     
     /**
     * Sets the phone
+    * Phone number of school.
     *
     * @param string $val The phone
     *
@@ -244,6 +260,7 @@ class EducationSchool extends EducationOrganization
     
     /**
     * Gets the fax
+    * Fax number of school.
     *
     * @return string The fax
     */
@@ -258,6 +275,7 @@ class EducationSchool extends EducationOrganization
     
     /**
     * Sets the fax
+    * Fax number of school.
     *
     * @param string $val The fax
     *
@@ -271,13 +289,14 @@ class EducationSchool extends EducationOrganization
     
     /**
     * Gets the createdBy
+    * Entity who created the school.
     *
     * @return IdentitySet The createdBy
     */
     public function getCreatedBy()
     {
         if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "Microsoft\Graph\Beta\Model\IdentitySet")) {
+            if (is_a($this->_propDict["createdBy"], "Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["createdBy"];
             } else {
                 $this->_propDict["createdBy"] = new IdentitySet($this->_propDict["createdBy"]);
@@ -289,6 +308,7 @@ class EducationSchool extends EducationOrganization
     
     /**
     * Sets the createdBy
+    * Entity who created the school.
     *
     * @param IdentitySet $val The createdBy
     *
@@ -302,13 +322,14 @@ class EducationSchool extends EducationOrganization
     
     /**
     * Gets the address
+    * Address of the school.
     *
     * @return PhysicalAddress The address
     */
     public function getAddress()
     {
         if (array_key_exists("address", $this->_propDict)) {
-            if (is_a($this->_propDict["address"], "Microsoft\Graph\Beta\Model\PhysicalAddress")) {
+            if (is_a($this->_propDict["address"], "Microsoft\Graph\Model\PhysicalAddress")) {
                 return $this->_propDict["address"];
             } else {
                 $this->_propDict["address"] = new PhysicalAddress($this->_propDict["address"]);
@@ -320,6 +341,7 @@ class EducationSchool extends EducationOrganization
     
     /**
     * Sets the address
+    * Address of the school.
     *
     * @param PhysicalAddress $val The address
     *
@@ -334,6 +356,7 @@ class EducationSchool extends EducationOrganization
 
      /** 
      * Gets the classes
+    * Classes taught at the school. Nullable.
      *
      * @return array The classes
      */
@@ -348,6 +371,7 @@ class EducationSchool extends EducationOrganization
     
     /** 
     * Sets the classes
+    * Classes taught at the school. Nullable.
     *
     * @param EducationClass $val The classes
     *
@@ -362,6 +386,7 @@ class EducationSchool extends EducationOrganization
 
      /** 
      * Gets the users
+    * Users in the school. Nullable.
      *
      * @return array The users
      */
@@ -376,6 +401,7 @@ class EducationSchool extends EducationOrganization
     
     /** 
     * Sets the users
+    * Users in the school. Nullable.
     *
     * @param EducationUser $val The users
     *
@@ -395,7 +421,7 @@ class EducationSchool extends EducationOrganization
     public function getAdministrativeUnit()
     {
         if (array_key_exists("administrativeUnit", $this->_propDict)) {
-            if (is_a($this->_propDict["administrativeUnit"], "Microsoft\Graph\Beta\Model\AdministrativeUnit")) {
+            if (is_a($this->_propDict["administrativeUnit"], "Microsoft\Graph\Model\AdministrativeUnit")) {
                 return $this->_propDict["administrativeUnit"];
             } else {
                 $this->_propDict["administrativeUnit"] = new AdministrativeUnit($this->_propDict["administrativeUnit"]);

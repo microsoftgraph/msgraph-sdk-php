@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * VpnServer class
 *
@@ -27,6 +27,7 @@ class VpnServer extends Entity
 {
     /**
     * Gets the description
+    * Description.
     *
     * @return string The description
     */
@@ -41,6 +42,7 @@ class VpnServer extends Entity
 
     /**
     * Sets the description
+    * Description.
     *
     * @param string $val The value of the description
     *
@@ -53,6 +55,7 @@ class VpnServer extends Entity
     }
     /**
     * Gets the address
+    * Address (IP address, FQDN or URL)
     *
     * @return string The address
     */
@@ -67,6 +70,7 @@ class VpnServer extends Entity
 
     /**
     * Sets the address
+    * Address (IP address, FQDN or URL)
     *
     * @param string $val The value of the address
     *
@@ -79,6 +83,7 @@ class VpnServer extends Entity
     }
     /**
     * Gets the isDefaultServer
+    * Default server.
     *
     * @return bool The isDefaultServer
     */
@@ -93,6 +98,7 @@ class VpnServer extends Entity
 
     /**
     * Sets the isDefaultServer
+    * Default server.
     *
     * @param bool $val The value of the isDefaultServer
     *

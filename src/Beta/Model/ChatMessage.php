@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * ChatMessage class
@@ -61,7 +61,7 @@ class ChatMessage extends Entity
     public function getFrom()
     {
         if (array_key_exists("from", $this->_propDict)) {
-            if (is_a($this->_propDict["from"], "Microsoft\Graph\Beta\Model\IdentitySet")) {
+            if (is_a($this->_propDict["from"], "Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["from"];
             } else {
                 $this->_propDict["from"] = new IdentitySet($this->_propDict["from"]);
@@ -119,7 +119,7 @@ class ChatMessage extends Entity
     public function getMessageType()
     {
         if (array_key_exists("messageType", $this->_propDict)) {
-            if (is_a($this->_propDict["messageType"], "Microsoft\Graph\Beta\Model\ChatMessageType")) {
+            if (is_a($this->_propDict["messageType"], "Microsoft\Graph\Model\ChatMessageType")) {
                 return $this->_propDict["messageType"];
             } else {
                 $this->_propDict["messageType"] = new ChatMessageType($this->_propDict["messageType"]);
@@ -266,7 +266,7 @@ class ChatMessage extends Entity
     public function getBody()
     {
         if (array_key_exists("body", $this->_propDict)) {
-            if (is_a($this->_propDict["body"], "Microsoft\Graph\Beta\Model\ItemBody")) {
+            if (is_a($this->_propDict["body"], "Microsoft\Graph\Model\ItemBody")) {
                 return $this->_propDict["body"];
             } else {
                 $this->_propDict["body"] = new ItemBody($this->_propDict["body"]);
@@ -380,7 +380,7 @@ class ChatMessage extends Entity
     public function getImportance()
     {
         if (array_key_exists("importance", $this->_propDict)) {
-            if (is_a($this->_propDict["importance"], "Microsoft\Graph\Beta\Model\ChatMessageImportance")) {
+            if (is_a($this->_propDict["importance"], "Microsoft\Graph\Model\ChatMessageImportance")) {
                 return $this->_propDict["importance"];
             } else {
                 $this->_propDict["importance"] = new ChatMessageImportance($this->_propDict["importance"]);
@@ -400,6 +400,37 @@ class ChatMessage extends Entity
     public function setImportance($val)
     {
         $this->_propDict["importance"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the policyViolation
+    *
+    * @return ChatMessagePolicyViolation The policyViolation
+    */
+    public function getPolicyViolation()
+    {
+        if (array_key_exists("policyViolation", $this->_propDict)) {
+            if (is_a($this->_propDict["policyViolation"], "Microsoft\Graph\Model\ChatMessagePolicyViolation")) {
+                return $this->_propDict["policyViolation"];
+            } else {
+                $this->_propDict["policyViolation"] = new ChatMessagePolicyViolation($this->_propDict["policyViolation"]);
+                return $this->_propDict["policyViolation"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the policyViolation
+    *
+    * @param ChatMessagePolicyViolation $val The policyViolation
+    *
+    * @return ChatMessage
+    */
+    public function setPolicyViolation($val)
+    {
+        $this->_propDict["policyViolation"] = $val;
         return $this;
     }
     

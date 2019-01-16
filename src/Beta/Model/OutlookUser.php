@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * OutlookUser class
@@ -29,6 +29,7 @@ class OutlookUser extends Entity
 
      /** 
      * Gets the masterCategories
+    * A list of categories defined for the user.
      *
      * @return array The masterCategories
      */
@@ -43,6 +44,7 @@ class OutlookUser extends Entity
     
     /** 
     * Sets the masterCategories
+    * A list of categories defined for the user.
     *
     * @param OutlookCategory $val The masterCategories
     *

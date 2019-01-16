@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * ListItem class
@@ -28,13 +28,14 @@ class ListItem extends BaseItem
 {
     /**
     * Gets the contentType
+    * The content type of this list item
     *
     * @return ContentTypeInfo The contentType
     */
     public function getContentType()
     {
         if (array_key_exists("contentType", $this->_propDict)) {
-            if (is_a($this->_propDict["contentType"], "Microsoft\Graph\Beta\Model\ContentTypeInfo")) {
+            if (is_a($this->_propDict["contentType"], "Microsoft\Graph\Model\ContentTypeInfo")) {
                 return $this->_propDict["contentType"];
             } else {
                 $this->_propDict["contentType"] = new ContentTypeInfo($this->_propDict["contentType"]);
@@ -46,6 +47,7 @@ class ListItem extends BaseItem
     
     /**
     * Sets the contentType
+    * The content type of this list item
     *
     * @param ContentTypeInfo $val The contentType
     *
@@ -59,13 +61,14 @@ class ListItem extends BaseItem
     
     /**
     * Gets the sharepointIds
+    * Returns identifiers useful for SharePoint REST compatibility. Read-only.
     *
     * @return SharepointIds The sharepointIds
     */
     public function getSharepointIds()
     {
         if (array_key_exists("sharepointIds", $this->_propDict)) {
-            if (is_a($this->_propDict["sharepointIds"], "Microsoft\Graph\Beta\Model\SharepointIds")) {
+            if (is_a($this->_propDict["sharepointIds"], "Microsoft\Graph\Model\SharepointIds")) {
                 return $this->_propDict["sharepointIds"];
             } else {
                 $this->_propDict["sharepointIds"] = new SharepointIds($this->_propDict["sharepointIds"]);
@@ -77,6 +80,7 @@ class ListItem extends BaseItem
     
     /**
     * Sets the sharepointIds
+    * Returns identifiers useful for SharePoint REST compatibility. Read-only.
     *
     * @param SharepointIds $val The sharepointIds
     *
@@ -106,7 +110,7 @@ class ListItem extends BaseItem
     /** 
     * Sets the activities
     *
-    * @param ItemActivity $val The activities
+    * @param ItemActivityOLD $val The activities
     *
     * @return ListItem
     */
@@ -117,14 +121,46 @@ class ListItem extends BaseItem
     }
     
     /**
+    * Gets the analytics
+    *
+    * @return ItemAnalytics The analytics
+    */
+    public function getAnalytics()
+    {
+        if (array_key_exists("analytics", $this->_propDict)) {
+            if (is_a($this->_propDict["analytics"], "Microsoft\Graph\Model\ItemAnalytics")) {
+                return $this->_propDict["analytics"];
+            } else {
+                $this->_propDict["analytics"] = new ItemAnalytics($this->_propDict["analytics"]);
+                return $this->_propDict["analytics"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the analytics
+    *
+    * @param ItemAnalytics $val The analytics
+    *
+    * @return ListItem
+    */
+    public function setAnalytics($val)
+    {
+        $this->_propDict["analytics"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the driveItem
+    * For document libraries, the driveItem relationship exposes the listItem as a [driveItem][]
     *
     * @return DriveItem The driveItem
     */
     public function getDriveItem()
     {
         if (array_key_exists("driveItem", $this->_propDict)) {
-            if (is_a($this->_propDict["driveItem"], "Microsoft\Graph\Beta\Model\DriveItem")) {
+            if (is_a($this->_propDict["driveItem"], "Microsoft\Graph\Model\DriveItem")) {
                 return $this->_propDict["driveItem"];
             } else {
                 $this->_propDict["driveItem"] = new DriveItem($this->_propDict["driveItem"]);
@@ -136,6 +172,7 @@ class ListItem extends BaseItem
     
     /**
     * Sets the driveItem
+    * For document libraries, the driveItem relationship exposes the listItem as a [driveItem][]
     *
     * @param DriveItem $val The driveItem
     *
@@ -149,13 +186,14 @@ class ListItem extends BaseItem
     
     /**
     * Gets the fields
+    * The values of the columns set on this list item.
     *
     * @return FieldValueSet The fields
     */
     public function getFields()
     {
         if (array_key_exists("fields", $this->_propDict)) {
-            if (is_a($this->_propDict["fields"], "Microsoft\Graph\Beta\Model\FieldValueSet")) {
+            if (is_a($this->_propDict["fields"], "Microsoft\Graph\Model\FieldValueSet")) {
                 return $this->_propDict["fields"];
             } else {
                 $this->_propDict["fields"] = new FieldValueSet($this->_propDict["fields"]);
@@ -167,6 +205,7 @@ class ListItem extends BaseItem
     
     /**
     * Sets the fields
+    * The values of the columns set on this list item.
     *
     * @param FieldValueSet $val The fields
     *
@@ -181,6 +220,7 @@ class ListItem extends BaseItem
 
      /** 
      * Gets the versions
+    * The list of previous versions of the list item.
      *
      * @return array The versions
      */
@@ -195,6 +235,7 @@ class ListItem extends BaseItem
     
     /** 
     * Sets the versions
+    * The list of previous versions of the list item.
     *
     * @param ListItemVersion $val The versions
     *

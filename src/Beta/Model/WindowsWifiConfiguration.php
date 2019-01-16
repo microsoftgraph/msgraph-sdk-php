@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * WindowsWifiConfiguration class
@@ -27,14 +27,44 @@ namespace Microsoft\Graph\Beta\Model;
 class WindowsWifiConfiguration extends DeviceConfiguration
 {
     /**
+    * Gets the preSharedKey
+    * This is the pre-shared key for WPA Personal Wi-Fi network.
+    *
+    * @return string The preSharedKey
+    */
+    public function getPreSharedKey()
+    {
+        if (array_key_exists("preSharedKey", $this->_propDict)) {
+            return $this->_propDict["preSharedKey"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the preSharedKey
+    * This is the pre-shared key for WPA Personal Wi-Fi network.
+    *
+    * @param string $val The preSharedKey
+    *
+    * @return WindowsWifiConfiguration
+    */
+    public function setPreSharedKey($val)
+    {
+        $this->_propDict["preSharedKey"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the wifiSecurityType
+    * Specify the Wifi Security Type.
     *
     * @return WiFiSecurityType The wifiSecurityType
     */
     public function getWifiSecurityType()
     {
         if (array_key_exists("wifiSecurityType", $this->_propDict)) {
-            if (is_a($this->_propDict["wifiSecurityType"], "Microsoft\Graph\Beta\Model\WiFiSecurityType")) {
+            if (is_a($this->_propDict["wifiSecurityType"], "Microsoft\Graph\Model\WiFiSecurityType")) {
                 return $this->_propDict["wifiSecurityType"];
             } else {
                 $this->_propDict["wifiSecurityType"] = new WiFiSecurityType($this->_propDict["wifiSecurityType"]);
@@ -46,6 +76,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
     
     /**
     * Sets the wifiSecurityType
+    * Specify the Wifi Security Type.
     *
     * @param WiFiSecurityType $val The wifiSecurityType
     *
@@ -58,7 +89,41 @@ class WindowsWifiConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the meteredConnectionLimit
+    * Specify the metered connection limit type for the wifi connection.
+    *
+    * @return MeteredConnectionLimitType The meteredConnectionLimit
+    */
+    public function getMeteredConnectionLimit()
+    {
+        if (array_key_exists("meteredConnectionLimit", $this->_propDict)) {
+            if (is_a($this->_propDict["meteredConnectionLimit"], "Microsoft\Graph\Model\MeteredConnectionLimitType")) {
+                return $this->_propDict["meteredConnectionLimit"];
+            } else {
+                $this->_propDict["meteredConnectionLimit"] = new MeteredConnectionLimitType($this->_propDict["meteredConnectionLimit"]);
+                return $this->_propDict["meteredConnectionLimit"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the meteredConnectionLimit
+    * Specify the metered connection limit type for the wifi connection.
+    *
+    * @param MeteredConnectionLimitType $val The meteredConnectionLimit
+    *
+    * @return WindowsWifiConfiguration
+    */
+    public function setMeteredConnectionLimit($val)
+    {
+        $this->_propDict["meteredConnectionLimit"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the ssid
+    * Specify the SSID of the wifi connection.
     *
     * @return string The ssid
     */
@@ -73,6 +138,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
     
     /**
     * Sets the ssid
+    * Specify the SSID of the wifi connection.
     *
     * @param string $val The ssid
     *
@@ -86,6 +152,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
     
     /**
     * Gets the networkName
+    * Specify the network configuration name.
     *
     * @return string The networkName
     */
@@ -100,6 +167,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
     
     /**
     * Sets the networkName
+    * Specify the network configuration name.
     *
     * @param string $val The networkName
     *
@@ -113,6 +181,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
     
     /**
     * Gets the connectAutomatically
+    * Specify whether the wifi connection should connect automatically when in range.
     *
     * @return bool The connectAutomatically
     */
@@ -127,6 +196,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
     
     /**
     * Sets the connectAutomatically
+    * Specify whether the wifi connection should connect automatically when in range.
     *
     * @param bool $val The connectAutomatically
     *
@@ -140,6 +210,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
     
     /**
     * Gets the connectToPreferredNetwork
+    * Specify whether the wifi connection should connect to more preferred networks when already connected to this one.  Requires ConnectAutomatically to be true.
     *
     * @return bool The connectToPreferredNetwork
     */
@@ -154,6 +225,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
     
     /**
     * Sets the connectToPreferredNetwork
+    * Specify whether the wifi connection should connect to more preferred networks when already connected to this one.  Requires ConnectAutomatically to be true.
     *
     * @param bool $val The connectToPreferredNetwork
     *
@@ -167,6 +239,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
     
     /**
     * Gets the connectWhenNetworkNameIsHidden
+    * Specify whether the wifi connection should connect automatically even when the SSID is not broadcasting.
     *
     * @return bool The connectWhenNetworkNameIsHidden
     */
@@ -181,6 +254,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
     
     /**
     * Sets the connectWhenNetworkNameIsHidden
+    * Specify whether the wifi connection should connect automatically even when the SSID is not broadcasting.
     *
     * @param bool $val The connectWhenNetworkNameIsHidden
     *
@@ -194,13 +268,14 @@ class WindowsWifiConfiguration extends DeviceConfiguration
     
     /**
     * Gets the proxySetting
+    * Specify the proxy setting for Wi-Fi configuration
     *
     * @return WiFiProxySetting The proxySetting
     */
     public function getProxySetting()
     {
         if (array_key_exists("proxySetting", $this->_propDict)) {
-            if (is_a($this->_propDict["proxySetting"], "Microsoft\Graph\Beta\Model\WiFiProxySetting")) {
+            if (is_a($this->_propDict["proxySetting"], "Microsoft\Graph\Model\WiFiProxySetting")) {
                 return $this->_propDict["proxySetting"];
             } else {
                 $this->_propDict["proxySetting"] = new WiFiProxySetting($this->_propDict["proxySetting"]);
@@ -212,6 +287,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
     
     /**
     * Sets the proxySetting
+    * Specify the proxy setting for Wi-Fi configuration
     *
     * @param WiFiProxySetting $val The proxySetting
     *
@@ -225,6 +301,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
     
     /**
     * Gets the proxyManualAddress
+    * Specify the IP address for the proxy server.
     *
     * @return string The proxyManualAddress
     */
@@ -239,6 +316,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
     
     /**
     * Sets the proxyManualAddress
+    * Specify the IP address for the proxy server.
     *
     * @param string $val The proxyManualAddress
     *
@@ -252,6 +330,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
     
     /**
     * Gets the proxyManualPort
+    * Specify the port for the proxy server.
     *
     * @return int The proxyManualPort
     */
@@ -266,6 +345,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
     
     /**
     * Sets the proxyManualPort
+    * Specify the port for the proxy server.
     *
     * @param int $val The proxyManualPort
     *
@@ -279,6 +359,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
     
     /**
     * Gets the proxyAutomaticConfigurationUrl
+    * Specify the URL for the proxy server configuration script.
     *
     * @return string The proxyAutomaticConfigurationUrl
     */
@@ -293,6 +374,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
     
     /**
     * Sets the proxyAutomaticConfigurationUrl
+    * Specify the URL for the proxy server configuration script.
     *
     * @param string $val The proxyAutomaticConfigurationUrl
     *
@@ -306,6 +388,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
     
     /**
     * Gets the forceFIPSCompliance
+    * Specify whether to force FIPS compliance.
     *
     * @return bool The forceFIPSCompliance
     */
@@ -320,6 +403,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
     
     /**
     * Sets the forceFIPSCompliance
+    * Specify whether to force FIPS compliance.
     *
     * @param bool $val The forceFIPSCompliance
     *

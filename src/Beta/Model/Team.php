@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * Team class
@@ -27,7 +27,151 @@ namespace Microsoft\Graph\Beta\Model;
 class Team extends Entity
 {
     /**
+    * Gets the displayName
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the displayName
+    *
+    * @param string $val The displayName
+    *
+    * @return Team
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the description
+    *
+    * @return string The description
+    */
+    public function getDescription()
+    {
+        if (array_key_exists("description", $this->_propDict)) {
+            return $this->_propDict["description"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the description
+    *
+    * @param string $val The description
+    *
+    * @return Team
+    */
+    public function setDescription($val)
+    {
+        $this->_propDict["description"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the classification
+    *
+    * @return string The classification
+    */
+    public function getClassification()
+    {
+        if (array_key_exists("classification", $this->_propDict)) {
+            return $this->_propDict["classification"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the classification
+    *
+    * @param string $val The classification
+    *
+    * @return Team
+    */
+    public function setClassification($val)
+    {
+        $this->_propDict["classification"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the specialization
+    *
+    * @return TeamSpecialization The specialization
+    */
+    public function getSpecialization()
+    {
+        if (array_key_exists("specialization", $this->_propDict)) {
+            if (is_a($this->_propDict["specialization"], "Microsoft\Graph\Model\TeamSpecialization")) {
+                return $this->_propDict["specialization"];
+            } else {
+                $this->_propDict["specialization"] = new TeamSpecialization($this->_propDict["specialization"]);
+                return $this->_propDict["specialization"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the specialization
+    *
+    * @param TeamSpecialization $val The specialization
+    *
+    * @return Team
+    */
+    public function setSpecialization($val)
+    {
+        $this->_propDict["specialization"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the visibility
+    *
+    * @return TeamVisibilityType The visibility
+    */
+    public function getVisibility()
+    {
+        if (array_key_exists("visibility", $this->_propDict)) {
+            if (is_a($this->_propDict["visibility"], "Microsoft\Graph\Model\TeamVisibilityType")) {
+                return $this->_propDict["visibility"];
+            } else {
+                $this->_propDict["visibility"] = new TeamVisibilityType($this->_propDict["visibility"]);
+                return $this->_propDict["visibility"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the visibility
+    *
+    * @param TeamVisibilityType $val The visibility
+    *
+    * @return Team
+    */
+    public function setVisibility($val)
+    {
+        $this->_propDict["visibility"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the webUrl
+    * A hyperlink that will go to the team in the Microsoft Teams client. This is the URL that you get when you right-click a team in the Microsoft Teams client and select Get link to team. This URL should be treated as an opaque blob, and not parsed.
     *
     * @return string The webUrl
     */
@@ -42,6 +186,7 @@ class Team extends Entity
     
     /**
     * Sets the webUrl
+    * A hyperlink that will go to the team in the Microsoft Teams client. This is the URL that you get when you right-click a team in the Microsoft Teams client and select Get link to team. This URL should be treated as an opaque blob, and not parsed.
     *
     * @param string $val The webUrl
     *
@@ -55,13 +200,14 @@ class Team extends Entity
     
     /**
     * Gets the memberSettings
+    * Settings to configure whether members can perform certain actions, for example, create channels and add bots, in the team.
     *
     * @return TeamMemberSettings The memberSettings
     */
     public function getMemberSettings()
     {
         if (array_key_exists("memberSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["memberSettings"], "Microsoft\Graph\Beta\Model\TeamMemberSettings")) {
+            if (is_a($this->_propDict["memberSettings"], "Microsoft\Graph\Model\TeamMemberSettings")) {
                 return $this->_propDict["memberSettings"];
             } else {
                 $this->_propDict["memberSettings"] = new TeamMemberSettings($this->_propDict["memberSettings"]);
@@ -73,6 +219,7 @@ class Team extends Entity
     
     /**
     * Sets the memberSettings
+    * Settings to configure whether members can perform certain actions, for example, create channels and add bots, in the team.
     *
     * @param TeamMemberSettings $val The memberSettings
     *
@@ -86,13 +233,14 @@ class Team extends Entity
     
     /**
     * Gets the guestSettings
+    * Settings to configure whether guests can create, update, or delete channels in the team.
     *
     * @return TeamGuestSettings The guestSettings
     */
     public function getGuestSettings()
     {
         if (array_key_exists("guestSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["guestSettings"], "Microsoft\Graph\Beta\Model\TeamGuestSettings")) {
+            if (is_a($this->_propDict["guestSettings"], "Microsoft\Graph\Model\TeamGuestSettings")) {
                 return $this->_propDict["guestSettings"];
             } else {
                 $this->_propDict["guestSettings"] = new TeamGuestSettings($this->_propDict["guestSettings"]);
@@ -104,6 +252,7 @@ class Team extends Entity
     
     /**
     * Sets the guestSettings
+    * Settings to configure whether guests can create, update, or delete channels in the team.
     *
     * @param TeamGuestSettings $val The guestSettings
     *
@@ -117,13 +266,14 @@ class Team extends Entity
     
     /**
     * Gets the messagingSettings
+    * Settings to configure messaging and mentions in the team.
     *
     * @return TeamMessagingSettings The messagingSettings
     */
     public function getMessagingSettings()
     {
         if (array_key_exists("messagingSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["messagingSettings"], "Microsoft\Graph\Beta\Model\TeamMessagingSettings")) {
+            if (is_a($this->_propDict["messagingSettings"], "Microsoft\Graph\Model\TeamMessagingSettings")) {
                 return $this->_propDict["messagingSettings"];
             } else {
                 $this->_propDict["messagingSettings"] = new TeamMessagingSettings($this->_propDict["messagingSettings"]);
@@ -135,6 +285,7 @@ class Team extends Entity
     
     /**
     * Sets the messagingSettings
+    * Settings to configure messaging and mentions in the team.
     *
     * @param TeamMessagingSettings $val The messagingSettings
     *
@@ -148,13 +299,14 @@ class Team extends Entity
     
     /**
     * Gets the funSettings
+    * Settings to configure use of Giphy, memes, and stickers in the team.
     *
     * @return TeamFunSettings The funSettings
     */
     public function getFunSettings()
     {
         if (array_key_exists("funSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["funSettings"], "Microsoft\Graph\Beta\Model\TeamFunSettings")) {
+            if (is_a($this->_propDict["funSettings"], "Microsoft\Graph\Model\TeamFunSettings")) {
                 return $this->_propDict["funSettings"];
             } else {
                 $this->_propDict["funSettings"] = new TeamFunSettings($this->_propDict["funSettings"]);
@@ -166,6 +318,7 @@ class Team extends Entity
     
     /**
     * Sets the funSettings
+    * Settings to configure use of Giphy, memes, and stickers in the team.
     *
     * @param TeamFunSettings $val The funSettings
     *
@@ -179,6 +332,7 @@ class Team extends Entity
     
     /**
     * Gets the isArchived
+    * Whether this team is in read-only mode.
     *
     * @return bool The isArchived
     */
@@ -193,6 +347,7 @@ class Team extends Entity
     
     /**
     * Sets the isArchived
+    * Whether this team is in read-only mode.
     *
     * @param bool $val The isArchived
     *
@@ -204,9 +359,41 @@ class Team extends Entity
         return $this;
     }
     
+    /**
+    * Gets the template
+    *
+    * @return TeamsTemplate The template
+    */
+    public function getTemplate()
+    {
+        if (array_key_exists("template", $this->_propDict)) {
+            if (is_a($this->_propDict["template"], "Microsoft\Graph\Model\TeamsTemplate")) {
+                return $this->_propDict["template"];
+            } else {
+                $this->_propDict["template"] = new TeamsTemplate($this->_propDict["template"]);
+                return $this->_propDict["template"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the template
+    *
+    * @param TeamsTemplate $val The template
+    *
+    * @return Team
+    */
+    public function setTemplate($val)
+    {
+        $this->_propDict["template"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the channels
+    * The collection of channels &amp; messages associated with the team.
      *
      * @return array The channels
      */
@@ -221,6 +408,7 @@ class Team extends Entity
     
     /** 
     * Sets the channels
+    * The collection of channels &amp; messages associated with the team.
     *
     * @param Channel $val The channels
     *
@@ -262,6 +450,36 @@ class Team extends Entity
     
 
      /** 
+     * Gets the installedApps
+    * The apps installed in this team.
+     *
+     * @return array The installedApps
+     */
+    public function getInstalledApps()
+    {
+        if (array_key_exists("installedApps", $this->_propDict)) {
+           return $this->_propDict["installedApps"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the installedApps
+    * The apps installed in this team.
+    *
+    * @param TeamsAppInstallation $val The installedApps
+    *
+    * @return Team
+    */
+    public function setInstalledApps($val)
+    {
+		$this->_propDict["installedApps"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the operations
      *
      * @return array The operations
@@ -285,6 +503,34 @@ class Team extends Entity
     public function setOperations($val)
     {
 		$this->_propDict["operations"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the owners
+     *
+     * @return array The owners
+     */
+    public function getOwners()
+    {
+        if (array_key_exists("owners", $this->_propDict)) {
+           return $this->_propDict["owners"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the owners
+    *
+    * @param User $val The owners
+    *
+    * @return Team
+    */
+    public function setOwners($val)
+    {
+		$this->_propDict["owners"] = $val;
         return $this;
     }
     

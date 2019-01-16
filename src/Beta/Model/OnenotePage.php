@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * OnenotePage class
@@ -28,6 +28,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
 {
     /**
     * Gets the title
+    * The title of the page.
     *
     * @return string The title
     */
@@ -42,6 +43,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
     
     /**
     * Sets the title
+    * The title of the page.
     *
     * @param string $val The title
     *
@@ -55,6 +57,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
     
     /**
     * Gets the createdByAppId
+    * The unique identifier of the application that created the page. Read-only.
     *
     * @return string The createdByAppId
     */
@@ -69,6 +72,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
     
     /**
     * Sets the createdByAppId
+    * The unique identifier of the application that created the page. Read-only.
     *
     * @param string $val The createdByAppId
     *
@@ -82,13 +86,14 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
     
     /**
     * Gets the links
+    * Links for opening the page. The oneNoteClientURL link opens the page in the OneNote native client if it 's installed. The oneNoteWebUrl link opens the page in OneNote Online. Read-only.
     *
     * @return PageLinks The links
     */
     public function getLinks()
     {
         if (array_key_exists("links", $this->_propDict)) {
-            if (is_a($this->_propDict["links"], "Microsoft\Graph\Beta\Model\PageLinks")) {
+            if (is_a($this->_propDict["links"], "Microsoft\Graph\Model\PageLinks")) {
                 return $this->_propDict["links"];
             } else {
                 $this->_propDict["links"] = new PageLinks($this->_propDict["links"]);
@@ -100,6 +105,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
     
     /**
     * Sets the links
+    * Links for opening the page. The oneNoteClientURL link opens the page in the OneNote native client if it 's installed. The oneNoteWebUrl link opens the page in OneNote Online. Read-only.
     *
     * @param PageLinks $val The links
     *
@@ -113,6 +119,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
     
     /**
     * Gets the contentUrl
+    * The URL for the page's HTML content.  Read-only.
     *
     * @return string The contentUrl
     */
@@ -127,6 +134,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
     
     /**
     * Sets the contentUrl
+    * The URL for the page's HTML content.  Read-only.
     *
     * @param string $val The contentUrl
     *
@@ -140,6 +148,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
     
     /**
     * Gets the content
+    * The page's HTML content.
     *
     * @return \GuzzleHttp\Psr7\Stream The content
     */
@@ -158,6 +167,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
     
     /**
     * Sets the content
+    * The page's HTML content.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The content
     *
@@ -171,6 +181,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
     
     /**
     * Gets the lastModifiedDateTime
+    * The date and time when the page was last modified. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -189,6 +200,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
     
     /**
     * Sets the lastModifiedDateTime
+    * The date and time when the page was last modified. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -202,6 +214,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
     
     /**
     * Gets the level
+    * The indentation level of the page. Read-only.
     *
     * @return int The level
     */
@@ -216,6 +229,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
     
     /**
     * Sets the level
+    * The indentation level of the page. Read-only.
     *
     * @param int $val The level
     *
@@ -229,6 +243,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
     
     /**
     * Gets the order
+    * The order of the page within its parent section. Read-only.
     *
     * @return int The order
     */
@@ -243,6 +258,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
     
     /**
     * Sets the order
+    * The order of the page within its parent section. Read-only.
     *
     * @param int $val The order
     *
@@ -283,13 +299,14 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
     
     /**
     * Gets the parentSection
+    * The section that contains the page. Read-only.
     *
     * @return OnenoteSection The parentSection
     */
     public function getParentSection()
     {
         if (array_key_exists("parentSection", $this->_propDict)) {
-            if (is_a($this->_propDict["parentSection"], "Microsoft\Graph\Beta\Model\OnenoteSection")) {
+            if (is_a($this->_propDict["parentSection"], "Microsoft\Graph\Model\OnenoteSection")) {
                 return $this->_propDict["parentSection"];
             } else {
                 $this->_propDict["parentSection"] = new OnenoteSection($this->_propDict["parentSection"]);
@@ -301,6 +318,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
     
     /**
     * Sets the parentSection
+    * The section that contains the page. Read-only.
     *
     * @param OnenoteSection $val The parentSection
     *
@@ -314,13 +332,14 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
     
     /**
     * Gets the parentNotebook
+    * The notebook that contains the page.  Read-only.
     *
     * @return Notebook The parentNotebook
     */
     public function getParentNotebook()
     {
         if (array_key_exists("parentNotebook", $this->_propDict)) {
-            if (is_a($this->_propDict["parentNotebook"], "Microsoft\Graph\Beta\Model\Notebook")) {
+            if (is_a($this->_propDict["parentNotebook"], "Microsoft\Graph\Model\Notebook")) {
                 return $this->_propDict["parentNotebook"];
             } else {
                 $this->_propDict["parentNotebook"] = new Notebook($this->_propDict["parentNotebook"]);
@@ -332,6 +351,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
     
     /**
     * Sets the parentNotebook
+    * The notebook that contains the page.  Read-only.
     *
     * @param Notebook $val The parentNotebook
     *

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * WorkbookTableSort class
@@ -29,6 +29,7 @@ class WorkbookTableSort extends Entity
 
      /** 
      * Gets the fields
+    * Represents the current conditions used to last sort the table. Read-only.
      *
      * @return array The fields
      */
@@ -43,6 +44,7 @@ class WorkbookTableSort extends Entity
     
     /** 
     * Sets the fields
+    * Represents the current conditions used to last sort the table. Read-only.
     *
     * @param WorkbookSortField $val The fields
     *
@@ -56,6 +58,7 @@ class WorkbookTableSort extends Entity
     
     /**
     * Gets the matchCase
+    * Represents whether the casing impacted the last sort of the table. Read-only.
     *
     * @return bool The matchCase
     */
@@ -70,6 +73,7 @@ class WorkbookTableSort extends Entity
     
     /**
     * Sets the matchCase
+    * Represents whether the casing impacted the last sort of the table. Read-only.
     *
     * @param bool $val The matchCase
     *
@@ -83,6 +87,7 @@ class WorkbookTableSort extends Entity
     
     /**
     * Gets the method
+    * Represents Chinese character ordering method last used to sort the table. The possible values are: PinYin, StrokeCount. Read-only.
     *
     * @return string The method
     */
@@ -97,6 +102,7 @@ class WorkbookTableSort extends Entity
     
     /**
     * Sets the method
+    * Represents Chinese character ordering method last used to sort the table. The possible values are: PinYin, StrokeCount. Read-only.
     *
     * @param string $val The method
     *

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * ChatMessageReaction class
 *
@@ -25,36 +25,31 @@ namespace Microsoft\Graph\Beta\Model;
 */
 class ChatMessageReaction extends Entity
 {
-
     /**
-    * Gets the type
+    * Gets the reactionType
     *
-    * @return ChatMessageReactionType The type
+    * @return string The reactionType
     */
-    public function getType()
+    public function getReactionType()
     {
-        if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "Microsoft\Graph\Beta\Model\ChatMessageReactionType")) {
-                return $this->_propDict["type"];
-            } else {
-                $this->_propDict["type"] = new ChatMessageReactionType($this->_propDict["type"]);
-                return $this->_propDict["type"];
-            }
+        if (array_key_exists("reactionType", $this->_propDict)) {
+            return $this->_propDict["reactionType"];
+        } else {
+            return null;
         }
-        return null;
     }
 
     /**
-    * Sets the type
+    * Sets the reactionType
     *
-    * @param ChatMessageReactionType $val The value to assign to the type
+    * @param string $val The value of the reactionType
     *
-    * @return ChatMessageReaction The ChatMessageReaction
+    * @return ChatMessageReaction
     */
-    public function setType($val)
+    public function setReactionType($val)
     {
-        $this->_propDict["type"] = $val;
-         return $this;
+        $this->_propDict["reactionType"] = $val;
+        return $this;
     }
 
     /**
@@ -65,7 +60,7 @@ class ChatMessageReaction extends Entity
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "Microsoft\Graph\Beta\Model\\DateTime")) {
+            if (is_a($this->_propDict["createdDateTime"], "Microsoft\Graph\Model\\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -96,7 +91,7 @@ class ChatMessageReaction extends Entity
     public function getUser()
     {
         if (array_key_exists("user", $this->_propDict)) {
-            if (is_a($this->_propDict["user"], "Microsoft\Graph\Beta\Model\IdentitySet")) {
+            if (is_a($this->_propDict["user"], "Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["user"];
             } else {
                 $this->_propDict["user"] = new IdentitySet($this->_propDict["user"]);
@@ -117,31 +112,5 @@ class ChatMessageReaction extends Entity
     {
         $this->_propDict["user"] = $val;
          return $this;
-    }
-    /**
-    * Gets the content
-    *
-    * @return string The content
-    */
-    public function getContent()
-    {
-        if (array_key_exists("content", $this->_propDict)) {
-            return $this->_propDict["content"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the content
-    *
-    * @param string $val The value of the content
-    *
-    * @return ChatMessageReaction
-    */
-    public function setContent($val)
-    {
-        $this->_propDict["content"] = $val;
-        return $this;
     }
 }

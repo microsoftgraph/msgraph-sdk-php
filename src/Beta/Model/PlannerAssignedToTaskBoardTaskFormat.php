@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * PlannerAssignedToTaskBoardTaskFormat class
@@ -28,6 +28,7 @@ class PlannerAssignedToTaskBoardTaskFormat extends Entity
 {
     /**
     * Gets the unassignedOrderHint
+    * Hint value used to order the task on the AssignedTo view of the Task Board when the task is not assigned to anyone, or if the orderHintsByAssignee dictionary does not provide an order hint for the user the task is assigned to. The format is defined as outlined here.
     *
     * @return string The unassignedOrderHint
     */
@@ -42,6 +43,7 @@ class PlannerAssignedToTaskBoardTaskFormat extends Entity
     
     /**
     * Sets the unassignedOrderHint
+    * Hint value used to order the task on the AssignedTo view of the Task Board when the task is not assigned to anyone, or if the orderHintsByAssignee dictionary does not provide an order hint for the user the task is assigned to. The format is defined as outlined here.
     *
     * @param string $val The unassignedOrderHint
     *
@@ -55,13 +57,14 @@ class PlannerAssignedToTaskBoardTaskFormat extends Entity
     
     /**
     * Gets the orderHintsByAssignee
+    * Dictionary of hints used to order tasks on the AssignedTo view of the Task Board. The key of each entry is one of the users the task is assigned to and the value is the order hint. The format of each value is defined as outlined here.
     *
     * @return PlannerOrderHintsByAssignee The orderHintsByAssignee
     */
     public function getOrderHintsByAssignee()
     {
         if (array_key_exists("orderHintsByAssignee", $this->_propDict)) {
-            if (is_a($this->_propDict["orderHintsByAssignee"], "Microsoft\Graph\Beta\Model\PlannerOrderHintsByAssignee")) {
+            if (is_a($this->_propDict["orderHintsByAssignee"], "Microsoft\Graph\Model\PlannerOrderHintsByAssignee")) {
                 return $this->_propDict["orderHintsByAssignee"];
             } else {
                 $this->_propDict["orderHintsByAssignee"] = new PlannerOrderHintsByAssignee($this->_propDict["orderHintsByAssignee"]);
@@ -73,6 +76,7 @@ class PlannerAssignedToTaskBoardTaskFormat extends Entity
     
     /**
     * Sets the orderHintsByAssignee
+    * Dictionary of hints used to order tasks on the AssignedTo view of the Task Board. The key of each entry is one of the users the task is assigned to and the value is the order hint. The format of each value is defined as outlined here.
     *
     * @param PlannerOrderHintsByAssignee $val The orderHintsByAssignee
     *

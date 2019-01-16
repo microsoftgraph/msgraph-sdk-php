@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * SharedAppleDeviceUser class
 *
@@ -27,6 +27,7 @@ class SharedAppleDeviceUser extends Entity
 {
     /**
     * Gets the userPrincipalName
+    * User name
     *
     * @return string The userPrincipalName
     */
@@ -41,6 +42,7 @@ class SharedAppleDeviceUser extends Entity
 
     /**
     * Sets the userPrincipalName
+    * User name
     *
     * @param string $val The value of the userPrincipalName
     *
@@ -53,6 +55,7 @@ class SharedAppleDeviceUser extends Entity
     }
     /**
     * Gets the dataToSync
+    * Data to sync
     *
     * @return bool The dataToSync
     */
@@ -67,6 +70,7 @@ class SharedAppleDeviceUser extends Entity
 
     /**
     * Sets the dataToSync
+    * Data to sync
     *
     * @param bool $val The value of the dataToSync
     *
@@ -79,6 +83,7 @@ class SharedAppleDeviceUser extends Entity
     }
     /**
     * Gets the dataQuota
+    * Data quota
     *
     * @return int The dataQuota
     */
@@ -93,6 +98,7 @@ class SharedAppleDeviceUser extends Entity
 
     /**
     * Sets the dataQuota
+    * Data quota
     *
     * @param int $val The value of the dataQuota
     *
@@ -105,6 +111,7 @@ class SharedAppleDeviceUser extends Entity
     }
     /**
     * Gets the dataUsed
+    * Data quota
     *
     * @return int The dataUsed
     */
@@ -119,6 +126,7 @@ class SharedAppleDeviceUser extends Entity
 
     /**
     * Sets the dataUsed
+    * Data quota
     *
     * @param int $val The value of the dataUsed
     *

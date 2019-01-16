@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * WindowsUniversalAppXContainedApp class
@@ -28,6 +28,7 @@ class WindowsUniversalAppXContainedApp extends MobileContainedApp
 {
     /**
     * Gets the appUserModelId
+    * The app user model ID of the contained app of a WindowsUniversalAppX app.
     *
     * @return string The appUserModelId
     */
@@ -42,6 +43,7 @@ class WindowsUniversalAppXContainedApp extends MobileContainedApp
     
     /**
     * Sets the appUserModelId
+    * The app user model ID of the contained app of a WindowsUniversalAppX app.
     *
     * @param string $val The appUserModelId
     *

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * WindowsInformationProtectionResourceCollection class
 *
@@ -27,6 +27,7 @@ class WindowsInformationProtectionResourceCollection extends Entity
 {
     /**
     * Gets the displayName
+    * Display name
     *
     * @return string The displayName
     */
@@ -41,6 +42,7 @@ class WindowsInformationProtectionResourceCollection extends Entity
 
     /**
     * Sets the displayName
+    * Display name
     *
     * @param string $val The value of the displayName
     *
@@ -53,6 +55,7 @@ class WindowsInformationProtectionResourceCollection extends Entity
     }
     /**
     * Gets the resources
+    * Collection of resources
     *
     * @return string The resources
     */
@@ -67,6 +70,7 @@ class WindowsInformationProtectionResourceCollection extends Entity
 
     /**
     * Sets the resources
+    * Collection of resources
     *
     * @param string $val The value of the resources
     *

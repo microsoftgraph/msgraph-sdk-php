@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * WindowsInformationProtectionApp class
 *
@@ -27,6 +27,7 @@ class WindowsInformationProtectionApp extends Entity
 {
     /**
     * Gets the displayName
+    * App display name.
     *
     * @return string The displayName
     */
@@ -41,6 +42,7 @@ class WindowsInformationProtectionApp extends Entity
 
     /**
     * Sets the displayName
+    * App display name.
     *
     * @param string $val The value of the displayName
     *
@@ -53,6 +55,7 @@ class WindowsInformationProtectionApp extends Entity
     }
     /**
     * Gets the description
+    * The app's description.
     *
     * @return string The description
     */
@@ -67,6 +70,7 @@ class WindowsInformationProtectionApp extends Entity
 
     /**
     * Sets the description
+    * The app's description.
     *
     * @param string $val The value of the description
     *
@@ -79,6 +83,7 @@ class WindowsInformationProtectionApp extends Entity
     }
     /**
     * Gets the publisherName
+    * The publisher name
     *
     * @return string The publisherName
     */
@@ -93,6 +98,7 @@ class WindowsInformationProtectionApp extends Entity
 
     /**
     * Sets the publisherName
+    * The publisher name
     *
     * @param string $val The value of the publisherName
     *
@@ -105,6 +111,7 @@ class WindowsInformationProtectionApp extends Entity
     }
     /**
     * Gets the productName
+    * The product name.
     *
     * @return string The productName
     */
@@ -119,6 +126,7 @@ class WindowsInformationProtectionApp extends Entity
 
     /**
     * Sets the productName
+    * The product name.
     *
     * @param string $val The value of the productName
     *
@@ -131,6 +139,7 @@ class WindowsInformationProtectionApp extends Entity
     }
     /**
     * Gets the denied
+    * If true, app is denied protection or exemption.
     *
     * @return bool The denied
     */
@@ -145,6 +154,7 @@ class WindowsInformationProtectionApp extends Entity
 
     /**
     * Sets the denied
+    * If true, app is denied protection or exemption.
     *
     * @param bool $val The value of the denied
     *

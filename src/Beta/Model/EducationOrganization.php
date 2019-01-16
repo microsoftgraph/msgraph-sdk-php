@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * EducationOrganization class
@@ -28,6 +28,7 @@ class EducationOrganization extends Entity
 {
     /**
     * Gets the displayName
+    * Organization display name.
     *
     * @return string The displayName
     */
@@ -42,6 +43,7 @@ class EducationOrganization extends Entity
     
     /**
     * Sets the displayName
+    * Organization display name.
     *
     * @param string $val The displayName
     *
@@ -55,6 +57,7 @@ class EducationOrganization extends Entity
     
     /**
     * Gets the description
+    * Organization description.
     *
     * @return string The description
     */
@@ -69,6 +72,7 @@ class EducationOrganization extends Entity
     
     /**
     * Sets the description
+    * Organization description.
     *
     * @param string $val The description
     *
@@ -82,13 +86,14 @@ class EducationOrganization extends Entity
     
     /**
     * Gets the externalSource
+    * Source where this organization was created from. The possible values are: sis, manual, unknownFutureValue.
     *
     * @return EducationExternalSource The externalSource
     */
     public function getExternalSource()
     {
         if (array_key_exists("externalSource", $this->_propDict)) {
-            if (is_a($this->_propDict["externalSource"], "Microsoft\Graph\Beta\Model\EducationExternalSource")) {
+            if (is_a($this->_propDict["externalSource"], "Microsoft\Graph\Model\EducationExternalSource")) {
                 return $this->_propDict["externalSource"];
             } else {
                 $this->_propDict["externalSource"] = new EducationExternalSource($this->_propDict["externalSource"]);
@@ -100,6 +105,7 @@ class EducationOrganization extends Entity
     
     /**
     * Sets the externalSource
+    * Source where this organization was created from. The possible values are: sis, manual, unknownFutureValue.
     *
     * @param EducationExternalSource $val The externalSource
     *

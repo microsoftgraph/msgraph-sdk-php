@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * WindowsAssignedAccessProfile class
@@ -28,6 +28,7 @@ class WindowsAssignedAccessProfile extends Entity
 {
     /**
     * Gets the profileName
+    * This is a friendly nameÂ used to identify a group of applications, the layout of these apps on the start menu and the users to whom this kiosk configuration is assigned.
     *
     * @return string The profileName
     */
@@ -42,6 +43,7 @@ class WindowsAssignedAccessProfile extends Entity
     
     /**
     * Sets the profileName
+    * This is a friendly nameÂ used to identify a group of applications, the layout of these apps on the start menu and the users to whom this kiosk configuration is assigned.
     *
     * @param string $val The profileName
     *
@@ -55,6 +57,7 @@ class WindowsAssignedAccessProfile extends Entity
     
     /**
     * Gets the showTaskBar
+    * This setting allows the admin to specify whether the Task Bar is shown or not.
     *
     * @return bool The showTaskBar
     */
@@ -69,6 +72,7 @@ class WindowsAssignedAccessProfile extends Entity
     
     /**
     * Sets the showTaskBar
+    * This setting allows the admin to specify whether the Task Bar is shown or not.
     *
     * @param bool $val The showTaskBar
     *
@@ -82,6 +86,7 @@ class WindowsAssignedAccessProfile extends Entity
     
     /**
     * Gets the appUserModelIds
+    * These are the only Windows Store Apps that will be available to launch from the Start menu.
     *
     * @return string The appUserModelIds
     */
@@ -96,6 +101,7 @@ class WindowsAssignedAccessProfile extends Entity
     
     /**
     * Sets the appUserModelIds
+    * These are the only Windows Store Apps that will be available to launch from the Start menu.
     *
     * @param string $val The appUserModelIds
     *
@@ -109,6 +115,7 @@ class WindowsAssignedAccessProfile extends Entity
     
     /**
     * Gets the desktopAppPaths
+    * These are the paths of the Desktop Apps that will be available on the Start menu and the only apps the user will be able to launch.
     *
     * @return string The desktopAppPaths
     */
@@ -123,6 +130,7 @@ class WindowsAssignedAccessProfile extends Entity
     
     /**
     * Sets the desktopAppPaths
+    * These are the paths of the Desktop Apps that will be available on the Start menu and the only apps the user will be able to launch.
     *
     * @param string $val The desktopAppPaths
     *
@@ -136,6 +144,7 @@ class WindowsAssignedAccessProfile extends Entity
     
     /**
     * Gets the userAccounts
+    * The user accounts that will be locked to this kiosk configuration.
     *
     * @return string The userAccounts
     */
@@ -150,6 +159,7 @@ class WindowsAssignedAccessProfile extends Entity
     
     /**
     * Sets the userAccounts
+    * The user accounts that will be locked to this kiosk configuration.
     *
     * @param string $val The userAccounts
     *
@@ -163,6 +173,7 @@ class WindowsAssignedAccessProfile extends Entity
     
     /**
     * Gets the startMenuLayoutXml
+    * Allows admins to override the default Start layout and prevents the user from changing it.Â The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format.
     *
     * @return \GuzzleHttp\Psr7\Stream The startMenuLayoutXml
     */
@@ -181,6 +192,7 @@ class WindowsAssignedAccessProfile extends Entity
     
     /**
     * Sets the startMenuLayoutXml
+    * Allows admins to override the default Start layout and prevents the user from changing it.Â The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The startMenuLayoutXml
     *

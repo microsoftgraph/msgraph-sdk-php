@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * MailboxSettings class
 *
@@ -28,13 +28,14 @@ class MailboxSettings extends Entity
 
     /**
     * Gets the automaticRepliesSetting
+    * Configuration settings to automatically notify the sender of an incoming email with a message from the signed-in user.
     *
     * @return AutomaticRepliesSetting The automaticRepliesSetting
     */
     public function getAutomaticRepliesSetting()
     {
         if (array_key_exists("automaticRepliesSetting", $this->_propDict)) {
-            if (is_a($this->_propDict["automaticRepliesSetting"], "Microsoft\Graph\Beta\Model\AutomaticRepliesSetting")) {
+            if (is_a($this->_propDict["automaticRepliesSetting"], "Microsoft\Graph\Model\AutomaticRepliesSetting")) {
                 return $this->_propDict["automaticRepliesSetting"];
             } else {
                 $this->_propDict["automaticRepliesSetting"] = new AutomaticRepliesSetting($this->_propDict["automaticRepliesSetting"]);
@@ -46,6 +47,7 @@ class MailboxSettings extends Entity
 
     /**
     * Sets the automaticRepliesSetting
+    * Configuration settings to automatically notify the sender of an incoming email with a message from the signed-in user.
     *
     * @param AutomaticRepliesSetting $val The value to assign to the automaticRepliesSetting
     *
@@ -58,6 +60,7 @@ class MailboxSettings extends Entity
     }
     /**
     * Gets the archiveFolder
+    * Folder ID of an archive folder for the user.
     *
     * @return string The archiveFolder
     */
@@ -72,6 +75,7 @@ class MailboxSettings extends Entity
 
     /**
     * Sets the archiveFolder
+    * Folder ID of an archive folder for the user.
     *
     * @param string $val The value of the archiveFolder
     *
@@ -84,6 +88,7 @@ class MailboxSettings extends Entity
     }
     /**
     * Gets the timeZone
+    * The default time zone for the user's mailbox.
     *
     * @return string The timeZone
     */
@@ -98,6 +103,7 @@ class MailboxSettings extends Entity
 
     /**
     * Sets the timeZone
+    * The default time zone for the user's mailbox.
     *
     * @param string $val The value of the timeZone
     *
@@ -111,13 +117,14 @@ class MailboxSettings extends Entity
 
     /**
     * Gets the language
+    * The locale information for the user, including the preferred language and country/region.
     *
     * @return LocaleInfo The language
     */
     public function getLanguage()
     {
         if (array_key_exists("language", $this->_propDict)) {
-            if (is_a($this->_propDict["language"], "Microsoft\Graph\Beta\Model\LocaleInfo")) {
+            if (is_a($this->_propDict["language"], "Microsoft\Graph\Model\LocaleInfo")) {
                 return $this->_propDict["language"];
             } else {
                 $this->_propDict["language"] = new LocaleInfo($this->_propDict["language"]);
@@ -129,6 +136,7 @@ class MailboxSettings extends Entity
 
     /**
     * Sets the language
+    * The locale information for the user, including the preferred language and country/region.
     *
     * @param LocaleInfo $val The value to assign to the language
     *
@@ -142,13 +150,14 @@ class MailboxSettings extends Entity
 
     /**
     * Gets the workingHours
+    * The days of the week and hours in a specific time zone that the user works.
     *
     * @return WorkingHours The workingHours
     */
     public function getWorkingHours()
     {
         if (array_key_exists("workingHours", $this->_propDict)) {
-            if (is_a($this->_propDict["workingHours"], "Microsoft\Graph\Beta\Model\WorkingHours")) {
+            if (is_a($this->_propDict["workingHours"], "Microsoft\Graph\Model\WorkingHours")) {
                 return $this->_propDict["workingHours"];
             } else {
                 $this->_propDict["workingHours"] = new WorkingHours($this->_propDict["workingHours"]);
@@ -160,6 +169,7 @@ class MailboxSettings extends Entity
 
     /**
     * Sets the workingHours
+    * The days of the week and hours in a specific time zone that the user works.
     *
     * @param WorkingHours $val The value to assign to the workingHours
     *

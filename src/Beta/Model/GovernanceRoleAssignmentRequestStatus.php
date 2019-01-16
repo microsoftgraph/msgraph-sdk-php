@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * GovernanceRoleAssignmentRequestStatus class
 *
@@ -86,7 +86,7 @@ class GovernanceRoleAssignmentRequestStatus extends Entity
     public function getStatusDetails()
     {
         if (array_key_exists("statusDetails", $this->_propDict)) {
-            if (is_a($this->_propDict["statusDetails"], "Microsoft\Graph\Beta\Model\KeyValue")) {
+            if (is_a($this->_propDict["statusDetails"], "Microsoft\Graph\Model\KeyValue")) {
                 return $this->_propDict["statusDetails"];
             } else {
                 $this->_propDict["statusDetails"] = new KeyValue($this->_propDict["statusDetails"]);

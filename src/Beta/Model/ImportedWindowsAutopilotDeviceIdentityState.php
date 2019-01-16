@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * ImportedWindowsAutopilotDeviceIdentityState class
 *
@@ -28,13 +28,14 @@ class ImportedWindowsAutopilotDeviceIdentityState extends Entity
 
     /**
     * Gets the deviceImportStatus
+    * Device status reported by Device Directory Service(DDS). Possible values are: unknown, pending, partial, complete, error.
     *
     * @return ImportedWindowsAutopilotDeviceIdentityImportStatus The deviceImportStatus
     */
     public function getDeviceImportStatus()
     {
         if (array_key_exists("deviceImportStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceImportStatus"], "Microsoft\Graph\Beta\Model\ImportedWindowsAutopilotDeviceIdentityImportStatus")) {
+            if (is_a($this->_propDict["deviceImportStatus"], "Microsoft\Graph\Model\ImportedWindowsAutopilotDeviceIdentityImportStatus")) {
                 return $this->_propDict["deviceImportStatus"];
             } else {
                 $this->_propDict["deviceImportStatus"] = new ImportedWindowsAutopilotDeviceIdentityImportStatus($this->_propDict["deviceImportStatus"]);
@@ -46,6 +47,7 @@ class ImportedWindowsAutopilotDeviceIdentityState extends Entity
 
     /**
     * Sets the deviceImportStatus
+    * Device status reported by Device Directory Service(DDS). Possible values are: unknown, pending, partial, complete, error.
     *
     * @param ImportedWindowsAutopilotDeviceIdentityImportStatus $val The value to assign to the deviceImportStatus
     *
@@ -58,6 +60,7 @@ class ImportedWindowsAutopilotDeviceIdentityState extends Entity
     }
     /**
     * Gets the deviceRegistrationId
+    * Device Registration ID for successfully added device reported by Device Directory Service(DDS).
     *
     * @return string The deviceRegistrationId
     */
@@ -72,6 +75,7 @@ class ImportedWindowsAutopilotDeviceIdentityState extends Entity
 
     /**
     * Sets the deviceRegistrationId
+    * Device Registration ID for successfully added device reported by Device Directory Service(DDS).
     *
     * @param string $val The value of the deviceRegistrationId
     *
@@ -84,6 +88,7 @@ class ImportedWindowsAutopilotDeviceIdentityState extends Entity
     }
     /**
     * Gets the deviceErrorCode
+    * Device error code reported by Device Directory Service(DDS).
     *
     * @return int The deviceErrorCode
     */
@@ -98,6 +103,7 @@ class ImportedWindowsAutopilotDeviceIdentityState extends Entity
 
     /**
     * Sets the deviceErrorCode
+    * Device error code reported by Device Directory Service(DDS).
     *
     * @param int $val The value of the deviceErrorCode
     *
@@ -110,6 +116,7 @@ class ImportedWindowsAutopilotDeviceIdentityState extends Entity
     }
     /**
     * Gets the deviceErrorName
+    * Device error name reported by Device Directory Service(DDS).
     *
     * @return string The deviceErrorName
     */
@@ -124,6 +131,7 @@ class ImportedWindowsAutopilotDeviceIdentityState extends Entity
 
     /**
     * Sets the deviceErrorName
+    * Device error name reported by Device Directory Service(DDS).
     *
     * @param string $val The value of the deviceErrorName
     *

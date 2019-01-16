@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * ManagedAppStatusRaw class
@@ -28,6 +28,7 @@ class ManagedAppStatusRaw extends ManagedAppStatus
 {
     /**
     * Gets the content
+    * Status report content.
     *
     * @return string The content
     */
@@ -42,6 +43,7 @@ class ManagedAppStatusRaw extends ManagedAppStatus
     
     /**
     * Sets the content
+    * Status report content.
     *
     * @param string $val The content
     *

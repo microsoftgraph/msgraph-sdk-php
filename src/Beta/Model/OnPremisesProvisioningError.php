@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * OnPremisesProvisioningError class
 *
@@ -27,6 +27,7 @@ class OnPremisesProvisioningError extends Entity
 {
     /**
     * Gets the value
+    * Value of the property causing the error.
     *
     * @return string The value
     */
@@ -41,6 +42,7 @@ class OnPremisesProvisioningError extends Entity
 
     /**
     * Sets the value
+    * Value of the property causing the error.
     *
     * @param string $val The value of the value
     *
@@ -53,6 +55,7 @@ class OnPremisesProvisioningError extends Entity
     }
     /**
     * Gets the category
+    * Category of the provisioning error. Note: Currently, there is only one possible value. Possible value: PropertyConflict - indicates a property value is not unique. Other objects contain the same value for the property.
     *
     * @return string The category
     */
@@ -67,6 +70,7 @@ class OnPremisesProvisioningError extends Entity
 
     /**
     * Sets the category
+    * Category of the provisioning error. Note: Currently, there is only one possible value. Possible value: PropertyConflict - indicates a property value is not unique. Other objects contain the same value for the property.
     *
     * @param string $val The value of the category
     *
@@ -79,6 +83,7 @@ class OnPremisesProvisioningError extends Entity
     }
     /**
     * Gets the propertyCausingError
+    * Name of the directory property causing the error. Current possible values: UserPrincipalName or ProxyAddress
     *
     * @return string The propertyCausingError
     */
@@ -93,6 +98,7 @@ class OnPremisesProvisioningError extends Entity
 
     /**
     * Sets the propertyCausingError
+    * Name of the directory property causing the error. Current possible values: UserPrincipalName or ProxyAddress
     *
     * @param string $val The value of the propertyCausingError
     *
@@ -106,13 +112,14 @@ class OnPremisesProvisioningError extends Entity
 
     /**
     * Gets the occurredDateTime
+    * The date and time at which the error occurred.
     *
     * @return \DateTime The occurredDateTime
     */
     public function getOccurredDateTime()
     {
         if (array_key_exists("occurredDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["occurredDateTime"], "Microsoft\Graph\Beta\Model\\DateTime")) {
+            if (is_a($this->_propDict["occurredDateTime"], "Microsoft\Graph\Model\\DateTime")) {
                 return $this->_propDict["occurredDateTime"];
             } else {
                 $this->_propDict["occurredDateTime"] = new \DateTime($this->_propDict["occurredDateTime"]);
@@ -124,6 +131,7 @@ class OnPremisesProvisioningError extends Entity
 
     /**
     * Sets the occurredDateTime
+    * The date and time at which the error occurred.
     *
     * @param \DateTime $val The value to assign to the occurredDateTime
     *

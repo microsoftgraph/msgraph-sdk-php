@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * IosWebContentFilterSpecificWebsitesAccess class
 *
@@ -25,16 +25,26 @@ namespace Microsoft\Graph\Beta\Model;
 */
 class IosWebContentFilterSpecificWebsitesAccess extends IosWebContentFilterBase
 {
+    /**
+    * Set the @odata.type since this type is immediately descended from an abstract
+    * type that is referenced as the type in an entity.
+    */
+    public function __construct()
+    {
+        $this->setODataType("#microsoft.graph.iosWebContentFilterSpecificWebsitesAccess");
+    }
+
 
     /**
     * Gets the specificWebsitesOnly
+    * URL bookmarks which will be installed into built-in browser and user is only allowed to access websites through bookmarks. This collection can contain a maximum of 500 elements.
     *
     * @return IosBookmark The specificWebsitesOnly
     */
     public function getSpecificWebsitesOnly()
     {
         if (array_key_exists("specificWebsitesOnly", $this->_propDict)) {
-            if (is_a($this->_propDict["specificWebsitesOnly"], "Microsoft\Graph\Beta\Model\IosBookmark")) {
+            if (is_a($this->_propDict["specificWebsitesOnly"], "Microsoft\Graph\Model\IosBookmark")) {
                 return $this->_propDict["specificWebsitesOnly"];
             } else {
                 $this->_propDict["specificWebsitesOnly"] = new IosBookmark($this->_propDict["specificWebsitesOnly"]);
@@ -46,6 +56,7 @@ class IosWebContentFilterSpecificWebsitesAccess extends IosWebContentFilterBase
 
     /**
     * Sets the specificWebsitesOnly
+    * URL bookmarks which will be installed into built-in browser and user is only allowed to access websites through bookmarks. This collection can contain a maximum of 500 elements.
     *
     * @param IosBookmark $val The value to assign to the specificWebsitesOnly
     *
@@ -59,13 +70,14 @@ class IosWebContentFilterSpecificWebsitesAccess extends IosWebContentFilterBase
 
     /**
     * Gets the websiteList
+    * URL bookmarks which will be installed into built-in browser and user is only allowed to access websites through bookmarks. This collection can contain a maximum of 500 elements.
     *
     * @return IosBookmark The websiteList
     */
     public function getWebsiteList()
     {
         if (array_key_exists("websiteList", $this->_propDict)) {
-            if (is_a($this->_propDict["websiteList"], "Microsoft\Graph\Beta\Model\IosBookmark")) {
+            if (is_a($this->_propDict["websiteList"], "Microsoft\Graph\Model\IosBookmark")) {
                 return $this->_propDict["websiteList"];
             } else {
                 $this->_propDict["websiteList"] = new IosBookmark($this->_propDict["websiteList"]);
@@ -77,6 +89,7 @@ class IosWebContentFilterSpecificWebsitesAccess extends IosWebContentFilterBase
 
     /**
     * Sets the websiteList
+    * URL bookmarks which will be installed into built-in browser and user is only allowed to access websites through bookmarks. This collection can contain a maximum of 500 elements.
     *
     * @param IosBookmark $val The value to assign to the websiteList
     *

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * PrivilegedRoleSettings class
@@ -61,7 +61,7 @@ class PrivilegedRoleSettings extends Entity
     public function getMinElevationDuration()
     {
         if (array_key_exists("minElevationDuration", $this->_propDict)) {
-            if (is_a($this->_propDict["minElevationDuration"], "Microsoft\Graph\Beta\Model\Duration")) {
+            if (is_a($this->_propDict["minElevationDuration"], "Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["minElevationDuration"];
             } else {
                 $this->_propDict["minElevationDuration"] = new Duration($this->_propDict["minElevationDuration"]);
@@ -92,7 +92,7 @@ class PrivilegedRoleSettings extends Entity
     public function getMaxElavationDuration()
     {
         if (array_key_exists("maxElavationDuration", $this->_propDict)) {
-            if (is_a($this->_propDict["maxElavationDuration"], "Microsoft\Graph\Beta\Model\Duration")) {
+            if (is_a($this->_propDict["maxElavationDuration"], "Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["maxElavationDuration"];
             } else {
                 $this->_propDict["maxElavationDuration"] = new Duration($this->_propDict["maxElavationDuration"]);
@@ -123,7 +123,7 @@ class PrivilegedRoleSettings extends Entity
     public function getElevationDuration()
     {
         if (array_key_exists("elevationDuration", $this->_propDict)) {
-            if (is_a($this->_propDict["elevationDuration"], "Microsoft\Graph\Beta\Model\Duration")) {
+            if (is_a($this->_propDict["elevationDuration"], "Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["elevationDuration"];
             } else {
                 $this->_propDict["elevationDuration"] = new Duration($this->_propDict["elevationDuration"]);

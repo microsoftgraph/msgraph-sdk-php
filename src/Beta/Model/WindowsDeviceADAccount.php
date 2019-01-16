@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * WindowsDeviceADAccount class
 *
@@ -27,6 +27,7 @@ class WindowsDeviceADAccount extends WindowsDeviceAccount
 {
     /**
     * Gets the domainName
+    * Not yet documented
     *
     * @return string The domainName
     */
@@ -41,6 +42,7 @@ class WindowsDeviceADAccount extends WindowsDeviceAccount
 
     /**
     * Sets the domainName
+    * Not yet documented
     *
     * @param string $val The value of the domainName
     *
@@ -53,6 +55,7 @@ class WindowsDeviceADAccount extends WindowsDeviceAccount
     }
     /**
     * Gets the userName
+    * Not yet documented
     *
     * @return string The userName
     */
@@ -67,6 +70,7 @@ class WindowsDeviceADAccount extends WindowsDeviceAccount
 
     /**
     * Sets the userName
+    * Not yet documented
     *
     * @param string $val The value of the userName
     *

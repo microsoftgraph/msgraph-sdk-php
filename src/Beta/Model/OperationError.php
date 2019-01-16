@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * OperationError class
 *
@@ -27,6 +27,7 @@ class OperationError extends Entity
 {
     /**
     * Gets the code
+    * Operation error code.
     *
     * @return string The code
     */
@@ -41,6 +42,7 @@ class OperationError extends Entity
 
     /**
     * Sets the code
+    * Operation error code.
     *
     * @param string $val The value of the code
     *
@@ -53,6 +55,7 @@ class OperationError extends Entity
     }
     /**
     * Gets the message
+    * Operation error message.
     *
     * @return string The message
     */
@@ -67,6 +70,7 @@ class OperationError extends Entity
 
     /**
     * Sets the message
+    * Operation error message.
     *
     * @param string $val The value of the message
     *

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * WindowsInformationProtectionDataRecoveryCertificate class
 *
@@ -27,6 +27,7 @@ class WindowsInformationProtectionDataRecoveryCertificate extends Entity
 {
     /**
     * Gets the subjectName
+    * Data recovery Certificate subject name
     *
     * @return string The subjectName
     */
@@ -41,6 +42,7 @@ class WindowsInformationProtectionDataRecoveryCertificate extends Entity
 
     /**
     * Sets the subjectName
+    * Data recovery Certificate subject name
     *
     * @param string $val The value of the subjectName
     *
@@ -53,6 +55,7 @@ class WindowsInformationProtectionDataRecoveryCertificate extends Entity
     }
     /**
     * Gets the description
+    * Data recovery Certificate description
     *
     * @return string The description
     */
@@ -67,6 +70,7 @@ class WindowsInformationProtectionDataRecoveryCertificate extends Entity
 
     /**
     * Sets the description
+    * Data recovery Certificate description
     *
     * @param string $val The value of the description
     *
@@ -80,13 +84,14 @@ class WindowsInformationProtectionDataRecoveryCertificate extends Entity
 
     /**
     * Gets the expirationDateTime
+    * Data recovery Certificate expiration datetime
     *
     * @return \DateTime The expirationDateTime
     */
     public function getExpirationDateTime()
     {
         if (array_key_exists("expirationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["expirationDateTime"], "Microsoft\Graph\Beta\Model\\DateTime")) {
+            if (is_a($this->_propDict["expirationDateTime"], "Microsoft\Graph\Model\\DateTime")) {
                 return $this->_propDict["expirationDateTime"];
             } else {
                 $this->_propDict["expirationDateTime"] = new \DateTime($this->_propDict["expirationDateTime"]);
@@ -98,6 +103,7 @@ class WindowsInformationProtectionDataRecoveryCertificate extends Entity
 
     /**
     * Sets the expirationDateTime
+    * Data recovery Certificate expiration datetime
     *
     * @param \DateTime $val The value to assign to the expirationDateTime
     *
@@ -111,13 +117,14 @@ class WindowsInformationProtectionDataRecoveryCertificate extends Entity
 
     /**
     * Gets the certificate
+    * Data recovery Certificate
     *
     * @return \GuzzleHttp\Psr7\Stream The certificate
     */
     public function getCertificate()
     {
         if (array_key_exists("certificate", $this->_propDict)) {
-            if (is_a($this->_propDict["certificate"], "Microsoft\Graph\Beta\Model\\GuzzleHttp\Psr7\Stream")) {
+            if (is_a($this->_propDict["certificate"], "Microsoft\Graph\Model\\GuzzleHttp\Psr7\Stream")) {
                 return $this->_propDict["certificate"];
             } else {
                 $this->_propDict["certificate"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["certificate"]);
@@ -129,6 +136,7 @@ class WindowsInformationProtectionDataRecoveryCertificate extends Entity
 
     /**
     * Sets the certificate
+    * Data recovery Certificate
     *
     * @param \GuzzleHttp\Psr7\Stream $val The value to assign to the certificate
     *

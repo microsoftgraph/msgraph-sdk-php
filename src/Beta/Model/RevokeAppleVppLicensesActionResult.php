@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * RevokeAppleVppLicensesActionResult class
 *
@@ -27,6 +27,7 @@ class RevokeAppleVppLicensesActionResult extends DeviceActionResult
 {
     /**
     * Gets the totalLicensesCount
+    * Total number of Apple Vpp licenses associated
     *
     * @return int The totalLicensesCount
     */
@@ -41,6 +42,7 @@ class RevokeAppleVppLicensesActionResult extends DeviceActionResult
 
     /**
     * Sets the totalLicensesCount
+    * Total number of Apple Vpp licenses associated
     *
     * @param int $val The value of the totalLicensesCount
     *
@@ -53,6 +55,7 @@ class RevokeAppleVppLicensesActionResult extends DeviceActionResult
     }
     /**
     * Gets the failedLicensesCount
+    * Total number of Apple Vpp licenses that failed to revoke
     *
     * @return int The failedLicensesCount
     */
@@ -67,6 +70,7 @@ class RevokeAppleVppLicensesActionResult extends DeviceActionResult
 
     /**
     * Sets the failedLicensesCount
+    * Total number of Apple Vpp licenses that failed to revoke
     *
     * @param int $val The value of the failedLicensesCount
     *

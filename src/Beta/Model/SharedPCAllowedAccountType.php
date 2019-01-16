@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 use Microsoft\Graph\Core\Enum;
 
@@ -31,6 +31,7 @@ class SharedPCAllowedAccountType extends Enum
     /**
     * The Enum SharedPCAllowedAccountType
     */
+    const NOT_CONFIGURED = "notConfigured";
     const GUEST = "guest";
     const DOMAIN = "domain";
 }

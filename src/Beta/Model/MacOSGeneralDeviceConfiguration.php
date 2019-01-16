@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * MacOSGeneralDeviceConfiguration class
@@ -29,6 +29,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
 
      /** 
      * Gets the compliantAppsList
+    * List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
      *
      * @return array The compliantAppsList
      */
@@ -43,6 +44,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /** 
     * Sets the compliantAppsList
+    * List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
     *
     * @param AppListItem $val The compliantAppsList
     *
@@ -56,13 +58,14 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the compliantAppListType
+    * List that is in the CompliantAppsList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
     *
     * @return AppListType The compliantAppListType
     */
     public function getCompliantAppListType()
     {
         if (array_key_exists("compliantAppListType", $this->_propDict)) {
-            if (is_a($this->_propDict["compliantAppListType"], "Microsoft\Graph\Beta\Model\AppListType")) {
+            if (is_a($this->_propDict["compliantAppListType"], "Microsoft\Graph\Model\AppListType")) {
                 return $this->_propDict["compliantAppListType"];
             } else {
                 $this->_propDict["compliantAppListType"] = new AppListType($this->_propDict["compliantAppListType"]);
@@ -74,6 +77,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the compliantAppListType
+    * List that is in the CompliantAppsList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
     *
     * @param AppListType $val The compliantAppListType
     *
@@ -87,6 +91,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the emailInDomainSuffixes
+    * An email address lacking a suffix that matches any of these strings will be considered out-of-domain.
     *
     * @return string The emailInDomainSuffixes
     */
@@ -101,6 +106,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the emailInDomainSuffixes
+    * An email address lacking a suffix that matches any of these strings will be considered out-of-domain.
     *
     * @param string $val The emailInDomainSuffixes
     *
@@ -114,6 +120,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordBlockSimple
+    * Block simple passwords.
     *
     * @return bool The passwordBlockSimple
     */
@@ -128,6 +135,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordBlockSimple
+    * Block simple passwords.
     *
     * @param bool $val The passwordBlockSimple
     *
@@ -141,6 +149,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordExpirationDays
+    * Number of days before the password expires.
     *
     * @return int The passwordExpirationDays
     */
@@ -155,6 +164,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordExpirationDays
+    * Number of days before the password expires.
     *
     * @param int $val The passwordExpirationDays
     *
@@ -168,6 +178,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordMinimumCharacterSetCount
+    * Number of character sets a password must contain. Valid values 0 to 4
     *
     * @return int The passwordMinimumCharacterSetCount
     */
@@ -182,6 +193,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordMinimumCharacterSetCount
+    * Number of character sets a password must contain. Valid values 0 to 4
     *
     * @param int $val The passwordMinimumCharacterSetCount
     *
@@ -195,6 +207,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordMinimumLength
+    * Minimum length of passwords.
     *
     * @return int The passwordMinimumLength
     */
@@ -209,6 +222,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordMinimumLength
+    * Minimum length of passwords.
     *
     * @param int $val The passwordMinimumLength
     *
@@ -222,6 +236,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordMinutesOfInactivityBeforeLock
+    * Minutes of inactivity required before a password is required.
     *
     * @return int The passwordMinutesOfInactivityBeforeLock
     */
@@ -236,6 +251,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordMinutesOfInactivityBeforeLock
+    * Minutes of inactivity required before a password is required.
     *
     * @param int $val The passwordMinutesOfInactivityBeforeLock
     *
@@ -249,6 +265,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordMinutesOfInactivityBeforeScreenTimeout
+    * Minutes of inactivity required before the screen times out.
     *
     * @return int The passwordMinutesOfInactivityBeforeScreenTimeout
     */
@@ -263,6 +280,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordMinutesOfInactivityBeforeScreenTimeout
+    * Minutes of inactivity required before the screen times out.
     *
     * @param int $val The passwordMinutesOfInactivityBeforeScreenTimeout
     *
@@ -276,6 +294,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordPreviousPasswordBlockCount
+    * Number of previous passwords to block.
     *
     * @return int The passwordPreviousPasswordBlockCount
     */
@@ -290,6 +309,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordPreviousPasswordBlockCount
+    * Number of previous passwords to block.
     *
     * @param int $val The passwordPreviousPasswordBlockCount
     *
@@ -303,13 +323,14 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordRequiredType
+    * Type of password that is required. Possible values are: deviceDefault, alphanumeric, numeric.
     *
     * @return RequiredPasswordType The passwordRequiredType
     */
     public function getPasswordRequiredType()
     {
         if (array_key_exists("passwordRequiredType", $this->_propDict)) {
-            if (is_a($this->_propDict["passwordRequiredType"], "Microsoft\Graph\Beta\Model\RequiredPasswordType")) {
+            if (is_a($this->_propDict["passwordRequiredType"], "Microsoft\Graph\Model\RequiredPasswordType")) {
                 return $this->_propDict["passwordRequiredType"];
             } else {
                 $this->_propDict["passwordRequiredType"] = new RequiredPasswordType($this->_propDict["passwordRequiredType"]);
@@ -321,6 +342,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordRequiredType
+    * Type of password that is required. Possible values are: deviceDefault, alphanumeric, numeric.
     *
     * @param RequiredPasswordType $val The passwordRequiredType
     *
@@ -334,6 +356,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordRequired
+    * Whether or not to require a password.
     *
     * @return bool The passwordRequired
     */
@@ -348,6 +371,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordRequired
+    * Whether or not to require a password.
     *
     * @param bool $val The passwordRequired
     *
@@ -360,7 +384,124 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the keychainBlockCloudSync
+    * Indicates whether or not iCloud keychain synchronization is blocked (macOS 10.12 and later).
+    *
+    * @return bool The keychainBlockCloudSync
+    */
+    public function getKeychainBlockCloudSync()
+    {
+        if (array_key_exists("keychainBlockCloudSync", $this->_propDict)) {
+            return $this->_propDict["keychainBlockCloudSync"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the keychainBlockCloudSync
+    * Indicates whether or not iCloud keychain synchronization is blocked (macOS 10.12 and later).
+    *
+    * @param bool $val The keychainBlockCloudSync
+    *
+    * @return MacOSGeneralDeviceConfiguration
+    */
+    public function setKeychainBlockCloudSync($val)
+    {
+        $this->_propDict["keychainBlockCloudSync"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the airPrintBlocked
+    * Indicates whether or not AirPrint is blocked (macOS 10.12 and later).
+    *
+    * @return bool The airPrintBlocked
+    */
+    public function getAirPrintBlocked()
+    {
+        if (array_key_exists("airPrintBlocked", $this->_propDict)) {
+            return $this->_propDict["airPrintBlocked"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the airPrintBlocked
+    * Indicates whether or not AirPrint is blocked (macOS 10.12 and later).
+    *
+    * @param bool $val The airPrintBlocked
+    *
+    * @return MacOSGeneralDeviceConfiguration
+    */
+    public function setAirPrintBlocked($val)
+    {
+        $this->_propDict["airPrintBlocked"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the airPrintForceTrustedTLS
+    * Indicates if trusted certificates are required for TLS printing communication (macOS 10.13 and later).
+    *
+    * @return bool The airPrintForceTrustedTLS
+    */
+    public function getAirPrintForceTrustedTLS()
+    {
+        if (array_key_exists("airPrintForceTrustedTLS", $this->_propDict)) {
+            return $this->_propDict["airPrintForceTrustedTLS"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the airPrintForceTrustedTLS
+    * Indicates if trusted certificates are required for TLS printing communication (macOS 10.13 and later).
+    *
+    * @param bool $val The airPrintForceTrustedTLS
+    *
+    * @return MacOSGeneralDeviceConfiguration
+    */
+    public function setAirPrintForceTrustedTLS($val)
+    {
+        $this->_propDict["airPrintForceTrustedTLS"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the airPrintBlockiBeaconDiscovery
+    * Indicates whether or not iBeacon discovery of AirPrint printers is blocked. This prevents spurious AirPrint Bluetooth beacons from phishing for network traffic (macOS 10.3 and later).
+    *
+    * @return bool The airPrintBlockiBeaconDiscovery
+    */
+    public function getAirPrintBlockiBeaconDiscovery()
+    {
+        if (array_key_exists("airPrintBlockiBeaconDiscovery", $this->_propDict)) {
+            return $this->_propDict["airPrintBlockiBeaconDiscovery"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the airPrintBlockiBeaconDiscovery
+    * Indicates whether or not iBeacon discovery of AirPrint printers is blocked. This prevents spurious AirPrint Bluetooth beacons from phishing for network traffic (macOS 10.3 and later).
+    *
+    * @param bool $val The airPrintBlockiBeaconDiscovery
+    *
+    * @return MacOSGeneralDeviceConfiguration
+    */
+    public function setAirPrintBlockiBeaconDiscovery($val)
+    {
+        $this->_propDict["airPrintBlockiBeaconDiscovery"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the safariBlockAutofill
+    * Indicates whether or not to block the user from using Auto fill in Safari.
     *
     * @return bool The safariBlockAutofill
     */
@@ -375,6 +516,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the safariBlockAutofill
+    * Indicates whether or not to block the user from using Auto fill in Safari.
     *
     * @param bool $val The safariBlockAutofill
     *
@@ -388,6 +530,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the cameraBlocked
+    * Indicates whether or not to block the user from accessing the camera of the device.
     *
     * @return bool The cameraBlocked
     */
@@ -402,6 +545,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the cameraBlocked
+    * Indicates whether or not to block the user from accessing the camera of the device.
     *
     * @param bool $val The cameraBlocked
     *
@@ -415,6 +559,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the iTunesBlockMusicService
+    * Indicates whether or not to block Music service and revert Music app to classic mode.
     *
     * @return bool The iTunesBlockMusicService
     */
@@ -429,6 +574,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the iTunesBlockMusicService
+    * Indicates whether or not to block Music service and revert Music app to classic mode.
     *
     * @param bool $val The iTunesBlockMusicService
     *
@@ -442,6 +588,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the spotlightBlockInternetResults
+    * Indicates whether or not to block Spotlight from returning any results from an Internet search.
     *
     * @return bool The spotlightBlockInternetResults
     */
@@ -456,6 +603,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the spotlightBlockInternetResults
+    * Indicates whether or not to block Spotlight from returning any results from an Internet search.
     *
     * @param bool $val The spotlightBlockInternetResults
     *
@@ -469,6 +617,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the keyboardBlockDictation
+    * Indicates whether or not to block the user from using dictation input.
     *
     * @return bool The keyboardBlockDictation
     */
@@ -483,6 +632,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the keyboardBlockDictation
+    * Indicates whether or not to block the user from using dictation input.
     *
     * @param bool $val The keyboardBlockDictation
     *
@@ -496,6 +646,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the definitionLookupBlocked
+    * Indicates whether or not to block definition lookup.
     *
     * @return bool The definitionLookupBlocked
     */
@@ -510,6 +661,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the definitionLookupBlocked
+    * Indicates whether or not to block definition lookup.
     *
     * @param bool $val The definitionLookupBlocked
     *
@@ -523,6 +675,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the appleWatchBlockAutoUnlock
+    * Indicates whether or to block users from unlocking their Mac with Apple Watch.
     *
     * @return bool The appleWatchBlockAutoUnlock
     */
@@ -537,6 +690,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the appleWatchBlockAutoUnlock
+    * Indicates whether or to block users from unlocking their Mac with Apple Watch.
     *
     * @param bool $val The appleWatchBlockAutoUnlock
     *
@@ -550,6 +704,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the iTunesBlockFileSharing
+    * Indicates whether or not to block files from being transferred using iTunes.
     *
     * @return bool The iTunesBlockFileSharing
     */
@@ -564,6 +719,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the iTunesBlockFileSharing
+    * Indicates whether or not to block files from being transferred using iTunes.
     *
     * @param bool $val The iTunesBlockFileSharing
     *
@@ -577,6 +733,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the iCloudBlockDocumentSync
+    * Indicates whether or not to block iCloud document sync.
     *
     * @return bool The iCloudBlockDocumentSync
     */
@@ -591,6 +748,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the iCloudBlockDocumentSync
+    * Indicates whether or not to block iCloud document sync.
     *
     * @param bool $val The iCloudBlockDocumentSync
     *
@@ -604,6 +762,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the iCloudBlockMail
+    * Indicates whether or not to block iCloud from syncing mail.
     *
     * @return bool The iCloudBlockMail
     */
@@ -618,6 +777,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the iCloudBlockMail
+    * Indicates whether or not to block iCloud from syncing mail.
     *
     * @param bool $val The iCloudBlockMail
     *
@@ -631,6 +791,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the iCloudBlockAddressBook
+    * Indicates whether or not to block iCloud from syncing contacts.
     *
     * @return bool The iCloudBlockAddressBook
     */
@@ -645,6 +806,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the iCloudBlockAddressBook
+    * Indicates whether or not to block iCloud from syncing contacts.
     *
     * @param bool $val The iCloudBlockAddressBook
     *
@@ -658,6 +820,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the iCloudBlockCalendar
+    * Indicates whether or not to block iCloud from syncing calendars.
     *
     * @return bool The iCloudBlockCalendar
     */
@@ -672,6 +835,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the iCloudBlockCalendar
+    * Indicates whether or not to block iCloud from syncing calendars.
     *
     * @param bool $val The iCloudBlockCalendar
     *
@@ -685,6 +849,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the iCloudBlockReminders
+    * Indicates whether or not to block iCloud from syncing reminders.
     *
     * @return bool The iCloudBlockReminders
     */
@@ -699,6 +864,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the iCloudBlockReminders
+    * Indicates whether or not to block iCloud from syncing reminders.
     *
     * @param bool $val The iCloudBlockReminders
     *
@@ -712,6 +878,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the iCloudBlockBookmarks
+    * Indicates whether or not to block iCloud from syncing bookmarks.
     *
     * @return bool The iCloudBlockBookmarks
     */
@@ -726,6 +893,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the iCloudBlockBookmarks
+    * Indicates whether or not to block iCloud from syncing bookmarks.
     *
     * @param bool $val The iCloudBlockBookmarks
     *
@@ -739,6 +907,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the iCloudBlockNotes
+    * Indicates whether or not to block iCloud from syncing notes.
     *
     * @return bool The iCloudBlockNotes
     */
@@ -753,6 +922,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the iCloudBlockNotes
+    * Indicates whether or not to block iCloud from syncing notes.
     *
     * @param bool $val The iCloudBlockNotes
     *
@@ -766,6 +936,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the airDropBlocked
+    * Indicates whether or not to allow AirDrop.
     *
     * @return bool The airDropBlocked
     */
@@ -780,6 +951,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the airDropBlocked
+    * Indicates whether or not to allow AirDrop.
     *
     * @param bool $val The airDropBlocked
     *
@@ -793,6 +965,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordBlockModification
+    * Indicates whether or not to allow passcode modification.
     *
     * @return bool The passwordBlockModification
     */
@@ -807,6 +980,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordBlockModification
+    * Indicates whether or not to allow passcode modification.
     *
     * @param bool $val The passwordBlockModification
     *
@@ -820,6 +994,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordBlockFingerprintUnlock
+    * Indicates whether or not to block fingerprint unlock.
     *
     * @return bool The passwordBlockFingerprintUnlock
     */
@@ -834,6 +1009,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordBlockFingerprintUnlock
+    * Indicates whether or not to block fingerprint unlock.
     *
     * @param bool $val The passwordBlockFingerprintUnlock
     *
@@ -842,6 +1018,93 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     public function setPasswordBlockFingerprintUnlock($val)
     {
         $this->_propDict["passwordBlockFingerprintUnlock"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the passwordBlockAutoFill
+    * Indicates whether or not to block the AutoFill Passwords feature.
+    *
+    * @return bool The passwordBlockAutoFill
+    */
+    public function getPasswordBlockAutoFill()
+    {
+        if (array_key_exists("passwordBlockAutoFill", $this->_propDict)) {
+            return $this->_propDict["passwordBlockAutoFill"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the passwordBlockAutoFill
+    * Indicates whether or not to block the AutoFill Passwords feature.
+    *
+    * @param bool $val The passwordBlockAutoFill
+    *
+    * @return MacOSGeneralDeviceConfiguration
+    */
+    public function setPasswordBlockAutoFill($val)
+    {
+        $this->_propDict["passwordBlockAutoFill"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the passwordBlockProximityRequests
+    * Indicates whether or not to block requesting passwords from nearby devices.
+    *
+    * @return bool The passwordBlockProximityRequests
+    */
+    public function getPasswordBlockProximityRequests()
+    {
+        if (array_key_exists("passwordBlockProximityRequests", $this->_propDict)) {
+            return $this->_propDict["passwordBlockProximityRequests"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the passwordBlockProximityRequests
+    * Indicates whether or not to block requesting passwords from nearby devices.
+    *
+    * @param bool $val The passwordBlockProximityRequests
+    *
+    * @return MacOSGeneralDeviceConfiguration
+    */
+    public function setPasswordBlockProximityRequests($val)
+    {
+        $this->_propDict["passwordBlockProximityRequests"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the passwordBlockAirDropSharing
+    * Indicates whether or not to block sharing passwords with the AirDrop passwords feature.
+    *
+    * @return bool The passwordBlockAirDropSharing
+    */
+    public function getPasswordBlockAirDropSharing()
+    {
+        if (array_key_exists("passwordBlockAirDropSharing", $this->_propDict)) {
+            return $this->_propDict["passwordBlockAirDropSharing"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the passwordBlockAirDropSharing
+    * Indicates whether or not to block sharing passwords with the AirDrop passwords feature.
+    *
+    * @param bool $val The passwordBlockAirDropSharing
+    *
+    * @return MacOSGeneralDeviceConfiguration
+    */
+    public function setPasswordBlockAirDropSharing($val)
+    {
+        $this->_propDict["passwordBlockAirDropSharing"] = boolval($val);
         return $this;
     }
     

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * BookingReminder class
 *
@@ -28,13 +28,14 @@ class BookingReminder extends Entity
 
     /**
     * Gets the offset
+    * How much time before an appointment the reminder should be sent.
     *
     * @return Duration The offset
     */
     public function getOffset()
     {
         if (array_key_exists("offset", $this->_propDict)) {
-            if (is_a($this->_propDict["offset"], "Microsoft\Graph\Beta\Model\Duration")) {
+            if (is_a($this->_propDict["offset"], "Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["offset"];
             } else {
                 $this->_propDict["offset"] = new Duration($this->_propDict["offset"]);
@@ -46,6 +47,7 @@ class BookingReminder extends Entity
 
     /**
     * Sets the offset
+    * How much time before an appointment the reminder should be sent.
     *
     * @param Duration $val The value to assign to the offset
     *
@@ -59,13 +61,14 @@ class BookingReminder extends Entity
 
     /**
     * Gets the recipients
+    * Who should receive the reminder.
     *
     * @return BookingReminderRecipients The recipients
     */
     public function getRecipients()
     {
         if (array_key_exists("recipients", $this->_propDict)) {
-            if (is_a($this->_propDict["recipients"], "Microsoft\Graph\Beta\Model\BookingReminderRecipients")) {
+            if (is_a($this->_propDict["recipients"], "Microsoft\Graph\Model\BookingReminderRecipients")) {
                 return $this->_propDict["recipients"];
             } else {
                 $this->_propDict["recipients"] = new BookingReminderRecipients($this->_propDict["recipients"]);
@@ -77,6 +80,7 @@ class BookingReminder extends Entity
 
     /**
     * Sets the recipients
+    * Who should receive the reminder.
     *
     * @param BookingReminderRecipients $val The value to assign to the recipients
     *
@@ -89,6 +93,7 @@ class BookingReminder extends Entity
     }
     /**
     * Gets the message
+    * Message to send.
     *
     * @return string The message
     */
@@ -103,6 +108,7 @@ class BookingReminder extends Entity
 
     /**
     * Sets the message
+    * Message to send.
     *
     * @param string $val The value of the message
     *

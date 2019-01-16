@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * Organization class
@@ -29,6 +29,7 @@ class Organization extends DirectoryObject
 
      /** 
      * Gets the assignedPlans
+    * The collection of service plans associated with the tenant. Not nullable.
      *
      * @return array The assignedPlans
      */
@@ -43,6 +44,7 @@ class Organization extends DirectoryObject
     
     /** 
     * Sets the assignedPlans
+    * The collection of service plans associated with the tenant. Not nullable.
     *
     * @param AssignedPlan $val The assignedPlans
     *
@@ -56,6 +58,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the businessPhones
+    * Telephone number for the organization. NOTE: Although this is a string collection, only one number can be set for this property.
     *
     * @return string The businessPhones
     */
@@ -70,6 +73,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the businessPhones
+    * Telephone number for the organization. NOTE: Although this is a string collection, only one number can be set for this property.
     *
     * @param string $val The businessPhones
     *
@@ -83,6 +87,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the city
+    * City name of the address for the organization
     *
     * @return string The city
     */
@@ -97,6 +102,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the city
+    * City name of the address for the organization
     *
     * @param string $val The city
     *
@@ -110,6 +116,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the country
+    * Country/region name of the address for the organization
     *
     * @return string The country
     */
@@ -124,6 +131,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the country
+    * Country/region name of the address for the organization
     *
     * @param string $val The country
     *
@@ -137,6 +145,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the countryLetterCode
+    * Country/region abbreviation for the organization
     *
     * @return string The countryLetterCode
     */
@@ -151,6 +160,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the countryLetterCode
+    * Country/region abbreviation for the organization
     *
     * @param string $val The countryLetterCode
     *
@@ -163,7 +173,41 @@ class Organization extends DirectoryObject
     }
     
     /**
+    * Gets the createdDateTime
+    * Timestamp of when the organization was created. The value cannot be modified and is automatically populated when the organization is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
+    *
+    * @return \DateTime The createdDateTime
+    */
+    public function getCreatedDateTime()
+    {
+        if (array_key_exists("createdDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+                return $this->_propDict["createdDateTime"];
+            } else {
+                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
+                return $this->_propDict["createdDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the createdDateTime
+    * Timestamp of when the organization was created. The value cannot be modified and is automatically populated when the organization is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
+    *
+    * @param \DateTime $val The createdDateTime
+    *
+    * @return Organization
+    */
+    public function setCreatedDateTime($val)
+    {
+        $this->_propDict["createdDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the displayName
+    * The display name for the tenant.
     *
     * @return string The displayName
     */
@@ -178,6 +222,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the displayName
+    * The display name for the tenant.
     *
     * @param string $val The displayName
     *
@@ -191,6 +236,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the isMultipleDataLocationsForServicesEnabled
+    * true if organization is Multi-Geo enabled; false if organization is not Multi-Geo enabled; null (default). Read-only. For more information, see OneDrive Online Multi-Geo.
     *
     * @return bool The isMultipleDataLocationsForServicesEnabled
     */
@@ -205,6 +251,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the isMultipleDataLocationsForServicesEnabled
+    * true if organization is Multi-Geo enabled; false if organization is not Multi-Geo enabled; null (default). Read-only. For more information, see OneDrive Online Multi-Geo.
     *
     * @param bool $val The isMultipleDataLocationsForServicesEnabled
     *
@@ -218,6 +265,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the marketingNotificationEmails
+    * Not nullable.
     *
     * @return string The marketingNotificationEmails
     */
@@ -232,6 +280,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the marketingNotificationEmails
+    * Not nullable.
     *
     * @param string $val The marketingNotificationEmails
     *
@@ -245,6 +294,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the onPremisesLastSyncDateTime
+    * The time and date at which the tenant was last synced with the on-premise directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
     *
     * @return \DateTime The onPremisesLastSyncDateTime
     */
@@ -263,6 +313,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the onPremisesLastSyncDateTime
+    * The time and date at which the tenant was last synced with the on-premise directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
     *
     * @param \DateTime $val The onPremisesLastSyncDateTime
     *
@@ -276,6 +327,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the onPremisesSyncEnabled
+    * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default).
     *
     * @return bool The onPremisesSyncEnabled
     */
@@ -290,6 +342,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the onPremisesSyncEnabled
+    * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default).
     *
     * @param bool $val The onPremisesSyncEnabled
     *
@@ -303,6 +356,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the postalCode
+    * Postal code of the address for the organization
     *
     * @return string The postalCode
     */
@@ -317,6 +371,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the postalCode
+    * Postal code of the address for the organization
     *
     * @param string $val The postalCode
     *
@@ -330,6 +385,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the preferredLanguage
+    * The preferred language for the organization. Should follow ISO 639-1 Code; for example 'en'.
     *
     * @return string The preferredLanguage
     */
@@ -344,6 +400,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the preferredLanguage
+    * The preferred language for the organization. Should follow ISO 639-1 Code; for example 'en'.
     *
     * @param string $val The preferredLanguage
     *
@@ -357,13 +414,14 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the privacyProfile
+    * The privacy profile of an organization.
     *
     * @return PrivacyProfile The privacyProfile
     */
     public function getPrivacyProfile()
     {
         if (array_key_exists("privacyProfile", $this->_propDict)) {
-            if (is_a($this->_propDict["privacyProfile"], "Microsoft\Graph\Beta\Model\PrivacyProfile")) {
+            if (is_a($this->_propDict["privacyProfile"], "Microsoft\Graph\Model\PrivacyProfile")) {
                 return $this->_propDict["privacyProfile"];
             } else {
                 $this->_propDict["privacyProfile"] = new PrivacyProfile($this->_propDict["privacyProfile"]);
@@ -375,6 +433,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the privacyProfile
+    * The privacy profile of an organization.
     *
     * @param PrivacyProfile $val The privacyProfile
     *
@@ -389,6 +448,7 @@ class Organization extends DirectoryObject
 
      /** 
      * Gets the provisionedPlans
+    * Not nullable.
      *
      * @return array The provisionedPlans
      */
@@ -403,6 +463,7 @@ class Organization extends DirectoryObject
     
     /** 
     * Sets the provisionedPlans
+    * Not nullable.
     *
     * @param ProvisionedPlan $val The provisionedPlans
     *
@@ -470,6 +531,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the state
+    * State name of the address for the organization
     *
     * @return string The state
     */
@@ -484,6 +546,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the state
+    * State name of the address for the organization
     *
     * @param string $val The state
     *
@@ -497,6 +560,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the street
+    * Street name of the address for organization
     *
     * @return string The street
     */
@@ -511,6 +575,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the street
+    * Street name of the address for organization
     *
     * @param string $val The street
     *
@@ -524,6 +589,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the technicalNotificationMails
+    * Not nullable.
     *
     * @return string The technicalNotificationMails
     */
@@ -538,6 +604,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the technicalNotificationMails
+    * Not nullable.
     *
     * @param string $val The technicalNotificationMails
     *
@@ -552,6 +619,7 @@ class Organization extends DirectoryObject
 
      /** 
      * Gets the verifiedDomains
+    * The collection of domains associated with this tenant. Not nullable.
      *
      * @return array The verifiedDomains
      */
@@ -566,6 +634,7 @@ class Organization extends DirectoryObject
     
     /** 
     * Sets the verifiedDomains
+    * The collection of domains associated with this tenant. Not nullable.
     *
     * @param VerifiedDomain $val The verifiedDomains
     *
@@ -579,13 +648,14 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the mobileDeviceManagementAuthority
+    * Mobile device management authority. Possible values are: unknown, intune, sccm, office365.
     *
     * @return MdmAuthority The mobileDeviceManagementAuthority
     */
     public function getMobileDeviceManagementAuthority()
     {
         if (array_key_exists("mobileDeviceManagementAuthority", $this->_propDict)) {
-            if (is_a($this->_propDict["mobileDeviceManagementAuthority"], "Microsoft\Graph\Beta\Model\MdmAuthority")) {
+            if (is_a($this->_propDict["mobileDeviceManagementAuthority"], "Microsoft\Graph\Model\MdmAuthority")) {
                 return $this->_propDict["mobileDeviceManagementAuthority"];
             } else {
                 $this->_propDict["mobileDeviceManagementAuthority"] = new MdmAuthority($this->_propDict["mobileDeviceManagementAuthority"]);
@@ -597,6 +667,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the mobileDeviceManagementAuthority
+    * Mobile device management authority. Possible values are: unknown, intune, sccm, office365.
     *
     * @param MdmAuthority $val The mobileDeviceManagementAuthority
     *
@@ -610,13 +681,14 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the certificateConnectorSetting
+    * Certificate connector setting.
     *
     * @return CertificateConnectorSetting The certificateConnectorSetting
     */
     public function getCertificateConnectorSetting()
     {
         if (array_key_exists("certificateConnectorSetting", $this->_propDict)) {
-            if (is_a($this->_propDict["certificateConnectorSetting"], "Microsoft\Graph\Beta\Model\CertificateConnectorSetting")) {
+            if (is_a($this->_propDict["certificateConnectorSetting"], "Microsoft\Graph\Model\CertificateConnectorSetting")) {
                 return $this->_propDict["certificateConnectorSetting"];
             } else {
                 $this->_propDict["certificateConnectorSetting"] = new CertificateConnectorSetting($this->_propDict["certificateConnectorSetting"]);
@@ -628,6 +700,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the certificateConnectorSetting
+    * Certificate connector setting.
     *
     * @param CertificateConnectorSetting $val The certificateConnectorSetting
     *
@@ -642,6 +715,7 @@ class Organization extends DirectoryObject
 
      /** 
      * Gets the extensions
+    * The collection of open extensions defined for the organization. Read-only. Nullable.
      *
      * @return array The extensions
      */
@@ -656,6 +730,7 @@ class Organization extends DirectoryObject
     
     /** 
     * Sets the extensions
+    * The collection of open extensions defined for the organization. Read-only. Nullable.
     *
     * @param Extension $val The extensions
     *

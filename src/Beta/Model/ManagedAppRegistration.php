@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * ManagedAppRegistration class
@@ -28,6 +28,7 @@ class ManagedAppRegistration extends Entity
 {
     /**
     * Gets the createdDateTime
+    * Date and time of creation
     *
     * @return \DateTime The createdDateTime
     */
@@ -46,6 +47,7 @@ class ManagedAppRegistration extends Entity
     
     /**
     * Sets the createdDateTime
+    * Date and time of creation
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -59,6 +61,7 @@ class ManagedAppRegistration extends Entity
     
     /**
     * Gets the lastSyncDateTime
+    * Date and time of last the app synced with management service.
     *
     * @return \DateTime The lastSyncDateTime
     */
@@ -77,6 +80,7 @@ class ManagedAppRegistration extends Entity
     
     /**
     * Sets the lastSyncDateTime
+    * Date and time of last the app synced with management service.
     *
     * @param \DateTime $val The lastSyncDateTime
     *
@@ -90,6 +94,7 @@ class ManagedAppRegistration extends Entity
     
     /**
     * Gets the applicationVersion
+    * App version
     *
     * @return string The applicationVersion
     */
@@ -104,6 +109,7 @@ class ManagedAppRegistration extends Entity
     
     /**
     * Sets the applicationVersion
+    * App version
     *
     * @param string $val The applicationVersion
     *
@@ -117,6 +123,7 @@ class ManagedAppRegistration extends Entity
     
     /**
     * Gets the managementSdkVersion
+    * App management SDK version
     *
     * @return string The managementSdkVersion
     */
@@ -131,6 +138,7 @@ class ManagedAppRegistration extends Entity
     
     /**
     * Sets the managementSdkVersion
+    * App management SDK version
     *
     * @param string $val The managementSdkVersion
     *
@@ -144,6 +152,7 @@ class ManagedAppRegistration extends Entity
     
     /**
     * Gets the platformVersion
+    * Operating System version
     *
     * @return string The platformVersion
     */
@@ -158,6 +167,7 @@ class ManagedAppRegistration extends Entity
     
     /**
     * Sets the platformVersion
+    * Operating System version
     *
     * @param string $val The platformVersion
     *
@@ -171,6 +181,7 @@ class ManagedAppRegistration extends Entity
     
     /**
     * Gets the deviceType
+    * Host device type
     *
     * @return string The deviceType
     */
@@ -185,6 +196,7 @@ class ManagedAppRegistration extends Entity
     
     /**
     * Sets the deviceType
+    * Host device type
     *
     * @param string $val The deviceType
     *
@@ -198,6 +210,7 @@ class ManagedAppRegistration extends Entity
     
     /**
     * Gets the deviceTag
+    * App management SDK generated tag, which helps relate apps hosted on the same device. Not guaranteed to relate apps in all conditions.
     *
     * @return string The deviceTag
     */
@@ -212,6 +225,7 @@ class ManagedAppRegistration extends Entity
     
     /**
     * Sets the deviceTag
+    * App management SDK generated tag, which helps relate apps hosted on the same device. Not guaranteed to relate apps in all conditions.
     *
     * @param string $val The deviceTag
     *
@@ -225,6 +239,7 @@ class ManagedAppRegistration extends Entity
     
     /**
     * Gets the deviceName
+    * Host device name
     *
     * @return string The deviceName
     */
@@ -239,6 +254,7 @@ class ManagedAppRegistration extends Entity
     
     /**
     * Sets the deviceName
+    * Host device name
     *
     * @param string $val The deviceName
     *
@@ -252,6 +268,7 @@ class ManagedAppRegistration extends Entity
     
     /**
     * Gets the managedDeviceId
+    * The Managed Device identifier of the host device. Value could be empty even when the host device is managed.
     *
     * @return string The managedDeviceId
     */
@@ -266,6 +283,7 @@ class ManagedAppRegistration extends Entity
     
     /**
     * Sets the managedDeviceId
+    * The Managed Device identifier of the host device. Value could be empty even when the host device is managed.
     *
     * @param string $val The managedDeviceId
     *
@@ -279,6 +297,7 @@ class ManagedAppRegistration extends Entity
     
     /**
     * Gets the azureADDeviceId
+    * The Azure Active Directory Device identifier of the host device. Value could be empty even when the host device is Azure Active Directory registered.
     *
     * @return string The azureADDeviceId
     */
@@ -293,6 +312,7 @@ class ManagedAppRegistration extends Entity
     
     /**
     * Sets the azureADDeviceId
+    * The Azure Active Directory Device identifier of the host device. Value could be empty even when the host device is Azure Active Directory registered.
     *
     * @param string $val The azureADDeviceId
     *
@@ -304,9 +324,68 @@ class ManagedAppRegistration extends Entity
         return $this;
     }
     
+    /**
+    * Gets the deviceModel
+    * The device model for the current app registration 
+    *
+    * @return string The deviceModel
+    */
+    public function getDeviceModel()
+    {
+        if (array_key_exists("deviceModel", $this->_propDict)) {
+            return $this->_propDict["deviceModel"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the deviceModel
+    * The device model for the current app registration 
+    *
+    * @param string $val The deviceModel
+    *
+    * @return ManagedAppRegistration
+    */
+    public function setDeviceModel($val)
+    {
+        $this->_propDict["deviceModel"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the deviceManufacturer
+    * The device manufacturer for the current app registration 
+    *
+    * @return string The deviceManufacturer
+    */
+    public function getDeviceManufacturer()
+    {
+        if (array_key_exists("deviceManufacturer", $this->_propDict)) {
+            return $this->_propDict["deviceManufacturer"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the deviceManufacturer
+    * The device manufacturer for the current app registration 
+    *
+    * @param string $val The deviceManufacturer
+    *
+    * @return ManagedAppRegistration
+    */
+    public function setDeviceManufacturer($val)
+    {
+        $this->_propDict["deviceManufacturer"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the flaggedReasons
+    * Zero or more reasons an app registration is flagged. E.g. app running on rooted device
      *
      * @return array The flaggedReasons
      */
@@ -321,6 +400,7 @@ class ManagedAppRegistration extends Entity
     
     /** 
     * Sets the flaggedReasons
+    * Zero or more reasons an app registration is flagged. E.g. app running on rooted device
     *
     * @param ManagedAppFlaggedReason $val The flaggedReasons
     *
@@ -334,6 +414,7 @@ class ManagedAppRegistration extends Entity
     
     /**
     * Gets the userId
+    * The user Id to who this app registration belongs.
     *
     * @return string The userId
     */
@@ -348,6 +429,7 @@ class ManagedAppRegistration extends Entity
     
     /**
     * Sets the userId
+    * The user Id to who this app registration belongs.
     *
     * @param string $val The userId
     *
@@ -361,13 +443,14 @@ class ManagedAppRegistration extends Entity
     
     /**
     * Gets the appIdentifier
+    * The app package Identifier
     *
     * @return MobileAppIdentifier The appIdentifier
     */
     public function getAppIdentifier()
     {
         if (array_key_exists("appIdentifier", $this->_propDict)) {
-            if (is_a($this->_propDict["appIdentifier"], "Microsoft\Graph\Beta\Model\MobileAppIdentifier")) {
+            if (is_a($this->_propDict["appIdentifier"], "Microsoft\Graph\Model\MobileAppIdentifier")) {
                 return $this->_propDict["appIdentifier"];
             } else {
                 $this->_propDict["appIdentifier"] = new MobileAppIdentifier($this->_propDict["appIdentifier"]);
@@ -379,6 +462,7 @@ class ManagedAppRegistration extends Entity
     
     /**
     * Sets the appIdentifier
+    * The app package Identifier
     *
     * @param MobileAppIdentifier $val The appIdentifier
     *
@@ -392,6 +476,7 @@ class ManagedAppRegistration extends Entity
     
     /**
     * Gets the version
+    * Version of the entity.
     *
     * @return string The version
     */
@@ -406,6 +491,7 @@ class ManagedAppRegistration extends Entity
     
     /**
     * Sets the version
+    * Version of the entity.
     *
     * @param string $val The version
     *
@@ -420,6 +506,7 @@ class ManagedAppRegistration extends Entity
 
      /** 
      * Gets the appliedPolicies
+    * Zero or more policys already applied on the registered app when it last synchronized with managment service.
      *
      * @return array The appliedPolicies
      */
@@ -434,6 +521,7 @@ class ManagedAppRegistration extends Entity
     
     /** 
     * Sets the appliedPolicies
+    * Zero or more policys already applied on the registered app when it last synchronized with managment service.
     *
     * @param ManagedAppPolicy $val The appliedPolicies
     *
@@ -448,6 +536,7 @@ class ManagedAppRegistration extends Entity
 
      /** 
      * Gets the intendedPolicies
+    * Zero or more policies admin intended for the app as of now.
      *
      * @return array The intendedPolicies
      */
@@ -462,6 +551,7 @@ class ManagedAppRegistration extends Entity
     
     /** 
     * Sets the intendedPolicies
+    * Zero or more policies admin intended for the app as of now.
     *
     * @param ManagedAppPolicy $val The intendedPolicies
     *
@@ -476,6 +566,7 @@ class ManagedAppRegistration extends Entity
 
      /** 
      * Gets the operations
+    * Zero or more long running operations triggered on the app registration.
      *
      * @return array The operations
      */
@@ -490,6 +581,7 @@ class ManagedAppRegistration extends Entity
     
     /** 
     * Sets the operations
+    * Zero or more long running operations triggered on the app registration.
     *
     * @param ManagedAppOperation $val The operations
     *

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * WindowsKioskLocalGroup class
 *
@@ -27,6 +27,7 @@ class WindowsKioskLocalGroup extends WindowsKioskUser
 {
     /**
     * Gets the groupName
+    * The name of the local group that will be locked to this kiosk configuration
     *
     * @return string The groupName
     */
@@ -41,6 +42,7 @@ class WindowsKioskLocalGroup extends WindowsKioskUser
 
     /**
     * Sets the groupName
+    * The name of the local group that will be locked to this kiosk configuration
     *
     * @param string $val The value of the groupName
     *

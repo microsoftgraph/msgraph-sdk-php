@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * AdminConsent class
 *
@@ -28,13 +28,14 @@ class AdminConsent extends Entity
 
     /**
     * Gets the shareAPNSData
+    * The admin consent state of sharing user and device data to Apple.
     *
     * @return AdminConsentState The shareAPNSData
     */
     public function getShareAPNSData()
     {
         if (array_key_exists("shareAPNSData", $this->_propDict)) {
-            if (is_a($this->_propDict["shareAPNSData"], "Microsoft\Graph\Beta\Model\AdminConsentState")) {
+            if (is_a($this->_propDict["shareAPNSData"], "Microsoft\Graph\Model\AdminConsentState")) {
                 return $this->_propDict["shareAPNSData"];
             } else {
                 $this->_propDict["shareAPNSData"] = new AdminConsentState($this->_propDict["shareAPNSData"]);
@@ -46,6 +47,7 @@ class AdminConsent extends Entity
 
     /**
     * Sets the shareAPNSData
+    * The admin consent state of sharing user and device data to Apple.
     *
     * @param AdminConsentState $val The value to assign to the shareAPNSData
     *

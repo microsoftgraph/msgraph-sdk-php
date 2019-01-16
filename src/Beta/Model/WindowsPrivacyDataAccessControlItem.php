@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * WindowsPrivacyDataAccessControlItem class
@@ -28,13 +28,14 @@ class WindowsPrivacyDataAccessControlItem extends Entity
 {
     /**
     * Gets the accessLevel
+    * This indicates an access level for the privacy data category to which the specified application will be given to.
     *
     * @return WindowsPrivacyDataAccessLevel The accessLevel
     */
     public function getAccessLevel()
     {
         if (array_key_exists("accessLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["accessLevel"], "Microsoft\Graph\Beta\Model\WindowsPrivacyDataAccessLevel")) {
+            if (is_a($this->_propDict["accessLevel"], "Microsoft\Graph\Model\WindowsPrivacyDataAccessLevel")) {
                 return $this->_propDict["accessLevel"];
             } else {
                 $this->_propDict["accessLevel"] = new WindowsPrivacyDataAccessLevel($this->_propDict["accessLevel"]);
@@ -46,6 +47,7 @@ class WindowsPrivacyDataAccessControlItem extends Entity
     
     /**
     * Sets the accessLevel
+    * This indicates an access level for the privacy data category to which the specified application will be given to.
     *
     * @param WindowsPrivacyDataAccessLevel $val The accessLevel
     *
@@ -59,13 +61,14 @@ class WindowsPrivacyDataAccessControlItem extends Entity
     
     /**
     * Gets the dataCategory
+    * This indicates a privacy data category to which the specific access control will apply.
     *
     * @return WindowsPrivacyDataCategory The dataCategory
     */
     public function getDataCategory()
     {
         if (array_key_exists("dataCategory", $this->_propDict)) {
-            if (is_a($this->_propDict["dataCategory"], "Microsoft\Graph\Beta\Model\WindowsPrivacyDataCategory")) {
+            if (is_a($this->_propDict["dataCategory"], "Microsoft\Graph\Model\WindowsPrivacyDataCategory")) {
                 return $this->_propDict["dataCategory"];
             } else {
                 $this->_propDict["dataCategory"] = new WindowsPrivacyDataCategory($this->_propDict["dataCategory"]);
@@ -77,6 +80,7 @@ class WindowsPrivacyDataAccessControlItem extends Entity
     
     /**
     * Sets the dataCategory
+    * This indicates a privacy data category to which the specific access control will apply.
     *
     * @param WindowsPrivacyDataCategory $val The dataCategory
     *
@@ -90,6 +94,7 @@ class WindowsPrivacyDataAccessControlItem extends Entity
     
     /**
     * Gets the appPackageFamilyName
+    * The Package Family Name of a Windows app. When set, the access level applies to the specified application.
     *
     * @return string The appPackageFamilyName
     */
@@ -104,6 +109,7 @@ class WindowsPrivacyDataAccessControlItem extends Entity
     
     /**
     * Sets the appPackageFamilyName
+    * The Package Family Name of a Windows app. When set, the access level applies to the specified application.
     *
     * @param string $val The appPackageFamilyName
     *
@@ -117,6 +123,7 @@ class WindowsPrivacyDataAccessControlItem extends Entity
     
     /**
     * Gets the appDisplayName
+    * The Package Family Name of a Windows app. When set, the access level applies to the specified application.
     *
     * @return string The appDisplayName
     */
@@ -131,6 +138,7 @@ class WindowsPrivacyDataAccessControlItem extends Entity
     
     /**
     * Sets the appDisplayName
+    * The Package Family Name of a Windows app. When set, the access level applies to the specified application.
     *
     * @param string $val The appDisplayName
     *

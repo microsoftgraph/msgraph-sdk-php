@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * ChoiceColumn class
 *
@@ -27,6 +27,7 @@ class ChoiceColumn extends Entity
 {
     /**
     * Gets the allowTextEntry
+    * If true, allows custom values that aren't in the configured choices.
     *
     * @return bool The allowTextEntry
     */
@@ -41,6 +42,7 @@ class ChoiceColumn extends Entity
 
     /**
     * Sets the allowTextEntry
+    * If true, allows custom values that aren't in the configured choices.
     *
     * @param bool $val The value of the allowTextEntry
     *
@@ -53,6 +55,7 @@ class ChoiceColumn extends Entity
     }
     /**
     * Gets the choices
+    * The list of values available for this column.
     *
     * @return string The choices
     */
@@ -67,6 +70,7 @@ class ChoiceColumn extends Entity
 
     /**
     * Sets the choices
+    * The list of values available for this column.
     *
     * @param string $val The value of the choices
     *
@@ -79,6 +83,7 @@ class ChoiceColumn extends Entity
     }
     /**
     * Gets the displayAs
+    * How the choices are to be presented in the UX. Must be one of checkBoxes, dropDownMenu, or radioButtons
     *
     * @return string The displayAs
     */
@@ -93,6 +98,7 @@ class ChoiceColumn extends Entity
 
     /**
     * Sets the displayAs
+    * How the choices are to be presented in the UX. Must be one of checkBoxes, dropDownMenu, or radioButtons
     *
     * @param string $val The value of the displayAs
     *

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * ImageInfo class
 *
@@ -27,6 +27,7 @@ class ImageInfo extends Entity
 {
     /**
     * Gets the iconUrl
+    * Optional; URI that points to an icon which represents the application used to generate the activity
     *
     * @return string The iconUrl
     */
@@ -41,6 +42,7 @@ class ImageInfo extends Entity
 
     /**
     * Sets the iconUrl
+    * Optional; URI that points to an icon which represents the application used to generate the activity
     *
     * @param string $val The value of the iconUrl
     *
@@ -79,6 +81,7 @@ class ImageInfo extends Entity
     }
     /**
     * Gets the alternateText
+    * Optional; alt-text accessible content for the image
     *
     * @return string The alternateText
     */
@@ -93,6 +96,7 @@ class ImageInfo extends Entity
 
     /**
     * Sets the alternateText
+    * Optional; alt-text accessible content for the image
     *
     * @param string $val The value of the alternateText
     *
@@ -105,6 +109,7 @@ class ImageInfo extends Entity
     }
     /**
     * Gets the addImageQuery
+    * Optional; parameter used to indicate the server is able to render image dynamically in response to parameterization. For example – a high contrast image
     *
     * @return bool The addImageQuery
     */
@@ -119,6 +124,7 @@ class ImageInfo extends Entity
 
     /**
     * Sets the addImageQuery
+    * Optional; parameter used to indicate the server is able to render image dynamically in response to parameterization. For example – a high contrast image
     *
     * @param bool $val The value of the addImageQuery
     *

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * OnenoteResource class
@@ -28,6 +28,7 @@ class OnenoteResource extends OnenoteEntityBaseModel
 {
     /**
     * Gets the content
+    * The content stream
     *
     * @return \GuzzleHttp\Psr7\Stream The content
     */
@@ -46,6 +47,7 @@ class OnenoteResource extends OnenoteEntityBaseModel
     
     /**
     * Sets the content
+    * The content stream
     *
     * @param \GuzzleHttp\Psr7\Stream $val The content
     *
@@ -59,6 +61,7 @@ class OnenoteResource extends OnenoteEntityBaseModel
     
     /**
     * Gets the contentUrl
+    * The URL for downloading the content
     *
     * @return string The contentUrl
     */
@@ -73,6 +76,7 @@ class OnenoteResource extends OnenoteEntityBaseModel
     
     /**
     * Sets the contentUrl
+    * The URL for downloading the content
     *
     * @param string $val The contentUrl
     *

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * EducationSynchronizationCustomization class
 *
@@ -60,7 +60,7 @@ class EducationSynchronizationCustomization extends Entity
     public function getSynchronizationStartDate()
     {
         if (array_key_exists("synchronizationStartDate", $this->_propDict)) {
-            if (is_a($this->_propDict["synchronizationStartDate"], "Microsoft\Graph\Beta\Model\\DateTime")) {
+            if (is_a($this->_propDict["synchronizationStartDate"], "Microsoft\Graph\Model\\DateTime")) {
                 return $this->_propDict["synchronizationStartDate"];
             } else {
                 $this->_propDict["synchronizationStartDate"] = new \DateTime($this->_propDict["synchronizationStartDate"]);

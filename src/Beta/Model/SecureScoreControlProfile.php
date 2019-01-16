@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * SecureScoreControlProfile class
@@ -104,6 +104,34 @@ class SecureScoreControlProfile extends Entity
     public function setAzureTenantId($val)
     {
         $this->_propDict["azureTenantId"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the complianceInformation
+     *
+     * @return array The complianceInformation
+     */
+    public function getComplianceInformation()
+    {
+        if (array_key_exists("complianceInformation", $this->_propDict)) {
+           return $this->_propDict["complianceInformation"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the complianceInformation
+    *
+    * @param ComplianceInformation $val The complianceInformation
+    *
+    * @return SecureScoreControlProfile
+    */
+    public function setComplianceInformation($val)
+    {
+		$this->_propDict["complianceInformation"] = $val;
         return $this;
     }
     
@@ -498,7 +526,7 @@ class SecureScoreControlProfile extends Entity
     public function getVendorInformation()
     {
         if (array_key_exists("vendorInformation", $this->_propDict)) {
-            if (is_a($this->_propDict["vendorInformation"], "Microsoft\Graph\Beta\Model\SecurityVendorInformation")) {
+            if (is_a($this->_propDict["vendorInformation"], "Microsoft\Graph\Model\SecurityVendorInformation")) {
                 return $this->_propDict["vendorInformation"];
             } else {
                 $this->_propDict["vendorInformation"] = new SecurityVendorInformation($this->_propDict["vendorInformation"]);

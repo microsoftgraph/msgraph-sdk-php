@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 use Microsoft\Graph\Core\Enum;
 
@@ -34,4 +34,7 @@ class RiskLevel extends Enum
     const LOW = "low";
     const MEDIUM = "medium";
     const HIGH = "high";
+    const HIDDEN = "hidden";
+    const NONE = "none";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

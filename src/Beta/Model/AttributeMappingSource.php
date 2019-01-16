@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * AttributeMappingSource class
 *
@@ -86,7 +86,7 @@ class AttributeMappingSource extends Entity
     public function getParameters()
     {
         if (array_key_exists("parameters", $this->_propDict)) {
-            if (is_a($this->_propDict["parameters"], "Microsoft\Graph\Beta\Model\StringKeyAttributeMappingSourceValuePair")) {
+            if (is_a($this->_propDict["parameters"], "Microsoft\Graph\Model\StringKeyAttributeMappingSourceValuePair")) {
                 return $this->_propDict["parameters"];
             } else {
                 $this->_propDict["parameters"] = new StringKeyAttributeMappingSourceValuePair($this->_propDict["parameters"]);
@@ -117,7 +117,7 @@ class AttributeMappingSource extends Entity
     public function getType()
     {
         if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "Microsoft\Graph\Beta\Model\AttributeMappingSourceType")) {
+            if (is_a($this->_propDict["type"], "Microsoft\Graph\Model\AttributeMappingSourceType")) {
                 return $this->_propDict["type"];
             } else {
                 $this->_propDict["type"] = new AttributeMappingSourceType($this->_propDict["type"]);

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * File class
 *
@@ -28,13 +28,14 @@ class File extends Entity
 
     /**
     * Gets the hashes
+    * Hashes of the file's binary content, if available. Read-only.
     *
     * @return Hashes The hashes
     */
     public function getHashes()
     {
         if (array_key_exists("hashes", $this->_propDict)) {
-            if (is_a($this->_propDict["hashes"], "Microsoft\Graph\Beta\Model\Hashes")) {
+            if (is_a($this->_propDict["hashes"], "Microsoft\Graph\Model\Hashes")) {
                 return $this->_propDict["hashes"];
             } else {
                 $this->_propDict["hashes"] = new Hashes($this->_propDict["hashes"]);
@@ -46,6 +47,7 @@ class File extends Entity
 
     /**
     * Sets the hashes
+    * Hashes of the file's binary content, if available. Read-only.
     *
     * @param Hashes $val The value to assign to the hashes
     *
@@ -58,6 +60,7 @@ class File extends Entity
     }
     /**
     * Gets the mimeType
+    * The MIME type for the file. This is determined by logic on the server and might not be the value provided when the file was uploaded. Read-only.
     *
     * @return string The mimeType
     */
@@ -72,6 +75,7 @@ class File extends Entity
 
     /**
     * Sets the mimeType
+    * The MIME type for the file. This is determined by logic on the server and might not be the value provided when the file was uploaded. Read-only.
     *
     * @param string $val The value of the mimeType
     *

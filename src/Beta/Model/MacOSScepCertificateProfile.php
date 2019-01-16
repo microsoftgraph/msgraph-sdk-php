@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * MacOSScepCertificateProfile class
@@ -28,6 +28,7 @@ class MacOSScepCertificateProfile extends MacOSCertificateProfileBase
 {
     /**
     * Gets the scepServerUrls
+    * SCEP Server Url(s).
     *
     * @return string The scepServerUrls
     */
@@ -42,6 +43,7 @@ class MacOSScepCertificateProfile extends MacOSCertificateProfileBase
     
     /**
     * Sets the scepServerUrls
+    * SCEP Server Url(s).
     *
     * @param string $val The scepServerUrls
     *
@@ -55,6 +57,7 @@ class MacOSScepCertificateProfile extends MacOSCertificateProfileBase
     
     /**
     * Gets the subjectNameFormatString
+    * Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
     *
     * @return string The subjectNameFormatString
     */
@@ -69,6 +72,7 @@ class MacOSScepCertificateProfile extends MacOSCertificateProfileBase
     
     /**
     * Sets the subjectNameFormatString
+    * Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
     *
     * @param string $val The subjectNameFormatString
     *
@@ -82,13 +86,14 @@ class MacOSScepCertificateProfile extends MacOSCertificateProfileBase
     
     /**
     * Gets the keyUsage
+    * SCEP Key Usage.
     *
     * @return KeyUsages The keyUsage
     */
     public function getKeyUsage()
     {
         if (array_key_exists("keyUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["keyUsage"], "Microsoft\Graph\Beta\Model\KeyUsages")) {
+            if (is_a($this->_propDict["keyUsage"], "Microsoft\Graph\Model\KeyUsages")) {
                 return $this->_propDict["keyUsage"];
             } else {
                 $this->_propDict["keyUsage"] = new KeyUsages($this->_propDict["keyUsage"]);
@@ -100,6 +105,7 @@ class MacOSScepCertificateProfile extends MacOSCertificateProfileBase
     
     /**
     * Sets the keyUsage
+    * SCEP Key Usage.
     *
     * @param KeyUsages $val The keyUsage
     *
@@ -113,13 +119,14 @@ class MacOSScepCertificateProfile extends MacOSCertificateProfileBase
     
     /**
     * Gets the keySize
+    * SCEP Key Size.
     *
     * @return KeySize The keySize
     */
     public function getKeySize()
     {
         if (array_key_exists("keySize", $this->_propDict)) {
-            if (is_a($this->_propDict["keySize"], "Microsoft\Graph\Beta\Model\KeySize")) {
+            if (is_a($this->_propDict["keySize"], "Microsoft\Graph\Model\KeySize")) {
                 return $this->_propDict["keySize"];
             } else {
                 $this->_propDict["keySize"] = new KeySize($this->_propDict["keySize"]);
@@ -131,6 +138,7 @@ class MacOSScepCertificateProfile extends MacOSCertificateProfileBase
     
     /**
     * Sets the keySize
+    * SCEP Key Size.
     *
     * @param KeySize $val The keySize
     *
@@ -144,13 +152,14 @@ class MacOSScepCertificateProfile extends MacOSCertificateProfileBase
     
     /**
     * Gets the hashAlgorithm
+    * SCEP Hash Algorithm.
     *
     * @return HashAlgorithms The hashAlgorithm
     */
     public function getHashAlgorithm()
     {
         if (array_key_exists("hashAlgorithm", $this->_propDict)) {
-            if (is_a($this->_propDict["hashAlgorithm"], "Microsoft\Graph\Beta\Model\HashAlgorithms")) {
+            if (is_a($this->_propDict["hashAlgorithm"], "Microsoft\Graph\Model\HashAlgorithms")) {
                 return $this->_propDict["hashAlgorithm"];
             } else {
                 $this->_propDict["hashAlgorithm"] = new HashAlgorithms($this->_propDict["hashAlgorithm"]);
@@ -162,6 +171,7 @@ class MacOSScepCertificateProfile extends MacOSCertificateProfileBase
     
     /**
     * Sets the hashAlgorithm
+    * SCEP Hash Algorithm.
     *
     * @param HashAlgorithms $val The hashAlgorithm
     *
@@ -176,6 +186,7 @@ class MacOSScepCertificateProfile extends MacOSCertificateProfileBase
 
      /** 
      * Gets the extendedKeyUsages
+    * Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.
      *
      * @return array The extendedKeyUsages
      */
@@ -190,6 +201,7 @@ class MacOSScepCertificateProfile extends MacOSCertificateProfileBase
     
     /** 
     * Sets the extendedKeyUsages
+    * Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.
     *
     * @param ExtendedKeyUsage $val The extendedKeyUsages
     *
@@ -203,6 +215,7 @@ class MacOSScepCertificateProfile extends MacOSCertificateProfileBase
     
     /**
     * Gets the subjectAlternativeNameFormatString
+    * Custom String that defines the AAD Attribute.
     *
     * @return string The subjectAlternativeNameFormatString
     */
@@ -217,6 +230,7 @@ class MacOSScepCertificateProfile extends MacOSCertificateProfileBase
     
     /**
     * Sets the subjectAlternativeNameFormatString
+    * Custom String that defines the AAD Attribute.
     *
     * @param string $val The subjectAlternativeNameFormatString
     *
@@ -230,13 +244,14 @@ class MacOSScepCertificateProfile extends MacOSCertificateProfileBase
     
     /**
     * Gets the rootCertificate
+    * Trusted Root Certificate.
     *
     * @return MacOSTrustedRootCertificate The rootCertificate
     */
     public function getRootCertificate()
     {
         if (array_key_exists("rootCertificate", $this->_propDict)) {
-            if (is_a($this->_propDict["rootCertificate"], "Microsoft\Graph\Beta\Model\MacOSTrustedRootCertificate")) {
+            if (is_a($this->_propDict["rootCertificate"], "Microsoft\Graph\Model\MacOSTrustedRootCertificate")) {
                 return $this->_propDict["rootCertificate"];
             } else {
                 $this->_propDict["rootCertificate"] = new MacOSTrustedRootCertificate($this->_propDict["rootCertificate"]);
@@ -248,6 +263,7 @@ class MacOSScepCertificateProfile extends MacOSCertificateProfileBase
     
     /**
     * Sets the rootCertificate
+    * Trusted Root Certificate.
     *
     * @param MacOSTrustedRootCertificate $val The rootCertificate
     *
@@ -262,6 +278,7 @@ class MacOSScepCertificateProfile extends MacOSCertificateProfileBase
 
      /** 
      * Gets the managedDeviceCertificateStates
+    * Certificate state for devices
      *
      * @return array The managedDeviceCertificateStates
      */
@@ -276,6 +293,7 @@ class MacOSScepCertificateProfile extends MacOSCertificateProfileBase
     
     /** 
     * Sets the managedDeviceCertificateStates
+    * Certificate state for devices
     *
     * @param ManagedDeviceCertificateState $val The managedDeviceCertificateStates
     *

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * MobileAppContent class
@@ -29,6 +29,7 @@ class MobileAppContent extends Entity
 
      /** 
      * Gets the files
+    * The list of files for this app content version.
      *
      * @return array The files
      */
@@ -43,6 +44,7 @@ class MobileAppContent extends Entity
     
     /** 
     * Sets the files
+    * The list of files for this app content version.
     *
     * @param MobileAppContentFile $val The files
     *
@@ -57,6 +59,7 @@ class MobileAppContent extends Entity
 
      /** 
      * Gets the containedApps
+    * The collection of contained apps in a MobileLobApp acting as a package.
      *
      * @return array The containedApps
      */
@@ -71,6 +74,7 @@ class MobileAppContent extends Entity
     
     /** 
     * Sets the containedApps
+    * The collection of contained apps in a MobileLobApp acting as a package.
     *
     * @param MobileContainedApp $val The containedApps
     *

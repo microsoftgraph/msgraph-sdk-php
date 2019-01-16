@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * WindowsKioskUWPApp class
 *
@@ -27,6 +27,7 @@ class WindowsKioskUWPApp extends WindowsKioskAppBase
 {
     /**
     * Gets the appUserModelId
+    * This is the only Application User Model ID (AUMID) that will be available to launch use while in Kiosk Mode
     *
     * @return string The appUserModelId
     */
@@ -41,6 +42,7 @@ class WindowsKioskUWPApp extends WindowsKioskAppBase
 
     /**
     * Sets the appUserModelId
+    * This is the only Application User Model ID (AUMID) that will be available to launch use while in Kiosk Mode
     *
     * @param string $val The value of the appUserModelId
     *
@@ -53,6 +55,7 @@ class WindowsKioskUWPApp extends WindowsKioskAppBase
     }
     /**
     * Gets the appId
+    * This references an Intune App that will be target to the same assignments as Kiosk configuration
     *
     * @return string The appId
     */
@@ -67,6 +70,7 @@ class WindowsKioskUWPApp extends WindowsKioskAppBase
 
     /**
     * Sets the appId
+    * This references an Intune App that will be target to the same assignments as Kiosk configuration
     *
     * @param string $val The value of the appId
     *
@@ -79,6 +83,7 @@ class WindowsKioskUWPApp extends WindowsKioskAppBase
     }
     /**
     * Gets the containedAppId
+    * This references an contained App from an Intune App
     *
     * @return string The containedAppId
     */
@@ -93,6 +98,7 @@ class WindowsKioskUWPApp extends WindowsKioskAppBase
 
     /**
     * Sets the containedAppId
+    * This references an contained App from an Intune App
     *
     * @param string $val The value of the containedAppId
     *

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * AndroidGeneralDeviceConfiguration class
@@ -28,6 +28,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
 {
     /**
     * Gets the appsBlockClipboardSharing
+    * Indicates whether or not to block clipboard sharing to copy and paste between applications.
     *
     * @return bool The appsBlockClipboardSharing
     */
@@ -42,6 +43,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the appsBlockClipboardSharing
+    * Indicates whether or not to block clipboard sharing to copy and paste between applications.
     *
     * @param bool $val The appsBlockClipboardSharing
     *
@@ -55,6 +57,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the appsBlockCopyPaste
+    * Indicates whether or not to block copy and paste within applications.
     *
     * @return bool The appsBlockCopyPaste
     */
@@ -69,6 +72,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the appsBlockCopyPaste
+    * Indicates whether or not to block copy and paste within applications.
     *
     * @param bool $val The appsBlockCopyPaste
     *
@@ -82,6 +86,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the appsBlockYouTube
+    * Indicates whether or not to block the YouTube app.
     *
     * @return bool The appsBlockYouTube
     */
@@ -96,6 +101,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the appsBlockYouTube
+    * Indicates whether or not to block the YouTube app.
     *
     * @param bool $val The appsBlockYouTube
     *
@@ -109,6 +115,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the bluetoothBlocked
+    * Indicates whether or not to block Bluetooth.
     *
     * @return bool The bluetoothBlocked
     */
@@ -123,6 +130,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the bluetoothBlocked
+    * Indicates whether or not to block Bluetooth.
     *
     * @param bool $val The bluetoothBlocked
     *
@@ -136,6 +144,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the cameraBlocked
+    * Indicates whether or not to block the use of the camera.
     *
     * @return bool The cameraBlocked
     */
@@ -150,6 +159,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the cameraBlocked
+    * Indicates whether or not to block the use of the camera.
     *
     * @param bool $val The cameraBlocked
     *
@@ -163,6 +173,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the cellularBlockDataRoaming
+    * Indicates whether or not to block data roaming.
     *
     * @return bool The cellularBlockDataRoaming
     */
@@ -177,6 +188,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the cellularBlockDataRoaming
+    * Indicates whether or not to block data roaming.
     *
     * @param bool $val The cellularBlockDataRoaming
     *
@@ -190,6 +202,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the cellularBlockMessaging
+    * Indicates whether or not to block SMS/MMS messaging.
     *
     * @return bool The cellularBlockMessaging
     */
@@ -204,6 +217,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the cellularBlockMessaging
+    * Indicates whether or not to block SMS/MMS messaging.
     *
     * @param bool $val The cellularBlockMessaging
     *
@@ -217,6 +231,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the cellularBlockVoiceRoaming
+    * Indicates whether or not to block voice roaming.
     *
     * @return bool The cellularBlockVoiceRoaming
     */
@@ -231,6 +246,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the cellularBlockVoiceRoaming
+    * Indicates whether or not to block voice roaming.
     *
     * @param bool $val The cellularBlockVoiceRoaming
     *
@@ -244,6 +260,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the cellularBlockWiFiTethering
+    * Indicates whether or not to block syncing Wi-Fi tethering.
     *
     * @return bool The cellularBlockWiFiTethering
     */
@@ -258,6 +275,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the cellularBlockWiFiTethering
+    * Indicates whether or not to block syncing Wi-Fi tethering.
     *
     * @param bool $val The cellularBlockWiFiTethering
     *
@@ -272,6 +290,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
 
      /** 
      * Gets the compliantAppsList
+    * List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
      *
      * @return array The compliantAppsList
      */
@@ -286,6 +305,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /** 
     * Sets the compliantAppsList
+    * List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
     *
     * @param AppListItem $val The compliantAppsList
     *
@@ -299,13 +319,14 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the compliantAppListType
+    * Type of list that is in the CompliantAppsList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
     *
     * @return AppListType The compliantAppListType
     */
     public function getCompliantAppListType()
     {
         if (array_key_exists("compliantAppListType", $this->_propDict)) {
-            if (is_a($this->_propDict["compliantAppListType"], "Microsoft\Graph\Beta\Model\AppListType")) {
+            if (is_a($this->_propDict["compliantAppListType"], "Microsoft\Graph\Model\AppListType")) {
                 return $this->_propDict["compliantAppListType"];
             } else {
                 $this->_propDict["compliantAppListType"] = new AppListType($this->_propDict["compliantAppListType"]);
@@ -317,6 +338,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the compliantAppListType
+    * Type of list that is in the CompliantAppsList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
     *
     * @param AppListType $val The compliantAppListType
     *
@@ -330,6 +352,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the diagnosticDataBlockSubmission
+    * Indicates whether or not to block diagnostic data submission.
     *
     * @return bool The diagnosticDataBlockSubmission
     */
@@ -344,6 +367,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the diagnosticDataBlockSubmission
+    * Indicates whether or not to block diagnostic data submission.
     *
     * @param bool $val The diagnosticDataBlockSubmission
     *
@@ -357,6 +381,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the locationServicesBlocked
+    * Indicates whether or not to block location services.
     *
     * @return bool The locationServicesBlocked
     */
@@ -371,6 +396,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the locationServicesBlocked
+    * Indicates whether or not to block location services.
     *
     * @param bool $val The locationServicesBlocked
     *
@@ -384,6 +410,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the googleAccountBlockAutoSync
+    * Indicates whether or not to block Google account auto sync.
     *
     * @return bool The googleAccountBlockAutoSync
     */
@@ -398,6 +425,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the googleAccountBlockAutoSync
+    * Indicates whether or not to block Google account auto sync.
     *
     * @param bool $val The googleAccountBlockAutoSync
     *
@@ -411,6 +439,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the googlePlayStoreBlocked
+    * Indicates whether or not to block the Google Play store.
     *
     * @return bool The googlePlayStoreBlocked
     */
@@ -425,6 +454,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the googlePlayStoreBlocked
+    * Indicates whether or not to block the Google Play store.
     *
     * @param bool $val The googlePlayStoreBlocked
     *
@@ -438,6 +468,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the kioskModeBlockSleepButton
+    * Indicates whether or not to block the screen sleep button while in Kiosk Mode.
     *
     * @return bool The kioskModeBlockSleepButton
     */
@@ -452,6 +483,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the kioskModeBlockSleepButton
+    * Indicates whether or not to block the screen sleep button while in Kiosk Mode.
     *
     * @param bool $val The kioskModeBlockSleepButton
     *
@@ -465,6 +497,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the kioskModeBlockVolumeButtons
+    * Indicates whether or not to block the volume buttons while in Kiosk Mode.
     *
     * @return bool The kioskModeBlockVolumeButtons
     */
@@ -479,6 +512,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the kioskModeBlockVolumeButtons
+    * Indicates whether or not to block the volume buttons while in Kiosk Mode.
     *
     * @param bool $val The kioskModeBlockVolumeButtons
     *
@@ -492,6 +526,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the dateAndTimeBlockChanges
+    * Indicates whether or not to block changing date and time while in KNOX Mode.
     *
     * @return bool The dateAndTimeBlockChanges
     */
@@ -506,6 +541,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the dateAndTimeBlockChanges
+    * Indicates whether or not to block changing date and time while in KNOX Mode.
     *
     * @param bool $val The dateAndTimeBlockChanges
     *
@@ -520,6 +556,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
 
      /** 
      * Gets the kioskModeApps
+    * A list of apps that will be allowed to run when the device is in Kiosk Mode. This collection can contain a maximum of 500 elements.
      *
      * @return array The kioskModeApps
      */
@@ -534,6 +571,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /** 
     * Sets the kioskModeApps
+    * A list of apps that will be allowed to run when the device is in Kiosk Mode. This collection can contain a maximum of 500 elements.
     *
     * @param AppListItem $val The kioskModeApps
     *
@@ -547,6 +585,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the nfcBlocked
+    * Indicates whether or not to block Near-Field Communication.
     *
     * @return bool The nfcBlocked
     */
@@ -561,6 +600,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the nfcBlocked
+    * Indicates whether or not to block Near-Field Communication.
     *
     * @param bool $val The nfcBlocked
     *
@@ -574,6 +614,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordBlockFingerprintUnlock
+    * Indicates whether or not to block fingerprint unlock.
     *
     * @return bool The passwordBlockFingerprintUnlock
     */
@@ -588,6 +629,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordBlockFingerprintUnlock
+    * Indicates whether or not to block fingerprint unlock.
     *
     * @param bool $val The passwordBlockFingerprintUnlock
     *
@@ -601,6 +643,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordBlockTrustAgents
+    * Indicates whether or not to block Smart Lock and other trust agents.
     *
     * @return bool The passwordBlockTrustAgents
     */
@@ -615,6 +658,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordBlockTrustAgents
+    * Indicates whether or not to block Smart Lock and other trust agents.
     *
     * @param bool $val The passwordBlockTrustAgents
     *
@@ -628,6 +672,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordExpirationDays
+    * Number of days before the password expires. Valid values 1 to 365
     *
     * @return int The passwordExpirationDays
     */
@@ -642,6 +687,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordExpirationDays
+    * Number of days before the password expires. Valid values 1 to 365
     *
     * @param int $val The passwordExpirationDays
     *
@@ -655,6 +701,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordMinimumLength
+    * Minimum length of passwords. Valid values 4 to 16
     *
     * @return int The passwordMinimumLength
     */
@@ -669,6 +716,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordMinimumLength
+    * Minimum length of passwords. Valid values 4 to 16
     *
     * @param int $val The passwordMinimumLength
     *
@@ -682,6 +730,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordMinutesOfInactivityBeforeScreenTimeout
+    * Minutes of inactivity before the screen times out.
     *
     * @return int The passwordMinutesOfInactivityBeforeScreenTimeout
     */
@@ -696,6 +745,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordMinutesOfInactivityBeforeScreenTimeout
+    * Minutes of inactivity before the screen times out.
     *
     * @param int $val The passwordMinutesOfInactivityBeforeScreenTimeout
     *
@@ -709,6 +759,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordPreviousPasswordBlockCount
+    * Number of previous passwords to block. Valid values 0 to 24
     *
     * @return int The passwordPreviousPasswordBlockCount
     */
@@ -723,6 +774,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordPreviousPasswordBlockCount
+    * Number of previous passwords to block. Valid values 0 to 24
     *
     * @param int $val The passwordPreviousPasswordBlockCount
     *
@@ -736,6 +788,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordSignInFailureCountBeforeFactoryReset
+    * Number of sign in failures allowed before factory reset. Valid values 4 to 11
     *
     * @return int The passwordSignInFailureCountBeforeFactoryReset
     */
@@ -750,6 +803,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordSignInFailureCountBeforeFactoryReset
+    * Number of sign in failures allowed before factory reset. Valid values 4 to 11
     *
     * @param int $val The passwordSignInFailureCountBeforeFactoryReset
     *
@@ -763,13 +817,14 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordRequiredType
+    * Type of password that is required. Possible values are: deviceDefault, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, numeric, numericComplex, any.
     *
     * @return AndroidRequiredPasswordType The passwordRequiredType
     */
     public function getPasswordRequiredType()
     {
         if (array_key_exists("passwordRequiredType", $this->_propDict)) {
-            if (is_a($this->_propDict["passwordRequiredType"], "Microsoft\Graph\Beta\Model\AndroidRequiredPasswordType")) {
+            if (is_a($this->_propDict["passwordRequiredType"], "Microsoft\Graph\Model\AndroidRequiredPasswordType")) {
                 return $this->_propDict["passwordRequiredType"];
             } else {
                 $this->_propDict["passwordRequiredType"] = new AndroidRequiredPasswordType($this->_propDict["passwordRequiredType"]);
@@ -781,6 +836,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordRequiredType
+    * Type of password that is required. Possible values are: deviceDefault, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, numeric, numericComplex, any.
     *
     * @param AndroidRequiredPasswordType $val The passwordRequiredType
     *
@@ -794,6 +850,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordRequired
+    * Indicates whether or not to require a password.
     *
     * @return bool The passwordRequired
     */
@@ -808,6 +865,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordRequired
+    * Indicates whether or not to require a password.
     *
     * @param bool $val The passwordRequired
     *
@@ -821,6 +879,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the powerOffBlocked
+    * Indicates whether or not to block powering off the device.
     *
     * @return bool The powerOffBlocked
     */
@@ -835,6 +894,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the powerOffBlocked
+    * Indicates whether or not to block powering off the device.
     *
     * @param bool $val The powerOffBlocked
     *
@@ -848,6 +908,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the factoryResetBlocked
+    * Indicates whether or not to block user performing a factory reset.
     *
     * @return bool The factoryResetBlocked
     */
@@ -862,6 +923,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the factoryResetBlocked
+    * Indicates whether or not to block user performing a factory reset.
     *
     * @param bool $val The factoryResetBlocked
     *
@@ -875,6 +937,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the screenCaptureBlocked
+    * Indicates whether or not to block screenshots.
     *
     * @return bool The screenCaptureBlocked
     */
@@ -889,6 +952,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the screenCaptureBlocked
+    * Indicates whether or not to block screenshots.
     *
     * @param bool $val The screenCaptureBlocked
     *
@@ -902,6 +966,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the deviceSharingAllowed
+    * Indicates whether or not to allow device sharing mode.
     *
     * @return bool The deviceSharingAllowed
     */
@@ -916,6 +981,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the deviceSharingAllowed
+    * Indicates whether or not to allow device sharing mode.
     *
     * @param bool $val The deviceSharingAllowed
     *
@@ -929,6 +995,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the storageBlockGoogleBackup
+    * Indicates whether or not to block Google Backup.
     *
     * @return bool The storageBlockGoogleBackup
     */
@@ -943,6 +1010,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the storageBlockGoogleBackup
+    * Indicates whether or not to block Google Backup.
     *
     * @param bool $val The storageBlockGoogleBackup
     *
@@ -956,6 +1024,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the storageBlockRemovableStorage
+    * Indicates whether or not to block removable storage usage.
     *
     * @return bool The storageBlockRemovableStorage
     */
@@ -970,6 +1039,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the storageBlockRemovableStorage
+    * Indicates whether or not to block removable storage usage.
     *
     * @param bool $val The storageBlockRemovableStorage
     *
@@ -983,6 +1053,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the storageRequireDeviceEncryption
+    * Indicates whether or not to require device encryption.
     *
     * @return bool The storageRequireDeviceEncryption
     */
@@ -997,6 +1068,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the storageRequireDeviceEncryption
+    * Indicates whether or not to require device encryption.
     *
     * @param bool $val The storageRequireDeviceEncryption
     *
@@ -1010,6 +1082,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the storageRequireRemovableStorageEncryption
+    * Indicates whether or not to require removable storage encryption.
     *
     * @return bool The storageRequireRemovableStorageEncryption
     */
@@ -1024,6 +1097,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the storageRequireRemovableStorageEncryption
+    * Indicates whether or not to require removable storage encryption.
     *
     * @param bool $val The storageRequireRemovableStorageEncryption
     *
@@ -1037,6 +1111,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the voiceAssistantBlocked
+    * Indicates whether or not to block the use of the Voice Assistant.
     *
     * @return bool The voiceAssistantBlocked
     */
@@ -1051,6 +1126,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the voiceAssistantBlocked
+    * Indicates whether or not to block the use of the Voice Assistant.
     *
     * @param bool $val The voiceAssistantBlocked
     *
@@ -1064,6 +1140,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the voiceDialingBlocked
+    * Indicates whether or not to block voice dialing.
     *
     * @return bool The voiceDialingBlocked
     */
@@ -1078,6 +1155,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the voiceDialingBlocked
+    * Indicates whether or not to block voice dialing.
     *
     * @param bool $val The voiceDialingBlocked
     *
@@ -1091,6 +1169,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the webBrowserBlockPopups
+    * Indicates whether or not to block popups within the web browser.
     *
     * @return bool The webBrowserBlockPopups
     */
@@ -1105,6 +1184,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the webBrowserBlockPopups
+    * Indicates whether or not to block popups within the web browser.
     *
     * @param bool $val The webBrowserBlockPopups
     *
@@ -1118,6 +1198,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the webBrowserBlockAutofill
+    * Indicates whether or not to block the web browser's auto fill feature.
     *
     * @return bool The webBrowserBlockAutofill
     */
@@ -1132,6 +1213,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the webBrowserBlockAutofill
+    * Indicates whether or not to block the web browser's auto fill feature.
     *
     * @param bool $val The webBrowserBlockAutofill
     *
@@ -1145,6 +1227,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the webBrowserBlockJavaScript
+    * Indicates whether or not to block JavaScript within the web browser.
     *
     * @return bool The webBrowserBlockJavaScript
     */
@@ -1159,6 +1242,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the webBrowserBlockJavaScript
+    * Indicates whether or not to block JavaScript within the web browser.
     *
     * @param bool $val The webBrowserBlockJavaScript
     *
@@ -1172,6 +1256,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the webBrowserBlocked
+    * Indicates whether or not to block the web browser.
     *
     * @return bool The webBrowserBlocked
     */
@@ -1186,6 +1271,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the webBrowserBlocked
+    * Indicates whether or not to block the web browser.
     *
     * @param bool $val The webBrowserBlocked
     *
@@ -1199,13 +1285,14 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the webBrowserCookieSettings
+    * Cookie settings within the web browser. Possible values are: browserDefault, blockAlways, allowCurrentWebSite, allowFromWebsitesVisited, allowAlways.
     *
     * @return WebBrowserCookieSettings The webBrowserCookieSettings
     */
     public function getWebBrowserCookieSettings()
     {
         if (array_key_exists("webBrowserCookieSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["webBrowserCookieSettings"], "Microsoft\Graph\Beta\Model\WebBrowserCookieSettings")) {
+            if (is_a($this->_propDict["webBrowserCookieSettings"], "Microsoft\Graph\Model\WebBrowserCookieSettings")) {
                 return $this->_propDict["webBrowserCookieSettings"];
             } else {
                 $this->_propDict["webBrowserCookieSettings"] = new WebBrowserCookieSettings($this->_propDict["webBrowserCookieSettings"]);
@@ -1217,6 +1304,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the webBrowserCookieSettings
+    * Cookie settings within the web browser. Possible values are: browserDefault, blockAlways, allowCurrentWebSite, allowFromWebsitesVisited, allowAlways.
     *
     * @param WebBrowserCookieSettings $val The webBrowserCookieSettings
     *
@@ -1230,6 +1318,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the wiFiBlocked
+    * Indicates whether or not to block syncing Wi-Fi.
     *
     * @return bool The wiFiBlocked
     */
@@ -1244,6 +1333,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the wiFiBlocked
+    * Indicates whether or not to block syncing Wi-Fi.
     *
     * @param bool $val The wiFiBlocked
     *
@@ -1258,6 +1348,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
 
      /** 
      * Gets the appsInstallAllowList
+    * List of apps which can be installed on the KNOX device. This collection can contain a maximum of 500 elements.
      *
      * @return array The appsInstallAllowList
      */
@@ -1272,6 +1363,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /** 
     * Sets the appsInstallAllowList
+    * List of apps which can be installed on the KNOX device. This collection can contain a maximum of 500 elements.
     *
     * @param AppListItem $val The appsInstallAllowList
     *
@@ -1286,6 +1378,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
 
      /** 
      * Gets the appsLaunchBlockList
+    * List of apps which are blocked from being launched on the KNOX device. This collection can contain a maximum of 500 elements.
      *
      * @return array The appsLaunchBlockList
      */
@@ -1300,6 +1393,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /** 
     * Sets the appsLaunchBlockList
+    * List of apps which are blocked from being launched on the KNOX device. This collection can contain a maximum of 500 elements.
     *
     * @param AppListItem $val The appsLaunchBlockList
     *
@@ -1314,6 +1408,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
 
      /** 
      * Gets the appsHideList
+    * List of apps to be hidden on the KNOX device. This collection can contain a maximum of 500 elements.
      *
      * @return array The appsHideList
      */
@@ -1328,6 +1423,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /** 
     * Sets the appsHideList
+    * List of apps to be hidden on the KNOX device. This collection can contain a maximum of 500 elements.
     *
     * @param AppListItem $val The appsHideList
     *
@@ -1341,6 +1437,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the securityRequireVerifyApps
+    * Require the Android Verify apps feature is turned on.
     *
     * @return bool The securityRequireVerifyApps
     */
@@ -1355,6 +1452,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the securityRequireVerifyApps
+    * Require the Android Verify apps feature is turned on.
     *
     * @param bool $val The securityRequireVerifyApps
     *

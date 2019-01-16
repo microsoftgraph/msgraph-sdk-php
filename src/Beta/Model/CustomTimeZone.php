@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * CustomTimeZone class
 *
@@ -27,6 +27,7 @@ class CustomTimeZone extends TimeZoneBase
 {
     /**
     * Gets the bias
+    * The time offset of the time zone from Coordinated Universal Time (UTC). This value is in minutes. Time zones that are ahead of UTC have a positive offset; time zones that are behind UTC have a negative offset.
     *
     * @return int The bias
     */
@@ -41,6 +42,7 @@ class CustomTimeZone extends TimeZoneBase
 
     /**
     * Sets the bias
+    * The time offset of the time zone from Coordinated Universal Time (UTC). This value is in minutes. Time zones that are ahead of UTC have a positive offset; time zones that are behind UTC have a negative offset.
     *
     * @param int $val The value of the bias
     *
@@ -54,13 +56,14 @@ class CustomTimeZone extends TimeZoneBase
 
     /**
     * Gets the standardOffset
+    * Specifies when the time zone switches from daylight saving time to standard time.
     *
     * @return StandardTimeZoneOffset The standardOffset
     */
     public function getStandardOffset()
     {
         if (array_key_exists("standardOffset", $this->_propDict)) {
-            if (is_a($this->_propDict["standardOffset"], "Microsoft\Graph\Beta\Model\StandardTimeZoneOffset")) {
+            if (is_a($this->_propDict["standardOffset"], "Microsoft\Graph\Model\StandardTimeZoneOffset")) {
                 return $this->_propDict["standardOffset"];
             } else {
                 $this->_propDict["standardOffset"] = new StandardTimeZoneOffset($this->_propDict["standardOffset"]);
@@ -72,6 +75,7 @@ class CustomTimeZone extends TimeZoneBase
 
     /**
     * Sets the standardOffset
+    * Specifies when the time zone switches from daylight saving time to standard time.
     *
     * @param StandardTimeZoneOffset $val The value to assign to the standardOffset
     *
@@ -85,13 +89,14 @@ class CustomTimeZone extends TimeZoneBase
 
     /**
     * Gets the daylightOffset
+    * Specifies when the time zone switches from standard time to daylight saving time.
     *
     * @return DaylightTimeZoneOffset The daylightOffset
     */
     public function getDaylightOffset()
     {
         if (array_key_exists("daylightOffset", $this->_propDict)) {
-            if (is_a($this->_propDict["daylightOffset"], "Microsoft\Graph\Beta\Model\DaylightTimeZoneOffset")) {
+            if (is_a($this->_propDict["daylightOffset"], "Microsoft\Graph\Model\DaylightTimeZoneOffset")) {
                 return $this->_propDict["daylightOffset"];
             } else {
                 $this->_propDict["daylightOffset"] = new DaylightTimeZoneOffset($this->_propDict["daylightOffset"]);
@@ -103,6 +108,7 @@ class CustomTimeZone extends TimeZoneBase
 
     /**
     * Sets the daylightOffset
+    * Specifies when the time zone switches from standard time to daylight saving time.
     *
     * @param DaylightTimeZoneOffset $val The value to assign to the daylightOffset
     *

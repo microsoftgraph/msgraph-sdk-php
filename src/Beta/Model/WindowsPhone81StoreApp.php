@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * WindowsPhone81StoreApp class
@@ -28,6 +28,7 @@ class WindowsPhone81StoreApp extends MobileApp
 {
     /**
     * Gets the appStoreUrl
+    * The Windows Phone 8.1 app store URL.
     *
     * @return string The appStoreUrl
     */
@@ -42,6 +43,7 @@ class WindowsPhone81StoreApp extends MobileApp
     
     /**
     * Sets the appStoreUrl
+    * The Windows Phone 8.1 app store URL.
     *
     * @param string $val The appStoreUrl
     *

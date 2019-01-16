@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * SynchronizationTemplate class
@@ -197,7 +197,7 @@ class SynchronizationTemplate extends Entity
     public function getSchema()
     {
         if (array_key_exists("schema", $this->_propDict)) {
-            if (is_a($this->_propDict["schema"], "Microsoft\Graph\Beta\Model\SynchronizationSchema")) {
+            if (is_a($this->_propDict["schema"], "Microsoft\Graph\Model\SynchronizationSchema")) {
                 return $this->_propDict["schema"];
             } else {
                 $this->_propDict["schema"] = new SynchronizationSchema($this->_propDict["schema"]);

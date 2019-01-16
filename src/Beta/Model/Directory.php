@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * Directory class
@@ -29,6 +29,7 @@ class Directory extends Entity
 
      /** 
      * Gets the deletedItems
+    * Recently deleted items. Read-only. Nullable.
      *
      * @return array The deletedItems
      */
@@ -43,6 +44,7 @@ class Directory extends Entity
     
     /** 
     * Sets the deletedItems
+    * Recently deleted items. Read-only. Nullable.
     *
     * @param DirectoryObject $val The deletedItems
     *

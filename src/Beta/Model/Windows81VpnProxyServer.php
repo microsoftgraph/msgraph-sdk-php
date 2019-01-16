@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * Windows81VpnProxyServer class
 *
@@ -27,6 +27,7 @@ class Windows81VpnProxyServer extends VpnProxyServer
 {
     /**
     * Gets the automaticallyDetectProxySettings
+    * Automatically detect proxy settings.
     *
     * @return bool The automaticallyDetectProxySettings
     */
@@ -41,6 +42,7 @@ class Windows81VpnProxyServer extends VpnProxyServer
 
     /**
     * Sets the automaticallyDetectProxySettings
+    * Automatically detect proxy settings.
     *
     * @param bool $val The value of the automaticallyDetectProxySettings
     *
@@ -53,6 +55,7 @@ class Windows81VpnProxyServer extends VpnProxyServer
     }
     /**
     * Gets the bypassProxyServerForLocalAddress
+    * Bypass proxy server for local address.
     *
     * @return bool The bypassProxyServerForLocalAddress
     */
@@ -67,6 +70,7 @@ class Windows81VpnProxyServer extends VpnProxyServer
 
     /**
     * Sets the bypassProxyServerForLocalAddress
+    * Bypass proxy server for local address.
     *
     * @param bool $val The value of the bypassProxyServerForLocalAddress
     *

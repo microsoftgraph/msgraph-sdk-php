@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * DeviceInstallState class
@@ -28,6 +28,7 @@ class DeviceInstallState extends Entity
 {
     /**
     * Gets the deviceName
+    * Device name.
     *
     * @return string The deviceName
     */
@@ -42,6 +43,7 @@ class DeviceInstallState extends Entity
     
     /**
     * Sets the deviceName
+    * Device name.
     *
     * @param string $val The deviceName
     *
@@ -55,6 +57,7 @@ class DeviceInstallState extends Entity
     
     /**
     * Gets the deviceId
+    * Device Id.
     *
     * @return string The deviceId
     */
@@ -69,6 +72,7 @@ class DeviceInstallState extends Entity
     
     /**
     * Sets the deviceId
+    * Device Id.
     *
     * @param string $val The deviceId
     *
@@ -82,6 +86,7 @@ class DeviceInstallState extends Entity
     
     /**
     * Gets the lastSyncDateTime
+    * Last sync date and time.
     *
     * @return \DateTime The lastSyncDateTime
     */
@@ -100,6 +105,7 @@ class DeviceInstallState extends Entity
     
     /**
     * Sets the lastSyncDateTime
+    * Last sync date and time.
     *
     * @param \DateTime $val The lastSyncDateTime
     *
@@ -113,13 +119,14 @@ class DeviceInstallState extends Entity
     
     /**
     * Gets the installState
+    * The install state of the eBook. Possible values are: notApplicable, installed, failed, notInstalled, uninstallFailed, unknown.
     *
     * @return InstallState The installState
     */
     public function getInstallState()
     {
         if (array_key_exists("installState", $this->_propDict)) {
-            if (is_a($this->_propDict["installState"], "Microsoft\Graph\Beta\Model\InstallState")) {
+            if (is_a($this->_propDict["installState"], "Microsoft\Graph\Model\InstallState")) {
                 return $this->_propDict["installState"];
             } else {
                 $this->_propDict["installState"] = new InstallState($this->_propDict["installState"]);
@@ -131,6 +138,7 @@ class DeviceInstallState extends Entity
     
     /**
     * Sets the installState
+    * The install state of the eBook. Possible values are: notApplicable, installed, failed, notInstalled, uninstallFailed, unknown.
     *
     * @param InstallState $val The installState
     *
@@ -144,6 +152,7 @@ class DeviceInstallState extends Entity
     
     /**
     * Gets the errorCode
+    * The error code for install failures.
     *
     * @return string The errorCode
     */
@@ -158,6 +167,7 @@ class DeviceInstallState extends Entity
     
     /**
     * Sets the errorCode
+    * The error code for install failures.
     *
     * @param string $val The errorCode
     *
@@ -171,6 +181,7 @@ class DeviceInstallState extends Entity
     
     /**
     * Gets the osVersion
+    * OS Version.
     *
     * @return string The osVersion
     */
@@ -185,6 +196,7 @@ class DeviceInstallState extends Entity
     
     /**
     * Sets the osVersion
+    * OS Version.
     *
     * @param string $val The osVersion
     *
@@ -198,6 +210,7 @@ class DeviceInstallState extends Entity
     
     /**
     * Gets the osDescription
+    * OS Description.
     *
     * @return string The osDescription
     */
@@ -212,6 +225,7 @@ class DeviceInstallState extends Entity
     
     /**
     * Sets the osDescription
+    * OS Description.
     *
     * @param string $val The osDescription
     *
@@ -225,6 +239,7 @@ class DeviceInstallState extends Entity
     
     /**
     * Gets the userName
+    * Device User Name.
     *
     * @return string The userName
     */
@@ -239,6 +254,7 @@ class DeviceInstallState extends Entity
     
     /**
     * Sets the userName
+    * Device User Name.
     *
     * @param string $val The userName
     *

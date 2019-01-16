@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * AndroidPermissionAction class
 *
@@ -27,6 +27,7 @@ class AndroidPermissionAction extends Entity
 {
     /**
     * Gets the permission
+    * Android permission string, defined in the official Android documentation.  Example 'android.permission.READ_CONTACTS'.
     *
     * @return string The permission
     */
@@ -41,6 +42,7 @@ class AndroidPermissionAction extends Entity
 
     /**
     * Sets the permission
+    * Android permission string, defined in the official Android documentation.  Example 'android.permission.READ_CONTACTS'.
     *
     * @param string $val The value of the permission
     *
@@ -54,13 +56,14 @@ class AndroidPermissionAction extends Entity
 
     /**
     * Gets the action
+    * Type of Android permission action.
     *
     * @return AndroidPermissionActionType The action
     */
     public function getAction()
     {
         if (array_key_exists("action", $this->_propDict)) {
-            if (is_a($this->_propDict["action"], "Microsoft\Graph\Beta\Model\AndroidPermissionActionType")) {
+            if (is_a($this->_propDict["action"], "Microsoft\Graph\Model\AndroidPermissionActionType")) {
                 return $this->_propDict["action"];
             } else {
                 $this->_propDict["action"] = new AndroidPermissionActionType($this->_propDict["action"]);
@@ -72,6 +75,7 @@ class AndroidPermissionAction extends Entity
 
     /**
     * Sets the action
+    * Type of Android permission action.
     *
     * @param AndroidPermissionActionType $val The value to assign to the action
     *

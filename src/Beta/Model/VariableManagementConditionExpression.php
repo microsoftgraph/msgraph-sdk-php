@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * VariableManagementConditionExpression class
 *
@@ -27,6 +27,7 @@ class VariableManagementConditionExpression extends ManagementConditionExpressio
 {
     /**
     * Gets the managementConditionId
+    * The management condition id that is used to evaluate the expression.
     *
     * @return string The managementConditionId
     */
@@ -41,6 +42,7 @@ class VariableManagementConditionExpression extends ManagementConditionExpressio
 
     /**
     * Sets the managementConditionId
+    * The management condition id that is used to evaluate the expression.
     *
     * @param string $val The value of the managementConditionId
     *

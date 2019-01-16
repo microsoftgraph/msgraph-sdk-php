@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * PatternedRecurrence class
 *
@@ -28,13 +28,14 @@ class PatternedRecurrence extends Entity
 
     /**
     * Gets the pattern
+    * The frequency of an event.
     *
     * @return RecurrencePattern The pattern
     */
     public function getPattern()
     {
         if (array_key_exists("pattern", $this->_propDict)) {
-            if (is_a($this->_propDict["pattern"], "Microsoft\Graph\Beta\Model\RecurrencePattern")) {
+            if (is_a($this->_propDict["pattern"], "Microsoft\Graph\Model\RecurrencePattern")) {
                 return $this->_propDict["pattern"];
             } else {
                 $this->_propDict["pattern"] = new RecurrencePattern($this->_propDict["pattern"]);
@@ -46,6 +47,7 @@ class PatternedRecurrence extends Entity
 
     /**
     * Sets the pattern
+    * The frequency of an event.
     *
     * @param RecurrencePattern $val The value to assign to the pattern
     *
@@ -59,13 +61,14 @@ class PatternedRecurrence extends Entity
 
     /**
     * Gets the range
+    * The duration of an event.
     *
     * @return RecurrenceRange The range
     */
     public function getRange()
     {
         if (array_key_exists("range", $this->_propDict)) {
-            if (is_a($this->_propDict["range"], "Microsoft\Graph\Beta\Model\RecurrenceRange")) {
+            if (is_a($this->_propDict["range"], "Microsoft\Graph\Model\RecurrenceRange")) {
                 return $this->_propDict["range"];
             } else {
                 $this->_propDict["range"] = new RecurrenceRange($this->_propDict["range"]);
@@ -77,6 +80,7 @@ class PatternedRecurrence extends Entity
 
     /**
     * Sets the range
+    * The duration of an event.
     *
     * @param RecurrenceRange $val The value to assign to the range
     *

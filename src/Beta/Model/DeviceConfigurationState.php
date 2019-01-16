@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * DeviceConfigurationState class
@@ -56,6 +56,7 @@ class DeviceConfigurationState extends Entity
     
     /**
     * Gets the displayName
+    * The name of the policy for this policyBase
     *
     * @return string The displayName
     */
@@ -70,6 +71,7 @@ class DeviceConfigurationState extends Entity
     
     /**
     * Sets the displayName
+    * The name of the policy for this policyBase
     *
     * @param string $val The displayName
     *
@@ -83,6 +85,7 @@ class DeviceConfigurationState extends Entity
     
     /**
     * Gets the version
+    * The version of the policy
     *
     * @return int The version
     */
@@ -97,6 +100,7 @@ class DeviceConfigurationState extends Entity
     
     /**
     * Sets the version
+    * The version of the policy
     *
     * @param int $val The version
     *
@@ -110,13 +114,14 @@ class DeviceConfigurationState extends Entity
     
     /**
     * Gets the platformType
+    * Platform type that the policy applies to
     *
     * @return PolicyPlatformType The platformType
     */
     public function getPlatformType()
     {
         if (array_key_exists("platformType", $this->_propDict)) {
-            if (is_a($this->_propDict["platformType"], "Microsoft\Graph\Beta\Model\PolicyPlatformType")) {
+            if (is_a($this->_propDict["platformType"], "Microsoft\Graph\Model\PolicyPlatformType")) {
                 return $this->_propDict["platformType"];
             } else {
                 $this->_propDict["platformType"] = new PolicyPlatformType($this->_propDict["platformType"]);
@@ -128,6 +133,7 @@ class DeviceConfigurationState extends Entity
     
     /**
     * Sets the platformType
+    * Platform type that the policy applies to
     *
     * @param PolicyPlatformType $val The platformType
     *
@@ -141,13 +147,14 @@ class DeviceConfigurationState extends Entity
     
     /**
     * Gets the state
+    * The compliance state of the policy
     *
     * @return ComplianceStatus The state
     */
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "Microsoft\Graph\Beta\Model\ComplianceStatus")) {
+            if (is_a($this->_propDict["state"], "Microsoft\Graph\Model\ComplianceStatus")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new ComplianceStatus($this->_propDict["state"]);
@@ -159,6 +166,7 @@ class DeviceConfigurationState extends Entity
     
     /**
     * Sets the state
+    * The compliance state of the policy
     *
     * @param ComplianceStatus $val The state
     *
@@ -172,6 +180,7 @@ class DeviceConfigurationState extends Entity
     
     /**
     * Gets the settingCount
+    * Count of how many setting a policy holds
     *
     * @return int The settingCount
     */
@@ -186,6 +195,7 @@ class DeviceConfigurationState extends Entity
     
     /**
     * Sets the settingCount
+    * Count of how many setting a policy holds
     *
     * @param int $val The settingCount
     *
@@ -199,6 +209,7 @@ class DeviceConfigurationState extends Entity
     
     /**
     * Gets the userId
+    * User unique identifier, must be Guid
     *
     * @return string The userId
     */
@@ -213,6 +224,7 @@ class DeviceConfigurationState extends Entity
     
     /**
     * Sets the userId
+    * User unique identifier, must be Guid
     *
     * @param string $val The userId
     *
@@ -226,6 +238,7 @@ class DeviceConfigurationState extends Entity
     
     /**
     * Gets the userPrincipalName
+    * User Principal Name
     *
     * @return string The userPrincipalName
     */
@@ -240,6 +253,7 @@ class DeviceConfigurationState extends Entity
     
     /**
     * Sets the userPrincipalName
+    * User Principal Name
     *
     * @param string $val The userPrincipalName
     *

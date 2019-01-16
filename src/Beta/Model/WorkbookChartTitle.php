@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * WorkbookChartTitle class
@@ -28,6 +28,7 @@ class WorkbookChartTitle extends Entity
 {
     /**
     * Gets the overlay
+    * Boolean value representing if the chart title will overlay the chart or not.
     *
     * @return bool The overlay
     */
@@ -42,6 +43,7 @@ class WorkbookChartTitle extends Entity
     
     /**
     * Sets the overlay
+    * Boolean value representing if the chart title will overlay the chart or not.
     *
     * @param bool $val The overlay
     *
@@ -55,6 +57,7 @@ class WorkbookChartTitle extends Entity
     
     /**
     * Gets the text
+    * Represents the title text of a chart.
     *
     * @return string The text
     */
@@ -69,6 +72,7 @@ class WorkbookChartTitle extends Entity
     
     /**
     * Sets the text
+    * Represents the title text of a chart.
     *
     * @param string $val The text
     *
@@ -82,6 +86,7 @@ class WorkbookChartTitle extends Entity
     
     /**
     * Gets the visible
+    * A boolean value the represents the visibility of a chart title object.
     *
     * @return bool The visible
     */
@@ -96,6 +101,7 @@ class WorkbookChartTitle extends Entity
     
     /**
     * Sets the visible
+    * A boolean value the represents the visibility of a chart title object.
     *
     * @param bool $val The visible
     *
@@ -109,13 +115,14 @@ class WorkbookChartTitle extends Entity
     
     /**
     * Gets the format
+    * Represents the formatting of a chart title, which includes fill and font formatting. Read-only.
     *
     * @return WorkbookChartTitleFormat The format
     */
     public function getFormat()
     {
         if (array_key_exists("format", $this->_propDict)) {
-            if (is_a($this->_propDict["format"], "Microsoft\Graph\Beta\Model\WorkbookChartTitleFormat")) {
+            if (is_a($this->_propDict["format"], "Microsoft\Graph\Model\WorkbookChartTitleFormat")) {
                 return $this->_propDict["format"];
             } else {
                 $this->_propDict["format"] = new WorkbookChartTitleFormat($this->_propDict["format"]);
@@ -127,6 +134,7 @@ class WorkbookChartTitle extends Entity
     
     /**
     * Sets the format
+    * Represents the formatting of a chart title, which includes fill and font formatting. Read-only.
     *
     * @param WorkbookChartTitleFormat $val The format
     *

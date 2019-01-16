@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * FilterOperatorSchema class
@@ -34,7 +34,7 @@ class FilterOperatorSchema extends Entity
     public function getArity()
     {
         if (array_key_exists("arity", $this->_propDict)) {
-            if (is_a($this->_propDict["arity"], "Microsoft\Graph\Beta\Model\ScopeOperatorType")) {
+            if (is_a($this->_propDict["arity"], "Microsoft\Graph\Model\ScopeOperatorType")) {
                 return $this->_propDict["arity"];
             } else {
                 $this->_propDict["arity"] = new ScopeOperatorType($this->_propDict["arity"]);
@@ -65,7 +65,7 @@ class FilterOperatorSchema extends Entity
     public function getMultivaluedComparisonType()
     {
         if (array_key_exists("multivaluedComparisonType", $this->_propDict)) {
-            if (is_a($this->_propDict["multivaluedComparisonType"], "Microsoft\Graph\Beta\Model\ScopeOperatorMultiValuedComparisonType")) {
+            if (is_a($this->_propDict["multivaluedComparisonType"], "Microsoft\Graph\Model\ScopeOperatorMultiValuedComparisonType")) {
                 return $this->_propDict["multivaluedComparisonType"];
             } else {
                 $this->_propDict["multivaluedComparisonType"] = new ScopeOperatorMultiValuedComparisonType($this->_propDict["multivaluedComparisonType"]);

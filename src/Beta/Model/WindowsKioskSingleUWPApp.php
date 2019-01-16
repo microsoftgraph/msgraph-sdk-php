@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * WindowsKioskSingleUWPApp class
 *
@@ -28,13 +28,14 @@ class WindowsKioskSingleUWPApp extends WindowsKioskAppConfiguration
 
     /**
     * Gets the uwpApp
+    * This is the only Application User Model ID (AUMID) that will be available to launch use while in Kiosk Mode
     *
     * @return WindowsKioskUWPApp The uwpApp
     */
     public function getUwpApp()
     {
         if (array_key_exists("uwpApp", $this->_propDict)) {
-            if (is_a($this->_propDict["uwpApp"], "Microsoft\Graph\Beta\Model\WindowsKioskUWPApp")) {
+            if (is_a($this->_propDict["uwpApp"], "Microsoft\Graph\Model\WindowsKioskUWPApp")) {
                 return $this->_propDict["uwpApp"];
             } else {
                 $this->_propDict["uwpApp"] = new WindowsKioskUWPApp($this->_propDict["uwpApp"]);
@@ -46,6 +47,7 @@ class WindowsKioskSingleUWPApp extends WindowsKioskAppConfiguration
 
     /**
     * Sets the uwpApp
+    * This is the only Application User Model ID (AUMID) that will be available to launch use while in Kiosk Mode
     *
     * @param WindowsKioskUWPApp $val The value to assign to the uwpApp
     *

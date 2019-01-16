@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * WorkbookNamedItem class
@@ -28,6 +28,7 @@ class WorkbookNamedItem extends Entity
 {
     /**
     * Gets the comment
+    * Represents the comment associated with this name.
     *
     * @return string The comment
     */
@@ -42,6 +43,7 @@ class WorkbookNamedItem extends Entity
     
     /**
     * Sets the comment
+    * Represents the comment associated with this name.
     *
     * @param string $val The comment
     *
@@ -55,6 +57,7 @@ class WorkbookNamedItem extends Entity
     
     /**
     * Gets the name
+    * The name of the object. Read-only.
     *
     * @return string The name
     */
@@ -69,6 +72,7 @@ class WorkbookNamedItem extends Entity
     
     /**
     * Sets the name
+    * The name of the object. Read-only.
     *
     * @param string $val The name
     *
@@ -82,6 +86,7 @@ class WorkbookNamedItem extends Entity
     
     /**
     * Gets the scope
+    * Indicates whether the name is scoped to the workbook or to a specific worksheet. Read-only.
     *
     * @return string The scope
     */
@@ -96,6 +101,7 @@ class WorkbookNamedItem extends Entity
     
     /**
     * Sets the scope
+    * Indicates whether the name is scoped to the workbook or to a specific worksheet. Read-only.
     *
     * @param string $val The scope
     *
@@ -109,6 +115,7 @@ class WorkbookNamedItem extends Entity
     
     /**
     * Gets the type
+    * Indicates what type of reference is associated with the name. The possible values are: String, Integer, Double, Boolean, Range. Read-only.
     *
     * @return string The type
     */
@@ -123,6 +130,7 @@ class WorkbookNamedItem extends Entity
     
     /**
     * Sets the type
+    * Indicates what type of reference is associated with the name. The possible values are: String, Integer, Double, Boolean, Range. Read-only.
     *
     * @param string $val The type
     *
@@ -136,6 +144,7 @@ class WorkbookNamedItem extends Entity
     
     /**
     * Gets the value
+    * Represents the formula that the name is defined to refer to. E.g. =Sheet14!$B$2:$H$12, =4.75, etc. Read-only.
     *
     * @return string The value
     */
@@ -150,6 +159,7 @@ class WorkbookNamedItem extends Entity
     
     /**
     * Sets the value
+    * Represents the formula that the name is defined to refer to. E.g. =Sheet14!$B$2:$H$12, =4.75, etc. Read-only.
     *
     * @param string $val The value
     *
@@ -163,6 +173,7 @@ class WorkbookNamedItem extends Entity
     
     /**
     * Gets the visible
+    * Specifies whether the object is visible or not.
     *
     * @return bool The visible
     */
@@ -177,6 +188,7 @@ class WorkbookNamedItem extends Entity
     
     /**
     * Sets the visible
+    * Specifies whether the object is visible or not.
     *
     * @param bool $val The visible
     *
@@ -190,13 +202,14 @@ class WorkbookNamedItem extends Entity
     
     /**
     * Gets the worksheet
+    * Returns the worksheet on which the named item is scoped to. Available only if the item is scoped to the worksheet. Read-only.
     *
     * @return WorkbookWorksheet The worksheet
     */
     public function getWorksheet()
     {
         if (array_key_exists("worksheet", $this->_propDict)) {
-            if (is_a($this->_propDict["worksheet"], "Microsoft\Graph\Beta\Model\WorkbookWorksheet")) {
+            if (is_a($this->_propDict["worksheet"], "Microsoft\Graph\Model\WorkbookWorksheet")) {
                 return $this->_propDict["worksheet"];
             } else {
                 $this->_propDict["worksheet"] = new WorkbookWorksheet($this->_propDict["worksheet"]);
@@ -208,6 +221,7 @@ class WorkbookNamedItem extends Entity
     
     /**
     * Sets the worksheet
+    * Returns the worksheet on which the named item is scoped to. Available only if the item is scoped to the worksheet. Read-only.
     *
     * @param WorkbookWorksheet $val The worksheet
     *

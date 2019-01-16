@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * UserAppInstallStatus class
@@ -28,6 +28,7 @@ class UserAppInstallStatus extends Entity
 {
     /**
     * Gets the userName
+    * User name.
     *
     * @return string The userName
     */
@@ -42,6 +43,7 @@ class UserAppInstallStatus extends Entity
     
     /**
     * Sets the userName
+    * User name.
     *
     * @param string $val The userName
     *
@@ -55,6 +57,7 @@ class UserAppInstallStatus extends Entity
     
     /**
     * Gets the userPrincipalName
+    * User Principal Name.
     *
     * @return string The userPrincipalName
     */
@@ -69,6 +72,7 @@ class UserAppInstallStatus extends Entity
     
     /**
     * Sets the userPrincipalName
+    * User Principal Name.
     *
     * @param string $val The userPrincipalName
     *
@@ -82,6 +86,7 @@ class UserAppInstallStatus extends Entity
     
     /**
     * Gets the installedDeviceCount
+    * Installed Device Count.
     *
     * @return int The installedDeviceCount
     */
@@ -96,6 +101,7 @@ class UserAppInstallStatus extends Entity
     
     /**
     * Sets the installedDeviceCount
+    * Installed Device Count.
     *
     * @param int $val The installedDeviceCount
     *
@@ -109,6 +115,7 @@ class UserAppInstallStatus extends Entity
     
     /**
     * Gets the failedDeviceCount
+    * Failed Device Count.
     *
     * @return int The failedDeviceCount
     */
@@ -123,6 +130,7 @@ class UserAppInstallStatus extends Entity
     
     /**
     * Sets the failedDeviceCount
+    * Failed Device Count.
     *
     * @param int $val The failedDeviceCount
     *
@@ -136,6 +144,7 @@ class UserAppInstallStatus extends Entity
     
     /**
     * Gets the notInstalledDeviceCount
+    * Not installed device count.
     *
     * @return int The notInstalledDeviceCount
     */
@@ -150,6 +159,7 @@ class UserAppInstallStatus extends Entity
     
     /**
     * Sets the notInstalledDeviceCount
+    * Not installed device count.
     *
     * @param int $val The notInstalledDeviceCount
     *
@@ -163,13 +173,14 @@ class UserAppInstallStatus extends Entity
     
     /**
     * Gets the app
+    * The navigation link to the mobile app.
     *
     * @return MobileApp The app
     */
     public function getApp()
     {
         if (array_key_exists("app", $this->_propDict)) {
-            if (is_a($this->_propDict["app"], "Microsoft\Graph\Beta\Model\MobileApp")) {
+            if (is_a($this->_propDict["app"], "Microsoft\Graph\Model\MobileApp")) {
                 return $this->_propDict["app"];
             } else {
                 $this->_propDict["app"] = new MobileApp($this->_propDict["app"]);
@@ -181,6 +192,7 @@ class UserAppInstallStatus extends Entity
     
     /**
     * Sets the app
+    * The navigation link to the mobile app.
     *
     * @param MobileApp $val The app
     *
@@ -195,6 +207,7 @@ class UserAppInstallStatus extends Entity
 
      /** 
      * Gets the deviceStatuses
+    * The install state of the app on devices.
      *
      * @return array The deviceStatuses
      */
@@ -209,6 +222,7 @@ class UserAppInstallStatus extends Entity
     
     /** 
     * Sets the deviceStatuses
+    * The install state of the app on devices.
     *
     * @param MobileAppInstallStatus $val The deviceStatuses
     *

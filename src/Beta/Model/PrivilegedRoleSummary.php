@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * PrivilegedRoleSummary class
@@ -34,7 +34,7 @@ class PrivilegedRoleSummary extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Microsoft\Graph\Beta\Model\RoleSummaryStatus")) {
+            if (is_a($this->_propDict["status"], "Microsoft\Graph\Model\RoleSummaryStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new RoleSummaryStatus($this->_propDict["status"]);

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * CircularGeofenceManagementCondition class
@@ -28,6 +28,7 @@ class CircularGeofenceManagementCondition extends LocationManagementCondition
 {
     /**
     * Gets the latitude
+    * Latitude in degrees, between -90 and +90 inclusive.
     *
     * @return float The latitude
     */
@@ -42,6 +43,7 @@ class CircularGeofenceManagementCondition extends LocationManagementCondition
     
     /**
     * Sets the latitude
+    * Latitude in degrees, between -90 and +90 inclusive.
     *
     * @param float $val The latitude
     *
@@ -55,6 +57,7 @@ class CircularGeofenceManagementCondition extends LocationManagementCondition
     
     /**
     * Gets the longitude
+    * Longitude in degrees, between -180 and +180 inclusive.
     *
     * @return float The longitude
     */
@@ -69,6 +72,7 @@ class CircularGeofenceManagementCondition extends LocationManagementCondition
     
     /**
     * Sets the longitude
+    * Longitude in degrees, between -180 and +180 inclusive.
     *
     * @param float $val The longitude
     *
@@ -82,13 +86,14 @@ class CircularGeofenceManagementCondition extends LocationManagementCondition
     
     /**
     * Gets the radiusInMeters
+    * Radius in meters.
     *
     * @return Single The radiusInMeters
     */
     public function getRadiusInMeters()
     {
         if (array_key_exists("radiusInMeters", $this->_propDict)) {
-            if (is_a($this->_propDict["radiusInMeters"], "Microsoft\Graph\Beta\Model\Single")) {
+            if (is_a($this->_propDict["radiusInMeters"], "Microsoft\Graph\Model\Single")) {
                 return $this->_propDict["radiusInMeters"];
             } else {
                 $this->_propDict["radiusInMeters"] = new Single($this->_propDict["radiusInMeters"]);
@@ -100,6 +105,7 @@ class CircularGeofenceManagementCondition extends LocationManagementCondition
     
     /**
     * Sets the radiusInMeters
+    * Radius in meters.
     *
     * @param Single $val The radiusInMeters
     *

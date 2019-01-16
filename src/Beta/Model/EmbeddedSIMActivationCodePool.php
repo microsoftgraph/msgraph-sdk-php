@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * EmbeddedSIMActivationCodePool class
@@ -28,6 +28,7 @@ class EmbeddedSIMActivationCodePool extends Entity
 {
     /**
     * Gets the displayName
+    * The admin defined name of the embedded SIM activation code pool.
     *
     * @return string The displayName
     */
@@ -42,6 +43,7 @@ class EmbeddedSIMActivationCodePool extends Entity
     
     /**
     * Sets the displayName
+    * The admin defined name of the embedded SIM activation code pool.
     *
     * @param string $val The displayName
     *
@@ -55,6 +57,7 @@ class EmbeddedSIMActivationCodePool extends Entity
     
     /**
     * Gets the createdDateTime
+    * The time the embedded SIM activation code pool was created. Generated service side.
     *
     * @return \DateTime The createdDateTime
     */
@@ -73,6 +76,7 @@ class EmbeddedSIMActivationCodePool extends Entity
     
     /**
     * Sets the createdDateTime
+    * The time the embedded SIM activation code pool was created. Generated service side.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -86,6 +90,7 @@ class EmbeddedSIMActivationCodePool extends Entity
     
     /**
     * Gets the modifiedDateTime
+    * The time the embedded SIM activation code pool was last modified. Updated service side.
     *
     * @return \DateTime The modifiedDateTime
     */
@@ -104,6 +109,7 @@ class EmbeddedSIMActivationCodePool extends Entity
     
     /**
     * Sets the modifiedDateTime
+    * The time the embedded SIM activation code pool was last modified. Updated service side.
     *
     * @param \DateTime $val The modifiedDateTime
     *
@@ -118,6 +124,7 @@ class EmbeddedSIMActivationCodePool extends Entity
 
      /** 
      * Gets the activationCodes
+    * The activation codes which belong to this pool. This navigation property is used to post activation codes to Intune but cannot be used to read activation codes from Intune.
      *
      * @return array The activationCodes
      */
@@ -132,6 +139,7 @@ class EmbeddedSIMActivationCodePool extends Entity
     
     /** 
     * Sets the activationCodes
+    * The activation codes which belong to this pool. This navigation property is used to post activation codes to Intune but cannot be used to read activation codes from Intune.
     *
     * @param EmbeddedSIMActivationCode $val The activationCodes
     *
@@ -145,6 +153,7 @@ class EmbeddedSIMActivationCodePool extends Entity
     
     /**
     * Gets the activationCodeCount
+    * The total count of activation codes which belong to this pool.
     *
     * @return int The activationCodeCount
     */
@@ -159,6 +168,7 @@ class EmbeddedSIMActivationCodePool extends Entity
     
     /**
     * Sets the activationCodeCount
+    * The total count of activation codes which belong to this pool.
     *
     * @param int $val The activationCodeCount
     *
@@ -173,6 +183,7 @@ class EmbeddedSIMActivationCodePool extends Entity
 
      /** 
      * Gets the assignments
+    * Navigational property to a list of targets to which this pool is assigned.
      *
      * @return array The assignments
      */
@@ -187,6 +198,7 @@ class EmbeddedSIMActivationCodePool extends Entity
     
     /** 
     * Sets the assignments
+    * Navigational property to a list of targets to which this pool is assigned.
     *
     * @param EmbeddedSIMActivationCodePoolAssignment $val The assignments
     *
@@ -201,6 +213,7 @@ class EmbeddedSIMActivationCodePool extends Entity
 
      /** 
      * Gets the deviceStates
+    * Navigational property to a list of device states for this pool.
      *
      * @return array The deviceStates
      */
@@ -215,6 +228,7 @@ class EmbeddedSIMActivationCodePool extends Entity
     
     /** 
     * Sets the deviceStates
+    * Navigational property to a list of device states for this pool.
     *
     * @param EmbeddedSIMDeviceState $val The deviceStates
     *

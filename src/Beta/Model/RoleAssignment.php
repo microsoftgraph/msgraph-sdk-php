@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * RoleAssignment class
@@ -28,6 +28,7 @@ class RoleAssignment extends Entity
 {
     /**
     * Gets the displayName
+    * The display or friendly name of the role Assignment.
     *
     * @return string The displayName
     */
@@ -42,6 +43,7 @@ class RoleAssignment extends Entity
     
     /**
     * Sets the displayName
+    * The display or friendly name of the role Assignment.
     *
     * @param string $val The displayName
     *
@@ -55,6 +57,7 @@ class RoleAssignment extends Entity
     
     /**
     * Gets the description
+    * Description of the Role Assignment.
     *
     * @return string The description
     */
@@ -69,6 +72,7 @@ class RoleAssignment extends Entity
     
     /**
     * Sets the description
+    * Description of the Role Assignment.
     *
     * @param string $val The description
     *
@@ -82,6 +86,7 @@ class RoleAssignment extends Entity
     
     /**
     * Gets the scopeMembers
+    * List of ids of role scope member security groups.  These are IDs from Azure Active Directory.
     *
     * @return string The scopeMembers
     */
@@ -96,6 +101,7 @@ class RoleAssignment extends Entity
     
     /**
     * Sets the scopeMembers
+    * List of ids of role scope member security groups.  These are IDs from Azure Active Directory.
     *
     * @param string $val The scopeMembers
     *
@@ -109,13 +115,14 @@ class RoleAssignment extends Entity
     
     /**
     * Gets the scopeType
+    * Specifies the type of scope for a Role Assignment. Default type 'ResourceScope' allows assignment of ResourceScopes. For 'AllDevices', 'AllLicensedUsers', and 'AllDevicesAndLicensedUsers', the ResourceScopes property should be left empty.
     *
     * @return RoleAssignmentScopeType The scopeType
     */
     public function getScopeType()
     {
         if (array_key_exists("scopeType", $this->_propDict)) {
-            if (is_a($this->_propDict["scopeType"], "Microsoft\Graph\Beta\Model\RoleAssignmentScopeType")) {
+            if (is_a($this->_propDict["scopeType"], "Microsoft\Graph\Model\RoleAssignmentScopeType")) {
                 return $this->_propDict["scopeType"];
             } else {
                 $this->_propDict["scopeType"] = new RoleAssignmentScopeType($this->_propDict["scopeType"]);
@@ -127,6 +134,7 @@ class RoleAssignment extends Entity
     
     /**
     * Sets the scopeType
+    * Specifies the type of scope for a Role Assignment. Default type 'ResourceScope' allows assignment of ResourceScopes. For 'AllDevices', 'AllLicensedUsers', and 'AllDevicesAndLicensedUsers', the ResourceScopes property should be left empty.
     *
     * @param RoleAssignmentScopeType $val The scopeType
     *
@@ -140,6 +148,7 @@ class RoleAssignment extends Entity
     
     /**
     * Gets the resourceScopes
+    * List of ids of role scope member security groups.  These are IDs from Azure Active Directory.
     *
     * @return string The resourceScopes
     */
@@ -154,6 +163,7 @@ class RoleAssignment extends Entity
     
     /**
     * Sets the resourceScopes
+    * List of ids of role scope member security groups.  These are IDs from Azure Active Directory.
     *
     * @param string $val The resourceScopes
     *
@@ -167,13 +177,14 @@ class RoleAssignment extends Entity
     
     /**
     * Gets the roleDefinition
+    * Role definition this assignment is part of.
     *
     * @return RoleDefinition The roleDefinition
     */
     public function getRoleDefinition()
     {
         if (array_key_exists("roleDefinition", $this->_propDict)) {
-            if (is_a($this->_propDict["roleDefinition"], "Microsoft\Graph\Beta\Model\RoleDefinition")) {
+            if (is_a($this->_propDict["roleDefinition"], "Microsoft\Graph\Model\RoleDefinition")) {
                 return $this->_propDict["roleDefinition"];
             } else {
                 $this->_propDict["roleDefinition"] = new RoleDefinition($this->_propDict["roleDefinition"]);
@@ -185,6 +196,7 @@ class RoleAssignment extends Entity
     
     /**
     * Sets the roleDefinition
+    * Role definition this assignment is part of.
     *
     * @param RoleDefinition $val The roleDefinition
     *

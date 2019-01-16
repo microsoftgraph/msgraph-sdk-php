@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * WorkbookTable class
@@ -28,6 +28,7 @@ class WorkbookTable extends Entity
 {
     /**
     * Gets the highlightFirstColumn
+    * Indicates whether the first column contains special formatting.
     *
     * @return bool The highlightFirstColumn
     */
@@ -42,6 +43,7 @@ class WorkbookTable extends Entity
     
     /**
     * Sets the highlightFirstColumn
+    * Indicates whether the first column contains special formatting.
     *
     * @param bool $val The highlightFirstColumn
     *
@@ -55,6 +57,7 @@ class WorkbookTable extends Entity
     
     /**
     * Gets the highlightLastColumn
+    * Indicates whether the last column contains special formatting.
     *
     * @return bool The highlightLastColumn
     */
@@ -69,6 +72,7 @@ class WorkbookTable extends Entity
     
     /**
     * Sets the highlightLastColumn
+    * Indicates whether the last column contains special formatting.
     *
     * @param bool $val The highlightLastColumn
     *
@@ -82,6 +86,7 @@ class WorkbookTable extends Entity
     
     /**
     * Gets the name
+    * Name of the table.
     *
     * @return string The name
     */
@@ -96,6 +101,7 @@ class WorkbookTable extends Entity
     
     /**
     * Sets the name
+    * Name of the table.
     *
     * @param string $val The name
     *
@@ -109,6 +115,7 @@ class WorkbookTable extends Entity
     
     /**
     * Gets the showBandedColumns
+    * Indicates whether the columns show banded formatting in which odd columns are highlighted differently from even ones to make reading the table easier.
     *
     * @return bool The showBandedColumns
     */
@@ -123,6 +130,7 @@ class WorkbookTable extends Entity
     
     /**
     * Sets the showBandedColumns
+    * Indicates whether the columns show banded formatting in which odd columns are highlighted differently from even ones to make reading the table easier.
     *
     * @param bool $val The showBandedColumns
     *
@@ -136,6 +144,7 @@ class WorkbookTable extends Entity
     
     /**
     * Gets the showBandedRows
+    * Indicates whether the rows show banded formatting in which odd rows are highlighted differently from even ones to make reading the table easier.
     *
     * @return bool The showBandedRows
     */
@@ -150,6 +159,7 @@ class WorkbookTable extends Entity
     
     /**
     * Sets the showBandedRows
+    * Indicates whether the rows show banded formatting in which odd rows are highlighted differently from even ones to make reading the table easier.
     *
     * @param bool $val The showBandedRows
     *
@@ -163,6 +173,7 @@ class WorkbookTable extends Entity
     
     /**
     * Gets the showFilterButton
+    * Indicates whether the filter buttons are visible at the top of each column header. Setting this is only allowed if the table contains a header row.
     *
     * @return bool The showFilterButton
     */
@@ -177,6 +188,7 @@ class WorkbookTable extends Entity
     
     /**
     * Sets the showFilterButton
+    * Indicates whether the filter buttons are visible at the top of each column header. Setting this is only allowed if the table contains a header row.
     *
     * @param bool $val The showFilterButton
     *
@@ -190,6 +202,7 @@ class WorkbookTable extends Entity
     
     /**
     * Gets the showHeaders
+    * Indicates whether the header row is visible or not. This value can be set to show or remove the header row.
     *
     * @return bool The showHeaders
     */
@@ -204,6 +217,7 @@ class WorkbookTable extends Entity
     
     /**
     * Sets the showHeaders
+    * Indicates whether the header row is visible or not. This value can be set to show or remove the header row.
     *
     * @param bool $val The showHeaders
     *
@@ -217,6 +231,7 @@ class WorkbookTable extends Entity
     
     /**
     * Gets the showTotals
+    * Indicates whether the total row is visible or not. This value can be set to show or remove the total row.
     *
     * @return bool The showTotals
     */
@@ -231,6 +246,7 @@ class WorkbookTable extends Entity
     
     /**
     * Sets the showTotals
+    * Indicates whether the total row is visible or not. This value can be set to show or remove the total row.
     *
     * @param bool $val The showTotals
     *
@@ -244,6 +260,7 @@ class WorkbookTable extends Entity
     
     /**
     * Gets the style
+    * Constant value that represents the Table style. The possible values are: TableStyleLight1 thru TableStyleLight21, TableStyleMedium1 thru TableStyleMedium28, TableStyleStyleDark1 thru TableStyleStyleDark11. A custom user-defined style present in the workbook can also be specified.
     *
     * @return string The style
     */
@@ -258,6 +275,7 @@ class WorkbookTable extends Entity
     
     /**
     * Sets the style
+    * Constant value that represents the Table style. The possible values are: TableStyleLight1 thru TableStyleLight21, TableStyleMedium1 thru TableStyleMedium28, TableStyleStyleDark1 thru TableStyleStyleDark11. A custom user-defined style present in the workbook can also be specified.
     *
     * @param string $val The style
     *
@@ -272,6 +290,7 @@ class WorkbookTable extends Entity
 
      /** 
      * Gets the columns
+    * Represents a collection of all the columns in the table. Read-only.
      *
      * @return array The columns
      */
@@ -286,6 +305,7 @@ class WorkbookTable extends Entity
     
     /** 
     * Sets the columns
+    * Represents a collection of all the columns in the table. Read-only.
     *
     * @param WorkbookTableColumn $val The columns
     *
@@ -300,6 +320,7 @@ class WorkbookTable extends Entity
 
      /** 
      * Gets the rows
+    * Represents a collection of all the rows in the table. Read-only.
      *
      * @return array The rows
      */
@@ -314,6 +335,7 @@ class WorkbookTable extends Entity
     
     /** 
     * Sets the rows
+    * Represents a collection of all the rows in the table. Read-only.
     *
     * @param WorkbookTableRow $val The rows
     *
@@ -327,13 +349,14 @@ class WorkbookTable extends Entity
     
     /**
     * Gets the sort
+    * Represents the sorting for the table. Read-only.
     *
     * @return WorkbookTableSort The sort
     */
     public function getSort()
     {
         if (array_key_exists("sort", $this->_propDict)) {
-            if (is_a($this->_propDict["sort"], "Microsoft\Graph\Beta\Model\WorkbookTableSort")) {
+            if (is_a($this->_propDict["sort"], "Microsoft\Graph\Model\WorkbookTableSort")) {
                 return $this->_propDict["sort"];
             } else {
                 $this->_propDict["sort"] = new WorkbookTableSort($this->_propDict["sort"]);
@@ -345,6 +368,7 @@ class WorkbookTable extends Entity
     
     /**
     * Sets the sort
+    * Represents the sorting for the table. Read-only.
     *
     * @param WorkbookTableSort $val The sort
     *
@@ -358,13 +382,14 @@ class WorkbookTable extends Entity
     
     /**
     * Gets the worksheet
+    * The worksheet containing the current table. Read-only.
     *
     * @return WorkbookWorksheet The worksheet
     */
     public function getWorksheet()
     {
         if (array_key_exists("worksheet", $this->_propDict)) {
-            if (is_a($this->_propDict["worksheet"], "Microsoft\Graph\Beta\Model\WorkbookWorksheet")) {
+            if (is_a($this->_propDict["worksheet"], "Microsoft\Graph\Model\WorkbookWorksheet")) {
                 return $this->_propDict["worksheet"];
             } else {
                 $this->_propDict["worksheet"] = new WorkbookWorksheet($this->_propDict["worksheet"]);
@@ -376,6 +401,7 @@ class WorkbookTable extends Entity
     
     /**
     * Sets the worksheet
+    * The worksheet containing the current table. Read-only.
     *
     * @param WorkbookWorksheet $val The worksheet
     *

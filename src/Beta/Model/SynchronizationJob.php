@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * SynchronizationJob class
@@ -61,7 +61,7 @@ class SynchronizationJob extends Entity
     public function getSchedule()
     {
         if (array_key_exists("schedule", $this->_propDict)) {
-            if (is_a($this->_propDict["schedule"], "Microsoft\Graph\Beta\Model\SynchronizationSchedule")) {
+            if (is_a($this->_propDict["schedule"], "Microsoft\Graph\Model\SynchronizationSchedule")) {
                 return $this->_propDict["schedule"];
             } else {
                 $this->_propDict["schedule"] = new SynchronizationSchedule($this->_propDict["schedule"]);
@@ -92,7 +92,7 @@ class SynchronizationJob extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Microsoft\Graph\Beta\Model\SynchronizationStatus")) {
+            if (is_a($this->_propDict["status"], "Microsoft\Graph\Model\SynchronizationStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new SynchronizationStatus($this->_propDict["status"]);
@@ -123,7 +123,7 @@ class SynchronizationJob extends Entity
     public function getSchema()
     {
         if (array_key_exists("schema", $this->_propDict)) {
-            if (is_a($this->_propDict["schema"], "Microsoft\Graph\Beta\Model\SynchronizationSchema")) {
+            if (is_a($this->_propDict["schema"], "Microsoft\Graph\Model\SynchronizationSchema")) {
                 return $this->_propDict["schema"];
             } else {
                 $this->_propDict["schema"] = new SynchronizationSchema($this->_propDict["schema"]);

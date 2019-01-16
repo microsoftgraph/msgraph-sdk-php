@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * IosTrustedRootCertificate class
@@ -28,6 +28,7 @@ class IosTrustedRootCertificate extends DeviceConfiguration
 {
     /**
     * Gets the trustedRootCertificate
+    * Trusted Root Certificate.
     *
     * @return \GuzzleHttp\Psr7\Stream The trustedRootCertificate
     */
@@ -46,6 +47,7 @@ class IosTrustedRootCertificate extends DeviceConfiguration
     
     /**
     * Sets the trustedRootCertificate
+    * Trusted Root Certificate.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The trustedRootCertificate
     *
@@ -59,6 +61,7 @@ class IosTrustedRootCertificate extends DeviceConfiguration
     
     /**
     * Gets the certFileName
+    * File name to display in UI.
     *
     * @return string The certFileName
     */
@@ -73,6 +76,7 @@ class IosTrustedRootCertificate extends DeviceConfiguration
     
     /**
     * Sets the certFileName
+    * File name to display in UI.
     *
     * @param string $val The certFileName
     *

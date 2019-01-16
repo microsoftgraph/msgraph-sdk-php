@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * CurrencyColumn class
 *
@@ -27,6 +27,7 @@ class CurrencyColumn extends Entity
 {
     /**
     * Gets the locale
+    * Specifies the locale from which to infer the currency symbol.
     *
     * @return string The locale
     */
@@ -41,6 +42,7 @@ class CurrencyColumn extends Entity
 
     /**
     * Sets the locale
+    * Specifies the locale from which to infer the currency symbol.
     *
     * @param string $val The value of the locale
     *

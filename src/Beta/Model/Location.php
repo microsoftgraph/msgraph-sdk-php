@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * Location class
 *
@@ -27,6 +27,7 @@ class Location extends Entity
 {
     /**
     * Gets the displayName
+    * The name associated with the location.
     *
     * @return string The displayName
     */
@@ -41,6 +42,7 @@ class Location extends Entity
 
     /**
     * Sets the displayName
+    * The name associated with the location.
     *
     * @param string $val The value of the displayName
     *
@@ -53,6 +55,7 @@ class Location extends Entity
     }
     /**
     * Gets the locationEmailAddress
+    * Optional email address of the location.
     *
     * @return string The locationEmailAddress
     */
@@ -67,6 +70,7 @@ class Location extends Entity
 
     /**
     * Sets the locationEmailAddress
+    * Optional email address of the location.
     *
     * @param string $val The value of the locationEmailAddress
     *
@@ -80,13 +84,14 @@ class Location extends Entity
 
     /**
     * Gets the address
+    * The street address of the location.
     *
     * @return PhysicalAddress The address
     */
     public function getAddress()
     {
         if (array_key_exists("address", $this->_propDict)) {
-            if (is_a($this->_propDict["address"], "Microsoft\Graph\Beta\Model\PhysicalAddress")) {
+            if (is_a($this->_propDict["address"], "Microsoft\Graph\Model\PhysicalAddress")) {
                 return $this->_propDict["address"];
             } else {
                 $this->_propDict["address"] = new PhysicalAddress($this->_propDict["address"]);
@@ -98,6 +103,7 @@ class Location extends Entity
 
     /**
     * Sets the address
+    * The street address of the location.
     *
     * @param PhysicalAddress $val The value to assign to the address
     *
@@ -111,13 +117,14 @@ class Location extends Entity
 
     /**
     * Gets the coordinates
+    * The geographic coordinates and elevation of the location.
     *
     * @return OutlookGeoCoordinates The coordinates
     */
     public function getCoordinates()
     {
         if (array_key_exists("coordinates", $this->_propDict)) {
-            if (is_a($this->_propDict["coordinates"], "Microsoft\Graph\Beta\Model\OutlookGeoCoordinates")) {
+            if (is_a($this->_propDict["coordinates"], "Microsoft\Graph\Model\OutlookGeoCoordinates")) {
                 return $this->_propDict["coordinates"];
             } else {
                 $this->_propDict["coordinates"] = new OutlookGeoCoordinates($this->_propDict["coordinates"]);
@@ -129,6 +136,7 @@ class Location extends Entity
 
     /**
     * Sets the coordinates
+    * The geographic coordinates and elevation of the location.
     *
     * @param OutlookGeoCoordinates $val The value to assign to the coordinates
     *
@@ -141,6 +149,7 @@ class Location extends Entity
     }
     /**
     * Gets the locationUri
+    * Optional URI representing the location.
     *
     * @return string The locationUri
     */
@@ -155,6 +164,7 @@ class Location extends Entity
 
     /**
     * Sets the locationUri
+    * Optional URI representing the location.
     *
     * @param string $val The value of the locationUri
     *
@@ -168,13 +178,14 @@ class Location extends Entity
 
     /**
     * Gets the locationType
+    * The type of location. The possible values are: default, conferenceRoom, homeAddress, businessAddress,geoCoordinates, streetAddress, hotel, restaurant, localBusiness, postalAddress. Read-only.
     *
     * @return LocationType The locationType
     */
     public function getLocationType()
     {
         if (array_key_exists("locationType", $this->_propDict)) {
-            if (is_a($this->_propDict["locationType"], "Microsoft\Graph\Beta\Model\LocationType")) {
+            if (is_a($this->_propDict["locationType"], "Microsoft\Graph\Model\LocationType")) {
                 return $this->_propDict["locationType"];
             } else {
                 $this->_propDict["locationType"] = new LocationType($this->_propDict["locationType"]);
@@ -186,6 +197,7 @@ class Location extends Entity
 
     /**
     * Sets the locationType
+    * The type of location. The possible values are: default, conferenceRoom, homeAddress, businessAddress,geoCoordinates, streetAddress, hotel, restaurant, localBusiness, postalAddress. Read-only.
     *
     * @param LocationType $val The value to assign to the locationType
     *
@@ -198,6 +210,7 @@ class Location extends Entity
     }
     /**
     * Gets the uniqueId
+    * For internal use only.
     *
     * @return string The uniqueId
     */
@@ -212,6 +225,7 @@ class Location extends Entity
 
     /**
     * Sets the uniqueId
+    * For internal use only.
     *
     * @param string $val The value of the uniqueId
     *
@@ -225,13 +239,14 @@ class Location extends Entity
 
     /**
     * Gets the uniqueIdType
+    * For internal use only.
     *
     * @return LocationUniqueIdType The uniqueIdType
     */
     public function getUniqueIdType()
     {
         if (array_key_exists("uniqueIdType", $this->_propDict)) {
-            if (is_a($this->_propDict["uniqueIdType"], "Microsoft\Graph\Beta\Model\LocationUniqueIdType")) {
+            if (is_a($this->_propDict["uniqueIdType"], "Microsoft\Graph\Model\LocationUniqueIdType")) {
                 return $this->_propDict["uniqueIdType"];
             } else {
                 $this->_propDict["uniqueIdType"] = new LocationUniqueIdType($this->_propDict["uniqueIdType"]);
@@ -243,6 +258,7 @@ class Location extends Entity
 
     /**
     * Sets the uniqueIdType
+    * For internal use only.
     *
     * @param LocationUniqueIdType $val The value to assign to the uniqueIdType
     *

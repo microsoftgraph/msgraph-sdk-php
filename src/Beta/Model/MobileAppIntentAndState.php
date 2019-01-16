@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * MobileAppIntentAndState class
@@ -28,6 +28,7 @@ class MobileAppIntentAndState extends Entity
 {
     /**
     * Gets the managedDeviceIdentifier
+    * Device identifier created or collected by Intune.
     *
     * @return string The managedDeviceIdentifier
     */
@@ -42,6 +43,7 @@ class MobileAppIntentAndState extends Entity
     
     /**
     * Sets the managedDeviceIdentifier
+    * Device identifier created or collected by Intune.
     *
     * @param string $val The managedDeviceIdentifier
     *
@@ -55,6 +57,7 @@ class MobileAppIntentAndState extends Entity
     
     /**
     * Gets the userId
+    * Identifier for the user that tried to enroll the device.
     *
     * @return string The userId
     */
@@ -69,6 +72,7 @@ class MobileAppIntentAndState extends Entity
     
     /**
     * Sets the userId
+    * Identifier for the user that tried to enroll the device.
     *
     * @param string $val The userId
     *
@@ -83,6 +87,7 @@ class MobileAppIntentAndState extends Entity
 
      /** 
      * Gets the mobileAppList
+    * The list of payload intents and states for the tenant.
      *
      * @return array The mobileAppList
      */
@@ -97,6 +102,7 @@ class MobileAppIntentAndState extends Entity
     
     /** 
     * Sets the mobileAppList
+    * The list of payload intents and states for the tenant.
     *
     * @param MobileAppIntentAndStateDetail $val The mobileAppList
     *

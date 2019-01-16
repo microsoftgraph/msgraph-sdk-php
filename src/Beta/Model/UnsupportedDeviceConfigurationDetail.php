@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * UnsupportedDeviceConfigurationDetail class
 *
@@ -27,6 +27,7 @@ class UnsupportedDeviceConfigurationDetail extends Entity
 {
     /**
     * Gets the message
+    * A message explaining why an entity is unsupported.
     *
     * @return string The message
     */
@@ -41,6 +42,7 @@ class UnsupportedDeviceConfigurationDetail extends Entity
 
     /**
     * Sets the message
+    * A message explaining why an entity is unsupported.
     *
     * @param string $val The value of the message
     *
@@ -53,6 +55,7 @@ class UnsupportedDeviceConfigurationDetail extends Entity
     }
     /**
     * Gets the propertyName
+    * If message is related to a specific property in the original entity, then the name of that property.
     *
     * @return string The propertyName
     */
@@ -67,6 +70,7 @@ class UnsupportedDeviceConfigurationDetail extends Entity
 
     /**
     * Sets the propertyName
+    * If message is related to a specific property in the original entity, then the name of that property.
     *
     * @param string $val The value of the propertyName
     *

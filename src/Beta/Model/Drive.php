@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * Drive class
@@ -28,6 +28,7 @@ class Drive extends BaseItem
 {
     /**
     * Gets the driveType
+    * Describes the type of drive represented by this resource. OneDrive personal drives will return personal. OneDrive for Business will return business. SharePoint document libraries will return documentLibrary. Read-only.
     *
     * @return string The driveType
     */
@@ -42,6 +43,7 @@ class Drive extends BaseItem
     
     /**
     * Sets the driveType
+    * Describes the type of drive represented by this resource. OneDrive personal drives will return personal. OneDrive for Business will return business. SharePoint document libraries will return documentLibrary. Read-only.
     *
     * @param string $val The driveType
     *
@@ -55,13 +57,14 @@ class Drive extends BaseItem
     
     /**
     * Gets the owner
+    * Optional. The user account that owns the drive. Read-only.
     *
     * @return IdentitySet The owner
     */
     public function getOwner()
     {
         if (array_key_exists("owner", $this->_propDict)) {
-            if (is_a($this->_propDict["owner"], "Microsoft\Graph\Beta\Model\IdentitySet")) {
+            if (is_a($this->_propDict["owner"], "Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["owner"];
             } else {
                 $this->_propDict["owner"] = new IdentitySet($this->_propDict["owner"]);
@@ -73,6 +76,7 @@ class Drive extends BaseItem
     
     /**
     * Sets the owner
+    * Optional. The user account that owns the drive. Read-only.
     *
     * @param IdentitySet $val The owner
     *
@@ -86,13 +90,14 @@ class Drive extends BaseItem
     
     /**
     * Gets the quota
+    * Optional. Information about the drive's storage space quota. Read-only.
     *
     * @return Quota The quota
     */
     public function getQuota()
     {
         if (array_key_exists("quota", $this->_propDict)) {
-            if (is_a($this->_propDict["quota"], "Microsoft\Graph\Beta\Model\Quota")) {
+            if (is_a($this->_propDict["quota"], "Microsoft\Graph\Model\Quota")) {
                 return $this->_propDict["quota"];
             } else {
                 $this->_propDict["quota"] = new Quota($this->_propDict["quota"]);
@@ -104,6 +109,7 @@ class Drive extends BaseItem
     
     /**
     * Sets the quota
+    * Optional. Information about the drive's storage space quota. Read-only.
     *
     * @param Quota $val The quota
     *
@@ -123,7 +129,7 @@ class Drive extends BaseItem
     public function getSharePointIds()
     {
         if (array_key_exists("sharePointIds", $this->_propDict)) {
-            if (is_a($this->_propDict["sharePointIds"], "Microsoft\Graph\Beta\Model\SharepointIds")) {
+            if (is_a($this->_propDict["sharePointIds"], "Microsoft\Graph\Model\SharepointIds")) {
                 return $this->_propDict["sharePointIds"];
             } else {
                 $this->_propDict["sharePointIds"] = new SharepointIds($this->_propDict["sharePointIds"]);
@@ -148,13 +154,14 @@ class Drive extends BaseItem
     
     /**
     * Gets the system
+    * If present, indicates that this is a system-managed drive. Read-only.
     *
     * @return SystemFacet The system
     */
     public function getSystem()
     {
         if (array_key_exists("system", $this->_propDict)) {
-            if (is_a($this->_propDict["system"], "Microsoft\Graph\Beta\Model\SystemFacet")) {
+            if (is_a($this->_propDict["system"], "Microsoft\Graph\Model\SystemFacet")) {
                 return $this->_propDict["system"];
             } else {
                 $this->_propDict["system"] = new SystemFacet($this->_propDict["system"]);
@@ -166,6 +173,7 @@ class Drive extends BaseItem
     
     /**
     * Sets the system
+    * If present, indicates that this is a system-managed drive. Read-only.
     *
     * @param SystemFacet $val The system
     *
@@ -195,7 +203,7 @@ class Drive extends BaseItem
     /** 
     * Sets the activities
     *
-    * @param ItemActivity $val The activities
+    * @param ItemActivityOLD $val The activities
     *
     * @return Drive
     */
@@ -207,7 +215,36 @@ class Drive extends BaseItem
     
 
      /** 
+     * Gets the following
+     *
+     * @return array The following
+     */
+    public function getFollowing()
+    {
+        if (array_key_exists("following", $this->_propDict)) {
+           return $this->_propDict["following"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the following
+    *
+    * @param DriveItem $val The following
+    *
+    * @return Drive
+    */
+    public function setFollowing($val)
+    {
+		$this->_propDict["following"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the items
+    * All items contained in the drive. Read-only. Nullable.
      *
      * @return array The items
      */
@@ -222,6 +259,7 @@ class Drive extends BaseItem
     
     /** 
     * Sets the items
+    * All items contained in the drive. Read-only. Nullable.
     *
     * @param DriveItem $val The items
     *
@@ -235,13 +273,14 @@ class Drive extends BaseItem
     
     /**
     * Gets the list
+    * For drives in SharePoint, the underlying document library list. Read-only. Nullable.
     *
     * @return GraphList The list
     */
     public function getList()
     {
         if (array_key_exists("list", $this->_propDict)) {
-            if (is_a($this->_propDict["list"], "Microsoft\Graph\Beta\Model\List")) {
+            if (is_a($this->_propDict["list"], "Microsoft\Graph\Model\List")) {
                 return $this->_propDict["list"];
             } else {
                 $this->_propDict["list"] = new GraphList($this->_propDict["list"]);
@@ -253,6 +292,7 @@ class Drive extends BaseItem
     
     /**
     * Sets the list
+    * For drives in SharePoint, the underlying document library list. Read-only. Nullable.
     *
     * @param GraphList $val The list
     *
@@ -266,13 +306,14 @@ class Drive extends BaseItem
     
     /**
     * Gets the root
+    * The root folder of the drive. Read-only.
     *
     * @return DriveItem The root
     */
     public function getRoot()
     {
         if (array_key_exists("root", $this->_propDict)) {
-            if (is_a($this->_propDict["root"], "Microsoft\Graph\Beta\Model\DriveItem")) {
+            if (is_a($this->_propDict["root"], "Microsoft\Graph\Model\DriveItem")) {
                 return $this->_propDict["root"];
             } else {
                 $this->_propDict["root"] = new DriveItem($this->_propDict["root"]);
@@ -284,6 +325,7 @@ class Drive extends BaseItem
     
     /**
     * Sets the root
+    * The root folder of the drive. Read-only.
     *
     * @param DriveItem $val The root
     *
@@ -298,6 +340,7 @@ class Drive extends BaseItem
 
      /** 
      * Gets the special
+    * Collection of common folders available in OneDrive. Read-only. Nullable.
      *
      * @return array The special
      */
@@ -312,6 +355,7 @@ class Drive extends BaseItem
     
     /** 
     * Sets the special
+    * Collection of common folders available in OneDrive. Read-only. Nullable.
     *
     * @param DriveItem $val The special
     *

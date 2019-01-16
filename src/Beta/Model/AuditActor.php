@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * AuditActor class
 *
@@ -27,6 +27,7 @@ class AuditActor extends Entity
 {
     /**
     * Gets the type
+    * Actor Type.
     *
     * @return string The type
     */
@@ -41,6 +42,7 @@ class AuditActor extends Entity
 
     /**
     * Sets the type
+    * Actor Type.
     *
     * @param string $val The value of the type
     *
@@ -53,6 +55,7 @@ class AuditActor extends Entity
     }
     /**
     * Gets the userPermissions
+    * List of user permissions when the audit was performed.
     *
     * @return string The userPermissions
     */
@@ -67,6 +70,7 @@ class AuditActor extends Entity
 
     /**
     * Sets the userPermissions
+    * List of user permissions when the audit was performed.
     *
     * @param string $val The value of the userPermissions
     *
@@ -79,6 +83,7 @@ class AuditActor extends Entity
     }
     /**
     * Gets the applicationId
+    * AAD Application Id.
     *
     * @return string The applicationId
     */
@@ -93,6 +98,7 @@ class AuditActor extends Entity
 
     /**
     * Sets the applicationId
+    * AAD Application Id.
     *
     * @param string $val The value of the applicationId
     *
@@ -105,6 +111,7 @@ class AuditActor extends Entity
     }
     /**
     * Gets the applicationDisplayName
+    * Name of the Application.
     *
     * @return string The applicationDisplayName
     */
@@ -119,6 +126,7 @@ class AuditActor extends Entity
 
     /**
     * Sets the applicationDisplayName
+    * Name of the Application.
     *
     * @param string $val The value of the applicationDisplayName
     *
@@ -131,6 +139,7 @@ class AuditActor extends Entity
     }
     /**
     * Gets the userPrincipalName
+    * User Principal Name (UPN).
     *
     * @return string The userPrincipalName
     */
@@ -145,6 +154,7 @@ class AuditActor extends Entity
 
     /**
     * Sets the userPrincipalName
+    * User Principal Name (UPN).
     *
     * @param string $val The value of the userPrincipalName
     *
@@ -157,6 +167,7 @@ class AuditActor extends Entity
     }
     /**
     * Gets the servicePrincipalName
+    * Service Principal Name (SPN).
     *
     * @return string The servicePrincipalName
     */
@@ -171,6 +182,7 @@ class AuditActor extends Entity
 
     /**
     * Sets the servicePrincipalName
+    * Service Principal Name (SPN).
     *
     * @param string $val The value of the servicePrincipalName
     *
@@ -183,6 +195,7 @@ class AuditActor extends Entity
     }
     /**
     * Gets the ipAddress
+    * IPAddress.
     *
     * @return string The ipAddress
     */
@@ -197,6 +210,7 @@ class AuditActor extends Entity
 
     /**
     * Sets the ipAddress
+    * IPAddress.
     *
     * @param string $val The value of the ipAddress
     *
@@ -209,6 +223,7 @@ class AuditActor extends Entity
     }
     /**
     * Gets the userId
+    * User Id.
     *
     * @return string The userId
     */
@@ -223,6 +238,7 @@ class AuditActor extends Entity
 
     /**
     * Sets the userId
+    * User Id.
     *
     * @param string $val The value of the userId
     *

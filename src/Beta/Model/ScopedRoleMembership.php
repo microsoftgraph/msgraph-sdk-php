@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * ScopedRoleMembership class
@@ -88,7 +88,7 @@ class ScopedRoleMembership extends Entity
     public function getRoleMemberInfo()
     {
         if (array_key_exists("roleMemberInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["roleMemberInfo"], "Microsoft\Graph\Beta\Model\Identity")) {
+            if (is_a($this->_propDict["roleMemberInfo"], "Microsoft\Graph\Model\Identity")) {
                 return $this->_propDict["roleMemberInfo"];
             } else {
                 $this->_propDict["roleMemberInfo"] = new Identity($this->_propDict["roleMemberInfo"]);

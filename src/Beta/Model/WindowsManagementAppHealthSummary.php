@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * WindowsManagementAppHealthSummary class
@@ -28,6 +28,7 @@ class WindowsManagementAppHealthSummary extends Entity
 {
     /**
     * Gets the healthyDeviceCount
+    * Healthy device count.
     *
     * @return int The healthyDeviceCount
     */
@@ -42,6 +43,7 @@ class WindowsManagementAppHealthSummary extends Entity
     
     /**
     * Sets the healthyDeviceCount
+    * Healthy device count.
     *
     * @param int $val The healthyDeviceCount
     *
@@ -55,6 +57,7 @@ class WindowsManagementAppHealthSummary extends Entity
     
     /**
     * Gets the unhealthyDeviceCount
+    * Unhealthy device count.
     *
     * @return int The unhealthyDeviceCount
     */
@@ -69,6 +72,7 @@ class WindowsManagementAppHealthSummary extends Entity
     
     /**
     * Sets the unhealthyDeviceCount
+    * Unhealthy device count.
     *
     * @param int $val The unhealthyDeviceCount
     *
@@ -82,6 +86,7 @@ class WindowsManagementAppHealthSummary extends Entity
     
     /**
     * Gets the unknownDeviceCount
+    * Unknown device count.
     *
     * @return int The unknownDeviceCount
     */
@@ -96,6 +101,7 @@ class WindowsManagementAppHealthSummary extends Entity
     
     /**
     * Sets the unknownDeviceCount
+    * Unknown device count.
     *
     * @param int $val The unknownDeviceCount
     *

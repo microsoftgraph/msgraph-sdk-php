@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * CertificateConnectorSetting class
 *
@@ -27,6 +27,7 @@ class CertificateConnectorSetting extends Entity
 {
     /**
     * Gets the status
+    * Certificate connector status
     *
     * @return int The status
     */
@@ -41,6 +42,7 @@ class CertificateConnectorSetting extends Entity
 
     /**
     * Sets the status
+    * Certificate connector status
     *
     * @param int $val The value of the status
     *
@@ -54,13 +56,14 @@ class CertificateConnectorSetting extends Entity
 
     /**
     * Gets the certExpiryTime
+    * Certificate expire time
     *
     * @return \DateTime The certExpiryTime
     */
     public function getCertExpiryTime()
     {
         if (array_key_exists("certExpiryTime", $this->_propDict)) {
-            if (is_a($this->_propDict["certExpiryTime"], "Microsoft\Graph\Beta\Model\\DateTime")) {
+            if (is_a($this->_propDict["certExpiryTime"], "Microsoft\Graph\Model\\DateTime")) {
                 return $this->_propDict["certExpiryTime"];
             } else {
                 $this->_propDict["certExpiryTime"] = new \DateTime($this->_propDict["certExpiryTime"]);
@@ -72,6 +75,7 @@ class CertificateConnectorSetting extends Entity
 
     /**
     * Sets the certExpiryTime
+    * Certificate expire time
     *
     * @param \DateTime $val The value to assign to the certExpiryTime
     *
@@ -84,6 +88,7 @@ class CertificateConnectorSetting extends Entity
     }
     /**
     * Gets the enrollmentError
+    * Certificate connector enrollment error
     *
     * @return string The enrollmentError
     */
@@ -98,6 +103,7 @@ class CertificateConnectorSetting extends Entity
 
     /**
     * Sets the enrollmentError
+    * Certificate connector enrollment error
     *
     * @param string $val The value of the enrollmentError
     *
@@ -111,13 +117,14 @@ class CertificateConnectorSetting extends Entity
 
     /**
     * Gets the lastConnectorConnectionTime
+    * Last time certificate connector connected
     *
     * @return \DateTime The lastConnectorConnectionTime
     */
     public function getLastConnectorConnectionTime()
     {
         if (array_key_exists("lastConnectorConnectionTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastConnectorConnectionTime"], "Microsoft\Graph\Beta\Model\\DateTime")) {
+            if (is_a($this->_propDict["lastConnectorConnectionTime"], "Microsoft\Graph\Model\\DateTime")) {
                 return $this->_propDict["lastConnectorConnectionTime"];
             } else {
                 $this->_propDict["lastConnectorConnectionTime"] = new \DateTime($this->_propDict["lastConnectorConnectionTime"]);
@@ -129,6 +136,7 @@ class CertificateConnectorSetting extends Entity
 
     /**
     * Sets the lastConnectorConnectionTime
+    * Last time certificate connector connected
     *
     * @param \DateTime $val The value to assign to the lastConnectorConnectionTime
     *
@@ -141,6 +149,7 @@ class CertificateConnectorSetting extends Entity
     }
     /**
     * Gets the connectorVersion
+    * Version of certificate connector
     *
     * @return string The connectorVersion
     */
@@ -155,6 +164,7 @@ class CertificateConnectorSetting extends Entity
 
     /**
     * Sets the connectorVersion
+    * Version of certificate connector
     *
     * @param string $val The value of the connectorVersion
     *
@@ -167,6 +177,7 @@ class CertificateConnectorSetting extends Entity
     }
     /**
     * Gets the lastUploadVersion
+    * Version of last uploaded certificate connector
     *
     * @return int The lastUploadVersion
     */
@@ -181,6 +192,7 @@ class CertificateConnectorSetting extends Entity
 
     /**
     * Sets the lastUploadVersion
+    * Version of last uploaded certificate connector
     *
     * @param int $val The value of the lastUploadVersion
     *

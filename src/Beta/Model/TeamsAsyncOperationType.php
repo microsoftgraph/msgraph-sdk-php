@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 use Microsoft\Graph\Core\Enum;
 
@@ -35,4 +35,6 @@ class TeamsAsyncOperationType extends Enum
     const CLONE_TEAM = "cloneTeam";
     const ARCHIVE_TEAM = "archiveTeam";
     const UNARCHIVE_TEAM = "unarchiveTeam";
+    const CREATE_TEAM = "createTeam";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

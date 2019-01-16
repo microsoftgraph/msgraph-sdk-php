@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * GovernanceRoleAssignment class
@@ -158,33 +158,6 @@ class GovernanceRoleAssignment extends Entity
     public function setExternalId($val)
     {
         $this->_propDict["externalId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the isPermanent
-    *
-    * @return bool The isPermanent
-    */
-    public function getIsPermanent()
-    {
-        if (array_key_exists("isPermanent", $this->_propDict)) {
-            return $this->_propDict["isPermanent"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the isPermanent
-    *
-    * @param bool $val The isPermanent
-    *
-    * @return GovernanceRoleAssignment
-    */
-    public function setIsPermanent($val)
-    {
-        $this->_propDict["isPermanent"] = boolval($val);
         return $this;
     }
     
@@ -339,7 +312,7 @@ class GovernanceRoleAssignment extends Entity
     public function getResource()
     {
         if (array_key_exists("resource", $this->_propDict)) {
-            if (is_a($this->_propDict["resource"], "Microsoft\Graph\Beta\Model\GovernanceResource")) {
+            if (is_a($this->_propDict["resource"], "Microsoft\Graph\Model\GovernanceResource")) {
                 return $this->_propDict["resource"];
             } else {
                 $this->_propDict["resource"] = new GovernanceResource($this->_propDict["resource"]);
@@ -370,7 +343,7 @@ class GovernanceRoleAssignment extends Entity
     public function getRoleDefinition()
     {
         if (array_key_exists("roleDefinition", $this->_propDict)) {
-            if (is_a($this->_propDict["roleDefinition"], "Microsoft\Graph\Beta\Model\GovernanceRoleDefinition")) {
+            if (is_a($this->_propDict["roleDefinition"], "Microsoft\Graph\Model\GovernanceRoleDefinition")) {
                 return $this->_propDict["roleDefinition"];
             } else {
                 $this->_propDict["roleDefinition"] = new GovernanceRoleDefinition($this->_propDict["roleDefinition"]);
@@ -401,7 +374,7 @@ class GovernanceRoleAssignment extends Entity
     public function getSubject()
     {
         if (array_key_exists("subject", $this->_propDict)) {
-            if (is_a($this->_propDict["subject"], "Microsoft\Graph\Beta\Model\GovernanceSubject")) {
+            if (is_a($this->_propDict["subject"], "Microsoft\Graph\Model\GovernanceSubject")) {
                 return $this->_propDict["subject"];
             } else {
                 $this->_propDict["subject"] = new GovernanceSubject($this->_propDict["subject"]);
@@ -432,7 +405,7 @@ class GovernanceRoleAssignment extends Entity
     public function getLinkedEligibleRoleAssignment()
     {
         if (array_key_exists("linkedEligibleRoleAssignment", $this->_propDict)) {
-            if (is_a($this->_propDict["linkedEligibleRoleAssignment"], "Microsoft\Graph\Beta\Model\GovernanceRoleAssignment")) {
+            if (is_a($this->_propDict["linkedEligibleRoleAssignment"], "Microsoft\Graph\Model\GovernanceRoleAssignment")) {
                 return $this->_propDict["linkedEligibleRoleAssignment"];
             } else {
                 $this->_propDict["linkedEligibleRoleAssignment"] = new GovernanceRoleAssignment($this->_propDict["linkedEligibleRoleAssignment"]);

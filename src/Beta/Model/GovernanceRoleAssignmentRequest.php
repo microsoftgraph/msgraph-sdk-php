@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * GovernanceRoleAssignmentRequest class
@@ -220,68 +220,6 @@ class GovernanceRoleAssignmentRequest extends Entity
     }
     
     /**
-    * Gets the roleAssignmentStartDateTime
-    *
-    * @return \DateTime The roleAssignmentStartDateTime
-    */
-    public function getRoleAssignmentStartDateTime()
-    {
-        if (array_key_exists("roleAssignmentStartDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["roleAssignmentStartDateTime"], "\DateTime")) {
-                return $this->_propDict["roleAssignmentStartDateTime"];
-            } else {
-                $this->_propDict["roleAssignmentStartDateTime"] = new \DateTime($this->_propDict["roleAssignmentStartDateTime"]);
-                return $this->_propDict["roleAssignmentStartDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the roleAssignmentStartDateTime
-    *
-    * @param \DateTime $val The roleAssignmentStartDateTime
-    *
-    * @return GovernanceRoleAssignmentRequest
-    */
-    public function setRoleAssignmentStartDateTime($val)
-    {
-        $this->_propDict["roleAssignmentStartDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the roleAssignmentEndDateTime
-    *
-    * @return \DateTime The roleAssignmentEndDateTime
-    */
-    public function getRoleAssignmentEndDateTime()
-    {
-        if (array_key_exists("roleAssignmentEndDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["roleAssignmentEndDateTime"], "\DateTime")) {
-                return $this->_propDict["roleAssignmentEndDateTime"];
-            } else {
-                $this->_propDict["roleAssignmentEndDateTime"] = new \DateTime($this->_propDict["roleAssignmentEndDateTime"]);
-                return $this->_propDict["roleAssignmentEndDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the roleAssignmentEndDateTime
-    *
-    * @param \DateTime $val The roleAssignmentEndDateTime
-    *
-    * @return GovernanceRoleAssignmentRequest
-    */
-    public function setRoleAssignmentEndDateTime($val)
-    {
-        $this->_propDict["roleAssignmentEndDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the reason
     *
     * @return string The reason
@@ -316,7 +254,7 @@ class GovernanceRoleAssignmentRequest extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Microsoft\Graph\Beta\Model\GovernanceRoleAssignmentRequestStatus")) {
+            if (is_a($this->_propDict["status"], "Microsoft\Graph\Model\GovernanceRoleAssignmentRequestStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new GovernanceRoleAssignmentRequestStatus($this->_propDict["status"]);
@@ -347,7 +285,7 @@ class GovernanceRoleAssignmentRequest extends Entity
     public function getSchedule()
     {
         if (array_key_exists("schedule", $this->_propDict)) {
-            if (is_a($this->_propDict["schedule"], "Microsoft\Graph\Beta\Model\GovernanceSchedule")) {
+            if (is_a($this->_propDict["schedule"], "Microsoft\Graph\Model\GovernanceSchedule")) {
                 return $this->_propDict["schedule"];
             } else {
                 $this->_propDict["schedule"] = new GovernanceSchedule($this->_propDict["schedule"]);
@@ -378,7 +316,7 @@ class GovernanceRoleAssignmentRequest extends Entity
     public function getResource()
     {
         if (array_key_exists("resource", $this->_propDict)) {
-            if (is_a($this->_propDict["resource"], "Microsoft\Graph\Beta\Model\GovernanceResource")) {
+            if (is_a($this->_propDict["resource"], "Microsoft\Graph\Model\GovernanceResource")) {
                 return $this->_propDict["resource"];
             } else {
                 $this->_propDict["resource"] = new GovernanceResource($this->_propDict["resource"]);
@@ -409,7 +347,7 @@ class GovernanceRoleAssignmentRequest extends Entity
     public function getRoleDefinition()
     {
         if (array_key_exists("roleDefinition", $this->_propDict)) {
-            if (is_a($this->_propDict["roleDefinition"], "Microsoft\Graph\Beta\Model\GovernanceRoleDefinition")) {
+            if (is_a($this->_propDict["roleDefinition"], "Microsoft\Graph\Model\GovernanceRoleDefinition")) {
                 return $this->_propDict["roleDefinition"];
             } else {
                 $this->_propDict["roleDefinition"] = new GovernanceRoleDefinition($this->_propDict["roleDefinition"]);
@@ -440,7 +378,7 @@ class GovernanceRoleAssignmentRequest extends Entity
     public function getSubject()
     {
         if (array_key_exists("subject", $this->_propDict)) {
-            if (is_a($this->_propDict["subject"], "Microsoft\Graph\Beta\Model\GovernanceSubject")) {
+            if (is_a($this->_propDict["subject"], "Microsoft\Graph\Model\GovernanceSubject")) {
                 return $this->_propDict["subject"];
             } else {
                 $this->_propDict["subject"] = new GovernanceSubject($this->_propDict["subject"]);

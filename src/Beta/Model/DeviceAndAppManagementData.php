@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * DeviceAndAppManagementData class
 *
@@ -34,7 +34,7 @@ class DeviceAndAppManagementData extends Entity
     public function getContent()
     {
         if (array_key_exists("content", $this->_propDict)) {
-            if (is_a($this->_propDict["content"], "Microsoft\Graph\Beta\Model\\GuzzleHttp\Psr7\Stream")) {
+            if (is_a($this->_propDict["content"], "Microsoft\Graph\Model\\GuzzleHttp\Psr7\Stream")) {
                 return $this->_propDict["content"];
             } else {
                 $this->_propDict["content"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["content"]);

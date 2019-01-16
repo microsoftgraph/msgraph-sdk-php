@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * Mention class
@@ -34,7 +34,7 @@ class Mention extends Entity
     public function getMentioned()
     {
         if (array_key_exists("mentioned", $this->_propDict)) {
-            if (is_a($this->_propDict["mentioned"], "Microsoft\Graph\Beta\Model\EmailAddress")) {
+            if (is_a($this->_propDict["mentioned"], "Microsoft\Graph\Model\EmailAddress")) {
                 return $this->_propDict["mentioned"];
             } else {
                 $this->_propDict["mentioned"] = new EmailAddress($this->_propDict["mentioned"]);
@@ -119,7 +119,7 @@ class Mention extends Entity
     public function getCreatedBy()
     {
         if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "Microsoft\Graph\Beta\Model\EmailAddress")) {
+            if (is_a($this->_propDict["createdBy"], "Microsoft\Graph\Model\EmailAddress")) {
                 return $this->_propDict["createdBy"];
             } else {
                 $this->_propDict["createdBy"] = new EmailAddress($this->_propDict["createdBy"]);

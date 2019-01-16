@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * TimeSlotOLD class
 *
@@ -34,7 +34,7 @@ class TimeSlotOLD extends Entity
     public function getStart()
     {
         if (array_key_exists("start", $this->_propDict)) {
-            if (is_a($this->_propDict["start"], "Microsoft\Graph\Beta\Model\TimeStamp")) {
+            if (is_a($this->_propDict["start"], "Microsoft\Graph\Model\TimeStamp")) {
                 return $this->_propDict["start"];
             } else {
                 $this->_propDict["start"] = new TimeStamp($this->_propDict["start"]);
@@ -65,7 +65,7 @@ class TimeSlotOLD extends Entity
     public function getEnd()
     {
         if (array_key_exists("end", $this->_propDict)) {
-            if (is_a($this->_propDict["end"], "Microsoft\Graph\Beta\Model\TimeStamp")) {
+            if (is_a($this->_propDict["end"], "Microsoft\Graph\Model\TimeStamp")) {
                 return $this->_propDict["end"];
             } else {
                 $this->_propDict["end"] = new TimeStamp($this->_propDict["end"]);

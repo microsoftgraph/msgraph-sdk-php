@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * MediaContentRatingUnitedStates class
 *
@@ -28,13 +28,14 @@ class MediaContentRatingUnitedStates extends Entity
 
     /**
     * Gets the movieRating
+    * Movies rating selected for United States. Possible values are: allAllowed, allBlocked, general, parentalGuidance, parentalGuidance13, restricted, adults.
     *
     * @return RatingUnitedStatesMoviesType The movieRating
     */
     public function getMovieRating()
     {
         if (array_key_exists("movieRating", $this->_propDict)) {
-            if (is_a($this->_propDict["movieRating"], "Microsoft\Graph\Beta\Model\RatingUnitedStatesMoviesType")) {
+            if (is_a($this->_propDict["movieRating"], "Microsoft\Graph\Model\RatingUnitedStatesMoviesType")) {
                 return $this->_propDict["movieRating"];
             } else {
                 $this->_propDict["movieRating"] = new RatingUnitedStatesMoviesType($this->_propDict["movieRating"]);
@@ -46,6 +47,7 @@ class MediaContentRatingUnitedStates extends Entity
 
     /**
     * Sets the movieRating
+    * Movies rating selected for United States. Possible values are: allAllowed, allBlocked, general, parentalGuidance, parentalGuidance13, restricted, adults.
     *
     * @param RatingUnitedStatesMoviesType $val The value to assign to the movieRating
     *
@@ -59,13 +61,14 @@ class MediaContentRatingUnitedStates extends Entity
 
     /**
     * Gets the tvRating
+    * TV rating selected for United States. Possible values are: allAllowed, allBlocked, childrenAll, childrenAbove7, general, parentalGuidance, childrenAbove14, adults.
     *
     * @return RatingUnitedStatesTelevisionType The tvRating
     */
     public function getTvRating()
     {
         if (array_key_exists("tvRating", $this->_propDict)) {
-            if (is_a($this->_propDict["tvRating"], "Microsoft\Graph\Beta\Model\RatingUnitedStatesTelevisionType")) {
+            if (is_a($this->_propDict["tvRating"], "Microsoft\Graph\Model\RatingUnitedStatesTelevisionType")) {
                 return $this->_propDict["tvRating"];
             } else {
                 $this->_propDict["tvRating"] = new RatingUnitedStatesTelevisionType($this->_propDict["tvRating"]);
@@ -77,6 +80,7 @@ class MediaContentRatingUnitedStates extends Entity
 
     /**
     * Sets the tvRating
+    * TV rating selected for United States. Possible values are: allAllowed, allBlocked, childrenAll, childrenAbove7, general, parentalGuidance, childrenAbove14, adults.
     *
     * @param RatingUnitedStatesTelevisionType $val The value to assign to the tvRating
     *

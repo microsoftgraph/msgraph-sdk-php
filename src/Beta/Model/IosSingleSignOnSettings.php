@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * IosSingleSignOnSettings class
 *
@@ -28,13 +28,14 @@ class IosSingleSignOnSettings extends Entity
 
     /**
     * Gets the allowedAppsList
+    * List of app identifiers that are allowed to use this login. If this field is omitted, the login applies to all applications on the device. This collection can contain a maximum of 500 elements.
     *
     * @return AppListItem The allowedAppsList
     */
     public function getAllowedAppsList()
     {
         if (array_key_exists("allowedAppsList", $this->_propDict)) {
-            if (is_a($this->_propDict["allowedAppsList"], "Microsoft\Graph\Beta\Model\AppListItem")) {
+            if (is_a($this->_propDict["allowedAppsList"], "Microsoft\Graph\Model\AppListItem")) {
                 return $this->_propDict["allowedAppsList"];
             } else {
                 $this->_propDict["allowedAppsList"] = new AppListItem($this->_propDict["allowedAppsList"]);
@@ -46,6 +47,7 @@ class IosSingleSignOnSettings extends Entity
 
     /**
     * Sets the allowedAppsList
+    * List of app identifiers that are allowed to use this login. If this field is omitted, the login applies to all applications on the device. This collection can contain a maximum of 500 elements.
     *
     * @param AppListItem $val The value to assign to the allowedAppsList
     *
@@ -58,6 +60,7 @@ class IosSingleSignOnSettings extends Entity
     }
     /**
     * Gets the allowedUrls
+    * List of HTTP URLs that must be matched in order to use this login. With iOS 9.0 or later, a wildcard characters may be used.
     *
     * @return string The allowedUrls
     */
@@ -72,6 +75,7 @@ class IosSingleSignOnSettings extends Entity
 
     /**
     * Sets the allowedUrls
+    * List of HTTP URLs that must be matched in order to use this login. With iOS 9.0 or later, a wildcard characters may be used.
     *
     * @param string $val The value of the allowedUrls
     *
@@ -84,6 +88,7 @@ class IosSingleSignOnSettings extends Entity
     }
     /**
     * Gets the displayName
+    * The display name of login settings shown on the receiving device.
     *
     * @return string The displayName
     */
@@ -98,6 +103,7 @@ class IosSingleSignOnSettings extends Entity
 
     /**
     * Sets the displayName
+    * The display name of login settings shown on the receiving device.
     *
     * @param string $val The value of the displayName
     *
@@ -110,6 +116,7 @@ class IosSingleSignOnSettings extends Entity
     }
     /**
     * Gets the kerberosPrincipalName
+    * A Kerberos principal name. If not provided, the user is prompted for one during profile installation.
     *
     * @return string The kerberosPrincipalName
     */
@@ -124,6 +131,7 @@ class IosSingleSignOnSettings extends Entity
 
     /**
     * Sets the kerberosPrincipalName
+    * A Kerberos principal name. If not provided, the user is prompted for one during profile installation.
     *
     * @param string $val The value of the kerberosPrincipalName
     *
@@ -136,6 +144,7 @@ class IosSingleSignOnSettings extends Entity
     }
     /**
     * Gets the kerberosRealm
+    * A Kerberos realm name. Case sensitive.
     *
     * @return string The kerberosRealm
     */
@@ -150,6 +159,7 @@ class IosSingleSignOnSettings extends Entity
 
     /**
     * Sets the kerberosRealm
+    * A Kerberos realm name. Case sensitive.
     *
     * @param string $val The value of the kerberosRealm
     *

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * WindowsInformationProtectionNetworkLearningSummary class
@@ -28,6 +28,7 @@ class WindowsInformationProtectionNetworkLearningSummary extends Entity
 {
     /**
     * Gets the url
+    * Website url
     *
     * @return string The url
     */
@@ -42,6 +43,7 @@ class WindowsInformationProtectionNetworkLearningSummary extends Entity
     
     /**
     * Sets the url
+    * Website url
     *
     * @param string $val The url
     *
@@ -55,6 +57,7 @@ class WindowsInformationProtectionNetworkLearningSummary extends Entity
     
     /**
     * Gets the deviceCount
+    * Device Count
     *
     * @return int The deviceCount
     */
@@ -69,6 +72,7 @@ class WindowsInformationProtectionNetworkLearningSummary extends Entity
     
     /**
     * Sets the deviceCount
+    * Device Count
     *
     * @param int $val The deviceCount
     *

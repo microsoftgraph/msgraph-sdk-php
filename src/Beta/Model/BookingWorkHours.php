@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * BookingWorkHours class
 *
@@ -28,13 +28,14 @@ class BookingWorkHours extends Entity
 
     /**
     * Gets the day
+    * The day of the week represented by this instance.
     *
     * @return DayOfWeek The day
     */
     public function getDay()
     {
         if (array_key_exists("day", $this->_propDict)) {
-            if (is_a($this->_propDict["day"], "Microsoft\Graph\Beta\Model\DayOfWeek")) {
+            if (is_a($this->_propDict["day"], "Microsoft\Graph\Model\DayOfWeek")) {
                 return $this->_propDict["day"];
             } else {
                 $this->_propDict["day"] = new DayOfWeek($this->_propDict["day"]);
@@ -46,6 +47,7 @@ class BookingWorkHours extends Entity
 
     /**
     * Sets the day
+    * The day of the week represented by this instance.
     *
     * @param DayOfWeek $val The value to assign to the day
     *
@@ -59,13 +61,14 @@ class BookingWorkHours extends Entity
 
     /**
     * Gets the timeSlots
+    * A list of start/end times during a day.
     *
     * @return BookingWorkTimeSlot The timeSlots
     */
     public function getTimeSlots()
     {
         if (array_key_exists("timeSlots", $this->_propDict)) {
-            if (is_a($this->_propDict["timeSlots"], "Microsoft\Graph\Beta\Model\BookingWorkTimeSlot")) {
+            if (is_a($this->_propDict["timeSlots"], "Microsoft\Graph\Model\BookingWorkTimeSlot")) {
                 return $this->_propDict["timeSlots"];
             } else {
                 $this->_propDict["timeSlots"] = new BookingWorkTimeSlot($this->_propDict["timeSlots"]);
@@ -77,6 +80,7 @@ class BookingWorkHours extends Entity
 
     /**
     * Sets the timeSlots
+    * A list of start/end times during a day.
     *
     * @param BookingWorkTimeSlot $val The value to assign to the timeSlots
     *

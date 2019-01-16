@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * DeviceAndAppManagementRoleAssignment class
@@ -28,6 +28,7 @@ class DeviceAndAppManagementRoleAssignment extends RoleAssignment
 {
     /**
     * Gets the members
+    * The list of ids of role member security groups. These are IDs from Azure Active Directory.
     *
     * @return string The members
     */
@@ -42,6 +43,7 @@ class DeviceAndAppManagementRoleAssignment extends RoleAssignment
     
     /**
     * Sets the members
+    * The list of ids of role member security groups. These are IDs from Azure Active Directory.
     *
     * @param string $val The members
     *
@@ -56,6 +58,7 @@ class DeviceAndAppManagementRoleAssignment extends RoleAssignment
 
      /** 
      * Gets the roleScopeTags
+    * The set of Role Scope Tags defined on the Role Assignment.
      *
      * @return array The roleScopeTags
      */
@@ -70,6 +73,7 @@ class DeviceAndAppManagementRoleAssignment extends RoleAssignment
     
     /** 
     * Sets the roleScopeTags
+    * The set of Role Scope Tags defined on the Role Assignment.
     *
     * @param RoleScopeTag $val The roleScopeTags
     *

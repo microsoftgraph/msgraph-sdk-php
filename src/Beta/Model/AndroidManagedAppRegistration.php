@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * AndroidManagedAppRegistration class
@@ -26,4 +26,33 @@ namespace Microsoft\Graph\Beta\Model;
 */
 class AndroidManagedAppRegistration extends ManagedAppRegistration
 {
+    /**
+    * Gets the patchVersion
+    * The patch version for the current android app registration
+    *
+    * @return string The patchVersion
+    */
+    public function getPatchVersion()
+    {
+        if (array_key_exists("patchVersion", $this->_propDict)) {
+            return $this->_propDict["patchVersion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the patchVersion
+    * The patch version for the current android app registration
+    *
+    * @param string $val The patchVersion
+    *
+    * @return AndroidManagedAppRegistration
+    */
+    public function setPatchVersion($val)
+    {
+        $this->_propDict["patchVersion"] = $val;
+        return $this;
+    }
+    
 }

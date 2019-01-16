@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * EducationRoot class
@@ -57,6 +57,7 @@ class EducationRoot extends Entity
 
      /** 
      * Gets the classes
+    * Read-only. Nullable.
      *
      * @return array The classes
      */
@@ -71,6 +72,7 @@ class EducationRoot extends Entity
     
     /** 
     * Sets the classes
+    * Read-only. Nullable.
     *
     * @param EducationClass $val The classes
     *
@@ -85,6 +87,7 @@ class EducationRoot extends Entity
 
      /** 
      * Gets the schools
+    * Read-only. Nullable.
      *
      * @return array The schools
      */
@@ -99,6 +102,7 @@ class EducationRoot extends Entity
     
     /** 
     * Sets the schools
+    * Read-only. Nullable.
     *
     * @param EducationSchool $val The schools
     *
@@ -113,6 +117,7 @@ class EducationRoot extends Entity
 
      /** 
      * Gets the users
+    * Read-only. Nullable.
      *
      * @return array The users
      */
@@ -127,6 +132,7 @@ class EducationRoot extends Entity
     
     /** 
     * Sets the users
+    * Read-only. Nullable.
     *
     * @param EducationUser $val The users
     *
@@ -140,13 +146,14 @@ class EducationRoot extends Entity
     
     /**
     * Gets the me
+    * Read-only. Nullable.
     *
     * @return EducationUser The me
     */
     public function getMe()
     {
         if (array_key_exists("me", $this->_propDict)) {
-            if (is_a($this->_propDict["me"], "Microsoft\Graph\Beta\Model\EducationUser")) {
+            if (is_a($this->_propDict["me"], "Microsoft\Graph\Model\EducationUser")) {
                 return $this->_propDict["me"];
             } else {
                 $this->_propDict["me"] = new EducationUser($this->_propDict["me"]);
@@ -158,6 +165,7 @@ class EducationRoot extends Entity
     
     /**
     * Sets the me
+    * Read-only. Nullable.
     *
     * @param EducationUser $val The me
     *

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * TenantSetupInfo class
@@ -142,7 +142,7 @@ class TenantSetupInfo extends Entity
     public function getSetupStatus()
     {
         if (array_key_exists("setupStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["setupStatus"], "Microsoft\Graph\Beta\Model\SetupStatus")) {
+            if (is_a($this->_propDict["setupStatus"], "Microsoft\Graph\Model\SetupStatus")) {
                 return $this->_propDict["setupStatus"];
             } else {
                 $this->_propDict["setupStatus"] = new SetupStatus($this->_propDict["setupStatus"]);
@@ -173,7 +173,7 @@ class TenantSetupInfo extends Entity
     public function getDefaultRolesSettings()
     {
         if (array_key_exists("defaultRolesSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["defaultRolesSettings"], "Microsoft\Graph\Beta\Model\PrivilegedRoleSettings")) {
+            if (is_a($this->_propDict["defaultRolesSettings"], "Microsoft\Graph\Model\PrivilegedRoleSettings")) {
                 return $this->_propDict["defaultRolesSettings"];
             } else {
                 $this->_propDict["defaultRolesSettings"] = new PrivilegedRoleSettings($this->_propDict["defaultRolesSettings"]);

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * ContentTypeInfo class
 *
@@ -27,6 +27,7 @@ class ContentTypeInfo extends Entity
 {
     /**
     * Gets the id
+    * The id of the content type.
     *
     * @return string The id
     */
@@ -41,6 +42,7 @@ class ContentTypeInfo extends Entity
 
     /**
     * Sets the id
+    * The id of the content type.
     *
     * @param string $val The value of the id
     *

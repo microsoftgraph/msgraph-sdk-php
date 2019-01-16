@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * AndroidForWorkApp class
@@ -28,6 +28,7 @@ class AndroidForWorkApp extends MobileApp
 {
     /**
     * Gets the packageId
+    * The package identifier.
     *
     * @return string The packageId
     */
@@ -42,6 +43,7 @@ class AndroidForWorkApp extends MobileApp
     
     /**
     * Sets the packageId
+    * The package identifier.
     *
     * @param string $val The packageId
     *
@@ -55,6 +57,7 @@ class AndroidForWorkApp extends MobileApp
     
     /**
     * Gets the appIdentifier
+    * The Identity Name.
     *
     * @return string The appIdentifier
     */
@@ -69,6 +72,7 @@ class AndroidForWorkApp extends MobileApp
     
     /**
     * Sets the appIdentifier
+    * The Identity Name.
     *
     * @param string $val The appIdentifier
     *
@@ -82,6 +86,7 @@ class AndroidForWorkApp extends MobileApp
     
     /**
     * Gets the usedLicenseCount
+    * The number of VPP licenses in use.
     *
     * @return int The usedLicenseCount
     */
@@ -96,6 +101,7 @@ class AndroidForWorkApp extends MobileApp
     
     /**
     * Sets the usedLicenseCount
+    * The number of VPP licenses in use.
     *
     * @param int $val The usedLicenseCount
     *
@@ -109,6 +115,7 @@ class AndroidForWorkApp extends MobileApp
     
     /**
     * Gets the totalLicenseCount
+    * The total number of VPP licenses.
     *
     * @return int The totalLicenseCount
     */
@@ -123,6 +130,7 @@ class AndroidForWorkApp extends MobileApp
     
     /**
     * Sets the totalLicenseCount
+    * The total number of VPP licenses.
     *
     * @param int $val The totalLicenseCount
     *
@@ -136,6 +144,7 @@ class AndroidForWorkApp extends MobileApp
     
     /**
     * Gets the appStoreUrl
+    * The Play for Work Store app URL.
     *
     * @return string The appStoreUrl
     */
@@ -150,6 +159,7 @@ class AndroidForWorkApp extends MobileApp
     
     /**
     * Sets the appStoreUrl
+    * The Play for Work Store app URL.
     *
     * @param string $val The appStoreUrl
     *

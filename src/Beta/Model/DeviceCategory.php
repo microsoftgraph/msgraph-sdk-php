@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * DeviceCategory class
@@ -28,6 +28,7 @@ class DeviceCategory extends Entity
 {
     /**
     * Gets the displayName
+    * Display name for the device category.
     *
     * @return string The displayName
     */
@@ -42,6 +43,7 @@ class DeviceCategory extends Entity
     
     /**
     * Sets the displayName
+    * Display name for the device category.
     *
     * @param string $val The displayName
     *
@@ -55,6 +57,7 @@ class DeviceCategory extends Entity
     
     /**
     * Gets the description
+    * Optional description for the device category.
     *
     * @return string The description
     */
@@ -69,6 +72,7 @@ class DeviceCategory extends Entity
     
     /**
     * Sets the description
+    * Optional description for the device category.
     *
     * @param string $val The description
     *

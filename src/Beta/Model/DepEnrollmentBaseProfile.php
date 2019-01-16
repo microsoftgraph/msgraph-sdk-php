@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * DepEnrollmentBaseProfile class
@@ -28,6 +28,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
 {
     /**
     * Gets the isDefault
+    * Indicates if this is the default profile
     *
     * @return bool The isDefault
     */
@@ -42,6 +43,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     
     /**
     * Sets the isDefault
+    * Indicates if this is the default profile
     *
     * @param bool $val The isDefault
     *
@@ -55,6 +57,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     
     /**
     * Gets the supervisedModeEnabled
+    * Supervised mode, True to enable, false otherwise. See https://docs.microsoft.com/en-us/intune/deploy-use/enroll-devices-in-microsoft-intune for additional information.
     *
     * @return bool The supervisedModeEnabled
     */
@@ -69,6 +72,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     
     /**
     * Sets the supervisedModeEnabled
+    * Supervised mode, True to enable, false otherwise. See https://docs.microsoft.com/en-us/intune/deploy-use/enroll-devices-in-microsoft-intune for additional information.
     *
     * @param bool $val The supervisedModeEnabled
     *
@@ -82,6 +86,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     
     /**
     * Gets the supportDepartment
+    * Support department information
     *
     * @return string The supportDepartment
     */
@@ -96,6 +101,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     
     /**
     * Sets the supportDepartment
+    * Support department information
     *
     * @param string $val The supportDepartment
     *
@@ -109,6 +115,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     
     /**
     * Gets the passCodeDisabled
+    * Indicates if Passcode setup pane is disabled
     *
     * @return bool The passCodeDisabled
     */
@@ -123,6 +130,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     
     /**
     * Sets the passCodeDisabled
+    * Indicates if Passcode setup pane is disabled
     *
     * @param bool $val The passCodeDisabled
     *
@@ -136,6 +144,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     
     /**
     * Gets the isMandatory
+    * Indicates if the profile is mandatory
     *
     * @return bool The isMandatory
     */
@@ -150,6 +159,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     
     /**
     * Sets the isMandatory
+    * Indicates if the profile is mandatory
     *
     * @param bool $val The isMandatory
     *
@@ -163,6 +173,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     
     /**
     * Gets the locationDisabled
+    * Indicates if Location service setup pane is disabled
     *
     * @return bool The locationDisabled
     */
@@ -177,6 +188,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     
     /**
     * Sets the locationDisabled
+    * Indicates if Location service setup pane is disabled
     *
     * @param bool $val The locationDisabled
     *
@@ -190,6 +202,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     
     /**
     * Gets the supportPhoneNumber
+    * Support phone number
     *
     * @return string The supportPhoneNumber
     */
@@ -204,6 +217,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     
     /**
     * Sets the supportPhoneNumber
+    * Support phone number
     *
     * @param string $val The supportPhoneNumber
     *
@@ -217,6 +231,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     
     /**
     * Gets the profileRemovalDisabled
+    * Indicates if the profile removal option is disabled
     *
     * @return bool The profileRemovalDisabled
     */
@@ -231,6 +246,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     
     /**
     * Sets the profileRemovalDisabled
+    * Indicates if the profile removal option is disabled
     *
     * @param bool $val The profileRemovalDisabled
     *
@@ -244,6 +260,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     
     /**
     * Gets the restoreBlocked
+    * Indicates if Restore setup pane is blocked
     *
     * @return bool The restoreBlocked
     */
@@ -258,6 +275,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     
     /**
     * Sets the restoreBlocked
+    * Indicates if Restore setup pane is blocked
     *
     * @param bool $val The restoreBlocked
     *
@@ -271,6 +289,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     
     /**
     * Gets the appleIdDisabled
+    * Indicates if Apple id setup pane is disabled
     *
     * @return bool The appleIdDisabled
     */
@@ -285,6 +304,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     
     /**
     * Sets the appleIdDisabled
+    * Indicates if Apple id setup pane is disabled
     *
     * @param bool $val The appleIdDisabled
     *
@@ -298,6 +318,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     
     /**
     * Gets the termsAndConditionsDisabled
+    * Indicates if 'Terms and Conditions' setup pane is disabled
     *
     * @return bool The termsAndConditionsDisabled
     */
@@ -312,6 +333,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     
     /**
     * Sets the termsAndConditionsDisabled
+    * Indicates if 'Terms and Conditions' setup pane is disabled
     *
     * @param bool $val The termsAndConditionsDisabled
     *
@@ -325,6 +347,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     
     /**
     * Gets the touchIdDisabled
+    * Indicates if touch id setup pane is disabled
     *
     * @return bool The touchIdDisabled
     */
@@ -339,6 +362,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     
     /**
     * Sets the touchIdDisabled
+    * Indicates if touch id setup pane is disabled
     *
     * @param bool $val The touchIdDisabled
     *
@@ -352,6 +376,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     
     /**
     * Gets the applePayDisabled
+    * Indicates if Apple pay setup pane is disabled
     *
     * @return bool The applePayDisabled
     */
@@ -366,6 +391,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     
     /**
     * Sets the applePayDisabled
+    * Indicates if Apple pay setup pane is disabled
     *
     * @param bool $val The applePayDisabled
     *
@@ -379,6 +405,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     
     /**
     * Gets the zoomDisabled
+    * Indicates if zoom setup pane is disabled
     *
     * @return bool The zoomDisabled
     */
@@ -393,6 +420,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     
     /**
     * Sets the zoomDisabled
+    * Indicates if zoom setup pane is disabled
     *
     * @param bool $val The zoomDisabled
     *
@@ -406,6 +434,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     
     /**
     * Gets the siriDisabled
+    * Indicates if siri setup pane is disabled
     *
     * @return bool The siriDisabled
     */
@@ -420,6 +449,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     
     /**
     * Sets the siriDisabled
+    * Indicates if siri setup pane is disabled
     *
     * @param bool $val The siriDisabled
     *
@@ -433,6 +463,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     
     /**
     * Gets the diagnosticsDisabled
+    * Indicates if diagnostics setup pane is disabled
     *
     * @return bool The diagnosticsDisabled
     */
@@ -447,6 +478,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     
     /**
     * Sets the diagnosticsDisabled
+    * Indicates if diagnostics setup pane is disabled
     *
     * @param bool $val The diagnosticsDisabled
     *
@@ -455,6 +487,64 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     public function setDiagnosticsDisabled($val)
     {
         $this->_propDict["diagnosticsDisabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the displayToneSetupDisabled
+    * Indicates if displaytone setup screen is disabled
+    *
+    * @return bool The displayToneSetupDisabled
+    */
+    public function getDisplayToneSetupDisabled()
+    {
+        if (array_key_exists("displayToneSetupDisabled", $this->_propDict)) {
+            return $this->_propDict["displayToneSetupDisabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the displayToneSetupDisabled
+    * Indicates if displaytone setup screen is disabled
+    *
+    * @param bool $val The displayToneSetupDisabled
+    *
+    * @return DepEnrollmentBaseProfile
+    */
+    public function setDisplayToneSetupDisabled($val)
+    {
+        $this->_propDict["displayToneSetupDisabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the privacyPaneDisabled
+    * Indicates if privacy screen is disabled
+    *
+    * @return bool The privacyPaneDisabled
+    */
+    public function getPrivacyPaneDisabled()
+    {
+        if (array_key_exists("privacyPaneDisabled", $this->_propDict)) {
+            return $this->_propDict["privacyPaneDisabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the privacyPaneDisabled
+    * Indicates if privacy screen is disabled
+    *
+    * @param bool $val The privacyPaneDisabled
+    *
+    * @return DepEnrollmentBaseProfile
+    */
+    public function setPrivacyPaneDisabled($val)
+    {
+        $this->_propDict["privacyPaneDisabled"] = boolval($val);
         return $this;
     }
     

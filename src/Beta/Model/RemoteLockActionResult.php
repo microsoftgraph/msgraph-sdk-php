@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * RemoteLockActionResult class
 *
@@ -27,6 +27,7 @@ class RemoteLockActionResult extends DeviceActionResult
 {
     /**
     * Gets the unlockPin
+    * Pin to unlock the client
     *
     * @return string The unlockPin
     */
@@ -41,6 +42,7 @@ class RemoteLockActionResult extends DeviceActionResult
 
     /**
     * Sets the unlockPin
+    * Pin to unlock the client
     *
     * @param string $val The value of the unlockPin
     *

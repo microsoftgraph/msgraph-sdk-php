@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * MobileAppContentFile class
@@ -28,6 +28,7 @@ class MobileAppContentFile extends Entity
 {
     /**
     * Gets the azureStorageUri
+    * The Azure Storage URI.
     *
     * @return string The azureStorageUri
     */
@@ -42,6 +43,7 @@ class MobileAppContentFile extends Entity
     
     /**
     * Sets the azureStorageUri
+    * The Azure Storage URI.
     *
     * @param string $val The azureStorageUri
     *
@@ -55,6 +57,7 @@ class MobileAppContentFile extends Entity
     
     /**
     * Gets the isCommitted
+    * A value indicating whether the file is committed.
     *
     * @return bool The isCommitted
     */
@@ -69,6 +72,7 @@ class MobileAppContentFile extends Entity
     
     /**
     * Sets the isCommitted
+    * A value indicating whether the file is committed.
     *
     * @param bool $val The isCommitted
     *
@@ -82,6 +86,7 @@ class MobileAppContentFile extends Entity
     
     /**
     * Gets the createdDateTime
+    * The time the file was created.
     *
     * @return \DateTime The createdDateTime
     */
@@ -100,6 +105,7 @@ class MobileAppContentFile extends Entity
     
     /**
     * Sets the createdDateTime
+    * The time the file was created.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -113,6 +119,7 @@ class MobileAppContentFile extends Entity
     
     /**
     * Gets the name
+    * the file name.
     *
     * @return string The name
     */
@@ -127,6 +134,7 @@ class MobileAppContentFile extends Entity
     
     /**
     * Sets the name
+    * the file name.
     *
     * @param string $val The name
     *
@@ -140,6 +148,7 @@ class MobileAppContentFile extends Entity
     
     /**
     * Gets the size
+    * The size of the file prior to encryption.
     *
     * @return int The size
     */
@@ -154,6 +163,7 @@ class MobileAppContentFile extends Entity
     
     /**
     * Sets the size
+    * The size of the file prior to encryption.
     *
     * @param int $val The size
     *
@@ -167,6 +177,7 @@ class MobileAppContentFile extends Entity
     
     /**
     * Gets the sizeEncrypted
+    * The size of the file after encryption.
     *
     * @return int The sizeEncrypted
     */
@@ -181,6 +192,7 @@ class MobileAppContentFile extends Entity
     
     /**
     * Sets the sizeEncrypted
+    * The size of the file after encryption.
     *
     * @param int $val The sizeEncrypted
     *
@@ -194,6 +206,7 @@ class MobileAppContentFile extends Entity
     
     /**
     * Gets the azureStorageUriExpirationDateTime
+    * The time the Azure storage Uri expires.
     *
     * @return \DateTime The azureStorageUriExpirationDateTime
     */
@@ -212,6 +225,7 @@ class MobileAppContentFile extends Entity
     
     /**
     * Sets the azureStorageUriExpirationDateTime
+    * The time the Azure storage Uri expires.
     *
     * @param \DateTime $val The azureStorageUriExpirationDateTime
     *
@@ -225,6 +239,7 @@ class MobileAppContentFile extends Entity
     
     /**
     * Gets the manifest
+    * The manifest information.
     *
     * @return \GuzzleHttp\Psr7\Stream The manifest
     */
@@ -243,6 +258,7 @@ class MobileAppContentFile extends Entity
     
     /**
     * Sets the manifest
+    * The manifest information.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The manifest
     *
@@ -256,13 +272,14 @@ class MobileAppContentFile extends Entity
     
     /**
     * Gets the uploadState
+    * The state of the current upload request. Possible values are: success, transientError, error, unknown, azureStorageUriRequestSuccess, azureStorageUriRequestPending, azureStorageUriRequestFailed, azureStorageUriRequestTimedOut, azureStorageUriRenewalSuccess, azureStorageUriRenewalPending, azureStorageUriRenewalFailed, azureStorageUriRenewalTimedOut, commitFileSuccess, commitFilePending, commitFileFailed, commitFileTimedOut.
     *
     * @return MobileAppContentFileUploadState The uploadState
     */
     public function getUploadState()
     {
         if (array_key_exists("uploadState", $this->_propDict)) {
-            if (is_a($this->_propDict["uploadState"], "Microsoft\Graph\Beta\Model\MobileAppContentFileUploadState")) {
+            if (is_a($this->_propDict["uploadState"], "Microsoft\Graph\Model\MobileAppContentFileUploadState")) {
                 return $this->_propDict["uploadState"];
             } else {
                 $this->_propDict["uploadState"] = new MobileAppContentFileUploadState($this->_propDict["uploadState"]);
@@ -274,6 +291,7 @@ class MobileAppContentFile extends Entity
     
     /**
     * Sets the uploadState
+    * The state of the current upload request. Possible values are: success, transientError, error, unknown, azureStorageUriRequestSuccess, azureStorageUriRequestPending, azureStorageUriRequestFailed, azureStorageUriRequestTimedOut, azureStorageUriRenewalSuccess, azureStorageUriRenewalPending, azureStorageUriRenewalFailed, azureStorageUriRenewalTimedOut, commitFileSuccess, commitFilePending, commitFileFailed, commitFileTimedOut.
     *
     * @param MobileAppContentFileUploadState $val The uploadState
     *
@@ -287,6 +305,7 @@ class MobileAppContentFile extends Entity
     
     /**
     * Gets the isFrameworkFile
+    * A value indicating whether the file is a framework file.
     *
     * @return bool The isFrameworkFile
     */
@@ -301,6 +320,7 @@ class MobileAppContentFile extends Entity
     
     /**
     * Sets the isFrameworkFile
+    * A value indicating whether the file is a framework file.
     *
     * @param bool $val The isFrameworkFile
     *
@@ -314,6 +334,7 @@ class MobileAppContentFile extends Entity
     
     /**
     * Gets the isDependency
+    * Whether the content file is a dependency for the main content file.
     *
     * @return bool The isDependency
     */
@@ -328,6 +349,7 @@ class MobileAppContentFile extends Entity
     
     /**
     * Sets the isDependency
+    * Whether the content file is a dependency for the main content file.
     *
     * @param bool $val The isDependency
     *

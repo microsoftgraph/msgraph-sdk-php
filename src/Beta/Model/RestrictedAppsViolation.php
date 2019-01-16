@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * RestrictedAppsViolation class
@@ -28,6 +28,7 @@ class RestrictedAppsViolation extends Entity
 {
     /**
     * Gets the userId
+    * User unique identifier, must be Guid
     *
     * @return string The userId
     */
@@ -42,6 +43,7 @@ class RestrictedAppsViolation extends Entity
     
     /**
     * Sets the userId
+    * User unique identifier, must be Guid
     *
     * @param string $val The userId
     *
@@ -55,6 +57,7 @@ class RestrictedAppsViolation extends Entity
     
     /**
     * Gets the userName
+    * User name
     *
     * @return string The userName
     */
@@ -69,6 +72,7 @@ class RestrictedAppsViolation extends Entity
     
     /**
     * Sets the userName
+    * User name
     *
     * @param string $val The userName
     *
@@ -82,6 +86,7 @@ class RestrictedAppsViolation extends Entity
     
     /**
     * Gets the managedDeviceId
+    * Managed device unique identifier, must be Guid
     *
     * @return string The managedDeviceId
     */
@@ -96,6 +101,7 @@ class RestrictedAppsViolation extends Entity
     
     /**
     * Sets the managedDeviceId
+    * Managed device unique identifier, must be Guid
     *
     * @param string $val The managedDeviceId
     *
@@ -109,6 +115,7 @@ class RestrictedAppsViolation extends Entity
     
     /**
     * Gets the deviceName
+    * Device name
     *
     * @return string The deviceName
     */
@@ -123,6 +130,7 @@ class RestrictedAppsViolation extends Entity
     
     /**
     * Sets the deviceName
+    * Device name
     *
     * @param string $val The deviceName
     *
@@ -136,6 +144,7 @@ class RestrictedAppsViolation extends Entity
     
     /**
     * Gets the deviceConfigurationId
+    * Device configuration profile unique identifier, must be Guid
     *
     * @return string The deviceConfigurationId
     */
@@ -150,6 +159,7 @@ class RestrictedAppsViolation extends Entity
     
     /**
     * Sets the deviceConfigurationId
+    * Device configuration profile unique identifier, must be Guid
     *
     * @param string $val The deviceConfigurationId
     *
@@ -163,6 +173,7 @@ class RestrictedAppsViolation extends Entity
     
     /**
     * Gets the deviceConfigurationName
+    * Device configuration profile name
     *
     * @return string The deviceConfigurationName
     */
@@ -177,6 +188,7 @@ class RestrictedAppsViolation extends Entity
     
     /**
     * Sets the deviceConfigurationName
+    * Device configuration profile name
     *
     * @param string $val The deviceConfigurationName
     *
@@ -190,13 +202,14 @@ class RestrictedAppsViolation extends Entity
     
     /**
     * Gets the platformType
+    * Platform type
     *
     * @return PolicyPlatformType The platformType
     */
     public function getPlatformType()
     {
         if (array_key_exists("platformType", $this->_propDict)) {
-            if (is_a($this->_propDict["platformType"], "Microsoft\Graph\Beta\Model\PolicyPlatformType")) {
+            if (is_a($this->_propDict["platformType"], "Microsoft\Graph\Model\PolicyPlatformType")) {
                 return $this->_propDict["platformType"];
             } else {
                 $this->_propDict["platformType"] = new PolicyPlatformType($this->_propDict["platformType"]);
@@ -208,6 +221,7 @@ class RestrictedAppsViolation extends Entity
     
     /**
     * Sets the platformType
+    * Platform type
     *
     * @param PolicyPlatformType $val The platformType
     *
@@ -221,13 +235,14 @@ class RestrictedAppsViolation extends Entity
     
     /**
     * Gets the restrictedAppsState
+    * Restricted apps state
     *
     * @return RestrictedAppsState The restrictedAppsState
     */
     public function getRestrictedAppsState()
     {
         if (array_key_exists("restrictedAppsState", $this->_propDict)) {
-            if (is_a($this->_propDict["restrictedAppsState"], "Microsoft\Graph\Beta\Model\RestrictedAppsState")) {
+            if (is_a($this->_propDict["restrictedAppsState"], "Microsoft\Graph\Model\RestrictedAppsState")) {
                 return $this->_propDict["restrictedAppsState"];
             } else {
                 $this->_propDict["restrictedAppsState"] = new RestrictedAppsState($this->_propDict["restrictedAppsState"]);
@@ -239,6 +254,7 @@ class RestrictedAppsViolation extends Entity
     
     /**
     * Sets the restrictedAppsState
+    * Restricted apps state
     *
     * @param RestrictedAppsState $val The restrictedAppsState
     *
@@ -253,6 +269,7 @@ class RestrictedAppsViolation extends Entity
 
      /** 
      * Gets the restrictedApps
+    * List of violated restricted apps
      *
      * @return array The restrictedApps
      */
@@ -267,6 +284,7 @@ class RestrictedAppsViolation extends Entity
     
     /** 
     * Sets the restrictedApps
+    * List of violated restricted apps
     *
     * @param ManagedDeviceReportedApp $val The restrictedApps
     *

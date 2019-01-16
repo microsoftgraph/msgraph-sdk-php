@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * WindowsDefenderScanActionResult class
 *
@@ -27,6 +27,7 @@ class WindowsDefenderScanActionResult extends DeviceActionResult
 {
     /**
     * Gets the scanType
+    * Scan type either full scan or quick scan
     *
     * @return string The scanType
     */
@@ -41,6 +42,7 @@ class WindowsDefenderScanActionResult extends DeviceActionResult
 
     /**
     * Sets the scanType
+    * Scan type either full scan or quick scan
     *
     * @param string $val The value of the scanType
     *

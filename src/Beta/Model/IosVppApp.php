@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * IosVppApp class
@@ -28,6 +28,7 @@ class IosVppApp extends MobileApp
 {
     /**
     * Gets the usedLicenseCount
+    * The number of VPP licenses in use.
     *
     * @return int The usedLicenseCount
     */
@@ -42,6 +43,7 @@ class IosVppApp extends MobileApp
     
     /**
     * Sets the usedLicenseCount
+    * The number of VPP licenses in use.
     *
     * @param int $val The usedLicenseCount
     *
@@ -55,6 +57,7 @@ class IosVppApp extends MobileApp
     
     /**
     * Gets the totalLicenseCount
+    * The total number of VPP licenses.
     *
     * @return int The totalLicenseCount
     */
@@ -69,6 +72,7 @@ class IosVppApp extends MobileApp
     
     /**
     * Sets the totalLicenseCount
+    * The total number of VPP licenses.
     *
     * @param int $val The totalLicenseCount
     *
@@ -82,6 +86,7 @@ class IosVppApp extends MobileApp
     
     /**
     * Gets the releaseDateTime
+    * The VPP application release date and time.
     *
     * @return \DateTime The releaseDateTime
     */
@@ -100,6 +105,7 @@ class IosVppApp extends MobileApp
     
     /**
     * Sets the releaseDateTime
+    * The VPP application release date and time.
     *
     * @param \DateTime $val The releaseDateTime
     *
@@ -113,6 +119,7 @@ class IosVppApp extends MobileApp
     
     /**
     * Gets the appStoreUrl
+    * The store URL.
     *
     * @return string The appStoreUrl
     */
@@ -127,6 +134,7 @@ class IosVppApp extends MobileApp
     
     /**
     * Sets the appStoreUrl
+    * The store URL.
     *
     * @param string $val The appStoreUrl
     *
@@ -140,13 +148,14 @@ class IosVppApp extends MobileApp
     
     /**
     * Gets the licensingType
+    * The supported License Type.
     *
     * @return VppLicensingType The licensingType
     */
     public function getLicensingType()
     {
         if (array_key_exists("licensingType", $this->_propDict)) {
-            if (is_a($this->_propDict["licensingType"], "Microsoft\Graph\Beta\Model\VppLicensingType")) {
+            if (is_a($this->_propDict["licensingType"], "Microsoft\Graph\Model\VppLicensingType")) {
                 return $this->_propDict["licensingType"];
             } else {
                 $this->_propDict["licensingType"] = new VppLicensingType($this->_propDict["licensingType"]);
@@ -158,6 +167,7 @@ class IosVppApp extends MobileApp
     
     /**
     * Sets the licensingType
+    * The supported License Type.
     *
     * @param VppLicensingType $val The licensingType
     *
@@ -171,13 +181,14 @@ class IosVppApp extends MobileApp
     
     /**
     * Gets the applicableDeviceType
+    * The applicable iOS Device Type.
     *
     * @return IosDeviceType The applicableDeviceType
     */
     public function getApplicableDeviceType()
     {
         if (array_key_exists("applicableDeviceType", $this->_propDict)) {
-            if (is_a($this->_propDict["applicableDeviceType"], "Microsoft\Graph\Beta\Model\IosDeviceType")) {
+            if (is_a($this->_propDict["applicableDeviceType"], "Microsoft\Graph\Model\IosDeviceType")) {
                 return $this->_propDict["applicableDeviceType"];
             } else {
                 $this->_propDict["applicableDeviceType"] = new IosDeviceType($this->_propDict["applicableDeviceType"]);
@@ -189,6 +200,7 @@ class IosVppApp extends MobileApp
     
     /**
     * Sets the applicableDeviceType
+    * The applicable iOS Device Type.
     *
     * @param IosDeviceType $val The applicableDeviceType
     *
@@ -202,6 +214,7 @@ class IosVppApp extends MobileApp
     
     /**
     * Gets the vppTokenOrganizationName
+    * The organization associated with the Apple Volume Purchase Program Token
     *
     * @return string The vppTokenOrganizationName
     */
@@ -216,6 +229,7 @@ class IosVppApp extends MobileApp
     
     /**
     * Sets the vppTokenOrganizationName
+    * The organization associated with the Apple Volume Purchase Program Token
     *
     * @param string $val The vppTokenOrganizationName
     *
@@ -229,13 +243,14 @@ class IosVppApp extends MobileApp
     
     /**
     * Gets the vppTokenAccountType
+    * The type of volume purchase program which the given Apple Volume Purchase Program Token is associated with. Possible values are: business, education. Possible values are: business, education.
     *
     * @return VppTokenAccountType The vppTokenAccountType
     */
     public function getVppTokenAccountType()
     {
         if (array_key_exists("vppTokenAccountType", $this->_propDict)) {
-            if (is_a($this->_propDict["vppTokenAccountType"], "Microsoft\Graph\Beta\Model\VppTokenAccountType")) {
+            if (is_a($this->_propDict["vppTokenAccountType"], "Microsoft\Graph\Model\VppTokenAccountType")) {
                 return $this->_propDict["vppTokenAccountType"];
             } else {
                 $this->_propDict["vppTokenAccountType"] = new VppTokenAccountType($this->_propDict["vppTokenAccountType"]);
@@ -247,6 +262,7 @@ class IosVppApp extends MobileApp
     
     /**
     * Sets the vppTokenAccountType
+    * The type of volume purchase program which the given Apple Volume Purchase Program Token is associated with. Possible values are: business, education. Possible values are: business, education.
     *
     * @param VppTokenAccountType $val The vppTokenAccountType
     *
@@ -260,6 +276,7 @@ class IosVppApp extends MobileApp
     
     /**
     * Gets the vppTokenAppleId
+    * The Apple Id associated with the given Apple Volume Purchase Program Token.
     *
     * @return string The vppTokenAppleId
     */
@@ -274,6 +291,7 @@ class IosVppApp extends MobileApp
     
     /**
     * Sets the vppTokenAppleId
+    * The Apple Id associated with the given Apple Volume Purchase Program Token.
     *
     * @param string $val The vppTokenAppleId
     *
@@ -287,6 +305,7 @@ class IosVppApp extends MobileApp
     
     /**
     * Gets the bundleId
+    * The Identity Name.
     *
     * @return string The bundleId
     */
@@ -301,6 +320,7 @@ class IosVppApp extends MobileApp
     
     /**
     * Sets the bundleId
+    * The Identity Name.
     *
     * @param string $val The bundleId
     *
@@ -314,6 +334,7 @@ class IosVppApp extends MobileApp
     
     /**
     * Gets the vppTokenId
+    * Identifier of the VPP token associated with this app.
     *
     * @return string The vppTokenId
     */
@@ -328,6 +349,7 @@ class IosVppApp extends MobileApp
     
     /**
     * Sets the vppTokenId
+    * Identifier of the VPP token associated with this app.
     *
     * @param string $val The vppTokenId
     *
@@ -342,6 +364,7 @@ class IosVppApp extends MobileApp
 
      /** 
      * Gets the revokeLicenseActionResults
+    * Results of revoke license actions on this app.
      *
      * @return array The revokeLicenseActionResults
      */
@@ -356,6 +379,7 @@ class IosVppApp extends MobileApp
     
     /** 
     * Sets the revokeLicenseActionResults
+    * Results of revoke license actions on this app.
     *
     * @param IosVppAppRevokeLicensesActionResult $val The revokeLicenseActionResults
     *
@@ -370,6 +394,7 @@ class IosVppApp extends MobileApp
 
      /** 
      * Gets the assignedLicenses
+    * The licenses assigned to this app.
      *
      * @return array The assignedLicenses
      */
@@ -384,6 +409,7 @@ class IosVppApp extends MobileApp
     
     /** 
     * Sets the assignedLicenses
+    * The licenses assigned to this app.
     *
     * @param IosVppAppAssignedLicense $val The assignedLicenses
     *

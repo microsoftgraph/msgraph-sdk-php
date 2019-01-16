@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * IosWebContentFilterAutoFilter class
 *
@@ -26,7 +26,17 @@ namespace Microsoft\Graph\Beta\Model;
 class IosWebContentFilterAutoFilter extends IosWebContentFilterBase
 {
     /**
+    * Set the @odata.type since this type is immediately descended from an abstract
+    * type that is referenced as the type in an entity.
+    */
+    public function __construct()
+    {
+        $this->setODataType("#microsoft.graph.iosWebContentFilterAutoFilter");
+    }
+
+    /**
     * Gets the allowedUrls
+    * Additional URLs allowed for access
     *
     * @return string The allowedUrls
     */
@@ -41,6 +51,7 @@ class IosWebContentFilterAutoFilter extends IosWebContentFilterBase
 
     /**
     * Sets the allowedUrls
+    * Additional URLs allowed for access
     *
     * @param string $val The value of the allowedUrls
     *
@@ -53,6 +64,7 @@ class IosWebContentFilterAutoFilter extends IosWebContentFilterBase
     }
     /**
     * Gets the blockedUrls
+    * Additional URLs blocked for access
     *
     * @return string The blockedUrls
     */
@@ -67,6 +79,7 @@ class IosWebContentFilterAutoFilter extends IosWebContentFilterBase
 
     /**
     * Sets the blockedUrls
+    * Additional URLs blocked for access
     *
     * @param string $val The value of the blockedUrls
     *

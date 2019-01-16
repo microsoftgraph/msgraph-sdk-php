@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * FileSystemInfo class
 *
@@ -28,13 +28,14 @@ class FileSystemInfo extends Entity
 
     /**
     * Gets the createdDateTime
+    * The UTC date and time the file was created on a client.
     *
     * @return \DateTime The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "Microsoft\Graph\Beta\Model\\DateTime")) {
+            if (is_a($this->_propDict["createdDateTime"], "Microsoft\Graph\Model\\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -46,6 +47,7 @@ class FileSystemInfo extends Entity
 
     /**
     * Sets the createdDateTime
+    * The UTC date and time the file was created on a client.
     *
     * @param \DateTime $val The value to assign to the createdDateTime
     *
@@ -59,13 +61,14 @@ class FileSystemInfo extends Entity
 
     /**
     * Gets the lastAccessedDateTime
+    * The UTC date and time the file was last accessed. Available for the recent file list only.
     *
     * @return \DateTime The lastAccessedDateTime
     */
     public function getLastAccessedDateTime()
     {
         if (array_key_exists("lastAccessedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastAccessedDateTime"], "Microsoft\Graph\Beta\Model\\DateTime")) {
+            if (is_a($this->_propDict["lastAccessedDateTime"], "Microsoft\Graph\Model\\DateTime")) {
                 return $this->_propDict["lastAccessedDateTime"];
             } else {
                 $this->_propDict["lastAccessedDateTime"] = new \DateTime($this->_propDict["lastAccessedDateTime"]);
@@ -77,6 +80,7 @@ class FileSystemInfo extends Entity
 
     /**
     * Sets the lastAccessedDateTime
+    * The UTC date and time the file was last accessed. Available for the recent file list only.
     *
     * @param \DateTime $val The value to assign to the lastAccessedDateTime
     *
@@ -90,13 +94,14 @@ class FileSystemInfo extends Entity
 
     /**
     * Gets the lastModifiedDateTime
+    * The UTC date and time the file was last modified on a client.
     *
     * @return \DateTime The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "Microsoft\Graph\Beta\Model\\DateTime")) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "Microsoft\Graph\Model\\DateTime")) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -108,6 +113,7 @@ class FileSystemInfo extends Entity
 
     /**
     * Sets the lastModifiedDateTime
+    * The UTC date and time the file was last modified on a client.
     *
     * @param \DateTime $val The value to assign to the lastModifiedDateTime
     *

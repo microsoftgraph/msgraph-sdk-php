@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * DeviceSetupConfiguration class
@@ -28,6 +28,7 @@ class DeviceSetupConfiguration extends Entity
 {
     /**
     * Gets the createdDateTime
+    * DateTime the object was created.
     *
     * @return \DateTime The createdDateTime
     */
@@ -46,6 +47,7 @@ class DeviceSetupConfiguration extends Entity
     
     /**
     * Sets the createdDateTime
+    * DateTime the object was created.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -59,6 +61,7 @@ class DeviceSetupConfiguration extends Entity
     
     /**
     * Gets the description
+    * Admin provided description of the Device Configuration.
     *
     * @return string The description
     */
@@ -73,6 +76,7 @@ class DeviceSetupConfiguration extends Entity
     
     /**
     * Sets the description
+    * Admin provided description of the Device Configuration.
     *
     * @param string $val The description
     *
@@ -86,6 +90,7 @@ class DeviceSetupConfiguration extends Entity
     
     /**
     * Gets the lastModifiedDateTime
+    * DateTime the object was last modified.
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -104,6 +109,7 @@ class DeviceSetupConfiguration extends Entity
     
     /**
     * Sets the lastModifiedDateTime
+    * DateTime the object was last modified.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -117,6 +123,7 @@ class DeviceSetupConfiguration extends Entity
     
     /**
     * Gets the displayName
+    * Admin provided name of the device configuration.
     *
     * @return string The displayName
     */
@@ -131,6 +138,7 @@ class DeviceSetupConfiguration extends Entity
     
     /**
     * Sets the displayName
+    * Admin provided name of the device configuration.
     *
     * @param string $val The displayName
     *
@@ -144,6 +152,7 @@ class DeviceSetupConfiguration extends Entity
     
     /**
     * Gets the version
+    * Version of the device configuration.
     *
     * @return int The version
     */
@@ -158,6 +167,7 @@ class DeviceSetupConfiguration extends Entity
     
     /**
     * Sets the version
+    * Version of the device configuration.
     *
     * @param int $val The version
     *

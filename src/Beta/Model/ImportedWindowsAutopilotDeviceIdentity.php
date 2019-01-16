@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * ImportedWindowsAutopilotDeviceIdentity class
@@ -28,6 +28,7 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity
 {
     /**
     * Gets the orderIdentifier
+    * Order Id of the Windows autopilot device.
     *
     * @return string The orderIdentifier
     */
@@ -42,6 +43,7 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity
     
     /**
     * Sets the orderIdentifier
+    * Order Id of the Windows autopilot device.
     *
     * @param string $val The orderIdentifier
     *
@@ -55,6 +57,7 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity
     
     /**
     * Gets the serialNumber
+    * Serial number of the Windows autopilot device.
     *
     * @return string The serialNumber
     */
@@ -69,6 +72,7 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity
     
     /**
     * Sets the serialNumber
+    * Serial number of the Windows autopilot device.
     *
     * @param string $val The serialNumber
     *
@@ -82,6 +86,7 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity
     
     /**
     * Gets the productKey
+    * Product Key of the Windows autopilot device.
     *
     * @return string The productKey
     */
@@ -96,6 +101,7 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity
     
     /**
     * Sets the productKey
+    * Product Key of the Windows autopilot device.
     *
     * @param string $val The productKey
     *
@@ -109,6 +115,7 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity
     
     /**
     * Gets the hardwareIdentifier
+    * Hardware Blob of the Windows autopilot device.
     *
     * @return \GuzzleHttp\Psr7\Stream The hardwareIdentifier
     */
@@ -127,6 +134,7 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity
     
     /**
     * Sets the hardwareIdentifier
+    * Hardware Blob of the Windows autopilot device.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The hardwareIdentifier
     *
@@ -140,13 +148,14 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity
     
     /**
     * Gets the state
+    * Current state of the imported device.
     *
     * @return ImportedWindowsAutopilotDeviceIdentityState The state
     */
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "Microsoft\Graph\Beta\Model\ImportedWindowsAutopilotDeviceIdentityState")) {
+            if (is_a($this->_propDict["state"], "Microsoft\Graph\Model\ImportedWindowsAutopilotDeviceIdentityState")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new ImportedWindowsAutopilotDeviceIdentityState($this->_propDict["state"]);
@@ -158,6 +167,7 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity
     
     /**
     * Sets the state
+    * Current state of the imported device.
     *
     * @param ImportedWindowsAutopilotDeviceIdentityState $val The state
     *

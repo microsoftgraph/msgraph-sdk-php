@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * MobileAppTroubleshootingHistoryItem class
 *
@@ -28,13 +28,14 @@ class MobileAppTroubleshootingHistoryItem extends Entity
 
     /**
     * Gets the occurrenceDateTime
+    * Time when the history item occurred.
     *
     * @return \DateTime The occurrenceDateTime
     */
     public function getOccurrenceDateTime()
     {
         if (array_key_exists("occurrenceDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["occurrenceDateTime"], "Microsoft\Graph\Beta\Model\\DateTime")) {
+            if (is_a($this->_propDict["occurrenceDateTime"], "Microsoft\Graph\Model\\DateTime")) {
                 return $this->_propDict["occurrenceDateTime"];
             } else {
                 $this->_propDict["occurrenceDateTime"] = new \DateTime($this->_propDict["occurrenceDateTime"]);
@@ -46,6 +47,7 @@ class MobileAppTroubleshootingHistoryItem extends Entity
 
     /**
     * Sets the occurrenceDateTime
+    * Time when the history item occurred.
     *
     * @param \DateTime $val The value to assign to the occurrenceDateTime
     *

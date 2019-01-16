@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * PlannerTaskDetails class
@@ -28,6 +28,7 @@ class PlannerTaskDetails extends Entity
 {
     /**
     * Gets the description
+    * Description of the task
     *
     * @return string The description
     */
@@ -42,6 +43,7 @@ class PlannerTaskDetails extends Entity
     
     /**
     * Sets the description
+    * Description of the task
     *
     * @param string $val The description
     *
@@ -55,13 +57,14 @@ class PlannerTaskDetails extends Entity
     
     /**
     * Gets the previewType
+    * This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
     *
     * @return PlannerPreviewType The previewType
     */
     public function getPreviewType()
     {
         if (array_key_exists("previewType", $this->_propDict)) {
-            if (is_a($this->_propDict["previewType"], "Microsoft\Graph\Beta\Model\PlannerPreviewType")) {
+            if (is_a($this->_propDict["previewType"], "Microsoft\Graph\Model\PlannerPreviewType")) {
                 return $this->_propDict["previewType"];
             } else {
                 $this->_propDict["previewType"] = new PlannerPreviewType($this->_propDict["previewType"]);
@@ -73,6 +76,7 @@ class PlannerTaskDetails extends Entity
     
     /**
     * Sets the previewType
+    * This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
     *
     * @param PlannerPreviewType $val The previewType
     *
@@ -86,13 +90,14 @@ class PlannerTaskDetails extends Entity
     
     /**
     * Gets the references
+    * The collection of references on the task.
     *
     * @return PlannerExternalReferences The references
     */
     public function getReferences()
     {
         if (array_key_exists("references", $this->_propDict)) {
-            if (is_a($this->_propDict["references"], "Microsoft\Graph\Beta\Model\PlannerExternalReferences")) {
+            if (is_a($this->_propDict["references"], "Microsoft\Graph\Model\PlannerExternalReferences")) {
                 return $this->_propDict["references"];
             } else {
                 $this->_propDict["references"] = new PlannerExternalReferences($this->_propDict["references"]);
@@ -104,6 +109,7 @@ class PlannerTaskDetails extends Entity
     
     /**
     * Sets the references
+    * The collection of references on the task.
     *
     * @param PlannerExternalReferences $val The references
     *
@@ -117,13 +123,14 @@ class PlannerTaskDetails extends Entity
     
     /**
     * Gets the checklist
+    * The collection of checklist items on the task.
     *
     * @return PlannerChecklistItems The checklist
     */
     public function getChecklist()
     {
         if (array_key_exists("checklist", $this->_propDict)) {
-            if (is_a($this->_propDict["checklist"], "Microsoft\Graph\Beta\Model\PlannerChecklistItems")) {
+            if (is_a($this->_propDict["checklist"], "Microsoft\Graph\Model\PlannerChecklistItems")) {
                 return $this->_propDict["checklist"];
             } else {
                 $this->_propDict["checklist"] = new PlannerChecklistItems($this->_propDict["checklist"]);
@@ -135,6 +142,7 @@ class PlannerTaskDetails extends Entity
     
     /**
     * Sets the checklist
+    * The collection of checklist items on the task.
     *
     * @param PlannerChecklistItems $val The checklist
     *

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * ScheduleInformation class
 *
@@ -60,7 +60,7 @@ class ScheduleInformation extends Entity
     public function getScheduleItems()
     {
         if (array_key_exists("scheduleItems", $this->_propDict)) {
-            if (is_a($this->_propDict["scheduleItems"], "Microsoft\Graph\Beta\Model\ScheduleItem")) {
+            if (is_a($this->_propDict["scheduleItems"], "Microsoft\Graph\Model\ScheduleItem")) {
                 return $this->_propDict["scheduleItems"];
             } else {
                 $this->_propDict["scheduleItems"] = new ScheduleItem($this->_propDict["scheduleItems"]);
@@ -117,7 +117,7 @@ class ScheduleInformation extends Entity
     public function getError()
     {
         if (array_key_exists("error", $this->_propDict)) {
-            if (is_a($this->_propDict["error"], "Microsoft\Graph\Beta\Model\FreeBusyError")) {
+            if (is_a($this->_propDict["error"], "Microsoft\Graph\Model\FreeBusyError")) {
                 return $this->_propDict["error"];
             } else {
                 $this->_propDict["error"] = new FreeBusyError($this->_propDict["error"]);
@@ -148,7 +148,7 @@ class ScheduleInformation extends Entity
     public function getWorkingHours()
     {
         if (array_key_exists("workingHours", $this->_propDict)) {
-            if (is_a($this->_propDict["workingHours"], "Microsoft\Graph\Beta\Model\WorkingHours")) {
+            if (is_a($this->_propDict["workingHours"], "Microsoft\Graph\Model\WorkingHours")) {
                 return $this->_propDict["workingHours"];
             } else {
                 $this->_propDict["workingHours"] = new WorkingHours($this->_propDict["workingHours"]);

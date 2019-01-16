@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * IosDeviceFeaturesConfiguration class
@@ -28,6 +28,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
 {
     /**
     * Gets the assetTagTemplate
+    * Asset tag information for the device, displayed on the login window and lock screen.
     *
     * @return string The assetTagTemplate
     */
@@ -42,6 +43,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     
     /**
     * Sets the assetTagTemplate
+    * Asset tag information for the device, displayed on the login window and lock screen.
     *
     * @param string $val The assetTagTemplate
     *
@@ -55,13 +57,14 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     
     /**
     * Gets the contentFilterSettings
+    * Gets or sets iOS Web Content Filter settings, supervised mode only
     *
     * @return IosWebContentFilterBase The contentFilterSettings
     */
     public function getContentFilterSettings()
     {
         if (array_key_exists("contentFilterSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["contentFilterSettings"], "Microsoft\Graph\Beta\Model\IosWebContentFilterBase")) {
+            if (is_a($this->_propDict["contentFilterSettings"], "Microsoft\Graph\Model\IosWebContentFilterBase")) {
                 return $this->_propDict["contentFilterSettings"];
             } else {
                 $this->_propDict["contentFilterSettings"] = new IosWebContentFilterBase($this->_propDict["contentFilterSettings"]);
@@ -73,6 +76,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     
     /**
     * Sets the contentFilterSettings
+    * Gets or sets iOS Web Content Filter settings, supervised mode only
     *
     * @param IosWebContentFilterBase $val The contentFilterSettings
     *
@@ -86,6 +90,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     
     /**
     * Gets the lockScreenFootnote
+    * A footnote displayed on the login window and lock screen. Available in iOS 9.3.1 and later.
     *
     * @return string The lockScreenFootnote
     */
@@ -100,6 +105,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     
     /**
     * Sets the lockScreenFootnote
+    * A footnote displayed on the login window and lock screen. Available in iOS 9.3.1 and later.
     *
     * @param string $val The lockScreenFootnote
     *
@@ -114,6 +120,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
 
      /** 
      * Gets the homeScreenDockIcons
+    * A list of app and folders to appear on the Home Screen Dock. This collection can contain a maximum of 500 elements.
      *
      * @return array The homeScreenDockIcons
      */
@@ -128,6 +135,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     
     /** 
     * Sets the homeScreenDockIcons
+    * A list of app and folders to appear on the Home Screen Dock. This collection can contain a maximum of 500 elements.
     *
     * @param IosHomeScreenItem $val The homeScreenDockIcons
     *
@@ -142,6 +150,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
 
      /** 
      * Gets the homeScreenPages
+    * A list of pages on the Home Screen. This collection can contain a maximum of 500 elements.
      *
      * @return array The homeScreenPages
      */
@@ -156,6 +165,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     
     /** 
     * Sets the homeScreenPages
+    * A list of pages on the Home Screen. This collection can contain a maximum of 500 elements.
     *
     * @param IosHomeScreenPage $val The homeScreenPages
     *
@@ -170,6 +180,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
 
      /** 
      * Gets the notificationSettings
+    * Notification settings for each bundle id. Applicable to devices in supervised mode only (iOS 9.3 and later). This collection can contain a maximum of 500 elements.
      *
      * @return array The notificationSettings
      */
@@ -184,6 +195,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     
     /** 
     * Sets the notificationSettings
+    * Notification settings for each bundle id. Applicable to devices in supervised mode only (iOS 9.3 and later). This collection can contain a maximum of 500 elements.
     *
     * @param IosNotificationSettings $val The notificationSettings
     *
@@ -197,13 +209,14 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     
     /**
     * Gets the singleSignOnSettings
+    * The Kerberos login settings that enable apps on receiving devices to authenticate smoothly.
     *
     * @return IosSingleSignOnSettings The singleSignOnSettings
     */
     public function getSingleSignOnSettings()
     {
         if (array_key_exists("singleSignOnSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["singleSignOnSettings"], "Microsoft\Graph\Beta\Model\IosSingleSignOnSettings")) {
+            if (is_a($this->_propDict["singleSignOnSettings"], "Microsoft\Graph\Model\IosSingleSignOnSettings")) {
                 return $this->_propDict["singleSignOnSettings"];
             } else {
                 $this->_propDict["singleSignOnSettings"] = new IosSingleSignOnSettings($this->_propDict["singleSignOnSettings"]);
@@ -215,6 +228,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     
     /**
     * Sets the singleSignOnSettings
+    * The Kerberos login settings that enable apps on receiving devices to authenticate smoothly.
     *
     * @param IosSingleSignOnSettings $val The singleSignOnSettings
     *
@@ -227,14 +241,81 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     }
     
     /**
+    * Gets the wallpaperDisplayLocation
+    * A wallpaper display location specifier.
+    *
+    * @return IosWallpaperDisplayLocation The wallpaperDisplayLocation
+    */
+    public function getWallpaperDisplayLocation()
+    {
+        if (array_key_exists("wallpaperDisplayLocation", $this->_propDict)) {
+            if (is_a($this->_propDict["wallpaperDisplayLocation"], "Microsoft\Graph\Model\IosWallpaperDisplayLocation")) {
+                return $this->_propDict["wallpaperDisplayLocation"];
+            } else {
+                $this->_propDict["wallpaperDisplayLocation"] = new IosWallpaperDisplayLocation($this->_propDict["wallpaperDisplayLocation"]);
+                return $this->_propDict["wallpaperDisplayLocation"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the wallpaperDisplayLocation
+    * A wallpaper display location specifier.
+    *
+    * @param IosWallpaperDisplayLocation $val The wallpaperDisplayLocation
+    *
+    * @return IosDeviceFeaturesConfiguration
+    */
+    public function setWallpaperDisplayLocation($val)
+    {
+        $this->_propDict["wallpaperDisplayLocation"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the wallpaperImage
+    * A wallpaper image must be in either PNG or JPEG format. It requires a supervised device with iOS 8 or later version.
+    *
+    * @return MimeContent The wallpaperImage
+    */
+    public function getWallpaperImage()
+    {
+        if (array_key_exists("wallpaperImage", $this->_propDict)) {
+            if (is_a($this->_propDict["wallpaperImage"], "Microsoft\Graph\Model\MimeContent")) {
+                return $this->_propDict["wallpaperImage"];
+            } else {
+                $this->_propDict["wallpaperImage"] = new MimeContent($this->_propDict["wallpaperImage"]);
+                return $this->_propDict["wallpaperImage"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the wallpaperImage
+    * A wallpaper image must be in either PNG or JPEG format. It requires a supervised device with iOS 8 or later version.
+    *
+    * @param MimeContent $val The wallpaperImage
+    *
+    * @return IosDeviceFeaturesConfiguration
+    */
+    public function setWallpaperImage($val)
+    {
+        $this->_propDict["wallpaperImage"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the identityCertificateForClientAuthentication
+    * Identity Certificate for the renewal of Kerberos ticket used in single sign-on settings.
     *
     * @return IosCertificateProfileBase The identityCertificateForClientAuthentication
     */
     public function getIdentityCertificateForClientAuthentication()
     {
         if (array_key_exists("identityCertificateForClientAuthentication", $this->_propDict)) {
-            if (is_a($this->_propDict["identityCertificateForClientAuthentication"], "Microsoft\Graph\Beta\Model\IosCertificateProfileBase")) {
+            if (is_a($this->_propDict["identityCertificateForClientAuthentication"], "Microsoft\Graph\Model\IosCertificateProfileBase")) {
                 return $this->_propDict["identityCertificateForClientAuthentication"];
             } else {
                 $this->_propDict["identityCertificateForClientAuthentication"] = new IosCertificateProfileBase($this->_propDict["identityCertificateForClientAuthentication"]);
@@ -246,6 +327,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     
     /**
     * Sets the identityCertificateForClientAuthentication
+    * Identity Certificate for the renewal of Kerberos ticket used in single sign-on settings.
     *
     * @param IosCertificateProfileBase $val The identityCertificateForClientAuthentication
     *

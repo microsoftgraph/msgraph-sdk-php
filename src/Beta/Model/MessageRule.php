@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * MessageRule class
@@ -28,6 +28,7 @@ class MessageRule extends Entity
 {
     /**
     * Gets the displayName
+    * The display name of the rule.
     *
     * @return string The displayName
     */
@@ -42,6 +43,7 @@ class MessageRule extends Entity
     
     /**
     * Sets the displayName
+    * The display name of the rule.
     *
     * @param string $val The displayName
     *
@@ -55,6 +57,7 @@ class MessageRule extends Entity
     
     /**
     * Gets the sequence
+    * Indicates the order in which the rule is executed, among other rules.
     *
     * @return int The sequence
     */
@@ -69,6 +72,7 @@ class MessageRule extends Entity
     
     /**
     * Sets the sequence
+    * Indicates the order in which the rule is executed, among other rules.
     *
     * @param int $val The sequence
     *
@@ -82,13 +86,14 @@ class MessageRule extends Entity
     
     /**
     * Gets the conditions
+    * Conditions that when fulfilled, will trigger the corresponding actions for that rule.
     *
     * @return MessageRulePredicates The conditions
     */
     public function getConditions()
     {
         if (array_key_exists("conditions", $this->_propDict)) {
-            if (is_a($this->_propDict["conditions"], "Microsoft\Graph\Beta\Model\MessageRulePredicates")) {
+            if (is_a($this->_propDict["conditions"], "Microsoft\Graph\Model\MessageRulePredicates")) {
                 return $this->_propDict["conditions"];
             } else {
                 $this->_propDict["conditions"] = new MessageRulePredicates($this->_propDict["conditions"]);
@@ -100,6 +105,7 @@ class MessageRule extends Entity
     
     /**
     * Sets the conditions
+    * Conditions that when fulfilled, will trigger the corresponding actions for that rule.
     *
     * @param MessageRulePredicates $val The conditions
     *
@@ -113,13 +119,14 @@ class MessageRule extends Entity
     
     /**
     * Gets the actions
+    * Actions to be taken on a message when the corresponding conditions are fulfilled.
     *
     * @return MessageRuleActions The actions
     */
     public function getActions()
     {
         if (array_key_exists("actions", $this->_propDict)) {
-            if (is_a($this->_propDict["actions"], "Microsoft\Graph\Beta\Model\MessageRuleActions")) {
+            if (is_a($this->_propDict["actions"], "Microsoft\Graph\Model\MessageRuleActions")) {
                 return $this->_propDict["actions"];
             } else {
                 $this->_propDict["actions"] = new MessageRuleActions($this->_propDict["actions"]);
@@ -131,6 +138,7 @@ class MessageRule extends Entity
     
     /**
     * Sets the actions
+    * Actions to be taken on a message when the corresponding conditions are fulfilled.
     *
     * @param MessageRuleActions $val The actions
     *
@@ -144,13 +152,14 @@ class MessageRule extends Entity
     
     /**
     * Gets the exceptions
+    * Exception conditions for the rule.
     *
     * @return MessageRulePredicates The exceptions
     */
     public function getExceptions()
     {
         if (array_key_exists("exceptions", $this->_propDict)) {
-            if (is_a($this->_propDict["exceptions"], "Microsoft\Graph\Beta\Model\MessageRulePredicates")) {
+            if (is_a($this->_propDict["exceptions"], "Microsoft\Graph\Model\MessageRulePredicates")) {
                 return $this->_propDict["exceptions"];
             } else {
                 $this->_propDict["exceptions"] = new MessageRulePredicates($this->_propDict["exceptions"]);
@@ -162,6 +171,7 @@ class MessageRule extends Entity
     
     /**
     * Sets the exceptions
+    * Exception conditions for the rule.
     *
     * @param MessageRulePredicates $val The exceptions
     *
@@ -175,6 +185,7 @@ class MessageRule extends Entity
     
     /**
     * Gets the isEnabled
+    * Indicates whether the rule is enabled to be applied to messages.
     *
     * @return bool The isEnabled
     */
@@ -189,6 +200,7 @@ class MessageRule extends Entity
     
     /**
     * Sets the isEnabled
+    * Indicates whether the rule is enabled to be applied to messages.
     *
     * @param bool $val The isEnabled
     *
@@ -202,6 +214,7 @@ class MessageRule extends Entity
     
     /**
     * Gets the hasError
+    * Indicates whether the rule is in an error condition. Read-only.
     *
     * @return bool The hasError
     */
@@ -216,6 +229,7 @@ class MessageRule extends Entity
     
     /**
     * Sets the hasError
+    * Indicates whether the rule is in an error condition. Read-only.
     *
     * @param bool $val The hasError
     *
@@ -229,6 +243,7 @@ class MessageRule extends Entity
     
     /**
     * Gets the isReadOnly
+    * Indicates if the rule is read-only and cannot be modified or deleted by the rules REST API.
     *
     * @return bool The isReadOnly
     */
@@ -243,6 +258,7 @@ class MessageRule extends Entity
     
     /**
     * Sets the isReadOnly
+    * Indicates if the rule is read-only and cannot be modified or deleted by the rules REST API.
     *
     * @param bool $val The isReadOnly
     *

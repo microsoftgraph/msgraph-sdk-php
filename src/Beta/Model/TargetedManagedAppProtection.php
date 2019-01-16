@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * TargetedManagedAppProtection class
@@ -28,6 +28,7 @@ class TargetedManagedAppProtection extends ManagedAppProtection
 {
     /**
     * Gets the isAssigned
+    * Indicates if the policy is deployed to any inclusion groups or not.
     *
     * @return bool The isAssigned
     */
@@ -42,6 +43,7 @@ class TargetedManagedAppProtection extends ManagedAppProtection
     
     /**
     * Sets the isAssigned
+    * Indicates if the policy is deployed to any inclusion groups or not.
     *
     * @param bool $val The isAssigned
     *
@@ -55,13 +57,14 @@ class TargetedManagedAppProtection extends ManagedAppProtection
     
     /**
     * Gets the targetedAppManagementLevels
+    * The intended app management levels for this policy
     *
     * @return AppManagementLevel The targetedAppManagementLevels
     */
     public function getTargetedAppManagementLevels()
     {
         if (array_key_exists("targetedAppManagementLevels", $this->_propDict)) {
-            if (is_a($this->_propDict["targetedAppManagementLevels"], "Microsoft\Graph\Beta\Model\AppManagementLevel")) {
+            if (is_a($this->_propDict["targetedAppManagementLevels"], "Microsoft\Graph\Model\AppManagementLevel")) {
                 return $this->_propDict["targetedAppManagementLevels"];
             } else {
                 $this->_propDict["targetedAppManagementLevels"] = new AppManagementLevel($this->_propDict["targetedAppManagementLevels"]);
@@ -73,6 +76,7 @@ class TargetedManagedAppProtection extends ManagedAppProtection
     
     /**
     * Sets the targetedAppManagementLevels
+    * The intended app management levels for this policy
     *
     * @param AppManagementLevel $val The targetedAppManagementLevels
     *
@@ -87,6 +91,7 @@ class TargetedManagedAppProtection extends ManagedAppProtection
 
      /** 
      * Gets the assignments
+    * Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
      *
      * @return array The assignments
      */
@@ -101,6 +106,7 @@ class TargetedManagedAppProtection extends ManagedAppProtection
     
     /** 
     * Sets the assignments
+    * Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
     *
     * @param TargetedManagedAppPolicyAssignment $val The assignments
     *

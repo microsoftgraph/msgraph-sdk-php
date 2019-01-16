@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * TeamMemberSettings class
 *
@@ -27,6 +27,7 @@ class TeamMemberSettings extends Entity
 {
     /**
     * Gets the allowCreateUpdateChannels
+    * If set to true, members can add and update channels.
     *
     * @return bool The allowCreateUpdateChannels
     */
@@ -41,6 +42,7 @@ class TeamMemberSettings extends Entity
 
     /**
     * Sets the allowCreateUpdateChannels
+    * If set to true, members can add and update channels.
     *
     * @param bool $val The value of the allowCreateUpdateChannels
     *
@@ -53,6 +55,7 @@ class TeamMemberSettings extends Entity
     }
     /**
     * Gets the allowDeleteChannels
+    * If set to true, members can delete channels.
     *
     * @return bool The allowDeleteChannels
     */
@@ -67,6 +70,7 @@ class TeamMemberSettings extends Entity
 
     /**
     * Sets the allowDeleteChannels
+    * If set to true, members can delete channels.
     *
     * @param bool $val The value of the allowDeleteChannels
     *
@@ -79,6 +83,7 @@ class TeamMemberSettings extends Entity
     }
     /**
     * Gets the allowAddRemoveApps
+    * If set to true, members can add and remove apps.
     *
     * @return bool The allowAddRemoveApps
     */
@@ -93,6 +98,7 @@ class TeamMemberSettings extends Entity
 
     /**
     * Sets the allowAddRemoveApps
+    * If set to true, members can add and remove apps.
     *
     * @param bool $val The value of the allowAddRemoveApps
     *
@@ -105,6 +111,7 @@ class TeamMemberSettings extends Entity
     }
     /**
     * Gets the allowCreateUpdateRemoveTabs
+    * If set to true, members can add, update, and remove tabs.
     *
     * @return bool The allowCreateUpdateRemoveTabs
     */
@@ -119,6 +126,7 @@ class TeamMemberSettings extends Entity
 
     /**
     * Sets the allowCreateUpdateRemoveTabs
+    * If set to true, members can add, update, and remove tabs.
     *
     * @param bool $val The value of the allowCreateUpdateRemoveTabs
     *
@@ -131,6 +139,7 @@ class TeamMemberSettings extends Entity
     }
     /**
     * Gets the allowCreateUpdateRemoveConnectors
+    * If set to true, members can add, update, and remove connectors.
     *
     * @return bool The allowCreateUpdateRemoveConnectors
     */
@@ -145,6 +154,7 @@ class TeamMemberSettings extends Entity
 
     /**
     * Sets the allowCreateUpdateRemoveConnectors
+    * If set to true, members can add, update, and remove connectors.
     *
     * @param bool $val The value of the allowCreateUpdateRemoveConnectors
     *

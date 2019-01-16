@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * BinaryManagementConditionExpression class
 *
@@ -28,13 +28,14 @@ class BinaryManagementConditionExpression extends ManagementConditionExpressionM
 
     /**
     * Gets the operator
+    * The operator used in the evaluation of the binary operation.
     *
     * @return BinaryManagementConditionExpressionOperatorType The operator
     */
     public function getOperator()
     {
         if (array_key_exists("operator", $this->_propDict)) {
-            if (is_a($this->_propDict["operator"], "Microsoft\Graph\Beta\Model\BinaryManagementConditionExpressionOperatorType")) {
+            if (is_a($this->_propDict["operator"], "Microsoft\Graph\Model\BinaryManagementConditionExpressionOperatorType")) {
                 return $this->_propDict["operator"];
             } else {
                 $this->_propDict["operator"] = new BinaryManagementConditionExpressionOperatorType($this->_propDict["operator"]);
@@ -46,6 +47,7 @@ class BinaryManagementConditionExpression extends ManagementConditionExpressionM
 
     /**
     * Sets the operator
+    * The operator used in the evaluation of the binary operation.
     *
     * @param BinaryManagementConditionExpressionOperatorType $val The value to assign to the operator
     *
@@ -59,13 +61,14 @@ class BinaryManagementConditionExpression extends ManagementConditionExpressionM
 
     /**
     * Gets the firstOperand
+    * The first operand of the binary operation.
     *
     * @return ManagementConditionExpressionModel The firstOperand
     */
     public function getFirstOperand()
     {
         if (array_key_exists("firstOperand", $this->_propDict)) {
-            if (is_a($this->_propDict["firstOperand"], "Microsoft\Graph\Beta\Model\ManagementConditionExpressionModel")) {
+            if (is_a($this->_propDict["firstOperand"], "Microsoft\Graph\Model\ManagementConditionExpressionModel")) {
                 return $this->_propDict["firstOperand"];
             } else {
                 $this->_propDict["firstOperand"] = new ManagementConditionExpressionModel($this->_propDict["firstOperand"]);
@@ -77,6 +80,7 @@ class BinaryManagementConditionExpression extends ManagementConditionExpressionM
 
     /**
     * Sets the firstOperand
+    * The first operand of the binary operation.
     *
     * @param ManagementConditionExpressionModel $val The value to assign to the firstOperand
     *
@@ -90,13 +94,14 @@ class BinaryManagementConditionExpression extends ManagementConditionExpressionM
 
     /**
     * Gets the secondOperand
+    * The second operand of the binary operation.
     *
     * @return ManagementConditionExpressionModel The secondOperand
     */
     public function getSecondOperand()
     {
         if (array_key_exists("secondOperand", $this->_propDict)) {
-            if (is_a($this->_propDict["secondOperand"], "Microsoft\Graph\Beta\Model\ManagementConditionExpressionModel")) {
+            if (is_a($this->_propDict["secondOperand"], "Microsoft\Graph\Model\ManagementConditionExpressionModel")) {
                 return $this->_propDict["secondOperand"];
             } else {
                 $this->_propDict["secondOperand"] = new ManagementConditionExpressionModel($this->_propDict["secondOperand"]);
@@ -108,6 +113,7 @@ class BinaryManagementConditionExpression extends ManagementConditionExpressionM
 
     /**
     * Sets the secondOperand
+    * The second operand of the binary operation.
     *
     * @param ManagementConditionExpressionModel $val The value to assign to the secondOperand
     *

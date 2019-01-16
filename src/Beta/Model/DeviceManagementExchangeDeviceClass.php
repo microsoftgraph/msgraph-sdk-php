@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * DeviceManagementExchangeDeviceClass class
 *
@@ -27,6 +27,7 @@ class DeviceManagementExchangeDeviceClass extends Entity
 {
     /**
     * Gets the name
+    * Name of the device class which will be impacted by this rule.
     *
     * @return string The name
     */
@@ -41,6 +42,7 @@ class DeviceManagementExchangeDeviceClass extends Entity
 
     /**
     * Sets the name
+    * Name of the device class which will be impacted by this rule.
     *
     * @param string $val The value of the name
     *
@@ -54,13 +56,14 @@ class DeviceManagementExchangeDeviceClass extends Entity
 
     /**
     * Gets the type
+    * Type of device which is impacted by this rule e.g. Model, Family
     *
     * @return DeviceManagementExchangeAccessRuleType The type
     */
     public function getType()
     {
         if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "Microsoft\Graph\Beta\Model\DeviceManagementExchangeAccessRuleType")) {
+            if (is_a($this->_propDict["type"], "Microsoft\Graph\Model\DeviceManagementExchangeAccessRuleType")) {
                 return $this->_propDict["type"];
             } else {
                 $this->_propDict["type"] = new DeviceManagementExchangeAccessRuleType($this->_propDict["type"]);
@@ -72,6 +75,7 @@ class DeviceManagementExchangeDeviceClass extends Entity
 
     /**
     * Sets the type
+    * Type of device which is impacted by this rule e.g. Model, Family
     *
     * @param DeviceManagementExchangeAccessRuleType $val The value to assign to the type
     *

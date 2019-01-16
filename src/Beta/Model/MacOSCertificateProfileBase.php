@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * MacOSCertificateProfileBase class
@@ -28,6 +28,7 @@ class MacOSCertificateProfileBase extends DeviceConfiguration
 {
     /**
     * Gets the renewalThresholdPercentage
+    * Certificate renewal threshold percentage.
     *
     * @return int The renewalThresholdPercentage
     */
@@ -42,6 +43,7 @@ class MacOSCertificateProfileBase extends DeviceConfiguration
     
     /**
     * Sets the renewalThresholdPercentage
+    * Certificate renewal threshold percentage.
     *
     * @param int $val The renewalThresholdPercentage
     *
@@ -55,13 +57,14 @@ class MacOSCertificateProfileBase extends DeviceConfiguration
     
     /**
     * Gets the subjectNameFormat
+    * Certificate Subject Name Format.
     *
     * @return AppleSubjectNameFormat The subjectNameFormat
     */
     public function getSubjectNameFormat()
     {
         if (array_key_exists("subjectNameFormat", $this->_propDict)) {
-            if (is_a($this->_propDict["subjectNameFormat"], "Microsoft\Graph\Beta\Model\AppleSubjectNameFormat")) {
+            if (is_a($this->_propDict["subjectNameFormat"], "Microsoft\Graph\Model\AppleSubjectNameFormat")) {
                 return $this->_propDict["subjectNameFormat"];
             } else {
                 $this->_propDict["subjectNameFormat"] = new AppleSubjectNameFormat($this->_propDict["subjectNameFormat"]);
@@ -73,6 +76,7 @@ class MacOSCertificateProfileBase extends DeviceConfiguration
     
     /**
     * Sets the subjectNameFormat
+    * Certificate Subject Name Format.
     *
     * @param AppleSubjectNameFormat $val The subjectNameFormat
     *
@@ -86,13 +90,14 @@ class MacOSCertificateProfileBase extends DeviceConfiguration
     
     /**
     * Gets the subjectAlternativeNameType
+    * Certificate Subject Alternative Name Type.
     *
     * @return SubjectAlternativeNameType The subjectAlternativeNameType
     */
     public function getSubjectAlternativeNameType()
     {
         if (array_key_exists("subjectAlternativeNameType", $this->_propDict)) {
-            if (is_a($this->_propDict["subjectAlternativeNameType"], "Microsoft\Graph\Beta\Model\SubjectAlternativeNameType")) {
+            if (is_a($this->_propDict["subjectAlternativeNameType"], "Microsoft\Graph\Model\SubjectAlternativeNameType")) {
                 return $this->_propDict["subjectAlternativeNameType"];
             } else {
                 $this->_propDict["subjectAlternativeNameType"] = new SubjectAlternativeNameType($this->_propDict["subjectAlternativeNameType"]);
@@ -104,6 +109,7 @@ class MacOSCertificateProfileBase extends DeviceConfiguration
     
     /**
     * Sets the subjectAlternativeNameType
+    * Certificate Subject Alternative Name Type.
     *
     * @param SubjectAlternativeNameType $val The subjectAlternativeNameType
     *
@@ -117,6 +123,7 @@ class MacOSCertificateProfileBase extends DeviceConfiguration
     
     /**
     * Gets the certificateValidityPeriodValue
+    * Value for the Certificate Validity Period.
     *
     * @return int The certificateValidityPeriodValue
     */
@@ -131,6 +138,7 @@ class MacOSCertificateProfileBase extends DeviceConfiguration
     
     /**
     * Sets the certificateValidityPeriodValue
+    * Value for the Certificate Validity Period.
     *
     * @param int $val The certificateValidityPeriodValue
     *
@@ -144,13 +152,14 @@ class MacOSCertificateProfileBase extends DeviceConfiguration
     
     /**
     * Gets the certificateValidityPeriodScale
+    * Scale for the Certificate Validity Period.
     *
     * @return CertificateValidityPeriodScale The certificateValidityPeriodScale
     */
     public function getCertificateValidityPeriodScale()
     {
         if (array_key_exists("certificateValidityPeriodScale", $this->_propDict)) {
-            if (is_a($this->_propDict["certificateValidityPeriodScale"], "Microsoft\Graph\Beta\Model\CertificateValidityPeriodScale")) {
+            if (is_a($this->_propDict["certificateValidityPeriodScale"], "Microsoft\Graph\Model\CertificateValidityPeriodScale")) {
                 return $this->_propDict["certificateValidityPeriodScale"];
             } else {
                 $this->_propDict["certificateValidityPeriodScale"] = new CertificateValidityPeriodScale($this->_propDict["certificateValidityPeriodScale"]);
@@ -162,6 +171,7 @@ class MacOSCertificateProfileBase extends DeviceConfiguration
     
     /**
     * Sets the certificateValidityPeriodScale
+    * Scale for the Certificate Validity Period.
     *
     * @param CertificateValidityPeriodScale $val The certificateValidityPeriodScale
     *

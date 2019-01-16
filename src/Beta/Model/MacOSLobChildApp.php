@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * MacOSLobChildApp class
 *
@@ -27,6 +27,7 @@ class MacOSLobChildApp extends Entity
 {
     /**
     * Gets the bundleId
+    * The Identity Name.
     *
     * @return string The bundleId
     */
@@ -41,6 +42,7 @@ class MacOSLobChildApp extends Entity
 
     /**
     * Sets the bundleId
+    * The Identity Name.
     *
     * @param string $val The value of the bundleId
     *
@@ -53,6 +55,7 @@ class MacOSLobChildApp extends Entity
     }
     /**
     * Gets the buildNumber
+    * The build number of MacOS Line of Business (LoB) app.
     *
     * @return string The buildNumber
     */
@@ -67,6 +70,7 @@ class MacOSLobChildApp extends Entity
 
     /**
     * Sets the buildNumber
+    * The build number of MacOS Line of Business (LoB) app.
     *
     * @param string $val The value of the buildNumber
     *
@@ -79,6 +83,7 @@ class MacOSLobChildApp extends Entity
     }
     /**
     * Gets the versionNumber
+    * The version number of MacOS Line of Business (LoB) app.
     *
     * @return string The versionNumber
     */
@@ -93,6 +98,7 @@ class MacOSLobChildApp extends Entity
 
     /**
     * Sets the versionNumber
+    * The version number of MacOS Line of Business (LoB) app.
     *
     * @param string $val The value of the versionNumber
     *

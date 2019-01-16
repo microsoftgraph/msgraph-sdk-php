@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * ResponseStatus class
 *
@@ -28,13 +28,14 @@ class ResponseStatus extends Entity
 
     /**
     * Gets the response
+    * The response type. The possible values are: None, Organizer, TentativelyAccepted, Accepted, Declined, NotResponded.
     *
     * @return ResponseType The response
     */
     public function getResponse()
     {
         if (array_key_exists("response", $this->_propDict)) {
-            if (is_a($this->_propDict["response"], "Microsoft\Graph\Beta\Model\ResponseType")) {
+            if (is_a($this->_propDict["response"], "Microsoft\Graph\Model\ResponseType")) {
                 return $this->_propDict["response"];
             } else {
                 $this->_propDict["response"] = new ResponseType($this->_propDict["response"]);
@@ -46,6 +47,7 @@ class ResponseStatus extends Entity
 
     /**
     * Sets the response
+    * The response type. The possible values are: None, Organizer, TentativelyAccepted, Accepted, Declined, NotResponded.
     *
     * @param ResponseType $val The value to assign to the response
     *
@@ -59,13 +61,14 @@ class ResponseStatus extends Entity
 
     /**
     * Gets the time
+    * The date and time that the response was returned. It uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The time
     */
     public function getTime()
     {
         if (array_key_exists("time", $this->_propDict)) {
-            if (is_a($this->_propDict["time"], "Microsoft\Graph\Beta\Model\\DateTime")) {
+            if (is_a($this->_propDict["time"], "Microsoft\Graph\Model\\DateTime")) {
                 return $this->_propDict["time"];
             } else {
                 $this->_propDict["time"] = new \DateTime($this->_propDict["time"]);
@@ -77,6 +80,7 @@ class ResponseStatus extends Entity
 
     /**
     * Sets the time
+    * The date and time that the response was returned. It uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The value to assign to the time
     *

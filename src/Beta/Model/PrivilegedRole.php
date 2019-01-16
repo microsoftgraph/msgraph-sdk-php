@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * PrivilegedRole class
@@ -61,7 +61,7 @@ class PrivilegedRole extends Entity
     public function getSettings()
     {
         if (array_key_exists("settings", $this->_propDict)) {
-            if (is_a($this->_propDict["settings"], "Microsoft\Graph\Beta\Model\PrivilegedRoleSettings")) {
+            if (is_a($this->_propDict["settings"], "Microsoft\Graph\Model\PrivilegedRoleSettings")) {
                 return $this->_propDict["settings"];
             } else {
                 $this->_propDict["settings"] = new PrivilegedRoleSettings($this->_propDict["settings"]);
@@ -120,7 +120,7 @@ class PrivilegedRole extends Entity
     public function getSummary()
     {
         if (array_key_exists("summary", $this->_propDict)) {
-            if (is_a($this->_propDict["summary"], "Microsoft\Graph\Beta\Model\PrivilegedRoleSummary")) {
+            if (is_a($this->_propDict["summary"], "Microsoft\Graph\Model\PrivilegedRoleSummary")) {
                 return $this->_propDict["summary"];
             } else {
                 $this->_propDict["summary"] = new PrivilegedRoleSummary($this->_propDict["summary"]);

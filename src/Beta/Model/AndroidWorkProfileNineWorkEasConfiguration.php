@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * AndroidWorkProfileNineWorkEasConfiguration class
@@ -28,6 +28,7 @@ class AndroidWorkProfileNineWorkEasConfiguration extends AndroidWorkProfileEasEm
 {
     /**
     * Gets the syncCalendar
+    * Toggles syncing the calendar. If set to false the calendar is turned off on the device.
     *
     * @return bool The syncCalendar
     */
@@ -42,6 +43,7 @@ class AndroidWorkProfileNineWorkEasConfiguration extends AndroidWorkProfileEasEm
     
     /**
     * Sets the syncCalendar
+    * Toggles syncing the calendar. If set to false the calendar is turned off on the device.
     *
     * @param bool $val The syncCalendar
     *
@@ -55,6 +57,7 @@ class AndroidWorkProfileNineWorkEasConfiguration extends AndroidWorkProfileEasEm
     
     /**
     * Gets the syncContacts
+    * Toggles syncing contacts. If set to false contacts are turned off on the device.
     *
     * @return bool The syncContacts
     */
@@ -69,6 +72,7 @@ class AndroidWorkProfileNineWorkEasConfiguration extends AndroidWorkProfileEasEm
     
     /**
     * Sets the syncContacts
+    * Toggles syncing contacts. If set to false contacts are turned off on the device.
     *
     * @param bool $val The syncContacts
     *
@@ -82,6 +86,7 @@ class AndroidWorkProfileNineWorkEasConfiguration extends AndroidWorkProfileEasEm
     
     /**
     * Gets the syncTasks
+    * Toggles syncing tasks. If set to false tasks are turned off on the device.
     *
     * @return bool The syncTasks
     */
@@ -96,6 +101,7 @@ class AndroidWorkProfileNineWorkEasConfiguration extends AndroidWorkProfileEasEm
     
     /**
     * Sets the syncTasks
+    * Toggles syncing tasks. If set to false tasks are turned off on the device.
     *
     * @param bool $val The syncTasks
     *

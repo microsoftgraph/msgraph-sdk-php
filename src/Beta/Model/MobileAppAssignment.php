@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * MobileAppAssignment class
@@ -28,13 +28,14 @@ class MobileAppAssignment extends Entity
 {
     /**
     * Gets the intent
+    * The install intent defined by the admin. Possible values are: available, required, uninstall, availableWithoutEnrollment.
     *
     * @return InstallIntent The intent
     */
     public function getIntent()
     {
         if (array_key_exists("intent", $this->_propDict)) {
-            if (is_a($this->_propDict["intent"], "Microsoft\Graph\Beta\Model\InstallIntent")) {
+            if (is_a($this->_propDict["intent"], "Microsoft\Graph\Model\InstallIntent")) {
                 return $this->_propDict["intent"];
             } else {
                 $this->_propDict["intent"] = new InstallIntent($this->_propDict["intent"]);
@@ -46,6 +47,7 @@ class MobileAppAssignment extends Entity
     
     /**
     * Sets the intent
+    * The install intent defined by the admin. Possible values are: available, required, uninstall, availableWithoutEnrollment.
     *
     * @param InstallIntent $val The intent
     *
@@ -59,13 +61,14 @@ class MobileAppAssignment extends Entity
     
     /**
     * Gets the target
+    * The target group assignment defined by the admin.
     *
     * @return DeviceAndAppManagementAssignmentTarget The target
     */
     public function getTarget()
     {
         if (array_key_exists("target", $this->_propDict)) {
-            if (is_a($this->_propDict["target"], "Microsoft\Graph\Beta\Model\DeviceAndAppManagementAssignmentTarget")) {
+            if (is_a($this->_propDict["target"], "Microsoft\Graph\Model\DeviceAndAppManagementAssignmentTarget")) {
                 return $this->_propDict["target"];
             } else {
                 $this->_propDict["target"] = new DeviceAndAppManagementAssignmentTarget($this->_propDict["target"]);
@@ -77,6 +80,7 @@ class MobileAppAssignment extends Entity
     
     /**
     * Sets the target
+    * The target group assignment defined by the admin.
     *
     * @param DeviceAndAppManagementAssignmentTarget $val The target
     *
@@ -90,13 +94,14 @@ class MobileAppAssignment extends Entity
     
     /**
     * Gets the settings
+    * The settings for target assignment defined by the admin.
     *
     * @return MobileAppAssignmentSettings The settings
     */
     public function getSettings()
     {
         if (array_key_exists("settings", $this->_propDict)) {
-            if (is_a($this->_propDict["settings"], "Microsoft\Graph\Beta\Model\MobileAppAssignmentSettings")) {
+            if (is_a($this->_propDict["settings"], "Microsoft\Graph\Model\MobileAppAssignmentSettings")) {
                 return $this->_propDict["settings"];
             } else {
                 $this->_propDict["settings"] = new MobileAppAssignmentSettings($this->_propDict["settings"]);
@@ -108,6 +113,7 @@ class MobileAppAssignment extends Entity
     
     /**
     * Sets the settings
+    * The settings for target assignment defined by the admin.
     *
     * @param MobileAppAssignmentSettings $val The settings
     *

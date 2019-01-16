@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * ManagedDeviceMobileAppConfigurationAssignment class
@@ -28,13 +28,14 @@ class ManagedDeviceMobileAppConfigurationAssignment extends Entity
 {
     /**
     * Gets the target
+    * Assignment target that the T&amp;C policy is assigned to.
     *
     * @return DeviceAndAppManagementAssignmentTarget The target
     */
     public function getTarget()
     {
         if (array_key_exists("target", $this->_propDict)) {
-            if (is_a($this->_propDict["target"], "Microsoft\Graph\Beta\Model\DeviceAndAppManagementAssignmentTarget")) {
+            if (is_a($this->_propDict["target"], "Microsoft\Graph\Model\DeviceAndAppManagementAssignmentTarget")) {
                 return $this->_propDict["target"];
             } else {
                 $this->_propDict["target"] = new DeviceAndAppManagementAssignmentTarget($this->_propDict["target"]);
@@ -46,6 +47,7 @@ class ManagedDeviceMobileAppConfigurationAssignment extends Entity
     
     /**
     * Sets the target
+    * Assignment target that the T&amp;C policy is assigned to.
     *
     * @param DeviceAndAppManagementAssignmentTarget $val The target
     *

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * IosHomeScreenApp class
 *
@@ -26,7 +26,17 @@ namespace Microsoft\Graph\Beta\Model;
 class IosHomeScreenApp extends IosHomeScreenItem
 {
     /**
+    * Set the @odata.type since this type is immediately descended from an abstract
+    * type that is referenced as the type in an entity.
+    */
+    public function __construct()
+    {
+        $this->setODataType("#microsoft.graph.iosHomeScreenApp");
+    }
+
+    /**
     * Gets the bundleID
+    * BundleID of app
     *
     * @return string The bundleID
     */
@@ -41,6 +51,7 @@ class IosHomeScreenApp extends IosHomeScreenItem
 
     /**
     * Sets the bundleID
+    * BundleID of app
     *
     * @param string $val The value of the bundleID
     *

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * AndroidForWorkImportedPFXCertificateProfile class
@@ -34,7 +34,7 @@ class AndroidForWorkImportedPFXCertificateProfile extends AndroidCertificateProf
     public function getIntendedPurpose()
     {
         if (array_key_exists("intendedPurpose", $this->_propDict)) {
-            if (is_a($this->_propDict["intendedPurpose"], "Microsoft\Graph\Beta\Model\IntendedPurpose")) {
+            if (is_a($this->_propDict["intendedPurpose"], "Microsoft\Graph\Model\IntendedPurpose")) {
                 return $this->_propDict["intendedPurpose"];
             } else {
                 $this->_propDict["intendedPurpose"] = new IntendedPurpose($this->_propDict["intendedPurpose"]);
@@ -60,6 +60,7 @@ class AndroidForWorkImportedPFXCertificateProfile extends AndroidCertificateProf
 
      /** 
      * Gets the managedDeviceCertificateStates
+    * Certificate state for devices
      *
      * @return array The managedDeviceCertificateStates
      */
@@ -74,6 +75,7 @@ class AndroidForWorkImportedPFXCertificateProfile extends AndroidCertificateProf
     
     /** 
     * Sets the managedDeviceCertificateStates
+    * Certificate state for devices
     *
     * @param ManagedDeviceCertificateState $val The managedDeviceCertificateStates
     *

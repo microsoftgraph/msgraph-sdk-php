@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * ItemReference class
 *
@@ -27,6 +27,7 @@ class ItemReference extends Entity
 {
     /**
     * Gets the driveId
+    * Unique identifier of the drive instance that contains the item. Read-only.
     *
     * @return string The driveId
     */
@@ -41,6 +42,7 @@ class ItemReference extends Entity
 
     /**
     * Sets the driveId
+    * Unique identifier of the drive instance that contains the item. Read-only.
     *
     * @param string $val The value of the driveId
     *
@@ -53,6 +55,7 @@ class ItemReference extends Entity
     }
     /**
     * Gets the driveType
+    * Identifies the type of drive. See [drive][] resource for values.
     *
     * @return string The driveType
     */
@@ -67,6 +70,7 @@ class ItemReference extends Entity
 
     /**
     * Sets the driveType
+    * Identifies the type of drive. See [drive][] resource for values.
     *
     * @param string $val The value of the driveType
     *
@@ -79,6 +83,7 @@ class ItemReference extends Entity
     }
     /**
     * Gets the id
+    * Unique identifier of the item in the drive. Read-only.
     *
     * @return string The id
     */
@@ -93,6 +98,7 @@ class ItemReference extends Entity
 
     /**
     * Sets the id
+    * Unique identifier of the item in the drive. Read-only.
     *
     * @param string $val The value of the id
     *
@@ -105,6 +111,7 @@ class ItemReference extends Entity
     }
     /**
     * Gets the name
+    * The name of the item being referenced. Read-only.
     *
     * @return string The name
     */
@@ -119,6 +126,7 @@ class ItemReference extends Entity
 
     /**
     * Sets the name
+    * The name of the item being referenced. Read-only.
     *
     * @param string $val The value of the name
     *
@@ -129,39 +137,9 @@ class ItemReference extends Entity
         $this->_propDict["name"] = $val;
         return $this;
     }
-
-    /**
-    * Gets the parent
-    *
-    * @return ItemReference The parent
-    */
-    public function getParent()
-    {
-        if (array_key_exists("parent", $this->_propDict)) {
-            if (is_a($this->_propDict["parent"], "Microsoft\Graph\Beta\Model\ItemReference")) {
-                return $this->_propDict["parent"];
-            } else {
-                $this->_propDict["parent"] = new ItemReference($this->_propDict["parent"]);
-                return $this->_propDict["parent"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the parent
-    *
-    * @param ItemReference $val The value to assign to the parent
-    *
-    * @return ItemReference The ItemReference
-    */
-    public function setParent($val)
-    {
-        $this->_propDict["parent"] = $val;
-         return $this;
-    }
     /**
     * Gets the path
+    * Path that can be used to navigate to the item. Read-only.
     *
     * @return string The path
     */
@@ -176,6 +154,7 @@ class ItemReference extends Entity
 
     /**
     * Sets the path
+    * Path that can be used to navigate to the item. Read-only.
     *
     * @param string $val The value of the path
     *
@@ -188,6 +167,7 @@ class ItemReference extends Entity
     }
     /**
     * Gets the shareId
+    * A unique identifier for a shared resource that can be accessed via the [Shares][] API.
     *
     * @return string The shareId
     */
@@ -202,6 +182,7 @@ class ItemReference extends Entity
 
     /**
     * Sets the shareId
+    * A unique identifier for a shared resource that can be accessed via the [Shares][] API.
     *
     * @param string $val The value of the shareId
     *
@@ -215,13 +196,14 @@ class ItemReference extends Entity
 
     /**
     * Gets the sharepointIds
+    * Returns identifiers useful for SharePoint REST compatibility. Read-only.
     *
     * @return SharepointIds The sharepointIds
     */
     public function getSharepointIds()
     {
         if (array_key_exists("sharepointIds", $this->_propDict)) {
-            if (is_a($this->_propDict["sharepointIds"], "Microsoft\Graph\Beta\Model\SharepointIds")) {
+            if (is_a($this->_propDict["sharepointIds"], "Microsoft\Graph\Model\SharepointIds")) {
                 return $this->_propDict["sharepointIds"];
             } else {
                 $this->_propDict["sharepointIds"] = new SharepointIds($this->_propDict["sharepointIds"]);
@@ -233,6 +215,7 @@ class ItemReference extends Entity
 
     /**
     * Sets the sharepointIds
+    * Returns identifiers useful for SharePoint REST compatibility. Read-only.
     *
     * @param SharepointIds $val The value to assign to the sharepointIds
     *
@@ -242,5 +225,31 @@ class ItemReference extends Entity
     {
         $this->_propDict["sharepointIds"] = $val;
          return $this;
+    }
+    /**
+    * Gets the siteId
+    *
+    * @return string The siteId
+    */
+    public function getSiteId()
+    {
+        if (array_key_exists("siteId", $this->_propDict)) {
+            return $this->_propDict["siteId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the siteId
+    *
+    * @param string $val The value of the siteId
+    *
+    * @return ItemReference
+    */
+    public function setSiteId($val)
+    {
+        $this->_propDict["siteId"] = $val;
+        return $this;
     }
 }

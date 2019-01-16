@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * DeviceManagementExchangeConnector class
@@ -28,6 +28,7 @@ class DeviceManagementExchangeConnector extends Entity
 {
     /**
     * Gets the lastSyncDateTime
+    * Last sync time for the Exchange Connector
     *
     * @return \DateTime The lastSyncDateTime
     */
@@ -46,6 +47,7 @@ class DeviceManagementExchangeConnector extends Entity
     
     /**
     * Sets the lastSyncDateTime
+    * Last sync time for the Exchange Connector
     *
     * @param \DateTime $val The lastSyncDateTime
     *
@@ -59,13 +61,14 @@ class DeviceManagementExchangeConnector extends Entity
     
     /**
     * Gets the status
+    * Exchange Connector Status. Possible values are: none, connectionPending, connected, disconnected.
     *
     * @return DeviceManagementExchangeConnectorStatus The status
     */
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Microsoft\Graph\Beta\Model\DeviceManagementExchangeConnectorStatus")) {
+            if (is_a($this->_propDict["status"], "Microsoft\Graph\Model\DeviceManagementExchangeConnectorStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new DeviceManagementExchangeConnectorStatus($this->_propDict["status"]);
@@ -77,6 +80,7 @@ class DeviceManagementExchangeConnector extends Entity
     
     /**
     * Sets the status
+    * Exchange Connector Status. Possible values are: none, connectionPending, connected, disconnected.
     *
     * @param DeviceManagementExchangeConnectorStatus $val The status
     *
@@ -90,6 +94,7 @@ class DeviceManagementExchangeConnector extends Entity
     
     /**
     * Gets the primarySmtpAddress
+    * Email address used to configure the Service To Service Exchange Connector.
     *
     * @return string The primarySmtpAddress
     */
@@ -104,6 +109,7 @@ class DeviceManagementExchangeConnector extends Entity
     
     /**
     * Sets the primarySmtpAddress
+    * Email address used to configure the Service To Service Exchange Connector.
     *
     * @param string $val The primarySmtpAddress
     *
@@ -117,6 +123,7 @@ class DeviceManagementExchangeConnector extends Entity
     
     /**
     * Gets the serverName
+    * The name of the Exchange server.
     *
     * @return string The serverName
     */
@@ -131,6 +138,7 @@ class DeviceManagementExchangeConnector extends Entity
     
     /**
     * Sets the serverName
+    * The name of the Exchange server.
     *
     * @param string $val The serverName
     *
@@ -144,6 +152,7 @@ class DeviceManagementExchangeConnector extends Entity
     
     /**
     * Gets the connectorServerName
+    * The name of the server hosting the Exchange Connector.
     *
     * @return string The connectorServerName
     */
@@ -158,6 +167,7 @@ class DeviceManagementExchangeConnector extends Entity
     
     /**
     * Sets the connectorServerName
+    * The name of the server hosting the Exchange Connector.
     *
     * @param string $val The connectorServerName
     *
@@ -171,13 +181,14 @@ class DeviceManagementExchangeConnector extends Entity
     
     /**
     * Gets the exchangeConnectorType
+    * The type of Exchange Connector Configured. Possible values are: onPremises, hosted, serviceToService, dedicated.
     *
     * @return DeviceManagementExchangeConnectorType The exchangeConnectorType
     */
     public function getExchangeConnectorType()
     {
         if (array_key_exists("exchangeConnectorType", $this->_propDict)) {
-            if (is_a($this->_propDict["exchangeConnectorType"], "Microsoft\Graph\Beta\Model\DeviceManagementExchangeConnectorType")) {
+            if (is_a($this->_propDict["exchangeConnectorType"], "Microsoft\Graph\Model\DeviceManagementExchangeConnectorType")) {
                 return $this->_propDict["exchangeConnectorType"];
             } else {
                 $this->_propDict["exchangeConnectorType"] = new DeviceManagementExchangeConnectorType($this->_propDict["exchangeConnectorType"]);
@@ -189,6 +200,7 @@ class DeviceManagementExchangeConnector extends Entity
     
     /**
     * Sets the exchangeConnectorType
+    * The type of Exchange Connector Configured. Possible values are: onPremises, hosted, serviceToService, dedicated.
     *
     * @param DeviceManagementExchangeConnectorType $val The exchangeConnectorType
     *
@@ -202,6 +214,7 @@ class DeviceManagementExchangeConnector extends Entity
     
     /**
     * Gets the version
+    * The version of the ExchangeConnectorAgent
     *
     * @return string The version
     */
@@ -216,6 +229,7 @@ class DeviceManagementExchangeConnector extends Entity
     
     /**
     * Sets the version
+    * The version of the ExchangeConnectorAgent
     *
     * @param string $val The version
     *
@@ -229,6 +243,7 @@ class DeviceManagementExchangeConnector extends Entity
     
     /**
     * Gets the exchangeAlias
+    * An alias assigned to the Exchange server
     *
     * @return string The exchangeAlias
     */
@@ -243,6 +258,7 @@ class DeviceManagementExchangeConnector extends Entity
     
     /**
     * Sets the exchangeAlias
+    * An alias assigned to the Exchange server
     *
     * @param string $val The exchangeAlias
     *
@@ -256,6 +272,7 @@ class DeviceManagementExchangeConnector extends Entity
     
     /**
     * Gets the exchangeOrganization
+    * Exchange Organization to the Exchange server
     *
     * @return string The exchangeOrganization
     */
@@ -270,6 +287,7 @@ class DeviceManagementExchangeConnector extends Entity
     
     /**
     * Sets the exchangeOrganization
+    * Exchange Organization to the Exchange server
     *
     * @param string $val The exchangeOrganization
     *

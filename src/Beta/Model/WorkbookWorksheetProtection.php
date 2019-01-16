@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * WorkbookWorksheetProtection class
@@ -28,13 +28,14 @@ class WorkbookWorksheetProtection extends Entity
 {
     /**
     * Gets the options
+    * Sheet protection options. Read-only.
     *
     * @return WorkbookWorksheetProtectionOptions The options
     */
     public function getOptions()
     {
         if (array_key_exists("options", $this->_propDict)) {
-            if (is_a($this->_propDict["options"], "Microsoft\Graph\Beta\Model\WorkbookWorksheetProtectionOptions")) {
+            if (is_a($this->_propDict["options"], "Microsoft\Graph\Model\WorkbookWorksheetProtectionOptions")) {
                 return $this->_propDict["options"];
             } else {
                 $this->_propDict["options"] = new WorkbookWorksheetProtectionOptions($this->_propDict["options"]);
@@ -46,6 +47,7 @@ class WorkbookWorksheetProtection extends Entity
     
     /**
     * Sets the options
+    * Sheet protection options. Read-only.
     *
     * @param WorkbookWorksheetProtectionOptions $val The options
     *
@@ -59,6 +61,7 @@ class WorkbookWorksheetProtection extends Entity
     
     /**
     * Gets the protected
+    * Indicates if the worksheet is protected.  Read-only.
     *
     * @return bool The protected
     */
@@ -73,6 +76,7 @@ class WorkbookWorksheetProtection extends Entity
     
     /**
     * Sets the protected
+    * Indicates if the worksheet is protected.  Read-only.
     *
     * @param bool $val The protected
     *

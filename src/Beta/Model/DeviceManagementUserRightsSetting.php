@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * DeviceManagementUserRightsSetting class
 *
@@ -28,13 +28,14 @@ class DeviceManagementUserRightsSetting extends Entity
 
     /**
     * Gets the state
+    * Representing the current state of this user rights setting
     *
     * @return StateManagementSetting The state
     */
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "Microsoft\Graph\Beta\Model\StateManagementSetting")) {
+            if (is_a($this->_propDict["state"], "Microsoft\Graph\Model\StateManagementSetting")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new StateManagementSetting($this->_propDict["state"]);
@@ -46,6 +47,7 @@ class DeviceManagementUserRightsSetting extends Entity
 
     /**
     * Sets the state
+    * Representing the current state of this user rights setting
     *
     * @param StateManagementSetting $val The value to assign to the state
     *
@@ -59,13 +61,14 @@ class DeviceManagementUserRightsSetting extends Entity
 
     /**
     * Gets the localUsersOrGroups
+    * Representing a collection of local users or groups which will be set on device if the state of this setting is Allowed. This collection can contain a maximum of 500 elements.
     *
     * @return DeviceManagementUserRightsLocalUserOrGroup The localUsersOrGroups
     */
     public function getLocalUsersOrGroups()
     {
         if (array_key_exists("localUsersOrGroups", $this->_propDict)) {
-            if (is_a($this->_propDict["localUsersOrGroups"], "Microsoft\Graph\Beta\Model\DeviceManagementUserRightsLocalUserOrGroup")) {
+            if (is_a($this->_propDict["localUsersOrGroups"], "Microsoft\Graph\Model\DeviceManagementUserRightsLocalUserOrGroup")) {
                 return $this->_propDict["localUsersOrGroups"];
             } else {
                 $this->_propDict["localUsersOrGroups"] = new DeviceManagementUserRightsLocalUserOrGroup($this->_propDict["localUsersOrGroups"]);
@@ -77,6 +80,7 @@ class DeviceManagementUserRightsSetting extends Entity
 
     /**
     * Sets the localUsersOrGroups
+    * Representing a collection of local users or groups which will be set on device if the state of this setting is Allowed. This collection can contain a maximum of 500 elements.
     *
     * @param DeviceManagementUserRightsLocalUserOrGroup $val The value to assign to the localUsersOrGroups
     *

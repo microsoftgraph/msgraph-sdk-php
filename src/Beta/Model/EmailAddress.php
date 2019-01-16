@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * EmailAddress class
 *
@@ -27,6 +27,7 @@ class EmailAddress extends Entity
 {
     /**
     * Gets the name
+    * The display name of the person or entity.
     *
     * @return string The name
     */
@@ -41,6 +42,7 @@ class EmailAddress extends Entity
 
     /**
     * Sets the name
+    * The display name of the person or entity.
     *
     * @param string $val The value of the name
     *
@@ -53,6 +55,7 @@ class EmailAddress extends Entity
     }
     /**
     * Gets the address
+    * The email address of the person or entity.
     *
     * @return string The address
     */
@@ -67,6 +70,7 @@ class EmailAddress extends Entity
 
     /**
     * Sets the address
+    * The email address of the person or entity.
     *
     * @param string $val The value of the address
     *

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * WindowsInformationProtectionDesktopApp class
 *
@@ -26,7 +26,17 @@ namespace Microsoft\Graph\Beta\Model;
 class WindowsInformationProtectionDesktopApp extends WindowsInformationProtectionApp
 {
     /**
+    * Set the @odata.type since this type is immediately descended from an abstract
+    * type that is referenced as the type in an entity.
+    */
+    public function __construct()
+    {
+        $this->setODataType("#microsoft.graph.windowsInformationProtectionDesktopApp");
+    }
+
+    /**
     * Gets the binaryName
+    * The binary name.
     *
     * @return string The binaryName
     */
@@ -41,6 +51,7 @@ class WindowsInformationProtectionDesktopApp extends WindowsInformationProtectio
 
     /**
     * Sets the binaryName
+    * The binary name.
     *
     * @param string $val The value of the binaryName
     *
@@ -53,6 +64,7 @@ class WindowsInformationProtectionDesktopApp extends WindowsInformationProtectio
     }
     /**
     * Gets the binaryVersionLow
+    * The lower binary version.
     *
     * @return string The binaryVersionLow
     */
@@ -67,6 +79,7 @@ class WindowsInformationProtectionDesktopApp extends WindowsInformationProtectio
 
     /**
     * Sets the binaryVersionLow
+    * The lower binary version.
     *
     * @param string $val The value of the binaryVersionLow
     *
@@ -79,6 +92,7 @@ class WindowsInformationProtectionDesktopApp extends WindowsInformationProtectio
     }
     /**
     * Gets the binaryVersionHigh
+    * The high binary version.
     *
     * @return string The binaryVersionHigh
     */
@@ -93,6 +107,7 @@ class WindowsInformationProtectionDesktopApp extends WindowsInformationProtectio
 
     /**
     * Sets the binaryVersionHigh
+    * The high binary version.
     *
     * @param string $val The value of the binaryVersionHigh
     *

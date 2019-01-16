@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * ManagedEBook class
@@ -28,6 +28,7 @@ class ManagedEBook extends Entity
 {
     /**
     * Gets the displayName
+    * Name of the eBook.
     *
     * @return string The displayName
     */
@@ -42,6 +43,7 @@ class ManagedEBook extends Entity
     
     /**
     * Sets the displayName
+    * Name of the eBook.
     *
     * @param string $val The displayName
     *
@@ -55,6 +57,7 @@ class ManagedEBook extends Entity
     
     /**
     * Gets the description
+    * Description.
     *
     * @return string The description
     */
@@ -69,6 +72,7 @@ class ManagedEBook extends Entity
     
     /**
     * Sets the description
+    * Description.
     *
     * @param string $val The description
     *
@@ -82,6 +86,7 @@ class ManagedEBook extends Entity
     
     /**
     * Gets the publisher
+    * Publisher.
     *
     * @return string The publisher
     */
@@ -96,6 +101,7 @@ class ManagedEBook extends Entity
     
     /**
     * Sets the publisher
+    * Publisher.
     *
     * @param string $val The publisher
     *
@@ -109,6 +115,7 @@ class ManagedEBook extends Entity
     
     /**
     * Gets the publishedDateTime
+    * The date and time when the eBook was published.
     *
     * @return \DateTime The publishedDateTime
     */
@@ -127,6 +134,7 @@ class ManagedEBook extends Entity
     
     /**
     * Sets the publishedDateTime
+    * The date and time when the eBook was published.
     *
     * @param \DateTime $val The publishedDateTime
     *
@@ -140,13 +148,14 @@ class ManagedEBook extends Entity
     
     /**
     * Gets the largeCover
+    * Book cover.
     *
     * @return MimeContent The largeCover
     */
     public function getLargeCover()
     {
         if (array_key_exists("largeCover", $this->_propDict)) {
-            if (is_a($this->_propDict["largeCover"], "Microsoft\Graph\Beta\Model\MimeContent")) {
+            if (is_a($this->_propDict["largeCover"], "Microsoft\Graph\Model\MimeContent")) {
                 return $this->_propDict["largeCover"];
             } else {
                 $this->_propDict["largeCover"] = new MimeContent($this->_propDict["largeCover"]);
@@ -158,6 +167,7 @@ class ManagedEBook extends Entity
     
     /**
     * Sets the largeCover
+    * Book cover.
     *
     * @param MimeContent $val The largeCover
     *
@@ -171,6 +181,7 @@ class ManagedEBook extends Entity
     
     /**
     * Gets the createdDateTime
+    * The date and time when the eBook file was created.
     *
     * @return \DateTime The createdDateTime
     */
@@ -189,6 +200,7 @@ class ManagedEBook extends Entity
     
     /**
     * Sets the createdDateTime
+    * The date and time when the eBook file was created.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -202,6 +214,7 @@ class ManagedEBook extends Entity
     
     /**
     * Gets the lastModifiedDateTime
+    * The date and time when the eBook was last modified.
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -220,6 +233,7 @@ class ManagedEBook extends Entity
     
     /**
     * Sets the lastModifiedDateTime
+    * The date and time when the eBook was last modified.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -233,6 +247,7 @@ class ManagedEBook extends Entity
     
     /**
     * Gets the informationUrl
+    * The more information Url.
     *
     * @return string The informationUrl
     */
@@ -247,6 +262,7 @@ class ManagedEBook extends Entity
     
     /**
     * Sets the informationUrl
+    * The more information Url.
     *
     * @param string $val The informationUrl
     *
@@ -260,6 +276,7 @@ class ManagedEBook extends Entity
     
     /**
     * Gets the privacyInformationUrl
+    * The privacy statement Url.
     *
     * @return string The privacyInformationUrl
     */
@@ -274,6 +291,7 @@ class ManagedEBook extends Entity
     
     /**
     * Sets the privacyInformationUrl
+    * The privacy statement Url.
     *
     * @param string $val The privacyInformationUrl
     *
@@ -288,6 +306,7 @@ class ManagedEBook extends Entity
 
      /** 
      * Gets the categories
+    * The list of categories for this eBook.
      *
      * @return array The categories
      */
@@ -302,6 +321,7 @@ class ManagedEBook extends Entity
     
     /** 
     * Sets the categories
+    * The list of categories for this eBook.
     *
     * @param ManagedEBookCategory $val The categories
     *
@@ -316,6 +336,7 @@ class ManagedEBook extends Entity
 
      /** 
      * Gets the assignments
+    * The list of assignments for this eBook.
      *
      * @return array The assignments
      */
@@ -330,6 +351,7 @@ class ManagedEBook extends Entity
     
     /** 
     * Sets the assignments
+    * The list of assignments for this eBook.
     *
     * @param ManagedEBookAssignment $val The assignments
     *
@@ -343,13 +365,14 @@ class ManagedEBook extends Entity
     
     /**
     * Gets the installSummary
+    * Mobile App Install Summary.
     *
     * @return EBookInstallSummary The installSummary
     */
     public function getInstallSummary()
     {
         if (array_key_exists("installSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["installSummary"], "Microsoft\Graph\Beta\Model\EBookInstallSummary")) {
+            if (is_a($this->_propDict["installSummary"], "Microsoft\Graph\Model\EBookInstallSummary")) {
                 return $this->_propDict["installSummary"];
             } else {
                 $this->_propDict["installSummary"] = new EBookInstallSummary($this->_propDict["installSummary"]);
@@ -361,6 +384,7 @@ class ManagedEBook extends Entity
     
     /**
     * Sets the installSummary
+    * Mobile App Install Summary.
     *
     * @param EBookInstallSummary $val The installSummary
     *
@@ -375,6 +399,7 @@ class ManagedEBook extends Entity
 
      /** 
      * Gets the deviceStates
+    * The list of installation states for this eBook.
      *
      * @return array The deviceStates
      */
@@ -389,6 +414,7 @@ class ManagedEBook extends Entity
     
     /** 
     * Sets the deviceStates
+    * The list of installation states for this eBook.
     *
     * @param DeviceInstallState $val The deviceStates
     *
@@ -403,6 +429,7 @@ class ManagedEBook extends Entity
 
      /** 
      * Gets the userStateSummary
+    * The list of installation states for this eBook.
      *
      * @return array The userStateSummary
      */
@@ -417,6 +444,7 @@ class ManagedEBook extends Entity
     
     /** 
     * Sets the userStateSummary
+    * The list of installation states for this eBook.
     *
     * @param UserInstallStateSummary $val The userStateSummary
     *

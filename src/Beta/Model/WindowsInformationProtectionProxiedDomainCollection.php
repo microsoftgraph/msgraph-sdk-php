@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * WindowsInformationProtectionProxiedDomainCollection class
 *
@@ -27,6 +27,7 @@ class WindowsInformationProtectionProxiedDomainCollection extends Entity
 {
     /**
     * Gets the displayName
+    * Display name
     *
     * @return string The displayName
     */
@@ -41,6 +42,7 @@ class WindowsInformationProtectionProxiedDomainCollection extends Entity
 
     /**
     * Sets the displayName
+    * Display name
     *
     * @param string $val The value of the displayName
     *
@@ -54,13 +56,14 @@ class WindowsInformationProtectionProxiedDomainCollection extends Entity
 
     /**
     * Gets the proxiedDomains
+    * Collection of proxied domains
     *
     * @return ProxiedDomain The proxiedDomains
     */
     public function getProxiedDomains()
     {
         if (array_key_exists("proxiedDomains", $this->_propDict)) {
-            if (is_a($this->_propDict["proxiedDomains"], "Microsoft\Graph\Beta\Model\ProxiedDomain")) {
+            if (is_a($this->_propDict["proxiedDomains"], "Microsoft\Graph\Model\ProxiedDomain")) {
                 return $this->_propDict["proxiedDomains"];
             } else {
                 $this->_propDict["proxiedDomains"] = new ProxiedDomain($this->_propDict["proxiedDomains"]);
@@ -72,6 +75,7 @@ class WindowsInformationProtectionProxiedDomainCollection extends Entity
 
     /**
     * Sets the proxiedDomains
+    * Collection of proxied domains
     *
     * @param ProxiedDomain $val The value to assign to the proxiedDomains
     *

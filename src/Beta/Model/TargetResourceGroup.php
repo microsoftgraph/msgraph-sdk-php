@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * TargetResourceGroup class
 *
@@ -25,6 +25,15 @@ namespace Microsoft\Graph\Beta\Model;
 */
 class TargetResourceGroup extends TargetResource
 {
+    /**
+    * Set the @odata.type since this type is immediately descended from an abstract
+    * type that is referenced as the type in an entity.
+    */
+    public function __construct()
+    {
+        $this->setODataType("#microsoft.graph.targetResourceGroup");
+    }
+
 
     /**
     * Gets the groupType
@@ -34,7 +43,7 @@ class TargetResourceGroup extends TargetResource
     public function getGroupType()
     {
         if (array_key_exists("groupType", $this->_propDict)) {
-            if (is_a($this->_propDict["groupType"], "Microsoft\Graph\Beta\Model\GroupType")) {
+            if (is_a($this->_propDict["groupType"], "Microsoft\Graph\Model\GroupType")) {
                 return $this->_propDict["groupType"];
             } else {
                 $this->_propDict["groupType"] = new GroupType($this->_propDict["groupType"]);

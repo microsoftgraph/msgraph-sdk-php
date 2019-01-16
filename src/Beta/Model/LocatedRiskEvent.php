@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * LocatedRiskEvent class
@@ -34,7 +34,7 @@ class LocatedRiskEvent extends IdentityRiskEvent
     public function getLocation()
     {
         if (array_key_exists("location", $this->_propDict)) {
-            if (is_a($this->_propDict["location"], "Microsoft\Graph\Beta\Model\SignInLocation")) {
+            if (is_a($this->_propDict["location"], "Microsoft\Graph\Model\SignInLocation")) {
                 return $this->_propDict["location"];
             } else {
                 $this->_propDict["location"] = new SignInLocation($this->_propDict["location"]);

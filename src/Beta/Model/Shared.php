@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * Shared class
 *
@@ -28,13 +28,14 @@ class Shared extends Entity
 
     /**
     * Gets the owner
+    * The identity of the owner of the shared item. Read-only.
     *
     * @return IdentitySet The owner
     */
     public function getOwner()
     {
         if (array_key_exists("owner", $this->_propDict)) {
-            if (is_a($this->_propDict["owner"], "Microsoft\Graph\Beta\Model\IdentitySet")) {
+            if (is_a($this->_propDict["owner"], "Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["owner"];
             } else {
                 $this->_propDict["owner"] = new IdentitySet($this->_propDict["owner"]);
@@ -46,6 +47,7 @@ class Shared extends Entity
 
     /**
     * Sets the owner
+    * The identity of the owner of the shared item. Read-only.
     *
     * @param IdentitySet $val The value to assign to the owner
     *
@@ -58,6 +60,7 @@ class Shared extends Entity
     }
     /**
     * Gets the scope
+    * Indicates the scope of how the item is shared: anonymous, organization, or users. Read-only.
     *
     * @return string The scope
     */
@@ -72,6 +75,7 @@ class Shared extends Entity
 
     /**
     * Sets the scope
+    * Indicates the scope of how the item is shared: anonymous, organization, or users. Read-only.
     *
     * @param string $val The value of the scope
     *
@@ -85,13 +89,14 @@ class Shared extends Entity
 
     /**
     * Gets the sharedBy
+    * The identity of the user who shared the item. Read-only.
     *
     * @return IdentitySet The sharedBy
     */
     public function getSharedBy()
     {
         if (array_key_exists("sharedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["sharedBy"], "Microsoft\Graph\Beta\Model\IdentitySet")) {
+            if (is_a($this->_propDict["sharedBy"], "Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["sharedBy"];
             } else {
                 $this->_propDict["sharedBy"] = new IdentitySet($this->_propDict["sharedBy"]);
@@ -103,6 +108,7 @@ class Shared extends Entity
 
     /**
     * Sets the sharedBy
+    * The identity of the user who shared the item. Read-only.
     *
     * @param IdentitySet $val The value to assign to the sharedBy
     *
@@ -116,13 +122,14 @@ class Shared extends Entity
 
     /**
     * Gets the sharedDateTime
+    * The UTC date and time when the item was shared. Read-only.
     *
     * @return \DateTime The sharedDateTime
     */
     public function getSharedDateTime()
     {
         if (array_key_exists("sharedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["sharedDateTime"], "Microsoft\Graph\Beta\Model\\DateTime")) {
+            if (is_a($this->_propDict["sharedDateTime"], "Microsoft\Graph\Model\\DateTime")) {
                 return $this->_propDict["sharedDateTime"];
             } else {
                 $this->_propDict["sharedDateTime"] = new \DateTime($this->_propDict["sharedDateTime"]);
@@ -134,6 +141,7 @@ class Shared extends Entity
 
     /**
     * Sets the sharedDateTime
+    * The UTC date and time when the item was shared. Read-only.
     *
     * @param \DateTime $val The value to assign to the sharedDateTime
     *

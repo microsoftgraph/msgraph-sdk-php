@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * WebApplication class
 *
@@ -25,6 +25,32 @@ namespace Microsoft\Graph\Beta\Model;
 */
 class WebApplication extends Entity
 {
+    /**
+    * Gets the homePageUrl
+    *
+    * @return string The homePageUrl
+    */
+    public function getHomePageUrl()
+    {
+        if (array_key_exists("homePageUrl", $this->_propDict)) {
+            return $this->_propDict["homePageUrl"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the homePageUrl
+    *
+    * @param string $val The value of the homePageUrl
+    *
+    * @return WebApplication
+    */
+    public function setHomePageUrl($val)
+    {
+        $this->_propDict["homePageUrl"] = $val;
+        return $this;
+    }
     /**
     * Gets the redirectUris
     *
@@ -112,7 +138,7 @@ class WebApplication extends Entity
     public function getImplicitGrantSettings()
     {
         if (array_key_exists("implicitGrantSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["implicitGrantSettings"], "Microsoft\Graph\Beta\Model\ImplicitGrantSettings")) {
+            if (is_a($this->_propDict["implicitGrantSettings"], "Microsoft\Graph\Model\ImplicitGrantSettings")) {
                 return $this->_propDict["implicitGrantSettings"];
             } else {
                 $this->_propDict["implicitGrantSettings"] = new ImplicitGrantSettings($this->_propDict["implicitGrantSettings"]);

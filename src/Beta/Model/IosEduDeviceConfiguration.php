@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * IosEduDeviceConfiguration class
@@ -28,13 +28,14 @@ class IosEduDeviceConfiguration extends DeviceConfiguration
 {
     /**
     * Gets the teacherCertificateSettings
+    * The Trusted Root and PFX certificates for Teacher
     *
     * @return IosEduCertificateSettings The teacherCertificateSettings
     */
     public function getTeacherCertificateSettings()
     {
         if (array_key_exists("teacherCertificateSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["teacherCertificateSettings"], "Microsoft\Graph\Beta\Model\IosEduCertificateSettings")) {
+            if (is_a($this->_propDict["teacherCertificateSettings"], "Microsoft\Graph\Model\IosEduCertificateSettings")) {
                 return $this->_propDict["teacherCertificateSettings"];
             } else {
                 $this->_propDict["teacherCertificateSettings"] = new IosEduCertificateSettings($this->_propDict["teacherCertificateSettings"]);
@@ -46,6 +47,7 @@ class IosEduDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the teacherCertificateSettings
+    * The Trusted Root and PFX certificates for Teacher
     *
     * @param IosEduCertificateSettings $val The teacherCertificateSettings
     *
@@ -59,13 +61,14 @@ class IosEduDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the studentCertificateSettings
+    * The Trusted Root and PFX certificates for Student
     *
     * @return IosEduCertificateSettings The studentCertificateSettings
     */
     public function getStudentCertificateSettings()
     {
         if (array_key_exists("studentCertificateSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["studentCertificateSettings"], "Microsoft\Graph\Beta\Model\IosEduCertificateSettings")) {
+            if (is_a($this->_propDict["studentCertificateSettings"], "Microsoft\Graph\Model\IosEduCertificateSettings")) {
                 return $this->_propDict["studentCertificateSettings"];
             } else {
                 $this->_propDict["studentCertificateSettings"] = new IosEduCertificateSettings($this->_propDict["studentCertificateSettings"]);
@@ -77,6 +80,7 @@ class IosEduDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the studentCertificateSettings
+    * The Trusted Root and PFX certificates for Student
     *
     * @param IosEduCertificateSettings $val The studentCertificateSettings
     *
@@ -90,13 +94,14 @@ class IosEduDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the deviceCertificateSettings
+    * The Trusted Root and PFX certificates for Device
     *
     * @return IosEduCertificateSettings The deviceCertificateSettings
     */
     public function getDeviceCertificateSettings()
     {
         if (array_key_exists("deviceCertificateSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceCertificateSettings"], "Microsoft\Graph\Beta\Model\IosEduCertificateSettings")) {
+            if (is_a($this->_propDict["deviceCertificateSettings"], "Microsoft\Graph\Model\IosEduCertificateSettings")) {
                 return $this->_propDict["deviceCertificateSettings"];
             } else {
                 $this->_propDict["deviceCertificateSettings"] = new IosEduCertificateSettings($this->_propDict["deviceCertificateSettings"]);
@@ -108,6 +113,7 @@ class IosEduDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the deviceCertificateSettings
+    * The Trusted Root and PFX certificates for Device
     *
     * @param IosEduCertificateSettings $val The deviceCertificateSettings
     *

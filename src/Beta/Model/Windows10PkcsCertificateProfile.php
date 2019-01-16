@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * Windows10PkcsCertificateProfile class
@@ -28,6 +28,7 @@ class Windows10PkcsCertificateProfile extends Windows10CertificateProfileBase
 {
     /**
     * Gets the certificationAuthority
+    * PKCS Certification Authority
     *
     * @return string The certificationAuthority
     */
@@ -42,6 +43,7 @@ class Windows10PkcsCertificateProfile extends Windows10CertificateProfileBase
     
     /**
     * Sets the certificationAuthority
+    * PKCS Certification Authority
     *
     * @param string $val The certificationAuthority
     *
@@ -55,6 +57,7 @@ class Windows10PkcsCertificateProfile extends Windows10CertificateProfileBase
     
     /**
     * Gets the certificationAuthorityName
+    * PKCS Certification Authority Name
     *
     * @return string The certificationAuthorityName
     */
@@ -69,6 +72,7 @@ class Windows10PkcsCertificateProfile extends Windows10CertificateProfileBase
     
     /**
     * Sets the certificationAuthorityName
+    * PKCS Certification Authority Name
     *
     * @param string $val The certificationAuthorityName
     *
@@ -82,6 +86,7 @@ class Windows10PkcsCertificateProfile extends Windows10CertificateProfileBase
     
     /**
     * Gets the certificateTemplateName
+    * PKCS Certificate Template Name
     *
     * @return string The certificateTemplateName
     */
@@ -96,6 +101,7 @@ class Windows10PkcsCertificateProfile extends Windows10CertificateProfileBase
     
     /**
     * Sets the certificateTemplateName
+    * PKCS Certificate Template Name
     *
     * @param string $val The certificateTemplateName
     *
@@ -109,6 +115,7 @@ class Windows10PkcsCertificateProfile extends Windows10CertificateProfileBase
     
     /**
     * Gets the subjectAlternativeNameFormatString
+    * Custom String that defines the AAD Attribute.
     *
     * @return string The subjectAlternativeNameFormatString
     */
@@ -123,6 +130,7 @@ class Windows10PkcsCertificateProfile extends Windows10CertificateProfileBase
     
     /**
     * Sets the subjectAlternativeNameFormatString
+    * Custom String that defines the AAD Attribute.
     *
     * @param string $val The subjectAlternativeNameFormatString
     *
@@ -137,6 +145,7 @@ class Windows10PkcsCertificateProfile extends Windows10CertificateProfileBase
 
      /** 
      * Gets the extendedKeyUsages
+    * Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.
      *
      * @return array The extendedKeyUsages
      */
@@ -151,6 +160,7 @@ class Windows10PkcsCertificateProfile extends Windows10CertificateProfileBase
     
     /** 
     * Sets the extendedKeyUsages
+    * Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.
     *
     * @param ExtendedKeyUsage $val The extendedKeyUsages
     *
@@ -165,6 +175,7 @@ class Windows10PkcsCertificateProfile extends Windows10CertificateProfileBase
 
      /** 
      * Gets the managedDeviceCertificateStates
+    * Certificate state for devices
      *
      * @return array The managedDeviceCertificateStates
      */
@@ -179,6 +190,7 @@ class Windows10PkcsCertificateProfile extends Windows10CertificateProfileBase
     
     /** 
     * Sets the managedDeviceCertificateStates
+    * Certificate state for devices
     *
     * @param ManagedDeviceCertificateState $val The managedDeviceCertificateStates
     *

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * ImportedDeviceIdentityResult class
@@ -28,6 +28,7 @@ class ImportedDeviceIdentityResult extends ImportedDeviceIdentity
 {
     /**
     * Gets the status
+    * Status of imported device identity
     *
     * @return bool The status
     */
@@ -42,6 +43,7 @@ class ImportedDeviceIdentityResult extends ImportedDeviceIdentity
     
     /**
     * Sets the status
+    * Status of imported device identity
     *
     * @param bool $val The status
     *

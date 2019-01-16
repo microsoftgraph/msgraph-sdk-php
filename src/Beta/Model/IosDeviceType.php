@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * IosDeviceType class
 *
@@ -27,6 +27,7 @@ class IosDeviceType extends Entity
 {
     /**
     * Gets the iPad
+    * Whether the app should run on iPads.
     *
     * @return bool The iPad
     */
@@ -41,6 +42,7 @@ class IosDeviceType extends Entity
 
     /**
     * Sets the iPad
+    * Whether the app should run on iPads.
     *
     * @param bool $val The value of the iPad
     *
@@ -53,6 +55,7 @@ class IosDeviceType extends Entity
     }
     /**
     * Gets the iPhoneAndIPod
+    * Whether the app should run on iPhones and iPods.
     *
     * @return bool The iPhoneAndIPod
     */
@@ -67,6 +70,7 @@ class IosDeviceType extends Entity
 
     /**
     * Sets the iPhoneAndIPod
+    * Whether the app should run on iPhones and iPods.
     *
     * @param bool $val The value of the iPhoneAndIPod
     *

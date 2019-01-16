@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * GovernanceResource class
@@ -135,33 +135,60 @@ class GovernanceResource extends Entity
     }
     
     /**
-    * Gets the onboardDateTime
+    * Gets the registeredDateTime
     *
-    * @return \DateTime The onboardDateTime
+    * @return \DateTime The registeredDateTime
     */
-    public function getOnboardDateTime()
+    public function getRegisteredDateTime()
     {
-        if (array_key_exists("onboardDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["onboardDateTime"], "\DateTime")) {
-                return $this->_propDict["onboardDateTime"];
+        if (array_key_exists("registeredDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["registeredDateTime"], "\DateTime")) {
+                return $this->_propDict["registeredDateTime"];
             } else {
-                $this->_propDict["onboardDateTime"] = new \DateTime($this->_propDict["onboardDateTime"]);
-                return $this->_propDict["onboardDateTime"];
+                $this->_propDict["registeredDateTime"] = new \DateTime($this->_propDict["registeredDateTime"]);
+                return $this->_propDict["registeredDateTime"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the onboardDateTime
+    * Sets the registeredDateTime
     *
-    * @param \DateTime $val The onboardDateTime
+    * @param \DateTime $val The registeredDateTime
     *
     * @return GovernanceResource
     */
-    public function setOnboardDateTime($val)
+    public function setRegisteredDateTime($val)
     {
-        $this->_propDict["onboardDateTime"] = $val;
+        $this->_propDict["registeredDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the registeredRoot
+    *
+    * @return string The registeredRoot
+    */
+    public function getRegisteredRoot()
+    {
+        if (array_key_exists("registeredRoot", $this->_propDict)) {
+            return $this->_propDict["registeredRoot"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the registeredRoot
+    *
+    * @param string $val The registeredRoot
+    *
+    * @return GovernanceResource
+    */
+    public function setRegisteredRoot($val)
+    {
+        $this->_propDict["registeredRoot"] = $val;
         return $this;
     }
     
@@ -173,7 +200,7 @@ class GovernanceResource extends Entity
     public function getParent()
     {
         if (array_key_exists("parent", $this->_propDict)) {
-            if (is_a($this->_propDict["parent"], "Microsoft\Graph\Beta\Model\GovernanceResource")) {
+            if (is_a($this->_propDict["parent"], "Microsoft\Graph\Model\GovernanceResource")) {
                 return $this->_propDict["parent"];
             } else {
                 $this->_propDict["parent"] = new GovernanceResource($this->_propDict["parent"]);

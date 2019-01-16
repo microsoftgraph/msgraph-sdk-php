@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * NdesConnector class
@@ -28,6 +28,7 @@ class NdesConnector extends Entity
 {
     /**
     * Gets the lastConnectionDateTime
+    * Last connection time for the Ndes Connector
     *
     * @return \DateTime The lastConnectionDateTime
     */
@@ -46,6 +47,7 @@ class NdesConnector extends Entity
     
     /**
     * Sets the lastConnectionDateTime
+    * Last connection time for the Ndes Connector
     *
     * @param \DateTime $val The lastConnectionDateTime
     *
@@ -59,13 +61,14 @@ class NdesConnector extends Entity
     
     /**
     * Gets the state
+    * Ndes Connector Status
     *
     * @return NdesConnectorState The state
     */
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "Microsoft\Graph\Beta\Model\NdesConnectorState")) {
+            if (is_a($this->_propDict["state"], "Microsoft\Graph\Model\NdesConnectorState")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new NdesConnectorState($this->_propDict["state"]);
@@ -77,6 +80,7 @@ class NdesConnector extends Entity
     
     /**
     * Sets the state
+    * Ndes Connector Status
     *
     * @param NdesConnectorState $val The state
     *
@@ -90,6 +94,7 @@ class NdesConnector extends Entity
     
     /**
     * Gets the displayName
+    * The friendly name of the Ndes Connector.
     *
     * @return string The displayName
     */
@@ -104,6 +109,7 @@ class NdesConnector extends Entity
     
     /**
     * Sets the displayName
+    * The friendly name of the Ndes Connector.
     *
     * @param string $val The displayName
     *

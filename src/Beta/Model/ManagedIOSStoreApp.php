@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * ManagedIOSStoreApp class
@@ -28,6 +28,7 @@ class ManagedIOSStoreApp extends ManagedApp
 {
     /**
     * Gets the bundleId
+    * The app's Bundle ID.
     *
     * @return string The bundleId
     */
@@ -42,6 +43,7 @@ class ManagedIOSStoreApp extends ManagedApp
     
     /**
     * Sets the bundleId
+    * The app's Bundle ID.
     *
     * @param string $val The bundleId
     *
@@ -55,6 +57,7 @@ class ManagedIOSStoreApp extends ManagedApp
     
     /**
     * Gets the appStoreUrl
+    * The Apple AppStoreUrl.
     *
     * @return string The appStoreUrl
     */
@@ -69,6 +72,7 @@ class ManagedIOSStoreApp extends ManagedApp
     
     /**
     * Sets the appStoreUrl
+    * The Apple AppStoreUrl.
     *
     * @param string $val The appStoreUrl
     *
@@ -82,13 +86,14 @@ class ManagedIOSStoreApp extends ManagedApp
     
     /**
     * Gets the applicableDeviceType
+    * The iOS architecture for which this app can run on.
     *
     * @return IosDeviceType The applicableDeviceType
     */
     public function getApplicableDeviceType()
     {
         if (array_key_exists("applicableDeviceType", $this->_propDict)) {
-            if (is_a($this->_propDict["applicableDeviceType"], "Microsoft\Graph\Beta\Model\IosDeviceType")) {
+            if (is_a($this->_propDict["applicableDeviceType"], "Microsoft\Graph\Model\IosDeviceType")) {
                 return $this->_propDict["applicableDeviceType"];
             } else {
                 $this->_propDict["applicableDeviceType"] = new IosDeviceType($this->_propDict["applicableDeviceType"]);
@@ -100,6 +105,7 @@ class ManagedIOSStoreApp extends ManagedApp
     
     /**
     * Sets the applicableDeviceType
+    * The iOS architecture for which this app can run on.
     *
     * @param IosDeviceType $val The applicableDeviceType
     *
@@ -113,13 +119,14 @@ class ManagedIOSStoreApp extends ManagedApp
     
     /**
     * Gets the minimumSupportedOperatingSystem
+    * The value for the minimum supported operating system.
     *
     * @return IosMinimumOperatingSystem The minimumSupportedOperatingSystem
     */
     public function getMinimumSupportedOperatingSystem()
     {
         if (array_key_exists("minimumSupportedOperatingSystem", $this->_propDict)) {
-            if (is_a($this->_propDict["minimumSupportedOperatingSystem"], "Microsoft\Graph\Beta\Model\IosMinimumOperatingSystem")) {
+            if (is_a($this->_propDict["minimumSupportedOperatingSystem"], "Microsoft\Graph\Model\IosMinimumOperatingSystem")) {
                 return $this->_propDict["minimumSupportedOperatingSystem"];
             } else {
                 $this->_propDict["minimumSupportedOperatingSystem"] = new IosMinimumOperatingSystem($this->_propDict["minimumSupportedOperatingSystem"]);
@@ -131,6 +138,7 @@ class ManagedIOSStoreApp extends ManagedApp
     
     /**
     * Sets the minimumSupportedOperatingSystem
+    * The value for the minimum supported operating system.
     *
     * @param IosMinimumOperatingSystem $val The minimumSupportedOperatingSystem
     *

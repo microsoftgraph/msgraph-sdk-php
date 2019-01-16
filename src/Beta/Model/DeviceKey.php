@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * DeviceKey class
 *
@@ -60,7 +60,7 @@ class DeviceKey extends Entity
     public function getKeyMaterial()
     {
         if (array_key_exists("keyMaterial", $this->_propDict)) {
-            if (is_a($this->_propDict["keyMaterial"], "Microsoft\Graph\Beta\Model\\GuzzleHttp\Psr7\Stream")) {
+            if (is_a($this->_propDict["keyMaterial"], "Microsoft\Graph\Model\\GuzzleHttp\Psr7\Stream")) {
                 return $this->_propDict["keyMaterial"];
             } else {
                 $this->_propDict["keyMaterial"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["keyMaterial"]);

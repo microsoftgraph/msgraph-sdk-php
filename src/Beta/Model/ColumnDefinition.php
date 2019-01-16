@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * ColumnDefinition class
@@ -28,13 +28,14 @@ class ColumnDefinition extends Entity
 {
     /**
     * Gets the boolean
+    * This column stores boolean values.
     *
     * @return BooleanColumn The boolean
     */
     public function getBoolean()
     {
         if (array_key_exists("boolean", $this->_propDict)) {
-            if (is_a($this->_propDict["boolean"], "Microsoft\Graph\Beta\Model\BooleanColumn")) {
+            if (is_a($this->_propDict["boolean"], "Microsoft\Graph\Model\BooleanColumn")) {
                 return $this->_propDict["boolean"];
             } else {
                 $this->_propDict["boolean"] = new BooleanColumn($this->_propDict["boolean"]);
@@ -46,6 +47,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the boolean
+    * This column stores boolean values.
     *
     * @param BooleanColumn $val The boolean
     *
@@ -59,13 +61,14 @@ class ColumnDefinition extends Entity
     
     /**
     * Gets the calculated
+    * This column's data is calculated based on other columns.
     *
     * @return CalculatedColumn The calculated
     */
     public function getCalculated()
     {
         if (array_key_exists("calculated", $this->_propDict)) {
-            if (is_a($this->_propDict["calculated"], "Microsoft\Graph\Beta\Model\CalculatedColumn")) {
+            if (is_a($this->_propDict["calculated"], "Microsoft\Graph\Model\CalculatedColumn")) {
                 return $this->_propDict["calculated"];
             } else {
                 $this->_propDict["calculated"] = new CalculatedColumn($this->_propDict["calculated"]);
@@ -77,6 +80,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the calculated
+    * This column's data is calculated based on other columns.
     *
     * @param CalculatedColumn $val The calculated
     *
@@ -90,13 +94,14 @@ class ColumnDefinition extends Entity
     
     /**
     * Gets the choice
+    * This column stores data from a list of choices.
     *
     * @return ChoiceColumn The choice
     */
     public function getChoice()
     {
         if (array_key_exists("choice", $this->_propDict)) {
-            if (is_a($this->_propDict["choice"], "Microsoft\Graph\Beta\Model\ChoiceColumn")) {
+            if (is_a($this->_propDict["choice"], "Microsoft\Graph\Model\ChoiceColumn")) {
                 return $this->_propDict["choice"];
             } else {
                 $this->_propDict["choice"] = new ChoiceColumn($this->_propDict["choice"]);
@@ -108,6 +113,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the choice
+    * This column stores data from a list of choices.
     *
     * @param ChoiceColumn $val The choice
     *
@@ -121,6 +127,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Gets the columnGroup
+    * For site columns, the name of the group this column belongs to. Helps organize related columns.
     *
     * @return string The columnGroup
     */
@@ -135,6 +142,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the columnGroup
+    * For site columns, the name of the group this column belongs to. Helps organize related columns.
     *
     * @param string $val The columnGroup
     *
@@ -148,13 +156,14 @@ class ColumnDefinition extends Entity
     
     /**
     * Gets the currency
+    * This column stores currency values.
     *
     * @return CurrencyColumn The currency
     */
     public function getCurrency()
     {
         if (array_key_exists("currency", $this->_propDict)) {
-            if (is_a($this->_propDict["currency"], "Microsoft\Graph\Beta\Model\CurrencyColumn")) {
+            if (is_a($this->_propDict["currency"], "Microsoft\Graph\Model\CurrencyColumn")) {
                 return $this->_propDict["currency"];
             } else {
                 $this->_propDict["currency"] = new CurrencyColumn($this->_propDict["currency"]);
@@ -166,6 +175,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the currency
+    * This column stores currency values.
     *
     * @param CurrencyColumn $val The currency
     *
@@ -179,13 +189,14 @@ class ColumnDefinition extends Entity
     
     /**
     * Gets the dateTime
+    * This column stores DateTime values.
     *
     * @return DateTimeColumn The dateTime
     */
     public function getDateTime()
     {
         if (array_key_exists("dateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["dateTime"], "Microsoft\Graph\Beta\Model\DateTimeColumn")) {
+            if (is_a($this->_propDict["dateTime"], "Microsoft\Graph\Model\DateTimeColumn")) {
                 return $this->_propDict["dateTime"];
             } else {
                 $this->_propDict["dateTime"] = new DateTimeColumn($this->_propDict["dateTime"]);
@@ -197,6 +208,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the dateTime
+    * This column stores DateTime values.
     *
     * @param DateTimeColumn $val The dateTime
     *
@@ -210,13 +222,14 @@ class ColumnDefinition extends Entity
     
     /**
     * Gets the defaultValue
+    * The default value for this column.
     *
     * @return DefaultColumnValue The defaultValue
     */
     public function getDefaultValue()
     {
         if (array_key_exists("defaultValue", $this->_propDict)) {
-            if (is_a($this->_propDict["defaultValue"], "Microsoft\Graph\Beta\Model\DefaultColumnValue")) {
+            if (is_a($this->_propDict["defaultValue"], "Microsoft\Graph\Model\DefaultColumnValue")) {
                 return $this->_propDict["defaultValue"];
             } else {
                 $this->_propDict["defaultValue"] = new DefaultColumnValue($this->_propDict["defaultValue"]);
@@ -228,6 +241,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the defaultValue
+    * The default value for this column.
     *
     * @param DefaultColumnValue $val The defaultValue
     *
@@ -241,6 +255,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Gets the description
+    * The user-facing description of the column.
     *
     * @return string The description
     */
@@ -255,6 +270,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the description
+    * The user-facing description of the column.
     *
     * @param string $val The description
     *
@@ -268,6 +284,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Gets the displayName
+    * The user-facing name of the column.
     *
     * @return string The displayName
     */
@@ -282,6 +299,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the displayName
+    * The user-facing name of the column.
     *
     * @param string $val The displayName
     *
@@ -295,6 +313,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Gets the enforceUniqueValues
+    * If true, no two list items may have the same value for this column.
     *
     * @return bool The enforceUniqueValues
     */
@@ -309,6 +328,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the enforceUniqueValues
+    * If true, no two list items may have the same value for this column.
     *
     * @param bool $val The enforceUniqueValues
     *
@@ -321,7 +341,39 @@ class ColumnDefinition extends Entity
     }
     
     /**
+    * Gets the geolocation
+    *
+    * @return GeolocationColumn The geolocation
+    */
+    public function getGeolocation()
+    {
+        if (array_key_exists("geolocation", $this->_propDict)) {
+            if (is_a($this->_propDict["geolocation"], "Microsoft\Graph\Model\GeolocationColumn")) {
+                return $this->_propDict["geolocation"];
+            } else {
+                $this->_propDict["geolocation"] = new GeolocationColumn($this->_propDict["geolocation"]);
+                return $this->_propDict["geolocation"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the geolocation
+    *
+    * @param GeolocationColumn $val The geolocation
+    *
+    * @return ColumnDefinition
+    */
+    public function setGeolocation($val)
+    {
+        $this->_propDict["geolocation"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the hidden
+    * Specifies whether the column is displayed in the user interface.
     *
     * @return bool The hidden
     */
@@ -336,6 +388,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the hidden
+    * Specifies whether the column is displayed in the user interface.
     *
     * @param bool $val The hidden
     *
@@ -349,6 +402,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Gets the indexed
+    * Specifies whether the column values can used for sorting and searching.
     *
     * @return bool The indexed
     */
@@ -363,6 +417,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the indexed
+    * Specifies whether the column values can used for sorting and searching.
     *
     * @param bool $val The indexed
     *
@@ -376,13 +431,14 @@ class ColumnDefinition extends Entity
     
     /**
     * Gets the lookup
+    * This column's data is looked up from another source in the site.
     *
     * @return LookupColumn The lookup
     */
     public function getLookup()
     {
         if (array_key_exists("lookup", $this->_propDict)) {
-            if (is_a($this->_propDict["lookup"], "Microsoft\Graph\Beta\Model\LookupColumn")) {
+            if (is_a($this->_propDict["lookup"], "Microsoft\Graph\Model\LookupColumn")) {
                 return $this->_propDict["lookup"];
             } else {
                 $this->_propDict["lookup"] = new LookupColumn($this->_propDict["lookup"]);
@@ -394,6 +450,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the lookup
+    * This column's data is looked up from another source in the site.
     *
     * @param LookupColumn $val The lookup
     *
@@ -407,6 +464,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Gets the name
+    * The API-facing name of the column as it appears in the [fields][] on a [listItem][]. For the user-facing name, see displayName.
     *
     * @return string The name
     */
@@ -421,6 +479,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the name
+    * The API-facing name of the column as it appears in the [fields][] on a [listItem][]. For the user-facing name, see displayName.
     *
     * @param string $val The name
     *
@@ -434,13 +493,14 @@ class ColumnDefinition extends Entity
     
     /**
     * Gets the number
+    * This column stores number values.
     *
     * @return NumberColumn The number
     */
     public function getNumber()
     {
         if (array_key_exists("number", $this->_propDict)) {
-            if (is_a($this->_propDict["number"], "Microsoft\Graph\Beta\Model\NumberColumn")) {
+            if (is_a($this->_propDict["number"], "Microsoft\Graph\Model\NumberColumn")) {
                 return $this->_propDict["number"];
             } else {
                 $this->_propDict["number"] = new NumberColumn($this->_propDict["number"]);
@@ -452,6 +512,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the number
+    * This column stores number values.
     *
     * @param NumberColumn $val The number
     *
@@ -465,13 +526,14 @@ class ColumnDefinition extends Entity
     
     /**
     * Gets the personOrGroup
+    * This column stores Person or Group values.
     *
     * @return PersonOrGroupColumn The personOrGroup
     */
     public function getPersonOrGroup()
     {
         if (array_key_exists("personOrGroup", $this->_propDict)) {
-            if (is_a($this->_propDict["personOrGroup"], "Microsoft\Graph\Beta\Model\PersonOrGroupColumn")) {
+            if (is_a($this->_propDict["personOrGroup"], "Microsoft\Graph\Model\PersonOrGroupColumn")) {
                 return $this->_propDict["personOrGroup"];
             } else {
                 $this->_propDict["personOrGroup"] = new PersonOrGroupColumn($this->_propDict["personOrGroup"]);
@@ -483,6 +545,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the personOrGroup
+    * This column stores Person or Group values.
     *
     * @param PersonOrGroupColumn $val The personOrGroup
     *
@@ -496,6 +559,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Gets the readOnly
+    * Specifies whether the column values can be modified.
     *
     * @return bool The readOnly
     */
@@ -510,6 +574,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the readOnly
+    * Specifies whether the column values can be modified.
     *
     * @param bool $val The readOnly
     *
@@ -523,6 +588,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Gets the required
+    * Specifies whether the column value is not optional.
     *
     * @return bool The required
     */
@@ -537,6 +603,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the required
+    * Specifies whether the column value is not optional.
     *
     * @param bool $val The required
     *
@@ -550,13 +617,14 @@ class ColumnDefinition extends Entity
     
     /**
     * Gets the text
+    * This column stores text values.
     *
     * @return TextColumn The text
     */
     public function getText()
     {
         if (array_key_exists("text", $this->_propDict)) {
-            if (is_a($this->_propDict["text"], "Microsoft\Graph\Beta\Model\TextColumn")) {
+            if (is_a($this->_propDict["text"], "Microsoft\Graph\Model\TextColumn")) {
                 return $this->_propDict["text"];
             } else {
                 $this->_propDict["text"] = new TextColumn($this->_propDict["text"]);
@@ -568,6 +636,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the text
+    * This column stores text values.
     *
     * @param TextColumn $val The text
     *

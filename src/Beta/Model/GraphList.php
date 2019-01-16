@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * GraphList class
@@ -28,6 +28,7 @@ class GraphList extends BaseItem
 {
     /**
     * Gets the displayName
+    * The displayable title of the list.
     *
     * @return string The displayName
     */
@@ -42,6 +43,7 @@ class GraphList extends BaseItem
     
     /**
     * Sets the displayName
+    * The displayable title of the list.
     *
     * @param string $val The displayName
     *
@@ -55,13 +57,14 @@ class GraphList extends BaseItem
     
     /**
     * Gets the list
+    * Provides additional details about the list.
     *
     * @return ListInfo The list
     */
     public function getList()
     {
         if (array_key_exists("list", $this->_propDict)) {
-            if (is_a($this->_propDict["list"], "Microsoft\Graph\Beta\Model\ListInfo")) {
+            if (is_a($this->_propDict["list"], "Microsoft\Graph\Model\ListInfo")) {
                 return $this->_propDict["list"];
             } else {
                 $this->_propDict["list"] = new ListInfo($this->_propDict["list"]);
@@ -73,6 +76,7 @@ class GraphList extends BaseItem
     
     /**
     * Sets the list
+    * Provides additional details about the list.
     *
     * @param ListInfo $val The list
     *
@@ -86,13 +90,14 @@ class GraphList extends BaseItem
     
     /**
     * Gets the sharepointIds
+    * Returns identifiers useful for SharePoint REST compatibility. Read-only.
     *
     * @return SharepointIds The sharepointIds
     */
     public function getSharepointIds()
     {
         if (array_key_exists("sharepointIds", $this->_propDict)) {
-            if (is_a($this->_propDict["sharepointIds"], "Microsoft\Graph\Beta\Model\SharepointIds")) {
+            if (is_a($this->_propDict["sharepointIds"], "Microsoft\Graph\Model\SharepointIds")) {
                 return $this->_propDict["sharepointIds"];
             } else {
                 $this->_propDict["sharepointIds"] = new SharepointIds($this->_propDict["sharepointIds"]);
@@ -104,6 +109,7 @@ class GraphList extends BaseItem
     
     /**
     * Sets the sharepointIds
+    * Returns identifiers useful for SharePoint REST compatibility. Read-only.
     *
     * @param SharepointIds $val The sharepointIds
     *
@@ -117,13 +123,14 @@ class GraphList extends BaseItem
     
     /**
     * Gets the system
+    * If present, indicates that this is a system-managed list. Read-only.
     *
     * @return SystemFacet The system
     */
     public function getSystem()
     {
         if (array_key_exists("system", $this->_propDict)) {
-            if (is_a($this->_propDict["system"], "Microsoft\Graph\Beta\Model\SystemFacet")) {
+            if (is_a($this->_propDict["system"], "Microsoft\Graph\Model\SystemFacet")) {
                 return $this->_propDict["system"];
             } else {
                 $this->_propDict["system"] = new SystemFacet($this->_propDict["system"]);
@@ -135,6 +142,7 @@ class GraphList extends BaseItem
     
     /**
     * Sets the system
+    * If present, indicates that this is a system-managed list. Read-only.
     *
     * @param SystemFacet $val The system
     *
@@ -164,7 +172,7 @@ class GraphList extends BaseItem
     /** 
     * Sets the activities
     *
-    * @param ItemActivity $val The activities
+    * @param ItemActivityOLD $val The activities
     *
     * @return List
     */
@@ -177,6 +185,7 @@ class GraphList extends BaseItem
 
      /** 
      * Gets the columns
+    * The collection of field definitions for this list.
      *
      * @return array The columns
      */
@@ -191,6 +200,7 @@ class GraphList extends BaseItem
     
     /** 
     * Sets the columns
+    * The collection of field definitions for this list.
     *
     * @param ColumnDefinition $val The columns
     *
@@ -205,6 +215,7 @@ class GraphList extends BaseItem
 
      /** 
      * Gets the contentTypes
+    * The collection of content types present in this list.
      *
      * @return array The contentTypes
      */
@@ -219,6 +230,7 @@ class GraphList extends BaseItem
     
     /** 
     * Sets the contentTypes
+    * The collection of content types present in this list.
     *
     * @param ContentType $val The contentTypes
     *
@@ -232,13 +244,14 @@ class GraphList extends BaseItem
     
     /**
     * Gets the drive
+    * Only present on document libraries. Allows access to the list as a [drive][] resource with [driveItems][driveItem].
     *
     * @return Drive The drive
     */
     public function getDrive()
     {
         if (array_key_exists("drive", $this->_propDict)) {
-            if (is_a($this->_propDict["drive"], "Microsoft\Graph\Beta\Model\Drive")) {
+            if (is_a($this->_propDict["drive"], "Microsoft\Graph\Model\Drive")) {
                 return $this->_propDict["drive"];
             } else {
                 $this->_propDict["drive"] = new Drive($this->_propDict["drive"]);
@@ -250,6 +263,7 @@ class GraphList extends BaseItem
     
     /**
     * Sets the drive
+    * Only present on document libraries. Allows access to the list as a [drive][] resource with [driveItems][driveItem].
     *
     * @param Drive $val The drive
     *
@@ -264,6 +278,7 @@ class GraphList extends BaseItem
 
      /** 
      * Gets the items
+    * All items contained in the list.
      *
      * @return array The items
      */
@@ -278,6 +293,7 @@ class GraphList extends BaseItem
     
     /** 
     * Sets the items
+    * All items contained in the list.
     *
     * @param ListItem $val The items
     *

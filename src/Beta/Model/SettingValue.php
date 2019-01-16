@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * SettingValue class
 *
@@ -27,6 +27,7 @@ class SettingValue extends Entity
 {
     /**
     * Gets the name
+    * Name of the setting (as defined by the groupSettingTemplate).
     *
     * @return string The name
     */
@@ -41,6 +42,7 @@ class SettingValue extends Entity
 
     /**
     * Sets the name
+    * Name of the setting (as defined by the groupSettingTemplate).
     *
     * @param string $val The value of the name
     *
@@ -53,6 +55,7 @@ class SettingValue extends Entity
     }
     /**
     * Gets the value
+    * Value of the setting.
     *
     * @return string The value
     */
@@ -67,6 +70,7 @@ class SettingValue extends Entity
 
     /**
     * Sets the value
+    * Value of the setting.
     *
     * @param string $val The value of the value
     *

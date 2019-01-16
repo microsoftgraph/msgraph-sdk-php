@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * DirectoryAudit class
@@ -88,7 +88,7 @@ class DirectoryAudit extends Entity
     public function getResult()
     {
         if (array_key_exists("result", $this->_propDict)) {
-            if (is_a($this->_propDict["result"], "Microsoft\Graph\Beta\Model\OperationResult")) {
+            if (is_a($this->_propDict["result"], "Microsoft\Graph\Model\OperationResult")) {
                 return $this->_propDict["result"];
             } else {
                 $this->_propDict["result"] = new OperationResult($this->_propDict["result"]);
@@ -204,7 +204,7 @@ class DirectoryAudit extends Entity
     public function getInitiatedBy()
     {
         if (array_key_exists("initiatedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["initiatedBy"], "Microsoft\Graph\Beta\Model\AuditActivityInitiator")) {
+            if (is_a($this->_propDict["initiatedBy"], "Microsoft\Graph\Model\AuditActivityInitiator")) {
                 return $this->_propDict["initiatedBy"];
             } else {
                 $this->_propDict["initiatedBy"] = new AuditActivityInitiator($this->_propDict["initiatedBy"]);

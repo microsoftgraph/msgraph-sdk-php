@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * WorkbookChartLineFormat class
@@ -28,6 +28,7 @@ class WorkbookChartLineFormat extends Entity
 {
     /**
     * Gets the color
+    * HTML color code representing the color of lines in the chart.
     *
     * @return string The color
     */
@@ -42,6 +43,7 @@ class WorkbookChartLineFormat extends Entity
     
     /**
     * Sets the color
+    * HTML color code representing the color of lines in the chart.
     *
     * @param string $val The color
     *

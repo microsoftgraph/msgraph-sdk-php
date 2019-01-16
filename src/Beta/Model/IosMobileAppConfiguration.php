@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * IosMobileAppConfiguration class
@@ -28,6 +28,7 @@ class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfiguration
 {
     /**
     * Gets the encodedSettingXml
+    * mdm app configuration Base64 binary.
     *
     * @return \GuzzleHttp\Psr7\Stream The encodedSettingXml
     */
@@ -46,6 +47,7 @@ class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfiguration
     
     /**
     * Sets the encodedSettingXml
+    * mdm app configuration Base64 binary.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The encodedSettingXml
     *
@@ -60,6 +62,7 @@ class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfiguration
 
      /** 
      * Gets the settings
+    * app configuration setting items.
      *
      * @return array The settings
      */
@@ -74,6 +77,7 @@ class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfiguration
     
     /** 
     * Sets the settings
+    * app configuration setting items.
     *
     * @param AppConfigurationSettingItem $val The settings
     *

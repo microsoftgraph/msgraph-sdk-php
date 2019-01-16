@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * OmaSettingBase64 class
 *
@@ -26,7 +26,17 @@ namespace Microsoft\Graph\Beta\Model;
 class OmaSettingBase64 extends OmaSetting
 {
     /**
+    * Set the @odata.type since this type is immediately descended from an abstract
+    * type that is referenced as the type in an entity.
+    */
+    public function __construct()
+    {
+        $this->setODataType("#microsoft.graph.omaSettingBase64");
+    }
+
+    /**
     * Gets the fileName
+    * File name associated with the Value property (.cer
     *
     * @return string The fileName
     */
@@ -41,6 +51,7 @@ class OmaSettingBase64 extends OmaSetting
 
     /**
     * Sets the fileName
+    * File name associated with the Value property (.cer
     *
     * @param string $val The value of the fileName
     *
@@ -53,6 +64,7 @@ class OmaSettingBase64 extends OmaSetting
     }
     /**
     * Gets the value
+    * Value. (Base64 encoded string)
     *
     * @return string The value
     */
@@ -67,6 +79,7 @@ class OmaSettingBase64 extends OmaSetting
 
     /**
     * Sets the value
+    * Value. (Base64 encoded string)
     *
     * @param string $val The value of the value
     *

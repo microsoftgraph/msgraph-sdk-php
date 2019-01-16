@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * MultiValueLegacyExtendedProperty class
@@ -28,6 +28,7 @@ class MultiValueLegacyExtendedProperty extends Entity
 {
     /**
     * Gets the value
+    * A collection of property values.
     *
     * @return string The value
     */
@@ -42,6 +43,7 @@ class MultiValueLegacyExtendedProperty extends Entity
     
     /**
     * Sets the value
+    * A collection of property values.
     *
     * @param string $val The value
     *

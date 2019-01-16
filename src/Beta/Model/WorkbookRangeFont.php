@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * WorkbookRangeFont class
@@ -28,6 +28,7 @@ class WorkbookRangeFont extends Entity
 {
     /**
     * Gets the bold
+    * Represents the bold status of font.
     *
     * @return bool The bold
     */
@@ -42,6 +43,7 @@ class WorkbookRangeFont extends Entity
     
     /**
     * Sets the bold
+    * Represents the bold status of font.
     *
     * @param bool $val The bold
     *
@@ -55,6 +57,7 @@ class WorkbookRangeFont extends Entity
     
     /**
     * Gets the color
+    * HTML color code representation of the text color. E.g. #FF0000 represents Red.
     *
     * @return string The color
     */
@@ -69,6 +72,7 @@ class WorkbookRangeFont extends Entity
     
     /**
     * Sets the color
+    * HTML color code representation of the text color. E.g. #FF0000 represents Red.
     *
     * @param string $val The color
     *
@@ -82,6 +86,7 @@ class WorkbookRangeFont extends Entity
     
     /**
     * Gets the italic
+    * Represents the italic status of the font.
     *
     * @return bool The italic
     */
@@ -96,6 +101,7 @@ class WorkbookRangeFont extends Entity
     
     /**
     * Sets the italic
+    * Represents the italic status of the font.
     *
     * @param bool $val The italic
     *
@@ -109,6 +115,7 @@ class WorkbookRangeFont extends Entity
     
     /**
     * Gets the name
+    * Font name (e.g. 'Calibri')
     *
     * @return string The name
     */
@@ -123,6 +130,7 @@ class WorkbookRangeFont extends Entity
     
     /**
     * Sets the name
+    * Font name (e.g. 'Calibri')
     *
     * @param string $val The name
     *
@@ -136,6 +144,7 @@ class WorkbookRangeFont extends Entity
     
     /**
     * Gets the size
+    * Font size.
     *
     * @return float The size
     */
@@ -150,6 +159,7 @@ class WorkbookRangeFont extends Entity
     
     /**
     * Sets the size
+    * Font size.
     *
     * @param float $val The size
     *
@@ -163,6 +173,7 @@ class WorkbookRangeFont extends Entity
     
     /**
     * Gets the underline
+    * Type of underline applied to the font. The possible values are: None, Single, Double, SingleAccountant, DoubleAccountant.
     *
     * @return string The underline
     */
@@ -177,6 +188,7 @@ class WorkbookRangeFont extends Entity
     
     /**
     * Sets the underline
+    * Type of underline applied to the font. The possible values are: None, Single, Double, SingleAccountant, DoubleAccountant.
     *
     * @param string $val The underline
     *

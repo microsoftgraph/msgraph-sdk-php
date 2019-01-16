@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * EditionUpgradeConfiguration class
@@ -28,13 +28,14 @@ class EditionUpgradeConfiguration extends DeviceConfiguration
 {
     /**
     * Gets the licenseType
+    * Edition Upgrade License Type. Possible values are: productKey, licenseFile.
     *
     * @return EditionUpgradeLicenseType The licenseType
     */
     public function getLicenseType()
     {
         if (array_key_exists("licenseType", $this->_propDict)) {
-            if (is_a($this->_propDict["licenseType"], "Microsoft\Graph\Beta\Model\EditionUpgradeLicenseType")) {
+            if (is_a($this->_propDict["licenseType"], "Microsoft\Graph\Model\EditionUpgradeLicenseType")) {
                 return $this->_propDict["licenseType"];
             } else {
                 $this->_propDict["licenseType"] = new EditionUpgradeLicenseType($this->_propDict["licenseType"]);
@@ -46,6 +47,7 @@ class EditionUpgradeConfiguration extends DeviceConfiguration
     
     /**
     * Sets the licenseType
+    * Edition Upgrade License Type. Possible values are: productKey, licenseFile.
     *
     * @param EditionUpgradeLicenseType $val The licenseType
     *
@@ -59,13 +61,14 @@ class EditionUpgradeConfiguration extends DeviceConfiguration
     
     /**
     * Gets the targetEdition
+    * Edition Upgrade Target Edition. Possible values are: windows10Enterprise, windows10EnterpriseN, windows10Education, windows10EducationN, windows10MobileEnterprise, windows10HolographicEnterprise, windows10Professional, windows10ProfessionalN, windows10ProfessionalEducation, windows10ProfessionalEducationN, windows10ProfessionalWorkstation, windows10ProfessionalWorkstationN.
     *
     * @return Windows10EditionType The targetEdition
     */
     public function getTargetEdition()
     {
         if (array_key_exists("targetEdition", $this->_propDict)) {
-            if (is_a($this->_propDict["targetEdition"], "Microsoft\Graph\Beta\Model\Windows10EditionType")) {
+            if (is_a($this->_propDict["targetEdition"], "Microsoft\Graph\Model\Windows10EditionType")) {
                 return $this->_propDict["targetEdition"];
             } else {
                 $this->_propDict["targetEdition"] = new Windows10EditionType($this->_propDict["targetEdition"]);
@@ -77,6 +80,7 @@ class EditionUpgradeConfiguration extends DeviceConfiguration
     
     /**
     * Sets the targetEdition
+    * Edition Upgrade Target Edition. Possible values are: windows10Enterprise, windows10EnterpriseN, windows10Education, windows10EducationN, windows10MobileEnterprise, windows10HolographicEnterprise, windows10Professional, windows10ProfessionalN, windows10ProfessionalEducation, windows10ProfessionalEducationN, windows10ProfessionalWorkstation, windows10ProfessionalWorkstationN.
     *
     * @param Windows10EditionType $val The targetEdition
     *
@@ -90,6 +94,7 @@ class EditionUpgradeConfiguration extends DeviceConfiguration
     
     /**
     * Gets the license
+    * Edition Upgrade License File Content.
     *
     * @return string The license
     */
@@ -104,6 +109,7 @@ class EditionUpgradeConfiguration extends DeviceConfiguration
     
     /**
     * Sets the license
+    * Edition Upgrade License File Content.
     *
     * @param string $val The license
     *
@@ -117,6 +123,7 @@ class EditionUpgradeConfiguration extends DeviceConfiguration
     
     /**
     * Gets the productKey
+    * Edition Upgrade Product Key.
     *
     * @return string The productKey
     */
@@ -131,6 +138,7 @@ class EditionUpgradeConfiguration extends DeviceConfiguration
     
     /**
     * Sets the productKey
+    * Edition Upgrade Product Key.
     *
     * @param string $val The productKey
     *
@@ -144,13 +152,14 @@ class EditionUpgradeConfiguration extends DeviceConfiguration
     
     /**
     * Gets the windowsSMode
+    * S mode configuration.
     *
     * @return WindowsSModeConfiguration The windowsSMode
     */
     public function getWindowsSMode()
     {
         if (array_key_exists("windowsSMode", $this->_propDict)) {
-            if (is_a($this->_propDict["windowsSMode"], "Microsoft\Graph\Beta\Model\WindowsSModeConfiguration")) {
+            if (is_a($this->_propDict["windowsSMode"], "Microsoft\Graph\Model\WindowsSModeConfiguration")) {
                 return $this->_propDict["windowsSMode"];
             } else {
                 $this->_propDict["windowsSMode"] = new WindowsSModeConfiguration($this->_propDict["windowsSMode"]);
@@ -162,6 +171,7 @@ class EditionUpgradeConfiguration extends DeviceConfiguration
     
     /**
     * Sets the windowsSMode
+    * S mode configuration.
     *
     * @param WindowsSModeConfiguration $val The windowsSMode
     *

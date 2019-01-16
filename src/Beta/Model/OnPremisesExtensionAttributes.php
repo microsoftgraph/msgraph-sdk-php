@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * OnPremisesExtensionAttributes class
 *
@@ -27,6 +27,7 @@ class OnPremisesExtensionAttributes extends Entity
 {
     /**
     * Gets the extensionAttribute1
+    * First customizable extension attribute.
     *
     * @return string The extensionAttribute1
     */
@@ -41,6 +42,7 @@ class OnPremisesExtensionAttributes extends Entity
 
     /**
     * Sets the extensionAttribute1
+    * First customizable extension attribute.
     *
     * @param string $val The value of the extensionAttribute1
     *
@@ -53,6 +55,7 @@ class OnPremisesExtensionAttributes extends Entity
     }
     /**
     * Gets the extensionAttribute2
+    * Second customizable extension attribute.
     *
     * @return string The extensionAttribute2
     */
@@ -67,6 +70,7 @@ class OnPremisesExtensionAttributes extends Entity
 
     /**
     * Sets the extensionAttribute2
+    * Second customizable extension attribute.
     *
     * @param string $val The value of the extensionAttribute2
     *
@@ -79,6 +83,7 @@ class OnPremisesExtensionAttributes extends Entity
     }
     /**
     * Gets the extensionAttribute3
+    * Third customizable extension attribute.
     *
     * @return string The extensionAttribute3
     */
@@ -93,6 +98,7 @@ class OnPremisesExtensionAttributes extends Entity
 
     /**
     * Sets the extensionAttribute3
+    * Third customizable extension attribute.
     *
     * @param string $val The value of the extensionAttribute3
     *
@@ -105,6 +111,7 @@ class OnPremisesExtensionAttributes extends Entity
     }
     /**
     * Gets the extensionAttribute4
+    * Fourth customizable extension attribute.
     *
     * @return string The extensionAttribute4
     */
@@ -119,6 +126,7 @@ class OnPremisesExtensionAttributes extends Entity
 
     /**
     * Sets the extensionAttribute4
+    * Fourth customizable extension attribute.
     *
     * @param string $val The value of the extensionAttribute4
     *
@@ -131,6 +139,7 @@ class OnPremisesExtensionAttributes extends Entity
     }
     /**
     * Gets the extensionAttribute5
+    * Fifth customizable extension attribute.
     *
     * @return string The extensionAttribute5
     */
@@ -145,6 +154,7 @@ class OnPremisesExtensionAttributes extends Entity
 
     /**
     * Sets the extensionAttribute5
+    * Fifth customizable extension attribute.
     *
     * @param string $val The value of the extensionAttribute5
     *
@@ -157,6 +167,7 @@ class OnPremisesExtensionAttributes extends Entity
     }
     /**
     * Gets the extensionAttribute6
+    * Sixth customizable extension attribute.
     *
     * @return string The extensionAttribute6
     */
@@ -171,6 +182,7 @@ class OnPremisesExtensionAttributes extends Entity
 
     /**
     * Sets the extensionAttribute6
+    * Sixth customizable extension attribute.
     *
     * @param string $val The value of the extensionAttribute6
     *
@@ -183,6 +195,7 @@ class OnPremisesExtensionAttributes extends Entity
     }
     /**
     * Gets the extensionAttribute7
+    * Seventh customizable extension attribute.
     *
     * @return string The extensionAttribute7
     */
@@ -197,6 +210,7 @@ class OnPremisesExtensionAttributes extends Entity
 
     /**
     * Sets the extensionAttribute7
+    * Seventh customizable extension attribute.
     *
     * @param string $val The value of the extensionAttribute7
     *
@@ -209,6 +223,7 @@ class OnPremisesExtensionAttributes extends Entity
     }
     /**
     * Gets the extensionAttribute8
+    * Eighth customizable extension attribute.
     *
     * @return string The extensionAttribute8
     */
@@ -223,6 +238,7 @@ class OnPremisesExtensionAttributes extends Entity
 
     /**
     * Sets the extensionAttribute8
+    * Eighth customizable extension attribute.
     *
     * @param string $val The value of the extensionAttribute8
     *
@@ -235,6 +251,7 @@ class OnPremisesExtensionAttributes extends Entity
     }
     /**
     * Gets the extensionAttribute9
+    * Ninth customizable extension attribute.
     *
     * @return string The extensionAttribute9
     */
@@ -249,6 +266,7 @@ class OnPremisesExtensionAttributes extends Entity
 
     /**
     * Sets the extensionAttribute9
+    * Ninth customizable extension attribute.
     *
     * @param string $val The value of the extensionAttribute9
     *
@@ -261,6 +279,7 @@ class OnPremisesExtensionAttributes extends Entity
     }
     /**
     * Gets the extensionAttribute10
+    * Tenth customizable extension attribute.
     *
     * @return string The extensionAttribute10
     */
@@ -275,6 +294,7 @@ class OnPremisesExtensionAttributes extends Entity
 
     /**
     * Sets the extensionAttribute10
+    * Tenth customizable extension attribute.
     *
     * @param string $val The value of the extensionAttribute10
     *
@@ -287,6 +307,7 @@ class OnPremisesExtensionAttributes extends Entity
     }
     /**
     * Gets the extensionAttribute11
+    * Eleventh customizable extension attribute.
     *
     * @return string The extensionAttribute11
     */
@@ -301,6 +322,7 @@ class OnPremisesExtensionAttributes extends Entity
 
     /**
     * Sets the extensionAttribute11
+    * Eleventh customizable extension attribute.
     *
     * @param string $val The value of the extensionAttribute11
     *
@@ -313,6 +335,7 @@ class OnPremisesExtensionAttributes extends Entity
     }
     /**
     * Gets the extensionAttribute12
+    * Twelfth customizable extension attribute.
     *
     * @return string The extensionAttribute12
     */
@@ -327,6 +350,7 @@ class OnPremisesExtensionAttributes extends Entity
 
     /**
     * Sets the extensionAttribute12
+    * Twelfth customizable extension attribute.
     *
     * @param string $val The value of the extensionAttribute12
     *
@@ -339,6 +363,7 @@ class OnPremisesExtensionAttributes extends Entity
     }
     /**
     * Gets the extensionAttribute13
+    * Thirteenth customizable extension attribute.
     *
     * @return string The extensionAttribute13
     */
@@ -353,6 +378,7 @@ class OnPremisesExtensionAttributes extends Entity
 
     /**
     * Sets the extensionAttribute13
+    * Thirteenth customizable extension attribute.
     *
     * @param string $val The value of the extensionAttribute13
     *
@@ -365,6 +391,7 @@ class OnPremisesExtensionAttributes extends Entity
     }
     /**
     * Gets the extensionAttribute14
+    * Fourteenth customizable extension attribute.
     *
     * @return string The extensionAttribute14
     */
@@ -379,6 +406,7 @@ class OnPremisesExtensionAttributes extends Entity
 
     /**
     * Sets the extensionAttribute14
+    * Fourteenth customizable extension attribute.
     *
     * @param string $val The value of the extensionAttribute14
     *
@@ -391,6 +419,7 @@ class OnPremisesExtensionAttributes extends Entity
     }
     /**
     * Gets the extensionAttribute15
+    * Fifteenth customizable extension attribute.
     *
     * @return string The extensionAttribute15
     */
@@ -405,6 +434,7 @@ class OnPremisesExtensionAttributes extends Entity
 
     /**
     * Sets the extensionAttribute15
+    * Fifteenth customizable extension attribute.
     *
     * @param string $val The value of the extensionAttribute15
     *

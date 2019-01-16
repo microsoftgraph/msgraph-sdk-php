@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * MacOSLobApp class
@@ -28,6 +28,7 @@ class MacOSLobApp extends MobileLobApp
 {
     /**
     * Gets the bundleId
+    * The bundle id.
     *
     * @return string The bundleId
     */
@@ -42,6 +43,7 @@ class MacOSLobApp extends MobileLobApp
     
     /**
     * Sets the bundleId
+    * The bundle id.
     *
     * @param string $val The bundleId
     *
@@ -55,13 +57,14 @@ class MacOSLobApp extends MobileLobApp
     
     /**
     * Gets the minimumSupportedOperatingSystem
+    * The value for the minimum applicable operating system.
     *
     * @return MacOSMinimumOperatingSystem The minimumSupportedOperatingSystem
     */
     public function getMinimumSupportedOperatingSystem()
     {
         if (array_key_exists("minimumSupportedOperatingSystem", $this->_propDict)) {
-            if (is_a($this->_propDict["minimumSupportedOperatingSystem"], "Microsoft\Graph\Beta\Model\MacOSMinimumOperatingSystem")) {
+            if (is_a($this->_propDict["minimumSupportedOperatingSystem"], "Microsoft\Graph\Model\MacOSMinimumOperatingSystem")) {
                 return $this->_propDict["minimumSupportedOperatingSystem"];
             } else {
                 $this->_propDict["minimumSupportedOperatingSystem"] = new MacOSMinimumOperatingSystem($this->_propDict["minimumSupportedOperatingSystem"]);
@@ -73,6 +76,7 @@ class MacOSLobApp extends MobileLobApp
     
     /**
     * Sets the minimumSupportedOperatingSystem
+    * The value for the minimum applicable operating system.
     *
     * @param MacOSMinimumOperatingSystem $val The minimumSupportedOperatingSystem
     *
@@ -86,6 +90,7 @@ class MacOSLobApp extends MobileLobApp
     
     /**
     * Gets the buildNumber
+    * The build number of MacOS Line of Business (LoB) app.
     *
     * @return string The buildNumber
     */
@@ -100,6 +105,7 @@ class MacOSLobApp extends MobileLobApp
     
     /**
     * Sets the buildNumber
+    * The build number of MacOS Line of Business (LoB) app.
     *
     * @param string $val The buildNumber
     *
@@ -113,6 +119,7 @@ class MacOSLobApp extends MobileLobApp
     
     /**
     * Gets the versionNumber
+    * The version number of MacOS Line of Business (LoB) app.
     *
     * @return string The versionNumber
     */
@@ -127,6 +134,7 @@ class MacOSLobApp extends MobileLobApp
     
     /**
     * Sets the versionNumber
+    * The version number of MacOS Line of Business (LoB) app.
     *
     * @param string $val The versionNumber
     *
@@ -141,6 +149,7 @@ class MacOSLobApp extends MobileLobApp
 
      /** 
      * Gets the childApps
+    * The app list in this bundle package
      *
      * @return array The childApps
      */
@@ -155,6 +164,7 @@ class MacOSLobApp extends MobileLobApp
     
     /** 
     * Sets the childApps
+    * The app list in this bundle package
     *
     * @param MacOSLobChildApp $val The childApps
     *
@@ -168,6 +178,7 @@ class MacOSLobApp extends MobileLobApp
     
     /**
     * Gets the identityVersion
+    * The identity version.
     *
     * @return string The identityVersion
     */
@@ -182,6 +193,7 @@ class MacOSLobApp extends MobileLobApp
     
     /**
     * Sets the identityVersion
+    * The identity version.
     *
     * @param string $val The identityVersion
     *
@@ -195,6 +207,7 @@ class MacOSLobApp extends MobileLobApp
     
     /**
     * Gets the md5HashChunkSize
+    * The chunk size for MD5 hash
     *
     * @return int The md5HashChunkSize
     */
@@ -209,6 +222,7 @@ class MacOSLobApp extends MobileLobApp
     
     /**
     * Sets the md5HashChunkSize
+    * The chunk size for MD5 hash
     *
     * @param int $val The md5HashChunkSize
     *
@@ -222,6 +236,7 @@ class MacOSLobApp extends MobileLobApp
     
     /**
     * Gets the md5Hash
+    * The MD5 hash codes
     *
     * @return string The md5Hash
     */
@@ -236,6 +251,7 @@ class MacOSLobApp extends MobileLobApp
     
     /**
     * Sets the md5Hash
+    * The MD5 hash codes
     *
     * @param string $val The md5Hash
     *
@@ -249,6 +265,7 @@ class MacOSLobApp extends MobileLobApp
     
     /**
     * Gets the ignoreVersionDetection
+    * A boolean to control whether the app's version will be used to detect the app after it is installed on a device. Set this to true for macOS Line of Business (LoB) apps that use a self update feature.
     *
     * @return bool The ignoreVersionDetection
     */
@@ -263,6 +280,7 @@ class MacOSLobApp extends MobileLobApp
     
     /**
     * Sets the ignoreVersionDetection
+    * A boolean to control whether the app's version will be used to detect the app after it is installed on a device. Set this to true for macOS Line of Business (LoB) apps that use a self update feature.
     *
     * @param bool $val The ignoreVersionDetection
     *

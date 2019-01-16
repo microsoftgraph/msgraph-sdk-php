@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * Person class
@@ -28,6 +28,7 @@ class Person extends Entity
 {
     /**
     * Gets the displayName
+    * The person's display name.
     *
     * @return string The displayName
     */
@@ -42,6 +43,7 @@ class Person extends Entity
     
     /**
     * Sets the displayName
+    * The person's display name.
     *
     * @param string $val The displayName
     *
@@ -55,6 +57,7 @@ class Person extends Entity
     
     /**
     * Gets the givenName
+    * The person's given name.
     *
     * @return string The givenName
     */
@@ -69,6 +72,7 @@ class Person extends Entity
     
     /**
     * Sets the givenName
+    * The person's given name.
     *
     * @param string $val The givenName
     *
@@ -82,6 +86,7 @@ class Person extends Entity
     
     /**
     * Gets the surname
+    * The person's surname.
     *
     * @return string The surname
     */
@@ -96,6 +101,7 @@ class Person extends Entity
     
     /**
     * Sets the surname
+    * The person's surname.
     *
     * @param string $val The surname
     *
@@ -109,6 +115,7 @@ class Person extends Entity
     
     /**
     * Gets the birthday
+    * The person's birthday.
     *
     * @return string The birthday
     */
@@ -123,6 +130,7 @@ class Person extends Entity
     
     /**
     * Sets the birthday
+    * The person's birthday.
     *
     * @param string $val The birthday
     *
@@ -136,6 +144,7 @@ class Person extends Entity
     
     /**
     * Gets the personNotes
+    * Free-form notes that the user has taken about this person.
     *
     * @return string The personNotes
     */
@@ -150,6 +159,7 @@ class Person extends Entity
     
     /**
     * Sets the personNotes
+    * Free-form notes that the user has taken about this person.
     *
     * @param string $val The personNotes
     *
@@ -163,6 +173,7 @@ class Person extends Entity
     
     /**
     * Gets the isFavorite
+    * true if the user has flagged this person as a favorite.
     *
     * @return bool The isFavorite
     */
@@ -177,6 +188,7 @@ class Person extends Entity
     
     /**
     * Sets the isFavorite
+    * true if the user has flagged this person as a favorite.
     *
     * @param bool $val The isFavorite
     *
@@ -219,6 +231,7 @@ class Person extends Entity
 
      /** 
      * Gets the phones
+    * The person's phone numbers.
      *
      * @return array The phones
      */
@@ -233,6 +246,7 @@ class Person extends Entity
     
     /** 
     * Sets the phones
+    * The person's phone numbers.
     *
     * @param Phone $val The phones
     *
@@ -247,6 +261,7 @@ class Person extends Entity
 
      /** 
      * Gets the postalAddresses
+    * The person's addresses.
      *
      * @return array The postalAddresses
      */
@@ -261,6 +276,7 @@ class Person extends Entity
     
     /** 
     * Sets the postalAddresses
+    * The person's addresses.
     *
     * @param Location $val The postalAddresses
     *
@@ -275,6 +291,7 @@ class Person extends Entity
 
      /** 
      * Gets the websites
+    * The person's websites.
      *
      * @return array The websites
      */
@@ -289,6 +306,7 @@ class Person extends Entity
     
     /** 
     * Sets the websites
+    * The person's websites.
     *
     * @param Website $val The websites
     *
@@ -329,6 +347,7 @@ class Person extends Entity
     
     /**
     * Gets the companyName
+    * The name of the person's company.
     *
     * @return string The companyName
     */
@@ -343,6 +362,7 @@ class Person extends Entity
     
     /**
     * Sets the companyName
+    * The name of the person's company.
     *
     * @param string $val The companyName
     *
@@ -356,6 +376,7 @@ class Person extends Entity
     
     /**
     * Gets the yomiCompany
+    * The phonetic Japanese name of the person's company.
     *
     * @return string The yomiCompany
     */
@@ -370,6 +391,7 @@ class Person extends Entity
     
     /**
     * Sets the yomiCompany
+    * The phonetic Japanese name of the person's company.
     *
     * @param string $val The yomiCompany
     *
@@ -383,6 +405,7 @@ class Person extends Entity
     
     /**
     * Gets the department
+    * The person's department.
     *
     * @return string The department
     */
@@ -397,6 +420,7 @@ class Person extends Entity
     
     /**
     * Sets the department
+    * The person's department.
     *
     * @param string $val The department
     *
@@ -410,6 +434,7 @@ class Person extends Entity
     
     /**
     * Gets the officeLocation
+    * The location of the person's office.
     *
     * @return string The officeLocation
     */
@@ -424,6 +449,7 @@ class Person extends Entity
     
     /**
     * Sets the officeLocation
+    * The location of the person's office.
     *
     * @param string $val The officeLocation
     *
@@ -437,6 +463,7 @@ class Person extends Entity
     
     /**
     * Gets the profession
+    * The person's profession.
     *
     * @return string The profession
     */
@@ -451,6 +478,7 @@ class Person extends Entity
     
     /**
     * Sets the profession
+    * The person's profession.
     *
     * @param string $val The profession
     *
@@ -519,6 +547,7 @@ class Person extends Entity
     
     /**
     * Gets the personType
+    * The type of person.
     *
     * @return string The personType
     */
@@ -533,6 +562,7 @@ class Person extends Entity
     
     /**
     * Sets the personType
+    * The type of person.
     *
     * @param string $val The personType
     *
@@ -546,6 +576,7 @@ class Person extends Entity
     
     /**
     * Gets the userPrincipalName
+    * The user principal name (UPN) of the person. The UPN is an Internet-style login name for the person based on the Internet standard RFC 822. By convention, this should map to the person's email name. The general format is alias@domain.
     *
     * @return string The userPrincipalName
     */
@@ -560,6 +591,7 @@ class Person extends Entity
     
     /**
     * Sets the userPrincipalName
+    * The user principal name (UPN) of the person. The UPN is an Internet-style login name for the person based on the Internet standard RFC 822. By convention, this should map to the person's email name. The general format is alias@domain.
     *
     * @param string $val The userPrincipalName
     *

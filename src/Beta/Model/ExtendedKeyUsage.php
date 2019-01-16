@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * ExtendedKeyUsage class
 *
@@ -27,6 +27,7 @@ class ExtendedKeyUsage extends Entity
 {
     /**
     * Gets the name
+    * Extended Key Usage Name
     *
     * @return string The name
     */
@@ -41,6 +42,7 @@ class ExtendedKeyUsage extends Entity
 
     /**
     * Sets the name
+    * Extended Key Usage Name
     *
     * @param string $val The value of the name
     *
@@ -53,6 +55,7 @@ class ExtendedKeyUsage extends Entity
     }
     /**
     * Gets the objectIdentifier
+    * Extended Key Usage Object Identifier
     *
     * @return string The objectIdentifier
     */
@@ -67,6 +70,7 @@ class ExtendedKeyUsage extends Entity
 
     /**
     * Sets the objectIdentifier
+    * Extended Key Usage Object Identifier
     *
     * @param string $val The value of the objectIdentifier
     *

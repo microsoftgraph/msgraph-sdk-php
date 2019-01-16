@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * VpnOnDemandRule class
 *
@@ -27,6 +27,7 @@ class VpnOnDemandRule extends Entity
 {
     /**
     * Gets the ssids
+    * Network Service Set Identifiers (SSIDs).
     *
     * @return string The ssids
     */
@@ -41,6 +42,7 @@ class VpnOnDemandRule extends Entity
 
     /**
     * Sets the ssids
+    * Network Service Set Identifiers (SSIDs).
     *
     * @param string $val The value of the ssids
     *
@@ -53,6 +55,7 @@ class VpnOnDemandRule extends Entity
     }
     /**
     * Gets the dnsSearchDomains
+    * DNS Search Domains.
     *
     * @return string The dnsSearchDomains
     */
@@ -67,6 +70,7 @@ class VpnOnDemandRule extends Entity
 
     /**
     * Sets the dnsSearchDomains
+    * DNS Search Domains.
     *
     * @param string $val The value of the dnsSearchDomains
     *
@@ -79,6 +83,7 @@ class VpnOnDemandRule extends Entity
     }
     /**
     * Gets the probeUrl
+    * A URL to probe. If this URL is successfully fetched (returning a 200 HTTP status code) without redirection, this rule matches.
     *
     * @return string The probeUrl
     */
@@ -93,6 +98,7 @@ class VpnOnDemandRule extends Entity
 
     /**
     * Sets the probeUrl
+    * A URL to probe. If this URL is successfully fetched (returning a 200 HTTP status code) without redirection, this rule matches.
     *
     * @param string $val The value of the probeUrl
     *
@@ -106,13 +112,14 @@ class VpnOnDemandRule extends Entity
 
     /**
     * Gets the action
+    * Action.
     *
     * @return VpnOnDemandRuleConnectionAction The action
     */
     public function getAction()
     {
         if (array_key_exists("action", $this->_propDict)) {
-            if (is_a($this->_propDict["action"], "Microsoft\Graph\Beta\Model\VpnOnDemandRuleConnectionAction")) {
+            if (is_a($this->_propDict["action"], "Microsoft\Graph\Model\VpnOnDemandRuleConnectionAction")) {
                 return $this->_propDict["action"];
             } else {
                 $this->_propDict["action"] = new VpnOnDemandRuleConnectionAction($this->_propDict["action"]);
@@ -124,6 +131,7 @@ class VpnOnDemandRule extends Entity
 
     /**
     * Sets the action
+    * Action.
     *
     * @param VpnOnDemandRuleConnectionAction $val The value to assign to the action
     *
@@ -137,13 +145,14 @@ class VpnOnDemandRule extends Entity
 
     /**
     * Gets the domainAction
+    * Domain Action (Only applicable when Action is evaluate connection).
     *
     * @return VpnOnDemandRuleConnectionDomainAction The domainAction
     */
     public function getDomainAction()
     {
         if (array_key_exists("domainAction", $this->_propDict)) {
-            if (is_a($this->_propDict["domainAction"], "Microsoft\Graph\Beta\Model\VpnOnDemandRuleConnectionDomainAction")) {
+            if (is_a($this->_propDict["domainAction"], "Microsoft\Graph\Model\VpnOnDemandRuleConnectionDomainAction")) {
                 return $this->_propDict["domainAction"];
             } else {
                 $this->_propDict["domainAction"] = new VpnOnDemandRuleConnectionDomainAction($this->_propDict["domainAction"]);
@@ -155,6 +164,7 @@ class VpnOnDemandRule extends Entity
 
     /**
     * Sets the domainAction
+    * Domain Action (Only applicable when Action is evaluate connection).
     *
     * @param VpnOnDemandRuleConnectionDomainAction $val The value to assign to the domainAction
     *
@@ -167,6 +177,7 @@ class VpnOnDemandRule extends Entity
     }
     /**
     * Gets the domains
+    * Domains (Only applicable when Action is evaluate connection).
     *
     * @return string The domains
     */
@@ -181,6 +192,7 @@ class VpnOnDemandRule extends Entity
 
     /**
     * Sets the domains
+    * Domains (Only applicable when Action is evaluate connection).
     *
     * @param string $val The value of the domains
     *
@@ -193,6 +205,7 @@ class VpnOnDemandRule extends Entity
     }
     /**
     * Gets the probeRequiredUrl
+    * Probe Required Url (Only applicable when Action is evaluate connection and DomainAction is connect if needed).
     *
     * @return string The probeRequiredUrl
     */
@@ -207,6 +220,7 @@ class VpnOnDemandRule extends Entity
 
     /**
     * Sets the probeRequiredUrl
+    * Probe Required Url (Only applicable when Action is evaluate connection and DomainAction is connect if needed).
     *
     * @param string $val The value of the probeRequiredUrl
     *

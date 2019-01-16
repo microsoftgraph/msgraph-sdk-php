@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * ExcludedApps class
 *
@@ -27,6 +27,7 @@ class ExcludedApps extends Entity
 {
     /**
     * Gets the access
+    * The value for if MS Office Access should be excluded or not.
     *
     * @return bool The access
     */
@@ -41,6 +42,7 @@ class ExcludedApps extends Entity
 
     /**
     * Sets the access
+    * The value for if MS Office Access should be excluded or not.
     *
     * @param bool $val The value of the access
     *
@@ -53,6 +55,7 @@ class ExcludedApps extends Entity
     }
     /**
     * Gets the excel
+    * The value for if MS Office Excel should be excluded or not.
     *
     * @return bool The excel
     */
@@ -67,6 +70,7 @@ class ExcludedApps extends Entity
 
     /**
     * Sets the excel
+    * The value for if MS Office Excel should be excluded or not.
     *
     * @param bool $val The value of the excel
     *
@@ -79,6 +83,7 @@ class ExcludedApps extends Entity
     }
     /**
     * Gets the groove
+    * The value for if MS Office OneDrive for Business - Groove should be excluded or not.
     *
     * @return bool The groove
     */
@@ -93,6 +98,7 @@ class ExcludedApps extends Entity
 
     /**
     * Sets the groove
+    * The value for if MS Office OneDrive for Business - Groove should be excluded or not.
     *
     * @param bool $val The value of the groove
     *
@@ -105,6 +111,7 @@ class ExcludedApps extends Entity
     }
     /**
     * Gets the infoPath
+    * The value for if MS Office InfoPath should be excluded or not.
     *
     * @return bool The infoPath
     */
@@ -119,6 +126,7 @@ class ExcludedApps extends Entity
 
     /**
     * Sets the infoPath
+    * The value for if MS Office InfoPath should be excluded or not.
     *
     * @param bool $val The value of the infoPath
     *
@@ -131,6 +139,7 @@ class ExcludedApps extends Entity
     }
     /**
     * Gets the lync
+    * The value for if MS Office Skype for Business - Lync should be excluded or not.
     *
     * @return bool The lync
     */
@@ -145,6 +154,7 @@ class ExcludedApps extends Entity
 
     /**
     * Sets the lync
+    * The value for if MS Office Skype for Business - Lync should be excluded or not.
     *
     * @param bool $val The value of the lync
     *
@@ -157,6 +167,7 @@ class ExcludedApps extends Entity
     }
     /**
     * Gets the oneDrive
+    * The value for if MS Office OneDrive should be excluded or not.
     *
     * @return bool The oneDrive
     */
@@ -171,6 +182,7 @@ class ExcludedApps extends Entity
 
     /**
     * Sets the oneDrive
+    * The value for if MS Office OneDrive should be excluded or not.
     *
     * @param bool $val The value of the oneDrive
     *
@@ -183,6 +195,7 @@ class ExcludedApps extends Entity
     }
     /**
     * Gets the oneNote
+    * The value for if MS Office OneNote should be excluded or not.
     *
     * @return bool The oneNote
     */
@@ -197,6 +210,7 @@ class ExcludedApps extends Entity
 
     /**
     * Sets the oneNote
+    * The value for if MS Office OneNote should be excluded or not.
     *
     * @param bool $val The value of the oneNote
     *
@@ -209,6 +223,7 @@ class ExcludedApps extends Entity
     }
     /**
     * Gets the outlook
+    * The value for if MS Office Outlook should be excluded or not.
     *
     * @return bool The outlook
     */
@@ -223,6 +238,7 @@ class ExcludedApps extends Entity
 
     /**
     * Sets the outlook
+    * The value for if MS Office Outlook should be excluded or not.
     *
     * @param bool $val The value of the outlook
     *
@@ -235,6 +251,7 @@ class ExcludedApps extends Entity
     }
     /**
     * Gets the powerPoint
+    * The value for if MS Office PowerPoint should be excluded or not.
     *
     * @return bool The powerPoint
     */
@@ -249,6 +266,7 @@ class ExcludedApps extends Entity
 
     /**
     * Sets the powerPoint
+    * The value for if MS Office PowerPoint should be excluded or not.
     *
     * @param bool $val The value of the powerPoint
     *
@@ -261,6 +279,7 @@ class ExcludedApps extends Entity
     }
     /**
     * Gets the publisher
+    * The value for if MS Office Publisher should be excluded or not.
     *
     * @return bool The publisher
     */
@@ -275,6 +294,7 @@ class ExcludedApps extends Entity
 
     /**
     * Sets the publisher
+    * The value for if MS Office Publisher should be excluded or not.
     *
     * @param bool $val The value of the publisher
     *
@@ -287,6 +307,7 @@ class ExcludedApps extends Entity
     }
     /**
     * Gets the sharePointDesigner
+    * The value for if MS Office SharePointDesigner should be excluded or not.
     *
     * @return bool The sharePointDesigner
     */
@@ -301,6 +322,7 @@ class ExcludedApps extends Entity
 
     /**
     * Sets the sharePointDesigner
+    * The value for if MS Office SharePointDesigner should be excluded or not.
     *
     * @param bool $val The value of the sharePointDesigner
     *
@@ -313,6 +335,7 @@ class ExcludedApps extends Entity
     }
     /**
     * Gets the visio
+    * The value for if MS Office Visio should be excluded or not.
     *
     * @return bool The visio
     */
@@ -327,6 +350,7 @@ class ExcludedApps extends Entity
 
     /**
     * Sets the visio
+    * The value for if MS Office Visio should be excluded or not.
     *
     * @param bool $val The value of the visio
     *
@@ -339,6 +363,7 @@ class ExcludedApps extends Entity
     }
     /**
     * Gets the word
+    * The value for if MS Office Word should be excluded or not.
     *
     * @return bool The word
     */
@@ -353,6 +378,7 @@ class ExcludedApps extends Entity
 
     /**
     * Sets the word
+    * The value for if MS Office Word should be excluded or not.
     *
     * @param bool $val The value of the word
     *

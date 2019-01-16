@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * DeviceComplianceUserOverview class
@@ -28,6 +28,7 @@ class DeviceComplianceUserOverview extends Entity
 {
     /**
     * Gets the pendingCount
+    * Number of pending Users
     *
     * @return int The pendingCount
     */
@@ -42,6 +43,7 @@ class DeviceComplianceUserOverview extends Entity
     
     /**
     * Sets the pendingCount
+    * Number of pending Users
     *
     * @param int $val The pendingCount
     *
@@ -55,6 +57,7 @@ class DeviceComplianceUserOverview extends Entity
     
     /**
     * Gets the notApplicableCount
+    * Number of not applicable users
     *
     * @return int The notApplicableCount
     */
@@ -69,6 +72,7 @@ class DeviceComplianceUserOverview extends Entity
     
     /**
     * Sets the notApplicableCount
+    * Number of not applicable users
     *
     * @param int $val The notApplicableCount
     *
@@ -82,6 +86,7 @@ class DeviceComplianceUserOverview extends Entity
     
     /**
     * Gets the successCount
+    * Number of succeeded Users
     *
     * @return int The successCount
     */
@@ -96,6 +101,7 @@ class DeviceComplianceUserOverview extends Entity
     
     /**
     * Sets the successCount
+    * Number of succeeded Users
     *
     * @param int $val The successCount
     *
@@ -109,6 +115,7 @@ class DeviceComplianceUserOverview extends Entity
     
     /**
     * Gets the errorCount
+    * Number of error Users
     *
     * @return int The errorCount
     */
@@ -123,6 +130,7 @@ class DeviceComplianceUserOverview extends Entity
     
     /**
     * Sets the errorCount
+    * Number of error Users
     *
     * @param int $val The errorCount
     *
@@ -136,6 +144,7 @@ class DeviceComplianceUserOverview extends Entity
     
     /**
     * Gets the failedCount
+    * Number of failed Users
     *
     * @return int The failedCount
     */
@@ -150,6 +159,7 @@ class DeviceComplianceUserOverview extends Entity
     
     /**
     * Sets the failedCount
+    * Number of failed Users
     *
     * @param int $val The failedCount
     *
@@ -163,6 +173,7 @@ class DeviceComplianceUserOverview extends Entity
     
     /**
     * Gets the conflictCount
+    * Number of users in conflict
     *
     * @return int The conflictCount
     */
@@ -177,6 +188,7 @@ class DeviceComplianceUserOverview extends Entity
     
     /**
     * Sets the conflictCount
+    * Number of users in conflict
     *
     * @param int $val The conflictCount
     *
@@ -190,6 +202,7 @@ class DeviceComplianceUserOverview extends Entity
     
     /**
     * Gets the lastUpdateDateTime
+    * Last update time
     *
     * @return \DateTime The lastUpdateDateTime
     */
@@ -208,6 +221,7 @@ class DeviceComplianceUserOverview extends Entity
     
     /**
     * Sets the lastUpdateDateTime
+    * Last update time
     *
     * @param \DateTime $val The lastUpdateDateTime
     *
@@ -221,6 +235,7 @@ class DeviceComplianceUserOverview extends Entity
     
     /**
     * Gets the configurationVersion
+    * Version of the policy for that overview
     *
     * @return int The configurationVersion
     */
@@ -235,6 +250,7 @@ class DeviceComplianceUserOverview extends Entity
     
     /**
     * Sets the configurationVersion
+    * Version of the policy for that overview
     *
     * @param int $val The configurationVersion
     *

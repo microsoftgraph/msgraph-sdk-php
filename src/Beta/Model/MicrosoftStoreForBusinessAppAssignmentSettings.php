@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * MicrosoftStoreForBusinessAppAssignmentSettings class
 *
@@ -26,7 +26,17 @@ namespace Microsoft\Graph\Beta\Model;
 class MicrosoftStoreForBusinessAppAssignmentSettings extends MobileAppAssignmentSettings
 {
     /**
+    * Set the @odata.type since this type is immediately descended from an abstract
+    * type that is referenced as the type in an entity.
+    */
+    public function __construct()
+    {
+        $this->setODataType("#microsoft.graph.microsoftStoreForBusinessAppAssignmentSettings");
+    }
+
+    /**
     * Gets the useDeviceContext
+    * Whether or not to use device execution context for Microsoft Store for Business mobile app.
     *
     * @return bool The useDeviceContext
     */
@@ -41,6 +51,7 @@ class MicrosoftStoreForBusinessAppAssignmentSettings extends MobileAppAssignment
 
     /**
     * Sets the useDeviceContext
+    * Whether or not to use device execution context for Microsoft Store for Business mobile app.
     *
     * @param bool $val The value of the useDeviceContext
     *

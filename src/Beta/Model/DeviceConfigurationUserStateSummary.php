@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * DeviceConfigurationUserStateSummary class
@@ -28,6 +28,7 @@ class DeviceConfigurationUserStateSummary extends Entity
 {
     /**
     * Gets the unknownUserCount
+    * Number of unknown users
     *
     * @return int The unknownUserCount
     */
@@ -42,6 +43,7 @@ class DeviceConfigurationUserStateSummary extends Entity
     
     /**
     * Sets the unknownUserCount
+    * Number of unknown users
     *
     * @param int $val The unknownUserCount
     *
@@ -55,6 +57,7 @@ class DeviceConfigurationUserStateSummary extends Entity
     
     /**
     * Gets the notApplicableUserCount
+    * Number of not applicable users
     *
     * @return int The notApplicableUserCount
     */
@@ -69,6 +72,7 @@ class DeviceConfigurationUserStateSummary extends Entity
     
     /**
     * Sets the notApplicableUserCount
+    * Number of not applicable users
     *
     * @param int $val The notApplicableUserCount
     *
@@ -82,6 +86,7 @@ class DeviceConfigurationUserStateSummary extends Entity
     
     /**
     * Gets the compliantUserCount
+    * Number of compliant users
     *
     * @return int The compliantUserCount
     */
@@ -96,6 +101,7 @@ class DeviceConfigurationUserStateSummary extends Entity
     
     /**
     * Sets the compliantUserCount
+    * Number of compliant users
     *
     * @param int $val The compliantUserCount
     *
@@ -109,6 +115,7 @@ class DeviceConfigurationUserStateSummary extends Entity
     
     /**
     * Gets the remediatedUserCount
+    * Number of remediated users
     *
     * @return int The remediatedUserCount
     */
@@ -123,6 +130,7 @@ class DeviceConfigurationUserStateSummary extends Entity
     
     /**
     * Sets the remediatedUserCount
+    * Number of remediated users
     *
     * @param int $val The remediatedUserCount
     *
@@ -136,6 +144,7 @@ class DeviceConfigurationUserStateSummary extends Entity
     
     /**
     * Gets the nonCompliantUserCount
+    * Number of NonCompliant users
     *
     * @return int The nonCompliantUserCount
     */
@@ -150,6 +159,7 @@ class DeviceConfigurationUserStateSummary extends Entity
     
     /**
     * Sets the nonCompliantUserCount
+    * Number of NonCompliant users
     *
     * @param int $val The nonCompliantUserCount
     *
@@ -163,6 +173,7 @@ class DeviceConfigurationUserStateSummary extends Entity
     
     /**
     * Gets the errorUserCount
+    * Number of error users
     *
     * @return int The errorUserCount
     */
@@ -177,6 +188,7 @@ class DeviceConfigurationUserStateSummary extends Entity
     
     /**
     * Sets the errorUserCount
+    * Number of error users
     *
     * @param int $val The errorUserCount
     *
@@ -190,6 +202,7 @@ class DeviceConfigurationUserStateSummary extends Entity
     
     /**
     * Gets the conflictUserCount
+    * Number of conflict users
     *
     * @return int The conflictUserCount
     */
@@ -204,6 +217,7 @@ class DeviceConfigurationUserStateSummary extends Entity
     
     /**
     * Sets the conflictUserCount
+    * Number of conflict users
     *
     * @param int $val The conflictUserCount
     *

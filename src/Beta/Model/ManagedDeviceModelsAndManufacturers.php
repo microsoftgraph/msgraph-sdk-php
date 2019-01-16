@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * ManagedDeviceModelsAndManufacturers class
 *
@@ -27,6 +27,7 @@ class ManagedDeviceModelsAndManufacturers extends Entity
 {
     /**
     * Gets the deviceModels
+    * List of Models for managed devices in the account
     *
     * @return string The deviceModels
     */
@@ -41,6 +42,7 @@ class ManagedDeviceModelsAndManufacturers extends Entity
 
     /**
     * Sets the deviceModels
+    * List of Models for managed devices in the account
     *
     * @param string $val The value of the deviceModels
     *
@@ -53,6 +55,7 @@ class ManagedDeviceModelsAndManufacturers extends Entity
     }
     /**
     * Gets the deviceManufacturers
+    * List of Manufactures for managed devices in the account
     *
     * @return string The deviceManufacturers
     */
@@ -67,6 +70,7 @@ class ManagedDeviceModelsAndManufacturers extends Entity
 
     /**
     * Sets the deviceManufacturers
+    * List of Manufactures for managed devices in the account
     *
     * @param string $val The value of the deviceManufacturers
     *

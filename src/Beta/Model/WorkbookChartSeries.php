@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * WorkbookChartSeries class
@@ -28,6 +28,7 @@ class WorkbookChartSeries extends Entity
 {
     /**
     * Gets the name
+    * Represents the name of a series in a chart.
     *
     * @return string The name
     */
@@ -42,6 +43,7 @@ class WorkbookChartSeries extends Entity
     
     /**
     * Sets the name
+    * Represents the name of a series in a chart.
     *
     * @param string $val The name
     *
@@ -55,13 +57,14 @@ class WorkbookChartSeries extends Entity
     
     /**
     * Gets the format
+    * Represents the formatting of a chart series, which includes fill and line formatting. Read-only.
     *
     * @return WorkbookChartSeriesFormat The format
     */
     public function getFormat()
     {
         if (array_key_exists("format", $this->_propDict)) {
-            if (is_a($this->_propDict["format"], "Microsoft\Graph\Beta\Model\WorkbookChartSeriesFormat")) {
+            if (is_a($this->_propDict["format"], "Microsoft\Graph\Model\WorkbookChartSeriesFormat")) {
                 return $this->_propDict["format"];
             } else {
                 $this->_propDict["format"] = new WorkbookChartSeriesFormat($this->_propDict["format"]);
@@ -73,6 +76,7 @@ class WorkbookChartSeries extends Entity
     
     /**
     * Sets the format
+    * Represents the formatting of a chart series, which includes fill and line formatting. Read-only.
     *
     * @param WorkbookChartSeriesFormat $val The format
     *
@@ -87,6 +91,7 @@ class WorkbookChartSeries extends Entity
 
      /** 
      * Gets the points
+    * Represents a collection of all points in the series. Read-only.
      *
      * @return array The points
      */
@@ -101,6 +106,7 @@ class WorkbookChartSeries extends Entity
     
     /** 
     * Sets the points
+    * Represents a collection of all points in the series. Read-only.
     *
     * @param WorkbookChartPoint $val The points
     *

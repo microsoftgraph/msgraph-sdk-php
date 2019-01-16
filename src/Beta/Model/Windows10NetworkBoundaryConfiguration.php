@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * Windows10NetworkBoundaryConfiguration class
@@ -28,13 +28,14 @@ class Windows10NetworkBoundaryConfiguration extends DeviceConfiguration
 {
     /**
     * Gets the windowsNetworkIsolationPolicy
+    * Windows Network Isolation Policy
     *
     * @return WindowsNetworkIsolationPolicy The windowsNetworkIsolationPolicy
     */
     public function getWindowsNetworkIsolationPolicy()
     {
         if (array_key_exists("windowsNetworkIsolationPolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["windowsNetworkIsolationPolicy"], "Microsoft\Graph\Beta\Model\WindowsNetworkIsolationPolicy")) {
+            if (is_a($this->_propDict["windowsNetworkIsolationPolicy"], "Microsoft\Graph\Model\WindowsNetworkIsolationPolicy")) {
                 return $this->_propDict["windowsNetworkIsolationPolicy"];
             } else {
                 $this->_propDict["windowsNetworkIsolationPolicy"] = new WindowsNetworkIsolationPolicy($this->_propDict["windowsNetworkIsolationPolicy"]);
@@ -46,6 +47,7 @@ class Windows10NetworkBoundaryConfiguration extends DeviceConfiguration
     
     /**
     * Sets the windowsNetworkIsolationPolicy
+    * Windows Network Isolation Policy
     *
     * @param WindowsNetworkIsolationPolicy $val The windowsNetworkIsolationPolicy
     *

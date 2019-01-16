@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * WindowsKioskProfile class
 *
@@ -27,6 +27,7 @@ class WindowsKioskProfile extends Entity
 {
     /**
     * Gets the profileId
+    * Key of the entity.
     *
     * @return string The profileId
     */
@@ -41,6 +42,7 @@ class WindowsKioskProfile extends Entity
 
     /**
     * Sets the profileId
+    * Key of the entity.
     *
     * @param string $val The value of the profileId
     *
@@ -53,6 +55,7 @@ class WindowsKioskProfile extends Entity
     }
     /**
     * Gets the profileName
+    * This is a friendly nameÂ used to identify a group of applications, the layout of these apps on the start menu and the users to whom this kiosk configuration is assigned.
     *
     * @return string The profileName
     */
@@ -67,6 +70,7 @@ class WindowsKioskProfile extends Entity
 
     /**
     * Sets the profileName
+    * This is a friendly nameÂ used to identify a group of applications, the layout of these apps on the start menu and the users to whom this kiosk configuration is assigned.
     *
     * @param string $val The value of the profileName
     *
@@ -80,13 +84,14 @@ class WindowsKioskProfile extends Entity
 
     /**
     * Gets the appConfiguration
+    * The App configuration that will be used for this kiosk configuration.
     *
     * @return WindowsKioskAppConfiguration The appConfiguration
     */
     public function getAppConfiguration()
     {
         if (array_key_exists("appConfiguration", $this->_propDict)) {
-            if (is_a($this->_propDict["appConfiguration"], "Microsoft\Graph\Beta\Model\WindowsKioskAppConfiguration")) {
+            if (is_a($this->_propDict["appConfiguration"], "Microsoft\Graph\Model\WindowsKioskAppConfiguration")) {
                 return $this->_propDict["appConfiguration"];
             } else {
                 $this->_propDict["appConfiguration"] = new WindowsKioskAppConfiguration($this->_propDict["appConfiguration"]);
@@ -98,6 +103,7 @@ class WindowsKioskProfile extends Entity
 
     /**
     * Sets the appConfiguration
+    * The App configuration that will be used for this kiosk configuration.
     *
     * @param WindowsKioskAppConfiguration $val The value to assign to the appConfiguration
     *
@@ -111,13 +117,14 @@ class WindowsKioskProfile extends Entity
 
     /**
     * Gets the userAccountsConfiguration
+    * The user accounts that will be locked to this kiosk configuration. This collection can contain a maximum of 100 elements.
     *
     * @return WindowsKioskUser The userAccountsConfiguration
     */
     public function getUserAccountsConfiguration()
     {
         if (array_key_exists("userAccountsConfiguration", $this->_propDict)) {
-            if (is_a($this->_propDict["userAccountsConfiguration"], "Microsoft\Graph\Beta\Model\WindowsKioskUser")) {
+            if (is_a($this->_propDict["userAccountsConfiguration"], "Microsoft\Graph\Model\WindowsKioskUser")) {
                 return $this->_propDict["userAccountsConfiguration"];
             } else {
                 $this->_propDict["userAccountsConfiguration"] = new WindowsKioskUser($this->_propDict["userAccountsConfiguration"]);
@@ -129,6 +136,7 @@ class WindowsKioskProfile extends Entity
 
     /**
     * Sets the userAccountsConfiguration
+    * The user accounts that will be locked to this kiosk configuration. This collection can contain a maximum of 100 elements.
     *
     * @param WindowsKioskUser $val The value to assign to the userAccountsConfiguration
     *

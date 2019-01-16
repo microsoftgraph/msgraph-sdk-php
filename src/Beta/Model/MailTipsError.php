@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * MailTipsError class
 *
@@ -27,6 +27,7 @@ class MailTipsError extends Entity
 {
     /**
     * Gets the message
+    * The error message.
     *
     * @return string The message
     */
@@ -41,6 +42,7 @@ class MailTipsError extends Entity
 
     /**
     * Sets the message
+    * The error message.
     *
     * @param string $val The value of the message
     *
@@ -53,6 +55,7 @@ class MailTipsError extends Entity
     }
     /**
     * Gets the code
+    * The error code.
     *
     * @return string The code
     */
@@ -67,6 +70,7 @@ class MailTipsError extends Entity
 
     /**
     * Sets the code
+    * The error code.
     *
     * @param string $val The value of the code
     *

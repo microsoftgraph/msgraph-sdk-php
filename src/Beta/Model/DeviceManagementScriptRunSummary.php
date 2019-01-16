@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * DeviceManagementScriptRunSummary class
@@ -28,6 +28,7 @@ class DeviceManagementScriptRunSummary extends Entity
 {
     /**
     * Gets the successDeviceCount
+    * Success device count.
     *
     * @return int The successDeviceCount
     */
@@ -42,6 +43,7 @@ class DeviceManagementScriptRunSummary extends Entity
     
     /**
     * Sets the successDeviceCount
+    * Success device count.
     *
     * @param int $val The successDeviceCount
     *
@@ -55,6 +57,7 @@ class DeviceManagementScriptRunSummary extends Entity
     
     /**
     * Gets the errorDeviceCount
+    * Error device count.
     *
     * @return int The errorDeviceCount
     */
@@ -69,6 +72,7 @@ class DeviceManagementScriptRunSummary extends Entity
     
     /**
     * Sets the errorDeviceCount
+    * Error device count.
     *
     * @param int $val The errorDeviceCount
     *
@@ -82,6 +86,7 @@ class DeviceManagementScriptRunSummary extends Entity
     
     /**
     * Gets the successUserCount
+    * Success user count.
     *
     * @return int The successUserCount
     */
@@ -96,6 +101,7 @@ class DeviceManagementScriptRunSummary extends Entity
     
     /**
     * Sets the successUserCount
+    * Success user count.
     *
     * @param int $val The successUserCount
     *
@@ -109,6 +115,7 @@ class DeviceManagementScriptRunSummary extends Entity
     
     /**
     * Gets the errorUserCount
+    * Error user count.
     *
     * @return int The errorUserCount
     */
@@ -123,6 +130,7 @@ class DeviceManagementScriptRunSummary extends Entity
     
     /**
     * Sets the errorUserCount
+    * Error user count.
     *
     * @param int $val The errorUserCount
     *

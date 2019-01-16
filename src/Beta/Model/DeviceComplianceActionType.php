@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 use Microsoft\Graph\Core\Enum;
 
@@ -38,4 +38,5 @@ class DeviceComplianceActionType extends Enum
     const WIPE = "wipe";
     const REMOVE_RESOURCE_ACCESS_PROFILES = "removeResourceAccessProfiles";
     const PUSH_NOTIFICATION = "pushNotification";
+    const REMOTE_LOCK = "remoteLock";
 }

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * AttributeMapping class
 *
@@ -86,7 +86,7 @@ class AttributeMapping extends Entity
     public function getFlowBehavior()
     {
         if (array_key_exists("flowBehavior", $this->_propDict)) {
-            if (is_a($this->_propDict["flowBehavior"], "Microsoft\Graph\Beta\Model\AttributeFlowBehavior")) {
+            if (is_a($this->_propDict["flowBehavior"], "Microsoft\Graph\Model\AttributeFlowBehavior")) {
                 return $this->_propDict["flowBehavior"];
             } else {
                 $this->_propDict["flowBehavior"] = new AttributeFlowBehavior($this->_propDict["flowBehavior"]);
@@ -117,7 +117,7 @@ class AttributeMapping extends Entity
     public function getFlowType()
     {
         if (array_key_exists("flowType", $this->_propDict)) {
-            if (is_a($this->_propDict["flowType"], "Microsoft\Graph\Beta\Model\AttributeFlowType")) {
+            if (is_a($this->_propDict["flowType"], "Microsoft\Graph\Model\AttributeFlowType")) {
                 return $this->_propDict["flowType"];
             } else {
                 $this->_propDict["flowType"] = new AttributeFlowType($this->_propDict["flowType"]);
@@ -174,7 +174,7 @@ class AttributeMapping extends Entity
     public function getSource()
     {
         if (array_key_exists("source", $this->_propDict)) {
-            if (is_a($this->_propDict["source"], "Microsoft\Graph\Beta\Model\AttributeMappingSource")) {
+            if (is_a($this->_propDict["source"], "Microsoft\Graph\Model\AttributeMappingSource")) {
                 return $this->_propDict["source"];
             } else {
                 $this->_propDict["source"] = new AttributeMappingSource($this->_propDict["source"]);

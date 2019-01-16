@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * ImportedDeviceIdentity class
@@ -28,6 +28,7 @@ class ImportedDeviceIdentity extends Entity
 {
     /**
     * Gets the importedDeviceIdentifier
+    * Imported Device Identifier
     *
     * @return string The importedDeviceIdentifier
     */
@@ -42,6 +43,7 @@ class ImportedDeviceIdentity extends Entity
     
     /**
     * Sets the importedDeviceIdentifier
+    * Imported Device Identifier
     *
     * @param string $val The importedDeviceIdentifier
     *
@@ -55,13 +57,14 @@ class ImportedDeviceIdentity extends Entity
     
     /**
     * Gets the importedDeviceIdentityType
+    * Type of Imported Device Identity
     *
     * @return ImportedDeviceIdentityType The importedDeviceIdentityType
     */
     public function getImportedDeviceIdentityType()
     {
         if (array_key_exists("importedDeviceIdentityType", $this->_propDict)) {
-            if (is_a($this->_propDict["importedDeviceIdentityType"], "Microsoft\Graph\Beta\Model\ImportedDeviceIdentityType")) {
+            if (is_a($this->_propDict["importedDeviceIdentityType"], "Microsoft\Graph\Model\ImportedDeviceIdentityType")) {
                 return $this->_propDict["importedDeviceIdentityType"];
             } else {
                 $this->_propDict["importedDeviceIdentityType"] = new ImportedDeviceIdentityType($this->_propDict["importedDeviceIdentityType"]);
@@ -73,6 +76,7 @@ class ImportedDeviceIdentity extends Entity
     
     /**
     * Sets the importedDeviceIdentityType
+    * Type of Imported Device Identity
     *
     * @param ImportedDeviceIdentityType $val The importedDeviceIdentityType
     *
@@ -86,6 +90,7 @@ class ImportedDeviceIdentity extends Entity
     
     /**
     * Gets the lastModifiedDateTime
+    * Last Modified DateTime of the description
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -104,6 +109,7 @@ class ImportedDeviceIdentity extends Entity
     
     /**
     * Sets the lastModifiedDateTime
+    * Last Modified DateTime of the description
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -117,6 +123,7 @@ class ImportedDeviceIdentity extends Entity
     
     /**
     * Gets the createdDateTime
+    * Created Date Time of the device
     *
     * @return \DateTime The createdDateTime
     */
@@ -135,6 +142,7 @@ class ImportedDeviceIdentity extends Entity
     
     /**
     * Sets the createdDateTime
+    * Created Date Time of the device
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -148,6 +156,7 @@ class ImportedDeviceIdentity extends Entity
     
     /**
     * Gets the lastContactedDateTime
+    * Last Contacted Date Time of the device
     *
     * @return \DateTime The lastContactedDateTime
     */
@@ -166,6 +175,7 @@ class ImportedDeviceIdentity extends Entity
     
     /**
     * Sets the lastContactedDateTime
+    * Last Contacted Date Time of the device
     *
     * @param \DateTime $val The lastContactedDateTime
     *
@@ -179,6 +189,7 @@ class ImportedDeviceIdentity extends Entity
     
     /**
     * Gets the description
+    * The description of the device
     *
     * @return string The description
     */
@@ -193,6 +204,7 @@ class ImportedDeviceIdentity extends Entity
     
     /**
     * Sets the description
+    * The description of the device
     *
     * @param string $val The description
     *
@@ -206,13 +218,14 @@ class ImportedDeviceIdentity extends Entity
     
     /**
     * Gets the enrollmentState
+    * The state of the device in Intune
     *
     * @return EnrollmentState The enrollmentState
     */
     public function getEnrollmentState()
     {
         if (array_key_exists("enrollmentState", $this->_propDict)) {
-            if (is_a($this->_propDict["enrollmentState"], "Microsoft\Graph\Beta\Model\EnrollmentState")) {
+            if (is_a($this->_propDict["enrollmentState"], "Microsoft\Graph\Model\EnrollmentState")) {
                 return $this->_propDict["enrollmentState"];
             } else {
                 $this->_propDict["enrollmentState"] = new EnrollmentState($this->_propDict["enrollmentState"]);
@@ -224,6 +237,7 @@ class ImportedDeviceIdentity extends Entity
     
     /**
     * Sets the enrollmentState
+    * The state of the device in Intune
     *
     * @param EnrollmentState $val The enrollmentState
     *
@@ -237,13 +251,14 @@ class ImportedDeviceIdentity extends Entity
     
     /**
     * Gets the platform
+    * The platform of the Device.
     *
     * @return Platform The platform
     */
     public function getPlatform()
     {
         if (array_key_exists("platform", $this->_propDict)) {
-            if (is_a($this->_propDict["platform"], "Microsoft\Graph\Beta\Model\Platform")) {
+            if (is_a($this->_propDict["platform"], "Microsoft\Graph\Model\Platform")) {
                 return $this->_propDict["platform"];
             } else {
                 $this->_propDict["platform"] = new Platform($this->_propDict["platform"]);
@@ -255,6 +270,7 @@ class ImportedDeviceIdentity extends Entity
     
     /**
     * Sets the platform
+    * The platform of the Device.
     *
     * @param Platform $val The platform
     *

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * BookingService class
@@ -34,7 +34,7 @@ class BookingService extends BookingNamedEntity
     public function getDefaultDuration()
     {
         if (array_key_exists("defaultDuration", $this->_propDict)) {
-            if (is_a($this->_propDict["defaultDuration"], "Microsoft\Graph\Beta\Model\Duration")) {
+            if (is_a($this->_propDict["defaultDuration"], "Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["defaultDuration"];
             } else {
                 $this->_propDict["defaultDuration"] = new Duration($this->_propDict["defaultDuration"]);
@@ -65,7 +65,7 @@ class BookingService extends BookingNamedEntity
     public function getDefaultLocation()
     {
         if (array_key_exists("defaultLocation", $this->_propDict)) {
-            if (is_a($this->_propDict["defaultLocation"], "Microsoft\Graph\Beta\Model\Location")) {
+            if (is_a($this->_propDict["defaultLocation"], "Microsoft\Graph\Model\Location")) {
                 return $this->_propDict["defaultLocation"];
             } else {
                 $this->_propDict["defaultLocation"] = new Location($this->_propDict["defaultLocation"]);
@@ -123,7 +123,7 @@ class BookingService extends BookingNamedEntity
     public function getDefaultPriceType()
     {
         if (array_key_exists("defaultPriceType", $this->_propDict)) {
-            if (is_a($this->_propDict["defaultPriceType"], "Microsoft\Graph\Beta\Model\BookingPriceType")) {
+            if (is_a($this->_propDict["defaultPriceType"], "Microsoft\Graph\Model\BookingPriceType")) {
                 return $this->_propDict["defaultPriceType"];
             } else {
                 $this->_propDict["defaultPriceType"] = new BookingPriceType($this->_propDict["defaultPriceType"]);
@@ -265,7 +265,7 @@ class BookingService extends BookingNamedEntity
     public function getPreBuffer()
     {
         if (array_key_exists("preBuffer", $this->_propDict)) {
-            if (is_a($this->_propDict["preBuffer"], "Microsoft\Graph\Beta\Model\Duration")) {
+            if (is_a($this->_propDict["preBuffer"], "Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["preBuffer"];
             } else {
                 $this->_propDict["preBuffer"] = new Duration($this->_propDict["preBuffer"]);
@@ -296,7 +296,7 @@ class BookingService extends BookingNamedEntity
     public function getPostBuffer()
     {
         if (array_key_exists("postBuffer", $this->_propDict)) {
-            if (is_a($this->_propDict["postBuffer"], "Microsoft\Graph\Beta\Model\Duration")) {
+            if (is_a($this->_propDict["postBuffer"], "Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["postBuffer"];
             } else {
                 $this->_propDict["postBuffer"] = new Duration($this->_propDict["postBuffer"]);
@@ -327,7 +327,7 @@ class BookingService extends BookingNamedEntity
     public function getSchedulingPolicy()
     {
         if (array_key_exists("schedulingPolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["schedulingPolicy"], "Microsoft\Graph\Beta\Model\BookingSchedulingPolicy")) {
+            if (is_a($this->_propDict["schedulingPolicy"], "Microsoft\Graph\Model\BookingSchedulingPolicy")) {
                 return $this->_propDict["schedulingPolicy"];
             } else {
                 $this->_propDict["schedulingPolicy"] = new BookingSchedulingPolicy($this->_propDict["schedulingPolicy"]);

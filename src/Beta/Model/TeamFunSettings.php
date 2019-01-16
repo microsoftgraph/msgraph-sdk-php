@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * TeamFunSettings class
 *
@@ -27,6 +27,7 @@ class TeamFunSettings extends Entity
 {
     /**
     * Gets the allowGiphy
+    * If set to true, enables Giphy use.
     *
     * @return bool The allowGiphy
     */
@@ -41,6 +42,7 @@ class TeamFunSettings extends Entity
 
     /**
     * Sets the allowGiphy
+    * If set to true, enables Giphy use.
     *
     * @param bool $val The value of the allowGiphy
     *
@@ -54,13 +56,14 @@ class TeamFunSettings extends Entity
 
     /**
     * Gets the giphyContentRating
+    * Giphy content rating. Possible values are: moderate, strict.
     *
     * @return GiphyRatingType The giphyContentRating
     */
     public function getGiphyContentRating()
     {
         if (array_key_exists("giphyContentRating", $this->_propDict)) {
-            if (is_a($this->_propDict["giphyContentRating"], "Microsoft\Graph\Beta\Model\GiphyRatingType")) {
+            if (is_a($this->_propDict["giphyContentRating"], "Microsoft\Graph\Model\GiphyRatingType")) {
                 return $this->_propDict["giphyContentRating"];
             } else {
                 $this->_propDict["giphyContentRating"] = new GiphyRatingType($this->_propDict["giphyContentRating"]);
@@ -72,6 +75,7 @@ class TeamFunSettings extends Entity
 
     /**
     * Sets the giphyContentRating
+    * Giphy content rating. Possible values are: moderate, strict.
     *
     * @param GiphyRatingType $val The value to assign to the giphyContentRating
     *
@@ -84,6 +88,7 @@ class TeamFunSettings extends Entity
     }
     /**
     * Gets the allowStickersAndMemes
+    * If set to true, enables users to include stickers and memes.
     *
     * @return bool The allowStickersAndMemes
     */
@@ -98,6 +103,7 @@ class TeamFunSettings extends Entity
 
     /**
     * Sets the allowStickersAndMemes
+    * If set to true, enables users to include stickers and memes.
     *
     * @param bool $val The value of the allowStickersAndMemes
     *
@@ -110,6 +116,7 @@ class TeamFunSettings extends Entity
     }
     /**
     * Gets the allowCustomMemes
+    * If set to true, enables users to include custom memes.
     *
     * @return bool The allowCustomMemes
     */
@@ -124,6 +131,7 @@ class TeamFunSettings extends Entity
 
     /**
     * Sets the allowCustomMemes
+    * If set to true, enables users to include custom memes.
     *
     * @param bool $val The value of the allowCustomMemes
     *

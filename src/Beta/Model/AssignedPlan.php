@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * AssignedPlan class
 *
@@ -28,13 +28,14 @@ class AssignedPlan extends Entity
 
     /**
     * Gets the assignedDateTime
+    * The date and time at which the plan was assigned; for example: 2013-01-02T19:32:30Z. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The assignedDateTime
     */
     public function getAssignedDateTime()
     {
         if (array_key_exists("assignedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["assignedDateTime"], "Microsoft\Graph\Beta\Model\\DateTime")) {
+            if (is_a($this->_propDict["assignedDateTime"], "Microsoft\Graph\Model\\DateTime")) {
                 return $this->_propDict["assignedDateTime"];
             } else {
                 $this->_propDict["assignedDateTime"] = new \DateTime($this->_propDict["assignedDateTime"]);
@@ -46,6 +47,7 @@ class AssignedPlan extends Entity
 
     /**
     * Sets the assignedDateTime
+    * The date and time at which the plan was assigned; for example: 2013-01-02T19:32:30Z. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The value to assign to the assignedDateTime
     *
@@ -58,6 +60,7 @@ class AssignedPlan extends Entity
     }
     /**
     * Gets the capabilityStatus
+    * For example, 'Enabled'.
     *
     * @return string The capabilityStatus
     */
@@ -72,6 +75,7 @@ class AssignedPlan extends Entity
 
     /**
     * Sets the capabilityStatus
+    * For example, 'Enabled'.
     *
     * @param string $val The value of the capabilityStatus
     *
@@ -84,6 +88,7 @@ class AssignedPlan extends Entity
     }
     /**
     * Gets the service
+    * The name of the service; for example, 'Exchange'.
     *
     * @return string The service
     */
@@ -98,6 +103,7 @@ class AssignedPlan extends Entity
 
     /**
     * Sets the service
+    * The name of the service; for example, 'Exchange'.
     *
     * @param string $val The value of the service
     *
@@ -110,6 +116,7 @@ class AssignedPlan extends Entity
     }
     /**
     * Gets the servicePlanId
+    * A GUID that identifies the service plan.
     *
     * @return string The servicePlanId
     */
@@ -124,6 +131,7 @@ class AssignedPlan extends Entity
 
     /**
     * Sets the servicePlanId
+    * A GUID that identifies the service plan.
     *
     * @param string $val The value of the servicePlanId
     *

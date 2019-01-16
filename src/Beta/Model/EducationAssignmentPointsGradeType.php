@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * EducationAssignmentPointsGradeType class
 *
@@ -25,6 +25,15 @@ namespace Microsoft\Graph\Beta\Model;
 */
 class EducationAssignmentPointsGradeType extends EducationAssignmentGradeType
 {
+    /**
+    * Set the @odata.type since this type is immediately descended from an abstract
+    * type that is referenced as the type in an entity.
+    */
+    public function __construct()
+    {
+        $this->setODataType("#microsoft.graph.educationAssignmentPointsGradeType");
+    }
+
 
     /**
     * Gets the maxPoints
@@ -34,7 +43,7 @@ class EducationAssignmentPointsGradeType extends EducationAssignmentGradeType
     public function getMaxPoints()
     {
         if (array_key_exists("maxPoints", $this->_propDict)) {
-            if (is_a($this->_propDict["maxPoints"], "Microsoft\Graph\Beta\Model\Single")) {
+            if (is_a($this->_propDict["maxPoints"], "Microsoft\Graph\Model\Single")) {
                 return $this->_propDict["maxPoints"];
             } else {
                 $this->_propDict["maxPoints"] = new Single($this->_propDict["maxPoints"]);

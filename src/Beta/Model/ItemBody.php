@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * ItemBody class
 *
@@ -28,13 +28,14 @@ class ItemBody extends Entity
 
     /**
     * Gets the contentType
+    * The type of the content. Possible values are Text and HTML.
     *
     * @return BodyType The contentType
     */
     public function getContentType()
     {
         if (array_key_exists("contentType", $this->_propDict)) {
-            if (is_a($this->_propDict["contentType"], "Microsoft\Graph\Beta\Model\BodyType")) {
+            if (is_a($this->_propDict["contentType"], "Microsoft\Graph\Model\BodyType")) {
                 return $this->_propDict["contentType"];
             } else {
                 $this->_propDict["contentType"] = new BodyType($this->_propDict["contentType"]);
@@ -46,6 +47,7 @@ class ItemBody extends Entity
 
     /**
     * Sets the contentType
+    * The type of the content. Possible values are Text and HTML.
     *
     * @param BodyType $val The value to assign to the contentType
     *
@@ -58,6 +60,7 @@ class ItemBody extends Entity
     }
     /**
     * Gets the content
+    * The content of the item.
     *
     * @return string The content
     */
@@ -72,6 +75,7 @@ class ItemBody extends Entity
 
     /**
     * Sets the content
+    * The content of the item.
     *
     * @param string $val The value of the content
     *

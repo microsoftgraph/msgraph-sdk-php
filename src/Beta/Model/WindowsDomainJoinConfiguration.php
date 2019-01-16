@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * WindowsDomainJoinConfiguration class
@@ -28,6 +28,7 @@ class WindowsDomainJoinConfiguration extends DeviceConfiguration
 {
     /**
     * Gets the computerNameStaticPrefix
+    * Fixed prefix to be used for computer name.
     *
     * @return string The computerNameStaticPrefix
     */
@@ -42,6 +43,7 @@ class WindowsDomainJoinConfiguration extends DeviceConfiguration
     
     /**
     * Sets the computerNameStaticPrefix
+    * Fixed prefix to be used for computer name.
     *
     * @param string $val The computerNameStaticPrefix
     *
@@ -55,6 +57,7 @@ class WindowsDomainJoinConfiguration extends DeviceConfiguration
     
     /**
     * Gets the computerNameSuffixRandomCharCount
+    * Dynamically generated characters used as suffix for computer name. Valid values 3 to 14
     *
     * @return int The computerNameSuffixRandomCharCount
     */
@@ -69,6 +72,7 @@ class WindowsDomainJoinConfiguration extends DeviceConfiguration
     
     /**
     * Sets the computerNameSuffixRandomCharCount
+    * Dynamically generated characters used as suffix for computer name. Valid values 3 to 14
     *
     * @param int $val The computerNameSuffixRandomCharCount
     *
@@ -82,6 +86,7 @@ class WindowsDomainJoinConfiguration extends DeviceConfiguration
     
     /**
     * Gets the activeDirectoryDomainName
+    * Active Directory domain name to join.
     *
     * @return string The activeDirectoryDomainName
     */
@@ -96,6 +101,7 @@ class WindowsDomainJoinConfiguration extends DeviceConfiguration
     
     /**
     * Sets the activeDirectoryDomainName
+    * Active Directory domain name to join.
     *
     * @param string $val The activeDirectoryDomainName
     *
@@ -109,6 +115,7 @@ class WindowsDomainJoinConfiguration extends DeviceConfiguration
     
     /**
     * Gets the organizationalUnit
+    * Organizational unit (OU) where the computer account will be created. If this parameter is NULL, the well known computer object container will be used as published in the domain.
     *
     * @return string The organizationalUnit
     */
@@ -123,6 +130,7 @@ class WindowsDomainJoinConfiguration extends DeviceConfiguration
     
     /**
     * Sets the organizationalUnit
+    * Organizational unit (OU) where the computer account will be created. If this parameter is NULL, the well known computer object container will be used as published in the domain.
     *
     * @param string $val The organizationalUnit
     *
@@ -137,6 +145,7 @@ class WindowsDomainJoinConfiguration extends DeviceConfiguration
 
      /** 
      * Gets the networkAccessConfigurations
+    * Reference to device configurations required for network connectivity
      *
      * @return array The networkAccessConfigurations
      */
@@ -151,6 +160,7 @@ class WindowsDomainJoinConfiguration extends DeviceConfiguration
     
     /** 
     * Sets the networkAccessConfigurations
+    * Reference to device configurations required for network connectivity
     *
     * @param DeviceConfiguration $val The networkAccessConfigurations
     *

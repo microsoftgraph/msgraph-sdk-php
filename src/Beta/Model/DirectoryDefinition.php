@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * DirectoryDefinition class
 *
@@ -86,7 +86,7 @@ class DirectoryDefinition extends Entity
     public function getObjects()
     {
         if (array_key_exists("objects", $this->_propDict)) {
-            if (is_a($this->_propDict["objects"], "Microsoft\Graph\Beta\Model\ObjectDefinition")) {
+            if (is_a($this->_propDict["objects"], "Microsoft\Graph\Model\ObjectDefinition")) {
                 return $this->_propDict["objects"];
             } else {
                 $this->_propDict["objects"] = new ObjectDefinition($this->_propDict["objects"]);
@@ -107,5 +107,31 @@ class DirectoryDefinition extends Entity
     {
         $this->_propDict["objects"] = $val;
          return $this;
+    }
+    /**
+    * Gets the readOnly
+    *
+    * @return bool The readOnly
+    */
+    public function getReadOnly()
+    {
+        if (array_key_exists("readOnly", $this->_propDict)) {
+            return $this->_propDict["readOnly"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the readOnly
+    *
+    * @param bool $val The value of the readOnly
+    *
+    * @return DirectoryDefinition
+    */
+    public function setReadOnly($val)
+    {
+        $this->_propDict["readOnly"] = $val;
+        return $this;
     }
 }

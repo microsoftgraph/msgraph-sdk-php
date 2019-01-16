@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * OutlookGeoCoordinates class
 *
@@ -27,6 +27,7 @@ class OutlookGeoCoordinates extends Entity
 {
     /**
     * Gets the altitude
+    * The altitude of the location.
     *
     * @return float The altitude
     */
@@ -41,6 +42,7 @@ class OutlookGeoCoordinates extends Entity
 
     /**
     * Sets the altitude
+    * The altitude of the location.
     *
     * @param float $val The value of the altitude
     *
@@ -53,6 +55,7 @@ class OutlookGeoCoordinates extends Entity
     }
     /**
     * Gets the latitude
+    * The latitude of the location.
     *
     * @return float The latitude
     */
@@ -67,6 +70,7 @@ class OutlookGeoCoordinates extends Entity
 
     /**
     * Sets the latitude
+    * The latitude of the location.
     *
     * @param float $val The value of the latitude
     *
@@ -79,6 +83,7 @@ class OutlookGeoCoordinates extends Entity
     }
     /**
     * Gets the longitude
+    * The longitude of the location.
     *
     * @return float The longitude
     */
@@ -93,6 +98,7 @@ class OutlookGeoCoordinates extends Entity
 
     /**
     * Sets the longitude
+    * The longitude of the location.
     *
     * @param float $val The value of the longitude
     *
@@ -105,6 +111,7 @@ class OutlookGeoCoordinates extends Entity
     }
     /**
     * Gets the accuracy
+    * The accuracy of the latitude and longitude. As an example, the accuracy can be measured in meters, such as the latitude and longitude are accurate to within 50 meters.
     *
     * @return float The accuracy
     */
@@ -119,6 +126,7 @@ class OutlookGeoCoordinates extends Entity
 
     /**
     * Sets the accuracy
+    * The accuracy of the latitude and longitude. As an example, the accuracy can be measured in meters, such as the latitude and longitude are accurate to within 50 meters.
     *
     * @param float $val The value of the accuracy
     *
@@ -131,6 +139,7 @@ class OutlookGeoCoordinates extends Entity
     }
     /**
     * Gets the altitudeAccuracy
+    * The accuracy of the altitude.
     *
     * @return float The altitudeAccuracy
     */
@@ -145,6 +154,7 @@ class OutlookGeoCoordinates extends Entity
 
     /**
     * Sets the altitudeAccuracy
+    * The accuracy of the altitude.
     *
     * @param float $val The value of the altitudeAccuracy
     *

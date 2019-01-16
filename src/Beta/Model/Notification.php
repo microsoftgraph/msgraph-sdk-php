@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * Notification class
@@ -92,7 +92,7 @@ class Notification extends Entity
     public function getPayload()
     {
         if (array_key_exists("payload", $this->_propDict)) {
-            if (is_a($this->_propDict["payload"], "Microsoft\Graph\Beta\Model\PayloadTypes")) {
+            if (is_a($this->_propDict["payload"], "Microsoft\Graph\Model\PayloadTypes")) {
                 return $this->_propDict["payload"];
             } else {
                 $this->_propDict["payload"] = new PayloadTypes($this->_propDict["payload"]);
@@ -150,7 +150,7 @@ class Notification extends Entity
     public function getPriority()
     {
         if (array_key_exists("priority", $this->_propDict)) {
-            if (is_a($this->_propDict["priority"], "Microsoft\Graph\Beta\Model\Priority")) {
+            if (is_a($this->_propDict["priority"], "Microsoft\Graph\Model\Priority")) {
                 return $this->_propDict["priority"];
             } else {
                 $this->_propDict["priority"] = new Priority($this->_propDict["priority"]);
@@ -208,7 +208,7 @@ class Notification extends Entity
     public function getTargetPolicy()
     {
         if (array_key_exists("targetPolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["targetPolicy"], "Microsoft\Graph\Beta\Model\TargetPolicyEndpoints")) {
+            if (is_a($this->_propDict["targetPolicy"], "Microsoft\Graph\Model\TargetPolicyEndpoints")) {
                 return $this->_propDict["targetPolicy"];
             } else {
                 $this->_propDict["targetPolicy"] = new TargetPolicyEndpoints($this->_propDict["targetPolicy"]);

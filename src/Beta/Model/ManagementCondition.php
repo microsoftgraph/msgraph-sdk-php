@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * ManagementCondition class
@@ -28,6 +28,7 @@ class ManagementCondition extends Entity
 {
     /**
     * Gets the uniqueName
+    * Unique name for the management condition. Used in management condition expressions.
     *
     * @return string The uniqueName
     */
@@ -42,6 +43,7 @@ class ManagementCondition extends Entity
     
     /**
     * Sets the uniqueName
+    * Unique name for the management condition. Used in management condition expressions.
     *
     * @param string $val The uniqueName
     *
@@ -55,6 +57,7 @@ class ManagementCondition extends Entity
     
     /**
     * Gets the displayName
+    * The admin defined name of the management condition.
     *
     * @return string The displayName
     */
@@ -69,6 +72,7 @@ class ManagementCondition extends Entity
     
     /**
     * Sets the displayName
+    * The admin defined name of the management condition.
     *
     * @param string $val The displayName
     *
@@ -82,6 +86,7 @@ class ManagementCondition extends Entity
     
     /**
     * Gets the description
+    * The admin defined description of the management condition.
     *
     * @return string The description
     */
@@ -96,6 +101,7 @@ class ManagementCondition extends Entity
     
     /**
     * Sets the description
+    * The admin defined description of the management condition.
     *
     * @param string $val The description
     *
@@ -109,6 +115,7 @@ class ManagementCondition extends Entity
     
     /**
     * Gets the createdDateTime
+    * The time the management condition was created. Generated service side.
     *
     * @return \DateTime The createdDateTime
     */
@@ -127,6 +134,7 @@ class ManagementCondition extends Entity
     
     /**
     * Sets the createdDateTime
+    * The time the management condition was created. Generated service side.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -140,6 +148,7 @@ class ManagementCondition extends Entity
     
     /**
     * Gets the modifiedDateTime
+    * The time the management condition was last modified. Updated service side.
     *
     * @return \DateTime The modifiedDateTime
     */
@@ -158,6 +167,7 @@ class ManagementCondition extends Entity
     
     /**
     * Sets the modifiedDateTime
+    * The time the management condition was last modified. Updated service side.
     *
     * @param \DateTime $val The modifiedDateTime
     *
@@ -171,6 +181,7 @@ class ManagementCondition extends Entity
     
     /**
     * Gets the eTag
+    * ETag of the management condition. Updated service side.
     *
     * @return string The eTag
     */
@@ -185,6 +196,7 @@ class ManagementCondition extends Entity
     
     /**
     * Sets the eTag
+    * ETag of the management condition. Updated service side.
     *
     * @param string $val The eTag
     *
@@ -199,6 +211,7 @@ class ManagementCondition extends Entity
 
      /** 
      * Gets the applicablePlatforms
+    * The applicable platforms for this management condition.
      *
      * @return array The applicablePlatforms
      */
@@ -213,6 +226,7 @@ class ManagementCondition extends Entity
     
     /** 
     * Sets the applicablePlatforms
+    * The applicable platforms for this management condition.
     *
     * @param DevicePlatformType $val The applicablePlatforms
     *
@@ -227,6 +241,7 @@ class ManagementCondition extends Entity
 
      /** 
      * Gets the managementConditionStatements
+    * The management condition statements associated to the management condition.
      *
      * @return array The managementConditionStatements
      */
@@ -241,6 +256,7 @@ class ManagementCondition extends Entity
     
     /** 
     * Sets the managementConditionStatements
+    * The management condition statements associated to the management condition.
     *
     * @param ManagementConditionStatement $val The managementConditionStatements
     *

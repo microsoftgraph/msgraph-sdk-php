@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * DeviceActionResult class
 *
@@ -27,6 +27,7 @@ class DeviceActionResult extends Entity
 {
     /**
     * Gets the actionName
+    * Action name
     *
     * @return string The actionName
     */
@@ -41,6 +42,7 @@ class DeviceActionResult extends Entity
 
     /**
     * Sets the actionName
+    * Action name
     *
     * @param string $val The value of the actionName
     *
@@ -54,13 +56,14 @@ class DeviceActionResult extends Entity
 
     /**
     * Gets the actionState
+    * State of the action. Possible values are: none, pending, canceled, active, done, failed, notSupported.
     *
     * @return ActionState The actionState
     */
     public function getActionState()
     {
         if (array_key_exists("actionState", $this->_propDict)) {
-            if (is_a($this->_propDict["actionState"], "Microsoft\Graph\Beta\Model\ActionState")) {
+            if (is_a($this->_propDict["actionState"], "Microsoft\Graph\Model\ActionState")) {
                 return $this->_propDict["actionState"];
             } else {
                 $this->_propDict["actionState"] = new ActionState($this->_propDict["actionState"]);
@@ -72,6 +75,7 @@ class DeviceActionResult extends Entity
 
     /**
     * Sets the actionState
+    * State of the action. Possible values are: none, pending, canceled, active, done, failed, notSupported.
     *
     * @param ActionState $val The value to assign to the actionState
     *
@@ -85,13 +89,14 @@ class DeviceActionResult extends Entity
 
     /**
     * Gets the startDateTime
+    * Time the action was initiated
     *
     * @return \DateTime The startDateTime
     */
     public function getStartDateTime()
     {
         if (array_key_exists("startDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startDateTime"], "Microsoft\Graph\Beta\Model\\DateTime")) {
+            if (is_a($this->_propDict["startDateTime"], "Microsoft\Graph\Model\\DateTime")) {
                 return $this->_propDict["startDateTime"];
             } else {
                 $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);
@@ -103,6 +108,7 @@ class DeviceActionResult extends Entity
 
     /**
     * Sets the startDateTime
+    * Time the action was initiated
     *
     * @param \DateTime $val The value to assign to the startDateTime
     *
@@ -116,13 +122,14 @@ class DeviceActionResult extends Entity
 
     /**
     * Gets the lastUpdatedDateTime
+    * Time the action state was last updated
     *
     * @return \DateTime The lastUpdatedDateTime
     */
     public function getLastUpdatedDateTime()
     {
         if (array_key_exists("lastUpdatedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastUpdatedDateTime"], "Microsoft\Graph\Beta\Model\\DateTime")) {
+            if (is_a($this->_propDict["lastUpdatedDateTime"], "Microsoft\Graph\Model\\DateTime")) {
                 return $this->_propDict["lastUpdatedDateTime"];
             } else {
                 $this->_propDict["lastUpdatedDateTime"] = new \DateTime($this->_propDict["lastUpdatedDateTime"]);
@@ -134,6 +141,7 @@ class DeviceActionResult extends Entity
 
     /**
     * Sets the lastUpdatedDateTime
+    * Time the action state was last updated
     *
     * @param \DateTime $val The value to assign to the lastUpdatedDateTime
     *

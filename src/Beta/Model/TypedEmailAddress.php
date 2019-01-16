@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * TypedEmailAddress class
 *
@@ -34,7 +34,7 @@ class TypedEmailAddress extends EmailAddress
     public function getType()
     {
         if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "Microsoft\Graph\Beta\Model\EmailType")) {
+            if (is_a($this->_propDict["type"], "Microsoft\Graph\Model\EmailType")) {
                 return $this->_propDict["type"];
             } else {
                 $this->_propDict["type"] = new EmailType($this->_propDict["type"]);

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * DeviceAppManagement class
@@ -28,6 +28,7 @@ class DeviceAppManagement extends Entity
 {
     /**
     * Gets the microsoftStoreForBusinessLastSuccessfulSyncDateTime
+    * The last time the apps from the Microsoft Store for Business were synced successfully for the account.
     *
     * @return \DateTime The microsoftStoreForBusinessLastSuccessfulSyncDateTime
     */
@@ -46,6 +47,7 @@ class DeviceAppManagement extends Entity
     
     /**
     * Sets the microsoftStoreForBusinessLastSuccessfulSyncDateTime
+    * The last time the apps from the Microsoft Store for Business were synced successfully for the account.
     *
     * @param \DateTime $val The microsoftStoreForBusinessLastSuccessfulSyncDateTime
     *
@@ -59,6 +61,7 @@ class DeviceAppManagement extends Entity
     
     /**
     * Gets the isEnabledForMicrosoftStoreForBusiness
+    * Whether the account is enabled for syncing applications from the Microsoft Store for Business.
     *
     * @return bool The isEnabledForMicrosoftStoreForBusiness
     */
@@ -73,6 +76,7 @@ class DeviceAppManagement extends Entity
     
     /**
     * Sets the isEnabledForMicrosoftStoreForBusiness
+    * Whether the account is enabled for syncing applications from the Microsoft Store for Business.
     *
     * @param bool $val The isEnabledForMicrosoftStoreForBusiness
     *
@@ -86,6 +90,7 @@ class DeviceAppManagement extends Entity
     
     /**
     * Gets the microsoftStoreForBusinessLanguage
+    * The locale information used to sync applications from the Microsoft Store for Business. Cultures that are specific to a country/region. The names of these cultures follow RFC 4646 (Windows Vista and later). The format is -&amp;lt;country/regioncode2&amp;gt;, where  is a lowercase two-letter code derived from ISO 639-1 and &amp;lt;country/regioncode2&amp;gt; is an uppercase two-letter code derived from ISO 3166. For example, en-US for English (United States) is a specific culture.
     *
     * @return string The microsoftStoreForBusinessLanguage
     */
@@ -100,6 +105,7 @@ class DeviceAppManagement extends Entity
     
     /**
     * Sets the microsoftStoreForBusinessLanguage
+    * The locale information used to sync applications from the Microsoft Store for Business. Cultures that are specific to a country/region. The names of these cultures follow RFC 4646 (Windows Vista and later). The format is -&amp;lt;country/regioncode2&amp;gt;, where  is a lowercase two-letter code derived from ISO 639-1 and &amp;lt;country/regioncode2&amp;gt; is an uppercase two-letter code derived from ISO 3166. For example, en-US for English (United States) is a specific culture.
     *
     * @param string $val The microsoftStoreForBusinessLanguage
     *
@@ -113,6 +119,7 @@ class DeviceAppManagement extends Entity
     
     /**
     * Gets the microsoftStoreForBusinessLastCompletedApplicationSyncTime
+    * The last time an application sync from the Microsoft Store for Business was completed.
     *
     * @return \DateTime The microsoftStoreForBusinessLastCompletedApplicationSyncTime
     */
@@ -131,6 +138,7 @@ class DeviceAppManagement extends Entity
     
     /**
     * Sets the microsoftStoreForBusinessLastCompletedApplicationSyncTime
+    * The last time an application sync from the Microsoft Store for Business was completed.
     *
     * @param \DateTime $val The microsoftStoreForBusinessLastCompletedApplicationSyncTime
     *
@@ -143,14 +151,48 @@ class DeviceAppManagement extends Entity
     }
     
     /**
+    * Gets the microsoftStoreForBusinessPortalSelection
+    * The end user portal information is used to sync applications from the Microsoft Store for Business to Intune Company Portal. There are three options to pick from ['Company portal only', 'Company portal and private store', 'Private store only']
+    *
+    * @return MicrosoftStoreForBusinessPortalSelectionOptions The microsoftStoreForBusinessPortalSelection
+    */
+    public function getMicrosoftStoreForBusinessPortalSelection()
+    {
+        if (array_key_exists("microsoftStoreForBusinessPortalSelection", $this->_propDict)) {
+            if (is_a($this->_propDict["microsoftStoreForBusinessPortalSelection"], "Microsoft\Graph\Model\MicrosoftStoreForBusinessPortalSelectionOptions")) {
+                return $this->_propDict["microsoftStoreForBusinessPortalSelection"];
+            } else {
+                $this->_propDict["microsoftStoreForBusinessPortalSelection"] = new MicrosoftStoreForBusinessPortalSelectionOptions($this->_propDict["microsoftStoreForBusinessPortalSelection"]);
+                return $this->_propDict["microsoftStoreForBusinessPortalSelection"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the microsoftStoreForBusinessPortalSelection
+    * The end user portal information is used to sync applications from the Microsoft Store for Business to Intune Company Portal. There are three options to pick from ['Company portal only', 'Company portal and private store', 'Private store only']
+    *
+    * @param MicrosoftStoreForBusinessPortalSelectionOptions $val The microsoftStoreForBusinessPortalSelection
+    *
+    * @return DeviceAppManagement
+    */
+    public function setMicrosoftStoreForBusinessPortalSelection($val)
+    {
+        $this->_propDict["microsoftStoreForBusinessPortalSelection"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the windowsManagementApp
+    * Windows management app.
     *
     * @return WindowsManagementApp The windowsManagementApp
     */
     public function getWindowsManagementApp()
     {
         if (array_key_exists("windowsManagementApp", $this->_propDict)) {
-            if (is_a($this->_propDict["windowsManagementApp"], "Microsoft\Graph\Beta\Model\WindowsManagementApp")) {
+            if (is_a($this->_propDict["windowsManagementApp"], "Microsoft\Graph\Model\WindowsManagementApp")) {
                 return $this->_propDict["windowsManagementApp"];
             } else {
                 $this->_propDict["windowsManagementApp"] = new WindowsManagementApp($this->_propDict["windowsManagementApp"]);
@@ -162,6 +204,7 @@ class DeviceAppManagement extends Entity
     
     /**
     * Sets the windowsManagementApp
+    * Windows management app.
     *
     * @param WindowsManagementApp $val The windowsManagementApp
     *
@@ -176,6 +219,7 @@ class DeviceAppManagement extends Entity
 
      /** 
      * Gets the mobileApps
+    * The mobile apps.
      *
      * @return array The mobileApps
      */
@@ -190,6 +234,7 @@ class DeviceAppManagement extends Entity
     
     /** 
     * Sets the mobileApps
+    * The mobile apps.
     *
     * @param MobileApp $val The mobileApps
     *
@@ -204,6 +249,7 @@ class DeviceAppManagement extends Entity
 
      /** 
      * Gets the mobileAppCategories
+    * The mobile app categories.
      *
      * @return array The mobileAppCategories
      */
@@ -218,6 +264,7 @@ class DeviceAppManagement extends Entity
     
     /** 
     * Sets the mobileAppCategories
+    * The mobile app categories.
     *
     * @param MobileAppCategory $val The mobileAppCategories
     *
@@ -232,6 +279,7 @@ class DeviceAppManagement extends Entity
 
      /** 
      * Gets the enterpriseCodeSigningCertificates
+    * The Windows Enterprise Code Signing Certificate.
      *
      * @return array The enterpriseCodeSigningCertificates
      */
@@ -246,6 +294,7 @@ class DeviceAppManagement extends Entity
     
     /** 
     * Sets the enterpriseCodeSigningCertificates
+    * The Windows Enterprise Code Signing Certificate.
     *
     * @param EnterpriseCodeSigningCertificate $val The enterpriseCodeSigningCertificates
     *
@@ -260,6 +309,7 @@ class DeviceAppManagement extends Entity
 
      /** 
      * Gets the iosLobAppProvisioningConfigurations
+    * The IOS Lob App Provisioning Configurations.
      *
      * @return array The iosLobAppProvisioningConfigurations
      */
@@ -274,6 +324,7 @@ class DeviceAppManagement extends Entity
     
     /** 
     * Sets the iosLobAppProvisioningConfigurations
+    * The IOS Lob App Provisioning Configurations.
     *
     * @param IosLobAppProvisioningConfiguration $val The iosLobAppProvisioningConfigurations
     *
@@ -287,13 +338,14 @@ class DeviceAppManagement extends Entity
     
     /**
     * Gets the symantecCodeSigningCertificate
+    * The WinPhone Symantec Code Signing Certificate.
     *
     * @return SymantecCodeSigningCertificate The symantecCodeSigningCertificate
     */
     public function getSymantecCodeSigningCertificate()
     {
         if (array_key_exists("symantecCodeSigningCertificate", $this->_propDict)) {
-            if (is_a($this->_propDict["symantecCodeSigningCertificate"], "Microsoft\Graph\Beta\Model\SymantecCodeSigningCertificate")) {
+            if (is_a($this->_propDict["symantecCodeSigningCertificate"], "Microsoft\Graph\Model\SymantecCodeSigningCertificate")) {
                 return $this->_propDict["symantecCodeSigningCertificate"];
             } else {
                 $this->_propDict["symantecCodeSigningCertificate"] = new SymantecCodeSigningCertificate($this->_propDict["symantecCodeSigningCertificate"]);
@@ -305,6 +357,7 @@ class DeviceAppManagement extends Entity
     
     /**
     * Sets the symantecCodeSigningCertificate
+    * The WinPhone Symantec Code Signing Certificate.
     *
     * @param SymantecCodeSigningCertificate $val The symantecCodeSigningCertificate
     *
@@ -319,6 +372,7 @@ class DeviceAppManagement extends Entity
 
      /** 
      * Gets the mobileAppConfigurations
+    * The Managed Device Mobile Application Configurations.
      *
      * @return array The mobileAppConfigurations
      */
@@ -333,6 +387,7 @@ class DeviceAppManagement extends Entity
     
     /** 
     * Sets the mobileAppConfigurations
+    * The Managed Device Mobile Application Configurations.
     *
     * @param ManagedDeviceMobileAppConfiguration $val The mobileAppConfigurations
     *
@@ -347,6 +402,7 @@ class DeviceAppManagement extends Entity
 
      /** 
      * Gets the sideLoadingKeys
+    * Side Loading Keys that are required for the Windows 8 and 8.1 Apps installation.
      *
      * @return array The sideLoadingKeys
      */
@@ -361,6 +417,7 @@ class DeviceAppManagement extends Entity
     
     /** 
     * Sets the sideLoadingKeys
+    * Side Loading Keys that are required for the Windows 8 and 8.1 Apps installation.
     *
     * @param SideLoadingKey $val The sideLoadingKeys
     *
@@ -375,6 +432,7 @@ class DeviceAppManagement extends Entity
 
      /** 
      * Gets the vppTokens
+    * List of Vpp tokens for this organization.
      *
      * @return array The vppTokens
      */
@@ -389,6 +447,7 @@ class DeviceAppManagement extends Entity
     
     /** 
     * Sets the vppTokens
+    * List of Vpp tokens for this organization.
     *
     * @param VppToken $val The vppTokens
     *
@@ -403,6 +462,7 @@ class DeviceAppManagement extends Entity
 
      /** 
      * Gets the managedAppPolicies
+    * Managed app policies.
      *
      * @return array The managedAppPolicies
      */
@@ -417,6 +477,7 @@ class DeviceAppManagement extends Entity
     
     /** 
     * Sets the managedAppPolicies
+    * Managed app policies.
     *
     * @param ManagedAppPolicy $val The managedAppPolicies
     *
@@ -431,6 +492,7 @@ class DeviceAppManagement extends Entity
 
      /** 
      * Gets the iosManagedAppProtections
+    * iOS managed app policies.
      *
      * @return array The iosManagedAppProtections
      */
@@ -445,6 +507,7 @@ class DeviceAppManagement extends Entity
     
     /** 
     * Sets the iosManagedAppProtections
+    * iOS managed app policies.
     *
     * @param IosManagedAppProtection $val The iosManagedAppProtections
     *
@@ -459,6 +522,7 @@ class DeviceAppManagement extends Entity
 
      /** 
      * Gets the androidManagedAppProtections
+    * Android managed app policies.
      *
      * @return array The androidManagedAppProtections
      */
@@ -473,6 +537,7 @@ class DeviceAppManagement extends Entity
     
     /** 
     * Sets the androidManagedAppProtections
+    * Android managed app policies.
     *
     * @param AndroidManagedAppProtection $val The androidManagedAppProtections
     *
@@ -487,6 +552,7 @@ class DeviceAppManagement extends Entity
 
      /** 
      * Gets the defaultManagedAppProtections
+    * Default managed app policies.
      *
      * @return array The defaultManagedAppProtections
      */
@@ -501,6 +567,7 @@ class DeviceAppManagement extends Entity
     
     /** 
     * Sets the defaultManagedAppProtections
+    * Default managed app policies.
     *
     * @param DefaultManagedAppProtection $val The defaultManagedAppProtections
     *
@@ -515,6 +582,7 @@ class DeviceAppManagement extends Entity
 
      /** 
      * Gets the targetedManagedAppConfigurations
+    * Targeted managed app configurations.
      *
      * @return array The targetedManagedAppConfigurations
      */
@@ -529,6 +597,7 @@ class DeviceAppManagement extends Entity
     
     /** 
     * Sets the targetedManagedAppConfigurations
+    * Targeted managed app configurations.
     *
     * @param TargetedManagedAppConfiguration $val The targetedManagedAppConfigurations
     *
@@ -543,6 +612,7 @@ class DeviceAppManagement extends Entity
 
      /** 
      * Gets the mdmWindowsInformationProtectionPolicies
+    * Windows information protection for apps running on devices which are MDM enrolled.
      *
      * @return array The mdmWindowsInformationProtectionPolicies
      */
@@ -557,6 +627,7 @@ class DeviceAppManagement extends Entity
     
     /** 
     * Sets the mdmWindowsInformationProtectionPolicies
+    * Windows information protection for apps running on devices which are MDM enrolled.
     *
     * @param MdmWindowsInformationProtectionPolicy $val The mdmWindowsInformationProtectionPolicies
     *
@@ -571,6 +642,7 @@ class DeviceAppManagement extends Entity
 
      /** 
      * Gets the windowsInformationProtectionPolicies
+    * Windows information protection for apps running on devices which are not MDM enrolled.
      *
      * @return array The windowsInformationProtectionPolicies
      */
@@ -585,6 +657,7 @@ class DeviceAppManagement extends Entity
     
     /** 
     * Sets the windowsInformationProtectionPolicies
+    * Windows information protection for apps running on devices which are not MDM enrolled.
     *
     * @param WindowsInformationProtectionPolicy $val The windowsInformationProtectionPolicies
     *
@@ -599,6 +672,7 @@ class DeviceAppManagement extends Entity
 
      /** 
      * Gets the managedAppRegistrations
+    * The managed app registrations.
      *
      * @return array The managedAppRegistrations
      */
@@ -613,6 +687,7 @@ class DeviceAppManagement extends Entity
     
     /** 
     * Sets the managedAppRegistrations
+    * The managed app registrations.
     *
     * @param ManagedAppRegistration $val The managedAppRegistrations
     *
@@ -627,6 +702,7 @@ class DeviceAppManagement extends Entity
 
      /** 
      * Gets the managedAppStatuses
+    * The managed app statuses.
      *
      * @return array The managedAppStatuses
      */
@@ -641,6 +717,7 @@ class DeviceAppManagement extends Entity
     
     /** 
     * Sets the managedAppStatuses
+    * The managed app statuses.
     *
     * @param ManagedAppStatus $val The managedAppStatuses
     *
@@ -654,7 +731,68 @@ class DeviceAppManagement extends Entity
     
 
      /** 
+     * Gets the windowsInformationProtectionDeviceRegistrations
+    * Windows information protection device registrations that are not MDM enrolled.
+     *
+     * @return array The windowsInformationProtectionDeviceRegistrations
+     */
+    public function getWindowsInformationProtectionDeviceRegistrations()
+    {
+        if (array_key_exists("windowsInformationProtectionDeviceRegistrations", $this->_propDict)) {
+           return $this->_propDict["windowsInformationProtectionDeviceRegistrations"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the windowsInformationProtectionDeviceRegistrations
+    * Windows information protection device registrations that are not MDM enrolled.
+    *
+    * @param WindowsInformationProtectionDeviceRegistration $val The windowsInformationProtectionDeviceRegistrations
+    *
+    * @return DeviceAppManagement
+    */
+    public function setWindowsInformationProtectionDeviceRegistrations($val)
+    {
+		$this->_propDict["windowsInformationProtectionDeviceRegistrations"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the windowsInformationProtectionWipeActions
+    * Windows information protection wipe actions.
+     *
+     * @return array The windowsInformationProtectionWipeActions
+     */
+    public function getWindowsInformationProtectionWipeActions()
+    {
+        if (array_key_exists("windowsInformationProtectionWipeActions", $this->_propDict)) {
+           return $this->_propDict["windowsInformationProtectionWipeActions"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the windowsInformationProtectionWipeActions
+    * Windows information protection wipe actions.
+    *
+    * @param WindowsInformationProtectionWipeAction $val The windowsInformationProtectionWipeActions
+    *
+    * @return DeviceAppManagement
+    */
+    public function setWindowsInformationProtectionWipeActions($val)
+    {
+		$this->_propDict["windowsInformationProtectionWipeActions"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the managedEBooks
+    * The Managed eBook.
      *
      * @return array The managedEBooks
      */
@@ -669,6 +807,7 @@ class DeviceAppManagement extends Entity
     
     /** 
     * Sets the managedEBooks
+    * The Managed eBook.
     *
     * @param ManagedEBook $val The managedEBooks
     *
@@ -683,6 +822,7 @@ class DeviceAppManagement extends Entity
 
      /** 
      * Gets the managedEBookCategories
+    * The mobile eBook categories.
      *
      * @return array The managedEBookCategories
      */
@@ -697,6 +837,7 @@ class DeviceAppManagement extends Entity
     
     /** 
     * Sets the managedEBookCategories
+    * The mobile eBook categories.
     *
     * @param ManagedEBookCategory $val The managedEBookCategories
     *

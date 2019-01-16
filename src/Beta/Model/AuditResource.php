@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * AuditResource class
 *
@@ -27,6 +27,7 @@ class AuditResource extends Entity
 {
     /**
     * Gets the displayName
+    * Display name.
     *
     * @return string The displayName
     */
@@ -41,6 +42,7 @@ class AuditResource extends Entity
 
     /**
     * Sets the displayName
+    * Display name.
     *
     * @param string $val The value of the displayName
     *
@@ -54,13 +56,14 @@ class AuditResource extends Entity
 
     /**
     * Gets the modifiedProperties
+    * List of modified properties.
     *
     * @return AuditProperty The modifiedProperties
     */
     public function getModifiedProperties()
     {
         if (array_key_exists("modifiedProperties", $this->_propDict)) {
-            if (is_a($this->_propDict["modifiedProperties"], "Microsoft\Graph\Beta\Model\AuditProperty")) {
+            if (is_a($this->_propDict["modifiedProperties"], "Microsoft\Graph\Model\AuditProperty")) {
                 return $this->_propDict["modifiedProperties"];
             } else {
                 $this->_propDict["modifiedProperties"] = new AuditProperty($this->_propDict["modifiedProperties"]);
@@ -72,6 +75,7 @@ class AuditResource extends Entity
 
     /**
     * Sets the modifiedProperties
+    * List of modified properties.
     *
     * @param AuditProperty $val The value to assign to the modifiedProperties
     *
@@ -84,6 +88,7 @@ class AuditResource extends Entity
     }
     /**
     * Gets the type
+    * Audit resource's type.
     *
     * @return string The type
     */
@@ -98,6 +103,7 @@ class AuditResource extends Entity
 
     /**
     * Sets the type
+    * Audit resource's type.
     *
     * @param string $val The value of the type
     *
@@ -110,6 +116,7 @@ class AuditResource extends Entity
     }
     /**
     * Gets the resourceId
+    * Audit resource's Id.
     *
     * @return string The resourceId
     */
@@ -124,6 +131,7 @@ class AuditResource extends Entity
 
     /**
     * Sets the resourceId
+    * Audit resource's Id.
     *
     * @param string $val The value of the resourceId
     *

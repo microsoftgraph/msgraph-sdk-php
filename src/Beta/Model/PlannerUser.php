@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * PlannerUser class
@@ -34,7 +34,7 @@ class PlannerUser extends Entity
     public function getFavoritePlanReferences()
     {
         if (array_key_exists("favoritePlanReferences", $this->_propDict)) {
-            if (is_a($this->_propDict["favoritePlanReferences"], "Microsoft\Graph\Beta\Model\PlannerFavoritePlanReferenceCollection")) {
+            if (is_a($this->_propDict["favoritePlanReferences"], "Microsoft\Graph\Model\PlannerFavoritePlanReferenceCollection")) {
                 return $this->_propDict["favoritePlanReferences"];
             } else {
                 $this->_propDict["favoritePlanReferences"] = new PlannerFavoritePlanReferenceCollection($this->_propDict["favoritePlanReferences"]);
@@ -65,7 +65,7 @@ class PlannerUser extends Entity
     public function getRecentPlanReferences()
     {
         if (array_key_exists("recentPlanReferences", $this->_propDict)) {
-            if (is_a($this->_propDict["recentPlanReferences"], "Microsoft\Graph\Beta\Model\PlannerRecentPlanReferenceCollection")) {
+            if (is_a($this->_propDict["recentPlanReferences"], "Microsoft\Graph\Model\PlannerRecentPlanReferenceCollection")) {
                 return $this->_propDict["recentPlanReferences"];
             } else {
                 $this->_propDict["recentPlanReferences"] = new PlannerRecentPlanReferenceCollection($this->_propDict["recentPlanReferences"]);
@@ -91,6 +91,7 @@ class PlannerUser extends Entity
 
      /** 
      * Gets the tasks
+    * Read-only. Nullable. Returns the plannerPlans shared with the user.
      *
      * @return array The tasks
      */
@@ -105,6 +106,7 @@ class PlannerUser extends Entity
     
     /** 
     * Sets the tasks
+    * Read-only. Nullable. Returns the plannerPlans shared with the user.
     *
     * @param PlannerTask $val The tasks
     *
@@ -119,6 +121,7 @@ class PlannerUser extends Entity
 
      /** 
      * Gets the plans
+    * Read-only. Nullable. Returns the plannerTasks assigned to the user.
      *
      * @return array The plans
      */
@@ -133,6 +136,7 @@ class PlannerUser extends Entity
     
     /** 
     * Sets the plans
+    * Read-only. Nullable. Returns the plannerTasks assigned to the user.
     *
     * @param PlannerPlan $val The plans
     *

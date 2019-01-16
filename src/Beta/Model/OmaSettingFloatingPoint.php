@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * OmaSettingFloatingPoint class
 *
@@ -25,16 +25,26 @@ namespace Microsoft\Graph\Beta\Model;
 */
 class OmaSettingFloatingPoint extends OmaSetting
 {
+    /**
+    * Set the @odata.type since this type is immediately descended from an abstract
+    * type that is referenced as the type in an entity.
+    */
+    public function __construct()
+    {
+        $this->setODataType("#microsoft.graph.omaSettingFloatingPoint");
+    }
+
 
     /**
     * Gets the value
+    * Value.
     *
     * @return Single The value
     */
     public function getValue()
     {
         if (array_key_exists("value", $this->_propDict)) {
-            if (is_a($this->_propDict["value"], "Microsoft\Graph\Beta\Model\Single")) {
+            if (is_a($this->_propDict["value"], "Microsoft\Graph\Model\Single")) {
                 return $this->_propDict["value"];
             } else {
                 $this->_propDict["value"] = new Single($this->_propDict["value"]);
@@ -46,6 +56,7 @@ class OmaSettingFloatingPoint extends OmaSetting
 
     /**
     * Sets the value
+    * Value.
     *
     * @param Single $val The value to assign to the value
     *

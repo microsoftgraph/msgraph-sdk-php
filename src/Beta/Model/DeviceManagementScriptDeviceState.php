@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * DeviceManagementScriptDeviceState class
@@ -28,13 +28,14 @@ class DeviceManagementScriptDeviceState extends Entity
 {
     /**
     * Gets the runState
+    * State of latest run of the device management script.
     *
     * @return RunState The runState
     */
     public function getRunState()
     {
         if (array_key_exists("runState", $this->_propDict)) {
-            if (is_a($this->_propDict["runState"], "Microsoft\Graph\Beta\Model\RunState")) {
+            if (is_a($this->_propDict["runState"], "Microsoft\Graph\Model\RunState")) {
                 return $this->_propDict["runState"];
             } else {
                 $this->_propDict["runState"] = new RunState($this->_propDict["runState"]);
@@ -46,6 +47,7 @@ class DeviceManagementScriptDeviceState extends Entity
     
     /**
     * Sets the runState
+    * State of latest run of the device management script.
     *
     * @param RunState $val The runState
     *
@@ -59,6 +61,7 @@ class DeviceManagementScriptDeviceState extends Entity
     
     /**
     * Gets the resultMessage
+    * Details of execution output.
     *
     * @return string The resultMessage
     */
@@ -73,6 +76,7 @@ class DeviceManagementScriptDeviceState extends Entity
     
     /**
     * Sets the resultMessage
+    * Details of execution output.
     *
     * @param string $val The resultMessage
     *
@@ -86,6 +90,7 @@ class DeviceManagementScriptDeviceState extends Entity
     
     /**
     * Gets the lastStateUpdateDateTime
+    * Latest time the device management script executes.
     *
     * @return \DateTime The lastStateUpdateDateTime
     */
@@ -104,6 +109,7 @@ class DeviceManagementScriptDeviceState extends Entity
     
     /**
     * Sets the lastStateUpdateDateTime
+    * Latest time the device management script executes.
     *
     * @param \DateTime $val The lastStateUpdateDateTime
     *
@@ -117,6 +123,7 @@ class DeviceManagementScriptDeviceState extends Entity
     
     /**
     * Gets the errorCode
+    * Error code corresponding to erroneous execution of the device management script.
     *
     * @return int The errorCode
     */
@@ -131,6 +138,7 @@ class DeviceManagementScriptDeviceState extends Entity
     
     /**
     * Sets the errorCode
+    * Error code corresponding to erroneous execution of the device management script.
     *
     * @param int $val The errorCode
     *
@@ -144,6 +152,7 @@ class DeviceManagementScriptDeviceState extends Entity
     
     /**
     * Gets the errorDescription
+    * Error description corresponding to erroneous execution of the device management script.
     *
     * @return string The errorDescription
     */
@@ -158,6 +167,7 @@ class DeviceManagementScriptDeviceState extends Entity
     
     /**
     * Sets the errorDescription
+    * Error description corresponding to erroneous execution of the device management script.
     *
     * @param string $val The errorDescription
     *
@@ -171,13 +181,14 @@ class DeviceManagementScriptDeviceState extends Entity
     
     /**
     * Gets the managedDevice
+    * The managed devices that executes the device management script.
     *
     * @return ManagedDevice The managedDevice
     */
     public function getManagedDevice()
     {
         if (array_key_exists("managedDevice", $this->_propDict)) {
-            if (is_a($this->_propDict["managedDevice"], "Microsoft\Graph\Beta\Model\ManagedDevice")) {
+            if (is_a($this->_propDict["managedDevice"], "Microsoft\Graph\Model\ManagedDevice")) {
                 return $this->_propDict["managedDevice"];
             } else {
                 $this->_propDict["managedDevice"] = new ManagedDevice($this->_propDict["managedDevice"]);
@@ -189,6 +200,7 @@ class DeviceManagementScriptDeviceState extends Entity
     
     /**
     * Sets the managedDevice
+    * The managed devices that executes the device management script.
     *
     * @param ManagedDevice $val The managedDevice
     *

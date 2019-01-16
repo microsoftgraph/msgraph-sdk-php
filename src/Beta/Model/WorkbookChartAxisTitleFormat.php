@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * WorkbookChartAxisTitleFormat class
@@ -28,13 +28,14 @@ class WorkbookChartAxisTitleFormat extends Entity
 {
     /**
     * Gets the font
+    * Represents the font attributes, such as font name, font size, color, etc. of chart axis title object. Read-only.
     *
     * @return WorkbookChartFont The font
     */
     public function getFont()
     {
         if (array_key_exists("font", $this->_propDict)) {
-            if (is_a($this->_propDict["font"], "Microsoft\Graph\Beta\Model\WorkbookChartFont")) {
+            if (is_a($this->_propDict["font"], "Microsoft\Graph\Model\WorkbookChartFont")) {
                 return $this->_propDict["font"];
             } else {
                 $this->_propDict["font"] = new WorkbookChartFont($this->_propDict["font"]);
@@ -46,6 +47,7 @@ class WorkbookChartAxisTitleFormat extends Entity
     
     /**
     * Sets the font
+    * Represents the font attributes, such as font name, font size, color, etc. of chart axis title object. Read-only.
     *
     * @param WorkbookChartFont $val The font
     *

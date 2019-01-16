@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * WorkbookRange class
@@ -28,6 +28,7 @@ class WorkbookRange extends Entity
 {
     /**
     * Gets the address
+    * Represents the range reference in A1-style. Address value will contain the Sheet reference (e.g. Sheet1!A1:B4). Read-only.
     *
     * @return string The address
     */
@@ -42,6 +43,7 @@ class WorkbookRange extends Entity
     
     /**
     * Sets the address
+    * Represents the range reference in A1-style. Address value will contain the Sheet reference (e.g. Sheet1!A1:B4). Read-only.
     *
     * @param string $val The address
     *
@@ -55,6 +57,7 @@ class WorkbookRange extends Entity
     
     /**
     * Gets the addressLocal
+    * Represents range reference for the specified range in the language of the user. Read-only.
     *
     * @return string The addressLocal
     */
@@ -69,6 +72,7 @@ class WorkbookRange extends Entity
     
     /**
     * Sets the addressLocal
+    * Represents range reference for the specified range in the language of the user. Read-only.
     *
     * @param string $val The addressLocal
     *
@@ -82,6 +86,7 @@ class WorkbookRange extends Entity
     
     /**
     * Gets the cellCount
+    * Number of cells in the range. Read-only.
     *
     * @return int The cellCount
     */
@@ -96,6 +101,7 @@ class WorkbookRange extends Entity
     
     /**
     * Sets the cellCount
+    * Number of cells in the range. Read-only.
     *
     * @param int $val The cellCount
     *
@@ -109,6 +115,7 @@ class WorkbookRange extends Entity
     
     /**
     * Gets the columnCount
+    * Represents the total number of columns in the range. Read-only.
     *
     * @return int The columnCount
     */
@@ -123,6 +130,7 @@ class WorkbookRange extends Entity
     
     /**
     * Sets the columnCount
+    * Represents the total number of columns in the range. Read-only.
     *
     * @param int $val The columnCount
     *
@@ -136,6 +144,7 @@ class WorkbookRange extends Entity
     
     /**
     * Gets the columnHidden
+    * Represents if all columns of the current range are hidden.
     *
     * @return bool The columnHidden
     */
@@ -150,6 +159,7 @@ class WorkbookRange extends Entity
     
     /**
     * Sets the columnHidden
+    * Represents if all columns of the current range are hidden.
     *
     * @param bool $val The columnHidden
     *
@@ -163,6 +173,7 @@ class WorkbookRange extends Entity
     
     /**
     * Gets the columnIndex
+    * Represents the column number of the first cell in the range. Zero-indexed. Read-only.
     *
     * @return int The columnIndex
     */
@@ -177,6 +188,7 @@ class WorkbookRange extends Entity
     
     /**
     * Sets the columnIndex
+    * Represents the column number of the first cell in the range. Zero-indexed. Read-only.
     *
     * @param int $val The columnIndex
     *
@@ -190,6 +202,7 @@ class WorkbookRange extends Entity
     
     /**
     * Gets the formulas
+    * Represents the formula in A1-style notation.
     *
     * @return string The formulas
     */
@@ -204,6 +217,7 @@ class WorkbookRange extends Entity
     
     /**
     * Sets the formulas
+    * Represents the formula in A1-style notation.
     *
     * @param string $val The formulas
     *
@@ -217,6 +231,7 @@ class WorkbookRange extends Entity
     
     /**
     * Gets the formulasLocal
+    * Represents the formula in A1-style notation, in the user's language and number-formatting locale.  For example, the English '=SUM(A1, 1.5)' formula would become '=SUMME(A1; 1,5)' in German.
     *
     * @return string The formulasLocal
     */
@@ -231,6 +246,7 @@ class WorkbookRange extends Entity
     
     /**
     * Sets the formulasLocal
+    * Represents the formula in A1-style notation, in the user's language and number-formatting locale.  For example, the English '=SUM(A1, 1.5)' formula would become '=SUMME(A1; 1,5)' in German.
     *
     * @param string $val The formulasLocal
     *
@@ -244,6 +260,7 @@ class WorkbookRange extends Entity
     
     /**
     * Gets the formulasR1C1
+    * Represents the formula in R1C1-style notation.
     *
     * @return string The formulasR1C1
     */
@@ -258,6 +275,7 @@ class WorkbookRange extends Entity
     
     /**
     * Sets the formulasR1C1
+    * Represents the formula in R1C1-style notation.
     *
     * @param string $val The formulasR1C1
     *
@@ -271,6 +289,7 @@ class WorkbookRange extends Entity
     
     /**
     * Gets the hidden
+    * Represents if all cells of the current range are hidden. Read-only.
     *
     * @return bool The hidden
     */
@@ -285,6 +304,7 @@ class WorkbookRange extends Entity
     
     /**
     * Sets the hidden
+    * Represents if all cells of the current range are hidden. Read-only.
     *
     * @param bool $val The hidden
     *
@@ -298,6 +318,7 @@ class WorkbookRange extends Entity
     
     /**
     * Gets the numberFormat
+    * Represents Excel's number format code for the given cell.
     *
     * @return string The numberFormat
     */
@@ -312,6 +333,7 @@ class WorkbookRange extends Entity
     
     /**
     * Sets the numberFormat
+    * Represents Excel's number format code for the given cell.
     *
     * @param string $val The numberFormat
     *
@@ -325,6 +347,7 @@ class WorkbookRange extends Entity
     
     /**
     * Gets the rowCount
+    * Returns the total number of rows in the range. Read-only.
     *
     * @return int The rowCount
     */
@@ -339,6 +362,7 @@ class WorkbookRange extends Entity
     
     /**
     * Sets the rowCount
+    * Returns the total number of rows in the range. Read-only.
     *
     * @param int $val The rowCount
     *
@@ -352,6 +376,7 @@ class WorkbookRange extends Entity
     
     /**
     * Gets the rowHidden
+    * Represents if all rows of the current range are hidden.
     *
     * @return bool The rowHidden
     */
@@ -366,6 +391,7 @@ class WorkbookRange extends Entity
     
     /**
     * Sets the rowHidden
+    * Represents if all rows of the current range are hidden.
     *
     * @param bool $val The rowHidden
     *
@@ -379,6 +405,7 @@ class WorkbookRange extends Entity
     
     /**
     * Gets the rowIndex
+    * Returns the row number of the first cell in the range. Zero-indexed. Read-only.
     *
     * @return int The rowIndex
     */
@@ -393,6 +420,7 @@ class WorkbookRange extends Entity
     
     /**
     * Sets the rowIndex
+    * Returns the row number of the first cell in the range. Zero-indexed. Read-only.
     *
     * @param int $val The rowIndex
     *
@@ -406,6 +434,7 @@ class WorkbookRange extends Entity
     
     /**
     * Gets the text
+    * Text values of the specified range. The Text value will not depend on the cell width. The # sign substitution that happens in Excel UI will not affect the text value returned by the API. Read-only.
     *
     * @return string The text
     */
@@ -420,6 +449,7 @@ class WorkbookRange extends Entity
     
     /**
     * Sets the text
+    * Text values of the specified range. The Text value will not depend on the cell width. The # sign substitution that happens in Excel UI will not affect the text value returned by the API. Read-only.
     *
     * @param string $val The text
     *
@@ -433,6 +463,7 @@ class WorkbookRange extends Entity
     
     /**
     * Gets the valueTypes
+    * Represents the type of data of each cell. The possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error. Read-only.
     *
     * @return string The valueTypes
     */
@@ -447,6 +478,7 @@ class WorkbookRange extends Entity
     
     /**
     * Sets the valueTypes
+    * Represents the type of data of each cell. The possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error. Read-only.
     *
     * @param string $val The valueTypes
     *
@@ -460,6 +492,7 @@ class WorkbookRange extends Entity
     
     /**
     * Gets the values
+    * Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
     *
     * @return string The values
     */
@@ -474,6 +507,7 @@ class WorkbookRange extends Entity
     
     /**
     * Sets the values
+    * Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
     *
     * @param string $val The values
     *
@@ -487,13 +521,14 @@ class WorkbookRange extends Entity
     
     /**
     * Gets the format
+    * Returns a format object, encapsulating the range's font, fill, borders, alignment, and other properties. Read-only.
     *
     * @return WorkbookRangeFormat The format
     */
     public function getFormat()
     {
         if (array_key_exists("format", $this->_propDict)) {
-            if (is_a($this->_propDict["format"], "Microsoft\Graph\Beta\Model\WorkbookRangeFormat")) {
+            if (is_a($this->_propDict["format"], "Microsoft\Graph\Model\WorkbookRangeFormat")) {
                 return $this->_propDict["format"];
             } else {
                 $this->_propDict["format"] = new WorkbookRangeFormat($this->_propDict["format"]);
@@ -505,6 +540,7 @@ class WorkbookRange extends Entity
     
     /**
     * Sets the format
+    * Returns a format object, encapsulating the range's font, fill, borders, alignment, and other properties. Read-only.
     *
     * @param WorkbookRangeFormat $val The format
     *
@@ -518,13 +554,14 @@ class WorkbookRange extends Entity
     
     /**
     * Gets the sort
+    * The worksheet containing the current range. Read-only.
     *
     * @return WorkbookRangeSort The sort
     */
     public function getSort()
     {
         if (array_key_exists("sort", $this->_propDict)) {
-            if (is_a($this->_propDict["sort"], "Microsoft\Graph\Beta\Model\WorkbookRangeSort")) {
+            if (is_a($this->_propDict["sort"], "Microsoft\Graph\Model\WorkbookRangeSort")) {
                 return $this->_propDict["sort"];
             } else {
                 $this->_propDict["sort"] = new WorkbookRangeSort($this->_propDict["sort"]);
@@ -536,6 +573,7 @@ class WorkbookRange extends Entity
     
     /**
     * Sets the sort
+    * The worksheet containing the current range. Read-only.
     *
     * @param WorkbookRangeSort $val The sort
     *
@@ -549,13 +587,14 @@ class WorkbookRange extends Entity
     
     /**
     * Gets the worksheet
+    * The worksheet containing the current range. Read-only.
     *
     * @return WorkbookWorksheet The worksheet
     */
     public function getWorksheet()
     {
         if (array_key_exists("worksheet", $this->_propDict)) {
-            if (is_a($this->_propDict["worksheet"], "Microsoft\Graph\Beta\Model\WorkbookWorksheet")) {
+            if (is_a($this->_propDict["worksheet"], "Microsoft\Graph\Model\WorkbookWorksheet")) {
                 return $this->_propDict["worksheet"];
             } else {
                 $this->_propDict["worksheet"] = new WorkbookWorksheet($this->_propDict["worksheet"]);
@@ -567,6 +606,7 @@ class WorkbookRange extends Entity
     
     /**
     * Sets the worksheet
+    * The worksheet containing the current range. Read-only.
     *
     * @param WorkbookWorksheet $val The worksheet
     *

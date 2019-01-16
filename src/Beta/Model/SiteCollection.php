@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * SiteCollection class
 *
@@ -53,6 +53,7 @@ class SiteCollection extends Entity
     }
     /**
     * Gets the hostname
+    * The hostname for the site collection. Read-only.
     *
     * @return string The hostname
     */
@@ -67,6 +68,7 @@ class SiteCollection extends Entity
 
     /**
     * Sets the hostname
+    * The hostname for the site collection. Read-only.
     *
     * @param string $val The value of the hostname
     *
@@ -80,13 +82,14 @@ class SiteCollection extends Entity
 
     /**
     * Gets the root
+    * If present, indicates that this is a root site collection in SharePoint. Read-only.
     *
     * @return Root The root
     */
     public function getRoot()
     {
         if (array_key_exists("root", $this->_propDict)) {
-            if (is_a($this->_propDict["root"], "Microsoft\Graph\Beta\Model\Root")) {
+            if (is_a($this->_propDict["root"], "Microsoft\Graph\Model\Root")) {
                 return $this->_propDict["root"];
             } else {
                 $this->_propDict["root"] = new Root($this->_propDict["root"]);
@@ -98,6 +101,7 @@ class SiteCollection extends Entity
 
     /**
     * Sets the root
+    * If present, indicates that this is a root site collection in SharePoint. Read-only.
     *
     * @param Root $val The value to assign to the root
     *

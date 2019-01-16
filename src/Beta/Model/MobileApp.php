@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * MobileApp class
@@ -28,6 +28,7 @@ class MobileApp extends Entity
 {
     /**
     * Gets the displayName
+    * The admin provided or imported title of the app.
     *
     * @return string The displayName
     */
@@ -42,6 +43,7 @@ class MobileApp extends Entity
     
     /**
     * Sets the displayName
+    * The admin provided or imported title of the app.
     *
     * @param string $val The displayName
     *
@@ -55,6 +57,7 @@ class MobileApp extends Entity
     
     /**
     * Gets the description
+    * The description of the app.
     *
     * @return string The description
     */
@@ -69,6 +72,7 @@ class MobileApp extends Entity
     
     /**
     * Sets the description
+    * The description of the app.
     *
     * @param string $val The description
     *
@@ -82,6 +86,7 @@ class MobileApp extends Entity
     
     /**
     * Gets the publisher
+    * The publisher of the app.
     *
     * @return string The publisher
     */
@@ -96,6 +101,7 @@ class MobileApp extends Entity
     
     /**
     * Sets the publisher
+    * The publisher of the app.
     *
     * @param string $val The publisher
     *
@@ -109,13 +115,14 @@ class MobileApp extends Entity
     
     /**
     * Gets the largeIcon
+    * The large icon, to be displayed in the app details and used for upload of the icon.
     *
     * @return MimeContent The largeIcon
     */
     public function getLargeIcon()
     {
         if (array_key_exists("largeIcon", $this->_propDict)) {
-            if (is_a($this->_propDict["largeIcon"], "Microsoft\Graph\Beta\Model\MimeContent")) {
+            if (is_a($this->_propDict["largeIcon"], "Microsoft\Graph\Model\MimeContent")) {
                 return $this->_propDict["largeIcon"];
             } else {
                 $this->_propDict["largeIcon"] = new MimeContent($this->_propDict["largeIcon"]);
@@ -127,6 +134,7 @@ class MobileApp extends Entity
     
     /**
     * Sets the largeIcon
+    * The large icon, to be displayed in the app details and used for upload of the icon.
     *
     * @param MimeContent $val The largeIcon
     *
@@ -140,6 +148,7 @@ class MobileApp extends Entity
     
     /**
     * Gets the createdDateTime
+    * The date and time the app was created.
     *
     * @return \DateTime The createdDateTime
     */
@@ -158,6 +167,7 @@ class MobileApp extends Entity
     
     /**
     * Sets the createdDateTime
+    * The date and time the app was created.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -171,6 +181,7 @@ class MobileApp extends Entity
     
     /**
     * Gets the lastModifiedDateTime
+    * The date and time the app was last modified.
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -189,6 +200,7 @@ class MobileApp extends Entity
     
     /**
     * Sets the lastModifiedDateTime
+    * The date and time the app was last modified.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -202,6 +214,7 @@ class MobileApp extends Entity
     
     /**
     * Gets the isFeatured
+    * The value indicating whether the app is marked as featured by the admin.
     *
     * @return bool The isFeatured
     */
@@ -216,6 +229,7 @@ class MobileApp extends Entity
     
     /**
     * Sets the isFeatured
+    * The value indicating whether the app is marked as featured by the admin.
     *
     * @param bool $val The isFeatured
     *
@@ -229,6 +243,7 @@ class MobileApp extends Entity
     
     /**
     * Gets the privacyInformationUrl
+    * The privacy statement Url.
     *
     * @return string The privacyInformationUrl
     */
@@ -243,6 +258,7 @@ class MobileApp extends Entity
     
     /**
     * Sets the privacyInformationUrl
+    * The privacy statement Url.
     *
     * @param string $val The privacyInformationUrl
     *
@@ -256,6 +272,7 @@ class MobileApp extends Entity
     
     /**
     * Gets the informationUrl
+    * The more information Url.
     *
     * @return string The informationUrl
     */
@@ -270,6 +287,7 @@ class MobileApp extends Entity
     
     /**
     * Sets the informationUrl
+    * The more information Url.
     *
     * @param string $val The informationUrl
     *
@@ -283,6 +301,7 @@ class MobileApp extends Entity
     
     /**
     * Gets the owner
+    * The owner of the app.
     *
     * @return string The owner
     */
@@ -297,6 +316,7 @@ class MobileApp extends Entity
     
     /**
     * Sets the owner
+    * The owner of the app.
     *
     * @param string $val The owner
     *
@@ -310,6 +330,7 @@ class MobileApp extends Entity
     
     /**
     * Gets the developer
+    * The developer of the app.
     *
     * @return string The developer
     */
@@ -324,6 +345,7 @@ class MobileApp extends Entity
     
     /**
     * Sets the developer
+    * The developer of the app.
     *
     * @param string $val The developer
     *
@@ -337,6 +359,7 @@ class MobileApp extends Entity
     
     /**
     * Gets the notes
+    * Notes for the app.
     *
     * @return string The notes
     */
@@ -351,6 +374,7 @@ class MobileApp extends Entity
     
     /**
     * Sets the notes
+    * Notes for the app.
     *
     * @param string $val The notes
     *
@@ -364,6 +388,7 @@ class MobileApp extends Entity
     
     /**
     * Gets the uploadState
+    * The upload state.
     *
     * @return int The uploadState
     */
@@ -378,6 +403,7 @@ class MobileApp extends Entity
     
     /**
     * Sets the uploadState
+    * The upload state.
     *
     * @param int $val The uploadState
     *
@@ -391,13 +417,14 @@ class MobileApp extends Entity
     
     /**
     * Gets the publishingState
+    * The publishing state for the app. The app cannot be assigned unless the app is published. Possible values are: notPublished, processing, published.
     *
     * @return MobileAppPublishingState The publishingState
     */
     public function getPublishingState()
     {
         if (array_key_exists("publishingState", $this->_propDict)) {
-            if (is_a($this->_propDict["publishingState"], "Microsoft\Graph\Beta\Model\MobileAppPublishingState")) {
+            if (is_a($this->_propDict["publishingState"], "Microsoft\Graph\Model\MobileAppPublishingState")) {
                 return $this->_propDict["publishingState"];
             } else {
                 $this->_propDict["publishingState"] = new MobileAppPublishingState($this->_propDict["publishingState"]);
@@ -409,6 +436,7 @@ class MobileApp extends Entity
     
     /**
     * Sets the publishingState
+    * The publishing state for the app. The app cannot be assigned unless the app is published. Possible values are: notPublished, processing, published.
     *
     * @param MobileAppPublishingState $val The publishingState
     *
@@ -420,9 +448,68 @@ class MobileApp extends Entity
         return $this;
     }
     
+    /**
+    * Gets the isAssigned
+    * The value indicating whether the app is assigned to at least one group.
+    *
+    * @return bool The isAssigned
+    */
+    public function getIsAssigned()
+    {
+        if (array_key_exists("isAssigned", $this->_propDict)) {
+            return $this->_propDict["isAssigned"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isAssigned
+    * The value indicating whether the app is assigned to at least one group.
+    *
+    * @param bool $val The isAssigned
+    *
+    * @return MobileApp
+    */
+    public function setIsAssigned($val)
+    {
+        $this->_propDict["isAssigned"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the roleScopeTagIds
+    * List of scope tag ids for this mobile app.
+    *
+    * @return string The roleScopeTagIds
+    */
+    public function getRoleScopeTagIds()
+    {
+        if (array_key_exists("roleScopeTagIds", $this->_propDict)) {
+            return $this->_propDict["roleScopeTagIds"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the roleScopeTagIds
+    * List of scope tag ids for this mobile app.
+    *
+    * @param string $val The roleScopeTagIds
+    *
+    * @return MobileApp
+    */
+    public function setRoleScopeTagIds($val)
+    {
+        $this->_propDict["roleScopeTagIds"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the categories
+    * The list of categories for this app.
      *
      * @return array The categories
      */
@@ -437,6 +524,7 @@ class MobileApp extends Entity
     
     /** 
     * Sets the categories
+    * The list of categories for this app.
     *
     * @param MobileAppCategory $val The categories
     *
@@ -451,6 +539,7 @@ class MobileApp extends Entity
 
      /** 
      * Gets the assignments
+    * The list of group assignments for this mobile app.
      *
      * @return array The assignments
      */
@@ -465,6 +554,7 @@ class MobileApp extends Entity
     
     /** 
     * Sets the assignments
+    * The list of group assignments for this mobile app.
     *
     * @param MobileAppAssignment $val The assignments
     *
@@ -478,13 +568,14 @@ class MobileApp extends Entity
     
     /**
     * Gets the installSummary
+    * Mobile App Install Summary.
     *
     * @return MobileAppInstallSummary The installSummary
     */
     public function getInstallSummary()
     {
         if (array_key_exists("installSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["installSummary"], "Microsoft\Graph\Beta\Model\MobileAppInstallSummary")) {
+            if (is_a($this->_propDict["installSummary"], "Microsoft\Graph\Model\MobileAppInstallSummary")) {
                 return $this->_propDict["installSummary"];
             } else {
                 $this->_propDict["installSummary"] = new MobileAppInstallSummary($this->_propDict["installSummary"]);
@@ -496,6 +587,7 @@ class MobileApp extends Entity
     
     /**
     * Sets the installSummary
+    * Mobile App Install Summary.
     *
     * @param MobileAppInstallSummary $val The installSummary
     *
@@ -510,6 +602,7 @@ class MobileApp extends Entity
 
      /** 
      * Gets the deviceStatuses
+    * The list of installation states for this mobile app.
      *
      * @return array The deviceStatuses
      */
@@ -524,6 +617,7 @@ class MobileApp extends Entity
     
     /** 
     * Sets the deviceStatuses
+    * The list of installation states for this mobile app.
     *
     * @param MobileAppInstallStatus $val The deviceStatuses
     *
@@ -538,6 +632,7 @@ class MobileApp extends Entity
 
      /** 
      * Gets the userStatuses
+    * The list of installation states for this mobile app.
      *
      * @return array The userStatuses
      */
@@ -552,6 +647,7 @@ class MobileApp extends Entity
     
     /** 
     * Sets the userStatuses
+    * The list of installation states for this mobile app.
     *
     * @param UserAppInstallStatus $val The userStatuses
     *

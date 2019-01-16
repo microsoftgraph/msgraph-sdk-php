@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * Windows10TeamGeneralConfiguration class
@@ -28,6 +28,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
 {
     /**
     * Gets the azureOperationalInsightsBlockTelemetry
+    * Indicates whether or not to Block Azure Operational Insights.
     *
     * @return bool The azureOperationalInsightsBlockTelemetry
     */
@@ -42,6 +43,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the azureOperationalInsightsBlockTelemetry
+    * Indicates whether or not to Block Azure Operational Insights.
     *
     * @param bool $val The azureOperationalInsightsBlockTelemetry
     *
@@ -55,6 +57,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the azureOperationalInsightsWorkspaceId
+    * The Azure Operational Insights workspace id.
     *
     * @return string The azureOperationalInsightsWorkspaceId
     */
@@ -69,6 +72,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the azureOperationalInsightsWorkspaceId
+    * The Azure Operational Insights workspace id.
     *
     * @param string $val The azureOperationalInsightsWorkspaceId
     *
@@ -82,6 +86,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the azureOperationalInsightsWorkspaceKey
+    * The Azure Operational Insights Workspace key.
     *
     * @return string The azureOperationalInsightsWorkspaceKey
     */
@@ -96,6 +101,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the azureOperationalInsightsWorkspaceKey
+    * The Azure Operational Insights Workspace key.
     *
     * @param string $val The azureOperationalInsightsWorkspaceKey
     *
@@ -109,6 +115,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the connectAppBlockAutoLaunch
+    * Specifies whether to automatically launch the Connect app whenever a projection is initiated.
     *
     * @return bool The connectAppBlockAutoLaunch
     */
@@ -123,6 +130,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the connectAppBlockAutoLaunch
+    * Specifies whether to automatically launch the Connect app whenever a projection is initiated.
     *
     * @param bool $val The connectAppBlockAutoLaunch
     *
@@ -136,6 +144,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the maintenanceWindowBlocked
+    * Indicates whether or not to Block setting a maintenance window for device updates.
     *
     * @return bool The maintenanceWindowBlocked
     */
@@ -150,6 +159,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the maintenanceWindowBlocked
+    * Indicates whether or not to Block setting a maintenance window for device updates.
     *
     * @param bool $val The maintenanceWindowBlocked
     *
@@ -163,6 +173,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the maintenanceWindowDurationInHours
+    * Maintenance window duration for device updates. Valid values 0 to 5
     *
     * @return int The maintenanceWindowDurationInHours
     */
@@ -177,6 +188,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the maintenanceWindowDurationInHours
+    * Maintenance window duration for device updates. Valid values 0 to 5
     *
     * @param int $val The maintenanceWindowDurationInHours
     *
@@ -190,13 +202,14 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the maintenanceWindowStartTime
+    * Maintenance window start time for device updates.
     *
     * @return TimeOfDay The maintenanceWindowStartTime
     */
     public function getMaintenanceWindowStartTime()
     {
         if (array_key_exists("maintenanceWindowStartTime", $this->_propDict)) {
-            if (is_a($this->_propDict["maintenanceWindowStartTime"], "Microsoft\Graph\Beta\Model\TimeOfDay")) {
+            if (is_a($this->_propDict["maintenanceWindowStartTime"], "Microsoft\Graph\Model\TimeOfDay")) {
                 return $this->_propDict["maintenanceWindowStartTime"];
             } else {
                 $this->_propDict["maintenanceWindowStartTime"] = new TimeOfDay($this->_propDict["maintenanceWindowStartTime"]);
@@ -208,6 +221,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the maintenanceWindowStartTime
+    * Maintenance window start time for device updates.
     *
     * @param TimeOfDay $val The maintenanceWindowStartTime
     *
@@ -221,13 +235,14 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the miracastChannel
+    * The channel. Possible values are: userDefined, one, two, three, four, five, six, seven, eight, nine, ten, eleven, thirtySix, forty, fortyFour, fortyEight, oneHundredFortyNine, oneHundredFiftyThree, oneHundredFiftySeven, oneHundredSixtyOne, oneHundredSixtyFive.
     *
     * @return MiracastChannel The miracastChannel
     */
     public function getMiracastChannel()
     {
         if (array_key_exists("miracastChannel", $this->_propDict)) {
-            if (is_a($this->_propDict["miracastChannel"], "Microsoft\Graph\Beta\Model\MiracastChannel")) {
+            if (is_a($this->_propDict["miracastChannel"], "Microsoft\Graph\Model\MiracastChannel")) {
                 return $this->_propDict["miracastChannel"];
             } else {
                 $this->_propDict["miracastChannel"] = new MiracastChannel($this->_propDict["miracastChannel"]);
@@ -239,6 +254,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the miracastChannel
+    * The channel. Possible values are: userDefined, one, two, three, four, five, six, seven, eight, nine, ten, eleven, thirtySix, forty, fortyFour, fortyEight, oneHundredFortyNine, oneHundredFiftyThree, oneHundredFiftySeven, oneHundredSixtyOne, oneHundredSixtyFive.
     *
     * @param MiracastChannel $val The miracastChannel
     *
@@ -252,6 +268,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the miracastBlocked
+    * Indicates whether or not to Block wireless projection.
     *
     * @return bool The miracastBlocked
     */
@@ -266,6 +283,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the miracastBlocked
+    * Indicates whether or not to Block wireless projection.
     *
     * @param bool $val The miracastBlocked
     *
@@ -279,6 +297,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the miracastRequirePin
+    * Indicates whether or not to require a pin for wireless projection.
     *
     * @return bool The miracastRequirePin
     */
@@ -293,6 +312,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the miracastRequirePin
+    * Indicates whether or not to require a pin for wireless projection.
     *
     * @param bool $val The miracastRequirePin
     *
@@ -306,6 +326,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the settingsBlockMyMeetingsAndFiles
+    * Specifies whether to disable the 'My meetings and files' feature in the Start menu, which shows the signed-in user's meetings and files from Office 365.
     *
     * @return bool The settingsBlockMyMeetingsAndFiles
     */
@@ -320,6 +341,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the settingsBlockMyMeetingsAndFiles
+    * Specifies whether to disable the 'My meetings and files' feature in the Start menu, which shows the signed-in user's meetings and files from Office 365.
     *
     * @param bool $val The settingsBlockMyMeetingsAndFiles
     *
@@ -333,6 +355,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the settingsBlockSessionResume
+    * Specifies whether to allow the ability to resume a session when the session times out.
     *
     * @return bool The settingsBlockSessionResume
     */
@@ -347,6 +370,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the settingsBlockSessionResume
+    * Specifies whether to allow the ability to resume a session when the session times out.
     *
     * @param bool $val The settingsBlockSessionResume
     *
@@ -360,6 +384,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the settingsBlockSigninSuggestions
+    * Specifies whether to disable auto-populating of the sign-in dialog with invitees from scheduled meetings.
     *
     * @return bool The settingsBlockSigninSuggestions
     */
@@ -374,6 +399,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the settingsBlockSigninSuggestions
+    * Specifies whether to disable auto-populating of the sign-in dialog with invitees from scheduled meetings.
     *
     * @param bool $val The settingsBlockSigninSuggestions
     *
@@ -387,6 +413,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the settingsDefaultVolume
+    * Specifies the default volume value for a new session. Permitted values are 0-100. The default is 45. Valid values 0 to 100
     *
     * @return int The settingsDefaultVolume
     */
@@ -401,6 +428,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the settingsDefaultVolume
+    * Specifies the default volume value for a new session. Permitted values are 0-100. The default is 45. Valid values 0 to 100
     *
     * @param int $val The settingsDefaultVolume
     *
@@ -414,6 +442,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the settingsScreenTimeoutInMinutes
+    * Specifies the number of minutes until the Hub screen turns off.
     *
     * @return int The settingsScreenTimeoutInMinutes
     */
@@ -428,6 +457,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the settingsScreenTimeoutInMinutes
+    * Specifies the number of minutes until the Hub screen turns off.
     *
     * @param int $val The settingsScreenTimeoutInMinutes
     *
@@ -441,6 +471,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the settingsSessionTimeoutInMinutes
+    * Specifies the number of minutes until the session times out.
     *
     * @return int The settingsSessionTimeoutInMinutes
     */
@@ -455,6 +486,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the settingsSessionTimeoutInMinutes
+    * Specifies the number of minutes until the session times out.
     *
     * @param int $val The settingsSessionTimeoutInMinutes
     *
@@ -468,6 +500,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the settingsSleepTimeoutInMinutes
+    * Specifies the number of minutes until the Hub enters sleep mode.
     *
     * @return int The settingsSleepTimeoutInMinutes
     */
@@ -482,6 +515,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the settingsSleepTimeoutInMinutes
+    * Specifies the number of minutes until the Hub enters sleep mode.
     *
     * @param int $val The settingsSleepTimeoutInMinutes
     *
@@ -495,6 +529,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the welcomeScreenBlockAutomaticWakeUp
+    * Indicates whether or not to Block the welcome screen from waking up automatically when someone enters the room.
     *
     * @return bool The welcomeScreenBlockAutomaticWakeUp
     */
@@ -509,6 +544,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the welcomeScreenBlockAutomaticWakeUp
+    * Indicates whether or not to Block the welcome screen from waking up automatically when someone enters the room.
     *
     * @param bool $val The welcomeScreenBlockAutomaticWakeUp
     *
@@ -522,6 +558,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the welcomeScreenBackgroundImageUrl
+    * The welcome screen background image URL. The URL must use the HTTPS protocol and return a PNG image.
     *
     * @return string The welcomeScreenBackgroundImageUrl
     */
@@ -536,6 +573,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the welcomeScreenBackgroundImageUrl
+    * The welcome screen background image URL. The URL must use the HTTPS protocol and return a PNG image.
     *
     * @param string $val The welcomeScreenBackgroundImageUrl
     *
@@ -549,13 +587,14 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the welcomeScreenMeetingInformation
+    * The welcome screen meeting information shown. Possible values are: userDefined, showOrganizerAndTimeOnly, showOrganizerAndTimeAndSubject.
     *
     * @return WelcomeScreenMeetingInformation The welcomeScreenMeetingInformation
     */
     public function getWelcomeScreenMeetingInformation()
     {
         if (array_key_exists("welcomeScreenMeetingInformation", $this->_propDict)) {
-            if (is_a($this->_propDict["welcomeScreenMeetingInformation"], "Microsoft\Graph\Beta\Model\WelcomeScreenMeetingInformation")) {
+            if (is_a($this->_propDict["welcomeScreenMeetingInformation"], "Microsoft\Graph\Model\WelcomeScreenMeetingInformation")) {
                 return $this->_propDict["welcomeScreenMeetingInformation"];
             } else {
                 $this->_propDict["welcomeScreenMeetingInformation"] = new WelcomeScreenMeetingInformation($this->_propDict["welcomeScreenMeetingInformation"]);
@@ -567,6 +606,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the welcomeScreenMeetingInformation
+    * The welcome screen meeting information shown. Possible values are: userDefined, showOrganizerAndTimeOnly, showOrganizerAndTimeAndSubject.
     *
     * @param WelcomeScreenMeetingInformation $val The welcomeScreenMeetingInformation
     *

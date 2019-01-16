@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * VppTokenRevokeLicensesActionResult class
 *
@@ -27,6 +27,7 @@ class VppTokenRevokeLicensesActionResult extends VppTokenActionResult
 {
     /**
     * Gets the totalLicensesCount
+    * A count of the number of licenses that were attempted to revoke.
     *
     * @return int The totalLicensesCount
     */
@@ -41,6 +42,7 @@ class VppTokenRevokeLicensesActionResult extends VppTokenActionResult
 
     /**
     * Sets the totalLicensesCount
+    * A count of the number of licenses that were attempted to revoke.
     *
     * @param int $val The value of the totalLicensesCount
     *
@@ -53,6 +55,7 @@ class VppTokenRevokeLicensesActionResult extends VppTokenActionResult
     }
     /**
     * Gets the failedLicensesCount
+    * A count of the number of licenses that failed to revoke.
     *
     * @return int The failedLicensesCount
     */
@@ -67,6 +70,7 @@ class VppTokenRevokeLicensesActionResult extends VppTokenActionResult
 
     /**
     * Sets the failedLicensesCount
+    * A count of the number of licenses that failed to revoke.
     *
     * @param int $val The value of the failedLicensesCount
     *
@@ -80,13 +84,14 @@ class VppTokenRevokeLicensesActionResult extends VppTokenActionResult
 
     /**
     * Gets the actionFailureReason
+    * The reason for the revoke licenses action failure.
     *
     * @return VppTokenActionFailureReason The actionFailureReason
     */
     public function getActionFailureReason()
     {
         if (array_key_exists("actionFailureReason", $this->_propDict)) {
-            if (is_a($this->_propDict["actionFailureReason"], "Microsoft\Graph\Beta\Model\VppTokenActionFailureReason")) {
+            if (is_a($this->_propDict["actionFailureReason"], "Microsoft\Graph\Model\VppTokenActionFailureReason")) {
                 return $this->_propDict["actionFailureReason"];
             } else {
                 $this->_propDict["actionFailureReason"] = new VppTokenActionFailureReason($this->_propDict["actionFailureReason"]);
@@ -98,6 +103,7 @@ class VppTokenRevokeLicensesActionResult extends VppTokenActionResult
 
     /**
     * Sets the actionFailureReason
+    * The reason for the revoke licenses action failure.
     *
     * @param VppTokenActionFailureReason $val The value to assign to the actionFailureReason
     *

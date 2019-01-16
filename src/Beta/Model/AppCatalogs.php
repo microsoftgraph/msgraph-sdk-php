@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * AppCatalogs class
@@ -44,7 +44,7 @@ class AppCatalogs extends Entity
     /** 
     * Sets the teamsApps
     *
-    * @param TeamsCatalogApp $val The teamsApps
+    * @param TeamsApp $val The teamsApps
     *
     * @return AppCatalogs
     */

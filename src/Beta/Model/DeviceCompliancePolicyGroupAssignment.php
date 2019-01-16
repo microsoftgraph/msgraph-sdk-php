@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * DeviceCompliancePolicyGroupAssignment class
@@ -28,6 +28,7 @@ class DeviceCompliancePolicyGroupAssignment extends Entity
 {
     /**
     * Gets the targetGroupId
+    * The Id of the AAD group we are targeting the device compliance policy to.
     *
     * @return string The targetGroupId
     */
@@ -42,6 +43,7 @@ class DeviceCompliancePolicyGroupAssignment extends Entity
     
     /**
     * Sets the targetGroupId
+    * The Id of the AAD group we are targeting the device compliance policy to.
     *
     * @param string $val The targetGroupId
     *
@@ -55,6 +57,7 @@ class DeviceCompliancePolicyGroupAssignment extends Entity
     
     /**
     * Gets the excludeGroup
+    * Indicates if this group is should be excluded. Defaults that the group should be included
     *
     * @return bool The excludeGroup
     */
@@ -69,6 +72,7 @@ class DeviceCompliancePolicyGroupAssignment extends Entity
     
     /**
     * Sets the excludeGroup
+    * Indicates if this group is should be excluded. Defaults that the group should be included
     *
     * @param bool $val The excludeGroup
     *
@@ -82,13 +86,14 @@ class DeviceCompliancePolicyGroupAssignment extends Entity
     
     /**
     * Gets the deviceCompliancePolicy
+    * The navigation link to the  device compliance polic targeted.
     *
     * @return DeviceCompliancePolicy The deviceCompliancePolicy
     */
     public function getDeviceCompliancePolicy()
     {
         if (array_key_exists("deviceCompliancePolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceCompliancePolicy"], "Microsoft\Graph\Beta\Model\DeviceCompliancePolicy")) {
+            if (is_a($this->_propDict["deviceCompliancePolicy"], "Microsoft\Graph\Model\DeviceCompliancePolicy")) {
                 return $this->_propDict["deviceCompliancePolicy"];
             } else {
                 $this->_propDict["deviceCompliancePolicy"] = new DeviceCompliancePolicy($this->_propDict["deviceCompliancePolicy"]);
@@ -100,6 +105,7 @@ class DeviceCompliancePolicyGroupAssignment extends Entity
     
     /**
     * Sets the deviceCompliancePolicy
+    * The navigation link to the  device compliance polic targeted.
     *
     * @param DeviceCompliancePolicy $val The deviceCompliancePolicy
     *

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * IosBookmark class
 *
@@ -27,6 +27,7 @@ class IosBookmark extends Entity
 {
     /**
     * Gets the url
+    * URL allowed to access
     *
     * @return string The url
     */
@@ -41,6 +42,7 @@ class IosBookmark extends Entity
 
     /**
     * Sets the url
+    * URL allowed to access
     *
     * @param string $val The value of the url
     *
@@ -53,6 +55,7 @@ class IosBookmark extends Entity
     }
     /**
     * Gets the bookmarkFolder
+    * The folder into which the bookmark should be added in Safari
     *
     * @return string The bookmarkFolder
     */
@@ -67,6 +70,7 @@ class IosBookmark extends Entity
 
     /**
     * Sets the bookmarkFolder
+    * The folder into which the bookmark should be added in Safari
     *
     * @param string $val The value of the bookmarkFolder
     *
@@ -79,6 +83,7 @@ class IosBookmark extends Entity
     }
     /**
     * Gets the displayName
+    * The display name of the bookmark
     *
     * @return string The displayName
     */
@@ -93,6 +98,7 @@ class IosBookmark extends Entity
 
     /**
     * Sets the displayName
+    * The display name of the bookmark
     *
     * @param string $val The value of the displayName
     *

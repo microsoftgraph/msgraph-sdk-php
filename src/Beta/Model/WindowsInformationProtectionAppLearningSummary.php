@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * WindowsInformationProtectionAppLearningSummary class
@@ -28,6 +28,7 @@ class WindowsInformationProtectionAppLearningSummary extends Entity
 {
     /**
     * Gets the applicationName
+    * Application Name
     *
     * @return string The applicationName
     */
@@ -42,6 +43,7 @@ class WindowsInformationProtectionAppLearningSummary extends Entity
     
     /**
     * Sets the applicationName
+    * Application Name
     *
     * @param string $val The applicationName
     *
@@ -55,13 +57,14 @@ class WindowsInformationProtectionAppLearningSummary extends Entity
     
     /**
     * Gets the applicationType
+    * Application Type. Possible values are: universal, desktop.
     *
     * @return ApplicationType The applicationType
     */
     public function getApplicationType()
     {
         if (array_key_exists("applicationType", $this->_propDict)) {
-            if (is_a($this->_propDict["applicationType"], "Microsoft\Graph\Beta\Model\ApplicationType")) {
+            if (is_a($this->_propDict["applicationType"], "Microsoft\Graph\Model\ApplicationType")) {
                 return $this->_propDict["applicationType"];
             } else {
                 $this->_propDict["applicationType"] = new ApplicationType($this->_propDict["applicationType"]);
@@ -73,6 +76,7 @@ class WindowsInformationProtectionAppLearningSummary extends Entity
     
     /**
     * Sets the applicationType
+    * Application Type. Possible values are: universal, desktop.
     *
     * @param ApplicationType $val The applicationType
     *
@@ -86,6 +90,7 @@ class WindowsInformationProtectionAppLearningSummary extends Entity
     
     /**
     * Gets the deviceCount
+    * Device Count
     *
     * @return int The deviceCount
     */
@@ -100,6 +105,7 @@ class WindowsInformationProtectionAppLearningSummary extends Entity
     
     /**
     * Sets the deviceCount
+    * Device Count
     *
     * @param int $val The deviceCount
     *

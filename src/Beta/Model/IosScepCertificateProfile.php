@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * IosScepCertificateProfile class
@@ -28,6 +28,7 @@ class IosScepCertificateProfile extends IosCertificateProfileBase
 {
     /**
     * Gets the scepServerUrls
+    * SCEP Server Url(s).
     *
     * @return string The scepServerUrls
     */
@@ -42,6 +43,7 @@ class IosScepCertificateProfile extends IosCertificateProfileBase
     
     /**
     * Sets the scepServerUrls
+    * SCEP Server Url(s).
     *
     * @param string $val The scepServerUrls
     *
@@ -55,6 +57,7 @@ class IosScepCertificateProfile extends IosCertificateProfileBase
     
     /**
     * Gets the subjectNameFormatString
+    * Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
     *
     * @return string The subjectNameFormatString
     */
@@ -69,6 +72,7 @@ class IosScepCertificateProfile extends IosCertificateProfileBase
     
     /**
     * Sets the subjectNameFormatString
+    * Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
     *
     * @param string $val The subjectNameFormatString
     *
@@ -82,13 +86,14 @@ class IosScepCertificateProfile extends IosCertificateProfileBase
     
     /**
     * Gets the keyUsage
+    * SCEP Key Usage.
     *
     * @return KeyUsages The keyUsage
     */
     public function getKeyUsage()
     {
         if (array_key_exists("keyUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["keyUsage"], "Microsoft\Graph\Beta\Model\KeyUsages")) {
+            if (is_a($this->_propDict["keyUsage"], "Microsoft\Graph\Model\KeyUsages")) {
                 return $this->_propDict["keyUsage"];
             } else {
                 $this->_propDict["keyUsage"] = new KeyUsages($this->_propDict["keyUsage"]);
@@ -100,6 +105,7 @@ class IosScepCertificateProfile extends IosCertificateProfileBase
     
     /**
     * Sets the keyUsage
+    * SCEP Key Usage.
     *
     * @param KeyUsages $val The keyUsage
     *
@@ -113,13 +119,14 @@ class IosScepCertificateProfile extends IosCertificateProfileBase
     
     /**
     * Gets the keySize
+    * SCEP Key Size.
     *
     * @return KeySize The keySize
     */
     public function getKeySize()
     {
         if (array_key_exists("keySize", $this->_propDict)) {
-            if (is_a($this->_propDict["keySize"], "Microsoft\Graph\Beta\Model\KeySize")) {
+            if (is_a($this->_propDict["keySize"], "Microsoft\Graph\Model\KeySize")) {
                 return $this->_propDict["keySize"];
             } else {
                 $this->_propDict["keySize"] = new KeySize($this->_propDict["keySize"]);
@@ -131,6 +138,7 @@ class IosScepCertificateProfile extends IosCertificateProfileBase
     
     /**
     * Sets the keySize
+    * SCEP Key Size.
     *
     * @param KeySize $val The keySize
     *
@@ -145,6 +153,7 @@ class IosScepCertificateProfile extends IosCertificateProfileBase
 
      /** 
      * Gets the extendedKeyUsages
+    * Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.
      *
      * @return array The extendedKeyUsages
      */
@@ -159,6 +168,7 @@ class IosScepCertificateProfile extends IosCertificateProfileBase
     
     /** 
     * Sets the extendedKeyUsages
+    * Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.
     *
     * @param ExtendedKeyUsage $val The extendedKeyUsages
     *
@@ -172,6 +182,7 @@ class IosScepCertificateProfile extends IosCertificateProfileBase
     
     /**
     * Gets the subjectAlternativeNameFormatString
+    * Custom String that defines the AAD Attribute.
     *
     * @return string The subjectAlternativeNameFormatString
     */
@@ -186,6 +197,7 @@ class IosScepCertificateProfile extends IosCertificateProfileBase
     
     /**
     * Sets the subjectAlternativeNameFormatString
+    * Custom String that defines the AAD Attribute.
     *
     * @param string $val The subjectAlternativeNameFormatString
     *
@@ -199,13 +211,14 @@ class IosScepCertificateProfile extends IosCertificateProfileBase
     
     /**
     * Gets the certificateStore
+    * Target store certificate
     *
     * @return CertificateStore The certificateStore
     */
     public function getCertificateStore()
     {
         if (array_key_exists("certificateStore", $this->_propDict)) {
-            if (is_a($this->_propDict["certificateStore"], "Microsoft\Graph\Beta\Model\CertificateStore")) {
+            if (is_a($this->_propDict["certificateStore"], "Microsoft\Graph\Model\CertificateStore")) {
                 return $this->_propDict["certificateStore"];
             } else {
                 $this->_propDict["certificateStore"] = new CertificateStore($this->_propDict["certificateStore"]);
@@ -217,6 +230,7 @@ class IosScepCertificateProfile extends IosCertificateProfileBase
     
     /**
     * Sets the certificateStore
+    * Target store certificate
     *
     * @param CertificateStore $val The certificateStore
     *
@@ -231,6 +245,7 @@ class IosScepCertificateProfile extends IosCertificateProfileBase
 
      /** 
      * Gets the customSubjectAlternativeNames
+    * Custom Subject Alterantive Name Settings. This collection can contain a maximum of 500 elements.
      *
      * @return array The customSubjectAlternativeNames
      */
@@ -245,6 +260,7 @@ class IosScepCertificateProfile extends IosCertificateProfileBase
     
     /** 
     * Sets the customSubjectAlternativeNames
+    * Custom Subject Alterantive Name Settings. This collection can contain a maximum of 500 elements.
     *
     * @param CustomSubjectAlternativeName $val The customSubjectAlternativeNames
     *
@@ -258,13 +274,14 @@ class IosScepCertificateProfile extends IosCertificateProfileBase
     
     /**
     * Gets the rootCertificate
+    * Trusted Root Certificate.
     *
     * @return IosTrustedRootCertificate The rootCertificate
     */
     public function getRootCertificate()
     {
         if (array_key_exists("rootCertificate", $this->_propDict)) {
-            if (is_a($this->_propDict["rootCertificate"], "Microsoft\Graph\Beta\Model\IosTrustedRootCertificate")) {
+            if (is_a($this->_propDict["rootCertificate"], "Microsoft\Graph\Model\IosTrustedRootCertificate")) {
                 return $this->_propDict["rootCertificate"];
             } else {
                 $this->_propDict["rootCertificate"] = new IosTrustedRootCertificate($this->_propDict["rootCertificate"]);
@@ -276,6 +293,7 @@ class IosScepCertificateProfile extends IosCertificateProfileBase
     
     /**
     * Sets the rootCertificate
+    * Trusted Root Certificate.
     *
     * @param IosTrustedRootCertificate $val The rootCertificate
     *
@@ -290,6 +308,7 @@ class IosScepCertificateProfile extends IosCertificateProfileBase
 
      /** 
      * Gets the managedDeviceCertificateStates
+    * Certificate state for devices
      *
      * @return array The managedDeviceCertificateStates
      */
@@ -304,6 +323,7 @@ class IosScepCertificateProfile extends IosCertificateProfileBase
     
     /** 
     * Sets the managedDeviceCertificateStates
+    * Certificate state for devices
     *
     * @param ManagedDeviceCertificateState $val The managedDeviceCertificateStates
     *

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * IosVppAppAssignedDeviceLicense class
@@ -28,6 +28,7 @@ class IosVppAppAssignedDeviceLicense extends IosVppAppAssignedLicense
 {
     /**
     * Gets the managedDeviceId
+    * The managed device ID.
     *
     * @return string The managedDeviceId
     */
@@ -42,6 +43,7 @@ class IosVppAppAssignedDeviceLicense extends IosVppAppAssignedLicense
     
     /**
     * Sets the managedDeviceId
+    * The managed device ID.
     *
     * @param string $val The managedDeviceId
     *
@@ -55,6 +57,7 @@ class IosVppAppAssignedDeviceLicense extends IosVppAppAssignedLicense
     
     /**
     * Gets the deviceName
+    * The device name.
     *
     * @return string The deviceName
     */
@@ -69,6 +72,7 @@ class IosVppAppAssignedDeviceLicense extends IosVppAppAssignedLicense
     
     /**
     * Sets the deviceName
+    * The device name.
     *
     * @param string $val The deviceName
     *

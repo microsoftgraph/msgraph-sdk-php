@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * ManagedDeviceMobileAppConfigurationDeviceSummary class
@@ -28,6 +28,7 @@ class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity
 {
     /**
     * Gets the pendingCount
+    * Number of pending devices
     *
     * @return int The pendingCount
     */
@@ -42,6 +43,7 @@ class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity
     
     /**
     * Sets the pendingCount
+    * Number of pending devices
     *
     * @param int $val The pendingCount
     *
@@ -55,6 +57,7 @@ class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity
     
     /**
     * Gets the notApplicableCount
+    * Number of not applicable devices
     *
     * @return int The notApplicableCount
     */
@@ -69,6 +72,7 @@ class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity
     
     /**
     * Sets the notApplicableCount
+    * Number of not applicable devices
     *
     * @param int $val The notApplicableCount
     *
@@ -82,6 +86,7 @@ class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity
     
     /**
     * Gets the notApplicablePlatformCount
+    * Number of not applicable devices due to mismatch platform and policy
     *
     * @return int The notApplicablePlatformCount
     */
@@ -96,6 +101,7 @@ class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity
     
     /**
     * Sets the notApplicablePlatformCount
+    * Number of not applicable devices due to mismatch platform and policy
     *
     * @param int $val The notApplicablePlatformCount
     *
@@ -109,6 +115,7 @@ class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity
     
     /**
     * Gets the successCount
+    * Number of succeeded devices
     *
     * @return int The successCount
     */
@@ -123,6 +130,7 @@ class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity
     
     /**
     * Sets the successCount
+    * Number of succeeded devices
     *
     * @param int $val The successCount
     *
@@ -136,6 +144,7 @@ class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity
     
     /**
     * Gets the errorCount
+    * Number of error devices
     *
     * @return int The errorCount
     */
@@ -150,6 +159,7 @@ class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity
     
     /**
     * Sets the errorCount
+    * Number of error devices
     *
     * @param int $val The errorCount
     *
@@ -163,6 +173,7 @@ class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity
     
     /**
     * Gets the failedCount
+    * Number of failed devices
     *
     * @return int The failedCount
     */
@@ -177,6 +188,7 @@ class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity
     
     /**
     * Sets the failedCount
+    * Number of failed devices
     *
     * @param int $val The failedCount
     *
@@ -190,6 +202,7 @@ class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity
     
     /**
     * Gets the conflictCount
+    * Number of devices in conflict
     *
     * @return int The conflictCount
     */
@@ -204,6 +217,7 @@ class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity
     
     /**
     * Sets the conflictCount
+    * Number of devices in conflict
     *
     * @param int $val The conflictCount
     *
@@ -217,6 +231,7 @@ class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity
     
     /**
     * Gets the lastUpdateDateTime
+    * Last update time
     *
     * @return \DateTime The lastUpdateDateTime
     */
@@ -235,6 +250,7 @@ class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity
     
     /**
     * Sets the lastUpdateDateTime
+    * Last update time
     *
     * @param \DateTime $val The lastUpdateDateTime
     *
@@ -248,6 +264,7 @@ class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity
     
     /**
     * Gets the configurationVersion
+    * Version of the policy for that overview
     *
     * @return int The configurationVersion
     */
@@ -262,6 +279,7 @@ class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity
     
     /**
     * Sets the configurationVersion
+    * Version of the policy for that overview
     *
     * @param int $val The configurationVersion
     *

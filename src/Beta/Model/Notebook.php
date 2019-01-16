@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * Notebook class
@@ -28,6 +28,7 @@ class Notebook extends OnenoteEntityHierarchyModel
 {
     /**
     * Gets the isDefault
+    * Indicates whether this is the user's default notebook. Read-only.
     *
     * @return bool The isDefault
     */
@@ -42,6 +43,7 @@ class Notebook extends OnenoteEntityHierarchyModel
     
     /**
     * Sets the isDefault
+    * Indicates whether this is the user's default notebook. Read-only.
     *
     * @param bool $val The isDefault
     *
@@ -55,13 +57,14 @@ class Notebook extends OnenoteEntityHierarchyModel
     
     /**
     * Gets the userRole
+    * Possible values are: Owner, Contributor, Reader, None. Owner represents owner-level access to the notebook. Contributor represents read/write access to the notebook. Reader represents read-only access to the notebook. Read-only.
     *
     * @return OnenoteUserRole The userRole
     */
     public function getUserRole()
     {
         if (array_key_exists("userRole", $this->_propDict)) {
-            if (is_a($this->_propDict["userRole"], "Microsoft\Graph\Beta\Model\OnenoteUserRole")) {
+            if (is_a($this->_propDict["userRole"], "Microsoft\Graph\Model\OnenoteUserRole")) {
                 return $this->_propDict["userRole"];
             } else {
                 $this->_propDict["userRole"] = new OnenoteUserRole($this->_propDict["userRole"]);
@@ -73,6 +76,7 @@ class Notebook extends OnenoteEntityHierarchyModel
     
     /**
     * Sets the userRole
+    * Possible values are: Owner, Contributor, Reader, None. Owner represents owner-level access to the notebook. Contributor represents read/write access to the notebook. Reader represents read-only access to the notebook. Read-only.
     *
     * @param OnenoteUserRole $val The userRole
     *
@@ -86,6 +90,7 @@ class Notebook extends OnenoteEntityHierarchyModel
     
     /**
     * Gets the isShared
+    * Indicates whether the notebook is shared. If true, the contents of the notebook can be seen by people other than the owner. Read-only.
     *
     * @return bool The isShared
     */
@@ -100,6 +105,7 @@ class Notebook extends OnenoteEntityHierarchyModel
     
     /**
     * Sets the isShared
+    * Indicates whether the notebook is shared. If true, the contents of the notebook can be seen by people other than the owner. Read-only.
     *
     * @param bool $val The isShared
     *
@@ -113,6 +119,7 @@ class Notebook extends OnenoteEntityHierarchyModel
     
     /**
     * Gets the sectionsUrl
+    * The URL for the sections navigation property, which returns all the sections in the notebook. Read-only.
     *
     * @return string The sectionsUrl
     */
@@ -127,6 +134,7 @@ class Notebook extends OnenoteEntityHierarchyModel
     
     /**
     * Sets the sectionsUrl
+    * The URL for the sections navigation property, which returns all the sections in the notebook. Read-only.
     *
     * @param string $val The sectionsUrl
     *
@@ -140,6 +148,7 @@ class Notebook extends OnenoteEntityHierarchyModel
     
     /**
     * Gets the sectionGroupsUrl
+    * The URL for the sectionGroups navigation property, which returns all the section groups in the notebook. Read-only.
     *
     * @return string The sectionGroupsUrl
     */
@@ -154,6 +163,7 @@ class Notebook extends OnenoteEntityHierarchyModel
     
     /**
     * Sets the sectionGroupsUrl
+    * The URL for the sectionGroups navigation property, which returns all the section groups in the notebook. Read-only.
     *
     * @param string $val The sectionGroupsUrl
     *
@@ -167,13 +177,14 @@ class Notebook extends OnenoteEntityHierarchyModel
     
     /**
     * Gets the links
+    * Links for opening the notebook. The oneNoteClientURL link opens the notebook in the OneNote native client if it's installed. The oneNoteWebURL link opens the notebook in OneNote Online.
     *
     * @return NotebookLinks The links
     */
     public function getLinks()
     {
         if (array_key_exists("links", $this->_propDict)) {
-            if (is_a($this->_propDict["links"], "Microsoft\Graph\Beta\Model\NotebookLinks")) {
+            if (is_a($this->_propDict["links"], "Microsoft\Graph\Model\NotebookLinks")) {
                 return $this->_propDict["links"];
             } else {
                 $this->_propDict["links"] = new NotebookLinks($this->_propDict["links"]);
@@ -185,6 +196,7 @@ class Notebook extends OnenoteEntityHierarchyModel
     
     /**
     * Sets the links
+    * Links for opening the notebook. The oneNoteClientURL link opens the notebook in the OneNote native client if it's installed. The oneNoteWebURL link opens the notebook in OneNote Online.
     *
     * @param NotebookLinks $val The links
     *
@@ -199,6 +211,7 @@ class Notebook extends OnenoteEntityHierarchyModel
 
      /** 
      * Gets the sections
+    * The sections in the notebook. Read-only. Nullable.
      *
      * @return array The sections
      */
@@ -213,6 +226,7 @@ class Notebook extends OnenoteEntityHierarchyModel
     
     /** 
     * Sets the sections
+    * The sections in the notebook. Read-only. Nullable.
     *
     * @param OnenoteSection $val The sections
     *
@@ -227,6 +241,7 @@ class Notebook extends OnenoteEntityHierarchyModel
 
      /** 
      * Gets the sectionGroups
+    * The section groups in the notebook. Read-only. Nullable.
      *
      * @return array The sectionGroups
      */
@@ -241,6 +256,7 @@ class Notebook extends OnenoteEntityHierarchyModel
     
     /** 
     * Sets the sectionGroups
+    * The section groups in the notebook. Read-only. Nullable.
     *
     * @param SectionGroup $val The sectionGroups
     *

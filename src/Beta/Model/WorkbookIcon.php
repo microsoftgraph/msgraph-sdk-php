@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * WorkbookIcon class
 *
@@ -27,6 +27,7 @@ class WorkbookIcon extends Entity
 {
     /**
     * Gets the index
+    * Represents the index of the icon in the given set.
     *
     * @return int The index
     */
@@ -41,6 +42,7 @@ class WorkbookIcon extends Entity
 
     /**
     * Sets the index
+    * Represents the index of the icon in the given set.
     *
     * @param int $val The value of the index
     *
@@ -53,6 +55,7 @@ class WorkbookIcon extends Entity
     }
     /**
     * Gets the set
+    * Represents the set that the icon is part of. The possible values are: Invalid, ThreeArrows, ThreeArrowsGray, ThreeFlags, ThreeTrafficLights1, ThreeTrafficLights2, ThreeSigns, ThreeSymbols, ThreeSymbols2, FourArrows, FourArrowsGray, FourRedToBlack, FourRating, FourTrafficLights, FiveArrows, FiveArrowsGray, FiveRating, FiveQuarters, ThreeStars, ThreeTriangles, FiveBoxes.
     *
     * @return string The set
     */
@@ -67,6 +70,7 @@ class WorkbookIcon extends Entity
 
     /**
     * Sets the set
+    * Represents the set that the icon is part of. The possible values are: Invalid, ThreeArrows, ThreeArrowsGray, ThreeFlags, ThreeTrafficLights1, ThreeTrafficLights2, ThreeSigns, ThreeSymbols, ThreeSymbols2, FourArrows, FourArrowsGray, FourRedToBlack, FourRating, FourTrafficLights, FiveArrows, FiveArrowsGray, FiveRating, FiveQuarters, ThreeStars, ThreeTriangles, FiveBoxes.
     *
     * @param string $val The value of the set
     *

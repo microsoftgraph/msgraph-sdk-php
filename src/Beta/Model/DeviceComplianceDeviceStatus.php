@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * DeviceComplianceDeviceStatus class
@@ -28,6 +28,7 @@ class DeviceComplianceDeviceStatus extends Entity
 {
     /**
     * Gets the deviceDisplayName
+    * Device name of the DevicePolicyStatus.
     *
     * @return string The deviceDisplayName
     */
@@ -42,6 +43,7 @@ class DeviceComplianceDeviceStatus extends Entity
     
     /**
     * Sets the deviceDisplayName
+    * Device name of the DevicePolicyStatus.
     *
     * @param string $val The deviceDisplayName
     *
@@ -55,6 +57,7 @@ class DeviceComplianceDeviceStatus extends Entity
     
     /**
     * Gets the userName
+    * The User Name that is being reported
     *
     * @return string The userName
     */
@@ -69,6 +72,7 @@ class DeviceComplianceDeviceStatus extends Entity
     
     /**
     * Sets the userName
+    * The User Name that is being reported
     *
     * @param string $val The userName
     *
@@ -82,6 +86,7 @@ class DeviceComplianceDeviceStatus extends Entity
     
     /**
     * Gets the deviceModel
+    * The device model that is being reported
     *
     * @return string The deviceModel
     */
@@ -96,6 +101,7 @@ class DeviceComplianceDeviceStatus extends Entity
     
     /**
     * Sets the deviceModel
+    * The device model that is being reported
     *
     * @param string $val The deviceModel
     *
@@ -109,6 +115,7 @@ class DeviceComplianceDeviceStatus extends Entity
     
     /**
     * Gets the platform
+    * Platform of the device that is being reported
     *
     * @return int The platform
     */
@@ -123,6 +130,7 @@ class DeviceComplianceDeviceStatus extends Entity
     
     /**
     * Sets the platform
+    * Platform of the device that is being reported
     *
     * @param int $val The platform
     *
@@ -136,6 +144,7 @@ class DeviceComplianceDeviceStatus extends Entity
     
     /**
     * Gets the complianceGracePeriodExpirationDateTime
+    * The DateTime when device compliance grace period expires
     *
     * @return \DateTime The complianceGracePeriodExpirationDateTime
     */
@@ -154,6 +163,7 @@ class DeviceComplianceDeviceStatus extends Entity
     
     /**
     * Sets the complianceGracePeriodExpirationDateTime
+    * The DateTime when device compliance grace period expires
     *
     * @param \DateTime $val The complianceGracePeriodExpirationDateTime
     *
@@ -167,13 +177,14 @@ class DeviceComplianceDeviceStatus extends Entity
     
     /**
     * Gets the status
+    * Compliance status of the policy report. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
     *
     * @return ComplianceStatus The status
     */
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Microsoft\Graph\Beta\Model\ComplianceStatus")) {
+            if (is_a($this->_propDict["status"], "Microsoft\Graph\Model\ComplianceStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new ComplianceStatus($this->_propDict["status"]);
@@ -185,6 +196,7 @@ class DeviceComplianceDeviceStatus extends Entity
     
     /**
     * Sets the status
+    * Compliance status of the policy report. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
     *
     * @param ComplianceStatus $val The status
     *
@@ -198,6 +210,7 @@ class DeviceComplianceDeviceStatus extends Entity
     
     /**
     * Gets the lastReportedDateTime
+    * Last modified date time of the policy report.
     *
     * @return \DateTime The lastReportedDateTime
     */
@@ -216,6 +229,7 @@ class DeviceComplianceDeviceStatus extends Entity
     
     /**
     * Sets the lastReportedDateTime
+    * Last modified date time of the policy report.
     *
     * @param \DateTime $val The lastReportedDateTime
     *
@@ -229,6 +243,7 @@ class DeviceComplianceDeviceStatus extends Entity
     
     /**
     * Gets the userPrincipalName
+    * UserPrincipalName.
     *
     * @return string The userPrincipalName
     */
@@ -243,6 +258,7 @@ class DeviceComplianceDeviceStatus extends Entity
     
     /**
     * Sets the userPrincipalName
+    * UserPrincipalName.
     *
     * @param string $val The userPrincipalName
     *

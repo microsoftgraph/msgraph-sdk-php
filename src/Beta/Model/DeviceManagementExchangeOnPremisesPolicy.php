@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * DeviceManagementExchangeOnPremisesPolicy class
@@ -28,6 +28,7 @@ class DeviceManagementExchangeOnPremisesPolicy extends Entity
 {
     /**
     * Gets the notificationContent
+    * Notification text that will be sent to users quarantined by this policy. This is UTF8 encoded byte array HTML.
     *
     * @return \GuzzleHttp\Psr7\Stream The notificationContent
     */
@@ -46,6 +47,7 @@ class DeviceManagementExchangeOnPremisesPolicy extends Entity
     
     /**
     * Sets the notificationContent
+    * Notification text that will be sent to users quarantined by this policy. This is UTF8 encoded byte array HTML.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The notificationContent
     *
@@ -59,13 +61,14 @@ class DeviceManagementExchangeOnPremisesPolicy extends Entity
     
     /**
     * Gets the defaultAccessLevel
+    * Default access state in Exchange. This rule applies globally to the entire Exchange organization
     *
     * @return DeviceManagementExchangeAccessLevel The defaultAccessLevel
     */
     public function getDefaultAccessLevel()
     {
         if (array_key_exists("defaultAccessLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["defaultAccessLevel"], "Microsoft\Graph\Beta\Model\DeviceManagementExchangeAccessLevel")) {
+            if (is_a($this->_propDict["defaultAccessLevel"], "Microsoft\Graph\Model\DeviceManagementExchangeAccessLevel")) {
                 return $this->_propDict["defaultAccessLevel"];
             } else {
                 $this->_propDict["defaultAccessLevel"] = new DeviceManagementExchangeAccessLevel($this->_propDict["defaultAccessLevel"]);
@@ -77,6 +80,7 @@ class DeviceManagementExchangeOnPremisesPolicy extends Entity
     
     /**
     * Sets the defaultAccessLevel
+    * Default access state in Exchange. This rule applies globally to the entire Exchange organization
     *
     * @param DeviceManagementExchangeAccessLevel $val The defaultAccessLevel
     *
@@ -91,6 +95,7 @@ class DeviceManagementExchangeOnPremisesPolicy extends Entity
 
      /** 
      * Gets the accessRules
+    * The list of device access rules in Exchange. The access rules apply globally to the entire Exchange organization
      *
      * @return array The accessRules
      */
@@ -105,6 +110,7 @@ class DeviceManagementExchangeOnPremisesPolicy extends Entity
     
     /** 
     * Sets the accessRules
+    * The list of device access rules in Exchange. The access rules apply globally to the entire Exchange organization
     *
     * @param DeviceManagementExchangeAccessRule $val The accessRules
     *
@@ -119,6 +125,7 @@ class DeviceManagementExchangeOnPremisesPolicy extends Entity
 
      /** 
      * Gets the knownDeviceClasses
+    * The list of device classes known to Exchange
      *
      * @return array The knownDeviceClasses
      */
@@ -133,6 +140,7 @@ class DeviceManagementExchangeOnPremisesPolicy extends Entity
     
     /** 
     * Sets the knownDeviceClasses
+    * The list of device classes known to Exchange
     *
     * @param DeviceManagementExchangeDeviceClass $val The knownDeviceClasses
     *
@@ -146,13 +154,14 @@ class DeviceManagementExchangeOnPremisesPolicy extends Entity
     
     /**
     * Gets the conditionalAccessSettings
+    * The Exchange on premises conditional access settings. On premises conditional access will require devices to be both enrolled and compliant for mail access
     *
     * @return OnPremisesConditionalAccessSettings The conditionalAccessSettings
     */
     public function getConditionalAccessSettings()
     {
         if (array_key_exists("conditionalAccessSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["conditionalAccessSettings"], "Microsoft\Graph\Beta\Model\OnPremisesConditionalAccessSettings")) {
+            if (is_a($this->_propDict["conditionalAccessSettings"], "Microsoft\Graph\Model\OnPremisesConditionalAccessSettings")) {
                 return $this->_propDict["conditionalAccessSettings"];
             } else {
                 $this->_propDict["conditionalAccessSettings"] = new OnPremisesConditionalAccessSettings($this->_propDict["conditionalAccessSettings"]);
@@ -164,6 +173,7 @@ class DeviceManagementExchangeOnPremisesPolicy extends Entity
     
     /**
     * Sets the conditionalAccessSettings
+    * The Exchange on premises conditional access settings. On premises conditional access will require devices to be both enrolled and compliant for mail access
     *
     * @param OnPremisesConditionalAccessSettings $val The conditionalAccessSettings
     *

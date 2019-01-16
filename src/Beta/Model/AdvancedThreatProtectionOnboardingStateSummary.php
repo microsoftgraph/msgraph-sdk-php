@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * AdvancedThreatProtectionOnboardingStateSummary class
@@ -28,6 +28,7 @@ class AdvancedThreatProtectionOnboardingStateSummary extends Entity
 {
     /**
     * Gets the unknownDeviceCount
+    * Number of unknown devices
     *
     * @return int The unknownDeviceCount
     */
@@ -42,6 +43,7 @@ class AdvancedThreatProtectionOnboardingStateSummary extends Entity
     
     /**
     * Sets the unknownDeviceCount
+    * Number of unknown devices
     *
     * @param int $val The unknownDeviceCount
     *
@@ -55,6 +57,7 @@ class AdvancedThreatProtectionOnboardingStateSummary extends Entity
     
     /**
     * Gets the notApplicableDeviceCount
+    * Number of not applicable devices
     *
     * @return int The notApplicableDeviceCount
     */
@@ -69,6 +72,7 @@ class AdvancedThreatProtectionOnboardingStateSummary extends Entity
     
     /**
     * Sets the notApplicableDeviceCount
+    * Number of not applicable devices
     *
     * @param int $val The notApplicableDeviceCount
     *
@@ -82,6 +86,7 @@ class AdvancedThreatProtectionOnboardingStateSummary extends Entity
     
     /**
     * Gets the compliantDeviceCount
+    * Number of compliant devices
     *
     * @return int The compliantDeviceCount
     */
@@ -96,6 +101,7 @@ class AdvancedThreatProtectionOnboardingStateSummary extends Entity
     
     /**
     * Sets the compliantDeviceCount
+    * Number of compliant devices
     *
     * @param int $val The compliantDeviceCount
     *
@@ -109,6 +115,7 @@ class AdvancedThreatProtectionOnboardingStateSummary extends Entity
     
     /**
     * Gets the remediatedDeviceCount
+    * Number of remediated devices
     *
     * @return int The remediatedDeviceCount
     */
@@ -123,6 +130,7 @@ class AdvancedThreatProtectionOnboardingStateSummary extends Entity
     
     /**
     * Sets the remediatedDeviceCount
+    * Number of remediated devices
     *
     * @param int $val The remediatedDeviceCount
     *
@@ -136,6 +144,7 @@ class AdvancedThreatProtectionOnboardingStateSummary extends Entity
     
     /**
     * Gets the nonCompliantDeviceCount
+    * Number of NonCompliant devices
     *
     * @return int The nonCompliantDeviceCount
     */
@@ -150,6 +159,7 @@ class AdvancedThreatProtectionOnboardingStateSummary extends Entity
     
     /**
     * Sets the nonCompliantDeviceCount
+    * Number of NonCompliant devices
     *
     * @param int $val The nonCompliantDeviceCount
     *
@@ -163,6 +173,7 @@ class AdvancedThreatProtectionOnboardingStateSummary extends Entity
     
     /**
     * Gets the errorDeviceCount
+    * Number of error devices
     *
     * @return int The errorDeviceCount
     */
@@ -177,6 +188,7 @@ class AdvancedThreatProtectionOnboardingStateSummary extends Entity
     
     /**
     * Sets the errorDeviceCount
+    * Number of error devices
     *
     * @param int $val The errorDeviceCount
     *
@@ -190,6 +202,7 @@ class AdvancedThreatProtectionOnboardingStateSummary extends Entity
     
     /**
     * Gets the conflictDeviceCount
+    * Number of conflict devices
     *
     * @return int The conflictDeviceCount
     */
@@ -204,6 +217,7 @@ class AdvancedThreatProtectionOnboardingStateSummary extends Entity
     
     /**
     * Sets the conflictDeviceCount
+    * Number of conflict devices
     *
     * @param int $val The conflictDeviceCount
     *
@@ -217,6 +231,7 @@ class AdvancedThreatProtectionOnboardingStateSummary extends Entity
     
     /**
     * Gets the notAssignedDeviceCount
+    * Number of not assigned devices
     *
     * @return int The notAssignedDeviceCount
     */
@@ -231,6 +246,7 @@ class AdvancedThreatProtectionOnboardingStateSummary extends Entity
     
     /**
     * Sets the notAssignedDeviceCount
+    * Number of not assigned devices
     *
     * @param int $val The notAssignedDeviceCount
     *

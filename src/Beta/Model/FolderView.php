@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * FolderView class
 *
@@ -27,6 +27,7 @@ class FolderView extends Entity
 {
     /**
     * Gets the sortBy
+    * The method by which the folder should be sorted.
     *
     * @return string The sortBy
     */
@@ -41,6 +42,7 @@ class FolderView extends Entity
 
     /**
     * Sets the sortBy
+    * The method by which the folder should be sorted.
     *
     * @param string $val The value of the sortBy
     *
@@ -53,6 +55,7 @@ class FolderView extends Entity
     }
     /**
     * Gets the sortOrder
+    * If true, indicates that items should be sorted in descending order. Otherwise, items should be sorted ascending.
     *
     * @return string The sortOrder
     */
@@ -67,6 +70,7 @@ class FolderView extends Entity
 
     /**
     * Sets the sortOrder
+    * If true, indicates that items should be sorted in descending order. Otherwise, items should be sorted ascending.
     *
     * @param string $val The value of the sortOrder
     *
@@ -79,6 +83,7 @@ class FolderView extends Entity
     }
     /**
     * Gets the viewType
+    * The type of view that should be used to represent the folder.
     *
     * @return string The viewType
     */
@@ -93,6 +98,7 @@ class FolderView extends Entity
 
     /**
     * Sets the viewType
+    * The type of view that should be used to represent the folder.
     *
     * @param string $val The value of the viewType
     *

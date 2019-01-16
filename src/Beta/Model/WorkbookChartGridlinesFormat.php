@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * WorkbookChartGridlinesFormat class
@@ -28,13 +28,14 @@ class WorkbookChartGridlinesFormat extends Entity
 {
     /**
     * Gets the line
+    * Represents chart line formatting. Read-only.
     *
     * @return WorkbookChartLineFormat The line
     */
     public function getLine()
     {
         if (array_key_exists("line", $this->_propDict)) {
-            if (is_a($this->_propDict["line"], "Microsoft\Graph\Beta\Model\WorkbookChartLineFormat")) {
+            if (is_a($this->_propDict["line"], "Microsoft\Graph\Model\WorkbookChartLineFormat")) {
                 return $this->_propDict["line"];
             } else {
                 $this->_propDict["line"] = new WorkbookChartLineFormat($this->_propDict["line"]);
@@ -46,6 +47,7 @@ class WorkbookChartGridlinesFormat extends Entity
     
     /**
     * Sets the line
+    * Represents chart line formatting. Read-only.
     *
     * @param WorkbookChartLineFormat $val The line
     *

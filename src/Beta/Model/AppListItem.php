@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * AppListItem class
 *
@@ -27,6 +27,7 @@ class AppListItem extends Entity
 {
     /**
     * Gets the name
+    * The application name
     *
     * @return string The name
     */
@@ -41,6 +42,7 @@ class AppListItem extends Entity
 
     /**
     * Sets the name
+    * The application name
     *
     * @param string $val The value of the name
     *
@@ -53,6 +55,7 @@ class AppListItem extends Entity
     }
     /**
     * Gets the publisher
+    * The publisher of the application
     *
     * @return string The publisher
     */
@@ -67,6 +70,7 @@ class AppListItem extends Entity
 
     /**
     * Sets the publisher
+    * The publisher of the application
     *
     * @param string $val The value of the publisher
     *
@@ -79,6 +83,7 @@ class AppListItem extends Entity
     }
     /**
     * Gets the appStoreUrl
+    * The Store URL of the application
     *
     * @return string The appStoreUrl
     */
@@ -93,6 +98,7 @@ class AppListItem extends Entity
 
     /**
     * Sets the appStoreUrl
+    * The Store URL of the application
     *
     * @param string $val The value of the appStoreUrl
     *
@@ -105,6 +111,7 @@ class AppListItem extends Entity
     }
     /**
     * Gets the appId
+    * The application or bundle identifier of the application
     *
     * @return string The appId
     */
@@ -119,6 +126,7 @@ class AppListItem extends Entity
 
     /**
     * Sets the appId
+    * The application or bundle identifier of the application
     *
     * @param string $val The value of the appId
     *

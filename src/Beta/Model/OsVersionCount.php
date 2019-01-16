@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * OsVersionCount class
 *
@@ -27,6 +27,7 @@ class OsVersionCount extends Entity
 {
     /**
     * Gets the osVersion
+    * OS version
     *
     * @return string The osVersion
     */
@@ -41,6 +42,7 @@ class OsVersionCount extends Entity
 
     /**
     * Sets the osVersion
+    * OS version
     *
     * @param string $val The value of the osVersion
     *
@@ -53,6 +55,7 @@ class OsVersionCount extends Entity
     }
     /**
     * Gets the deviceCount
+    * Count of devices with malware for the OS version
     *
     * @return int The deviceCount
     */
@@ -67,6 +70,7 @@ class OsVersionCount extends Entity
 
     /**
     * Sets the deviceCount
+    * Count of devices with malware for the OS version
     *
     * @param int $val The value of the deviceCount
     *
@@ -76,5 +80,38 @@ class OsVersionCount extends Entity
     {
         $this->_propDict["deviceCount"] = $val;
         return $this;
+    }
+
+    /**
+    * Gets the lastUpdateDateTime
+    * The Timestamp of the last update for the device count in UTC
+    *
+    * @return \DateTime The lastUpdateDateTime
+    */
+    public function getLastUpdateDateTime()
+    {
+        if (array_key_exists("lastUpdateDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastUpdateDateTime"], "Microsoft\Graph\Model\\DateTime")) {
+                return $this->_propDict["lastUpdateDateTime"];
+            } else {
+                $this->_propDict["lastUpdateDateTime"] = new \DateTime($this->_propDict["lastUpdateDateTime"]);
+                return $this->_propDict["lastUpdateDateTime"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the lastUpdateDateTime
+    * The Timestamp of the last update for the device count in UTC
+    *
+    * @param \DateTime $val The value to assign to the lastUpdateDateTime
+    *
+    * @return OsVersionCount The OsVersionCount
+    */
+    public function setLastUpdateDateTime($val)
+    {
+        $this->_propDict["lastUpdateDateTime"] = $val;
+         return $this;
     }
 }

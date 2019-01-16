@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * AndroidForWorkAppConfigurationSchema class
@@ -28,6 +28,7 @@ class AndroidForWorkAppConfigurationSchema extends Entity
 {
     /**
     * Gets the exampleJson
+    * UTF8 encoded byte array containing example JSON string conforming to this schema that demonstrates how to set the configuration for this app
     *
     * @return \GuzzleHttp\Psr7\Stream The exampleJson
     */
@@ -46,6 +47,7 @@ class AndroidForWorkAppConfigurationSchema extends Entity
     
     /**
     * Sets the exampleJson
+    * UTF8 encoded byte array containing example JSON string conforming to this schema that demonstrates how to set the configuration for this app
     *
     * @param \GuzzleHttp\Psr7\Stream $val The exampleJson
     *
@@ -60,6 +62,7 @@ class AndroidForWorkAppConfigurationSchema extends Entity
 
      /** 
      * Gets the schemaItems
+    * Collection of items each representing a named configuration option in the schema
      *
      * @return array The schemaItems
      */
@@ -74,6 +77,7 @@ class AndroidForWorkAppConfigurationSchema extends Entity
     
     /** 
     * Sets the schemaItems
+    * Collection of items each representing a named configuration option in the schema
     *
     * @param AndroidForWorkAppConfigurationSchemaItem $val The schemaItems
     *

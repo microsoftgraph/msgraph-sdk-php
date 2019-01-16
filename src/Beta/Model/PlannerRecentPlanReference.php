@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * PlannerRecentPlanReference class
 *
@@ -34,7 +34,7 @@ class PlannerRecentPlanReference extends Entity
     public function getLastAccessedDateTime()
     {
         if (array_key_exists("lastAccessedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastAccessedDateTime"], "Microsoft\Graph\Beta\Model\\DateTime")) {
+            if (is_a($this->_propDict["lastAccessedDateTime"], "Microsoft\Graph\Model\\DateTime")) {
                 return $this->_propDict["lastAccessedDateTime"];
             } else {
                 $this->_propDict["lastAccessedDateTime"] = new \DateTime($this->_propDict["lastAccessedDateTime"]);

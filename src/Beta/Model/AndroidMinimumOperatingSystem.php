@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * AndroidMinimumOperatingSystem class
 *
@@ -27,6 +27,7 @@ class AndroidMinimumOperatingSystem extends Entity
 {
     /**
     * Gets the v4_0
+    * Version 4.0 or later.
     *
     * @return bool The v4_0
     */
@@ -41,6 +42,7 @@ class AndroidMinimumOperatingSystem extends Entity
 
     /**
     * Sets the v4_0
+    * Version 4.0 or later.
     *
     * @param bool $val The value of the v4_0
     *
@@ -53,6 +55,7 @@ class AndroidMinimumOperatingSystem extends Entity
     }
     /**
     * Gets the v4_0_3
+    * Version 4.0.3 or later.
     *
     * @return bool The v4_0_3
     */
@@ -67,6 +70,7 @@ class AndroidMinimumOperatingSystem extends Entity
 
     /**
     * Sets the v4_0_3
+    * Version 4.0.3 or later.
     *
     * @param bool $val The value of the v4_0_3
     *
@@ -79,6 +83,7 @@ class AndroidMinimumOperatingSystem extends Entity
     }
     /**
     * Gets the v4_1
+    * Version 4.1 or later.
     *
     * @return bool The v4_1
     */
@@ -93,6 +98,7 @@ class AndroidMinimumOperatingSystem extends Entity
 
     /**
     * Sets the v4_1
+    * Version 4.1 or later.
     *
     * @param bool $val The value of the v4_1
     *
@@ -105,6 +111,7 @@ class AndroidMinimumOperatingSystem extends Entity
     }
     /**
     * Gets the v4_2
+    * Version 4.2 or later.
     *
     * @return bool The v4_2
     */
@@ -119,6 +126,7 @@ class AndroidMinimumOperatingSystem extends Entity
 
     /**
     * Sets the v4_2
+    * Version 4.2 or later.
     *
     * @param bool $val The value of the v4_2
     *
@@ -131,6 +139,7 @@ class AndroidMinimumOperatingSystem extends Entity
     }
     /**
     * Gets the v4_3
+    * Version 4.3 or later.
     *
     * @return bool The v4_3
     */
@@ -145,6 +154,7 @@ class AndroidMinimumOperatingSystem extends Entity
 
     /**
     * Sets the v4_3
+    * Version 4.3 or later.
     *
     * @param bool $val The value of the v4_3
     *
@@ -157,6 +167,7 @@ class AndroidMinimumOperatingSystem extends Entity
     }
     /**
     * Gets the v4_4
+    * Version 4.4 or later.
     *
     * @return bool The v4_4
     */
@@ -171,6 +182,7 @@ class AndroidMinimumOperatingSystem extends Entity
 
     /**
     * Sets the v4_4
+    * Version 4.4 or later.
     *
     * @param bool $val The value of the v4_4
     *
@@ -183,6 +195,7 @@ class AndroidMinimumOperatingSystem extends Entity
     }
     /**
     * Gets the v5_0
+    * Version 5.0 or later.
     *
     * @return bool The v5_0
     */
@@ -197,6 +210,7 @@ class AndroidMinimumOperatingSystem extends Entity
 
     /**
     * Sets the v5_0
+    * Version 5.0 or later.
     *
     * @param bool $val The value of the v5_0
     *
@@ -209,6 +223,7 @@ class AndroidMinimumOperatingSystem extends Entity
     }
     /**
     * Gets the v5_1
+    * Version 5.1 or later.
     *
     * @return bool The v5_1
     */
@@ -223,6 +238,7 @@ class AndroidMinimumOperatingSystem extends Entity
 
     /**
     * Sets the v5_1
+    * Version 5.1 or later.
     *
     * @param bool $val The value of the v5_1
     *
@@ -231,6 +247,174 @@ class AndroidMinimumOperatingSystem extends Entity
     public function setV5_1($val)
     {
         $this->_propDict["v51"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the v6_0
+    * Version 6.0 or later.
+    *
+    * @return bool The v6_0
+    */
+    public function getV6_0()
+    {
+        if (array_key_exists("v60", $this->_propDict)) {
+            return $this->_propDict["v60"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the v6_0
+    * Version 6.0 or later.
+    *
+    * @param bool $val The value of the v6_0
+    *
+    * @return AndroidMinimumOperatingSystem
+    */
+    public function setV6_0($val)
+    {
+        $this->_propDict["v60"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the v7_0
+    * Version 7.0 or later.
+    *
+    * @return bool The v7_0
+    */
+    public function getV7_0()
+    {
+        if (array_key_exists("v70", $this->_propDict)) {
+            return $this->_propDict["v70"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the v7_0
+    * Version 7.0 or later.
+    *
+    * @param bool $val The value of the v7_0
+    *
+    * @return AndroidMinimumOperatingSystem
+    */
+    public function setV7_0($val)
+    {
+        $this->_propDict["v70"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the v7_1
+    * Version 7.1 or later.
+    *
+    * @return bool The v7_1
+    */
+    public function getV7_1()
+    {
+        if (array_key_exists("v71", $this->_propDict)) {
+            return $this->_propDict["v71"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the v7_1
+    * Version 7.1 or later.
+    *
+    * @param bool $val The value of the v7_1
+    *
+    * @return AndroidMinimumOperatingSystem
+    */
+    public function setV7_1($val)
+    {
+        $this->_propDict["v71"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the v8_0
+    * Version 8.0 or later.
+    *
+    * @return bool The v8_0
+    */
+    public function getV8_0()
+    {
+        if (array_key_exists("v80", $this->_propDict)) {
+            return $this->_propDict["v80"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the v8_0
+    * Version 8.0 or later.
+    *
+    * @param bool $val The value of the v8_0
+    *
+    * @return AndroidMinimumOperatingSystem
+    */
+    public function setV8_0($val)
+    {
+        $this->_propDict["v80"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the v8_1
+    * Version 8.1 or later.
+    *
+    * @return bool The v8_1
+    */
+    public function getV8_1()
+    {
+        if (array_key_exists("v81", $this->_propDict)) {
+            return $this->_propDict["v81"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the v8_1
+    * Version 8.1 or later.
+    *
+    * @param bool $val The value of the v8_1
+    *
+    * @return AndroidMinimumOperatingSystem
+    */
+    public function setV8_1($val)
+    {
+        $this->_propDict["v81"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the v9_0
+    * Version 9.0 or later.
+    *
+    * @return bool The v9_0
+    */
+    public function getV9_0()
+    {
+        if (array_key_exists("v90", $this->_propDict)) {
+            return $this->_propDict["v90"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the v9_0
+    * Version 9.0 or later.
+    *
+    * @param bool $val The value of the v9_0
+    *
+    * @return AndroidMinimumOperatingSystem
+    */
+    public function setV9_0($val)
+    {
+        $this->_propDict["v90"] = $val;
         return $this;
     }
 }

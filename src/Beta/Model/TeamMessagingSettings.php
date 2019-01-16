@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * TeamMessagingSettings class
 *
@@ -27,6 +27,7 @@ class TeamMessagingSettings extends Entity
 {
     /**
     * Gets the allowUserEditMessages
+    * If set to true, users can edit their messages.
     *
     * @return bool The allowUserEditMessages
     */
@@ -41,6 +42,7 @@ class TeamMessagingSettings extends Entity
 
     /**
     * Sets the allowUserEditMessages
+    * If set to true, users can edit their messages.
     *
     * @param bool $val The value of the allowUserEditMessages
     *
@@ -53,6 +55,7 @@ class TeamMessagingSettings extends Entity
     }
     /**
     * Gets the allowUserDeleteMessages
+    * If set to true, users can delete their messages.
     *
     * @return bool The allowUserDeleteMessages
     */
@@ -67,6 +70,7 @@ class TeamMessagingSettings extends Entity
 
     /**
     * Sets the allowUserDeleteMessages
+    * If set to true, users can delete their messages.
     *
     * @param bool $val The value of the allowUserDeleteMessages
     *
@@ -79,6 +83,7 @@ class TeamMessagingSettings extends Entity
     }
     /**
     * Gets the allowOwnerDeleteMessages
+    * If set to true, owners can delete any message.
     *
     * @return bool The allowOwnerDeleteMessages
     */
@@ -93,6 +98,7 @@ class TeamMessagingSettings extends Entity
 
     /**
     * Sets the allowOwnerDeleteMessages
+    * If set to true, owners can delete any message.
     *
     * @param bool $val The value of the allowOwnerDeleteMessages
     *
@@ -105,6 +111,7 @@ class TeamMessagingSettings extends Entity
     }
     /**
     * Gets the allowTeamMentions
+    * If set to true, @team mentions are allowed.
     *
     * @return bool The allowTeamMentions
     */
@@ -119,6 +126,7 @@ class TeamMessagingSettings extends Entity
 
     /**
     * Sets the allowTeamMentions
+    * If set to true, @team mentions are allowed.
     *
     * @param bool $val The value of the allowTeamMentions
     *
@@ -131,6 +139,7 @@ class TeamMessagingSettings extends Entity
     }
     /**
     * Gets the allowChannelMentions
+    * If set to true, @channel mentions are allowed.
     *
     * @return bool The allowChannelMentions
     */
@@ -145,6 +154,7 @@ class TeamMessagingSettings extends Entity
 
     /**
     * Sets the allowChannelMentions
+    * If set to true, @channel mentions are allowed.
     *
     * @param bool $val The value of the allowChannelMentions
     *

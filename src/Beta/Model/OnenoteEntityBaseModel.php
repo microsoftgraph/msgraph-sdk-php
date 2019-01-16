@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * OnenoteEntityBaseModel class
@@ -28,6 +28,7 @@ class OnenoteEntityBaseModel extends Entity
 {
     /**
     * Gets the self
+    * The endpoint where you can get details about the page. Read-only.
     *
     * @return string The self
     */
@@ -42,6 +43,7 @@ class OnenoteEntityBaseModel extends Entity
     
     /**
     * Sets the self
+    * The endpoint where you can get details about the page. Read-only.
     *
     * @param string $val The self
     *

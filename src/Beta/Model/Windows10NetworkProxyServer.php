@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * Windows10NetworkProxyServer class
 *
@@ -27,6 +27,7 @@ class Windows10NetworkProxyServer extends Entity
 {
     /**
     * Gets the address
+    * Address to the proxy server. Specify an address in the format [':']
     *
     * @return string The address
     */
@@ -41,6 +42,7 @@ class Windows10NetworkProxyServer extends Entity
 
     /**
     * Sets the address
+    * Address to the proxy server. Specify an address in the format [':']
     *
     * @param string $val The value of the address
     *
@@ -53,6 +55,7 @@ class Windows10NetworkProxyServer extends Entity
     }
     /**
     * Gets the exceptions
+    * Addresses that should not use the proxy server. The system will not use the proxy server for addresses beginning with what is specified in this node.
     *
     * @return string The exceptions
     */
@@ -67,6 +70,7 @@ class Windows10NetworkProxyServer extends Entity
 
     /**
     * Sets the exceptions
+    * Addresses that should not use the proxy server. The system will not use the proxy server for addresses beginning with what is specified in this node.
     *
     * @param string $val The value of the exceptions
     *
@@ -79,6 +83,7 @@ class Windows10NetworkProxyServer extends Entity
     }
     /**
     * Gets the useForLocalAddresses
+    * Specifies whether the proxy server should be used for local (intranet) addresses.
     *
     * @return bool The useForLocalAddresses
     */
@@ -93,6 +98,7 @@ class Windows10NetworkProxyServer extends Entity
 
     /**
     * Sets the useForLocalAddresses
+    * Specifies whether the proxy server should be used for local (intranet) addresses.
     *
     * @param bool $val The value of the useForLocalAddresses
     *

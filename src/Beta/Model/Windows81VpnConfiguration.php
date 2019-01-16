@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * Windows81VpnConfiguration class
@@ -28,6 +28,7 @@ class Windows81VpnConfiguration extends WindowsVpnConfiguration
 {
     /**
     * Gets the applyOnlyToWindows81
+    * Value indicating whether this policy only applies to Windows 8.1. This property is read-only.
     *
     * @return bool The applyOnlyToWindows81
     */
@@ -42,6 +43,7 @@ class Windows81VpnConfiguration extends WindowsVpnConfiguration
     
     /**
     * Sets the applyOnlyToWindows81
+    * Value indicating whether this policy only applies to Windows 8.1. This property is read-only.
     *
     * @param bool $val The applyOnlyToWindows81
     *
@@ -55,13 +57,14 @@ class Windows81VpnConfiguration extends WindowsVpnConfiguration
     
     /**
     * Gets the connectionType
+    * Connection type.
     *
     * @return WindowsVpnConnectionType The connectionType
     */
     public function getConnectionType()
     {
         if (array_key_exists("connectionType", $this->_propDict)) {
-            if (is_a($this->_propDict["connectionType"], "Microsoft\Graph\Beta\Model\WindowsVpnConnectionType")) {
+            if (is_a($this->_propDict["connectionType"], "Microsoft\Graph\Model\WindowsVpnConnectionType")) {
                 return $this->_propDict["connectionType"];
             } else {
                 $this->_propDict["connectionType"] = new WindowsVpnConnectionType($this->_propDict["connectionType"]);
@@ -73,6 +76,7 @@ class Windows81VpnConfiguration extends WindowsVpnConfiguration
     
     /**
     * Sets the connectionType
+    * Connection type.
     *
     * @param WindowsVpnConnectionType $val The connectionType
     *
@@ -86,6 +90,7 @@ class Windows81VpnConfiguration extends WindowsVpnConfiguration
     
     /**
     * Gets the loginGroupOrDomain
+    * Login group or domain when connection type is set to Dell SonicWALL Mobile Connection.
     *
     * @return string The loginGroupOrDomain
     */
@@ -100,6 +105,7 @@ class Windows81VpnConfiguration extends WindowsVpnConfiguration
     
     /**
     * Sets the loginGroupOrDomain
+    * Login group or domain when connection type is set to Dell SonicWALL Mobile Connection.
     *
     * @param string $val The loginGroupOrDomain
     *
@@ -113,6 +119,7 @@ class Windows81VpnConfiguration extends WindowsVpnConfiguration
     
     /**
     * Gets the enableSplitTunneling
+    * Enable split tunneling for the VPN.
     *
     * @return bool The enableSplitTunneling
     */
@@ -127,6 +134,7 @@ class Windows81VpnConfiguration extends WindowsVpnConfiguration
     
     /**
     * Sets the enableSplitTunneling
+    * Enable split tunneling for the VPN.
     *
     * @param bool $val The enableSplitTunneling
     *
@@ -140,13 +148,14 @@ class Windows81VpnConfiguration extends WindowsVpnConfiguration
     
     /**
     * Gets the proxyServer
+    * Proxy Server.
     *
     * @return Windows81VpnProxyServer The proxyServer
     */
     public function getProxyServer()
     {
         if (array_key_exists("proxyServer", $this->_propDict)) {
-            if (is_a($this->_propDict["proxyServer"], "Microsoft\Graph\Beta\Model\Windows81VpnProxyServer")) {
+            if (is_a($this->_propDict["proxyServer"], "Microsoft\Graph\Model\Windows81VpnProxyServer")) {
                 return $this->_propDict["proxyServer"];
             } else {
                 $this->_propDict["proxyServer"] = new Windows81VpnProxyServer($this->_propDict["proxyServer"]);
@@ -158,6 +167,7 @@ class Windows81VpnConfiguration extends WindowsVpnConfiguration
     
     /**
     * Sets the proxyServer
+    * Proxy Server.
     *
     * @param Windows81VpnProxyServer $val The proxyServer
     *

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * VpnProxyServer class
 *
@@ -27,6 +27,7 @@ class VpnProxyServer extends Entity
 {
     /**
     * Gets the automaticConfigurationScriptUrl
+    * Proxy's automatic configuration script url.
     *
     * @return string The automaticConfigurationScriptUrl
     */
@@ -41,6 +42,7 @@ class VpnProxyServer extends Entity
 
     /**
     * Sets the automaticConfigurationScriptUrl
+    * Proxy's automatic configuration script url.
     *
     * @param string $val The value of the automaticConfigurationScriptUrl
     *
@@ -53,6 +55,7 @@ class VpnProxyServer extends Entity
     }
     /**
     * Gets the address
+    * Address.
     *
     * @return string The address
     */
@@ -67,6 +70,7 @@ class VpnProxyServer extends Entity
 
     /**
     * Sets the address
+    * Address.
     *
     * @param string $val The value of the address
     *
@@ -79,6 +83,7 @@ class VpnProxyServer extends Entity
     }
     /**
     * Gets the port
+    * Port. Valid values 0 to 65535
     *
     * @return int The port
     */
@@ -93,6 +98,7 @@ class VpnProxyServer extends Entity
 
     /**
     * Sets the port
+    * Port. Valid values 0 to 65535
     *
     * @param int $val The value of the port
     *

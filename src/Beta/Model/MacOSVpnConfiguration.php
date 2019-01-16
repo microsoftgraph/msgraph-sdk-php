@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * MacOSVpnConfiguration class
@@ -28,13 +28,14 @@ class MacOSVpnConfiguration extends AppleVpnConfiguration
 {
     /**
     * Gets the identityCertificate
+    * Identity certificate for client authentication when authentication method is certificate.
     *
     * @return MacOSCertificateProfileBase The identityCertificate
     */
     public function getIdentityCertificate()
     {
         if (array_key_exists("identityCertificate", $this->_propDict)) {
-            if (is_a($this->_propDict["identityCertificate"], "Microsoft\Graph\Beta\Model\MacOSCertificateProfileBase")) {
+            if (is_a($this->_propDict["identityCertificate"], "Microsoft\Graph\Model\MacOSCertificateProfileBase")) {
                 return $this->_propDict["identityCertificate"];
             } else {
                 $this->_propDict["identityCertificate"] = new MacOSCertificateProfileBase($this->_propDict["identityCertificate"]);
@@ -46,6 +47,7 @@ class MacOSVpnConfiguration extends AppleVpnConfiguration
     
     /**
     * Sets the identityCertificate
+    * Identity certificate for client authentication when authentication method is certificate.
     *
     * @param MacOSCertificateProfileBase $val The identityCertificate
     *

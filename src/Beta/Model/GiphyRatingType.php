@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 use Microsoft\Graph\Core\Enum;
 
@@ -33,4 +33,5 @@ class GiphyRatingType extends Enum
     */
     const MODERATE = "moderate";
     const STRICT = "strict";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

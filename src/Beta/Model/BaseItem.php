@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * BaseItem class
@@ -28,13 +28,14 @@ class BaseItem extends Entity
 {
     /**
     * Gets the createdBy
+    * Identity of the user, device, or application which created the item. Read-only.
     *
     * @return IdentitySet The createdBy
     */
     public function getCreatedBy()
     {
         if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "Microsoft\Graph\Beta\Model\IdentitySet")) {
+            if (is_a($this->_propDict["createdBy"], "Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["createdBy"];
             } else {
                 $this->_propDict["createdBy"] = new IdentitySet($this->_propDict["createdBy"]);
@@ -46,6 +47,7 @@ class BaseItem extends Entity
     
     /**
     * Sets the createdBy
+    * Identity of the user, device, or application which created the item. Read-only.
     *
     * @param IdentitySet $val The createdBy
     *
@@ -59,6 +61,7 @@ class BaseItem extends Entity
     
     /**
     * Gets the createdDateTime
+    * Date and time of item creation. Read-only.
     *
     * @return \DateTime The createdDateTime
     */
@@ -77,6 +80,7 @@ class BaseItem extends Entity
     
     /**
     * Sets the createdDateTime
+    * Date and time of item creation. Read-only.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -90,6 +94,7 @@ class BaseItem extends Entity
     
     /**
     * Gets the description
+    * Provides a user-visible description of the item. Optional.
     *
     * @return string The description
     */
@@ -104,6 +109,7 @@ class BaseItem extends Entity
     
     /**
     * Sets the description
+    * Provides a user-visible description of the item. Optional.
     *
     * @param string $val The description
     *
@@ -117,6 +123,7 @@ class BaseItem extends Entity
     
     /**
     * Gets the eTag
+    * ETag for the item. Read-only.
     *
     * @return string The eTag
     */
@@ -131,6 +138,7 @@ class BaseItem extends Entity
     
     /**
     * Sets the eTag
+    * ETag for the item. Read-only.
     *
     * @param string $val The eTag
     *
@@ -144,13 +152,14 @@ class BaseItem extends Entity
     
     /**
     * Gets the lastModifiedBy
+    * Identity of the user, device, and application which last modified the item. Read-only.
     *
     * @return IdentitySet The lastModifiedBy
     */
     public function getLastModifiedBy()
     {
         if (array_key_exists("lastModifiedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedBy"], "Microsoft\Graph\Beta\Model\IdentitySet")) {
+            if (is_a($this->_propDict["lastModifiedBy"], "Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["lastModifiedBy"];
             } else {
                 $this->_propDict["lastModifiedBy"] = new IdentitySet($this->_propDict["lastModifiedBy"]);
@@ -162,6 +171,7 @@ class BaseItem extends Entity
     
     /**
     * Sets the lastModifiedBy
+    * Identity of the user, device, and application which last modified the item. Read-only.
     *
     * @param IdentitySet $val The lastModifiedBy
     *
@@ -175,6 +185,7 @@ class BaseItem extends Entity
     
     /**
     * Gets the lastModifiedDateTime
+    * Date and time the item was last modified. Read-only.
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -193,6 +204,7 @@ class BaseItem extends Entity
     
     /**
     * Sets the lastModifiedDateTime
+    * Date and time the item was last modified. Read-only.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -206,6 +218,7 @@ class BaseItem extends Entity
     
     /**
     * Gets the name
+    * The name of the item. Read-write.
     *
     * @return string The name
     */
@@ -220,6 +233,7 @@ class BaseItem extends Entity
     
     /**
     * Sets the name
+    * The name of the item. Read-write.
     *
     * @param string $val The name
     *
@@ -233,13 +247,14 @@ class BaseItem extends Entity
     
     /**
     * Gets the parentReference
+    * Parent information, if the item has a parent. Read-write.
     *
     * @return ItemReference The parentReference
     */
     public function getParentReference()
     {
         if (array_key_exists("parentReference", $this->_propDict)) {
-            if (is_a($this->_propDict["parentReference"], "Microsoft\Graph\Beta\Model\ItemReference")) {
+            if (is_a($this->_propDict["parentReference"], "Microsoft\Graph\Model\ItemReference")) {
                 return $this->_propDict["parentReference"];
             } else {
                 $this->_propDict["parentReference"] = new ItemReference($this->_propDict["parentReference"]);
@@ -251,6 +266,7 @@ class BaseItem extends Entity
     
     /**
     * Sets the parentReference
+    * Parent information, if the item has a parent. Read-write.
     *
     * @param ItemReference $val The parentReference
     *
@@ -264,6 +280,7 @@ class BaseItem extends Entity
     
     /**
     * Gets the webUrl
+    * URL that displays the resource in the browser. Read-only.
     *
     * @return string The webUrl
     */
@@ -278,6 +295,7 @@ class BaseItem extends Entity
     
     /**
     * Sets the webUrl
+    * URL that displays the resource in the browser. Read-only.
     *
     * @param string $val The webUrl
     *
@@ -291,13 +309,14 @@ class BaseItem extends Entity
     
     /**
     * Gets the createdByUser
+    * Identity of the user who created the item. Read-only.
     *
     * @return User The createdByUser
     */
     public function getCreatedByUser()
     {
         if (array_key_exists("createdByUser", $this->_propDict)) {
-            if (is_a($this->_propDict["createdByUser"], "Microsoft\Graph\Beta\Model\User")) {
+            if (is_a($this->_propDict["createdByUser"], "Microsoft\Graph\Model\User")) {
                 return $this->_propDict["createdByUser"];
             } else {
                 $this->_propDict["createdByUser"] = new User($this->_propDict["createdByUser"]);
@@ -309,6 +328,7 @@ class BaseItem extends Entity
     
     /**
     * Sets the createdByUser
+    * Identity of the user who created the item. Read-only.
     *
     * @param User $val The createdByUser
     *
@@ -322,13 +342,14 @@ class BaseItem extends Entity
     
     /**
     * Gets the lastModifiedByUser
+    * Identity of the user who last modified the item. Read-only.
     *
     * @return User The lastModifiedByUser
     */
     public function getLastModifiedByUser()
     {
         if (array_key_exists("lastModifiedByUser", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedByUser"], "Microsoft\Graph\Beta\Model\User")) {
+            if (is_a($this->_propDict["lastModifiedByUser"], "Microsoft\Graph\Model\User")) {
                 return $this->_propDict["lastModifiedByUser"];
             } else {
                 $this->_propDict["lastModifiedByUser"] = new User($this->_propDict["lastModifiedByUser"]);
@@ -340,6 +361,7 @@ class BaseItem extends Entity
     
     /**
     * Sets the lastModifiedByUser
+    * Identity of the user who last modified the item. Read-only.
     *
     * @param User $val The lastModifiedByUser
     *

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * WindowsPhone81AppX class
@@ -28,13 +28,14 @@ class WindowsPhone81AppX extends MobileLobApp
 {
     /**
     * Gets the applicableArchitectures
+    * The Windows architecture(s) for which this app can run on.
     *
     * @return WindowsArchitecture The applicableArchitectures
     */
     public function getApplicableArchitectures()
     {
         if (array_key_exists("applicableArchitectures", $this->_propDict)) {
-            if (is_a($this->_propDict["applicableArchitectures"], "Microsoft\Graph\Beta\Model\WindowsArchitecture")) {
+            if (is_a($this->_propDict["applicableArchitectures"], "Microsoft\Graph\Model\WindowsArchitecture")) {
                 return $this->_propDict["applicableArchitectures"];
             } else {
                 $this->_propDict["applicableArchitectures"] = new WindowsArchitecture($this->_propDict["applicableArchitectures"]);
@@ -46,6 +47,7 @@ class WindowsPhone81AppX extends MobileLobApp
     
     /**
     * Sets the applicableArchitectures
+    * The Windows architecture(s) for which this app can run on.
     *
     * @param WindowsArchitecture $val The applicableArchitectures
     *
@@ -59,6 +61,7 @@ class WindowsPhone81AppX extends MobileLobApp
     
     /**
     * Gets the identityName
+    * The Identity Name.
     *
     * @return string The identityName
     */
@@ -73,6 +76,7 @@ class WindowsPhone81AppX extends MobileLobApp
     
     /**
     * Sets the identityName
+    * The Identity Name.
     *
     * @param string $val The identityName
     *
@@ -86,6 +90,7 @@ class WindowsPhone81AppX extends MobileLobApp
     
     /**
     * Gets the identityPublisherHash
+    * The Identity Publisher Hash.
     *
     * @return string The identityPublisherHash
     */
@@ -100,6 +105,7 @@ class WindowsPhone81AppX extends MobileLobApp
     
     /**
     * Sets the identityPublisherHash
+    * The Identity Publisher Hash.
     *
     * @param string $val The identityPublisherHash
     *
@@ -113,6 +119,7 @@ class WindowsPhone81AppX extends MobileLobApp
     
     /**
     * Gets the identityResourceIdentifier
+    * The Identity Resource Identifier.
     *
     * @return string The identityResourceIdentifier
     */
@@ -127,6 +134,7 @@ class WindowsPhone81AppX extends MobileLobApp
     
     /**
     * Sets the identityResourceIdentifier
+    * The Identity Resource Identifier.
     *
     * @param string $val The identityResourceIdentifier
     *
@@ -140,13 +148,14 @@ class WindowsPhone81AppX extends MobileLobApp
     
     /**
     * Gets the minimumSupportedOperatingSystem
+    * The value for the minimum applicable operating system.
     *
     * @return WindowsMinimumOperatingSystem The minimumSupportedOperatingSystem
     */
     public function getMinimumSupportedOperatingSystem()
     {
         if (array_key_exists("minimumSupportedOperatingSystem", $this->_propDict)) {
-            if (is_a($this->_propDict["minimumSupportedOperatingSystem"], "Microsoft\Graph\Beta\Model\WindowsMinimumOperatingSystem")) {
+            if (is_a($this->_propDict["minimumSupportedOperatingSystem"], "Microsoft\Graph\Model\WindowsMinimumOperatingSystem")) {
                 return $this->_propDict["minimumSupportedOperatingSystem"];
             } else {
                 $this->_propDict["minimumSupportedOperatingSystem"] = new WindowsMinimumOperatingSystem($this->_propDict["minimumSupportedOperatingSystem"]);
@@ -158,6 +167,7 @@ class WindowsPhone81AppX extends MobileLobApp
     
     /**
     * Sets the minimumSupportedOperatingSystem
+    * The value for the minimum applicable operating system.
     *
     * @param WindowsMinimumOperatingSystem $val The minimumSupportedOperatingSystem
     *
@@ -171,6 +181,7 @@ class WindowsPhone81AppX extends MobileLobApp
     
     /**
     * Gets the phoneProductIdentifier
+    * The Phone Product Identifier.
     *
     * @return string The phoneProductIdentifier
     */
@@ -185,6 +196,7 @@ class WindowsPhone81AppX extends MobileLobApp
     
     /**
     * Sets the phoneProductIdentifier
+    * The Phone Product Identifier.
     *
     * @param string $val The phoneProductIdentifier
     *
@@ -198,6 +210,7 @@ class WindowsPhone81AppX extends MobileLobApp
     
     /**
     * Gets the phonePublisherId
+    * The Phone Publisher Id.
     *
     * @return string The phonePublisherId
     */
@@ -212,6 +225,7 @@ class WindowsPhone81AppX extends MobileLobApp
     
     /**
     * Sets the phonePublisherId
+    * The Phone Publisher Id.
     *
     * @param string $val The phonePublisherId
     *
@@ -225,6 +239,7 @@ class WindowsPhone81AppX extends MobileLobApp
     
     /**
     * Gets the identityVersion
+    * The identity version.
     *
     * @return string The identityVersion
     */
@@ -239,6 +254,7 @@ class WindowsPhone81AppX extends MobileLobApp
     
     /**
     * Sets the identityVersion
+    * The identity version.
     *
     * @param string $val The identityVersion
     *

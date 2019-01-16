@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * DeviceCompliancePolicyDeviceStateSummary class
@@ -28,6 +28,7 @@ class DeviceCompliancePolicyDeviceStateSummary extends Entity
 {
     /**
     * Gets the inGracePeriodCount
+    * Number of devices that are in grace period
     *
     * @return int The inGracePeriodCount
     */
@@ -42,6 +43,7 @@ class DeviceCompliancePolicyDeviceStateSummary extends Entity
     
     /**
     * Sets the inGracePeriodCount
+    * Number of devices that are in grace period
     *
     * @param int $val The inGracePeriodCount
     *
@@ -55,6 +57,7 @@ class DeviceCompliancePolicyDeviceStateSummary extends Entity
     
     /**
     * Gets the configManagerCount
+    * Number of devices that have compliance managed by System Center Configuration Manager
     *
     * @return int The configManagerCount
     */
@@ -69,6 +72,7 @@ class DeviceCompliancePolicyDeviceStateSummary extends Entity
     
     /**
     * Sets the configManagerCount
+    * Number of devices that have compliance managed by System Center Configuration Manager
     *
     * @param int $val The configManagerCount
     *
@@ -82,6 +86,7 @@ class DeviceCompliancePolicyDeviceStateSummary extends Entity
     
     /**
     * Gets the unknownDeviceCount
+    * Number of unknown devices
     *
     * @return int The unknownDeviceCount
     */
@@ -96,6 +101,7 @@ class DeviceCompliancePolicyDeviceStateSummary extends Entity
     
     /**
     * Sets the unknownDeviceCount
+    * Number of unknown devices
     *
     * @param int $val The unknownDeviceCount
     *
@@ -109,6 +115,7 @@ class DeviceCompliancePolicyDeviceStateSummary extends Entity
     
     /**
     * Gets the notApplicableDeviceCount
+    * Number of not applicable devices
     *
     * @return int The notApplicableDeviceCount
     */
@@ -123,6 +130,7 @@ class DeviceCompliancePolicyDeviceStateSummary extends Entity
     
     /**
     * Sets the notApplicableDeviceCount
+    * Number of not applicable devices
     *
     * @param int $val The notApplicableDeviceCount
     *
@@ -136,6 +144,7 @@ class DeviceCompliancePolicyDeviceStateSummary extends Entity
     
     /**
     * Gets the compliantDeviceCount
+    * Number of compliant devices
     *
     * @return int The compliantDeviceCount
     */
@@ -150,6 +159,7 @@ class DeviceCompliancePolicyDeviceStateSummary extends Entity
     
     /**
     * Sets the compliantDeviceCount
+    * Number of compliant devices
     *
     * @param int $val The compliantDeviceCount
     *
@@ -163,6 +173,7 @@ class DeviceCompliancePolicyDeviceStateSummary extends Entity
     
     /**
     * Gets the remediatedDeviceCount
+    * Number of remediated devices
     *
     * @return int The remediatedDeviceCount
     */
@@ -177,6 +188,7 @@ class DeviceCompliancePolicyDeviceStateSummary extends Entity
     
     /**
     * Sets the remediatedDeviceCount
+    * Number of remediated devices
     *
     * @param int $val The remediatedDeviceCount
     *
@@ -190,6 +202,7 @@ class DeviceCompliancePolicyDeviceStateSummary extends Entity
     
     /**
     * Gets the nonCompliantDeviceCount
+    * Number of NonCompliant devices
     *
     * @return int The nonCompliantDeviceCount
     */
@@ -204,6 +217,7 @@ class DeviceCompliancePolicyDeviceStateSummary extends Entity
     
     /**
     * Sets the nonCompliantDeviceCount
+    * Number of NonCompliant devices
     *
     * @param int $val The nonCompliantDeviceCount
     *
@@ -217,6 +231,7 @@ class DeviceCompliancePolicyDeviceStateSummary extends Entity
     
     /**
     * Gets the errorDeviceCount
+    * Number of error devices
     *
     * @return int The errorDeviceCount
     */
@@ -231,6 +246,7 @@ class DeviceCompliancePolicyDeviceStateSummary extends Entity
     
     /**
     * Sets the errorDeviceCount
+    * Number of error devices
     *
     * @param int $val The errorDeviceCount
     *
@@ -244,6 +260,7 @@ class DeviceCompliancePolicyDeviceStateSummary extends Entity
     
     /**
     * Gets the conflictDeviceCount
+    * Number of conflict devices
     *
     * @return int The conflictDeviceCount
     */
@@ -258,6 +275,7 @@ class DeviceCompliancePolicyDeviceStateSummary extends Entity
     
     /**
     * Sets the conflictDeviceCount
+    * Number of conflict devices
     *
     * @param int $val The conflictDeviceCount
     *

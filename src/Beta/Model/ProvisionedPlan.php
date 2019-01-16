@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * ProvisionedPlan class
 *
@@ -27,6 +27,7 @@ class ProvisionedPlan extends Entity
 {
     /**
     * Gets the capabilityStatus
+    * For example, 'Enabled'.
     *
     * @return string The capabilityStatus
     */
@@ -41,6 +42,7 @@ class ProvisionedPlan extends Entity
 
     /**
     * Sets the capabilityStatus
+    * For example, 'Enabled'.
     *
     * @param string $val The value of the capabilityStatus
     *
@@ -53,6 +55,7 @@ class ProvisionedPlan extends Entity
     }
     /**
     * Gets the provisioningStatus
+    * For example, 'Success'.
     *
     * @return string The provisioningStatus
     */
@@ -67,6 +70,7 @@ class ProvisionedPlan extends Entity
 
     /**
     * Sets the provisioningStatus
+    * For example, 'Success'.
     *
     * @param string $val The value of the provisioningStatus
     *
@@ -79,6 +83,7 @@ class ProvisionedPlan extends Entity
     }
     /**
     * Gets the service
+    * The name of the service; for example, 'AccessControlS2S'
     *
     * @return string The service
     */
@@ -93,6 +98,7 @@ class ProvisionedPlan extends Entity
 
     /**
     * Sets the service
+    * The name of the service; for example, 'AccessControlS2S'
     *
     * @param string $val The value of the service
     *

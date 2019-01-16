@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * SecurityVendorInformation class
 *
@@ -27,6 +27,7 @@ class SecurityVendorInformation extends Entity
 {
     /**
     * Gets the provider
+    * Specific provider (product/service - not vendor company); for example, WindowsDefenderATP.
     *
     * @return string The provider
     */
@@ -41,6 +42,7 @@ class SecurityVendorInformation extends Entity
 
     /**
     * Sets the provider
+    * Specific provider (product/service - not vendor company); for example, WindowsDefenderATP.
     *
     * @param string $val The value of the provider
     *
@@ -53,6 +55,7 @@ class SecurityVendorInformation extends Entity
     }
     /**
     * Gets the providerVersion
+    * Version of the provider or subprovider, if it exists, that generated the alert. Required
     *
     * @return string The providerVersion
     */
@@ -67,6 +70,7 @@ class SecurityVendorInformation extends Entity
 
     /**
     * Sets the providerVersion
+    * Version of the provider or subprovider, if it exists, that generated the alert. Required
     *
     * @param string $val The value of the providerVersion
     *
@@ -79,6 +83,7 @@ class SecurityVendorInformation extends Entity
     }
     /**
     * Gets the subProvider
+    * Specific subprovider (under aggregating provider); for example, WindowsDefenderATP.SmartScreen.
     *
     * @return string The subProvider
     */
@@ -93,6 +98,7 @@ class SecurityVendorInformation extends Entity
 
     /**
     * Sets the subProvider
+    * Specific subprovider (under aggregating provider); for example, WindowsDefenderATP.SmartScreen.
     *
     * @param string $val The value of the subProvider
     *
@@ -105,6 +111,7 @@ class SecurityVendorInformation extends Entity
     }
     /**
     * Gets the vendor
+    * Name of the alert vendor (for example, Microsoft, Dell, FireEye). Required
     *
     * @return string The vendor
     */
@@ -119,6 +126,7 @@ class SecurityVendorInformation extends Entity
 
     /**
     * Sets the vendor
+    * Name of the alert vendor (for example, Microsoft, Dell, FireEye). Required
     *
     * @param string $val The value of the vendor
     *

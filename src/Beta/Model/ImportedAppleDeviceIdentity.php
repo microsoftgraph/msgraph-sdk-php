@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * ImportedAppleDeviceIdentity class
@@ -28,6 +28,7 @@ class ImportedAppleDeviceIdentity extends Entity
 {
     /**
     * Gets the serialNumber
+    * Device serial number
     *
     * @return string The serialNumber
     */
@@ -42,6 +43,7 @@ class ImportedAppleDeviceIdentity extends Entity
     
     /**
     * Sets the serialNumber
+    * Device serial number
     *
     * @param string $val The serialNumber
     *
@@ -55,6 +57,7 @@ class ImportedAppleDeviceIdentity extends Entity
     
     /**
     * Gets the requestedEnrollmentProfileId
+    * Enrollment profile Id admin intends to apply to the device during next enrollment
     *
     * @return string The requestedEnrollmentProfileId
     */
@@ -69,6 +72,7 @@ class ImportedAppleDeviceIdentity extends Entity
     
     /**
     * Sets the requestedEnrollmentProfileId
+    * Enrollment profile Id admin intends to apply to the device during next enrollment
     *
     * @param string $val The requestedEnrollmentProfileId
     *
@@ -82,6 +86,7 @@ class ImportedAppleDeviceIdentity extends Entity
     
     /**
     * Gets the requestedEnrollmentProfileAssignmentDateTime
+    * The time enrollment profile was assigned to the device
     *
     * @return \DateTime The requestedEnrollmentProfileAssignmentDateTime
     */
@@ -100,6 +105,7 @@ class ImportedAppleDeviceIdentity extends Entity
     
     /**
     * Sets the requestedEnrollmentProfileAssignmentDateTime
+    * The time enrollment profile was assigned to the device
     *
     * @param \DateTime $val The requestedEnrollmentProfileAssignmentDateTime
     *
@@ -113,6 +119,7 @@ class ImportedAppleDeviceIdentity extends Entity
     
     /**
     * Gets the isSupervised
+    * Indicates if the Apple device is supervised. More information is at: https://support.apple.com/en-us/HT202837
     *
     * @return bool The isSupervised
     */
@@ -127,6 +134,7 @@ class ImportedAppleDeviceIdentity extends Entity
     
     /**
     * Sets the isSupervised
+    * Indicates if the Apple device is supervised. More information is at: https://support.apple.com/en-us/HT202837
     *
     * @param bool $val The isSupervised
     *
@@ -140,13 +148,14 @@ class ImportedAppleDeviceIdentity extends Entity
     
     /**
     * Gets the discoverySource
+    * Apple device discovery source.
     *
     * @return DiscoverySource The discoverySource
     */
     public function getDiscoverySource()
     {
         if (array_key_exists("discoverySource", $this->_propDict)) {
-            if (is_a($this->_propDict["discoverySource"], "Microsoft\Graph\Beta\Model\DiscoverySource")) {
+            if (is_a($this->_propDict["discoverySource"], "Microsoft\Graph\Model\DiscoverySource")) {
                 return $this->_propDict["discoverySource"];
             } else {
                 $this->_propDict["discoverySource"] = new DiscoverySource($this->_propDict["discoverySource"]);
@@ -158,6 +167,7 @@ class ImportedAppleDeviceIdentity extends Entity
     
     /**
     * Sets the discoverySource
+    * Apple device discovery source.
     *
     * @param DiscoverySource $val The discoverySource
     *
@@ -171,6 +181,7 @@ class ImportedAppleDeviceIdentity extends Entity
     
     /**
     * Gets the createdDateTime
+    * Created Date Time of the device
     *
     * @return \DateTime The createdDateTime
     */
@@ -189,6 +200,7 @@ class ImportedAppleDeviceIdentity extends Entity
     
     /**
     * Sets the createdDateTime
+    * Created Date Time of the device
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -202,6 +214,7 @@ class ImportedAppleDeviceIdentity extends Entity
     
     /**
     * Gets the lastContactedDateTime
+    * Last Contacted Date Time of the device
     *
     * @return \DateTime The lastContactedDateTime
     */
@@ -220,6 +233,7 @@ class ImportedAppleDeviceIdentity extends Entity
     
     /**
     * Sets the lastContactedDateTime
+    * Last Contacted Date Time of the device
     *
     * @param \DateTime $val The lastContactedDateTime
     *
@@ -233,6 +247,7 @@ class ImportedAppleDeviceIdentity extends Entity
     
     /**
     * Gets the description
+    * The description of the device
     *
     * @return string The description
     */
@@ -247,6 +262,7 @@ class ImportedAppleDeviceIdentity extends Entity
     
     /**
     * Sets the description
+    * The description of the device
     *
     * @param string $val The description
     *
@@ -260,13 +276,14 @@ class ImportedAppleDeviceIdentity extends Entity
     
     /**
     * Gets the enrollmentState
+    * The state of the device in Intune
     *
     * @return EnrollmentState The enrollmentState
     */
     public function getEnrollmentState()
     {
         if (array_key_exists("enrollmentState", $this->_propDict)) {
-            if (is_a($this->_propDict["enrollmentState"], "Microsoft\Graph\Beta\Model\EnrollmentState")) {
+            if (is_a($this->_propDict["enrollmentState"], "Microsoft\Graph\Model\EnrollmentState")) {
                 return $this->_propDict["enrollmentState"];
             } else {
                 $this->_propDict["enrollmentState"] = new EnrollmentState($this->_propDict["enrollmentState"]);
@@ -278,6 +295,7 @@ class ImportedAppleDeviceIdentity extends Entity
     
     /**
     * Sets the enrollmentState
+    * The state of the device in Intune
     *
     * @param EnrollmentState $val The enrollmentState
     *
@@ -291,13 +309,14 @@ class ImportedAppleDeviceIdentity extends Entity
     
     /**
     * Gets the platform
+    * The platform of the Device.
     *
     * @return Platform The platform
     */
     public function getPlatform()
     {
         if (array_key_exists("platform", $this->_propDict)) {
-            if (is_a($this->_propDict["platform"], "Microsoft\Graph\Beta\Model\Platform")) {
+            if (is_a($this->_propDict["platform"], "Microsoft\Graph\Model\Platform")) {
                 return $this->_propDict["platform"];
             } else {
                 $this->_propDict["platform"] = new Platform($this->_propDict["platform"]);
@@ -309,6 +328,7 @@ class ImportedAppleDeviceIdentity extends Entity
     
     /**
     * Sets the platform
+    * The platform of the Device.
     *
     * @param Platform $val The platform
     *

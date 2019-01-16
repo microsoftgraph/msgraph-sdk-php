@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * DepIOSEnrollmentProfile class
@@ -28,13 +28,14 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
 {
     /**
     * Gets the iTunesPairingMode
+    * Indicates the iTunes pairing mode
     *
     * @return ITunesPairingMode The iTunesPairingMode
     */
     public function getITunesPairingMode()
     {
         if (array_key_exists("iTunesPairingMode", $this->_propDict)) {
-            if (is_a($this->_propDict["iTunesPairingMode"], "Microsoft\Graph\Beta\Model\ITunesPairingMode")) {
+            if (is_a($this->_propDict["iTunesPairingMode"], "Microsoft\Graph\Model\ITunesPairingMode")) {
                 return $this->_propDict["iTunesPairingMode"];
             } else {
                 $this->_propDict["iTunesPairingMode"] = new ITunesPairingMode($this->_propDict["iTunesPairingMode"]);
@@ -46,6 +47,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     
     /**
     * Sets the iTunesPairingMode
+    * Indicates the iTunes pairing mode
     *
     * @param ITunesPairingMode $val The iTunesPairingMode
     *
@@ -60,6 +62,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
 
      /** 
      * Gets the managementCertificates
+    * Management certificates for Apple Configurator
      *
      * @return array The managementCertificates
      */
@@ -74,6 +77,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     
     /** 
     * Sets the managementCertificates
+    * Management certificates for Apple Configurator
     *
     * @param ManagementCertificateWithThumbprint $val The managementCertificates
     *
@@ -87,6 +91,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     
     /**
     * Gets the restoreFromAndroidDisabled
+    * Indicates if Restore from Android is disabled
     *
     * @return bool The restoreFromAndroidDisabled
     */
@@ -101,6 +106,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     
     /**
     * Sets the restoreFromAndroidDisabled
+    * Indicates if Restore from Android is disabled
     *
     * @param bool $val The restoreFromAndroidDisabled
     *
@@ -114,6 +120,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     
     /**
     * Gets the awaitDeviceConfiguredConfirmation
+    * Indicates if the device will need to wait for configured confirmation
     *
     * @return bool The awaitDeviceConfiguredConfirmation
     */
@@ -128,6 +135,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     
     /**
     * Sets the awaitDeviceConfiguredConfirmation
+    * Indicates if the device will need to wait for configured confirmation
     *
     * @param bool $val The awaitDeviceConfiguredConfirmation
     *
@@ -141,6 +149,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     
     /**
     * Gets the sharedIPadMaximumUserCount
+    * This specifies the maximum number of users that can use a shared iPad. Only applicable in shared iPad mode.
     *
     * @return int The sharedIPadMaximumUserCount
     */
@@ -155,6 +164,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     
     /**
     * Sets the sharedIPadMaximumUserCount
+    * This specifies the maximum number of users that can use a shared iPad. Only applicable in shared iPad mode.
     *
     * @param int $val The sharedIPadMaximumUserCount
     *
@@ -168,6 +178,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     
     /**
     * Gets the enableSharedIPad
+    * This indicates whether the device is to be enrolled in a mode which enables multi user scenarios. Only applicable in shared iPads.
     *
     * @return bool The enableSharedIPad
     */
@@ -182,6 +193,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     
     /**
     * Sets the enableSharedIPad
+    * This indicates whether the device is to be enrolled in a mode which enables multi user scenarios. Only applicable in shared iPads.
     *
     * @param bool $val The enableSharedIPad
     *
@@ -195,6 +207,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     
     /**
     * Gets the companyPortalVppTokenId
+    * If set, indicates which Vpp token should be used to deploy the Company Portal w/ device licensing. 'enableAuthenticationViaCompanyPortal' must be set in order for this property to be set.
     *
     * @return string The companyPortalVppTokenId
     */
@@ -209,6 +222,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     
     /**
     * Sets the companyPortalVppTokenId
+    * If set, indicates which Vpp token should be used to deploy the Company Portal w/ device licensing. 'enableAuthenticationViaCompanyPortal' must be set in order for this property to be set.
     *
     * @param string $val The companyPortalVppTokenId
     *
@@ -222,6 +236,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     
     /**
     * Gets the enableSingleAppEnrollmentMode
+    * Tells the device to enable single app mode and apply app-lock during enrollment. Default is false. 'enableAuthenticationViaCompanyPortal' and 'companyPortalVppTokenId' must be set for this property to be set.
     *
     * @return bool The enableSingleAppEnrollmentMode
     */
@@ -236,6 +251,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     
     /**
     * Sets the enableSingleAppEnrollmentMode
+    * Tells the device to enable single app mode and apply app-lock during enrollment. Default is false. 'enableAuthenticationViaCompanyPortal' and 'companyPortalVppTokenId' must be set for this property to be set.
     *
     * @param bool $val The enableSingleAppEnrollmentMode
     *
@@ -244,6 +260,209 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     public function setEnableSingleAppEnrollmentMode($val)
     {
         $this->_propDict["enableSingleAppEnrollmentMode"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the homeButtonScreenDisabled
+    * Indicates if home button sensitivity screen is disabled
+    *
+    * @return bool The homeButtonScreenDisabled
+    */
+    public function getHomeButtonScreenDisabled()
+    {
+        if (array_key_exists("homeButtonScreenDisabled", $this->_propDict)) {
+            return $this->_propDict["homeButtonScreenDisabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the homeButtonScreenDisabled
+    * Indicates if home button sensitivity screen is disabled
+    *
+    * @param bool $val The homeButtonScreenDisabled
+    *
+    * @return DepIOSEnrollmentProfile
+    */
+    public function setHomeButtonScreenDisabled($val)
+    {
+        $this->_propDict["homeButtonScreenDisabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the iMessageAndFaceTimeScreenDisabled
+    * Indicates if iMessage and FaceTime screen is disabled
+    *
+    * @return bool The iMessageAndFaceTimeScreenDisabled
+    */
+    public function getIMessageAndFaceTimeScreenDisabled()
+    {
+        if (array_key_exists("iMessageAndFaceTimeScreenDisabled", $this->_propDict)) {
+            return $this->_propDict["iMessageAndFaceTimeScreenDisabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the iMessageAndFaceTimeScreenDisabled
+    * Indicates if iMessage and FaceTime screen is disabled
+    *
+    * @param bool $val The iMessageAndFaceTimeScreenDisabled
+    *
+    * @return DepIOSEnrollmentProfile
+    */
+    public function setIMessageAndFaceTimeScreenDisabled($val)
+    {
+        $this->_propDict["iMessageAndFaceTimeScreenDisabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the onBoardingScreenDisabled
+    * Indicates if onboarding setup screen is disabled
+    *
+    * @return bool The onBoardingScreenDisabled
+    */
+    public function getOnBoardingScreenDisabled()
+    {
+        if (array_key_exists("onBoardingScreenDisabled", $this->_propDict)) {
+            return $this->_propDict["onBoardingScreenDisabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the onBoardingScreenDisabled
+    * Indicates if onboarding setup screen is disabled
+    *
+    * @param bool $val The onBoardingScreenDisabled
+    *
+    * @return DepIOSEnrollmentProfile
+    */
+    public function setOnBoardingScreenDisabled($val)
+    {
+        $this->_propDict["onBoardingScreenDisabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the screenTimeScreenDisabled
+    * Indicates if screen timeout setup is disabled
+    *
+    * @return bool The screenTimeScreenDisabled
+    */
+    public function getScreenTimeScreenDisabled()
+    {
+        if (array_key_exists("screenTimeScreenDisabled", $this->_propDict)) {
+            return $this->_propDict["screenTimeScreenDisabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the screenTimeScreenDisabled
+    * Indicates if screen timeout setup is disabled
+    *
+    * @param bool $val The screenTimeScreenDisabled
+    *
+    * @return DepIOSEnrollmentProfile
+    */
+    public function setScreenTimeScreenDisabled($val)
+    {
+        $this->_propDict["screenTimeScreenDisabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the simSetupScreenDisabled
+    * Indicates if the SIMSetup screen is disabled
+    *
+    * @return bool The simSetupScreenDisabled
+    */
+    public function getSimSetupScreenDisabled()
+    {
+        if (array_key_exists("simSetupScreenDisabled", $this->_propDict)) {
+            return $this->_propDict["simSetupScreenDisabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the simSetupScreenDisabled
+    * Indicates if the SIMSetup screen is disabled
+    *
+    * @param bool $val The simSetupScreenDisabled
+    *
+    * @return DepIOSEnrollmentProfile
+    */
+    public function setSimSetupScreenDisabled($val)
+    {
+        $this->_propDict["simSetupScreenDisabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the softwareUpdateScreenDisabled
+    * Indicates if the mandatory sofware update screen is disabled
+    *
+    * @return bool The softwareUpdateScreenDisabled
+    */
+    public function getSoftwareUpdateScreenDisabled()
+    {
+        if (array_key_exists("softwareUpdateScreenDisabled", $this->_propDict)) {
+            return $this->_propDict["softwareUpdateScreenDisabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the softwareUpdateScreenDisabled
+    * Indicates if the mandatory sofware update screen is disabled
+    *
+    * @param bool $val The softwareUpdateScreenDisabled
+    *
+    * @return DepIOSEnrollmentProfile
+    */
+    public function setSoftwareUpdateScreenDisabled($val)
+    {
+        $this->_propDict["softwareUpdateScreenDisabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the watchMigrationScreenDisabled
+    * Indicates if the watch migration screen is disabled
+    *
+    * @return bool The watchMigrationScreenDisabled
+    */
+    public function getWatchMigrationScreenDisabled()
+    {
+        if (array_key_exists("watchMigrationScreenDisabled", $this->_propDict)) {
+            return $this->_propDict["watchMigrationScreenDisabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the watchMigrationScreenDisabled
+    * Indicates if the watch migration screen is disabled
+    *
+    * @param bool $val The watchMigrationScreenDisabled
+    *
+    * @return DepIOSEnrollmentProfile
+    */
+    public function setWatchMigrationScreenDisabled($val)
+    {
+        $this->_propDict["watchMigrationScreenDisabled"] = boolval($val);
         return $this;
     }
     

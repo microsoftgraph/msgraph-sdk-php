@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * Onenote class
@@ -29,6 +29,7 @@ class Onenote extends Entity
 
      /** 
      * Gets the notebooks
+    * The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable.
      *
      * @return array The notebooks
      */
@@ -43,6 +44,7 @@ class Onenote extends Entity
     
     /** 
     * Sets the notebooks
+    * The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable.
     *
     * @param Notebook $val The notebooks
     *
@@ -57,6 +59,7 @@ class Onenote extends Entity
 
      /** 
      * Gets the sections
+    * The sections in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
      *
      * @return array The sections
      */
@@ -71,6 +74,7 @@ class Onenote extends Entity
     
     /** 
     * Sets the sections
+    * The sections in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
     *
     * @param OnenoteSection $val The sections
     *
@@ -85,6 +89,7 @@ class Onenote extends Entity
 
      /** 
      * Gets the sectionGroups
+    * The section groups in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
      *
      * @return array The sectionGroups
      */
@@ -99,6 +104,7 @@ class Onenote extends Entity
     
     /** 
     * Sets the sectionGroups
+    * The section groups in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
     *
     * @param SectionGroup $val The sectionGroups
     *
@@ -113,6 +119,7 @@ class Onenote extends Entity
 
      /** 
      * Gets the pages
+    * The pages in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
      *
      * @return array The pages
      */
@@ -127,6 +134,7 @@ class Onenote extends Entity
     
     /** 
     * Sets the pages
+    * The pages in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
     *
     * @param OnenotePage $val The pages
     *
@@ -141,6 +149,7 @@ class Onenote extends Entity
 
      /** 
      * Gets the resources
+    * The image and other file resources in OneNote pages. Getting a resources collection is not supported, but you can get the binary content of a specific resource. Read-only. Nullable.
      *
      * @return array The resources
      */
@@ -155,6 +164,7 @@ class Onenote extends Entity
     
     /** 
     * Sets the resources
+    * The image and other file resources in OneNote pages. Getting a resources collection is not supported, but you can get the binary content of a specific resource. Read-only. Nullable.
     *
     * @param OnenoteResource $val The resources
     *
@@ -169,6 +179,7 @@ class Onenote extends Entity
 
      /** 
      * Gets the operations
+    * The status of OneNote operations. Getting an operations collection is not supported, but you can get the status of long-running operations if the Operation-Location header is returned in the response. Read-only. Nullable.
      *
      * @return array The operations
      */
@@ -183,6 +194,7 @@ class Onenote extends Entity
     
     /** 
     * Sets the operations
+    * The status of OneNote operations. Getting an operations collection is not supported, but you can get the status of long-running operations if the Operation-Location header is returned in the response. Read-only. Nullable.
     *
     * @param OnenoteOperation $val The operations
     *

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * PrivacyProfile class
 *
@@ -27,6 +27,7 @@ class PrivacyProfile extends Entity
 {
     /**
     * Gets the contactEmail
+    * A valid smtp email address for the privacy statement contact. Not required.
     *
     * @return string The contactEmail
     */
@@ -41,6 +42,7 @@ class PrivacyProfile extends Entity
 
     /**
     * Sets the contactEmail
+    * A valid smtp email address for the privacy statement contact. Not required.
     *
     * @param string $val The value of the contactEmail
     *
@@ -53,6 +55,7 @@ class PrivacyProfile extends Entity
     }
     /**
     * Gets the statementUrl
+    * A valid URL format that begins with http:// or https://. Maximum length is 255 characters. The URL that directs to the company's privacy statement. Not required.
     *
     * @return string The statementUrl
     */
@@ -67,6 +70,7 @@ class PrivacyProfile extends Entity
 
     /**
     * Sets the statementUrl
+    * A valid URL format that begins with http:// or https://. Maximum length is 255 characters. The URL that directs to the company's privacy statement. Not required.
     *
     * @param string $val The value of the statementUrl
     *

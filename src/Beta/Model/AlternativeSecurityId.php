@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * AlternativeSecurityId class
 *
@@ -27,6 +27,7 @@ class AlternativeSecurityId extends Entity
 {
     /**
     * Gets the type
+    * For internal use only
     *
     * @return int The type
     */
@@ -41,6 +42,7 @@ class AlternativeSecurityId extends Entity
 
     /**
     * Sets the type
+    * For internal use only
     *
     * @param int $val The value of the type
     *
@@ -53,6 +55,7 @@ class AlternativeSecurityId extends Entity
     }
     /**
     * Gets the identityProvider
+    * For internal use only
     *
     * @return string The identityProvider
     */
@@ -67,6 +70,7 @@ class AlternativeSecurityId extends Entity
 
     /**
     * Sets the identityProvider
+    * For internal use only
     *
     * @param string $val The value of the identityProvider
     *
@@ -80,13 +84,14 @@ class AlternativeSecurityId extends Entity
 
     /**
     * Gets the key
+    * For internal use only
     *
     * @return \GuzzleHttp\Psr7\Stream The key
     */
     public function getKey()
     {
         if (array_key_exists("key", $this->_propDict)) {
-            if (is_a($this->_propDict["key"], "Microsoft\Graph\Beta\Model\\GuzzleHttp\Psr7\Stream")) {
+            if (is_a($this->_propDict["key"], "Microsoft\Graph\Model\\GuzzleHttp\Psr7\Stream")) {
                 return $this->_propDict["key"];
             } else {
                 $this->_propDict["key"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["key"]);
@@ -98,6 +103,7 @@ class AlternativeSecurityId extends Entity
 
     /**
     * Sets the key
+    * For internal use only
     *
     * @param \GuzzleHttp\Psr7\Stream $val The value to assign to the key
     *

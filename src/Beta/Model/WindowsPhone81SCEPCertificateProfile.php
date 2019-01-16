@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * WindowsPhone81SCEPCertificateProfile class
@@ -28,6 +28,7 @@ class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81CertificateProf
 {
     /**
     * Gets the scepServerUrls
+    * SCEP Server Url(s).
     *
     * @return string The scepServerUrls
     */
@@ -42,6 +43,7 @@ class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81CertificateProf
     
     /**
     * Sets the scepServerUrls
+    * SCEP Server Url(s).
     *
     * @param string $val The scepServerUrls
     *
@@ -55,6 +57,7 @@ class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81CertificateProf
     
     /**
     * Gets the subjectNameFormatString
+    * Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
     *
     * @return string The subjectNameFormatString
     */
@@ -69,6 +72,7 @@ class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81CertificateProf
     
     /**
     * Sets the subjectNameFormatString
+    * Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
     *
     * @param string $val The subjectNameFormatString
     *
@@ -82,13 +86,14 @@ class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81CertificateProf
     
     /**
     * Gets the keyUsage
+    * SCEP Key Usage.
     *
     * @return KeyUsages The keyUsage
     */
     public function getKeyUsage()
     {
         if (array_key_exists("keyUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["keyUsage"], "Microsoft\Graph\Beta\Model\KeyUsages")) {
+            if (is_a($this->_propDict["keyUsage"], "Microsoft\Graph\Model\KeyUsages")) {
                 return $this->_propDict["keyUsage"];
             } else {
                 $this->_propDict["keyUsage"] = new KeyUsages($this->_propDict["keyUsage"]);
@@ -100,6 +105,7 @@ class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81CertificateProf
     
     /**
     * Sets the keyUsage
+    * SCEP Key Usage.
     *
     * @param KeyUsages $val The keyUsage
     *
@@ -113,13 +119,14 @@ class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81CertificateProf
     
     /**
     * Gets the keySize
+    * SCEP Key Size.
     *
     * @return KeySize The keySize
     */
     public function getKeySize()
     {
         if (array_key_exists("keySize", $this->_propDict)) {
-            if (is_a($this->_propDict["keySize"], "Microsoft\Graph\Beta\Model\KeySize")) {
+            if (is_a($this->_propDict["keySize"], "Microsoft\Graph\Model\KeySize")) {
                 return $this->_propDict["keySize"];
             } else {
                 $this->_propDict["keySize"] = new KeySize($this->_propDict["keySize"]);
@@ -131,6 +138,7 @@ class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81CertificateProf
     
     /**
     * Sets the keySize
+    * SCEP Key Size.
     *
     * @param KeySize $val The keySize
     *
@@ -144,13 +152,14 @@ class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81CertificateProf
     
     /**
     * Gets the hashAlgorithm
+    * SCEP Hash Algorithm.
     *
     * @return HashAlgorithms The hashAlgorithm
     */
     public function getHashAlgorithm()
     {
         if (array_key_exists("hashAlgorithm", $this->_propDict)) {
-            if (is_a($this->_propDict["hashAlgorithm"], "Microsoft\Graph\Beta\Model\HashAlgorithms")) {
+            if (is_a($this->_propDict["hashAlgorithm"], "Microsoft\Graph\Model\HashAlgorithms")) {
                 return $this->_propDict["hashAlgorithm"];
             } else {
                 $this->_propDict["hashAlgorithm"] = new HashAlgorithms($this->_propDict["hashAlgorithm"]);
@@ -162,6 +171,7 @@ class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81CertificateProf
     
     /**
     * Sets the hashAlgorithm
+    * SCEP Hash Algorithm.
     *
     * @param HashAlgorithms $val The hashAlgorithm
     *
@@ -175,6 +185,7 @@ class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81CertificateProf
     
     /**
     * Gets the subjectAlternativeNameFormatString
+    * Custom String that defines the AAD Attribute.
     *
     * @return string The subjectAlternativeNameFormatString
     */
@@ -189,6 +200,7 @@ class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81CertificateProf
     
     /**
     * Sets the subjectAlternativeNameFormatString
+    * Custom String that defines the AAD Attribute.
     *
     * @param string $val The subjectAlternativeNameFormatString
     *
@@ -202,13 +214,14 @@ class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81CertificateProf
     
     /**
     * Gets the rootCertificate
+    * Trusted Root Certificate.
     *
     * @return WindowsPhone81TrustedRootCertificate The rootCertificate
     */
     public function getRootCertificate()
     {
         if (array_key_exists("rootCertificate", $this->_propDict)) {
-            if (is_a($this->_propDict["rootCertificate"], "Microsoft\Graph\Beta\Model\WindowsPhone81TrustedRootCertificate")) {
+            if (is_a($this->_propDict["rootCertificate"], "Microsoft\Graph\Model\WindowsPhone81TrustedRootCertificate")) {
                 return $this->_propDict["rootCertificate"];
             } else {
                 $this->_propDict["rootCertificate"] = new WindowsPhone81TrustedRootCertificate($this->_propDict["rootCertificate"]);
@@ -220,6 +233,7 @@ class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81CertificateProf
     
     /**
     * Sets the rootCertificate
+    * Trusted Root Certificate.
     *
     * @param WindowsPhone81TrustedRootCertificate $val The rootCertificate
     *
@@ -234,6 +248,7 @@ class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81CertificateProf
 
      /** 
      * Gets the managedDeviceCertificateStates
+    * Certificate state for devices
      *
      * @return array The managedDeviceCertificateStates
      */
@@ -248,6 +263,7 @@ class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81CertificateProf
     
     /** 
     * Sets the managedDeviceCertificateStates
+    * Certificate state for devices
     *
     * @param ManagedDeviceCertificateState $val The managedDeviceCertificateStates
     *

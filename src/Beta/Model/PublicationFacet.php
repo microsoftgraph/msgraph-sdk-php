@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * PublicationFacet class
 *
@@ -27,6 +27,7 @@ class PublicationFacet extends Entity
 {
     /**
     * Gets the level
+    * The state of publication for this document. Either published or checkout. Read-only.
     *
     * @return string The level
     */
@@ -41,6 +42,7 @@ class PublicationFacet extends Entity
 
     /**
     * Sets the level
+    * The state of publication for this document. Either published or checkout. Read-only.
     *
     * @param string $val The value of the level
     *
@@ -53,6 +55,7 @@ class PublicationFacet extends Entity
     }
     /**
     * Gets the versionId
+    * The unique identifier for the version that is visible to the current caller. Read-only.
     *
     * @return string The versionId
     */
@@ -67,6 +70,7 @@ class PublicationFacet extends Entity
 
     /**
     * Sets the versionId
+    * The unique identifier for the version that is visible to the current caller. Read-only.
     *
     * @param string $val The value of the versionId
     *

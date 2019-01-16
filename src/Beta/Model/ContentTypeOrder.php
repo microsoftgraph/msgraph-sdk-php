@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * ContentTypeOrder class
 *
@@ -27,6 +27,7 @@ class ContentTypeOrder extends Entity
 {
     /**
     * Gets the default
+    * Whether this is the default Content Type
     *
     * @return bool The default
     */
@@ -41,6 +42,7 @@ class ContentTypeOrder extends Entity
 
     /**
     * Sets the default
+    * Whether this is the default Content Type
     *
     * @param bool $val The value of the default
     *
@@ -53,6 +55,7 @@ class ContentTypeOrder extends Entity
     }
     /**
     * Gets the position
+    * Specifies the position in which the Content Type appears in the selection UI.
     *
     * @return int The position
     */
@@ -67,6 +70,7 @@ class ContentTypeOrder extends Entity
 
     /**
     * Sets the position
+    * Specifies the position in which the Content Type appears in the selection UI.
     *
     * @param int $val The value of the position
     *

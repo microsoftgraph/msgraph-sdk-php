@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * OpenTypeExtension class
@@ -28,6 +28,7 @@ class OpenTypeExtension extends Extension
 {
     /**
     * Gets the extensionName
+    * A unique text identifier for an open type open extension. Required.
     *
     * @return string The extensionName
     */
@@ -42,6 +43,7 @@ class OpenTypeExtension extends Extension
     
     /**
     * Sets the extensionName
+    * A unique text identifier for an open type open extension. Required.
     *
     * @param string $val The extensionName
     *

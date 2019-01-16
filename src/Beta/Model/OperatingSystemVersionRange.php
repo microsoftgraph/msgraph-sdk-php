@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * OperatingSystemVersionRange class
 *
@@ -27,6 +27,7 @@ class OperatingSystemVersionRange extends Entity
 {
     /**
     * Gets the description
+    * The description of this range (e.g. Valid 1702 builds)
     *
     * @return string The description
     */
@@ -41,6 +42,7 @@ class OperatingSystemVersionRange extends Entity
 
     /**
     * Sets the description
+    * The description of this range (e.g. Valid 1702 builds)
     *
     * @param string $val The value of the description
     *
@@ -53,6 +55,7 @@ class OperatingSystemVersionRange extends Entity
     }
     /**
     * Gets the lowestVersion
+    * The lowest inclusive version that this range contains.
     *
     * @return string The lowestVersion
     */
@@ -67,6 +70,7 @@ class OperatingSystemVersionRange extends Entity
 
     /**
     * Sets the lowestVersion
+    * The lowest inclusive version that this range contains.
     *
     * @param string $val The value of the lowestVersion
     *
@@ -79,6 +83,7 @@ class OperatingSystemVersionRange extends Entity
     }
     /**
     * Gets the highestVersion
+    * The highest inclusive version that this range contains.
     *
     * @return string The highestVersion
     */
@@ -93,6 +98,7 @@ class OperatingSystemVersionRange extends Entity
 
     /**
     * Sets the highestVersion
+    * The highest inclusive version that this range contains.
     *
     * @param string $val The value of the highestVersion
     *

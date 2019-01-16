@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * AndroidForWorkSettings class
@@ -28,13 +28,14 @@ class AndroidForWorkSettings extends Entity
 {
     /**
     * Gets the bindStatus
+    * Bind status of the tenant with the Google EMM API
     *
     * @return AndroidForWorkBindStatus The bindStatus
     */
     public function getBindStatus()
     {
         if (array_key_exists("bindStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["bindStatus"], "Microsoft\Graph\Beta\Model\AndroidForWorkBindStatus")) {
+            if (is_a($this->_propDict["bindStatus"], "Microsoft\Graph\Model\AndroidForWorkBindStatus")) {
                 return $this->_propDict["bindStatus"];
             } else {
                 $this->_propDict["bindStatus"] = new AndroidForWorkBindStatus($this->_propDict["bindStatus"]);
@@ -46,6 +47,7 @@ class AndroidForWorkSettings extends Entity
     
     /**
     * Sets the bindStatus
+    * Bind status of the tenant with the Google EMM API
     *
     * @param AndroidForWorkBindStatus $val The bindStatus
     *
@@ -59,6 +61,7 @@ class AndroidForWorkSettings extends Entity
     
     /**
     * Gets the lastAppSyncDateTime
+    * Last completion time for app sync
     *
     * @return \DateTime The lastAppSyncDateTime
     */
@@ -77,6 +80,7 @@ class AndroidForWorkSettings extends Entity
     
     /**
     * Sets the lastAppSyncDateTime
+    * Last completion time for app sync
     *
     * @param \DateTime $val The lastAppSyncDateTime
     *
@@ -90,13 +94,14 @@ class AndroidForWorkSettings extends Entity
     
     /**
     * Gets the lastAppSyncStatus
+    * Last application sync result
     *
     * @return AndroidForWorkSyncStatus The lastAppSyncStatus
     */
     public function getLastAppSyncStatus()
     {
         if (array_key_exists("lastAppSyncStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["lastAppSyncStatus"], "Microsoft\Graph\Beta\Model\AndroidForWorkSyncStatus")) {
+            if (is_a($this->_propDict["lastAppSyncStatus"], "Microsoft\Graph\Model\AndroidForWorkSyncStatus")) {
                 return $this->_propDict["lastAppSyncStatus"];
             } else {
                 $this->_propDict["lastAppSyncStatus"] = new AndroidForWorkSyncStatus($this->_propDict["lastAppSyncStatus"]);
@@ -108,6 +113,7 @@ class AndroidForWorkSettings extends Entity
     
     /**
     * Sets the lastAppSyncStatus
+    * Last application sync result
     *
     * @param AndroidForWorkSyncStatus $val The lastAppSyncStatus
     *
@@ -121,6 +127,7 @@ class AndroidForWorkSettings extends Entity
     
     /**
     * Gets the ownerUserPrincipalName
+    * Owner UPN that created the enterprise
     *
     * @return string The ownerUserPrincipalName
     */
@@ -135,6 +142,7 @@ class AndroidForWorkSettings extends Entity
     
     /**
     * Sets the ownerUserPrincipalName
+    * Owner UPN that created the enterprise
     *
     * @param string $val The ownerUserPrincipalName
     *
@@ -148,6 +156,7 @@ class AndroidForWorkSettings extends Entity
     
     /**
     * Gets the ownerOrganizationName
+    * Organization name used when onboarding Android for Work
     *
     * @return string The ownerOrganizationName
     */
@@ -162,6 +171,7 @@ class AndroidForWorkSettings extends Entity
     
     /**
     * Sets the ownerOrganizationName
+    * Organization name used when onboarding Android for Work
     *
     * @param string $val The ownerOrganizationName
     *
@@ -175,6 +185,7 @@ class AndroidForWorkSettings extends Entity
     
     /**
     * Gets the lastModifiedDateTime
+    * Last modification time for Android for Work settings
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -193,6 +204,7 @@ class AndroidForWorkSettings extends Entity
     
     /**
     * Sets the lastModifiedDateTime
+    * Last modification time for Android for Work settings
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -206,13 +218,14 @@ class AndroidForWorkSettings extends Entity
     
     /**
     * Gets the enrollmentTarget
+    * Indicates which users can enroll devices in Android for Work device management
     *
     * @return AndroidForWorkEnrollmentTarget The enrollmentTarget
     */
     public function getEnrollmentTarget()
     {
         if (array_key_exists("enrollmentTarget", $this->_propDict)) {
-            if (is_a($this->_propDict["enrollmentTarget"], "Microsoft\Graph\Beta\Model\AndroidForWorkEnrollmentTarget")) {
+            if (is_a($this->_propDict["enrollmentTarget"], "Microsoft\Graph\Model\AndroidForWorkEnrollmentTarget")) {
                 return $this->_propDict["enrollmentTarget"];
             } else {
                 $this->_propDict["enrollmentTarget"] = new AndroidForWorkEnrollmentTarget($this->_propDict["enrollmentTarget"]);
@@ -224,6 +237,7 @@ class AndroidForWorkSettings extends Entity
     
     /**
     * Sets the enrollmentTarget
+    * Indicates which users can enroll devices in Android for Work device management
     *
     * @param AndroidForWorkEnrollmentTarget $val The enrollmentTarget
     *
@@ -237,6 +251,7 @@ class AndroidForWorkSettings extends Entity
     
     /**
     * Gets the targetGroupIds
+    * Specifies which AAD groups can enroll devices in Android for Work device management if enrollmentTarget is set to 'Targeted'
     *
     * @return string The targetGroupIds
     */
@@ -251,6 +266,7 @@ class AndroidForWorkSettings extends Entity
     
     /**
     * Sets the targetGroupIds
+    * Specifies which AAD groups can enroll devices in Android for Work device management if enrollmentTarget is set to 'Targeted'
     *
     * @param string $val The targetGroupIds
     *
@@ -264,6 +280,7 @@ class AndroidForWorkSettings extends Entity
     
     /**
     * Gets the deviceOwnerManagementEnabled
+    * Indicates if this account is flighting for Android Device Owner Management with CloudDPC.
     *
     * @return bool The deviceOwnerManagementEnabled
     */
@@ -278,6 +295,7 @@ class AndroidForWorkSettings extends Entity
     
     /**
     * Sets the deviceOwnerManagementEnabled
+    * Indicates if this account is flighting for Android Device Owner Management with CloudDPC.
     *
     * @param bool $val The deviceOwnerManagementEnabled
     *

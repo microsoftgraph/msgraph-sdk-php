@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * SharingInvitation class
 *
@@ -27,6 +27,7 @@ class SharingInvitation extends Entity
 {
     /**
     * Gets the email
+    * The email address provided for the recipient of the sharing invitation. Read-only.
     *
     * @return string The email
     */
@@ -41,6 +42,7 @@ class SharingInvitation extends Entity
 
     /**
     * Sets the email
+    * The email address provided for the recipient of the sharing invitation. Read-only.
     *
     * @param string $val The value of the email
     *
@@ -54,13 +56,14 @@ class SharingInvitation extends Entity
 
     /**
     * Gets the invitedBy
+    * Provides information about who sent the invitation that created this permission, if that information is available. Read-only.
     *
     * @return IdentitySet The invitedBy
     */
     public function getInvitedBy()
     {
         if (array_key_exists("invitedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["invitedBy"], "Microsoft\Graph\Beta\Model\IdentitySet")) {
+            if (is_a($this->_propDict["invitedBy"], "Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["invitedBy"];
             } else {
                 $this->_propDict["invitedBy"] = new IdentitySet($this->_propDict["invitedBy"]);
@@ -72,6 +75,7 @@ class SharingInvitation extends Entity
 
     /**
     * Sets the invitedBy
+    * Provides information about who sent the invitation that created this permission, if that information is available. Read-only.
     *
     * @param IdentitySet $val The value to assign to the invitedBy
     *
@@ -110,6 +114,7 @@ class SharingInvitation extends Entity
     }
     /**
     * Gets the signInRequired
+    * If true the recipient of the invitation needs to sign in in order to access the shared item. Read-only.
     *
     * @return bool The signInRequired
     */
@@ -124,6 +129,7 @@ class SharingInvitation extends Entity
 
     /**
     * Sets the signInRequired
+    * If true the recipient of the invitation needs to sign in in order to access the shared item. Read-only.
     *
     * @param bool $val The value of the signInRequired
     *

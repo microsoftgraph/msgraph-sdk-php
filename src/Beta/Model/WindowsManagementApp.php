@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * WindowsManagementApp class
@@ -28,6 +28,7 @@ class WindowsManagementApp extends Entity
 {
     /**
     * Gets the availableVersion
+    * Windows management app available version.
     *
     * @return string The availableVersion
     */
@@ -42,6 +43,7 @@ class WindowsManagementApp extends Entity
     
     /**
     * Sets the availableVersion
+    * Windows management app available version.
     *
     * @param string $val The availableVersion
     *
@@ -55,13 +57,14 @@ class WindowsManagementApp extends Entity
     
     /**
     * Gets the healthSummary
+    * Health summary for Windows management app.
     *
     * @return WindowsManagementAppHealthSummary The healthSummary
     */
     public function getHealthSummary()
     {
         if (array_key_exists("healthSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["healthSummary"], "Microsoft\Graph\Beta\Model\WindowsManagementAppHealthSummary")) {
+            if (is_a($this->_propDict["healthSummary"], "Microsoft\Graph\Model\WindowsManagementAppHealthSummary")) {
                 return $this->_propDict["healthSummary"];
             } else {
                 $this->_propDict["healthSummary"] = new WindowsManagementAppHealthSummary($this->_propDict["healthSummary"]);
@@ -73,6 +76,7 @@ class WindowsManagementApp extends Entity
     
     /**
     * Sets the healthSummary
+    * Health summary for Windows management app.
     *
     * @param WindowsManagementAppHealthSummary $val The healthSummary
     *
@@ -87,6 +91,7 @@ class WindowsManagementApp extends Entity
 
      /** 
      * Gets the healthStates
+    * The list of health states for installed Windows management app.
      *
      * @return array The healthStates
      */
@@ -101,6 +106,7 @@ class WindowsManagementApp extends Entity
     
     /** 
     * Sets the healthStates
+    * The list of health states for installed Windows management app.
     *
     * @param WindowsManagementAppHealthState $val The healthStates
     *

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * MessageRuleActions class
 *
@@ -27,6 +27,7 @@ class MessageRuleActions extends Entity
 {
     /**
     * Gets the moveToFolder
+    * The ID of the folder that a message will be moved to.
     *
     * @return string The moveToFolder
     */
@@ -41,6 +42,7 @@ class MessageRuleActions extends Entity
 
     /**
     * Sets the moveToFolder
+    * The ID of the folder that a message will be moved to.
     *
     * @param string $val The value of the moveToFolder
     *
@@ -53,6 +55,7 @@ class MessageRuleActions extends Entity
     }
     /**
     * Gets the copyToFolder
+    * The ID of a folder that a message is to be copied to.
     *
     * @return string The copyToFolder
     */
@@ -67,6 +70,7 @@ class MessageRuleActions extends Entity
 
     /**
     * Sets the copyToFolder
+    * The ID of a folder that a message is to be copied to.
     *
     * @param string $val The value of the copyToFolder
     *
@@ -79,6 +83,7 @@ class MessageRuleActions extends Entity
     }
     /**
     * Gets the delete
+    * Indicates whether a message should be moved to the Deleted Items folder.
     *
     * @return bool The delete
     */
@@ -93,6 +98,7 @@ class MessageRuleActions extends Entity
 
     /**
     * Sets the delete
+    * Indicates whether a message should be moved to the Deleted Items folder.
     *
     * @param bool $val The value of the delete
     *
@@ -105,6 +111,7 @@ class MessageRuleActions extends Entity
     }
     /**
     * Gets the permanentDelete
+    * Indicates whether a message should be permanently deleted and not saved to the Deleted Items folder.
     *
     * @return bool The permanentDelete
     */
@@ -119,6 +126,7 @@ class MessageRuleActions extends Entity
 
     /**
     * Sets the permanentDelete
+    * Indicates whether a message should be permanently deleted and not saved to the Deleted Items folder.
     *
     * @param bool $val The value of the permanentDelete
     *
@@ -131,6 +139,7 @@ class MessageRuleActions extends Entity
     }
     /**
     * Gets the markAsRead
+    * Indicates whether a message should be marked as read.
     *
     * @return bool The markAsRead
     */
@@ -145,6 +154,7 @@ class MessageRuleActions extends Entity
 
     /**
     * Sets the markAsRead
+    * Indicates whether a message should be marked as read.
     *
     * @param bool $val The value of the markAsRead
     *
@@ -158,13 +168,14 @@ class MessageRuleActions extends Entity
 
     /**
     * Gets the markImportance
+    * Sets the importance of the message, which can be: low, normal, high.
     *
     * @return Importance The markImportance
     */
     public function getMarkImportance()
     {
         if (array_key_exists("markImportance", $this->_propDict)) {
-            if (is_a($this->_propDict["markImportance"], "Microsoft\Graph\Beta\Model\Importance")) {
+            if (is_a($this->_propDict["markImportance"], "Microsoft\Graph\Model\Importance")) {
                 return $this->_propDict["markImportance"];
             } else {
                 $this->_propDict["markImportance"] = new Importance($this->_propDict["markImportance"]);
@@ -176,6 +187,7 @@ class MessageRuleActions extends Entity
 
     /**
     * Sets the markImportance
+    * Sets the importance of the message, which can be: low, normal, high.
     *
     * @param Importance $val The value to assign to the markImportance
     *
@@ -189,13 +201,14 @@ class MessageRuleActions extends Entity
 
     /**
     * Gets the forwardTo
+    * The email addresses of the recipients to which a message should be forwarded.
     *
     * @return Recipient The forwardTo
     */
     public function getForwardTo()
     {
         if (array_key_exists("forwardTo", $this->_propDict)) {
-            if (is_a($this->_propDict["forwardTo"], "Microsoft\Graph\Beta\Model\Recipient")) {
+            if (is_a($this->_propDict["forwardTo"], "Microsoft\Graph\Model\Recipient")) {
                 return $this->_propDict["forwardTo"];
             } else {
                 $this->_propDict["forwardTo"] = new Recipient($this->_propDict["forwardTo"]);
@@ -207,6 +220,7 @@ class MessageRuleActions extends Entity
 
     /**
     * Sets the forwardTo
+    * The email addresses of the recipients to which a message should be forwarded.
     *
     * @param Recipient $val The value to assign to the forwardTo
     *
@@ -220,13 +234,14 @@ class MessageRuleActions extends Entity
 
     /**
     * Gets the forwardAsAttachmentTo
+    * The email addresses of the recipients to which a message should be forwarded as an attachment.
     *
     * @return Recipient The forwardAsAttachmentTo
     */
     public function getForwardAsAttachmentTo()
     {
         if (array_key_exists("forwardAsAttachmentTo", $this->_propDict)) {
-            if (is_a($this->_propDict["forwardAsAttachmentTo"], "Microsoft\Graph\Beta\Model\Recipient")) {
+            if (is_a($this->_propDict["forwardAsAttachmentTo"], "Microsoft\Graph\Model\Recipient")) {
                 return $this->_propDict["forwardAsAttachmentTo"];
             } else {
                 $this->_propDict["forwardAsAttachmentTo"] = new Recipient($this->_propDict["forwardAsAttachmentTo"]);
@@ -238,6 +253,7 @@ class MessageRuleActions extends Entity
 
     /**
     * Sets the forwardAsAttachmentTo
+    * The email addresses of the recipients to which a message should be forwarded as an attachment.
     *
     * @param Recipient $val The value to assign to the forwardAsAttachmentTo
     *
@@ -251,13 +267,14 @@ class MessageRuleActions extends Entity
 
     /**
     * Gets the redirectTo
+    * The email addresses to which a message should be redirected.
     *
     * @return Recipient The redirectTo
     */
     public function getRedirectTo()
     {
         if (array_key_exists("redirectTo", $this->_propDict)) {
-            if (is_a($this->_propDict["redirectTo"], "Microsoft\Graph\Beta\Model\Recipient")) {
+            if (is_a($this->_propDict["redirectTo"], "Microsoft\Graph\Model\Recipient")) {
                 return $this->_propDict["redirectTo"];
             } else {
                 $this->_propDict["redirectTo"] = new Recipient($this->_propDict["redirectTo"]);
@@ -269,6 +286,7 @@ class MessageRuleActions extends Entity
 
     /**
     * Sets the redirectTo
+    * The email addresses to which a message should be redirected.
     *
     * @param Recipient $val The value to assign to the redirectTo
     *
@@ -281,6 +299,7 @@ class MessageRuleActions extends Entity
     }
     /**
     * Gets the assignCategories
+    * A list of categories to be assigned to a message.
     *
     * @return string The assignCategories
     */
@@ -295,6 +314,7 @@ class MessageRuleActions extends Entity
 
     /**
     * Sets the assignCategories
+    * A list of categories to be assigned to a message.
     *
     * @param string $val The value of the assignCategories
     *
@@ -307,6 +327,7 @@ class MessageRuleActions extends Entity
     }
     /**
     * Gets the stopProcessingRules
+    * Indicates whether subsequent rules should be evaluated.
     *
     * @return bool The stopProcessingRules
     */
@@ -321,6 +342,7 @@ class MessageRuleActions extends Entity
 
     /**
     * Sets the stopProcessingRules
+    * Indicates whether subsequent rules should be evaluated.
     *
     * @param bool $val The value of the stopProcessingRules
     *

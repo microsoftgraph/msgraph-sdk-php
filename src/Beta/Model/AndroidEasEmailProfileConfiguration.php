@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * AndroidEasEmailProfileConfiguration class
@@ -28,6 +28,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
 {
     /**
     * Gets the accountName
+    * Exchange ActiveSync account name, displayed to users as name of EAS (this) profile.
     *
     * @return string The accountName
     */
@@ -42,6 +43,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
     
     /**
     * Sets the accountName
+    * Exchange ActiveSync account name, displayed to users as name of EAS (this) profile.
     *
     * @param string $val The accountName
     *
@@ -55,13 +57,14 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
     
     /**
     * Gets the authenticationMethod
+    * Authentication method for Exchange ActiveSync.
     *
     * @return EasAuthenticationMethod The authenticationMethod
     */
     public function getAuthenticationMethod()
     {
         if (array_key_exists("authenticationMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["authenticationMethod"], "Microsoft\Graph\Beta\Model\EasAuthenticationMethod")) {
+            if (is_a($this->_propDict["authenticationMethod"], "Microsoft\Graph\Model\EasAuthenticationMethod")) {
                 return $this->_propDict["authenticationMethod"];
             } else {
                 $this->_propDict["authenticationMethod"] = new EasAuthenticationMethod($this->_propDict["authenticationMethod"]);
@@ -73,6 +76,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
     
     /**
     * Sets the authenticationMethod
+    * Authentication method for Exchange ActiveSync.
     *
     * @param EasAuthenticationMethod $val The authenticationMethod
     *
@@ -86,6 +90,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
     
     /**
     * Gets the syncCalendar
+    * Toggles syncing the calendar. If set to false calendar is turned off on the device.
     *
     * @return bool The syncCalendar
     */
@@ -100,6 +105,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
     
     /**
     * Sets the syncCalendar
+    * Toggles syncing the calendar. If set to false calendar is turned off on the device.
     *
     * @param bool $val The syncCalendar
     *
@@ -113,6 +119,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
     
     /**
     * Gets the syncContacts
+    * Toggles syncing contacts. If set to false contacts are turned off on the device.
     *
     * @return bool The syncContacts
     */
@@ -127,6 +134,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
     
     /**
     * Sets the syncContacts
+    * Toggles syncing contacts. If set to false contacts are turned off on the device.
     *
     * @param bool $val The syncContacts
     *
@@ -140,6 +148,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
     
     /**
     * Gets the syncTasks
+    * Toggles syncing tasks. If set to false tasks are turned off on the device.
     *
     * @return bool The syncTasks
     */
@@ -154,6 +163,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
     
     /**
     * Sets the syncTasks
+    * Toggles syncing tasks. If set to false tasks are turned off on the device.
     *
     * @param bool $val The syncTasks
     *
@@ -167,6 +177,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
     
     /**
     * Gets the syncNotes
+    * Toggles syncing notes. If set to false notes are turned off on the device.
     *
     * @return bool The syncNotes
     */
@@ -181,6 +192,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
     
     /**
     * Sets the syncNotes
+    * Toggles syncing notes. If set to false notes are turned off on the device.
     *
     * @param bool $val The syncNotes
     *
@@ -194,13 +206,14 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
     
     /**
     * Gets the durationOfEmailToSync
+    * Duration of time email should be synced to.
     *
     * @return EmailSyncDuration The durationOfEmailToSync
     */
     public function getDurationOfEmailToSync()
     {
         if (array_key_exists("durationOfEmailToSync", $this->_propDict)) {
-            if (is_a($this->_propDict["durationOfEmailToSync"], "Microsoft\Graph\Beta\Model\EmailSyncDuration")) {
+            if (is_a($this->_propDict["durationOfEmailToSync"], "Microsoft\Graph\Model\EmailSyncDuration")) {
                 return $this->_propDict["durationOfEmailToSync"];
             } else {
                 $this->_propDict["durationOfEmailToSync"] = new EmailSyncDuration($this->_propDict["durationOfEmailToSync"]);
@@ -212,6 +225,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
     
     /**
     * Sets the durationOfEmailToSync
+    * Duration of time email should be synced to.
     *
     * @param EmailSyncDuration $val The durationOfEmailToSync
     *
@@ -225,13 +239,14 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
     
     /**
     * Gets the emailAddressSource
+    * Email attribute that is picked from AAD and injected into this profile before installing on the device.
     *
     * @return UserEmailSource The emailAddressSource
     */
     public function getEmailAddressSource()
     {
         if (array_key_exists("emailAddressSource", $this->_propDict)) {
-            if (is_a($this->_propDict["emailAddressSource"], "Microsoft\Graph\Beta\Model\UserEmailSource")) {
+            if (is_a($this->_propDict["emailAddressSource"], "Microsoft\Graph\Model\UserEmailSource")) {
                 return $this->_propDict["emailAddressSource"];
             } else {
                 $this->_propDict["emailAddressSource"] = new UserEmailSource($this->_propDict["emailAddressSource"]);
@@ -243,6 +258,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
     
     /**
     * Sets the emailAddressSource
+    * Email attribute that is picked from AAD and injected into this profile before installing on the device.
     *
     * @param UserEmailSource $val The emailAddressSource
     *
@@ -256,13 +272,14 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
     
     /**
     * Gets the emailSyncSchedule
+    * Email sync schedule.
     *
     * @return EmailSyncSchedule The emailSyncSchedule
     */
     public function getEmailSyncSchedule()
     {
         if (array_key_exists("emailSyncSchedule", $this->_propDict)) {
-            if (is_a($this->_propDict["emailSyncSchedule"], "Microsoft\Graph\Beta\Model\EmailSyncSchedule")) {
+            if (is_a($this->_propDict["emailSyncSchedule"], "Microsoft\Graph\Model\EmailSyncSchedule")) {
                 return $this->_propDict["emailSyncSchedule"];
             } else {
                 $this->_propDict["emailSyncSchedule"] = new EmailSyncSchedule($this->_propDict["emailSyncSchedule"]);
@@ -274,6 +291,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
     
     /**
     * Sets the emailSyncSchedule
+    * Email sync schedule.
     *
     * @param EmailSyncSchedule $val The emailSyncSchedule
     *
@@ -287,6 +305,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
     
     /**
     * Gets the hostName
+    * Exchange location (URL) that the native mail app connects to.
     *
     * @return string The hostName
     */
@@ -301,6 +320,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
     
     /**
     * Sets the hostName
+    * Exchange location (URL) that the native mail app connects to.
     *
     * @param string $val The hostName
     *
@@ -314,6 +334,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
     
     /**
     * Gets the requireSmime
+    * Indicates whether or not to use S/MIME certificate.
     *
     * @return bool The requireSmime
     */
@@ -328,6 +349,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
     
     /**
     * Sets the requireSmime
+    * Indicates whether or not to use S/MIME certificate.
     *
     * @param bool $val The requireSmime
     *
@@ -341,6 +363,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
     
     /**
     * Gets the requireSsl
+    * Indicates whether or not to use SSL.
     *
     * @return bool The requireSsl
     */
@@ -355,6 +378,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
     
     /**
     * Sets the requireSsl
+    * Indicates whether or not to use SSL.
     *
     * @param bool $val The requireSsl
     *
@@ -368,13 +392,14 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
     
     /**
     * Gets the usernameSource
+    * Username attribute that is picked from AAD and injected into this profile before installing on the device.
     *
     * @return AndroidUsernameSource The usernameSource
     */
     public function getUsernameSource()
     {
         if (array_key_exists("usernameSource", $this->_propDict)) {
-            if (is_a($this->_propDict["usernameSource"], "Microsoft\Graph\Beta\Model\AndroidUsernameSource")) {
+            if (is_a($this->_propDict["usernameSource"], "Microsoft\Graph\Model\AndroidUsernameSource")) {
                 return $this->_propDict["usernameSource"];
             } else {
                 $this->_propDict["usernameSource"] = new AndroidUsernameSource($this->_propDict["usernameSource"]);
@@ -386,6 +411,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
     
     /**
     * Sets the usernameSource
+    * Username attribute that is picked from AAD and injected into this profile before installing on the device.
     *
     * @param AndroidUsernameSource $val The usernameSource
     *
@@ -399,13 +425,14 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
     
     /**
     * Gets the userDomainNameSource
+    * UserDomainname attribute that is picked from AAD and injected into this profile before installing on the device.
     *
     * @return DomainNameSource The userDomainNameSource
     */
     public function getUserDomainNameSource()
     {
         if (array_key_exists("userDomainNameSource", $this->_propDict)) {
-            if (is_a($this->_propDict["userDomainNameSource"], "Microsoft\Graph\Beta\Model\DomainNameSource")) {
+            if (is_a($this->_propDict["userDomainNameSource"], "Microsoft\Graph\Model\DomainNameSource")) {
                 return $this->_propDict["userDomainNameSource"];
             } else {
                 $this->_propDict["userDomainNameSource"] = new DomainNameSource($this->_propDict["userDomainNameSource"]);
@@ -417,6 +444,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
     
     /**
     * Sets the userDomainNameSource
+    * UserDomainname attribute that is picked from AAD and injected into this profile before installing on the device.
     *
     * @param DomainNameSource $val The userDomainNameSource
     *
@@ -430,6 +458,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
     
     /**
     * Gets the customDomainName
+    * Custom domain name value used while generating an email profile before installing on the device.
     *
     * @return string The customDomainName
     */
@@ -444,6 +473,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
     
     /**
     * Sets the customDomainName
+    * Custom domain name value used while generating an email profile before installing on the device.
     *
     * @param string $val The customDomainName
     *
@@ -457,13 +487,14 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
     
     /**
     * Gets the identityCertificate
+    * Identity certificate.
     *
     * @return AndroidCertificateProfileBase The identityCertificate
     */
     public function getIdentityCertificate()
     {
         if (array_key_exists("identityCertificate", $this->_propDict)) {
-            if (is_a($this->_propDict["identityCertificate"], "Microsoft\Graph\Beta\Model\AndroidCertificateProfileBase")) {
+            if (is_a($this->_propDict["identityCertificate"], "Microsoft\Graph\Model\AndroidCertificateProfileBase")) {
                 return $this->_propDict["identityCertificate"];
             } else {
                 $this->_propDict["identityCertificate"] = new AndroidCertificateProfileBase($this->_propDict["identityCertificate"]);
@@ -475,6 +506,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
     
     /**
     * Sets the identityCertificate
+    * Identity certificate.
     *
     * @param AndroidCertificateProfileBase $val The identityCertificate
     *
@@ -488,13 +520,14 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
     
     /**
     * Gets the smimeSigningCertificate
+    * S/MIME signing certificate.
     *
     * @return AndroidCertificateProfileBase The smimeSigningCertificate
     */
     public function getSmimeSigningCertificate()
     {
         if (array_key_exists("smimeSigningCertificate", $this->_propDict)) {
-            if (is_a($this->_propDict["smimeSigningCertificate"], "Microsoft\Graph\Beta\Model\AndroidCertificateProfileBase")) {
+            if (is_a($this->_propDict["smimeSigningCertificate"], "Microsoft\Graph\Model\AndroidCertificateProfileBase")) {
                 return $this->_propDict["smimeSigningCertificate"];
             } else {
                 $this->_propDict["smimeSigningCertificate"] = new AndroidCertificateProfileBase($this->_propDict["smimeSigningCertificate"]);
@@ -506,6 +539,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
     
     /**
     * Sets the smimeSigningCertificate
+    * S/MIME signing certificate.
     *
     * @param AndroidCertificateProfileBase $val The smimeSigningCertificate
     *

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * ManagedAndroidStoreApp class
@@ -28,6 +28,7 @@ class ManagedAndroidStoreApp extends ManagedApp
 {
     /**
     * Gets the packageId
+    * The app's package ID.
     *
     * @return string The packageId
     */
@@ -42,6 +43,7 @@ class ManagedAndroidStoreApp extends ManagedApp
     
     /**
     * Sets the packageId
+    * The app's package ID.
     *
     * @param string $val The packageId
     *
@@ -55,6 +57,7 @@ class ManagedAndroidStoreApp extends ManagedApp
     
     /**
     * Gets the appStoreUrl
+    * The Android AppStoreUrl.
     *
     * @return string The appStoreUrl
     */
@@ -69,6 +72,7 @@ class ManagedAndroidStoreApp extends ManagedApp
     
     /**
     * Sets the appStoreUrl
+    * The Android AppStoreUrl.
     *
     * @param string $val The appStoreUrl
     *
@@ -82,13 +86,14 @@ class ManagedAndroidStoreApp extends ManagedApp
     
     /**
     * Gets the minimumSupportedOperatingSystem
+    * The value for the minimum supported operating system.
     *
     * @return AndroidMinimumOperatingSystem The minimumSupportedOperatingSystem
     */
     public function getMinimumSupportedOperatingSystem()
     {
         if (array_key_exists("minimumSupportedOperatingSystem", $this->_propDict)) {
-            if (is_a($this->_propDict["minimumSupportedOperatingSystem"], "Microsoft\Graph\Beta\Model\AndroidMinimumOperatingSystem")) {
+            if (is_a($this->_propDict["minimumSupportedOperatingSystem"], "Microsoft\Graph\Model\AndroidMinimumOperatingSystem")) {
                 return $this->_propDict["minimumSupportedOperatingSystem"];
             } else {
                 $this->_propDict["minimumSupportedOperatingSystem"] = new AndroidMinimumOperatingSystem($this->_propDict["minimumSupportedOperatingSystem"]);
@@ -100,6 +105,7 @@ class ManagedAndroidStoreApp extends ManagedApp
     
     /**
     * Sets the minimumSupportedOperatingSystem
+    * The value for the minimum supported operating system.
     *
     * @param AndroidMinimumOperatingSystem $val The minimumSupportedOperatingSystem
     *

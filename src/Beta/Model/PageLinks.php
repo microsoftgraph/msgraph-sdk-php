@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * PageLinks class
 *
@@ -28,13 +28,14 @@ class PageLinks extends Entity
 
     /**
     * Gets the oneNoteClientUrl
+    * Opens the page in the OneNote native client if it's installed.
     *
     * @return ExternalLink The oneNoteClientUrl
     */
     public function getOneNoteClientUrl()
     {
         if (array_key_exists("oneNoteClientUrl", $this->_propDict)) {
-            if (is_a($this->_propDict["oneNoteClientUrl"], "Microsoft\Graph\Beta\Model\ExternalLink")) {
+            if (is_a($this->_propDict["oneNoteClientUrl"], "Microsoft\Graph\Model\ExternalLink")) {
                 return $this->_propDict["oneNoteClientUrl"];
             } else {
                 $this->_propDict["oneNoteClientUrl"] = new ExternalLink($this->_propDict["oneNoteClientUrl"]);
@@ -46,6 +47,7 @@ class PageLinks extends Entity
 
     /**
     * Sets the oneNoteClientUrl
+    * Opens the page in the OneNote native client if it's installed.
     *
     * @param ExternalLink $val The value to assign to the oneNoteClientUrl
     *
@@ -59,13 +61,14 @@ class PageLinks extends Entity
 
     /**
     * Gets the oneNoteWebUrl
+    * Opens the page in OneNote Online.
     *
     * @return ExternalLink The oneNoteWebUrl
     */
     public function getOneNoteWebUrl()
     {
         if (array_key_exists("oneNoteWebUrl", $this->_propDict)) {
-            if (is_a($this->_propDict["oneNoteWebUrl"], "Microsoft\Graph\Beta\Model\ExternalLink")) {
+            if (is_a($this->_propDict["oneNoteWebUrl"], "Microsoft\Graph\Model\ExternalLink")) {
                 return $this->_propDict["oneNoteWebUrl"];
             } else {
                 $this->_propDict["oneNoteWebUrl"] = new ExternalLink($this->_propDict["oneNoteWebUrl"]);
@@ -77,6 +80,7 @@ class PageLinks extends Entity
 
     /**
     * Sets the oneNoteWebUrl
+    * Opens the page in OneNote Online.
     *
     * @param ExternalLink $val The value to assign to the oneNoteWebUrl
     *

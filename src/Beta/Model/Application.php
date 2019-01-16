@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * Application class
@@ -34,7 +34,7 @@ class Application extends DirectoryObject
     public function getApi()
     {
         if (array_key_exists("api", $this->_propDict)) {
-            if (is_a($this->_propDict["api"], "Microsoft\Graph\Beta\Model\ApiApplication")) {
+            if (is_a($this->_propDict["api"], "Microsoft\Graph\Model\ApiApplication")) {
                 return $this->_propDict["api"];
             } else {
                 $this->_propDict["api"] = new ApiApplication($this->_propDict["api"]);
@@ -225,6 +225,33 @@ class Application extends DirectoryObject
     }
     
     /**
+    * Gets the groupMembershipClaims
+    *
+    * @return string The groupMembershipClaims
+    */
+    public function getGroupMembershipClaims()
+    {
+        if (array_key_exists("groupMembershipClaims", $this->_propDict)) {
+            return $this->_propDict["groupMembershipClaims"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the groupMembershipClaims
+    *
+    * @param string $val The groupMembershipClaims
+    *
+    * @return Application
+    */
+    public function setGroupMembershipClaims($val)
+    {
+        $this->_propDict["groupMembershipClaims"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the info
     *
     * @return InformationalUrl The info
@@ -232,7 +259,7 @@ class Application extends DirectoryObject
     public function getInfo()
     {
         if (array_key_exists("info", $this->_propDict)) {
-            if (is_a($this->_propDict["info"], "Microsoft\Graph\Beta\Model\InformationalUrl")) {
+            if (is_a($this->_propDict["info"], "Microsoft\Graph\Model\InformationalUrl")) {
                 return $this->_propDict["info"];
             } else {
                 $this->_propDict["info"] = new InformationalUrl($this->_propDict["info"]);
@@ -252,6 +279,33 @@ class Application extends DirectoryObject
     public function setInfo($val)
     {
         $this->_propDict["info"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the isDeviceOnlyAuthSupported
+    *
+    * @return bool The isDeviceOnlyAuthSupported
+    */
+    public function getIsDeviceOnlyAuthSupported()
+    {
+        if (array_key_exists("isDeviceOnlyAuthSupported", $this->_propDict)) {
+            return $this->_propDict["isDeviceOnlyAuthSupported"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isDeviceOnlyAuthSupported
+    *
+    * @param bool $val The isDeviceOnlyAuthSupported
+    *
+    * @return Application
+    */
+    public function setIsDeviceOnlyAuthSupported($val)
+    {
+        $this->_propDict["isDeviceOnlyAuthSupported"] = boolval($val);
         return $this;
     }
     
@@ -322,7 +376,7 @@ class Application extends DirectoryObject
     public function getOptionalClaims()
     {
         if (array_key_exists("optionalClaims", $this->_propDict)) {
-            if (is_a($this->_propDict["optionalClaims"], "Microsoft\Graph\Beta\Model\OptionalClaims")) {
+            if (is_a($this->_propDict["optionalClaims"], "Microsoft\Graph\Model\OptionalClaims")) {
                 return $this->_propDict["optionalClaims"];
             } else {
                 $this->_propDict["optionalClaims"] = new OptionalClaims($this->_propDict["optionalClaims"]);
@@ -380,7 +434,7 @@ class Application extends DirectoryObject
     public function getParentalControlSettings()
     {
         if (array_key_exists("parentalControlSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["parentalControlSettings"], "Microsoft\Graph\Beta\Model\ParentalControlSettings")) {
+            if (is_a($this->_propDict["parentalControlSettings"], "Microsoft\Graph\Model\ParentalControlSettings")) {
                 return $this->_propDict["parentalControlSettings"];
             } else {
                 $this->_propDict["parentalControlSettings"] = new ParentalControlSettings($this->_propDict["parentalControlSettings"]);
@@ -439,7 +493,7 @@ class Application extends DirectoryObject
     public function getPublicClient()
     {
         if (array_key_exists("publicClient", $this->_propDict)) {
-            if (is_a($this->_propDict["publicClient"], "Microsoft\Graph\Beta\Model\PublicClientApplication")) {
+            if (is_a($this->_propDict["publicClient"], "Microsoft\Graph\Model\PublicClientApplication")) {
                 return $this->_propDict["publicClient"];
             } else {
                 $this->_propDict["publicClient"] = new PublicClientApplication($this->_propDict["publicClient"]);
@@ -606,7 +660,7 @@ class Application extends DirectoryObject
     public function getWeb()
     {
         if (array_key_exists("web", $this->_propDict)) {
-            if (is_a($this->_propDict["web"], "Microsoft\Graph\Beta\Model\WebApplication")) {
+            if (is_a($this->_propDict["web"], "Microsoft\Graph\Model\WebApplication")) {
                 return $this->_propDict["web"];
             } else {
                 $this->_propDict["web"] = new WebApplication($this->_propDict["web"]);
@@ -665,7 +719,7 @@ class Application extends DirectoryObject
     public function getCreatedOnBehalfOf()
     {
         if (array_key_exists("createdOnBehalfOf", $this->_propDict)) {
-            if (is_a($this->_propDict["createdOnBehalfOf"], "Microsoft\Graph\Beta\Model\DirectoryObject")) {
+            if (is_a($this->_propDict["createdOnBehalfOf"], "Microsoft\Graph\Model\DirectoryObject")) {
                 return $this->_propDict["createdOnBehalfOf"];
             } else {
                 $this->_propDict["createdOnBehalfOf"] = new DirectoryObject($this->_propDict["createdOnBehalfOf"]);
@@ -752,7 +806,7 @@ class Application extends DirectoryObject
     public function getSynchronization()
     {
         if (array_key_exists("synchronization", $this->_propDict)) {
-            if (is_a($this->_propDict["synchronization"], "Microsoft\Graph\Beta\Model\Synchronization")) {
+            if (is_a($this->_propDict["synchronization"], "Microsoft\Graph\Model\Synchronization")) {
                 return $this->_propDict["synchronization"];
             } else {
                 $this->_propDict["synchronization"] = new Synchronization($this->_propDict["synchronization"]);

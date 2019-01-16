@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * DeviceManagementPartner class
@@ -28,6 +28,7 @@ class DeviceManagementPartner extends Entity
 {
     /**
     * Gets the lastHeartbeatDateTime
+    * Timestamp of last heartbeat after admin enabled option Connect to Device management Partner
     *
     * @return \DateTime The lastHeartbeatDateTime
     */
@@ -46,6 +47,7 @@ class DeviceManagementPartner extends Entity
     
     /**
     * Sets the lastHeartbeatDateTime
+    * Timestamp of last heartbeat after admin enabled option Connect to Device management Partner
     *
     * @param \DateTime $val The lastHeartbeatDateTime
     *
@@ -59,13 +61,14 @@ class DeviceManagementPartner extends Entity
     
     /**
     * Gets the partnerState
+    * Partner state of this tenant. Possible values are: unknown, unavailable, enabled, terminated, rejected, unresponsive.
     *
     * @return DeviceManagementPartnerTenantState The partnerState
     */
     public function getPartnerState()
     {
         if (array_key_exists("partnerState", $this->_propDict)) {
-            if (is_a($this->_propDict["partnerState"], "Microsoft\Graph\Beta\Model\DeviceManagementPartnerTenantState")) {
+            if (is_a($this->_propDict["partnerState"], "Microsoft\Graph\Model\DeviceManagementPartnerTenantState")) {
                 return $this->_propDict["partnerState"];
             } else {
                 $this->_propDict["partnerState"] = new DeviceManagementPartnerTenantState($this->_propDict["partnerState"]);
@@ -77,6 +80,7 @@ class DeviceManagementPartner extends Entity
     
     /**
     * Sets the partnerState
+    * Partner state of this tenant. Possible values are: unknown, unavailable, enabled, terminated, rejected, unresponsive.
     *
     * @param DeviceManagementPartnerTenantState $val The partnerState
     *
@@ -90,13 +94,14 @@ class DeviceManagementPartner extends Entity
     
     /**
     * Gets the partnerAppType
+    * Partner App type. Possible values are: unknown, singleTenantApp, multiTenantApp.
     *
     * @return DeviceManagementPartnerAppType The partnerAppType
     */
     public function getPartnerAppType()
     {
         if (array_key_exists("partnerAppType", $this->_propDict)) {
-            if (is_a($this->_propDict["partnerAppType"], "Microsoft\Graph\Beta\Model\DeviceManagementPartnerAppType")) {
+            if (is_a($this->_propDict["partnerAppType"], "Microsoft\Graph\Model\DeviceManagementPartnerAppType")) {
                 return $this->_propDict["partnerAppType"];
             } else {
                 $this->_propDict["partnerAppType"] = new DeviceManagementPartnerAppType($this->_propDict["partnerAppType"]);
@@ -108,6 +113,7 @@ class DeviceManagementPartner extends Entity
     
     /**
     * Sets the partnerAppType
+    * Partner App type. Possible values are: unknown, singleTenantApp, multiTenantApp.
     *
     * @param DeviceManagementPartnerAppType $val The partnerAppType
     *
@@ -121,6 +127,7 @@ class DeviceManagementPartner extends Entity
     
     /**
     * Gets the singleTenantAppId
+    * Partner Single tenant App id
     *
     * @return string The singleTenantAppId
     */
@@ -135,6 +142,7 @@ class DeviceManagementPartner extends Entity
     
     /**
     * Sets the singleTenantAppId
+    * Partner Single tenant App id
     *
     * @param string $val The singleTenantAppId
     *
@@ -148,6 +156,7 @@ class DeviceManagementPartner extends Entity
     
     /**
     * Gets the displayName
+    * Partner display name
     *
     * @return string The displayName
     */
@@ -162,6 +171,7 @@ class DeviceManagementPartner extends Entity
     
     /**
     * Sets the displayName
+    * Partner display name
     *
     * @param string $val The displayName
     *
@@ -175,6 +185,7 @@ class DeviceManagementPartner extends Entity
     
     /**
     * Gets the isConfigured
+    * Whether device management partner is configured or not
     *
     * @return bool The isConfigured
     */
@@ -189,6 +200,7 @@ class DeviceManagementPartner extends Entity
     
     /**
     * Sets the isConfigured
+    * Whether device management partner is configured or not
     *
     * @param bool $val The isConfigured
     *
@@ -202,6 +214,7 @@ class DeviceManagementPartner extends Entity
     
     /**
     * Gets the whenPartnerDevicesWillBeRemoved
+    * DateTime in UTC when PartnerDevices will be removed. This will become obselete soon.
     *
     * @return \DateTime The whenPartnerDevicesWillBeRemoved
     */
@@ -220,6 +233,7 @@ class DeviceManagementPartner extends Entity
     
     /**
     * Sets the whenPartnerDevicesWillBeRemoved
+    * DateTime in UTC when PartnerDevices will be removed. This will become obselete soon.
     *
     * @param \DateTime $val The whenPartnerDevicesWillBeRemoved
     *
@@ -233,6 +247,7 @@ class DeviceManagementPartner extends Entity
     
     /**
     * Gets the whenPartnerDevicesWillBeMarkedAsNonCompliant
+    * DateTime in UTC when PartnerDevices will be marked as NonCompliant. This will become obselete soon.
     *
     * @return \DateTime The whenPartnerDevicesWillBeMarkedAsNonCompliant
     */
@@ -251,6 +266,7 @@ class DeviceManagementPartner extends Entity
     
     /**
     * Sets the whenPartnerDevicesWillBeMarkedAsNonCompliant
+    * DateTime in UTC when PartnerDevices will be marked as NonCompliant. This will become obselete soon.
     *
     * @param \DateTime $val The whenPartnerDevicesWillBeMarkedAsNonCompliant
     *
@@ -264,6 +280,7 @@ class DeviceManagementPartner extends Entity
     
     /**
     * Gets the whenPartnerDevicesWillBeRemovedDateTime
+    * DateTime in UTC when PartnerDevices will be removed
     *
     * @return \DateTime The whenPartnerDevicesWillBeRemovedDateTime
     */
@@ -282,6 +299,7 @@ class DeviceManagementPartner extends Entity
     
     /**
     * Sets the whenPartnerDevicesWillBeRemovedDateTime
+    * DateTime in UTC when PartnerDevices will be removed
     *
     * @param \DateTime $val The whenPartnerDevicesWillBeRemovedDateTime
     *
@@ -295,6 +313,7 @@ class DeviceManagementPartner extends Entity
     
     /**
     * Gets the whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime
+    * DateTime in UTC when PartnerDevices will be marked as NonCompliant
     *
     * @return \DateTime The whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime
     */
@@ -313,6 +332,7 @@ class DeviceManagementPartner extends Entity
     
     /**
     * Sets the whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime
+    * DateTime in UTC when PartnerDevices will be marked as NonCompliant
     *
     * @param \DateTime $val The whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime
     *

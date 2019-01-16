@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * Phone class
 *
@@ -28,13 +28,14 @@ class Phone extends Entity
 
     /**
     * Gets the type
+    * The type of phone number. The possible values are: home, business, mobile, other, assistant, homeFax, businessFax, otherFax, pager, radio.
     *
     * @return PhoneType The type
     */
     public function getType()
     {
         if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "Microsoft\Graph\Beta\Model\PhoneType")) {
+            if (is_a($this->_propDict["type"], "Microsoft\Graph\Model\PhoneType")) {
                 return $this->_propDict["type"];
             } else {
                 $this->_propDict["type"] = new PhoneType($this->_propDict["type"]);
@@ -46,6 +47,7 @@ class Phone extends Entity
 
     /**
     * Sets the type
+    * The type of phone number. The possible values are: home, business, mobile, other, assistant, homeFax, businessFax, otherFax, pager, radio.
     *
     * @param PhoneType $val The value to assign to the type
     *
@@ -58,6 +60,7 @@ class Phone extends Entity
     }
     /**
     * Gets the number
+    * The phone number.
     *
     * @return string The number
     */
@@ -72,6 +75,7 @@ class Phone extends Entity
 
     /**
     * Sets the number
+    * The phone number.
     *
     * @param string $val The value of the number
     *

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * MobileAppTroubleshootingEvent class
@@ -28,6 +28,7 @@ class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshootingEvent
 {
     /**
     * Gets the managedDeviceIdentifier
+    * Device identifier created or collected by Intune.
     *
     * @return string The managedDeviceIdentifier
     */
@@ -42,6 +43,7 @@ class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshootingEvent
     
     /**
     * Sets the managedDeviceIdentifier
+    * Device identifier created or collected by Intune.
     *
     * @param string $val The managedDeviceIdentifier
     *
@@ -55,6 +57,7 @@ class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshootingEvent
     
     /**
     * Gets the userId
+    * Identifier for the user that tried to enroll the device.
     *
     * @return string The userId
     */
@@ -69,6 +72,7 @@ class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshootingEvent
     
     /**
     * Sets the userId
+    * Identifier for the user that tried to enroll the device.
     *
     * @param string $val The userId
     *
@@ -82,6 +86,7 @@ class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshootingEvent
     
     /**
     * Gets the applicationId
+    * Intune application identifier.
     *
     * @return string The applicationId
     */
@@ -96,6 +101,7 @@ class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshootingEvent
     
     /**
     * Sets the applicationId
+    * Intune application identifier.
     *
     * @param string $val The applicationId
     *
@@ -110,6 +116,7 @@ class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshootingEvent
 
      /** 
      * Gets the history
+    * Intune Mobile Application Troubleshooting History Item
      *
      * @return array The history
      */
@@ -124,6 +131,7 @@ class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshootingEvent
     
     /** 
     * Sets the history
+    * Intune Mobile Application Troubleshooting History Item
     *
     * @param MobileAppTroubleshootingHistoryItem $val The history
     *

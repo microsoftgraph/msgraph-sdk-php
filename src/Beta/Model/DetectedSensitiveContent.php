@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * DetectedSensitiveContent class
 *
@@ -138,7 +138,7 @@ class DetectedSensitiveContent extends Entity
     public function getMatches()
     {
         if (array_key_exists("matches", $this->_propDict)) {
-            if (is_a($this->_propDict["matches"], "Microsoft\Graph\Beta\Model\SensitiveContentLocation")) {
+            if (is_a($this->_propDict["matches"], "Microsoft\Graph\Model\SensitiveContentLocation")) {
                 return $this->_propDict["matches"];
             } else {
                 $this->_propDict["matches"] = new SensitiveContentLocation($this->_propDict["matches"]);

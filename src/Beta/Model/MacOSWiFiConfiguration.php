@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * MacOSWiFiConfiguration class
@@ -28,6 +28,7 @@ class MacOSWiFiConfiguration extends DeviceConfiguration
 {
     /**
     * Gets the networkName
+    * Network Name
     *
     * @return string The networkName
     */
@@ -42,6 +43,7 @@ class MacOSWiFiConfiguration extends DeviceConfiguration
     
     /**
     * Sets the networkName
+    * Network Name
     *
     * @param string $val The networkName
     *
@@ -55,6 +57,7 @@ class MacOSWiFiConfiguration extends DeviceConfiguration
     
     /**
     * Gets the ssid
+    * This is the name of the Wi-Fi network that is broadcast to all devices.
     *
     * @return string The ssid
     */
@@ -69,6 +72,7 @@ class MacOSWiFiConfiguration extends DeviceConfiguration
     
     /**
     * Sets the ssid
+    * This is the name of the Wi-Fi network that is broadcast to all devices.
     *
     * @param string $val The ssid
     *
@@ -82,6 +86,7 @@ class MacOSWiFiConfiguration extends DeviceConfiguration
     
     /**
     * Gets the connectAutomatically
+    * Connect automatically when this network is in range. Setting this to true will skip the user prompt and automatically connect the device to Wi-Fi network.
     *
     * @return bool The connectAutomatically
     */
@@ -96,6 +101,7 @@ class MacOSWiFiConfiguration extends DeviceConfiguration
     
     /**
     * Sets the connectAutomatically
+    * Connect automatically when this network is in range. Setting this to true will skip the user prompt and automatically connect the device to Wi-Fi network.
     *
     * @param bool $val The connectAutomatically
     *
@@ -109,6 +115,7 @@ class MacOSWiFiConfiguration extends DeviceConfiguration
     
     /**
     * Gets the connectWhenNetworkNameIsHidden
+    * Connect when the network is not broadcasting its name (SSID). When set to true, this profile forces the device to connect to a network that doesn't broadcast its SSID to all devices.
     *
     * @return bool The connectWhenNetworkNameIsHidden
     */
@@ -123,6 +130,7 @@ class MacOSWiFiConfiguration extends DeviceConfiguration
     
     /**
     * Sets the connectWhenNetworkNameIsHidden
+    * Connect when the network is not broadcasting its name (SSID). When set to true, this profile forces the device to connect to a network that doesn't broadcast its SSID to all devices.
     *
     * @param bool $val The connectWhenNetworkNameIsHidden
     *
@@ -136,13 +144,14 @@ class MacOSWiFiConfiguration extends DeviceConfiguration
     
     /**
     * Gets the wiFiSecurityType
+    * Indicates whether Wi-Fi endpoint uses an EAP based security type.
     *
     * @return WiFiSecurityType The wiFiSecurityType
     */
     public function getWiFiSecurityType()
     {
         if (array_key_exists("wiFiSecurityType", $this->_propDict)) {
-            if (is_a($this->_propDict["wiFiSecurityType"], "Microsoft\Graph\Beta\Model\WiFiSecurityType")) {
+            if (is_a($this->_propDict["wiFiSecurityType"], "Microsoft\Graph\Model\WiFiSecurityType")) {
                 return $this->_propDict["wiFiSecurityType"];
             } else {
                 $this->_propDict["wiFiSecurityType"] = new WiFiSecurityType($this->_propDict["wiFiSecurityType"]);
@@ -154,6 +163,7 @@ class MacOSWiFiConfiguration extends DeviceConfiguration
     
     /**
     * Sets the wiFiSecurityType
+    * Indicates whether Wi-Fi endpoint uses an EAP based security type.
     *
     * @param WiFiSecurityType $val The wiFiSecurityType
     *
@@ -167,13 +177,14 @@ class MacOSWiFiConfiguration extends DeviceConfiguration
     
     /**
     * Gets the proxySettings
+    * Proxy Type for this Wi-Fi connection
     *
     * @return WiFiProxySetting The proxySettings
     */
     public function getProxySettings()
     {
         if (array_key_exists("proxySettings", $this->_propDict)) {
-            if (is_a($this->_propDict["proxySettings"], "Microsoft\Graph\Beta\Model\WiFiProxySetting")) {
+            if (is_a($this->_propDict["proxySettings"], "Microsoft\Graph\Model\WiFiProxySetting")) {
                 return $this->_propDict["proxySettings"];
             } else {
                 $this->_propDict["proxySettings"] = new WiFiProxySetting($this->_propDict["proxySettings"]);
@@ -185,6 +196,7 @@ class MacOSWiFiConfiguration extends DeviceConfiguration
     
     /**
     * Sets the proxySettings
+    * Proxy Type for this Wi-Fi connection
     *
     * @param WiFiProxySetting $val The proxySettings
     *
@@ -198,6 +210,7 @@ class MacOSWiFiConfiguration extends DeviceConfiguration
     
     /**
     * Gets the proxyManualAddress
+    * IP Address or DNS hostname of the proxy server when manual configuration is selected.
     *
     * @return string The proxyManualAddress
     */
@@ -212,6 +225,7 @@ class MacOSWiFiConfiguration extends DeviceConfiguration
     
     /**
     * Sets the proxyManualAddress
+    * IP Address or DNS hostname of the proxy server when manual configuration is selected.
     *
     * @param string $val The proxyManualAddress
     *
@@ -225,6 +239,7 @@ class MacOSWiFiConfiguration extends DeviceConfiguration
     
     /**
     * Gets the proxyManualPort
+    * Port of the proxy server when manual configuration is selected.
     *
     * @return int The proxyManualPort
     */
@@ -239,6 +254,7 @@ class MacOSWiFiConfiguration extends DeviceConfiguration
     
     /**
     * Sets the proxyManualPort
+    * Port of the proxy server when manual configuration is selected.
     *
     * @param int $val The proxyManualPort
     *
@@ -252,6 +268,7 @@ class MacOSWiFiConfiguration extends DeviceConfiguration
     
     /**
     * Gets the proxyAutomaticConfigurationUrl
+    * URL of the proxy server automatic configuration script when automatic configuration is selected. This URL is typically the location of PAC (Proxy Auto Configuration) file.
     *
     * @return string The proxyAutomaticConfigurationUrl
     */
@@ -266,6 +283,7 @@ class MacOSWiFiConfiguration extends DeviceConfiguration
     
     /**
     * Sets the proxyAutomaticConfigurationUrl
+    * URL of the proxy server automatic configuration script when automatic configuration is selected. This URL is typically the location of PAC (Proxy Auto Configuration) file.
     *
     * @param string $val The proxyAutomaticConfigurationUrl
     *
@@ -279,6 +297,7 @@ class MacOSWiFiConfiguration extends DeviceConfiguration
     
     /**
     * Gets the preSharedKey
+    * This is the pre-shared key for WPA Personal Wi-Fi network.
     *
     * @return string The preSharedKey
     */
@@ -293,6 +312,7 @@ class MacOSWiFiConfiguration extends DeviceConfiguration
     
     /**
     * Sets the preSharedKey
+    * This is the pre-shared key for WPA Personal Wi-Fi network.
     *
     * @param string $val The preSharedKey
     *

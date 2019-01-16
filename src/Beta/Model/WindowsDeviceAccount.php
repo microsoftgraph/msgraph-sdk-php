@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * WindowsDeviceAccount class
 *
@@ -27,6 +27,7 @@ class WindowsDeviceAccount extends Entity
 {
     /**
     * Gets the password
+    * Not yet documented
     *
     * @return string The password
     */
@@ -41,6 +42,7 @@ class WindowsDeviceAccount extends Entity
 
     /**
     * Sets the password
+    * Not yet documented
     *
     * @param string $val The value of the password
     *

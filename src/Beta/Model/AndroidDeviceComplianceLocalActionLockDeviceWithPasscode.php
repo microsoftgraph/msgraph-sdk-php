@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * AndroidDeviceComplianceLocalActionLockDeviceWithPasscode class
@@ -28,6 +28,7 @@ class AndroidDeviceComplianceLocalActionLockDeviceWithPasscode extends AndroidDe
 {
     /**
     * Gets the passcode
+    * Passcode to reset to Android device. This property is read-only.
     *
     * @return string The passcode
     */
@@ -42,6 +43,7 @@ class AndroidDeviceComplianceLocalActionLockDeviceWithPasscode extends AndroidDe
     
     /**
     * Sets the passcode
+    * Passcode to reset to Android device. This property is read-only.
     *
     * @param string $val The passcode
     *
@@ -55,6 +57,7 @@ class AndroidDeviceComplianceLocalActionLockDeviceWithPasscode extends AndroidDe
     
     /**
     * Gets the passcodeSignInFailureCountBeforeWipe
+    * Number of sign in failures before wiping device, the value can be 4-11. Valid values 4 to 11
     *
     * @return int The passcodeSignInFailureCountBeforeWipe
     */
@@ -69,6 +72,7 @@ class AndroidDeviceComplianceLocalActionLockDeviceWithPasscode extends AndroidDe
     
     /**
     * Sets the passcodeSignInFailureCountBeforeWipe
+    * Number of sign in failures before wiping device, the value can be 4-11. Valid values 4 to 11
     *
     * @param int $val The passcodeSignInFailureCountBeforeWipe
     *

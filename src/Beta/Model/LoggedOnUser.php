@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * LoggedOnUser class
 *
@@ -27,6 +27,7 @@ class LoggedOnUser extends Entity
 {
     /**
     * Gets the userId
+    * User id
     *
     * @return string The userId
     */
@@ -41,6 +42,7 @@ class LoggedOnUser extends Entity
 
     /**
     * Sets the userId
+    * User id
     *
     * @param string $val The value of the userId
     *
@@ -54,13 +56,14 @@ class LoggedOnUser extends Entity
 
     /**
     * Gets the lastLogOnDateTime
+    * Date time when user logs on
     *
     * @return \DateTime The lastLogOnDateTime
     */
     public function getLastLogOnDateTime()
     {
         if (array_key_exists("lastLogOnDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastLogOnDateTime"], "Microsoft\Graph\Beta\Model\\DateTime")) {
+            if (is_a($this->_propDict["lastLogOnDateTime"], "Microsoft\Graph\Model\\DateTime")) {
                 return $this->_propDict["lastLogOnDateTime"];
             } else {
                 $this->_propDict["lastLogOnDateTime"] = new \DateTime($this->_propDict["lastLogOnDateTime"]);
@@ -72,6 +75,7 @@ class LoggedOnUser extends Entity
 
     /**
     * Sets the lastLogOnDateTime
+    * Date time when user logs on
     *
     * @param \DateTime $val The value to assign to the lastLogOnDateTime
     *

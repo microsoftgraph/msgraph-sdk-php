@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * WindowsPhone81VpnConfiguration class
@@ -28,6 +28,7 @@ class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration
 {
     /**
     * Gets the bypassVpnOnCompanyWifi
+    * Bypass VPN on company Wi-Fi.
     *
     * @return bool The bypassVpnOnCompanyWifi
     */
@@ -42,6 +43,7 @@ class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration
     
     /**
     * Sets the bypassVpnOnCompanyWifi
+    * Bypass VPN on company Wi-Fi.
     *
     * @param bool $val The bypassVpnOnCompanyWifi
     *
@@ -55,6 +57,7 @@ class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration
     
     /**
     * Gets the bypassVpnOnHomeWifi
+    * Bypass VPN on home Wi-Fi.
     *
     * @return bool The bypassVpnOnHomeWifi
     */
@@ -69,6 +72,7 @@ class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration
     
     /**
     * Sets the bypassVpnOnHomeWifi
+    * Bypass VPN on home Wi-Fi.
     *
     * @param bool $val The bypassVpnOnHomeWifi
     *
@@ -82,13 +86,14 @@ class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration
     
     /**
     * Gets the authenticationMethod
+    * Authentication method.
     *
     * @return VpnAuthenticationMethod The authenticationMethod
     */
     public function getAuthenticationMethod()
     {
         if (array_key_exists("authenticationMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["authenticationMethod"], "Microsoft\Graph\Beta\Model\VpnAuthenticationMethod")) {
+            if (is_a($this->_propDict["authenticationMethod"], "Microsoft\Graph\Model\VpnAuthenticationMethod")) {
                 return $this->_propDict["authenticationMethod"];
             } else {
                 $this->_propDict["authenticationMethod"] = new VpnAuthenticationMethod($this->_propDict["authenticationMethod"]);
@@ -100,6 +105,7 @@ class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration
     
     /**
     * Sets the authenticationMethod
+    * Authentication method.
     *
     * @param VpnAuthenticationMethod $val The authenticationMethod
     *
@@ -113,6 +119,7 @@ class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration
     
     /**
     * Gets the rememberUserCredentials
+    * Remember user credentials.
     *
     * @return bool The rememberUserCredentials
     */
@@ -127,6 +134,7 @@ class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration
     
     /**
     * Sets the rememberUserCredentials
+    * Remember user credentials.
     *
     * @param bool $val The rememberUserCredentials
     *
@@ -140,6 +148,7 @@ class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration
     
     /**
     * Gets the dnsSuffixSearchList
+    * DNS suffix search list.
     *
     * @return string The dnsSuffixSearchList
     */
@@ -154,6 +163,7 @@ class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration
     
     /**
     * Sets the dnsSuffixSearchList
+    * DNS suffix search list.
     *
     * @param string $val The dnsSuffixSearchList
     *
@@ -167,13 +177,14 @@ class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration
     
     /**
     * Gets the identityCertificate
+    * Identity certificate for client authentication when authentication method is certificate.
     *
     * @return WindowsPhone81CertificateProfileBase The identityCertificate
     */
     public function getIdentityCertificate()
     {
         if (array_key_exists("identityCertificate", $this->_propDict)) {
-            if (is_a($this->_propDict["identityCertificate"], "Microsoft\Graph\Beta\Model\WindowsPhone81CertificateProfileBase")) {
+            if (is_a($this->_propDict["identityCertificate"], "Microsoft\Graph\Model\WindowsPhone81CertificateProfileBase")) {
                 return $this->_propDict["identityCertificate"];
             } else {
                 $this->_propDict["identityCertificate"] = new WindowsPhone81CertificateProfileBase($this->_propDict["identityCertificate"]);
@@ -185,6 +196,7 @@ class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration
     
     /**
     * Sets the identityCertificate
+    * Identity certificate for client authentication when authentication method is certificate.
     *
     * @param WindowsPhone81CertificateProfileBase $val The identityCertificate
     *

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * MacOSMinimumOperatingSystem class
 *
@@ -27,6 +27,7 @@ class MacOSMinimumOperatingSystem extends Entity
 {
     /**
     * Gets the v10_7
+    * Mac OS 10.7 or later.
     *
     * @return bool The v10_7
     */
@@ -41,6 +42,7 @@ class MacOSMinimumOperatingSystem extends Entity
 
     /**
     * Sets the v10_7
+    * Mac OS 10.7 or later.
     *
     * @param bool $val The value of the v10_7
     *
@@ -53,6 +55,7 @@ class MacOSMinimumOperatingSystem extends Entity
     }
     /**
     * Gets the v10_8
+    * Mac OS 10.8 or later.
     *
     * @return bool The v10_8
     */
@@ -67,6 +70,7 @@ class MacOSMinimumOperatingSystem extends Entity
 
     /**
     * Sets the v10_8
+    * Mac OS 10.8 or later.
     *
     * @param bool $val The value of the v10_8
     *
@@ -79,6 +83,7 @@ class MacOSMinimumOperatingSystem extends Entity
     }
     /**
     * Gets the v10_9
+    * Mac OS 10.9 or later.
     *
     * @return bool The v10_9
     */
@@ -93,6 +98,7 @@ class MacOSMinimumOperatingSystem extends Entity
 
     /**
     * Sets the v10_9
+    * Mac OS 10.9 or later.
     *
     * @param bool $val The value of the v10_9
     *
@@ -105,6 +111,7 @@ class MacOSMinimumOperatingSystem extends Entity
     }
     /**
     * Gets the v10_10
+    * Mac OS 10.10 or later.
     *
     * @return bool The v10_10
     */
@@ -119,6 +126,7 @@ class MacOSMinimumOperatingSystem extends Entity
 
     /**
     * Sets the v10_10
+    * Mac OS 10.10 or later.
     *
     * @param bool $val The value of the v10_10
     *
@@ -131,6 +139,7 @@ class MacOSMinimumOperatingSystem extends Entity
     }
     /**
     * Gets the v10_11
+    * Mac OS 10.11 or later.
     *
     * @return bool The v10_11
     */
@@ -145,6 +154,7 @@ class MacOSMinimumOperatingSystem extends Entity
 
     /**
     * Sets the v10_11
+    * Mac OS 10.11 or later.
     *
     * @param bool $val The value of the v10_11
     *
@@ -157,6 +167,7 @@ class MacOSMinimumOperatingSystem extends Entity
     }
     /**
     * Gets the v10_12
+    * Mac OS 10.12 or later.
     *
     * @return bool The v10_12
     */
@@ -171,6 +182,7 @@ class MacOSMinimumOperatingSystem extends Entity
 
     /**
     * Sets the v10_12
+    * Mac OS 10.12 or later.
     *
     * @param bool $val The value of the v10_12
     *
@@ -183,6 +195,7 @@ class MacOSMinimumOperatingSystem extends Entity
     }
     /**
     * Gets the v10_13
+    * Mac OS 10.13 or later.
     *
     * @return bool The v10_13
     */
@@ -197,6 +210,7 @@ class MacOSMinimumOperatingSystem extends Entity
 
     /**
     * Sets the v10_13
+    * Mac OS 10.13 or later.
     *
     * @param bool $val The value of the v10_13
     *

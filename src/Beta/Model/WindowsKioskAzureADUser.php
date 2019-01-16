@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * WindowsKioskAzureADUser class
 *
@@ -27,6 +27,7 @@ class WindowsKioskAzureADUser extends WindowsKioskUser
 {
     /**
     * Gets the userId
+    * The ID of the AzureAD user that will be locked to this kiosk configuration
     *
     * @return string The userId
     */
@@ -41,6 +42,7 @@ class WindowsKioskAzureADUser extends WindowsKioskUser
 
     /**
     * Sets the userId
+    * The ID of the AzureAD user that will be locked to this kiosk configuration
     *
     * @param string $val The value of the userId
     *
@@ -53,6 +55,7 @@ class WindowsKioskAzureADUser extends WindowsKioskUser
     }
     /**
     * Gets the userPrincipalName
+    * The user accounts that will be locked to this kiosk configuration
     *
     * @return string The userPrincipalName
     */
@@ -67,6 +70,7 @@ class WindowsKioskAzureADUser extends WindowsKioskUser
 
     /**
     * Sets the userPrincipalName
+    * The user accounts that will be locked to this kiosk configuration
     *
     * @param string $val The value of the userPrincipalName
     *

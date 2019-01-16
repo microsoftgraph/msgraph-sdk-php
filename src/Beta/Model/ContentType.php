@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * ContentType class
@@ -28,6 +28,7 @@ class ContentType extends Entity
 {
     /**
     * Gets the description
+    * The descriptive text for the item.
     *
     * @return string The description
     */
@@ -42,6 +43,7 @@ class ContentType extends Entity
     
     /**
     * Sets the description
+    * The descriptive text for the item.
     *
     * @param string $val The description
     *
@@ -55,6 +57,7 @@ class ContentType extends Entity
     
     /**
     * Gets the group
+    * The name of the group this content type belongs to. Helps organize related content types.
     *
     * @return string The group
     */
@@ -69,6 +72,7 @@ class ContentType extends Entity
     
     /**
     * Sets the group
+    * The name of the group this content type belongs to. Helps organize related content types.
     *
     * @param string $val The group
     *
@@ -82,6 +86,7 @@ class ContentType extends Entity
     
     /**
     * Gets the hidden
+    * Indicates whether the content type is hidden in the list's 'New' menu.
     *
     * @return bool The hidden
     */
@@ -96,6 +101,7 @@ class ContentType extends Entity
     
     /**
     * Sets the hidden
+    * Indicates whether the content type is hidden in the list's 'New' menu.
     *
     * @param bool $val The hidden
     *
@@ -109,13 +115,14 @@ class ContentType extends Entity
     
     /**
     * Gets the inheritedFrom
+    * If this content type is inherited from another scope (like a site), provides a reference to the item where the content type is defined.
     *
     * @return ItemReference The inheritedFrom
     */
     public function getInheritedFrom()
     {
         if (array_key_exists("inheritedFrom", $this->_propDict)) {
-            if (is_a($this->_propDict["inheritedFrom"], "Microsoft\Graph\Beta\Model\ItemReference")) {
+            if (is_a($this->_propDict["inheritedFrom"], "Microsoft\Graph\Model\ItemReference")) {
                 return $this->_propDict["inheritedFrom"];
             } else {
                 $this->_propDict["inheritedFrom"] = new ItemReference($this->_propDict["inheritedFrom"]);
@@ -127,6 +134,7 @@ class ContentType extends Entity
     
     /**
     * Sets the inheritedFrom
+    * If this content type is inherited from another scope (like a site), provides a reference to the item where the content type is defined.
     *
     * @param ItemReference $val The inheritedFrom
     *
@@ -140,6 +148,7 @@ class ContentType extends Entity
     
     /**
     * Gets the name
+    * The name of the content type.
     *
     * @return string The name
     */
@@ -154,6 +163,7 @@ class ContentType extends Entity
     
     /**
     * Sets the name
+    * The name of the content type.
     *
     * @param string $val The name
     *
@@ -167,13 +177,14 @@ class ContentType extends Entity
     
     /**
     * Gets the order
+    * Specifies the order in which the content type appears in the selection UI.
     *
     * @return ContentTypeOrder The order
     */
     public function getOrder()
     {
         if (array_key_exists("order", $this->_propDict)) {
-            if (is_a($this->_propDict["order"], "Microsoft\Graph\Beta\Model\ContentTypeOrder")) {
+            if (is_a($this->_propDict["order"], "Microsoft\Graph\Model\ContentTypeOrder")) {
                 return $this->_propDict["order"];
             } else {
                 $this->_propDict["order"] = new ContentTypeOrder($this->_propDict["order"]);
@@ -185,6 +196,7 @@ class ContentType extends Entity
     
     /**
     * Sets the order
+    * Specifies the order in which the content type appears in the selection UI.
     *
     * @param ContentTypeOrder $val The order
     *
@@ -198,6 +210,7 @@ class ContentType extends Entity
     
     /**
     * Gets the parentId
+    * The unique identifier of the content type.
     *
     * @return string The parentId
     */
@@ -212,6 +225,7 @@ class ContentType extends Entity
     
     /**
     * Sets the parentId
+    * The unique identifier of the content type.
     *
     * @param string $val The parentId
     *
@@ -225,6 +239,7 @@ class ContentType extends Entity
     
     /**
     * Gets the readOnly
+    * If true, the content type cannot be modified unless this value is first set to false.
     *
     * @return bool The readOnly
     */
@@ -239,6 +254,7 @@ class ContentType extends Entity
     
     /**
     * Sets the readOnly
+    * If true, the content type cannot be modified unless this value is first set to false.
     *
     * @param bool $val The readOnly
     *
@@ -252,6 +268,7 @@ class ContentType extends Entity
     
     /**
     * Gets the sealed
+    * If true, the content type cannot be modified by users or through push-down operations. Only site collection administrators can seal or unseal content types.
     *
     * @return bool The sealed
     */
@@ -266,6 +283,7 @@ class ContentType extends Entity
     
     /**
     * Sets the sealed
+    * If true, the content type cannot be modified by users or through push-down operations. Only site collection administrators can seal or unseal content types.
     *
     * @param bool $val The sealed
     *
@@ -280,6 +298,7 @@ class ContentType extends Entity
 
      /** 
      * Gets the columnLinks
+    * The collection of columns that are required by this content type
      *
      * @return array The columnLinks
      */
@@ -294,6 +313,7 @@ class ContentType extends Entity
     
     /** 
     * Sets the columnLinks
+    * The collection of columns that are required by this content type
     *
     * @param ColumnLink $val The columnLinks
     *

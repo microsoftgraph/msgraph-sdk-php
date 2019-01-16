@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * HardwareInformation class
 *
@@ -27,6 +27,7 @@ class HardwareInformation extends Entity
 {
     /**
     * Gets the serialNumber
+    * Serial number.
     *
     * @return string The serialNumber
     */
@@ -41,6 +42,7 @@ class HardwareInformation extends Entity
 
     /**
     * Sets the serialNumber
+    * Serial number.
     *
     * @param string $val The value of the serialNumber
     *
@@ -53,6 +55,7 @@ class HardwareInformation extends Entity
     }
     /**
     * Gets the totalStorageSpace
+    * Total storage space of the device.
     *
     * @return int The totalStorageSpace
     */
@@ -67,6 +70,7 @@ class HardwareInformation extends Entity
 
     /**
     * Sets the totalStorageSpace
+    * Total storage space of the device.
     *
     * @param int $val The value of the totalStorageSpace
     *
@@ -79,6 +83,7 @@ class HardwareInformation extends Entity
     }
     /**
     * Gets the freeStorageSpace
+    * Free storage space of the device.
     *
     * @return int The freeStorageSpace
     */
@@ -93,6 +98,7 @@ class HardwareInformation extends Entity
 
     /**
     * Sets the freeStorageSpace
+    * Free storage space of the device.
     *
     * @param int $val The value of the freeStorageSpace
     *
@@ -105,6 +111,7 @@ class HardwareInformation extends Entity
     }
     /**
     * Gets the imei
+    * IMEI
     *
     * @return string The imei
     */
@@ -119,6 +126,7 @@ class HardwareInformation extends Entity
 
     /**
     * Sets the imei
+    * IMEI
     *
     * @param string $val The value of the imei
     *
@@ -131,6 +139,7 @@ class HardwareInformation extends Entity
     }
     /**
     * Gets the meid
+    * MEID
     *
     * @return string The meid
     */
@@ -145,6 +154,7 @@ class HardwareInformation extends Entity
 
     /**
     * Sets the meid
+    * MEID
     *
     * @param string $val The value of the meid
     *
@@ -157,6 +167,7 @@ class HardwareInformation extends Entity
     }
     /**
     * Gets the manufacturer
+    * Manufacturer of the device
     *
     * @return string The manufacturer
     */
@@ -171,6 +182,7 @@ class HardwareInformation extends Entity
 
     /**
     * Sets the manufacturer
+    * Manufacturer of the device
     *
     * @param string $val The value of the manufacturer
     *
@@ -183,6 +195,7 @@ class HardwareInformation extends Entity
     }
     /**
     * Gets the model
+    * Model of the device
     *
     * @return string The model
     */
@@ -197,6 +210,7 @@ class HardwareInformation extends Entity
 
     /**
     * Sets the model
+    * Model of the device
     *
     * @param string $val The value of the model
     *
@@ -209,6 +223,7 @@ class HardwareInformation extends Entity
     }
     /**
     * Gets the phoneNumber
+    * Phone number of the device
     *
     * @return string The phoneNumber
     */
@@ -223,6 +238,7 @@ class HardwareInformation extends Entity
 
     /**
     * Sets the phoneNumber
+    * Phone number of the device
     *
     * @param string $val The value of the phoneNumber
     *
@@ -235,6 +251,7 @@ class HardwareInformation extends Entity
     }
     /**
     * Gets the subscriberCarrier
+    * Subscriber carrier of the device
     *
     * @return string The subscriberCarrier
     */
@@ -249,6 +266,7 @@ class HardwareInformation extends Entity
 
     /**
     * Sets the subscriberCarrier
+    * Subscriber carrier of the device
     *
     * @param string $val The value of the subscriberCarrier
     *
@@ -261,6 +279,7 @@ class HardwareInformation extends Entity
     }
     /**
     * Gets the cellularTechnology
+    * Cellular technology of the device
     *
     * @return string The cellularTechnology
     */
@@ -275,6 +294,7 @@ class HardwareInformation extends Entity
 
     /**
     * Sets the cellularTechnology
+    * Cellular technology of the device
     *
     * @param string $val The value of the cellularTechnology
     *
@@ -287,6 +307,7 @@ class HardwareInformation extends Entity
     }
     /**
     * Gets the wifiMac
+    * WiFi MAC address of the device
     *
     * @return string The wifiMac
     */
@@ -301,6 +322,7 @@ class HardwareInformation extends Entity
 
     /**
     * Sets the wifiMac
+    * WiFi MAC address of the device
     *
     * @param string $val The value of the wifiMac
     *
@@ -313,6 +335,7 @@ class HardwareInformation extends Entity
     }
     /**
     * Gets the operatingSystemLanguage
+    * Operating system language of the device
     *
     * @return string The operatingSystemLanguage
     */
@@ -327,6 +350,7 @@ class HardwareInformation extends Entity
 
     /**
     * Sets the operatingSystemLanguage
+    * Operating system language of the device
     *
     * @param string $val The value of the operatingSystemLanguage
     *
@@ -339,6 +363,7 @@ class HardwareInformation extends Entity
     }
     /**
     * Gets the isSupervised
+    * Supervised mode of the device
     *
     * @return bool The isSupervised
     */
@@ -353,6 +378,7 @@ class HardwareInformation extends Entity
 
     /**
     * Sets the isSupervised
+    * Supervised mode of the device
     *
     * @param bool $val The value of the isSupervised
     *
@@ -365,6 +391,7 @@ class HardwareInformation extends Entity
     }
     /**
     * Gets the isEncrypted
+    * Encryption status of the device
     *
     * @return bool The isEncrypted
     */
@@ -379,6 +406,7 @@ class HardwareInformation extends Entity
 
     /**
     * Sets the isEncrypted
+    * Encryption status of the device
     *
     * @param bool $val The value of the isEncrypted
     *
@@ -391,6 +419,7 @@ class HardwareInformation extends Entity
     }
     /**
     * Gets the isSharedDevice
+    * Shared iPad
     *
     * @return bool The isSharedDevice
     */
@@ -405,6 +434,7 @@ class HardwareInformation extends Entity
 
     /**
     * Sets the isSharedDevice
+    * Shared iPad
     *
     * @param bool $val The value of the isSharedDevice
     *
@@ -418,13 +448,14 @@ class HardwareInformation extends Entity
 
     /**
     * Gets the sharedDeviceCachedUsers
+    * All users on the shared Apple device
     *
     * @return SharedAppleDeviceUser The sharedDeviceCachedUsers
     */
     public function getSharedDeviceCachedUsers()
     {
         if (array_key_exists("sharedDeviceCachedUsers", $this->_propDict)) {
-            if (is_a($this->_propDict["sharedDeviceCachedUsers"], "Microsoft\Graph\Beta\Model\SharedAppleDeviceUser")) {
+            if (is_a($this->_propDict["sharedDeviceCachedUsers"], "Microsoft\Graph\Model\SharedAppleDeviceUser")) {
                 return $this->_propDict["sharedDeviceCachedUsers"];
             } else {
                 $this->_propDict["sharedDeviceCachedUsers"] = new SharedAppleDeviceUser($this->_propDict["sharedDeviceCachedUsers"]);
@@ -436,6 +467,7 @@ class HardwareInformation extends Entity
 
     /**
     * Sets the sharedDeviceCachedUsers
+    * All users on the shared Apple device
     *
     * @param SharedAppleDeviceUser $val The value to assign to the sharedDeviceCachedUsers
     *
@@ -448,6 +480,7 @@ class HardwareInformation extends Entity
     }
     /**
     * Gets the tpmSpecificationVersion
+    * String that specifies the specification version.
     *
     * @return string The tpmSpecificationVersion
     */
@@ -462,6 +495,7 @@ class HardwareInformation extends Entity
 
     /**
     * Sets the tpmSpecificationVersion
+    * String that specifies the specification version.
     *
     * @param string $val The value of the tpmSpecificationVersion
     *
@@ -474,6 +508,7 @@ class HardwareInformation extends Entity
     }
     /**
     * Gets the operatingSystemEdition
+    * String that specifies the OS edition.
     *
     * @return string The operatingSystemEdition
     */
@@ -488,6 +523,7 @@ class HardwareInformation extends Entity
 
     /**
     * Sets the operatingSystemEdition
+    * String that specifies the OS edition.
     *
     * @param string $val The value of the operatingSystemEdition
     *
@@ -500,6 +536,7 @@ class HardwareInformation extends Entity
     }
     /**
     * Gets the deviceFullQualifiedDomainName
+    * Returns the fully qualified domain name of the device (if any). If the device is not domain-joined, it returns an empty string. 
     *
     * @return string The deviceFullQualifiedDomainName
     */
@@ -514,6 +551,7 @@ class HardwareInformation extends Entity
 
     /**
     * Sets the deviceFullQualifiedDomainName
+    * Returns the fully qualified domain name of the device (if any). If the device is not domain-joined, it returns an empty string. 
     *
     * @param string $val The value of the deviceFullQualifiedDomainName
     *
@@ -527,13 +565,14 @@ class HardwareInformation extends Entity
 
     /**
     * Gets the deviceGuardVirtualizationBasedSecurityHardwareRequirementState
+    * Virtualization-based security hardware requirement status.
     *
     * @return DeviceGuardVirtualizationBasedSecurityHardwareRequirementState The deviceGuardVirtualizationBasedSecurityHardwareRequirementState
     */
     public function getDeviceGuardVirtualizationBasedSecurityHardwareRequirementState()
     {
         if (array_key_exists("deviceGuardVirtualizationBasedSecurityHardwareRequirementState", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceGuardVirtualizationBasedSecurityHardwareRequirementState"], "Microsoft\Graph\Beta\Model\DeviceGuardVirtualizationBasedSecurityHardwareRequirementState")) {
+            if (is_a($this->_propDict["deviceGuardVirtualizationBasedSecurityHardwareRequirementState"], "Microsoft\Graph\Model\DeviceGuardVirtualizationBasedSecurityHardwareRequirementState")) {
                 return $this->_propDict["deviceGuardVirtualizationBasedSecurityHardwareRequirementState"];
             } else {
                 $this->_propDict["deviceGuardVirtualizationBasedSecurityHardwareRequirementState"] = new DeviceGuardVirtualizationBasedSecurityHardwareRequirementState($this->_propDict["deviceGuardVirtualizationBasedSecurityHardwareRequirementState"]);
@@ -545,6 +584,7 @@ class HardwareInformation extends Entity
 
     /**
     * Sets the deviceGuardVirtualizationBasedSecurityHardwareRequirementState
+    * Virtualization-based security hardware requirement status.
     *
     * @param DeviceGuardVirtualizationBasedSecurityHardwareRequirementState $val The value to assign to the deviceGuardVirtualizationBasedSecurityHardwareRequirementState
     *
@@ -558,13 +598,14 @@ class HardwareInformation extends Entity
 
     /**
     * Gets the deviceGuardVirtualizationBasedSecurityState
+    * Virtualization-based security status. 
     *
     * @return DeviceGuardVirtualizationBasedSecurityState The deviceGuardVirtualizationBasedSecurityState
     */
     public function getDeviceGuardVirtualizationBasedSecurityState()
     {
         if (array_key_exists("deviceGuardVirtualizationBasedSecurityState", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceGuardVirtualizationBasedSecurityState"], "Microsoft\Graph\Beta\Model\DeviceGuardVirtualizationBasedSecurityState")) {
+            if (is_a($this->_propDict["deviceGuardVirtualizationBasedSecurityState"], "Microsoft\Graph\Model\DeviceGuardVirtualizationBasedSecurityState")) {
                 return $this->_propDict["deviceGuardVirtualizationBasedSecurityState"];
             } else {
                 $this->_propDict["deviceGuardVirtualizationBasedSecurityState"] = new DeviceGuardVirtualizationBasedSecurityState($this->_propDict["deviceGuardVirtualizationBasedSecurityState"]);
@@ -576,6 +617,7 @@ class HardwareInformation extends Entity
 
     /**
     * Sets the deviceGuardVirtualizationBasedSecurityState
+    * Virtualization-based security status. 
     *
     * @param DeviceGuardVirtualizationBasedSecurityState $val The value to assign to the deviceGuardVirtualizationBasedSecurityState
     *
@@ -589,13 +631,14 @@ class HardwareInformation extends Entity
 
     /**
     * Gets the deviceGuardLocalSystemAuthorityCredentialGuardState
+    * Local System Authority (LSA) credential guard status. 
     *
     * @return DeviceGuardLocalSystemAuthorityCredentialGuardState The deviceGuardLocalSystemAuthorityCredentialGuardState
     */
     public function getDeviceGuardLocalSystemAuthorityCredentialGuardState()
     {
         if (array_key_exists("deviceGuardLocalSystemAuthorityCredentialGuardState", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceGuardLocalSystemAuthorityCredentialGuardState"], "Microsoft\Graph\Beta\Model\DeviceGuardLocalSystemAuthorityCredentialGuardState")) {
+            if (is_a($this->_propDict["deviceGuardLocalSystemAuthorityCredentialGuardState"], "Microsoft\Graph\Model\DeviceGuardLocalSystemAuthorityCredentialGuardState")) {
                 return $this->_propDict["deviceGuardLocalSystemAuthorityCredentialGuardState"];
             } else {
                 $this->_propDict["deviceGuardLocalSystemAuthorityCredentialGuardState"] = new DeviceGuardLocalSystemAuthorityCredentialGuardState($this->_propDict["deviceGuardLocalSystemAuthorityCredentialGuardState"]);
@@ -607,6 +650,7 @@ class HardwareInformation extends Entity
 
     /**
     * Sets the deviceGuardLocalSystemAuthorityCredentialGuardState
+    * Local System Authority (LSA) credential guard status. 
     *
     * @param DeviceGuardLocalSystemAuthorityCredentialGuardState $val The value to assign to the deviceGuardLocalSystemAuthorityCredentialGuardState
     *

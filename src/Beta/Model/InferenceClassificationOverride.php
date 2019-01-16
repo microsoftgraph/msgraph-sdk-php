@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * InferenceClassificationOverride class
@@ -28,13 +28,14 @@ class InferenceClassificationOverride extends Entity
 {
     /**
     * Gets the classifyAs
+    * Specifies how incoming messages from a specific sender should always be classified as. The possible values are: focused, other.
     *
     * @return InferenceClassificationType The classifyAs
     */
     public function getClassifyAs()
     {
         if (array_key_exists("classifyAs", $this->_propDict)) {
-            if (is_a($this->_propDict["classifyAs"], "Microsoft\Graph\Beta\Model\InferenceClassificationType")) {
+            if (is_a($this->_propDict["classifyAs"], "Microsoft\Graph\Model\InferenceClassificationType")) {
                 return $this->_propDict["classifyAs"];
             } else {
                 $this->_propDict["classifyAs"] = new InferenceClassificationType($this->_propDict["classifyAs"]);
@@ -46,6 +47,7 @@ class InferenceClassificationOverride extends Entity
     
     /**
     * Sets the classifyAs
+    * Specifies how incoming messages from a specific sender should always be classified as. The possible values are: focused, other.
     *
     * @param InferenceClassificationType $val The classifyAs
     *
@@ -59,13 +61,14 @@ class InferenceClassificationOverride extends Entity
     
     /**
     * Gets the senderEmailAddress
+    * The email address information of the sender for whom the override is created.
     *
     * @return EmailAddress The senderEmailAddress
     */
     public function getSenderEmailAddress()
     {
         if (array_key_exists("senderEmailAddress", $this->_propDict)) {
-            if (is_a($this->_propDict["senderEmailAddress"], "Microsoft\Graph\Beta\Model\EmailAddress")) {
+            if (is_a($this->_propDict["senderEmailAddress"], "Microsoft\Graph\Model\EmailAddress")) {
                 return $this->_propDict["senderEmailAddress"];
             } else {
                 $this->_propDict["senderEmailAddress"] = new EmailAddress($this->_propDict["senderEmailAddress"]);
@@ -77,6 +80,7 @@ class InferenceClassificationOverride extends Entity
     
     /**
     * Sets the senderEmailAddress
+    * The email address information of the sender for whom the override is created.
     *
     * @param EmailAddress $val The senderEmailAddress
     *

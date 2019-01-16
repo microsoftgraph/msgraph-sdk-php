@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * IosVppAppAssignmentSettings class
 *
@@ -26,7 +26,17 @@ namespace Microsoft\Graph\Beta\Model;
 class IosVppAppAssignmentSettings extends MobileAppAssignmentSettings
 {
     /**
+    * Set the @odata.type since this type is immediately descended from an abstract
+    * type that is referenced as the type in an entity.
+    */
+    public function __construct()
+    {
+        $this->setODataType("#microsoft.graph.iosVppAppAssignmentSettings");
+    }
+
+    /**
     * Gets the useDeviceLicensing
+    * Whether or not to use device licensing.
     *
     * @return bool The useDeviceLicensing
     */
@@ -41,6 +51,7 @@ class IosVppAppAssignmentSettings extends MobileAppAssignmentSettings
 
     /**
     * Sets the useDeviceLicensing
+    * Whether or not to use device licensing.
     *
     * @param bool $val The value of the useDeviceLicensing
     *
@@ -53,6 +64,7 @@ class IosVppAppAssignmentSettings extends MobileAppAssignmentSettings
     }
     /**
     * Gets the vpnConfigurationId
+    * The VPN Configuration Id to apply for this app.
     *
     * @return string The vpnConfigurationId
     */
@@ -67,6 +79,7 @@ class IosVppAppAssignmentSettings extends MobileAppAssignmentSettings
 
     /**
     * Sets the vpnConfigurationId
+    * The VPN Configuration Id to apply for this app.
     *
     * @param string $val The value of the vpnConfigurationId
     *

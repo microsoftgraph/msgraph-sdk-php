@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * BookingPerson class
@@ -28,6 +28,7 @@ class BookingPerson extends BookingNamedEntity
 {
     /**
     * Gets the emailAddress
+    * The e-mail address of this person.
     *
     * @return string The emailAddress
     */
@@ -42,6 +43,7 @@ class BookingPerson extends BookingNamedEntity
     
     /**
     * Sets the emailAddress
+    * The e-mail address of this person.
     *
     * @param string $val The emailAddress
     *

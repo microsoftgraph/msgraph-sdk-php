@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * WindowsAutopilotDeviceIdentity class
@@ -28,13 +28,14 @@ class WindowsAutopilotDeviceIdentity extends Entity
 {
     /**
     * Gets the deploymentProfileAssignmentStatus
+    * Profile assignment status of the Windows autopilot device.
     *
     * @return WindowsAutopilotProfileAssignmentStatus The deploymentProfileAssignmentStatus
     */
     public function getDeploymentProfileAssignmentStatus()
     {
         if (array_key_exists("deploymentProfileAssignmentStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["deploymentProfileAssignmentStatus"], "Microsoft\Graph\Beta\Model\WindowsAutopilotProfileAssignmentStatus")) {
+            if (is_a($this->_propDict["deploymentProfileAssignmentStatus"], "Microsoft\Graph\Model\WindowsAutopilotProfileAssignmentStatus")) {
                 return $this->_propDict["deploymentProfileAssignmentStatus"];
             } else {
                 $this->_propDict["deploymentProfileAssignmentStatus"] = new WindowsAutopilotProfileAssignmentStatus($this->_propDict["deploymentProfileAssignmentStatus"]);
@@ -46,6 +47,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     
     /**
     * Sets the deploymentProfileAssignmentStatus
+    * Profile assignment status of the Windows autopilot device.
     *
     * @param WindowsAutopilotProfileAssignmentStatus $val The deploymentProfileAssignmentStatus
     *
@@ -58,7 +60,41 @@ class WindowsAutopilotDeviceIdentity extends Entity
     }
     
     /**
+    * Gets the deploymentProfileAssignmentDetailedStatus
+    * Profile assignment detailed status of the Windows autopilot device.
+    *
+    * @return WindowsAutopilotProfileAssignmentDetailedStatus The deploymentProfileAssignmentDetailedStatus
+    */
+    public function getDeploymentProfileAssignmentDetailedStatus()
+    {
+        if (array_key_exists("deploymentProfileAssignmentDetailedStatus", $this->_propDict)) {
+            if (is_a($this->_propDict["deploymentProfileAssignmentDetailedStatus"], "Microsoft\Graph\Model\WindowsAutopilotProfileAssignmentDetailedStatus")) {
+                return $this->_propDict["deploymentProfileAssignmentDetailedStatus"];
+            } else {
+                $this->_propDict["deploymentProfileAssignmentDetailedStatus"] = new WindowsAutopilotProfileAssignmentDetailedStatus($this->_propDict["deploymentProfileAssignmentDetailedStatus"]);
+                return $this->_propDict["deploymentProfileAssignmentDetailedStatus"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the deploymentProfileAssignmentDetailedStatus
+    * Profile assignment detailed status of the Windows autopilot device.
+    *
+    * @param WindowsAutopilotProfileAssignmentDetailedStatus $val The deploymentProfileAssignmentDetailedStatus
+    *
+    * @return WindowsAutopilotDeviceIdentity
+    */
+    public function setDeploymentProfileAssignmentDetailedStatus($val)
+    {
+        $this->_propDict["deploymentProfileAssignmentDetailedStatus"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the deploymentProfileAssignedDateTime
+    * Profile set time of the Windows autopilot device.
     *
     * @return \DateTime The deploymentProfileAssignedDateTime
     */
@@ -77,6 +113,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     
     /**
     * Sets the deploymentProfileAssignedDateTime
+    * Profile set time of the Windows autopilot device.
     *
     * @param \DateTime $val The deploymentProfileAssignedDateTime
     *
@@ -90,6 +127,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     
     /**
     * Gets the orderIdentifier
+    * Order Identifier of the Windows autopilot device.
     *
     * @return string The orderIdentifier
     */
@@ -104,6 +142,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     
     /**
     * Sets the orderIdentifier
+    * Order Identifier of the Windows autopilot device.
     *
     * @param string $val The orderIdentifier
     *
@@ -117,6 +156,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     
     /**
     * Gets the purchaseOrderIdentifier
+    * Purchase Order Identifier of the Windows autopilot device.
     *
     * @return string The purchaseOrderIdentifier
     */
@@ -131,6 +171,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     
     /**
     * Sets the purchaseOrderIdentifier
+    * Purchase Order Identifier of the Windows autopilot device.
     *
     * @param string $val The purchaseOrderIdentifier
     *
@@ -144,6 +185,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     
     /**
     * Gets the serialNumber
+    * Serial number of the Windows autopilot device.
     *
     * @return string The serialNumber
     */
@@ -158,6 +200,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     
     /**
     * Sets the serialNumber
+    * Serial number of the Windows autopilot device.
     *
     * @param string $val The serialNumber
     *
@@ -171,6 +214,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     
     /**
     * Gets the productKey
+    * Product Key of the Windows autopilot device.
     *
     * @return string The productKey
     */
@@ -185,6 +229,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     
     /**
     * Sets the productKey
+    * Product Key of the Windows autopilot device.
     *
     * @param string $val The productKey
     *
@@ -198,6 +243,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     
     /**
     * Gets the manufacturer
+    * Oem manufacturer of the Windows autopilot device.
     *
     * @return string The manufacturer
     */
@@ -212,6 +258,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     
     /**
     * Sets the manufacturer
+    * Oem manufacturer of the Windows autopilot device.
     *
     * @param string $val The manufacturer
     *
@@ -225,6 +272,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     
     /**
     * Gets the model
+    * Model name of the Windows autopilot device.
     *
     * @return string The model
     */
@@ -239,6 +287,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     
     /**
     * Sets the model
+    * Model name of the Windows autopilot device.
     *
     * @param string $val The model
     *
@@ -252,13 +301,14 @@ class WindowsAutopilotDeviceIdentity extends Entity
     
     /**
     * Gets the enrollmentState
+    * Intune enrollment state of the Windows autopilot device.
     *
     * @return EnrollmentState The enrollmentState
     */
     public function getEnrollmentState()
     {
         if (array_key_exists("enrollmentState", $this->_propDict)) {
-            if (is_a($this->_propDict["enrollmentState"], "Microsoft\Graph\Beta\Model\EnrollmentState")) {
+            if (is_a($this->_propDict["enrollmentState"], "Microsoft\Graph\Model\EnrollmentState")) {
                 return $this->_propDict["enrollmentState"];
             } else {
                 $this->_propDict["enrollmentState"] = new EnrollmentState($this->_propDict["enrollmentState"]);
@@ -270,6 +320,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     
     /**
     * Sets the enrollmentState
+    * Intune enrollment state of the Windows autopilot device.
     *
     * @param EnrollmentState $val The enrollmentState
     *
@@ -283,6 +334,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     
     /**
     * Gets the lastContactedDateTime
+    * Intune Last Contacted Date Time of the Windows autopilot device.
     *
     * @return \DateTime The lastContactedDateTime
     */
@@ -301,6 +353,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     
     /**
     * Sets the lastContactedDateTime
+    * Intune Last Contacted Date Time of the Windows autopilot device.
     *
     * @param \DateTime $val The lastContactedDateTime
     *
@@ -314,6 +367,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     
     /**
     * Gets the addressableUserName
+    * Addressable user name.
     *
     * @return string The addressableUserName
     */
@@ -328,6 +382,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     
     /**
     * Sets the addressableUserName
+    * Addressable user name.
     *
     * @param string $val The addressableUserName
     *
@@ -341,6 +396,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     
     /**
     * Gets the userPrincipalName
+    * User Principal Name.
     *
     * @return string The userPrincipalName
     */
@@ -355,6 +411,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     
     /**
     * Sets the userPrincipalName
+    * User Principal Name.
     *
     * @param string $val The userPrincipalName
     *
@@ -368,13 +425,14 @@ class WindowsAutopilotDeviceIdentity extends Entity
     
     /**
     * Gets the deploymentProfile
+    * Deployment profile currently assigned to the Windows autopilot device.
     *
     * @return WindowsAutopilotDeploymentProfile The deploymentProfile
     */
     public function getDeploymentProfile()
     {
         if (array_key_exists("deploymentProfile", $this->_propDict)) {
-            if (is_a($this->_propDict["deploymentProfile"], "Microsoft\Graph\Beta\Model\WindowsAutopilotDeploymentProfile")) {
+            if (is_a($this->_propDict["deploymentProfile"], "Microsoft\Graph\Model\WindowsAutopilotDeploymentProfile")) {
                 return $this->_propDict["deploymentProfile"];
             } else {
                 $this->_propDict["deploymentProfile"] = new WindowsAutopilotDeploymentProfile($this->_propDict["deploymentProfile"]);
@@ -386,6 +444,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     
     /**
     * Sets the deploymentProfile
+    * Deployment profile currently assigned to the Windows autopilot device.
     *
     * @param WindowsAutopilotDeploymentProfile $val The deploymentProfile
     *
@@ -394,6 +453,39 @@ class WindowsAutopilotDeviceIdentity extends Entity
     public function setDeploymentProfile($val)
     {
         $this->_propDict["deploymentProfile"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the intendedDeploymentProfile
+    * Deployment profile intended to be assigned to the Windows autopilot device.
+    *
+    * @return WindowsAutopilotDeploymentProfile The intendedDeploymentProfile
+    */
+    public function getIntendedDeploymentProfile()
+    {
+        if (array_key_exists("intendedDeploymentProfile", $this->_propDict)) {
+            if (is_a($this->_propDict["intendedDeploymentProfile"], "Microsoft\Graph\Model\WindowsAutopilotDeploymentProfile")) {
+                return $this->_propDict["intendedDeploymentProfile"];
+            } else {
+                $this->_propDict["intendedDeploymentProfile"] = new WindowsAutopilotDeploymentProfile($this->_propDict["intendedDeploymentProfile"]);
+                return $this->_propDict["intendedDeploymentProfile"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the intendedDeploymentProfile
+    * Deployment profile intended to be assigned to the Windows autopilot device.
+    *
+    * @param WindowsAutopilotDeploymentProfile $val The intendedDeploymentProfile
+    *
+    * @return WindowsAutopilotDeviceIdentity
+    */
+    public function setIntendedDeploymentProfile($val)
+    {
+        $this->_propDict["intendedDeploymentProfile"] = $val;
         return $this;
     }
     

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * SignIn class
@@ -227,7 +227,7 @@ class SignIn extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Microsoft\Graph\Beta\Model\SignInStatus")) {
+            if (is_a($this->_propDict["status"], "Microsoft\Graph\Model\SignInStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new SignInStatus($this->_propDict["status"]);
@@ -285,7 +285,7 @@ class SignIn extends Entity
     public function getDeviceDetail()
     {
         if (array_key_exists("deviceDetail", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceDetail"], "Microsoft\Graph\Beta\Model\DeviceDetail")) {
+            if (is_a($this->_propDict["deviceDetail"], "Microsoft\Graph\Model\DeviceDetail")) {
                 return $this->_propDict["deviceDetail"];
             } else {
                 $this->_propDict["deviceDetail"] = new DeviceDetail($this->_propDict["deviceDetail"]);
@@ -316,7 +316,7 @@ class SignIn extends Entity
     public function getLocation()
     {
         if (array_key_exists("location", $this->_propDict)) {
-            if (is_a($this->_propDict["location"], "Microsoft\Graph\Beta\Model\SignInLocation")) {
+            if (is_a($this->_propDict["location"], "Microsoft\Graph\Model\SignInLocation")) {
                 return $this->_propDict["location"];
             } else {
                 $this->_propDict["location"] = new SignInLocation($this->_propDict["location"]);
@@ -347,7 +347,7 @@ class SignIn extends Entity
     public function getMfaDetail()
     {
         if (array_key_exists("mfaDetail", $this->_propDict)) {
-            if (is_a($this->_propDict["mfaDetail"], "Microsoft\Graph\Beta\Model\MfaDetail")) {
+            if (is_a($this->_propDict["mfaDetail"], "Microsoft\Graph\Model\MfaDetail")) {
                 return $this->_propDict["mfaDetail"];
             } else {
                 $this->_propDict["mfaDetail"] = new MfaDetail($this->_propDict["mfaDetail"]);
@@ -405,7 +405,7 @@ class SignIn extends Entity
     public function getConditionalAccessStatus()
     {
         if (array_key_exists("conditionalAccessStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["conditionalAccessStatus"], "Microsoft\Graph\Beta\Model\ConditionalAccessStatus")) {
+            if (is_a($this->_propDict["conditionalAccessStatus"], "Microsoft\Graph\Model\ConditionalAccessStatus")) {
                 return $this->_propDict["conditionalAccessStatus"];
             } else {
                 $this->_propDict["conditionalAccessStatus"] = new ConditionalAccessStatus($this->_propDict["conditionalAccessStatus"]);
@@ -430,87 +430,457 @@ class SignIn extends Entity
     
 
      /** 
-     * Gets the conditionalAccessPolicies
+     * Gets the appliedConditionalAccessPolicies
      *
-     * @return array The conditionalAccessPolicies
+     * @return array The appliedConditionalAccessPolicies
      */
-    public function getConditionalAccessPolicies()
+    public function getAppliedConditionalAccessPolicies()
     {
-        if (array_key_exists("conditionalAccessPolicies", $this->_propDict)) {
-           return $this->_propDict["conditionalAccessPolicies"];
+        if (array_key_exists("appliedConditionalAccessPolicies", $this->_propDict)) {
+           return $this->_propDict["appliedConditionalAccessPolicies"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the conditionalAccessPolicies
+    * Sets the appliedConditionalAccessPolicies
     *
-    * @param ConditionalAccessPolicy $val The conditionalAccessPolicies
+    * @param AppliedConditionalAccessPolicy $val The appliedConditionalAccessPolicies
     *
     * @return SignIn
     */
-    public function setConditionalAccessPolicies($val)
+    public function setAppliedConditionalAccessPolicies($val)
     {
-		$this->_propDict["conditionalAccessPolicies"] = $val;
+		$this->_propDict["appliedConditionalAccessPolicies"] = $val;
         return $this;
     }
     
     /**
-    * Gets the isRisky
+    * Gets the originalRequestId
     *
-    * @return bool The isRisky
+    * @return string The originalRequestId
     */
-    public function getIsRisky()
+    public function getOriginalRequestId()
     {
-        if (array_key_exists("isRisky", $this->_propDict)) {
-            return $this->_propDict["isRisky"];
+        if (array_key_exists("originalRequestId", $this->_propDict)) {
+            return $this->_propDict["originalRequestId"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the isRisky
+    * Sets the originalRequestId
     *
-    * @param bool $val The isRisky
+    * @param string $val The originalRequestId
     *
     * @return SignIn
     */
-    public function setIsRisky($val)
+    public function setOriginalRequestId($val)
     {
-        $this->_propDict["isRisky"] = boolval($val);
+        $this->_propDict["originalRequestId"] = $val;
         return $this;
     }
     
     /**
-    * Gets the riskLevel
+    * Gets the isInteractive
     *
-    * @return RiskLevel The riskLevel
+    * @return bool The isInteractive
     */
-    public function getRiskLevel()
+    public function getIsInteractive()
     {
-        if (array_key_exists("riskLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["riskLevel"], "Microsoft\Graph\Beta\Model\RiskLevel")) {
-                return $this->_propDict["riskLevel"];
+        if (array_key_exists("isInteractive", $this->_propDict)) {
+            return $this->_propDict["isInteractive"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isInteractive
+    *
+    * @param bool $val The isInteractive
+    *
+    * @return SignIn
+    */
+    public function setIsInteractive($val)
+    {
+        $this->_propDict["isInteractive"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the tokenIssuerName
+    *
+    * @return string The tokenIssuerName
+    */
+    public function getTokenIssuerName()
+    {
+        if (array_key_exists("tokenIssuerName", $this->_propDict)) {
+            return $this->_propDict["tokenIssuerName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the tokenIssuerName
+    *
+    * @param string $val The tokenIssuerName
+    *
+    * @return SignIn
+    */
+    public function setTokenIssuerName($val)
+    {
+        $this->_propDict["tokenIssuerName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the tokenIssuerType
+    *
+    * @return TokenIssuerType The tokenIssuerType
+    */
+    public function getTokenIssuerType()
+    {
+        if (array_key_exists("tokenIssuerType", $this->_propDict)) {
+            if (is_a($this->_propDict["tokenIssuerType"], "Microsoft\Graph\Model\TokenIssuerType")) {
+                return $this->_propDict["tokenIssuerType"];
             } else {
-                $this->_propDict["riskLevel"] = new RiskLevel($this->_propDict["riskLevel"]);
-                return $this->_propDict["riskLevel"];
+                $this->_propDict["tokenIssuerType"] = new TokenIssuerType($this->_propDict["tokenIssuerType"]);
+                return $this->_propDict["tokenIssuerType"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the riskLevel
+    * Sets the tokenIssuerType
     *
-    * @param RiskLevel $val The riskLevel
+    * @param TokenIssuerType $val The tokenIssuerType
     *
     * @return SignIn
     */
-    public function setRiskLevel($val)
+    public function setTokenIssuerType($val)
     {
-        $this->_propDict["riskLevel"] = $val;
+        $this->_propDict["tokenIssuerType"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the authenticationProcessingDetails
+     *
+     * @return array The authenticationProcessingDetails
+     */
+    public function getAuthenticationProcessingDetails()
+    {
+        if (array_key_exists("authenticationProcessingDetails", $this->_propDict)) {
+           return $this->_propDict["authenticationProcessingDetails"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the authenticationProcessingDetails
+    *
+    * @param KeyValue $val The authenticationProcessingDetails
+    *
+    * @return SignIn
+    */
+    public function setAuthenticationProcessingDetails($val)
+    {
+		$this->_propDict["authenticationProcessingDetails"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the networkLocationDetails
+     *
+     * @return array The networkLocationDetails
+     */
+    public function getNetworkLocationDetails()
+    {
+        if (array_key_exists("networkLocationDetails", $this->_propDict)) {
+           return $this->_propDict["networkLocationDetails"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the networkLocationDetails
+    *
+    * @param NetworkLocationDetail $val The networkLocationDetails
+    *
+    * @return SignIn
+    */
+    public function setNetworkLocationDetails($val)
+    {
+		$this->_propDict["networkLocationDetails"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the processingTimeInMilliseconds
+    *
+    * @return int The processingTimeInMilliseconds
+    */
+    public function getProcessingTimeInMilliseconds()
+    {
+        if (array_key_exists("processingTimeInMilliseconds", $this->_propDict)) {
+            return $this->_propDict["processingTimeInMilliseconds"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the processingTimeInMilliseconds
+    *
+    * @param int $val The processingTimeInMilliseconds
+    *
+    * @return SignIn
+    */
+    public function setProcessingTimeInMilliseconds($val)
+    {
+        $this->_propDict["processingTimeInMilliseconds"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the riskDetail
+    *
+    * @return RiskDetail The riskDetail
+    */
+    public function getRiskDetail()
+    {
+        if (array_key_exists("riskDetail", $this->_propDict)) {
+            if (is_a($this->_propDict["riskDetail"], "Microsoft\Graph\Model\RiskDetail")) {
+                return $this->_propDict["riskDetail"];
+            } else {
+                $this->_propDict["riskDetail"] = new RiskDetail($this->_propDict["riskDetail"]);
+                return $this->_propDict["riskDetail"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the riskDetail
+    *
+    * @param RiskDetail $val The riskDetail
+    *
+    * @return SignIn
+    */
+    public function setRiskDetail($val)
+    {
+        $this->_propDict["riskDetail"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the riskLevelAggregated
+    *
+    * @return RiskLevel The riskLevelAggregated
+    */
+    public function getRiskLevelAggregated()
+    {
+        if (array_key_exists("riskLevelAggregated", $this->_propDict)) {
+            if (is_a($this->_propDict["riskLevelAggregated"], "Microsoft\Graph\Model\RiskLevel")) {
+                return $this->_propDict["riskLevelAggregated"];
+            } else {
+                $this->_propDict["riskLevelAggregated"] = new RiskLevel($this->_propDict["riskLevelAggregated"]);
+                return $this->_propDict["riskLevelAggregated"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the riskLevelAggregated
+    *
+    * @param RiskLevel $val The riskLevelAggregated
+    *
+    * @return SignIn
+    */
+    public function setRiskLevelAggregated($val)
+    {
+        $this->_propDict["riskLevelAggregated"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the riskLevelDuringSignIn
+    *
+    * @return RiskLevel The riskLevelDuringSignIn
+    */
+    public function getRiskLevelDuringSignIn()
+    {
+        if (array_key_exists("riskLevelDuringSignIn", $this->_propDict)) {
+            if (is_a($this->_propDict["riskLevelDuringSignIn"], "Microsoft\Graph\Model\RiskLevel")) {
+                return $this->_propDict["riskLevelDuringSignIn"];
+            } else {
+                $this->_propDict["riskLevelDuringSignIn"] = new RiskLevel($this->_propDict["riskLevelDuringSignIn"]);
+                return $this->_propDict["riskLevelDuringSignIn"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the riskLevelDuringSignIn
+    *
+    * @param RiskLevel $val The riskLevelDuringSignIn
+    *
+    * @return SignIn
+    */
+    public function setRiskLevelDuringSignIn($val)
+    {
+        $this->_propDict["riskLevelDuringSignIn"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the riskState
+    *
+    * @return RiskState The riskState
+    */
+    public function getRiskState()
+    {
+        if (array_key_exists("riskState", $this->_propDict)) {
+            if (is_a($this->_propDict["riskState"], "Microsoft\Graph\Model\RiskState")) {
+                return $this->_propDict["riskState"];
+            } else {
+                $this->_propDict["riskState"] = new RiskState($this->_propDict["riskState"]);
+                return $this->_propDict["riskState"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the riskState
+    *
+    * @param RiskState $val The riskState
+    *
+    * @return SignIn
+    */
+    public function setRiskState($val)
+    {
+        $this->_propDict["riskState"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the riskEventTypes
+     *
+     * @return array The riskEventTypes
+     */
+    public function getRiskEventTypes()
+    {
+        if (array_key_exists("riskEventTypes", $this->_propDict)) {
+           return $this->_propDict["riskEventTypes"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the riskEventTypes
+    *
+    * @param RiskEventType $val The riskEventTypes
+    *
+    * @return SignIn
+    */
+    public function setRiskEventTypes($val)
+    {
+		$this->_propDict["riskEventTypes"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the resourceDisplayName
+    *
+    * @return string The resourceDisplayName
+    */
+    public function getResourceDisplayName()
+    {
+        if (array_key_exists("resourceDisplayName", $this->_propDict)) {
+            return $this->_propDict["resourceDisplayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the resourceDisplayName
+    *
+    * @param string $val The resourceDisplayName
+    *
+    * @return SignIn
+    */
+    public function setResourceDisplayName($val)
+    {
+        $this->_propDict["resourceDisplayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the resourceId
+    *
+    * @return string The resourceId
+    */
+    public function getResourceId()
+    {
+        if (array_key_exists("resourceId", $this->_propDict)) {
+            return $this->_propDict["resourceId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the resourceId
+    *
+    * @param string $val The resourceId
+    *
+    * @return SignIn
+    */
+    public function setResourceId($val)
+    {
+        $this->_propDict["resourceId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the authenticationMethodsUsed
+    *
+    * @return string The authenticationMethodsUsed
+    */
+    public function getAuthenticationMethodsUsed()
+    {
+        if (array_key_exists("authenticationMethodsUsed", $this->_propDict)) {
+            return $this->_propDict["authenticationMethodsUsed"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the authenticationMethodsUsed
+    *
+    * @param string $val The authenticationMethodsUsed
+    *
+    * @return SignIn
+    */
+    public function setAuthenticationMethodsUsed($val)
+    {
+        $this->_propDict["authenticationMethodsUsed"] = $val;
         return $this;
     }
     

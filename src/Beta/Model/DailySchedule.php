@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * DailySchedule class
 *
@@ -27,6 +27,7 @@ class DailySchedule extends RunSchedule
 {
     /**
     * Gets the interval
+    * Interval in number of days
     *
     * @return int The interval
     */
@@ -41,6 +42,7 @@ class DailySchedule extends RunSchedule
 
     /**
     * Sets the interval
+    * Interval in number of days
     *
     * @param int $val The value of the interval
     *

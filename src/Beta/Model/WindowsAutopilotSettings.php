@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * WindowsAutopilotSettings class
@@ -28,6 +28,7 @@ class WindowsAutopilotSettings extends Entity
 {
     /**
     * Gets the lastSyncDateTime
+    * Last data sync date time with DDS service.
     *
     * @return \DateTime The lastSyncDateTime
     */
@@ -46,6 +47,7 @@ class WindowsAutopilotSettings extends Entity
     
     /**
     * Sets the lastSyncDateTime
+    * Last data sync date time with DDS service.
     *
     * @param \DateTime $val The lastSyncDateTime
     *
@@ -59,6 +61,7 @@ class WindowsAutopilotSettings extends Entity
     
     /**
     * Gets the lastManualSyncTriggerDateTime
+    * Last data sync date time with DDS service.
     *
     * @return \DateTime The lastManualSyncTriggerDateTime
     */
@@ -77,6 +80,7 @@ class WindowsAutopilotSettings extends Entity
     
     /**
     * Sets the lastManualSyncTriggerDateTime
+    * Last data sync date time with DDS service.
     *
     * @param \DateTime $val The lastManualSyncTriggerDateTime
     *
@@ -90,13 +94,14 @@ class WindowsAutopilotSettings extends Entity
     
     /**
     * Gets the syncStatus
+    * Indicates the status of sync with Device data sync (DDS) service.
     *
     * @return WindowsAutopilotSyncStatus The syncStatus
     */
     public function getSyncStatus()
     {
         if (array_key_exists("syncStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["syncStatus"], "Microsoft\Graph\Beta\Model\WindowsAutopilotSyncStatus")) {
+            if (is_a($this->_propDict["syncStatus"], "Microsoft\Graph\Model\WindowsAutopilotSyncStatus")) {
                 return $this->_propDict["syncStatus"];
             } else {
                 $this->_propDict["syncStatus"] = new WindowsAutopilotSyncStatus($this->_propDict["syncStatus"]);
@@ -108,6 +113,7 @@ class WindowsAutopilotSettings extends Entity
     
     /**
     * Sets the syncStatus
+    * Indicates the status of sync with Device data sync (DDS) service.
     *
     * @param WindowsAutopilotSyncStatus $val The syncStatus
     *

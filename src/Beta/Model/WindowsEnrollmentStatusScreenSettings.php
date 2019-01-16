@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * WindowsEnrollmentStatusScreenSettings class
 *
@@ -27,6 +27,7 @@ class WindowsEnrollmentStatusScreenSettings extends Entity
 {
     /**
     * Gets the hideInstallationProgress
+    * Show or hide installation progress to user
     *
     * @return bool The hideInstallationProgress
     */
@@ -41,6 +42,7 @@ class WindowsEnrollmentStatusScreenSettings extends Entity
 
     /**
     * Sets the hideInstallationProgress
+    * Show or hide installation progress to user
     *
     * @param bool $val The value of the hideInstallationProgress
     *
@@ -53,6 +55,7 @@ class WindowsEnrollmentStatusScreenSettings extends Entity
     }
     /**
     * Gets the allowDeviceUseBeforeProfileAndAppInstallComplete
+    * Allow or block user to use device before profile and app installation complete
     *
     * @return bool The allowDeviceUseBeforeProfileAndAppInstallComplete
     */
@@ -67,6 +70,7 @@ class WindowsEnrollmentStatusScreenSettings extends Entity
 
     /**
     * Sets the allowDeviceUseBeforeProfileAndAppInstallComplete
+    * Allow or block user to use device before profile and app installation complete
     *
     * @param bool $val The value of the allowDeviceUseBeforeProfileAndAppInstallComplete
     *
@@ -79,6 +83,7 @@ class WindowsEnrollmentStatusScreenSettings extends Entity
     }
     /**
     * Gets the blockDeviceSetupRetryByUser
+    * Allow the user to retry the setup on installation failure
     *
     * @return bool The blockDeviceSetupRetryByUser
     */
@@ -93,6 +98,7 @@ class WindowsEnrollmentStatusScreenSettings extends Entity
 
     /**
     * Sets the blockDeviceSetupRetryByUser
+    * Allow the user to retry the setup on installation failure
     *
     * @param bool $val The value of the blockDeviceSetupRetryByUser
     *
@@ -105,6 +111,7 @@ class WindowsEnrollmentStatusScreenSettings extends Entity
     }
     /**
     * Gets the allowLogCollectionOnInstallFailure
+    * Allow or block log collection on installation failure
     *
     * @return bool The allowLogCollectionOnInstallFailure
     */
@@ -119,6 +126,7 @@ class WindowsEnrollmentStatusScreenSettings extends Entity
 
     /**
     * Sets the allowLogCollectionOnInstallFailure
+    * Allow or block log collection on installation failure
     *
     * @param bool $val The value of the allowLogCollectionOnInstallFailure
     *
@@ -131,6 +139,7 @@ class WindowsEnrollmentStatusScreenSettings extends Entity
     }
     /**
     * Gets the customErrorMessage
+    * Set custom error message to show upon installation failure
     *
     * @return string The customErrorMessage
     */
@@ -145,6 +154,7 @@ class WindowsEnrollmentStatusScreenSettings extends Entity
 
     /**
     * Sets the customErrorMessage
+    * Set custom error message to show upon installation failure
     *
     * @param string $val The value of the customErrorMessage
     *
@@ -157,6 +167,7 @@ class WindowsEnrollmentStatusScreenSettings extends Entity
     }
     /**
     * Gets the installProgressTimeoutInMinutes
+    * Set installation progress timeout in minutes
     *
     * @return int The installProgressTimeoutInMinutes
     */
@@ -171,6 +182,7 @@ class WindowsEnrollmentStatusScreenSettings extends Entity
 
     /**
     * Sets the installProgressTimeoutInMinutes
+    * Set installation progress timeout in minutes
     *
     * @param int $val The value of the installProgressTimeoutInMinutes
     *
@@ -183,6 +195,7 @@ class WindowsEnrollmentStatusScreenSettings extends Entity
     }
     /**
     * Gets the allowDeviceUseOnInstallFailure
+    * Allow the user to continue using the device on installation failure
     *
     * @return bool The allowDeviceUseOnInstallFailure
     */
@@ -197,6 +210,7 @@ class WindowsEnrollmentStatusScreenSettings extends Entity
 
     /**
     * Sets the allowDeviceUseOnInstallFailure
+    * Allow the user to continue using the device on installation failure
     *
     * @param bool $val The value of the allowDeviceUseOnInstallFailure
     *

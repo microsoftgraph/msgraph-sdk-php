@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * NetworkIPv6ConfigurationManagementCondition class
@@ -28,6 +28,7 @@ class NetworkIPv6ConfigurationManagementCondition extends NetworkManagementCondi
 {
     /**
     * Gets the ipV6Prefix
+    * The IPv6 subnet to be connected to. e.g. 2001:db8::/32
     *
     * @return string The ipV6Prefix
     */
@@ -42,6 +43,7 @@ class NetworkIPv6ConfigurationManagementCondition extends NetworkManagementCondi
     
     /**
     * Sets the ipV6Prefix
+    * The IPv6 subnet to be connected to. e.g. 2001:db8::/32
     *
     * @param string $val The ipV6Prefix
     *
@@ -55,6 +57,7 @@ class NetworkIPv6ConfigurationManagementCondition extends NetworkManagementCondi
     
     /**
     * Gets the ipV6Gateway
+    * The IPv6 gateway address to. e.g 2001:db8::1
     *
     * @return string The ipV6Gateway
     */
@@ -69,6 +72,7 @@ class NetworkIPv6ConfigurationManagementCondition extends NetworkManagementCondi
     
     /**
     * Sets the ipV6Gateway
+    * The IPv6 gateway address to. e.g 2001:db8::1
     *
     * @param string $val The ipV6Gateway
     *
@@ -82,6 +86,7 @@ class NetworkIPv6ConfigurationManagementCondition extends NetworkManagementCondi
     
     /**
     * Gets the ipV6DNSServerList
+    * An IPv6 DNS servers configured for the adapter.
     *
     * @return string The ipV6DNSServerList
     */
@@ -96,6 +101,7 @@ class NetworkIPv6ConfigurationManagementCondition extends NetworkManagementCondi
     
     /**
     * Sets the ipV6DNSServerList
+    * An IPv6 DNS servers configured for the adapter.
     *
     * @param string $val The ipV6DNSServerList
     *
@@ -109,6 +115,7 @@ class NetworkIPv6ConfigurationManagementCondition extends NetworkManagementCondi
     
     /**
     * Gets the dnsSuffixList
+    * Valid DNS suffixes for the current network. e.g. seattle.contoso.com
     *
     * @return string The dnsSuffixList
     */
@@ -123,6 +130,7 @@ class NetworkIPv6ConfigurationManagementCondition extends NetworkManagementCondi
     
     /**
     * Sets the dnsSuffixList
+    * Valid DNS suffixes for the current network. e.g. seattle.contoso.com
     *
     * @param string $val The dnsSuffixList
     *

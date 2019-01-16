@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * DeviceManagementTroubleshootingEvent class
@@ -28,6 +28,7 @@ class DeviceManagementTroubleshootingEvent extends Entity
 {
     /**
     * Gets the eventDateTime
+    * Time when the event occurred .
     *
     * @return \DateTime The eventDateTime
     */
@@ -46,6 +47,7 @@ class DeviceManagementTroubleshootingEvent extends Entity
     
     /**
     * Sets the eventDateTime
+    * Time when the event occurred .
     *
     * @param \DateTime $val The eventDateTime
     *
@@ -59,6 +61,7 @@ class DeviceManagementTroubleshootingEvent extends Entity
     
     /**
     * Gets the correlationId
+    * Id used for tracing the failure in the service.
     *
     * @return string The correlationId
     */
@@ -73,6 +76,7 @@ class DeviceManagementTroubleshootingEvent extends Entity
     
     /**
     * Sets the correlationId
+    * Id used for tracing the failure in the service.
     *
     * @param string $val The correlationId
     *

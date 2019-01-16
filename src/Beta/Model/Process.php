@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * Process class
 *
@@ -27,6 +27,7 @@ class Process extends Entity
 {
     /**
     * Gets the accountName
+    * User account identifier (user account context the process ran under) for example, AccountName, SID, and so on.
     *
     * @return string The accountName
     */
@@ -41,6 +42,7 @@ class Process extends Entity
 
     /**
     * Sets the accountName
+    * User account identifier (user account context the process ran under) for example, AccountName, SID, and so on.
     *
     * @param string $val The value of the accountName
     *
@@ -53,6 +55,7 @@ class Process extends Entity
     }
     /**
     * Gets the commandLine
+    * The full process invocation commandline including all parameters.
     *
     * @return string The commandLine
     */
@@ -67,6 +70,7 @@ class Process extends Entity
 
     /**
     * Sets the commandLine
+    * The full process invocation commandline including all parameters.
     *
     * @param string $val The value of the commandLine
     *
@@ -80,13 +84,14 @@ class Process extends Entity
 
     /**
     * Gets the createdDateTime
+    * Time at which the process was started. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @return \DateTime The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "Microsoft\Graph\Beta\Model\\DateTime")) {
+            if (is_a($this->_propDict["createdDateTime"], "Microsoft\Graph\Model\\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -98,6 +103,7 @@ class Process extends Entity
 
     /**
     * Sets the createdDateTime
+    * Time at which the process was started. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @param \DateTime $val The value to assign to the createdDateTime
     *
@@ -111,13 +117,14 @@ class Process extends Entity
 
     /**
     * Gets the fileHash
+    * Complex type containing file hashes (cryptographic and location-sensitive).
     *
     * @return FileHash The fileHash
     */
     public function getFileHash()
     {
         if (array_key_exists("fileHash", $this->_propDict)) {
-            if (is_a($this->_propDict["fileHash"], "Microsoft\Graph\Beta\Model\FileHash")) {
+            if (is_a($this->_propDict["fileHash"], "Microsoft\Graph\Model\FileHash")) {
                 return $this->_propDict["fileHash"];
             } else {
                 $this->_propDict["fileHash"] = new FileHash($this->_propDict["fileHash"]);
@@ -129,6 +136,7 @@ class Process extends Entity
 
     /**
     * Sets the fileHash
+    * Complex type containing file hashes (cryptographic and location-sensitive).
     *
     * @param FileHash $val The value to assign to the fileHash
     *
@@ -142,13 +150,14 @@ class Process extends Entity
 
     /**
     * Gets the integrityLevel
+    * The integrity level of the process. Possible values are: unknown, untrusted, low, medium, high, system.
     *
     * @return ProcessIntegrityLevel The integrityLevel
     */
     public function getIntegrityLevel()
     {
         if (array_key_exists("integrityLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["integrityLevel"], "Microsoft\Graph\Beta\Model\ProcessIntegrityLevel")) {
+            if (is_a($this->_propDict["integrityLevel"], "Microsoft\Graph\Model\ProcessIntegrityLevel")) {
                 return $this->_propDict["integrityLevel"];
             } else {
                 $this->_propDict["integrityLevel"] = new ProcessIntegrityLevel($this->_propDict["integrityLevel"]);
@@ -160,6 +169,7 @@ class Process extends Entity
 
     /**
     * Sets the integrityLevel
+    * The integrity level of the process. Possible values are: unknown, untrusted, low, medium, high, system.
     *
     * @param ProcessIntegrityLevel $val The value to assign to the integrityLevel
     *
@@ -172,6 +182,7 @@ class Process extends Entity
     }
     /**
     * Gets the isElevated
+    * True if the process is elevated.
     *
     * @return bool The isElevated
     */
@@ -186,6 +197,7 @@ class Process extends Entity
 
     /**
     * Sets the isElevated
+    * True if the process is elevated.
     *
     * @param bool $val The value of the isElevated
     *
@@ -198,6 +210,7 @@ class Process extends Entity
     }
     /**
     * Gets the name
+    * The name of the process' Image file.
     *
     * @return string The name
     */
@@ -212,6 +225,7 @@ class Process extends Entity
 
     /**
     * Sets the name
+    * The name of the process' Image file.
     *
     * @param string $val The value of the name
     *
@@ -225,13 +239,14 @@ class Process extends Entity
 
     /**
     * Gets the parentProcessCreatedDateTime
+    * DateTime at which the parent process was started. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @return \DateTime The parentProcessCreatedDateTime
     */
     public function getParentProcessCreatedDateTime()
     {
         if (array_key_exists("parentProcessCreatedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["parentProcessCreatedDateTime"], "Microsoft\Graph\Beta\Model\\DateTime")) {
+            if (is_a($this->_propDict["parentProcessCreatedDateTime"], "Microsoft\Graph\Model\\DateTime")) {
                 return $this->_propDict["parentProcessCreatedDateTime"];
             } else {
                 $this->_propDict["parentProcessCreatedDateTime"] = new \DateTime($this->_propDict["parentProcessCreatedDateTime"]);
@@ -243,6 +258,7 @@ class Process extends Entity
 
     /**
     * Sets the parentProcessCreatedDateTime
+    * DateTime at which the parent process was started. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @param \DateTime $val The value to assign to the parentProcessCreatedDateTime
     *
@@ -255,6 +271,7 @@ class Process extends Entity
     }
     /**
     * Gets the parentProcessId
+    * The Process ID (PID) of the parent process.
     *
     * @return int The parentProcessId
     */
@@ -269,6 +286,7 @@ class Process extends Entity
 
     /**
     * Sets the parentProcessId
+    * The Process ID (PID) of the parent process.
     *
     * @param int $val The value of the parentProcessId
     *
@@ -281,6 +299,7 @@ class Process extends Entity
     }
     /**
     * Gets the parentProcessName
+    * The name of the image file of the parent process.
     *
     * @return string The parentProcessName
     */
@@ -295,6 +314,7 @@ class Process extends Entity
 
     /**
     * Sets the parentProcessName
+    * The name of the image file of the parent process.
     *
     * @param string $val The value of the parentProcessName
     *
@@ -307,6 +327,7 @@ class Process extends Entity
     }
     /**
     * Gets the path
+    * Full path, including filename.
     *
     * @return string The path
     */
@@ -321,6 +342,7 @@ class Process extends Entity
 
     /**
     * Sets the path
+    * Full path, including filename.
     *
     * @param string $val The value of the path
     *
@@ -333,6 +355,7 @@ class Process extends Entity
     }
     /**
     * Gets the processId
+    * The Process ID (PID) of the process.
     *
     * @return int The processId
     */
@@ -347,6 +370,7 @@ class Process extends Entity
 
     /**
     * Sets the processId
+    * The Process ID (PID) of the process.
     *
     * @param int $val The value of the processId
     *

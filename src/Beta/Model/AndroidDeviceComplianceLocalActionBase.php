@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * AndroidDeviceComplianceLocalActionBase class
@@ -28,6 +28,7 @@ class AndroidDeviceComplianceLocalActionBase extends Entity
 {
     /**
     * Gets the gracePeriodInMinutes
+    * Number of minutes to wait till a local action is enforced. Valid values 0 to 2147483647
     *
     * @return int The gracePeriodInMinutes
     */
@@ -42,6 +43,7 @@ class AndroidDeviceComplianceLocalActionBase extends Entity
     
     /**
     * Sets the gracePeriodInMinutes
+    * Number of minutes to wait till a local action is enforced. Valid values 0 to 2147483647
     *
     * @param int $val The gracePeriodInMinutes
     *

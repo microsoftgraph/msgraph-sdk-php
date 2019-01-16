@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * MeetingTimeCandidate class
 *
@@ -34,7 +34,7 @@ class MeetingTimeCandidate extends Entity
     public function getMeetingTimeSlot()
     {
         if (array_key_exists("meetingTimeSlot", $this->_propDict)) {
-            if (is_a($this->_propDict["meetingTimeSlot"], "Microsoft\Graph\Beta\Model\TimeSlotOLD")) {
+            if (is_a($this->_propDict["meetingTimeSlot"], "Microsoft\Graph\Model\TimeSlotOLD")) {
                 return $this->_propDict["meetingTimeSlot"];
             } else {
                 $this->_propDict["meetingTimeSlot"] = new TimeSlotOLD($this->_propDict["meetingTimeSlot"]);
@@ -91,7 +91,7 @@ class MeetingTimeCandidate extends Entity
     public function getOrganizerAvailability()
     {
         if (array_key_exists("organizerAvailability", $this->_propDict)) {
-            if (is_a($this->_propDict["organizerAvailability"], "Microsoft\Graph\Beta\Model\FreeBusyStatus")) {
+            if (is_a($this->_propDict["organizerAvailability"], "Microsoft\Graph\Model\FreeBusyStatus")) {
                 return $this->_propDict["organizerAvailability"];
             } else {
                 $this->_propDict["organizerAvailability"] = new FreeBusyStatus($this->_propDict["organizerAvailability"]);
@@ -122,7 +122,7 @@ class MeetingTimeCandidate extends Entity
     public function getAttendeeAvailability()
     {
         if (array_key_exists("attendeeAvailability", $this->_propDict)) {
-            if (is_a($this->_propDict["attendeeAvailability"], "Microsoft\Graph\Beta\Model\AttendeeAvailability")) {
+            if (is_a($this->_propDict["attendeeAvailability"], "Microsoft\Graph\Model\AttendeeAvailability")) {
                 return $this->_propDict["attendeeAvailability"];
             } else {
                 $this->_propDict["attendeeAvailability"] = new AttendeeAvailability($this->_propDict["attendeeAvailability"]);
@@ -153,7 +153,7 @@ class MeetingTimeCandidate extends Entity
     public function getLocations()
     {
         if (array_key_exists("locations", $this->_propDict)) {
-            if (is_a($this->_propDict["locations"], "Microsoft\Graph\Beta\Model\Location")) {
+            if (is_a($this->_propDict["locations"], "Microsoft\Graph\Model\Location")) {
                 return $this->_propDict["locations"];
             } else {
                 $this->_propDict["locations"] = new Location($this->_propDict["locations"]);

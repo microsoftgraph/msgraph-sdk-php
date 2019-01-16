@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * DomainDnsUnavailableRecord class
@@ -28,6 +28,7 @@ class DomainDnsUnavailableRecord extends DomainDnsRecord
 {
     /**
     * Gets the description
+    * Provides the reason why the DomainDnsUnavailableRecord entity is returned.
     *
     * @return string The description
     */
@@ -42,6 +43,7 @@ class DomainDnsUnavailableRecord extends DomainDnsRecord
     
     /**
     * Sets the description
+    * Provides the reason why the DomainDnsUnavailableRecord entity is returned.
     *
     * @param string $val The description
     *

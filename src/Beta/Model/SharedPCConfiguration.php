@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * SharedPCConfiguration class
@@ -28,13 +28,14 @@ class SharedPCConfiguration extends DeviceConfiguration
 {
     /**
     * Gets the accountManagerPolicy
+    * Specifies how accounts are managed on a shared PC. Only applies when disableAccountManager is false.
     *
     * @return SharedPCAccountManagerPolicy The accountManagerPolicy
     */
     public function getAccountManagerPolicy()
     {
         if (array_key_exists("accountManagerPolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["accountManagerPolicy"], "Microsoft\Graph\Beta\Model\SharedPCAccountManagerPolicy")) {
+            if (is_a($this->_propDict["accountManagerPolicy"], "Microsoft\Graph\Model\SharedPCAccountManagerPolicy")) {
                 return $this->_propDict["accountManagerPolicy"];
             } else {
                 $this->_propDict["accountManagerPolicy"] = new SharedPCAccountManagerPolicy($this->_propDict["accountManagerPolicy"]);
@@ -46,6 +47,7 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Sets the accountManagerPolicy
+    * Specifies how accounts are managed on a shared PC. Only applies when disableAccountManager is false.
     *
     * @param SharedPCAccountManagerPolicy $val The accountManagerPolicy
     *
@@ -59,13 +61,14 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Gets the allowedAccounts
+    * Indicates which type of accounts are allowed to use on a shared PC. Possible values are: guest, domain.
     *
     * @return SharedPCAllowedAccountType The allowedAccounts
     */
     public function getAllowedAccounts()
     {
         if (array_key_exists("allowedAccounts", $this->_propDict)) {
-            if (is_a($this->_propDict["allowedAccounts"], "Microsoft\Graph\Beta\Model\SharedPCAllowedAccountType")) {
+            if (is_a($this->_propDict["allowedAccounts"], "Microsoft\Graph\Model\SharedPCAllowedAccountType")) {
                 return $this->_propDict["allowedAccounts"];
             } else {
                 $this->_propDict["allowedAccounts"] = new SharedPCAllowedAccountType($this->_propDict["allowedAccounts"]);
@@ -77,6 +80,7 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Sets the allowedAccounts
+    * Indicates which type of accounts are allowed to use on a shared PC. Possible values are: guest, domain.
     *
     * @param SharedPCAllowedAccountType $val The allowedAccounts
     *
@@ -90,13 +94,14 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Gets the localStorage
+    * Specifies whether local storage is allowed on a shared PC.
     *
     * @return Enablement The localStorage
     */
     public function getLocalStorage()
     {
         if (array_key_exists("localStorage", $this->_propDict)) {
-            if (is_a($this->_propDict["localStorage"], "Microsoft\Graph\Beta\Model\Enablement")) {
+            if (is_a($this->_propDict["localStorage"], "Microsoft\Graph\Model\Enablement")) {
                 return $this->_propDict["localStorage"];
             } else {
                 $this->_propDict["localStorage"] = new Enablement($this->_propDict["localStorage"]);
@@ -108,6 +113,7 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Sets the localStorage
+    * Specifies whether local storage is allowed on a shared PC.
     *
     * @param Enablement $val The localStorage
     *
@@ -121,6 +127,7 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Gets the allowLocalStorage
+    * Specifies whether local storage is allowed on a shared PC.
     *
     * @return bool The allowLocalStorage
     */
@@ -135,6 +142,7 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Sets the allowLocalStorage
+    * Specifies whether local storage is allowed on a shared PC.
     *
     * @param bool $val The allowLocalStorage
     *
@@ -148,13 +156,14 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Gets the setAccountManager
+    * Disables the account manager for shared PC mode.
     *
     * @return Enablement The setAccountManager
     */
     public function getSetAccountManager()
     {
         if (array_key_exists("setAccountManager", $this->_propDict)) {
-            if (is_a($this->_propDict["setAccountManager"], "Microsoft\Graph\Beta\Model\Enablement")) {
+            if (is_a($this->_propDict["setAccountManager"], "Microsoft\Graph\Model\Enablement")) {
                 return $this->_propDict["setAccountManager"];
             } else {
                 $this->_propDict["setAccountManager"] = new Enablement($this->_propDict["setAccountManager"]);
@@ -166,6 +175,7 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Sets the setAccountManager
+    * Disables the account manager for shared PC mode.
     *
     * @param Enablement $val The setAccountManager
     *
@@ -179,6 +189,7 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Gets the disableAccountManager
+    * Disables the account manager for shared PC mode.
     *
     * @return bool The disableAccountManager
     */
@@ -193,6 +204,7 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Sets the disableAccountManager
+    * Disables the account manager for shared PC mode.
     *
     * @param bool $val The disableAccountManager
     *
@@ -206,13 +218,14 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Gets the setEduPolicies
+    * Specifies whether the default shared PC education environment policies should be enabled/disabled/not configured. For Windows 10 RS2 and later, this policy will be applied without setting Enabled to true.
     *
     * @return Enablement The setEduPolicies
     */
     public function getSetEduPolicies()
     {
         if (array_key_exists("setEduPolicies", $this->_propDict)) {
-            if (is_a($this->_propDict["setEduPolicies"], "Microsoft\Graph\Beta\Model\Enablement")) {
+            if (is_a($this->_propDict["setEduPolicies"], "Microsoft\Graph\Model\Enablement")) {
                 return $this->_propDict["setEduPolicies"];
             } else {
                 $this->_propDict["setEduPolicies"] = new Enablement($this->_propDict["setEduPolicies"]);
@@ -224,6 +237,7 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Sets the setEduPolicies
+    * Specifies whether the default shared PC education environment policies should be enabled/disabled/not configured. For Windows 10 RS2 and later, this policy will be applied without setting Enabled to true.
     *
     * @param Enablement $val The setEduPolicies
     *
@@ -237,6 +251,7 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Gets the disableEduPolicies
+    * Specifies whether the default shared PC education environment policies should be disabled. For Windows 10 RS2 and later, this policy will be applied without setting Enabled to true.
     *
     * @return bool The disableEduPolicies
     */
@@ -251,6 +266,7 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Sets the disableEduPolicies
+    * Specifies whether the default shared PC education environment policies should be disabled. For Windows 10 RS2 and later, this policy will be applied without setting Enabled to true.
     *
     * @param bool $val The disableEduPolicies
     *
@@ -264,13 +280,14 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Gets the setPowerPolicies
+    * Specifies whether the default shared PC power policies should be enabled/disabled.
     *
     * @return Enablement The setPowerPolicies
     */
     public function getSetPowerPolicies()
     {
         if (array_key_exists("setPowerPolicies", $this->_propDict)) {
-            if (is_a($this->_propDict["setPowerPolicies"], "Microsoft\Graph\Beta\Model\Enablement")) {
+            if (is_a($this->_propDict["setPowerPolicies"], "Microsoft\Graph\Model\Enablement")) {
                 return $this->_propDict["setPowerPolicies"];
             } else {
                 $this->_propDict["setPowerPolicies"] = new Enablement($this->_propDict["setPowerPolicies"]);
@@ -282,6 +299,7 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Sets the setPowerPolicies
+    * Specifies whether the default shared PC power policies should be enabled/disabled.
     *
     * @param Enablement $val The setPowerPolicies
     *
@@ -295,6 +313,7 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Gets the disablePowerPolicies
+    * Specifies whether the default shared PC power policies should be disabled.
     *
     * @return bool The disablePowerPolicies
     */
@@ -309,6 +328,7 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Sets the disablePowerPolicies
+    * Specifies whether the default shared PC power policies should be disabled.
     *
     * @param bool $val The disablePowerPolicies
     *
@@ -322,13 +342,14 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Gets the signInOnResume
+    * Specifies the requirement to sign in whenever the device wakes up from sleep mode.
     *
     * @return Enablement The signInOnResume
     */
     public function getSignInOnResume()
     {
         if (array_key_exists("signInOnResume", $this->_propDict)) {
-            if (is_a($this->_propDict["signInOnResume"], "Microsoft\Graph\Beta\Model\Enablement")) {
+            if (is_a($this->_propDict["signInOnResume"], "Microsoft\Graph\Model\Enablement")) {
                 return $this->_propDict["signInOnResume"];
             } else {
                 $this->_propDict["signInOnResume"] = new Enablement($this->_propDict["signInOnResume"]);
@@ -340,6 +361,7 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Sets the signInOnResume
+    * Specifies the requirement to sign in whenever the device wakes up from sleep mode.
     *
     * @param Enablement $val The signInOnResume
     *
@@ -353,6 +375,7 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Gets the disableSignInOnResume
+    * Disables the requirement to sign in whenever the device wakes up from sleep mode.
     *
     * @return bool The disableSignInOnResume
     */
@@ -367,6 +390,7 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Sets the disableSignInOnResume
+    * Disables the requirement to sign in whenever the device wakes up from sleep mode.
     *
     * @param bool $val The disableSignInOnResume
     *
@@ -380,6 +404,7 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Gets the enabled
+    * Enables shared PC mode and applies the shared pc policies.
     *
     * @return bool The enabled
     */
@@ -394,6 +419,7 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Sets the enabled
+    * Enables shared PC mode and applies the shared pc policies.
     *
     * @param bool $val The enabled
     *
@@ -407,6 +433,7 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Gets the idleTimeBeforeSleepInSeconds
+    * Specifies the time in seconds that a device must sit idle before the PC goes to sleep. Setting this value to 0 prevents the sleep timeout from occurring.
     *
     * @return int The idleTimeBeforeSleepInSeconds
     */
@@ -421,6 +448,7 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Sets the idleTimeBeforeSleepInSeconds
+    * Specifies the time in seconds that a device must sit idle before the PC goes to sleep. Setting this value to 0 prevents the sleep timeout from occurring.
     *
     * @param int $val The idleTimeBeforeSleepInSeconds
     *
@@ -434,6 +462,7 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Gets the kioskAppDisplayName
+    * Specifies the display text for the account shown on the sign-in screen which launches the app specified by SetKioskAppUserModelId. Only applies when KioskAppUserModelId is set.
     *
     * @return string The kioskAppDisplayName
     */
@@ -448,6 +477,7 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Sets the kioskAppDisplayName
+    * Specifies the display text for the account shown on the sign-in screen which launches the app specified by SetKioskAppUserModelId. Only applies when KioskAppUserModelId is set.
     *
     * @param string $val The kioskAppDisplayName
     *
@@ -461,6 +491,7 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Gets the kioskAppUserModelId
+    * Specifies the application user model ID of the app to use with assigned access.
     *
     * @return string The kioskAppUserModelId
     */
@@ -475,6 +506,7 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Sets the kioskAppUserModelId
+    * Specifies the application user model ID of the app to use with assigned access.
     *
     * @param string $val The kioskAppUserModelId
     *
@@ -488,13 +520,14 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Gets the maintenanceStartTime
+    * Specifies the daily start time of maintenance hour.
     *
     * @return TimeOfDay The maintenanceStartTime
     */
     public function getMaintenanceStartTime()
     {
         if (array_key_exists("maintenanceStartTime", $this->_propDict)) {
-            if (is_a($this->_propDict["maintenanceStartTime"], "Microsoft\Graph\Beta\Model\TimeOfDay")) {
+            if (is_a($this->_propDict["maintenanceStartTime"], "Microsoft\Graph\Model\TimeOfDay")) {
                 return $this->_propDict["maintenanceStartTime"];
             } else {
                 $this->_propDict["maintenanceStartTime"] = new TimeOfDay($this->_propDict["maintenanceStartTime"]);
@@ -506,6 +539,7 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Sets the maintenanceStartTime
+    * Specifies the daily start time of maintenance hour.
     *
     * @param TimeOfDay $val The maintenanceStartTime
     *

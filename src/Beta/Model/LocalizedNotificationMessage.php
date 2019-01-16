@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * LocalizedNotificationMessage class
@@ -28,6 +28,7 @@ class LocalizedNotificationMessage extends Entity
 {
     /**
     * Gets the lastModifiedDateTime
+    * DateTime the object was last modified.
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -46,6 +47,7 @@ class LocalizedNotificationMessage extends Entity
     
     /**
     * Sets the lastModifiedDateTime
+    * DateTime the object was last modified.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -59,6 +61,7 @@ class LocalizedNotificationMessage extends Entity
     
     /**
     * Gets the locale
+    * The Locale for which this message is destined.
     *
     * @return string The locale
     */
@@ -73,6 +76,7 @@ class LocalizedNotificationMessage extends Entity
     
     /**
     * Sets the locale
+    * The Locale for which this message is destined.
     *
     * @param string $val The locale
     *
@@ -86,6 +90,7 @@ class LocalizedNotificationMessage extends Entity
     
     /**
     * Gets the subject
+    * The Message Template Subject.
     *
     * @return string The subject
     */
@@ -100,6 +105,7 @@ class LocalizedNotificationMessage extends Entity
     
     /**
     * Sets the subject
+    * The Message Template Subject.
     *
     * @param string $val The subject
     *
@@ -113,6 +119,7 @@ class LocalizedNotificationMessage extends Entity
     
     /**
     * Gets the messageTemplate
+    * The Message Template content.
     *
     * @return string The messageTemplate
     */
@@ -127,6 +134,7 @@ class LocalizedNotificationMessage extends Entity
     
     /**
     * Sets the messageTemplate
+    * The Message Template content.
     *
     * @param string $val The messageTemplate
     *
@@ -140,6 +148,7 @@ class LocalizedNotificationMessage extends Entity
     
     /**
     * Gets the isDefault
+    * Flag to indicate whether or not this is the default locale for language fallback. This flag can only be set. To unset, set this property to true on another Localized Notification Message.
     *
     * @return bool The isDefault
     */
@@ -154,6 +163,7 @@ class LocalizedNotificationMessage extends Entity
     
     /**
     * Sets the isDefault
+    * Flag to indicate whether or not this is the default locale for language fallback. This flag can only be set. To unset, set this property to true on another Localized Notification Message.
     *
     * @param bool $val The isDefault
     *

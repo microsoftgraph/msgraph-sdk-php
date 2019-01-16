@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * VppLicensingType class
 *
@@ -27,6 +27,7 @@ class VppLicensingType extends Entity
 {
     /**
     * Gets the supportUserLicensing
+    * Whether the program supports the user licensing type.
     *
     * @return bool The supportUserLicensing
     */
@@ -41,6 +42,7 @@ class VppLicensingType extends Entity
 
     /**
     * Sets the supportUserLicensing
+    * Whether the program supports the user licensing type.
     *
     * @param bool $val The value of the supportUserLicensing
     *
@@ -53,6 +55,7 @@ class VppLicensingType extends Entity
     }
     /**
     * Gets the supportDeviceLicensing
+    * Whether the program supports the device licensing type.
     *
     * @return bool The supportDeviceLicensing
     */
@@ -67,6 +70,7 @@ class VppLicensingType extends Entity
 
     /**
     * Sets the supportDeviceLicensing
+    * Whether the program supports the device licensing type.
     *
     * @param bool $val The value of the supportDeviceLicensing
     *
@@ -79,6 +83,7 @@ class VppLicensingType extends Entity
     }
     /**
     * Gets the supportsUserLicensing
+    * Whether the program supports the user licensing type.
     *
     * @return bool The supportsUserLicensing
     */
@@ -93,6 +98,7 @@ class VppLicensingType extends Entity
 
     /**
     * Sets the supportsUserLicensing
+    * Whether the program supports the user licensing type.
     *
     * @param bool $val The value of the supportsUserLicensing
     *
@@ -105,6 +111,7 @@ class VppLicensingType extends Entity
     }
     /**
     * Gets the supportsDeviceLicensing
+    * Whether the program supports the device licensing type.
     *
     * @return bool The supportsDeviceLicensing
     */
@@ -119,6 +126,7 @@ class VppLicensingType extends Entity
 
     /**
     * Sets the supportsDeviceLicensing
+    * Whether the program supports the device licensing type.
     *
     * @param bool $val The value of the supportsDeviceLicensing
     *

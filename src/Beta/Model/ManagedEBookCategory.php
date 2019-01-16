@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * ManagedEBookCategory class
@@ -28,6 +28,7 @@ class ManagedEBookCategory extends Entity
 {
     /**
     * Gets the displayName
+    * The name of the eBook category.
     *
     * @return string The displayName
     */
@@ -42,6 +43,7 @@ class ManagedEBookCategory extends Entity
     
     /**
     * Sets the displayName
+    * The name of the eBook category.
     *
     * @param string $val The displayName
     *
@@ -55,6 +57,7 @@ class ManagedEBookCategory extends Entity
     
     /**
     * Gets the lastModifiedDateTime
+    * The date and time the ManagedEBookCategory was last modified.
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -73,6 +76,7 @@ class ManagedEBookCategory extends Entity
     
     /**
     * Sets the lastModifiedDateTime
+    * The date and time the ManagedEBookCategory was last modified.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * VpnRoute class
 *
@@ -27,6 +27,7 @@ class VpnRoute extends Entity
 {
     /**
     * Gets the destinationPrefix
+    * Destination prefix (IPv4/v6 address).
     *
     * @return string The destinationPrefix
     */
@@ -41,6 +42,7 @@ class VpnRoute extends Entity
 
     /**
     * Sets the destinationPrefix
+    * Destination prefix (IPv4/v6 address).
     *
     * @param string $val The value of the destinationPrefix
     *
@@ -53,6 +55,7 @@ class VpnRoute extends Entity
     }
     /**
     * Gets the prefixSize
+    * Prefix size. (1-32). Valid values 1 to 32
     *
     * @return int The prefixSize
     */
@@ -67,6 +70,7 @@ class VpnRoute extends Entity
 
     /**
     * Sets the prefixSize
+    * Prefix size. (1-32). Valid values 1 to 32
     *
     * @param int $val The value of the prefixSize
     *

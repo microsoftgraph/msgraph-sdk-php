@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * AndroidManagedStoreAppConfiguration class
@@ -28,6 +28,7 @@ class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppConfigur
 {
     /**
     * Gets the packageId
+    * Android Enterprise app configuration package id.
     *
     * @return string The packageId
     */
@@ -42,6 +43,7 @@ class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppConfigur
     
     /**
     * Sets the packageId
+    * Android Enterprise app configuration package id.
     *
     * @param string $val The packageId
     *
@@ -55,6 +57,7 @@ class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppConfigur
     
     /**
     * Gets the payloadJson
+    * Android Enterprise app configuration JSON payload.
     *
     * @return string The payloadJson
     */
@@ -69,6 +72,7 @@ class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppConfigur
     
     /**
     * Sets the payloadJson
+    * Android Enterprise app configuration JSON payload.
     *
     * @param string $val The payloadJson
     *
@@ -83,6 +87,7 @@ class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppConfigur
 
      /** 
      * Gets the permissionActions
+    * List of Android app permissions and corresponding permission actions.
      *
      * @return array The permissionActions
      */
@@ -97,6 +102,7 @@ class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppConfigur
     
     /** 
     * Sets the permissionActions
+    * List of Android app permissions and corresponding permission actions.
     *
     * @param AndroidPermissionAction $val The permissionActions
     *

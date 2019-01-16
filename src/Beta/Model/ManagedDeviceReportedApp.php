@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * ManagedDeviceReportedApp class
 *
@@ -27,6 +27,7 @@ class ManagedDeviceReportedApp extends Entity
 {
     /**
     * Gets the appId
+    * The application or bundle identifier of the application
     *
     * @return string The appId
     */
@@ -41,6 +42,7 @@ class ManagedDeviceReportedApp extends Entity
 
     /**
     * Sets the appId
+    * The application or bundle identifier of the application
     *
     * @param string $val The value of the appId
     *

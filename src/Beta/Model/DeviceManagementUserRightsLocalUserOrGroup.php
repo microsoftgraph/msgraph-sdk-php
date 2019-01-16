@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * DeviceManagementUserRightsLocalUserOrGroup class
 *
@@ -27,6 +27,7 @@ class DeviceManagementUserRightsLocalUserOrGroup extends Entity
 {
     /**
     * Gets the name
+    * The name of this local user or group.
     *
     * @return string The name
     */
@@ -41,6 +42,7 @@ class DeviceManagementUserRightsLocalUserOrGroup extends Entity
 
     /**
     * Sets the name
+    * The name of this local user or group.
     *
     * @param string $val The value of the name
     *
@@ -53,6 +55,7 @@ class DeviceManagementUserRightsLocalUserOrGroup extends Entity
     }
     /**
     * Gets the description
+    * Adminâ€™s description of this local user or group.
     *
     * @return string The description
     */
@@ -67,6 +70,7 @@ class DeviceManagementUserRightsLocalUserOrGroup extends Entity
 
     /**
     * Sets the description
+    * Adminâ€™s description of this local user or group.
     *
     * @param string $val The value of the description
     *
@@ -79,6 +83,7 @@ class DeviceManagementUserRightsLocalUserOrGroup extends Entity
     }
     /**
     * Gets the securityIdentifier
+    * The security identifier of this local user or group (e.g. *S-1-5-32-544).
     *
     * @return string The securityIdentifier
     */
@@ -93,6 +98,7 @@ class DeviceManagementUserRightsLocalUserOrGroup extends Entity
 
     /**
     * Sets the securityIdentifier
+    * The security identifier of this local user or group (e.g. *S-1-5-32-544).
     *
     * @param string $val The value of the securityIdentifier
     *

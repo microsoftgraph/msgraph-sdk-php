@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * BitLockerRecoveryOptions class
 *
@@ -27,6 +27,7 @@ class BitLockerRecoveryOptions extends Entity
 {
     /**
     * Gets the blockDataRecoveryAgent
+    * Indicates whether to block certificate-based data recovery agent.
     *
     * @return bool The blockDataRecoveryAgent
     */
@@ -41,6 +42,7 @@ class BitLockerRecoveryOptions extends Entity
 
     /**
     * Sets the blockDataRecoveryAgent
+    * Indicates whether to block certificate-based data recovery agent.
     *
     * @param bool $val The value of the blockDataRecoveryAgent
     *
@@ -54,13 +56,14 @@ class BitLockerRecoveryOptions extends Entity
 
     /**
     * Gets the recoveryPasswordUsage
+    * Indicates whether users are allowed or required to generate a 48-digit recovery password for fixed or system disk.
     *
     * @return ConfigurationUsage The recoveryPasswordUsage
     */
     public function getRecoveryPasswordUsage()
     {
         if (array_key_exists("recoveryPasswordUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["recoveryPasswordUsage"], "Microsoft\Graph\Beta\Model\ConfigurationUsage")) {
+            if (is_a($this->_propDict["recoveryPasswordUsage"], "Microsoft\Graph\Model\ConfigurationUsage")) {
                 return $this->_propDict["recoveryPasswordUsage"];
             } else {
                 $this->_propDict["recoveryPasswordUsage"] = new ConfigurationUsage($this->_propDict["recoveryPasswordUsage"]);
@@ -72,6 +75,7 @@ class BitLockerRecoveryOptions extends Entity
 
     /**
     * Sets the recoveryPasswordUsage
+    * Indicates whether users are allowed or required to generate a 48-digit recovery password for fixed or system disk.
     *
     * @param ConfigurationUsage $val The value to assign to the recoveryPasswordUsage
     *
@@ -85,13 +89,14 @@ class BitLockerRecoveryOptions extends Entity
 
     /**
     * Gets the recoveryKeyUsage
+    * Indicates whether users are allowed or required to generate a 256-bit recovery key for fixed or system disk.
     *
     * @return ConfigurationUsage The recoveryKeyUsage
     */
     public function getRecoveryKeyUsage()
     {
         if (array_key_exists("recoveryKeyUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["recoveryKeyUsage"], "Microsoft\Graph\Beta\Model\ConfigurationUsage")) {
+            if (is_a($this->_propDict["recoveryKeyUsage"], "Microsoft\Graph\Model\ConfigurationUsage")) {
                 return $this->_propDict["recoveryKeyUsage"];
             } else {
                 $this->_propDict["recoveryKeyUsage"] = new ConfigurationUsage($this->_propDict["recoveryKeyUsage"]);
@@ -103,6 +108,7 @@ class BitLockerRecoveryOptions extends Entity
 
     /**
     * Sets the recoveryKeyUsage
+    * Indicates whether users are allowed or required to generate a 256-bit recovery key for fixed or system disk.
     *
     * @param ConfigurationUsage $val The value to assign to the recoveryKeyUsage
     *
@@ -115,6 +121,7 @@ class BitLockerRecoveryOptions extends Entity
     }
     /**
     * Gets the hideRecoveryOptions
+    * Indicates whether or not to allow showing recovery options in BitLocker Setup Wizard for fixed or system disk.
     *
     * @return bool The hideRecoveryOptions
     */
@@ -129,6 +136,7 @@ class BitLockerRecoveryOptions extends Entity
 
     /**
     * Sets the hideRecoveryOptions
+    * Indicates whether or not to allow showing recovery options in BitLocker Setup Wizard for fixed or system disk.
     *
     * @param bool $val The value of the hideRecoveryOptions
     *
@@ -141,6 +149,7 @@ class BitLockerRecoveryOptions extends Entity
     }
     /**
     * Gets the enableRecoveryInformationSaveToStore
+    * Indicates whether or not to allow BitLocker recovery information to store in AD DS.
     *
     * @return bool The enableRecoveryInformationSaveToStore
     */
@@ -155,6 +164,7 @@ class BitLockerRecoveryOptions extends Entity
 
     /**
     * Sets the enableRecoveryInformationSaveToStore
+    * Indicates whether or not to allow BitLocker recovery information to store in AD DS.
     *
     * @param bool $val The value of the enableRecoveryInformationSaveToStore
     *
@@ -168,13 +178,14 @@ class BitLockerRecoveryOptions extends Entity
 
     /**
     * Gets the recoveryInformationToStore
+    * Configure what pieces of BitLocker recovery information are stored to AD DS.
     *
     * @return BitLockerRecoveryInformationType The recoveryInformationToStore
     */
     public function getRecoveryInformationToStore()
     {
         if (array_key_exists("recoveryInformationToStore", $this->_propDict)) {
-            if (is_a($this->_propDict["recoveryInformationToStore"], "Microsoft\Graph\Beta\Model\BitLockerRecoveryInformationType")) {
+            if (is_a($this->_propDict["recoveryInformationToStore"], "Microsoft\Graph\Model\BitLockerRecoveryInformationType")) {
                 return $this->_propDict["recoveryInformationToStore"];
             } else {
                 $this->_propDict["recoveryInformationToStore"] = new BitLockerRecoveryInformationType($this->_propDict["recoveryInformationToStore"]);
@@ -186,6 +197,7 @@ class BitLockerRecoveryOptions extends Entity
 
     /**
     * Sets the recoveryInformationToStore
+    * Configure what pieces of BitLocker recovery information are stored to AD DS.
     *
     * @param BitLockerRecoveryInformationType $val The value to assign to the recoveryInformationToStore
     *
@@ -198,6 +210,7 @@ class BitLockerRecoveryOptions extends Entity
     }
     /**
     * Gets the enableBitLockerAfterRecoveryInformationToStore
+    * Indicates whether or not to enable BitLocker until recovery information is stored in AD DS.
     *
     * @return bool The enableBitLockerAfterRecoveryInformationToStore
     */
@@ -212,6 +225,7 @@ class BitLockerRecoveryOptions extends Entity
 
     /**
     * Sets the enableBitLockerAfterRecoveryInformationToStore
+    * Indicates whether or not to enable BitLocker until recovery information is stored in AD DS.
     *
     * @param bool $val The value of the enableBitLockerAfterRecoveryInformationToStore
     *

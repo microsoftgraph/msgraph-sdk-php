@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * DeviceProtectionOverview class
 *
@@ -27,6 +27,7 @@ class DeviceProtectionOverview extends Entity
 {
     /**
     * Gets the totalReportedDeviceCount
+    * Total device count.
     *
     * @return int The totalReportedDeviceCount
     */
@@ -41,6 +42,7 @@ class DeviceProtectionOverview extends Entity
 
     /**
     * Sets the totalReportedDeviceCount
+    * Total device count.
     *
     * @param int $val The value of the totalReportedDeviceCount
     *
@@ -53,6 +55,7 @@ class DeviceProtectionOverview extends Entity
     }
     /**
     * Gets the inactiveThreatAgentDeviceCount
+    * Device with inactive threat agent count
     *
     * @return int The inactiveThreatAgentDeviceCount
     */
@@ -67,6 +70,7 @@ class DeviceProtectionOverview extends Entity
 
     /**
     * Sets the inactiveThreatAgentDeviceCount
+    * Device with inactive threat agent count
     *
     * @param int $val The value of the inactiveThreatAgentDeviceCount
     *
@@ -79,6 +83,7 @@ class DeviceProtectionOverview extends Entity
     }
     /**
     * Gets the unknownStateThreatAgentDeviceCount
+    * Device with threat agent state as unknown count.
     *
     * @return int The unknownStateThreatAgentDeviceCount
     */
@@ -93,6 +98,7 @@ class DeviceProtectionOverview extends Entity
 
     /**
     * Sets the unknownStateThreatAgentDeviceCount
+    * Device with threat agent state as unknown count.
     *
     * @param int $val The value of the unknownStateThreatAgentDeviceCount
     *
@@ -105,6 +111,7 @@ class DeviceProtectionOverview extends Entity
     }
     /**
     * Gets the pendingSignatureUpdateDeviceCount
+    * Device with old signature count.
     *
     * @return int The pendingSignatureUpdateDeviceCount
     */
@@ -119,6 +126,7 @@ class DeviceProtectionOverview extends Entity
 
     /**
     * Sets the pendingSignatureUpdateDeviceCount
+    * Device with old signature count.
     *
     * @param int $val The value of the pendingSignatureUpdateDeviceCount
     *
@@ -131,6 +139,7 @@ class DeviceProtectionOverview extends Entity
     }
     /**
     * Gets the cleanDeviceCount
+    * Clean device count.
     *
     * @return int The cleanDeviceCount
     */
@@ -145,6 +154,7 @@ class DeviceProtectionOverview extends Entity
 
     /**
     * Sets the cleanDeviceCount
+    * Clean device count.
     *
     * @param int $val The value of the cleanDeviceCount
     *
@@ -157,6 +167,7 @@ class DeviceProtectionOverview extends Entity
     }
     /**
     * Gets the pendingFullScanDeviceCount
+    * Pending full scan device count.
     *
     * @return int The pendingFullScanDeviceCount
     */
@@ -171,6 +182,7 @@ class DeviceProtectionOverview extends Entity
 
     /**
     * Sets the pendingFullScanDeviceCount
+    * Pending full scan device count.
     *
     * @param int $val The value of the pendingFullScanDeviceCount
     *
@@ -183,6 +195,7 @@ class DeviceProtectionOverview extends Entity
     }
     /**
     * Gets the pendingRestartDeviceCount
+    * Pending restart device count.
     *
     * @return int The pendingRestartDeviceCount
     */
@@ -197,6 +210,7 @@ class DeviceProtectionOverview extends Entity
 
     /**
     * Sets the pendingRestartDeviceCount
+    * Pending restart device count.
     *
     * @param int $val The value of the pendingRestartDeviceCount
     *
@@ -209,6 +223,7 @@ class DeviceProtectionOverview extends Entity
     }
     /**
     * Gets the pendingManualStepsDeviceCount
+    * Pending manual steps device count.
     *
     * @return int The pendingManualStepsDeviceCount
     */
@@ -223,6 +238,7 @@ class DeviceProtectionOverview extends Entity
 
     /**
     * Sets the pendingManualStepsDeviceCount
+    * Pending manual steps device count.
     *
     * @param int $val The value of the pendingManualStepsDeviceCount
     *
@@ -235,6 +251,7 @@ class DeviceProtectionOverview extends Entity
     }
     /**
     * Gets the pendingOfflineScanDeviceCount
+    * Pending offline scan device count.
     *
     * @return int The pendingOfflineScanDeviceCount
     */
@@ -249,6 +266,7 @@ class DeviceProtectionOverview extends Entity
 
     /**
     * Sets the pendingOfflineScanDeviceCount
+    * Pending offline scan device count.
     *
     * @param int $val The value of the pendingOfflineScanDeviceCount
     *
@@ -261,6 +279,7 @@ class DeviceProtectionOverview extends Entity
     }
     /**
     * Gets the criticalFailuresDeviceCount
+    * Critical failures device count.
     *
     * @return int The criticalFailuresDeviceCount
     */
@@ -275,6 +294,7 @@ class DeviceProtectionOverview extends Entity
 
     /**
     * Sets the criticalFailuresDeviceCount
+    * Critical failures device count.
     *
     * @param int $val The value of the criticalFailuresDeviceCount
     *

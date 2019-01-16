@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * SignInLocation class
 *
@@ -112,7 +112,7 @@ class SignInLocation extends Entity
     public function getGeoCoordinates()
     {
         if (array_key_exists("geoCoordinates", $this->_propDict)) {
-            if (is_a($this->_propDict["geoCoordinates"], "Microsoft\Graph\Beta\Model\GeoCoordinates")) {
+            if (is_a($this->_propDict["geoCoordinates"], "Microsoft\Graph\Model\GeoCoordinates")) {
                 return $this->_propDict["geoCoordinates"];
             } else {
                 $this->_propDict["geoCoordinates"] = new GeoCoordinates($this->_propDict["geoCoordinates"]);

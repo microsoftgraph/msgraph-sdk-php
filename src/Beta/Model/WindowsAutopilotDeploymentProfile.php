@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * WindowsAutopilotDeploymentProfile class
@@ -28,6 +28,7 @@ class WindowsAutopilotDeploymentProfile extends Entity
 {
     /**
     * Gets the displayName
+    * Name of the profile
     *
     * @return string The displayName
     */
@@ -42,6 +43,7 @@ class WindowsAutopilotDeploymentProfile extends Entity
     
     /**
     * Sets the displayName
+    * Name of the profile
     *
     * @param string $val The displayName
     *
@@ -55,6 +57,7 @@ class WindowsAutopilotDeploymentProfile extends Entity
     
     /**
     * Gets the description
+    * Description of the profile
     *
     * @return string The description
     */
@@ -69,6 +72,7 @@ class WindowsAutopilotDeploymentProfile extends Entity
     
     /**
     * Sets the description
+    * Description of the profile
     *
     * @param string $val The description
     *
@@ -82,6 +86,7 @@ class WindowsAutopilotDeploymentProfile extends Entity
     
     /**
     * Gets the language
+    * Language configured on the device
     *
     * @return string The language
     */
@@ -96,6 +101,7 @@ class WindowsAutopilotDeploymentProfile extends Entity
     
     /**
     * Sets the language
+    * Language configured on the device
     *
     * @param string $val The language
     *
@@ -109,6 +115,7 @@ class WindowsAutopilotDeploymentProfile extends Entity
     
     /**
     * Gets the createdDateTime
+    * Profile creation time
     *
     * @return \DateTime The createdDateTime
     */
@@ -127,6 +134,7 @@ class WindowsAutopilotDeploymentProfile extends Entity
     
     /**
     * Sets the createdDateTime
+    * Profile creation time
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -140,6 +148,7 @@ class WindowsAutopilotDeploymentProfile extends Entity
     
     /**
     * Gets the lastModifiedDateTime
+    * Profile last modified time
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -158,6 +167,7 @@ class WindowsAutopilotDeploymentProfile extends Entity
     
     /**
     * Sets the lastModifiedDateTime
+    * Profile last modified time
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -171,13 +181,14 @@ class WindowsAutopilotDeploymentProfile extends Entity
     
     /**
     * Gets the outOfBoxExperienceSettings
+    * Out of box experience setting
     *
     * @return OutOfBoxExperienceSettings The outOfBoxExperienceSettings
     */
     public function getOutOfBoxExperienceSettings()
     {
         if (array_key_exists("outOfBoxExperienceSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["outOfBoxExperienceSettings"], "Microsoft\Graph\Beta\Model\OutOfBoxExperienceSettings")) {
+            if (is_a($this->_propDict["outOfBoxExperienceSettings"], "Microsoft\Graph\Model\OutOfBoxExperienceSettings")) {
                 return $this->_propDict["outOfBoxExperienceSettings"];
             } else {
                 $this->_propDict["outOfBoxExperienceSettings"] = new OutOfBoxExperienceSettings($this->_propDict["outOfBoxExperienceSettings"]);
@@ -189,6 +200,7 @@ class WindowsAutopilotDeploymentProfile extends Entity
     
     /**
     * Sets the outOfBoxExperienceSettings
+    * Out of box experience setting
     *
     * @param OutOfBoxExperienceSettings $val The outOfBoxExperienceSettings
     *
@@ -202,13 +214,14 @@ class WindowsAutopilotDeploymentProfile extends Entity
     
     /**
     * Gets the enrollmentStatusScreenSettings
+    * Enrollment status screen setting
     *
     * @return WindowsEnrollmentStatusScreenSettings The enrollmentStatusScreenSettings
     */
     public function getEnrollmentStatusScreenSettings()
     {
         if (array_key_exists("enrollmentStatusScreenSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["enrollmentStatusScreenSettings"], "Microsoft\Graph\Beta\Model\WindowsEnrollmentStatusScreenSettings")) {
+            if (is_a($this->_propDict["enrollmentStatusScreenSettings"], "Microsoft\Graph\Model\WindowsEnrollmentStatusScreenSettings")) {
                 return $this->_propDict["enrollmentStatusScreenSettings"];
             } else {
                 $this->_propDict["enrollmentStatusScreenSettings"] = new WindowsEnrollmentStatusScreenSettings($this->_propDict["enrollmentStatusScreenSettings"]);
@@ -220,6 +233,7 @@ class WindowsAutopilotDeploymentProfile extends Entity
     
     /**
     * Sets the enrollmentStatusScreenSettings
+    * Enrollment status screen setting
     *
     * @param WindowsEnrollmentStatusScreenSettings $val The enrollmentStatusScreenSettings
     *
@@ -233,6 +247,7 @@ class WindowsAutopilotDeploymentProfile extends Entity
     
     /**
     * Gets the extractHardwareHash
+    * HardwareHash Extraction for the profile
     *
     * @return bool The extractHardwareHash
     */
@@ -247,6 +262,7 @@ class WindowsAutopilotDeploymentProfile extends Entity
     
     /**
     * Sets the extractHardwareHash
+    * HardwareHash Extraction for the profile
     *
     * @param bool $val The extractHardwareHash
     *
@@ -260,6 +276,7 @@ class WindowsAutopilotDeploymentProfile extends Entity
     
     /**
     * Gets the deviceNameTemplate
+    * The template used to name the AutoPilot Device. This can be a custom text and can also contain either the serial number of the device, or a randomly generated number. The total length of the text generated by the template can be no more than 15 characters.
     *
     * @return string The deviceNameTemplate
     */
@@ -274,6 +291,7 @@ class WindowsAutopilotDeploymentProfile extends Entity
     
     /**
     * Sets the deviceNameTemplate
+    * The template used to name the AutoPilot Device. This can be a custom text and can also contain either the serial number of the device, or a randomly generated number. The total length of the text generated by the template can be no more than 15 characters.
     *
     * @param string $val The deviceNameTemplate
     *
@@ -288,6 +306,7 @@ class WindowsAutopilotDeploymentProfile extends Entity
 
      /** 
      * Gets the assignedDevices
+    * The list of assigned devices for the profile.
      *
      * @return array The assignedDevices
      */
@@ -302,6 +321,7 @@ class WindowsAutopilotDeploymentProfile extends Entity
     
     /** 
     * Sets the assignedDevices
+    * The list of assigned devices for the profile.
     *
     * @param WindowsAutopilotDeviceIdentity $val The assignedDevices
     *
@@ -316,6 +336,7 @@ class WindowsAutopilotDeploymentProfile extends Entity
 
      /** 
      * Gets the assignments
+    * The list of group assignments for the profile.
      *
      * @return array The assignments
      */
@@ -330,6 +351,7 @@ class WindowsAutopilotDeploymentProfile extends Entity
     
     /** 
     * Sets the assignments
+    * The list of group assignments for the profile.
     *
     * @param WindowsAutopilotDeploymentProfileAssignment $val The assignments
     *

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * DeviceManagementExchangeAccessRule class
 *
@@ -28,13 +28,14 @@ class DeviceManagementExchangeAccessRule extends Entity
 
     /**
     * Gets the deviceClass
+    * Device Class which will be impacted by this rule.
     *
     * @return DeviceManagementExchangeDeviceClass The deviceClass
     */
     public function getDeviceClass()
     {
         if (array_key_exists("deviceClass", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceClass"], "Microsoft\Graph\Beta\Model\DeviceManagementExchangeDeviceClass")) {
+            if (is_a($this->_propDict["deviceClass"], "Microsoft\Graph\Model\DeviceManagementExchangeDeviceClass")) {
                 return $this->_propDict["deviceClass"];
             } else {
                 $this->_propDict["deviceClass"] = new DeviceManagementExchangeDeviceClass($this->_propDict["deviceClass"]);
@@ -46,6 +47,7 @@ class DeviceManagementExchangeAccessRule extends Entity
 
     /**
     * Sets the deviceClass
+    * Device Class which will be impacted by this rule.
     *
     * @param DeviceManagementExchangeDeviceClass $val The value to assign to the deviceClass
     *
@@ -59,13 +61,14 @@ class DeviceManagementExchangeAccessRule extends Entity
 
     /**
     * Gets the accessLevel
+    * Access Level for Exchange granted by this rule.
     *
     * @return DeviceManagementExchangeAccessLevel The accessLevel
     */
     public function getAccessLevel()
     {
         if (array_key_exists("accessLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["accessLevel"], "Microsoft\Graph\Beta\Model\DeviceManagementExchangeAccessLevel")) {
+            if (is_a($this->_propDict["accessLevel"], "Microsoft\Graph\Model\DeviceManagementExchangeAccessLevel")) {
                 return $this->_propDict["accessLevel"];
             } else {
                 $this->_propDict["accessLevel"] = new DeviceManagementExchangeAccessLevel($this->_propDict["accessLevel"]);
@@ -77,6 +80,7 @@ class DeviceManagementExchangeAccessRule extends Entity
 
     /**
     * Sets the accessLevel
+    * Access Level for Exchange granted by this rule.
     *
     * @param DeviceManagementExchangeAccessLevel $val The value to assign to the accessLevel
     *

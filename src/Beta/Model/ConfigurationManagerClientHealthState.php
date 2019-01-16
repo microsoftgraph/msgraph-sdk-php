@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * ConfigurationManagerClientHealthState class
 *
@@ -28,13 +28,14 @@ class ConfigurationManagerClientHealthState extends Entity
 
     /**
     * Gets the state
+    * Current configuration manager client state.
     *
     * @return ConfigurationManagerClientState The state
     */
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "Microsoft\Graph\Beta\Model\ConfigurationManagerClientState")) {
+            if (is_a($this->_propDict["state"], "Microsoft\Graph\Model\ConfigurationManagerClientState")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new ConfigurationManagerClientState($this->_propDict["state"]);
@@ -46,6 +47,7 @@ class ConfigurationManagerClientHealthState extends Entity
 
     /**
     * Sets the state
+    * Current configuration manager client state.
     *
     * @param ConfigurationManagerClientState $val The value to assign to the state
     *
@@ -58,6 +60,7 @@ class ConfigurationManagerClientHealthState extends Entity
     }
     /**
     * Gets the errorCode
+    * Error code for failed state.
     *
     * @return int The errorCode
     */
@@ -72,6 +75,7 @@ class ConfigurationManagerClientHealthState extends Entity
 
     /**
     * Sets the errorCode
+    * Error code for failed state.
     *
     * @param int $val The value of the errorCode
     *
@@ -85,13 +89,14 @@ class ConfigurationManagerClientHealthState extends Entity
 
     /**
     * Gets the lastSyncDateTime
+    * Datetime fo last sync with configuration manager management point.
     *
     * @return \DateTime The lastSyncDateTime
     */
     public function getLastSyncDateTime()
     {
         if (array_key_exists("lastSyncDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastSyncDateTime"], "Microsoft\Graph\Beta\Model\\DateTime")) {
+            if (is_a($this->_propDict["lastSyncDateTime"], "Microsoft\Graph\Model\\DateTime")) {
                 return $this->_propDict["lastSyncDateTime"];
             } else {
                 $this->_propDict["lastSyncDateTime"] = new \DateTime($this->_propDict["lastSyncDateTime"]);
@@ -103,6 +108,7 @@ class ConfigurationManagerClientHealthState extends Entity
 
     /**
     * Sets the lastSyncDateTime
+    * Datetime fo last sync with configuration manager management point.
     *
     * @param \DateTime $val The value to assign to the lastSyncDateTime
     *

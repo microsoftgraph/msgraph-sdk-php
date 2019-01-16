@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * Hashes class
 *
@@ -27,6 +27,7 @@ class Hashes extends Entity
 {
     /**
     * Gets the crc32Hash
+    * The CRC32 value of the file in little endian (if available). Read-only.
     *
     * @return string The crc32Hash
     */
@@ -41,6 +42,7 @@ class Hashes extends Entity
 
     /**
     * Sets the crc32Hash
+    * The CRC32 value of the file in little endian (if available). Read-only.
     *
     * @param string $val The value of the crc32Hash
     *
@@ -53,6 +55,7 @@ class Hashes extends Entity
     }
     /**
     * Gets the quickXorHash
+    * A proprietary hash of the file that can be used to determine if the contents of the file have changed (if available). Read-only.
     *
     * @return string The quickXorHash
     */
@@ -67,6 +70,7 @@ class Hashes extends Entity
 
     /**
     * Sets the quickXorHash
+    * A proprietary hash of the file that can be used to determine if the contents of the file have changed (if available). Read-only.
     *
     * @param string $val The value of the quickXorHash
     *
@@ -79,6 +83,7 @@ class Hashes extends Entity
     }
     /**
     * Gets the sha1Hash
+    * SHA1 hash for the contents of the file (if available). Read-only.
     *
     * @return string The sha1Hash
     */
@@ -93,6 +98,7 @@ class Hashes extends Entity
 
     /**
     * Sets the sha1Hash
+    * SHA1 hash for the contents of the file (if available). Read-only.
     *
     * @param string $val The value of the sha1Hash
     *

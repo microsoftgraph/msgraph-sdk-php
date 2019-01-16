@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * WindowsProtectionState class
@@ -28,6 +28,7 @@ class WindowsProtectionState extends Entity
 {
     /**
     * Gets the malwareProtectionEnabled
+    * Anti malware is enabled or not
     *
     * @return bool The malwareProtectionEnabled
     */
@@ -42,6 +43,7 @@ class WindowsProtectionState extends Entity
     
     /**
     * Sets the malwareProtectionEnabled
+    * Anti malware is enabled or not
     *
     * @param bool $val The malwareProtectionEnabled
     *
@@ -55,13 +57,14 @@ class WindowsProtectionState extends Entity
     
     /**
     * Gets the deviceState
+    * Computer's state (like clean or pending full scan or pending reboot etc)
     *
     * @return WindowsDeviceHealthState The deviceState
     */
     public function getDeviceState()
     {
         if (array_key_exists("deviceState", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceState"], "Microsoft\Graph\Beta\Model\WindowsDeviceHealthState")) {
+            if (is_a($this->_propDict["deviceState"], "Microsoft\Graph\Model\WindowsDeviceHealthState")) {
                 return $this->_propDict["deviceState"];
             } else {
                 $this->_propDict["deviceState"] = new WindowsDeviceHealthState($this->_propDict["deviceState"]);
@@ -73,6 +76,7 @@ class WindowsProtectionState extends Entity
     
     /**
     * Sets the deviceState
+    * Computer's state (like clean or pending full scan or pending reboot etc)
     *
     * @param WindowsDeviceHealthState $val The deviceState
     *
@@ -86,6 +90,7 @@ class WindowsProtectionState extends Entity
     
     /**
     * Gets the realTimeProtectionEnabled
+    * Real time protection is enabled or not?
     *
     * @return bool The realTimeProtectionEnabled
     */
@@ -100,6 +105,7 @@ class WindowsProtectionState extends Entity
     
     /**
     * Sets the realTimeProtectionEnabled
+    * Real time protection is enabled or not?
     *
     * @param bool $val The realTimeProtectionEnabled
     *
@@ -113,6 +119,7 @@ class WindowsProtectionState extends Entity
     
     /**
     * Gets the networkInspectionSystemEnabled
+    * Network inspection system enabled or not?
     *
     * @return bool The networkInspectionSystemEnabled
     */
@@ -127,6 +134,7 @@ class WindowsProtectionState extends Entity
     
     /**
     * Sets the networkInspectionSystemEnabled
+    * Network inspection system enabled or not?
     *
     * @param bool $val The networkInspectionSystemEnabled
     *
@@ -140,6 +148,7 @@ class WindowsProtectionState extends Entity
     
     /**
     * Gets the quickScanOverdue
+    * Quick scan overdue or not?
     *
     * @return bool The quickScanOverdue
     */
@@ -154,6 +163,7 @@ class WindowsProtectionState extends Entity
     
     /**
     * Sets the quickScanOverdue
+    * Quick scan overdue or not?
     *
     * @param bool $val The quickScanOverdue
     *
@@ -167,6 +177,7 @@ class WindowsProtectionState extends Entity
     
     /**
     * Gets the fullScanOverdue
+    * Full scan overdue or not?
     *
     * @return bool The fullScanOverdue
     */
@@ -181,6 +192,7 @@ class WindowsProtectionState extends Entity
     
     /**
     * Sets the fullScanOverdue
+    * Full scan overdue or not?
     *
     * @param bool $val The fullScanOverdue
     *
@@ -194,6 +206,7 @@ class WindowsProtectionState extends Entity
     
     /**
     * Gets the signatureUpdateOverdue
+    * Signature out of date or not?
     *
     * @return bool The signatureUpdateOverdue
     */
@@ -208,6 +221,7 @@ class WindowsProtectionState extends Entity
     
     /**
     * Sets the signatureUpdateOverdue
+    * Signature out of date or not?
     *
     * @param bool $val The signatureUpdateOverdue
     *
@@ -221,6 +235,7 @@ class WindowsProtectionState extends Entity
     
     /**
     * Gets the rebootRequired
+    * Reboot required or not?
     *
     * @return bool The rebootRequired
     */
@@ -235,6 +250,7 @@ class WindowsProtectionState extends Entity
     
     /**
     * Sets the rebootRequired
+    * Reboot required or not?
     *
     * @param bool $val The rebootRequired
     *
@@ -248,6 +264,7 @@ class WindowsProtectionState extends Entity
     
     /**
     * Gets the fullScanRequired
+    * Full scan required or not?
     *
     * @return bool The fullScanRequired
     */
@@ -262,6 +279,7 @@ class WindowsProtectionState extends Entity
     
     /**
     * Sets the fullScanRequired
+    * Full scan required or not?
     *
     * @param bool $val The fullScanRequired
     *
@@ -275,6 +293,7 @@ class WindowsProtectionState extends Entity
     
     /**
     * Gets the engineVersion
+    * Current endpoint protection engine's version
     *
     * @return string The engineVersion
     */
@@ -289,6 +308,7 @@ class WindowsProtectionState extends Entity
     
     /**
     * Sets the engineVersion
+    * Current endpoint protection engine's version
     *
     * @param string $val The engineVersion
     *
@@ -302,6 +322,7 @@ class WindowsProtectionState extends Entity
     
     /**
     * Gets the signatureVersion
+    * Current malware definitions version
     *
     * @return string The signatureVersion
     */
@@ -316,6 +337,7 @@ class WindowsProtectionState extends Entity
     
     /**
     * Sets the signatureVersion
+    * Current malware definitions version
     *
     * @param string $val The signatureVersion
     *
@@ -329,6 +351,7 @@ class WindowsProtectionState extends Entity
     
     /**
     * Gets the antiMalwareVersion
+    * Current anti malware version
     *
     * @return string The antiMalwareVersion
     */
@@ -343,6 +366,7 @@ class WindowsProtectionState extends Entity
     
     /**
     * Sets the antiMalwareVersion
+    * Current anti malware version
     *
     * @param string $val The antiMalwareVersion
     *
@@ -356,6 +380,7 @@ class WindowsProtectionState extends Entity
     
     /**
     * Gets the lastQuickScanDateTime
+    * Last quick scan datetime
     *
     * @return \DateTime The lastQuickScanDateTime
     */
@@ -374,6 +399,7 @@ class WindowsProtectionState extends Entity
     
     /**
     * Sets the lastQuickScanDateTime
+    * Last quick scan datetime
     *
     * @param \DateTime $val The lastQuickScanDateTime
     *
@@ -387,6 +413,7 @@ class WindowsProtectionState extends Entity
     
     /**
     * Gets the lastFullScanDateTime
+    * Last quick scan datetime
     *
     * @return \DateTime The lastFullScanDateTime
     */
@@ -405,6 +432,7 @@ class WindowsProtectionState extends Entity
     
     /**
     * Sets the lastFullScanDateTime
+    * Last quick scan datetime
     *
     * @param \DateTime $val The lastFullScanDateTime
     *
@@ -418,6 +446,7 @@ class WindowsProtectionState extends Entity
     
     /**
     * Gets the lastQuickScanSignatureVersion
+    * Last quick scan signature version
     *
     * @return string The lastQuickScanSignatureVersion
     */
@@ -432,6 +461,7 @@ class WindowsProtectionState extends Entity
     
     /**
     * Sets the lastQuickScanSignatureVersion
+    * Last quick scan signature version
     *
     * @param string $val The lastQuickScanSignatureVersion
     *
@@ -445,6 +475,7 @@ class WindowsProtectionState extends Entity
     
     /**
     * Gets the lastFullScanSignatureVersion
+    * Last full scan signature version
     *
     * @return string The lastFullScanSignatureVersion
     */
@@ -459,6 +490,7 @@ class WindowsProtectionState extends Entity
     
     /**
     * Sets the lastFullScanSignatureVersion
+    * Last full scan signature version
     *
     * @param string $val The lastFullScanSignatureVersion
     *
@@ -472,6 +504,7 @@ class WindowsProtectionState extends Entity
     
     /**
     * Gets the lastReportedDateTime
+    * Last device health status reported time
     *
     * @return \DateTime The lastReportedDateTime
     */
@@ -490,6 +523,7 @@ class WindowsProtectionState extends Entity
     
     /**
     * Sets the lastReportedDateTime
+    * Last device health status reported time
     *
     * @param \DateTime $val The lastReportedDateTime
     *
@@ -504,6 +538,7 @@ class WindowsProtectionState extends Entity
 
      /** 
      * Gets the detectedMalwareState
+    * Device malware list
      *
      * @return array The detectedMalwareState
      */
@@ -518,6 +553,7 @@ class WindowsProtectionState extends Entity
     
     /** 
     * Sets the detectedMalwareState
+    * Device malware list
     *
     * @param WindowsDeviceMalwareState $val The detectedMalwareState
     *

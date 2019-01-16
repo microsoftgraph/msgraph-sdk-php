@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * ManagedEBookAssignment class
@@ -28,13 +28,14 @@ class ManagedEBookAssignment extends Entity
 {
     /**
     * Gets the target
+    * The assignment target for eBook.
     *
     * @return DeviceAndAppManagementAssignmentTarget The target
     */
     public function getTarget()
     {
         if (array_key_exists("target", $this->_propDict)) {
-            if (is_a($this->_propDict["target"], "Microsoft\Graph\Beta\Model\DeviceAndAppManagementAssignmentTarget")) {
+            if (is_a($this->_propDict["target"], "Microsoft\Graph\Model\DeviceAndAppManagementAssignmentTarget")) {
                 return $this->_propDict["target"];
             } else {
                 $this->_propDict["target"] = new DeviceAndAppManagementAssignmentTarget($this->_propDict["target"]);
@@ -46,6 +47,7 @@ class ManagedEBookAssignment extends Entity
     
     /**
     * Sets the target
+    * The assignment target for eBook.
     *
     * @param DeviceAndAppManagementAssignmentTarget $val The target
     *
@@ -59,13 +61,14 @@ class ManagedEBookAssignment extends Entity
     
     /**
     * Gets the installIntent
+    * The install intent for eBook. Possible values are: available, required, uninstall, availableWithoutEnrollment.
     *
     * @return InstallIntent The installIntent
     */
     public function getInstallIntent()
     {
         if (array_key_exists("installIntent", $this->_propDict)) {
-            if (is_a($this->_propDict["installIntent"], "Microsoft\Graph\Beta\Model\InstallIntent")) {
+            if (is_a($this->_propDict["installIntent"], "Microsoft\Graph\Model\InstallIntent")) {
                 return $this->_propDict["installIntent"];
             } else {
                 $this->_propDict["installIntent"] = new InstallIntent($this->_propDict["installIntent"]);
@@ -77,6 +80,7 @@ class ManagedEBookAssignment extends Entity
     
     /**
     * Sets the installIntent
+    * The install intent for eBook. Possible values are: available, required, uninstall, availableWithoutEnrollment.
     *
     * @param InstallIntent $val The installIntent
     *

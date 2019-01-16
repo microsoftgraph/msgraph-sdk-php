@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * SpecialFolder class
 *
@@ -27,6 +27,7 @@ class SpecialFolder extends Entity
 {
     /**
     * Gets the name
+    * The unique identifier for this item in the /drive/special collection
     *
     * @return string The name
     */
@@ -41,6 +42,7 @@ class SpecialFolder extends Entity
 
     /**
     * Sets the name
+    * The unique identifier for this item in the /drive/special collection
     *
     * @param string $val The value of the name
     *

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * IosEnterpriseWiFiConfiguration class
@@ -28,13 +28,14 @@ class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration
 {
     /**
     * Gets the eapType
+    * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the the Wi-Fi endpoint (router).
     *
     * @return EapType The eapType
     */
     public function getEapType()
     {
         if (array_key_exists("eapType", $this->_propDict)) {
-            if (is_a($this->_propDict["eapType"], "Microsoft\Graph\Beta\Model\EapType")) {
+            if (is_a($this->_propDict["eapType"], "Microsoft\Graph\Model\EapType")) {
                 return $this->_propDict["eapType"];
             } else {
                 $this->_propDict["eapType"] = new EapType($this->_propDict["eapType"]);
@@ -46,6 +47,7 @@ class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration
     
     /**
     * Sets the eapType
+    * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the the Wi-Fi endpoint (router).
     *
     * @param EapType $val The eapType
     *
@@ -59,13 +61,14 @@ class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration
     
     /**
     * Gets the eapFastConfiguration
+    * EAP-FAST Configuration Option when EAP-FAST is the selected EAP Type.
     *
     * @return EapFastConfiguration The eapFastConfiguration
     */
     public function getEapFastConfiguration()
     {
         if (array_key_exists("eapFastConfiguration", $this->_propDict)) {
-            if (is_a($this->_propDict["eapFastConfiguration"], "Microsoft\Graph\Beta\Model\EapFastConfiguration")) {
+            if (is_a($this->_propDict["eapFastConfiguration"], "Microsoft\Graph\Model\EapFastConfiguration")) {
                 return $this->_propDict["eapFastConfiguration"];
             } else {
                 $this->_propDict["eapFastConfiguration"] = new EapFastConfiguration($this->_propDict["eapFastConfiguration"]);
@@ -77,6 +80,7 @@ class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration
     
     /**
     * Sets the eapFastConfiguration
+    * EAP-FAST Configuration Option when EAP-FAST is the selected EAP Type.
     *
     * @param EapFastConfiguration $val The eapFastConfiguration
     *
@@ -90,6 +94,7 @@ class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration
     
     /**
     * Gets the trustedServerCertificateNames
+    * Trusted server certificate names when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. This is the common name used in the certificates issued by your trusted certificate authority (CA). If you provide this information, you can bypass the dynamic trust dialog that is displayed on end users' devices when they connect to this Wi-Fi network.
     *
     * @return string The trustedServerCertificateNames
     */
@@ -104,6 +109,7 @@ class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration
     
     /**
     * Sets the trustedServerCertificateNames
+    * Trusted server certificate names when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. This is the common name used in the certificates issued by your trusted certificate authority (CA). If you provide this information, you can bypass the dynamic trust dialog that is displayed on end users' devices when they connect to this Wi-Fi network.
     *
     * @param string $val The trustedServerCertificateNames
     *
@@ -117,13 +123,14 @@ class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration
     
     /**
     * Gets the authenticationMethod
+    * Authentication Method when EAP Type is configured to PEAP or EAP-TTLS.
     *
     * @return WiFiAuthenticationMethod The authenticationMethod
     */
     public function getAuthenticationMethod()
     {
         if (array_key_exists("authenticationMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["authenticationMethod"], "Microsoft\Graph\Beta\Model\WiFiAuthenticationMethod")) {
+            if (is_a($this->_propDict["authenticationMethod"], "Microsoft\Graph\Model\WiFiAuthenticationMethod")) {
                 return $this->_propDict["authenticationMethod"];
             } else {
                 $this->_propDict["authenticationMethod"] = new WiFiAuthenticationMethod($this->_propDict["authenticationMethod"]);
@@ -135,6 +142,7 @@ class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration
     
     /**
     * Sets the authenticationMethod
+    * Authentication Method when EAP Type is configured to PEAP or EAP-TTLS.
     *
     * @param WiFiAuthenticationMethod $val The authenticationMethod
     *
@@ -148,13 +156,14 @@ class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration
     
     /**
     * Gets the innerAuthenticationProtocolForEapTtls
+    * Non-EAP Method for Authentication when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password.
     *
     * @return NonEapAuthenticationMethodForEapTtlsType The innerAuthenticationProtocolForEapTtls
     */
     public function getInnerAuthenticationProtocolForEapTtls()
     {
         if (array_key_exists("innerAuthenticationProtocolForEapTtls", $this->_propDict)) {
-            if (is_a($this->_propDict["innerAuthenticationProtocolForEapTtls"], "Microsoft\Graph\Beta\Model\NonEapAuthenticationMethodForEapTtlsType")) {
+            if (is_a($this->_propDict["innerAuthenticationProtocolForEapTtls"], "Microsoft\Graph\Model\NonEapAuthenticationMethodForEapTtlsType")) {
                 return $this->_propDict["innerAuthenticationProtocolForEapTtls"];
             } else {
                 $this->_propDict["innerAuthenticationProtocolForEapTtls"] = new NonEapAuthenticationMethodForEapTtlsType($this->_propDict["innerAuthenticationProtocolForEapTtls"]);
@@ -166,6 +175,7 @@ class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration
     
     /**
     * Sets the innerAuthenticationProtocolForEapTtls
+    * Non-EAP Method for Authentication when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password.
     *
     * @param NonEapAuthenticationMethodForEapTtlsType $val The innerAuthenticationProtocolForEapTtls
     *
@@ -179,6 +189,7 @@ class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration
     
     /**
     * Gets the outerIdentityPrivacyTemporaryValue
+    * Enable identity privacy (Outer Identity) when EAP Type is configured to EAP - TTLS, EAP - FAST or PEAP. This property masks usernames with the text you enter. For example, if you use 'anonymous', each user that authenticates with this Wi-Fi connection using their real username is displayed as 'anonymous'.
     *
     * @return string The outerIdentityPrivacyTemporaryValue
     */
@@ -193,6 +204,7 @@ class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration
     
     /**
     * Sets the outerIdentityPrivacyTemporaryValue
+    * Enable identity privacy (Outer Identity) when EAP Type is configured to EAP - TTLS, EAP - FAST or PEAP. This property masks usernames with the text you enter. For example, if you use 'anonymous', each user that authenticates with this Wi-Fi connection using their real username is displayed as 'anonymous'.
     *
     * @param string $val The outerIdentityPrivacyTemporaryValue
     *
@@ -207,6 +219,7 @@ class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration
 
      /** 
      * Gets the rootCertificatesForServerValidation
+    * Trusted Root Certificates for Server Validation when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. If you provide this value you do not need to provide trustedServerCertificateNames, and vice versa.
      *
      * @return array The rootCertificatesForServerValidation
      */
@@ -221,6 +234,7 @@ class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration
     
     /** 
     * Sets the rootCertificatesForServerValidation
+    * Trusted Root Certificates for Server Validation when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. If you provide this value you do not need to provide trustedServerCertificateNames, and vice versa.
     *
     * @param IosTrustedRootCertificate $val The rootCertificatesForServerValidation
     *
@@ -234,13 +248,14 @@ class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration
     
     /**
     * Gets the identityCertificateForClientAuthentication
+    * Identity Certificate for client authentication when EAP Type is configured to EAP-TLS, EAP-TTLS (with Certificate Authentication), or PEAP (with Certificate Authentication).
     *
     * @return IosCertificateProfileBase The identityCertificateForClientAuthentication
     */
     public function getIdentityCertificateForClientAuthentication()
     {
         if (array_key_exists("identityCertificateForClientAuthentication", $this->_propDict)) {
-            if (is_a($this->_propDict["identityCertificateForClientAuthentication"], "Microsoft\Graph\Beta\Model\IosCertificateProfileBase")) {
+            if (is_a($this->_propDict["identityCertificateForClientAuthentication"], "Microsoft\Graph\Model\IosCertificateProfileBase")) {
                 return $this->_propDict["identityCertificateForClientAuthentication"];
             } else {
                 $this->_propDict["identityCertificateForClientAuthentication"] = new IosCertificateProfileBase($this->_propDict["identityCertificateForClientAuthentication"]);
@@ -252,6 +267,7 @@ class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration
     
     /**
     * Sets the identityCertificateForClientAuthentication
+    * Identity Certificate for client authentication when EAP Type is configured to EAP-TLS, EAP-TTLS (with Certificate Authentication), or PEAP (with Certificate Authentication).
     *
     * @param IosCertificateProfileBase $val The identityCertificateForClientAuthentication
     *

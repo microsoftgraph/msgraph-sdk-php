@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * WindowsPhoneXAP class
@@ -28,13 +28,14 @@ class WindowsPhoneXAP extends MobileLobApp
 {
     /**
     * Gets the minimumSupportedOperatingSystem
+    * The value for the minimum applicable operating system.
     *
     * @return WindowsMinimumOperatingSystem The minimumSupportedOperatingSystem
     */
     public function getMinimumSupportedOperatingSystem()
     {
         if (array_key_exists("minimumSupportedOperatingSystem", $this->_propDict)) {
-            if (is_a($this->_propDict["minimumSupportedOperatingSystem"], "Microsoft\Graph\Beta\Model\WindowsMinimumOperatingSystem")) {
+            if (is_a($this->_propDict["minimumSupportedOperatingSystem"], "Microsoft\Graph\Model\WindowsMinimumOperatingSystem")) {
                 return $this->_propDict["minimumSupportedOperatingSystem"];
             } else {
                 $this->_propDict["minimumSupportedOperatingSystem"] = new WindowsMinimumOperatingSystem($this->_propDict["minimumSupportedOperatingSystem"]);
@@ -46,6 +47,7 @@ class WindowsPhoneXAP extends MobileLobApp
     
     /**
     * Sets the minimumSupportedOperatingSystem
+    * The value for the minimum applicable operating system.
     *
     * @param WindowsMinimumOperatingSystem $val The minimumSupportedOperatingSystem
     *
@@ -59,6 +61,7 @@ class WindowsPhoneXAP extends MobileLobApp
     
     /**
     * Gets the productIdentifier
+    * The Product Identifier.
     *
     * @return string The productIdentifier
     */
@@ -73,6 +76,7 @@ class WindowsPhoneXAP extends MobileLobApp
     
     /**
     * Sets the productIdentifier
+    * The Product Identifier.
     *
     * @param string $val The productIdentifier
     *
@@ -86,6 +90,7 @@ class WindowsPhoneXAP extends MobileLobApp
     
     /**
     * Gets the identityVersion
+    * The identity version.
     *
     * @return string The identityVersion
     */
@@ -100,6 +105,7 @@ class WindowsPhoneXAP extends MobileLobApp
     
     /**
     * Sets the identityVersion
+    * The identity version.
     *
     * @param string $val The identityVersion
     *

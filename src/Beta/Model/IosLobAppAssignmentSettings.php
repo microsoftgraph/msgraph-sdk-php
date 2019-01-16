@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * IosLobAppAssignmentSettings class
 *
@@ -26,7 +26,17 @@ namespace Microsoft\Graph\Beta\Model;
 class IosLobAppAssignmentSettings extends MobileAppAssignmentSettings
 {
     /**
+    * Set the @odata.type since this type is immediately descended from an abstract
+    * type that is referenced as the type in an entity.
+    */
+    public function __construct()
+    {
+        $this->setODataType("#microsoft.graph.iosLobAppAssignmentSettings");
+    }
+
+    /**
     * Gets the vpnConfigurationId
+    * The VPN Configuration Id to apply for this app.
     *
     * @return string The vpnConfigurationId
     */
@@ -41,6 +51,7 @@ class IosLobAppAssignmentSettings extends MobileAppAssignmentSettings
 
     /**
     * Sets the vpnConfigurationId
+    * The VPN Configuration Id to apply for this app.
     *
     * @param string $val The value of the vpnConfigurationId
     *

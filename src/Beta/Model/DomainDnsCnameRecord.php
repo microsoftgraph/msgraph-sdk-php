@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * DomainDnsCnameRecord class
@@ -28,6 +28,7 @@ class DomainDnsCnameRecord extends DomainDnsRecord
 {
     /**
     * Gets the canonicalName
+    * The canonical name of the CNAME record. Used to configure the CNAME record at the DNS host.
     *
     * @return string The canonicalName
     */
@@ -42,6 +43,7 @@ class DomainDnsCnameRecord extends DomainDnsRecord
     
     /**
     * Sets the canonicalName
+    * The canonical name of the CNAME record. Used to configure the CNAME record at the DNS host.
     *
     * @param string $val The canonicalName
     *

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * SettingSource class
 *
@@ -27,6 +27,7 @@ class SettingSource extends Entity
 {
     /**
     * Gets the id
+    * Not yet documented
     *
     * @return string The id
     */
@@ -41,6 +42,7 @@ class SettingSource extends Entity
 
     /**
     * Sets the id
+    * Not yet documented
     *
     * @param string $val The value of the id
     *
@@ -53,6 +55,7 @@ class SettingSource extends Entity
     }
     /**
     * Gets the displayName
+    * Not yet documented
     *
     * @return string The displayName
     */
@@ -67,6 +70,7 @@ class SettingSource extends Entity
 
     /**
     * Sets the displayName
+    * Not yet documented
     *
     * @param string $val The value of the displayName
     *

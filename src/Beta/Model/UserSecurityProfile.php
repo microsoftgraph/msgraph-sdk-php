@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * UserSecurityProfile class
@@ -170,7 +170,7 @@ class UserSecurityProfile extends Entity
     public function getAccountStatus()
     {
         if (array_key_exists("accountStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["accountStatus"], "Microsoft\Graph\Beta\Model\AccountStatus")) {
+            if (is_a($this->_propDict["accountStatus"], "Microsoft\Graph\Model\AccountStatus")) {
                 return $this->_propDict["accountStatus"];
             } else {
                 $this->_propDict["accountStatus"] = new AccountStatus($this->_propDict["accountStatus"]);
@@ -479,7 +479,7 @@ class UserSecurityProfile extends Entity
     public function getVendorInformation()
     {
         if (array_key_exists("vendorInformation", $this->_propDict)) {
-            if (is_a($this->_propDict["vendorInformation"], "Microsoft\Graph\Beta\Model\SecurityVendorInformation")) {
+            if (is_a($this->_propDict["vendorInformation"], "Microsoft\Graph\Model\SecurityVendorInformation")) {
                 return $this->_propDict["vendorInformation"];
             } else {
                 $this->_propDict["vendorInformation"] = new SecurityVendorInformation($this->_propDict["vendorInformation"]);

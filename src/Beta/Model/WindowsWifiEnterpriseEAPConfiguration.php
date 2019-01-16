@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * WindowsWifiEnterpriseEAPConfiguration class
@@ -28,13 +28,14 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
 {
     /**
     * Gets the networkSingleSignOn
+    * Specify the network single sign on type.
     *
     * @return NetworkSingleSignOnType The networkSingleSignOn
     */
     public function getNetworkSingleSignOn()
     {
         if (array_key_exists("networkSingleSignOn", $this->_propDict)) {
-            if (is_a($this->_propDict["networkSingleSignOn"], "Microsoft\Graph\Beta\Model\NetworkSingleSignOnType")) {
+            if (is_a($this->_propDict["networkSingleSignOn"], "Microsoft\Graph\Model\NetworkSingleSignOnType")) {
                 return $this->_propDict["networkSingleSignOn"];
             } else {
                 $this->_propDict["networkSingleSignOn"] = new NetworkSingleSignOnType($this->_propDict["networkSingleSignOn"]);
@@ -46,6 +47,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     
     /**
     * Sets the networkSingleSignOn
+    * Specify the network single sign on type.
     *
     * @param NetworkSingleSignOnType $val The networkSingleSignOn
     *
@@ -59,6 +61,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     
     /**
     * Gets the maximumAuthenticationTimeoutInSeconds
+    * Specify maximum authentication timeout (in seconds).  Valid range: 1-120
     *
     * @return int The maximumAuthenticationTimeoutInSeconds
     */
@@ -73,6 +76,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     
     /**
     * Sets the maximumAuthenticationTimeoutInSeconds
+    * Specify maximum authentication timeout (in seconds).  Valid range: 1-120
     *
     * @param int $val The maximumAuthenticationTimeoutInSeconds
     *
@@ -86,6 +90,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     
     /**
     * Gets the promptForAdditionalAuthenticationCredentials
+    * Specify whether the wifi connection should prompt for additional authentication credentials.
     *
     * @return bool The promptForAdditionalAuthenticationCredentials
     */
@@ -100,6 +105,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     
     /**
     * Sets the promptForAdditionalAuthenticationCredentials
+    * Specify whether the wifi connection should prompt for additional authentication credentials.
     *
     * @param bool $val The promptForAdditionalAuthenticationCredentials
     *
@@ -113,6 +119,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     
     /**
     * Gets the enablePairwiseMasterKeyCaching
+    * Specify whether the wifi connection should enable pairwise master key caching.
     *
     * @return bool The enablePairwiseMasterKeyCaching
     */
@@ -127,6 +134,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     
     /**
     * Sets the enablePairwiseMasterKeyCaching
+    * Specify whether the wifi connection should enable pairwise master key caching.
     *
     * @param bool $val The enablePairwiseMasterKeyCaching
     *
@@ -140,6 +148,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     
     /**
     * Gets the maximumPairwiseMasterKeyCacheTimeInMinutes
+    * Specify maximum pairwise master key cache time (in minutes).  Valid range: 5-1440
     *
     * @return int The maximumPairwiseMasterKeyCacheTimeInMinutes
     */
@@ -154,6 +163,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     
     /**
     * Sets the maximumPairwiseMasterKeyCacheTimeInMinutes
+    * Specify maximum pairwise master key cache time (in minutes).  Valid range: 5-1440
     *
     * @param int $val The maximumPairwiseMasterKeyCacheTimeInMinutes
     *
@@ -167,6 +177,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     
     /**
     * Gets the maximumNumberOfPairwiseMasterKeysInCache
+    * Specify maximum number of pairwise master keys in cache.  Valid range: 1-255
     *
     * @return int The maximumNumberOfPairwiseMasterKeysInCache
     */
@@ -181,6 +192,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     
     /**
     * Sets the maximumNumberOfPairwiseMasterKeysInCache
+    * Specify maximum number of pairwise master keys in cache.  Valid range: 1-255
     *
     * @param int $val The maximumNumberOfPairwiseMasterKeysInCache
     *
@@ -194,6 +206,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     
     /**
     * Gets the enablePreAuthentication
+    * Specify whether pre-authentication should be enabled.
     *
     * @return bool The enablePreAuthentication
     */
@@ -208,6 +221,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     
     /**
     * Sets the enablePreAuthentication
+    * Specify whether pre-authentication should be enabled.
     *
     * @param bool $val The enablePreAuthentication
     *
@@ -221,6 +235,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     
     /**
     * Gets the maximumPreAuthenticationAttempts
+    * Specify maximum pre-authentication attempts.  Valid range: 1-16
     *
     * @return int The maximumPreAuthenticationAttempts
     */
@@ -235,6 +250,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     
     /**
     * Sets the maximumPreAuthenticationAttempts
+    * Specify maximum pre-authentication attempts.  Valid range: 1-16
     *
     * @param int $val The maximumPreAuthenticationAttempts
     *
@@ -248,13 +264,14 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     
     /**
     * Gets the eapType
+    * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the the Wi-Fi endpoint (router).
     *
     * @return EapType The eapType
     */
     public function getEapType()
     {
         if (array_key_exists("eapType", $this->_propDict)) {
-            if (is_a($this->_propDict["eapType"], "Microsoft\Graph\Beta\Model\EapType")) {
+            if (is_a($this->_propDict["eapType"], "Microsoft\Graph\Model\EapType")) {
                 return $this->_propDict["eapType"];
             } else {
                 $this->_propDict["eapType"] = new EapType($this->_propDict["eapType"]);
@@ -266,6 +283,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     
     /**
     * Sets the eapType
+    * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the the Wi-Fi endpoint (router).
     *
     * @param EapType $val The eapType
     *
@@ -279,6 +297,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     
     /**
     * Gets the trustedServerCertificateNames
+    * Specify trusted server certificate names.
     *
     * @return string The trustedServerCertificateNames
     */
@@ -293,6 +312,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     
     /**
     * Sets the trustedServerCertificateNames
+    * Specify trusted server certificate names.
     *
     * @param string $val The trustedServerCertificateNames
     *
@@ -306,13 +326,14 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     
     /**
     * Gets the authenticationMethod
+    * Specify the authentication method.
     *
     * @return WiFiAuthenticationMethod The authenticationMethod
     */
     public function getAuthenticationMethod()
     {
         if (array_key_exists("authenticationMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["authenticationMethod"], "Microsoft\Graph\Beta\Model\WiFiAuthenticationMethod")) {
+            if (is_a($this->_propDict["authenticationMethod"], "Microsoft\Graph\Model\WiFiAuthenticationMethod")) {
                 return $this->_propDict["authenticationMethod"];
             } else {
                 $this->_propDict["authenticationMethod"] = new WiFiAuthenticationMethod($this->_propDict["authenticationMethod"]);
@@ -324,6 +345,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     
     /**
     * Sets the authenticationMethod
+    * Specify the authentication method.
     *
     * @param WiFiAuthenticationMethod $val The authenticationMethod
     *
@@ -337,13 +359,14 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     
     /**
     * Gets the innerAuthenticationProtocolForEAPTTLS
+    * Specify inner authentication protocol for EAP TTLS.
     *
     * @return NonEapAuthenticationMethodForEapTtlsType The innerAuthenticationProtocolForEAPTTLS
     */
     public function getInnerAuthenticationProtocolForEAPTTLS()
     {
         if (array_key_exists("innerAuthenticationProtocolForEAPTTLS", $this->_propDict)) {
-            if (is_a($this->_propDict["innerAuthenticationProtocolForEAPTTLS"], "Microsoft\Graph\Beta\Model\NonEapAuthenticationMethodForEapTtlsType")) {
+            if (is_a($this->_propDict["innerAuthenticationProtocolForEAPTTLS"], "Microsoft\Graph\Model\NonEapAuthenticationMethodForEapTtlsType")) {
                 return $this->_propDict["innerAuthenticationProtocolForEAPTTLS"];
             } else {
                 $this->_propDict["innerAuthenticationProtocolForEAPTTLS"] = new NonEapAuthenticationMethodForEapTtlsType($this->_propDict["innerAuthenticationProtocolForEAPTTLS"]);
@@ -355,6 +378,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     
     /**
     * Sets the innerAuthenticationProtocolForEAPTTLS
+    * Specify inner authentication protocol for EAP TTLS.
     *
     * @param NonEapAuthenticationMethodForEapTtlsType $val The innerAuthenticationProtocolForEAPTTLS
     *
@@ -368,6 +392,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     
     /**
     * Gets the outerIdentityPrivacyTemporaryValue
+    * Specify the string to replace usernames for privacy when using EAP TTLS or PEAP.
     *
     * @return string The outerIdentityPrivacyTemporaryValue
     */
@@ -382,6 +407,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     
     /**
     * Sets the outerIdentityPrivacyTemporaryValue
+    * Specify the string to replace usernames for privacy when using EAP TTLS or PEAP.
     *
     * @param string $val The outerIdentityPrivacyTemporaryValue
     *
@@ -396,6 +422,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
 
      /** 
      * Gets the rootCertificatesForServerValidation
+    * Specify root certificate for server validation.
      *
      * @return array The rootCertificatesForServerValidation
      */
@@ -410,6 +437,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     
     /** 
     * Sets the rootCertificatesForServerValidation
+    * Specify root certificate for server validation.
     *
     * @param Windows81TrustedRootCertificate $val The rootCertificatesForServerValidation
     *
@@ -423,13 +451,14 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     
     /**
     * Gets the identityCertificateForClientAuthentication
+    * Specify identity certificate for client authentication.
     *
     * @return WindowsCertificateProfileBase The identityCertificateForClientAuthentication
     */
     public function getIdentityCertificateForClientAuthentication()
     {
         if (array_key_exists("identityCertificateForClientAuthentication", $this->_propDict)) {
-            if (is_a($this->_propDict["identityCertificateForClientAuthentication"], "Microsoft\Graph\Beta\Model\WindowsCertificateProfileBase")) {
+            if (is_a($this->_propDict["identityCertificateForClientAuthentication"], "Microsoft\Graph\Model\WindowsCertificateProfileBase")) {
                 return $this->_propDict["identityCertificateForClientAuthentication"];
             } else {
                 $this->_propDict["identityCertificateForClientAuthentication"] = new WindowsCertificateProfileBase($this->_propDict["identityCertificateForClientAuthentication"]);
@@ -441,6 +470,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     
     /**
     * Sets the identityCertificateForClientAuthentication
+    * Specify identity certificate for client authentication.
     *
     * @param WindowsCertificateProfileBase $val The identityCertificateForClientAuthentication
     *

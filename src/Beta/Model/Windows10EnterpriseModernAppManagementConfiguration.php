@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * Windows10EnterpriseModernAppManagementConfiguration class
@@ -28,6 +28,7 @@ class Windows10EnterpriseModernAppManagementConfiguration extends DeviceConfigur
 {
     /**
     * Gets the uninstallBuiltInApps
+    * Indicates whether or not to uninstall a fixed list of built-in Windows apps.
     *
     * @return bool The uninstallBuiltInApps
     */
@@ -42,6 +43,7 @@ class Windows10EnterpriseModernAppManagementConfiguration extends DeviceConfigur
     
     /**
     * Sets the uninstallBuiltInApps
+    * Indicates whether or not to uninstall a fixed list of built-in Windows apps.
     *
     * @param bool $val The uninstallBuiltInApps
     *

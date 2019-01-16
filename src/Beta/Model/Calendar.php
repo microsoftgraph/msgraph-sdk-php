@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * Calendar class
@@ -28,6 +28,7 @@ class Calendar extends Entity
 {
     /**
     * Gets the name
+    * The calendar name.
     *
     * @return string The name
     */
@@ -42,6 +43,7 @@ class Calendar extends Entity
     
     /**
     * Sets the name
+    * The calendar name.
     *
     * @param string $val The name
     *
@@ -55,13 +57,14 @@ class Calendar extends Entity
     
     /**
     * Gets the color
+    * Specifies the color theme to distinguish the calendar from other calendars in a UI. The property values are: LightBlue=0, LightGreen=1, LightOrange=2, LightGray=3, LightYellow=4, LightTeal=5, LightPink=6, LightBrown=7, LightRed=8, MaxColor=9, Auto=-1
     *
     * @return CalendarColor The color
     */
     public function getColor()
     {
         if (array_key_exists("color", $this->_propDict)) {
-            if (is_a($this->_propDict["color"], "Microsoft\Graph\Beta\Model\CalendarColor")) {
+            if (is_a($this->_propDict["color"], "Microsoft\Graph\Model\CalendarColor")) {
                 return $this->_propDict["color"];
             } else {
                 $this->_propDict["color"] = new CalendarColor($this->_propDict["color"]);
@@ -73,6 +76,7 @@ class Calendar extends Entity
     
     /**
     * Sets the color
+    * Specifies the color theme to distinguish the calendar from other calendars in a UI. The property values are: LightBlue=0, LightGreen=1, LightOrange=2, LightGray=3, LightYellow=4, LightTeal=5, LightPink=6, LightBrown=7, LightRed=8, MaxColor=9, Auto=-1
     *
     * @param CalendarColor $val The color
     *
@@ -140,6 +144,7 @@ class Calendar extends Entity
     
     /**
     * Gets the changeKey
+    * Identifies the version of the calendar object. Every time the calendar is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
     *
     * @return string The changeKey
     */
@@ -154,6 +159,7 @@ class Calendar extends Entity
     
     /**
     * Sets the changeKey
+    * Identifies the version of the calendar object. Every time the calendar is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
     *
     * @param string $val The changeKey
     *
@@ -167,6 +173,7 @@ class Calendar extends Entity
     
     /**
     * Gets the canShare
+    * True if the user has the permission to share the calendar, false otherwise. Only the user who created the calendar can share it.
     *
     * @return bool The canShare
     */
@@ -181,6 +188,7 @@ class Calendar extends Entity
     
     /**
     * Sets the canShare
+    * True if the user has the permission to share the calendar, false otherwise. Only the user who created the calendar can share it.
     *
     * @param bool $val The canShare
     *
@@ -194,6 +202,7 @@ class Calendar extends Entity
     
     /**
     * Gets the canViewPrivateItems
+    * True if the user can read calendar items that have been marked private, false otherwise.
     *
     * @return bool The canViewPrivateItems
     */
@@ -208,6 +217,7 @@ class Calendar extends Entity
     
     /**
     * Sets the canViewPrivateItems
+    * True if the user can read calendar items that have been marked private, false otherwise.
     *
     * @param bool $val The canViewPrivateItems
     *
@@ -275,6 +285,7 @@ class Calendar extends Entity
     
     /**
     * Gets the canEdit
+    * True if the user can write to the calendar, false otherwise. This property is true for the user who created the calendar. This property is also true for a user who has been shared a calendar and granted write access.
     *
     * @return bool The canEdit
     */
@@ -289,6 +300,7 @@ class Calendar extends Entity
     
     /**
     * Sets the canEdit
+    * True if the user can write to the calendar, false otherwise. This property is true for the user who created the calendar. This property is also true for a user who has been shared a calendar and granted write access.
     *
     * @param bool $val The canEdit
     *
@@ -302,13 +314,14 @@ class Calendar extends Entity
     
     /**
     * Gets the owner
+    * If set, this represents the user who created or added the calendar. For a calendar that the user created or added, the owner property is set to the user. For a calendar shared with the user, the owner property is set to the person who shared that calendar with the user.
     *
     * @return EmailAddress The owner
     */
     public function getOwner()
     {
         if (array_key_exists("owner", $this->_propDict)) {
-            if (is_a($this->_propDict["owner"], "Microsoft\Graph\Beta\Model\EmailAddress")) {
+            if (is_a($this->_propDict["owner"], "Microsoft\Graph\Model\EmailAddress")) {
                 return $this->_propDict["owner"];
             } else {
                 $this->_propDict["owner"] = new EmailAddress($this->_propDict["owner"]);
@@ -320,6 +333,7 @@ class Calendar extends Entity
     
     /**
     * Sets the owner
+    * If set, this represents the user who created or added the calendar. For a calendar that the user created or added, the owner property is set to the user. For a calendar shared with the user, the owner property is set to the person who shared that calendar with the user.
     *
     * @param EmailAddress $val The owner
     *
@@ -334,6 +348,7 @@ class Calendar extends Entity
 
      /** 
      * Gets the events
+    * The events in the calendar. Navigation property. Read-only.
      *
      * @return array The events
      */
@@ -348,6 +363,7 @@ class Calendar extends Entity
     
     /** 
     * Sets the events
+    * The events in the calendar. Navigation property. Read-only.
     *
     * @param Event $val The events
     *
@@ -362,6 +378,7 @@ class Calendar extends Entity
 
      /** 
      * Gets the calendarView
+    * The calendar view for the calendar. Navigation property. Read-only.
      *
      * @return array The calendarView
      */
@@ -376,6 +393,7 @@ class Calendar extends Entity
     
     /** 
     * Sets the calendarView
+    * The calendar view for the calendar. Navigation property. Read-only.
     *
     * @param Event $val The calendarView
     *
@@ -390,6 +408,7 @@ class Calendar extends Entity
 
      /** 
      * Gets the singleValueExtendedProperties
+    * The collection of single-value extended properties defined for the calendar. Read-only. Nullable.
      *
      * @return array The singleValueExtendedProperties
      */
@@ -404,6 +423,7 @@ class Calendar extends Entity
     
     /** 
     * Sets the singleValueExtendedProperties
+    * The collection of single-value extended properties defined for the calendar. Read-only. Nullable.
     *
     * @param SingleValueLegacyExtendedProperty $val The singleValueExtendedProperties
     *
@@ -418,6 +438,7 @@ class Calendar extends Entity
 
      /** 
      * Gets the multiValueExtendedProperties
+    * The collection of multi-value extended properties defined for the calendar. Read-only. Nullable.
      *
      * @return array The multiValueExtendedProperties
      */
@@ -432,6 +453,7 @@ class Calendar extends Entity
     
     /** 
     * Sets the multiValueExtendedProperties
+    * The collection of multi-value extended properties defined for the calendar. Read-only. Nullable.
     *
     * @param MultiValueLegacyExtendedProperty $val The multiValueExtendedProperties
     *

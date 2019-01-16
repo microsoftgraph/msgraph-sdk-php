@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * ManagedAndroidLobApp class
@@ -28,6 +28,7 @@ class ManagedAndroidLobApp extends ManagedMobileLobApp
 {
     /**
     * Gets the packageId
+    * The package identifier.
     *
     * @return string The packageId
     */
@@ -42,6 +43,7 @@ class ManagedAndroidLobApp extends ManagedMobileLobApp
     
     /**
     * Sets the packageId
+    * The package identifier.
     *
     * @param string $val The packageId
     *
@@ -55,6 +57,7 @@ class ManagedAndroidLobApp extends ManagedMobileLobApp
     
     /**
     * Gets the identityName
+    * The Identity Name.
     *
     * @return string The identityName
     */
@@ -69,6 +72,7 @@ class ManagedAndroidLobApp extends ManagedMobileLobApp
     
     /**
     * Sets the identityName
+    * The Identity Name.
     *
     * @param string $val The identityName
     *
@@ -82,13 +86,14 @@ class ManagedAndroidLobApp extends ManagedMobileLobApp
     
     /**
     * Gets the minimumSupportedOperatingSystem
+    * The value for the minimum applicable operating system.
     *
     * @return AndroidMinimumOperatingSystem The minimumSupportedOperatingSystem
     */
     public function getMinimumSupportedOperatingSystem()
     {
         if (array_key_exists("minimumSupportedOperatingSystem", $this->_propDict)) {
-            if (is_a($this->_propDict["minimumSupportedOperatingSystem"], "Microsoft\Graph\Beta\Model\AndroidMinimumOperatingSystem")) {
+            if (is_a($this->_propDict["minimumSupportedOperatingSystem"], "Microsoft\Graph\Model\AndroidMinimumOperatingSystem")) {
                 return $this->_propDict["minimumSupportedOperatingSystem"];
             } else {
                 $this->_propDict["minimumSupportedOperatingSystem"] = new AndroidMinimumOperatingSystem($this->_propDict["minimumSupportedOperatingSystem"]);
@@ -100,6 +105,7 @@ class ManagedAndroidLobApp extends ManagedMobileLobApp
     
     /**
     * Sets the minimumSupportedOperatingSystem
+    * The value for the minimum applicable operating system.
     *
     * @param AndroidMinimumOperatingSystem $val The minimumSupportedOperatingSystem
     *
@@ -113,6 +119,7 @@ class ManagedAndroidLobApp extends ManagedMobileLobApp
     
     /**
     * Gets the versionName
+    * The version name of managed Android Line of Business (LoB) app.
     *
     * @return string The versionName
     */
@@ -127,6 +134,7 @@ class ManagedAndroidLobApp extends ManagedMobileLobApp
     
     /**
     * Sets the versionName
+    * The version name of managed Android Line of Business (LoB) app.
     *
     * @param string $val The versionName
     *
@@ -140,6 +148,7 @@ class ManagedAndroidLobApp extends ManagedMobileLobApp
     
     /**
     * Gets the versionCode
+    * The version code of managed Android Line of Business (LoB) app.
     *
     * @return string The versionCode
     */
@@ -154,6 +163,7 @@ class ManagedAndroidLobApp extends ManagedMobileLobApp
     
     /**
     * Sets the versionCode
+    * The version code of managed Android Line of Business (LoB) app.
     *
     * @param string $val The versionCode
     *
@@ -167,6 +177,7 @@ class ManagedAndroidLobApp extends ManagedMobileLobApp
     
     /**
     * Gets the identityVersion
+    * The identity version.
     *
     * @return string The identityVersion
     */
@@ -181,6 +192,7 @@ class ManagedAndroidLobApp extends ManagedMobileLobApp
     
     /**
     * Sets the identityVersion
+    * The identity version.
     *
     * @param string $val The identityVersion
     *

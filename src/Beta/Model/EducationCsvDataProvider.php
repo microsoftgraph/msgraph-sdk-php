@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * EducationCsvDataProvider class
 *
@@ -25,6 +25,15 @@ namespace Microsoft\Graph\Beta\Model;
 */
 class EducationCsvDataProvider extends EducationSynchronizationDataProvider
 {
+    /**
+    * Set the @odata.type since this type is immediately descended from an abstract
+    * type that is referenced as the type in an entity.
+    */
+    public function __construct()
+    {
+        $this->setODataType("#microsoft.graph.educationCsvDataProvider");
+    }
+
 
     /**
     * Gets the customizations
@@ -34,7 +43,7 @@ class EducationCsvDataProvider extends EducationSynchronizationDataProvider
     public function getCustomizations()
     {
         if (array_key_exists("customizations", $this->_propDict)) {
-            if (is_a($this->_propDict["customizations"], "Microsoft\Graph\Beta\Model\EducationSynchronizationCustomizations")) {
+            if (is_a($this->_propDict["customizations"], "Microsoft\Graph\Model\EducationSynchronizationCustomizations")) {
                 return $this->_propDict["customizations"];
             } else {
                 $this->_propDict["customizations"] = new EducationSynchronizationCustomizations($this->_propDict["customizations"]);

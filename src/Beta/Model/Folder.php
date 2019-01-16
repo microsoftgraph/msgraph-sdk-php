@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * Folder class
 *
@@ -27,6 +27,7 @@ class Folder extends Entity
 {
     /**
     * Gets the childCount
+    * Number of children contained immediately within this container.
     *
     * @return int The childCount
     */
@@ -41,6 +42,7 @@ class Folder extends Entity
 
     /**
     * Sets the childCount
+    * Number of children contained immediately within this container.
     *
     * @param int $val The value of the childCount
     *
@@ -54,13 +56,14 @@ class Folder extends Entity
 
     /**
     * Gets the view
+    * A collection of properties defining the recommended view for the folder.
     *
     * @return FolderView The view
     */
     public function getView()
     {
         if (array_key_exists("view", $this->_propDict)) {
-            if (is_a($this->_propDict["view"], "Microsoft\Graph\Beta\Model\FolderView")) {
+            if (is_a($this->_propDict["view"], "Microsoft\Graph\Model\FolderView")) {
                 return $this->_propDict["view"];
             } else {
                 $this->_propDict["view"] = new FolderView($this->_propDict["view"]);
@@ -72,6 +75,7 @@ class Folder extends Entity
 
     /**
     * Sets the view
+    * A collection of properties defining the recommended view for the folder.
     *
     * @param FolderView $val The value to assign to the view
     *

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * MacOSCustomConfiguration class
@@ -28,6 +28,7 @@ class MacOSCustomConfiguration extends DeviceConfiguration
 {
     /**
     * Gets the payloadName
+    * Name that is displayed to the user.
     *
     * @return string The payloadName
     */
@@ -42,6 +43,7 @@ class MacOSCustomConfiguration extends DeviceConfiguration
     
     /**
     * Sets the payloadName
+    * Name that is displayed to the user.
     *
     * @param string $val The payloadName
     *
@@ -55,6 +57,7 @@ class MacOSCustomConfiguration extends DeviceConfiguration
     
     /**
     * Gets the payloadFileName
+    * Payload file name (.mobileconfig
     *
     * @return string The payloadFileName
     */
@@ -69,6 +72,7 @@ class MacOSCustomConfiguration extends DeviceConfiguration
     
     /**
     * Sets the payloadFileName
+    * Payload file name (.mobileconfig
     *
     * @param string $val The payloadFileName
     *
@@ -82,6 +86,7 @@ class MacOSCustomConfiguration extends DeviceConfiguration
     
     /**
     * Gets the payload
+    * Payload. (UTF8 encoded byte array)
     *
     * @return \GuzzleHttp\Psr7\Stream The payload
     */
@@ -100,6 +105,7 @@ class MacOSCustomConfiguration extends DeviceConfiguration
     
     /**
     * Sets the payload
+    * Payload. (UTF8 encoded byte array)
     *
     * @param \GuzzleHttp\Psr7\Stream $val The payload
     *

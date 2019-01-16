@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * MobileAppTroubleshootingAppPolicyCreationHistory class
 *
@@ -28,13 +28,14 @@ class MobileAppTroubleshootingAppPolicyCreationHistory extends MobileAppTroubles
 
     /**
     * Gets the runState
+    * Status of the item.
     *
     * @return RunState The runState
     */
     public function getRunState()
     {
         if (array_key_exists("runState", $this->_propDict)) {
-            if (is_a($this->_propDict["runState"], "Microsoft\Graph\Beta\Model\RunState")) {
+            if (is_a($this->_propDict["runState"], "Microsoft\Graph\Model\RunState")) {
                 return $this->_propDict["runState"];
             } else {
                 $this->_propDict["runState"] = new RunState($this->_propDict["runState"]);
@@ -46,6 +47,7 @@ class MobileAppTroubleshootingAppPolicyCreationHistory extends MobileAppTroubles
 
     /**
     * Sets the runState
+    * Status of the item.
     *
     * @param RunState $val The value to assign to the runState
     *
@@ -58,6 +60,7 @@ class MobileAppTroubleshootingAppPolicyCreationHistory extends MobileAppTroubles
     }
     /**
     * Gets the errorCode
+    * Error code for the failure, empty if no failure.
     *
     * @return string The errorCode
     */
@@ -72,6 +75,7 @@ class MobileAppTroubleshootingAppPolicyCreationHistory extends MobileAppTroubles
 
     /**
     * Sets the errorCode
+    * Error code for the failure, empty if no failure.
     *
     * @param string $val The value of the errorCode
     *

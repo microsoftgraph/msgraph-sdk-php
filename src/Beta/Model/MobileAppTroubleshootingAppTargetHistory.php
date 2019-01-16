@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * MobileAppTroubleshootingAppTargetHistory class
 *
@@ -27,6 +27,7 @@ class MobileAppTroubleshootingAppTargetHistory extends MobileAppTroubleshootingH
 {
     /**
     * Gets the securityGroupId
+    * AAD security group id to which it was targeted.
     *
     * @return string The securityGroupId
     */
@@ -41,6 +42,7 @@ class MobileAppTroubleshootingAppTargetHistory extends MobileAppTroubleshootingH
 
     /**
     * Sets the securityGroupId
+    * AAD security group id to which it was targeted.
     *
     * @param string $val The value of the securityGroupId
     *
@@ -54,13 +56,14 @@ class MobileAppTroubleshootingAppTargetHistory extends MobileAppTroubleshootingH
 
     /**
     * Gets the runState
+    * Status of the item.
     *
     * @return RunState The runState
     */
     public function getRunState()
     {
         if (array_key_exists("runState", $this->_propDict)) {
-            if (is_a($this->_propDict["runState"], "Microsoft\Graph\Beta\Model\RunState")) {
+            if (is_a($this->_propDict["runState"], "Microsoft\Graph\Model\RunState")) {
                 return $this->_propDict["runState"];
             } else {
                 $this->_propDict["runState"] = new RunState($this->_propDict["runState"]);
@@ -72,6 +75,7 @@ class MobileAppTroubleshootingAppTargetHistory extends MobileAppTroubleshootingH
 
     /**
     * Sets the runState
+    * Status of the item.
     *
     * @param RunState $val The value to assign to the runState
     *
@@ -84,6 +88,7 @@ class MobileAppTroubleshootingAppTargetHistory extends MobileAppTroubleshootingH
     }
     /**
     * Gets the errorCode
+    * Error code for the failure, empty if no failure.
     *
     * @return string The errorCode
     */
@@ -98,6 +103,7 @@ class MobileAppTroubleshootingAppTargetHistory extends MobileAppTroubleshootingH
 
     /**
     * Sets the errorCode
+    * Error code for the failure, empty if no failure.
     *
     * @param string $val The value of the errorCode
     *

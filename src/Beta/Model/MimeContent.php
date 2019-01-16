@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * MimeContent class
 *
@@ -27,6 +27,7 @@ class MimeContent extends Entity
 {
     /**
     * Gets the type
+    * Indicates the content mime type.
     *
     * @return string The type
     */
@@ -41,6 +42,7 @@ class MimeContent extends Entity
 
     /**
     * Sets the type
+    * Indicates the content mime type.
     *
     * @param string $val The value of the type
     *
@@ -54,13 +56,14 @@ class MimeContent extends Entity
 
     /**
     * Gets the value
+    * The byte array that contains the actual content.
     *
     * @return \GuzzleHttp\Psr7\Stream The value
     */
     public function getValue()
     {
         if (array_key_exists("value", $this->_propDict)) {
-            if (is_a($this->_propDict["value"], "Microsoft\Graph\Beta\Model\\GuzzleHttp\Psr7\Stream")) {
+            if (is_a($this->_propDict["value"], "Microsoft\Graph\Model\\GuzzleHttp\Psr7\Stream")) {
                 return $this->_propDict["value"];
             } else {
                 $this->_propDict["value"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["value"]);
@@ -72,6 +75,7 @@ class MimeContent extends Entity
 
     /**
     * Sets the value
+    * The byte array that contains the actual content.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The value to assign to the value
     *

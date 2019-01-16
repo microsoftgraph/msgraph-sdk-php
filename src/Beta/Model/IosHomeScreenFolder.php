@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * IosHomeScreenFolder class
 *
@@ -25,16 +25,26 @@ namespace Microsoft\Graph\Beta\Model;
 */
 class IosHomeScreenFolder extends IosHomeScreenItem
 {
+    /**
+    * Set the @odata.type since this type is immediately descended from an abstract
+    * type that is referenced as the type in an entity.
+    */
+    public function __construct()
+    {
+        $this->setODataType("#microsoft.graph.iosHomeScreenFolder");
+    }
+
 
     /**
     * Gets the pages
+    * Pages of Home Screen Layout Icons which must be Application Type. This collection can contain a maximum of 500 elements.
     *
     * @return IosHomeScreenFolderPage The pages
     */
     public function getPages()
     {
         if (array_key_exists("pages", $this->_propDict)) {
-            if (is_a($this->_propDict["pages"], "Microsoft\Graph\Beta\Model\IosHomeScreenFolderPage")) {
+            if (is_a($this->_propDict["pages"], "Microsoft\Graph\Model\IosHomeScreenFolderPage")) {
                 return $this->_propDict["pages"];
             } else {
                 $this->_propDict["pages"] = new IosHomeScreenFolderPage($this->_propDict["pages"]);
@@ -46,6 +56,7 @@ class IosHomeScreenFolder extends IosHomeScreenItem
 
     /**
     * Sets the pages
+    * Pages of Home Screen Layout Icons which must be Application Type. This collection can contain a maximum of 500 elements.
     *
     * @param IosHomeScreenFolderPage $val The value to assign to the pages
     *

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * OmaSettingStringXml class
 *
@@ -26,7 +26,17 @@ namespace Microsoft\Graph\Beta\Model;
 class OmaSettingStringXml extends OmaSetting
 {
     /**
+    * Set the @odata.type since this type is immediately descended from an abstract
+    * type that is referenced as the type in an entity.
+    */
+    public function __construct()
+    {
+        $this->setODataType("#microsoft.graph.omaSettingStringXml");
+    }
+
+    /**
     * Gets the fileName
+    * File name associated with the Value property (.xml).
     *
     * @return string The fileName
     */
@@ -41,6 +51,7 @@ class OmaSettingStringXml extends OmaSetting
 
     /**
     * Sets the fileName
+    * File name associated with the Value property (.xml).
     *
     * @param string $val The value of the fileName
     *
@@ -54,13 +65,14 @@ class OmaSettingStringXml extends OmaSetting
 
     /**
     * Gets the value
+    * Value. (UTF8 encoded byte array)
     *
     * @return \GuzzleHttp\Psr7\Stream The value
     */
     public function getValue()
     {
         if (array_key_exists("value", $this->_propDict)) {
-            if (is_a($this->_propDict["value"], "Microsoft\Graph\Beta\Model\\GuzzleHttp\Psr7\Stream")) {
+            if (is_a($this->_propDict["value"], "Microsoft\Graph\Model\\GuzzleHttp\Psr7\Stream")) {
                 return $this->_propDict["value"];
             } else {
                 $this->_propDict["value"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["value"]);
@@ -72,6 +84,7 @@ class OmaSettingStringXml extends OmaSetting
 
     /**
     * Sets the value
+    * Value. (UTF8 encoded byte array)
     *
     * @param \GuzzleHttp\Psr7\Stream $val The value to assign to the value
     *

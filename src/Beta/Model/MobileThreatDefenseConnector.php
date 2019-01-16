@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * MobileThreatDefenseConnector class
@@ -28,6 +28,7 @@ class MobileThreatDefenseConnector extends Entity
 {
     /**
     * Gets the lastHeartbeatDateTime
+    * DateTime of last Heartbeat recieved from the Data Sync Partner
     *
     * @return \DateTime The lastHeartbeatDateTime
     */
@@ -46,6 +47,7 @@ class MobileThreatDefenseConnector extends Entity
     
     /**
     * Sets the lastHeartbeatDateTime
+    * DateTime of last Heartbeat recieved from the Data Sync Partner
     *
     * @param \DateTime $val The lastHeartbeatDateTime
     *
@@ -59,13 +61,14 @@ class MobileThreatDefenseConnector extends Entity
     
     /**
     * Gets the partnerState
+    * Data Sync Partner state for this account. Possible values are: unavailable, available, enabled, unresponsive.
     *
     * @return MobileThreatPartnerTenantState The partnerState
     */
     public function getPartnerState()
     {
         if (array_key_exists("partnerState", $this->_propDict)) {
-            if (is_a($this->_propDict["partnerState"], "Microsoft\Graph\Beta\Model\MobileThreatPartnerTenantState")) {
+            if (is_a($this->_propDict["partnerState"], "Microsoft\Graph\Model\MobileThreatPartnerTenantState")) {
                 return $this->_propDict["partnerState"];
             } else {
                 $this->_propDict["partnerState"] = new MobileThreatPartnerTenantState($this->_propDict["partnerState"]);
@@ -77,6 +80,7 @@ class MobileThreatDefenseConnector extends Entity
     
     /**
     * Sets the partnerState
+    * Data Sync Partner state for this account. Possible values are: unavailable, available, enabled, unresponsive.
     *
     * @param MobileThreatPartnerTenantState $val The partnerState
     *
@@ -90,6 +94,7 @@ class MobileThreatDefenseConnector extends Entity
     
     /**
     * Gets the androidEnabled
+    * For Android, set whether data from the data sync partner should be used during compliance evaluations
     *
     * @return bool The androidEnabled
     */
@@ -104,6 +109,7 @@ class MobileThreatDefenseConnector extends Entity
     
     /**
     * Sets the androidEnabled
+    * For Android, set whether data from the data sync partner should be used during compliance evaluations
     *
     * @param bool $val The androidEnabled
     *
@@ -117,6 +123,7 @@ class MobileThreatDefenseConnector extends Entity
     
     /**
     * Gets the iosEnabled
+    * For IOS, get or set whether data from the data sync partner should be used during compliance evaluations
     *
     * @return bool The iosEnabled
     */
@@ -131,6 +138,7 @@ class MobileThreatDefenseConnector extends Entity
     
     /**
     * Sets the iosEnabled
+    * For IOS, get or set whether data from the data sync partner should be used during compliance evaluations
     *
     * @param bool $val The iosEnabled
     *
@@ -144,6 +152,7 @@ class MobileThreatDefenseConnector extends Entity
     
     /**
     * Gets the windowsEnabled
+    * For Windows, get or set whether data from the data sync partner should be used during compliance evaluations
     *
     * @return bool The windowsEnabled
     */
@@ -158,6 +167,7 @@ class MobileThreatDefenseConnector extends Entity
     
     /**
     * Sets the windowsEnabled
+    * For Windows, get or set whether data from the data sync partner should be used during compliance evaluations
     *
     * @param bool $val The windowsEnabled
     *
@@ -171,6 +181,7 @@ class MobileThreatDefenseConnector extends Entity
     
     /**
     * Gets the macEnabled
+    * For Mac, get or set whether data from the data sync partner should be used during compliance evaluations
     *
     * @return bool The macEnabled
     */
@@ -185,6 +196,7 @@ class MobileThreatDefenseConnector extends Entity
     
     /**
     * Sets the macEnabled
+    * For Mac, get or set whether data from the data sync partner should be used during compliance evaluations
     *
     * @param bool $val The macEnabled
     *
@@ -198,6 +210,7 @@ class MobileThreatDefenseConnector extends Entity
     
     /**
     * Gets the androidDeviceBlockedOnMissingPartnerData
+    * For Android, set whether Intune must receive data from the data sync partner prior to marking a device compliant
     *
     * @return bool The androidDeviceBlockedOnMissingPartnerData
     */
@@ -212,6 +225,7 @@ class MobileThreatDefenseConnector extends Entity
     
     /**
     * Sets the androidDeviceBlockedOnMissingPartnerData
+    * For Android, set whether Intune must receive data from the data sync partner prior to marking a device compliant
     *
     * @param bool $val The androidDeviceBlockedOnMissingPartnerData
     *
@@ -225,6 +239,7 @@ class MobileThreatDefenseConnector extends Entity
     
     /**
     * Gets the iosDeviceBlockedOnMissingPartnerData
+    * For IOS, set whether Intune must receive data from the data sync partner prior to marking a device compliant
     *
     * @return bool The iosDeviceBlockedOnMissingPartnerData
     */
@@ -239,6 +254,7 @@ class MobileThreatDefenseConnector extends Entity
     
     /**
     * Sets the iosDeviceBlockedOnMissingPartnerData
+    * For IOS, set whether Intune must receive data from the data sync partner prior to marking a device compliant
     *
     * @param bool $val The iosDeviceBlockedOnMissingPartnerData
     *
@@ -252,6 +268,7 @@ class MobileThreatDefenseConnector extends Entity
     
     /**
     * Gets the windowsDeviceBlockedOnMissingPartnerData
+    * For Windows, set whether Intune must receive data from the data sync partner prior to marking a device compliant
     *
     * @return bool The windowsDeviceBlockedOnMissingPartnerData
     */
@@ -266,6 +283,7 @@ class MobileThreatDefenseConnector extends Entity
     
     /**
     * Sets the windowsDeviceBlockedOnMissingPartnerData
+    * For Windows, set whether Intune must receive data from the data sync partner prior to marking a device compliant
     *
     * @param bool $val The windowsDeviceBlockedOnMissingPartnerData
     *
@@ -279,6 +297,7 @@ class MobileThreatDefenseConnector extends Entity
     
     /**
     * Gets the macDeviceBlockedOnMissingPartnerData
+    * For Mac, get or set whether Intune must receive data from the data sync partner prior to marking a device compliant
     *
     * @return bool The macDeviceBlockedOnMissingPartnerData
     */
@@ -293,6 +312,7 @@ class MobileThreatDefenseConnector extends Entity
     
     /**
     * Sets the macDeviceBlockedOnMissingPartnerData
+    * For Mac, get or set whether Intune must receive data from the data sync partner prior to marking a device compliant
     *
     * @param bool $val The macDeviceBlockedOnMissingPartnerData
     *
@@ -306,6 +326,7 @@ class MobileThreatDefenseConnector extends Entity
     
     /**
     * Gets the partnerUnsupportedOsVersionBlocked
+    * Get or set whether to block devices on the enabled platforms that do not meet the minimum version requirements of the Data Sync Partner
     *
     * @return bool The partnerUnsupportedOsVersionBlocked
     */
@@ -320,6 +341,7 @@ class MobileThreatDefenseConnector extends Entity
     
     /**
     * Sets the partnerUnsupportedOsVersionBlocked
+    * Get or set whether to block devices on the enabled platforms that do not meet the minimum version requirements of the Data Sync Partner
     *
     * @param bool $val The partnerUnsupportedOsVersionBlocked
     *
@@ -333,6 +355,7 @@ class MobileThreatDefenseConnector extends Entity
     
     /**
     * Gets the partnerUnresponsivenessThresholdInDays
+    * Get or Set days the per tenant tolerance to unresponsiveness for this partner integration
     *
     * @return int The partnerUnresponsivenessThresholdInDays
     */
@@ -347,6 +370,7 @@ class MobileThreatDefenseConnector extends Entity
     
     /**
     * Sets the partnerUnresponsivenessThresholdInDays
+    * Get or Set days the per tenant tolerance to unresponsiveness for this partner integration
     *
     * @param int $val The partnerUnresponsivenessThresholdInDays
     *
@@ -360,6 +384,7 @@ class MobileThreatDefenseConnector extends Entity
     
     /**
     * Gets the allowPartnerToCollectIOSApplicationMetadata
+    * For IOS devices, allows the admin to configure whether the data sync partner may also collect metadata about installed applications from Intune
     *
     * @return bool The allowPartnerToCollectIOSApplicationMetadata
     */
@@ -374,6 +399,7 @@ class MobileThreatDefenseConnector extends Entity
     
     /**
     * Sets the allowPartnerToCollectIOSApplicationMetadata
+    * For IOS devices, allows the admin to configure whether the data sync partner may also collect metadata about installed applications from Intune
     *
     * @param bool $val The allowPartnerToCollectIOSApplicationMetadata
     *

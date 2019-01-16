@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * ManagedDeviceCleanupSettings class
 *
@@ -27,6 +27,7 @@ class ManagedDeviceCleanupSettings extends Entity
 {
     /**
     * Gets the deviceInactivityBeforeRetirementInDays
+    * Number of days when the device has not contacted Intune.
     *
     * @return string The deviceInactivityBeforeRetirementInDays
     */
@@ -41,6 +42,7 @@ class ManagedDeviceCleanupSettings extends Entity
 
     /**
     * Sets the deviceInactivityBeforeRetirementInDays
+    * Number of days when the device has not contacted Intune.
     *
     * @param string $val The value of the deviceInactivityBeforeRetirementInDays
     *

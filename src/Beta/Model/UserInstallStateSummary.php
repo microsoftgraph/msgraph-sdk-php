@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * UserInstallStateSummary class
@@ -28,6 +28,7 @@ class UserInstallStateSummary extends Entity
 {
     /**
     * Gets the userName
+    * User name.
     *
     * @return string The userName
     */
@@ -42,6 +43,7 @@ class UserInstallStateSummary extends Entity
     
     /**
     * Sets the userName
+    * User name.
     *
     * @param string $val The userName
     *
@@ -55,6 +57,7 @@ class UserInstallStateSummary extends Entity
     
     /**
     * Gets the installedDeviceCount
+    * Installed Device Count.
     *
     * @return int The installedDeviceCount
     */
@@ -69,6 +72,7 @@ class UserInstallStateSummary extends Entity
     
     /**
     * Sets the installedDeviceCount
+    * Installed Device Count.
     *
     * @param int $val The installedDeviceCount
     *
@@ -82,6 +86,7 @@ class UserInstallStateSummary extends Entity
     
     /**
     * Gets the failedDeviceCount
+    * Failed Device Count.
     *
     * @return int The failedDeviceCount
     */
@@ -96,6 +101,7 @@ class UserInstallStateSummary extends Entity
     
     /**
     * Sets the failedDeviceCount
+    * Failed Device Count.
     *
     * @param int $val The failedDeviceCount
     *
@@ -109,6 +115,7 @@ class UserInstallStateSummary extends Entity
     
     /**
     * Gets the notInstalledDeviceCount
+    * Not installed device count.
     *
     * @return int The notInstalledDeviceCount
     */
@@ -123,6 +130,7 @@ class UserInstallStateSummary extends Entity
     
     /**
     * Sets the notInstalledDeviceCount
+    * Not installed device count.
     *
     * @param int $val The notInstalledDeviceCount
     *
@@ -137,6 +145,7 @@ class UserInstallStateSummary extends Entity
 
      /** 
      * Gets the deviceStates
+    * The install state of the eBook.
      *
      * @return array The deviceStates
      */
@@ -151,6 +160,7 @@ class UserInstallStateSummary extends Entity
     
     /** 
     * Sets the deviceStates
+    * The install state of the eBook.
     *
     * @param DeviceInstallState $val The deviceStates
     *

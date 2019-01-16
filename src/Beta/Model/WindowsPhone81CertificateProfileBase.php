@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * WindowsPhone81CertificateProfileBase class
@@ -28,6 +28,7 @@ class WindowsPhone81CertificateProfileBase extends DeviceConfiguration
 {
     /**
     * Gets the renewalThresholdPercentage
+    * Certificate renewal threshold percentage.
     *
     * @return int The renewalThresholdPercentage
     */
@@ -42,6 +43,7 @@ class WindowsPhone81CertificateProfileBase extends DeviceConfiguration
     
     /**
     * Sets the renewalThresholdPercentage
+    * Certificate renewal threshold percentage.
     *
     * @param int $val The renewalThresholdPercentage
     *
@@ -55,13 +57,14 @@ class WindowsPhone81CertificateProfileBase extends DeviceConfiguration
     
     /**
     * Gets the keyStorageProvider
+    * Key Storage Provider (KSP).
     *
     * @return KeyStorageProviderOption The keyStorageProvider
     */
     public function getKeyStorageProvider()
     {
         if (array_key_exists("keyStorageProvider", $this->_propDict)) {
-            if (is_a($this->_propDict["keyStorageProvider"], "Microsoft\Graph\Beta\Model\KeyStorageProviderOption")) {
+            if (is_a($this->_propDict["keyStorageProvider"], "Microsoft\Graph\Model\KeyStorageProviderOption")) {
                 return $this->_propDict["keyStorageProvider"];
             } else {
                 $this->_propDict["keyStorageProvider"] = new KeyStorageProviderOption($this->_propDict["keyStorageProvider"]);
@@ -73,6 +76,7 @@ class WindowsPhone81CertificateProfileBase extends DeviceConfiguration
     
     /**
     * Sets the keyStorageProvider
+    * Key Storage Provider (KSP).
     *
     * @param KeyStorageProviderOption $val The keyStorageProvider
     *
@@ -86,13 +90,14 @@ class WindowsPhone81CertificateProfileBase extends DeviceConfiguration
     
     /**
     * Gets the subjectNameFormat
+    * Certificate Subject Name Format.
     *
     * @return SubjectNameFormat The subjectNameFormat
     */
     public function getSubjectNameFormat()
     {
         if (array_key_exists("subjectNameFormat", $this->_propDict)) {
-            if (is_a($this->_propDict["subjectNameFormat"], "Microsoft\Graph\Beta\Model\SubjectNameFormat")) {
+            if (is_a($this->_propDict["subjectNameFormat"], "Microsoft\Graph\Model\SubjectNameFormat")) {
                 return $this->_propDict["subjectNameFormat"];
             } else {
                 $this->_propDict["subjectNameFormat"] = new SubjectNameFormat($this->_propDict["subjectNameFormat"]);
@@ -104,6 +109,7 @@ class WindowsPhone81CertificateProfileBase extends DeviceConfiguration
     
     /**
     * Sets the subjectNameFormat
+    * Certificate Subject Name Format.
     *
     * @param SubjectNameFormat $val The subjectNameFormat
     *
@@ -117,13 +123,14 @@ class WindowsPhone81CertificateProfileBase extends DeviceConfiguration
     
     /**
     * Gets the subjectAlternativeNameType
+    * Certificate Subject Alternative Name Type.
     *
     * @return SubjectAlternativeNameType The subjectAlternativeNameType
     */
     public function getSubjectAlternativeNameType()
     {
         if (array_key_exists("subjectAlternativeNameType", $this->_propDict)) {
-            if (is_a($this->_propDict["subjectAlternativeNameType"], "Microsoft\Graph\Beta\Model\SubjectAlternativeNameType")) {
+            if (is_a($this->_propDict["subjectAlternativeNameType"], "Microsoft\Graph\Model\SubjectAlternativeNameType")) {
                 return $this->_propDict["subjectAlternativeNameType"];
             } else {
                 $this->_propDict["subjectAlternativeNameType"] = new SubjectAlternativeNameType($this->_propDict["subjectAlternativeNameType"]);
@@ -135,6 +142,7 @@ class WindowsPhone81CertificateProfileBase extends DeviceConfiguration
     
     /**
     * Sets the subjectAlternativeNameType
+    * Certificate Subject Alternative Name Type.
     *
     * @param SubjectAlternativeNameType $val The subjectAlternativeNameType
     *
@@ -148,6 +156,7 @@ class WindowsPhone81CertificateProfileBase extends DeviceConfiguration
     
     /**
     * Gets the certificateValidityPeriodValue
+    * Value for the Certificate Validtiy Period.
     *
     * @return int The certificateValidityPeriodValue
     */
@@ -162,6 +171,7 @@ class WindowsPhone81CertificateProfileBase extends DeviceConfiguration
     
     /**
     * Sets the certificateValidityPeriodValue
+    * Value for the Certificate Validtiy Period.
     *
     * @param int $val The certificateValidityPeriodValue
     *
@@ -175,13 +185,14 @@ class WindowsPhone81CertificateProfileBase extends DeviceConfiguration
     
     /**
     * Gets the certificateValidityPeriodScale
+    * Scale for the Certificate Validity Period.
     *
     * @return CertificateValidityPeriodScale The certificateValidityPeriodScale
     */
     public function getCertificateValidityPeriodScale()
     {
         if (array_key_exists("certificateValidityPeriodScale", $this->_propDict)) {
-            if (is_a($this->_propDict["certificateValidityPeriodScale"], "Microsoft\Graph\Beta\Model\CertificateValidityPeriodScale")) {
+            if (is_a($this->_propDict["certificateValidityPeriodScale"], "Microsoft\Graph\Model\CertificateValidityPeriodScale")) {
                 return $this->_propDict["certificateValidityPeriodScale"];
             } else {
                 $this->_propDict["certificateValidityPeriodScale"] = new CertificateValidityPeriodScale($this->_propDict["certificateValidityPeriodScale"]);
@@ -193,6 +204,7 @@ class WindowsPhone81CertificateProfileBase extends DeviceConfiguration
     
     /**
     * Sets the certificateValidityPeriodScale
+    * Scale for the Certificate Validity Period.
     *
     * @param CertificateValidityPeriodScale $val The certificateValidityPeriodScale
     *
@@ -207,6 +219,7 @@ class WindowsPhone81CertificateProfileBase extends DeviceConfiguration
 
      /** 
      * Gets the extendedKeyUsages
+    * Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.
      *
      * @return array The extendedKeyUsages
      */
@@ -221,6 +234,7 @@ class WindowsPhone81CertificateProfileBase extends DeviceConfiguration
     
     /** 
     * Sets the extendedKeyUsages
+    * Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.
     *
     * @param ExtendedKeyUsage $val The extendedKeyUsages
     *

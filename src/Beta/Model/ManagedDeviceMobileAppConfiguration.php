@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * ManagedDeviceMobileAppConfiguration class
@@ -28,6 +28,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity
 {
     /**
     * Gets the targetedMobileApps
+    * the associated app.
     *
     * @return string The targetedMobileApps
     */
@@ -42,6 +43,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity
     
     /**
     * Sets the targetedMobileApps
+    * the associated app.
     *
     * @param string $val The targetedMobileApps
     *
@@ -54,7 +56,37 @@ class ManagedDeviceMobileAppConfiguration extends Entity
     }
     
     /**
+    * Gets the roleScopeTagIds
+    * List of Scope Tags for this App configuration entity.
+    *
+    * @return string The roleScopeTagIds
+    */
+    public function getRoleScopeTagIds()
+    {
+        if (array_key_exists("roleScopeTagIds", $this->_propDict)) {
+            return $this->_propDict["roleScopeTagIds"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the roleScopeTagIds
+    * List of Scope Tags for this App configuration entity.
+    *
+    * @param string $val The roleScopeTagIds
+    *
+    * @return ManagedDeviceMobileAppConfiguration
+    */
+    public function setRoleScopeTagIds($val)
+    {
+        $this->_propDict["roleScopeTagIds"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the createdDateTime
+    * DateTime the object was created.
     *
     * @return \DateTime The createdDateTime
     */
@@ -73,6 +105,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity
     
     /**
     * Sets the createdDateTime
+    * DateTime the object was created.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -86,6 +119,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity
     
     /**
     * Gets the description
+    * Admin provided description of the Device Configuration.
     *
     * @return string The description
     */
@@ -100,6 +134,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity
     
     /**
     * Sets the description
+    * Admin provided description of the Device Configuration.
     *
     * @param string $val The description
     *
@@ -113,6 +148,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity
     
     /**
     * Gets the lastModifiedDateTime
+    * DateTime the object was last modified.
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -131,6 +167,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity
     
     /**
     * Sets the lastModifiedDateTime
+    * DateTime the object was last modified.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -144,6 +181,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity
     
     /**
     * Gets the displayName
+    * Admin provided name of the device configuration.
     *
     * @return string The displayName
     */
@@ -158,6 +196,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity
     
     /**
     * Sets the displayName
+    * Admin provided name of the device configuration.
     *
     * @param string $val The displayName
     *
@@ -171,6 +210,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity
     
     /**
     * Gets the version
+    * Version of the device configuration.
     *
     * @return int The version
     */
@@ -185,6 +225,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity
     
     /**
     * Sets the version
+    * Version of the device configuration.
     *
     * @param int $val The version
     *
@@ -199,6 +240,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity
 
      /** 
      * Gets the assignments
+    * The list of group assignemenets for app configration.
      *
      * @return array The assignments
      */
@@ -213,6 +255,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity
     
     /** 
     * Sets the assignments
+    * The list of group assignemenets for app configration.
     *
     * @param ManagedDeviceMobileAppConfigurationAssignment $val The assignments
     *
@@ -227,6 +270,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity
 
      /** 
      * Gets the deviceStatuses
+    * List of ManagedDeviceMobileAppConfigurationDeviceStatus.
      *
      * @return array The deviceStatuses
      */
@@ -241,6 +285,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity
     
     /** 
     * Sets the deviceStatuses
+    * List of ManagedDeviceMobileAppConfigurationDeviceStatus.
     *
     * @param ManagedDeviceMobileAppConfigurationDeviceStatus $val The deviceStatuses
     *
@@ -255,6 +300,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity
 
      /** 
      * Gets the userStatuses
+    * List of ManagedDeviceMobileAppConfigurationUserStatus.
      *
      * @return array The userStatuses
      */
@@ -269,6 +315,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity
     
     /** 
     * Sets the userStatuses
+    * List of ManagedDeviceMobileAppConfigurationUserStatus.
     *
     * @param ManagedDeviceMobileAppConfigurationUserStatus $val The userStatuses
     *
@@ -282,13 +329,14 @@ class ManagedDeviceMobileAppConfiguration extends Entity
     
     /**
     * Gets the deviceStatusSummary
+    * App configuration device status summary.
     *
     * @return ManagedDeviceMobileAppConfigurationDeviceSummary The deviceStatusSummary
     */
     public function getDeviceStatusSummary()
     {
         if (array_key_exists("deviceStatusSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceStatusSummary"], "Microsoft\Graph\Beta\Model\ManagedDeviceMobileAppConfigurationDeviceSummary")) {
+            if (is_a($this->_propDict["deviceStatusSummary"], "Microsoft\Graph\Model\ManagedDeviceMobileAppConfigurationDeviceSummary")) {
                 return $this->_propDict["deviceStatusSummary"];
             } else {
                 $this->_propDict["deviceStatusSummary"] = new ManagedDeviceMobileAppConfigurationDeviceSummary($this->_propDict["deviceStatusSummary"]);
@@ -300,6 +348,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity
     
     /**
     * Sets the deviceStatusSummary
+    * App configuration device status summary.
     *
     * @param ManagedDeviceMobileAppConfigurationDeviceSummary $val The deviceStatusSummary
     *
@@ -313,13 +362,14 @@ class ManagedDeviceMobileAppConfiguration extends Entity
     
     /**
     * Gets the userStatusSummary
+    * App configuration user status summary.
     *
     * @return ManagedDeviceMobileAppConfigurationUserSummary The userStatusSummary
     */
     public function getUserStatusSummary()
     {
         if (array_key_exists("userStatusSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["userStatusSummary"], "Microsoft\Graph\Beta\Model\ManagedDeviceMobileAppConfigurationUserSummary")) {
+            if (is_a($this->_propDict["userStatusSummary"], "Microsoft\Graph\Model\ManagedDeviceMobileAppConfigurationUserSummary")) {
                 return $this->_propDict["userStatusSummary"];
             } else {
                 $this->_propDict["userStatusSummary"] = new ManagedDeviceMobileAppConfigurationUserSummary($this->_propDict["userStatusSummary"]);
@@ -331,6 +381,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity
     
     /**
     * Sets the userStatusSummary
+    * App configuration user status summary.
     *
     * @param ManagedDeviceMobileAppConfigurationUserSummary $val The userStatusSummary
     *

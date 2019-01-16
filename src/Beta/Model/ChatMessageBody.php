@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * ChatMessageBody class
 *
@@ -60,7 +60,7 @@ class ChatMessageBody extends Entity
     public function getContentType()
     {
         if (array_key_exists("contentType", $this->_propDict)) {
-            if (is_a($this->_propDict["contentType"], "Microsoft\Graph\Beta\Model\ChatMessageBodyType")) {
+            if (is_a($this->_propDict["contentType"], "Microsoft\Graph\Model\ChatMessageBodyType")) {
                 return $this->_propDict["contentType"];
             } else {
                 $this->_propDict["contentType"] = new ChatMessageBodyType($this->_propDict["contentType"]);

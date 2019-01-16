@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * IosNetworkUsageRule class
 *
@@ -28,13 +28,14 @@ class IosNetworkUsageRule extends Entity
 
     /**
     * Gets the managedApps
+    * Information about the managed apps that this rule is going to apply to. This collection can contain a maximum of 500 elements.
     *
     * @return AppListItem The managedApps
     */
     public function getManagedApps()
     {
         if (array_key_exists("managedApps", $this->_propDict)) {
-            if (is_a($this->_propDict["managedApps"], "Microsoft\Graph\Beta\Model\AppListItem")) {
+            if (is_a($this->_propDict["managedApps"], "Microsoft\Graph\Model\AppListItem")) {
                 return $this->_propDict["managedApps"];
             } else {
                 $this->_propDict["managedApps"] = new AppListItem($this->_propDict["managedApps"]);
@@ -46,6 +47,7 @@ class IosNetworkUsageRule extends Entity
 
     /**
     * Sets the managedApps
+    * Information about the managed apps that this rule is going to apply to. This collection can contain a maximum of 500 elements.
     *
     * @param AppListItem $val The value to assign to the managedApps
     *
@@ -58,6 +60,7 @@ class IosNetworkUsageRule extends Entity
     }
     /**
     * Gets the cellularDataBlockWhenRoaming
+    * If set to true, corresponding managed apps will not be allowed to use cellular data when roaming.
     *
     * @return bool The cellularDataBlockWhenRoaming
     */
@@ -72,6 +75,7 @@ class IosNetworkUsageRule extends Entity
 
     /**
     * Sets the cellularDataBlockWhenRoaming
+    * If set to true, corresponding managed apps will not be allowed to use cellular data when roaming.
     *
     * @param bool $val The value of the cellularDataBlockWhenRoaming
     *
@@ -84,6 +88,7 @@ class IosNetworkUsageRule extends Entity
     }
     /**
     * Gets the cellularDataBlocked
+    * If set to true, corresponding managed apps will not be allowed to use cellular data at any time.
     *
     * @return bool The cellularDataBlocked
     */
@@ -98,6 +103,7 @@ class IosNetworkUsageRule extends Entity
 
     /**
     * Sets the cellularDataBlocked
+    * If set to true, corresponding managed apps will not be allowed to use cellular data at any time.
     *
     * @param bool $val The value of the cellularDataBlocked
     *

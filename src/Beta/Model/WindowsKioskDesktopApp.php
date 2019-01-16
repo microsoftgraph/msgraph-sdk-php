@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * WindowsKioskDesktopApp class
 *
@@ -26,33 +26,8 @@ namespace Microsoft\Graph\Beta\Model;
 class WindowsKioskDesktopApp extends WindowsKioskAppBase
 {
     /**
-    * Gets the name
-    *
-    * @return string The name
-    */
-    public function getName()
-    {
-        if (array_key_exists("name", $this->_propDict)) {
-            return $this->_propDict["name"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the name
-    *
-    * @param string $val The value of the name
-    *
-    * @return WindowsKioskDesktopApp
-    */
-    public function setName($val)
-    {
-        $this->_propDict["name"] = $val;
-        return $this;
-    }
-    /**
     * Gets the path
+    * Define the path of a desktop app
     *
     * @return string The path
     */
@@ -67,6 +42,7 @@ class WindowsKioskDesktopApp extends WindowsKioskAppBase
 
     /**
     * Sets the path
+    * Define the path of a desktop app
     *
     * @param string $val The value of the path
     *
@@ -75,6 +51,62 @@ class WindowsKioskDesktopApp extends WindowsKioskAppBase
     public function setPath($val)
     {
         $this->_propDict["path"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the desktopApplicationId
+    * Define the DesktopApplicationID of the app
+    *
+    * @return string The desktopApplicationId
+    */
+    public function getDesktopApplicationId()
+    {
+        if (array_key_exists("desktopApplicationId", $this->_propDict)) {
+            return $this->_propDict["desktopApplicationId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the desktopApplicationId
+    * Define the DesktopApplicationID of the app
+    *
+    * @param string $val The value of the desktopApplicationId
+    *
+    * @return WindowsKioskDesktopApp
+    */
+    public function setDesktopApplicationId($val)
+    {
+        $this->_propDict["desktopApplicationId"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the desktopApplicationLinkPath
+    * Define the DesktopApplicationLinkPath of the app
+    *
+    * @return string The desktopApplicationLinkPath
+    */
+    public function getDesktopApplicationLinkPath()
+    {
+        if (array_key_exists("desktopApplicationLinkPath", $this->_propDict)) {
+            return $this->_propDict["desktopApplicationLinkPath"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the desktopApplicationLinkPath
+    * Define the DesktopApplicationLinkPath of the app
+    *
+    * @param string $val The value of the desktopApplicationLinkPath
+    *
+    * @return WindowsKioskDesktopApp
+    */
+    public function setDesktopApplicationLinkPath($val)
+    {
+        $this->_propDict["desktopApplicationLinkPath"] = $val;
         return $this;
     }
 }

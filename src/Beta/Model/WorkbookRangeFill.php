@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * WorkbookRangeFill class
@@ -28,6 +28,7 @@ class WorkbookRangeFill extends Entity
 {
     /**
     * Gets the color
+    * HTML color code representing the color of the border line, of the form #RRGGBB (e.g. 'FFA500') or as a named HTML color (e.g. 'orange')
     *
     * @return string The color
     */
@@ -42,6 +43,7 @@ class WorkbookRangeFill extends Entity
     
     /**
     * Sets the color
+    * HTML color code representing the color of the border line, of the form #RRGGBB (e.g. 'FFA500') or as a named HTML color (e.g. 'orange')
     *
     * @param string $val The color
     *

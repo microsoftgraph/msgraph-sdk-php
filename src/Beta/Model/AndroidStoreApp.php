@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * AndroidStoreApp class
@@ -28,6 +28,7 @@ class AndroidStoreApp extends MobileApp
 {
     /**
     * Gets the packageId
+    * The package identifier.
     *
     * @return string The packageId
     */
@@ -42,6 +43,7 @@ class AndroidStoreApp extends MobileApp
     
     /**
     * Sets the packageId
+    * The package identifier.
     *
     * @param string $val The packageId
     *
@@ -55,6 +57,7 @@ class AndroidStoreApp extends MobileApp
     
     /**
     * Gets the appIdentifier
+    * The Identity Name.
     *
     * @return string The appIdentifier
     */
@@ -69,6 +72,7 @@ class AndroidStoreApp extends MobileApp
     
     /**
     * Sets the appIdentifier
+    * The Identity Name.
     *
     * @param string $val The appIdentifier
     *
@@ -82,6 +86,7 @@ class AndroidStoreApp extends MobileApp
     
     /**
     * Gets the appStoreUrl
+    * The Android app store URL.
     *
     * @return string The appStoreUrl
     */
@@ -96,6 +101,7 @@ class AndroidStoreApp extends MobileApp
     
     /**
     * Sets the appStoreUrl
+    * The Android app store URL.
     *
     * @param string $val The appStoreUrl
     *
@@ -109,13 +115,14 @@ class AndroidStoreApp extends MobileApp
     
     /**
     * Gets the minimumSupportedOperatingSystem
+    * The value for the minimum applicable operating system.
     *
     * @return AndroidMinimumOperatingSystem The minimumSupportedOperatingSystem
     */
     public function getMinimumSupportedOperatingSystem()
     {
         if (array_key_exists("minimumSupportedOperatingSystem", $this->_propDict)) {
-            if (is_a($this->_propDict["minimumSupportedOperatingSystem"], "Microsoft\Graph\Beta\Model\AndroidMinimumOperatingSystem")) {
+            if (is_a($this->_propDict["minimumSupportedOperatingSystem"], "Microsoft\Graph\Model\AndroidMinimumOperatingSystem")) {
                 return $this->_propDict["minimumSupportedOperatingSystem"];
             } else {
                 $this->_propDict["minimumSupportedOperatingSystem"] = new AndroidMinimumOperatingSystem($this->_propDict["minimumSupportedOperatingSystem"]);
@@ -127,6 +134,7 @@ class AndroidStoreApp extends MobileApp
     
     /**
     * Sets the minimumSupportedOperatingSystem
+    * The value for the minimum applicable operating system.
     *
     * @param AndroidMinimumOperatingSystem $val The minimumSupportedOperatingSystem
     *

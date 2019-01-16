@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * SharedPCAccountManagerPolicy class
 *
@@ -28,13 +28,14 @@ class SharedPCAccountManagerPolicy extends Entity
 
     /**
     * Gets the accountDeletionPolicy
+    * Configures when accounts are deleted. Possible values are: immediate, diskSpaceThreshold, diskSpaceThresholdOrInactiveThreshold.
     *
     * @return SharedPCAccountDeletionPolicyType The accountDeletionPolicy
     */
     public function getAccountDeletionPolicy()
     {
         if (array_key_exists("accountDeletionPolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["accountDeletionPolicy"], "Microsoft\Graph\Beta\Model\SharedPCAccountDeletionPolicyType")) {
+            if (is_a($this->_propDict["accountDeletionPolicy"], "Microsoft\Graph\Model\SharedPCAccountDeletionPolicyType")) {
                 return $this->_propDict["accountDeletionPolicy"];
             } else {
                 $this->_propDict["accountDeletionPolicy"] = new SharedPCAccountDeletionPolicyType($this->_propDict["accountDeletionPolicy"]);
@@ -46,6 +47,7 @@ class SharedPCAccountManagerPolicy extends Entity
 
     /**
     * Sets the accountDeletionPolicy
+    * Configures when accounts are deleted. Possible values are: immediate, diskSpaceThreshold, diskSpaceThresholdOrInactiveThreshold.
     *
     * @param SharedPCAccountDeletionPolicyType $val The value to assign to the accountDeletionPolicy
     *
@@ -58,6 +60,7 @@ class SharedPCAccountManagerPolicy extends Entity
     }
     /**
     * Gets the cacheAccountsAboveDiskFreePercentage
+    * Sets the percentage of available disk space a PC should have before it stops deleting cached shared PC accounts. Only applies when AccountDeletionPolicy is DiskSpaceThreshold or DiskSpaceThresholdOrInactiveThreshold. Valid values 0 to 100
     *
     * @return int The cacheAccountsAboveDiskFreePercentage
     */
@@ -72,6 +75,7 @@ class SharedPCAccountManagerPolicy extends Entity
 
     /**
     * Sets the cacheAccountsAboveDiskFreePercentage
+    * Sets the percentage of available disk space a PC should have before it stops deleting cached shared PC accounts. Only applies when AccountDeletionPolicy is DiskSpaceThreshold or DiskSpaceThresholdOrInactiveThreshold. Valid values 0 to 100
     *
     * @param int $val The value of the cacheAccountsAboveDiskFreePercentage
     *
@@ -84,6 +88,7 @@ class SharedPCAccountManagerPolicy extends Entity
     }
     /**
     * Gets the inactiveThresholdDays
+    * Specifies when the accounts will start being deleted when they have not been logged on during the specified period, given as number of days. Only applies when AccountDeletionPolicy is DiskSpaceThreshold or DiskSpaceThresholdOrInactiveThreshold.
     *
     * @return int The inactiveThresholdDays
     */
@@ -98,6 +103,7 @@ class SharedPCAccountManagerPolicy extends Entity
 
     /**
     * Sets the inactiveThresholdDays
+    * Specifies when the accounts will start being deleted when they have not been logged on during the specified period, given as number of days. Only applies when AccountDeletionPolicy is DiskSpaceThreshold or DiskSpaceThresholdOrInactiveThreshold.
     *
     * @param int $val The value of the inactiveThresholdDays
     *
@@ -110,6 +116,7 @@ class SharedPCAccountManagerPolicy extends Entity
     }
     /**
     * Gets the removeAccountsBelowDiskFreePercentage
+    * Sets the percentage of disk space remaining on a PC before cached accounts will be deleted to free disk space. Accounts that have been inactive the longest will be deleted first. Only applies when AccountDeletionPolicy is DiskSpaceThresholdOrInactiveThreshold. Valid values 0 to 100
     *
     * @return int The removeAccountsBelowDiskFreePercentage
     */
@@ -124,6 +131,7 @@ class SharedPCAccountManagerPolicy extends Entity
 
     /**
     * Sets the removeAccountsBelowDiskFreePercentage
+    * Sets the percentage of disk space remaining on a PC before cached accounts will be deleted to free disk space. Accounts that have been inactive the longest will be deleted first. Only applies when AccountDeletionPolicy is DiskSpaceThresholdOrInactiveThreshold. Valid values 0 to 100
     *
     * @param int $val The value of the removeAccountsBelowDiskFreePercentage
     *

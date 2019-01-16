@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * Windows10EnrollmentCompletionPageConfiguration class
@@ -28,6 +28,7 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
 {
     /**
     * Gets the showInstallationProgress
+    * Show or hide installation progress to user
     *
     * @return bool The showInstallationProgress
     */
@@ -42,6 +43,7 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
     
     /**
     * Sets the showInstallationProgress
+    * Show or hide installation progress to user
     *
     * @param bool $val The showInstallationProgress
     *
@@ -55,6 +57,7 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
     
     /**
     * Gets the blockDeviceSetupRetryByUser
+    * Allow the user to retry the setup on installation failure
     *
     * @return bool The blockDeviceSetupRetryByUser
     */
@@ -69,6 +72,7 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
     
     /**
     * Sets the blockDeviceSetupRetryByUser
+    * Allow the user to retry the setup on installation failure
     *
     * @param bool $val The blockDeviceSetupRetryByUser
     *
@@ -82,6 +86,7 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
     
     /**
     * Gets the allowDeviceResetOnInstallFailure
+    * Allow or block device reset on installation failure
     *
     * @return bool The allowDeviceResetOnInstallFailure
     */
@@ -96,6 +101,7 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
     
     /**
     * Sets the allowDeviceResetOnInstallFailure
+    * Allow or block device reset on installation failure
     *
     * @param bool $val The allowDeviceResetOnInstallFailure
     *
@@ -109,6 +115,7 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
     
     /**
     * Gets the allowLogCollectionOnInstallFailure
+    * Allow or block log collection on installation failure
     *
     * @return bool The allowLogCollectionOnInstallFailure
     */
@@ -123,6 +130,7 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
     
     /**
     * Sets the allowLogCollectionOnInstallFailure
+    * Allow or block log collection on installation failure
     *
     * @param bool $val The allowLogCollectionOnInstallFailure
     *
@@ -136,6 +144,7 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
     
     /**
     * Gets the customErrorMessage
+    * Set custom error message to show upon installation failure
     *
     * @return string The customErrorMessage
     */
@@ -150,6 +159,7 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
     
     /**
     * Sets the customErrorMessage
+    * Set custom error message to show upon installation failure
     *
     * @param string $val The customErrorMessage
     *
@@ -163,6 +173,7 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
     
     /**
     * Gets the installProgressTimeoutInMinutes
+    * Set installation progress timeout in minutes
     *
     * @return int The installProgressTimeoutInMinutes
     */
@@ -177,6 +188,7 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
     
     /**
     * Sets the installProgressTimeoutInMinutes
+    * Set installation progress timeout in minutes
     *
     * @param int $val The installProgressTimeoutInMinutes
     *
@@ -190,6 +202,7 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
     
     /**
     * Gets the allowDeviceUseOnInstallFailure
+    * Allow the user to continue using the device on installation failure
     *
     * @return bool The allowDeviceUseOnInstallFailure
     */
@@ -204,6 +217,7 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
     
     /**
     * Sets the allowDeviceUseOnInstallFailure
+    * Allow the user to continue using the device on installation failure
     *
     * @param bool $val The allowDeviceUseOnInstallFailure
     *
@@ -212,6 +226,35 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
     public function setAllowDeviceUseOnInstallFailure($val)
     {
         $this->_propDict["allowDeviceUseOnInstallFailure"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the selectedMobileAppIds
+    * Selected applications to track the installation status
+    *
+    * @return string The selectedMobileAppIds
+    */
+    public function getSelectedMobileAppIds()
+    {
+        if (array_key_exists("selectedMobileAppIds", $this->_propDict)) {
+            return $this->_propDict["selectedMobileAppIds"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the selectedMobileAppIds
+    * Selected applications to track the installation status
+    *
+    * @param string $val The selectedMobileAppIds
+    *
+    * @return Windows10EnrollmentCompletionPageConfiguration
+    */
+    public function setSelectedMobileAppIds($val)
+    {
+        $this->_propDict["selectedMobileAppIds"] = $val;
         return $this;
     }
     

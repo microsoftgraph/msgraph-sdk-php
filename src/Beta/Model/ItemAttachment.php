@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * ItemAttachment class
@@ -28,13 +28,14 @@ class ItemAttachment extends Attachment
 {
     /**
     * Gets the item
+    * The attached message or event. Navigation property.
     *
     * @return OutlookItem The item
     */
     public function getItem()
     {
         if (array_key_exists("item", $this->_propDict)) {
-            if (is_a($this->_propDict["item"], "Microsoft\Graph\Beta\Model\OutlookItem")) {
+            if (is_a($this->_propDict["item"], "Microsoft\Graph\Model\OutlookItem")) {
                 return $this->_propDict["item"];
             } else {
                 $this->_propDict["item"] = new OutlookItem($this->_propDict["item"]);
@@ -46,6 +47,7 @@ class ItemAttachment extends Attachment
     
     /**
     * Sets the item
+    * The attached message or event. Navigation property.
     *
     * @param OutlookItem $val The item
     *

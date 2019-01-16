@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * WorkbookChartPoint class
@@ -28,6 +28,7 @@ class WorkbookChartPoint extends Entity
 {
     /**
     * Gets the value
+    * Returns the value of a chart point. Read-only.
     *
     * @return string The value
     */
@@ -42,6 +43,7 @@ class WorkbookChartPoint extends Entity
     
     /**
     * Sets the value
+    * Returns the value of a chart point. Read-only.
     *
     * @param string $val The value
     *
@@ -55,13 +57,14 @@ class WorkbookChartPoint extends Entity
     
     /**
     * Gets the format
+    * Encapsulates the format properties chart point. Read-only.
     *
     * @return WorkbookChartPointFormat The format
     */
     public function getFormat()
     {
         if (array_key_exists("format", $this->_propDict)) {
-            if (is_a($this->_propDict["format"], "Microsoft\Graph\Beta\Model\WorkbookChartPointFormat")) {
+            if (is_a($this->_propDict["format"], "Microsoft\Graph\Model\WorkbookChartPointFormat")) {
                 return $this->_propDict["format"];
             } else {
                 $this->_propDict["format"] = new WorkbookChartPointFormat($this->_propDict["format"]);
@@ -73,6 +76,7 @@ class WorkbookChartPoint extends Entity
     
     /**
     * Sets the format
+    * Encapsulates the format properties chart point. Read-only.
     *
     * @param WorkbookChartPointFormat $val The format
     *

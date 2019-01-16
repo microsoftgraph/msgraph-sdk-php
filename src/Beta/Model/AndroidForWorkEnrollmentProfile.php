@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * AndroidForWorkEnrollmentProfile class
@@ -28,6 +28,7 @@ class AndroidForWorkEnrollmentProfile extends Entity
 {
     /**
     * Gets the accountId
+    * Tenant GUID the enrollment profile belongs to.
     *
     * @return string The accountId
     */
@@ -42,6 +43,7 @@ class AndroidForWorkEnrollmentProfile extends Entity
     
     /**
     * Sets the accountId
+    * Tenant GUID the enrollment profile belongs to.
     *
     * @param string $val The accountId
     *
@@ -55,6 +57,7 @@ class AndroidForWorkEnrollmentProfile extends Entity
     
     /**
     * Gets the displayName
+    * Display name for the enrollment profile.
     *
     * @return string The displayName
     */
@@ -69,6 +72,7 @@ class AndroidForWorkEnrollmentProfile extends Entity
     
     /**
     * Sets the displayName
+    * Display name for the enrollment profile.
     *
     * @param string $val The displayName
     *
@@ -82,6 +86,7 @@ class AndroidForWorkEnrollmentProfile extends Entity
     
     /**
     * Gets the description
+    * Description for the enrollment profile.
     *
     * @return string The description
     */
@@ -96,6 +101,7 @@ class AndroidForWorkEnrollmentProfile extends Entity
     
     /**
     * Sets the description
+    * Description for the enrollment profile.
     *
     * @param string $val The description
     *
@@ -109,6 +115,7 @@ class AndroidForWorkEnrollmentProfile extends Entity
     
     /**
     * Gets the createdDateTime
+    * Date time the enrollment profile was created.
     *
     * @return \DateTime The createdDateTime
     */
@@ -127,6 +134,7 @@ class AndroidForWorkEnrollmentProfile extends Entity
     
     /**
     * Sets the createdDateTime
+    * Date time the enrollment profile was created.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -140,6 +148,7 @@ class AndroidForWorkEnrollmentProfile extends Entity
     
     /**
     * Gets the lastModifiedDateTime
+    * Date time the enrollment profile was last modified.
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -158,6 +167,7 @@ class AndroidForWorkEnrollmentProfile extends Entity
     
     /**
     * Sets the lastModifiedDateTime
+    * Date time the enrollment profile was last modified.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -171,6 +181,7 @@ class AndroidForWorkEnrollmentProfile extends Entity
     
     /**
     * Gets the tokenValue
+    * Value of the most recently created token for this enrollment profile.
     *
     * @return string The tokenValue
     */
@@ -185,6 +196,7 @@ class AndroidForWorkEnrollmentProfile extends Entity
     
     /**
     * Sets the tokenValue
+    * Value of the most recently created token for this enrollment profile.
     *
     * @param string $val The tokenValue
     *
@@ -198,6 +210,7 @@ class AndroidForWorkEnrollmentProfile extends Entity
     
     /**
     * Gets the tokenExpirationDateTime
+    * Date time the most recently created token will expire.
     *
     * @return \DateTime The tokenExpirationDateTime
     */
@@ -216,6 +229,7 @@ class AndroidForWorkEnrollmentProfile extends Entity
     
     /**
     * Sets the tokenExpirationDateTime
+    * Date time the most recently created token will expire.
     *
     * @param \DateTime $val The tokenExpirationDateTime
     *
@@ -229,6 +243,7 @@ class AndroidForWorkEnrollmentProfile extends Entity
     
     /**
     * Gets the enrolledDeviceCount
+    * Total number of Android devices that have enrolled using this enrollment profile.
     *
     * @return int The enrolledDeviceCount
     */
@@ -243,6 +258,7 @@ class AndroidForWorkEnrollmentProfile extends Entity
     
     /**
     * Sets the enrolledDeviceCount
+    * Total number of Android devices that have enrolled using this enrollment profile.
     *
     * @param int $val The enrolledDeviceCount
     *
@@ -256,6 +272,7 @@ class AndroidForWorkEnrollmentProfile extends Entity
     
     /**
     * Gets the qrCodeContent
+    * String used to generate a QR code for the token.
     *
     * @return string The qrCodeContent
     */
@@ -270,6 +287,7 @@ class AndroidForWorkEnrollmentProfile extends Entity
     
     /**
     * Sets the qrCodeContent
+    * String used to generate a QR code for the token.
     *
     * @param string $val The qrCodeContent
     *
@@ -283,13 +301,14 @@ class AndroidForWorkEnrollmentProfile extends Entity
     
     /**
     * Gets the qrCodeImage
+    * String used to generate a QR code for the token.
     *
     * @return MimeContent The qrCodeImage
     */
     public function getQrCodeImage()
     {
         if (array_key_exists("qrCodeImage", $this->_propDict)) {
-            if (is_a($this->_propDict["qrCodeImage"], "Microsoft\Graph\Beta\Model\MimeContent")) {
+            if (is_a($this->_propDict["qrCodeImage"], "Microsoft\Graph\Model\MimeContent")) {
                 return $this->_propDict["qrCodeImage"];
             } else {
                 $this->_propDict["qrCodeImage"] = new MimeContent($this->_propDict["qrCodeImage"]);
@@ -301,6 +320,7 @@ class AndroidForWorkEnrollmentProfile extends Entity
     
     /**
     * Sets the qrCodeImage
+    * String used to generate a QR code for the token.
     *
     * @param MimeContent $val The qrCodeImage
     *

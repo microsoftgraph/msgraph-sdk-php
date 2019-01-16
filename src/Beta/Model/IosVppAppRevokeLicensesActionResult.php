@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * IosVppAppRevokeLicensesActionResult class
 *
@@ -27,6 +27,7 @@ class IosVppAppRevokeLicensesActionResult extends Entity
 {
     /**
     * Gets the userId
+    * UserId associated with the action.
     *
     * @return string The userId
     */
@@ -41,6 +42,7 @@ class IosVppAppRevokeLicensesActionResult extends Entity
 
     /**
     * Sets the userId
+    * UserId associated with the action.
     *
     * @param string $val The value of the userId
     *
@@ -53,6 +55,7 @@ class IosVppAppRevokeLicensesActionResult extends Entity
     }
     /**
     * Gets the managedDeviceId
+    * DeviceId associated with the action.
     *
     * @return string The managedDeviceId
     */
@@ -67,6 +70,7 @@ class IosVppAppRevokeLicensesActionResult extends Entity
 
     /**
     * Sets the managedDeviceId
+    * DeviceId associated with the action.
     *
     * @param string $val The value of the managedDeviceId
     *
@@ -79,6 +83,7 @@ class IosVppAppRevokeLicensesActionResult extends Entity
     }
     /**
     * Gets the totalLicensesCount
+    * A count of the number of licenses for which revoke was attempted.
     *
     * @return int The totalLicensesCount
     */
@@ -93,6 +98,7 @@ class IosVppAppRevokeLicensesActionResult extends Entity
 
     /**
     * Sets the totalLicensesCount
+    * A count of the number of licenses for which revoke was attempted.
     *
     * @param int $val The value of the totalLicensesCount
     *
@@ -105,6 +111,7 @@ class IosVppAppRevokeLicensesActionResult extends Entity
     }
     /**
     * Gets the failedLicensesCount
+    * A count of the number of licenses for which revoke failed.
     *
     * @return int The failedLicensesCount
     */
@@ -119,6 +126,7 @@ class IosVppAppRevokeLicensesActionResult extends Entity
 
     /**
     * Sets the failedLicensesCount
+    * A count of the number of licenses for which revoke failed.
     *
     * @param int $val The value of the failedLicensesCount
     *
@@ -132,13 +140,14 @@ class IosVppAppRevokeLicensesActionResult extends Entity
 
     /**
     * Gets the actionFailureReason
+    * The reason for the revoke licenses action failure.
     *
     * @return VppTokenActionFailureReason The actionFailureReason
     */
     public function getActionFailureReason()
     {
         if (array_key_exists("actionFailureReason", $this->_propDict)) {
-            if (is_a($this->_propDict["actionFailureReason"], "Microsoft\Graph\Beta\Model\VppTokenActionFailureReason")) {
+            if (is_a($this->_propDict["actionFailureReason"], "Microsoft\Graph\Model\VppTokenActionFailureReason")) {
                 return $this->_propDict["actionFailureReason"];
             } else {
                 $this->_propDict["actionFailureReason"] = new VppTokenActionFailureReason($this->_propDict["actionFailureReason"]);
@@ -150,6 +159,7 @@ class IosVppAppRevokeLicensesActionResult extends Entity
 
     /**
     * Sets the actionFailureReason
+    * The reason for the revoke licenses action failure.
     *
     * @param VppTokenActionFailureReason $val The value to assign to the actionFailureReason
     *
@@ -162,6 +172,7 @@ class IosVppAppRevokeLicensesActionResult extends Entity
     }
     /**
     * Gets the actionName
+    * Action name
     *
     * @return string The actionName
     */
@@ -176,6 +187,7 @@ class IosVppAppRevokeLicensesActionResult extends Entity
 
     /**
     * Sets the actionName
+    * Action name
     *
     * @param string $val The value of the actionName
     *
@@ -189,13 +201,14 @@ class IosVppAppRevokeLicensesActionResult extends Entity
 
     /**
     * Gets the actionState
+    * State of the action
     *
     * @return ActionState The actionState
     */
     public function getActionState()
     {
         if (array_key_exists("actionState", $this->_propDict)) {
-            if (is_a($this->_propDict["actionState"], "Microsoft\Graph\Beta\Model\ActionState")) {
+            if (is_a($this->_propDict["actionState"], "Microsoft\Graph\Model\ActionState")) {
                 return $this->_propDict["actionState"];
             } else {
                 $this->_propDict["actionState"] = new ActionState($this->_propDict["actionState"]);
@@ -207,6 +220,7 @@ class IosVppAppRevokeLicensesActionResult extends Entity
 
     /**
     * Sets the actionState
+    * State of the action
     *
     * @param ActionState $val The value to assign to the actionState
     *
@@ -220,13 +234,14 @@ class IosVppAppRevokeLicensesActionResult extends Entity
 
     /**
     * Gets the startDateTime
+    * Time the action was initiated
     *
     * @return \DateTime The startDateTime
     */
     public function getStartDateTime()
     {
         if (array_key_exists("startDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startDateTime"], "Microsoft\Graph\Beta\Model\\DateTime")) {
+            if (is_a($this->_propDict["startDateTime"], "Microsoft\Graph\Model\\DateTime")) {
                 return $this->_propDict["startDateTime"];
             } else {
                 $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);
@@ -238,6 +253,7 @@ class IosVppAppRevokeLicensesActionResult extends Entity
 
     /**
     * Sets the startDateTime
+    * Time the action was initiated
     *
     * @param \DateTime $val The value to assign to the startDateTime
     *
@@ -251,13 +267,14 @@ class IosVppAppRevokeLicensesActionResult extends Entity
 
     /**
     * Gets the lastUpdatedDateTime
+    * Time the action state was last updated
     *
     * @return \DateTime The lastUpdatedDateTime
     */
     public function getLastUpdatedDateTime()
     {
         if (array_key_exists("lastUpdatedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastUpdatedDateTime"], "Microsoft\Graph\Beta\Model\\DateTime")) {
+            if (is_a($this->_propDict["lastUpdatedDateTime"], "Microsoft\Graph\Model\\DateTime")) {
                 return $this->_propDict["lastUpdatedDateTime"];
             } else {
                 $this->_propDict["lastUpdatedDateTime"] = new \DateTime($this->_propDict["lastUpdatedDateTime"]);
@@ -269,6 +286,7 @@ class IosVppAppRevokeLicensesActionResult extends Entity
 
     /**
     * Sets the lastUpdatedDateTime
+    * Time the action state was last updated
     *
     * @param \DateTime $val The value to assign to the lastUpdatedDateTime
     *

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * WindowsManagementAppHealthState class
@@ -28,13 +28,14 @@ class WindowsManagementAppHealthState extends Entity
 {
     /**
     * Gets the healthState
+    * Windows management app health state.
     *
     * @return HealthState The healthState
     */
     public function getHealthState()
     {
         if (array_key_exists("healthState", $this->_propDict)) {
-            if (is_a($this->_propDict["healthState"], "Microsoft\Graph\Beta\Model\HealthState")) {
+            if (is_a($this->_propDict["healthState"], "Microsoft\Graph\Model\HealthState")) {
                 return $this->_propDict["healthState"];
             } else {
                 $this->_propDict["healthState"] = new HealthState($this->_propDict["healthState"]);
@@ -46,6 +47,7 @@ class WindowsManagementAppHealthState extends Entity
     
     /**
     * Sets the healthState
+    * Windows management app health state.
     *
     * @param HealthState $val The healthState
     *
@@ -59,6 +61,7 @@ class WindowsManagementAppHealthState extends Entity
     
     /**
     * Gets the installedVersion
+    * Windows management app installed version.
     *
     * @return string The installedVersion
     */
@@ -73,6 +76,7 @@ class WindowsManagementAppHealthState extends Entity
     
     /**
     * Sets the installedVersion
+    * Windows management app installed version.
     *
     * @param string $val The installedVersion
     *
@@ -86,6 +90,7 @@ class WindowsManagementAppHealthState extends Entity
     
     /**
     * Gets the lastCheckInDateTime
+    * Windows management app last check-in time.
     *
     * @return \DateTime The lastCheckInDateTime
     */
@@ -104,6 +109,7 @@ class WindowsManagementAppHealthState extends Entity
     
     /**
     * Sets the lastCheckInDateTime
+    * Windows management app last check-in time.
     *
     * @param \DateTime $val The lastCheckInDateTime
     *
@@ -117,6 +123,7 @@ class WindowsManagementAppHealthState extends Entity
     
     /**
     * Gets the deviceName
+    * Name of the device on which Windows management app is installed.
     *
     * @return string The deviceName
     */
@@ -131,6 +138,7 @@ class WindowsManagementAppHealthState extends Entity
     
     /**
     * Sets the deviceName
+    * Name of the device on which Windows management app is installed.
     *
     * @param string $val The deviceName
     *
@@ -144,6 +152,7 @@ class WindowsManagementAppHealthState extends Entity
     
     /**
     * Gets the deviceOSVersion
+    * Windows 10 OS version of the device on which Windows management app is installed.
     *
     * @return string The deviceOSVersion
     */
@@ -158,6 +167,7 @@ class WindowsManagementAppHealthState extends Entity
     
     /**
     * Sets the deviceOSVersion
+    * Windows 10 OS version of the device on which Windows management app is installed.
     *
     * @param string $val The deviceOSVersion
     *

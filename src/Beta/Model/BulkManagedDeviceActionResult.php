@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * BulkManagedDeviceActionResult class
 *
@@ -27,6 +27,7 @@ class BulkManagedDeviceActionResult extends Entity
 {
     /**
     * Gets the successfulDeviceIds
+    * Successful devices
     *
     * @return string The successfulDeviceIds
     */
@@ -41,6 +42,7 @@ class BulkManagedDeviceActionResult extends Entity
 
     /**
     * Sets the successfulDeviceIds
+    * Successful devices
     *
     * @param string $val The value of the successfulDeviceIds
     *
@@ -53,6 +55,7 @@ class BulkManagedDeviceActionResult extends Entity
     }
     /**
     * Gets the failedDeviceIds
+    * Failed devices
     *
     * @return string The failedDeviceIds
     */
@@ -67,6 +70,7 @@ class BulkManagedDeviceActionResult extends Entity
 
     /**
     * Sets the failedDeviceIds
+    * Failed devices
     *
     * @param string $val The value of the failedDeviceIds
     *
@@ -79,6 +83,7 @@ class BulkManagedDeviceActionResult extends Entity
     }
     /**
     * Gets the notFoundDeviceIds
+    * Not found devices
     *
     * @return string The notFoundDeviceIds
     */
@@ -93,6 +98,7 @@ class BulkManagedDeviceActionResult extends Entity
 
     /**
     * Sets the notFoundDeviceIds
+    * Not found devices
     *
     * @param string $val The value of the notFoundDeviceIds
     *
@@ -105,6 +111,7 @@ class BulkManagedDeviceActionResult extends Entity
     }
     /**
     * Gets the notSupportedDeviceIds
+    * Not supported devices
     *
     * @return string The notSupportedDeviceIds
     */
@@ -119,6 +126,7 @@ class BulkManagedDeviceActionResult extends Entity
 
     /**
     * Sets the notSupportedDeviceIds
+    * Not supported devices
     *
     * @param string $val The value of the notSupportedDeviceIds
     *

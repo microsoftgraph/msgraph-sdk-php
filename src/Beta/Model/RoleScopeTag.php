@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * RoleScopeTag class
@@ -28,6 +28,7 @@ class RoleScopeTag extends Entity
 {
     /**
     * Gets the displayName
+    * The display or friendly name of the Role Scope Tag.
     *
     * @return string The displayName
     */
@@ -42,6 +43,7 @@ class RoleScopeTag extends Entity
     
     /**
     * Sets the displayName
+    * The display or friendly name of the Role Scope Tag.
     *
     * @param string $val The displayName
     *
@@ -55,6 +57,7 @@ class RoleScopeTag extends Entity
     
     /**
     * Gets the description
+    * Description of the Role Scope Tag.
     *
     * @return string The description
     */
@@ -69,6 +72,7 @@ class RoleScopeTag extends Entity
     
     /**
     * Sets the description
+    * Description of the Role Scope Tag.
     *
     * @param string $val The description
     *

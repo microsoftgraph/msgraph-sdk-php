@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * EnrollmentProfile class
@@ -28,6 +28,7 @@ class EnrollmentProfile extends Entity
 {
     /**
     * Gets the displayName
+    * Name of the profile
     *
     * @return string The displayName
     */
@@ -42,6 +43,7 @@ class EnrollmentProfile extends Entity
     
     /**
     * Sets the displayName
+    * Name of the profile
     *
     * @param string $val The displayName
     *
@@ -55,6 +57,7 @@ class EnrollmentProfile extends Entity
     
     /**
     * Gets the description
+    * Description of the profile
     *
     * @return string The description
     */
@@ -69,6 +72,7 @@ class EnrollmentProfile extends Entity
     
     /**
     * Sets the description
+    * Description of the profile
     *
     * @param string $val The description
     *
@@ -82,6 +86,7 @@ class EnrollmentProfile extends Entity
     
     /**
     * Gets the requiresUserAuthentication
+    * Indicates if the profile requires user authentication
     *
     * @return bool The requiresUserAuthentication
     */
@@ -96,6 +101,7 @@ class EnrollmentProfile extends Entity
     
     /**
     * Sets the requiresUserAuthentication
+    * Indicates if the profile requires user authentication
     *
     * @param bool $val The requiresUserAuthentication
     *
@@ -109,6 +115,7 @@ class EnrollmentProfile extends Entity
     
     /**
     * Gets the configurationEndpointUrl
+    * Configuration endpoint url to use for Enrollment
     *
     * @return string The configurationEndpointUrl
     */
@@ -123,6 +130,7 @@ class EnrollmentProfile extends Entity
     
     /**
     * Sets the configurationEndpointUrl
+    * Configuration endpoint url to use for Enrollment
     *
     * @param string $val The configurationEndpointUrl
     *
@@ -136,6 +144,7 @@ class EnrollmentProfile extends Entity
     
     /**
     * Gets the enableAuthenticationViaCompanyPortal
+    * Indicates to authenticate with Apple Setup Assistant instead of Company Portal.
     *
     * @return bool The enableAuthenticationViaCompanyPortal
     */
@@ -150,6 +159,7 @@ class EnrollmentProfile extends Entity
     
     /**
     * Sets the enableAuthenticationViaCompanyPortal
+    * Indicates to authenticate with Apple Setup Assistant instead of Company Portal.
     *
     * @param bool $val The enableAuthenticationViaCompanyPortal
     *
@@ -158,6 +168,35 @@ class EnrollmentProfile extends Entity
     public function setEnableAuthenticationViaCompanyPortal($val)
     {
         $this->_propDict["enableAuthenticationViaCompanyPortal"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the requireCompanyPortalOnSetupAssistantEnrolledDevices
+    * Indicates that Company Portal is required on setup assistant enrolled devices
+    *
+    * @return bool The requireCompanyPortalOnSetupAssistantEnrolledDevices
+    */
+    public function getRequireCompanyPortalOnSetupAssistantEnrolledDevices()
+    {
+        if (array_key_exists("requireCompanyPortalOnSetupAssistantEnrolledDevices", $this->_propDict)) {
+            return $this->_propDict["requireCompanyPortalOnSetupAssistantEnrolledDevices"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the requireCompanyPortalOnSetupAssistantEnrolledDevices
+    * Indicates that Company Portal is required on setup assistant enrolled devices
+    *
+    * @param bool $val The requireCompanyPortalOnSetupAssistantEnrolledDevices
+    *
+    * @return EnrollmentProfile
+    */
+    public function setRequireCompanyPortalOnSetupAssistantEnrolledDevices($val)
+    {
+        $this->_propDict["requireCompanyPortalOnSetupAssistantEnrolledDevices"] = boolval($val);
         return $this;
     }
     

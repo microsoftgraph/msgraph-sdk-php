@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * Windows81CompliancePolicy class
@@ -28,6 +28,7 @@ class Windows81CompliancePolicy extends DeviceCompliancePolicy
 {
     /**
     * Gets the passwordRequired
+    * Require a password to unlock Windows device.
     *
     * @return bool The passwordRequired
     */
@@ -42,6 +43,7 @@ class Windows81CompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passwordRequired
+    * Require a password to unlock Windows device.
     *
     * @param bool $val The passwordRequired
     *
@@ -55,6 +57,7 @@ class Windows81CompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the passwordBlockSimple
+    * Indicates whether or not to block simple password.
     *
     * @return bool The passwordBlockSimple
     */
@@ -69,6 +72,7 @@ class Windows81CompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passwordBlockSimple
+    * Indicates whether or not to block simple password.
     *
     * @param bool $val The passwordBlockSimple
     *
@@ -82,6 +86,7 @@ class Windows81CompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the passwordExpirationDays
+    * Password expiration in days.
     *
     * @return int The passwordExpirationDays
     */
@@ -96,6 +101,7 @@ class Windows81CompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passwordExpirationDays
+    * Password expiration in days.
     *
     * @param int $val The passwordExpirationDays
     *
@@ -109,6 +115,7 @@ class Windows81CompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the passwordMinimumLength
+    * The minimum password length.
     *
     * @return int The passwordMinimumLength
     */
@@ -123,6 +130,7 @@ class Windows81CompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passwordMinimumLength
+    * The minimum password length.
     *
     * @param int $val The passwordMinimumLength
     *
@@ -136,6 +144,7 @@ class Windows81CompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the passwordMinutesOfInactivityBeforeLock
+    * Minutes of inactivity before a password is required.
     *
     * @return int The passwordMinutesOfInactivityBeforeLock
     */
@@ -150,6 +159,7 @@ class Windows81CompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passwordMinutesOfInactivityBeforeLock
+    * Minutes of inactivity before a password is required.
     *
     * @param int $val The passwordMinutesOfInactivityBeforeLock
     *
@@ -163,6 +173,7 @@ class Windows81CompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the passwordMinimumCharacterSetCount
+    * The number of character sets required in the password.
     *
     * @return int The passwordMinimumCharacterSetCount
     */
@@ -177,6 +188,7 @@ class Windows81CompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passwordMinimumCharacterSetCount
+    * The number of character sets required in the password.
     *
     * @param int $val The passwordMinimumCharacterSetCount
     *
@@ -190,13 +202,14 @@ class Windows81CompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the passwordRequiredType
+    * The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
     *
     * @return RequiredPasswordType The passwordRequiredType
     */
     public function getPasswordRequiredType()
     {
         if (array_key_exists("passwordRequiredType", $this->_propDict)) {
-            if (is_a($this->_propDict["passwordRequiredType"], "Microsoft\Graph\Beta\Model\RequiredPasswordType")) {
+            if (is_a($this->_propDict["passwordRequiredType"], "Microsoft\Graph\Model\RequiredPasswordType")) {
                 return $this->_propDict["passwordRequiredType"];
             } else {
                 $this->_propDict["passwordRequiredType"] = new RequiredPasswordType($this->_propDict["passwordRequiredType"]);
@@ -208,6 +221,7 @@ class Windows81CompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passwordRequiredType
+    * The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
     *
     * @param RequiredPasswordType $val The passwordRequiredType
     *
@@ -221,6 +235,7 @@ class Windows81CompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the passwordPreviousPasswordBlockCount
+    * The number of previous passwords to prevent re-use of. Valid values 0 to 24
     *
     * @return int The passwordPreviousPasswordBlockCount
     */
@@ -235,6 +250,7 @@ class Windows81CompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passwordPreviousPasswordBlockCount
+    * The number of previous passwords to prevent re-use of. Valid values 0 to 24
     *
     * @param int $val The passwordPreviousPasswordBlockCount
     *
@@ -248,6 +264,7 @@ class Windows81CompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the osMinimumVersion
+    * Minimum Windows 8.1 version.
     *
     * @return string The osMinimumVersion
     */
@@ -262,6 +279,7 @@ class Windows81CompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the osMinimumVersion
+    * Minimum Windows 8.1 version.
     *
     * @param string $val The osMinimumVersion
     *
@@ -275,6 +293,7 @@ class Windows81CompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the osMaximumVersion
+    * Maximum Windows 8.1 version.
     *
     * @return string The osMaximumVersion
     */
@@ -289,6 +308,7 @@ class Windows81CompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the osMaximumVersion
+    * Maximum Windows 8.1 version.
     *
     * @param string $val The osMaximumVersion
     *
@@ -302,6 +322,7 @@ class Windows81CompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the storageRequireEncryption
+    * Indicates whether or not to require encryption on a windows 8.1 device.
     *
     * @return bool The storageRequireEncryption
     */
@@ -316,6 +337,7 @@ class Windows81CompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the storageRequireEncryption
+    * Indicates whether or not to require encryption on a windows 8.1 device.
     *
     * @param bool $val The storageRequireEncryption
     *

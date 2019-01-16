@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * MobileAppInstallSummary class
@@ -28,6 +28,7 @@ class MobileAppInstallSummary extends Entity
 {
     /**
     * Gets the installedDeviceCount
+    * Number of Devices that have successfully installed this app.
     *
     * @return int The installedDeviceCount
     */
@@ -42,6 +43,7 @@ class MobileAppInstallSummary extends Entity
     
     /**
     * Sets the installedDeviceCount
+    * Number of Devices that have successfully installed this app.
     *
     * @param int $val The installedDeviceCount
     *
@@ -55,6 +57,7 @@ class MobileAppInstallSummary extends Entity
     
     /**
     * Gets the failedDeviceCount
+    * Number of Devices that have failed to install this app.
     *
     * @return int The failedDeviceCount
     */
@@ -69,6 +72,7 @@ class MobileAppInstallSummary extends Entity
     
     /**
     * Sets the failedDeviceCount
+    * Number of Devices that have failed to install this app.
     *
     * @param int $val The failedDeviceCount
     *
@@ -82,6 +86,7 @@ class MobileAppInstallSummary extends Entity
     
     /**
     * Gets the notApplicableDeviceCount
+    * Number of Devices that are not applicable for this app.
     *
     * @return int The notApplicableDeviceCount
     */
@@ -96,6 +101,7 @@ class MobileAppInstallSummary extends Entity
     
     /**
     * Sets the notApplicableDeviceCount
+    * Number of Devices that are not applicable for this app.
     *
     * @param int $val The notApplicableDeviceCount
     *
@@ -109,6 +115,7 @@ class MobileAppInstallSummary extends Entity
     
     /**
     * Gets the notInstalledDeviceCount
+    * Number of Devices that does not have this app installed.
     *
     * @return int The notInstalledDeviceCount
     */
@@ -123,6 +130,7 @@ class MobileAppInstallSummary extends Entity
     
     /**
     * Sets the notInstalledDeviceCount
+    * Number of Devices that does not have this app installed.
     *
     * @param int $val The notInstalledDeviceCount
     *
@@ -136,6 +144,7 @@ class MobileAppInstallSummary extends Entity
     
     /**
     * Gets the pendingInstallDeviceCount
+    * Number of Devices that have been notified to install this app.
     *
     * @return int The pendingInstallDeviceCount
     */
@@ -150,6 +159,7 @@ class MobileAppInstallSummary extends Entity
     
     /**
     * Sets the pendingInstallDeviceCount
+    * Number of Devices that have been notified to install this app.
     *
     * @param int $val The pendingInstallDeviceCount
     *
@@ -163,6 +173,7 @@ class MobileAppInstallSummary extends Entity
     
     /**
     * Gets the installedUserCount
+    * Number of Users whose devices have all succeeded to install this app.
     *
     * @return int The installedUserCount
     */
@@ -177,6 +188,7 @@ class MobileAppInstallSummary extends Entity
     
     /**
     * Sets the installedUserCount
+    * Number of Users whose devices have all succeeded to install this app.
     *
     * @param int $val The installedUserCount
     *
@@ -190,6 +202,7 @@ class MobileAppInstallSummary extends Entity
     
     /**
     * Gets the failedUserCount
+    * Number of Users that have 1 or more device that failed to install this app.
     *
     * @return int The failedUserCount
     */
@@ -204,6 +217,7 @@ class MobileAppInstallSummary extends Entity
     
     /**
     * Sets the failedUserCount
+    * Number of Users that have 1 or more device that failed to install this app.
     *
     * @param int $val The failedUserCount
     *
@@ -217,6 +231,7 @@ class MobileAppInstallSummary extends Entity
     
     /**
     * Gets the notApplicableUserCount
+    * Number of Users whose devices were all not applicable for this app.
     *
     * @return int The notApplicableUserCount
     */
@@ -231,6 +246,7 @@ class MobileAppInstallSummary extends Entity
     
     /**
     * Sets the notApplicableUserCount
+    * Number of Users whose devices were all not applicable for this app.
     *
     * @param int $val The notApplicableUserCount
     *
@@ -244,6 +260,7 @@ class MobileAppInstallSummary extends Entity
     
     /**
     * Gets the notInstalledUserCount
+    * Number of Users that have 1 or more devices that did not install this app.
     *
     * @return int The notInstalledUserCount
     */
@@ -258,6 +275,7 @@ class MobileAppInstallSummary extends Entity
     
     /**
     * Sets the notInstalledUserCount
+    * Number of Users that have 1 or more devices that did not install this app.
     *
     * @param int $val The notInstalledUserCount
     *
@@ -271,6 +289,7 @@ class MobileAppInstallSummary extends Entity
     
     /**
     * Gets the pendingInstallUserCount
+    * Number of Users that have 1 or more device that have been notified to install this app and have 0 devices with failures.
     *
     * @return int The pendingInstallUserCount
     */
@@ -285,6 +304,7 @@ class MobileAppInstallSummary extends Entity
     
     /**
     * Sets the pendingInstallUserCount
+    * Number of Users that have 1 or more device that have been notified to install this app and have 0 devices with failures.
     *
     * @param int $val The pendingInstallUserCount
     *

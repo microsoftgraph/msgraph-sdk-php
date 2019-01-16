@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * LicenseUnitsDetail class
 *
@@ -27,6 +27,7 @@ class LicenseUnitsDetail extends Entity
 {
     /**
     * Gets the enabled
+    * The number of units that are enabled.
     *
     * @return int The enabled
     */
@@ -41,6 +42,7 @@ class LicenseUnitsDetail extends Entity
 
     /**
     * Sets the enabled
+    * The number of units that are enabled.
     *
     * @param int $val The value of the enabled
     *
@@ -53,6 +55,7 @@ class LicenseUnitsDetail extends Entity
     }
     /**
     * Gets the suspended
+    * The number of units that are suspended.
     *
     * @return int The suspended
     */
@@ -67,6 +70,7 @@ class LicenseUnitsDetail extends Entity
 
     /**
     * Sets the suspended
+    * The number of units that are suspended.
     *
     * @param int $val The value of the suspended
     *
@@ -79,6 +83,7 @@ class LicenseUnitsDetail extends Entity
     }
     /**
     * Gets the warning
+    * The number of units that are in warning status.
     *
     * @return int The warning
     */
@@ -93,6 +98,7 @@ class LicenseUnitsDetail extends Entity
 
     /**
     * Sets the warning
+    * The number of units that are in warning status.
     *
     * @param int $val The value of the warning
     *

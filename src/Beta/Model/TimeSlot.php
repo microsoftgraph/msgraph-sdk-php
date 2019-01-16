@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * TimeSlot class
 *
@@ -28,13 +28,14 @@ class TimeSlot extends Entity
 
     /**
     * Gets the start
+    * The time the period ends.
     *
     * @return DateTimeTimeZone The start
     */
     public function getStart()
     {
         if (array_key_exists("start", $this->_propDict)) {
-            if (is_a($this->_propDict["start"], "Microsoft\Graph\Beta\Model\DateTimeTimeZone")) {
+            if (is_a($this->_propDict["start"], "Microsoft\Graph\Model\DateTimeTimeZone")) {
                 return $this->_propDict["start"];
             } else {
                 $this->_propDict["start"] = new DateTimeTimeZone($this->_propDict["start"]);
@@ -46,6 +47,7 @@ class TimeSlot extends Entity
 
     /**
     * Sets the start
+    * The time the period ends.
     *
     * @param DateTimeTimeZone $val The value to assign to the start
     *
@@ -59,13 +61,14 @@ class TimeSlot extends Entity
 
     /**
     * Gets the end
+    * The time a period begins.
     *
     * @return DateTimeTimeZone The end
     */
     public function getEnd()
     {
         if (array_key_exists("end", $this->_propDict)) {
-            if (is_a($this->_propDict["end"], "Microsoft\Graph\Beta\Model\DateTimeTimeZone")) {
+            if (is_a($this->_propDict["end"], "Microsoft\Graph\Model\DateTimeTimeZone")) {
                 return $this->_propDict["end"];
             } else {
                 $this->_propDict["end"] = new DateTimeTimeZone($this->_propDict["end"]);
@@ -77,6 +80,7 @@ class TimeSlot extends Entity
 
     /**
     * Sets the end
+    * The time a period begins.
     *
     * @param DateTimeTimeZone $val The value to assign to the end
     *

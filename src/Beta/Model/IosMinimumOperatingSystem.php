@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * IosMinimumOperatingSystem class
 *
@@ -27,6 +27,7 @@ class IosMinimumOperatingSystem extends Entity
 {
     /**
     * Gets the v8_0
+    * Version 8.0 or later.
     *
     * @return bool The v8_0
     */
@@ -41,6 +42,7 @@ class IosMinimumOperatingSystem extends Entity
 
     /**
     * Sets the v8_0
+    * Version 8.0 or later.
     *
     * @param bool $val The value of the v8_0
     *
@@ -53,6 +55,7 @@ class IosMinimumOperatingSystem extends Entity
     }
     /**
     * Gets the v9_0
+    * Version 9.0 or later.
     *
     * @return bool The v9_0
     */
@@ -67,6 +70,7 @@ class IosMinimumOperatingSystem extends Entity
 
     /**
     * Sets the v9_0
+    * Version 9.0 or later.
     *
     * @param bool $val The value of the v9_0
     *
@@ -79,6 +83,7 @@ class IosMinimumOperatingSystem extends Entity
     }
     /**
     * Gets the v10_0
+    * Version 10.0 or later.
     *
     * @return bool The v10_0
     */
@@ -93,6 +98,7 @@ class IosMinimumOperatingSystem extends Entity
 
     /**
     * Sets the v10_0
+    * Version 10.0 or later.
     *
     * @param bool $val The value of the v10_0
     *
@@ -105,6 +111,7 @@ class IosMinimumOperatingSystem extends Entity
     }
     /**
     * Gets the v11_0
+    * Version 11.0 or later.
     *
     * @return bool The v11_0
     */
@@ -119,6 +126,7 @@ class IosMinimumOperatingSystem extends Entity
 
     /**
     * Sets the v11_0
+    * Version 11.0 or later.
     *
     * @param bool $val The value of the v11_0
     *
@@ -127,6 +135,34 @@ class IosMinimumOperatingSystem extends Entity
     public function setV11_0($val)
     {
         $this->_propDict["v110"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the v12_0
+    * Version 12.0 or later.
+    *
+    * @return bool The v12_0
+    */
+    public function getV12_0()
+    {
+        if (array_key_exists("v120", $this->_propDict)) {
+            return $this->_propDict["v120"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the v12_0
+    * Version 12.0 or later.
+    *
+    * @param bool $val The value of the v12_0
+    *
+    * @return IosMinimumOperatingSystem
+    */
+    public function setV12_0($val)
+    {
+        $this->_propDict["v120"] = $val;
         return $this;
     }
 }

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * EducationFeedback class
 *
@@ -34,7 +34,7 @@ class EducationFeedback extends Entity
     public function getText()
     {
         if (array_key_exists("text", $this->_propDict)) {
-            if (is_a($this->_propDict["text"], "Microsoft\Graph\Beta\Model\EducationItemBody")) {
+            if (is_a($this->_propDict["text"], "Microsoft\Graph\Model\EducationItemBody")) {
                 return $this->_propDict["text"];
             } else {
                 $this->_propDict["text"] = new EducationItemBody($this->_propDict["text"]);
@@ -65,7 +65,7 @@ class EducationFeedback extends Entity
     public function getFeedbackDateTime()
     {
         if (array_key_exists("feedbackDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["feedbackDateTime"], "Microsoft\Graph\Beta\Model\\DateTime")) {
+            if (is_a($this->_propDict["feedbackDateTime"], "Microsoft\Graph\Model\\DateTime")) {
                 return $this->_propDict["feedbackDateTime"];
             } else {
                 $this->_propDict["feedbackDateTime"] = new \DateTime($this->_propDict["feedbackDateTime"]);
@@ -96,7 +96,7 @@ class EducationFeedback extends Entity
     public function getFeedbackBy()
     {
         if (array_key_exists("feedbackBy", $this->_propDict)) {
-            if (is_a($this->_propDict["feedbackBy"], "Microsoft\Graph\Beta\Model\IdentitySet")) {
+            if (is_a($this->_propDict["feedbackBy"], "Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["feedbackBy"];
             } else {
                 $this->_propDict["feedbackBy"] = new IdentitySet($this->_propDict["feedbackBy"]);

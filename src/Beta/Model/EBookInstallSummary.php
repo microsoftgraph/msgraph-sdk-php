@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * EBookInstallSummary class
@@ -28,6 +28,7 @@ class EBookInstallSummary extends Entity
 {
     /**
     * Gets the installedDeviceCount
+    * Number of Devices that have successfully installed this book.
     *
     * @return int The installedDeviceCount
     */
@@ -42,6 +43,7 @@ class EBookInstallSummary extends Entity
     
     /**
     * Sets the installedDeviceCount
+    * Number of Devices that have successfully installed this book.
     *
     * @param int $val The installedDeviceCount
     *
@@ -55,6 +57,7 @@ class EBookInstallSummary extends Entity
     
     /**
     * Gets the failedDeviceCount
+    * Number of Devices that have failed to install this book.
     *
     * @return int The failedDeviceCount
     */
@@ -69,6 +72,7 @@ class EBookInstallSummary extends Entity
     
     /**
     * Sets the failedDeviceCount
+    * Number of Devices that have failed to install this book.
     *
     * @param int $val The failedDeviceCount
     *
@@ -82,6 +86,7 @@ class EBookInstallSummary extends Entity
     
     /**
     * Gets the notInstalledDeviceCount
+    * Number of Devices that does not have this book installed.
     *
     * @return int The notInstalledDeviceCount
     */
@@ -96,6 +101,7 @@ class EBookInstallSummary extends Entity
     
     /**
     * Sets the notInstalledDeviceCount
+    * Number of Devices that does not have this book installed.
     *
     * @param int $val The notInstalledDeviceCount
     *
@@ -109,6 +115,7 @@ class EBookInstallSummary extends Entity
     
     /**
     * Gets the installedUserCount
+    * Number of Users whose devices have all succeeded to install this book.
     *
     * @return int The installedUserCount
     */
@@ -123,6 +130,7 @@ class EBookInstallSummary extends Entity
     
     /**
     * Sets the installedUserCount
+    * Number of Users whose devices have all succeeded to install this book.
     *
     * @param int $val The installedUserCount
     *
@@ -136,6 +144,7 @@ class EBookInstallSummary extends Entity
     
     /**
     * Gets the failedUserCount
+    * Number of Users that have 1 or more device that failed to install this book.
     *
     * @return int The failedUserCount
     */
@@ -150,6 +159,7 @@ class EBookInstallSummary extends Entity
     
     /**
     * Sets the failedUserCount
+    * Number of Users that have 1 or more device that failed to install this book.
     *
     * @param int $val The failedUserCount
     *
@@ -163,6 +173,7 @@ class EBookInstallSummary extends Entity
     
     /**
     * Gets the notInstalledUserCount
+    * Number of Users that did not install this book.
     *
     * @return int The notInstalledUserCount
     */
@@ -177,6 +188,7 @@ class EBookInstallSummary extends Entity
     
     /**
     * Sets the notInstalledUserCount
+    * Number of Users that did not install this book.
     *
     * @param int $val The notInstalledUserCount
     *

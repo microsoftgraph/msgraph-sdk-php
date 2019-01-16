@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * ManagementCertificateWithThumbprint class
 *
@@ -27,6 +27,7 @@ class ManagementCertificateWithThumbprint extends Entity
 {
     /**
     * Gets the thumbprint
+    * The thumbprint of the management certificate
     *
     * @return string The thumbprint
     */
@@ -41,6 +42,7 @@ class ManagementCertificateWithThumbprint extends Entity
 
     /**
     * Sets the thumbprint
+    * The thumbprint of the management certificate
     *
     * @param string $val The value of the thumbprint
     *
@@ -53,6 +55,7 @@ class ManagementCertificateWithThumbprint extends Entity
     }
     /**
     * Gets the certificate
+    * The Base 64 encoded management certificate
     *
     * @return string The certificate
     */
@@ -67,6 +70,7 @@ class ManagementCertificateWithThumbprint extends Entity
 
     /**
     * Sets the certificate
+    * The Base 64 encoded management certificate
     *
     * @param string $val The value of the certificate
     *

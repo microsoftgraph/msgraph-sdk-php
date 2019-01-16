@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * SynchronizationSchedule class
 *
@@ -34,7 +34,7 @@ class SynchronizationSchedule extends Entity
     public function getExpiration()
     {
         if (array_key_exists("expiration", $this->_propDict)) {
-            if (is_a($this->_propDict["expiration"], "Microsoft\Graph\Beta\Model\\DateTime")) {
+            if (is_a($this->_propDict["expiration"], "Microsoft\Graph\Model\\DateTime")) {
                 return $this->_propDict["expiration"];
             } else {
                 $this->_propDict["expiration"] = new \DateTime($this->_propDict["expiration"]);
@@ -65,7 +65,7 @@ class SynchronizationSchedule extends Entity
     public function getInterval()
     {
         if (array_key_exists("interval", $this->_propDict)) {
-            if (is_a($this->_propDict["interval"], "Microsoft\Graph\Beta\Model\Duration")) {
+            if (is_a($this->_propDict["interval"], "Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["interval"];
             } else {
                 $this->_propDict["interval"] = new Duration($this->_propDict["interval"]);
@@ -96,7 +96,7 @@ class SynchronizationSchedule extends Entity
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "Microsoft\Graph\Beta\Model\SynchronizationScheduleState")) {
+            if (is_a($this->_propDict["state"], "Microsoft\Graph\Model\SynchronizationScheduleState")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new SynchronizationScheduleState($this->_propDict["state"]);

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * ActiveDirectoryWindowsAutopilotDeploymentProfile class
@@ -28,13 +28,14 @@ class ActiveDirectoryWindowsAutopilotDeploymentProfile extends WindowsAutopilotD
 {
     /**
     * Gets the domainJoinConfiguration
+    * Configuration to join Active Directory domain
     *
     * @return WindowsDomainJoinConfiguration The domainJoinConfiguration
     */
     public function getDomainJoinConfiguration()
     {
         if (array_key_exists("domainJoinConfiguration", $this->_propDict)) {
-            if (is_a($this->_propDict["domainJoinConfiguration"], "Microsoft\Graph\Beta\Model\WindowsDomainJoinConfiguration")) {
+            if (is_a($this->_propDict["domainJoinConfiguration"], "Microsoft\Graph\Model\WindowsDomainJoinConfiguration")) {
                 return $this->_propDict["domainJoinConfiguration"];
             } else {
                 $this->_propDict["domainJoinConfiguration"] = new WindowsDomainJoinConfiguration($this->_propDict["domainJoinConfiguration"]);
@@ -46,6 +47,7 @@ class ActiveDirectoryWindowsAutopilotDeploymentProfile extends WindowsAutopilotD
     
     /**
     * Sets the domainJoinConfiguration
+    * Configuration to join Active Directory domain
     *
     * @param WindowsDomainJoinConfiguration $val The domainJoinConfiguration
     *

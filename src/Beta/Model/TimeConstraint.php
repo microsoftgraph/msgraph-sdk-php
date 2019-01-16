@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * TimeConstraint class
 *
@@ -28,13 +28,14 @@ class TimeConstraint extends Entity
 
     /**
     * Gets the activityDomain
+    * The nature of the activity, optional. The possible values are: work, personal, unrestricted, or unknown.
     *
     * @return ActivityDomain The activityDomain
     */
     public function getActivityDomain()
     {
         if (array_key_exists("activityDomain", $this->_propDict)) {
-            if (is_a($this->_propDict["activityDomain"], "Microsoft\Graph\Beta\Model\ActivityDomain")) {
+            if (is_a($this->_propDict["activityDomain"], "Microsoft\Graph\Model\ActivityDomain")) {
                 return $this->_propDict["activityDomain"];
             } else {
                 $this->_propDict["activityDomain"] = new ActivityDomain($this->_propDict["activityDomain"]);
@@ -46,6 +47,7 @@ class TimeConstraint extends Entity
 
     /**
     * Sets the activityDomain
+    * The nature of the activity, optional. The possible values are: work, personal, unrestricted, or unknown.
     *
     * @param ActivityDomain $val The value to assign to the activityDomain
     *
@@ -59,13 +61,14 @@ class TimeConstraint extends Entity
 
     /**
     * Gets the timeslots
+    * An array of time periods.
     *
     * @return TimeSlot The timeslots
     */
     public function getTimeslots()
     {
         if (array_key_exists("timeslots", $this->_propDict)) {
-            if (is_a($this->_propDict["timeslots"], "Microsoft\Graph\Beta\Model\TimeSlot")) {
+            if (is_a($this->_propDict["timeslots"], "Microsoft\Graph\Model\TimeSlot")) {
                 return $this->_propDict["timeslots"];
             } else {
                 $this->_propDict["timeslots"] = new TimeSlot($this->_propDict["timeslots"]);
@@ -77,6 +80,7 @@ class TimeConstraint extends Entity
 
     /**
     * Sets the timeslots
+    * An array of time periods.
     *
     * @param TimeSlot $val The value to assign to the timeslots
     *

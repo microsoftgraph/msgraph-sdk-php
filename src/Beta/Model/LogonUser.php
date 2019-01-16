@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * LogonUser class
 *
@@ -86,7 +86,7 @@ class LogonUser extends Entity
     public function getAccountType()
     {
         if (array_key_exists("accountType", $this->_propDict)) {
-            if (is_a($this->_propDict["accountType"], "Microsoft\Graph\Beta\Model\UserAccountSecurityType")) {
+            if (is_a($this->_propDict["accountType"], "Microsoft\Graph\Model\UserAccountSecurityType")) {
                 return $this->_propDict["accountType"];
             } else {
                 $this->_propDict["accountType"] = new UserAccountSecurityType($this->_propDict["accountType"]);
@@ -117,7 +117,7 @@ class LogonUser extends Entity
     public function getFirstSeenDateTime()
     {
         if (array_key_exists("firstSeenDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["firstSeenDateTime"], "Microsoft\Graph\Beta\Model\\DateTime")) {
+            if (is_a($this->_propDict["firstSeenDateTime"], "Microsoft\Graph\Model\\DateTime")) {
                 return $this->_propDict["firstSeenDateTime"];
             } else {
                 $this->_propDict["firstSeenDateTime"] = new \DateTime($this->_propDict["firstSeenDateTime"]);
@@ -148,7 +148,7 @@ class LogonUser extends Entity
     public function getLastSeenDateTime()
     {
         if (array_key_exists("lastSeenDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastSeenDateTime"], "Microsoft\Graph\Beta\Model\\DateTime")) {
+            if (is_a($this->_propDict["lastSeenDateTime"], "Microsoft\Graph\Model\\DateTime")) {
                 return $this->_propDict["lastSeenDateTime"];
             } else {
                 $this->_propDict["lastSeenDateTime"] = new \DateTime($this->_propDict["lastSeenDateTime"]);
@@ -205,7 +205,7 @@ class LogonUser extends Entity
     public function getLogonTypes()
     {
         if (array_key_exists("logonTypes", $this->_propDict)) {
-            if (is_a($this->_propDict["logonTypes"], "Microsoft\Graph\Beta\Model\LogonType")) {
+            if (is_a($this->_propDict["logonTypes"], "Microsoft\Graph\Model\LogonType")) {
                 return $this->_propDict["logonTypes"];
             } else {
                 $this->_propDict["logonTypes"] = new LogonType($this->_propDict["logonTypes"]);

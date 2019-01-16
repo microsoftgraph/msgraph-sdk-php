@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * PrivilegedApproval class
@@ -115,7 +115,7 @@ class PrivilegedApproval extends Entity
     public function getApprovalState()
     {
         if (array_key_exists("approvalState", $this->_propDict)) {
-            if (is_a($this->_propDict["approvalState"], "Microsoft\Graph\Beta\Model\ApprovalState")) {
+            if (is_a($this->_propDict["approvalState"], "Microsoft\Graph\Model\ApprovalState")) {
                 return $this->_propDict["approvalState"];
             } else {
                 $this->_propDict["approvalState"] = new ApprovalState($this->_propDict["approvalState"]);
@@ -146,7 +146,7 @@ class PrivilegedApproval extends Entity
     public function getApprovalDuration()
     {
         if (array_key_exists("approvalDuration", $this->_propDict)) {
-            if (is_a($this->_propDict["approvalDuration"], "Microsoft\Graph\Beta\Model\Duration")) {
+            if (is_a($this->_propDict["approvalDuration"], "Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["approvalDuration"];
             } else {
                 $this->_propDict["approvalDuration"] = new Duration($this->_propDict["approvalDuration"]);
@@ -286,6 +286,37 @@ class PrivilegedApproval extends Entity
     }
     
     /**
+    * Gets the request
+    *
+    * @return PrivilegedRoleAssignmentRequest The request
+    */
+    public function getRequest()
+    {
+        if (array_key_exists("request", $this->_propDict)) {
+            if (is_a($this->_propDict["request"], "Microsoft\Graph\Model\PrivilegedRoleAssignmentRequest")) {
+                return $this->_propDict["request"];
+            } else {
+                $this->_propDict["request"] = new PrivilegedRoleAssignmentRequest($this->_propDict["request"]);
+                return $this->_propDict["request"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the request
+    *
+    * @param PrivilegedRoleAssignmentRequest $val The request
+    *
+    * @return PrivilegedApproval
+    */
+    public function setRequest($val)
+    {
+        $this->_propDict["request"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the roleInfo
     *
     * @return PrivilegedRole The roleInfo
@@ -293,7 +324,7 @@ class PrivilegedApproval extends Entity
     public function getRoleInfo()
     {
         if (array_key_exists("roleInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["roleInfo"], "Microsoft\Graph\Beta\Model\PrivilegedRole")) {
+            if (is_a($this->_propDict["roleInfo"], "Microsoft\Graph\Model\PrivilegedRole")) {
                 return $this->_propDict["roleInfo"];
             } else {
                 $this->_propDict["roleInfo"] = new PrivilegedRole($this->_propDict["roleInfo"]);

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * DeviceConfigurationSettingState class
 *
@@ -27,6 +27,7 @@ class DeviceConfigurationSettingState extends Entity
 {
     /**
     * Gets the setting
+    * The setting that is being reported
     *
     * @return string The setting
     */
@@ -41,6 +42,7 @@ class DeviceConfigurationSettingState extends Entity
 
     /**
     * Sets the setting
+    * The setting that is being reported
     *
     * @param string $val The value of the setting
     *
@@ -53,6 +55,7 @@ class DeviceConfigurationSettingState extends Entity
     }
     /**
     * Gets the settingName
+    * Localized/user friendly setting name that is being reported
     *
     * @return string The settingName
     */
@@ -67,6 +70,7 @@ class DeviceConfigurationSettingState extends Entity
 
     /**
     * Sets the settingName
+    * Localized/user friendly setting name that is being reported
     *
     * @param string $val The value of the settingName
     *
@@ -79,6 +83,7 @@ class DeviceConfigurationSettingState extends Entity
     }
     /**
     * Gets the instanceDisplayName
+    * Name of setting instance that is being reported.
     *
     * @return string The instanceDisplayName
     */
@@ -93,6 +98,7 @@ class DeviceConfigurationSettingState extends Entity
 
     /**
     * Sets the instanceDisplayName
+    * Name of setting instance that is being reported.
     *
     * @param string $val The value of the instanceDisplayName
     *
@@ -106,13 +112,14 @@ class DeviceConfigurationSettingState extends Entity
 
     /**
     * Gets the state
+    * The compliance state of the setting. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
     *
     * @return ComplianceStatus The state
     */
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "Microsoft\Graph\Beta\Model\ComplianceStatus")) {
+            if (is_a($this->_propDict["state"], "Microsoft\Graph\Model\ComplianceStatus")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new ComplianceStatus($this->_propDict["state"]);
@@ -124,6 +131,7 @@ class DeviceConfigurationSettingState extends Entity
 
     /**
     * Sets the state
+    * The compliance state of the setting. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
     *
     * @param ComplianceStatus $val The value to assign to the state
     *
@@ -136,6 +144,7 @@ class DeviceConfigurationSettingState extends Entity
     }
     /**
     * Gets the errorCode
+    * Error code for the setting
     *
     * @return int The errorCode
     */
@@ -150,6 +159,7 @@ class DeviceConfigurationSettingState extends Entity
 
     /**
     * Sets the errorCode
+    * Error code for the setting
     *
     * @param int $val The value of the errorCode
     *
@@ -162,6 +172,7 @@ class DeviceConfigurationSettingState extends Entity
     }
     /**
     * Gets the errorDescription
+    * Error description
     *
     * @return string The errorDescription
     */
@@ -176,6 +187,7 @@ class DeviceConfigurationSettingState extends Entity
 
     /**
     * Sets the errorDescription
+    * Error description
     *
     * @param string $val The value of the errorDescription
     *
@@ -188,6 +200,7 @@ class DeviceConfigurationSettingState extends Entity
     }
     /**
     * Gets the userId
+    * UserId
     *
     * @return string The userId
     */
@@ -202,6 +215,7 @@ class DeviceConfigurationSettingState extends Entity
 
     /**
     * Sets the userId
+    * UserId
     *
     * @param string $val The value of the userId
     *
@@ -214,6 +228,7 @@ class DeviceConfigurationSettingState extends Entity
     }
     /**
     * Gets the userName
+    * UserName
     *
     * @return string The userName
     */
@@ -228,6 +243,7 @@ class DeviceConfigurationSettingState extends Entity
 
     /**
     * Sets the userName
+    * UserName
     *
     * @param string $val The value of the userName
     *
@@ -240,6 +256,7 @@ class DeviceConfigurationSettingState extends Entity
     }
     /**
     * Gets the userEmail
+    * UserEmail
     *
     * @return string The userEmail
     */
@@ -254,6 +271,7 @@ class DeviceConfigurationSettingState extends Entity
 
     /**
     * Sets the userEmail
+    * UserEmail
     *
     * @param string $val The value of the userEmail
     *
@@ -266,6 +284,7 @@ class DeviceConfigurationSettingState extends Entity
     }
     /**
     * Gets the userPrincipalName
+    * UserPrincipalName.
     *
     * @return string The userPrincipalName
     */
@@ -280,6 +299,7 @@ class DeviceConfigurationSettingState extends Entity
 
     /**
     * Sets the userPrincipalName
+    * UserPrincipalName.
     *
     * @param string $val The value of the userPrincipalName
     *
@@ -293,13 +313,14 @@ class DeviceConfigurationSettingState extends Entity
 
     /**
     * Gets the sources
+    * Contributing policies
     *
     * @return SettingSource The sources
     */
     public function getSources()
     {
         if (array_key_exists("sources", $this->_propDict)) {
-            if (is_a($this->_propDict["sources"], "Microsoft\Graph\Beta\Model\SettingSource")) {
+            if (is_a($this->_propDict["sources"], "Microsoft\Graph\Model\SettingSource")) {
                 return $this->_propDict["sources"];
             } else {
                 $this->_propDict["sources"] = new SettingSource($this->_propDict["sources"]);
@@ -311,6 +332,7 @@ class DeviceConfigurationSettingState extends Entity
 
     /**
     * Sets the sources
+    * Contributing policies
     *
     * @param SettingSource $val The value to assign to the sources
     *
@@ -323,6 +345,7 @@ class DeviceConfigurationSettingState extends Entity
     }
     /**
     * Gets the currentValue
+    * Current value of setting on device
     *
     * @return string The currentValue
     */
@@ -337,6 +360,7 @@ class DeviceConfigurationSettingState extends Entity
 
     /**
     * Sets the currentValue
+    * Current value of setting on device
     *
     * @param string $val The value of the currentValue
     *

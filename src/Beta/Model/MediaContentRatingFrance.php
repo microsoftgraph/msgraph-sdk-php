@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * MediaContentRatingFrance class
 *
@@ -28,13 +28,14 @@ class MediaContentRatingFrance extends Entity
 
     /**
     * Gets the movieRating
+    * Movies rating selected for France. Possible values are: allAllowed, allBlocked, agesAbove10, agesAbove12, agesAbove16, agesAbove18.
     *
     * @return RatingFranceMoviesType The movieRating
     */
     public function getMovieRating()
     {
         if (array_key_exists("movieRating", $this->_propDict)) {
-            if (is_a($this->_propDict["movieRating"], "Microsoft\Graph\Beta\Model\RatingFranceMoviesType")) {
+            if (is_a($this->_propDict["movieRating"], "Microsoft\Graph\Model\RatingFranceMoviesType")) {
                 return $this->_propDict["movieRating"];
             } else {
                 $this->_propDict["movieRating"] = new RatingFranceMoviesType($this->_propDict["movieRating"]);
@@ -46,6 +47,7 @@ class MediaContentRatingFrance extends Entity
 
     /**
     * Sets the movieRating
+    * Movies rating selected for France. Possible values are: allAllowed, allBlocked, agesAbove10, agesAbove12, agesAbove16, agesAbove18.
     *
     * @param RatingFranceMoviesType $val The value to assign to the movieRating
     *
@@ -59,13 +61,14 @@ class MediaContentRatingFrance extends Entity
 
     /**
     * Gets the tvRating
+    * TV rating selected for France. Possible values are: allAllowed, allBlocked, agesAbove10, agesAbove12, agesAbove16, agesAbove18.
     *
     * @return RatingFranceTelevisionType The tvRating
     */
     public function getTvRating()
     {
         if (array_key_exists("tvRating", $this->_propDict)) {
-            if (is_a($this->_propDict["tvRating"], "Microsoft\Graph\Beta\Model\RatingFranceTelevisionType")) {
+            if (is_a($this->_propDict["tvRating"], "Microsoft\Graph\Model\RatingFranceTelevisionType")) {
                 return $this->_propDict["tvRating"];
             } else {
                 $this->_propDict["tvRating"] = new RatingFranceTelevisionType($this->_propDict["tvRating"]);
@@ -77,6 +80,7 @@ class MediaContentRatingFrance extends Entity
 
     /**
     * Sets the tvRating
+    * TV rating selected for France. Possible values are: allAllowed, allBlocked, agesAbove10, agesAbove12, agesAbove16, agesAbove18.
     *
     * @param RatingFranceTelevisionType $val The value to assign to the tvRating
     *

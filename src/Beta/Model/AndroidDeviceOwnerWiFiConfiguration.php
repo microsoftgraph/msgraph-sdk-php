@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * AndroidDeviceOwnerWiFiConfiguration class
@@ -28,6 +28,7 @@ class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration
 {
     /**
     * Gets the networkName
+    * Network Name
     *
     * @return string The networkName
     */
@@ -42,6 +43,7 @@ class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration
     
     /**
     * Sets the networkName
+    * Network Name
     *
     * @param string $val The networkName
     *
@@ -55,6 +57,7 @@ class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration
     
     /**
     * Gets the ssid
+    * This is the name of the Wi-Fi network that is broadcast to all devices.
     *
     * @return string The ssid
     */
@@ -69,6 +72,7 @@ class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration
     
     /**
     * Sets the ssid
+    * This is the name of the Wi-Fi network that is broadcast to all devices.
     *
     * @param string $val The ssid
     *
@@ -82,6 +86,7 @@ class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration
     
     /**
     * Gets the connectAutomatically
+    * Connect automatically when this network is in range. Setting this to true will skip the user prompt and automatically connect the device to Wi-Fi network.
     *
     * @return bool The connectAutomatically
     */
@@ -96,6 +101,7 @@ class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration
     
     /**
     * Sets the connectAutomatically
+    * Connect automatically when this network is in range. Setting this to true will skip the user prompt and automatically connect the device to Wi-Fi network.
     *
     * @param bool $val The connectAutomatically
     *
@@ -109,6 +115,7 @@ class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration
     
     /**
     * Gets the connectWhenNetworkNameIsHidden
+    * When set to true, this profile forces the device to connect to a network that doesn't broadcast its SSID to all devices.
     *
     * @return bool The connectWhenNetworkNameIsHidden
     */
@@ -123,6 +130,7 @@ class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration
     
     /**
     * Sets the connectWhenNetworkNameIsHidden
+    * When set to true, this profile forces the device to connect to a network that doesn't broadcast its SSID to all devices.
     *
     * @param bool $val The connectWhenNetworkNameIsHidden
     *
@@ -136,13 +144,14 @@ class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration
     
     /**
     * Gets the wiFiSecurityType
+    * Indicates whether Wi-Fi endpoint uses an EAP based security type.
     *
     * @return AndroidDeviceOwnerWiFiSecurityType The wiFiSecurityType
     */
     public function getWiFiSecurityType()
     {
         if (array_key_exists("wiFiSecurityType", $this->_propDict)) {
-            if (is_a($this->_propDict["wiFiSecurityType"], "Microsoft\Graph\Beta\Model\AndroidDeviceOwnerWiFiSecurityType")) {
+            if (is_a($this->_propDict["wiFiSecurityType"], "Microsoft\Graph\Model\AndroidDeviceOwnerWiFiSecurityType")) {
                 return $this->_propDict["wiFiSecurityType"];
             } else {
                 $this->_propDict["wiFiSecurityType"] = new AndroidDeviceOwnerWiFiSecurityType($this->_propDict["wiFiSecurityType"]);
@@ -154,6 +163,7 @@ class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration
     
     /**
     * Sets the wiFiSecurityType
+    * Indicates whether Wi-Fi endpoint uses an EAP based security type.
     *
     * @param AndroidDeviceOwnerWiFiSecurityType $val The wiFiSecurityType
     *
@@ -167,6 +177,7 @@ class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration
     
     /**
     * Gets the preSharedKey
+    * This is the pre-shared key for WPA Personal Wi-Fi network.
     *
     * @return string The preSharedKey
     */
@@ -181,6 +192,7 @@ class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration
     
     /**
     * Sets the preSharedKey
+    * This is the pre-shared key for WPA Personal Wi-Fi network.
     *
     * @param string $val The preSharedKey
     *
@@ -194,6 +206,7 @@ class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration
     
     /**
     * Gets the preSharedKeyIsSet
+    * This is the pre-shared key for WPA Personal Wi-Fi network.
     *
     * @return bool The preSharedKeyIsSet
     */
@@ -208,6 +221,7 @@ class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration
     
     /**
     * Sets the preSharedKeyIsSet
+    * This is the pre-shared key for WPA Personal Wi-Fi network.
     *
     * @param bool $val The preSharedKeyIsSet
     *

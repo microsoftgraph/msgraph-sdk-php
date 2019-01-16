@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * WorkbookChartSeriesFormat class
@@ -28,13 +28,14 @@ class WorkbookChartSeriesFormat extends Entity
 {
     /**
     * Gets the fill
+    * Represents the fill format of a chart series, which includes background formating information. Read-only.
     *
     * @return WorkbookChartFill The fill
     */
     public function getFill()
     {
         if (array_key_exists("fill", $this->_propDict)) {
-            if (is_a($this->_propDict["fill"], "Microsoft\Graph\Beta\Model\WorkbookChartFill")) {
+            if (is_a($this->_propDict["fill"], "Microsoft\Graph\Model\WorkbookChartFill")) {
                 return $this->_propDict["fill"];
             } else {
                 $this->_propDict["fill"] = new WorkbookChartFill($this->_propDict["fill"]);
@@ -46,6 +47,7 @@ class WorkbookChartSeriesFormat extends Entity
     
     /**
     * Sets the fill
+    * Represents the fill format of a chart series, which includes background formating information. Read-only.
     *
     * @param WorkbookChartFill $val The fill
     *
@@ -59,13 +61,14 @@ class WorkbookChartSeriesFormat extends Entity
     
     /**
     * Gets the line
+    * Represents line formatting. Read-only.
     *
     * @return WorkbookChartLineFormat The line
     */
     public function getLine()
     {
         if (array_key_exists("line", $this->_propDict)) {
-            if (is_a($this->_propDict["line"], "Microsoft\Graph\Beta\Model\WorkbookChartLineFormat")) {
+            if (is_a($this->_propDict["line"], "Microsoft\Graph\Model\WorkbookChartLineFormat")) {
                 return $this->_propDict["line"];
             } else {
                 $this->_propDict["line"] = new WorkbookChartLineFormat($this->_propDict["line"]);
@@ -77,6 +80,7 @@ class WorkbookChartSeriesFormat extends Entity
     
     /**
     * Sets the line
+    * Represents line formatting. Read-only.
     *
     * @param WorkbookChartLineFormat $val The line
     *

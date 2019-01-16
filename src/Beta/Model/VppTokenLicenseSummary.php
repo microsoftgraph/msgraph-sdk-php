@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * VppTokenLicenseSummary class
 *
@@ -27,6 +27,7 @@ class VppTokenLicenseSummary extends Entity
 {
     /**
     * Gets the vppTokenId
+    * Identifier of the VPP token.
     *
     * @return string The vppTokenId
     */
@@ -41,6 +42,7 @@ class VppTokenLicenseSummary extends Entity
 
     /**
     * Sets the vppTokenId
+    * Identifier of the VPP token.
     *
     * @param string $val The value of the vppTokenId
     *
@@ -53,6 +55,7 @@ class VppTokenLicenseSummary extends Entity
     }
     /**
     * Gets the appleId
+    * The Apple Id associated with the given Apple Volume Purchase Program Token.
     *
     * @return string The appleId
     */
@@ -67,6 +70,7 @@ class VppTokenLicenseSummary extends Entity
 
     /**
     * Sets the appleId
+    * The Apple Id associated with the given Apple Volume Purchase Program Token.
     *
     * @param string $val The value of the appleId
     *
@@ -79,6 +83,7 @@ class VppTokenLicenseSummary extends Entity
     }
     /**
     * Gets the organizationName
+    * The organization associated with the Apple Volume Purchase Program Token.
     *
     * @return string The organizationName
     */
@@ -93,6 +98,7 @@ class VppTokenLicenseSummary extends Entity
 
     /**
     * Sets the organizationName
+    * The organization associated with the Apple Volume Purchase Program Token.
     *
     * @param string $val The value of the organizationName
     *
@@ -105,6 +111,7 @@ class VppTokenLicenseSummary extends Entity
     }
     /**
     * Gets the availableLicenseCount
+    * The number of VPP licenses available.
     *
     * @return int The availableLicenseCount
     */
@@ -119,6 +126,7 @@ class VppTokenLicenseSummary extends Entity
 
     /**
     * Sets the availableLicenseCount
+    * The number of VPP licenses available.
     *
     * @param int $val The value of the availableLicenseCount
     *
@@ -131,6 +139,7 @@ class VppTokenLicenseSummary extends Entity
     }
     /**
     * Gets the usedLicenseCount
+    * The number of VPP licenses in use.
     *
     * @return int The usedLicenseCount
     */
@@ -145,6 +154,7 @@ class VppTokenLicenseSummary extends Entity
 
     /**
     * Sets the usedLicenseCount
+    * The number of VPP licenses in use.
     *
     * @param int $val The value of the usedLicenseCount
     *

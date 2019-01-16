@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * SynchronizationStatus class
 *
@@ -86,7 +86,7 @@ class SynchronizationStatus extends Entity
     public function getCode()
     {
         if (array_key_exists("code", $this->_propDict)) {
-            if (is_a($this->_propDict["code"], "Microsoft\Graph\Beta\Model\SynchronizationStatusCode")) {
+            if (is_a($this->_propDict["code"], "Microsoft\Graph\Model\SynchronizationStatusCode")) {
                 return $this->_propDict["code"];
             } else {
                 $this->_propDict["code"] = new SynchronizationStatusCode($this->_propDict["code"]);
@@ -117,7 +117,7 @@ class SynchronizationStatus extends Entity
     public function getLastExecution()
     {
         if (array_key_exists("lastExecution", $this->_propDict)) {
-            if (is_a($this->_propDict["lastExecution"], "Microsoft\Graph\Beta\Model\SynchronizationTaskExecution")) {
+            if (is_a($this->_propDict["lastExecution"], "Microsoft\Graph\Model\SynchronizationTaskExecution")) {
                 return $this->_propDict["lastExecution"];
             } else {
                 $this->_propDict["lastExecution"] = new SynchronizationTaskExecution($this->_propDict["lastExecution"]);
@@ -148,7 +148,7 @@ class SynchronizationStatus extends Entity
     public function getLastSuccessfulExecution()
     {
         if (array_key_exists("lastSuccessfulExecution", $this->_propDict)) {
-            if (is_a($this->_propDict["lastSuccessfulExecution"], "Microsoft\Graph\Beta\Model\SynchronizationTaskExecution")) {
+            if (is_a($this->_propDict["lastSuccessfulExecution"], "Microsoft\Graph\Model\SynchronizationTaskExecution")) {
                 return $this->_propDict["lastSuccessfulExecution"];
             } else {
                 $this->_propDict["lastSuccessfulExecution"] = new SynchronizationTaskExecution($this->_propDict["lastSuccessfulExecution"]);
@@ -179,7 +179,7 @@ class SynchronizationStatus extends Entity
     public function getLastSuccessfulExecutionWithExports()
     {
         if (array_key_exists("lastSuccessfulExecutionWithExports", $this->_propDict)) {
-            if (is_a($this->_propDict["lastSuccessfulExecutionWithExports"], "Microsoft\Graph\Beta\Model\SynchronizationTaskExecution")) {
+            if (is_a($this->_propDict["lastSuccessfulExecutionWithExports"], "Microsoft\Graph\Model\SynchronizationTaskExecution")) {
                 return $this->_propDict["lastSuccessfulExecutionWithExports"];
             } else {
                 $this->_propDict["lastSuccessfulExecutionWithExports"] = new SynchronizationTaskExecution($this->_propDict["lastSuccessfulExecutionWithExports"]);
@@ -210,7 +210,7 @@ class SynchronizationStatus extends Entity
     public function getProgress()
     {
         if (array_key_exists("progress", $this->_propDict)) {
-            if (is_a($this->_propDict["progress"], "Microsoft\Graph\Beta\Model\SynchronizationProgress")) {
+            if (is_a($this->_propDict["progress"], "Microsoft\Graph\Model\SynchronizationProgress")) {
                 return $this->_propDict["progress"];
             } else {
                 $this->_propDict["progress"] = new SynchronizationProgress($this->_propDict["progress"]);
@@ -241,7 +241,7 @@ class SynchronizationStatus extends Entity
     public function getQuarantine()
     {
         if (array_key_exists("quarantine", $this->_propDict)) {
-            if (is_a($this->_propDict["quarantine"], "Microsoft\Graph\Beta\Model\SynchronizationQuarantine")) {
+            if (is_a($this->_propDict["quarantine"], "Microsoft\Graph\Model\SynchronizationQuarantine")) {
                 return $this->_propDict["quarantine"];
             } else {
                 $this->_propDict["quarantine"] = new SynchronizationQuarantine($this->_propDict["quarantine"]);
@@ -272,7 +272,7 @@ class SynchronizationStatus extends Entity
     public function getSteadyStateFirstAchievedTime()
     {
         if (array_key_exists("steadyStateFirstAchievedTime", $this->_propDict)) {
-            if (is_a($this->_propDict["steadyStateFirstAchievedTime"], "Microsoft\Graph\Beta\Model\\DateTime")) {
+            if (is_a($this->_propDict["steadyStateFirstAchievedTime"], "Microsoft\Graph\Model\\DateTime")) {
                 return $this->_propDict["steadyStateFirstAchievedTime"];
             } else {
                 $this->_propDict["steadyStateFirstAchievedTime"] = new \DateTime($this->_propDict["steadyStateFirstAchievedTime"]);
@@ -303,7 +303,7 @@ class SynchronizationStatus extends Entity
     public function getSteadyStateLastAchievedTime()
     {
         if (array_key_exists("steadyStateLastAchievedTime", $this->_propDict)) {
-            if (is_a($this->_propDict["steadyStateLastAchievedTime"], "Microsoft\Graph\Beta\Model\\DateTime")) {
+            if (is_a($this->_propDict["steadyStateLastAchievedTime"], "Microsoft\Graph\Model\\DateTime")) {
                 return $this->_propDict["steadyStateLastAchievedTime"];
             } else {
                 $this->_propDict["steadyStateLastAchievedTime"] = new \DateTime($this->_propDict["steadyStateLastAchievedTime"]);
@@ -334,7 +334,7 @@ class SynchronizationStatus extends Entity
     public function getSynchronizedEntryCountByType()
     {
         if (array_key_exists("synchronizedEntryCountByType", $this->_propDict)) {
-            if (is_a($this->_propDict["synchronizedEntryCountByType"], "Microsoft\Graph\Beta\Model\StringKeyLongValuePair")) {
+            if (is_a($this->_propDict["synchronizedEntryCountByType"], "Microsoft\Graph\Model\StringKeyLongValuePair")) {
                 return $this->_propDict["synchronizedEntryCountByType"];
             } else {
                 $this->_propDict["synchronizedEntryCountByType"] = new StringKeyLongValuePair($this->_propDict["synchronizedEntryCountByType"]);

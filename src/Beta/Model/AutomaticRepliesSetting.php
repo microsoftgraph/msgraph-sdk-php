@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * AutomaticRepliesSetting class
 *
@@ -28,13 +28,14 @@ class AutomaticRepliesSetting extends Entity
 
     /**
     * Gets the status
+    * Configurations status for automatic replies. The possible values are: disabled, alwaysEnabled, scheduled.
     *
     * @return AutomaticRepliesStatus The status
     */
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Microsoft\Graph\Beta\Model\AutomaticRepliesStatus")) {
+            if (is_a($this->_propDict["status"], "Microsoft\Graph\Model\AutomaticRepliesStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new AutomaticRepliesStatus($this->_propDict["status"]);
@@ -46,6 +47,7 @@ class AutomaticRepliesSetting extends Entity
 
     /**
     * Sets the status
+    * Configurations status for automatic replies. The possible values are: disabled, alwaysEnabled, scheduled.
     *
     * @param AutomaticRepliesStatus $val The value to assign to the status
     *
@@ -59,13 +61,14 @@ class AutomaticRepliesSetting extends Entity
 
     /**
     * Gets the externalAudience
+    * The set of audience external to the signed-in user's organization who will receive the ExternalReplyMessage, if Status is AlwaysEnabled or Scheduled. The possible values are: none, contactsOnly, all.
     *
     * @return ExternalAudienceScope The externalAudience
     */
     public function getExternalAudience()
     {
         if (array_key_exists("externalAudience", $this->_propDict)) {
-            if (is_a($this->_propDict["externalAudience"], "Microsoft\Graph\Beta\Model\ExternalAudienceScope")) {
+            if (is_a($this->_propDict["externalAudience"], "Microsoft\Graph\Model\ExternalAudienceScope")) {
                 return $this->_propDict["externalAudience"];
             } else {
                 $this->_propDict["externalAudience"] = new ExternalAudienceScope($this->_propDict["externalAudience"]);
@@ -77,6 +80,7 @@ class AutomaticRepliesSetting extends Entity
 
     /**
     * Sets the externalAudience
+    * The set of audience external to the signed-in user's organization who will receive the ExternalReplyMessage, if Status is AlwaysEnabled or Scheduled. The possible values are: none, contactsOnly, all.
     *
     * @param ExternalAudienceScope $val The value to assign to the externalAudience
     *
@@ -90,13 +94,14 @@ class AutomaticRepliesSetting extends Entity
 
     /**
     * Gets the scheduledStartDateTime
+    * The date and time that automatic replies are set to begin, if Status is set to Scheduled.
     *
     * @return DateTimeTimeZone The scheduledStartDateTime
     */
     public function getScheduledStartDateTime()
     {
         if (array_key_exists("scheduledStartDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["scheduledStartDateTime"], "Microsoft\Graph\Beta\Model\DateTimeTimeZone")) {
+            if (is_a($this->_propDict["scheduledStartDateTime"], "Microsoft\Graph\Model\DateTimeTimeZone")) {
                 return $this->_propDict["scheduledStartDateTime"];
             } else {
                 $this->_propDict["scheduledStartDateTime"] = new DateTimeTimeZone($this->_propDict["scheduledStartDateTime"]);
@@ -108,6 +113,7 @@ class AutomaticRepliesSetting extends Entity
 
     /**
     * Sets the scheduledStartDateTime
+    * The date and time that automatic replies are set to begin, if Status is set to Scheduled.
     *
     * @param DateTimeTimeZone $val The value to assign to the scheduledStartDateTime
     *
@@ -121,13 +127,14 @@ class AutomaticRepliesSetting extends Entity
 
     /**
     * Gets the scheduledEndDateTime
+    * The date and time that automatic replies are set to end, if Status is set to Scheduled.
     *
     * @return DateTimeTimeZone The scheduledEndDateTime
     */
     public function getScheduledEndDateTime()
     {
         if (array_key_exists("scheduledEndDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["scheduledEndDateTime"], "Microsoft\Graph\Beta\Model\DateTimeTimeZone")) {
+            if (is_a($this->_propDict["scheduledEndDateTime"], "Microsoft\Graph\Model\DateTimeTimeZone")) {
                 return $this->_propDict["scheduledEndDateTime"];
             } else {
                 $this->_propDict["scheduledEndDateTime"] = new DateTimeTimeZone($this->_propDict["scheduledEndDateTime"]);
@@ -139,6 +146,7 @@ class AutomaticRepliesSetting extends Entity
 
     /**
     * Sets the scheduledEndDateTime
+    * The date and time that automatic replies are set to end, if Status is set to Scheduled.
     *
     * @param DateTimeTimeZone $val The value to assign to the scheduledEndDateTime
     *
@@ -151,6 +159,7 @@ class AutomaticRepliesSetting extends Entity
     }
     /**
     * Gets the internalReplyMessage
+    * The automatic reply to send to the audience internal to the signed-in user's organization, if Status is AlwaysEnabled or Scheduled.
     *
     * @return string The internalReplyMessage
     */
@@ -165,6 +174,7 @@ class AutomaticRepliesSetting extends Entity
 
     /**
     * Sets the internalReplyMessage
+    * The automatic reply to send to the audience internal to the signed-in user's organization, if Status is AlwaysEnabled or Scheduled.
     *
     * @param string $val The value of the internalReplyMessage
     *
@@ -177,6 +187,7 @@ class AutomaticRepliesSetting extends Entity
     }
     /**
     * Gets the externalReplyMessage
+    * The automatic reply to send to the specified external audience, if Status is AlwaysEnabled or Scheduled.
     *
     * @return string The externalReplyMessage
     */
@@ -191,6 +202,7 @@ class AutomaticRepliesSetting extends Entity
 
     /**
     * Sets the externalReplyMessage
+    * The automatic reply to send to the specified external audience, if Status is AlwaysEnabled or Scheduled.
     *
     * @param string $val The value of the externalReplyMessage
     *

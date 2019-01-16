@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * IosNotificationSettings class
 *
@@ -27,6 +27,7 @@ class IosNotificationSettings extends Entity
 {
     /**
     * Gets the bundleID
+    * Bundle id of app to which to apply these notification settings.
     *
     * @return string The bundleID
     */
@@ -41,6 +42,7 @@ class IosNotificationSettings extends Entity
 
     /**
     * Sets the bundleID
+    * Bundle id of app to which to apply these notification settings.
     *
     * @param string $val The value of the bundleID
     *
@@ -53,6 +55,7 @@ class IosNotificationSettings extends Entity
     }
     /**
     * Gets the appName
+    * Application name to be associated with the bundleID.
     *
     * @return string The appName
     */
@@ -67,6 +70,7 @@ class IosNotificationSettings extends Entity
 
     /**
     * Sets the appName
+    * Application name to be associated with the bundleID.
     *
     * @param string $val The value of the appName
     *
@@ -79,6 +83,7 @@ class IosNotificationSettings extends Entity
     }
     /**
     * Gets the publisher
+    * Publisher to be associated with the bundleID.
     *
     * @return string The publisher
     */
@@ -93,6 +98,7 @@ class IosNotificationSettings extends Entity
 
     /**
     * Sets the publisher
+    * Publisher to be associated with the bundleID.
     *
     * @param string $val The value of the publisher
     *
@@ -105,6 +111,7 @@ class IosNotificationSettings extends Entity
     }
     /**
     * Gets the enabled
+    * Indicates whether notifications are allowed for this app.
     *
     * @return bool The enabled
     */
@@ -119,6 +126,7 @@ class IosNotificationSettings extends Entity
 
     /**
     * Sets the enabled
+    * Indicates whether notifications are allowed for this app.
     *
     * @param bool $val The value of the enabled
     *
@@ -131,6 +139,7 @@ class IosNotificationSettings extends Entity
     }
     /**
     * Gets the showInNotificationCenter
+    * Indicates whether notifications can be shown in notification center.
     *
     * @return bool The showInNotificationCenter
     */
@@ -145,6 +154,7 @@ class IosNotificationSettings extends Entity
 
     /**
     * Sets the showInNotificationCenter
+    * Indicates whether notifications can be shown in notification center.
     *
     * @param bool $val The value of the showInNotificationCenter
     *
@@ -157,6 +167,7 @@ class IosNotificationSettings extends Entity
     }
     /**
     * Gets the showOnLockScreen
+    * Indicates whether notifications can be shown on the lock screen.
     *
     * @return bool The showOnLockScreen
     */
@@ -171,6 +182,7 @@ class IosNotificationSettings extends Entity
 
     /**
     * Sets the showOnLockScreen
+    * Indicates whether notifications can be shown on the lock screen.
     *
     * @param bool $val The value of the showOnLockScreen
     *
@@ -184,13 +196,14 @@ class IosNotificationSettings extends Entity
 
     /**
     * Gets the alertType
+    * Indicates the type of alert for notifications for this app. Possible values are: deviceDefault, banner, modal, none.
     *
     * @return IosNotificationAlertType The alertType
     */
     public function getAlertType()
     {
         if (array_key_exists("alertType", $this->_propDict)) {
-            if (is_a($this->_propDict["alertType"], "Microsoft\Graph\Beta\Model\IosNotificationAlertType")) {
+            if (is_a($this->_propDict["alertType"], "Microsoft\Graph\Model\IosNotificationAlertType")) {
                 return $this->_propDict["alertType"];
             } else {
                 $this->_propDict["alertType"] = new IosNotificationAlertType($this->_propDict["alertType"]);
@@ -202,6 +215,7 @@ class IosNotificationSettings extends Entity
 
     /**
     * Sets the alertType
+    * Indicates the type of alert for notifications for this app. Possible values are: deviceDefault, banner, modal, none.
     *
     * @param IosNotificationAlertType $val The value to assign to the alertType
     *
@@ -214,6 +228,7 @@ class IosNotificationSettings extends Entity
     }
     /**
     * Gets the badgesEnabled
+    * Indicates whether badges are allowed for this app.
     *
     * @return bool The badgesEnabled
     */
@@ -228,6 +243,7 @@ class IosNotificationSettings extends Entity
 
     /**
     * Sets the badgesEnabled
+    * Indicates whether badges are allowed for this app.
     *
     * @param bool $val The value of the badgesEnabled
     *
@@ -240,6 +256,7 @@ class IosNotificationSettings extends Entity
     }
     /**
     * Gets the soundsEnabled
+    * Indicates whether sounds are allowed for this app.
     *
     * @return bool The soundsEnabled
     */
@@ -254,6 +271,7 @@ class IosNotificationSettings extends Entity
 
     /**
     * Sets the soundsEnabled
+    * Indicates whether sounds are allowed for this app.
     *
     * @param bool $val The value of the soundsEnabled
     *

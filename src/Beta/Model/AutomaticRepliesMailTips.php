@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * AutomaticRepliesMailTips class
 *
@@ -27,6 +27,7 @@ class AutomaticRepliesMailTips extends Entity
 {
     /**
     * Gets the message
+    * The automatic reply message.
     *
     * @return string The message
     */
@@ -41,6 +42,7 @@ class AutomaticRepliesMailTips extends Entity
 
     /**
     * Sets the message
+    * The automatic reply message.
     *
     * @param string $val The value of the message
     *
@@ -54,13 +56,14 @@ class AutomaticRepliesMailTips extends Entity
 
     /**
     * Gets the messageLanguage
+    * The language that the automatic reply message is in.
     *
     * @return LocaleInfo The messageLanguage
     */
     public function getMessageLanguage()
     {
         if (array_key_exists("messageLanguage", $this->_propDict)) {
-            if (is_a($this->_propDict["messageLanguage"], "Microsoft\Graph\Beta\Model\LocaleInfo")) {
+            if (is_a($this->_propDict["messageLanguage"], "Microsoft\Graph\Model\LocaleInfo")) {
                 return $this->_propDict["messageLanguage"];
             } else {
                 $this->_propDict["messageLanguage"] = new LocaleInfo($this->_propDict["messageLanguage"]);
@@ -72,6 +75,7 @@ class AutomaticRepliesMailTips extends Entity
 
     /**
     * Sets the messageLanguage
+    * The language that the automatic reply message is in.
     *
     * @param LocaleInfo $val The value to assign to the messageLanguage
     *
@@ -85,13 +89,14 @@ class AutomaticRepliesMailTips extends Entity
 
     /**
     * Gets the scheduledStartTime
+    * The date and time that automatic replies are set to begin.
     *
     * @return DateTimeTimeZone The scheduledStartTime
     */
     public function getScheduledStartTime()
     {
         if (array_key_exists("scheduledStartTime", $this->_propDict)) {
-            if (is_a($this->_propDict["scheduledStartTime"], "Microsoft\Graph\Beta\Model\DateTimeTimeZone")) {
+            if (is_a($this->_propDict["scheduledStartTime"], "Microsoft\Graph\Model\DateTimeTimeZone")) {
                 return $this->_propDict["scheduledStartTime"];
             } else {
                 $this->_propDict["scheduledStartTime"] = new DateTimeTimeZone($this->_propDict["scheduledStartTime"]);
@@ -103,6 +108,7 @@ class AutomaticRepliesMailTips extends Entity
 
     /**
     * Sets the scheduledStartTime
+    * The date and time that automatic replies are set to begin.
     *
     * @param DateTimeTimeZone $val The value to assign to the scheduledStartTime
     *
@@ -116,13 +122,14 @@ class AutomaticRepliesMailTips extends Entity
 
     /**
     * Gets the scheduledEndTime
+    * The date and time that automatic replies are set to end.
     *
     * @return DateTimeTimeZone The scheduledEndTime
     */
     public function getScheduledEndTime()
     {
         if (array_key_exists("scheduledEndTime", $this->_propDict)) {
-            if (is_a($this->_propDict["scheduledEndTime"], "Microsoft\Graph\Beta\Model\DateTimeTimeZone")) {
+            if (is_a($this->_propDict["scheduledEndTime"], "Microsoft\Graph\Model\DateTimeTimeZone")) {
                 return $this->_propDict["scheduledEndTime"];
             } else {
                 $this->_propDict["scheduledEndTime"] = new DateTimeTimeZone($this->_propDict["scheduledEndTime"]);
@@ -134,6 +141,7 @@ class AutomaticRepliesMailTips extends Entity
 
     /**
     * Sets the scheduledEndTime
+    * The date and time that automatic replies are set to end.
     *
     * @param DateTimeTimeZone $val The value to assign to the scheduledEndTime
     *

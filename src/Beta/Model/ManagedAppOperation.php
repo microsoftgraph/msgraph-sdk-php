@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * ManagedAppOperation class
@@ -28,6 +28,7 @@ class ManagedAppOperation extends Entity
 {
     /**
     * Gets the displayName
+    * The operation name.
     *
     * @return string The displayName
     */
@@ -42,6 +43,7 @@ class ManagedAppOperation extends Entity
     
     /**
     * Sets the displayName
+    * The operation name.
     *
     * @param string $val The displayName
     *
@@ -55,6 +57,7 @@ class ManagedAppOperation extends Entity
     
     /**
     * Gets the lastModifiedDateTime
+    * The last time the app operation was modified.
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -73,6 +76,7 @@ class ManagedAppOperation extends Entity
     
     /**
     * Sets the lastModifiedDateTime
+    * The last time the app operation was modified.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -86,6 +90,7 @@ class ManagedAppOperation extends Entity
     
     /**
     * Gets the state
+    * The current state of the operation
     *
     * @return string The state
     */
@@ -100,6 +105,7 @@ class ManagedAppOperation extends Entity
     
     /**
     * Sets the state
+    * The current state of the operation
     *
     * @param string $val The state
     *
@@ -113,6 +119,7 @@ class ManagedAppOperation extends Entity
     
     /**
     * Gets the version
+    * Version of the entity.
     *
     * @return string The version
     */
@@ -127,6 +134,7 @@ class ManagedAppOperation extends Entity
     
     /**
     * Sets the version
+    * Version of the entity.
     *
     * @param string $val The version
     *

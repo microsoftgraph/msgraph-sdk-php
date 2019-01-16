@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * ResetPasscodeActionResult class
 *
@@ -27,6 +27,7 @@ class ResetPasscodeActionResult extends DeviceActionResult
 {
     /**
     * Gets the passcode
+    * Newly generated passcode for the device
     *
     * @return string The passcode
     */
@@ -41,6 +42,7 @@ class ResetPasscodeActionResult extends DeviceActionResult
 
     /**
     * Sets the passcode
+    * Newly generated passcode for the device
     *
     * @param string $val The value of the passcode
     *

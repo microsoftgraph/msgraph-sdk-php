@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * Post class
@@ -28,13 +28,14 @@ class Post extends OutlookItem
 {
     /**
     * Gets the body
+    * The contents of the post. This is a default property. This property can be null.
     *
     * @return ItemBody The body
     */
     public function getBody()
     {
         if (array_key_exists("body", $this->_propDict)) {
-            if (is_a($this->_propDict["body"], "Microsoft\Graph\Beta\Model\ItemBody")) {
+            if (is_a($this->_propDict["body"], "Microsoft\Graph\Model\ItemBody")) {
                 return $this->_propDict["body"];
             } else {
                 $this->_propDict["body"] = new ItemBody($this->_propDict["body"]);
@@ -46,6 +47,7 @@ class Post extends OutlookItem
     
     /**
     * Sets the body
+    * The contents of the post. This is a default property. This property can be null.
     *
     * @param ItemBody $val The body
     *
@@ -59,6 +61,7 @@ class Post extends OutlookItem
     
     /**
     * Gets the receivedDateTime
+    * Specifies when the post was received. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The receivedDateTime
     */
@@ -77,6 +80,7 @@ class Post extends OutlookItem
     
     /**
     * Sets the receivedDateTime
+    * Specifies when the post was received. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The receivedDateTime
     *
@@ -90,6 +94,7 @@ class Post extends OutlookItem
     
     /**
     * Gets the hasAttachments
+    * Indicates whether the post has at least one attachment. This is a default property.
     *
     * @return bool The hasAttachments
     */
@@ -104,6 +109,7 @@ class Post extends OutlookItem
     
     /**
     * Sets the hasAttachments
+    * Indicates whether the post has at least one attachment. This is a default property.
     *
     * @param bool $val The hasAttachments
     *
@@ -117,13 +123,14 @@ class Post extends OutlookItem
     
     /**
     * Gets the from
+    * Used in delegate access scenarios. Indicates who posted the message on behalf of another user. This is a default property.
     *
     * @return Recipient The from
     */
     public function getFrom()
     {
         if (array_key_exists("from", $this->_propDict)) {
-            if (is_a($this->_propDict["from"], "Microsoft\Graph\Beta\Model\Recipient")) {
+            if (is_a($this->_propDict["from"], "Microsoft\Graph\Model\Recipient")) {
                 return $this->_propDict["from"];
             } else {
                 $this->_propDict["from"] = new Recipient($this->_propDict["from"]);
@@ -135,6 +142,7 @@ class Post extends OutlookItem
     
     /**
     * Sets the from
+    * Used in delegate access scenarios. Indicates who posted the message on behalf of another user. This is a default property.
     *
     * @param Recipient $val The from
     *
@@ -148,13 +156,14 @@ class Post extends OutlookItem
     
     /**
     * Gets the sender
+    * Contains the address of the sender. The value of Sender is assumed to be the address of the authenticated user in the case when Sender is not specified. This is a default property.
     *
     * @return Recipient The sender
     */
     public function getSender()
     {
         if (array_key_exists("sender", $this->_propDict)) {
-            if (is_a($this->_propDict["sender"], "Microsoft\Graph\Beta\Model\Recipient")) {
+            if (is_a($this->_propDict["sender"], "Microsoft\Graph\Model\Recipient")) {
                 return $this->_propDict["sender"];
             } else {
                 $this->_propDict["sender"] = new Recipient($this->_propDict["sender"]);
@@ -166,6 +175,7 @@ class Post extends OutlookItem
     
     /**
     * Sets the sender
+    * Contains the address of the sender. The value of Sender is assumed to be the address of the authenticated user in the case when Sender is not specified. This is a default property.
     *
     * @param Recipient $val The sender
     *
@@ -179,6 +189,7 @@ class Post extends OutlookItem
     
     /**
     * Gets the conversationThreadId
+    * Unique ID of the conversation thread. Read-only.
     *
     * @return string The conversationThreadId
     */
@@ -193,6 +204,7 @@ class Post extends OutlookItem
     
     /**
     * Sets the conversationThreadId
+    * Unique ID of the conversation thread. Read-only.
     *
     * @param string $val The conversationThreadId
     *
@@ -207,6 +219,7 @@ class Post extends OutlookItem
 
      /** 
      * Gets the newParticipants
+    * Conversation participants that were added to the thread as part of this post.
      *
      * @return array The newParticipants
      */
@@ -221,6 +234,7 @@ class Post extends OutlookItem
     
     /** 
     * Sets the newParticipants
+    * Conversation participants that were added to the thread as part of this post.
     *
     * @param Recipient $val The newParticipants
     *
@@ -234,6 +248,7 @@ class Post extends OutlookItem
     
     /**
     * Gets the conversationId
+    * Unique ID of the conversation. Read-only.
     *
     * @return string The conversationId
     */
@@ -248,6 +263,7 @@ class Post extends OutlookItem
     
     /**
     * Sets the conversationId
+    * Unique ID of the conversation. Read-only.
     *
     * @param string $val The conversationId
     *
@@ -267,7 +283,7 @@ class Post extends OutlookItem
     public function getImportance()
     {
         if (array_key_exists("importance", $this->_propDict)) {
-            if (is_a($this->_propDict["importance"], "Microsoft\Graph\Beta\Model\Importance")) {
+            if (is_a($this->_propDict["importance"], "Microsoft\Graph\Model\Importance")) {
                 return $this->_propDict["importance"];
             } else {
                 $this->_propDict["importance"] = new Importance($this->_propDict["importance"]);
@@ -293,6 +309,7 @@ class Post extends OutlookItem
 
      /** 
      * Gets the extensions
+    * The collection of open extensions defined for the post. Read-only. Nullable.
      *
      * @return array The extensions
      */
@@ -307,6 +324,7 @@ class Post extends OutlookItem
     
     /** 
     * Sets the extensions
+    * The collection of open extensions defined for the post. Read-only. Nullable.
     *
     * @param Extension $val The extensions
     *
@@ -320,13 +338,14 @@ class Post extends OutlookItem
     
     /**
     * Gets the inReplyTo
+    * Read-only.
     *
     * @return Post The inReplyTo
     */
     public function getInReplyTo()
     {
         if (array_key_exists("inReplyTo", $this->_propDict)) {
-            if (is_a($this->_propDict["inReplyTo"], "Microsoft\Graph\Beta\Model\Post")) {
+            if (is_a($this->_propDict["inReplyTo"], "Microsoft\Graph\Model\Post")) {
                 return $this->_propDict["inReplyTo"];
             } else {
                 $this->_propDict["inReplyTo"] = new Post($this->_propDict["inReplyTo"]);
@@ -338,6 +357,7 @@ class Post extends OutlookItem
     
     /**
     * Sets the inReplyTo
+    * Read-only.
     *
     * @param Post $val The inReplyTo
     *
@@ -352,6 +372,7 @@ class Post extends OutlookItem
 
      /** 
      * Gets the attachments
+    * Read-only. Nullable.
      *
      * @return array The attachments
      */
@@ -366,6 +387,7 @@ class Post extends OutlookItem
     
     /** 
     * Sets the attachments
+    * Read-only. Nullable.
     *
     * @param Attachment $val The attachments
     *
@@ -380,6 +402,7 @@ class Post extends OutlookItem
 
      /** 
      * Gets the singleValueExtendedProperties
+    * The collection of single-value extended properties defined for the post. Read-only. Nullable.
      *
      * @return array The singleValueExtendedProperties
      */
@@ -394,6 +417,7 @@ class Post extends OutlookItem
     
     /** 
     * Sets the singleValueExtendedProperties
+    * The collection of single-value extended properties defined for the post. Read-only. Nullable.
     *
     * @param SingleValueLegacyExtendedProperty $val The singleValueExtendedProperties
     *
@@ -408,6 +432,7 @@ class Post extends OutlookItem
 
      /** 
      * Gets the multiValueExtendedProperties
+    * The collection of multi-value extended properties defined for the post. Read-only. Nullable.
      *
      * @return array The multiValueExtendedProperties
      */
@@ -422,6 +447,7 @@ class Post extends OutlookItem
     
     /** 
     * Sets the multiValueExtendedProperties
+    * The collection of multi-value extended properties defined for the post. Read-only. Nullable.
     *
     * @param MultiValueLegacyExtendedProperty $val The multiValueExtendedProperties
     *

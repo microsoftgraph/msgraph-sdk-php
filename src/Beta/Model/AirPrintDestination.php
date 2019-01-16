@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * AirPrintDestination class
 *
@@ -27,6 +27,7 @@ class AirPrintDestination extends Entity
 {
     /**
     * Gets the ipAddress
+    * The IP Address of the AirPrint destination.
     *
     * @return string The ipAddress
     */
@@ -41,6 +42,7 @@ class AirPrintDestination extends Entity
 
     /**
     * Sets the ipAddress
+    * The IP Address of the AirPrint destination.
     *
     * @param string $val The value of the ipAddress
     *
@@ -81,6 +83,7 @@ class AirPrintDestination extends Entity
     }
     /**
     * Gets the port
+    * The listening port of the AirPrint destination. If this key is not specified AirPrint will use the default port. Available in iOS 11.0 and later.
     *
     * @return int The port
     */
@@ -95,6 +98,7 @@ class AirPrintDestination extends Entity
 
     /**
     * Sets the port
+    * The listening port of the AirPrint destination. If this key is not specified AirPrint will use the default port. Available in iOS 11.0 and later.
     *
     * @param int $val The value of the port
     *
@@ -107,6 +111,7 @@ class AirPrintDestination extends Entity
     }
     /**
     * Gets the forceTls
+    * If true AirPrint connections are secured by Transport Layer Security (TLS). Default is false. Available in iOS 11.0 and later.
     *
     * @return bool The forceTls
     */
@@ -121,6 +126,7 @@ class AirPrintDestination extends Entity
 
     /**
     * Sets the forceTls
+    * If true AirPrint connections are secured by Transport Layer Security (TLS). Default is false. Available in iOS 11.0 and later.
     *
     * @param bool $val The value of the forceTls
     *

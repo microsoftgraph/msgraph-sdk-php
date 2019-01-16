@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * EducationIdentityMatchingConfiguration class
 *
@@ -25,6 +25,15 @@ namespace Microsoft\Graph\Beta\Model;
 */
 class EducationIdentityMatchingConfiguration extends EducationIdentitySynchronizationConfiguration
 {
+    /**
+    * Set the @odata.type since this type is immediately descended from an abstract
+    * type that is referenced as the type in an entity.
+    */
+    public function __construct()
+    {
+        $this->setODataType("#microsoft.graph.educationIdentityMatchingConfiguration");
+    }
+
 
     /**
     * Gets the matchingOptions
@@ -34,7 +43,7 @@ class EducationIdentityMatchingConfiguration extends EducationIdentitySynchroniz
     public function getMatchingOptions()
     {
         if (array_key_exists("matchingOptions", $this->_propDict)) {
-            if (is_a($this->_propDict["matchingOptions"], "Microsoft\Graph\Beta\Model\EducationIdentityMatchingOptions")) {
+            if (is_a($this->_propDict["matchingOptions"], "Microsoft\Graph\Model\EducationIdentityMatchingOptions")) {
                 return $this->_propDict["matchingOptions"];
             } else {
                 $this->_propDict["matchingOptions"] = new EducationIdentityMatchingOptions($this->_propDict["matchingOptions"]);

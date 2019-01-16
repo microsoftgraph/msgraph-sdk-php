@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * DomainDnsTxtRecord class
@@ -28,6 +28,7 @@ class DomainDnsTxtRecord extends DomainDnsRecord
 {
     /**
     * Gets the text
+    * Value used when configuring the text property at the DNS host.
     *
     * @return string The text
     */
@@ -42,6 +43,7 @@ class DomainDnsTxtRecord extends DomainDnsRecord
     
     /**
     * Sets the text
+    * Value used when configuring the text property at the DNS host.
     *
     * @param string $val The text
     *

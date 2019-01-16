@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * Workbook class
@@ -34,7 +34,7 @@ class Workbook extends Entity
     public function getApplication()
     {
         if (array_key_exists("application", $this->_propDict)) {
-            if (is_a($this->_propDict["application"], "Microsoft\Graph\Beta\Model\WorkbookApplication")) {
+            if (is_a($this->_propDict["application"], "Microsoft\Graph\Model\WorkbookApplication")) {
                 return $this->_propDict["application"];
             } else {
                 $this->_propDict["application"] = new WorkbookApplication($this->_propDict["application"]);
@@ -60,6 +60,7 @@ class Workbook extends Entity
 
      /** 
      * Gets the names
+    * Represents a collection of workbook scoped named items (named ranges and constants). Read-only.
      *
      * @return array The names
      */
@@ -74,6 +75,7 @@ class Workbook extends Entity
     
     /** 
     * Sets the names
+    * Represents a collection of workbook scoped named items (named ranges and constants). Read-only.
     *
     * @param WorkbookNamedItem $val The names
     *
@@ -88,6 +90,7 @@ class Workbook extends Entity
 
      /** 
      * Gets the tables
+    * Represents a collection of tables associated with the workbook. Read-only.
      *
      * @return array The tables
      */
@@ -102,6 +105,7 @@ class Workbook extends Entity
     
     /** 
     * Sets the tables
+    * Represents a collection of tables associated with the workbook. Read-only.
     *
     * @param WorkbookTable $val The tables
     *
@@ -116,6 +120,7 @@ class Workbook extends Entity
 
      /** 
      * Gets the worksheets
+    * Represents a collection of worksheets associated with the workbook. Read-only.
      *
      * @return array The worksheets
      */
@@ -130,6 +135,7 @@ class Workbook extends Entity
     
     /** 
     * Sets the worksheets
+    * Represents a collection of worksheets associated with the workbook. Read-only.
     *
     * @param WorkbookWorksheet $val The worksheets
     *
@@ -149,7 +155,7 @@ class Workbook extends Entity
     public function getFunctions()
     {
         if (array_key_exists("functions", $this->_propDict)) {
-            if (is_a($this->_propDict["functions"], "Microsoft\Graph\Beta\Model\WorkbookFunctions")) {
+            if (is_a($this->_propDict["functions"], "Microsoft\Graph\Model\WorkbookFunctions")) {
                 return $this->_propDict["functions"];
             } else {
                 $this->_propDict["functions"] = new WorkbookFunctions($this->_propDict["functions"]);

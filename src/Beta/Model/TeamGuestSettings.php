@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * TeamGuestSettings class
 *
@@ -27,6 +27,7 @@ class TeamGuestSettings extends Entity
 {
     /**
     * Gets the allowCreateUpdateChannels
+    * If set to true, guests can add and update channels.
     *
     * @return bool The allowCreateUpdateChannels
     */
@@ -41,6 +42,7 @@ class TeamGuestSettings extends Entity
 
     /**
     * Sets the allowCreateUpdateChannels
+    * If set to true, guests can add and update channels.
     *
     * @param bool $val The value of the allowCreateUpdateChannels
     *
@@ -53,6 +55,7 @@ class TeamGuestSettings extends Entity
     }
     /**
     * Gets the allowDeleteChannels
+    * If set to true, guests can delete channels.
     *
     * @return bool The allowDeleteChannels
     */
@@ -67,6 +70,7 @@ class TeamGuestSettings extends Entity
 
     /**
     * Sets the allowDeleteChannels
+    * If set to true, guests can delete channels.
     *
     * @param bool $val The value of the allowDeleteChannels
     *

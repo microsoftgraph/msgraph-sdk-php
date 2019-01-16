@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * ControlScore class
 *
@@ -49,6 +49,32 @@ class ControlScore extends Entity
     public function setControlCategory($val)
     {
         $this->_propDict["controlCategory"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the controlName
+    *
+    * @return string The controlName
+    */
+    public function getControlName()
+    {
+        if (array_key_exists("controlName", $this->_propDict)) {
+            return $this->_propDict["controlName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the controlName
+    *
+    * @param string $val The value of the controlName
+    *
+    * @return ControlScore
+    */
+    public function setControlName($val)
+    {
+        $this->_propDict["controlName"] = $val;
         return $this;
     }
     /**
@@ -101,32 +127,6 @@ class ControlScore extends Entity
     public function setScore($val)
     {
         $this->_propDict["score"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the controlName
-    *
-    * @return string The controlName
-    */
-    public function getControlName()
-    {
-        if (array_key_exists("controlName", $this->_propDict)) {
-            return $this->_propDict["controlName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the controlName
-    *
-    * @param string $val The value of the controlName
-    *
-    * @return ControlScore
-    */
-    public function setControlName($val)
-    {
-        $this->_propDict["controlName"] = $val;
         return $this;
     }
 }

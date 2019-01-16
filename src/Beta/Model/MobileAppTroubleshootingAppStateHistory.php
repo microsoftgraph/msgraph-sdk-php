@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * MobileAppTroubleshootingAppStateHistory class
 *
@@ -28,13 +28,14 @@ class MobileAppTroubleshootingAppStateHistory extends MobileAppTroubleshootingHi
 
     /**
     * Gets the actionType
+    * AAD security group id to which it was targeted.
     *
     * @return MobileAppActionType The actionType
     */
     public function getActionType()
     {
         if (array_key_exists("actionType", $this->_propDict)) {
-            if (is_a($this->_propDict["actionType"], "Microsoft\Graph\Beta\Model\MobileAppActionType")) {
+            if (is_a($this->_propDict["actionType"], "Microsoft\Graph\Model\MobileAppActionType")) {
                 return $this->_propDict["actionType"];
             } else {
                 $this->_propDict["actionType"] = new MobileAppActionType($this->_propDict["actionType"]);
@@ -46,6 +47,7 @@ class MobileAppTroubleshootingAppStateHistory extends MobileAppTroubleshootingHi
 
     /**
     * Sets the actionType
+    * AAD security group id to which it was targeted.
     *
     * @param MobileAppActionType $val The value to assign to the actionType
     *
@@ -59,13 +61,14 @@ class MobileAppTroubleshootingAppStateHistory extends MobileAppTroubleshootingHi
 
     /**
     * Gets the runState
+    * Status of the item.
     *
     * @return RunState The runState
     */
     public function getRunState()
     {
         if (array_key_exists("runState", $this->_propDict)) {
-            if (is_a($this->_propDict["runState"], "Microsoft\Graph\Beta\Model\RunState")) {
+            if (is_a($this->_propDict["runState"], "Microsoft\Graph\Model\RunState")) {
                 return $this->_propDict["runState"];
             } else {
                 $this->_propDict["runState"] = new RunState($this->_propDict["runState"]);
@@ -77,6 +80,7 @@ class MobileAppTroubleshootingAppStateHistory extends MobileAppTroubleshootingHi
 
     /**
     * Sets the runState
+    * Status of the item.
     *
     * @param RunState $val The value to assign to the runState
     *
@@ -89,6 +93,7 @@ class MobileAppTroubleshootingAppStateHistory extends MobileAppTroubleshootingHi
     }
     /**
     * Gets the errorCode
+    * Error code for the failure, empty if no failure.
     *
     * @return string The errorCode
     */
@@ -103,6 +108,7 @@ class MobileAppTroubleshootingAppStateHistory extends MobileAppTroubleshootingHi
 
     /**
     * Sets the errorCode
+    * Error code for the failure, empty if no failure.
     *
     * @param string $val The value of the errorCode
     *

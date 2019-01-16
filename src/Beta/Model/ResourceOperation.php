@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * ResourceOperation class
@@ -28,6 +28,7 @@ class ResourceOperation extends Entity
 {
     /**
     * Gets the resource
+    * Resource category to which this Operation belongs.
     *
     * @return string The resource
     */
@@ -42,6 +43,7 @@ class ResourceOperation extends Entity
     
     /**
     * Sets the resource
+    * Resource category to which this Operation belongs.
     *
     * @param string $val The resource
     *
@@ -55,6 +57,7 @@ class ResourceOperation extends Entity
     
     /**
     * Gets the resourceName
+    * Name of the Resource this operation is performed on.
     *
     * @return string The resourceName
     */
@@ -69,6 +72,7 @@ class ResourceOperation extends Entity
     
     /**
     * Sets the resourceName
+    * Name of the Resource this operation is performed on.
     *
     * @param string $val The resourceName
     *
@@ -82,6 +86,7 @@ class ResourceOperation extends Entity
     
     /**
     * Gets the actionName
+    * Type of action this operation is going to perform. The actionName should be concise and limited to as few words as possible.
     *
     * @return string The actionName
     */
@@ -96,6 +101,7 @@ class ResourceOperation extends Entity
     
     /**
     * Sets the actionName
+    * Type of action this operation is going to perform. The actionName should be concise and limited to as few words as possible.
     *
     * @param string $val The actionName
     *
@@ -109,6 +115,7 @@ class ResourceOperation extends Entity
     
     /**
     * Gets the description
+    * Description of the resource operation. The description is used in mouse-over text for the operation when shown in the Azure Portal.
     *
     * @return string The description
     */
@@ -123,6 +130,7 @@ class ResourceOperation extends Entity
     
     /**
     * Sets the description
+    * Description of the resource operation. The description is used in mouse-over text for the operation when shown in the Azure Portal.
     *
     * @param string $val The description
     *
@@ -131,6 +139,35 @@ class ResourceOperation extends Entity
     public function setDescription($val)
     {
         $this->_propDict["description"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the enabledForScopeValidation
+    * Determines whether the Permission is validated for Scopes defined per Role Assignment.
+    *
+    * @return bool The enabledForScopeValidation
+    */
+    public function getEnabledForScopeValidation()
+    {
+        if (array_key_exists("enabledForScopeValidation", $this->_propDict)) {
+            return $this->_propDict["enabledForScopeValidation"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the enabledForScopeValidation
+    * Determines whether the Permission is validated for Scopes defined per Role Assignment.
+    *
+    * @param bool $val The enabledForScopeValidation
+    *
+    * @return ResourceOperation
+    */
+    public function setEnabledForScopeValidation($val)
+    {
+        $this->_propDict["enabledForScopeValidation"] = boolval($val);
         return $this;
     }
     

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * WindowsVpnConfiguration class
@@ -28,6 +28,7 @@ class WindowsVpnConfiguration extends DeviceConfiguration
 {
     /**
     * Gets the connectionName
+    * Connection name displayed to the user.
     *
     * @return string The connectionName
     */
@@ -42,6 +43,7 @@ class WindowsVpnConfiguration extends DeviceConfiguration
     
     /**
     * Sets the connectionName
+    * Connection name displayed to the user.
     *
     * @param string $val The connectionName
     *
@@ -56,6 +58,7 @@ class WindowsVpnConfiguration extends DeviceConfiguration
 
      /** 
      * Gets the servers
+    * List of VPN Servers on the network. Make sure end users can access these network locations. This collection can contain a maximum of 500 elements.
      *
      * @return array The servers
      */
@@ -70,6 +73,7 @@ class WindowsVpnConfiguration extends DeviceConfiguration
     
     /** 
     * Sets the servers
+    * List of VPN Servers on the network. Make sure end users can access these network locations. This collection can contain a maximum of 500 elements.
     *
     * @param VpnServer $val The servers
     *
@@ -83,6 +87,7 @@ class WindowsVpnConfiguration extends DeviceConfiguration
     
     /**
     * Gets the customXml
+    * Custom XML commands that configures the VPN connection. (UTF8 encoded byte array)
     *
     * @return \GuzzleHttp\Psr7\Stream The customXml
     */
@@ -101,6 +106,7 @@ class WindowsVpnConfiguration extends DeviceConfiguration
     
     /**
     * Sets the customXml
+    * Custom XML commands that configures the VPN connection. (UTF8 encoded byte array)
     *
     * @param \GuzzleHttp\Psr7\Stream $val The customXml
     *

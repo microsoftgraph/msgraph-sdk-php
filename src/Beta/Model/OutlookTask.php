@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * OutlookTask class
@@ -61,7 +61,7 @@ class OutlookTask extends OutlookItem
     public function getBody()
     {
         if (array_key_exists("body", $this->_propDict)) {
-            if (is_a($this->_propDict["body"], "Microsoft\Graph\Beta\Model\ItemBody")) {
+            if (is_a($this->_propDict["body"], "Microsoft\Graph\Model\ItemBody")) {
                 return $this->_propDict["body"];
             } else {
                 $this->_propDict["body"] = new ItemBody($this->_propDict["body"]);
@@ -92,7 +92,7 @@ class OutlookTask extends OutlookItem
     public function getCompletedDateTime()
     {
         if (array_key_exists("completedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["completedDateTime"], "Microsoft\Graph\Beta\Model\DateTimeTimeZone")) {
+            if (is_a($this->_propDict["completedDateTime"], "Microsoft\Graph\Model\DateTimeTimeZone")) {
                 return $this->_propDict["completedDateTime"];
             } else {
                 $this->_propDict["completedDateTime"] = new DateTimeTimeZone($this->_propDict["completedDateTime"]);
@@ -123,7 +123,7 @@ class OutlookTask extends OutlookItem
     public function getDueDateTime()
     {
         if (array_key_exists("dueDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["dueDateTime"], "Microsoft\Graph\Beta\Model\DateTimeTimeZone")) {
+            if (is_a($this->_propDict["dueDateTime"], "Microsoft\Graph\Model\DateTimeTimeZone")) {
                 return $this->_propDict["dueDateTime"];
             } else {
                 $this->_propDict["dueDateTime"] = new DateTimeTimeZone($this->_propDict["dueDateTime"]);
@@ -181,7 +181,7 @@ class OutlookTask extends OutlookItem
     public function getImportance()
     {
         if (array_key_exists("importance", $this->_propDict)) {
-            if (is_a($this->_propDict["importance"], "Microsoft\Graph\Beta\Model\Importance")) {
+            if (is_a($this->_propDict["importance"], "Microsoft\Graph\Model\Importance")) {
                 return $this->_propDict["importance"];
             } else {
                 $this->_propDict["importance"] = new Importance($this->_propDict["importance"]);
@@ -293,7 +293,7 @@ class OutlookTask extends OutlookItem
     public function getRecurrence()
     {
         if (array_key_exists("recurrence", $this->_propDict)) {
-            if (is_a($this->_propDict["recurrence"], "Microsoft\Graph\Beta\Model\PatternedRecurrence")) {
+            if (is_a($this->_propDict["recurrence"], "Microsoft\Graph\Model\PatternedRecurrence")) {
                 return $this->_propDict["recurrence"];
             } else {
                 $this->_propDict["recurrence"] = new PatternedRecurrence($this->_propDict["recurrence"]);
@@ -324,7 +324,7 @@ class OutlookTask extends OutlookItem
     public function getReminderDateTime()
     {
         if (array_key_exists("reminderDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["reminderDateTime"], "Microsoft\Graph\Beta\Model\DateTimeTimeZone")) {
+            if (is_a($this->_propDict["reminderDateTime"], "Microsoft\Graph\Model\DateTimeTimeZone")) {
                 return $this->_propDict["reminderDateTime"];
             } else {
                 $this->_propDict["reminderDateTime"] = new DateTimeTimeZone($this->_propDict["reminderDateTime"]);
@@ -355,7 +355,7 @@ class OutlookTask extends OutlookItem
     public function getSensitivity()
     {
         if (array_key_exists("sensitivity", $this->_propDict)) {
-            if (is_a($this->_propDict["sensitivity"], "Microsoft\Graph\Beta\Model\Sensitivity")) {
+            if (is_a($this->_propDict["sensitivity"], "Microsoft\Graph\Model\Sensitivity")) {
                 return $this->_propDict["sensitivity"];
             } else {
                 $this->_propDict["sensitivity"] = new Sensitivity($this->_propDict["sensitivity"]);
@@ -386,7 +386,7 @@ class OutlookTask extends OutlookItem
     public function getStartDateTime()
     {
         if (array_key_exists("startDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startDateTime"], "Microsoft\Graph\Beta\Model\DateTimeTimeZone")) {
+            if (is_a($this->_propDict["startDateTime"], "Microsoft\Graph\Model\DateTimeTimeZone")) {
                 return $this->_propDict["startDateTime"];
             } else {
                 $this->_propDict["startDateTime"] = new DateTimeTimeZone($this->_propDict["startDateTime"]);
@@ -417,7 +417,7 @@ class OutlookTask extends OutlookItem
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Microsoft\Graph\Beta\Model\TaskStatus")) {
+            if (is_a($this->_propDict["status"], "Microsoft\Graph\Model\TaskStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new TaskStatus($this->_propDict["status"]);

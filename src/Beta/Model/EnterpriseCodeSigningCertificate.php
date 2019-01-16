@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * EnterpriseCodeSigningCertificate class
@@ -28,6 +28,7 @@ class EnterpriseCodeSigningCertificate extends Entity
 {
     /**
     * Gets the content
+    * The Windows Enterprise Code-Signing Certificate in the raw data format.
     *
     * @return \GuzzleHttp\Psr7\Stream The content
     */
@@ -46,6 +47,7 @@ class EnterpriseCodeSigningCertificate extends Entity
     
     /**
     * Sets the content
+    * The Windows Enterprise Code-Signing Certificate in the raw data format.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The content
     *
@@ -59,13 +61,14 @@ class EnterpriseCodeSigningCertificate extends Entity
     
     /**
     * Gets the status
+    * The Certificate Status Provisioned or not Provisioned.
     *
     * @return CertificateStatus The status
     */
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Microsoft\Graph\Beta\Model\CertificateStatus")) {
+            if (is_a($this->_propDict["status"], "Microsoft\Graph\Model\CertificateStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new CertificateStatus($this->_propDict["status"]);
@@ -77,6 +80,7 @@ class EnterpriseCodeSigningCertificate extends Entity
     
     /**
     * Sets the status
+    * The Certificate Status Provisioned or not Provisioned.
     *
     * @param CertificateStatus $val The status
     *
@@ -90,6 +94,7 @@ class EnterpriseCodeSigningCertificate extends Entity
     
     /**
     * Gets the subjectName
+    * The Subject Name for the cert.
     *
     * @return string The subjectName
     */
@@ -104,6 +109,7 @@ class EnterpriseCodeSigningCertificate extends Entity
     
     /**
     * Sets the subjectName
+    * The Subject Name for the cert.
     *
     * @param string $val The subjectName
     *
@@ -117,6 +123,7 @@ class EnterpriseCodeSigningCertificate extends Entity
     
     /**
     * Gets the subject
+    * The Subject Value for the cert.
     *
     * @return string The subject
     */
@@ -131,6 +138,7 @@ class EnterpriseCodeSigningCertificate extends Entity
     
     /**
     * Sets the subject
+    * The Subject Value for the cert.
     *
     * @param string $val The subject
     *
@@ -144,6 +152,7 @@ class EnterpriseCodeSigningCertificate extends Entity
     
     /**
     * Gets the issuerName
+    * The Issuer Name for the cert.
     *
     * @return string The issuerName
     */
@@ -158,6 +167,7 @@ class EnterpriseCodeSigningCertificate extends Entity
     
     /**
     * Sets the issuerName
+    * The Issuer Name for the cert.
     *
     * @param string $val The issuerName
     *
@@ -171,6 +181,7 @@ class EnterpriseCodeSigningCertificate extends Entity
     
     /**
     * Gets the issuer
+    * The Issuer value for the cert.
     *
     * @return string The issuer
     */
@@ -185,6 +196,7 @@ class EnterpriseCodeSigningCertificate extends Entity
     
     /**
     * Sets the issuer
+    * The Issuer value for the cert.
     *
     * @param string $val The issuer
     *
@@ -198,6 +210,7 @@ class EnterpriseCodeSigningCertificate extends Entity
     
     /**
     * Gets the expirationDateTime
+    * The Cert Expiration Date.
     *
     * @return \DateTime The expirationDateTime
     */
@@ -216,6 +229,7 @@ class EnterpriseCodeSigningCertificate extends Entity
     
     /**
     * Sets the expirationDateTime
+    * The Cert Expiration Date.
     *
     * @param \DateTime $val The expirationDateTime
     *
@@ -229,6 +243,7 @@ class EnterpriseCodeSigningCertificate extends Entity
     
     /**
     * Gets the uploadDateTime
+    * The date time of CodeSigning Cert when it is uploaded.
     *
     * @return \DateTime The uploadDateTime
     */
@@ -247,6 +262,7 @@ class EnterpriseCodeSigningCertificate extends Entity
     
     /**
     * Sets the uploadDateTime
+    * The date time of CodeSigning Cert when it is uploaded.
     *
     * @param \DateTime $val The uploadDateTime
     *

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * CloudAppSecurityState class
 *
@@ -27,6 +27,7 @@ class CloudAppSecurityState extends Entity
 {
     /**
     * Gets the destinationServiceIp
+    * Destination IP Address of the connection to the cloud application/service.
     *
     * @return string The destinationServiceIp
     */
@@ -41,6 +42,7 @@ class CloudAppSecurityState extends Entity
 
     /**
     * Sets the destinationServiceIp
+    * Destination IP Address of the connection to the cloud application/service.
     *
     * @param string $val The value of the destinationServiceIp
     *
@@ -53,6 +55,7 @@ class CloudAppSecurityState extends Entity
     }
     /**
     * Gets the destinationServiceName
+    * Cloud application/service name (for example 'Salesforce', 'DropBox', etc.).
     *
     * @return string The destinationServiceName
     */
@@ -67,6 +70,7 @@ class CloudAppSecurityState extends Entity
 
     /**
     * Sets the destinationServiceName
+    * Cloud application/service name (for example 'Salesforce', 'DropBox', etc.).
     *
     * @param string $val The value of the destinationServiceName
     *
@@ -79,6 +83,7 @@ class CloudAppSecurityState extends Entity
     }
     /**
     * Gets the riskScore
+    * Provider-generated/calculated risk score of the Cloud Application/Service. Recommended value range of 0-1, which equates to a percentage.
     *
     * @return string The riskScore
     */
@@ -93,6 +98,7 @@ class CloudAppSecurityState extends Entity
 
     /**
     * Sets the riskScore
+    * Provider-generated/calculated risk score of the Cloud Application/Service. Recommended value range of 0-1, which equates to a percentage.
     *
     * @param string $val The value of the riskScore
     *

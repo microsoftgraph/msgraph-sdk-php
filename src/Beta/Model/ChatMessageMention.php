@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * ChatMessageMention class
 *
@@ -25,41 +25,10 @@ namespace Microsoft\Graph\Beta\Model;
 */
 class ChatMessageMention extends Entity
 {
-
-    /**
-    * Gets the type
-    *
-    * @return ChatMessageMentionType The type
-    */
-    public function getType()
-    {
-        if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "Microsoft\Graph\Beta\Model\ChatMessageMentionType")) {
-                return $this->_propDict["type"];
-            } else {
-                $this->_propDict["type"] = new ChatMessageMentionType($this->_propDict["type"]);
-                return $this->_propDict["type"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the type
-    *
-    * @param ChatMessageMentionType $val The value to assign to the type
-    *
-    * @return ChatMessageMention The ChatMessageMention
-    */
-    public function setType($val)
-    {
-        $this->_propDict["type"] = $val;
-         return $this;
-    }
     /**
     * Gets the id
     *
-    * @return string The id
+    * @return int The id
     */
     public function getId()
     {
@@ -73,7 +42,7 @@ class ChatMessageMention extends Entity
     /**
     * Sets the id
     *
-    * @param string $val The value of the id
+    * @param int $val The value of the id
     *
     * @return ChatMessageMention
     */
@@ -107,5 +76,36 @@ class ChatMessageMention extends Entity
     {
         $this->_propDict["mentionText"] = $val;
         return $this;
+    }
+
+    /**
+    * Gets the mentioned
+    *
+    * @return IdentitySet The mentioned
+    */
+    public function getMentioned()
+    {
+        if (array_key_exists("mentioned", $this->_propDict)) {
+            if (is_a($this->_propDict["mentioned"], "Microsoft\Graph\Model\IdentitySet")) {
+                return $this->_propDict["mentioned"];
+            } else {
+                $this->_propDict["mentioned"] = new IdentitySet($this->_propDict["mentioned"]);
+                return $this->_propDict["mentioned"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the mentioned
+    *
+    * @param IdentitySet $val The value to assign to the mentioned
+    *
+    * @return ChatMessageMention The ChatMessageMention
+    */
+    public function setMentioned($val)
+    {
+        $this->_propDict["mentioned"] = $val;
+         return $this;
     }
 }

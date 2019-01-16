@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * ProgramControl class
@@ -169,7 +169,7 @@ class ProgramControl extends Entity
     public function getOwner()
     {
         if (array_key_exists("owner", $this->_propDict)) {
-            if (is_a($this->_propDict["owner"], "Microsoft\Graph\Beta\Model\UserIdentity")) {
+            if (is_a($this->_propDict["owner"], "Microsoft\Graph\Model\UserIdentity")) {
                 return $this->_propDict["owner"];
             } else {
                 $this->_propDict["owner"] = new UserIdentity($this->_propDict["owner"]);
@@ -200,7 +200,7 @@ class ProgramControl extends Entity
     public function getResource()
     {
         if (array_key_exists("resource", $this->_propDict)) {
-            if (is_a($this->_propDict["resource"], "Microsoft\Graph\Beta\Model\ProgramResource")) {
+            if (is_a($this->_propDict["resource"], "Microsoft\Graph\Model\ProgramResource")) {
                 return $this->_propDict["resource"];
             } else {
                 $this->_propDict["resource"] = new ProgramResource($this->_propDict["resource"]);
@@ -262,7 +262,7 @@ class ProgramControl extends Entity
     public function getProgram()
     {
         if (array_key_exists("program", $this->_propDict)) {
-            if (is_a($this->_propDict["program"], "Microsoft\Graph\Beta\Model\Program")) {
+            if (is_a($this->_propDict["program"], "Microsoft\Graph\Model\Program")) {
                 return $this->_propDict["program"];
             } else {
                 $this->_propDict["program"] = new Program($this->_propDict["program"]);

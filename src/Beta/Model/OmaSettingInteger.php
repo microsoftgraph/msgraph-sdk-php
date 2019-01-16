@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 /**
 * OmaSettingInteger class
 *
@@ -26,7 +26,17 @@ namespace Microsoft\Graph\Beta\Model;
 class OmaSettingInteger extends OmaSetting
 {
     /**
+    * Set the @odata.type since this type is immediately descended from an abstract
+    * type that is referenced as the type in an entity.
+    */
+    public function __construct()
+    {
+        $this->setODataType("#microsoft.graph.omaSettingInteger");
+    }
+
+    /**
     * Gets the value
+    * Value.
     *
     * @return int The value
     */
@@ -41,6 +51,7 @@ class OmaSettingInteger extends OmaSetting
 
     /**
     * Sets the value
+    * Value.
     *
     * @param int $val The value of the value
     *

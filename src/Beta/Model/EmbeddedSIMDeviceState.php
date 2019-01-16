@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * EmbeddedSIMDeviceState class
@@ -28,6 +28,7 @@ class EmbeddedSIMDeviceState extends Entity
 {
     /**
     * Gets the createdDateTime
+    * The time the embedded SIM device status was created. Generated service side.
     *
     * @return \DateTime The createdDateTime
     */
@@ -46,6 +47,7 @@ class EmbeddedSIMDeviceState extends Entity
     
     /**
     * Sets the createdDateTime
+    * The time the embedded SIM device status was created. Generated service side.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -59,6 +61,7 @@ class EmbeddedSIMDeviceState extends Entity
     
     /**
     * Gets the modifiedDateTime
+    * The time the embedded SIM device status was last modified. Updated service side.
     *
     * @return \DateTime The modifiedDateTime
     */
@@ -77,6 +80,7 @@ class EmbeddedSIMDeviceState extends Entity
     
     /**
     * Sets the modifiedDateTime
+    * The time the embedded SIM device status was last modified. Updated service side.
     *
     * @param \DateTime $val The modifiedDateTime
     *
@@ -90,6 +94,7 @@ class EmbeddedSIMDeviceState extends Entity
     
     /**
     * Gets the lastSyncDateTime
+    * The time the embedded SIM device last checked in. Updated service side.
     *
     * @return \DateTime The lastSyncDateTime
     */
@@ -108,6 +113,7 @@ class EmbeddedSIMDeviceState extends Entity
     
     /**
     * Sets the lastSyncDateTime
+    * The time the embedded SIM device last checked in. Updated service side.
     *
     * @param \DateTime $val The lastSyncDateTime
     *
@@ -121,6 +127,7 @@ class EmbeddedSIMDeviceState extends Entity
     
     /**
     * Gets the universalIntegratedCircuitCardIdentifier
+    * The Universal Integrated Circuit Card Identifier (UICCID) identifying the hardware onto which a profile is to be deployed.
     *
     * @return string The universalIntegratedCircuitCardIdentifier
     */
@@ -135,6 +142,7 @@ class EmbeddedSIMDeviceState extends Entity
     
     /**
     * Sets the universalIntegratedCircuitCardIdentifier
+    * The Universal Integrated Circuit Card Identifier (UICCID) identifying the hardware onto which a profile is to be deployed.
     *
     * @param string $val The universalIntegratedCircuitCardIdentifier
     *
@@ -148,6 +156,7 @@ class EmbeddedSIMDeviceState extends Entity
     
     /**
     * Gets the deviceName
+    * Device name to which the subscription was provisioned e.g. DESKTOP-JOE
     *
     * @return string The deviceName
     */
@@ -162,6 +171,7 @@ class EmbeddedSIMDeviceState extends Entity
     
     /**
     * Sets the deviceName
+    * Device name to which the subscription was provisioned e.g. DESKTOP-JOE
     *
     * @param string $val The deviceName
     *
@@ -175,6 +185,7 @@ class EmbeddedSIMDeviceState extends Entity
     
     /**
     * Gets the userName
+    * Username which the subscription was provisioned to e.g. joe@contoso.com
     *
     * @return string The userName
     */
@@ -189,6 +200,7 @@ class EmbeddedSIMDeviceState extends Entity
     
     /**
     * Sets the userName
+    * Username which the subscription was provisioned to e.g. joe@contoso.com
     *
     * @param string $val The userName
     *
@@ -202,13 +214,14 @@ class EmbeddedSIMDeviceState extends Entity
     
     /**
     * Gets the state
+    * The state of the profile operation applied to the device.
     *
     * @return EmbeddedSIMDeviceStateValue The state
     */
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "Microsoft\Graph\Beta\Model\EmbeddedSIMDeviceStateValue")) {
+            if (is_a($this->_propDict["state"], "Microsoft\Graph\Model\EmbeddedSIMDeviceStateValue")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new EmbeddedSIMDeviceStateValue($this->_propDict["state"]);
@@ -220,6 +233,7 @@ class EmbeddedSIMDeviceState extends Entity
     
     /**
     * Sets the state
+    * The state of the profile operation applied to the device.
     *
     * @param EmbeddedSIMDeviceStateValue $val The state
     *
@@ -233,6 +247,7 @@ class EmbeddedSIMDeviceState extends Entity
     
     /**
     * Gets the stateDetails
+    * String description of the provisioning state.
     *
     * @return string The stateDetails
     */
@@ -247,6 +262,7 @@ class EmbeddedSIMDeviceState extends Entity
     
     /**
     * Sets the stateDetails
+    * String description of the provisioning state.
     *
     * @param string $val The stateDetails
     *

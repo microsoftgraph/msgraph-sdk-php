@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * TermsAndConditionsGroupAssignment class
@@ -28,6 +28,7 @@ class TermsAndConditionsGroupAssignment extends Entity
 {
     /**
     * Gets the targetGroupId
+    * Unique identifier of a group that the T&amp;C policy is assigned to.
     *
     * @return string The targetGroupId
     */
@@ -42,6 +43,7 @@ class TermsAndConditionsGroupAssignment extends Entity
     
     /**
     * Sets the targetGroupId
+    * Unique identifier of a group that the T&amp;C policy is assigned to.
     *
     * @param string $val The targetGroupId
     *
@@ -55,13 +57,14 @@ class TermsAndConditionsGroupAssignment extends Entity
     
     /**
     * Gets the termsAndConditions
+    * Navigation link to the terms and conditions that are assigned.
     *
     * @return TermsAndConditions The termsAndConditions
     */
     public function getTermsAndConditions()
     {
         if (array_key_exists("termsAndConditions", $this->_propDict)) {
-            if (is_a($this->_propDict["termsAndConditions"], "Microsoft\Graph\Beta\Model\TermsAndConditions")) {
+            if (is_a($this->_propDict["termsAndConditions"], "Microsoft\Graph\Model\TermsAndConditions")) {
                 return $this->_propDict["termsAndConditions"];
             } else {
                 $this->_propDict["termsAndConditions"] = new TermsAndConditions($this->_propDict["termsAndConditions"]);
@@ -73,6 +76,7 @@ class TermsAndConditionsGroupAssignment extends Entity
     
     /**
     * Sets the termsAndConditions
+    * Navigation link to the terms and conditions that are assigned.
     *
     * @param TermsAndConditions $val The termsAndConditions
     *

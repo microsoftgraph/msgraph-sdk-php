@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * RemoteActionAudit class
@@ -28,6 +28,7 @@ class RemoteActionAudit extends Entity
 {
     /**
     * Gets the deviceDisplayName
+    * Intune device name.
     *
     * @return string The deviceDisplayName
     */
@@ -42,6 +43,7 @@ class RemoteActionAudit extends Entity
     
     /**
     * Sets the deviceDisplayName
+    * Intune device name.
     *
     * @param string $val The deviceDisplayName
     *
@@ -55,6 +57,7 @@ class RemoteActionAudit extends Entity
     
     /**
     * Gets the userName
+    * [deprecated] Please use InitiatedByUserPrincipalName instead.
     *
     * @return string The userName
     */
@@ -69,6 +72,7 @@ class RemoteActionAudit extends Entity
     
     /**
     * Sets the userName
+    * [deprecated] Please use InitiatedByUserPrincipalName instead.
     *
     * @param string $val The userName
     *
@@ -82,6 +86,7 @@ class RemoteActionAudit extends Entity
     
     /**
     * Gets the initiatedByUserPrincipalName
+    * User who initiated the device action, format is UPN.
     *
     * @return string The initiatedByUserPrincipalName
     */
@@ -96,6 +101,7 @@ class RemoteActionAudit extends Entity
     
     /**
     * Sets the initiatedByUserPrincipalName
+    * User who initiated the device action, format is UPN.
     *
     * @param string $val The initiatedByUserPrincipalName
     *
@@ -109,13 +115,14 @@ class RemoteActionAudit extends Entity
     
     /**
     * Gets the action
+    * The action name.
     *
     * @return RemoteAction The action
     */
     public function getAction()
     {
         if (array_key_exists("action", $this->_propDict)) {
-            if (is_a($this->_propDict["action"], "Microsoft\Graph\Beta\Model\RemoteAction")) {
+            if (is_a($this->_propDict["action"], "Microsoft\Graph\Model\RemoteAction")) {
                 return $this->_propDict["action"];
             } else {
                 $this->_propDict["action"] = new RemoteAction($this->_propDict["action"]);
@@ -127,6 +134,7 @@ class RemoteActionAudit extends Entity
     
     /**
     * Sets the action
+    * The action name.
     *
     * @param RemoteAction $val The action
     *
@@ -140,6 +148,7 @@ class RemoteActionAudit extends Entity
     
     /**
     * Gets the requestDateTime
+    * Time when the action was issued, given in UTC.
     *
     * @return \DateTime The requestDateTime
     */
@@ -158,6 +167,7 @@ class RemoteActionAudit extends Entity
     
     /**
     * Sets the requestDateTime
+    * Time when the action was issued, given in UTC.
     *
     * @param \DateTime $val The requestDateTime
     *
@@ -171,6 +181,7 @@ class RemoteActionAudit extends Entity
     
     /**
     * Gets the deviceOwnerUserPrincipalName
+    * Upn of the device owner.
     *
     * @return string The deviceOwnerUserPrincipalName
     */
@@ -185,6 +196,7 @@ class RemoteActionAudit extends Entity
     
     /**
     * Sets the deviceOwnerUserPrincipalName
+    * Upn of the device owner.
     *
     * @param string $val The deviceOwnerUserPrincipalName
     *
@@ -198,6 +210,7 @@ class RemoteActionAudit extends Entity
     
     /**
     * Gets the deviceIMEI
+    * IMEI of the device.
     *
     * @return string The deviceIMEI
     */
@@ -212,6 +225,7 @@ class RemoteActionAudit extends Entity
     
     /**
     * Sets the deviceIMEI
+    * IMEI of the device.
     *
     * @param string $val The deviceIMEI
     *
@@ -225,13 +239,14 @@ class RemoteActionAudit extends Entity
     
     /**
     * Gets the actionState
+    * Action state.
     *
     * @return ActionState The actionState
     */
     public function getActionState()
     {
         if (array_key_exists("actionState", $this->_propDict)) {
-            if (is_a($this->_propDict["actionState"], "Microsoft\Graph\Beta\Model\ActionState")) {
+            if (is_a($this->_propDict["actionState"], "Microsoft\Graph\Model\ActionState")) {
                 return $this->_propDict["actionState"];
             } else {
                 $this->_propDict["actionState"] = new ActionState($this->_propDict["actionState"]);
@@ -243,6 +258,7 @@ class RemoteActionAudit extends Entity
     
     /**
     * Sets the actionState
+    * Action state.
     *
     * @param ActionState $val The actionState
     *

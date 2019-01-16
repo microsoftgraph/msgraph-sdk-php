@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * ManagedAppStatus class
@@ -28,6 +28,7 @@ class ManagedAppStatus extends Entity
 {
     /**
     * Gets the displayName
+    * Friendly name of the status report.
     *
     * @return string The displayName
     */
@@ -42,6 +43,7 @@ class ManagedAppStatus extends Entity
     
     /**
     * Sets the displayName
+    * Friendly name of the status report.
     *
     * @param string $val The displayName
     *
@@ -55,6 +57,7 @@ class ManagedAppStatus extends Entity
     
     /**
     * Gets the version
+    * Version of the entity.
     *
     * @return string The version
     */
@@ -69,6 +72,7 @@ class ManagedAppStatus extends Entity
     
     /**
     * Sets the version
+    * Version of the entity.
     *
     * @param string $val The version
     *

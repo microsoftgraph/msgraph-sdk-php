@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Beta\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * PlannerProgressTaskBoardTaskFormat class
@@ -28,6 +28,7 @@ class PlannerProgressTaskBoardTaskFormat extends Entity
 {
     /**
     * Gets the orderHint
+    * Hint value used to order the task on the Progress view of the Task Board. The format is defined as outlined here.
     *
     * @return string The orderHint
     */
@@ -42,6 +43,7 @@ class PlannerProgressTaskBoardTaskFormat extends Entity
     
     /**
     * Sets the orderHint
+    * Hint value used to order the task on the Progress view of the Task Board. The format is defined as outlined here.
     *
     * @param string $val The orderHint
     *
