@@ -299,7 +299,7 @@ class GraphRequest
             function ($result) {
 
                 // Check to see if returnType is a stream, if so return it immediately
-                if($this->returnStream) {
+                if($this->returnsStream) {
                     return $result->getBody();
                 }
 
