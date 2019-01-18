@@ -247,10 +247,14 @@ class GraphRequest
             $this->_getRequestUrl(), 
             [
                 'body' => $this->requestBody,
-                'stream' =>  $this->returnsStream,
                 'timeout' => $this->timeout
             ]
         );
+
+        // Check to see if returnType is a stream, if so return it immediately
+        if($this->returnsStream) {
+            return $result->getBody();
+        }
 
         // Wrap response in GraphResponse layer
         $response = new GraphResponse(
@@ -288,12 +292,17 @@ class GraphRequest
             $this->_getRequestUrl(),
             [
                 'body' => $this->requestBody,
-                'stream' => $this->returnsStream,
                 'timeout' => $this->timeout
             ]
         )->then(
             // On success, return the result/response
             function ($result) {
+
+                // Check to see if returnType is a stream, if so return it immediately
+                if($this->returnsStream) {
+                    return $result->getBody();
+                }
+
                 $response = new GraphResponse(
                     $this, 
                     $result->getBody(), 
