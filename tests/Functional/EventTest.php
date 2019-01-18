@@ -1,7 +1,7 @@
 <?php
 use PHPUnit\Framework\TestCase;
 use Microsoft\Graph\Test\GraphTestBase;
-use Microsoft\Graph\Model;
+use Microsoft\Graph\Beta\Model;
 
 class EventTest extends TestCase
 {
@@ -12,7 +12,7 @@ class EventTest extends TestCase
 	{
 		$graphTestBase = new GraphTestBase();
     	$client = $graphTestBase->graphClient;
-    	
+
     	$startTime = new DateTime('today midnight');
     	$startTime = $startTime->format('Y-m-d H:i:s');
     	$endTime = new DateTime('tomorrow midnight');

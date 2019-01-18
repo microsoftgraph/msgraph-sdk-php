@@ -1,7 +1,7 @@
 <?php
 use PHPUnit\Framework\TestCase;
 use Microsoft\Graph\Test\GraphTestBase;
-use Microsoft\Graph\Model;
+use Microsoft\Graph\Beta\Model;
 
 class OnedriveTest extends TestCase
 {
@@ -132,7 +132,7 @@ class OnedriveTest extends TestCase
 
         $folder = new Model\Folder();
         $folder->setChildCount(0);
-        
+
         $rareSearchItem->setFolder($folder);
         $rareSearchItem = $this->_client->createRequest("POST", "/me/drive/root/children")
                                 ->attachBody($rareSearchItem)
@@ -193,10 +193,10 @@ class OnedriveTest extends TestCase
     	$roles = array("write");
 
     	$body = array(
-    		"recipients" => array($recipient), 
+    		"recipients" => array($recipient),
     		"requireSignIn" => true,
     		"sendInvitation" => true,
-    		"roles" => $roles, 
+    		"roles" => $roles,
     		"message" => "Check out the Invite feature!");
 
     	$inviteCollection = $this->_client->createRequest("POST", "/me/drive/items/$itemId/invite")

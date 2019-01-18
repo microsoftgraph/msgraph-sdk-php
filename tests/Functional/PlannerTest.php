@@ -1,7 +1,7 @@
 <?php
 use PHPUnit\Framework\TestCase;
 use Microsoft\Graph\Test\GraphTestBase;
-use Microsoft\Graph\Model;
+use Microsoft\Graph\Beta\Model;
 
 class PlannerTest extends TestCase
 {
@@ -72,7 +72,7 @@ class PlannerTest extends TestCase
         $task = $this->_client->createRequest("GET", "/planner/tasks/" . $this->planTask->getId())
             ->setReturnType(Model\PlannerTask::class)
             ->execute();
-        
+
         try {
             $this->_client->createRequest("PATCH", "/planner/tasks/" . $this->planTask->getId())
                 ->attachBody(array("assignments" => array($me->getId() => $assignment)))

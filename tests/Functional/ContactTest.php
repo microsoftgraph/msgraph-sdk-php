@@ -1,7 +1,7 @@
 <?php
 use PHPUnit\Framework\TestCase;
 use Microsoft\Graph\Test\GraphTestBase;
-use Microsoft\Graph\Model;
+use Microsoft\Graph\Beta\Model;
 
 class ContactTest extends TestCase
 {
@@ -36,7 +36,7 @@ class ContactTest extends TestCase
 
     	$this->assertNotNull($addedContact->getId());
 
-    	$syncedContact = $client->createRequest("GET", 
+    	$syncedContact = $client->createRequest("GET",
     											"/me/contacts/".
     											$addedContact->getId().
     											"?\$expand=singleValueExtendedProperties(\$filter=id eq '$propertyId')"

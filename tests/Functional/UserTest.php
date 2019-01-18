@@ -1,7 +1,7 @@
 <?php
 use PHPUnit\Framework\TestCase;
 use Microsoft\Graph\Test\GraphTestBase;
-use Microsoft\Graph\Model;
+use Microsoft\Graph\Beta\Model;
 
 class UserTest extends TestCase
 {

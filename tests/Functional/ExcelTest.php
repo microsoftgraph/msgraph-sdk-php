@@ -1,7 +1,7 @@
 <?php
 use PHPUnit\Framework\TestCase;
 use Microsoft\Graph\Test\GraphTestBase;
-use Microsoft\Graph\Model;
+use Microsoft\Graph\Beta\Model;
 use GuzzleHttp\Exception\RequestException;
 
 class ExcelTest extends TestCase
@@ -55,7 +55,7 @@ class ExcelTest extends TestCase
         $stream = GuzzleHttp\Psr7\stream_for(fopen("./tests/Functional/Resources/excelTestResource.xlsx", "r"));
     	$excelDriveItem = $this->_client->createRequest("PUT", "/me/drive/items/" . $this->_fileId . "/content")
     							        ->addHeaders(array(
-    							 	         "Content-Type" => "application/octet-stream", 
+    							 	         "Content-Type" => "application/octet-stream",
     							 	         "Content-Length" => filesize("./tests/Functional/Resources/excelTestResource.xlsx")
     							        ))
     							        ->attachBody($stream)
@@ -70,9 +70,9 @@ class ExcelTest extends TestCase
     public function testGetUpdateRange()
     {
         $rangeToUpdate = $this->_client->createRequest(
-                                            "GET", 
-                                            "/me/drive/items/" . 
-                                            $this->_fileId . 
+                                            "GET",
+                                            "/me/drive/items/" .
+                                            $this->_fileId .
                                             "/workbook/worksheets/GetUpdateRange/Range(address='A1')"
                                         )
         						       ->setReturnType(Model\WorkbookRange::class)
@@ -84,9 +84,9 @@ class ExcelTest extends TestCase
         $dummyWorkbookRange->setValues($arr);
 
         $workbookRange = $this->_client->createRequest(
-                                            "PATCH", 
-                                            "/me/drive/items/" . 
-                                            $this->_fileId . 
+                                            "PATCH",
+                                            "/me/drive/items/" .
+                                            $this->_fileId .
                                             "/workbook/worksheets/GetUpdateRange/Range(address='A1')"
                                         )
         						       ->attachBody($dummyWorkbookRange)
@@ -108,9 +108,9 @@ class ExcelTest extends TestCase
     	$arr = [["$#,##0.00;[Red]$#,##0.00"]];
 
     	$workbookRange = $this->_client->createRequest(
-                                            "PATCH", 
-                                            "/me/drive/items/" . 
-                                            $this->_fileId . 
+                                            "PATCH",
+                                            "/me/drive/items/" .
+                                            $this->_fileId .
                                             "/workbook/worksheets/$excelWorksheetName/range(address='$rangeAddress')"
                                         )
     							        ->attachBody(array("numberFormat" => $arr))
@@ -129,9 +129,9 @@ class ExcelTest extends TestCase
     	$inputNumber = "-10";
 
     	$workbookFunctionResult = $this->_client->createRequest(
-                                                    "POST", 
-                                                    "/me/drive/items/" . 
-                                                    $this->_fileId . 
+                                                    "POST",
+                                                    "/me/drive/items/" .
+                                                    $this->_fileId .
                                                     "/workbook/functions/abs"
                                                 )
     									        ->attachBody('{"number": '. $inputNumber . '}')
@@ -150,9 +150,9 @@ class ExcelTest extends TestCase
     	$arr = [['=A4*B4']];
 
     	$workbookRange = $this->_client->createRequest(
-                                            "PATCH", 
-                                            "/me/drive/items/" . 
-                                            $this->_fileId . 
+                                            "PATCH",
+                                            "/me/drive/items/" .
+                                            $this->_fileId .
                                             "/workbook/worksheets/SetFormula/range(address='C4')"
                                         )
     							        ->attachBody(array("formulas" => $arr))
@@ -169,9 +169,9 @@ class ExcelTest extends TestCase
     public function testAddTableUsedRange()
     {
     	$workbookRange = $this->_client->createRequest(
-                                            "GET", 
-                                            "/me/drive/items/" . 
-                                            $this->_fileId . 
+                                            "GET",
+                                            "/me/drive/items/" .
+                                            $this->_fileId .
                                             "/workbook/worksheets/AddTableUsedRange/usedrange"
                                         )
     							       ->setReturnType(Model\WorkbookRange::class)
@@ -198,9 +198,9 @@ class ExcelTest extends TestCase
     	$newWorkbookTableRow->setValues($arr);
 
     	$workbookTableRow = $this->_client->createRequest(
-                                                "POST", 
-                                                "/me/drive/items/" . 
-                                                $this->_fileId . 
+                                                "POST",
+                                                "/me/drive/items/" .
+                                                $this->_fileId .
                                                 "/workbook/tables/Table1/Rows"
                                           )
     							          ->attachBody($newWorkbookTableRow)
@@ -222,9 +222,9 @@ class ExcelTest extends TestCase
     	$sortField->setKey(0);
 
     	$workbookSortFields = $this->_client->createRequest(
-                                                "POST", 
-                                                "/me/drive/items/" . 
-                                                $this->_fileId . 
+                                                "POST",
+                                                "/me/drive/items/" .
+                                                $this->_fileId .
                                                 "/workbook/tables/Table2/sort/apply"
                                             )
     							            ->attachBody('{"fields":'. json_encode(array($sortField)) . '}')
@@ -241,9 +241,9 @@ class ExcelTest extends TestCase
     public function testFilterTableValues()
     {
     	$this->_client->createRequest(
-    				      "POST", 
-    				      "/me/drive/items/" . 
-                          $this->_fileId . 
+    				      "POST",
+    				      "/me/drive/items/" .
+                          $this->_fileId .
                           "/workbook/tables/FilterTableValues/columns/1/filter/applyvaluesfilter"
         			    )
         			    ->attachBody('{"values":["2"]}')
@@ -258,9 +258,9 @@ class ExcelTest extends TestCase
     public function testCreateChartFromTable()
     {
     	$tableRange = $this->_client->createRequest(
-                                        "GET", 
-                                        "/me/drive/items/" . 
-                                        $this->_fileId . 
+                                        "GET",
+                                        "/me/drive/items/" .
+                                        $this->_fileId .
                                         "/workbook/tables/CreateChartFromTable/range"
                                     )
     							    ->setReturnType(Model\WorkbookRange::class)
@@ -268,9 +268,9 @@ class ExcelTest extends TestCase
     	$address = $tableRange->getAddress();
 
     	$workbookChart = $this->_client->createRequest(
-                                            "POST", 
-                                            "/me/drive/items/" . 
-                                            $this->_fileId . 
+                                            "POST",
+                                            "/me/drive/items/" .
+                                            $this->_fileId .
                                             "/workbook/worksheets/CreateChartFromTable/charts/add"
                                         )
     							       ->attachBody(array("type" => "ColumnStacked", "sourceData" => "$address", "seriesBy" => "Auto"))
@@ -287,9 +287,9 @@ class ExcelTest extends TestCase
     {
         try{
         	$this->_client->createRequest(
-                                "POST", 
-                                "/me/drive/items/" . 
-                                $this->_fileId . 
+                                "POST",
+                                "/me/drive/items/" .
+                                $this->_fileId .
                                 "/workbook/worksheets/ProtectWorksheet/protection/protect"
                             )
         		            ->execute();
@@ -298,9 +298,9 @@ class ExcelTest extends TestCase
         	$dummyWorkbookRange->setValues('[["This should not work"]]');
 
         	$workbookRange = $this->_client->createRequest(
-                                                "PATCH", 
-                                                "/me/drive/items/" . 
-                                                $this->_fileId . 
+                                                "PATCH",
+                                                "/me/drive/items/" .
+                                                $this->_fileId .
                                                 "/workbook/worksheets('protectworksheet')/cell(row=1,column=1)"
                                             )
         							        ->attachBody($dummyWorkbookRange)
@@ -311,12 +311,12 @@ class ExcelTest extends TestCase
         	$this->assertEquals(403, $e->getResponse()->getStatusCode());
 
         	$this->_client->createRequest(
-                                "POST", 
-                                "/me/drive/items/" . 
-                                $this->_fileId . 
+                                "POST",
+                                "/me/drive/items/" .
+                                $this->_fileId .
                                 "/workbook/worksheets/ProtectWorksheet/protection/unprotect"
                             )
         		            ->execute();
-        } 
+        }
     }
 }
