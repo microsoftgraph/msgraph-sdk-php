@@ -58,6 +58,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the businessPhones
+    * Telephone number for the organization. NOTE: Although this is a string collection, only one number can be set for this property.
     *
     * @return string The businessPhones
     */
@@ -72,6 +73,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the businessPhones
+    * Telephone number for the organization. NOTE: Although this is a string collection, only one number can be set for this property.
     *
     * @param string $val The businessPhones
     *
@@ -230,6 +232,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the onPremisesLastSyncDateTime
+    * The time and date at which the tenant was last synced with the on-premise directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
     *
     * @return \DateTime The onPremisesLastSyncDateTime
     */
@@ -248,6 +251,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the onPremisesLastSyncDateTime
+    * The time and date at which the tenant was last synced with the on-premise directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
     *
     * @param \DateTime $val The onPremisesLastSyncDateTime
     *
@@ -261,6 +265,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the onPremisesSyncEnabled
+    * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default).
     *
     * @return bool The onPremisesSyncEnabled
     */
@@ -275,6 +280,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the onPremisesSyncEnabled
+    * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default).
     *
     * @param bool $val The onPremisesSyncEnabled
     *
