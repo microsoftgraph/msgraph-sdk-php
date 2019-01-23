@@ -28,6 +28,7 @@ class WorkbookChartAxisTitle extends Entity
 {
     /**
     * Gets the text
+    * Represents the axis title.
     *
     * @return string The text
     */
@@ -42,6 +43,7 @@ class WorkbookChartAxisTitle extends Entity
     
     /**
     * Sets the text
+    * Represents the axis title.
     *
     * @param string $val The text
     *
@@ -55,6 +57,7 @@ class WorkbookChartAxisTitle extends Entity
     
     /**
     * Gets the visible
+    * A boolean that specifies the visibility of an axis title.
     *
     * @return bool The visible
     */
@@ -69,6 +72,7 @@ class WorkbookChartAxisTitle extends Entity
     
     /**
     * Sets the visible
+    * A boolean that specifies the visibility of an axis title.
     *
     * @param bool $val The visible
     *
@@ -82,6 +86,7 @@ class WorkbookChartAxisTitle extends Entity
     
     /**
     * Gets the format
+    * Represents the formatting of chart axis title. Read-only.
     *
     * @return WorkbookChartAxisTitleFormat The format
     */
@@ -100,6 +105,7 @@ class WorkbookChartAxisTitle extends Entity
     
     /**
     * Sets the format
+    * Represents the formatting of chart axis title. Read-only.
     *
     * @param WorkbookChartAxisTitleFormat $val The format
     *

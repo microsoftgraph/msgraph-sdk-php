@@ -28,6 +28,7 @@ class WorkbookChartAxis extends Entity
 {
     /**
     * Gets the majorUnit
+    * Represents the interval between two major tick marks. Can be set to a numeric value or an empty string.  The returned value is always a number.
     *
     * @return string The majorUnit
     */
@@ -42,6 +43,7 @@ class WorkbookChartAxis extends Entity
     
     /**
     * Sets the majorUnit
+    * Represents the interval between two major tick marks. Can be set to a numeric value or an empty string.  The returned value is always a number.
     *
     * @param string $val The majorUnit
     *
@@ -55,6 +57,7 @@ class WorkbookChartAxis extends Entity
     
     /**
     * Gets the maximum
+    * Represents the maximum value on the value axis.  Can be set to a numeric value or an empty string (for automatic axis values).  The returned value is always a number.
     *
     * @return string The maximum
     */
@@ -69,6 +72,7 @@ class WorkbookChartAxis extends Entity
     
     /**
     * Sets the maximum
+    * Represents the maximum value on the value axis.  Can be set to a numeric value or an empty string (for automatic axis values).  The returned value is always a number.
     *
     * @param string $val The maximum
     *
@@ -82,6 +86,7 @@ class WorkbookChartAxis extends Entity
     
     /**
     * Gets the minimum
+    * Represents the minimum value on the value axis. Can be set to a numeric value or an empty string (for automatic axis values).  The returned value is always a number.
     *
     * @return string The minimum
     */
@@ -96,6 +101,7 @@ class WorkbookChartAxis extends Entity
     
     /**
     * Sets the minimum
+    * Represents the minimum value on the value axis. Can be set to a numeric value or an empty string (for automatic axis values).  The returned value is always a number.
     *
     * @param string $val The minimum
     *
@@ -109,6 +115,7 @@ class WorkbookChartAxis extends Entity
     
     /**
     * Gets the minorUnit
+    * Represents the interval between two minor tick marks. 'Can be set to a numeric value or an empty string (for automatic axis values). The returned value is always a number.
     *
     * @return string The minorUnit
     */
@@ -123,6 +130,7 @@ class WorkbookChartAxis extends Entity
     
     /**
     * Sets the minorUnit
+    * Represents the interval between two minor tick marks. 'Can be set to a numeric value or an empty string (for automatic axis values). The returned value is always a number.
     *
     * @param string $val The minorUnit
     *
@@ -136,6 +144,7 @@ class WorkbookChartAxis extends Entity
     
     /**
     * Gets the format
+    * Represents the formatting of a chart object, which includes line and font formatting. Read-only.
     *
     * @return WorkbookChartAxisFormat The format
     */
@@ -154,6 +163,7 @@ class WorkbookChartAxis extends Entity
     
     /**
     * Sets the format
+    * Represents the formatting of a chart object, which includes line and font formatting. Read-only.
     *
     * @param WorkbookChartAxisFormat $val The format
     *
@@ -167,6 +177,7 @@ class WorkbookChartAxis extends Entity
     
     /**
     * Gets the majorGridlines
+    * Returns a gridlines object that represents the major gridlines for the specified axis. Read-only.
     *
     * @return WorkbookChartGridlines The majorGridlines
     */
@@ -185,6 +196,7 @@ class WorkbookChartAxis extends Entity
     
     /**
     * Sets the majorGridlines
+    * Returns a gridlines object that represents the major gridlines for the specified axis. Read-only.
     *
     * @param WorkbookChartGridlines $val The majorGridlines
     *
@@ -198,6 +210,7 @@ class WorkbookChartAxis extends Entity
     
     /**
     * Gets the minorGridlines
+    * Returns a Gridlines object that represents the minor gridlines for the specified axis. Read-only.
     *
     * @return WorkbookChartGridlines The minorGridlines
     */
@@ -216,6 +229,7 @@ class WorkbookChartAxis extends Entity
     
     /**
     * Sets the minorGridlines
+    * Returns a Gridlines object that represents the minor gridlines for the specified axis. Read-only.
     *
     * @param WorkbookChartGridlines $val The minorGridlines
     *
@@ -229,6 +243,7 @@ class WorkbookChartAxis extends Entity
     
     /**
     * Gets the title
+    * Represents the axis title. Read-only.
     *
     * @return WorkbookChartAxisTitle The title
     */
@@ -247,6 +262,7 @@ class WorkbookChartAxis extends Entity
     
     /**
     * Sets the title
+    * Represents the axis title. Read-only.
     *
     * @param WorkbookChartAxisTitle $val The title
     *

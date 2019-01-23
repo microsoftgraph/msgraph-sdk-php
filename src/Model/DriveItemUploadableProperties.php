@@ -27,6 +27,7 @@ class DriveItemUploadableProperties extends Entity
 {
     /**
     * Gets the description
+    * Provides a user-visible description of the item. Read-write. Only on OneDrive Personal
     *
     * @return string The description
     */
@@ -41,6 +42,7 @@ class DriveItemUploadableProperties extends Entity
 
     /**
     * Sets the description
+    * Provides a user-visible description of the item. Read-write. Only on OneDrive Personal
     *
     * @param string $val The value of the description
     *
@@ -54,6 +56,7 @@ class DriveItemUploadableProperties extends Entity
 
     /**
     * Gets the fileSystemInfo
+    * File system information on client. Read-write.
     *
     * @return FileSystemInfo The fileSystemInfo
     */
@@ -72,6 +75,7 @@ class DriveItemUploadableProperties extends Entity
 
     /**
     * Sets the fileSystemInfo
+    * File system information on client. Read-write.
     *
     * @param FileSystemInfo $val The value to assign to the fileSystemInfo
     *
@@ -84,6 +88,7 @@ class DriveItemUploadableProperties extends Entity
     }
     /**
     * Gets the name
+    * The name of the item (filename and extension). Read-write.
     *
     * @return string The name
     */
@@ -98,6 +103,7 @@ class DriveItemUploadableProperties extends Entity
 
     /**
     * Sets the name
+    * The name of the item (filename and extension). Read-write.
     *
     * @param string $val The value of the name
     *

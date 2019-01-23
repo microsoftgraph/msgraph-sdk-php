@@ -27,6 +27,7 @@ class AutomaticRepliesMailTips extends Entity
 {
     /**
     * Gets the message
+    * The automatic reply message.
     *
     * @return string The message
     */
@@ -41,6 +42,7 @@ class AutomaticRepliesMailTips extends Entity
 
     /**
     * Sets the message
+    * The automatic reply message.
     *
     * @param string $val The value of the message
     *
@@ -54,6 +56,7 @@ class AutomaticRepliesMailTips extends Entity
 
     /**
     * Gets the messageLanguage
+    * The language that the automatic reply message is in.
     *
     * @return LocaleInfo The messageLanguage
     */
@@ -72,6 +75,7 @@ class AutomaticRepliesMailTips extends Entity
 
     /**
     * Sets the messageLanguage
+    * The language that the automatic reply message is in.
     *
     * @param LocaleInfo $val The value to assign to the messageLanguage
     *
@@ -85,6 +89,7 @@ class AutomaticRepliesMailTips extends Entity
 
     /**
     * Gets the scheduledStartTime
+    * The date and time that automatic replies are set to begin.
     *
     * @return DateTimeTimeZone The scheduledStartTime
     */
@@ -103,6 +108,7 @@ class AutomaticRepliesMailTips extends Entity
 
     /**
     * Sets the scheduledStartTime
+    * The date and time that automatic replies are set to begin.
     *
     * @param DateTimeTimeZone $val The value to assign to the scheduledStartTime
     *
@@ -116,6 +122,7 @@ class AutomaticRepliesMailTips extends Entity
 
     /**
     * Gets the scheduledEndTime
+    * The date and time that automatic replies are set to end.
     *
     * @return DateTimeTimeZone The scheduledEndTime
     */
@@ -134,6 +141,7 @@ class AutomaticRepliesMailTips extends Entity
 
     /**
     * Sets the scheduledEndTime
+    * The date and time that automatic replies are set to end.
     *
     * @param DateTimeTimeZone $val The value to assign to the scheduledEndTime
     *

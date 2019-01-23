@@ -148,7 +148,7 @@ class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity
     
     /**
     * Gets the status
-    * Compliance status of the policy report. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict.
+    * Compliance status of the policy report. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
     *
     * @return ComplianceStatus The status
     */
@@ -167,7 +167,7 @@ class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity
     
     /**
     * Sets the status
-    * Compliance status of the policy report. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict.
+    * Compliance status of the policy report. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
     *
     * @param ComplianceStatus $val The status
     *

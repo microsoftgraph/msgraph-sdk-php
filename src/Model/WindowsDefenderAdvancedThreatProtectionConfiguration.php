@@ -28,7 +28,7 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
 {
     /**
     * Gets the allowSampleSharing
-    * Windows Defender AdvancedThreatProtection "Allow Sample Sharing" Rule
+    * Windows Defender AdvancedThreatProtection 'Allow Sample Sharing' Rule
     *
     * @return bool The allowSampleSharing
     */
@@ -43,7 +43,7 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
     
     /**
     * Sets the allowSampleSharing
-    * Windows Defender AdvancedThreatProtection "Allow Sample Sharing" Rule
+    * Windows Defender AdvancedThreatProtection 'Allow Sample Sharing' Rule
     *
     * @param bool $val The allowSampleSharing
     *

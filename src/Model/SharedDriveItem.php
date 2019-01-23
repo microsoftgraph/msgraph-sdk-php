@@ -190,6 +190,7 @@ class SharedDriveItem extends BaseItem
     
     /**
     * Gets the root
+    * Used to access the underlying driveItem. Deprecated -- use driveItem instead.
     *
     * @return DriveItem The root
     */
@@ -208,6 +209,7 @@ class SharedDriveItem extends BaseItem
     
     /**
     * Sets the root
+    * Used to access the underlying driveItem. Deprecated -- use driveItem instead.
     *
     * @param DriveItem $val The root
     *

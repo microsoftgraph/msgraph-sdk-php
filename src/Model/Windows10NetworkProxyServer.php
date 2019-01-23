@@ -27,7 +27,7 @@ class Windows10NetworkProxyServer extends Entity
 {
     /**
     * Gets the address
-    * Address to the proxy server. Specify an address in the format [":"]
+    * Address to the proxy server. Specify an address in the format [':']
     *
     * @return string The address
     */
@@ -42,7 +42,7 @@ class Windows10NetworkProxyServer extends Entity
 
     /**
     * Sets the address
-    * Address to the proxy server. Specify an address in the format [":"]
+    * Address to the proxy server. Specify an address in the format [':']
     *
     * @param string $val The value of the address
     *

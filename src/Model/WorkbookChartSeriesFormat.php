@@ -28,6 +28,7 @@ class WorkbookChartSeriesFormat extends Entity
 {
     /**
     * Gets the fill
+    * Represents the fill format of a chart series, which includes background formating information. Read-only.
     *
     * @return WorkbookChartFill The fill
     */
@@ -46,6 +47,7 @@ class WorkbookChartSeriesFormat extends Entity
     
     /**
     * Sets the fill
+    * Represents the fill format of a chart series, which includes background formating information. Read-only.
     *
     * @param WorkbookChartFill $val The fill
     *
@@ -59,6 +61,7 @@ class WorkbookChartSeriesFormat extends Entity
     
     /**
     * Gets the line
+    * Represents line formatting. Read-only.
     *
     * @return WorkbookChartLineFormat The line
     */
@@ -77,6 +80,7 @@ class WorkbookChartSeriesFormat extends Entity
     
     /**
     * Sets the line
+    * Represents line formatting. Read-only.
     *
     * @param WorkbookChartLineFormat $val The line
     *

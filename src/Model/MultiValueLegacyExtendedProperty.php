@@ -28,6 +28,7 @@ class MultiValueLegacyExtendedProperty extends Entity
 {
     /**
     * Gets the value
+    * A collection of property values.
     *
     * @return string The value
     */
@@ -42,6 +43,7 @@ class MultiValueLegacyExtendedProperty extends Entity
     
     /**
     * Sets the value
+    * A collection of property values.
     *
     * @param string $val The value
     *

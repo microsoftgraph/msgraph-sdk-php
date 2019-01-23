@@ -27,6 +27,7 @@ class NetworkConnection extends Entity
 {
     /**
     * Gets the applicationName
+    * Name of the application managing the network connection (for example, Facebook, SMTP, etc.).
     *
     * @return string The applicationName
     */
@@ -41,6 +42,7 @@ class NetworkConnection extends Entity
 
     /**
     * Sets the applicationName
+    * Name of the application managing the network connection (for example, Facebook, SMTP, etc.).
     *
     * @param string $val The value of the applicationName
     *
@@ -53,6 +55,7 @@ class NetworkConnection extends Entity
     }
     /**
     * Gets the destinationAddress
+    * Destination IP address (of the network connection).
     *
     * @return string The destinationAddress
     */
@@ -67,6 +70,7 @@ class NetworkConnection extends Entity
 
     /**
     * Sets the destinationAddress
+    * Destination IP address (of the network connection).
     *
     * @param string $val The value of the destinationAddress
     *
@@ -79,6 +83,7 @@ class NetworkConnection extends Entity
     }
     /**
     * Gets the destinationDomain
+    * Destination domain portion of the destination URL. (for example 'www.contoso.com').
     *
     * @return string The destinationDomain
     */
@@ -93,6 +98,7 @@ class NetworkConnection extends Entity
 
     /**
     * Sets the destinationDomain
+    * Destination domain portion of the destination URL. (for example 'www.contoso.com').
     *
     * @param string $val The value of the destinationDomain
     *
@@ -105,6 +111,7 @@ class NetworkConnection extends Entity
     }
     /**
     * Gets the destinationPort
+    * Destination port (of the network connection).
     *
     * @return string The destinationPort
     */
@@ -119,6 +126,7 @@ class NetworkConnection extends Entity
 
     /**
     * Sets the destinationPort
+    * Destination port (of the network connection).
     *
     * @param string $val The value of the destinationPort
     *
@@ -131,6 +139,7 @@ class NetworkConnection extends Entity
     }
     /**
     * Gets the destinationUrl
+    * Network connection URL/URI string - excluding parameters. (for example 'www.contoso.com/products/default.html')
     *
     * @return string The destinationUrl
     */
@@ -145,6 +154,7 @@ class NetworkConnection extends Entity
 
     /**
     * Sets the destinationUrl
+    * Network connection URL/URI string - excluding parameters. (for example 'www.contoso.com/products/default.html')
     *
     * @param string $val The value of the destinationUrl
     *
@@ -158,6 +168,7 @@ class NetworkConnection extends Entity
 
     /**
     * Gets the direction
+    * Network connection direction. Possible values are: unknown, inbound, outbound.
     *
     * @return ConnectionDirection The direction
     */
@@ -176,6 +187,7 @@ class NetworkConnection extends Entity
 
     /**
     * Sets the direction
+    * Network connection direction. Possible values are: unknown, inbound, outbound.
     *
     * @param ConnectionDirection $val The value to assign to the direction
     *
@@ -189,6 +201,7 @@ class NetworkConnection extends Entity
 
     /**
     * Gets the domainRegisteredDateTime
+    * Date when the destination domain was registered. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The domainRegisteredDateTime
     */
@@ -207,6 +220,7 @@ class NetworkConnection extends Entity
 
     /**
     * Sets the domainRegisteredDateTime
+    * Date when the destination domain was registered. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The value to assign to the domainRegisteredDateTime
     *
@@ -219,6 +233,7 @@ class NetworkConnection extends Entity
     }
     /**
     * Gets the localDnsName
+    * The local DNS name resolution as it appears in the host's local DNS cache (for example, in case the 'hosts' file was tampered with).
     *
     * @return string The localDnsName
     */
@@ -233,6 +248,7 @@ class NetworkConnection extends Entity
 
     /**
     * Sets the localDnsName
+    * The local DNS name resolution as it appears in the host's local DNS cache (for example, in case the 'hosts' file was tampered with).
     *
     * @param string $val The value of the localDnsName
     *
@@ -245,6 +261,7 @@ class NetworkConnection extends Entity
     }
     /**
     * Gets the natDestinationAddress
+    * Network Address Translation destination IP address.
     *
     * @return string The natDestinationAddress
     */
@@ -259,6 +276,7 @@ class NetworkConnection extends Entity
 
     /**
     * Sets the natDestinationAddress
+    * Network Address Translation destination IP address.
     *
     * @param string $val The value of the natDestinationAddress
     *
@@ -271,6 +289,7 @@ class NetworkConnection extends Entity
     }
     /**
     * Gets the natDestinationPort
+    * Network Address Translation destination port.
     *
     * @return string The natDestinationPort
     */
@@ -285,6 +304,7 @@ class NetworkConnection extends Entity
 
     /**
     * Sets the natDestinationPort
+    * Network Address Translation destination port.
     *
     * @param string $val The value of the natDestinationPort
     *
@@ -297,6 +317,7 @@ class NetworkConnection extends Entity
     }
     /**
     * Gets the natSourceAddress
+    * Network Address Translation source IP address.
     *
     * @return string The natSourceAddress
     */
@@ -311,6 +332,7 @@ class NetworkConnection extends Entity
 
     /**
     * Sets the natSourceAddress
+    * Network Address Translation source IP address.
     *
     * @param string $val The value of the natSourceAddress
     *
@@ -323,6 +345,7 @@ class NetworkConnection extends Entity
     }
     /**
     * Gets the natSourcePort
+    * Network Address Translation source port.
     *
     * @return string The natSourcePort
     */
@@ -337,6 +360,7 @@ class NetworkConnection extends Entity
 
     /**
     * Sets the natSourcePort
+    * Network Address Translation source port.
     *
     * @param string $val The value of the natSourcePort
     *
@@ -350,6 +374,7 @@ class NetworkConnection extends Entity
 
     /**
     * Gets the protocol
+    * Network protocol. Possible values are: unknown, ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII.
     *
     * @return SecurityNetworkProtocol The protocol
     */
@@ -368,6 +393,7 @@ class NetworkConnection extends Entity
 
     /**
     * Sets the protocol
+    * Network protocol. Possible values are: unknown, ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII.
     *
     * @param SecurityNetworkProtocol $val The value to assign to the protocol
     *
@@ -380,6 +406,7 @@ class NetworkConnection extends Entity
     }
     /**
     * Gets the riskScore
+    * Provider generated/calculated risk score of the network connection. Recommended value range of 0-1, which equates to a percentage.
     *
     * @return string The riskScore
     */
@@ -394,6 +421,7 @@ class NetworkConnection extends Entity
 
     /**
     * Sets the riskScore
+    * Provider generated/calculated risk score of the network connection. Recommended value range of 0-1, which equates to a percentage.
     *
     * @param string $val The value of the riskScore
     *
@@ -406,6 +434,7 @@ class NetworkConnection extends Entity
     }
     /**
     * Gets the sourceAddress
+    * Source (i.e. origin) IP address (of the network connection).
     *
     * @return string The sourceAddress
     */
@@ -420,6 +449,7 @@ class NetworkConnection extends Entity
 
     /**
     * Sets the sourceAddress
+    * Source (i.e. origin) IP address (of the network connection).
     *
     * @param string $val The value of the sourceAddress
     *
@@ -432,6 +462,7 @@ class NetworkConnection extends Entity
     }
     /**
     * Gets the sourcePort
+    * Source (i.e. origin) IP port (of the network connection).
     *
     * @return string The sourcePort
     */
@@ -446,6 +477,7 @@ class NetworkConnection extends Entity
 
     /**
     * Sets the sourcePort
+    * Source (i.e. origin) IP port (of the network connection).
     *
     * @param string $val The value of the sourcePort
     *
@@ -459,6 +491,7 @@ class NetworkConnection extends Entity
 
     /**
     * Gets the status
+    * Network connection status. Possible values are: unknown, attempted, succeeded, blocked, failed.
     *
     * @return ConnectionStatus The status
     */
@@ -477,6 +510,7 @@ class NetworkConnection extends Entity
 
     /**
     * Sets the status
+    * Network connection status. Possible values are: unknown, attempted, succeeded, blocked, failed.
     *
     * @param ConnectionStatus $val The value to assign to the status
     *
@@ -489,6 +523,7 @@ class NetworkConnection extends Entity
     }
     /**
     * Gets the urlParameters
+    * Parameters (suffix) of the destination URL.
     *
     * @return string The urlParameters
     */
@@ -503,6 +538,7 @@ class NetworkConnection extends Entity
 
     /**
     * Sets the urlParameters
+    * Parameters (suffix) of the destination URL.
     *
     * @param string $val The value of the urlParameters
     *

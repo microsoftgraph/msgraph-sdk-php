@@ -210,7 +210,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection
     
     /**
     * Gets the pinSpecialCharacters
-    * Integer value that configures the use of special characters in the Windows Hello for Business PIN. Valid special characters for Windows Hello for Business PIN gestures include: ! " # $ % & ' ( )  + , - . / : ; < = > ? @ [ \ ] ^  ` {
+    * Integer value that configures the use of special characters in the Windows Hello for Business PIN. Valid special characters for Windows Hello for Business PIN gestures include: ! ' # $ % &amp; ' ( )  + , - . / : ; &amp;lt; = &amp;gt; ? @ [ / ] ^  ` {
     *
     * @return WindowsInformationProtectionPinCharacterRequirements The pinSpecialCharacters
     */
@@ -229,7 +229,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection
     
     /**
     * Sets the pinSpecialCharacters
-    * Integer value that configures the use of special characters in the Windows Hello for Business PIN. Valid special characters for Windows Hello for Business PIN gestures include: ! " # $ % & ' ( )  + , - . / : ; < = > ? @ [ \ ] ^  ` {
+    * Integer value that configures the use of special characters in the Windows Hello for Business PIN. Valid special characters for Windows Hello for Business PIN gestures include: ! ' # $ % &amp; ' ( )  + , - . / : ; &amp;lt; = &amp;gt; ? @ [ / ] ^  ` {
     *
     * @param WindowsInformationProtectionPinCharacterRequirements $val The pinSpecialCharacters
     *
@@ -301,7 +301,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection
     
     /**
     * Gets the passwordMaximumAttemptCount
-    * The number of authentication failures allowed before the device will be wiped. A value of 0 disables device wipe functionality. Range is an integer X where 4 <= X <= 16 for desktop and 0 <= X <= 999 for mobile devices.
+    * The number of authentication failures allowed before the device will be wiped. A value of 0 disables device wipe functionality. Range is an integer X where 4 &amp;lt;= X &amp;lt;= 16 for desktop and 0 &amp;lt;= X &amp;lt;= 999 for mobile devices.
     *
     * @return int The passwordMaximumAttemptCount
     */
@@ -316,7 +316,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection
     
     /**
     * Sets the passwordMaximumAttemptCount
-    * The number of authentication failures allowed before the device will be wiped. A value of 0 disables device wipe functionality. Range is an integer X where 4 <= X <= 16 for desktop and 0 <= X <= 999 for mobile devices.
+    * The number of authentication failures allowed before the device will be wiped. A value of 0 disables device wipe functionality. Range is an integer X where 4 &amp;lt;= X &amp;lt;= 16 for desktop and 0 &amp;lt;= X &amp;lt;= 999 for mobile devices.
     *
     * @param int $val The passwordMaximumAttemptCount
     *
@@ -330,7 +330,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection
     
     /**
     * Gets the minutesOfInactivityBeforeDeviceLock
-    * Specifies the maximum amount of time (in minutes) allowed after the device is idle that will cause the device to become PIN or password locked.   Range is an integer X where 0 <= X <= 999.
+    * Specifies the maximum amount of time (in minutes) allowed after the device is idle that will cause the device to become PIN or password locked.   Range is an integer X where 0 &amp;lt;= X &amp;lt;= 999.
     *
     * @return int The minutesOfInactivityBeforeDeviceLock
     */
@@ -345,7 +345,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection
     
     /**
     * Sets the minutesOfInactivityBeforeDeviceLock
-    * Specifies the maximum amount of time (in minutes) allowed after the device is idle that will cause the device to become PIN or password locked.   Range is an integer X where 0 <= X <= 999.
+    * Specifies the maximum amount of time (in minutes) allowed after the device is idle that will cause the device to become PIN or password locked.   Range is an integer X where 0 &amp;lt;= X &amp;lt;= 999.
     *
     * @param int $val The minutesOfInactivityBeforeDeviceLock
     *

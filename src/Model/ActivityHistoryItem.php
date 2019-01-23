@@ -28,6 +28,7 @@ class ActivityHistoryItem extends Entity
 {
     /**
     * Gets the status
+    * Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored.
     *
     * @return Status The status
     */
@@ -46,6 +47,7 @@ class ActivityHistoryItem extends Entity
     
     /**
     * Sets the status
+    * Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored.
     *
     * @param Status $val The status
     *
@@ -59,6 +61,7 @@ class ActivityHistoryItem extends Entity
     
     /**
     * Gets the activeDurationSeconds
+    * Optional. The duration of active user engagement. if not supplied, this is calculated from the startedDateTime and lastActiveDateTime.
     *
     * @return int The activeDurationSeconds
     */
@@ -73,6 +76,7 @@ class ActivityHistoryItem extends Entity
     
     /**
     * Sets the activeDurationSeconds
+    * Optional. The duration of active user engagement. if not supplied, this is calculated from the startedDateTime and lastActiveDateTime.
     *
     * @param int $val The activeDurationSeconds
     *
@@ -86,6 +90,7 @@ class ActivityHistoryItem extends Entity
     
     /**
     * Gets the createdDateTime
+    * Set by the server. DateTime in UTC when the object was created on the server.
     *
     * @return \DateTime The createdDateTime
     */
@@ -104,6 +109,7 @@ class ActivityHistoryItem extends Entity
     
     /**
     * Sets the createdDateTime
+    * Set by the server. DateTime in UTC when the object was created on the server.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -117,6 +123,7 @@ class ActivityHistoryItem extends Entity
     
     /**
     * Gets the lastActiveDateTime
+    * Optional. UTC DateTime when the historyItem (activity session) was last understood as active or finished - if null, historyItem status should be Ongoing.
     *
     * @return \DateTime The lastActiveDateTime
     */
@@ -135,6 +142,7 @@ class ActivityHistoryItem extends Entity
     
     /**
     * Sets the lastActiveDateTime
+    * Optional. UTC DateTime when the historyItem (activity session) was last understood as active or finished - if null, historyItem status should be Ongoing.
     *
     * @param \DateTime $val The lastActiveDateTime
     *
@@ -148,6 +156,7 @@ class ActivityHistoryItem extends Entity
     
     /**
     * Gets the lastModifiedDateTime
+    * Set by the server. DateTime in UTC when the object was modified on the server.
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -166,6 +175,7 @@ class ActivityHistoryItem extends Entity
     
     /**
     * Sets the lastModifiedDateTime
+    * Set by the server. DateTime in UTC when the object was modified on the server.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -179,6 +189,7 @@ class ActivityHistoryItem extends Entity
     
     /**
     * Gets the expirationDateTime
+    * Optional. UTC DateTime when the historyItem will undergo hard-delete. Can be set by the client.
     *
     * @return \DateTime The expirationDateTime
     */
@@ -197,6 +208,7 @@ class ActivityHistoryItem extends Entity
     
     /**
     * Sets the expirationDateTime
+    * Optional. UTC DateTime when the historyItem will undergo hard-delete. Can be set by the client.
     *
     * @param \DateTime $val The expirationDateTime
     *
@@ -210,6 +222,7 @@ class ActivityHistoryItem extends Entity
     
     /**
     * Gets the startedDateTime
+    * Required. UTC DateTime when the historyItem (activity session) was started. Required for timeline history.
     *
     * @return \DateTime The startedDateTime
     */
@@ -228,6 +241,7 @@ class ActivityHistoryItem extends Entity
     
     /**
     * Sets the startedDateTime
+    * Required. UTC DateTime when the historyItem (activity session) was started. Required for timeline history.
     *
     * @param \DateTime $val The startedDateTime
     *
@@ -241,6 +255,7 @@ class ActivityHistoryItem extends Entity
     
     /**
     * Gets the userTimezone
+    * Optional. The timezone in which the user's device used to generate the activity was located at activity creation time. Values supplied as Olson IDs in order to support cross-platform representation.
     *
     * @return string The userTimezone
     */
@@ -255,6 +270,7 @@ class ActivityHistoryItem extends Entity
     
     /**
     * Sets the userTimezone
+    * Optional. The timezone in which the user's device used to generate the activity was located at activity creation time. Values supplied as Olson IDs in order to support cross-platform representation.
     *
     * @param string $val The userTimezone
     *
@@ -268,6 +284,7 @@ class ActivityHistoryItem extends Entity
     
     /**
     * Gets the activity
+    * Optional. NavigationProperty/Containment; navigation property to the associated activity.
     *
     * @return UserActivity The activity
     */
@@ -286,6 +303,7 @@ class ActivityHistoryItem extends Entity
     
     /**
     * Sets the activity
+    * Optional. NavigationProperty/Containment; navigation property to the associated activity.
     *
     * @param UserActivity $val The activity
     *

@@ -28,7 +28,7 @@ class Website extends Entity
 
     /**
     * Gets the type
-    * Possible values are: other, home, work, blog, profile.
+    * The possible values are: other, home, work, blog, profile.
     *
     * @return WebsiteType The type
     */
@@ -47,7 +47,7 @@ class Website extends Entity
 
     /**
     * Sets the type
-    * Possible values are: other, home, work, blog, profile.
+    * The possible values are: other, home, work, blog, profile.
     *
     * @param WebsiteType $val The value to assign to the type
     *

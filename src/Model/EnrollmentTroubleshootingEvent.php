@@ -206,7 +206,7 @@ class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshootingEven
     
     /**
     * Gets the failureCategory
-    * Highlevel failure category. Possible values are: unknown, authentication, authorization, accountValidation, userValidation, deviceNotSupported, inMaintenance, badRequest, featureNotSupported, enrollmentRestrictionsEnforced, clientDisconnected.
+    * Highlevel failure category. Possible values are: unknown, authentication, authorization, accountValidation, userValidation, deviceNotSupported, inMaintenance, badRequest, featureNotSupported, enrollmentRestrictionsEnforced, clientDisconnected, userAbandonment.
     *
     * @return DeviceEnrollmentFailureReason The failureCategory
     */
@@ -225,7 +225,7 @@ class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshootingEven
     
     /**
     * Sets the failureCategory
-    * Highlevel failure category. Possible values are: unknown, authentication, authorization, accountValidation, userValidation, deviceNotSupported, inMaintenance, badRequest, featureNotSupported, enrollmentRestrictionsEnforced, clientDisconnected.
+    * Highlevel failure category. Possible values are: unknown, authentication, authorization, accountValidation, userValidation, deviceNotSupported, inMaintenance, badRequest, featureNotSupported, enrollmentRestrictionsEnforced, clientDisconnected, userAbandonment.
     *
     * @param DeviceEnrollmentFailureReason $val The failureCategory
     *

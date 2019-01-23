@@ -28,6 +28,7 @@ class WorkbookChartSeries extends Entity
 {
     /**
     * Gets the name
+    * Represents the name of a series in a chart.
     *
     * @return string The name
     */
@@ -42,6 +43,7 @@ class WorkbookChartSeries extends Entity
     
     /**
     * Sets the name
+    * Represents the name of a series in a chart.
     *
     * @param string $val The name
     *
@@ -55,6 +57,7 @@ class WorkbookChartSeries extends Entity
     
     /**
     * Gets the format
+    * Represents the formatting of a chart series, which includes fill and line formatting. Read-only.
     *
     * @return WorkbookChartSeriesFormat The format
     */
@@ -73,6 +76,7 @@ class WorkbookChartSeries extends Entity
     
     /**
     * Sets the format
+    * Represents the formatting of a chart series, which includes fill and line formatting. Read-only.
     *
     * @param WorkbookChartSeriesFormat $val The format
     *
@@ -87,6 +91,7 @@ class WorkbookChartSeries extends Entity
 
      /** 
      * Gets the points
+    * Represents a collection of all points in the series. Read-only.
      *
      * @return array The points
      */
@@ -101,6 +106,7 @@ class WorkbookChartSeries extends Entity
     
     /** 
     * Sets the points
+    * Represents a collection of all points in the series. Read-only.
     *
     * @param WorkbookChartPoint $val The points
     *

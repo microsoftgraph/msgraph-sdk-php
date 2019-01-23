@@ -28,6 +28,7 @@ class WorkbookFormatProtection extends Entity
 {
     /**
     * Gets the formulaHidden
+    * Indicates if Excel hides the formula for the cells in the range. A null value indicates that the entire range doesn't have uniform formula hidden setting.
     *
     * @return bool The formulaHidden
     */
@@ -42,6 +43,7 @@ class WorkbookFormatProtection extends Entity
     
     /**
     * Sets the formulaHidden
+    * Indicates if Excel hides the formula for the cells in the range. A null value indicates that the entire range doesn't have uniform formula hidden setting.
     *
     * @param bool $val The formulaHidden
     *
@@ -55,6 +57,7 @@ class WorkbookFormatProtection extends Entity
     
     /**
     * Gets the locked
+    * Indicates if Excel locks the cells in the object. A null value indicates that the entire range doesn't have uniform lock setting.
     *
     * @return bool The locked
     */
@@ -69,6 +72,7 @@ class WorkbookFormatProtection extends Entity
     
     /**
     * Sets the locked
+    * Indicates if Excel locks the cells in the object. A null value indicates that the entire range doesn't have uniform lock setting.
     *
     * @param bool $val The locked
     *
