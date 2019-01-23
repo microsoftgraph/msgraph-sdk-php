@@ -4522,6 +4522,35 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the edgeSendIntranetTrafficToInternetExplorer
+    * Indicates whether or not to switch the intranet traffic from Edge to Internet Explorer.
+    *
+    * @return bool The edgeSendIntranetTrafficToInternetExplorer
+    */
+    public function getEdgeSendIntranetTrafficToInternetExplorer()
+    {
+        if (array_key_exists("edgeSendIntranetTrafficToInternetExplorer", $this->_propDict)) {
+            return $this->_propDict["edgeSendIntranetTrafficToInternetExplorer"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the edgeSendIntranetTrafficToInternetExplorer
+    * Indicates whether or not to switch the intranet traffic from Edge to Internet Explorer.
+    *
+    * @param bool $val The edgeSendIntranetTrafficToInternetExplorer
+    *
+    * @return Windows10GeneralConfiguration
+    */
+    public function setEdgeSendIntranetTrafficToInternetExplorer($val)
+    {
+        $this->_propDict["edgeSendIntranetTrafficToInternetExplorer"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the edgeRequireSmartScreen
     * Indicates whether or not to Require the user to use the smart screen filter.
     *

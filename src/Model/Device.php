@@ -562,6 +562,34 @@ class Device extends DirectoryObject
     
 
      /** 
+     * Gets the transitiveMemberOf
+     *
+     * @return array The transitiveMemberOf
+     */
+    public function getTransitiveMemberOf()
+    {
+        if (array_key_exists("transitiveMemberOf", $this->_propDict)) {
+           return $this->_propDict["transitiveMemberOf"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the transitiveMemberOf
+    *
+    * @param DirectoryObject $val The transitiveMemberOf
+    *
+    * @return Device
+    */
+    public function setTransitiveMemberOf($val)
+    {
+		$this->_propDict["transitiveMemberOf"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the extensions
     * The collection of open extensions defined for the device. Read-only. Nullable.
      *
