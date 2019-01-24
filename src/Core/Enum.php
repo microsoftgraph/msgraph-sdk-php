@@ -45,6 +45,7 @@ abstract class Enum
     */
     public function __construct($value)
     {
+        $value = is_string($value) ? lcfirst($value) : $value;
         if (!self::has($value)) {
             throw new GraphException("Invalid enum value $value");
         }
