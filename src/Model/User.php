@@ -517,6 +517,34 @@ class User extends DirectoryObject
         return $this;
     }
     
+
+     /** 
+     * Gets the licenseAssignmentStates
+     *
+     * @return array The licenseAssignmentStates
+     */
+    public function getLicenseAssignmentStates()
+    {
+        if (array_key_exists("licenseAssignmentStates", $this->_propDict)) {
+           return $this->_propDict["licenseAssignmentStates"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the licenseAssignmentStates
+    *
+    * @param LicenseAssignmentState $val The licenseAssignmentStates
+    *
+    * @return User
+    */
+    public function setLicenseAssignmentStates($val)
+    {
+		$this->_propDict["licenseAssignmentStates"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the mail
     * The SMTP address for the user, for example, 'jeff@contoso.onmicrosoft.com'. Read-Only. Supports $filter.
