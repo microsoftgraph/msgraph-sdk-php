@@ -289,6 +289,7 @@ class EducationUser extends Entity
 
      /** 
      * Gets the relatedContacts
+    * Set of contacts related to the user.  This optional property must be specified in a $select clause and can only be retrieved for an individual user.
      *
      * @return array The relatedContacts
      */
@@ -303,6 +304,7 @@ class EducationUser extends Entity
     
     /** 
     * Sets the relatedContacts
+    * Set of contacts related to the user.  This optional property must be specified in a $select clause and can only be retrieved for an individual user.
     *
     * @param EducationRelatedContact $val The relatedContacts
     *
