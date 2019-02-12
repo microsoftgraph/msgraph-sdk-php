@@ -1,5 +1,5 @@
 {
-	"name": "tutu/lib-msgraph-sdk",
+	"name": "tutu-ru/lib-msgraph-sdk",
 	"type": "library",
 	"description": "The Microsoft Graph SDK for PHP",
 	"homepage": "https://graph.microsoft.io/en-us/",
