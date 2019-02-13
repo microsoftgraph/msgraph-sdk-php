@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * SharingInvitation class
 *
@@ -63,7 +63,7 @@ class SharingInvitation extends Entity
     public function getInvitedBy()
     {
         if (array_key_exists("invitedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["invitedBy"], "Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["invitedBy"], "Microsoft\Graph\Beta\Model\IdentitySet")) {
                 return $this->_propDict["invitedBy"];
             } else {
                 $this->_propDict["invitedBy"] = new IdentitySet($this->_propDict["invitedBy"]);

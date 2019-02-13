@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * StringKeyAttributeMappingSourceValuePair class
 *
@@ -60,7 +60,7 @@ class StringKeyAttributeMappingSourceValuePair extends Entity
     public function getValue()
     {
         if (array_key_exists("value", $this->_propDict)) {
-            if (is_a($this->_propDict["value"], "Microsoft\Graph\Model\AttributeMappingSource")) {
+            if (is_a($this->_propDict["value"], "Microsoft\Graph\Beta\Model\AttributeMappingSource")) {
                 return $this->_propDict["value"];
             } else {
                 $this->_propDict["value"] = new AttributeMappingSource($this->_propDict["value"]);

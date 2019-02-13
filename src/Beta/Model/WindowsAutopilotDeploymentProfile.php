@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * WindowsAutopilotDeploymentProfile class
@@ -188,7 +188,7 @@ class WindowsAutopilotDeploymentProfile extends Entity
     public function getOutOfBoxExperienceSettings()
     {
         if (array_key_exists("outOfBoxExperienceSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["outOfBoxExperienceSettings"], "Microsoft\Graph\Model\OutOfBoxExperienceSettings")) {
+            if (is_a($this->_propDict["outOfBoxExperienceSettings"], "Microsoft\Graph\Beta\Model\OutOfBoxExperienceSettings")) {
                 return $this->_propDict["outOfBoxExperienceSettings"];
             } else {
                 $this->_propDict["outOfBoxExperienceSettings"] = new OutOfBoxExperienceSettings($this->_propDict["outOfBoxExperienceSettings"]);
@@ -221,7 +221,7 @@ class WindowsAutopilotDeploymentProfile extends Entity
     public function getEnrollmentStatusScreenSettings()
     {
         if (array_key_exists("enrollmentStatusScreenSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["enrollmentStatusScreenSettings"], "Microsoft\Graph\Model\WindowsEnrollmentStatusScreenSettings")) {
+            if (is_a($this->_propDict["enrollmentStatusScreenSettings"], "Microsoft\Graph\Beta\Model\WindowsEnrollmentStatusScreenSettings")) {
                 return $this->_propDict["enrollmentStatusScreenSettings"];
             } else {
                 $this->_propDict["enrollmentStatusScreenSettings"] = new WindowsEnrollmentStatusScreenSettings($this->_propDict["enrollmentStatusScreenSettings"]);

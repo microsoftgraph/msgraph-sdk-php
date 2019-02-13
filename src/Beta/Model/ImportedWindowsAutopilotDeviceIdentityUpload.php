@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * ImportedWindowsAutopilotDeviceIdentityUpload class
@@ -68,7 +68,7 @@ class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Microsoft\Graph\Model\ImportedWindowsAutopilotDeviceIdentityUploadStatus")) {
+            if (is_a($this->_propDict["status"], "Microsoft\Graph\Beta\Model\ImportedWindowsAutopilotDeviceIdentityUploadStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new ImportedWindowsAutopilotDeviceIdentityUploadStatus($this->_propDict["status"]);

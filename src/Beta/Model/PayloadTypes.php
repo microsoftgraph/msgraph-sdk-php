@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * PayloadTypes class
 *
@@ -60,7 +60,7 @@ class PayloadTypes extends Entity
     public function getVisualContent()
     {
         if (array_key_exists("visualContent", $this->_propDict)) {
-            if (is_a($this->_propDict["visualContent"], "Microsoft\Graph\Model\VisualProperties")) {
+            if (is_a($this->_propDict["visualContent"], "Microsoft\Graph\Beta\Model\VisualProperties")) {
                 return $this->_propDict["visualContent"];
             } else {
                 $this->_propDict["visualContent"] = new VisualProperties($this->_propDict["visualContent"]);

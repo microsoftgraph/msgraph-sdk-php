@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * TargetResource class
 *
@@ -86,7 +86,7 @@ class TargetResource extends Entity
     public function getModifiedProperties()
     {
         if (array_key_exists("modifiedProperties", $this->_propDict)) {
-            if (is_a($this->_propDict["modifiedProperties"], "Microsoft\Graph\Model\ModifiedProperty")) {
+            if (is_a($this->_propDict["modifiedProperties"], "Microsoft\Graph\Beta\Model\ModifiedProperty")) {
                 return $this->_propDict["modifiedProperties"];
             } else {
                 $this->_propDict["modifiedProperties"] = new ModifiedProperty($this->_propDict["modifiedProperties"]);

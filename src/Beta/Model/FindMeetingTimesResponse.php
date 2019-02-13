@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * FindMeetingTimesResponse class
 *
@@ -34,7 +34,7 @@ class FindMeetingTimesResponse extends Entity
     public function getMeetingTimeSuggestions()
     {
         if (array_key_exists("meetingTimeSuggestions", $this->_propDict)) {
-            if (is_a($this->_propDict["meetingTimeSuggestions"], "Microsoft\Graph\Model\MeetingTimeSuggestionGriffin")) {
+            if (is_a($this->_propDict["meetingTimeSuggestions"], "Microsoft\Graph\Beta\Model\MeetingTimeSuggestionGriffin")) {
                 return $this->_propDict["meetingTimeSuggestions"];
             } else {
                 $this->_propDict["meetingTimeSuggestions"] = new MeetingTimeSuggestionGriffin($this->_propDict["meetingTimeSuggestions"]);

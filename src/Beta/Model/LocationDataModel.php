@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * LocationDataModel class
 *
@@ -86,7 +86,7 @@ class LocationDataModel extends Entity
     public function getAddress()
     {
         if (array_key_exists("address", $this->_propDict)) {
-            if (is_a($this->_propDict["address"], "Microsoft\Graph\Model\PostalAddressGriffin")) {
+            if (is_a($this->_propDict["address"], "Microsoft\Graph\Beta\Model\PostalAddressGriffin")) {
                 return $this->_propDict["address"];
             } else {
                 $this->_propDict["address"] = new PostalAddressGriffin($this->_propDict["address"]);
@@ -143,7 +143,7 @@ class LocationDataModel extends Entity
     public function getCoordinates()
     {
         if (array_key_exists("coordinates", $this->_propDict)) {
-            if (is_a($this->_propDict["coordinates"], "Microsoft\Graph\Model\GeoCoordinatesGriffin")) {
+            if (is_a($this->_propDict["coordinates"], "Microsoft\Graph\Beta\Model\GeoCoordinatesGriffin")) {
                 return $this->_propDict["coordinates"];
             } else {
                 $this->_propDict["coordinates"] = new GeoCoordinatesGriffin($this->_propDict["coordinates"]);

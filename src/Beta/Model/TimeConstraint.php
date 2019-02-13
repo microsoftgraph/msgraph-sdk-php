@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * TimeConstraint class
 *
@@ -35,7 +35,7 @@ class TimeConstraint extends Entity
     public function getActivityDomain()
     {
         if (array_key_exists("activityDomain", $this->_propDict)) {
-            if (is_a($this->_propDict["activityDomain"], "Microsoft\Graph\Model\ActivityDomain")) {
+            if (is_a($this->_propDict["activityDomain"], "Microsoft\Graph\Beta\Model\ActivityDomain")) {
                 return $this->_propDict["activityDomain"];
             } else {
                 $this->_propDict["activityDomain"] = new ActivityDomain($this->_propDict["activityDomain"]);
@@ -68,7 +68,7 @@ class TimeConstraint extends Entity
     public function getTimeslots()
     {
         if (array_key_exists("timeslots", $this->_propDict)) {
-            if (is_a($this->_propDict["timeslots"], "Microsoft\Graph\Model\TimeSlot")) {
+            if (is_a($this->_propDict["timeslots"], "Microsoft\Graph\Beta\Model\TimeSlot")) {
                 return $this->_propDict["timeslots"];
             } else {
                 $this->_propDict["timeslots"] = new TimeSlot($this->_propDict["timeslots"]);

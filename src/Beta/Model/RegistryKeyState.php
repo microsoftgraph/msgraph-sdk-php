@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * RegistryKeyState class
 *
@@ -35,7 +35,7 @@ class RegistryKeyState extends Entity
     public function getHive()
     {
         if (array_key_exists("hive", $this->_propDict)) {
-            if (is_a($this->_propDict["hive"], "Microsoft\Graph\Model\RegistryHive")) {
+            if (is_a($this->_propDict["hive"], "Microsoft\Graph\Beta\Model\RegistryHive")) {
                 return $this->_propDict["hive"];
             } else {
                 $this->_propDict["hive"] = new RegistryHive($this->_propDict["hive"]);
@@ -180,7 +180,7 @@ class RegistryKeyState extends Entity
     public function getOperation()
     {
         if (array_key_exists("operation", $this->_propDict)) {
-            if (is_a($this->_propDict["operation"], "Microsoft\Graph\Model\RegistryOperation")) {
+            if (is_a($this->_propDict["operation"], "Microsoft\Graph\Beta\Model\RegistryOperation")) {
                 return $this->_propDict["operation"];
             } else {
                 $this->_propDict["operation"] = new RegistryOperation($this->_propDict["operation"]);
@@ -297,7 +297,7 @@ class RegistryKeyState extends Entity
     public function getValueType()
     {
         if (array_key_exists("valueType", $this->_propDict)) {
-            if (is_a($this->_propDict["valueType"], "Microsoft\Graph\Model\RegistryValueType")) {
+            if (is_a($this->_propDict["valueType"], "Microsoft\Graph\Beta\Model\RegistryValueType")) {
                 return $this->_propDict["valueType"];
             } else {
                 $this->_propDict["valueType"] = new RegistryValueType($this->_propDict["valueType"]);

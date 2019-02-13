@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * AttendeeAvailabilityDataModel class
 *
@@ -34,7 +34,7 @@ class AttendeeAvailabilityDataModel extends Entity
     public function getAttendee()
     {
         if (array_key_exists("attendee", $this->_propDict)) {
-            if (is_a($this->_propDict["attendee"], "Microsoft\Graph\Model\AttendeeGriffin")) {
+            if (is_a($this->_propDict["attendee"], "Microsoft\Graph\Beta\Model\AttendeeGriffin")) {
                 return $this->_propDict["attendee"];
             } else {
                 $this->_propDict["attendee"] = new AttendeeGriffin($this->_propDict["attendee"]);
@@ -65,7 +65,7 @@ class AttendeeAvailabilityDataModel extends Entity
     public function getAvailability()
     {
         if (array_key_exists("availability", $this->_propDict)) {
-            if (is_a($this->_propDict["availability"], "Microsoft\Graph\Model\AvailabilityStatus")) {
+            if (is_a($this->_propDict["availability"], "Microsoft\Graph\Beta\Model\AvailabilityStatus")) {
                 return $this->_propDict["availability"];
             } else {
                 $this->_propDict["availability"] = new AvailabilityStatus($this->_propDict["availability"]);

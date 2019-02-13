@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * WindowsIdentityProtectionConfiguration class
@@ -122,7 +122,7 @@ class WindowsIdentityProtectionConfiguration extends DeviceConfiguration
     public function getPinUppercaseCharactersUsage()
     {
         if (array_key_exists("pinUppercaseCharactersUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["pinUppercaseCharactersUsage"], "Microsoft\Graph\Model\ConfigurationUsage")) {
+            if (is_a($this->_propDict["pinUppercaseCharactersUsage"], "Microsoft\Graph\Beta\Model\ConfigurationUsage")) {
                 return $this->_propDict["pinUppercaseCharactersUsage"];
             } else {
                 $this->_propDict["pinUppercaseCharactersUsage"] = new ConfigurationUsage($this->_propDict["pinUppercaseCharactersUsage"]);
@@ -155,7 +155,7 @@ class WindowsIdentityProtectionConfiguration extends DeviceConfiguration
     public function getPinLowercaseCharactersUsage()
     {
         if (array_key_exists("pinLowercaseCharactersUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["pinLowercaseCharactersUsage"], "Microsoft\Graph\Model\ConfigurationUsage")) {
+            if (is_a($this->_propDict["pinLowercaseCharactersUsage"], "Microsoft\Graph\Beta\Model\ConfigurationUsage")) {
                 return $this->_propDict["pinLowercaseCharactersUsage"];
             } else {
                 $this->_propDict["pinLowercaseCharactersUsage"] = new ConfigurationUsage($this->_propDict["pinLowercaseCharactersUsage"]);
@@ -188,7 +188,7 @@ class WindowsIdentityProtectionConfiguration extends DeviceConfiguration
     public function getPinSpecialCharactersUsage()
     {
         if (array_key_exists("pinSpecialCharactersUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["pinSpecialCharactersUsage"], "Microsoft\Graph\Model\ConfigurationUsage")) {
+            if (is_a($this->_propDict["pinSpecialCharactersUsage"], "Microsoft\Graph\Beta\Model\ConfigurationUsage")) {
                 return $this->_propDict["pinSpecialCharactersUsage"];
             } else {
                 $this->_propDict["pinSpecialCharactersUsage"] = new ConfigurationUsage($this->_propDict["pinSpecialCharactersUsage"]);

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * TiIndicator class
@@ -34,7 +34,7 @@ class TiIndicator extends Entity
     public function getAction()
     {
         if (array_key_exists("action", $this->_propDict)) {
-            if (is_a($this->_propDict["action"], "Microsoft\Graph\Model\TiAction")) {
+            if (is_a($this->_propDict["action"], "Microsoft\Graph\Beta\Model\TiAction")) {
                 return $this->_propDict["action"];
             } else {
                 $this->_propDict["action"] = new TiAction($this->_propDict["action"]);
@@ -200,7 +200,7 @@ class TiIndicator extends Entity
     public function getDiamondModel()
     {
         if (array_key_exists("diamondModel", $this->_propDict)) {
-            if (is_a($this->_propDict["diamondModel"], "Microsoft\Graph\Model\DiamondModel")) {
+            if (is_a($this->_propDict["diamondModel"], "Microsoft\Graph\Beta\Model\DiamondModel")) {
                 return $this->_propDict["diamondModel"];
             } else {
                 $this->_propDict["diamondModel"] = new DiamondModel($this->_propDict["diamondModel"]);
@@ -594,7 +594,7 @@ class TiIndicator extends Entity
     public function getFileHashType()
     {
         if (array_key_exists("fileHashType", $this->_propDict)) {
-            if (is_a($this->_propDict["fileHashType"], "Microsoft\Graph\Model\FileHashType")) {
+            if (is_a($this->_propDict["fileHashType"], "Microsoft\Graph\Beta\Model\FileHashType")) {
                 return $this->_propDict["fileHashType"];
             } else {
                 $this->_propDict["fileHashType"] = new FileHashType($this->_propDict["fileHashType"]);
@@ -1551,7 +1551,7 @@ class TiIndicator extends Entity
     public function getTlpLevel()
     {
         if (array_key_exists("tlpLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["tlpLevel"], "Microsoft\Graph\Model\TlpLevel")) {
+            if (is_a($this->_propDict["tlpLevel"], "Microsoft\Graph\Beta\Model\TlpLevel")) {
                 return $this->_propDict["tlpLevel"];
             } else {
                 $this->_propDict["tlpLevel"] = new TlpLevel($this->_propDict["tlpLevel"]);

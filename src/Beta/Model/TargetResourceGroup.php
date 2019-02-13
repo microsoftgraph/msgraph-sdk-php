@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * TargetResourceGroup class
 *
@@ -43,7 +43,7 @@ class TargetResourceGroup extends TargetResource
     public function getGroupType()
     {
         if (array_key_exists("groupType", $this->_propDict)) {
-            if (is_a($this->_propDict["groupType"], "Microsoft\Graph\Model\GroupType")) {
+            if (is_a($this->_propDict["groupType"], "Microsoft\Graph\Beta\Model\GroupType")) {
                 return $this->_propDict["groupType"];
             } else {
                 $this->_propDict["groupType"] = new GroupType($this->_propDict["groupType"]);

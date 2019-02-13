@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * MeetingTimeSuggestionGriffin class
 *
@@ -86,7 +86,7 @@ class MeetingTimeSuggestionGriffin extends Entity
     public function getOrganizerAvailability()
     {
         if (array_key_exists("organizerAvailability", $this->_propDict)) {
-            if (is_a($this->_propDict["organizerAvailability"], "Microsoft\Graph\Model\AvailabilityStatus")) {
+            if (is_a($this->_propDict["organizerAvailability"], "Microsoft\Graph\Beta\Model\AvailabilityStatus")) {
                 return $this->_propDict["organizerAvailability"];
             } else {
                 $this->_propDict["organizerAvailability"] = new AvailabilityStatus($this->_propDict["organizerAvailability"]);
@@ -117,7 +117,7 @@ class MeetingTimeSuggestionGriffin extends Entity
     public function getAttendeeAvailability()
     {
         if (array_key_exists("attendeeAvailability", $this->_propDict)) {
-            if (is_a($this->_propDict["attendeeAvailability"], "Microsoft\Graph\Model\AttendeeAvailabilityDataModel")) {
+            if (is_a($this->_propDict["attendeeAvailability"], "Microsoft\Graph\Beta\Model\AttendeeAvailabilityDataModel")) {
                 return $this->_propDict["attendeeAvailability"];
             } else {
                 $this->_propDict["attendeeAvailability"] = new AttendeeAvailabilityDataModel($this->_propDict["attendeeAvailability"]);
@@ -148,7 +148,7 @@ class MeetingTimeSuggestionGriffin extends Entity
     public function getLocations()
     {
         if (array_key_exists("locations", $this->_propDict)) {
-            if (is_a($this->_propDict["locations"], "Microsoft\Graph\Model\LocationDataModel")) {
+            if (is_a($this->_propDict["locations"], "Microsoft\Graph\Beta\Model\LocationDataModel")) {
                 return $this->_propDict["locations"];
             } else {
                 $this->_propDict["locations"] = new LocationDataModel($this->_propDict["locations"]);
@@ -205,7 +205,7 @@ class MeetingTimeSuggestionGriffin extends Entity
     public function getMeetingTimeSlot()
     {
         if (array_key_exists("meetingTimeSlot", $this->_propDict)) {
-            if (is_a($this->_propDict["meetingTimeSlot"], "Microsoft\Graph\Model\MeetingTimeSlotDataModel")) {
+            if (is_a($this->_propDict["meetingTimeSlot"], "Microsoft\Graph\Beta\Model\MeetingTimeSlotDataModel")) {
                 return $this->_propDict["meetingTimeSlot"];
             } else {
                 $this->_propDict["meetingTimeSlot"] = new MeetingTimeSlotDataModel($this->_propDict["meetingTimeSlot"]);
