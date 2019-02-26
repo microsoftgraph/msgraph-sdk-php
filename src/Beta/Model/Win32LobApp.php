@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * Win32LobApp class
@@ -93,7 +93,7 @@ class Win32LobApp extends MobileLobApp
     public function getApplicableArchitectures()
     {
         if (array_key_exists("applicableArchitectures", $this->_propDict)) {
-            if (is_a($this->_propDict["applicableArchitectures"], "Microsoft\Graph\Model\WindowsArchitecture")) {
+            if (is_a($this->_propDict["applicableArchitectures"], "Microsoft\Graph\Beta\Model\WindowsArchitecture")) {
                 return $this->_propDict["applicableArchitectures"];
             } else {
                 $this->_propDict["applicableArchitectures"] = new WindowsArchitecture($this->_propDict["applicableArchitectures"]);
@@ -126,7 +126,7 @@ class Win32LobApp extends MobileLobApp
     public function getMinimumSupportedOperatingSystem()
     {
         if (array_key_exists("minimumSupportedOperatingSystem", $this->_propDict)) {
-            if (is_a($this->_propDict["minimumSupportedOperatingSystem"], "Microsoft\Graph\Model\WindowsMinimumOperatingSystem")) {
+            if (is_a($this->_propDict["minimumSupportedOperatingSystem"], "Microsoft\Graph\Beta\Model\WindowsMinimumOperatingSystem")) {
                 return $this->_propDict["minimumSupportedOperatingSystem"];
             } else {
                 $this->_propDict["minimumSupportedOperatingSystem"] = new WindowsMinimumOperatingSystem($this->_propDict["minimumSupportedOperatingSystem"]);
@@ -305,7 +305,7 @@ class Win32LobApp extends MobileLobApp
     public function getInstallExperience()
     {
         if (array_key_exists("installExperience", $this->_propDict)) {
-            if (is_a($this->_propDict["installExperience"], "Microsoft\Graph\Model\Win32LobAppInstallExperience")) {
+            if (is_a($this->_propDict["installExperience"], "Microsoft\Graph\Beta\Model\Win32LobAppInstallExperience")) {
                 return $this->_propDict["installExperience"];
             } else {
                 $this->_propDict["installExperience"] = new Win32LobAppInstallExperience($this->_propDict["installExperience"]);
@@ -368,7 +368,7 @@ class Win32LobApp extends MobileLobApp
     public function getMsiInformation()
     {
         if (array_key_exists("msiInformation", $this->_propDict)) {
-            if (is_a($this->_propDict["msiInformation"], "Microsoft\Graph\Model\Win32LobAppMsiInformation")) {
+            if (is_a($this->_propDict["msiInformation"], "Microsoft\Graph\Beta\Model\Win32LobAppMsiInformation")) {
                 return $this->_propDict["msiInformation"];
             } else {
                 $this->_propDict["msiInformation"] = new Win32LobAppMsiInformation($this->_propDict["msiInformation"]);

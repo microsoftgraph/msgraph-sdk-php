@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * MeetingTimeSuggestion class
 *
@@ -25,39 +25,6 @@ namespace Microsoft\Graph\Model;
 */
 class MeetingTimeSuggestion extends Entity
 {
-
-    /**
-    * Gets the meetingTimeSlot
-    * A time period suggested for the meeting.
-    *
-    * @return TimeSlot The meetingTimeSlot
-    */
-    public function getMeetingTimeSlot()
-    {
-        if (array_key_exists("meetingTimeSlot", $this->_propDict)) {
-            if (is_a($this->_propDict["meetingTimeSlot"], "Microsoft\Graph\Model\TimeSlot")) {
-                return $this->_propDict["meetingTimeSlot"];
-            } else {
-                $this->_propDict["meetingTimeSlot"] = new TimeSlot($this->_propDict["meetingTimeSlot"]);
-                return $this->_propDict["meetingTimeSlot"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the meetingTimeSlot
-    * A time period suggested for the meeting.
-    *
-    * @param TimeSlot $val The value to assign to the meetingTimeSlot
-    *
-    * @return MeetingTimeSuggestion The MeetingTimeSuggestion
-    */
-    public function setMeetingTimeSlot($val)
-    {
-        $this->_propDict["meetingTimeSlot"] = $val;
-         return $this;
-    }
     /**
     * Gets the confidence
     * A percentage that represents the likelhood of all the attendees attending.
@@ -86,20 +53,46 @@ class MeetingTimeSuggestion extends Entity
         $this->_propDict["confidence"] = $val;
         return $this;
     }
+    /**
+    * Gets the order
+    *
+    * @return int The order
+    */
+    public function getOrder()
+    {
+        if (array_key_exists("order", $this->_propDict)) {
+            return $this->_propDict["order"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the order
+    *
+    * @param int $val The value of the order
+    *
+    * @return MeetingTimeSuggestion
+    */
+    public function setOrder($val)
+    {
+        $this->_propDict["order"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the organizerAvailability
     * Availability of the meeting organizer for this meeting suggestion. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
     *
-    * @return FreeBusyStatus The organizerAvailability
+    * @return AvailabilityStatus The organizerAvailability
     */
     public function getOrganizerAvailability()
     {
         if (array_key_exists("organizerAvailability", $this->_propDict)) {
-            if (is_a($this->_propDict["organizerAvailability"], "Microsoft\Graph\Model\FreeBusyStatus")) {
+            if (is_a($this->_propDict["organizerAvailability"], "Microsoft\Graph\Beta\Model\AvailabilityStatus")) {
                 return $this->_propDict["organizerAvailability"];
             } else {
-                $this->_propDict["organizerAvailability"] = new FreeBusyStatus($this->_propDict["organizerAvailability"]);
+                $this->_propDict["organizerAvailability"] = new AvailabilityStatus($this->_propDict["organizerAvailability"]);
                 return $this->_propDict["organizerAvailability"];
             }
         }
@@ -110,7 +103,7 @@ class MeetingTimeSuggestion extends Entity
     * Sets the organizerAvailability
     * Availability of the meeting organizer for this meeting suggestion. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
     *
-    * @param FreeBusyStatus $val The value to assign to the organizerAvailability
+    * @param AvailabilityStatus $val The value to assign to the organizerAvailability
     *
     * @return MeetingTimeSuggestion The MeetingTimeSuggestion
     */
@@ -124,15 +117,15 @@ class MeetingTimeSuggestion extends Entity
     * Gets the attendeeAvailability
     * An array that shows the availability status of each attendee for this meeting suggestion.
     *
-    * @return AttendeeAvailability The attendeeAvailability
+    * @return AttendeeAvailabilityDataModel The attendeeAvailability
     */
     public function getAttendeeAvailability()
     {
         if (array_key_exists("attendeeAvailability", $this->_propDict)) {
-            if (is_a($this->_propDict["attendeeAvailability"], "Microsoft\Graph\Model\AttendeeAvailability")) {
+            if (is_a($this->_propDict["attendeeAvailability"], "Microsoft\Graph\Beta\Model\AttendeeAvailabilityDataModel")) {
                 return $this->_propDict["attendeeAvailability"];
             } else {
-                $this->_propDict["attendeeAvailability"] = new AttendeeAvailability($this->_propDict["attendeeAvailability"]);
+                $this->_propDict["attendeeAvailability"] = new AttendeeAvailabilityDataModel($this->_propDict["attendeeAvailability"]);
                 return $this->_propDict["attendeeAvailability"];
             }
         }
@@ -143,7 +136,7 @@ class MeetingTimeSuggestion extends Entity
     * Sets the attendeeAvailability
     * An array that shows the availability status of each attendee for this meeting suggestion.
     *
-    * @param AttendeeAvailability $val The value to assign to the attendeeAvailability
+    * @param AttendeeAvailabilityDataModel $val The value to assign to the attendeeAvailability
     *
     * @return MeetingTimeSuggestion The MeetingTimeSuggestion
     */
@@ -157,15 +150,15 @@ class MeetingTimeSuggestion extends Entity
     * Gets the locations
     * An array that specifies the name and geographic location of each meeting location for this meeting suggestion.
     *
-    * @return Location The locations
+    * @return LocationDataModel The locations
     */
     public function getLocations()
     {
         if (array_key_exists("locations", $this->_propDict)) {
-            if (is_a($this->_propDict["locations"], "Microsoft\Graph\Model\Location")) {
+            if (is_a($this->_propDict["locations"], "Microsoft\Graph\Beta\Model\LocationDataModel")) {
                 return $this->_propDict["locations"];
             } else {
-                $this->_propDict["locations"] = new Location($this->_propDict["locations"]);
+                $this->_propDict["locations"] = new LocationDataModel($this->_propDict["locations"]);
                 return $this->_propDict["locations"];
             }
         }
@@ -176,7 +169,7 @@ class MeetingTimeSuggestion extends Entity
     * Sets the locations
     * An array that specifies the name and geographic location of each meeting location for this meeting suggestion.
     *
-    * @param Location $val The value to assign to the locations
+    * @param LocationDataModel $val The value to assign to the locations
     *
     * @return MeetingTimeSuggestion The MeetingTimeSuggestion
     */
@@ -212,5 +205,38 @@ class MeetingTimeSuggestion extends Entity
     {
         $this->_propDict["suggestionReason"] = $val;
         return $this;
+    }
+
+    /**
+    * Gets the meetingTimeSlot
+    * A time period suggested for the meeting.
+    *
+    * @return MeetingTimeSlotDataModel The meetingTimeSlot
+    */
+    public function getMeetingTimeSlot()
+    {
+        if (array_key_exists("meetingTimeSlot", $this->_propDict)) {
+            if (is_a($this->_propDict["meetingTimeSlot"], "Microsoft\Graph\Beta\Model\MeetingTimeSlotDataModel")) {
+                return $this->_propDict["meetingTimeSlot"];
+            } else {
+                $this->_propDict["meetingTimeSlot"] = new MeetingTimeSlotDataModel($this->_propDict["meetingTimeSlot"]);
+                return $this->_propDict["meetingTimeSlot"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the meetingTimeSlot
+    * A time period suggested for the meeting.
+    *
+    * @param MeetingTimeSlotDataModel $val The value to assign to the meetingTimeSlot
+    *
+    * @return MeetingTimeSuggestion The MeetingTimeSuggestion
+    */
+    public function setMeetingTimeSlot($val)
+    {
+        $this->_propDict["meetingTimeSlot"] = $val;
+         return $this;
     }
 }

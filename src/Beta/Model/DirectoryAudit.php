@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * DirectoryAudit class
@@ -88,7 +88,7 @@ class DirectoryAudit extends Entity
     public function getResult()
     {
         if (array_key_exists("result", $this->_propDict)) {
-            if (is_a($this->_propDict["result"], "Microsoft\Graph\Model\OperationResult")) {
+            if (is_a($this->_propDict["result"], "Microsoft\Graph\Beta\Model\OperationResult")) {
                 return $this->_propDict["result"];
             } else {
                 $this->_propDict["result"] = new OperationResult($this->_propDict["result"]);
@@ -197,6 +197,60 @@ class DirectoryAudit extends Entity
     }
     
     /**
+    * Gets the loggedByService
+    *
+    * @return string The loggedByService
+    */
+    public function getLoggedByService()
+    {
+        if (array_key_exists("loggedByService", $this->_propDict)) {
+            return $this->_propDict["loggedByService"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the loggedByService
+    *
+    * @param string $val The loggedByService
+    *
+    * @return DirectoryAudit
+    */
+    public function setLoggedByService($val)
+    {
+        $this->_propDict["loggedByService"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the operationType
+    *
+    * @return string The operationType
+    */
+    public function getOperationType()
+    {
+        if (array_key_exists("operationType", $this->_propDict)) {
+            return $this->_propDict["operationType"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the operationType
+    *
+    * @param string $val The operationType
+    *
+    * @return DirectoryAudit
+    */
+    public function setOperationType($val)
+    {
+        $this->_propDict["operationType"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the initiatedBy
     *
     * @return AuditActivityInitiator The initiatedBy
@@ -204,7 +258,7 @@ class DirectoryAudit extends Entity
     public function getInitiatedBy()
     {
         if (array_key_exists("initiatedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["initiatedBy"], "Microsoft\Graph\Model\AuditActivityInitiator")) {
+            if (is_a($this->_propDict["initiatedBy"], "Microsoft\Graph\Beta\Model\AuditActivityInitiator")) {
                 return $this->_propDict["initiatedBy"];
             } else {
                 $this->_propDict["initiatedBy"] = new AuditActivityInitiator($this->_propDict["initiatedBy"]);
@@ -252,33 +306,6 @@ class DirectoryAudit extends Entity
     public function setTargetResources($val)
     {
 		$this->_propDict["targetResources"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the loggedByService
-    *
-    * @return string The loggedByService
-    */
-    public function getLoggedByService()
-    {
-        if (array_key_exists("loggedByService", $this->_propDict)) {
-            return $this->_propDict["loggedByService"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the loggedByService
-    *
-    * @param string $val The loggedByService
-    *
-    * @return DirectoryAudit
-    */
-    public function setLoggedByService($val)
-    {
-        $this->_propDict["loggedByService"] = $val;
         return $this;
     }
     

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * AndroidWorkProfileVpnConfiguration class
@@ -64,7 +64,7 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
     public function getConnectionType()
     {
         if (array_key_exists("connectionType", $this->_propDict)) {
-            if (is_a($this->_propDict["connectionType"], "Microsoft\Graph\Model\AndroidWorkProfileVpnConnectionType")) {
+            if (is_a($this->_propDict["connectionType"], "Microsoft\Graph\Beta\Model\AndroidWorkProfileVpnConnectionType")) {
                 return $this->_propDict["connectionType"];
             } else {
                 $this->_propDict["connectionType"] = new AndroidWorkProfileVpnConnectionType($this->_propDict["connectionType"]);
@@ -274,7 +274,7 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
     public function getAuthenticationMethod()
     {
         if (array_key_exists("authenticationMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["authenticationMethod"], "Microsoft\Graph\Model\VpnAuthenticationMethod")) {
+            if (is_a($this->_propDict["authenticationMethod"], "Microsoft\Graph\Beta\Model\VpnAuthenticationMethod")) {
                 return $this->_propDict["authenticationMethod"];
             } else {
                 $this->_propDict["authenticationMethod"] = new VpnAuthenticationMethod($this->_propDict["authenticationMethod"]);
@@ -307,7 +307,7 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
     public function getIdentityCertificate()
     {
         if (array_key_exists("identityCertificate", $this->_propDict)) {
-            if (is_a($this->_propDict["identityCertificate"], "Microsoft\Graph\Model\AndroidWorkProfileCertificateProfileBase")) {
+            if (is_a($this->_propDict["identityCertificate"], "Microsoft\Graph\Beta\Model\AndroidWorkProfileCertificateProfileBase")) {
                 return $this->_propDict["identityCertificate"];
             } else {
                 $this->_propDict["identityCertificate"] = new AndroidWorkProfileCertificateProfileBase($this->_propDict["identityCertificate"]);

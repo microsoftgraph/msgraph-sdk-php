@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * WindowsKioskAppBase class
 *
@@ -35,7 +35,7 @@ class WindowsKioskAppBase extends Entity
     public function getStartLayoutTileSize()
     {
         if (array_key_exists("startLayoutTileSize", $this->_propDict)) {
-            if (is_a($this->_propDict["startLayoutTileSize"], "Microsoft\Graph\Model\WindowsAppStartLayoutTileSize")) {
+            if (is_a($this->_propDict["startLayoutTileSize"], "Microsoft\Graph\Beta\Model\WindowsAppStartLayoutTileSize")) {
                 return $this->_propDict["startLayoutTileSize"];
             } else {
                 $this->_propDict["startLayoutTileSize"] = new WindowsAppStartLayoutTileSize($this->_propDict["startLayoutTileSize"]);
@@ -96,7 +96,7 @@ class WindowsKioskAppBase extends Entity
     public function getAppType()
     {
         if (array_key_exists("appType", $this->_propDict)) {
-            if (is_a($this->_propDict["appType"], "Microsoft\Graph\Model\WindowsKioskAppType")) {
+            if (is_a($this->_propDict["appType"], "Microsoft\Graph\Beta\Model\WindowsKioskAppType")) {
                 return $this->_propDict["appType"];
             } else {
                 $this->_propDict["appType"] = new WindowsKioskAppType($this->_propDict["appType"]);

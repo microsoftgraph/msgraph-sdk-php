@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * GroupPolicyDefinitionValue class
@@ -97,7 +97,7 @@ class GroupPolicyDefinitionValue extends Entity
     public function getConfigurationType()
     {
         if (array_key_exists("configurationType", $this->_propDict)) {
-            if (is_a($this->_propDict["configurationType"], "Microsoft\Graph\Model\GroupPolicyConfigurationType")) {
+            if (is_a($this->_propDict["configurationType"], "Microsoft\Graph\Beta\Model\GroupPolicyConfigurationType")) {
                 return $this->_propDict["configurationType"];
             } else {
                 $this->_propDict["configurationType"] = new GroupPolicyConfigurationType($this->_propDict["configurationType"]);
@@ -193,7 +193,7 @@ class GroupPolicyDefinitionValue extends Entity
     public function getDefinition()
     {
         if (array_key_exists("definition", $this->_propDict)) {
-            if (is_a($this->_propDict["definition"], "Microsoft\Graph\Model\GroupPolicyDefinition")) {
+            if (is_a($this->_propDict["definition"], "Microsoft\Graph\Beta\Model\GroupPolicyDefinition")) {
                 return $this->_propDict["definition"];
             } else {
                 $this->_propDict["definition"] = new GroupPolicyDefinition($this->_propDict["definition"]);

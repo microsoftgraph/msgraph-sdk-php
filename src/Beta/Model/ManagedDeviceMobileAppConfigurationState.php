@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * ManagedDeviceMobileAppConfigurationState class
@@ -93,7 +93,7 @@ class ManagedDeviceMobileAppConfigurationState extends Entity
     public function getPlatformType()
     {
         if (array_key_exists("platformType", $this->_propDict)) {
-            if (is_a($this->_propDict["platformType"], "Microsoft\Graph\Model\PolicyPlatformType")) {
+            if (is_a($this->_propDict["platformType"], "Microsoft\Graph\Beta\Model\PolicyPlatformType")) {
                 return $this->_propDict["platformType"];
             } else {
                 $this->_propDict["platformType"] = new PolicyPlatformType($this->_propDict["platformType"]);
@@ -126,7 +126,7 @@ class ManagedDeviceMobileAppConfigurationState extends Entity
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "Microsoft\Graph\Model\ComplianceStatus")) {
+            if (is_a($this->_propDict["state"], "Microsoft\Graph\Beta\Model\ComplianceStatus")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new ComplianceStatus($this->_propDict["state"]);

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * FindMeetingTimesTimeConstraints class
 *
@@ -34,7 +34,7 @@ class FindMeetingTimesTimeConstraints extends Entity
     public function getActivityDomain()
     {
         if (array_key_exists("activityDomain", $this->_propDict)) {
-            if (is_a($this->_propDict["activityDomain"], "Microsoft\Graph\Model\ActivityDomain")) {
+            if (is_a($this->_propDict["activityDomain"], "Microsoft\Graph\Beta\Model\ActivityDomain")) {
                 return $this->_propDict["activityDomain"];
             } else {
                 $this->_propDict["activityDomain"] = new ActivityDomain($this->_propDict["activityDomain"]);
@@ -65,7 +65,7 @@ class FindMeetingTimesTimeConstraints extends Entity
     public function getTimeSlots()
     {
         if (array_key_exists("timeSlots", $this->_propDict)) {
-            if (is_a($this->_propDict["timeSlots"], "Microsoft\Graph\Model\SearchWindowTimeSlot")) {
+            if (is_a($this->_propDict["timeSlots"], "Microsoft\Graph\Beta\Model\SearchWindowTimeSlot")) {
                 return $this->_propDict["timeSlots"];
             } else {
                 $this->_propDict["timeSlots"] = new SearchWindowTimeSlot($this->_propDict["timeSlots"]);

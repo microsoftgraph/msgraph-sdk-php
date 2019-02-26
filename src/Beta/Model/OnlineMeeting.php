@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * OnlineMeeting class
@@ -297,7 +297,7 @@ class OnlineMeeting extends Entity
     public function getParticipants()
     {
         if (array_key_exists("participants", $this->_propDict)) {
-            if (is_a($this->_propDict["participants"], "Microsoft\Graph\Model\MeetingParticipants")) {
+            if (is_a($this->_propDict["participants"], "Microsoft\Graph\Beta\Model\MeetingParticipants")) {
                 return $this->_propDict["participants"];
             } else {
                 $this->_propDict["participants"] = new MeetingParticipants($this->_propDict["participants"]);
@@ -328,7 +328,7 @@ class OnlineMeeting extends Entity
     public function getMeetingType()
     {
         if (array_key_exists("meetingType", $this->_propDict)) {
-            if (is_a($this->_propDict["meetingType"], "Microsoft\Graph\Model\MeetingType")) {
+            if (is_a($this->_propDict["meetingType"], "Microsoft\Graph\Beta\Model\MeetingType")) {
                 return $this->_propDict["meetingType"];
             } else {
                 $this->_propDict["meetingType"] = new MeetingType($this->_propDict["meetingType"]);
@@ -359,7 +359,7 @@ class OnlineMeeting extends Entity
     public function getAccessLevel()
     {
         if (array_key_exists("accessLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["accessLevel"], "Microsoft\Graph\Model\AccessLevel")) {
+            if (is_a($this->_propDict["accessLevel"], "Microsoft\Graph\Beta\Model\AccessLevel")) {
                 return $this->_propDict["accessLevel"];
             } else {
                 $this->_propDict["accessLevel"] = new AccessLevel($this->_propDict["accessLevel"]);
@@ -390,7 +390,7 @@ class OnlineMeeting extends Entity
     public function getAudioConferencing()
     {
         if (array_key_exists("audioConferencing", $this->_propDict)) {
-            if (is_a($this->_propDict["audioConferencing"], "Microsoft\Graph\Model\AudioConferencing")) {
+            if (is_a($this->_propDict["audioConferencing"], "Microsoft\Graph\Beta\Model\AudioConferencing")) {
                 return $this->_propDict["audioConferencing"];
             } else {
                 $this->_propDict["audioConferencing"] = new AudioConferencing($this->_propDict["audioConferencing"]);
@@ -421,7 +421,7 @@ class OnlineMeeting extends Entity
     public function getChatInfo()
     {
         if (array_key_exists("chatInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["chatInfo"], "Microsoft\Graph\Model\ChatInfo")) {
+            if (is_a($this->_propDict["chatInfo"], "Microsoft\Graph\Beta\Model\ChatInfo")) {
                 return $this->_propDict["chatInfo"];
             } else {
                 $this->_propDict["chatInfo"] = new ChatInfo($this->_propDict["chatInfo"]);
@@ -452,7 +452,7 @@ class OnlineMeeting extends Entity
     public function getMeetingInfo()
     {
         if (array_key_exists("meetingInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["meetingInfo"], "Microsoft\Graph\Model\MeetingInfo")) {
+            if (is_a($this->_propDict["meetingInfo"], "Microsoft\Graph\Beta\Model\MeetingInfo")) {
                 return $this->_propDict["meetingInfo"];
             } else {
                 $this->_propDict["meetingInfo"] = new MeetingInfo($this->_propDict["meetingInfo"]);

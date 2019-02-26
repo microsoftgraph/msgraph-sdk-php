@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * ApiApplication class
 *
@@ -86,7 +86,7 @@ class ApiApplication extends Entity
     public function getPreAuthorizedApplications()
     {
         if (array_key_exists("preAuthorizedApplications", $this->_propDict)) {
-            if (is_a($this->_propDict["preAuthorizedApplications"], "Microsoft\Graph\Model\PreAuthorizedApplication")) {
+            if (is_a($this->_propDict["preAuthorizedApplications"], "Microsoft\Graph\Beta\Model\PreAuthorizedApplication")) {
                 return $this->_propDict["preAuthorizedApplications"];
             } else {
                 $this->_propDict["preAuthorizedApplications"] = new PreAuthorizedApplication($this->_propDict["preAuthorizedApplications"]);
@@ -143,7 +143,7 @@ class ApiApplication extends Entity
     public function getOauth2PermissionScopes()
     {
         if (array_key_exists("oauth2PermissionScopes", $this->_propDict)) {
-            if (is_a($this->_propDict["oauth2PermissionScopes"], "Microsoft\Graph\Model\PermissionScope")) {
+            if (is_a($this->_propDict["oauth2PermissionScopes"], "Microsoft\Graph\Beta\Model\PermissionScope")) {
                 return $this->_propDict["oauth2PermissionScopes"];
             } else {
                 $this->_propDict["oauth2PermissionScopes"] = new PermissionScope($this->_propDict["oauth2PermissionScopes"]);

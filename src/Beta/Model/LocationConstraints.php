@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * LocationConstraints class
 *
@@ -29,15 +29,15 @@ class LocationConstraints extends Entity
     /**
     * Gets the locations
     *
-    * @return LocationConstraintItemGriffin The locations
+    * @return LocationConstraintItem The locations
     */
     public function getLocations()
     {
         if (array_key_exists("locations", $this->_propDict)) {
-            if (is_a($this->_propDict["locations"], "Microsoft\Graph\Model\LocationConstraintItemGriffin")) {
+            if (is_a($this->_propDict["locations"], "Microsoft\Graph\Beta\Model\LocationConstraintItem")) {
                 return $this->_propDict["locations"];
             } else {
-                $this->_propDict["locations"] = new LocationConstraintItemGriffin($this->_propDict["locations"]);
+                $this->_propDict["locations"] = new LocationConstraintItem($this->_propDict["locations"]);
                 return $this->_propDict["locations"];
             }
         }
@@ -47,7 +47,7 @@ class LocationConstraints extends Entity
     /**
     * Sets the locations
     *
-    * @param LocationConstraintItemGriffin $val The value to assign to the locations
+    * @param LocationConstraintItem $val The value to assign to the locations
     *
     * @return LocationConstraints The LocationConstraints
     */

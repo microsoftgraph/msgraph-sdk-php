@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * LocationDataModel class
 *
@@ -81,15 +81,15 @@ class LocationDataModel extends Entity
     /**
     * Gets the address
     *
-    * @return PostalAddressGriffin The address
+    * @return PostalAddress The address
     */
     public function getAddress()
     {
         if (array_key_exists("address", $this->_propDict)) {
-            if (is_a($this->_propDict["address"], "Microsoft\Graph\Model\PostalAddressGriffin")) {
+            if (is_a($this->_propDict["address"], "Microsoft\Graph\Beta\Model\PostalAddress")) {
                 return $this->_propDict["address"];
             } else {
-                $this->_propDict["address"] = new PostalAddressGriffin($this->_propDict["address"]);
+                $this->_propDict["address"] = new PostalAddress($this->_propDict["address"]);
                 return $this->_propDict["address"];
             }
         }
@@ -99,7 +99,7 @@ class LocationDataModel extends Entity
     /**
     * Sets the address
     *
-    * @param PostalAddressGriffin $val The value to assign to the address
+    * @param PostalAddress $val The value to assign to the address
     *
     * @return LocationDataModel The LocationDataModel
     */
@@ -138,15 +138,15 @@ class LocationDataModel extends Entity
     /**
     * Gets the coordinates
     *
-    * @return GeoCoordinatesGriffin The coordinates
+    * @return OutlookGeoCoordinates The coordinates
     */
     public function getCoordinates()
     {
         if (array_key_exists("coordinates", $this->_propDict)) {
-            if (is_a($this->_propDict["coordinates"], "Microsoft\Graph\Model\GeoCoordinatesGriffin")) {
+            if (is_a($this->_propDict["coordinates"], "Microsoft\Graph\Beta\Model\OutlookGeoCoordinates")) {
                 return $this->_propDict["coordinates"];
             } else {
-                $this->_propDict["coordinates"] = new GeoCoordinatesGriffin($this->_propDict["coordinates"]);
+                $this->_propDict["coordinates"] = new OutlookGeoCoordinates($this->_propDict["coordinates"]);
                 return $this->_propDict["coordinates"];
             }
         }
@@ -156,7 +156,7 @@ class LocationDataModel extends Entity
     /**
     * Sets the coordinates
     *
-    * @param GeoCoordinatesGriffin $val The value to assign to the coordinates
+    * @param OutlookGeoCoordinates $val The value to assign to the coordinates
     *
     * @return LocationDataModel The LocationDataModel
     */

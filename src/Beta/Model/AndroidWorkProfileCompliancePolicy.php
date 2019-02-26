@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * AndroidWorkProfileCompliancePolicy class
@@ -93,7 +93,7 @@ class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy
     public function getPasswordRequiredType()
     {
         if (array_key_exists("passwordRequiredType", $this->_propDict)) {
-            if (is_a($this->_propDict["passwordRequiredType"], "Microsoft\Graph\Model\AndroidRequiredPasswordType")) {
+            if (is_a($this->_propDict["passwordRequiredType"], "Microsoft\Graph\Beta\Model\AndroidRequiredPasswordType")) {
                 return $this->_propDict["passwordRequiredType"];
             } else {
                 $this->_propDict["passwordRequiredType"] = new AndroidRequiredPasswordType($this->_propDict["passwordRequiredType"]);
@@ -177,7 +177,7 @@ class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the passwordPreviousPasswordBlockCount
-    * Number of previous passwords to block.
+    * Number of previous passwords to block. Valid values 1 to 24
     *
     * @return int The passwordPreviousPasswordBlockCount
     */
@@ -192,7 +192,7 @@ class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passwordPreviousPasswordBlockCount
-    * Number of previous passwords to block.
+    * Number of previous passwords to block. Valid values 1 to 24
     *
     * @param int $val The passwordPreviousPasswordBlockCount
     *
@@ -201,6 +201,35 @@ class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy
     public function setPasswordPreviousPasswordBlockCount($val)
     {
         $this->_propDict["passwordPreviousPasswordBlockCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the passwordSignInFailureCountBeforeFactoryReset
+    * Number of sign-in failures allowed before factory reset. Valid values 1 to 16
+    *
+    * @return int The passwordSignInFailureCountBeforeFactoryReset
+    */
+    public function getPasswordSignInFailureCountBeforeFactoryReset()
+    {
+        if (array_key_exists("passwordSignInFailureCountBeforeFactoryReset", $this->_propDict)) {
+            return $this->_propDict["passwordSignInFailureCountBeforeFactoryReset"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the passwordSignInFailureCountBeforeFactoryReset
+    * Number of sign-in failures allowed before factory reset. Valid values 1 to 16
+    *
+    * @param int $val The passwordSignInFailureCountBeforeFactoryReset
+    *
+    * @return AndroidWorkProfileCompliancePolicy
+    */
+    public function setPasswordSignInFailureCountBeforeFactoryReset($val)
+    {
+        $this->_propDict["passwordSignInFailureCountBeforeFactoryReset"] = intval($val);
         return $this;
     }
     
@@ -329,7 +358,7 @@ class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy
     public function getDeviceThreatProtectionRequiredSecurityLevel()
     {
         if (array_key_exists("deviceThreatProtectionRequiredSecurityLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceThreatProtectionRequiredSecurityLevel"], "Microsoft\Graph\Model\DeviceThreatProtectionLevel")) {
+            if (is_a($this->_propDict["deviceThreatProtectionRequiredSecurityLevel"], "Microsoft\Graph\Beta\Model\DeviceThreatProtectionLevel")) {
                 return $this->_propDict["deviceThreatProtectionRequiredSecurityLevel"];
             } else {
                 $this->_propDict["deviceThreatProtectionRequiredSecurityLevel"] = new DeviceThreatProtectionLevel($this->_propDict["deviceThreatProtectionRequiredSecurityLevel"]);

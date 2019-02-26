@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * VppTokenRevokeLicensesActionResult class
 *
@@ -91,7 +91,7 @@ class VppTokenRevokeLicensesActionResult extends VppTokenActionResult
     public function getActionFailureReason()
     {
         if (array_key_exists("actionFailureReason", $this->_propDict)) {
-            if (is_a($this->_propDict["actionFailureReason"], "Microsoft\Graph\Model\VppTokenActionFailureReason")) {
+            if (is_a($this->_propDict["actionFailureReason"], "Microsoft\Graph\Beta\Model\VppTokenActionFailureReason")) {
                 return $this->_propDict["actionFailureReason"];
             } else {
                 $this->_propDict["actionFailureReason"] = new VppTokenActionFailureReason($this->_propDict["actionFailureReason"]);

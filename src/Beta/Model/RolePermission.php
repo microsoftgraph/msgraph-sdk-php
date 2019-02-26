@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * RolePermission class
 *
@@ -63,7 +63,7 @@ class RolePermission extends Entity
     public function getResourceActions()
     {
         if (array_key_exists("resourceActions", $this->_propDict)) {
-            if (is_a($this->_propDict["resourceActions"], "Microsoft\Graph\Model\ResourceAction")) {
+            if (is_a($this->_propDict["resourceActions"], "Microsoft\Graph\Beta\Model\ResourceAction")) {
                 return $this->_propDict["resourceActions"];
             } else {
                 $this->_propDict["resourceActions"] = new ResourceAction($this->_propDict["resourceActions"]);

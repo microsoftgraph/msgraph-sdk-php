@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * LocationConstraintItem class
 *
@@ -23,7 +23,7 @@ namespace Microsoft\Graph\Model;
 * @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-class LocationConstraintItem extends Location
+class LocationConstraintItem extends LocationDataModel
 {
     /**
     * Gets the resolveAvailability

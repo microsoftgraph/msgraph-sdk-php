@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * Alert class
@@ -425,7 +425,7 @@ class Alert extends Entity
     public function getFeedback()
     {
         if (array_key_exists("feedback", $this->_propDict)) {
-            if (is_a($this->_propDict["feedback"], "Microsoft\Graph\Model\AlertFeedback")) {
+            if (is_a($this->_propDict["feedback"], "Microsoft\Graph\Beta\Model\AlertFeedback")) {
                 return $this->_propDict["feedback"];
             } else {
                 $this->_propDict["feedback"] = new AlertFeedback($this->_propDict["feedback"]);
@@ -700,7 +700,7 @@ class Alert extends Entity
     public function getSeverity()
     {
         if (array_key_exists("severity", $this->_propDict)) {
-            if (is_a($this->_propDict["severity"], "Microsoft\Graph\Model\AlertSeverity")) {
+            if (is_a($this->_propDict["severity"], "Microsoft\Graph\Beta\Model\AlertSeverity")) {
                 return $this->_propDict["severity"];
             } else {
                 $this->_propDict["severity"] = new AlertSeverity($this->_propDict["severity"]);
@@ -762,7 +762,7 @@ class Alert extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Microsoft\Graph\Model\AlertStatus")) {
+            if (is_a($this->_propDict["status"], "Microsoft\Graph\Beta\Model\AlertStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new AlertStatus($this->_propDict["status"]);
@@ -913,7 +913,7 @@ class Alert extends Entity
     public function getVendorInformation()
     {
         if (array_key_exists("vendorInformation", $this->_propDict)) {
-            if (is_a($this->_propDict["vendorInformation"], "Microsoft\Graph\Model\SecurityVendorInformation")) {
+            if (is_a($this->_propDict["vendorInformation"], "Microsoft\Graph\Beta\Model\SecurityVendorInformation")) {
                 return $this->_propDict["vendorInformation"];
             } else {
                 $this->_propDict["vendorInformation"] = new SecurityVendorInformation($this->_propDict["vendorInformation"]);

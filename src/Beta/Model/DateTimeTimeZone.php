@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * DateTimeTimeZone class
 *
@@ -27,7 +27,7 @@ class DateTimeTimeZone extends Entity
 {
     /**
     * Gets the dateTime
-    * A single point of time in a combined date and time representation (&amp;lt;date&amp;gt;T&amp;lt;time&amp;gt;).
+    * A single point of time in a combined date and time representation ({date}T{time}; for example, 2017-08-29T04:00:00.0000000).
     *
     * @return string The dateTime
     */
@@ -42,7 +42,7 @@ class DateTimeTimeZone extends Entity
 
     /**
     * Sets the dateTime
-    * A single point of time in a combined date and time representation (&amp;lt;date&amp;gt;T&amp;lt;time&amp;gt;).
+    * A single point of time in a combined date and time representation ({date}T{time}; for example, 2017-08-29T04:00:00.0000000).
     *
     * @param string $val The value of the dateTime
     *
