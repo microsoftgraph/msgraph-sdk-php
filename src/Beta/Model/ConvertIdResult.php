@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * ConvertIdResult class
 *
@@ -86,7 +86,7 @@ class ConvertIdResult extends Entity
     public function getErrorDetails()
     {
         if (array_key_exists("errorDetails", $this->_propDict)) {
-            if (is_a($this->_propDict["errorDetails"], "Microsoft\Graph\Model\GenericError")) {
+            if (is_a($this->_propDict["errorDetails"], "Microsoft\Graph\Beta\Model\GenericError")) {
                 return $this->_propDict["errorDetails"];
             } else {
                 $this->_propDict["errorDetails"] = new GenericError($this->_propDict["errorDetails"]);

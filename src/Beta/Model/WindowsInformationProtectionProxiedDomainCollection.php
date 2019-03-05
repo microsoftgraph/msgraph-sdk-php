@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * WindowsInformationProtectionProxiedDomainCollection class
 *
@@ -63,7 +63,7 @@ class WindowsInformationProtectionProxiedDomainCollection extends Entity
     public function getProxiedDomains()
     {
         if (array_key_exists("proxiedDomains", $this->_propDict)) {
-            if (is_a($this->_propDict["proxiedDomains"], "Microsoft\Graph\Model\ProxiedDomain")) {
+            if (is_a($this->_propDict["proxiedDomains"], "Microsoft\Graph\Beta\Model\ProxiedDomain")) {
                 return $this->_propDict["proxiedDomains"];
             } else {
                 $this->_propDict["proxiedDomains"] = new ProxiedDomain($this->_propDict["proxiedDomains"]);

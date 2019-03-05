@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * WindowsPhone81AppX class
@@ -35,7 +35,7 @@ class WindowsPhone81AppX extends MobileLobApp
     public function getApplicableArchitectures()
     {
         if (array_key_exists("applicableArchitectures", $this->_propDict)) {
-            if (is_a($this->_propDict["applicableArchitectures"], "Microsoft\Graph\Model\WindowsArchitecture")) {
+            if (is_a($this->_propDict["applicableArchitectures"], "Microsoft\Graph\Beta\Model\WindowsArchitecture")) {
                 return $this->_propDict["applicableArchitectures"];
             } else {
                 $this->_propDict["applicableArchitectures"] = new WindowsArchitecture($this->_propDict["applicableArchitectures"]);
@@ -155,7 +155,7 @@ class WindowsPhone81AppX extends MobileLobApp
     public function getMinimumSupportedOperatingSystem()
     {
         if (array_key_exists("minimumSupportedOperatingSystem", $this->_propDict)) {
-            if (is_a($this->_propDict["minimumSupportedOperatingSystem"], "Microsoft\Graph\Model\WindowsMinimumOperatingSystem")) {
+            if (is_a($this->_propDict["minimumSupportedOperatingSystem"], "Microsoft\Graph\Beta\Model\WindowsMinimumOperatingSystem")) {
                 return $this->_propDict["minimumSupportedOperatingSystem"];
             } else {
                 $this->_propDict["minimumSupportedOperatingSystem"] = new WindowsMinimumOperatingSystem($this->_propDict["minimumSupportedOperatingSystem"]);

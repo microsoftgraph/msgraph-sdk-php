@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * PasswordProfile class
 *
@@ -83,6 +83,7 @@ class PasswordProfile extends Entity
     }
     /**
     * Gets the forceChangePasswordNextSignInWithMfa
+    * If true, at next sign-in, the user must perform a multi-factor authentication (MFA) before being forced to change their password. The behavior is identical to forceChangePasswordNextSignIn except that the user is required to first perform a multi-factor authentication before password change. After a password change, this property will be automatically reset to false. If not set, default is false.
     *
     * @return bool The forceChangePasswordNextSignInWithMfa
     */
@@ -97,6 +98,7 @@ class PasswordProfile extends Entity
 
     /**
     * Sets the forceChangePasswordNextSignInWithMfa
+    * If true, at next sign-in, the user must perform a multi-factor authentication (MFA) before being forced to change their password. The behavior is identical to forceChangePasswordNextSignIn except that the user is required to first perform a multi-factor authentication before password change. After a password change, this property will be automatically reset to false. If not set, default is false.
     *
     * @param bool $val The value of the forceChangePasswordNextSignInWithMfa
     *

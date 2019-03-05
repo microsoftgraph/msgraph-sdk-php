@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * Quota class
 *
@@ -174,7 +174,7 @@ class Quota extends Entity
     public function getStoragePlanInformation()
     {
         if (array_key_exists("storagePlanInformation", $this->_propDict)) {
-            if (is_a($this->_propDict["storagePlanInformation"], "Microsoft\Graph\Model\StoragePlanInformation")) {
+            if (is_a($this->_propDict["storagePlanInformation"], "Microsoft\Graph\Beta\Model\StoragePlanInformation")) {
                 return $this->_propDict["storagePlanInformation"];
             } else {
                 $this->_propDict["storagePlanInformation"] = new StoragePlanInformation($this->_propDict["storagePlanInformation"]);

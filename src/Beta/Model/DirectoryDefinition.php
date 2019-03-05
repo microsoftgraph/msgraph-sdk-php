@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * DirectoryDefinition class
 *
@@ -86,7 +86,7 @@ class DirectoryDefinition extends Entity
     public function getObjects()
     {
         if (array_key_exists("objects", $this->_propDict)) {
-            if (is_a($this->_propDict["objects"], "Microsoft\Graph\Model\ObjectDefinition")) {
+            if (is_a($this->_propDict["objects"], "Microsoft\Graph\Beta\Model\ObjectDefinition")) {
                 return $this->_propDict["objects"];
             } else {
                 $this->_propDict["objects"] = new ObjectDefinition($this->_propDict["objects"]);

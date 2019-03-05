@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * AgreementFile class
@@ -88,7 +88,7 @@ class AgreementFile extends Entity
     public function getFileData()
     {
         if (array_key_exists("fileData", $this->_propDict)) {
-            if (is_a($this->_propDict["fileData"], "Microsoft\Graph\Model\AgreementFileData")) {
+            if (is_a($this->_propDict["fileData"], "Microsoft\Graph\Beta\Model\AgreementFileData")) {
                 return $this->_propDict["fileData"];
             } else {
                 $this->_propDict["fileData"] = new AgreementFileData($this->_propDict["fileData"]);

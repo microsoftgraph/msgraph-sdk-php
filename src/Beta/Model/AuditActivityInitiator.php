@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * AuditActivityInitiator class
 *
@@ -34,7 +34,7 @@ class AuditActivityInitiator extends Entity
     public function getUser()
     {
         if (array_key_exists("user", $this->_propDict)) {
-            if (is_a($this->_propDict["user"], "Microsoft\Graph\Model\UserIdentity")) {
+            if (is_a($this->_propDict["user"], "Microsoft\Graph\Beta\Model\UserIdentity")) {
                 return $this->_propDict["user"];
             } else {
                 $this->_propDict["user"] = new UserIdentity($this->_propDict["user"]);
@@ -65,7 +65,7 @@ class AuditActivityInitiator extends Entity
     public function getApp()
     {
         if (array_key_exists("app", $this->_propDict)) {
-            if (is_a($this->_propDict["app"], "Microsoft\Graph\Model\AppIdentity")) {
+            if (is_a($this->_propDict["app"], "Microsoft\Graph\Beta\Model\AppIdentity")) {
                 return $this->_propDict["app"];
             } else {
                 $this->_propDict["app"] = new AppIdentity($this->_propDict["app"]);
