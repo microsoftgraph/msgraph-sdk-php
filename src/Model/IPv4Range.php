@@ -27,7 +27,7 @@ class IPv4Range extends IpRange
 {
     /**
     * Gets the lowerAddress
-    * Lower IP Address
+    * Lower address.
     *
     * @return string The lowerAddress
     */
@@ -42,7 +42,7 @@ class IPv4Range extends IpRange
 
     /**
     * Sets the lowerAddress
-    * Lower IP Address
+    * Lower address.
     *
     * @param string $val The value of the lowerAddress
     *
@@ -55,7 +55,7 @@ class IPv4Range extends IpRange
     }
     /**
     * Gets the upperAddress
-    * Upper IP Address
+    * Upper address.
     *
     * @return string The upperAddress
     */
@@ -70,7 +70,7 @@ class IPv4Range extends IpRange
 
     /**
     * Sets the upperAddress
-    * Upper IP Address
+    * Upper address.
     *
     * @param string $val The value of the upperAddress
     *

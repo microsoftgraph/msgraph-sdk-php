@@ -177,7 +177,7 @@ class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the passwordPreviousPasswordBlockCount
-    * Number of previous passwords to block.
+    * Number of previous passwords to block. Valid values 1 to 24
     *
     * @return int The passwordPreviousPasswordBlockCount
     */
@@ -192,7 +192,7 @@ class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passwordPreviousPasswordBlockCount
-    * Number of previous passwords to block.
+    * Number of previous passwords to block. Valid values 1 to 24
     *
     * @param int $val The passwordPreviousPasswordBlockCount
     *

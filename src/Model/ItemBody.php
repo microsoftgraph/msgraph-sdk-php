@@ -28,7 +28,7 @@ class ItemBody extends Entity
 
     /**
     * Gets the contentType
-    * The type of the content. Possible values are Text and HTML.
+    * The type of the content. Possible values are text and HTML.
     *
     * @return BodyType The contentType
     */
@@ -47,7 +47,7 @@ class ItemBody extends Entity
 
     /**
     * Sets the contentType
-    * The type of the content. Possible values are Text and HTML.
+    * The type of the content. Possible values are text and HTML.
     *
     * @param BodyType $val The value to assign to the contentType
     *
