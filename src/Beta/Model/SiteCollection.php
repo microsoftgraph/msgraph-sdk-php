@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * SiteCollection class
 *
@@ -89,7 +89,7 @@ class SiteCollection extends Entity
     public function getRoot()
     {
         if (array_key_exists("root", $this->_propDict)) {
-            if (is_a($this->_propDict["root"], "Microsoft\Graph\Model\Root")) {
+            if (is_a($this->_propDict["root"], "Microsoft\Graph\Beta\Model\Root")) {
                 return $this->_propDict["root"];
             } else {
                 $this->_propDict["root"] = new Root($this->_propDict["root"]);

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * IdentityProvider class
@@ -28,6 +28,7 @@ class IdentityProvider extends Entity
 {
     /**
     * Gets the type
+    * The identity provider type. It must be one of the following values for B2C scenarios: MicrosoftGoogleAmazonLinkedInFacebookGitHubTwitterWeiboQQWeChatFor B2B scenarios, the value must be Google.
     *
     * @return string The type
     */
@@ -42,6 +43,7 @@ class IdentityProvider extends Entity
     
     /**
     * Sets the type
+    * The identity provider type. It must be one of the following values for B2C scenarios: MicrosoftGoogleAmazonLinkedInFacebookGitHubTwitterWeiboQQWeChatFor B2B scenarios, the value must be Google.
     *
     * @param string $val The type
     *
@@ -55,6 +57,7 @@ class IdentityProvider extends Entity
     
     /**
     * Gets the name
+    * The display name of the identity provider.
     *
     * @return string The name
     */
@@ -69,6 +72,7 @@ class IdentityProvider extends Entity
     
     /**
     * Sets the name
+    * The display name of the identity provider.
     *
     * @param string $val The name
     *
@@ -82,6 +86,7 @@ class IdentityProvider extends Entity
     
     /**
     * Gets the clientId
+    * The client ID for the application. This is the client ID obtained when registering the application with the identity provider.
     *
     * @return string The clientId
     */
@@ -96,6 +101,7 @@ class IdentityProvider extends Entity
     
     /**
     * Sets the clientId
+    * The client ID for the application. This is the client ID obtained when registering the application with the identity provider.
     *
     * @param string $val The clientId
     *
@@ -109,6 +115,7 @@ class IdentityProvider extends Entity
     
     /**
     * Gets the clientSecret
+    * The client secret for the application. This is the client secret obtained when registering the application with the identity provider. This is write-only. A read operation will return '****'.
     *
     * @return string The clientSecret
     */
@@ -123,6 +130,7 @@ class IdentityProvider extends Entity
     
     /**
     * Sets the clientSecret
+    * The client secret for the application. This is the client secret obtained when registering the application with the identity provider. This is write-only. A read operation will return '****'.
     *
     * @param string $val The clientSecret
     *

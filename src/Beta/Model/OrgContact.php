@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * OrgContact class
@@ -579,7 +579,7 @@ class OrgContact extends DirectoryObject
     public function getManager()
     {
         if (array_key_exists("manager", $this->_propDict)) {
-            if (is_a($this->_propDict["manager"], "Microsoft\Graph\Model\DirectoryObject")) {
+            if (is_a($this->_propDict["manager"], "Microsoft\Graph\Beta\Model\DirectoryObject")) {
                 return $this->_propDict["manager"];
             } else {
                 $this->_propDict["manager"] = new DirectoryObject($this->_propDict["manager"]);

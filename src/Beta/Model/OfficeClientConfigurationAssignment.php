@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * OfficeClientConfigurationAssignment class
@@ -34,7 +34,7 @@ class OfficeClientConfigurationAssignment extends Entity
     public function getTarget()
     {
         if (array_key_exists("target", $this->_propDict)) {
-            if (is_a($this->_propDict["target"], "Microsoft\Graph\Model\OfficeConfigurationAssignmentTarget")) {
+            if (is_a($this->_propDict["target"], "Microsoft\Graph\Beta\Model\OfficeConfigurationAssignmentTarget")) {
                 return $this->_propDict["target"];
             } else {
                 $this->_propDict["target"] = new OfficeConfigurationAssignmentTarget($this->_propDict["target"]);

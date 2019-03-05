@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * FileSecurityState class
 *
@@ -35,7 +35,7 @@ class FileSecurityState extends Entity
     public function getFileHash()
     {
         if (array_key_exists("fileHash", $this->_propDict)) {
-            if (is_a($this->_propDict["fileHash"], "Microsoft\Graph\Model\FileHash")) {
+            if (is_a($this->_propDict["fileHash"], "Microsoft\Graph\Beta\Model\FileHash")) {
                 return $this->_propDict["fileHash"];
             } else {
                 $this->_propDict["fileHash"] = new FileHash($this->_propDict["fileHash"]);

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * WindowsPhone81ImportedPFXCertificateProfile class
@@ -34,7 +34,7 @@ class WindowsPhone81ImportedPFXCertificateProfile extends WindowsCertificateProf
     public function getIntendedPurpose()
     {
         if (array_key_exists("intendedPurpose", $this->_propDict)) {
-            if (is_a($this->_propDict["intendedPurpose"], "Microsoft\Graph\Model\IntendedPurpose")) {
+            if (is_a($this->_propDict["intendedPurpose"], "Microsoft\Graph\Beta\Model\IntendedPurpose")) {
                 return $this->_propDict["intendedPurpose"];
             } else {
                 $this->_propDict["intendedPurpose"] = new IntendedPurpose($this->_propDict["intendedPurpose"]);

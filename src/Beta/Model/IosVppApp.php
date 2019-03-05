@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * IosVppApp class
@@ -155,7 +155,7 @@ class IosVppApp extends MobileApp
     public function getLicensingType()
     {
         if (array_key_exists("licensingType", $this->_propDict)) {
-            if (is_a($this->_propDict["licensingType"], "Microsoft\Graph\Model\VppLicensingType")) {
+            if (is_a($this->_propDict["licensingType"], "Microsoft\Graph\Beta\Model\VppLicensingType")) {
                 return $this->_propDict["licensingType"];
             } else {
                 $this->_propDict["licensingType"] = new VppLicensingType($this->_propDict["licensingType"]);
@@ -188,7 +188,7 @@ class IosVppApp extends MobileApp
     public function getApplicableDeviceType()
     {
         if (array_key_exists("applicableDeviceType", $this->_propDict)) {
-            if (is_a($this->_propDict["applicableDeviceType"], "Microsoft\Graph\Model\IosDeviceType")) {
+            if (is_a($this->_propDict["applicableDeviceType"], "Microsoft\Graph\Beta\Model\IosDeviceType")) {
                 return $this->_propDict["applicableDeviceType"];
             } else {
                 $this->_propDict["applicableDeviceType"] = new IosDeviceType($this->_propDict["applicableDeviceType"]);
@@ -250,7 +250,7 @@ class IosVppApp extends MobileApp
     public function getVppTokenAccountType()
     {
         if (array_key_exists("vppTokenAccountType", $this->_propDict)) {
-            if (is_a($this->_propDict["vppTokenAccountType"], "Microsoft\Graph\Model\VppTokenAccountType")) {
+            if (is_a($this->_propDict["vppTokenAccountType"], "Microsoft\Graph\Beta\Model\VppTokenAccountType")) {
                 return $this->_propDict["vppTokenAccountType"];
             } else {
                 $this->_propDict["vppTokenAccountType"] = new VppTokenAccountType($this->_propDict["vppTokenAccountType"]);
