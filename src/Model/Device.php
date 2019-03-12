@@ -87,7 +87,7 @@ class Device extends DirectoryObject
     
     /**
     * Gets the approximateLastSignInDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z' Read-only.
+    * The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
     *
     * @return \DateTime The approximateLastSignInDateTime
     */
@@ -106,7 +106,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the approximateLastSignInDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z' Read-only.
+    * The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
     *
     * @param \DateTime $val The approximateLastSignInDateTime
     *
@@ -115,6 +115,39 @@ class Device extends DirectoryObject
     public function setApproximateLastSignInDateTime($val)
     {
         $this->_propDict["approximateLastSignInDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the complianceExpirationDateTime
+    * The timestamp when the device is no longer deemed compliant. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
+    *
+    * @return \DateTime The complianceExpirationDateTime
+    */
+    public function getComplianceExpirationDateTime()
+    {
+        if (array_key_exists("complianceExpirationDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["complianceExpirationDateTime"], "\DateTime")) {
+                return $this->_propDict["complianceExpirationDateTime"];
+            } else {
+                $this->_propDict["complianceExpirationDateTime"] = new \DateTime($this->_propDict["complianceExpirationDateTime"]);
+                return $this->_propDict["complianceExpirationDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the complianceExpirationDateTime
+    * The timestamp when the device is no longer deemed compliant. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
+    *
+    * @param \DateTime $val The complianceExpirationDateTime
+    *
+    * @return Device
+    */
+    public function setComplianceExpirationDateTime($val)
+    {
+        $this->_propDict["complianceExpirationDateTime"] = $val;
         return $this;
     }
     
@@ -438,6 +471,64 @@ class Device extends DirectoryObject
     public function setPhysicalIds($val)
     {
         $this->_propDict["physicalIds"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the profileType
+    * The profile type of the device. Possible values:RegisteredDevice (default)SecureVMPrinterSharedIoT
+    *
+    * @return string The profileType
+    */
+    public function getProfileType()
+    {
+        if (array_key_exists("profileType", $this->_propDict)) {
+            return $this->_propDict["profileType"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the profileType
+    * The profile type of the device. Possible values:RegisteredDevice (default)SecureVMPrinterSharedIoT
+    *
+    * @param string $val The profileType
+    *
+    * @return Device
+    */
+    public function setProfileType($val)
+    {
+        $this->_propDict["profileType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the systemLabels
+    * List of labels applied to the device by the system.
+    *
+    * @return string The systemLabels
+    */
+    public function getSystemLabels()
+    {
+        if (array_key_exists("systemLabels", $this->_propDict)) {
+            return $this->_propDict["systemLabels"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the systemLabels
+    * List of labels applied to the device by the system.
+    *
+    * @param string $val The systemLabels
+    *
+    * @return Device
+    */
+    public function setSystemLabels($val)
+    {
+        $this->_propDict["systemLabels"] = $val;
         return $this;
     }
     

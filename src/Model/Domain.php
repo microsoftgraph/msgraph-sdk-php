@@ -230,6 +230,64 @@ class Domain extends Entity
     }
     
     /**
+    * Gets the passwordNotificationWindowInDays
+    * Specifies the number of days before a user receives notification that their password will expire. If the property is not set, a default value of 14 days will be used.
+    *
+    * @return int The passwordNotificationWindowInDays
+    */
+    public function getPasswordNotificationWindowInDays()
+    {
+        if (array_key_exists("passwordNotificationWindowInDays", $this->_propDict)) {
+            return $this->_propDict["passwordNotificationWindowInDays"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the passwordNotificationWindowInDays
+    * Specifies the number of days before a user receives notification that their password will expire. If the property is not set, a default value of 14 days will be used.
+    *
+    * @param int $val The passwordNotificationWindowInDays
+    *
+    * @return Domain
+    */
+    public function setPasswordNotificationWindowInDays($val)
+    {
+        $this->_propDict["passwordNotificationWindowInDays"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the passwordValidityPeriodInDays
+    * Specifies the length of time that a password is valid before it must be changed. If the property is not set, a default value of 90 days will be used.
+    *
+    * @return int The passwordValidityPeriodInDays
+    */
+    public function getPasswordValidityPeriodInDays()
+    {
+        if (array_key_exists("passwordValidityPeriodInDays", $this->_propDict)) {
+            return $this->_propDict["passwordValidityPeriodInDays"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the passwordValidityPeriodInDays
+    * Specifies the length of time that a password is valid before it must be changed. If the property is not set, a default value of 90 days will be used.
+    *
+    * @param int $val The passwordValidityPeriodInDays
+    *
+    * @return Domain
+    */
+    public function setPasswordValidityPeriodInDays($val)
+    {
+        $this->_propDict["passwordValidityPeriodInDays"] = intval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the supportedServices
     * The capabilities assigned to the domain.Can include 0, 1 or more of following values: Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline, SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune The values which you can add/remove using Graph API include: Email, OfficeCommunicationsOnline, YammerNot nullable
     *

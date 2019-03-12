@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* IPv6Range File
+* WorkbookCommentReply File
 * PHP version 7
 *
 * @category  Library
@@ -13,8 +13,9 @@
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Model;
+
 /**
-* IPv6Range class
+* WorkbookCommentReply class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -23,62 +24,60 @@ namespace Microsoft\Graph\Model;
 * @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-class IPv6Range extends IpRange
+class WorkbookCommentReply extends Entity
 {
     /**
-    * Gets the lowerAddress
-    * Lower address
+    * Gets the content
     *
-    * @return string The lowerAddress
+    * @return string The content
     */
-    public function getLowerAddress()
+    public function getContent()
     {
-        if (array_key_exists("lowerAddress", $this->_propDict)) {
-            return $this->_propDict["lowerAddress"];
+        if (array_key_exists("content", $this->_propDict)) {
+            return $this->_propDict["content"];
         } else {
             return null;
         }
     }
-
+    
     /**
-    * Sets the lowerAddress
-    * Lower address
+    * Sets the content
     *
-    * @param string $val The value of the lowerAddress
+    * @param string $val The content
     *
-    * @return IPv6Range
+    * @return WorkbookCommentReply
     */
-    public function setLowerAddress($val)
+    public function setContent($val)
     {
-        $this->_propDict["lowerAddress"] = $val;
+        $this->_propDict["content"] = $val;
         return $this;
     }
+    
     /**
-    * Gets the upperAddress
-    * Upper address
+    * Gets the contentType
     *
-    * @return string The upperAddress
+    * @return string The contentType
     */
-    public function getUpperAddress()
+    public function getContentType()
     {
-        if (array_key_exists("upperAddress", $this->_propDict)) {
-            return $this->_propDict["upperAddress"];
+        if (array_key_exists("contentType", $this->_propDict)) {
+            return $this->_propDict["contentType"];
         } else {
             return null;
         }
     }
-
+    
     /**
-    * Sets the upperAddress
-    * Upper address
+    * Sets the contentType
     *
-    * @param string $val The value of the upperAddress
+    * @param string $val The contentType
     *
-    * @return IPv6Range
+    * @return WorkbookCommentReply
     */
-    public function setUpperAddress($val)
+    public function setContentType($val)
     {
-        $this->_propDict["upperAddress"] = $val;
+        $this->_propDict["contentType"] = $val;
         return $this;
     }
+    
 }
