@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * AppliedConditionalAccessPolicy class
 *
@@ -138,7 +138,7 @@ class AppliedConditionalAccessPolicy extends Entity
     public function getResult()
     {
         if (array_key_exists("result", $this->_propDict)) {
-            if (is_a($this->_propDict["result"], "Microsoft\Graph\Model\AppliedConditionalAccessPolicyResult")) {
+            if (is_a($this->_propDict["result"], "Microsoft\Graph\Beta\Model\AppliedConditionalAccessPolicyResult")) {
                 return $this->_propDict["result"];
             } else {
                 $this->_propDict["result"] = new AppliedConditionalAccessPolicyResult($this->_propDict["result"]);

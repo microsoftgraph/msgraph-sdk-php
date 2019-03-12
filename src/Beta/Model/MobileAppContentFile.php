@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * MobileAppContentFile class
@@ -279,7 +279,7 @@ class MobileAppContentFile extends Entity
     public function getUploadState()
     {
         if (array_key_exists("uploadState", $this->_propDict)) {
-            if (is_a($this->_propDict["uploadState"], "Microsoft\Graph\Model\MobileAppContentFileUploadState")) {
+            if (is_a($this->_propDict["uploadState"], "Microsoft\Graph\Beta\Model\MobileAppContentFileUploadState")) {
                 return $this->_propDict["uploadState"];
             } else {
                 $this->_propDict["uploadState"] = new MobileAppContentFileUploadState($this->_propDict["uploadState"]);

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * WindowsInformationProtectionAppLearningSummary class
@@ -64,7 +64,7 @@ class WindowsInformationProtectionAppLearningSummary extends Entity
     public function getApplicationType()
     {
         if (array_key_exists("applicationType", $this->_propDict)) {
-            if (is_a($this->_propDict["applicationType"], "Microsoft\Graph\Model\ApplicationType")) {
+            if (is_a($this->_propDict["applicationType"], "Microsoft\Graph\Beta\Model\ApplicationType")) {
                 return $this->_propDict["applicationType"];
             } else {
                 $this->_propDict["applicationType"] = new ApplicationType($this->_propDict["applicationType"]);

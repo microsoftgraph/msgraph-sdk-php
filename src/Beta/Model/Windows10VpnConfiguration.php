@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * Windows10VpnConfiguration class
@@ -35,7 +35,7 @@ class Windows10VpnConfiguration extends WindowsVpnConfiguration
     public function getProfileTarget()
     {
         if (array_key_exists("profileTarget", $this->_propDict)) {
-            if (is_a($this->_propDict["profileTarget"], "Microsoft\Graph\Model\Windows10VpnProfileTarget")) {
+            if (is_a($this->_propDict["profileTarget"], "Microsoft\Graph\Beta\Model\Windows10VpnProfileTarget")) {
                 return $this->_propDict["profileTarget"];
             } else {
                 $this->_propDict["profileTarget"] = new Windows10VpnProfileTarget($this->_propDict["profileTarget"]);
@@ -68,7 +68,7 @@ class Windows10VpnConfiguration extends WindowsVpnConfiguration
     public function getConnectionType()
     {
         if (array_key_exists("connectionType", $this->_propDict)) {
-            if (is_a($this->_propDict["connectionType"], "Microsoft\Graph\Model\Windows10VpnConnectionType")) {
+            if (is_a($this->_propDict["connectionType"], "Microsoft\Graph\Beta\Model\Windows10VpnConnectionType")) {
                 return $this->_propDict["connectionType"];
             } else {
                 $this->_propDict["connectionType"] = new Windows10VpnConnectionType($this->_propDict["connectionType"]);
@@ -246,7 +246,7 @@ class Windows10VpnConfiguration extends WindowsVpnConfiguration
     public function getAuthenticationMethod()
     {
         if (array_key_exists("authenticationMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["authenticationMethod"], "Microsoft\Graph\Model\Windows10VpnAuthenticationMethod")) {
+            if (is_a($this->_propDict["authenticationMethod"], "Microsoft\Graph\Beta\Model\Windows10VpnAuthenticationMethod")) {
                 return $this->_propDict["authenticationMethod"];
             } else {
                 $this->_propDict["authenticationMethod"] = new Windows10VpnAuthenticationMethod($this->_propDict["authenticationMethod"]);
@@ -366,7 +366,7 @@ class Windows10VpnConfiguration extends WindowsVpnConfiguration
     public function getSingleSignOnEku()
     {
         if (array_key_exists("singleSignOnEku", $this->_propDict)) {
-            if (is_a($this->_propDict["singleSignOnEku"], "Microsoft\Graph\Model\ExtendedKeyUsage")) {
+            if (is_a($this->_propDict["singleSignOnEku"], "Microsoft\Graph\Beta\Model\ExtendedKeyUsage")) {
                 return $this->_propDict["singleSignOnEku"];
             } else {
                 $this->_propDict["singleSignOnEku"] = new ExtendedKeyUsage($this->_propDict["singleSignOnEku"]);
@@ -461,7 +461,7 @@ class Windows10VpnConfiguration extends WindowsVpnConfiguration
     public function getProxyServer()
     {
         if (array_key_exists("proxyServer", $this->_propDict)) {
-            if (is_a($this->_propDict["proxyServer"], "Microsoft\Graph\Model\Windows10VpnProxyServer")) {
+            if (is_a($this->_propDict["proxyServer"], "Microsoft\Graph\Beta\Model\Windows10VpnProxyServer")) {
                 return $this->_propDict["proxyServer"];
             } else {
                 $this->_propDict["proxyServer"] = new Windows10VpnProxyServer($this->_propDict["proxyServer"]);
@@ -701,7 +701,7 @@ class Windows10VpnConfiguration extends WindowsVpnConfiguration
     public function getIdentityCertificate()
     {
         if (array_key_exists("identityCertificate", $this->_propDict)) {
-            if (is_a($this->_propDict["identityCertificate"], "Microsoft\Graph\Model\WindowsCertificateProfileBase")) {
+            if (is_a($this->_propDict["identityCertificate"], "Microsoft\Graph\Beta\Model\WindowsCertificateProfileBase")) {
                 return $this->_propDict["identityCertificate"];
             } else {
                 $this->_propDict["identityCertificate"] = new WindowsCertificateProfileBase($this->_propDict["identityCertificate"]);

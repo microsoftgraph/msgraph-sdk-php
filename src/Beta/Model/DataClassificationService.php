@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * DataClassificationService class
@@ -135,6 +135,34 @@ class DataClassificationService extends Entity
     public function setClassifyFile($val)
     {
 		$this->_propDict["classifyFile"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the sensitivityLabels
+     *
+     * @return array The sensitivityLabels
+     */
+    public function getSensitivityLabels()
+    {
+        if (array_key_exists("sensitivityLabels", $this->_propDict)) {
+           return $this->_propDict["sensitivityLabels"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the sensitivityLabels
+    *
+    * @param SensitivityLabel $val The sensitivityLabels
+    *
+    * @return DataClassificationService
+    */
+    public function setSensitivityLabels($val)
+    {
+		$this->_propDict["sensitivityLabels"] = $val;
         return $this;
     }
     

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * WindowsKioskMultipleApps class
 *
@@ -35,7 +35,7 @@ class WindowsKioskMultipleApps extends WindowsKioskAppConfiguration
     public function getApps()
     {
         if (array_key_exists("apps", $this->_propDict)) {
-            if (is_a($this->_propDict["apps"], "Microsoft\Graph\Model\WindowsKioskAppBase")) {
+            if (is_a($this->_propDict["apps"], "Microsoft\Graph\Beta\Model\WindowsKioskAppBase")) {
                 return $this->_propDict["apps"];
             } else {
                 $this->_propDict["apps"] = new WindowsKioskAppBase($this->_propDict["apps"]);
@@ -124,7 +124,7 @@ class WindowsKioskMultipleApps extends WindowsKioskAppConfiguration
     public function getStartMenuLayoutXml()
     {
         if (array_key_exists("startMenuLayoutXml", $this->_propDict)) {
-            if (is_a($this->_propDict["startMenuLayoutXml"], "Microsoft\Graph\Model\\GuzzleHttp\Psr7\Stream")) {
+            if (is_a($this->_propDict["startMenuLayoutXml"], "Microsoft\Graph\Beta\Model\\GuzzleHttp\Psr7\Stream")) {
                 return $this->_propDict["startMenuLayoutXml"];
             } else {
                 $this->_propDict["startMenuLayoutXml"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["startMenuLayoutXml"]);

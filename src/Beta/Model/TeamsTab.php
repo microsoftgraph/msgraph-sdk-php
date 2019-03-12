@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * TeamsTab class
@@ -111,7 +111,6 @@ class TeamsTab extends Entity
     
     /**
     * Gets the sortOrderIndex
-    * Index of the order used for sorting tabs
     *
     * @return string The sortOrderIndex
     */
@@ -126,7 +125,6 @@ class TeamsTab extends Entity
     
     /**
     * Sets the sortOrderIndex
-    * Index of the order used for sorting tabs
     *
     * @param string $val The sortOrderIndex
     *
@@ -203,7 +201,7 @@ class TeamsTab extends Entity
     public function getConfiguration()
     {
         if (array_key_exists("configuration", $this->_propDict)) {
-            if (is_a($this->_propDict["configuration"], "Microsoft\Graph\Model\TeamsTabConfiguration")) {
+            if (is_a($this->_propDict["configuration"], "Microsoft\Graph\Beta\Model\TeamsTabConfiguration")) {
                 return $this->_propDict["configuration"];
             } else {
                 $this->_propDict["configuration"] = new TeamsTabConfiguration($this->_propDict["configuration"]);
@@ -236,7 +234,7 @@ class TeamsTab extends Entity
     public function getTeamsApp()
     {
         if (array_key_exists("teamsApp", $this->_propDict)) {
-            if (is_a($this->_propDict["teamsApp"], "Microsoft\Graph\Model\TeamsApp")) {
+            if (is_a($this->_propDict["teamsApp"], "Microsoft\Graph\Beta\Model\TeamsApp")) {
                 return $this->_propDict["teamsApp"];
             } else {
                 $this->_propDict["teamsApp"] = new TeamsApp($this->_propDict["teamsApp"]);

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * ItemActivityTimeSet class
 *
@@ -34,7 +34,7 @@ class ItemActivityTimeSet extends Entity
     public function getLastRecordedDateTime()
     {
         if (array_key_exists("lastRecordedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastRecordedDateTime"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["lastRecordedDateTime"], "Microsoft\Graph\Beta\Model\\DateTime")) {
                 return $this->_propDict["lastRecordedDateTime"];
             } else {
                 $this->_propDict["lastRecordedDateTime"] = new \DateTime($this->_propDict["lastRecordedDateTime"]);
@@ -65,7 +65,7 @@ class ItemActivityTimeSet extends Entity
     public function getObservedDateTime()
     {
         if (array_key_exists("observedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["observedDateTime"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["observedDateTime"], "Microsoft\Graph\Beta\Model\\DateTime")) {
                 return $this->_propDict["observedDateTime"];
             } else {
                 $this->_propDict["observedDateTime"] = new \DateTime($this->_propDict["observedDateTime"]);
@@ -96,7 +96,7 @@ class ItemActivityTimeSet extends Entity
     public function getRecordedDateTime()
     {
         if (array_key_exists("recordedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["recordedDateTime"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["recordedDateTime"], "Microsoft\Graph\Beta\Model\\DateTime")) {
                 return $this->_propDict["recordedDateTime"];
             } else {
                 $this->_propDict["recordedDateTime"] = new \DateTime($this->_propDict["recordedDateTime"]);

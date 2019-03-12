@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * CaasError class
 *
@@ -23,21 +23,21 @@ namespace Microsoft\Graph\Model;
 * @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-class CaasError extends CaasChildError
+class CaasError extends CaaSErrorBase
 {
 
     /**
     * Gets the details
     *
-    * @return CaasChildError The details
+    * @return CaaSErrorBase The details
     */
     public function getDetails()
     {
         if (array_key_exists("details", $this->_propDict)) {
-            if (is_a($this->_propDict["details"], "Microsoft\Graph\Model\CaasChildError")) {
+            if (is_a($this->_propDict["details"], "Microsoft\Graph\Beta\Model\CaaSErrorBase")) {
                 return $this->_propDict["details"];
             } else {
-                $this->_propDict["details"] = new CaasChildError($this->_propDict["details"]);
+                $this->_propDict["details"] = new CaaSErrorBase($this->_propDict["details"]);
                 return $this->_propDict["details"];
             }
         }
@@ -47,7 +47,7 @@ class CaasError extends CaasChildError
     /**
     * Sets the details
     *
-    * @param CaasChildError $val The value to assign to the details
+    * @param CaaSErrorBase $val The value to assign to the details
     *
     * @return CaasError The CaasError
     */
