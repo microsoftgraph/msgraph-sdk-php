@@ -759,7 +759,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordSignInFailureCountBeforeFactoryReset
-    * Number of sign in failures allowed before factory reset. Valid values 4 to 11
+    * Number of sign in failures allowed before factory reset. Valid values 1 to 16
     *
     * @return int The passwordSignInFailureCountBeforeFactoryReset
     */
@@ -774,7 +774,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordSignInFailureCountBeforeFactoryReset
-    * Number of sign in failures allowed before factory reset. Valid values 4 to 11
+    * Number of sign in failures allowed before factory reset. Valid values 1 to 16
     *
     * @param int $val The passwordSignInFailureCountBeforeFactoryReset
     *

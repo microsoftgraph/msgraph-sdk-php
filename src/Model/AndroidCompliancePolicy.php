@@ -148,7 +148,7 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the passwordExpirationDays
-    * Number of days before the password expires. Valid values 1 to 65535
+    * Number of days before the password expires. Valid values 1 to 365
     *
     * @return int The passwordExpirationDays
     */
@@ -163,7 +163,7 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passwordExpirationDays
-    * Number of days before the password expires. Valid values 1 to 65535
+    * Number of days before the password expires. Valid values 1 to 365
     *
     * @param int $val The passwordExpirationDays
     *
@@ -177,7 +177,7 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the passwordPreviousPasswordBlockCount
-    * Number of previous passwords to block.
+    * Number of previous passwords to block. Valid values 1 to 24
     *
     * @return int The passwordPreviousPasswordBlockCount
     */
@@ -192,7 +192,7 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passwordPreviousPasswordBlockCount
-    * Number of previous passwords to block.
+    * Number of previous passwords to block. Valid values 1 to 24
     *
     * @param int $val The passwordPreviousPasswordBlockCount
     *
