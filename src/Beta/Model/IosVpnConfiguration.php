@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * IosVpnConfiguration class
@@ -35,7 +35,7 @@ class IosVpnConfiguration extends AppleVpnConfiguration
     public function getProviderType()
     {
         if (array_key_exists("providerType", $this->_propDict)) {
-            if (is_a($this->_propDict["providerType"], "Microsoft\Graph\Model\VpnProviderType")) {
+            if (is_a($this->_propDict["providerType"], "Microsoft\Graph\Beta\Model\VpnProviderType")) {
                 return $this->_propDict["providerType"];
             } else {
                 $this->_propDict["providerType"] = new VpnProviderType($this->_propDict["providerType"]);
@@ -184,7 +184,7 @@ class IosVpnConfiguration extends AppleVpnConfiguration
     public function getIdentityCertificate()
     {
         if (array_key_exists("identityCertificate", $this->_propDict)) {
-            if (is_a($this->_propDict["identityCertificate"], "Microsoft\Graph\Model\IosCertificateProfileBase")) {
+            if (is_a($this->_propDict["identityCertificate"], "Microsoft\Graph\Beta\Model\IosCertificateProfileBase")) {
                 return $this->_propDict["identityCertificate"];
             } else {
                 $this->_propDict["identityCertificate"] = new IosCertificateProfileBase($this->_propDict["identityCertificate"]);

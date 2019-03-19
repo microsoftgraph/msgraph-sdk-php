@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * BitLockerRecoveryOptions class
 *
@@ -63,7 +63,7 @@ class BitLockerRecoveryOptions extends Entity
     public function getRecoveryPasswordUsage()
     {
         if (array_key_exists("recoveryPasswordUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["recoveryPasswordUsage"], "Microsoft\Graph\Model\ConfigurationUsage")) {
+            if (is_a($this->_propDict["recoveryPasswordUsage"], "Microsoft\Graph\Beta\Model\ConfigurationUsage")) {
                 return $this->_propDict["recoveryPasswordUsage"];
             } else {
                 $this->_propDict["recoveryPasswordUsage"] = new ConfigurationUsage($this->_propDict["recoveryPasswordUsage"]);
@@ -96,7 +96,7 @@ class BitLockerRecoveryOptions extends Entity
     public function getRecoveryKeyUsage()
     {
         if (array_key_exists("recoveryKeyUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["recoveryKeyUsage"], "Microsoft\Graph\Model\ConfigurationUsage")) {
+            if (is_a($this->_propDict["recoveryKeyUsage"], "Microsoft\Graph\Beta\Model\ConfigurationUsage")) {
                 return $this->_propDict["recoveryKeyUsage"];
             } else {
                 $this->_propDict["recoveryKeyUsage"] = new ConfigurationUsage($this->_propDict["recoveryKeyUsage"]);
@@ -185,7 +185,7 @@ class BitLockerRecoveryOptions extends Entity
     public function getRecoveryInformationToStore()
     {
         if (array_key_exists("recoveryInformationToStore", $this->_propDict)) {
-            if (is_a($this->_propDict["recoveryInformationToStore"], "Microsoft\Graph\Model\BitLockerRecoveryInformationType")) {
+            if (is_a($this->_propDict["recoveryInformationToStore"], "Microsoft\Graph\Beta\Model\BitLockerRecoveryInformationType")) {
                 return $this->_propDict["recoveryInformationToStore"];
             } else {
                 $this->_propDict["recoveryInformationToStore"] = new BitLockerRecoveryInformationType($this->_propDict["recoveryInformationToStore"]);

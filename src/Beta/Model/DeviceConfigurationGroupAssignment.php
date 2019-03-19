@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * DeviceConfigurationGroupAssignment class
@@ -93,7 +93,7 @@ class DeviceConfigurationGroupAssignment extends Entity
     public function getDeviceConfiguration()
     {
         if (array_key_exists("deviceConfiguration", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceConfiguration"], "Microsoft\Graph\Model\DeviceConfiguration")) {
+            if (is_a($this->_propDict["deviceConfiguration"], "Microsoft\Graph\Beta\Model\DeviceConfiguration")) {
                 return $this->_propDict["deviceConfiguration"];
             } else {
                 $this->_propDict["deviceConfiguration"] = new DeviceConfiguration($this->_propDict["deviceConfiguration"]);

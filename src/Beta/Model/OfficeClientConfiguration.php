@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * OfficeClientConfiguration class
@@ -177,7 +177,7 @@ class OfficeClientConfiguration extends Entity
     public function getUserCheckinSummary()
     {
         if (array_key_exists("userCheckinSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["userCheckinSummary"], "Microsoft\Graph\Model\OfficeUserCheckinSummary")) {
+            if (is_a($this->_propDict["userCheckinSummary"], "Microsoft\Graph\Beta\Model\OfficeUserCheckinSummary")) {
                 return $this->_propDict["userCheckinSummary"];
             } else {
                 $this->_propDict["userCheckinSummary"] = new OfficeUserCheckinSummary($this->_propDict["userCheckinSummary"]);

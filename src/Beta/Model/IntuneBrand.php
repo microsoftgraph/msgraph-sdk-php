@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * IntuneBrand class
 *
@@ -259,7 +259,7 @@ class IntuneBrand extends Entity
     public function getThemeColor()
     {
         if (array_key_exists("themeColor", $this->_propDict)) {
-            if (is_a($this->_propDict["themeColor"], "Microsoft\Graph\Model\RgbColor")) {
+            if (is_a($this->_propDict["themeColor"], "Microsoft\Graph\Beta\Model\RgbColor")) {
                 return $this->_propDict["themeColor"];
             } else {
                 $this->_propDict["themeColor"] = new RgbColor($this->_propDict["themeColor"]);
@@ -320,7 +320,7 @@ class IntuneBrand extends Entity
     public function getLightBackgroundLogo()
     {
         if (array_key_exists("lightBackgroundLogo", $this->_propDict)) {
-            if (is_a($this->_propDict["lightBackgroundLogo"], "Microsoft\Graph\Model\MimeContent")) {
+            if (is_a($this->_propDict["lightBackgroundLogo"], "Microsoft\Graph\Beta\Model\MimeContent")) {
                 return $this->_propDict["lightBackgroundLogo"];
             } else {
                 $this->_propDict["lightBackgroundLogo"] = new MimeContent($this->_propDict["lightBackgroundLogo"]);
@@ -353,7 +353,7 @@ class IntuneBrand extends Entity
     public function getDarkBackgroundLogo()
     {
         if (array_key_exists("darkBackgroundLogo", $this->_propDict)) {
-            if (is_a($this->_propDict["darkBackgroundLogo"], "Microsoft\Graph\Model\MimeContent")) {
+            if (is_a($this->_propDict["darkBackgroundLogo"], "Microsoft\Graph\Beta\Model\MimeContent")) {
                 return $this->_propDict["darkBackgroundLogo"];
             } else {
                 $this->_propDict["darkBackgroundLogo"] = new MimeContent($this->_propDict["darkBackgroundLogo"]);
@@ -414,7 +414,7 @@ class IntuneBrand extends Entity
     public function getLandingPageCustomizedImage()
     {
         if (array_key_exists("landingPageCustomizedImage", $this->_propDict)) {
-            if (is_a($this->_propDict["landingPageCustomizedImage"], "Microsoft\Graph\Model\MimeContent")) {
+            if (is_a($this->_propDict["landingPageCustomizedImage"], "Microsoft\Graph\Beta\Model\MimeContent")) {
                 return $this->_propDict["landingPageCustomizedImage"];
             } else {
                 $this->_propDict["landingPageCustomizedImage"] = new MimeContent($this->_propDict["landingPageCustomizedImage"]);

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * WindowsUpdateScheduledInstall class
 *
@@ -44,7 +44,7 @@ class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleType
     public function getScheduledInstallDay()
     {
         if (array_key_exists("scheduledInstallDay", $this->_propDict)) {
-            if (is_a($this->_propDict["scheduledInstallDay"], "Microsoft\Graph\Model\WeeklySchedule")) {
+            if (is_a($this->_propDict["scheduledInstallDay"], "Microsoft\Graph\Beta\Model\WeeklySchedule")) {
                 return $this->_propDict["scheduledInstallDay"];
             } else {
                 $this->_propDict["scheduledInstallDay"] = new WeeklySchedule($this->_propDict["scheduledInstallDay"]);
@@ -77,7 +77,7 @@ class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleType
     public function getScheduledInstallTime()
     {
         if (array_key_exists("scheduledInstallTime", $this->_propDict)) {
-            if (is_a($this->_propDict["scheduledInstallTime"], "Microsoft\Graph\Model\TimeOfDay")) {
+            if (is_a($this->_propDict["scheduledInstallTime"], "Microsoft\Graph\Beta\Model\TimeOfDay")) {
                 return $this->_propDict["scheduledInstallTime"];
             } else {
                 $this->_propDict["scheduledInstallTime"] = new TimeOfDay($this->_propDict["scheduledInstallTime"]);

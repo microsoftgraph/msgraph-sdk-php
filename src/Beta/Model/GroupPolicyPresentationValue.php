@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * GroupPolicyPresentationValue class
@@ -101,7 +101,7 @@ class GroupPolicyPresentationValue extends Entity
     public function getDefinitionValue()
     {
         if (array_key_exists("definitionValue", $this->_propDict)) {
-            if (is_a($this->_propDict["definitionValue"], "Microsoft\Graph\Model\GroupPolicyDefinitionValue")) {
+            if (is_a($this->_propDict["definitionValue"], "Microsoft\Graph\Beta\Model\GroupPolicyDefinitionValue")) {
                 return $this->_propDict["definitionValue"];
             } else {
                 $this->_propDict["definitionValue"] = new GroupPolicyDefinitionValue($this->_propDict["definitionValue"]);
@@ -134,7 +134,7 @@ class GroupPolicyPresentationValue extends Entity
     public function getPresentation()
     {
         if (array_key_exists("presentation", $this->_propDict)) {
-            if (is_a($this->_propDict["presentation"], "Microsoft\Graph\Model\GroupPolicyPresentation")) {
+            if (is_a($this->_propDict["presentation"], "Microsoft\Graph\Beta\Model\GroupPolicyPresentation")) {
                 return $this->_propDict["presentation"];
             } else {
                 $this->_propDict["presentation"] = new GroupPolicyPresentation($this->_propDict["presentation"]);

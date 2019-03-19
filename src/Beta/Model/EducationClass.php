@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * EducationClass class
@@ -122,7 +122,7 @@ class EducationClass extends Entity
     public function getCreatedBy()
     {
         if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["createdBy"], "Microsoft\Graph\Beta\Model\IdentitySet")) {
                 return $this->_propDict["createdBy"];
             } else {
                 $this->_propDict["createdBy"] = new IdentitySet($this->_propDict["createdBy"]);
@@ -242,7 +242,7 @@ class EducationClass extends Entity
     public function getExternalSource()
     {
         if (array_key_exists("externalSource", $this->_propDict)) {
-            if (is_a($this->_propDict["externalSource"], "Microsoft\Graph\Model\EducationExternalSource")) {
+            if (is_a($this->_propDict["externalSource"], "Microsoft\Graph\Beta\Model\EducationExternalSource")) {
                 return $this->_propDict["externalSource"];
             } else {
                 $this->_propDict["externalSource"] = new EducationExternalSource($this->_propDict["externalSource"]);
@@ -275,7 +275,7 @@ class EducationClass extends Entity
     public function getTerm()
     {
         if (array_key_exists("term", $this->_propDict)) {
-            if (is_a($this->_propDict["term"], "Microsoft\Graph\Model\EducationTerm")) {
+            if (is_a($this->_propDict["term"], "Microsoft\Graph\Beta\Model\EducationTerm")) {
                 return $this->_propDict["term"];
             } else {
                 $this->_propDict["term"] = new EducationTerm($this->_propDict["term"]);
@@ -398,7 +398,7 @@ class EducationClass extends Entity
     public function getGroup()
     {
         if (array_key_exists("group", $this->_propDict)) {
-            if (is_a($this->_propDict["group"], "Microsoft\Graph\Model\Group")) {
+            if (is_a($this->_propDict["group"], "Microsoft\Graph\Beta\Model\Group")) {
                 return $this->_propDict["group"];
             } else {
                 $this->_propDict["group"] = new Group($this->_propDict["group"]);

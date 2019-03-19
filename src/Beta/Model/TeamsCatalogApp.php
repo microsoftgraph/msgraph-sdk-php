@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * TeamsCatalogApp class
@@ -115,7 +115,7 @@ class TeamsCatalogApp extends Entity
     public function getDistributionMethod()
     {
         if (array_key_exists("distributionMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["distributionMethod"], "Microsoft\Graph\Model\TeamsAppDistributionMethod")) {
+            if (is_a($this->_propDict["distributionMethod"], "Microsoft\Graph\Beta\Model\TeamsAppDistributionMethod")) {
                 return $this->_propDict["distributionMethod"];
             } else {
                 $this->_propDict["distributionMethod"] = new TeamsAppDistributionMethod($this->_propDict["distributionMethod"]);

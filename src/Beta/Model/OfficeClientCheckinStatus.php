@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * OfficeClientCheckinStatus class
 *
@@ -190,7 +190,7 @@ class OfficeClientCheckinStatus extends Entity
     public function getCheckinDateTime()
     {
         if (array_key_exists("checkinDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["checkinDateTime"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["checkinDateTime"], "Microsoft\Graph\Beta\Model\\DateTime")) {
                 return $this->_propDict["checkinDateTime"];
             } else {
                 $this->_propDict["checkinDateTime"] = new \DateTime($this->_propDict["checkinDateTime"]);
