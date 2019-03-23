@@ -34,7 +34,7 @@ class PatternedRecurrence extends Entity
     */
     public function getPattern()
     {
-        if ($this->->getProperties() && array_key_exists("pattern", $this->_propDict)) {
+        if ($this->getProperties() && array_key_exists("pattern", $this->_propDict)) {
             if (is_a($this->_propDict["pattern"], "Microsoft\Graph\Model\RecurrencePattern")) {
                 return $this->_propDict["pattern"];
             } else {
@@ -67,7 +67,7 @@ class PatternedRecurrence extends Entity
     */
     public function getRange()
     {
-        if ($this->->getProperties() && array_key_exists("range", $this->_propDict)) {
+        if ($this->getProperties() && array_key_exists("range", $this->_propDict)) {
             if (is_a($this->_propDict["range"], "Microsoft\Graph\Model\RecurrenceRange")) {
                 return $this->_propDict["range"];
             } else {
