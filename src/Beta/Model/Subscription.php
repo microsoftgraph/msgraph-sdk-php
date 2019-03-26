@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * Subscription class
@@ -230,6 +230,33 @@ class Subscription extends Entity
     public function setCreatorId($val)
     {
         $this->_propDict["creatorId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the includeProperties
+    *
+    * @return bool The includeProperties
+    */
+    public function getIncludeProperties()
+    {
+        if (array_key_exists("includeProperties", $this->_propDict)) {
+            return $this->_propDict["includeProperties"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the includeProperties
+    *
+    * @param bool $val The includeProperties
+    *
+    * @return Subscription
+    */
+    public function setIncludeProperties($val)
+    {
+        $this->_propDict["includeProperties"] = boolval($val);
         return $this;
     }
     

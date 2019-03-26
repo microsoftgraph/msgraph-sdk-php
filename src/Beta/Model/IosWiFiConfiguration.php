@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * IosWiFiConfiguration class
@@ -151,7 +151,7 @@ class IosWiFiConfiguration extends DeviceConfiguration
     public function getWiFiSecurityType()
     {
         if (array_key_exists("wiFiSecurityType", $this->_propDict)) {
-            if (is_a($this->_propDict["wiFiSecurityType"], "Microsoft\Graph\Model\WiFiSecurityType")) {
+            if (is_a($this->_propDict["wiFiSecurityType"], "Microsoft\Graph\Beta\Model\WiFiSecurityType")) {
                 return $this->_propDict["wiFiSecurityType"];
             } else {
                 $this->_propDict["wiFiSecurityType"] = new WiFiSecurityType($this->_propDict["wiFiSecurityType"]);
@@ -184,7 +184,7 @@ class IosWiFiConfiguration extends DeviceConfiguration
     public function getProxySettings()
     {
         if (array_key_exists("proxySettings", $this->_propDict)) {
-            if (is_a($this->_propDict["proxySettings"], "Microsoft\Graph\Model\WiFiProxySetting")) {
+            if (is_a($this->_propDict["proxySettings"], "Microsoft\Graph\Beta\Model\WiFiProxySetting")) {
                 return $this->_propDict["proxySettings"];
             } else {
                 $this->_propDict["proxySettings"] = new WiFiProxySetting($this->_propDict["proxySettings"]);

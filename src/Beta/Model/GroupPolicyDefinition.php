@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * GroupPolicyDefinition class
@@ -35,7 +35,7 @@ class GroupPolicyDefinition extends Entity
     public function getClassType()
     {
         if (array_key_exists("classType", $this->_propDict)) {
-            if (is_a($this->_propDict["classType"], "Microsoft\Graph\Model\GroupPolicyDefinitionClassType")) {
+            if (is_a($this->_propDict["classType"], "Microsoft\Graph\Beta\Model\GroupPolicyDefinitionClassType")) {
                 return $this->_propDict["classType"];
             } else {
                 $this->_propDict["classType"] = new GroupPolicyDefinitionClassType($this->_propDict["classType"]);
@@ -184,7 +184,7 @@ class GroupPolicyDefinition extends Entity
     public function getPolicyType()
     {
         if (array_key_exists("policyType", $this->_propDict)) {
-            if (is_a($this->_propDict["policyType"], "Microsoft\Graph\Model\GroupPolicyType")) {
+            if (is_a($this->_propDict["policyType"], "Microsoft\Graph\Beta\Model\GroupPolicyType")) {
                 return $this->_propDict["policyType"];
             } else {
                 $this->_propDict["policyType"] = new GroupPolicyType($this->_propDict["policyType"]);
@@ -250,7 +250,7 @@ class GroupPolicyDefinition extends Entity
     public function getDefinitionFile()
     {
         if (array_key_exists("definitionFile", $this->_propDict)) {
-            if (is_a($this->_propDict["definitionFile"], "Microsoft\Graph\Model\GroupPolicyDefinitionFile")) {
+            if (is_a($this->_propDict["definitionFile"], "Microsoft\Graph\Beta\Model\GroupPolicyDefinitionFile")) {
                 return $this->_propDict["definitionFile"];
             } else {
                 $this->_propDict["definitionFile"] = new GroupPolicyDefinitionFile($this->_propDict["definitionFile"]);

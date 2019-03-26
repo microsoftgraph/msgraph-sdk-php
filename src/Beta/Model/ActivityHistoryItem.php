@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * ActivityHistoryItem class
@@ -35,7 +35,7 @@ class ActivityHistoryItem extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Microsoft\Graph\Model\Status")) {
+            if (is_a($this->_propDict["status"], "Microsoft\Graph\Beta\Model\Status")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new Status($this->_propDict["status"]);
@@ -291,7 +291,7 @@ class ActivityHistoryItem extends Entity
     public function getActivity()
     {
         if (array_key_exists("activity", $this->_propDict)) {
-            if (is_a($this->_propDict["activity"], "Microsoft\Graph\Model\UserActivity")) {
+            if (is_a($this->_propDict["activity"], "Microsoft\Graph\Beta\Model\UserActivity")) {
                 return $this->_propDict["activity"];
             } else {
                 $this->_propDict["activity"] = new UserActivity($this->_propDict["activity"]);

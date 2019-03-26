@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * EducationAssignmentPointsGradeType class
 *
@@ -43,7 +43,7 @@ class EducationAssignmentPointsGradeType extends EducationAssignmentGradeType
     public function getMaxPoints()
     {
         if (array_key_exists("maxPoints", $this->_propDict)) {
-            if (is_a($this->_propDict["maxPoints"], "Microsoft\Graph\Model\Single")) {
+            if (is_a($this->_propDict["maxPoints"], "Microsoft\Graph\Beta\Model\Single")) {
                 return $this->_propDict["maxPoints"];
             } else {
                 $this->_propDict["maxPoints"] = new Single($this->_propDict["maxPoints"]);
