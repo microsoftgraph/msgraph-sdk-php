@@ -4465,7 +4465,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeBlockSearchSuggestions
-    * Indicates whether or not to Block the user from using the search suggestions in the address bar.
+    * Indicates whether or not to block the user from using the search suggestions in the address bar.
     *
     * @return bool The edgeBlockSearchSuggestions
     */
@@ -4480,7 +4480,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeBlockSearchSuggestions
-    * Indicates whether or not to Block the user from using the search suggestions in the address bar.
+    * Indicates whether or not to block the user from using the search suggestions in the address bar.
     *
     * @param bool $val The edgeBlockSearchSuggestions
     *
@@ -4494,7 +4494,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeBlockSendingIntranetTrafficToInternetExplorer
-    * Indicates whether or not to Block the user from sending Intranet traffic to Internet Explorer from Edge.
+    * Indicates whether or not to switch the intranet traffic from Edge to Internet Explorer. Note: the name of this property is misleading; the property is obsolete, use EdgeSendIntranetTrafficToInternetExplorer instead.
     *
     * @return bool The edgeBlockSendingIntranetTrafficToInternetExplorer
     */
@@ -4509,7 +4509,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeBlockSendingIntranetTrafficToInternetExplorer
-    * Indicates whether or not to Block the user from sending Intranet traffic to Internet Explorer from Edge.
+    * Indicates whether or not to switch the intranet traffic from Edge to Internet Explorer. Note: the name of this property is misleading; the property is obsolete, use EdgeSendIntranetTrafficToInternetExplorer instead.
     *
     * @param bool $val The edgeBlockSendingIntranetTrafficToInternetExplorer
     *

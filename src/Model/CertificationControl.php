@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* IPv6Range File
+* CertificationControl File
 * PHP version 7
 *
 * @category  Library
@@ -14,7 +14,7 @@
 */
 namespace Microsoft\Graph\Model;
 /**
-* IPv6Range class
+* CertificationControl class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -23,62 +23,58 @@ namespace Microsoft\Graph\Model;
 * @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-class IPv6Range extends IpRange
+class CertificationControl extends Entity
 {
     /**
-    * Gets the lowerAddress
-    * Lower address
+    * Gets the name
     *
-    * @return string The lowerAddress
+    * @return string The name
     */
-    public function getLowerAddress()
+    public function getName()
     {
-        if (array_key_exists("lowerAddress", $this->_propDict)) {
-            return $this->_propDict["lowerAddress"];
+        if (array_key_exists("name", $this->_propDict)) {
+            return $this->_propDict["name"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the lowerAddress
-    * Lower address
+    * Sets the name
     *
-    * @param string $val The value of the lowerAddress
+    * @param string $val The value of the name
     *
-    * @return IPv6Range
+    * @return CertificationControl
     */
-    public function setLowerAddress($val)
+    public function setName($val)
     {
-        $this->_propDict["lowerAddress"] = $val;
+        $this->_propDict["name"] = $val;
         return $this;
     }
     /**
-    * Gets the upperAddress
-    * Upper address
+    * Gets the url
     *
-    * @return string The upperAddress
+    * @return string The url
     */
-    public function getUpperAddress()
+    public function getUrl()
     {
-        if (array_key_exists("upperAddress", $this->_propDict)) {
-            return $this->_propDict["upperAddress"];
+        if (array_key_exists("url", $this->_propDict)) {
+            return $this->_propDict["url"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the upperAddress
-    * Upper address
+    * Sets the url
     *
-    * @param string $val The value of the upperAddress
+    * @param string $val The value of the url
     *
-    * @return IPv6Range
+    * @return CertificationControl
     */
-    public function setUpperAddress($val)
+    public function setUrl($val)
     {
-        $this->_propDict["upperAddress"] = $val;
+        $this->_propDict["url"] = $val;
         return $this;
     }
 }

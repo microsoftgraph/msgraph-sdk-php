@@ -56,4 +56,60 @@ class Security extends Entity
         return $this;
     }
     
+
+     /** 
+     * Gets the secureScoreControlProfiles
+     *
+     * @return array The secureScoreControlProfiles
+     */
+    public function getSecureScoreControlProfiles()
+    {
+        if (array_key_exists("secureScoreControlProfiles", $this->_propDict)) {
+           return $this->_propDict["secureScoreControlProfiles"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the secureScoreControlProfiles
+    *
+    * @param SecureScoreControlProfile $val The secureScoreControlProfiles
+    *
+    * @return Security
+    */
+    public function setSecureScoreControlProfiles($val)
+    {
+		$this->_propDict["secureScoreControlProfiles"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the secureScores
+     *
+     * @return array The secureScores
+     */
+    public function getSecureScores()
+    {
+        if (array_key_exists("secureScores", $this->_propDict)) {
+           return $this->_propDict["secureScores"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the secureScores
+    *
+    * @param SecureScore $val The secureScores
+    *
+    * @return Security
+    */
+    public function setSecureScores($val)
+    {
+		$this->_propDict["secureScores"] = $val;
+        return $this;
+    }
+    
 }

@@ -85,6 +85,35 @@ class WorkbookTable extends Entity
     }
     
     /**
+    * Gets the legacyId
+    * Legacy Id used in older Excle clients. The value of the identifier remains the same even when the table is renamed. This property should be interpreted as an opaque string value and should not be parsed to any other type. Read-only.
+    *
+    * @return string The legacyId
+    */
+    public function getLegacyId()
+    {
+        if (array_key_exists("legacyId", $this->_propDict)) {
+            return $this->_propDict["legacyId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the legacyId
+    * Legacy Id used in older Excle clients. The value of the identifier remains the same even when the table is renamed. This property should be interpreted as an opaque string value and should not be parsed to any other type. Read-only.
+    *
+    * @param string $val The legacyId
+    *
+    * @return WorkbookTable
+    */
+    public function setLegacyId($val)
+    {
+        $this->_propDict["legacyId"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the name
     * Name of the table.
     *

@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* IPv6Range File
+* FreeBusyError File
 * PHP version 7
 *
 * @category  Library
@@ -14,7 +14,7 @@
 */
 namespace Microsoft\Graph\Model;
 /**
-* IPv6Range class
+* FreeBusyError class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -23,62 +23,58 @@ namespace Microsoft\Graph\Model;
 * @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-class IPv6Range extends IpRange
+class FreeBusyError extends Entity
 {
     /**
-    * Gets the lowerAddress
-    * Lower address
+    * Gets the message
     *
-    * @return string The lowerAddress
+    * @return string The message
     */
-    public function getLowerAddress()
+    public function getMessage()
     {
-        if (array_key_exists("lowerAddress", $this->_propDict)) {
-            return $this->_propDict["lowerAddress"];
+        if (array_key_exists("message", $this->_propDict)) {
+            return $this->_propDict["message"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the lowerAddress
-    * Lower address
+    * Sets the message
     *
-    * @param string $val The value of the lowerAddress
+    * @param string $val The value of the message
     *
-    * @return IPv6Range
+    * @return FreeBusyError
     */
-    public function setLowerAddress($val)
+    public function setMessage($val)
     {
-        $this->_propDict["lowerAddress"] = $val;
+        $this->_propDict["message"] = $val;
         return $this;
     }
     /**
-    * Gets the upperAddress
-    * Upper address
+    * Gets the responseCode
     *
-    * @return string The upperAddress
+    * @return string The responseCode
     */
-    public function getUpperAddress()
+    public function getResponseCode()
     {
-        if (array_key_exists("upperAddress", $this->_propDict)) {
-            return $this->_propDict["upperAddress"];
+        if (array_key_exists("responseCode", $this->_propDict)) {
+            return $this->_propDict["responseCode"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the upperAddress
-    * Upper address
+    * Sets the responseCode
     *
-    * @param string $val The value of the upperAddress
+    * @param string $val The value of the responseCode
     *
-    * @return IPv6Range
+    * @return FreeBusyError
     */
-    public function setUpperAddress($val)
+    public function setResponseCode($val)
     {
-        $this->_propDict["upperAddress"] = $val;
+        $this->_propDict["responseCode"] = $val;
         return $this;
     }
 }
