@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * TextPrompt class
 *
@@ -69,7 +69,7 @@ class TextPrompt extends Prompt
     public function getVoiceGender()
     {
         if (array_key_exists("voiceGender", $this->_propDict)) {
-            if (is_a($this->_propDict["voiceGender"], "Microsoft\Graph\Model\VoiceGender")) {
+            if (is_a($this->_propDict["voiceGender"], "Microsoft\Graph\Beta\Model\VoiceGender")) {
                 return $this->_propDict["voiceGender"];
             } else {
                 $this->_propDict["voiceGender"] = new VoiceGender($this->_propDict["voiceGender"]);
@@ -100,7 +100,7 @@ class TextPrompt extends Prompt
     public function getCulture()
     {
         if (array_key_exists("culture", $this->_propDict)) {
-            if (is_a($this->_propDict["culture"], "Microsoft\Graph\Model\Culture")) {
+            if (is_a($this->_propDict["culture"], "Microsoft\Graph\Beta\Model\Culture")) {
                 return $this->_propDict["culture"];
             } else {
                 $this->_propDict["culture"] = new Culture($this->_propDict["culture"]);
@@ -157,7 +157,7 @@ class TextPrompt extends Prompt
     public function getSayAs()
     {
         if (array_key_exists("sayAs", $this->_propDict)) {
-            if (is_a($this->_propDict["sayAs"], "Microsoft\Graph\Model\SayAs")) {
+            if (is_a($this->_propDict["sayAs"], "Microsoft\Graph\Beta\Model\SayAs")) {
                 return $this->_propDict["sayAs"];
             } else {
                 $this->_propDict["sayAs"] = new SayAs($this->_propDict["sayAs"]);

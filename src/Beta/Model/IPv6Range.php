@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * IPv6Range class
 *
@@ -27,7 +27,7 @@ class IPv6Range extends IpRange
 {
     /**
     * Gets the lowerAddress
-    * Lower IP Address
+    * Lower address
     *
     * @return string The lowerAddress
     */
@@ -42,7 +42,7 @@ class IPv6Range extends IpRange
 
     /**
     * Sets the lowerAddress
-    * Lower IP Address
+    * Lower address
     *
     * @param string $val The value of the lowerAddress
     *
@@ -55,7 +55,7 @@ class IPv6Range extends IpRange
     }
     /**
     * Gets the upperAddress
-    * Upper IP Address
+    * Upper address
     *
     * @return string The upperAddress
     */
@@ -70,7 +70,7 @@ class IPv6Range extends IpRange
 
     /**
     * Sets the upperAddress
-    * Upper IP Address
+    * Upper address
     *
     * @param string $val The value of the upperAddress
     *

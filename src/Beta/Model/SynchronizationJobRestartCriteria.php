@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * SynchronizationJobRestartCriteria class
 *
@@ -34,7 +34,7 @@ class SynchronizationJobRestartCriteria extends Entity
     public function getResetScope()
     {
         if (array_key_exists("resetScope", $this->_propDict)) {
-            if (is_a($this->_propDict["resetScope"], "Microsoft\Graph\Model\SynchronizationJobRestartScope")) {
+            if (is_a($this->_propDict["resetScope"], "Microsoft\Graph\Beta\Model\SynchronizationJobRestartScope")) {
                 return $this->_propDict["resetScope"];
             } else {
                 $this->_propDict["resetScope"] = new SynchronizationJobRestartScope($this->_propDict["resetScope"]);

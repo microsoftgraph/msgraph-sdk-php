@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * WorkbookWorksheet class
@@ -212,7 +212,7 @@ class WorkbookWorksheet extends Entity
     public function getProtection()
     {
         if (array_key_exists("protection", $this->_propDict)) {
-            if (is_a($this->_propDict["protection"], "Microsoft\Graph\Model\WorkbookWorksheetProtection")) {
+            if (is_a($this->_propDict["protection"], "Microsoft\Graph\Beta\Model\WorkbookWorksheetProtection")) {
                 return $this->_propDict["protection"];
             } else {
                 $this->_propDict["protection"] = new WorkbookWorksheetProtection($this->_propDict["protection"]);

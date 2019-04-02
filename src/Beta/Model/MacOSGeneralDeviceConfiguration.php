@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * MacOSGeneralDeviceConfiguration class
@@ -65,7 +65,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     public function getCompliantAppListType()
     {
         if (array_key_exists("compliantAppListType", $this->_propDict)) {
-            if (is_a($this->_propDict["compliantAppListType"], "Microsoft\Graph\Model\AppListType")) {
+            if (is_a($this->_propDict["compliantAppListType"], "Microsoft\Graph\Beta\Model\AppListType")) {
                 return $this->_propDict["compliantAppListType"];
             } else {
                 $this->_propDict["compliantAppListType"] = new AppListType($this->_propDict["compliantAppListType"]);
@@ -330,7 +330,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     public function getPasswordRequiredType()
     {
         if (array_key_exists("passwordRequiredType", $this->_propDict)) {
-            if (is_a($this->_propDict["passwordRequiredType"], "Microsoft\Graph\Model\RequiredPasswordType")) {
+            if (is_a($this->_propDict["passwordRequiredType"], "Microsoft\Graph\Beta\Model\RequiredPasswordType")) {
                 return $this->_propDict["passwordRequiredType"];
             } else {
                 $this->_propDict["passwordRequiredType"] = new RequiredPasswordType($this->_propDict["passwordRequiredType"]);
@@ -1105,6 +1105,93 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     public function setPasswordBlockAirDropSharing($val)
     {
         $this->_propDict["passwordBlockAirDropSharing"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the softwareUpdatesEnforcedDelayInDays
+    * Sets how many days a software update will be delyed for a supervised device. Valid values 0 to 90
+    *
+    * @return int The softwareUpdatesEnforcedDelayInDays
+    */
+    public function getSoftwareUpdatesEnforcedDelayInDays()
+    {
+        if (array_key_exists("softwareUpdatesEnforcedDelayInDays", $this->_propDict)) {
+            return $this->_propDict["softwareUpdatesEnforcedDelayInDays"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the softwareUpdatesEnforcedDelayInDays
+    * Sets how many days a software update will be delyed for a supervised device. Valid values 0 to 90
+    *
+    * @param int $val The softwareUpdatesEnforcedDelayInDays
+    *
+    * @return MacOSGeneralDeviceConfiguration
+    */
+    public function setSoftwareUpdatesEnforcedDelayInDays($val)
+    {
+        $this->_propDict["softwareUpdatesEnforcedDelayInDays"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the softwareUpdatesForceDelayed
+    * Indicates whether or not to delay user visibility of software updates when the device is in supervised mode.
+    *
+    * @return bool The softwareUpdatesForceDelayed
+    */
+    public function getSoftwareUpdatesForceDelayed()
+    {
+        if (array_key_exists("softwareUpdatesForceDelayed", $this->_propDict)) {
+            return $this->_propDict["softwareUpdatesForceDelayed"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the softwareUpdatesForceDelayed
+    * Indicates whether or not to delay user visibility of software updates when the device is in supervised mode.
+    *
+    * @param bool $val The softwareUpdatesForceDelayed
+    *
+    * @return MacOSGeneralDeviceConfiguration
+    */
+    public function setSoftwareUpdatesForceDelayed($val)
+    {
+        $this->_propDict["softwareUpdatesForceDelayed"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the contentCachingBlocked
+    * Indicates whether or not to allow content caching.
+    *
+    * @return bool The contentCachingBlocked
+    */
+    public function getContentCachingBlocked()
+    {
+        if (array_key_exists("contentCachingBlocked", $this->_propDict)) {
+            return $this->_propDict["contentCachingBlocked"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the contentCachingBlocked
+    * Indicates whether or not to allow content caching.
+    *
+    * @param bool $val The contentCachingBlocked
+    *
+    * @return MacOSGeneralDeviceConfiguration
+    */
+    public function setContentCachingBlocked($val)
+    {
+        $this->_propDict["contentCachingBlocked"] = boolval($val);
         return $this;
     }
     

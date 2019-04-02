@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * CertificateConnectorSetting class
 *
@@ -63,7 +63,7 @@ class CertificateConnectorSetting extends Entity
     public function getCertExpiryTime()
     {
         if (array_key_exists("certExpiryTime", $this->_propDict)) {
-            if (is_a($this->_propDict["certExpiryTime"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["certExpiryTime"], "Microsoft\Graph\Beta\Model\\DateTime")) {
                 return $this->_propDict["certExpiryTime"];
             } else {
                 $this->_propDict["certExpiryTime"] = new \DateTime($this->_propDict["certExpiryTime"]);
@@ -124,7 +124,7 @@ class CertificateConnectorSetting extends Entity
     public function getLastConnectorConnectionTime()
     {
         if (array_key_exists("lastConnectorConnectionTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastConnectorConnectionTime"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["lastConnectorConnectionTime"], "Microsoft\Graph\Beta\Model\\DateTime")) {
                 return $this->_propDict["lastConnectorConnectionTime"];
             } else {
                 $this->_propDict["lastConnectorConnectionTime"] = new \DateTime($this->_propDict["lastConnectorConnectionTime"]);

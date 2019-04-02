@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * RemoteActionAudit class
@@ -122,7 +122,7 @@ class RemoteActionAudit extends Entity
     public function getAction()
     {
         if (array_key_exists("action", $this->_propDict)) {
-            if (is_a($this->_propDict["action"], "Microsoft\Graph\Model\RemoteAction")) {
+            if (is_a($this->_propDict["action"], "Microsoft\Graph\Beta\Model\RemoteAction")) {
                 return $this->_propDict["action"];
             } else {
                 $this->_propDict["action"] = new RemoteAction($this->_propDict["action"]);
@@ -246,7 +246,7 @@ class RemoteActionAudit extends Entity
     public function getActionState()
     {
         if (array_key_exists("actionState", $this->_propDict)) {
-            if (is_a($this->_propDict["actionState"], "Microsoft\Graph\Model\ActionState")) {
+            if (is_a($this->_propDict["actionState"], "Microsoft\Graph\Beta\Model\ActionState")) {
                 return $this->_propDict["actionState"];
             } else {
                 $this->_propDict["actionState"] = new ActionState($this->_propDict["actionState"]);

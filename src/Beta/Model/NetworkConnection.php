@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * NetworkConnection class
 *
@@ -175,7 +175,7 @@ class NetworkConnection extends Entity
     public function getDirection()
     {
         if (array_key_exists("direction", $this->_propDict)) {
-            if (is_a($this->_propDict["direction"], "Microsoft\Graph\Model\ConnectionDirection")) {
+            if (is_a($this->_propDict["direction"], "Microsoft\Graph\Beta\Model\ConnectionDirection")) {
                 return $this->_propDict["direction"];
             } else {
                 $this->_propDict["direction"] = new ConnectionDirection($this->_propDict["direction"]);
@@ -208,7 +208,7 @@ class NetworkConnection extends Entity
     public function getDomainRegisteredDateTime()
     {
         if (array_key_exists("domainRegisteredDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["domainRegisteredDateTime"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["domainRegisteredDateTime"], "Microsoft\Graph\Beta\Model\\DateTime")) {
                 return $this->_propDict["domainRegisteredDateTime"];
             } else {
                 $this->_propDict["domainRegisteredDateTime"] = new \DateTime($this->_propDict["domainRegisteredDateTime"]);
@@ -381,7 +381,7 @@ class NetworkConnection extends Entity
     public function getProtocol()
     {
         if (array_key_exists("protocol", $this->_propDict)) {
-            if (is_a($this->_propDict["protocol"], "Microsoft\Graph\Model\SecurityNetworkProtocol")) {
+            if (is_a($this->_propDict["protocol"], "Microsoft\Graph\Beta\Model\SecurityNetworkProtocol")) {
                 return $this->_propDict["protocol"];
             } else {
                 $this->_propDict["protocol"] = new SecurityNetworkProtocol($this->_propDict["protocol"]);
@@ -498,7 +498,7 @@ class NetworkConnection extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Microsoft\Graph\Model\ConnectionStatus")) {
+            if (is_a($this->_propDict["status"], "Microsoft\Graph\Beta\Model\ConnectionStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new ConnectionStatus($this->_propDict["status"]);

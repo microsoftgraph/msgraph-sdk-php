@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * AppleVpnConfiguration class
@@ -64,7 +64,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
     public function getConnectionType()
     {
         if (array_key_exists("connectionType", $this->_propDict)) {
-            if (is_a($this->_propDict["connectionType"], "Microsoft\Graph\Model\AppleVpnConnectionType")) {
+            if (is_a($this->_propDict["connectionType"], "Microsoft\Graph\Beta\Model\AppleVpnConnectionType")) {
                 return $this->_propDict["connectionType"];
             } else {
                 $this->_propDict["connectionType"] = new AppleVpnConnectionType($this->_propDict["connectionType"]);
@@ -184,7 +184,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
     public function getServer()
     {
         if (array_key_exists("server", $this->_propDict)) {
-            if (is_a($this->_propDict["server"], "Microsoft\Graph\Model\VpnServer")) {
+            if (is_a($this->_propDict["server"], "Microsoft\Graph\Beta\Model\VpnServer")) {
                 return $this->_propDict["server"];
             } else {
                 $this->_propDict["server"] = new VpnServer($this->_propDict["server"]);
@@ -335,7 +335,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
     public function getAuthenticationMethod()
     {
         if (array_key_exists("authenticationMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["authenticationMethod"], "Microsoft\Graph\Model\VpnAuthenticationMethod")) {
+            if (is_a($this->_propDict["authenticationMethod"], "Microsoft\Graph\Beta\Model\VpnAuthenticationMethod")) {
                 return $this->_propDict["authenticationMethod"];
             } else {
                 $this->_propDict["authenticationMethod"] = new VpnAuthenticationMethod($this->_propDict["authenticationMethod"]);
@@ -456,7 +456,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
     public function getProxyServer()
     {
         if (array_key_exists("proxyServer", $this->_propDict)) {
-            if (is_a($this->_propDict["proxyServer"], "Microsoft\Graph\Model\VpnProxyServer")) {
+            if (is_a($this->_propDict["proxyServer"], "Microsoft\Graph\Beta\Model\VpnProxyServer")) {
                 return $this->_propDict["proxyServer"];
             } else {
                 $this->_propDict["proxyServer"] = new VpnProxyServer($this->_propDict["proxyServer"]);

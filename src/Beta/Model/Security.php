@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * Security class
@@ -26,6 +26,34 @@ namespace Microsoft\Graph\Model;
 */
 class Security extends Entity
 {
+
+     /** 
+     * Gets the providerStatus
+     *
+     * @return array The providerStatus
+     */
+    public function getProviderStatus()
+    {
+        if (array_key_exists("providerStatus", $this->_propDict)) {
+           return $this->_propDict["providerStatus"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the providerStatus
+    *
+    * @param SecurityProviderStatus $val The providerStatus
+    *
+    * @return Security
+    */
+    public function setProviderStatus($val)
+    {
+		$this->_propDict["providerStatus"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the alerts
@@ -333,6 +361,34 @@ class Security extends Entity
     public function setUserSecurityProfiles($val)
     {
 		$this->_propDict["userSecurityProfiles"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the securityActions
+     *
+     * @return array The securityActions
+     */
+    public function getSecurityActions()
+    {
+        if (array_key_exists("securityActions", $this->_propDict)) {
+           return $this->_propDict["securityActions"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the securityActions
+    *
+    * @param SecurityAction $val The securityActions
+    *
+    * @return Security
+    */
+    public function setSecurityActions($val)
+    {
+		$this->_propDict["securityActions"] = $val;
         return $this;
     }
     

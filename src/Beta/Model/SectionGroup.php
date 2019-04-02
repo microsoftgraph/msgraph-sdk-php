@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * SectionGroup class
@@ -93,7 +93,7 @@ class SectionGroup extends OnenoteEntityHierarchyModel
     public function getParentNotebook()
     {
         if (array_key_exists("parentNotebook", $this->_propDict)) {
-            if (is_a($this->_propDict["parentNotebook"], "Microsoft\Graph\Model\Notebook")) {
+            if (is_a($this->_propDict["parentNotebook"], "Microsoft\Graph\Beta\Model\Notebook")) {
                 return $this->_propDict["parentNotebook"];
             } else {
                 $this->_propDict["parentNotebook"] = new Notebook($this->_propDict["parentNotebook"]);
@@ -126,7 +126,7 @@ class SectionGroup extends OnenoteEntityHierarchyModel
     public function getParentSectionGroup()
     {
         if (array_key_exists("parentSectionGroup", $this->_propDict)) {
-            if (is_a($this->_propDict["parentSectionGroup"], "Microsoft\Graph\Model\SectionGroup")) {
+            if (is_a($this->_propDict["parentSectionGroup"], "Microsoft\Graph\Beta\Model\SectionGroup")) {
                 return $this->_propDict["parentSectionGroup"];
             } else {
                 $this->_propDict["parentSectionGroup"] = new SectionGroup($this->_propDict["parentSectionGroup"]);
