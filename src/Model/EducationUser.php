@@ -286,34 +286,6 @@ class EducationUser extends Entity
         return $this;
     }
     
-
-     /** 
-     * Gets the relatedContacts
-     *
-     * @return array The relatedContacts
-     */
-    public function getRelatedContacts()
-    {
-        if (array_key_exists("relatedContacts", $this->_propDict)) {
-           return $this->_propDict["relatedContacts"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the relatedContacts
-    *
-    * @param EducationRelatedContact $val The relatedContacts
-    *
-    * @return EducationUser
-    */
-    public function setRelatedContacts($val)
-    {
-		$this->_propDict["relatedContacts"] = $val;
-        return $this;
-    }
-    
     /**
     * Gets the accountEnabled
     * True if the account is enabled; otherwise, false. This property is required when a user is created. Supports $filter.

@@ -226,4 +226,30 @@ class ItemReference extends Entity
         $this->_propDict["sharepointIds"] = $val;
          return $this;
     }
+    /**
+    * Gets the siteId
+    *
+    * @return string The siteId
+    */
+    public function getSiteId()
+    {
+        if (array_key_exists("siteId", $this->_propDict)) {
+            return $this->_propDict["siteId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the siteId
+    *
+    * @param string $val The value of the siteId
+    *
+    * @return ItemReference
+    */
+    public function setSiteId($val)
+    {
+        $this->_propDict["siteId"] = $val;
+        return $this;
+    }
 }

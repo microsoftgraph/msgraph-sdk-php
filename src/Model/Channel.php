@@ -84,6 +84,60 @@ class Channel extends Entity
         return $this;
     }
     
+    /**
+    * Gets the email
+    *
+    * @return string The email
+    */
+    public function getEmail()
+    {
+        if (array_key_exists("email", $this->_propDict)) {
+            return $this->_propDict["email"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the email
+    *
+    * @param string $val The email
+    *
+    * @return Channel
+    */
+    public function setEmail($val)
+    {
+        $this->_propDict["email"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the webUrl
+    *
+    * @return string The webUrl
+    */
+    public function getWebUrl()
+    {
+        if (array_key_exists("webUrl", $this->_propDict)) {
+            return $this->_propDict["webUrl"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the webUrl
+    *
+    * @param string $val The webUrl
+    *
+    * @return Channel
+    */
+    public function setWebUrl($val)
+    {
+        $this->_propDict["webUrl"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the tabs
