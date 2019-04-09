@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * ItemActionSet class
 *
@@ -34,7 +34,7 @@ class ItemActionSet extends Entity
     public function getComment()
     {
         if (array_key_exists("comment", $this->_propDict)) {
-            if (is_a($this->_propDict["comment"], "Microsoft\Graph\Model\CommentAction")) {
+            if (is_a($this->_propDict["comment"], "Microsoft\Graph\Beta\Model\CommentAction")) {
                 return $this->_propDict["comment"];
             } else {
                 $this->_propDict["comment"] = new CommentAction($this->_propDict["comment"]);
@@ -65,7 +65,7 @@ class ItemActionSet extends Entity
     public function getCreate()
     {
         if (array_key_exists("create", $this->_propDict)) {
-            if (is_a($this->_propDict["create"], "Microsoft\Graph\Model\CreateAction")) {
+            if (is_a($this->_propDict["create"], "Microsoft\Graph\Beta\Model\CreateAction")) {
                 return $this->_propDict["create"];
             } else {
                 $this->_propDict["create"] = new CreateAction($this->_propDict["create"]);
@@ -96,7 +96,7 @@ class ItemActionSet extends Entity
     public function getDelete()
     {
         if (array_key_exists("delete", $this->_propDict)) {
-            if (is_a($this->_propDict["delete"], "Microsoft\Graph\Model\DeleteAction")) {
+            if (is_a($this->_propDict["delete"], "Microsoft\Graph\Beta\Model\DeleteAction")) {
                 return $this->_propDict["delete"];
             } else {
                 $this->_propDict["delete"] = new DeleteAction($this->_propDict["delete"]);
@@ -127,7 +127,7 @@ class ItemActionSet extends Entity
     public function getEdit()
     {
         if (array_key_exists("edit", $this->_propDict)) {
-            if (is_a($this->_propDict["edit"], "Microsoft\Graph\Model\EditAction")) {
+            if (is_a($this->_propDict["edit"], "Microsoft\Graph\Beta\Model\EditAction")) {
                 return $this->_propDict["edit"];
             } else {
                 $this->_propDict["edit"] = new EditAction($this->_propDict["edit"]);
@@ -158,7 +158,7 @@ class ItemActionSet extends Entity
     public function getMention()
     {
         if (array_key_exists("mention", $this->_propDict)) {
-            if (is_a($this->_propDict["mention"], "Microsoft\Graph\Model\MentionAction")) {
+            if (is_a($this->_propDict["mention"], "Microsoft\Graph\Beta\Model\MentionAction")) {
                 return $this->_propDict["mention"];
             } else {
                 $this->_propDict["mention"] = new MentionAction($this->_propDict["mention"]);
@@ -189,7 +189,7 @@ class ItemActionSet extends Entity
     public function getMove()
     {
         if (array_key_exists("move", $this->_propDict)) {
-            if (is_a($this->_propDict["move"], "Microsoft\Graph\Model\MoveAction")) {
+            if (is_a($this->_propDict["move"], "Microsoft\Graph\Beta\Model\MoveAction")) {
                 return $this->_propDict["move"];
             } else {
                 $this->_propDict["move"] = new MoveAction($this->_propDict["move"]);
@@ -220,7 +220,7 @@ class ItemActionSet extends Entity
     public function getRename()
     {
         if (array_key_exists("rename", $this->_propDict)) {
-            if (is_a($this->_propDict["rename"], "Microsoft\Graph\Model\RenameAction")) {
+            if (is_a($this->_propDict["rename"], "Microsoft\Graph\Beta\Model\RenameAction")) {
                 return $this->_propDict["rename"];
             } else {
                 $this->_propDict["rename"] = new RenameAction($this->_propDict["rename"]);
@@ -251,7 +251,7 @@ class ItemActionSet extends Entity
     public function getRestore()
     {
         if (array_key_exists("restore", $this->_propDict)) {
-            if (is_a($this->_propDict["restore"], "Microsoft\Graph\Model\RestoreAction")) {
+            if (is_a($this->_propDict["restore"], "Microsoft\Graph\Beta\Model\RestoreAction")) {
                 return $this->_propDict["restore"];
             } else {
                 $this->_propDict["restore"] = new RestoreAction($this->_propDict["restore"]);
@@ -282,7 +282,7 @@ class ItemActionSet extends Entity
     public function getShare()
     {
         if (array_key_exists("share", $this->_propDict)) {
-            if (is_a($this->_propDict["share"], "Microsoft\Graph\Model\ShareAction")) {
+            if (is_a($this->_propDict["share"], "Microsoft\Graph\Beta\Model\ShareAction")) {
                 return $this->_propDict["share"];
             } else {
                 $this->_propDict["share"] = new ShareAction($this->_propDict["share"]);
@@ -313,7 +313,7 @@ class ItemActionSet extends Entity
     public function getVersion()
     {
         if (array_key_exists("version", $this->_propDict)) {
-            if (is_a($this->_propDict["version"], "Microsoft\Graph\Model\VersionAction")) {
+            if (is_a($this->_propDict["version"], "Microsoft\Graph\Beta\Model\VersionAction")) {
                 return $this->_propDict["version"];
             } else {
                 $this->_propDict["version"] = new VersionAction($this->_propDict["version"]);

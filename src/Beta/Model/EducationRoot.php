@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * EducationRoot class
@@ -153,7 +153,7 @@ class EducationRoot extends Entity
     public function getMe()
     {
         if (array_key_exists("me", $this->_propDict)) {
-            if (is_a($this->_propDict["me"], "Microsoft\Graph\Model\EducationUser")) {
+            if (is_a($this->_propDict["me"], "Microsoft\Graph\Beta\Model\EducationUser")) {
                 return $this->_propDict["me"];
             } else {
                 $this->_propDict["me"] = new EducationUser($this->_propDict["me"]);

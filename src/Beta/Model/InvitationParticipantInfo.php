@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * InvitationParticipantInfo class
 *
@@ -34,7 +34,7 @@ class InvitationParticipantInfo extends ParticipantInfo
     public function getEndpointType()
     {
         if (array_key_exists("endpointType", $this->_propDict)) {
-            if (is_a($this->_propDict["endpointType"], "Microsoft\Graph\Model\EndpointType")) {
+            if (is_a($this->_propDict["endpointType"], "Microsoft\Graph\Beta\Model\EndpointType")) {
                 return $this->_propDict["endpointType"];
             } else {
                 $this->_propDict["endpointType"] = new EndpointType($this->_propDict["endpointType"]);

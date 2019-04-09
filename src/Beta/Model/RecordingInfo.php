@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * RecordingInfo class
 *
@@ -34,7 +34,7 @@ class RecordingInfo extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Microsoft\Graph\Model\RecordingStatus")) {
+            if (is_a($this->_propDict["status"], "Microsoft\Graph\Beta\Model\RecordingStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new RecordingStatus($this->_propDict["status"]);
@@ -65,7 +65,7 @@ class RecordingInfo extends Entity
     public function getInitiatedBy()
     {
         if (array_key_exists("initiatedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["initiatedBy"], "Microsoft\Graph\Model\ParticipantInfo")) {
+            if (is_a($this->_propDict["initiatedBy"], "Microsoft\Graph\Beta\Model\ParticipantInfo")) {
                 return $this->_propDict["initiatedBy"];
             } else {
                 $this->_propDict["initiatedBy"] = new ParticipantInfo($this->_propDict["initiatedBy"]);

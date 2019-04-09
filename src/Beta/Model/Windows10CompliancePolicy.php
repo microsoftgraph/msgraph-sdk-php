@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * Windows10CompliancePolicy class
@@ -238,7 +238,7 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy
     public function getPasswordRequiredType()
     {
         if (array_key_exists("passwordRequiredType", $this->_propDict)) {
-            if (is_a($this->_propDict["passwordRequiredType"], "Microsoft\Graph\Model\RequiredPasswordType")) {
+            if (is_a($this->_propDict["passwordRequiredType"], "Microsoft\Graph\Beta\Model\RequiredPasswordType")) {
                 return $this->_propDict["passwordRequiredType"];
             } else {
                 $this->_propDict["passwordRequiredType"] = new RequiredPasswordType($this->_propDict["passwordRequiredType"]);
@@ -852,7 +852,7 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy
     public function getDeviceThreatProtectionRequiredSecurityLevel()
     {
         if (array_key_exists("deviceThreatProtectionRequiredSecurityLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceThreatProtectionRequiredSecurityLevel"], "Microsoft\Graph\Model\DeviceThreatProtectionLevel")) {
+            if (is_a($this->_propDict["deviceThreatProtectionRequiredSecurityLevel"], "Microsoft\Graph\Beta\Model\DeviceThreatProtectionLevel")) {
                 return $this->_propDict["deviceThreatProtectionRequiredSecurityLevel"];
             } else {
                 $this->_propDict["deviceThreatProtectionRequiredSecurityLevel"] = new DeviceThreatProtectionLevel($this->_propDict["deviceThreatProtectionRequiredSecurityLevel"]);
@@ -902,6 +902,35 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy
     public function setConfigurationManagerComplianceRequired($val)
     {
         $this->_propDict["configurationManagerComplianceRequired"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the tpmRequired
+    * Require Trusted Platform Module(TPM) to be present.
+    *
+    * @return bool The tpmRequired
+    */
+    public function getTpmRequired()
+    {
+        if (array_key_exists("tpmRequired", $this->_propDict)) {
+            return $this->_propDict["tpmRequired"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the tpmRequired
+    * Require Trusted Platform Module(TPM) to be present.
+    *
+    * @param bool $val The tpmRequired
+    *
+    * @return Windows10CompliancePolicy
+    */
+    public function setTpmRequired($val)
+    {
+        $this->_propDict["tpmRequired"] = boolval($val);
         return $this;
     }
     

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * WindowsFirewallNetworkProfile class
 *
@@ -35,7 +35,7 @@ class WindowsFirewallNetworkProfile extends Entity
     public function getFirewallEnabled()
     {
         if (array_key_exists("firewallEnabled", $this->_propDict)) {
-            if (is_a($this->_propDict["firewallEnabled"], "Microsoft\Graph\Model\StateManagementSetting")) {
+            if (is_a($this->_propDict["firewallEnabled"], "Microsoft\Graph\Beta\Model\StateManagementSetting")) {
                 return $this->_propDict["firewallEnabled"];
             } else {
                 $this->_propDict["firewallEnabled"] = new StateManagementSetting($this->_propDict["firewallEnabled"]);

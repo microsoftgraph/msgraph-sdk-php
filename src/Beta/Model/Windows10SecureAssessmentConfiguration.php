@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * Windows10SecureAssessmentConfiguration class
@@ -93,7 +93,7 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration
     public function getConfigurationAccountType()
     {
         if (array_key_exists("configurationAccountType", $this->_propDict)) {
-            if (is_a($this->_propDict["configurationAccountType"], "Microsoft\Graph\Model\SecureAssessmentAccountType")) {
+            if (is_a($this->_propDict["configurationAccountType"], "Microsoft\Graph\Beta\Model\SecureAssessmentAccountType")) {
                 return $this->_propDict["configurationAccountType"];
             } else {
                 $this->_propDict["configurationAccountType"] = new SecureAssessmentAccountType($this->_propDict["configurationAccountType"]);
