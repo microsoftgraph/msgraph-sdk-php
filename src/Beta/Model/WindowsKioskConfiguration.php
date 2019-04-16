@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * WindowsKioskConfiguration class
@@ -285,35 +285,6 @@ class WindowsKioskConfiguration extends DeviceConfiguration
     public function setEdgeKioskEnablePublicBrowsing($val)
     {
         $this->_propDict["edgeKioskEnablePublicBrowsing"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the edgeKioskResetAfterIdleTimeInMinutes
-    * Specifies the time in minutes from the last user activity before Microsoft Edge kiosk resets.  Valid values are 0-1440. The default is 5. 0 indicates no reset. Valid values 0 to 1440
-    *
-    * @return int The edgeKioskResetAfterIdleTimeInMinutes
-    */
-    public function getEdgeKioskResetAfterIdleTimeInMinutes()
-    {
-        if (array_key_exists("edgeKioskResetAfterIdleTimeInMinutes", $this->_propDict)) {
-            return $this->_propDict["edgeKioskResetAfterIdleTimeInMinutes"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the edgeKioskResetAfterIdleTimeInMinutes
-    * Specifies the time in minutes from the last user activity before Microsoft Edge kiosk resets.  Valid values are 0-1440. The default is 5. 0 indicates no reset. Valid values 0 to 1440
-    *
-    * @param int $val The edgeKioskResetAfterIdleTimeInMinutes
-    *
-    * @return WindowsKioskConfiguration
-    */
-    public function setEdgeKioskResetAfterIdleTimeInMinutes($val)
-    {
-        $this->_propDict["edgeKioskResetAfterIdleTimeInMinutes"] = intval($val);
         return $this;
     }
     

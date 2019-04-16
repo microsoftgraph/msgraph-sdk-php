@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * WindowsProtectionState class
@@ -64,7 +64,7 @@ class WindowsProtectionState extends Entity
     public function getDeviceState()
     {
         if (array_key_exists("deviceState", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceState"], "Microsoft\Graph\Model\WindowsDeviceHealthState")) {
+            if (is_a($this->_propDict["deviceState"], "Microsoft\Graph\Beta\Model\WindowsDeviceHealthState")) {
                 return $this->_propDict["deviceState"];
             } else {
                 $this->_propDict["deviceState"] = new WindowsDeviceHealthState($this->_propDict["deviceState"]);

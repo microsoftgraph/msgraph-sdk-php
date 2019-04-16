@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * PhysicalAddress class
 *
@@ -34,7 +34,7 @@ class PhysicalAddress extends Entity
     public function getType()
     {
         if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "Microsoft\Graph\Model\PhysicalAddressType")) {
+            if (is_a($this->_propDict["type"], "Microsoft\Graph\Beta\Model\PhysicalAddressType")) {
                 return $this->_propDict["type"];
             } else {
                 $this->_propDict["type"] = new PhysicalAddressType($this->_propDict["type"]);

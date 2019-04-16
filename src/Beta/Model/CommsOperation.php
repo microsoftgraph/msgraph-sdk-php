@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * CommsOperation class
@@ -34,7 +34,7 @@ class CommsOperation extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Microsoft\Graph\Model\OperationStatus")) {
+            if (is_a($this->_propDict["status"], "Microsoft\Graph\Beta\Model\OperationStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new OperationStatus($this->_propDict["status"]);
@@ -154,7 +154,7 @@ class CommsOperation extends Entity
     public function getErrorInfo()
     {
         if (array_key_exists("errorInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["errorInfo"], "Microsoft\Graph\Model\ResultInfo")) {
+            if (is_a($this->_propDict["errorInfo"], "Microsoft\Graph\Beta\Model\ResultInfo")) {
                 return $this->_propDict["errorInfo"];
             } else {
                 $this->_propDict["errorInfo"] = new ResultInfo($this->_propDict["errorInfo"]);

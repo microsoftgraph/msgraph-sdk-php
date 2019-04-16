@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * ManagementConditionStatement class
@@ -159,7 +159,7 @@ class ManagementConditionStatement extends Entity
     public function getExpression()
     {
         if (array_key_exists("expression", $this->_propDict)) {
-            if (is_a($this->_propDict["expression"], "Microsoft\Graph\Model\ManagementConditionExpression")) {
+            if (is_a($this->_propDict["expression"], "Microsoft\Graph\Beta\Model\ManagementConditionExpression")) {
                 return $this->_propDict["expression"];
             } else {
                 $this->_propDict["expression"] = new ManagementConditionExpression($this->_propDict["expression"]);
