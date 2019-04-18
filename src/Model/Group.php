@@ -26,6 +26,36 @@ namespace Microsoft\Graph\Model;
 */
 class Group extends DirectoryObject
 {
+
+     /** 
+     * Gets the assignedLicenses
+    * The licenses that are assigned to the group. Returned only on $select. Read-only.
+     *
+     * @return array The assignedLicenses
+     */
+    public function getAssignedLicenses()
+    {
+        if (array_key_exists("assignedLicenses", $this->_propDict)) {
+           return $this->_propDict["assignedLicenses"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the assignedLicenses
+    * The licenses that are assigned to the group. Returned only on $select. Read-only.
+    *
+    * @param AssignedLicense $val The assignedLicenses
+    *
+    * @return Group
+    */
+    public function setAssignedLicenses($val)
+    {
+		$this->_propDict["assignedLicenses"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the classification
     * Describes a classification for the group (such as low, medium or high business impact). Valid values for this property are defined by creating a ClassificationList setting value, based on the template definition.Returned by default.
@@ -147,6 +177,35 @@ class Group extends DirectoryObject
     }
     
     /**
+    * Gets the hasMembersWithLicenseErrors
+    * Indicates whether there are members in this group that have license errors from its group-based license assignment. This property is never returned on a GET operation. You can use it as a $filter argument to get groups that have members with license errors (that is, filter for this property being true). See an example.
+    *
+    * @return bool The hasMembersWithLicenseErrors
+    */
+    public function getHasMembersWithLicenseErrors()
+    {
+        if (array_key_exists("hasMembersWithLicenseErrors", $this->_propDict)) {
+            return $this->_propDict["hasMembersWithLicenseErrors"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the hasMembersWithLicenseErrors
+    * Indicates whether there are members in this group that have license errors from its group-based license assignment. This property is never returned on a GET operation. You can use it as a $filter argument to get groups that have members with license errors (that is, filter for this property being true). See an example.
+    *
+    * @param bool $val The hasMembersWithLicenseErrors
+    *
+    * @return Group
+    */
+    public function setHasMembersWithLicenseErrors($val)
+    {
+        $this->_propDict["hasMembersWithLicenseErrors"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the groupTypes
     * Specifies the type of group to create. Possible values are Unified to create an Office 365 group, or DynamicMembership for dynamic groups.  For all other group types, like security-enabled groups and email-enabled security groups, do not set this property. Returned by default. Supports $filter.
     *
@@ -172,6 +231,39 @@ class Group extends DirectoryObject
     public function setGroupTypes($val)
     {
         $this->_propDict["groupTypes"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the licenseProcessingState
+    * Indicates status of the group license assignment to all members of the group. Default value is false. Read-only. Possible values: QueuedForProcessing, ProcessingInProgress, and ProcessingComplete.Returned only on $select. Read-only.
+    *
+    * @return LicenseProcessingState The licenseProcessingState
+    */
+    public function getLicenseProcessingState()
+    {
+        if (array_key_exists("licenseProcessingState", $this->_propDict)) {
+            if (is_a($this->_propDict["licenseProcessingState"], "Microsoft\Graph\Model\LicenseProcessingState")) {
+                return $this->_propDict["licenseProcessingState"];
+            } else {
+                $this->_propDict["licenseProcessingState"] = new LicenseProcessingState($this->_propDict["licenseProcessingState"]);
+                return $this->_propDict["licenseProcessingState"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the licenseProcessingState
+    * Indicates status of the group license assignment to all members of the group. Default value is false. Read-only. Possible values: QueuedForProcessing, ProcessingInProgress, and ProcessingComplete.Returned only on $select. Read-only.
+    *
+    * @param LicenseProcessingState $val The licenseProcessingState
+    *
+    * @return Group
+    */
+    public function setLicenseProcessingState($val)
+    {
+        $this->_propDict["licenseProcessingState"] = $val;
         return $this;
     }
     
@@ -703,6 +795,36 @@ class Group extends DirectoryObject
     public function setMemberOf($val)
     {
 		$this->_propDict["memberOf"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the membersWithLicenseErrors
+    * A list of group members with license errors from this group-based license assignment. Read-only.
+     *
+     * @return array The membersWithLicenseErrors
+     */
+    public function getMembersWithLicenseErrors()
+    {
+        if (array_key_exists("membersWithLicenseErrors", $this->_propDict)) {
+           return $this->_propDict["membersWithLicenseErrors"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the membersWithLicenseErrors
+    * A list of group members with license errors from this group-based license assignment. Read-only.
+    *
+    * @param DirectoryObject $val The membersWithLicenseErrors
+    *
+    * @return Group
+    */
+    public function setMembersWithLicenseErrors($val)
+    {
+		$this->_propDict["membersWithLicenseErrors"] = $val;
         return $this;
     }
     

@@ -147,6 +147,34 @@ class Workbook extends Entity
         return $this;
     }
     
+
+     /** 
+     * Gets the comments
+     *
+     * @return array The comments
+     */
+    public function getComments()
+    {
+        if (array_key_exists("comments", $this->_propDict)) {
+           return $this->_propDict["comments"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the comments
+    *
+    * @param WorkbookComment $val The comments
+    *
+    * @return Workbook
+    */
+    public function setComments($val)
+    {
+		$this->_propDict["comments"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the functions
     *

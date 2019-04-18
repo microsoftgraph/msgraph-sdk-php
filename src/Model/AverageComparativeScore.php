@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* IPv6Range File
+* AverageComparativeScore File
 * PHP version 7
 *
 * @category  Library
@@ -14,7 +14,7 @@
 */
 namespace Microsoft\Graph\Model;
 /**
-* IPv6Range class
+* AverageComparativeScore class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -23,62 +23,58 @@ namespace Microsoft\Graph\Model;
 * @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-class IPv6Range extends IpRange
+class AverageComparativeScore extends Entity
 {
     /**
-    * Gets the lowerAddress
-    * Lower address
+    * Gets the averageScore
     *
-    * @return string The lowerAddress
+    * @return float The averageScore
     */
-    public function getLowerAddress()
+    public function getAverageScore()
     {
-        if (array_key_exists("lowerAddress", $this->_propDict)) {
-            return $this->_propDict["lowerAddress"];
+        if (array_key_exists("averageScore", $this->_propDict)) {
+            return $this->_propDict["averageScore"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the lowerAddress
-    * Lower address
+    * Sets the averageScore
     *
-    * @param string $val The value of the lowerAddress
+    * @param float $val The value of the averageScore
     *
-    * @return IPv6Range
+    * @return AverageComparativeScore
     */
-    public function setLowerAddress($val)
+    public function setAverageScore($val)
     {
-        $this->_propDict["lowerAddress"] = $val;
+        $this->_propDict["averageScore"] = $val;
         return $this;
     }
     /**
-    * Gets the upperAddress
-    * Upper address
+    * Gets the basis
     *
-    * @return string The upperAddress
+    * @return string The basis
     */
-    public function getUpperAddress()
+    public function getBasis()
     {
-        if (array_key_exists("upperAddress", $this->_propDict)) {
-            return $this->_propDict["upperAddress"];
+        if (array_key_exists("basis", $this->_propDict)) {
+            return $this->_propDict["basis"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the upperAddress
-    * Upper address
+    * Sets the basis
     *
-    * @param string $val The value of the upperAddress
+    * @param string $val The value of the basis
     *
-    * @return IPv6Range
+    * @return AverageComparativeScore
     */
-    public function setUpperAddress($val)
+    public function setBasis($val)
     {
-        $this->_propDict["upperAddress"] = $val;
+        $this->_propDict["basis"] = $val;
         return $this;
     }
 }

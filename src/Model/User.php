@@ -204,7 +204,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the companyName
-    * The company name which the user is associated. Read-only.
+    * The company name which the user is associated. This property can be useful for describing the company that an external user comes from.
     *
     * @return string The companyName
     */
@@ -219,7 +219,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the companyName
-    * The company name which the user is associated. Read-only.
+    * The company name which the user is associated. This property can be useful for describing the company that an external user comes from.
     *
     * @param string $val The companyName
     *
@@ -349,6 +349,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the employeeId
+    * The employee identifier assigned to the user by the organization. Supports $filter.
     *
     * @return string The employeeId
     */
@@ -363,6 +364,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the employeeId
+    * The employee identifier assigned to the user by the organization. Supports $filter.
     *
     * @param string $val The employeeId
     *
@@ -376,6 +378,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the faxNumber
+    * The fax number of the user.
     *
     * @return string The faxNumber
     */
@@ -390,6 +393,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the faxNumber
+    * The fax number of the user.
     *
     * @param string $val The faxNumber
     *
@@ -460,6 +464,35 @@ class User extends DirectoryObject
     }
     
     /**
+    * Gets the isResourceAccount
+    * true if the user is a resource account; otherwise, false. Null value should be considered false.
+    *
+    * @return bool The isResourceAccount
+    */
+    public function getIsResourceAccount()
+    {
+        if (array_key_exists("isResourceAccount", $this->_propDict)) {
+            return $this->_propDict["isResourceAccount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isResourceAccount
+    * true if the user is a resource account; otherwise, false. Null value should be considered false.
+    *
+    * @param bool $val The isResourceAccount
+    *
+    * @return User
+    */
+    public function setIsResourceAccount($val)
+    {
+        $this->_propDict["isResourceAccount"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the jobTitle
     * The user’s job title. Supports $filter.
     *
@@ -514,6 +547,36 @@ class User extends DirectoryObject
     public function setLegalAgeGroupClassification($val)
     {
         $this->_propDict["legalAgeGroupClassification"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the licenseAssignmentStates
+    * State of license assignments for this user. Read-only.
+     *
+     * @return array The licenseAssignmentStates
+     */
+    public function getLicenseAssignmentStates()
+    {
+        if (array_key_exists("licenseAssignmentStates", $this->_propDict)) {
+           return $this->_propDict["licenseAssignmentStates"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the licenseAssignmentStates
+    * State of license assignments for this user. Read-only.
+    *
+    * @param LicenseAssignmentState $val The licenseAssignmentStates
+    *
+    * @return User
+    */
+    public function setLicenseAssignmentStates($val)
+    {
+		$this->_propDict["licenseAssignmentStates"] = $val;
         return $this;
     }
     
@@ -606,6 +669,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the onPremisesDistinguishedName
+    * Contains the on-premises Active Directory distinguished name or DN. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only.
     *
     * @return string The onPremisesDistinguishedName
     */
@@ -620,6 +684,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the onPremisesDistinguishedName
+    * Contains the on-premises Active Directory distinguished name or DN. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only.
     *
     * @param string $val The onPremisesDistinguishedName
     *
@@ -903,6 +968,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the otherMails
+    * A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com']. Supports $filter.
     *
     * @return string The otherMails
     */
@@ -917,6 +983,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the otherMails
+    * A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com']. Supports $filter.
     *
     * @param string $val The otherMails
     *
@@ -1138,6 +1205,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the showInAddressList
+    * true if the Outlook global address list should contain this user, otherwise false. If not set, this will be treated as true. For users invited through the invitation manager, this property will be set to false.
     *
     * @return bool The showInAddressList
     */
@@ -1152,6 +1220,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the showInAddressList
+    * true if the Outlook global address list should contain this user, otherwise false. If not set, this will be treated as true. For users invited through the invitation manager, this property will be set to false.
     *
     * @param bool $val The showInAddressList
     *

@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* EducationContactRelationship File
+* LicenseProcessingState File
 * PHP version 7
 *
 * @category  Library
@@ -13,11 +13,8 @@
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Model;
-
-use Microsoft\Graph\Core\Enum;
-
 /**
-* EducationContactRelationship class
+* LicenseProcessingState class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -26,17 +23,32 @@ use Microsoft\Graph\Core\Enum;
 * @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-class EducationContactRelationship extends Enum
+class LicenseProcessingState extends Entity
 {
     /**
-    * The Enum EducationContactRelationship
+    * Gets the state
+    *
+    * @return string The state
     */
-    const PARENT = "parent";
-    const RELATIVE = "relative";
-    const AIDE = "aide";
-    const DOCTOR = "doctor";
-    const GUARDIAN = "guardian";
-    const CHILD = "child";
-    const OTHER = "other";
-    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
+    public function getState()
+    {
+        if (array_key_exists("state", $this->_propDict)) {
+            return $this->_propDict["state"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the state
+    *
+    * @param string $val The value of the state
+    *
+    * @return LicenseProcessingState
+    */
+    public function setState($val)
+    {
+        $this->_propDict["state"] = $val;
+        return $this;
+    }
 }

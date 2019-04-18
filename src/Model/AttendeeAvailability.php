@@ -28,7 +28,7 @@ class AttendeeAvailability extends Entity
 
     /**
     * Gets the attendee
-    * The type of attendee - whether it's a person or a resource, and whether required or optional if it's a person.
+    * The email address and type of attendee - whether it's a person or a resource, and whether required or optional if it's a person.
     *
     * @return AttendeeBase The attendee
     */
@@ -47,7 +47,7 @@ class AttendeeAvailability extends Entity
 
     /**
     * Sets the attendee
-    * The type of attendee - whether it's a person or a resource, and whether required or optional if it's a person.
+    * The email address and type of attendee - whether it's a person or a resource, and whether required or optional if it's a person.
     *
     * @param AttendeeBase $val The value to assign to the attendee
     *
