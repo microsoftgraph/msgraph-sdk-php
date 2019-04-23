@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * SymantecCodeSigningCertificate class
@@ -68,7 +68,7 @@ class SymantecCodeSigningCertificate extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Microsoft\Graph\Model\CertificateStatus")) {
+            if (is_a($this->_propDict["status"], "Microsoft\Graph\Beta\Model\CertificateStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new CertificateStatus($this->_propDict["status"]);

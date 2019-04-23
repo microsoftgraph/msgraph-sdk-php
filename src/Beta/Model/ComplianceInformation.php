@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * ComplianceInformation class
 *
@@ -34,7 +34,7 @@ class ComplianceInformation extends Entity
     public function getCertificationControls()
     {
         if (array_key_exists("certificationControls", $this->_propDict)) {
-            if (is_a($this->_propDict["certificationControls"], "Microsoft\Graph\Model\CertificationControl")) {
+            if (is_a($this->_propDict["certificationControls"], "Microsoft\Graph\Beta\Model\CertificationControl")) {
                 return $this->_propDict["certificationControls"];
             } else {
                 $this->_propDict["certificationControls"] = new CertificationControl($this->_propDict["certificationControls"]);

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * MacOSEndpointProtectionConfiguration class
@@ -35,7 +35,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     public function getGatekeeperAllowedAppSource()
     {
         if (array_key_exists("gatekeeperAllowedAppSource", $this->_propDict)) {
-            if (is_a($this->_propDict["gatekeeperAllowedAppSource"], "Microsoft\Graph\Model\MacOSGatekeeperAppSources")) {
+            if (is_a($this->_propDict["gatekeeperAllowedAppSource"], "Microsoft\Graph\Beta\Model\MacOSGatekeeperAppSources")) {
                 return $this->_propDict["gatekeeperAllowedAppSource"];
             } else {
                 $this->_propDict["gatekeeperAllowedAppSource"] = new MacOSGatekeeperAppSources($this->_propDict["gatekeeperAllowedAppSource"]);

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * AlternativeSecurityId class
 *
@@ -91,7 +91,7 @@ class AlternativeSecurityId extends Entity
     public function getKey()
     {
         if (array_key_exists("key", $this->_propDict)) {
-            if (is_a($this->_propDict["key"], "Microsoft\Graph\Model\\GuzzleHttp\Psr7\Stream")) {
+            if (is_a($this->_propDict["key"], "Microsoft\Graph\Beta\Model\\GuzzleHttp\Psr7\Stream")) {
                 return $this->_propDict["key"];
             } else {
                 $this->_propDict["key"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["key"]);

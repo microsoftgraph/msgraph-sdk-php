@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 use Microsoft\Graph\Core\Enum;
 
@@ -33,4 +33,6 @@ class ManagedAppFlaggedReason extends Enum
     */
     const NONE = "none";
     const ROOTED_DEVICE = "rootedDevice";
+    const ANDROID_BOOTLOADER_UNLOCKED = "androidBootloaderUnlocked";
+    const ANDROID_FACTORY_ROM_MODIFIED = "androidFactoryRomModified";
 }

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * DeviceManagementScriptDeviceState class
@@ -35,7 +35,7 @@ class DeviceManagementScriptDeviceState extends Entity
     public function getRunState()
     {
         if (array_key_exists("runState", $this->_propDict)) {
-            if (is_a($this->_propDict["runState"], "Microsoft\Graph\Model\RunState")) {
+            if (is_a($this->_propDict["runState"], "Microsoft\Graph\Beta\Model\RunState")) {
                 return $this->_propDict["runState"];
             } else {
                 $this->_propDict["runState"] = new RunState($this->_propDict["runState"]);
@@ -188,7 +188,7 @@ class DeviceManagementScriptDeviceState extends Entity
     public function getManagedDevice()
     {
         if (array_key_exists("managedDevice", $this->_propDict)) {
-            if (is_a($this->_propDict["managedDevice"], "Microsoft\Graph\Model\ManagedDevice")) {
+            if (is_a($this->_propDict["managedDevice"], "Microsoft\Graph\Beta\Model\ManagedDevice")) {
                 return $this->_propDict["managedDevice"];
             } else {
                 $this->_propDict["managedDevice"] = new ManagedDevice($this->_propDict["managedDevice"]);

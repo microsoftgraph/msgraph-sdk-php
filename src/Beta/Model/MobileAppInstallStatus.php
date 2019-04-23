@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * MobileAppInstallStatus class
@@ -126,7 +126,7 @@ class MobileAppInstallStatus extends Entity
     public function getMobileAppInstallStatusValue()
     {
         if (array_key_exists("mobileAppInstallStatusValue", $this->_propDict)) {
-            if (is_a($this->_propDict["mobileAppInstallStatusValue"], "Microsoft\Graph\Model\ResultantAppState")) {
+            if (is_a($this->_propDict["mobileAppInstallStatusValue"], "Microsoft\Graph\Beta\Model\ResultantAppState")) {
                 return $this->_propDict["mobileAppInstallStatusValue"];
             } else {
                 $this->_propDict["mobileAppInstallStatusValue"] = new ResultantAppState($this->_propDict["mobileAppInstallStatusValue"]);
@@ -159,7 +159,7 @@ class MobileAppInstallStatus extends Entity
     public function getInstallState()
     {
         if (array_key_exists("installState", $this->_propDict)) {
-            if (is_a($this->_propDict["installState"], "Microsoft\Graph\Model\ResultantAppState")) {
+            if (is_a($this->_propDict["installState"], "Microsoft\Graph\Beta\Model\ResultantAppState")) {
                 return $this->_propDict["installState"];
             } else {
                 $this->_propDict["installState"] = new ResultantAppState($this->_propDict["installState"]);
@@ -192,7 +192,7 @@ class MobileAppInstallStatus extends Entity
     public function getInstallStateDetail()
     {
         if (array_key_exists("installStateDetail", $this->_propDict)) {
-            if (is_a($this->_propDict["installStateDetail"], "Microsoft\Graph\Model\ResultantAppStateDetail")) {
+            if (is_a($this->_propDict["installStateDetail"], "Microsoft\Graph\Beta\Model\ResultantAppStateDetail")) {
                 return $this->_propDict["installStateDetail"];
             } else {
                 $this->_propDict["installStateDetail"] = new ResultantAppStateDetail($this->_propDict["installStateDetail"]);
@@ -399,7 +399,7 @@ class MobileAppInstallStatus extends Entity
     public function getApp()
     {
         if (array_key_exists("app", $this->_propDict)) {
-            if (is_a($this->_propDict["app"], "Microsoft\Graph\Model\MobileApp")) {
+            if (is_a($this->_propDict["app"], "Microsoft\Graph\Beta\Model\MobileApp")) {
                 return $this->_propDict["app"];
             } else {
                 $this->_propDict["app"] = new MobileApp($this->_propDict["app"]);

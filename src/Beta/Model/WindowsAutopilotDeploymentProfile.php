@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * WindowsAutopilotDeploymentProfile class
@@ -188,7 +188,7 @@ class WindowsAutopilotDeploymentProfile extends Entity
     public function getOutOfBoxExperienceSettings()
     {
         if (array_key_exists("outOfBoxExperienceSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["outOfBoxExperienceSettings"], "Microsoft\Graph\Model\OutOfBoxExperienceSettings")) {
+            if (is_a($this->_propDict["outOfBoxExperienceSettings"], "Microsoft\Graph\Beta\Model\OutOfBoxExperienceSettings")) {
                 return $this->_propDict["outOfBoxExperienceSettings"];
             } else {
                 $this->_propDict["outOfBoxExperienceSettings"] = new OutOfBoxExperienceSettings($this->_propDict["outOfBoxExperienceSettings"]);
@@ -221,7 +221,7 @@ class WindowsAutopilotDeploymentProfile extends Entity
     public function getEnrollmentStatusScreenSettings()
     {
         if (array_key_exists("enrollmentStatusScreenSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["enrollmentStatusScreenSettings"], "Microsoft\Graph\Model\WindowsEnrollmentStatusScreenSettings")) {
+            if (is_a($this->_propDict["enrollmentStatusScreenSettings"], "Microsoft\Graph\Beta\Model\WindowsEnrollmentStatusScreenSettings")) {
                 return $this->_propDict["enrollmentStatusScreenSettings"];
             } else {
                 $this->_propDict["enrollmentStatusScreenSettings"] = new WindowsEnrollmentStatusScreenSettings($this->_propDict["enrollmentStatusScreenSettings"]);
@@ -300,6 +300,68 @@ class WindowsAutopilotDeploymentProfile extends Entity
     public function setDeviceNameTemplate($val)
     {
         $this->_propDict["deviceNameTemplate"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the deviceType
+    * The AutoPilot device type that this profile is applicable to.
+    *
+    * @return WindowsAutopilotDeviceType The deviceType
+    */
+    public function getDeviceType()
+    {
+        if (array_key_exists("deviceType", $this->_propDict)) {
+            if (is_a($this->_propDict["deviceType"], "Microsoft\Graph\Beta\Model\WindowsAutopilotDeviceType")) {
+                return $this->_propDict["deviceType"];
+            } else {
+                $this->_propDict["deviceType"] = new WindowsAutopilotDeviceType($this->_propDict["deviceType"]);
+                return $this->_propDict["deviceType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the deviceType
+    * The AutoPilot device type that this profile is applicable to.
+    *
+    * @param WindowsAutopilotDeviceType $val The deviceType
+    *
+    * @return WindowsAutopilotDeploymentProfile
+    */
+    public function setDeviceType($val)
+    {
+        $this->_propDict["deviceType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the enableWhiteGlove
+    * Enable Autopilot White Glove for the profile.
+    *
+    * @return bool The enableWhiteGlove
+    */
+    public function getEnableWhiteGlove()
+    {
+        if (array_key_exists("enableWhiteGlove", $this->_propDict)) {
+            return $this->_propDict["enableWhiteGlove"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the enableWhiteGlove
+    * Enable Autopilot White Glove for the profile.
+    *
+    * @param bool $val The enableWhiteGlove
+    *
+    * @return WindowsAutopilotDeploymentProfile
+    */
+    public function setEnableWhiteGlove($val)
+    {
+        $this->_propDict["enableWhiteGlove"] = boolval($val);
         return $this;
     }
     
