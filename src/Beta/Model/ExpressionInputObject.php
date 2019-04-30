@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * ExpressionInputObject class
 *
@@ -34,7 +34,7 @@ class ExpressionInputObject extends Entity
     public function getDefinition()
     {
         if (array_key_exists("definition", $this->_propDict)) {
-            if (is_a($this->_propDict["definition"], "Microsoft\Graph\Model\ObjectDefinition")) {
+            if (is_a($this->_propDict["definition"], "Microsoft\Graph\Beta\Model\ObjectDefinition")) {
                 return $this->_propDict["definition"];
             } else {
                 $this->_propDict["definition"] = new ObjectDefinition($this->_propDict["definition"]);
@@ -65,7 +65,7 @@ class ExpressionInputObject extends Entity
     public function getExpressionInputObjectProperties()
     {
         if (array_key_exists("properties", $this->_propDict)) {
-            if (is_a($this->_propDict["properties"], "Microsoft\Graph\Model\StringKeyObjectValuePair")) {
+            if (is_a($this->_propDict["properties"], "Microsoft\Graph\Beta\Model\StringKeyObjectValuePair")) {
                 return $this->_propDict["properties"];
             } else {
                 $this->_propDict["properties"] = new StringKeyObjectValuePair($this->_propDict["properties"]);

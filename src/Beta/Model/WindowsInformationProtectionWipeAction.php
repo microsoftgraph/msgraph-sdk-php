@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * WindowsInformationProtectionWipeAction class
@@ -35,7 +35,7 @@ class WindowsInformationProtectionWipeAction extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Microsoft\Graph\Model\ActionState")) {
+            if (is_a($this->_propDict["status"], "Microsoft\Graph\Beta\Model\ActionState")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new ActionState($this->_propDict["status"]);
@@ -172,6 +172,39 @@ class WindowsInformationProtectionWipeAction extends Entity
     public function setTargetedDeviceMacAddress($val)
     {
         $this->_propDict["targetedDeviceMacAddress"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the lastCheckInDateTime
+    * Last checkin time of the device that was targeted by this wipe action.
+    *
+    * @return \DateTime The lastCheckInDateTime
+    */
+    public function getLastCheckInDateTime()
+    {
+        if (array_key_exists("lastCheckInDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastCheckInDateTime"], "\DateTime")) {
+                return $this->_propDict["lastCheckInDateTime"];
+            } else {
+                $this->_propDict["lastCheckInDateTime"] = new \DateTime($this->_propDict["lastCheckInDateTime"]);
+                return $this->_propDict["lastCheckInDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the lastCheckInDateTime
+    * Last checkin time of the device that was targeted by this wipe action.
+    *
+    * @param \DateTime $val The lastCheckInDateTime
+    *
+    * @return WindowsInformationProtectionWipeAction
+    */
+    public function setLastCheckInDateTime($val)
+    {
+        $this->_propDict["lastCheckInDateTime"] = $val;
         return $this;
     }
     

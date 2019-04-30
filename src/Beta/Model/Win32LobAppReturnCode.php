@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * Win32LobAppReturnCode class
 *
@@ -63,7 +63,7 @@ class Win32LobAppReturnCode extends Entity
     public function getType()
     {
         if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "Microsoft\Graph\Model\Win32LobAppReturnCodeType")) {
+            if (is_a($this->_propDict["type"], "Microsoft\Graph\Beta\Model\Win32LobAppReturnCodeType")) {
                 return $this->_propDict["type"];
             } else {
                 $this->_propDict["type"] = new Win32LobAppReturnCodeType($this->_propDict["type"]);

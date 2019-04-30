@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * Invitation class
@@ -122,7 +122,7 @@ class Invitation extends Entity
     public function getInvitedUserMessageInfo()
     {
         if (array_key_exists("invitedUserMessageInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["invitedUserMessageInfo"], "Microsoft\Graph\Model\InvitedUserMessageInfo")) {
+            if (is_a($this->_propDict["invitedUserMessageInfo"], "Microsoft\Graph\Beta\Model\InvitedUserMessageInfo")) {
                 return $this->_propDict["invitedUserMessageInfo"];
             } else {
                 $this->_propDict["invitedUserMessageInfo"] = new InvitedUserMessageInfo($this->_propDict["invitedUserMessageInfo"]);
@@ -271,7 +271,7 @@ class Invitation extends Entity
     public function getInvitedUser()
     {
         if (array_key_exists("invitedUser", $this->_propDict)) {
-            if (is_a($this->_propDict["invitedUser"], "Microsoft\Graph\Model\User")) {
+            if (is_a($this->_propDict["invitedUser"], "Microsoft\Graph\Beta\Model\User")) {
                 return $this->_propDict["invitedUser"];
             } else {
                 $this->_propDict["invitedUser"] = new User($this->_propDict["invitedUser"]);

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * ShareAction class
 *
@@ -34,7 +34,7 @@ class ShareAction extends Entity
     public function getRecipients()
     {
         if (array_key_exists("recipients", $this->_propDict)) {
-            if (is_a($this->_propDict["recipients"], "Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["recipients"], "Microsoft\Graph\Beta\Model\IdentitySet")) {
                 return $this->_propDict["recipients"];
             } else {
                 $this->_propDict["recipients"] = new IdentitySet($this->_propDict["recipients"]);

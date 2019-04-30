@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * MobileAppSupportedDeviceType class
 *
@@ -35,7 +35,7 @@ class MobileAppSupportedDeviceType extends Entity
     public function getType()
     {
         if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "Microsoft\Graph\Model\DeviceType")) {
+            if (is_a($this->_propDict["type"], "Microsoft\Graph\Beta\Model\DeviceType")) {
                 return $this->_propDict["type"];
             } else {
                 $this->_propDict["type"] = new DeviceType($this->_propDict["type"]);

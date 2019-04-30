@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * MacOSScepCertificateProfile class
@@ -93,7 +93,7 @@ class MacOSScepCertificateProfile extends MacOSCertificateProfileBase
     public function getKeyUsage()
     {
         if (array_key_exists("keyUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["keyUsage"], "Microsoft\Graph\Model\KeyUsages")) {
+            if (is_a($this->_propDict["keyUsage"], "Microsoft\Graph\Beta\Model\KeyUsages")) {
                 return $this->_propDict["keyUsage"];
             } else {
                 $this->_propDict["keyUsage"] = new KeyUsages($this->_propDict["keyUsage"]);
@@ -126,7 +126,7 @@ class MacOSScepCertificateProfile extends MacOSCertificateProfileBase
     public function getKeySize()
     {
         if (array_key_exists("keySize", $this->_propDict)) {
-            if (is_a($this->_propDict["keySize"], "Microsoft\Graph\Model\KeySize")) {
+            if (is_a($this->_propDict["keySize"], "Microsoft\Graph\Beta\Model\KeySize")) {
                 return $this->_propDict["keySize"];
             } else {
                 $this->_propDict["keySize"] = new KeySize($this->_propDict["keySize"]);
@@ -159,7 +159,7 @@ class MacOSScepCertificateProfile extends MacOSCertificateProfileBase
     public function getHashAlgorithm()
     {
         if (array_key_exists("hashAlgorithm", $this->_propDict)) {
-            if (is_a($this->_propDict["hashAlgorithm"], "Microsoft\Graph\Model\HashAlgorithms")) {
+            if (is_a($this->_propDict["hashAlgorithm"], "Microsoft\Graph\Beta\Model\HashAlgorithms")) {
                 return $this->_propDict["hashAlgorithm"];
             } else {
                 $this->_propDict["hashAlgorithm"] = new HashAlgorithms($this->_propDict["hashAlgorithm"]);
@@ -243,6 +243,69 @@ class MacOSScepCertificateProfile extends MacOSCertificateProfileBase
     }
     
     /**
+    * Gets the certificateStore
+    * Target store certificate
+    *
+    * @return CertificateStore The certificateStore
+    */
+    public function getCertificateStore()
+    {
+        if (array_key_exists("certificateStore", $this->_propDict)) {
+            if (is_a($this->_propDict["certificateStore"], "Microsoft\Graph\Beta\Model\CertificateStore")) {
+                return $this->_propDict["certificateStore"];
+            } else {
+                $this->_propDict["certificateStore"] = new CertificateStore($this->_propDict["certificateStore"]);
+                return $this->_propDict["certificateStore"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the certificateStore
+    * Target store certificate
+    *
+    * @param CertificateStore $val The certificateStore
+    *
+    * @return MacOSScepCertificateProfile
+    */
+    public function setCertificateStore($val)
+    {
+        $this->_propDict["certificateStore"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the customSubjectAlternativeNames
+    * Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
+     *
+     * @return array The customSubjectAlternativeNames
+     */
+    public function getCustomSubjectAlternativeNames()
+    {
+        if (array_key_exists("customSubjectAlternativeNames", $this->_propDict)) {
+           return $this->_propDict["customSubjectAlternativeNames"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the customSubjectAlternativeNames
+    * Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
+    *
+    * @param CustomSubjectAlternativeName $val The customSubjectAlternativeNames
+    *
+    * @return MacOSScepCertificateProfile
+    */
+    public function setCustomSubjectAlternativeNames($val)
+    {
+		$this->_propDict["customSubjectAlternativeNames"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the rootCertificate
     * Trusted Root Certificate.
     *
@@ -251,7 +314,7 @@ class MacOSScepCertificateProfile extends MacOSCertificateProfileBase
     public function getRootCertificate()
     {
         if (array_key_exists("rootCertificate", $this->_propDict)) {
-            if (is_a($this->_propDict["rootCertificate"], "Microsoft\Graph\Model\MacOSTrustedRootCertificate")) {
+            if (is_a($this->_propDict["rootCertificate"], "Microsoft\Graph\Beta\Model\MacOSTrustedRootCertificate")) {
                 return $this->_propDict["rootCertificate"];
             } else {
                 $this->_propDict["rootCertificate"] = new MacOSTrustedRootCertificate($this->_propDict["rootCertificate"]);

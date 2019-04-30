@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * WorkbookRangeFormat class
@@ -210,7 +210,7 @@ class WorkbookRangeFormat extends Entity
     public function getFill()
     {
         if (array_key_exists("fill", $this->_propDict)) {
-            if (is_a($this->_propDict["fill"], "Microsoft\Graph\Model\WorkbookRangeFill")) {
+            if (is_a($this->_propDict["fill"], "Microsoft\Graph\Beta\Model\WorkbookRangeFill")) {
                 return $this->_propDict["fill"];
             } else {
                 $this->_propDict["fill"] = new WorkbookRangeFill($this->_propDict["fill"]);
@@ -243,7 +243,7 @@ class WorkbookRangeFormat extends Entity
     public function getFont()
     {
         if (array_key_exists("font", $this->_propDict)) {
-            if (is_a($this->_propDict["font"], "Microsoft\Graph\Model\WorkbookRangeFont")) {
+            if (is_a($this->_propDict["font"], "Microsoft\Graph\Beta\Model\WorkbookRangeFont")) {
                 return $this->_propDict["font"];
             } else {
                 $this->_propDict["font"] = new WorkbookRangeFont($this->_propDict["font"]);
@@ -276,7 +276,7 @@ class WorkbookRangeFormat extends Entity
     public function getProtection()
     {
         if (array_key_exists("protection", $this->_propDict)) {
-            if (is_a($this->_propDict["protection"], "Microsoft\Graph\Model\WorkbookFormatProtection")) {
+            if (is_a($this->_propDict["protection"], "Microsoft\Graph\Beta\Model\WorkbookFormatProtection")) {
                 return $this->_propDict["protection"];
             } else {
                 $this->_propDict["protection"] = new WorkbookFormatProtection($this->_propDict["protection"]);
