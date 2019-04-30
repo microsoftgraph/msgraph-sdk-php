@@ -520,7 +520,7 @@ class PlannerTask extends Entity
     
     /**
     * Gets the activeChecklistItemCount
-    * Number of checklist items with value set to 'false', representing incomplete items.
+    * Number of checklist items with value set to false, representing incomplete items.
     *
     * @return int The activeChecklistItemCount
     */
@@ -535,7 +535,7 @@ class PlannerTask extends Entity
     
     /**
     * Sets the activeChecklistItemCount
-    * Number of checklist items with value set to 'false', representing incomplete items.
+    * Number of checklist items with value set to false, representing incomplete items.
     *
     * @param int $val The activeChecklistItemCount
     *

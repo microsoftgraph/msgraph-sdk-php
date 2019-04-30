@@ -84,6 +84,64 @@ class Channel extends Entity
         return $this;
     }
     
+    /**
+    * Gets the email
+    * The email address for sending messages to the channel. Read-only.
+    *
+    * @return string The email
+    */
+    public function getEmail()
+    {
+        if (array_key_exists("email", $this->_propDict)) {
+            return $this->_propDict["email"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the email
+    * The email address for sending messages to the channel. Read-only.
+    *
+    * @param string $val The email
+    *
+    * @return Channel
+    */
+    public function setEmail($val)
+    {
+        $this->_propDict["email"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the webUrl
+    * A hyperlink that will navigate to the channel in Microsoft Teams. This is the URL that you get when you right-click a channel in Microsoft Teams and select Get link to channel. This URL should be treated as an opaque blob, and not parsed. Read-only.
+    *
+    * @return string The webUrl
+    */
+    public function getWebUrl()
+    {
+        if (array_key_exists("webUrl", $this->_propDict)) {
+            return $this->_propDict["webUrl"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the webUrl
+    * A hyperlink that will navigate to the channel in Microsoft Teams. This is the URL that you get when you right-click a channel in Microsoft Teams and select Get link to channel. This URL should be treated as an opaque blob, and not parsed. Read-only.
+    *
+    * @param string $val The webUrl
+    *
+    * @return Channel
+    */
+    public function setWebUrl($val)
+    {
+        $this->_propDict["webUrl"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the tabs

@@ -81,4 +81,32 @@ class PasswordProfile extends Entity
         $this->_propDict["forceChangePasswordNextSignIn"] = $val;
         return $this;
     }
+    /**
+    * Gets the forceChangePasswordNextSignInWithMfa
+    * If true, at next sign-in, the user must perform a multi-factor authentication (MFA) before being forced to change their password. The behavior is identical to forceChangePasswordNextSignIn except that the user is required to first perform a multi-factor authentication before password change. After a password change, this property will be automatically reset to false. If not set, default is false.
+    *
+    * @return bool The forceChangePasswordNextSignInWithMfa
+    */
+    public function getForceChangePasswordNextSignInWithMfa()
+    {
+        if (array_key_exists("forceChangePasswordNextSignInWithMfa", $this->_propDict)) {
+            return $this->_propDict["forceChangePasswordNextSignInWithMfa"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the forceChangePasswordNextSignInWithMfa
+    * If true, at next sign-in, the user must perform a multi-factor authentication (MFA) before being forced to change their password. The behavior is identical to forceChangePasswordNextSignIn except that the user is required to first perform a multi-factor authentication before password change. After a password change, this property will be automatically reset to false. If not set, default is false.
+    *
+    * @param bool $val The value of the forceChangePasswordNextSignInWithMfa
+    *
+    * @return PasswordProfile
+    */
+    public function setForceChangePasswordNextSignInWithMfa($val)
+    {
+        $this->_propDict["forceChangePasswordNextSignInWithMfa"] = $val;
+        return $this;
+    }
 }

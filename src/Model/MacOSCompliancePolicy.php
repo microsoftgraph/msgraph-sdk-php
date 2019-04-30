@@ -264,7 +264,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the osMinimumVersion
-    * Minimum IOS version.
+    * Minimum MacOS version.
     *
     * @return string The osMinimumVersion
     */
@@ -279,7 +279,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the osMinimumVersion
-    * Minimum IOS version.
+    * Minimum MacOS version.
     *
     * @param string $val The osMinimumVersion
     *
@@ -293,7 +293,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the osMaximumVersion
-    * Maximum IOS version.
+    * Maximum MacOS version.
     *
     * @return string The osMaximumVersion
     */
@@ -308,7 +308,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the osMaximumVersion
-    * Maximum IOS version.
+    * Maximum MacOS version.
     *
     * @param string $val The osMaximumVersion
     *
@@ -351,7 +351,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the deviceThreatProtectionEnabled
-    * Require that devices have enabled device threat protection .
+    * Require that devices have enabled device threat protection.
     *
     * @return bool The deviceThreatProtectionEnabled
     */
@@ -366,7 +366,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the deviceThreatProtectionEnabled
-    * Require that devices have enabled device threat protection .
+    * Require that devices have enabled device threat protection.
     *
     * @param bool $val The deviceThreatProtectionEnabled
     *

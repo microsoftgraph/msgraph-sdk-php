@@ -202,7 +202,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordSignInFailureCountBeforeFactoryReset
-    * Number of sign in failures allowed before factory reset. Valid values 4 to 11
+    * Number of sign in failures allowed before factory reset. Valid values 1 to 16
     *
     * @return int The passwordSignInFailureCountBeforeFactoryReset
     */
@@ -217,7 +217,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordSignInFailureCountBeforeFactoryReset
-    * Number of sign in failures allowed before factory reset. Valid values 4 to 11
+    * Number of sign in failures allowed before factory reset. Valid values 1 to 16
     *
     * @param int $val The passwordSignInFailureCountBeforeFactoryReset
     *
@@ -910,7 +910,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the workProfilePasswordSignInFailureCountBeforeFactoryReset
-    * Number of sign in failures allowed before work profile is removed and all corporate data deleted. Valid values 4 to 11
+    * Number of sign in failures allowed before work profile is removed and all corporate data deleted. Valid values 1 to 16
     *
     * @return int The workProfilePasswordSignInFailureCountBeforeFactoryReset
     */
@@ -925,7 +925,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the workProfilePasswordSignInFailureCountBeforeFactoryReset
-    * Number of sign in failures allowed before work profile is removed and all corporate data deleted. Valid values 4 to 11
+    * Number of sign in failures allowed before work profile is removed and all corporate data deleted. Valid values 1 to 16
     *
     * @param int $val The workProfilePasswordSignInFailureCountBeforeFactoryReset
     *

@@ -802,6 +802,36 @@ class DriveItem extends BaseItem
     
 
      /** 
+     * Gets the subscriptions
+    * The set of subscriptions on the item. Only supported on the root of a drive.
+     *
+     * @return array The subscriptions
+     */
+    public function getSubscriptions()
+    {
+        if (array_key_exists("subscriptions", $this->_propDict)) {
+           return $this->_propDict["subscriptions"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the subscriptions
+    * The set of subscriptions on the item. Only supported on the root of a drive.
+    *
+    * @param Subscription $val The subscriptions
+    *
+    * @return DriveItem
+    */
+    public function setSubscriptions($val)
+    {
+		$this->_propDict["subscriptions"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the thumbnails
     * Collection containing [ThumbnailSet][] objects associated with the item. For more info, see [getting thumbnails][]. Read-only. Nullable.
      *
