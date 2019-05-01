@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * BookingSchedulingPolicy class
 *
@@ -35,7 +35,7 @@ class BookingSchedulingPolicy extends Entity
     public function getTimeSlotInterval()
     {
         if (array_key_exists("timeSlotInterval", $this->_propDict)) {
-            if (is_a($this->_propDict["timeSlotInterval"], "Microsoft\Graph\Model\Duration")) {
+            if (is_a($this->_propDict["timeSlotInterval"], "Microsoft\Graph\Beta\Model\Duration")) {
                 return $this->_propDict["timeSlotInterval"];
             } else {
                 $this->_propDict["timeSlotInterval"] = new Duration($this->_propDict["timeSlotInterval"]);
@@ -68,7 +68,7 @@ class BookingSchedulingPolicy extends Entity
     public function getMinimumLeadTime()
     {
         if (array_key_exists("minimumLeadTime", $this->_propDict)) {
-            if (is_a($this->_propDict["minimumLeadTime"], "Microsoft\Graph\Model\Duration")) {
+            if (is_a($this->_propDict["minimumLeadTime"], "Microsoft\Graph\Beta\Model\Duration")) {
                 return $this->_propDict["minimumLeadTime"];
             } else {
                 $this->_propDict["minimumLeadTime"] = new Duration($this->_propDict["minimumLeadTime"]);
@@ -101,7 +101,7 @@ class BookingSchedulingPolicy extends Entity
     public function getMaximumAdvance()
     {
         if (array_key_exists("maximumAdvance", $this->_propDict)) {
-            if (is_a($this->_propDict["maximumAdvance"], "Microsoft\Graph\Model\Duration")) {
+            if (is_a($this->_propDict["maximumAdvance"], "Microsoft\Graph\Beta\Model\Duration")) {
                 return $this->_propDict["maximumAdvance"];
             } else {
                 $this->_propDict["maximumAdvance"] = new Duration($this->_propDict["maximumAdvance"]);

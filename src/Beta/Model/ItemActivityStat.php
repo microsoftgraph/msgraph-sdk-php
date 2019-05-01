@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * ItemActivityStat class
@@ -96,7 +96,7 @@ class ItemActivityStat extends Entity
     public function getAccess()
     {
         if (array_key_exists("access", $this->_propDict)) {
-            if (is_a($this->_propDict["access"], "Microsoft\Graph\Model\ItemActionStat")) {
+            if (is_a($this->_propDict["access"], "Microsoft\Graph\Beta\Model\ItemActionStat")) {
                 return $this->_propDict["access"];
             } else {
                 $this->_propDict["access"] = new ItemActionStat($this->_propDict["access"]);
@@ -127,7 +127,7 @@ class ItemActivityStat extends Entity
     public function getCreate()
     {
         if (array_key_exists("create", $this->_propDict)) {
-            if (is_a($this->_propDict["create"], "Microsoft\Graph\Model\ItemActionStat")) {
+            if (is_a($this->_propDict["create"], "Microsoft\Graph\Beta\Model\ItemActionStat")) {
                 return $this->_propDict["create"];
             } else {
                 $this->_propDict["create"] = new ItemActionStat($this->_propDict["create"]);
@@ -158,7 +158,7 @@ class ItemActivityStat extends Entity
     public function getDelete()
     {
         if (array_key_exists("delete", $this->_propDict)) {
-            if (is_a($this->_propDict["delete"], "Microsoft\Graph\Model\ItemActionStat")) {
+            if (is_a($this->_propDict["delete"], "Microsoft\Graph\Beta\Model\ItemActionStat")) {
                 return $this->_propDict["delete"];
             } else {
                 $this->_propDict["delete"] = new ItemActionStat($this->_propDict["delete"]);
@@ -189,7 +189,7 @@ class ItemActivityStat extends Entity
     public function getEdit()
     {
         if (array_key_exists("edit", $this->_propDict)) {
-            if (is_a($this->_propDict["edit"], "Microsoft\Graph\Model\ItemActionStat")) {
+            if (is_a($this->_propDict["edit"], "Microsoft\Graph\Beta\Model\ItemActionStat")) {
                 return $this->_propDict["edit"];
             } else {
                 $this->_propDict["edit"] = new ItemActionStat($this->_propDict["edit"]);
@@ -220,7 +220,7 @@ class ItemActivityStat extends Entity
     public function getMove()
     {
         if (array_key_exists("move", $this->_propDict)) {
-            if (is_a($this->_propDict["move"], "Microsoft\Graph\Model\ItemActionStat")) {
+            if (is_a($this->_propDict["move"], "Microsoft\Graph\Beta\Model\ItemActionStat")) {
                 return $this->_propDict["move"];
             } else {
                 $this->_propDict["move"] = new ItemActionStat($this->_propDict["move"]);
@@ -278,7 +278,7 @@ class ItemActivityStat extends Entity
     public function getIncompleteData()
     {
         if (array_key_exists("incompleteData", $this->_propDict)) {
-            if (is_a($this->_propDict["incompleteData"], "Microsoft\Graph\Model\IncompleteData")) {
+            if (is_a($this->_propDict["incompleteData"], "Microsoft\Graph\Beta\Model\IncompleteData")) {
                 return $this->_propDict["incompleteData"];
             } else {
                 $this->_propDict["incompleteData"] = new IncompleteData($this->_propDict["incompleteData"]);
@@ -298,6 +298,34 @@ class ItemActivityStat extends Entity
     public function setIncompleteData($val)
     {
         $this->_propDict["incompleteData"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the activities
+     *
+     * @return array The activities
+     */
+    public function getActivities()
+    {
+        if (array_key_exists("activities", $this->_propDict)) {
+           return $this->_propDict["activities"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the activities
+    *
+    * @param ItemActivity $val The activities
+    *
+    * @return ItemActivityStat
+    */
+    public function setActivities($val)
+    {
+		$this->_propDict["activities"] = $val;
         return $this;
     }
     

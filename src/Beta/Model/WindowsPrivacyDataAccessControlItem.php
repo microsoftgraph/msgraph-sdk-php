@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * WindowsPrivacyDataAccessControlItem class
@@ -35,7 +35,7 @@ class WindowsPrivacyDataAccessControlItem extends Entity
     public function getAccessLevel()
     {
         if (array_key_exists("accessLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["accessLevel"], "Microsoft\Graph\Model\WindowsPrivacyDataAccessLevel")) {
+            if (is_a($this->_propDict["accessLevel"], "Microsoft\Graph\Beta\Model\WindowsPrivacyDataAccessLevel")) {
                 return $this->_propDict["accessLevel"];
             } else {
                 $this->_propDict["accessLevel"] = new WindowsPrivacyDataAccessLevel($this->_propDict["accessLevel"]);
@@ -68,7 +68,7 @@ class WindowsPrivacyDataAccessControlItem extends Entity
     public function getDataCategory()
     {
         if (array_key_exists("dataCategory", $this->_propDict)) {
-            if (is_a($this->_propDict["dataCategory"], "Microsoft\Graph\Model\WindowsPrivacyDataCategory")) {
+            if (is_a($this->_propDict["dataCategory"], "Microsoft\Graph\Beta\Model\WindowsPrivacyDataCategory")) {
                 return $this->_propDict["dataCategory"];
             } else {
                 $this->_propDict["dataCategory"] = new WindowsPrivacyDataCategory($this->_propDict["dataCategory"]);

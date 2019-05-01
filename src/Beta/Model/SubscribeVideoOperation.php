@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * SubscribeVideoOperation class
@@ -34,7 +34,7 @@ class SubscribeVideoOperation extends CommsOperation
     public function getVideoResolution()
     {
         if (array_key_exists("videoResolution", $this->_propDict)) {
-            if (is_a($this->_propDict["videoResolution"], "Microsoft\Graph\Model\VideoResolutionFormat")) {
+            if (is_a($this->_propDict["videoResolution"], "Microsoft\Graph\Beta\Model\VideoResolutionFormat")) {
                 return $this->_propDict["videoResolution"];
             } else {
                 $this->_propDict["videoResolution"] = new VideoResolutionFormat($this->_propDict["videoResolution"]);
@@ -65,7 +65,7 @@ class SubscribeVideoOperation extends CommsOperation
     public function getModality()
     {
         if (array_key_exists("modality", $this->_propDict)) {
-            if (is_a($this->_propDict["modality"], "Microsoft\Graph\Model\Modality")) {
+            if (is_a($this->_propDict["modality"], "Microsoft\Graph\Beta\Model\Modality")) {
                 return $this->_propDict["modality"];
             } else {
                 $this->_propDict["modality"] = new Modality($this->_propDict["modality"]);

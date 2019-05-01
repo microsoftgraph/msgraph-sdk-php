@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * IosLobAppProvisioningConfiguration class
@@ -118,6 +118,35 @@ class IosLobAppProvisioningConfiguration extends Entity
     public function setPayload($val)
     {
         $this->_propDict["payload"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the roleScopeTagIds
+    * List of Scope Tags for this iOS LOB app provisioning configuration entity.
+    *
+    * @return string The roleScopeTagIds
+    */
+    public function getRoleScopeTagIds()
+    {
+        if (array_key_exists("roleScopeTagIds", $this->_propDict)) {
+            return $this->_propDict["roleScopeTagIds"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the roleScopeTagIds
+    * List of Scope Tags for this iOS LOB app provisioning configuration entity.
+    *
+    * @param string $val The roleScopeTagIds
+    *
+    * @return IosLobAppProvisioningConfiguration
+    */
+    public function setRoleScopeTagIds($val)
+    {
+        $this->_propDict["roleScopeTagIds"] = $val;
         return $this;
     }
     

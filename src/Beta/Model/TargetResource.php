@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * TargetResource class
 *
@@ -25,6 +25,32 @@ namespace Microsoft\Graph\Model;
 */
 class TargetResource extends Entity
 {
+    /**
+    * Gets the id
+    *
+    * @return string The id
+    */
+    public function getId()
+    {
+        if (array_key_exists("id", $this->_propDict)) {
+            return $this->_propDict["id"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the id
+    *
+    * @param string $val The value of the id
+    *
+    * @return TargetResource
+    */
+    public function setId($val)
+    {
+        $this->_propDict["id"] = $val;
+        return $this;
+    }
     /**
     * Gets the displayName
     *
@@ -52,30 +78,87 @@ class TargetResource extends Entity
         return $this;
     }
     /**
-    * Gets the id
+    * Gets the type
     *
-    * @return string The id
+    * @return string The type
     */
-    public function getId()
+    public function getType()
     {
-        if (array_key_exists("id", $this->_propDict)) {
-            return $this->_propDict["id"];
+        if (array_key_exists("type", $this->_propDict)) {
+            return $this->_propDict["type"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the id
+    * Sets the type
     *
-    * @param string $val The value of the id
+    * @param string $val The value of the type
     *
     * @return TargetResource
     */
-    public function setId($val)
+    public function setType($val)
     {
-        $this->_propDict["id"] = $val;
+        $this->_propDict["type"] = $val;
         return $this;
+    }
+    /**
+    * Gets the userPrincipalName
+    *
+    * @return string The userPrincipalName
+    */
+    public function getUserPrincipalName()
+    {
+        if (array_key_exists("userPrincipalName", $this->_propDict)) {
+            return $this->_propDict["userPrincipalName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the userPrincipalName
+    *
+    * @param string $val The value of the userPrincipalName
+    *
+    * @return TargetResource
+    */
+    public function setUserPrincipalName($val)
+    {
+        $this->_propDict["userPrincipalName"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the groupType
+    *
+    * @return GroupType The groupType
+    */
+    public function getGroupType()
+    {
+        if (array_key_exists("groupType", $this->_propDict)) {
+            if (is_a($this->_propDict["groupType"], "Microsoft\Graph\Beta\Model\GroupType")) {
+                return $this->_propDict["groupType"];
+            } else {
+                $this->_propDict["groupType"] = new GroupType($this->_propDict["groupType"]);
+                return $this->_propDict["groupType"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the groupType
+    *
+    * @param GroupType $val The value to assign to the groupType
+    *
+    * @return TargetResource The TargetResource
+    */
+    public function setGroupType($val)
+    {
+        $this->_propDict["groupType"] = $val;
+         return $this;
     }
 
     /**
@@ -86,7 +169,7 @@ class TargetResource extends Entity
     public function getModifiedProperties()
     {
         if (array_key_exists("modifiedProperties", $this->_propDict)) {
-            if (is_a($this->_propDict["modifiedProperties"], "Microsoft\Graph\Model\ModifiedProperty")) {
+            if (is_a($this->_propDict["modifiedProperties"], "Microsoft\Graph\Beta\Model\ModifiedProperty")) {
                 return $this->_propDict["modifiedProperties"];
             } else {
                 $this->_propDict["modifiedProperties"] = new ModifiedProperty($this->_propDict["modifiedProperties"]);

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * PublicError class
 *
@@ -112,7 +112,7 @@ class PublicError extends Entity
     public function getDetails()
     {
         if (array_key_exists("details", $this->_propDict)) {
-            if (is_a($this->_propDict["details"], "Microsoft\Graph\Model\PublicErrorDetail")) {
+            if (is_a($this->_propDict["details"], "Microsoft\Graph\Beta\Model\PublicErrorDetail")) {
                 return $this->_propDict["details"];
             } else {
                 $this->_propDict["details"] = new PublicErrorDetail($this->_propDict["details"]);
@@ -143,7 +143,7 @@ class PublicError extends Entity
     public function getInnerError()
     {
         if (array_key_exists("innerError", $this->_propDict)) {
-            if (is_a($this->_propDict["innerError"], "Microsoft\Graph\Model\PublicInnerError")) {
+            if (is_a($this->_propDict["innerError"], "Microsoft\Graph\Beta\Model\PublicInnerError")) {
                 return $this->_propDict["innerError"];
             } else {
                 $this->_propDict["innerError"] = new PublicInnerError($this->_propDict["innerError"]);

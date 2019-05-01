@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * MacOSCompliancePolicy class
@@ -238,7 +238,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     public function getPasswordRequiredType()
     {
         if (array_key_exists("passwordRequiredType", $this->_propDict)) {
-            if (is_a($this->_propDict["passwordRequiredType"], "Microsoft\Graph\Model\RequiredPasswordType")) {
+            if (is_a($this->_propDict["passwordRequiredType"], "Microsoft\Graph\Beta\Model\RequiredPasswordType")) {
                 return $this->_propDict["passwordRequiredType"];
             } else {
                 $this->_propDict["passwordRequiredType"] = new RequiredPasswordType($this->_propDict["passwordRequiredType"]);
@@ -264,7 +264,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the osMinimumVersion
-    * Minimum IOS version.
+    * Minimum MacOS version.
     *
     * @return string The osMinimumVersion
     */
@@ -279,7 +279,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the osMinimumVersion
-    * Minimum IOS version.
+    * Minimum MacOS version.
     *
     * @param string $val The osMinimumVersion
     *
@@ -293,7 +293,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the osMaximumVersion
-    * Maximum IOS version.
+    * Maximum MacOS version.
     *
     * @return string The osMaximumVersion
     */
@@ -308,7 +308,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the osMaximumVersion
-    * Maximum IOS version.
+    * Maximum MacOS version.
     *
     * @param string $val The osMaximumVersion
     *
@@ -409,7 +409,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the deviceThreatProtectionEnabled
-    * Require that devices have enabled device threat protection .
+    * Require that devices have enabled device threat protection.
     *
     * @return bool The deviceThreatProtectionEnabled
     */
@@ -424,7 +424,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the deviceThreatProtectionEnabled
-    * Require that devices have enabled device threat protection .
+    * Require that devices have enabled device threat protection.
     *
     * @param bool $val The deviceThreatProtectionEnabled
     *
@@ -445,7 +445,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     public function getDeviceThreatProtectionRequiredSecurityLevel()
     {
         if (array_key_exists("deviceThreatProtectionRequiredSecurityLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceThreatProtectionRequiredSecurityLevel"], "Microsoft\Graph\Model\DeviceThreatProtectionLevel")) {
+            if (is_a($this->_propDict["deviceThreatProtectionRequiredSecurityLevel"], "Microsoft\Graph\Beta\Model\DeviceThreatProtectionLevel")) {
                 return $this->_propDict["deviceThreatProtectionRequiredSecurityLevel"];
             } else {
                 $this->_propDict["deviceThreatProtectionRequiredSecurityLevel"] = new DeviceThreatProtectionLevel($this->_propDict["deviceThreatProtectionRequiredSecurityLevel"]);
@@ -507,7 +507,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     public function getGatekeeperAllowedAppSource()
     {
         if (array_key_exists("gatekeeperAllowedAppSource", $this->_propDict)) {
-            if (is_a($this->_propDict["gatekeeperAllowedAppSource"], "Microsoft\Graph\Model\MacOSGatekeeperAppSources")) {
+            if (is_a($this->_propDict["gatekeeperAllowedAppSource"], "Microsoft\Graph\Beta\Model\MacOSGatekeeperAppSources")) {
                 return $this->_propDict["gatekeeperAllowedAppSource"];
             } else {
                 $this->_propDict["gatekeeperAllowedAppSource"] = new MacOSGatekeeperAppSources($this->_propDict["gatekeeperAllowedAppSource"]);
