@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * ServicePrincipal class
@@ -859,7 +859,7 @@ class ServicePrincipal extends DirectoryObject
     public function getSynchronization()
     {
         if (array_key_exists("synchronization", $this->_propDict)) {
-            if (is_a($this->_propDict["synchronization"], "Microsoft\Graph\Model\Synchronization")) {
+            if (is_a($this->_propDict["synchronization"], "Microsoft\Graph\Beta\Model\Synchronization")) {
                 return $this->_propDict["synchronization"];
             } else {
                 $this->_propDict["synchronization"] = new Synchronization($this->_propDict["synchronization"]);

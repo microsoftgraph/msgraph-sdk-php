@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * ImportedWindowsAutopilotDeviceIdentity class
@@ -114,6 +114,35 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity
     }
     
     /**
+    * Gets the importId
+    * The Import Id of the Windows autopilot device.
+    *
+    * @return string The importId
+    */
+    public function getImportId()
+    {
+        if (array_key_exists("importId", $this->_propDict)) {
+            return $this->_propDict["importId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the importId
+    * The Import Id of the Windows autopilot device.
+    *
+    * @param string $val The importId
+    *
+    * @return ImportedWindowsAutopilotDeviceIdentity
+    */
+    public function setImportId($val)
+    {
+        $this->_propDict["importId"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the hardwareIdentifier
     * Hardware Blob of the Windows autopilot device.
     *
@@ -155,7 +184,7 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "Microsoft\Graph\Model\ImportedWindowsAutopilotDeviceIdentityState")) {
+            if (is_a($this->_propDict["state"], "Microsoft\Graph\Beta\Model\ImportedWindowsAutopilotDeviceIdentityState")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new ImportedWindowsAutopilotDeviceIdentityState($this->_propDict["state"]);

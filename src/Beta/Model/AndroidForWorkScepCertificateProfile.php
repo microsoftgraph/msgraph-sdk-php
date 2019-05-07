@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * AndroidForWorkScepCertificateProfile class
@@ -93,7 +93,7 @@ class AndroidForWorkScepCertificateProfile extends AndroidForWorkCertificateProf
     public function getKeyUsage()
     {
         if (array_key_exists("keyUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["keyUsage"], "Microsoft\Graph\Model\KeyUsages")) {
+            if (is_a($this->_propDict["keyUsage"], "Microsoft\Graph\Beta\Model\KeyUsages")) {
                 return $this->_propDict["keyUsage"];
             } else {
                 $this->_propDict["keyUsage"] = new KeyUsages($this->_propDict["keyUsage"]);
@@ -126,7 +126,7 @@ class AndroidForWorkScepCertificateProfile extends AndroidForWorkCertificateProf
     public function getKeySize()
     {
         if (array_key_exists("keySize", $this->_propDict)) {
-            if (is_a($this->_propDict["keySize"], "Microsoft\Graph\Model\KeySize")) {
+            if (is_a($this->_propDict["keySize"], "Microsoft\Graph\Beta\Model\KeySize")) {
                 return $this->_propDict["keySize"];
             } else {
                 $this->_propDict["keySize"] = new KeySize($this->_propDict["keySize"]);
@@ -159,7 +159,7 @@ class AndroidForWorkScepCertificateProfile extends AndroidForWorkCertificateProf
     public function getHashAlgorithm()
     {
         if (array_key_exists("hashAlgorithm", $this->_propDict)) {
-            if (is_a($this->_propDict["hashAlgorithm"], "Microsoft\Graph\Model\HashAlgorithms")) {
+            if (is_a($this->_propDict["hashAlgorithm"], "Microsoft\Graph\Beta\Model\HashAlgorithms")) {
                 return $this->_propDict["hashAlgorithm"];
             } else {
                 $this->_propDict["hashAlgorithm"] = new HashAlgorithms($this->_propDict["hashAlgorithm"]);
@@ -221,7 +221,7 @@ class AndroidForWorkScepCertificateProfile extends AndroidForWorkCertificateProf
     public function getCertificateStore()
     {
         if (array_key_exists("certificateStore", $this->_propDict)) {
-            if (is_a($this->_propDict["certificateStore"], "Microsoft\Graph\Model\CertificateStore")) {
+            if (is_a($this->_propDict["certificateStore"], "Microsoft\Graph\Beta\Model\CertificateStore")) {
                 return $this->_propDict["certificateStore"];
             } else {
                 $this->_propDict["certificateStore"] = new CertificateStore($this->_propDict["certificateStore"]);
@@ -248,7 +248,7 @@ class AndroidForWorkScepCertificateProfile extends AndroidForWorkCertificateProf
 
      /** 
      * Gets the customSubjectAlternativeNames
-    * Custom Subject Alterantive Name Settings. This collection can contain a maximum of 500 elements.
+    * Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
      *
      * @return array The customSubjectAlternativeNames
      */
@@ -263,7 +263,7 @@ class AndroidForWorkScepCertificateProfile extends AndroidForWorkCertificateProf
     
     /** 
     * Sets the customSubjectAlternativeNames
-    * Custom Subject Alterantive Name Settings. This collection can contain a maximum of 500 elements.
+    * Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
     *
     * @param CustomSubjectAlternativeName $val The customSubjectAlternativeNames
     *
@@ -272,39 +272,6 @@ class AndroidForWorkScepCertificateProfile extends AndroidForWorkCertificateProf
     public function setCustomSubjectAlternativeNames($val)
     {
 		$this->_propDict["customSubjectAlternativeNames"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the subjectAlternativeNameType
-    * Certificate Subject Alternative Name Type.
-    *
-    * @return SubjectAlternativeNameType The subjectAlternativeNameType
-    */
-    public function getSubjectAlternativeNameType()
-    {
-        if (array_key_exists("subjectAlternativeNameType", $this->_propDict)) {
-            if (is_a($this->_propDict["subjectAlternativeNameType"], "Microsoft\Graph\Model\SubjectAlternativeNameType")) {
-                return $this->_propDict["subjectAlternativeNameType"];
-            } else {
-                $this->_propDict["subjectAlternativeNameType"] = new SubjectAlternativeNameType($this->_propDict["subjectAlternativeNameType"]);
-                return $this->_propDict["subjectAlternativeNameType"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the subjectAlternativeNameType
-    * Certificate Subject Alternative Name Type.
-    *
-    * @param SubjectAlternativeNameType $val The subjectAlternativeNameType
-    *
-    * @return AndroidForWorkScepCertificateProfile
-    */
-    public function setSubjectAlternativeNameType($val)
-    {
-        $this->_propDict["subjectAlternativeNameType"] = $val;
         return $this;
     }
     

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * EducationPowerSchoolDataProvider class
 *
@@ -199,7 +199,7 @@ class EducationPowerSchoolDataProvider extends EducationSynchronizationDataProvi
     public function getCustomizations()
     {
         if (array_key_exists("customizations", $this->_propDict)) {
-            if (is_a($this->_propDict["customizations"], "Microsoft\Graph\Model\EducationSynchronizationCustomizations")) {
+            if (is_a($this->_propDict["customizations"], "Microsoft\Graph\Beta\Model\EducationSynchronizationCustomizations")) {
                 return $this->_propDict["customizations"];
             } else {
                 $this->_propDict["customizations"] = new EducationSynchronizationCustomizations($this->_propDict["customizations"]);

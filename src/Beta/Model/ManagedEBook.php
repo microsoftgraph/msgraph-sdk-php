@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * ManagedEBook class
@@ -155,7 +155,7 @@ class ManagedEBook extends Entity
     public function getLargeCover()
     {
         if (array_key_exists("largeCover", $this->_propDict)) {
-            if (is_a($this->_propDict["largeCover"], "Microsoft\Graph\Model\MimeContent")) {
+            if (is_a($this->_propDict["largeCover"], "Microsoft\Graph\Beta\Model\MimeContent")) {
                 return $this->_propDict["largeCover"];
             } else {
                 $this->_propDict["largeCover"] = new MimeContent($this->_propDict["largeCover"]);
@@ -372,7 +372,7 @@ class ManagedEBook extends Entity
     public function getInstallSummary()
     {
         if (array_key_exists("installSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["installSummary"], "Microsoft\Graph\Model\EBookInstallSummary")) {
+            if (is_a($this->_propDict["installSummary"], "Microsoft\Graph\Beta\Model\EBookInstallSummary")) {
                 return $this->_propDict["installSummary"];
             } else {
                 $this->_propDict["installSummary"] = new EBookInstallSummary($this->_propDict["installSummary"]);

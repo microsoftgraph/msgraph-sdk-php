@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * RequiredResourceAccess class
 *
@@ -60,7 +60,7 @@ class RequiredResourceAccess extends Entity
     public function getResourceAccess()
     {
         if (array_key_exists("resourceAccess", $this->_propDict)) {
-            if (is_a($this->_propDict["resourceAccess"], "Microsoft\Graph\Model\ResourceAccess")) {
+            if (is_a($this->_propDict["resourceAccess"], "Microsoft\Graph\Beta\Model\ResourceAccess")) {
                 return $this->_propDict["resourceAccess"];
             } else {
                 $this->_propDict["resourceAccess"] = new ResourceAccess($this->_propDict["resourceAccess"]);

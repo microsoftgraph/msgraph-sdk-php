@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * RecordOperation class
@@ -278,7 +278,7 @@ class RecordOperation extends CommsOperation
     public function getCompletionReason()
     {
         if (array_key_exists("completionReason", $this->_propDict)) {
-            if (is_a($this->_propDict["completionReason"], "Microsoft\Graph\Model\RecordCompletionReason")) {
+            if (is_a($this->_propDict["completionReason"], "Microsoft\Graph\Beta\Model\RecordCompletionReason")) {
                 return $this->_propDict["completionReason"];
             } else {
                 $this->_propDict["completionReason"] = new RecordCompletionReason($this->_propDict["completionReason"]);

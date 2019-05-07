@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 use Microsoft\Graph\Core\Enum;
 
@@ -33,5 +33,4 @@ class GroupPolicyDefinitionClassType extends Enum
     */
     const USER = "user";
     const MACHINE = "machine";
-    const BOTH = "both";
 }
