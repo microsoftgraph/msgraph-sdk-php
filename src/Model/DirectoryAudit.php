@@ -28,6 +28,7 @@ class DirectoryAudit extends Entity
 {
     /**
     * Gets the category
+    * Indicates which resource category that's targeted by the activity. (For example: User Management, Group Management etc..)
     *
     * @return string The category
     */
@@ -42,6 +43,7 @@ class DirectoryAudit extends Entity
     
     /**
     * Sets the category
+    * Indicates which resource category that's targeted by the activity. (For example: User Management, Group Management etc..)
     *
     * @param string $val The category
     *
@@ -55,6 +57,7 @@ class DirectoryAudit extends Entity
     
     /**
     * Gets the correlationId
+    * Indicates a unique ID that helps correlate activities that span across various services. Can be used to trace logs across services.
     *
     * @return string The correlationId
     */
@@ -69,6 +72,7 @@ class DirectoryAudit extends Entity
     
     /**
     * Sets the correlationId
+    * Indicates a unique ID that helps correlate activities that span across various services. Can be used to trace logs across services.
     *
     * @param string $val The correlationId
     *
@@ -82,6 +86,7 @@ class DirectoryAudit extends Entity
     
     /**
     * Gets the result
+    * Indicates the result of the activity.Possible values are: success, failure, timeout, unknownFutureValue.
     *
     * @return OperationResult The result
     */
@@ -100,6 +105,7 @@ class DirectoryAudit extends Entity
     
     /**
     * Sets the result
+    * Indicates the result of the activity.Possible values are: success, failure, timeout, unknownFutureValue.
     *
     * @param OperationResult $val The result
     *
@@ -113,6 +119,7 @@ class DirectoryAudit extends Entity
     
     /**
     * Gets the resultReason
+    * Describes cause of 'failure' or 'timeout' results.
     *
     * @return string The resultReason
     */
@@ -127,6 +134,7 @@ class DirectoryAudit extends Entity
     
     /**
     * Sets the resultReason
+    * Describes cause of 'failure' or 'timeout' results.
     *
     * @param string $val The resultReason
     *
@@ -140,6 +148,7 @@ class DirectoryAudit extends Entity
     
     /**
     * Gets the activityDisplayName
+    * Indicates the activity name or the operation name (examples: 'Create User' and 'Add member to group'). For full list, see Azure AD activity list.
     *
     * @return string The activityDisplayName
     */
@@ -154,6 +163,7 @@ class DirectoryAudit extends Entity
     
     /**
     * Sets the activityDisplayName
+    * Indicates the activity name or the operation name (examples: 'Create User' and 'Add member to group'). For full list, see Azure AD activity list.
     *
     * @param string $val The activityDisplayName
     *
@@ -167,6 +177,7 @@ class DirectoryAudit extends Entity
     
     /**
     * Gets the activityDateTime
+    * Indicates the date and time the activity was performed. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The activityDateTime
     */
@@ -185,6 +196,7 @@ class DirectoryAudit extends Entity
     
     /**
     * Sets the activityDateTime
+    * Indicates the date and time the activity was performed. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The activityDateTime
     *
@@ -198,6 +210,7 @@ class DirectoryAudit extends Entity
     
     /**
     * Gets the loggedByService
+    * Indicates information on which service initiated the activity (For example: Self-service Password Management, Core Directory, B2C, Invited Users, Microsoft Identity Manager, Privileged Identity Management.
     *
     * @return string The loggedByService
     */
@@ -212,6 +225,7 @@ class DirectoryAudit extends Entity
     
     /**
     * Sets the loggedByService
+    * Indicates information on which service initiated the activity (For example: Self-service Password Management, Core Directory, B2C, Invited Users, Microsoft Identity Manager, Privileged Identity Management.
     *
     * @param string $val The loggedByService
     *
@@ -252,6 +266,7 @@ class DirectoryAudit extends Entity
     
     /**
     * Gets the initiatedBy
+    * Indicates information about the user or app initiated the activity.
     *
     * @return AuditActivityInitiator The initiatedBy
     */
@@ -270,6 +285,7 @@ class DirectoryAudit extends Entity
     
     /**
     * Sets the initiatedBy
+    * Indicates information about the user or app initiated the activity.
     *
     * @param AuditActivityInitiator $val The initiatedBy
     *
@@ -284,6 +300,7 @@ class DirectoryAudit extends Entity
 
      /** 
      * Gets the targetResources
+    * Indicates information on which resource was changed due to the activity. Target Resource Type can be User, Device, Directory, App, Role, Group, Policy or Other.
      *
      * @return array The targetResources
      */
@@ -298,6 +315,7 @@ class DirectoryAudit extends Entity
     
     /** 
     * Sets the targetResources
+    * Indicates information on which resource was changed due to the activity. Target Resource Type can be User, Device, Directory, App, Role, Group, Policy or Other.
     *
     * @param TargetResource $val The targetResources
     *
@@ -312,6 +330,7 @@ class DirectoryAudit extends Entity
 
      /** 
      * Gets the additionalDetails
+    * Indicates additional details on the activity.
      *
      * @return array The additionalDetails
      */
@@ -326,6 +345,7 @@ class DirectoryAudit extends Entity
     
     /** 
     * Sets the additionalDetails
+    * Indicates additional details on the activity.
     *
     * @param KeyValue $val The additionalDetails
     *

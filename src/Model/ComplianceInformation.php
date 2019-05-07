@@ -28,6 +28,7 @@ class ComplianceInformation extends Entity
 
     /**
     * Gets the certificationControls
+    * Collection of the certification controls associated with certification
     *
     * @return CertificationControl The certificationControls
     */
@@ -46,6 +47,7 @@ class ComplianceInformation extends Entity
 
     /**
     * Sets the certificationControls
+    * Collection of the certification controls associated with certification
     *
     * @param CertificationControl $val The value to assign to the certificationControls
     *
@@ -58,6 +60,7 @@ class ComplianceInformation extends Entity
     }
     /**
     * Gets the certificationName
+    * Compliance certification name (for example, ISO 27018:2014, GDPR, FedRAMP, NIST 800-171)
     *
     * @return string The certificationName
     */
@@ -72,6 +75,7 @@ class ComplianceInformation extends Entity
 
     /**
     * Sets the certificationName
+    * Compliance certification name (for example, ISO 27018:2014, GDPR, FedRAMP, NIST 800-171)
     *
     * @param string $val The value of the certificationName
     *

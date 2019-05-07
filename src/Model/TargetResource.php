@@ -27,6 +27,7 @@ class TargetResource extends Entity
 {
     /**
     * Gets the id
+    * Indicates the unique ID of the resource.
     *
     * @return string The id
     */
@@ -41,6 +42,7 @@ class TargetResource extends Entity
 
     /**
     * Sets the id
+    * Indicates the unique ID of the resource.
     *
     * @param string $val The value of the id
     *
@@ -53,6 +55,7 @@ class TargetResource extends Entity
     }
     /**
     * Gets the displayName
+    * Indicates the visible name defined for the resource. Typically specified when the resource is created.
     *
     * @return string The displayName
     */
@@ -67,6 +70,7 @@ class TargetResource extends Entity
 
     /**
     * Sets the displayName
+    * Indicates the visible name defined for the resource. Typically specified when the resource is created.
     *
     * @param string $val The value of the displayName
     *
@@ -79,6 +83,7 @@ class TargetResource extends Entity
     }
     /**
     * Gets the type
+    * Describes the resource type.  Example values include Application, Group, ServicePrincipal, and User.
     *
     * @return string The type
     */
@@ -93,6 +98,7 @@ class TargetResource extends Entity
 
     /**
     * Sets the type
+    * Describes the resource type.  Example values include Application, Group, ServicePrincipal, and User.
     *
     * @param string $val The value of the type
     *
@@ -105,6 +111,7 @@ class TargetResource extends Entity
     }
     /**
     * Gets the userPrincipalName
+    * When type is set to User, this includes the user name that initiated the action; null for other types.
     *
     * @return string The userPrincipalName
     */
@@ -119,6 +126,7 @@ class TargetResource extends Entity
 
     /**
     * Sets the userPrincipalName
+    * When type is set to User, this includes the user name that initiated the action; null for other types.
     *
     * @param string $val The value of the userPrincipalName
     *
@@ -132,6 +140,7 @@ class TargetResource extends Entity
 
     /**
     * Gets the groupType
+    * When type is set to Group, this indicates the group type.
     *
     * @return GroupType The groupType
     */
@@ -150,6 +159,7 @@ class TargetResource extends Entity
 
     /**
     * Sets the groupType
+    * When type is set to Group, this indicates the group type.
     *
     * @param GroupType $val The value to assign to the groupType
     *
@@ -163,6 +173,7 @@ class TargetResource extends Entity
 
     /**
     * Gets the modifiedProperties
+    * Indicates name, old value and new value of each attribute that changed. Property values depend on the operation type.
     *
     * @return ModifiedProperty The modifiedProperties
     */
@@ -181,6 +192,7 @@ class TargetResource extends Entity
 
     /**
     * Sets the modifiedProperties
+    * Indicates name, old value and new value of each attribute that changed. Property values depend on the operation type.
     *
     * @param ModifiedProperty $val The value to assign to the modifiedProperties
     *

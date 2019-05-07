@@ -27,6 +27,7 @@ class UserIdentity extends Entity
 {
     /**
     * Gets the id
+    * Unique identifier for the identity.
     *
     * @return string The id
     */
@@ -41,6 +42,7 @@ class UserIdentity extends Entity
 
     /**
     * Sets the id
+    * Unique identifier for the identity.
     *
     * @param string $val The value of the id
     *
@@ -53,6 +55,7 @@ class UserIdentity extends Entity
     }
     /**
     * Gets the displayName
+    * The identity's display name. Note that this may not always be available or up-to-date.
     *
     * @return string The displayName
     */
@@ -67,6 +70,7 @@ class UserIdentity extends Entity
 
     /**
     * Sets the displayName
+    * The identity's display name. Note that this may not always be available or up-to-date.
     *
     * @param string $val The value of the displayName
     *
@@ -79,6 +83,7 @@ class UserIdentity extends Entity
     }
     /**
     * Gets the ipAddress
+    * Indicates the client IP address used by user performing the activity (audit log only).
     *
     * @return string The ipAddress
     */
@@ -93,6 +98,7 @@ class UserIdentity extends Entity
 
     /**
     * Sets the ipAddress
+    * Indicates the client IP address used by user performing the activity (audit log only).
     *
     * @param string $val The value of the ipAddress
     *
@@ -105,6 +111,7 @@ class UserIdentity extends Entity
     }
     /**
     * Gets the userPrincipalName
+    * The userPrincipalName attribute of the user.
     *
     * @return string The userPrincipalName
     */
@@ -119,6 +126,7 @@ class UserIdentity extends Entity
 
     /**
     * Sets the userPrincipalName
+    * The userPrincipalName attribute of the user.
     *
     * @param string $val The value of the userPrincipalName
     *

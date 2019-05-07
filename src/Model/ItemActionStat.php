@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* KeyValue File
+* ItemActionStat File
 * PHP version 7
 *
 * @category  Library
@@ -14,7 +14,7 @@
 */
 namespace Microsoft\Graph\Model;
 /**
-* KeyValue class
+* ItemActionStat class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -23,62 +23,58 @@ namespace Microsoft\Graph\Model;
 * @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-class KeyValue extends Entity
+class ItemActionStat extends Entity
 {
     /**
-    * Gets the key
-    * Key for the key-value pair.
+    * Gets the actionCount
     *
-    * @return string The key
+    * @return int The actionCount
     */
-    public function getKey()
+    public function getActionCount()
     {
-        if (array_key_exists("key", $this->_propDict)) {
-            return $this->_propDict["key"];
+        if (array_key_exists("actionCount", $this->_propDict)) {
+            return $this->_propDict["actionCount"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the key
-    * Key for the key-value pair.
+    * Sets the actionCount
     *
-    * @param string $val The value of the key
+    * @param int $val The value of the actionCount
     *
-    * @return KeyValue
+    * @return ItemActionStat
     */
-    public function setKey($val)
+    public function setActionCount($val)
     {
-        $this->_propDict["key"] = $val;
+        $this->_propDict["actionCount"] = $val;
         return $this;
     }
     /**
-    * Gets the value
-    * Value for the key-value pair.
+    * Gets the actorCount
     *
-    * @return string The value
+    * @return int The actorCount
     */
-    public function getValue()
+    public function getActorCount()
     {
-        if (array_key_exists("value", $this->_propDict)) {
-            return $this->_propDict["value"];
+        if (array_key_exists("actorCount", $this->_propDict)) {
+            return $this->_propDict["actorCount"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the value
-    * Value for the key-value pair.
+    * Sets the actorCount
     *
-    * @param string $val The value of the value
+    * @param int $val The value of the actorCount
     *
-    * @return KeyValue
+    * @return ItemActionStat
     */
-    public function setValue($val)
+    public function setActorCount($val)
     {
-        $this->_propDict["value"] = $val;
+        $this->_propDict["actorCount"] = $val;
         return $this;
     }
 }

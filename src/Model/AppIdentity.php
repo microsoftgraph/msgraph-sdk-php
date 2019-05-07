@@ -27,6 +27,7 @@ class AppIdentity extends Entity
 {
     /**
     * Gets the appId
+    * Refers to the Unique GUID representing Application Id in the Azure Active Directory.
     *
     * @return string The appId
     */
@@ -41,6 +42,7 @@ class AppIdentity extends Entity
 
     /**
     * Sets the appId
+    * Refers to the Unique GUID representing Application Id in the Azure Active Directory.
     *
     * @param string $val The value of the appId
     *
@@ -53,6 +55,7 @@ class AppIdentity extends Entity
     }
     /**
     * Gets the displayName
+    * Refers to the Application Name displayed in the Azure Portal.
     *
     * @return string The displayName
     */
@@ -67,6 +70,7 @@ class AppIdentity extends Entity
 
     /**
     * Sets the displayName
+    * Refers to the Application Name displayed in the Azure Portal.
     *
     * @param string $val The value of the displayName
     *
@@ -79,6 +83,7 @@ class AppIdentity extends Entity
     }
     /**
     * Gets the servicePrincipalId
+    * Refers to the Unique GUID indicating Service Principal Id in Azure Active Directory for the corresponding App.
     *
     * @return string The servicePrincipalId
     */
@@ -93,6 +98,7 @@ class AppIdentity extends Entity
 
     /**
     * Sets the servicePrincipalId
+    * Refers to the Unique GUID indicating Service Principal Id in Azure Active Directory for the corresponding App.
     *
     * @param string $val The value of the servicePrincipalId
     *
@@ -105,6 +111,7 @@ class AppIdentity extends Entity
     }
     /**
     * Gets the servicePrincipalName
+    * Refers to the Service Principal Name is the Application name in the tenant.
     *
     * @return string The servicePrincipalName
     */
@@ -119,6 +126,7 @@ class AppIdentity extends Entity
 
     /**
     * Sets the servicePrincipalName
+    * Refers to the Service Principal Name is the Application name in the tenant.
     *
     * @param string $val The value of the servicePrincipalName
     *

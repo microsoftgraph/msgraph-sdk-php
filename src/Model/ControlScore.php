@@ -27,6 +27,7 @@ class ControlScore extends Entity
 {
     /**
     * Gets the controlCategory
+    * Control action category (Identity, Data, Device, Apps, Infrastructure).
     *
     * @return string The controlCategory
     */
@@ -41,6 +42,7 @@ class ControlScore extends Entity
 
     /**
     * Sets the controlCategory
+    * Control action category (Identity, Data, Device, Apps, Infrastructure).
     *
     * @param string $val The value of the controlCategory
     *
@@ -53,6 +55,7 @@ class ControlScore extends Entity
     }
     /**
     * Gets the controlName
+    * Control unique name.
     *
     * @return string The controlName
     */
@@ -67,6 +70,7 @@ class ControlScore extends Entity
 
     /**
     * Sets the controlName
+    * Control unique name.
     *
     * @param string $val The value of the controlName
     *
@@ -79,6 +83,7 @@ class ControlScore extends Entity
     }
     /**
     * Gets the description
+    * Description of the control.
     *
     * @return string The description
     */
@@ -93,6 +98,7 @@ class ControlScore extends Entity
 
     /**
     * Sets the description
+    * Description of the control.
     *
     * @param string $val The value of the description
     *
@@ -105,6 +111,7 @@ class ControlScore extends Entity
     }
     /**
     * Gets the score
+    * Tenant achieved score for the control (it varies day by day depending on tenant operations on the control).
     *
     * @return float The score
     */
@@ -119,6 +126,7 @@ class ControlScore extends Entity
 
     /**
     * Sets the score
+    * Tenant achieved score for the control (it varies day by day depending on tenant operations on the control).
     *
     * @param float $val The value of the score
     *
