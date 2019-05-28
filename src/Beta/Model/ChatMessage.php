@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * ChatMessage class
@@ -61,7 +61,7 @@ class ChatMessage extends Entity
     public function getFrom()
     {
         if (array_key_exists("from", $this->_propDict)) {
-            if (is_a($this->_propDict["from"], "Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["from"], "Microsoft\Graph\Beta\Model\IdentitySet")) {
                 return $this->_propDict["from"];
             } else {
                 $this->_propDict["from"] = new IdentitySet($this->_propDict["from"]);
@@ -119,7 +119,7 @@ class ChatMessage extends Entity
     public function getMessageType()
     {
         if (array_key_exists("messageType", $this->_propDict)) {
-            if (is_a($this->_propDict["messageType"], "Microsoft\Graph\Model\ChatMessageType")) {
+            if (is_a($this->_propDict["messageType"], "Microsoft\Graph\Beta\Model\ChatMessageType")) {
                 return $this->_propDict["messageType"];
             } else {
                 $this->_propDict["messageType"] = new ChatMessageType($this->_propDict["messageType"]);
@@ -205,29 +205,33 @@ class ChatMessage extends Entity
     }
     
     /**
-    * Gets the deleted
+    * Gets the deletedDateTime
     *
-    * @return bool The deleted
+    * @return \DateTime The deletedDateTime
     */
-    public function getDeleted()
+    public function getDeletedDateTime()
     {
-        if (array_key_exists("deleted", $this->_propDict)) {
-            return $this->_propDict["deleted"];
-        } else {
-            return null;
+        if (array_key_exists("deletedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["deletedDateTime"], "\DateTime")) {
+                return $this->_propDict["deletedDateTime"];
+            } else {
+                $this->_propDict["deletedDateTime"] = new \DateTime($this->_propDict["deletedDateTime"]);
+                return $this->_propDict["deletedDateTime"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the deleted
+    * Sets the deletedDateTime
     *
-    * @param bool $val The deleted
+    * @param \DateTime $val The deletedDateTime
     *
     * @return ChatMessage
     */
-    public function setDeleted($val)
+    public function setDeletedDateTime($val)
     {
-        $this->_propDict["deleted"] = boolval($val);
+        $this->_propDict["deletedDateTime"] = $val;
         return $this;
     }
     
@@ -266,7 +270,7 @@ class ChatMessage extends Entity
     public function getBody()
     {
         if (array_key_exists("body", $this->_propDict)) {
-            if (is_a($this->_propDict["body"], "Microsoft\Graph\Model\ItemBody")) {
+            if (is_a($this->_propDict["body"], "Microsoft\Graph\Beta\Model\ItemBody")) {
                 return $this->_propDict["body"];
             } else {
                 $this->_propDict["body"] = new ItemBody($this->_propDict["body"]);
@@ -380,7 +384,7 @@ class ChatMessage extends Entity
     public function getImportance()
     {
         if (array_key_exists("importance", $this->_propDict)) {
-            if (is_a($this->_propDict["importance"], "Microsoft\Graph\Model\ChatMessageImportance")) {
+            if (is_a($this->_propDict["importance"], "Microsoft\Graph\Beta\Model\ChatMessageImportance")) {
                 return $this->_propDict["importance"];
             } else {
                 $this->_propDict["importance"] = new ChatMessageImportance($this->_propDict["importance"]);
@@ -411,7 +415,7 @@ class ChatMessage extends Entity
     public function getPolicyViolation()
     {
         if (array_key_exists("policyViolation", $this->_propDict)) {
-            if (is_a($this->_propDict["policyViolation"], "Microsoft\Graph\Model\ChatMessagePolicyViolation")) {
+            if (is_a($this->_propDict["policyViolation"], "Microsoft\Graph\Beta\Model\ChatMessagePolicyViolation")) {
                 return $this->_propDict["policyViolation"];
             } else {
                 $this->_propDict["policyViolation"] = new ChatMessagePolicyViolation($this->_propDict["policyViolation"]);
@@ -489,6 +493,33 @@ class ChatMessage extends Entity
         return $this;
     }
     
+    /**
+    * Gets the webUrl
+    *
+    * @return string The webUrl
+    */
+    public function getWebUrl()
+    {
+        if (array_key_exists("webUrl", $this->_propDict)) {
+            return $this->_propDict["webUrl"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the webUrl
+    *
+    * @param string $val The webUrl
+    *
+    * @return ChatMessage
+    */
+    public function setWebUrl($val)
+    {
+        $this->_propDict["webUrl"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the replies
@@ -514,6 +545,34 @@ class ChatMessage extends Entity
     public function setReplies($val)
     {
 		$this->_propDict["replies"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the hostedImages
+     *
+     * @return array The hostedImages
+     */
+    public function getHostedImages()
+    {
+        if (array_key_exists("hostedImages", $this->_propDict)) {
+           return $this->_propDict["hostedImages"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the hostedImages
+    *
+    * @param ChatMessageHostedImage $val The hostedImages
+    *
+    * @return ChatMessage
+    */
+    public function setHostedImages($val)
+    {
+		$this->_propDict["hostedImages"] = $val;
         return $this;
     }
     

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * SynchronizationQuarantine class
 *
@@ -34,7 +34,7 @@ class SynchronizationQuarantine extends Entity
     public function getCurrentBegan()
     {
         if (array_key_exists("currentBegan", $this->_propDict)) {
-            if (is_a($this->_propDict["currentBegan"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["currentBegan"], "Microsoft\Graph\Beta\Model\\DateTime")) {
                 return $this->_propDict["currentBegan"];
             } else {
                 $this->_propDict["currentBegan"] = new \DateTime($this->_propDict["currentBegan"]);
@@ -65,7 +65,7 @@ class SynchronizationQuarantine extends Entity
     public function getNextAttempt()
     {
         if (array_key_exists("nextAttempt", $this->_propDict)) {
-            if (is_a($this->_propDict["nextAttempt"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["nextAttempt"], "Microsoft\Graph\Beta\Model\\DateTime")) {
                 return $this->_propDict["nextAttempt"];
             } else {
                 $this->_propDict["nextAttempt"] = new \DateTime($this->_propDict["nextAttempt"]);
@@ -96,7 +96,7 @@ class SynchronizationQuarantine extends Entity
     public function getReason()
     {
         if (array_key_exists("reason", $this->_propDict)) {
-            if (is_a($this->_propDict["reason"], "Microsoft\Graph\Model\QuarantineReason")) {
+            if (is_a($this->_propDict["reason"], "Microsoft\Graph\Beta\Model\QuarantineReason")) {
                 return $this->_propDict["reason"];
             } else {
                 $this->_propDict["reason"] = new QuarantineReason($this->_propDict["reason"]);
@@ -127,7 +127,7 @@ class SynchronizationQuarantine extends Entity
     public function getSeriesBegan()
     {
         if (array_key_exists("seriesBegan", $this->_propDict)) {
-            if (is_a($this->_propDict["seriesBegan"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["seriesBegan"], "Microsoft\Graph\Beta\Model\\DateTime")) {
                 return $this->_propDict["seriesBegan"];
             } else {
                 $this->_propDict["seriesBegan"] = new \DateTime($this->_propDict["seriesBegan"]);

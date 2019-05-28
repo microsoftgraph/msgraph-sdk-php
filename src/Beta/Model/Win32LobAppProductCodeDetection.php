@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * Win32LobAppProductCodeDetection class
 *
@@ -72,7 +72,7 @@ class Win32LobAppProductCodeDetection extends Win32LobAppDetection
     public function getProductVersionOperator()
     {
         if (array_key_exists("productVersionOperator", $this->_propDict)) {
-            if (is_a($this->_propDict["productVersionOperator"], "Microsoft\Graph\Model\Win32LobAppDetectionOperator")) {
+            if (is_a($this->_propDict["productVersionOperator"], "Microsoft\Graph\Beta\Model\Win32LobAppDetectionOperator")) {
                 return $this->_propDict["productVersionOperator"];
             } else {
                 $this->_propDict["productVersionOperator"] = new Win32LobAppDetectionOperator($this->_propDict["productVersionOperator"]);

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * SharedPCAccountManagerPolicy class
 *
@@ -35,7 +35,7 @@ class SharedPCAccountManagerPolicy extends Entity
     public function getAccountDeletionPolicy()
     {
         if (array_key_exists("accountDeletionPolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["accountDeletionPolicy"], "Microsoft\Graph\Model\SharedPCAccountDeletionPolicyType")) {
+            if (is_a($this->_propDict["accountDeletionPolicy"], "Microsoft\Graph\Beta\Model\SharedPCAccountDeletionPolicyType")) {
                 return $this->_propDict["accountDeletionPolicy"];
             } else {
                 $this->_propDict["accountDeletionPolicy"] = new SharedPCAccountDeletionPolicyType($this->_propDict["accountDeletionPolicy"]);

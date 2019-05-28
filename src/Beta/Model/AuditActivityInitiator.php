@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * AuditActivityInitiator class
 *
@@ -28,13 +28,14 @@ class AuditActivityInitiator extends Entity
 
     /**
     * Gets the user
+    * If the resource initiating the activity is a user, this property Indicates all the user related information like userId, Name, UserPrinicpalName.
     *
     * @return UserIdentity The user
     */
     public function getUser()
     {
         if (array_key_exists("user", $this->_propDict)) {
-            if (is_a($this->_propDict["user"], "Microsoft\Graph\Model\UserIdentity")) {
+            if (is_a($this->_propDict["user"], "Microsoft\Graph\Beta\Model\UserIdentity")) {
                 return $this->_propDict["user"];
             } else {
                 $this->_propDict["user"] = new UserIdentity($this->_propDict["user"]);
@@ -46,6 +47,7 @@ class AuditActivityInitiator extends Entity
 
     /**
     * Sets the user
+    * If the resource initiating the activity is a user, this property Indicates all the user related information like userId, Name, UserPrinicpalName.
     *
     * @param UserIdentity $val The value to assign to the user
     *
@@ -59,13 +61,14 @@ class AuditActivityInitiator extends Entity
 
     /**
     * Gets the app
+    * If the resource initiating the activity is an app, this property indicates all the app related information like appId, Name, servicePrincipalId, Name.
     *
     * @return AppIdentity The app
     */
     public function getApp()
     {
         if (array_key_exists("app", $this->_propDict)) {
-            if (is_a($this->_propDict["app"], "Microsoft\Graph\Model\AppIdentity")) {
+            if (is_a($this->_propDict["app"], "Microsoft\Graph\Beta\Model\AppIdentity")) {
                 return $this->_propDict["app"];
             } else {
                 $this->_propDict["app"] = new AppIdentity($this->_propDict["app"]);
@@ -77,6 +80,7 @@ class AuditActivityInitiator extends Entity
 
     /**
     * Sets the app
+    * If the resource initiating the activity is an app, this property indicates all the app related information like appId, Name, servicePrincipalId, Name.
     *
     * @param AppIdentity $val The value to assign to the app
     *

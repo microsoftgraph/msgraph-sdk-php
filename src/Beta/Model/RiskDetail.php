@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 use Microsoft\Graph\Core\Enum;
 
@@ -41,5 +41,6 @@ class RiskDetail extends Enum
     const ADMIN_DISMISSED_ALL_RISK_FOR_USER = "adminDismissedAllRiskForUser";
     const ADMIN_CONFIRMED_SIGNIN_COMPROMISED = "adminConfirmedSigninCompromised";
     const HIDDEN = "hidden";
+    const ADMIN_CONFIRMED_USER_COMPROMISED = "adminConfirmedUserCompromised";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

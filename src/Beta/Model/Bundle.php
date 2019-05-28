@@ -1,0 +1,85 @@
+<?php
+/**
+* Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
+* 
+* Bundle File
+* PHP version 7
+*
+* @category  Library
+* @package   Microsoft.Graph
+* @copyright © Microsoft Corporation. All rights reserved.
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   GIT: 1.4.0
+* @link      https://graph.microsoft.io/
+*/
+namespace Microsoft\Graph\Beta\Model;
+/**
+* Bundle class
+*
+* @category  Model
+* @package   Microsoft.Graph
+* @copyright © Microsoft Corporation. All rights reserved.
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   Release: 1.4.0
+* @link      https://graph.microsoft.io/
+*/
+class Bundle extends Entity
+{
+    /**
+    * Gets the childCount
+    *
+    * @return int The childCount
+    */
+    public function getChildCount()
+    {
+        if (array_key_exists("childCount", $this->_propDict)) {
+            return $this->_propDict["childCount"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the childCount
+    *
+    * @param int $val The value of the childCount
+    *
+    * @return Bundle
+    */
+    public function setChildCount($val)
+    {
+        $this->_propDict["childCount"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the album
+    *
+    * @return Album The album
+    */
+    public function getAlbum()
+    {
+        if (array_key_exists("album", $this->_propDict)) {
+            if (is_a($this->_propDict["album"], "Microsoft\Graph\Beta\Model\Album")) {
+                return $this->_propDict["album"];
+            } else {
+                $this->_propDict["album"] = new Album($this->_propDict["album"]);
+                return $this->_propDict["album"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the album
+    *
+    * @param Album $val The value to assign to the album
+    *
+    * @return Bundle The Bundle
+    */
+    public function setAlbum($val)
+    {
+        $this->_propDict["album"] = $val;
+         return $this;
+    }
+}

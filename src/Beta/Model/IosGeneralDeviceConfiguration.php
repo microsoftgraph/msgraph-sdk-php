@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * IosGeneralDeviceConfiguration class
@@ -327,7 +327,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function getAppsVisibilityListType()
     {
         if (array_key_exists("appsVisibilityListType", $this->_propDict)) {
-            if (is_a($this->_propDict["appsVisibilityListType"], "Microsoft\Graph\Model\AppListType")) {
+            if (is_a($this->_propDict["appsVisibilityListType"], "Microsoft\Graph\Beta\Model\AppListType")) {
                 return $this->_propDict["appsVisibilityListType"];
             } else {
                 $this->_propDict["appsVisibilityListType"] = new AppListType($this->_propDict["appsVisibilityListType"]);
@@ -493,6 +493,35 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function setAppStoreRequirePassword($val)
     {
         $this->_propDict["appStoreRequirePassword"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the autoFillForceAuthentication
+    * Indicates whether or not to force user authentication before autofilling passwords and credit card information in Safari and other apps on supervised devices.
+    *
+    * @return bool The autoFillForceAuthentication
+    */
+    public function getAutoFillForceAuthentication()
+    {
+        if (array_key_exists("autoFillForceAuthentication", $this->_propDict)) {
+            return $this->_propDict["autoFillForceAuthentication"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the autoFillForceAuthentication
+    * Indicates whether or not to force user authentication before autofilling passwords and credit card information in Safari and other apps on supervised devices.
+    *
+    * @param bool $val The autoFillForceAuthentication
+    *
+    * @return IosGeneralDeviceConfiguration
+    */
+    public function setAutoFillForceAuthentication($val)
+    {
+        $this->_propDict["autoFillForceAuthentication"] = boolval($val);
         return $this;
     }
     
@@ -671,6 +700,35 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the cellularBlockPlanModification
+    * Indicates whether or not to allow users to change the settings of the cellular plan on a supervised device.
+    *
+    * @return bool The cellularBlockPlanModification
+    */
+    public function getCellularBlockPlanModification()
+    {
+        if (array_key_exists("cellularBlockPlanModification", $this->_propDict)) {
+            return $this->_propDict["cellularBlockPlanModification"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the cellularBlockPlanModification
+    * Indicates whether or not to allow users to change the settings of the cellular plan on a supervised device.
+    *
+    * @param bool $val The cellularBlockPlanModification
+    *
+    * @return IosGeneralDeviceConfiguration
+    */
+    public function setCellularBlockPlanModification($val)
+    {
+        $this->_propDict["cellularBlockPlanModification"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the cellularBlockVoiceRoaming
     * Indicates whether or not to block voice roaming.
     *
@@ -786,6 +844,64 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         return $this;
     }
     
+    /**
+    * Gets the classroomForceAutomaticallyJoinClasses
+    * Indicates whether or not to automatically give permission to the teacher's requests, without prompting the student, when the device is in supervised mode.
+    *
+    * @return bool The classroomForceAutomaticallyJoinClasses
+    */
+    public function getClassroomForceAutomaticallyJoinClasses()
+    {
+        if (array_key_exists("classroomForceAutomaticallyJoinClasses", $this->_propDict)) {
+            return $this->_propDict["classroomForceAutomaticallyJoinClasses"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the classroomForceAutomaticallyJoinClasses
+    * Indicates whether or not to automatically give permission to the teacher's requests, without prompting the student, when the device is in supervised mode.
+    *
+    * @param bool $val The classroomForceAutomaticallyJoinClasses
+    *
+    * @return IosGeneralDeviceConfiguration
+    */
+    public function setClassroomForceAutomaticallyJoinClasses($val)
+    {
+        $this->_propDict["classroomForceAutomaticallyJoinClasses"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the classroomForceUnpromptedAppAndDeviceLock
+    * Indicates whether or not to allow the teacher to lock apps or the device without prompting the student. Supervised only.
+    *
+    * @return bool The classroomForceUnpromptedAppAndDeviceLock
+    */
+    public function getClassroomForceUnpromptedAppAndDeviceLock()
+    {
+        if (array_key_exists("classroomForceUnpromptedAppAndDeviceLock", $this->_propDict)) {
+            return $this->_propDict["classroomForceUnpromptedAppAndDeviceLock"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the classroomForceUnpromptedAppAndDeviceLock
+    * Indicates whether or not to allow the teacher to lock apps or the device without prompting the student. Supervised only.
+    *
+    * @param bool $val The classroomForceUnpromptedAppAndDeviceLock
+    *
+    * @return IosGeneralDeviceConfiguration
+    */
+    public function setClassroomForceUnpromptedAppAndDeviceLock($val)
+    {
+        $this->_propDict["classroomForceUnpromptedAppAndDeviceLock"] = boolval($val);
+        return $this;
+    }
+    
 
      /** 
      * Gets the compliantAppsList
@@ -825,7 +941,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function getCompliantAppListType()
     {
         if (array_key_exists("compliantAppListType", $this->_propDict)) {
-            if (is_a($this->_propDict["compliantAppListType"], "Microsoft\Graph\Model\AppListType")) {
+            if (is_a($this->_propDict["compliantAppListType"], "Microsoft\Graph\Beta\Model\AppListType")) {
                 return $this->_propDict["compliantAppListType"];
             } else {
                 $this->_propDict["compliantAppListType"] = new AppListType($this->_propDict["compliantAppListType"]);
@@ -1194,6 +1310,35 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function setEnterpriseAppBlockTrustModification($val)
     {
         $this->_propDict["enterpriseAppBlockTrustModification"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the esimBlockModification
+    * Indicates whether or not to allow the addition or removal of cellular plans on the eSIM of a supervised device.
+    *
+    * @return bool The esimBlockModification
+    */
+    public function getEsimBlockModification()
+    {
+        if (array_key_exists("esimBlockModification", $this->_propDict)) {
+            return $this->_propDict["esimBlockModification"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the esimBlockModification
+    * Indicates whether or not to allow the addition or removal of cellular plans on the eSIM of a supervised device.
+    *
+    * @param bool $val The esimBlockModification
+    *
+    * @return IosGeneralDeviceConfiguration
+    */
+    public function setEsimBlockModification($val)
+    {
+        $this->_propDict["esimBlockModification"] = boolval($val);
         return $this;
     }
     
@@ -1981,6 +2126,35 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the kioskModeBlockAutoLock
+    * Indicates whether or not to block device auto lock while in kiosk mode.
+    *
+    * @return bool The kioskModeBlockAutoLock
+    */
+    public function getKioskModeBlockAutoLock()
+    {
+        if (array_key_exists("kioskModeBlockAutoLock", $this->_propDict)) {
+            return $this->_propDict["kioskModeBlockAutoLock"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the kioskModeBlockAutoLock
+    * Indicates whether or not to block device auto lock while in kiosk mode.
+    *
+    * @param bool $val The kioskModeBlockAutoLock
+    *
+    * @return IosGeneralDeviceConfiguration
+    */
+    public function setKioskModeBlockAutoLock($val)
+    {
+        $this->_propDict["kioskModeBlockAutoLock"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the kioskModeAllowColorInversionSettings
     * Indicates whether or not to allow access to the Color Inversion Settings while in kiosk mode.
     *
@@ -2039,6 +2213,35 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the kioskModeBlockRingerSwitch
+    * Indicates whether or not to block use of the ringer switch while in kiosk mode.
+    *
+    * @return bool The kioskModeBlockRingerSwitch
+    */
+    public function getKioskModeBlockRingerSwitch()
+    {
+        if (array_key_exists("kioskModeBlockRingerSwitch", $this->_propDict)) {
+            return $this->_propDict["kioskModeBlockRingerSwitch"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the kioskModeBlockRingerSwitch
+    * Indicates whether or not to block use of the ringer switch while in kiosk mode.
+    *
+    * @param bool $val The kioskModeBlockRingerSwitch
+    *
+    * @return IosGeneralDeviceConfiguration
+    */
+    public function setKioskModeBlockRingerSwitch($val)
+    {
+        $this->_propDict["kioskModeBlockRingerSwitch"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the kioskModeAllowScreenRotation
     * Indicates whether or not to allow screen rotation while in kiosk mode.
     *
@@ -2064,6 +2267,35 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function setKioskModeAllowScreenRotation($val)
     {
         $this->_propDict["kioskModeAllowScreenRotation"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the kioskModeBlockScreenRotation
+    * Indicates whether or not to block screen rotation while in kiosk mode.
+    *
+    * @return bool The kioskModeBlockScreenRotation
+    */
+    public function getKioskModeBlockScreenRotation()
+    {
+        if (array_key_exists("kioskModeBlockScreenRotation", $this->_propDict)) {
+            return $this->_propDict["kioskModeBlockScreenRotation"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the kioskModeBlockScreenRotation
+    * Indicates whether or not to block screen rotation while in kiosk mode.
+    *
+    * @param bool $val The kioskModeBlockScreenRotation
+    *
+    * @return IosGeneralDeviceConfiguration
+    */
+    public function setKioskModeBlockScreenRotation($val)
+    {
+        $this->_propDict["kioskModeBlockScreenRotation"] = boolval($val);
         return $this;
     }
     
@@ -2097,6 +2329,35 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the kioskModeBlockSleepButton
+    * Indicates whether or not to block use of the sleep button while in kiosk mode.
+    *
+    * @return bool The kioskModeBlockSleepButton
+    */
+    public function getKioskModeBlockSleepButton()
+    {
+        if (array_key_exists("kioskModeBlockSleepButton", $this->_propDict)) {
+            return $this->_propDict["kioskModeBlockSleepButton"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the kioskModeBlockSleepButton
+    * Indicates whether or not to block use of the sleep button while in kiosk mode.
+    *
+    * @param bool $val The kioskModeBlockSleepButton
+    *
+    * @return IosGeneralDeviceConfiguration
+    */
+    public function setKioskModeBlockSleepButton($val)
+    {
+        $this->_propDict["kioskModeBlockSleepButton"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the kioskModeAllowTouchscreen
     * Indicates whether or not to allow use of the touchscreen while in kiosk mode.
     *
@@ -2122,6 +2383,35 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function setKioskModeAllowTouchscreen($val)
     {
         $this->_propDict["kioskModeAllowTouchscreen"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the kioskModeBlockTouchscreen
+    * Indicates whether or not to block use of the touchscreen while in kiosk mode.
+    *
+    * @return bool The kioskModeBlockTouchscreen
+    */
+    public function getKioskModeBlockTouchscreen()
+    {
+        if (array_key_exists("kioskModeBlockTouchscreen", $this->_propDict)) {
+            return $this->_propDict["kioskModeBlockTouchscreen"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the kioskModeBlockTouchscreen
+    * Indicates whether or not to block use of the touchscreen while in kiosk mode.
+    *
+    * @param bool $val The kioskModeBlockTouchscreen
+    *
+    * @return IosGeneralDeviceConfiguration
+    */
+    public function setKioskModeBlockTouchscreen($val)
+    {
+        $this->_propDict["kioskModeBlockTouchscreen"] = boolval($val);
         return $this;
     }
     
@@ -2598,7 +2888,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function getMediaContentRatingAustralia()
     {
         if (array_key_exists("mediaContentRatingAustralia", $this->_propDict)) {
-            if (is_a($this->_propDict["mediaContentRatingAustralia"], "Microsoft\Graph\Model\MediaContentRatingAustralia")) {
+            if (is_a($this->_propDict["mediaContentRatingAustralia"], "Microsoft\Graph\Beta\Model\MediaContentRatingAustralia")) {
                 return $this->_propDict["mediaContentRatingAustralia"];
             } else {
                 $this->_propDict["mediaContentRatingAustralia"] = new MediaContentRatingAustralia($this->_propDict["mediaContentRatingAustralia"]);
@@ -2631,7 +2921,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function getMediaContentRatingCanada()
     {
         if (array_key_exists("mediaContentRatingCanada", $this->_propDict)) {
-            if (is_a($this->_propDict["mediaContentRatingCanada"], "Microsoft\Graph\Model\MediaContentRatingCanada")) {
+            if (is_a($this->_propDict["mediaContentRatingCanada"], "Microsoft\Graph\Beta\Model\MediaContentRatingCanada")) {
                 return $this->_propDict["mediaContentRatingCanada"];
             } else {
                 $this->_propDict["mediaContentRatingCanada"] = new MediaContentRatingCanada($this->_propDict["mediaContentRatingCanada"]);
@@ -2664,7 +2954,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function getMediaContentRatingFrance()
     {
         if (array_key_exists("mediaContentRatingFrance", $this->_propDict)) {
-            if (is_a($this->_propDict["mediaContentRatingFrance"], "Microsoft\Graph\Model\MediaContentRatingFrance")) {
+            if (is_a($this->_propDict["mediaContentRatingFrance"], "Microsoft\Graph\Beta\Model\MediaContentRatingFrance")) {
                 return $this->_propDict["mediaContentRatingFrance"];
             } else {
                 $this->_propDict["mediaContentRatingFrance"] = new MediaContentRatingFrance($this->_propDict["mediaContentRatingFrance"]);
@@ -2697,7 +2987,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function getMediaContentRatingGermany()
     {
         if (array_key_exists("mediaContentRatingGermany", $this->_propDict)) {
-            if (is_a($this->_propDict["mediaContentRatingGermany"], "Microsoft\Graph\Model\MediaContentRatingGermany")) {
+            if (is_a($this->_propDict["mediaContentRatingGermany"], "Microsoft\Graph\Beta\Model\MediaContentRatingGermany")) {
                 return $this->_propDict["mediaContentRatingGermany"];
             } else {
                 $this->_propDict["mediaContentRatingGermany"] = new MediaContentRatingGermany($this->_propDict["mediaContentRatingGermany"]);
@@ -2730,7 +3020,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function getMediaContentRatingIreland()
     {
         if (array_key_exists("mediaContentRatingIreland", $this->_propDict)) {
-            if (is_a($this->_propDict["mediaContentRatingIreland"], "Microsoft\Graph\Model\MediaContentRatingIreland")) {
+            if (is_a($this->_propDict["mediaContentRatingIreland"], "Microsoft\Graph\Beta\Model\MediaContentRatingIreland")) {
                 return $this->_propDict["mediaContentRatingIreland"];
             } else {
                 $this->_propDict["mediaContentRatingIreland"] = new MediaContentRatingIreland($this->_propDict["mediaContentRatingIreland"]);
@@ -2763,7 +3053,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function getMediaContentRatingJapan()
     {
         if (array_key_exists("mediaContentRatingJapan", $this->_propDict)) {
-            if (is_a($this->_propDict["mediaContentRatingJapan"], "Microsoft\Graph\Model\MediaContentRatingJapan")) {
+            if (is_a($this->_propDict["mediaContentRatingJapan"], "Microsoft\Graph\Beta\Model\MediaContentRatingJapan")) {
                 return $this->_propDict["mediaContentRatingJapan"];
             } else {
                 $this->_propDict["mediaContentRatingJapan"] = new MediaContentRatingJapan($this->_propDict["mediaContentRatingJapan"]);
@@ -2796,7 +3086,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function getMediaContentRatingNewZealand()
     {
         if (array_key_exists("mediaContentRatingNewZealand", $this->_propDict)) {
-            if (is_a($this->_propDict["mediaContentRatingNewZealand"], "Microsoft\Graph\Model\MediaContentRatingNewZealand")) {
+            if (is_a($this->_propDict["mediaContentRatingNewZealand"], "Microsoft\Graph\Beta\Model\MediaContentRatingNewZealand")) {
                 return $this->_propDict["mediaContentRatingNewZealand"];
             } else {
                 $this->_propDict["mediaContentRatingNewZealand"] = new MediaContentRatingNewZealand($this->_propDict["mediaContentRatingNewZealand"]);
@@ -2829,7 +3119,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function getMediaContentRatingUnitedKingdom()
     {
         if (array_key_exists("mediaContentRatingUnitedKingdom", $this->_propDict)) {
-            if (is_a($this->_propDict["mediaContentRatingUnitedKingdom"], "Microsoft\Graph\Model\MediaContentRatingUnitedKingdom")) {
+            if (is_a($this->_propDict["mediaContentRatingUnitedKingdom"], "Microsoft\Graph\Beta\Model\MediaContentRatingUnitedKingdom")) {
                 return $this->_propDict["mediaContentRatingUnitedKingdom"];
             } else {
                 $this->_propDict["mediaContentRatingUnitedKingdom"] = new MediaContentRatingUnitedKingdom($this->_propDict["mediaContentRatingUnitedKingdom"]);
@@ -2862,7 +3152,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function getMediaContentRatingUnitedStates()
     {
         if (array_key_exists("mediaContentRatingUnitedStates", $this->_propDict)) {
-            if (is_a($this->_propDict["mediaContentRatingUnitedStates"], "Microsoft\Graph\Model\MediaContentRatingUnitedStates")) {
+            if (is_a($this->_propDict["mediaContentRatingUnitedStates"], "Microsoft\Graph\Beta\Model\MediaContentRatingUnitedStates")) {
                 return $this->_propDict["mediaContentRatingUnitedStates"];
             } else {
                 $this->_propDict["mediaContentRatingUnitedStates"] = new MediaContentRatingUnitedStates($this->_propDict["mediaContentRatingUnitedStates"]);
@@ -2925,7 +3215,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function getMediaContentRatingApps()
     {
         if (array_key_exists("mediaContentRatingApps", $this->_propDict)) {
-            if (is_a($this->_propDict["mediaContentRatingApps"], "Microsoft\Graph\Model\RatingAppsType")) {
+            if (is_a($this->_propDict["mediaContentRatingApps"], "Microsoft\Graph\Beta\Model\RatingAppsType")) {
                 return $this->_propDict["mediaContentRatingApps"];
             } else {
                 $this->_propDict["mediaContentRatingApps"] = new RatingAppsType($this->_propDict["mediaContentRatingApps"]);
@@ -3335,7 +3625,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function getPasscodeRequiredType()
     {
         if (array_key_exists("passcodeRequiredType", $this->_propDict)) {
-            if (is_a($this->_propDict["passcodeRequiredType"], "Microsoft\Graph\Model\RequiredPasswordType")) {
+            if (is_a($this->_propDict["passcodeRequiredType"], "Microsoft\Graph\Beta\Model\RequiredPasswordType")) {
                 return $this->_propDict["passcodeRequiredType"];
             } else {
                 $this->_propDict["passcodeRequiredType"] = new RequiredPasswordType($this->_propDict["passcodeRequiredType"]);
@@ -3414,6 +3704,35 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function setPodcastsBlocked($val)
     {
         $this->_propDict["podcastsBlocked"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the proximityBlockSetupToNewDevice
+    * Indicates whether or not to enable the prompt to setup nearby devices with a supervised device.
+    *
+    * @return bool The proximityBlockSetupToNewDevice
+    */
+    public function getProximityBlockSetupToNewDevice()
+    {
+        if (array_key_exists("proximityBlockSetupToNewDevice", $this->_propDict)) {
+            return $this->_propDict["proximityBlockSetupToNewDevice"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the proximityBlockSetupToNewDevice
+    * Indicates whether or not to enable the prompt to setup nearby devices with a supervised device.
+    *
+    * @param bool $val The proximityBlockSetupToNewDevice
+    *
+    * @return IosGeneralDeviceConfiguration
+    */
+    public function setProximityBlockSetupToNewDevice($val)
+    {
+        $this->_propDict["proximityBlockSetupToNewDevice"] = boolval($val);
         return $this;
     }
     
@@ -3542,7 +3861,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function getSafariCookieSettings()
     {
         if (array_key_exists("safariCookieSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["safariCookieSettings"], "Microsoft\Graph\Model\WebBrowserCookieSettings")) {
+            if (is_a($this->_propDict["safariCookieSettings"], "Microsoft\Graph\Beta\Model\WebBrowserCookieSettings")) {
                 return $this->_propDict["safariCookieSettings"];
             } else {
                 $this->_propDict["safariCookieSettings"] = new WebBrowserCookieSettings($this->_propDict["safariCookieSettings"]);
@@ -3795,6 +4114,64 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function setSiriRequireProfanityFilter($val)
     {
         $this->_propDict["siriRequireProfanityFilter"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the softwareUpdatesEnforcedDelayInDays
+    * Sets how many days a software update will be delyed for a supervised device. Valid values 0 to 90
+    *
+    * @return int The softwareUpdatesEnforcedDelayInDays
+    */
+    public function getSoftwareUpdatesEnforcedDelayInDays()
+    {
+        if (array_key_exists("softwareUpdatesEnforcedDelayInDays", $this->_propDict)) {
+            return $this->_propDict["softwareUpdatesEnforcedDelayInDays"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the softwareUpdatesEnforcedDelayInDays
+    * Sets how many days a software update will be delyed for a supervised device. Valid values 0 to 90
+    *
+    * @param int $val The softwareUpdatesEnforcedDelayInDays
+    *
+    * @return IosGeneralDeviceConfiguration
+    */
+    public function setSoftwareUpdatesEnforcedDelayInDays($val)
+    {
+        $this->_propDict["softwareUpdatesEnforcedDelayInDays"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the softwareUpdatesForceDelayed
+    * Indicates whether or not to delay user visibility of software updates when the device is in supervised mode.
+    *
+    * @return bool The softwareUpdatesForceDelayed
+    */
+    public function getSoftwareUpdatesForceDelayed()
+    {
+        if (array_key_exists("softwareUpdatesForceDelayed", $this->_propDict)) {
+            return $this->_propDict["softwareUpdatesForceDelayed"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the softwareUpdatesForceDelayed
+    * Indicates whether or not to delay user visibility of software updates when the device is in supervised mode.
+    *
+    * @param bool $val The softwareUpdatesForceDelayed
+    *
+    * @return IosGeneralDeviceConfiguration
+    */
+    public function setSoftwareUpdatesForceDelayed($val)
+    {
+        $this->_propDict["softwareUpdatesForceDelayed"] = boolval($val);
         return $this;
     }
     
@@ -4491,6 +4868,64 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function setContactsAllowUnmanagedToManagedRead($val)
     {
         $this->_propDict["contactsAllowUnmanagedToManagedRead"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the cellularBlockPersonalHotspotModification
+    * Indicates whether or not to block the user from modifying the personal hotspot setting (iOS 12.2 or later).
+    *
+    * @return bool The cellularBlockPersonalHotspotModification
+    */
+    public function getCellularBlockPersonalHotspotModification()
+    {
+        if (array_key_exists("cellularBlockPersonalHotspotModification", $this->_propDict)) {
+            return $this->_propDict["cellularBlockPersonalHotspotModification"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the cellularBlockPersonalHotspotModification
+    * Indicates whether or not to block the user from modifying the personal hotspot setting (iOS 12.2 or later).
+    *
+    * @param bool $val The cellularBlockPersonalHotspotModification
+    *
+    * @return IosGeneralDeviceConfiguration
+    */
+    public function setCellularBlockPersonalHotspotModification($val)
+    {
+        $this->_propDict["cellularBlockPersonalHotspotModification"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the siriDisableServerLogging
+    * Indicates whether or not server-side Siri logging is disabled (iOS 12.2 or later).
+    *
+    * @return bool The siriDisableServerLogging
+    */
+    public function getSiriDisableServerLogging()
+    {
+        if (array_key_exists("siriDisableServerLogging", $this->_propDict)) {
+            return $this->_propDict["siriDisableServerLogging"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the siriDisableServerLogging
+    * Indicates whether or not server-side Siri logging is disabled (iOS 12.2 or later).
+    *
+    * @param bool $val The siriDisableServerLogging
+    *
+    * @return IosGeneralDeviceConfiguration
+    */
+    public function setSiriDisableServerLogging($val)
+    {
+        $this->_propDict["siriDisableServerLogging"] = boolval($val);
         return $this;
     }
     

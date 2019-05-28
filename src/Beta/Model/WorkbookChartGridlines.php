@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * WorkbookChartGridlines class
@@ -64,7 +64,7 @@ class WorkbookChartGridlines extends Entity
     public function getFormat()
     {
         if (array_key_exists("format", $this->_propDict)) {
-            if (is_a($this->_propDict["format"], "Microsoft\Graph\Model\WorkbookChartGridlinesFormat")) {
+            if (is_a($this->_propDict["format"], "Microsoft\Graph\Beta\Model\WorkbookChartGridlinesFormat")) {
                 return $this->_propDict["format"];
             } else {
                 $this->_propDict["format"] = new WorkbookChartGridlinesFormat($this->_propDict["format"]);

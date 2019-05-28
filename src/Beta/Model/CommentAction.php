@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * CommentAction class
 *
@@ -27,6 +27,7 @@ class CommentAction extends Entity
 {
     /**
     * Gets the isReply
+    * If true, this activity was a reply to an existing comment thread.
     *
     * @return bool The isReply
     */
@@ -41,6 +42,7 @@ class CommentAction extends Entity
 
     /**
     * Sets the isReply
+    * If true, this activity was a reply to an existing comment thread.
     *
     * @param bool $val The value of the isReply
     *
@@ -54,13 +56,14 @@ class CommentAction extends Entity
 
     /**
     * Gets the parentAuthor
+    * The identity of the user who started the comment thread.
     *
     * @return IdentitySet The parentAuthor
     */
     public function getParentAuthor()
     {
         if (array_key_exists("parentAuthor", $this->_propDict)) {
-            if (is_a($this->_propDict["parentAuthor"], "Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["parentAuthor"], "Microsoft\Graph\Beta\Model\IdentitySet")) {
                 return $this->_propDict["parentAuthor"];
             } else {
                 $this->_propDict["parentAuthor"] = new IdentitySet($this->_propDict["parentAuthor"]);
@@ -72,6 +75,7 @@ class CommentAction extends Entity
 
     /**
     * Sets the parentAuthor
+    * The identity of the user who started the comment thread.
     *
     * @param IdentitySet $val The value to assign to the parentAuthor
     *
@@ -85,13 +89,14 @@ class CommentAction extends Entity
 
     /**
     * Gets the participants
+    * The identities of the users participating in this comment thread.
     *
     * @return IdentitySet The participants
     */
     public function getParticipants()
     {
         if (array_key_exists("participants", $this->_propDict)) {
-            if (is_a($this->_propDict["participants"], "Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["participants"], "Microsoft\Graph\Beta\Model\IdentitySet")) {
                 return $this->_propDict["participants"];
             } else {
                 $this->_propDict["participants"] = new IdentitySet($this->_propDict["participants"]);
@@ -103,6 +108,7 @@ class CommentAction extends Entity
 
     /**
     * Sets the participants
+    * The identities of the users participating in this comment thread.
     *
     * @param IdentitySet $val The value to assign to the participants
     *

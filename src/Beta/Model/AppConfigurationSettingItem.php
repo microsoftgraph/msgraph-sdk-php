@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * AppConfigurationSettingItem class
 *
@@ -63,7 +63,7 @@ class AppConfigurationSettingItem extends Entity
     public function getAppConfigKeyType()
     {
         if (array_key_exists("appConfigKeyType", $this->_propDict)) {
-            if (is_a($this->_propDict["appConfigKeyType"], "Microsoft\Graph\Model\MdmAppConfigKeyType")) {
+            if (is_a($this->_propDict["appConfigKeyType"], "Microsoft\Graph\Beta\Model\MdmAppConfigKeyType")) {
                 return $this->_propDict["appConfigKeyType"];
             } else {
                 $this->_propDict["appConfigKeyType"] = new MdmAppConfigKeyType($this->_propDict["appConfigKeyType"]);
