@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * MobileAppTroubleshootingAppStateHistory class
 *
@@ -35,7 +35,7 @@ class MobileAppTroubleshootingAppStateHistory extends MobileAppTroubleshootingHi
     public function getActionType()
     {
         if (array_key_exists("actionType", $this->_propDict)) {
-            if (is_a($this->_propDict["actionType"], "Microsoft\Graph\Model\MobileAppActionType")) {
+            if (is_a($this->_propDict["actionType"], "Microsoft\Graph\Beta\Model\MobileAppActionType")) {
                 return $this->_propDict["actionType"];
             } else {
                 $this->_propDict["actionType"] = new MobileAppActionType($this->_propDict["actionType"]);
@@ -68,7 +68,7 @@ class MobileAppTroubleshootingAppStateHistory extends MobileAppTroubleshootingHi
     public function getRunState()
     {
         if (array_key_exists("runState", $this->_propDict)) {
-            if (is_a($this->_propDict["runState"], "Microsoft\Graph\Model\RunState")) {
+            if (is_a($this->_propDict["runState"], "Microsoft\Graph\Beta\Model\RunState")) {
                 return $this->_propDict["runState"];
             } else {
                 $this->_propDict["runState"] = new RunState($this->_propDict["runState"]);

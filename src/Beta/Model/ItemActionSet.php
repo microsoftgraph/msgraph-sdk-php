@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * ItemActionSet class
 *
@@ -28,13 +28,14 @@ class ItemActionSet extends Entity
 
     /**
     * Gets the comment
+    * A comment was added to the item.
     *
     * @return CommentAction The comment
     */
     public function getComment()
     {
         if (array_key_exists("comment", $this->_propDict)) {
-            if (is_a($this->_propDict["comment"], "Microsoft\Graph\Model\CommentAction")) {
+            if (is_a($this->_propDict["comment"], "Microsoft\Graph\Beta\Model\CommentAction")) {
                 return $this->_propDict["comment"];
             } else {
                 $this->_propDict["comment"] = new CommentAction($this->_propDict["comment"]);
@@ -46,6 +47,7 @@ class ItemActionSet extends Entity
 
     /**
     * Sets the comment
+    * A comment was added to the item.
     *
     * @param CommentAction $val The value to assign to the comment
     *
@@ -59,13 +61,14 @@ class ItemActionSet extends Entity
 
     /**
     * Gets the create
+    * An item was created.
     *
     * @return CreateAction The create
     */
     public function getCreate()
     {
         if (array_key_exists("create", $this->_propDict)) {
-            if (is_a($this->_propDict["create"], "Microsoft\Graph\Model\CreateAction")) {
+            if (is_a($this->_propDict["create"], "Microsoft\Graph\Beta\Model\CreateAction")) {
                 return $this->_propDict["create"];
             } else {
                 $this->_propDict["create"] = new CreateAction($this->_propDict["create"]);
@@ -77,6 +80,7 @@ class ItemActionSet extends Entity
 
     /**
     * Sets the create
+    * An item was created.
     *
     * @param CreateAction $val The value to assign to the create
     *
@@ -90,13 +94,14 @@ class ItemActionSet extends Entity
 
     /**
     * Gets the delete
+    * An item was deleted.
     *
     * @return DeleteAction The delete
     */
     public function getDelete()
     {
         if (array_key_exists("delete", $this->_propDict)) {
-            if (is_a($this->_propDict["delete"], "Microsoft\Graph\Model\DeleteAction")) {
+            if (is_a($this->_propDict["delete"], "Microsoft\Graph\Beta\Model\DeleteAction")) {
                 return $this->_propDict["delete"];
             } else {
                 $this->_propDict["delete"] = new DeleteAction($this->_propDict["delete"]);
@@ -108,6 +113,7 @@ class ItemActionSet extends Entity
 
     /**
     * Sets the delete
+    * An item was deleted.
     *
     * @param DeleteAction $val The value to assign to the delete
     *
@@ -121,13 +127,14 @@ class ItemActionSet extends Entity
 
     /**
     * Gets the edit
+    * An item was edited.
     *
     * @return EditAction The edit
     */
     public function getEdit()
     {
         if (array_key_exists("edit", $this->_propDict)) {
-            if (is_a($this->_propDict["edit"], "Microsoft\Graph\Model\EditAction")) {
+            if (is_a($this->_propDict["edit"], "Microsoft\Graph\Beta\Model\EditAction")) {
                 return $this->_propDict["edit"];
             } else {
                 $this->_propDict["edit"] = new EditAction($this->_propDict["edit"]);
@@ -139,6 +146,7 @@ class ItemActionSet extends Entity
 
     /**
     * Sets the edit
+    * An item was edited.
     *
     * @param EditAction $val The value to assign to the edit
     *
@@ -152,13 +160,14 @@ class ItemActionSet extends Entity
 
     /**
     * Gets the mention
+    * A user was mentioned in the item.
     *
     * @return MentionAction The mention
     */
     public function getMention()
     {
         if (array_key_exists("mention", $this->_propDict)) {
-            if (is_a($this->_propDict["mention"], "Microsoft\Graph\Model\MentionAction")) {
+            if (is_a($this->_propDict["mention"], "Microsoft\Graph\Beta\Model\MentionAction")) {
                 return $this->_propDict["mention"];
             } else {
                 $this->_propDict["mention"] = new MentionAction($this->_propDict["mention"]);
@@ -170,6 +179,7 @@ class ItemActionSet extends Entity
 
     /**
     * Sets the mention
+    * A user was mentioned in the item.
     *
     * @param MentionAction $val The value to assign to the mention
     *
@@ -183,13 +193,14 @@ class ItemActionSet extends Entity
 
     /**
     * Gets the move
+    * An item was moved.
     *
     * @return MoveAction The move
     */
     public function getMove()
     {
         if (array_key_exists("move", $this->_propDict)) {
-            if (is_a($this->_propDict["move"], "Microsoft\Graph\Model\MoveAction")) {
+            if (is_a($this->_propDict["move"], "Microsoft\Graph\Beta\Model\MoveAction")) {
                 return $this->_propDict["move"];
             } else {
                 $this->_propDict["move"] = new MoveAction($this->_propDict["move"]);
@@ -201,6 +212,7 @@ class ItemActionSet extends Entity
 
     /**
     * Sets the move
+    * An item was moved.
     *
     * @param MoveAction $val The value to assign to the move
     *
@@ -214,13 +226,14 @@ class ItemActionSet extends Entity
 
     /**
     * Gets the rename
+    * An item was renamed.
     *
     * @return RenameAction The rename
     */
     public function getRename()
     {
         if (array_key_exists("rename", $this->_propDict)) {
-            if (is_a($this->_propDict["rename"], "Microsoft\Graph\Model\RenameAction")) {
+            if (is_a($this->_propDict["rename"], "Microsoft\Graph\Beta\Model\RenameAction")) {
                 return $this->_propDict["rename"];
             } else {
                 $this->_propDict["rename"] = new RenameAction($this->_propDict["rename"]);
@@ -232,6 +245,7 @@ class ItemActionSet extends Entity
 
     /**
     * Sets the rename
+    * An item was renamed.
     *
     * @param RenameAction $val The value to assign to the rename
     *
@@ -245,13 +259,14 @@ class ItemActionSet extends Entity
 
     /**
     * Gets the restore
+    * An item was restored.
     *
     * @return RestoreAction The restore
     */
     public function getRestore()
     {
         if (array_key_exists("restore", $this->_propDict)) {
-            if (is_a($this->_propDict["restore"], "Microsoft\Graph\Model\RestoreAction")) {
+            if (is_a($this->_propDict["restore"], "Microsoft\Graph\Beta\Model\RestoreAction")) {
                 return $this->_propDict["restore"];
             } else {
                 $this->_propDict["restore"] = new RestoreAction($this->_propDict["restore"]);
@@ -263,6 +278,7 @@ class ItemActionSet extends Entity
 
     /**
     * Sets the restore
+    * An item was restored.
     *
     * @param RestoreAction $val The value to assign to the restore
     *
@@ -276,13 +292,14 @@ class ItemActionSet extends Entity
 
     /**
     * Gets the share
+    * An item was shared.
     *
     * @return ShareAction The share
     */
     public function getShare()
     {
         if (array_key_exists("share", $this->_propDict)) {
-            if (is_a($this->_propDict["share"], "Microsoft\Graph\Model\ShareAction")) {
+            if (is_a($this->_propDict["share"], "Microsoft\Graph\Beta\Model\ShareAction")) {
                 return $this->_propDict["share"];
             } else {
                 $this->_propDict["share"] = new ShareAction($this->_propDict["share"]);
@@ -294,6 +311,7 @@ class ItemActionSet extends Entity
 
     /**
     * Sets the share
+    * An item was shared.
     *
     * @param ShareAction $val The value to assign to the share
     *
@@ -307,13 +325,14 @@ class ItemActionSet extends Entity
 
     /**
     * Gets the version
+    * An item was versioned.
     *
     * @return VersionAction The version
     */
     public function getVersion()
     {
         if (array_key_exists("version", $this->_propDict)) {
-            if (is_a($this->_propDict["version"], "Microsoft\Graph\Model\VersionAction")) {
+            if (is_a($this->_propDict["version"], "Microsoft\Graph\Beta\Model\VersionAction")) {
                 return $this->_propDict["version"];
             } else {
                 $this->_propDict["version"] = new VersionAction($this->_propDict["version"]);
@@ -325,6 +344,7 @@ class ItemActionSet extends Entity
 
     /**
     * Sets the version
+    * An item was versioned.
     *
     * @param VersionAction $val The value to assign to the version
     *

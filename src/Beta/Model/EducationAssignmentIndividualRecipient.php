@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * EducationAssignmentIndividualRecipient class
 *
@@ -34,4 +34,30 @@ class EducationAssignmentIndividualRecipient extends EducationAssignmentRecipien
         $this->setODataType("#microsoft.graph.educationAssignmentIndividualRecipient");
     }
 
+    /**
+    * Gets the recipients
+    *
+    * @return string The recipients
+    */
+    public function getRecipients()
+    {
+        if (array_key_exists("recipients", $this->_propDict)) {
+            return $this->_propDict["recipients"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the recipients
+    *
+    * @param string $val The value of the recipients
+    *
+    * @return EducationAssignmentIndividualRecipient
+    */
+    public function setRecipients($val)
+    {
+        $this->_propDict["recipients"] = $val;
+        return $this;
+    }
 }

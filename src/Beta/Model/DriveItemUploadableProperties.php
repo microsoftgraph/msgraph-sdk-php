@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * DriveItemUploadableProperties class
 *
@@ -63,7 +63,7 @@ class DriveItemUploadableProperties extends Entity
     public function getFileSystemInfo()
     {
         if (array_key_exists("fileSystemInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["fileSystemInfo"], "Microsoft\Graph\Model\FileSystemInfo")) {
+            if (is_a($this->_propDict["fileSystemInfo"], "Microsoft\Graph\Beta\Model\FileSystemInfo")) {
                 return $this->_propDict["fileSystemInfo"];
             } else {
                 $this->_propDict["fileSystemInfo"] = new FileSystemInfo($this->_propDict["fileSystemInfo"]);

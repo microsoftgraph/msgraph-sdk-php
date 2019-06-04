@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * DeviceManagementSettings class
 *
@@ -175,7 +175,7 @@ class DeviceManagementSettings extends Entity
     public function getDerivedCredentialProvider()
     {
         if (array_key_exists("derivedCredentialProvider", $this->_propDict)) {
-            if (is_a($this->_propDict["derivedCredentialProvider"], "Microsoft\Graph\Model\DerivedCredentialProviderType")) {
+            if (is_a($this->_propDict["derivedCredentialProvider"], "Microsoft\Graph\Beta\Model\DerivedCredentialProviderType")) {
                 return $this->_propDict["derivedCredentialProvider"];
             } else {
                 $this->_propDict["derivedCredentialProvider"] = new DerivedCredentialProviderType($this->_propDict["derivedCredentialProvider"]);

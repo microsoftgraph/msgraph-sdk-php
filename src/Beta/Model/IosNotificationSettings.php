@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * IosNotificationSettings class
 *
@@ -203,7 +203,7 @@ class IosNotificationSettings extends Entity
     public function getAlertType()
     {
         if (array_key_exists("alertType", $this->_propDict)) {
-            if (is_a($this->_propDict["alertType"], "Microsoft\Graph\Model\IosNotificationAlertType")) {
+            if (is_a($this->_propDict["alertType"], "Microsoft\Graph\Beta\Model\IosNotificationAlertType")) {
                 return $this->_propDict["alertType"];
             } else {
                 $this->_propDict["alertType"] = new IosNotificationAlertType($this->_propDict["alertType"]);

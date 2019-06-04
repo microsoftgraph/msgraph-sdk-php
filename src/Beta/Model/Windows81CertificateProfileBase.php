@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * Windows81CertificateProfileBase class
@@ -59,7 +59,7 @@ class Windows81CertificateProfileBase extends WindowsCertificateProfileBase
 
      /** 
      * Gets the customSubjectAlternativeNames
-    * Custom Subject Alterantive Name Settings. This collection can contain a maximum of 500 elements.
+    * Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
      *
      * @return array The customSubjectAlternativeNames
      */
@@ -74,7 +74,7 @@ class Windows81CertificateProfileBase extends WindowsCertificateProfileBase
     
     /** 
     * Sets the customSubjectAlternativeNames
-    * Custom Subject Alterantive Name Settings. This collection can contain a maximum of 500 elements.
+    * Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
     *
     * @param CustomSubjectAlternativeName $val The customSubjectAlternativeNames
     *

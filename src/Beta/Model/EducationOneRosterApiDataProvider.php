@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * EducationOneRosterApiDataProvider class
 *
@@ -69,7 +69,7 @@ class EducationOneRosterApiDataProvider extends EducationSynchronizationDataProv
     public function getConnectionSettings()
     {
         if (array_key_exists("connectionSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["connectionSettings"], "Microsoft\Graph\Model\EducationSynchronizationConnectionSettings")) {
+            if (is_a($this->_propDict["connectionSettings"], "Microsoft\Graph\Beta\Model\EducationSynchronizationConnectionSettings")) {
                 return $this->_propDict["connectionSettings"];
             } else {
                 $this->_propDict["connectionSettings"] = new EducationSynchronizationConnectionSettings($this->_propDict["connectionSettings"]);
@@ -118,6 +118,32 @@ class EducationOneRosterApiDataProvider extends EducationSynchronizationDataProv
         return $this;
     }
     /**
+    * Gets the termIds
+    *
+    * @return string The termIds
+    */
+    public function getTermIds()
+    {
+        if (array_key_exists("termIds", $this->_propDict)) {
+            return $this->_propDict["termIds"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the termIds
+    *
+    * @param string $val The value of the termIds
+    *
+    * @return EducationOneRosterApiDataProvider
+    */
+    public function setTermIds($val)
+    {
+        $this->_propDict["termIds"] = $val;
+        return $this;
+    }
+    /**
     * Gets the providerName
     *
     * @return string The providerName
@@ -152,7 +178,7 @@ class EducationOneRosterApiDataProvider extends EducationSynchronizationDataProv
     public function getCustomizations()
     {
         if (array_key_exists("customizations", $this->_propDict)) {
-            if (is_a($this->_propDict["customizations"], "Microsoft\Graph\Model\EducationSynchronizationCustomizations")) {
+            if (is_a($this->_propDict["customizations"], "Microsoft\Graph\Beta\Model\EducationSynchronizationCustomizations")) {
                 return $this->_propDict["customizations"];
             } else {
                 $this->_propDict["customizations"] = new EducationSynchronizationCustomizations($this->_propDict["customizations"]);
