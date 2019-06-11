@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * FreeBusyError class
 *
@@ -27,6 +27,7 @@ class FreeBusyError extends Entity
 {
     /**
     * Gets the message
+    * Describes the error.
     *
     * @return string The message
     */
@@ -41,6 +42,7 @@ class FreeBusyError extends Entity
 
     /**
     * Sets the message
+    * Describes the error.
     *
     * @param string $val The value of the message
     *
@@ -53,6 +55,7 @@ class FreeBusyError extends Entity
     }
     /**
     * Gets the responseCode
+    * The response code from querying for the availability of the user, distribution list, or resource.
     *
     * @return string The responseCode
     */
@@ -67,6 +70,7 @@ class FreeBusyError extends Entity
 
     /**
     * Sets the responseCode
+    * The response code from querying for the availability of the user, distribution list, or resource.
     *
     * @param string $val The value of the responseCode
     *

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * IncompleteData class
 *
@@ -28,13 +28,14 @@ class IncompleteData extends Entity
 
     /**
     * Gets the missingDataBeforeDateTime
+    * The service does not have source data before the specified time.
     *
     * @return \DateTime The missingDataBeforeDateTime
     */
     public function getMissingDataBeforeDateTime()
     {
         if (array_key_exists("missingDataBeforeDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["missingDataBeforeDateTime"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["missingDataBeforeDateTime"], "Microsoft\Graph\Beta\Model\\DateTime")) {
                 return $this->_propDict["missingDataBeforeDateTime"];
             } else {
                 $this->_propDict["missingDataBeforeDateTime"] = new \DateTime($this->_propDict["missingDataBeforeDateTime"]);
@@ -46,6 +47,7 @@ class IncompleteData extends Entity
 
     /**
     * Sets the missingDataBeforeDateTime
+    * The service does not have source data before the specified time.
     *
     * @param \DateTime $val The value to assign to the missingDataBeforeDateTime
     *
@@ -58,6 +60,7 @@ class IncompleteData extends Entity
     }
     /**
     * Gets the wasThrottled
+    * Some data was not recorded due to excessive activity.
     *
     * @return bool The wasThrottled
     */
@@ -72,6 +75,7 @@ class IncompleteData extends Entity
 
     /**
     * Sets the wasThrottled
+    * Some data was not recorded due to excessive activity.
     *
     * @param bool $val The value of the wasThrottled
     *

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * Contact class
@@ -962,7 +962,7 @@ class Contact extends OutlookItem
     public function getFlag()
     {
         if (array_key_exists("flag", $this->_propDict)) {
-            if (is_a($this->_propDict["flag"], "Microsoft\Graph\Model\FollowupFlag")) {
+            if (is_a($this->_propDict["flag"], "Microsoft\Graph\Beta\Model\FollowupFlag")) {
                 return $this->_propDict["flag"];
             } else {
                 $this->_propDict["flag"] = new FollowupFlag($this->_propDict["flag"]);
@@ -1084,7 +1084,7 @@ class Contact extends OutlookItem
     public function getPhoto()
     {
         if (array_key_exists("photo", $this->_propDict)) {
-            if (is_a($this->_propDict["photo"], "Microsoft\Graph\Model\ProfilePhoto")) {
+            if (is_a($this->_propDict["photo"], "Microsoft\Graph\Beta\Model\ProfilePhoto")) {
                 return $this->_propDict["photo"];
             } else {
                 $this->_propDict["photo"] = new ProfilePhoto($this->_propDict["photo"]);

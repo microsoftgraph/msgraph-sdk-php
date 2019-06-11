@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * Process class
 *
@@ -91,7 +91,7 @@ class Process extends Entity
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["createdDateTime"], "Microsoft\Graph\Beta\Model\\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -124,7 +124,7 @@ class Process extends Entity
     public function getFileHash()
     {
         if (array_key_exists("fileHash", $this->_propDict)) {
-            if (is_a($this->_propDict["fileHash"], "Microsoft\Graph\Model\FileHash")) {
+            if (is_a($this->_propDict["fileHash"], "Microsoft\Graph\Beta\Model\FileHash")) {
                 return $this->_propDict["fileHash"];
             } else {
                 $this->_propDict["fileHash"] = new FileHash($this->_propDict["fileHash"]);
@@ -157,7 +157,7 @@ class Process extends Entity
     public function getIntegrityLevel()
     {
         if (array_key_exists("integrityLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["integrityLevel"], "Microsoft\Graph\Model\ProcessIntegrityLevel")) {
+            if (is_a($this->_propDict["integrityLevel"], "Microsoft\Graph\Beta\Model\ProcessIntegrityLevel")) {
                 return $this->_propDict["integrityLevel"];
             } else {
                 $this->_propDict["integrityLevel"] = new ProcessIntegrityLevel($this->_propDict["integrityLevel"]);
@@ -246,7 +246,7 @@ class Process extends Entity
     public function getParentProcessCreatedDateTime()
     {
         if (array_key_exists("parentProcessCreatedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["parentProcessCreatedDateTime"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["parentProcessCreatedDateTime"], "Microsoft\Graph\Beta\Model\\DateTime")) {
                 return $this->_propDict["parentProcessCreatedDateTime"];
             } else {
                 $this->_propDict["parentProcessCreatedDateTime"] = new \DateTime($this->_propDict["parentProcessCreatedDateTime"]);

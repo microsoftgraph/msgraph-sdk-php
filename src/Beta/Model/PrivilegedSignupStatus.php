@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * PrivilegedSignupStatus class
@@ -61,7 +61,7 @@ class PrivilegedSignupStatus extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Microsoft\Graph\Model\SetupStatus")) {
+            if (is_a($this->_propDict["status"], "Microsoft\Graph\Beta\Model\SetupStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new SetupStatus($this->_propDict["status"]);

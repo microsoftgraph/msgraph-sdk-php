@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * Windows81VpnConfiguration class
@@ -64,7 +64,7 @@ class Windows81VpnConfiguration extends WindowsVpnConfiguration
     public function getConnectionType()
     {
         if (array_key_exists("connectionType", $this->_propDict)) {
-            if (is_a($this->_propDict["connectionType"], "Microsoft\Graph\Model\WindowsVpnConnectionType")) {
+            if (is_a($this->_propDict["connectionType"], "Microsoft\Graph\Beta\Model\WindowsVpnConnectionType")) {
                 return $this->_propDict["connectionType"];
             } else {
                 $this->_propDict["connectionType"] = new WindowsVpnConnectionType($this->_propDict["connectionType"]);
@@ -155,7 +155,7 @@ class Windows81VpnConfiguration extends WindowsVpnConfiguration
     public function getProxyServer()
     {
         if (array_key_exists("proxyServer", $this->_propDict)) {
-            if (is_a($this->_propDict["proxyServer"], "Microsoft\Graph\Model\Windows81VpnProxyServer")) {
+            if (is_a($this->_propDict["proxyServer"], "Microsoft\Graph\Beta\Model\Windows81VpnProxyServer")) {
                 return $this->_propDict["proxyServer"];
             } else {
                 $this->_propDict["proxyServer"] = new Windows81VpnProxyServer($this->_propDict["proxyServer"]);

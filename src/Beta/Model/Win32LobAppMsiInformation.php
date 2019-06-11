@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * Win32LobAppMsiInformation class
 *
@@ -147,7 +147,7 @@ class Win32LobAppMsiInformation extends Entity
     public function getPackageType()
     {
         if (array_key_exists("packageType", $this->_propDict)) {
-            if (is_a($this->_propDict["packageType"], "Microsoft\Graph\Model\Win32LobAppMsiPackageType")) {
+            if (is_a($this->_propDict["packageType"], "Microsoft\Graph\Beta\Model\Win32LobAppMsiPackageType")) {
                 return $this->_propDict["packageType"];
             } else {
                 $this->_propDict["packageType"] = new Win32LobAppMsiPackageType($this->_propDict["packageType"]);
@@ -169,5 +169,61 @@ class Win32LobAppMsiInformation extends Entity
     {
         $this->_propDict["packageType"] = $val;
          return $this;
+    }
+    /**
+    * Gets the productName
+    * The MSI product name.
+    *
+    * @return string The productName
+    */
+    public function getProductName()
+    {
+        if (array_key_exists("productName", $this->_propDict)) {
+            return $this->_propDict["productName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the productName
+    * The MSI product name.
+    *
+    * @param string $val The value of the productName
+    *
+    * @return Win32LobAppMsiInformation
+    */
+    public function setProductName($val)
+    {
+        $this->_propDict["productName"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the publisher
+    * The MSI publisher.
+    *
+    * @return string The publisher
+    */
+    public function getPublisher()
+    {
+        if (array_key_exists("publisher", $this->_propDict)) {
+            return $this->_propDict["publisher"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the publisher
+    * The MSI publisher.
+    *
+    * @param string $val The value of the publisher
+    *
+    * @return Win32LobAppMsiInformation
+    */
+    public function setPublisher($val)
+    {
+        $this->_propDict["publisher"] = $val;
+        return $this;
     }
 }

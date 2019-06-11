@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * ParticipantMixerLevel class
 *
@@ -60,7 +60,7 @@ class ParticipantMixerLevel extends Entity
     public function getDucking()
     {
         if (array_key_exists("ducking", $this->_propDict)) {
-            if (is_a($this->_propDict["ducking"], "Microsoft\Graph\Model\AudioDuckingConfiguration")) {
+            if (is_a($this->_propDict["ducking"], "Microsoft\Graph\Beta\Model\AudioDuckingConfiguration")) {
                 return $this->_propDict["ducking"];
             } else {
                 $this->_propDict["ducking"] = new AudioDuckingConfiguration($this->_propDict["ducking"]);
@@ -117,7 +117,7 @@ class ParticipantMixerLevel extends Entity
     public function getSourceLevels()
     {
         if (array_key_exists("sourceLevels", $this->_propDict)) {
-            if (is_a($this->_propDict["sourceLevels"], "Microsoft\Graph\Model\AudioSourceLevel")) {
+            if (is_a($this->_propDict["sourceLevels"], "Microsoft\Graph\Beta\Model\AudioSourceLevel")) {
                 return $this->_propDict["sourceLevels"];
             } else {
                 $this->_propDict["sourceLevels"] = new AudioSourceLevel($this->_propDict["sourceLevels"]);

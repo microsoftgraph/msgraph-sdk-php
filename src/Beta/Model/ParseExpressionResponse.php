@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * ParseExpressionResponse class
 *
@@ -34,7 +34,7 @@ class ParseExpressionResponse extends Entity
     public function getError()
     {
         if (array_key_exists("error", $this->_propDict)) {
-            if (is_a($this->_propDict["error"], "Microsoft\Graph\Model\PublicError")) {
+            if (is_a($this->_propDict["error"], "Microsoft\Graph\Beta\Model\PublicError")) {
                 return $this->_propDict["error"];
             } else {
                 $this->_propDict["error"] = new PublicError($this->_propDict["error"]);
@@ -117,7 +117,7 @@ class ParseExpressionResponse extends Entity
     public function getParsedExpression()
     {
         if (array_key_exists("parsedExpression", $this->_propDict)) {
-            if (is_a($this->_propDict["parsedExpression"], "Microsoft\Graph\Model\AttributeMappingSource")) {
+            if (is_a($this->_propDict["parsedExpression"], "Microsoft\Graph\Beta\Model\AttributeMappingSource")) {
                 return $this->_propDict["parsedExpression"];
             } else {
                 $this->_propDict["parsedExpression"] = new AttributeMappingSource($this->_propDict["parsedExpression"]);

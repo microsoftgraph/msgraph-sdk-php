@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * IosSingleSignOnSettings class
 *
@@ -35,7 +35,7 @@ class IosSingleSignOnSettings extends Entity
     public function getAllowedAppsList()
     {
         if (array_key_exists("allowedAppsList", $this->_propDict)) {
-            if (is_a($this->_propDict["allowedAppsList"], "Microsoft\Graph\Model\AppListItem")) {
+            if (is_a($this->_propDict["allowedAppsList"], "Microsoft\Graph\Beta\Model\AppListItem")) {
                 return $this->_propDict["allowedAppsList"];
             } else {
                 $this->_propDict["allowedAppsList"] = new AppListItem($this->_propDict["allowedAppsList"]);

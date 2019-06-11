@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * DeviceAppManagement class
@@ -159,7 +159,7 @@ class DeviceAppManagement extends Entity
     public function getMicrosoftStoreForBusinessPortalSelection()
     {
         if (array_key_exists("microsoftStoreForBusinessPortalSelection", $this->_propDict)) {
-            if (is_a($this->_propDict["microsoftStoreForBusinessPortalSelection"], "Microsoft\Graph\Model\MicrosoftStoreForBusinessPortalSelectionOptions")) {
+            if (is_a($this->_propDict["microsoftStoreForBusinessPortalSelection"], "Microsoft\Graph\Beta\Model\MicrosoftStoreForBusinessPortalSelectionOptions")) {
                 return $this->_propDict["microsoftStoreForBusinessPortalSelection"];
             } else {
                 $this->_propDict["microsoftStoreForBusinessPortalSelection"] = new MicrosoftStoreForBusinessPortalSelectionOptions($this->_propDict["microsoftStoreForBusinessPortalSelection"]);
@@ -192,7 +192,7 @@ class DeviceAppManagement extends Entity
     public function getWindowsManagementApp()
     {
         if (array_key_exists("windowsManagementApp", $this->_propDict)) {
-            if (is_a($this->_propDict["windowsManagementApp"], "Microsoft\Graph\Model\WindowsManagementApp")) {
+            if (is_a($this->_propDict["windowsManagementApp"], "Microsoft\Graph\Beta\Model\WindowsManagementApp")) {
                 return $this->_propDict["windowsManagementApp"];
             } else {
                 $this->_propDict["windowsManagementApp"] = new WindowsManagementApp($this->_propDict["windowsManagementApp"]);
@@ -345,7 +345,7 @@ class DeviceAppManagement extends Entity
     public function getSymantecCodeSigningCertificate()
     {
         if (array_key_exists("symantecCodeSigningCertificate", $this->_propDict)) {
-            if (is_a($this->_propDict["symantecCodeSigningCertificate"], "Microsoft\Graph\Model\SymantecCodeSigningCertificate")) {
+            if (is_a($this->_propDict["symantecCodeSigningCertificate"], "Microsoft\Graph\Beta\Model\SymantecCodeSigningCertificate")) {
                 return $this->_propDict["symantecCodeSigningCertificate"];
             } else {
                 $this->_propDict["symantecCodeSigningCertificate"] = new SymantecCodeSigningCertificate($this->_propDict["symantecCodeSigningCertificate"]);

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 use Microsoft\Graph\Core\Enum;
 
@@ -35,4 +35,5 @@ class ApplicationIdentityType extends Enum
     const BOT = "bot";
     const TENANT_BOT = "tenantBot";
     const OFFICE365_CONNECTOR = "office365Connector";
+    const OUTGOING_WEBHOOK = "outgoingWebhook";
 }

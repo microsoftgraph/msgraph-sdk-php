@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * DepMacOSEnrollmentProfile class
@@ -110,6 +110,64 @@ class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile
     public function setICloudDiagnosticsDisabled($val)
     {
         $this->_propDict["iCloudDiagnosticsDisabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the iCloudStorageDisabled
+    * Indicates if iCloud Documents and Desktop screen is disabled
+    *
+    * @return bool The iCloudStorageDisabled
+    */
+    public function getICloudStorageDisabled()
+    {
+        if (array_key_exists("iCloudStorageDisabled", $this->_propDict)) {
+            return $this->_propDict["iCloudStorageDisabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the iCloudStorageDisabled
+    * Indicates if iCloud Documents and Desktop screen is disabled
+    *
+    * @param bool $val The iCloudStorageDisabled
+    *
+    * @return DepMacOSEnrollmentProfile
+    */
+    public function setICloudStorageDisabled($val)
+    {
+        $this->_propDict["iCloudStorageDisabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the chooseYourLockScreenDisabled
+    * Indicates if iCloud Documents and Desktop screen is disabled
+    *
+    * @return bool The chooseYourLockScreenDisabled
+    */
+    public function getChooseYourLockScreenDisabled()
+    {
+        if (array_key_exists("chooseYourLockScreenDisabled", $this->_propDict)) {
+            return $this->_propDict["chooseYourLockScreenDisabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the chooseYourLockScreenDisabled
+    * Indicates if iCloud Documents and Desktop screen is disabled
+    *
+    * @param bool $val The chooseYourLockScreenDisabled
+    *
+    * @return DepMacOSEnrollmentProfile
+    */
+    public function setChooseYourLockScreenDisabled($val)
+    {
+        $this->_propDict["chooseYourLockScreenDisabled"] = boolval($val);
         return $this;
     }
     
