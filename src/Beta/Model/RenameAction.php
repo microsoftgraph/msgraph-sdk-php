@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * RenameAction class
 *
@@ -27,6 +27,7 @@ class RenameAction extends Entity
 {
     /**
     * Gets the newName
+    * The new name of the item.
     *
     * @return string The newName
     */
@@ -41,6 +42,7 @@ class RenameAction extends Entity
 
     /**
     * Sets the newName
+    * The new name of the item.
     *
     * @param string $val The value of the newName
     *
@@ -53,6 +55,7 @@ class RenameAction extends Entity
     }
     /**
     * Gets the oldName
+    * The previous name of the item.
     *
     * @return string The oldName
     */
@@ -67,6 +70,7 @@ class RenameAction extends Entity
 
     /**
     * Sets the oldName
+    * The previous name of the item.
     *
     * @param string $val The value of the oldName
     *

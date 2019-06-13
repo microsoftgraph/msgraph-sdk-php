@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * PlayPromptOperation class
@@ -62,7 +62,7 @@ class PlayPromptOperation extends CommsOperation
     public function getCompletionReason()
     {
         if (array_key_exists("completionReason", $this->_propDict)) {
-            if (is_a($this->_propDict["completionReason"], "Microsoft\Graph\Model\CompletionReason")) {
+            if (is_a($this->_propDict["completionReason"], "Microsoft\Graph\Beta\Model\CompletionReason")) {
                 return $this->_propDict["completionReason"];
             } else {
                 $this->_propDict["completionReason"] = new CompletionReason($this->_propDict["completionReason"]);

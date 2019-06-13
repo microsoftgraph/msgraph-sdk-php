@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * RecognizeOperation class
@@ -198,7 +198,7 @@ class RecognizeOperation extends CommsOperation
     public function getCollectDigits()
     {
         if (array_key_exists("collectDigits", $this->_propDict)) {
-            if (is_a($this->_propDict["collectDigits"], "Microsoft\Graph\Model\CollectDigits")) {
+            if (is_a($this->_propDict["collectDigits"], "Microsoft\Graph\Beta\Model\CollectDigits")) {
                 return $this->_propDict["collectDigits"];
             } else {
                 $this->_propDict["collectDigits"] = new CollectDigits($this->_propDict["collectDigits"]);

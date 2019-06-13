@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * SharedPCConfiguration class
@@ -35,7 +35,7 @@ class SharedPCConfiguration extends DeviceConfiguration
     public function getAccountManagerPolicy()
     {
         if (array_key_exists("accountManagerPolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["accountManagerPolicy"], "Microsoft\Graph\Model\SharedPCAccountManagerPolicy")) {
+            if (is_a($this->_propDict["accountManagerPolicy"], "Microsoft\Graph\Beta\Model\SharedPCAccountManagerPolicy")) {
                 return $this->_propDict["accountManagerPolicy"];
             } else {
                 $this->_propDict["accountManagerPolicy"] = new SharedPCAccountManagerPolicy($this->_propDict["accountManagerPolicy"]);
@@ -68,7 +68,7 @@ class SharedPCConfiguration extends DeviceConfiguration
     public function getAllowedAccounts()
     {
         if (array_key_exists("allowedAccounts", $this->_propDict)) {
-            if (is_a($this->_propDict["allowedAccounts"], "Microsoft\Graph\Model\SharedPCAllowedAccountType")) {
+            if (is_a($this->_propDict["allowedAccounts"], "Microsoft\Graph\Beta\Model\SharedPCAllowedAccountType")) {
                 return $this->_propDict["allowedAccounts"];
             } else {
                 $this->_propDict["allowedAccounts"] = new SharedPCAllowedAccountType($this->_propDict["allowedAccounts"]);
@@ -101,7 +101,7 @@ class SharedPCConfiguration extends DeviceConfiguration
     public function getLocalStorage()
     {
         if (array_key_exists("localStorage", $this->_propDict)) {
-            if (is_a($this->_propDict["localStorage"], "Microsoft\Graph\Model\Enablement")) {
+            if (is_a($this->_propDict["localStorage"], "Microsoft\Graph\Beta\Model\Enablement")) {
                 return $this->_propDict["localStorage"];
             } else {
                 $this->_propDict["localStorage"] = new Enablement($this->_propDict["localStorage"]);
@@ -163,7 +163,7 @@ class SharedPCConfiguration extends DeviceConfiguration
     public function getSetAccountManager()
     {
         if (array_key_exists("setAccountManager", $this->_propDict)) {
-            if (is_a($this->_propDict["setAccountManager"], "Microsoft\Graph\Model\Enablement")) {
+            if (is_a($this->_propDict["setAccountManager"], "Microsoft\Graph\Beta\Model\Enablement")) {
                 return $this->_propDict["setAccountManager"];
             } else {
                 $this->_propDict["setAccountManager"] = new Enablement($this->_propDict["setAccountManager"]);
@@ -225,7 +225,7 @@ class SharedPCConfiguration extends DeviceConfiguration
     public function getSetEduPolicies()
     {
         if (array_key_exists("setEduPolicies", $this->_propDict)) {
-            if (is_a($this->_propDict["setEduPolicies"], "Microsoft\Graph\Model\Enablement")) {
+            if (is_a($this->_propDict["setEduPolicies"], "Microsoft\Graph\Beta\Model\Enablement")) {
                 return $this->_propDict["setEduPolicies"];
             } else {
                 $this->_propDict["setEduPolicies"] = new Enablement($this->_propDict["setEduPolicies"]);
@@ -287,7 +287,7 @@ class SharedPCConfiguration extends DeviceConfiguration
     public function getSetPowerPolicies()
     {
         if (array_key_exists("setPowerPolicies", $this->_propDict)) {
-            if (is_a($this->_propDict["setPowerPolicies"], "Microsoft\Graph\Model\Enablement")) {
+            if (is_a($this->_propDict["setPowerPolicies"], "Microsoft\Graph\Beta\Model\Enablement")) {
                 return $this->_propDict["setPowerPolicies"];
             } else {
                 $this->_propDict["setPowerPolicies"] = new Enablement($this->_propDict["setPowerPolicies"]);
@@ -349,7 +349,7 @@ class SharedPCConfiguration extends DeviceConfiguration
     public function getSignInOnResume()
     {
         if (array_key_exists("signInOnResume", $this->_propDict)) {
-            if (is_a($this->_propDict["signInOnResume"], "Microsoft\Graph\Model\Enablement")) {
+            if (is_a($this->_propDict["signInOnResume"], "Microsoft\Graph\Beta\Model\Enablement")) {
                 return $this->_propDict["signInOnResume"];
             } else {
                 $this->_propDict["signInOnResume"] = new Enablement($this->_propDict["signInOnResume"]);
@@ -527,7 +527,7 @@ class SharedPCConfiguration extends DeviceConfiguration
     public function getMaintenanceStartTime()
     {
         if (array_key_exists("maintenanceStartTime", $this->_propDict)) {
-            if (is_a($this->_propDict["maintenanceStartTime"], "Microsoft\Graph\Model\TimeOfDay")) {
+            if (is_a($this->_propDict["maintenanceStartTime"], "Microsoft\Graph\Beta\Model\TimeOfDay")) {
                 return $this->_propDict["maintenanceStartTime"];
             } else {
                 $this->_propDict["maintenanceStartTime"] = new TimeOfDay($this->_propDict["maintenanceStartTime"]);
@@ -548,6 +548,39 @@ class SharedPCConfiguration extends DeviceConfiguration
     public function setMaintenanceStartTime($val)
     {
         $this->_propDict["maintenanceStartTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the fastFirstSignIn
+    * Specifies whether to auto connect new non-admin Azure AD accounts to pre-configured candidate local accounts
+    *
+    * @return Enablement The fastFirstSignIn
+    */
+    public function getFastFirstSignIn()
+    {
+        if (array_key_exists("fastFirstSignIn", $this->_propDict)) {
+            if (is_a($this->_propDict["fastFirstSignIn"], "Microsoft\Graph\Beta\Model\Enablement")) {
+                return $this->_propDict["fastFirstSignIn"];
+            } else {
+                $this->_propDict["fastFirstSignIn"] = new Enablement($this->_propDict["fastFirstSignIn"]);
+                return $this->_propDict["fastFirstSignIn"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the fastFirstSignIn
+    * Specifies whether to auto connect new non-admin Azure AD accounts to pre-configured candidate local accounts
+    *
+    * @param Enablement $val The fastFirstSignIn
+    *
+    * @return SharedPCConfiguration
+    */
+    public function setFastFirstSignIn($val)
+    {
+        $this->_propDict["fastFirstSignIn"] = $val;
         return $this;
     }
     

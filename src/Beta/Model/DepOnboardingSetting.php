@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * DepOnboardingSetting class
@@ -254,7 +254,7 @@ class DepOnboardingSetting extends Entity
     public function getTokenType()
     {
         if (array_key_exists("tokenType", $this->_propDict)) {
-            if (is_a($this->_propDict["tokenType"], "Microsoft\Graph\Model\DepTokenType")) {
+            if (is_a($this->_propDict["tokenType"], "Microsoft\Graph\Beta\Model\DepTokenType")) {
                 return $this->_propDict["tokenType"];
             } else {
                 $this->_propDict["tokenType"] = new DepTokenType($this->_propDict["tokenType"]);
@@ -337,35 +337,6 @@ class DepOnboardingSetting extends Entity
     }
     
     /**
-    * Gets the defaultProfileDisplayName
-    * Gets synced device count
-    *
-    * @return string The defaultProfileDisplayName
-    */
-    public function getDefaultProfileDisplayName()
-    {
-        if (array_key_exists("defaultProfileDisplayName", $this->_propDict)) {
-            return $this->_propDict["defaultProfileDisplayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the defaultProfileDisplayName
-    * Gets synced device count
-    *
-    * @param string $val The defaultProfileDisplayName
-    *
-    * @return DepOnboardingSetting
-    */
-    public function setDefaultProfileDisplayName($val)
-    {
-        $this->_propDict["defaultProfileDisplayName"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the dataSharingConsentGranted
     * Consent granted for data sharing with Apple Dep Service
     *
@@ -395,6 +366,35 @@ class DepOnboardingSetting extends Entity
     }
     
     /**
+    * Gets the roleScopeTagIds
+    * List of Scope Tags for this Entity instance.
+    *
+    * @return string The roleScopeTagIds
+    */
+    public function getRoleScopeTagIds()
+    {
+        if (array_key_exists("roleScopeTagIds", $this->_propDict)) {
+            return $this->_propDict["roleScopeTagIds"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the roleScopeTagIds
+    * List of Scope Tags for this Entity instance.
+    *
+    * @param string $val The roleScopeTagIds
+    *
+    * @return DepOnboardingSetting
+    */
+    public function setRoleScopeTagIds($val)
+    {
+        $this->_propDict["roleScopeTagIds"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the defaultIosEnrollmentProfile
     * Default iOS Enrollment Profile
     *
@@ -403,7 +403,7 @@ class DepOnboardingSetting extends Entity
     public function getDefaultIosEnrollmentProfile()
     {
         if (array_key_exists("defaultIosEnrollmentProfile", $this->_propDict)) {
-            if (is_a($this->_propDict["defaultIosEnrollmentProfile"], "Microsoft\Graph\Model\DepIOSEnrollmentProfile")) {
+            if (is_a($this->_propDict["defaultIosEnrollmentProfile"], "Microsoft\Graph\Beta\Model\DepIOSEnrollmentProfile")) {
                 return $this->_propDict["defaultIosEnrollmentProfile"];
             } else {
                 $this->_propDict["defaultIosEnrollmentProfile"] = new DepIOSEnrollmentProfile($this->_propDict["defaultIosEnrollmentProfile"]);
@@ -436,7 +436,7 @@ class DepOnboardingSetting extends Entity
     public function getDefaultMacOsEnrollmentProfile()
     {
         if (array_key_exists("defaultMacOsEnrollmentProfile", $this->_propDict)) {
-            if (is_a($this->_propDict["defaultMacOsEnrollmentProfile"], "Microsoft\Graph\Model\DepMacOSEnrollmentProfile")) {
+            if (is_a($this->_propDict["defaultMacOsEnrollmentProfile"], "Microsoft\Graph\Beta\Model\DepMacOSEnrollmentProfile")) {
                 return $this->_propDict["defaultMacOsEnrollmentProfile"];
             } else {
                 $this->_propDict["defaultMacOsEnrollmentProfile"] = new DepMacOSEnrollmentProfile($this->_propDict["defaultMacOsEnrollmentProfile"]);

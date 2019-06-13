@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * UnaryManagementConditionExpression class
 *
@@ -35,7 +35,7 @@ class UnaryManagementConditionExpression extends ManagementConditionExpressionMo
     public function getOperator()
     {
         if (array_key_exists("operator", $this->_propDict)) {
-            if (is_a($this->_propDict["operator"], "Microsoft\Graph\Model\UnaryManagementConditionExpressionOperatorType")) {
+            if (is_a($this->_propDict["operator"], "Microsoft\Graph\Beta\Model\UnaryManagementConditionExpressionOperatorType")) {
                 return $this->_propDict["operator"];
             } else {
                 $this->_propDict["operator"] = new UnaryManagementConditionExpressionOperatorType($this->_propDict["operator"]);
@@ -68,7 +68,7 @@ class UnaryManagementConditionExpression extends ManagementConditionExpressionMo
     public function getOperand()
     {
         if (array_key_exists("operand", $this->_propDict)) {
-            if (is_a($this->_propDict["operand"], "Microsoft\Graph\Model\ManagementConditionExpressionModel")) {
+            if (is_a($this->_propDict["operand"], "Microsoft\Graph\Beta\Model\ManagementConditionExpressionModel")) {
                 return $this->_propDict["operand"];
             } else {
                 $this->_propDict["operand"] = new ManagementConditionExpressionModel($this->_propDict["operand"]);
