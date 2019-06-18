@@ -1233,6 +1233,39 @@ class User extends DirectoryObject
     }
     
     /**
+    * Gets the signInSessionsValidFromDateTime
+    * Any refresh tokens or sessions tokens (session cookies) issued before this time are invalid, and applications will get an error when using an invalid refresh or sessions token to acquire a delegated access token (to access APIs such as Microsoft Graph).  If this happens, the application will need to acquire a new refresh token by making a request to the authorize endpoint. Read-only. Use revokeSignInSessions to reset.
+    *
+    * @return \DateTime The signInSessionsValidFromDateTime
+    */
+    public function getSignInSessionsValidFromDateTime()
+    {
+        if (array_key_exists("signInSessionsValidFromDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["signInSessionsValidFromDateTime"], "\DateTime")) {
+                return $this->_propDict["signInSessionsValidFromDateTime"];
+            } else {
+                $this->_propDict["signInSessionsValidFromDateTime"] = new \DateTime($this->_propDict["signInSessionsValidFromDateTime"]);
+                return $this->_propDict["signInSessionsValidFromDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the signInSessionsValidFromDateTime
+    * Any refresh tokens or sessions tokens (session cookies) issued before this time are invalid, and applications will get an error when using an invalid refresh or sessions token to acquire a delegated access token (to access APIs such as Microsoft Graph).  If this happens, the application will need to acquire a new refresh token by making a request to the authorize endpoint. Read-only. Use revokeSignInSessions to reset.
+    *
+    * @param \DateTime $val The signInSessionsValidFromDateTime
+    *
+    * @return User
+    */
+    public function setSignInSessionsValidFromDateTime($val)
+    {
+        $this->_propDict["signInSessionsValidFromDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the state
     * The state or province in the user's address. Supports $filter.
     *
@@ -1982,7 +2015,7 @@ class User extends DirectoryObject
 
      /** 
      * Gets the licenseDetails
-    * A collection of this user's license details. Nullable.
+    * A collection of this user's license details. Read-only.
      *
      * @return array The licenseDetails
      */
@@ -1997,7 +2030,7 @@ class User extends DirectoryObject
     
     /** 
     * Sets the licenseDetails
-    * A collection of this user's license details. Nullable.
+    * A collection of this user's license details. Read-only.
     *
     * @param LicenseDetails $val The licenseDetails
     *

@@ -27,6 +27,7 @@ class CertificationControl extends Entity
 {
     /**
     * Gets the name
+    * Certification control name
     *
     * @return string The name
     */
@@ -41,6 +42,7 @@ class CertificationControl extends Entity
 
     /**
     * Sets the name
+    * Certification control name
     *
     * @param string $val The value of the name
     *
@@ -53,6 +55,7 @@ class CertificationControl extends Entity
     }
     /**
     * Gets the url
+    * URL for the Microsoft Service Trust Portal
     *
     * @return string The url
     */
@@ -67,6 +70,7 @@ class CertificationControl extends Entity
 
     /**
     * Sets the url
+    * URL for the Microsoft Service Trust Portal
     *
     * @param string $val The value of the url
     *

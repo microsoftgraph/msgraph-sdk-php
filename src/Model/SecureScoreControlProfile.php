@@ -28,6 +28,7 @@ class SecureScoreControlProfile extends Entity
 {
     /**
     * Gets the actionType
+    * Control action type (Config, Review, Behavior).
     *
     * @return string The actionType
     */
@@ -42,6 +43,7 @@ class SecureScoreControlProfile extends Entity
     
     /**
     * Sets the actionType
+    * Control action type (Config, Review, Behavior).
     *
     * @param string $val The actionType
     *
@@ -55,6 +57,7 @@ class SecureScoreControlProfile extends Entity
     
     /**
     * Gets the actionUrl
+    * URL to where the control can be actioned.
     *
     * @return string The actionUrl
     */
@@ -69,6 +72,7 @@ class SecureScoreControlProfile extends Entity
     
     /**
     * Sets the actionUrl
+    * URL to where the control can be actioned.
     *
     * @param string $val The actionUrl
     *
@@ -82,6 +86,7 @@ class SecureScoreControlProfile extends Entity
     
     /**
     * Gets the azureTenantId
+    * GUID string for tenant ID.
     *
     * @return string The azureTenantId
     */
@@ -96,6 +101,7 @@ class SecureScoreControlProfile extends Entity
     
     /**
     * Sets the azureTenantId
+    * GUID string for tenant ID.
     *
     * @param string $val The azureTenantId
     *
@@ -137,6 +143,7 @@ class SecureScoreControlProfile extends Entity
     
     /**
     * Gets the controlCategory
+    * Control action category (Identity, Data, Device, Apps, Infrastructure).
     *
     * @return string The controlCategory
     */
@@ -151,6 +158,7 @@ class SecureScoreControlProfile extends Entity
     
     /**
     * Sets the controlCategory
+    * Control action category (Identity, Data, Device, Apps, Infrastructure).
     *
     * @param string $val The controlCategory
     *
@@ -192,6 +200,7 @@ class SecureScoreControlProfile extends Entity
     
     /**
     * Gets the deprecated
+    * Flag to indicate if a control is depreciated.
     *
     * @return bool The deprecated
     */
@@ -206,6 +215,7 @@ class SecureScoreControlProfile extends Entity
     
     /**
     * Sets the deprecated
+    * Flag to indicate if a control is depreciated.
     *
     * @param bool $val The deprecated
     *
@@ -219,6 +229,7 @@ class SecureScoreControlProfile extends Entity
     
     /**
     * Gets the implementationCost
+    * Resource cost of implemmentating control (low, moderate, high).
     *
     * @return string The implementationCost
     */
@@ -233,6 +244,7 @@ class SecureScoreControlProfile extends Entity
     
     /**
     * Sets the implementationCost
+    * Resource cost of implemmentating control (low, moderate, high).
     *
     * @param string $val The implementationCost
     *
@@ -246,6 +258,7 @@ class SecureScoreControlProfile extends Entity
     
     /**
     * Gets the lastModifiedDateTime
+    * Time at which the control profile entity was last modified. The Timestamp type represents date and time
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -264,6 +277,7 @@ class SecureScoreControlProfile extends Entity
     
     /**
     * Sets the lastModifiedDateTime
+    * Time at which the control profile entity was last modified. The Timestamp type represents date and time
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -277,6 +291,7 @@ class SecureScoreControlProfile extends Entity
     
     /**
     * Gets the maxScore
+    * max attainable score for the control.
     *
     * @return float The maxScore
     */
@@ -291,6 +306,7 @@ class SecureScoreControlProfile extends Entity
     
     /**
     * Sets the maxScore
+    * max attainable score for the control.
     *
     * @param float $val The maxScore
     *
@@ -304,6 +320,7 @@ class SecureScoreControlProfile extends Entity
     
     /**
     * Gets the rank
+    * Microsoft's stack ranking of control.
     *
     * @return int The rank
     */
@@ -318,6 +335,7 @@ class SecureScoreControlProfile extends Entity
     
     /**
     * Sets the rank
+    * Microsoft's stack ranking of control.
     *
     * @param int $val The rank
     *
@@ -331,6 +349,7 @@ class SecureScoreControlProfile extends Entity
     
     /**
     * Gets the remediation
+    * Description of what the control will help remediate.
     *
     * @return string The remediation
     */
@@ -345,6 +364,7 @@ class SecureScoreControlProfile extends Entity
     
     /**
     * Sets the remediation
+    * Description of what the control will help remediate.
     *
     * @param string $val The remediation
     *
@@ -358,6 +378,7 @@ class SecureScoreControlProfile extends Entity
     
     /**
     * Gets the remediationImpact
+    * Description of the impact on users of the remediation.
     *
     * @return string The remediationImpact
     */
@@ -372,6 +393,7 @@ class SecureScoreControlProfile extends Entity
     
     /**
     * Sets the remediationImpact
+    * Description of the impact on users of the remediation.
     *
     * @param string $val The remediationImpact
     *
@@ -385,6 +407,7 @@ class SecureScoreControlProfile extends Entity
     
     /**
     * Gets the service
+    * Service that owns the control (Exchange, Sharepoint, Azure AD).
     *
     * @return string The service
     */
@@ -399,6 +422,7 @@ class SecureScoreControlProfile extends Entity
     
     /**
     * Sets the service
+    * Service that owns the control (Exchange, Sharepoint, Azure AD).
     *
     * @param string $val The service
     *
@@ -412,6 +436,7 @@ class SecureScoreControlProfile extends Entity
     
     /**
     * Gets the threats
+    * List of threats the control mitigates (accountBreach,dataDeletion,dataExfiltration,dataSpillage,
     *
     * @return string The threats
     */
@@ -426,6 +451,7 @@ class SecureScoreControlProfile extends Entity
     
     /**
     * Sets the threats
+    * List of threats the control mitigates (accountBreach,dataDeletion,dataExfiltration,dataSpillage,
     *
     * @param string $val The threats
     *
@@ -466,6 +492,7 @@ class SecureScoreControlProfile extends Entity
     
     /**
     * Gets the title
+    * Title of the control.
     *
     * @return string The title
     */
@@ -480,6 +507,7 @@ class SecureScoreControlProfile extends Entity
     
     /**
     * Sets the title
+    * Title of the control.
     *
     * @param string $val The title
     *
