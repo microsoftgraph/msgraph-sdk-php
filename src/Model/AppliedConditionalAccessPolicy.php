@@ -27,6 +27,7 @@ class AppliedConditionalAccessPolicy extends Entity
 {
     /**
     * Gets the id
+    * Unique GUID of the conditional access polic.y
     *
     * @return string The id
     */
@@ -41,6 +42,7 @@ class AppliedConditionalAccessPolicy extends Entity
 
     /**
     * Sets the id
+    * Unique GUID of the conditional access polic.y
     *
     * @param string $val The value of the id
     *
@@ -53,6 +55,7 @@ class AppliedConditionalAccessPolicy extends Entity
     }
     /**
     * Gets the displayName
+    * Refers to the Name of the conditional access policy (example: 'Require MFA for Salesforce').
     *
     * @return string The displayName
     */
@@ -67,6 +70,7 @@ class AppliedConditionalAccessPolicy extends Entity
 
     /**
     * Sets the displayName
+    * Refers to the Name of the conditional access policy (example: 'Require MFA for Salesforce').
     *
     * @param string $val The value of the displayName
     *
@@ -79,6 +83,7 @@ class AppliedConditionalAccessPolicy extends Entity
     }
     /**
     * Gets the enforcedGrantControls
+    * Refers to the grant controls enforced by the conditional access policy (example: 'Require multi-factor authentication').
     *
     * @return string The enforcedGrantControls
     */
@@ -93,6 +98,7 @@ class AppliedConditionalAccessPolicy extends Entity
 
     /**
     * Sets the enforcedGrantControls
+    * Refers to the grant controls enforced by the conditional access policy (example: 'Require multi-factor authentication').
     *
     * @param string $val The value of the enforcedGrantControls
     *
@@ -105,6 +111,7 @@ class AppliedConditionalAccessPolicy extends Entity
     }
     /**
     * Gets the enforcedSessionControls
+    * Refers to the session controls enforced by the conditional access policy (example: 'Require app enforced controls').
     *
     * @return string The enforcedSessionControls
     */
@@ -119,6 +126,7 @@ class AppliedConditionalAccessPolicy extends Entity
 
     /**
     * Sets the enforcedSessionControls
+    * Refers to the session controls enforced by the conditional access policy (example: 'Require app enforced controls').
     *
     * @param string $val The value of the enforcedSessionControls
     *
@@ -132,6 +140,7 @@ class AppliedConditionalAccessPolicy extends Entity
 
     /**
     * Gets the result
+    * Indicates the result of the CA policy that was triggered. Possible values are:successfailurenotApplied - Policy isn't applied because policy conditions were not met.notEnabled - This is due to the policy in disabled state.
     *
     * @return AppliedConditionalAccessPolicyResult The result
     */
@@ -150,6 +159,7 @@ class AppliedConditionalAccessPolicy extends Entity
 
     /**
     * Sets the result
+    * Indicates the result of the CA policy that was triggered. Possible values are:successfailurenotApplied - Policy isn't applied because policy conditions were not met.notEnabled - This is due to the policy in disabled state.
     *
     * @param AppliedConditionalAccessPolicyResult $val The value to assign to the result
     *

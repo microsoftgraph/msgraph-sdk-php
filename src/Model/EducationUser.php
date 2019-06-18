@@ -28,7 +28,7 @@ class EducationUser extends Entity
 {
     /**
     * Gets the primaryRole
-    * Default role for a user. The user's role might be different in an individual class. The possible values are: student, teacher, unknownFutureValue. Supports $filter.
+    * Default role for a user. The user's role might be different in an individual class. The possible values are: student, teacher. Supports $filter.
     *
     * @return EducationUserRole The primaryRole
     */
@@ -47,7 +47,7 @@ class EducationUser extends Entity
     
     /**
     * Sets the primaryRole
-    * Default role for a user. The user's role might be different in an individual class. The possible values are: student, teacher, unknownFutureValue. Supports $filter.
+    * Default role for a user. The user's role might be different in an individual class. The possible values are: student, teacher. Supports $filter.
     *
     * @param EducationUserRole $val The primaryRole
     *
@@ -90,7 +90,7 @@ class EducationUser extends Entity
     
     /**
     * Gets the externalSource
-    * Where this user was created from. The possible values are: sis, manual, unkownFutureValue.
+    * Where this user was created from. The possible values are: sis, manual.
     *
     * @return EducationExternalSource The externalSource
     */
@@ -109,7 +109,7 @@ class EducationUser extends Entity
     
     /**
     * Sets the externalSource
-    * Where this user was created from. The possible values are: sis, manual, unkownFutureValue.
+    * Where this user was created from. The possible values are: sis, manual.
     *
     * @param EducationExternalSource $val The externalSource
     *

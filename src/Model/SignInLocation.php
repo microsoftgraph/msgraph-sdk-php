@@ -27,6 +27,7 @@ class SignInLocation extends Entity
 {
     /**
     * Gets the city
+    * Provides the city where the sign-in originated. This is calculated using latitude/longitude information from the sign-in activity.
     *
     * @return string The city
     */
@@ -41,6 +42,7 @@ class SignInLocation extends Entity
 
     /**
     * Sets the city
+    * Provides the city where the sign-in originated. This is calculated using latitude/longitude information from the sign-in activity.
     *
     * @param string $val The value of the city
     *
@@ -53,6 +55,7 @@ class SignInLocation extends Entity
     }
     /**
     * Gets the state
+    * Provides the State where the sign-in originated. This is calculated using latitude/longitude information from the sign-in activity.
     *
     * @return string The state
     */
@@ -67,6 +70,7 @@ class SignInLocation extends Entity
 
     /**
     * Sets the state
+    * Provides the State where the sign-in originated. This is calculated using latitude/longitude information from the sign-in activity.
     *
     * @param string $val The value of the state
     *
@@ -79,6 +83,7 @@ class SignInLocation extends Entity
     }
     /**
     * Gets the countryOrRegion
+    * Provides the country code info (2 letter code) where the sign-in originated.  This is calculated using latitude/longitude information from the sign-in activity.
     *
     * @return string The countryOrRegion
     */
@@ -93,6 +98,7 @@ class SignInLocation extends Entity
 
     /**
     * Sets the countryOrRegion
+    * Provides the country code info (2 letter code) where the sign-in originated.  This is calculated using latitude/longitude information from the sign-in activity.
     *
     * @param string $val The value of the countryOrRegion
     *
@@ -106,6 +112,7 @@ class SignInLocation extends Entity
 
     /**
     * Gets the geoCoordinates
+    * Provides the latitude, longitude and altitude where the sign-in originated.
     *
     * @return GeoCoordinates The geoCoordinates
     */
@@ -124,6 +131,7 @@ class SignInLocation extends Entity
 
     /**
     * Sets the geoCoordinates
+    * Provides the latitude, longitude and altitude where the sign-in originated.
     *
     * @param GeoCoordinates $val The value to assign to the geoCoordinates
     *

@@ -28,6 +28,7 @@ class SecureScore extends Entity
 {
     /**
     * Gets the activeUserCount
+    * Active user count of the given tenant.
     *
     * @return int The activeUserCount
     */
@@ -42,6 +43,7 @@ class SecureScore extends Entity
     
     /**
     * Sets the activeUserCount
+    * Active user count of the given tenant.
     *
     * @param int $val The activeUserCount
     *
@@ -56,6 +58,7 @@ class SecureScore extends Entity
 
      /** 
      * Gets the averageComparativeScores
+    * Average score by different scopes (for example, average by industry, average by seating) and control category (Identity, Data, Device, Apps, Infrastructure) within the scope.
      *
      * @return array The averageComparativeScores
      */
@@ -70,6 +73,7 @@ class SecureScore extends Entity
     
     /** 
     * Sets the averageComparativeScores
+    * Average score by different scopes (for example, average by industry, average by seating) and control category (Identity, Data, Device, Apps, Infrastructure) within the scope.
     *
     * @param AverageComparativeScore $val The averageComparativeScores
     *
@@ -83,6 +87,7 @@ class SecureScore extends Entity
     
     /**
     * Gets the azureTenantId
+    * GUID string for tenant ID.
     *
     * @return string The azureTenantId
     */
@@ -97,6 +102,7 @@ class SecureScore extends Entity
     
     /**
     * Sets the azureTenantId
+    * GUID string for tenant ID.
     *
     * @param string $val The azureTenantId
     *
@@ -111,6 +117,7 @@ class SecureScore extends Entity
 
      /** 
      * Gets the controlScores
+    * Contains tenant scores for a set of controls.
      *
      * @return array The controlScores
      */
@@ -125,6 +132,7 @@ class SecureScore extends Entity
     
     /** 
     * Sets the controlScores
+    * Contains tenant scores for a set of controls.
     *
     * @param ControlScore $val The controlScores
     *
@@ -138,6 +146,7 @@ class SecureScore extends Entity
     
     /**
     * Gets the createdDateTime
+    * The date when the entity is created.
     *
     * @return \DateTime The createdDateTime
     */
@@ -156,6 +165,7 @@ class SecureScore extends Entity
     
     /**
     * Sets the createdDateTime
+    * The date when the entity is created.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -169,6 +179,7 @@ class SecureScore extends Entity
     
     /**
     * Gets the currentScore
+    * Tenant current attained score on specified date.
     *
     * @return float The currentScore
     */
@@ -183,6 +194,7 @@ class SecureScore extends Entity
     
     /**
     * Sets the currentScore
+    * Tenant current attained score on specified date.
     *
     * @param float $val The currentScore
     *
@@ -196,6 +208,7 @@ class SecureScore extends Entity
     
     /**
     * Gets the enabledServices
+    * Microsoft-provided services for the tenant (for example, Exchange online, Skype, Sharepoint).
     *
     * @return string The enabledServices
     */
@@ -210,6 +223,7 @@ class SecureScore extends Entity
     
     /**
     * Sets the enabledServices
+    * Microsoft-provided services for the tenant (for example, Exchange online, Skype, Sharepoint).
     *
     * @param string $val The enabledServices
     *
@@ -223,6 +237,7 @@ class SecureScore extends Entity
     
     /**
     * Gets the licensedUserCount
+    * Licensed user count of the given tenant.
     *
     * @return int The licensedUserCount
     */
@@ -237,6 +252,7 @@ class SecureScore extends Entity
     
     /**
     * Sets the licensedUserCount
+    * Licensed user count of the given tenant.
     *
     * @param int $val The licensedUserCount
     *
@@ -250,6 +266,7 @@ class SecureScore extends Entity
     
     /**
     * Gets the maxScore
+    * Tenant maximum possible score on specified date.
     *
     * @return float The maxScore
     */
@@ -264,6 +281,7 @@ class SecureScore extends Entity
     
     /**
     * Sets the maxScore
+    * Tenant maximum possible score on specified date.
     *
     * @param float $val The maxScore
     *
@@ -277,6 +295,7 @@ class SecureScore extends Entity
     
     /**
     * Gets the vendorInformation
+    * Complex type containing details about the security product/service vendor, provider, and subprovider (for example, vendor=Microsoft; provider=SecureScore). Required.
     *
     * @return SecurityVendorInformation The vendorInformation
     */
@@ -295,6 +314,7 @@ class SecureScore extends Entity
     
     /**
     * Sets the vendorInformation
+    * Complex type containing details about the security product/service vendor, provider, and subprovider (for example, vendor=Microsoft; provider=SecureScore). Required.
     *
     * @param SecurityVendorInformation $val The vendorInformation
     *

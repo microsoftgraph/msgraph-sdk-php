@@ -154,6 +154,39 @@ class Site extends BaseItem
         return $this;
     }
     
+    /**
+    * Gets the analytics
+    * Analytics about the view activities that took place in this site.
+    *
+    * @return ItemAnalytics The analytics
+    */
+    public function getAnalytics()
+    {
+        if (array_key_exists("analytics", $this->_propDict)) {
+            if (is_a($this->_propDict["analytics"], "Microsoft\Graph\Model\ItemAnalytics")) {
+                return $this->_propDict["analytics"];
+            } else {
+                $this->_propDict["analytics"] = new ItemAnalytics($this->_propDict["analytics"]);
+                return $this->_propDict["analytics"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the analytics
+    * Analytics about the view activities that took place in this site.
+    *
+    * @param ItemAnalytics $val The analytics
+    *
+    * @return Site
+    */
+    public function setAnalytics($val)
+    {
+        $this->_propDict["analytics"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the columns

@@ -93,6 +93,39 @@ class ListItem extends BaseItem
     }
     
     /**
+    * Gets the analytics
+    * Analytics about the view activities that took place on this item.
+    *
+    * @return ItemAnalytics The analytics
+    */
+    public function getAnalytics()
+    {
+        if (array_key_exists("analytics", $this->_propDict)) {
+            if (is_a($this->_propDict["analytics"], "Microsoft\Graph\Model\ItemAnalytics")) {
+                return $this->_propDict["analytics"];
+            } else {
+                $this->_propDict["analytics"] = new ItemAnalytics($this->_propDict["analytics"]);
+                return $this->_propDict["analytics"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the analytics
+    * Analytics about the view activities that took place on this item.
+    *
+    * @param ItemAnalytics $val The analytics
+    *
+    * @return ListItem
+    */
+    public function setAnalytics($val)
+    {
+        $this->_propDict["analytics"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the driveItem
     * For document libraries, the driveItem relationship exposes the listItem as a [driveItem][]
     *
