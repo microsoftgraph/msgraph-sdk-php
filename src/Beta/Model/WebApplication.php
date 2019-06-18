@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * WebApplication class
 *
@@ -138,7 +138,7 @@ class WebApplication extends Entity
     public function getImplicitGrantSettings()
     {
         if (array_key_exists("implicitGrantSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["implicitGrantSettings"], "Microsoft\Graph\Model\ImplicitGrantSettings")) {
+            if (is_a($this->_propDict["implicitGrantSettings"], "Microsoft\Graph\Beta\Model\ImplicitGrantSettings")) {
                 return $this->_propDict["implicitGrantSettings"];
             } else {
                 $this->_propDict["implicitGrantSettings"] = new ImplicitGrantSettings($this->_propDict["implicitGrantSettings"]);

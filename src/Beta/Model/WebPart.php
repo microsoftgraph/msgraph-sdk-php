@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * WebPart class
 *
@@ -60,7 +60,7 @@ class WebPart extends Entity
     public function getData()
     {
         if (array_key_exists("data", $this->_propDict)) {
-            if (is_a($this->_propDict["data"], "Microsoft\Graph\Model\SitePageData")) {
+            if (is_a($this->_propDict["data"], "Microsoft\Graph\Beta\Model\SitePageData")) {
                 return $this->_propDict["data"];
             } else {
                 $this->_propDict["data"] = new SitePageData($this->_propDict["data"]);

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * Windows10AppsForceUpdateSchedule class
 *
@@ -35,7 +35,7 @@ class Windows10AppsForceUpdateSchedule extends Entity
     public function getStartDateTime()
     {
         if (array_key_exists("startDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startDateTime"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["startDateTime"], "Microsoft\Graph\Beta\Model\\DateTime")) {
                 return $this->_propDict["startDateTime"];
             } else {
                 $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);
@@ -68,7 +68,7 @@ class Windows10AppsForceUpdateSchedule extends Entity
     public function getRecurrence()
     {
         if (array_key_exists("recurrence", $this->_propDict)) {
-            if (is_a($this->_propDict["recurrence"], "Microsoft\Graph\Model\Windows10AppsUpdateRecurrence")) {
+            if (is_a($this->_propDict["recurrence"], "Microsoft\Graph\Beta\Model\Windows10AppsUpdateRecurrence")) {
                 return $this->_propDict["recurrence"];
             } else {
                 $this->_propDict["recurrence"] = new Windows10AppsUpdateRecurrence($this->_propDict["recurrence"]);

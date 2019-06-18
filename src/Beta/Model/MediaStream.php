@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * MediaStream class
 *
@@ -34,7 +34,7 @@ class MediaStream extends Entity
     public function getMediaType()
     {
         if (array_key_exists("mediaType", $this->_propDict)) {
-            if (is_a($this->_propDict["mediaType"], "Microsoft\Graph\Model\Modality")) {
+            if (is_a($this->_propDict["mediaType"], "Microsoft\Graph\Beta\Model\Modality")) {
                 return $this->_propDict["mediaType"];
             } else {
                 $this->_propDict["mediaType"] = new Modality($this->_propDict["mediaType"]);
@@ -117,7 +117,7 @@ class MediaStream extends Entity
     public function getDirection()
     {
         if (array_key_exists("direction", $this->_propDict)) {
-            if (is_a($this->_propDict["direction"], "Microsoft\Graph\Model\MediaDirection")) {
+            if (is_a($this->_propDict["direction"], "Microsoft\Graph\Beta\Model\MediaDirection")) {
                 return $this->_propDict["direction"];
             } else {
                 $this->_propDict["direction"] = new MediaDirection($this->_propDict["direction"]);

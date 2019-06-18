@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * DeviceConfigurationUserStatus class
@@ -93,7 +93,7 @@ class DeviceConfigurationUserStatus extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Microsoft\Graph\Model\ComplianceStatus")) {
+            if (is_a($this->_propDict["status"], "Microsoft\Graph\Beta\Model\ComplianceStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new ComplianceStatus($this->_propDict["status"]);

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * OptionalClaims class
 *
@@ -34,7 +34,7 @@ class OptionalClaims extends Entity
     public function getIdToken()
     {
         if (array_key_exists("idToken", $this->_propDict)) {
-            if (is_a($this->_propDict["idToken"], "Microsoft\Graph\Model\OptionalClaim")) {
+            if (is_a($this->_propDict["idToken"], "Microsoft\Graph\Beta\Model\OptionalClaim")) {
                 return $this->_propDict["idToken"];
             } else {
                 $this->_propDict["idToken"] = new OptionalClaim($this->_propDict["idToken"]);
@@ -65,7 +65,7 @@ class OptionalClaims extends Entity
     public function getAccessToken()
     {
         if (array_key_exists("accessToken", $this->_propDict)) {
-            if (is_a($this->_propDict["accessToken"], "Microsoft\Graph\Model\OptionalClaim")) {
+            if (is_a($this->_propDict["accessToken"], "Microsoft\Graph\Beta\Model\OptionalClaim")) {
                 return $this->_propDict["accessToken"];
             } else {
                 $this->_propDict["accessToken"] = new OptionalClaim($this->_propDict["accessToken"]);
@@ -96,7 +96,7 @@ class OptionalClaims extends Entity
     public function getSaml2Token()
     {
         if (array_key_exists("saml2Token", $this->_propDict)) {
-            if (is_a($this->_propDict["saml2Token"], "Microsoft\Graph\Model\OptionalClaim")) {
+            if (is_a($this->_propDict["saml2Token"], "Microsoft\Graph\Beta\Model\OptionalClaim")) {
                 return $this->_propDict["saml2Token"];
             } else {
                 $this->_propDict["saml2Token"] = new OptionalClaim($this->_propDict["saml2Token"]);

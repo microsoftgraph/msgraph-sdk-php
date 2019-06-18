@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * MentionAction class
 *
@@ -28,13 +28,14 @@ class MentionAction extends Entity
 
     /**
     * Gets the mentionees
+    * The identities of the users mentioned in this action.
     *
     * @return IdentitySet The mentionees
     */
     public function getMentionees()
     {
         if (array_key_exists("mentionees", $this->_propDict)) {
-            if (is_a($this->_propDict["mentionees"], "Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["mentionees"], "Microsoft\Graph\Beta\Model\IdentitySet")) {
                 return $this->_propDict["mentionees"];
             } else {
                 $this->_propDict["mentionees"] = new IdentitySet($this->_propDict["mentionees"]);
@@ -46,6 +47,7 @@ class MentionAction extends Entity
 
     /**
     * Sets the mentionees
+    * The identities of the users mentioned in this action.
     *
     * @param IdentitySet $val The value to assign to the mentionees
     *
