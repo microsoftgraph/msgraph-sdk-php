@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * MobileAppTroubleshootingEvent class
@@ -140,6 +140,36 @@ class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshootingEvent
     public function setHistory($val)
     {
 		$this->_propDict["history"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the appLogCollectionRequests
+    * The collection property of AppLogUploadRequest.
+     *
+     * @return array The appLogCollectionRequests
+     */
+    public function getAppLogCollectionRequests()
+    {
+        if (array_key_exists("appLogCollectionRequests", $this->_propDict)) {
+           return $this->_propDict["appLogCollectionRequests"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the appLogCollectionRequests
+    * The collection property of AppLogUploadRequest.
+    *
+    * @param AppLogCollectionRequest $val The appLogCollectionRequests
+    *
+    * @return MobileAppTroubleshootingEvent
+    */
+    public function setAppLogCollectionRequests($val)
+    {
+		$this->_propDict["appLogCollectionRequests"] = $val;
         return $this;
     }
     

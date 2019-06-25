@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * Call class
@@ -34,7 +34,7 @@ class Call extends Entity
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "Microsoft\Graph\Model\CallState")) {
+            if (is_a($this->_propDict["state"], "Microsoft\Graph\Beta\Model\CallState")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new CallState($this->_propDict["state"]);
@@ -65,7 +65,7 @@ class Call extends Entity
     public function getError()
     {
         if (array_key_exists("error", $this->_propDict)) {
-            if (is_a($this->_propDict["error"], "Microsoft\Graph\Model\ResultInfo")) {
+            if (is_a($this->_propDict["error"], "Microsoft\Graph\Beta\Model\ResultInfo")) {
                 return $this->_propDict["error"];
             } else {
                 $this->_propDict["error"] = new ResultInfo($this->_propDict["error"]);
@@ -123,7 +123,7 @@ class Call extends Entity
     public function getDirection()
     {
         if (array_key_exists("direction", $this->_propDict)) {
-            if (is_a($this->_propDict["direction"], "Microsoft\Graph\Model\CallDirection")) {
+            if (is_a($this->_propDict["direction"], "Microsoft\Graph\Beta\Model\CallDirection")) {
                 return $this->_propDict["direction"];
             } else {
                 $this->_propDict["direction"] = new CallDirection($this->_propDict["direction"]);
@@ -263,7 +263,7 @@ class Call extends Entity
     public function getSource()
     {
         if (array_key_exists("source", $this->_propDict)) {
-            if (is_a($this->_propDict["source"], "Microsoft\Graph\Model\ParticipantInfo")) {
+            if (is_a($this->_propDict["source"], "Microsoft\Graph\Beta\Model\ParticipantInfo")) {
                 return $this->_propDict["source"];
             } else {
                 $this->_propDict["source"] = new ParticipantInfo($this->_propDict["source"]);
@@ -322,7 +322,7 @@ class Call extends Entity
     public function getAnsweredBy()
     {
         if (array_key_exists("answeredBy", $this->_propDict)) {
-            if (is_a($this->_propDict["answeredBy"], "Microsoft\Graph\Model\ParticipantInfo")) {
+            if (is_a($this->_propDict["answeredBy"], "Microsoft\Graph\Beta\Model\ParticipantInfo")) {
                 return $this->_propDict["answeredBy"];
             } else {
                 $this->_propDict["answeredBy"] = new ParticipantInfo($this->_propDict["answeredBy"]);
@@ -409,7 +409,7 @@ class Call extends Entity
     public function getMediaConfig()
     {
         if (array_key_exists("mediaConfig", $this->_propDict)) {
-            if (is_a($this->_propDict["mediaConfig"], "Microsoft\Graph\Model\MediaConfig")) {
+            if (is_a($this->_propDict["mediaConfig"], "Microsoft\Graph\Beta\Model\MediaConfig")) {
                 return $this->_propDict["mediaConfig"];
             } else {
                 $this->_propDict["mediaConfig"] = new MediaConfig($this->_propDict["mediaConfig"]);
@@ -440,7 +440,7 @@ class Call extends Entity
     public function getChatInfo()
     {
         if (array_key_exists("chatInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["chatInfo"], "Microsoft\Graph\Model\ChatInfo")) {
+            if (is_a($this->_propDict["chatInfo"], "Microsoft\Graph\Beta\Model\ChatInfo")) {
                 return $this->_propDict["chatInfo"];
             } else {
                 $this->_propDict["chatInfo"] = new ChatInfo($this->_propDict["chatInfo"]);
@@ -471,7 +471,7 @@ class Call extends Entity
     public function getMeetingInfo()
     {
         if (array_key_exists("meetingInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["meetingInfo"], "Microsoft\Graph\Model\MeetingInfo")) {
+            if (is_a($this->_propDict["meetingInfo"], "Microsoft\Graph\Beta\Model\MeetingInfo")) {
                 return $this->_propDict["meetingInfo"];
             } else {
                 $this->_propDict["meetingInfo"] = new MeetingInfo($this->_propDict["meetingInfo"]);
@@ -502,7 +502,7 @@ class Call extends Entity
     public function getMeetingCapability()
     {
         if (array_key_exists("meetingCapability", $this->_propDict)) {
-            if (is_a($this->_propDict["meetingCapability"], "Microsoft\Graph\Model\MeetingCapability")) {
+            if (is_a($this->_propDict["meetingCapability"], "Microsoft\Graph\Beta\Model\MeetingCapability")) {
                 return $this->_propDict["meetingCapability"];
             } else {
                 $this->_propDict["meetingCapability"] = new MeetingCapability($this->_propDict["meetingCapability"]);
@@ -615,7 +615,7 @@ class Call extends Entity
     public function getToneInfo()
     {
         if (array_key_exists("toneInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["toneInfo"], "Microsoft\Graph\Model\ToneInfo")) {
+            if (is_a($this->_propDict["toneInfo"], "Microsoft\Graph\Beta\Model\ToneInfo")) {
                 return $this->_propDict["toneInfo"];
             } else {
                 $this->_propDict["toneInfo"] = new ToneInfo($this->_propDict["toneInfo"]);

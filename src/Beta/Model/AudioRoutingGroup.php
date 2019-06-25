@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * AudioRoutingGroup class
@@ -61,7 +61,7 @@ class AudioRoutingGroup extends Entity
     public function getRoutingMode()
     {
         if (array_key_exists("routingMode", $this->_propDict)) {
-            if (is_a($this->_propDict["routingMode"], "Microsoft\Graph\Model\RoutingMode")) {
+            if (is_a($this->_propDict["routingMode"], "Microsoft\Graph\Beta\Model\RoutingMode")) {
                 return $this->_propDict["routingMode"];
             } else {
                 $this->_propDict["routingMode"] = new RoutingMode($this->_propDict["routingMode"]);

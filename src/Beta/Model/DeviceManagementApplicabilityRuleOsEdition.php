@@ -12,8 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
-
+namespace Microsoft\Graph\Beta\Model;
 /**
 * DeviceManagementApplicabilityRuleOsEdition class
 *
@@ -26,6 +25,39 @@ namespace Microsoft\Graph\Model;
 */
 class DeviceManagementApplicabilityRuleOsEdition extends Entity
 {
+
+    /**
+    * Gets the osEditionTypes
+    * Applicability rule OS edition type.
+    *
+    * @return Windows10EditionType The osEditionTypes
+    */
+    public function getOsEditionTypes()
+    {
+        if (array_key_exists("osEditionTypes", $this->_propDict)) {
+            if (is_a($this->_propDict["osEditionTypes"], "Microsoft\Graph\Beta\Model\Windows10EditionType")) {
+                return $this->_propDict["osEditionTypes"];
+            } else {
+                $this->_propDict["osEditionTypes"] = new Windows10EditionType($this->_propDict["osEditionTypes"]);
+                return $this->_propDict["osEditionTypes"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the osEditionTypes
+    * Applicability rule OS edition type.
+    *
+    * @param Windows10EditionType $val The value to assign to the osEditionTypes
+    *
+    * @return DeviceManagementApplicabilityRuleOsEdition The DeviceManagementApplicabilityRuleOsEdition
+    */
+    public function setOsEditionTypes($val)
+    {
+        $this->_propDict["osEditionTypes"] = $val;
+         return $this;
+    }
     /**
     * Gets the name
     * Name for object.
@@ -40,12 +72,12 @@ class DeviceManagementApplicabilityRuleOsEdition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the name
     * Name for object.
     *
-    * @param string $val The name
+    * @param string $val The value of the name
     *
     * @return DeviceManagementApplicabilityRuleOsEdition
     */
@@ -54,5 +86,37 @@ class DeviceManagementApplicabilityRuleOsEdition extends Entity
         $this->_propDict["name"] = $val;
         return $this;
     }
-    
+
+    /**
+    * Gets the ruleType
+    * Applicability Rule type.
+    *
+    * @return DeviceManagementApplicabilityRuleType The ruleType
+    */
+    public function getRuleType()
+    {
+        if (array_key_exists("ruleType", $this->_propDict)) {
+            if (is_a($this->_propDict["ruleType"], "Microsoft\Graph\Beta\Model\DeviceManagementApplicabilityRuleType")) {
+                return $this->_propDict["ruleType"];
+            } else {
+                $this->_propDict["ruleType"] = new DeviceManagementApplicabilityRuleType($this->_propDict["ruleType"]);
+                return $this->_propDict["ruleType"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the ruleType
+    * Applicability Rule type.
+    *
+    * @param DeviceManagementApplicabilityRuleType $val The value to assign to the ruleType
+    *
+    * @return DeviceManagementApplicabilityRuleOsEdition The DeviceManagementApplicabilityRuleOsEdition
+    */
+    public function setRuleType($val)
+    {
+        $this->_propDict["ruleType"] = $val;
+         return $this;
+    }
 }

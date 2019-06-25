@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * Channel class
@@ -113,6 +113,7 @@ class Channel extends Entity
     
     /**
     * Gets the email
+    * The email address for sending messages to the channel. Read-only.
     *
     * @return string The email
     */
@@ -127,6 +128,7 @@ class Channel extends Entity
     
     /**
     * Sets the email
+    * The email address for sending messages to the channel. Read-only.
     *
     * @param string $val The email
     *
@@ -140,6 +142,7 @@ class Channel extends Entity
     
     /**
     * Gets the webUrl
+    * A hyperlink that will navigate to the channel in Microsoft Teams. This is the URL that you get when you right-click a channel in Microsoft Teams and select Get link to channel. This URL should be treated as an opaque blob, and not parsed. Read-only.
     *
     * @return string The webUrl
     */
@@ -154,6 +157,7 @@ class Channel extends Entity
     
     /**
     * Sets the webUrl
+    * A hyperlink that will navigate to the channel in Microsoft Teams. This is the URL that you get when you right-click a channel in Microsoft Teams and select Get link to channel. This URL should be treated as an opaque blob, and not parsed. Read-only.
     *
     * @param string $val The webUrl
     *

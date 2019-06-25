@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * AuditLogRoot class
@@ -29,6 +29,7 @@ class AuditLogRoot extends Entity
 
      /** 
      * Gets the signIns
+    * Read-only. Nullable.
      *
      * @return array The signIns
      */
@@ -43,6 +44,7 @@ class AuditLogRoot extends Entity
     
     /** 
     * Sets the signIns
+    * Read-only. Nullable.
     *
     * @param SignIn $val The signIns
     *
@@ -57,6 +59,7 @@ class AuditLogRoot extends Entity
 
      /** 
      * Gets the directoryAudits
+    * Read-only. Nullable.
      *
      * @return array The directoryAudits
      */
@@ -71,6 +74,7 @@ class AuditLogRoot extends Entity
     
     /** 
     * Sets the directoryAudits
+    * Read-only. Nullable.
     *
     * @param DirectoryAudit $val The directoryAudits
     *
@@ -107,6 +111,34 @@ class AuditLogRoot extends Entity
     public function setRestrictedSignIns($val)
     {
 		$this->_propDict["restrictedSignIns"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the directoryProvisioning
+     *
+     * @return array The directoryProvisioning
+     */
+    public function getDirectoryProvisioning()
+    {
+        if (array_key_exists("directoryProvisioning", $this->_propDict)) {
+           return $this->_propDict["directoryProvisioning"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the directoryProvisioning
+    *
+    * @param ProvisioningObjectSummary $val The directoryProvisioning
+    *
+    * @return AuditLogRoot
+    */
+    public function setDirectoryProvisioning($val)
+    {
+		$this->_propDict["directoryProvisioning"] = $val;
         return $this;
     }
     

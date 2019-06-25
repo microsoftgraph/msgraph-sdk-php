@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * SitePage class
@@ -61,7 +61,7 @@ class SitePage extends BaseItem
     public function getContentType()
     {
         if (array_key_exists("contentType", $this->_propDict)) {
-            if (is_a($this->_propDict["contentType"], "Microsoft\Graph\Model\ContentTypeInfo")) {
+            if (is_a($this->_propDict["contentType"], "Microsoft\Graph\Beta\Model\ContentTypeInfo")) {
                 return $this->_propDict["contentType"];
             } else {
                 $this->_propDict["contentType"] = new ContentTypeInfo($this->_propDict["contentType"]);
@@ -147,7 +147,7 @@ class SitePage extends BaseItem
     public function getPublishingState()
     {
         if (array_key_exists("publishingState", $this->_propDict)) {
-            if (is_a($this->_propDict["publishingState"], "Microsoft\Graph\Model\PublicationFacet")) {
+            if (is_a($this->_propDict["publishingState"], "Microsoft\Graph\Beta\Model\PublicationFacet")) {
                 return $this->_propDict["publishingState"];
             } else {
                 $this->_propDict["publishingState"] = new PublicationFacet($this->_propDict["publishingState"]);
