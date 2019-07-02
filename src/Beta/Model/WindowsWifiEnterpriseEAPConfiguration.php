@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * WindowsWifiEnterpriseEAPConfiguration class
@@ -35,7 +35,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     public function getNetworkSingleSignOn()
     {
         if (array_key_exists("networkSingleSignOn", $this->_propDict)) {
-            if (is_a($this->_propDict["networkSingleSignOn"], "Microsoft\Graph\Model\NetworkSingleSignOnType")) {
+            if (is_a($this->_propDict["networkSingleSignOn"], "Microsoft\Graph\Beta\Model\NetworkSingleSignOnType")) {
                 return $this->_propDict["networkSingleSignOn"];
             } else {
                 $this->_propDict["networkSingleSignOn"] = new NetworkSingleSignOnType($this->_propDict["networkSingleSignOn"]);
@@ -264,14 +264,14 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     
     /**
     * Gets the eapType
-    * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the the Wi-Fi endpoint (router).
+    * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router).
     *
     * @return EapType The eapType
     */
     public function getEapType()
     {
         if (array_key_exists("eapType", $this->_propDict)) {
-            if (is_a($this->_propDict["eapType"], "Microsoft\Graph\Model\EapType")) {
+            if (is_a($this->_propDict["eapType"], "Microsoft\Graph\Beta\Model\EapType")) {
                 return $this->_propDict["eapType"];
             } else {
                 $this->_propDict["eapType"] = new EapType($this->_propDict["eapType"]);
@@ -283,7 +283,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     
     /**
     * Sets the eapType
-    * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the the Wi-Fi endpoint (router).
+    * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router).
     *
     * @param EapType $val The eapType
     *
@@ -333,7 +333,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     public function getAuthenticationMethod()
     {
         if (array_key_exists("authenticationMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["authenticationMethod"], "Microsoft\Graph\Model\WiFiAuthenticationMethod")) {
+            if (is_a($this->_propDict["authenticationMethod"], "Microsoft\Graph\Beta\Model\WiFiAuthenticationMethod")) {
                 return $this->_propDict["authenticationMethod"];
             } else {
                 $this->_propDict["authenticationMethod"] = new WiFiAuthenticationMethod($this->_propDict["authenticationMethod"]);
@@ -366,7 +366,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     public function getInnerAuthenticationProtocolForEAPTTLS()
     {
         if (array_key_exists("innerAuthenticationProtocolForEAPTTLS", $this->_propDict)) {
-            if (is_a($this->_propDict["innerAuthenticationProtocolForEAPTTLS"], "Microsoft\Graph\Model\NonEapAuthenticationMethodForEapTtlsType")) {
+            if (is_a($this->_propDict["innerAuthenticationProtocolForEAPTTLS"], "Microsoft\Graph\Beta\Model\NonEapAuthenticationMethodForEapTtlsType")) {
                 return $this->_propDict["innerAuthenticationProtocolForEAPTTLS"];
             } else {
                 $this->_propDict["innerAuthenticationProtocolForEAPTTLS"] = new NonEapAuthenticationMethodForEapTtlsType($this->_propDict["innerAuthenticationProtocolForEAPTTLS"]);
@@ -458,7 +458,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     public function getIdentityCertificateForClientAuthentication()
     {
         if (array_key_exists("identityCertificateForClientAuthentication", $this->_propDict)) {
-            if (is_a($this->_propDict["identityCertificateForClientAuthentication"], "Microsoft\Graph\Model\WindowsCertificateProfileBase")) {
+            if (is_a($this->_propDict["identityCertificateForClientAuthentication"], "Microsoft\Graph\Beta\Model\WindowsCertificateProfileBase")) {
                 return $this->_propDict["identityCertificateForClientAuthentication"];
             } else {
                 $this->_propDict["identityCertificateForClientAuthentication"] = new WindowsCertificateProfileBase($this->_propDict["identityCertificateForClientAuthentication"]);

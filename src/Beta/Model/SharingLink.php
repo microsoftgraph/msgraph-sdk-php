@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * SharingLink class
 *
@@ -35,7 +35,7 @@ class SharingLink extends Entity
     public function getApplication()
     {
         if (array_key_exists("application", $this->_propDict)) {
-            if (is_a($this->_propDict["application"], "Microsoft\Graph\Model\Identity")) {
+            if (is_a($this->_propDict["application"], "Microsoft\Graph\Beta\Model\Identity")) {
                 return $this->_propDict["application"];
             } else {
                 $this->_propDict["application"] = new Identity($this->_propDict["application"]);

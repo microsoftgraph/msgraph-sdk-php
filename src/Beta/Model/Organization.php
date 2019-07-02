@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * Organization class
@@ -421,7 +421,7 @@ class Organization extends DirectoryObject
     public function getPrivacyProfile()
     {
         if (array_key_exists("privacyProfile", $this->_propDict)) {
-            if (is_a($this->_propDict["privacyProfile"], "Microsoft\Graph\Model\PrivacyProfile")) {
+            if (is_a($this->_propDict["privacyProfile"], "Microsoft\Graph\Beta\Model\PrivacyProfile")) {
                 return $this->_propDict["privacyProfile"];
             } else {
                 $this->_propDict["privacyProfile"] = new PrivacyProfile($this->_propDict["privacyProfile"]);
@@ -655,7 +655,7 @@ class Organization extends DirectoryObject
     public function getMobileDeviceManagementAuthority()
     {
         if (array_key_exists("mobileDeviceManagementAuthority", $this->_propDict)) {
-            if (is_a($this->_propDict["mobileDeviceManagementAuthority"], "Microsoft\Graph\Model\MdmAuthority")) {
+            if (is_a($this->_propDict["mobileDeviceManagementAuthority"], "Microsoft\Graph\Beta\Model\MdmAuthority")) {
                 return $this->_propDict["mobileDeviceManagementAuthority"];
             } else {
                 $this->_propDict["mobileDeviceManagementAuthority"] = new MdmAuthority($this->_propDict["mobileDeviceManagementAuthority"]);
@@ -688,7 +688,7 @@ class Organization extends DirectoryObject
     public function getCertificateConnectorSetting()
     {
         if (array_key_exists("certificateConnectorSetting", $this->_propDict)) {
-            if (is_a($this->_propDict["certificateConnectorSetting"], "Microsoft\Graph\Model\CertificateConnectorSetting")) {
+            if (is_a($this->_propDict["certificateConnectorSetting"], "Microsoft\Graph\Beta\Model\CertificateConnectorSetting")) {
                 return $this->_propDict["certificateConnectorSetting"];
             } else {
                 $this->_propDict["certificateConnectorSetting"] = new CertificateConnectorSetting($this->_propDict["certificateConnectorSetting"]);
@@ -739,6 +739,34 @@ class Organization extends DirectoryObject
     public function setExtensions($val)
     {
 		$this->_propDict["extensions"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the brandings
+     *
+     * @return array The brandings
+     */
+    public function getBrandings()
+    {
+        if (array_key_exists("brandings", $this->_propDict)) {
+           return $this->_propDict["brandings"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the brandings
+    *
+    * @param OrganizationalBranding $val The brandings
+    *
+    * @return Organization
+    */
+    public function setBrandings($val)
+    {
+		$this->_propDict["brandings"] = $val;
         return $this;
     }
     

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * Post class
@@ -35,7 +35,7 @@ class Post extends OutlookItem
     public function getBody()
     {
         if (array_key_exists("body", $this->_propDict)) {
-            if (is_a($this->_propDict["body"], "Microsoft\Graph\Model\ItemBody")) {
+            if (is_a($this->_propDict["body"], "Microsoft\Graph\Beta\Model\ItemBody")) {
                 return $this->_propDict["body"];
             } else {
                 $this->_propDict["body"] = new ItemBody($this->_propDict["body"]);
@@ -130,7 +130,7 @@ class Post extends OutlookItem
     public function getFrom()
     {
         if (array_key_exists("from", $this->_propDict)) {
-            if (is_a($this->_propDict["from"], "Microsoft\Graph\Model\Recipient")) {
+            if (is_a($this->_propDict["from"], "Microsoft\Graph\Beta\Model\Recipient")) {
                 return $this->_propDict["from"];
             } else {
                 $this->_propDict["from"] = new Recipient($this->_propDict["from"]);
@@ -163,7 +163,7 @@ class Post extends OutlookItem
     public function getSender()
     {
         if (array_key_exists("sender", $this->_propDict)) {
-            if (is_a($this->_propDict["sender"], "Microsoft\Graph\Model\Recipient")) {
+            if (is_a($this->_propDict["sender"], "Microsoft\Graph\Beta\Model\Recipient")) {
                 return $this->_propDict["sender"];
             } else {
                 $this->_propDict["sender"] = new Recipient($this->_propDict["sender"]);
@@ -283,7 +283,7 @@ class Post extends OutlookItem
     public function getImportance()
     {
         if (array_key_exists("importance", $this->_propDict)) {
-            if (is_a($this->_propDict["importance"], "Microsoft\Graph\Model\Importance")) {
+            if (is_a($this->_propDict["importance"], "Microsoft\Graph\Beta\Model\Importance")) {
                 return $this->_propDict["importance"];
             } else {
                 $this->_propDict["importance"] = new Importance($this->_propDict["importance"]);
@@ -345,7 +345,7 @@ class Post extends OutlookItem
     public function getInReplyTo()
     {
         if (array_key_exists("inReplyTo", $this->_propDict)) {
-            if (is_a($this->_propDict["inReplyTo"], "Microsoft\Graph\Model\Post")) {
+            if (is_a($this->_propDict["inReplyTo"], "Microsoft\Graph\Beta\Model\Post")) {
                 return $this->_propDict["inReplyTo"];
             } else {
                 $this->_propDict["inReplyTo"] = new Post($this->_propDict["inReplyTo"]);

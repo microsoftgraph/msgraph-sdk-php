@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * BookingAppointment class
@@ -171,7 +171,7 @@ class BookingAppointment extends Entity
     public function getCustomerLocation()
     {
         if (array_key_exists("customerLocation", $this->_propDict)) {
-            if (is_a($this->_propDict["customerLocation"], "Microsoft\Graph\Model\Location")) {
+            if (is_a($this->_propDict["customerLocation"], "Microsoft\Graph\Beta\Model\Location")) {
                 return $this->_propDict["customerLocation"];
             } else {
                 $this->_propDict["customerLocation"] = new Location($this->_propDict["customerLocation"]);
@@ -289,7 +289,7 @@ class BookingAppointment extends Entity
     public function getStart()
     {
         if (array_key_exists("start", $this->_propDict)) {
-            if (is_a($this->_propDict["start"], "Microsoft\Graph\Model\DateTimeTimeZone")) {
+            if (is_a($this->_propDict["start"], "Microsoft\Graph\Beta\Model\DateTimeTimeZone")) {
                 return $this->_propDict["start"];
             } else {
                 $this->_propDict["start"] = new DateTimeTimeZone($this->_propDict["start"]);
@@ -320,7 +320,7 @@ class BookingAppointment extends Entity
     public function getEnd()
     {
         if (array_key_exists("end", $this->_propDict)) {
-            if (is_a($this->_propDict["end"], "Microsoft\Graph\Model\DateTimeTimeZone")) {
+            if (is_a($this->_propDict["end"], "Microsoft\Graph\Beta\Model\DateTimeTimeZone")) {
                 return $this->_propDict["end"];
             } else {
                 $this->_propDict["end"] = new DateTimeTimeZone($this->_propDict["end"]);
@@ -351,7 +351,7 @@ class BookingAppointment extends Entity
     public function getDuration()
     {
         if (array_key_exists("duration", $this->_propDict)) {
-            if (is_a($this->_propDict["duration"], "Microsoft\Graph\Model\Duration")) {
+            if (is_a($this->_propDict["duration"], "Microsoft\Graph\Beta\Model\Duration")) {
                 return $this->_propDict["duration"];
             } else {
                 $this->_propDict["duration"] = new Duration($this->_propDict["duration"]);
@@ -382,7 +382,7 @@ class BookingAppointment extends Entity
     public function getPreBuffer()
     {
         if (array_key_exists("preBuffer", $this->_propDict)) {
-            if (is_a($this->_propDict["preBuffer"], "Microsoft\Graph\Model\Duration")) {
+            if (is_a($this->_propDict["preBuffer"], "Microsoft\Graph\Beta\Model\Duration")) {
                 return $this->_propDict["preBuffer"];
             } else {
                 $this->_propDict["preBuffer"] = new Duration($this->_propDict["preBuffer"]);
@@ -413,7 +413,7 @@ class BookingAppointment extends Entity
     public function getPostBuffer()
     {
         if (array_key_exists("postBuffer", $this->_propDict)) {
-            if (is_a($this->_propDict["postBuffer"], "Microsoft\Graph\Model\Duration")) {
+            if (is_a($this->_propDict["postBuffer"], "Microsoft\Graph\Beta\Model\Duration")) {
                 return $this->_propDict["postBuffer"];
             } else {
                 $this->_propDict["postBuffer"] = new Duration($this->_propDict["postBuffer"]);
@@ -444,7 +444,7 @@ class BookingAppointment extends Entity
     public function getServiceLocation()
     {
         if (array_key_exists("serviceLocation", $this->_propDict)) {
-            if (is_a($this->_propDict["serviceLocation"], "Microsoft\Graph\Model\Location")) {
+            if (is_a($this->_propDict["serviceLocation"], "Microsoft\Graph\Beta\Model\Location")) {
                 return $this->_propDict["serviceLocation"];
             } else {
                 $this->_propDict["serviceLocation"] = new Location($this->_propDict["serviceLocation"]);
@@ -475,7 +475,7 @@ class BookingAppointment extends Entity
     public function getPriceType()
     {
         if (array_key_exists("priceType", $this->_propDict)) {
-            if (is_a($this->_propDict["priceType"], "Microsoft\Graph\Model\BookingPriceType")) {
+            if (is_a($this->_propDict["priceType"], "Microsoft\Graph\Beta\Model\BookingPriceType")) {
                 return $this->_propDict["priceType"];
             } else {
                 $this->_propDict["priceType"] = new BookingPriceType($this->_propDict["priceType"]);
@@ -673,7 +673,7 @@ class BookingAppointment extends Entity
     public function getInvoiceDate()
     {
         if (array_key_exists("invoiceDate", $this->_propDict)) {
-            if (is_a($this->_propDict["invoiceDate"], "Microsoft\Graph\Model\DateTimeTimeZone")) {
+            if (is_a($this->_propDict["invoiceDate"], "Microsoft\Graph\Beta\Model\DateTimeTimeZone")) {
                 return $this->_propDict["invoiceDate"];
             } else {
                 $this->_propDict["invoiceDate"] = new DateTimeTimeZone($this->_propDict["invoiceDate"]);
@@ -731,7 +731,7 @@ class BookingAppointment extends Entity
     public function getInvoiceStatus()
     {
         if (array_key_exists("invoiceStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["invoiceStatus"], "Microsoft\Graph\Model\BookingInvoiceStatus")) {
+            if (is_a($this->_propDict["invoiceStatus"], "Microsoft\Graph\Beta\Model\BookingInvoiceStatus")) {
                 return $this->_propDict["invoiceStatus"];
             } else {
                 $this->_propDict["invoiceStatus"] = new BookingInvoiceStatus($this->_propDict["invoiceStatus"]);

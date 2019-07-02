@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * IosManagedAppProtection class
@@ -35,7 +35,7 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     public function getAppDataEncryptionType()
     {
         if (array_key_exists("appDataEncryptionType", $this->_propDict)) {
-            if (is_a($this->_propDict["appDataEncryptionType"], "Microsoft\Graph\Model\ManagedAppDataEncryptionType")) {
+            if (is_a($this->_propDict["appDataEncryptionType"], "Microsoft\Graph\Beta\Model\ManagedAppDataEncryptionType")) {
                 return $this->_propDict["appDataEncryptionType"];
             } else {
                 $this->_propDict["appDataEncryptionType"] = new ManagedAppDataEncryptionType($this->_propDict["appDataEncryptionType"]);
@@ -243,7 +243,7 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     public function getAppActionIfIosDeviceModelNotAllowed()
     {
         if (array_key_exists("appActionIfIosDeviceModelNotAllowed", $this->_propDict)) {
-            if (is_a($this->_propDict["appActionIfIosDeviceModelNotAllowed"], "Microsoft\Graph\Model\ManagedAppRemediationAction")) {
+            if (is_a($this->_propDict["appActionIfIosDeviceModelNotAllowed"], "Microsoft\Graph\Beta\Model\ManagedAppRemediationAction")) {
                 return $this->_propDict["appActionIfIosDeviceModelNotAllowed"];
             } else {
                 $this->_propDict["appActionIfIosDeviceModelNotAllowed"] = new ManagedAppRemediationAction($this->_propDict["appActionIfIosDeviceModelNotAllowed"]);
@@ -264,35 +264,6 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     public function setAppActionIfIosDeviceModelNotAllowed($val)
     {
         $this->_propDict["appActionIfIosDeviceModelNotAllowed"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the thirdPartyKeyboardsBlocked
-    * Defines if third party keyboards are allowed while accessing a managed app
-    *
-    * @return bool The thirdPartyKeyboardsBlocked
-    */
-    public function getThirdPartyKeyboardsBlocked()
-    {
-        if (array_key_exists("thirdPartyKeyboardsBlocked", $this->_propDict)) {
-            return $this->_propDict["thirdPartyKeyboardsBlocked"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the thirdPartyKeyboardsBlocked
-    * Defines if third party keyboards are allowed while accessing a managed app
-    *
-    * @param bool $val The thirdPartyKeyboardsBlocked
-    *
-    * @return IosManagedAppProtection
-    */
-    public function setThirdPartyKeyboardsBlocked($val)
-    {
-        $this->_propDict["thirdPartyKeyboardsBlocked"] = boolval($val);
         return $this;
     }
     
@@ -383,6 +354,35 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
         return $this;
     }
     
+    /**
+    * Gets the customBrowserProtocol
+    * A custom browser protocol to open weblink on iOS.
+    *
+    * @return string The customBrowserProtocol
+    */
+    public function getCustomBrowserProtocol()
+    {
+        if (array_key_exists("customBrowserProtocol", $this->_propDict)) {
+            return $this->_propDict["customBrowserProtocol"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the customBrowserProtocol
+    * A custom browser protocol to open weblink on iOS.
+    *
+    * @param string $val The customBrowserProtocol
+    *
+    * @return IosManagedAppProtection
+    */
+    public function setCustomBrowserProtocol($val)
+    {
+        $this->_propDict["customBrowserProtocol"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the apps
@@ -422,7 +422,7 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     public function getDeploymentSummary()
     {
         if (array_key_exists("deploymentSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["deploymentSummary"], "Microsoft\Graph\Model\ManagedAppPolicyDeploymentSummary")) {
+            if (is_a($this->_propDict["deploymentSummary"], "Microsoft\Graph\Beta\Model\ManagedAppPolicyDeploymentSummary")) {
                 return $this->_propDict["deploymentSummary"];
             } else {
                 $this->_propDict["deploymentSummary"] = new ManagedAppPolicyDeploymentSummary($this->_propDict["deploymentSummary"]);

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * WorkbookChartAxisFormat class
@@ -35,7 +35,7 @@ class WorkbookChartAxisFormat extends Entity
     public function getFont()
     {
         if (array_key_exists("font", $this->_propDict)) {
-            if (is_a($this->_propDict["font"], "Microsoft\Graph\Model\WorkbookChartFont")) {
+            if (is_a($this->_propDict["font"], "Microsoft\Graph\Beta\Model\WorkbookChartFont")) {
                 return $this->_propDict["font"];
             } else {
                 $this->_propDict["font"] = new WorkbookChartFont($this->_propDict["font"]);
@@ -68,7 +68,7 @@ class WorkbookChartAxisFormat extends Entity
     public function getLine()
     {
         if (array_key_exists("line", $this->_propDict)) {
-            if (is_a($this->_propDict["line"], "Microsoft\Graph\Model\WorkbookChartLineFormat")) {
+            if (is_a($this->_propDict["line"], "Microsoft\Graph\Beta\Model\WorkbookChartLineFormat")) {
                 return $this->_propDict["line"];
             } else {
                 $this->_propDict["line"] = new WorkbookChartLineFormat($this->_propDict["line"]);
