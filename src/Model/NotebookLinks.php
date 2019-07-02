@@ -61,7 +61,7 @@ class NotebookLinks extends Entity
 
     /**
     * Gets the oneNoteWebUrl
-    * Opens the notebook in OneNote Online.
+    * Opens the notebook in OneNote on the web.
     *
     * @return ExternalLink The oneNoteWebUrl
     */
@@ -80,7 +80,7 @@ class NotebookLinks extends Entity
 
     /**
     * Sets the oneNoteWebUrl
-    * Opens the notebook in OneNote Online.
+    * Opens the notebook in OneNote on the web.
     *
     * @param ExternalLink $val The value to assign to the oneNoteWebUrl
     *

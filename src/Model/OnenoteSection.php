@@ -57,7 +57,7 @@ class OnenoteSection extends OnenoteEntityHierarchyModel
     
     /**
     * Gets the links
-    * Links for opening the section. The oneNoteClientURL link opens the section in the OneNote native client if it's installed. The oneNoteWebURL link opens the section in OneNote Online.
+    * Links for opening the section. The oneNoteClientURL link opens the section in the OneNote native client if it's installed. The oneNoteWebURL link opens the section in OneNote on the web.
     *
     * @return SectionLinks The links
     */
@@ -76,7 +76,7 @@ class OnenoteSection extends OnenoteEntityHierarchyModel
     
     /**
     * Sets the links
-    * Links for opening the section. The oneNoteClientURL link opens the section in the OneNote native client if it's installed. The oneNoteWebURL link opens the section in OneNote Online.
+    * Links for opening the section. The oneNoteClientURL link opens the section in the OneNote native client if it's installed. The oneNoteWebURL link opens the section in OneNote on the web.
     *
     * @param SectionLinks $val The links
     *

@@ -177,7 +177,7 @@ class Notebook extends OnenoteEntityHierarchyModel
     
     /**
     * Gets the links
-    * Links for opening the notebook. The oneNoteClientURL link opens the notebook in the OneNote native client if it's installed. The oneNoteWebURL link opens the notebook in OneNote Online.
+    * Links for opening the notebook. The oneNoteClientURL link opens the notebook in the OneNote native client if it's installed. The oneNoteWebURL link opens the notebook in OneNote on the web.
     *
     * @return NotebookLinks The links
     */
@@ -196,7 +196,7 @@ class Notebook extends OnenoteEntityHierarchyModel
     
     /**
     * Sets the links
-    * Links for opening the notebook. The oneNoteClientURL link opens the notebook in the OneNote native client if it's installed. The oneNoteWebURL link opens the notebook in OneNote Online.
+    * Links for opening the notebook. The oneNoteClientURL link opens the notebook in the OneNote native client if it's installed. The oneNoteWebURL link opens the notebook in OneNote on the web.
     *
     * @param NotebookLinks $val The links
     *

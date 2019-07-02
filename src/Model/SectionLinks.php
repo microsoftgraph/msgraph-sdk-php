@@ -61,7 +61,7 @@ class SectionLinks extends Entity
 
     /**
     * Gets the oneNoteWebUrl
-    * Opens the section in OneNote Online.
+    * Opens the section in OneNote on the web.
     *
     * @return ExternalLink The oneNoteWebUrl
     */
@@ -80,7 +80,7 @@ class SectionLinks extends Entity
 
     /**
     * Sets the oneNoteWebUrl
-    * Opens the section in OneNote Online.
+    * Opens the section in OneNote on the web.
     *
     * @param ExternalLink $val The value to assign to the oneNoteWebUrl
     *
