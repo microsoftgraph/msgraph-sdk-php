@@ -86,7 +86,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
     
     /**
     * Gets the links
-    * Links for opening the page. The oneNoteClientURL link opens the page in the OneNote native client if it 's installed. The oneNoteWebUrl link opens the page in OneNote Online. Read-only.
+    * Links for opening the page. The oneNoteClientURL link opens the page in the OneNote native client if it 's installed. The oneNoteWebUrl link opens the page in OneNote on the web. Read-only.
     *
     * @return PageLinks The links
     */
@@ -105,7 +105,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
     
     /**
     * Sets the links
-    * Links for opening the page. The oneNoteClientURL link opens the page in the OneNote native client if it 's installed. The oneNoteWebUrl link opens the page in OneNote Online. Read-only.
+    * Links for opening the page. The oneNoteClientURL link opens the page in the OneNote native client if it 's installed. The oneNoteWebUrl link opens the page in OneNote on the web. Read-only.
     *
     * @param PageLinks $val The links
     *
