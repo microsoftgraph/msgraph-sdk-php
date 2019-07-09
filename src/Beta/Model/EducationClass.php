@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * EducationClass class
@@ -122,7 +122,7 @@ class EducationClass extends Entity
     public function getCreatedBy()
     {
         if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["createdBy"], "Microsoft\Graph\Beta\Model\IdentitySet")) {
                 return $this->_propDict["createdBy"];
             } else {
                 $this->_propDict["createdBy"] = new IdentitySet($this->_propDict["createdBy"]);
@@ -242,7 +242,7 @@ class EducationClass extends Entity
     public function getExternalSource()
     {
         if (array_key_exists("externalSource", $this->_propDict)) {
-            if (is_a($this->_propDict["externalSource"], "Microsoft\Graph\Model\EducationExternalSource")) {
+            if (is_a($this->_propDict["externalSource"], "Microsoft\Graph\Beta\Model\EducationExternalSource")) {
                 return $this->_propDict["externalSource"];
             } else {
                 $this->_propDict["externalSource"] = new EducationExternalSource($this->_propDict["externalSource"]);
@@ -275,7 +275,7 @@ class EducationClass extends Entity
     public function getTerm()
     {
         if (array_key_exists("term", $this->_propDict)) {
-            if (is_a($this->_propDict["term"], "Microsoft\Graph\Model\EducationTerm")) {
+            if (is_a($this->_propDict["term"], "Microsoft\Graph\Beta\Model\EducationTerm")) {
                 return $this->_propDict["term"];
             } else {
                 $this->_propDict["term"] = new EducationTerm($this->_propDict["term"]);
@@ -299,33 +299,90 @@ class EducationClass extends Entity
         return $this;
     }
     
+    /**
+    * Gets the course
+    *
+    * @return EducationCourse The course
+    */
+    public function getCourse()
+    {
+        if (array_key_exists("course", $this->_propDict)) {
+            if (is_a($this->_propDict["course"], "Microsoft\Graph\Beta\Model\EducationCourse")) {
+                return $this->_propDict["course"];
+            } else {
+                $this->_propDict["course"] = new EducationCourse($this->_propDict["course"]);
+                return $this->_propDict["course"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the course
+    *
+    * @param EducationCourse $val The course
+    *
+    * @return EducationClass
+    */
+    public function setCourse($val)
+    {
+        $this->_propDict["course"] = $val;
+        return $this;
+    }
+    
 
      /** 
-     * Gets the schools
-    * All schools that this class is associated with. Nullable.
+     * Gets the assignments
      *
-     * @return array The schools
+     * @return array The assignments
      */
-    public function getSchools()
+    public function getAssignments()
     {
-        if (array_key_exists("schools", $this->_propDict)) {
-           return $this->_propDict["schools"];
+        if (array_key_exists("assignments", $this->_propDict)) {
+           return $this->_propDict["assignments"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the schools
-    * All schools that this class is associated with. Nullable.
+    * Sets the assignments
     *
-    * @param EducationSchool $val The schools
+    * @param EducationAssignment $val The assignments
     *
     * @return EducationClass
     */
-    public function setSchools($val)
+    public function setAssignments($val)
     {
-		$this->_propDict["schools"] = $val;
+		$this->_propDict["assignments"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the assignmentCategories
+     *
+     * @return array The assignmentCategories
+     */
+    public function getAssignmentCategories()
+    {
+        if (array_key_exists("assignmentCategories", $this->_propDict)) {
+           return $this->_propDict["assignmentCategories"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the assignmentCategories
+    *
+    * @param EducationCategory $val The assignmentCategories
+    *
+    * @return EducationClass
+    */
+    public function setAssignmentCategories($val)
+    {
+		$this->_propDict["assignmentCategories"] = $val;
         return $this;
     }
     
@@ -389,6 +446,36 @@ class EducationClass extends Entity
         return $this;
     }
     
+
+     /** 
+     * Gets the schools
+    * All schools that this class is associated with. Nullable.
+     *
+     * @return array The schools
+     */
+    public function getSchools()
+    {
+        if (array_key_exists("schools", $this->_propDict)) {
+           return $this->_propDict["schools"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the schools
+    * All schools that this class is associated with. Nullable.
+    *
+    * @param EducationSchool $val The schools
+    *
+    * @return EducationClass
+    */
+    public function setSchools($val)
+    {
+		$this->_propDict["schools"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the group
     * The directory group corresponding to this class.
@@ -398,7 +485,7 @@ class EducationClass extends Entity
     public function getGroup()
     {
         if (array_key_exists("group", $this->_propDict)) {
-            if (is_a($this->_propDict["group"], "Microsoft\Graph\Model\Group")) {
+            if (is_a($this->_propDict["group"], "Microsoft\Graph\Beta\Model\Group")) {
                 return $this->_propDict["group"];
             } else {
                 $this->_propDict["group"] = new Group($this->_propDict["group"]);
@@ -419,34 +506,6 @@ class EducationClass extends Entity
     public function setGroup($val)
     {
         $this->_propDict["group"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the assignments
-     *
-     * @return array The assignments
-     */
-    public function getAssignments()
-    {
-        if (array_key_exists("assignments", $this->_propDict)) {
-           return $this->_propDict["assignments"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the assignments
-    *
-    * @param EducationAssignment $val The assignments
-    *
-    * @return EducationClass
-    */
-    public function setAssignments($val)
-    {
-		$this->_propDict["assignments"] = $val;
         return $this;
     }
     

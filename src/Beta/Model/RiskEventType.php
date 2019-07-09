@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 use Microsoft\Graph\Core\Enum;
 
@@ -40,5 +40,10 @@ class RiskEventType extends Enum
     const LEAKED_CREDENTIALS = "leakedCredentials";
     const INVESTIGATIONS_THREAT_INTELLIGENCE = "investigationsThreatIntelligence";
     const GENERIC = "generic";
+    const ADMIN_CONFIRMED_USER_COMPROMISED = "adminConfirmedUserCompromised";
+    const MCAS_IMPOSSIBLE_TRAVEL = "mcasImpossibleTravel";
+    const MCAS_SUSPICIOUS_INBOX_MANIPULATION_RULES = "mcasSuspiciousInboxManipulationRules";
+    const INVESTIGATIONS_THREAT_INTELLIGENCE_SIGNIN_LINKED = "investigationsThreatIntelligenceSigninLinked";
+    const MALICIOUS_IP_ADDRESS_VALID_CREDENTIALS_BLOCKED_IP = "maliciousIPAddressValidCredentialsBlockedIP";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

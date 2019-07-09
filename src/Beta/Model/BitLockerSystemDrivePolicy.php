@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * BitLockerSystemDrivePolicy class
 *
@@ -35,7 +35,7 @@ class BitLockerSystemDrivePolicy extends Entity
     public function getEncryptionMethod()
     {
         if (array_key_exists("encryptionMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["encryptionMethod"], "Microsoft\Graph\Model\BitLockerEncryptionMethod")) {
+            if (is_a($this->_propDict["encryptionMethod"], "Microsoft\Graph\Beta\Model\BitLockerEncryptionMethod")) {
                 return $this->_propDict["encryptionMethod"];
             } else {
                 $this->_propDict["encryptionMethod"] = new BitLockerEncryptionMethod($this->_propDict["encryptionMethod"]);
@@ -124,7 +124,7 @@ class BitLockerSystemDrivePolicy extends Entity
     public function getStartupAuthenticationTpmUsage()
     {
         if (array_key_exists("startupAuthenticationTpmUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["startupAuthenticationTpmUsage"], "Microsoft\Graph\Model\ConfigurationUsage")) {
+            if (is_a($this->_propDict["startupAuthenticationTpmUsage"], "Microsoft\Graph\Beta\Model\ConfigurationUsage")) {
                 return $this->_propDict["startupAuthenticationTpmUsage"];
             } else {
                 $this->_propDict["startupAuthenticationTpmUsage"] = new ConfigurationUsage($this->_propDict["startupAuthenticationTpmUsage"]);
@@ -157,7 +157,7 @@ class BitLockerSystemDrivePolicy extends Entity
     public function getStartupAuthenticationTpmPinUsage()
     {
         if (array_key_exists("startupAuthenticationTpmPinUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["startupAuthenticationTpmPinUsage"], "Microsoft\Graph\Model\ConfigurationUsage")) {
+            if (is_a($this->_propDict["startupAuthenticationTpmPinUsage"], "Microsoft\Graph\Beta\Model\ConfigurationUsage")) {
                 return $this->_propDict["startupAuthenticationTpmPinUsage"];
             } else {
                 $this->_propDict["startupAuthenticationTpmPinUsage"] = new ConfigurationUsage($this->_propDict["startupAuthenticationTpmPinUsage"]);
@@ -190,7 +190,7 @@ class BitLockerSystemDrivePolicy extends Entity
     public function getStartupAuthenticationTpmKeyUsage()
     {
         if (array_key_exists("startupAuthenticationTpmKeyUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["startupAuthenticationTpmKeyUsage"], "Microsoft\Graph\Model\ConfigurationUsage")) {
+            if (is_a($this->_propDict["startupAuthenticationTpmKeyUsage"], "Microsoft\Graph\Beta\Model\ConfigurationUsage")) {
                 return $this->_propDict["startupAuthenticationTpmKeyUsage"];
             } else {
                 $this->_propDict["startupAuthenticationTpmKeyUsage"] = new ConfigurationUsage($this->_propDict["startupAuthenticationTpmKeyUsage"]);
@@ -223,7 +223,7 @@ class BitLockerSystemDrivePolicy extends Entity
     public function getStartupAuthenticationTpmPinAndKeyUsage()
     {
         if (array_key_exists("startupAuthenticationTpmPinAndKeyUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["startupAuthenticationTpmPinAndKeyUsage"], "Microsoft\Graph\Model\ConfigurationUsage")) {
+            if (is_a($this->_propDict["startupAuthenticationTpmPinAndKeyUsage"], "Microsoft\Graph\Beta\Model\ConfigurationUsage")) {
                 return $this->_propDict["startupAuthenticationTpmPinAndKeyUsage"];
             } else {
                 $this->_propDict["startupAuthenticationTpmPinAndKeyUsage"] = new ConfigurationUsage($this->_propDict["startupAuthenticationTpmPinAndKeyUsage"]);
@@ -284,7 +284,7 @@ class BitLockerSystemDrivePolicy extends Entity
     public function getRecoveryOptions()
     {
         if (array_key_exists("recoveryOptions", $this->_propDict)) {
-            if (is_a($this->_propDict["recoveryOptions"], "Microsoft\Graph\Model\BitLockerRecoveryOptions")) {
+            if (is_a($this->_propDict["recoveryOptions"], "Microsoft\Graph\Beta\Model\BitLockerRecoveryOptions")) {
                 return $this->_propDict["recoveryOptions"];
             } else {
                 $this->_propDict["recoveryOptions"] = new BitLockerRecoveryOptions($this->_propDict["recoveryOptions"]);

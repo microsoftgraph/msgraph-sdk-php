@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * EducationSynchronizationProfileStatus class
@@ -34,7 +34,7 @@ class EducationSynchronizationProfileStatus extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Microsoft\Graph\Model\EducationSynchronizationStatus")) {
+            if (is_a($this->_propDict["status"], "Microsoft\Graph\Beta\Model\EducationSynchronizationStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new EducationSynchronizationStatus($this->_propDict["status"]);

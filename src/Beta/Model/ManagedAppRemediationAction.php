@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 use Microsoft\Graph\Core\Enum;
 
@@ -33,4 +33,5 @@ class ManagedAppRemediationAction extends Enum
     */
     const BLOCK = "block";
     const WIPE = "wipe";
+    const WARN = "warn";
 }

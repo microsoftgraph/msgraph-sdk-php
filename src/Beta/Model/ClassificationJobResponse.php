@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * ClassificationJobResponse class
@@ -34,7 +34,7 @@ class ClassificationJobResponse extends JobResponseBase
     public function getResult()
     {
         if (array_key_exists("result", $this->_propDict)) {
-            if (is_a($this->_propDict["result"], "Microsoft\Graph\Model\DetectedSensitiveContentWrapper")) {
+            if (is_a($this->_propDict["result"], "Microsoft\Graph\Beta\Model\DetectedSensitiveContentWrapper")) {
                 return $this->_propDict["result"];
             } else {
                 $this->_propDict["result"] = new DetectedSensitiveContentWrapper($this->_propDict["result"]);

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * MeetingCapability class
 *
@@ -60,7 +60,7 @@ class MeetingCapability extends Entity
     public function getAutoAdmittedUsers()
     {
         if (array_key_exists("autoAdmittedUsers", $this->_propDict)) {
-            if (is_a($this->_propDict["autoAdmittedUsers"], "Microsoft\Graph\Model\AutoAdmittedUsersType")) {
+            if (is_a($this->_propDict["autoAdmittedUsers"], "Microsoft\Graph\Beta\Model\AutoAdmittedUsersType")) {
                 return $this->_propDict["autoAdmittedUsers"];
             } else {
                 $this->_propDict["autoAdmittedUsers"] = new AutoAdmittedUsersType($this->_propDict["autoAdmittedUsers"]);

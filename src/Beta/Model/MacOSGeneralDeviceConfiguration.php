@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * MacOSGeneralDeviceConfiguration class
@@ -65,7 +65,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     public function getCompliantAppListType()
     {
         if (array_key_exists("compliantAppListType", $this->_propDict)) {
-            if (is_a($this->_propDict["compliantAppListType"], "Microsoft\Graph\Model\AppListType")) {
+            if (is_a($this->_propDict["compliantAppListType"], "Microsoft\Graph\Beta\Model\AppListType")) {
                 return $this->_propDict["compliantAppListType"];
             } else {
                 $this->_propDict["compliantAppListType"] = new AppListType($this->_propDict["compliantAppListType"]);
@@ -330,7 +330,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     public function getPasswordRequiredType()
     {
         if (array_key_exists("passwordRequiredType", $this->_propDict)) {
-            if (is_a($this->_propDict["passwordRequiredType"], "Microsoft\Graph\Model\RequiredPasswordType")) {
+            if (is_a($this->_propDict["passwordRequiredType"], "Microsoft\Graph\Beta\Model\RequiredPasswordType")) {
                 return $this->_propDict["passwordRequiredType"];
             } else {
                 $this->_propDict["passwordRequiredType"] = new RequiredPasswordType($this->_propDict["passwordRequiredType"]);
@@ -1105,6 +1105,296 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     public function setPasswordBlockAirDropSharing($val)
     {
         $this->_propDict["passwordBlockAirDropSharing"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the softwareUpdatesEnforcedDelayInDays
+    * Sets how many days a software update will be delyed for a supervised device. Valid values 0 to 90
+    *
+    * @return int The softwareUpdatesEnforcedDelayInDays
+    */
+    public function getSoftwareUpdatesEnforcedDelayInDays()
+    {
+        if (array_key_exists("softwareUpdatesEnforcedDelayInDays", $this->_propDict)) {
+            return $this->_propDict["softwareUpdatesEnforcedDelayInDays"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the softwareUpdatesEnforcedDelayInDays
+    * Sets how many days a software update will be delyed for a supervised device. Valid values 0 to 90
+    *
+    * @param int $val The softwareUpdatesEnforcedDelayInDays
+    *
+    * @return MacOSGeneralDeviceConfiguration
+    */
+    public function setSoftwareUpdatesEnforcedDelayInDays($val)
+    {
+        $this->_propDict["softwareUpdatesEnforcedDelayInDays"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the softwareUpdatesForceDelayed
+    * Indicates whether or not to delay user visibility of software updates when the device is in supervised mode.
+    *
+    * @return bool The softwareUpdatesForceDelayed
+    */
+    public function getSoftwareUpdatesForceDelayed()
+    {
+        if (array_key_exists("softwareUpdatesForceDelayed", $this->_propDict)) {
+            return $this->_propDict["softwareUpdatesForceDelayed"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the softwareUpdatesForceDelayed
+    * Indicates whether or not to delay user visibility of software updates when the device is in supervised mode.
+    *
+    * @param bool $val The softwareUpdatesForceDelayed
+    *
+    * @return MacOSGeneralDeviceConfiguration
+    */
+    public function setSoftwareUpdatesForceDelayed($val)
+    {
+        $this->_propDict["softwareUpdatesForceDelayed"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the contentCachingBlocked
+    * Indicates whether or not to allow content caching.
+    *
+    * @return bool The contentCachingBlocked
+    */
+    public function getContentCachingBlocked()
+    {
+        if (array_key_exists("contentCachingBlocked", $this->_propDict)) {
+            return $this->_propDict["contentCachingBlocked"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the contentCachingBlocked
+    * Indicates whether or not to allow content caching.
+    *
+    * @param bool $val The contentCachingBlocked
+    *
+    * @return MacOSGeneralDeviceConfiguration
+    */
+    public function setContentCachingBlocked($val)
+    {
+        $this->_propDict["contentCachingBlocked"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the iCloudBlockPhotoLibrary
+    * Indicates whether or not to block iCloud Photo Library.
+    *
+    * @return bool The iCloudBlockPhotoLibrary
+    */
+    public function getICloudBlockPhotoLibrary()
+    {
+        if (array_key_exists("iCloudBlockPhotoLibrary", $this->_propDict)) {
+            return $this->_propDict["iCloudBlockPhotoLibrary"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the iCloudBlockPhotoLibrary
+    * Indicates whether or not to block iCloud Photo Library.
+    *
+    * @param bool $val The iCloudBlockPhotoLibrary
+    *
+    * @return MacOSGeneralDeviceConfiguration
+    */
+    public function setICloudBlockPhotoLibrary($val)
+    {
+        $this->_propDict["iCloudBlockPhotoLibrary"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the screenCaptureBlocked
+    * Indicates whether or not to block the user from taking Screenshots.
+    *
+    * @return bool The screenCaptureBlocked
+    */
+    public function getScreenCaptureBlocked()
+    {
+        if (array_key_exists("screenCaptureBlocked", $this->_propDict)) {
+            return $this->_propDict["screenCaptureBlocked"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the screenCaptureBlocked
+    * Indicates whether or not to block the user from taking Screenshots.
+    *
+    * @param bool $val The screenCaptureBlocked
+    *
+    * @return MacOSGeneralDeviceConfiguration
+    */
+    public function setScreenCaptureBlocked($val)
+    {
+        $this->_propDict["screenCaptureBlocked"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the classroomAppBlockRemoteScreenObservation
+    * Indicates whether or not to allow remote screen observation by Classroom app. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
+    *
+    * @return bool The classroomAppBlockRemoteScreenObservation
+    */
+    public function getClassroomAppBlockRemoteScreenObservation()
+    {
+        if (array_key_exists("classroomAppBlockRemoteScreenObservation", $this->_propDict)) {
+            return $this->_propDict["classroomAppBlockRemoteScreenObservation"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the classroomAppBlockRemoteScreenObservation
+    * Indicates whether or not to allow remote screen observation by Classroom app. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
+    *
+    * @param bool $val The classroomAppBlockRemoteScreenObservation
+    *
+    * @return MacOSGeneralDeviceConfiguration
+    */
+    public function setClassroomAppBlockRemoteScreenObservation($val)
+    {
+        $this->_propDict["classroomAppBlockRemoteScreenObservation"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the classroomAppForceUnpromptedScreenObservation
+    * Indicates whether or not to automatically give permission to the teacher of a managed course on the Classroom app to view a student's screen without prompting. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
+    *
+    * @return bool The classroomAppForceUnpromptedScreenObservation
+    */
+    public function getClassroomAppForceUnpromptedScreenObservation()
+    {
+        if (array_key_exists("classroomAppForceUnpromptedScreenObservation", $this->_propDict)) {
+            return $this->_propDict["classroomAppForceUnpromptedScreenObservation"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the classroomAppForceUnpromptedScreenObservation
+    * Indicates whether or not to automatically give permission to the teacher of a managed course on the Classroom app to view a student's screen without prompting. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
+    *
+    * @param bool $val The classroomAppForceUnpromptedScreenObservation
+    *
+    * @return MacOSGeneralDeviceConfiguration
+    */
+    public function setClassroomAppForceUnpromptedScreenObservation($val)
+    {
+        $this->_propDict["classroomAppForceUnpromptedScreenObservation"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the classroomForceAutomaticallyJoinClasses
+    * Indicates whether or not to automatically give permission to the teacher's requests, without prompting the student. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
+    *
+    * @return bool The classroomForceAutomaticallyJoinClasses
+    */
+    public function getClassroomForceAutomaticallyJoinClasses()
+    {
+        if (array_key_exists("classroomForceAutomaticallyJoinClasses", $this->_propDict)) {
+            return $this->_propDict["classroomForceAutomaticallyJoinClasses"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the classroomForceAutomaticallyJoinClasses
+    * Indicates whether or not to automatically give permission to the teacher's requests, without prompting the student. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
+    *
+    * @param bool $val The classroomForceAutomaticallyJoinClasses
+    *
+    * @return MacOSGeneralDeviceConfiguration
+    */
+    public function setClassroomForceAutomaticallyJoinClasses($val)
+    {
+        $this->_propDict["classroomForceAutomaticallyJoinClasses"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the classroomForceRequestPermissionToLeaveClasses
+    * Indicates whether a student enrolled in an unmanaged course via Classroom will be required to request permission from the teacher when attempting to leave the course. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
+    *
+    * @return bool The classroomForceRequestPermissionToLeaveClasses
+    */
+    public function getClassroomForceRequestPermissionToLeaveClasses()
+    {
+        if (array_key_exists("classroomForceRequestPermissionToLeaveClasses", $this->_propDict)) {
+            return $this->_propDict["classroomForceRequestPermissionToLeaveClasses"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the classroomForceRequestPermissionToLeaveClasses
+    * Indicates whether a student enrolled in an unmanaged course via Classroom will be required to request permission from the teacher when attempting to leave the course. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
+    *
+    * @param bool $val The classroomForceRequestPermissionToLeaveClasses
+    *
+    * @return MacOSGeneralDeviceConfiguration
+    */
+    public function setClassroomForceRequestPermissionToLeaveClasses($val)
+    {
+        $this->_propDict["classroomForceRequestPermissionToLeaveClasses"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the classroomForceUnpromptedAppAndDeviceLock
+    * Indicates whether or not to allow the teacher to lock apps or the device without prompting the student. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
+    *
+    * @return bool The classroomForceUnpromptedAppAndDeviceLock
+    */
+    public function getClassroomForceUnpromptedAppAndDeviceLock()
+    {
+        if (array_key_exists("classroomForceUnpromptedAppAndDeviceLock", $this->_propDict)) {
+            return $this->_propDict["classroomForceUnpromptedAppAndDeviceLock"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the classroomForceUnpromptedAppAndDeviceLock
+    * Indicates whether or not to allow the teacher to lock apps or the device without prompting the student. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
+    *
+    * @param bool $val The classroomForceUnpromptedAppAndDeviceLock
+    *
+    * @return MacOSGeneralDeviceConfiguration
+    */
+    public function setClassroomForceUnpromptedAppAndDeviceLock($val)
+    {
+        $this->_propDict["classroomForceUnpromptedAppAndDeviceLock"] = boolval($val);
         return $this;
     }
     
