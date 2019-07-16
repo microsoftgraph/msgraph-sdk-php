@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * WorkbookChartLegend class
@@ -122,7 +122,7 @@ class WorkbookChartLegend extends Entity
     public function getFormat()
     {
         if (array_key_exists("format", $this->_propDict)) {
-            if (is_a($this->_propDict["format"], "Microsoft\Graph\Model\WorkbookChartLegendFormat")) {
+            if (is_a($this->_propDict["format"], "Microsoft\Graph\Beta\Model\WorkbookChartLegendFormat")) {
                 return $this->_propDict["format"];
             } else {
                 $this->_propDict["format"] = new WorkbookChartLegendFormat($this->_propDict["format"]);

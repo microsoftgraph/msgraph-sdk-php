@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * OnenoteSection class
@@ -57,14 +57,14 @@ class OnenoteSection extends OnenoteEntityHierarchyModel
     
     /**
     * Gets the links
-    * Links for opening the section. The oneNoteClientURL link opens the section in the OneNote native client if it's installed. The oneNoteWebURL link opens the section in OneNote Online.
+    * Links for opening the section. The oneNoteClientURL link opens the section in the OneNote native client if it's installed. The oneNoteWebURL link opens the section in OneNote on the web.
     *
     * @return SectionLinks The links
     */
     public function getLinks()
     {
         if (array_key_exists("links", $this->_propDict)) {
-            if (is_a($this->_propDict["links"], "Microsoft\Graph\Model\SectionLinks")) {
+            if (is_a($this->_propDict["links"], "Microsoft\Graph\Beta\Model\SectionLinks")) {
                 return $this->_propDict["links"];
             } else {
                 $this->_propDict["links"] = new SectionLinks($this->_propDict["links"]);
@@ -76,7 +76,7 @@ class OnenoteSection extends OnenoteEntityHierarchyModel
     
     /**
     * Sets the links
-    * Links for opening the section. The oneNoteClientURL link opens the section in the OneNote native client if it's installed. The oneNoteWebURL link opens the section in OneNote Online.
+    * Links for opening the section. The oneNoteClientURL link opens the section in the OneNote native client if it's installed. The oneNoteWebURL link opens the section in OneNote on the web.
     *
     * @param SectionLinks $val The links
     *
@@ -126,7 +126,7 @@ class OnenoteSection extends OnenoteEntityHierarchyModel
     public function getParentNotebook()
     {
         if (array_key_exists("parentNotebook", $this->_propDict)) {
-            if (is_a($this->_propDict["parentNotebook"], "Microsoft\Graph\Model\Notebook")) {
+            if (is_a($this->_propDict["parentNotebook"], "Microsoft\Graph\Beta\Model\Notebook")) {
                 return $this->_propDict["parentNotebook"];
             } else {
                 $this->_propDict["parentNotebook"] = new Notebook($this->_propDict["parentNotebook"]);
@@ -159,7 +159,7 @@ class OnenoteSection extends OnenoteEntityHierarchyModel
     public function getParentSectionGroup()
     {
         if (array_key_exists("parentSectionGroup", $this->_propDict)) {
-            if (is_a($this->_propDict["parentSectionGroup"], "Microsoft\Graph\Model\SectionGroup")) {
+            if (is_a($this->_propDict["parentSectionGroup"], "Microsoft\Graph\Beta\Model\SectionGroup")) {
                 return $this->_propDict["parentSectionGroup"];
             } else {
                 $this->_propDict["parentSectionGroup"] = new SectionGroup($this->_propDict["parentSectionGroup"]);

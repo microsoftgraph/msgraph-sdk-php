@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * WindowsManagementApp class
@@ -64,7 +64,7 @@ class WindowsManagementApp extends Entity
     public function getHealthSummary()
     {
         if (array_key_exists("healthSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["healthSummary"], "Microsoft\Graph\Model\WindowsManagementAppHealthSummary")) {
+            if (is_a($this->_propDict["healthSummary"], "Microsoft\Graph\Beta\Model\WindowsManagementAppHealthSummary")) {
                 return $this->_propDict["healthSummary"];
             } else {
                 $this->_propDict["healthSummary"] = new WindowsManagementAppHealthSummary($this->_propDict["healthSummary"]);

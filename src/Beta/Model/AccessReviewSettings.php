@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * AccessReviewSettings class
 *
@@ -112,7 +112,7 @@ class AccessReviewSettings extends Entity
     public function getRecurrenceSettings()
     {
         if (array_key_exists("recurrenceSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["recurrenceSettings"], "Microsoft\Graph\Model\AccessReviewRecurrenceSettings")) {
+            if (is_a($this->_propDict["recurrenceSettings"], "Microsoft\Graph\Beta\Model\AccessReviewRecurrenceSettings")) {
                 return $this->_propDict["recurrenceSettings"];
             } else {
                 $this->_propDict["recurrenceSettings"] = new AccessReviewRecurrenceSettings($this->_propDict["recurrenceSettings"]);
@@ -195,7 +195,7 @@ class AccessReviewSettings extends Entity
     public function getAutoReviewSettings()
     {
         if (array_key_exists("autoReviewSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["autoReviewSettings"], "Microsoft\Graph\Model\AutoReviewSettings")) {
+            if (is_a($this->_propDict["autoReviewSettings"], "Microsoft\Graph\Beta\Model\AutoReviewSettings")) {
                 return $this->_propDict["autoReviewSettings"];
             } else {
                 $this->_propDict["autoReviewSettings"] = new AutoReviewSettings($this->_propDict["autoReviewSettings"]);
@@ -268,5 +268,36 @@ class AccessReviewSettings extends Entity
     {
         $this->_propDict["accessRecommendationsEnabled"] = $val;
         return $this;
+    }
+
+    /**
+    * Gets the applyDeniedDecisionsSettings
+    *
+    * @return AccessReviewDenyActionSettings The applyDeniedDecisionsSettings
+    */
+    public function getApplyDeniedDecisionsSettings()
+    {
+        if (array_key_exists("applyDeniedDecisionsSettings", $this->_propDict)) {
+            if (is_a($this->_propDict["applyDeniedDecisionsSettings"], "Microsoft\Graph\Beta\Model\AccessReviewDenyActionSettings")) {
+                return $this->_propDict["applyDeniedDecisionsSettings"];
+            } else {
+                $this->_propDict["applyDeniedDecisionsSettings"] = new AccessReviewDenyActionSettings($this->_propDict["applyDeniedDecisionsSettings"]);
+                return $this->_propDict["applyDeniedDecisionsSettings"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the applyDeniedDecisionsSettings
+    *
+    * @param AccessReviewDenyActionSettings $val The value to assign to the applyDeniedDecisionsSettings
+    *
+    * @return AccessReviewSettings The AccessReviewSettings
+    */
+    public function setApplyDeniedDecisionsSettings($val)
+    {
+        $this->_propDict["applyDeniedDecisionsSettings"] = $val;
+         return $this;
     }
 }
