@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 use Microsoft\Graph\Core\Enum;
 
@@ -35,4 +35,5 @@ class EducationUserRole extends Enum
     const TEACHER = "teacher";
     const NONE = "none";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
+    const FACULTY = "faculty";
 }

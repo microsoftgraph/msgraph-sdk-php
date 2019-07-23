@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 use Microsoft\Graph\Core\Enum;
 
@@ -37,4 +37,8 @@ class AppliedConditionalAccessPolicyResult extends Enum
     const NOT_ENABLED = "notEnabled";
     const UNKNOWN = "unknown";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
+    const REPORT_ONLY_SUCCESS = "reportOnlySuccess";
+    const REPORT_ONLY_FAILURE = "reportOnlyFailure";
+    const REPORT_ONLY_NOT_APPLIED = "reportOnlyNotApplied";
+    const REPORT_ONLY_INTERRUPTED = "reportOnlyInterrupted";
 }

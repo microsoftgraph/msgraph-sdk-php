@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * AndroidManagedStoreAppConfiguration class
@@ -111,6 +111,35 @@ class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppConfigur
     public function setPermissionActions($val)
     {
 		$this->_propDict["permissionActions"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the appSupportsOemConfig
+    * Whether or not this AppConfig is an OEMConfig policy.
+    *
+    * @return bool The appSupportsOemConfig
+    */
+    public function getAppSupportsOemConfig()
+    {
+        if (array_key_exists("appSupportsOemConfig", $this->_propDict)) {
+            return $this->_propDict["appSupportsOemConfig"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the appSupportsOemConfig
+    * Whether or not this AppConfig is an OEMConfig policy.
+    *
+    * @param bool $val The appSupportsOemConfig
+    *
+    * @return AndroidManagedStoreAppConfiguration
+    */
+    public function setAppSupportsOemConfig($val)
+    {
+        $this->_propDict["appSupportsOemConfig"] = boolval($val);
         return $this;
     }
     

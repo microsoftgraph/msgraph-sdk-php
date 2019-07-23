@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * IosVpnConfiguration class
@@ -35,7 +35,7 @@ class IosVpnConfiguration extends AppleVpnConfiguration
     public function getProviderType()
     {
         if (array_key_exists("providerType", $this->_propDict)) {
-            if (is_a($this->_propDict["providerType"], "Microsoft\Graph\Model\VpnProviderType")) {
+            if (is_a($this->_propDict["providerType"], "Microsoft\Graph\Beta\Model\VpnProviderType")) {
                 return $this->_propDict["providerType"];
             } else {
                 $this->_propDict["providerType"] = new VpnProviderType($this->_propDict["providerType"]);
@@ -184,7 +184,7 @@ class IosVpnConfiguration extends AppleVpnConfiguration
     public function getIdentityCertificate()
     {
         if (array_key_exists("identityCertificate", $this->_propDict)) {
-            if (is_a($this->_propDict["identityCertificate"], "Microsoft\Graph\Model\IosCertificateProfileBase")) {
+            if (is_a($this->_propDict["identityCertificate"], "Microsoft\Graph\Beta\Model\IosCertificateProfileBase")) {
                 return $this->_propDict["identityCertificate"];
             } else {
                 $this->_propDict["identityCertificate"] = new IosCertificateProfileBase($this->_propDict["identityCertificate"]);
@@ -205,6 +205,39 @@ class IosVpnConfiguration extends AppleVpnConfiguration
     public function setIdentityCertificate($val)
     {
         $this->_propDict["identityCertificate"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the derivedCredentialSettings
+    * Tenant level settings for the Derived Credentials to be used for authentication.
+    *
+    * @return DeviceManagementDerivedCredentialSettings The derivedCredentialSettings
+    */
+    public function getDerivedCredentialSettings()
+    {
+        if (array_key_exists("derivedCredentialSettings", $this->_propDict)) {
+            if (is_a($this->_propDict["derivedCredentialSettings"], "Microsoft\Graph\Beta\Model\DeviceManagementDerivedCredentialSettings")) {
+                return $this->_propDict["derivedCredentialSettings"];
+            } else {
+                $this->_propDict["derivedCredentialSettings"] = new DeviceManagementDerivedCredentialSettings($this->_propDict["derivedCredentialSettings"]);
+                return $this->_propDict["derivedCredentialSettings"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the derivedCredentialSettings
+    * Tenant level settings for the Derived Credentials to be used for authentication.
+    *
+    * @param DeviceManagementDerivedCredentialSettings $val The derivedCredentialSettings
+    *
+    * @return IosVpnConfiguration
+    */
+    public function setDerivedCredentialSettings($val)
+    {
+        $this->_propDict["derivedCredentialSettings"] = $val;
         return $this;
     }
     

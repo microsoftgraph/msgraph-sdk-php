@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * OnenoteOperation class
@@ -93,7 +93,7 @@ class OnenoteOperation extends Operation
     public function getError()
     {
         if (array_key_exists("error", $this->_propDict)) {
-            if (is_a($this->_propDict["error"], "Microsoft\Graph\Model\OnenoteOperationError")) {
+            if (is_a($this->_propDict["error"], "Microsoft\Graph\Beta\Model\OnenoteOperationError")) {
                 return $this->_propDict["error"];
             } else {
                 $this->_propDict["error"] = new OnenoteOperationError($this->_propDict["error"]);
