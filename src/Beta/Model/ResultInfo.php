@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * ResultInfo class
 *
@@ -52,32 +52,6 @@ class ResultInfo extends Entity
         return $this;
     }
     /**
-    * Gets the subCode
-    *
-    * @return string The subCode
-    */
-    public function getSubCode()
-    {
-        if (array_key_exists("subCode", $this->_propDict)) {
-            return $this->_propDict["subCode"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the subCode
-    *
-    * @param string $val The value of the subCode
-    *
-    * @return ResultInfo
-    */
-    public function setSubCode($val)
-    {
-        $this->_propDict["subCode"] = $val;
-        return $this;
-    }
-    /**
     * Gets the message
     *
     * @return string The message
@@ -101,6 +75,32 @@ class ResultInfo extends Entity
     public function setMessage($val)
     {
         $this->_propDict["message"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the subCode
+    *
+    * @return string The subCode
+    */
+    public function getSubCode()
+    {
+        if (array_key_exists("subCode", $this->_propDict)) {
+            return $this->_propDict["subCode"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the subCode
+    *
+    * @param string $val The value of the subCode
+    *
+    * @return ResultInfo
+    */
+    public function setSubCode($val)
+    {
+        $this->_propDict["subCode"] = $val;
         return $this;
     }
 }

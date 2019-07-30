@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * UpdateWindowsDeviceAccountActionParameter class
 *
@@ -35,7 +35,7 @@ class UpdateWindowsDeviceAccountActionParameter extends Entity
     public function getDeviceAccount()
     {
         if (array_key_exists("deviceAccount", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceAccount"], "Microsoft\Graph\Model\WindowsDeviceAccount")) {
+            if (is_a($this->_propDict["deviceAccount"], "Microsoft\Graph\Beta\Model\WindowsDeviceAccount")) {
                 return $this->_propDict["deviceAccount"];
             } else {
                 $this->_propDict["deviceAccount"] = new WindowsDeviceAccount($this->_propDict["deviceAccount"]);

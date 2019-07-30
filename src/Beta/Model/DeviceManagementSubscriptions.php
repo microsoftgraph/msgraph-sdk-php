@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 use Microsoft\Graph\Core\Enum;
 
@@ -35,6 +35,6 @@ class DeviceManagementSubscriptions extends Enum
     const INTUNE = "intune";
     const OFFICE365 = "office365";
     const INTUNE_PREMIUM = "intunePremium";
-    const INTUNE_EDU = "intuneEDU";
-    const INTUNE_SMB = "intuneSMB";
+    const INTUNE__EDU = "intuneEDU";
+    const INTUNE__SMB = "intuneSMB";
 }

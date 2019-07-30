@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * PlannerPlanDetails class
@@ -35,7 +35,7 @@ class PlannerPlanDetails extends Entity
     public function getSharedWith()
     {
         if (array_key_exists("sharedWith", $this->_propDict)) {
-            if (is_a($this->_propDict["sharedWith"], "Microsoft\Graph\Model\PlannerUserIds")) {
+            if (is_a($this->_propDict["sharedWith"], "Microsoft\Graph\Beta\Model\PlannerUserIds")) {
                 return $this->_propDict["sharedWith"];
             } else {
                 $this->_propDict["sharedWith"] = new PlannerUserIds($this->_propDict["sharedWith"]);
@@ -68,7 +68,7 @@ class PlannerPlanDetails extends Entity
     public function getCategoryDescriptions()
     {
         if (array_key_exists("categoryDescriptions", $this->_propDict)) {
-            if (is_a($this->_propDict["categoryDescriptions"], "Microsoft\Graph\Model\PlannerCategoryDescriptions")) {
+            if (is_a($this->_propDict["categoryDescriptions"], "Microsoft\Graph\Beta\Model\PlannerCategoryDescriptions")) {
                 return $this->_propDict["categoryDescriptions"];
             } else {
                 $this->_propDict["categoryDescriptions"] = new PlannerCategoryDescriptions($this->_propDict["categoryDescriptions"]);
@@ -100,7 +100,7 @@ class PlannerPlanDetails extends Entity
     public function getContextDetails()
     {
         if (array_key_exists("contextDetails", $this->_propDict)) {
-            if (is_a($this->_propDict["contextDetails"], "Microsoft\Graph\Model\PlannerPlanContextDetailsCollection")) {
+            if (is_a($this->_propDict["contextDetails"], "Microsoft\Graph\Beta\Model\PlannerPlanContextDetailsCollection")) {
                 return $this->_propDict["contextDetails"];
             } else {
                 $this->_propDict["contextDetails"] = new PlannerPlanContextDetailsCollection($this->_propDict["contextDetails"]);

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * AdminConsent class
 *
@@ -35,7 +35,7 @@ class AdminConsent extends Entity
     public function getShareAPNSData()
     {
         if (array_key_exists("shareAPNSData", $this->_propDict)) {
-            if (is_a($this->_propDict["shareAPNSData"], "Microsoft\Graph\Model\AdminConsentState")) {
+            if (is_a($this->_propDict["shareAPNSData"], "Microsoft\Graph\Beta\Model\AdminConsentState")) {
                 return $this->_propDict["shareAPNSData"];
             } else {
                 $this->_propDict["shareAPNSData"] = new AdminConsentState($this->_propDict["shareAPNSData"]);

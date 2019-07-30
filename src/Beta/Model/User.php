@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * User class
@@ -204,7 +204,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the companyName
-    * The company name which the user is associated. Read-only.
+    * The company name which the user is associated. This property can be useful for describing the company that an external user comes from.
     *
     * @return string The companyName
     */
@@ -219,7 +219,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the companyName
-    * The company name which the user is associated. Read-only.
+    * The company name which the user is associated. This property can be useful for describing the company that an external user comes from.
     *
     * @param string $val The companyName
     *
@@ -286,6 +286,39 @@ class User extends DirectoryObject
     public function setCountry($val)
     {
         $this->_propDict["country"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the createdDateTime
+    * The created date of the user object.
+    *
+    * @return \DateTime The createdDateTime
+    */
+    public function getCreatedDateTime()
+    {
+        if (array_key_exists("createdDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+                return $this->_propDict["createdDateTime"];
+            } else {
+                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
+                return $this->_propDict["createdDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the createdDateTime
+    * The created date of the user object.
+    *
+    * @param \DateTime $val The createdDateTime
+    *
+    * @return User
+    */
+    public function setCreatedDateTime($val)
+    {
+        $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
     
@@ -377,6 +410,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the employeeId
+    * The employee identifier assigned to the user by the organization. Supports $filter.
     *
     * @return string The employeeId
     */
@@ -391,6 +425,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the employeeId
+    * The employee identifier assigned to the user by the organization. Supports $filter.
     *
     * @param string $val The employeeId
     *
@@ -404,6 +439,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the faxNumber
+    * The fax number of the user.
     *
     * @return string The faxNumber
     */
@@ -418,6 +454,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the faxNumber
+    * The fax number of the user.
     *
     * @param string $val The faxNumber
     *
@@ -489,6 +526,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the isResourceAccount
+    * true if the user is a resource account; otherwise, false. Null value should be considered false.
     *
     * @return bool The isResourceAccount
     */
@@ -503,6 +541,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the isResourceAccount
+    * true if the user is a resource account; otherwise, false. Null value should be considered false.
     *
     * @param bool $val The isResourceAccount
     *
@@ -544,6 +583,37 @@ class User extends DirectoryObject
     }
     
     /**
+    * Gets the lastPasswordChangeDateTime
+    *
+    * @return \DateTime The lastPasswordChangeDateTime
+    */
+    public function getLastPasswordChangeDateTime()
+    {
+        if (array_key_exists("lastPasswordChangeDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastPasswordChangeDateTime"], "\DateTime")) {
+                return $this->_propDict["lastPasswordChangeDateTime"];
+            } else {
+                $this->_propDict["lastPasswordChangeDateTime"] = new \DateTime($this->_propDict["lastPasswordChangeDateTime"]);
+                return $this->_propDict["lastPasswordChangeDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the lastPasswordChangeDateTime
+    *
+    * @param \DateTime $val The lastPasswordChangeDateTime
+    *
+    * @return User
+    */
+    public function setLastPasswordChangeDateTime($val)
+    {
+        $this->_propDict["lastPasswordChangeDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the legalAgeGroupClassification
     * Used by enterprise applications to determine the legal age group of the user. This property is read-only and calculated based on ageGroup and consentProvidedForMinor properties. Allowed values: null, minorWithOutParentalConsent, minorWithParentalConsent, minorNoParentalConsentRequired, notAdult and adult. Refer to the legal age group property definitions for further information.)
     *
@@ -575,6 +645,7 @@ class User extends DirectoryObject
 
      /** 
      * Gets the licenseAssignmentStates
+    * State of license assignments for this user. Read-only.
      *
      * @return array The licenseAssignmentStates
      */
@@ -589,6 +660,7 @@ class User extends DirectoryObject
     
     /** 
     * Sets the licenseAssignmentStates
+    * State of license assignments for this user. Read-only.
     *
     * @param LicenseAssignmentState $val The licenseAssignmentStates
     *
@@ -689,6 +761,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the onPremisesDistinguishedName
+    * Contains the on-premises Active Directory distinguished name or DN. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only.
     *
     * @return string The onPremisesDistinguishedName
     */
@@ -703,6 +776,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the onPremisesDistinguishedName
+    * Contains the on-premises Active Directory distinguished name or DN. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only.
     *
     * @param string $val The onPremisesDistinguishedName
     *
@@ -723,7 +797,7 @@ class User extends DirectoryObject
     public function getOnPremisesExtensionAttributes()
     {
         if (array_key_exists("onPremisesExtensionAttributes", $this->_propDict)) {
-            if (is_a($this->_propDict["onPremisesExtensionAttributes"], "Microsoft\Graph\Model\OnPremisesExtensionAttributes")) {
+            if (is_a($this->_propDict["onPremisesExtensionAttributes"], "Microsoft\Graph\Beta\Model\OnPremisesExtensionAttributes")) {
                 return $this->_propDict["onPremisesExtensionAttributes"];
             } else {
                 $this->_propDict["onPremisesExtensionAttributes"] = new OnPremisesExtensionAttributes($this->_propDict["onPremisesExtensionAttributes"]);
@@ -986,6 +1060,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the otherMails
+    * A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com']. Supports $filter.
     *
     * @return string The otherMails
     */
@@ -1000,6 +1075,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the otherMails
+    * A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com']. Supports $filter.
     *
     * @param string $val The otherMails
     *
@@ -1049,7 +1125,7 @@ class User extends DirectoryObject
     public function getPasswordProfile()
     {
         if (array_key_exists("passwordProfile", $this->_propDict)) {
-            if (is_a($this->_propDict["passwordProfile"], "Microsoft\Graph\Model\PasswordProfile")) {
+            if (is_a($this->_propDict["passwordProfile"], "Microsoft\Graph\Beta\Model\PasswordProfile")) {
                 return $this->_propDict["passwordProfile"];
             } else {
                 $this->_propDict["passwordProfile"] = new PasswordProfile($this->_propDict["passwordProfile"]);
@@ -1281,6 +1357,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the showInAddressList
+    * true if the Outlook global address list should contain this user, otherwise false. If not set, this will be treated as true. For users invited through the invitation manager, this property will be set to false.
     *
     * @return bool The showInAddressList
     */
@@ -1295,6 +1372,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the showInAddressList
+    * true if the Outlook global address list should contain this user, otherwise false. If not set, this will be treated as true. For users invited through the invitation manager, this property will be set to false.
     *
     * @param bool $val The showInAddressList
     *
@@ -1303,6 +1381,39 @@ class User extends DirectoryObject
     public function setShowInAddressList($val)
     {
         $this->_propDict["showInAddressList"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the signInSessionsValidFromDateTime
+    * Any refresh tokens or sessions tokens (session cookies) issued before this time are invalid, and applications will get an error when using an invalid refresh or sessions token to acquire a delegated access token (to access APIs such as Microsoft Graph).  If this happens, the application will need to acquire a new refresh token by making a request to the authorize endpoint. Read-only. Use revokeSignInSessions to reset.
+    *
+    * @return \DateTime The signInSessionsValidFromDateTime
+    */
+    public function getSignInSessionsValidFromDateTime()
+    {
+        if (array_key_exists("signInSessionsValidFromDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["signInSessionsValidFromDateTime"], "\DateTime")) {
+                return $this->_propDict["signInSessionsValidFromDateTime"];
+            } else {
+                $this->_propDict["signInSessionsValidFromDateTime"] = new \DateTime($this->_propDict["signInSessionsValidFromDateTime"]);
+                return $this->_propDict["signInSessionsValidFromDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the signInSessionsValidFromDateTime
+    * Any refresh tokens or sessions tokens (session cookies) issued before this time are invalid, and applications will get an error when using an invalid refresh or sessions token to acquire a delegated access token (to access APIs such as Microsoft Graph).  If this happens, the application will need to acquire a new refresh token by making a request to the authorize endpoint. Read-only. Use revokeSignInSessions to reset.
+    *
+    * @param \DateTime $val The signInSessionsValidFromDateTime
+    *
+    * @return User
+    */
+    public function setSignInSessionsValidFromDateTime($val)
+    {
+        $this->_propDict["signInSessionsValidFromDateTime"] = $val;
         return $this;
     }
     
@@ -1543,7 +1654,7 @@ class User extends DirectoryObject
     public function getMailboxSettings()
     {
         if (array_key_exists("mailboxSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["mailboxSettings"], "Microsoft\Graph\Model\MailboxSettings")) {
+            if (is_a($this->_propDict["mailboxSettings"], "Microsoft\Graph\Beta\Model\MailboxSettings")) {
                 return $this->_propDict["mailboxSettings"];
             } else {
                 $this->_propDict["mailboxSettings"] = new MailboxSettings($this->_propDict["mailboxSettings"]);
@@ -1873,7 +1984,7 @@ class User extends DirectoryObject
     public function getIdentityUserRisk()
     {
         if (array_key_exists("identityUserRisk", $this->_propDict)) {
-            if (is_a($this->_propDict["identityUserRisk"], "Microsoft\Graph\Model\IdentityUserRisk")) {
+            if (is_a($this->_propDict["identityUserRisk"], "Microsoft\Graph\Beta\Model\IdentityUserRisk")) {
                 return $this->_propDict["identityUserRisk"];
             } else {
                 $this->_propDict["identityUserRisk"] = new IdentityUserRisk($this->_propDict["identityUserRisk"]);
@@ -2046,7 +2157,7 @@ class User extends DirectoryObject
 
      /** 
      * Gets the licenseDetails
-    * A collection of this user's license details. Nullable.
+    * A collection of this user's license details. Read-only.
      *
      * @return array The licenseDetails
      */
@@ -2061,7 +2172,7 @@ class User extends DirectoryObject
     
     /** 
     * Sets the licenseDetails
-    * A collection of this user's license details. Nullable.
+    * A collection of this user's license details. Read-only.
     *
     * @param LicenseDetails $val The licenseDetails
     *
@@ -2082,7 +2193,7 @@ class User extends DirectoryObject
     public function getManager()
     {
         if (array_key_exists("manager", $this->_propDict)) {
-            if (is_a($this->_propDict["manager"], "Microsoft\Graph\Model\DirectoryObject")) {
+            if (is_a($this->_propDict["manager"], "Microsoft\Graph\Beta\Model\DirectoryObject")) {
                 return $this->_propDict["manager"];
             } else {
                 $this->_propDict["manager"] = new DirectoryObject($this->_propDict["manager"]);
@@ -2321,7 +2432,7 @@ class User extends DirectoryObject
     public function getOutlook()
     {
         if (array_key_exists("outlook", $this->_propDict)) {
-            if (is_a($this->_propDict["outlook"], "Microsoft\Graph\Model\OutlookUser")) {
+            if (is_a($this->_propDict["outlook"], "Microsoft\Graph\Beta\Model\OutlookUser")) {
                 return $this->_propDict["outlook"];
             } else {
                 $this->_propDict["outlook"] = new OutlookUser($this->_propDict["outlook"]);
@@ -2442,7 +2553,7 @@ class User extends DirectoryObject
     public function getCalendar()
     {
         if (array_key_exists("calendar", $this->_propDict)) {
-            if (is_a($this->_propDict["calendar"], "Microsoft\Graph\Model\Calendar")) {
+            if (is_a($this->_propDict["calendar"], "Microsoft\Graph\Beta\Model\Calendar")) {
                 return $this->_propDict["calendar"];
             } else {
                 $this->_propDict["calendar"] = new Calendar($this->_propDict["calendar"]);
@@ -2685,7 +2796,7 @@ class User extends DirectoryObject
     public function getInferenceClassification()
     {
         if (array_key_exists("inferenceClassification", $this->_propDict)) {
-            if (is_a($this->_propDict["inferenceClassification"], "Microsoft\Graph\Model\InferenceClassification")) {
+            if (is_a($this->_propDict["inferenceClassification"], "Microsoft\Graph\Beta\Model\InferenceClassification")) {
                 return $this->_propDict["inferenceClassification"];
             } else {
                 $this->_propDict["inferenceClassification"] = new InferenceClassification($this->_propDict["inferenceClassification"]);
@@ -2718,7 +2829,7 @@ class User extends DirectoryObject
     public function getPhoto()
     {
         if (array_key_exists("photo", $this->_propDict)) {
-            if (is_a($this->_propDict["photo"], "Microsoft\Graph\Model\ProfilePhoto")) {
+            if (is_a($this->_propDict["photo"], "Microsoft\Graph\Beta\Model\ProfilePhoto")) {
                 return $this->_propDict["photo"];
             } else {
                 $this->_propDict["photo"] = new ProfilePhoto($this->_propDict["photo"]);
@@ -2779,7 +2890,7 @@ class User extends DirectoryObject
     public function getDrive()
     {
         if (array_key_exists("drive", $this->_propDict)) {
-            if (is_a($this->_propDict["drive"], "Microsoft\Graph\Model\Drive")) {
+            if (is_a($this->_propDict["drive"], "Microsoft\Graph\Beta\Model\Drive")) {
                 return $this->_propDict["drive"];
             } else {
                 $this->_propDict["drive"] = new Drive($this->_propDict["drive"]);
@@ -2833,6 +2944,34 @@ class User extends DirectoryObject
         return $this;
     }
     
+
+     /** 
+     * Gets the followedSites
+     *
+     * @return array The followedSites
+     */
+    public function getFollowedSites()
+    {
+        if (array_key_exists("followedSites", $this->_propDict)) {
+           return $this->_propDict["followedSites"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the followedSites
+    *
+    * @param Site $val The followedSites
+    *
+    * @return User
+    */
+    public function setFollowedSites($val)
+    {
+		$this->_propDict["followedSites"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the insights
     *
@@ -2841,7 +2980,7 @@ class User extends DirectoryObject
     public function getInsights()
     {
         if (array_key_exists("insights", $this->_propDict)) {
-            if (is_a($this->_propDict["insights"], "Microsoft\Graph\Model\OfficeGraphInsights")) {
+            if (is_a($this->_propDict["insights"], "Microsoft\Graph\Beta\Model\OfficeGraphInsights")) {
                 return $this->_propDict["insights"];
             } else {
                 $this->_propDict["insights"] = new OfficeGraphInsights($this->_propDict["insights"]);
@@ -2872,7 +3011,7 @@ class User extends DirectoryObject
     public function getSettings()
     {
         if (array_key_exists("settings", $this->_propDict)) {
-            if (is_a($this->_propDict["settings"], "Microsoft\Graph\Model\UserSettings")) {
+            if (is_a($this->_propDict["settings"], "Microsoft\Graph\Beta\Model\UserSettings")) {
                 return $this->_propDict["settings"];
             } else {
                 $this->_propDict["settings"] = new UserSettings($this->_propDict["settings"]);
@@ -2904,7 +3043,7 @@ class User extends DirectoryObject
     public function getPlanner()
     {
         if (array_key_exists("planner", $this->_propDict)) {
-            if (is_a($this->_propDict["planner"], "Microsoft\Graph\Model\PlannerUser")) {
+            if (is_a($this->_propDict["planner"], "Microsoft\Graph\Beta\Model\PlannerUser")) {
                 return $this->_propDict["planner"];
             } else {
                 $this->_propDict["planner"] = new PlannerUser($this->_propDict["planner"]);
@@ -2937,7 +3076,7 @@ class User extends DirectoryObject
     public function getOnenote()
     {
         if (array_key_exists("onenote", $this->_propDict)) {
-            if (is_a($this->_propDict["onenote"], "Microsoft\Graph\Model\Onenote")) {
+            if (is_a($this->_propDict["onenote"], "Microsoft\Graph\Beta\Model\Onenote")) {
                 return $this->_propDict["onenote"];
             } else {
                 $this->_propDict["onenote"] = new Onenote($this->_propDict["onenote"]);
@@ -3127,13 +3266,44 @@ class User extends DirectoryObject
     /** 
     * Sets the joinedTeams
     *
-    * @param Group $val The joinedTeams
+    * @param Team $val The joinedTeams
     *
     * @return User
     */
     public function setJoinedTeams($val)
     {
 		$this->_propDict["joinedTeams"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the teamwork
+    *
+    * @return UserTeamwork The teamwork
+    */
+    public function getTeamwork()
+    {
+        if (array_key_exists("teamwork", $this->_propDict)) {
+            if (is_a($this->_propDict["teamwork"], "Microsoft\Graph\Beta\Model\UserTeamwork")) {
+                return $this->_propDict["teamwork"];
+            } else {
+                $this->_propDict["teamwork"] = new UserTeamwork($this->_propDict["teamwork"]);
+                return $this->_propDict["teamwork"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the teamwork
+    *
+    * @param UserTeamwork $val The teamwork
+    *
+    * @return User
+    */
+    public function setTeamwork($val)
+    {
+        $this->_propDict["teamwork"] = $val;
         return $this;
     }
     
@@ -3227,6 +3397,65 @@ class User extends DirectoryObject
         return $this;
     }
     
+    /**
+    * Gets the informationProtection
+    *
+    * @return InformationProtection The informationProtection
+    */
+    public function getInformationProtection()
+    {
+        if (array_key_exists("informationProtection", $this->_propDict)) {
+            if (is_a($this->_propDict["informationProtection"], "Microsoft\Graph\Beta\Model\InformationProtection")) {
+                return $this->_propDict["informationProtection"];
+            } else {
+                $this->_propDict["informationProtection"] = new InformationProtection($this->_propDict["informationProtection"]);
+                return $this->_propDict["informationProtection"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the informationProtection
+    *
+    * @param InformationProtection $val The informationProtection
+    *
+    * @return User
+    */
+    public function setInformationProtection($val)
+    {
+        $this->_propDict["informationProtection"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the chats
+     *
+     * @return array The chats
+     */
+    public function getChats()
+    {
+        if (array_key_exists("chats", $this->_propDict)) {
+           return $this->_propDict["chats"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the chats
+    *
+    * @param Chat $val The chats
+    *
+    * @return User
+    */
+    public function setChats($val)
+    {
+		$this->_propDict["chats"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the agreementAcceptances
@@ -3280,6 +3509,37 @@ class User extends DirectoryObject
     public function setNotifications($val)
     {
 		$this->_propDict["notifications"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the analytics
+    *
+    * @return UserAnalytics The analytics
+    */
+    public function getAnalytics()
+    {
+        if (array_key_exists("analytics", $this->_propDict)) {
+            if (is_a($this->_propDict["analytics"], "Microsoft\Graph\Beta\Model\UserAnalytics")) {
+                return $this->_propDict["analytics"];
+            } else {
+                $this->_propDict["analytics"] = new UserAnalytics($this->_propDict["analytics"]);
+                return $this->_propDict["analytics"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the analytics
+    *
+    * @param UserAnalytics $val The analytics
+    *
+    * @return User
+    */
+    public function setAnalytics($val)
+    {
+        $this->_propDict["analytics"] = $val;
         return $this;
     }
     

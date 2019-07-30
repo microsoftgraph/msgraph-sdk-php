@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * DeviceManagementUserRightsSetting class
 *
@@ -35,7 +35,7 @@ class DeviceManagementUserRightsSetting extends Entity
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "Microsoft\Graph\Model\StateManagementSetting")) {
+            if (is_a($this->_propDict["state"], "Microsoft\Graph\Beta\Model\StateManagementSetting")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new StateManagementSetting($this->_propDict["state"]);
@@ -68,7 +68,7 @@ class DeviceManagementUserRightsSetting extends Entity
     public function getLocalUsersOrGroups()
     {
         if (array_key_exists("localUsersOrGroups", $this->_propDict)) {
-            if (is_a($this->_propDict["localUsersOrGroups"], "Microsoft\Graph\Model\DeviceManagementUserRightsLocalUserOrGroup")) {
+            if (is_a($this->_propDict["localUsersOrGroups"], "Microsoft\Graph\Beta\Model\DeviceManagementUserRightsLocalUserOrGroup")) {
                 return $this->_propDict["localUsersOrGroups"];
             } else {
                 $this->_propDict["localUsersOrGroups"] = new DeviceManagementUserRightsLocalUserOrGroup($this->_propDict["localUsersOrGroups"]);

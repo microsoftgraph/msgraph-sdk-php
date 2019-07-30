@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 use Microsoft\Graph\Core\Enum;
 
@@ -33,4 +33,6 @@ class VpnAuthenticationMethod extends Enum
     */
     const CERTIFICATE = "certificate";
     const USERNAME_AND_PASSWORD = "usernameAndPassword";
+    const SHARED_SECRET = "sharedSecret";
+    const DERIVED_CREDENTIAL = "derivedCredential";
 }

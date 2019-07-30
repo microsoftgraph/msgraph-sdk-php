@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * ImportedDeviceIdentity class
@@ -64,7 +64,7 @@ class ImportedDeviceIdentity extends Entity
     public function getImportedDeviceIdentityType()
     {
         if (array_key_exists("importedDeviceIdentityType", $this->_propDict)) {
-            if (is_a($this->_propDict["importedDeviceIdentityType"], "Microsoft\Graph\Model\ImportedDeviceIdentityType")) {
+            if (is_a($this->_propDict["importedDeviceIdentityType"], "Microsoft\Graph\Beta\Model\ImportedDeviceIdentityType")) {
                 return $this->_propDict["importedDeviceIdentityType"];
             } else {
                 $this->_propDict["importedDeviceIdentityType"] = new ImportedDeviceIdentityType($this->_propDict["importedDeviceIdentityType"]);
@@ -225,7 +225,7 @@ class ImportedDeviceIdentity extends Entity
     public function getEnrollmentState()
     {
         if (array_key_exists("enrollmentState", $this->_propDict)) {
-            if (is_a($this->_propDict["enrollmentState"], "Microsoft\Graph\Model\EnrollmentState")) {
+            if (is_a($this->_propDict["enrollmentState"], "Microsoft\Graph\Beta\Model\EnrollmentState")) {
                 return $this->_propDict["enrollmentState"];
             } else {
                 $this->_propDict["enrollmentState"] = new EnrollmentState($this->_propDict["enrollmentState"]);
@@ -258,7 +258,7 @@ class ImportedDeviceIdentity extends Entity
     public function getPlatform()
     {
         if (array_key_exists("platform", $this->_propDict)) {
-            if (is_a($this->_propDict["platform"], "Microsoft\Graph\Model\Platform")) {
+            if (is_a($this->_propDict["platform"], "Microsoft\Graph\Beta\Model\Platform")) {
                 return $this->_propDict["platform"];
             } else {
                 $this->_propDict["platform"] = new Platform($this->_propDict["platform"]);

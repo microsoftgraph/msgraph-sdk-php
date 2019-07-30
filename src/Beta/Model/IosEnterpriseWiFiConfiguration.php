@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * IosEnterpriseWiFiConfiguration class
@@ -28,14 +28,14 @@ class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration
 {
     /**
     * Gets the eapType
-    * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the the Wi-Fi endpoint (router).
+    * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router).
     *
     * @return EapType The eapType
     */
     public function getEapType()
     {
         if (array_key_exists("eapType", $this->_propDict)) {
-            if (is_a($this->_propDict["eapType"], "Microsoft\Graph\Model\EapType")) {
+            if (is_a($this->_propDict["eapType"], "Microsoft\Graph\Beta\Model\EapType")) {
                 return $this->_propDict["eapType"];
             } else {
                 $this->_propDict["eapType"] = new EapType($this->_propDict["eapType"]);
@@ -47,7 +47,7 @@ class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration
     
     /**
     * Sets the eapType
-    * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the the Wi-Fi endpoint (router).
+    * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router).
     *
     * @param EapType $val The eapType
     *
@@ -68,7 +68,7 @@ class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration
     public function getEapFastConfiguration()
     {
         if (array_key_exists("eapFastConfiguration", $this->_propDict)) {
-            if (is_a($this->_propDict["eapFastConfiguration"], "Microsoft\Graph\Model\EapFastConfiguration")) {
+            if (is_a($this->_propDict["eapFastConfiguration"], "Microsoft\Graph\Beta\Model\EapFastConfiguration")) {
                 return $this->_propDict["eapFastConfiguration"];
             } else {
                 $this->_propDict["eapFastConfiguration"] = new EapFastConfiguration($this->_propDict["eapFastConfiguration"]);
@@ -130,7 +130,7 @@ class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration
     public function getAuthenticationMethod()
     {
         if (array_key_exists("authenticationMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["authenticationMethod"], "Microsoft\Graph\Model\WiFiAuthenticationMethod")) {
+            if (is_a($this->_propDict["authenticationMethod"], "Microsoft\Graph\Beta\Model\WiFiAuthenticationMethod")) {
                 return $this->_propDict["authenticationMethod"];
             } else {
                 $this->_propDict["authenticationMethod"] = new WiFiAuthenticationMethod($this->_propDict["authenticationMethod"]);
@@ -163,7 +163,7 @@ class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration
     public function getInnerAuthenticationProtocolForEapTtls()
     {
         if (array_key_exists("innerAuthenticationProtocolForEapTtls", $this->_propDict)) {
-            if (is_a($this->_propDict["innerAuthenticationProtocolForEapTtls"], "Microsoft\Graph\Model\NonEapAuthenticationMethodForEapTtlsType")) {
+            if (is_a($this->_propDict["innerAuthenticationProtocolForEapTtls"], "Microsoft\Graph\Beta\Model\NonEapAuthenticationMethodForEapTtlsType")) {
                 return $this->_propDict["innerAuthenticationProtocolForEapTtls"];
             } else {
                 $this->_propDict["innerAuthenticationProtocolForEapTtls"] = new NonEapAuthenticationMethodForEapTtlsType($this->_propDict["innerAuthenticationProtocolForEapTtls"]);
@@ -216,6 +216,64 @@ class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration
         return $this;
     }
     
+    /**
+    * Gets the usernameFormatString
+    * Username format string used to build the username to connect to wifi
+    *
+    * @return string The usernameFormatString
+    */
+    public function getUsernameFormatString()
+    {
+        if (array_key_exists("usernameFormatString", $this->_propDict)) {
+            return $this->_propDict["usernameFormatString"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the usernameFormatString
+    * Username format string used to build the username to connect to wifi
+    *
+    * @param string $val The usernameFormatString
+    *
+    * @return IosEnterpriseWiFiConfiguration
+    */
+    public function setUsernameFormatString($val)
+    {
+        $this->_propDict["usernameFormatString"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the passwordFormatString
+    * Password format string used to build the password to connect to wifi
+    *
+    * @return string The passwordFormatString
+    */
+    public function getPasswordFormatString()
+    {
+        if (array_key_exists("passwordFormatString", $this->_propDict)) {
+            return $this->_propDict["passwordFormatString"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the passwordFormatString
+    * Password format string used to build the password to connect to wifi
+    *
+    * @param string $val The passwordFormatString
+    *
+    * @return IosEnterpriseWiFiConfiguration
+    */
+    public function setPasswordFormatString($val)
+    {
+        $this->_propDict["passwordFormatString"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the rootCertificatesForServerValidation
@@ -255,7 +313,7 @@ class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration
     public function getIdentityCertificateForClientAuthentication()
     {
         if (array_key_exists("identityCertificateForClientAuthentication", $this->_propDict)) {
-            if (is_a($this->_propDict["identityCertificateForClientAuthentication"], "Microsoft\Graph\Model\IosCertificateProfileBase")) {
+            if (is_a($this->_propDict["identityCertificateForClientAuthentication"], "Microsoft\Graph\Beta\Model\IosCertificateProfileBase")) {
                 return $this->_propDict["identityCertificateForClientAuthentication"];
             } else {
                 $this->_propDict["identityCertificateForClientAuthentication"] = new IosCertificateProfileBase($this->_propDict["identityCertificateForClientAuthentication"]);
@@ -276,6 +334,39 @@ class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration
     public function setIdentityCertificateForClientAuthentication($val)
     {
         $this->_propDict["identityCertificateForClientAuthentication"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the derivedCredentialSettings
+    * Tenant level settings for the Derived Credentials to be used for authentication.
+    *
+    * @return DeviceManagementDerivedCredentialSettings The derivedCredentialSettings
+    */
+    public function getDerivedCredentialSettings()
+    {
+        if (array_key_exists("derivedCredentialSettings", $this->_propDict)) {
+            if (is_a($this->_propDict["derivedCredentialSettings"], "Microsoft\Graph\Beta\Model\DeviceManagementDerivedCredentialSettings")) {
+                return $this->_propDict["derivedCredentialSettings"];
+            } else {
+                $this->_propDict["derivedCredentialSettings"] = new DeviceManagementDerivedCredentialSettings($this->_propDict["derivedCredentialSettings"]);
+                return $this->_propDict["derivedCredentialSettings"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the derivedCredentialSettings
+    * Tenant level settings for the Derived Credentials to be used for authentication.
+    *
+    * @param DeviceManagementDerivedCredentialSettings $val The derivedCredentialSettings
+    *
+    * @return IosEnterpriseWiFiConfiguration
+    */
+    public function setDerivedCredentialSettings($val)
+    {
+        $this->_propDict["derivedCredentialSettings"] = $val;
         return $this;
     }
     
