@@ -222,7 +222,7 @@ class EducationUser extends Entity
     
     /**
     * Gets the teacher
-    * If the primary role is teacher, this block will conatin teacher specific data.
+    * If the primary role is teacher, this block will contain teacher specific data.
     *
     * @return EducationTeacher The teacher
     */
@@ -241,7 +241,7 @@ class EducationUser extends Entity
     
     /**
     * Sets the teacher
-    * If the primary role is teacher, this block will conatin teacher specific data.
+    * If the primary role is teacher, this block will contain teacher specific data.
     *
     * @param EducationTeacher $val The teacher
     *

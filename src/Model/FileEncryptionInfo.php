@@ -159,7 +159,7 @@ class FileEncryptionInfo extends Entity
     }
     /**
     * Gets the profileIdentifier
-    * The the profile identifier.
+    * The profile identifier.
     *
     * @return string The profileIdentifier
     */
@@ -174,7 +174,7 @@ class FileEncryptionInfo extends Entity
 
     /**
     * Sets the profileIdentifier
-    * The the profile identifier.
+    * The profile identifier.
     *
     * @param string $val The value of the profileIdentifier
     *

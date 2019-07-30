@@ -87,7 +87,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the city
-    * City name of the address for the organization
+    * City name of the address for the organization.
     *
     * @return string The city
     */
@@ -102,7 +102,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the city
-    * City name of the address for the organization
+    * City name of the address for the organization.
     *
     * @param string $val The city
     *
@@ -116,7 +116,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the country
-    * Country/region name of the address for the organization
+    * Country/region name of the address for the organization.
     *
     * @return string The country
     */
@@ -131,7 +131,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the country
-    * Country/region name of the address for the organization
+    * Country/region name of the address for the organization.
     *
     * @param string $val The country
     *
@@ -145,7 +145,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the countryLetterCode
-    * Country/region abbreviation for the organization
+    * Country/region abbreviation for the organization.
     *
     * @return string The countryLetterCode
     */
@@ -160,7 +160,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the countryLetterCode
-    * Country/region abbreviation for the organization
+    * Country/region abbreviation for the organization.
     *
     * @param string $val The countryLetterCode
     *
@@ -327,7 +327,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the postalCode
-    * Postal code of the address for the organization
+    * Postal code of the address for the organization.
     *
     * @return string The postalCode
     */
@@ -342,7 +342,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the postalCode
-    * Postal code of the address for the organization
+    * Postal code of the address for the organization.
     *
     * @param string $val The postalCode
     *
@@ -502,7 +502,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the state
-    * State name of the address for the organization
+    * State name of the address for the organization.
     *
     * @return string The state
     */
@@ -517,7 +517,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the state
-    * State name of the address for the organization
+    * State name of the address for the organization.
     *
     * @param string $val The state
     *
@@ -531,7 +531,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the street
-    * Street name of the address for organization
+    * Street name of the address for organization.
     *
     * @return string The street
     */
@@ -546,7 +546,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the street
-    * Street name of the address for organization
+    * Street name of the address for organization.
     *
     * @param string $val The street
     *

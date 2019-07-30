@@ -392,7 +392,7 @@ class Event extends OutlookItem
     
     /**
     * Gets the start
-    * The date, time, and time zone that the event starts.
+    * The date, time, and time zone that the event starts. By default, the start time is in UTC.
     *
     * @return DateTimeTimeZone The start
     */
@@ -411,7 +411,7 @@ class Event extends OutlookItem
     
     /**
     * Sets the start
-    * The date, time, and time zone that the event starts.
+    * The date, time, and time zone that the event starts. By default, the start time is in UTC.
     *
     * @param DateTimeTimeZone $val The start
     *
@@ -458,7 +458,7 @@ class Event extends OutlookItem
     
     /**
     * Gets the end
-    * The date, time, and time zone that the event ends.
+    * The date, time, and time zone that the event ends. By default, the end time is in UTC.
     *
     * @return DateTimeTimeZone The end
     */
@@ -477,7 +477,7 @@ class Event extends OutlookItem
     
     /**
     * Sets the end
-    * The date, time, and time zone that the event ends.
+    * The date, time, and time zone that the event ends. By default, the end time is in UTC.
     *
     * @param DateTimeTimeZone $val The end
     *
