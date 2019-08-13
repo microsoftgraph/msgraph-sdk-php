@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * GroupPolicyDefinitionFile class
@@ -180,7 +180,7 @@ class GroupPolicyDefinitionFile extends Entity
     public function getPolicyType()
     {
         if (array_key_exists("policyType", $this->_propDict)) {
-            if (is_a($this->_propDict["policyType"], "Microsoft\Graph\Model\GroupPolicyType")) {
+            if (is_a($this->_propDict["policyType"], "Microsoft\Graph\Beta\Model\GroupPolicyType")) {
                 return $this->_propDict["policyType"];
             } else {
                 $this->_propDict["policyType"] = new GroupPolicyType($this->_propDict["policyType"]);
@@ -201,6 +201,35 @@ class GroupPolicyDefinitionFile extends Entity
     public function setPolicyType($val)
     {
         $this->_propDict["policyType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the revision
+    * The revision version associated with the file.
+    *
+    * @return string The revision
+    */
+    public function getRevision()
+    {
+        if (array_key_exists("revision", $this->_propDict)) {
+            return $this->_propDict["revision"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the revision
+    * The revision version associated with the file.
+    *
+    * @param string $val The revision
+    *
+    * @return GroupPolicyDefinitionFile
+    */
+    public function setRevision($val)
+    {
+        $this->_propDict["revision"] = $val;
         return $this;
     }
     

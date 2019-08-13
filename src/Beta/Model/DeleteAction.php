@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * DeleteAction class
 *
@@ -27,6 +27,7 @@ class DeleteAction extends Entity
 {
     /**
     * Gets the name
+    * The name of the item that was deleted.
     *
     * @return string The name
     */
@@ -41,6 +42,7 @@ class DeleteAction extends Entity
 
     /**
     * Sets the name
+    * The name of the item that was deleted.
     *
     * @param string $val The value of the name
     *
@@ -53,6 +55,7 @@ class DeleteAction extends Entity
     }
     /**
     * Gets the objectType
+    * File or Folder, depending on the type of the deleted item.
     *
     * @return string The objectType
     */
@@ -67,6 +70,7 @@ class DeleteAction extends Entity
 
     /**
     * Sets the objectType
+    * File or Folder, depending on the type of the deleted item.
     *
     * @param string $val The value of the objectType
     *

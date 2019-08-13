@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * PlannerPlan class
@@ -35,7 +35,7 @@ class PlannerPlan extends Entity
     public function getCreatedBy()
     {
         if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["createdBy"], "Microsoft\Graph\Beta\Model\IdentitySet")) {
                 return $this->_propDict["createdBy"];
             } else {
                 $this->_propDict["createdBy"] = new IdentitySet($this->_propDict["createdBy"]);
@@ -158,7 +158,7 @@ class PlannerPlan extends Entity
     public function getContexts()
     {
         if (array_key_exists("contexts", $this->_propDict)) {
-            if (is_a($this->_propDict["contexts"], "Microsoft\Graph\Model\PlannerPlanContextCollection")) {
+            if (is_a($this->_propDict["contexts"], "Microsoft\Graph\Beta\Model\PlannerPlanContextCollection")) {
                 return $this->_propDict["contexts"];
             } else {
                 $this->_propDict["contexts"] = new PlannerPlanContextCollection($this->_propDict["contexts"]);
@@ -250,7 +250,7 @@ class PlannerPlan extends Entity
     public function getDetails()
     {
         if (array_key_exists("details", $this->_propDict)) {
-            if (is_a($this->_propDict["details"], "Microsoft\Graph\Model\PlannerPlanDetails")) {
+            if (is_a($this->_propDict["details"], "Microsoft\Graph\Beta\Model\PlannerPlanDetails")) {
                 return $this->_propDict["details"];
             } else {
                 $this->_propDict["details"] = new PlannerPlanDetails($this->_propDict["details"]);

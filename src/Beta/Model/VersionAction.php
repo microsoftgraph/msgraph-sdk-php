@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * VersionAction class
 *
@@ -27,6 +27,7 @@ class VersionAction extends Entity
 {
     /**
     * Gets the newVersion
+    * The name of the new version that was created by this action.
     *
     * @return string The newVersion
     */
@@ -41,6 +42,7 @@ class VersionAction extends Entity
 
     /**
     * Sets the newVersion
+    * The name of the new version that was created by this action.
     *
     * @param string $val The value of the newVersion
     *

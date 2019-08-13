@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * ModifiedProperty class
 *
@@ -27,6 +27,7 @@ class ModifiedProperty extends Entity
 {
     /**
     * Gets the displayName
+    * Indicates the property name of the target attribute that was changed.
     *
     * @return string The displayName
     */
@@ -41,6 +42,7 @@ class ModifiedProperty extends Entity
 
     /**
     * Sets the displayName
+    * Indicates the property name of the target attribute that was changed.
     *
     * @param string $val The value of the displayName
     *
@@ -53,6 +55,7 @@ class ModifiedProperty extends Entity
     }
     /**
     * Gets the oldValue
+    * Indicates the previous value (before the update) for the property.
     *
     * @return string The oldValue
     */
@@ -67,6 +70,7 @@ class ModifiedProperty extends Entity
 
     /**
     * Sets the oldValue
+    * Indicates the previous value (before the update) for the property.
     *
     * @param string $val The value of the oldValue
     *
@@ -79,6 +83,7 @@ class ModifiedProperty extends Entity
     }
     /**
     * Gets the newValue
+    * Indicates the updated value for the propery.
     *
     * @return string The newValue
     */
@@ -93,6 +98,7 @@ class ModifiedProperty extends Entity
 
     /**
     * Sets the newValue
+    * Indicates the updated value for the propery.
     *
     * @param string $val The value of the newValue
     *

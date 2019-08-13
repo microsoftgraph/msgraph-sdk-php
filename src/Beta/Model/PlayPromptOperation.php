@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * PlayPromptOperation class
@@ -26,46 +26,18 @@ namespace Microsoft\Graph\Model;
 */
 class PlayPromptOperation extends CommsOperation
 {
-
-     /** 
-     * Gets the prompts
-     *
-     * @return array The prompts
-     */
-    public function getPrompts()
-    {
-        if (array_key_exists("prompts", $this->_propDict)) {
-           return $this->_propDict["prompts"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the prompts
-    *
-    * @param Prompt $val The prompts
-    *
-    * @return PlayPromptOperation
-    */
-    public function setPrompts($val)
-    {
-		$this->_propDict["prompts"] = $val;
-        return $this;
-    }
-    
     /**
     * Gets the completionReason
     *
-    * @return CompletionReason The completionReason
+    * @return PlayPromptCompletionReason The completionReason
     */
     public function getCompletionReason()
     {
         if (array_key_exists("completionReason", $this->_propDict)) {
-            if (is_a($this->_propDict["completionReason"], "Microsoft\Graph\Model\CompletionReason")) {
+            if (is_a($this->_propDict["completionReason"], "Microsoft\Graph\Beta\Model\PlayPromptCompletionReason")) {
                 return $this->_propDict["completionReason"];
             } else {
-                $this->_propDict["completionReason"] = new CompletionReason($this->_propDict["completionReason"]);
+                $this->_propDict["completionReason"] = new PlayPromptCompletionReason($this->_propDict["completionReason"]);
                 return $this->_propDict["completionReason"];
             }
         }
@@ -75,7 +47,7 @@ class PlayPromptOperation extends CommsOperation
     /**
     * Sets the completionReason
     *
-    * @param CompletionReason $val The completionReason
+    * @param PlayPromptCompletionReason $val The completionReason
     *
     * @return PlayPromptOperation
     */

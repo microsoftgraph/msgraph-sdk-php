@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * AndroidDeviceOwnerWiFiConfiguration class
@@ -151,7 +151,7 @@ class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration
     public function getWiFiSecurityType()
     {
         if (array_key_exists("wiFiSecurityType", $this->_propDict)) {
-            if (is_a($this->_propDict["wiFiSecurityType"], "Microsoft\Graph\Model\AndroidDeviceOwnerWiFiSecurityType")) {
+            if (is_a($this->_propDict["wiFiSecurityType"], "Microsoft\Graph\Beta\Model\AndroidDeviceOwnerWiFiSecurityType")) {
                 return $this->_propDict["wiFiSecurityType"];
             } else {
                 $this->_propDict["wiFiSecurityType"] = new AndroidDeviceOwnerWiFiSecurityType($this->_propDict["wiFiSecurityType"]);

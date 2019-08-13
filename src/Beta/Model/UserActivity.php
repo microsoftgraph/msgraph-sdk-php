@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * UserActivity class
@@ -35,7 +35,7 @@ class UserActivity extends Entity
     public function getVisualElements()
     {
         if (array_key_exists("visualElements", $this->_propDict)) {
-            if (is_a($this->_propDict["visualElements"], "Microsoft\Graph\Model\VisualInfo")) {
+            if (is_a($this->_propDict["visualElements"], "Microsoft\Graph\Beta\Model\VisualInfo")) {
                 return $this->_propDict["visualElements"];
             } else {
                 $this->_propDict["visualElements"] = new VisualInfo($this->_propDict["visualElements"]);
@@ -399,7 +399,7 @@ class UserActivity extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Microsoft\Graph\Model\Status")) {
+            if (is_a($this->_propDict["status"], "Microsoft\Graph\Beta\Model\Status")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new Status($this->_propDict["status"]);

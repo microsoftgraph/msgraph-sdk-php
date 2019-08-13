@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * SynchronizationTaskExecution class
 *
@@ -294,7 +294,7 @@ class SynchronizationTaskExecution extends Entity
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "Microsoft\Graph\Model\SynchronizationTaskExecutionResult")) {
+            if (is_a($this->_propDict["state"], "Microsoft\Graph\Beta\Model\SynchronizationTaskExecutionResult")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new SynchronizationTaskExecutionResult($this->_propDict["state"]);
@@ -325,7 +325,7 @@ class SynchronizationTaskExecution extends Entity
     public function getError()
     {
         if (array_key_exists("error", $this->_propDict)) {
-            if (is_a($this->_propDict["error"], "Microsoft\Graph\Model\SynchronizationError")) {
+            if (is_a($this->_propDict["error"], "Microsoft\Graph\Beta\Model\SynchronizationError")) {
                 return $this->_propDict["error"];
             } else {
                 $this->_propDict["error"] = new SynchronizationError($this->_propDict["error"]);
@@ -356,7 +356,7 @@ class SynchronizationTaskExecution extends Entity
     public function getTimeBegan()
     {
         if (array_key_exists("timeBegan", $this->_propDict)) {
-            if (is_a($this->_propDict["timeBegan"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["timeBegan"], "Microsoft\Graph\Beta\Model\\DateTime")) {
                 return $this->_propDict["timeBegan"];
             } else {
                 $this->_propDict["timeBegan"] = new \DateTime($this->_propDict["timeBegan"]);
@@ -387,7 +387,7 @@ class SynchronizationTaskExecution extends Entity
     public function getTimeEnded()
     {
         if (array_key_exists("timeEnded", $this->_propDict)) {
-            if (is_a($this->_propDict["timeEnded"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["timeEnded"], "Microsoft\Graph\Beta\Model\\DateTime")) {
                 return $this->_propDict["timeEnded"];
             } else {
                 $this->_propDict["timeEnded"] = new \DateTime($this->_propDict["timeEnded"]);

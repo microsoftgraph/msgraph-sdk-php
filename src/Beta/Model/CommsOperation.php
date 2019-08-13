@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * CommsOperation class
@@ -34,7 +34,7 @@ class CommsOperation extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Microsoft\Graph\Model\OperationStatus")) {
+            if (is_a($this->_propDict["status"], "Microsoft\Graph\Beta\Model\OperationStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new OperationStatus($this->_propDict["status"]);
@@ -147,33 +147,33 @@ class CommsOperation extends Entity
     }
     
     /**
-    * Gets the errorInfo
+    * Gets the resultInfo
     *
-    * @return ResultInfo The errorInfo
+    * @return ResultInfo The resultInfo
     */
-    public function getErrorInfo()
+    public function getResultInfo()
     {
-        if (array_key_exists("errorInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["errorInfo"], "Microsoft\Graph\Model\ResultInfo")) {
-                return $this->_propDict["errorInfo"];
+        if (array_key_exists("resultInfo", $this->_propDict)) {
+            if (is_a($this->_propDict["resultInfo"], "Microsoft\Graph\Beta\Model\ResultInfo")) {
+                return $this->_propDict["resultInfo"];
             } else {
-                $this->_propDict["errorInfo"] = new ResultInfo($this->_propDict["errorInfo"]);
-                return $this->_propDict["errorInfo"];
+                $this->_propDict["resultInfo"] = new ResultInfo($this->_propDict["resultInfo"]);
+                return $this->_propDict["resultInfo"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the errorInfo
+    * Sets the resultInfo
     *
-    * @param ResultInfo $val The errorInfo
+    * @param ResultInfo $val The resultInfo
     *
     * @return CommsOperation
     */
-    public function setErrorInfo($val)
+    public function setResultInfo($val)
     {
-        $this->_propDict["errorInfo"] = $val;
+        $this->_propDict["resultInfo"] = $val;
         return $this;
     }
     

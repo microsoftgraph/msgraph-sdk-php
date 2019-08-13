@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * SensitiveContentLocation class
 *
@@ -112,7 +112,7 @@ class SensitiveContentLocation extends Entity
     public function getEvidences()
     {
         if (array_key_exists("evidences", $this->_propDict)) {
-            if (is_a($this->_propDict["evidences"], "Microsoft\Graph\Model\SensitiveContentEvidence")) {
+            if (is_a($this->_propDict["evidences"], "Microsoft\Graph\Beta\Model\SensitiveContentEvidence")) {
                 return $this->_propDict["evidences"];
             } else {
                 $this->_propDict["evidences"] = new SensitiveContentEvidence($this->_propDict["evidences"]);

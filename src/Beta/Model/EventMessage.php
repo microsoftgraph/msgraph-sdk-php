@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * EventMessage class
@@ -35,7 +35,7 @@ class EventMessage extends Message
     public function getMeetingMessageType()
     {
         if (array_key_exists("meetingMessageType", $this->_propDict)) {
-            if (is_a($this->_propDict["meetingMessageType"], "Microsoft\Graph\Model\MeetingMessageType")) {
+            if (is_a($this->_propDict["meetingMessageType"], "Microsoft\Graph\Beta\Model\MeetingMessageType")) {
                 return $this->_propDict["meetingMessageType"];
             } else {
                 $this->_propDict["meetingMessageType"] = new MeetingMessageType($this->_propDict["meetingMessageType"]);
@@ -67,7 +67,7 @@ class EventMessage extends Message
     public function getStartDateTime()
     {
         if (array_key_exists("startDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startDateTime"], "Microsoft\Graph\Model\DateTimeTimeZone")) {
+            if (is_a($this->_propDict["startDateTime"], "Microsoft\Graph\Beta\Model\DateTimeTimeZone")) {
                 return $this->_propDict["startDateTime"];
             } else {
                 $this->_propDict["startDateTime"] = new DateTimeTimeZone($this->_propDict["startDateTime"]);
@@ -98,7 +98,7 @@ class EventMessage extends Message
     public function getEndDateTime()
     {
         if (array_key_exists("endDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["endDateTime"], "Microsoft\Graph\Model\DateTimeTimeZone")) {
+            if (is_a($this->_propDict["endDateTime"], "Microsoft\Graph\Beta\Model\DateTimeTimeZone")) {
                 return $this->_propDict["endDateTime"];
             } else {
                 $this->_propDict["endDateTime"] = new DateTimeTimeZone($this->_propDict["endDateTime"]);
@@ -129,7 +129,7 @@ class EventMessage extends Message
     public function getLocation()
     {
         if (array_key_exists("location", $this->_propDict)) {
-            if (is_a($this->_propDict["location"], "Microsoft\Graph\Model\Location")) {
+            if (is_a($this->_propDict["location"], "Microsoft\Graph\Beta\Model\Location")) {
                 return $this->_propDict["location"];
             } else {
                 $this->_propDict["location"] = new Location($this->_propDict["location"]);
@@ -160,7 +160,7 @@ class EventMessage extends Message
     public function getType()
     {
         if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "Microsoft\Graph\Model\EventType")) {
+            if (is_a($this->_propDict["type"], "Microsoft\Graph\Beta\Model\EventType")) {
                 return $this->_propDict["type"];
             } else {
                 $this->_propDict["type"] = new EventType($this->_propDict["type"]);
@@ -191,7 +191,7 @@ class EventMessage extends Message
     public function getRecurrence()
     {
         if (array_key_exists("recurrence", $this->_propDict)) {
-            if (is_a($this->_propDict["recurrence"], "Microsoft\Graph\Model\PatternedRecurrence")) {
+            if (is_a($this->_propDict["recurrence"], "Microsoft\Graph\Beta\Model\PatternedRecurrence")) {
                 return $this->_propDict["recurrence"];
             } else {
                 $this->_propDict["recurrence"] = new PatternedRecurrence($this->_propDict["recurrence"]);
@@ -304,7 +304,7 @@ class EventMessage extends Message
     public function getEvent()
     {
         if (array_key_exists("event", $this->_propDict)) {
-            if (is_a($this->_propDict["event"], "Microsoft\Graph\Model\Event")) {
+            if (is_a($this->_propDict["event"], "Microsoft\Graph\Beta\Model\Event")) {
                 return $this->_propDict["event"];
             } else {
                 $this->_propDict["event"] = new Event($this->_propDict["event"]);
