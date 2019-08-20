@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * TeamsAppInstallation class
@@ -35,7 +35,7 @@ class TeamsAppInstallation extends Entity
     public function getTeamsApp()
     {
         if (array_key_exists("teamsApp", $this->_propDict)) {
-            if (is_a($this->_propDict["teamsApp"], "Microsoft\Graph\Model\TeamsApp")) {
+            if (is_a($this->_propDict["teamsApp"], "Microsoft\Graph\Beta\Model\TeamsApp")) {
                 return $this->_propDict["teamsApp"];
             } else {
                 $this->_propDict["teamsApp"] = new TeamsApp($this->_propDict["teamsApp"]);
@@ -68,7 +68,7 @@ class TeamsAppInstallation extends Entity
     public function getTeamsAppDefinition()
     {
         if (array_key_exists("teamsAppDefinition", $this->_propDict)) {
-            if (is_a($this->_propDict["teamsAppDefinition"], "Microsoft\Graph\Model\TeamsAppDefinition")) {
+            if (is_a($this->_propDict["teamsAppDefinition"], "Microsoft\Graph\Beta\Model\TeamsAppDefinition")) {
                 return $this->_propDict["teamsAppDefinition"];
             } else {
                 $this->_propDict["teamsAppDefinition"] = new TeamsAppDefinition($this->_propDict["teamsAppDefinition"]);

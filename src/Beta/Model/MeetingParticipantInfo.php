@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * MeetingParticipantInfo class
 *
@@ -34,7 +34,7 @@ class MeetingParticipantInfo extends Entity
     public function getIdentity()
     {
         if (array_key_exists("identity", $this->_propDict)) {
-            if (is_a($this->_propDict["identity"], "Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["identity"], "Microsoft\Graph\Beta\Model\IdentitySet")) {
                 return $this->_propDict["identity"];
             } else {
                 $this->_propDict["identity"] = new IdentitySet($this->_propDict["identity"]);
@@ -80,32 +80,6 @@ class MeetingParticipantInfo extends Entity
     public function setUpn($val)
     {
         $this->_propDict["upn"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the sipProxyAddress
-    *
-    * @return string The sipProxyAddress
-    */
-    public function getSipProxyAddress()
-    {
-        if (array_key_exists("sipProxyAddress", $this->_propDict)) {
-            return $this->_propDict["sipProxyAddress"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the sipProxyAddress
-    *
-    * @param string $val The value of the sipProxyAddress
-    *
-    * @return MeetingParticipantInfo
-    */
-    public function setSipProxyAddress($val)
-    {
-        $this->_propDict["sipProxyAddress"] = $val;
         return $this;
     }
 }

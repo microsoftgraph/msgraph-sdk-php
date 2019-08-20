@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * LoggedOnUser class
 *
@@ -63,7 +63,7 @@ class LoggedOnUser extends Entity
     public function getLastLogOnDateTime()
     {
         if (array_key_exists("lastLogOnDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastLogOnDateTime"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["lastLogOnDateTime"], "Microsoft\Graph\Beta\Model\\DateTime")) {
                 return $this->_propDict["lastLogOnDateTime"];
             } else {
                 $this->_propDict["lastLogOnDateTime"] = new \DateTime($this->_propDict["lastLogOnDateTime"]);

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * ConfigurationManagerClientHealthState class
 *
@@ -35,7 +35,7 @@ class ConfigurationManagerClientHealthState extends Entity
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "Microsoft\Graph\Model\ConfigurationManagerClientState")) {
+            if (is_a($this->_propDict["state"], "Microsoft\Graph\Beta\Model\ConfigurationManagerClientState")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new ConfigurationManagerClientState($this->_propDict["state"]);
@@ -96,7 +96,7 @@ class ConfigurationManagerClientHealthState extends Entity
     public function getLastSyncDateTime()
     {
         if (array_key_exists("lastSyncDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastSyncDateTime"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["lastSyncDateTime"], "Microsoft\Graph\Beta\Model\\DateTime")) {
                 return $this->_propDict["lastSyncDateTime"];
             } else {
                 $this->_propDict["lastSyncDateTime"] = new \DateTime($this->_propDict["lastSyncDateTime"]);

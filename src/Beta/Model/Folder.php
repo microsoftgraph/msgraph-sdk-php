@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * Folder class
 *
@@ -63,7 +63,7 @@ class Folder extends Entity
     public function getView()
     {
         if (array_key_exists("view", $this->_propDict)) {
-            if (is_a($this->_propDict["view"], "Microsoft\Graph\Model\FolderView")) {
+            if (is_a($this->_propDict["view"], "Microsoft\Graph\Beta\Model\FolderView")) {
                 return $this->_propDict["view"];
             } else {
                 $this->_propDict["view"] = new FolderView($this->_propDict["view"]);

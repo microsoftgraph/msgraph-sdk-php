@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * IosWebContentFilterSpecificWebsitesAccess class
 *
@@ -44,7 +44,7 @@ class IosWebContentFilterSpecificWebsitesAccess extends IosWebContentFilterBase
     public function getSpecificWebsitesOnly()
     {
         if (array_key_exists("specificWebsitesOnly", $this->_propDict)) {
-            if (is_a($this->_propDict["specificWebsitesOnly"], "Microsoft\Graph\Model\IosBookmark")) {
+            if (is_a($this->_propDict["specificWebsitesOnly"], "Microsoft\Graph\Beta\Model\IosBookmark")) {
                 return $this->_propDict["specificWebsitesOnly"];
             } else {
                 $this->_propDict["specificWebsitesOnly"] = new IosBookmark($this->_propDict["specificWebsitesOnly"]);
@@ -77,7 +77,7 @@ class IosWebContentFilterSpecificWebsitesAccess extends IosWebContentFilterBase
     public function getWebsiteList()
     {
         if (array_key_exists("websiteList", $this->_propDict)) {
-            if (is_a($this->_propDict["websiteList"], "Microsoft\Graph\Model\IosBookmark")) {
+            if (is_a($this->_propDict["websiteList"], "Microsoft\Graph\Beta\Model\IosBookmark")) {
                 return $this->_propDict["websiteList"];
             } else {
                 $this->_propDict["websiteList"] = new IosBookmark($this->_propDict["websiteList"]);

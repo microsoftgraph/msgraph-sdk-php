@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * BookingStaffMember class
@@ -88,7 +88,7 @@ class BookingStaffMember extends BookingPerson
     public function getRole()
     {
         if (array_key_exists("role", $this->_propDict)) {
-            if (is_a($this->_propDict["role"], "Microsoft\Graph\Model\BookingStaffRole")) {
+            if (is_a($this->_propDict["role"], "Microsoft\Graph\Beta\Model\BookingStaffRole")) {
                 return $this->_propDict["role"];
             } else {
                 $this->_propDict["role"] = new BookingStaffRole($this->_propDict["role"]);

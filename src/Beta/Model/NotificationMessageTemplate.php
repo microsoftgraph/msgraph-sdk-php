@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * NotificationMessageTemplate class
@@ -126,7 +126,7 @@ class NotificationMessageTemplate extends Entity
     public function getBrandingOptions()
     {
         if (array_key_exists("brandingOptions", $this->_propDict)) {
-            if (is_a($this->_propDict["brandingOptions"], "Microsoft\Graph\Model\NotificationTemplateBrandingOptions")) {
+            if (is_a($this->_propDict["brandingOptions"], "Microsoft\Graph\Beta\Model\NotificationTemplateBrandingOptions")) {
                 return $this->_propDict["brandingOptions"];
             } else {
                 $this->_propDict["brandingOptions"] = new NotificationTemplateBrandingOptions($this->_propDict["brandingOptions"]);

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * MailSearchFolder class
@@ -28,6 +28,7 @@ class MailSearchFolder extends MailFolder
 {
     /**
     * Gets the isSupported
+    * Indicates whether a search folder is editable using REST APIs.
     *
     * @return bool The isSupported
     */
@@ -42,6 +43,7 @@ class MailSearchFolder extends MailFolder
     
     /**
     * Sets the isSupported
+    * Indicates whether a search folder is editable using REST APIs.
     *
     * @param bool $val The isSupported
     *
@@ -55,6 +57,7 @@ class MailSearchFolder extends MailFolder
     
     /**
     * Gets the includeNestedFolders
+    * Indicates how the mailbox folder hierarchy should be traversed in the search. true means that a deep search should be done to include child folders in the hierarchy of each folder explicitly specified in sourceFolderIds. false means a shallow search of only each of the folders explicitly specified in sourceFolderIds.
     *
     * @return bool The includeNestedFolders
     */
@@ -69,6 +72,7 @@ class MailSearchFolder extends MailFolder
     
     /**
     * Sets the includeNestedFolders
+    * Indicates how the mailbox folder hierarchy should be traversed in the search. true means that a deep search should be done to include child folders in the hierarchy of each folder explicitly specified in sourceFolderIds. false means a shallow search of only each of the folders explicitly specified in sourceFolderIds.
     *
     * @param bool $val The includeNestedFolders
     *
@@ -81,34 +85,37 @@ class MailSearchFolder extends MailFolder
     }
     
     /**
-    * Gets the sourceFolderIDs
+    * Gets the sourceFolderIds
+    * The mailbox folders that should be mined.
     *
-    * @return string The sourceFolderIDs
+    * @return string The sourceFolderIds
     */
-    public function getSourceFolderIDs()
+    public function getSourceFolderIds()
     {
-        if (array_key_exists("sourceFolderIDs", $this->_propDict)) {
-            return $this->_propDict["sourceFolderIDs"];
+        if (array_key_exists("sourceFolderIds", $this->_propDict)) {
+            return $this->_propDict["sourceFolderIds"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the sourceFolderIDs
+    * Sets the sourceFolderIds
+    * The mailbox folders that should be mined.
     *
-    * @param string $val The sourceFolderIDs
+    * @param string $val The sourceFolderIds
     *
     * @return MailSearchFolder
     */
-    public function setSourceFolderIDs($val)
+    public function setSourceFolderIds($val)
     {
-        $this->_propDict["sourceFolderIDs"] = $val;
+        $this->_propDict["sourceFolderIds"] = $val;
         return $this;
     }
     
     /**
     * Gets the filterQuery
+    * The OData query to filter the messages.
     *
     * @return string The filterQuery
     */
@@ -123,6 +130,7 @@ class MailSearchFolder extends MailFolder
     
     /**
     * Sets the filterQuery
+    * The OData query to filter the messages.
     *
     * @param string $val The filterQuery
     *

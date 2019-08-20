@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * WindowsInformationProtection class
@@ -35,7 +35,7 @@ class WindowsInformationProtection extends ManagedAppPolicy
     public function getEnforcementLevel()
     {
         if (array_key_exists("enforcementLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["enforcementLevel"], "Microsoft\Graph\Model\WindowsInformationProtectionEnforcementLevel")) {
+            if (is_a($this->_propDict["enforcementLevel"], "Microsoft\Graph\Beta\Model\WindowsInformationProtectionEnforcementLevel")) {
                 return $this->_propDict["enforcementLevel"];
             } else {
                 $this->_propDict["enforcementLevel"] = new WindowsInformationProtectionEnforcementLevel($this->_propDict["enforcementLevel"]);
@@ -156,7 +156,7 @@ class WindowsInformationProtection extends ManagedAppPolicy
     public function getDataRecoveryCertificate()
     {
         if (array_key_exists("dataRecoveryCertificate", $this->_propDict)) {
-            if (is_a($this->_propDict["dataRecoveryCertificate"], "Microsoft\Graph\Model\WindowsInformationProtectionDataRecoveryCertificate")) {
+            if (is_a($this->_propDict["dataRecoveryCertificate"], "Microsoft\Graph\Beta\Model\WindowsInformationProtectionDataRecoveryCertificate")) {
                 return $this->_propDict["dataRecoveryCertificate"];
             } else {
                 $this->_propDict["dataRecoveryCertificate"] = new WindowsInformationProtectionDataRecoveryCertificate($this->_propDict["dataRecoveryCertificate"]);

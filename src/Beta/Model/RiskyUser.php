@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * RiskyUser class
@@ -81,6 +81,33 @@ class RiskyUser extends Entity
     }
     
     /**
+    * Gets the isProcessing
+    *
+    * @return bool The isProcessing
+    */
+    public function getIsProcessing()
+    {
+        if (array_key_exists("isProcessing", $this->_propDict)) {
+            return $this->_propDict["isProcessing"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isProcessing
+    *
+    * @param bool $val The isProcessing
+    *
+    * @return RiskyUser
+    */
+    public function setIsProcessing($val)
+    {
+        $this->_propDict["isProcessing"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the riskLastUpdatedDateTime
     *
     * @return \DateTime The riskLastUpdatedDateTime
@@ -119,7 +146,7 @@ class RiskyUser extends Entity
     public function getRiskLevel()
     {
         if (array_key_exists("riskLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["riskLevel"], "Microsoft\Graph\Model\RiskLevel")) {
+            if (is_a($this->_propDict["riskLevel"], "Microsoft\Graph\Beta\Model\RiskLevel")) {
                 return $this->_propDict["riskLevel"];
             } else {
                 $this->_propDict["riskLevel"] = new RiskLevel($this->_propDict["riskLevel"]);
@@ -150,7 +177,7 @@ class RiskyUser extends Entity
     public function getRiskState()
     {
         if (array_key_exists("riskState", $this->_propDict)) {
-            if (is_a($this->_propDict["riskState"], "Microsoft\Graph\Model\RiskState")) {
+            if (is_a($this->_propDict["riskState"], "Microsoft\Graph\Beta\Model\RiskState")) {
                 return $this->_propDict["riskState"];
             } else {
                 $this->_propDict["riskState"] = new RiskState($this->_propDict["riskState"]);
@@ -181,7 +208,7 @@ class RiskyUser extends Entity
     public function getRiskDetail()
     {
         if (array_key_exists("riskDetail", $this->_propDict)) {
-            if (is_a($this->_propDict["riskDetail"], "Microsoft\Graph\Model\RiskDetail")) {
+            if (is_a($this->_propDict["riskDetail"], "Microsoft\Graph\Beta\Model\RiskDetail")) {
                 return $this->_propDict["riskDetail"];
             } else {
                 $this->_propDict["riskDetail"] = new RiskDetail($this->_propDict["riskDetail"]);
@@ -255,6 +282,34 @@ class RiskyUser extends Entity
     public function setUserPrincipalName($val)
     {
         $this->_propDict["userPrincipalName"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the history
+     *
+     * @return array The history
+     */
+    public function getHistory()
+    {
+        if (array_key_exists("history", $this->_propDict)) {
+           return $this->_propDict["history"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the history
+    *
+    * @param RiskyUserHistoryItem $val The history
+    *
+    * @return RiskyUser
+    */
+    public function setHistory($val)
+    {
+		$this->_propDict["history"] = $val;
         return $this;
     }
     

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * AndroidManagedStoreApp class
@@ -168,6 +168,35 @@ class AndroidManagedStoreApp extends MobileApp
     public function setAppStoreUrl($val)
     {
         $this->_propDict["appStoreUrl"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the supportsOemConfig
+    * Whether this app supports OEMConfig policy.
+    *
+    * @return bool The supportsOemConfig
+    */
+    public function getSupportsOemConfig()
+    {
+        if (array_key_exists("supportsOemConfig", $this->_propDict)) {
+            return $this->_propDict["supportsOemConfig"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the supportsOemConfig
+    * Whether this app supports OEMConfig policy.
+    *
+    * @param bool $val The supportsOemConfig
+    *
+    * @return AndroidManagedStoreApp
+    */
+    public function setSupportsOemConfig($val)
+    {
+        $this->_propDict["supportsOemConfig"] = boolval($val);
         return $this;
     }
     
