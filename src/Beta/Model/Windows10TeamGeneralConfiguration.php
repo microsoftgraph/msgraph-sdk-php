@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * Windows10TeamGeneralConfiguration class
@@ -209,7 +209,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     public function getMaintenanceWindowStartTime()
     {
         if (array_key_exists("maintenanceWindowStartTime", $this->_propDict)) {
-            if (is_a($this->_propDict["maintenanceWindowStartTime"], "Microsoft\Graph\Model\TimeOfDay")) {
+            if (is_a($this->_propDict["maintenanceWindowStartTime"], "Microsoft\Graph\Beta\Model\TimeOfDay")) {
                 return $this->_propDict["maintenanceWindowStartTime"];
             } else {
                 $this->_propDict["maintenanceWindowStartTime"] = new TimeOfDay($this->_propDict["maintenanceWindowStartTime"]);
@@ -242,7 +242,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     public function getMiracastChannel()
     {
         if (array_key_exists("miracastChannel", $this->_propDict)) {
-            if (is_a($this->_propDict["miracastChannel"], "Microsoft\Graph\Model\MiracastChannel")) {
+            if (is_a($this->_propDict["miracastChannel"], "Microsoft\Graph\Beta\Model\MiracastChannel")) {
                 return $this->_propDict["miracastChannel"];
             } else {
                 $this->_propDict["miracastChannel"] = new MiracastChannel($this->_propDict["miracastChannel"]);
@@ -594,7 +594,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     public function getWelcomeScreenMeetingInformation()
     {
         if (array_key_exists("welcomeScreenMeetingInformation", $this->_propDict)) {
-            if (is_a($this->_propDict["welcomeScreenMeetingInformation"], "Microsoft\Graph\Model\WelcomeScreenMeetingInformation")) {
+            if (is_a($this->_propDict["welcomeScreenMeetingInformation"], "Microsoft\Graph\Beta\Model\WelcomeScreenMeetingInformation")) {
                 return $this->_propDict["welcomeScreenMeetingInformation"];
             } else {
                 $this->_propDict["welcomeScreenMeetingInformation"] = new WelcomeScreenMeetingInformation($this->_propDict["welcomeScreenMeetingInformation"]);

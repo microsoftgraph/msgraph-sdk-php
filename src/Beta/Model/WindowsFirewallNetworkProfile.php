@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * WindowsFirewallNetworkProfile class
 *
@@ -35,7 +35,7 @@ class WindowsFirewallNetworkProfile extends Entity
     public function getFirewallEnabled()
     {
         if (array_key_exists("firewallEnabled", $this->_propDict)) {
-            if (is_a($this->_propDict["firewallEnabled"], "Microsoft\Graph\Model\StateManagementSetting")) {
+            if (is_a($this->_propDict["firewallEnabled"], "Microsoft\Graph\Beta\Model\StateManagementSetting")) {
                 return $this->_propDict["firewallEnabled"];
             } else {
                 $this->_propDict["firewallEnabled"] = new StateManagementSetting($this->_propDict["firewallEnabled"]);
@@ -452,7 +452,7 @@ class WindowsFirewallNetworkProfile extends Entity
     }
     /**
     * Gets the outboundConnectionsRequired
-    * Configures the firewall to allow all outgoing connections by default. When OutboundConnectionsRequired and OutboundConnectionsBlocked are both true, OutboundConnectionsBlocked takes priority.
+    * Configures the firewall to allow all outgoing connections by default. When OutboundConnectionsRequired and OutboundConnectionsBlocked are both true, OutboundConnectionsBlocked takes priority. This setting will get applied to Windows releases version 1809 and above.
     *
     * @return bool The outboundConnectionsRequired
     */
@@ -467,7 +467,7 @@ class WindowsFirewallNetworkProfile extends Entity
 
     /**
     * Sets the outboundConnectionsRequired
-    * Configures the firewall to allow all outgoing connections by default. When OutboundConnectionsRequired and OutboundConnectionsBlocked are both true, OutboundConnectionsBlocked takes priority.
+    * Configures the firewall to allow all outgoing connections by default. When OutboundConnectionsRequired and OutboundConnectionsBlocked are both true, OutboundConnectionsBlocked takes priority. This setting will get applied to Windows releases version 1809 and above.
     *
     * @param bool $val The value of the outboundConnectionsRequired
     *
@@ -480,7 +480,7 @@ class WindowsFirewallNetworkProfile extends Entity
     }
     /**
     * Gets the outboundConnectionsBlocked
-    * Configures the firewall to block all outgoing connections by default. When OutboundConnectionsRequired and OutboundConnectionsBlocked are both true, OutboundConnectionsBlocked takes priority.
+    * Configures the firewall to block all outgoing connections by default. When OutboundConnectionsRequired and OutboundConnectionsBlocked are both true, OutboundConnectionsBlocked takes priority. This setting will get applied to Windows releases version 1809 and above.
     *
     * @return bool The outboundConnectionsBlocked
     */
@@ -495,7 +495,7 @@ class WindowsFirewallNetworkProfile extends Entity
 
     /**
     * Sets the outboundConnectionsBlocked
-    * Configures the firewall to block all outgoing connections by default. When OutboundConnectionsRequired and OutboundConnectionsBlocked are both true, OutboundConnectionsBlocked takes priority.
+    * Configures the firewall to block all outgoing connections by default. When OutboundConnectionsRequired and OutboundConnectionsBlocked are both true, OutboundConnectionsBlocked takes priority. This setting will get applied to Windows releases version 1809 and above.
     *
     * @param bool $val The value of the outboundConnectionsBlocked
     *

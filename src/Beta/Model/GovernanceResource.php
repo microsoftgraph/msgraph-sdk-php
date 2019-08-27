@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * GovernanceResource class
@@ -200,7 +200,7 @@ class GovernanceResource extends Entity
     public function getParent()
     {
         if (array_key_exists("parent", $this->_propDict)) {
-            if (is_a($this->_propDict["parent"], "Microsoft\Graph\Model\GovernanceResource")) {
+            if (is_a($this->_propDict["parent"], "Microsoft\Graph\Beta\Model\GovernanceResource")) {
                 return $this->_propDict["parent"];
             } else {
                 $this->_propDict["parent"] = new GovernanceResource($this->_propDict["parent"]);

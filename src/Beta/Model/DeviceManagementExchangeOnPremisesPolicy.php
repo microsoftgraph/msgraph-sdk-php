@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * DeviceManagementExchangeOnPremisesPolicy class
@@ -68,7 +68,7 @@ class DeviceManagementExchangeOnPremisesPolicy extends Entity
     public function getDefaultAccessLevel()
     {
         if (array_key_exists("defaultAccessLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["defaultAccessLevel"], "Microsoft\Graph\Model\DeviceManagementExchangeAccessLevel")) {
+            if (is_a($this->_propDict["defaultAccessLevel"], "Microsoft\Graph\Beta\Model\DeviceManagementExchangeAccessLevel")) {
                 return $this->_propDict["defaultAccessLevel"];
             } else {
                 $this->_propDict["defaultAccessLevel"] = new DeviceManagementExchangeAccessLevel($this->_propDict["defaultAccessLevel"]);
@@ -161,7 +161,7 @@ class DeviceManagementExchangeOnPremisesPolicy extends Entity
     public function getConditionalAccessSettings()
     {
         if (array_key_exists("conditionalAccessSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["conditionalAccessSettings"], "Microsoft\Graph\Model\OnPremisesConditionalAccessSettings")) {
+            if (is_a($this->_propDict["conditionalAccessSettings"], "Microsoft\Graph\Beta\Model\OnPremisesConditionalAccessSettings")) {
                 return $this->_propDict["conditionalAccessSettings"];
             } else {
                 $this->_propDict["conditionalAccessSettings"] = new OnPremisesConditionalAccessSettings($this->_propDict["conditionalAccessSettings"]);

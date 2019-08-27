@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * WindowsManagementApp class
@@ -52,39 +52,6 @@ class WindowsManagementApp extends Entity
     public function setAvailableVersion($val)
     {
         $this->_propDict["availableVersion"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the healthSummary
-    * Health summary for Windows management app.
-    *
-    * @return WindowsManagementAppHealthSummary The healthSummary
-    */
-    public function getHealthSummary()
-    {
-        if (array_key_exists("healthSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["healthSummary"], "Microsoft\Graph\Model\WindowsManagementAppHealthSummary")) {
-                return $this->_propDict["healthSummary"];
-            } else {
-                $this->_propDict["healthSummary"] = new WindowsManagementAppHealthSummary($this->_propDict["healthSummary"]);
-                return $this->_propDict["healthSummary"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the healthSummary
-    * Health summary for Windows management app.
-    *
-    * @param WindowsManagementAppHealthSummary $val The healthSummary
-    *
-    * @return WindowsManagementApp
-    */
-    public function setHealthSummary($val)
-    {
-        $this->_propDict["healthSummary"] = $val;
         return $this;
     }
     

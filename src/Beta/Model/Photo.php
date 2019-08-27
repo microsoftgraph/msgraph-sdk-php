@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * Photo class
 *
@@ -221,6 +221,32 @@ class Photo extends Entity
         $this->_propDict["iso"] = $val;
         return $this;
     }
+    /**
+    * Gets the orientation
+    *
+    * @return int The orientation
+    */
+    public function getOrientation()
+    {
+        if (array_key_exists("orientation", $this->_propDict)) {
+            return $this->_propDict["orientation"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the orientation
+    *
+    * @param int $val The value of the orientation
+    *
+    * @return Photo
+    */
+    public function setOrientation($val)
+    {
+        $this->_propDict["orientation"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the takenDateTime
@@ -231,7 +257,7 @@ class Photo extends Entity
     public function getTakenDateTime()
     {
         if (array_key_exists("takenDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["takenDateTime"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["takenDateTime"], "Microsoft\Graph\Beta\Model\\DateTime")) {
                 return $this->_propDict["takenDateTime"];
             } else {
                 $this->_propDict["takenDateTime"] = new \DateTime($this->_propDict["takenDateTime"]);

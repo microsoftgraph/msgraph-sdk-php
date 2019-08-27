@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * Hashes class
 *
@@ -107,6 +107,32 @@ class Hashes extends Entity
     public function setSha1Hash($val)
     {
         $this->_propDict["sha1Hash"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the sha256Hash
+    *
+    * @return string The sha256Hash
+    */
+    public function getSha256Hash()
+    {
+        if (array_key_exists("sha256Hash", $this->_propDict)) {
+            return $this->_propDict["sha256Hash"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the sha256Hash
+    *
+    * @param string $val The value of the sha256Hash
+    *
+    * @return Hashes
+    */
+    public function setSha256Hash($val)
+    {
+        $this->_propDict["sha256Hash"] = $val;
         return $this;
     }
 }

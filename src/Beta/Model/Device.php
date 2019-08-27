@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * Device class
@@ -87,7 +87,7 @@ class Device extends DirectoryObject
     
     /**
     * Gets the approximateLastSignInDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z' Read-only.
+    * The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
     *
     * @return \DateTime The approximateLastSignInDateTime
     */
@@ -106,7 +106,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the approximateLastSignInDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z' Read-only.
+    * The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
     *
     * @param \DateTime $val The approximateLastSignInDateTime
     *
@@ -120,6 +120,7 @@ class Device extends DirectoryObject
     
     /**
     * Gets the complianceExpirationDateTime
+    * The timestamp when the device is no longer deemed compliant. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
     *
     * @return \DateTime The complianceExpirationDateTime
     */
@@ -138,6 +139,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the complianceExpirationDateTime
+    * The timestamp when the device is no longer deemed compliant. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
     *
     * @param \DateTime $val The complianceExpirationDateTime
     *
@@ -474,6 +476,7 @@ class Device extends DirectoryObject
     
     /**
     * Gets the profileType
+    * The profile type of the device. Possible values:RegisteredDevice (default)SecureVMPrinterSharedIoT
     *
     * @return string The profileType
     */
@@ -488,6 +491,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the profileType
+    * The profile type of the device. Possible values:RegisteredDevice (default)SecureVMPrinterSharedIoT
     *
     * @param string $val The profileType
     *
@@ -501,6 +505,7 @@ class Device extends DirectoryObject
     
     /**
     * Gets the systemLabels
+    * List of labels applied to the device by the system.
     *
     * @return string The systemLabels
     */
@@ -515,6 +520,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the systemLabels
+    * List of labels applied to the device by the system.
     *
     * @param string $val The systemLabels
     *
@@ -719,36 +725,6 @@ class Device extends DirectoryObject
     
 
      /** 
-     * Gets the extensions
-    * The collection of open extensions defined for the device. Read-only. Nullable.
-     *
-     * @return array The extensions
-     */
-    public function getExtensions()
-    {
-        if (array_key_exists("extensions", $this->_propDict)) {
-           return $this->_propDict["extensions"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the extensions
-    * The collection of open extensions defined for the device. Read-only. Nullable.
-    *
-    * @param Extension $val The extensions
-    *
-    * @return Device
-    */
-    public function setExtensions($val)
-    {
-		$this->_propDict["extensions"] = $val;
-        return $this;
-    }
-    
-
-     /** 
      * Gets the memberOf
     * Groups that this group is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable.
      *
@@ -862,6 +838,36 @@ class Device extends DirectoryObject
     public function setTransitiveMemberOf($val)
     {
 		$this->_propDict["transitiveMemberOf"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the extensions
+    * The collection of open extensions defined for the device. Read-only. Nullable.
+     *
+     * @return array The extensions
+     */
+    public function getExtensions()
+    {
+        if (array_key_exists("extensions", $this->_propDict)) {
+           return $this->_propDict["extensions"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the extensions
+    * The collection of open extensions defined for the device. Read-only. Nullable.
+    *
+    * @param Extension $val The extensions
+    *
+    * @return Device
+    */
+    public function setExtensions($val)
+    {
+		$this->_propDict["extensions"] = $val;
         return $this;
     }
     

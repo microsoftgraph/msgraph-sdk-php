@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * UserActivationCounts class
 *
@@ -60,7 +60,7 @@ class UserActivationCounts extends Entity
     public function getLastActivatedDate()
     {
         if (array_key_exists("lastActivatedDate", $this->_propDict)) {
-            if (is_a($this->_propDict["lastActivatedDate"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["lastActivatedDate"], "Microsoft\Graph\Beta\Model\\DateTime")) {
                 return $this->_propDict["lastActivatedDate"];
             } else {
                 $this->_propDict["lastActivatedDate"] = new \DateTime($this->_propDict["lastActivatedDate"]);

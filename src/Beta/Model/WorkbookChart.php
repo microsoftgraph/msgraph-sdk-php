@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * WorkbookChart class
@@ -180,7 +180,7 @@ class WorkbookChart extends Entity
     public function getAxes()
     {
         if (array_key_exists("axes", $this->_propDict)) {
-            if (is_a($this->_propDict["axes"], "Microsoft\Graph\Model\WorkbookChartAxes")) {
+            if (is_a($this->_propDict["axes"], "Microsoft\Graph\Beta\Model\WorkbookChartAxes")) {
                 return $this->_propDict["axes"];
             } else {
                 $this->_propDict["axes"] = new WorkbookChartAxes($this->_propDict["axes"]);
@@ -213,7 +213,7 @@ class WorkbookChart extends Entity
     public function getDataLabels()
     {
         if (array_key_exists("dataLabels", $this->_propDict)) {
-            if (is_a($this->_propDict["dataLabels"], "Microsoft\Graph\Model\WorkbookChartDataLabels")) {
+            if (is_a($this->_propDict["dataLabels"], "Microsoft\Graph\Beta\Model\WorkbookChartDataLabels")) {
                 return $this->_propDict["dataLabels"];
             } else {
                 $this->_propDict["dataLabels"] = new WorkbookChartDataLabels($this->_propDict["dataLabels"]);
@@ -246,7 +246,7 @@ class WorkbookChart extends Entity
     public function getFormat()
     {
         if (array_key_exists("format", $this->_propDict)) {
-            if (is_a($this->_propDict["format"], "Microsoft\Graph\Model\WorkbookChartAreaFormat")) {
+            if (is_a($this->_propDict["format"], "Microsoft\Graph\Beta\Model\WorkbookChartAreaFormat")) {
                 return $this->_propDict["format"];
             } else {
                 $this->_propDict["format"] = new WorkbookChartAreaFormat($this->_propDict["format"]);
@@ -279,7 +279,7 @@ class WorkbookChart extends Entity
     public function getLegend()
     {
         if (array_key_exists("legend", $this->_propDict)) {
-            if (is_a($this->_propDict["legend"], "Microsoft\Graph\Model\WorkbookChartLegend")) {
+            if (is_a($this->_propDict["legend"], "Microsoft\Graph\Beta\Model\WorkbookChartLegend")) {
                 return $this->_propDict["legend"];
             } else {
                 $this->_propDict["legend"] = new WorkbookChartLegend($this->_propDict["legend"]);
@@ -342,7 +342,7 @@ class WorkbookChart extends Entity
     public function getTitle()
     {
         if (array_key_exists("title", $this->_propDict)) {
-            if (is_a($this->_propDict["title"], "Microsoft\Graph\Model\WorkbookChartTitle")) {
+            if (is_a($this->_propDict["title"], "Microsoft\Graph\Beta\Model\WorkbookChartTitle")) {
                 return $this->_propDict["title"];
             } else {
                 $this->_propDict["title"] = new WorkbookChartTitle($this->_propDict["title"]);
@@ -375,7 +375,7 @@ class WorkbookChart extends Entity
     public function getWorksheet()
     {
         if (array_key_exists("worksheet", $this->_propDict)) {
-            if (is_a($this->_propDict["worksheet"], "Microsoft\Graph\Model\WorkbookWorksheet")) {
+            if (is_a($this->_propDict["worksheet"], "Microsoft\Graph\Beta\Model\WorkbookWorksheet")) {
                 return $this->_propDict["worksheet"];
             } else {
                 $this->_propDict["worksheet"] = new WorkbookWorksheet($this->_propDict["worksheet"]);

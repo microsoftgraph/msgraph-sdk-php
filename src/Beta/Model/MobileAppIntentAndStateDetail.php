@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * MobileAppIntentAndStateDetail class
 *
@@ -91,7 +91,7 @@ class MobileAppIntentAndStateDetail extends Entity
     public function getMobileAppIntent()
     {
         if (array_key_exists("mobileAppIntent", $this->_propDict)) {
-            if (is_a($this->_propDict["mobileAppIntent"], "Microsoft\Graph\Model\MobileAppIntent")) {
+            if (is_a($this->_propDict["mobileAppIntent"], "Microsoft\Graph\Beta\Model\MobileAppIntent")) {
                 return $this->_propDict["mobileAppIntent"];
             } else {
                 $this->_propDict["mobileAppIntent"] = new MobileAppIntent($this->_propDict["mobileAppIntent"]);
@@ -152,7 +152,7 @@ class MobileAppIntentAndStateDetail extends Entity
     public function getInstallState()
     {
         if (array_key_exists("installState", $this->_propDict)) {
-            if (is_a($this->_propDict["installState"], "Microsoft\Graph\Model\ResultantAppState")) {
+            if (is_a($this->_propDict["installState"], "Microsoft\Graph\Beta\Model\ResultantAppState")) {
                 return $this->_propDict["installState"];
             } else {
                 $this->_propDict["installState"] = new ResultantAppState($this->_propDict["installState"]);
@@ -185,7 +185,7 @@ class MobileAppIntentAndStateDetail extends Entity
     public function getSupportedDeviceTypes()
     {
         if (array_key_exists("supportedDeviceTypes", $this->_propDict)) {
-            if (is_a($this->_propDict["supportedDeviceTypes"], "Microsoft\Graph\Model\MobileAppSupportedDeviceType")) {
+            if (is_a($this->_propDict["supportedDeviceTypes"], "Microsoft\Graph\Beta\Model\MobileAppSupportedDeviceType")) {
                 return $this->_propDict["supportedDeviceTypes"];
             } else {
                 $this->_propDict["supportedDeviceTypes"] = new MobileAppSupportedDeviceType($this->_propDict["supportedDeviceTypes"]);

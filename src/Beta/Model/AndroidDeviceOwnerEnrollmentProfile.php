@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * AndroidDeviceOwnerEnrollmentProfile class
@@ -341,7 +341,7 @@ class AndroidDeviceOwnerEnrollmentProfile extends Entity
     public function getQrCodeImage()
     {
         if (array_key_exists("qrCodeImage", $this->_propDict)) {
-            if (is_a($this->_propDict["qrCodeImage"], "Microsoft\Graph\Model\MimeContent")) {
+            if (is_a($this->_propDict["qrCodeImage"], "Microsoft\Graph\Beta\Model\MimeContent")) {
                 return $this->_propDict["qrCodeImage"];
             } else {
                 $this->_propDict["qrCodeImage"] = new MimeContent($this->_propDict["qrCodeImage"]);
@@ -362,6 +362,35 @@ class AndroidDeviceOwnerEnrollmentProfile extends Entity
     public function setQrCodeImage($val)
     {
         $this->_propDict["qrCodeImage"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the roleScopeTagIds
+    * List of Scope Tags for this Entity instance.
+    *
+    * @return string The roleScopeTagIds
+    */
+    public function getRoleScopeTagIds()
+    {
+        if (array_key_exists("roleScopeTagIds", $this->_propDict)) {
+            return $this->_propDict["roleScopeTagIds"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the roleScopeTagIds
+    * List of Scope Tags for this Entity instance.
+    *
+    * @param string $val The roleScopeTagIds
+    *
+    * @return AndroidDeviceOwnerEnrollmentProfile
+    */
+    public function setRoleScopeTagIds($val)
+    {
+        $this->_propDict["roleScopeTagIds"] = $val;
         return $this;
     }
     

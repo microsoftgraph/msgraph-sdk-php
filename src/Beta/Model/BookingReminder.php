@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * BookingReminder class
 *
@@ -35,7 +35,7 @@ class BookingReminder extends Entity
     public function getOffset()
     {
         if (array_key_exists("offset", $this->_propDict)) {
-            if (is_a($this->_propDict["offset"], "Microsoft\Graph\Model\Duration")) {
+            if (is_a($this->_propDict["offset"], "Microsoft\Graph\Beta\Model\Duration")) {
                 return $this->_propDict["offset"];
             } else {
                 $this->_propDict["offset"] = new Duration($this->_propDict["offset"]);
@@ -68,7 +68,7 @@ class BookingReminder extends Entity
     public function getRecipients()
     {
         if (array_key_exists("recipients", $this->_propDict)) {
-            if (is_a($this->_propDict["recipients"], "Microsoft\Graph\Model\BookingReminderRecipients")) {
+            if (is_a($this->_propDict["recipients"], "Microsoft\Graph\Beta\Model\BookingReminderRecipients")) {
                 return $this->_propDict["recipients"];
             } else {
                 $this->_propDict["recipients"] = new BookingReminderRecipients($this->_propDict["recipients"]);
