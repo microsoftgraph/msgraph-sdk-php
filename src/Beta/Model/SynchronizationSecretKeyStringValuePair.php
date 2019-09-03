@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * SynchronizationSecretKeyStringValuePair class
 *
@@ -34,7 +34,7 @@ class SynchronizationSecretKeyStringValuePair extends Entity
     public function getKey()
     {
         if (array_key_exists("key", $this->_propDict)) {
-            if (is_a($this->_propDict["key"], "Microsoft\Graph\Model\SynchronizationSecret")) {
+            if (is_a($this->_propDict["key"], "Microsoft\Graph\Beta\Model\SynchronizationSecret")) {
                 return $this->_propDict["key"];
             } else {
                 $this->_propDict["key"] = new SynchronizationSecret($this->_propDict["key"]);

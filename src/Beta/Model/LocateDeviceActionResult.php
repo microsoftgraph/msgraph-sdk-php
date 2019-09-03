@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * LocateDeviceActionResult class
 *
@@ -35,7 +35,7 @@ class LocateDeviceActionResult extends DeviceActionResult
     public function getDeviceLocation()
     {
         if (array_key_exists("deviceLocation", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceLocation"], "Microsoft\Graph\Model\DeviceGeoLocation")) {
+            if (is_a($this->_propDict["deviceLocation"], "Microsoft\Graph\Beta\Model\DeviceGeoLocation")) {
                 return $this->_propDict["deviceLocation"];
             } else {
                 $this->_propDict["deviceLocation"] = new DeviceGeoLocation($this->_propDict["deviceLocation"]);

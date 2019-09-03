@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * WindowsInformationProtectionPolicy class
@@ -151,7 +151,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection
     public function getPinUppercaseLetters()
     {
         if (array_key_exists("pinUppercaseLetters", $this->_propDict)) {
-            if (is_a($this->_propDict["pinUppercaseLetters"], "Microsoft\Graph\Model\WindowsInformationProtectionPinCharacterRequirements")) {
+            if (is_a($this->_propDict["pinUppercaseLetters"], "Microsoft\Graph\Beta\Model\WindowsInformationProtectionPinCharacterRequirements")) {
                 return $this->_propDict["pinUppercaseLetters"];
             } else {
                 $this->_propDict["pinUppercaseLetters"] = new WindowsInformationProtectionPinCharacterRequirements($this->_propDict["pinUppercaseLetters"]);
@@ -184,7 +184,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection
     public function getPinLowercaseLetters()
     {
         if (array_key_exists("pinLowercaseLetters", $this->_propDict)) {
-            if (is_a($this->_propDict["pinLowercaseLetters"], "Microsoft\Graph\Model\WindowsInformationProtectionPinCharacterRequirements")) {
+            if (is_a($this->_propDict["pinLowercaseLetters"], "Microsoft\Graph\Beta\Model\WindowsInformationProtectionPinCharacterRequirements")) {
                 return $this->_propDict["pinLowercaseLetters"];
             } else {
                 $this->_propDict["pinLowercaseLetters"] = new WindowsInformationProtectionPinCharacterRequirements($this->_propDict["pinLowercaseLetters"]);
@@ -217,7 +217,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection
     public function getPinSpecialCharacters()
     {
         if (array_key_exists("pinSpecialCharacters", $this->_propDict)) {
-            if (is_a($this->_propDict["pinSpecialCharacters"], "Microsoft\Graph\Model\WindowsInformationProtectionPinCharacterRequirements")) {
+            if (is_a($this->_propDict["pinSpecialCharacters"], "Microsoft\Graph\Beta\Model\WindowsInformationProtectionPinCharacterRequirements")) {
                 return $this->_propDict["pinSpecialCharacters"];
             } else {
                 $this->_propDict["pinSpecialCharacters"] = new WindowsInformationProtectionPinCharacterRequirements($this->_propDict["pinSpecialCharacters"]);

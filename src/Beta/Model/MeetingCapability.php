@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * MeetingCapability class
 *
@@ -60,7 +60,7 @@ class MeetingCapability extends Entity
     public function getAutoAdmittedUsers()
     {
         if (array_key_exists("autoAdmittedUsers", $this->_propDict)) {
-            if (is_a($this->_propDict["autoAdmittedUsers"], "Microsoft\Graph\Model\AutoAdmittedUsersType")) {
+            if (is_a($this->_propDict["autoAdmittedUsers"], "Microsoft\Graph\Beta\Model\AutoAdmittedUsersType")) {
                 return $this->_propDict["autoAdmittedUsers"];
             } else {
                 $this->_propDict["autoAdmittedUsers"] = new AutoAdmittedUsersType($this->_propDict["autoAdmittedUsers"]);
@@ -81,5 +81,31 @@ class MeetingCapability extends Entity
     {
         $this->_propDict["autoAdmittedUsers"] = $val;
          return $this;
+    }
+    /**
+    * Gets the allowAnonymousUsersToStartMeeting
+    *
+    * @return bool The allowAnonymousUsersToStartMeeting
+    */
+    public function getAllowAnonymousUsersToStartMeeting()
+    {
+        if (array_key_exists("allowAnonymousUsersToStartMeeting", $this->_propDict)) {
+            return $this->_propDict["allowAnonymousUsersToStartMeeting"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the allowAnonymousUsersToStartMeeting
+    *
+    * @param bool $val The value of the allowAnonymousUsersToStartMeeting
+    *
+    * @return MeetingCapability
+    */
+    public function setAllowAnonymousUsersToStartMeeting($val)
+    {
+        $this->_propDict["allowAnonymousUsersToStartMeeting"] = $val;
+        return $this;
     }
 }

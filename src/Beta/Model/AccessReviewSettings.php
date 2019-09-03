@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * AccessReviewSettings class
 *
@@ -112,7 +112,7 @@ class AccessReviewSettings extends Entity
     public function getRecurrenceSettings()
     {
         if (array_key_exists("recurrenceSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["recurrenceSettings"], "Microsoft\Graph\Model\AccessReviewRecurrenceSettings")) {
+            if (is_a($this->_propDict["recurrenceSettings"], "Microsoft\Graph\Beta\Model\AccessReviewRecurrenceSettings")) {
                 return $this->_propDict["recurrenceSettings"];
             } else {
                 $this->_propDict["recurrenceSettings"] = new AccessReviewRecurrenceSettings($this->_propDict["recurrenceSettings"]);
@@ -195,7 +195,7 @@ class AccessReviewSettings extends Entity
     public function getAutoReviewSettings()
     {
         if (array_key_exists("autoReviewSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["autoReviewSettings"], "Microsoft\Graph\Model\AutoReviewSettings")) {
+            if (is_a($this->_propDict["autoReviewSettings"], "Microsoft\Graph\Beta\Model\AutoReviewSettings")) {
                 return $this->_propDict["autoReviewSettings"];
             } else {
                 $this->_propDict["autoReviewSettings"] = new AutoReviewSettings($this->_propDict["autoReviewSettings"]);

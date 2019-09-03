@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * Event class
@@ -93,7 +93,7 @@ class Event extends OutlookItem
     public function getResponseStatus()
     {
         if (array_key_exists("responseStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["responseStatus"], "Microsoft\Graph\Model\ResponseStatus")) {
+            if (is_a($this->_propDict["responseStatus"], "Microsoft\Graph\Beta\Model\ResponseStatus")) {
                 return $this->_propDict["responseStatus"];
             } else {
                 $this->_propDict["responseStatus"] = new ResponseStatus($this->_propDict["responseStatus"]);
@@ -269,7 +269,7 @@ class Event extends OutlookItem
     public function getBody()
     {
         if (array_key_exists("body", $this->_propDict)) {
-            if (is_a($this->_propDict["body"], "Microsoft\Graph\Model\ItemBody")) {
+            if (is_a($this->_propDict["body"], "Microsoft\Graph\Beta\Model\ItemBody")) {
                 return $this->_propDict["body"];
             } else {
                 $this->_propDict["body"] = new ItemBody($this->_propDict["body"]);
@@ -331,7 +331,7 @@ class Event extends OutlookItem
     public function getImportance()
     {
         if (array_key_exists("importance", $this->_propDict)) {
-            if (is_a($this->_propDict["importance"], "Microsoft\Graph\Model\Importance")) {
+            if (is_a($this->_propDict["importance"], "Microsoft\Graph\Beta\Model\Importance")) {
                 return $this->_propDict["importance"];
             } else {
                 $this->_propDict["importance"] = new Importance($this->_propDict["importance"]);
@@ -364,7 +364,7 @@ class Event extends OutlookItem
     public function getSensitivity()
     {
         if (array_key_exists("sensitivity", $this->_propDict)) {
-            if (is_a($this->_propDict["sensitivity"], "Microsoft\Graph\Model\Sensitivity")) {
+            if (is_a($this->_propDict["sensitivity"], "Microsoft\Graph\Beta\Model\Sensitivity")) {
                 return $this->_propDict["sensitivity"];
             } else {
                 $this->_propDict["sensitivity"] = new Sensitivity($this->_propDict["sensitivity"]);
@@ -390,14 +390,14 @@ class Event extends OutlookItem
     
     /**
     * Gets the start
-    * The date, time, and time zone that the event starts.
+    * The date, time, and time zone that the event starts. By default, the start time is in UTC.
     *
     * @return DateTimeTimeZone The start
     */
     public function getStart()
     {
         if (array_key_exists("start", $this->_propDict)) {
-            if (is_a($this->_propDict["start"], "Microsoft\Graph\Model\DateTimeTimeZone")) {
+            if (is_a($this->_propDict["start"], "Microsoft\Graph\Beta\Model\DateTimeTimeZone")) {
                 return $this->_propDict["start"];
             } else {
                 $this->_propDict["start"] = new DateTimeTimeZone($this->_propDict["start"]);
@@ -409,7 +409,7 @@ class Event extends OutlookItem
     
     /**
     * Sets the start
-    * The date, time, and time zone that the event starts.
+    * The date, time, and time zone that the event starts. By default, the start time is in UTC.
     *
     * @param DateTimeTimeZone $val The start
     *
@@ -456,14 +456,14 @@ class Event extends OutlookItem
     
     /**
     * Gets the end
-    * The date, time, and time zone that the event ends.
+    * The date, time, and time zone that the event ends. By default, the end time is in UTC.
     *
     * @return DateTimeTimeZone The end
     */
     public function getEnd()
     {
         if (array_key_exists("end", $this->_propDict)) {
-            if (is_a($this->_propDict["end"], "Microsoft\Graph\Model\DateTimeTimeZone")) {
+            if (is_a($this->_propDict["end"], "Microsoft\Graph\Beta\Model\DateTimeTimeZone")) {
                 return $this->_propDict["end"];
             } else {
                 $this->_propDict["end"] = new DateTimeTimeZone($this->_propDict["end"]);
@@ -475,7 +475,7 @@ class Event extends OutlookItem
     
     /**
     * Sets the end
-    * The date, time, and time zone that the event ends.
+    * The date, time, and time zone that the event ends. By default, the end time is in UTC.
     *
     * @param DateTimeTimeZone $val The end
     *
@@ -496,7 +496,7 @@ class Event extends OutlookItem
     public function getLocation()
     {
         if (array_key_exists("location", $this->_propDict)) {
-            if (is_a($this->_propDict["location"], "Microsoft\Graph\Model\Location")) {
+            if (is_a($this->_propDict["location"], "Microsoft\Graph\Beta\Model\Location")) {
                 return $this->_propDict["location"];
             } else {
                 $this->_propDict["location"] = new Location($this->_propDict["location"]);
@@ -646,7 +646,7 @@ class Event extends OutlookItem
     public function getRecurrence()
     {
         if (array_key_exists("recurrence", $this->_propDict)) {
-            if (is_a($this->_propDict["recurrence"], "Microsoft\Graph\Model\PatternedRecurrence")) {
+            if (is_a($this->_propDict["recurrence"], "Microsoft\Graph\Beta\Model\PatternedRecurrence")) {
                 return $this->_propDict["recurrence"];
             } else {
                 $this->_propDict["recurrence"] = new PatternedRecurrence($this->_propDict["recurrence"]);
@@ -737,7 +737,7 @@ class Event extends OutlookItem
     public function getShowAs()
     {
         if (array_key_exists("showAs", $this->_propDict)) {
-            if (is_a($this->_propDict["showAs"], "Microsoft\Graph\Model\FreeBusyStatus")) {
+            if (is_a($this->_propDict["showAs"], "Microsoft\Graph\Beta\Model\FreeBusyStatus")) {
                 return $this->_propDict["showAs"];
             } else {
                 $this->_propDict["showAs"] = new FreeBusyStatus($this->_propDict["showAs"]);
@@ -770,7 +770,7 @@ class Event extends OutlookItem
     public function getType()
     {
         if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "Microsoft\Graph\Model\EventType")) {
+            if (is_a($this->_propDict["type"], "Microsoft\Graph\Beta\Model\EventType")) {
                 return $this->_propDict["type"];
             } else {
                 $this->_propDict["type"] = new EventType($this->_propDict["type"]);
@@ -833,7 +833,7 @@ class Event extends OutlookItem
     public function getOrganizer()
     {
         if (array_key_exists("organizer", $this->_propDict)) {
-            if (is_a($this->_propDict["organizer"], "Microsoft\Graph\Model\Recipient")) {
+            if (is_a($this->_propDict["organizer"], "Microsoft\Graph\Beta\Model\Recipient")) {
                 return $this->_propDict["organizer"];
             } else {
                 $this->_propDict["organizer"] = new Recipient($this->_propDict["organizer"]);
@@ -859,7 +859,7 @@ class Event extends OutlookItem
     
     /**
     * Gets the webLink
-    * The URL to open the event in Outlook Web App.The event will open in the browser if you are logged in to your mailbox via Outlook Web App. You will be prompted to login if you are not already logged in with the browser.This URL can be accessed from within an iFrame.
+    * The URL to open the event in Outlook on the web.Outlook on the web opens the event in the browser if you are signed in to your mailbox. Otherwise, Outlook on the web prompts you to sign in.This URL can be accessed from within an iFrame.
     *
     * @return string The webLink
     */
@@ -874,7 +874,7 @@ class Event extends OutlookItem
     
     /**
     * Sets the webLink
-    * The URL to open the event in Outlook Web App.The event will open in the browser if you are logged in to your mailbox via Outlook Web App. You will be prompted to login if you are not already logged in with the browser.This URL can be accessed from within an iFrame.
+    * The URL to open the event in Outlook on the web.Outlook on the web opens the event in the browser if you are signed in to your mailbox. Otherwise, Outlook on the web prompts you to sign in.This URL can be accessed from within an iFrame.
     *
     * @param string $val The webLink
     *
@@ -916,37 +916,6 @@ class Event extends OutlookItem
     }
     
     /**
-    * Gets the creationOptions
-    *
-    * @return EventCreationOptions The creationOptions
-    */
-    public function getCreationOptions()
-    {
-        if (array_key_exists("creationOptions", $this->_propDict)) {
-            if (is_a($this->_propDict["creationOptions"], "Microsoft\Graph\Model\EventCreationOptions")) {
-                return $this->_propDict["creationOptions"];
-            } else {
-                $this->_propDict["creationOptions"] = new EventCreationOptions($this->_propDict["creationOptions"]);
-                return $this->_propDict["creationOptions"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the creationOptions
-    *
-    * @param EventCreationOptions $val The creationOptions
-    *
-    * @return Event
-    */
-    public function setCreationOptions($val)
-    {
-        $this->_propDict["creationOptions"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the calendar
     * The calendar that contains the event. Navigation property. Read-only.
     *
@@ -955,7 +924,7 @@ class Event extends OutlookItem
     public function getCalendar()
     {
         if (array_key_exists("calendar", $this->_propDict)) {
-            if (is_a($this->_propDict["calendar"], "Microsoft\Graph\Model\Calendar")) {
+            if (is_a($this->_propDict["calendar"], "Microsoft\Graph\Beta\Model\Calendar")) {
                 return $this->_propDict["calendar"];
             } else {
                 $this->_propDict["calendar"] = new Calendar($this->_propDict["calendar"]);

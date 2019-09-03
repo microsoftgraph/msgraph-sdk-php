@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * IosUpdateDeviceStatus class
@@ -35,7 +35,7 @@ class IosUpdateDeviceStatus extends Entity
     public function getInstallStatus()
     {
         if (array_key_exists("installStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["installStatus"], "Microsoft\Graph\Model\IosUpdatesInstallStatus")) {
+            if (is_a($this->_propDict["installStatus"], "Microsoft\Graph\Beta\Model\IosUpdatesInstallStatus")) {
                 return $this->_propDict["installStatus"];
             } else {
                 $this->_propDict["installStatus"] = new IosUpdatesInstallStatus($this->_propDict["installStatus"]);
@@ -304,7 +304,7 @@ class IosUpdateDeviceStatus extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Microsoft\Graph\Model\ComplianceStatus")) {
+            if (is_a($this->_propDict["status"], "Microsoft\Graph\Beta\Model\ComplianceStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new ComplianceStatus($this->_propDict["status"]);

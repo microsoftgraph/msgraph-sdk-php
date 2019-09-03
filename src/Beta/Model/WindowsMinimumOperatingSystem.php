@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * WindowsMinimumOperatingSystem class
 *
@@ -219,6 +219,62 @@ class WindowsMinimumOperatingSystem extends Entity
     public function setV10_1803($val)
     {
         $this->_propDict["v101803"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the v10_1809
+    * Windows 10 1809 or later.
+    *
+    * @return bool The v10_1809
+    */
+    public function getV10_1809()
+    {
+        if (array_key_exists("v101809", $this->_propDict)) {
+            return $this->_propDict["v101809"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the v10_1809
+    * Windows 10 1809 or later.
+    *
+    * @param bool $val The value of the v10_1809
+    *
+    * @return WindowsMinimumOperatingSystem
+    */
+    public function setV10_1809($val)
+    {
+        $this->_propDict["v101809"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the v10_1903
+    * Windows 10 1903 or later.
+    *
+    * @return bool The v10_1903
+    */
+    public function getV10_1903()
+    {
+        if (array_key_exists("v101903", $this->_propDict)) {
+            return $this->_propDict["v101903"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the v10_1903
+    * Windows 10 1903 or later.
+    *
+    * @param bool $val The value of the v10_1903
+    *
+    * @return WindowsMinimumOperatingSystem
+    */
+    public function setV10_1903($val)
+    {
+        $this->_propDict["v101903"] = $val;
         return $this;
     }
 }

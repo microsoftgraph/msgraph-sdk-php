@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * EducationUser class
@@ -26,16 +26,46 @@ namespace Microsoft\Graph\Model;
 */
 class EducationUser extends Entity
 {
+
+     /** 
+     * Gets the relatedContacts
+    * Set of contacts related to the user.  This optional property must be specified in a $select clause and can only be retrieved for an individual user.
+     *
+     * @return array The relatedContacts
+     */
+    public function getRelatedContacts()
+    {
+        if (array_key_exists("relatedContacts", $this->_propDict)) {
+           return $this->_propDict["relatedContacts"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the relatedContacts
+    * Set of contacts related to the user.  This optional property must be specified in a $select clause and can only be retrieved for an individual user.
+    *
+    * @param RelatedContact $val The relatedContacts
+    *
+    * @return EducationUser
+    */
+    public function setRelatedContacts($val)
+    {
+		$this->_propDict["relatedContacts"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the primaryRole
-    * Default role for a user. The user's role might be different in an individual class. The possible values are: student, teacher, unknownFutureValue. Supports $filter.
+    * Default role for a user. The user's role might be different in an individual class. The possible values are: student, teacher. Supports $filter.
     *
     * @return EducationUserRole The primaryRole
     */
     public function getPrimaryRole()
     {
         if (array_key_exists("primaryRole", $this->_propDict)) {
-            if (is_a($this->_propDict["primaryRole"], "Microsoft\Graph\Model\EducationUserRole")) {
+            if (is_a($this->_propDict["primaryRole"], "Microsoft\Graph\Beta\Model\EducationUserRole")) {
                 return $this->_propDict["primaryRole"];
             } else {
                 $this->_propDict["primaryRole"] = new EducationUserRole($this->_propDict["primaryRole"]);
@@ -47,7 +77,7 @@ class EducationUser extends Entity
     
     /**
     * Sets the primaryRole
-    * Default role for a user. The user's role might be different in an individual class. The possible values are: student, teacher, unknownFutureValue. Supports $filter.
+    * Default role for a user. The user's role might be different in an individual class. The possible values are: student, teacher. Supports $filter.
     *
     * @param EducationUserRole $val The primaryRole
     *
@@ -90,14 +120,14 @@ class EducationUser extends Entity
     
     /**
     * Gets the externalSource
-    * Where this user was created from. The possible values are: sis, manual, unkownFutureValue.
+    * Where this user was created from. The possible values are: sis, manual.
     *
     * @return EducationExternalSource The externalSource
     */
     public function getExternalSource()
     {
         if (array_key_exists("externalSource", $this->_propDict)) {
-            if (is_a($this->_propDict["externalSource"], "Microsoft\Graph\Model\EducationExternalSource")) {
+            if (is_a($this->_propDict["externalSource"], "Microsoft\Graph\Beta\Model\EducationExternalSource")) {
                 return $this->_propDict["externalSource"];
             } else {
                 $this->_propDict["externalSource"] = new EducationExternalSource($this->_propDict["externalSource"]);
@@ -109,7 +139,7 @@ class EducationUser extends Entity
     
     /**
     * Sets the externalSource
-    * Where this user was created from. The possible values are: sis, manual, unkownFutureValue.
+    * Where this user was created from. The possible values are: sis, manual.
     *
     * @param EducationExternalSource $val The externalSource
     *
@@ -130,7 +160,7 @@ class EducationUser extends Entity
     public function getResidenceAddress()
     {
         if (array_key_exists("residenceAddress", $this->_propDict)) {
-            if (is_a($this->_propDict["residenceAddress"], "Microsoft\Graph\Model\PhysicalAddress")) {
+            if (is_a($this->_propDict["residenceAddress"], "Microsoft\Graph\Beta\Model\PhysicalAddress")) {
                 return $this->_propDict["residenceAddress"];
             } else {
                 $this->_propDict["residenceAddress"] = new PhysicalAddress($this->_propDict["residenceAddress"]);
@@ -163,7 +193,7 @@ class EducationUser extends Entity
     public function getMailingAddress()
     {
         if (array_key_exists("mailingAddress", $this->_propDict)) {
-            if (is_a($this->_propDict["mailingAddress"], "Microsoft\Graph\Model\PhysicalAddress")) {
+            if (is_a($this->_propDict["mailingAddress"], "Microsoft\Graph\Beta\Model\PhysicalAddress")) {
                 return $this->_propDict["mailingAddress"];
             } else {
                 $this->_propDict["mailingAddress"] = new PhysicalAddress($this->_propDict["mailingAddress"]);
@@ -196,7 +226,7 @@ class EducationUser extends Entity
     public function getStudent()
     {
         if (array_key_exists("student", $this->_propDict)) {
-            if (is_a($this->_propDict["student"], "Microsoft\Graph\Model\EducationStudent")) {
+            if (is_a($this->_propDict["student"], "Microsoft\Graph\Beta\Model\EducationStudent")) {
                 return $this->_propDict["student"];
             } else {
                 $this->_propDict["student"] = new EducationStudent($this->_propDict["student"]);
@@ -222,14 +252,14 @@ class EducationUser extends Entity
     
     /**
     * Gets the teacher
-    * If the primary role is teacher, this block will conatin teacher specific data.
+    * If the primary role is teacher, this block will contain teacher specific data.
     *
     * @return EducationTeacher The teacher
     */
     public function getTeacher()
     {
         if (array_key_exists("teacher", $this->_propDict)) {
-            if (is_a($this->_propDict["teacher"], "Microsoft\Graph\Model\EducationTeacher")) {
+            if (is_a($this->_propDict["teacher"], "Microsoft\Graph\Beta\Model\EducationTeacher")) {
                 return $this->_propDict["teacher"];
             } else {
                 $this->_propDict["teacher"] = new EducationTeacher($this->_propDict["teacher"]);
@@ -241,7 +271,7 @@ class EducationUser extends Entity
     
     /**
     * Sets the teacher
-    * If the primary role is teacher, this block will conatin teacher specific data.
+    * If the primary role is teacher, this block will contain teacher specific data.
     *
     * @param EducationTeacher $val The teacher
     *
@@ -262,7 +292,7 @@ class EducationUser extends Entity
     public function getCreatedBy()
     {
         if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["createdBy"], "Microsoft\Graph\Beta\Model\IdentitySet")) {
                 return $this->_propDict["createdBy"];
             } else {
                 $this->_propDict["createdBy"] = new IdentitySet($this->_propDict["createdBy"]);
@@ -616,7 +646,7 @@ class EducationUser extends Entity
     public function getPasswordProfile()
     {
         if (array_key_exists("passwordProfile", $this->_propDict)) {
-            if (is_a($this->_propDict["passwordProfile"], "Microsoft\Graph\Model\PasswordProfile")) {
+            if (is_a($this->_propDict["passwordProfile"], "Microsoft\Graph\Beta\Model\PasswordProfile")) {
                 return $this->_propDict["passwordProfile"];
             } else {
                 $this->_propDict["passwordProfile"] = new PasswordProfile($this->_propDict["passwordProfile"]);
@@ -900,33 +930,92 @@ class EducationUser extends Entity
         return $this;
     }
     
+    /**
+    * Gets the onPremisesInfo
+    *
+    * @return EducationOnPremisesInfo The onPremisesInfo
+    */
+    public function getOnPremisesInfo()
+    {
+        if (array_key_exists("onPremisesInfo", $this->_propDict)) {
+            if (is_a($this->_propDict["onPremisesInfo"], "Microsoft\Graph\Beta\Model\EducationOnPremisesInfo")) {
+                return $this->_propDict["onPremisesInfo"];
+            } else {
+                $this->_propDict["onPremisesInfo"] = new EducationOnPremisesInfo($this->_propDict["onPremisesInfo"]);
+                return $this->_propDict["onPremisesInfo"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the onPremisesInfo
+    *
+    * @param EducationOnPremisesInfo $val The onPremisesInfo
+    *
+    * @return EducationUser
+    */
+    public function setOnPremisesInfo($val)
+    {
+        $this->_propDict["onPremisesInfo"] = $val;
+        return $this;
+    }
+    
 
      /** 
-     * Gets the schools
-    * Schools to which the user belongs. Nullable.
+     * Gets the assignments
+    * List of assignments for the user. Nullable.
      *
-     * @return array The schools
+     * @return array The assignments
      */
-    public function getSchools()
+    public function getAssignments()
     {
-        if (array_key_exists("schools", $this->_propDict)) {
-           return $this->_propDict["schools"];
+        if (array_key_exists("assignments", $this->_propDict)) {
+           return $this->_propDict["assignments"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the schools
-    * Schools to which the user belongs. Nullable.
+    * Sets the assignments
+    * List of assignments for the user. Nullable.
     *
-    * @param EducationSchool $val The schools
+    * @param EducationAssignment $val The assignments
     *
     * @return EducationUser
     */
-    public function setSchools($val)
+    public function setAssignments($val)
     {
-		$this->_propDict["schools"] = $val;
+		$this->_propDict["assignments"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the rubrics
+     *
+     * @return array The rubrics
+     */
+    public function getRubrics()
+    {
+        if (array_key_exists("rubrics", $this->_propDict)) {
+           return $this->_propDict["rubrics"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the rubrics
+    *
+    * @param EducationRubric $val The rubrics
+    *
+    * @return EducationUser
+    */
+    public function setRubrics($val)
+    {
+		$this->_propDict["rubrics"] = $val;
         return $this;
     }
     
@@ -960,6 +1049,64 @@ class EducationUser extends Entity
         return $this;
     }
     
+
+     /** 
+     * Gets the taughtClasses
+     *
+     * @return array The taughtClasses
+     */
+    public function getTaughtClasses()
+    {
+        if (array_key_exists("taughtClasses", $this->_propDict)) {
+           return $this->_propDict["taughtClasses"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the taughtClasses
+    *
+    * @param EducationClass $val The taughtClasses
+    *
+    * @return EducationUser
+    */
+    public function setTaughtClasses($val)
+    {
+		$this->_propDict["taughtClasses"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the schools
+    * Schools to which the user belongs. Nullable.
+     *
+     * @return array The schools
+     */
+    public function getSchools()
+    {
+        if (array_key_exists("schools", $this->_propDict)) {
+           return $this->_propDict["schools"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the schools
+    * Schools to which the user belongs. Nullable.
+    *
+    * @param EducationSchool $val The schools
+    *
+    * @return EducationUser
+    */
+    public function setSchools($val)
+    {
+		$this->_propDict["schools"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the user
     * The directory user corresponding to this user.
@@ -969,7 +1116,7 @@ class EducationUser extends Entity
     public function getUser()
     {
         if (array_key_exists("user", $this->_propDict)) {
-            if (is_a($this->_propDict["user"], "Microsoft\Graph\Model\User")) {
+            if (is_a($this->_propDict["user"], "Microsoft\Graph\Beta\Model\User")) {
                 return $this->_propDict["user"];
             } else {
                 $this->_propDict["user"] = new User($this->_propDict["user"]);
@@ -990,36 +1137,6 @@ class EducationUser extends Entity
     public function setUser($val)
     {
         $this->_propDict["user"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the assignments
-    * List of assignments for the user. Nullable.
-     *
-     * @return array The assignments
-     */
-    public function getAssignments()
-    {
-        if (array_key_exists("assignments", $this->_propDict)) {
-           return $this->_propDict["assignments"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the assignments
-    * List of assignments for the user. Nullable.
-    *
-    * @param EducationAssignment $val The assignments
-    *
-    * @return EducationUser
-    */
-    public function setAssignments($val)
-    {
-		$this->_propDict["assignments"] = $val;
         return $this;
     }
     

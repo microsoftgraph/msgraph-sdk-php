@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * CancelMediaProcessingOperation class
@@ -26,31 +26,4 @@ namespace Microsoft\Graph\Model;
 */
 class CancelMediaProcessingOperation extends CommsOperation
 {
-    /**
-    * Gets the all
-    *
-    * @return bool The all
-    */
-    public function getAll()
-    {
-        if (array_key_exists("all", $this->_propDict)) {
-            return $this->_propDict["all"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the all
-    *
-    * @param bool $val The all
-    *
-    * @return CancelMediaProcessingOperation
-    */
-    public function setAll($val)
-    {
-        $this->_propDict["all"] = boolval($val);
-        return $this;
-    }
-    
 }

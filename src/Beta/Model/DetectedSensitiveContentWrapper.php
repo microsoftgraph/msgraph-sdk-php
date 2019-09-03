@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * DetectedSensitiveContentWrapper class
 *
@@ -34,7 +34,7 @@ class DetectedSensitiveContentWrapper extends Entity
     public function getClassification()
     {
         if (array_key_exists("classification", $this->_propDict)) {
-            if (is_a($this->_propDict["classification"], "Microsoft\Graph\Model\DetectedSensitiveContent")) {
+            if (is_a($this->_propDict["classification"], "Microsoft\Graph\Beta\Model\DetectedSensitiveContent")) {
                 return $this->_propDict["classification"];
             } else {
                 $this->_propDict["classification"] = new DetectedSensitiveContent($this->_propDict["classification"]);

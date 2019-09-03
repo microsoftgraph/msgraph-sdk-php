@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * VppToken class
@@ -64,7 +64,7 @@ class VppToken extends Entity
     public function getVppTokenAccountType()
     {
         if (array_key_exists("vppTokenAccountType", $this->_propDict)) {
-            if (is_a($this->_propDict["vppTokenAccountType"], "Microsoft\Graph\Model\VppTokenAccountType")) {
+            if (is_a($this->_propDict["vppTokenAccountType"], "Microsoft\Graph\Beta\Model\VppTokenAccountType")) {
                 return $this->_propDict["vppTokenAccountType"];
             } else {
                 $this->_propDict["vppTokenAccountType"] = new VppTokenAccountType($this->_propDict["vppTokenAccountType"]);
@@ -152,7 +152,7 @@ class VppToken extends Entity
     
     /**
     * Gets the lastSyncDateTime
-    * The last time when an application sync was done with the Apple volume purchase program service using the the Apple Volume Purchase Program Token.
+    * The last time when an application sync was done with the Apple volume purchase program service using the Apple Volume Purchase Program Token.
     *
     * @return \DateTime The lastSyncDateTime
     */
@@ -171,7 +171,7 @@ class VppToken extends Entity
     
     /**
     * Sets the lastSyncDateTime
-    * The last time when an application sync was done with the Apple volume purchase program service using the the Apple Volume Purchase Program Token.
+    * The last time when an application sync was done with the Apple volume purchase program service using the Apple Volume Purchase Program Token.
     *
     * @param \DateTime $val The lastSyncDateTime
     *
@@ -254,7 +254,7 @@ class VppToken extends Entity
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "Microsoft\Graph\Model\VppTokenState")) {
+            if (is_a($this->_propDict["state"], "Microsoft\Graph\Beta\Model\VppTokenState")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new VppTokenState($this->_propDict["state"]);
@@ -317,7 +317,7 @@ class VppToken extends Entity
     public function getLastSyncStatus()
     {
         if (array_key_exists("lastSyncStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["lastSyncStatus"], "Microsoft\Graph\Model\VppTokenSyncStatus")) {
+            if (is_a($this->_propDict["lastSyncStatus"], "Microsoft\Graph\Beta\Model\VppTokenSyncStatus")) {
                 return $this->_propDict["lastSyncStatus"];
             } else {
                 $this->_propDict["lastSyncStatus"] = new VppTokenSyncStatus($this->_propDict["lastSyncStatus"]);
