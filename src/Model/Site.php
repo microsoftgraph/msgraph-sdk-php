@@ -213,7 +213,7 @@ class Site extends BaseItem
     */
     public function setColumns($val)
     {
-		$this->_propDict["columns"] = $val;
+	$this->_propDict["columns"] = $val;
         return $this;
     }
     
@@ -243,7 +243,7 @@ class Site extends BaseItem
     */
     public function setContentTypes($val)
     {
-		$this->_propDict["contentTypes"] = $val;
+	$this->_propDict["contentTypes"] = $val;
         return $this;
     }
     
@@ -306,7 +306,7 @@ class Site extends BaseItem
     */
     public function setDrives($val)
     {
-		$this->_propDict["drives"] = $val;
+	$this->_propDict["drives"] = $val;
         return $this;
     }
     
@@ -336,7 +336,7 @@ class Site extends BaseItem
     */
     public function setItems($val)
     {
-		$this->_propDict["items"] = $val;
+	$this->_propDict["items"] = $val;
         return $this;
     }
     
@@ -366,7 +366,7 @@ class Site extends BaseItem
     */
     public function setLists($val)
     {
-		$this->_propDict["lists"] = $val;
+	$this->_propDict["lists"] = $val;
         return $this;
     }
     
@@ -396,7 +396,7 @@ class Site extends BaseItem
     */
     public function setSites($val)
     {
-		$this->_propDict["sites"] = $val;
+	$this->_propDict["sites"] = $val;
         return $this;
     }
     
