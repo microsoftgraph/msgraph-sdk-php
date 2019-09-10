@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 use Microsoft\Graph\Core\Enum;
 
@@ -39,4 +39,5 @@ class DevicePlatformType extends Enum
     const WINDOWS81_AND_LATER = "windows81AndLater";
     const WINDOWS10_AND_LATER = "windows10AndLater";
     const ANDROID_WORK_PROFILE = "androidWorkProfile";
+    const UNKNOWN = "unknown";
 }

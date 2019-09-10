@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * OnenotePagePreviewLinks class
 *
@@ -34,7 +34,7 @@ class OnenotePagePreviewLinks extends Entity
     public function getPreviewImageUrl()
     {
         if (array_key_exists("previewImageUrl", $this->_propDict)) {
-            if (is_a($this->_propDict["previewImageUrl"], "Microsoft\Graph\Model\ExternalLink")) {
+            if (is_a($this->_propDict["previewImageUrl"], "Microsoft\Graph\Beta\Model\ExternalLink")) {
                 return $this->_propDict["previewImageUrl"];
             } else {
                 $this->_propDict["previewImageUrl"] = new ExternalLink($this->_propDict["previewImageUrl"]);

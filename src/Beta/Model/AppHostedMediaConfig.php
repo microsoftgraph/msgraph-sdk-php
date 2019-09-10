@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * AppHostedMediaConfig class
 *
@@ -31,7 +31,7 @@ class AppHostedMediaConfig extends MediaConfig
     */
     public function __construct()
     {
-        $this->setODataType("#microsoft.graph.AppHostedMediaConfig");
+        $this->setODataType("#microsoft.graph.appHostedMediaConfig");
     }
 
     /**

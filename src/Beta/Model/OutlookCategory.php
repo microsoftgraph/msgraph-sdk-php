@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * OutlookCategory class
@@ -64,7 +64,7 @@ class OutlookCategory extends Entity
     public function getColor()
     {
         if (array_key_exists("color", $this->_propDict)) {
-            if (is_a($this->_propDict["color"], "Microsoft\Graph\Model\CategoryColor")) {
+            if (is_a($this->_propDict["color"], "Microsoft\Graph\Beta\Model\CategoryColor")) {
                 return $this->_propDict["color"];
             } else {
                 $this->_propDict["color"] = new CategoryColor($this->_propDict["color"]);

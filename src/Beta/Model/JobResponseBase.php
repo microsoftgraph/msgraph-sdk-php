@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * JobResponseBase class
@@ -203,15 +203,15 @@ class JobResponseBase extends Entity
     /**
     * Gets the error
     *
-    * @return CaasError The error
+    * @return ClassificationError The error
     */
     public function getError()
     {
         if (array_key_exists("error", $this->_propDict)) {
-            if (is_a($this->_propDict["error"], "Microsoft\Graph\Model\CaasError")) {
+            if (is_a($this->_propDict["error"], "Microsoft\Graph\Beta\Model\ClassificationError")) {
                 return $this->_propDict["error"];
             } else {
-                $this->_propDict["error"] = new CaasError($this->_propDict["error"]);
+                $this->_propDict["error"] = new ClassificationError($this->_propDict["error"]);
                 return $this->_propDict["error"];
             }
         }
@@ -221,7 +221,7 @@ class JobResponseBase extends Entity
     /**
     * Sets the error
     *
-    * @param CaasError $val The error
+    * @param ClassificationError $val The error
     *
     * @return JobResponseBase
     */

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 use Microsoft\Graph\Core\Enum;
 
@@ -37,4 +37,5 @@ class Win32LobAppFileSystemDetectionType extends Enum
     const CREATED_DATE = "createdDate";
     const VERSION = "version";
     const SIZE_IN_MB = "sizeInMB";
+    const DOES_NOT_EXIST = "doesNotExist";
 }

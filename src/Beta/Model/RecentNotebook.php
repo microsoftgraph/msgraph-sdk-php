@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * RecentNotebook class
 *
@@ -63,7 +63,7 @@ class RecentNotebook extends Entity
     public function getLastAccessedTime()
     {
         if (array_key_exists("lastAccessedTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastAccessedTime"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["lastAccessedTime"], "Microsoft\Graph\Beta\Model\\DateTime")) {
                 return $this->_propDict["lastAccessedTime"];
             } else {
                 $this->_propDict["lastAccessedTime"] = new \DateTime($this->_propDict["lastAccessedTime"]);
@@ -89,14 +89,14 @@ class RecentNotebook extends Entity
 
     /**
     * Gets the links
-    * Links for opening the notebook. The oneNoteClientURL link opens the notebook in the OneNote client, if it's installed. The oneNoteWebURL link opens the notebook in OneNote Online.
+    * Links for opening the notebook. The oneNoteClientURL link opens the notebook in the OneNote client, if it's installed. The oneNoteWebURL link opens the notebook in OneNote on the web.
     *
     * @return RecentNotebookLinks The links
     */
     public function getLinks()
     {
         if (array_key_exists("links", $this->_propDict)) {
-            if (is_a($this->_propDict["links"], "Microsoft\Graph\Model\RecentNotebookLinks")) {
+            if (is_a($this->_propDict["links"], "Microsoft\Graph\Beta\Model\RecentNotebookLinks")) {
                 return $this->_propDict["links"];
             } else {
                 $this->_propDict["links"] = new RecentNotebookLinks($this->_propDict["links"]);
@@ -108,7 +108,7 @@ class RecentNotebook extends Entity
 
     /**
     * Sets the links
-    * Links for opening the notebook. The oneNoteClientURL link opens the notebook in the OneNote client, if it's installed. The oneNoteWebURL link opens the notebook in OneNote Online.
+    * Links for opening the notebook. The oneNoteClientURL link opens the notebook in the OneNote client, if it's installed. The oneNoteWebURL link opens the notebook in OneNote on the web.
     *
     * @param RecentNotebookLinks $val The value to assign to the links
     *
@@ -129,7 +129,7 @@ class RecentNotebook extends Entity
     public function getSourceService()
     {
         if (array_key_exists("sourceService", $this->_propDict)) {
-            if (is_a($this->_propDict["sourceService"], "Microsoft\Graph\Model\OnenoteSourceService")) {
+            if (is_a($this->_propDict["sourceService"], "Microsoft\Graph\Beta\Model\OnenoteSourceService")) {
                 return $this->_propDict["sourceService"];
             } else {
                 $this->_propDict["sourceService"] = new OnenoteSourceService($this->_propDict["sourceService"]);

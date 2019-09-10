@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * DeviceConfigurationTargetedUserAndDevice class
 *
@@ -175,7 +175,7 @@ class DeviceConfigurationTargetedUserAndDevice extends Entity
     public function getLastCheckinDateTime()
     {
         if (array_key_exists("lastCheckinDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastCheckinDateTime"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["lastCheckinDateTime"], "Microsoft\Graph\Beta\Model\\DateTime")) {
                 return $this->_propDict["lastCheckinDateTime"];
             } else {
                 $this->_propDict["lastCheckinDateTime"] = new \DateTime($this->_propDict["lastCheckinDateTime"]);

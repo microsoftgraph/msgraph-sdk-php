@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * WorkbookFilter class
@@ -35,7 +35,7 @@ class WorkbookFilter extends Entity
     public function getCriteria()
     {
         if (array_key_exists("criteria", $this->_propDict)) {
-            if (is_a($this->_propDict["criteria"], "Microsoft\Graph\Model\WorkbookFilterCriteria")) {
+            if (is_a($this->_propDict["criteria"], "Microsoft\Graph\Beta\Model\WorkbookFilterCriteria")) {
                 return $this->_propDict["criteria"];
             } else {
                 $this->_propDict["criteria"] = new WorkbookFilterCriteria($this->_propDict["criteria"]);

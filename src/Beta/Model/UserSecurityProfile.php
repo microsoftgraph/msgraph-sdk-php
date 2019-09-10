@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * UserSecurityProfile class
@@ -26,170 +26,31 @@ namespace Microsoft\Graph\Model;
 */
 class UserSecurityProfile extends Entity
 {
-    /**
-    * Gets the aadUserDisplayName
-    *
-    * @return string The aadUserDisplayName
-    */
-    public function getAadUserDisplayName()
-    {
-        if (array_key_exists("aadUserDisplayName", $this->_propDict)) {
-            return $this->_propDict["aadUserDisplayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the aadUserDisplayName
-    *
-    * @param string $val The aadUserDisplayName
-    *
-    * @return UserSecurityProfile
-    */
-    public function setAadUserDisplayName($val)
-    {
-        $this->_propDict["aadUserDisplayName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the aadUserId
-    *
-    * @return string The aadUserId
-    */
-    public function getAadUserId()
-    {
-        if (array_key_exists("aadUserId", $this->_propDict)) {
-            return $this->_propDict["aadUserId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the aadUserId
-    *
-    * @param string $val The aadUserId
-    *
-    * @return UserSecurityProfile
-    */
-    public function setAadUserId($val)
-    {
-        $this->_propDict["aadUserId"] = $val;
-        return $this;
-    }
-    
 
      /** 
-     * Gets the accountAliases
+     * Gets the accounts
      *
-     * @return array The accountAliases
+     * @return array The accounts
      */
-    public function getAccountAliases()
+    public function getAccounts()
     {
-        if (array_key_exists("accountAliases", $this->_propDict)) {
-           return $this->_propDict["accountAliases"];
+        if (array_key_exists("accounts", $this->_propDict)) {
+           return $this->_propDict["accounts"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the accountAliases
+    * Sets the accounts
     *
-    * @param AccountAlias $val The accountAliases
-    *
-    * @return UserSecurityProfile
-    */
-    public function setAccountAliases($val)
-    {
-		$this->_propDict["accountAliases"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the accountInstance
-    *
-    * @return int The accountInstance
-    */
-    public function getAccountInstance()
-    {
-        if (array_key_exists("accountInstance", $this->_propDict)) {
-            return $this->_propDict["accountInstance"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the accountInstance
-    *
-    * @param int $val The accountInstance
+    * @param UserAccount $val The accounts
     *
     * @return UserSecurityProfile
     */
-    public function setAccountInstance($val)
+    public function setAccounts($val)
     {
-        $this->_propDict["accountInstance"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the accountService
-    *
-    * @return string The accountService
-    */
-    public function getAccountService()
-    {
-        if (array_key_exists("accountService", $this->_propDict)) {
-            return $this->_propDict["accountService"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the accountService
-    *
-    * @param string $val The accountService
-    *
-    * @return UserSecurityProfile
-    */
-    public function setAccountService($val)
-    {
-        $this->_propDict["accountService"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the accountStatus
-    *
-    * @return AccountStatus The accountStatus
-    */
-    public function getAccountStatus()
-    {
-        if (array_key_exists("accountStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["accountStatus"], "Microsoft\Graph\Model\AccountStatus")) {
-                return $this->_propDict["accountStatus"];
-            } else {
-                $this->_propDict["accountStatus"] = new AccountStatus($this->_propDict["accountStatus"]);
-                return $this->_propDict["accountStatus"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the accountStatus
-    *
-    * @param AccountStatus $val The accountStatus
-    *
-    * @return UserSecurityProfile
-    */
-    public function setAccountStatus($val)
-    {
-        $this->_propDict["accountStatus"] = $val;
+		$this->_propDict["accounts"] = $val;
         return $this;
     }
     
@@ -248,145 +109,91 @@ class UserSecurityProfile extends Entity
     }
     
     /**
-    * Gets the domainName
+    * Gets the createdDateTime
     *
-    * @return string The domainName
+    * @return \DateTime The createdDateTime
     */
-    public function getDomainName()
+    public function getCreatedDateTime()
     {
-        if (array_key_exists("domainName", $this->_propDict)) {
-            return $this->_propDict["domainName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the domainName
-    *
-    * @param string $val The domainName
-    *
-    * @return UserSecurityProfile
-    */
-    public function setDomainName($val)
-    {
-        $this->_propDict["domainName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the firstSeenDateTime
-    *
-    * @return \DateTime The firstSeenDateTime
-    */
-    public function getFirstSeenDateTime()
-    {
-        if (array_key_exists("firstSeenDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["firstSeenDateTime"], "\DateTime")) {
-                return $this->_propDict["firstSeenDateTime"];
+        if (array_key_exists("createdDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+                return $this->_propDict["createdDateTime"];
             } else {
-                $this->_propDict["firstSeenDateTime"] = new \DateTime($this->_propDict["firstSeenDateTime"]);
-                return $this->_propDict["firstSeenDateTime"];
+                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
+                return $this->_propDict["createdDateTime"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the firstSeenDateTime
+    * Sets the createdDateTime
     *
-    * @param \DateTime $val The firstSeenDateTime
+    * @param \DateTime $val The createdDateTime
     *
     * @return UserSecurityProfile
     */
-    public function setFirstSeenDateTime($val)
+    public function setCreatedDateTime($val)
     {
-        $this->_propDict["firstSeenDateTime"] = $val;
+        $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
     
     /**
-    * Gets the lastSeenDateTime
+    * Gets the displayName
     *
-    * @return \DateTime The lastSeenDateTime
+    * @return string The displayName
     */
-    public function getLastSeenDateTime()
+    public function getDisplayName()
     {
-        if (array_key_exists("lastSeenDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastSeenDateTime"], "\DateTime")) {
-                return $this->_propDict["lastSeenDateTime"];
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the displayName
+    *
+    * @param string $val The displayName
+    *
+    * @return UserSecurityProfile
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the lastModifiedDateTime
+    *
+    * @return \DateTime The lastModifiedDateTime
+    */
+    public function getLastModifiedDateTime()
+    {
+        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+                return $this->_propDict["lastModifiedDateTime"];
             } else {
-                $this->_propDict["lastSeenDateTime"] = new \DateTime($this->_propDict["lastSeenDateTime"]);
-                return $this->_propDict["lastSeenDateTime"];
+                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
+                return $this->_propDict["lastModifiedDateTime"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the lastSeenDateTime
+    * Sets the lastModifiedDateTime
     *
-    * @param \DateTime $val The lastSeenDateTime
-    *
-    * @return UserSecurityProfile
-    */
-    public function setLastSeenDateTime($val)
-    {
-        $this->_propDict["lastSeenDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the lastVpnClientIp
-    *
-    * @return string The lastVpnClientIp
-    */
-    public function getLastVpnClientIp()
-    {
-        if (array_key_exists("lastVpnClientIp", $this->_propDict)) {
-            return $this->_propDict["lastVpnClientIp"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the lastVpnClientIp
-    *
-    * @param string $val The lastVpnClientIp
+    * @param \DateTime $val The lastModifiedDateTime
     *
     * @return UserSecurityProfile
     */
-    public function setLastVpnClientIp($val)
+    public function setLastModifiedDateTime($val)
     {
-        $this->_propDict["lastVpnClientIp"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the mfaEnabled
-    *
-    * @return bool The mfaEnabled
-    */
-    public function getMfaEnabled()
-    {
-        if (array_key_exists("mfaEnabled", $this->_propDict)) {
-            return $this->_propDict["mfaEnabled"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the mfaEnabled
-    *
-    * @param bool $val The mfaEnabled
-    *
-    * @return UserSecurityProfile
-    */
-    public function setMfaEnabled($val)
-    {
-        $this->_propDict["mfaEnabled"] = boolval($val);
+        $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
     
@@ -479,7 +286,7 @@ class UserSecurityProfile extends Entity
     public function getVendorInformation()
     {
         if (array_key_exists("vendorInformation", $this->_propDict)) {
-            if (is_a($this->_propDict["vendorInformation"], "Microsoft\Graph\Model\SecurityVendorInformation")) {
+            if (is_a($this->_propDict["vendorInformation"], "Microsoft\Graph\Beta\Model\SecurityVendorInformation")) {
                 return $this->_propDict["vendorInformation"];
             } else {
                 $this->_propDict["vendorInformation"] = new SecurityVendorInformation($this->_propDict["vendorInformation"]);
@@ -499,33 +306,6 @@ class UserSecurityProfile extends Entity
     public function setVendorInformation($val)
     {
         $this->_propDict["vendorInformation"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the vpnClientId
-    *
-    * @return string The vpnClientId
-    */
-    public function getVpnClientId()
-    {
-        if (array_key_exists("vpnClientId", $this->_propDict)) {
-            return $this->_propDict["vpnClientId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the vpnClientId
-    *
-    * @param string $val The vpnClientId
-    *
-    * @return UserSecurityProfile
-    */
-    public function setVpnClientId($val)
-    {
-        $this->_propDict["vpnClientId"] = $val;
         return $this;
     }
     

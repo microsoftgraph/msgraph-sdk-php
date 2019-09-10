@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * MailboxUsageDetail class
@@ -282,6 +282,60 @@ class MailboxUsageDetail extends Entity
     public function setStorageUsedInBytes($val)
     {
         $this->_propDict["storageUsedInBytes"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the deletedItemCount
+    *
+    * @return int The deletedItemCount
+    */
+    public function getDeletedItemCount()
+    {
+        if (array_key_exists("deletedItemCount", $this->_propDict)) {
+            return $this->_propDict["deletedItemCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the deletedItemCount
+    *
+    * @param int $val The deletedItemCount
+    *
+    * @return MailboxUsageDetail
+    */
+    public function setDeletedItemCount($val)
+    {
+        $this->_propDict["deletedItemCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the deletedItemSizeInBytes
+    *
+    * @return int The deletedItemSizeInBytes
+    */
+    public function getDeletedItemSizeInBytes()
+    {
+        if (array_key_exists("deletedItemSizeInBytes", $this->_propDict)) {
+            return $this->_propDict["deletedItemSizeInBytes"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the deletedItemSizeInBytes
+    *
+    * @param int $val The deletedItemSizeInBytes
+    *
+    * @return MailboxUsageDetail
+    */
+    public function setDeletedItemSizeInBytes($val)
+    {
+        $this->_propDict["deletedItemSizeInBytes"] = intval($val);
         return $this;
     }
     

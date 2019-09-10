@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * IosNetworkUsageRule class
 *
@@ -35,7 +35,7 @@ class IosNetworkUsageRule extends Entity
     public function getManagedApps()
     {
         if (array_key_exists("managedApps", $this->_propDict)) {
-            if (is_a($this->_propDict["managedApps"], "Microsoft\Graph\Model\AppListItem")) {
+            if (is_a($this->_propDict["managedApps"], "Microsoft\Graph\Beta\Model\AppListItem")) {
                 return $this->_propDict["managedApps"];
             } else {
                 $this->_propDict["managedApps"] = new AppListItem($this->_propDict["managedApps"]);

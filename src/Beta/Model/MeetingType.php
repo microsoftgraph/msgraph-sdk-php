@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 use Microsoft\Graph\Core\Enum;
 
@@ -32,7 +32,7 @@ class MeetingType extends Enum
     * The Enum MeetingType
     */
     const MEET_NOW = "meetNow";
-    const CALENDAR = "calendar";
+    const SCHEDULED = "scheduled";
     const RECURRING = "recurring";
     const BROADCAST = "broadcast";
 }

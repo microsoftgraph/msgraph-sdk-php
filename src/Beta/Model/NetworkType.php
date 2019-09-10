@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 use Microsoft\Graph\Core\Enum;
 
@@ -35,4 +35,5 @@ class NetworkType extends Enum
     const EXTRANET = "extranet";
     const NAMED_NETWORK = "namedNetwork";
     const TRUSTED = "trusted";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

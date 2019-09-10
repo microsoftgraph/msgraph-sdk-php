@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * Directory class
@@ -53,6 +53,34 @@ class Directory extends Entity
     public function setDeletedItems($val)
     {
 		$this->_propDict["deletedItems"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the featureRolloutPolicies
+     *
+     * @return array The featureRolloutPolicies
+     */
+    public function getFeatureRolloutPolicies()
+    {
+        if (array_key_exists("featureRolloutPolicies", $this->_propDict)) {
+           return $this->_propDict["featureRolloutPolicies"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the featureRolloutPolicies
+    *
+    * @param FeatureRolloutPolicy $val The featureRolloutPolicies
+    *
+    * @return Directory
+    */
+    public function setFeatureRolloutPolicies($val)
+    {
+		$this->_propDict["featureRolloutPolicies"] = $val;
         return $this;
     }
     

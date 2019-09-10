@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * OmaSettingStringXml class
 *
@@ -72,7 +72,7 @@ class OmaSettingStringXml extends OmaSetting
     public function getValue()
     {
         if (array_key_exists("value", $this->_propDict)) {
-            if (is_a($this->_propDict["value"], "Microsoft\Graph\Model\\GuzzleHttp\Psr7\Stream")) {
+            if (is_a($this->_propDict["value"], "Microsoft\Graph\Beta\Model\\GuzzleHttp\Psr7\Stream")) {
                 return $this->_propDict["value"];
             } else {
                 $this->_propDict["value"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["value"]);

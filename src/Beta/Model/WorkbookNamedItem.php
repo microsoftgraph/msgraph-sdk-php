@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * WorkbookNamedItem class
@@ -209,7 +209,7 @@ class WorkbookNamedItem extends Entity
     public function getWorksheet()
     {
         if (array_key_exists("worksheet", $this->_propDict)) {
-            if (is_a($this->_propDict["worksheet"], "Microsoft\Graph\Model\WorkbookWorksheet")) {
+            if (is_a($this->_propDict["worksheet"], "Microsoft\Graph\Beta\Model\WorkbookWorksheet")) {
                 return $this->_propDict["worksheet"];
             } else {
                 $this->_propDict["worksheet"] = new WorkbookWorksheet($this->_propDict["worksheet"]);

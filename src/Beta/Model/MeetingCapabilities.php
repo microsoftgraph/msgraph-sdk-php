@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 use Microsoft\Graph\Core\Enum;
 
@@ -31,8 +31,6 @@ class MeetingCapabilities extends Enum
     /**
     * The Enum MeetingCapabilities
     */
-    const QN_A = "qnA";
-    const VIDEO_ON_DEMAND = "videoOnDemand";
-    const YAMMER = "yammer";
-    const VIDEO_INTEROP = "videoInterop";
+    const QUESTION_AND_ANSWER = "questionAndAnswer";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

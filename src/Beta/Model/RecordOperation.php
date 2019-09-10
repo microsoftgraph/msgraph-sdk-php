@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * RecordOperation class
@@ -26,247 +26,57 @@ namespace Microsoft\Graph\Model;
 */
 class RecordOperation extends CommsOperation
 {
-
-     /** 
-     * Gets the prompts
-     *
-     * @return array The prompts
-     */
-    public function getPrompts()
+    /**
+    * Gets the recordingLocation
+    *
+    * @return string The recordingLocation
+    */
+    public function getRecordingLocation()
     {
-        if (array_key_exists("prompts", $this->_propDict)) {
-           return $this->_propDict["prompts"];
+        if (array_key_exists("recordingLocation", $this->_propDict)) {
+            return $this->_propDict["recordingLocation"];
         } else {
             return null;
         }
     }
     
-    /** 
-    * Sets the prompts
+    /**
+    * Sets the recordingLocation
     *
-    * @param Prompt $val The prompts
+    * @param string $val The recordingLocation
     *
     * @return RecordOperation
     */
-    public function setPrompts($val)
+    public function setRecordingLocation($val)
     {
-		$this->_propDict["prompts"] = $val;
+        $this->_propDict["recordingLocation"] = $val;
         return $this;
     }
     
     /**
-    * Gets the bargeInAllowed
+    * Gets the recordingAccessToken
     *
-    * @return bool The bargeInAllowed
+    * @return string The recordingAccessToken
     */
-    public function getBargeInAllowed()
+    public function getRecordingAccessToken()
     {
-        if (array_key_exists("bargeInAllowed", $this->_propDict)) {
-            return $this->_propDict["bargeInAllowed"];
+        if (array_key_exists("recordingAccessToken", $this->_propDict)) {
+            return $this->_propDict["recordingAccessToken"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the bargeInAllowed
+    * Sets the recordingAccessToken
     *
-    * @param bool $val The bargeInAllowed
-    *
-    * @return RecordOperation
-    */
-    public function setBargeInAllowed($val)
-    {
-        $this->_propDict["bargeInAllowed"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the initialSilenceTimeoutInSeconds
-    *
-    * @return int The initialSilenceTimeoutInSeconds
-    */
-    public function getInitialSilenceTimeoutInSeconds()
-    {
-        if (array_key_exists("initialSilenceTimeoutInSeconds", $this->_propDict)) {
-            return $this->_propDict["initialSilenceTimeoutInSeconds"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the initialSilenceTimeoutInSeconds
-    *
-    * @param int $val The initialSilenceTimeoutInSeconds
+    * @param string $val The recordingAccessToken
     *
     * @return RecordOperation
     */
-    public function setInitialSilenceTimeoutInSeconds($val)
+    public function setRecordingAccessToken($val)
     {
-        $this->_propDict["initialSilenceTimeoutInSeconds"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the maxSilenceTimeoutInSeconds
-    *
-    * @return int The maxSilenceTimeoutInSeconds
-    */
-    public function getMaxSilenceTimeoutInSeconds()
-    {
-        if (array_key_exists("maxSilenceTimeoutInSeconds", $this->_propDict)) {
-            return $this->_propDict["maxSilenceTimeoutInSeconds"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the maxSilenceTimeoutInSeconds
-    *
-    * @param int $val The maxSilenceTimeoutInSeconds
-    *
-    * @return RecordOperation
-    */
-    public function setMaxSilenceTimeoutInSeconds($val)
-    {
-        $this->_propDict["maxSilenceTimeoutInSeconds"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the maxRecordDurationInSeconds
-    *
-    * @return int The maxRecordDurationInSeconds
-    */
-    public function getMaxRecordDurationInSeconds()
-    {
-        if (array_key_exists("maxRecordDurationInSeconds", $this->_propDict)) {
-            return $this->_propDict["maxRecordDurationInSeconds"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the maxRecordDurationInSeconds
-    *
-    * @param int $val The maxRecordDurationInSeconds
-    *
-    * @return RecordOperation
-    */
-    public function setMaxRecordDurationInSeconds($val)
-    {
-        $this->_propDict["maxRecordDurationInSeconds"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the playBeep
-    *
-    * @return bool The playBeep
-    */
-    public function getPlayBeep()
-    {
-        if (array_key_exists("playBeep", $this->_propDict)) {
-            return $this->_propDict["playBeep"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the playBeep
-    *
-    * @param bool $val The playBeep
-    *
-    * @return RecordOperation
-    */
-    public function setPlayBeep($val)
-    {
-        $this->_propDict["playBeep"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the streamWhileRecording
-    *
-    * @return bool The streamWhileRecording
-    */
-    public function getStreamWhileRecording()
-    {
-        if (array_key_exists("streamWhileRecording", $this->_propDict)) {
-            return $this->_propDict["streamWhileRecording"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the streamWhileRecording
-    *
-    * @param bool $val The streamWhileRecording
-    *
-    * @return RecordOperation
-    */
-    public function setStreamWhileRecording($val)
-    {
-        $this->_propDict["streamWhileRecording"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the stopTones
-    *
-    * @return string The stopTones
-    */
-    public function getStopTones()
-    {
-        if (array_key_exists("stopTones", $this->_propDict)) {
-            return $this->_propDict["stopTones"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the stopTones
-    *
-    * @param string $val The stopTones
-    *
-    * @return RecordOperation
-    */
-    public function setStopTones($val)
-    {
-        $this->_propDict["stopTones"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the recordResourceLocation
-    *
-    * @return string The recordResourceLocation
-    */
-    public function getRecordResourceLocation()
-    {
-        if (array_key_exists("recordResourceLocation", $this->_propDict)) {
-            return $this->_propDict["recordResourceLocation"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the recordResourceLocation
-    *
-    * @param string $val The recordResourceLocation
-    *
-    * @return RecordOperation
-    */
-    public function setRecordResourceLocation($val)
-    {
-        $this->_propDict["recordResourceLocation"] = $val;
+        $this->_propDict["recordingAccessToken"] = $val;
         return $this;
     }
     
@@ -278,7 +88,7 @@ class RecordOperation extends CommsOperation
     public function getCompletionReason()
     {
         if (array_key_exists("completionReason", $this->_propDict)) {
-            if (is_a($this->_propDict["completionReason"], "Microsoft\Graph\Model\RecordCompletionReason")) {
+            if (is_a($this->_propDict["completionReason"], "Microsoft\Graph\Beta\Model\RecordCompletionReason")) {
                 return $this->_propDict["completionReason"];
             } else {
                 $this->_propDict["completionReason"] = new RecordCompletionReason($this->_propDict["completionReason"]);
