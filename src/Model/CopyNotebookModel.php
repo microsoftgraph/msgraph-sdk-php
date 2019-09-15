@@ -340,7 +340,7 @@ class CopyNotebookModel extends Entity
     public function getLastModifiedTime()
     {
         if (array_key_exists("lastModifiedTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedTime"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["lastModifiedTime"], "\DateTime")) {
                 return $this->_propDict["lastModifiedTime"];
             } else {
                 $this->_propDict["lastModifiedTime"] = new \DateTime($this->_propDict["lastModifiedTime"]);
@@ -423,7 +423,7 @@ class CopyNotebookModel extends Entity
     public function getCreatedTime()
     {
         if (array_key_exists("createdTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdTime"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["createdTime"], "\DateTime")) {
                 return $this->_propDict["createdTime"];
             } else {
                 $this->_propDict["createdTime"] = new \DateTime($this->_propDict["createdTime"]);

@@ -63,7 +63,7 @@ class RecentNotebook extends Entity
     public function getLastAccessedTime()
     {
         if (array_key_exists("lastAccessedTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastAccessedTime"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["lastAccessedTime"], "\DateTime")) {
                 return $this->_propDict["lastAccessedTime"];
             } else {
                 $this->_propDict["lastAccessedTime"] = new \DateTime($this->_propDict["lastAccessedTime"]);

@@ -91,7 +91,7 @@ class Process extends Entity
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -246,7 +246,7 @@ class Process extends Entity
     public function getParentProcessCreatedDateTime()
     {
         if (array_key_exists("parentProcessCreatedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["parentProcessCreatedDateTime"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["parentProcessCreatedDateTime"], "\DateTime")) {
                 return $this->_propDict["parentProcessCreatedDateTime"];
             } else {
                 $this->_propDict["parentProcessCreatedDateTime"] = new \DateTime($this->_propDict["parentProcessCreatedDateTime"]);

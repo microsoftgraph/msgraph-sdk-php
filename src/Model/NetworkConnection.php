@@ -208,7 +208,7 @@ class NetworkConnection extends Entity
     public function getDomainRegisteredDateTime()
     {
         if (array_key_exists("domainRegisteredDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["domainRegisteredDateTime"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["domainRegisteredDateTime"], "\DateTime")) {
                 return $this->_propDict["domainRegisteredDateTime"];
             } else {
                 $this->_propDict["domainRegisteredDateTime"] = new \DateTime($this->_propDict["domainRegisteredDateTime"]);

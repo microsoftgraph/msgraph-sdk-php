@@ -35,7 +35,7 @@ class IncompleteData extends Entity
     public function getMissingDataBeforeDateTime()
     {
         if (array_key_exists("missingDataBeforeDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["missingDataBeforeDateTime"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["missingDataBeforeDateTime"], "\DateTime")) {
                 return $this->_propDict["missingDataBeforeDateTime"];
             } else {
                 $this->_propDict["missingDataBeforeDateTime"] = new \DateTime($this->_propDict["missingDataBeforeDateTime"]);

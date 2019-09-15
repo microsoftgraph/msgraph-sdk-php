@@ -35,7 +35,7 @@ class FileEncryptionInfo extends Entity
     public function getEncryptionKey()
     {
         if (array_key_exists("encryptionKey", $this->_propDict)) {
-            if (is_a($this->_propDict["encryptionKey"], "Microsoft\Graph\Model\\GuzzleHttp\Psr7\Stream")) {
+            if (is_a($this->_propDict["encryptionKey"], "\GuzzleHttp\Psr7\Stream")) {
                 return $this->_propDict["encryptionKey"];
             } else {
                 $this->_propDict["encryptionKey"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["encryptionKey"]);
@@ -68,7 +68,7 @@ class FileEncryptionInfo extends Entity
     public function getInitializationVector()
     {
         if (array_key_exists("initializationVector", $this->_propDict)) {
-            if (is_a($this->_propDict["initializationVector"], "Microsoft\Graph\Model\\GuzzleHttp\Psr7\Stream")) {
+            if (is_a($this->_propDict["initializationVector"], "\GuzzleHttp\Psr7\Stream")) {
                 return $this->_propDict["initializationVector"];
             } else {
                 $this->_propDict["initializationVector"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["initializationVector"]);
@@ -101,7 +101,7 @@ class FileEncryptionInfo extends Entity
     public function getMac()
     {
         if (array_key_exists("mac", $this->_propDict)) {
-            if (is_a($this->_propDict["mac"], "Microsoft\Graph\Model\\GuzzleHttp\Psr7\Stream")) {
+            if (is_a($this->_propDict["mac"], "\GuzzleHttp\Psr7\Stream")) {
                 return $this->_propDict["mac"];
             } else {
                 $this->_propDict["mac"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["mac"]);
@@ -134,7 +134,7 @@ class FileEncryptionInfo extends Entity
     public function getMacKey()
     {
         if (array_key_exists("macKey", $this->_propDict)) {
-            if (is_a($this->_propDict["macKey"], "Microsoft\Graph\Model\\GuzzleHttp\Psr7\Stream")) {
+            if (is_a($this->_propDict["macKey"], "\GuzzleHttp\Psr7\Stream")) {
                 return $this->_propDict["macKey"];
             } else {
                 $this->_propDict["macKey"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["macKey"]);
@@ -195,7 +195,7 @@ class FileEncryptionInfo extends Entity
     public function getFileDigest()
     {
         if (array_key_exists("fileDigest", $this->_propDict)) {
-            if (is_a($this->_propDict["fileDigest"], "Microsoft\Graph\Model\\GuzzleHttp\Psr7\Stream")) {
+            if (is_a($this->_propDict["fileDigest"], "\GuzzleHttp\Psr7\Stream")) {
                 return $this->_propDict["fileDigest"];
             } else {
                 $this->_propDict["fileDigest"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["fileDigest"]);

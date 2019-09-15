@@ -147,7 +147,7 @@ class DeviceHealthAttestationState extends Entity
     public function getIssuedDateTime()
     {
         if (array_key_exists("issuedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["issuedDateTime"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["issuedDateTime"], "\DateTime")) {
                 return $this->_propDict["issuedDateTime"];
             } else {
                 $this->_propDict["issuedDateTime"] = new \DateTime($this->_propDict["issuedDateTime"]);
