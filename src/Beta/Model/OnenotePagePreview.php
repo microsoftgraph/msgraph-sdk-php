@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * OnenotePagePreview class
 *
@@ -60,7 +60,7 @@ class OnenotePagePreview extends Entity
     public function getLinks()
     {
         if (array_key_exists("links", $this->_propDict)) {
-            if (is_a($this->_propDict["links"], "Microsoft\Graph\Model\OnenotePagePreviewLinks")) {
+            if (is_a($this->_propDict["links"], "Microsoft\Graph\Beta\Model\OnenotePagePreviewLinks")) {
                 return $this->_propDict["links"];
             } else {
                 $this->_propDict["links"] = new OnenotePagePreviewLinks($this->_propDict["links"]);

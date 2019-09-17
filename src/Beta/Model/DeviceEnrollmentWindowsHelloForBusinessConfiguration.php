@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * DeviceEnrollmentWindowsHelloForBusinessConfiguration class
@@ -93,7 +93,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     public function getPinUppercaseCharactersUsage()
     {
         if (array_key_exists("pinUppercaseCharactersUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["pinUppercaseCharactersUsage"], "Microsoft\Graph\Model\WindowsHelloForBusinessPinUsage")) {
+            if (is_a($this->_propDict["pinUppercaseCharactersUsage"], "Microsoft\Graph\Beta\Model\WindowsHelloForBusinessPinUsage")) {
                 return $this->_propDict["pinUppercaseCharactersUsage"];
             } else {
                 $this->_propDict["pinUppercaseCharactersUsage"] = new WindowsHelloForBusinessPinUsage($this->_propDict["pinUppercaseCharactersUsage"]);
@@ -126,7 +126,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     public function getPinLowercaseCharactersUsage()
     {
         if (array_key_exists("pinLowercaseCharactersUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["pinLowercaseCharactersUsage"], "Microsoft\Graph\Model\WindowsHelloForBusinessPinUsage")) {
+            if (is_a($this->_propDict["pinLowercaseCharactersUsage"], "Microsoft\Graph\Beta\Model\WindowsHelloForBusinessPinUsage")) {
                 return $this->_propDict["pinLowercaseCharactersUsage"];
             } else {
                 $this->_propDict["pinLowercaseCharactersUsage"] = new WindowsHelloForBusinessPinUsage($this->_propDict["pinLowercaseCharactersUsage"]);
@@ -159,7 +159,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     public function getPinSpecialCharactersUsage()
     {
         if (array_key_exists("pinSpecialCharactersUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["pinSpecialCharactersUsage"], "Microsoft\Graph\Model\WindowsHelloForBusinessPinUsage")) {
+            if (is_a($this->_propDict["pinSpecialCharactersUsage"], "Microsoft\Graph\Beta\Model\WindowsHelloForBusinessPinUsage")) {
                 return $this->_propDict["pinSpecialCharactersUsage"];
             } else {
                 $this->_propDict["pinSpecialCharactersUsage"] = new WindowsHelloForBusinessPinUsage($this->_propDict["pinSpecialCharactersUsage"]);
@@ -192,7 +192,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "Microsoft\Graph\Model\Enablement")) {
+            if (is_a($this->_propDict["state"], "Microsoft\Graph\Beta\Model\Enablement")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new Enablement($this->_propDict["state"]);
@@ -370,7 +370,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     public function getEnhancedBiometricsState()
     {
         if (array_key_exists("enhancedBiometricsState", $this->_propDict)) {
-            if (is_a($this->_propDict["enhancedBiometricsState"], "Microsoft\Graph\Model\Enablement")) {
+            if (is_a($this->_propDict["enhancedBiometricsState"], "Microsoft\Graph\Beta\Model\Enablement")) {
                 return $this->_propDict["enhancedBiometricsState"];
             } else {
                 $this->_propDict["enhancedBiometricsState"] = new Enablement($this->_propDict["enhancedBiometricsState"]);
@@ -391,6 +391,39 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     public function setEnhancedBiometricsState($val)
     {
         $this->_propDict["enhancedBiometricsState"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the securityKeyForSignIn
+    * Security key for Sign In provides the capacity for remotely turning ON/OFF Windows Hello Sercurity Keyl Not configured will honor configurations done on the clinet.
+    *
+    * @return Enablement The securityKeyForSignIn
+    */
+    public function getSecurityKeyForSignIn()
+    {
+        if (array_key_exists("securityKeyForSignIn", $this->_propDict)) {
+            if (is_a($this->_propDict["securityKeyForSignIn"], "Microsoft\Graph\Beta\Model\Enablement")) {
+                return $this->_propDict["securityKeyForSignIn"];
+            } else {
+                $this->_propDict["securityKeyForSignIn"] = new Enablement($this->_propDict["securityKeyForSignIn"]);
+                return $this->_propDict["securityKeyForSignIn"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the securityKeyForSignIn
+    * Security key for Sign In provides the capacity for remotely turning ON/OFF Windows Hello Sercurity Keyl Not configured will honor configurations done on the clinet.
+    *
+    * @param Enablement $val The securityKeyForSignIn
+    *
+    * @return DeviceEnrollmentWindowsHelloForBusinessConfiguration
+    */
+    public function setSecurityKeyForSignIn($val)
+    {
+        $this->_propDict["securityKeyForSignIn"] = $val;
         return $this;
     }
     

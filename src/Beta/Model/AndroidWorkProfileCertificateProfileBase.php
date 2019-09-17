@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * AndroidWorkProfileCertificateProfileBase class
@@ -64,7 +64,7 @@ class AndroidWorkProfileCertificateProfileBase extends DeviceConfiguration
     public function getSubjectNameFormat()
     {
         if (array_key_exists("subjectNameFormat", $this->_propDict)) {
-            if (is_a($this->_propDict["subjectNameFormat"], "Microsoft\Graph\Model\SubjectNameFormat")) {
+            if (is_a($this->_propDict["subjectNameFormat"], "Microsoft\Graph\Beta\Model\SubjectNameFormat")) {
                 return $this->_propDict["subjectNameFormat"];
             } else {
                 $this->_propDict["subjectNameFormat"] = new SubjectNameFormat($this->_propDict["subjectNameFormat"]);
@@ -126,7 +126,7 @@ class AndroidWorkProfileCertificateProfileBase extends DeviceConfiguration
     public function getCertificateValidityPeriodScale()
     {
         if (array_key_exists("certificateValidityPeriodScale", $this->_propDict)) {
-            if (is_a($this->_propDict["certificateValidityPeriodScale"], "Microsoft\Graph\Model\CertificateValidityPeriodScale")) {
+            if (is_a($this->_propDict["certificateValidityPeriodScale"], "Microsoft\Graph\Beta\Model\CertificateValidityPeriodScale")) {
                 return $this->_propDict["certificateValidityPeriodScale"];
             } else {
                 $this->_propDict["certificateValidityPeriodScale"] = new CertificateValidityPeriodScale($this->_propDict["certificateValidityPeriodScale"]);
@@ -181,6 +181,39 @@ class AndroidWorkProfileCertificateProfileBase extends DeviceConfiguration
     }
     
     /**
+    * Gets the subjectAlternativeNameType
+    * Certificate Subject Alternative Name Type.
+    *
+    * @return SubjectAlternativeNameType The subjectAlternativeNameType
+    */
+    public function getSubjectAlternativeNameType()
+    {
+        if (array_key_exists("subjectAlternativeNameType", $this->_propDict)) {
+            if (is_a($this->_propDict["subjectAlternativeNameType"], "Microsoft\Graph\Beta\Model\SubjectAlternativeNameType")) {
+                return $this->_propDict["subjectAlternativeNameType"];
+            } else {
+                $this->_propDict["subjectAlternativeNameType"] = new SubjectAlternativeNameType($this->_propDict["subjectAlternativeNameType"]);
+                return $this->_propDict["subjectAlternativeNameType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the subjectAlternativeNameType
+    * Certificate Subject Alternative Name Type.
+    *
+    * @param SubjectAlternativeNameType $val The subjectAlternativeNameType
+    *
+    * @return AndroidWorkProfileCertificateProfileBase
+    */
+    public function setSubjectAlternativeNameType($val)
+    {
+        $this->_propDict["subjectAlternativeNameType"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the rootCertificate
     * Trusted Root Certificate.
     *
@@ -189,7 +222,7 @@ class AndroidWorkProfileCertificateProfileBase extends DeviceConfiguration
     public function getRootCertificate()
     {
         if (array_key_exists("rootCertificate", $this->_propDict)) {
-            if (is_a($this->_propDict["rootCertificate"], "Microsoft\Graph\Model\AndroidWorkProfileTrustedRootCertificate")) {
+            if (is_a($this->_propDict["rootCertificate"], "Microsoft\Graph\Beta\Model\AndroidWorkProfileTrustedRootCertificate")) {
                 return $this->_propDict["rootCertificate"];
             } else {
                 $this->_propDict["rootCertificate"] = new AndroidWorkProfileTrustedRootCertificate($this->_propDict["rootCertificate"]);

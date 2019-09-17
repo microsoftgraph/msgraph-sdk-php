@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * AndroidPermissionAction class
 *
@@ -63,7 +63,7 @@ class AndroidPermissionAction extends Entity
     public function getAction()
     {
         if (array_key_exists("action", $this->_propDict)) {
-            if (is_a($this->_propDict["action"], "Microsoft\Graph\Model\AndroidPermissionActionType")) {
+            if (is_a($this->_propDict["action"], "Microsoft\Graph\Beta\Model\AndroidPermissionActionType")) {
                 return $this->_propDict["action"];
             } else {
                 $this->_propDict["action"] = new AndroidPermissionActionType($this->_propDict["action"]);

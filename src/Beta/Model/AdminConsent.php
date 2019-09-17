@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * AdminConsent class
 *
@@ -35,7 +35,7 @@ class AdminConsent extends Entity
     public function getShareAPNSData()
     {
         if (array_key_exists("shareAPNSData", $this->_propDict)) {
-            if (is_a($this->_propDict["shareAPNSData"], "Microsoft\Graph\Model\AdminConsentState")) {
+            if (is_a($this->_propDict["shareAPNSData"], "Microsoft\Graph\Beta\Model\AdminConsentState")) {
                 return $this->_propDict["shareAPNSData"];
             } else {
                 $this->_propDict["shareAPNSData"] = new AdminConsentState($this->_propDict["shareAPNSData"]);
@@ -56,6 +56,39 @@ class AdminConsent extends Entity
     public function setShareAPNSData($val)
     {
         $this->_propDict["shareAPNSData"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the shareUserExperienceAnalyticsData
+    * Gets or sets the admin consent for sharing User experience analytics data.
+    *
+    * @return AdminConsentState The shareUserExperienceAnalyticsData
+    */
+    public function getShareUserExperienceAnalyticsData()
+    {
+        if (array_key_exists("shareUserExperienceAnalyticsData", $this->_propDict)) {
+            if (is_a($this->_propDict["shareUserExperienceAnalyticsData"], "Microsoft\Graph\Beta\Model\AdminConsentState")) {
+                return $this->_propDict["shareUserExperienceAnalyticsData"];
+            } else {
+                $this->_propDict["shareUserExperienceAnalyticsData"] = new AdminConsentState($this->_propDict["shareUserExperienceAnalyticsData"]);
+                return $this->_propDict["shareUserExperienceAnalyticsData"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the shareUserExperienceAnalyticsData
+    * Gets or sets the admin consent for sharing User experience analytics data.
+    *
+    * @param AdminConsentState $val The value to assign to the shareUserExperienceAnalyticsData
+    *
+    * @return AdminConsent The AdminConsent
+    */
+    public function setShareUserExperienceAnalyticsData($val)
+    {
+        $this->_propDict["shareUserExperienceAnalyticsData"] = $val;
          return $this;
     }
 }

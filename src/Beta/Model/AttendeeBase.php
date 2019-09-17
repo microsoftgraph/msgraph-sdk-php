@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * AttendeeBase class
 *
@@ -35,7 +35,7 @@ class AttendeeBase extends Recipient
     public function getType()
     {
         if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "Microsoft\Graph\Model\AttendeeType")) {
+            if (is_a($this->_propDict["type"], "Microsoft\Graph\Beta\Model\AttendeeType")) {
                 return $this->_propDict["type"];
             } else {
                 $this->_propDict["type"] = new AttendeeType($this->_propDict["type"]);

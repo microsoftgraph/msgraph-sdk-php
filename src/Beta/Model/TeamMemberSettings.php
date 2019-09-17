@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * TeamMemberSettings class
 *
@@ -79,6 +79,32 @@ class TeamMemberSettings extends Entity
     public function setAllowDeleteChannels($val)
     {
         $this->_propDict["allowDeleteChannels"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the allowCreatePrivateChannels
+    *
+    * @return bool The allowCreatePrivateChannels
+    */
+    public function getAllowCreatePrivateChannels()
+    {
+        if (array_key_exists("allowCreatePrivateChannels", $this->_propDict)) {
+            return $this->_propDict["allowCreatePrivateChannels"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the allowCreatePrivateChannels
+    *
+    * @param bool $val The value of the allowCreatePrivateChannels
+    *
+    * @return TeamMemberSettings
+    */
+    public function setAllowCreatePrivateChannels($val)
+    {
+        $this->_propDict["allowCreatePrivateChannels"] = $val;
         return $this;
     }
     /**

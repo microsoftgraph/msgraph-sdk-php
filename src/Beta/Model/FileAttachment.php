@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * FileAttachment class
@@ -57,7 +57,7 @@ class FileAttachment extends Attachment
     
     /**
     * Gets the contentLocation
-    * The Uniform Resource Identifier (URI) that corresponds to the location of the content of the attachment.
+    * Do not use this property as it is not supported.
     *
     * @return string The contentLocation
     */
@@ -72,7 +72,7 @@ class FileAttachment extends Attachment
     
     /**
     * Sets the contentLocation
-    * The Uniform Resource Identifier (URI) that corresponds to the location of the content of the attachment.
+    * Do not use this property as it is not supported.
     *
     * @param string $val The contentLocation
     *

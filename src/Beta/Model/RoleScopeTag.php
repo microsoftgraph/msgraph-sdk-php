@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * RoleScopeTag class
@@ -81,6 +81,65 @@ class RoleScopeTag extends Entity
     public function setDescription($val)
     {
         $this->_propDict["description"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the isBuiltIn
+    * Description of the Role Scope Tag.
+    *
+    * @return bool The isBuiltIn
+    */
+    public function getIsBuiltIn()
+    {
+        if (array_key_exists("isBuiltIn", $this->_propDict)) {
+            return $this->_propDict["isBuiltIn"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isBuiltIn
+    * Description of the Role Scope Tag.
+    *
+    * @param bool $val The isBuiltIn
+    *
+    * @return RoleScopeTag
+    */
+    public function setIsBuiltIn($val)
+    {
+        $this->_propDict["isBuiltIn"] = boolval($val);
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the assignments
+    * The list of assignments for this Role Scope Tag.
+     *
+     * @return array The assignments
+     */
+    public function getAssignments()
+    {
+        if (array_key_exists("assignments", $this->_propDict)) {
+           return $this->_propDict["assignments"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the assignments
+    * The list of assignments for this Role Scope Tag.
+    *
+    * @param RoleScopeTagAutoAssignment $val The assignments
+    *
+    * @return RoleScopeTag
+    */
+    public function setAssignments($val)
+    {
+		$this->_propDict["assignments"] = $val;
         return $this;
     }
     

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 use Microsoft\Graph\Core\Enum;
 
@@ -32,9 +32,18 @@ class ResultantAppStateDetail extends Enum
     * The Enum ResultantAppStateDetail
     */
     const NO_ADDITIONAL_DETAILS = "noAdditionalDetails";
+    const DEPENDENCY_FAILED_TO_INSTALL = "dependencyFailedToInstall";
+    const DEPENDENCY_WITH_REQUIREMENTS_NOT_MET = "dependencyWithRequirementsNotMet";
+    const DEPENDENCY_PENDING_REBOOT = "dependencyPendingReboot";
+    const DEPENDENCY_WITH_AUTO_INSTALL_DISABLED = "dependencyWithAutoInstallDisabled";
     const SEE_INSTALL_ERROR_CODE = "seeInstallErrorCode";
+    const AUTO_INSTALL_DISABLED = "autoInstallDisabled";
     const SEE_UNINSTALL_ERROR_CODE = "seeUninstallErrorCode";
     const PENDING_REBOOT = "pendingReboot";
+    const INSTALLING_DEPENDENCIES = "installingDependencies";
+    const POWER_SHELL_SCRIPT_REQUIREMENT_NOT_MET = "powerShellScriptRequirementNotMet";
+    const REGISTRY_REQUIREMENT_NOT_MET = "registryRequirementNotMet";
+    const FILE_SYSTEM_REQUIREMENT_NOT_MET = "fileSystemRequirementNotMet";
     const PLATFORM_NOT_APPLICABLE = "platformNotApplicable";
     const MINIMUM_CPU_SPEED_NOT_MET = "minimumCpuSpeedNotMet";
     const MINIMUM_LOGICAL_PROCESSOR_COUNT_NOT_MET = "minimumLogicalProcessorCountNotMet";

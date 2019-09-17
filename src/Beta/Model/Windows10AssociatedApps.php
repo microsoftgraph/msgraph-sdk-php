@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * Windows10AssociatedApps class
 *
@@ -35,7 +35,7 @@ class Windows10AssociatedApps extends Entity
     public function getAppType()
     {
         if (array_key_exists("appType", $this->_propDict)) {
-            if (is_a($this->_propDict["appType"], "Microsoft\Graph\Model\Windows10AppType")) {
+            if (is_a($this->_propDict["appType"], "Microsoft\Graph\Beta\Model\Windows10AppType")) {
                 return $this->_propDict["appType"];
             } else {
                 $this->_propDict["appType"] = new Windows10AppType($this->_propDict["appType"]);

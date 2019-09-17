@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * SynchronizationSchema class
@@ -26,34 +26,6 @@ namespace Microsoft\Graph\Model;
 */
 class SynchronizationSchema extends Entity
 {
-
-     /** 
-     * Gets the directories
-     *
-     * @return array The directories
-     */
-    public function getDirectories()
-    {
-        if (array_key_exists("directories", $this->_propDict)) {
-           return $this->_propDict["directories"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the directories
-    *
-    * @param DirectoryDefinition $val The directories
-    *
-    * @return SynchronizationSchema
-    */
-    public function setDirectories($val)
-    {
-		$this->_propDict["directories"] = $val;
-        return $this;
-    }
-    
 
      /** 
      * Gets the synchronizationRules
@@ -106,6 +78,34 @@ class SynchronizationSchema extends Entity
     public function setVersion($val)
     {
         $this->_propDict["version"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the directories
+     *
+     * @return array The directories
+     */
+    public function getDirectories()
+    {
+        if (array_key_exists("directories", $this->_propDict)) {
+           return $this->_propDict["directories"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the directories
+    *
+    * @param DirectoryDefinition $val The directories
+    *
+    * @return SynchronizationSchema
+    */
+    public function setDirectories($val)
+    {
+		$this->_propDict["directories"] = $val;
         return $this;
     }
     

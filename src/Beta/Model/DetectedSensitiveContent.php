@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * DetectedSensitiveContent class
 *
@@ -129,6 +129,32 @@ class DetectedSensitiveContent extends Entity
         $this->_propDict["confidence"] = $val;
         return $this;
     }
+    /**
+    * Gets the recommendedConfidence
+    *
+    * @return int The recommendedConfidence
+    */
+    public function getRecommendedConfidence()
+    {
+        if (array_key_exists("recommendedConfidence", $this->_propDict)) {
+            return $this->_propDict["recommendedConfidence"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the recommendedConfidence
+    *
+    * @param int $val The value of the recommendedConfidence
+    *
+    * @return DetectedSensitiveContent
+    */
+    public function setRecommendedConfidence($val)
+    {
+        $this->_propDict["recommendedConfidence"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the matches
@@ -138,7 +164,7 @@ class DetectedSensitiveContent extends Entity
     public function getMatches()
     {
         if (array_key_exists("matches", $this->_propDict)) {
-            if (is_a($this->_propDict["matches"], "Microsoft\Graph\Model\SensitiveContentLocation")) {
+            if (is_a($this->_propDict["matches"], "Microsoft\Graph\Beta\Model\SensitiveContentLocation")) {
                 return $this->_propDict["matches"];
             } else {
                 $this->_propDict["matches"] = new SensitiveContentLocation($this->_propDict["matches"]);
