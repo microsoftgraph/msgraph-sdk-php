@@ -239,66 +239,6 @@ class Calendar extends Entity
     
 
      /** 
-     * Gets the events
-    * The events in the calendar. Navigation property. Read-only.
-     *
-     * @return array The events
-     */
-    public function getEvents()
-    {
-        if (array_key_exists("events", $this->_propDict)) {
-           return $this->_propDict["events"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the events
-    * The events in the calendar. Navigation property. Read-only.
-    *
-    * @param Event $val The events
-    *
-    * @return Calendar
-    */
-    public function setEvents($val)
-    {
-		$this->_propDict["events"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the calendarView
-    * The calendar view for the calendar. Navigation property. Read-only.
-     *
-     * @return array The calendarView
-     */
-    public function getCalendarView()
-    {
-        if (array_key_exists("calendarView", $this->_propDict)) {
-           return $this->_propDict["calendarView"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the calendarView
-    * The calendar view for the calendar. Navigation property. Read-only.
-    *
-    * @param Event $val The calendarView
-    *
-    * @return Calendar
-    */
-    public function setCalendarView($val)
-    {
-		$this->_propDict["calendarView"] = $val;
-        return $this;
-    }
-    
-
-     /** 
      * Gets the singleValueExtendedProperties
     * The collection of single-value extended properties defined for the calendar. Read-only. Nullable.
      *
@@ -354,6 +294,66 @@ class Calendar extends Entity
     public function setMultiValueExtendedProperties($val)
     {
 		$this->_propDict["multiValueExtendedProperties"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the events
+    * The events in the calendar. Navigation property. Read-only.
+     *
+     * @return array The events
+     */
+    public function getEvents()
+    {
+        if (array_key_exists("events", $this->_propDict)) {
+           return $this->_propDict["events"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the events
+    * The events in the calendar. Navigation property. Read-only.
+    *
+    * @param Event $val The events
+    *
+    * @return Calendar
+    */
+    public function setEvents($val)
+    {
+		$this->_propDict["events"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the calendarView
+    * The calendar view for the calendar. Navigation property. Read-only.
+     *
+     * @return array The calendarView
+     */
+    public function getCalendarView()
+    {
+        if (array_key_exists("calendarView", $this->_propDict)) {
+           return $this->_propDict["calendarView"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the calendarView
+    * The calendar view for the calendar. Navigation property. Read-only.
+    *
+    * @param Event $val The calendarView
+    *
+    * @return Calendar
+    */
+    public function setCalendarView($val)
+    {
+		$this->_propDict["calendarView"] = $val;
         return $this;
     }
     

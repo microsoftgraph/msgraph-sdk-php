@@ -1002,36 +1002,6 @@ class Contact extends OutlookItem
     
 
      /** 
-     * Gets the extensions
-    * The collection of open extensions defined for the contact. Read-only. Nullable.
-     *
-     * @return array The extensions
-     */
-    public function getExtensions()
-    {
-        if (array_key_exists("extensions", $this->_propDict)) {
-           return $this->_propDict["extensions"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the extensions
-    * The collection of open extensions defined for the contact. Read-only. Nullable.
-    *
-    * @param Extension $val The extensions
-    *
-    * @return Contact
-    */
-    public function setExtensions($val)
-    {
-		$this->_propDict["extensions"] = $val;
-        return $this;
-    }
-    
-
-     /** 
      * Gets the singleValueExtendedProperties
     * The collection of single-value extended properties defined for the contact. Read-only. Nullable.
      *
@@ -1120,6 +1090,36 @@ class Contact extends OutlookItem
     public function setPhoto($val)
     {
         $this->_propDict["photo"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the extensions
+    * The collection of open extensions defined for the contact. Read-only. Nullable.
+     *
+     * @return array The extensions
+     */
+    public function getExtensions()
+    {
+        if (array_key_exists("extensions", $this->_propDict)) {
+           return $this->_propDict["extensions"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the extensions
+    * The collection of open extensions defined for the contact. Read-only. Nullable.
+    *
+    * @param Extension $val The extensions
+    *
+    * @return Contact
+    */
+    public function setExtensions($val)
+    {
+		$this->_propDict["extensions"] = $val;
         return $this;
     }
     

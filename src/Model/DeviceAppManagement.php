@@ -152,6 +152,36 @@ class DeviceAppManagement extends Entity
     
 
      /** 
+     * Gets the managedEBooks
+    * The Managed eBook.
+     *
+     * @return array The managedEBooks
+     */
+    public function getManagedEBooks()
+    {
+        if (array_key_exists("managedEBooks", $this->_propDict)) {
+           return $this->_propDict["managedEBooks"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the managedEBooks
+    * The Managed eBook.
+    *
+    * @param ManagedEBook $val The managedEBooks
+    *
+    * @return DeviceAppManagement
+    */
+    public function setManagedEBooks($val)
+    {
+		$this->_propDict["managedEBooks"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the mobileApps
     * The mobile apps.
      *
@@ -537,36 +567,6 @@ class DeviceAppManagement extends Entity
     public function setManagedAppStatuses($val)
     {
 		$this->_propDict["managedAppStatuses"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the managedEBooks
-    * The Managed eBook.
-     *
-     * @return array The managedEBooks
-     */
-    public function getManagedEBooks()
-    {
-        if (array_key_exists("managedEBooks", $this->_propDict)) {
-           return $this->_propDict["managedEBooks"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the managedEBooks
-    * The Managed eBook.
-    *
-    * @param ManagedEBook $val The managedEBooks
-    *
-    * @return DeviceAppManagement
-    */
-    public function setManagedEBooks($val)
-    {
-		$this->_propDict["managedEBooks"] = $val;
         return $this;
     }
     

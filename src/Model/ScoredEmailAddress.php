@@ -113,9 +113,9 @@ class ScoredEmailAddress extends Entity
          return $this;
     }
     /**
-    * Gets the ItemId
+    * Gets the itemId
     *
-    * @return string The ItemId
+    * @return string The itemId
     */
     public function getItemId()
     {
@@ -127,9 +127,9 @@ class ScoredEmailAddress extends Entity
     }
 
     /**
-    * Sets the ItemId
+    * Sets the itemId
     *
-    * @param string $val The value of the ItemId
+    * @param string $val The value of the itemId
     *
     * @return ScoredEmailAddress
     */

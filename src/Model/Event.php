@@ -392,7 +392,7 @@ class Event extends OutlookItem
     
     /**
     * Gets the start
-    * The date, time, and time zone that the event starts.
+    * The date, time, and time zone that the event starts. By default, the start time is in UTC.
     *
     * @return DateTimeTimeZone The start
     */
@@ -411,7 +411,7 @@ class Event extends OutlookItem
     
     /**
     * Sets the start
-    * The date, time, and time zone that the event starts.
+    * The date, time, and time zone that the event starts. By default, the start time is in UTC.
     *
     * @param DateTimeTimeZone $val The start
     *
@@ -458,7 +458,7 @@ class Event extends OutlookItem
     
     /**
     * Gets the end
-    * The date, time, and time zone that the event ends.
+    * The date, time, and time zone that the event ends. By default, the end time is in UTC.
     *
     * @return DateTimeTimeZone The end
     */
@@ -477,7 +477,7 @@ class Event extends OutlookItem
     
     /**
     * Sets the end
-    * The date, time, and time zone that the event ends.
+    * The date, time, and time zone that the event ends. By default, the end time is in UTC.
     *
     * @param DateTimeTimeZone $val The end
     *
@@ -861,7 +861,7 @@ class Event extends OutlookItem
     
     /**
     * Gets the webLink
-    * The URL to open the event in Outlook Web App.The event will open in the browser if you are logged in to your mailbox via Outlook Web App. You will be prompted to login if you are not already logged in with the browser.This URL can be accessed from within an iFrame.
+    * The URL to open the event in Outlook on the web.Outlook on the web opens the event in the browser if you are signed in to your mailbox. Otherwise, Outlook on the web prompts you to sign in.This URL can be accessed from within an iFrame.
     *
     * @return string The webLink
     */
@@ -876,7 +876,7 @@ class Event extends OutlookItem
     
     /**
     * Sets the webLink
-    * The URL to open the event in Outlook Web App.The event will open in the browser if you are logged in to your mailbox via Outlook Web App. You will be prompted to login if you are not already logged in with the browser.This URL can be accessed from within an iFrame.
+    * The URL to open the event in Outlook on the web.Outlook on the web opens the event in the browser if you are signed in to your mailbox. Otherwise, Outlook on the web prompts you to sign in.This URL can be accessed from within an iFrame.
     *
     * @param string $val The webLink
     *
@@ -914,6 +914,96 @@ class Event extends OutlookItem
     public function setOnlineMeetingUrl($val)
     {
         $this->_propDict["onlineMeetingUrl"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the attachments
+    * The collection of fileAttachment and itemAttachment attachments for the event. Navigation property. Read-only. Nullable.
+     *
+     * @return array The attachments
+     */
+    public function getAttachments()
+    {
+        if (array_key_exists("attachments", $this->_propDict)) {
+           return $this->_propDict["attachments"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the attachments
+    * The collection of fileAttachment and itemAttachment attachments for the event. Navigation property. Read-only. Nullable.
+    *
+    * @param Attachment $val The attachments
+    *
+    * @return Event
+    */
+    public function setAttachments($val)
+    {
+		$this->_propDict["attachments"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the singleValueExtendedProperties
+    * The collection of single-value extended properties defined for the event. Read-only. Nullable.
+     *
+     * @return array The singleValueExtendedProperties
+     */
+    public function getSingleValueExtendedProperties()
+    {
+        if (array_key_exists("singleValueExtendedProperties", $this->_propDict)) {
+           return $this->_propDict["singleValueExtendedProperties"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the singleValueExtendedProperties
+    * The collection of single-value extended properties defined for the event. Read-only. Nullable.
+    *
+    * @param SingleValueLegacyExtendedProperty $val The singleValueExtendedProperties
+    *
+    * @return Event
+    */
+    public function setSingleValueExtendedProperties($val)
+    {
+		$this->_propDict["singleValueExtendedProperties"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the multiValueExtendedProperties
+    * The collection of multi-value extended properties defined for the event. Read-only. Nullable.
+     *
+     * @return array The multiValueExtendedProperties
+     */
+    public function getMultiValueExtendedProperties()
+    {
+        if (array_key_exists("multiValueExtendedProperties", $this->_propDict)) {
+           return $this->_propDict["multiValueExtendedProperties"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the multiValueExtendedProperties
+    * The collection of multi-value extended properties defined for the event. Read-only. Nullable.
+    *
+    * @param MultiValueLegacyExtendedProperty $val The multiValueExtendedProperties
+    *
+    * @return Event
+    */
+    public function setMultiValueExtendedProperties($val)
+    {
+		$this->_propDict["multiValueExtendedProperties"] = $val;
         return $this;
     }
     
@@ -1007,96 +1097,6 @@ class Event extends OutlookItem
     public function setExtensions($val)
     {
 		$this->_propDict["extensions"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the attachments
-    * The collection of fileAttachment and itemAttachment attachments for the event. Navigation property. Read-only. Nullable.
-     *
-     * @return array The attachments
-     */
-    public function getAttachments()
-    {
-        if (array_key_exists("attachments", $this->_propDict)) {
-           return $this->_propDict["attachments"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the attachments
-    * The collection of fileAttachment and itemAttachment attachments for the event. Navigation property. Read-only. Nullable.
-    *
-    * @param Attachment $val The attachments
-    *
-    * @return Event
-    */
-    public function setAttachments($val)
-    {
-		$this->_propDict["attachments"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the singleValueExtendedProperties
-    * The collection of single-value extended properties defined for the event. Read-only. Nullable.
-     *
-     * @return array The singleValueExtendedProperties
-     */
-    public function getSingleValueExtendedProperties()
-    {
-        if (array_key_exists("singleValueExtendedProperties", $this->_propDict)) {
-           return $this->_propDict["singleValueExtendedProperties"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the singleValueExtendedProperties
-    * The collection of single-value extended properties defined for the event. Read-only. Nullable.
-    *
-    * @param SingleValueLegacyExtendedProperty $val The singleValueExtendedProperties
-    *
-    * @return Event
-    */
-    public function setSingleValueExtendedProperties($val)
-    {
-		$this->_propDict["singleValueExtendedProperties"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the multiValueExtendedProperties
-    * The collection of multi-value extended properties defined for the event. Read-only. Nullable.
-     *
-     * @return array The multiValueExtendedProperties
-     */
-    public function getMultiValueExtendedProperties()
-    {
-        if (array_key_exists("multiValueExtendedProperties", $this->_propDict)) {
-           return $this->_propDict["multiValueExtendedProperties"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the multiValueExtendedProperties
-    * The collection of multi-value extended properties defined for the event. Read-only. Nullable.
-    *
-    * @param MultiValueLegacyExtendedProperty $val The multiValueExtendedProperties
-    *
-    * @return Event
-    */
-    public function setMultiValueExtendedProperties($val)
-    {
-		$this->_propDict["multiValueExtendedProperties"] = $val;
         return $this;
     }
     

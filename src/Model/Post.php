@@ -275,36 +275,6 @@ class Post extends OutlookItem
         return $this;
     }
     
-
-     /** 
-     * Gets the extensions
-    * The collection of open extensions defined for the post. Read-only. Nullable.
-     *
-     * @return array The extensions
-     */
-    public function getExtensions()
-    {
-        if (array_key_exists("extensions", $this->_propDict)) {
-           return $this->_propDict["extensions"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the extensions
-    * The collection of open extensions defined for the post. Read-only. Nullable.
-    *
-    * @param Extension $val The extensions
-    *
-    * @return Post
-    */
-    public function setExtensions($val)
-    {
-		$this->_propDict["extensions"] = $val;
-        return $this;
-    }
-    
     /**
     * Gets the inReplyTo
     * Read-only.
@@ -335,36 +305,6 @@ class Post extends OutlookItem
     public function setInReplyTo($val)
     {
         $this->_propDict["inReplyTo"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the attachments
-    * Read-only. Nullable.
-     *
-     * @return array The attachments
-     */
-    public function getAttachments()
-    {
-        if (array_key_exists("attachments", $this->_propDict)) {
-           return $this->_propDict["attachments"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the attachments
-    * Read-only. Nullable.
-    *
-    * @param Attachment $val The attachments
-    *
-    * @return Post
-    */
-    public function setAttachments($val)
-    {
-		$this->_propDict["attachments"] = $val;
         return $this;
     }
     
@@ -425,6 +365,66 @@ class Post extends OutlookItem
     public function setMultiValueExtendedProperties($val)
     {
 		$this->_propDict["multiValueExtendedProperties"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the extensions
+    * The collection of open extensions defined for the post. Read-only. Nullable.
+     *
+     * @return array The extensions
+     */
+    public function getExtensions()
+    {
+        if (array_key_exists("extensions", $this->_propDict)) {
+           return $this->_propDict["extensions"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the extensions
+    * The collection of open extensions defined for the post. Read-only. Nullable.
+    *
+    * @param Extension $val The extensions
+    *
+    * @return Post
+    */
+    public function setExtensions($val)
+    {
+		$this->_propDict["extensions"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the attachments
+    * Read-only. Nullable.
+     *
+     * @return array The attachments
+     */
+    public function getAttachments()
+    {
+        if (array_key_exists("attachments", $this->_propDict)) {
+           return $this->_propDict["attachments"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the attachments
+    * Read-only. Nullable.
+    *
+    * @param Attachment $val The attachments
+    *
+    * @return Post
+    */
+    public function setAttachments($val)
+    {
+		$this->_propDict["attachments"] = $val;
         return $this;
     }
     
