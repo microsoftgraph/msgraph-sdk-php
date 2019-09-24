@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * Workbook class
@@ -34,7 +34,7 @@ class Workbook extends Entity
     public function getApplication()
     {
         if (array_key_exists("application", $this->_propDict)) {
-            if (is_a($this->_propDict["application"], "Microsoft\Graph\Model\WorkbookApplication")) {
+            if (is_a($this->_propDict["application"], "Microsoft\Graph\Beta\Model\WorkbookApplication")) {
                 return $this->_propDict["application"];
             } else {
                 $this->_propDict["application"] = new WorkbookApplication($this->_propDict["application"]);
@@ -147,6 +147,34 @@ class Workbook extends Entity
         return $this;
     }
     
+
+     /** 
+     * Gets the comments
+     *
+     * @return array The comments
+     */
+    public function getComments()
+    {
+        if (array_key_exists("comments", $this->_propDict)) {
+           return $this->_propDict["comments"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the comments
+    *
+    * @param WorkbookComment $val The comments
+    *
+    * @return Workbook
+    */
+    public function setComments($val)
+    {
+		$this->_propDict["comments"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the functions
     *
@@ -155,7 +183,7 @@ class Workbook extends Entity
     public function getFunctions()
     {
         if (array_key_exists("functions", $this->_propDict)) {
-            if (is_a($this->_propDict["functions"], "Microsoft\Graph\Model\WorkbookFunctions")) {
+            if (is_a($this->_propDict["functions"], "Microsoft\Graph\Beta\Model\WorkbookFunctions")) {
                 return $this->_propDict["functions"];
             } else {
                 $this->_propDict["functions"] = new WorkbookFunctions($this->_propDict["functions"]);

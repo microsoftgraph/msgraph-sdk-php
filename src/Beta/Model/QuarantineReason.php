@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 use Microsoft\Graph\Core\Enum;
 
@@ -36,4 +36,6 @@ class QuarantineReason extends Enum
     const ENCOUNTERED_ESCROW_PROPORTION_THRESHOLD = "encounteredEscrowProportionThreshold";
     const ENCOUNTERED_QUARANTINE_EXCEPTION = "encounteredQuarantineException";
     const UNKNOWN = "unknown";
+    const QUARANTINED_ON_DEMAND = "quarantinedOnDemand";
+    const TOO_MANY_DELETES = "tooManyDeletes";
 }

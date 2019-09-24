@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * DeviceManagementScriptRunSummary class
@@ -81,6 +81,93 @@ class DeviceManagementScriptRunSummary extends Entity
     public function setErrorDeviceCount($val)
     {
         $this->_propDict["errorDeviceCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the compliantDeviceCount
+    * Compliant device count.
+    *
+    * @return int The compliantDeviceCount
+    */
+    public function getCompliantDeviceCount()
+    {
+        if (array_key_exists("compliantDeviceCount", $this->_propDict)) {
+            return $this->_propDict["compliantDeviceCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the compliantDeviceCount
+    * Compliant device count.
+    *
+    * @param int $val The compliantDeviceCount
+    *
+    * @return DeviceManagementScriptRunSummary
+    */
+    public function setCompliantDeviceCount($val)
+    {
+        $this->_propDict["compliantDeviceCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the notCompliantDeviceCount
+    * Not Compliant device count.
+    *
+    * @return int The notCompliantDeviceCount
+    */
+    public function getNotCompliantDeviceCount()
+    {
+        if (array_key_exists("notCompliantDeviceCount", $this->_propDict)) {
+            return $this->_propDict["notCompliantDeviceCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the notCompliantDeviceCount
+    * Not Compliant device count.
+    *
+    * @param int $val The notCompliantDeviceCount
+    *
+    * @return DeviceManagementScriptRunSummary
+    */
+    public function setNotCompliantDeviceCount($val)
+    {
+        $this->_propDict["notCompliantDeviceCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the pendingDeviceCount
+    * Pending device count.
+    *
+    * @return int The pendingDeviceCount
+    */
+    public function getPendingDeviceCount()
+    {
+        if (array_key_exists("pendingDeviceCount", $this->_propDict)) {
+            return $this->_propDict["pendingDeviceCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the pendingDeviceCount
+    * Pending device count.
+    *
+    * @param int $val The pendingDeviceCount
+    *
+    * @return DeviceManagementScriptRunSummary
+    */
+    public function setPendingDeviceCount($val)
+    {
+        $this->_propDict["pendingDeviceCount"] = intval($val);
         return $this;
     }
     

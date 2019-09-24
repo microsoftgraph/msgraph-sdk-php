@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * WindowsIdentityProtectionConfiguration class
@@ -26,6 +26,35 @@ namespace Microsoft\Graph\Model;
 */
 class WindowsIdentityProtectionConfiguration extends DeviceConfiguration
 {
+    /**
+    * Gets the useSecurityKeyForSignin
+    * Boolean value used to enable the Windows Hello security key as a logon credential.
+    *
+    * @return bool The useSecurityKeyForSignin
+    */
+    public function getUseSecurityKeyForSignin()
+    {
+        if (array_key_exists("useSecurityKeyForSignin", $this->_propDict)) {
+            return $this->_propDict["useSecurityKeyForSignin"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the useSecurityKeyForSignin
+    * Boolean value used to enable the Windows Hello security key as a logon credential.
+    *
+    * @param bool $val The useSecurityKeyForSignin
+    *
+    * @return WindowsIdentityProtectionConfiguration
+    */
+    public function setUseSecurityKeyForSignin($val)
+    {
+        $this->_propDict["useSecurityKeyForSignin"] = boolval($val);
+        return $this;
+    }
+    
     /**
     * Gets the enhancedAntiSpoofingForFacialFeaturesEnabled
     * Boolean value used to enable enhanced anti-spoofing for facial feature recognition on Windows Hello face authentication.
@@ -122,7 +151,7 @@ class WindowsIdentityProtectionConfiguration extends DeviceConfiguration
     public function getPinUppercaseCharactersUsage()
     {
         if (array_key_exists("pinUppercaseCharactersUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["pinUppercaseCharactersUsage"], "Microsoft\Graph\Model\ConfigurationUsage")) {
+            if (is_a($this->_propDict["pinUppercaseCharactersUsage"], "Microsoft\Graph\Beta\Model\ConfigurationUsage")) {
                 return $this->_propDict["pinUppercaseCharactersUsage"];
             } else {
                 $this->_propDict["pinUppercaseCharactersUsage"] = new ConfigurationUsage($this->_propDict["pinUppercaseCharactersUsage"]);
@@ -155,7 +184,7 @@ class WindowsIdentityProtectionConfiguration extends DeviceConfiguration
     public function getPinLowercaseCharactersUsage()
     {
         if (array_key_exists("pinLowercaseCharactersUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["pinLowercaseCharactersUsage"], "Microsoft\Graph\Model\ConfigurationUsage")) {
+            if (is_a($this->_propDict["pinLowercaseCharactersUsage"], "Microsoft\Graph\Beta\Model\ConfigurationUsage")) {
                 return $this->_propDict["pinLowercaseCharactersUsage"];
             } else {
                 $this->_propDict["pinLowercaseCharactersUsage"] = new ConfigurationUsage($this->_propDict["pinLowercaseCharactersUsage"]);
@@ -188,7 +217,7 @@ class WindowsIdentityProtectionConfiguration extends DeviceConfiguration
     public function getPinSpecialCharactersUsage()
     {
         if (array_key_exists("pinSpecialCharactersUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["pinSpecialCharactersUsage"], "Microsoft\Graph\Model\ConfigurationUsage")) {
+            if (is_a($this->_propDict["pinSpecialCharactersUsage"], "Microsoft\Graph\Beta\Model\ConfigurationUsage")) {
                 return $this->_propDict["pinSpecialCharactersUsage"];
             } else {
                 $this->_propDict["pinSpecialCharactersUsage"] = new ConfigurationUsage($this->_propDict["pinSpecialCharactersUsage"]);

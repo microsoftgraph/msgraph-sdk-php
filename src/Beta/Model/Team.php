@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * Team class
@@ -81,6 +81,35 @@ class Team extends Entity
     }
     
     /**
+    * Gets the internalId
+    * A unique ID for the team that has been used in a few places such as the audit log/Office 365 Management Activity API.
+    *
+    * @return string The internalId
+    */
+    public function getInternalId()
+    {
+        if (array_key_exists("internalId", $this->_propDict)) {
+            return $this->_propDict["internalId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the internalId
+    * A unique ID for the team that has been used in a few places such as the audit log/Office 365 Management Activity API.
+    *
+    * @param string $val The internalId
+    *
+    * @return Team
+    */
+    public function setInternalId($val)
+    {
+        $this->_propDict["internalId"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the classification
     *
     * @return string The classification
@@ -115,7 +144,7 @@ class Team extends Entity
     public function getSpecialization()
     {
         if (array_key_exists("specialization", $this->_propDict)) {
-            if (is_a($this->_propDict["specialization"], "Microsoft\Graph\Model\TeamSpecialization")) {
+            if (is_a($this->_propDict["specialization"], "Microsoft\Graph\Beta\Model\TeamSpecialization")) {
                 return $this->_propDict["specialization"];
             } else {
                 $this->_propDict["specialization"] = new TeamSpecialization($this->_propDict["specialization"]);
@@ -146,7 +175,7 @@ class Team extends Entity
     public function getVisibility()
     {
         if (array_key_exists("visibility", $this->_propDict)) {
-            if (is_a($this->_propDict["visibility"], "Microsoft\Graph\Model\TeamVisibilityType")) {
+            if (is_a($this->_propDict["visibility"], "Microsoft\Graph\Beta\Model\TeamVisibilityType")) {
                 return $this->_propDict["visibility"];
             } else {
                 $this->_propDict["visibility"] = new TeamVisibilityType($this->_propDict["visibility"]);
@@ -207,7 +236,7 @@ class Team extends Entity
     public function getMemberSettings()
     {
         if (array_key_exists("memberSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["memberSettings"], "Microsoft\Graph\Model\TeamMemberSettings")) {
+            if (is_a($this->_propDict["memberSettings"], "Microsoft\Graph\Beta\Model\TeamMemberSettings")) {
                 return $this->_propDict["memberSettings"];
             } else {
                 $this->_propDict["memberSettings"] = new TeamMemberSettings($this->_propDict["memberSettings"]);
@@ -240,7 +269,7 @@ class Team extends Entity
     public function getGuestSettings()
     {
         if (array_key_exists("guestSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["guestSettings"], "Microsoft\Graph\Model\TeamGuestSettings")) {
+            if (is_a($this->_propDict["guestSettings"], "Microsoft\Graph\Beta\Model\TeamGuestSettings")) {
                 return $this->_propDict["guestSettings"];
             } else {
                 $this->_propDict["guestSettings"] = new TeamGuestSettings($this->_propDict["guestSettings"]);
@@ -273,7 +302,7 @@ class Team extends Entity
     public function getMessagingSettings()
     {
         if (array_key_exists("messagingSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["messagingSettings"], "Microsoft\Graph\Model\TeamMessagingSettings")) {
+            if (is_a($this->_propDict["messagingSettings"], "Microsoft\Graph\Beta\Model\TeamMessagingSettings")) {
                 return $this->_propDict["messagingSettings"];
             } else {
                 $this->_propDict["messagingSettings"] = new TeamMessagingSettings($this->_propDict["messagingSettings"]);
@@ -306,7 +335,7 @@ class Team extends Entity
     public function getFunSettings()
     {
         if (array_key_exists("funSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["funSettings"], "Microsoft\Graph\Model\TeamFunSettings")) {
+            if (is_a($this->_propDict["funSettings"], "Microsoft\Graph\Beta\Model\TeamFunSettings")) {
                 return $this->_propDict["funSettings"];
             } else {
                 $this->_propDict["funSettings"] = new TeamFunSettings($this->_propDict["funSettings"]);
@@ -327,6 +356,37 @@ class Team extends Entity
     public function setFunSettings($val)
     {
         $this->_propDict["funSettings"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the discoverySettings
+    *
+    * @return TeamDiscoverySettings The discoverySettings
+    */
+    public function getDiscoverySettings()
+    {
+        if (array_key_exists("discoverySettings", $this->_propDict)) {
+            if (is_a($this->_propDict["discoverySettings"], "Microsoft\Graph\Beta\Model\TeamDiscoverySettings")) {
+                return $this->_propDict["discoverySettings"];
+            } else {
+                $this->_propDict["discoverySettings"] = new TeamDiscoverySettings($this->_propDict["discoverySettings"]);
+                return $this->_propDict["discoverySettings"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the discoverySettings
+    *
+    * @param TeamDiscoverySettings $val The discoverySettings
+    *
+    * @return Team
+    */
+    public function setDiscoverySettings($val)
+    {
+        $this->_propDict["discoverySettings"] = $val;
         return $this;
     }
     
@@ -359,6 +419,34 @@ class Team extends Entity
         return $this;
     }
     
+
+     /** 
+     * Gets the apps
+     *
+     * @return array The apps
+     */
+    public function getApps()
+    {
+        if (array_key_exists("apps", $this->_propDict)) {
+           return $this->_propDict["apps"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the apps
+    *
+    * @param TeamsCatalogApp $val The apps
+    *
+    * @return Team
+    */
+    public function setApps($val)
+    {
+		$this->_propDict["apps"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the template
     *
@@ -367,7 +455,7 @@ class Team extends Entity
     public function getTemplate()
     {
         if (array_key_exists("template", $this->_propDict)) {
-            if (is_a($this->_propDict["template"], "Microsoft\Graph\Model\TeamsTemplate")) {
+            if (is_a($this->_propDict["template"], "Microsoft\Graph\Beta\Model\TeamsTemplate")) {
                 return $this->_propDict["template"];
             } else {
                 $this->_propDict["template"] = new TeamsTemplate($this->_propDict["template"]);
@@ -417,64 +505,6 @@ class Team extends Entity
     public function setChannels($val)
     {
 		$this->_propDict["channels"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the apps
-     *
-     * @return array The apps
-     */
-    public function getApps()
-    {
-        if (array_key_exists("apps", $this->_propDict)) {
-           return $this->_propDict["apps"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the apps
-    *
-    * @param TeamsCatalogApp $val The apps
-    *
-    * @return Team
-    */
-    public function setApps($val)
-    {
-		$this->_propDict["apps"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the installedApps
-    * The apps installed in this team.
-     *
-     * @return array The installedApps
-     */
-    public function getInstalledApps()
-    {
-        if (array_key_exists("installedApps", $this->_propDict)) {
-           return $this->_propDict["installedApps"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the installedApps
-    * The apps installed in this team.
-    *
-    * @param TeamsAppInstallation $val The installedApps
-    *
-    * @return Team
-    */
-    public function setInstalledApps($val)
-    {
-		$this->_propDict["installedApps"] = $val;
         return $this;
     }
     
@@ -531,6 +561,129 @@ class Team extends Entity
     public function setOwners($val)
     {
 		$this->_propDict["owners"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the primaryChannel
+    *
+    * @return Channel The primaryChannel
+    */
+    public function getPrimaryChannel()
+    {
+        if (array_key_exists("primaryChannel", $this->_propDict)) {
+            if (is_a($this->_propDict["primaryChannel"], "Microsoft\Graph\Beta\Model\Channel")) {
+                return $this->_propDict["primaryChannel"];
+            } else {
+                $this->_propDict["primaryChannel"] = new Channel($this->_propDict["primaryChannel"]);
+                return $this->_propDict["primaryChannel"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the primaryChannel
+    *
+    * @param Channel $val The primaryChannel
+    *
+    * @return Team
+    */
+    public function setPrimaryChannel($val)
+    {
+        $this->_propDict["primaryChannel"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the group
+    *
+    * @return Group The group
+    */
+    public function getGroup()
+    {
+        if (array_key_exists("group", $this->_propDict)) {
+            if (is_a($this->_propDict["group"], "Microsoft\Graph\Beta\Model\Group")) {
+                return $this->_propDict["group"];
+            } else {
+                $this->_propDict["group"] = new Group($this->_propDict["group"]);
+                return $this->_propDict["group"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the group
+    *
+    * @param Group $val The group
+    *
+    * @return Team
+    */
+    public function setGroup($val)
+    {
+        $this->_propDict["group"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the installedApps
+    * The apps installed in this team.
+     *
+     * @return array The installedApps
+     */
+    public function getInstalledApps()
+    {
+        if (array_key_exists("installedApps", $this->_propDict)) {
+           return $this->_propDict["installedApps"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the installedApps
+    * The apps installed in this team.
+    *
+    * @param TeamsAppInstallation $val The installedApps
+    *
+    * @return Team
+    */
+    public function setInstalledApps($val)
+    {
+		$this->_propDict["installedApps"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the schedule
+    *
+    * @return Schedule The schedule
+    */
+    public function getSchedule()
+    {
+        if (array_key_exists("schedule", $this->_propDict)) {
+            if (is_a($this->_propDict["schedule"], "Microsoft\Graph\Beta\Model\Schedule")) {
+                return $this->_propDict["schedule"];
+            } else {
+                $this->_propDict["schedule"] = new Schedule($this->_propDict["schedule"]);
+                return $this->_propDict["schedule"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the schedule
+    *
+    * @param Schedule $val The schedule
+    *
+    * @return Team
+    */
+    public function setSchedule($val)
+    {
+        $this->_propDict["schedule"] = $val;
         return $this;
     }
     

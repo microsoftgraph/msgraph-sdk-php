@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * MeetingParticipants class
 *
@@ -34,7 +34,7 @@ class MeetingParticipants extends Entity
     public function getOrganizer()
     {
         if (array_key_exists("organizer", $this->_propDict)) {
-            if (is_a($this->_propDict["organizer"], "Microsoft\Graph\Model\MeetingParticipantInfo")) {
+            if (is_a($this->_propDict["organizer"], "Microsoft\Graph\Beta\Model\MeetingParticipantInfo")) {
                 return $this->_propDict["organizer"];
             } else {
                 $this->_propDict["organizer"] = new MeetingParticipantInfo($this->_propDict["organizer"]);
@@ -65,7 +65,7 @@ class MeetingParticipants extends Entity
     public function getAttendees()
     {
         if (array_key_exists("attendees", $this->_propDict)) {
-            if (is_a($this->_propDict["attendees"], "Microsoft\Graph\Model\MeetingParticipantInfo")) {
+            if (is_a($this->_propDict["attendees"], "Microsoft\Graph\Beta\Model\MeetingParticipantInfo")) {
                 return $this->_propDict["attendees"];
             } else {
                 $this->_propDict["attendees"] = new MeetingParticipantInfo($this->_propDict["attendees"]);
@@ -85,6 +85,68 @@ class MeetingParticipants extends Entity
     public function setAttendees($val)
     {
         $this->_propDict["attendees"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the producers
+    *
+    * @return MeetingParticipantInfo The producers
+    */
+    public function getProducers()
+    {
+        if (array_key_exists("producers", $this->_propDict)) {
+            if (is_a($this->_propDict["producers"], "Microsoft\Graph\Beta\Model\MeetingParticipantInfo")) {
+                return $this->_propDict["producers"];
+            } else {
+                $this->_propDict["producers"] = new MeetingParticipantInfo($this->_propDict["producers"]);
+                return $this->_propDict["producers"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the producers
+    *
+    * @param MeetingParticipantInfo $val The value to assign to the producers
+    *
+    * @return MeetingParticipants The MeetingParticipants
+    */
+    public function setProducers($val)
+    {
+        $this->_propDict["producers"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the contributors
+    *
+    * @return MeetingParticipantInfo The contributors
+    */
+    public function getContributors()
+    {
+        if (array_key_exists("contributors", $this->_propDict)) {
+            if (is_a($this->_propDict["contributors"], "Microsoft\Graph\Beta\Model\MeetingParticipantInfo")) {
+                return $this->_propDict["contributors"];
+            } else {
+                $this->_propDict["contributors"] = new MeetingParticipantInfo($this->_propDict["contributors"]);
+                return $this->_propDict["contributors"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the contributors
+    *
+    * @param MeetingParticipantInfo $val The value to assign to the contributors
+    *
+    * @return MeetingParticipants The MeetingParticipants
+    */
+    public function setContributors($val)
+    {
+        $this->_propDict["contributors"] = $val;
          return $this;
     }
 }

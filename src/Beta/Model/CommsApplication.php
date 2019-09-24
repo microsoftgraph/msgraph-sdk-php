@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * CommsApplication class
@@ -26,34 +26,6 @@ namespace Microsoft\Graph\Model;
 */
 class CommsApplication extends Entity
 {
-
-     /** 
-     * Gets the onlineMeetings
-     *
-     * @return array The onlineMeetings
-     */
-    public function getOnlineMeetings()
-    {
-        if (array_key_exists("onlineMeetings", $this->_propDict)) {
-           return $this->_propDict["onlineMeetings"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the onlineMeetings
-    *
-    * @param OnlineMeeting $val The onlineMeetings
-    *
-    * @return CommsApplication
-    */
-    public function setOnlineMeetings($val)
-    {
-		$this->_propDict["onlineMeetings"] = $val;
-        return $this;
-    }
-    
 
      /** 
      * Gets the calls
@@ -79,6 +51,34 @@ class CommsApplication extends Entity
     public function setCalls($val)
     {
 		$this->_propDict["calls"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the onlineMeetings
+     *
+     * @return array The onlineMeetings
+     */
+    public function getOnlineMeetings()
+    {
+        if (array_key_exists("onlineMeetings", $this->_propDict)) {
+           return $this->_propDict["onlineMeetings"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the onlineMeetings
+    *
+    * @param OnlineMeeting $val The onlineMeetings
+    *
+    * @return CommsApplication
+    */
+    public function setOnlineMeetings($val)
+    {
+		$this->_propDict["onlineMeetings"] = $val;
         return $this;
     }
     

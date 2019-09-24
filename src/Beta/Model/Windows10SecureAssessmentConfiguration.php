@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * Windows10SecureAssessmentConfiguration class
@@ -93,7 +93,7 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration
     public function getConfigurationAccountType()
     {
         if (array_key_exists("configurationAccountType", $this->_propDict)) {
-            if (is_a($this->_propDict["configurationAccountType"], "Microsoft\Graph\Model\SecureAssessmentAccountType")) {
+            if (is_a($this->_propDict["configurationAccountType"], "Microsoft\Graph\Beta\Model\SecureAssessmentAccountType")) {
                 return $this->_propDict["configurationAccountType"];
             } else {
                 $this->_propDict["configurationAccountType"] = new SecureAssessmentAccountType($this->_propDict["configurationAccountType"]);
@@ -201,6 +201,64 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration
     public function setAllowTextSuggestion($val)
     {
         $this->_propDict["allowTextSuggestion"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the localGuestAccountName
+    * Specifies the display text for the local guest account shown on the sign-in screen. Typically is the name of an assessment. When the user clicks the local guest account on the sign-in screen, an assessment app is launched with a specified assessment URL. Secure assessments can only be configured with local guest account sign-in on devices running Windows 10, version 1903 or later. Important notice: this property must be set with assessmentAppUserModelID in order to make the local guest account sign-in experience work properly for secure assessments.
+    *
+    * @return string The localGuestAccountName
+    */
+    public function getLocalGuestAccountName()
+    {
+        if (array_key_exists("localGuestAccountName", $this->_propDict)) {
+            return $this->_propDict["localGuestAccountName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the localGuestAccountName
+    * Specifies the display text for the local guest account shown on the sign-in screen. Typically is the name of an assessment. When the user clicks the local guest account on the sign-in screen, an assessment app is launched with a specified assessment URL. Secure assessments can only be configured with local guest account sign-in on devices running Windows 10, version 1903 or later. Important notice: this property must be set with assessmentAppUserModelID in order to make the local guest account sign-in experience work properly for secure assessments.
+    *
+    * @param string $val The localGuestAccountName
+    *
+    * @return Windows10SecureAssessmentConfiguration
+    */
+    public function setLocalGuestAccountName($val)
+    {
+        $this->_propDict["localGuestAccountName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the assessmentAppUserModelId
+    * Specifies the application user model ID of the assessment app launched when a user signs in to a secure assessment with a local guest account. Important notice: this property must be set with localGuestAccountName in order to make the local guest account sign-in experience work properly for secure assessments.
+    *
+    * @return string The assessmentAppUserModelId
+    */
+    public function getAssessmentAppUserModelId()
+    {
+        if (array_key_exists("assessmentAppUserModelId", $this->_propDict)) {
+            return $this->_propDict["assessmentAppUserModelId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the assessmentAppUserModelId
+    * Specifies the application user model ID of the assessment app launched when a user signs in to a secure assessment with a local guest account. Important notice: this property must be set with localGuestAccountName in order to make the local guest account sign-in experience work properly for secure assessments.
+    *
+    * @param string $val The assessmentAppUserModelId
+    *
+    * @return Windows10SecureAssessmentConfiguration
+    */
+    public function setAssessmentAppUserModelId($val)
+    {
+        $this->_propDict["assessmentAppUserModelId"] = $val;
         return $this;
     }
     

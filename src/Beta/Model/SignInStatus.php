@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * SignInStatus class
 *
@@ -27,6 +27,7 @@ class SignInStatus extends Entity
 {
     /**
     * Gets the errorCode
+    * Provides the 5-6digit error code that's generated during a sign-in failure. Check out the list of error codes and messages.
     *
     * @return int The errorCode
     */
@@ -41,6 +42,7 @@ class SignInStatus extends Entity
 
     /**
     * Sets the errorCode
+    * Provides the 5-6digit error code that's generated during a sign-in failure. Check out the list of error codes and messages.
     *
     * @param int $val The value of the errorCode
     *
@@ -53,6 +55,7 @@ class SignInStatus extends Entity
     }
     /**
     * Gets the failureReason
+    * Provides the error message or the reason for failure for the corresponding sign-in activity. Check out the list of error codes and messages.
     *
     * @return string The failureReason
     */
@@ -67,6 +70,7 @@ class SignInStatus extends Entity
 
     /**
     * Sets the failureReason
+    * Provides the error message or the reason for failure for the corresponding sign-in activity. Check out the list of error codes and messages.
     *
     * @param string $val The value of the failureReason
     *
@@ -79,6 +83,7 @@ class SignInStatus extends Entity
     }
     /**
     * Gets the additionalDetails
+    * Provides additional details on the sign-in activity
     *
     * @return string The additionalDetails
     */
@@ -93,6 +98,7 @@ class SignInStatus extends Entity
 
     /**
     * Sets the additionalDetails
+    * Provides additional details on the sign-in activity
     *
     * @param string $val The value of the additionalDetails
     *

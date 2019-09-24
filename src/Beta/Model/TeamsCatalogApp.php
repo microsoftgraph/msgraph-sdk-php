@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * TeamsCatalogApp class
@@ -81,29 +81,29 @@ class TeamsCatalogApp extends Entity
     }
     
     /**
-    * Gets the version
+    * Gets the displayName
     *
-    * @return string The version
+    * @return string The displayName
     */
-    public function getVersion()
+    public function getDisplayName()
     {
-        if (array_key_exists("version", $this->_propDict)) {
-            return $this->_propDict["version"];
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the version
+    * Sets the displayName
     *
-    * @param string $val The version
+    * @param string $val The displayName
     *
     * @return TeamsCatalogApp
     */
-    public function setVersion($val)
+    public function setDisplayName($val)
     {
-        $this->_propDict["version"] = $val;
+        $this->_propDict["displayName"] = $val;
         return $this;
     }
     
@@ -115,7 +115,7 @@ class TeamsCatalogApp extends Entity
     public function getDistributionMethod()
     {
         if (array_key_exists("distributionMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["distributionMethod"], "Microsoft\Graph\Model\TeamsAppDistributionMethod")) {
+            if (is_a($this->_propDict["distributionMethod"], "Microsoft\Graph\Beta\Model\TeamsAppDistributionMethod")) {
                 return $this->_propDict["distributionMethod"];
             } else {
                 $this->_propDict["distributionMethod"] = new TeamsAppDistributionMethod($this->_propDict["distributionMethod"]);
