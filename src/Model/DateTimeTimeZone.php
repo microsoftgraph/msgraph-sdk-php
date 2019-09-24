@@ -55,7 +55,7 @@ class DateTimeTimeZone extends Entity
     }
     /**
     * Gets the timeZone
-    * One of the following time zone names.
+    * Represents a time zone, for example, 'Pacific Standard Time'. See below for more possible values.
     *
     * @return string The timeZone
     */
@@ -70,7 +70,7 @@ class DateTimeTimeZone extends Entity
 
     /**
     * Sets the timeZone
-    * One of the following time zone names.
+    * Represents a time zone, for example, 'Pacific Standard Time'. See below for more possible values.
     *
     * @param string $val The value of the timeZone
     *

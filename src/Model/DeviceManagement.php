@@ -27,39 +27,6 @@ namespace Microsoft\Graph\Model;
 class DeviceManagement extends Entity
 {
     /**
-    * Gets the subscriptionState
-    * Tenant mobile device management subscription state. The possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
-    *
-    * @return DeviceManagementSubscriptionState The subscriptionState
-    */
-    public function getSubscriptionState()
-    {
-        if (array_key_exists("subscriptionState", $this->_propDict)) {
-            if (is_a($this->_propDict["subscriptionState"], "Microsoft\Graph\Model\DeviceManagementSubscriptionState")) {
-                return $this->_propDict["subscriptionState"];
-            } else {
-                $this->_propDict["subscriptionState"] = new DeviceManagementSubscriptionState($this->_propDict["subscriptionState"]);
-                return $this->_propDict["subscriptionState"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the subscriptionState
-    * Tenant mobile device management subscription state. The possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
-    *
-    * @param DeviceManagementSubscriptionState $val The subscriptionState
-    *
-    * @return DeviceManagement
-    */
-    public function setSubscriptionState($val)
-    {
-        $this->_propDict["subscriptionState"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the settings
     * Account level settings.
     *
@@ -125,6 +92,39 @@ class DeviceManagement extends Entity
         return $this;
     }
     
+    /**
+    * Gets the subscriptionState
+    * Tenant mobile device management subscription state. The possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
+    *
+    * @return DeviceManagementSubscriptionState The subscriptionState
+    */
+    public function getSubscriptionState()
+    {
+        if (array_key_exists("subscriptionState", $this->_propDict)) {
+            if (is_a($this->_propDict["subscriptionState"], "Microsoft\Graph\Model\DeviceManagementSubscriptionState")) {
+                return $this->_propDict["subscriptionState"];
+            } else {
+                $this->_propDict["subscriptionState"] = new DeviceManagementSubscriptionState($this->_propDict["subscriptionState"]);
+                return $this->_propDict["subscriptionState"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the subscriptionState
+    * Tenant mobile device management subscription state. The possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
+    *
+    * @param DeviceManagementSubscriptionState $val The subscriptionState
+    *
+    * @return DeviceManagement
+    */
+    public function setSubscriptionState($val)
+    {
+        $this->_propDict["subscriptionState"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the termsAndConditions
@@ -152,132 +152,6 @@ class DeviceManagement extends Entity
     public function setTermsAndConditions($val)
     {
 		$this->_propDict["termsAndConditions"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the applePushNotificationCertificate
-    * Apple push notification certificate.
-    *
-    * @return ApplePushNotificationCertificate The applePushNotificationCertificate
-    */
-    public function getApplePushNotificationCertificate()
-    {
-        if (array_key_exists("applePushNotificationCertificate", $this->_propDict)) {
-            if (is_a($this->_propDict["applePushNotificationCertificate"], "Microsoft\Graph\Model\ApplePushNotificationCertificate")) {
-                return $this->_propDict["applePushNotificationCertificate"];
-            } else {
-                $this->_propDict["applePushNotificationCertificate"] = new ApplePushNotificationCertificate($this->_propDict["applePushNotificationCertificate"]);
-                return $this->_propDict["applePushNotificationCertificate"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the applePushNotificationCertificate
-    * Apple push notification certificate.
-    *
-    * @param ApplePushNotificationCertificate $val The applePushNotificationCertificate
-    *
-    * @return DeviceManagement
-    */
-    public function setApplePushNotificationCertificate($val)
-    {
-        $this->_propDict["applePushNotificationCertificate"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the managedDeviceOverview
-    * Device overview
-    *
-    * @return ManagedDeviceOverview The managedDeviceOverview
-    */
-    public function getManagedDeviceOverview()
-    {
-        if (array_key_exists("managedDeviceOverview", $this->_propDict)) {
-            if (is_a($this->_propDict["managedDeviceOverview"], "Microsoft\Graph\Model\ManagedDeviceOverview")) {
-                return $this->_propDict["managedDeviceOverview"];
-            } else {
-                $this->_propDict["managedDeviceOverview"] = new ManagedDeviceOverview($this->_propDict["managedDeviceOverview"]);
-                return $this->_propDict["managedDeviceOverview"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the managedDeviceOverview
-    * Device overview
-    *
-    * @param ManagedDeviceOverview $val The managedDeviceOverview
-    *
-    * @return DeviceManagement
-    */
-    public function setManagedDeviceOverview($val)
-    {
-        $this->_propDict["managedDeviceOverview"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the detectedApps
-    * The list of detected apps associated with a device.
-     *
-     * @return array The detectedApps
-     */
-    public function getDetectedApps()
-    {
-        if (array_key_exists("detectedApps", $this->_propDict)) {
-           return $this->_propDict["detectedApps"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the detectedApps
-    * The list of detected apps associated with a device.
-    *
-    * @param DetectedApp $val The detectedApps
-    *
-    * @return DeviceManagement
-    */
-    public function setDetectedApps($val)
-    {
-		$this->_propDict["detectedApps"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the managedDevices
-    * The list of managed devices.
-     *
-     * @return array The managedDevices
-     */
-    public function getManagedDevices()
-    {
-        if (array_key_exists("managedDevices", $this->_propDict)) {
-           return $this->_propDict["managedDevices"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the managedDevices
-    * The list of managed devices.
-    *
-    * @param ManagedDevice $val The managedDevices
-    *
-    * @return DeviceManagement
-    */
-    public function setManagedDevices($val)
-    {
-		$this->_propDict["managedDevices"] = $val;
         return $this;
     }
     
@@ -683,6 +557,132 @@ class DeviceManagement extends Entity
         return $this;
     }
     
+    /**
+    * Gets the applePushNotificationCertificate
+    * Apple push notification certificate.
+    *
+    * @return ApplePushNotificationCertificate The applePushNotificationCertificate
+    */
+    public function getApplePushNotificationCertificate()
+    {
+        if (array_key_exists("applePushNotificationCertificate", $this->_propDict)) {
+            if (is_a($this->_propDict["applePushNotificationCertificate"], "Microsoft\Graph\Model\ApplePushNotificationCertificate")) {
+                return $this->_propDict["applePushNotificationCertificate"];
+            } else {
+                $this->_propDict["applePushNotificationCertificate"] = new ApplePushNotificationCertificate($this->_propDict["applePushNotificationCertificate"]);
+                return $this->_propDict["applePushNotificationCertificate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the applePushNotificationCertificate
+    * Apple push notification certificate.
+    *
+    * @param ApplePushNotificationCertificate $val The applePushNotificationCertificate
+    *
+    * @return DeviceManagement
+    */
+    public function setApplePushNotificationCertificate($val)
+    {
+        $this->_propDict["applePushNotificationCertificate"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the managedDeviceOverview
+    * Device overview
+    *
+    * @return ManagedDeviceOverview The managedDeviceOverview
+    */
+    public function getManagedDeviceOverview()
+    {
+        if (array_key_exists("managedDeviceOverview", $this->_propDict)) {
+            if (is_a($this->_propDict["managedDeviceOverview"], "Microsoft\Graph\Model\ManagedDeviceOverview")) {
+                return $this->_propDict["managedDeviceOverview"];
+            } else {
+                $this->_propDict["managedDeviceOverview"] = new ManagedDeviceOverview($this->_propDict["managedDeviceOverview"]);
+                return $this->_propDict["managedDeviceOverview"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the managedDeviceOverview
+    * Device overview
+    *
+    * @param ManagedDeviceOverview $val The managedDeviceOverview
+    *
+    * @return DeviceManagement
+    */
+    public function setManagedDeviceOverview($val)
+    {
+        $this->_propDict["managedDeviceOverview"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the detectedApps
+    * The list of detected apps associated with a device.
+     *
+     * @return array The detectedApps
+     */
+    public function getDetectedApps()
+    {
+        if (array_key_exists("detectedApps", $this->_propDict)) {
+           return $this->_propDict["detectedApps"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the detectedApps
+    * The list of detected apps associated with a device.
+    *
+    * @param DetectedApp $val The detectedApps
+    *
+    * @return DeviceManagement
+    */
+    public function setDetectedApps($val)
+    {
+		$this->_propDict["detectedApps"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the managedDevices
+    * The list of managed devices.
+     *
+     * @return array The managedDevices
+     */
+    public function getManagedDevices()
+    {
+        if (array_key_exists("managedDevices", $this->_propDict)) {
+           return $this->_propDict["managedDevices"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the managedDevices
+    * The list of managed devices.
+    *
+    * @param ManagedDevice $val The managedDevices
+    *
+    * @return DeviceManagement
+    */
+    public function setManagedDevices($val)
+    {
+		$this->_propDict["managedDevices"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the notificationMessageTemplates
@@ -805,6 +805,36 @@ class DeviceManagement extends Entity
     
 
      /** 
+     * Gets the remoteAssistancePartners
+    * The remote assist partners.
+     *
+     * @return array The remoteAssistancePartners
+     */
+    public function getRemoteAssistancePartners()
+    {
+        if (array_key_exists("remoteAssistancePartners", $this->_propDict)) {
+           return $this->_propDict["remoteAssistancePartners"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the remoteAssistancePartners
+    * The remote assist partners.
+    *
+    * @param RemoteAssistancePartner $val The remoteAssistancePartners
+    *
+    * @return DeviceManagement
+    */
+    public function setRemoteAssistancePartners($val)
+    {
+		$this->_propDict["remoteAssistancePartners"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the telecomExpenseManagementPartners
     * The telecom expense management partners.
      *
@@ -835,31 +865,31 @@ class DeviceManagement extends Entity
     
 
      /** 
-     * Gets the remoteAssistancePartners
-    * The remote assist partners.
+     * Gets the troubleshootingEvents
+    * The list of troubleshooting events for the tenant.
      *
-     * @return array The remoteAssistancePartners
+     * @return array The troubleshootingEvents
      */
-    public function getRemoteAssistancePartners()
+    public function getTroubleshootingEvents()
     {
-        if (array_key_exists("remoteAssistancePartners", $this->_propDict)) {
-           return $this->_propDict["remoteAssistancePartners"];
+        if (array_key_exists("troubleshootingEvents", $this->_propDict)) {
+           return $this->_propDict["troubleshootingEvents"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the remoteAssistancePartners
-    * The remote assist partners.
+    * Sets the troubleshootingEvents
+    * The list of troubleshooting events for the tenant.
     *
-    * @param RemoteAssistancePartner $val The remoteAssistancePartners
+    * @param DeviceManagementTroubleshootingEvent $val The troubleshootingEvents
     *
     * @return DeviceManagement
     */
-    public function setRemoteAssistancePartners($val)
+    public function setTroubleshootingEvents($val)
     {
-		$this->_propDict["remoteAssistancePartners"] = $val;
+		$this->_propDict["troubleshootingEvents"] = $val;
         return $this;
     }
     
@@ -920,36 +950,6 @@ class DeviceManagement extends Entity
     public function setWindowsInformationProtectionNetworkLearningSummaries($val)
     {
 		$this->_propDict["windowsInformationProtectionNetworkLearningSummaries"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the troubleshootingEvents
-    * The list of troubleshooting events for the tenant.
-     *
-     * @return array The troubleshootingEvents
-     */
-    public function getTroubleshootingEvents()
-    {
-        if (array_key_exists("troubleshootingEvents", $this->_propDict)) {
-           return $this->_propDict["troubleshootingEvents"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the troubleshootingEvents
-    * The list of troubleshooting events for the tenant.
-    *
-    * @param DeviceManagementTroubleshootingEvent $val The troubleshootingEvents
-    *
-    * @return DeviceManagement
-    */
-    public function setTroubleshootingEvents($val)
-    {
-		$this->_propDict["troubleshootingEvents"] = $val;
         return $this;
     }
     

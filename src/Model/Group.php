@@ -597,7 +597,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the visibility
-    * Specifies the visibility of an Office 365 group. Possible values are: private, public, or hiddenmembership; blank values are treated as public.  See group visibility options to learn more.Visibility can be set only when a group is created; it is not editable.Visibility is supported only for unified groups; it is not supported for security groups. Returned by default.
+    * Specifies the visibility of an Office 365 group. Possible values are: Private, Public, or Hiddenmembership; blank values are treated as public.  See group visibility options to learn more.Visibility can be set only when a group is created; it is not editable.Visibility is supported only for unified groups; it is not supported for security groups. Returned by default.
     *
     * @return string The visibility
     */
@@ -612,7 +612,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the visibility
-    * Specifies the visibility of an Office 365 group. Possible values are: private, public, or hiddenmembership; blank values are treated as public.  See group visibility options to learn more.Visibility can be set only when a group is created; it is not editable.Visibility is supported only for unified groups; it is not supported for security groups. Returned by default.
+    * Specifies the visibility of an Office 365 group. Possible values are: Private, Public, or Hiddenmembership; blank values are treated as public.  See group visibility options to learn more.Visibility can be set only when a group is created; it is not editable.Visibility is supported only for unified groups; it is not supported for security groups. Returned by default.
     *
     * @param string $val The visibility
     *
@@ -1008,31 +1008,121 @@ class Group extends DirectoryObject
     
 
      /** 
-     * Gets the extensions
-    * The collection of open extensions defined for the group. Read-only. Nullable.
+     * Gets the conversations
+    * The group's conversations.
      *
-     * @return array The extensions
+     * @return array The conversations
      */
-    public function getExtensions()
+    public function getConversations()
     {
-        if (array_key_exists("extensions", $this->_propDict)) {
-           return $this->_propDict["extensions"];
+        if (array_key_exists("conversations", $this->_propDict)) {
+           return $this->_propDict["conversations"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the extensions
-    * The collection of open extensions defined for the group. Read-only. Nullable.
+    * Sets the conversations
+    * The group's conversations.
     *
-    * @param Extension $val The extensions
+    * @param Conversation $val The conversations
     *
     * @return Group
     */
-    public function setExtensions($val)
+    public function setConversations($val)
     {
-		$this->_propDict["extensions"] = $val;
+		$this->_propDict["conversations"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the photos
+    * The profile photos owned by the group. Read-only. Nullable.
+     *
+     * @return array The photos
+     */
+    public function getPhotos()
+    {
+        if (array_key_exists("photos", $this->_propDict)) {
+           return $this->_propDict["photos"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the photos
+    * The profile photos owned by the group. Read-only. Nullable.
+    *
+    * @param ProfilePhoto $val The photos
+    *
+    * @return Group
+    */
+    public function setPhotos($val)
+    {
+		$this->_propDict["photos"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the acceptedSenders
+    * The list of users or groups that are allowed to create post's or calendar events in this group. If this list is non-empty then only users or groups listed here are allowed to post.
+     *
+     * @return array The acceptedSenders
+     */
+    public function getAcceptedSenders()
+    {
+        if (array_key_exists("acceptedSenders", $this->_propDict)) {
+           return $this->_propDict["acceptedSenders"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the acceptedSenders
+    * The list of users or groups that are allowed to create post's or calendar events in this group. If this list is non-empty then only users or groups listed here are allowed to post.
+    *
+    * @param DirectoryObject $val The acceptedSenders
+    *
+    * @return Group
+    */
+    public function setAcceptedSenders($val)
+    {
+		$this->_propDict["acceptedSenders"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the rejectedSenders
+    * The list of users or groups that are not allowed to create posts or calendar events in this group. Nullable
+     *
+     * @return array The rejectedSenders
+     */
+    public function getRejectedSenders()
+    {
+        if (array_key_exists("rejectedSenders", $this->_propDict)) {
+           return $this->_propDict["rejectedSenders"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the rejectedSenders
+    * The list of users or groups that are not allowed to create posts or calendar events in this group. Nullable
+    *
+    * @param DirectoryObject $val The rejectedSenders
+    *
+    * @return Group
+    */
+    public function setRejectedSenders($val)
+    {
+		$this->_propDict["rejectedSenders"] = $val;
         return $this;
     }
     
@@ -1159,36 +1249,6 @@ class Group extends DirectoryObject
         return $this;
     }
     
-
-     /** 
-     * Gets the conversations
-    * The group's conversations.
-     *
-     * @return array The conversations
-     */
-    public function getConversations()
-    {
-        if (array_key_exists("conversations", $this->_propDict)) {
-           return $this->_propDict["conversations"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the conversations
-    * The group's conversations.
-    *
-    * @param Conversation $val The conversations
-    *
-    * @return Group
-    */
-    public function setConversations($val)
-    {
-		$this->_propDict["conversations"] = $val;
-        return $this;
-    }
-    
     /**
     * Gets the photo
     * The group's profile photo
@@ -1219,96 +1279,6 @@ class Group extends DirectoryObject
     public function setPhoto($val)
     {
         $this->_propDict["photo"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the photos
-    * The profile photos owned by the group. Read-only. Nullable.
-     *
-     * @return array The photos
-     */
-    public function getPhotos()
-    {
-        if (array_key_exists("photos", $this->_propDict)) {
-           return $this->_propDict["photos"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the photos
-    * The profile photos owned by the group. Read-only. Nullable.
-    *
-    * @param ProfilePhoto $val The photos
-    *
-    * @return Group
-    */
-    public function setPhotos($val)
-    {
-		$this->_propDict["photos"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the acceptedSenders
-    * The list of users or groups that are allowed to create post's or calendar events in this group. If this list is non-empty then only users or groups listed here are allowed to post.
-     *
-     * @return array The acceptedSenders
-     */
-    public function getAcceptedSenders()
-    {
-        if (array_key_exists("acceptedSenders", $this->_propDict)) {
-           return $this->_propDict["acceptedSenders"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the acceptedSenders
-    * The list of users or groups that are allowed to create post's or calendar events in this group. If this list is non-empty then only users or groups listed here are allowed to post.
-    *
-    * @param DirectoryObject $val The acceptedSenders
-    *
-    * @return Group
-    */
-    public function setAcceptedSenders($val)
-    {
-		$this->_propDict["acceptedSenders"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the rejectedSenders
-    * The list of users or groups that are not allowed to create posts or calendar events in this group. Nullable
-     *
-     * @return array The rejectedSenders
-     */
-    public function getRejectedSenders()
-    {
-        if (array_key_exists("rejectedSenders", $this->_propDict)) {
-           return $this->_propDict["rejectedSenders"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the rejectedSenders
-    * The list of users or groups that are not allowed to create posts or calendar events in this group. Nullable
-    *
-    * @param DirectoryObject $val The rejectedSenders
-    *
-    * @return Group
-    */
-    public function setRejectedSenders($val)
-    {
-		$this->_propDict["rejectedSenders"] = $val;
         return $this;
     }
     
@@ -1405,6 +1375,66 @@ class Group extends DirectoryObject
         return $this;
     }
     
+
+     /** 
+     * Gets the extensions
+    * The collection of open extensions defined for the group. Read-only. Nullable.
+     *
+     * @return array The extensions
+     */
+    public function getExtensions()
+    {
+        if (array_key_exists("extensions", $this->_propDict)) {
+           return $this->_propDict["extensions"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the extensions
+    * The collection of open extensions defined for the group. Read-only. Nullable.
+    *
+    * @param Extension $val The extensions
+    *
+    * @return Group
+    */
+    public function setExtensions($val)
+    {
+		$this->_propDict["extensions"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the groupLifecyclePolicies
+    * The collection of lifecycle policies for this group. Read-only. Nullable.
+     *
+     * @return array The groupLifecyclePolicies
+     */
+    public function getGroupLifecyclePolicies()
+    {
+        if (array_key_exists("groupLifecyclePolicies", $this->_propDict)) {
+           return $this->_propDict["groupLifecyclePolicies"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the groupLifecyclePolicies
+    * The collection of lifecycle policies for this group. Read-only. Nullable.
+    *
+    * @param GroupLifecyclePolicy $val The groupLifecyclePolicies
+    *
+    * @return Group
+    */
+    public function setGroupLifecyclePolicies($val)
+    {
+		$this->_propDict["groupLifecyclePolicies"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the planner
     * Entry-point to Planner resource that might exist for a Unified Group.
@@ -1468,36 +1498,6 @@ class Group extends DirectoryObject
     public function setOnenote($val)
     {
         $this->_propDict["onenote"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the groupLifecyclePolicies
-    * The collection of lifecycle policies for this group. Read-only. Nullable.
-     *
-     * @return array The groupLifecyclePolicies
-     */
-    public function getGroupLifecyclePolicies()
-    {
-        if (array_key_exists("groupLifecyclePolicies", $this->_propDict)) {
-           return $this->_propDict["groupLifecyclePolicies"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the groupLifecyclePolicies
-    * The collection of lifecycle policies for this group. Read-only. Nullable.
-    *
-    * @param GroupLifecyclePolicy $val The groupLifecyclePolicies
-    *
-    * @return Group
-    */
-    public function setGroupLifecyclePolicies($val)
-    {
-		$this->_propDict["groupLifecyclePolicies"] = $val;
         return $this;
     }
     

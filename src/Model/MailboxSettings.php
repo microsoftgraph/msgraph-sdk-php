@@ -180,4 +180,56 @@ class MailboxSettings extends Entity
         $this->_propDict["workingHours"] = $val;
          return $this;
     }
+    /**
+    * Gets the dateFormat
+    *
+    * @return string The dateFormat
+    */
+    public function getDateFormat()
+    {
+        if (array_key_exists("dateFormat", $this->_propDict)) {
+            return $this->_propDict["dateFormat"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the dateFormat
+    *
+    * @param string $val The value of the dateFormat
+    *
+    * @return MailboxSettings
+    */
+    public function setDateFormat($val)
+    {
+        $this->_propDict["dateFormat"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the timeFormat
+    *
+    * @return string The timeFormat
+    */
+    public function getTimeFormat()
+    {
+        if (array_key_exists("timeFormat", $this->_propDict)) {
+            return $this->_propDict["timeFormat"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the timeFormat
+    *
+    * @param string $val The value of the timeFormat
+    *
+    * @return MailboxSettings
+    */
+    public function setTimeFormat($val)
+    {
+        $this->_propDict["timeFormat"] = $val;
+        return $this;
+    }
 }

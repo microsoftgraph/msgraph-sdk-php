@@ -1451,6 +1451,36 @@ class ManagedDevice extends Entity
         return $this;
     }
     
+
+     /** 
+     * Gets the deviceCompliancePolicyStates
+    * Device compliance policy states for this device.
+     *
+     * @return array The deviceCompliancePolicyStates
+     */
+    public function getDeviceCompliancePolicyStates()
+    {
+        if (array_key_exists("deviceCompliancePolicyStates", $this->_propDict)) {
+           return $this->_propDict["deviceCompliancePolicyStates"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the deviceCompliancePolicyStates
+    * Device compliance policy states for this device.
+    *
+    * @param DeviceCompliancePolicyState $val The deviceCompliancePolicyStates
+    *
+    * @return ManagedDevice
+    */
+    public function setDeviceCompliancePolicyStates($val)
+    {
+		$this->_propDict["deviceCompliancePolicyStates"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the deviceCategory
     * Device category
@@ -1481,36 +1511,6 @@ class ManagedDevice extends Entity
     public function setDeviceCategory($val)
     {
         $this->_propDict["deviceCategory"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the deviceCompliancePolicyStates
-    * Device compliance policy states for this device.
-     *
-     * @return array The deviceCompliancePolicyStates
-     */
-    public function getDeviceCompliancePolicyStates()
-    {
-        if (array_key_exists("deviceCompliancePolicyStates", $this->_propDict)) {
-           return $this->_propDict["deviceCompliancePolicyStates"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the deviceCompliancePolicyStates
-    * Device compliance policy states for this device.
-    *
-    * @param DeviceCompliancePolicyState $val The deviceCompliancePolicyStates
-    *
-    * @return ManagedDevice
-    */
-    public function setDeviceCompliancePolicyStates($val)
-    {
-		$this->_propDict["deviceCompliancePolicyStates"] = $val;
         return $this;
     }
     

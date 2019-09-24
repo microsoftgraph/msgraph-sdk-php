@@ -57,7 +57,7 @@ class WorkbookTableColumn extends Entity
     
     /**
     * Gets the name
-    * Returns the name of the table column. Read-only.
+    * Returns the name of the table column.
     *
     * @return string The name
     */
@@ -72,7 +72,7 @@ class WorkbookTableColumn extends Entity
     
     /**
     * Sets the name
-    * Returns the name of the table column. Read-only.
+    * Returns the name of the table column.
     *
     * @param string $val The name
     *

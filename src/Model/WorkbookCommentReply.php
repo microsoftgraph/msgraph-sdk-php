@@ -28,6 +28,7 @@ class WorkbookCommentReply extends Entity
 {
     /**
     * Gets the content
+    * The content of a comment reply.
     *
     * @return string The content
     */
@@ -42,6 +43,7 @@ class WorkbookCommentReply extends Entity
     
     /**
     * Sets the content
+    * The content of a comment reply.
     *
     * @param string $val The content
     *
@@ -55,6 +57,7 @@ class WorkbookCommentReply extends Entity
     
     /**
     * Gets the contentType
+    * Indicates the type for the comment reply.
     *
     * @return string The contentType
     */
@@ -69,6 +72,7 @@ class WorkbookCommentReply extends Entity
     
     /**
     * Sets the contentType
+    * Indicates the type for the comment reply.
     *
     * @param string $val The contentType
     *
