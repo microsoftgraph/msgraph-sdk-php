@@ -708,6 +708,39 @@ class DriveItem extends BaseItem
     }
     
     /**
+    * Gets the workbook
+    * For files that are Excel spreadsheets, accesses the workbook API to work with the spreadsheet's contents. Nullable.
+    *
+    * @return Workbook The workbook
+    */
+    public function getWorkbook()
+    {
+        if (array_key_exists("workbook", $this->_propDict)) {
+            if (is_a($this->_propDict["workbook"], "Microsoft\Graph\Model\Workbook")) {
+                return $this->_propDict["workbook"];
+            } else {
+                $this->_propDict["workbook"] = new Workbook($this->_propDict["workbook"]);
+                return $this->_propDict["workbook"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the workbook
+    * For files that are Excel spreadsheets, accesses the workbook API to work with the spreadsheet's contents. Nullable.
+    *
+    * @param Workbook $val The workbook
+    *
+    * @return DriveItem
+    */
+    public function setWorkbook($val)
+    {
+        $this->_propDict["workbook"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the analytics
     * Analytics about the view activities that took place on this item.
     *
@@ -920,39 +953,6 @@ class DriveItem extends BaseItem
     public function setVersions($val)
     {
 		$this->_propDict["versions"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the workbook
-    * For files that are Excel spreadsheets, accesses the workbook API to work with the spreadsheet's contents. Nullable.
-    *
-    * @return Workbook The workbook
-    */
-    public function getWorkbook()
-    {
-        if (array_key_exists("workbook", $this->_propDict)) {
-            if (is_a($this->_propDict["workbook"], "Microsoft\Graph\Model\Workbook")) {
-                return $this->_propDict["workbook"];
-            } else {
-                $this->_propDict["workbook"] = new Workbook($this->_propDict["workbook"]);
-                return $this->_propDict["workbook"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the workbook
-    * For files that are Excel spreadsheets, accesses the workbook API to work with the spreadsheet's contents. Nullable.
-    *
-    * @param Workbook $val The workbook
-    *
-    * @return DriveItem
-    */
-    public function setWorkbook($val)
-    {
-        $this->_propDict["workbook"] = $val;
         return $this;
     }
     

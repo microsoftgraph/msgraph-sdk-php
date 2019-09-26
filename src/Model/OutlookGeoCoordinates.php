@@ -26,34 +26,6 @@ namespace Microsoft\Graph\Model;
 class OutlookGeoCoordinates extends Entity
 {
     /**
-    * Gets the altitude
-    * The altitude of the location.
-    *
-    * @return float The altitude
-    */
-    public function getAltitude()
-    {
-        if (array_key_exists("altitude", $this->_propDict)) {
-            return $this->_propDict["altitude"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the altitude
-    * The altitude of the location.
-    *
-    * @param float $val The value of the altitude
-    *
-    * @return OutlookGeoCoordinates
-    */
-    public function setAltitude($val)
-    {
-        $this->_propDict["altitude"] = $val;
-        return $this;
-    }
-    /**
     * Gets the latitude
     * The latitude of the location.
     *
@@ -135,6 +107,34 @@ class OutlookGeoCoordinates extends Entity
     public function setAccuracy($val)
     {
         $this->_propDict["accuracy"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the altitude
+    * The altitude of the location.
+    *
+    * @return float The altitude
+    */
+    public function getAltitude()
+    {
+        if (array_key_exists("altitude", $this->_propDict)) {
+            return $this->_propDict["altitude"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the altitude
+    * The altitude of the location.
+    *
+    * @param float $val The value of the altitude
+    *
+    * @return OutlookGeoCoordinates
+    */
+    public function setAltitude($val)
+    {
+        $this->_propDict["altitude"] = $val;
         return $this;
     }
     /**

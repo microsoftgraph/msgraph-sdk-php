@@ -794,66 +794,6 @@ class Message extends OutlookItem
     
 
      /** 
-     * Gets the attachments
-    * The fileAttachment and itemAttachment attachments for the message.
-     *
-     * @return array The attachments
-     */
-    public function getAttachments()
-    {
-        if (array_key_exists("attachments", $this->_propDict)) {
-           return $this->_propDict["attachments"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the attachments
-    * The fileAttachment and itemAttachment attachments for the message.
-    *
-    * @param Attachment $val The attachments
-    *
-    * @return Message
-    */
-    public function setAttachments($val)
-    {
-		$this->_propDict["attachments"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the extensions
-    * The collection of open extensions defined for the message. Nullable.
-     *
-     * @return array The extensions
-     */
-    public function getExtensions()
-    {
-        if (array_key_exists("extensions", $this->_propDict)) {
-           return $this->_propDict["extensions"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the extensions
-    * The collection of open extensions defined for the message. Nullable.
-    *
-    * @param Extension $val The extensions
-    *
-    * @return Message
-    */
-    public function setExtensions($val)
-    {
-		$this->_propDict["extensions"] = $val;
-        return $this;
-    }
-    
-
-     /** 
      * Gets the singleValueExtendedProperties
     * The collection of single-value extended properties defined for the message. Nullable.
      *
@@ -909,6 +849,66 @@ class Message extends OutlookItem
     public function setMultiValueExtendedProperties($val)
     {
 		$this->_propDict["multiValueExtendedProperties"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the attachments
+    * The fileAttachment and itemAttachment attachments for the message.
+     *
+     * @return array The attachments
+     */
+    public function getAttachments()
+    {
+        if (array_key_exists("attachments", $this->_propDict)) {
+           return $this->_propDict["attachments"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the attachments
+    * The fileAttachment and itemAttachment attachments for the message.
+    *
+    * @param Attachment $val The attachments
+    *
+    * @return Message
+    */
+    public function setAttachments($val)
+    {
+		$this->_propDict["attachments"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the extensions
+    * The collection of open extensions defined for the message. Nullable.
+     *
+     * @return array The extensions
+     */
+    public function getExtensions()
+    {
+        if (array_key_exists("extensions", $this->_propDict)) {
+           return $this->_propDict["extensions"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the extensions
+    * The collection of open extensions defined for the message. Nullable.
+    *
+    * @param Extension $val The extensions
+    *
+    * @return Message
+    */
+    public function setExtensions($val)
+    {
+		$this->_propDict["extensions"] = $val;
         return $this;
     }
     

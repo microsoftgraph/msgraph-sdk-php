@@ -114,6 +114,34 @@ class Location extends Entity
         $this->_propDict["address"] = $val;
          return $this;
     }
+    /**
+    * Gets the locationUri
+    * Optional URI representing the location.
+    *
+    * @return string The locationUri
+    */
+    public function getLocationUri()
+    {
+        if (array_key_exists("locationUri", $this->_propDict)) {
+            return $this->_propDict["locationUri"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the locationUri
+    * Optional URI representing the location.
+    *
+    * @param string $val The value of the locationUri
+    *
+    * @return Location
+    */
+    public function setLocationUri($val)
+    {
+        $this->_propDict["locationUri"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the coordinates
@@ -146,34 +174,6 @@ class Location extends Entity
     {
         $this->_propDict["coordinates"] = $val;
          return $this;
-    }
-    /**
-    * Gets the locationUri
-    * Optional URI representing the location.
-    *
-    * @return string The locationUri
-    */
-    public function getLocationUri()
-    {
-        if (array_key_exists("locationUri", $this->_propDict)) {
-            return $this->_propDict["locationUri"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the locationUri
-    * Optional URI representing the location.
-    *
-    * @param string $val The value of the locationUri
-    *
-    * @return Location
-    */
-    public function setLocationUri($val)
-    {
-        $this->_propDict["locationUri"] = $val;
-        return $this;
     }
 
     /**
