@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * OmaSettingInteger class
 *
@@ -60,6 +60,34 @@ class OmaSettingInteger extends OmaSetting
     public function setValue($val)
     {
         $this->_propDict["value"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the isReadOnly
+    * By setting to true, the CSP (configuration service provider) specified in the OMA-URI will perform a get, instead of set
+    *
+    * @return bool The isReadOnly
+    */
+    public function getIsReadOnly()
+    {
+        if (array_key_exists("isReadOnly", $this->_propDict)) {
+            return $this->_propDict["isReadOnly"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isReadOnly
+    * By setting to true, the CSP (configuration service provider) specified in the OMA-URI will perform a get, instead of set
+    *
+    * @param bool $val The value of the isReadOnly
+    *
+    * @return OmaSettingInteger
+    */
+    public function setIsReadOnly($val)
+    {
+        $this->_propDict["isReadOnly"] = $val;
         return $this;
     }
 }

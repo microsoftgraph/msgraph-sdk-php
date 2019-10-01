@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * AndroidManagedStoreAppConfigurationSchemaItem class
 *
@@ -25,6 +25,62 @@ namespace Microsoft\Graph\Model;
 */
 class AndroidManagedStoreAppConfigurationSchemaItem extends Entity
 {
+    /**
+    * Gets the index
+    * Unique index the application uses to maintain nested schema items
+    *
+    * @return int The index
+    */
+    public function getIndex()
+    {
+        if (array_key_exists("index", $this->_propDict)) {
+            return $this->_propDict["index"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the index
+    * Unique index the application uses to maintain nested schema items
+    *
+    * @param int $val The value of the index
+    *
+    * @return AndroidManagedStoreAppConfigurationSchemaItem
+    */
+    public function setIndex($val)
+    {
+        $this->_propDict["index"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the parentIndex
+    * Index of parent schema item to track nested schema items
+    *
+    * @return int The parentIndex
+    */
+    public function getParentIndex()
+    {
+        if (array_key_exists("parentIndex", $this->_propDict)) {
+            return $this->_propDict["parentIndex"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the parentIndex
+    * Index of parent schema item to track nested schema items
+    *
+    * @param int $val The value of the parentIndex
+    *
+    * @return AndroidManagedStoreAppConfigurationSchemaItem
+    */
+    public function setParentIndex($val)
+    {
+        $this->_propDict["parentIndex"] = $val;
+        return $this;
+    }
     /**
     * Gets the schemaItemKey
     * Unique key the application uses to identify the item
@@ -231,7 +287,7 @@ class AndroidManagedStoreAppConfigurationSchemaItem extends Entity
     public function getDataType()
     {
         if (array_key_exists("dataType", $this->_propDict)) {
-            if (is_a($this->_propDict["dataType"], "Microsoft\Graph\Model\AndroidManagedStoreAppConfigurationSchemaItemDataType")) {
+            if (is_a($this->_propDict["dataType"], "Microsoft\Graph\Beta\Model\AndroidManagedStoreAppConfigurationSchemaItemDataType")) {
                 return $this->_propDict["dataType"];
             } else {
                 $this->_propDict["dataType"] = new AndroidManagedStoreAppConfigurationSchemaItemDataType($this->_propDict["dataType"]);
@@ -264,7 +320,7 @@ class AndroidManagedStoreAppConfigurationSchemaItem extends Entity
     public function getSelections()
     {
         if (array_key_exists("selections", $this->_propDict)) {
-            if (is_a($this->_propDict["selections"], "Microsoft\Graph\Model\KeyValuePair")) {
+            if (is_a($this->_propDict["selections"], "Microsoft\Graph\Beta\Model\KeyValuePair")) {
                 return $this->_propDict["selections"];
             } else {
                 $this->_propDict["selections"] = new KeyValuePair($this->_propDict["selections"]);

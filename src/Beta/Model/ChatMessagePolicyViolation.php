@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * ChatMessagePolicyViolation class
 *
@@ -29,15 +29,15 @@ class ChatMessagePolicyViolation extends Entity
     /**
     * Gets the dlpAction
     *
-    * @return ChatMessagePolicyViolationDlpActionType The dlpAction
+    * @return ChatMessagePolicyViolationDlpActionTypes The dlpAction
     */
     public function getDlpAction()
     {
         if (array_key_exists("dlpAction", $this->_propDict)) {
-            if (is_a($this->_propDict["dlpAction"], "Microsoft\Graph\Model\ChatMessagePolicyViolationDlpActionType")) {
+            if (is_a($this->_propDict["dlpAction"], "Microsoft\Graph\Beta\Model\ChatMessagePolicyViolationDlpActionTypes")) {
                 return $this->_propDict["dlpAction"];
             } else {
-                $this->_propDict["dlpAction"] = new ChatMessagePolicyViolationDlpActionType($this->_propDict["dlpAction"]);
+                $this->_propDict["dlpAction"] = new ChatMessagePolicyViolationDlpActionTypes($this->_propDict["dlpAction"]);
                 return $this->_propDict["dlpAction"];
             }
         }
@@ -47,7 +47,7 @@ class ChatMessagePolicyViolation extends Entity
     /**
     * Sets the dlpAction
     *
-    * @param ChatMessagePolicyViolationDlpActionType $val The value to assign to the dlpAction
+    * @param ChatMessagePolicyViolationDlpActionTypes $val The value to assign to the dlpAction
     *
     * @return ChatMessagePolicyViolation The ChatMessagePolicyViolation
     */
@@ -91,7 +91,7 @@ class ChatMessagePolicyViolation extends Entity
     public function getPolicyTip()
     {
         if (array_key_exists("policyTip", $this->_propDict)) {
-            if (is_a($this->_propDict["policyTip"], "Microsoft\Graph\Model\ChatMessagePolicyViolationPolicyTip")) {
+            if (is_a($this->_propDict["policyTip"], "Microsoft\Graph\Beta\Model\ChatMessagePolicyViolationPolicyTip")) {
                 return $this->_propDict["policyTip"];
             } else {
                 $this->_propDict["policyTip"] = new ChatMessagePolicyViolationPolicyTip($this->_propDict["policyTip"]);
@@ -117,15 +117,15 @@ class ChatMessagePolicyViolation extends Entity
     /**
     * Gets the userAction
     *
-    * @return ChatMessagePolicyViolationUserActionType The userAction
+    * @return ChatMessagePolicyViolationUserActionTypes The userAction
     */
     public function getUserAction()
     {
         if (array_key_exists("userAction", $this->_propDict)) {
-            if (is_a($this->_propDict["userAction"], "Microsoft\Graph\Model\ChatMessagePolicyViolationUserActionType")) {
+            if (is_a($this->_propDict["userAction"], "Microsoft\Graph\Beta\Model\ChatMessagePolicyViolationUserActionTypes")) {
                 return $this->_propDict["userAction"];
             } else {
-                $this->_propDict["userAction"] = new ChatMessagePolicyViolationUserActionType($this->_propDict["userAction"]);
+                $this->_propDict["userAction"] = new ChatMessagePolicyViolationUserActionTypes($this->_propDict["userAction"]);
                 return $this->_propDict["userAction"];
             }
         }
@@ -135,7 +135,7 @@ class ChatMessagePolicyViolation extends Entity
     /**
     * Sets the userAction
     *
-    * @param ChatMessagePolicyViolationUserActionType $val The value to assign to the userAction
+    * @param ChatMessagePolicyViolationUserActionTypes $val The value to assign to the userAction
     *
     * @return ChatMessagePolicyViolation The ChatMessagePolicyViolation
     */
@@ -148,15 +148,15 @@ class ChatMessagePolicyViolation extends Entity
     /**
     * Gets the verdictDetails
     *
-    * @return ChatMessagePolicyViolationVerdictDetailsType The verdictDetails
+    * @return ChatMessagePolicyViolationVerdictDetailsTypes The verdictDetails
     */
     public function getVerdictDetails()
     {
         if (array_key_exists("verdictDetails", $this->_propDict)) {
-            if (is_a($this->_propDict["verdictDetails"], "Microsoft\Graph\Model\ChatMessagePolicyViolationVerdictDetailsType")) {
+            if (is_a($this->_propDict["verdictDetails"], "Microsoft\Graph\Beta\Model\ChatMessagePolicyViolationVerdictDetailsTypes")) {
                 return $this->_propDict["verdictDetails"];
             } else {
-                $this->_propDict["verdictDetails"] = new ChatMessagePolicyViolationVerdictDetailsType($this->_propDict["verdictDetails"]);
+                $this->_propDict["verdictDetails"] = new ChatMessagePolicyViolationVerdictDetailsTypes($this->_propDict["verdictDetails"]);
                 return $this->_propDict["verdictDetails"];
             }
         }
@@ -166,7 +166,7 @@ class ChatMessagePolicyViolation extends Entity
     /**
     * Sets the verdictDetails
     *
-    * @param ChatMessagePolicyViolationVerdictDetailsType $val The value to assign to the verdictDetails
+    * @param ChatMessagePolicyViolationVerdictDetailsTypes $val The value to assign to the verdictDetails
     *
     * @return ChatMessagePolicyViolation The ChatMessagePolicyViolation
     */

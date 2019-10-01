@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * ResultInfo class
 *
@@ -28,7 +28,7 @@ class ResultInfo extends Entity
     /**
     * Gets the code
     *
-    * @return string The code
+    * @return int The code
     */
     public function getCode()
     {
@@ -42,7 +42,7 @@ class ResultInfo extends Entity
     /**
     * Sets the code
     *
-    * @param string $val The value of the code
+    * @param int $val The value of the code
     *
     * @return ResultInfo
     */
@@ -52,29 +52,29 @@ class ResultInfo extends Entity
         return $this;
     }
     /**
-    * Gets the subCode
+    * Gets the subcode
     *
-    * @return string The subCode
+    * @return int The subcode
     */
-    public function getSubCode()
+    public function getSubcode()
     {
-        if (array_key_exists("subCode", $this->_propDict)) {
-            return $this->_propDict["subCode"];
+        if (array_key_exists("subcode", $this->_propDict)) {
+            return $this->_propDict["subcode"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the subCode
+    * Sets the subcode
     *
-    * @param string $val The value of the subCode
+    * @param int $val The value of the subcode
     *
     * @return ResultInfo
     */
-    public function setSubCode($val)
+    public function setSubcode($val)
     {
-        $this->_propDict["subCode"] = $val;
+        $this->_propDict["subcode"] = $val;
         return $this;
     }
     /**

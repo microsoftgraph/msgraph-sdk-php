@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * Organization class
@@ -87,7 +87,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the city
-    * City name of the address for the organization
+    * City name of the address for the organization.
     *
     * @return string The city
     */
@@ -102,7 +102,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the city
-    * City name of the address for the organization
+    * City name of the address for the organization.
     *
     * @param string $val The city
     *
@@ -116,7 +116,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the country
-    * Country/region name of the address for the organization
+    * Country/region name of the address for the organization.
     *
     * @return string The country
     */
@@ -131,7 +131,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the country
-    * Country/region name of the address for the organization
+    * Country/region name of the address for the organization.
     *
     * @param string $val The country
     *
@@ -145,7 +145,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the countryLetterCode
-    * Country/region abbreviation for the organization
+    * Country/region abbreviation for the organization.
     *
     * @return string The countryLetterCode
     */
@@ -160,7 +160,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the countryLetterCode
-    * Country/region abbreviation for the organization
+    * Country/region abbreviation for the organization.
     *
     * @param string $val The countryLetterCode
     *
@@ -356,7 +356,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the postalCode
-    * Postal code of the address for the organization
+    * Postal code of the address for the organization.
     *
     * @return string The postalCode
     */
@@ -371,7 +371,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the postalCode
-    * Postal code of the address for the organization
+    * Postal code of the address for the organization.
     *
     * @param string $val The postalCode
     *
@@ -421,7 +421,7 @@ class Organization extends DirectoryObject
     public function getPrivacyProfile()
     {
         if (array_key_exists("privacyProfile", $this->_propDict)) {
-            if (is_a($this->_propDict["privacyProfile"], "Microsoft\Graph\Model\PrivacyProfile")) {
+            if (is_a($this->_propDict["privacyProfile"], "Microsoft\Graph\Beta\Model\PrivacyProfile")) {
                 return $this->_propDict["privacyProfile"];
             } else {
                 $this->_propDict["privacyProfile"] = new PrivacyProfile($this->_propDict["privacyProfile"]);
@@ -531,7 +531,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the state
-    * State name of the address for the organization
+    * State name of the address for the organization.
     *
     * @return string The state
     */
@@ -546,7 +546,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the state
-    * State name of the address for the organization
+    * State name of the address for the organization.
     *
     * @param string $val The state
     *
@@ -560,7 +560,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the street
-    * Street name of the address for organization
+    * Street name of the address for organization.
     *
     * @return string The street
     */
@@ -575,7 +575,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the street
-    * Street name of the address for organization
+    * Street name of the address for organization.
     *
     * @param string $val The street
     *
@@ -655,7 +655,7 @@ class Organization extends DirectoryObject
     public function getMobileDeviceManagementAuthority()
     {
         if (array_key_exists("mobileDeviceManagementAuthority", $this->_propDict)) {
-            if (is_a($this->_propDict["mobileDeviceManagementAuthority"], "Microsoft\Graph\Model\MdmAuthority")) {
+            if (is_a($this->_propDict["mobileDeviceManagementAuthority"], "Microsoft\Graph\Beta\Model\MdmAuthority")) {
                 return $this->_propDict["mobileDeviceManagementAuthority"];
             } else {
                 $this->_propDict["mobileDeviceManagementAuthority"] = new MdmAuthority($this->_propDict["mobileDeviceManagementAuthority"]);
@@ -688,7 +688,7 @@ class Organization extends DirectoryObject
     public function getCertificateConnectorSetting()
     {
         if (array_key_exists("certificateConnectorSetting", $this->_propDict)) {
-            if (is_a($this->_propDict["certificateConnectorSetting"], "Microsoft\Graph\Model\CertificateConnectorSetting")) {
+            if (is_a($this->_propDict["certificateConnectorSetting"], "Microsoft\Graph\Beta\Model\CertificateConnectorSetting")) {
                 return $this->_propDict["certificateConnectorSetting"];
             } else {
                 $this->_propDict["certificateConnectorSetting"] = new CertificateConnectorSetting($this->_propDict["certificateConnectorSetting"]);
@@ -709,6 +709,62 @@ class Organization extends DirectoryObject
     public function setCertificateConnectorSetting($val)
     {
         $this->_propDict["certificateConnectorSetting"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the brandings
+     *
+     * @return array The brandings
+     */
+    public function getBrandings()
+    {
+        if (array_key_exists("brandings", $this->_propDict)) {
+           return $this->_propDict["brandings"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the brandings
+    *
+    * @param OrganizationalBranding $val The brandings
+    *
+    * @return Organization
+    */
+    public function setBrandings($val)
+    {
+		$this->_propDict["brandings"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the certificateBasedAuthConfiguration
+     *
+     * @return array The certificateBasedAuthConfiguration
+     */
+    public function getCertificateBasedAuthConfiguration()
+    {
+        if (array_key_exists("certificateBasedAuthConfiguration", $this->_propDict)) {
+           return $this->_propDict["certificateBasedAuthConfiguration"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the certificateBasedAuthConfiguration
+    *
+    * @param CertificateBasedAuthConfiguration $val The certificateBasedAuthConfiguration
+    *
+    * @return Organization
+    */
+    public function setCertificateBasedAuthConfiguration($val)
+    {
+		$this->_propDict["certificateBasedAuthConfiguration"] = $val;
         return $this;
     }
     

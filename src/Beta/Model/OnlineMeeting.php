@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * OnlineMeeting class
@@ -27,157 +27,157 @@ namespace Microsoft\Graph\Model;
 class OnlineMeeting extends Entity
 {
     /**
-    * Gets the creationTime
+    * Gets the creationDateTime
     *
-    * @return \DateTime The creationTime
+    * @return \DateTime The creationDateTime
     */
-    public function getCreationTime()
+    public function getCreationDateTime()
     {
-        if (array_key_exists("creationTime", $this->_propDict)) {
-            if (is_a($this->_propDict["creationTime"], "\DateTime")) {
-                return $this->_propDict["creationTime"];
+        if (array_key_exists("creationDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["creationDateTime"], "\DateTime")) {
+                return $this->_propDict["creationDateTime"];
             } else {
-                $this->_propDict["creationTime"] = new \DateTime($this->_propDict["creationTime"]);
-                return $this->_propDict["creationTime"];
+                $this->_propDict["creationDateTime"] = new \DateTime($this->_propDict["creationDateTime"]);
+                return $this->_propDict["creationDateTime"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the creationTime
+    * Sets the creationDateTime
     *
-    * @param \DateTime $val The creationTime
+    * @param \DateTime $val The creationDateTime
     *
     * @return OnlineMeeting
     */
-    public function setCreationTime($val)
+    public function setCreationDateTime($val)
     {
-        $this->_propDict["creationTime"] = $val;
+        $this->_propDict["creationDateTime"] = $val;
         return $this;
     }
     
     /**
-    * Gets the startTime
+    * Gets the startDateTime
     *
-    * @return \DateTime The startTime
+    * @return \DateTime The startDateTime
     */
-    public function getStartTime()
+    public function getStartDateTime()
     {
-        if (array_key_exists("startTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startTime"], "\DateTime")) {
-                return $this->_propDict["startTime"];
+        if (array_key_exists("startDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
+                return $this->_propDict["startDateTime"];
             } else {
-                $this->_propDict["startTime"] = new \DateTime($this->_propDict["startTime"]);
-                return $this->_propDict["startTime"];
+                $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);
+                return $this->_propDict["startDateTime"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the startTime
+    * Sets the startDateTime
     *
-    * @param \DateTime $val The startTime
+    * @param \DateTime $val The startDateTime
     *
     * @return OnlineMeeting
     */
-    public function setStartTime($val)
+    public function setStartDateTime($val)
     {
-        $this->_propDict["startTime"] = $val;
+        $this->_propDict["startDateTime"] = $val;
         return $this;
     }
     
     /**
-    * Gets the endTime
+    * Gets the endDateTime
     *
-    * @return \DateTime The endTime
+    * @return \DateTime The endDateTime
     */
-    public function getEndTime()
+    public function getEndDateTime()
     {
-        if (array_key_exists("endTime", $this->_propDict)) {
-            if (is_a($this->_propDict["endTime"], "\DateTime")) {
-                return $this->_propDict["endTime"];
+        if (array_key_exists("endDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["endDateTime"], "\DateTime")) {
+                return $this->_propDict["endDateTime"];
             } else {
-                $this->_propDict["endTime"] = new \DateTime($this->_propDict["endTime"]);
-                return $this->_propDict["endTime"];
+                $this->_propDict["endDateTime"] = new \DateTime($this->_propDict["endDateTime"]);
+                return $this->_propDict["endDateTime"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the endTime
+    * Sets the endDateTime
     *
-    * @param \DateTime $val The endTime
+    * @param \DateTime $val The endDateTime
     *
     * @return OnlineMeeting
     */
-    public function setEndTime($val)
+    public function setEndDateTime($val)
     {
-        $this->_propDict["endTime"] = $val;
+        $this->_propDict["endDateTime"] = $val;
         return $this;
     }
     
     /**
-    * Gets the canceledTime
+    * Gets the canceledDateTime
     *
-    * @return \DateTime The canceledTime
+    * @return \DateTime The canceledDateTime
     */
-    public function getCanceledTime()
+    public function getCanceledDateTime()
     {
-        if (array_key_exists("canceledTime", $this->_propDict)) {
-            if (is_a($this->_propDict["canceledTime"], "\DateTime")) {
-                return $this->_propDict["canceledTime"];
+        if (array_key_exists("canceledDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["canceledDateTime"], "\DateTime")) {
+                return $this->_propDict["canceledDateTime"];
             } else {
-                $this->_propDict["canceledTime"] = new \DateTime($this->_propDict["canceledTime"]);
-                return $this->_propDict["canceledTime"];
+                $this->_propDict["canceledDateTime"] = new \DateTime($this->_propDict["canceledDateTime"]);
+                return $this->_propDict["canceledDateTime"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the canceledTime
+    * Sets the canceledDateTime
     *
-    * @param \DateTime $val The canceledTime
+    * @param \DateTime $val The canceledDateTime
     *
     * @return OnlineMeeting
     */
-    public function setCanceledTime($val)
+    public function setCanceledDateTime($val)
     {
-        $this->_propDict["canceledTime"] = $val;
+        $this->_propDict["canceledDateTime"] = $val;
         return $this;
     }
     
     /**
-    * Gets the expirationTime
+    * Gets the expirationDateTime
     *
-    * @return \DateTime The expirationTime
+    * @return \DateTime The expirationDateTime
     */
-    public function getExpirationTime()
+    public function getExpirationDateTime()
     {
-        if (array_key_exists("expirationTime", $this->_propDict)) {
-            if (is_a($this->_propDict["expirationTime"], "\DateTime")) {
-                return $this->_propDict["expirationTime"];
+        if (array_key_exists("expirationDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["expirationDateTime"], "\DateTime")) {
+                return $this->_propDict["expirationDateTime"];
             } else {
-                $this->_propDict["expirationTime"] = new \DateTime($this->_propDict["expirationTime"]);
-                return $this->_propDict["expirationTime"];
+                $this->_propDict["expirationDateTime"] = new \DateTime($this->_propDict["expirationDateTime"]);
+                return $this->_propDict["expirationDateTime"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the expirationTime
+    * Sets the expirationDateTime
     *
-    * @param \DateTime $val The expirationTime
+    * @param \DateTime $val The expirationDateTime
     *
     * @return OnlineMeeting
     */
-    public function setExpirationTime($val)
+    public function setExpirationDateTime($val)
     {
-        $this->_propDict["expirationTime"] = $val;
+        $this->_propDict["expirationDateTime"] = $val;
         return $this;
     }
     
@@ -297,7 +297,7 @@ class OnlineMeeting extends Entity
     public function getParticipants()
     {
         if (array_key_exists("participants", $this->_propDict)) {
-            if (is_a($this->_propDict["participants"], "Microsoft\Graph\Model\MeetingParticipants")) {
+            if (is_a($this->_propDict["participants"], "Microsoft\Graph\Beta\Model\MeetingParticipants")) {
                 return $this->_propDict["participants"];
             } else {
                 $this->_propDict["participants"] = new MeetingParticipants($this->_propDict["participants"]);
@@ -321,33 +321,29 @@ class OnlineMeeting extends Entity
     }
     
     /**
-    * Gets the meetingType
+    * Gets the isBroadcast
     *
-    * @return MeetingType The meetingType
+    * @return bool The isBroadcast
     */
-    public function getMeetingType()
+    public function getIsBroadcast()
     {
-        if (array_key_exists("meetingType", $this->_propDict)) {
-            if (is_a($this->_propDict["meetingType"], "Microsoft\Graph\Model\MeetingType")) {
-                return $this->_propDict["meetingType"];
-            } else {
-                $this->_propDict["meetingType"] = new MeetingType($this->_propDict["meetingType"]);
-                return $this->_propDict["meetingType"];
-            }
+        if (array_key_exists("isBroadcast", $this->_propDict)) {
+            return $this->_propDict["isBroadcast"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the meetingType
+    * Sets the isBroadcast
     *
-    * @param MeetingType $val The meetingType
+    * @param bool $val The isBroadcast
     *
     * @return OnlineMeeting
     */
-    public function setMeetingType($val)
+    public function setIsBroadcast($val)
     {
-        $this->_propDict["meetingType"] = $val;
+        $this->_propDict["isBroadcast"] = boolval($val);
         return $this;
     }
     
@@ -359,7 +355,7 @@ class OnlineMeeting extends Entity
     public function getAccessLevel()
     {
         if (array_key_exists("accessLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["accessLevel"], "Microsoft\Graph\Model\AccessLevel")) {
+            if (is_a($this->_propDict["accessLevel"], "Microsoft\Graph\Beta\Model\AccessLevel")) {
                 return $this->_propDict["accessLevel"];
             } else {
                 $this->_propDict["accessLevel"] = new AccessLevel($this->_propDict["accessLevel"]);
@@ -382,6 +378,34 @@ class OnlineMeeting extends Entity
         return $this;
     }
     
+
+     /** 
+     * Gets the capabilities
+     *
+     * @return array The capabilities
+     */
+    public function getCapabilities()
+    {
+        if (array_key_exists("capabilities", $this->_propDict)) {
+           return $this->_propDict["capabilities"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the capabilities
+    *
+    * @param MeetingCapabilities $val The capabilities
+    *
+    * @return OnlineMeeting
+    */
+    public function setCapabilities($val)
+    {
+		$this->_propDict["capabilities"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the audioConferencing
     *
@@ -390,7 +414,7 @@ class OnlineMeeting extends Entity
     public function getAudioConferencing()
     {
         if (array_key_exists("audioConferencing", $this->_propDict)) {
-            if (is_a($this->_propDict["audioConferencing"], "Microsoft\Graph\Model\AudioConferencing")) {
+            if (is_a($this->_propDict["audioConferencing"], "Microsoft\Graph\Beta\Model\AudioConferencing")) {
                 return $this->_propDict["audioConferencing"];
             } else {
                 $this->_propDict["audioConferencing"] = new AudioConferencing($this->_propDict["audioConferencing"]);
@@ -421,7 +445,7 @@ class OnlineMeeting extends Entity
     public function getChatInfo()
     {
         if (array_key_exists("chatInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["chatInfo"], "Microsoft\Graph\Model\ChatInfo")) {
+            if (is_a($this->_propDict["chatInfo"], "Microsoft\Graph\Beta\Model\ChatInfo")) {
                 return $this->_propDict["chatInfo"];
             } else {
                 $this->_propDict["chatInfo"] = new ChatInfo($this->_propDict["chatInfo"]);
@@ -445,33 +469,29 @@ class OnlineMeeting extends Entity
     }
     
     /**
-    * Gets the meetingInfo
+    * Gets the videoTeleconferenceId
     *
-    * @return MeetingInfo The meetingInfo
+    * @return string The videoTeleconferenceId
     */
-    public function getMeetingInfo()
+    public function getVideoTeleconferenceId()
     {
-        if (array_key_exists("meetingInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["meetingInfo"], "Microsoft\Graph\Model\MeetingInfo")) {
-                return $this->_propDict["meetingInfo"];
-            } else {
-                $this->_propDict["meetingInfo"] = new MeetingInfo($this->_propDict["meetingInfo"]);
-                return $this->_propDict["meetingInfo"];
-            }
+        if (array_key_exists("videoTeleconferenceId", $this->_propDict)) {
+            return $this->_propDict["videoTeleconferenceId"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the meetingInfo
+    * Sets the videoTeleconferenceId
     *
-    * @param MeetingInfo $val The meetingInfo
+    * @param string $val The videoTeleconferenceId
     *
     * @return OnlineMeeting
     */
-    public function setMeetingInfo($val)
+    public function setVideoTeleconferenceId($val)
     {
-        $this->_propDict["meetingInfo"] = $val;
+        $this->_propDict["videoTeleconferenceId"] = $val;
         return $this;
     }
     

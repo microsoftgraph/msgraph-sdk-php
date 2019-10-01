@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * Office365GroupsActivityDetail class
@@ -54,6 +54,33 @@ class Office365GroupsActivityDetail extends Entity
     public function setReportRefreshDate($val)
     {
         $this->_propDict["reportRefreshDate"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the groupId
+    *
+    * @return string The groupId
+    */
+    public function getGroupId()
+    {
+        if (array_key_exists("groupId", $this->_propDict)) {
+            return $this->_propDict["groupId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the groupId
+    *
+    * @param string $val The groupId
+    *
+    * @return Office365GroupsActivityDetail
+    */
+    public function setGroupId($val)
+    {
+        $this->_propDict["groupId"] = $val;
         return $this;
     }
     

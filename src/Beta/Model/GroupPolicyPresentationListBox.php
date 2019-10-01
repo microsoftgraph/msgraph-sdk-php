@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * GroupPolicyPresentationListBox class
@@ -52,6 +52,33 @@ class GroupPolicyPresentationListBox extends GroupPolicyPresentation
     public function setExplicitValue($val)
     {
         $this->_propDict["explicitValue"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the valuePrefix
+    *
+    * @return string The valuePrefix
+    */
+    public function getValuePrefix()
+    {
+        if (array_key_exists("valuePrefix", $this->_propDict)) {
+            return $this->_propDict["valuePrefix"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the valuePrefix
+    *
+    * @param string $val The valuePrefix
+    *
+    * @return GroupPolicyPresentationListBox
+    */
+    public function setValuePrefix($val)
+    {
+        $this->_propDict["valuePrefix"] = $val;
         return $this;
     }
     

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * ConvertIdResult class
 *
@@ -27,6 +27,7 @@ class ConvertIdResult extends Entity
 {
     /**
     * Gets the sourceId
+    * The identifier that was converted. This value is the original, un-converted identifier.
     *
     * @return string The sourceId
     */
@@ -41,6 +42,7 @@ class ConvertIdResult extends Entity
 
     /**
     * Sets the sourceId
+    * The identifier that was converted. This value is the original, un-converted identifier.
     *
     * @param string $val The value of the sourceId
     *
@@ -53,6 +55,7 @@ class ConvertIdResult extends Entity
     }
     /**
     * Gets the targetId
+    * The converted identifier. This value is not present if the conversion failed.
     *
     * @return string The targetId
     */
@@ -67,6 +70,7 @@ class ConvertIdResult extends Entity
 
     /**
     * Sets the targetId
+    * The converted identifier. This value is not present if the conversion failed.
     *
     * @param string $val The value of the targetId
     *
@@ -80,13 +84,14 @@ class ConvertIdResult extends Entity
 
     /**
     * Gets the errorDetails
+    * An error object indicating the reason for the conversion failure. This value is not present if the conversion succeeded.
     *
     * @return GenericError The errorDetails
     */
     public function getErrorDetails()
     {
         if (array_key_exists("errorDetails", $this->_propDict)) {
-            if (is_a($this->_propDict["errorDetails"], "Microsoft\Graph\Model\GenericError")) {
+            if (is_a($this->_propDict["errorDetails"], "Microsoft\Graph\Beta\Model\GenericError")) {
                 return $this->_propDict["errorDetails"];
             } else {
                 $this->_propDict["errorDetails"] = new GenericError($this->_propDict["errorDetails"]);
@@ -98,6 +103,7 @@ class ConvertIdResult extends Entity
 
     /**
     * Sets the errorDetails
+    * An error object indicating the reason for the conversion failure. This value is not present if the conversion succeeded.
     *
     * @param GenericError $val The value to assign to the errorDetails
     *

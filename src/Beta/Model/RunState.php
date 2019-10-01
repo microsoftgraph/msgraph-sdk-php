@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 use Microsoft\Graph\Core\Enum;
 
@@ -34,4 +34,6 @@ class RunState extends Enum
     const UNKNOWN = "unknown";
     const SUCCESS = "success";
     const FAIL = "fail";
+    const ERROR = "error";
+    const PENDING = "pending";
 }

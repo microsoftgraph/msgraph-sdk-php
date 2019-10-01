@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * AndroidForWorkGeneralDeviceConfiguration class
@@ -238,7 +238,7 @@ class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguration
     public function getPasswordRequiredType()
     {
         if (array_key_exists("passwordRequiredType", $this->_propDict)) {
-            if (is_a($this->_propDict["passwordRequiredType"], "Microsoft\Graph\Model\AndroidForWorkRequiredPasswordType")) {
+            if (is_a($this->_propDict["passwordRequiredType"], "Microsoft\Graph\Beta\Model\AndroidForWorkRequiredPasswordType")) {
                 return $this->_propDict["passwordRequiredType"];
             } else {
                 $this->_propDict["passwordRequiredType"] = new AndroidForWorkRequiredPasswordType($this->_propDict["passwordRequiredType"]);
@@ -271,7 +271,7 @@ class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguration
     public function getWorkProfileDataSharingType()
     {
         if (array_key_exists("workProfileDataSharingType", $this->_propDict)) {
-            if (is_a($this->_propDict["workProfileDataSharingType"], "Microsoft\Graph\Model\AndroidForWorkCrossProfileDataSharingType")) {
+            if (is_a($this->_propDict["workProfileDataSharingType"], "Microsoft\Graph\Beta\Model\AndroidForWorkCrossProfileDataSharingType")) {
                 return $this->_propDict["workProfileDataSharingType"];
             } else {
                 $this->_propDict["workProfileDataSharingType"] = new AndroidForWorkCrossProfileDataSharingType($this->_propDict["workProfileDataSharingType"]);
@@ -536,7 +536,7 @@ class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguration
     public function getWorkProfileDefaultAppPermissionPolicy()
     {
         if (array_key_exists("workProfileDefaultAppPermissionPolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["workProfileDefaultAppPermissionPolicy"], "Microsoft\Graph\Model\AndroidForWorkDefaultAppPermissionPolicyType")) {
+            if (is_a($this->_propDict["workProfileDefaultAppPermissionPolicy"], "Microsoft\Graph\Beta\Model\AndroidForWorkDefaultAppPermissionPolicyType")) {
                 return $this->_propDict["workProfileDefaultAppPermissionPolicy"];
             } else {
                 $this->_propDict["workProfileDefaultAppPermissionPolicy"] = new AndroidForWorkDefaultAppPermissionPolicyType($this->_propDict["workProfileDefaultAppPermissionPolicy"]);
@@ -946,7 +946,7 @@ class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguration
     public function getWorkProfilePasswordRequiredType()
     {
         if (array_key_exists("workProfilePasswordRequiredType", $this->_propDict)) {
-            if (is_a($this->_propDict["workProfilePasswordRequiredType"], "Microsoft\Graph\Model\AndroidForWorkRequiredPasswordType")) {
+            if (is_a($this->_propDict["workProfilePasswordRequiredType"], "Microsoft\Graph\Beta\Model\AndroidForWorkRequiredPasswordType")) {
                 return $this->_propDict["workProfilePasswordRequiredType"];
             } else {
                 $this->_propDict["workProfilePasswordRequiredType"] = new AndroidForWorkRequiredPasswordType($this->_propDict["workProfilePasswordRequiredType"]);
@@ -1083,6 +1083,35 @@ class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguration
     public function setVpnEnableAlwaysOnLockdownMode($val)
     {
         $this->_propDict["vpnEnableAlwaysOnLockdownMode"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the workProfileAllowWidgets
+    * Allow widgets from work profile apps.
+    *
+    * @return bool The workProfileAllowWidgets
+    */
+    public function getWorkProfileAllowWidgets()
+    {
+        if (array_key_exists("workProfileAllowWidgets", $this->_propDict)) {
+            return $this->_propDict["workProfileAllowWidgets"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the workProfileAllowWidgets
+    * Allow widgets from work profile apps.
+    *
+    * @param bool $val The workProfileAllowWidgets
+    *
+    * @return AndroidForWorkGeneralDeviceConfiguration
+    */
+    public function setWorkProfileAllowWidgets($val)
+    {
+        $this->_propDict["workProfileAllowWidgets"] = boolval($val);
         return $this;
     }
     

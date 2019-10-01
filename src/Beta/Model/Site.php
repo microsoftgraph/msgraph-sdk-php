@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * Site class
@@ -64,7 +64,7 @@ class Site extends BaseItem
     public function getRoot()
     {
         if (array_key_exists("root", $this->_propDict)) {
-            if (is_a($this->_propDict["root"], "Microsoft\Graph\Model\Root")) {
+            if (is_a($this->_propDict["root"], "Microsoft\Graph\Beta\Model\Root")) {
                 return $this->_propDict["root"];
             } else {
                 $this->_propDict["root"] = new Root($this->_propDict["root"]);
@@ -97,7 +97,7 @@ class Site extends BaseItem
     public function getSharepointIds()
     {
         if (array_key_exists("sharepointIds", $this->_propDict)) {
-            if (is_a($this->_propDict["sharepointIds"], "Microsoft\Graph\Model\SharepointIds")) {
+            if (is_a($this->_propDict["sharepointIds"], "Microsoft\Graph\Beta\Model\SharepointIds")) {
                 return $this->_propDict["sharepointIds"];
             } else {
                 $this->_propDict["sharepointIds"] = new SharepointIds($this->_propDict["sharepointIds"]);
@@ -130,7 +130,7 @@ class Site extends BaseItem
     public function getSiteCollection()
     {
         if (array_key_exists("siteCollection", $this->_propDict)) {
-            if (is_a($this->_propDict["siteCollection"], "Microsoft\Graph\Model\SiteCollection")) {
+            if (is_a($this->_propDict["siteCollection"], "Microsoft\Graph\Beta\Model\SiteCollection")) {
                 return $this->_propDict["siteCollection"];
             } else {
                 $this->_propDict["siteCollection"] = new SiteCollection($this->_propDict["siteCollection"]);
@@ -156,13 +156,14 @@ class Site extends BaseItem
     
     /**
     * Gets the analytics
+    * Analytics about the view activities that took place in this site.
     *
     * @return ItemAnalytics The analytics
     */
     public function getAnalytics()
     {
         if (array_key_exists("analytics", $this->_propDict)) {
-            if (is_a($this->_propDict["analytics"], "Microsoft\Graph\Model\ItemAnalytics")) {
+            if (is_a($this->_propDict["analytics"], "Microsoft\Graph\Beta\Model\ItemAnalytics")) {
                 return $this->_propDict["analytics"];
             } else {
                 $this->_propDict["analytics"] = new ItemAnalytics($this->_propDict["analytics"]);
@@ -174,6 +175,7 @@ class Site extends BaseItem
     
     /**
     * Sets the analytics
+    * Analytics about the view activities that took place in this site.
     *
     * @param ItemAnalytics $val The analytics
     *
@@ -254,7 +256,7 @@ class Site extends BaseItem
     public function getDrive()
     {
         if (array_key_exists("drive", $this->_propDict)) {
-            if (is_a($this->_propDict["drive"], "Microsoft\Graph\Model\Drive")) {
+            if (is_a($this->_propDict["drive"], "Microsoft\Graph\Beta\Model\Drive")) {
                 return $this->_propDict["drive"];
             } else {
                 $this->_propDict["drive"] = new Drive($this->_propDict["drive"]);
@@ -435,7 +437,7 @@ class Site extends BaseItem
     public function getOnenote()
     {
         if (array_key_exists("onenote", $this->_propDict)) {
-            if (is_a($this->_propDict["onenote"], "Microsoft\Graph\Model\Onenote")) {
+            if (is_a($this->_propDict["onenote"], "Microsoft\Graph\Beta\Model\Onenote")) {
                 return $this->_propDict["onenote"];
             } else {
                 $this->_propDict["onenote"] = new Onenote($this->_propDict["onenote"]);
