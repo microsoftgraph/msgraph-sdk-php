@@ -2843,6 +2843,34 @@ class User extends DirectoryObject
     
 
      /** 
+     * Gets the onlineMeetings
+     *
+     * @return array The onlineMeetings
+     */
+    public function getOnlineMeetings()
+    {
+        if (array_key_exists("onlineMeetings", $this->_propDict)) {
+           return $this->_propDict["onlineMeetings"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the onlineMeetings
+    *
+    * @param OnlineMeeting $val The onlineMeetings
+    *
+    * @return User
+    */
+    public function setOnlineMeetings($val)
+    {
+		$this->_propDict["onlineMeetings"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the joinedTeams
      *
      * @return array The joinedTeams
