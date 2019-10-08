@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * ContactFolder class
@@ -113,66 +113,6 @@ class ContactFolder extends Entity
     
 
      /** 
-     * Gets the contacts
-    * The contacts in the folder. Navigation property. Read-only. Nullable.
-     *
-     * @return array The contacts
-     */
-    public function getContacts()
-    {
-        if (array_key_exists("contacts", $this->_propDict)) {
-           return $this->_propDict["contacts"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the contacts
-    * The contacts in the folder. Navigation property. Read-only. Nullable.
-    *
-    * @param Contact $val The contacts
-    *
-    * @return ContactFolder
-    */
-    public function setContacts($val)
-    {
-		$this->_propDict["contacts"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the childFolders
-    * The collection of child folders in the folder. Navigation property. Read-only. Nullable.
-     *
-     * @return array The childFolders
-     */
-    public function getChildFolders()
-    {
-        if (array_key_exists("childFolders", $this->_propDict)) {
-           return $this->_propDict["childFolders"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the childFolders
-    * The collection of child folders in the folder. Navigation property. Read-only. Nullable.
-    *
-    * @param ContactFolder $val The childFolders
-    *
-    * @return ContactFolder
-    */
-    public function setChildFolders($val)
-    {
-		$this->_propDict["childFolders"] = $val;
-        return $this;
-    }
-    
-
-     /** 
      * Gets the singleValueExtendedProperties
     * The collection of single-value extended properties defined for the contactFolder. Read-only. Nullable.
      *
@@ -228,6 +168,66 @@ class ContactFolder extends Entity
     public function setMultiValueExtendedProperties($val)
     {
 		$this->_propDict["multiValueExtendedProperties"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the contacts
+    * The contacts in the folder. Navigation property. Read-only. Nullable.
+     *
+     * @return array The contacts
+     */
+    public function getContacts()
+    {
+        if (array_key_exists("contacts", $this->_propDict)) {
+           return $this->_propDict["contacts"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the contacts
+    * The contacts in the folder. Navigation property. Read-only. Nullable.
+    *
+    * @param Contact $val The contacts
+    *
+    * @return ContactFolder
+    */
+    public function setContacts($val)
+    {
+		$this->_propDict["contacts"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the childFolders
+    * The collection of child folders in the folder. Navigation property. Read-only. Nullable.
+     *
+     * @return array The childFolders
+     */
+    public function getChildFolders()
+    {
+        if (array_key_exists("childFolders", $this->_propDict)) {
+           return $this->_propDict["childFolders"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the childFolders
+    * The collection of child folders in the folder. Navigation property. Read-only. Nullable.
+    *
+    * @param ContactFolder $val The childFolders
+    *
+    * @return ContactFolder
+    */
+    public function setChildFolders($val)
+    {
+		$this->_propDict["childFolders"] = $val;
         return $this;
     }
     

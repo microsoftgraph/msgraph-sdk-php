@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * IosHomeScreenFolderPage class
 *
@@ -63,7 +63,7 @@ class IosHomeScreenFolderPage extends Entity
     public function getApps()
     {
         if (array_key_exists("apps", $this->_propDict)) {
-            if (is_a($this->_propDict["apps"], "Microsoft\Graph\Model\IosHomeScreenApp")) {
+            if (is_a($this->_propDict["apps"], "Microsoft\Graph\Beta\Model\IosHomeScreenApp")) {
                 return $this->_propDict["apps"];
             } else {
                 $this->_propDict["apps"] = new IosHomeScreenApp($this->_propDict["apps"]);

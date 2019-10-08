@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 use Microsoft\Graph\Core\Enum;
 
@@ -31,6 +31,7 @@ class SynchronizationJobRestartScope extends Enum
     /**
     * The Enum SynchronizationJobRestartScope
     */
+    const FORCE_DELETES = "forceDeletes";
     const FULL = "full";
     const QUARANTINE_STATE = "quarantineState";
     const WATERMARK = "watermark";

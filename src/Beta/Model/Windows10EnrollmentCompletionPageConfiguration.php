@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * Windows10EnrollmentCompletionPageConfiguration class
@@ -255,6 +255,64 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
     public function setSelectedMobileAppIds($val)
     {
         $this->_propDict["selectedMobileAppIds"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the trackInstallProgressForAutopilotOnly
+    * Only show installation progress for Autopilot enrollment scenarios
+    *
+    * @return bool The trackInstallProgressForAutopilotOnly
+    */
+    public function getTrackInstallProgressForAutopilotOnly()
+    {
+        if (array_key_exists("trackInstallProgressForAutopilotOnly", $this->_propDict)) {
+            return $this->_propDict["trackInstallProgressForAutopilotOnly"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the trackInstallProgressForAutopilotOnly
+    * Only show installation progress for Autopilot enrollment scenarios
+    *
+    * @param bool $val The trackInstallProgressForAutopilotOnly
+    *
+    * @return Windows10EnrollmentCompletionPageConfiguration
+    */
+    public function setTrackInstallProgressForAutopilotOnly($val)
+    {
+        $this->_propDict["trackInstallProgressForAutopilotOnly"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the disableUserStatusTrackingAfterFirstUser
+    * Only show installation progress for first user post enrollment
+    *
+    * @return bool The disableUserStatusTrackingAfterFirstUser
+    */
+    public function getDisableUserStatusTrackingAfterFirstUser()
+    {
+        if (array_key_exists("disableUserStatusTrackingAfterFirstUser", $this->_propDict)) {
+            return $this->_propDict["disableUserStatusTrackingAfterFirstUser"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the disableUserStatusTrackingAfterFirstUser
+    * Only show installation progress for first user post enrollment
+    *
+    * @param bool $val The disableUserStatusTrackingAfterFirstUser
+    *
+    * @return Windows10EnrollmentCompletionPageConfiguration
+    */
+    public function setDisableUserStatusTrackingAfterFirstUser($val)
+    {
+        $this->_propDict["disableUserStatusTrackingAfterFirstUser"] = boolval($val);
         return $this;
     }
     

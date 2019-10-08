@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * CustomSubjectAlternativeName class
 *
@@ -35,7 +35,7 @@ class CustomSubjectAlternativeName extends Entity
     public function getSanType()
     {
         if (array_key_exists("sanType", $this->_propDict)) {
-            if (is_a($this->_propDict["sanType"], "Microsoft\Graph\Model\SubjectAlternativeNameType")) {
+            if (is_a($this->_propDict["sanType"], "Microsoft\Graph\Beta\Model\SubjectAlternativeNameType")) {
                 return $this->_propDict["sanType"];
             } else {
                 $this->_propDict["sanType"] = new SubjectAlternativeNameType($this->_propDict["sanType"]);

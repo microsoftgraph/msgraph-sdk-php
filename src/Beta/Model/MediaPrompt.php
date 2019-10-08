@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * MediaPrompt class
 *
@@ -25,15 +25,6 @@ namespace Microsoft\Graph\Model;
 */
 class MediaPrompt extends Prompt
 {
-    /**
-    * Set the @odata.type since this type is immediately descended from an abstract
-    * type that is referenced as the type in an entity.
-    */
-    public function __construct()
-    {
-        $this->setODataType("#microsoft.graph.MediaPrompt");
-    }
-
 
     /**
     * Gets the mediaInfo
@@ -43,7 +34,7 @@ class MediaPrompt extends Prompt
     public function getMediaInfo()
     {
         if (array_key_exists("mediaInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["mediaInfo"], "Microsoft\Graph\Model\MediaInfo")) {
+            if (is_a($this->_propDict["mediaInfo"], "Microsoft\Graph\Beta\Model\MediaInfo")) {
                 return $this->_propDict["mediaInfo"];
             } else {
                 $this->_propDict["mediaInfo"] = new MediaInfo($this->_propDict["mediaInfo"]);

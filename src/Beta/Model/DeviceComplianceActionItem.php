@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * DeviceComplianceActionItem class
@@ -64,7 +64,7 @@ class DeviceComplianceActionItem extends Entity
     public function getActionType()
     {
         if (array_key_exists("actionType", $this->_propDict)) {
-            if (is_a($this->_propDict["actionType"], "Microsoft\Graph\Model\DeviceComplianceActionType")) {
+            if (is_a($this->_propDict["actionType"], "Microsoft\Graph\Beta\Model\DeviceComplianceActionType")) {
                 return $this->_propDict["actionType"];
             } else {
                 $this->_propDict["actionType"] = new DeviceComplianceActionType($this->_propDict["actionType"]);

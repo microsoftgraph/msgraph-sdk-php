@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 use Microsoft\Graph\Core\Enum;
 
@@ -34,4 +34,5 @@ class SecureAssessmentAccountType extends Enum
     const AZURE_AD_ACCOUNT = "azureADAccount";
     const DOMAIN_ACCOUNT = "domainAccount";
     const LOCAL_ACCOUNT = "localAccount";
+    const LOCAL_GUEST_ACCOUNT = "localGuestAccount";
 }

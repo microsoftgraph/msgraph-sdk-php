@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * MacOSMinimumOperatingSystem class
 *
@@ -219,6 +219,62 @@ class MacOSMinimumOperatingSystem extends Entity
     public function setV10_13($val)
     {
         $this->_propDict["v1013"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the v10_14
+    * Mac OS 10.14 or later.
+    *
+    * @return bool The v10_14
+    */
+    public function getV10_14()
+    {
+        if (array_key_exists("v1014", $this->_propDict)) {
+            return $this->_propDict["v1014"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the v10_14
+    * Mac OS 10.14 or later.
+    *
+    * @param bool $val The value of the v10_14
+    *
+    * @return MacOSMinimumOperatingSystem
+    */
+    public function setV10_14($val)
+    {
+        $this->_propDict["v1014"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the v10_15
+    * Mac OS 10.15 or later.
+    *
+    * @return bool The v10_15
+    */
+    public function getV10_15()
+    {
+        if (array_key_exists("v1015", $this->_propDict)) {
+            return $this->_propDict["v1015"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the v10_15
+    * Mac OS 10.15 or later.
+    *
+    * @param bool $val The value of the v10_15
+    *
+    * @return MacOSMinimumOperatingSystem
+    */
+    public function setV10_15($val)
+    {
+        $this->_propDict["v1015"] = $val;
         return $this;
     }
 }

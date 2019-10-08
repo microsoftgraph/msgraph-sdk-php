@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * WindowsPackageInformation class
 *
@@ -35,7 +35,7 @@ class WindowsPackageInformation extends Entity
     public function getApplicableArchitecture()
     {
         if (array_key_exists("applicableArchitecture", $this->_propDict)) {
-            if (is_a($this->_propDict["applicableArchitecture"], "Microsoft\Graph\Model\WindowsArchitecture")) {
+            if (is_a($this->_propDict["applicableArchitecture"], "Microsoft\Graph\Beta\Model\WindowsArchitecture")) {
                 return $this->_propDict["applicableArchitecture"];
             } else {
                 $this->_propDict["applicableArchitecture"] = new WindowsArchitecture($this->_propDict["applicableArchitecture"]);
@@ -208,7 +208,7 @@ class WindowsPackageInformation extends Entity
     public function getMinimumSupportedOperatingSystem()
     {
         if (array_key_exists("minimumSupportedOperatingSystem", $this->_propDict)) {
-            if (is_a($this->_propDict["minimumSupportedOperatingSystem"], "Microsoft\Graph\Model\WindowsMinimumOperatingSystem")) {
+            if (is_a($this->_propDict["minimumSupportedOperatingSystem"], "Microsoft\Graph\Beta\Model\WindowsMinimumOperatingSystem")) {
                 return $this->_propDict["minimumSupportedOperatingSystem"];
             } else {
                 $this->_propDict["minimumSupportedOperatingSystem"] = new WindowsMinimumOperatingSystem($this->_propDict["minimumSupportedOperatingSystem"]);

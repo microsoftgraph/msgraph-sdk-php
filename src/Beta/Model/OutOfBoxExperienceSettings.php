@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * OutOfBoxExperienceSettings class
 *
@@ -91,7 +91,7 @@ class OutOfBoxExperienceSettings extends Entity
     public function getUserType()
     {
         if (array_key_exists("userType", $this->_propDict)) {
-            if (is_a($this->_propDict["userType"], "Microsoft\Graph\Model\WindowsUserType")) {
+            if (is_a($this->_propDict["userType"], "Microsoft\Graph\Beta\Model\WindowsUserType")) {
                 return $this->_propDict["userType"];
             } else {
                 $this->_propDict["userType"] = new WindowsUserType($this->_propDict["userType"]);
@@ -124,7 +124,7 @@ class OutOfBoxExperienceSettings extends Entity
     public function getDeviceUsageType()
     {
         if (array_key_exists("deviceUsageType", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceUsageType"], "Microsoft\Graph\Model\WindowsDeviceUsageType")) {
+            if (is_a($this->_propDict["deviceUsageType"], "Microsoft\Graph\Beta\Model\WindowsDeviceUsageType")) {
                 return $this->_propDict["deviceUsageType"];
             } else {
                 $this->_propDict["deviceUsageType"] = new WindowsDeviceUsageType($this->_propDict["deviceUsageType"]);

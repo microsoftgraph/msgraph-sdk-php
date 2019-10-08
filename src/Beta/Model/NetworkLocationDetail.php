@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * NetworkLocationDetail class
 *
@@ -34,7 +34,7 @@ class NetworkLocationDetail extends Entity
     public function getNetworkType()
     {
         if (array_key_exists("networkType", $this->_propDict)) {
-            if (is_a($this->_propDict["networkType"], "Microsoft\Graph\Model\NetworkType")) {
+            if (is_a($this->_propDict["networkType"], "Microsoft\Graph\Beta\Model\NetworkType")) {
                 return $this->_propDict["networkType"];
             } else {
                 $this->_propDict["networkType"] = new NetworkType($this->_propDict["networkType"]);

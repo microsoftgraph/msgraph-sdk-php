@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * PlannerBucketTaskBoardTaskFormat class
@@ -24,7 +24,7 @@ namespace Microsoft\Graph\Model;
 * @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-class PlannerBucketTaskBoardTaskFormat extends Entity
+class PlannerBucketTaskBoardTaskFormat extends PlannerDelta
 {
     /**
     * Gets the orderHint
