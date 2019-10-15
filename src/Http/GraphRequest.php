@@ -98,6 +98,12 @@ class GraphRequest
     * @var string
     */
     protected $proxyPort;
+    /**
+    * Request options to decide if Guzzle Client should throw exceptions when http code is 4xx or 5xx
+    *
+    * @var bool
+    */
+    protected $http_errors;
 
     /**
     * Constructs a new Graph Request object
@@ -115,6 +121,7 @@ class GraphRequest
         $this->requestType = $requestType;
         $this->endpoint = $endpoint;
         $this->accessToken = $accessToken;
+        $this->http_errors = true;
 
         if (!$this->accessToken) {
             throw new GraphException(GraphConstants::NO_ACCESS_TOKEN);
@@ -125,6 +132,19 @@ class GraphRequest
         $this->timeout = 0;
         $this->headers = $this->_getDefaultHeaders();
         $this->proxyPort = $proxyPort;
+    }
+
+    /**
+    * Sets a http errors option
+    *
+    * @param string $http_errors A bool option to the Graph call
+    *
+    * @return GraphRequest object
+    */
+    public function setHttpErrors($http_errors)
+    {
+        $this->http_errors = $http_errors;
+        return $this;
     }
 
     /**
@@ -457,6 +477,7 @@ class GraphRequest
     { 
         $clientSettings = [
             'base_uri' => $this->baseUrl,
+            'http_errors' => $this->http_errors,
             'headers' => $this->headers
         ];
         if ($this->proxyPort !== null) {
