@@ -182,6 +182,7 @@ class MailboxSettings extends Entity
     }
     /**
     * Gets the dateFormat
+    * The date format for the user's mailbox.
     *
     * @return string The dateFormat
     */
@@ -196,6 +197,7 @@ class MailboxSettings extends Entity
 
     /**
     * Sets the dateFormat
+    * The date format for the user's mailbox.
     *
     * @param string $val The value of the dateFormat
     *
@@ -208,6 +210,7 @@ class MailboxSettings extends Entity
     }
     /**
     * Gets the timeFormat
+    * The time format for the user's mailbox.
     *
     * @return string The timeFormat
     */
@@ -222,6 +225,7 @@ class MailboxSettings extends Entity
 
     /**
     * Sets the timeFormat
+    * The time format for the user's mailbox.
     *
     * @param string $val The value of the timeFormat
     *
