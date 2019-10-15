@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * Shared class
 *
@@ -35,7 +35,7 @@ class Shared extends Entity
     public function getOwner()
     {
         if (array_key_exists("owner", $this->_propDict)) {
-            if (is_a($this->_propDict["owner"], "Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["owner"], "Microsoft\Graph\Beta\Model\IdentitySet")) {
                 return $this->_propDict["owner"];
             } else {
                 $this->_propDict["owner"] = new IdentitySet($this->_propDict["owner"]);
@@ -96,7 +96,7 @@ class Shared extends Entity
     public function getSharedBy()
     {
         if (array_key_exists("sharedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["sharedBy"], "Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["sharedBy"], "Microsoft\Graph\Beta\Model\IdentitySet")) {
                 return $this->_propDict["sharedBy"];
             } else {
                 $this->_propDict["sharedBy"] = new IdentitySet($this->_propDict["sharedBy"]);
@@ -129,7 +129,7 @@ class Shared extends Entity
     public function getSharedDateTime()
     {
         if (array_key_exists("sharedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["sharedDateTime"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["sharedDateTime"], "Microsoft\Graph\Beta\Model\\DateTime")) {
                 return $this->_propDict["sharedDateTime"];
             } else {
                 $this->_propDict["sharedDateTime"] = new \DateTime($this->_propDict["sharedDateTime"]);

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * WindowsInformationProtectionIPRangeCollection class
 *
@@ -56,14 +56,14 @@ class WindowsInformationProtectionIPRangeCollection extends Entity
 
     /**
     * Gets the ranges
-    * Collection of ip ranges
+    * Collection of Internet protocol address ranges
     *
     * @return IpRange The ranges
     */
     public function getRanges()
     {
         if (array_key_exists("ranges", $this->_propDict)) {
-            if (is_a($this->_propDict["ranges"], "Microsoft\Graph\Model\IpRange")) {
+            if (is_a($this->_propDict["ranges"], "Microsoft\Graph\Beta\Model\IpRange")) {
                 return $this->_propDict["ranges"];
             } else {
                 $this->_propDict["ranges"] = new IpRange($this->_propDict["ranges"]);
@@ -75,7 +75,7 @@ class WindowsInformationProtectionIPRangeCollection extends Entity
 
     /**
     * Sets the ranges
-    * Collection of ip ranges
+    * Collection of Internet protocol address ranges
     *
     * @param IpRange $val The value to assign to the ranges
     *

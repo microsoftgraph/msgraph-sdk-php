@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * AndroidManagedStoreAccountEnterpriseSettings class
@@ -35,7 +35,7 @@ class AndroidManagedStoreAccountEnterpriseSettings extends Entity
     public function getBindStatus()
     {
         if (array_key_exists("bindStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["bindStatus"], "Microsoft\Graph\Model\AndroidManagedStoreAccountBindStatus")) {
+            if (is_a($this->_propDict["bindStatus"], "Microsoft\Graph\Beta\Model\AndroidManagedStoreAccountBindStatus")) {
                 return $this->_propDict["bindStatus"];
             } else {
                 $this->_propDict["bindStatus"] = new AndroidManagedStoreAccountBindStatus($this->_propDict["bindStatus"]);
@@ -101,7 +101,7 @@ class AndroidManagedStoreAccountEnterpriseSettings extends Entity
     public function getLastAppSyncStatus()
     {
         if (array_key_exists("lastAppSyncStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["lastAppSyncStatus"], "Microsoft\Graph\Model\AndroidManagedStoreAccountAppSyncStatus")) {
+            if (is_a($this->_propDict["lastAppSyncStatus"], "Microsoft\Graph\Beta\Model\AndroidManagedStoreAccountAppSyncStatus")) {
                 return $this->_propDict["lastAppSyncStatus"];
             } else {
                 $this->_propDict["lastAppSyncStatus"] = new AndroidManagedStoreAccountAppSyncStatus($this->_propDict["lastAppSyncStatus"]);
@@ -225,7 +225,7 @@ class AndroidManagedStoreAccountEnterpriseSettings extends Entity
     public function getEnrollmentTarget()
     {
         if (array_key_exists("enrollmentTarget", $this->_propDict)) {
-            if (is_a($this->_propDict["enrollmentTarget"], "Microsoft\Graph\Model\AndroidManagedStoreAccountEnrollmentTarget")) {
+            if (is_a($this->_propDict["enrollmentTarget"], "Microsoft\Graph\Beta\Model\AndroidManagedStoreAccountEnrollmentTarget")) {
                 return $this->_propDict["enrollmentTarget"];
             } else {
                 $this->_propDict["enrollmentTarget"] = new AndroidManagedStoreAccountEnrollmentTarget($this->_propDict["enrollmentTarget"]);

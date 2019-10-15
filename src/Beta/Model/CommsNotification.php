@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * CommsNotification class
 *
@@ -34,7 +34,7 @@ class CommsNotification extends Entity
     public function getChangeType()
     {
         if (array_key_exists("changeType", $this->_propDict)) {
-            if (is_a($this->_propDict["changeType"], "Microsoft\Graph\Model\ChangeType")) {
+            if (is_a($this->_propDict["changeType"], "Microsoft\Graph\Beta\Model\ChangeType")) {
                 return $this->_propDict["changeType"];
             } else {
                 $this->_propDict["changeType"] = new ChangeType($this->_propDict["changeType"]);
@@ -57,29 +57,29 @@ class CommsNotification extends Entity
          return $this;
     }
     /**
-    * Gets the resource
+    * Gets the resourceUrl
     *
-    * @return string The resource
+    * @return string The resourceUrl
     */
-    public function getResource()
+    public function getResourceUrl()
     {
-        if (array_key_exists("resource", $this->_propDict)) {
-            return $this->_propDict["resource"];
+        if (array_key_exists("resourceUrl", $this->_propDict)) {
+            return $this->_propDict["resourceUrl"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the resource
+    * Sets the resourceUrl
     *
-    * @param string $val The value of the resource
+    * @param string $val The value of the resourceUrl
     *
     * @return CommsNotification
     */
-    public function setResource($val)
+    public function setResourceUrl($val)
     {
-        $this->_propDict["resource"] = $val;
+        $this->_propDict["resourceUrl"] = $val;
         return $this;
     }
 }

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * MoveAction class
 *
@@ -27,6 +27,7 @@ class MoveAction extends Entity
 {
     /**
     * Gets the from
+    * The name of the location the item was moved from.
     *
     * @return string The from
     */
@@ -41,6 +42,7 @@ class MoveAction extends Entity
 
     /**
     * Sets the from
+    * The name of the location the item was moved from.
     *
     * @param string $val The value of the from
     *
@@ -53,6 +55,7 @@ class MoveAction extends Entity
     }
     /**
     * Gets the to
+    * The name of the location the item was moved to.
     *
     * @return string The to
     */
@@ -67,6 +70,7 @@ class MoveAction extends Entity
 
     /**
     * Sets the to
+    * The name of the location the item was moved to.
     *
     * @param string $val The value of the to
     *

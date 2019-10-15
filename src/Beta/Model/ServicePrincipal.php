@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * ServicePrincipal class
@@ -241,33 +241,6 @@ class ServicePrincipal extends DirectoryObject
     public function setDisplayName($val)
     {
         $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the errorUrl
-    *
-    * @return string The errorUrl
-    */
-    public function getErrorUrl()
-    {
-        if (array_key_exists("errorUrl", $this->_propDict)) {
-            return $this->_propDict["errorUrl"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the errorUrl
-    *
-    * @param string $val The errorUrl
-    *
-    * @return ServicePrincipal
-    */
-    public function setErrorUrl($val)
-    {
-        $this->_propDict["errorUrl"] = $val;
         return $this;
     }
     
@@ -859,7 +832,7 @@ class ServicePrincipal extends DirectoryObject
     public function getSynchronization()
     {
         if (array_key_exists("synchronization", $this->_propDict)) {
-            if (is_a($this->_propDict["synchronization"], "Microsoft\Graph\Model\Synchronization")) {
+            if (is_a($this->_propDict["synchronization"], "Microsoft\Graph\Beta\Model\Synchronization")) {
                 return $this->_propDict["synchronization"];
             } else {
                 $this->_propDict["synchronization"] = new Synchronization($this->_propDict["synchronization"]);

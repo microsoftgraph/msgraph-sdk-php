@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * MediaContentRatingJapan class
 *
@@ -35,7 +35,7 @@ class MediaContentRatingJapan extends Entity
     public function getMovieRating()
     {
         if (array_key_exists("movieRating", $this->_propDict)) {
-            if (is_a($this->_propDict["movieRating"], "Microsoft\Graph\Model\RatingJapanMoviesType")) {
+            if (is_a($this->_propDict["movieRating"], "Microsoft\Graph\Beta\Model\RatingJapanMoviesType")) {
                 return $this->_propDict["movieRating"];
             } else {
                 $this->_propDict["movieRating"] = new RatingJapanMoviesType($this->_propDict["movieRating"]);
@@ -68,7 +68,7 @@ class MediaContentRatingJapan extends Entity
     public function getTvRating()
     {
         if (array_key_exists("tvRating", $this->_propDict)) {
-            if (is_a($this->_propDict["tvRating"], "Microsoft\Graph\Model\RatingJapanTelevisionType")) {
+            if (is_a($this->_propDict["tvRating"], "Microsoft\Graph\Beta\Model\RatingJapanTelevisionType")) {
                 return $this->_propDict["tvRating"];
             } else {
                 $this->_propDict["tvRating"] = new RatingJapanTelevisionType($this->_propDict["tvRating"]);

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * IosDeviceFeaturesConfiguration class
@@ -64,7 +64,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     public function getContentFilterSettings()
     {
         if (array_key_exists("contentFilterSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["contentFilterSettings"], "Microsoft\Graph\Model\IosWebContentFilterBase")) {
+            if (is_a($this->_propDict["contentFilterSettings"], "Microsoft\Graph\Beta\Model\IosWebContentFilterBase")) {
                 return $this->_propDict["contentFilterSettings"];
             } else {
                 $this->_propDict["contentFilterSettings"] = new IosWebContentFilterBase($this->_propDict["contentFilterSettings"]);
@@ -216,7 +216,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     public function getSingleSignOnSettings()
     {
         if (array_key_exists("singleSignOnSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["singleSignOnSettings"], "Microsoft\Graph\Model\IosSingleSignOnSettings")) {
+            if (is_a($this->_propDict["singleSignOnSettings"], "Microsoft\Graph\Beta\Model\IosSingleSignOnSettings")) {
                 return $this->_propDict["singleSignOnSettings"];
             } else {
                 $this->_propDict["singleSignOnSettings"] = new IosSingleSignOnSettings($this->_propDict["singleSignOnSettings"]);
@@ -249,7 +249,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     public function getWallpaperDisplayLocation()
     {
         if (array_key_exists("wallpaperDisplayLocation", $this->_propDict)) {
-            if (is_a($this->_propDict["wallpaperDisplayLocation"], "Microsoft\Graph\Model\IosWallpaperDisplayLocation")) {
+            if (is_a($this->_propDict["wallpaperDisplayLocation"], "Microsoft\Graph\Beta\Model\IosWallpaperDisplayLocation")) {
                 return $this->_propDict["wallpaperDisplayLocation"];
             } else {
                 $this->_propDict["wallpaperDisplayLocation"] = new IosWallpaperDisplayLocation($this->_propDict["wallpaperDisplayLocation"]);
@@ -282,7 +282,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     public function getWallpaperImage()
     {
         if (array_key_exists("wallpaperImage", $this->_propDict)) {
-            if (is_a($this->_propDict["wallpaperImage"], "Microsoft\Graph\Model\MimeContent")) {
+            if (is_a($this->_propDict["wallpaperImage"], "Microsoft\Graph\Beta\Model\MimeContent")) {
                 return $this->_propDict["wallpaperImage"];
             } else {
                 $this->_propDict["wallpaperImage"] = new MimeContent($this->_propDict["wallpaperImage"]);
@@ -307,6 +307,39 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     }
     
     /**
+    * Gets the singleSignOnExtension
+    * Gets or sets a single sign-on extension profile.
+    *
+    * @return SingleSignOnExtension The singleSignOnExtension
+    */
+    public function getSingleSignOnExtension()
+    {
+        if (array_key_exists("singleSignOnExtension", $this->_propDict)) {
+            if (is_a($this->_propDict["singleSignOnExtension"], "Microsoft\Graph\Beta\Model\SingleSignOnExtension")) {
+                return $this->_propDict["singleSignOnExtension"];
+            } else {
+                $this->_propDict["singleSignOnExtension"] = new SingleSignOnExtension($this->_propDict["singleSignOnExtension"]);
+                return $this->_propDict["singleSignOnExtension"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the singleSignOnExtension
+    * Gets or sets a single sign-on extension profile.
+    *
+    * @param SingleSignOnExtension $val The singleSignOnExtension
+    *
+    * @return IosDeviceFeaturesConfiguration
+    */
+    public function setSingleSignOnExtension($val)
+    {
+        $this->_propDict["singleSignOnExtension"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the identityCertificateForClientAuthentication
     * Identity Certificate for the renewal of Kerberos ticket used in single sign-on settings.
     *
@@ -315,7 +348,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     public function getIdentityCertificateForClientAuthentication()
     {
         if (array_key_exists("identityCertificateForClientAuthentication", $this->_propDict)) {
-            if (is_a($this->_propDict["identityCertificateForClientAuthentication"], "Microsoft\Graph\Model\IosCertificateProfileBase")) {
+            if (is_a($this->_propDict["identityCertificateForClientAuthentication"], "Microsoft\Graph\Beta\Model\IosCertificateProfileBase")) {
                 return $this->_propDict["identityCertificateForClientAuthentication"];
             } else {
                 $this->_propDict["identityCertificateForClientAuthentication"] = new IosCertificateProfileBase($this->_propDict["identityCertificateForClientAuthentication"]);

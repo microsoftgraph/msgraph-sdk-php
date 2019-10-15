@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 use Microsoft\Graph\Core\Enum;
 
@@ -36,4 +36,7 @@ class ManagedDeviceRemoteAction extends Enum
     const FULL_SCAN = "fullScan";
     const QUICK_SCAN = "quickScan";
     const SIGNATURE_UPDATE = "signatureUpdate";
+    const WIPE = "wipe";
+    const CUSTOM_TEXT_NOTIFICATION = "customTextNotification";
+    const REBOOT_NOW = "rebootNow";
 }

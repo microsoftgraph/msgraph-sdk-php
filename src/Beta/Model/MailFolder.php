@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * MailFolder class
@@ -200,6 +200,66 @@ class MailFolder extends Entity
     
 
      /** 
+     * Gets the singleValueExtendedProperties
+    * The collection of single-value extended properties defined for the mailFolder. Read-only. Nullable.
+     *
+     * @return array The singleValueExtendedProperties
+     */
+    public function getSingleValueExtendedProperties()
+    {
+        if (array_key_exists("singleValueExtendedProperties", $this->_propDict)) {
+           return $this->_propDict["singleValueExtendedProperties"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the singleValueExtendedProperties
+    * The collection of single-value extended properties defined for the mailFolder. Read-only. Nullable.
+    *
+    * @param SingleValueLegacyExtendedProperty $val The singleValueExtendedProperties
+    *
+    * @return MailFolder
+    */
+    public function setSingleValueExtendedProperties($val)
+    {
+		$this->_propDict["singleValueExtendedProperties"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the multiValueExtendedProperties
+    * The collection of multi-value extended properties defined for the mailFolder. Read-only. Nullable.
+     *
+     * @return array The multiValueExtendedProperties
+     */
+    public function getMultiValueExtendedProperties()
+    {
+        if (array_key_exists("multiValueExtendedProperties", $this->_propDict)) {
+           return $this->_propDict["multiValueExtendedProperties"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the multiValueExtendedProperties
+    * The collection of multi-value extended properties defined for the mailFolder. Read-only. Nullable.
+    *
+    * @param MultiValueLegacyExtendedProperty $val The multiValueExtendedProperties
+    *
+    * @return MailFolder
+    */
+    public function setMultiValueExtendedProperties($val)
+    {
+		$this->_propDict["multiValueExtendedProperties"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the messages
     * The collection of messages in the mailFolder.
      *
@@ -313,66 +373,6 @@ class MailFolder extends Entity
     public function setUserConfigurations($val)
     {
 		$this->_propDict["userConfigurations"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the singleValueExtendedProperties
-    * The collection of single-value extended properties defined for the mailFolder. Read-only. Nullable.
-     *
-     * @return array The singleValueExtendedProperties
-     */
-    public function getSingleValueExtendedProperties()
-    {
-        if (array_key_exists("singleValueExtendedProperties", $this->_propDict)) {
-           return $this->_propDict["singleValueExtendedProperties"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the singleValueExtendedProperties
-    * The collection of single-value extended properties defined for the mailFolder. Read-only. Nullable.
-    *
-    * @param SingleValueLegacyExtendedProperty $val The singleValueExtendedProperties
-    *
-    * @return MailFolder
-    */
-    public function setSingleValueExtendedProperties($val)
-    {
-		$this->_propDict["singleValueExtendedProperties"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the multiValueExtendedProperties
-    * The collection of multi-value extended properties defined for the mailFolder. Read-only. Nullable.
-     *
-     * @return array The multiValueExtendedProperties
-     */
-    public function getMultiValueExtendedProperties()
-    {
-        if (array_key_exists("multiValueExtendedProperties", $this->_propDict)) {
-           return $this->_propDict["multiValueExtendedProperties"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the multiValueExtendedProperties
-    * The collection of multi-value extended properties defined for the mailFolder. Read-only. Nullable.
-    *
-    * @param MultiValueLegacyExtendedProperty $val The multiValueExtendedProperties
-    *
-    * @return MailFolder
-    */
-    public function setMultiValueExtendedProperties($val)
-    {
-		$this->_propDict["multiValueExtendedProperties"] = $val;
         return $this;
     }
     

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 use Microsoft\Graph\Core\Enum;
 
@@ -35,4 +35,5 @@ class AccessLevel extends Enum
     const INVITED = "invited";
     const LOCKED = "locked";
     const SAME_ENTERPRISE = "sameEnterprise";
+    const SAME_ENTERPRISE_AND_FEDERATED = "sameEnterpriseAndFederated";
 }
