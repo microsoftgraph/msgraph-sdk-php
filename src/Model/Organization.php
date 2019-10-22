@@ -652,6 +652,36 @@ class Organization extends DirectoryObject
     
 
      /** 
+     * Gets the certificateBasedAuthConfiguration
+    * Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
+     *
+     * @return array The certificateBasedAuthConfiguration
+     */
+    public function getCertificateBasedAuthConfiguration()
+    {
+        if (array_key_exists("certificateBasedAuthConfiguration", $this->_propDict)) {
+           return $this->_propDict["certificateBasedAuthConfiguration"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the certificateBasedAuthConfiguration
+    * Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
+    *
+    * @param CertificateBasedAuthConfiguration $val The certificateBasedAuthConfiguration
+    *
+    * @return Organization
+    */
+    public function setCertificateBasedAuthConfiguration($val)
+    {
+		$this->_propDict["certificateBasedAuthConfiguration"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the extensions
     * The collection of open extensions defined for the organization. Read-only. Nullable.
      *
