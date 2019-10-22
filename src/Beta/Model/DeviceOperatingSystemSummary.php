@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * DeviceOperatingSystemSummary class
 *
@@ -191,6 +191,118 @@ class DeviceOperatingSystemSummary extends Entity
     public function setUnknownCount($val)
     {
         $this->_propDict["unknownCount"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the androidDedicatedCount
+    * Number of dedicated Android devices.
+    *
+    * @return int The androidDedicatedCount
+    */
+    public function getAndroidDedicatedCount()
+    {
+        if (array_key_exists("androidDedicatedCount", $this->_propDict)) {
+            return $this->_propDict["androidDedicatedCount"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the androidDedicatedCount
+    * Number of dedicated Android devices.
+    *
+    * @param int $val The value of the androidDedicatedCount
+    *
+    * @return DeviceOperatingSystemSummary
+    */
+    public function setAndroidDedicatedCount($val)
+    {
+        $this->_propDict["androidDedicatedCount"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the androidDeviceAdminCount
+    * Number of device admin Android devices.
+    *
+    * @return int The androidDeviceAdminCount
+    */
+    public function getAndroidDeviceAdminCount()
+    {
+        if (array_key_exists("androidDeviceAdminCount", $this->_propDict)) {
+            return $this->_propDict["androidDeviceAdminCount"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the androidDeviceAdminCount
+    * Number of device admin Android devices.
+    *
+    * @param int $val The value of the androidDeviceAdminCount
+    *
+    * @return DeviceOperatingSystemSummary
+    */
+    public function setAndroidDeviceAdminCount($val)
+    {
+        $this->_propDict["androidDeviceAdminCount"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the androidFullyManagedCount
+    * Number of fully managed Android devices.
+    *
+    * @return int The androidFullyManagedCount
+    */
+    public function getAndroidFullyManagedCount()
+    {
+        if (array_key_exists("androidFullyManagedCount", $this->_propDict)) {
+            return $this->_propDict["androidFullyManagedCount"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the androidFullyManagedCount
+    * Number of fully managed Android devices.
+    *
+    * @param int $val The value of the androidFullyManagedCount
+    *
+    * @return DeviceOperatingSystemSummary
+    */
+    public function setAndroidFullyManagedCount($val)
+    {
+        $this->_propDict["androidFullyManagedCount"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the androidWorkProfileCount
+    * Number of work profile Android devices.
+    *
+    * @return int The androidWorkProfileCount
+    */
+    public function getAndroidWorkProfileCount()
+    {
+        if (array_key_exists("androidWorkProfileCount", $this->_propDict)) {
+            return $this->_propDict["androidWorkProfileCount"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the androidWorkProfileCount
+    * Number of work profile Android devices.
+    *
+    * @param int $val The value of the androidWorkProfileCount
+    *
+    * @return DeviceOperatingSystemSummary
+    */
+    public function setAndroidWorkProfileCount($val)
+    {
+        $this->_propDict["androidWorkProfileCount"] = $val;
         return $this;
     }
 }

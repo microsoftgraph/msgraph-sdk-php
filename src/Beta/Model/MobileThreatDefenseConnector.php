@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * MobileThreatDefenseConnector class
@@ -68,7 +68,7 @@ class MobileThreatDefenseConnector extends Entity
     public function getPartnerState()
     {
         if (array_key_exists("partnerState", $this->_propDict)) {
-            if (is_a($this->_propDict["partnerState"], "Microsoft\Graph\Model\MobileThreatPartnerTenantState")) {
+            if (is_a($this->_propDict["partnerState"], "Microsoft\Graph\Beta\Model\MobileThreatPartnerTenantState")) {
                 return $this->_propDict["partnerState"];
             } else {
                 $this->_propDict["partnerState"] = new MobileThreatPartnerTenantState($this->_propDict["partnerState"]);
@@ -89,6 +89,64 @@ class MobileThreatDefenseConnector extends Entity
     public function setPartnerState($val)
     {
         $this->_propDict["partnerState"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the androidMobileApplicationManagementEnabled
+    * For Android, set whether data from the data sync partner should be used during Mobile Application Management (MAM) evaluations. Only one partner per platform may be enabled for Mobile Application Management (MAM) evaluation.
+    *
+    * @return bool The androidMobileApplicationManagementEnabled
+    */
+    public function getAndroidMobileApplicationManagementEnabled()
+    {
+        if (array_key_exists("androidMobileApplicationManagementEnabled", $this->_propDict)) {
+            return $this->_propDict["androidMobileApplicationManagementEnabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the androidMobileApplicationManagementEnabled
+    * For Android, set whether data from the data sync partner should be used during Mobile Application Management (MAM) evaluations. Only one partner per platform may be enabled for Mobile Application Management (MAM) evaluation.
+    *
+    * @param bool $val The androidMobileApplicationManagementEnabled
+    *
+    * @return MobileThreatDefenseConnector
+    */
+    public function setAndroidMobileApplicationManagementEnabled($val)
+    {
+        $this->_propDict["androidMobileApplicationManagementEnabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the iosMobileApplicationManagementEnabled
+    * For IOS, get or set whether data from the data sync partner should be used during Mobile Application Management (MAM) evaluations. Only one partner per platform may be enabled for Mobile Application Management (MAM) evaluation.
+    *
+    * @return bool The iosMobileApplicationManagementEnabled
+    */
+    public function getIosMobileApplicationManagementEnabled()
+    {
+        if (array_key_exists("iosMobileApplicationManagementEnabled", $this->_propDict)) {
+            return $this->_propDict["iosMobileApplicationManagementEnabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the iosMobileApplicationManagementEnabled
+    * For IOS, get or set whether data from the data sync partner should be used during Mobile Application Management (MAM) evaluations. Only one partner per platform may be enabled for Mobile Application Management (MAM) evaluation.
+    *
+    * @param bool $val The iosMobileApplicationManagementEnabled
+    *
+    * @return MobileThreatDefenseConnector
+    */
+    public function setIosMobileApplicationManagementEnabled($val)
+    {
+        $this->_propDict["iosMobileApplicationManagementEnabled"] = boolval($val);
         return $this;
     }
     

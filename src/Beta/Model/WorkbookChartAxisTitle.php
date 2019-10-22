@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * WorkbookChartAxisTitle class
@@ -93,7 +93,7 @@ class WorkbookChartAxisTitle extends Entity
     public function getFormat()
     {
         if (array_key_exists("format", $this->_propDict)) {
-            if (is_a($this->_propDict["format"], "Microsoft\Graph\Model\WorkbookChartAxisTitleFormat")) {
+            if (is_a($this->_propDict["format"], "Microsoft\Graph\Beta\Model\WorkbookChartAxisTitleFormat")) {
                 return $this->_propDict["format"];
             } else {
                 $this->_propDict["format"] = new WorkbookChartAxisTitleFormat($this->_propDict["format"]);

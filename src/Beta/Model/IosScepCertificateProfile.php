@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * IosScepCertificateProfile class
@@ -93,7 +93,7 @@ class IosScepCertificateProfile extends IosCertificateProfileBase
     public function getKeyUsage()
     {
         if (array_key_exists("keyUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["keyUsage"], "Microsoft\Graph\Model\KeyUsages")) {
+            if (is_a($this->_propDict["keyUsage"], "Microsoft\Graph\Beta\Model\KeyUsages")) {
                 return $this->_propDict["keyUsage"];
             } else {
                 $this->_propDict["keyUsage"] = new KeyUsages($this->_propDict["keyUsage"]);
@@ -126,7 +126,7 @@ class IosScepCertificateProfile extends IosCertificateProfileBase
     public function getKeySize()
     {
         if (array_key_exists("keySize", $this->_propDict)) {
-            if (is_a($this->_propDict["keySize"], "Microsoft\Graph\Model\KeySize")) {
+            if (is_a($this->_propDict["keySize"], "Microsoft\Graph\Beta\Model\KeySize")) {
                 return $this->_propDict["keySize"];
             } else {
                 $this->_propDict["keySize"] = new KeySize($this->_propDict["keySize"]);
@@ -218,7 +218,7 @@ class IosScepCertificateProfile extends IosCertificateProfileBase
     public function getCertificateStore()
     {
         if (array_key_exists("certificateStore", $this->_propDict)) {
-            if (is_a($this->_propDict["certificateStore"], "Microsoft\Graph\Model\CertificateStore")) {
+            if (is_a($this->_propDict["certificateStore"], "Microsoft\Graph\Beta\Model\CertificateStore")) {
                 return $this->_propDict["certificateStore"];
             } else {
                 $this->_propDict["certificateStore"] = new CertificateStore($this->_propDict["certificateStore"]);
@@ -245,7 +245,7 @@ class IosScepCertificateProfile extends IosCertificateProfileBase
 
      /** 
      * Gets the customSubjectAlternativeNames
-    * Custom Subject Alterantive Name Settings. This collection can contain a maximum of 500 elements.
+    * Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
      *
      * @return array The customSubjectAlternativeNames
      */
@@ -260,7 +260,7 @@ class IosScepCertificateProfile extends IosCertificateProfileBase
     
     /** 
     * Sets the customSubjectAlternativeNames
-    * Custom Subject Alterantive Name Settings. This collection can contain a maximum of 500 elements.
+    * Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
     *
     * @param CustomSubjectAlternativeName $val The customSubjectAlternativeNames
     *
@@ -281,7 +281,7 @@ class IosScepCertificateProfile extends IosCertificateProfileBase
     public function getRootCertificate()
     {
         if (array_key_exists("rootCertificate", $this->_propDict)) {
-            if (is_a($this->_propDict["rootCertificate"], "Microsoft\Graph\Model\IosTrustedRootCertificate")) {
+            if (is_a($this->_propDict["rootCertificate"], "Microsoft\Graph\Beta\Model\IosTrustedRootCertificate")) {
                 return $this->_propDict["rootCertificate"];
             } else {
                 $this->_propDict["rootCertificate"] = new IosTrustedRootCertificate($this->_propDict["rootCertificate"]);

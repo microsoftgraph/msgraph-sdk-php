@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * ReportRoot class
@@ -26,4 +26,88 @@ namespace Microsoft\Graph\Model;
 */
 class ReportRoot extends Entity
 {
+
+     /** 
+     * Gets the applicationSignInDetailedSummary
+     *
+     * @return array The applicationSignInDetailedSummary
+     */
+    public function getApplicationSignInDetailedSummary()
+    {
+        if (array_key_exists("applicationSignInDetailedSummary", $this->_propDict)) {
+           return $this->_propDict["applicationSignInDetailedSummary"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the applicationSignInDetailedSummary
+    *
+    * @param ApplicationSignInDetailedSummary $val The applicationSignInDetailedSummary
+    *
+    * @return ReportRoot
+    */
+    public function setApplicationSignInDetailedSummary($val)
+    {
+		$this->_propDict["applicationSignInDetailedSummary"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the credentialUserRegistrationDetails
+     *
+     * @return array The credentialUserRegistrationDetails
+     */
+    public function getCredentialUserRegistrationDetails()
+    {
+        if (array_key_exists("credentialUserRegistrationDetails", $this->_propDict)) {
+           return $this->_propDict["credentialUserRegistrationDetails"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the credentialUserRegistrationDetails
+    *
+    * @param CredentialUserRegistrationDetails $val The credentialUserRegistrationDetails
+    *
+    * @return ReportRoot
+    */
+    public function setCredentialUserRegistrationDetails($val)
+    {
+		$this->_propDict["credentialUserRegistrationDetails"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the userCredentialUsageDetails
+     *
+     * @return array The userCredentialUsageDetails
+     */
+    public function getUserCredentialUsageDetails()
+    {
+        if (array_key_exists("userCredentialUsageDetails", $this->_propDict)) {
+           return $this->_propDict["userCredentialUsageDetails"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the userCredentialUsageDetails
+    *
+    * @param UserCredentialUsageDetails $val The userCredentialUsageDetails
+    *
+    * @return ReportRoot
+    */
+    public function setUserCredentialUsageDetails($val)
+    {
+		$this->_propDict["userCredentialUsageDetails"] = $val;
+        return $this;
+    }
+    
 }

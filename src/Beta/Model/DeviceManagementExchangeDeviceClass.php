@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * DeviceManagementExchangeDeviceClass class
 *
@@ -63,7 +63,7 @@ class DeviceManagementExchangeDeviceClass extends Entity
     public function getType()
     {
         if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "Microsoft\Graph\Model\DeviceManagementExchangeAccessRuleType")) {
+            if (is_a($this->_propDict["type"], "Microsoft\Graph\Beta\Model\DeviceManagementExchangeAccessRuleType")) {
                 return $this->_propDict["type"];
             } else {
                 $this->_propDict["type"] = new DeviceManagementExchangeAccessRuleType($this->_propDict["type"]);

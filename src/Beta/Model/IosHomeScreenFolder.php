@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * IosHomeScreenFolder class
 *
@@ -44,7 +44,7 @@ class IosHomeScreenFolder extends IosHomeScreenItem
     public function getPages()
     {
         if (array_key_exists("pages", $this->_propDict)) {
-            if (is_a($this->_propDict["pages"], "Microsoft\Graph\Model\IosHomeScreenFolderPage")) {
+            if (is_a($this->_propDict["pages"], "Microsoft\Graph\Beta\Model\IosHomeScreenFolderPage")) {
                 return $this->_propDict["pages"];
             } else {
                 $this->_propDict["pages"] = new IosHomeScreenFolderPage($this->_propDict["pages"]);

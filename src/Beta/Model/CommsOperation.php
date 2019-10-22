@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * CommsOperation class
@@ -34,7 +34,7 @@ class CommsOperation extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Microsoft\Graph\Model\OperationStatus")) {
+            if (is_a($this->_propDict["status"], "Microsoft\Graph\Beta\Model\OperationStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new OperationStatus($this->_propDict["status"]);
@@ -54,68 +54,6 @@ class CommsOperation extends Entity
     public function setStatus($val)
     {
         $this->_propDict["status"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the createdDateTime
-    *
-    * @return \DateTime The createdDateTime
-    */
-    public function getCreatedDateTime()
-    {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
-                return $this->_propDict["createdDateTime"];
-            } else {
-                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
-                return $this->_propDict["createdDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the createdDateTime
-    *
-    * @param \DateTime $val The createdDateTime
-    *
-    * @return CommsOperation
-    */
-    public function setCreatedDateTime($val)
-    {
-        $this->_propDict["createdDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the lastActionDateTime
-    *
-    * @return \DateTime The lastActionDateTime
-    */
-    public function getLastActionDateTime()
-    {
-        if (array_key_exists("lastActionDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastActionDateTime"], "\DateTime")) {
-                return $this->_propDict["lastActionDateTime"];
-            } else {
-                $this->_propDict["lastActionDateTime"] = new \DateTime($this->_propDict["lastActionDateTime"]);
-                return $this->_propDict["lastActionDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the lastActionDateTime
-    *
-    * @param \DateTime $val The lastActionDateTime
-    *
-    * @return CommsOperation
-    */
-    public function setLastActionDateTime($val)
-    {
-        $this->_propDict["lastActionDateTime"] = $val;
         return $this;
     }
     
@@ -147,33 +85,33 @@ class CommsOperation extends Entity
     }
     
     /**
-    * Gets the errorInfo
+    * Gets the resultInfo
     *
-    * @return ResultInfo The errorInfo
+    * @return ResultInfo The resultInfo
     */
-    public function getErrorInfo()
+    public function getResultInfo()
     {
-        if (array_key_exists("errorInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["errorInfo"], "Microsoft\Graph\Model\ResultInfo")) {
-                return $this->_propDict["errorInfo"];
+        if (array_key_exists("resultInfo", $this->_propDict)) {
+            if (is_a($this->_propDict["resultInfo"], "Microsoft\Graph\Beta\Model\ResultInfo")) {
+                return $this->_propDict["resultInfo"];
             } else {
-                $this->_propDict["errorInfo"] = new ResultInfo($this->_propDict["errorInfo"]);
-                return $this->_propDict["errorInfo"];
+                $this->_propDict["resultInfo"] = new ResultInfo($this->_propDict["resultInfo"]);
+                return $this->_propDict["resultInfo"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the errorInfo
+    * Sets the resultInfo
     *
-    * @param ResultInfo $val The errorInfo
+    * @param ResultInfo $val The resultInfo
     *
     * @return CommsOperation
     */
-    public function setErrorInfo($val)
+    public function setResultInfo($val)
     {
-        $this->_propDict["errorInfo"] = $val;
+        $this->_propDict["resultInfo"] = $val;
         return $this;
     }
     

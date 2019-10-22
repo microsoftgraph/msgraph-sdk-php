@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * WindowsWifiConfiguration class
@@ -64,7 +64,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
     public function getWifiSecurityType()
     {
         if (array_key_exists("wifiSecurityType", $this->_propDict)) {
-            if (is_a($this->_propDict["wifiSecurityType"], "Microsoft\Graph\Model\WiFiSecurityType")) {
+            if (is_a($this->_propDict["wifiSecurityType"], "Microsoft\Graph\Beta\Model\WiFiSecurityType")) {
                 return $this->_propDict["wifiSecurityType"];
             } else {
                 $this->_propDict["wifiSecurityType"] = new WiFiSecurityType($this->_propDict["wifiSecurityType"]);
@@ -97,7 +97,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
     public function getMeteredConnectionLimit()
     {
         if (array_key_exists("meteredConnectionLimit", $this->_propDict)) {
-            if (is_a($this->_propDict["meteredConnectionLimit"], "Microsoft\Graph\Model\MeteredConnectionLimitType")) {
+            if (is_a($this->_propDict["meteredConnectionLimit"], "Microsoft\Graph\Beta\Model\MeteredConnectionLimitType")) {
                 return $this->_propDict["meteredConnectionLimit"];
             } else {
                 $this->_propDict["meteredConnectionLimit"] = new MeteredConnectionLimitType($this->_propDict["meteredConnectionLimit"]);
@@ -275,7 +275,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
     public function getProxySetting()
     {
         if (array_key_exists("proxySetting", $this->_propDict)) {
-            if (is_a($this->_propDict["proxySetting"], "Microsoft\Graph\Model\WiFiProxySetting")) {
+            if (is_a($this->_propDict["proxySetting"], "Microsoft\Graph\Beta\Model\WiFiProxySetting")) {
                 return $this->_propDict["proxySetting"];
             } else {
                 $this->_propDict["proxySetting"] = new WiFiProxySetting($this->_propDict["proxySetting"]);

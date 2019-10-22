@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * AndroidManagedStoreAppConfigurationSchema class
@@ -62,7 +62,7 @@ class AndroidManagedStoreAppConfigurationSchema extends Entity
 
      /** 
      * Gets the schemaItems
-    * Collection of items each representing a named configuration option in the schema
+    * Collection of items each representing a named configuration option in the schema. It only contains the root-level configuration.
      *
      * @return array The schemaItems
      */
@@ -77,7 +77,7 @@ class AndroidManagedStoreAppConfigurationSchema extends Entity
     
     /** 
     * Sets the schemaItems
-    * Collection of items each representing a named configuration option in the schema
+    * Collection of items each representing a named configuration option in the schema. It only contains the root-level configuration.
     *
     * @param AndroidManagedStoreAppConfigurationSchemaItem $val The schemaItems
     *
@@ -86,6 +86,36 @@ class AndroidManagedStoreAppConfigurationSchema extends Entity
     public function setSchemaItems($val)
     {
 		$this->_propDict["schemaItems"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the nestedSchemaItems
+    * Collection of items each representing a named configuration option in the schema. It contains a flat list of all configuration.
+     *
+     * @return array The nestedSchemaItems
+     */
+    public function getNestedSchemaItems()
+    {
+        if (array_key_exists("nestedSchemaItems", $this->_propDict)) {
+           return $this->_propDict["nestedSchemaItems"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the nestedSchemaItems
+    * Collection of items each representing a named configuration option in the schema. It contains a flat list of all configuration.
+    *
+    * @param AndroidManagedStoreAppConfigurationSchemaItem $val The nestedSchemaItems
+    *
+    * @return AndroidManagedStoreAppConfigurationSchema
+    */
+    public function setNestedSchemaItems($val)
+    {
+		$this->_propDict["nestedSchemaItems"] = $val;
         return $this;
     }
     

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * Win32LobAppInstallExperience class
 *
@@ -35,7 +35,7 @@ class Win32LobAppInstallExperience extends Entity
     public function getRunAsAccount()
     {
         if (array_key_exists("runAsAccount", $this->_propDict)) {
-            if (is_a($this->_propDict["runAsAccount"], "Microsoft\Graph\Model\RunAsAccountType")) {
+            if (is_a($this->_propDict["runAsAccount"], "Microsoft\Graph\Beta\Model\RunAsAccountType")) {
                 return $this->_propDict["runAsAccount"];
             } else {
                 $this->_propDict["runAsAccount"] = new RunAsAccountType($this->_propDict["runAsAccount"]);
@@ -56,6 +56,39 @@ class Win32LobAppInstallExperience extends Entity
     public function setRunAsAccount($val)
     {
         $this->_propDict["runAsAccount"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the deviceRestartBehavior
+    * Device restart behavior.
+    *
+    * @return Win32LobAppRestartBehavior The deviceRestartBehavior
+    */
+    public function getDeviceRestartBehavior()
+    {
+        if (array_key_exists("deviceRestartBehavior", $this->_propDict)) {
+            if (is_a($this->_propDict["deviceRestartBehavior"], "Microsoft\Graph\Beta\Model\Win32LobAppRestartBehavior")) {
+                return $this->_propDict["deviceRestartBehavior"];
+            } else {
+                $this->_propDict["deviceRestartBehavior"] = new Win32LobAppRestartBehavior($this->_propDict["deviceRestartBehavior"]);
+                return $this->_propDict["deviceRestartBehavior"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the deviceRestartBehavior
+    * Device restart behavior.
+    *
+    * @param Win32LobAppRestartBehavior $val The value to assign to the deviceRestartBehavior
+    *
+    * @return Win32LobAppInstallExperience The Win32LobAppInstallExperience
+    */
+    public function setDeviceRestartBehavior($val)
+    {
+        $this->_propDict["deviceRestartBehavior"] = $val;
          return $this;
     }
 }

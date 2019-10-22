@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 use Microsoft\Graph\Core\Enum;
 
@@ -41,4 +41,6 @@ class DeviceEnrollmentType extends Enum
     const WINDOWS_AUTO_ENROLLMENT = "windowsAutoEnrollment";
     const WINDOWS_BULK_AZURE_DOMAIN_JOIN = "windowsBulkAzureDomainJoin";
     const WINDOWS_CO_MANAGEMENT = "windowsCoManagement";
+    const APPLE_USER_ENROLLMENT = "appleUserEnrollment";
+    const APPLE_USER_ENROLLMENT_WITH_SERVICE_ACCOUNT = "appleUserEnrollmentWithServiceAccount";
 }
