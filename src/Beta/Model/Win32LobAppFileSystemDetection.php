@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * Win32LobAppFileSystemDetection class
 *
@@ -128,7 +128,7 @@ class Win32LobAppFileSystemDetection extends Win32LobAppDetection
     public function getDetectionType()
     {
         if (array_key_exists("detectionType", $this->_propDict)) {
-            if (is_a($this->_propDict["detectionType"], "Microsoft\Graph\Model\Win32LobAppFileSystemDetectionType")) {
+            if (is_a($this->_propDict["detectionType"], "Microsoft\Graph\Beta\Model\Win32LobAppFileSystemDetectionType")) {
                 return $this->_propDict["detectionType"];
             } else {
                 $this->_propDict["detectionType"] = new Win32LobAppFileSystemDetectionType($this->_propDict["detectionType"]);
@@ -154,14 +154,14 @@ class Win32LobAppFileSystemDetection extends Win32LobAppDetection
 
     /**
     * Gets the operator
-    * The operator for file or fodler detection
+    * The operator for file or folder detection
     *
     * @return Win32LobAppDetectionOperator The operator
     */
     public function getOperator()
     {
         if (array_key_exists("operator", $this->_propDict)) {
-            if (is_a($this->_propDict["operator"], "Microsoft\Graph\Model\Win32LobAppDetectionOperator")) {
+            if (is_a($this->_propDict["operator"], "Microsoft\Graph\Beta\Model\Win32LobAppDetectionOperator")) {
                 return $this->_propDict["operator"];
             } else {
                 $this->_propDict["operator"] = new Win32LobAppDetectionOperator($this->_propDict["operator"]);
@@ -173,7 +173,7 @@ class Win32LobAppFileSystemDetection extends Win32LobAppDetection
 
     /**
     * Sets the operator
-    * The operator for file or fodler detection
+    * The operator for file or folder detection
     *
     * @param Win32LobAppDetectionOperator $val The value to assign to the operator
     *

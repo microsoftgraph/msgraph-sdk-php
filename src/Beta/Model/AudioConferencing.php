@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * AudioConferencing class
 *
@@ -25,6 +25,32 @@ namespace Microsoft\Graph\Model;
 */
 class AudioConferencing extends Entity
 {
+    /**
+    * Gets the conferenceId
+    *
+    * @return string The conferenceId
+    */
+    public function getConferenceId()
+    {
+        if (array_key_exists("conferenceId", $this->_propDict)) {
+            return $this->_propDict["conferenceId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the conferenceId
+    *
+    * @param string $val The value of the conferenceId
+    *
+    * @return AudioConferencing
+    */
+    public function setConferenceId($val)
+    {
+        $this->_propDict["conferenceId"] = $val;
+        return $this;
+    }
     /**
     * Gets the tollNumber
     *
@@ -75,58 +101,6 @@ class AudioConferencing extends Entity
     public function setTollFreeNumber($val)
     {
         $this->_propDict["tollFreeNumber"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the participantPasscode
-    *
-    * @return string The participantPasscode
-    */
-    public function getParticipantPasscode()
-    {
-        if (array_key_exists("participantPasscode", $this->_propDict)) {
-            return $this->_propDict["participantPasscode"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the participantPasscode
-    *
-    * @param string $val The value of the participantPasscode
-    *
-    * @return AudioConferencing
-    */
-    public function setParticipantPasscode($val)
-    {
-        $this->_propDict["participantPasscode"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the leaderPasscode
-    *
-    * @return string The leaderPasscode
-    */
-    public function getLeaderPasscode()
-    {
-        if (array_key_exists("leaderPasscode", $this->_propDict)) {
-            return $this->_propDict["leaderPasscode"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the leaderPasscode
-    *
-    * @param string $val The value of the leaderPasscode
-    *
-    * @return AudioConferencing
-    */
-    public function setLeaderPasscode($val)
-    {
-        $this->_propDict["leaderPasscode"] = $val;
         return $this;
     }
     /**

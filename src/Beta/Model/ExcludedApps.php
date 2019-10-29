@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * ExcludedApps class
 *
@@ -331,6 +331,34 @@ class ExcludedApps extends Entity
     public function setSharePointDesigner($val)
     {
         $this->_propDict["sharePointDesigner"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the teams
+    * The value for if MS Office Teams should be excluded or not.
+    *
+    * @return bool The teams
+    */
+    public function getTeams()
+    {
+        if (array_key_exists("teams", $this->_propDict)) {
+            return $this->_propDict["teams"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the teams
+    * The value for if MS Office Teams should be excluded or not.
+    *
+    * @param bool $val The value of the teams
+    *
+    * @return ExcludedApps
+    */
+    public function setTeams($val)
+    {
+        $this->_propDict["teams"] = $val;
         return $this;
     }
     /**

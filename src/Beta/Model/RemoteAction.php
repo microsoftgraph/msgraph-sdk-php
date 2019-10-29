@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 use Microsoft\Graph\Core\Enum;
 
@@ -50,4 +50,8 @@ class RemoteAction extends Enum
     const UPDATE_DEVICE_ACCOUNT = "updateDeviceAccount";
     const AUTOMATIC_REDEPLOYMENT = "automaticRedeployment";
     const SHUT_DOWN = "shutDown";
+    const ROTATE_BIT_LOCKER_KEYS = "rotateBitLockerKeys";
+    const ROTATE_FILE_VAULT_KEY = "rotateFileVaultKey";
+    const GET_FILE_VAULT_KEY = "getFileVaultKey";
+    const SET_DEVICE_NAME = "setDeviceName";
 }

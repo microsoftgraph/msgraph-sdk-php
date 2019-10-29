@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * Contact class
@@ -962,7 +962,7 @@ class Contact extends OutlookItem
     public function getFlag()
     {
         if (array_key_exists("flag", $this->_propDict)) {
-            if (is_a($this->_propDict["flag"], "Microsoft\Graph\Model\FollowupFlag")) {
+            if (is_a($this->_propDict["flag"], "Microsoft\Graph\Beta\Model\FollowupFlag")) {
                 return $this->_propDict["flag"];
             } else {
                 $this->_propDict["flag"] = new FollowupFlag($this->_propDict["flag"]);
@@ -982,36 +982,6 @@ class Contact extends OutlookItem
     public function setFlag($val)
     {
         $this->_propDict["flag"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the extensions
-    * The collection of open extensions defined for the contact. Read-only. Nullable.
-     *
-     * @return array The extensions
-     */
-    public function getExtensions()
-    {
-        if (array_key_exists("extensions", $this->_propDict)) {
-           return $this->_propDict["extensions"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the extensions
-    * The collection of open extensions defined for the contact. Read-only. Nullable.
-    *
-    * @param Extension $val The extensions
-    *
-    * @return Contact
-    */
-    public function setExtensions($val)
-    {
-		$this->_propDict["extensions"] = $val;
         return $this;
     }
     
@@ -1084,7 +1054,7 @@ class Contact extends OutlookItem
     public function getPhoto()
     {
         if (array_key_exists("photo", $this->_propDict)) {
-            if (is_a($this->_propDict["photo"], "Microsoft\Graph\Model\ProfilePhoto")) {
+            if (is_a($this->_propDict["photo"], "Microsoft\Graph\Beta\Model\ProfilePhoto")) {
                 return $this->_propDict["photo"];
             } else {
                 $this->_propDict["photo"] = new ProfilePhoto($this->_propDict["photo"]);
@@ -1105,6 +1075,36 @@ class Contact extends OutlookItem
     public function setPhoto($val)
     {
         $this->_propDict["photo"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the extensions
+    * The collection of open extensions defined for the contact. Read-only. Nullable.
+     *
+     * @return array The extensions
+     */
+    public function getExtensions()
+    {
+        if (array_key_exists("extensions", $this->_propDict)) {
+           return $this->_propDict["extensions"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the extensions
+    * The collection of open extensions defined for the contact. Read-only. Nullable.
+    *
+    * @param Extension $val The extensions
+    *
+    * @return Contact
+    */
+    public function setExtensions($val)
+    {
+		$this->_propDict["extensions"] = $val;
         return $this;
     }
     

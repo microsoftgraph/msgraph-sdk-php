@@ -1,0 +1,147 @@
+<?php
+/**
+* Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
+* 
+* ContentInfo File
+* PHP version 7
+*
+* @category  Library
+* @package   Microsoft.Graph
+* @copyright © Microsoft Corporation. All rights reserved.
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   GIT: 1.4.0
+* @link      https://graph.microsoft.io/
+*/
+namespace Microsoft\Graph\Beta\Model;
+/**
+* ContentInfo class
+*
+* @category  Model
+* @package   Microsoft.Graph
+* @copyright © Microsoft Corporation. All rights reserved.
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   Release: 1.4.0
+* @link      https://graph.microsoft.io/
+*/
+class ContentInfo extends Entity
+{
+
+    /**
+    * Gets the format
+    *
+    * @return ContentFormat The format
+    */
+    public function getFormat()
+    {
+        if (array_key_exists("format", $this->_propDict)) {
+            if (is_a($this->_propDict["format"], "Microsoft\Graph\Beta\Model\ContentFormat")) {
+                return $this->_propDict["format"];
+            } else {
+                $this->_propDict["format"] = new ContentFormat($this->_propDict["format"]);
+                return $this->_propDict["format"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the format
+    *
+    * @param ContentFormat $val The value to assign to the format
+    *
+    * @return ContentInfo The ContentInfo
+    */
+    public function setFormat($val)
+    {
+        $this->_propDict["format"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the state
+    *
+    * @return ContentState The state
+    */
+    public function getState()
+    {
+        if (array_key_exists("state", $this->_propDict)) {
+            if (is_a($this->_propDict["state"], "Microsoft\Graph\Beta\Model\ContentState")) {
+                return $this->_propDict["state"];
+            } else {
+                $this->_propDict["state"] = new ContentState($this->_propDict["state"]);
+                return $this->_propDict["state"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the state
+    *
+    * @param ContentState $val The value to assign to the state
+    *
+    * @return ContentInfo The ContentInfo
+    */
+    public function setState($val)
+    {
+        $this->_propDict["state"] = $val;
+         return $this;
+    }
+    /**
+    * Gets the identifier
+    *
+    * @return string The identifier
+    */
+    public function getIdentifier()
+    {
+        if (array_key_exists("identifier", $this->_propDict)) {
+            return $this->_propDict["identifier"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the identifier
+    *
+    * @param string $val The value of the identifier
+    *
+    * @return ContentInfo
+    */
+    public function setIdentifier($val)
+    {
+        $this->_propDict["identifier"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the metadata
+    *
+    * @return KeyValuePair The metadata
+    */
+    public function getMetadata()
+    {
+        if (array_key_exists("metadata", $this->_propDict)) {
+            if (is_a($this->_propDict["metadata"], "Microsoft\Graph\Beta\Model\KeyValuePair")) {
+                return $this->_propDict["metadata"];
+            } else {
+                $this->_propDict["metadata"] = new KeyValuePair($this->_propDict["metadata"]);
+                return $this->_propDict["metadata"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the metadata
+    *
+    * @param KeyValuePair $val The value to assign to the metadata
+    *
+    * @return ContentInfo The ContentInfo
+    */
+    public function setMetadata($val)
+    {
+        $this->_propDict["metadata"] = $val;
+         return $this;
+    }
+}

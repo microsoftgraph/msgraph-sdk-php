@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * AuditActor class
 *
@@ -248,5 +248,38 @@ class AuditActor extends Entity
     {
         $this->_propDict["userId"] = $val;
         return $this;
+    }
+
+    /**
+    * Gets the scopeTags
+    * List of user scope tags when the audit was performed.
+    *
+    * @return ScopeTagInfo The scopeTags
+    */
+    public function getScopeTags()
+    {
+        if (array_key_exists("scopeTags", $this->_propDict)) {
+            if (is_a($this->_propDict["scopeTags"], "Microsoft\Graph\Beta\Model\ScopeTagInfo")) {
+                return $this->_propDict["scopeTags"];
+            } else {
+                $this->_propDict["scopeTags"] = new ScopeTagInfo($this->_propDict["scopeTags"]);
+                return $this->_propDict["scopeTags"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the scopeTags
+    * List of user scope tags when the audit was performed.
+    *
+    * @param ScopeTagInfo $val The value to assign to the scopeTags
+    *
+    * @return AuditActor The AuditActor
+    */
+    public function setScopeTags($val)
+    {
+        $this->_propDict["scopeTags"] = $val;
+         return $this;
     }
 }

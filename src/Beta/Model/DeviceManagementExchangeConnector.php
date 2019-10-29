@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * DeviceManagementExchangeConnector class
@@ -68,7 +68,7 @@ class DeviceManagementExchangeConnector extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Microsoft\Graph\Model\DeviceManagementExchangeConnectorStatus")) {
+            if (is_a($this->_propDict["status"], "Microsoft\Graph\Beta\Model\DeviceManagementExchangeConnectorStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new DeviceManagementExchangeConnectorStatus($this->_propDict["status"]);
@@ -188,7 +188,7 @@ class DeviceManagementExchangeConnector extends Entity
     public function getExchangeConnectorType()
     {
         if (array_key_exists("exchangeConnectorType", $this->_propDict)) {
-            if (is_a($this->_propDict["exchangeConnectorType"], "Microsoft\Graph\Model\DeviceManagementExchangeConnectorType")) {
+            if (is_a($this->_propDict["exchangeConnectorType"], "Microsoft\Graph\Beta\Model\DeviceManagementExchangeConnectorType")) {
                 return $this->_propDict["exchangeConnectorType"];
             } else {
                 $this->_propDict["exchangeConnectorType"] = new DeviceManagementExchangeConnectorType($this->_propDict["exchangeConnectorType"]);

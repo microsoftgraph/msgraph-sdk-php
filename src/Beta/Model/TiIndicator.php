@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * TiIndicator class
@@ -34,7 +34,7 @@ class TiIndicator extends Entity
     public function getAction()
     {
         if (array_key_exists("action", $this->_propDict)) {
-            if (is_a($this->_propDict["action"], "Microsoft\Graph\Model\TiAction")) {
+            if (is_a($this->_propDict["action"], "Microsoft\Graph\Beta\Model\TiAction")) {
                 return $this->_propDict["action"];
             } else {
                 $this->_propDict["action"] = new TiAction($this->_propDict["action"]);
@@ -200,7 +200,7 @@ class TiIndicator extends Entity
     public function getDiamondModel()
     {
         if (array_key_exists("diamondModel", $this->_propDict)) {
-            if (is_a($this->_propDict["diamondModel"], "Microsoft\Graph\Model\DiamondModel")) {
+            if (is_a($this->_propDict["diamondModel"], "Microsoft\Graph\Beta\Model\DiamondModel")) {
                 return $this->_propDict["diamondModel"];
             } else {
                 $this->_propDict["diamondModel"] = new DiamondModel($this->_propDict["diamondModel"]);
@@ -220,6 +220,33 @@ class TiIndicator extends Entity
     public function setDiamondModel($val)
     {
         $this->_propDict["diamondModel"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the domainName
+    *
+    * @return string The domainName
+    */
+    public function getDomainName()
+    {
+        if (array_key_exists("domainName", $this->_propDict)) {
+            return $this->_propDict["domainName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the domainName
+    *
+    * @param string $val The domainName
+    *
+    * @return TiIndicator
+    */
+    public function setDomainName($val)
+    {
+        $this->_propDict["domainName"] = $val;
         return $this;
     }
     
@@ -594,7 +621,7 @@ class TiIndicator extends Entity
     public function getFileHashType()
     {
         if (array_key_exists("fileHashType", $this->_propDict)) {
-            if (is_a($this->_propDict["fileHashType"], "Microsoft\Graph\Model\FileHashType")) {
+            if (is_a($this->_propDict["fileHashType"], "Microsoft\Graph\Beta\Model\FileHashType")) {
                 return $this->_propDict["fileHashType"];
             } else {
                 $this->_propDict["fileHashType"] = new FileHashType($this->_propDict["fileHashType"]);
@@ -803,33 +830,6 @@ class TiIndicator extends Entity
     public function setFileType($val)
     {
         $this->_propDict["fileType"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the hostName
-    *
-    * @return string The hostName
-    */
-    public function getHostName()
-    {
-        if (array_key_exists("hostName", $this->_propDict)) {
-            return $this->_propDict["hostName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the hostName
-    *
-    * @param string $val The hostName
-    *
-    * @return TiIndicator
-    */
-    public function setHostName($val)
-    {
-        $this->_propDict["hostName"] = $val;
         return $this;
     }
     
@@ -1551,7 +1551,7 @@ class TiIndicator extends Entity
     public function getTlpLevel()
     {
         if (array_key_exists("tlpLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["tlpLevel"], "Microsoft\Graph\Model\TlpLevel")) {
+            if (is_a($this->_propDict["tlpLevel"], "Microsoft\Graph\Beta\Model\TlpLevel")) {
                 return $this->_propDict["tlpLevel"];
             } else {
                 $this->_propDict["tlpLevel"] = new TlpLevel($this->_propDict["tlpLevel"]);

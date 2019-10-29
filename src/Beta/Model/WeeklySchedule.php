@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 use Microsoft\Graph\Core\Enum;
 
@@ -40,4 +40,5 @@ class WeeklySchedule extends Enum
     const THURSDAY = "thursday";
     const FRIDAY = "friday";
     const SATURDAY = "saturday";
+    const NO_SCHEDULED_SCAN = "noScheduledScan";
 }

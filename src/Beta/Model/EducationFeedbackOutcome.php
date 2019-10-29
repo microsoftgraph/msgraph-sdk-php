@@ -1,0 +1,91 @@
+<?php
+/**
+* Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
+* 
+* EducationFeedbackOutcome File
+* PHP version 7
+*
+* @category  Library
+* @package   Microsoft.Graph
+* @copyright © Microsoft Corporation. All rights reserved.
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   GIT: 1.4.0
+* @link      https://graph.microsoft.io/
+*/
+namespace Microsoft\Graph\Beta\Model;
+
+/**
+* EducationFeedbackOutcome class
+*
+* @category  Model
+* @package   Microsoft.Graph
+* @copyright © Microsoft Corporation. All rights reserved.
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   Release: 1.4.0
+* @link      https://graph.microsoft.io/
+*/
+class EducationFeedbackOutcome extends EducationOutcome
+{
+    /**
+    * Gets the feedback
+    *
+    * @return EducationFeedback The feedback
+    */
+    public function getFeedback()
+    {
+        if (array_key_exists("feedback", $this->_propDict)) {
+            if (is_a($this->_propDict["feedback"], "Microsoft\Graph\Beta\Model\EducationFeedback")) {
+                return $this->_propDict["feedback"];
+            } else {
+                $this->_propDict["feedback"] = new EducationFeedback($this->_propDict["feedback"]);
+                return $this->_propDict["feedback"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the feedback
+    *
+    * @param EducationFeedback $val The feedback
+    *
+    * @return EducationFeedbackOutcome
+    */
+    public function setFeedback($val)
+    {
+        $this->_propDict["feedback"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the publishedFeedback
+    *
+    * @return EducationFeedback The publishedFeedback
+    */
+    public function getPublishedFeedback()
+    {
+        if (array_key_exists("publishedFeedback", $this->_propDict)) {
+            if (is_a($this->_propDict["publishedFeedback"], "Microsoft\Graph\Beta\Model\EducationFeedback")) {
+                return $this->_propDict["publishedFeedback"];
+            } else {
+                $this->_propDict["publishedFeedback"] = new EducationFeedback($this->_propDict["publishedFeedback"]);
+                return $this->_propDict["publishedFeedback"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the publishedFeedback
+    *
+    * @param EducationFeedback $val The publishedFeedback
+    *
+    * @return EducationFeedbackOutcome
+    */
+    public function setPublishedFeedback($val)
+    {
+        $this->_propDict["publishedFeedback"] = $val;
+        return $this;
+    }
+    
+}

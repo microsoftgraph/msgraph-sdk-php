@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 use Microsoft\Graph\Core\Enum;
 
@@ -35,4 +35,6 @@ class RoutingPolicy extends Enum
     const NO_MISSED_CALL = "noMissedCall";
     const DISABLE_FORWARDING_EXCEPT_PHONE = "disableForwardingExceptPhone";
     const DISABLE_FORWARDING = "disableForwarding";
+    const PREFER_SKYPE_FOR_BUSINESS = "preferSkypeForBusiness";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

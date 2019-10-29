@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * OmaSettingFloatingPoint class
 *
@@ -44,7 +44,7 @@ class OmaSettingFloatingPoint extends OmaSetting
     public function getValue()
     {
         if (array_key_exists("value", $this->_propDict)) {
-            if (is_a($this->_propDict["value"], "Microsoft\Graph\Model\Single")) {
+            if (is_a($this->_propDict["value"], "Microsoft\Graph\Beta\Model\Single")) {
                 return $this->_propDict["value"];
             } else {
                 $this->_propDict["value"] = new Single($this->_propDict["value"]);

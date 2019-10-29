@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * AdministrativeUnit class
@@ -109,34 +109,6 @@ class AdministrativeUnit extends DirectoryObject
     
 
      /** 
-     * Gets the extensions
-     *
-     * @return array The extensions
-     */
-    public function getExtensions()
-    {
-        if (array_key_exists("extensions", $this->_propDict)) {
-           return $this->_propDict["extensions"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the extensions
-    *
-    * @param Extension $val The extensions
-    *
-    * @return AdministrativeUnit
-    */
-    public function setExtensions($val)
-    {
-		$this->_propDict["extensions"] = $val;
-        return $this;
-    }
-    
-
-     /** 
      * Gets the members
      *
      * @return array The members
@@ -188,6 +160,34 @@ class AdministrativeUnit extends DirectoryObject
     public function setScopedRoleMembers($val)
     {
 		$this->_propDict["scopedRoleMembers"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the extensions
+     *
+     * @return array The extensions
+     */
+    public function getExtensions()
+    {
+        if (array_key_exists("extensions", $this->_propDict)) {
+           return $this->_propDict["extensions"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the extensions
+    *
+    * @param Extension $val The extensions
+    *
+    * @return AdministrativeUnit
+    */
+    public function setExtensions($val)
+    {
+		$this->_propDict["extensions"] = $val;
         return $this;
     }
     
