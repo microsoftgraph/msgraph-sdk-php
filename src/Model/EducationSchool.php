@@ -260,7 +260,6 @@ class EducationSchool extends EducationOrganization
     
     /**
     * Gets the fax
-    * Fax number of school.
     *
     * @return string The fax
     */
@@ -275,7 +274,6 @@ class EducationSchool extends EducationOrganization
     
     /**
     * Sets the fax
-    * Fax number of school.
     *
     * @param string $val The fax
     *

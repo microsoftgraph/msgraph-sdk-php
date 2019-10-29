@@ -522,6 +522,39 @@ class User extends DirectoryObject
     }
     
     /**
+    * Gets the lastPasswordChangeDateTime
+    * The time when this Azure AD user last changed their password. The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+    *
+    * @return \DateTime The lastPasswordChangeDateTime
+    */
+    public function getLastPasswordChangeDateTime()
+    {
+        if (array_key_exists("lastPasswordChangeDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastPasswordChangeDateTime"], "\DateTime")) {
+                return $this->_propDict["lastPasswordChangeDateTime"];
+            } else {
+                $this->_propDict["lastPasswordChangeDateTime"] = new \DateTime($this->_propDict["lastPasswordChangeDateTime"]);
+                return $this->_propDict["lastPasswordChangeDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the lastPasswordChangeDateTime
+    * The time when this Azure AD user last changed their password. The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+    *
+    * @param \DateTime $val The lastPasswordChangeDateTime
+    *
+    * @return User
+    */
+    public function setLastPasswordChangeDateTime($val)
+    {
+        $this->_propDict["lastPasswordChangeDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the legalAgeGroupClassification
     * Used by enterprise applications to determine the legal age group of the user. This property is read-only and calculated based on ageGroup and consentProvidedForMinor properties. Allowed values: null, minorWithOutParentalConsent, minorWithParentalConsent, minorNoParentalConsentRequired, notAdult and adult. Refer to the legal age group property definitions for further information.)
     *
@@ -2838,6 +2871,34 @@ class User extends DirectoryObject
     public function setActivities($val)
     {
 		$this->_propDict["activities"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the onlineMeetings
+     *
+     * @return array The onlineMeetings
+     */
+    public function getOnlineMeetings()
+    {
+        if (array_key_exists("onlineMeetings", $this->_propDict)) {
+           return $this->_propDict["onlineMeetings"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the onlineMeetings
+    *
+    * @param OnlineMeeting $val The onlineMeetings
+    *
+    * @return User
+    */
+    public function setOnlineMeetings($val)
+    {
+		$this->_propDict["onlineMeetings"] = $val;
         return $this;
     }
     
