@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * TermsAndConditions class
@@ -296,6 +296,35 @@ class TermsAndConditions extends Entity
     public function setVersion($val)
     {
         $this->_propDict["version"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the roleScopeTagIds
+    * List of Scope Tags for this Entity instance.
+    *
+    * @return string The roleScopeTagIds
+    */
+    public function getRoleScopeTagIds()
+    {
+        if (array_key_exists("roleScopeTagIds", $this->_propDict)) {
+            return $this->_propDict["roleScopeTagIds"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the roleScopeTagIds
+    * List of Scope Tags for this Entity instance.
+    *
+    * @param string $val The roleScopeTagIds
+    *
+    * @return TermsAndConditions
+    */
+    public function setRoleScopeTagIds($val)
+    {
+        $this->_propDict["roleScopeTagIds"] = $val;
         return $this;
     }
     

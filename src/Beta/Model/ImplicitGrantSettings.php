@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * ImplicitGrantSettings class
 *
@@ -27,6 +27,7 @@ class ImplicitGrantSettings extends Entity
 {
     /**
     * Gets the enableIdTokenIssuance
+    * Specifies whether this web application can request an ID token using the OAuth 2.0 implicit flow.
     *
     * @return bool The enableIdTokenIssuance
     */
@@ -41,6 +42,7 @@ class ImplicitGrantSettings extends Entity
 
     /**
     * Sets the enableIdTokenIssuance
+    * Specifies whether this web application can request an ID token using the OAuth 2.0 implicit flow.
     *
     * @param bool $val The value of the enableIdTokenIssuance
     *
@@ -53,6 +55,7 @@ class ImplicitGrantSettings extends Entity
     }
     /**
     * Gets the enableAccessTokenIssuance
+    * Specifies whether this web application can request an access token using the OAuth 2.0 implicit flow.
     *
     * @return bool The enableAccessTokenIssuance
     */
@@ -67,6 +70,7 @@ class ImplicitGrantSettings extends Entity
 
     /**
     * Sets the enableAccessTokenIssuance
+    * Specifies whether this web application can request an access token using the OAuth 2.0 implicit flow.
     *
     * @param bool $val The value of the enableAccessTokenIssuance
     *

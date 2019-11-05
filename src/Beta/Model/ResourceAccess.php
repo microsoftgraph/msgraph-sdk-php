@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * ResourceAccess class
 *
@@ -27,6 +27,7 @@ class ResourceAccess extends Entity
 {
     /**
     * Gets the id
+    * The unique identifier for one of the oauth2PermissionScopes or appRole instances that the resource application exposes.
     *
     * @return string The id
     */
@@ -41,6 +42,7 @@ class ResourceAccess extends Entity
 
     /**
     * Sets the id
+    * The unique identifier for one of the oauth2PermissionScopes or appRole instances that the resource application exposes.
     *
     * @param string $val The value of the id
     *
@@ -53,6 +55,7 @@ class ResourceAccess extends Entity
     }
     /**
     * Gets the type
+    * Specifies whether the id property references an oauth2PermissionScopes or an appRole. Possible values are 'scope' or 'role'.
     *
     * @return string The type
     */
@@ -67,6 +70,7 @@ class ResourceAccess extends Entity
 
     /**
     * Sets the type
+    * Specifies whether the id property references an oauth2PermissionScopes or an appRole. Possible values are 'scope' or 'role'.
     *
     * @param string $val The value of the type
     *

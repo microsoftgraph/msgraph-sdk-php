@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * ExtensionProperty class
@@ -28,6 +28,7 @@ class ExtensionProperty extends DirectoryObject
 {
     /**
     * Gets the appDisplayName
+    * Display name of the application object on which this extension property is defined. Read-only.
     *
     * @return string The appDisplayName
     */
@@ -42,6 +43,7 @@ class ExtensionProperty extends DirectoryObject
     
     /**
     * Sets the appDisplayName
+    * Display name of the application object on which this extension property is defined. Read-only.
     *
     * @param string $val The appDisplayName
     *
@@ -55,6 +57,7 @@ class ExtensionProperty extends DirectoryObject
     
     /**
     * Gets the name
+    * Name of the extension property. Not nullable.
     *
     * @return string The name
     */
@@ -69,6 +72,7 @@ class ExtensionProperty extends DirectoryObject
     
     /**
     * Sets the name
+    * Name of the extension property. Not nullable.
     *
     * @param string $val The name
     *
@@ -82,6 +86,7 @@ class ExtensionProperty extends DirectoryObject
     
     /**
     * Gets the dataType
+    * Specifies the data type of the value the extension property can hold. Following values are supported. Not nullable. Binary - 256 bytes maximumBooleanDateTime - Must be specified in ISO 8601 format. Will be stored in UTC.Integer - 32-bit value.LargeInteger - 64-bit value.String - 256 characters maximum
     *
     * @return string The dataType
     */
@@ -96,6 +101,7 @@ class ExtensionProperty extends DirectoryObject
     
     /**
     * Sets the dataType
+    * Specifies the data type of the value the extension property can hold. Following values are supported. Not nullable. Binary - 256 bytes maximumBooleanDateTime - Must be specified in ISO 8601 format. Will be stored in UTC.Integer - 32-bit value.LargeInteger - 64-bit value.String - 256 characters maximum
     *
     * @param string $val The dataType
     *
@@ -109,6 +115,7 @@ class ExtensionProperty extends DirectoryObject
     
     /**
     * Gets the isSyncedFromOnPremises
+    * Indicates if this extension property was sycned from onpremises directory using Azure AD Connect. Read-only.
     *
     * @return bool The isSyncedFromOnPremises
     */
@@ -123,6 +130,7 @@ class ExtensionProperty extends DirectoryObject
     
     /**
     * Sets the isSyncedFromOnPremises
+    * Indicates if this extension property was sycned from onpremises directory using Azure AD Connect. Read-only.
     *
     * @param bool $val The isSyncedFromOnPremises
     *
@@ -136,6 +144,7 @@ class ExtensionProperty extends DirectoryObject
     
     /**
     * Gets the targetObjects
+    * Following values are supported. Not nullable. UserGroupOrganizationDeviceApplication
     *
     * @return string The targetObjects
     */
@@ -150,6 +159,7 @@ class ExtensionProperty extends DirectoryObject
     
     /**
     * Sets the targetObjects
+    * Following values are supported. Not nullable. UserGroupOrganizationDeviceApplication
     *
     * @param string $val The targetObjects
     *

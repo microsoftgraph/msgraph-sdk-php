@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * ItemActionStat class
 *
@@ -27,6 +27,7 @@ class ItemActionStat extends Entity
 {
     /**
     * Gets the actionCount
+    * The number of times the action took place. Read-only.
     *
     * @return int The actionCount
     */
@@ -41,6 +42,7 @@ class ItemActionStat extends Entity
 
     /**
     * Sets the actionCount
+    * The number of times the action took place. Read-only.
     *
     * @param int $val The value of the actionCount
     *
@@ -53,6 +55,7 @@ class ItemActionStat extends Entity
     }
     /**
     * Gets the actorCount
+    * The number of distinct actors that performed the action. Read-only.
     *
     * @return int The actorCount
     */
@@ -67,6 +70,7 @@ class ItemActionStat extends Entity
 
     /**
     * Sets the actorCount
+    * The number of distinct actors that performed the action. Read-only.
     *
     * @param int $val The value of the actorCount
     *

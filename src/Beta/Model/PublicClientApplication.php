@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * PublicClientApplication class
 *
@@ -27,6 +27,7 @@ class PublicClientApplication extends Entity
 {
     /**
     * Gets the redirectUris
+    * Specifies the URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.
     *
     * @return string The redirectUris
     */
@@ -41,6 +42,7 @@ class PublicClientApplication extends Entity
 
     /**
     * Sets the redirectUris
+    * Specifies the URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.
     *
     * @param string $val The value of the redirectUris
     *

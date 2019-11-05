@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * DeviceAppManagement class
@@ -159,7 +159,7 @@ class DeviceAppManagement extends Entity
     public function getMicrosoftStoreForBusinessPortalSelection()
     {
         if (array_key_exists("microsoftStoreForBusinessPortalSelection", $this->_propDict)) {
-            if (is_a($this->_propDict["microsoftStoreForBusinessPortalSelection"], "Microsoft\Graph\Model\MicrosoftStoreForBusinessPortalSelectionOptions")) {
+            if (is_a($this->_propDict["microsoftStoreForBusinessPortalSelection"], "Microsoft\Graph\Beta\Model\MicrosoftStoreForBusinessPortalSelectionOptions")) {
                 return $this->_propDict["microsoftStoreForBusinessPortalSelection"];
             } else {
                 $this->_propDict["microsoftStoreForBusinessPortalSelection"] = new MicrosoftStoreForBusinessPortalSelectionOptions($this->_propDict["microsoftStoreForBusinessPortalSelection"]);
@@ -183,36 +183,33 @@ class DeviceAppManagement extends Entity
         return $this;
     }
     
-    /**
-    * Gets the windowsManagementApp
-    * Windows management app.
-    *
-    * @return WindowsManagementApp The windowsManagementApp
-    */
-    public function getWindowsManagementApp()
+
+     /** 
+     * Gets the managedEBooks
+    * The Managed eBook.
+     *
+     * @return array The managedEBooks
+     */
+    public function getManagedEBooks()
     {
-        if (array_key_exists("windowsManagementApp", $this->_propDict)) {
-            if (is_a($this->_propDict["windowsManagementApp"], "Microsoft\Graph\Model\WindowsManagementApp")) {
-                return $this->_propDict["windowsManagementApp"];
-            } else {
-                $this->_propDict["windowsManagementApp"] = new WindowsManagementApp($this->_propDict["windowsManagementApp"]);
-                return $this->_propDict["windowsManagementApp"];
-            }
+        if (array_key_exists("managedEBooks", $this->_propDict)) {
+           return $this->_propDict["managedEBooks"];
+        } else {
+            return null;
         }
-        return null;
     }
     
-    /**
-    * Sets the windowsManagementApp
-    * Windows management app.
+    /** 
+    * Sets the managedEBooks
+    * The Managed eBook.
     *
-    * @param WindowsManagementApp $val The windowsManagementApp
+    * @param ManagedEBook $val The managedEBooks
     *
     * @return DeviceAppManagement
     */
-    public function setWindowsManagementApp($val)
+    public function setManagedEBooks($val)
     {
-        $this->_propDict["windowsManagementApp"] = $val;
+		$this->_propDict["managedEBooks"] = $val;
         return $this;
     }
     
@@ -345,7 +342,7 @@ class DeviceAppManagement extends Entity
     public function getSymantecCodeSigningCertificate()
     {
         if (array_key_exists("symantecCodeSigningCertificate", $this->_propDict)) {
-            if (is_a($this->_propDict["symantecCodeSigningCertificate"], "Microsoft\Graph\Model\SymantecCodeSigningCertificate")) {
+            if (is_a($this->_propDict["symantecCodeSigningCertificate"], "Microsoft\Graph\Beta\Model\SymantecCodeSigningCertificate")) {
                 return $this->_propDict["symantecCodeSigningCertificate"];
             } else {
                 $this->_propDict["symantecCodeSigningCertificate"] = new SymantecCodeSigningCertificate($this->_propDict["symantecCodeSigningCertificate"]);
@@ -396,6 +393,66 @@ class DeviceAppManagement extends Entity
     public function setMobileAppConfigurations($val)
     {
 		$this->_propDict["mobileAppConfigurations"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the managedEBookCategories
+    * The mobile eBook categories.
+     *
+     * @return array The managedEBookCategories
+     */
+    public function getManagedEBookCategories()
+    {
+        if (array_key_exists("managedEBookCategories", $this->_propDict)) {
+           return $this->_propDict["managedEBookCategories"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the managedEBookCategories
+    * The mobile eBook categories.
+    *
+    * @param ManagedEBookCategory $val The managedEBookCategories
+    *
+    * @return DeviceAppManagement
+    */
+    public function setManagedEBookCategories($val)
+    {
+		$this->_propDict["managedEBookCategories"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the policySets
+    * The PolicySet of Policies and Applications
+     *
+     * @return array The policySets
+     */
+    public function getPolicySets()
+    {
+        if (array_key_exists("policySets", $this->_propDict)) {
+           return $this->_propDict["policySets"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the policySets
+    * The PolicySet of Policies and Applications
+    *
+    * @param PolicySet $val The policySets
+    *
+    * @return DeviceAppManagement
+    */
+    public function setPolicySets($val)
+    {
+		$this->_propDict["policySets"] = $val;
         return $this;
     }
     
@@ -456,6 +513,39 @@ class DeviceAppManagement extends Entity
     public function setVppTokens($val)
     {
 		$this->_propDict["vppTokens"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the windowsManagementApp
+    * Windows management app.
+    *
+    * @return WindowsManagementApp The windowsManagementApp
+    */
+    public function getWindowsManagementApp()
+    {
+        if (array_key_exists("windowsManagementApp", $this->_propDict)) {
+            if (is_a($this->_propDict["windowsManagementApp"], "Microsoft\Graph\Beta\Model\WindowsManagementApp")) {
+                return $this->_propDict["windowsManagementApp"];
+            } else {
+                $this->_propDict["windowsManagementApp"] = new WindowsManagementApp($this->_propDict["windowsManagementApp"]);
+                return $this->_propDict["windowsManagementApp"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the windowsManagementApp
+    * Windows management app.
+    *
+    * @param WindowsManagementApp $val The windowsManagementApp
+    *
+    * @return DeviceAppManagement
+    */
+    public function setWindowsManagementApp($val)
+    {
+        $this->_propDict["windowsManagementApp"] = $val;
         return $this;
     }
     
@@ -791,61 +881,61 @@ class DeviceAppManagement extends Entity
     
 
      /** 
-     * Gets the managedEBooks
-    * The Managed eBook.
+     * Gets the deviceAppManagementTasks
+    * Device app management tasks.
      *
-     * @return array The managedEBooks
+     * @return array The deviceAppManagementTasks
      */
-    public function getManagedEBooks()
+    public function getDeviceAppManagementTasks()
     {
-        if (array_key_exists("managedEBooks", $this->_propDict)) {
-           return $this->_propDict["managedEBooks"];
+        if (array_key_exists("deviceAppManagementTasks", $this->_propDict)) {
+           return $this->_propDict["deviceAppManagementTasks"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the managedEBooks
-    * The Managed eBook.
+    * Sets the deviceAppManagementTasks
+    * Device app management tasks.
     *
-    * @param ManagedEBook $val The managedEBooks
+    * @param DeviceAppManagementTask $val The deviceAppManagementTasks
     *
     * @return DeviceAppManagement
     */
-    public function setManagedEBooks($val)
+    public function setDeviceAppManagementTasks($val)
     {
-		$this->_propDict["managedEBooks"] = $val;
+		$this->_propDict["deviceAppManagementTasks"] = $val;
         return $this;
     }
     
 
      /** 
-     * Gets the managedEBookCategories
-    * The mobile eBook categories.
+     * Gets the wdacSupplementalPolicies
+    * The collection of Windows Defender Application Control Supplemental Policies.
      *
-     * @return array The managedEBookCategories
+     * @return array The wdacSupplementalPolicies
      */
-    public function getManagedEBookCategories()
+    public function getWdacSupplementalPolicies()
     {
-        if (array_key_exists("managedEBookCategories", $this->_propDict)) {
-           return $this->_propDict["managedEBookCategories"];
+        if (array_key_exists("wdacSupplementalPolicies", $this->_propDict)) {
+           return $this->_propDict["wdacSupplementalPolicies"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the managedEBookCategories
-    * The mobile eBook categories.
+    * Sets the wdacSupplementalPolicies
+    * The collection of Windows Defender Application Control Supplemental Policies.
     *
-    * @param ManagedEBookCategory $val The managedEBookCategories
+    * @param WindowsDefenderApplicationControlSupplementalPolicy $val The wdacSupplementalPolicies
     *
     * @return DeviceAppManagement
     */
-    public function setManagedEBookCategories($val)
+    public function setWdacSupplementalPolicies($val)
     {
-		$this->_propDict["managedEBookCategories"] = $val;
+		$this->_propDict["wdacSupplementalPolicies"] = $val;
         return $this;
     }
     

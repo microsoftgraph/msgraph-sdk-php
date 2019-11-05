@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * Notebook class
@@ -64,7 +64,7 @@ class Notebook extends OnenoteEntityHierarchyModel
     public function getUserRole()
     {
         if (array_key_exists("userRole", $this->_propDict)) {
-            if (is_a($this->_propDict["userRole"], "Microsoft\Graph\Model\OnenoteUserRole")) {
+            if (is_a($this->_propDict["userRole"], "Microsoft\Graph\Beta\Model\OnenoteUserRole")) {
                 return $this->_propDict["userRole"];
             } else {
                 $this->_propDict["userRole"] = new OnenoteUserRole($this->_propDict["userRole"]);
@@ -177,14 +177,14 @@ class Notebook extends OnenoteEntityHierarchyModel
     
     /**
     * Gets the links
-    * Links for opening the notebook. The oneNoteClientURL link opens the notebook in the OneNote native client if it's installed. The oneNoteWebURL link opens the notebook in OneNote Online.
+    * Links for opening the notebook. The oneNoteClientURL link opens the notebook in the OneNote native client if it's installed. The oneNoteWebURL link opens the notebook in OneNote on the web.
     *
     * @return NotebookLinks The links
     */
     public function getLinks()
     {
         if (array_key_exists("links", $this->_propDict)) {
-            if (is_a($this->_propDict["links"], "Microsoft\Graph\Model\NotebookLinks")) {
+            if (is_a($this->_propDict["links"], "Microsoft\Graph\Beta\Model\NotebookLinks")) {
                 return $this->_propDict["links"];
             } else {
                 $this->_propDict["links"] = new NotebookLinks($this->_propDict["links"]);
@@ -196,7 +196,7 @@ class Notebook extends OnenoteEntityHierarchyModel
     
     /**
     * Sets the links
-    * Links for opening the notebook. The oneNoteClientURL link opens the notebook in the OneNote native client if it's installed. The oneNoteWebURL link opens the notebook in OneNote Online.
+    * Links for opening the notebook. The oneNoteClientURL link opens the notebook in the OneNote native client if it's installed. The oneNoteWebURL link opens the notebook in OneNote on the web.
     *
     * @param NotebookLinks $val The links
     *

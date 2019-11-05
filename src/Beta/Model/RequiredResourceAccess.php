@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * RequiredResourceAccess class
 *
@@ -27,6 +27,7 @@ class RequiredResourceAccess extends Entity
 {
     /**
     * Gets the resourceAppId
+    * The unique identifier for the resource that the application requires access to.  This should be equal to the appId declared on the target resource application.
     *
     * @return string The resourceAppId
     */
@@ -41,6 +42,7 @@ class RequiredResourceAccess extends Entity
 
     /**
     * Sets the resourceAppId
+    * The unique identifier for the resource that the application requires access to.  This should be equal to the appId declared on the target resource application.
     *
     * @param string $val The value of the resourceAppId
     *
@@ -54,13 +56,14 @@ class RequiredResourceAccess extends Entity
 
     /**
     * Gets the resourceAccess
+    * The list of OAuth2.0 permission scopes and app roles that the application requires from the specified resource.
     *
     * @return ResourceAccess The resourceAccess
     */
     public function getResourceAccess()
     {
         if (array_key_exists("resourceAccess", $this->_propDict)) {
-            if (is_a($this->_propDict["resourceAccess"], "Microsoft\Graph\Model\ResourceAccess")) {
+            if (is_a($this->_propDict["resourceAccess"], "Microsoft\Graph\Beta\Model\ResourceAccess")) {
                 return $this->_propDict["resourceAccess"];
             } else {
                 $this->_propDict["resourceAccess"] = new ResourceAccess($this->_propDict["resourceAccess"]);
@@ -72,6 +75,7 @@ class RequiredResourceAccess extends Entity
 
     /**
     * Sets the resourceAccess
+    * The list of OAuth2.0 permission scopes and app roles that the application requires from the specified resource.
     *
     * @param ResourceAccess $val The value to assign to the resourceAccess
     *

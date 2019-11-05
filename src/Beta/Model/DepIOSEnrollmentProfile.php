@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * DepIOSEnrollmentProfile class
@@ -35,7 +35,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     public function getITunesPairingMode()
     {
         if (array_key_exists("iTunesPairingMode", $this->_propDict)) {
-            if (is_a($this->_propDict["iTunesPairingMode"], "Microsoft\Graph\Model\ITunesPairingMode")) {
+            if (is_a($this->_propDict["iTunesPairingMode"], "Microsoft\Graph\Beta\Model\ITunesPairingMode")) {
                 return $this->_propDict["iTunesPairingMode"];
             } else {
                 $this->_propDict["iTunesPairingMode"] = new ITunesPairingMode($this->_propDict["iTunesPairingMode"]);
@@ -351,35 +351,6 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     }
     
     /**
-    * Gets the screenTimeScreenDisabled
-    * Indicates if screen timeout setup is disabled
-    *
-    * @return bool The screenTimeScreenDisabled
-    */
-    public function getScreenTimeScreenDisabled()
-    {
-        if (array_key_exists("screenTimeScreenDisabled", $this->_propDict)) {
-            return $this->_propDict["screenTimeScreenDisabled"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the screenTimeScreenDisabled
-    * Indicates if screen timeout setup is disabled
-    *
-    * @param bool $val The screenTimeScreenDisabled
-    *
-    * @return DepIOSEnrollmentProfile
-    */
-    public function setScreenTimeScreenDisabled($val)
-    {
-        $this->_propDict["screenTimeScreenDisabled"] = boolval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the simSetupScreenDisabled
     * Indicates if the SIMSetup screen is disabled
     *
@@ -463,6 +434,151 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     public function setWatchMigrationScreenDisabled($val)
     {
         $this->_propDict["watchMigrationScreenDisabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the appearanceScreenDisabled
+    * Indicates if Apperance screen is disabled
+    *
+    * @return bool The appearanceScreenDisabled
+    */
+    public function getAppearanceScreenDisabled()
+    {
+        if (array_key_exists("appearanceScreenDisabled", $this->_propDict)) {
+            return $this->_propDict["appearanceScreenDisabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the appearanceScreenDisabled
+    * Indicates if Apperance screen is disabled
+    *
+    * @param bool $val The appearanceScreenDisabled
+    *
+    * @return DepIOSEnrollmentProfile
+    */
+    public function setAppearanceScreenDisabled($val)
+    {
+        $this->_propDict["appearanceScreenDisabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the expressLanguageScreenDisabled
+    * Indicates if Express Language screen is disabled
+    *
+    * @return bool The expressLanguageScreenDisabled
+    */
+    public function getExpressLanguageScreenDisabled()
+    {
+        if (array_key_exists("expressLanguageScreenDisabled", $this->_propDict)) {
+            return $this->_propDict["expressLanguageScreenDisabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the expressLanguageScreenDisabled
+    * Indicates if Express Language screen is disabled
+    *
+    * @param bool $val The expressLanguageScreenDisabled
+    *
+    * @return DepIOSEnrollmentProfile
+    */
+    public function setExpressLanguageScreenDisabled($val)
+    {
+        $this->_propDict["expressLanguageScreenDisabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the preferredLanguageScreenDisabled
+    * Indicates if Preferred language screen is disabled
+    *
+    * @return bool The preferredLanguageScreenDisabled
+    */
+    public function getPreferredLanguageScreenDisabled()
+    {
+        if (array_key_exists("preferredLanguageScreenDisabled", $this->_propDict)) {
+            return $this->_propDict["preferredLanguageScreenDisabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the preferredLanguageScreenDisabled
+    * Indicates if Preferred language screen is disabled
+    *
+    * @param bool $val The preferredLanguageScreenDisabled
+    *
+    * @return DepIOSEnrollmentProfile
+    */
+    public function setPreferredLanguageScreenDisabled($val)
+    {
+        $this->_propDict["preferredLanguageScreenDisabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the deviceToDeviceMigrationDisabled
+    * Indicates if Device To Device Migration is disabled
+    *
+    * @return bool The deviceToDeviceMigrationDisabled
+    */
+    public function getDeviceToDeviceMigrationDisabled()
+    {
+        if (array_key_exists("deviceToDeviceMigrationDisabled", $this->_propDict)) {
+            return $this->_propDict["deviceToDeviceMigrationDisabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the deviceToDeviceMigrationDisabled
+    * Indicates if Device To Device Migration is disabled
+    *
+    * @param bool $val The deviceToDeviceMigrationDisabled
+    *
+    * @return DepIOSEnrollmentProfile
+    */
+    public function setDeviceToDeviceMigrationDisabled($val)
+    {
+        $this->_propDict["deviceToDeviceMigrationDisabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the welcomeScreenDisabled
+    * Indicates if Weclome screen is disabled
+    *
+    * @return bool The welcomeScreenDisabled
+    */
+    public function getWelcomeScreenDisabled()
+    {
+        if (array_key_exists("welcomeScreenDisabled", $this->_propDict)) {
+            return $this->_propDict["welcomeScreenDisabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the welcomeScreenDisabled
+    * Indicates if Weclome screen is disabled
+    *
+    * @param bool $val The welcomeScreenDisabled
+    *
+    * @return DepIOSEnrollmentProfile
+    */
+    public function setWelcomeScreenDisabled($val)
+    {
+        $this->_propDict["welcomeScreenDisabled"] = boolval($val);
         return $this;
     }
     

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * AverageComparativeScore class
 *
@@ -27,6 +27,7 @@ class AverageComparativeScore extends Entity
 {
     /**
     * Gets the averageScore
+    * Average score within specified basis.
     *
     * @return float The averageScore
     */
@@ -41,6 +42,7 @@ class AverageComparativeScore extends Entity
 
     /**
     * Sets the averageScore
+    * Average score within specified basis.
     *
     * @param float $val The value of the averageScore
     *
@@ -53,6 +55,7 @@ class AverageComparativeScore extends Entity
     }
     /**
     * Gets the basis
+    * Scope type. The possible values are: AllTenants, TotalSeats, IndustryTypes.
     *
     * @return string The basis
     */
@@ -67,6 +70,7 @@ class AverageComparativeScore extends Entity
 
     /**
     * Sets the basis
+    * Scope type. The possible values are: AllTenants, TotalSeats, IndustryTypes.
     *
     * @param string $val The value of the basis
     *

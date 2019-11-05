@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * EducationSchool class
@@ -260,7 +260,6 @@ class EducationSchool extends EducationOrganization
     
     /**
     * Gets the fax
-    * Fax number of school.
     *
     * @return string The fax
     */
@@ -275,7 +274,6 @@ class EducationSchool extends EducationOrganization
     
     /**
     * Sets the fax
-    * Fax number of school.
     *
     * @param string $val The fax
     *
@@ -296,7 +294,7 @@ class EducationSchool extends EducationOrganization
     public function getCreatedBy()
     {
         if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["createdBy"], "Microsoft\Graph\Beta\Model\IdentitySet")) {
                 return $this->_propDict["createdBy"];
             } else {
                 $this->_propDict["createdBy"] = new IdentitySet($this->_propDict["createdBy"]);
@@ -329,7 +327,7 @@ class EducationSchool extends EducationOrganization
     public function getAddress()
     {
         if (array_key_exists("address", $this->_propDict)) {
-            if (is_a($this->_propDict["address"], "Microsoft\Graph\Model\PhysicalAddress")) {
+            if (is_a($this->_propDict["address"], "Microsoft\Graph\Beta\Model\PhysicalAddress")) {
                 return $this->_propDict["address"];
             } else {
                 $this->_propDict["address"] = new PhysicalAddress($this->_propDict["address"]);
@@ -421,7 +419,7 @@ class EducationSchool extends EducationOrganization
     public function getAdministrativeUnit()
     {
         if (array_key_exists("administrativeUnit", $this->_propDict)) {
-            if (is_a($this->_propDict["administrativeUnit"], "Microsoft\Graph\Model\AdministrativeUnit")) {
+            if (is_a($this->_propDict["administrativeUnit"], "Microsoft\Graph\Beta\Model\AdministrativeUnit")) {
                 return $this->_propDict["administrativeUnit"];
             } else {
                 $this->_propDict["administrativeUnit"] = new AdministrativeUnit($this->_propDict["administrativeUnit"]);

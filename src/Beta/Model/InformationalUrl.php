@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * InformationalUrl class
 *
@@ -27,6 +27,7 @@ class InformationalUrl extends Entity
 {
     /**
     * Gets the logoUrl
+    * CDN URL to the application's logo, Read-only.
     *
     * @return string The logoUrl
     */
@@ -41,6 +42,7 @@ class InformationalUrl extends Entity
 
     /**
     * Sets the logoUrl
+    * CDN URL to the application's logo, Read-only.
     *
     * @param string $val The value of the logoUrl
     *
@@ -53,6 +55,7 @@ class InformationalUrl extends Entity
     }
     /**
     * Gets the marketingUrl
+    * Link to the application's marketing page. For example, https://www.contoso.com/app/marketing
     *
     * @return string The marketingUrl
     */
@@ -67,6 +70,7 @@ class InformationalUrl extends Entity
 
     /**
     * Sets the marketingUrl
+    * Link to the application's marketing page. For example, https://www.contoso.com/app/marketing
     *
     * @param string $val The value of the marketingUrl
     *
@@ -79,6 +83,7 @@ class InformationalUrl extends Entity
     }
     /**
     * Gets the privacyStatementUrl
+    * Link to the application's privacy statement. For example, https://www.contoso.com/app/privacy
     *
     * @return string The privacyStatementUrl
     */
@@ -93,6 +98,7 @@ class InformationalUrl extends Entity
 
     /**
     * Sets the privacyStatementUrl
+    * Link to the application's privacy statement. For example, https://www.contoso.com/app/privacy
     *
     * @param string $val The value of the privacyStatementUrl
     *
@@ -105,6 +111,7 @@ class InformationalUrl extends Entity
     }
     /**
     * Gets the supportUrl
+    * Link to the application's support page. For example, https://www.contoso.com/app/support
     *
     * @return string The supportUrl
     */
@@ -119,6 +126,7 @@ class InformationalUrl extends Entity
 
     /**
     * Sets the supportUrl
+    * Link to the application's support page. For example, https://www.contoso.com/app/support
     *
     * @param string $val The value of the supportUrl
     *
@@ -131,6 +139,7 @@ class InformationalUrl extends Entity
     }
     /**
     * Gets the termsOfServiceUrl
+    * Link to the application's terms of service statement. For example, https://www.contoso.com/app/termsofservice
     *
     * @return string The termsOfServiceUrl
     */
@@ -145,6 +154,7 @@ class InformationalUrl extends Entity
 
     /**
     * Sets the termsOfServiceUrl
+    * Link to the application's terms of service statement. For example, https://www.contoso.com/app/termsofservice
     *
     * @param string $val The value of the termsOfServiceUrl
     *

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * OrganizerMeetingInfo class
 *
@@ -25,6 +25,15 @@ namespace Microsoft\Graph\Model;
 */
 class OrganizerMeetingInfo extends MeetingInfo
 {
+    /**
+    * Set the @odata.type since this type is immediately descended from an abstract
+    * type that is referenced as the type in an entity.
+    */
+    public function __construct()
+    {
+        $this->setODataType("#microsoft.graph.organizerMeetingInfo");
+    }
+
 
     /**
     * Gets the organizer
@@ -34,7 +43,7 @@ class OrganizerMeetingInfo extends MeetingInfo
     public function getOrganizer()
     {
         if (array_key_exists("organizer", $this->_propDict)) {
-            if (is_a($this->_propDict["organizer"], "Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["organizer"], "Microsoft\Graph\Beta\Model\IdentitySet")) {
                 return $this->_propDict["organizer"];
             } else {
                 $this->_propDict["organizer"] = new IdentitySet($this->_propDict["organizer"]);

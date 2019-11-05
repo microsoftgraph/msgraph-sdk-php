@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * WindowsKioskConfiguration class
@@ -289,31 +289,35 @@ class WindowsKioskConfiguration extends DeviceConfiguration
     }
     
     /**
-    * Gets the edgeKioskResetAfterIdleTimeInMinutes
-    * Specifies the time in minutes from the last user activity before Microsoft Edge kiosk resets.  Valid values are 0-1440. The default is 5. 0 indicates no reset. Valid values 0 to 1440
+    * Gets the windowsKioskForceUpdateSchedule
+    * force update schedule for Kiosk devices.
     *
-    * @return int The edgeKioskResetAfterIdleTimeInMinutes
+    * @return WindowsKioskForceUpdateSchedule The windowsKioskForceUpdateSchedule
     */
-    public function getEdgeKioskResetAfterIdleTimeInMinutes()
+    public function getWindowsKioskForceUpdateSchedule()
     {
-        if (array_key_exists("edgeKioskResetAfterIdleTimeInMinutes", $this->_propDict)) {
-            return $this->_propDict["edgeKioskResetAfterIdleTimeInMinutes"];
-        } else {
-            return null;
+        if (array_key_exists("windowsKioskForceUpdateSchedule", $this->_propDict)) {
+            if (is_a($this->_propDict["windowsKioskForceUpdateSchedule"], "Microsoft\Graph\Beta\Model\WindowsKioskForceUpdateSchedule")) {
+                return $this->_propDict["windowsKioskForceUpdateSchedule"];
+            } else {
+                $this->_propDict["windowsKioskForceUpdateSchedule"] = new WindowsKioskForceUpdateSchedule($this->_propDict["windowsKioskForceUpdateSchedule"]);
+                return $this->_propDict["windowsKioskForceUpdateSchedule"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the edgeKioskResetAfterIdleTimeInMinutes
-    * Specifies the time in minutes from the last user activity before Microsoft Edge kiosk resets.  Valid values are 0-1440. The default is 5. 0 indicates no reset. Valid values 0 to 1440
+    * Sets the windowsKioskForceUpdateSchedule
+    * force update schedule for Kiosk devices.
     *
-    * @param int $val The edgeKioskResetAfterIdleTimeInMinutes
+    * @param WindowsKioskForceUpdateSchedule $val The windowsKioskForceUpdateSchedule
     *
     * @return WindowsKioskConfiguration
     */
-    public function setEdgeKioskResetAfterIdleTimeInMinutes($val)
+    public function setWindowsKioskForceUpdateSchedule($val)
     {
-        $this->_propDict["edgeKioskResetAfterIdleTimeInMinutes"] = intval($val);
+        $this->_propDict["windowsKioskForceUpdateSchedule"] = $val;
         return $this;
     }
     

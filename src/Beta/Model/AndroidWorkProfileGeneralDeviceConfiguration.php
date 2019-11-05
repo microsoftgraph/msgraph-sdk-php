@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * AndroidWorkProfileGeneralDeviceConfiguration class
@@ -202,7 +202,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordSignInFailureCountBeforeFactoryReset
-    * Number of sign in failures allowed before factory reset. Valid values 4 to 11
+    * Number of sign in failures allowed before factory reset. Valid values 1 to 16
     *
     * @return int The passwordSignInFailureCountBeforeFactoryReset
     */
@@ -217,7 +217,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordSignInFailureCountBeforeFactoryReset
-    * Number of sign in failures allowed before factory reset. Valid values 4 to 11
+    * Number of sign in failures allowed before factory reset. Valid values 1 to 16
     *
     * @param int $val The passwordSignInFailureCountBeforeFactoryReset
     *
@@ -238,7 +238,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     public function getPasswordRequiredType()
     {
         if (array_key_exists("passwordRequiredType", $this->_propDict)) {
-            if (is_a($this->_propDict["passwordRequiredType"], "Microsoft\Graph\Model\AndroidWorkProfileRequiredPasswordType")) {
+            if (is_a($this->_propDict["passwordRequiredType"], "Microsoft\Graph\Beta\Model\AndroidWorkProfileRequiredPasswordType")) {
                 return $this->_propDict["passwordRequiredType"];
             } else {
                 $this->_propDict["passwordRequiredType"] = new AndroidWorkProfileRequiredPasswordType($this->_propDict["passwordRequiredType"]);
@@ -271,7 +271,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     public function getWorkProfileDataSharingType()
     {
         if (array_key_exists("workProfileDataSharingType", $this->_propDict)) {
-            if (is_a($this->_propDict["workProfileDataSharingType"], "Microsoft\Graph\Model\AndroidWorkProfileCrossProfileDataSharingType")) {
+            if (is_a($this->_propDict["workProfileDataSharingType"], "Microsoft\Graph\Beta\Model\AndroidWorkProfileCrossProfileDataSharingType")) {
                 return $this->_propDict["workProfileDataSharingType"];
             } else {
                 $this->_propDict["workProfileDataSharingType"] = new AndroidWorkProfileCrossProfileDataSharingType($this->_propDict["workProfileDataSharingType"]);
@@ -536,7 +536,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     public function getWorkProfileDefaultAppPermissionPolicy()
     {
         if (array_key_exists("workProfileDefaultAppPermissionPolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["workProfileDefaultAppPermissionPolicy"], "Microsoft\Graph\Model\AndroidWorkProfileDefaultAppPermissionPolicyType")) {
+            if (is_a($this->_propDict["workProfileDefaultAppPermissionPolicy"], "Microsoft\Graph\Beta\Model\AndroidWorkProfileDefaultAppPermissionPolicyType")) {
                 return $this->_propDict["workProfileDefaultAppPermissionPolicy"];
             } else {
                 $this->_propDict["workProfileDefaultAppPermissionPolicy"] = new AndroidWorkProfileDefaultAppPermissionPolicyType($this->_propDict["workProfileDefaultAppPermissionPolicy"]);
@@ -910,7 +910,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the workProfilePasswordSignInFailureCountBeforeFactoryReset
-    * Number of sign in failures allowed before work profile is removed and all corporate data deleted. Valid values 4 to 11
+    * Number of sign in failures allowed before work profile is removed and all corporate data deleted. Valid values 1 to 16
     *
     * @return int The workProfilePasswordSignInFailureCountBeforeFactoryReset
     */
@@ -925,7 +925,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the workProfilePasswordSignInFailureCountBeforeFactoryReset
-    * Number of sign in failures allowed before work profile is removed and all corporate data deleted. Valid values 4 to 11
+    * Number of sign in failures allowed before work profile is removed and all corporate data deleted. Valid values 1 to 16
     *
     * @param int $val The workProfilePasswordSignInFailureCountBeforeFactoryReset
     *
@@ -946,7 +946,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     public function getWorkProfilePasswordRequiredType()
     {
         if (array_key_exists("workProfilePasswordRequiredType", $this->_propDict)) {
-            if (is_a($this->_propDict["workProfilePasswordRequiredType"], "Microsoft\Graph\Model\AndroidWorkProfileRequiredPasswordType")) {
+            if (is_a($this->_propDict["workProfilePasswordRequiredType"], "Microsoft\Graph\Beta\Model\AndroidWorkProfileRequiredPasswordType")) {
                 return $this->_propDict["workProfilePasswordRequiredType"];
             } else {
                 $this->_propDict["workProfilePasswordRequiredType"] = new AndroidWorkProfileRequiredPasswordType($this->_propDict["workProfilePasswordRequiredType"]);
@@ -1083,6 +1083,64 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     public function setVpnEnableAlwaysOnLockdownMode($val)
     {
         $this->_propDict["vpnEnableAlwaysOnLockdownMode"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the workProfileAllowWidgets
+    * Allow widgets from work profile apps.
+    *
+    * @return bool The workProfileAllowWidgets
+    */
+    public function getWorkProfileAllowWidgets()
+    {
+        if (array_key_exists("workProfileAllowWidgets", $this->_propDict)) {
+            return $this->_propDict["workProfileAllowWidgets"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the workProfileAllowWidgets
+    * Allow widgets from work profile apps.
+    *
+    * @param bool $val The workProfileAllowWidgets
+    *
+    * @return AndroidWorkProfileGeneralDeviceConfiguration
+    */
+    public function setWorkProfileAllowWidgets($val)
+    {
+        $this->_propDict["workProfileAllowWidgets"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the workProfileBlockPersonalAppInstallsFromUnknownSources
+    * Prevent app installations from unknown sources in the personal profile.
+    *
+    * @return bool The workProfileBlockPersonalAppInstallsFromUnknownSources
+    */
+    public function getWorkProfileBlockPersonalAppInstallsFromUnknownSources()
+    {
+        if (array_key_exists("workProfileBlockPersonalAppInstallsFromUnknownSources", $this->_propDict)) {
+            return $this->_propDict["workProfileBlockPersonalAppInstallsFromUnknownSources"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the workProfileBlockPersonalAppInstallsFromUnknownSources
+    * Prevent app installations from unknown sources in the personal profile.
+    *
+    * @param bool $val The workProfileBlockPersonalAppInstallsFromUnknownSources
+    *
+    * @return AndroidWorkProfileGeneralDeviceConfiguration
+    */
+    public function setWorkProfileBlockPersonalAppInstallsFromUnknownSources($val)
+    {
+        $this->_propDict["workProfileBlockPersonalAppInstallsFromUnknownSources"] = boolval($val);
         return $this;
     }
     

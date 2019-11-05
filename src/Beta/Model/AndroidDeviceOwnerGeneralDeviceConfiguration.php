@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * AndroidDeviceOwnerGeneralDeviceConfiguration class
@@ -93,7 +93,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     public function getAppsAutoUpdatePolicy()
     {
         if (array_key_exists("appsAutoUpdatePolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["appsAutoUpdatePolicy"], "Microsoft\Graph\Model\AndroidDeviceOwnerAppAutoUpdatePolicyType")) {
+            if (is_a($this->_propDict["appsAutoUpdatePolicy"], "Microsoft\Graph\Beta\Model\AndroidDeviceOwnerAppAutoUpdatePolicyType")) {
                 return $this->_propDict["appsAutoUpdatePolicy"];
             } else {
                 $this->_propDict["appsAutoUpdatePolicy"] = new AndroidDeviceOwnerAppAutoUpdatePolicyType($this->_propDict["appsAutoUpdatePolicy"]);
@@ -126,7 +126,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     public function getAppsDefaultPermissionPolicy()
     {
         if (array_key_exists("appsDefaultPermissionPolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["appsDefaultPermissionPolicy"], "Microsoft\Graph\Model\AndroidDeviceOwnerDefaultAppPermissionPolicyType")) {
+            if (is_a($this->_propDict["appsDefaultPermissionPolicy"], "Microsoft\Graph\Beta\Model\AndroidDeviceOwnerDefaultAppPermissionPolicyType")) {
                 return $this->_propDict["appsDefaultPermissionPolicy"];
             } else {
                 $this->_propDict["appsDefaultPermissionPolicy"] = new AndroidDeviceOwnerDefaultAppPermissionPolicyType($this->_propDict["appsDefaultPermissionPolicy"]);
@@ -411,6 +411,184 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
         return $this;
     }
     
+    /**
+    * Gets the globalProxy
+    * Proxy is set up directly with host, port and excluded hosts.
+    *
+    * @return AndroidDeviceOwnerGlobalProxy The globalProxy
+    */
+    public function getGlobalProxy()
+    {
+        if (array_key_exists("globalProxy", $this->_propDict)) {
+            if (is_a($this->_propDict["globalProxy"], "Microsoft\Graph\Beta\Model\AndroidDeviceOwnerGlobalProxy")) {
+                return $this->_propDict["globalProxy"];
+            } else {
+                $this->_propDict["globalProxy"] = new AndroidDeviceOwnerGlobalProxy($this->_propDict["globalProxy"]);
+                return $this->_propDict["globalProxy"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the globalProxy
+    * Proxy is set up directly with host, port and excluded hosts.
+    *
+    * @param AndroidDeviceOwnerGlobalProxy $val The globalProxy
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setGlobalProxy($val)
+    {
+        $this->_propDict["globalProxy"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the kioskModeScreenSaverConfigurationEnabled
+    * Whether or not to enable screen saver mode or not in Kiosk Mode.
+    *
+    * @return bool The kioskModeScreenSaverConfigurationEnabled
+    */
+    public function getKioskModeScreenSaverConfigurationEnabled()
+    {
+        if (array_key_exists("kioskModeScreenSaverConfigurationEnabled", $this->_propDict)) {
+            return $this->_propDict["kioskModeScreenSaverConfigurationEnabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the kioskModeScreenSaverConfigurationEnabled
+    * Whether or not to enable screen saver mode or not in Kiosk Mode.
+    *
+    * @param bool $val The kioskModeScreenSaverConfigurationEnabled
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setKioskModeScreenSaverConfigurationEnabled($val)
+    {
+        $this->_propDict["kioskModeScreenSaverConfigurationEnabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the kioskModeScreenSaverImageUrl
+    * URL for an image that will be the device's screen saver in Kiosk Mode.
+    *
+    * @return string The kioskModeScreenSaverImageUrl
+    */
+    public function getKioskModeScreenSaverImageUrl()
+    {
+        if (array_key_exists("kioskModeScreenSaverImageUrl", $this->_propDict)) {
+            return $this->_propDict["kioskModeScreenSaverImageUrl"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the kioskModeScreenSaverImageUrl
+    * URL for an image that will be the device's screen saver in Kiosk Mode.
+    *
+    * @param string $val The kioskModeScreenSaverImageUrl
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setKioskModeScreenSaverImageUrl($val)
+    {
+        $this->_propDict["kioskModeScreenSaverImageUrl"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the kioskModeScreenSaverDisplayTimeInSeconds
+    * The number of seconds that the device will display the screen saver for in Kiosk Mode. Valid values 0 to 9999999
+    *
+    * @return int The kioskModeScreenSaverDisplayTimeInSeconds
+    */
+    public function getKioskModeScreenSaverDisplayTimeInSeconds()
+    {
+        if (array_key_exists("kioskModeScreenSaverDisplayTimeInSeconds", $this->_propDict)) {
+            return $this->_propDict["kioskModeScreenSaverDisplayTimeInSeconds"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the kioskModeScreenSaverDisplayTimeInSeconds
+    * The number of seconds that the device will display the screen saver for in Kiosk Mode. Valid values 0 to 9999999
+    *
+    * @param int $val The kioskModeScreenSaverDisplayTimeInSeconds
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setKioskModeScreenSaverDisplayTimeInSeconds($val)
+    {
+        $this->_propDict["kioskModeScreenSaverDisplayTimeInSeconds"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the kioskModeScreenSaverStartDelayInSeconds
+    * The number of seconds the device needs to be inactive for before the screen saver is shown in Kiosk Mode. Valid values 1 to 9999999
+    *
+    * @return int The kioskModeScreenSaverStartDelayInSeconds
+    */
+    public function getKioskModeScreenSaverStartDelayInSeconds()
+    {
+        if (array_key_exists("kioskModeScreenSaverStartDelayInSeconds", $this->_propDict)) {
+            return $this->_propDict["kioskModeScreenSaverStartDelayInSeconds"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the kioskModeScreenSaverStartDelayInSeconds
+    * The number of seconds the device needs to be inactive for before the screen saver is shown in Kiosk Mode. Valid values 1 to 9999999
+    *
+    * @param int $val The kioskModeScreenSaverStartDelayInSeconds
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setKioskModeScreenSaverStartDelayInSeconds($val)
+    {
+        $this->_propDict["kioskModeScreenSaverStartDelayInSeconds"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the kioskModeScreenSaverDetectMediaDisabled
+    * Whether or not the device screen should show the screen saver if audio/video is playing in Kiosk Mode.
+    *
+    * @return bool The kioskModeScreenSaverDetectMediaDisabled
+    */
+    public function getKioskModeScreenSaverDetectMediaDisabled()
+    {
+        if (array_key_exists("kioskModeScreenSaverDetectMediaDisabled", $this->_propDict)) {
+            return $this->_propDict["kioskModeScreenSaverDetectMediaDisabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the kioskModeScreenSaverDetectMediaDisabled
+    * Whether or not the device screen should show the screen saver if audio/video is playing in Kiosk Mode.
+    *
+    * @param bool $val The kioskModeScreenSaverDetectMediaDisabled
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setKioskModeScreenSaverDetectMediaDisabled($val)
+    {
+        $this->_propDict["kioskModeScreenSaverDetectMediaDisabled"] = boolval($val);
+        return $this;
+    }
+    
 
      /** 
      * Gets the kioskModeApps
@@ -525,6 +703,155 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     public function setKioskModeVirtualHomeButtonEnabled($val)
     {
         $this->_propDict["kioskModeVirtualHomeButtonEnabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the kioskModeVirtualHomeButtonType
+    * Indicates whether the virtual home button is a swipe up home button or a floating home button.
+    *
+    * @return AndroidDeviceOwnerVirtualHomeButtonType The kioskModeVirtualHomeButtonType
+    */
+    public function getKioskModeVirtualHomeButtonType()
+    {
+        if (array_key_exists("kioskModeVirtualHomeButtonType", $this->_propDict)) {
+            if (is_a($this->_propDict["kioskModeVirtualHomeButtonType"], "Microsoft\Graph\Beta\Model\AndroidDeviceOwnerVirtualHomeButtonType")) {
+                return $this->_propDict["kioskModeVirtualHomeButtonType"];
+            } else {
+                $this->_propDict["kioskModeVirtualHomeButtonType"] = new AndroidDeviceOwnerVirtualHomeButtonType($this->_propDict["kioskModeVirtualHomeButtonType"]);
+                return $this->_propDict["kioskModeVirtualHomeButtonType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the kioskModeVirtualHomeButtonType
+    * Indicates whether the virtual home button is a swipe up home button or a floating home button.
+    *
+    * @param AndroidDeviceOwnerVirtualHomeButtonType $val The kioskModeVirtualHomeButtonType
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setKioskModeVirtualHomeButtonType($val)
+    {
+        $this->_propDict["kioskModeVirtualHomeButtonType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the kioskModeBluetoothConfigurationEnabled
+    * Whether or not to allow a user to configure Bluetooth settings in Kiosk Mode.
+    *
+    * @return bool The kioskModeBluetoothConfigurationEnabled
+    */
+    public function getKioskModeBluetoothConfigurationEnabled()
+    {
+        if (array_key_exists("kioskModeBluetoothConfigurationEnabled", $this->_propDict)) {
+            return $this->_propDict["kioskModeBluetoothConfigurationEnabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the kioskModeBluetoothConfigurationEnabled
+    * Whether or not to allow a user to configure Bluetooth settings in Kiosk Mode.
+    *
+    * @param bool $val The kioskModeBluetoothConfigurationEnabled
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setKioskModeBluetoothConfigurationEnabled($val)
+    {
+        $this->_propDict["kioskModeBluetoothConfigurationEnabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the kioskModeWiFiConfigurationEnabled
+    * Whether or not to allow a user to configure Wi-Fi settings in Kiosk Mode.
+    *
+    * @return bool The kioskModeWiFiConfigurationEnabled
+    */
+    public function getKioskModeWiFiConfigurationEnabled()
+    {
+        if (array_key_exists("kioskModeWiFiConfigurationEnabled", $this->_propDict)) {
+            return $this->_propDict["kioskModeWiFiConfigurationEnabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the kioskModeWiFiConfigurationEnabled
+    * Whether or not to allow a user to configure Wi-Fi settings in Kiosk Mode.
+    *
+    * @param bool $val The kioskModeWiFiConfigurationEnabled
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setKioskModeWiFiConfigurationEnabled($val)
+    {
+        $this->_propDict["kioskModeWiFiConfigurationEnabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the kioskModeFlashlightConfigurationEnabled
+    * Whether or not to allow a user to use the flashlight in Kiosk Mode.
+    *
+    * @return bool The kioskModeFlashlightConfigurationEnabled
+    */
+    public function getKioskModeFlashlightConfigurationEnabled()
+    {
+        if (array_key_exists("kioskModeFlashlightConfigurationEnabled", $this->_propDict)) {
+            return $this->_propDict["kioskModeFlashlightConfigurationEnabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the kioskModeFlashlightConfigurationEnabled
+    * Whether or not to allow a user to use the flashlight in Kiosk Mode.
+    *
+    * @param bool $val The kioskModeFlashlightConfigurationEnabled
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setKioskModeFlashlightConfigurationEnabled($val)
+    {
+        $this->_propDict["kioskModeFlashlightConfigurationEnabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the kioskModeMediaVolumeConfigurationEnabled
+    * Whether or not to allow a user to change the media volume in Kiosk Mode.
+    *
+    * @return bool The kioskModeMediaVolumeConfigurationEnabled
+    */
+    public function getKioskModeMediaVolumeConfigurationEnabled()
+    {
+        if (array_key_exists("kioskModeMediaVolumeConfigurationEnabled", $this->_propDict)) {
+            return $this->_propDict["kioskModeMediaVolumeConfigurationEnabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the kioskModeMediaVolumeConfigurationEnabled
+    * Whether or not to allow a user to change the media volume in Kiosk Mode.
+    *
+    * @param bool $val The kioskModeMediaVolumeConfigurationEnabled
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setKioskModeMediaVolumeConfigurationEnabled($val)
+    {
+        $this->_propDict["kioskModeMediaVolumeConfigurationEnabled"] = boolval($val);
         return $this;
     }
     
@@ -733,6 +1060,180 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the passwordMinimumLetterCharacters
+    * Indicates the minimum number of letter characters required for device password. Valid values 1 to 16
+    *
+    * @return int The passwordMinimumLetterCharacters
+    */
+    public function getPasswordMinimumLetterCharacters()
+    {
+        if (array_key_exists("passwordMinimumLetterCharacters", $this->_propDict)) {
+            return $this->_propDict["passwordMinimumLetterCharacters"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the passwordMinimumLetterCharacters
+    * Indicates the minimum number of letter characters required for device password. Valid values 1 to 16
+    *
+    * @param int $val The passwordMinimumLetterCharacters
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setPasswordMinimumLetterCharacters($val)
+    {
+        $this->_propDict["passwordMinimumLetterCharacters"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the passwordMinimumLowerCaseCharacters
+    * Indicates the minimum number of lower case characters required for device password. Valid values 1 to 16
+    *
+    * @return int The passwordMinimumLowerCaseCharacters
+    */
+    public function getPasswordMinimumLowerCaseCharacters()
+    {
+        if (array_key_exists("passwordMinimumLowerCaseCharacters", $this->_propDict)) {
+            return $this->_propDict["passwordMinimumLowerCaseCharacters"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the passwordMinimumLowerCaseCharacters
+    * Indicates the minimum number of lower case characters required for device password. Valid values 1 to 16
+    *
+    * @param int $val The passwordMinimumLowerCaseCharacters
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setPasswordMinimumLowerCaseCharacters($val)
+    {
+        $this->_propDict["passwordMinimumLowerCaseCharacters"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the passwordMinimumNonLetterCharacters
+    * Indicates the minimum number of non-letter characters required for device password. Valid values 1 to 16
+    *
+    * @return int The passwordMinimumNonLetterCharacters
+    */
+    public function getPasswordMinimumNonLetterCharacters()
+    {
+        if (array_key_exists("passwordMinimumNonLetterCharacters", $this->_propDict)) {
+            return $this->_propDict["passwordMinimumNonLetterCharacters"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the passwordMinimumNonLetterCharacters
+    * Indicates the minimum number of non-letter characters required for device password. Valid values 1 to 16
+    *
+    * @param int $val The passwordMinimumNonLetterCharacters
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setPasswordMinimumNonLetterCharacters($val)
+    {
+        $this->_propDict["passwordMinimumNonLetterCharacters"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the passwordMinimumNumericCharacters
+    * Indicates the minimum number of numeric characters required for device password. Valid values 1 to 16
+    *
+    * @return int The passwordMinimumNumericCharacters
+    */
+    public function getPasswordMinimumNumericCharacters()
+    {
+        if (array_key_exists("passwordMinimumNumericCharacters", $this->_propDict)) {
+            return $this->_propDict["passwordMinimumNumericCharacters"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the passwordMinimumNumericCharacters
+    * Indicates the minimum number of numeric characters required for device password. Valid values 1 to 16
+    *
+    * @param int $val The passwordMinimumNumericCharacters
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setPasswordMinimumNumericCharacters($val)
+    {
+        $this->_propDict["passwordMinimumNumericCharacters"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the passwordMinimumSymbolCharacters
+    * Indicates the minimum number of symbol characters required for device password. Valid values 1 to 16
+    *
+    * @return int The passwordMinimumSymbolCharacters
+    */
+    public function getPasswordMinimumSymbolCharacters()
+    {
+        if (array_key_exists("passwordMinimumSymbolCharacters", $this->_propDict)) {
+            return $this->_propDict["passwordMinimumSymbolCharacters"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the passwordMinimumSymbolCharacters
+    * Indicates the minimum number of symbol characters required for device password. Valid values 1 to 16
+    *
+    * @param int $val The passwordMinimumSymbolCharacters
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setPasswordMinimumSymbolCharacters($val)
+    {
+        $this->_propDict["passwordMinimumSymbolCharacters"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the passwordMinimumUpperCaseCharacters
+    * Indicates the minimum number of upper caseletter characters required for device password. Valid values 1 to 16
+    *
+    * @return int The passwordMinimumUpperCaseCharacters
+    */
+    public function getPasswordMinimumUpperCaseCharacters()
+    {
+        if (array_key_exists("passwordMinimumUpperCaseCharacters", $this->_propDict)) {
+            return $this->_propDict["passwordMinimumUpperCaseCharacters"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the passwordMinimumUpperCaseCharacters
+    * Indicates the minimum number of upper caseletter characters required for device password. Valid values 1 to 16
+    *
+    * @param int $val The passwordMinimumUpperCaseCharacters
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setPasswordMinimumUpperCaseCharacters($val)
+    {
+        $this->_propDict["passwordMinimumUpperCaseCharacters"] = intval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the passwordMinutesOfInactivityBeforeScreenTimeout
     * Milliseconds of inactivity before the screen times out.
     *
@@ -799,7 +1300,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     public function getPasswordRequiredType()
     {
         if (array_key_exists("passwordRequiredType", $this->_propDict)) {
-            if (is_a($this->_propDict["passwordRequiredType"], "Microsoft\Graph\Model\AndroidDeviceOwnerRequiredPasswordType")) {
+            if (is_a($this->_propDict["passwordRequiredType"], "Microsoft\Graph\Beta\Model\AndroidDeviceOwnerRequiredPasswordType")) {
                 return $this->_propDict["passwordRequiredType"];
             } else {
                 $this->_propDict["passwordRequiredType"] = new AndroidDeviceOwnerRequiredPasswordType($this->_propDict["passwordRequiredType"]);
@@ -849,6 +1350,39 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     public function setPasswordSignInFailureCountBeforeFactoryReset($val)
     {
         $this->_propDict["passwordSignInFailureCountBeforeFactoryReset"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the playStoreMode
+    * Indicates the Play Store mode of the device.
+    *
+    * @return AndroidDeviceOwnerPlayStoreMode The playStoreMode
+    */
+    public function getPlayStoreMode()
+    {
+        if (array_key_exists("playStoreMode", $this->_propDict)) {
+            if (is_a($this->_propDict["playStoreMode"], "Microsoft\Graph\Beta\Model\AndroidDeviceOwnerPlayStoreMode")) {
+                return $this->_propDict["playStoreMode"];
+            } else {
+                $this->_propDict["playStoreMode"] = new AndroidDeviceOwnerPlayStoreMode($this->_propDict["playStoreMode"]);
+                return $this->_propDict["playStoreMode"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the playStoreMode
+    * Indicates the Play Store mode of the device.
+    *
+    * @param AndroidDeviceOwnerPlayStoreMode $val The playStoreMode
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setPlayStoreMode($val)
+    {
+        $this->_propDict["playStoreMode"] = $val;
         return $this;
     }
     
@@ -1181,7 +1715,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     public function getSystemUpdateInstallType()
     {
         if (array_key_exists("systemUpdateInstallType", $this->_propDict)) {
-            if (is_a($this->_propDict["systemUpdateInstallType"], "Microsoft\Graph\Model\AndroidDeviceOwnerSystemUpdateInstallType")) {
+            if (is_a($this->_propDict["systemUpdateInstallType"], "Microsoft\Graph\Beta\Model\AndroidDeviceOwnerSystemUpdateInstallType")) {
                 return $this->_propDict["systemUpdateInstallType"];
             } else {
                 $this->_propDict["systemUpdateInstallType"] = new AndroidDeviceOwnerSystemUpdateInstallType($this->_propDict["systemUpdateInstallType"]);

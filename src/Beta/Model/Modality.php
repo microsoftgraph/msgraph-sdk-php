@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 use Microsoft\Graph\Core\Enum;
 
@@ -36,4 +36,5 @@ class Modality extends Enum
     const VIDEO = "video";
     const VIDEO_BASED_SCREEN_SHARING = "videoBasedScreenSharing";
     const DATA = "data";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * UserAppInstallStatus class
@@ -180,7 +180,7 @@ class UserAppInstallStatus extends Entity
     public function getApp()
     {
         if (array_key_exists("app", $this->_propDict)) {
-            if (is_a($this->_propDict["app"], "Microsoft\Graph\Model\MobileApp")) {
+            if (is_a($this->_propDict["app"], "Microsoft\Graph\Beta\Model\MobileApp")) {
                 return $this->_propDict["app"];
             } else {
                 $this->_propDict["app"] = new MobileApp($this->_propDict["app"]);

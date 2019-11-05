@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * InvitationParticipantInfo class
 *
@@ -23,8 +23,39 @@ namespace Microsoft\Graph\Model;
 * @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-class InvitationParticipantInfo extends ParticipantInfo
+class InvitationParticipantInfo extends Entity
 {
+
+    /**
+    * Gets the identity
+    *
+    * @return IdentitySet The identity
+    */
+    public function getIdentity()
+    {
+        if (array_key_exists("identity", $this->_propDict)) {
+            if (is_a($this->_propDict["identity"], "Microsoft\Graph\Beta\Model\IdentitySet")) {
+                return $this->_propDict["identity"];
+            } else {
+                $this->_propDict["identity"] = new IdentitySet($this->_propDict["identity"]);
+                return $this->_propDict["identity"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the identity
+    *
+    * @param IdentitySet $val The value to assign to the identity
+    *
+    * @return InvitationParticipantInfo The InvitationParticipantInfo
+    */
+    public function setIdentity($val)
+    {
+        $this->_propDict["identity"] = $val;
+         return $this;
+    }
 
     /**
     * Gets the endpointType
@@ -34,7 +65,7 @@ class InvitationParticipantInfo extends ParticipantInfo
     public function getEndpointType()
     {
         if (array_key_exists("endpointType", $this->_propDict)) {
-            if (is_a($this->_propDict["endpointType"], "Microsoft\Graph\Model\EndpointType")) {
+            if (is_a($this->_propDict["endpointType"], "Microsoft\Graph\Beta\Model\EndpointType")) {
                 return $this->_propDict["endpointType"];
             } else {
                 $this->_propDict["endpointType"] = new EndpointType($this->_propDict["endpointType"]);

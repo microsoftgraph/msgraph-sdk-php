@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * EducationIdentityCreationConfiguration class
 *
@@ -43,7 +43,7 @@ class EducationIdentityCreationConfiguration extends EducationIdentitySynchroniz
     public function getUserDomains()
     {
         if (array_key_exists("userDomains", $this->_propDict)) {
-            if (is_a($this->_propDict["userDomains"], "Microsoft\Graph\Model\EducationIdentityDomain")) {
+            if (is_a($this->_propDict["userDomains"], "Microsoft\Graph\Beta\Model\EducationIdentityDomain")) {
                 return $this->_propDict["userDomains"];
             } else {
                 $this->_propDict["userDomains"] = new EducationIdentityDomain($this->_propDict["userDomains"]);

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 use Microsoft\Graph\Core\Enum;
 
@@ -41,4 +41,5 @@ class CallState extends Enum
     const REDIRECTING = "redirecting";
     const TERMINATING = "terminating";
     const TERMINATED = "terminated";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

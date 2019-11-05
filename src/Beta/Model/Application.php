@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * Application class
@@ -28,13 +28,14 @@ class Application extends DirectoryObject
 {
     /**
     * Gets the api
+    * Specifies settings for an application that implements a web API.
     *
     * @return ApiApplication The api
     */
     public function getApi()
     {
         if (array_key_exists("api", $this->_propDict)) {
-            if (is_a($this->_propDict["api"], "Microsoft\Graph\Model\ApiApplication")) {
+            if (is_a($this->_propDict["api"], "Microsoft\Graph\Beta\Model\ApiApplication")) {
                 return $this->_propDict["api"];
             } else {
                 $this->_propDict["api"] = new ApiApplication($this->_propDict["api"]);
@@ -46,6 +47,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the api
+    * Specifies settings for an application that implements a web API.
     *
     * @param ApiApplication $val The api
     *
@@ -59,6 +61,7 @@ class Application extends DirectoryObject
     
     /**
     * Gets the appId
+    * The unique identifier for the application that is assigned to an application by Azure AD. Not nullable. Read-only.
     *
     * @return string The appId
     */
@@ -73,6 +76,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the appId
+    * The unique identifier for the application that is assigned to an application by Azure AD. Not nullable. Read-only.
     *
     * @param string $val The appId
     *
@@ -87,6 +91,7 @@ class Application extends DirectoryObject
 
      /** 
      * Gets the appRoles
+    * The collection of application roles that an application may declare. These roles can be assigned to users, groups, or service principals. Not nullable.
      *
      * @return array The appRoles
      */
@@ -101,6 +106,7 @@ class Application extends DirectoryObject
     
     /** 
     * Sets the appRoles
+    * The collection of application roles that an application may declare. These roles can be assigned to users, groups, or service principals. Not nullable.
     *
     * @param AppRole $val The appRoles
     *
@@ -114,6 +120,7 @@ class Application extends DirectoryObject
     
     /**
     * Gets the createdDateTime
+    * The date and time the application was registered. Read-only.
     *
     * @return \DateTime The createdDateTime
     */
@@ -132,6 +139,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the createdDateTime
+    * The date and time the application was registered. Read-only.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -145,6 +153,7 @@ class Application extends DirectoryObject
     
     /**
     * Gets the isFallbackPublicClient
+    * Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as web app. There are certain scenarios where Azure AD cannot determine the client application type (e.g. ROPC flow where it is configured without specifying a redirect URI). In those cases Azure AD will interpret the application type based on the value of this property.
     *
     * @return bool The isFallbackPublicClient
     */
@@ -159,6 +168,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the isFallbackPublicClient
+    * Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as web app. There are certain scenarios where Azure AD cannot determine the client application type (e.g. ROPC flow where it is configured without specifying a redirect URI). In those cases Azure AD will interpret the application type based on the value of this property.
     *
     * @param bool $val The isFallbackPublicClient
     *
@@ -172,6 +182,7 @@ class Application extends DirectoryObject
     
     /**
     * Gets the identifierUris
+    * The URIs that identify the application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant. For more information see Application Objects and Service Principal Objects. The any operator is required for filter expressions on multi-valued properties. Not nullable.
     *
     * @return string The identifierUris
     */
@@ -186,6 +197,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the identifierUris
+    * The URIs that identify the application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant. For more information see Application Objects and Service Principal Objects. The any operator is required for filter expressions on multi-valued properties. Not nullable.
     *
     * @param string $val The identifierUris
     *
@@ -199,6 +211,7 @@ class Application extends DirectoryObject
     
     /**
     * Gets the displayName
+    * The display name for the application.
     *
     * @return string The displayName
     */
@@ -213,6 +226,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the displayName
+    * The display name for the application.
     *
     * @param string $val The displayName
     *
@@ -226,6 +240,7 @@ class Application extends DirectoryObject
     
     /**
     * Gets the groupMembershipClaims
+    * Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following valid string values:NoneSecurityGroup: For security groups and Azure AD rolesAll: This will get all of the security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of
     *
     * @return string The groupMembershipClaims
     */
@@ -240,6 +255,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the groupMembershipClaims
+    * Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following valid string values:NoneSecurityGroup: For security groups and Azure AD rolesAll: This will get all of the security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of
     *
     * @param string $val The groupMembershipClaims
     *
@@ -253,13 +269,14 @@ class Application extends DirectoryObject
     
     /**
     * Gets the info
+    * Basic profile information of the application such as  app's marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Azure AD apps.
     *
     * @return InformationalUrl The info
     */
     public function getInfo()
     {
         if (array_key_exists("info", $this->_propDict)) {
-            if (is_a($this->_propDict["info"], "Microsoft\Graph\Model\InformationalUrl")) {
+            if (is_a($this->_propDict["info"], "Microsoft\Graph\Beta\Model\InformationalUrl")) {
                 return $this->_propDict["info"];
             } else {
                 $this->_propDict["info"] = new InformationalUrl($this->_propDict["info"]);
@@ -271,6 +288,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the info
+    * Basic profile information of the application such as  app's marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Azure AD apps.
     *
     * @param InformationalUrl $val The info
     *
@@ -312,6 +330,7 @@ class Application extends DirectoryObject
 
      /** 
      * Gets the keyCredentials
+    * The collection of key credentials associated with the application Not nullable.
      *
      * @return array The keyCredentials
      */
@@ -326,6 +345,7 @@ class Application extends DirectoryObject
     
     /** 
     * Sets the keyCredentials
+    * The collection of key credentials associated with the application Not nullable.
     *
     * @param KeyCredential $val The keyCredentials
     *
@@ -339,6 +359,7 @@ class Application extends DirectoryObject
     
     /**
     * Gets the logo
+    * The main logo for the application. Not nullable.
     *
     * @return \GuzzleHttp\Psr7\Stream The logo
     */
@@ -357,6 +378,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the logo
+    * The main logo for the application. Not nullable.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The logo
     *
@@ -370,13 +392,14 @@ class Application extends DirectoryObject
     
     /**
     * Gets the optionalClaims
+    * Application developers can configure optional claims in their Azure AD apps to specify which claims they want in tokens sent to their application by the Microsoft security token service. See provide optional claims to your Azure AD app for more information.
     *
     * @return OptionalClaims The optionalClaims
     */
     public function getOptionalClaims()
     {
         if (array_key_exists("optionalClaims", $this->_propDict)) {
-            if (is_a($this->_propDict["optionalClaims"], "Microsoft\Graph\Model\OptionalClaims")) {
+            if (is_a($this->_propDict["optionalClaims"], "Microsoft\Graph\Beta\Model\OptionalClaims")) {
                 return $this->_propDict["optionalClaims"];
             } else {
                 $this->_propDict["optionalClaims"] = new OptionalClaims($this->_propDict["optionalClaims"]);
@@ -388,6 +411,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the optionalClaims
+    * Application developers can configure optional claims in their Azure AD apps to specify which claims they want in tokens sent to their application by the Microsoft security token service. See provide optional claims to your Azure AD app for more information.
     *
     * @param OptionalClaims $val The optionalClaims
     *
@@ -400,41 +424,15 @@ class Application extends DirectoryObject
     }
     
     /**
-    * Gets the orgRestrictions
-    *
-    * @return string The orgRestrictions
-    */
-    public function getOrgRestrictions()
-    {
-        if (array_key_exists("orgRestrictions", $this->_propDict)) {
-            return $this->_propDict["orgRestrictions"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the orgRestrictions
-    *
-    * @param string $val The orgRestrictions
-    *
-    * @return Application
-    */
-    public function setOrgRestrictions($val)
-    {
-        $this->_propDict["orgRestrictions"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the parentalControlSettings
+    * Specifies parental control settings for an application.
     *
     * @return ParentalControlSettings The parentalControlSettings
     */
     public function getParentalControlSettings()
     {
         if (array_key_exists("parentalControlSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["parentalControlSettings"], "Microsoft\Graph\Model\ParentalControlSettings")) {
+            if (is_a($this->_propDict["parentalControlSettings"], "Microsoft\Graph\Beta\Model\ParentalControlSettings")) {
                 return $this->_propDict["parentalControlSettings"];
             } else {
                 $this->_propDict["parentalControlSettings"] = new ParentalControlSettings($this->_propDict["parentalControlSettings"]);
@@ -446,6 +444,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the parentalControlSettings
+    * Specifies parental control settings for an application.
     *
     * @param ParentalControlSettings $val The parentalControlSettings
     *
@@ -460,6 +459,7 @@ class Application extends DirectoryObject
 
      /** 
      * Gets the passwordCredentials
+    * The collection of password credentials associated with the application. Not nullable.
      *
      * @return array The passwordCredentials
      */
@@ -474,6 +474,7 @@ class Application extends DirectoryObject
     
     /** 
     * Sets the passwordCredentials
+    * The collection of password credentials associated with the application. Not nullable.
     *
     * @param PasswordCredential $val The passwordCredentials
     *
@@ -487,13 +488,14 @@ class Application extends DirectoryObject
     
     /**
     * Gets the publicClient
+    * Specifies settings for installed clients such as desktop or mobile devices.
     *
     * @return PublicClientApplication The publicClient
     */
     public function getPublicClient()
     {
         if (array_key_exists("publicClient", $this->_propDict)) {
-            if (is_a($this->_propDict["publicClient"], "Microsoft\Graph\Model\PublicClientApplication")) {
+            if (is_a($this->_propDict["publicClient"], "Microsoft\Graph\Beta\Model\PublicClientApplication")) {
                 return $this->_propDict["publicClient"];
             } else {
                 $this->_propDict["publicClient"] = new PublicClientApplication($this->_propDict["publicClient"]);
@@ -505,6 +507,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the publicClient
+    * Specifies settings for installed clients such as desktop or mobile devices.
     *
     * @param PublicClientApplication $val The publicClient
     *
@@ -518,6 +521,7 @@ class Application extends DirectoryObject
     
     /**
     * Gets the publisherDomain
+    * The verified publisher domain for the application. Read-only.
     *
     * @return string The publisherDomain
     */
@@ -532,6 +536,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the publisherDomain
+    * The verified publisher domain for the application. Read-only.
     *
     * @param string $val The publisherDomain
     *
@@ -546,6 +551,7 @@ class Application extends DirectoryObject
 
      /** 
      * Gets the requiredResourceAccess
+    * Specifies resources that this application requires access to and the set of OAuth permission scopes and application roles that it needs under each of those resources. This pre-configuration of required resource access drives the consent experience. Not nullable.
      *
      * @return array The requiredResourceAccess
      */
@@ -560,6 +566,7 @@ class Application extends DirectoryObject
     
     /** 
     * Sets the requiredResourceAccess
+    * Specifies resources that this application requires access to and the set of OAuth permission scopes and application roles that it needs under each of those resources. This pre-configuration of required resource access drives the consent experience. Not nullable.
     *
     * @param RequiredResourceAccess $val The requiredResourceAccess
     *
@@ -573,6 +580,7 @@ class Application extends DirectoryObject
     
     /**
     * Gets the signInAudience
+    * Specifies what Microsoft accounts are supported for the current application. Supported values are:AzureADMyOrg: Users with a Microsoft work or school account in my organization’s Azure AD tenant (i.e. single tenant)AzureADMultipleOrgs: Users with a Microsoft work or school account in any organization’s Azure AD tenant (i.e. multi-tenant) AzureADandPersonalMicrosoftAccount: Users with a personal Microsoft account, or a work or school account in any organization’s Azure AD tenant
     *
     * @return string The signInAudience
     */
@@ -587,6 +595,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the signInAudience
+    * Specifies what Microsoft accounts are supported for the current application. Supported values are:AzureADMyOrg: Users with a Microsoft work or school account in my organization’s Azure AD tenant (i.e. single tenant)AzureADMultipleOrgs: Users with a Microsoft work or school account in any organization’s Azure AD tenant (i.e. multi-tenant) AzureADandPersonalMicrosoftAccount: Users with a personal Microsoft account, or a work or school account in any organization’s Azure AD tenant
     *
     * @param string $val The signInAudience
     *
@@ -600,6 +609,7 @@ class Application extends DirectoryObject
     
     /**
     * Gets the tags
+    * Custom strings that can be used to categorize and identify the application. Not nullable.
     *
     * @return string The tags
     */
@@ -614,6 +624,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the tags
+    * Custom strings that can be used to categorize and identify the application. Not nullable.
     *
     * @param string $val The tags
     *
@@ -627,6 +638,7 @@ class Application extends DirectoryObject
     
     /**
     * Gets the tokenEncryptionKeyId
+    * Specifies the keyId of a public key from the keyCredentials collection. When configured, Azure AD encrypts all the tokens it emits by using the key this property points to. The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user.
     *
     * @return string The tokenEncryptionKeyId
     */
@@ -641,6 +653,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the tokenEncryptionKeyId
+    * Specifies the keyId of a public key from the keyCredentials collection. When configured, Azure AD encrypts all the tokens it emits by using the key this property points to. The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user.
     *
     * @param string $val The tokenEncryptionKeyId
     *
@@ -654,13 +667,14 @@ class Application extends DirectoryObject
     
     /**
     * Gets the web
+    * Specifies settings for a web application.
     *
     * @return WebApplication The web
     */
     public function getWeb()
     {
         if (array_key_exists("web", $this->_propDict)) {
-            if (is_a($this->_propDict["web"], "Microsoft\Graph\Model\WebApplication")) {
+            if (is_a($this->_propDict["web"], "Microsoft\Graph\Beta\Model\WebApplication")) {
                 return $this->_propDict["web"];
             } else {
                 $this->_propDict["web"] = new WebApplication($this->_propDict["web"]);
@@ -672,6 +686,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the web
+    * Specifies settings for a web application.
     *
     * @param WebApplication $val The web
     *
@@ -686,6 +701,7 @@ class Application extends DirectoryObject
 
      /** 
      * Gets the extensionProperties
+    * Read-only. Nullable.
      *
      * @return array The extensionProperties
      */
@@ -700,6 +716,7 @@ class Application extends DirectoryObject
     
     /** 
     * Sets the extensionProperties
+    * Read-only. Nullable.
     *
     * @param ExtensionProperty $val The extensionProperties
     *
@@ -713,13 +730,14 @@ class Application extends DirectoryObject
     
     /**
     * Gets the createdOnBehalfOf
+    * Read-only.
     *
     * @return DirectoryObject The createdOnBehalfOf
     */
     public function getCreatedOnBehalfOf()
     {
         if (array_key_exists("createdOnBehalfOf", $this->_propDict)) {
-            if (is_a($this->_propDict["createdOnBehalfOf"], "Microsoft\Graph\Model\DirectoryObject")) {
+            if (is_a($this->_propDict["createdOnBehalfOf"], "Microsoft\Graph\Beta\Model\DirectoryObject")) {
                 return $this->_propDict["createdOnBehalfOf"];
             } else {
                 $this->_propDict["createdOnBehalfOf"] = new DirectoryObject($this->_propDict["createdOnBehalfOf"]);
@@ -731,6 +749,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the createdOnBehalfOf
+    * Read-only.
     *
     * @param DirectoryObject $val The createdOnBehalfOf
     *
@@ -745,6 +764,7 @@ class Application extends DirectoryObject
 
      /** 
      * Gets the owners
+    * Directory objects that are owners of the application. The owners are a set of non-admin users who are allowed to modify this object. Requires version 2013-11-08 or newer. Read-only. Nullable.
      *
      * @return array The owners
      */
@@ -759,6 +779,7 @@ class Application extends DirectoryObject
     
     /** 
     * Sets the owners
+    * Directory objects that are owners of the application. The owners are a set of non-admin users who are allowed to modify this object. Requires version 2013-11-08 or newer. Read-only. Nullable.
     *
     * @param DirectoryObject $val The owners
     *
@@ -806,7 +827,7 @@ class Application extends DirectoryObject
     public function getSynchronization()
     {
         if (array_key_exists("synchronization", $this->_propDict)) {
-            if (is_a($this->_propDict["synchronization"], "Microsoft\Graph\Model\Synchronization")) {
+            if (is_a($this->_propDict["synchronization"], "Microsoft\Graph\Beta\Model\Synchronization")) {
                 return $this->_propDict["synchronization"];
             } else {
                 $this->_propDict["synchronization"] = new Synchronization($this->_propDict["synchronization"]);

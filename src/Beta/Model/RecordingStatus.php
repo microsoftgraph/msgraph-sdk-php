@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 use Microsoft\Graph\Core\Enum;
 
@@ -31,7 +31,9 @@ class RecordingStatus extends Enum
     /**
     * The Enum RecordingStatus
     */
-    const RECORDING_CAPABLE = "recordingCapable";
+    const UNKNOWN = "unknown";
     const NOT_RECORDING = "notRecording";
-    const STARTED_RECORDING = "startedRecording";
+    const RECORDING = "recording";
+    const FAILED = "failed";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }
