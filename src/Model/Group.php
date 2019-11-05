@@ -355,6 +355,35 @@ class Group extends DirectoryObject
     }
     
     /**
+    * Gets the onPremisesDomainName
+    * Contains the on-premises domain FQDN, also called dnsDomainName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect.Returned by default. Read-only.
+    *
+    * @return string The onPremisesDomainName
+    */
+    public function getOnPremisesDomainName()
+    {
+        if (array_key_exists("onPremisesDomainName", $this->_propDict)) {
+            return $this->_propDict["onPremisesDomainName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the onPremisesDomainName
+    * Contains the on-premises domain FQDN, also called dnsDomainName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect.Returned by default. Read-only.
+    *
+    * @param string $val The onPremisesDomainName
+    *
+    * @return Group
+    */
+    public function setOnPremisesDomainName($val)
+    {
+        $this->_propDict["onPremisesDomainName"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the onPremisesLastSyncDateTime
     * Indicates the last time at which the group was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only. Supports $filter.
     *
@@ -387,6 +416,35 @@ class Group extends DirectoryObject
         return $this;
     }
     
+    /**
+    * Gets the onPremisesNetBiosName
+    * Contains the on-premises netBios name synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect.Returned by default. Read-only.
+    *
+    * @return string The onPremisesNetBiosName
+    */
+    public function getOnPremisesNetBiosName()
+    {
+        if (array_key_exists("onPremisesNetBiosName", $this->_propDict)) {
+            return $this->_propDict["onPremisesNetBiosName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the onPremisesNetBiosName
+    * Contains the on-premises netBios name synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect.Returned by default. Read-only.
+    *
+    * @param string $val The onPremisesNetBiosName
+    *
+    * @return Group
+    */
+    public function setOnPremisesNetBiosName($val)
+    {
+        $this->_propDict["onPremisesNetBiosName"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the onPremisesProvisioningErrors
@@ -414,6 +472,35 @@ class Group extends DirectoryObject
     public function setOnPremisesProvisioningErrors($val)
     {
 		$this->_propDict["onPremisesProvisioningErrors"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the onPremisesSamAccountName
+    * Contains the on-premises SAM account name synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect.Returned by default. Read-only.
+    *
+    * @return string The onPremisesSamAccountName
+    */
+    public function getOnPremisesSamAccountName()
+    {
+        if (array_key_exists("onPremisesSamAccountName", $this->_propDict)) {
+            return $this->_propDict["onPremisesSamAccountName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the onPremisesSamAccountName
+    * Contains the on-premises SAM account name synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect.Returned by default. Read-only.
+    *
+    * @param string $val The onPremisesSamAccountName
+    *
+    * @return Group
+    */
+    public function setOnPremisesSamAccountName($val)
+    {
+        $this->_propDict["onPremisesSamAccountName"] = $val;
         return $this;
     }
     
