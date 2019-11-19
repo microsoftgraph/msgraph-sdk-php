@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * MailboxSettings class
 *
@@ -35,7 +35,7 @@ class MailboxSettings extends Entity
     public function getAutomaticRepliesSetting()
     {
         if (array_key_exists("automaticRepliesSetting", $this->_propDict)) {
-            if (is_a($this->_propDict["automaticRepliesSetting"], "Microsoft\Graph\Model\AutomaticRepliesSetting")) {
+            if (is_a($this->_propDict["automaticRepliesSetting"], "Microsoft\Graph\Beta\Model\AutomaticRepliesSetting")) {
                 return $this->_propDict["automaticRepliesSetting"];
             } else {
                 $this->_propDict["automaticRepliesSetting"] = new AutomaticRepliesSetting($this->_propDict["automaticRepliesSetting"]);
@@ -124,7 +124,7 @@ class MailboxSettings extends Entity
     public function getLanguage()
     {
         if (array_key_exists("language", $this->_propDict)) {
-            if (is_a($this->_propDict["language"], "Microsoft\Graph\Model\LocaleInfo")) {
+            if (is_a($this->_propDict["language"], "Microsoft\Graph\Beta\Model\LocaleInfo")) {
                 return $this->_propDict["language"];
             } else {
                 $this->_propDict["language"] = new LocaleInfo($this->_propDict["language"]);
@@ -149,6 +149,37 @@ class MailboxSettings extends Entity
     }
 
     /**
+    * Gets the delegateMeetingMessageDeliveryOptions
+    *
+    * @return DelegateMeetingMessageDeliveryOptions The delegateMeetingMessageDeliveryOptions
+    */
+    public function getDelegateMeetingMessageDeliveryOptions()
+    {
+        if (array_key_exists("delegateMeetingMessageDeliveryOptions", $this->_propDict)) {
+            if (is_a($this->_propDict["delegateMeetingMessageDeliveryOptions"], "Microsoft\Graph\Beta\Model\DelegateMeetingMessageDeliveryOptions")) {
+                return $this->_propDict["delegateMeetingMessageDeliveryOptions"];
+            } else {
+                $this->_propDict["delegateMeetingMessageDeliveryOptions"] = new DelegateMeetingMessageDeliveryOptions($this->_propDict["delegateMeetingMessageDeliveryOptions"]);
+                return $this->_propDict["delegateMeetingMessageDeliveryOptions"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the delegateMeetingMessageDeliveryOptions
+    *
+    * @param DelegateMeetingMessageDeliveryOptions $val The value to assign to the delegateMeetingMessageDeliveryOptions
+    *
+    * @return MailboxSettings The MailboxSettings
+    */
+    public function setDelegateMeetingMessageDeliveryOptions($val)
+    {
+        $this->_propDict["delegateMeetingMessageDeliveryOptions"] = $val;
+         return $this;
+    }
+
+    /**
     * Gets the workingHours
     * The days of the week and hours in a specific time zone that the user works.
     *
@@ -157,7 +188,7 @@ class MailboxSettings extends Entity
     public function getWorkingHours()
     {
         if (array_key_exists("workingHours", $this->_propDict)) {
-            if (is_a($this->_propDict["workingHours"], "Microsoft\Graph\Model\WorkingHours")) {
+            if (is_a($this->_propDict["workingHours"], "Microsoft\Graph\Beta\Model\WorkingHours")) {
                 return $this->_propDict["workingHours"];
             } else {
                 $this->_propDict["workingHours"] = new WorkingHours($this->_propDict["workingHours"]);
@@ -179,5 +210,61 @@ class MailboxSettings extends Entity
     {
         $this->_propDict["workingHours"] = $val;
          return $this;
+    }
+    /**
+    * Gets the dateFormat
+    * The date format for the user's mailbox.
+    *
+    * @return string The dateFormat
+    */
+    public function getDateFormat()
+    {
+        if (array_key_exists("dateFormat", $this->_propDict)) {
+            return $this->_propDict["dateFormat"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the dateFormat
+    * The date format for the user's mailbox.
+    *
+    * @param string $val The value of the dateFormat
+    *
+    * @return MailboxSettings
+    */
+    public function setDateFormat($val)
+    {
+        $this->_propDict["dateFormat"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the timeFormat
+    * The time format for the user's mailbox.
+    *
+    * @return string The timeFormat
+    */
+    public function getTimeFormat()
+    {
+        if (array_key_exists("timeFormat", $this->_propDict)) {
+            return $this->_propDict["timeFormat"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the timeFormat
+    * The time format for the user's mailbox.
+    *
+    * @param string $val The value of the timeFormat
+    *
+    * @return MailboxSettings
+    */
+    public function setTimeFormat($val)
+    {
+        $this->_propDict["timeFormat"] = $val;
+        return $this;
     }
 }

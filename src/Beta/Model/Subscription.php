@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * Subscription class
@@ -230,6 +230,141 @@ class Subscription extends Entity
     public function setCreatorId($val)
     {
         $this->_propDict["creatorId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the includeProperties
+    *
+    * @return bool The includeProperties
+    */
+    public function getIncludeProperties()
+    {
+        if (array_key_exists("includeProperties", $this->_propDict)) {
+            return $this->_propDict["includeProperties"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the includeProperties
+    *
+    * @param bool $val The includeProperties
+    *
+    * @return Subscription
+    */
+    public function setIncludeProperties($val)
+    {
+        $this->_propDict["includeProperties"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the includeResourceData
+    *
+    * @return bool The includeResourceData
+    */
+    public function getIncludeResourceData()
+    {
+        if (array_key_exists("includeResourceData", $this->_propDict)) {
+            return $this->_propDict["includeResourceData"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the includeResourceData
+    *
+    * @param bool $val The includeResourceData
+    *
+    * @return Subscription
+    */
+    public function setIncludeResourceData($val)
+    {
+        $this->_propDict["includeResourceData"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the lifecycleNotificationUrl
+    *
+    * @return string The lifecycleNotificationUrl
+    */
+    public function getLifecycleNotificationUrl()
+    {
+        if (array_key_exists("lifecycleNotificationUrl", $this->_propDict)) {
+            return $this->_propDict["lifecycleNotificationUrl"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the lifecycleNotificationUrl
+    *
+    * @param string $val The lifecycleNotificationUrl
+    *
+    * @return Subscription
+    */
+    public function setLifecycleNotificationUrl($val)
+    {
+        $this->_propDict["lifecycleNotificationUrl"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the encryptionCertificate
+    *
+    * @return string The encryptionCertificate
+    */
+    public function getEncryptionCertificate()
+    {
+        if (array_key_exists("encryptionCertificate", $this->_propDict)) {
+            return $this->_propDict["encryptionCertificate"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the encryptionCertificate
+    *
+    * @param string $val The encryptionCertificate
+    *
+    * @return Subscription
+    */
+    public function setEncryptionCertificate($val)
+    {
+        $this->_propDict["encryptionCertificate"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the encryptionCertificateId
+    *
+    * @return string The encryptionCertificateId
+    */
+    public function getEncryptionCertificateId()
+    {
+        if (array_key_exists("encryptionCertificateId", $this->_propDict)) {
+            return $this->_propDict["encryptionCertificateId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the encryptionCertificateId
+    *
+    * @param string $val The encryptionCertificateId
+    *
+    * @return Subscription
+    */
+    public function setEncryptionCertificateId($val)
+    {
+        $this->_propDict["encryptionCertificateId"] = $val;
         return $this;
     }
     

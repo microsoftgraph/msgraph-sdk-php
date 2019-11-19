@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * SubscribedSku class
@@ -93,7 +93,7 @@ class SubscribedSku extends Entity
     public function getPrepaidUnits()
     {
         if (array_key_exists("prepaidUnits", $this->_propDict)) {
-            if (is_a($this->_propDict["prepaidUnits"], "Microsoft\Graph\Model\LicenseUnitsDetail")) {
+            if (is_a($this->_propDict["prepaidUnits"], "Microsoft\Graph\Beta\Model\LicenseUnitsDetail")) {
                 return $this->_propDict["prepaidUnits"];
             } else {
                 $this->_propDict["prepaidUnits"] = new LicenseUnitsDetail($this->_propDict["prepaidUnits"]);

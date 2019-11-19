@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * DepEnrollmentBaseProfile class
@@ -545,6 +545,93 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     public function setPrivacyPaneDisabled($val)
     {
         $this->_propDict["privacyPaneDisabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the screenTimeScreenDisabled
+    * Indicates if screen timeout setup is disabled
+    *
+    * @return bool The screenTimeScreenDisabled
+    */
+    public function getScreenTimeScreenDisabled()
+    {
+        if (array_key_exists("screenTimeScreenDisabled", $this->_propDict)) {
+            return $this->_propDict["screenTimeScreenDisabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the screenTimeScreenDisabled
+    * Indicates if screen timeout setup is disabled
+    *
+    * @param bool $val The screenTimeScreenDisabled
+    *
+    * @return DepEnrollmentBaseProfile
+    */
+    public function setScreenTimeScreenDisabled($val)
+    {
+        $this->_propDict["screenTimeScreenDisabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the deviceNameTemplate
+    * Sets a literal or name pattern.
+    *
+    * @return string The deviceNameTemplate
+    */
+    public function getDeviceNameTemplate()
+    {
+        if (array_key_exists("deviceNameTemplate", $this->_propDict)) {
+            return $this->_propDict["deviceNameTemplate"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the deviceNameTemplate
+    * Sets a literal or name pattern.
+    *
+    * @param string $val The deviceNameTemplate
+    *
+    * @return DepEnrollmentBaseProfile
+    */
+    public function setDeviceNameTemplate($val)
+    {
+        $this->_propDict["deviceNameTemplate"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the configurationWebUrl
+    * URL for setup assistant login
+    *
+    * @return bool The configurationWebUrl
+    */
+    public function getConfigurationWebUrl()
+    {
+        if (array_key_exists("configurationWebUrl", $this->_propDict)) {
+            return $this->_propDict["configurationWebUrl"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the configurationWebUrl
+    * URL for setup assistant login
+    *
+    * @param bool $val The configurationWebUrl
+    *
+    * @return DepEnrollmentBaseProfile
+    */
+    public function setConfigurationWebUrl($val)
+    {
+        $this->_propDict["configurationWebUrl"] = boolval($val);
         return $this;
     }
     

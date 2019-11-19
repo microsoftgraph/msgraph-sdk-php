@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * PreAuthorizedApplication class
 *
@@ -27,6 +27,7 @@ class PreAuthorizedApplication extends Entity
 {
     /**
     * Gets the appId
+    * The unique identifier for the application.
     *
     * @return string The appId
     */
@@ -41,6 +42,7 @@ class PreAuthorizedApplication extends Entity
 
     /**
     * Sets the appId
+    * The unique identifier for the application.
     *
     * @param string $val The value of the appId
     *

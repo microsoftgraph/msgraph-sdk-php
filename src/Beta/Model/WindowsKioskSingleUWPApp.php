@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * WindowsKioskSingleUWPApp class
 *
@@ -35,7 +35,7 @@ class WindowsKioskSingleUWPApp extends WindowsKioskAppConfiguration
     public function getUwpApp()
     {
         if (array_key_exists("uwpApp", $this->_propDict)) {
-            if (is_a($this->_propDict["uwpApp"], "Microsoft\Graph\Model\WindowsKioskUWPApp")) {
+            if (is_a($this->_propDict["uwpApp"], "Microsoft\Graph\Beta\Model\WindowsKioskUWPApp")) {
                 return $this->_propDict["uwpApp"];
             } else {
                 $this->_propDict["uwpApp"] = new WindowsKioskUWPApp($this->_propDict["uwpApp"]);

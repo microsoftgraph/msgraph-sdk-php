@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * GovernanceSchedule class
 *
@@ -60,7 +60,7 @@ class GovernanceSchedule extends Entity
     public function getStartDateTime()
     {
         if (array_key_exists("startDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startDateTime"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["startDateTime"], "Microsoft\Graph\Beta\Model\\DateTime")) {
                 return $this->_propDict["startDateTime"];
             } else {
                 $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);
@@ -91,7 +91,7 @@ class GovernanceSchedule extends Entity
     public function getEndDateTime()
     {
         if (array_key_exists("endDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["endDateTime"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["endDateTime"], "Microsoft\Graph\Beta\Model\\DateTime")) {
                 return $this->_propDict["endDateTime"];
             } else {
                 $this->_propDict["endDateTime"] = new \DateTime($this->_propDict["endDateTime"]);
@@ -122,7 +122,7 @@ class GovernanceSchedule extends Entity
     public function getDuration()
     {
         if (array_key_exists("duration", $this->_propDict)) {
-            if (is_a($this->_propDict["duration"], "Microsoft\Graph\Model\Duration")) {
+            if (is_a($this->_propDict["duration"], "Microsoft\Graph\Beta\Model\Duration")) {
                 return $this->_propDict["duration"];
             } else {
                 $this->_propDict["duration"] = new Duration($this->_propDict["duration"]);

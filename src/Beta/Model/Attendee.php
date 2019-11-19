@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * Attendee class
 *
@@ -35,7 +35,7 @@ class Attendee extends AttendeeBase
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Microsoft\Graph\Model\ResponseStatus")) {
+            if (is_a($this->_propDict["status"], "Microsoft\Graph\Beta\Model\ResponseStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new ResponseStatus($this->_propDict["status"]);
@@ -56,6 +56,37 @@ class Attendee extends AttendeeBase
     public function setStatus($val)
     {
         $this->_propDict["status"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the proposedNewTime
+    *
+    * @return TimeSlot The proposedNewTime
+    */
+    public function getProposedNewTime()
+    {
+        if (array_key_exists("proposedNewTime", $this->_propDict)) {
+            if (is_a($this->_propDict["proposedNewTime"], "Microsoft\Graph\Beta\Model\TimeSlot")) {
+                return $this->_propDict["proposedNewTime"];
+            } else {
+                $this->_propDict["proposedNewTime"] = new TimeSlot($this->_propDict["proposedNewTime"]);
+                return $this->_propDict["proposedNewTime"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the proposedNewTime
+    *
+    * @param TimeSlot $val The value to assign to the proposedNewTime
+    *
+    * @return Attendee The Attendee
+    */
+    public function setProposedNewTime($val)
+    {
+        $this->_propDict["proposedNewTime"] = $val;
          return $this;
     }
 }

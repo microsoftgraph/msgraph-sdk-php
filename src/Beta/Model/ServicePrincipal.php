@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * ServicePrincipal class
@@ -136,6 +136,33 @@ class ServicePrincipal extends DirectoryObject
     }
     
     /**
+    * Gets the applicationTemplateId
+    *
+    * @return string The applicationTemplateId
+    */
+    public function getApplicationTemplateId()
+    {
+        if (array_key_exists("applicationTemplateId", $this->_propDict)) {
+            return $this->_propDict["applicationTemplateId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the applicationTemplateId
+    *
+    * @param string $val The applicationTemplateId
+    *
+    * @return ServicePrincipal
+    */
+    public function setApplicationTemplateId($val)
+    {
+        $this->_propDict["applicationTemplateId"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the appOwnerOrganizationId
     *
     * @return string The appOwnerOrganizationId
@@ -245,33 +272,6 @@ class ServicePrincipal extends DirectoryObject
     }
     
     /**
-    * Gets the errorUrl
-    *
-    * @return string The errorUrl
-    */
-    public function getErrorUrl()
-    {
-        if (array_key_exists("errorUrl", $this->_propDict)) {
-            return $this->_propDict["errorUrl"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the errorUrl
-    *
-    * @param string $val The errorUrl
-    *
-    * @return ServicePrincipal
-    */
-    public function setErrorUrl($val)
-    {
-        $this->_propDict["errorUrl"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the homepage
     *
     * @return string The homepage
@@ -327,6 +327,37 @@ class ServicePrincipal extends DirectoryObject
     }
     
     /**
+    * Gets the info
+    *
+    * @return InformationalUrl The info
+    */
+    public function getInfo()
+    {
+        if (array_key_exists("info", $this->_propDict)) {
+            if (is_a($this->_propDict["info"], "Microsoft\Graph\Beta\Model\InformationalUrl")) {
+                return $this->_propDict["info"];
+            } else {
+                $this->_propDict["info"] = new InformationalUrl($this->_propDict["info"]);
+                return $this->_propDict["info"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the info
+    *
+    * @param InformationalUrl $val The info
+    *
+    * @return ServicePrincipal
+    */
+    public function setInfo($val)
+    {
+        $this->_propDict["info"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the logoutUrl
     *
     * @return string The logoutUrl
@@ -353,31 +384,58 @@ class ServicePrincipal extends DirectoryObject
         return $this;
     }
     
+    /**
+    * Gets the notificationEmailAddresses
+    *
+    * @return string The notificationEmailAddresses
+    */
+    public function getNotificationEmailAddresses()
+    {
+        if (array_key_exists("notificationEmailAddresses", $this->_propDict)) {
+            return $this->_propDict["notificationEmailAddresses"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the notificationEmailAddresses
+    *
+    * @param string $val The notificationEmailAddresses
+    *
+    * @return ServicePrincipal
+    */
+    public function setNotificationEmailAddresses($val)
+    {
+        $this->_propDict["notificationEmailAddresses"] = $val;
+        return $this;
+    }
+    
 
      /** 
-     * Gets the oauth2Permissions
+     * Gets the publishedPermissionScopes
      *
-     * @return array The oauth2Permissions
+     * @return array The publishedPermissionScopes
      */
-    public function getOauth2Permissions()
+    public function getPublishedPermissionScopes()
     {
-        if (array_key_exists("oauth2Permissions", $this->_propDict)) {
-           return $this->_propDict["oauth2Permissions"];
+        if (array_key_exists("publishedPermissionScopes", $this->_propDict)) {
+           return $this->_propDict["publishedPermissionScopes"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the oauth2Permissions
+    * Sets the publishedPermissionScopes
     *
-    * @param OAuth2Permission $val The oauth2Permissions
+    * @param PermissionScope $val The publishedPermissionScopes
     *
     * @return ServicePrincipal
     */
-    public function setOauth2Permissions($val)
+    public function setPublishedPermissionScopes($val)
     {
-		$this->_propDict["oauth2Permissions"] = $val;
+		$this->_propDict["publishedPermissionScopes"] = $val;
         return $this;
     }
     
@@ -859,7 +917,7 @@ class ServicePrincipal extends DirectoryObject
     public function getSynchronization()
     {
         if (array_key_exists("synchronization", $this->_propDict)) {
-            if (is_a($this->_propDict["synchronization"], "Microsoft\Graph\Model\Synchronization")) {
+            if (is_a($this->_propDict["synchronization"], "Microsoft\Graph\Beta\Model\Synchronization")) {
                 return $this->_propDict["synchronization"];
             } else {
                 $this->_propDict["synchronization"] = new Synchronization($this->_propDict["synchronization"]);

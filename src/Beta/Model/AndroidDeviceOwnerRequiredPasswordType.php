@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 use Microsoft\Graph\Core\Enum;
 
@@ -38,4 +38,6 @@ class AndroidDeviceOwnerRequiredPasswordType extends Enum
     const ALPHABETIC = "alphabetic";
     const ALPHANUMERIC = "alphanumeric";
     const ALPHANUMERIC_WITH_SYMBOLS = "alphanumericWithSymbols";
+    const LOW_SECURITY_BIOMETRIC = "lowSecurityBiometric";
+    const CUSTOM_PASSWORD = "customPassword";
 }

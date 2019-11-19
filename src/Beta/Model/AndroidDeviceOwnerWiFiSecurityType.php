@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 use Microsoft\Graph\Core\Enum;
 
@@ -34,4 +34,5 @@ class AndroidDeviceOwnerWiFiSecurityType extends Enum
     const OPEN = "open";
     const WEP = "wep";
     const WPA_PERSONAL = "wpaPersonal";
+    const WPA_ENTERPRISE = "wpaEnterprise";
 }

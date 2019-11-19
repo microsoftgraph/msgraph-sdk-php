@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * TimeConstraint class
 *
@@ -35,7 +35,7 @@ class TimeConstraint extends Entity
     public function getActivityDomain()
     {
         if (array_key_exists("activityDomain", $this->_propDict)) {
-            if (is_a($this->_propDict["activityDomain"], "Microsoft\Graph\Model\ActivityDomain")) {
+            if (is_a($this->_propDict["activityDomain"], "Microsoft\Graph\Beta\Model\ActivityDomain")) {
                 return $this->_propDict["activityDomain"];
             } else {
                 $this->_propDict["activityDomain"] = new ActivityDomain($this->_propDict["activityDomain"]);
@@ -60,35 +60,33 @@ class TimeConstraint extends Entity
     }
 
     /**
-    * Gets the timeslots
-    * An array of time periods.
+    * Gets the timeSlots
     *
-    * @return TimeSlot The timeslots
+    * @return TimeSlot The timeSlots
     */
-    public function getTimeslots()
+    public function getTimeSlots()
     {
-        if (array_key_exists("timeslots", $this->_propDict)) {
-            if (is_a($this->_propDict["timeslots"], "Microsoft\Graph\Model\TimeSlot")) {
-                return $this->_propDict["timeslots"];
+        if (array_key_exists("timeSlots", $this->_propDict)) {
+            if (is_a($this->_propDict["timeSlots"], "Microsoft\Graph\Beta\Model\TimeSlot")) {
+                return $this->_propDict["timeSlots"];
             } else {
-                $this->_propDict["timeslots"] = new TimeSlot($this->_propDict["timeslots"]);
-                return $this->_propDict["timeslots"];
+                $this->_propDict["timeSlots"] = new TimeSlot($this->_propDict["timeSlots"]);
+                return $this->_propDict["timeSlots"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the timeslots
-    * An array of time periods.
+    * Sets the timeSlots
     *
-    * @param TimeSlot $val The value to assign to the timeslots
+    * @param TimeSlot $val The value to assign to the timeSlots
     *
     * @return TimeConstraint The TimeConstraint
     */
-    public function setTimeslots($val)
+    public function setTimeSlots($val)
     {
-        $this->_propDict["timeslots"] = $val;
+        $this->_propDict["timeSlots"] = $val;
          return $this;
     }
 }

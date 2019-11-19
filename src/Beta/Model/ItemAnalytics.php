@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * ItemAnalytics class
@@ -62,7 +62,7 @@ class ItemAnalytics extends Entity
     public function getAllTime()
     {
         if (array_key_exists("allTime", $this->_propDict)) {
-            if (is_a($this->_propDict["allTime"], "Microsoft\Graph\Model\ItemActivityStat")) {
+            if (is_a($this->_propDict["allTime"], "Microsoft\Graph\Beta\Model\ItemActivityStat")) {
                 return $this->_propDict["allTime"];
             } else {
                 $this->_propDict["allTime"] = new ItemActivityStat($this->_propDict["allTime"]);
@@ -93,7 +93,7 @@ class ItemAnalytics extends Entity
     public function getLastSevenDays()
     {
         if (array_key_exists("lastSevenDays", $this->_propDict)) {
-            if (is_a($this->_propDict["lastSevenDays"], "Microsoft\Graph\Model\ItemActivityStat")) {
+            if (is_a($this->_propDict["lastSevenDays"], "Microsoft\Graph\Beta\Model\ItemActivityStat")) {
                 return $this->_propDict["lastSevenDays"];
             } else {
                 $this->_propDict["lastSevenDays"] = new ItemActivityStat($this->_propDict["lastSevenDays"]);

@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * PermissionScope class
 *
@@ -27,6 +27,7 @@ class PermissionScope extends Entity
 {
     /**
     * Gets the adminConsentDescription
+    * Permission help text that appears in the admin consent and app assignment experiences.
     *
     * @return string The adminConsentDescription
     */
@@ -41,6 +42,7 @@ class PermissionScope extends Entity
 
     /**
     * Sets the adminConsentDescription
+    * Permission help text that appears in the admin consent and app assignment experiences.
     *
     * @param string $val The value of the adminConsentDescription
     *
@@ -53,6 +55,7 @@ class PermissionScope extends Entity
     }
     /**
     * Gets the adminConsentDisplayName
+    * Display name for the permission that appears in the admin consent and app assignment experiences.
     *
     * @return string The adminConsentDisplayName
     */
@@ -67,6 +70,7 @@ class PermissionScope extends Entity
 
     /**
     * Sets the adminConsentDisplayName
+    * Display name for the permission that appears in the admin consent and app assignment experiences.
     *
     * @param string $val The value of the adminConsentDisplayName
     *
@@ -79,6 +83,7 @@ class PermissionScope extends Entity
     }
     /**
     * Gets the id
+    * Unique scope permission identifier inside the oauth2Permissions collection.
     *
     * @return string The id
     */
@@ -93,6 +98,7 @@ class PermissionScope extends Entity
 
     /**
     * Sets the id
+    * Unique scope permission identifier inside the oauth2Permissions collection.
     *
     * @param string $val The value of the id
     *
@@ -105,6 +111,7 @@ class PermissionScope extends Entity
     }
     /**
     * Gets the isEnabled
+    * When creating or updating a permission, this property must be set to true (which is the default). To delete a permission, this property must first be set to false. At that point, in a subsequent call, the permission may be removed.
     *
     * @return bool The isEnabled
     */
@@ -119,6 +126,7 @@ class PermissionScope extends Entity
 
     /**
     * Sets the isEnabled
+    * When creating or updating a permission, this property must be set to true (which is the default). To delete a permission, this property must first be set to false. At that point, in a subsequent call, the permission may be removed.
     *
     * @param bool $val The value of the isEnabled
     *
@@ -131,6 +139,7 @@ class PermissionScope extends Entity
     }
     /**
     * Gets the origin
+    * For internal use.
     *
     * @return string The origin
     */
@@ -145,6 +154,7 @@ class PermissionScope extends Entity
 
     /**
     * Sets the origin
+    * For internal use.
     *
     * @param string $val The value of the origin
     *
@@ -157,6 +167,7 @@ class PermissionScope extends Entity
     }
     /**
     * Gets the type
+    * Specifies whether this scope permission can be consented to by an end user, or whether it is a tenant-wide permission that must be consented to by a company administrator. Possible values are User or Admin.
     *
     * @return string The type
     */
@@ -171,6 +182,7 @@ class PermissionScope extends Entity
 
     /**
     * Sets the type
+    * Specifies whether this scope permission can be consented to by an end user, or whether it is a tenant-wide permission that must be consented to by a company administrator. Possible values are User or Admin.
     *
     * @param string $val The value of the type
     *
@@ -183,6 +195,7 @@ class PermissionScope extends Entity
     }
     /**
     * Gets the userConsentDescription
+    * Permission help text that appears in the end-user consent experience.
     *
     * @return string The userConsentDescription
     */
@@ -197,6 +210,7 @@ class PermissionScope extends Entity
 
     /**
     * Sets the userConsentDescription
+    * Permission help text that appears in the end-user consent experience.
     *
     * @param string $val The value of the userConsentDescription
     *
@@ -209,6 +223,7 @@ class PermissionScope extends Entity
     }
     /**
     * Gets the userConsentDisplayName
+    * Display name for the permission that appears in the end-user consent experience.
     *
     * @return string The userConsentDisplayName
     */
@@ -223,6 +238,7 @@ class PermissionScope extends Entity
 
     /**
     * Sets the userConsentDisplayName
+    * Display name for the permission that appears in the end-user consent experience.
     *
     * @param string $val The value of the userConsentDisplayName
     *
@@ -235,6 +251,7 @@ class PermissionScope extends Entity
     }
     /**
     * Gets the value
+    * The value of the scope claim that the resource application should expect in the OAuth 2.0 access token.
     *
     * @return string The value
     */
@@ -249,6 +266,7 @@ class PermissionScope extends Entity
 
     /**
     * Sets the value
+    * The value of the scope claim that the resource application should expect in the OAuth 2.0 access token.
     *
     * @param string $val The value of the value
     *

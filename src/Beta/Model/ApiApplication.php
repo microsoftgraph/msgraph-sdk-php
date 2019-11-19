@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * ApiApplication class
 *
@@ -27,6 +27,7 @@ class ApiApplication extends Entity
 {
     /**
     * Gets the acceptMappedClaims
+    * When true, allows an application to use claims mapping without specifying a custom signing key.
     *
     * @return bool The acceptMappedClaims
     */
@@ -41,6 +42,7 @@ class ApiApplication extends Entity
 
     /**
     * Sets the acceptMappedClaims
+    * When true, allows an application to use claims mapping without specifying a custom signing key.
     *
     * @param bool $val The value of the acceptMappedClaims
     *
@@ -53,6 +55,7 @@ class ApiApplication extends Entity
     }
     /**
     * Gets the knownClientApplications
+    * Used for bundling consent if you have a solution that contains two parts: a client app and a custom web API app. If you set the appID of the client app to this value, the user only consents once to the client app. Azure AD knows that consenting to the client means implicitly consenting to the web API and automatically provisions service principals for both APIs at the same time. Both the client and the web API app must be registered in the same tenant.
     *
     * @return string The knownClientApplications
     */
@@ -67,6 +70,7 @@ class ApiApplication extends Entity
 
     /**
     * Sets the knownClientApplications
+    * Used for bundling consent if you have a solution that contains two parts: a client app and a custom web API app. If you set the appID of the client app to this value, the user only consents once to the client app. Azure AD knows that consenting to the client means implicitly consenting to the web API and automatically provisions service principals for both APIs at the same time. Both the client and the web API app must be registered in the same tenant.
     *
     * @param string $val The value of the knownClientApplications
     *
@@ -80,13 +84,14 @@ class ApiApplication extends Entity
 
     /**
     * Gets the preAuthorizedApplications
+    * Lists the client applications that are pre-authorized with the specified delegated permissions to access this application's APIs. Users are not required to consent to any pre-authorized application (for the permissions specified). However, any additional permissions not listed in preAuthorizedApplications (requested through incremental consent for example) will require user consent.
     *
     * @return PreAuthorizedApplication The preAuthorizedApplications
     */
     public function getPreAuthorizedApplications()
     {
         if (array_key_exists("preAuthorizedApplications", $this->_propDict)) {
-            if (is_a($this->_propDict["preAuthorizedApplications"], "Microsoft\Graph\Model\PreAuthorizedApplication")) {
+            if (is_a($this->_propDict["preAuthorizedApplications"], "Microsoft\Graph\Beta\Model\PreAuthorizedApplication")) {
                 return $this->_propDict["preAuthorizedApplications"];
             } else {
                 $this->_propDict["preAuthorizedApplications"] = new PreAuthorizedApplication($this->_propDict["preAuthorizedApplications"]);
@@ -98,6 +103,7 @@ class ApiApplication extends Entity
 
     /**
     * Sets the preAuthorizedApplications
+    * Lists the client applications that are pre-authorized with the specified delegated permissions to access this application's APIs. Users are not required to consent to any pre-authorized application (for the permissions specified). However, any additional permissions not listed in preAuthorizedApplications (requested through incremental consent for example) will require user consent.
     *
     * @param PreAuthorizedApplication $val The value to assign to the preAuthorizedApplications
     *
@@ -110,6 +116,7 @@ class ApiApplication extends Entity
     }
     /**
     * Gets the requestedAccessTokenVersion
+    * Specifies the access token version expected by this resource. This changes the version and format of the JWT produced independent of the endpoint or client used to request the access token.  The endpoint used, v1.0 or v2.0, is chosen by the client and only impacts the version of id_tokens. Resources need to explicitly configure requestedAccessTokenVersion to indicate the supported access token format.  Possible values for requestedAccessTokenVersion are 1, 2, or null. If the value is null, this defaults to 1, which corresponds to the v1.0 endpoint.  If signInAudience on the application is configured as AzureADandPersonalMicrosoftAccount, the value for this property must be 2
     *
     * @return int The requestedAccessTokenVersion
     */
@@ -124,6 +131,7 @@ class ApiApplication extends Entity
 
     /**
     * Sets the requestedAccessTokenVersion
+    * Specifies the access token version expected by this resource. This changes the version and format of the JWT produced independent of the endpoint or client used to request the access token.  The endpoint used, v1.0 or v2.0, is chosen by the client and only impacts the version of id_tokens. Resources need to explicitly configure requestedAccessTokenVersion to indicate the supported access token format.  Possible values for requestedAccessTokenVersion are 1, 2, or null. If the value is null, this defaults to 1, which corresponds to the v1.0 endpoint.  If signInAudience on the application is configured as AzureADandPersonalMicrosoftAccount, the value for this property must be 2
     *
     * @param int $val The value of the requestedAccessTokenVersion
     *
@@ -137,13 +145,14 @@ class ApiApplication extends Entity
 
     /**
     * Gets the oauth2PermissionScopes
+    * The collection of OAuth 2.0 permission scopes that the web API (resource) application exposes to client applications. These permission scopes may be granted to client applications during consent.
     *
     * @return PermissionScope The oauth2PermissionScopes
     */
     public function getOauth2PermissionScopes()
     {
         if (array_key_exists("oauth2PermissionScopes", $this->_propDict)) {
-            if (is_a($this->_propDict["oauth2PermissionScopes"], "Microsoft\Graph\Model\PermissionScope")) {
+            if (is_a($this->_propDict["oauth2PermissionScopes"], "Microsoft\Graph\Beta\Model\PermissionScope")) {
                 return $this->_propDict["oauth2PermissionScopes"];
             } else {
                 $this->_propDict["oauth2PermissionScopes"] = new PermissionScope($this->_propDict["oauth2PermissionScopes"]);
@@ -155,6 +164,7 @@ class ApiApplication extends Entity
 
     /**
     * Sets the oauth2PermissionScopes
+    * The collection of OAuth 2.0 permission scopes that the web API (resource) application exposes to client applications. These permission scopes may be granted to client applications during consent.
     *
     * @param PermissionScope $val The value to assign to the oauth2PermissionScopes
     *

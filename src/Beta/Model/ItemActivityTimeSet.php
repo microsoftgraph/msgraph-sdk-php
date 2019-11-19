@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * ItemActivityTimeSet class
 *
@@ -34,7 +34,7 @@ class ItemActivityTimeSet extends Entity
     public function getLastRecordedDateTime()
     {
         if (array_key_exists("lastRecordedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastRecordedDateTime"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["lastRecordedDateTime"], "Microsoft\Graph\Beta\Model\\DateTime")) {
                 return $this->_propDict["lastRecordedDateTime"];
             } else {
                 $this->_propDict["lastRecordedDateTime"] = new \DateTime($this->_propDict["lastRecordedDateTime"]);
@@ -59,13 +59,14 @@ class ItemActivityTimeSet extends Entity
 
     /**
     * Gets the observedDateTime
+    * When the activity was observed to take place.
     *
     * @return \DateTime The observedDateTime
     */
     public function getObservedDateTime()
     {
         if (array_key_exists("observedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["observedDateTime"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["observedDateTime"], "Microsoft\Graph\Beta\Model\\DateTime")) {
                 return $this->_propDict["observedDateTime"];
             } else {
                 $this->_propDict["observedDateTime"] = new \DateTime($this->_propDict["observedDateTime"]);
@@ -77,6 +78,7 @@ class ItemActivityTimeSet extends Entity
 
     /**
     * Sets the observedDateTime
+    * When the activity was observed to take place.
     *
     * @param \DateTime $val The value to assign to the observedDateTime
     *
@@ -90,13 +92,14 @@ class ItemActivityTimeSet extends Entity
 
     /**
     * Gets the recordedDateTime
+    * When the observation was recorded on the service.
     *
     * @return \DateTime The recordedDateTime
     */
     public function getRecordedDateTime()
     {
         if (array_key_exists("recordedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["recordedDateTime"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["recordedDateTime"], "Microsoft\Graph\Beta\Model\\DateTime")) {
                 return $this->_propDict["recordedDateTime"];
             } else {
                 $this->_propDict["recordedDateTime"] = new \DateTime($this->_propDict["recordedDateTime"]);
@@ -108,6 +111,7 @@ class ItemActivityTimeSet extends Entity
 
     /**
     * Sets the recordedDateTime
+    * When the observation was recorded on the service.
     *
     * @param \DateTime $val The value to assign to the recordedDateTime
     *

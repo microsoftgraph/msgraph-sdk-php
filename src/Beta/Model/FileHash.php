@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * FileHash class
 *
@@ -35,7 +35,7 @@ class FileHash extends Entity
     public function getHashType()
     {
         if (array_key_exists("hashType", $this->_propDict)) {
-            if (is_a($this->_propDict["hashType"], "Microsoft\Graph\Model\FileHashType")) {
+            if (is_a($this->_propDict["hashType"], "Microsoft\Graph\Beta\Model\FileHashType")) {
                 return $this->_propDict["hashType"];
             } else {
                 $this->_propDict["hashType"] = new FileHashType($this->_propDict["hashType"]);

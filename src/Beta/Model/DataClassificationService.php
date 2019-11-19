@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * DataClassificationService class
@@ -26,6 +26,34 @@ namespace Microsoft\Graph\Model;
 */
 class DataClassificationService extends Entity
 {
+
+     /** 
+     * Gets the exactMatchDataStores
+     *
+     * @return array The exactMatchDataStores
+     */
+    public function getExactMatchDataStores()
+    {
+        if (array_key_exists("exactMatchDataStores", $this->_propDict)) {
+           return $this->_propDict["exactMatchDataStores"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the exactMatchDataStores
+    *
+    * @param ExactMatchDataStore $val The exactMatchDataStores
+    *
+    * @return DataClassificationService
+    */
+    public function setExactMatchDataStores($val)
+    {
+		$this->_propDict["exactMatchDataStores"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the sensitiveTypes
@@ -84,6 +112,146 @@ class DataClassificationService extends Entity
     
 
      /** 
+     * Gets the classifyFileJobs
+     *
+     * @return array The classifyFileJobs
+     */
+    public function getClassifyFileJobs()
+    {
+        if (array_key_exists("classifyFileJobs", $this->_propDict)) {
+           return $this->_propDict["classifyFileJobs"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the classifyFileJobs
+    *
+    * @param JobResponseBase $val The classifyFileJobs
+    *
+    * @return DataClassificationService
+    */
+    public function setClassifyFileJobs($val)
+    {
+		$this->_propDict["classifyFileJobs"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the classifyTextJobs
+     *
+     * @return array The classifyTextJobs
+     */
+    public function getClassifyTextJobs()
+    {
+        if (array_key_exists("classifyTextJobs", $this->_propDict)) {
+           return $this->_propDict["classifyTextJobs"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the classifyTextJobs
+    *
+    * @param JobResponseBase $val The classifyTextJobs
+    *
+    * @return DataClassificationService
+    */
+    public function setClassifyTextJobs($val)
+    {
+		$this->_propDict["classifyTextJobs"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the evaluateLabelJobs
+     *
+     * @return array The evaluateLabelJobs
+     */
+    public function getEvaluateLabelJobs()
+    {
+        if (array_key_exists("evaluateLabelJobs", $this->_propDict)) {
+           return $this->_propDict["evaluateLabelJobs"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the evaluateLabelJobs
+    *
+    * @param JobResponseBase $val The evaluateLabelJobs
+    *
+    * @return DataClassificationService
+    */
+    public function setEvaluateLabelJobs($val)
+    {
+		$this->_propDict["evaluateLabelJobs"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the evaluateDlpPoliciesJobs
+     *
+     * @return array The evaluateDlpPoliciesJobs
+     */
+    public function getEvaluateDlpPoliciesJobs()
+    {
+        if (array_key_exists("evaluateDlpPoliciesJobs", $this->_propDict)) {
+           return $this->_propDict["evaluateDlpPoliciesJobs"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the evaluateDlpPoliciesJobs
+    *
+    * @param JobResponseBase $val The evaluateDlpPoliciesJobs
+    *
+    * @return DataClassificationService
+    */
+    public function setEvaluateDlpPoliciesJobs($val)
+    {
+		$this->_propDict["evaluateDlpPoliciesJobs"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the labelsAndPoliciesEvaluationJobs
+     *
+     * @return array The labelsAndPoliciesEvaluationJobs
+     */
+    public function getLabelsAndPoliciesEvaluationJobs()
+    {
+        if (array_key_exists("labelsAndPoliciesEvaluationJobs", $this->_propDict)) {
+           return $this->_propDict["labelsAndPoliciesEvaluationJobs"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the labelsAndPoliciesEvaluationJobs
+    *
+    * @param JobResponseBase $val The labelsAndPoliciesEvaluationJobs
+    *
+    * @return DataClassificationService
+    */
+    public function setLabelsAndPoliciesEvaluationJobs($val)
+    {
+		$this->_propDict["labelsAndPoliciesEvaluationJobs"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the classifyText
      *
      * @return array The classifyText
@@ -135,6 +303,62 @@ class DataClassificationService extends Entity
     public function setClassifyFile($val)
     {
 		$this->_propDict["classifyFile"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the sensitivityLabels
+     *
+     * @return array The sensitivityLabels
+     */
+    public function getSensitivityLabels()
+    {
+        if (array_key_exists("sensitivityLabels", $this->_propDict)) {
+           return $this->_propDict["sensitivityLabels"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the sensitivityLabels
+    *
+    * @param SensitivityLabel $val The sensitivityLabels
+    *
+    * @return DataClassificationService
+    */
+    public function setSensitivityLabels($val)
+    {
+		$this->_propDict["sensitivityLabels"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the exactMatchUploadAgents
+     *
+     * @return array The exactMatchUploadAgents
+     */
+    public function getExactMatchUploadAgents()
+    {
+        if (array_key_exists("exactMatchUploadAgents", $this->_propDict)) {
+           return $this->_propDict["exactMatchUploadAgents"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the exactMatchUploadAgents
+    *
+    * @param ExactMatchUploadAgent $val The exactMatchUploadAgents
+    *
+    * @return DataClassificationService
+    */
+    public function setExactMatchUploadAgents($val)
+    {
+		$this->_propDict["exactMatchUploadAgents"] = $val;
         return $this;
     }
     

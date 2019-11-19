@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * OrgContact class
@@ -26,57 +26,31 @@ namespace Microsoft\Graph\Model;
 */
 class OrgContact extends DirectoryObject
 {
-    /**
-    * Gets the businessPhones
-    *
-    * @return string The businessPhones
-    */
-    public function getBusinessPhones()
+
+     /** 
+     * Gets the addresses
+     *
+     * @return array The addresses
+     */
+    public function getAddresses()
     {
-        if (array_key_exists("businessPhones", $this->_propDict)) {
-            return $this->_propDict["businessPhones"];
+        if (array_key_exists("addresses", $this->_propDict)) {
+           return $this->_propDict["addresses"];
         } else {
             return null;
         }
     }
     
-    /**
-    * Sets the businessPhones
+    /** 
+    * Sets the addresses
     *
-    * @param string $val The businessPhones
-    *
-    * @return OrgContact
-    */
-    public function setBusinessPhones($val)
-    {
-        $this->_propDict["businessPhones"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the city
-    *
-    * @return string The city
-    */
-    public function getCity()
-    {
-        if (array_key_exists("city", $this->_propDict)) {
-            return $this->_propDict["city"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the city
-    *
-    * @param string $val The city
+    * @param PhysicalOfficeAddress $val The addresses
     *
     * @return OrgContact
     */
-    public function setCity($val)
+    public function setAddresses($val)
     {
-        $this->_propDict["city"] = $val;
+		$this->_propDict["addresses"] = $val;
         return $this;
     }
     
@@ -104,33 +78,6 @@ class OrgContact extends DirectoryObject
     public function setCompanyName($val)
     {
         $this->_propDict["companyName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the country
-    *
-    * @return string The country
-    */
-    public function getCountry()
-    {
-        if (array_key_exists("country", $this->_propDict)) {
-            return $this->_propDict["country"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the country
-    *
-    * @param string $val The country
-    *
-    * @return OrgContact
-    */
-    public function setCountry($val)
-    {
-        $this->_propDict["country"] = $val;
         return $this;
     }
     
@@ -297,33 +244,6 @@ class OrgContact extends DirectoryObject
     }
     
     /**
-    * Gets the mobilePhone
-    *
-    * @return string The mobilePhone
-    */
-    public function getMobilePhone()
-    {
-        if (array_key_exists("mobilePhone", $this->_propDict)) {
-            return $this->_propDict["mobilePhone"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the mobilePhone
-    *
-    * @param string $val The mobilePhone
-    *
-    * @return OrgContact
-    */
-    public function setMobilePhone($val)
-    {
-        $this->_propDict["mobilePhone"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the onPremisesSyncEnabled
     *
     * @return bool The onPremisesSyncEnabled
@@ -409,57 +329,31 @@ class OrgContact extends DirectoryObject
         return $this;
     }
     
-    /**
-    * Gets the officeLocation
-    *
-    * @return string The officeLocation
-    */
-    public function getOfficeLocation()
+
+     /** 
+     * Gets the phones
+     *
+     * @return array The phones
+     */
+    public function getPhones()
     {
-        if (array_key_exists("officeLocation", $this->_propDict)) {
-            return $this->_propDict["officeLocation"];
+        if (array_key_exists("phones", $this->_propDict)) {
+           return $this->_propDict["phones"];
         } else {
             return null;
         }
     }
     
-    /**
-    * Sets the officeLocation
+    /** 
+    * Sets the phones
     *
-    * @param string $val The officeLocation
-    *
-    * @return OrgContact
-    */
-    public function setOfficeLocation($val)
-    {
-        $this->_propDict["officeLocation"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the postalCode
-    *
-    * @return string The postalCode
-    */
-    public function getPostalCode()
-    {
-        if (array_key_exists("postalCode", $this->_propDict)) {
-            return $this->_propDict["postalCode"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the postalCode
-    *
-    * @param string $val The postalCode
+    * @param Phone $val The phones
     *
     * @return OrgContact
     */
-    public function setPostalCode($val)
+    public function setPhones($val)
     {
-        $this->_propDict["postalCode"] = $val;
+		$this->_propDict["phones"] = $val;
         return $this;
     }
     
@@ -487,60 +381,6 @@ class OrgContact extends DirectoryObject
     public function setProxyAddresses($val)
     {
         $this->_propDict["proxyAddresses"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the state
-    *
-    * @return string The state
-    */
-    public function getState()
-    {
-        if (array_key_exists("state", $this->_propDict)) {
-            return $this->_propDict["state"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the state
-    *
-    * @param string $val The state
-    *
-    * @return OrgContact
-    */
-    public function setState($val)
-    {
-        $this->_propDict["state"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the streetAddress
-    *
-    * @return string The streetAddress
-    */
-    public function getStreetAddress()
-    {
-        if (array_key_exists("streetAddress", $this->_propDict)) {
-            return $this->_propDict["streetAddress"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the streetAddress
-    *
-    * @param string $val The streetAddress
-    *
-    * @return OrgContact
-    */
-    public function setStreetAddress($val)
-    {
-        $this->_propDict["streetAddress"] = $val;
         return $this;
     }
     
@@ -579,7 +419,7 @@ class OrgContact extends DirectoryObject
     public function getManager()
     {
         if (array_key_exists("manager", $this->_propDict)) {
-            if (is_a($this->_propDict["manager"], "Microsoft\Graph\Model\DirectoryObject")) {
+            if (is_a($this->_propDict["manager"], "Microsoft\Graph\Beta\Model\DirectoryObject")) {
                 return $this->_propDict["manager"];
             } else {
                 $this->_propDict["manager"] = new DirectoryObject($this->_propDict["manager"]);

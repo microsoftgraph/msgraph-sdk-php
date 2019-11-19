@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * WorkbookTable class
@@ -81,6 +81,35 @@ class WorkbookTable extends Entity
     public function setHighlightLastColumn($val)
     {
         $this->_propDict["highlightLastColumn"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the legacyId
+    * Legacy Id used in older Excle clients. The value of the identifier remains the same even when the table is renamed. This property should be interpreted as an opaque string value and should not be parsed to any other type. Read-only.
+    *
+    * @return string The legacyId
+    */
+    public function getLegacyId()
+    {
+        if (array_key_exists("legacyId", $this->_propDict)) {
+            return $this->_propDict["legacyId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the legacyId
+    * Legacy Id used in older Excle clients. The value of the identifier remains the same even when the table is renamed. This property should be interpreted as an opaque string value and should not be parsed to any other type. Read-only.
+    *
+    * @param string $val The legacyId
+    *
+    * @return WorkbookTable
+    */
+    public function setLegacyId($val)
+    {
+        $this->_propDict["legacyId"] = $val;
         return $this;
     }
     
@@ -356,7 +385,7 @@ class WorkbookTable extends Entity
     public function getSort()
     {
         if (array_key_exists("sort", $this->_propDict)) {
-            if (is_a($this->_propDict["sort"], "Microsoft\Graph\Model\WorkbookTableSort")) {
+            if (is_a($this->_propDict["sort"], "Microsoft\Graph\Beta\Model\WorkbookTableSort")) {
                 return $this->_propDict["sort"];
             } else {
                 $this->_propDict["sort"] = new WorkbookTableSort($this->_propDict["sort"]);
@@ -389,7 +418,7 @@ class WorkbookTable extends Entity
     public function getWorksheet()
     {
         if (array_key_exists("worksheet", $this->_propDict)) {
-            if (is_a($this->_propDict["worksheet"], "Microsoft\Graph\Model\WorkbookWorksheet")) {
+            if (is_a($this->_propDict["worksheet"], "Microsoft\Graph\Beta\Model\WorkbookWorksheet")) {
                 return $this->_propDict["worksheet"];
             } else {
                 $this->_propDict["worksheet"] = new WorkbookWorksheet($this->_propDict["worksheet"]);

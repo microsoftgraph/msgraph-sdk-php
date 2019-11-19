@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 use Microsoft\Graph\Core\Enum;
 
@@ -33,4 +33,7 @@ class EndpointType extends Enum
     */
     const GRAPHDEFAULT = "default";
     const VOICEMAIL = "voicemail";
+    const SKYPE_FOR_BUSINESS = "skypeForBusiness";
+    const SKYPE_FOR_BUSINESS_VOIP_PHONE = "skypeForBusinessVoipPhone";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

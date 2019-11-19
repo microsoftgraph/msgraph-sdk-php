@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * RecordingInfo class
 *
@@ -27,33 +27,33 @@ class RecordingInfo extends Entity
 {
 
     /**
-    * Gets the status
+    * Gets the recordingStatus
     *
-    * @return RecordingStatus The status
+    * @return RecordingStatus The recordingStatus
     */
-    public function getStatus()
+    public function getRecordingStatus()
     {
-        if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Microsoft\Graph\Model\RecordingStatus")) {
-                return $this->_propDict["status"];
+        if (array_key_exists("recordingStatus", $this->_propDict)) {
+            if (is_a($this->_propDict["recordingStatus"], "Microsoft\Graph\Beta\Model\RecordingStatus")) {
+                return $this->_propDict["recordingStatus"];
             } else {
-                $this->_propDict["status"] = new RecordingStatus($this->_propDict["status"]);
-                return $this->_propDict["status"];
+                $this->_propDict["recordingStatus"] = new RecordingStatus($this->_propDict["recordingStatus"]);
+                return $this->_propDict["recordingStatus"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the status
+    * Sets the recordingStatus
     *
-    * @param RecordingStatus $val The value to assign to the status
+    * @param RecordingStatus $val The value to assign to the recordingStatus
     *
     * @return RecordingInfo The RecordingInfo
     */
-    public function setStatus($val)
+    public function setRecordingStatus($val)
     {
-        $this->_propDict["status"] = $val;
+        $this->_propDict["recordingStatus"] = $val;
          return $this;
     }
 
@@ -65,7 +65,7 @@ class RecordingInfo extends Entity
     public function getInitiatedBy()
     {
         if (array_key_exists("initiatedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["initiatedBy"], "Microsoft\Graph\Model\ParticipantInfo")) {
+            if (is_a($this->_propDict["initiatedBy"], "Microsoft\Graph\Beta\Model\ParticipantInfo")) {
                 return $this->_propDict["initiatedBy"];
             } else {
                 $this->_propDict["initiatedBy"] = new ParticipantInfo($this->_propDict["initiatedBy"]);

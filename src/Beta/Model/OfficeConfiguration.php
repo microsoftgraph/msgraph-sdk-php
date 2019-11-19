@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * OfficeConfiguration class
@@ -62,7 +62,7 @@ class OfficeConfiguration extends Entity
     public function getTenantUserCheckinSummary()
     {
         if (array_key_exists("tenantUserCheckinSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["tenantUserCheckinSummary"], "Microsoft\Graph\Model\OfficeUserCheckinSummary")) {
+            if (is_a($this->_propDict["tenantUserCheckinSummary"], "Microsoft\Graph\Beta\Model\OfficeUserCheckinSummary")) {
                 return $this->_propDict["tenantUserCheckinSummary"];
             } else {
                 $this->_propDict["tenantUserCheckinSummary"] = new OfficeUserCheckinSummary($this->_propDict["tenantUserCheckinSummary"]);

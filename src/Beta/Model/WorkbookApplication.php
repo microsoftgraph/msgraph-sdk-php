@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * WorkbookApplication class
@@ -28,6 +28,7 @@ class WorkbookApplication extends Entity
 {
     /**
     * Gets the calculationMode
+    * Returns the calculation mode used in the workbook. Possible values are: Automatic, AutomaticExceptTables, Manual.
     *
     * @return string The calculationMode
     */
@@ -42,6 +43,7 @@ class WorkbookApplication extends Entity
     
     /**
     * Sets the calculationMode
+    * Returns the calculation mode used in the workbook. Possible values are: Automatic, AutomaticExceptTables, Manual.
     *
     * @param string $val The calculationMode
     *

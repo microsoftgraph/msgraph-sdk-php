@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 /**
 * CallRoute class
 *
@@ -34,7 +34,7 @@ class CallRoute extends Entity
     public function getRoutingType()
     {
         if (array_key_exists("routingType", $this->_propDict)) {
-            if (is_a($this->_propDict["routingType"], "Microsoft\Graph\Model\RoutingType")) {
+            if (is_a($this->_propDict["routingType"], "Microsoft\Graph\Beta\Model\RoutingType")) {
                 return $this->_propDict["routingType"];
             } else {
                 $this->_propDict["routingType"] = new RoutingType($this->_propDict["routingType"]);
@@ -65,7 +65,7 @@ class CallRoute extends Entity
     public function getOriginal()
     {
         if (array_key_exists("original", $this->_propDict)) {
-            if (is_a($this->_propDict["original"], "Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["original"], "Microsoft\Graph\Beta\Model\IdentitySet")) {
                 return $this->_propDict["original"];
             } else {
                 $this->_propDict["original"] = new IdentitySet($this->_propDict["original"]);
@@ -96,7 +96,7 @@ class CallRoute extends Entity
     public function getFinal()
     {
         if (array_key_exists("final", $this->_propDict)) {
-            if (is_a($this->_propDict["final"], "Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["final"], "Microsoft\Graph\Beta\Model\IdentitySet")) {
                 return $this->_propDict["final"];
             } else {
                 $this->_propDict["final"] = new IdentitySet($this->_propDict["final"]);

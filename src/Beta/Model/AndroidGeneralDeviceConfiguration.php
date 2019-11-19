@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * AndroidGeneralDeviceConfiguration class
@@ -326,7 +326,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     public function getCompliantAppListType()
     {
         if (array_key_exists("compliantAppListType", $this->_propDict)) {
-            if (is_a($this->_propDict["compliantAppListType"], "Microsoft\Graph\Model\AppListType")) {
+            if (is_a($this->_propDict["compliantAppListType"], "Microsoft\Graph\Beta\Model\AppListType")) {
                 return $this->_propDict["compliantAppListType"];
             } else {
                 $this->_propDict["compliantAppListType"] = new AppListType($this->_propDict["compliantAppListType"]);
@@ -788,7 +788,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordSignInFailureCountBeforeFactoryReset
-    * Number of sign in failures allowed before factory reset. Valid values 4 to 11
+    * Number of sign in failures allowed before factory reset. Valid values 1 to 16
     *
     * @return int The passwordSignInFailureCountBeforeFactoryReset
     */
@@ -803,7 +803,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordSignInFailureCountBeforeFactoryReset
-    * Number of sign in failures allowed before factory reset. Valid values 4 to 11
+    * Number of sign in failures allowed before factory reset. Valid values 1 to 16
     *
     * @param int $val The passwordSignInFailureCountBeforeFactoryReset
     *
@@ -824,7 +824,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     public function getPasswordRequiredType()
     {
         if (array_key_exists("passwordRequiredType", $this->_propDict)) {
-            if (is_a($this->_propDict["passwordRequiredType"], "Microsoft\Graph\Model\AndroidRequiredPasswordType")) {
+            if (is_a($this->_propDict["passwordRequiredType"], "Microsoft\Graph\Beta\Model\AndroidRequiredPasswordType")) {
                 return $this->_propDict["passwordRequiredType"];
             } else {
                 $this->_propDict["passwordRequiredType"] = new AndroidRequiredPasswordType($this->_propDict["passwordRequiredType"]);
@@ -1292,7 +1292,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     public function getWebBrowserCookieSettings()
     {
         if (array_key_exists("webBrowserCookieSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["webBrowserCookieSettings"], "Microsoft\Graph\Model\WebBrowserCookieSettings")) {
+            if (is_a($this->_propDict["webBrowserCookieSettings"], "Microsoft\Graph\Beta\Model\WebBrowserCookieSettings")) {
                 return $this->_propDict["webBrowserCookieSettings"];
             } else {
                 $this->_propDict["webBrowserCookieSettings"] = new WebBrowserCookieSettings($this->_propDict["webBrowserCookieSettings"]);

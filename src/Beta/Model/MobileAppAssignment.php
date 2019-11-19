@@ -12,7 +12,7 @@
 * @version   GIT: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\Beta\Model;
 
 /**
 * MobileAppAssignment class
@@ -35,7 +35,7 @@ class MobileAppAssignment extends Entity
     public function getIntent()
     {
         if (array_key_exists("intent", $this->_propDict)) {
-            if (is_a($this->_propDict["intent"], "Microsoft\Graph\Model\InstallIntent")) {
+            if (is_a($this->_propDict["intent"], "Microsoft\Graph\Beta\Model\InstallIntent")) {
                 return $this->_propDict["intent"];
             } else {
                 $this->_propDict["intent"] = new InstallIntent($this->_propDict["intent"]);
@@ -68,7 +68,7 @@ class MobileAppAssignment extends Entity
     public function getTarget()
     {
         if (array_key_exists("target", $this->_propDict)) {
-            if (is_a($this->_propDict["target"], "Microsoft\Graph\Model\DeviceAndAppManagementAssignmentTarget")) {
+            if (is_a($this->_propDict["target"], "Microsoft\Graph\Beta\Model\DeviceAndAppManagementAssignmentTarget")) {
                 return $this->_propDict["target"];
             } else {
                 $this->_propDict["target"] = new DeviceAndAppManagementAssignmentTarget($this->_propDict["target"]);
@@ -101,7 +101,7 @@ class MobileAppAssignment extends Entity
     public function getSettings()
     {
         if (array_key_exists("settings", $this->_propDict)) {
-            if (is_a($this->_propDict["settings"], "Microsoft\Graph\Model\MobileAppAssignmentSettings")) {
+            if (is_a($this->_propDict["settings"], "Microsoft\Graph\Beta\Model\MobileAppAssignmentSettings")) {
                 return $this->_propDict["settings"];
             } else {
                 $this->_propDict["settings"] = new MobileAppAssignmentSettings($this->_propDict["settings"]);
@@ -122,6 +122,68 @@ class MobileAppAssignment extends Entity
     public function setSettings($val)
     {
         $this->_propDict["settings"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the source
+    * The resource type which is the source for the assignment.
+    *
+    * @return DeviceAndAppManagementAssignmentSource The source
+    */
+    public function getSource()
+    {
+        if (array_key_exists("source", $this->_propDict)) {
+            if (is_a($this->_propDict["source"], "Microsoft\Graph\Beta\Model\DeviceAndAppManagementAssignmentSource")) {
+                return $this->_propDict["source"];
+            } else {
+                $this->_propDict["source"] = new DeviceAndAppManagementAssignmentSource($this->_propDict["source"]);
+                return $this->_propDict["source"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the source
+    * The resource type which is the source for the assignment.
+    *
+    * @param DeviceAndAppManagementAssignmentSource $val The source
+    *
+    * @return MobileAppAssignment
+    */
+    public function setSource($val)
+    {
+        $this->_propDict["source"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the sourceId
+    * The identifier of the source of the assignment.
+    *
+    * @return string The sourceId
+    */
+    public function getSourceId()
+    {
+        if (array_key_exists("sourceId", $this->_propDict)) {
+            return $this->_propDict["sourceId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the sourceId
+    * The identifier of the source of the assignment.
+    *
+    * @param string $val The sourceId
+    *
+    * @return MobileAppAssignment
+    */
+    public function setSourceId($val)
+    {
+        $this->_propDict["sourceId"] = $val;
         return $this;
     }
     
