@@ -596,6 +596,35 @@ class Group extends DirectoryObject
     }
     
     /**
+    * Gets the securityIdentifier
+    * Security identifier of the group, used in Windows scenarios. Returned by default.
+    *
+    * @return string The securityIdentifier
+    */
+    public function getSecurityIdentifier()
+    {
+        if (array_key_exists("securityIdentifier", $this->_propDict)) {
+            return $this->_propDict["securityIdentifier"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the securityIdentifier
+    * Security identifier of the group, used in Windows scenarios. Returned by default.
+    *
+    * @param string $val The securityIdentifier
+    *
+    * @return Group
+    */
+    public function setSecurityIdentifier($val)
+    {
+        $this->_propDict["securityIdentifier"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the visibility
     * Specifies the visibility of an Office 365 group. Possible values are: Private, Public, or Hiddenmembership; blank values are treated as public.  See group visibility options to learn more.Visibility can be set only when a group is created; it is not editable.Visibility is supported only for unified groups; it is not supported for security groups. Returned by default.
     *

@@ -326,6 +326,35 @@ class Device extends DirectoryObject
     }
     
     /**
+    * Gets the mdmAppId
+    * Application identifier used to register device into MDM. Read-only. Supports $filter.
+    *
+    * @return string The mdmAppId
+    */
+    public function getMdmAppId()
+    {
+        if (array_key_exists("mdmAppId", $this->_propDict)) {
+            return $this->_propDict["mdmAppId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the mdmAppId
+    * Application identifier used to register device into MDM. Read-only. Supports $filter.
+    *
+    * @param string $val The mdmAppId
+    *
+    * @return Device
+    */
+    public function setMdmAppId($val)
+    {
+        $this->_propDict["mdmAppId"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the onPremisesLastSyncDateTime
     * The last time at which the object was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z' Read-only.
     *
