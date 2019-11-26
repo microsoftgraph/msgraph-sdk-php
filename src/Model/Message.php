@@ -549,6 +549,37 @@ class Message extends OutlookItem
     }
     
     /**
+    * Gets the conversationIndex
+    *
+    * @return \GuzzleHttp\Psr7\Stream The conversationIndex
+    */
+    public function getConversationIndex()
+    {
+        if (array_key_exists("conversationIndex", $this->_propDict)) {
+            if (is_a($this->_propDict["conversationIndex"], "\GuzzleHttp\Psr7\Stream")) {
+                return $this->_propDict["conversationIndex"];
+            } else {
+                $this->_propDict["conversationIndex"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["conversationIndex"]);
+                return $this->_propDict["conversationIndex"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the conversationIndex
+    *
+    * @param \GuzzleHttp\Psr7\Stream $val The conversationIndex
+    *
+    * @return Message
+    */
+    public function setConversationIndex($val)
+    {
+        $this->_propDict["conversationIndex"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the uniqueBody
     * The part of the body of the message that is unique to the current message. uniqueBody is not returned by default but can be retrieved for a given message by use of the ?$select=uniqueBody query. It can be in HTML or text format.
     *

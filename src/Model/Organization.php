@@ -206,6 +206,33 @@ class Organization extends DirectoryObject
     }
     
     /**
+    * Gets the creationType
+    *
+    * @return string The creationType
+    */
+    public function getCreationType()
+    {
+        if (array_key_exists("creationType", $this->_propDict)) {
+            return $this->_propDict["creationType"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the creationType
+    *
+    * @param string $val The creationType
+    *
+    * @return Organization
+    */
+    public function setCreationType($val)
+    {
+        $this->_propDict["creationType"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the displayName
     * The display name for the tenant.
     *
