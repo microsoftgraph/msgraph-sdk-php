@@ -145,7 +145,7 @@ class GraphResponse
             $values = $result['value'];
 
             //Check that this is an object array instead of a value called "value"
-            if ($values && is_array($values)) {
+            if (is_array($values)) {
                 foreach ($values as $obj) {
                     $objArray[] = new $class($obj);
                 }
