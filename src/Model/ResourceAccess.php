@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* ResourceReference File
+* ResourceAccess File
 * PHP version 7
 *
 * @category  Library
@@ -14,7 +14,7 @@
 */
 namespace Microsoft\Graph\Model;
 /**
-* ResourceReference class
+* ResourceAccess class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -23,39 +23,11 @@ namespace Microsoft\Graph\Model;
 * @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-class ResourceReference extends Entity
+class ResourceAccess extends Entity
 {
     /**
-    * Gets the webUrl
-    * A URL leading to the referenced item.
-    *
-    * @return string The webUrl
-    */
-    public function getWebUrl()
-    {
-        if (array_key_exists("webUrl", $this->_propDict)) {
-            return $this->_propDict["webUrl"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the webUrl
-    * A URL leading to the referenced item.
-    *
-    * @param string $val The value of the webUrl
-    *
-    * @return ResourceReference
-    */
-    public function setWebUrl($val)
-    {
-        $this->_propDict["webUrl"] = $val;
-        return $this;
-    }
-    /**
     * Gets the id
-    * The item's unique identifier.
+    * The unique identifier for one of the oauth2PermissionScopes or appRole instances that the resource application exposes.
     *
     * @return string The id
     */
@@ -70,11 +42,11 @@ class ResourceReference extends Entity
 
     /**
     * Sets the id
-    * The item's unique identifier.
+    * The unique identifier for one of the oauth2PermissionScopes or appRole instances that the resource application exposes.
     *
     * @param string $val The value of the id
     *
-    * @return ResourceReference
+    * @return ResourceAccess
     */
     public function setId($val)
     {
@@ -83,7 +55,7 @@ class ResourceReference extends Entity
     }
     /**
     * Gets the type
-    * A string value that can be used to classify the item, such as 'microsoft.graph.driveItem'
+    * Specifies whether the id property references an oauth2PermissionScopes or an appRole. Possible values are 'scope' or 'role'.
     *
     * @return string The type
     */
@@ -98,11 +70,11 @@ class ResourceReference extends Entity
 
     /**
     * Sets the type
-    * A string value that can be used to classify the item, such as 'microsoft.graph.driveItem'
+    * Specifies whether the id property references an oauth2PermissionScopes or an appRole. Possible values are 'scope' or 'role'.
     *
     * @param string $val The value of the type
     *
-    * @return ResourceReference
+    * @return ResourceAccess
     */
     public function setType($val)
     {

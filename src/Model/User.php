@@ -290,6 +290,33 @@ class User extends DirectoryObject
     }
     
     /**
+    * Gets the creationType
+    *
+    * @return string The creationType
+    */
+    public function getCreationType()
+    {
+        if (array_key_exists("creationType", $this->_propDict)) {
+            return $this->_propDict["creationType"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the creationType
+    *
+    * @param string $val The creationType
+    *
+    * @return User
+    */
+    public function setCreationType($val)
+    {
+        $this->_propDict["creationType"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the department
     * The name for the department in which the user works. Supports $filter.
     *
@@ -2751,6 +2778,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the insights
+    * Read-only. Nullable.
     *
     * @return OfficeGraphInsights The insights
     */
@@ -2769,6 +2797,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the insights
+    * Read-only. Nullable.
     *
     * @param OfficeGraphInsights $val The insights
     *

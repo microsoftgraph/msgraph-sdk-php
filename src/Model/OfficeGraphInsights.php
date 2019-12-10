@@ -29,6 +29,7 @@ class OfficeGraphInsights extends Entity
 
      /** 
      * Gets the trending
+    * Calculated relationship identifying trending documents. Trending documents can be stored in OneDrive or in SharePoint sites.
      *
      * @return array The trending
      */
@@ -43,6 +44,7 @@ class OfficeGraphInsights extends Entity
     
     /** 
     * Sets the trending
+    * Calculated relationship identifying trending documents. Trending documents can be stored in OneDrive or in SharePoint sites.
     *
     * @param Trending $val The trending
     *
@@ -57,6 +59,7 @@ class OfficeGraphInsights extends Entity
 
      /** 
      * Gets the shared
+    * Calculated relationship identifying documents shared with a user. Documents can be shared as email attachments or as OneDrive for Business links sent in emails.
      *
      * @return array The shared
      */
@@ -71,6 +74,7 @@ class OfficeGraphInsights extends Entity
     
     /** 
     * Sets the shared
+    * Calculated relationship identifying documents shared with a user. Documents can be shared as email attachments or as OneDrive for Business links sent in emails.
     *
     * @param SharedInsight $val The shared
     *
@@ -85,6 +89,7 @@ class OfficeGraphInsights extends Entity
 
      /** 
      * Gets the used
+    * Calculated relationship identifying documents viewed and modified by a user. Includes documents the user used in OneDrive for Business, SharePoint, opened as email attachments, and as link attachments from sources like Box, DropBox and Google Drive.
      *
      * @return array The used
      */
@@ -99,6 +104,7 @@ class OfficeGraphInsights extends Entity
     
     /** 
     * Sets the used
+    * Calculated relationship identifying documents viewed and modified by a user. Includes documents the user used in OneDrive for Business, SharePoint, opened as email attachments, and as link attachments from sources like Box, DropBox and Google Drive.
     *
     * @param UsedInsight $val The used
     *

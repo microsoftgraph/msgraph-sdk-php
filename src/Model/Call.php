@@ -253,7 +253,7 @@ class Call extends Entity
     /** 
     * Sets the targets
     *
-    * @param ParticipantInfo $val The targets
+    * @param InvitationParticipantInfo $val The targets
     *
     * @return Call
     */
@@ -350,6 +350,37 @@ class Call extends Entity
     public function setChatInfo($val)
     {
         $this->_propDict["chatInfo"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the callOptions
+    *
+    * @return CallOptions The callOptions
+    */
+    public function getCallOptions()
+    {
+        if (array_key_exists("callOptions", $this->_propDict)) {
+            if (is_a($this->_propDict["callOptions"], "Microsoft\Graph\Model\CallOptions")) {
+                return $this->_propDict["callOptions"];
+            } else {
+                $this->_propDict["callOptions"] = new CallOptions($this->_propDict["callOptions"]);
+                return $this->_propDict["callOptions"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the callOptions
+    *
+    * @param CallOptions $val The callOptions
+    *
+    * @return Call
+    */
+    public function setCallOptions($val)
+    {
+        $this->_propDict["callOptions"] = $val;
         return $this;
     }
     

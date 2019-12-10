@@ -23,8 +23,39 @@ namespace Microsoft\Graph\Model;
 * @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-class InvitationParticipantInfo extends ParticipantInfo
+class InvitationParticipantInfo extends Entity
 {
+
+    /**
+    * Gets the identity
+    *
+    * @return IdentitySet The identity
+    */
+    public function getIdentity()
+    {
+        if (array_key_exists("identity", $this->_propDict)) {
+            if (is_a($this->_propDict["identity"], "Microsoft\Graph\Model\IdentitySet")) {
+                return $this->_propDict["identity"];
+            } else {
+                $this->_propDict["identity"] = new IdentitySet($this->_propDict["identity"]);
+                return $this->_propDict["identity"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the identity
+    *
+    * @param IdentitySet $val The value to assign to the identity
+    *
+    * @return InvitationParticipantInfo The InvitationParticipantInfo
+    */
+    public function setIdentity($val)
+    {
+        $this->_propDict["identity"] = $val;
+         return $this;
+    }
     /**
     * Gets the replacesCallId
     *

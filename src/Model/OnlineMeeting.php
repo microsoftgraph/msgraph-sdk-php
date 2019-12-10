@@ -120,29 +120,29 @@ class OnlineMeeting extends Entity
     }
     
     /**
-    * Gets the joinUrl
+    * Gets the joinWebUrl
     *
-    * @return string The joinUrl
+    * @return string The joinWebUrl
     */
-    public function getJoinUrl()
+    public function getJoinWebUrl()
     {
-        if (array_key_exists("joinUrl", $this->_propDict)) {
-            return $this->_propDict["joinUrl"];
+        if (array_key_exists("joinWebUrl", $this->_propDict)) {
+            return $this->_propDict["joinWebUrl"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the joinUrl
+    * Sets the joinWebUrl
     *
-    * @param string $val The joinUrl
+    * @param string $val The joinWebUrl
     *
     * @return OnlineMeeting
     */
-    public function setJoinUrl($val)
+    public function setJoinWebUrl($val)
     {
-        $this->_propDict["joinUrl"] = $val;
+        $this->_propDict["joinWebUrl"] = $val;
         return $this;
     }
     
