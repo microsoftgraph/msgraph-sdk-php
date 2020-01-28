@@ -141,21 +141,19 @@ class GraphResponse
 
         //If more than one object is returned
         if (array_key_exists('value', $result)) {
-            $objArray = array();
             $values = $result['value'];
 
             //Check that this is an object array instead of a value called "value"
-            if ($values && is_array($values)) {
+            if (is_array($values)) {
+                $objArray = array();
                 foreach ($values as $obj) {
                     $objArray[] = new $class($obj);
                 }
-            } else {
-                return new $class($result);
+                return $objArray;
             }
-            return $objArray;
-        } else {
-            return new $class($result);
         }
+
+        return new $class($result);
     }
 
     /**
