@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* GiphyRatingType File
+* OutgoingCallOptions File
 * PHP version 7
 *
 * @category  Library
@@ -13,11 +13,8 @@
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Model;
-
-use Microsoft\Graph\Core\Enum;
-
 /**
-* GiphyRatingType class
+* OutgoingCallOptions class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -26,12 +23,15 @@ use Microsoft\Graph\Core\Enum;
 * @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-class GiphyRatingType extends Enum
+class OutgoingCallOptions extends CallOptions
 {
     /**
-    * The Enum GiphyRatingType
+    * Set the @odata.type since this type is immediately descended from an abstract
+    * type that is referenced as the type in an entity.
     */
-    const STRICT = "strict";
-    const MODERATE = "moderate";
-    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
+    public function __construct()
+    {
+        $this->setODataType("#microsoft.graph.outgoingCallOptions");
+    }
+
 }

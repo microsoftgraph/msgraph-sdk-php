@@ -28,6 +28,7 @@ class ParticipantInfo extends Entity
 
     /**
     * Gets the identity
+    * The identitySet associated with this participant. Read-only.
     *
     * @return IdentitySet The identity
     */
@@ -46,6 +47,7 @@ class ParticipantInfo extends Entity
 
     /**
     * Sets the identity
+    * The identitySet associated with this participant. Read-only.
     *
     * @param IdentitySet $val The value to assign to the identity
     *
@@ -58,6 +60,7 @@ class ParticipantInfo extends Entity
     }
     /**
     * Gets the region
+    * The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location. Read-only.
     *
     * @return string The region
     */
@@ -72,6 +75,7 @@ class ParticipantInfo extends Entity
 
     /**
     * Sets the region
+    * The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location. Read-only.
     *
     * @param string $val The value of the region
     *
@@ -84,6 +88,7 @@ class ParticipantInfo extends Entity
     }
     /**
     * Gets the languageId
+    * The language culture string. Read-only.
     *
     * @return string The languageId
     */
@@ -98,6 +103,7 @@ class ParticipantInfo extends Entity
 
     /**
     * Sets the languageId
+    * The language culture string. Read-only.
     *
     * @param string $val The value of the languageId
     *

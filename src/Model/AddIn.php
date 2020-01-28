@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* ResourceReference File
+* AddIn File
 * PHP version 7
 *
 * @category  Library
@@ -14,7 +14,7 @@
 */
 namespace Microsoft\Graph\Model;
 /**
-* ResourceReference class
+* AddIn class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -23,39 +23,10 @@ namespace Microsoft\Graph\Model;
 * @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-class ResourceReference extends Entity
+class AddIn extends Entity
 {
     /**
-    * Gets the webUrl
-    * A URL leading to the referenced item.
-    *
-    * @return string The webUrl
-    */
-    public function getWebUrl()
-    {
-        if (array_key_exists("webUrl", $this->_propDict)) {
-            return $this->_propDict["webUrl"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the webUrl
-    * A URL leading to the referenced item.
-    *
-    * @param string $val The value of the webUrl
-    *
-    * @return ResourceReference
-    */
-    public function setWebUrl($val)
-    {
-        $this->_propDict["webUrl"] = $val;
-        return $this;
-    }
-    /**
     * Gets the id
-    * The item's unique identifier.
     *
     * @return string The id
     */
@@ -70,11 +41,10 @@ class ResourceReference extends Entity
 
     /**
     * Sets the id
-    * The item's unique identifier.
     *
     * @param string $val The value of the id
     *
-    * @return ResourceReference
+    * @return AddIn
     */
     public function setId($val)
     {
@@ -83,7 +53,6 @@ class ResourceReference extends Entity
     }
     /**
     * Gets the type
-    * A string value that can be used to classify the item, such as 'microsoft.graph.driveItem'
     *
     * @return string The type
     */
@@ -98,15 +67,45 @@ class ResourceReference extends Entity
 
     /**
     * Sets the type
-    * A string value that can be used to classify the item, such as 'microsoft.graph.driveItem'
     *
     * @param string $val The value of the type
     *
-    * @return ResourceReference
+    * @return AddIn
     */
     public function setType($val)
     {
         $this->_propDict["type"] = $val;
         return $this;
+    }
+
+    /**
+    * Gets the addInProperties
+    *
+    * @return KeyValue The addInProperties
+    */
+    public function getAddInProperties()
+    {
+        if (array_key_exists("properties", $this->_propDict)) {
+            if (is_a($this->_propDict["properties"], "Microsoft\Graph\Model\KeyValue")) {
+                return $this->_propDict["properties"];
+            } else {
+                $this->_propDict["properties"] = new KeyValue($this->_propDict["properties"]);
+                return $this->_propDict["properties"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the addInProperties
+    *
+    * @param KeyValue $val The value to assign to the properties
+    *
+    * @return AddIn The AddIn
+    */
+    public function setAddInProperties($val)
+    {
+        $this->_propDict["properties"] = $val;
+         return $this;
     }
 }

@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* WorkbookApplication File
+* PublicClientApplication File
 * PHP version 7
 *
 * @category  Library
@@ -13,9 +13,8 @@
 * @link      https://graph.microsoft.io/
 */
 namespace Microsoft\Graph\Model;
-
 /**
-* WorkbookApplication class
+* PublicClientApplication class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,35 +23,34 @@ namespace Microsoft\Graph\Model;
 * @version   Release: 1.4.0
 * @link      https://graph.microsoft.io/
 */
-class WorkbookApplication extends Entity
+class PublicClientApplication extends Entity
 {
     /**
-    * Gets the calculationMode
-    * Returns the calculation mode used in the workbook. Possible values are: Automatic, AutomaticExceptTables, Manual.
+    * Gets the redirectUris
+    * Specifies the URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.
     *
-    * @return string The calculationMode
+    * @return string The redirectUris
     */
-    public function getCalculationMode()
+    public function getRedirectUris()
     {
-        if (array_key_exists("calculationMode", $this->_propDict)) {
-            return $this->_propDict["calculationMode"];
+        if (array_key_exists("redirectUris", $this->_propDict)) {
+            return $this->_propDict["redirectUris"];
         } else {
             return null;
         }
     }
-    
+
     /**
-    * Sets the calculationMode
-    * Returns the calculation mode used in the workbook. Possible values are: Automatic, AutomaticExceptTables, Manual.
+    * Sets the redirectUris
+    * Specifies the URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.
     *
-    * @param string $val The calculationMode
+    * @param string $val The value of the redirectUris
     *
-    * @return WorkbookApplication
+    * @return PublicClientApplication
     */
-    public function setCalculationMode($val)
+    public function setRedirectUris($val)
     {
-        $this->_propDict["calculationMode"] = $val;
+        $this->_propDict["redirectUris"] = $val;
         return $this;
     }
-    
 }

@@ -230,6 +230,60 @@ class Domain extends Entity
     }
     
     /**
+    * Gets the manufacturer
+    *
+    * @return string The manufacturer
+    */
+    public function getManufacturer()
+    {
+        if (array_key_exists("manufacturer", $this->_propDict)) {
+            return $this->_propDict["manufacturer"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the manufacturer
+    *
+    * @param string $val The manufacturer
+    *
+    * @return Domain
+    */
+    public function setManufacturer($val)
+    {
+        $this->_propDict["manufacturer"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the model
+    *
+    * @return string The model
+    */
+    public function getModel()
+    {
+        if (array_key_exists("model", $this->_propDict)) {
+            return $this->_propDict["model"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the model
+    *
+    * @param string $val The model
+    *
+    * @return Domain
+    */
+    public function setModel($val)
+    {
+        $this->_propDict["model"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the passwordNotificationWindowInDays
     * Specifies the number of days before a user receives notification that their password will expire. If the property is not set, a default value of 14 days will be used.
     *

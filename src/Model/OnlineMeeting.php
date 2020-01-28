@@ -28,6 +28,7 @@ class OnlineMeeting extends Entity
 {
     /**
     * Gets the creationDateTime
+    * The meeting creation time in UTC. Read-only.
     *
     * @return \DateTime The creationDateTime
     */
@@ -46,6 +47,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Sets the creationDateTime
+    * The meeting creation time in UTC. Read-only.
     *
     * @param \DateTime $val The creationDateTime
     *
@@ -59,6 +61,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Gets the startDateTime
+    * The meeting start time in UTC.
     *
     * @return \DateTime The startDateTime
     */
@@ -77,6 +80,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Sets the startDateTime
+    * The meeting start time in UTC.
     *
     * @param \DateTime $val The startDateTime
     *
@@ -90,6 +94,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Gets the endDateTime
+    * The meeting end time in UTC.
     *
     * @return \DateTime The endDateTime
     */
@@ -108,6 +113,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Sets the endDateTime
+    * The meeting end time in UTC.
     *
     * @param \DateTime $val The endDateTime
     *
@@ -120,34 +126,37 @@ class OnlineMeeting extends Entity
     }
     
     /**
-    * Gets the joinUrl
+    * Gets the joinWebUrl
+    * The join URL of the online meeting. Read-only.
     *
-    * @return string The joinUrl
+    * @return string The joinWebUrl
     */
-    public function getJoinUrl()
+    public function getJoinWebUrl()
     {
-        if (array_key_exists("joinUrl", $this->_propDict)) {
-            return $this->_propDict["joinUrl"];
+        if (array_key_exists("joinWebUrl", $this->_propDict)) {
+            return $this->_propDict["joinWebUrl"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the joinUrl
+    * Sets the joinWebUrl
+    * The join URL of the online meeting. Read-only.
     *
-    * @param string $val The joinUrl
+    * @param string $val The joinWebUrl
     *
     * @return OnlineMeeting
     */
-    public function setJoinUrl($val)
+    public function setJoinWebUrl($val)
     {
-        $this->_propDict["joinUrl"] = $val;
+        $this->_propDict["joinWebUrl"] = $val;
         return $this;
     }
     
     /**
     * Gets the subject
+    * The subject of the online meeting.
     *
     * @return string The subject
     */
@@ -162,6 +171,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Sets the subject
+    * The subject of the online meeting.
     *
     * @param string $val The subject
     *
@@ -175,6 +185,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Gets the participants
+    * The participants associated with the online meeting.  This includes the organizer and the attendees.
     *
     * @return MeetingParticipants The participants
     */
@@ -193,6 +204,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Sets the participants
+    * The participants associated with the online meeting.  This includes the organizer and the attendees.
     *
     * @param MeetingParticipants $val The participants
     *
@@ -206,6 +218,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Gets the audioConferencing
+    * The phone access (dial-in) information for an online meeting. Read-only.
     *
     * @return AudioConferencing The audioConferencing
     */
@@ -224,6 +237,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Sets the audioConferencing
+    * The phone access (dial-in) information for an online meeting. Read-only.
     *
     * @param AudioConferencing $val The audioConferencing
     *
@@ -237,6 +251,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Gets the chatInfo
+    * The chat information associated with this online meeting.
     *
     * @return ChatInfo The chatInfo
     */
@@ -255,6 +270,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Sets the chatInfo
+    * The chat information associated with this online meeting.
     *
     * @param ChatInfo $val The chatInfo
     *
@@ -268,6 +284,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Gets the videoTeleconferenceId
+    * The video teleconferencing ID. Read-only.
     *
     * @return string The videoTeleconferenceId
     */
@@ -282,6 +299,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Sets the videoTeleconferenceId
+    * The video teleconferencing ID. Read-only.
     *
     * @param string $val The videoTeleconferenceId
     *

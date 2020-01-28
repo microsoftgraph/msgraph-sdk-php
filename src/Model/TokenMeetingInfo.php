@@ -36,6 +36,7 @@ class TokenMeetingInfo extends MeetingInfo
 
     /**
     * Gets the token
+    * The token used to join the call.
     *
     * @return string The token
     */
@@ -50,6 +51,7 @@ class TokenMeetingInfo extends MeetingInfo
 
     /**
     * Sets the token
+    * The token used to join the call.
     *
     * @param string $val The value of the token
     *
