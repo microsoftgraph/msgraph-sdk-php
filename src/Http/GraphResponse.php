@@ -1,17 +1,17 @@
-<?php 
+<?php
 /**
-* Copyright (c) Microsoft Corporation.  All Rights Reserved.  
-* Licensed under the MIT License.  See License in the project root 
+* Copyright (c) Microsoft Corporation.  All Rights Reserved.
+* Licensed under the MIT License.  See License in the project root
 * for license information.
-* 
+*
 * HttpResponse File
 * PHP version 7
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2016 Microsoft Corporation
+* @copyright 2020 Microsoft Corporation
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 0.1.0
+* @version   GIT: 1.13.0
 * @link      https://graph.microsoft.io/
 */
 
@@ -37,7 +37,7 @@ class GraphResponse
     */
     private $_body;
     /**
-    * The body of the response, 
+    * The body of the response,
     * decoded into an array
     *
     * @var array(string)
