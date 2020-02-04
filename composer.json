@@ -2,7 +2,7 @@
 	"name": "microsoft/microsoft-graph",
 	"type": "library",
 	"description": "The Microsoft Graph SDK for PHP",
-	"homepage": "https://graph.microsoft.io/en-us/",
+	"homepage": "https://developer.microsoft.com/en-us/graph",
 	"license": "MIT",
 	"authors": [
 		{
