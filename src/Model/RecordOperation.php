@@ -28,6 +28,7 @@ class RecordOperation extends CommsOperation
 {
     /**
     * Gets the recordingLocation
+    * The location where the recording is located.
     *
     * @return string The recordingLocation
     */
@@ -42,6 +43,7 @@ class RecordOperation extends CommsOperation
     
     /**
     * Sets the recordingLocation
+    * The location where the recording is located.
     *
     * @param string $val The recordingLocation
     *
@@ -55,6 +57,7 @@ class RecordOperation extends CommsOperation
     
     /**
     * Gets the recordingAccessToken
+    * The access token required to retrieve the recording.
     *
     * @return string The recordingAccessToken
     */
@@ -69,6 +72,7 @@ class RecordOperation extends CommsOperation
     
     /**
     * Sets the recordingAccessToken
+    * The access token required to retrieve the recording.
     *
     * @param string $val The recordingAccessToken
     *

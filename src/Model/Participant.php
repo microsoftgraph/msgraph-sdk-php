@@ -28,6 +28,7 @@ class Participant extends Entity
 {
     /**
     * Gets the info
+    * The participant of the participant.
     *
     * @return ParticipantInfo The info
     */
@@ -46,6 +47,7 @@ class Participant extends Entity
     
     /**
     * Sets the info
+    * The participant of the participant.
     *
     * @param ParticipantInfo $val The info
     *
@@ -60,6 +62,7 @@ class Participant extends Entity
 
      /** 
      * Gets the mediaStreams
+    * The list of media streams.
      *
      * @return array The mediaStreams
      */
@@ -74,6 +77,7 @@ class Participant extends Entity
     
     /** 
     * Sets the mediaStreams
+    * The list of media streams.
     *
     * @param MediaStream $val The mediaStreams
     *
@@ -87,6 +91,7 @@ class Participant extends Entity
     
     /**
     * Gets the isMuted
+    * true if the participant is muted (client or server muted).
     *
     * @return bool The isMuted
     */
@@ -101,6 +106,7 @@ class Participant extends Entity
     
     /**
     * Sets the isMuted
+    * true if the participant is muted (client or server muted).
     *
     * @param bool $val The isMuted
     *
@@ -114,6 +120,7 @@ class Participant extends Entity
     
     /**
     * Gets the isInLobby
+    * true if the participant is in lobby.
     *
     * @return bool The isInLobby
     */
@@ -128,6 +135,7 @@ class Participant extends Entity
     
     /**
     * Sets the isInLobby
+    * true if the participant is in lobby.
     *
     * @param bool $val The isInLobby
     *
