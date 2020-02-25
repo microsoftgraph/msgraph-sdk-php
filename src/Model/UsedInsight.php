@@ -28,6 +28,7 @@ class UsedInsight extends Entity
 {
     /**
     * Gets the lastUsed
+    * Information about when the item was last viewed and modified by the user. Read only.
     *
     * @return UsageDetails The lastUsed
     */
@@ -46,6 +47,7 @@ class UsedInsight extends Entity
     
     /**
     * Sets the lastUsed
+    * Information about when the item was last viewed and modified by the user. Read only.
     *
     * @param UsageDetails $val The lastUsed
     *
@@ -59,6 +61,7 @@ class UsedInsight extends Entity
     
     /**
     * Gets the resourceVisualization
+    * Properties that you can use to visualize the document in your experience. Read-only
     *
     * @return ResourceVisualization The resourceVisualization
     */
@@ -77,6 +80,7 @@ class UsedInsight extends Entity
     
     /**
     * Sets the resourceVisualization
+    * Properties that you can use to visualize the document in your experience. Read-only
     *
     * @param ResourceVisualization $val The resourceVisualization
     *
@@ -90,6 +94,7 @@ class UsedInsight extends Entity
     
     /**
     * Gets the resourceReference
+    * Reference properties of the used document, such as the url and type of the document. Read-only
     *
     * @return ResourceReference The resourceReference
     */
@@ -108,6 +113,7 @@ class UsedInsight extends Entity
     
     /**
     * Sets the resourceReference
+    * Reference properties of the used document, such as the url and type of the document. Read-only
     *
     * @param ResourceReference $val The resourceReference
     *
@@ -121,6 +127,7 @@ class UsedInsight extends Entity
     
     /**
     * Gets the resource
+    * Used for navigating to the item that was used. For file attachments, the type is fileAttachment. For linked attachments, the type is driveItem.
     *
     * @return Entity The resource
     */
@@ -139,6 +146,7 @@ class UsedInsight extends Entity
     
     /**
     * Sets the resource
+    * Used for navigating to the item that was used. For file attachments, the type is fileAttachment. For linked attachments, the type is driveItem.
     *
     * @param Entity $val The resource
     *

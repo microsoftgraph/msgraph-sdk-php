@@ -28,6 +28,7 @@ class CommsNotifications extends Entity
 
     /**
     * Gets the value
+    * The notification of a change in the resource.
     *
     * @return CommsNotification The value
     */
@@ -46,6 +47,7 @@ class CommsNotifications extends Entity
 
     /**
     * Sets the value
+    * The notification of a change in the resource.
     *
     * @param CommsNotification $val The value to assign to the value
     *
