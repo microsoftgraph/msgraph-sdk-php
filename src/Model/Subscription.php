@@ -28,7 +28,7 @@ class Subscription extends Entity
 {
     /**
     * Gets the resource
-    * Required. Specifies the resource that will be monitored for changes. Do not include the base URL (https://graph.microsoft.com/v1.0/).
+    * Required. Specifies the resource that will be monitored for changes. Do not include the base URL (https://graph.microsoft.com/v1.0/). See the possible resource path values for each supported resource.
     *
     * @return string The resource
     */
@@ -43,7 +43,7 @@ class Subscription extends Entity
     
     /**
     * Sets the resource
-    * Required. Specifies the resource that will be monitored for changes. Do not include the base URL (https://graph.microsoft.com/v1.0/).
+    * Required. Specifies the resource that will be monitored for changes. Do not include the base URL (https://graph.microsoft.com/v1.0/). See the possible resource path values for each supported resource.
     *
     * @param string $val The resource
     *

@@ -27,6 +27,7 @@ class InsightIdentity extends Entity
 {
     /**
     * Gets the displayName
+    * The display name of the user who shared the item.
     *
     * @return string The displayName
     */
@@ -41,6 +42,7 @@ class InsightIdentity extends Entity
 
     /**
     * Sets the displayName
+    * The display name of the user who shared the item.
     *
     * @param string $val The value of the displayName
     *
@@ -53,6 +55,7 @@ class InsightIdentity extends Entity
     }
     /**
     * Gets the id
+    * The id of the user who shared the item.
     *
     * @return string The id
     */
@@ -67,6 +70,7 @@ class InsightIdentity extends Entity
 
     /**
     * Sets the id
+    * The id of the user who shared the item.
     *
     * @param string $val The value of the id
     *
@@ -79,6 +83,7 @@ class InsightIdentity extends Entity
     }
     /**
     * Gets the address
+    * The email address of the user who shared the item.
     *
     * @return string The address
     */
@@ -93,6 +98,7 @@ class InsightIdentity extends Entity
 
     /**
     * Sets the address
+    * The email address of the user who shared the item.
     *
     * @param string $val The value of the address
     *

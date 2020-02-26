@@ -28,6 +28,7 @@ class MeetingParticipantInfo extends Entity
 
     /**
     * Gets the identity
+    * Identity information of the participant.
     *
     * @return IdentitySet The identity
     */
@@ -46,6 +47,7 @@ class MeetingParticipantInfo extends Entity
 
     /**
     * Sets the identity
+    * Identity information of the participant.
     *
     * @param IdentitySet $val The value to assign to the identity
     *
@@ -58,6 +60,7 @@ class MeetingParticipantInfo extends Entity
     }
     /**
     * Gets the upn
+    * User principal name of the participant.
     *
     * @return string The upn
     */
@@ -72,6 +75,7 @@ class MeetingParticipantInfo extends Entity
 
     /**
     * Sets the upn
+    * User principal name of the participant.
     *
     * @param string $val The value of the upn
     *

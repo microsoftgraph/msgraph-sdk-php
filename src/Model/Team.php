@@ -246,6 +246,39 @@ class Team extends Entity
         return $this;
     }
     
+    /**
+    * Gets the primaryChannel
+    * The general channel for the team.
+    *
+    * @return Channel The primaryChannel
+    */
+    public function getPrimaryChannel()
+    {
+        if (array_key_exists("primaryChannel", $this->_propDict)) {
+            if (is_a($this->_propDict["primaryChannel"], "Microsoft\Graph\Model\Channel")) {
+                return $this->_propDict["primaryChannel"];
+            } else {
+                $this->_propDict["primaryChannel"] = new Channel($this->_propDict["primaryChannel"]);
+                return $this->_propDict["primaryChannel"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the primaryChannel
+    * The general channel for the team.
+    *
+    * @param Channel $val The primaryChannel
+    *
+    * @return Team
+    */
+    public function setPrimaryChannel($val)
+    {
+        $this->_propDict["primaryChannel"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the installedApps
