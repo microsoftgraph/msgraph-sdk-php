@@ -28,6 +28,7 @@ class CommsNotification extends Entity
 
     /**
     * Gets the changeType
+    * Possible values are: created, updated, deleted.
     *
     * @return ChangeType The changeType
     */
@@ -46,6 +47,7 @@ class CommsNotification extends Entity
 
     /**
     * Sets the changeType
+    * Possible values are: created, updated, deleted.
     *
     * @param ChangeType $val The value to assign to the changeType
     *
@@ -58,6 +60,7 @@ class CommsNotification extends Entity
     }
     /**
     * Gets the resourceUrl
+    * URI of the resource that was changed.
     *
     * @return string The resourceUrl
     */
@@ -72,6 +75,7 @@ class CommsNotification extends Entity
 
     /**
     * Sets the resourceUrl
+    * URI of the resource that was changed.
     *
     * @param string $val The value of the resourceUrl
     *

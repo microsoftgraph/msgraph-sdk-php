@@ -53,6 +53,7 @@ class AudioConferencing extends Entity
     }
     /**
     * Gets the tollNumber
+    * The toll number that connects to the Audio Conference Provider.
     *
     * @return string The tollNumber
     */
@@ -67,6 +68,7 @@ class AudioConferencing extends Entity
 
     /**
     * Sets the tollNumber
+    * The toll number that connects to the Audio Conference Provider.
     *
     * @param string $val The value of the tollNumber
     *
@@ -79,6 +81,7 @@ class AudioConferencing extends Entity
     }
     /**
     * Gets the tollFreeNumber
+    * The toll-free number that connects to the Audio Conference Provider.
     *
     * @return string The tollFreeNumber
     */
@@ -93,6 +96,7 @@ class AudioConferencing extends Entity
 
     /**
     * Sets the tollFreeNumber
+    * The toll-free number that connects to the Audio Conference Provider.
     *
     * @param string $val The value of the tollFreeNumber
     *
@@ -105,6 +109,7 @@ class AudioConferencing extends Entity
     }
     /**
     * Gets the dialinUrl
+    * A URL to the externally-accessible web page that contains dial-in information.
     *
     * @return string The dialinUrl
     */
@@ -119,6 +124,7 @@ class AudioConferencing extends Entity
 
     /**
     * Sets the dialinUrl
+    * A URL to the externally-accessible web page that contains dial-in information.
     *
     * @param string $val The value of the dialinUrl
     *

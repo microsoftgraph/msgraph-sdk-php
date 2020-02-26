@@ -29,6 +29,7 @@ class InviteParticipantsOperation extends CommsOperation
 
      /** 
      * Gets the participants
+    * The participants to invite.
      *
      * @return array The participants
      */
@@ -43,6 +44,7 @@ class InviteParticipantsOperation extends CommsOperation
     
     /** 
     * Sets the participants
+    * The participants to invite.
     *
     * @param InvitationParticipantInfo $val The participants
     *

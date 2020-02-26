@@ -27,6 +27,7 @@ class TeamClassSettings extends Entity
 {
     /**
     * Gets the notifyGuardiansAboutAssignments
+    * If set to true, enables sending of weekly assignments digest emails to parents/guardians, provided the tenant admin has enabled the setting globally.
     *
     * @return bool The notifyGuardiansAboutAssignments
     */
@@ -41,6 +42,7 @@ class TeamClassSettings extends Entity
 
     /**
     * Sets the notifyGuardiansAboutAssignments
+    * If set to true, enables sending of weekly assignments digest emails to parents/guardians, provided the tenant admin has enabled the setting globally.
     *
     * @param bool $val The value of the notifyGuardiansAboutAssignments
     *
