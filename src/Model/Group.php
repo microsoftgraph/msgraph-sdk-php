@@ -355,6 +355,33 @@ class Group extends DirectoryObject
     }
     
     /**
+    * Gets the onPremisesDomainName
+    *
+    * @return string The onPremisesDomainName
+    */
+    public function getOnPremisesDomainName()
+    {
+        if (array_key_exists("onPremisesDomainName", $this->_propDict)) {
+            return $this->_propDict["onPremisesDomainName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the onPremisesDomainName
+    *
+    * @param string $val The onPremisesDomainName
+    *
+    * @return Group
+    */
+    public function setOnPremisesDomainName($val)
+    {
+        $this->_propDict["onPremisesDomainName"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the onPremisesLastSyncDateTime
     * Indicates the last time at which the group was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only. Supports $filter.
     *
@@ -387,6 +414,33 @@ class Group extends DirectoryObject
         return $this;
     }
     
+    /**
+    * Gets the onPremisesNetBiosName
+    *
+    * @return string The onPremisesNetBiosName
+    */
+    public function getOnPremisesNetBiosName()
+    {
+        if (array_key_exists("onPremisesNetBiosName", $this->_propDict)) {
+            return $this->_propDict["onPremisesNetBiosName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the onPremisesNetBiosName
+    *
+    * @param string $val The onPremisesNetBiosName
+    *
+    * @return Group
+    */
+    public function setOnPremisesNetBiosName($val)
+    {
+        $this->_propDict["onPremisesNetBiosName"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the onPremisesProvisioningErrors
@@ -414,6 +468,33 @@ class Group extends DirectoryObject
     public function setOnPremisesProvisioningErrors($val)
     {
 		$this->_propDict["onPremisesProvisioningErrors"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the onPremisesSamAccountName
+    *
+    * @return string The onPremisesSamAccountName
+    */
+    public function getOnPremisesSamAccountName()
+    {
+        if (array_key_exists("onPremisesSamAccountName", $this->_propDict)) {
+            return $this->_propDict["onPremisesSamAccountName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the onPremisesSamAccountName
+    *
+    * @param string $val The onPremisesSamAccountName
+    *
+    * @return Group
+    */
+    public function setOnPremisesSamAccountName($val)
+    {
+        $this->_propDict["onPremisesSamAccountName"] = $val;
         return $this;
     }
     
@@ -766,6 +847,64 @@ class Group extends DirectoryObject
     public function setUnseenCount($val)
     {
         $this->_propDict["unseenCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the hideFromOutlookClients
+    * True if the group is not displayed in Outlook clients, such as Outlook for Windows and Outlook on the web; otherwise, false. Default value is false. Returned only on $select.
+    *
+    * @return bool The hideFromOutlookClients
+    */
+    public function getHideFromOutlookClients()
+    {
+        if (array_key_exists("hideFromOutlookClients", $this->_propDict)) {
+            return $this->_propDict["hideFromOutlookClients"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the hideFromOutlookClients
+    * True if the group is not displayed in Outlook clients, such as Outlook for Windows and Outlook on the web; otherwise, false. Default value is false. Returned only on $select.
+    *
+    * @param bool $val The hideFromOutlookClients
+    *
+    * @return Group
+    */
+    public function setHideFromOutlookClients($val)
+    {
+        $this->_propDict["hideFromOutlookClients"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the hideFromAddressLists
+    * True if the group is not displayed in certain parts of the Outlook UI: the Address Book, address lists for selecting message recipients, and the Browse Groups dialog for searching groups; otherwise, false. Default value is false. Returned only on $select.
+    *
+    * @return bool The hideFromAddressLists
+    */
+    public function getHideFromAddressLists()
+    {
+        if (array_key_exists("hideFromAddressLists", $this->_propDict)) {
+            return $this->_propDict["hideFromAddressLists"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the hideFromAddressLists
+    * True if the group is not displayed in certain parts of the Outlook UI: the Address Book, address lists for selecting message recipients, and the Browse Groups dialog for searching groups; otherwise, false. Default value is false. Returned only on $select.
+    *
+    * @param bool $val The hideFromAddressLists
+    *
+    * @return Group
+    */
+    public function setHideFromAddressLists($val)
+    {
+        $this->_propDict["hideFromAddressLists"] = boolval($val);
         return $this;
     }
     
