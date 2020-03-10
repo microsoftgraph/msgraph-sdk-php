@@ -612,7 +612,7 @@ class Event extends OutlookItem
     
     /**
     * Gets the isOrganizer
-    * Set to true if the message sender is also the organizer.
+    * Set to true if the calendar owner (specified by the owner property of the calendar) is the organizer of the event (specified by the organizer property of the event). This also applies if a delegate organized the event on behalf of the owner.
     *
     * @return bool The isOrganizer
     */
@@ -627,7 +627,7 @@ class Event extends OutlookItem
     
     /**
     * Sets the isOrganizer
-    * Set to true if the message sender is also the organizer.
+    * Set to true if the calendar owner (specified by the owner property of the calendar) is the organizer of the event (specified by the organizer property of the event). This also applies if a delegate organized the event on behalf of the owner.
     *
     * @param bool $val The isOrganizer
     *
