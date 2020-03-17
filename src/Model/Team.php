@@ -216,6 +216,37 @@ class Team extends Entity
         return $this;
     }
     
+    /**
+    * Gets the schedule
+    *
+    * @return Schedule The schedule
+    */
+    public function getSchedule()
+    {
+        if (array_key_exists("schedule", $this->_propDict)) {
+            if (is_a($this->_propDict["schedule"], "Microsoft\Graph\Model\Schedule")) {
+                return $this->_propDict["schedule"];
+            } else {
+                $this->_propDict["schedule"] = new Schedule($this->_propDict["schedule"]);
+                return $this->_propDict["schedule"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the schedule
+    *
+    * @param Schedule $val The schedule
+    *
+    * @return Team
+    */
+    public function setSchedule($val)
+    {
+        $this->_propDict["schedule"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the channels
@@ -243,6 +274,39 @@ class Team extends Entity
     public function setChannels($val)
     {
 		$this->_propDict["channels"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the primaryChannel
+    * The general channel for the team.
+    *
+    * @return Channel The primaryChannel
+    */
+    public function getPrimaryChannel()
+    {
+        if (array_key_exists("primaryChannel", $this->_propDict)) {
+            if (is_a($this->_propDict["primaryChannel"], "Microsoft\Graph\Model\Channel")) {
+                return $this->_propDict["primaryChannel"];
+            } else {
+                $this->_propDict["primaryChannel"] = new Channel($this->_propDict["primaryChannel"]);
+                return $this->_propDict["primaryChannel"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the primaryChannel
+    * The general channel for the team.
+    *
+    * @param Channel $val The primaryChannel
+    *
+    * @return Team
+    */
+    public function setPrimaryChannel($val)
+    {
+        $this->_propDict["primaryChannel"] = $val;
         return $this;
     }
     

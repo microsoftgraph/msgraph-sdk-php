@@ -290,6 +290,35 @@ class User extends DirectoryObject
     }
     
     /**
+    * Gets the creationType
+    * Indicates whether the user account was created as a regular school or work account (null), an external account (Invitation), a local account for an Azure Active Directory B2C tenant (LocalAccount) or self-service sign-up using email verification (EmailVerified). Read-only.
+    *
+    * @return string The creationType
+    */
+    public function getCreationType()
+    {
+        if (array_key_exists("creationType", $this->_propDict)) {
+            return $this->_propDict["creationType"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the creationType
+    * Indicates whether the user account was created as a regular school or work account (null), an external account (Invitation), a local account for an Azure Active Directory B2C tenant (LocalAccount) or self-service sign-up using email verification (EmailVerified). Read-only.
+    *
+    * @param string $val The creationType
+    *
+    * @return User
+    */
+    public function setCreationType($val)
+    {
+        $this->_propDict["creationType"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the department
     * The name for the department in which the user works. Supports $filter.
     *
@@ -431,6 +460,36 @@ class User extends DirectoryObject
     public function setGivenName($val)
     {
         $this->_propDict["givenName"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the identities
+    * Represents the identities that can be used to sign in to this user account. An identity can be provided by Microsoft (also known as a local account), by organizations, or by social identity providers such as Facebook, Google, and Microsoft, and tied to a user account. May contain multiple items with the same signInType value. Supports $filter.
+     *
+     * @return array The identities
+     */
+    public function getIdentities()
+    {
+        if (array_key_exists("identities", $this->_propDict)) {
+           return $this->_propDict["identities"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the identities
+    * Represents the identities that can be used to sign in to this user account. An identity can be provided by Microsoft (also known as a local account), by organizations, or by social identity providers such as Facebook, Google, and Microsoft, and tied to a user account. May contain multiple items with the same signInType value. Supports $filter.
+    *
+    * @param ObjectIdentity $val The identities
+    *
+    * @return User
+    */
+    public function setIdentities($val)
+    {
+		$this->_propDict["identities"] = $val;
         return $this;
     }
     
@@ -2751,6 +2810,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the insights
+    * Read-only. Nullable.
     *
     * @return OfficeGraphInsights The insights
     */
@@ -2769,6 +2829,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the insights
+    * Read-only. Nullable.
     *
     * @param OfficeGraphInsights $val The insights
     *
@@ -2920,7 +2981,7 @@ class User extends DirectoryObject
     /** 
     * Sets the joinedTeams
     *
-    * @param Group $val The joinedTeams
+    * @param Team $val The joinedTeams
     *
     * @return User
     */
