@@ -46,10 +46,6 @@ steps:
     targetType: inline
     pwsh: true
     script: |
-      # Gets all env variables
-      #Get-Childitem env:
-      #gci env: | sort name
-
       $repoModelsDir = "$env:BUILD_SOURCESDIRECTORY/msgraph-sdk-php/src/Model/"
       Write-Host "Path to repo model directory: $repoModelsDir"
       Write-Host "##vso[task.setvariable variable=REPOMODELSDIR]$repoModelsDir"
@@ -81,11 +77,6 @@ steps:
     targetType: inline
     workingDirectory: '$(Build.SourcesDirectory)/msgraph-sdk-php'
     script: |
-      
-      # Gets all env variables
-      Get-Childitem env:
-      gci env: | sort name
-
       Write-Host "The new branch name will be: $env:BRANCHNAME"
       git checkout -B $env:BRANCHNAME | Write-Host
 
@@ -178,4 +169,4 @@ steps:
 
 # References
 # [0] https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/hosted?view=azure-devops#use-a-microsoft-hosted-agent
-# [1] https://github.com/actions/virtual-environments/blob/master/images/linux/Ubuntu1804-README.md
+# [1] hhttps://github.com/actions/virtual-environments/blob/master/images/win/Windows2019-Readme.md
