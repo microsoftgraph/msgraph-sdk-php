@@ -26,10 +26,11 @@ class GraphTestBase
 
     public function getAuthenticatedClient()
     {
-        if ($this->graphClient == null) 
+        if ($this->graphClient == null)
         {
             $this->graphClient = new Graph();
             $this->graphClient->setAccessToken($this->getAccessToken());
+            //$this->graphClient->setProxyPort("localhost:8888"); // Need for fiddler.
         }
     }
 
@@ -46,6 +47,8 @@ class GraphTestBase
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $body);
         curl_setopt($ch, CURLOPT_FAILONERROR, 0);
+        //curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0); // turns off SSL check,
+        //curl_setopt($ch, CURLOPT_PROXY, "127.0.0.1:8888"); // need for fiddler + auth
         curl_setopt($ch, CURLOPT_HTTPHEADER, array($this->contentType, 'Content-Length: ' . strlen($body)));
 
         $result = curl_exec ($ch);

@@ -9,9 +9,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright 2019 Microsoft Corporation
+* @copyright 2020 Microsoft Corporation
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.12.0
+* @version   GIT: 1.13.0
 * @link      https://graph.microsoft.io/
 */
 
@@ -24,7 +24,7 @@ final class GraphConstants
     const REST_ENDPOINT = "https://graph.microsoft.com/";
 
     // Define HTTP request constants
-    const SDK_VERSION = "1.12.0";
+    const SDK_VERSION = "1.13.0";
 
     // Define error constants
     const MAX_PAGE_SIZE = 999;

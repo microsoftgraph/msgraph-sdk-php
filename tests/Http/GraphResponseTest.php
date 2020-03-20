@@ -20,12 +20,14 @@ class GraphResponseTest extends TestCase
         $body = json_encode($this->responseBody);
         $multiBody = json_encode(array('value' => array('1' => array('givenName' => 'Bob'), '2' => array('givenName' => 'Drew'))));
         $valueBody = json_encode(array('value' => 'Bob Barker'));
+        $emptyMultiBody = json_encode(array('value' => array()));
 
         $mock = new GuzzleHttp\Handler\MockHandler([
             new GuzzleHttp\Psr7\Response(200, ['foo' => 'bar'], $body),
             new GuzzleHttp\Psr7\Response(200, ['foo' => 'bar'], $body),
             new GuzzleHttp\Psr7\Response(200, ['foo' => 'bar'], $multiBody),
             new GuzzleHttp\Psr7\Response(200, ['foo' => 'bar'], $valueBody),
+            new GuzzleHttp\Psr7\Response(200, ['foo' => 'bar'], $emptyMultiBody),
         ]);
         $handler = GuzzleHttp\HandlerStack::create($mock);
         $this->client = new GuzzleHttp\Client(['handler' => $handler]);
@@ -120,6 +122,9 @@ class GraphResponseTest extends TestCase
         $this->request->execute($this->client);
         $hosts = $this->request->setReturnType(Model\User::class)->execute($this->client);
 
+        $this->assertInternalType('array', $hosts);
+        $this->assertContainsOnlyInstancesOf(Model\User::class, $hosts);
+        $this->assertSame(array_values($hosts), $hosts);
         $this->assertEquals(2, count($hosts));
         $this->assertEquals("Bob", $hosts[0]->getGivenName());
     }
@@ -132,5 +137,16 @@ class GraphResponseTest extends TestCase
         $response = $this->request->setReturnType(Model\User::class)->execute($this->client);
 
         $this->assertInstanceOf(Model\User::class, $response);
+    }
+
+    public function testGetZeroMultipleObjects()
+    {
+        $this->request->execute($this->client);
+        $this->request->execute($this->client);
+        $this->request->execute($this->client);
+        $this->request->execute($this->client);
+        $response = $this->request->setReturnType(Model\User::class)->execute($this->client);
+
+        $this->assertSame(array(), $response);
     }
 }
