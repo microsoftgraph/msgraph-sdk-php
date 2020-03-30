@@ -122,8 +122,8 @@ class SharingLink extends Entity
     */
     public function getWebUrl()
     {
-        if (array_key_exists("webUrl", $this->_propDict)) {
-            return $this->_propDict["webUrl"];
+        if (array_key_exists("link", $this->_propDict) && array_key_exists("webUrl", $this->_propDict["link"])) {
+            return $this->_propDict["link"]["webUrl"];
         } else {
             return null;
         }
