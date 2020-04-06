@@ -251,8 +251,6 @@ class GraphRequest
     *
     * @param mixed $client The client to use in the request
     *
-     * @throws GraphException if response is invalid
-     *
     * @return mixed object or array of objects
     *         of class $returnType
     */
