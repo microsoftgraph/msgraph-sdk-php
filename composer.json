@@ -22,7 +22,11 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"Microsoft\\Graph\\": "src/",
+			"Microsoft\\Graph\\": "src/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
 			"Microsoft\\Graph\\Test\\": "tests/Functional/"
 		}
 	}
