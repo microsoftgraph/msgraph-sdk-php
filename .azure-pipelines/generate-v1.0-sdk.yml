@@ -1,6 +1,10 @@
 # Copyright (c) Microsoft Corporation. All rights reserved.
 # Licensed under the MIT License.
 
+# This pipeline generates the v1.0 PHP model files using typewriter.exe.
+# This pipeline is triggered by the completion of clean metadata
+# publication pipeline.
+
 name: $(BuildDefinitionName)_$(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r)
 
 trigger: none # disable triggers based on commits.
@@ -17,11 +21,11 @@ resources:
     type: github
     endpoint: microsoftgraph
     name: microsoftgraph/msgraph-metadata
-    ref: master # 
+    ref: master
   pipelines:
   - pipeline: publishMetadata # This pipeline produces an metadata artifact that we need to validate.
     source: (v1.0 - 3) msgraph-publish-cleanmetadata
-    trigger: # TODO: validate that this pipeline triggers as expected.
+    trigger:
       branches:
       - master
 
@@ -81,16 +85,6 @@ steps:
       git checkout -B $env:BRANCHNAME | Write-Host
 
 - task: PowerShell@2
-  displayName: 'Git: set user config'
-  inputs:
-    targetType: inline
-    pwsh: true
-    workingDirectory: '$(Build.SourcesDirectory)/msgraph-sdk-php'
-    script: |
-      git config user.email "GraphTooling@service.microsoft.com"
-      git config user.name "Microsoft Graph DevX Tooling"
-
-- task: PowerShell@2
   displayName: 'Remove generated files from the repo'
   inputs:
     targetType: inline
@@ -100,13 +94,13 @@ steps:
       Write-Host "Removed the existing generated files in the repo." -ForegroundColor Green
 
 - task: PowerShell@2
-  displayName: 'Typewriter: generate v1.0 .NET files'
+  displayName: 'Typewriter: generate v1.0 PHP model files'
   inputs:
     targetType: filePath
     pwsh: true
     filePath: '$(Build.SourcesDirectory)/msgraph-metadata/scripts/runTypewriter.ps1'
     arguments: '-verbosity Info -metadata $(CLEANMETADATA) -output $(OUTPUTPATH) -generationMode Files -l PHP'
-    workingDirectory: '$(Build.SourcesDirectory)' # Set the root for a multi-repo pipeline. /s
+    workingDirectory: '$(Build.SourcesDirectory)' # Set the root for a multi-repo pipeline. /s is the actual dir name.
   enabled: true
 
 - task: PowerShell@2
@@ -126,8 +120,6 @@ steps:
     workingDirectory: '$(Build.SourcesDirectory)/msgraph-sdk-php'
     pwsh: true 
     script: |
-      $installDir = "c:\tools\php"
-      choco install composer --ia "/DEV=$installDir /PHP=$installDir"
       composer install # Adds dependencies to vendor.
       .\vendor\bin\phpunit --exclude-group functional
 
@@ -141,7 +133,7 @@ steps:
       Write-Host "About to add files....." -ForegroundColor Green
       git add . | Write-Host
       git commit -m "Update generated files with build $env:BUILD_BUILDID" | Write-Host
-      Write-Host "Added and commited generated files." -ForegroundColor Green
+      Write-Host "Added and committed generated files." -ForegroundColor Green
 
 - task: PowerShell@2
   displayName: 'Git: push updates'
