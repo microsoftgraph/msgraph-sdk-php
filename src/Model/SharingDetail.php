@@ -28,6 +28,7 @@ class SharingDetail extends Entity
 
     /**
     * Gets the sharedBy
+    * The user who shared the document.
     *
     * @return InsightIdentity The sharedBy
     */
@@ -46,6 +47,7 @@ class SharingDetail extends Entity
 
     /**
     * Sets the sharedBy
+    * The user who shared the document.
     *
     * @param InsightIdentity $val The value to assign to the sharedBy
     *
@@ -59,6 +61,7 @@ class SharingDetail extends Entity
 
     /**
     * Gets the sharedDateTime
+    * The date and time the file was last shared. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: 2014-01-01T00:00:00Z. Read-only.
     *
     * @return \DateTime The sharedDateTime
     */
@@ -77,6 +80,7 @@ class SharingDetail extends Entity
 
     /**
     * Sets the sharedDateTime
+    * The date and time the file was last shared. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: 2014-01-01T00:00:00Z. Read-only.
     *
     * @param \DateTime $val The value to assign to the sharedDateTime
     *
@@ -89,6 +93,7 @@ class SharingDetail extends Entity
     }
     /**
     * Gets the sharingSubject
+    * The subject with which the document was shared.
     *
     * @return string The sharingSubject
     */
@@ -103,6 +108,7 @@ class SharingDetail extends Entity
 
     /**
     * Sets the sharingSubject
+    * The subject with which the document was shared.
     *
     * @param string $val The value of the sharingSubject
     *
@@ -115,6 +121,7 @@ class SharingDetail extends Entity
     }
     /**
     * Gets the sharingType
+    * Determines the way the document was shared, can be by a 'Link', 'Attachment', 'Group', 'Site'.
     *
     * @return string The sharingType
     */
@@ -129,6 +136,7 @@ class SharingDetail extends Entity
 
     /**
     * Sets the sharingType
+    * Determines the way the document was shared, can be by a 'Link', 'Attachment', 'Group', 'Site'.
     *
     * @param string $val The value of the sharingType
     *

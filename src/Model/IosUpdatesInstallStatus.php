@@ -48,4 +48,5 @@ class IosUpdatesInstallStatus extends Enum
     const INSTALL_FAILED = "installFailed";
     const NOT_SUPPORTED_OPERATION = "notSupportedOperation";
     const SHARED_DEVICE_USER_LOGGED_IN_ERROR = "sharedDeviceUserLoggedInError";
+    const DEVICE_OS_HIGHER_THAN_DESIRED_OS_VERSION = "deviceOsHigherThanDesiredOsVersion";
 }

@@ -27,6 +27,7 @@ class ToneInfo extends Entity
 {
     /**
     * Gets the sequenceId
+    * An incremental identifier used for ordering DTMF events.
     *
     * @return int The sequenceId
     */
@@ -41,6 +42,7 @@ class ToneInfo extends Entity
 
     /**
     * Sets the sequenceId
+    * An incremental identifier used for ordering DTMF events.
     *
     * @param int $val The value of the sequenceId
     *
@@ -54,6 +56,7 @@ class ToneInfo extends Entity
 
     /**
     * Gets the tone
+    * Possible values are: tone0, tone1, tone2, tone3, tone4, tone5, tone6, tone7, tone8, tone9, star, pound
     *
     * @return Tone The tone
     */
@@ -72,6 +75,7 @@ class ToneInfo extends Entity
 
     /**
     * Sets the tone
+    * Possible values are: tone0, tone1, tone2, tone3, tone4, tone5, tone6, tone7, tone8, tone9, star, pound
     *
     * @param Tone $val The value to assign to the tone
     *

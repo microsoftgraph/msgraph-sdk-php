@@ -114,4 +114,30 @@ class DriveItemUploadableProperties extends Entity
         $this->_propDict["name"] = $val;
         return $this;
     }
+    /**
+    * Gets the fileSize
+    *
+    * @return int The fileSize
+    */
+    public function getFileSize()
+    {
+        if (array_key_exists("fileSize", $this->_propDict)) {
+            return $this->_propDict["fileSize"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the fileSize
+    *
+    * @param int $val The value of the fileSize
+    *
+    * @return DriveItemUploadableProperties
+    */
+    public function setFileSize($val)
+    {
+        $this->_propDict["fileSize"] = $val;
+        return $this;
+    }
 }

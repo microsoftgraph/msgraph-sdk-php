@@ -28,6 +28,34 @@ class Group extends DirectoryObject
 {
 
      /** 
+     * Gets the assignedLabels
+     *
+     * @return array The assignedLabels
+     */
+    public function getAssignedLabels()
+    {
+        if (array_key_exists("assignedLabels", $this->_propDict)) {
+           return $this->_propDict["assignedLabels"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the assignedLabels
+    *
+    * @param AssignedLabel $val The assignedLabels
+    *
+    * @return Group
+    */
+    public function setAssignedLabels($val)
+    {
+		$this->_propDict["assignedLabels"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the assignedLicenses
     * The licenses that are assigned to the group. Returned only on $select. Read-only.
      *
@@ -173,6 +201,37 @@ class Group extends DirectoryObject
     public function setDisplayName($val)
     {
         $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the expirationDateTime
+    *
+    * @return \DateTime The expirationDateTime
+    */
+    public function getExpirationDateTime()
+    {
+        if (array_key_exists("expirationDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["expirationDateTime"], "\DateTime")) {
+                return $this->_propDict["expirationDateTime"];
+            } else {
+                $this->_propDict["expirationDateTime"] = new \DateTime($this->_propDict["expirationDateTime"]);
+                return $this->_propDict["expirationDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the expirationDateTime
+    *
+    * @param \DateTime $val The expirationDateTime
+    *
+    * @return Group
+    */
+    public function setExpirationDateTime($val)
+    {
+        $this->_propDict["expirationDateTime"] = $val;
         return $this;
     }
     
@@ -355,6 +414,89 @@ class Group extends DirectoryObject
     }
     
     /**
+    * Gets the membershipRule
+    *
+    * @return string The membershipRule
+    */
+    public function getMembershipRule()
+    {
+        if (array_key_exists("membershipRule", $this->_propDict)) {
+            return $this->_propDict["membershipRule"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the membershipRule
+    *
+    * @param string $val The membershipRule
+    *
+    * @return Group
+    */
+    public function setMembershipRule($val)
+    {
+        $this->_propDict["membershipRule"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the membershipRuleProcessingState
+    *
+    * @return string The membershipRuleProcessingState
+    */
+    public function getMembershipRuleProcessingState()
+    {
+        if (array_key_exists("membershipRuleProcessingState", $this->_propDict)) {
+            return $this->_propDict["membershipRuleProcessingState"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the membershipRuleProcessingState
+    *
+    * @param string $val The membershipRuleProcessingState
+    *
+    * @return Group
+    */
+    public function setMembershipRuleProcessingState($val)
+    {
+        $this->_propDict["membershipRuleProcessingState"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the onPremisesDomainName
+    * Contains the on-premises domain FQDN, also called dnsDomainName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect.Returned by default. Read-only.
+    *
+    * @return string The onPremisesDomainName
+    */
+    public function getOnPremisesDomainName()
+    {
+        if (array_key_exists("onPremisesDomainName", $this->_propDict)) {
+            return $this->_propDict["onPremisesDomainName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the onPremisesDomainName
+    * Contains the on-premises domain FQDN, also called dnsDomainName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect.Returned by default. Read-only.
+    *
+    * @param string $val The onPremisesDomainName
+    *
+    * @return Group
+    */
+    public function setOnPremisesDomainName($val)
+    {
+        $this->_propDict["onPremisesDomainName"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the onPremisesLastSyncDateTime
     * Indicates the last time at which the group was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only. Supports $filter.
     *
@@ -387,6 +529,35 @@ class Group extends DirectoryObject
         return $this;
     }
     
+    /**
+    * Gets the onPremisesNetBiosName
+    * Contains the on-premises netBios name synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect.Returned by default. Read-only.
+    *
+    * @return string The onPremisesNetBiosName
+    */
+    public function getOnPremisesNetBiosName()
+    {
+        if (array_key_exists("onPremisesNetBiosName", $this->_propDict)) {
+            return $this->_propDict["onPremisesNetBiosName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the onPremisesNetBiosName
+    * Contains the on-premises netBios name synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect.Returned by default. Read-only.
+    *
+    * @param string $val The onPremisesNetBiosName
+    *
+    * @return Group
+    */
+    public function setOnPremisesNetBiosName($val)
+    {
+        $this->_propDict["onPremisesNetBiosName"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the onPremisesProvisioningErrors
@@ -414,6 +585,35 @@ class Group extends DirectoryObject
     public function setOnPremisesProvisioningErrors($val)
     {
 		$this->_propDict["onPremisesProvisioningErrors"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the onPremisesSamAccountName
+    * Contains the on-premises SAM account name synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect.Returned by default. Read-only.
+    *
+    * @return string The onPremisesSamAccountName
+    */
+    public function getOnPremisesSamAccountName()
+    {
+        if (array_key_exists("onPremisesSamAccountName", $this->_propDict)) {
+            return $this->_propDict["onPremisesSamAccountName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the onPremisesSamAccountName
+    * Contains the on-premises SAM account name synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect.Returned by default. Read-only.
+    *
+    * @param string $val The onPremisesSamAccountName
+    *
+    * @return Group
+    */
+    public function setOnPremisesSamAccountName($val)
+    {
+        $this->_propDict["onPremisesSamAccountName"] = $val;
         return $this;
     }
     
@@ -501,6 +701,33 @@ class Group extends DirectoryObject
     public function setPreferredDataLocation($val)
     {
         $this->_propDict["preferredDataLocation"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the preferredLanguage
+    *
+    * @return string The preferredLanguage
+    */
+    public function getPreferredLanguage()
+    {
+        if (array_key_exists("preferredLanguage", $this->_propDict)) {
+            return $this->_propDict["preferredLanguage"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the preferredLanguage
+    *
+    * @param string $val The preferredLanguage
+    *
+    * @return Group
+    */
+    public function setPreferredLanguage($val)
+    {
+        $this->_propDict["preferredLanguage"] = $val;
         return $this;
     }
     
@@ -621,6 +848,33 @@ class Group extends DirectoryObject
     public function setSecurityIdentifier($val)
     {
         $this->_propDict["securityIdentifier"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the theme
+    *
+    * @return string The theme
+    */
+    public function getTheme()
+    {
+        if (array_key_exists("theme", $this->_propDict)) {
+            return $this->_propDict["theme"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the theme
+    *
+    * @param string $val The theme
+    *
+    * @return Group
+    */
+    public function setTheme($val)
+    {
+        $this->_propDict["theme"] = $val;
         return $this;
     }
     
@@ -770,6 +1024,64 @@ class Group extends DirectoryObject
     }
     
     /**
+    * Gets the hideFromOutlookClients
+    * True if the group is not displayed in Outlook clients, such as Outlook for Windows and Outlook on the web; otherwise, false. Default value is false. Returned only on $select.
+    *
+    * @return bool The hideFromOutlookClients
+    */
+    public function getHideFromOutlookClients()
+    {
+        if (array_key_exists("hideFromOutlookClients", $this->_propDict)) {
+            return $this->_propDict["hideFromOutlookClients"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the hideFromOutlookClients
+    * True if the group is not displayed in Outlook clients, such as Outlook for Windows and Outlook on the web; otherwise, false. Default value is false. Returned only on $select.
+    *
+    * @param bool $val The hideFromOutlookClients
+    *
+    * @return Group
+    */
+    public function setHideFromOutlookClients($val)
+    {
+        $this->_propDict["hideFromOutlookClients"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the hideFromAddressLists
+    * True if the group is not displayed in certain parts of the Outlook UI: the Address Book, address lists for selecting message recipients, and the Browse Groups dialog for searching groups; otherwise, false. Default value is false. Returned only on $select.
+    *
+    * @return bool The hideFromAddressLists
+    */
+    public function getHideFromAddressLists()
+    {
+        if (array_key_exists("hideFromAddressLists", $this->_propDict)) {
+            return $this->_propDict["hideFromAddressLists"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the hideFromAddressLists
+    * True if the group is not displayed in certain parts of the Outlook UI: the Address Book, address lists for selecting message recipients, and the Browse Groups dialog for searching groups; otherwise, false. Default value is false. Returned only on $select.
+    *
+    * @param bool $val The hideFromAddressLists
+    *
+    * @return Group
+    */
+    public function setHideFromAddressLists($val)
+    {
+        $this->_propDict["hideFromAddressLists"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the isArchived
     *
     * @return bool The isArchived
@@ -793,6 +1105,34 @@ class Group extends DirectoryObject
     public function setIsArchived($val)
     {
         $this->_propDict["isArchived"] = boolval($val);
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the appRoleAssignments
+     *
+     * @return array The appRoleAssignments
+     */
+    public function getAppRoleAssignments()
+    {
+        if (array_key_exists("appRoleAssignments", $this->_propDict)) {
+           return $this->_propDict["appRoleAssignments"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the appRoleAssignments
+    *
+    * @param AppRoleAssignment $val The appRoleAssignments
+    *
+    * @return Group
+    */
+    public function setAppRoleAssignments($val)
+    {
+		$this->_propDict["appRoleAssignments"] = $val;
         return $this;
     }
     
@@ -978,7 +1318,7 @@ class Group extends DirectoryObject
 
      /** 
      * Gets the owners
-    * The owners of the group. The owners are a set of non-admin users who are allowed to modify this object. Limited to 10 owners. HTTP Methods: GET (supported for all groups), POST (supported for Office 365 groups, security groups and mail-enabled security groups), DELETE (supported for Office 365 groups and security groups). Nullable.
+    * The owners of the group. The owners are a set of non-admin users who are allowed to modify this object. Limited to 100 owners. HTTP Methods: GET (supported for all groups), POST (supported for Office 365 groups, security groups and mail-enabled security groups), DELETE (supported for Office 365 groups and security groups). Nullable.
      *
      * @return array The owners
      */
@@ -993,7 +1333,7 @@ class Group extends DirectoryObject
     
     /** 
     * Sets the owners
-    * The owners of the group. The owners are a set of non-admin users who are allowed to modify this object. Limited to 10 owners. HTTP Methods: GET (supported for all groups), POST (supported for Office 365 groups, security groups and mail-enabled security groups), DELETE (supported for Office 365 groups and security groups). Nullable.
+    * The owners of the group. The owners are a set of non-admin users who are allowed to modify this object. Limited to 100 owners. HTTP Methods: GET (supported for all groups), POST (supported for Office 365 groups, security groups and mail-enabled security groups), DELETE (supported for Office 365 groups and security groups). Nullable.
     *
     * @param DirectoryObject $val The owners
     *
