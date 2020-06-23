@@ -124,6 +124,16 @@ steps:
       .\vendor\bin\phpunit --exclude-group functional
 
 - task: PowerShell@2
+  displayName: 'Git: set user config'
+  inputs:
+    targetType: inline
+    pwsh: true
+    workingDirectory: '$(Build.SourcesDirectory)/msgraph-sdk-php'
+    script: |
+      git config user.email "GraphTooling@service.microsoft.com"
+      git config user.name "Microsoft Graph DevX Tooling"
+
+- task: PowerShell@2
   displayName: 'Git: stage and commit generated files'
   inputs:
     targetType: inline
