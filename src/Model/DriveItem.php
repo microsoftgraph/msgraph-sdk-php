@@ -353,6 +353,37 @@ class DriveItem extends BaseItem
     }
     
     /**
+    * Gets the pendingOperations
+    *
+    * @return PendingOperations The pendingOperations
+    */
+    public function getPendingOperations()
+    {
+        if (array_key_exists("pendingOperations", $this->_propDict)) {
+            if (is_a($this->_propDict["pendingOperations"], "Microsoft\Graph\Model\PendingOperations")) {
+                return $this->_propDict["pendingOperations"];
+            } else {
+                $this->_propDict["pendingOperations"] = new PendingOperations($this->_propDict["pendingOperations"]);
+                return $this->_propDict["pendingOperations"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the pendingOperations
+    *
+    * @param PendingOperations $val The pendingOperations
+    *
+    * @return DriveItem
+    */
+    public function setPendingOperations($val)
+    {
+        $this->_propDict["pendingOperations"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the photo
     * Photo metadata, if the item is a photo. Read-only.
     *

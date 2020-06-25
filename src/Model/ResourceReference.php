@@ -27,6 +27,7 @@ class ResourceReference extends Entity
 {
     /**
     * Gets the webUrl
+    * A URL leading to the referenced item.
     *
     * @return string The webUrl
     */
@@ -41,6 +42,7 @@ class ResourceReference extends Entity
 
     /**
     * Sets the webUrl
+    * A URL leading to the referenced item.
     *
     * @param string $val The value of the webUrl
     *
@@ -53,6 +55,7 @@ class ResourceReference extends Entity
     }
     /**
     * Gets the id
+    * The item's unique identifier.
     *
     * @return string The id
     */
@@ -67,6 +70,7 @@ class ResourceReference extends Entity
 
     /**
     * Sets the id
+    * The item's unique identifier.
     *
     * @param string $val The value of the id
     *
@@ -79,6 +83,7 @@ class ResourceReference extends Entity
     }
     /**
     * Gets the type
+    * A string value that can be used to classify the item, such as 'microsoft.graph.driveItem'
     *
     * @return string The type
     */
@@ -93,6 +98,7 @@ class ResourceReference extends Entity
 
     /**
     * Sets the type
+    * A string value that can be used to classify the item, such as 'microsoft.graph.driveItem'
     *
     * @param string $val The value of the type
     *

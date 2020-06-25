@@ -166,6 +166,34 @@ class SharepointIds extends Entity
         return $this;
     }
     /**
+    * Gets the tenantId
+    * The unique identifier (guid) for the tenancy.
+    *
+    * @return string The tenantId
+    */
+    public function getTenantId()
+    {
+        if (array_key_exists("tenantId", $this->_propDict)) {
+            return $this->_propDict["tenantId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the tenantId
+    * The unique identifier (guid) for the tenancy.
+    *
+    * @param string $val The value of the tenantId
+    *
+    * @return SharepointIds
+    */
+    public function setTenantId($val)
+    {
+        $this->_propDict["tenantId"] = $val;
+        return $this;
+    }
+    /**
     * Gets the webId
     * The unique identifier (guid) for the item's site (SPWeb).
     *
