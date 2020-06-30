@@ -19,14 +19,7 @@ You can install the PHP SDK with Composer, either run `composer require microsof
 
 ### Register your application
 
-Register your application to use the Microsoft Graph API by using one of the following
-supported authentication portals:
-
-* [Microsoft Application Registration Portal](https://apps.dev.microsoft.com) (**Recommended**):
-  Register a new application that authenticates using the v2.0 authentication endpoint. This endpoint authenticates both personal (Microsoft) and work or school (Azure Active Directory) accounts.
-* [Microsoft Azure Active Directory](https://manage.windowsazure.com): Register
-  a new application in your tenant's Active Directory to support work or school
-  users for your tenant, or multiple tenants.
+Register your application to use the Microsoft Graph API using [Microsoft Azure Active Directory](https://manage.windowsazure.com) in your tenant's Active Directory to support work or school users for your tenant, or multiple tenants.
 
 ### Authenticate with the Microsoft Graph service
 
