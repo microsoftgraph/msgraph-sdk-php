@@ -25,6 +25,34 @@ namespace Microsoft\Graph\Model;
 */
 class UploadSession extends Entity
 {
+    /**
+    * Gets the uploadUrl
+    * The URL endpoint that accepts PUT requests for byte ranges of the file.
+    *
+    * @return string The uploadUrl
+    */
+    public function getUploadUrl()
+    {
+        if (array_key_exists("uploadUrl", $this->_propDict)) {
+            return $this->_propDict["uploadUrl"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the uploadUrl
+    * The URL endpoint that accepts PUT requests for byte ranges of the file.
+    *
+    * @param string $val The value of the uploadUrl
+    *
+    * @return UploadSession
+    */
+    public function setUploadUrl($val)
+    {
+        $this->_propDict["uploadUrl"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the expirationDateTime
@@ -60,7 +88,7 @@ class UploadSession extends Entity
     }
     /**
     * Gets the nextExpectedRanges
-    * A collection of byte ranges that the server is missing for the file. These ranges are zero indexed and of the format 'start-end' (e.g. '0-26' to indicate the first 27 bytes of the file).
+    * A collection of byte ranges that the server is missing for the file. These ranges are zero indexed and of the format 'start-end' (e.g. '0-26' to indicate the first 27 bytes of the file). When uploading files as Outlook attachments, instead of a collection of ranges, this property always indicates a single value '{start}', the location in the file where the next upload should begin.
     *
     * @return string The nextExpectedRanges
     */
@@ -75,7 +103,7 @@ class UploadSession extends Entity
 
     /**
     * Sets the nextExpectedRanges
-    * A collection of byte ranges that the server is missing for the file. These ranges are zero indexed and of the format 'start-end' (e.g. '0-26' to indicate the first 27 bytes of the file).
+    * A collection of byte ranges that the server is missing for the file. These ranges are zero indexed and of the format 'start-end' (e.g. '0-26' to indicate the first 27 bytes of the file). When uploading files as Outlook attachments, instead of a collection of ranges, this property always indicates a single value '{start}', the location in the file where the next upload should begin.
     *
     * @param string $val The value of the nextExpectedRanges
     *
@@ -84,34 +112,6 @@ class UploadSession extends Entity
     public function setNextExpectedRanges($val)
     {
         $this->_propDict["nextExpectedRanges"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the uploadUrl
-    * The URL endpoint that accepts PUT requests for byte ranges of the file.
-    *
-    * @return string The uploadUrl
-    */
-    public function getUploadUrl()
-    {
-        if (array_key_exists("uploadUrl", $this->_propDict)) {
-            return $this->_propDict["uploadUrl"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the uploadUrl
-    * The URL endpoint that accepts PUT requests for byte ranges of the file.
-    *
-    * @param string $val The value of the uploadUrl
-    *
-    * @return UploadSession
-    */
-    public function setUploadUrl($val)
-    {
-        $this->_propDict["uploadUrl"] = $val;
         return $this;
     }
 }

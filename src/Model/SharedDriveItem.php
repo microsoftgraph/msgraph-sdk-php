@@ -189,6 +189,39 @@ class SharedDriveItem extends BaseItem
     }
     
     /**
+    * Gets the permission
+    * Used to access the permission representing the underlying sharing link
+    *
+    * @return Permission The permission
+    */
+    public function getPermission()
+    {
+        if (array_key_exists("permission", $this->_propDict)) {
+            if (is_a($this->_propDict["permission"], "Microsoft\Graph\Model\Permission")) {
+                return $this->_propDict["permission"];
+            } else {
+                $this->_propDict["permission"] = new Permission($this->_propDict["permission"]);
+                return $this->_propDict["permission"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the permission
+    * Used to access the permission representing the underlying sharing link
+    *
+    * @param Permission $val The permission
+    *
+    * @return SharedDriveItem
+    */
+    public function setPermission($val)
+    {
+        $this->_propDict["permission"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the root
     * Used to access the underlying driveItem. Deprecated -- use driveItem instead.
     *

@@ -53,4 +53,30 @@ class ContentTypeInfo extends Entity
         $this->_propDict["id"] = $val;
         return $this;
     }
+    /**
+    * Gets the name
+    *
+    * @return string The name
+    */
+    public function getName()
+    {
+        if (array_key_exists("name", $this->_propDict)) {
+            return $this->_propDict["name"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the name
+    *
+    * @param string $val The value of the name
+    *
+    * @return ContentTypeInfo
+    */
+    public function setName($val)
+    {
+        $this->_propDict["name"] = $val;
+        return $this;
+    }
 }
