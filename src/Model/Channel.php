@@ -144,6 +144,36 @@ class Channel extends Entity
     
 
      /** 
+     * Gets the messages
+    * A collection of all the messages in the channel. A navigation property. Nullable.
+     *
+     * @return array The messages
+     */
+    public function getMessages()
+    {
+        if (array_key_exists("messages", $this->_propDict)) {
+           return $this->_propDict["messages"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the messages
+    * A collection of all the messages in the channel. A navigation property. Nullable.
+    *
+    * @param ChatMessage $val The messages
+    *
+    * @return Channel
+    */
+    public function setMessages($val)
+    {
+		$this->_propDict["messages"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the tabs
     * A collection of all the tabs in the channel. A navigation property.
      *
@@ -169,6 +199,39 @@ class Channel extends Entity
     public function setTabs($val)
     {
 		$this->_propDict["tabs"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the filesFolder
+    * Metadata for the location where the channel's files are stored.
+    *
+    * @return DriveItem The filesFolder
+    */
+    public function getFilesFolder()
+    {
+        if (array_key_exists("filesFolder", $this->_propDict)) {
+            if (is_a($this->_propDict["filesFolder"], "Microsoft\Graph\Model\DriveItem")) {
+                return $this->_propDict["filesFolder"];
+            } else {
+                $this->_propDict["filesFolder"] = new DriveItem($this->_propDict["filesFolder"]);
+                return $this->_propDict["filesFolder"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the filesFolder
+    * Metadata for the location where the channel's files are stored.
+    *
+    * @param DriveItem $val The filesFolder
+    *
+    * @return Channel
+    */
+    public function setFilesFolder($val)
+    {
+        $this->_propDict["filesFolder"] = $val;
         return $this;
     }
     

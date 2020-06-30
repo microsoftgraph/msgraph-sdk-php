@@ -28,7 +28,7 @@ class SubscribedSku extends Entity
 {
     /**
     * Gets the capabilityStatus
-    * For example, 'Enabled'.
+    * Possible values are: Enabled, Warning, Suspended, Deleted, LockedOut.
     *
     * @return string The capabilityStatus
     */
@@ -43,7 +43,7 @@ class SubscribedSku extends Entity
     
     /**
     * Sets the capabilityStatus
-    * For example, 'Enabled'.
+    * Possible values are: Enabled, Warning, Suspended, Deleted, LockedOut.
     *
     * @param string $val The capabilityStatus
     *
@@ -178,7 +178,7 @@ class SubscribedSku extends Entity
     
     /**
     * Gets the skuPartNumber
-    * The SKU part number; for example: 'AAD_PREMIUM' or 'RMSBASIC'.
+    * The SKU part number; for example: 'AAD_PREMIUM' or 'RMSBASIC'. To get a list of commercial subscriptions that an organization has acquired, see List subscribedSkus.
     *
     * @return string The skuPartNumber
     */
@@ -193,7 +193,7 @@ class SubscribedSku extends Entity
     
     /**
     * Sets the skuPartNumber
-    * The SKU part number; for example: 'AAD_PREMIUM' or 'RMSBASIC'.
+    * The SKU part number; for example: 'AAD_PREMIUM' or 'RMSBASIC'. To get a list of commercial subscriptions that an organization has acquired, see List subscribedSkus.
     *
     * @param string $val The skuPartNumber
     *

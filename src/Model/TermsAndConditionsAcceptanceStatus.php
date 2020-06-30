@@ -118,6 +118,35 @@ class TermsAndConditionsAcceptanceStatus extends Entity
     }
     
     /**
+    * Gets the userPrincipalName
+    * The userPrincipalName of the User that accepted the term.
+    *
+    * @return string The userPrincipalName
+    */
+    public function getUserPrincipalName()
+    {
+        if (array_key_exists("userPrincipalName", $this->_propDict)) {
+            return $this->_propDict["userPrincipalName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the userPrincipalName
+    * The userPrincipalName of the User that accepted the term.
+    *
+    * @param string $val The userPrincipalName
+    *
+    * @return TermsAndConditionsAcceptanceStatus
+    */
+    public function setUserPrincipalName($val)
+    {
+        $this->_propDict["userPrincipalName"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the termsAndConditions
     * Navigation link to the terms and conditions that are assigned.
     *

@@ -58,4 +58,35 @@ class Attendee extends AttendeeBase
         $this->_propDict["status"] = $val;
          return $this;
     }
+
+    /**
+    * Gets the proposedNewTime
+    *
+    * @return TimeSlot The proposedNewTime
+    */
+    public function getProposedNewTime()
+    {
+        if (array_key_exists("proposedNewTime", $this->_propDict)) {
+            if (is_a($this->_propDict["proposedNewTime"], "Microsoft\Graph\Model\TimeSlot")) {
+                return $this->_propDict["proposedNewTime"];
+            } else {
+                $this->_propDict["proposedNewTime"] = new TimeSlot($this->_propDict["proposedNewTime"]);
+                return $this->_propDict["proposedNewTime"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the proposedNewTime
+    *
+    * @param TimeSlot $val The value to assign to the proposedNewTime
+    *
+    * @return Attendee The Attendee
+    */
+    public function setProposedNewTime($val)
+    {
+        $this->_propDict["proposedNewTime"] = $val;
+         return $this;
+    }
 }

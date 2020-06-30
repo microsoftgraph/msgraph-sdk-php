@@ -643,6 +643,35 @@ class SignIn extends Entity
     }
     
     /**
+    * Gets the riskEventTypesV2
+    * The list of risk event types associated with the sign-in. Possible values: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, or unknownFutureValue.
+    *
+    * @return string The riskEventTypesV2
+    */
+    public function getRiskEventTypesV2()
+    {
+        if (array_key_exists("riskEventTypesV2", $this->_propDict)) {
+            return $this->_propDict["riskEventTypesV2"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the riskEventTypesV2
+    * The list of risk event types associated with the sign-in. Possible values: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, or unknownFutureValue.
+    *
+    * @param string $val The riskEventTypesV2
+    *
+    * @return SignIn
+    */
+    public function setRiskEventTypesV2($val)
+    {
+        $this->_propDict["riskEventTypes_v2"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the resourceDisplayName
     * Name of the resource the user signed into.
     *

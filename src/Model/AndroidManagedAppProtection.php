@@ -200,6 +200,64 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
         return $this;
     }
     
+    /**
+    * Gets the customBrowserPackageId
+    * Unique identifier of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+    *
+    * @return string The customBrowserPackageId
+    */
+    public function getCustomBrowserPackageId()
+    {
+        if (array_key_exists("customBrowserPackageId", $this->_propDict)) {
+            return $this->_propDict["customBrowserPackageId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the customBrowserPackageId
+    * Unique identifier of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+    *
+    * @param string $val The customBrowserPackageId
+    *
+    * @return AndroidManagedAppProtection
+    */
+    public function setCustomBrowserPackageId($val)
+    {
+        $this->_propDict["customBrowserPackageId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the customBrowserDisplayName
+    * Friendly name of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+    *
+    * @return string The customBrowserDisplayName
+    */
+    public function getCustomBrowserDisplayName()
+    {
+        if (array_key_exists("customBrowserDisplayName", $this->_propDict)) {
+            return $this->_propDict["customBrowserDisplayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the customBrowserDisplayName
+    * Friendly name of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+    *
+    * @param string $val The customBrowserDisplayName
+    *
+    * @return AndroidManagedAppProtection
+    */
+    public function setCustomBrowserDisplayName($val)
+    {
+        $this->_propDict["customBrowserDisplayName"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the apps

@@ -26,6 +26,34 @@ namespace Microsoft\Graph\Model;
 class SiteCollection extends Entity
 {
     /**
+    * Gets the dataLocationCode
+    * The geographic region code for where this site collection resides. Read-only.
+    *
+    * @return string The dataLocationCode
+    */
+    public function getDataLocationCode()
+    {
+        if (array_key_exists("dataLocationCode", $this->_propDict)) {
+            return $this->_propDict["dataLocationCode"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the dataLocationCode
+    * The geographic region code for where this site collection resides. Read-only.
+    *
+    * @param string $val The value of the dataLocationCode
+    *
+    * @return SiteCollection
+    */
+    public function setDataLocationCode($val)
+    {
+        $this->_propDict["dataLocationCode"] = $val;
+        return $this;
+    }
+    /**
     * Gets the hostname
     * The hostname for the site collection. Read-only.
     *

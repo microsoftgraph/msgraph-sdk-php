@@ -341,6 +341,37 @@ class ColumnDefinition extends Entity
     }
     
     /**
+    * Gets the geolocation
+    *
+    * @return GeolocationColumn The geolocation
+    */
+    public function getGeolocation()
+    {
+        if (array_key_exists("geolocation", $this->_propDict)) {
+            if (is_a($this->_propDict["geolocation"], "Microsoft\Graph\Model\GeolocationColumn")) {
+                return $this->_propDict["geolocation"];
+            } else {
+                $this->_propDict["geolocation"] = new GeolocationColumn($this->_propDict["geolocation"]);
+                return $this->_propDict["geolocation"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the geolocation
+    *
+    * @param GeolocationColumn $val The geolocation
+    *
+    * @return ColumnDefinition
+    */
+    public function setGeolocation($val)
+    {
+        $this->_propDict["geolocation"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the hidden
     * Specifies whether the column is displayed in the user interface.
     *
