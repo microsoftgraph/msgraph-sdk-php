@@ -31,7 +31,7 @@ class GiphyRatingType extends Enum
     /**
     * The Enum GiphyRatingType
     */
-    const MODERATE = "moderate";
     const STRICT = "strict";
+    const MODERATE = "moderate";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

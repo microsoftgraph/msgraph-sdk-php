@@ -61,7 +61,7 @@ class FollowupFlag extends Entity
 
     /**
     * Gets the dueDateTime
-    * The date and time that the follow-up is to be finished.
+    * The date and time that the follow up is to be finished. Note: To set the due date, you must also specify the startDateTime; otherwise, you will get a 400 Bad Request response.
     *
     * @return DateTimeTimeZone The dueDateTime
     */
@@ -80,7 +80,7 @@ class FollowupFlag extends Entity
 
     /**
     * Sets the dueDateTime
-    * The date and time that the follow-up is to be finished.
+    * The date and time that the follow up is to be finished. Note: To set the due date, you must also specify the startDateTime; otherwise, you will get a 400 Bad Request response.
     *
     * @param DateTimeTimeZone $val The value to assign to the dueDateTime
     *

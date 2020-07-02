@@ -80,4 +80,35 @@ class UserSettings extends Entity
         return $this;
     }
     
+    /**
+    * Gets the shiftPreferences
+    *
+    * @return ShiftPreferences The shiftPreferences
+    */
+    public function getShiftPreferences()
+    {
+        if (array_key_exists("shiftPreferences", $this->_propDict)) {
+            if (is_a($this->_propDict["shiftPreferences"], "Microsoft\Graph\Model\ShiftPreferences")) {
+                return $this->_propDict["shiftPreferences"];
+            } else {
+                $this->_propDict["shiftPreferences"] = new ShiftPreferences($this->_propDict["shiftPreferences"]);
+                return $this->_propDict["shiftPreferences"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the shiftPreferences
+    *
+    * @param ShiftPreferences $val The shiftPreferences
+    *
+    * @return UserSettings
+    */
+    public function setShiftPreferences($val)
+    {
+        $this->_propDict["shiftPreferences"] = $val;
+        return $this;
+    }
+    
 }

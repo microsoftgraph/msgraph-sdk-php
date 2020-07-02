@@ -149,6 +149,39 @@ class MailboxSettings extends Entity
     }
 
     /**
+    * Gets the delegateMeetingMessageDeliveryOptions
+    * If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly.
+    *
+    * @return DelegateMeetingMessageDeliveryOptions The delegateMeetingMessageDeliveryOptions
+    */
+    public function getDelegateMeetingMessageDeliveryOptions()
+    {
+        if (array_key_exists("delegateMeetingMessageDeliveryOptions", $this->_propDict)) {
+            if (is_a($this->_propDict["delegateMeetingMessageDeliveryOptions"], "Microsoft\Graph\Model\DelegateMeetingMessageDeliveryOptions")) {
+                return $this->_propDict["delegateMeetingMessageDeliveryOptions"];
+            } else {
+                $this->_propDict["delegateMeetingMessageDeliveryOptions"] = new DelegateMeetingMessageDeliveryOptions($this->_propDict["delegateMeetingMessageDeliveryOptions"]);
+                return $this->_propDict["delegateMeetingMessageDeliveryOptions"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the delegateMeetingMessageDeliveryOptions
+    * If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly.
+    *
+    * @param DelegateMeetingMessageDeliveryOptions $val The value to assign to the delegateMeetingMessageDeliveryOptions
+    *
+    * @return MailboxSettings The MailboxSettings
+    */
+    public function setDelegateMeetingMessageDeliveryOptions($val)
+    {
+        $this->_propDict["delegateMeetingMessageDeliveryOptions"] = $val;
+         return $this;
+    }
+
+    /**
     * Gets the workingHours
     * The days of the week and hours in a specific time zone that the user works.
     *

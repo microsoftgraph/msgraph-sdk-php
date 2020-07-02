@@ -538,6 +538,35 @@ class Alert extends Entity
     }
     
     /**
+    * Gets the incidentIds
+    * IDs of incidents related to current alert.
+    *
+    * @return string The incidentIds
+    */
+    public function getIncidentIds()
+    {
+        if (array_key_exists("incidentIds", $this->_propDict)) {
+            return $this->_propDict["incidentIds"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the incidentIds
+    * IDs of incidents related to current alert.
+    *
+    * @param string $val The incidentIds
+    *
+    * @return Alert
+    */
+    public function setIncidentIds($val)
+    {
+        $this->_propDict["incidentIds"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the lastModifiedDateTime
     * Time at which the alert entity was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
@@ -716,6 +745,36 @@ class Alert extends Entity
     public function setRegistryKeyStates($val)
     {
 		$this->_propDict["registryKeyStates"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the securityResources
+    * Resources related to current alert. For example, for some alerts this can have the Azure Resource value.
+     *
+     * @return array The securityResources
+     */
+    public function getSecurityResources()
+    {
+        if (array_key_exists("securityResources", $this->_propDict)) {
+           return $this->_propDict["securityResources"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the securityResources
+    * Resources related to current alert. For example, for some alerts this can have the Azure Resource value.
+    *
+    * @param SecurityResource $val The securityResources
+    *
+    * @return Alert
+    */
+    public function setSecurityResources($val)
+    {
+		$this->_propDict["securityResources"] = $val;
         return $this;
     }
     

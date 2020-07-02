@@ -37,6 +37,7 @@ class ServiceHostedMediaConfig extends MediaConfig
 
     /**
     * Gets the preFetchMedia
+    * The list of media to pre-fetch.
     *
     * @return MediaInfo The preFetchMedia
     */
@@ -55,6 +56,7 @@ class ServiceHostedMediaConfig extends MediaConfig
 
     /**
     * Sets the preFetchMedia
+    * The list of media to pre-fetch.
     *
     * @param MediaInfo $val The value to assign to the preFetchMedia
     *

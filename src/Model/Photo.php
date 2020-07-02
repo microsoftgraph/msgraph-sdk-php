@@ -221,6 +221,32 @@ class Photo extends Entity
         $this->_propDict["iso"] = $val;
         return $this;
     }
+    /**
+    * Gets the orientation
+    *
+    * @return int The orientation
+    */
+    public function getOrientation()
+    {
+        if (array_key_exists("orientation", $this->_propDict)) {
+            return $this->_propDict["orientation"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the orientation
+    *
+    * @param int $val The value of the orientation
+    *
+    * @return Photo
+    */
+    public function setOrientation($val)
+    {
+        $this->_propDict["orientation"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the takenDateTime

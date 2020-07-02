@@ -165,4 +165,35 @@ class Quota extends Entity
         $this->_propDict["used"] = $val;
         return $this;
     }
+
+    /**
+    * Gets the storagePlanInformation
+    *
+    * @return StoragePlanInformation The storagePlanInformation
+    */
+    public function getStoragePlanInformation()
+    {
+        if (array_key_exists("storagePlanInformation", $this->_propDict)) {
+            if (is_a($this->_propDict["storagePlanInformation"], "Microsoft\Graph\Model\StoragePlanInformation")) {
+                return $this->_propDict["storagePlanInformation"];
+            } else {
+                $this->_propDict["storagePlanInformation"] = new StoragePlanInformation($this->_propDict["storagePlanInformation"]);
+                return $this->_propDict["storagePlanInformation"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the storagePlanInformation
+    *
+    * @param StoragePlanInformation $val The value to assign to the storagePlanInformation
+    *
+    * @return Quota The Quota
+    */
+    public function setStoragePlanInformation($val)
+    {
+        $this->_propDict["storagePlanInformation"] = $val;
+         return $this;
+    }
 }

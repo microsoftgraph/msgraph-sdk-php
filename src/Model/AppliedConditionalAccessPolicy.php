@@ -27,7 +27,7 @@ class AppliedConditionalAccessPolicy extends Entity
 {
     /**
     * Gets the id
-    * Unique GUID of the conditional access polic.y
+    * Unique GUID of the conditional access policy.
     *
     * @return string The id
     */
@@ -42,7 +42,7 @@ class AppliedConditionalAccessPolicy extends Entity
 
     /**
     * Sets the id
-    * Unique GUID of the conditional access polic.y
+    * Unique GUID of the conditional access policy.
     *
     * @param string $val The value of the id
     *

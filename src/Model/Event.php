@@ -612,7 +612,7 @@ class Event extends OutlookItem
     
     /**
     * Gets the isOrganizer
-    * Set to true if the message sender is also the organizer.
+    * Set to true if the calendar owner (specified by the owner property of the calendar) is the organizer of the event (specified by the organizer property of the event). This also applies if a delegate organized the event on behalf of the owner.
     *
     * @return bool The isOrganizer
     */
@@ -627,7 +627,7 @@ class Event extends OutlookItem
     
     /**
     * Sets the isOrganizer
-    * Set to true if the message sender is also the organizer.
+    * Set to true if the calendar owner (specified by the owner property of the calendar) is the organizer of the event (specified by the organizer property of the event). This also applies if a delegate organized the event on behalf of the owner.
     *
     * @param bool $val The isOrganizer
     *
@@ -914,6 +914,128 @@ class Event extends OutlookItem
     public function setOnlineMeetingUrl($val)
     {
         $this->_propDict["onlineMeetingUrl"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the isOnlineMeeting
+    * True if this event has online meeting information, false otherwise. Default is false. Optional.
+    *
+    * @return bool The isOnlineMeeting
+    */
+    public function getIsOnlineMeeting()
+    {
+        if (array_key_exists("isOnlineMeeting", $this->_propDict)) {
+            return $this->_propDict["isOnlineMeeting"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isOnlineMeeting
+    * True if this event has online meeting information, false otherwise. Default is false. Optional.
+    *
+    * @param bool $val The isOnlineMeeting
+    *
+    * @return Event
+    */
+    public function setIsOnlineMeeting($val)
+    {
+        $this->_propDict["isOnlineMeeting"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the onlineMeetingProvider
+    * Represents the online meeting service provider. The possible values are teamsForBusiness, skypeForBusiness, and skypeForConsumer. Optional.
+    *
+    * @return OnlineMeetingProviderType The onlineMeetingProvider
+    */
+    public function getOnlineMeetingProvider()
+    {
+        if (array_key_exists("onlineMeetingProvider", $this->_propDict)) {
+            if (is_a($this->_propDict["onlineMeetingProvider"], "Microsoft\Graph\Model\OnlineMeetingProviderType")) {
+                return $this->_propDict["onlineMeetingProvider"];
+            } else {
+                $this->_propDict["onlineMeetingProvider"] = new OnlineMeetingProviderType($this->_propDict["onlineMeetingProvider"]);
+                return $this->_propDict["onlineMeetingProvider"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the onlineMeetingProvider
+    * Represents the online meeting service provider. The possible values are teamsForBusiness, skypeForBusiness, and skypeForConsumer. Optional.
+    *
+    * @param OnlineMeetingProviderType $val The onlineMeetingProvider
+    *
+    * @return Event
+    */
+    public function setOnlineMeetingProvider($val)
+    {
+        $this->_propDict["onlineMeetingProvider"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the onlineMeeting
+    * Details for an attendee to join the meeting online. Read-only.
+    *
+    * @return OnlineMeetingInfo The onlineMeeting
+    */
+    public function getOnlineMeeting()
+    {
+        if (array_key_exists("onlineMeeting", $this->_propDict)) {
+            if (is_a($this->_propDict["onlineMeeting"], "Microsoft\Graph\Model\OnlineMeetingInfo")) {
+                return $this->_propDict["onlineMeeting"];
+            } else {
+                $this->_propDict["onlineMeeting"] = new OnlineMeetingInfo($this->_propDict["onlineMeeting"]);
+                return $this->_propDict["onlineMeeting"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the onlineMeeting
+    * Details for an attendee to join the meeting online. Read-only.
+    *
+    * @param OnlineMeetingInfo $val The onlineMeeting
+    *
+    * @return Event
+    */
+    public function setOnlineMeeting($val)
+    {
+        $this->_propDict["onlineMeeting"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the allowNewTimeProposals
+    *
+    * @return bool The allowNewTimeProposals
+    */
+    public function getAllowNewTimeProposals()
+    {
+        if (array_key_exists("allowNewTimeProposals", $this->_propDict)) {
+            return $this->_propDict["allowNewTimeProposals"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the allowNewTimeProposals
+    *
+    * @param bool $val The allowNewTimeProposals
+    *
+    * @return Event
+    */
+    public function setAllowNewTimeProposals($val)
+    {
+        $this->_propDict["allowNewTimeProposals"] = boolval($val);
         return $this;
     }
     

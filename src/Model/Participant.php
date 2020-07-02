@@ -28,6 +28,7 @@ class Participant extends Entity
 {
     /**
     * Gets the info
+    * The participant of the participant.
     *
     * @return ParticipantInfo The info
     */
@@ -46,6 +47,7 @@ class Participant extends Entity
     
     /**
     * Sets the info
+    * The participant of the participant.
     *
     * @param ParticipantInfo $val The info
     *
@@ -57,9 +59,43 @@ class Participant extends Entity
         return $this;
     }
     
+    /**
+    * Gets the recordingInfo
+    * Information about whether the participant has recording capability.
+    *
+    * @return RecordingInfo The recordingInfo
+    */
+    public function getRecordingInfo()
+    {
+        if (array_key_exists("recordingInfo", $this->_propDict)) {
+            if (is_a($this->_propDict["recordingInfo"], "Microsoft\Graph\Model\RecordingInfo")) {
+                return $this->_propDict["recordingInfo"];
+            } else {
+                $this->_propDict["recordingInfo"] = new RecordingInfo($this->_propDict["recordingInfo"]);
+                return $this->_propDict["recordingInfo"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the recordingInfo
+    * Information about whether the participant has recording capability.
+    *
+    * @param RecordingInfo $val The recordingInfo
+    *
+    * @return Participant
+    */
+    public function setRecordingInfo($val)
+    {
+        $this->_propDict["recordingInfo"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the mediaStreams
+    * The list of media streams.
      *
      * @return array The mediaStreams
      */
@@ -74,6 +110,7 @@ class Participant extends Entity
     
     /** 
     * Sets the mediaStreams
+    * The list of media streams.
     *
     * @param MediaStream $val The mediaStreams
     *
@@ -87,6 +124,7 @@ class Participant extends Entity
     
     /**
     * Gets the isMuted
+    * true if the participant is muted (client or server muted).
     *
     * @return bool The isMuted
     */
@@ -101,6 +139,7 @@ class Participant extends Entity
     
     /**
     * Sets the isMuted
+    * true if the participant is muted (client or server muted).
     *
     * @param bool $val The isMuted
     *
@@ -114,6 +153,7 @@ class Participant extends Entity
     
     /**
     * Gets the isInLobby
+    * true if the participant is in lobby.
     *
     * @return bool The isInLobby
     */
@@ -128,6 +168,7 @@ class Participant extends Entity
     
     /**
     * Sets the isInLobby
+    * true if the participant is in lobby.
     *
     * @param bool $val The isInLobby
     *

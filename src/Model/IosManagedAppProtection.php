@@ -146,6 +146,35 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
         return $this;
     }
     
+    /**
+    * Gets the customBrowserProtocol
+    * A custom browser protocol to open weblink on iOS. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+    *
+    * @return string The customBrowserProtocol
+    */
+    public function getCustomBrowserProtocol()
+    {
+        if (array_key_exists("customBrowserProtocol", $this->_propDict)) {
+            return $this->_propDict["customBrowserProtocol"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the customBrowserProtocol
+    * A custom browser protocol to open weblink on iOS. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+    *
+    * @param string $val The customBrowserProtocol
+    *
+    * @return IosManagedAppProtection
+    */
+    public function setCustomBrowserProtocol($val)
+    {
+        $this->_propDict["customBrowserProtocol"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the apps
