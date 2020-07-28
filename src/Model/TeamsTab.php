@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 
@@ -21,8 +20,7 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class TeamsTab extends Entity
 {
@@ -57,7 +55,7 @@ class TeamsTab extends Entity
     
     /**
     * Gets the webUrl
-    * Deep link url of the tab instance. Read only.
+    * Deep link URL of the tab instance. Read only.
     *
     * @return string The webUrl
     */
@@ -72,7 +70,7 @@ class TeamsTab extends Entity
     
     /**
     * Sets the webUrl
-    * Deep link url of the tab instance. Read only.
+    * Deep link URL of the tab instance. Read only.
     *
     * @param string $val The webUrl
     *

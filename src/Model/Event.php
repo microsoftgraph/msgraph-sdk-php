@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 
@@ -21,8 +20,7 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class Event extends OutlookItem
 {
@@ -674,7 +672,7 @@ class Event extends OutlookItem
     
     /**
     * Gets the responseRequested
-    * Set to true if the sender would like a response when the event is accepted or declined.
+    * Default is true, which represents the organizer would like an invitee to send a response to the event.
     *
     * @return bool The responseRequested
     */
@@ -689,7 +687,7 @@ class Event extends OutlookItem
     
     /**
     * Sets the responseRequested
-    * Set to true if the sender would like a response when the event is accepted or declined.
+    * Default is true, which represents the organizer would like an invitee to send a response to the event.
     *
     * @param bool $val The responseRequested
     *
@@ -1014,6 +1012,7 @@ class Event extends OutlookItem
     
     /**
     * Gets the allowNewTimeProposals
+    * True if the meeting organizer allows invitees to propose a new time when responding, false otherwise. Optional. Default is true.
     *
     * @return bool The allowNewTimeProposals
     */
@@ -1028,6 +1027,7 @@ class Event extends OutlookItem
     
     /**
     * Sets the allowNewTimeProposals
+    * True if the meeting organizer allows invitees to propose a new time when responding, false otherwise. Optional. Default is true.
     *
     * @param bool $val The allowNewTimeProposals
     *

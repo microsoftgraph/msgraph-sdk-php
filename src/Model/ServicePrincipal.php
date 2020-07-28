@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 
@@ -21,8 +20,7 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class ServicePrincipal extends DirectoryObject
 {
@@ -58,7 +56,7 @@ class ServicePrincipal extends DirectoryObject
 
      /** 
      * Gets the addIns
-    * Defines custom behavior that a consuming service can use to call an app in specific contexts. For example, applications that can render file streams may set the addIns property for its 'FileHandler' functionality. This will let services like Office 365 call the application in the context of a document the user is working on.
+    * Defines custom behavior that a consuming service can use to call an app in specific contexts. For example, applications that can render file streams may set the addIns property for its 'FileHandler' functionality. This will let services like Microsoft 365 call the application in the context of a document the user is working on.
      *
      * @return array The addIns
      */
@@ -73,7 +71,7 @@ class ServicePrincipal extends DirectoryObject
     
     /** 
     * Sets the addIns
-    * Defines custom behavior that a consuming service can use to call an app in specific contexts. For example, applications that can render file streams may set the addIns property for its 'FileHandler' functionality. This will let services like Office 365 call the application in the context of a document the user is working on.
+    * Defines custom behavior that a consuming service can use to call an app in specific contexts. For example, applications that can render file streams may set the addIns property for its 'FileHandler' functionality. This will let services like Microsoft 365 call the application in the context of a document the user is working on.
     *
     * @param AddIn $val The addIns
     *
@@ -412,7 +410,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Gets the loginUrl
-    * Specifies the URL where the service provider redirects the user to Azure AD to authenticate. Azure AD uses the URL to launch the application from Office 365 or the Azure AD My Apps. When blank, Azure AD performs IdP-initiated sign-on for applications configured with SAML-based single sign-on. The user launches the application from Office 365, the Azure AD My Apps, or the Azure AD SSO URL.
+    * Specifies the URL where the service provider redirects the user to Azure AD to authenticate. Azure AD uses the URL to launch the application from Microsoft 365 or the Azure AD My Apps. When blank, Azure AD performs IdP-initiated sign-on for applications configured with SAML-based single sign-on. The user launches the application from Microsoft 365, the Azure AD My Apps, or the Azure AD SSO URL.
     *
     * @return string The loginUrl
     */
@@ -427,7 +425,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Sets the loginUrl
-    * Specifies the URL where the service provider redirects the user to Azure AD to authenticate. Azure AD uses the URL to launch the application from Office 365 or the Azure AD My Apps. When blank, Azure AD performs IdP-initiated sign-on for applications configured with SAML-based single sign-on. The user launches the application from Office 365, the Azure AD My Apps, or the Azure AD SSO URL.
+    * Specifies the URL where the service provider redirects the user to Azure AD to authenticate. Azure AD uses the URL to launch the application from Microsoft 365 or the Azure AD My Apps. When blank, Azure AD performs IdP-initiated sign-on for applications configured with SAML-based single sign-on. The user launches the application from Microsoft 365, the Azure AD My Apps, or the Azure AD SSO URL.
     *
     * @param string $val The loginUrl
     *
@@ -558,8 +556,35 @@ class ServicePrincipal extends DirectoryObject
     }
     
     /**
+    * Gets the preferredTokenSigningKeyThumbprint
+    *
+    * @return string The preferredTokenSigningKeyThumbprint
+    */
+    public function getPreferredTokenSigningKeyThumbprint()
+    {
+        if (array_key_exists("preferredTokenSigningKeyThumbprint", $this->_propDict)) {
+            return $this->_propDict["preferredTokenSigningKeyThumbprint"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the preferredTokenSigningKeyThumbprint
+    *
+    * @param string $val The preferredTokenSigningKeyThumbprint
+    *
+    * @return ServicePrincipal
+    */
+    public function setPreferredTokenSigningKeyThumbprint($val)
+    {
+        $this->_propDict["preferredTokenSigningKeyThumbprint"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the preferredSingleSignOnMode
-    * Specifies the single sign-on mode configured for this application. Azure AD uses the preferred single sign-on mode to launch the application from Office 365 or the Azure AD My Apps. The supported values are password, saml, external, and oidc.
+    * Specifies the single sign-on mode configured for this application. Azure AD uses the preferred single sign-on mode to launch the application from Microsoft 365 or the Azure AD My Apps. The supported values are password, saml, external, and oidc.
     *
     * @return string The preferredSingleSignOnMode
     */
@@ -574,7 +599,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Sets the preferredSingleSignOnMode
-    * Specifies the single sign-on mode configured for this application. Azure AD uses the preferred single sign-on mode to launch the application from Office 365 or the Azure AD My Apps. The supported values are password, saml, external, and oidc.
+    * Specifies the single sign-on mode configured for this application. Azure AD uses the preferred single sign-on mode to launch the application from Microsoft 365 or the Azure AD My Apps. The supported values are password, saml, external, and oidc.
     *
     * @param string $val The preferredSingleSignOnMode
     *
@@ -827,6 +852,7 @@ class ServicePrincipal extends DirectoryObject
 
      /** 
      * Gets the claimsMappingPolicies
+    * The claimsMappingPolicies assigned to this service principal.
      *
      * @return array The claimsMappingPolicies
      */
@@ -841,6 +867,7 @@ class ServicePrincipal extends DirectoryObject
     
     /** 
     * Sets the claimsMappingPolicies
+    * The claimsMappingPolicies assigned to this service principal.
     *
     * @param ClaimsMappingPolicy $val The claimsMappingPolicies
     *
@@ -885,6 +912,7 @@ class ServicePrincipal extends DirectoryObject
 
      /** 
      * Gets the homeRealmDiscoveryPolicies
+    * The homeRealmDiscoveryPolicies assigned to this service principal.
      *
      * @return array The homeRealmDiscoveryPolicies
      */
@@ -899,6 +927,7 @@ class ServicePrincipal extends DirectoryObject
     
     /** 
     * Sets the homeRealmDiscoveryPolicies
+    * The homeRealmDiscoveryPolicies assigned to this service principal.
     *
     * @param HomeRealmDiscoveryPolicy $val The homeRealmDiscoveryPolicies
     *
@@ -1091,6 +1120,7 @@ class ServicePrincipal extends DirectoryObject
 
      /** 
      * Gets the tokenIssuancePolicies
+    * The tokenIssuancePolicies assigned to this service principal.
      *
      * @return array The tokenIssuancePolicies
      */
@@ -1105,6 +1135,7 @@ class ServicePrincipal extends DirectoryObject
     
     /** 
     * Sets the tokenIssuancePolicies
+    * The tokenIssuancePolicies assigned to this service principal.
     *
     * @param TokenIssuancePolicy $val The tokenIssuancePolicies
     *
@@ -1119,6 +1150,7 @@ class ServicePrincipal extends DirectoryObject
 
      /** 
      * Gets the tokenLifetimePolicies
+    * The tokenLifetimePolicies assigned to this service principal.
      *
      * @return array The tokenLifetimePolicies
      */
@@ -1133,6 +1165,7 @@ class ServicePrincipal extends DirectoryObject
     
     /** 
     * Sets the tokenLifetimePolicies
+    * The tokenLifetimePolicies assigned to this service principal.
     *
     * @param TokenLifetimePolicy $val The tokenLifetimePolicies
     *

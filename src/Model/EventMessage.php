@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 
@@ -21,8 +20,7 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class EventMessage extends Message
 {
@@ -270,6 +268,7 @@ class EventMessage extends Message
     
     /**
     * Gets the isDelegated
+    * True if this meeting request is accessible to a delegate, false otherwise. Default is false.
     *
     * @return bool The isDelegated
     */
@@ -284,6 +283,7 @@ class EventMessage extends Message
     
     /**
     * Sets the isDelegated
+    * True if this meeting request is accessible to a delegate, false otherwise. Default is false.
     *
     * @param bool $val The isDelegated
     *

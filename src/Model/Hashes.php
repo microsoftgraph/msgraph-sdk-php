@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 /**
@@ -20,8 +19,7 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class Hashes extends Entity
 {
@@ -111,6 +109,7 @@ class Hashes extends Entity
     }
     /**
     * Gets the sha256Hash
+    * SHA256 hash for the contents of the file (if available). Read-only.
     *
     * @return string The sha256Hash
     */
@@ -125,6 +124,7 @@ class Hashes extends Entity
 
     /**
     * Sets the sha256Hash
+    * SHA256 hash for the contents of the file (if available). Read-only.
     *
     * @param string $val The value of the sha256Hash
     *

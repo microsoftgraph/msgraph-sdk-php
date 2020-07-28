@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 /**
@@ -20,8 +19,7 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class Quota extends Entity
 {
@@ -168,6 +166,7 @@ class Quota extends Entity
 
     /**
     * Gets the storagePlanInformation
+    * Information about the drive's storage quota plans. Only in Personal OneDrive.
     *
     * @return StoragePlanInformation The storagePlanInformation
     */
@@ -186,6 +185,7 @@ class Quota extends Entity
 
     /**
     * Sets the storagePlanInformation
+    * Information about the drive's storage quota plans. Only in Personal OneDrive.
     *
     * @param StoragePlanInformation $val The value to assign to the storagePlanInformation
     *

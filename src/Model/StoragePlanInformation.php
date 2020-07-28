@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 /**
@@ -20,13 +19,13 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class StoragePlanInformation extends Entity
 {
     /**
     * Gets the upgradeAvailable
+    * Indicates whether there are higher storage quota plans available. Read-only.
     *
     * @return bool The upgradeAvailable
     */
@@ -41,6 +40,7 @@ class StoragePlanInformation extends Entity
 
     /**
     * Sets the upgradeAvailable
+    * Indicates whether there are higher storage quota plans available. Read-only.
     *
     * @param bool $val The value of the upgradeAvailable
     *

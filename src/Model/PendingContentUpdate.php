@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 /**
@@ -20,21 +19,21 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class PendingContentUpdate extends Entity
 {
 
     /**
     * Gets the queuedDateTime
+    * Date and time the pending binary operation was queued in UTC time. Read-only.
     *
     * @return \DateTime The queuedDateTime
     */
     public function getQueuedDateTime()
     {
         if (array_key_exists("queuedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["queuedDateTime"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["queuedDateTime"], "\DateTime")) {
                 return $this->_propDict["queuedDateTime"];
             } else {
                 $this->_propDict["queuedDateTime"] = new \DateTime($this->_propDict["queuedDateTime"]);
@@ -46,6 +45,7 @@ class PendingContentUpdate extends Entity
 
     /**
     * Sets the queuedDateTime
+    * Date and time the pending binary operation was queued in UTC time. Read-only.
     *
     * @param \DateTime $val The value to assign to the queuedDateTime
     *

@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 /**
@@ -20,8 +19,7 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class UserSecurityState extends Entity
 {
@@ -180,7 +178,7 @@ class UserSecurityState extends Entity
     public function getLogonDateTime()
     {
         if (array_key_exists("logonDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["logonDateTime"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["logonDateTime"], "\DateTime")) {
                 return $this->_propDict["logonDateTime"];
             } else {
                 $this->_propDict["logonDateTime"] = new \DateTime($this->_propDict["logonDateTime"]);

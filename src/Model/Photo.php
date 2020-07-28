@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 /**
@@ -20,8 +19,7 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class Photo extends Entity
 {
@@ -223,6 +221,7 @@ class Photo extends Entity
     }
     /**
     * Gets the orientation
+    * The orientation value from the camera. Writable on OneDrive Personal.
     *
     * @return int The orientation
     */
@@ -237,6 +236,7 @@ class Photo extends Entity
 
     /**
     * Sets the orientation
+    * The orientation value from the camera. Writable on OneDrive Personal.
     *
     * @param int $val The value of the orientation
     *
@@ -257,7 +257,7 @@ class Photo extends Entity
     public function getTakenDateTime()
     {
         if (array_key_exists("takenDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["takenDateTime"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["takenDateTime"], "\DateTime")) {
                 return $this->_propDict["takenDateTime"];
             } else {
                 $this->_propDict["takenDateTime"] = new \DateTime($this->_propDict["takenDateTime"]);

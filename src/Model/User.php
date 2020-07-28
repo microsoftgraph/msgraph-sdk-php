@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 
@@ -21,8 +20,7 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class User extends DirectoryObject
 {
@@ -586,7 +584,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the isResourceAccount
-    * true if the user is a resource account; otherwise, false. Null value should be considered false.
+    * Do not use – reserved for future use.
     *
     * @return bool The isResourceAccount
     */
@@ -601,7 +599,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the isResourceAccount
-    * true if the user is a resource account; otherwise, false. Null value should be considered false.
+    * Do not use – reserved for future use.
     *
     * @param bool $val The isResourceAccount
     *
@@ -852,7 +850,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the onPremisesExtensionAttributes
-    * Contains extensionAttributes 1-15 for the user. Note that the individual extension attributes are neither selectable nor filterable. For an onPremisesSyncEnabled user, this set of properties is mastered on-premises and is read-only. For a cloud-only user (where onPremisesSyncEnabled is false), these properties may be set during creation or update.
+    * Contains extensionAttributes 1-15 for the user. Note that the individual extension attributes are neither selectable nor filterable. For an onPremisesSyncEnabled user, the source of authority for this set of properties is the on-premises and is read-only. For a cloud-only user (where onPremisesSyncEnabled is false), these properties may be set during creation or update. These extension attributes are also known as Exchange custom attributes 1-15.
     *
     * @return OnPremisesExtensionAttributes The onPremisesExtensionAttributes
     */
@@ -871,7 +869,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the onPremisesExtensionAttributes
-    * Contains extensionAttributes 1-15 for the user. Note that the individual extension attributes are neither selectable nor filterable. For an onPremisesSyncEnabled user, this set of properties is mastered on-premises and is read-only. For a cloud-only user (where onPremisesSyncEnabled is false), these properties may be set during creation or update.
+    * Contains extensionAttributes 1-15 for the user. Note that the individual extension attributes are neither selectable nor filterable. For an onPremisesSyncEnabled user, the source of authority for this set of properties is the on-premises and is read-only. For a cloud-only user (where onPremisesSyncEnabled is false), these properties may be set during creation or update. These extension attributes are also known as Exchange custom attributes 1-15.
     *
     * @param OnPremisesExtensionAttributes $val The onPremisesExtensionAttributes
     *

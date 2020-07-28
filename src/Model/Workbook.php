@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 
@@ -21,8 +20,7 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class Workbook extends Entity
 {
@@ -203,6 +201,36 @@ class Workbook extends Entity
     public function setFunctions($val)
     {
         $this->_propDict["functions"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the operations
+    * The status of workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only.
+     *
+     * @return array The operations
+     */
+    public function getOperations()
+    {
+        if (array_key_exists("operations", $this->_propDict)) {
+           return $this->_propDict["operations"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the operations
+    * The status of workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only.
+    *
+    * @param WorkbookOperation $val The operations
+    *
+    * @return Workbook
+    */
+    public function setOperations($val)
+    {
+		$this->_propDict["operations"] = $val;
         return $this;
     }
     
