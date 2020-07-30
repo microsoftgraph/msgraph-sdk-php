@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 
@@ -21,14 +20,14 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class Group extends DirectoryObject
 {
 
      /** 
      * Gets the assignedLabels
+    * The list of sensitivity label pairs (label ID, label name) associated with an Microsoft 365 group. Returned only on $select. Read-only.
      *
      * @return array The assignedLabels
      */
@@ -43,6 +42,7 @@ class Group extends DirectoryObject
     
     /** 
     * Sets the assignedLabels
+    * The list of sensitivity label pairs (label ID, label name) associated with an Microsoft 365 group. Returned only on $select. Read-only.
     *
     * @param AssignedLabel $val The assignedLabels
     *
@@ -206,6 +206,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the expirationDateTime
+    * Timestamp of when the group is set to expire. The value cannot be modified and is automatically populated when the group is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only.
     *
     * @return \DateTime The expirationDateTime
     */
@@ -224,6 +225,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the expirationDateTime
+    * Timestamp of when the group is set to expire. The value cannot be modified and is automatically populated when the group is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only.
     *
     * @param \DateTime $val The expirationDateTime
     *
@@ -266,7 +268,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the groupTypes
-    * Specifies the group type and its membership.  If the collection contains Unified then the group is an Office 365 group; otherwise it's a security group.  If the collection includes DynamicMembership, the group has dynamic membership; otherwise, membership is static.  Returned by default. Supports $filter.
+    * Specifies the group type and its membership.  If the collection contains Unified, the group is a Microsoft 365 group; otherwise, it's either a security group or distribution group. For details, see groups overview.If the collection includes DynamicMembership, the group has dynamic membership; otherwise, membership is static.  Returned by default. Supports $filter.
     *
     * @return string The groupTypes
     */
@@ -281,7 +283,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the groupTypes
-    * Specifies the group type and its membership.  If the collection contains Unified then the group is an Office 365 group; otherwise it's a security group.  If the collection includes DynamicMembership, the group has dynamic membership; otherwise, membership is static.  Returned by default. Supports $filter.
+    * Specifies the group type and its membership.  If the collection contains Unified, the group is a Microsoft 365 group; otherwise, it's either a security group or distribution group. For details, see groups overview.If the collection includes DynamicMembership, the group has dynamic membership; otherwise, membership is static.  Returned by default. Supports $filter.
     *
     * @param string $val The groupTypes
     *
@@ -415,6 +417,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the membershipRule
+    * The rule that determines members for this group if the group is a dynamic group (groupTypes contains DynamicMembership). For more information about the syntax of the membership rule, see Membership Rules syntax. Returned by default.
     *
     * @return string The membershipRule
     */
@@ -429,6 +432,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the membershipRule
+    * The rule that determines members for this group if the group is a dynamic group (groupTypes contains DynamicMembership). For more information about the syntax of the membership rule, see Membership Rules syntax. Returned by default.
     *
     * @param string $val The membershipRule
     *
@@ -442,6 +446,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the membershipRuleProcessingState
+    * Indicates whether the dynamic membership processing is on or paused. Possible values are 'On' or 'Paused'. Returned by default.
     *
     * @return string The membershipRuleProcessingState
     */
@@ -456,6 +461,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the membershipRuleProcessingState
+    * Indicates whether the dynamic membership processing is on or paused. Possible values are 'On' or 'Paused'. Returned by default.
     *
     * @param string $val The membershipRuleProcessingState
     *
@@ -706,6 +712,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the preferredLanguage
+    * The preferred language for an Microsoft 365 group. Should follow ISO 639-1 Code; for example 'en-US'. Returned by default.
     *
     * @return string The preferredLanguage
     */
@@ -720,6 +727,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the preferredLanguage
+    * The preferred language for an Microsoft 365 group. Should follow ISO 639-1 Code; for example 'en-US'. Returned by default.
     *
     * @param string $val The preferredLanguage
     *
@@ -853,6 +861,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the theme
+    * Specifies an Microsoft 365 group's color theme. Possible values are Teal, Purple, Green, Blue, Pink, Orange or Red. Returned by default.
     *
     * @return string The theme
     */
@@ -867,6 +876,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the theme
+    * Specifies an Microsoft 365 group's color theme. Possible values are Teal, Purple, Green, Blue, Pink, Orange or Red. Returned by default.
     *
     * @param string $val The theme
     *
@@ -880,7 +890,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the visibility
-    * Specifies the visibility of an Office 365 group. Possible values are: Private, Public, or Hiddenmembership; blank values are treated as public.  See group visibility options to learn more.Visibility can be set only when a group is created; it is not editable.Visibility is supported only for unified groups; it is not supported for security groups. Returned by default.
+    * Specifies the visibility of a Microsoft 365 group. Possible values are: Private, Public, or Hiddenmembership; blank values are treated as public.  See group visibility options to learn more.Visibility can be set only when a group is created; it is not editable.Visibility is supported only for unified groups; it is not supported for security groups. Returned by default.
     *
     * @return string The visibility
     */
@@ -895,7 +905,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the visibility
-    * Specifies the visibility of an Office 365 group. Possible values are: Private, Public, or Hiddenmembership; blank values are treated as public.  See group visibility options to learn more.Visibility can be set only when a group is created; it is not editable.Visibility is supported only for unified groups; it is not supported for security groups. Returned by default.
+    * Specifies the visibility of a Microsoft 365 group. Possible values are: Private, Public, or Hiddenmembership; blank values are treated as public.  See group visibility options to learn more.Visibility can be set only when a group is created; it is not editable.Visibility is supported only for unified groups; it is not supported for security groups. Returned by default.
     *
     * @param string $val The visibility
     *
@@ -1139,7 +1149,7 @@ class Group extends DirectoryObject
 
      /** 
      * Gets the members
-    * Users and groups that are members of this group. HTTP Methods: GET (supported for all groups), POST (supported for Office 365 groups, security groups and mail-enabled security groups), DELETE (supported for Office 365 groups and security groups) Nullable.
+    * Users and groups that are members of this group. HTTP Methods: GET (supported for all groups), POST (supported for Microsoft 365 groups, security groups and mail-enabled security groups), DELETE (supported for Microsoft 365 groups and security groups) Nullable.
      *
      * @return array The members
      */
@@ -1154,7 +1164,7 @@ class Group extends DirectoryObject
     
     /** 
     * Sets the members
-    * Users and groups that are members of this group. HTTP Methods: GET (supported for all groups), POST (supported for Office 365 groups, security groups and mail-enabled security groups), DELETE (supported for Office 365 groups and security groups) Nullable.
+    * Users and groups that are members of this group. HTTP Methods: GET (supported for all groups), POST (supported for Microsoft 365 groups, security groups and mail-enabled security groups), DELETE (supported for Microsoft 365 groups and security groups) Nullable.
     *
     * @param DirectoryObject $val The members
     *
@@ -1318,7 +1328,7 @@ class Group extends DirectoryObject
 
      /** 
      * Gets the owners
-    * The owners of the group. The owners are a set of non-admin users who are allowed to modify this object. Limited to 100 owners. HTTP Methods: GET (supported for all groups), POST (supported for Office 365 groups, security groups and mail-enabled security groups), DELETE (supported for Office 365 groups and security groups). Nullable.
+    * The owners of the group. The owners are a set of non-admin users who are allowed to modify this object. Limited to 100 owners. HTTP Methods: GET (supported for all groups), POST (supported for Microsoft 365 groups, security groups and mail-enabled security groups), DELETE (supported for Microsoft 365 groups and security groups). Nullable.
      *
      * @return array The owners
      */
@@ -1333,7 +1343,7 @@ class Group extends DirectoryObject
     
     /** 
     * Sets the owners
-    * The owners of the group. The owners are a set of non-admin users who are allowed to modify this object. Limited to 100 owners. HTTP Methods: GET (supported for all groups), POST (supported for Office 365 groups, security groups and mail-enabled security groups), DELETE (supported for Office 365 groups and security groups). Nullable.
+    * The owners of the group. The owners are a set of non-admin users who are allowed to modify this object. Limited to 100 owners. HTTP Methods: GET (supported for all groups), POST (supported for Microsoft 365 groups, security groups and mail-enabled security groups), DELETE (supported for Microsoft 365 groups and security groups). Nullable.
     *
     * @param DirectoryObject $val The owners
     *

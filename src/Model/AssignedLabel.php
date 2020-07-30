@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 /**
@@ -20,13 +19,13 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class AssignedLabel extends Entity
 {
     /**
     * Gets the labelId
+    * The unique identifier of the label.
     *
     * @return string The labelId
     */
@@ -41,6 +40,7 @@ class AssignedLabel extends Entity
 
     /**
     * Sets the labelId
+    * The unique identifier of the label.
     *
     * @param string $val The value of the labelId
     *
@@ -53,6 +53,7 @@ class AssignedLabel extends Entity
     }
     /**
     * Gets the displayName
+    * The display name of the label. Read-only.
     *
     * @return string The displayName
     */
@@ -67,6 +68,7 @@ class AssignedLabel extends Entity
 
     /**
     * Sets the displayName
+    * The display name of the label. Read-only.
     *
     * @param string $val The value of the displayName
     *

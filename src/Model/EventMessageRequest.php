@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 
@@ -21,13 +20,13 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class EventMessageRequest extends EventMessage
 {
     /**
     * Gets the previousLocation
+    * If the meeting update changes the meeting location, this property specifies the previous meeting location.
     *
     * @return Location The previousLocation
     */
@@ -46,6 +45,7 @@ class EventMessageRequest extends EventMessage
     
     /**
     * Sets the previousLocation
+    * If the meeting update changes the meeting location, this property specifies the previous meeting location.
     *
     * @param Location $val The previousLocation
     *
@@ -59,6 +59,7 @@ class EventMessageRequest extends EventMessage
     
     /**
     * Gets the previousStartDateTime
+    * If the meeting update changes the meeting start time, this property specifies the previous meeting start time.
     *
     * @return DateTimeTimeZone The previousStartDateTime
     */
@@ -77,6 +78,7 @@ class EventMessageRequest extends EventMessage
     
     /**
     * Sets the previousStartDateTime
+    * If the meeting update changes the meeting start time, this property specifies the previous meeting start time.
     *
     * @param DateTimeTimeZone $val The previousStartDateTime
     *
@@ -90,6 +92,7 @@ class EventMessageRequest extends EventMessage
     
     /**
     * Gets the previousEndDateTime
+    * If the meeting update changes the meeting end time, this property specifies the previous meeting end time.
     *
     * @return DateTimeTimeZone The previousEndDateTime
     */
@@ -108,6 +111,7 @@ class EventMessageRequest extends EventMessage
     
     /**
     * Sets the previousEndDateTime
+    * If the meeting update changes the meeting end time, this property specifies the previous meeting end time.
     *
     * @param DateTimeTimeZone $val The previousEndDateTime
     *
@@ -121,6 +125,7 @@ class EventMessageRequest extends EventMessage
     
     /**
     * Gets the responseRequested
+    * Set to true if the sender would like the invitee to send a response to the requested meeting.
     *
     * @return bool The responseRequested
     */
@@ -135,6 +140,7 @@ class EventMessageRequest extends EventMessage
     
     /**
     * Sets the responseRequested
+    * Set to true if the sender would like the invitee to send a response to the requested meeting.
     *
     * @param bool $val The responseRequested
     *
@@ -148,6 +154,7 @@ class EventMessageRequest extends EventMessage
     
     /**
     * Gets the allowNewTimeProposals
+    * True if the meeting organizer allows invitees to propose a new time when responding, false otherwise. Optional. Default is true.
     *
     * @return bool The allowNewTimeProposals
     */
@@ -162,6 +169,7 @@ class EventMessageRequest extends EventMessage
     
     /**
     * Sets the allowNewTimeProposals
+    * True if the meeting organizer allows invitees to propose a new time when responding, false otherwise. Optional. Default is true.
     *
     * @param bool $val The allowNewTimeProposals
     *

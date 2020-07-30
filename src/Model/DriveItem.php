@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 
@@ -21,8 +20,7 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class DriveItem extends BaseItem
 {
@@ -354,6 +352,7 @@ class DriveItem extends BaseItem
     
     /**
     * Gets the pendingOperations
+    * If present, indicates that one or more operations that might affect the state of the driveItem are pending completion. Read-only.
     *
     * @return PendingOperations The pendingOperations
     */
@@ -372,6 +371,7 @@ class DriveItem extends BaseItem
     
     /**
     * Sets the pendingOperations
+    * If present, indicates that one or more operations that might affect the state of the driveItem are pending completion. Read-only.
     *
     * @param PendingOperations $val The pendingOperations
     *

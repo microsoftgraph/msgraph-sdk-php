@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 /**
@@ -20,8 +19,7 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class Process extends Entity
 {
@@ -91,7 +89,7 @@ class Process extends Entity
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -246,7 +244,7 @@ class Process extends Entity
     public function getParentProcessCreatedDateTime()
     {
         if (array_key_exists("parentProcessCreatedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["parentProcessCreatedDateTime"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["parentProcessCreatedDateTime"], "\DateTime")) {
                 return $this->_propDict["parentProcessCreatedDateTime"];
             } else {
                 $this->_propDict["parentProcessCreatedDateTime"] = new \DateTime($this->_propDict["parentProcessCreatedDateTime"]);

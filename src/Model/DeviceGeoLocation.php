@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 /**
@@ -20,8 +19,7 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class DeviceGeoLocation extends Entity
 {
@@ -35,7 +33,7 @@ class DeviceGeoLocation extends Entity
     public function getLastCollectedDateTime()
     {
         if (array_key_exists("lastCollectedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastCollectedDateTime"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["lastCollectedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastCollectedDateTime"];
             } else {
                 $this->_propDict["lastCollectedDateTime"] = new \DateTime($this->_propDict["lastCollectedDateTime"]);

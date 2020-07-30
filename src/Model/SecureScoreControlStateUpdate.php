@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 /**
@@ -20,8 +19,7 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class SecureScoreControlStateUpdate extends Entity
 {
@@ -147,7 +145,7 @@ class SecureScoreControlStateUpdate extends Entity
     public function getUpdatedDateTime()
     {
         if (array_key_exists("updatedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["updatedDateTime"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["updatedDateTime"], "\DateTime")) {
                 return $this->_propDict["updatedDateTime"];
             } else {
                 $this->_propDict["updatedDateTime"] = new \DateTime($this->_propDict["updatedDateTime"]);

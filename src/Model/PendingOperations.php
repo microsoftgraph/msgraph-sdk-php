@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 /**
@@ -20,14 +19,14 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class PendingOperations extends Entity
 {
 
     /**
     * Gets the pendingContentUpdate
+    * A property that indicates that an operation that might update the binary content of a file is pending completion.
     *
     * @return PendingContentUpdate The pendingContentUpdate
     */
@@ -46,6 +45,7 @@ class PendingOperations extends Entity
 
     /**
     * Sets the pendingContentUpdate
+    * A property that indicates that an operation that might update the binary content of a file is pending completion.
     *
     * @param PendingContentUpdate $val The value to assign to the pendingContentUpdate
     *
