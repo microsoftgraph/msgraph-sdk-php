@@ -91,6 +91,25 @@ from the base directory.
 *The set of functional tests are meant to be run against a test account. Currently, the 
 tests to do not restore state of the account.*
 
+#### Debug tests on Windows
+
+This SDK has an XDebug run configuration that attaches the debugger to VS Code so that you can debug tests.
+
+1. Install the [PHP Debug](https://marketplace.visualstudio.com/items?itemName=felixfbecker.php-debug) extension into Visual Studio Code.
+2. From the root of this repo, using PowerShell, run `php .\tests\GetPhpInfo.php | clip` from the repo root. This will copy PHP configuration information into the clipboard which we will use in the next step.
+3. Paste your clipboard into the [XDebug Installation Wizard](https://xdebug.org/wizard) and select **Analyse my phpinfo() output**.
+4. Follow the generated instructions for installing XDebug. Note that the `/ext` directory is located in your PHP directory.
+5. Add the following info to your php.ini file:
+
+    [XDebug]
+    xdebug.remote_enable = 1
+    xdebug.remote_autostart = 1
+
+Now you can hit a Visual Studio Code breakpoint in a test. Try this:
+
+1. Add a breakpoint to `testGetCalendarView` in *.\tests\Functional\EventTest.php*.
+2. Run the **Listen for XDebug** configuration in VS Code.
+3. Run `.\vendor\bin\phpunit --filter testGetCalendarView` from the PowerShell terminal to run the test and hit the breakpoint.
 
 ## Documentation and resources
 
