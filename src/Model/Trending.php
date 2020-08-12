@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 
@@ -21,13 +20,13 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class Trending extends Entity
 {
     /**
     * Gets the weight
+    * Value indicating how much the document is currently trending. The larger the number, the more the document is currently trending around the user (the more relevant it is). Returned documents are sorted by this value.
     *
     * @return float The weight
     */
@@ -42,6 +41,7 @@ class Trending extends Entity
     
     /**
     * Sets the weight
+    * Value indicating how much the document is currently trending. The larger the number, the more the document is currently trending around the user (the more relevant it is). Returned documents are sorted by this value.
     *
     * @param float $val The weight
     *
@@ -55,6 +55,7 @@ class Trending extends Entity
     
     /**
     * Gets the resourceVisualization
+    * Properties that you can use to visualize the document in your experience.
     *
     * @return ResourceVisualization The resourceVisualization
     */
@@ -73,6 +74,7 @@ class Trending extends Entity
     
     /**
     * Sets the resourceVisualization
+    * Properties that you can use to visualize the document in your experience.
     *
     * @param ResourceVisualization $val The resourceVisualization
     *
@@ -86,6 +88,7 @@ class Trending extends Entity
     
     /**
     * Gets the resourceReference
+    * Reference properties of the trending document, such as the url and type of the document.
     *
     * @return ResourceReference The resourceReference
     */
@@ -104,6 +107,7 @@ class Trending extends Entity
     
     /**
     * Sets the resourceReference
+    * Reference properties of the trending document, such as the url and type of the document.
     *
     * @param ResourceReference $val The resourceReference
     *
@@ -148,6 +152,7 @@ class Trending extends Entity
     
     /**
     * Gets the resource
+    * Used for navigating to the trending document.
     *
     * @return Entity The resource
     */
@@ -166,6 +171,7 @@ class Trending extends Entity
     
     /**
     * Sets the resource
+    * Used for navigating to the trending document.
     *
     * @param Entity $val The resource
     *

@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 
@@ -23,8 +22,7 @@ use Microsoft\Graph\Core\Enum;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class IosUpdatesInstallStatus extends Enum
 {
@@ -48,4 +46,5 @@ class IosUpdatesInstallStatus extends Enum
     const INSTALL_FAILED = "installFailed";
     const NOT_SUPPORTED_OPERATION = "notSupportedOperation";
     const SHARED_DEVICE_USER_LOGGED_IN_ERROR = "sharedDeviceUserLoggedInError";
+    const DEVICE_OS_HIGHER_THAN_DESIRED_OS_VERSION = "deviceOsHigherThanDesiredOsVersion";
 }

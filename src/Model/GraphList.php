@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 
@@ -21,8 +20,7 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class GraphList extends BaseItem
 {
@@ -274,6 +272,36 @@ class GraphList extends BaseItem
     public function setItems($val)
     {
 		$this->_propDict["items"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the subscriptions
+    * The set of subscriptions on the list.
+     *
+     * @return array The subscriptions
+     */
+    public function getSubscriptions()
+    {
+        if (array_key_exists("subscriptions", $this->_propDict)) {
+           return $this->_propDict["subscriptions"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the subscriptions
+    * The set of subscriptions on the list.
+    *
+    * @param Subscription $val The subscriptions
+    *
+    * @return List
+    */
+    public function setSubscriptions($val)
+    {
+		$this->_propDict["subscriptions"] = $val;
         return $this;
     }
     

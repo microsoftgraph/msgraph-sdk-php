@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 /**
@@ -20,8 +19,7 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class AlternativeSecurityId extends Entity
 {
@@ -91,7 +89,7 @@ class AlternativeSecurityId extends Entity
     public function getKey()
     {
         if (array_key_exists("key", $this->_propDict)) {
-            if (is_a($this->_propDict["key"], "Microsoft\Graph\Model\\GuzzleHttp\Psr7\Stream")) {
+            if (is_a($this->_propDict["key"], "\GuzzleHttp\Psr7\Stream")) {
                 return $this->_propDict["key"];
             } else {
                 $this->_propDict["key"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["key"]);

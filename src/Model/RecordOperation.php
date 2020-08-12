@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 
@@ -21,13 +20,13 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class RecordOperation extends CommsOperation
 {
     /**
     * Gets the recordingLocation
+    * The location where the recording is located.
     *
     * @return string The recordingLocation
     */
@@ -42,6 +41,7 @@ class RecordOperation extends CommsOperation
     
     /**
     * Sets the recordingLocation
+    * The location where the recording is located.
     *
     * @param string $val The recordingLocation
     *
@@ -55,6 +55,7 @@ class RecordOperation extends CommsOperation
     
     /**
     * Gets the recordingAccessToken
+    * The access token required to retrieve the recording.
     *
     * @return string The recordingAccessToken
     */
@@ -69,6 +70,7 @@ class RecordOperation extends CommsOperation
     
     /**
     * Sets the recordingAccessToken
+    * The access token required to retrieve the recording.
     *
     * @param string $val The recordingAccessToken
     *

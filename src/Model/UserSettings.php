@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 
@@ -21,8 +20,7 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class UserSettings extends Entity
 {
@@ -77,6 +75,37 @@ class UserSettings extends Entity
     public function setContributionToContentDiscoveryAsOrganizationDisabled($val)
     {
         $this->_propDict["contributionToContentDiscoveryAsOrganizationDisabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the shiftPreferences
+    *
+    * @return ShiftPreferences The shiftPreferences
+    */
+    public function getShiftPreferences()
+    {
+        if (array_key_exists("shiftPreferences", $this->_propDict)) {
+            if (is_a($this->_propDict["shiftPreferences"], "Microsoft\Graph\Model\ShiftPreferences")) {
+                return $this->_propDict["shiftPreferences"];
+            } else {
+                $this->_propDict["shiftPreferences"] = new ShiftPreferences($this->_propDict["shiftPreferences"]);
+                return $this->_propDict["shiftPreferences"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the shiftPreferences
+    *
+    * @param ShiftPreferences $val The shiftPreferences
+    *
+    * @return UserSettings
+    */
+    public function setShiftPreferences($val)
+    {
+        $this->_propDict["shiftPreferences"] = $val;
         return $this;
     }
     

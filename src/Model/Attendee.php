@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 /**
@@ -20,8 +19,7 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class Attendee extends AttendeeBase
 {
@@ -56,6 +54,39 @@ class Attendee extends AttendeeBase
     public function setStatus($val)
     {
         $this->_propDict["status"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the proposedNewTime
+    * An alternate date/time proposed by the attendee for a meeting request to start and end. If the attendee hasn't proposed another time, then this property is not included in a response of a GET event.
+    *
+    * @return TimeSlot The proposedNewTime
+    */
+    public function getProposedNewTime()
+    {
+        if (array_key_exists("proposedNewTime", $this->_propDict)) {
+            if (is_a($this->_propDict["proposedNewTime"], "Microsoft\Graph\Model\TimeSlot")) {
+                return $this->_propDict["proposedNewTime"];
+            } else {
+                $this->_propDict["proposedNewTime"] = new TimeSlot($this->_propDict["proposedNewTime"]);
+                return $this->_propDict["proposedNewTime"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the proposedNewTime
+    * An alternate date/time proposed by the attendee for a meeting request to start and end. If the attendee hasn't proposed another time, then this property is not included in a response of a GET event.
+    *
+    * @param TimeSlot $val The value to assign to the proposedNewTime
+    *
+    * @return Attendee The Attendee
+    */
+    public function setProposedNewTime($val)
+    {
+        $this->_propDict["proposedNewTime"] = $val;
          return $this;
     }
 }

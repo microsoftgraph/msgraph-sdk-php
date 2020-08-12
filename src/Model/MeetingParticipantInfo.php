@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 /**
@@ -20,14 +19,14 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class MeetingParticipantInfo extends Entity
 {
 
     /**
     * Gets the identity
+    * Identity information of the participant.
     *
     * @return IdentitySet The identity
     */
@@ -46,6 +45,7 @@ class MeetingParticipantInfo extends Entity
 
     /**
     * Sets the identity
+    * Identity information of the participant.
     *
     * @param IdentitySet $val The value to assign to the identity
     *
@@ -58,6 +58,7 @@ class MeetingParticipantInfo extends Entity
     }
     /**
     * Gets the upn
+    * User principal name of the participant.
     *
     * @return string The upn
     */
@@ -72,6 +73,7 @@ class MeetingParticipantInfo extends Entity
 
     /**
     * Sets the upn
+    * User principal name of the participant.
     *
     * @param string $val The value of the upn
     *

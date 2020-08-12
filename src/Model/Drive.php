@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 
@@ -21,8 +20,7 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class Drive extends BaseItem
 {
@@ -182,6 +180,36 @@ class Drive extends BaseItem
     public function setSystem($val)
     {
         $this->_propDict["system"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the following
+    * The list of items the user is following. Only in OneDrive for Business.
+     *
+     * @return array The following
+     */
+    public function getFollowing()
+    {
+        if (array_key_exists("following", $this->_propDict)) {
+           return $this->_propDict["following"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the following
+    * The list of items the user is following. Only in OneDrive for Business.
+    *
+    * @param DriveItem $val The following
+    *
+    * @return Drive
+    */
+    public function setFollowing($val)
+    {
+		$this->_propDict["following"] = $val;
         return $this;
     }
     

@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 /**
@@ -20,13 +19,13 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class MediaInfo extends Entity
 {
     /**
     * Gets the uri
+    * Path to the prompt that will be played. Currently supports only Wave file (.wav) format, single-channel, 16-bit samples with a 16,000 (16KHz) sampling rate.
     *
     * @return string The uri
     */
@@ -41,6 +40,7 @@ class MediaInfo extends Entity
 
     /**
     * Sets the uri
+    * Path to the prompt that will be played. Currently supports only Wave file (.wav) format, single-channel, 16-bit samples with a 16,000 (16KHz) sampling rate.
     *
     * @param string $val The value of the uri
     *
@@ -53,6 +53,7 @@ class MediaInfo extends Entity
     }
     /**
     * Gets the resourceId
+    * Optional. Used to uniquely identity the resource. If passed in, the prompt uri will be cached against this resourceId as a key.
     *
     * @return string The resourceId
     */
@@ -67,6 +68,7 @@ class MediaInfo extends Entity
 
     /**
     * Sets the resourceId
+    * Optional. Used to uniquely identity the resource. If passed in, the prompt uri will be cached against this resourceId as a key.
     *
     * @param string $val The value of the resourceId
     *

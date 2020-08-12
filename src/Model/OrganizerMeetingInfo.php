@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 /**
@@ -20,8 +19,7 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class OrganizerMeetingInfo extends MeetingInfo
 {
@@ -37,6 +35,7 @@ class OrganizerMeetingInfo extends MeetingInfo
 
     /**
     * Gets the organizer
+    * The organizer Azure Active Directory identity.
     *
     * @return IdentitySet The organizer
     */
@@ -55,6 +54,7 @@ class OrganizerMeetingInfo extends MeetingInfo
 
     /**
     * Sets the organizer
+    * The organizer Azure Active Directory identity.
     *
     * @param IdentitySet $val The value to assign to the organizer
     *

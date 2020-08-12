@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 
@@ -21,8 +20,7 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class DeviceManagement extends Entity
 {
@@ -56,6 +54,35 @@ class DeviceManagement extends Entity
     public function setSettings($val)
     {
         $this->_propDict["settings"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the intuneAccountId
+    * Intune Account Id for given tenant
+    *
+    * @return string The intuneAccountId
+    */
+    public function getIntuneAccountId()
+    {
+        if (array_key_exists("intuneAccountId", $this->_propDict)) {
+            return $this->_propDict["intuneAccountId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the intuneAccountId
+    * Intune Account Id for given tenant
+    *
+    * @param string $val The intuneAccountId
+    *
+    * @return DeviceManagement
+    */
+    public function setIntuneAccountId($val)
+    {
+        $this->_propDict["intuneAccountId"] = $val;
         return $this;
     }
     
@@ -554,6 +581,36 @@ class DeviceManagement extends Entity
     public function setDeviceManagementPartners($val)
     {
 		$this->_propDict["deviceManagementPartners"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the complianceManagementPartners
+    * The list of Compliance Management Partners configured by the tenant.
+     *
+     * @return array The complianceManagementPartners
+     */
+    public function getComplianceManagementPartners()
+    {
+        if (array_key_exists("complianceManagementPartners", $this->_propDict)) {
+           return $this->_propDict["complianceManagementPartners"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the complianceManagementPartners
+    * The list of Compliance Management Partners configured by the tenant.
+    *
+    * @param ComplianceManagementPartner $val The complianceManagementPartners
+    *
+    * @return DeviceManagement
+    */
+    public function setComplianceManagementPartners($val)
+    {
+		$this->_propDict["complianceManagementPartners"] = $val;
         return $this;
     }
     

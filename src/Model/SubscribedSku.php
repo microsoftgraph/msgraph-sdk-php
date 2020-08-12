@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 
@@ -21,14 +20,13 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class SubscribedSku extends Entity
 {
     /**
     * Gets the capabilityStatus
-    * For example, 'Enabled'.
+    * Possible values are: Enabled, Warning, Suspended, Deleted, LockedOut.
     *
     * @return string The capabilityStatus
     */
@@ -43,7 +41,7 @@ class SubscribedSku extends Entity
     
     /**
     * Sets the capabilityStatus
-    * For example, 'Enabled'.
+    * Possible values are: Enabled, Warning, Suspended, Deleted, LockedOut.
     *
     * @param string $val The capabilityStatus
     *
@@ -178,7 +176,7 @@ class SubscribedSku extends Entity
     
     /**
     * Gets the skuPartNumber
-    * The SKU part number; for example: 'AAD_PREMIUM' or 'RMSBASIC'.
+    * The SKU part number; for example: 'AAD_PREMIUM' or 'RMSBASIC'. To get a list of commercial subscriptions that an organization has acquired, see List subscribedSkus.
     *
     * @return string The skuPartNumber
     */
@@ -193,7 +191,7 @@ class SubscribedSku extends Entity
     
     /**
     * Sets the skuPartNumber
-    * The SKU part number; for example: 'AAD_PREMIUM' or 'RMSBASIC'.
+    * The SKU part number; for example: 'AAD_PREMIUM' or 'RMSBASIC'. To get a list of commercial subscriptions that an organization has acquired, see List subscribedSkus.
     *
     * @param string $val The skuPartNumber
     *

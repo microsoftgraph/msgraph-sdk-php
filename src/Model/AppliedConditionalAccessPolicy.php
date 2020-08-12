@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 /**
@@ -20,14 +19,13 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class AppliedConditionalAccessPolicy extends Entity
 {
     /**
     * Gets the id
-    * Unique GUID of the conditional access polic.y
+    * Unique GUID of the conditional access policy.
     *
     * @return string The id
     */
@@ -42,7 +40,7 @@ class AppliedConditionalAccessPolicy extends Entity
 
     /**
     * Sets the id
-    * Unique GUID of the conditional access polic.y
+    * Unique GUID of the conditional access policy.
     *
     * @param string $val The value of the id
     *

@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 /**
@@ -20,8 +19,7 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class ServiceHostedMediaConfig extends MediaConfig
 {
@@ -37,6 +35,7 @@ class ServiceHostedMediaConfig extends MediaConfig
 
     /**
     * Gets the preFetchMedia
+    * The list of media to pre-fetch.
     *
     * @return MediaInfo The preFetchMedia
     */
@@ -55,6 +54,7 @@ class ServiceHostedMediaConfig extends MediaConfig
 
     /**
     * Sets the preFetchMedia
+    * The list of media to pre-fetch.
     *
     * @param MediaInfo $val The value to assign to the preFetchMedia
     *

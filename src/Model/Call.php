@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 
@@ -21,13 +20,13 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class Call extends Entity
 {
     /**
     * Gets the state
+    * The call state. Possible values are: incoming, establishing, ringing, established, hold, transferring, transferAccepted, redirecting, terminating, terminated. Read-only.
     *
     * @return CallState The state
     */
@@ -46,6 +45,7 @@ class Call extends Entity
     
     /**
     * Sets the state
+    * The call state. Possible values are: incoming, establishing, ringing, established, hold, transferring, transferAccepted, redirecting, terminating, terminated. Read-only.
     *
     * @param CallState $val The state
     *
@@ -59,6 +59,7 @@ class Call extends Entity
     
     /**
     * Gets the mediaState
+    * Read-only. The call media state.
     *
     * @return CallMediaState The mediaState
     */
@@ -77,6 +78,7 @@ class Call extends Entity
     
     /**
     * Sets the mediaState
+    * Read-only. The call media state.
     *
     * @param CallMediaState $val The mediaState
     *
@@ -90,6 +92,7 @@ class Call extends Entity
     
     /**
     * Gets the resultInfo
+    * The result information. For example can hold termination reason. Read-only.
     *
     * @return ResultInfo The resultInfo
     */
@@ -108,6 +111,7 @@ class Call extends Entity
     
     /**
     * Sets the resultInfo
+    * The result information. For example can hold termination reason. Read-only.
     *
     * @param ResultInfo $val The resultInfo
     *
@@ -121,6 +125,7 @@ class Call extends Entity
     
     /**
     * Gets the direction
+    * The direction of the call. The possible value are incoming or outgoing. Read-only.
     *
     * @return CallDirection The direction
     */
@@ -139,6 +144,7 @@ class Call extends Entity
     
     /**
     * Sets the direction
+    * The direction of the call. The possible value are incoming or outgoing. Read-only.
     *
     * @param CallDirection $val The direction
     *
@@ -152,6 +158,7 @@ class Call extends Entity
     
     /**
     * Gets the subject
+    * The subject of the conversation.
     *
     * @return string The subject
     */
@@ -166,6 +173,7 @@ class Call extends Entity
     
     /**
     * Sets the subject
+    * The subject of the conversation.
     *
     * @param string $val The subject
     *
@@ -179,6 +187,7 @@ class Call extends Entity
     
     /**
     * Gets the callbackUri
+    * The callback URL on which callbacks will be delivered. Must be https.
     *
     * @return string The callbackUri
     */
@@ -193,6 +202,7 @@ class Call extends Entity
     
     /**
     * Sets the callbackUri
+    * The callback URL on which callbacks will be delivered. Must be https.
     *
     * @param string $val The callbackUri
     *
@@ -204,8 +214,39 @@ class Call extends Entity
         return $this;
     }
     
+
+     /** 
+     * Gets the callRoutes
+    * The routing information on how the call was retargeted. Read-only.
+     *
+     * @return array The callRoutes
+     */
+    public function getCallRoutes()
+    {
+        if (array_key_exists("callRoutes", $this->_propDict)) {
+           return $this->_propDict["callRoutes"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the callRoutes
+    * The routing information on how the call was retargeted. Read-only.
+    *
+    * @param CallRoute $val The callRoutes
+    *
+    * @return Call
+    */
+    public function setCallRoutes($val)
+    {
+		$this->_propDict["callRoutes"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the source
+    * The originator of the call.
     *
     * @return ParticipantInfo The source
     */
@@ -224,6 +265,7 @@ class Call extends Entity
     
     /**
     * Sets the source
+    * The originator of the call.
     *
     * @param ParticipantInfo $val The source
     *
@@ -238,6 +280,7 @@ class Call extends Entity
 
      /** 
      * Gets the targets
+    * The targets of the call. Required information for creating peer to peer call.
      *
      * @return array The targets
      */
@@ -252,8 +295,9 @@ class Call extends Entity
     
     /** 
     * Sets the targets
+    * The targets of the call. Required information for creating peer to peer call.
     *
-    * @param ParticipantInfo $val The targets
+    * @param InvitationParticipantInfo $val The targets
     *
     * @return Call
     */
@@ -266,6 +310,7 @@ class Call extends Entity
 
      /** 
      * Gets the requestedModalities
+    * The list of requested modalities. Possible values are: unknown, audio, video, videoBasedScreenSharing, data.
      *
      * @return array The requestedModalities
      */
@@ -280,6 +325,7 @@ class Call extends Entity
     
     /** 
     * Sets the requestedModalities
+    * The list of requested modalities. Possible values are: unknown, audio, video, videoBasedScreenSharing, data.
     *
     * @param Modality $val The requestedModalities
     *
@@ -293,6 +339,7 @@ class Call extends Entity
     
     /**
     * Gets the mediaConfig
+    * The media configuration. Required.
     *
     * @return MediaConfig The mediaConfig
     */
@@ -311,6 +358,7 @@ class Call extends Entity
     
     /**
     * Sets the mediaConfig
+    * The media configuration. Required.
     *
     * @param MediaConfig $val The mediaConfig
     *
@@ -324,6 +372,7 @@ class Call extends Entity
     
     /**
     * Gets the chatInfo
+    * The chat information. Required information for joining a meeting.
     *
     * @return ChatInfo The chatInfo
     */
@@ -342,6 +391,7 @@ class Call extends Entity
     
     /**
     * Sets the chatInfo
+    * The chat information. Required information for joining a meeting.
     *
     * @param ChatInfo $val The chatInfo
     *
@@ -354,7 +404,39 @@ class Call extends Entity
     }
     
     /**
+    * Gets the callOptions
+    *
+    * @return CallOptions The callOptions
+    */
+    public function getCallOptions()
+    {
+        if (array_key_exists("callOptions", $this->_propDict)) {
+            if (is_a($this->_propDict["callOptions"], "Microsoft\Graph\Model\CallOptions")) {
+                return $this->_propDict["callOptions"];
+            } else {
+                $this->_propDict["callOptions"] = new CallOptions($this->_propDict["callOptions"]);
+                return $this->_propDict["callOptions"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the callOptions
+    *
+    * @param CallOptions $val The callOptions
+    *
+    * @return Call
+    */
+    public function setCallOptions($val)
+    {
+        $this->_propDict["callOptions"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the meetingInfo
+    * The meeting information that's required for joining a meeting.
     *
     * @return MeetingInfo The meetingInfo
     */
@@ -373,6 +455,7 @@ class Call extends Entity
     
     /**
     * Sets the meetingInfo
+    * The meeting information that's required for joining a meeting.
     *
     * @param MeetingInfo $val The meetingInfo
     *
@@ -413,6 +496,7 @@ class Call extends Entity
     
     /**
     * Gets the myParticipantId
+    * Read-only.
     *
     * @return string The myParticipantId
     */
@@ -427,6 +511,7 @@ class Call extends Entity
     
     /**
     * Sets the myParticipantId
+    * Read-only.
     *
     * @param string $val The myParticipantId
     *
@@ -469,9 +554,70 @@ class Call extends Entity
         return $this;
     }
     
+    /**
+    * Gets the callChainId
+    * A unique identifier for all the participant calls in a conference or a unique identifier for two participant calls in a P2P call.  This needs to be copied over from Microsoft.Graph.Call.CallChainId.
+    *
+    * @return string The callChainId
+    */
+    public function getCallChainId()
+    {
+        if (array_key_exists("callChainId", $this->_propDict)) {
+            return $this->_propDict["callChainId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the callChainId
+    * A unique identifier for all the participant calls in a conference or a unique identifier for two participant calls in a P2P call.  This needs to be copied over from Microsoft.Graph.Call.CallChainId.
+    *
+    * @param string $val The callChainId
+    *
+    * @return Call
+    */
+    public function setCallChainId($val)
+    {
+        $this->_propDict["callChainId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the incomingContext
+    *
+    * @return IncomingContext The incomingContext
+    */
+    public function getIncomingContext()
+    {
+        if (array_key_exists("incomingContext", $this->_propDict)) {
+            if (is_a($this->_propDict["incomingContext"], "Microsoft\Graph\Model\IncomingContext")) {
+                return $this->_propDict["incomingContext"];
+            } else {
+                $this->_propDict["incomingContext"] = new IncomingContext($this->_propDict["incomingContext"]);
+                return $this->_propDict["incomingContext"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the incomingContext
+    *
+    * @param IncomingContext $val The incomingContext
+    *
+    * @return Call
+    */
+    public function setIncomingContext($val)
+    {
+        $this->_propDict["incomingContext"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the participants
+    * Read-only. Nullable.
      *
      * @return array The participants
      */
@@ -486,6 +632,7 @@ class Call extends Entity
     
     /** 
     * Sets the participants
+    * Read-only. Nullable.
     *
     * @param Participant $val The participants
     *
@@ -500,6 +647,7 @@ class Call extends Entity
 
      /** 
      * Gets the operations
+    * Read-only. Nullable.
      *
      * @return array The operations
      */
@@ -514,6 +662,7 @@ class Call extends Entity
     
     /** 
     * Sets the operations
+    * Read-only. Nullable.
     *
     * @param CommsOperation $val The operations
     *

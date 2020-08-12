@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 
@@ -21,8 +20,7 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class SignIn extends Entity
 {
@@ -639,6 +637,35 @@ class SignIn extends Entity
     public function setRiskEventTypes($val)
     {
 		$this->_propDict["riskEventTypes"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the riskEventTypesV2
+    * The list of risk event types associated with the sign-in. Possible values: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, or unknownFutureValue.
+    *
+    * @return string The riskEventTypesV2
+    */
+    public function getRiskEventTypesV2()
+    {
+        if (array_key_exists("riskEventTypesV2", $this->_propDict)) {
+            return $this->_propDict["riskEventTypesV2"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the riskEventTypesV2
+    * The list of risk event types associated with the sign-in. Possible values: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, or unknownFutureValue.
+    *
+    * @param string $val The riskEventTypesV2
+    *
+    * @return SignIn
+    */
+    public function setRiskEventTypesV2($val)
+    {
+        $this->_propDict["riskEventTypes_v2"] = $val;
         return $this;
     }
     

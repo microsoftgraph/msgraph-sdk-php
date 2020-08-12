@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 
@@ -21,8 +20,7 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class SharedDriveItem extends BaseItem
 {
@@ -185,6 +183,39 @@ class SharedDriveItem extends BaseItem
     public function setListItem($val)
     {
         $this->_propDict["listItem"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the permission
+    * Used to access the permission representing the underlying sharing link
+    *
+    * @return Permission The permission
+    */
+    public function getPermission()
+    {
+        if (array_key_exists("permission", $this->_propDict)) {
+            if (is_a($this->_propDict["permission"], "Microsoft\Graph\Model\Permission")) {
+                return $this->_propDict["permission"];
+            } else {
+                $this->_propDict["permission"] = new Permission($this->_propDict["permission"]);
+                return $this->_propDict["permission"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the permission
+    * Used to access the permission representing the underlying sharing link
+    *
+    * @param Permission $val The permission
+    *
+    * @return SharedDriveItem
+    */
+    public function setPermission($val)
+    {
+        $this->_propDict["permission"] = $val;
         return $this;
     }
     

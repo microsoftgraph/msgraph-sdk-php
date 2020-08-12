@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 /**
@@ -20,8 +19,7 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class RecurrenceRange extends Entity
 {
@@ -68,7 +66,7 @@ class RecurrenceRange extends Entity
     public function getStartDate()
     {
         if (array_key_exists("startDate", $this->_propDict)) {
-            if (is_a($this->_propDict["startDate"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["startDate"], "\DateTime")) {
                 return $this->_propDict["startDate"];
             } else {
                 $this->_propDict["startDate"] = new \DateTime($this->_propDict["startDate"]);
@@ -101,7 +99,7 @@ class RecurrenceRange extends Entity
     public function getEndDate()
     {
         if (array_key_exists("endDate", $this->_propDict)) {
-            if (is_a($this->_propDict["endDate"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["endDate"], "\DateTime")) {
                 return $this->_propDict["endDate"];
             } else {
                 $this->_propDict["endDate"] = new \DateTime($this->_propDict["endDate"]);

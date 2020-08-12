@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 
@@ -21,11 +20,43 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class Permission extends Entity
 {
+    /**
+    * Gets the expirationDateTime
+    * A format of yyyy-MM-ddTHH:mm:ssZ of DateTimeOffset indicates the expiration time of the permission. DateTime.MinValue indicates there is no expiration set for this permission. Optional.
+    *
+    * @return \DateTime The expirationDateTime
+    */
+    public function getExpirationDateTime()
+    {
+        if (array_key_exists("expirationDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["expirationDateTime"], "\DateTime")) {
+                return $this->_propDict["expirationDateTime"];
+            } else {
+                $this->_propDict["expirationDateTime"] = new \DateTime($this->_propDict["expirationDateTime"]);
+                return $this->_propDict["expirationDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the expirationDateTime
+    * A format of yyyy-MM-ddTHH:mm:ssZ of DateTimeOffset indicates the expiration time of the permission. DateTime.MinValue indicates there is no expiration set for this permission. Optional.
+    *
+    * @param \DateTime $val The expirationDateTime
+    *
+    * @return Permission
+    */
+    public function setExpirationDateTime($val)
+    {
+        $this->_propDict["expirationDateTime"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the grantedTo
     * For user type permissions, the details of the users &amp; applications for this permission. Read-only.
@@ -56,6 +87,65 @@ class Permission extends Entity
     public function setGrantedTo($val)
     {
         $this->_propDict["grantedTo"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the grantedToIdentities
+    * For link type permissions, the details of the users to whom permission was granted. Read-only.
+     *
+     * @return array The grantedToIdentities
+     */
+    public function getGrantedToIdentities()
+    {
+        if (array_key_exists("grantedToIdentities", $this->_propDict)) {
+           return $this->_propDict["grantedToIdentities"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the grantedToIdentities
+    * For link type permissions, the details of the users to whom permission was granted. Read-only.
+    *
+    * @param IdentitySet $val The grantedToIdentities
+    *
+    * @return Permission
+    */
+    public function setGrantedToIdentities($val)
+    {
+		$this->_propDict["grantedToIdentities"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the hasPassword
+    * This indicates whether password is set for this permission, it's only showing in response. Optional and Read-only and for OneDrive Personal only.
+    *
+    * @return bool The hasPassword
+    */
+    public function getHasPassword()
+    {
+        if (array_key_exists("hasPassword", $this->_propDict)) {
+            return $this->_propDict["hasPassword"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the hasPassword
+    * This indicates whether password is set for this permission, it's only showing in response. Optional and Read-only and for OneDrive Personal only.
+    *
+    * @param bool $val The hasPassword
+    *
+    * @return Permission
+    */
+    public function setHasPassword($val)
+    {
+        $this->_propDict["hasPassword"] = boolval($val);
         return $this;
     }
     

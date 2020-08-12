@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 
@@ -21,8 +20,7 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class DriveItem extends BaseItem
 {
@@ -349,6 +347,39 @@ class DriveItem extends BaseItem
     public function setPackage($val)
     {
         $this->_propDict["package"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the pendingOperations
+    * If present, indicates that one or more operations that might affect the state of the driveItem are pending completion. Read-only.
+    *
+    * @return PendingOperations The pendingOperations
+    */
+    public function getPendingOperations()
+    {
+        if (array_key_exists("pendingOperations", $this->_propDict)) {
+            if (is_a($this->_propDict["pendingOperations"], "Microsoft\Graph\Model\PendingOperations")) {
+                return $this->_propDict["pendingOperations"];
+            } else {
+                $this->_propDict["pendingOperations"] = new PendingOperations($this->_propDict["pendingOperations"]);
+                return $this->_propDict["pendingOperations"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the pendingOperations
+    * If present, indicates that one or more operations that might affect the state of the driveItem are pending completion. Read-only.
+    *
+    * @param PendingOperations $val The pendingOperations
+    *
+    * @return DriveItem
+    */
+    public function setPendingOperations($val)
+    {
+        $this->_propDict["pendingOperations"] = $val;
         return $this;
     }
     

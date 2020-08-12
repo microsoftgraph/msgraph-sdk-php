@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 /**
@@ -20,14 +19,13 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class DriveItemUploadableProperties extends Entity
 {
     /**
     * Gets the description
-    * Provides a user-visible description of the item. Read-write. Only on OneDrive Personal
+    * Provides a user-visible description of the item. Read-write. Only on OneDrive Personal.
     *
     * @return string The description
     */
@@ -42,7 +40,7 @@ class DriveItemUploadableProperties extends Entity
 
     /**
     * Sets the description
-    * Provides a user-visible description of the item. Read-write. Only on OneDrive Personal
+    * Provides a user-visible description of the item. Read-write. Only on OneDrive Personal.
     *
     * @param string $val The value of the description
     *
@@ -112,6 +110,34 @@ class DriveItemUploadableProperties extends Entity
     public function setName($val)
     {
         $this->_propDict["name"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the fileSize
+    * Provides an expected file size to perform a quota check prior to upload. Only on OneDrive Personal.
+    *
+    * @return int The fileSize
+    */
+    public function getFileSize()
+    {
+        if (array_key_exists("fileSize", $this->_propDict)) {
+            return $this->_propDict["fileSize"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the fileSize
+    * Provides an expected file size to perform a quota check prior to upload. Only on OneDrive Personal.
+    *
+    * @param int $val The value of the fileSize
+    *
+    * @return DriveItemUploadableProperties
+    */
+    public function setFileSize($val)
+    {
+        $this->_propDict["fileSize"] = $val;
         return $this;
     }
 }

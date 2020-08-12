@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 
@@ -21,8 +20,7 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class IosManagedAppProtection extends TargetedManagedAppProtection
 {
@@ -143,6 +141,35 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     public function setFaceIdBlocked($val)
     {
         $this->_propDict["faceIdBlocked"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the customBrowserProtocol
+    * A custom browser protocol to open weblink on iOS. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+    *
+    * @return string The customBrowserProtocol
+    */
+    public function getCustomBrowserProtocol()
+    {
+        if (array_key_exists("customBrowserProtocol", $this->_propDict)) {
+            return $this->_propDict["customBrowserProtocol"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the customBrowserProtocol
+    * A custom browser protocol to open weblink on iOS. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+    *
+    * @param string $val The customBrowserProtocol
+    *
+    * @return IosManagedAppProtection
+    */
+    public function setCustomBrowserProtocol($val)
+    {
+        $this->_propDict["customBrowserProtocol"] = $val;
         return $this;
     }
     

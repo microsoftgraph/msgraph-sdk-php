@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 /**
@@ -20,8 +19,7 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class DeviceHealthAttestationState extends Entity
 {
@@ -147,7 +145,7 @@ class DeviceHealthAttestationState extends Entity
     public function getIssuedDateTime()
     {
         if (array_key_exists("issuedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["issuedDateTime"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["issuedDateTime"], "\DateTime")) {
                 return $this->_propDict["issuedDateTime"];
             } else {
                 $this->_propDict["issuedDateTime"] = new \DateTime($this->_propDict["issuedDateTime"]);

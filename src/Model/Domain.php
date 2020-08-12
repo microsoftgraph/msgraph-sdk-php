@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 
@@ -21,8 +20,7 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class Domain extends Entity
 {
@@ -86,7 +84,7 @@ class Domain extends Entity
     
     /**
     * Gets the isAdminManaged
-    * The value of the property is false if the DNS record management of the domain has been delegated to Office 365. Otherwise, the value is true. Not nullable
+    * The value of the property is false if the DNS record management of the domain has been delegated to Microsoft 365. Otherwise, the value is true. Not nullable
     *
     * @return bool The isAdminManaged
     */
@@ -101,7 +99,7 @@ class Domain extends Entity
     
     /**
     * Sets the isAdminManaged
-    * The value of the property is false if the DNS record management of the domain has been delegated to Office 365. Otherwise, the value is true. Not nullable
+    * The value of the property is false if the DNS record management of the domain has been delegated to Microsoft 365. Otherwise, the value is true. Not nullable
     *
     * @param bool $val The isAdminManaged
     *
@@ -226,6 +224,60 @@ class Domain extends Entity
     public function setIsVerified($val)
     {
         $this->_propDict["isVerified"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the manufacturer
+    *
+    * @return string The manufacturer
+    */
+    public function getManufacturer()
+    {
+        if (array_key_exists("manufacturer", $this->_propDict)) {
+            return $this->_propDict["manufacturer"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the manufacturer
+    *
+    * @param string $val The manufacturer
+    *
+    * @return Domain
+    */
+    public function setManufacturer($val)
+    {
+        $this->_propDict["manufacturer"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the model
+    *
+    * @return string The model
+    */
+    public function getModel()
+    {
+        if (array_key_exists("model", $this->_propDict)) {
+            return $this->_propDict["model"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the model
+    *
+    * @param string $val The model
+    *
+    * @return Domain
+    */
+    public function setModel($val)
+    {
+        $this->_propDict["model"] = $val;
         return $this;
     }
     

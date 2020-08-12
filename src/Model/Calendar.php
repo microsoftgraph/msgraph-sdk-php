@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 
@@ -21,8 +20,7 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class Calendar extends Entity
 {
@@ -239,6 +237,127 @@ class Calendar extends Entity
     
 
      /** 
+     * Gets the allowedOnlineMeetingProviders
+    * Represent the online meeting service providers that can be used to create online meetings in this calendar. Possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.
+     *
+     * @return array The allowedOnlineMeetingProviders
+     */
+    public function getAllowedOnlineMeetingProviders()
+    {
+        if (array_key_exists("allowedOnlineMeetingProviders", $this->_propDict)) {
+           return $this->_propDict["allowedOnlineMeetingProviders"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the allowedOnlineMeetingProviders
+    * Represent the online meeting service providers that can be used to create online meetings in this calendar. Possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.
+    *
+    * @param OnlineMeetingProviderType $val The allowedOnlineMeetingProviders
+    *
+    * @return Calendar
+    */
+    public function setAllowedOnlineMeetingProviders($val)
+    {
+		$this->_propDict["allowedOnlineMeetingProviders"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the defaultOnlineMeetingProvider
+    * The default online meeting provider for meetings sent from this calendar. Possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.
+    *
+    * @return OnlineMeetingProviderType The defaultOnlineMeetingProvider
+    */
+    public function getDefaultOnlineMeetingProvider()
+    {
+        if (array_key_exists("defaultOnlineMeetingProvider", $this->_propDict)) {
+            if (is_a($this->_propDict["defaultOnlineMeetingProvider"], "Microsoft\Graph\Model\OnlineMeetingProviderType")) {
+                return $this->_propDict["defaultOnlineMeetingProvider"];
+            } else {
+                $this->_propDict["defaultOnlineMeetingProvider"] = new OnlineMeetingProviderType($this->_propDict["defaultOnlineMeetingProvider"]);
+                return $this->_propDict["defaultOnlineMeetingProvider"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the defaultOnlineMeetingProvider
+    * The default online meeting provider for meetings sent from this calendar. Possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.
+    *
+    * @param OnlineMeetingProviderType $val The defaultOnlineMeetingProvider
+    *
+    * @return Calendar
+    */
+    public function setDefaultOnlineMeetingProvider($val)
+    {
+        $this->_propDict["defaultOnlineMeetingProvider"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the isTallyingResponses
+    * Indicates whether this user calendar supports tracking of meeting responses. Only meeting invites sent from users' primary calendars support tracking of meeting responses.
+    *
+    * @return bool The isTallyingResponses
+    */
+    public function getIsTallyingResponses()
+    {
+        if (array_key_exists("isTallyingResponses", $this->_propDict)) {
+            return $this->_propDict["isTallyingResponses"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isTallyingResponses
+    * Indicates whether this user calendar supports tracking of meeting responses. Only meeting invites sent from users' primary calendars support tracking of meeting responses.
+    *
+    * @param bool $val The isTallyingResponses
+    *
+    * @return Calendar
+    */
+    public function setIsTallyingResponses($val)
+    {
+        $this->_propDict["isTallyingResponses"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the isRemovable
+    * Indicates whether this user calendar can be deleted from the user mailbox.
+    *
+    * @return bool The isRemovable
+    */
+    public function getIsRemovable()
+    {
+        if (array_key_exists("isRemovable", $this->_propDict)) {
+            return $this->_propDict["isRemovable"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isRemovable
+    * Indicates whether this user calendar can be deleted from the user mailbox.
+    *
+    * @param bool $val The isRemovable
+    *
+    * @return Calendar
+    */
+    public function setIsRemovable($val)
+    {
+        $this->_propDict["isRemovable"] = boolval($val);
+        return $this;
+    }
+    
+
+     /** 
      * Gets the singleValueExtendedProperties
     * The collection of single-value extended properties defined for the calendar. Read-only. Nullable.
      *
@@ -294,6 +413,36 @@ class Calendar extends Entity
     public function setMultiValueExtendedProperties($val)
     {
 		$this->_propDict["multiValueExtendedProperties"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the calendarPermissions
+    * The permissions of the users with whom the calendar is shared.
+     *
+     * @return array The calendarPermissions
+     */
+    public function getCalendarPermissions()
+    {
+        if (array_key_exists("calendarPermissions", $this->_propDict)) {
+           return $this->_propDict["calendarPermissions"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the calendarPermissions
+    * The permissions of the users with whom the calendar is shared.
+    *
+    * @param CalendarPermission $val The calendarPermissions
+    *
+    * @return Calendar
+    */
+    public function setCalendarPermissions($val)
+    {
+		$this->_propDict["calendarPermissions"] = $val;
         return $this;
     }
     

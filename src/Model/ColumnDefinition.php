@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 
@@ -21,8 +20,7 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class ColumnDefinition extends Entity
 {
@@ -337,6 +335,39 @@ class ColumnDefinition extends Entity
     public function setEnforceUniqueValues($val)
     {
         $this->_propDict["enforceUniqueValues"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the geolocation
+    * This column stores a geolocation.
+    *
+    * @return GeolocationColumn The geolocation
+    */
+    public function getGeolocation()
+    {
+        if (array_key_exists("geolocation", $this->_propDict)) {
+            if (is_a($this->_propDict["geolocation"], "Microsoft\Graph\Model\GeolocationColumn")) {
+                return $this->_propDict["geolocation"];
+            } else {
+                $this->_propDict["geolocation"] = new GeolocationColumn($this->_propDict["geolocation"]);
+                return $this->_propDict["geolocation"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the geolocation
+    * This column stores a geolocation.
+    *
+    * @param GeolocationColumn $val The geolocation
+    *
+    * @return ColumnDefinition
+    */
+    public function setGeolocation($val)
+    {
+        $this->_propDict["geolocation"] = $val;
         return $this;
     }
     
