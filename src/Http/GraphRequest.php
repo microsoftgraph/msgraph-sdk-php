@@ -216,7 +216,7 @@ class GraphRequest
     /**
     * Sets the timeout limit of the cURL request
     *
-    * @param string $timeout The timeout in ms
+    * @param string $timeout The timeout in seconds
     * 
     * @return GraphRequest object
     */
