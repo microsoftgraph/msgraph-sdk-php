@@ -84,7 +84,7 @@ class TeamsApp extends Entity
     
     /**
     * Gets the distributionMethod
-    * The method of distribution for the app.
+    * The method of distribution for the app. Read-only.
     *
     * @return TeamsAppDistributionMethod The distributionMethod
     */
@@ -103,7 +103,7 @@ class TeamsApp extends Entity
     
     /**
     * Sets the distributionMethod
-    * The method of distribution for the app.
+    * The method of distribution for the app. Read-only.
     *
     * @param TeamsAppDistributionMethod $val The distributionMethod
     *
