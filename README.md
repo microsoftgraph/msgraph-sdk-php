@@ -101,9 +101,11 @@ This SDK has an XDebug run configuration that attaches the debugger to VS Code s
 4. Follow the generated instructions for installing XDebug. Note that the `/ext` directory is located in your PHP directory.
 5. Add the following info to your php.ini file:
 
-    [XDebug]
-    xdebug.remote_enable = 1
-    xdebug.remote_autostart = 1
+```
+[XDebug]
+xdebug.remote_enable = 1
+xdebug.remote_autostart = 1
+```
 
 Now you can hit a Visual Studio Code breakpoint in a test. Try this:
 
