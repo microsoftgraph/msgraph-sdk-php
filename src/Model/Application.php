@@ -265,6 +265,33 @@ class Application extends DirectoryObject
     }
     
     /**
+    * Gets the description
+    *
+    * @return string The description
+    */
+    public function getDescription()
+    {
+        if (array_key_exists("description", $this->_propDict)) {
+            return $this->_propDict["description"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the description
+    *
+    * @param string $val The description
+    *
+    * @return Application
+    */
+    public function setDescription($val)
+    {
+        $this->_propDict["description"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the publicClient
     * Specifies settings for installed clients such as desktop or mobile devices.
     *
@@ -475,6 +502,33 @@ class Application extends DirectoryObject
     public function setLogo($val)
     {
         $this->_propDict["logo"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the notes
+    *
+    * @return string The notes
+    */
+    public function getNotes()
+    {
+        if (array_key_exists("notes", $this->_propDict)) {
+            return $this->_propDict["notes"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the notes
+    *
+    * @param string $val The notes
+    *
+    * @return Application
+    */
+    public function setNotes($val)
+    {
+        $this->_propDict["notes"] = $val;
         return $this;
     }
     

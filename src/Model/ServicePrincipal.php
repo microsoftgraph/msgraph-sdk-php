@@ -142,6 +142,33 @@ class ServicePrincipal extends DirectoryObject
     }
     
     /**
+    * Gets the appDescription
+    *
+    * @return string The appDescription
+    */
+    public function getAppDescription()
+    {
+        if (array_key_exists("appDescription", $this->_propDict)) {
+            return $this->_propDict["appDescription"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the appDescription
+    *
+    * @param string $val The appDescription
+    *
+    * @return ServicePrincipal
+    */
+    public function setAppDescription($val)
+    {
+        $this->_propDict["appDescription"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the appId
     * The unique identifier for the associated application (its appId property).
     *
@@ -284,6 +311,33 @@ class ServicePrincipal extends DirectoryObject
     public function setAppRoles($val)
     {
 		$this->_propDict["appRoles"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the description
+    *
+    * @return string The description
+    */
+    public function getDescription()
+    {
+        if (array_key_exists("description", $this->_propDict)) {
+            return $this->_propDict["description"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the description
+    *
+    * @param string $val The description
+    *
+    * @return ServicePrincipal
+    */
+    public function setDescription($val)
+    {
+        $this->_propDict["description"] = $val;
         return $this;
     }
     
@@ -463,6 +517,33 @@ class ServicePrincipal extends DirectoryObject
     public function setLogoutUrl($val)
     {
         $this->_propDict["logoutUrl"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the notes
+    *
+    * @return string The notes
+    */
+    public function getNotes()
+    {
+        if (array_key_exists("notes", $this->_propDict)) {
+            return $this->_propDict["notes"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the notes
+    *
+    * @param string $val The notes
+    *
+    * @return ServicePrincipal
+    */
+    public function setNotes($val)
+    {
+        $this->_propDict["notes"] = $val;
         return $this;
     }
     
