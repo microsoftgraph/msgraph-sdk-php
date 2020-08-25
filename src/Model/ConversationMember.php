@@ -26,6 +26,7 @@ class ConversationMember extends Entity
 {
     /**
     * Gets the roles
+    * The roles for that user.
     *
     * @return string The roles
     */
@@ -40,6 +41,7 @@ class ConversationMember extends Entity
     
     /**
     * Sets the roles
+    * The roles for that user.
     *
     * @param string $val The roles
     *
@@ -53,6 +55,7 @@ class ConversationMember extends Entity
     
     /**
     * Gets the displayName
+    * The display name of the user.
     *
     * @return string The displayName
     */
@@ -67,6 +70,7 @@ class ConversationMember extends Entity
     
     /**
     * Sets the displayName
+    * The display name of the user.
     *
     * @param string $val The displayName
     *

@@ -26,6 +26,7 @@ class AadUserConversationMember extends ConversationMember
 {
     /**
     * Gets the userId
+    * The guid of the user.
     *
     * @return string The userId
     */
@@ -40,6 +41,7 @@ class AadUserConversationMember extends ConversationMember
     
     /**
     * Sets the userId
+    * The guid of the user.
     *
     * @param string $val The userId
     *
@@ -53,6 +55,7 @@ class AadUserConversationMember extends ConversationMember
     
     /**
     * Gets the email
+    * The email address of the user.
     *
     * @return string The email
     */
@@ -67,6 +70,7 @@ class AadUserConversationMember extends ConversationMember
     
     /**
     * Sets the email
+    * The email address of the user.
     *
     * @param string $val The email
     *
