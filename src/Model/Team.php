@@ -26,6 +26,7 @@ class Team extends Entity
 {
     /**
     * Gets the displayName
+    * The name of the team.
     *
     * @return string The displayName
     */
@@ -40,6 +41,7 @@ class Team extends Entity
     
     /**
     * Sets the displayName
+    * The name of the team.
     *
     * @param string $val The displayName
     *
@@ -53,6 +55,7 @@ class Team extends Entity
     
     /**
     * Gets the description
+    * An optional description for the team.
     *
     * @return string The description
     */
@@ -67,6 +70,7 @@ class Team extends Entity
     
     /**
     * Sets the description
+    * An optional description for the team.
     *
     * @param string $val The description
     *
@@ -109,6 +113,7 @@ class Team extends Entity
     
     /**
     * Gets the classification
+    * An optional label. Typically describes the data or business sensitivity of the team. Must match one of a pre-configured set in the tenant's directory.
     *
     * @return string The classification
     */
@@ -123,6 +128,7 @@ class Team extends Entity
     
     /**
     * Sets the classification
+    * An optional label. Typically describes the data or business sensitivity of the team. Must match one of a pre-configured set in the tenant's directory.
     *
     * @param string $val The classification
     *
@@ -136,6 +142,7 @@ class Team extends Entity
     
     /**
     * Gets the specialization
+    * Optional. Indicates whether the team is intended for a particular use case.  Each team specialization has access to unique behaviors and experiences targeted to its use case.
     *
     * @return TeamSpecialization The specialization
     */
@@ -154,6 +161,7 @@ class Team extends Entity
     
     /**
     * Sets the specialization
+    * Optional. Indicates whether the team is intended for a particular use case.  Each team specialization has access to unique behaviors and experiences targeted to its use case.
     *
     * @param TeamSpecialization $val The specialization
     *
@@ -167,6 +175,7 @@ class Team extends Entity
     
     /**
     * Gets the visibility
+    * The visibility of a the group and team. Defaults to Public.
     *
     * @return TeamVisibilityType The visibility
     */
@@ -185,6 +194,7 @@ class Team extends Entity
     
     /**
     * Sets the visibility
+    * The visibility of a the group and team. Defaults to Public.
     *
     * @param TeamVisibilityType $val The visibility
     *
@@ -388,6 +398,7 @@ class Team extends Entity
     
     /**
     * Gets the schedule
+    * The schedule of shifts for this team.
     *
     * @return Schedule The schedule
     */
@@ -406,6 +417,7 @@ class Team extends Entity
     
     /**
     * Sets the schedule
+    * The schedule of shifts for this team.
     *
     * @param Schedule $val The schedule
     *
@@ -450,6 +462,7 @@ class Team extends Entity
     
     /**
     * Gets the template
+    * The template this team was created from. See available templates.
     *
     * @return TeamsTemplate The template
     */
@@ -468,6 +481,7 @@ class Team extends Entity
     
     /**
     * Sets the template
+    * The template this team was created from. See available templates.
     *
     * @param TeamsTemplate $val The template
     *
@@ -482,6 +496,7 @@ class Team extends Entity
 
      /** 
      * Gets the members
+    * Members and owners of the team.
      *
      * @return array The members
      */
@@ -496,6 +511,7 @@ class Team extends Entity
     
     /** 
     * Sets the members
+    * Members and owners of the team.
     *
     * @param ConversationMember $val The members
     *
@@ -603,6 +619,7 @@ class Team extends Entity
 
      /** 
      * Gets the operations
+    * The async operations that ran or are running on this team.
      *
      * @return array The operations
      */
@@ -617,6 +634,7 @@ class Team extends Entity
     
     /** 
     * Sets the operations
+    * The async operations that ran or are running on this team.
     *
     * @param TeamsAsyncOperation $val The operations
     *

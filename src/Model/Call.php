@@ -468,6 +468,37 @@ class Call extends Entity
     }
     
     /**
+    * Gets the transcription
+    *
+    * @return CallTranscriptionInfo The transcription
+    */
+    public function getTranscription()
+    {
+        if (array_key_exists("transcription", $this->_propDict)) {
+            if (is_a($this->_propDict["transcription"], "Microsoft\Graph\Model\CallTranscriptionInfo")) {
+                return $this->_propDict["transcription"];
+            } else {
+                $this->_propDict["transcription"] = new CallTranscriptionInfo($this->_propDict["transcription"]);
+                return $this->_propDict["transcription"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the transcription
+    *
+    * @param CallTranscriptionInfo $val The transcription
+    *
+    * @return Call
+    */
+    public function setTranscription($val)
+    {
+        $this->_propDict["transcription"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the tenantId
     *
     * @return string The tenantId

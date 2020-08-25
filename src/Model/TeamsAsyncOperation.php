@@ -26,6 +26,7 @@ class TeamsAsyncOperation extends Entity
 {
     /**
     * Gets the operationType
+    * Denotes which type of operation is being described.
     *
     * @return TeamsAsyncOperationType The operationType
     */
@@ -44,6 +45,7 @@ class TeamsAsyncOperation extends Entity
     
     /**
     * Sets the operationType
+    * Denotes which type of operation is being described.
     *
     * @param TeamsAsyncOperationType $val The operationType
     *
@@ -57,6 +59,7 @@ class TeamsAsyncOperation extends Entity
     
     /**
     * Gets the createdDateTime
+    * Time when the operation was created.
     *
     * @return \DateTime The createdDateTime
     */
@@ -75,6 +78,7 @@ class TeamsAsyncOperation extends Entity
     
     /**
     * Sets the createdDateTime
+    * Time when the operation was created.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -88,6 +92,7 @@ class TeamsAsyncOperation extends Entity
     
     /**
     * Gets the status
+    * Operation status.
     *
     * @return TeamsAsyncOperationStatus The status
     */
@@ -106,6 +111,7 @@ class TeamsAsyncOperation extends Entity
     
     /**
     * Sets the status
+    * Operation status.
     *
     * @param TeamsAsyncOperationStatus $val The status
     *
@@ -119,6 +125,7 @@ class TeamsAsyncOperation extends Entity
     
     /**
     * Gets the lastActionDateTime
+    * Time when the async operation was last updated.
     *
     * @return \DateTime The lastActionDateTime
     */
@@ -137,6 +144,7 @@ class TeamsAsyncOperation extends Entity
     
     /**
     * Sets the lastActionDateTime
+    * Time when the async operation was last updated.
     *
     * @param \DateTime $val The lastActionDateTime
     *
@@ -150,6 +158,7 @@ class TeamsAsyncOperation extends Entity
     
     /**
     * Gets the attemptsCount
+    * Number of times the operation was attempted before being marked successful or failed.
     *
     * @return int The attemptsCount
     */
@@ -164,6 +173,7 @@ class TeamsAsyncOperation extends Entity
     
     /**
     * Sets the attemptsCount
+    * Number of times the operation was attempted before being marked successful or failed.
     *
     * @param int $val The attemptsCount
     *
@@ -177,6 +187,7 @@ class TeamsAsyncOperation extends Entity
     
     /**
     * Gets the targetResourceId
+    * The ID of the object that's created or modified as result of this async operation, typically a team.
     *
     * @return string The targetResourceId
     */
@@ -191,6 +202,7 @@ class TeamsAsyncOperation extends Entity
     
     /**
     * Sets the targetResourceId
+    * The ID of the object that's created or modified as result of this async operation, typically a team.
     *
     * @param string $val The targetResourceId
     *
@@ -204,6 +216,7 @@ class TeamsAsyncOperation extends Entity
     
     /**
     * Gets the targetResourceLocation
+    * The location of the object that's created or modified as result of this async operation. This URL should be treated as an opaque value and not parsed into its component paths.
     *
     * @return string The targetResourceLocation
     */
@@ -218,6 +231,7 @@ class TeamsAsyncOperation extends Entity
     
     /**
     * Sets the targetResourceLocation
+    * The location of the object that's created or modified as result of this async operation. This URL should be treated as an opaque value and not parsed into its component paths.
     *
     * @param string $val The targetResourceLocation
     *
@@ -231,6 +245,7 @@ class TeamsAsyncOperation extends Entity
     
     /**
     * Gets the error
+    * Any error that causes the async operation to fail.
     *
     * @return OperationError The error
     */
@@ -249,6 +264,7 @@ class TeamsAsyncOperation extends Entity
     
     /**
     * Sets the error
+    * Any error that causes the async operation to fail.
     *
     * @param OperationError $val The error
     *
