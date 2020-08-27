@@ -16,7 +16,7 @@ resources:
     type: github
     endpoint: microsoftgraph
     name: microsoftgraph/msgraph-sdk-php
-    ref: zengin/namespacesRelease # checkout the dev branch
+    ref: dev # checkout the dev branch
   - repository: msgraph-metadata
     type: github
     endpoint: microsoftgraph
