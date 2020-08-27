@@ -54,6 +54,34 @@ class CloudCommunications extends Entity
     
 
      /** 
+     * Gets the callRecords
+     *
+     * @return array The callRecords
+     */
+    public function getCallRecords()
+    {
+        if (array_key_exists("callRecords", $this->_propDict)) {
+           return $this->_propDict["callRecords"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the callRecords
+    *
+    * @param Microsoft\Graph\CallRecords\Model\CallRecord $val The callRecords
+    *
+    * @return CloudCommunications
+    */
+    public function setCallRecords($val)
+    {
+		$this->_propDict["callRecords"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the onlineMeetings
      *
      * @return array The onlineMeetings

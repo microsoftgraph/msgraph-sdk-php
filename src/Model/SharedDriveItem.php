@@ -129,7 +129,7 @@ class SharedDriveItem extends BaseItem
     public function getList()
     {
         if (array_key_exists("list", $this->_propDict)) {
-            if (is_a($this->_propDict["list"], "Microsoft\Graph\Model\List")) {
+            if (is_a($this->_propDict["list"], "Microsoft\Graph\Model\GraphList")) {
                 return $this->_propDict["list"];
             } else {
                 $this->_propDict["list"] = new GraphList($this->_propDict["list"]);
