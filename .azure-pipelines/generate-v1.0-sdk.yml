@@ -145,7 +145,16 @@ steps:
     script: |
       Write-Host "About to add files....." -ForegroundColor Green
       git add . | Write-Host
-      git commit -m "Update generated files with build $env:BUILD_BUILDID" | Write-Host
+
+      if ($env:Build_Reason -eq 'Manual') # Skip CI if manually running this pipeline.
+      {
+        git commit -m "Update generated files with build $env:BUILD_BUILDID [skip ci]" | Write-Host
+      }
+      else
+      {
+        git commit -m "Update generated files with build $env:BUILD_BUILDID" | Write-Host
+      }
+
       Write-Host "Added and committed generated files." -ForegroundColor Green
 
 - task: PowerShell@2
