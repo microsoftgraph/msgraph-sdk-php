@@ -50,9 +50,9 @@ steps:
     targetType: inline
     pwsh: true
     script: |
-      $repoModelsDir = "$env:BUILD_SOURCESDIRECTORY/msgraph-sdk-php/src/Model/"
-      Write-Host "Path to repo model directory: $repoModelsDir"
-      Write-Host "##vso[task.setvariable variable=REPOMODELSDIR]$repoModelsDir"
+      $repoDir = "$env:BUILD_SOURCESDIRECTORY/msgraph-sdk-php/src/"
+      Write-Host "Path to repo model directory: $repoDir"
+      Write-Host "##vso[task.setvariable variable=REPODIR]$repoDir"
 
       $outputPath = Join-Path $env:BUILD_SOURCESDIRECTORY "output"
       Write-Host "Path to typewriter.exe output $outputPath"
@@ -65,15 +65,6 @@ steps:
       $branchName = "v1.0/pipelinebuild/$env:BUILD_BUILDID" # Match the spec in the GH Action
       Write-Host "Branch path spec for the pull request will be $branchName"
       Write-Host "##vso[task.setvariable variable=BRANCHNAME]$branchName"
-
-- task: PowerShell@2
-  displayName: 'Git: checkout dev'
-  inputs:
-    targetType: inline
-    pwsh: true
-    workingDirectory: '$(Build.SourcesDirectory)/msgraph-sdk-php'
-    script: |
-      git checkout dev | Write-Host
 
 - task: PowerShell@2
   displayName: 'Git: branch from dev named with the build id: $(Build.BuildId)'
@@ -90,8 +81,17 @@ steps:
     targetType: inline
     pwsh: true
     script: |
-      Remove-Item -Recurse $env:REPOMODELSDIR | Write-Host
-      Write-Host "Removed the existing generated files in the repo." -ForegroundColor Green
+      # Example directories are:
+      # src/Model (types in microsoft.graph namespace)
+      # src/CallRecords/Model (types in microsoft.graph.callRecords namespace)
+      $destinationModelDirs = Get-ChildItem $env:REPODIR -Include Model -Recurse -Directory
+
+      #remove all existing models to make sure that we detect type deletions in PRs
+      foreach ($modelDir in $destinationModelDirs)
+      {
+        Remove-Item $modelDir -Recurse -Force
+        Write-Host "Removed the existing generated files in the repo at $modelDir." -ForegroundColor Green
+      }
 
 - task: PowerShell@2
   displayName: 'Typewriter: generate v1.0 PHP model files'
@@ -109,9 +109,12 @@ steps:
     targetType: inline
     pwsh: true
     script: |
-      $modelsDirectory = Join-Path $env:OUTPUTPATH "/com/microsoft/graph/model/"
-      Move-Item $modelsDirectory $env:REPOMODELSDIR
-      Write-Host "Moved the models from $modelsDirectory into the local repo." -ForegroundColor Green
+      $generatedFiles = Join-Path $env:OUTPUTPATH "/com/microsoft/graph/*"
+
+      # copy generated files by preserving the subdirectory structure from /com/microsoft/graph/
+      # the same directory structure is expected to appear in repository's src/ directory after copy
+      Copy-Item $generatedFiles $env:REPODIR -Recurse -Force
+      Write-Host "Moved the models with path $generatedFiles into the local repo." -ForegroundColor Green
 
 - task: PowerShell@2
   displayName: 'Run PHP tests'
@@ -142,7 +145,16 @@ steps:
     script: |
       Write-Host "About to add files....." -ForegroundColor Green
       git add . | Write-Host
-      git commit -m "Update generated files with build $env:BUILD_BUILDID" | Write-Host
+
+      if ($env:Build_Reason -eq 'Manual') # Skip CI if manually running this pipeline.
+      {
+        git commit -m "Update generated files with build $env:BUILD_BUILDID [skip ci]" | Write-Host
+      }
+      else
+      {
+        git commit -m "Update generated files with build $env:BUILD_BUILDID" | Write-Host
+      }
+
       Write-Host "Added and committed generated files." -ForegroundColor Green
 
 - task: PowerShell@2
