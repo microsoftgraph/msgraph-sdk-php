@@ -81,8 +81,17 @@ steps:
     targetType: inline
     pwsh: true
     script: |
-      Remove-Item -Recurse $env:REPOMODELSDIR | Write-Host
-      Write-Host "Removed the existing generated files in the repo." -ForegroundColor Green
+      # Example directories are:
+      # src/Model (types in microsoft.graph namespace)
+      # src/CallRecords/Model (types in microsoft.graph.callRecords namespace)
+      $destinationModelDirs = Get-ChildItem $env:REPODIR -Include Model -Recurse -Directory
+
+      #remove all existing models to make sure that we detect type deletions in PRs
+      foreach ($modelDir in $destinationModelDirs)
+      {
+        Remove-Item $modelDir -Recurse -Force
+        Write-Host "Removed the existing generated files in the repo at $modelDir." -ForegroundColor Green
+      }
 
 - task: PowerShell@2
   displayName: 'Typewriter: generate v1.0 PHP model files'
@@ -100,22 +109,11 @@ steps:
     targetType: inline
     pwsh: true
     script: |
-      # Example directories are:
-      # src/Model (types in microsoft.graph namespace)
-      # src/CallRecords/Model (types in microsoft.graph.callRecords namespace)
-      $destinationModelDirs = Get-ChildItem $env:REPODIR -Include Model -Recurse -Directory
-
-      #remove all existing models to make sure that we detect type deletions in PRs
-      foreach ($modelDir in $destinationModelDirs)
-      {
-        Remove-Item $modelDir -Recurse -Force
-      }
-
       $generatedFiles = Join-Path $env:OUTPUTPATH "/com/microsoft/graph/*"
 
       # copy generated files by preserving the subdirectory structure from /com/microsoft/graph/
       # the same directory structure is expected to appear in repository's src/ directory after copy
-      Copy-Item $generatedFiles $repoDir -Recurse -Force
+      Copy-Item $generatedFiles $env:REPODIR -Recurse -Force
       Write-Host "Moved the models with path $generatedFiles into the local repo." -ForegroundColor Green
 
 - task: PowerShell@2
