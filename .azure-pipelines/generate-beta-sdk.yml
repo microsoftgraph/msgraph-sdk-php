@@ -111,15 +111,15 @@ steps:
       Copy-Item $generatedFiles $destinationDir -Recurse -Force
       Write-Host "Moved the models with path $generatedFiles into the local repo." -ForegroundColor Green
 
-#- task: PowerShell@2
-#  displayName: 'Run PHP tests'
-#  inputs:
-#    targetType: inline
-#    workingDirectory: '$(Build.SourcesDirectory)/msgraph-sdk-php'
-#    pwsh: true 
-#    script: |
-#      composer install # Adds dependencies to vendor.
-#      .\vendor\bin\phpunit --exclude-group functional
+- task: PowerShell@2
+  displayName: 'Run PHP tests'
+  inputs:
+    targetType: inline
+    workingDirectory: '$(Build.SourcesDirectory)/msgraph-sdk-php'
+    pwsh: true
+    script: |
+      composer install # Adds dependencies to vendor.
+      .\vendor\bin\phpunit --exclude-group functional
 
 - task: PowerShell@2
   displayName: 'Git: set user config'
