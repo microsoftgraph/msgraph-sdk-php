@@ -83,7 +83,7 @@ steps:
     script: |
       # removes all models under src/Beta
       Get-ChildItem $env:REPODIR -Include Beta -Directory -Recurse | Remove-Item -Recurse -Force
-      Write-Host "Removed the existing generated files in the repo at $($env:REPODIR)." -ForegroundColor Green
+      Write-Host "Removed the existing generated files for Beta in the repo at $($env:REPODIR)." -ForegroundColor Green
 
 - task: PowerShell@2
   displayName: 'Typewriter: generate beta PHP model files'
