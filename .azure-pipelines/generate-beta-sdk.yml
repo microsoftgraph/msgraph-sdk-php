@@ -1,0 +1,181 @@
+# Copyright (c) Microsoft Corporation. All rights reserved.
+# Licensed under the MIT License.
+
+# This pipeline generates the v1.0 PHP model files using typewriter.exe.
+# This pipeline is triggered by the completion of clean metadata
+# publication pipeline.
+
+name: $(BuildDefinitionName)_$(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r)
+
+trigger: none # disable triggers based on commits.
+pr: none # disable triggers based on pull requests.
+
+resources:
+  repositories:
+  - repository: msgraph-sdk-php # The name used to reference this repository in the checkout step
+    type: github
+    endpoint: microsoftgraph
+    name: microsoftgraph/msgraph-sdk-php
+    ref: dev # checkout the dev branch
+  - repository: msgraph-metadata
+    type: github
+    endpoint: microsoftgraph
+    name: microsoftgraph/msgraph-metadata
+    ref: master
+  pipelines:
+  - pipeline: publishMetadata # This pipeline produces an metadata artifact that we need to validate.
+    source: (v1.0 - 3) msgraph-publish-cleanmetadata
+    trigger:
+      branches:
+      - master
+
+pool:
+  vmImage: windows-latest # Info about this image: [0][1]
+
+variables:
+  - group: MicrosoftGraph # Variable group, where variables not set here come from. Set in Azure DevOps
+
+steps:
+- checkout: msgraph-sdk-php
+  clean: true
+  fetchDepth: 1
+  persistCredentials: true
+- checkout: msgraph-metadata
+  clean: true
+  fetchDepth: 1
+
+- task: PowerShell@2 # Setup environment variables and make them available to all tasks. See [1] for more info.
+  displayName: 'Calculate and set pipeline variables for this job'
+  inputs:
+    targetType: inline
+    pwsh: true
+    script: |
+      $repoDir = "$env:BUILD_SOURCESDIRECTORY/msgraph-sdk-php/src/"
+      Write-Host "Path to repo model directory: $repoDir"
+      Write-Host "##vso[task.setvariable variable=REPODIR]$repoDir"
+
+      $outputPath = Join-Path $env:BUILD_SOURCESDIRECTORY "output"
+      Write-Host "Path to typewriter.exe output $outputPath"
+      Write-Host "##vso[task.setvariable variable=OUTPUTPATH]$outputPath"
+
+      $cleanMetadata = "https://raw.githubusercontent.com/microsoftgraph/msgraph-metadata/master/clean_beta_metadata/cleanMetadataWithDescriptionsbeta.xml"
+      Write-Host "Path to clean metadata $cleanMetadata"
+      Write-Host "##vso[task.setvariable variable=CLEANMETADATA]$cleanMetadata"
+
+      $branchName = "v1.0/pipelinebuild/$env:BUILD_BUILDID" # Match the spec in the GH Action
+      Write-Host "Branch path spec for the pull request will be $branchName"
+      Write-Host "##vso[task.setvariable variable=BRANCHNAME]$branchName"
+
+- task: PowerShell@2
+  displayName: 'Git: branch from dev named with the build id: $(Build.BuildId)'
+  inputs:
+    targetType: inline
+    workingDirectory: '$(Build.SourcesDirectory)/msgraph-sdk-php'
+    script: |
+      Write-Host "The new branch name will be: $env:BRANCHNAME"
+      git checkout -B $env:BRANCHNAME | Write-Host
+
+- task: PowerShell@2
+  displayName: 'Remove generated files from the repo'
+  inputs:
+    targetType: inline
+    pwsh: true
+    script: |
+      # removes all models under src/Beta
+      Get-ChildItem $env:REPODIR -Include Beta -Directory -Recurse | Remove-Item -Recurse -Force
+      Write-Host "Removed the existing generated files in the repo at $($env:REPODIR)." -ForegroundColor Green
+
+- task: PowerShell@2
+  displayName: 'Typewriter: generate beta PHP model files'
+  inputs:
+    targetType: filePath
+    pwsh: true
+    filePath: '$(Build.SourcesDirectory)/msgraph-metadata/scripts/runTypewriter.ps1'
+    arguments: '-verbosity Info -metadata $(CLEANMETADATA) -output $(OUTPUTPATH) -generationMode Files -l PHP -p php.namespacePrefix:Beta'
+    workingDirectory: '$(Build.SourcesDirectory)' # Set the root for a multi-repo pipeline. /s is the actual dir name.
+  enabled: true
+
+- task: PowerShell@2
+  displayName: 'Copy generated files into the repo'
+  inputs:
+    targetType: inline
+    pwsh: true
+    script: |
+      $generatedFiles = Join-Path $env:OUTPUTPATH "/com/Beta/*"
+
+      $destinationDir = Join-Path $env:REPODIR "/Beta/"
+      New-Item -Path $destinationDir -ItemType Directory
+
+      # copy generated files by preserving the subdirectory structure from /com/Beta
+      # the same directory structure is expected to appear in repository's src/Beta directory after copy
+      Copy-Item $generatedFiles $destinationDir -Recurse -Force
+      Write-Host "Moved the models with path $generatedFiles into the local repo." -ForegroundColor Green
+
+- task: PowerShell@2
+  displayName: 'Run PHP tests'
+  inputs:
+    targetType: inline
+    workingDirectory: '$(Build.SourcesDirectory)/msgraph-sdk-php'
+    pwsh: true 
+    script: |
+      composer install # Adds dependencies to vendor.
+      .\vendor\bin\phpunit --exclude-group functional
+
+- task: PowerShell@2
+  displayName: 'Git: set user config'
+  inputs:
+    targetType: inline
+    pwsh: true
+    workingDirectory: '$(Build.SourcesDirectory)/msgraph-sdk-php'
+    script: |
+      git config user.email "GraphTooling@service.microsoft.com"
+      git config user.name "Microsoft Graph DevX Tooling"
+
+- task: PowerShell@2
+  displayName: 'Git: stage and commit generated files'
+  inputs:
+    targetType: inline
+    pwsh: true
+    workingDirectory: '$(Build.SourcesDirectory)/msgraph-sdk-php'
+    script: |
+      Write-Host "About to add files....." -ForegroundColor Green
+      git add . | Write-Host
+
+      if ($env:Build_Reason -eq 'Manual') # Skip CI if manually running this pipeline.
+      {
+        git commit -m "Update generated files with build $env:BUILD_BUILDID [skip ci]" | Write-Host
+      }
+      else
+      {
+        git commit -m "Update generated files with build $env:BUILD_BUILDID" | Write-Host
+      }
+
+      Write-Host "Added and committed generated files." -ForegroundColor Green
+
+- task: PowerShell@2
+  displayName: 'Git: push updates'
+  inputs:
+    targetType: inline
+    pwsh: true
+    workingDirectory: '$(Build.SourcesDirectory)/msgraph-sdk-php'
+    script: |
+      git push --set-upstream origin $env:BRANCHNAME | Write-Host
+      Write-Host "Pushed the results of the build to the $env:BRANCHNAME branch." -ForegroundColor Green
+  enabled: true
+
+# Send a notification to our Graph Tooling channel to let us know that
+# that automated build failed. This won't notify on manual builds.
+
+- task: YodLabs.O365PostMessage.O365PostMessageBuild.O365PostMessageBuild@0
+  displayName: 'Graph Client Tooling pipeline fail notification'
+  inputs:
+    addressType: serviceEndpoint
+    serviceEndpointName: 'microsoftgraph pipeline status'
+    title: '$(Build.DefinitionName) failure notification'
+    text: 'This automated pipeline has failed. View the build details for further information. This is a blocking failure.'
+  condition: and(failed(), ne(variables['Build.Reason'], 'Manual')) # Only notify if the automated build failed.
+  enabled: true
+
+# References
+# [0] https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/hosted?view=azure-devops#use-a-microsoft-hosted-agent
+# [1] hhttps://github.com/actions/virtual-environments/blob/master/images/win/Windows2019-Readme.md
