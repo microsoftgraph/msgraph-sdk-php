@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 
@@ -21,8 +20,7 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class AndroidManagedAppProtection extends TargetedManagedAppProtection
 {
@@ -197,6 +195,64 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     public function setMinimumWarningPatchVersion($val)
     {
         $this->_propDict["minimumWarningPatchVersion"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the customBrowserPackageId
+    * Unique identifier of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+    *
+    * @return string The customBrowserPackageId
+    */
+    public function getCustomBrowserPackageId()
+    {
+        if (array_key_exists("customBrowserPackageId", $this->_propDict)) {
+            return $this->_propDict["customBrowserPackageId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the customBrowserPackageId
+    * Unique identifier of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+    *
+    * @param string $val The customBrowserPackageId
+    *
+    * @return AndroidManagedAppProtection
+    */
+    public function setCustomBrowserPackageId($val)
+    {
+        $this->_propDict["customBrowserPackageId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the customBrowserDisplayName
+    * Friendly name of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+    *
+    * @return string The customBrowserDisplayName
+    */
+    public function getCustomBrowserDisplayName()
+    {
+        if (array_key_exists("customBrowserDisplayName", $this->_propDict)) {
+            return $this->_propDict["customBrowserDisplayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the customBrowserDisplayName
+    * Friendly name of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+    *
+    * @param string $val The customBrowserDisplayName
+    *
+    * @return AndroidManagedAppProtection
+    */
+    public function setCustomBrowserDisplayName($val)
+    {
+        $this->_propDict["customBrowserDisplayName"] = $val;
         return $this;
     }
     

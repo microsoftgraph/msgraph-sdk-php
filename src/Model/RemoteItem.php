@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 /**
@@ -20,8 +19,7 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class RemoteItem extends Entity
 {
@@ -68,7 +66,7 @@ class RemoteItem extends Entity
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -190,6 +188,39 @@ class RemoteItem extends Entity
         $this->_propDict["folder"] = $val;
          return $this;
     }
+
+    /**
+    * Gets the image
+    * Image metadata, if the item is an image. Read-only.
+    *
+    * @return Image The image
+    */
+    public function getImage()
+    {
+        if (array_key_exists("image", $this->_propDict)) {
+            if (is_a($this->_propDict["image"], "Microsoft\Graph\Model\Image")) {
+                return $this->_propDict["image"];
+            } else {
+                $this->_propDict["image"] = new Image($this->_propDict["image"]);
+                return $this->_propDict["image"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the image
+    * Image metadata, if the item is an image. Read-only.
+    *
+    * @param Image $val The value to assign to the image
+    *
+    * @return RemoteItem The RemoteItem
+    */
+    public function setImage($val)
+    {
+        $this->_propDict["image"] = $val;
+         return $this;
+    }
     /**
     * Gets the id
     * Unique identifier for the remote item in its drive. Read-only.
@@ -261,7 +292,7 @@ class RemoteItem extends Entity
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "Microsoft\Graph\Model\\DateTime")) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -503,6 +534,39 @@ class RemoteItem extends Entity
     public function setSpecialFolder($val)
     {
         $this->_propDict["specialFolder"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the video
+    * Video metadata, if the item is a video. Read-only.
+    *
+    * @return Video The video
+    */
+    public function getVideo()
+    {
+        if (array_key_exists("video", $this->_propDict)) {
+            if (is_a($this->_propDict["video"], "Microsoft\Graph\Model\Video")) {
+                return $this->_propDict["video"];
+            } else {
+                $this->_propDict["video"] = new Video($this->_propDict["video"]);
+                return $this->_propDict["video"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the video
+    * Video metadata, if the item is a video. Read-only.
+    *
+    * @param Video $val The value to assign to the video
+    *
+    * @return RemoteItem The RemoteItem
+    */
+    public function setVideo($val)
+    {
+        $this->_propDict["video"] = $val;
          return $this;
     }
     /**

@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 
@@ -21,8 +20,7 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class ConversationThread extends Entity
 {
@@ -208,7 +206,7 @@ class ConversationThread extends Entity
     
     /**
     * Gets the preview
-    * A short summary from the body of the latest post in this converstaion.
+    * A short summary from the body of the latest post in this conversation.
     *
     * @return string The preview
     */
@@ -223,7 +221,7 @@ class ConversationThread extends Entity
     
     /**
     * Sets the preview
-    * A short summary from the body of the latest post in this converstaion.
+    * A short summary from the body of the latest post in this conversation.
     *
     * @param string $val The preview
     *

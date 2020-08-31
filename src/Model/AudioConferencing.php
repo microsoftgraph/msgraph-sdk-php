@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 /**
@@ -20,8 +19,7 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class AudioConferencing extends Entity
 {
@@ -53,6 +51,7 @@ class AudioConferencing extends Entity
     }
     /**
     * Gets the tollNumber
+    * The toll number that connects to the Audio Conference Provider.
     *
     * @return string The tollNumber
     */
@@ -67,6 +66,7 @@ class AudioConferencing extends Entity
 
     /**
     * Sets the tollNumber
+    * The toll number that connects to the Audio Conference Provider.
     *
     * @param string $val The value of the tollNumber
     *
@@ -79,6 +79,7 @@ class AudioConferencing extends Entity
     }
     /**
     * Gets the tollFreeNumber
+    * The toll-free number that connects to the Audio Conference Provider.
     *
     * @return string The tollFreeNumber
     */
@@ -93,6 +94,7 @@ class AudioConferencing extends Entity
 
     /**
     * Sets the tollFreeNumber
+    * The toll-free number that connects to the Audio Conference Provider.
     *
     * @param string $val The value of the tollFreeNumber
     *
@@ -105,6 +107,7 @@ class AudioConferencing extends Entity
     }
     /**
     * Gets the dialinUrl
+    * A URL to the externally-accessible web page that contains dial-in information.
     *
     * @return string The dialinUrl
     */
@@ -119,6 +122,7 @@ class AudioConferencing extends Entity
 
     /**
     * Sets the dialinUrl
+    * A URL to the externally-accessible web page that contains dial-in information.
     *
     * @param string $val The value of the dialinUrl
     *

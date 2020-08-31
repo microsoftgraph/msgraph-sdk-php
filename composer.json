@@ -6,16 +6,16 @@
 	"license": "MIT",
 	"authors": [
 		{
-			"name": "Michael Mainer",
-			"email": "mmainer@microsoft.com",
+			"name": "Microsoft Graph Client Tooling",
+			"email": "graphtooling@service.microsoft.com",
 			"role": "Developer"
 		}
 	],
 	"require": {
 		"php": "^7.1",
-		"guzzlehttp/guzzle": "^6.2",
-      	"ext-json": "*"
-    },
+		"guzzlehttp/guzzle": "^7.2",
+    "ext-json": "*"
+	},
 	"require-dev": {
 		"phpunit/phpunit": "^7.5",
 		"phpdocumentor/phpdocumentor": "^2.9",
@@ -23,7 +23,8 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"Microsoft\\Graph\\": "src/"
+			"Beta\\Microsoft\\Graph\\": "src/Beta/Microsoft/Graph/",
+			"Microsoft\\Graph\\": "src/",
 		}
 	},
 	"autoload-dev": {

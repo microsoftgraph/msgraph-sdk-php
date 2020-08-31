@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 /**
@@ -20,13 +19,13 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class ResourceVisualization extends Entity
 {
     /**
     * Gets the title
+    * The item's title text.
     *
     * @return string The title
     */
@@ -41,6 +40,7 @@ class ResourceVisualization extends Entity
 
     /**
     * Sets the title
+    * The item's title text.
     *
     * @param string $val The value of the title
     *
@@ -53,6 +53,7 @@ class ResourceVisualization extends Entity
     }
     /**
     * Gets the type
+    * The item's media type. Can be used for filtering for a specific file based on a specific type. See below for supported types.
     *
     * @return string The type
     */
@@ -67,6 +68,7 @@ class ResourceVisualization extends Entity
 
     /**
     * Sets the type
+    * The item's media type. Can be used for filtering for a specific file based on a specific type. See below for supported types.
     *
     * @param string $val The value of the type
     *
@@ -79,6 +81,7 @@ class ResourceVisualization extends Entity
     }
     /**
     * Gets the mediaType
+    * The item's media type. Can be used for filtering for a specific type of file based on supported IANA Media Mime Types. Note that not all Media Mime Types are supported.
     *
     * @return string The mediaType
     */
@@ -93,6 +96,7 @@ class ResourceVisualization extends Entity
 
     /**
     * Sets the mediaType
+    * The item's media type. Can be used for filtering for a specific type of file based on supported IANA Media Mime Types. Note that not all Media Mime Types are supported.
     *
     * @param string $val The value of the mediaType
     *
@@ -105,6 +109,7 @@ class ResourceVisualization extends Entity
     }
     /**
     * Gets the previewImageUrl
+    * A URL leading to the preview image for the item.
     *
     * @return string The previewImageUrl
     */
@@ -119,6 +124,7 @@ class ResourceVisualization extends Entity
 
     /**
     * Sets the previewImageUrl
+    * A URL leading to the preview image for the item.
     *
     * @param string $val The value of the previewImageUrl
     *
@@ -131,6 +137,7 @@ class ResourceVisualization extends Entity
     }
     /**
     * Gets the previewText
+    * A preview text for the item.
     *
     * @return string The previewText
     */
@@ -145,6 +152,7 @@ class ResourceVisualization extends Entity
 
     /**
     * Sets the previewText
+    * A preview text for the item.
     *
     * @param string $val The value of the previewText
     *
@@ -157,6 +165,7 @@ class ResourceVisualization extends Entity
     }
     /**
     * Gets the containerWebUrl
+    * A path leading to the folder in which the item is stored.
     *
     * @return string The containerWebUrl
     */
@@ -171,6 +180,7 @@ class ResourceVisualization extends Entity
 
     /**
     * Sets the containerWebUrl
+    * A path leading to the folder in which the item is stored.
     *
     * @param string $val The value of the containerWebUrl
     *
@@ -183,6 +193,7 @@ class ResourceVisualization extends Entity
     }
     /**
     * Gets the containerDisplayName
+    * A string describing where the item is stored. For example, the name of a SharePoint site or the user name identifying the owner of the OneDrive storing the item.
     *
     * @return string The containerDisplayName
     */
@@ -197,6 +208,7 @@ class ResourceVisualization extends Entity
 
     /**
     * Sets the containerDisplayName
+    * A string describing where the item is stored. For example, the name of a SharePoint site or the user name identifying the owner of the OneDrive storing the item.
     *
     * @param string $val The value of the containerDisplayName
     *
@@ -209,6 +221,7 @@ class ResourceVisualization extends Entity
     }
     /**
     * Gets the containerType
+    * Can be used for filtering by the type of container in which the file is stored. Such as Site or OneDriveBusiness.
     *
     * @return string The containerType
     */
@@ -223,6 +236,7 @@ class ResourceVisualization extends Entity
 
     /**
     * Sets the containerType
+    * Can be used for filtering by the type of container in which the file is stored. Such as Site or OneDriveBusiness.
     *
     * @param string $val The value of the containerType
     *

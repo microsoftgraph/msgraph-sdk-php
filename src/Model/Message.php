@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 
@@ -21,8 +20,7 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class Message extends OutlookItem
 {
@@ -335,7 +333,7 @@ class Message extends OutlookItem
     
     /**
     * Gets the sender
-    * The account that is actually used to generate the message. In most cases, this value is the same as the from property. You can set this property to a different value when sending a message from a shared mailbox, or sending a message as a delegate. In any case, the value must correspond to the actual mailbox used. Find out more about setting the from and sender properties of a message.
+    * The account that is actually used to generate the message. In most cases, this value is the same as the from property. You can set this property to a different value when sending a message from a shared mailbox, for a shared calendar, or as a delegate. In any case, the value must correspond to the actual mailbox used. Find out more about setting the from and sender properties of a message.
     *
     * @return Recipient The sender
     */
@@ -354,7 +352,7 @@ class Message extends OutlookItem
     
     /**
     * Sets the sender
-    * The account that is actually used to generate the message. In most cases, this value is the same as the from property. You can set this property to a different value when sending a message from a shared mailbox, or sending a message as a delegate. In any case, the value must correspond to the actual mailbox used. Find out more about setting the from and sender properties of a message.
+    * The account that is actually used to generate the message. In most cases, this value is the same as the from property. You can set this property to a different value when sending a message from a shared mailbox, for a shared calendar, or as a delegate. In any case, the value must correspond to the actual mailbox used. Find out more about setting the from and sender properties of a message.
     *
     * @param Recipient $val The sender
     *
@@ -368,7 +366,7 @@ class Message extends OutlookItem
     
     /**
     * Gets the from
-    * The mailbox owner and sender of the message. The value must correspond to the actual mailbox used. Find out more about setting the from and sender properties of a message.
+    * The owner of the mailbox from which the message is sent. In most cases, this value is the same as the sender property, except for sharing or delegation scenarios. The value must correspond to the actual mailbox used. Find out more about setting the from and sender properties of a message.
     *
     * @return Recipient The from
     */
@@ -387,7 +385,7 @@ class Message extends OutlookItem
     
     /**
     * Sets the from
-    * The mailbox owner and sender of the message. The value must correspond to the actual mailbox used. Find out more about setting the from and sender properties of a message.
+    * The owner of the mailbox from which the message is sent. In most cases, this value is the same as the sender property, except for sharing or delegation scenarios. The value must correspond to the actual mailbox used. Find out more about setting the from and sender properties of a message.
     *
     * @param Recipient $val The from
     *
@@ -545,6 +543,39 @@ class Message extends OutlookItem
     public function setConversationId($val)
     {
         $this->_propDict["conversationId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the conversationIndex
+    * Indicates the position of the message within the conversation.
+    *
+    * @return \GuzzleHttp\Psr7\Stream The conversationIndex
+    */
+    public function getConversationIndex()
+    {
+        if (array_key_exists("conversationIndex", $this->_propDict)) {
+            if (is_a($this->_propDict["conversationIndex"], "\GuzzleHttp\Psr7\Stream")) {
+                return $this->_propDict["conversationIndex"];
+            } else {
+                $this->_propDict["conversationIndex"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["conversationIndex"]);
+                return $this->_propDict["conversationIndex"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the conversationIndex
+    * Indicates the position of the message within the conversation.
+    *
+    * @param \GuzzleHttp\Psr7\Stream $val The conversationIndex
+    *
+    * @return Message
+    */
+    public function setConversationIndex($val)
+    {
+        $this->_propDict["conversationIndex"] = $val;
         return $this;
     }
     

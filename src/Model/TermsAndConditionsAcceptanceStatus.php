@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 
@@ -21,8 +20,7 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class TermsAndConditionsAcceptanceStatus extends Entity
 {
@@ -114,6 +112,35 @@ class TermsAndConditionsAcceptanceStatus extends Entity
     public function setAcceptedDateTime($val)
     {
         $this->_propDict["acceptedDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userPrincipalName
+    * The userPrincipalName of the User that accepted the term.
+    *
+    * @return string The userPrincipalName
+    */
+    public function getUserPrincipalName()
+    {
+        if (array_key_exists("userPrincipalName", $this->_propDict)) {
+            return $this->_propDict["userPrincipalName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the userPrincipalName
+    * The userPrincipalName of the User that accepted the term.
+    *
+    * @param string $val The userPrincipalName
+    *
+    * @return TermsAndConditionsAcceptanceStatus
+    */
+    public function setUserPrincipalName($val)
+    {
+        $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
     

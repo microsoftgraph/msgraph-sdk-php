@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 
@@ -21,13 +20,13 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class OnlineMeeting extends Entity
 {
     /**
     * Gets the creationDateTime
+    * The meeting creation time in UTC. Read-only.
     *
     * @return \DateTime The creationDateTime
     */
@@ -46,6 +45,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Sets the creationDateTime
+    * The meeting creation time in UTC. Read-only.
     *
     * @param \DateTime $val The creationDateTime
     *
@@ -59,6 +59,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Gets the startDateTime
+    * The meeting start time in UTC.
     *
     * @return \DateTime The startDateTime
     */
@@ -77,6 +78,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Sets the startDateTime
+    * The meeting start time in UTC.
     *
     * @param \DateTime $val The startDateTime
     *
@@ -90,6 +92,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Gets the endDateTime
+    * The meeting end time in UTC.
     *
     * @return \DateTime The endDateTime
     */
@@ -108,6 +111,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Sets the endDateTime
+    * The meeting end time in UTC.
     *
     * @param \DateTime $val The endDateTime
     *
@@ -120,34 +124,37 @@ class OnlineMeeting extends Entity
     }
     
     /**
-    * Gets the joinUrl
+    * Gets the joinWebUrl
+    * The join URL of the online meeting. Read-only.
     *
-    * @return string The joinUrl
+    * @return string The joinWebUrl
     */
-    public function getJoinUrl()
+    public function getJoinWebUrl()
     {
-        if (array_key_exists("joinUrl", $this->_propDict)) {
-            return $this->_propDict["joinUrl"];
+        if (array_key_exists("joinWebUrl", $this->_propDict)) {
+            return $this->_propDict["joinWebUrl"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the joinUrl
+    * Sets the joinWebUrl
+    * The join URL of the online meeting. Read-only.
     *
-    * @param string $val The joinUrl
+    * @param string $val The joinWebUrl
     *
     * @return OnlineMeeting
     */
-    public function setJoinUrl($val)
+    public function setJoinWebUrl($val)
     {
-        $this->_propDict["joinUrl"] = $val;
+        $this->_propDict["joinWebUrl"] = $val;
         return $this;
     }
     
     /**
     * Gets the subject
+    * The subject of the online meeting.
     *
     * @return string The subject
     */
@@ -162,6 +169,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Sets the subject
+    * The subject of the online meeting.
     *
     * @param string $val The subject
     *
@@ -175,6 +183,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Gets the participants
+    * The participants associated with the online meeting.  This includes the organizer and the attendees.
     *
     * @return MeetingParticipants The participants
     */
@@ -193,6 +202,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Sets the participants
+    * The participants associated with the online meeting.  This includes the organizer and the attendees.
     *
     * @param MeetingParticipants $val The participants
     *
@@ -206,6 +216,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Gets the audioConferencing
+    * The phone access (dial-in) information for an online meeting. Read-only.
     *
     * @return AudioConferencing The audioConferencing
     */
@@ -224,6 +235,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Sets the audioConferencing
+    * The phone access (dial-in) information for an online meeting. Read-only.
     *
     * @param AudioConferencing $val The audioConferencing
     *
@@ -237,6 +249,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Gets the chatInfo
+    * The chat information associated with this online meeting.
     *
     * @return ChatInfo The chatInfo
     */
@@ -255,6 +268,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Sets the chatInfo
+    * The chat information associated with this online meeting.
     *
     * @param ChatInfo $val The chatInfo
     *
@@ -268,6 +282,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Gets the videoTeleconferenceId
+    * The video teleconferencing ID. Read-only.
     *
     * @return string The videoTeleconferenceId
     */
@@ -282,6 +297,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Sets the videoTeleconferenceId
+    * The video teleconferencing ID. Read-only.
     *
     * @param string $val The videoTeleconferenceId
     *
@@ -290,6 +306,66 @@ class OnlineMeeting extends Entity
     public function setVideoTeleconferenceId($val)
     {
         $this->_propDict["videoTeleconferenceId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the externalId
+    *
+    * @return string The externalId
+    */
+    public function getExternalId()
+    {
+        if (array_key_exists("externalId", $this->_propDict)) {
+            return $this->_propDict["externalId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the externalId
+    *
+    * @param string $val The externalId
+    *
+    * @return OnlineMeeting
+    */
+    public function setExternalId($val)
+    {
+        $this->_propDict["externalId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the joinInformation
+    * The join information in the language and locale variant specified in the Accept-Language request HTTP header. Read-only.
+    *
+    * @return ItemBody The joinInformation
+    */
+    public function getJoinInformation()
+    {
+        if (array_key_exists("joinInformation", $this->_propDict)) {
+            if (is_a($this->_propDict["joinInformation"], "Microsoft\Graph\Model\ItemBody")) {
+                return $this->_propDict["joinInformation"];
+            } else {
+                $this->_propDict["joinInformation"] = new ItemBody($this->_propDict["joinInformation"]);
+                return $this->_propDict["joinInformation"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the joinInformation
+    * The join information in the language and locale variant specified in the Accept-Language request HTTP header. Read-only.
+    *
+    * @param ItemBody $val The joinInformation
+    *
+    * @return OnlineMeeting
+    */
+    public function setJoinInformation($val)
+    {
+        $this->_propDict["joinInformation"] = $val;
         return $this;
     }
     

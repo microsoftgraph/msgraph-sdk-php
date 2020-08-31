@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 
@@ -21,13 +20,13 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class CommsOperation extends Entity
 {
     /**
     * Gets the status
+    * Possible values are: notStarted, running, completed, failed. Read-only.
     *
     * @return OperationStatus The status
     */
@@ -46,6 +45,7 @@ class CommsOperation extends Entity
     
     /**
     * Sets the status
+    * Possible values are: notStarted, running, completed, failed. Read-only.
     *
     * @param OperationStatus $val The status
     *
@@ -59,6 +59,7 @@ class CommsOperation extends Entity
     
     /**
     * Gets the clientContext
+    * Unique Client Context string. Max limit is 256 chars.
     *
     * @return string The clientContext
     */
@@ -73,6 +74,7 @@ class CommsOperation extends Entity
     
     /**
     * Sets the clientContext
+    * Unique Client Context string. Max limit is 256 chars.
     *
     * @param string $val The clientContext
     *
@@ -86,6 +88,7 @@ class CommsOperation extends Entity
     
     /**
     * Gets the resultInfo
+    * The result information. Read-only.
     *
     * @return ResultInfo The resultInfo
     */
@@ -104,6 +107,7 @@ class CommsOperation extends Entity
     
     /**
     * Sets the resultInfo
+    * The result information. Read-only.
     *
     * @param ResultInfo $val The resultInfo
     *

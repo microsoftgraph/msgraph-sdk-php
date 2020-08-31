@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 /**
@@ -20,14 +19,14 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class MediaStream extends Entity
 {
 
     /**
     * Gets the mediaType
+    * The media type. The possible value are unknown, audio, video, videoBasedScreenSharing, data.
     *
     * @return Modality The mediaType
     */
@@ -46,6 +45,7 @@ class MediaStream extends Entity
 
     /**
     * Sets the mediaType
+    * The media type. The possible value are unknown, audio, video, videoBasedScreenSharing, data.
     *
     * @param Modality $val The value to assign to the mediaType
     *
@@ -58,6 +58,7 @@ class MediaStream extends Entity
     }
     /**
     * Gets the label
+    * The media stream label.
     *
     * @return string The label
     */
@@ -72,6 +73,7 @@ class MediaStream extends Entity
 
     /**
     * Sets the label
+    * The media stream label.
     *
     * @param string $val The value of the label
     *
@@ -84,6 +86,7 @@ class MediaStream extends Entity
     }
     /**
     * Gets the sourceId
+    * The source ID.
     *
     * @return string The sourceId
     */
@@ -98,6 +101,7 @@ class MediaStream extends Entity
 
     /**
     * Sets the sourceId
+    * The source ID.
     *
     * @param string $val The value of the sourceId
     *
@@ -111,6 +115,7 @@ class MediaStream extends Entity
 
     /**
     * Gets the direction
+    * The direction. The possible values are inactive, sendOnly, receiveOnly, sendReceive.
     *
     * @return MediaDirection The direction
     */
@@ -129,6 +134,7 @@ class MediaStream extends Entity
 
     /**
     * Sets the direction
+    * The direction. The possible values are inactive, sendOnly, receiveOnly, sendReceive.
     *
     * @param MediaDirection $val The value to assign to the direction
     *
@@ -141,6 +147,7 @@ class MediaStream extends Entity
     }
     /**
     * Gets the serverMuted
+    * If the media is muted by the server.
     *
     * @return bool The serverMuted
     */
@@ -155,6 +162,7 @@ class MediaStream extends Entity
 
     /**
     * Sets the serverMuted
+    * If the media is muted by the server.
     *
     * @param bool $val The value of the serverMuted
     *

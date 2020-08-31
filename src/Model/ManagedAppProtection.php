@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 
@@ -21,8 +20,7 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class ManagedAppProtection extends ManagedAppPolicy
 {
@@ -280,7 +278,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     
     /**
     * Gets the managedBrowserToOpenLinksRequired
-    * Indicates whether internet links should be opened in the managed browser app.
+    * Indicates whether internet links should be opened in the managed browser app, or any custom browser specified by CustomBrowserProtocol (for iOS) or CustomBrowserPackageId/CustomBrowserDisplayName (for Android)
     *
     * @return bool The managedBrowserToOpenLinksRequired
     */
@@ -295,7 +293,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     
     /**
     * Sets the managedBrowserToOpenLinksRequired
-    * Indicates whether internet links should be opened in the managed browser app.
+    * Indicates whether internet links should be opened in the managed browser app, or any custom browser specified by CustomBrowserProtocol (for iOS) or CustomBrowserPackageId/CustomBrowserDisplayName (for Android)
     *
     * @param bool $val The managedBrowserToOpenLinksRequired
     *
@@ -810,6 +808,39 @@ class ManagedAppProtection extends ManagedAppPolicy
     public function setMinimumWarningAppVersion($val)
     {
         $this->_propDict["minimumWarningAppVersion"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the managedBrowser
+    * Indicates in which managed browser(s) that internet links should be opened. When this property is configured, ManagedBrowserToOpenLinksRequired should be true. Possible values are: notConfigured, microsoftEdge.
+    *
+    * @return ManagedBrowserType The managedBrowser
+    */
+    public function getManagedBrowser()
+    {
+        if (array_key_exists("managedBrowser", $this->_propDict)) {
+            if (is_a($this->_propDict["managedBrowser"], "Microsoft\Graph\Model\ManagedBrowserType")) {
+                return $this->_propDict["managedBrowser"];
+            } else {
+                $this->_propDict["managedBrowser"] = new ManagedBrowserType($this->_propDict["managedBrowser"]);
+                return $this->_propDict["managedBrowser"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the managedBrowser
+    * Indicates in which managed browser(s) that internet links should be opened. When this property is configured, ManagedBrowserToOpenLinksRequired should be true. Possible values are: notConfigured, microsoftEdge.
+    *
+    * @param ManagedBrowserType $val The managedBrowser
+    *
+    * @return ManagedAppProtection
+    */
+    public function setManagedBrowser($val)
+    {
+        $this->_propDict["managedBrowser"] = $val;
         return $this;
     }
     

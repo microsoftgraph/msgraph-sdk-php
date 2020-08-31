@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 
@@ -21,8 +20,7 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class User extends DirectoryObject
 {
@@ -290,6 +288,35 @@ class User extends DirectoryObject
     }
     
     /**
+    * Gets the creationType
+    * Indicates whether the user account was created as a regular school or work account (null), an external account (Invitation), a local account for an Azure Active Directory B2C tenant (LocalAccount) or self-service sign-up using email verification (EmailVerified). Read-only.
+    *
+    * @return string The creationType
+    */
+    public function getCreationType()
+    {
+        if (array_key_exists("creationType", $this->_propDict)) {
+            return $this->_propDict["creationType"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the creationType
+    * Indicates whether the user account was created as a regular school or work account (null), an external account (Invitation), a local account for an Azure Active Directory B2C tenant (LocalAccount) or self-service sign-up using email verification (EmailVerified). Read-only.
+    *
+    * @param string $val The creationType
+    *
+    * @return User
+    */
+    public function setCreationType($val)
+    {
+        $this->_propDict["creationType"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the department
     * The name for the department in which the user works. Supports $filter.
     *
@@ -377,6 +404,68 @@ class User extends DirectoryObject
     }
     
     /**
+    * Gets the externalUserState
+    * For an external user invited to the tenant using the invitation API, this property represents the invited user's invitation status. For invited users, the state can be PendingAcceptance or Accepted, or null for all other users. Returned only on $select. Supports $filter with the supported values. For example: $filter=externalUserState eq 'PendingAcceptance'.
+    *
+    * @return string The externalUserState
+    */
+    public function getExternalUserState()
+    {
+        if (array_key_exists("externalUserState", $this->_propDict)) {
+            return $this->_propDict["externalUserState"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the externalUserState
+    * For an external user invited to the tenant using the invitation API, this property represents the invited user's invitation status. For invited users, the state can be PendingAcceptance or Accepted, or null for all other users. Returned only on $select. Supports $filter with the supported values. For example: $filter=externalUserState eq 'PendingAcceptance'.
+    *
+    * @param string $val The externalUserState
+    *
+    * @return User
+    */
+    public function setExternalUserState($val)
+    {
+        $this->_propDict["externalUserState"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the externalUserStateChangeDateTime
+    * Shows the timestamp for the latest change to the externalUserState property. Returned only on $select.
+    *
+    * @return \DateTime The externalUserStateChangeDateTime
+    */
+    public function getExternalUserStateChangeDateTime()
+    {
+        if (array_key_exists("externalUserStateChangeDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["externalUserStateChangeDateTime"], "\DateTime")) {
+                return $this->_propDict["externalUserStateChangeDateTime"];
+            } else {
+                $this->_propDict["externalUserStateChangeDateTime"] = new \DateTime($this->_propDict["externalUserStateChangeDateTime"]);
+                return $this->_propDict["externalUserStateChangeDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the externalUserStateChangeDateTime
+    * Shows the timestamp for the latest change to the externalUserState property. Returned only on $select.
+    *
+    * @param \DateTime $val The externalUserStateChangeDateTime
+    *
+    * @return User
+    */
+    public function setExternalUserStateChangeDateTime($val)
+    {
+        $this->_propDict["externalUserStateChangeDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the faxNumber
     * The fax number of the user.
     *
@@ -434,6 +523,36 @@ class User extends DirectoryObject
         return $this;
     }
     
+
+     /** 
+     * Gets the identities
+    * Represents the identities that can be used to sign in to this user account. An identity can be provided by Microsoft (also known as a local account), by organizations, or by social identity providers such as Facebook, Google, and Microsoft, and tied to a user account. May contain multiple items with the same signInType value. Supports $filter.
+     *
+     * @return array The identities
+     */
+    public function getIdentities()
+    {
+        if (array_key_exists("identities", $this->_propDict)) {
+           return $this->_propDict["identities"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the identities
+    * Represents the identities that can be used to sign in to this user account. An identity can be provided by Microsoft (also known as a local account), by organizations, or by social identity providers such as Facebook, Google, and Microsoft, and tied to a user account. May contain multiple items with the same signInType value. Supports $filter.
+    *
+    * @param ObjectIdentity $val The identities
+    *
+    * @return User
+    */
+    public function setIdentities($val)
+    {
+		$this->_propDict["identities"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the imAddresses
     * The instant message voice over IP (VOIP) session initiation protocol (SIP) addresses for the user. Read-only.
@@ -465,7 +584,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the isResourceAccount
-    * true if the user is a resource account; otherwise, false. Null value should be considered false.
+    * Do not use – reserved for future use.
     *
     * @return bool The isResourceAccount
     */
@@ -480,7 +599,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the isResourceAccount
-    * true if the user is a resource account; otherwise, false. Null value should be considered false.
+    * Do not use – reserved for future use.
     *
     * @param bool $val The isResourceAccount
     *
@@ -731,7 +850,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the onPremisesExtensionAttributes
-    * Contains extensionAttributes 1-15 for the user. Note that the individual extension attributes are neither selectable nor filterable. For an onPremisesSyncEnabled user, this set of properties is mastered on-premises and is read-only. For a cloud-only user (where onPremisesSyncEnabled is false), these properties may be set during creation or update.
+    * Contains extensionAttributes 1-15 for the user. Note that the individual extension attributes are neither selectable nor filterable. For an onPremisesSyncEnabled user, the source of authority for this set of properties is the on-premises and is read-only. For a cloud-only user (where onPremisesSyncEnabled is false), these properties may be set during creation or update. These extension attributes are also known as Exchange custom attributes 1-15.
     *
     * @return OnPremisesExtensionAttributes The onPremisesExtensionAttributes
     */
@@ -750,7 +869,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the onPremisesExtensionAttributes
-    * Contains extensionAttributes 1-15 for the user. Note that the individual extension attributes are neither selectable nor filterable. For an onPremisesSyncEnabled user, this set of properties is mastered on-premises and is read-only. For a cloud-only user (where onPremisesSyncEnabled is false), these properties may be set during creation or update.
+    * Contains extensionAttributes 1-15 for the user. Note that the individual extension attributes are neither selectable nor filterable. For an onPremisesSyncEnabled user, the source of authority for this set of properties is the on-premises and is read-only. For a cloud-only user (where onPremisesSyncEnabled is false), these properties may be set during creation or update. These extension attributes are also known as Exchange custom attributes 1-15.
     *
     * @param OnPremisesExtensionAttributes $val The onPremisesExtensionAttributes
     *
@@ -1834,6 +1953,34 @@ class User extends DirectoryObject
     
 
      /** 
+     * Gets the appRoleAssignments
+     *
+     * @return array The appRoleAssignments
+     */
+    public function getAppRoleAssignments()
+    {
+        if (array_key_exists("appRoleAssignments", $this->_propDict)) {
+           return $this->_propDict["appRoleAssignments"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the appRoleAssignments
+    *
+    * @param AppRoleAssignment $val The appRoleAssignments
+    *
+    * @return User
+    */
+    public function setAppRoleAssignments($val)
+    {
+		$this->_propDict["appRoleAssignments"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the ownedDevices
     * Devices that are owned by the user. Read-only. Nullable.
      *
@@ -2012,6 +2159,34 @@ class User extends DirectoryObject
     public function setCreatedObjects($val)
     {
 		$this->_propDict["createdObjects"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the oauth2PermissionGrants
+     *
+     * @return array The oauth2PermissionGrants
+     */
+    public function getOauth2PermissionGrants()
+    {
+        if (array_key_exists("oauth2PermissionGrants", $this->_propDict)) {
+           return $this->_propDict["oauth2PermissionGrants"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the oauth2PermissionGrants
+    *
+    * @param OAuth2PermissionGrant $val The oauth2PermissionGrants
+    *
+    * @return User
+    */
+    public function setOauth2PermissionGrants($val)
+    {
+		$this->_propDict["oauth2PermissionGrants"] = $val;
         return $this;
     }
     
@@ -2598,6 +2773,34 @@ class User extends DirectoryObject
     
 
      /** 
+     * Gets the followedSites
+     *
+     * @return array The followedSites
+     */
+    public function getFollowedSites()
+    {
+        if (array_key_exists("followedSites", $this->_propDict)) {
+           return $this->_propDict["followedSites"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the followedSites
+    *
+    * @param Site $val The followedSites
+    *
+    * @return User
+    */
+    public function setFollowedSites($val)
+    {
+		$this->_propDict["followedSites"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the extensions
     * The collection of open extensions defined for the user. Read-only. Nullable.
      *
@@ -2751,6 +2954,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the insights
+    * Read-only. Nullable.
     *
     * @return OfficeGraphInsights The insights
     */
@@ -2769,6 +2973,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the insights
+    * Read-only. Nullable.
     *
     * @param OfficeGraphInsights $val The insights
     *
@@ -2920,7 +3125,7 @@ class User extends DirectoryObject
     /** 
     * Sets the joinedTeams
     *
-    * @param Group $val The joinedTeams
+    * @param Team $val The joinedTeams
     *
     * @return User
     */

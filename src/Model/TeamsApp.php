@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 
@@ -21,8 +20,7 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class TeamsApp extends Entity
 {
@@ -86,7 +84,7 @@ class TeamsApp extends Entity
     
     /**
     * Gets the distributionMethod
-    * The method of distribution for the app.
+    * The method of distribution for the app. Read-only.
     *
     * @return TeamsAppDistributionMethod The distributionMethod
     */
@@ -105,7 +103,7 @@ class TeamsApp extends Entity
     
     /**
     * Sets the distributionMethod
-    * The method of distribution for the app.
+    * The method of distribution for the app. Read-only.
     *
     * @param TeamsAppDistributionMethod $val The distributionMethod
     *

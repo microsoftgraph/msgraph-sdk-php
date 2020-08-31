@@ -9,8 +9,7 @@
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 /**
@@ -20,13 +19,13 @@ namespace Microsoft\Graph\Model;
 * @package   Microsoft.Graph
 * @copyright © Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class ChatInfo extends Entity
 {
     /**
     * Gets the threadId
+    * The unique identifier for a thread in Microsoft Teams.
     *
     * @return string The threadId
     */
@@ -41,6 +40,7 @@ class ChatInfo extends Entity
 
     /**
     * Sets the threadId
+    * The unique identifier for a thread in Microsoft Teams.
     *
     * @param string $val The value of the threadId
     *
@@ -53,6 +53,7 @@ class ChatInfo extends Entity
     }
     /**
     * Gets the messageId
+    * The unique identifier of a message in a Microsoft Teams channel.
     *
     * @return string The messageId
     */
@@ -67,6 +68,7 @@ class ChatInfo extends Entity
 
     /**
     * Sets the messageId
+    * The unique identifier of a message in a Microsoft Teams channel.
     *
     * @param string $val The value of the messageId
     *
@@ -79,6 +81,7 @@ class ChatInfo extends Entity
     }
     /**
     * Gets the replyChainMessageId
+    * The ID of the reply message.
     *
     * @return string The replyChainMessageId
     */
@@ -93,6 +96,7 @@ class ChatInfo extends Entity
 
     /**
     * Sets the replyChainMessageId
+    * The ID of the reply message.
     *
     * @param string $val The value of the replyChainMessageId
     *
