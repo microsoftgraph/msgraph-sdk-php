@@ -13,8 +13,8 @@
 	],
 	"require": {
 		"php": "^7.1",
-		"guzzlehttp/guzzle": "^7.2",
-    "ext-json": "*"
+		"guzzlehttp/guzzle": "^7.0",
+		"ext-json": "*"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "^7.5",
@@ -24,7 +24,7 @@
 	"autoload": {
 		"psr-4": {
 			"Beta\\Microsoft\\Graph\\": "src/Beta/Microsoft/Graph/",
-			"Microsoft\\Graph\\": "src/",
+			"Microsoft\\Graph\\": "src/"
 		}
 	},
 	"autoload-dev": {

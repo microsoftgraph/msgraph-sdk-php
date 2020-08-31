@@ -1,7 +1,7 @@
 # Copyright (c) Microsoft Corporation. All rights reserved.
 # Licensed under the MIT License.
 
-# This pipeline generates the v1.0 PHP model files using typewriter.exe.
+# This pipeline generates the beta PHP model files using typewriter.exe.
 # This pipeline is triggered by the completion of clean metadata
 # publication pipeline.
 
@@ -24,7 +24,7 @@ resources:
     ref: master
   pipelines:
   - pipeline: publishMetadata # This pipeline produces an metadata artifact that we need to validate.
-    source: (v1.0 - 3) msgraph-publish-cleanmetadata
+    source: (beta - 3) msgraph-publish-cleanmetadata
     trigger:
       branches:
       - master
@@ -58,11 +58,11 @@ steps:
       Write-Host "Path to typewriter.exe output $outputPath"
       Write-Host "##vso[task.setvariable variable=OUTPUTPATH]$outputPath"
 
-      $cleanMetadata = "https://raw.githubusercontent.com/microsoftgraph/msgraph-metadata/master/clean_v10_metadata/cleanMetadataWithDescriptionsv1.0.xml"
+      $cleanMetadata = "https://raw.githubusercontent.com/microsoftgraph/msgraph-metadata/master/clean_beta_metadata/cleanMetadataWithDescriptionsbeta.xml"
       Write-Host "Path to clean metadata $cleanMetadata"
       Write-Host "##vso[task.setvariable variable=CLEANMETADATA]$cleanMetadata"
 
-      $branchName = "v1.0/pipelinebuild/$env:BUILD_BUILDID" # Match the spec in the GH Action
+      $branchName = "beta/pipelinebuild/$env:BUILD_BUILDID" # Match the spec in the GH Action
       Write-Host "Branch path spec for the pull request will be $branchName"
       Write-Host "##vso[task.setvariable variable=BRANCHNAME]$branchName"
 
@@ -81,19 +81,17 @@ steps:
     targetType: inline
     pwsh: true
     script: |
-      # Example directories are:
-      # src/Model (types in microsoft.graph namespace)
-      # src/CallRecords/Model (types in microsoft.graph.callRecords namespace)
-      Get-ChildItem .\src\ -Exclude Beta,Core,Exception,Http -Directory | Remove-Item -Force -Recurse
-      Write-Host "Removed the existing generated files in the repo at $modelDir." -ForegroundColor Green
+      # removes all models under src/Beta
+      Get-ChildItem $env:REPODIR -Include Beta -Directory -Recurse | Remove-Item -Recurse -Force
+      Write-Host "Removed the existing generated files for Beta in the repo at $($env:REPODIR)." -ForegroundColor Green
 
 - task: PowerShell@2
-  displayName: 'Typewriter: generate v1.0 PHP model files'
+  displayName: 'Typewriter: generate beta PHP model files'
   inputs:
     targetType: filePath
     pwsh: true
     filePath: '$(Build.SourcesDirectory)/msgraph-metadata/scripts/runTypewriter.ps1'
-    arguments: '-verbosity Info -metadata $(CLEANMETADATA) -output $(OUTPUTPATH) -generationMode Files -l PHP'
+    arguments: '-verbosity Info -metadata $(CLEANMETADATA) -output $(OUTPUTPATH) -generationMode Files -l PHP -p php.namespacePrefix:Beta'
     workingDirectory: '$(Build.SourcesDirectory)' # Set the root for a multi-repo pipeline. /s is the actual dir name.
   enabled: true
 
@@ -103,11 +101,14 @@ steps:
     targetType: inline
     pwsh: true
     script: |
-      $generatedFiles = Join-Path $env:OUTPUTPATH "/com/microsoft/graph/*"
+      $generatedFiles = Join-Path $env:OUTPUTPATH "/com/Beta/*"
 
-      # copy generated files by preserving the subdirectory structure from /com/microsoft/graph/
-      # the same directory structure is expected to appear in repository's src/ directory after copy
-      Copy-Item $generatedFiles $env:REPODIR -Recurse -Force
+      $destinationDir = Join-Path $env:REPODIR "/Beta/"
+      New-Item -Path $destinationDir -ItemType Directory
+
+      # copy generated files by preserving the subdirectory structure from /com/Beta
+      # the same directory structure is expected to appear in repository's src/Beta directory after copy
+      Copy-Item $generatedFiles $destinationDir -Recurse -Force
       Write-Host "Moved the models with path $generatedFiles into the local repo." -ForegroundColor Green
 
 - task: PowerShell@2
@@ -115,7 +116,7 @@ steps:
   inputs:
     targetType: inline
     workingDirectory: '$(Build.SourcesDirectory)/msgraph-sdk-php'
-    pwsh: true 
+    pwsh: true
     script: |
       composer install # Adds dependencies to vendor.
       .\vendor\bin\phpunit --exclude-group functional
