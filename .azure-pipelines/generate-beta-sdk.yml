@@ -1,7 +1,7 @@
 # Copyright (c) Microsoft Corporation. All rights reserved.
 # Licensed under the MIT License.
 
-# This pipeline generates the v1.0 PHP model files using typewriter.exe.
+# This pipeline generates the beta PHP model files using typewriter.exe.
 # This pipeline is triggered by the completion of clean metadata
 # publication pipeline.
 
@@ -24,7 +24,7 @@ resources:
     ref: master
   pipelines:
   - pipeline: publishMetadata # This pipeline produces an metadata artifact that we need to validate.
-    source: (v1.0 - 3) msgraph-publish-cleanmetadata
+    source: (beta - 3) msgraph-publish-cleanmetadata
     trigger:
       branches:
       - master
@@ -62,7 +62,7 @@ steps:
       Write-Host "Path to clean metadata $cleanMetadata"
       Write-Host "##vso[task.setvariable variable=CLEANMETADATA]$cleanMetadata"
 
-      $branchName = "v1.0/pipelinebuild/$env:BUILD_BUILDID" # Match the spec in the GH Action
+      $branchName = "beta/pipelinebuild/$env:BUILD_BUILDID" # Match the spec in the GH Action
       Write-Host "Branch path spec for the pull request will be $branchName"
       Write-Host "##vso[task.setvariable variable=BRANCHNAME]$branchName"
 

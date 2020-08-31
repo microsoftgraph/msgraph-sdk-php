@@ -5,18 +5,16 @@
 # has a branch path spec likev 1.0/pipelinebuild/*. Configure this action by updating the
 # environment variable values[0]. 
 
-name: "create pull request"
+name: "create beta pull request"
 
 # Controls when the action will run. Triggers the workflow on push
-# events but only for branches with the following branch spec: "v1.0/pipelinebuild/*"
+# events but only for branches with the following branch spec: "beta/pipelinebuild/*"
 on:
   push:
     branches:
-      - "v1.0/pipelinebuild/*"
+      - "beta/pipelinebuild/*"
     paths:
-      - 'src/**/*.php'
-    paths-ignore:
-      - 'src/Beta/**'
+      - 'src/Beta/**/*.php'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -41,7 +39,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         MESSAGE_TITLE: Generated models and request builders using Typewriter
-        MESSAGE_BODY: "This pull request was automatically created by the GitHub Action, **${{github.workflow}}**. \n\n The commit hash is _${{github.sha}}_. \n\n **Important** Check for unexpected deletions or changes in this PR. See [v1.0_metadata.xml](https://github.com/microsoftgraph/msgraph-metadata/blob/master/v1.0_metadata.xml) for metadata changes. \n\n Make sure the version number is incremented in /src/Core/GraphConstants.php. Compare the version against the latest release on [packagist.org](https://packagist.org/packages/microsoft/microsoft-graph) and update the version in src/Core/GraphConstants. \n\n cc: @darrelmiller"
+        MESSAGE_BODY: "This pull request was automatically created by the GitHub Action, **${{github.workflow}}**. \n\n The commit hash is _${{github.sha}}_. \n\n **Important** Check for unexpected deletions or changes in this PR. See [beta_metadata.xml](https://github.com/microsoftgraph/msgraph-metadata/blob/master/beta_metadata.xml) for metadata changes. \n\n Make sure the version number is incremented in /src/Core/GraphConstants.php. Compare the version against the latest release on [packagist.org](https://packagist.org/packages/microsoft/microsoft-graph) and update the version in src/Core/GraphConstants. \n\n cc: @darrelmiller"
         REVIEWERS: peombwa,ddyett,zengin,nikithauc,baywet
         ASSIGNEDTO: MIchaelMainer
         LABELS: generated
