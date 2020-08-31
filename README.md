@@ -41,7 +41,7 @@ $accessToken = $token->access_token;
 ```
 For an integrated example on how to use Oauth2 in a Laravel application and use the Graph, see the [PHP Connect Sample](https://github.com/microsoftgraph/php-connect-sample).
 
-### Call Microsoft Graph
+### Call Microsoft Graph using the v1.0 endpoint and models
 
 The following is an example that shows how to call Microsoft Graph.
 
@@ -60,6 +60,33 @@ class UsageExample
 
         $user = $graph->createRequest("GET", "/me")
                       ->setReturnType(Model\User::class)
+                      ->execute();
+
+        echo "Hello, I am $user->getGivenName() ";
+    }
+}
+```
+
+### Call Microsoft Graph using the beta endpoint and models
+
+The following is an example that shows how to call Microsoft Graph.
+
+```php
+use Microsoft\Graph\Graph;
+use Beta\Microsoft\Graph\Model as BetaModel;
+
+class UsageExample
+{
+    public function run()
+    {
+        $accessToken = 'xxx';
+
+        $graph = new Graph();
+        $graph->setAccessToken($accessToken);
+
+        $user = $graph->setApiVersion("beta")
+                      ->createRequest("GET", "/me")
+                      ->setReturnType(BetaModel\User::class)
                       ->execute();
 
         echo "Hello, I am $user->getGivenName() ";

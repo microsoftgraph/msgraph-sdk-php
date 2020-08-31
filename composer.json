@@ -6,8 +6,8 @@
 	"license": "MIT",
 	"authors": [
 		{
-			"name": "Michael Mainer",
-			"email": "mmainer@microsoft.com",
+			"name": "Microsoft Graph Client Tooling",
+			"email": "graphtooling@service.microsoft.com",
 			"role": "Developer"
 		}
 	],
@@ -22,6 +22,7 @@
 	},
 	"autoload": {
 		"psr-4": {
+			"Beta\\Microsoft\\Graph\\": "src/Beta/Microsoft/Graph/",
 			"Microsoft\\Graph\\": "src/",
 			"Microsoft\\Graph\\Test\\": "tests/Functional/"
 		}
