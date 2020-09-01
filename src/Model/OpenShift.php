@@ -25,39 +25,6 @@ namespace Microsoft\Graph\Model;
 class OpenShift extends ChangeTrackedEntity
 {
     /**
-    * Gets the sharedOpenShift
-    * A published open shift.
-    *
-    * @return OpenShiftItem The sharedOpenShift
-    */
-    public function getSharedOpenShift()
-    {
-        if (array_key_exists("sharedOpenShift", $this->_propDict)) {
-            if (is_a($this->_propDict["sharedOpenShift"], "Microsoft\Graph\Model\OpenShiftItem")) {
-                return $this->_propDict["sharedOpenShift"];
-            } else {
-                $this->_propDict["sharedOpenShift"] = new OpenShiftItem($this->_propDict["sharedOpenShift"]);
-                return $this->_propDict["sharedOpenShift"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the sharedOpenShift
-    * A published open shift.
-    *
-    * @param OpenShiftItem $val The sharedOpenShift
-    *
-    * @return OpenShift
-    */
-    public function setSharedOpenShift($val)
-    {
-        $this->_propDict["sharedOpenShift"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the draftOpenShift
     * An unpublished open shift.
     *
@@ -116,6 +83,39 @@ class OpenShift extends ChangeTrackedEntity
     public function setSchedulingGroupId($val)
     {
         $this->_propDict["schedulingGroupId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the sharedOpenShift
+    * A published open shift.
+    *
+    * @return OpenShiftItem The sharedOpenShift
+    */
+    public function getSharedOpenShift()
+    {
+        if (array_key_exists("sharedOpenShift", $this->_propDict)) {
+            if (is_a($this->_propDict["sharedOpenShift"], "Microsoft\Graph\Model\OpenShiftItem")) {
+                return $this->_propDict["sharedOpenShift"];
+            } else {
+                $this->_propDict["sharedOpenShift"] = new OpenShiftItem($this->_propDict["sharedOpenShift"]);
+                return $this->_propDict["sharedOpenShift"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the sharedOpenShift
+    * A published open shift.
+    *
+    * @param OpenShiftItem $val The sharedOpenShift
+    *
+    * @return OpenShift
+    */
+    public function setSharedOpenShift($val)
+    {
+        $this->_propDict["sharedOpenShift"] = $val;
         return $this;
     }
     

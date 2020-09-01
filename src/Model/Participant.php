@@ -58,35 +58,60 @@ class Participant extends Entity
     }
     
     /**
-    * Gets the recordingInfo
-    * Information about whether the participant has recording capability.
+    * Gets the isInLobby
+    * true if the participant is in lobby.
     *
-    * @return RecordingInfo The recordingInfo
+    * @return bool The isInLobby
     */
-    public function getRecordingInfo()
+    public function getIsInLobby()
     {
-        if (array_key_exists("recordingInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["recordingInfo"], "Microsoft\Graph\Model\RecordingInfo")) {
-                return $this->_propDict["recordingInfo"];
-            } else {
-                $this->_propDict["recordingInfo"] = new RecordingInfo($this->_propDict["recordingInfo"]);
-                return $this->_propDict["recordingInfo"];
-            }
+        if (array_key_exists("isInLobby", $this->_propDict)) {
+            return $this->_propDict["isInLobby"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the recordingInfo
-    * Information about whether the participant has recording capability.
+    * Sets the isInLobby
+    * true if the participant is in lobby.
     *
-    * @param RecordingInfo $val The recordingInfo
+    * @param bool $val The isInLobby
     *
     * @return Participant
     */
-    public function setRecordingInfo($val)
+    public function setIsInLobby($val)
     {
-        $this->_propDict["recordingInfo"] = $val;
+        $this->_propDict["isInLobby"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the isMuted
+    * true if the participant is muted (client or server muted).
+    *
+    * @return bool The isMuted
+    */
+    public function getIsMuted()
+    {
+        if (array_key_exists("isMuted", $this->_propDict)) {
+            return $this->_propDict["isMuted"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isMuted
+    * true if the participant is muted (client or server muted).
+    *
+    * @param bool $val The isMuted
+    *
+    * @return Participant
+    */
+    public function setIsMuted($val)
+    {
+        $this->_propDict["isMuted"] = boolval($val);
         return $this;
     }
     
@@ -121,60 +146,35 @@ class Participant extends Entity
     }
     
     /**
-    * Gets the isMuted
-    * true if the participant is muted (client or server muted).
+    * Gets the recordingInfo
+    * Information about whether the participant has recording capability.
     *
-    * @return bool The isMuted
+    * @return RecordingInfo The recordingInfo
     */
-    public function getIsMuted()
+    public function getRecordingInfo()
     {
-        if (array_key_exists("isMuted", $this->_propDict)) {
-            return $this->_propDict["isMuted"];
-        } else {
-            return null;
+        if (array_key_exists("recordingInfo", $this->_propDict)) {
+            if (is_a($this->_propDict["recordingInfo"], "Microsoft\Graph\Model\RecordingInfo")) {
+                return $this->_propDict["recordingInfo"];
+            } else {
+                $this->_propDict["recordingInfo"] = new RecordingInfo($this->_propDict["recordingInfo"]);
+                return $this->_propDict["recordingInfo"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the isMuted
-    * true if the participant is muted (client or server muted).
+    * Sets the recordingInfo
+    * Information about whether the participant has recording capability.
     *
-    * @param bool $val The isMuted
+    * @param RecordingInfo $val The recordingInfo
     *
     * @return Participant
     */
-    public function setIsMuted($val)
+    public function setRecordingInfo($val)
     {
-        $this->_propDict["isMuted"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the isInLobby
-    * true if the participant is in lobby.
-    *
-    * @return bool The isInLobby
-    */
-    public function getIsInLobby()
-    {
-        if (array_key_exists("isInLobby", $this->_propDict)) {
-            return $this->_propDict["isInLobby"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the isInLobby
-    * true if the participant is in lobby.
-    *
-    * @param bool $val The isInLobby
-    *
-    * @return Participant
-    */
-    public function setIsInLobby($val)
-    {
-        $this->_propDict["isInLobby"] = boolval($val);
+        $this->_propDict["recordingInfo"] = $val;
         return $this;
     }
     

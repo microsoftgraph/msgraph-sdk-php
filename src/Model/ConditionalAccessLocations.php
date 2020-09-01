@@ -24,34 +24,6 @@ namespace Microsoft\Graph\Model;
 class ConditionalAccessLocations extends Entity
 {
     /**
-    * Gets the includeLocations
-    * Location IDs in scope of policy unless explicitly excluded, All, or AllTrusted.
-    *
-    * @return string The includeLocations
-    */
-    public function getIncludeLocations()
-    {
-        if (array_key_exists("includeLocations", $this->_propDict)) {
-            return $this->_propDict["includeLocations"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the includeLocations
-    * Location IDs in scope of policy unless explicitly excluded, All, or AllTrusted.
-    *
-    * @param string $val The value of the includeLocations
-    *
-    * @return ConditionalAccessLocations
-    */
-    public function setIncludeLocations($val)
-    {
-        $this->_propDict["includeLocations"] = $val;
-        return $this;
-    }
-    /**
     * Gets the excludeLocations
     * Location IDs excluded from scope of policy.
     *
@@ -77,6 +49,34 @@ class ConditionalAccessLocations extends Entity
     public function setExcludeLocations($val)
     {
         $this->_propDict["excludeLocations"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the includeLocations
+    * Location IDs in scope of policy unless explicitly excluded, All, or AllTrusted.
+    *
+    * @return string The includeLocations
+    */
+    public function getIncludeLocations()
+    {
+        if (array_key_exists("includeLocations", $this->_propDict)) {
+            return $this->_propDict["includeLocations"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the includeLocations
+    * Location IDs in scope of policy unless explicitly excluded, All, or AllTrusted.
+    *
+    * @param string $val The value of the includeLocations
+    *
+    * @return ConditionalAccessLocations
+    */
+    public function setIncludeLocations($val)
+    {
+        $this->_propDict["includeLocations"] = $val;
         return $this;
     }
 }

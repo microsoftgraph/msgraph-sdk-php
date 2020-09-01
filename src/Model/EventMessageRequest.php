@@ -25,6 +25,99 @@ namespace Microsoft\Graph\Model;
 class EventMessageRequest extends EventMessage
 {
     /**
+    * Gets the allowNewTimeProposals
+    * True if the meeting organizer allows invitees to propose a new time when responding, false otherwise. Optional. Default is true.
+    *
+    * @return bool The allowNewTimeProposals
+    */
+    public function getAllowNewTimeProposals()
+    {
+        if (array_key_exists("allowNewTimeProposals", $this->_propDict)) {
+            return $this->_propDict["allowNewTimeProposals"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the allowNewTimeProposals
+    * True if the meeting organizer allows invitees to propose a new time when responding, false otherwise. Optional. Default is true.
+    *
+    * @param bool $val The allowNewTimeProposals
+    *
+    * @return EventMessageRequest
+    */
+    public function setAllowNewTimeProposals($val)
+    {
+        $this->_propDict["allowNewTimeProposals"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the meetingRequestType
+    *
+    * @return MeetingRequestType The meetingRequestType
+    */
+    public function getMeetingRequestType()
+    {
+        if (array_key_exists("meetingRequestType", $this->_propDict)) {
+            if (is_a($this->_propDict["meetingRequestType"], "Microsoft\Graph\Model\MeetingRequestType")) {
+                return $this->_propDict["meetingRequestType"];
+            } else {
+                $this->_propDict["meetingRequestType"] = new MeetingRequestType($this->_propDict["meetingRequestType"]);
+                return $this->_propDict["meetingRequestType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the meetingRequestType
+    *
+    * @param MeetingRequestType $val The meetingRequestType
+    *
+    * @return EventMessageRequest
+    */
+    public function setMeetingRequestType($val)
+    {
+        $this->_propDict["meetingRequestType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the previousEndDateTime
+    * If the meeting update changes the meeting end time, this property specifies the previous meeting end time.
+    *
+    * @return DateTimeTimeZone The previousEndDateTime
+    */
+    public function getPreviousEndDateTime()
+    {
+        if (array_key_exists("previousEndDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["previousEndDateTime"], "Microsoft\Graph\Model\DateTimeTimeZone")) {
+                return $this->_propDict["previousEndDateTime"];
+            } else {
+                $this->_propDict["previousEndDateTime"] = new DateTimeTimeZone($this->_propDict["previousEndDateTime"]);
+                return $this->_propDict["previousEndDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the previousEndDateTime
+    * If the meeting update changes the meeting end time, this property specifies the previous meeting end time.
+    *
+    * @param DateTimeTimeZone $val The previousEndDateTime
+    *
+    * @return EventMessageRequest
+    */
+    public function setPreviousEndDateTime($val)
+    {
+        $this->_propDict["previousEndDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the previousLocation
     * If the meeting update changes the meeting location, this property specifies the previous meeting location.
     *
@@ -91,39 +184,6 @@ class EventMessageRequest extends EventMessage
     }
     
     /**
-    * Gets the previousEndDateTime
-    * If the meeting update changes the meeting end time, this property specifies the previous meeting end time.
-    *
-    * @return DateTimeTimeZone The previousEndDateTime
-    */
-    public function getPreviousEndDateTime()
-    {
-        if (array_key_exists("previousEndDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["previousEndDateTime"], "Microsoft\Graph\Model\DateTimeTimeZone")) {
-                return $this->_propDict["previousEndDateTime"];
-            } else {
-                $this->_propDict["previousEndDateTime"] = new DateTimeTimeZone($this->_propDict["previousEndDateTime"]);
-                return $this->_propDict["previousEndDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the previousEndDateTime
-    * If the meeting update changes the meeting end time, this property specifies the previous meeting end time.
-    *
-    * @param DateTimeTimeZone $val The previousEndDateTime
-    *
-    * @return EventMessageRequest
-    */
-    public function setPreviousEndDateTime($val)
-    {
-        $this->_propDict["previousEndDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the responseRequested
     * Set to true if the sender would like the invitee to send a response to the requested meeting.
     *
@@ -149,66 +209,6 @@ class EventMessageRequest extends EventMessage
     public function setResponseRequested($val)
     {
         $this->_propDict["responseRequested"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the allowNewTimeProposals
-    * True if the meeting organizer allows invitees to propose a new time when responding, false otherwise. Optional. Default is true.
-    *
-    * @return bool The allowNewTimeProposals
-    */
-    public function getAllowNewTimeProposals()
-    {
-        if (array_key_exists("allowNewTimeProposals", $this->_propDict)) {
-            return $this->_propDict["allowNewTimeProposals"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the allowNewTimeProposals
-    * True if the meeting organizer allows invitees to propose a new time when responding, false otherwise. Optional. Default is true.
-    *
-    * @param bool $val The allowNewTimeProposals
-    *
-    * @return EventMessageRequest
-    */
-    public function setAllowNewTimeProposals($val)
-    {
-        $this->_propDict["allowNewTimeProposals"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the meetingRequestType
-    *
-    * @return MeetingRequestType The meetingRequestType
-    */
-    public function getMeetingRequestType()
-    {
-        if (array_key_exists("meetingRequestType", $this->_propDict)) {
-            if (is_a($this->_propDict["meetingRequestType"], "Microsoft\Graph\Model\MeetingRequestType")) {
-                return $this->_propDict["meetingRequestType"];
-            } else {
-                $this->_propDict["meetingRequestType"] = new MeetingRequestType($this->_propDict["meetingRequestType"]);
-                return $this->_propDict["meetingRequestType"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the meetingRequestType
-    *
-    * @param MeetingRequestType $val The meetingRequestType
-    *
-    * @return EventMessageRequest
-    */
-    public function setMeetingRequestType($val)
-    {
-        $this->_propDict["meetingRequestType"] = $val;
         return $this;
     }
     

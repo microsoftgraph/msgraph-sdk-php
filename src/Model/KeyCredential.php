@@ -117,6 +117,39 @@ class KeyCredential extends Entity
         $this->_propDict["endDateTime"] = $val;
          return $this;
     }
+
+    /**
+    * Gets the key
+    * Value for the key credential. Should be a base 64 encoded value.
+    *
+    * @return \GuzzleHttp\Psr7\Stream The key
+    */
+    public function getKey()
+    {
+        if (array_key_exists("key", $this->_propDict)) {
+            if (is_a($this->_propDict["key"], "\GuzzleHttp\Psr7\Stream")) {
+                return $this->_propDict["key"];
+            } else {
+                $this->_propDict["key"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["key"]);
+                return $this->_propDict["key"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the key
+    * Value for the key credential. Should be a base 64 encoded value.
+    *
+    * @param \GuzzleHttp\Psr7\Stream $val The value to assign to the key
+    *
+    * @return KeyCredential The KeyCredential
+    */
+    public function setKey($val)
+    {
+        $this->_propDict["key"] = $val;
+         return $this;
+    }
     /**
     * Gets the keyId
     * The unique identifier (GUID) for the key.
@@ -233,38 +266,5 @@ class KeyCredential extends Entity
     {
         $this->_propDict["usage"] = $val;
         return $this;
-    }
-
-    /**
-    * Gets the key
-    * Value for the key credential. Should be a base 64 encoded value.
-    *
-    * @return \GuzzleHttp\Psr7\Stream The key
-    */
-    public function getKey()
-    {
-        if (array_key_exists("key", $this->_propDict)) {
-            if (is_a($this->_propDict["key"], "\GuzzleHttp\Psr7\Stream")) {
-                return $this->_propDict["key"];
-            } else {
-                $this->_propDict["key"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["key"]);
-                return $this->_propDict["key"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the key
-    * Value for the key credential. Should be a base 64 encoded value.
-    *
-    * @param \GuzzleHttp\Psr7\Stream $val The value to assign to the key
-    *
-    * @return KeyCredential The KeyCredential
-    */
-    public function setKey($val)
-    {
-        $this->_propDict["key"] = $val;
-         return $this;
     }
 }

@@ -25,122 +25,6 @@ namespace Microsoft\Graph\Model;
 class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshootingEvent
 {
     /**
-    * Gets the managedDeviceIdentifier
-    * Device identifier created or collected by Intune.
-    *
-    * @return string The managedDeviceIdentifier
-    */
-    public function getManagedDeviceIdentifier()
-    {
-        if (array_key_exists("managedDeviceIdentifier", $this->_propDict)) {
-            return $this->_propDict["managedDeviceIdentifier"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the managedDeviceIdentifier
-    * Device identifier created or collected by Intune.
-    *
-    * @param string $val The managedDeviceIdentifier
-    *
-    * @return EnrollmentTroubleshootingEvent
-    */
-    public function setManagedDeviceIdentifier($val)
-    {
-        $this->_propDict["managedDeviceIdentifier"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the operatingSystem
-    * Operating System.
-    *
-    * @return string The operatingSystem
-    */
-    public function getOperatingSystem()
-    {
-        if (array_key_exists("operatingSystem", $this->_propDict)) {
-            return $this->_propDict["operatingSystem"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the operatingSystem
-    * Operating System.
-    *
-    * @param string $val The operatingSystem
-    *
-    * @return EnrollmentTroubleshootingEvent
-    */
-    public function setOperatingSystem($val)
-    {
-        $this->_propDict["operatingSystem"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the osVersion
-    * OS Version.
-    *
-    * @return string The osVersion
-    */
-    public function getOsVersion()
-    {
-        if (array_key_exists("osVersion", $this->_propDict)) {
-            return $this->_propDict["osVersion"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the osVersion
-    * OS Version.
-    *
-    * @param string $val The osVersion
-    *
-    * @return EnrollmentTroubleshootingEvent
-    */
-    public function setOsVersion($val)
-    {
-        $this->_propDict["osVersion"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the userId
-    * Identifier for the user that tried to enroll the device.
-    *
-    * @return string The userId
-    */
-    public function getUserId()
-    {
-        if (array_key_exists("userId", $this->_propDict)) {
-            return $this->_propDict["userId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the userId
-    * Identifier for the user that tried to enroll the device.
-    *
-    * @param string $val The userId
-    *
-    * @return EnrollmentTroubleshootingEvent
-    */
-    public function setUserId($val)
-    {
-        $this->_propDict["userId"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the deviceId
     * Azure AD device identifier.
     *
@@ -261,6 +145,122 @@ class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshootingEven
     public function setFailureReason($val)
     {
         $this->_propDict["failureReason"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the managedDeviceIdentifier
+    * Device identifier created or collected by Intune.
+    *
+    * @return string The managedDeviceIdentifier
+    */
+    public function getManagedDeviceIdentifier()
+    {
+        if (array_key_exists("managedDeviceIdentifier", $this->_propDict)) {
+            return $this->_propDict["managedDeviceIdentifier"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the managedDeviceIdentifier
+    * Device identifier created or collected by Intune.
+    *
+    * @param string $val The managedDeviceIdentifier
+    *
+    * @return EnrollmentTroubleshootingEvent
+    */
+    public function setManagedDeviceIdentifier($val)
+    {
+        $this->_propDict["managedDeviceIdentifier"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the operatingSystem
+    * Operating System.
+    *
+    * @return string The operatingSystem
+    */
+    public function getOperatingSystem()
+    {
+        if (array_key_exists("operatingSystem", $this->_propDict)) {
+            return $this->_propDict["operatingSystem"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the operatingSystem
+    * Operating System.
+    *
+    * @param string $val The operatingSystem
+    *
+    * @return EnrollmentTroubleshootingEvent
+    */
+    public function setOperatingSystem($val)
+    {
+        $this->_propDict["operatingSystem"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the osVersion
+    * OS Version.
+    *
+    * @return string The osVersion
+    */
+    public function getOsVersion()
+    {
+        if (array_key_exists("osVersion", $this->_propDict)) {
+            return $this->_propDict["osVersion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the osVersion
+    * OS Version.
+    *
+    * @param string $val The osVersion
+    *
+    * @return EnrollmentTroubleshootingEvent
+    */
+    public function setOsVersion($val)
+    {
+        $this->_propDict["osVersion"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userId
+    * Identifier for the user that tried to enroll the device.
+    *
+    * @return string The userId
+    */
+    public function getUserId()
+    {
+        if (array_key_exists("userId", $this->_propDict)) {
+            return $this->_propDict["userId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the userId
+    * Identifier for the user that tried to enroll the device.
+    *
+    * @param string $val The userId
+    *
+    * @return EnrollmentTroubleshootingEvent
+    */
+    public function setUserId($val)
+    {
+        $this->_propDict["userId"] = $val;
         return $this;
     }
     

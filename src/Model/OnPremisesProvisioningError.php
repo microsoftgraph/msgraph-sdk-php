@@ -24,34 +24,6 @@ namespace Microsoft\Graph\Model;
 class OnPremisesProvisioningError extends Entity
 {
     /**
-    * Gets the value
-    * Value of the property causing the error.
-    *
-    * @return string The value
-    */
-    public function getValue()
-    {
-        if (array_key_exists("value", $this->_propDict)) {
-            return $this->_propDict["value"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the value
-    * Value of the property causing the error.
-    *
-    * @param string $val The value of the value
-    *
-    * @return OnPremisesProvisioningError
-    */
-    public function setValue($val)
-    {
-        $this->_propDict["value"] = $val;
-        return $this;
-    }
-    /**
     * Gets the category
     * Category of the provisioning error. Note: Currently, there is only one possible value. Possible value: PropertyConflict - indicates a property value is not unique. Other objects contain the same value for the property.
     *
@@ -77,34 +49,6 @@ class OnPremisesProvisioningError extends Entity
     public function setCategory($val)
     {
         $this->_propDict["category"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the propertyCausingError
-    * Name of the directory property causing the error. Current possible values: UserPrincipalName or ProxyAddress
-    *
-    * @return string The propertyCausingError
-    */
-    public function getPropertyCausingError()
-    {
-        if (array_key_exists("propertyCausingError", $this->_propDict)) {
-            return $this->_propDict["propertyCausingError"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the propertyCausingError
-    * Name of the directory property causing the error. Current possible values: UserPrincipalName or ProxyAddress
-    *
-    * @param string $val The value of the propertyCausingError
-    *
-    * @return OnPremisesProvisioningError
-    */
-    public function setPropertyCausingError($val)
-    {
-        $this->_propDict["propertyCausingError"] = $val;
         return $this;
     }
 
@@ -139,5 +83,61 @@ class OnPremisesProvisioningError extends Entity
     {
         $this->_propDict["occurredDateTime"] = $val;
          return $this;
+    }
+    /**
+    * Gets the propertyCausingError
+    * Name of the directory property causing the error. Current possible values: UserPrincipalName or ProxyAddress
+    *
+    * @return string The propertyCausingError
+    */
+    public function getPropertyCausingError()
+    {
+        if (array_key_exists("propertyCausingError", $this->_propDict)) {
+            return $this->_propDict["propertyCausingError"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the propertyCausingError
+    * Name of the directory property causing the error. Current possible values: UserPrincipalName or ProxyAddress
+    *
+    * @param string $val The value of the propertyCausingError
+    *
+    * @return OnPremisesProvisioningError
+    */
+    public function setPropertyCausingError($val)
+    {
+        $this->_propDict["propertyCausingError"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the value
+    * Value of the property causing the error.
+    *
+    * @return string The value
+    */
+    public function getValue()
+    {
+        if (array_key_exists("value", $this->_propDict)) {
+            return $this->_propDict["value"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the value
+    * Value of the property causing the error.
+    *
+    * @param string $val The value of the value
+    *
+    * @return OnPremisesProvisioningError
+    */
+    public function setValue($val)
+    {
+        $this->_propDict["value"] = $val;
+        return $this;
     }
 }

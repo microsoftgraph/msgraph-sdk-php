@@ -25,93 +25,6 @@ namespace Microsoft\Graph\Model;
 class MicrosoftStoreForBusinessApp extends MobileApp
 {
     /**
-    * Gets the usedLicenseCount
-    * The number of Microsoft Store for Business licenses in use.
-    *
-    * @return int The usedLicenseCount
-    */
-    public function getUsedLicenseCount()
-    {
-        if (array_key_exists("usedLicenseCount", $this->_propDict)) {
-            return $this->_propDict["usedLicenseCount"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the usedLicenseCount
-    * The number of Microsoft Store for Business licenses in use.
-    *
-    * @param int $val The usedLicenseCount
-    *
-    * @return MicrosoftStoreForBusinessApp
-    */
-    public function setUsedLicenseCount($val)
-    {
-        $this->_propDict["usedLicenseCount"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the totalLicenseCount
-    * The total number of Microsoft Store for Business licenses.
-    *
-    * @return int The totalLicenseCount
-    */
-    public function getTotalLicenseCount()
-    {
-        if (array_key_exists("totalLicenseCount", $this->_propDict)) {
-            return $this->_propDict["totalLicenseCount"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the totalLicenseCount
-    * The total number of Microsoft Store for Business licenses.
-    *
-    * @param int $val The totalLicenseCount
-    *
-    * @return MicrosoftStoreForBusinessApp
-    */
-    public function setTotalLicenseCount($val)
-    {
-        $this->_propDict["totalLicenseCount"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the productKey
-    * The app product key
-    *
-    * @return string The productKey
-    */
-    public function getProductKey()
-    {
-        if (array_key_exists("productKey", $this->_propDict)) {
-            return $this->_propDict["productKey"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the productKey
-    * The app product key
-    *
-    * @param string $val The productKey
-    *
-    * @return MicrosoftStoreForBusinessApp
-    */
-    public function setProductKey($val)
-    {
-        $this->_propDict["productKey"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the licenseType
     * The app license type. Possible values are: offline, online.
     *
@@ -170,6 +83,93 @@ class MicrosoftStoreForBusinessApp extends MobileApp
     public function setPackageIdentityName($val)
     {
         $this->_propDict["packageIdentityName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the productKey
+    * The app product key
+    *
+    * @return string The productKey
+    */
+    public function getProductKey()
+    {
+        if (array_key_exists("productKey", $this->_propDict)) {
+            return $this->_propDict["productKey"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the productKey
+    * The app product key
+    *
+    * @param string $val The productKey
+    *
+    * @return MicrosoftStoreForBusinessApp
+    */
+    public function setProductKey($val)
+    {
+        $this->_propDict["productKey"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the totalLicenseCount
+    * The total number of Microsoft Store for Business licenses.
+    *
+    * @return int The totalLicenseCount
+    */
+    public function getTotalLicenseCount()
+    {
+        if (array_key_exists("totalLicenseCount", $this->_propDict)) {
+            return $this->_propDict["totalLicenseCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the totalLicenseCount
+    * The total number of Microsoft Store for Business licenses.
+    *
+    * @param int $val The totalLicenseCount
+    *
+    * @return MicrosoftStoreForBusinessApp
+    */
+    public function setTotalLicenseCount($val)
+    {
+        $this->_propDict["totalLicenseCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the usedLicenseCount
+    * The number of Microsoft Store for Business licenses in use.
+    *
+    * @return int The usedLicenseCount
+    */
+    public function getUsedLicenseCount()
+    {
+        if (array_key_exists("usedLicenseCount", $this->_propDict)) {
+            return $this->_propDict["usedLicenseCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the usedLicenseCount
+    * The number of Microsoft Store for Business licenses in use.
+    *
+    * @param int $val The usedLicenseCount
+    *
+    * @return MicrosoftStoreForBusinessApp
+    */
+    public function setUsedLicenseCount($val)
+    {
+        $this->_propDict["usedLicenseCount"] = intval($val);
         return $this;
     }
     

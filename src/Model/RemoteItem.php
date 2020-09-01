@@ -188,6 +188,34 @@ class RemoteItem extends Entity
         $this->_propDict["folder"] = $val;
          return $this;
     }
+    /**
+    * Gets the id
+    * Unique identifier for the remote item in its drive. Read-only.
+    *
+    * @return string The id
+    */
+    public function getId()
+    {
+        if (array_key_exists("id", $this->_propDict)) {
+            return $this->_propDict["id"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the id
+    * Unique identifier for the remote item in its drive. Read-only.
+    *
+    * @param string $val The value of the id
+    *
+    * @return RemoteItem
+    */
+    public function setId($val)
+    {
+        $this->_propDict["id"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the image
@@ -220,34 +248,6 @@ class RemoteItem extends Entity
     {
         $this->_propDict["image"] = $val;
          return $this;
-    }
-    /**
-    * Gets the id
-    * Unique identifier for the remote item in its drive. Read-only.
-    *
-    * @return string The id
-    */
-    public function getId()
-    {
-        if (array_key_exists("id", $this->_propDict)) {
-            return $this->_propDict["id"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the id
-    * Unique identifier for the remote item in its drive. Read-only.
-    *
-    * @param string $val The value of the id
-    *
-    * @return RemoteItem
-    */
-    public function setId($val)
-    {
-        $this->_propDict["id"] = $val;
-        return $this;
     }
 
     /**

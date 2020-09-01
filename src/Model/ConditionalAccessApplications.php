@@ -24,34 +24,6 @@ namespace Microsoft\Graph\Model;
 class ConditionalAccessApplications extends Entity
 {
     /**
-    * Gets the includeApplications
-    * The list of application IDs the policy applies to, unless explicitly excluded (in excludeApplications). Can also be set to All.
-    *
-    * @return string The includeApplications
-    */
-    public function getIncludeApplications()
-    {
-        if (array_key_exists("includeApplications", $this->_propDict)) {
-            return $this->_propDict["includeApplications"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the includeApplications
-    * The list of application IDs the policy applies to, unless explicitly excluded (in excludeApplications). Can also be set to All.
-    *
-    * @param string $val The value of the includeApplications
-    *
-    * @return ConditionalAccessApplications
-    */
-    public function setIncludeApplications($val)
-    {
-        $this->_propDict["includeApplications"] = $val;
-        return $this;
-    }
-    /**
     * Gets the excludeApplications
     * The list of application IDs explicitly excluded from the policy.
     *
@@ -77,6 +49,34 @@ class ConditionalAccessApplications extends Entity
     public function setExcludeApplications($val)
     {
         $this->_propDict["excludeApplications"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the includeApplications
+    * The list of application IDs the policy applies to, unless explicitly excluded (in excludeApplications). Can also be set to All.
+    *
+    * @return string The includeApplications
+    */
+    public function getIncludeApplications()
+    {
+        if (array_key_exists("includeApplications", $this->_propDict)) {
+            return $this->_propDict["includeApplications"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the includeApplications
+    * The list of application IDs the policy applies to, unless explicitly excluded (in excludeApplications). Can also be set to All.
+    *
+    * @param string $val The value of the includeApplications
+    *
+    * @return ConditionalAccessApplications
+    */
+    public function setIncludeApplications($val)
+    {
+        $this->_propDict["includeApplications"] = $val;
         return $this;
     }
     /**

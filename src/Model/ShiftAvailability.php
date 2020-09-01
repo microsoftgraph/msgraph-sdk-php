@@ -56,34 +56,6 @@ class ShiftAvailability extends Entity
         $this->_propDict["recurrence"] = $val;
          return $this;
     }
-    /**
-    * Gets the timeZone
-    * Specifies the time zone for the indicated time.
-    *
-    * @return string The timeZone
-    */
-    public function getTimeZone()
-    {
-        if (array_key_exists("timeZone", $this->_propDict)) {
-            return $this->_propDict["timeZone"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the timeZone
-    * Specifies the time zone for the indicated time.
-    *
-    * @param string $val The value of the timeZone
-    *
-    * @return ShiftAvailability
-    */
-    public function setTimeZone($val)
-    {
-        $this->_propDict["timeZone"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the timeSlots
@@ -116,5 +88,33 @@ class ShiftAvailability extends Entity
     {
         $this->_propDict["timeSlots"] = $val;
          return $this;
+    }
+    /**
+    * Gets the timeZone
+    * Specifies the time zone for the indicated time.
+    *
+    * @return string The timeZone
+    */
+    public function getTimeZone()
+    {
+        if (array_key_exists("timeZone", $this->_propDict)) {
+            return $this->_propDict["timeZone"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the timeZone
+    * Specifies the time zone for the indicated time.
+    *
+    * @param string $val The value of the timeZone
+    *
+    * @return ShiftAvailability
+    */
+    public function setTimeZone($val)
+    {
+        $this->_propDict["timeZone"] = $val;
+        return $this;
     }
 }

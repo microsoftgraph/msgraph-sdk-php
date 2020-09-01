@@ -25,68 +25,35 @@ namespace Microsoft\Graph\CallRecords\Model;
 class Segment extends \Microsoft\Graph\Model\Entity
 {
     /**
-    * Gets the startDateTime
-    * UTC time when the segment started. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+    * Gets the callee
+    * Endpoint that answered this segment.
     *
-    * @return \DateTime The startDateTime
+    * @return Endpoint The callee
     */
-    public function getStartDateTime()
+    public function getCallee()
     {
-        if (array_key_exists("startDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
-                return $this->_propDict["startDateTime"];
+        if (array_key_exists("callee", $this->_propDict)) {
+            if (is_a($this->_propDict["callee"], "Microsoft\Graph\CallRecords\Model\Endpoint")) {
+                return $this->_propDict["callee"];
             } else {
-                $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);
-                return $this->_propDict["startDateTime"];
+                $this->_propDict["callee"] = new Endpoint($this->_propDict["callee"]);
+                return $this->_propDict["callee"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the startDateTime
-    * UTC time when the segment started. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+    * Sets the callee
+    * Endpoint that answered this segment.
     *
-    * @param \DateTime $val The startDateTime
-    *
-    * @return Segment
-    */
-    public function setStartDateTime($val)
-    {
-        $this->_propDict["startDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the endDateTime
-    * UTC time when the segment ended. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
-    *
-    * @return \DateTime The endDateTime
-    */
-    public function getEndDateTime()
-    {
-        if (array_key_exists("endDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["endDateTime"], "\DateTime")) {
-                return $this->_propDict["endDateTime"];
-            } else {
-                $this->_propDict["endDateTime"] = new \DateTime($this->_propDict["endDateTime"]);
-                return $this->_propDict["endDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the endDateTime
-    * UTC time when the segment ended. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
-    *
-    * @param \DateTime $val The endDateTime
+    * @param Endpoint $val The callee
     *
     * @return Segment
     */
-    public function setEndDateTime($val)
+    public function setCallee($val)
     {
-        $this->_propDict["endDateTime"] = $val;
+        $this->_propDict["callee"] = $val;
         return $this;
     }
     
@@ -124,35 +91,35 @@ class Segment extends \Microsoft\Graph\Model\Entity
     }
     
     /**
-    * Gets the callee
-    * Endpoint that answered this segment.
+    * Gets the endDateTime
+    * UTC time when the segment ended. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
-    * @return Endpoint The callee
+    * @return \DateTime The endDateTime
     */
-    public function getCallee()
+    public function getEndDateTime()
     {
-        if (array_key_exists("callee", $this->_propDict)) {
-            if (is_a($this->_propDict["callee"], "Microsoft\Graph\CallRecords\Model\Endpoint")) {
-                return $this->_propDict["callee"];
+        if (array_key_exists("endDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["endDateTime"], "\DateTime")) {
+                return $this->_propDict["endDateTime"];
             } else {
-                $this->_propDict["callee"] = new Endpoint($this->_propDict["callee"]);
-                return $this->_propDict["callee"];
+                $this->_propDict["endDateTime"] = new \DateTime($this->_propDict["endDateTime"]);
+                return $this->_propDict["endDateTime"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the callee
-    * Endpoint that answered this segment.
+    * Sets the endDateTime
+    * UTC time when the segment ended. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
-    * @param Endpoint $val The callee
+    * @param \DateTime $val The endDateTime
     *
     * @return Segment
     */
-    public function setCallee($val)
+    public function setEndDateTime($val)
     {
-        $this->_propDict["callee"] = $val;
+        $this->_propDict["endDateTime"] = $val;
         return $this;
     }
     
@@ -216,6 +183,39 @@ class Segment extends \Microsoft\Graph\Model\Entity
     public function setMedia($val)
     {
 		$this->_propDict["media"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the startDateTime
+    * UTC time when the segment started. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+    *
+    * @return \DateTime The startDateTime
+    */
+    public function getStartDateTime()
+    {
+        if (array_key_exists("startDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
+                return $this->_propDict["startDateTime"];
+            } else {
+                $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);
+                return $this->_propDict["startDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the startDateTime
+    * UTC time when the segment started. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+    *
+    * @param \DateTime $val The startDateTime
+    *
+    * @return Segment
+    */
+    public function setStartDateTime($val)
+    {
+        $this->_propDict["startDateTime"] = $val;
         return $this;
     }
     

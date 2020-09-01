@@ -25,60 +25,6 @@ namespace Microsoft\Graph\Model;
 class IdentityProvider extends Entity
 {
     /**
-    * Gets the type
-    *
-    * @return string The type
-    */
-    public function getType()
-    {
-        if (array_key_exists("type", $this->_propDict)) {
-            return $this->_propDict["type"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the type
-    *
-    * @param string $val The type
-    *
-    * @return IdentityProvider
-    */
-    public function setType($val)
-    {
-        $this->_propDict["type"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the name
-    *
-    * @return string The name
-    */
-    public function getName()
-    {
-        if (array_key_exists("name", $this->_propDict)) {
-            return $this->_propDict["name"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the name
-    *
-    * @param string $val The name
-    *
-    * @return IdentityProvider
-    */
-    public function setName($val)
-    {
-        $this->_propDict["name"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the clientId
     *
     * @return string The clientId
@@ -129,6 +75,60 @@ class IdentityProvider extends Entity
     public function setClientSecret($val)
     {
         $this->_propDict["clientSecret"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the name
+    *
+    * @return string The name
+    */
+    public function getName()
+    {
+        if (array_key_exists("name", $this->_propDict)) {
+            return $this->_propDict["name"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the name
+    *
+    * @param string $val The name
+    *
+    * @return IdentityProvider
+    */
+    public function setName($val)
+    {
+        $this->_propDict["name"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the type
+    *
+    * @return string The type
+    */
+    public function getType()
+    {
+        if (array_key_exists("type", $this->_propDict)) {
+            return $this->_propDict["type"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the type
+    *
+    * @param string $val The type
+    *
+    * @return IdentityProvider
+    */
+    public function setType($val)
+    {
+        $this->_propDict["type"] = $val;
         return $this;
     }
     

@@ -25,39 +25,6 @@ namespace Microsoft\Graph\Model;
 class TimeOffRequest extends ScheduleChangeRequest
 {
     /**
-    * Gets the startDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
-    *
-    * @return \DateTime The startDateTime
-    */
-    public function getStartDateTime()
-    {
-        if (array_key_exists("startDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
-                return $this->_propDict["startDateTime"];
-            } else {
-                $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);
-                return $this->_propDict["startDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the startDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
-    *
-    * @param \DateTime $val The startDateTime
-    *
-    * @return TimeOffRequest
-    */
-    public function setStartDateTime($val)
-    {
-        $this->_propDict["startDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the endDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
@@ -87,6 +54,39 @@ class TimeOffRequest extends ScheduleChangeRequest
     public function setEndDateTime($val)
     {
         $this->_propDict["endDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the startDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+    *
+    * @return \DateTime The startDateTime
+    */
+    public function getStartDateTime()
+    {
+        if (array_key_exists("startDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
+                return $this->_propDict["startDateTime"];
+            } else {
+                $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);
+                return $this->_propDict["startDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the startDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+    *
+    * @param \DateTime $val The startDateTime
+    *
+    * @return TimeOffRequest
+    */
+    public function setStartDateTime($val)
+    {
+        $this->_propDict["startDateTime"] = $val;
         return $this;
     }
     

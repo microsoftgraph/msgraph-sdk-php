@@ -25,31 +25,35 @@ namespace Microsoft\Graph\Model;
 class MobileApp extends Entity
 {
     /**
-    * Gets the displayName
-    * The admin provided or imported title of the app.
+    * Gets the createdDateTime
+    * The date and time the app was created.
     *
-    * @return string The displayName
+    * @return \DateTime The createdDateTime
     */
-    public function getDisplayName()
+    public function getCreatedDateTime()
     {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
+        if (array_key_exists("createdDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+                return $this->_propDict["createdDateTime"];
+            } else {
+                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
+                return $this->_propDict["createdDateTime"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the displayName
-    * The admin provided or imported title of the app.
+    * Sets the createdDateTime
+    * The date and time the app was created.
     *
-    * @param string $val The displayName
+    * @param \DateTime $val The createdDateTime
     *
     * @return MobileApp
     */
-    public function setDisplayName($val)
+    public function setCreatedDateTime($val)
     {
-        $this->_propDict["displayName"] = $val;
+        $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
     
@@ -83,31 +87,118 @@ class MobileApp extends Entity
     }
     
     /**
-    * Gets the publisher
-    * The publisher of the app.
+    * Gets the developer
+    * The developer of the app.
     *
-    * @return string The publisher
+    * @return string The developer
     */
-    public function getPublisher()
+    public function getDeveloper()
     {
-        if (array_key_exists("publisher", $this->_propDict)) {
-            return $this->_propDict["publisher"];
+        if (array_key_exists("developer", $this->_propDict)) {
+            return $this->_propDict["developer"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the publisher
-    * The publisher of the app.
+    * Sets the developer
+    * The developer of the app.
     *
-    * @param string $val The publisher
+    * @param string $val The developer
     *
     * @return MobileApp
     */
-    public function setPublisher($val)
+    public function setDeveloper($val)
     {
-        $this->_propDict["publisher"] = $val;
+        $this->_propDict["developer"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the displayName
+    * The admin provided or imported title of the app.
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the displayName
+    * The admin provided or imported title of the app.
+    *
+    * @param string $val The displayName
+    *
+    * @return MobileApp
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the informationUrl
+    * The more information Url.
+    *
+    * @return string The informationUrl
+    */
+    public function getInformationUrl()
+    {
+        if (array_key_exists("informationUrl", $this->_propDict)) {
+            return $this->_propDict["informationUrl"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the informationUrl
+    * The more information Url.
+    *
+    * @param string $val The informationUrl
+    *
+    * @return MobileApp
+    */
+    public function setInformationUrl($val)
+    {
+        $this->_propDict["informationUrl"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the isFeatured
+    * The value indicating whether the app is marked as featured by the admin.
+    *
+    * @return bool The isFeatured
+    */
+    public function getIsFeatured()
+    {
+        if (array_key_exists("isFeatured", $this->_propDict)) {
+            return $this->_propDict["isFeatured"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isFeatured
+    * The value indicating whether the app is marked as featured by the admin.
+    *
+    * @param bool $val The isFeatured
+    *
+    * @return MobileApp
+    */
+    public function setIsFeatured($val)
+    {
+        $this->_propDict["isFeatured"] = boolval($val);
         return $this;
     }
     
@@ -145,39 +236,6 @@ class MobileApp extends Entity
     }
     
     /**
-    * Gets the createdDateTime
-    * The date and time the app was created.
-    *
-    * @return \DateTime The createdDateTime
-    */
-    public function getCreatedDateTime()
-    {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
-                return $this->_propDict["createdDateTime"];
-            } else {
-                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
-                return $this->_propDict["createdDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the createdDateTime
-    * The date and time the app was created.
-    *
-    * @param \DateTime $val The createdDateTime
-    *
-    * @return MobileApp
-    */
-    public function setCreatedDateTime($val)
-    {
-        $this->_propDict["createdDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the lastModifiedDateTime
     * The date and time the app was last modified.
     *
@@ -211,89 +269,31 @@ class MobileApp extends Entity
     }
     
     /**
-    * Gets the isFeatured
-    * The value indicating whether the app is marked as featured by the admin.
+    * Gets the notes
+    * Notes for the app.
     *
-    * @return bool The isFeatured
+    * @return string The notes
     */
-    public function getIsFeatured()
+    public function getNotes()
     {
-        if (array_key_exists("isFeatured", $this->_propDict)) {
-            return $this->_propDict["isFeatured"];
+        if (array_key_exists("notes", $this->_propDict)) {
+            return $this->_propDict["notes"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the isFeatured
-    * The value indicating whether the app is marked as featured by the admin.
+    * Sets the notes
+    * Notes for the app.
     *
-    * @param bool $val The isFeatured
-    *
-    * @return MobileApp
-    */
-    public function setIsFeatured($val)
-    {
-        $this->_propDict["isFeatured"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the privacyInformationUrl
-    * The privacy statement Url.
-    *
-    * @return string The privacyInformationUrl
-    */
-    public function getPrivacyInformationUrl()
-    {
-        if (array_key_exists("privacyInformationUrl", $this->_propDict)) {
-            return $this->_propDict["privacyInformationUrl"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the privacyInformationUrl
-    * The privacy statement Url.
-    *
-    * @param string $val The privacyInformationUrl
+    * @param string $val The notes
     *
     * @return MobileApp
     */
-    public function setPrivacyInformationUrl($val)
+    public function setNotes($val)
     {
-        $this->_propDict["privacyInformationUrl"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the informationUrl
-    * The more information Url.
-    *
-    * @return string The informationUrl
-    */
-    public function getInformationUrl()
-    {
-        if (array_key_exists("informationUrl", $this->_propDict)) {
-            return $this->_propDict["informationUrl"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the informationUrl
-    * The more information Url.
-    *
-    * @param string $val The informationUrl
-    *
-    * @return MobileApp
-    */
-    public function setInformationUrl($val)
-    {
-        $this->_propDict["informationUrl"] = $val;
+        $this->_propDict["notes"] = $val;
         return $this;
     }
     
@@ -327,60 +327,60 @@ class MobileApp extends Entity
     }
     
     /**
-    * Gets the developer
-    * The developer of the app.
+    * Gets the privacyInformationUrl
+    * The privacy statement Url.
     *
-    * @return string The developer
+    * @return string The privacyInformationUrl
     */
-    public function getDeveloper()
+    public function getPrivacyInformationUrl()
     {
-        if (array_key_exists("developer", $this->_propDict)) {
-            return $this->_propDict["developer"];
+        if (array_key_exists("privacyInformationUrl", $this->_propDict)) {
+            return $this->_propDict["privacyInformationUrl"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the developer
-    * The developer of the app.
+    * Sets the privacyInformationUrl
+    * The privacy statement Url.
     *
-    * @param string $val The developer
+    * @param string $val The privacyInformationUrl
     *
     * @return MobileApp
     */
-    public function setDeveloper($val)
+    public function setPrivacyInformationUrl($val)
     {
-        $this->_propDict["developer"] = $val;
+        $this->_propDict["privacyInformationUrl"] = $val;
         return $this;
     }
     
     /**
-    * Gets the notes
-    * Notes for the app.
+    * Gets the publisher
+    * The publisher of the app.
     *
-    * @return string The notes
+    * @return string The publisher
     */
-    public function getNotes()
+    public function getPublisher()
     {
-        if (array_key_exists("notes", $this->_propDict)) {
-            return $this->_propDict["notes"];
+        if (array_key_exists("publisher", $this->_propDict)) {
+            return $this->_propDict["publisher"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the notes
-    * Notes for the app.
+    * Sets the publisher
+    * The publisher of the app.
     *
-    * @param string $val The notes
+    * @param string $val The publisher
     *
     * @return MobileApp
     */
-    public function setNotes($val)
+    public function setPublisher($val)
     {
-        $this->_propDict["notes"] = $val;
+        $this->_propDict["publisher"] = $val;
         return $this;
     }
     
@@ -419,36 +419,6 @@ class MobileApp extends Entity
     
 
      /** 
-     * Gets the categories
-    * The list of categories for this app.
-     *
-     * @return array The categories
-     */
-    public function getCategories()
-    {
-        if (array_key_exists("categories", $this->_propDict)) {
-           return $this->_propDict["categories"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the categories
-    * The list of categories for this app.
-    *
-    * @param MobileAppCategory $val The categories
-    *
-    * @return MobileApp
-    */
-    public function setCategories($val)
-    {
-		$this->_propDict["categories"] = $val;
-        return $this;
-    }
-    
-
-     /** 
      * Gets the assignments
     * The list of group assignments for this mobile app.
      *
@@ -474,6 +444,36 @@ class MobileApp extends Entity
     public function setAssignments($val)
     {
 		$this->_propDict["assignments"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the categories
+    * The list of categories for this app.
+     *
+     * @return array The categories
+     */
+    public function getCategories()
+    {
+        if (array_key_exists("categories", $this->_propDict)) {
+           return $this->_propDict["categories"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the categories
+    * The list of categories for this app.
+    *
+    * @param MobileAppCategory $val The categories
+    *
+    * @return MobileApp
+    */
+    public function setCategories($val)
+    {
+		$this->_propDict["categories"] = $val;
         return $this;
     }
     

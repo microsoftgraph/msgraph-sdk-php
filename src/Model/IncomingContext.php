@@ -24,34 +24,6 @@ namespace Microsoft\Graph\Model;
 class IncomingContext extends Entity
 {
     /**
-    * Gets the sourceParticipantId
-    * The ID of the participant that triggered the incoming call. Read-only.
-    *
-    * @return string The sourceParticipantId
-    */
-    public function getSourceParticipantId()
-    {
-        if (array_key_exists("sourceParticipantId", $this->_propDict)) {
-            return $this->_propDict["sourceParticipantId"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the sourceParticipantId
-    * The ID of the participant that triggered the incoming call. Read-only.
-    *
-    * @param string $val The value of the sourceParticipantId
-    *
-    * @return IncomingContext
-    */
-    public function setSourceParticipantId($val)
-    {
-        $this->_propDict["sourceParticipantId"] = $val;
-        return $this;
-    }
-    /**
     * Gets the observedParticipantId
     * The ID of the participant that is under observation. Read-only.
     *
@@ -111,6 +83,34 @@ class IncomingContext extends Entity
     {
         $this->_propDict["onBehalfOf"] = $val;
          return $this;
+    }
+    /**
+    * Gets the sourceParticipantId
+    * The ID of the participant that triggered the incoming call. Read-only.
+    *
+    * @return string The sourceParticipantId
+    */
+    public function getSourceParticipantId()
+    {
+        if (array_key_exists("sourceParticipantId", $this->_propDict)) {
+            return $this->_propDict["sourceParticipantId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the sourceParticipantId
+    * The ID of the participant that triggered the incoming call. Read-only.
+    *
+    * @param string $val The value of the sourceParticipantId
+    *
+    * @return IncomingContext
+    */
+    public function setSourceParticipantId($val)
+    {
+        $this->_propDict["sourceParticipantId"] = $val;
+        return $this;
     }
 
     /**

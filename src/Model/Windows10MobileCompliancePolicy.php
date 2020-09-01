@@ -25,31 +25,147 @@ namespace Microsoft\Graph\Model;
 class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
 {
     /**
-    * Gets the passwordRequired
-    * Require a password to unlock Windows Phone device.
+    * Gets the bitLockerEnabled
+    * Require devices to be reported healthy by Windows Device Health Attestation - bit locker is enabled
     *
-    * @return bool The passwordRequired
+    * @return bool The bitLockerEnabled
     */
-    public function getPasswordRequired()
+    public function getBitLockerEnabled()
     {
-        if (array_key_exists("passwordRequired", $this->_propDict)) {
-            return $this->_propDict["passwordRequired"];
+        if (array_key_exists("bitLockerEnabled", $this->_propDict)) {
+            return $this->_propDict["bitLockerEnabled"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the passwordRequired
-    * Require a password to unlock Windows Phone device.
+    * Sets the bitLockerEnabled
+    * Require devices to be reported healthy by Windows Device Health Attestation - bit locker is enabled
     *
-    * @param bool $val The passwordRequired
+    * @param bool $val The bitLockerEnabled
     *
     * @return Windows10MobileCompliancePolicy
     */
-    public function setPasswordRequired($val)
+    public function setBitLockerEnabled($val)
     {
-        $this->_propDict["passwordRequired"] = boolval($val);
+        $this->_propDict["bitLockerEnabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the codeIntegrityEnabled
+    * Require devices to be reported as healthy by Windows Device Health Attestation.
+    *
+    * @return bool The codeIntegrityEnabled
+    */
+    public function getCodeIntegrityEnabled()
+    {
+        if (array_key_exists("codeIntegrityEnabled", $this->_propDict)) {
+            return $this->_propDict["codeIntegrityEnabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the codeIntegrityEnabled
+    * Require devices to be reported as healthy by Windows Device Health Attestation.
+    *
+    * @param bool $val The codeIntegrityEnabled
+    *
+    * @return Windows10MobileCompliancePolicy
+    */
+    public function setCodeIntegrityEnabled($val)
+    {
+        $this->_propDict["codeIntegrityEnabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the earlyLaunchAntiMalwareDriverEnabled
+    * Require devices to be reported as healthy by Windows Device Health Attestation - early launch antimalware driver is enabled.
+    *
+    * @return bool The earlyLaunchAntiMalwareDriverEnabled
+    */
+    public function getEarlyLaunchAntiMalwareDriverEnabled()
+    {
+        if (array_key_exists("earlyLaunchAntiMalwareDriverEnabled", $this->_propDict)) {
+            return $this->_propDict["earlyLaunchAntiMalwareDriverEnabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the earlyLaunchAntiMalwareDriverEnabled
+    * Require devices to be reported as healthy by Windows Device Health Attestation - early launch antimalware driver is enabled.
+    *
+    * @param bool $val The earlyLaunchAntiMalwareDriverEnabled
+    *
+    * @return Windows10MobileCompliancePolicy
+    */
+    public function setEarlyLaunchAntiMalwareDriverEnabled($val)
+    {
+        $this->_propDict["earlyLaunchAntiMalwareDriverEnabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the osMaximumVersion
+    * Maximum Windows Phone version.
+    *
+    * @return string The osMaximumVersion
+    */
+    public function getOsMaximumVersion()
+    {
+        if (array_key_exists("osMaximumVersion", $this->_propDict)) {
+            return $this->_propDict["osMaximumVersion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the osMaximumVersion
+    * Maximum Windows Phone version.
+    *
+    * @param string $val The osMaximumVersion
+    *
+    * @return Windows10MobileCompliancePolicy
+    */
+    public function setOsMaximumVersion($val)
+    {
+        $this->_propDict["osMaximumVersion"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the osMinimumVersion
+    * Minimum Windows Phone version.
+    *
+    * @return string The osMinimumVersion
+    */
+    public function getOsMinimumVersion()
+    {
+        if (array_key_exists("osMinimumVersion", $this->_propDict)) {
+            return $this->_propDict["osMinimumVersion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the osMinimumVersion
+    * Minimum Windows Phone version.
+    *
+    * @param string $val The osMinimumVersion
+    *
+    * @return Windows10MobileCompliancePolicy
+    */
+    public function setOsMinimumVersion($val)
+    {
+        $this->_propDict["osMinimumVersion"] = $val;
         return $this;
     }
     
@@ -83,31 +199,31 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     }
     
     /**
-    * Gets the passwordMinimumLength
-    * Minimum password length. Valid values 4 to 16
+    * Gets the passwordExpirationDays
+    * Number of days before password expiration. Valid values 1 to 255
     *
-    * @return int The passwordMinimumLength
+    * @return int The passwordExpirationDays
     */
-    public function getPasswordMinimumLength()
+    public function getPasswordExpirationDays()
     {
-        if (array_key_exists("passwordMinimumLength", $this->_propDict)) {
-            return $this->_propDict["passwordMinimumLength"];
+        if (array_key_exists("passwordExpirationDays", $this->_propDict)) {
+            return $this->_propDict["passwordExpirationDays"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the passwordMinimumLength
-    * Minimum password length. Valid values 4 to 16
+    * Sets the passwordExpirationDays
+    * Number of days before password expiration. Valid values 1 to 255
     *
-    * @param int $val The passwordMinimumLength
+    * @param int $val The passwordExpirationDays
     *
     * @return Windows10MobileCompliancePolicy
     */
-    public function setPasswordMinimumLength($val)
+    public function setPasswordExpirationDays($val)
     {
-        $this->_propDict["passwordMinimumLength"] = intval($val);
+        $this->_propDict["passwordExpirationDays"] = intval($val);
         return $this;
     }
     
@@ -137,6 +253,122 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     public function setPasswordMinimumCharacterSetCount($val)
     {
         $this->_propDict["passwordMinimumCharacterSetCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the passwordMinimumLength
+    * Minimum password length. Valid values 4 to 16
+    *
+    * @return int The passwordMinimumLength
+    */
+    public function getPasswordMinimumLength()
+    {
+        if (array_key_exists("passwordMinimumLength", $this->_propDict)) {
+            return $this->_propDict["passwordMinimumLength"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the passwordMinimumLength
+    * Minimum password length. Valid values 4 to 16
+    *
+    * @param int $val The passwordMinimumLength
+    *
+    * @return Windows10MobileCompliancePolicy
+    */
+    public function setPasswordMinimumLength($val)
+    {
+        $this->_propDict["passwordMinimumLength"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the passwordMinutesOfInactivityBeforeLock
+    * Minutes of inactivity before a password is required.
+    *
+    * @return int The passwordMinutesOfInactivityBeforeLock
+    */
+    public function getPasswordMinutesOfInactivityBeforeLock()
+    {
+        if (array_key_exists("passwordMinutesOfInactivityBeforeLock", $this->_propDict)) {
+            return $this->_propDict["passwordMinutesOfInactivityBeforeLock"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the passwordMinutesOfInactivityBeforeLock
+    * Minutes of inactivity before a password is required.
+    *
+    * @param int $val The passwordMinutesOfInactivityBeforeLock
+    *
+    * @return Windows10MobileCompliancePolicy
+    */
+    public function setPasswordMinutesOfInactivityBeforeLock($val)
+    {
+        $this->_propDict["passwordMinutesOfInactivityBeforeLock"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the passwordPreviousPasswordBlockCount
+    * The number of previous passwords to prevent re-use of.
+    *
+    * @return int The passwordPreviousPasswordBlockCount
+    */
+    public function getPasswordPreviousPasswordBlockCount()
+    {
+        if (array_key_exists("passwordPreviousPasswordBlockCount", $this->_propDict)) {
+            return $this->_propDict["passwordPreviousPasswordBlockCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the passwordPreviousPasswordBlockCount
+    * The number of previous passwords to prevent re-use of.
+    *
+    * @param int $val The passwordPreviousPasswordBlockCount
+    *
+    * @return Windows10MobileCompliancePolicy
+    */
+    public function setPasswordPreviousPasswordBlockCount($val)
+    {
+        $this->_propDict["passwordPreviousPasswordBlockCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the passwordRequired
+    * Require a password to unlock Windows Phone device.
+    *
+    * @return bool The passwordRequired
+    */
+    public function getPasswordRequired()
+    {
+        if (array_key_exists("passwordRequired", $this->_propDict)) {
+            return $this->_propDict["passwordRequired"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the passwordRequired
+    * Require a password to unlock Windows Phone device.
+    *
+    * @param bool $val The passwordRequired
+    *
+    * @return Windows10MobileCompliancePolicy
+    */
+    public function setPasswordRequired($val)
+    {
+        $this->_propDict["passwordRequired"] = boolval($val);
         return $this;
     }
     
@@ -174,93 +406,6 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     }
     
     /**
-    * Gets the passwordPreviousPasswordBlockCount
-    * The number of previous passwords to prevent re-use of.
-    *
-    * @return int The passwordPreviousPasswordBlockCount
-    */
-    public function getPasswordPreviousPasswordBlockCount()
-    {
-        if (array_key_exists("passwordPreviousPasswordBlockCount", $this->_propDict)) {
-            return $this->_propDict["passwordPreviousPasswordBlockCount"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the passwordPreviousPasswordBlockCount
-    * The number of previous passwords to prevent re-use of.
-    *
-    * @param int $val The passwordPreviousPasswordBlockCount
-    *
-    * @return Windows10MobileCompliancePolicy
-    */
-    public function setPasswordPreviousPasswordBlockCount($val)
-    {
-        $this->_propDict["passwordPreviousPasswordBlockCount"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the passwordExpirationDays
-    * Number of days before password expiration. Valid values 1 to 255
-    *
-    * @return int The passwordExpirationDays
-    */
-    public function getPasswordExpirationDays()
-    {
-        if (array_key_exists("passwordExpirationDays", $this->_propDict)) {
-            return $this->_propDict["passwordExpirationDays"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the passwordExpirationDays
-    * Number of days before password expiration. Valid values 1 to 255
-    *
-    * @param int $val The passwordExpirationDays
-    *
-    * @return Windows10MobileCompliancePolicy
-    */
-    public function setPasswordExpirationDays($val)
-    {
-        $this->_propDict["passwordExpirationDays"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the passwordMinutesOfInactivityBeforeLock
-    * Minutes of inactivity before a password is required.
-    *
-    * @return int The passwordMinutesOfInactivityBeforeLock
-    */
-    public function getPasswordMinutesOfInactivityBeforeLock()
-    {
-        if (array_key_exists("passwordMinutesOfInactivityBeforeLock", $this->_propDict)) {
-            return $this->_propDict["passwordMinutesOfInactivityBeforeLock"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the passwordMinutesOfInactivityBeforeLock
-    * Minutes of inactivity before a password is required.
-    *
-    * @param int $val The passwordMinutesOfInactivityBeforeLock
-    *
-    * @return Windows10MobileCompliancePolicy
-    */
-    public function setPasswordMinutesOfInactivityBeforeLock($val)
-    {
-        $this->_propDict["passwordMinutesOfInactivityBeforeLock"] = intval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the passwordRequireToUnlockFromIdle
     * Require a password to unlock an idle device.
     *
@@ -290,122 +435,6 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     }
     
     /**
-    * Gets the osMinimumVersion
-    * Minimum Windows Phone version.
-    *
-    * @return string The osMinimumVersion
-    */
-    public function getOsMinimumVersion()
-    {
-        if (array_key_exists("osMinimumVersion", $this->_propDict)) {
-            return $this->_propDict["osMinimumVersion"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the osMinimumVersion
-    * Minimum Windows Phone version.
-    *
-    * @param string $val The osMinimumVersion
-    *
-    * @return Windows10MobileCompliancePolicy
-    */
-    public function setOsMinimumVersion($val)
-    {
-        $this->_propDict["osMinimumVersion"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the osMaximumVersion
-    * Maximum Windows Phone version.
-    *
-    * @return string The osMaximumVersion
-    */
-    public function getOsMaximumVersion()
-    {
-        if (array_key_exists("osMaximumVersion", $this->_propDict)) {
-            return $this->_propDict["osMaximumVersion"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the osMaximumVersion
-    * Maximum Windows Phone version.
-    *
-    * @param string $val The osMaximumVersion
-    *
-    * @return Windows10MobileCompliancePolicy
-    */
-    public function setOsMaximumVersion($val)
-    {
-        $this->_propDict["osMaximumVersion"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the earlyLaunchAntiMalwareDriverEnabled
-    * Require devices to be reported as healthy by Windows Device Health Attestation - early launch antimalware driver is enabled.
-    *
-    * @return bool The earlyLaunchAntiMalwareDriverEnabled
-    */
-    public function getEarlyLaunchAntiMalwareDriverEnabled()
-    {
-        if (array_key_exists("earlyLaunchAntiMalwareDriverEnabled", $this->_propDict)) {
-            return $this->_propDict["earlyLaunchAntiMalwareDriverEnabled"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the earlyLaunchAntiMalwareDriverEnabled
-    * Require devices to be reported as healthy by Windows Device Health Attestation - early launch antimalware driver is enabled.
-    *
-    * @param bool $val The earlyLaunchAntiMalwareDriverEnabled
-    *
-    * @return Windows10MobileCompliancePolicy
-    */
-    public function setEarlyLaunchAntiMalwareDriverEnabled($val)
-    {
-        $this->_propDict["earlyLaunchAntiMalwareDriverEnabled"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the bitLockerEnabled
-    * Require devices to be reported healthy by Windows Device Health Attestation - bit locker is enabled
-    *
-    * @return bool The bitLockerEnabled
-    */
-    public function getBitLockerEnabled()
-    {
-        if (array_key_exists("bitLockerEnabled", $this->_propDict)) {
-            return $this->_propDict["bitLockerEnabled"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the bitLockerEnabled
-    * Require devices to be reported healthy by Windows Device Health Attestation - bit locker is enabled
-    *
-    * @param bool $val The bitLockerEnabled
-    *
-    * @return Windows10MobileCompliancePolicy
-    */
-    public function setBitLockerEnabled($val)
-    {
-        $this->_propDict["bitLockerEnabled"] = boolval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the secureBootEnabled
     * Require devices to be reported as healthy by Windows Device Health Attestation - secure boot is enabled.
     *
@@ -431,35 +460,6 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     public function setSecureBootEnabled($val)
     {
         $this->_propDict["secureBootEnabled"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the codeIntegrityEnabled
-    * Require devices to be reported as healthy by Windows Device Health Attestation.
-    *
-    * @return bool The codeIntegrityEnabled
-    */
-    public function getCodeIntegrityEnabled()
-    {
-        if (array_key_exists("codeIntegrityEnabled", $this->_propDict)) {
-            return $this->_propDict["codeIntegrityEnabled"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the codeIntegrityEnabled
-    * Require devices to be reported as healthy by Windows Device Health Attestation.
-    *
-    * @param bool $val The codeIntegrityEnabled
-    *
-    * @return Windows10MobileCompliancePolicy
-    */
-    public function setCodeIntegrityEnabled($val)
-    {
-        $this->_propDict["codeIntegrityEnabled"] = boolval($val);
         return $this;
     }
     

@@ -24,34 +24,6 @@ namespace Microsoft\Graph\Model;
 */
 class ItemAnalytics extends Entity
 {
-
-     /** 
-     * Gets the itemActivityStats
-     *
-     * @return array The itemActivityStats
-     */
-    public function getItemActivityStats()
-    {
-        if (array_key_exists("itemActivityStats", $this->_propDict)) {
-           return $this->_propDict["itemActivityStats"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the itemActivityStats
-    *
-    * @param ItemActivityStat $val The itemActivityStats
-    *
-    * @return ItemAnalytics
-    */
-    public function setItemActivityStats($val)
-    {
-		$this->_propDict["itemActivityStats"] = $val;
-        return $this;
-    }
-    
     /**
     * Gets the allTime
     *
@@ -80,6 +52,34 @@ class ItemAnalytics extends Entity
     public function setAllTime($val)
     {
         $this->_propDict["allTime"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the itemActivityStats
+     *
+     * @return array The itemActivityStats
+     */
+    public function getItemActivityStats()
+    {
+        if (array_key_exists("itemActivityStats", $this->_propDict)) {
+           return $this->_propDict["itemActivityStats"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the itemActivityStats
+    *
+    * @param ItemActivityStat $val The itemActivityStats
+    *
+    * @return ItemAnalytics
+    */
+    public function setItemActivityStats($val)
+    {
+		$this->_propDict["itemActivityStats"] = $val;
         return $this;
     }
     

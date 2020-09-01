@@ -25,31 +25,31 @@ namespace Microsoft\Graph\Model;
 class Subscription extends Entity
 {
     /**
-    * Gets the resource
-    * Required. Specifies the resource that will be monitored for changes. Do not include the base URL (https://graph.microsoft.com/v1.0/). See the possible resource path values for each supported resource.
+    * Gets the applicationId
+    * Identifier of the application used to create the subscription. Read-only.
     *
-    * @return string The resource
+    * @return string The applicationId
     */
-    public function getResource()
+    public function getApplicationId()
     {
-        if (array_key_exists("resource", $this->_propDict)) {
-            return $this->_propDict["resource"];
+        if (array_key_exists("applicationId", $this->_propDict)) {
+            return $this->_propDict["applicationId"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the resource
-    * Required. Specifies the resource that will be monitored for changes. Do not include the base URL (https://graph.microsoft.com/v1.0/). See the possible resource path values for each supported resource.
+    * Sets the applicationId
+    * Identifier of the application used to create the subscription. Read-only.
     *
-    * @param string $val The resource
+    * @param string $val The applicationId
     *
     * @return Subscription
     */
-    public function setResource($val)
+    public function setApplicationId($val)
     {
-        $this->_propDict["resource"] = $val;
+        $this->_propDict["applicationId"] = $val;
         return $this;
     }
     
@@ -112,31 +112,31 @@ class Subscription extends Entity
     }
     
     /**
-    * Gets the notificationUrl
-    * Required. The URL of the endpoint that will receive the change notifications. This URL must make use of the HTTPS protocol.
+    * Gets the creatorId
+    * Identifier of the user or service principal that created the subscription. If the app used delegated permissions to create the subscription, this field contains the id of the signed-in user the app called on behalf of. If the app used application permissions, this field contains the id of the service principal corresponding to the app. Read-only.
     *
-    * @return string The notificationUrl
+    * @return string The creatorId
     */
-    public function getNotificationUrl()
+    public function getCreatorId()
     {
-        if (array_key_exists("notificationUrl", $this->_propDict)) {
-            return $this->_propDict["notificationUrl"];
+        if (array_key_exists("creatorId", $this->_propDict)) {
+            return $this->_propDict["creatorId"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the notificationUrl
-    * Required. The URL of the endpoint that will receive the change notifications. This URL must make use of the HTTPS protocol.
+    * Sets the creatorId
+    * Identifier of the user or service principal that created the subscription. If the app used delegated permissions to create the subscription, this field contains the id of the signed-in user the app called on behalf of. If the app used application permissions, this field contains the id of the service principal corresponding to the app. Read-only.
     *
-    * @param string $val The notificationUrl
+    * @param string $val The creatorId
     *
     * @return Subscription
     */
-    public function setNotificationUrl($val)
+    public function setCreatorId($val)
     {
-        $this->_propDict["notificationUrl"] = $val;
+        $this->_propDict["creatorId"] = $val;
         return $this;
     }
     
@@ -174,64 +174,6 @@ class Subscription extends Entity
     }
     
     /**
-    * Gets the applicationId
-    * Identifier of the application used to create the subscription. Read-only.
-    *
-    * @return string The applicationId
-    */
-    public function getApplicationId()
-    {
-        if (array_key_exists("applicationId", $this->_propDict)) {
-            return $this->_propDict["applicationId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the applicationId
-    * Identifier of the application used to create the subscription. Read-only.
-    *
-    * @param string $val The applicationId
-    *
-    * @return Subscription
-    */
-    public function setApplicationId($val)
-    {
-        $this->_propDict["applicationId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the creatorId
-    * Identifier of the user or service principal that created the subscription. If the app used delegated permissions to create the subscription, this field contains the id of the signed-in user the app called on behalf of. If the app used application permissions, this field contains the id of the service principal corresponding to the app. Read-only.
-    *
-    * @return string The creatorId
-    */
-    public function getCreatorId()
-    {
-        if (array_key_exists("creatorId", $this->_propDict)) {
-            return $this->_propDict["creatorId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the creatorId
-    * Identifier of the user or service principal that created the subscription. If the app used delegated permissions to create the subscription, this field contains the id of the signed-in user the app called on behalf of. If the app used application permissions, this field contains the id of the service principal corresponding to the app. Read-only.
-    *
-    * @param string $val The creatorId
-    *
-    * @return Subscription
-    */
-    public function setCreatorId($val)
-    {
-        $this->_propDict["creatorId"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the latestSupportedTlsVersion
     * Specifies the latest version of Transport Layer Security (TLS) that the notification endpoint, specified by notificationUrl, supports. The possible values are: v1_0, v1_1, v1_2, v1_3. For subscribers whose notification endpoint supports a version lower than the currently recommended version (TLS 1.2), specifying this property by a set timeline allows them to temporarily use their deprecated version of TLS before completing their upgrade to TLS 1.2. For these subscribers, not setting this property per the timeline would result in subscription operations failing. For subscribers whose notification endpoint already supports TLS 1.2, setting this property is optional. In such cases, Microsoft Graph defaults the property to v1_2.
     *
@@ -257,6 +199,64 @@ class Subscription extends Entity
     public function setLatestSupportedTlsVersion($val)
     {
         $this->_propDict["latestSupportedTlsVersion"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the notificationUrl
+    * Required. The URL of the endpoint that will receive the change notifications. This URL must make use of the HTTPS protocol.
+    *
+    * @return string The notificationUrl
+    */
+    public function getNotificationUrl()
+    {
+        if (array_key_exists("notificationUrl", $this->_propDict)) {
+            return $this->_propDict["notificationUrl"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the notificationUrl
+    * Required. The URL of the endpoint that will receive the change notifications. This URL must make use of the HTTPS protocol.
+    *
+    * @param string $val The notificationUrl
+    *
+    * @return Subscription
+    */
+    public function setNotificationUrl($val)
+    {
+        $this->_propDict["notificationUrl"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the resource
+    * Required. Specifies the resource that will be monitored for changes. Do not include the base URL (https://graph.microsoft.com/v1.0/). See the possible resource path values for each supported resource.
+    *
+    * @return string The resource
+    */
+    public function getResource()
+    {
+        if (array_key_exists("resource", $this->_propDict)) {
+            return $this->_propDict["resource"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the resource
+    * Required. Specifies the resource that will be monitored for changes. Do not include the base URL (https://graph.microsoft.com/v1.0/). See the possible resource path values for each supported resource.
+    *
+    * @param string $val The resource
+    *
+    * @return Subscription
+    */
+    public function setResource($val)
+    {
+        $this->_propDict["resource"] = $val;
         return $this;
     }
     

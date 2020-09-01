@@ -25,39 +25,6 @@ class OptionalClaims extends Entity
 {
 
     /**
-    * Gets the idToken
-    * The optional claims returned in the JWT ID token.
-    *
-    * @return OptionalClaim The idToken
-    */
-    public function getIdToken()
-    {
-        if (array_key_exists("idToken", $this->_propDict)) {
-            if (is_a($this->_propDict["idToken"], "Microsoft\Graph\Model\OptionalClaim")) {
-                return $this->_propDict["idToken"];
-            } else {
-                $this->_propDict["idToken"] = new OptionalClaim($this->_propDict["idToken"]);
-                return $this->_propDict["idToken"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the idToken
-    * The optional claims returned in the JWT ID token.
-    *
-    * @param OptionalClaim $val The value to assign to the idToken
-    *
-    * @return OptionalClaims The OptionalClaims
-    */
-    public function setIdToken($val)
-    {
-        $this->_propDict["idToken"] = $val;
-         return $this;
-    }
-
-    /**
     * Gets the accessToken
     * The optional claims returned in the JWT access token.
     *
@@ -87,6 +54,39 @@ class OptionalClaims extends Entity
     public function setAccessToken($val)
     {
         $this->_propDict["accessToken"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the idToken
+    * The optional claims returned in the JWT ID token.
+    *
+    * @return OptionalClaim The idToken
+    */
+    public function getIdToken()
+    {
+        if (array_key_exists("idToken", $this->_propDict)) {
+            if (is_a($this->_propDict["idToken"], "Microsoft\Graph\Model\OptionalClaim")) {
+                return $this->_propDict["idToken"];
+            } else {
+                $this->_propDict["idToken"] = new OptionalClaim($this->_propDict["idToken"]);
+                return $this->_propDict["idToken"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the idToken
+    * The optional claims returned in the JWT ID token.
+    *
+    * @param OptionalClaim $val The value to assign to the idToken
+    *
+    * @return OptionalClaims The OptionalClaims
+    */
+    public function setIdToken($val)
+    {
+        $this->_propDict["idToken"] = $val;
          return $this;
     }
 

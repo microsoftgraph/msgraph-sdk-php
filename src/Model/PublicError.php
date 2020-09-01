@@ -49,58 +49,6 @@ class PublicError extends Entity
         $this->_propDict["code"] = $val;
         return $this;
     }
-    /**
-    * Gets the message
-    *
-    * @return string The message
-    */
-    public function getMessage()
-    {
-        if (array_key_exists("message", $this->_propDict)) {
-            return $this->_propDict["message"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the message
-    *
-    * @param string $val The value of the message
-    *
-    * @return PublicError
-    */
-    public function setMessage($val)
-    {
-        $this->_propDict["message"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the target
-    *
-    * @return string The target
-    */
-    public function getTarget()
-    {
-        if (array_key_exists("target", $this->_propDict)) {
-            return $this->_propDict["target"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the target
-    *
-    * @param string $val The value of the target
-    *
-    * @return PublicError
-    */
-    public function setTarget($val)
-    {
-        $this->_propDict["target"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the details
@@ -162,5 +110,57 @@ class PublicError extends Entity
     {
         $this->_propDict["innerError"] = $val;
          return $this;
+    }
+    /**
+    * Gets the message
+    *
+    * @return string The message
+    */
+    public function getMessage()
+    {
+        if (array_key_exists("message", $this->_propDict)) {
+            return $this->_propDict["message"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the message
+    *
+    * @param string $val The value of the message
+    *
+    * @return PublicError
+    */
+    public function setMessage($val)
+    {
+        $this->_propDict["message"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the target
+    *
+    * @return string The target
+    */
+    public function getTarget()
+    {
+        if (array_key_exists("target", $this->_propDict)) {
+            return $this->_propDict["target"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the target
+    *
+    * @param string $val The value of the target
+    *
+    * @return PublicError
+    */
+    public function setTarget($val)
+    {
+        $this->_propDict["target"] = $val;
+        return $this;
     }
 }

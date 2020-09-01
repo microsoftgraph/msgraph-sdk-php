@@ -232,6 +232,35 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the miracastBlocked
+    * Indicates whether or not to Block wireless projection.
+    *
+    * @return bool The miracastBlocked
+    */
+    public function getMiracastBlocked()
+    {
+        if (array_key_exists("miracastBlocked", $this->_propDict)) {
+            return $this->_propDict["miracastBlocked"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the miracastBlocked
+    * Indicates whether or not to Block wireless projection.
+    *
+    * @param bool $val The miracastBlocked
+    *
+    * @return Windows10TeamGeneralConfiguration
+    */
+    public function setMiracastBlocked($val)
+    {
+        $this->_propDict["miracastBlocked"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the miracastChannel
     * The channel. Possible values are: userDefined, one, two, three, four, five, six, seven, eight, nine, ten, eleven, thirtySix, forty, fortyFour, fortyEight, oneHundredFortyNine, oneHundredFiftyThree, oneHundredFiftySeven, oneHundredSixtyOne, oneHundredSixtyFive.
     *
@@ -261,35 +290,6 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     public function setMiracastChannel($val)
     {
         $this->_propDict["miracastChannel"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the miracastBlocked
-    * Indicates whether or not to Block wireless projection.
-    *
-    * @return bool The miracastBlocked
-    */
-    public function getMiracastBlocked()
-    {
-        if (array_key_exists("miracastBlocked", $this->_propDict)) {
-            return $this->_propDict["miracastBlocked"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the miracastBlocked
-    * Indicates whether or not to Block wireless projection.
-    *
-    * @param bool $val The miracastBlocked
-    *
-    * @return Windows10TeamGeneralConfiguration
-    */
-    public function setMiracastBlocked($val)
-    {
-        $this->_propDict["miracastBlocked"] = boolval($val);
         return $this;
     }
     
@@ -526,35 +526,6 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     }
     
     /**
-    * Gets the welcomeScreenBlockAutomaticWakeUp
-    * Indicates whether or not to Block the welcome screen from waking up automatically when someone enters the room.
-    *
-    * @return bool The welcomeScreenBlockAutomaticWakeUp
-    */
-    public function getWelcomeScreenBlockAutomaticWakeUp()
-    {
-        if (array_key_exists("welcomeScreenBlockAutomaticWakeUp", $this->_propDict)) {
-            return $this->_propDict["welcomeScreenBlockAutomaticWakeUp"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the welcomeScreenBlockAutomaticWakeUp
-    * Indicates whether or not to Block the welcome screen from waking up automatically when someone enters the room.
-    *
-    * @param bool $val The welcomeScreenBlockAutomaticWakeUp
-    *
-    * @return Windows10TeamGeneralConfiguration
-    */
-    public function setWelcomeScreenBlockAutomaticWakeUp($val)
-    {
-        $this->_propDict["welcomeScreenBlockAutomaticWakeUp"] = boolval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the welcomeScreenBackgroundImageUrl
     * The welcome screen background image URL. The URL must use the HTTPS protocol and return a PNG image.
     *
@@ -580,6 +551,35 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     public function setWelcomeScreenBackgroundImageUrl($val)
     {
         $this->_propDict["welcomeScreenBackgroundImageUrl"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the welcomeScreenBlockAutomaticWakeUp
+    * Indicates whether or not to Block the welcome screen from waking up automatically when someone enters the room.
+    *
+    * @return bool The welcomeScreenBlockAutomaticWakeUp
+    */
+    public function getWelcomeScreenBlockAutomaticWakeUp()
+    {
+        if (array_key_exists("welcomeScreenBlockAutomaticWakeUp", $this->_propDict)) {
+            return $this->_propDict["welcomeScreenBlockAutomaticWakeUp"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the welcomeScreenBlockAutomaticWakeUp
+    * Indicates whether or not to Block the welcome screen from waking up automatically when someone enters the room.
+    *
+    * @param bool $val The welcomeScreenBlockAutomaticWakeUp
+    *
+    * @return Windows10TeamGeneralConfiguration
+    */
+    public function setWelcomeScreenBlockAutomaticWakeUp($val)
+    {
+        $this->_propDict["welcomeScreenBlockAutomaticWakeUp"] = boolval($val);
         return $this;
     }
     

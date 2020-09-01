@@ -150,36 +150,6 @@ class PlannerPlan extends Entity
     
 
      /** 
-     * Gets the tasks
-    * Read-only. Nullable. Collection of tasks in the plan.
-     *
-     * @return array The tasks
-     */
-    public function getTasks()
-    {
-        if (array_key_exists("tasks", $this->_propDict)) {
-           return $this->_propDict["tasks"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the tasks
-    * Read-only. Nullable. Collection of tasks in the plan.
-    *
-    * @param PlannerTask $val The tasks
-    *
-    * @return PlannerPlan
-    */
-    public function setTasks($val)
-    {
-		$this->_propDict["tasks"] = $val;
-        return $this;
-    }
-    
-
-     /** 
      * Gets the buckets
     * Read-only. Nullable. Collection of buckets in the plan.
      *
@@ -238,6 +208,36 @@ class PlannerPlan extends Entity
     public function setDetails($val)
     {
         $this->_propDict["details"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the tasks
+    * Read-only. Nullable. Collection of tasks in the plan.
+     *
+     * @return array The tasks
+     */
+    public function getTasks()
+    {
+        if (array_key_exists("tasks", $this->_propDict)) {
+           return $this->_propDict["tasks"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the tasks
+    * Read-only. Nullable. Collection of tasks in the plan.
+    *
+    * @param PlannerTask $val The tasks
+    *
+    * @return PlannerPlan
+    */
+    public function setTasks($val)
+    {
+		$this->_propDict["tasks"] = $val;
         return $this;
     }
     

@@ -24,34 +24,6 @@ namespace Microsoft\Graph\Model;
 class VppLicensingType extends Entity
 {
     /**
-    * Gets the supportsUserLicensing
-    * Whether the program supports the user licensing type.
-    *
-    * @return bool The supportsUserLicensing
-    */
-    public function getSupportsUserLicensing()
-    {
-        if (array_key_exists("supportsUserLicensing", $this->_propDict)) {
-            return $this->_propDict["supportsUserLicensing"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the supportsUserLicensing
-    * Whether the program supports the user licensing type.
-    *
-    * @param bool $val The value of the supportsUserLicensing
-    *
-    * @return VppLicensingType
-    */
-    public function setSupportsUserLicensing($val)
-    {
-        $this->_propDict["supportsUserLicensing"] = $val;
-        return $this;
-    }
-    /**
     * Gets the supportsDeviceLicensing
     * Whether the program supports the device licensing type.
     *
@@ -77,6 +49,34 @@ class VppLicensingType extends Entity
     public function setSupportsDeviceLicensing($val)
     {
         $this->_propDict["supportsDeviceLicensing"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the supportsUserLicensing
+    * Whether the program supports the user licensing type.
+    *
+    * @return bool The supportsUserLicensing
+    */
+    public function getSupportsUserLicensing()
+    {
+        if (array_key_exists("supportsUserLicensing", $this->_propDict)) {
+            return $this->_propDict["supportsUserLicensing"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the supportsUserLicensing
+    * Whether the program supports the user licensing type.
+    *
+    * @param bool $val The value of the supportsUserLicensing
+    *
+    * @return VppLicensingType
+    */
+    public function setSupportsUserLicensing($val)
+    {
+        $this->_propDict["supportsUserLicensing"] = $val;
         return $this;
     }
 }

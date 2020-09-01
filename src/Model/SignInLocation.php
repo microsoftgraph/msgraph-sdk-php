@@ -52,34 +52,6 @@ class SignInLocation extends Entity
         return $this;
     }
     /**
-    * Gets the state
-    * Provides the State where the sign-in originated. This is calculated using latitude/longitude information from the sign-in activity.
-    *
-    * @return string The state
-    */
-    public function getState()
-    {
-        if (array_key_exists("state", $this->_propDict)) {
-            return $this->_propDict["state"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the state
-    * Provides the State where the sign-in originated. This is calculated using latitude/longitude information from the sign-in activity.
-    *
-    * @param string $val The value of the state
-    *
-    * @return SignInLocation
-    */
-    public function setState($val)
-    {
-        $this->_propDict["state"] = $val;
-        return $this;
-    }
-    /**
     * Gets the countryOrRegion
     * Provides the country code info (2 letter code) where the sign-in originated.  This is calculated using latitude/longitude information from the sign-in activity.
     *
@@ -139,5 +111,33 @@ class SignInLocation extends Entity
     {
         $this->_propDict["geoCoordinates"] = $val;
          return $this;
+    }
+    /**
+    * Gets the state
+    * Provides the State where the sign-in originated. This is calculated using latitude/longitude information from the sign-in activity.
+    *
+    * @return string The state
+    */
+    public function getState()
+    {
+        if (array_key_exists("state", $this->_propDict)) {
+            return $this->_propDict["state"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the state
+    * Provides the State where the sign-in originated. This is calculated using latitude/longitude information from the sign-in activity.
+    *
+    * @param string $val The value of the state
+    *
+    * @return SignInLocation
+    */
+    public function setState($val)
+    {
+        $this->_propDict["state"] = $val;
+        return $this;
     }
 }

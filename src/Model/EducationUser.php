@@ -25,266 +25,6 @@ namespace Microsoft\Graph\Model;
 class EducationUser extends Entity
 {
     /**
-    * Gets the primaryRole
-    * Default role for a user. The user's role might be different in an individual class. The possible values are: student, teacher. Supports $filter.
-    *
-    * @return EducationUserRole The primaryRole
-    */
-    public function getPrimaryRole()
-    {
-        if (array_key_exists("primaryRole", $this->_propDict)) {
-            if (is_a($this->_propDict["primaryRole"], "Microsoft\Graph\Model\EducationUserRole")) {
-                return $this->_propDict["primaryRole"];
-            } else {
-                $this->_propDict["primaryRole"] = new EducationUserRole($this->_propDict["primaryRole"]);
-                return $this->_propDict["primaryRole"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the primaryRole
-    * Default role for a user. The user's role might be different in an individual class. The possible values are: student, teacher. Supports $filter.
-    *
-    * @param EducationUserRole $val The primaryRole
-    *
-    * @return EducationUser
-    */
-    public function setPrimaryRole($val)
-    {
-        $this->_propDict["primaryRole"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the middleName
-    * The middle name of user.
-    *
-    * @return string The middleName
-    */
-    public function getMiddleName()
-    {
-        if (array_key_exists("middleName", $this->_propDict)) {
-            return $this->_propDict["middleName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the middleName
-    * The middle name of user.
-    *
-    * @param string $val The middleName
-    *
-    * @return EducationUser
-    */
-    public function setMiddleName($val)
-    {
-        $this->_propDict["middleName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the externalSource
-    * Where this user was created from. The possible values are: sis, manual.
-    *
-    * @return EducationExternalSource The externalSource
-    */
-    public function getExternalSource()
-    {
-        if (array_key_exists("externalSource", $this->_propDict)) {
-            if (is_a($this->_propDict["externalSource"], "Microsoft\Graph\Model\EducationExternalSource")) {
-                return $this->_propDict["externalSource"];
-            } else {
-                $this->_propDict["externalSource"] = new EducationExternalSource($this->_propDict["externalSource"]);
-                return $this->_propDict["externalSource"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the externalSource
-    * Where this user was created from. The possible values are: sis, manual.
-    *
-    * @param EducationExternalSource $val The externalSource
-    *
-    * @return EducationUser
-    */
-    public function setExternalSource($val)
-    {
-        $this->_propDict["externalSource"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the residenceAddress
-    * Address where user lives.
-    *
-    * @return PhysicalAddress The residenceAddress
-    */
-    public function getResidenceAddress()
-    {
-        if (array_key_exists("residenceAddress", $this->_propDict)) {
-            if (is_a($this->_propDict["residenceAddress"], "Microsoft\Graph\Model\PhysicalAddress")) {
-                return $this->_propDict["residenceAddress"];
-            } else {
-                $this->_propDict["residenceAddress"] = new PhysicalAddress($this->_propDict["residenceAddress"]);
-                return $this->_propDict["residenceAddress"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the residenceAddress
-    * Address where user lives.
-    *
-    * @param PhysicalAddress $val The residenceAddress
-    *
-    * @return EducationUser
-    */
-    public function setResidenceAddress($val)
-    {
-        $this->_propDict["residenceAddress"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the mailingAddress
-    * Mail address of user.
-    *
-    * @return PhysicalAddress The mailingAddress
-    */
-    public function getMailingAddress()
-    {
-        if (array_key_exists("mailingAddress", $this->_propDict)) {
-            if (is_a($this->_propDict["mailingAddress"], "Microsoft\Graph\Model\PhysicalAddress")) {
-                return $this->_propDict["mailingAddress"];
-            } else {
-                $this->_propDict["mailingAddress"] = new PhysicalAddress($this->_propDict["mailingAddress"]);
-                return $this->_propDict["mailingAddress"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the mailingAddress
-    * Mail address of user.
-    *
-    * @param PhysicalAddress $val The mailingAddress
-    *
-    * @return EducationUser
-    */
-    public function setMailingAddress($val)
-    {
-        $this->_propDict["mailingAddress"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the student
-    * If the primary role is student, this block will contain student specific data.
-    *
-    * @return EducationStudent The student
-    */
-    public function getStudent()
-    {
-        if (array_key_exists("student", $this->_propDict)) {
-            if (is_a($this->_propDict["student"], "Microsoft\Graph\Model\EducationStudent")) {
-                return $this->_propDict["student"];
-            } else {
-                $this->_propDict["student"] = new EducationStudent($this->_propDict["student"]);
-                return $this->_propDict["student"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the student
-    * If the primary role is student, this block will contain student specific data.
-    *
-    * @param EducationStudent $val The student
-    *
-    * @return EducationUser
-    */
-    public function setStudent($val)
-    {
-        $this->_propDict["student"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the teacher
-    * If the primary role is teacher, this block will contain teacher specific data.
-    *
-    * @return EducationTeacher The teacher
-    */
-    public function getTeacher()
-    {
-        if (array_key_exists("teacher", $this->_propDict)) {
-            if (is_a($this->_propDict["teacher"], "Microsoft\Graph\Model\EducationTeacher")) {
-                return $this->_propDict["teacher"];
-            } else {
-                $this->_propDict["teacher"] = new EducationTeacher($this->_propDict["teacher"]);
-                return $this->_propDict["teacher"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the teacher
-    * If the primary role is teacher, this block will contain teacher specific data.
-    *
-    * @param EducationTeacher $val The teacher
-    *
-    * @return EducationUser
-    */
-    public function setTeacher($val)
-    {
-        $this->_propDict["teacher"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the createdBy
-    * Entity who created the user.
-    *
-    * @return IdentitySet The createdBy
-    */
-    public function getCreatedBy()
-    {
-        if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "Microsoft\Graph\Model\IdentitySet")) {
-                return $this->_propDict["createdBy"];
-            } else {
-                $this->_propDict["createdBy"] = new IdentitySet($this->_propDict["createdBy"]);
-                return $this->_propDict["createdBy"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the createdBy
-    * Entity who created the user.
-    *
-    * @param IdentitySet $val The createdBy
-    *
-    * @return EducationUser
-    */
-    public function setCreatedBy($val)
-    {
-        $this->_propDict["createdBy"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the accountEnabled
     * True if the account is enabled; otherwise, false. This property is required when a user is created. Supports $filter.
     *
@@ -403,6 +143,39 @@ class EducationUser extends Entity
     }
     
     /**
+    * Gets the createdBy
+    * Entity who created the user.
+    *
+    * @return IdentitySet The createdBy
+    */
+    public function getCreatedBy()
+    {
+        if (array_key_exists("createdBy", $this->_propDict)) {
+            if (is_a($this->_propDict["createdBy"], "Microsoft\Graph\Model\IdentitySet")) {
+                return $this->_propDict["createdBy"];
+            } else {
+                $this->_propDict["createdBy"] = new IdentitySet($this->_propDict["createdBy"]);
+                return $this->_propDict["createdBy"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the createdBy
+    * Entity who created the user.
+    *
+    * @param IdentitySet $val The createdBy
+    *
+    * @return EducationUser
+    */
+    public function setCreatedBy($val)
+    {
+        $this->_propDict["createdBy"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the department
     * The name for the department in which the user works. Supports $filter.
     *
@@ -457,6 +230,39 @@ class EducationUser extends Entity
     public function setDisplayName($val)
     {
         $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the externalSource
+    * Where this user was created from. The possible values are: sis, manual.
+    *
+    * @return EducationExternalSource The externalSource
+    */
+    public function getExternalSource()
+    {
+        if (array_key_exists("externalSource", $this->_propDict)) {
+            if (is_a($this->_propDict["externalSource"], "Microsoft\Graph\Model\EducationExternalSource")) {
+                return $this->_propDict["externalSource"];
+            } else {
+                $this->_propDict["externalSource"] = new EducationExternalSource($this->_propDict["externalSource"]);
+                return $this->_propDict["externalSource"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the externalSource
+    * Where this user was created from. The possible values are: sis, manual.
+    *
+    * @param EducationExternalSource $val The externalSource
+    *
+    * @return EducationUser
+    */
+    public function setExternalSource($val)
+    {
+        $this->_propDict["externalSource"] = $val;
         return $this;
     }
     
@@ -519,6 +325,39 @@ class EducationUser extends Entity
     }
     
     /**
+    * Gets the mailingAddress
+    * Mail address of user.
+    *
+    * @return PhysicalAddress The mailingAddress
+    */
+    public function getMailingAddress()
+    {
+        if (array_key_exists("mailingAddress", $this->_propDict)) {
+            if (is_a($this->_propDict["mailingAddress"], "Microsoft\Graph\Model\PhysicalAddress")) {
+                return $this->_propDict["mailingAddress"];
+            } else {
+                $this->_propDict["mailingAddress"] = new PhysicalAddress($this->_propDict["mailingAddress"]);
+                return $this->_propDict["mailingAddress"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the mailingAddress
+    * Mail address of user.
+    *
+    * @param PhysicalAddress $val The mailingAddress
+    *
+    * @return EducationUser
+    */
+    public function setMailingAddress($val)
+    {
+        $this->_propDict["mailingAddress"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the mailNickname
     * The mail alias for the user. This property must be specified when a user is created. Supports $filter.
     *
@@ -548,6 +387,35 @@ class EducationUser extends Entity
     }
     
     /**
+    * Gets the middleName
+    * The middle name of user.
+    *
+    * @return string The middleName
+    */
+    public function getMiddleName()
+    {
+        if (array_key_exists("middleName", $this->_propDict)) {
+            return $this->_propDict["middleName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the middleName
+    * The middle name of user.
+    *
+    * @param string $val The middleName
+    *
+    * @return EducationUser
+    */
+    public function setMiddleName($val)
+    {
+        $this->_propDict["middleName"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the mobilePhone
     * The primary cellular telephone number for the user.
     *
@@ -573,6 +441,33 @@ class EducationUser extends Entity
     public function setMobilePhone($val)
     {
         $this->_propDict["mobilePhone"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the officeLocation
+    *
+    * @return string The officeLocation
+    */
+    public function getOfficeLocation()
+    {
+        if (array_key_exists("officeLocation", $this->_propDict)) {
+            return $this->_propDict["officeLocation"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the officeLocation
+    *
+    * @param string $val The officeLocation
+    *
+    * @return EducationUser
+    */
+    public function setOfficeLocation($val)
+    {
+        $this->_propDict["officeLocation"] = $val;
         return $this;
     }
     
@@ -639,33 +534,6 @@ class EducationUser extends Entity
     }
     
     /**
-    * Gets the officeLocation
-    *
-    * @return string The officeLocation
-    */
-    public function getOfficeLocation()
-    {
-        if (array_key_exists("officeLocation", $this->_propDict)) {
-            return $this->_propDict["officeLocation"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the officeLocation
-    *
-    * @param string $val The officeLocation
-    *
-    * @return EducationUser
-    */
-    public function setOfficeLocation($val)
-    {
-        $this->_propDict["officeLocation"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the preferredLanguage
     * The preferred language for the user. Should follow ISO 639-1 Code; for example, 'en-US'.
     *
@@ -691,6 +559,39 @@ class EducationUser extends Entity
     public function setPreferredLanguage($val)
     {
         $this->_propDict["preferredLanguage"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the primaryRole
+    * Default role for a user. The user's role might be different in an individual class. The possible values are: student, teacher. Supports $filter.
+    *
+    * @return EducationUserRole The primaryRole
+    */
+    public function getPrimaryRole()
+    {
+        if (array_key_exists("primaryRole", $this->_propDict)) {
+            if (is_a($this->_propDict["primaryRole"], "Microsoft\Graph\Model\EducationUserRole")) {
+                return $this->_propDict["primaryRole"];
+            } else {
+                $this->_propDict["primaryRole"] = new EducationUserRole($this->_propDict["primaryRole"]);
+                return $this->_propDict["primaryRole"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the primaryRole
+    * Default role for a user. The user's role might be different in an individual class. The possible values are: student, teacher. Supports $filter.
+    *
+    * @param EducationUserRole $val The primaryRole
+    *
+    * @return EducationUser
+    */
+    public function setPrimaryRole($val)
+    {
+        $this->_propDict["primaryRole"] = $val;
         return $this;
     }
     
@@ -756,6 +657,39 @@ class EducationUser extends Entity
     }
     
     /**
+    * Gets the residenceAddress
+    * Address where user lives.
+    *
+    * @return PhysicalAddress The residenceAddress
+    */
+    public function getResidenceAddress()
+    {
+        if (array_key_exists("residenceAddress", $this->_propDict)) {
+            if (is_a($this->_propDict["residenceAddress"], "Microsoft\Graph\Model\PhysicalAddress")) {
+                return $this->_propDict["residenceAddress"];
+            } else {
+                $this->_propDict["residenceAddress"] = new PhysicalAddress($this->_propDict["residenceAddress"]);
+                return $this->_propDict["residenceAddress"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the residenceAddress
+    * Address where user lives.
+    *
+    * @param PhysicalAddress $val The residenceAddress
+    *
+    * @return EducationUser
+    */
+    public function setResidenceAddress($val)
+    {
+        $this->_propDict["residenceAddress"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the showInAddressList
     *
     * @return bool The showInAddressList
@@ -779,6 +713,39 @@ class EducationUser extends Entity
     public function setShowInAddressList($val)
     {
         $this->_propDict["showInAddressList"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the student
+    * If the primary role is student, this block will contain student specific data.
+    *
+    * @return EducationStudent The student
+    */
+    public function getStudent()
+    {
+        if (array_key_exists("student", $this->_propDict)) {
+            if (is_a($this->_propDict["student"], "Microsoft\Graph\Model\EducationStudent")) {
+                return $this->_propDict["student"];
+            } else {
+                $this->_propDict["student"] = new EducationStudent($this->_propDict["student"]);
+                return $this->_propDict["student"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the student
+    * If the primary role is student, this block will contain student specific data.
+    *
+    * @param EducationStudent $val The student
+    *
+    * @return EducationUser
+    */
+    public function setStudent($val)
+    {
+        $this->_propDict["student"] = $val;
         return $this;
     }
     
@@ -808,6 +775,39 @@ class EducationUser extends Entity
     public function setSurname($val)
     {
         $this->_propDict["surname"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the teacher
+    * If the primary role is teacher, this block will contain teacher specific data.
+    *
+    * @return EducationTeacher The teacher
+    */
+    public function getTeacher()
+    {
+        if (array_key_exists("teacher", $this->_propDict)) {
+            if (is_a($this->_propDict["teacher"], "Microsoft\Graph\Model\EducationTeacher")) {
+                return $this->_propDict["teacher"];
+            } else {
+                $this->_propDict["teacher"] = new EducationTeacher($this->_propDict["teacher"]);
+                return $this->_propDict["teacher"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the teacher
+    * If the primary role is teacher, this block will contain teacher specific data.
+    *
+    * @param EducationTeacher $val The teacher
+    *
+    * @return EducationUser
+    */
+    public function setTeacher($val)
+    {
+        $this->_propDict["teacher"] = $val;
         return $this;
     }
     
@@ -900,36 +900,6 @@ class EducationUser extends Entity
     
 
      /** 
-     * Gets the schools
-    * Schools to which the user belongs. Nullable.
-     *
-     * @return array The schools
-     */
-    public function getSchools()
-    {
-        if (array_key_exists("schools", $this->_propDict)) {
-           return $this->_propDict["schools"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the schools
-    * Schools to which the user belongs. Nullable.
-    *
-    * @param EducationSchool $val The schools
-    *
-    * @return EducationUser
-    */
-    public function setSchools($val)
-    {
-		$this->_propDict["schools"] = $val;
-        return $this;
-    }
-    
-
-     /** 
      * Gets the classes
     * Classes to which the user belongs. Nullable.
      *
@@ -955,6 +925,36 @@ class EducationUser extends Entity
     public function setClasses($val)
     {
 		$this->_propDict["classes"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the schools
+    * Schools to which the user belongs. Nullable.
+     *
+     * @return array The schools
+     */
+    public function getSchools()
+    {
+        if (array_key_exists("schools", $this->_propDict)) {
+           return $this->_propDict["schools"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the schools
+    * Schools to which the user belongs. Nullable.
+    *
+    * @param EducationSchool $val The schools
+    *
+    * @return EducationUser
+    */
+    public function setSchools($val)
+    {
+		$this->_propDict["schools"] = $val;
         return $this;
     }
     

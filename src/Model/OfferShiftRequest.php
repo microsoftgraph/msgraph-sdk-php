@@ -25,35 +25,6 @@ namespace Microsoft\Graph\Model;
 class OfferShiftRequest extends ScheduleChangeRequest
 {
     /**
-    * Gets the recipientActionMessage
-    * Custom message sent by recipient of the offer shift request.
-    *
-    * @return string The recipientActionMessage
-    */
-    public function getRecipientActionMessage()
-    {
-        if (array_key_exists("recipientActionMessage", $this->_propDict)) {
-            return $this->_propDict["recipientActionMessage"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the recipientActionMessage
-    * Custom message sent by recipient of the offer shift request.
-    *
-    * @param string $val The recipientActionMessage
-    *
-    * @return OfferShiftRequest
-    */
-    public function setRecipientActionMessage($val)
-    {
-        $this->_propDict["recipientActionMessage"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the recipientActionDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
@@ -87,31 +58,31 @@ class OfferShiftRequest extends ScheduleChangeRequest
     }
     
     /**
-    * Gets the senderShiftId
-    * User ID of the sender of the offer shift request.
+    * Gets the recipientActionMessage
+    * Custom message sent by recipient of the offer shift request.
     *
-    * @return string The senderShiftId
+    * @return string The recipientActionMessage
     */
-    public function getSenderShiftId()
+    public function getRecipientActionMessage()
     {
-        if (array_key_exists("senderShiftId", $this->_propDict)) {
-            return $this->_propDict["senderShiftId"];
+        if (array_key_exists("recipientActionMessage", $this->_propDict)) {
+            return $this->_propDict["recipientActionMessage"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the senderShiftId
-    * User ID of the sender of the offer shift request.
+    * Sets the recipientActionMessage
+    * Custom message sent by recipient of the offer shift request.
     *
-    * @param string $val The senderShiftId
+    * @param string $val The recipientActionMessage
     *
     * @return OfferShiftRequest
     */
-    public function setSenderShiftId($val)
+    public function setRecipientActionMessage($val)
     {
-        $this->_propDict["senderShiftId"] = $val;
+        $this->_propDict["recipientActionMessage"] = $val;
         return $this;
     }
     
@@ -141,6 +112,35 @@ class OfferShiftRequest extends ScheduleChangeRequest
     public function setRecipientUserId($val)
     {
         $this->_propDict["recipientUserId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the senderShiftId
+    * User ID of the sender of the offer shift request.
+    *
+    * @return string The senderShiftId
+    */
+    public function getSenderShiftId()
+    {
+        if (array_key_exists("senderShiftId", $this->_propDict)) {
+            return $this->_propDict["senderShiftId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the senderShiftId
+    * User ID of the sender of the offer shift request.
+    *
+    * @param string $val The senderShiftId
+    *
+    * @return OfferShiftRequest
+    */
+    public function setSenderShiftId($val)
+    {
+        $this->_propDict["senderShiftId"] = $val;
         return $this;
     }
     

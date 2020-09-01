@@ -52,6 +52,32 @@ class ScoredEmailAddress extends Entity
         return $this;
     }
     /**
+    * Gets the itemId
+    *
+    * @return string The itemId
+    */
+    public function getItemId()
+    {
+        if (array_key_exists("itemId", $this->_propDict)) {
+            return $this->_propDict["itemId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the itemId
+    *
+    * @param string $val The value of the itemId
+    *
+    * @return ScoredEmailAddress
+    */
+    public function setItemId($val)
+    {
+        $this->_propDict["itemId"] = $val;
+        return $this;
+    }
+    /**
     * Gets the relevanceScore
     * The relevance score of the email address. A relevance score is used as a sort key, in relation to the other returned results. A higher relevance score value corresponds to a more relevant result. Relevance is determined by the user’s communication and collaboration patterns and business relationships.
     *
@@ -109,31 +135,5 @@ class ScoredEmailAddress extends Entity
     {
         $this->_propDict["selectionLikelihood"] = $val;
          return $this;
-    }
-    /**
-    * Gets the itemId
-    *
-    * @return string The itemId
-    */
-    public function getItemId()
-    {
-        if (array_key_exists("itemId", $this->_propDict)) {
-            return $this->_propDict["itemId"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the itemId
-    *
-    * @param string $val The value of the itemId
-    *
-    * @return ScoredEmailAddress
-    */
-    public function setItemId($val)
-    {
-        $this->_propDict["itemId"] = $val;
-        return $this;
     }
 }

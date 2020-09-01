@@ -23,6 +23,72 @@ namespace Microsoft\Graph\Model;
 */
 class Location extends Entity
 {
+
+    /**
+    * Gets the address
+    * The street address of the location.
+    *
+    * @return PhysicalAddress The address
+    */
+    public function getAddress()
+    {
+        if (array_key_exists("address", $this->_propDict)) {
+            if (is_a($this->_propDict["address"], "Microsoft\Graph\Model\PhysicalAddress")) {
+                return $this->_propDict["address"];
+            } else {
+                $this->_propDict["address"] = new PhysicalAddress($this->_propDict["address"]);
+                return $this->_propDict["address"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the address
+    * The street address of the location.
+    *
+    * @param PhysicalAddress $val The value to assign to the address
+    *
+    * @return Location The Location
+    */
+    public function setAddress($val)
+    {
+        $this->_propDict["address"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the coordinates
+    * The geographic coordinates and elevation of the location.
+    *
+    * @return OutlookGeoCoordinates The coordinates
+    */
+    public function getCoordinates()
+    {
+        if (array_key_exists("coordinates", $this->_propDict)) {
+            if (is_a($this->_propDict["coordinates"], "Microsoft\Graph\Model\OutlookGeoCoordinates")) {
+                return $this->_propDict["coordinates"];
+            } else {
+                $this->_propDict["coordinates"] = new OutlookGeoCoordinates($this->_propDict["coordinates"]);
+                return $this->_propDict["coordinates"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the coordinates
+    * The geographic coordinates and elevation of the location.
+    *
+    * @param OutlookGeoCoordinates $val The value to assign to the coordinates
+    *
+    * @return Location The Location
+    */
+    public function setCoordinates($val)
+    {
+        $this->_propDict["coordinates"] = $val;
+         return $this;
+    }
     /**
     * Gets the displayName
     * The name associated with the location.
@@ -81,100 +147,6 @@ class Location extends Entity
     }
 
     /**
-    * Gets the address
-    * The street address of the location.
-    *
-    * @return PhysicalAddress The address
-    */
-    public function getAddress()
-    {
-        if (array_key_exists("address", $this->_propDict)) {
-            if (is_a($this->_propDict["address"], "Microsoft\Graph\Model\PhysicalAddress")) {
-                return $this->_propDict["address"];
-            } else {
-                $this->_propDict["address"] = new PhysicalAddress($this->_propDict["address"]);
-                return $this->_propDict["address"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the address
-    * The street address of the location.
-    *
-    * @param PhysicalAddress $val The value to assign to the address
-    *
-    * @return Location The Location
-    */
-    public function setAddress($val)
-    {
-        $this->_propDict["address"] = $val;
-         return $this;
-    }
-    /**
-    * Gets the locationUri
-    * Optional URI representing the location.
-    *
-    * @return string The locationUri
-    */
-    public function getLocationUri()
-    {
-        if (array_key_exists("locationUri", $this->_propDict)) {
-            return $this->_propDict["locationUri"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the locationUri
-    * Optional URI representing the location.
-    *
-    * @param string $val The value of the locationUri
-    *
-    * @return Location
-    */
-    public function setLocationUri($val)
-    {
-        $this->_propDict["locationUri"] = $val;
-        return $this;
-    }
-
-    /**
-    * Gets the coordinates
-    * The geographic coordinates and elevation of the location.
-    *
-    * @return OutlookGeoCoordinates The coordinates
-    */
-    public function getCoordinates()
-    {
-        if (array_key_exists("coordinates", $this->_propDict)) {
-            if (is_a($this->_propDict["coordinates"], "Microsoft\Graph\Model\OutlookGeoCoordinates")) {
-                return $this->_propDict["coordinates"];
-            } else {
-                $this->_propDict["coordinates"] = new OutlookGeoCoordinates($this->_propDict["coordinates"]);
-                return $this->_propDict["coordinates"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the coordinates
-    * The geographic coordinates and elevation of the location.
-    *
-    * @param OutlookGeoCoordinates $val The value to assign to the coordinates
-    *
-    * @return Location The Location
-    */
-    public function setCoordinates($val)
-    {
-        $this->_propDict["coordinates"] = $val;
-         return $this;
-    }
-
-    /**
     * Gets the locationType
     * The type of location. The possible values are: default, conferenceRoom, homeAddress, businessAddress,geoCoordinates, streetAddress, hotel, restaurant, localBusiness, postalAddress. Read-only.
     *
@@ -205,6 +177,34 @@ class Location extends Entity
     {
         $this->_propDict["locationType"] = $val;
          return $this;
+    }
+    /**
+    * Gets the locationUri
+    * Optional URI representing the location.
+    *
+    * @return string The locationUri
+    */
+    public function getLocationUri()
+    {
+        if (array_key_exists("locationUri", $this->_propDict)) {
+            return $this->_propDict["locationUri"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the locationUri
+    * Optional URI representing the location.
+    *
+    * @param string $val The value of the locationUri
+    *
+    * @return Location
+    */
+    public function setLocationUri($val)
+    {
+        $this->_propDict["locationUri"] = $val;
+        return $this;
     }
     /**
     * Gets the uniqueId
