@@ -57,34 +57,6 @@ class InvitedUserMessageInfo extends Entity
          return $this;
     }
     /**
-    * Gets the messageLanguage
-    * The language you want to send the default message in. If the customizedMessageBody is specified, this property is ignored, and the message is sent using the customizedMessageBody. The language format should be in ISO 639. The default is en-US.
-    *
-    * @return string The messageLanguage
-    */
-    public function getMessageLanguage()
-    {
-        if (array_key_exists("messageLanguage", $this->_propDict)) {
-            return $this->_propDict["messageLanguage"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the messageLanguage
-    * The language you want to send the default message in. If the customizedMessageBody is specified, this property is ignored, and the message is sent using the customizedMessageBody. The language format should be in ISO 639. The default is en-US.
-    *
-    * @param string $val The value of the messageLanguage
-    *
-    * @return InvitedUserMessageInfo
-    */
-    public function setMessageLanguage($val)
-    {
-        $this->_propDict["messageLanguage"] = $val;
-        return $this;
-    }
-    /**
     * Gets the customizedMessageBody
     * Customized message body you want to send if you don't want the default message.
     *
@@ -110,6 +82,34 @@ class InvitedUserMessageInfo extends Entity
     public function setCustomizedMessageBody($val)
     {
         $this->_propDict["customizedMessageBody"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the messageLanguage
+    * The language you want to send the default message in. If the customizedMessageBody is specified, this property is ignored, and the message is sent using the customizedMessageBody. The language format should be in ISO 639. The default is en-US.
+    *
+    * @return string The messageLanguage
+    */
+    public function getMessageLanguage()
+    {
+        if (array_key_exists("messageLanguage", $this->_propDict)) {
+            return $this->_propDict["messageLanguage"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the messageLanguage
+    * The language you want to send the default message in. If the customizedMessageBody is specified, this property is ignored, and the message is sent using the customizedMessageBody. The language format should be in ISO 639. The default is en-US.
+    *
+    * @param string $val The value of the messageLanguage
+    *
+    * @return InvitedUserMessageInfo
+    */
+    public function setMessageLanguage($val)
+    {
+        $this->_propDict["messageLanguage"] = $val;
         return $this;
     }
 }

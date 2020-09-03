@@ -25,35 +25,6 @@ namespace Microsoft\Graph\Model;
 class AndroidStoreApp extends MobileApp
 {
     /**
-    * Gets the packageId
-    * The package identifier.
-    *
-    * @return string The packageId
-    */
-    public function getPackageId()
-    {
-        if (array_key_exists("packageId", $this->_propDict)) {
-            return $this->_propDict["packageId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the packageId
-    * The package identifier.
-    *
-    * @param string $val The packageId
-    *
-    * @return AndroidStoreApp
-    */
-    public function setPackageId($val)
-    {
-        $this->_propDict["packageId"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the appStoreUrl
     * The Android app store URL.
     *
@@ -112,6 +83,35 @@ class AndroidStoreApp extends MobileApp
     public function setMinimumSupportedOperatingSystem($val)
     {
         $this->_propDict["minimumSupportedOperatingSystem"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the packageId
+    * The package identifier.
+    *
+    * @return string The packageId
+    */
+    public function getPackageId()
+    {
+        if (array_key_exists("packageId", $this->_propDict)) {
+            return $this->_propDict["packageId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the packageId
+    * The package identifier.
+    *
+    * @param string $val The packageId
+    *
+    * @return AndroidStoreApp
+    */
+    public function setPackageId($val)
+    {
+        $this->_propDict["packageId"] = $val;
         return $this;
     }
     

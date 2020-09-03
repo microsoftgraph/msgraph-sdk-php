@@ -24,34 +24,6 @@ namespace Microsoft\Graph\Model;
 class GenericError extends Entity
 {
     /**
-    * Gets the message
-    * The error message.
-    *
-    * @return string The message
-    */
-    public function getMessage()
-    {
-        if (array_key_exists("message", $this->_propDict)) {
-            return $this->_propDict["message"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the message
-    * The error message.
-    *
-    * @param string $val The value of the message
-    *
-    * @return GenericError
-    */
-    public function setMessage($val)
-    {
-        $this->_propDict["message"] = $val;
-        return $this;
-    }
-    /**
     * Gets the code
     * The error code.
     *
@@ -77,6 +49,34 @@ class GenericError extends Entity
     public function setCode($val)
     {
         $this->_propDict["code"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the message
+    * The error message.
+    *
+    * @return string The message
+    */
+    public function getMessage()
+    {
+        if (array_key_exists("message", $this->_propDict)) {
+            return $this->_propDict["message"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the message
+    * The error message.
+    *
+    * @param string $val The value of the message
+    *
+    * @return GenericError
+    */
+    public function setMessage($val)
+    {
+        $this->_propDict["message"] = $val;
         return $this;
     }
 }

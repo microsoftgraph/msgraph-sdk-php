@@ -25,6 +25,39 @@ namespace Microsoft\Graph\Model;
 class TeamsTab extends Entity
 {
     /**
+    * Gets the configuration
+    * Container for custom settings applied to a tab. The tab is considered configured only once this property is set.
+    *
+    * @return TeamsTabConfiguration The configuration
+    */
+    public function getConfiguration()
+    {
+        if (array_key_exists("configuration", $this->_propDict)) {
+            if (is_a($this->_propDict["configuration"], "Microsoft\Graph\Model\TeamsTabConfiguration")) {
+                return $this->_propDict["configuration"];
+            } else {
+                $this->_propDict["configuration"] = new TeamsTabConfiguration($this->_propDict["configuration"]);
+                return $this->_propDict["configuration"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the configuration
+    * Container for custom settings applied to a tab. The tab is considered configured only once this property is set.
+    *
+    * @param TeamsTabConfiguration $val The configuration
+    *
+    * @return TeamsTab
+    */
+    public function setConfiguration($val)
+    {
+        $this->_propDict["configuration"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the displayName
     * Name of the tab.
     *
@@ -79,39 +112,6 @@ class TeamsTab extends Entity
     public function setWebUrl($val)
     {
         $this->_propDict["webUrl"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the configuration
-    * Container for custom settings applied to a tab. The tab is considered configured only once this property is set.
-    *
-    * @return TeamsTabConfiguration The configuration
-    */
-    public function getConfiguration()
-    {
-        if (array_key_exists("configuration", $this->_propDict)) {
-            if (is_a($this->_propDict["configuration"], "Microsoft\Graph\Model\TeamsTabConfiguration")) {
-                return $this->_propDict["configuration"];
-            } else {
-                $this->_propDict["configuration"] = new TeamsTabConfiguration($this->_propDict["configuration"]);
-                return $this->_propDict["configuration"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the configuration
-    * Container for custom settings applied to a tab. The tab is considered configured only once this property is set.
-    *
-    * @param TeamsTabConfiguration $val The configuration
-    *
-    * @return TeamsTab
-    */
-    public function setConfiguration($val)
-    {
-        $this->_propDict["configuration"] = $val;
         return $this;
     }
     

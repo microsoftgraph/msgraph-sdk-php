@@ -25,39 +25,6 @@ namespace Microsoft\Graph\Model;
 class ActivityHistoryItem extends Entity
 {
     /**
-    * Gets the status
-    * Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored.
-    *
-    * @return Status The status
-    */
-    public function getStatus()
-    {
-        if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Microsoft\Graph\Model\Status")) {
-                return $this->_propDict["status"];
-            } else {
-                $this->_propDict["status"] = new Status($this->_propDict["status"]);
-                return $this->_propDict["status"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the status
-    * Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored.
-    *
-    * @param Status $val The status
-    *
-    * @return ActivityHistoryItem
-    */
-    public function setStatus($val)
-    {
-        $this->_propDict["status"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the activeDurationSeconds
     * Optional. The duration of active user engagement. if not supplied, this is calculated from the startedDateTime and lastActiveDateTime.
     *
@@ -116,6 +83,39 @@ class ActivityHistoryItem extends Entity
     public function setCreatedDateTime($val)
     {
         $this->_propDict["createdDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the expirationDateTime
+    * Optional. UTC DateTime when the historyItem will undergo hard-delete. Can be set by the client.
+    *
+    * @return \DateTime The expirationDateTime
+    */
+    public function getExpirationDateTime()
+    {
+        if (array_key_exists("expirationDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["expirationDateTime"], "\DateTime")) {
+                return $this->_propDict["expirationDateTime"];
+            } else {
+                $this->_propDict["expirationDateTime"] = new \DateTime($this->_propDict["expirationDateTime"]);
+                return $this->_propDict["expirationDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the expirationDateTime
+    * Optional. UTC DateTime when the historyItem will undergo hard-delete. Can be set by the client.
+    *
+    * @param \DateTime $val The expirationDateTime
+    *
+    * @return ActivityHistoryItem
+    */
+    public function setExpirationDateTime($val)
+    {
+        $this->_propDict["expirationDateTime"] = $val;
         return $this;
     }
     
@@ -186,39 +186,6 @@ class ActivityHistoryItem extends Entity
     }
     
     /**
-    * Gets the expirationDateTime
-    * Optional. UTC DateTime when the historyItem will undergo hard-delete. Can be set by the client.
-    *
-    * @return \DateTime The expirationDateTime
-    */
-    public function getExpirationDateTime()
-    {
-        if (array_key_exists("expirationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["expirationDateTime"], "\DateTime")) {
-                return $this->_propDict["expirationDateTime"];
-            } else {
-                $this->_propDict["expirationDateTime"] = new \DateTime($this->_propDict["expirationDateTime"]);
-                return $this->_propDict["expirationDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the expirationDateTime
-    * Optional. UTC DateTime when the historyItem will undergo hard-delete. Can be set by the client.
-    *
-    * @param \DateTime $val The expirationDateTime
-    *
-    * @return ActivityHistoryItem
-    */
-    public function setExpirationDateTime($val)
-    {
-        $this->_propDict["expirationDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the startedDateTime
     * Required. UTC DateTime when the historyItem (activity session) was started. Required for timeline history.
     *
@@ -248,6 +215,39 @@ class ActivityHistoryItem extends Entity
     public function setStartedDateTime($val)
     {
         $this->_propDict["startedDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the status
+    * Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored.
+    *
+    * @return Status The status
+    */
+    public function getStatus()
+    {
+        if (array_key_exists("status", $this->_propDict)) {
+            if (is_a($this->_propDict["status"], "Microsoft\Graph\Model\Status")) {
+                return $this->_propDict["status"];
+            } else {
+                $this->_propDict["status"] = new Status($this->_propDict["status"]);
+                return $this->_propDict["status"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the status
+    * Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored.
+    *
+    * @param Status $val The status
+    *
+    * @return ActivityHistoryItem
+    */
+    public function setStatus($val)
+    {
+        $this->_propDict["status"] = $val;
         return $this;
     }
     

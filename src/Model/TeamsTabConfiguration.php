@@ -24,34 +24,6 @@ namespace Microsoft\Graph\Model;
 class TeamsTabConfiguration extends Entity
 {
     /**
-    * Gets the entityId
-    * Identifier for the entity hosted by the tab provider.
-    *
-    * @return string The entityId
-    */
-    public function getEntityId()
-    {
-        if (array_key_exists("entityId", $this->_propDict)) {
-            return $this->_propDict["entityId"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the entityId
-    * Identifier for the entity hosted by the tab provider.
-    *
-    * @param string $val The value of the entityId
-    *
-    * @return TeamsTabConfiguration
-    */
-    public function setEntityId($val)
-    {
-        $this->_propDict["entityId"] = $val;
-        return $this;
-    }
-    /**
     * Gets the contentUrl
     * Url used for rendering tab contents in Teams. Required.
     *
@@ -77,6 +49,34 @@ class TeamsTabConfiguration extends Entity
     public function setContentUrl($val)
     {
         $this->_propDict["contentUrl"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the entityId
+    * Identifier for the entity hosted by the tab provider.
+    *
+    * @return string The entityId
+    */
+    public function getEntityId()
+    {
+        if (array_key_exists("entityId", $this->_propDict)) {
+            return $this->_propDict["entityId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the entityId
+    * Identifier for the entity hosted by the tab provider.
+    *
+    * @param string $val The value of the entityId
+    *
+    * @return TeamsTabConfiguration
+    */
+    public function setEntityId($val)
+    {
+        $this->_propDict["entityId"] = $val;
         return $this;
     }
     /**

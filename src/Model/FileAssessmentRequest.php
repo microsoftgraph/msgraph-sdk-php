@@ -25,35 +25,6 @@ namespace Microsoft\Graph\Model;
 class FileAssessmentRequest extends ThreatAssessmentRequest
 {
     /**
-    * Gets the fileName
-    * The file name.
-    *
-    * @return string The fileName
-    */
-    public function getFileName()
-    {
-        if (array_key_exists("fileName", $this->_propDict)) {
-            return $this->_propDict["fileName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the fileName
-    * The file name.
-    *
-    * @param string $val The fileName
-    *
-    * @return FileAssessmentRequest
-    */
-    public function setFileName($val)
-    {
-        $this->_propDict["fileName"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the contentData
     * Base64 encoded file content. The file content cannot fetch back because it isn't stored.
     *
@@ -79,6 +50,35 @@ class FileAssessmentRequest extends ThreatAssessmentRequest
     public function setContentData($val)
     {
         $this->_propDict["contentData"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the fileName
+    * The file name.
+    *
+    * @return string The fileName
+    */
+    public function getFileName()
+    {
+        if (array_key_exists("fileName", $this->_propDict)) {
+            return $this->_propDict["fileName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the fileName
+    * The file name.
+    *
+    * @param string $val The fileName
+    *
+    * @return FileAssessmentRequest
+    */
+    public function setFileName($val)
+    {
+        $this->_propDict["fileName"] = $val;
         return $this;
     }
     

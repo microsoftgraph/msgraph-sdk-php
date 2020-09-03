@@ -23,62 +23,6 @@ namespace Microsoft\Graph\Model;
 */
 class DomainState extends Entity
 {
-    /**
-    * Gets the status
-    * Current status of the operation.  Scheduled - Operation has been scheduled but has not started.  InProgress - Task has started and is in progress.  Failed - Operation has failed.
-    *
-    * @return string The status
-    */
-    public function getStatus()
-    {
-        if (array_key_exists("status", $this->_propDict)) {
-            return $this->_propDict["status"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the status
-    * Current status of the operation.  Scheduled - Operation has been scheduled but has not started.  InProgress - Task has started and is in progress.  Failed - Operation has failed.
-    *
-    * @param string $val The value of the status
-    *
-    * @return DomainState
-    */
-    public function setStatus($val)
-    {
-        $this->_propDict["status"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the operation
-    * Type of asynchronous operation. The values can be ForceDelete or Verification
-    *
-    * @return string The operation
-    */
-    public function getOperation()
-    {
-        if (array_key_exists("operation", $this->_propDict)) {
-            return $this->_propDict["operation"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the operation
-    * Type of asynchronous operation. The values can be ForceDelete or Verification
-    *
-    * @param string $val The value of the operation
-    *
-    * @return DomainState
-    */
-    public function setOperation($val)
-    {
-        $this->_propDict["operation"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the lastActionDateTime
@@ -111,5 +55,61 @@ class DomainState extends Entity
     {
         $this->_propDict["lastActionDateTime"] = $val;
          return $this;
+    }
+    /**
+    * Gets the operation
+    * Type of asynchronous operation. The values can be ForceDelete or Verification
+    *
+    * @return string The operation
+    */
+    public function getOperation()
+    {
+        if (array_key_exists("operation", $this->_propDict)) {
+            return $this->_propDict["operation"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the operation
+    * Type of asynchronous operation. The values can be ForceDelete or Verification
+    *
+    * @param string $val The value of the operation
+    *
+    * @return DomainState
+    */
+    public function setOperation($val)
+    {
+        $this->_propDict["operation"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the status
+    * Current status of the operation.  Scheduled - Operation has been scheduled but has not started.  InProgress - Task has started and is in progress.  Failed - Operation has failed.
+    *
+    * @return string The status
+    */
+    public function getStatus()
+    {
+        if (array_key_exists("status", $this->_propDict)) {
+            return $this->_propDict["status"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the status
+    * Current status of the operation.  Scheduled - Operation has been scheduled but has not started.  InProgress - Task has started and is in progress.  Failed - Operation has failed.
+    *
+    * @param string $val The value of the status
+    *
+    * @return DomainState
+    */
+    public function setStatus($val)
+    {
+        $this->_propDict["status"] = $val;
+        return $this;
     }
 }

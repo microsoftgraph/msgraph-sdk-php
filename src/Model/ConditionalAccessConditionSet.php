@@ -58,101 +58,35 @@ class ConditionalAccessConditionSet extends Entity
     }
 
     /**
-    * Gets the users
-    * Users, groups, and roles included in and excluded from the policy. Required.
+    * Gets the clientAppTypes
+    * Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other.
     *
-    * @return ConditionalAccessUsers The users
+    * @return ConditionalAccessClientApp The clientAppTypes
     */
-    public function getUsers()
+    public function getClientAppTypes()
     {
-        if (array_key_exists("users", $this->_propDict)) {
-            if (is_a($this->_propDict["users"], "Microsoft\Graph\Model\ConditionalAccessUsers")) {
-                return $this->_propDict["users"];
+        if (array_key_exists("clientAppTypes", $this->_propDict)) {
+            if (is_a($this->_propDict["clientAppTypes"], "Microsoft\Graph\Model\ConditionalAccessClientApp")) {
+                return $this->_propDict["clientAppTypes"];
             } else {
-                $this->_propDict["users"] = new ConditionalAccessUsers($this->_propDict["users"]);
-                return $this->_propDict["users"];
+                $this->_propDict["clientAppTypes"] = new ConditionalAccessClientApp($this->_propDict["clientAppTypes"]);
+                return $this->_propDict["clientAppTypes"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the users
-    * Users, groups, and roles included in and excluded from the policy. Required.
+    * Sets the clientAppTypes
+    * Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other.
     *
-    * @param ConditionalAccessUsers $val The value to assign to the users
-    *
-    * @return ConditionalAccessConditionSet The ConditionalAccessConditionSet
-    */
-    public function setUsers($val)
-    {
-        $this->_propDict["users"] = $val;
-         return $this;
-    }
-
-    /**
-    * Gets the signInRiskLevels
-    * Risk levels included in the policy. Possible values are: low, medium, high, none.
-    *
-    * @return RiskLevel The signInRiskLevels
-    */
-    public function getSignInRiskLevels()
-    {
-        if (array_key_exists("signInRiskLevels", $this->_propDict)) {
-            if (is_a($this->_propDict["signInRiskLevels"], "Microsoft\Graph\Model\RiskLevel")) {
-                return $this->_propDict["signInRiskLevels"];
-            } else {
-                $this->_propDict["signInRiskLevels"] = new RiskLevel($this->_propDict["signInRiskLevels"]);
-                return $this->_propDict["signInRiskLevels"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the signInRiskLevels
-    * Risk levels included in the policy. Possible values are: low, medium, high, none.
-    *
-    * @param RiskLevel $val The value to assign to the signInRiskLevels
+    * @param ConditionalAccessClientApp $val The value to assign to the clientAppTypes
     *
     * @return ConditionalAccessConditionSet The ConditionalAccessConditionSet
     */
-    public function setSignInRiskLevels($val)
+    public function setClientAppTypes($val)
     {
-        $this->_propDict["signInRiskLevels"] = $val;
-         return $this;
-    }
-
-    /**
-    * Gets the platforms
-    * Platforms included in and excluded from the policy.
-    *
-    * @return ConditionalAccessPlatforms The platforms
-    */
-    public function getPlatforms()
-    {
-        if (array_key_exists("platforms", $this->_propDict)) {
-            if (is_a($this->_propDict["platforms"], "Microsoft\Graph\Model\ConditionalAccessPlatforms")) {
-                return $this->_propDict["platforms"];
-            } else {
-                $this->_propDict["platforms"] = new ConditionalAccessPlatforms($this->_propDict["platforms"]);
-                return $this->_propDict["platforms"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the platforms
-    * Platforms included in and excluded from the policy.
-    *
-    * @param ConditionalAccessPlatforms $val The value to assign to the platforms
-    *
-    * @return ConditionalAccessConditionSet The ConditionalAccessConditionSet
-    */
-    public function setPlatforms($val)
-    {
-        $this->_propDict["platforms"] = $val;
+        $this->_propDict["clientAppTypes"] = $val;
          return $this;
     }
 
@@ -190,35 +124,101 @@ class ConditionalAccessConditionSet extends Entity
     }
 
     /**
-    * Gets the clientAppTypes
-    * Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other.
+    * Gets the platforms
+    * Platforms included in and excluded from the policy.
     *
-    * @return ConditionalAccessClientApp The clientAppTypes
+    * @return ConditionalAccessPlatforms The platforms
     */
-    public function getClientAppTypes()
+    public function getPlatforms()
     {
-        if (array_key_exists("clientAppTypes", $this->_propDict)) {
-            if (is_a($this->_propDict["clientAppTypes"], "Microsoft\Graph\Model\ConditionalAccessClientApp")) {
-                return $this->_propDict["clientAppTypes"];
+        if (array_key_exists("platforms", $this->_propDict)) {
+            if (is_a($this->_propDict["platforms"], "Microsoft\Graph\Model\ConditionalAccessPlatforms")) {
+                return $this->_propDict["platforms"];
             } else {
-                $this->_propDict["clientAppTypes"] = new ConditionalAccessClientApp($this->_propDict["clientAppTypes"]);
-                return $this->_propDict["clientAppTypes"];
+                $this->_propDict["platforms"] = new ConditionalAccessPlatforms($this->_propDict["platforms"]);
+                return $this->_propDict["platforms"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the clientAppTypes
-    * Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other.
+    * Sets the platforms
+    * Platforms included in and excluded from the policy.
     *
-    * @param ConditionalAccessClientApp $val The value to assign to the clientAppTypes
+    * @param ConditionalAccessPlatforms $val The value to assign to the platforms
     *
     * @return ConditionalAccessConditionSet The ConditionalAccessConditionSet
     */
-    public function setClientAppTypes($val)
+    public function setPlatforms($val)
     {
-        $this->_propDict["clientAppTypes"] = $val;
+        $this->_propDict["platforms"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the signInRiskLevels
+    * Risk levels included in the policy. Possible values are: low, medium, high, none.
+    *
+    * @return RiskLevel The signInRiskLevels
+    */
+    public function getSignInRiskLevels()
+    {
+        if (array_key_exists("signInRiskLevels", $this->_propDict)) {
+            if (is_a($this->_propDict["signInRiskLevels"], "Microsoft\Graph\Model\RiskLevel")) {
+                return $this->_propDict["signInRiskLevels"];
+            } else {
+                $this->_propDict["signInRiskLevels"] = new RiskLevel($this->_propDict["signInRiskLevels"]);
+                return $this->_propDict["signInRiskLevels"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the signInRiskLevels
+    * Risk levels included in the policy. Possible values are: low, medium, high, none.
+    *
+    * @param RiskLevel $val The value to assign to the signInRiskLevels
+    *
+    * @return ConditionalAccessConditionSet The ConditionalAccessConditionSet
+    */
+    public function setSignInRiskLevels($val)
+    {
+        $this->_propDict["signInRiskLevels"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the users
+    * Users, groups, and roles included in and excluded from the policy. Required.
+    *
+    * @return ConditionalAccessUsers The users
+    */
+    public function getUsers()
+    {
+        if (array_key_exists("users", $this->_propDict)) {
+            if (is_a($this->_propDict["users"], "Microsoft\Graph\Model\ConditionalAccessUsers")) {
+                return $this->_propDict["users"];
+            } else {
+                $this->_propDict["users"] = new ConditionalAccessUsers($this->_propDict["users"]);
+                return $this->_propDict["users"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the users
+    * Users, groups, and roles included in and excluded from the policy. Required.
+    *
+    * @param ConditionalAccessUsers $val The value to assign to the users
+    *
+    * @return ConditionalAccessConditionSet The ConditionalAccessConditionSet
+    */
+    public function setUsers($val)
+    {
+        $this->_propDict["users"] = $val;
          return $this;
     }
 }

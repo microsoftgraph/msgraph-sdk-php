@@ -585,6 +585,33 @@ class Organization extends DirectoryObject
         return $this;
     }
     
+    /**
+    * Gets the tenantType
+    *
+    * @return string The tenantType
+    */
+    public function getTenantType()
+    {
+        if (array_key_exists("tenantType", $this->_propDict)) {
+            return $this->_propDict["tenantType"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the tenantType
+    *
+    * @param string $val The tenantType
+    *
+    * @return Organization
+    */
+    public function setTenantType($val)
+    {
+        $this->_propDict["tenantType"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the verifiedDomains

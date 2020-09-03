@@ -25,39 +25,6 @@ class TimeSlot extends Entity
 {
 
     /**
-    * Gets the start
-    * The date, time, and time zone that a period ends.
-    *
-    * @return DateTimeTimeZone The start
-    */
-    public function getStart()
-    {
-        if (array_key_exists("start", $this->_propDict)) {
-            if (is_a($this->_propDict["start"], "Microsoft\Graph\Model\DateTimeTimeZone")) {
-                return $this->_propDict["start"];
-            } else {
-                $this->_propDict["start"] = new DateTimeTimeZone($this->_propDict["start"]);
-                return $this->_propDict["start"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the start
-    * The date, time, and time zone that a period ends.
-    *
-    * @param DateTimeTimeZone $val The value to assign to the start
-    *
-    * @return TimeSlot The TimeSlot
-    */
-    public function setStart($val)
-    {
-        $this->_propDict["start"] = $val;
-         return $this;
-    }
-
-    /**
     * Gets the end
     * The date, time, and time zone that a period begins.
     *
@@ -87,6 +54,39 @@ class TimeSlot extends Entity
     public function setEnd($val)
     {
         $this->_propDict["end"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the start
+    * The date, time, and time zone that a period ends.
+    *
+    * @return DateTimeTimeZone The start
+    */
+    public function getStart()
+    {
+        if (array_key_exists("start", $this->_propDict)) {
+            if (is_a($this->_propDict["start"], "Microsoft\Graph\Model\DateTimeTimeZone")) {
+                return $this->_propDict["start"];
+            } else {
+                $this->_propDict["start"] = new DateTimeTimeZone($this->_propDict["start"]);
+                return $this->_propDict["start"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the start
+    * The date, time, and time zone that a period ends.
+    *
+    * @param DateTimeTimeZone $val The value to assign to the start
+    *
+    * @return TimeSlot The TimeSlot
+    */
+    public function setStart($val)
+    {
+        $this->_propDict["start"] = $val;
          return $this;
     }
 }

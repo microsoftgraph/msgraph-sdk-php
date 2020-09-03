@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* CalendarColor File
+* ChannelMembershipType File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* CalendarColor class
+* ChannelMembershipType class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,20 +24,12 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class CalendarColor extends Enum
+class ChannelMembershipType extends Enum
 {
     /**
-    * The Enum CalendarColor
+    * The Enum ChannelMembershipType
     */
-    const LIGHT_BLUE = "lightBlue";
-    const LIGHT_GREEN = "lightGreen";
-    const AUTO = "auto";
-    const LIGHT_ORANGE = "lightOrange";
-    const LIGHT_GRAY = "lightGray";
-    const LIGHT_YELLOW = "lightYellow";
-    const LIGHT_TEAL = "lightTeal";
-    const LIGHT_PINK = "lightPink";
-    const LIGHT_BROWN = "lightBrown";
-    const LIGHT_RED = "lightRed";
-    const MAX_COLOR = "maxColor";
+    const STANDARD = "standard";
+    const GRAPHPRIVATE = "private";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

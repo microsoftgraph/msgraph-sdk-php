@@ -25,35 +25,35 @@ namespace Microsoft\Graph\Model;
 class ThreatAssessmentRequest extends Entity
 {
     /**
-    * Gets the createdDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
+    * Gets the category
+    * The threat category. Possible values are: spam, phishing, malware.
     *
-    * @return \DateTime The createdDateTime
+    * @return ThreatCategory The category
     */
-    public function getCreatedDateTime()
+    public function getCategory()
     {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
-                return $this->_propDict["createdDateTime"];
+        if (array_key_exists("category", $this->_propDict)) {
+            if (is_a($this->_propDict["category"], "Microsoft\Graph\Model\ThreatCategory")) {
+                return $this->_propDict["category"];
             } else {
-                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
-                return $this->_propDict["createdDateTime"];
+                $this->_propDict["category"] = new ThreatCategory($this->_propDict["category"]);
+                return $this->_propDict["category"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the createdDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
+    * Sets the category
+    * The threat category. Possible values are: spam, phishing, malware.
     *
-    * @param \DateTime $val The createdDateTime
+    * @param ThreatCategory $val The category
     *
     * @return ThreatAssessmentRequest
     */
-    public function setCreatedDateTime($val)
+    public function setCategory($val)
     {
-        $this->_propDict["createdDateTime"] = $val;
+        $this->_propDict["category"] = $val;
         return $this;
     }
     
@@ -91,6 +91,72 @@ class ThreatAssessmentRequest extends Entity
     }
     
     /**
+    * Gets the createdBy
+    * The threat assessment request creator.
+    *
+    * @return IdentitySet The createdBy
+    */
+    public function getCreatedBy()
+    {
+        if (array_key_exists("createdBy", $this->_propDict)) {
+            if (is_a($this->_propDict["createdBy"], "Microsoft\Graph\Model\IdentitySet")) {
+                return $this->_propDict["createdBy"];
+            } else {
+                $this->_propDict["createdBy"] = new IdentitySet($this->_propDict["createdBy"]);
+                return $this->_propDict["createdBy"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the createdBy
+    * The threat assessment request creator.
+    *
+    * @param IdentitySet $val The createdBy
+    *
+    * @return ThreatAssessmentRequest
+    */
+    public function setCreatedBy($val)
+    {
+        $this->_propDict["createdBy"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the createdDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
+    *
+    * @return \DateTime The createdDateTime
+    */
+    public function getCreatedDateTime()
+    {
+        if (array_key_exists("createdDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+                return $this->_propDict["createdDateTime"];
+            } else {
+                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
+                return $this->_propDict["createdDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the createdDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
+    *
+    * @param \DateTime $val The createdDateTime
+    *
+    * @return ThreatAssessmentRequest
+    */
+    public function setCreatedDateTime($val)
+    {
+        $this->_propDict["createdDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the expectedAssessment
     * The expected assessment from submitter. Possible values are: block, unblock.
     *
@@ -120,72 +186,6 @@ class ThreatAssessmentRequest extends Entity
     public function setExpectedAssessment($val)
     {
         $this->_propDict["expectedAssessment"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the category
-    * The threat category. Possible values are: spam, phishing, malware.
-    *
-    * @return ThreatCategory The category
-    */
-    public function getCategory()
-    {
-        if (array_key_exists("category", $this->_propDict)) {
-            if (is_a($this->_propDict["category"], "Microsoft\Graph\Model\ThreatCategory")) {
-                return $this->_propDict["category"];
-            } else {
-                $this->_propDict["category"] = new ThreatCategory($this->_propDict["category"]);
-                return $this->_propDict["category"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the category
-    * The threat category. Possible values are: spam, phishing, malware.
-    *
-    * @param ThreatCategory $val The category
-    *
-    * @return ThreatAssessmentRequest
-    */
-    public function setCategory($val)
-    {
-        $this->_propDict["category"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the status
-    * The assessment process status. Possible values are: pending, completed.
-    *
-    * @return ThreatAssessmentStatus The status
-    */
-    public function getStatus()
-    {
-        if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Microsoft\Graph\Model\ThreatAssessmentStatus")) {
-                return $this->_propDict["status"];
-            } else {
-                $this->_propDict["status"] = new ThreatAssessmentStatus($this->_propDict["status"]);
-                return $this->_propDict["status"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the status
-    * The assessment process status. Possible values are: pending, completed.
-    *
-    * @param ThreatAssessmentStatus $val The status
-    *
-    * @return ThreatAssessmentRequest
-    */
-    public function setStatus($val)
-    {
-        $this->_propDict["status"] = $val;
         return $this;
     }
     
@@ -223,35 +223,35 @@ class ThreatAssessmentRequest extends Entity
     }
     
     /**
-    * Gets the createdBy
-    * The threat assessment request creator.
+    * Gets the status
+    * The assessment process status. Possible values are: pending, completed.
     *
-    * @return IdentitySet The createdBy
+    * @return ThreatAssessmentStatus The status
     */
-    public function getCreatedBy()
+    public function getStatus()
     {
-        if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "Microsoft\Graph\Model\IdentitySet")) {
-                return $this->_propDict["createdBy"];
+        if (array_key_exists("status", $this->_propDict)) {
+            if (is_a($this->_propDict["status"], "Microsoft\Graph\Model\ThreatAssessmentStatus")) {
+                return $this->_propDict["status"];
             } else {
-                $this->_propDict["createdBy"] = new IdentitySet($this->_propDict["createdBy"]);
-                return $this->_propDict["createdBy"];
+                $this->_propDict["status"] = new ThreatAssessmentStatus($this->_propDict["status"]);
+                return $this->_propDict["status"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the createdBy
-    * The threat assessment request creator.
+    * Sets the status
+    * The assessment process status. Possible values are: pending, completed.
     *
-    * @param IdentitySet $val The createdBy
+    * @param ThreatAssessmentStatus $val The status
     *
     * @return ThreatAssessmentRequest
     */
-    public function setCreatedBy($val)
+    public function setStatus($val)
     {
-        $this->_propDict["createdBy"] = $val;
+        $this->_propDict["status"] = $val;
         return $this;
     }
     

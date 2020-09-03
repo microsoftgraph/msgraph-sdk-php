@@ -108,31 +108,31 @@ class DeviceOperatingSystemSummary extends Entity
         return $this;
     }
     /**
-    * Gets the windowsMobileCount
-    * Number of Windows mobile device count.
+    * Gets the unknownCount
+    * Number of unknown device count.
     *
-    * @return int The windowsMobileCount
+    * @return int The unknownCount
     */
-    public function getWindowsMobileCount()
+    public function getUnknownCount()
     {
-        if (array_key_exists("windowsMobileCount", $this->_propDict)) {
-            return $this->_propDict["windowsMobileCount"];
+        if (array_key_exists("unknownCount", $this->_propDict)) {
+            return $this->_propDict["unknownCount"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the windowsMobileCount
-    * Number of Windows mobile device count.
+    * Sets the unknownCount
+    * Number of unknown device count.
     *
-    * @param int $val The value of the windowsMobileCount
+    * @param int $val The value of the unknownCount
     *
     * @return DeviceOperatingSystemSummary
     */
-    public function setWindowsMobileCount($val)
+    public function setUnknownCount($val)
     {
-        $this->_propDict["windowsMobileCount"] = $val;
+        $this->_propDict["unknownCount"] = $val;
         return $this;
     }
     /**
@@ -164,31 +164,31 @@ class DeviceOperatingSystemSummary extends Entity
         return $this;
     }
     /**
-    * Gets the unknownCount
-    * Number of unknown device count.
+    * Gets the windowsMobileCount
+    * Number of Windows mobile device count.
     *
-    * @return int The unknownCount
+    * @return int The windowsMobileCount
     */
-    public function getUnknownCount()
+    public function getWindowsMobileCount()
     {
-        if (array_key_exists("unknownCount", $this->_propDict)) {
-            return $this->_propDict["unknownCount"];
+        if (array_key_exists("windowsMobileCount", $this->_propDict)) {
+            return $this->_propDict["windowsMobileCount"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the unknownCount
-    * Number of unknown device count.
+    * Sets the windowsMobileCount
+    * Number of Windows mobile device count.
     *
-    * @param int $val The value of the unknownCount
+    * @param int $val The value of the windowsMobileCount
     *
     * @return DeviceOperatingSystemSummary
     */
-    public function setUnknownCount($val)
+    public function setWindowsMobileCount($val)
     {
-        $this->_propDict["unknownCount"] = $val;
+        $this->_propDict["windowsMobileCount"] = $val;
         return $this;
     }
 }

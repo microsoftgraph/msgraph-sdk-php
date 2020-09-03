@@ -54,35 +54,6 @@ class WindowsInformationProtectionAppLockerFile extends Entity
     }
     
     /**
-    * Gets the fileHash
-    * SHA256 hash of the file
-    *
-    * @return string The fileHash
-    */
-    public function getFileHash()
-    {
-        if (array_key_exists("fileHash", $this->_propDict)) {
-            return $this->_propDict["fileHash"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the fileHash
-    * SHA256 hash of the file
-    *
-    * @param string $val The fileHash
-    *
-    * @return WindowsInformationProtectionAppLockerFile
-    */
-    public function setFileHash($val)
-    {
-        $this->_propDict["fileHash"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the file
     * File as a byte array
     *
@@ -112,6 +83,35 @@ class WindowsInformationProtectionAppLockerFile extends Entity
     public function setFile($val)
     {
         $this->_propDict["file"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the fileHash
+    * SHA256 hash of the file
+    *
+    * @return string The fileHash
+    */
+    public function getFileHash()
+    {
+        if (array_key_exists("fileHash", $this->_propDict)) {
+            return $this->_propDict["fileHash"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the fileHash
+    * SHA256 hash of the file
+    *
+    * @param string $val The fileHash
+    *
+    * @return WindowsInformationProtectionAppLockerFile
+    */
+    public function setFileHash($val)
+    {
+        $this->_propDict["fileHash"] = $val;
         return $this;
     }
     

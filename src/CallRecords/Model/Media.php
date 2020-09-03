@@ -23,65 +23,37 @@ namespace Microsoft\Graph\CallRecords\Model;
 */
 class Media extends \Microsoft\Graph\Model\Entity
 {
-    /**
-    * Gets the label
-    * How the media was identified during media negotiation stage.
-    *
-    * @return string The label
-    */
-    public function getLabel()
-    {
-        if (array_key_exists("label", $this->_propDict)) {
-            return $this->_propDict["label"];
-        } else {
-            return null;
-        }
-    }
 
     /**
-    * Sets the label
-    * How the media was identified during media negotiation stage.
+    * Gets the calleeDevice
+    * Device information associated with the callee endpoint of this media.
     *
-    * @param string $val The value of the label
-    *
-    * @return Media
+    * @return DeviceInfo The calleeDevice
     */
-    public function setLabel($val)
+    public function getCalleeDevice()
     {
-        $this->_propDict["label"] = $val;
-        return $this;
-    }
-
-    /**
-    * Gets the callerNetwork
-    * Network information associated with the caller endpoint of this media.
-    *
-    * @return NetworkInfo The callerNetwork
-    */
-    public function getCallerNetwork()
-    {
-        if (array_key_exists("callerNetwork", $this->_propDict)) {
-            if (is_a($this->_propDict["callerNetwork"], "Microsoft\Graph\CallRecords\Model\NetworkInfo")) {
-                return $this->_propDict["callerNetwork"];
+        if (array_key_exists("calleeDevice", $this->_propDict)) {
+            if (is_a($this->_propDict["calleeDevice"], "Microsoft\Graph\CallRecords\Model\DeviceInfo")) {
+                return $this->_propDict["calleeDevice"];
             } else {
-                $this->_propDict["callerNetwork"] = new NetworkInfo($this->_propDict["callerNetwork"]);
-                return $this->_propDict["callerNetwork"];
+                $this->_propDict["calleeDevice"] = new DeviceInfo($this->_propDict["calleeDevice"]);
+                return $this->_propDict["calleeDevice"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the callerNetwork
-    * Network information associated with the caller endpoint of this media.
+    * Sets the calleeDevice
+    * Device information associated with the callee endpoint of this media.
     *
-    * @param NetworkInfo $val The value to assign to the callerNetwork
+    * @param DeviceInfo $val The value to assign to the calleeDevice
     *
     * @return Media The Media
     */
-    public function setCallerNetwork($val)
+    public function setCalleeDevice($val)
     {
-        $this->_propDict["callerNetwork"] = $val;
+        $this->_propDict["calleeDevice"] = $val;
          return $this;
     }
 
@@ -152,36 +124,64 @@ class Media extends \Microsoft\Graph\Model\Entity
     }
 
     /**
-    * Gets the calleeDevice
-    * Device information associated with the callee endpoint of this media.
+    * Gets the callerNetwork
+    * Network information associated with the caller endpoint of this media.
     *
-    * @return DeviceInfo The calleeDevice
+    * @return NetworkInfo The callerNetwork
     */
-    public function getCalleeDevice()
+    public function getCallerNetwork()
     {
-        if (array_key_exists("calleeDevice", $this->_propDict)) {
-            if (is_a($this->_propDict["calleeDevice"], "Microsoft\Graph\CallRecords\Model\DeviceInfo")) {
-                return $this->_propDict["calleeDevice"];
+        if (array_key_exists("callerNetwork", $this->_propDict)) {
+            if (is_a($this->_propDict["callerNetwork"], "Microsoft\Graph\CallRecords\Model\NetworkInfo")) {
+                return $this->_propDict["callerNetwork"];
             } else {
-                $this->_propDict["calleeDevice"] = new DeviceInfo($this->_propDict["calleeDevice"]);
-                return $this->_propDict["calleeDevice"];
+                $this->_propDict["callerNetwork"] = new NetworkInfo($this->_propDict["callerNetwork"]);
+                return $this->_propDict["callerNetwork"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the calleeDevice
-    * Device information associated with the callee endpoint of this media.
+    * Sets the callerNetwork
+    * Network information associated with the caller endpoint of this media.
     *
-    * @param DeviceInfo $val The value to assign to the calleeDevice
+    * @param NetworkInfo $val The value to assign to the callerNetwork
     *
     * @return Media The Media
     */
-    public function setCalleeDevice($val)
+    public function setCallerNetwork($val)
     {
-        $this->_propDict["calleeDevice"] = $val;
+        $this->_propDict["callerNetwork"] = $val;
          return $this;
+    }
+    /**
+    * Gets the label
+    * How the media was identified during media negotiation stage.
+    *
+    * @return string The label
+    */
+    public function getLabel()
+    {
+        if (array_key_exists("label", $this->_propDict)) {
+            return $this->_propDict["label"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the label
+    * How the media was identified during media negotiation stage.
+    *
+    * @param string $val The value of the label
+    *
+    * @return Media
+    */
+    public function setLabel($val)
+    {
+        $this->_propDict["label"] = $val;
+        return $this;
     }
 
     /**

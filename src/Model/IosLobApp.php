@@ -25,35 +25,6 @@ namespace Microsoft\Graph\Model;
 class IosLobApp extends MobileLobApp
 {
     /**
-    * Gets the bundleId
-    * The Identity Name.
-    *
-    * @return string The bundleId
-    */
-    public function getBundleId()
-    {
-        if (array_key_exists("bundleId", $this->_propDict)) {
-            return $this->_propDict["bundleId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the bundleId
-    * The Identity Name.
-    *
-    * @param string $val The bundleId
-    *
-    * @return IosLobApp
-    */
-    public function setBundleId($val)
-    {
-        $this->_propDict["bundleId"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the applicableDeviceType
     * The iOS architecture for which this app can run on.
     *
@@ -87,35 +58,60 @@ class IosLobApp extends MobileLobApp
     }
     
     /**
-    * Gets the minimumSupportedOperatingSystem
-    * The value for the minimum applicable operating system.
+    * Gets the buildNumber
+    * The build number of iOS Line of Business (LoB) app.
     *
-    * @return IosMinimumOperatingSystem The minimumSupportedOperatingSystem
+    * @return string The buildNumber
     */
-    public function getMinimumSupportedOperatingSystem()
+    public function getBuildNumber()
     {
-        if (array_key_exists("minimumSupportedOperatingSystem", $this->_propDict)) {
-            if (is_a($this->_propDict["minimumSupportedOperatingSystem"], "Microsoft\Graph\Model\IosMinimumOperatingSystem")) {
-                return $this->_propDict["minimumSupportedOperatingSystem"];
-            } else {
-                $this->_propDict["minimumSupportedOperatingSystem"] = new IosMinimumOperatingSystem($this->_propDict["minimumSupportedOperatingSystem"]);
-                return $this->_propDict["minimumSupportedOperatingSystem"];
-            }
+        if (array_key_exists("buildNumber", $this->_propDict)) {
+            return $this->_propDict["buildNumber"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the minimumSupportedOperatingSystem
-    * The value for the minimum applicable operating system.
+    * Sets the buildNumber
+    * The build number of iOS Line of Business (LoB) app.
     *
-    * @param IosMinimumOperatingSystem $val The minimumSupportedOperatingSystem
+    * @param string $val The buildNumber
     *
     * @return IosLobApp
     */
-    public function setMinimumSupportedOperatingSystem($val)
+    public function setBuildNumber($val)
     {
-        $this->_propDict["minimumSupportedOperatingSystem"] = $val;
+        $this->_propDict["buildNumber"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the bundleId
+    * The Identity Name.
+    *
+    * @return string The bundleId
+    */
+    public function getBundleId()
+    {
+        if (array_key_exists("bundleId", $this->_propDict)) {
+            return $this->_propDict["bundleId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the bundleId
+    * The Identity Name.
+    *
+    * @param string $val The bundleId
+    *
+    * @return IosLobApp
+    */
+    public function setBundleId($val)
+    {
+        $this->_propDict["bundleId"] = $val;
         return $this;
     }
     
@@ -153,6 +149,39 @@ class IosLobApp extends MobileLobApp
     }
     
     /**
+    * Gets the minimumSupportedOperatingSystem
+    * The value for the minimum applicable operating system.
+    *
+    * @return IosMinimumOperatingSystem The minimumSupportedOperatingSystem
+    */
+    public function getMinimumSupportedOperatingSystem()
+    {
+        if (array_key_exists("minimumSupportedOperatingSystem", $this->_propDict)) {
+            if (is_a($this->_propDict["minimumSupportedOperatingSystem"], "Microsoft\Graph\Model\IosMinimumOperatingSystem")) {
+                return $this->_propDict["minimumSupportedOperatingSystem"];
+            } else {
+                $this->_propDict["minimumSupportedOperatingSystem"] = new IosMinimumOperatingSystem($this->_propDict["minimumSupportedOperatingSystem"]);
+                return $this->_propDict["minimumSupportedOperatingSystem"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the minimumSupportedOperatingSystem
+    * The value for the minimum applicable operating system.
+    *
+    * @param IosMinimumOperatingSystem $val The minimumSupportedOperatingSystem
+    *
+    * @return IosLobApp
+    */
+    public function setMinimumSupportedOperatingSystem($val)
+    {
+        $this->_propDict["minimumSupportedOperatingSystem"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the versionNumber
     * The version number of iOS Line of Business (LoB) app.
     *
@@ -178,35 +207,6 @@ class IosLobApp extends MobileLobApp
     public function setVersionNumber($val)
     {
         $this->_propDict["versionNumber"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the buildNumber
-    * The build number of iOS Line of Business (LoB) app.
-    *
-    * @return string The buildNumber
-    */
-    public function getBuildNumber()
-    {
-        if (array_key_exists("buildNumber", $this->_propDict)) {
-            return $this->_propDict["buildNumber"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the buildNumber
-    * The build number of iOS Line of Business (LoB) app.
-    *
-    * @param string $val The buildNumber
-    *
-    * @return IosLobApp
-    */
-    public function setBuildNumber($val)
-    {
-        $this->_propDict["buildNumber"] = $val;
         return $this;
     }
     

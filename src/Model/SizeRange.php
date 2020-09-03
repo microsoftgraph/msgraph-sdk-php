@@ -24,34 +24,6 @@ namespace Microsoft\Graph\Model;
 class SizeRange extends Entity
 {
     /**
-    * Gets the minimumSize
-    * The minimum size (in kilobytes) that an incoming message must have in order for a condition or exception to apply.
-    *
-    * @return int The minimumSize
-    */
-    public function getMinimumSize()
-    {
-        if (array_key_exists("minimumSize", $this->_propDict)) {
-            return $this->_propDict["minimumSize"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the minimumSize
-    * The minimum size (in kilobytes) that an incoming message must have in order for a condition or exception to apply.
-    *
-    * @param int $val The value of the minimumSize
-    *
-    * @return SizeRange
-    */
-    public function setMinimumSize($val)
-    {
-        $this->_propDict["minimumSize"] = $val;
-        return $this;
-    }
-    /**
     * Gets the maximumSize
     * The maximum size (in kilobytes) that an incoming message must have in order for a condition or exception to apply.
     *
@@ -77,6 +49,34 @@ class SizeRange extends Entity
     public function setMaximumSize($val)
     {
         $this->_propDict["maximumSize"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the minimumSize
+    * The minimum size (in kilobytes) that an incoming message must have in order for a condition or exception to apply.
+    *
+    * @return int The minimumSize
+    */
+    public function getMinimumSize()
+    {
+        if (array_key_exists("minimumSize", $this->_propDict)) {
+            return $this->_propDict["minimumSize"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the minimumSize
+    * The minimum size (in kilobytes) that an incoming message must have in order for a condition or exception to apply.
+    *
+    * @param int $val The value of the minimumSize
+    *
+    * @return SizeRange
+    */
+    public function setMinimumSize($val)
+    {
+        $this->_propDict["minimumSize"] = $val;
         return $this;
     }
 }

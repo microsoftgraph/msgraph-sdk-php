@@ -26,34 +26,6 @@ class ConditionalAccessRoot extends Entity
 {
 
      /** 
-     * Gets the policies
-     *
-     * @return array The policies
-     */
-    public function getPolicies()
-    {
-        if (array_key_exists("policies", $this->_propDict)) {
-           return $this->_propDict["policies"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the policies
-    *
-    * @param ConditionalAccessPolicy $val The policies
-    *
-    * @return ConditionalAccessRoot
-    */
-    public function setPolicies($val)
-    {
-		$this->_propDict["policies"] = $val;
-        return $this;
-    }
-    
-
-     /** 
      * Gets the namedLocations
      *
      * @return array The namedLocations
@@ -77,6 +49,34 @@ class ConditionalAccessRoot extends Entity
     public function setNamedLocations($val)
     {
 		$this->_propDict["namedLocations"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the policies
+     *
+     * @return array The policies
+     */
+    public function getPolicies()
+    {
+        if (array_key_exists("policies", $this->_propDict)) {
+           return $this->_propDict["policies"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the policies
+    *
+    * @param ConditionalAccessPolicy $val The policies
+    *
+    * @return ConditionalAccessRoot
+    */
+    public function setPolicies($val)
+    {
+		$this->_propDict["policies"] = $val;
         return $this;
     }
     

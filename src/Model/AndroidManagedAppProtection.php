@@ -25,31 +25,89 @@ namespace Microsoft\Graph\Model;
 class AndroidManagedAppProtection extends TargetedManagedAppProtection
 {
     /**
-    * Gets the screenCaptureBlocked
-    * Indicates whether a managed user can take screen captures of managed apps
+    * Gets the customBrowserDisplayName
+    * Friendly name of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
     *
-    * @return bool The screenCaptureBlocked
+    * @return string The customBrowserDisplayName
     */
-    public function getScreenCaptureBlocked()
+    public function getCustomBrowserDisplayName()
     {
-        if (array_key_exists("screenCaptureBlocked", $this->_propDict)) {
-            return $this->_propDict["screenCaptureBlocked"];
+        if (array_key_exists("customBrowserDisplayName", $this->_propDict)) {
+            return $this->_propDict["customBrowserDisplayName"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the screenCaptureBlocked
-    * Indicates whether a managed user can take screen captures of managed apps
+    * Sets the customBrowserDisplayName
+    * Friendly name of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
     *
-    * @param bool $val The screenCaptureBlocked
+    * @param string $val The customBrowserDisplayName
     *
     * @return AndroidManagedAppProtection
     */
-    public function setScreenCaptureBlocked($val)
+    public function setCustomBrowserDisplayName($val)
     {
-        $this->_propDict["screenCaptureBlocked"] = boolval($val);
+        $this->_propDict["customBrowserDisplayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the customBrowserPackageId
+    * Unique identifier of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+    *
+    * @return string The customBrowserPackageId
+    */
+    public function getCustomBrowserPackageId()
+    {
+        if (array_key_exists("customBrowserPackageId", $this->_propDict)) {
+            return $this->_propDict["customBrowserPackageId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the customBrowserPackageId
+    * Unique identifier of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+    *
+    * @param string $val The customBrowserPackageId
+    *
+    * @return AndroidManagedAppProtection
+    */
+    public function setCustomBrowserPackageId($val)
+    {
+        $this->_propDict["customBrowserPackageId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the deployedAppCount
+    * Count of apps to which the current policy is deployed.
+    *
+    * @return int The deployedAppCount
+    */
+    public function getDeployedAppCount()
+    {
+        if (array_key_exists("deployedAppCount", $this->_propDict)) {
+            return $this->_propDict["deployedAppCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the deployedAppCount
+    * Count of apps to which the current policy is deployed.
+    *
+    * @param int $val The deployedAppCount
+    *
+    * @return AndroidManagedAppProtection
+    */
+    public function setDeployedAppCount($val)
+    {
+        $this->_propDict["deployedAppCount"] = intval($val);
         return $this;
     }
     
@@ -112,35 +170,6 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     }
     
     /**
-    * Gets the deployedAppCount
-    * Count of apps to which the current policy is deployed.
-    *
-    * @return int The deployedAppCount
-    */
-    public function getDeployedAppCount()
-    {
-        if (array_key_exists("deployedAppCount", $this->_propDict)) {
-            return $this->_propDict["deployedAppCount"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the deployedAppCount
-    * Count of apps to which the current policy is deployed.
-    *
-    * @param int $val The deployedAppCount
-    *
-    * @return AndroidManagedAppProtection
-    */
-    public function setDeployedAppCount($val)
-    {
-        $this->_propDict["deployedAppCount"] = intval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the minimumRequiredPatchVersion
     * Define the oldest required Android security patch level a user can have to gain secure access to the app.
     *
@@ -199,60 +228,31 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     }
     
     /**
-    * Gets the customBrowserPackageId
-    * Unique identifier of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+    * Gets the screenCaptureBlocked
+    * Indicates whether a managed user can take screen captures of managed apps
     *
-    * @return string The customBrowserPackageId
+    * @return bool The screenCaptureBlocked
     */
-    public function getCustomBrowserPackageId()
+    public function getScreenCaptureBlocked()
     {
-        if (array_key_exists("customBrowserPackageId", $this->_propDict)) {
-            return $this->_propDict["customBrowserPackageId"];
+        if (array_key_exists("screenCaptureBlocked", $this->_propDict)) {
+            return $this->_propDict["screenCaptureBlocked"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the customBrowserPackageId
-    * Unique identifier of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+    * Sets the screenCaptureBlocked
+    * Indicates whether a managed user can take screen captures of managed apps
     *
-    * @param string $val The customBrowserPackageId
-    *
-    * @return AndroidManagedAppProtection
-    */
-    public function setCustomBrowserPackageId($val)
-    {
-        $this->_propDict["customBrowserPackageId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the customBrowserDisplayName
-    * Friendly name of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
-    *
-    * @return string The customBrowserDisplayName
-    */
-    public function getCustomBrowserDisplayName()
-    {
-        if (array_key_exists("customBrowserDisplayName", $this->_propDict)) {
-            return $this->_propDict["customBrowserDisplayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the customBrowserDisplayName
-    * Friendly name of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
-    *
-    * @param string $val The customBrowserDisplayName
+    * @param bool $val The screenCaptureBlocked
     *
     * @return AndroidManagedAppProtection
     */
-    public function setCustomBrowserDisplayName($val)
+    public function setScreenCaptureBlocked($val)
     {
-        $this->_propDict["customBrowserDisplayName"] = $val;
+        $this->_propDict["screenCaptureBlocked"] = boolval($val);
         return $this;
     }
     

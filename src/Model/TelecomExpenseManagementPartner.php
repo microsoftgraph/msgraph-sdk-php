@@ -25,64 +25,6 @@ namespace Microsoft\Graph\Model;
 class TelecomExpenseManagementPartner extends Entity
 {
     /**
-    * Gets the displayName
-    * Display name of the TEM partner.
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the displayName
-    * Display name of the TEM partner.
-    *
-    * @param string $val The displayName
-    *
-    * @return TelecomExpenseManagementPartner
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the url
-    * URL of the TEM partner's administrative control panel, where an administrator can configure their TEM service.
-    *
-    * @return string The url
-    */
-    public function getUrl()
-    {
-        if (array_key_exists("url", $this->_propDict)) {
-            return $this->_propDict["url"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the url
-    * URL of the TEM partner's administrative control panel, where an administrator can configure their TEM service.
-    *
-    * @param string $val The url
-    *
-    * @return TelecomExpenseManagementPartner
-    */
-    public function setUrl($val)
-    {
-        $this->_propDict["url"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the appAuthorized
     * Whether the partner's AAD app has been authorized to access Intune.
     *
@@ -108,6 +50,35 @@ class TelecomExpenseManagementPartner extends Entity
     public function setAppAuthorized($val)
     {
         $this->_propDict["appAuthorized"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the displayName
+    * Display name of the TEM partner.
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the displayName
+    * Display name of the TEM partner.
+    *
+    * @param string $val The displayName
+    *
+    * @return TelecomExpenseManagementPartner
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
         return $this;
     }
     
@@ -170,6 +141,35 @@ class TelecomExpenseManagementPartner extends Entity
     public function setLastConnectionDateTime($val)
     {
         $this->_propDict["lastConnectionDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the url
+    * URL of the TEM partner's administrative control panel, where an administrator can configure their TEM service.
+    *
+    * @return string The url
+    */
+    public function getUrl()
+    {
+        if (array_key_exists("url", $this->_propDict)) {
+            return $this->_propDict["url"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the url
+    * URL of the TEM partner's administrative control panel, where an administrator can configure their TEM service.
+    *
+    * @param string $val The url
+    *
+    * @return TelecomExpenseManagementPartner
+    */
+    public function setUrl($val)
+    {
+        $this->_propDict["url"] = $val;
         return $this;
     }
     

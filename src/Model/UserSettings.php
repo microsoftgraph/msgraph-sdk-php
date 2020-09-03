@@ -25,33 +25,6 @@ namespace Microsoft\Graph\Model;
 class UserSettings extends Entity
 {
     /**
-    * Gets the contributionToContentDiscoveryDisabled
-    *
-    * @return bool The contributionToContentDiscoveryDisabled
-    */
-    public function getContributionToContentDiscoveryDisabled()
-    {
-        if (array_key_exists("contributionToContentDiscoveryDisabled", $this->_propDict)) {
-            return $this->_propDict["contributionToContentDiscoveryDisabled"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the contributionToContentDiscoveryDisabled
-    *
-    * @param bool $val The contributionToContentDiscoveryDisabled
-    *
-    * @return UserSettings
-    */
-    public function setContributionToContentDiscoveryDisabled($val)
-    {
-        $this->_propDict["contributionToContentDiscoveryDisabled"] = boolval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the contributionToContentDiscoveryAsOrganizationDisabled
     *
     * @return bool The contributionToContentDiscoveryAsOrganizationDisabled
@@ -75,6 +48,33 @@ class UserSettings extends Entity
     public function setContributionToContentDiscoveryAsOrganizationDisabled($val)
     {
         $this->_propDict["contributionToContentDiscoveryAsOrganizationDisabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the contributionToContentDiscoveryDisabled
+    *
+    * @return bool The contributionToContentDiscoveryDisabled
+    */
+    public function getContributionToContentDiscoveryDisabled()
+    {
+        if (array_key_exists("contributionToContentDiscoveryDisabled", $this->_propDict)) {
+            return $this->_propDict["contributionToContentDiscoveryDisabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the contributionToContentDiscoveryDisabled
+    *
+    * @param bool $val The contributionToContentDiscoveryDisabled
+    *
+    * @return UserSettings
+    */
+    public function setContributionToContentDiscoveryDisabled($val)
+    {
+        $this->_propDict["contributionToContentDiscoveryDisabled"] = boolval($val);
         return $this;
     }
     

@@ -25,35 +25,6 @@ namespace Microsoft\Graph\Model;
 class MailAssessmentRequest extends ThreatAssessmentRequest
 {
     /**
-    * Gets the recipientEmail
-    * The mail recipient whose policies are used to assess the mail.
-    *
-    * @return string The recipientEmail
-    */
-    public function getRecipientEmail()
-    {
-        if (array_key_exists("recipientEmail", $this->_propDict)) {
-            return $this->_propDict["recipientEmail"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the recipientEmail
-    * The mail recipient whose policies are used to assess the mail.
-    *
-    * @param string $val The recipientEmail
-    *
-    * @return MailAssessmentRequest
-    */
-    public function setRecipientEmail($val)
-    {
-        $this->_propDict["recipientEmail"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the destinationRoutingReason
     * The reason for mail routed to its destination. Possible values are: none, mailFlowRule, safeSender, blockedSender, advancedSpamFiltering, domainAllowList, domainBlockList, notInAddressBook, firstTimeSender, autoPurgeToInbox, autoPurgeToJunk, autoPurgeToDeleted, outbound, notJunk, junk.
     *
@@ -112,6 +83,35 @@ class MailAssessmentRequest extends ThreatAssessmentRequest
     public function setMessageUri($val)
     {
         $this->_propDict["messageUri"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the recipientEmail
+    * The mail recipient whose policies are used to assess the mail.
+    *
+    * @return string The recipientEmail
+    */
+    public function getRecipientEmail()
+    {
+        if (array_key_exists("recipientEmail", $this->_propDict)) {
+            return $this->_propDict["recipientEmail"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the recipientEmail
+    * The mail recipient whose policies are used to assess the mail.
+    *
+    * @param string $val The recipientEmail
+    *
+    * @return MailAssessmentRequest
+    */
+    public function setRecipientEmail($val)
+    {
+        $this->_propDict["recipientEmail"] = $val;
         return $this;
     }
     

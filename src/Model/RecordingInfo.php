@@ -25,39 +25,6 @@ class RecordingInfo extends Entity
 {
 
     /**
-    * Gets the recordingStatus
-    * Possible values are: unknown, notRecording, recording, or failed.
-    *
-    * @return RecordingStatus The recordingStatus
-    */
-    public function getRecordingStatus()
-    {
-        if (array_key_exists("recordingStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["recordingStatus"], "Microsoft\Graph\Model\RecordingStatus")) {
-                return $this->_propDict["recordingStatus"];
-            } else {
-                $this->_propDict["recordingStatus"] = new RecordingStatus($this->_propDict["recordingStatus"]);
-                return $this->_propDict["recordingStatus"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the recordingStatus
-    * Possible values are: unknown, notRecording, recording, or failed.
-    *
-    * @param RecordingStatus $val The value to assign to the recordingStatus
-    *
-    * @return RecordingInfo The RecordingInfo
-    */
-    public function setRecordingStatus($val)
-    {
-        $this->_propDict["recordingStatus"] = $val;
-         return $this;
-    }
-
-    /**
     * Gets the initiator
     * The identities of the recording initiator.
     *
@@ -87,6 +54,39 @@ class RecordingInfo extends Entity
     public function setInitiator($val)
     {
         $this->_propDict["initiator"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the recordingStatus
+    * Possible values are: unknown, notRecording, recording, or failed.
+    *
+    * @return RecordingStatus The recordingStatus
+    */
+    public function getRecordingStatus()
+    {
+        if (array_key_exists("recordingStatus", $this->_propDict)) {
+            if (is_a($this->_propDict["recordingStatus"], "Microsoft\Graph\Model\RecordingStatus")) {
+                return $this->_propDict["recordingStatus"];
+            } else {
+                $this->_propDict["recordingStatus"] = new RecordingStatus($this->_propDict["recordingStatus"]);
+                return $this->_propDict["recordingStatus"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the recordingStatus
+    * Possible values are: unknown, notRecording, recording, or failed.
+    *
+    * @param RecordingStatus $val The value to assign to the recordingStatus
+    *
+    * @return RecordingInfo The RecordingInfo
+    */
+    public function setRecordingStatus($val)
+    {
+        $this->_propDict["recordingStatus"] = $val;
          return $this;
     }
 }

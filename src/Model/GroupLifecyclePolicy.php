@@ -25,6 +25,35 @@ namespace Microsoft\Graph\Model;
 class GroupLifecyclePolicy extends Entity
 {
     /**
+    * Gets the alternateNotificationEmails
+    * List of email address to send notifications for groups without owners. Multiple email address can be defined by separating email address with a semicolon.
+    *
+    * @return string The alternateNotificationEmails
+    */
+    public function getAlternateNotificationEmails()
+    {
+        if (array_key_exists("alternateNotificationEmails", $this->_propDict)) {
+            return $this->_propDict["alternateNotificationEmails"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the alternateNotificationEmails
+    * List of email address to send notifications for groups without owners. Multiple email address can be defined by separating email address with a semicolon.
+    *
+    * @param string $val The alternateNotificationEmails
+    *
+    * @return GroupLifecyclePolicy
+    */
+    public function setAlternateNotificationEmails($val)
+    {
+        $this->_propDict["alternateNotificationEmails"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the groupLifetimeInDays
     * Number of days before a group expires and needs to be renewed. Once renewed, the group expiration is extended by the number of days defined.
     *
@@ -79,35 +108,6 @@ class GroupLifecyclePolicy extends Entity
     public function setManagedGroupTypes($val)
     {
         $this->_propDict["managedGroupTypes"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the alternateNotificationEmails
-    * List of email address to send notifications for groups without owners. Multiple email address can be defined by separating email address with a semicolon.
-    *
-    * @return string The alternateNotificationEmails
-    */
-    public function getAlternateNotificationEmails()
-    {
-        if (array_key_exists("alternateNotificationEmails", $this->_propDict)) {
-            return $this->_propDict["alternateNotificationEmails"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the alternateNotificationEmails
-    * List of email address to send notifications for groups without owners. Multiple email address can be defined by separating email address with a semicolon.
-    *
-    * @param string $val The alternateNotificationEmails
-    *
-    * @return GroupLifecyclePolicy
-    */
-    public function setAlternateNotificationEmails($val)
-    {
-        $this->_propDict["alternateNotificationEmails"] = $val;
         return $this;
     }
     

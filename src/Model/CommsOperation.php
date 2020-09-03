@@ -25,39 +25,6 @@ namespace Microsoft\Graph\Model;
 class CommsOperation extends Entity
 {
     /**
-    * Gets the status
-    * Possible values are: notStarted, running, completed, failed. Read-only.
-    *
-    * @return OperationStatus The status
-    */
-    public function getStatus()
-    {
-        if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Microsoft\Graph\Model\OperationStatus")) {
-                return $this->_propDict["status"];
-            } else {
-                $this->_propDict["status"] = new OperationStatus($this->_propDict["status"]);
-                return $this->_propDict["status"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the status
-    * Possible values are: notStarted, running, completed, failed. Read-only.
-    *
-    * @param OperationStatus $val The status
-    *
-    * @return CommsOperation
-    */
-    public function setStatus($val)
-    {
-        $this->_propDict["status"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the clientContext
     * Unique Client Context string. Max limit is 256 chars.
     *
@@ -116,6 +83,39 @@ class CommsOperation extends Entity
     public function setResultInfo($val)
     {
         $this->_propDict["resultInfo"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the status
+    * Possible values are: notStarted, running, completed, failed. Read-only.
+    *
+    * @return OperationStatus The status
+    */
+    public function getStatus()
+    {
+        if (array_key_exists("status", $this->_propDict)) {
+            if (is_a($this->_propDict["status"], "Microsoft\Graph\Model\OperationStatus")) {
+                return $this->_propDict["status"];
+            } else {
+                $this->_propDict["status"] = new OperationStatus($this->_propDict["status"]);
+                return $this->_propDict["status"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the status
+    * Possible values are: notStarted, running, completed, failed. Read-only.
+    *
+    * @param OperationStatus $val The status
+    *
+    * @return CommsOperation
+    */
+    public function setStatus($val)
+    {
+        $this->_propDict["status"] = $val;
         return $this;
     }
     

@@ -24,34 +24,6 @@ namespace Microsoft\Graph\Model;
 class EducationTeacher extends Entity
 {
     /**
-    * Gets the teacherNumber
-    * Teacher number.
-    *
-    * @return string The teacherNumber
-    */
-    public function getTeacherNumber()
-    {
-        if (array_key_exists("teacherNumber", $this->_propDict)) {
-            return $this->_propDict["teacherNumber"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the teacherNumber
-    * Teacher number.
-    *
-    * @param string $val The value of the teacherNumber
-    *
-    * @return EducationTeacher
-    */
-    public function setTeacherNumber($val)
-    {
-        $this->_propDict["teacherNumber"] = $val;
-        return $this;
-    }
-    /**
     * Gets the externalId
     * ID of the teacher in the source system.
     *
@@ -77,6 +49,34 @@ class EducationTeacher extends Entity
     public function setExternalId($val)
     {
         $this->_propDict["externalId"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the teacherNumber
+    * Teacher number.
+    *
+    * @return string The teacherNumber
+    */
+    public function getTeacherNumber()
+    {
+        if (array_key_exists("teacherNumber", $this->_propDict)) {
+            return $this->_propDict["teacherNumber"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the teacherNumber
+    * Teacher number.
+    *
+    * @param string $val The value of the teacherNumber
+    *
+    * @return EducationTeacher
+    */
+    public function setTeacherNumber($val)
+    {
+        $this->_propDict["teacherNumber"] = $val;
         return $this;
     }
 }

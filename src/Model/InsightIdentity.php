@@ -24,6 +24,34 @@ namespace Microsoft\Graph\Model;
 class InsightIdentity extends Entity
 {
     /**
+    * Gets the address
+    * The email address of the user who shared the item.
+    *
+    * @return string The address
+    */
+    public function getAddress()
+    {
+        if (array_key_exists("address", $this->_propDict)) {
+            return $this->_propDict["address"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the address
+    * The email address of the user who shared the item.
+    *
+    * @param string $val The value of the address
+    *
+    * @return InsightIdentity
+    */
+    public function setAddress($val)
+    {
+        $this->_propDict["address"] = $val;
+        return $this;
+    }
+    /**
     * Gets the displayName
     * The display name of the user who shared the item.
     *
@@ -77,34 +105,6 @@ class InsightIdentity extends Entity
     public function setId($val)
     {
         $this->_propDict["id"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the address
-    * The email address of the user who shared the item.
-    *
-    * @return string The address
-    */
-    public function getAddress()
-    {
-        if (array_key_exists("address", $this->_propDict)) {
-            return $this->_propDict["address"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the address
-    * The email address of the user who shared the item.
-    *
-    * @param string $val The value of the address
-    *
-    * @return InsightIdentity
-    */
-    public function setAddress($val)
-    {
-        $this->_propDict["address"] = $val;
         return $this;
     }
 }

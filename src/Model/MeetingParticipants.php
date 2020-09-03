@@ -25,37 +25,6 @@ class MeetingParticipants extends Entity
 {
 
     /**
-    * Gets the organizer
-    *
-    * @return MeetingParticipantInfo The organizer
-    */
-    public function getOrganizer()
-    {
-        if (array_key_exists("organizer", $this->_propDict)) {
-            if (is_a($this->_propDict["organizer"], "Microsoft\Graph\Model\MeetingParticipantInfo")) {
-                return $this->_propDict["organizer"];
-            } else {
-                $this->_propDict["organizer"] = new MeetingParticipantInfo($this->_propDict["organizer"]);
-                return $this->_propDict["organizer"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the organizer
-    *
-    * @param MeetingParticipantInfo $val The value to assign to the organizer
-    *
-    * @return MeetingParticipants The MeetingParticipants
-    */
-    public function setOrganizer($val)
-    {
-        $this->_propDict["organizer"] = $val;
-         return $this;
-    }
-
-    /**
     * Gets the attendees
     *
     * @return MeetingParticipantInfo The attendees
@@ -83,6 +52,37 @@ class MeetingParticipants extends Entity
     public function setAttendees($val)
     {
         $this->_propDict["attendees"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the organizer
+    *
+    * @return MeetingParticipantInfo The organizer
+    */
+    public function getOrganizer()
+    {
+        if (array_key_exists("organizer", $this->_propDict)) {
+            if (is_a($this->_propDict["organizer"], "Microsoft\Graph\Model\MeetingParticipantInfo")) {
+                return $this->_propDict["organizer"];
+            } else {
+                $this->_propDict["organizer"] = new MeetingParticipantInfo($this->_propDict["organizer"]);
+                return $this->_propDict["organizer"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the organizer
+    *
+    * @param MeetingParticipantInfo $val The value to assign to the organizer
+    *
+    * @return MeetingParticipants The MeetingParticipants
+    */
+    public function setOrganizer($val)
+    {
+        $this->_propDict["organizer"] = $val;
          return $this;
     }
 }

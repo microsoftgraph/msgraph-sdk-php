@@ -25,35 +25,6 @@ namespace Microsoft\Graph\Model;
 class Channel extends Entity
 {
     /**
-    * Gets the displayName
-    * Channel name as it will appear to the user in Microsoft Teams.
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the displayName
-    * Channel name as it will appear to the user in Microsoft Teams.
-    *
-    * @param string $val The displayName
-    *
-    * @return Channel
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the description
     * Optional textual description for the channel.
     *
@@ -79,6 +50,35 @@ class Channel extends Entity
     public function setDescription($val)
     {
         $this->_propDict["description"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the displayName
+    * Channel name as it will appear to the user in Microsoft Teams.
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the displayName
+    * Channel name as it will appear to the user in Microsoft Teams.
+    *
+    * @param string $val The displayName
+    *
+    * @return Channel
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
         return $this;
     }
     
@@ -112,6 +112,37 @@ class Channel extends Entity
     }
     
     /**
+    * Gets the membershipType
+    *
+    * @return ChannelMembershipType The membershipType
+    */
+    public function getMembershipType()
+    {
+        if (array_key_exists("membershipType", $this->_propDict)) {
+            if (is_a($this->_propDict["membershipType"], "Microsoft\Graph\Model\ChannelMembershipType")) {
+                return $this->_propDict["membershipType"];
+            } else {
+                $this->_propDict["membershipType"] = new ChannelMembershipType($this->_propDict["membershipType"]);
+                return $this->_propDict["membershipType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the membershipType
+    *
+    * @param ChannelMembershipType $val The membershipType
+    *
+    * @return Channel
+    */
+    public function setMembershipType($val)
+    {
+        $this->_propDict["membershipType"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the webUrl
     * A hyperlink that will navigate to the channel in Microsoft Teams. This is the URL that you get when you right-click a channel in Microsoft Teams and select Get link to channel. This URL should be treated as an opaque blob, and not parsed. Read-only.
     *
@@ -137,6 +168,67 @@ class Channel extends Entity
     public function setWebUrl($val)
     {
         $this->_propDict["webUrl"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the filesFolder
+    * Metadata for the location where the channel's files are stored.
+    *
+    * @return DriveItem The filesFolder
+    */
+    public function getFilesFolder()
+    {
+        if (array_key_exists("filesFolder", $this->_propDict)) {
+            if (is_a($this->_propDict["filesFolder"], "Microsoft\Graph\Model\DriveItem")) {
+                return $this->_propDict["filesFolder"];
+            } else {
+                $this->_propDict["filesFolder"] = new DriveItem($this->_propDict["filesFolder"]);
+                return $this->_propDict["filesFolder"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the filesFolder
+    * Metadata for the location where the channel's files are stored.
+    *
+    * @param DriveItem $val The filesFolder
+    *
+    * @return Channel
+    */
+    public function setFilesFolder($val)
+    {
+        $this->_propDict["filesFolder"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the members
+     *
+     * @return array The members
+     */
+    public function getMembers()
+    {
+        if (array_key_exists("members", $this->_propDict)) {
+           return $this->_propDict["members"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the members
+    *
+    * @param ConversationMember $val The members
+    *
+    * @return Channel
+    */
+    public function setMembers($val)
+    {
+		$this->_propDict["members"] = $val;
         return $this;
     }
     
@@ -197,39 +289,6 @@ class Channel extends Entity
     public function setTabs($val)
     {
 		$this->_propDict["tabs"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the filesFolder
-    * Metadata for the location where the channel's files are stored.
-    *
-    * @return DriveItem The filesFolder
-    */
-    public function getFilesFolder()
-    {
-        if (array_key_exists("filesFolder", $this->_propDict)) {
-            if (is_a($this->_propDict["filesFolder"], "Microsoft\Graph\Model\DriveItem")) {
-                return $this->_propDict["filesFolder"];
-            } else {
-                $this->_propDict["filesFolder"] = new DriveItem($this->_propDict["filesFolder"]);
-                return $this->_propDict["filesFolder"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the filesFolder
-    * Metadata for the location where the channel's files are stored.
-    *
-    * @param DriveItem $val The filesFolder
-    *
-    * @return Channel
-    */
-    public function setFilesFolder($val)
-    {
-        $this->_propDict["filesFolder"] = $val;
         return $this;
     }
     

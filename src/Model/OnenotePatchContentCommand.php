@@ -57,34 +57,6 @@ class OnenotePatchContentCommand extends Entity
          return $this;
     }
     /**
-    * Gets the target
-    * The element to update. Must be the #&amp;lt;data-id&amp;gt; or the generated &amp;lt;id&amp;gt; of the element, or the body or title keyword.
-    *
-    * @return string The target
-    */
-    public function getTarget()
-    {
-        if (array_key_exists("target", $this->_propDict)) {
-            return $this->_propDict["target"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the target
-    * The element to update. Must be the #&amp;lt;data-id&amp;gt; or the generated &amp;lt;id&amp;gt; of the element, or the body or title keyword.
-    *
-    * @param string $val The value of the target
-    *
-    * @return OnenotePatchContentCommand
-    */
-    public function setTarget($val)
-    {
-        $this->_propDict["target"] = $val;
-        return $this;
-    }
-    /**
     * Gets the content
     * A string of well-formed HTML to add to the page, and any image or file binary data. If the content contains binary data, the request must be sent using the multipart/form-data content type with a 'Commands' part.
     *
@@ -144,5 +116,33 @@ class OnenotePatchContentCommand extends Entity
     {
         $this->_propDict["position"] = $val;
          return $this;
+    }
+    /**
+    * Gets the target
+    * The element to update. Must be the #&amp;lt;data-id&amp;gt; or the generated &amp;lt;id&amp;gt; of the element, or the body or title keyword.
+    *
+    * @return string The target
+    */
+    public function getTarget()
+    {
+        if (array_key_exists("target", $this->_propDict)) {
+            return $this->_propDict["target"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the target
+    * The element to update. Must be the #&amp;lt;data-id&amp;gt; or the generated &amp;lt;id&amp;gt; of the element, or the body or title keyword.
+    *
+    * @param string $val The value of the target
+    *
+    * @return OnenotePatchContentCommand
+    */
+    public function setTarget($val)
+    {
+        $this->_propDict["target"] = $val;
+        return $this;
     }
 }

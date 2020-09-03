@@ -58,6 +58,67 @@ class FileEncryptionInfo extends Entity
     }
 
     /**
+    * Gets the fileDigest
+    * The file digest prior to encryption.
+    *
+    * @return \GuzzleHttp\Psr7\Stream The fileDigest
+    */
+    public function getFileDigest()
+    {
+        if (array_key_exists("fileDigest", $this->_propDict)) {
+            if (is_a($this->_propDict["fileDigest"], "\GuzzleHttp\Psr7\Stream")) {
+                return $this->_propDict["fileDigest"];
+            } else {
+                $this->_propDict["fileDigest"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["fileDigest"]);
+                return $this->_propDict["fileDigest"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the fileDigest
+    * The file digest prior to encryption.
+    *
+    * @param \GuzzleHttp\Psr7\Stream $val The value to assign to the fileDigest
+    *
+    * @return FileEncryptionInfo The FileEncryptionInfo
+    */
+    public function setFileDigest($val)
+    {
+        $this->_propDict["fileDigest"] = $val;
+         return $this;
+    }
+    /**
+    * Gets the fileDigestAlgorithm
+    * The file digest algorithm.
+    *
+    * @return string The fileDigestAlgorithm
+    */
+    public function getFileDigestAlgorithm()
+    {
+        if (array_key_exists("fileDigestAlgorithm", $this->_propDict)) {
+            return $this->_propDict["fileDigestAlgorithm"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the fileDigestAlgorithm
+    * The file digest algorithm.
+    *
+    * @param string $val The value of the fileDigestAlgorithm
+    *
+    * @return FileEncryptionInfo
+    */
+    public function setFileDigestAlgorithm($val)
+    {
+        $this->_propDict["fileDigestAlgorithm"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the initializationVector
     * The initialization vector used for the encryption algorithm.
     *
@@ -181,67 +242,6 @@ class FileEncryptionInfo extends Entity
     public function setProfileIdentifier($val)
     {
         $this->_propDict["profileIdentifier"] = $val;
-        return $this;
-    }
-
-    /**
-    * Gets the fileDigest
-    * The file digest prior to encryption.
-    *
-    * @return \GuzzleHttp\Psr7\Stream The fileDigest
-    */
-    public function getFileDigest()
-    {
-        if (array_key_exists("fileDigest", $this->_propDict)) {
-            if (is_a($this->_propDict["fileDigest"], "\GuzzleHttp\Psr7\Stream")) {
-                return $this->_propDict["fileDigest"];
-            } else {
-                $this->_propDict["fileDigest"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["fileDigest"]);
-                return $this->_propDict["fileDigest"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the fileDigest
-    * The file digest prior to encryption.
-    *
-    * @param \GuzzleHttp\Psr7\Stream $val The value to assign to the fileDigest
-    *
-    * @return FileEncryptionInfo The FileEncryptionInfo
-    */
-    public function setFileDigest($val)
-    {
-        $this->_propDict["fileDigest"] = $val;
-         return $this;
-    }
-    /**
-    * Gets the fileDigestAlgorithm
-    * The file digest algorithm.
-    *
-    * @return string The fileDigestAlgorithm
-    */
-    public function getFileDigestAlgorithm()
-    {
-        if (array_key_exists("fileDigestAlgorithm", $this->_propDict)) {
-            return $this->_propDict["fileDigestAlgorithm"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the fileDigestAlgorithm
-    * The file digest algorithm.
-    *
-    * @param string $val The value of the fileDigestAlgorithm
-    *
-    * @return FileEncryptionInfo
-    */
-    public function setFileDigestAlgorithm($val)
-    {
-        $this->_propDict["fileDigestAlgorithm"] = $val;
         return $this;
     }
 }

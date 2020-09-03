@@ -238,35 +238,6 @@ class Group extends DirectoryObject
     }
     
     /**
-    * Gets the hasMembersWithLicenseErrors
-    * Indicates whether there are members in this group that have license errors from its group-based license assignment. This property is never returned on a GET operation. You can use it as a $filter argument to get groups that have members with license errors (that is, filter for this property being true). See an example.
-    *
-    * @return bool The hasMembersWithLicenseErrors
-    */
-    public function getHasMembersWithLicenseErrors()
-    {
-        if (array_key_exists("hasMembersWithLicenseErrors", $this->_propDict)) {
-            return $this->_propDict["hasMembersWithLicenseErrors"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the hasMembersWithLicenseErrors
-    * Indicates whether there are members in this group that have license errors from its group-based license assignment. This property is never returned on a GET operation. You can use it as a $filter argument to get groups that have members with license errors (that is, filter for this property being true). See an example.
-    *
-    * @param bool $val The hasMembersWithLicenseErrors
-    *
-    * @return Group
-    */
-    public function setHasMembersWithLicenseErrors($val)
-    {
-        $this->_propDict["hasMembersWithLicenseErrors"] = boolval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the groupTypes
     * Specifies the group type and its membership.  If the collection contains Unified, the group is a Microsoft 365 group; otherwise, it's either a security group or distribution group. For details, see groups overview.If the collection includes DynamicMembership, the group has dynamic membership; otherwise, membership is static.  Returned by default. Supports $filter.
     *
@@ -292,6 +263,35 @@ class Group extends DirectoryObject
     public function setGroupTypes($val)
     {
         $this->_propDict["groupTypes"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the hasMembersWithLicenseErrors
+    * Indicates whether there are members in this group that have license errors from its group-based license assignment. This property is never returned on a GET operation. You can use it as a $filter argument to get groups that have members with license errors (that is, filter for this property being true). See an example.
+    *
+    * @return bool The hasMembersWithLicenseErrors
+    */
+    public function getHasMembersWithLicenseErrors()
+    {
+        if (array_key_exists("hasMembersWithLicenseErrors", $this->_propDict)) {
+            return $this->_propDict["hasMembersWithLicenseErrors"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the hasMembersWithLicenseErrors
+    * Indicates whether there are members in this group that have license errors from its group-based license assignment. This property is never returned on a GET operation. You can use it as a $filter argument to get groups that have members with license errors (that is, filter for this property being true). See an example.
+    *
+    * @param bool $val The hasMembersWithLicenseErrors
+    *
+    * @return Group
+    */
+    public function setHasMembersWithLicenseErrors($val)
+    {
+        $this->_propDict["hasMembersWithLicenseErrors"] = boolval($val);
         return $this;
     }
     
@@ -976,6 +976,64 @@ class Group extends DirectoryObject
     }
     
     /**
+    * Gets the hideFromAddressLists
+    * True if the group is not displayed in certain parts of the Outlook UI: the Address Book, address lists for selecting message recipients, and the Browse Groups dialog for searching groups; otherwise, false. Default value is false. Returned only on $select.
+    *
+    * @return bool The hideFromAddressLists
+    */
+    public function getHideFromAddressLists()
+    {
+        if (array_key_exists("hideFromAddressLists", $this->_propDict)) {
+            return $this->_propDict["hideFromAddressLists"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the hideFromAddressLists
+    * True if the group is not displayed in certain parts of the Outlook UI: the Address Book, address lists for selecting message recipients, and the Browse Groups dialog for searching groups; otherwise, false. Default value is false. Returned only on $select.
+    *
+    * @param bool $val The hideFromAddressLists
+    *
+    * @return Group
+    */
+    public function setHideFromAddressLists($val)
+    {
+        $this->_propDict["hideFromAddressLists"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the hideFromOutlookClients
+    * True if the group is not displayed in Outlook clients, such as Outlook for Windows and Outlook on the web; otherwise, false. Default value is false. Returned only on $select.
+    *
+    * @return bool The hideFromOutlookClients
+    */
+    public function getHideFromOutlookClients()
+    {
+        if (array_key_exists("hideFromOutlookClients", $this->_propDict)) {
+            return $this->_propDict["hideFromOutlookClients"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the hideFromOutlookClients
+    * True if the group is not displayed in Outlook clients, such as Outlook for Windows and Outlook on the web; otherwise, false. Default value is false. Returned only on $select.
+    *
+    * @param bool $val The hideFromOutlookClients
+    *
+    * @return Group
+    */
+    public function setHideFromOutlookClients($val)
+    {
+        $this->_propDict["hideFromOutlookClients"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the isSubscribedByMail
     * Indicates whether the signed-in user is subscribed to receive email conversations. Default value is true. Returned only on $select.
     *
@@ -1034,64 +1092,6 @@ class Group extends DirectoryObject
     }
     
     /**
-    * Gets the hideFromOutlookClients
-    * True if the group is not displayed in Outlook clients, such as Outlook for Windows and Outlook on the web; otherwise, false. Default value is false. Returned only on $select.
-    *
-    * @return bool The hideFromOutlookClients
-    */
-    public function getHideFromOutlookClients()
-    {
-        if (array_key_exists("hideFromOutlookClients", $this->_propDict)) {
-            return $this->_propDict["hideFromOutlookClients"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the hideFromOutlookClients
-    * True if the group is not displayed in Outlook clients, such as Outlook for Windows and Outlook on the web; otherwise, false. Default value is false. Returned only on $select.
-    *
-    * @param bool $val The hideFromOutlookClients
-    *
-    * @return Group
-    */
-    public function setHideFromOutlookClients($val)
-    {
-        $this->_propDict["hideFromOutlookClients"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the hideFromAddressLists
-    * True if the group is not displayed in certain parts of the Outlook UI: the Address Book, address lists for selecting message recipients, and the Browse Groups dialog for searching groups; otherwise, false. Default value is false. Returned only on $select.
-    *
-    * @return bool The hideFromAddressLists
-    */
-    public function getHideFromAddressLists()
-    {
-        if (array_key_exists("hideFromAddressLists", $this->_propDict)) {
-            return $this->_propDict["hideFromAddressLists"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the hideFromAddressLists
-    * True if the group is not displayed in certain parts of the Outlook UI: the Address Book, address lists for selecting message recipients, and the Browse Groups dialog for searching groups; otherwise, false. Default value is false. Returned only on $select.
-    *
-    * @param bool $val The hideFromAddressLists
-    *
-    * @return Group
-    */
-    public function setHideFromAddressLists($val)
-    {
-        $this->_propDict["hideFromAddressLists"] = boolval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the isArchived
     *
     * @return bool The isArchived
@@ -1146,33 +1146,36 @@ class Group extends DirectoryObject
         return $this;
     }
     
-
-     /** 
-     * Gets the members
-    * Users and groups that are members of this group. HTTP Methods: GET (supported for all groups), POST (supported for Microsoft 365 groups, security groups and mail-enabled security groups), DELETE (supported for Microsoft 365 groups and security groups) Nullable.
-     *
-     * @return array The members
-     */
-    public function getMembers()
+    /**
+    * Gets the createdOnBehalfOf
+    * The user (or application) that created the group. NOTE: This is not set if the user is an administrator. Read-only.
+    *
+    * @return DirectoryObject The createdOnBehalfOf
+    */
+    public function getCreatedOnBehalfOf()
     {
-        if (array_key_exists("members", $this->_propDict)) {
-           return $this->_propDict["members"];
-        } else {
-            return null;
+        if (array_key_exists("createdOnBehalfOf", $this->_propDict)) {
+            if (is_a($this->_propDict["createdOnBehalfOf"], "Microsoft\Graph\Model\DirectoryObject")) {
+                return $this->_propDict["createdOnBehalfOf"];
+            } else {
+                $this->_propDict["createdOnBehalfOf"] = new DirectoryObject($this->_propDict["createdOnBehalfOf"]);
+                return $this->_propDict["createdOnBehalfOf"];
+            }
         }
+        return null;
     }
     
-    /** 
-    * Sets the members
-    * Users and groups that are members of this group. HTTP Methods: GET (supported for all groups), POST (supported for Microsoft 365 groups, security groups and mail-enabled security groups), DELETE (supported for Microsoft 365 groups and security groups) Nullable.
+    /**
+    * Sets the createdOnBehalfOf
+    * The user (or application) that created the group. NOTE: This is not set if the user is an administrator. Read-only.
     *
-    * @param DirectoryObject $val The members
+    * @param DirectoryObject $val The createdOnBehalfOf
     *
     * @return Group
     */
-    public function setMembers($val)
+    public function setCreatedOnBehalfOf($val)
     {
-		$this->_propDict["members"] = $val;
+        $this->_propDict["createdOnBehalfOf"] = $val;
         return $this;
     }
     
@@ -1208,6 +1211,36 @@ class Group extends DirectoryObject
     
 
      /** 
+     * Gets the members
+    * Users and groups that are members of this group. HTTP Methods: GET (supported for all groups), POST (supported for Microsoft 365 groups, security groups and mail-enabled security groups), DELETE (supported for Microsoft 365 groups and security groups) Nullable.
+     *
+     * @return array The members
+     */
+    public function getMembers()
+    {
+        if (array_key_exists("members", $this->_propDict)) {
+           return $this->_propDict["members"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the members
+    * Users and groups that are members of this group. HTTP Methods: GET (supported for all groups), POST (supported for Microsoft 365 groups, security groups and mail-enabled security groups), DELETE (supported for Microsoft 365 groups and security groups) Nullable.
+    *
+    * @param DirectoryObject $val The members
+    *
+    * @return Group
+    */
+    public function setMembers($val)
+    {
+		$this->_propDict["members"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the membersWithLicenseErrors
     * A list of group members with license errors from this group-based license assignment. Read-only.
      *
@@ -1233,95 +1266,6 @@ class Group extends DirectoryObject
     public function setMembersWithLicenseErrors($val)
     {
 		$this->_propDict["membersWithLicenseErrors"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the transitiveMembers
-     *
-     * @return array The transitiveMembers
-     */
-    public function getTransitiveMembers()
-    {
-        if (array_key_exists("transitiveMembers", $this->_propDict)) {
-           return $this->_propDict["transitiveMembers"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the transitiveMembers
-    *
-    * @param DirectoryObject $val The transitiveMembers
-    *
-    * @return Group
-    */
-    public function setTransitiveMembers($val)
-    {
-		$this->_propDict["transitiveMembers"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the transitiveMemberOf
-     *
-     * @return array The transitiveMemberOf
-     */
-    public function getTransitiveMemberOf()
-    {
-        if (array_key_exists("transitiveMemberOf", $this->_propDict)) {
-           return $this->_propDict["transitiveMemberOf"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the transitiveMemberOf
-    *
-    * @param DirectoryObject $val The transitiveMemberOf
-    *
-    * @return Group
-    */
-    public function setTransitiveMemberOf($val)
-    {
-		$this->_propDict["transitiveMemberOf"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the createdOnBehalfOf
-    * The user (or application) that created the group. NOTE: This is not set if the user is an administrator. Read-only.
-    *
-    * @return DirectoryObject The createdOnBehalfOf
-    */
-    public function getCreatedOnBehalfOf()
-    {
-        if (array_key_exists("createdOnBehalfOf", $this->_propDict)) {
-            if (is_a($this->_propDict["createdOnBehalfOf"], "Microsoft\Graph\Model\DirectoryObject")) {
-                return $this->_propDict["createdOnBehalfOf"];
-            } else {
-                $this->_propDict["createdOnBehalfOf"] = new DirectoryObject($this->_propDict["createdOnBehalfOf"]);
-                return $this->_propDict["createdOnBehalfOf"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the createdOnBehalfOf
-    * The user (or application) that created the group. NOTE: This is not set if the user is an administrator. Read-only.
-    *
-    * @param DirectoryObject $val The createdOnBehalfOf
-    *
-    * @return Group
-    */
-    public function setCreatedOnBehalfOf($val)
-    {
-        $this->_propDict["createdOnBehalfOf"] = $val;
         return $this;
     }
     
@@ -1387,61 +1331,57 @@ class Group extends DirectoryObject
     
 
      /** 
-     * Gets the conversations
-    * The group's conversations.
+     * Gets the transitiveMemberOf
      *
-     * @return array The conversations
+     * @return array The transitiveMemberOf
      */
-    public function getConversations()
+    public function getTransitiveMemberOf()
     {
-        if (array_key_exists("conversations", $this->_propDict)) {
-           return $this->_propDict["conversations"];
+        if (array_key_exists("transitiveMemberOf", $this->_propDict)) {
+           return $this->_propDict["transitiveMemberOf"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the conversations
-    * The group's conversations.
+    * Sets the transitiveMemberOf
     *
-    * @param Conversation $val The conversations
+    * @param DirectoryObject $val The transitiveMemberOf
     *
     * @return Group
     */
-    public function setConversations($val)
+    public function setTransitiveMemberOf($val)
     {
-		$this->_propDict["conversations"] = $val;
+		$this->_propDict["transitiveMemberOf"] = $val;
         return $this;
     }
     
 
      /** 
-     * Gets the photos
-    * The profile photos owned by the group. Read-only. Nullable.
+     * Gets the transitiveMembers
      *
-     * @return array The photos
+     * @return array The transitiveMembers
      */
-    public function getPhotos()
+    public function getTransitiveMembers()
     {
-        if (array_key_exists("photos", $this->_propDict)) {
-           return $this->_propDict["photos"];
+        if (array_key_exists("transitiveMembers", $this->_propDict)) {
+           return $this->_propDict["transitiveMembers"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the photos
-    * The profile photos owned by the group. Read-only. Nullable.
+    * Sets the transitiveMembers
     *
-    * @param ProfilePhoto $val The photos
+    * @param DirectoryObject $val The transitiveMembers
     *
     * @return Group
     */
-    public function setPhotos($val)
+    public function setTransitiveMembers($val)
     {
-		$this->_propDict["photos"] = $val;
+		$this->_propDict["transitiveMembers"] = $val;
         return $this;
     }
     
@@ -1472,66 +1412,6 @@ class Group extends DirectoryObject
     public function setAcceptedSenders($val)
     {
 		$this->_propDict["acceptedSenders"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the rejectedSenders
-    * The list of users or groups that are not allowed to create posts or calendar events in this group. Nullable
-     *
-     * @return array The rejectedSenders
-     */
-    public function getRejectedSenders()
-    {
-        if (array_key_exists("rejectedSenders", $this->_propDict)) {
-           return $this->_propDict["rejectedSenders"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the rejectedSenders
-    * The list of users or groups that are not allowed to create posts or calendar events in this group. Nullable
-    *
-    * @param DirectoryObject $val The rejectedSenders
-    *
-    * @return Group
-    */
-    public function setRejectedSenders($val)
-    {
-		$this->_propDict["rejectedSenders"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the threads
-    * The group's conversation threads. Nullable.
-     *
-     * @return array The threads
-     */
-    public function getThreads()
-    {
-        if (array_key_exists("threads", $this->_propDict)) {
-           return $this->_propDict["threads"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the threads
-    * The group's conversation threads. Nullable.
-    *
-    * @param ConversationThread $val The threads
-    *
-    * @return Group
-    */
-    public function setThreads($val)
-    {
-		$this->_propDict["threads"] = $val;
         return $this;
     }
     
@@ -1600,6 +1480,36 @@ class Group extends DirectoryObject
     
 
      /** 
+     * Gets the conversations
+    * The group's conversations.
+     *
+     * @return array The conversations
+     */
+    public function getConversations()
+    {
+        if (array_key_exists("conversations", $this->_propDict)) {
+           return $this->_propDict["conversations"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the conversations
+    * The group's conversations.
+    *
+    * @param Conversation $val The conversations
+    *
+    * @return Group
+    */
+    public function setConversations($val)
+    {
+		$this->_propDict["conversations"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the events
     * The group's calendar events.
      *
@@ -1658,6 +1568,96 @@ class Group extends DirectoryObject
     public function setPhoto($val)
     {
         $this->_propDict["photo"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the photos
+    * The profile photos owned by the group. Read-only. Nullable.
+     *
+     * @return array The photos
+     */
+    public function getPhotos()
+    {
+        if (array_key_exists("photos", $this->_propDict)) {
+           return $this->_propDict["photos"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the photos
+    * The profile photos owned by the group. Read-only. Nullable.
+    *
+    * @param ProfilePhoto $val The photos
+    *
+    * @return Group
+    */
+    public function setPhotos($val)
+    {
+		$this->_propDict["photos"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the rejectedSenders
+    * The list of users or groups that are not allowed to create posts or calendar events in this group. Nullable
+     *
+     * @return array The rejectedSenders
+     */
+    public function getRejectedSenders()
+    {
+        if (array_key_exists("rejectedSenders", $this->_propDict)) {
+           return $this->_propDict["rejectedSenders"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the rejectedSenders
+    * The list of users or groups that are not allowed to create posts or calendar events in this group. Nullable
+    *
+    * @param DirectoryObject $val The rejectedSenders
+    *
+    * @return Group
+    */
+    public function setRejectedSenders($val)
+    {
+		$this->_propDict["rejectedSenders"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the threads
+    * The group's conversation threads. Nullable.
+     *
+     * @return array The threads
+     */
+    public function getThreads()
+    {
+        if (array_key_exists("threads", $this->_propDict)) {
+           return $this->_propDict["threads"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the threads
+    * The group's conversation threads. Nullable.
+    *
+    * @param ConversationThread $val The threads
+    *
+    * @return Group
+    */
+    public function setThreads($val)
+    {
+		$this->_propDict["threads"] = $val;
         return $this;
     }
     

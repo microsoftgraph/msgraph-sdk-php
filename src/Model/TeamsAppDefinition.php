@@ -25,35 +25,6 @@ namespace Microsoft\Graph\Model;
 class TeamsAppDefinition extends Entity
 {
     /**
-    * Gets the teamsAppId
-    * The ID from the Teams app manifest.
-    *
-    * @return string The teamsAppId
-    */
-    public function getTeamsAppId()
-    {
-        if (array_key_exists("teamsAppId", $this->_propDict)) {
-            return $this->_propDict["teamsAppId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the teamsAppId
-    * The ID from the Teams app manifest.
-    *
-    * @param string $val The teamsAppId
-    *
-    * @return TeamsAppDefinition
-    */
-    public function setTeamsAppId($val)
-    {
-        $this->_propDict["teamsAppId"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the displayName
     * The name of the app provided by the app developer.
     *
@@ -79,6 +50,35 @@ class TeamsAppDefinition extends Entity
     public function setDisplayName($val)
     {
         $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the teamsAppId
+    * The ID from the Teams app manifest.
+    *
+    * @return string The teamsAppId
+    */
+    public function getTeamsAppId()
+    {
+        if (array_key_exists("teamsAppId", $this->_propDict)) {
+            return $this->_propDict["teamsAppId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the teamsAppId
+    * The ID from the Teams app manifest.
+    *
+    * @param string $val The teamsAppId
+    *
+    * @return TeamsAppDefinition
+    */
+    public function setTeamsAppId($val)
+    {
+        $this->_propDict["teamsAppId"] = $val;
         return $this;
     }
     

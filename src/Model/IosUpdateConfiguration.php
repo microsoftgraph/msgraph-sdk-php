@@ -25,39 +25,6 @@ namespace Microsoft\Graph\Model;
 class IosUpdateConfiguration extends DeviceConfiguration
 {
     /**
-    * Gets the activeHoursStart
-    * Active Hours Start (active hours mean the time window when updates install should not happen)
-    *
-    * @return TimeOfDay The activeHoursStart
-    */
-    public function getActiveHoursStart()
-    {
-        if (array_key_exists("activeHoursStart", $this->_propDict)) {
-            if (is_a($this->_propDict["activeHoursStart"], "Microsoft\Graph\Model\TimeOfDay")) {
-                return $this->_propDict["activeHoursStart"];
-            } else {
-                $this->_propDict["activeHoursStart"] = new TimeOfDay($this->_propDict["activeHoursStart"]);
-                return $this->_propDict["activeHoursStart"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the activeHoursStart
-    * Active Hours Start (active hours mean the time window when updates install should not happen)
-    *
-    * @param TimeOfDay $val The activeHoursStart
-    *
-    * @return IosUpdateConfiguration
-    */
-    public function setActiveHoursStart($val)
-    {
-        $this->_propDict["activeHoursStart"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the activeHoursEnd
     * Active Hours End (active hours mean the time window when updates install should not happen)
     *
@@ -87,6 +54,39 @@ class IosUpdateConfiguration extends DeviceConfiguration
     public function setActiveHoursEnd($val)
     {
         $this->_propDict["activeHoursEnd"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the activeHoursStart
+    * Active Hours Start (active hours mean the time window when updates install should not happen)
+    *
+    * @return TimeOfDay The activeHoursStart
+    */
+    public function getActiveHoursStart()
+    {
+        if (array_key_exists("activeHoursStart", $this->_propDict)) {
+            if (is_a($this->_propDict["activeHoursStart"], "Microsoft\Graph\Model\TimeOfDay")) {
+                return $this->_propDict["activeHoursStart"];
+            } else {
+                $this->_propDict["activeHoursStart"] = new TimeOfDay($this->_propDict["activeHoursStart"]);
+                return $this->_propDict["activeHoursStart"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the activeHoursStart
+    * Active Hours Start (active hours mean the time window when updates install should not happen)
+    *
+    * @param TimeOfDay $val The activeHoursStart
+    *
+    * @return IosUpdateConfiguration
+    */
+    public function setActiveHoursStart($val)
+    {
+        $this->_propDict["activeHoursStart"] = $val;
         return $this;
     }
     

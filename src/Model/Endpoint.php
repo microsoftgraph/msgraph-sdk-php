@@ -112,35 +112,6 @@ class Endpoint extends DirectoryObject
     }
     
     /**
-    * Gets the uri
-    * URL of the published resource. Not nullable. Read-only.
-    *
-    * @return string The uri
-    */
-    public function getUri()
-    {
-        if (array_key_exists("uri", $this->_propDict)) {
-            return $this->_propDict["uri"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the uri
-    * URL of the published resource. Not nullable. Read-only.
-    *
-    * @param string $val The uri
-    *
-    * @return Endpoint
-    */
-    public function setUri($val)
-    {
-        $this->_propDict["uri"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the providerResourceId
     * For Microsoft 365 groups, this is set to a well-known name for the resource (e.g. Yammer.FeedURL etc.). Not nullable. Read-only.
     *
@@ -166,6 +137,35 @@ class Endpoint extends DirectoryObject
     public function setProviderResourceId($val)
     {
         $this->_propDict["providerResourceId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the uri
+    * URL of the published resource. Not nullable. Read-only.
+    *
+    * @return string The uri
+    */
+    public function getUri()
+    {
+        if (array_key_exists("uri", $this->_propDict)) {
+            return $this->_propDict["uri"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the uri
+    * URL of the published resource. Not nullable. Read-only.
+    *
+    * @param string $val The uri
+    *
+    * @return Endpoint
+    */
+    public function setUri($val)
+    {
+        $this->_propDict["uri"] = $val;
         return $this;
     }
     
