@@ -978,6 +978,33 @@ class Event extends OutlookItem
     }
     
     /**
+    * Gets the transactionId
+    *
+    * @return string The transactionId
+    */
+    public function getTransactionId()
+    {
+        if (array_key_exists("transactionId", $this->_propDict)) {
+            return $this->_propDict["transactionId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the transactionId
+    *
+    * @param string $val The transactionId
+    *
+    * @return Event
+    */
+    public function setTransactionId($val)
+    {
+        $this->_propDict["transactionId"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the type
     * The event type. The possible values are: singleInstance, occurrence, exception, seriesMaster. Read-only.
     *

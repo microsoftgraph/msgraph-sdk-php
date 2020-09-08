@@ -202,7 +202,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the companyName
-    * The company name which the user is associated. This property can be useful for describing the company that an external user comes from.
+    * The company name which the user is associated. This property can be useful for describing the company that an external user comes from. The maximum length of the company name is 64 chararcters.Returned only on $select.
     *
     * @return string The companyName
     */
@@ -217,7 +217,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the companyName
-    * The company name which the user is associated. This property can be useful for describing the company that an external user comes from.
+    * The company name which the user is associated. This property can be useful for describing the company that an external user comes from. The maximum length of the company name is 64 chararcters.Returned only on $select.
     *
     * @param string $val The companyName
     *
@@ -284,6 +284,39 @@ class User extends DirectoryObject
     public function setCountry($val)
     {
         $this->_propDict["country"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the createdDateTime
+    * The created date of the user object.
+    *
+    * @return \DateTime The createdDateTime
+    */
+    public function getCreatedDateTime()
+    {
+        if (array_key_exists("createdDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+                return $this->_propDict["createdDateTime"];
+            } else {
+                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
+                return $this->_propDict["createdDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the createdDateTime
+    * The created date of the user object.
+    *
+    * @param \DateTime $val The createdDateTime
+    *
+    * @return User
+    */
+    public function setCreatedDateTime($val)
+    {
+        $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
     
@@ -734,7 +767,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the mail
-    * The SMTP address for the user, for example, 'jeff@contoso.onmicrosoft.com'. Read-Only. Supports $filter.
+    * The SMTP address for the user, for example, 'jeff@contoso.onmicrosoft.com'. Supports $filter.
     *
     * @return string The mail
     */
@@ -749,7 +782,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the mail
-    * The SMTP address for the user, for example, 'jeff@contoso.onmicrosoft.com'. Read-Only. Supports $filter.
+    * The SMTP address for the user, for example, 'jeff@contoso.onmicrosoft.com'. Supports $filter.
     *
     * @param string $val The mail
     *

@@ -336,7 +336,7 @@ class Team extends Entity
     
     /**
     * Gets the visibility
-    * The visibility of a the group and team. Defaults to Public.
+    * The visibility of the group and team. Defaults to Public.
     *
     * @return TeamVisibilityType The visibility
     */
@@ -355,7 +355,7 @@ class Team extends Entity
     
     /**
     * Sets the visibility
-    * The visibility of a the group and team. Defaults to Public.
+    * The visibility of the group and team. Defaults to Public.
     *
     * @param TeamVisibilityType $val The visibility
     *
