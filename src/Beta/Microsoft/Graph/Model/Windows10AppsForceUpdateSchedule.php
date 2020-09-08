@@ -25,39 +25,6 @@ class Windows10AppsForceUpdateSchedule extends Entity
 {
 
     /**
-    * Gets the startDateTime
-    * The start time for the force restart.
-    *
-    * @return \DateTime The startDateTime
-    */
-    public function getStartDateTime()
-    {
-        if (array_key_exists("startDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
-                return $this->_propDict["startDateTime"];
-            } else {
-                $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);
-                return $this->_propDict["startDateTime"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the startDateTime
-    * The start time for the force restart.
-    *
-    * @param \DateTime $val The value to assign to the startDateTime
-    *
-    * @return Windows10AppsForceUpdateSchedule The Windows10AppsForceUpdateSchedule
-    */
-    public function setStartDateTime($val)
-    {
-        $this->_propDict["startDateTime"] = $val;
-         return $this;
-    }
-
-    /**
     * Gets the recurrence
     * Recurrence schedule.
     *
@@ -116,5 +83,38 @@ class Windows10AppsForceUpdateSchedule extends Entity
     {
         $this->_propDict["runImmediatelyIfAfterStartDateTime"] = $val;
         return $this;
+    }
+
+    /**
+    * Gets the startDateTime
+    * The start time for the force restart.
+    *
+    * @return \DateTime The startDateTime
+    */
+    public function getStartDateTime()
+    {
+        if (array_key_exists("startDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
+                return $this->_propDict["startDateTime"];
+            } else {
+                $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);
+                return $this->_propDict["startDateTime"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the startDateTime
+    * The start time for the force restart.
+    *
+    * @param \DateTime $val The value to assign to the startDateTime
+    *
+    * @return Windows10AppsForceUpdateSchedule The Windows10AppsForceUpdateSchedule
+    */
+    public function setStartDateTime($val)
+    {
+        $this->_propDict["startDateTime"] = $val;
+         return $this;
     }
 }

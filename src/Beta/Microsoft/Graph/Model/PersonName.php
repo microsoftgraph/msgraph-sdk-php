@@ -106,33 +106,6 @@ class PersonName extends ItemFacet
     }
     
     /**
-    * Gets the last
-    *
-    * @return string The last
-    */
-    public function getLast()
-    {
-        if (array_key_exists("last", $this->_propDict)) {
-            return $this->_propDict["last"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the last
-    *
-    * @param string $val The last
-    *
-    * @return PersonName
-    */
-    public function setLast($val)
-    {
-        $this->_propDict["last"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the languageTag
     *
     * @return string The languageTag
@@ -156,6 +129,33 @@ class PersonName extends ItemFacet
     public function setLanguageTag($val)
     {
         $this->_propDict["languageTag"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the last
+    *
+    * @return string The last
+    */
+    public function getLast()
+    {
+        if (array_key_exists("last", $this->_propDict)) {
+            return $this->_propDict["last"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the last
+    *
+    * @param string $val The last
+    *
+    * @return PersonName
+    */
+    public function setLast($val)
+    {
+        $this->_propDict["last"] = $val;
         return $this;
     }
     
@@ -241,6 +241,37 @@ class PersonName extends ItemFacet
     }
     
     /**
+    * Gets the pronunciation
+    *
+    * @return YomiPersonName The pronunciation
+    */
+    public function getPronunciation()
+    {
+        if (array_key_exists("pronunciation", $this->_propDict)) {
+            if (is_a($this->_propDict["pronunciation"], "Beta\Microsoft\Graph\Model\YomiPersonName")) {
+                return $this->_propDict["pronunciation"];
+            } else {
+                $this->_propDict["pronunciation"] = new YomiPersonName($this->_propDict["pronunciation"]);
+                return $this->_propDict["pronunciation"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the pronunciation
+    *
+    * @param YomiPersonName $val The pronunciation
+    *
+    * @return PersonName
+    */
+    public function setPronunciation($val)
+    {
+        $this->_propDict["pronunciation"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the suffix
     *
     * @return string The suffix
@@ -291,37 +322,6 @@ class PersonName extends ItemFacet
     public function setTitle($val)
     {
         $this->_propDict["title"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the pronunciation
-    *
-    * @return YomiPersonName The pronunciation
-    */
-    public function getPronunciation()
-    {
-        if (array_key_exists("pronunciation", $this->_propDict)) {
-            if (is_a($this->_propDict["pronunciation"], "Beta\Microsoft\Graph\Model\YomiPersonName")) {
-                return $this->_propDict["pronunciation"];
-            } else {
-                $this->_propDict["pronunciation"] = new YomiPersonName($this->_propDict["pronunciation"]);
-                return $this->_propDict["pronunciation"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the pronunciation
-    *
-    * @param YomiPersonName $val The pronunciation
-    *
-    * @return PersonName
-    */
-    public function setPronunciation($val)
-    {
-        $this->_propDict["pronunciation"] = $val;
         return $this;
     }
     

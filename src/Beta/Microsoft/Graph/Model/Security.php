@@ -308,6 +308,34 @@ class Security extends Entity
     
 
      /** 
+     * Gets the securityActions
+     *
+     * @return array The securityActions
+     */
+    public function getSecurityActions()
+    {
+        if (array_key_exists("securityActions", $this->_propDict)) {
+           return $this->_propDict["securityActions"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the securityActions
+    *
+    * @param SecurityAction $val The securityActions
+    *
+    * @return Security
+    */
+    public function setSecurityActions($val)
+    {
+		$this->_propDict["securityActions"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the tiIndicators
      *
      * @return array The tiIndicators
@@ -359,34 +387,6 @@ class Security extends Entity
     public function setUserSecurityProfiles($val)
     {
 		$this->_propDict["userSecurityProfiles"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the securityActions
-     *
-     * @return array The securityActions
-     */
-    public function getSecurityActions()
-    {
-        if (array_key_exists("securityActions", $this->_propDict)) {
-           return $this->_propDict["securityActions"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the securityActions
-    *
-    * @param SecurityAction $val The securityActions
-    *
-    * @return Security
-    */
-    public function setSecurityActions($val)
-    {
-		$this->_propDict["securityActions"] = $val;
         return $this;
     }
     

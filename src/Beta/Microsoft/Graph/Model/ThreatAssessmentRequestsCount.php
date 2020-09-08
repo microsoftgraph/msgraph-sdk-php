@@ -23,6 +23,32 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class ThreatAssessmentRequestsCount extends Entity
 {
+    /**
+    * Gets the count
+    *
+    * @return int The count
+    */
+    public function getCount()
+    {
+        if (array_key_exists("count", $this->_propDict)) {
+            return $this->_propDict["count"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the count
+    *
+    * @param int $val The value of the count
+    *
+    * @return ThreatAssessmentRequestsCount
+    */
+    public function setCount($val)
+    {
+        $this->_propDict["count"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the createdDateTime
@@ -78,32 +104,6 @@ class ThreatAssessmentRequestsCount extends Entity
     public function setPivotValue($val)
     {
         $this->_propDict["pivotValue"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the count
-    *
-    * @return int The count
-    */
-    public function getCount()
-    {
-        if (array_key_exists("count", $this->_propDict)) {
-            return $this->_propDict["count"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the count
-    *
-    * @param int $val The value of the count
-    *
-    * @return ThreatAssessmentRequestsCount
-    */
-    public function setCount($val)
-    {
-        $this->_propDict["count"] = $val;
         return $this;
     }
 }

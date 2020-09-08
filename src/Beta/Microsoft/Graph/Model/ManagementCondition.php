@@ -24,90 +24,33 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class ManagementCondition extends Entity
 {
-    /**
-    * Gets the uniqueName
-    * Unique name for the management condition. Used in management condition expressions.
-    *
-    * @return string The uniqueName
-    */
-    public function getUniqueName()
+
+     /** 
+     * Gets the applicablePlatforms
+    * The applicable platforms for this management condition.
+     *
+     * @return array The applicablePlatforms
+     */
+    public function getApplicablePlatforms()
     {
-        if (array_key_exists("uniqueName", $this->_propDict)) {
-            return $this->_propDict["uniqueName"];
+        if (array_key_exists("applicablePlatforms", $this->_propDict)) {
+           return $this->_propDict["applicablePlatforms"];
         } else {
             return null;
         }
     }
     
-    /**
-    * Sets the uniqueName
-    * Unique name for the management condition. Used in management condition expressions.
+    /** 
+    * Sets the applicablePlatforms
+    * The applicable platforms for this management condition.
     *
-    * @param string $val The uniqueName
-    *
-    * @return ManagementCondition
-    */
-    public function setUniqueName($val)
-    {
-        $this->_propDict["uniqueName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the displayName
-    * The admin defined name of the management condition.
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the displayName
-    * The admin defined name of the management condition.
-    *
-    * @param string $val The displayName
+    * @param DevicePlatformType $val The applicablePlatforms
     *
     * @return ManagementCondition
     */
-    public function setDisplayName($val)
+    public function setApplicablePlatforms($val)
     {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the description
-    * The admin defined description of the management condition.
-    *
-    * @return string The description
-    */
-    public function getDescription()
-    {
-        if (array_key_exists("description", $this->_propDict)) {
-            return $this->_propDict["description"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the description
-    * The admin defined description of the management condition.
-    *
-    * @param string $val The description
-    *
-    * @return ManagementCondition
-    */
-    public function setDescription($val)
-    {
-        $this->_propDict["description"] = $val;
+		$this->_propDict["applicablePlatforms"] = $val;
         return $this;
     }
     
@@ -145,6 +88,93 @@ class ManagementCondition extends Entity
     }
     
     /**
+    * Gets the description
+    * The admin defined description of the management condition.
+    *
+    * @return string The description
+    */
+    public function getDescription()
+    {
+        if (array_key_exists("description", $this->_propDict)) {
+            return $this->_propDict["description"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the description
+    * The admin defined description of the management condition.
+    *
+    * @param string $val The description
+    *
+    * @return ManagementCondition
+    */
+    public function setDescription($val)
+    {
+        $this->_propDict["description"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the displayName
+    * The admin defined name of the management condition.
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the displayName
+    * The admin defined name of the management condition.
+    *
+    * @param string $val The displayName
+    *
+    * @return ManagementCondition
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the eTag
+    * ETag of the management condition. Updated service side.
+    *
+    * @return string The eTag
+    */
+    public function getETag()
+    {
+        if (array_key_exists("eTag", $this->_propDict)) {
+            return $this->_propDict["eTag"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the eTag
+    * ETag of the management condition. Updated service side.
+    *
+    * @param string $val The eTag
+    *
+    * @return ManagementCondition
+    */
+    public function setETag($val)
+    {
+        $this->_propDict["eTag"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the modifiedDateTime
     * The time the management condition was last modified. Updated service side.
     *
@@ -178,61 +208,31 @@ class ManagementCondition extends Entity
     }
     
     /**
-    * Gets the eTag
-    * ETag of the management condition. Updated service side.
+    * Gets the uniqueName
+    * Unique name for the management condition. Used in management condition expressions.
     *
-    * @return string The eTag
+    * @return string The uniqueName
     */
-    public function getETag()
+    public function getUniqueName()
     {
-        if (array_key_exists("eTag", $this->_propDict)) {
-            return $this->_propDict["eTag"];
+        if (array_key_exists("uniqueName", $this->_propDict)) {
+            return $this->_propDict["uniqueName"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the eTag
-    * ETag of the management condition. Updated service side.
+    * Sets the uniqueName
+    * Unique name for the management condition. Used in management condition expressions.
     *
-    * @param string $val The eTag
-    *
-    * @return ManagementCondition
-    */
-    public function setETag($val)
-    {
-        $this->_propDict["eTag"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the applicablePlatforms
-    * The applicable platforms for this management condition.
-     *
-     * @return array The applicablePlatforms
-     */
-    public function getApplicablePlatforms()
-    {
-        if (array_key_exists("applicablePlatforms", $this->_propDict)) {
-           return $this->_propDict["applicablePlatforms"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the applicablePlatforms
-    * The applicable platforms for this management condition.
-    *
-    * @param DevicePlatformType $val The applicablePlatforms
+    * @param string $val The uniqueName
     *
     * @return ManagementCondition
     */
-    public function setApplicablePlatforms($val)
+    public function setUniqueName($val)
     {
-		$this->_propDict["applicablePlatforms"] = $val;
+        $this->_propDict["uniqueName"] = $val;
         return $this;
     }
     

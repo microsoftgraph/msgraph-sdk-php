@@ -57,194 +57,6 @@ class BitLockerSystemDrivePolicy extends Entity
          return $this;
     }
     /**
-    * Gets the startupAuthenticationRequired
-    * Require additional authentication at startup.
-    *
-    * @return bool The startupAuthenticationRequired
-    */
-    public function getStartupAuthenticationRequired()
-    {
-        if (array_key_exists("startupAuthenticationRequired", $this->_propDict)) {
-            return $this->_propDict["startupAuthenticationRequired"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the startupAuthenticationRequired
-    * Require additional authentication at startup.
-    *
-    * @param bool $val The value of the startupAuthenticationRequired
-    *
-    * @return BitLockerSystemDrivePolicy
-    */
-    public function setStartupAuthenticationRequired($val)
-    {
-        $this->_propDict["startupAuthenticationRequired"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the startupAuthenticationBlockWithoutTpmChip
-    * Indicates whether to allow BitLocker without a compatible TPM (requires a password or a startup key on a USB flash drive).
-    *
-    * @return bool The startupAuthenticationBlockWithoutTpmChip
-    */
-    public function getStartupAuthenticationBlockWithoutTpmChip()
-    {
-        if (array_key_exists("startupAuthenticationBlockWithoutTpmChip", $this->_propDict)) {
-            return $this->_propDict["startupAuthenticationBlockWithoutTpmChip"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the startupAuthenticationBlockWithoutTpmChip
-    * Indicates whether to allow BitLocker without a compatible TPM (requires a password or a startup key on a USB flash drive).
-    *
-    * @param bool $val The value of the startupAuthenticationBlockWithoutTpmChip
-    *
-    * @return BitLockerSystemDrivePolicy
-    */
-    public function setStartupAuthenticationBlockWithoutTpmChip($val)
-    {
-        $this->_propDict["startupAuthenticationBlockWithoutTpmChip"] = $val;
-        return $this;
-    }
-
-    /**
-    * Gets the startupAuthenticationTpmUsage
-    * Indicates if TPM startup is allowed/required/disallowed.
-    *
-    * @return ConfigurationUsage The startupAuthenticationTpmUsage
-    */
-    public function getStartupAuthenticationTpmUsage()
-    {
-        if (array_key_exists("startupAuthenticationTpmUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["startupAuthenticationTpmUsage"], "Beta\Microsoft\Graph\Model\ConfigurationUsage")) {
-                return $this->_propDict["startupAuthenticationTpmUsage"];
-            } else {
-                $this->_propDict["startupAuthenticationTpmUsage"] = new ConfigurationUsage($this->_propDict["startupAuthenticationTpmUsage"]);
-                return $this->_propDict["startupAuthenticationTpmUsage"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the startupAuthenticationTpmUsage
-    * Indicates if TPM startup is allowed/required/disallowed.
-    *
-    * @param ConfigurationUsage $val The value to assign to the startupAuthenticationTpmUsage
-    *
-    * @return BitLockerSystemDrivePolicy The BitLockerSystemDrivePolicy
-    */
-    public function setStartupAuthenticationTpmUsage($val)
-    {
-        $this->_propDict["startupAuthenticationTpmUsage"] = $val;
-         return $this;
-    }
-
-    /**
-    * Gets the startupAuthenticationTpmPinUsage
-    * Indicates if TPM startup pin is allowed/required/disallowed.
-    *
-    * @return ConfigurationUsage The startupAuthenticationTpmPinUsage
-    */
-    public function getStartupAuthenticationTpmPinUsage()
-    {
-        if (array_key_exists("startupAuthenticationTpmPinUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["startupAuthenticationTpmPinUsage"], "Beta\Microsoft\Graph\Model\ConfigurationUsage")) {
-                return $this->_propDict["startupAuthenticationTpmPinUsage"];
-            } else {
-                $this->_propDict["startupAuthenticationTpmPinUsage"] = new ConfigurationUsage($this->_propDict["startupAuthenticationTpmPinUsage"]);
-                return $this->_propDict["startupAuthenticationTpmPinUsage"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the startupAuthenticationTpmPinUsage
-    * Indicates if TPM startup pin is allowed/required/disallowed.
-    *
-    * @param ConfigurationUsage $val The value to assign to the startupAuthenticationTpmPinUsage
-    *
-    * @return BitLockerSystemDrivePolicy The BitLockerSystemDrivePolicy
-    */
-    public function setStartupAuthenticationTpmPinUsage($val)
-    {
-        $this->_propDict["startupAuthenticationTpmPinUsage"] = $val;
-         return $this;
-    }
-
-    /**
-    * Gets the startupAuthenticationTpmKeyUsage
-    * Indicates if TPM startup key is allowed/required/disallowed.
-    *
-    * @return ConfigurationUsage The startupAuthenticationTpmKeyUsage
-    */
-    public function getStartupAuthenticationTpmKeyUsage()
-    {
-        if (array_key_exists("startupAuthenticationTpmKeyUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["startupAuthenticationTpmKeyUsage"], "Beta\Microsoft\Graph\Model\ConfigurationUsage")) {
-                return $this->_propDict["startupAuthenticationTpmKeyUsage"];
-            } else {
-                $this->_propDict["startupAuthenticationTpmKeyUsage"] = new ConfigurationUsage($this->_propDict["startupAuthenticationTpmKeyUsage"]);
-                return $this->_propDict["startupAuthenticationTpmKeyUsage"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the startupAuthenticationTpmKeyUsage
-    * Indicates if TPM startup key is allowed/required/disallowed.
-    *
-    * @param ConfigurationUsage $val The value to assign to the startupAuthenticationTpmKeyUsage
-    *
-    * @return BitLockerSystemDrivePolicy The BitLockerSystemDrivePolicy
-    */
-    public function setStartupAuthenticationTpmKeyUsage($val)
-    {
-        $this->_propDict["startupAuthenticationTpmKeyUsage"] = $val;
-         return $this;
-    }
-
-    /**
-    * Gets the startupAuthenticationTpmPinAndKeyUsage
-    * Indicates if TPM startup pin key and key are allowed/required/disallowed.
-    *
-    * @return ConfigurationUsage The startupAuthenticationTpmPinAndKeyUsage
-    */
-    public function getStartupAuthenticationTpmPinAndKeyUsage()
-    {
-        if (array_key_exists("startupAuthenticationTpmPinAndKeyUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["startupAuthenticationTpmPinAndKeyUsage"], "Beta\Microsoft\Graph\Model\ConfigurationUsage")) {
-                return $this->_propDict["startupAuthenticationTpmPinAndKeyUsage"];
-            } else {
-                $this->_propDict["startupAuthenticationTpmPinAndKeyUsage"] = new ConfigurationUsage($this->_propDict["startupAuthenticationTpmPinAndKeyUsage"]);
-                return $this->_propDict["startupAuthenticationTpmPinAndKeyUsage"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the startupAuthenticationTpmPinAndKeyUsage
-    * Indicates if TPM startup pin key and key are allowed/required/disallowed.
-    *
-    * @param ConfigurationUsage $val The value to assign to the startupAuthenticationTpmPinAndKeyUsage
-    *
-    * @return BitLockerSystemDrivePolicy The BitLockerSystemDrivePolicy
-    */
-    public function setStartupAuthenticationTpmPinAndKeyUsage($val)
-    {
-        $this->_propDict["startupAuthenticationTpmPinAndKeyUsage"] = $val;
-         return $this;
-    }
-    /**
     * Gets the minimumPinLength
     * Indicates the minimum length of startup pin. Valid values 4 to 20
     *
@@ -271,39 +83,6 @@ class BitLockerSystemDrivePolicy extends Entity
     {
         $this->_propDict["minimumPinLength"] = $val;
         return $this;
-    }
-
-    /**
-    * Gets the recoveryOptions
-    * Allows to recover BitLocker encrypted operating system drives in the absence of the required startup key information. This policy setting is applied when you turn on BitLocker.
-    *
-    * @return BitLockerRecoveryOptions The recoveryOptions
-    */
-    public function getRecoveryOptions()
-    {
-        if (array_key_exists("recoveryOptions", $this->_propDict)) {
-            if (is_a($this->_propDict["recoveryOptions"], "Beta\Microsoft\Graph\Model\BitLockerRecoveryOptions")) {
-                return $this->_propDict["recoveryOptions"];
-            } else {
-                $this->_propDict["recoveryOptions"] = new BitLockerRecoveryOptions($this->_propDict["recoveryOptions"]);
-                return $this->_propDict["recoveryOptions"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the recoveryOptions
-    * Allows to recover BitLocker encrypted operating system drives in the absence of the required startup key information. This policy setting is applied when you turn on BitLocker.
-    *
-    * @param BitLockerRecoveryOptions $val The value to assign to the recoveryOptions
-    *
-    * @return BitLockerSystemDrivePolicy The BitLockerSystemDrivePolicy
-    */
-    public function setRecoveryOptions($val)
-    {
-        $this->_propDict["recoveryOptions"] = $val;
-         return $this;
     }
     /**
     * Gets the prebootRecoveryEnableMessageAndUrl
@@ -388,5 +167,226 @@ class BitLockerSystemDrivePolicy extends Entity
     {
         $this->_propDict["prebootRecoveryUrl"] = $val;
         return $this;
+    }
+
+    /**
+    * Gets the recoveryOptions
+    * Allows to recover BitLocker encrypted operating system drives in the absence of the required startup key information. This policy setting is applied when you turn on BitLocker.
+    *
+    * @return BitLockerRecoveryOptions The recoveryOptions
+    */
+    public function getRecoveryOptions()
+    {
+        if (array_key_exists("recoveryOptions", $this->_propDict)) {
+            if (is_a($this->_propDict["recoveryOptions"], "Beta\Microsoft\Graph\Model\BitLockerRecoveryOptions")) {
+                return $this->_propDict["recoveryOptions"];
+            } else {
+                $this->_propDict["recoveryOptions"] = new BitLockerRecoveryOptions($this->_propDict["recoveryOptions"]);
+                return $this->_propDict["recoveryOptions"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the recoveryOptions
+    * Allows to recover BitLocker encrypted operating system drives in the absence of the required startup key information. This policy setting is applied when you turn on BitLocker.
+    *
+    * @param BitLockerRecoveryOptions $val The value to assign to the recoveryOptions
+    *
+    * @return BitLockerSystemDrivePolicy The BitLockerSystemDrivePolicy
+    */
+    public function setRecoveryOptions($val)
+    {
+        $this->_propDict["recoveryOptions"] = $val;
+         return $this;
+    }
+    /**
+    * Gets the startupAuthenticationBlockWithoutTpmChip
+    * Indicates whether to allow BitLocker without a compatible TPM (requires a password or a startup key on a USB flash drive).
+    *
+    * @return bool The startupAuthenticationBlockWithoutTpmChip
+    */
+    public function getStartupAuthenticationBlockWithoutTpmChip()
+    {
+        if (array_key_exists("startupAuthenticationBlockWithoutTpmChip", $this->_propDict)) {
+            return $this->_propDict["startupAuthenticationBlockWithoutTpmChip"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the startupAuthenticationBlockWithoutTpmChip
+    * Indicates whether to allow BitLocker without a compatible TPM (requires a password or a startup key on a USB flash drive).
+    *
+    * @param bool $val The value of the startupAuthenticationBlockWithoutTpmChip
+    *
+    * @return BitLockerSystemDrivePolicy
+    */
+    public function setStartupAuthenticationBlockWithoutTpmChip($val)
+    {
+        $this->_propDict["startupAuthenticationBlockWithoutTpmChip"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the startupAuthenticationRequired
+    * Require additional authentication at startup.
+    *
+    * @return bool The startupAuthenticationRequired
+    */
+    public function getStartupAuthenticationRequired()
+    {
+        if (array_key_exists("startupAuthenticationRequired", $this->_propDict)) {
+            return $this->_propDict["startupAuthenticationRequired"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the startupAuthenticationRequired
+    * Require additional authentication at startup.
+    *
+    * @param bool $val The value of the startupAuthenticationRequired
+    *
+    * @return BitLockerSystemDrivePolicy
+    */
+    public function setStartupAuthenticationRequired($val)
+    {
+        $this->_propDict["startupAuthenticationRequired"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the startupAuthenticationTpmKeyUsage
+    * Indicates if TPM startup key is allowed/required/disallowed.
+    *
+    * @return ConfigurationUsage The startupAuthenticationTpmKeyUsage
+    */
+    public function getStartupAuthenticationTpmKeyUsage()
+    {
+        if (array_key_exists("startupAuthenticationTpmKeyUsage", $this->_propDict)) {
+            if (is_a($this->_propDict["startupAuthenticationTpmKeyUsage"], "Beta\Microsoft\Graph\Model\ConfigurationUsage")) {
+                return $this->_propDict["startupAuthenticationTpmKeyUsage"];
+            } else {
+                $this->_propDict["startupAuthenticationTpmKeyUsage"] = new ConfigurationUsage($this->_propDict["startupAuthenticationTpmKeyUsage"]);
+                return $this->_propDict["startupAuthenticationTpmKeyUsage"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the startupAuthenticationTpmKeyUsage
+    * Indicates if TPM startup key is allowed/required/disallowed.
+    *
+    * @param ConfigurationUsage $val The value to assign to the startupAuthenticationTpmKeyUsage
+    *
+    * @return BitLockerSystemDrivePolicy The BitLockerSystemDrivePolicy
+    */
+    public function setStartupAuthenticationTpmKeyUsage($val)
+    {
+        $this->_propDict["startupAuthenticationTpmKeyUsage"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the startupAuthenticationTpmPinAndKeyUsage
+    * Indicates if TPM startup pin key and key are allowed/required/disallowed.
+    *
+    * @return ConfigurationUsage The startupAuthenticationTpmPinAndKeyUsage
+    */
+    public function getStartupAuthenticationTpmPinAndKeyUsage()
+    {
+        if (array_key_exists("startupAuthenticationTpmPinAndKeyUsage", $this->_propDict)) {
+            if (is_a($this->_propDict["startupAuthenticationTpmPinAndKeyUsage"], "Beta\Microsoft\Graph\Model\ConfigurationUsage")) {
+                return $this->_propDict["startupAuthenticationTpmPinAndKeyUsage"];
+            } else {
+                $this->_propDict["startupAuthenticationTpmPinAndKeyUsage"] = new ConfigurationUsage($this->_propDict["startupAuthenticationTpmPinAndKeyUsage"]);
+                return $this->_propDict["startupAuthenticationTpmPinAndKeyUsage"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the startupAuthenticationTpmPinAndKeyUsage
+    * Indicates if TPM startup pin key and key are allowed/required/disallowed.
+    *
+    * @param ConfigurationUsage $val The value to assign to the startupAuthenticationTpmPinAndKeyUsage
+    *
+    * @return BitLockerSystemDrivePolicy The BitLockerSystemDrivePolicy
+    */
+    public function setStartupAuthenticationTpmPinAndKeyUsage($val)
+    {
+        $this->_propDict["startupAuthenticationTpmPinAndKeyUsage"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the startupAuthenticationTpmPinUsage
+    * Indicates if TPM startup pin is allowed/required/disallowed.
+    *
+    * @return ConfigurationUsage The startupAuthenticationTpmPinUsage
+    */
+    public function getStartupAuthenticationTpmPinUsage()
+    {
+        if (array_key_exists("startupAuthenticationTpmPinUsage", $this->_propDict)) {
+            if (is_a($this->_propDict["startupAuthenticationTpmPinUsage"], "Beta\Microsoft\Graph\Model\ConfigurationUsage")) {
+                return $this->_propDict["startupAuthenticationTpmPinUsage"];
+            } else {
+                $this->_propDict["startupAuthenticationTpmPinUsage"] = new ConfigurationUsage($this->_propDict["startupAuthenticationTpmPinUsage"]);
+                return $this->_propDict["startupAuthenticationTpmPinUsage"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the startupAuthenticationTpmPinUsage
+    * Indicates if TPM startup pin is allowed/required/disallowed.
+    *
+    * @param ConfigurationUsage $val The value to assign to the startupAuthenticationTpmPinUsage
+    *
+    * @return BitLockerSystemDrivePolicy The BitLockerSystemDrivePolicy
+    */
+    public function setStartupAuthenticationTpmPinUsage($val)
+    {
+        $this->_propDict["startupAuthenticationTpmPinUsage"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the startupAuthenticationTpmUsage
+    * Indicates if TPM startup is allowed/required/disallowed.
+    *
+    * @return ConfigurationUsage The startupAuthenticationTpmUsage
+    */
+    public function getStartupAuthenticationTpmUsage()
+    {
+        if (array_key_exists("startupAuthenticationTpmUsage", $this->_propDict)) {
+            if (is_a($this->_propDict["startupAuthenticationTpmUsage"], "Beta\Microsoft\Graph\Model\ConfigurationUsage")) {
+                return $this->_propDict["startupAuthenticationTpmUsage"];
+            } else {
+                $this->_propDict["startupAuthenticationTpmUsage"] = new ConfigurationUsage($this->_propDict["startupAuthenticationTpmUsage"]);
+                return $this->_propDict["startupAuthenticationTpmUsage"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the startupAuthenticationTpmUsage
+    * Indicates if TPM startup is allowed/required/disallowed.
+    *
+    * @param ConfigurationUsage $val The value to assign to the startupAuthenticationTpmUsage
+    *
+    * @return BitLockerSystemDrivePolicy The BitLockerSystemDrivePolicy
+    */
+    public function setStartupAuthenticationTpmUsage($val)
+    {
+        $this->_propDict["startupAuthenticationTpmUsage"] = $val;
+         return $this;
     }
 }

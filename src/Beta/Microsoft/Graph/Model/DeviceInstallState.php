@@ -25,35 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class DeviceInstallState extends Entity
 {
     /**
-    * Gets the deviceName
-    * Device name.
-    *
-    * @return string The deviceName
-    */
-    public function getDeviceName()
-    {
-        if (array_key_exists("deviceName", $this->_propDict)) {
-            return $this->_propDict["deviceName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the deviceName
-    * Device name.
-    *
-    * @param string $val The deviceName
-    *
-    * @return DeviceInstallState
-    */
-    public function setDeviceName($val)
-    {
-        $this->_propDict["deviceName"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the deviceId
     * Device Id.
     *
@@ -83,35 +54,60 @@ class DeviceInstallState extends Entity
     }
     
     /**
-    * Gets the lastSyncDateTime
-    * Last sync date and time.
+    * Gets the deviceName
+    * Device name.
     *
-    * @return \DateTime The lastSyncDateTime
+    * @return string The deviceName
     */
-    public function getLastSyncDateTime()
+    public function getDeviceName()
     {
-        if (array_key_exists("lastSyncDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastSyncDateTime"], "\DateTime")) {
-                return $this->_propDict["lastSyncDateTime"];
-            } else {
-                $this->_propDict["lastSyncDateTime"] = new \DateTime($this->_propDict["lastSyncDateTime"]);
-                return $this->_propDict["lastSyncDateTime"];
-            }
+        if (array_key_exists("deviceName", $this->_propDict)) {
+            return $this->_propDict["deviceName"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the lastSyncDateTime
-    * Last sync date and time.
+    * Sets the deviceName
+    * Device name.
     *
-    * @param \DateTime $val The lastSyncDateTime
+    * @param string $val The deviceName
     *
     * @return DeviceInstallState
     */
-    public function setLastSyncDateTime($val)
+    public function setDeviceName($val)
     {
-        $this->_propDict["lastSyncDateTime"] = $val;
+        $this->_propDict["deviceName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the errorCode
+    * The error code for install failures.
+    *
+    * @return string The errorCode
+    */
+    public function getErrorCode()
+    {
+        if (array_key_exists("errorCode", $this->_propDict)) {
+            return $this->_propDict["errorCode"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the errorCode
+    * The error code for install failures.
+    *
+    * @param string $val The errorCode
+    *
+    * @return DeviceInstallState
+    */
+    public function setErrorCode($val)
+    {
+        $this->_propDict["errorCode"] = $val;
         return $this;
     }
     
@@ -149,60 +145,35 @@ class DeviceInstallState extends Entity
     }
     
     /**
-    * Gets the errorCode
-    * The error code for install failures.
+    * Gets the lastSyncDateTime
+    * Last sync date and time.
     *
-    * @return string The errorCode
+    * @return \DateTime The lastSyncDateTime
     */
-    public function getErrorCode()
+    public function getLastSyncDateTime()
     {
-        if (array_key_exists("errorCode", $this->_propDict)) {
-            return $this->_propDict["errorCode"];
-        } else {
-            return null;
+        if (array_key_exists("lastSyncDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastSyncDateTime"], "\DateTime")) {
+                return $this->_propDict["lastSyncDateTime"];
+            } else {
+                $this->_propDict["lastSyncDateTime"] = new \DateTime($this->_propDict["lastSyncDateTime"]);
+                return $this->_propDict["lastSyncDateTime"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the errorCode
-    * The error code for install failures.
+    * Sets the lastSyncDateTime
+    * Last sync date and time.
     *
-    * @param string $val The errorCode
+    * @param \DateTime $val The lastSyncDateTime
     *
     * @return DeviceInstallState
     */
-    public function setErrorCode($val)
+    public function setLastSyncDateTime($val)
     {
-        $this->_propDict["errorCode"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the osVersion
-    * OS Version.
-    *
-    * @return string The osVersion
-    */
-    public function getOsVersion()
-    {
-        if (array_key_exists("osVersion", $this->_propDict)) {
-            return $this->_propDict["osVersion"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the osVersion
-    * OS Version.
-    *
-    * @param string $val The osVersion
-    *
-    * @return DeviceInstallState
-    */
-    public function setOsVersion($val)
-    {
-        $this->_propDict["osVersion"] = $val;
+        $this->_propDict["lastSyncDateTime"] = $val;
         return $this;
     }
     
@@ -232,6 +203,35 @@ class DeviceInstallState extends Entity
     public function setOsDescription($val)
     {
         $this->_propDict["osDescription"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the osVersion
+    * OS Version.
+    *
+    * @return string The osVersion
+    */
+    public function getOsVersion()
+    {
+        if (array_key_exists("osVersion", $this->_propDict)) {
+            return $this->_propDict["osVersion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the osVersion
+    * OS Version.
+    *
+    * @param string $val The osVersion
+    *
+    * @return DeviceInstallState
+    */
+    public function setOsVersion($val)
+    {
+        $this->_propDict["osVersion"] = $val;
         return $this;
     }
     

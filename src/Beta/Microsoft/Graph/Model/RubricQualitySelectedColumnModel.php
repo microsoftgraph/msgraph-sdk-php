@@ -24,32 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class RubricQualitySelectedColumnModel extends Entity
 {
     /**
-    * Gets the qualityId
-    *
-    * @return string The qualityId
-    */
-    public function getQualityId()
-    {
-        if (array_key_exists("qualityId", $this->_propDict)) {
-            return $this->_propDict["qualityId"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the qualityId
-    *
-    * @param string $val The value of the qualityId
-    *
-    * @return RubricQualitySelectedColumnModel
-    */
-    public function setQualityId($val)
-    {
-        $this->_propDict["qualityId"] = $val;
-        return $this;
-    }
-    /**
     * Gets the columnId
     *
     * @return string The columnId
@@ -73,6 +47,32 @@ class RubricQualitySelectedColumnModel extends Entity
     public function setColumnId($val)
     {
         $this->_propDict["columnId"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the qualityId
+    *
+    * @return string The qualityId
+    */
+    public function getQualityId()
+    {
+        if (array_key_exists("qualityId", $this->_propDict)) {
+            return $this->_propDict["qualityId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the qualityId
+    *
+    * @param string $val The value of the qualityId
+    *
+    * @return RubricQualitySelectedColumnModel
+    */
+    public function setQualityId($val)
+    {
+        $this->_propDict["qualityId"] = $val;
         return $this;
     }
 }

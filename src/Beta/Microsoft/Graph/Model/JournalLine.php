@@ -25,60 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class JournalLine extends Entity
 {
     /**
-    * Gets the journalDisplayName
-    *
-    * @return string The journalDisplayName
-    */
-    public function getJournalDisplayName()
-    {
-        if (array_key_exists("journalDisplayName", $this->_propDict)) {
-            return $this->_propDict["journalDisplayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the journalDisplayName
-    *
-    * @param string $val The journalDisplayName
-    *
-    * @return JournalLine
-    */
-    public function setJournalDisplayName($val)
-    {
-        $this->_propDict["journalDisplayName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the lineNumber
-    *
-    * @return int The lineNumber
-    */
-    public function getLineNumber()
-    {
-        if (array_key_exists("lineNumber", $this->_propDict)) {
-            return $this->_propDict["lineNumber"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the lineNumber
-    *
-    * @param int $val The lineNumber
-    *
-    * @return JournalLine
-    */
-    public function setLineNumber($val)
-    {
-        $this->_propDict["lineNumber"] = intval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the accountId
     *
     * @return string The accountId
@@ -133,33 +79,87 @@ class JournalLine extends Entity
     }
     
     /**
-    * Gets the postingDate
+    * Gets the amount
     *
-    * @return \DateTime The postingDate
+    * @return Decimal The amount
     */
-    public function getPostingDate()
+    public function getAmount()
     {
-        if (array_key_exists("postingDate", $this->_propDict)) {
-            if (is_a($this->_propDict["postingDate"], "\DateTime")) {
-                return $this->_propDict["postingDate"];
+        if (array_key_exists("amount", $this->_propDict)) {
+            if (is_a($this->_propDict["amount"], "Beta\Microsoft\Graph\Model\Decimal")) {
+                return $this->_propDict["amount"];
             } else {
-                $this->_propDict["postingDate"] = new \DateTime($this->_propDict["postingDate"]);
-                return $this->_propDict["postingDate"];
+                $this->_propDict["amount"] = new Decimal($this->_propDict["amount"]);
+                return $this->_propDict["amount"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the postingDate
+    * Sets the amount
     *
-    * @param \DateTime $val The postingDate
+    * @param Decimal $val The amount
     *
     * @return JournalLine
     */
-    public function setPostingDate($val)
+    public function setAmount($val)
     {
-        $this->_propDict["postingDate"] = $val;
+        $this->_propDict["amount"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the comment
+    *
+    * @return string The comment
+    */
+    public function getComment()
+    {
+        if (array_key_exists("comment", $this->_propDict)) {
+            return $this->_propDict["comment"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the comment
+    *
+    * @param string $val The comment
+    *
+    * @return JournalLine
+    */
+    public function setComment($val)
+    {
+        $this->_propDict["comment"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the description
+    *
+    * @return string The description
+    */
+    public function getDescription()
+    {
+        if (array_key_exists("description", $this->_propDict)) {
+            return $this->_propDict["description"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the description
+    *
+    * @param string $val The description
+    *
+    * @return JournalLine
+    */
+    public function setDescription($val)
+    {
+        $this->_propDict["description"] = $val;
         return $this;
     }
     
@@ -218,87 +218,29 @@ class JournalLine extends Entity
     }
     
     /**
-    * Gets the amount
+    * Gets the journalDisplayName
     *
-    * @return Decimal The amount
+    * @return string The journalDisplayName
     */
-    public function getAmount()
+    public function getJournalDisplayName()
     {
-        if (array_key_exists("amount", $this->_propDict)) {
-            if (is_a($this->_propDict["amount"], "Beta\Microsoft\Graph\Model\Decimal")) {
-                return $this->_propDict["amount"];
-            } else {
-                $this->_propDict["amount"] = new Decimal($this->_propDict["amount"]);
-                return $this->_propDict["amount"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the amount
-    *
-    * @param Decimal $val The amount
-    *
-    * @return JournalLine
-    */
-    public function setAmount($val)
-    {
-        $this->_propDict["amount"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the description
-    *
-    * @return string The description
-    */
-    public function getDescription()
-    {
-        if (array_key_exists("description", $this->_propDict)) {
-            return $this->_propDict["description"];
+        if (array_key_exists("journalDisplayName", $this->_propDict)) {
+            return $this->_propDict["journalDisplayName"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the description
+    * Sets the journalDisplayName
     *
-    * @param string $val The description
-    *
-    * @return JournalLine
-    */
-    public function setDescription($val)
-    {
-        $this->_propDict["description"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the comment
-    *
-    * @return string The comment
-    */
-    public function getComment()
-    {
-        if (array_key_exists("comment", $this->_propDict)) {
-            return $this->_propDict["comment"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the comment
-    *
-    * @param string $val The comment
+    * @param string $val The journalDisplayName
     *
     * @return JournalLine
     */
-    public function setComment($val)
+    public function setJournalDisplayName($val)
     {
-        $this->_propDict["comment"] = $val;
+        $this->_propDict["journalDisplayName"] = $val;
         return $this;
     }
     
@@ -330,6 +272,64 @@ class JournalLine extends Entity
     public function setLastModifiedDateTime($val)
     {
         $this->_propDict["lastModifiedDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the lineNumber
+    *
+    * @return int The lineNumber
+    */
+    public function getLineNumber()
+    {
+        if (array_key_exists("lineNumber", $this->_propDict)) {
+            return $this->_propDict["lineNumber"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the lineNumber
+    *
+    * @param int $val The lineNumber
+    *
+    * @return JournalLine
+    */
+    public function setLineNumber($val)
+    {
+        $this->_propDict["lineNumber"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the postingDate
+    *
+    * @return \DateTime The postingDate
+    */
+    public function getPostingDate()
+    {
+        if (array_key_exists("postingDate", $this->_propDict)) {
+            if (is_a($this->_propDict["postingDate"], "\DateTime")) {
+                return $this->_propDict["postingDate"];
+            } else {
+                $this->_propDict["postingDate"] = new \DateTime($this->_propDict["postingDate"]);
+                return $this->_propDict["postingDate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the postingDate
+    *
+    * @param \DateTime $val The postingDate
+    *
+    * @return JournalLine
+    */
+    public function setPostingDate($val)
+    {
+        $this->_propDict["postingDate"] = $val;
         return $this;
     }
     

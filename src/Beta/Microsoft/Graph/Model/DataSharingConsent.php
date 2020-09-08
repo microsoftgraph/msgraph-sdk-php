@@ -25,93 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class DataSharingConsent extends Entity
 {
     /**
-    * Gets the serviceDisplayName
-    * The display name of the service work flow
-    *
-    * @return string The serviceDisplayName
-    */
-    public function getServiceDisplayName()
-    {
-        if (array_key_exists("serviceDisplayName", $this->_propDict)) {
-            return $this->_propDict["serviceDisplayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the serviceDisplayName
-    * The display name of the service work flow
-    *
-    * @param string $val The serviceDisplayName
-    *
-    * @return DataSharingConsent
-    */
-    public function setServiceDisplayName($val)
-    {
-        $this->_propDict["serviceDisplayName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the termsUrl
-    * The TermsUrl for the data sharing consent
-    *
-    * @return string The termsUrl
-    */
-    public function getTermsUrl()
-    {
-        if (array_key_exists("termsUrl", $this->_propDict)) {
-            return $this->_propDict["termsUrl"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the termsUrl
-    * The TermsUrl for the data sharing consent
-    *
-    * @param string $val The termsUrl
-    *
-    * @return DataSharingConsent
-    */
-    public function setTermsUrl($val)
-    {
-        $this->_propDict["termsUrl"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the granted
-    * The granted state for the data sharing consent
-    *
-    * @return bool The granted
-    */
-    public function getGranted()
-    {
-        if (array_key_exists("granted", $this->_propDict)) {
-            return $this->_propDict["granted"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the granted
-    * The granted state for the data sharing consent
-    *
-    * @param bool $val The granted
-    *
-    * @return DataSharingConsent
-    */
-    public function setGranted($val)
-    {
-        $this->_propDict["granted"] = boolval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the grantDateTime
     * The time consent was granted for this account
     *
@@ -141,6 +54,35 @@ class DataSharingConsent extends Entity
     public function setGrantDateTime($val)
     {
         $this->_propDict["grantDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the granted
+    * The granted state for the data sharing consent
+    *
+    * @return bool The granted
+    */
+    public function getGranted()
+    {
+        if (array_key_exists("granted", $this->_propDict)) {
+            return $this->_propDict["granted"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the granted
+    * The granted state for the data sharing consent
+    *
+    * @param bool $val The granted
+    *
+    * @return DataSharingConsent
+    */
+    public function setGranted($val)
+    {
+        $this->_propDict["granted"] = boolval($val);
         return $this;
     }
     
@@ -199,6 +141,64 @@ class DataSharingConsent extends Entity
     public function setGrantedByUserId($val)
     {
         $this->_propDict["grantedByUserId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the serviceDisplayName
+    * The display name of the service work flow
+    *
+    * @return string The serviceDisplayName
+    */
+    public function getServiceDisplayName()
+    {
+        if (array_key_exists("serviceDisplayName", $this->_propDict)) {
+            return $this->_propDict["serviceDisplayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the serviceDisplayName
+    * The display name of the service work flow
+    *
+    * @param string $val The serviceDisplayName
+    *
+    * @return DataSharingConsent
+    */
+    public function setServiceDisplayName($val)
+    {
+        $this->_propDict["serviceDisplayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the termsUrl
+    * The TermsUrl for the data sharing consent
+    *
+    * @return string The termsUrl
+    */
+    public function getTermsUrl()
+    {
+        if (array_key_exists("termsUrl", $this->_propDict)) {
+            return $this->_propDict["termsUrl"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the termsUrl
+    * The TermsUrl for the data sharing consent
+    *
+    * @param string $val The termsUrl
+    *
+    * @return DataSharingConsent
+    */
+    public function setTermsUrl($val)
+    {
+        $this->_propDict["termsUrl"] = $val;
         return $this;
     }
     

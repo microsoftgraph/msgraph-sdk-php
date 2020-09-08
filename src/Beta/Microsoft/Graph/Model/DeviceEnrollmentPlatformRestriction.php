@@ -24,87 +24,31 @@ namespace Beta\Microsoft\Graph\Model;
 class DeviceEnrollmentPlatformRestriction extends Entity
 {
     /**
-    * Gets the platformBlocked
-    * Block the platform from enrolling
+    * Gets the blockedManufacturers
+    * Collection of blocked Manufacturers.
     *
-    * @return bool The platformBlocked
+    * @return string The blockedManufacturers
     */
-    public function getPlatformBlocked()
+    public function getBlockedManufacturers()
     {
-        if (array_key_exists("platformBlocked", $this->_propDict)) {
-            return $this->_propDict["platformBlocked"];
+        if (array_key_exists("blockedManufacturers", $this->_propDict)) {
+            return $this->_propDict["blockedManufacturers"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the platformBlocked
-    * Block the platform from enrolling
+    * Sets the blockedManufacturers
+    * Collection of blocked Manufacturers.
     *
-    * @param bool $val The value of the platformBlocked
-    *
-    * @return DeviceEnrollmentPlatformRestriction
-    */
-    public function setPlatformBlocked($val)
-    {
-        $this->_propDict["platformBlocked"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the personalDeviceEnrollmentBlocked
-    * Block personally owned devices from enrolling
-    *
-    * @return bool The personalDeviceEnrollmentBlocked
-    */
-    public function getPersonalDeviceEnrollmentBlocked()
-    {
-        if (array_key_exists("personalDeviceEnrollmentBlocked", $this->_propDict)) {
-            return $this->_propDict["personalDeviceEnrollmentBlocked"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the personalDeviceEnrollmentBlocked
-    * Block personally owned devices from enrolling
-    *
-    * @param bool $val The value of the personalDeviceEnrollmentBlocked
+    * @param string $val The value of the blockedManufacturers
     *
     * @return DeviceEnrollmentPlatformRestriction
     */
-    public function setPersonalDeviceEnrollmentBlocked($val)
+    public function setBlockedManufacturers($val)
     {
-        $this->_propDict["personalDeviceEnrollmentBlocked"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the osMinimumVersion
-    * Min OS version supported
-    *
-    * @return string The osMinimumVersion
-    */
-    public function getOsMinimumVersion()
-    {
-        if (array_key_exists("osMinimumVersion", $this->_propDict)) {
-            return $this->_propDict["osMinimumVersion"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the osMinimumVersion
-    * Min OS version supported
-    *
-    * @param string $val The value of the osMinimumVersion
-    *
-    * @return DeviceEnrollmentPlatformRestriction
-    */
-    public function setOsMinimumVersion($val)
-    {
-        $this->_propDict["osMinimumVersion"] = $val;
+        $this->_propDict["blockedManufacturers"] = $val;
         return $this;
     }
     /**
@@ -136,31 +80,87 @@ class DeviceEnrollmentPlatformRestriction extends Entity
         return $this;
     }
     /**
-    * Gets the blockedManufacturers
-    * Collection of blocked Manufacturers.
+    * Gets the osMinimumVersion
+    * Min OS version supported
     *
-    * @return string The blockedManufacturers
+    * @return string The osMinimumVersion
     */
-    public function getBlockedManufacturers()
+    public function getOsMinimumVersion()
     {
-        if (array_key_exists("blockedManufacturers", $this->_propDict)) {
-            return $this->_propDict["blockedManufacturers"];
+        if (array_key_exists("osMinimumVersion", $this->_propDict)) {
+            return $this->_propDict["osMinimumVersion"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the blockedManufacturers
-    * Collection of blocked Manufacturers.
+    * Sets the osMinimumVersion
+    * Min OS version supported
     *
-    * @param string $val The value of the blockedManufacturers
+    * @param string $val The value of the osMinimumVersion
     *
     * @return DeviceEnrollmentPlatformRestriction
     */
-    public function setBlockedManufacturers($val)
+    public function setOsMinimumVersion($val)
     {
-        $this->_propDict["blockedManufacturers"] = $val;
+        $this->_propDict["osMinimumVersion"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the personalDeviceEnrollmentBlocked
+    * Block personally owned devices from enrolling
+    *
+    * @return bool The personalDeviceEnrollmentBlocked
+    */
+    public function getPersonalDeviceEnrollmentBlocked()
+    {
+        if (array_key_exists("personalDeviceEnrollmentBlocked", $this->_propDict)) {
+            return $this->_propDict["personalDeviceEnrollmentBlocked"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the personalDeviceEnrollmentBlocked
+    * Block personally owned devices from enrolling
+    *
+    * @param bool $val The value of the personalDeviceEnrollmentBlocked
+    *
+    * @return DeviceEnrollmentPlatformRestriction
+    */
+    public function setPersonalDeviceEnrollmentBlocked($val)
+    {
+        $this->_propDict["personalDeviceEnrollmentBlocked"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the platformBlocked
+    * Block the platform from enrolling
+    *
+    * @return bool The platformBlocked
+    */
+    public function getPlatformBlocked()
+    {
+        if (array_key_exists("platformBlocked", $this->_propDict)) {
+            return $this->_propDict["platformBlocked"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the platformBlocked
+    * Block the platform from enrolling
+    *
+    * @param bool $val The value of the platformBlocked
+    *
+    * @return DeviceEnrollmentPlatformRestriction
+    */
+    public function setPlatformBlocked($val)
+    {
+        $this->_propDict["platformBlocked"] = $val;
         return $this;
     }
 }

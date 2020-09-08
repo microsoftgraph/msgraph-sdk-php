@@ -23,6 +23,37 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class ExactMatchClassificationRequest extends Entity
 {
+
+    /**
+    * Gets the contentClassifications
+    *
+    * @return ContentClassification The contentClassifications
+    */
+    public function getContentClassifications()
+    {
+        if (array_key_exists("contentClassifications", $this->_propDict)) {
+            if (is_a($this->_propDict["contentClassifications"], "Beta\Microsoft\Graph\Model\ContentClassification")) {
+                return $this->_propDict["contentClassifications"];
+            } else {
+                $this->_propDict["contentClassifications"] = new ContentClassification($this->_propDict["contentClassifications"]);
+                return $this->_propDict["contentClassifications"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the contentClassifications
+    *
+    * @param ContentClassification $val The value to assign to the contentClassifications
+    *
+    * @return ExactMatchClassificationRequest The ExactMatchClassificationRequest
+    */
+    public function setContentClassifications($val)
+    {
+        $this->_propDict["contentClassifications"] = $val;
+         return $this;
+    }
     /**
     * Gets the sensitiveTypeIds
     *
@@ -100,36 +131,5 @@ class ExactMatchClassificationRequest extends Entity
     {
         $this->_propDict["timeoutInMs"] = $val;
         return $this;
-    }
-
-    /**
-    * Gets the contentClassifications
-    *
-    * @return ContentClassification The contentClassifications
-    */
-    public function getContentClassifications()
-    {
-        if (array_key_exists("contentClassifications", $this->_propDict)) {
-            if (is_a($this->_propDict["contentClassifications"], "Beta\Microsoft\Graph\Model\ContentClassification")) {
-                return $this->_propDict["contentClassifications"];
-            } else {
-                $this->_propDict["contentClassifications"] = new ContentClassification($this->_propDict["contentClassifications"]);
-                return $this->_propDict["contentClassifications"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the contentClassifications
-    *
-    * @param ContentClassification $val The value to assign to the contentClassifications
-    *
-    * @return ExactMatchClassificationRequest The ExactMatchClassificationRequest
-    */
-    public function setContentClassifications($val)
-    {
-        $this->_propDict["contentClassifications"] = $val;
-         return $this;
     }
 }

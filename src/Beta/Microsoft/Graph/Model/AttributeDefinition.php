@@ -272,32 +272,6 @@ class AttributeDefinition extends Entity
         $this->_propDict["name"] = $val;
         return $this;
     }
-    /**
-    * Gets the required
-    *
-    * @return bool The required
-    */
-    public function getRequired()
-    {
-        if (array_key_exists("required", $this->_propDict)) {
-            return $this->_propDict["required"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the required
-    *
-    * @param bool $val The value of the required
-    *
-    * @return AttributeDefinition
-    */
-    public function setRequired($val)
-    {
-        $this->_propDict["required"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the referencedObjects
@@ -328,6 +302,32 @@ class AttributeDefinition extends Entity
     {
         $this->_propDict["referencedObjects"] = $val;
          return $this;
+    }
+    /**
+    * Gets the required
+    *
+    * @return bool The required
+    */
+    public function getRequired()
+    {
+        if (array_key_exists("required", $this->_propDict)) {
+            return $this->_propDict["required"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the required
+    *
+    * @param bool $val The value of the required
+    *
+    * @return AttributeDefinition
+    */
+    public function setRequired($val)
+    {
+        $this->_propDict["required"] = $val;
+        return $this;
     }
 
     /**

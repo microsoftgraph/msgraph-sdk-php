@@ -57,6 +57,32 @@ class SharingLink extends Entity
          return $this;
     }
     /**
+    * Gets the configuratorUrl
+    *
+    * @return string The configuratorUrl
+    */
+    public function getConfiguratorUrl()
+    {
+        if (array_key_exists("configuratorUrl", $this->_propDict)) {
+            return $this->_propDict["configuratorUrl"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the configuratorUrl
+    *
+    * @param string $val The value of the configuratorUrl
+    *
+    * @return SharingLink
+    */
+    public function setConfiguratorUrl($val)
+    {
+        $this->_propDict["configuratorUrl"] = $val;
+        return $this;
+    }
+    /**
     * Gets the preventsDownload
     * If true then the user can only use this link to view the item on the web, and cannot use it to download the contents of the item. Only for OneDrive for Business and SharePoint.
     *
@@ -82,32 +108,6 @@ class SharingLink extends Entity
     public function setPreventsDownload($val)
     {
         $this->_propDict["preventsDownload"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the configuratorUrl
-    *
-    * @return string The configuratorUrl
-    */
-    public function getConfiguratorUrl()
-    {
-        if (array_key_exists("configuratorUrl", $this->_propDict)) {
-            return $this->_propDict["configuratorUrl"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the configuratorUrl
-    *
-    * @param string $val The value of the configuratorUrl
-    *
-    * @return SharingLink
-    */
-    public function setConfiguratorUrl($val)
-    {
-        $this->_propDict["configuratorUrl"] = $val;
         return $this;
     }
     /**

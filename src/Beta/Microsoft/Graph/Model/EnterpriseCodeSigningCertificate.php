@@ -58,122 +58,35 @@ class EnterpriseCodeSigningCertificate extends Entity
     }
     
     /**
-    * Gets the status
-    * The Certificate Status Provisioned or not Provisioned.
+    * Gets the expirationDateTime
+    * The Cert Expiration Date.
     *
-    * @return CertificateStatus The status
+    * @return \DateTime The expirationDateTime
     */
-    public function getStatus()
+    public function getExpirationDateTime()
     {
-        if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Beta\Microsoft\Graph\Model\CertificateStatus")) {
-                return $this->_propDict["status"];
+        if (array_key_exists("expirationDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["expirationDateTime"], "\DateTime")) {
+                return $this->_propDict["expirationDateTime"];
             } else {
-                $this->_propDict["status"] = new CertificateStatus($this->_propDict["status"]);
-                return $this->_propDict["status"];
+                $this->_propDict["expirationDateTime"] = new \DateTime($this->_propDict["expirationDateTime"]);
+                return $this->_propDict["expirationDateTime"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the status
-    * The Certificate Status Provisioned or not Provisioned.
+    * Sets the expirationDateTime
+    * The Cert Expiration Date.
     *
-    * @param CertificateStatus $val The status
-    *
-    * @return EnterpriseCodeSigningCertificate
-    */
-    public function setStatus($val)
-    {
-        $this->_propDict["status"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the subjectName
-    * The Subject Name for the cert.
-    *
-    * @return string The subjectName
-    */
-    public function getSubjectName()
-    {
-        if (array_key_exists("subjectName", $this->_propDict)) {
-            return $this->_propDict["subjectName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the subjectName
-    * The Subject Name for the cert.
-    *
-    * @param string $val The subjectName
+    * @param \DateTime $val The expirationDateTime
     *
     * @return EnterpriseCodeSigningCertificate
     */
-    public function setSubjectName($val)
+    public function setExpirationDateTime($val)
     {
-        $this->_propDict["subjectName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the subject
-    * The Subject Value for the cert.
-    *
-    * @return string The subject
-    */
-    public function getSubject()
-    {
-        if (array_key_exists("subject", $this->_propDict)) {
-            return $this->_propDict["subject"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the subject
-    * The Subject Value for the cert.
-    *
-    * @param string $val The subject
-    *
-    * @return EnterpriseCodeSigningCertificate
-    */
-    public function setSubject($val)
-    {
-        $this->_propDict["subject"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the issuerName
-    * The Issuer Name for the cert.
-    *
-    * @return string The issuerName
-    */
-    public function getIssuerName()
-    {
-        if (array_key_exists("issuerName", $this->_propDict)) {
-            return $this->_propDict["issuerName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the issuerName
-    * The Issuer Name for the cert.
-    *
-    * @param string $val The issuerName
-    *
-    * @return EnterpriseCodeSigningCertificate
-    */
-    public function setIssuerName($val)
-    {
-        $this->_propDict["issuerName"] = $val;
+        $this->_propDict["expirationDateTime"] = $val;
         return $this;
     }
     
@@ -207,35 +120,122 @@ class EnterpriseCodeSigningCertificate extends Entity
     }
     
     /**
-    * Gets the expirationDateTime
-    * The Cert Expiration Date.
+    * Gets the issuerName
+    * The Issuer Name for the cert.
     *
-    * @return \DateTime The expirationDateTime
+    * @return string The issuerName
     */
-    public function getExpirationDateTime()
+    public function getIssuerName()
     {
-        if (array_key_exists("expirationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["expirationDateTime"], "\DateTime")) {
-                return $this->_propDict["expirationDateTime"];
+        if (array_key_exists("issuerName", $this->_propDict)) {
+            return $this->_propDict["issuerName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the issuerName
+    * The Issuer Name for the cert.
+    *
+    * @param string $val The issuerName
+    *
+    * @return EnterpriseCodeSigningCertificate
+    */
+    public function setIssuerName($val)
+    {
+        $this->_propDict["issuerName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the status
+    * The Certificate Status Provisioned or not Provisioned.
+    *
+    * @return CertificateStatus The status
+    */
+    public function getStatus()
+    {
+        if (array_key_exists("status", $this->_propDict)) {
+            if (is_a($this->_propDict["status"], "Beta\Microsoft\Graph\Model\CertificateStatus")) {
+                return $this->_propDict["status"];
             } else {
-                $this->_propDict["expirationDateTime"] = new \DateTime($this->_propDict["expirationDateTime"]);
-                return $this->_propDict["expirationDateTime"];
+                $this->_propDict["status"] = new CertificateStatus($this->_propDict["status"]);
+                return $this->_propDict["status"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the expirationDateTime
-    * The Cert Expiration Date.
+    * Sets the status
+    * The Certificate Status Provisioned or not Provisioned.
     *
-    * @param \DateTime $val The expirationDateTime
+    * @param CertificateStatus $val The status
     *
     * @return EnterpriseCodeSigningCertificate
     */
-    public function setExpirationDateTime($val)
+    public function setStatus($val)
     {
-        $this->_propDict["expirationDateTime"] = $val;
+        $this->_propDict["status"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the subject
+    * The Subject Value for the cert.
+    *
+    * @return string The subject
+    */
+    public function getSubject()
+    {
+        if (array_key_exists("subject", $this->_propDict)) {
+            return $this->_propDict["subject"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the subject
+    * The Subject Value for the cert.
+    *
+    * @param string $val The subject
+    *
+    * @return EnterpriseCodeSigningCertificate
+    */
+    public function setSubject($val)
+    {
+        $this->_propDict["subject"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the subjectName
+    * The Subject Name for the cert.
+    *
+    * @return string The subjectName
+    */
+    public function getSubjectName()
+    {
+        if (array_key_exists("subjectName", $this->_propDict)) {
+            return $this->_propDict["subjectName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the subjectName
+    * The Subject Name for the cert.
+    *
+    * @param string $val The subjectName
+    *
+    * @return EnterpriseCodeSigningCertificate
+    */
+    public function setSubjectName($val)
+    {
+        $this->_propDict["subjectName"] = $val;
         return $this;
     }
     

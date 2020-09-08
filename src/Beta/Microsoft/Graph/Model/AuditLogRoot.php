@@ -26,36 +26,6 @@ class AuditLogRoot extends Entity
 {
 
      /** 
-     * Gets the signIns
-    * Read-only. Nullable.
-     *
-     * @return array The signIns
-     */
-    public function getSignIns()
-    {
-        if (array_key_exists("signIns", $this->_propDict)) {
-           return $this->_propDict["signIns"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the signIns
-    * Read-only. Nullable.
-    *
-    * @param SignIn $val The signIns
-    *
-    * @return AuditLogRoot
-    */
-    public function setSignIns($val)
-    {
-		$this->_propDict["signIns"] = $val;
-        return $this;
-    }
-    
-
-     /** 
      * Gets the directoryAudits
     * Read-only. Nullable.
      *
@@ -81,34 +51,6 @@ class AuditLogRoot extends Entity
     public function setDirectoryAudits($val)
     {
 		$this->_propDict["directoryAudits"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the restrictedSignIns
-     *
-     * @return array The restrictedSignIns
-     */
-    public function getRestrictedSignIns()
-    {
-        if (array_key_exists("restrictedSignIns", $this->_propDict)) {
-           return $this->_propDict["restrictedSignIns"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the restrictedSignIns
-    *
-    * @param RestrictedSignIn $val The restrictedSignIns
-    *
-    * @return AuditLogRoot
-    */
-    public function setRestrictedSignIns($val)
-    {
-		$this->_propDict["restrictedSignIns"] = $val;
         return $this;
     }
     
@@ -165,6 +107,64 @@ class AuditLogRoot extends Entity
     public function setProvisioning($val)
     {
 		$this->_propDict["provisioning"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the restrictedSignIns
+     *
+     * @return array The restrictedSignIns
+     */
+    public function getRestrictedSignIns()
+    {
+        if (array_key_exists("restrictedSignIns", $this->_propDict)) {
+           return $this->_propDict["restrictedSignIns"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the restrictedSignIns
+    *
+    * @param RestrictedSignIn $val The restrictedSignIns
+    *
+    * @return AuditLogRoot
+    */
+    public function setRestrictedSignIns($val)
+    {
+		$this->_propDict["restrictedSignIns"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the signIns
+    * Read-only. Nullable.
+     *
+     * @return array The signIns
+     */
+    public function getSignIns()
+    {
+        if (array_key_exists("signIns", $this->_propDict)) {
+           return $this->_propDict["signIns"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the signIns
+    * Read-only. Nullable.
+    *
+    * @param SignIn $val The signIns
+    *
+    * @return AuditLogRoot
+    */
+    public function setSignIns($val)
+    {
+		$this->_propDict["signIns"] = $val;
         return $this;
     }
     

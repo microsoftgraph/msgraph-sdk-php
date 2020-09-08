@@ -25,64 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentConfiguration
 {
     /**
-    * Gets the showInstallationProgress
-    * Show or hide installation progress to user
-    *
-    * @return bool The showInstallationProgress
-    */
-    public function getShowInstallationProgress()
-    {
-        if (array_key_exists("showInstallationProgress", $this->_propDict)) {
-            return $this->_propDict["showInstallationProgress"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the showInstallationProgress
-    * Show or hide installation progress to user
-    *
-    * @param bool $val The showInstallationProgress
-    *
-    * @return Windows10EnrollmentCompletionPageConfiguration
-    */
-    public function setShowInstallationProgress($val)
-    {
-        $this->_propDict["showInstallationProgress"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the blockDeviceSetupRetryByUser
-    * Allow the user to retry the setup on installation failure
-    *
-    * @return bool The blockDeviceSetupRetryByUser
-    */
-    public function getBlockDeviceSetupRetryByUser()
-    {
-        if (array_key_exists("blockDeviceSetupRetryByUser", $this->_propDict)) {
-            return $this->_propDict["blockDeviceSetupRetryByUser"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the blockDeviceSetupRetryByUser
-    * Allow the user to retry the setup on installation failure
-    *
-    * @param bool $val The blockDeviceSetupRetryByUser
-    *
-    * @return Windows10EnrollmentCompletionPageConfiguration
-    */
-    public function setBlockDeviceSetupRetryByUser($val)
-    {
-        $this->_propDict["blockDeviceSetupRetryByUser"] = boolval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the allowDeviceResetOnInstallFailure
     * Allow or block device reset on installation failure
     *
@@ -108,93 +50,6 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
     public function setAllowDeviceResetOnInstallFailure($val)
     {
         $this->_propDict["allowDeviceResetOnInstallFailure"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the allowLogCollectionOnInstallFailure
-    * Allow or block log collection on installation failure
-    *
-    * @return bool The allowLogCollectionOnInstallFailure
-    */
-    public function getAllowLogCollectionOnInstallFailure()
-    {
-        if (array_key_exists("allowLogCollectionOnInstallFailure", $this->_propDict)) {
-            return $this->_propDict["allowLogCollectionOnInstallFailure"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the allowLogCollectionOnInstallFailure
-    * Allow or block log collection on installation failure
-    *
-    * @param bool $val The allowLogCollectionOnInstallFailure
-    *
-    * @return Windows10EnrollmentCompletionPageConfiguration
-    */
-    public function setAllowLogCollectionOnInstallFailure($val)
-    {
-        $this->_propDict["allowLogCollectionOnInstallFailure"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the customErrorMessage
-    * Set custom error message to show upon installation failure
-    *
-    * @return string The customErrorMessage
-    */
-    public function getCustomErrorMessage()
-    {
-        if (array_key_exists("customErrorMessage", $this->_propDict)) {
-            return $this->_propDict["customErrorMessage"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the customErrorMessage
-    * Set custom error message to show upon installation failure
-    *
-    * @param string $val The customErrorMessage
-    *
-    * @return Windows10EnrollmentCompletionPageConfiguration
-    */
-    public function setCustomErrorMessage($val)
-    {
-        $this->_propDict["customErrorMessage"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the installProgressTimeoutInMinutes
-    * Set installation progress timeout in minutes
-    *
-    * @return int The installProgressTimeoutInMinutes
-    */
-    public function getInstallProgressTimeoutInMinutes()
-    {
-        if (array_key_exists("installProgressTimeoutInMinutes", $this->_propDict)) {
-            return $this->_propDict["installProgressTimeoutInMinutes"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the installProgressTimeoutInMinutes
-    * Set installation progress timeout in minutes
-    *
-    * @param int $val The installProgressTimeoutInMinutes
-    *
-    * @return Windows10EnrollmentCompletionPageConfiguration
-    */
-    public function setInstallProgressTimeoutInMinutes($val)
-    {
-        $this->_propDict["installProgressTimeoutInMinutes"] = intval($val);
         return $this;
     }
     
@@ -228,60 +83,89 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
     }
     
     /**
-    * Gets the selectedMobileAppIds
-    * Selected applications to track the installation status
+    * Gets the allowLogCollectionOnInstallFailure
+    * Allow or block log collection on installation failure
     *
-    * @return string The selectedMobileAppIds
+    * @return bool The allowLogCollectionOnInstallFailure
     */
-    public function getSelectedMobileAppIds()
+    public function getAllowLogCollectionOnInstallFailure()
     {
-        if (array_key_exists("selectedMobileAppIds", $this->_propDict)) {
-            return $this->_propDict["selectedMobileAppIds"];
+        if (array_key_exists("allowLogCollectionOnInstallFailure", $this->_propDict)) {
+            return $this->_propDict["allowLogCollectionOnInstallFailure"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the selectedMobileAppIds
-    * Selected applications to track the installation status
+    * Sets the allowLogCollectionOnInstallFailure
+    * Allow or block log collection on installation failure
     *
-    * @param string $val The selectedMobileAppIds
+    * @param bool $val The allowLogCollectionOnInstallFailure
     *
     * @return Windows10EnrollmentCompletionPageConfiguration
     */
-    public function setSelectedMobileAppIds($val)
+    public function setAllowLogCollectionOnInstallFailure($val)
     {
-        $this->_propDict["selectedMobileAppIds"] = $val;
+        $this->_propDict["allowLogCollectionOnInstallFailure"] = boolval($val);
         return $this;
     }
     
     /**
-    * Gets the trackInstallProgressForAutopilotOnly
-    * Only show installation progress for Autopilot enrollment scenarios
+    * Gets the blockDeviceSetupRetryByUser
+    * Allow the user to retry the setup on installation failure
     *
-    * @return bool The trackInstallProgressForAutopilotOnly
+    * @return bool The blockDeviceSetupRetryByUser
     */
-    public function getTrackInstallProgressForAutopilotOnly()
+    public function getBlockDeviceSetupRetryByUser()
     {
-        if (array_key_exists("trackInstallProgressForAutopilotOnly", $this->_propDict)) {
-            return $this->_propDict["trackInstallProgressForAutopilotOnly"];
+        if (array_key_exists("blockDeviceSetupRetryByUser", $this->_propDict)) {
+            return $this->_propDict["blockDeviceSetupRetryByUser"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the trackInstallProgressForAutopilotOnly
-    * Only show installation progress for Autopilot enrollment scenarios
+    * Sets the blockDeviceSetupRetryByUser
+    * Allow the user to retry the setup on installation failure
     *
-    * @param bool $val The trackInstallProgressForAutopilotOnly
+    * @param bool $val The blockDeviceSetupRetryByUser
     *
     * @return Windows10EnrollmentCompletionPageConfiguration
     */
-    public function setTrackInstallProgressForAutopilotOnly($val)
+    public function setBlockDeviceSetupRetryByUser($val)
     {
-        $this->_propDict["trackInstallProgressForAutopilotOnly"] = boolval($val);
+        $this->_propDict["blockDeviceSetupRetryByUser"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the customErrorMessage
+    * Set custom error message to show upon installation failure
+    *
+    * @return string The customErrorMessage
+    */
+    public function getCustomErrorMessage()
+    {
+        if (array_key_exists("customErrorMessage", $this->_propDict)) {
+            return $this->_propDict["customErrorMessage"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the customErrorMessage
+    * Set custom error message to show upon installation failure
+    *
+    * @param string $val The customErrorMessage
+    *
+    * @return Windows10EnrollmentCompletionPageConfiguration
+    */
+    public function setCustomErrorMessage($val)
+    {
+        $this->_propDict["customErrorMessage"] = $val;
         return $this;
     }
     
@@ -311,6 +195,122 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
     public function setDisableUserStatusTrackingAfterFirstUser($val)
     {
         $this->_propDict["disableUserStatusTrackingAfterFirstUser"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the installProgressTimeoutInMinutes
+    * Set installation progress timeout in minutes
+    *
+    * @return int The installProgressTimeoutInMinutes
+    */
+    public function getInstallProgressTimeoutInMinutes()
+    {
+        if (array_key_exists("installProgressTimeoutInMinutes", $this->_propDict)) {
+            return $this->_propDict["installProgressTimeoutInMinutes"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the installProgressTimeoutInMinutes
+    * Set installation progress timeout in minutes
+    *
+    * @param int $val The installProgressTimeoutInMinutes
+    *
+    * @return Windows10EnrollmentCompletionPageConfiguration
+    */
+    public function setInstallProgressTimeoutInMinutes($val)
+    {
+        $this->_propDict["installProgressTimeoutInMinutes"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the selectedMobileAppIds
+    * Selected applications to track the installation status
+    *
+    * @return string The selectedMobileAppIds
+    */
+    public function getSelectedMobileAppIds()
+    {
+        if (array_key_exists("selectedMobileAppIds", $this->_propDict)) {
+            return $this->_propDict["selectedMobileAppIds"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the selectedMobileAppIds
+    * Selected applications to track the installation status
+    *
+    * @param string $val The selectedMobileAppIds
+    *
+    * @return Windows10EnrollmentCompletionPageConfiguration
+    */
+    public function setSelectedMobileAppIds($val)
+    {
+        $this->_propDict["selectedMobileAppIds"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the showInstallationProgress
+    * Show or hide installation progress to user
+    *
+    * @return bool The showInstallationProgress
+    */
+    public function getShowInstallationProgress()
+    {
+        if (array_key_exists("showInstallationProgress", $this->_propDict)) {
+            return $this->_propDict["showInstallationProgress"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the showInstallationProgress
+    * Show or hide installation progress to user
+    *
+    * @param bool $val The showInstallationProgress
+    *
+    * @return Windows10EnrollmentCompletionPageConfiguration
+    */
+    public function setShowInstallationProgress($val)
+    {
+        $this->_propDict["showInstallationProgress"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the trackInstallProgressForAutopilotOnly
+    * Only show installation progress for Autopilot enrollment scenarios
+    *
+    * @return bool The trackInstallProgressForAutopilotOnly
+    */
+    public function getTrackInstallProgressForAutopilotOnly()
+    {
+        if (array_key_exists("trackInstallProgressForAutopilotOnly", $this->_propDict)) {
+            return $this->_propDict["trackInstallProgressForAutopilotOnly"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the trackInstallProgressForAutopilotOnly
+    * Only show installation progress for Autopilot enrollment scenarios
+    *
+    * @param bool $val The trackInstallProgressForAutopilotOnly
+    *
+    * @return Windows10EnrollmentCompletionPageConfiguration
+    */
+    public function setTrackInstallProgressForAutopilotOnly($val)
+    {
+        $this->_propDict["trackInstallProgressForAutopilotOnly"] = boolval($val);
         return $this;
     }
     

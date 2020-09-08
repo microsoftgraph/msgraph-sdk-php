@@ -25,31 +25,35 @@ namespace Beta\Microsoft\Graph\Model;
 class IosUpdateConfiguration extends DeviceConfiguration
 {
     /**
-    * Gets the isEnabled
-    * Is setting enabled in UI
+    * Gets the activeHoursEnd
+    * Active Hours End (active hours mean the time window when updates install should not happen)
     *
-    * @return bool The isEnabled
+    * @return TimeOfDay The activeHoursEnd
     */
-    public function getIsEnabled()
+    public function getActiveHoursEnd()
     {
-        if (array_key_exists("isEnabled", $this->_propDict)) {
-            return $this->_propDict["isEnabled"];
-        } else {
-            return null;
+        if (array_key_exists("activeHoursEnd", $this->_propDict)) {
+            if (is_a($this->_propDict["activeHoursEnd"], "Beta\Microsoft\Graph\Model\TimeOfDay")) {
+                return $this->_propDict["activeHoursEnd"];
+            } else {
+                $this->_propDict["activeHoursEnd"] = new TimeOfDay($this->_propDict["activeHoursEnd"]);
+                return $this->_propDict["activeHoursEnd"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the isEnabled
-    * Is setting enabled in UI
+    * Sets the activeHoursEnd
+    * Active Hours End (active hours mean the time window when updates install should not happen)
     *
-    * @param bool $val The isEnabled
+    * @param TimeOfDay $val The activeHoursEnd
     *
     * @return IosUpdateConfiguration
     */
-    public function setIsEnabled($val)
+    public function setActiveHoursEnd($val)
     {
-        $this->_propDict["isEnabled"] = boolval($val);
+        $this->_propDict["activeHoursEnd"] = $val;
         return $this;
     }
     
@@ -86,36 +90,33 @@ class IosUpdateConfiguration extends DeviceConfiguration
         return $this;
     }
     
-    /**
-    * Gets the activeHoursEnd
-    * Active Hours End (active hours mean the time window when updates install should not happen)
-    *
-    * @return TimeOfDay The activeHoursEnd
-    */
-    public function getActiveHoursEnd()
+
+     /** 
+     * Gets the customUpdateTimeWindows
+    * If update schedule type is set to use time window scheduling, custom time windows when updates will be scheduled. This collection can contain a maximum of 20 elements.
+     *
+     * @return array The customUpdateTimeWindows
+     */
+    public function getCustomUpdateTimeWindows()
     {
-        if (array_key_exists("activeHoursEnd", $this->_propDict)) {
-            if (is_a($this->_propDict["activeHoursEnd"], "Beta\Microsoft\Graph\Model\TimeOfDay")) {
-                return $this->_propDict["activeHoursEnd"];
-            } else {
-                $this->_propDict["activeHoursEnd"] = new TimeOfDay($this->_propDict["activeHoursEnd"]);
-                return $this->_propDict["activeHoursEnd"];
-            }
+        if (array_key_exists("customUpdateTimeWindows", $this->_propDict)) {
+           return $this->_propDict["customUpdateTimeWindows"];
+        } else {
+            return null;
         }
-        return null;
     }
     
-    /**
-    * Sets the activeHoursEnd
-    * Active Hours End (active hours mean the time window when updates install should not happen)
+    /** 
+    * Sets the customUpdateTimeWindows
+    * If update schedule type is set to use time window scheduling, custom time windows when updates will be scheduled. This collection can contain a maximum of 20 elements.
     *
-    * @param TimeOfDay $val The activeHoursEnd
+    * @param CustomUpdateTimeWindow $val The customUpdateTimeWindows
     *
     * @return IosUpdateConfiguration
     */
-    public function setActiveHoursEnd($val)
+    public function setCustomUpdateTimeWindows($val)
     {
-        $this->_propDict["activeHoursEnd"] = $val;
+		$this->_propDict["customUpdateTimeWindows"] = $val;
         return $this;
     }
     
@@ -148,6 +149,64 @@ class IosUpdateConfiguration extends DeviceConfiguration
         return $this;
     }
     
+    /**
+    * Gets the enforcedSoftwareUpdateDelayInDays
+    * Days before software updates are visible to iOS devices ranging from 0 to 90 inclusive
+    *
+    * @return int The enforcedSoftwareUpdateDelayInDays
+    */
+    public function getEnforcedSoftwareUpdateDelayInDays()
+    {
+        if (array_key_exists("enforcedSoftwareUpdateDelayInDays", $this->_propDict)) {
+            return $this->_propDict["enforcedSoftwareUpdateDelayInDays"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the enforcedSoftwareUpdateDelayInDays
+    * Days before software updates are visible to iOS devices ranging from 0 to 90 inclusive
+    *
+    * @param int $val The enforcedSoftwareUpdateDelayInDays
+    *
+    * @return IosUpdateConfiguration
+    */
+    public function setEnforcedSoftwareUpdateDelayInDays($val)
+    {
+        $this->_propDict["enforcedSoftwareUpdateDelayInDays"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the isEnabled
+    * Is setting enabled in UI
+    *
+    * @return bool The isEnabled
+    */
+    public function getIsEnabled()
+    {
+        if (array_key_exists("isEnabled", $this->_propDict)) {
+            return $this->_propDict["isEnabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isEnabled
+    * Is setting enabled in UI
+    *
+    * @param bool $val The isEnabled
+    *
+    * @return IosUpdateConfiguration
+    */
+    public function setIsEnabled($val)
+    {
+        $this->_propDict["isEnabled"] = boolval($val);
+        return $this;
+    }
+    
 
      /** 
      * Gets the scheduledInstallDays
@@ -175,64 +234,6 @@ class IosUpdateConfiguration extends DeviceConfiguration
     public function setScheduledInstallDays($val)
     {
 		$this->_propDict["scheduledInstallDays"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the utcTimeOffsetInMinutes
-    * UTC Time Offset indicated in minutes
-    *
-    * @return int The utcTimeOffsetInMinutes
-    */
-    public function getUtcTimeOffsetInMinutes()
-    {
-        if (array_key_exists("utcTimeOffsetInMinutes", $this->_propDict)) {
-            return $this->_propDict["utcTimeOffsetInMinutes"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the utcTimeOffsetInMinutes
-    * UTC Time Offset indicated in minutes
-    *
-    * @param int $val The utcTimeOffsetInMinutes
-    *
-    * @return IosUpdateConfiguration
-    */
-    public function setUtcTimeOffsetInMinutes($val)
-    {
-        $this->_propDict["utcTimeOffsetInMinutes"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the enforcedSoftwareUpdateDelayInDays
-    * Days before software updates are visible to iOS devices ranging from 0 to 90 inclusive
-    *
-    * @return int The enforcedSoftwareUpdateDelayInDays
-    */
-    public function getEnforcedSoftwareUpdateDelayInDays()
-    {
-        if (array_key_exists("enforcedSoftwareUpdateDelayInDays", $this->_propDict)) {
-            return $this->_propDict["enforcedSoftwareUpdateDelayInDays"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the enforcedSoftwareUpdateDelayInDays
-    * Days before software updates are visible to iOS devices ranging from 0 to 90 inclusive
-    *
-    * @param int $val The enforcedSoftwareUpdateDelayInDays
-    *
-    * @return IosUpdateConfiguration
-    */
-    public function setEnforcedSoftwareUpdateDelayInDays($val)
-    {
-        $this->_propDict["enforcedSoftwareUpdateDelayInDays"] = intval($val);
         return $this;
     }
     
@@ -269,33 +270,32 @@ class IosUpdateConfiguration extends DeviceConfiguration
         return $this;
     }
     
-
-     /** 
-     * Gets the customUpdateTimeWindows
-    * If update schedule type is set to use time window scheduling, custom time windows when updates will be scheduled. This collection can contain a maximum of 20 elements.
-     *
-     * @return array The customUpdateTimeWindows
-     */
-    public function getCustomUpdateTimeWindows()
+    /**
+    * Gets the utcTimeOffsetInMinutes
+    * UTC Time Offset indicated in minutes
+    *
+    * @return int The utcTimeOffsetInMinutes
+    */
+    public function getUtcTimeOffsetInMinutes()
     {
-        if (array_key_exists("customUpdateTimeWindows", $this->_propDict)) {
-           return $this->_propDict["customUpdateTimeWindows"];
+        if (array_key_exists("utcTimeOffsetInMinutes", $this->_propDict)) {
+            return $this->_propDict["utcTimeOffsetInMinutes"];
         } else {
             return null;
         }
     }
     
-    /** 
-    * Sets the customUpdateTimeWindows
-    * If update schedule type is set to use time window scheduling, custom time windows when updates will be scheduled. This collection can contain a maximum of 20 elements.
+    /**
+    * Sets the utcTimeOffsetInMinutes
+    * UTC Time Offset indicated in minutes
     *
-    * @param CustomUpdateTimeWindow $val The customUpdateTimeWindows
+    * @param int $val The utcTimeOffsetInMinutes
     *
     * @return IosUpdateConfiguration
     */
-    public function setCustomUpdateTimeWindows($val)
+    public function setUtcTimeOffsetInMinutes($val)
     {
-		$this->_propDict["customUpdateTimeWindows"] = $val;
+        $this->_propDict["utcTimeOffsetInMinutes"] = intval($val);
         return $this;
     }
     

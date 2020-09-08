@@ -25,6 +25,64 @@ namespace Beta\Microsoft\Graph\Model;
 class WindowsManagementAppHealthState extends Entity
 {
     /**
+    * Gets the deviceName
+    * Name of the device on which Windows management app is installed.
+    *
+    * @return string The deviceName
+    */
+    public function getDeviceName()
+    {
+        if (array_key_exists("deviceName", $this->_propDict)) {
+            return $this->_propDict["deviceName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the deviceName
+    * Name of the device on which Windows management app is installed.
+    *
+    * @param string $val The deviceName
+    *
+    * @return WindowsManagementAppHealthState
+    */
+    public function setDeviceName($val)
+    {
+        $this->_propDict["deviceName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the deviceOSVersion
+    * Windows 10 OS version of the device on which Windows management app is installed.
+    *
+    * @return string The deviceOSVersion
+    */
+    public function getDeviceOSVersion()
+    {
+        if (array_key_exists("deviceOSVersion", $this->_propDict)) {
+            return $this->_propDict["deviceOSVersion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the deviceOSVersion
+    * Windows 10 OS version of the device on which Windows management app is installed.
+    *
+    * @param string $val The deviceOSVersion
+    *
+    * @return WindowsManagementAppHealthState
+    */
+    public function setDeviceOSVersion($val)
+    {
+        $this->_propDict["deviceOSVersion"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the healthState
     * Windows management app health state.
     *
@@ -116,64 +174,6 @@ class WindowsManagementAppHealthState extends Entity
     public function setLastCheckInDateTime($val)
     {
         $this->_propDict["lastCheckInDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the deviceName
-    * Name of the device on which Windows management app is installed.
-    *
-    * @return string The deviceName
-    */
-    public function getDeviceName()
-    {
-        if (array_key_exists("deviceName", $this->_propDict)) {
-            return $this->_propDict["deviceName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the deviceName
-    * Name of the device on which Windows management app is installed.
-    *
-    * @param string $val The deviceName
-    *
-    * @return WindowsManagementAppHealthState
-    */
-    public function setDeviceName($val)
-    {
-        $this->_propDict["deviceName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the deviceOSVersion
-    * Windows 10 OS version of the device on which Windows management app is installed.
-    *
-    * @return string The deviceOSVersion
-    */
-    public function getDeviceOSVersion()
-    {
-        if (array_key_exists("deviceOSVersion", $this->_propDict)) {
-            return $this->_propDict["deviceOSVersion"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the deviceOSVersion
-    * Windows 10 OS version of the device on which Windows management app is installed.
-    *
-    * @param string $val The deviceOSVersion
-    *
-    * @return WindowsManagementAppHealthState
-    */
-    public function setDeviceOSVersion($val)
-    {
-        $this->_propDict["deviceOSVersion"] = $val;
         return $this;
     }
     

@@ -32,6 +32,39 @@ class MacOSRedirectSingleSignOnExtension extends MacOSSingleSignOnExtension
         $this->setODataType("#microsoft.graph.macOSRedirectSingleSignOnExtension");
     }
 
+
+    /**
+    * Gets the configurations
+    * Gets or sets a list of typed key-value pairs used to configure Credential-type profiles. This collection can contain a maximum of 500 elements.
+    *
+    * @return KeyTypedValuePair The configurations
+    */
+    public function getConfigurations()
+    {
+        if (array_key_exists("configurations", $this->_propDict)) {
+            if (is_a($this->_propDict["configurations"], "Beta\Microsoft\Graph\Model\KeyTypedValuePair")) {
+                return $this->_propDict["configurations"];
+            } else {
+                $this->_propDict["configurations"] = new KeyTypedValuePair($this->_propDict["configurations"]);
+                return $this->_propDict["configurations"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the configurations
+    * Gets or sets a list of typed key-value pairs used to configure Credential-type profiles. This collection can contain a maximum of 500 elements.
+    *
+    * @param KeyTypedValuePair $val The value to assign to the configurations
+    *
+    * @return MacOSRedirectSingleSignOnExtension The MacOSRedirectSingleSignOnExtension
+    */
+    public function setConfigurations($val)
+    {
+        $this->_propDict["configurations"] = $val;
+         return $this;
+    }
     /**
     * Gets the extensionIdentifier
     * Gets or sets the bundle ID of the app extension that performs SSO for the specified URLs.
@@ -87,39 +120,6 @@ class MacOSRedirectSingleSignOnExtension extends MacOSSingleSignOnExtension
     {
         $this->_propDict["teamIdentifier"] = $val;
         return $this;
-    }
-
-    /**
-    * Gets the configurations
-    * Gets or sets a list of typed key-value pairs used to configure Credential-type profiles. This collection can contain a maximum of 500 elements.
-    *
-    * @return KeyTypedValuePair The configurations
-    */
-    public function getConfigurations()
-    {
-        if (array_key_exists("configurations", $this->_propDict)) {
-            if (is_a($this->_propDict["configurations"], "Beta\Microsoft\Graph\Model\KeyTypedValuePair")) {
-                return $this->_propDict["configurations"];
-            } else {
-                $this->_propDict["configurations"] = new KeyTypedValuePair($this->_propDict["configurations"]);
-                return $this->_propDict["configurations"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the configurations
-    * Gets or sets a list of typed key-value pairs used to configure Credential-type profiles. This collection can contain a maximum of 500 elements.
-    *
-    * @param KeyTypedValuePair $val The value to assign to the configurations
-    *
-    * @return MacOSRedirectSingleSignOnExtension The MacOSRedirectSingleSignOnExtension
-    */
-    public function setConfigurations($val)
-    {
-        $this->_propDict["configurations"] = $val;
-         return $this;
     }
     /**
     * Gets the urlPrefixes

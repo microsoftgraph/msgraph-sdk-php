@@ -25,33 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class AppConsentRequest extends Entity
 {
     /**
-    * Gets the appId
-    *
-    * @return string The appId
-    */
-    public function getAppId()
-    {
-        if (array_key_exists("appId", $this->_propDict)) {
-            return $this->_propDict["appId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the appId
-    *
-    * @param string $val The appId
-    *
-    * @return AppConsentRequest
-    */
-    public function setAppId($val)
-    {
-        $this->_propDict["appId"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the appDisplayName
     *
     * @return string The appDisplayName
@@ -75,6 +48,33 @@ class AppConsentRequest extends Entity
     public function setAppDisplayName($val)
     {
         $this->_propDict["appDisplayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the appId
+    *
+    * @return string The appId
+    */
+    public function getAppId()
+    {
+        if (array_key_exists("appId", $this->_propDict)) {
+            return $this->_propDict["appId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the appId
+    *
+    * @param string $val The appId
+    *
+    * @return AppConsentRequest
+    */
+    public function setAppId($val)
+    {
+        $this->_propDict["appId"] = $val;
         return $this;
     }
     

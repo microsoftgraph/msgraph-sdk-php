@@ -24,34 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class VpnServer extends Entity
 {
     /**
-    * Gets the description
-    * Description.
-    *
-    * @return string The description
-    */
-    public function getDescription()
-    {
-        if (array_key_exists("description", $this->_propDict)) {
-            return $this->_propDict["description"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the description
-    * Description.
-    *
-    * @param string $val The value of the description
-    *
-    * @return VpnServer
-    */
-    public function setDescription($val)
-    {
-        $this->_propDict["description"] = $val;
-        return $this;
-    }
-    /**
     * Gets the address
     * Address (IP address, FQDN or URL)
     *
@@ -77,6 +49,34 @@ class VpnServer extends Entity
     public function setAddress($val)
     {
         $this->_propDict["address"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the description
+    * Description.
+    *
+    * @return string The description
+    */
+    public function getDescription()
+    {
+        if (array_key_exists("description", $this->_propDict)) {
+            return $this->_propDict["description"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the description
+    * Description.
+    *
+    * @param string $val The value of the description
+    *
+    * @return VpnServer
+    */
+    public function setDescription($val)
+    {
+        $this->_propDict["description"] = $val;
         return $this;
     }
     /**

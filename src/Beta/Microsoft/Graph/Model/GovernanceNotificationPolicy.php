@@ -23,6 +23,32 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class GovernanceNotificationPolicy extends Entity
 {
+    /**
+    * Gets the enabledTemplateTypes
+    *
+    * @return string The enabledTemplateTypes
+    */
+    public function getEnabledTemplateTypes()
+    {
+        if (array_key_exists("enabledTemplateTypes", $this->_propDict)) {
+            return $this->_propDict["enabledTemplateTypes"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the enabledTemplateTypes
+    *
+    * @param string $val The value of the enabledTemplateTypes
+    *
+    * @return GovernanceNotificationPolicy
+    */
+    public function setEnabledTemplateTypes($val)
+    {
+        $this->_propDict["enabledTemplateTypes"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the notificationTemplates
@@ -53,31 +79,5 @@ class GovernanceNotificationPolicy extends Entity
     {
         $this->_propDict["notificationTemplates"] = $val;
          return $this;
-    }
-    /**
-    * Gets the enabledTemplateTypes
-    *
-    * @return string The enabledTemplateTypes
-    */
-    public function getEnabledTemplateTypes()
-    {
-        if (array_key_exists("enabledTemplateTypes", $this->_propDict)) {
-            return $this->_propDict["enabledTemplateTypes"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the enabledTemplateTypes
-    *
-    * @param string $val The value of the enabledTemplateTypes
-    *
-    * @return GovernanceNotificationPolicy
-    */
-    public function setEnabledTemplateTypes($val)
-    {
-        $this->_propDict["enabledTemplateTypes"] = $val;
-        return $this;
     }
 }

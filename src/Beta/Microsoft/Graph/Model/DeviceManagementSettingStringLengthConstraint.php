@@ -33,34 +33,6 @@ class DeviceManagementSettingStringLengthConstraint extends DeviceManagementCons
     }
 
     /**
-    * Gets the minimumLength
-    * The minimum permitted string length
-    *
-    * @return int The minimumLength
-    */
-    public function getMinimumLength()
-    {
-        if (array_key_exists("minimumLength", $this->_propDict)) {
-            return $this->_propDict["minimumLength"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the minimumLength
-    * The minimum permitted string length
-    *
-    * @param int $val The value of the minimumLength
-    *
-    * @return DeviceManagementSettingStringLengthConstraint
-    */
-    public function setMinimumLength($val)
-    {
-        $this->_propDict["minimumLength"] = $val;
-        return $this;
-    }
-    /**
     * Gets the maximumLength
     * The maximum permitted string length
     *
@@ -86,6 +58,34 @@ class DeviceManagementSettingStringLengthConstraint extends DeviceManagementCons
     public function setMaximumLength($val)
     {
         $this->_propDict["maximumLength"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the minimumLength
+    * The minimum permitted string length
+    *
+    * @return int The minimumLength
+    */
+    public function getMinimumLength()
+    {
+        if (array_key_exists("minimumLength", $this->_propDict)) {
+            return $this->_propDict["minimumLength"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the minimumLength
+    * The minimum permitted string length
+    *
+    * @param int $val The value of the minimumLength
+    *
+    * @return DeviceManagementSettingStringLengthConstraint
+    */
+    public function setMinimumLength($val)
+    {
+        $this->_propDict["minimumLength"] = $val;
         return $this;
     }
 }

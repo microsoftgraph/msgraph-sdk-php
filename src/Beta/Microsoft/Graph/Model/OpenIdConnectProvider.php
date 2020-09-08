@@ -25,56 +25,33 @@ namespace Beta\Microsoft\Graph\Model;
 class OpenIdConnectProvider extends IdentityProvider
 {
     /**
-    * Gets the scope
+    * Gets the claimsMapping
     *
-    * @return string The scope
+    * @return ClaimsMapping The claimsMapping
     */
-    public function getScope()
+    public function getClaimsMapping()
     {
-        if (array_key_exists("scope", $this->_propDict)) {
-            return $this->_propDict["scope"];
-        } else {
-            return null;
+        if (array_key_exists("claimsMapping", $this->_propDict)) {
+            if (is_a($this->_propDict["claimsMapping"], "Beta\Microsoft\Graph\Model\ClaimsMapping")) {
+                return $this->_propDict["claimsMapping"];
+            } else {
+                $this->_propDict["claimsMapping"] = new ClaimsMapping($this->_propDict["claimsMapping"]);
+                return $this->_propDict["claimsMapping"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the scope
+    * Sets the claimsMapping
     *
-    * @param string $val The scope
+    * @param ClaimsMapping $val The claimsMapping
     *
     * @return OpenIdConnectProvider
     */
-    public function setScope($val)
+    public function setClaimsMapping($val)
     {
-        $this->_propDict["scope"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the metadataUrl
-    *
-    * @return string The metadataUrl
-    */
-    public function getMetadataUrl()
-    {
-        if (array_key_exists("metadataUrl", $this->_propDict)) {
-            return $this->_propDict["metadataUrl"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the metadataUrl
-    *
-    * @param string $val The metadataUrl
-    *
-    * @return OpenIdConnectProvider
-    */
-    public function setMetadataUrl($val)
-    {
-        $this->_propDict["metadataUrl"] = $val;
+        $this->_propDict["claimsMapping"] = $val;
         return $this;
     }
     
@@ -106,33 +83,29 @@ class OpenIdConnectProvider extends IdentityProvider
     }
     
     /**
-    * Gets the responseType
+    * Gets the metadataUrl
     *
-    * @return OpenIdConnectResponseTypes The responseType
+    * @return string The metadataUrl
     */
-    public function getResponseType()
+    public function getMetadataUrl()
     {
-        if (array_key_exists("responseType", $this->_propDict)) {
-            if (is_a($this->_propDict["responseType"], "Beta\Microsoft\Graph\Model\OpenIdConnectResponseTypes")) {
-                return $this->_propDict["responseType"];
-            } else {
-                $this->_propDict["responseType"] = new OpenIdConnectResponseTypes($this->_propDict["responseType"]);
-                return $this->_propDict["responseType"];
-            }
+        if (array_key_exists("metadataUrl", $this->_propDict)) {
+            return $this->_propDict["metadataUrl"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the responseType
+    * Sets the metadataUrl
     *
-    * @param OpenIdConnectResponseTypes $val The responseType
+    * @param string $val The metadataUrl
     *
     * @return OpenIdConnectProvider
     */
-    public function setResponseType($val)
+    public function setMetadataUrl($val)
     {
-        $this->_propDict["responseType"] = $val;
+        $this->_propDict["metadataUrl"] = $val;
         return $this;
     }
     
@@ -168,33 +141,60 @@ class OpenIdConnectProvider extends IdentityProvider
     }
     
     /**
-    * Gets the claimsMapping
+    * Gets the responseType
     *
-    * @return ClaimsMapping The claimsMapping
+    * @return OpenIdConnectResponseTypes The responseType
     */
-    public function getClaimsMapping()
+    public function getResponseType()
     {
-        if (array_key_exists("claimsMapping", $this->_propDict)) {
-            if (is_a($this->_propDict["claimsMapping"], "Beta\Microsoft\Graph\Model\ClaimsMapping")) {
-                return $this->_propDict["claimsMapping"];
+        if (array_key_exists("responseType", $this->_propDict)) {
+            if (is_a($this->_propDict["responseType"], "Beta\Microsoft\Graph\Model\OpenIdConnectResponseTypes")) {
+                return $this->_propDict["responseType"];
             } else {
-                $this->_propDict["claimsMapping"] = new ClaimsMapping($this->_propDict["claimsMapping"]);
-                return $this->_propDict["claimsMapping"];
+                $this->_propDict["responseType"] = new OpenIdConnectResponseTypes($this->_propDict["responseType"]);
+                return $this->_propDict["responseType"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the claimsMapping
+    * Sets the responseType
     *
-    * @param ClaimsMapping $val The claimsMapping
+    * @param OpenIdConnectResponseTypes $val The responseType
     *
     * @return OpenIdConnectProvider
     */
-    public function setClaimsMapping($val)
+    public function setResponseType($val)
     {
-        $this->_propDict["claimsMapping"] = $val;
+        $this->_propDict["responseType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the scope
+    *
+    * @return string The scope
+    */
+    public function getScope()
+    {
+        if (array_key_exists("scope", $this->_propDict)) {
+            return $this->_propDict["scope"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the scope
+    *
+    * @param string $val The scope
+    *
+    * @return OpenIdConnectProvider
+    */
+    public function setScope($val)
+    {
+        $this->_propDict["scope"] = $val;
         return $this;
     }
     

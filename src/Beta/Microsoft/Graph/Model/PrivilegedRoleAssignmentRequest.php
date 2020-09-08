@@ -25,118 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class PrivilegedRoleAssignmentRequest extends Entity
 {
     /**
-    * Gets the schedule
-    *
-    * @return GovernanceSchedule The schedule
-    */
-    public function getSchedule()
-    {
-        if (array_key_exists("schedule", $this->_propDict)) {
-            if (is_a($this->_propDict["schedule"], "Beta\Microsoft\Graph\Model\GovernanceSchedule")) {
-                return $this->_propDict["schedule"];
-            } else {
-                $this->_propDict["schedule"] = new GovernanceSchedule($this->_propDict["schedule"]);
-                return $this->_propDict["schedule"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the schedule
-    *
-    * @param GovernanceSchedule $val The schedule
-    *
-    * @return PrivilegedRoleAssignmentRequest
-    */
-    public function setSchedule($val)
-    {
-        $this->_propDict["schedule"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the userId
-    *
-    * @return string The userId
-    */
-    public function getUserId()
-    {
-        if (array_key_exists("userId", $this->_propDict)) {
-            return $this->_propDict["userId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the userId
-    *
-    * @param string $val The userId
-    *
-    * @return PrivilegedRoleAssignmentRequest
-    */
-    public function setUserId($val)
-    {
-        $this->_propDict["userId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the roleId
-    *
-    * @return string The roleId
-    */
-    public function getRoleId()
-    {
-        if (array_key_exists("roleId", $this->_propDict)) {
-            return $this->_propDict["roleId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the roleId
-    *
-    * @param string $val The roleId
-    *
-    * @return PrivilegedRoleAssignmentRequest
-    */
-    public function setRoleId($val)
-    {
-        $this->_propDict["roleId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the type
-    *
-    * @return string The type
-    */
-    public function getType()
-    {
-        if (array_key_exists("type", $this->_propDict)) {
-            return $this->_propDict["type"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the type
-    *
-    * @param string $val The type
-    *
-    * @return PrivilegedRoleAssignmentRequest
-    */
-    public function setType($val)
-    {
-        $this->_propDict["type"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the assignmentState
     *
     * @return string The assignmentState
@@ -160,64 +48,6 @@ class PrivilegedRoleAssignmentRequest extends Entity
     public function setAssignmentState($val)
     {
         $this->_propDict["assignmentState"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the requestedDateTime
-    *
-    * @return \DateTime The requestedDateTime
-    */
-    public function getRequestedDateTime()
-    {
-        if (array_key_exists("requestedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["requestedDateTime"], "\DateTime")) {
-                return $this->_propDict["requestedDateTime"];
-            } else {
-                $this->_propDict["requestedDateTime"] = new \DateTime($this->_propDict["requestedDateTime"]);
-                return $this->_propDict["requestedDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the requestedDateTime
-    *
-    * @param \DateTime $val The requestedDateTime
-    *
-    * @return PrivilegedRoleAssignmentRequest
-    */
-    public function setRequestedDateTime($val)
-    {
-        $this->_propDict["requestedDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the status
-    *
-    * @return string The status
-    */
-    public function getStatus()
-    {
-        if (array_key_exists("status", $this->_propDict)) {
-            return $this->_propDict["status"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the status
-    *
-    * @param string $val The status
-    *
-    * @return PrivilegedRoleAssignmentRequest
-    */
-    public function setStatus($val)
-    {
-        $this->_propDict["status"] = $val;
         return $this;
     }
     
@@ -276,6 +106,122 @@ class PrivilegedRoleAssignmentRequest extends Entity
     }
     
     /**
+    * Gets the requestedDateTime
+    *
+    * @return \DateTime The requestedDateTime
+    */
+    public function getRequestedDateTime()
+    {
+        if (array_key_exists("requestedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["requestedDateTime"], "\DateTime")) {
+                return $this->_propDict["requestedDateTime"];
+            } else {
+                $this->_propDict["requestedDateTime"] = new \DateTime($this->_propDict["requestedDateTime"]);
+                return $this->_propDict["requestedDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the requestedDateTime
+    *
+    * @param \DateTime $val The requestedDateTime
+    *
+    * @return PrivilegedRoleAssignmentRequest
+    */
+    public function setRequestedDateTime($val)
+    {
+        $this->_propDict["requestedDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the roleId
+    *
+    * @return string The roleId
+    */
+    public function getRoleId()
+    {
+        if (array_key_exists("roleId", $this->_propDict)) {
+            return $this->_propDict["roleId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the roleId
+    *
+    * @param string $val The roleId
+    *
+    * @return PrivilegedRoleAssignmentRequest
+    */
+    public function setRoleId($val)
+    {
+        $this->_propDict["roleId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the schedule
+    *
+    * @return GovernanceSchedule The schedule
+    */
+    public function getSchedule()
+    {
+        if (array_key_exists("schedule", $this->_propDict)) {
+            if (is_a($this->_propDict["schedule"], "Beta\Microsoft\Graph\Model\GovernanceSchedule")) {
+                return $this->_propDict["schedule"];
+            } else {
+                $this->_propDict["schedule"] = new GovernanceSchedule($this->_propDict["schedule"]);
+                return $this->_propDict["schedule"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the schedule
+    *
+    * @param GovernanceSchedule $val The schedule
+    *
+    * @return PrivilegedRoleAssignmentRequest
+    */
+    public function setSchedule($val)
+    {
+        $this->_propDict["schedule"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the status
+    *
+    * @return string The status
+    */
+    public function getStatus()
+    {
+        if (array_key_exists("status", $this->_propDict)) {
+            return $this->_propDict["status"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the status
+    *
+    * @param string $val The status
+    *
+    * @return PrivilegedRoleAssignmentRequest
+    */
+    public function setStatus($val)
+    {
+        $this->_propDict["status"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the ticketNumber
     *
     * @return string The ticketNumber
@@ -326,6 +272,60 @@ class PrivilegedRoleAssignmentRequest extends Entity
     public function setTicketSystem($val)
     {
         $this->_propDict["ticketSystem"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the type
+    *
+    * @return string The type
+    */
+    public function getType()
+    {
+        if (array_key_exists("type", $this->_propDict)) {
+            return $this->_propDict["type"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the type
+    *
+    * @param string $val The type
+    *
+    * @return PrivilegedRoleAssignmentRequest
+    */
+    public function setType($val)
+    {
+        $this->_propDict["type"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userId
+    *
+    * @return string The userId
+    */
+    public function getUserId()
+    {
+        if (array_key_exists("userId", $this->_propDict)) {
+            return $this->_propDict["userId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the userId
+    *
+    * @param string $val The userId
+    *
+    * @return PrivilegedRoleAssignmentRequest
+    */
+    public function setUserId($val)
+    {
+        $this->_propDict["userId"] = $val;
         return $this;
     }
     

@@ -207,39 +207,6 @@ class IosEasEmailProfileConfiguration extends EasEmailProfileConfigurationBase
     }
     
     /**
-    * Gets the emailAddressSource
-    * Email attribute that is picked from AAD and injected into this profile before installing on the device.
-    *
-    * @return UserEmailSource The emailAddressSource
-    */
-    public function getEmailAddressSource()
-    {
-        if (array_key_exists("emailAddressSource", $this->_propDict)) {
-            if (is_a($this->_propDict["emailAddressSource"], "Beta\Microsoft\Graph\Model\UserEmailSource")) {
-                return $this->_propDict["emailAddressSource"];
-            } else {
-                $this->_propDict["emailAddressSource"] = new UserEmailSource($this->_propDict["emailAddressSource"]);
-                return $this->_propDict["emailAddressSource"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the emailAddressSource
-    * Email attribute that is picked from AAD and injected into this profile before installing on the device.
-    *
-    * @param UserEmailSource $val The emailAddressSource
-    *
-    * @return IosEasEmailProfileConfiguration
-    */
-    public function setEmailAddressSource($val)
-    {
-        $this->_propDict["emailAddressSource"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the easServices
     * Exchange data to sync.
     *
@@ -302,6 +269,72 @@ class IosEasEmailProfileConfiguration extends EasEmailProfileConfigurationBase
     }
     
     /**
+    * Gets the emailAddressSource
+    * Email attribute that is picked from AAD and injected into this profile before installing on the device.
+    *
+    * @return UserEmailSource The emailAddressSource
+    */
+    public function getEmailAddressSource()
+    {
+        if (array_key_exists("emailAddressSource", $this->_propDict)) {
+            if (is_a($this->_propDict["emailAddressSource"], "Beta\Microsoft\Graph\Model\UserEmailSource")) {
+                return $this->_propDict["emailAddressSource"];
+            } else {
+                $this->_propDict["emailAddressSource"] = new UserEmailSource($this->_propDict["emailAddressSource"]);
+                return $this->_propDict["emailAddressSource"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the emailAddressSource
+    * Email attribute that is picked from AAD and injected into this profile before installing on the device.
+    *
+    * @param UserEmailSource $val The emailAddressSource
+    *
+    * @return IosEasEmailProfileConfiguration
+    */
+    public function setEmailAddressSource($val)
+    {
+        $this->_propDict["emailAddressSource"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the encryptionCertificateType
+    * Encryption Certificate type for this Email profile.
+    *
+    * @return EmailCertificateType The encryptionCertificateType
+    */
+    public function getEncryptionCertificateType()
+    {
+        if (array_key_exists("encryptionCertificateType", $this->_propDict)) {
+            if (is_a($this->_propDict["encryptionCertificateType"], "Beta\Microsoft\Graph\Model\EmailCertificateType")) {
+                return $this->_propDict["encryptionCertificateType"];
+            } else {
+                $this->_propDict["encryptionCertificateType"] = new EmailCertificateType($this->_propDict["encryptionCertificateType"]);
+                return $this->_propDict["encryptionCertificateType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the encryptionCertificateType
+    * Encryption Certificate type for this Email profile.
+    *
+    * @param EmailCertificateType $val The encryptionCertificateType
+    *
+    * @return IosEasEmailProfileConfiguration
+    */
+    public function setEncryptionCertificateType($val)
+    {
+        $this->_propDict["encryptionCertificateType"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the hostName
     * Exchange location that (URL) that the native mail app connects to.
     *
@@ -356,6 +389,68 @@ class IosEasEmailProfileConfiguration extends EasEmailProfileConfigurationBase
     public function setRequireSmime($val)
     {
         $this->_propDict["requireSmime"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the requireSsl
+    * Indicates whether or not to use SSL.
+    *
+    * @return bool The requireSsl
+    */
+    public function getRequireSsl()
+    {
+        if (array_key_exists("requireSsl", $this->_propDict)) {
+            return $this->_propDict["requireSsl"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the requireSsl
+    * Indicates whether or not to use SSL.
+    *
+    * @param bool $val The requireSsl
+    *
+    * @return IosEasEmailProfileConfiguration
+    */
+    public function setRequireSsl($val)
+    {
+        $this->_propDict["requireSsl"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the signingCertificateType
+    * Signing Certificate type for this Email profile.
+    *
+    * @return EmailCertificateType The signingCertificateType
+    */
+    public function getSigningCertificateType()
+    {
+        if (array_key_exists("signingCertificateType", $this->_propDict)) {
+            if (is_a($this->_propDict["signingCertificateType"], "Beta\Microsoft\Graph\Model\EmailCertificateType")) {
+                return $this->_propDict["signingCertificateType"];
+            } else {
+                $this->_propDict["signingCertificateType"] = new EmailCertificateType($this->_propDict["signingCertificateType"]);
+                return $this->_propDict["signingCertificateType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the signingCertificateType
+    * Signing Certificate type for this Email profile.
+    *
+    * @param EmailCertificateType $val The signingCertificateType
+    *
+    * @return IosEasEmailProfileConfiguration
+    */
+    public function setSigningCertificateType($val)
+    {
+        $this->_propDict["signingCertificateType"] = $val;
         return $this;
     }
     
@@ -418,6 +513,93 @@ class IosEasEmailProfileConfiguration extends EasEmailProfileConfigurationBase
     }
     
     /**
+    * Gets the smimeEncryptByDefaultUserOverrideEnabled
+    * If set to true, the user can toggle the encryption by default setting.
+    *
+    * @return bool The smimeEncryptByDefaultUserOverrideEnabled
+    */
+    public function getSmimeEncryptByDefaultUserOverrideEnabled()
+    {
+        if (array_key_exists("smimeEncryptByDefaultUserOverrideEnabled", $this->_propDict)) {
+            return $this->_propDict["smimeEncryptByDefaultUserOverrideEnabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the smimeEncryptByDefaultUserOverrideEnabled
+    * If set to true, the user can toggle the encryption by default setting.
+    *
+    * @param bool $val The smimeEncryptByDefaultUserOverrideEnabled
+    *
+    * @return IosEasEmailProfileConfiguration
+    */
+    public function setSmimeEncryptByDefaultUserOverrideEnabled($val)
+    {
+        $this->_propDict["smimeEncryptByDefaultUserOverrideEnabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the smimeEncryptionCertificateUserOverrideEnabled
+    * If set to true the user can select the S/MIME encryption identity. 
+    *
+    * @return bool The smimeEncryptionCertificateUserOverrideEnabled
+    */
+    public function getSmimeEncryptionCertificateUserOverrideEnabled()
+    {
+        if (array_key_exists("smimeEncryptionCertificateUserOverrideEnabled", $this->_propDict)) {
+            return $this->_propDict["smimeEncryptionCertificateUserOverrideEnabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the smimeEncryptionCertificateUserOverrideEnabled
+    * If set to true the user can select the S/MIME encryption identity. 
+    *
+    * @param bool $val The smimeEncryptionCertificateUserOverrideEnabled
+    *
+    * @return IosEasEmailProfileConfiguration
+    */
+    public function setSmimeEncryptionCertificateUserOverrideEnabled($val)
+    {
+        $this->_propDict["smimeEncryptionCertificateUserOverrideEnabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the smimeSigningCertificateUserOverrideEnabled
+    * If set to true, the user can select the signing identity.
+    *
+    * @return bool The smimeSigningCertificateUserOverrideEnabled
+    */
+    public function getSmimeSigningCertificateUserOverrideEnabled()
+    {
+        if (array_key_exists("smimeSigningCertificateUserOverrideEnabled", $this->_propDict)) {
+            return $this->_propDict["smimeSigningCertificateUserOverrideEnabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the smimeSigningCertificateUserOverrideEnabled
+    * If set to true, the user can select the signing identity.
+    *
+    * @param bool $val The smimeSigningCertificateUserOverrideEnabled
+    *
+    * @return IosEasEmailProfileConfiguration
+    */
+    public function setSmimeSigningCertificateUserOverrideEnabled($val)
+    {
+        $this->_propDict["smimeSigningCertificateUserOverrideEnabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the smimeSigningEnabled
     * If set to true S/MIME signing is enabled for this account
     *
@@ -476,122 +658,6 @@ class IosEasEmailProfileConfiguration extends EasEmailProfileConfigurationBase
     }
     
     /**
-    * Gets the smimeEncryptByDefaultUserOverrideEnabled
-    * If set to true, the user can toggle the encryption by default setting.
-    *
-    * @return bool The smimeEncryptByDefaultUserOverrideEnabled
-    */
-    public function getSmimeEncryptByDefaultUserOverrideEnabled()
-    {
-        if (array_key_exists("smimeEncryptByDefaultUserOverrideEnabled", $this->_propDict)) {
-            return $this->_propDict["smimeEncryptByDefaultUserOverrideEnabled"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the smimeEncryptByDefaultUserOverrideEnabled
-    * If set to true, the user can toggle the encryption by default setting.
-    *
-    * @param bool $val The smimeEncryptByDefaultUserOverrideEnabled
-    *
-    * @return IosEasEmailProfileConfiguration
-    */
-    public function setSmimeEncryptByDefaultUserOverrideEnabled($val)
-    {
-        $this->_propDict["smimeEncryptByDefaultUserOverrideEnabled"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the smimeSigningCertificateUserOverrideEnabled
-    * If set to true, the user can select the signing identity.
-    *
-    * @return bool The smimeSigningCertificateUserOverrideEnabled
-    */
-    public function getSmimeSigningCertificateUserOverrideEnabled()
-    {
-        if (array_key_exists("smimeSigningCertificateUserOverrideEnabled", $this->_propDict)) {
-            return $this->_propDict["smimeSigningCertificateUserOverrideEnabled"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the smimeSigningCertificateUserOverrideEnabled
-    * If set to true, the user can select the signing identity.
-    *
-    * @param bool $val The smimeSigningCertificateUserOverrideEnabled
-    *
-    * @return IosEasEmailProfileConfiguration
-    */
-    public function setSmimeSigningCertificateUserOverrideEnabled($val)
-    {
-        $this->_propDict["smimeSigningCertificateUserOverrideEnabled"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the smimeEncryptionCertificateUserOverrideEnabled
-    * If set to true the user can select the S/MIME encryption identity. 
-    *
-    * @return bool The smimeEncryptionCertificateUserOverrideEnabled
-    */
-    public function getSmimeEncryptionCertificateUserOverrideEnabled()
-    {
-        if (array_key_exists("smimeEncryptionCertificateUserOverrideEnabled", $this->_propDict)) {
-            return $this->_propDict["smimeEncryptionCertificateUserOverrideEnabled"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the smimeEncryptionCertificateUserOverrideEnabled
-    * If set to true the user can select the S/MIME encryption identity. 
-    *
-    * @param bool $val The smimeEncryptionCertificateUserOverrideEnabled
-    *
-    * @return IosEasEmailProfileConfiguration
-    */
-    public function setSmimeEncryptionCertificateUserOverrideEnabled($val)
-    {
-        $this->_propDict["smimeEncryptionCertificateUserOverrideEnabled"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the requireSsl
-    * Indicates whether or not to use SSL.
-    *
-    * @return bool The requireSsl
-    */
-    public function getRequireSsl()
-    {
-        if (array_key_exists("requireSsl", $this->_propDict)) {
-            return $this->_propDict["requireSsl"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the requireSsl
-    * Indicates whether or not to use SSL.
-    *
-    * @param bool $val The requireSsl
-    *
-    * @return IosEasEmailProfileConfiguration
-    */
-    public function setRequireSsl($val)
-    {
-        $this->_propDict["requireSsl"] = boolval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the useOAuth
     * Specifies whether the connection should use OAuth for authentication.
     *
@@ -621,68 +687,35 @@ class IosEasEmailProfileConfiguration extends EasEmailProfileConfigurationBase
     }
     
     /**
-    * Gets the signingCertificateType
-    * Signing Certificate type for this Email profile.
+    * Gets the derivedCredentialSettings
+    * Tenant level settings for the Derived Credentials to be used for authentication.
     *
-    * @return EmailCertificateType The signingCertificateType
+    * @return DeviceManagementDerivedCredentialSettings The derivedCredentialSettings
     */
-    public function getSigningCertificateType()
+    public function getDerivedCredentialSettings()
     {
-        if (array_key_exists("signingCertificateType", $this->_propDict)) {
-            if (is_a($this->_propDict["signingCertificateType"], "Beta\Microsoft\Graph\Model\EmailCertificateType")) {
-                return $this->_propDict["signingCertificateType"];
+        if (array_key_exists("derivedCredentialSettings", $this->_propDict)) {
+            if (is_a($this->_propDict["derivedCredentialSettings"], "Beta\Microsoft\Graph\Model\DeviceManagementDerivedCredentialSettings")) {
+                return $this->_propDict["derivedCredentialSettings"];
             } else {
-                $this->_propDict["signingCertificateType"] = new EmailCertificateType($this->_propDict["signingCertificateType"]);
-                return $this->_propDict["signingCertificateType"];
+                $this->_propDict["derivedCredentialSettings"] = new DeviceManagementDerivedCredentialSettings($this->_propDict["derivedCredentialSettings"]);
+                return $this->_propDict["derivedCredentialSettings"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the signingCertificateType
-    * Signing Certificate type for this Email profile.
+    * Sets the derivedCredentialSettings
+    * Tenant level settings for the Derived Credentials to be used for authentication.
     *
-    * @param EmailCertificateType $val The signingCertificateType
-    *
-    * @return IosEasEmailProfileConfiguration
-    */
-    public function setSigningCertificateType($val)
-    {
-        $this->_propDict["signingCertificateType"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the encryptionCertificateType
-    * Encryption Certificate type for this Email profile.
-    *
-    * @return EmailCertificateType The encryptionCertificateType
-    */
-    public function getEncryptionCertificateType()
-    {
-        if (array_key_exists("encryptionCertificateType", $this->_propDict)) {
-            if (is_a($this->_propDict["encryptionCertificateType"], "Beta\Microsoft\Graph\Model\EmailCertificateType")) {
-                return $this->_propDict["encryptionCertificateType"];
-            } else {
-                $this->_propDict["encryptionCertificateType"] = new EmailCertificateType($this->_propDict["encryptionCertificateType"]);
-                return $this->_propDict["encryptionCertificateType"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the encryptionCertificateType
-    * Encryption Certificate type for this Email profile.
-    *
-    * @param EmailCertificateType $val The encryptionCertificateType
+    * @param DeviceManagementDerivedCredentialSettings $val The derivedCredentialSettings
     *
     * @return IosEasEmailProfileConfiguration
     */
-    public function setEncryptionCertificateType($val)
+    public function setDerivedCredentialSettings($val)
     {
-        $this->_propDict["encryptionCertificateType"] = $val;
+        $this->_propDict["derivedCredentialSettings"] = $val;
         return $this;
     }
     
@@ -720,39 +753,6 @@ class IosEasEmailProfileConfiguration extends EasEmailProfileConfigurationBase
     }
     
     /**
-    * Gets the smimeSigningCertificate
-    * S/MIME signing certificate.
-    *
-    * @return IosCertificateProfile The smimeSigningCertificate
-    */
-    public function getSmimeSigningCertificate()
-    {
-        if (array_key_exists("smimeSigningCertificate", $this->_propDict)) {
-            if (is_a($this->_propDict["smimeSigningCertificate"], "Beta\Microsoft\Graph\Model\IosCertificateProfile")) {
-                return $this->_propDict["smimeSigningCertificate"];
-            } else {
-                $this->_propDict["smimeSigningCertificate"] = new IosCertificateProfile($this->_propDict["smimeSigningCertificate"]);
-                return $this->_propDict["smimeSigningCertificate"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the smimeSigningCertificate
-    * S/MIME signing certificate.
-    *
-    * @param IosCertificateProfile $val The smimeSigningCertificate
-    *
-    * @return IosEasEmailProfileConfiguration
-    */
-    public function setSmimeSigningCertificate($val)
-    {
-        $this->_propDict["smimeSigningCertificate"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the smimeEncryptionCertificate
     * S/MIME encryption certificate.
     *
@@ -786,35 +786,35 @@ class IosEasEmailProfileConfiguration extends EasEmailProfileConfigurationBase
     }
     
     /**
-    * Gets the derivedCredentialSettings
-    * Tenant level settings for the Derived Credentials to be used for authentication.
+    * Gets the smimeSigningCertificate
+    * S/MIME signing certificate.
     *
-    * @return DeviceManagementDerivedCredentialSettings The derivedCredentialSettings
+    * @return IosCertificateProfile The smimeSigningCertificate
     */
-    public function getDerivedCredentialSettings()
+    public function getSmimeSigningCertificate()
     {
-        if (array_key_exists("derivedCredentialSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["derivedCredentialSettings"], "Beta\Microsoft\Graph\Model\DeviceManagementDerivedCredentialSettings")) {
-                return $this->_propDict["derivedCredentialSettings"];
+        if (array_key_exists("smimeSigningCertificate", $this->_propDict)) {
+            if (is_a($this->_propDict["smimeSigningCertificate"], "Beta\Microsoft\Graph\Model\IosCertificateProfile")) {
+                return $this->_propDict["smimeSigningCertificate"];
             } else {
-                $this->_propDict["derivedCredentialSettings"] = new DeviceManagementDerivedCredentialSettings($this->_propDict["derivedCredentialSettings"]);
-                return $this->_propDict["derivedCredentialSettings"];
+                $this->_propDict["smimeSigningCertificate"] = new IosCertificateProfile($this->_propDict["smimeSigningCertificate"]);
+                return $this->_propDict["smimeSigningCertificate"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the derivedCredentialSettings
-    * Tenant level settings for the Derived Credentials to be used for authentication.
+    * Sets the smimeSigningCertificate
+    * S/MIME signing certificate.
     *
-    * @param DeviceManagementDerivedCredentialSettings $val The derivedCredentialSettings
+    * @param IosCertificateProfile $val The smimeSigningCertificate
     *
     * @return IosEasEmailProfileConfiguration
     */
-    public function setDerivedCredentialSettings($val)
+    public function setSmimeSigningCertificate($val)
     {
-        $this->_propDict["derivedCredentialSettings"] = $val;
+        $this->_propDict["smimeSigningCertificate"] = $val;
         return $this;
     }
     

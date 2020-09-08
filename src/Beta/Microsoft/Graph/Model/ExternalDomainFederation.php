@@ -33,29 +33,29 @@ class ExternalDomainFederation extends IdentitySource
     }
 
     /**
-    * Gets the issuerUri
+    * Gets the displayName
     *
-    * @return string The issuerUri
+    * @return string The displayName
     */
-    public function getIssuerUri()
+    public function getDisplayName()
     {
-        if (array_key_exists("issuerUri", $this->_propDict)) {
-            return $this->_propDict["issuerUri"];
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the issuerUri
+    * Sets the displayName
     *
-    * @param string $val The value of the issuerUri
+    * @param string $val The value of the displayName
     *
     * @return ExternalDomainFederation
     */
-    public function setIssuerUri($val)
+    public function setDisplayName($val)
     {
-        $this->_propDict["issuerUri"] = $val;
+        $this->_propDict["displayName"] = $val;
         return $this;
     }
     /**
@@ -85,29 +85,29 @@ class ExternalDomainFederation extends IdentitySource
         return $this;
     }
     /**
-    * Gets the displayName
+    * Gets the issuerUri
     *
-    * @return string The displayName
+    * @return string The issuerUri
     */
-    public function getDisplayName()
+    public function getIssuerUri()
     {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
+        if (array_key_exists("issuerUri", $this->_propDict)) {
+            return $this->_propDict["issuerUri"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the displayName
+    * Sets the issuerUri
     *
-    * @param string $val The value of the displayName
+    * @param string $val The value of the issuerUri
     *
     * @return ExternalDomainFederation
     */
-    public function setDisplayName($val)
+    public function setIssuerUri($val)
     {
-        $this->_propDict["displayName"] = $val;
+        $this->_propDict["issuerUri"] = $val;
         return $this;
     }
 }

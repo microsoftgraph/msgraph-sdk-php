@@ -24,63 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class ProvisioningStep extends Entity
 {
     /**
-    * Gets the name
-    *
-    * @return string The name
-    */
-    public function getName()
-    {
-        if (array_key_exists("name", $this->_propDict)) {
-            return $this->_propDict["name"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the name
-    *
-    * @param string $val The value of the name
-    *
-    * @return ProvisioningStep
-    */
-    public function setName($val)
-    {
-        $this->_propDict["name"] = $val;
-        return $this;
-    }
-
-    /**
-    * Gets the status
-    *
-    * @return ProvisioningResult The status
-    */
-    public function getStatus()
-    {
-        if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Beta\Microsoft\Graph\Model\ProvisioningResult")) {
-                return $this->_propDict["status"];
-            } else {
-                $this->_propDict["status"] = new ProvisioningResult($this->_propDict["status"]);
-                return $this->_propDict["status"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the status
-    *
-    * @param ProvisioningResult $val The value to assign to the status
-    *
-    * @return ProvisioningStep The ProvisioningStep
-    */
-    public function setStatus($val)
-    {
-        $this->_propDict["status"] = $val;
-         return $this;
-    }
-    /**
     * Gets the description
     *
     * @return string The description
@@ -137,6 +80,32 @@ class ProvisioningStep extends Entity
         $this->_propDict["details"] = $val;
          return $this;
     }
+    /**
+    * Gets the name
+    *
+    * @return string The name
+    */
+    public function getName()
+    {
+        if (array_key_exists("name", $this->_propDict)) {
+            return $this->_propDict["name"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the name
+    *
+    * @param string $val The value of the name
+    *
+    * @return ProvisioningStep
+    */
+    public function setName($val)
+    {
+        $this->_propDict["name"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the provisioningStepType
@@ -166,6 +135,37 @@ class ProvisioningStep extends Entity
     public function setProvisioningStepType($val)
     {
         $this->_propDict["provisioningStepType"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the status
+    *
+    * @return ProvisioningResult The status
+    */
+    public function getStatus()
+    {
+        if (array_key_exists("status", $this->_propDict)) {
+            if (is_a($this->_propDict["status"], "Beta\Microsoft\Graph\Model\ProvisioningResult")) {
+                return $this->_propDict["status"];
+            } else {
+                $this->_propDict["status"] = new ProvisioningResult($this->_propDict["status"]);
+                return $this->_propDict["status"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the status
+    *
+    * @param ProvisioningResult $val The value to assign to the status
+    *
+    * @return ProvisioningStep The ProvisioningStep
+    */
+    public function setStatus($val)
+    {
+        $this->_propDict["status"] = $val;
          return $this;
     }
 }

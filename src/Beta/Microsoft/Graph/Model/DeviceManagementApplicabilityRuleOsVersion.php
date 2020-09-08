@@ -24,34 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class DeviceManagementApplicabilityRuleOsVersion extends Entity
 {
     /**
-    * Gets the minOSVersion
-    * Min OS version for Applicability Rule.
-    *
-    * @return string The minOSVersion
-    */
-    public function getMinOSVersion()
-    {
-        if (array_key_exists("minOSVersion", $this->_propDict)) {
-            return $this->_propDict["minOSVersion"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the minOSVersion
-    * Min OS version for Applicability Rule.
-    *
-    * @param string $val The value of the minOSVersion
-    *
-    * @return DeviceManagementApplicabilityRuleOsVersion
-    */
-    public function setMinOSVersion($val)
-    {
-        $this->_propDict["minOSVersion"] = $val;
-        return $this;
-    }
-    /**
     * Gets the maxOSVersion
     * Max OS version for Applicability Rule.
     *
@@ -77,6 +49,34 @@ class DeviceManagementApplicabilityRuleOsVersion extends Entity
     public function setMaxOSVersion($val)
     {
         $this->_propDict["maxOSVersion"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the minOSVersion
+    * Min OS version for Applicability Rule.
+    *
+    * @return string The minOSVersion
+    */
+    public function getMinOSVersion()
+    {
+        if (array_key_exists("minOSVersion", $this->_propDict)) {
+            return $this->_propDict["minOSVersion"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the minOSVersion
+    * Min OS version for Applicability Rule.
+    *
+    * @param string $val The value of the minOSVersion
+    *
+    * @return DeviceManagementApplicabilityRuleOsVersion
+    */
+    public function setMinOSVersion($val)
+    {
+        $this->_propDict["minOSVersion"] = $val;
         return $this;
     }
     /**

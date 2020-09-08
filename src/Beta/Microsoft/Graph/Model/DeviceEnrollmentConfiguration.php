@@ -25,31 +25,35 @@ namespace Beta\Microsoft\Graph\Model;
 class DeviceEnrollmentConfiguration extends Entity
 {
     /**
-    * Gets the displayName
+    * Gets the createdDateTime
     * Not yet documented
     *
-    * @return string The displayName
+    * @return \DateTime The createdDateTime
     */
-    public function getDisplayName()
+    public function getCreatedDateTime()
     {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
+        if (array_key_exists("createdDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+                return $this->_propDict["createdDateTime"];
+            } else {
+                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
+                return $this->_propDict["createdDateTime"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the displayName
+    * Sets the createdDateTime
     * Not yet documented
     *
-    * @param string $val The displayName
+    * @param \DateTime $val The createdDateTime
     *
     * @return DeviceEnrollmentConfiguration
     */
-    public function setDisplayName($val)
+    public function setCreatedDateTime($val)
     {
-        $this->_propDict["displayName"] = $val;
+        $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
     
@@ -83,64 +87,31 @@ class DeviceEnrollmentConfiguration extends Entity
     }
     
     /**
-    * Gets the priority
+    * Gets the displayName
     * Not yet documented
     *
-    * @return int The priority
+    * @return string The displayName
     */
-    public function getPriority()
+    public function getDisplayName()
     {
-        if (array_key_exists("priority", $this->_propDict)) {
-            return $this->_propDict["priority"];
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the priority
+    * Sets the displayName
     * Not yet documented
     *
-    * @param int $val The priority
+    * @param string $val The displayName
     *
     * @return DeviceEnrollmentConfiguration
     */
-    public function setPriority($val)
+    public function setDisplayName($val)
     {
-        $this->_propDict["priority"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the createdDateTime
-    * Not yet documented
-    *
-    * @return \DateTime The createdDateTime
-    */
-    public function getCreatedDateTime()
-    {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
-                return $this->_propDict["createdDateTime"];
-            } else {
-                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
-                return $this->_propDict["createdDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the createdDateTime
-    * Not yet documented
-    *
-    * @param \DateTime $val The createdDateTime
-    *
-    * @return DeviceEnrollmentConfiguration
-    */
-    public function setCreatedDateTime($val)
-    {
-        $this->_propDict["createdDateTime"] = $val;
+        $this->_propDict["displayName"] = $val;
         return $this;
     }
     
@@ -178,31 +149,31 @@ class DeviceEnrollmentConfiguration extends Entity
     }
     
     /**
-    * Gets the version
+    * Gets the priority
     * Not yet documented
     *
-    * @return int The version
+    * @return int The priority
     */
-    public function getVersion()
+    public function getPriority()
     {
-        if (array_key_exists("version", $this->_propDict)) {
-            return $this->_propDict["version"];
+        if (array_key_exists("priority", $this->_propDict)) {
+            return $this->_propDict["priority"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the version
+    * Sets the priority
     * Not yet documented
     *
-    * @param int $val The version
+    * @param int $val The priority
     *
     * @return DeviceEnrollmentConfiguration
     */
-    public function setVersion($val)
+    public function setPriority($val)
     {
-        $this->_propDict["version"] = intval($val);
+        $this->_propDict["priority"] = intval($val);
         return $this;
     }
     
@@ -232,6 +203,35 @@ class DeviceEnrollmentConfiguration extends Entity
     public function setRoleScopeTagIds($val)
     {
         $this->_propDict["roleScopeTagIds"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the version
+    * Not yet documented
+    *
+    * @return int The version
+    */
+    public function getVersion()
+    {
+        if (array_key_exists("version", $this->_propDict)) {
+            return $this->_propDict["version"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the version
+    * Not yet documented
+    *
+    * @param int $val The version
+    *
+    * @return DeviceEnrollmentConfiguration
+    */
+    public function setVersion($val)
+    {
+        $this->_propDict["version"] = intval($val);
         return $this;
     }
     

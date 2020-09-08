@@ -23,33 +23,38 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class MobileAppInstallTimeSettings extends Entity
 {
+
     /**
-    * Gets the useLocalTime
-    * Whether the local device time or UTC time should be used when determining the available and deadline times.
+    * Gets the deadlineDateTime
+    * The time at which the app should be installed.
     *
-    * @return bool The useLocalTime
+    * @return \DateTime The deadlineDateTime
     */
-    public function getUseLocalTime()
+    public function getDeadlineDateTime()
     {
-        if (array_key_exists("useLocalTime", $this->_propDict)) {
-            return $this->_propDict["useLocalTime"];
-        } else {
-            return null;
+        if (array_key_exists("deadlineDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["deadlineDateTime"], "\DateTime")) {
+                return $this->_propDict["deadlineDateTime"];
+            } else {
+                $this->_propDict["deadlineDateTime"] = new \DateTime($this->_propDict["deadlineDateTime"]);
+                return $this->_propDict["deadlineDateTime"];
+            }
         }
+        return null;
     }
 
     /**
-    * Sets the useLocalTime
-    * Whether the local device time or UTC time should be used when determining the available and deadline times.
+    * Sets the deadlineDateTime
+    * The time at which the app should be installed.
     *
-    * @param bool $val The value of the useLocalTime
+    * @param \DateTime $val The value to assign to the deadlineDateTime
     *
-    * @return MobileAppInstallTimeSettings
+    * @return MobileAppInstallTimeSettings The MobileAppInstallTimeSettings
     */
-    public function setUseLocalTime($val)
+    public function setDeadlineDateTime($val)
     {
-        $this->_propDict["useLocalTime"] = $val;
-        return $this;
+        $this->_propDict["deadlineDateTime"] = $val;
+         return $this;
     }
 
     /**
@@ -84,37 +89,32 @@ class MobileAppInstallTimeSettings extends Entity
         $this->_propDict["startDateTime"] = $val;
          return $this;
     }
-
     /**
-    * Gets the deadlineDateTime
-    * The time at which the app should be installed.
+    * Gets the useLocalTime
+    * Whether the local device time or UTC time should be used when determining the available and deadline times.
     *
-    * @return \DateTime The deadlineDateTime
+    * @return bool The useLocalTime
     */
-    public function getDeadlineDateTime()
+    public function getUseLocalTime()
     {
-        if (array_key_exists("deadlineDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["deadlineDateTime"], "\DateTime")) {
-                return $this->_propDict["deadlineDateTime"];
-            } else {
-                $this->_propDict["deadlineDateTime"] = new \DateTime($this->_propDict["deadlineDateTime"]);
-                return $this->_propDict["deadlineDateTime"];
-            }
+        if (array_key_exists("useLocalTime", $this->_propDict)) {
+            return $this->_propDict["useLocalTime"];
+        } else {
+            return null;
         }
-        return null;
     }
 
     /**
-    * Sets the deadlineDateTime
-    * The time at which the app should be installed.
+    * Sets the useLocalTime
+    * Whether the local device time or UTC time should be used when determining the available and deadline times.
     *
-    * @param \DateTime $val The value to assign to the deadlineDateTime
+    * @param bool $val The value of the useLocalTime
     *
-    * @return MobileAppInstallTimeSettings The MobileAppInstallTimeSettings
+    * @return MobileAppInstallTimeSettings
     */
-    public function setDeadlineDateTime($val)
+    public function setUseLocalTime($val)
     {
-        $this->_propDict["deadlineDateTime"] = $val;
-         return $this;
+        $this->_propDict["useLocalTime"] = $val;
+        return $this;
     }
 }

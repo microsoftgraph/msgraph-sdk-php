@@ -24,58 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class AccessReviewRecurrenceSettings extends Entity
 {
     /**
-    * Gets the recurrenceType
-    *
-    * @return string The recurrenceType
-    */
-    public function getRecurrenceType()
-    {
-        if (array_key_exists("recurrenceType", $this->_propDict)) {
-            return $this->_propDict["recurrenceType"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the recurrenceType
-    *
-    * @param string $val The value of the recurrenceType
-    *
-    * @return AccessReviewRecurrenceSettings
-    */
-    public function setRecurrenceType($val)
-    {
-        $this->_propDict["recurrenceType"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the recurrenceEndType
-    *
-    * @return string The recurrenceEndType
-    */
-    public function getRecurrenceEndType()
-    {
-        if (array_key_exists("recurrenceEndType", $this->_propDict)) {
-            return $this->_propDict["recurrenceEndType"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the recurrenceEndType
-    *
-    * @param string $val The value of the recurrenceEndType
-    *
-    * @return AccessReviewRecurrenceSettings
-    */
-    public function setRecurrenceEndType($val)
-    {
-        $this->_propDict["recurrenceEndType"] = $val;
-        return $this;
-    }
-    /**
     * Gets the durationInDays
     *
     * @return int The durationInDays
@@ -125,6 +73,58 @@ class AccessReviewRecurrenceSettings extends Entity
     public function setRecurrenceCount($val)
     {
         $this->_propDict["recurrenceCount"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the recurrenceEndType
+    *
+    * @return string The recurrenceEndType
+    */
+    public function getRecurrenceEndType()
+    {
+        if (array_key_exists("recurrenceEndType", $this->_propDict)) {
+            return $this->_propDict["recurrenceEndType"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the recurrenceEndType
+    *
+    * @param string $val The value of the recurrenceEndType
+    *
+    * @return AccessReviewRecurrenceSettings
+    */
+    public function setRecurrenceEndType($val)
+    {
+        $this->_propDict["recurrenceEndType"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the recurrenceType
+    *
+    * @return string The recurrenceType
+    */
+    public function getRecurrenceType()
+    {
+        if (array_key_exists("recurrenceType", $this->_propDict)) {
+            return $this->_propDict["recurrenceType"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the recurrenceType
+    *
+    * @param string $val The value of the recurrenceType
+    *
+    * @return AccessReviewRecurrenceSettings
+    */
+    public function setRecurrenceType($val)
+    {
+        $this->_propDict["recurrenceType"] = $val;
         return $this;
     }
 }

@@ -52,34 +52,6 @@ class OperatingSystemVersionRange extends Entity
         return $this;
     }
     /**
-    * Gets the lowestVersion
-    * The lowest inclusive version that this range contains.
-    *
-    * @return string The lowestVersion
-    */
-    public function getLowestVersion()
-    {
-        if (array_key_exists("lowestVersion", $this->_propDict)) {
-            return $this->_propDict["lowestVersion"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the lowestVersion
-    * The lowest inclusive version that this range contains.
-    *
-    * @param string $val The value of the lowestVersion
-    *
-    * @return OperatingSystemVersionRange
-    */
-    public function setLowestVersion($val)
-    {
-        $this->_propDict["lowestVersion"] = $val;
-        return $this;
-    }
-    /**
     * Gets the highestVersion
     * The highest inclusive version that this range contains.
     *
@@ -105,6 +77,34 @@ class OperatingSystemVersionRange extends Entity
     public function setHighestVersion($val)
     {
         $this->_propDict["highestVersion"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the lowestVersion
+    * The lowest inclusive version that this range contains.
+    *
+    * @return string The lowestVersion
+    */
+    public function getLowestVersion()
+    {
+        if (array_key_exists("lowestVersion", $this->_propDict)) {
+            return $this->_propDict["lowestVersion"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the lowestVersion
+    * The lowest inclusive version that this range contains.
+    *
+    * @param string $val The value of the lowestVersion
+    *
+    * @return OperatingSystemVersionRange
+    */
+    public function setLowestVersion($val)
+    {
+        $this->_propDict["lowestVersion"] = $val;
         return $this;
     }
 }

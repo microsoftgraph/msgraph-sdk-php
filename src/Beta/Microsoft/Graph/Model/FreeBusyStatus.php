@@ -31,8 +31,8 @@ class FreeBusyStatus extends Enum
     */
     const FREE = "free";
     const TENTATIVE = "tentative";
+    const UNKNOWN = "unknown";
     const BUSY = "busy";
     const OOF = "oof";
     const WORKING_ELSEWHERE = "workingElsewhere";
-    const UNKNOWN = "unknown";
 }

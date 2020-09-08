@@ -25,33 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class TenantSetupInfo extends Entity
 {
     /**
-    * Gets the userRolesActions
-    *
-    * @return string The userRolesActions
-    */
-    public function getUserRolesActions()
-    {
-        if (array_key_exists("userRolesActions", $this->_propDict)) {
-            return $this->_propDict["userRolesActions"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the userRolesActions
-    *
-    * @param string $val The userRolesActions
-    *
-    * @return TenantSetupInfo
-    */
-    public function setUserRolesActions($val)
-    {
-        $this->_propDict["userRolesActions"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the firstTimeSetup
     *
     * @return bool The firstTimeSetup
@@ -106,33 +79,6 @@ class TenantSetupInfo extends Entity
     }
     
     /**
-    * Gets the skipSetup
-    *
-    * @return bool The skipSetup
-    */
-    public function getSkipSetup()
-    {
-        if (array_key_exists("skipSetup", $this->_propDict)) {
-            return $this->_propDict["skipSetup"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the skipSetup
-    *
-    * @param bool $val The skipSetup
-    *
-    * @return TenantSetupInfo
-    */
-    public function setSkipSetup($val)
-    {
-        $this->_propDict["skipSetup"] = boolval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the setupStatus
     *
     * @return SetupStatus The setupStatus
@@ -160,6 +106,60 @@ class TenantSetupInfo extends Entity
     public function setSetupStatus($val)
     {
         $this->_propDict["setupStatus"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the skipSetup
+    *
+    * @return bool The skipSetup
+    */
+    public function getSkipSetup()
+    {
+        if (array_key_exists("skipSetup", $this->_propDict)) {
+            return $this->_propDict["skipSetup"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the skipSetup
+    *
+    * @param bool $val The skipSetup
+    *
+    * @return TenantSetupInfo
+    */
+    public function setSkipSetup($val)
+    {
+        $this->_propDict["skipSetup"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the userRolesActions
+    *
+    * @return string The userRolesActions
+    */
+    public function getUserRolesActions()
+    {
+        if (array_key_exists("userRolesActions", $this->_propDict)) {
+            return $this->_propDict["userRolesActions"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the userRolesActions
+    *
+    * @param string $val The userRolesActions
+    *
+    * @return TenantSetupInfo
+    */
+    public function setUserRolesActions($val)
+    {
+        $this->_propDict["userRolesActions"] = $val;
         return $this;
     }
     

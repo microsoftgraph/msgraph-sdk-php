@@ -24,34 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class MacOSKernelExtension extends Entity
 {
     /**
-    * Gets the teamIdentifier
-    * The team identifier that was used to sign the kernel extension.
-    *
-    * @return string The teamIdentifier
-    */
-    public function getTeamIdentifier()
-    {
-        if (array_key_exists("teamIdentifier", $this->_propDict)) {
-            return $this->_propDict["teamIdentifier"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the teamIdentifier
-    * The team identifier that was used to sign the kernel extension.
-    *
-    * @param string $val The value of the teamIdentifier
-    *
-    * @return MacOSKernelExtension
-    */
-    public function setTeamIdentifier($val)
-    {
-        $this->_propDict["teamIdentifier"] = $val;
-        return $this;
-    }
-    /**
     * Gets the bundleId
     * Bundle ID of the kernel extension.
     *
@@ -77,6 +49,34 @@ class MacOSKernelExtension extends Entity
     public function setBundleId($val)
     {
         $this->_propDict["bundleId"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the teamIdentifier
+    * The team identifier that was used to sign the kernel extension.
+    *
+    * @return string The teamIdentifier
+    */
+    public function getTeamIdentifier()
+    {
+        if (array_key_exists("teamIdentifier", $this->_propDict)) {
+            return $this->_propDict["teamIdentifier"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the teamIdentifier
+    * The team identifier that was used to sign the kernel extension.
+    *
+    * @param string $val The value of the teamIdentifier
+    *
+    * @return MacOSKernelExtension
+    */
+    public function setTeamIdentifier($val)
+    {
+        $this->_propDict["teamIdentifier"] = $val;
         return $this;
     }
 }

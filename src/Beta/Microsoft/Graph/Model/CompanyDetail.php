@@ -23,110 +23,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class CompanyDetail extends Entity
 {
-    /**
-    * Gets the displayName
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the displayName
-    *
-    * @param string $val The value of the displayName
-    *
-    * @return CompanyDetail
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the pronunciation
-    *
-    * @return string The pronunciation
-    */
-    public function getPronunciation()
-    {
-        if (array_key_exists("pronunciation", $this->_propDict)) {
-            return $this->_propDict["pronunciation"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the pronunciation
-    *
-    * @param string $val The value of the pronunciation
-    *
-    * @return CompanyDetail
-    */
-    public function setPronunciation($val)
-    {
-        $this->_propDict["pronunciation"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the department
-    *
-    * @return string The department
-    */
-    public function getDepartment()
-    {
-        if (array_key_exists("department", $this->_propDict)) {
-            return $this->_propDict["department"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the department
-    *
-    * @param string $val The value of the department
-    *
-    * @return CompanyDetail
-    */
-    public function setDepartment($val)
-    {
-        $this->_propDict["department"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the officeLocation
-    *
-    * @return string The officeLocation
-    */
-    public function getOfficeLocation()
-    {
-        if (array_key_exists("officeLocation", $this->_propDict)) {
-            return $this->_propDict["officeLocation"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the officeLocation
-    *
-    * @param string $val The value of the officeLocation
-    *
-    * @return CompanyDetail
-    */
-    public function setOfficeLocation($val)
-    {
-        $this->_propDict["officeLocation"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the address
@@ -157,6 +53,110 @@ class CompanyDetail extends Entity
     {
         $this->_propDict["address"] = $val;
          return $this;
+    }
+    /**
+    * Gets the department
+    *
+    * @return string The department
+    */
+    public function getDepartment()
+    {
+        if (array_key_exists("department", $this->_propDict)) {
+            return $this->_propDict["department"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the department
+    *
+    * @param string $val The value of the department
+    *
+    * @return CompanyDetail
+    */
+    public function setDepartment($val)
+    {
+        $this->_propDict["department"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the displayName
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the displayName
+    *
+    * @param string $val The value of the displayName
+    *
+    * @return CompanyDetail
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the officeLocation
+    *
+    * @return string The officeLocation
+    */
+    public function getOfficeLocation()
+    {
+        if (array_key_exists("officeLocation", $this->_propDict)) {
+            return $this->_propDict["officeLocation"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the officeLocation
+    *
+    * @param string $val The value of the officeLocation
+    *
+    * @return CompanyDetail
+    */
+    public function setOfficeLocation($val)
+    {
+        $this->_propDict["officeLocation"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the pronunciation
+    *
+    * @return string The pronunciation
+    */
+    public function getPronunciation()
+    {
+        if (array_key_exists("pronunciation", $this->_propDict)) {
+            return $this->_propDict["pronunciation"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the pronunciation
+    *
+    * @param string $val The value of the pronunciation
+    *
+    * @return CompanyDetail
+    */
+    public function setPronunciation($val)
+    {
+        $this->_propDict["pronunciation"] = $val;
+        return $this;
     }
     /**
     * Gets the webUrl

@@ -25,31 +25,35 @@ namespace Beta\Microsoft\Graph\Model;
 class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus extends Entity
 {
     /**
-    * Gets the deviceName
-    * Device name.
+    * Gets the deploymentStatus
+    * The deployment state of the policy.
     *
-    * @return string The deviceName
+    * @return WindowsDefenderApplicationControlSupplementalPolicyStatuses The deploymentStatus
     */
-    public function getDeviceName()
+    public function getDeploymentStatus()
     {
-        if (array_key_exists("deviceName", $this->_propDict)) {
-            return $this->_propDict["deviceName"];
-        } else {
-            return null;
+        if (array_key_exists("deploymentStatus", $this->_propDict)) {
+            if (is_a($this->_propDict["deploymentStatus"], "Beta\Microsoft\Graph\Model\WindowsDefenderApplicationControlSupplementalPolicyStatuses")) {
+                return $this->_propDict["deploymentStatus"];
+            } else {
+                $this->_propDict["deploymentStatus"] = new WindowsDefenderApplicationControlSupplementalPolicyStatuses($this->_propDict["deploymentStatus"]);
+                return $this->_propDict["deploymentStatus"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the deviceName
-    * Device name.
+    * Sets the deploymentStatus
+    * The deployment state of the policy.
     *
-    * @param string $val The deviceName
+    * @param WindowsDefenderApplicationControlSupplementalPolicyStatuses $val The deploymentStatus
     *
     * @return WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
     */
-    public function setDeviceName($val)
+    public function setDeploymentStatus($val)
     {
-        $this->_propDict["deviceName"] = $val;
+        $this->_propDict["deploymentStatus"] = $val;
         return $this;
     }
     
@@ -79,6 +83,35 @@ class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus extend
     public function setDeviceId($val)
     {
         $this->_propDict["deviceId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the deviceName
+    * Device name.
+    *
+    * @return string The deviceName
+    */
+    public function getDeviceName()
+    {
+        if (array_key_exists("deviceName", $this->_propDict)) {
+            return $this->_propDict["deviceName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the deviceName
+    * Device name.
+    *
+    * @param string $val The deviceName
+    *
+    * @return WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
+    */
+    public function setDeviceName($val)
+    {
+        $this->_propDict["deviceName"] = $val;
         return $this;
     }
     
@@ -116,35 +149,6 @@ class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus extend
     }
     
     /**
-    * Gets the osVersion
-    * Windows OS Version.
-    *
-    * @return string The osVersion
-    */
-    public function getOsVersion()
-    {
-        if (array_key_exists("osVersion", $this->_propDict)) {
-            return $this->_propDict["osVersion"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the osVersion
-    * Windows OS Version.
-    *
-    * @param string $val The osVersion
-    *
-    * @return WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
-    */
-    public function setOsVersion($val)
-    {
-        $this->_propDict["osVersion"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the osDescription
     * Windows OS Version Description.
     *
@@ -174,35 +178,60 @@ class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus extend
     }
     
     /**
-    * Gets the deploymentStatus
-    * The deployment state of the policy.
+    * Gets the osVersion
+    * Windows OS Version.
     *
-    * @return WindowsDefenderApplicationControlSupplementalPolicyStatuses The deploymentStatus
+    * @return string The osVersion
     */
-    public function getDeploymentStatus()
+    public function getOsVersion()
     {
-        if (array_key_exists("deploymentStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["deploymentStatus"], "Beta\Microsoft\Graph\Model\WindowsDefenderApplicationControlSupplementalPolicyStatuses")) {
-                return $this->_propDict["deploymentStatus"];
-            } else {
-                $this->_propDict["deploymentStatus"] = new WindowsDefenderApplicationControlSupplementalPolicyStatuses($this->_propDict["deploymentStatus"]);
-                return $this->_propDict["deploymentStatus"];
-            }
+        if (array_key_exists("osVersion", $this->_propDict)) {
+            return $this->_propDict["osVersion"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the deploymentStatus
-    * The deployment state of the policy.
+    * Sets the osVersion
+    * Windows OS Version.
     *
-    * @param WindowsDefenderApplicationControlSupplementalPolicyStatuses $val The deploymentStatus
+    * @param string $val The osVersion
     *
     * @return WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
     */
-    public function setDeploymentStatus($val)
+    public function setOsVersion($val)
     {
-        $this->_propDict["deploymentStatus"] = $val;
+        $this->_propDict["osVersion"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the policyVersion
+    * Human readable version of the WindowsDefenderApplicationControl supplemental policy.
+    *
+    * @return string The policyVersion
+    */
+    public function getPolicyVersion()
+    {
+        if (array_key_exists("policyVersion", $this->_propDict)) {
+            return $this->_propDict["policyVersion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the policyVersion
+    * Human readable version of the WindowsDefenderApplicationControl supplemental policy.
+    *
+    * @param string $val The policyVersion
+    *
+    * @return WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
+    */
+    public function setPolicyVersion($val)
+    {
+        $this->_propDict["policyVersion"] = $val;
         return $this;
     }
     
@@ -261,35 +290,6 @@ class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus extend
     public function setUserPrincipalName($val)
     {
         $this->_propDict["userPrincipalName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the policyVersion
-    * Human readable version of the WindowsDefenderApplicationControl supplemental policy.
-    *
-    * @return string The policyVersion
-    */
-    public function getPolicyVersion()
-    {
-        if (array_key_exists("policyVersion", $this->_propDict)) {
-            return $this->_propDict["policyVersion"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the policyVersion
-    * Human readable version of the WindowsDefenderApplicationControl supplemental policy.
-    *
-    * @param string $val The policyVersion
-    *
-    * @return WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
-    */
-    public function setPolicyVersion($val)
-    {
-        $this->_propDict["policyVersion"] = $val;
         return $this;
     }
     

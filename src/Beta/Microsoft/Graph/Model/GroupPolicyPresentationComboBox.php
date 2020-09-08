@@ -54,31 +54,31 @@ class GroupPolicyPresentationComboBox extends GroupPolicyPresentation
     }
     
     /**
-    * Gets the suggestions
-    * Localized strings listed in the drop-down list of the combo box. The default value is empty.
+    * Gets the maxLength
+    * An unsigned integer that specifies the maximum number of text characters for the parameter. The default value is 1023.
     *
-    * @return string The suggestions
+    * @return int The maxLength
     */
-    public function getSuggestions()
+    public function getMaxLength()
     {
-        if (array_key_exists("suggestions", $this->_propDict)) {
-            return $this->_propDict["suggestions"];
+        if (array_key_exists("maxLength", $this->_propDict)) {
+            return $this->_propDict["maxLength"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the suggestions
-    * Localized strings listed in the drop-down list of the combo box. The default value is empty.
+    * Sets the maxLength
+    * An unsigned integer that specifies the maximum number of text characters for the parameter. The default value is 1023.
     *
-    * @param string $val The suggestions
+    * @param int $val The maxLength
     *
     * @return GroupPolicyPresentationComboBox
     */
-    public function setSuggestions($val)
+    public function setMaxLength($val)
     {
-        $this->_propDict["suggestions"] = $val;
+        $this->_propDict["maxLength"] = intval($val);
         return $this;
     }
     
@@ -112,31 +112,31 @@ class GroupPolicyPresentationComboBox extends GroupPolicyPresentation
     }
     
     /**
-    * Gets the maxLength
-    * An unsigned integer that specifies the maximum number of text characters for the parameter. The default value is 1023.
+    * Gets the suggestions
+    * Localized strings listed in the drop-down list of the combo box. The default value is empty.
     *
-    * @return int The maxLength
+    * @return string The suggestions
     */
-    public function getMaxLength()
+    public function getSuggestions()
     {
-        if (array_key_exists("maxLength", $this->_propDict)) {
-            return $this->_propDict["maxLength"];
+        if (array_key_exists("suggestions", $this->_propDict)) {
+            return $this->_propDict["suggestions"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the maxLength
-    * An unsigned integer that specifies the maximum number of text characters for the parameter. The default value is 1023.
+    * Sets the suggestions
+    * Localized strings listed in the drop-down list of the combo box. The default value is empty.
     *
-    * @param int $val The maxLength
+    * @param string $val The suggestions
     *
     * @return GroupPolicyPresentationComboBox
     */
-    public function setMaxLength($val)
+    public function setSuggestions($val)
     {
-        $this->_propDict["maxLength"] = intval($val);
+        $this->_propDict["suggestions"] = $val;
         return $this;
     }
     

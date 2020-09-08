@@ -23,32 +23,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class DlpEvaluatePoliciesRequest extends Entity
 {
-    /**
-    * Gets the target
-    *
-    * @return string The target
-    */
-    public function getTarget()
-    {
-        if (array_key_exists("target", $this->_propDict)) {
-            return $this->_propDict["target"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the target
-    *
-    * @param string $val The value of the target
-    *
-    * @return DlpEvaluatePoliciesRequest
-    */
-    public function setTarget($val)
-    {
-        $this->_propDict["target"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the evaluationInput
@@ -110,5 +84,31 @@ class DlpEvaluatePoliciesRequest extends Entity
     {
         $this->_propDict["notificationInfo"] = $val;
          return $this;
+    }
+    /**
+    * Gets the target
+    *
+    * @return string The target
+    */
+    public function getTarget()
+    {
+        if (array_key_exists("target", $this->_propDict)) {
+            return $this->_propDict["target"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the target
+    *
+    * @param string $val The value of the target
+    *
+    * @return DlpEvaluatePoliciesRequest
+    */
+    public function setTarget($val)
+    {
+        $this->_propDict["target"] = $val;
+        return $this;
     }
 }

@@ -25,60 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class ConnectedOrganization extends Entity
 {
     /**
-    * Gets the displayName
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the displayName
-    *
-    * @param string $val The displayName
-    *
-    * @return ConnectedOrganization
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the description
-    *
-    * @return string The description
-    */
-    public function getDescription()
-    {
-        if (array_key_exists("description", $this->_propDict)) {
-            return $this->_propDict["description"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the description
-    *
-    * @param string $val The description
-    *
-    * @return ConnectedOrganization
-    */
-    public function setDescription($val)
-    {
-        $this->_propDict["description"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the createdBy
     *
     * @return string The createdBy
@@ -133,6 +79,88 @@ class ConnectedOrganization extends Entity
     public function setCreatedDateTime($val)
     {
         $this->_propDict["createdDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the description
+    *
+    * @return string The description
+    */
+    public function getDescription()
+    {
+        if (array_key_exists("description", $this->_propDict)) {
+            return $this->_propDict["description"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the description
+    *
+    * @param string $val The description
+    *
+    * @return ConnectedOrganization
+    */
+    public function setDescription($val)
+    {
+        $this->_propDict["description"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the displayName
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the displayName
+    *
+    * @param string $val The displayName
+    *
+    * @return ConnectedOrganization
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the identitySources
+     *
+     * @return array The identitySources
+     */
+    public function getIdentitySources()
+    {
+        if (array_key_exists("identitySources", $this->_propDict)) {
+           return $this->_propDict["identitySources"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the identitySources
+    *
+    * @param IdentitySource $val The identitySources
+    *
+    * @return ConnectedOrganization
+    */
+    public function setIdentitySources($val)
+    {
+		$this->_propDict["identitySources"] = $val;
         return $this;
     }
     
@@ -196,29 +224,29 @@ class ConnectedOrganization extends Entity
     
 
      /** 
-     * Gets the identitySources
+     * Gets the externalSponsors
      *
-     * @return array The identitySources
+     * @return array The externalSponsors
      */
-    public function getIdentitySources()
+    public function getExternalSponsors()
     {
-        if (array_key_exists("identitySources", $this->_propDict)) {
-           return $this->_propDict["identitySources"];
+        if (array_key_exists("externalSponsors", $this->_propDict)) {
+           return $this->_propDict["externalSponsors"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the identitySources
+    * Sets the externalSponsors
     *
-    * @param IdentitySource $val The identitySources
+    * @param DirectoryObject $val The externalSponsors
     *
     * @return ConnectedOrganization
     */
-    public function setIdentitySources($val)
+    public function setExternalSponsors($val)
     {
-		$this->_propDict["identitySources"] = $val;
+		$this->_propDict["externalSponsors"] = $val;
         return $this;
     }
     
@@ -247,34 +275,6 @@ class ConnectedOrganization extends Entity
     public function setInternalSponsors($val)
     {
 		$this->_propDict["internalSponsors"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the externalSponsors
-     *
-     * @return array The externalSponsors
-     */
-    public function getExternalSponsors()
-    {
-        if (array_key_exists("externalSponsors", $this->_propDict)) {
-           return $this->_propDict["externalSponsors"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the externalSponsors
-    *
-    * @param DirectoryObject $val The externalSponsors
-    *
-    * @return ConnectedOrganization
-    */
-    public function setExternalSponsors($val)
-    {
-		$this->_propDict["externalSponsors"] = $val;
         return $this;
     }
     

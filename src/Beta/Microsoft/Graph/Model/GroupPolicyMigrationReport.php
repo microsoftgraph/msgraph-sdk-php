@@ -25,93 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class GroupPolicyMigrationReport extends Entity
 {
     /**
-    * Gets the groupPolicyObjectId
-    * The Group Policy Object GUID from GPO Xml content
-    *
-    * @return string The groupPolicyObjectId
-    */
-    public function getGroupPolicyObjectId()
-    {
-        if (array_key_exists("groupPolicyObjectId", $this->_propDict)) {
-            return $this->_propDict["groupPolicyObjectId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the groupPolicyObjectId
-    * The Group Policy Object GUID from GPO Xml content
-    *
-    * @param string $val The groupPolicyObjectId
-    *
-    * @return GroupPolicyMigrationReport
-    */
-    public function setGroupPolicyObjectId($val)
-    {
-        $this->_propDict["groupPolicyObjectId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the displayName
-    * The name of Group Policy Object from the GPO Xml Content
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the displayName
-    * The name of Group Policy Object from the GPO Xml Content
-    *
-    * @param string $val The displayName
-    *
-    * @return GroupPolicyMigrationReport
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the ouDistinguishedName
-    * The distinguished name of the OU.
-    *
-    * @return string The ouDistinguishedName
-    */
-    public function getOuDistinguishedName()
-    {
-        if (array_key_exists("ouDistinguishedName", $this->_propDict)) {
-            return $this->_propDict["ouDistinguishedName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the ouDistinguishedName
-    * The distinguished name of the OU.
-    *
-    * @param string $val The ouDistinguishedName
-    *
-    * @return GroupPolicyMigrationReport
-    */
-    public function setOuDistinguishedName($val)
-    {
-        $this->_propDict["ouDistinguishedName"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the createdDateTime
     * The date and time at which the GroupPolicyMigrationReport was created.
     *
@@ -145,35 +58,31 @@ class GroupPolicyMigrationReport extends Entity
     }
     
     /**
-    * Gets the lastModifiedDateTime
-    * The date and time at which the GroupPolicyMigrationReport was last modified.
+    * Gets the displayName
+    * The name of Group Policy Object from the GPO Xml Content
     *
-    * @return \DateTime The lastModifiedDateTime
+    * @return string The displayName
     */
-    public function getLastModifiedDateTime()
+    public function getDisplayName()
     {
-        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
-                return $this->_propDict["lastModifiedDateTime"];
-            } else {
-                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
-                return $this->_propDict["lastModifiedDateTime"];
-            }
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the lastModifiedDateTime
-    * The date and time at which the GroupPolicyMigrationReport was last modified.
+    * Sets the displayName
+    * The name of Group Policy Object from the GPO Xml Content
     *
-    * @param \DateTime $val The lastModifiedDateTime
+    * @param string $val The displayName
     *
     * @return GroupPolicyMigrationReport
     */
-    public function setLastModifiedDateTime($val)
+    public function setDisplayName($val)
     {
-        $this->_propDict["lastModifiedDateTime"] = $val;
+        $this->_propDict["displayName"] = $val;
         return $this;
     }
     
@@ -244,6 +153,68 @@ class GroupPolicyMigrationReport extends Entity
     }
     
     /**
+    * Gets the groupPolicyObjectId
+    * The Group Policy Object GUID from GPO Xml content
+    *
+    * @return string The groupPolicyObjectId
+    */
+    public function getGroupPolicyObjectId()
+    {
+        if (array_key_exists("groupPolicyObjectId", $this->_propDict)) {
+            return $this->_propDict["groupPolicyObjectId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the groupPolicyObjectId
+    * The Group Policy Object GUID from GPO Xml content
+    *
+    * @param string $val The groupPolicyObjectId
+    *
+    * @return GroupPolicyMigrationReport
+    */
+    public function setGroupPolicyObjectId($val)
+    {
+        $this->_propDict["groupPolicyObjectId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the lastModifiedDateTime
+    * The date and time at which the GroupPolicyMigrationReport was last modified.
+    *
+    * @return \DateTime The lastModifiedDateTime
+    */
+    public function getLastModifiedDateTime()
+    {
+        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+                return $this->_propDict["lastModifiedDateTime"];
+            } else {
+                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
+                return $this->_propDict["lastModifiedDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the lastModifiedDateTime
+    * The date and time at which the GroupPolicyMigrationReport was last modified.
+    *
+    * @param \DateTime $val The lastModifiedDateTime
+    *
+    * @return GroupPolicyMigrationReport
+    */
+    public function setLastModifiedDateTime($val)
+    {
+        $this->_propDict["lastModifiedDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the migrationReadiness
     * The Intune coverage for the associated Group Policy Object file.
     *
@@ -277,60 +248,31 @@ class GroupPolicyMigrationReport extends Entity
     }
     
     /**
-    * Gets the targetedInActiveDirectory
-    * The Targeted in AD property from GPO Xml Content
+    * Gets the ouDistinguishedName
+    * The distinguished name of the OU.
     *
-    * @return bool The targetedInActiveDirectory
+    * @return string The ouDistinguishedName
     */
-    public function getTargetedInActiveDirectory()
+    public function getOuDistinguishedName()
     {
-        if (array_key_exists("targetedInActiveDirectory", $this->_propDict)) {
-            return $this->_propDict["targetedInActiveDirectory"];
+        if (array_key_exists("ouDistinguishedName", $this->_propDict)) {
+            return $this->_propDict["ouDistinguishedName"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the targetedInActiveDirectory
-    * The Targeted in AD property from GPO Xml Content
+    * Sets the ouDistinguishedName
+    * The distinguished name of the OU.
     *
-    * @param bool $val The targetedInActiveDirectory
-    *
-    * @return GroupPolicyMigrationReport
-    */
-    public function setTargetedInActiveDirectory($val)
-    {
-        $this->_propDict["targetedInActiveDirectory"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the totalSettingsCount
-    * The total number of Group Policy Settings from GPO file.
-    *
-    * @return int The totalSettingsCount
-    */
-    public function getTotalSettingsCount()
-    {
-        if (array_key_exists("totalSettingsCount", $this->_propDict)) {
-            return $this->_propDict["totalSettingsCount"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the totalSettingsCount
-    * The total number of Group Policy Settings from GPO file.
-    *
-    * @param int $val The totalSettingsCount
+    * @param string $val The ouDistinguishedName
     *
     * @return GroupPolicyMigrationReport
     */
-    public function setTotalSettingsCount($val)
+    public function setOuDistinguishedName($val)
     {
-        $this->_propDict["totalSettingsCount"] = intval($val);
+        $this->_propDict["ouDistinguishedName"] = $val;
         return $this;
     }
     
@@ -389,6 +331,64 @@ class GroupPolicyMigrationReport extends Entity
     public function setSupportedSettingsPercent($val)
     {
         $this->_propDict["supportedSettingsPercent"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the targetedInActiveDirectory
+    * The Targeted in AD property from GPO Xml Content
+    *
+    * @return bool The targetedInActiveDirectory
+    */
+    public function getTargetedInActiveDirectory()
+    {
+        if (array_key_exists("targetedInActiveDirectory", $this->_propDict)) {
+            return $this->_propDict["targetedInActiveDirectory"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the targetedInActiveDirectory
+    * The Targeted in AD property from GPO Xml Content
+    *
+    * @param bool $val The targetedInActiveDirectory
+    *
+    * @return GroupPolicyMigrationReport
+    */
+    public function setTargetedInActiveDirectory($val)
+    {
+        $this->_propDict["targetedInActiveDirectory"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the totalSettingsCount
+    * The total number of Group Policy Settings from GPO file.
+    *
+    * @return int The totalSettingsCount
+    */
+    public function getTotalSettingsCount()
+    {
+        if (array_key_exists("totalSettingsCount", $this->_propDict)) {
+            return $this->_propDict["totalSettingsCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the totalSettingsCount
+    * The total number of Group Policy Settings from GPO file.
+    *
+    * @param int $val The totalSettingsCount
+    *
+    * @return GroupPolicyMigrationReport
+    */
+    public function setTotalSettingsCount($val)
+    {
+        $this->_propDict["totalSettingsCount"] = intval($val);
         return $this;
     }
     

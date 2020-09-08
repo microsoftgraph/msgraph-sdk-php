@@ -23,37 +23,65 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class WindowsKioskForceUpdateSchedule extends Entity
 {
+    /**
+    * Gets the dayofMonth
+    * Day of month. Valid values 1 to 31
+    *
+    * @return int The dayofMonth
+    */
+    public function getDayofMonth()
+    {
+        if (array_key_exists("dayofMonth", $this->_propDict)) {
+            return $this->_propDict["dayofMonth"];
+        } else {
+            return null;
+        }
+    }
 
     /**
-    * Gets the startDateTime
-    * The start time for the force restart.
+    * Sets the dayofMonth
+    * Day of month. Valid values 1 to 31
     *
-    * @return \DateTime The startDateTime
+    * @param int $val The value of the dayofMonth
+    *
+    * @return WindowsKioskForceUpdateSchedule
     */
-    public function getStartDateTime()
+    public function setDayofMonth($val)
     {
-        if (array_key_exists("startDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
-                return $this->_propDict["startDateTime"];
+        $this->_propDict["dayofMonth"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the dayofWeek
+    * Day of week.
+    *
+    * @return DayOfWeek The dayofWeek
+    */
+    public function getDayofWeek()
+    {
+        if (array_key_exists("dayofWeek", $this->_propDict)) {
+            if (is_a($this->_propDict["dayofWeek"], "Beta\Microsoft\Graph\Model\DayOfWeek")) {
+                return $this->_propDict["dayofWeek"];
             } else {
-                $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);
-                return $this->_propDict["startDateTime"];
+                $this->_propDict["dayofWeek"] = new DayOfWeek($this->_propDict["dayofWeek"]);
+                return $this->_propDict["dayofWeek"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the startDateTime
-    * The start time for the force restart.
+    * Sets the dayofWeek
+    * Day of week.
     *
-    * @param \DateTime $val The value to assign to the startDateTime
+    * @param DayOfWeek $val The value to assign to the dayofWeek
     *
     * @return WindowsKioskForceUpdateSchedule The WindowsKioskForceUpdateSchedule
     */
-    public function setStartDateTime($val)
+    public function setDayofWeek($val)
     {
-        $this->_propDict["startDateTime"] = $val;
+        $this->_propDict["dayofWeek"] = $val;
          return $this;
     }
 
@@ -89,67 +117,6 @@ class WindowsKioskForceUpdateSchedule extends Entity
         $this->_propDict["recurrence"] = $val;
          return $this;
     }
-
-    /**
-    * Gets the dayofWeek
-    * Day of week.
-    *
-    * @return DayOfWeek The dayofWeek
-    */
-    public function getDayofWeek()
-    {
-        if (array_key_exists("dayofWeek", $this->_propDict)) {
-            if (is_a($this->_propDict["dayofWeek"], "Beta\Microsoft\Graph\Model\DayOfWeek")) {
-                return $this->_propDict["dayofWeek"];
-            } else {
-                $this->_propDict["dayofWeek"] = new DayOfWeek($this->_propDict["dayofWeek"]);
-                return $this->_propDict["dayofWeek"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the dayofWeek
-    * Day of week.
-    *
-    * @param DayOfWeek $val The value to assign to the dayofWeek
-    *
-    * @return WindowsKioskForceUpdateSchedule The WindowsKioskForceUpdateSchedule
-    */
-    public function setDayofWeek($val)
-    {
-        $this->_propDict["dayofWeek"] = $val;
-         return $this;
-    }
-    /**
-    * Gets the dayofMonth
-    * Day of month. Valid values 1 to 31
-    *
-    * @return int The dayofMonth
-    */
-    public function getDayofMonth()
-    {
-        if (array_key_exists("dayofMonth", $this->_propDict)) {
-            return $this->_propDict["dayofMonth"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the dayofMonth
-    * Day of month. Valid values 1 to 31
-    *
-    * @param int $val The value of the dayofMonth
-    *
-    * @return WindowsKioskForceUpdateSchedule
-    */
-    public function setDayofMonth($val)
-    {
-        $this->_propDict["dayofMonth"] = $val;
-        return $this;
-    }
     /**
     * Gets the runImmediatelyIfAfterStartDateTime
     * If true, runs the task immediately if StartDateTime is in the past, else, runs at the next recurrence.
@@ -177,5 +144,38 @@ class WindowsKioskForceUpdateSchedule extends Entity
     {
         $this->_propDict["runImmediatelyIfAfterStartDateTime"] = $val;
         return $this;
+    }
+
+    /**
+    * Gets the startDateTime
+    * The start time for the force restart.
+    *
+    * @return \DateTime The startDateTime
+    */
+    public function getStartDateTime()
+    {
+        if (array_key_exists("startDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
+                return $this->_propDict["startDateTime"];
+            } else {
+                $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);
+                return $this->_propDict["startDateTime"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the startDateTime
+    * The start time for the force restart.
+    *
+    * @param \DateTime $val The value to assign to the startDateTime
+    *
+    * @return WindowsKioskForceUpdateSchedule The WindowsKioskForceUpdateSchedule
+    */
+    public function setStartDateTime($val)
+    {
+        $this->_propDict["startDateTime"] = $val;
+         return $this;
     }
 }

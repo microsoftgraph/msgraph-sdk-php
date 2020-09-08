@@ -25,6 +25,37 @@ namespace Beta\Microsoft\Graph\Model;
 class ExactMatchJobBase extends Entity
 {
     /**
+    * Gets the completionDateTime
+    *
+    * @return \DateTime The completionDateTime
+    */
+    public function getCompletionDateTime()
+    {
+        if (array_key_exists("completionDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["completionDateTime"], "\DateTime")) {
+                return $this->_propDict["completionDateTime"];
+            } else {
+                $this->_propDict["completionDateTime"] = new \DateTime($this->_propDict["completionDateTime"]);
+                return $this->_propDict["completionDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the completionDateTime
+    *
+    * @param \DateTime $val The completionDateTime
+    *
+    * @return ExactMatchJobBase
+    */
+    public function setCompletionDateTime($val)
+    {
+        $this->_propDict["completionDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the creationDateTime
     *
     * @return \DateTime The creationDateTime
@@ -56,33 +87,33 @@ class ExactMatchJobBase extends Entity
     }
     
     /**
-    * Gets the startDateTime
+    * Gets the error
     *
-    * @return \DateTime The startDateTime
+    * @return ClassificationError The error
     */
-    public function getStartDateTime()
+    public function getError()
     {
-        if (array_key_exists("startDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
-                return $this->_propDict["startDateTime"];
+        if (array_key_exists("error", $this->_propDict)) {
+            if (is_a($this->_propDict["error"], "Beta\Microsoft\Graph\Model\ClassificationError")) {
+                return $this->_propDict["error"];
             } else {
-                $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);
-                return $this->_propDict["startDateTime"];
+                $this->_propDict["error"] = new ClassificationError($this->_propDict["error"]);
+                return $this->_propDict["error"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the startDateTime
+    * Sets the error
     *
-    * @param \DateTime $val The startDateTime
+    * @param ClassificationError $val The error
     *
     * @return ExactMatchJobBase
     */
-    public function setStartDateTime($val)
+    public function setError($val)
     {
-        $this->_propDict["startDateTime"] = $val;
+        $this->_propDict["error"] = $val;
         return $this;
     }
     
@@ -118,64 +149,33 @@ class ExactMatchJobBase extends Entity
     }
     
     /**
-    * Gets the completionDateTime
+    * Gets the startDateTime
     *
-    * @return \DateTime The completionDateTime
+    * @return \DateTime The startDateTime
     */
-    public function getCompletionDateTime()
+    public function getStartDateTime()
     {
-        if (array_key_exists("completionDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["completionDateTime"], "\DateTime")) {
-                return $this->_propDict["completionDateTime"];
+        if (array_key_exists("startDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
+                return $this->_propDict["startDateTime"];
             } else {
-                $this->_propDict["completionDateTime"] = new \DateTime($this->_propDict["completionDateTime"]);
-                return $this->_propDict["completionDateTime"];
+                $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);
+                return $this->_propDict["startDateTime"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the completionDateTime
+    * Sets the startDateTime
     *
-    * @param \DateTime $val The completionDateTime
-    *
-    * @return ExactMatchJobBase
-    */
-    public function setCompletionDateTime($val)
-    {
-        $this->_propDict["completionDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the error
-    *
-    * @return ClassificationError The error
-    */
-    public function getError()
-    {
-        if (array_key_exists("error", $this->_propDict)) {
-            if (is_a($this->_propDict["error"], "Beta\Microsoft\Graph\Model\ClassificationError")) {
-                return $this->_propDict["error"];
-            } else {
-                $this->_propDict["error"] = new ClassificationError($this->_propDict["error"]);
-                return $this->_propDict["error"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the error
-    *
-    * @param ClassificationError $val The error
+    * @param \DateTime $val The startDateTime
     *
     * @return ExactMatchJobBase
     */
-    public function setError($val)
+    public function setStartDateTime($val)
     {
-        $this->_propDict["error"] = $val;
+        $this->_propDict["startDateTime"] = $val;
         return $this;
     }
     

@@ -25,33 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class AppScope extends Entity
 {
     /**
-    * Gets the type
-    *
-    * @return string The type
-    */
-    public function getType()
-    {
-        if (array_key_exists("type", $this->_propDict)) {
-            return $this->_propDict["type"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the type
-    *
-    * @param string $val The type
-    *
-    * @return AppScope
-    */
-    public function setType($val)
-    {
-        $this->_propDict["type"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the displayName
     *
     * @return string The displayName
@@ -75,6 +48,33 @@ class AppScope extends Entity
     public function setDisplayName($val)
     {
         $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the type
+    *
+    * @return string The type
+    */
+    public function getType()
+    {
+        if (array_key_exists("type", $this->_propDict)) {
+            return $this->_propDict["type"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the type
+    *
+    * @param string $val The type
+    *
+    * @return AppScope
+    */
+    public function setType($val)
+    {
+        $this->_propDict["type"] = $val;
         return $this;
     }
     

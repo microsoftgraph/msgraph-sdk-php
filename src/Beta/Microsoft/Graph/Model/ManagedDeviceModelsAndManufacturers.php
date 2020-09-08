@@ -24,34 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class ManagedDeviceModelsAndManufacturers extends Entity
 {
     /**
-    * Gets the deviceModels
-    * List of Models for managed devices in the account
-    *
-    * @return string The deviceModels
-    */
-    public function getDeviceModels()
-    {
-        if (array_key_exists("deviceModels", $this->_propDict)) {
-            return $this->_propDict["deviceModels"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the deviceModels
-    * List of Models for managed devices in the account
-    *
-    * @param string $val The value of the deviceModels
-    *
-    * @return ManagedDeviceModelsAndManufacturers
-    */
-    public function setDeviceModels($val)
-    {
-        $this->_propDict["deviceModels"] = $val;
-        return $this;
-    }
-    /**
     * Gets the deviceManufacturers
     * List of Manufactures for managed devices in the account
     *
@@ -77,6 +49,34 @@ class ManagedDeviceModelsAndManufacturers extends Entity
     public function setDeviceManufacturers($val)
     {
         $this->_propDict["deviceManufacturers"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the deviceModels
+    * List of Models for managed devices in the account
+    *
+    * @return string The deviceModels
+    */
+    public function getDeviceModels()
+    {
+        if (array_key_exists("deviceModels", $this->_propDict)) {
+            return $this->_propDict["deviceModels"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the deviceModels
+    * List of Models for managed devices in the account
+    *
+    * @param string $val The value of the deviceModels
+    *
+    * @return ManagedDeviceModelsAndManufacturers
+    */
+    public function setDeviceModels($val)
+    {
+        $this->_propDict["deviceModels"] = $val;
         return $this;
     }
 }

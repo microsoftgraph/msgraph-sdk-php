@@ -25,151 +25,89 @@ namespace Beta\Microsoft\Graph\Model;
 class UserExperienceAnalyticsDevicePerformance extends Entity
 {
     /**
-    * Gets the deviceName
-    * The user experience analytics device name.
+    * Gets the averageBlueScreens
+    * Average (mean) number of Blue Screens per device in the last 14 days. Valid values 0 to 9999999
     *
-    * @return string The deviceName
+    * @return float The averageBlueScreens
     */
-    public function getDeviceName()
+    public function getAverageBlueScreens()
     {
-        if (array_key_exists("deviceName", $this->_propDict)) {
-            return $this->_propDict["deviceName"];
+        if (array_key_exists("averageBlueScreens", $this->_propDict)) {
+            return $this->_propDict["averageBlueScreens"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the deviceName
-    * The user experience analytics device name.
+    * Sets the averageBlueScreens
+    * Average (mean) number of Blue Screens per device in the last 14 days. Valid values 0 to 9999999
     *
-    * @param string $val The deviceName
+    * @param float $val The averageBlueScreens
     *
     * @return UserExperienceAnalyticsDevicePerformance
     */
-    public function setDeviceName($val)
+    public function setAverageBlueScreens($val)
     {
-        $this->_propDict["deviceName"] = $val;
+        $this->_propDict["averageBlueScreens"] = $val;
         return $this;
     }
     
     /**
-    * Gets the model
-    * The user experience analytics device model.
+    * Gets the averageRestarts
+    * Average (mean) number of Restarts per device in the last 14 days. Valid values 0 to 9999999
     *
-    * @return string The model
+    * @return float The averageRestarts
     */
-    public function getModel()
+    public function getAverageRestarts()
     {
-        if (array_key_exists("model", $this->_propDict)) {
-            return $this->_propDict["model"];
+        if (array_key_exists("averageRestarts", $this->_propDict)) {
+            return $this->_propDict["averageRestarts"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the model
-    * The user experience analytics device model.
+    * Sets the averageRestarts
+    * Average (mean) number of Restarts per device in the last 14 days. Valid values 0 to 9999999
     *
-    * @param string $val The model
+    * @param float $val The averageRestarts
     *
     * @return UserExperienceAnalyticsDevicePerformance
     */
-    public function setModel($val)
+    public function setAverageRestarts($val)
     {
-        $this->_propDict["model"] = $val;
+        $this->_propDict["averageRestarts"] = $val;
         return $this;
     }
     
     /**
-    * Gets the manufacturer
-    * The user experience analytics device manufacturer.
+    * Gets the blueScreenCount
+    * Number of Blue Screens in the last 14 days. Valid values 0 to 9999999
     *
-    * @return string The manufacturer
+    * @return int The blueScreenCount
     */
-    public function getManufacturer()
+    public function getBlueScreenCount()
     {
-        if (array_key_exists("manufacturer", $this->_propDict)) {
-            return $this->_propDict["manufacturer"];
+        if (array_key_exists("blueScreenCount", $this->_propDict)) {
+            return $this->_propDict["blueScreenCount"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the manufacturer
-    * The user experience analytics device manufacturer.
+    * Sets the blueScreenCount
+    * Number of Blue Screens in the last 14 days. Valid values 0 to 9999999
     *
-    * @param string $val The manufacturer
-    *
-    * @return UserExperienceAnalyticsDevicePerformance
-    */
-    public function setManufacturer($val)
-    {
-        $this->_propDict["manufacturer"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the diskType
-    * The user experience analytics device disk type.
-    *
-    * @return DiskType The diskType
-    */
-    public function getDiskType()
-    {
-        if (array_key_exists("diskType", $this->_propDict)) {
-            if (is_a($this->_propDict["diskType"], "Beta\Microsoft\Graph\Model\DiskType")) {
-                return $this->_propDict["diskType"];
-            } else {
-                $this->_propDict["diskType"] = new DiskType($this->_propDict["diskType"]);
-                return $this->_propDict["diskType"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the diskType
-    * The user experience analytics device disk type.
-    *
-    * @param DiskType $val The diskType
+    * @param int $val The blueScreenCount
     *
     * @return UserExperienceAnalyticsDevicePerformance
     */
-    public function setDiskType($val)
+    public function setBlueScreenCount($val)
     {
-        $this->_propDict["diskType"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the operatingSystemVersion
-    * The user experience analytics device Operating System version.
-    *
-    * @return string The operatingSystemVersion
-    */
-    public function getOperatingSystemVersion()
-    {
-        if (array_key_exists("operatingSystemVersion", $this->_propDict)) {
-            return $this->_propDict["operatingSystemVersion"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the operatingSystemVersion
-    * The user experience analytics device Operating System version.
-    *
-    * @param string $val The operatingSystemVersion
-    *
-    * @return UserExperienceAnalyticsDevicePerformance
-    */
-    public function setOperatingSystemVersion($val)
-    {
-        $this->_propDict["operatingSystemVersion"] = $val;
+        $this->_propDict["blueScreenCount"] = intval($val);
         return $this;
     }
     
@@ -232,6 +170,126 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
     }
     
     /**
+    * Gets the coreLoginTimeInMs
+    * The user experience analytics device core login time in milliseconds.
+    *
+    * @return int The coreLoginTimeInMs
+    */
+    public function getCoreLoginTimeInMs()
+    {
+        if (array_key_exists("coreLoginTimeInMs", $this->_propDict)) {
+            return $this->_propDict["coreLoginTimeInMs"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the coreLoginTimeInMs
+    * The user experience analytics device core login time in milliseconds.
+    *
+    * @param int $val The coreLoginTimeInMs
+    *
+    * @return UserExperienceAnalyticsDevicePerformance
+    */
+    public function setCoreLoginTimeInMs($val)
+    {
+        $this->_propDict["coreLoginTimeInMs"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the deviceCount
+    * User experience analytics summarized device count.
+    *
+    * @return int The deviceCount
+    */
+    public function getDeviceCount()
+    {
+        if (array_key_exists("deviceCount", $this->_propDict)) {
+            return $this->_propDict["deviceCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the deviceCount
+    * User experience analytics summarized device count.
+    *
+    * @param int $val The deviceCount
+    *
+    * @return UserExperienceAnalyticsDevicePerformance
+    */
+    public function setDeviceCount($val)
+    {
+        $this->_propDict["deviceCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the deviceName
+    * The user experience analytics device name.
+    *
+    * @return string The deviceName
+    */
+    public function getDeviceName()
+    {
+        if (array_key_exists("deviceName", $this->_propDict)) {
+            return $this->_propDict["deviceName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the deviceName
+    * The user experience analytics device name.
+    *
+    * @param string $val The deviceName
+    *
+    * @return UserExperienceAnalyticsDevicePerformance
+    */
+    public function setDeviceName($val)
+    {
+        $this->_propDict["deviceName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the diskType
+    * The user experience analytics device disk type.
+    *
+    * @return DiskType The diskType
+    */
+    public function getDiskType()
+    {
+        if (array_key_exists("diskType", $this->_propDict)) {
+            if (is_a($this->_propDict["diskType"], "Beta\Microsoft\Graph\Model\DiskType")) {
+                return $this->_propDict["diskType"];
+            } else {
+                $this->_propDict["diskType"] = new DiskType($this->_propDict["diskType"]);
+                return $this->_propDict["diskType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the diskType
+    * The user experience analytics device disk type.
+    *
+    * @param DiskType $val The diskType
+    *
+    * @return UserExperienceAnalyticsDevicePerformance
+    */
+    public function setDiskType($val)
+    {
+        $this->_propDict["diskType"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the groupPolicyBootTimeInMs
     * The user experience analytics device group policy boot time in milliseconds.
     *
@@ -257,6 +315,35 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
     public function setGroupPolicyBootTimeInMs($val)
     {
         $this->_propDict["groupPolicyBootTimeInMs"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the groupPolicyLoginTimeInMs
+    * The user experience analytics device group policy login time in milliseconds.
+    *
+    * @return int The groupPolicyLoginTimeInMs
+    */
+    public function getGroupPolicyLoginTimeInMs()
+    {
+        if (array_key_exists("groupPolicyLoginTimeInMs", $this->_propDict)) {
+            return $this->_propDict["groupPolicyLoginTimeInMs"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the groupPolicyLoginTimeInMs
+    * The user experience analytics device group policy login time in milliseconds.
+    *
+    * @param int $val The groupPolicyLoginTimeInMs
+    *
+    * @return UserExperienceAnalyticsDevicePerformance
+    */
+    public function setGroupPolicyLoginTimeInMs($val)
+    {
+        $this->_propDict["groupPolicyLoginTimeInMs"] = intval($val);
         return $this;
     }
     
@@ -323,89 +410,89 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
     }
     
     /**
-    * Gets the coreLoginTimeInMs
-    * The user experience analytics device core login time in milliseconds.
+    * Gets the manufacturer
+    * The user experience analytics device manufacturer.
     *
-    * @return int The coreLoginTimeInMs
+    * @return string The manufacturer
     */
-    public function getCoreLoginTimeInMs()
+    public function getManufacturer()
     {
-        if (array_key_exists("coreLoginTimeInMs", $this->_propDict)) {
-            return $this->_propDict["coreLoginTimeInMs"];
+        if (array_key_exists("manufacturer", $this->_propDict)) {
+            return $this->_propDict["manufacturer"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the coreLoginTimeInMs
-    * The user experience analytics device core login time in milliseconds.
+    * Sets the manufacturer
+    * The user experience analytics device manufacturer.
     *
-    * @param int $val The coreLoginTimeInMs
+    * @param string $val The manufacturer
     *
     * @return UserExperienceAnalyticsDevicePerformance
     */
-    public function setCoreLoginTimeInMs($val)
+    public function setManufacturer($val)
     {
-        $this->_propDict["coreLoginTimeInMs"] = intval($val);
+        $this->_propDict["manufacturer"] = $val;
         return $this;
     }
     
     /**
-    * Gets the groupPolicyLoginTimeInMs
-    * The user experience analytics device group policy login time in milliseconds.
+    * Gets the model
+    * The user experience analytics device model.
     *
-    * @return int The groupPolicyLoginTimeInMs
+    * @return string The model
     */
-    public function getGroupPolicyLoginTimeInMs()
+    public function getModel()
     {
-        if (array_key_exists("groupPolicyLoginTimeInMs", $this->_propDict)) {
-            return $this->_propDict["groupPolicyLoginTimeInMs"];
+        if (array_key_exists("model", $this->_propDict)) {
+            return $this->_propDict["model"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the groupPolicyLoginTimeInMs
-    * The user experience analytics device group policy login time in milliseconds.
+    * Sets the model
+    * The user experience analytics device model.
     *
-    * @param int $val The groupPolicyLoginTimeInMs
+    * @param string $val The model
     *
     * @return UserExperienceAnalyticsDevicePerformance
     */
-    public function setGroupPolicyLoginTimeInMs($val)
+    public function setModel($val)
     {
-        $this->_propDict["groupPolicyLoginTimeInMs"] = intval($val);
+        $this->_propDict["model"] = $val;
         return $this;
     }
     
     /**
-    * Gets the deviceCount
-    * User experience analytics summarized device count.
+    * Gets the operatingSystemVersion
+    * The user experience analytics device Operating System version.
     *
-    * @return int The deviceCount
+    * @return string The operatingSystemVersion
     */
-    public function getDeviceCount()
+    public function getOperatingSystemVersion()
     {
-        if (array_key_exists("deviceCount", $this->_propDict)) {
-            return $this->_propDict["deviceCount"];
+        if (array_key_exists("operatingSystemVersion", $this->_propDict)) {
+            return $this->_propDict["operatingSystemVersion"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the deviceCount
-    * User experience analytics summarized device count.
+    * Sets the operatingSystemVersion
+    * The user experience analytics device Operating System version.
     *
-    * @param int $val The deviceCount
+    * @param string $val The operatingSystemVersion
     *
     * @return UserExperienceAnalyticsDevicePerformance
     */
-    public function setDeviceCount($val)
+    public function setOperatingSystemVersion($val)
     {
-        $this->_propDict["deviceCount"] = intval($val);
+        $this->_propDict["operatingSystemVersion"] = $val;
         return $this;
     }
     
@@ -439,35 +526,6 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
     }
     
     /**
-    * Gets the blueScreenCount
-    * Number of Blue Screens in the last 14 days. Valid values 0 to 9999999
-    *
-    * @return int The blueScreenCount
-    */
-    public function getBlueScreenCount()
-    {
-        if (array_key_exists("blueScreenCount", $this->_propDict)) {
-            return $this->_propDict["blueScreenCount"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the blueScreenCount
-    * Number of Blue Screens in the last 14 days. Valid values 0 to 9999999
-    *
-    * @param int $val The blueScreenCount
-    *
-    * @return UserExperienceAnalyticsDevicePerformance
-    */
-    public function setBlueScreenCount($val)
-    {
-        $this->_propDict["blueScreenCount"] = intval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the restartCount
     * Number of Restarts in the last 14 days. Valid values 0 to 9999999
     *
@@ -493,64 +551,6 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
     public function setRestartCount($val)
     {
         $this->_propDict["restartCount"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the averageBlueScreens
-    * Average (mean) number of Blue Screens per device in the last 14 days. Valid values 0 to 9999999
-    *
-    * @return float The averageBlueScreens
-    */
-    public function getAverageBlueScreens()
-    {
-        if (array_key_exists("averageBlueScreens", $this->_propDict)) {
-            return $this->_propDict["averageBlueScreens"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the averageBlueScreens
-    * Average (mean) number of Blue Screens per device in the last 14 days. Valid values 0 to 9999999
-    *
-    * @param float $val The averageBlueScreens
-    *
-    * @return UserExperienceAnalyticsDevicePerformance
-    */
-    public function setAverageBlueScreens($val)
-    {
-        $this->_propDict["averageBlueScreens"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the averageRestarts
-    * Average (mean) number of Restarts per device in the last 14 days. Valid values 0 to 9999999
-    *
-    * @return float The averageRestarts
-    */
-    public function getAverageRestarts()
-    {
-        if (array_key_exists("averageRestarts", $this->_propDict)) {
-            return $this->_propDict["averageRestarts"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the averageRestarts
-    * Average (mean) number of Restarts per device in the last 14 days. Valid values 0 to 9999999
-    *
-    * @param float $val The averageRestarts
-    *
-    * @return UserExperienceAnalyticsDevicePerformance
-    */
-    public function setAverageRestarts($val)
-    {
-        $this->_propDict["averageRestarts"] = $val;
         return $this;
     }
     

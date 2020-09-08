@@ -23,32 +23,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class MetadataAction extends InformationProtectionAction
 {
-    /**
-    * Gets the metadataToRemove
-    *
-    * @return string The metadataToRemove
-    */
-    public function getMetadataToRemove()
-    {
-        if (array_key_exists("metadataToRemove", $this->_propDict)) {
-            return $this->_propDict["metadataToRemove"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the metadataToRemove
-    *
-    * @param string $val The value of the metadataToRemove
-    *
-    * @return MetadataAction
-    */
-    public function setMetadataToRemove($val)
-    {
-        $this->_propDict["metadataToRemove"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the metadataToAdd
@@ -79,5 +53,31 @@ class MetadataAction extends InformationProtectionAction
     {
         $this->_propDict["metadataToAdd"] = $val;
          return $this;
+    }
+    /**
+    * Gets the metadataToRemove
+    *
+    * @return string The metadataToRemove
+    */
+    public function getMetadataToRemove()
+    {
+        if (array_key_exists("metadataToRemove", $this->_propDict)) {
+            return $this->_propDict["metadataToRemove"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the metadataToRemove
+    *
+    * @param string $val The value of the metadataToRemove
+    *
+    * @return MetadataAction
+    */
+    public function setMetadataToRemove($val)
+    {
+        $this->_propDict["metadataToRemove"] = $val;
+        return $this;
     }
 }

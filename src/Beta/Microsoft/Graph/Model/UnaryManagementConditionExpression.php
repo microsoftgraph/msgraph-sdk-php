@@ -25,39 +25,6 @@ class UnaryManagementConditionExpression extends ManagementConditionExpressionMo
 {
 
     /**
-    * Gets the operator
-    * The operator used in the evaluation of the unary operation.
-    *
-    * @return UnaryManagementConditionExpressionOperatorType The operator
-    */
-    public function getOperator()
-    {
-        if (array_key_exists("operator", $this->_propDict)) {
-            if (is_a($this->_propDict["operator"], "Beta\Microsoft\Graph\Model\UnaryManagementConditionExpressionOperatorType")) {
-                return $this->_propDict["operator"];
-            } else {
-                $this->_propDict["operator"] = new UnaryManagementConditionExpressionOperatorType($this->_propDict["operator"]);
-                return $this->_propDict["operator"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the operator
-    * The operator used in the evaluation of the unary operation.
-    *
-    * @param UnaryManagementConditionExpressionOperatorType $val The value to assign to the operator
-    *
-    * @return UnaryManagementConditionExpression The UnaryManagementConditionExpression
-    */
-    public function setOperator($val)
-    {
-        $this->_propDict["operator"] = $val;
-         return $this;
-    }
-
-    /**
     * Gets the operand
     * The operand of the unary operation.
     *
@@ -87,6 +54,39 @@ class UnaryManagementConditionExpression extends ManagementConditionExpressionMo
     public function setOperand($val)
     {
         $this->_propDict["operand"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the operator
+    * The operator used in the evaluation of the unary operation.
+    *
+    * @return UnaryManagementConditionExpressionOperatorType The operator
+    */
+    public function getOperator()
+    {
+        if (array_key_exists("operator", $this->_propDict)) {
+            if (is_a($this->_propDict["operator"], "Beta\Microsoft\Graph\Model\UnaryManagementConditionExpressionOperatorType")) {
+                return $this->_propDict["operator"];
+            } else {
+                $this->_propDict["operator"] = new UnaryManagementConditionExpressionOperatorType($this->_propDict["operator"]);
+                return $this->_propDict["operator"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the operator
+    * The operator used in the evaluation of the unary operation.
+    *
+    * @param UnaryManagementConditionExpressionOperatorType $val The value to assign to the operator
+    *
+    * @return UnaryManagementConditionExpression The UnaryManagementConditionExpression
+    */
+    public function setOperator($val)
+    {
+        $this->_propDict["operator"] = $val;
          return $this;
     }
 }

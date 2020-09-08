@@ -25,39 +25,6 @@ class AppleOwnerTypeEnrollmentType extends Entity
 {
 
     /**
-    * Gets the ownerType
-    * The owner type.
-    *
-    * @return ManagedDeviceOwnerType The ownerType
-    */
-    public function getOwnerType()
-    {
-        if (array_key_exists("ownerType", $this->_propDict)) {
-            if (is_a($this->_propDict["ownerType"], "Beta\Microsoft\Graph\Model\ManagedDeviceOwnerType")) {
-                return $this->_propDict["ownerType"];
-            } else {
-                $this->_propDict["ownerType"] = new ManagedDeviceOwnerType($this->_propDict["ownerType"]);
-                return $this->_propDict["ownerType"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the ownerType
-    * The owner type.
-    *
-    * @param ManagedDeviceOwnerType $val The value to assign to the ownerType
-    *
-    * @return AppleOwnerTypeEnrollmentType The AppleOwnerTypeEnrollmentType
-    */
-    public function setOwnerType($val)
-    {
-        $this->_propDict["ownerType"] = $val;
-         return $this;
-    }
-
-    /**
     * Gets the enrollmentType
     * The enrollment type.
     *
@@ -87,6 +54,39 @@ class AppleOwnerTypeEnrollmentType extends Entity
     public function setEnrollmentType($val)
     {
         $this->_propDict["enrollmentType"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the ownerType
+    * The owner type.
+    *
+    * @return ManagedDeviceOwnerType The ownerType
+    */
+    public function getOwnerType()
+    {
+        if (array_key_exists("ownerType", $this->_propDict)) {
+            if (is_a($this->_propDict["ownerType"], "Beta\Microsoft\Graph\Model\ManagedDeviceOwnerType")) {
+                return $this->_propDict["ownerType"];
+            } else {
+                $this->_propDict["ownerType"] = new ManagedDeviceOwnerType($this->_propDict["ownerType"]);
+                return $this->_propDict["ownerType"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the ownerType
+    * The owner type.
+    *
+    * @param ManagedDeviceOwnerType $val The value to assign to the ownerType
+    *
+    * @return AppleOwnerTypeEnrollmentType The AppleOwnerTypeEnrollmentType
+    */
+    public function setOwnerType($val)
+    {
+        $this->_propDict["ownerType"] = $val;
          return $this;
     }
 }

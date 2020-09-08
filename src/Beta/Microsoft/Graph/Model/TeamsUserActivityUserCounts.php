@@ -25,122 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class TeamsUserActivityUserCounts extends Entity
 {
     /**
-    * Gets the reportRefreshDate
-    *
-    * @return \DateTime The reportRefreshDate
-    */
-    public function getReportRefreshDate()
-    {
-        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
-                return $this->_propDict["reportRefreshDate"];
-            } else {
-                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
-                return $this->_propDict["reportRefreshDate"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the reportRefreshDate
-    *
-    * @param \DateTime $val The reportRefreshDate
-    *
-    * @return TeamsUserActivityUserCounts
-    */
-    public function setReportRefreshDate($val)
-    {
-        $this->_propDict["reportRefreshDate"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the reportDate
-    *
-    * @return \DateTime The reportDate
-    */
-    public function getReportDate()
-    {
-        if (array_key_exists("reportDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportDate"], "\DateTime")) {
-                return $this->_propDict["reportDate"];
-            } else {
-                $this->_propDict["reportDate"] = new \DateTime($this->_propDict["reportDate"]);
-                return $this->_propDict["reportDate"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the reportDate
-    *
-    * @param \DateTime $val The reportDate
-    *
-    * @return TeamsUserActivityUserCounts
-    */
-    public function setReportDate($val)
-    {
-        $this->_propDict["reportDate"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the teamChatMessages
-    *
-    * @return int The teamChatMessages
-    */
-    public function getTeamChatMessages()
-    {
-        if (array_key_exists("teamChatMessages", $this->_propDict)) {
-            return $this->_propDict["teamChatMessages"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the teamChatMessages
-    *
-    * @param int $val The teamChatMessages
-    *
-    * @return TeamsUserActivityUserCounts
-    */
-    public function setTeamChatMessages($val)
-    {
-        $this->_propDict["teamChatMessages"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the privateChatMessages
-    *
-    * @return int The privateChatMessages
-    */
-    public function getPrivateChatMessages()
-    {
-        if (array_key_exists("privateChatMessages", $this->_propDict)) {
-            return $this->_propDict["privateChatMessages"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the privateChatMessages
-    *
-    * @param int $val The privateChatMessages
-    *
-    * @return TeamsUserActivityUserCounts
-    */
-    public function setPrivateChatMessages($val)
-    {
-        $this->_propDict["privateChatMessages"] = intval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the calls
     *
     * @return int The calls
@@ -222,6 +106,64 @@ class TeamsUserActivityUserCounts extends Entity
     }
     
     /**
+    * Gets the privateChatMessages
+    *
+    * @return int The privateChatMessages
+    */
+    public function getPrivateChatMessages()
+    {
+        if (array_key_exists("privateChatMessages", $this->_propDict)) {
+            return $this->_propDict["privateChatMessages"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the privateChatMessages
+    *
+    * @param int $val The privateChatMessages
+    *
+    * @return TeamsUserActivityUserCounts
+    */
+    public function setPrivateChatMessages($val)
+    {
+        $this->_propDict["privateChatMessages"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the reportDate
+    *
+    * @return \DateTime The reportDate
+    */
+    public function getReportDate()
+    {
+        if (array_key_exists("reportDate", $this->_propDict)) {
+            if (is_a($this->_propDict["reportDate"], "\DateTime")) {
+                return $this->_propDict["reportDate"];
+            } else {
+                $this->_propDict["reportDate"] = new \DateTime($this->_propDict["reportDate"]);
+                return $this->_propDict["reportDate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the reportDate
+    *
+    * @param \DateTime $val The reportDate
+    *
+    * @return TeamsUserActivityUserCounts
+    */
+    public function setReportDate($val)
+    {
+        $this->_propDict["reportDate"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the reportPeriod
     *
     * @return string The reportPeriod
@@ -245,6 +187,64 @@ class TeamsUserActivityUserCounts extends Entity
     public function setReportPeriod($val)
     {
         $this->_propDict["reportPeriod"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the reportRefreshDate
+    *
+    * @return \DateTime The reportRefreshDate
+    */
+    public function getReportRefreshDate()
+    {
+        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
+                return $this->_propDict["reportRefreshDate"];
+            } else {
+                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
+                return $this->_propDict["reportRefreshDate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the reportRefreshDate
+    *
+    * @param \DateTime $val The reportRefreshDate
+    *
+    * @return TeamsUserActivityUserCounts
+    */
+    public function setReportRefreshDate($val)
+    {
+        $this->_propDict["reportRefreshDate"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the teamChatMessages
+    *
+    * @return int The teamChatMessages
+    */
+    public function getTeamChatMessages()
+    {
+        if (array_key_exists("teamChatMessages", $this->_propDict)) {
+            return $this->_propDict["teamChatMessages"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the teamChatMessages
+    *
+    * @param int $val The teamChatMessages
+    *
+    * @return TeamsUserActivityUserCounts
+    */
+    public function setTeamChatMessages($val)
+    {
+        $this->_propDict["teamChatMessages"] = intval($val);
         return $this;
     }
     

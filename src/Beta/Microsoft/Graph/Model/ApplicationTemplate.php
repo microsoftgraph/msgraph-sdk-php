@@ -25,6 +25,60 @@ namespace Beta\Microsoft\Graph\Model;
 class ApplicationTemplate extends Entity
 {
     /**
+    * Gets the categories
+    *
+    * @return string The categories
+    */
+    public function getCategories()
+    {
+        if (array_key_exists("categories", $this->_propDict)) {
+            return $this->_propDict["categories"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the categories
+    *
+    * @param string $val The categories
+    *
+    * @return ApplicationTemplate
+    */
+    public function setCategories($val)
+    {
+        $this->_propDict["categories"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the description
+    *
+    * @return string The description
+    */
+    public function getDescription()
+    {
+        if (array_key_exists("description", $this->_propDict)) {
+            return $this->_propDict["description"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the description
+    *
+    * @param string $val The description
+    *
+    * @return ApplicationTemplate
+    */
+    public function setDescription($val)
+    {
+        $this->_propDict["description"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the displayName
     *
     * @return string The displayName
@@ -79,60 +133,6 @@ class ApplicationTemplate extends Entity
     }
     
     /**
-    * Gets the supportedSingleSignOnModes
-    *
-    * @return string The supportedSingleSignOnModes
-    */
-    public function getSupportedSingleSignOnModes()
-    {
-        if (array_key_exists("supportedSingleSignOnModes", $this->_propDict)) {
-            return $this->_propDict["supportedSingleSignOnModes"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the supportedSingleSignOnModes
-    *
-    * @param string $val The supportedSingleSignOnModes
-    *
-    * @return ApplicationTemplate
-    */
-    public function setSupportedSingleSignOnModes($val)
-    {
-        $this->_propDict["supportedSingleSignOnModes"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the supportedProvisioningTypes
-    *
-    * @return string The supportedProvisioningTypes
-    */
-    public function getSupportedProvisioningTypes()
-    {
-        if (array_key_exists("supportedProvisioningTypes", $this->_propDict)) {
-            return $this->_propDict["supportedProvisioningTypes"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the supportedProvisioningTypes
-    *
-    * @param string $val The supportedProvisioningTypes
-    *
-    * @return ApplicationTemplate
-    */
-    public function setSupportedProvisioningTypes($val)
-    {
-        $this->_propDict["supportedProvisioningTypes"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the logoUrl
     *
     * @return string The logoUrl
@@ -156,33 +156,6 @@ class ApplicationTemplate extends Entity
     public function setLogoUrl($val)
     {
         $this->_propDict["logoUrl"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the categories
-    *
-    * @return string The categories
-    */
-    public function getCategories()
-    {
-        if (array_key_exists("categories", $this->_propDict)) {
-            return $this->_propDict["categories"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the categories
-    *
-    * @param string $val The categories
-    *
-    * @return ApplicationTemplate
-    */
-    public function setCategories($val)
-    {
-        $this->_propDict["categories"] = $val;
         return $this;
     }
     
@@ -214,29 +187,56 @@ class ApplicationTemplate extends Entity
     }
     
     /**
-    * Gets the description
+    * Gets the supportedProvisioningTypes
     *
-    * @return string The description
+    * @return string The supportedProvisioningTypes
     */
-    public function getDescription()
+    public function getSupportedProvisioningTypes()
     {
-        if (array_key_exists("description", $this->_propDict)) {
-            return $this->_propDict["description"];
+        if (array_key_exists("supportedProvisioningTypes", $this->_propDict)) {
+            return $this->_propDict["supportedProvisioningTypes"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the description
+    * Sets the supportedProvisioningTypes
     *
-    * @param string $val The description
+    * @param string $val The supportedProvisioningTypes
     *
     * @return ApplicationTemplate
     */
-    public function setDescription($val)
+    public function setSupportedProvisioningTypes($val)
     {
-        $this->_propDict["description"] = $val;
+        $this->_propDict["supportedProvisioningTypes"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the supportedSingleSignOnModes
+    *
+    * @return string The supportedSingleSignOnModes
+    */
+    public function getSupportedSingleSignOnModes()
+    {
+        if (array_key_exists("supportedSingleSignOnModes", $this->_propDict)) {
+            return $this->_propDict["supportedSingleSignOnModes"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the supportedSingleSignOnModes
+    *
+    * @param string $val The supportedSingleSignOnModes
+    *
+    * @return ApplicationTemplate
+    */
+    public function setSupportedSingleSignOnModes($val)
+    {
+        $this->_propDict["supportedSingleSignOnModes"] = $val;
         return $this;
     }
     

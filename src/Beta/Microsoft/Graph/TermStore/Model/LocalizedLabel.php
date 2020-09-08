@@ -24,32 +24,6 @@ namespace Beta\Microsoft\Graph\TermStore\Model;
 class LocalizedLabel extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
-    * Gets the name
-    *
-    * @return string The name
-    */
-    public function getName()
-    {
-        if (array_key_exists("name", $this->_propDict)) {
-            return $this->_propDict["name"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the name
-    *
-    * @param string $val The value of the name
-    *
-    * @return LocalizedLabel
-    */
-    public function setName($val)
-    {
-        $this->_propDict["name"] = $val;
-        return $this;
-    }
-    /**
     * Gets the isDefault
     *
     * @return bool The isDefault
@@ -99,6 +73,32 @@ class LocalizedLabel extends \Beta\Microsoft\Graph\Model\Entity
     public function setLanguageTag($val)
     {
         $this->_propDict["languageTag"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the name
+    *
+    * @return string The name
+    */
+    public function getName()
+    {
+        if (array_key_exists("name", $this->_propDict)) {
+            return $this->_propDict["name"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the name
+    *
+    * @param string $val The value of the name
+    *
+    * @return LocalizedLabel
+    */
+    public function setName($val)
+    {
+        $this->_propDict["name"] = $val;
         return $this;
     }
 }

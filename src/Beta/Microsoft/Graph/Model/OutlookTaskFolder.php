@@ -52,33 +52,6 @@ class OutlookTaskFolder extends Entity
     }
     
     /**
-    * Gets the name
-    *
-    * @return string The name
-    */
-    public function getName()
-    {
-        if (array_key_exists("name", $this->_propDict)) {
-            return $this->_propDict["name"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the name
-    *
-    * @param string $val The name
-    *
-    * @return OutlookTaskFolder
-    */
-    public function setName($val)
-    {
-        $this->_propDict["name"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the isDefaultFolder
     *
     * @return bool The isDefaultFolder
@@ -102,6 +75,33 @@ class OutlookTaskFolder extends Entity
     public function setIsDefaultFolder($val)
     {
         $this->_propDict["isDefaultFolder"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the name
+    *
+    * @return string The name
+    */
+    public function getName()
+    {
+        if (array_key_exists("name", $this->_propDict)) {
+            return $this->_propDict["name"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the name
+    *
+    * @param string $val The name
+    *
+    * @return OutlookTaskFolder
+    */
+    public function setName($val)
+    {
+        $this->_propDict["name"] = $val;
         return $this;
     }
     
@@ -134,29 +134,29 @@ class OutlookTaskFolder extends Entity
     
 
      /** 
-     * Gets the tasks
+     * Gets the multiValueExtendedProperties
      *
-     * @return array The tasks
+     * @return array The multiValueExtendedProperties
      */
-    public function getTasks()
+    public function getMultiValueExtendedProperties()
     {
-        if (array_key_exists("tasks", $this->_propDict)) {
-           return $this->_propDict["tasks"];
+        if (array_key_exists("multiValueExtendedProperties", $this->_propDict)) {
+           return $this->_propDict["multiValueExtendedProperties"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the tasks
+    * Sets the multiValueExtendedProperties
     *
-    * @param OutlookTask $val The tasks
+    * @param MultiValueLegacyExtendedProperty $val The multiValueExtendedProperties
     *
     * @return OutlookTaskFolder
     */
-    public function setTasks($val)
+    public function setMultiValueExtendedProperties($val)
     {
-		$this->_propDict["tasks"] = $val;
+		$this->_propDict["multiValueExtendedProperties"] = $val;
         return $this;
     }
     
@@ -190,29 +190,29 @@ class OutlookTaskFolder extends Entity
     
 
      /** 
-     * Gets the multiValueExtendedProperties
+     * Gets the tasks
      *
-     * @return array The multiValueExtendedProperties
+     * @return array The tasks
      */
-    public function getMultiValueExtendedProperties()
+    public function getTasks()
     {
-        if (array_key_exists("multiValueExtendedProperties", $this->_propDict)) {
-           return $this->_propDict["multiValueExtendedProperties"];
+        if (array_key_exists("tasks", $this->_propDict)) {
+           return $this->_propDict["tasks"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the multiValueExtendedProperties
+    * Sets the tasks
     *
-    * @param MultiValueLegacyExtendedProperty $val The multiValueExtendedProperties
+    * @param OutlookTask $val The tasks
     *
     * @return OutlookTaskFolder
     */
-    public function setMultiValueExtendedProperties($val)
+    public function setTasks($val)
     {
-		$this->_propDict["multiValueExtendedProperties"] = $val;
+		$this->_propDict["tasks"] = $val;
         return $this;
     }
     

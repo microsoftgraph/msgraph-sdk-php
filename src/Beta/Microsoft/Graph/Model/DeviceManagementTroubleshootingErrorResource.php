@@ -24,32 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class DeviceManagementTroubleshootingErrorResource extends Entity
 {
     /**
-    * Gets the text
-    *
-    * @return string The text
-    */
-    public function getText()
-    {
-        if (array_key_exists("text", $this->_propDict)) {
-            return $this->_propDict["text"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the text
-    *
-    * @param string $val The value of the text
-    *
-    * @return DeviceManagementTroubleshootingErrorResource
-    */
-    public function setText($val)
-    {
-        $this->_propDict["text"] = $val;
-        return $this;
-    }
-    /**
     * Gets the link
     * The link to the web resource. Can contain any of the following formatters: {{UPN}}, {{DeviceGUID}}, {{UserGUID}}
     *
@@ -75,6 +49,32 @@ class DeviceManagementTroubleshootingErrorResource extends Entity
     public function setLink($val)
     {
         $this->_propDict["link"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the text
+    *
+    * @return string The text
+    */
+    public function getText()
+    {
+        if (array_key_exists("text", $this->_propDict)) {
+            return $this->_propDict["text"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the text
+    *
+    * @param string $val The value of the text
+    *
+    * @return DeviceManagementTroubleshootingErrorResource
+    */
+    public function setText($val)
+    {
+        $this->_propDict["text"] = $val;
         return $this;
     }
 }

@@ -25,60 +25,31 @@ namespace Beta\Microsoft\Graph\Model;
 class NetworkIPv6ConfigurationManagementCondition extends NetworkManagementCondition
 {
     /**
-    * Gets the ipV6Prefix
-    * The IPv6 subnet to be connected to. e.g. 2001:db8::/32
+    * Gets the dnsSuffixList
+    * Valid DNS suffixes for the current network. e.g. seattle.contoso.com
     *
-    * @return string The ipV6Prefix
+    * @return string The dnsSuffixList
     */
-    public function getIpV6Prefix()
+    public function getDnsSuffixList()
     {
-        if (array_key_exists("ipV6Prefix", $this->_propDict)) {
-            return $this->_propDict["ipV6Prefix"];
+        if (array_key_exists("dnsSuffixList", $this->_propDict)) {
+            return $this->_propDict["dnsSuffixList"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the ipV6Prefix
-    * The IPv6 subnet to be connected to. e.g. 2001:db8::/32
+    * Sets the dnsSuffixList
+    * Valid DNS suffixes for the current network. e.g. seattle.contoso.com
     *
-    * @param string $val The ipV6Prefix
-    *
-    * @return NetworkIPv6ConfigurationManagementCondition
-    */
-    public function setIpV6Prefix($val)
-    {
-        $this->_propDict["ipV6Prefix"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the ipV6Gateway
-    * The IPv6 gateway address to. e.g 2001:db8::1
-    *
-    * @return string The ipV6Gateway
-    */
-    public function getIpV6Gateway()
-    {
-        if (array_key_exists("ipV6Gateway", $this->_propDict)) {
-            return $this->_propDict["ipV6Gateway"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the ipV6Gateway
-    * The IPv6 gateway address to. e.g 2001:db8::1
-    *
-    * @param string $val The ipV6Gateway
+    * @param string $val The dnsSuffixList
     *
     * @return NetworkIPv6ConfigurationManagementCondition
     */
-    public function setIpV6Gateway($val)
+    public function setDnsSuffixList($val)
     {
-        $this->_propDict["ipV6Gateway"] = $val;
+        $this->_propDict["dnsSuffixList"] = $val;
         return $this;
     }
     
@@ -112,31 +83,60 @@ class NetworkIPv6ConfigurationManagementCondition extends NetworkManagementCondi
     }
     
     /**
-    * Gets the dnsSuffixList
-    * Valid DNS suffixes for the current network. e.g. seattle.contoso.com
+    * Gets the ipV6Gateway
+    * The IPv6 gateway address to. e.g 2001:db8::1
     *
-    * @return string The dnsSuffixList
+    * @return string The ipV6Gateway
     */
-    public function getDnsSuffixList()
+    public function getIpV6Gateway()
     {
-        if (array_key_exists("dnsSuffixList", $this->_propDict)) {
-            return $this->_propDict["dnsSuffixList"];
+        if (array_key_exists("ipV6Gateway", $this->_propDict)) {
+            return $this->_propDict["ipV6Gateway"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the dnsSuffixList
-    * Valid DNS suffixes for the current network. e.g. seattle.contoso.com
+    * Sets the ipV6Gateway
+    * The IPv6 gateway address to. e.g 2001:db8::1
     *
-    * @param string $val The dnsSuffixList
+    * @param string $val The ipV6Gateway
     *
     * @return NetworkIPv6ConfigurationManagementCondition
     */
-    public function setDnsSuffixList($val)
+    public function setIpV6Gateway($val)
     {
-        $this->_propDict["dnsSuffixList"] = $val;
+        $this->_propDict["ipV6Gateway"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the ipV6Prefix
+    * The IPv6 subnet to be connected to. e.g. 2001:db8::/32
+    *
+    * @return string The ipV6Prefix
+    */
+    public function getIpV6Prefix()
+    {
+        if (array_key_exists("ipV6Prefix", $this->_propDict)) {
+            return $this->_propDict["ipV6Prefix"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the ipV6Prefix
+    * The IPv6 subnet to be connected to. e.g. 2001:db8::/32
+    *
+    * @param string $val The ipV6Prefix
+    *
+    * @return NetworkIPv6ConfigurationManagementCondition
+    */
+    public function setIpV6Prefix($val)
+    {
+        $this->_propDict["ipV6Prefix"] = $val;
         return $this;
     }
     

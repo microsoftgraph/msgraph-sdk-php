@@ -52,114 +52,6 @@ class AccessPackage extends Entity
     }
     
     /**
-    * Gets the displayName
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the displayName
-    *
-    * @param string $val The displayName
-    *
-    * @return AccessPackage
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the description
-    *
-    * @return string The description
-    */
-    public function getDescription()
-    {
-        if (array_key_exists("description", $this->_propDict)) {
-            return $this->_propDict["description"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the description
-    *
-    * @param string $val The description
-    *
-    * @return AccessPackage
-    */
-    public function setDescription($val)
-    {
-        $this->_propDict["description"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the isHidden
-    *
-    * @return bool The isHidden
-    */
-    public function getIsHidden()
-    {
-        if (array_key_exists("isHidden", $this->_propDict)) {
-            return $this->_propDict["isHidden"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the isHidden
-    *
-    * @param bool $val The isHidden
-    *
-    * @return AccessPackage
-    */
-    public function setIsHidden($val)
-    {
-        $this->_propDict["isHidden"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the isRoleScopesVisible
-    *
-    * @return bool The isRoleScopesVisible
-    */
-    public function getIsRoleScopesVisible()
-    {
-        if (array_key_exists("isRoleScopesVisible", $this->_propDict)) {
-            return $this->_propDict["isRoleScopesVisible"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the isRoleScopesVisible
-    *
-    * @param bool $val The isRoleScopesVisible
-    *
-    * @return AccessPackage
-    */
-    public function setIsRoleScopesVisible($val)
-    {
-        $this->_propDict["isRoleScopesVisible"] = boolval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the createdBy
     *
     * @return string The createdBy
@@ -214,6 +106,114 @@ class AccessPackage extends Entity
     public function setCreatedDateTime($val)
     {
         $this->_propDict["createdDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the description
+    *
+    * @return string The description
+    */
+    public function getDescription()
+    {
+        if (array_key_exists("description", $this->_propDict)) {
+            return $this->_propDict["description"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the description
+    *
+    * @param string $val The description
+    *
+    * @return AccessPackage
+    */
+    public function setDescription($val)
+    {
+        $this->_propDict["description"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the displayName
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the displayName
+    *
+    * @param string $val The displayName
+    *
+    * @return AccessPackage
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the isHidden
+    *
+    * @return bool The isHidden
+    */
+    public function getIsHidden()
+    {
+        if (array_key_exists("isHidden", $this->_propDict)) {
+            return $this->_propDict["isHidden"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isHidden
+    *
+    * @param bool $val The isHidden
+    *
+    * @return AccessPackage
+    */
+    public function setIsHidden($val)
+    {
+        $this->_propDict["isHidden"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the isRoleScopesVisible
+    *
+    * @return bool The isRoleScopesVisible
+    */
+    public function getIsRoleScopesVisible()
+    {
+        if (array_key_exists("isRoleScopesVisible", $this->_propDict)) {
+            return $this->_propDict["isRoleScopesVisible"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isRoleScopesVisible
+    *
+    * @param bool $val The isRoleScopesVisible
+    *
+    * @return AccessPackage
+    */
+    public function setIsRoleScopesVisible($val)
+    {
+        $this->_propDict["isRoleScopesVisible"] = boolval($val);
         return $this;
     }
     
@@ -275,6 +275,34 @@ class AccessPackage extends Entity
         return $this;
     }
     
+
+     /** 
+     * Gets the accessPackageAssignmentPolicies
+     *
+     * @return array The accessPackageAssignmentPolicies
+     */
+    public function getAccessPackageAssignmentPolicies()
+    {
+        if (array_key_exists("accessPackageAssignmentPolicies", $this->_propDict)) {
+           return $this->_propDict["accessPackageAssignmentPolicies"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the accessPackageAssignmentPolicies
+    *
+    * @param AccessPackageAssignmentPolicy $val The accessPackageAssignmentPolicies
+    *
+    * @return AccessPackage
+    */
+    public function setAccessPackageAssignmentPolicies($val)
+    {
+		$this->_propDict["accessPackageAssignmentPolicies"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the accessPackageCatalog
     *
@@ -331,34 +359,6 @@ class AccessPackage extends Entity
     public function setAccessPackageResourceRoleScopes($val)
     {
 		$this->_propDict["accessPackageResourceRoleScopes"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the accessPackageAssignmentPolicies
-     *
-     * @return array The accessPackageAssignmentPolicies
-     */
-    public function getAccessPackageAssignmentPolicies()
-    {
-        if (array_key_exists("accessPackageAssignmentPolicies", $this->_propDict)) {
-           return $this->_propDict["accessPackageAssignmentPolicies"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the accessPackageAssignmentPolicies
-    *
-    * @param AccessPackageAssignmentPolicy $val The accessPackageAssignmentPolicies
-    *
-    * @return AccessPackage
-    */
-    public function setAccessPackageAssignmentPolicies($val)
-    {
-		$this->_propDict["accessPackageAssignmentPolicies"] = $val;
         return $this;
     }
     

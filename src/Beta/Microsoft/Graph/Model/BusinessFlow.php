@@ -25,56 +25,29 @@ namespace Beta\Microsoft\Graph\Model;
 class BusinessFlow extends Entity
 {
     /**
-    * Gets the displayName
+    * Gets the customData
     *
-    * @return string The displayName
+    * @return string The customData
     */
-    public function getDisplayName()
+    public function getCustomData()
     {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
+        if (array_key_exists("customData", $this->_propDict)) {
+            return $this->_propDict["customData"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the displayName
+    * Sets the customData
     *
-    * @param string $val The displayName
-    *
-    * @return BusinessFlow
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the description
-    *
-    * @return string The description
-    */
-    public function getDescription()
-    {
-        if (array_key_exists("description", $this->_propDict)) {
-            return $this->_propDict["description"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the description
-    *
-    * @param string $val The description
+    * @param string $val The customData
     *
     * @return BusinessFlow
     */
-    public function setDescription($val)
+    public function setCustomData($val)
     {
-        $this->_propDict["description"] = $val;
+        $this->_propDict["customData"] = $val;
         return $this;
     }
     
@@ -106,83 +79,56 @@ class BusinessFlow extends Entity
     }
     
     /**
-    * Gets the schemaId
+    * Gets the description
     *
-    * @return string The schemaId
+    * @return string The description
     */
-    public function getSchemaId()
+    public function getDescription()
     {
-        if (array_key_exists("schemaId", $this->_propDict)) {
-            return $this->_propDict["schemaId"];
+        if (array_key_exists("description", $this->_propDict)) {
+            return $this->_propDict["description"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the schemaId
+    * Sets the description
     *
-    * @param string $val The schemaId
+    * @param string $val The description
     *
     * @return BusinessFlow
     */
-    public function setSchemaId($val)
+    public function setDescription($val)
     {
-        $this->_propDict["schemaId"] = $val;
+        $this->_propDict["description"] = $val;
         return $this;
     }
     
     /**
-    * Gets the customData
+    * Gets the displayName
     *
-    * @return string The customData
+    * @return string The displayName
     */
-    public function getCustomData()
+    public function getDisplayName()
     {
-        if (array_key_exists("customData", $this->_propDict)) {
-            return $this->_propDict["customData"];
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the customData
+    * Sets the displayName
     *
-    * @param string $val The customData
-    *
-    * @return BusinessFlow
-    */
-    public function setCustomData($val)
-    {
-        $this->_propDict["customData"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the recordVersion
-    *
-    * @return string The recordVersion
-    */
-    public function getRecordVersion()
-    {
-        if (array_key_exists("recordVersion", $this->_propDict)) {
-            return $this->_propDict["recordVersion"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the recordVersion
-    *
-    * @param string $val The recordVersion
+    * @param string $val The displayName
     *
     * @return BusinessFlow
     */
-    public function setRecordVersion($val)
+    public function setDisplayName($val)
     {
-        $this->_propDict["recordVersion"] = $val;
+        $this->_propDict["displayName"] = $val;
         return $this;
     }
     
@@ -241,6 +187,60 @@ class BusinessFlow extends Entity
     public function setPolicyTemplateId($val)
     {
         $this->_propDict["policyTemplateId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the recordVersion
+    *
+    * @return string The recordVersion
+    */
+    public function getRecordVersion()
+    {
+        if (array_key_exists("recordVersion", $this->_propDict)) {
+            return $this->_propDict["recordVersion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the recordVersion
+    *
+    * @param string $val The recordVersion
+    *
+    * @return BusinessFlow
+    */
+    public function setRecordVersion($val)
+    {
+        $this->_propDict["recordVersion"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the schemaId
+    *
+    * @return string The schemaId
+    */
+    public function getSchemaId()
+    {
+        if (array_key_exists("schemaId", $this->_propDict)) {
+            return $this->_propDict["schemaId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the schemaId
+    *
+    * @param string $val The schemaId
+    *
+    * @return BusinessFlow
+    */
+    public function setSchemaId($val)
+    {
+        $this->_propDict["schemaId"] = $val;
         return $this;
     }
     

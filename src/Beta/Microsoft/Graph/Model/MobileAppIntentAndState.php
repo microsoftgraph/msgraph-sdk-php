@@ -53,35 +53,6 @@ class MobileAppIntentAndState extends Entity
         return $this;
     }
     
-    /**
-    * Gets the userId
-    * Identifier for the user that tried to enroll the device.
-    *
-    * @return string The userId
-    */
-    public function getUserId()
-    {
-        if (array_key_exists("userId", $this->_propDict)) {
-            return $this->_propDict["userId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the userId
-    * Identifier for the user that tried to enroll the device.
-    *
-    * @param string $val The userId
-    *
-    * @return MobileAppIntentAndState
-    */
-    public function setUserId($val)
-    {
-        $this->_propDict["userId"] = $val;
-        return $this;
-    }
-    
 
      /** 
      * Gets the mobileAppList
@@ -109,6 +80,35 @@ class MobileAppIntentAndState extends Entity
     public function setMobileAppList($val)
     {
 		$this->_propDict["mobileAppList"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userId
+    * Identifier for the user that tried to enroll the device.
+    *
+    * @return string The userId
+    */
+    public function getUserId()
+    {
+        if (array_key_exists("userId", $this->_propDict)) {
+            return $this->_propDict["userId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the userId
+    * Identifier for the user that tried to enroll the device.
+    *
+    * @param string $val The userId
+    *
+    * @return MobileAppIntentAndState
+    */
+    public function setUserId($val)
+    {
+        $this->_propDict["userId"] = $val;
         return $this;
     }
     

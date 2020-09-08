@@ -24,29 +24,55 @@ namespace Beta\Microsoft\Graph\CallRecords\Model;
 class PstnCallLogRow extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
-    * Gets the id
+    * Gets the calleeNumber
     *
-    * @return string The id
+    * @return string The calleeNumber
     */
-    public function getId()
+    public function getCalleeNumber()
     {
-        if (array_key_exists("id", $this->_propDict)) {
-            return $this->_propDict["id"];
+        if (array_key_exists("calleeNumber", $this->_propDict)) {
+            return $this->_propDict["calleeNumber"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the id
+    * Sets the calleeNumber
     *
-    * @param string $val The value of the id
+    * @param string $val The value of the calleeNumber
     *
     * @return PstnCallLogRow
     */
-    public function setId($val)
+    public function setCalleeNumber($val)
     {
-        $this->_propDict["id"] = $val;
+        $this->_propDict["calleeNumber"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the callerNumber
+    *
+    * @return string The callerNumber
+    */
+    public function getCallerNumber()
+    {
+        if (array_key_exists("callerNumber", $this->_propDict)) {
+            return $this->_propDict["callerNumber"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the callerNumber
+    *
+    * @param string $val The value of the callerNumber
+    *
+    * @return PstnCallLogRow
+    */
+    public function setCallerNumber($val)
+    {
+        $this->_propDict["callerNumber"] = $val;
         return $this;
     }
     /**
@@ -76,169 +102,29 @@ class PstnCallLogRow extends \Beta\Microsoft\Graph\Model\Entity
         return $this;
     }
     /**
-    * Gets the userId
+    * Gets the callType
     *
-    * @return string The userId
+    * @return string The callType
     */
-    public function getUserId()
+    public function getCallType()
     {
-        if (array_key_exists("userId", $this->_propDict)) {
-            return $this->_propDict["userId"];
+        if (array_key_exists("callType", $this->_propDict)) {
+            return $this->_propDict["callType"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the userId
+    * Sets the callType
     *
-    * @param string $val The value of the userId
-    *
-    * @return PstnCallLogRow
-    */
-    public function setUserId($val)
-    {
-        $this->_propDict["userId"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the userPrincipalName
-    *
-    * @return string The userPrincipalName
-    */
-    public function getUserPrincipalName()
-    {
-        if (array_key_exists("userPrincipalName", $this->_propDict)) {
-            return $this->_propDict["userPrincipalName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the userPrincipalName
-    *
-    * @param string $val The value of the userPrincipalName
+    * @param string $val The value of the callType
     *
     * @return PstnCallLogRow
     */
-    public function setUserPrincipalName($val)
+    public function setCallType($val)
     {
-        $this->_propDict["userPrincipalName"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the userDisplayName
-    *
-    * @return string The userDisplayName
-    */
-    public function getUserDisplayName()
-    {
-        if (array_key_exists("userDisplayName", $this->_propDict)) {
-            return $this->_propDict["userDisplayName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the userDisplayName
-    *
-    * @param string $val The value of the userDisplayName
-    *
-    * @return PstnCallLogRow
-    */
-    public function setUserDisplayName($val)
-    {
-        $this->_propDict["userDisplayName"] = $val;
-        return $this;
-    }
-
-    /**
-    * Gets the startDateTime
-    *
-    * @return \DateTime The startDateTime
-    */
-    public function getStartDateTime()
-    {
-        if (array_key_exists("startDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
-                return $this->_propDict["startDateTime"];
-            } else {
-                $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);
-                return $this->_propDict["startDateTime"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the startDateTime
-    *
-    * @param \DateTime $val The value to assign to the startDateTime
-    *
-    * @return PstnCallLogRow The PstnCallLogRow
-    */
-    public function setStartDateTime($val)
-    {
-        $this->_propDict["startDateTime"] = $val;
-         return $this;
-    }
-
-    /**
-    * Gets the endDateTime
-    *
-    * @return \DateTime The endDateTime
-    */
-    public function getEndDateTime()
-    {
-        if (array_key_exists("endDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["endDateTime"], "\DateTime")) {
-                return $this->_propDict["endDateTime"];
-            } else {
-                $this->_propDict["endDateTime"] = new \DateTime($this->_propDict["endDateTime"]);
-                return $this->_propDict["endDateTime"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the endDateTime
-    *
-    * @param \DateTime $val The value to assign to the endDateTime
-    *
-    * @return PstnCallLogRow The PstnCallLogRow
-    */
-    public function setEndDateTime($val)
-    {
-        $this->_propDict["endDateTime"] = $val;
-         return $this;
-    }
-    /**
-    * Gets the duration
-    *
-    * @return int The duration
-    */
-    public function getDuration()
-    {
-        if (array_key_exists("duration", $this->_propDict)) {
-            return $this->_propDict["duration"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the duration
-    *
-    * @param int $val The value of the duration
-    *
-    * @return PstnCallLogRow
-    */
-    public function setDuration($val)
-    {
-        $this->_propDict["duration"] = $val;
+        $this->_propDict["callType"] = $val;
         return $this;
     }
 
@@ -273,133 +159,29 @@ class PstnCallLogRow extends \Beta\Microsoft\Graph\Model\Entity
          return $this;
     }
     /**
-    * Gets the callType
+    * Gets the conferenceId
     *
-    * @return string The callType
+    * @return string The conferenceId
     */
-    public function getCallType()
+    public function getConferenceId()
     {
-        if (array_key_exists("callType", $this->_propDict)) {
-            return $this->_propDict["callType"];
+        if (array_key_exists("conferenceId", $this->_propDict)) {
+            return $this->_propDict["conferenceId"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the callType
+    * Sets the conferenceId
     *
-    * @param string $val The value of the callType
-    *
-    * @return PstnCallLogRow
-    */
-    public function setCallType($val)
-    {
-        $this->_propDict["callType"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the currency
-    *
-    * @return string The currency
-    */
-    public function getCurrency()
-    {
-        if (array_key_exists("currency", $this->_propDict)) {
-            return $this->_propDict["currency"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the currency
-    *
-    * @param string $val The value of the currency
+    * @param string $val The value of the conferenceId
     *
     * @return PstnCallLogRow
     */
-    public function setCurrency($val)
+    public function setConferenceId($val)
     {
-        $this->_propDict["currency"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the calleeNumber
-    *
-    * @return string The calleeNumber
-    */
-    public function getCalleeNumber()
-    {
-        if (array_key_exists("calleeNumber", $this->_propDict)) {
-            return $this->_propDict["calleeNumber"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the calleeNumber
-    *
-    * @param string $val The value of the calleeNumber
-    *
-    * @return PstnCallLogRow
-    */
-    public function setCalleeNumber($val)
-    {
-        $this->_propDict["calleeNumber"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the usageCountryCode
-    *
-    * @return string The usageCountryCode
-    */
-    public function getUsageCountryCode()
-    {
-        if (array_key_exists("usageCountryCode", $this->_propDict)) {
-            return $this->_propDict["usageCountryCode"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the usageCountryCode
-    *
-    * @param string $val The value of the usageCountryCode
-    *
-    * @return PstnCallLogRow
-    */
-    public function setUsageCountryCode($val)
-    {
-        $this->_propDict["usageCountryCode"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the tenantCountryCode
-    *
-    * @return string The tenantCountryCode
-    */
-    public function getTenantCountryCode()
-    {
-        if (array_key_exists("tenantCountryCode", $this->_propDict)) {
-            return $this->_propDict["tenantCountryCode"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the tenantCountryCode
-    *
-    * @param string $val The value of the tenantCountryCode
-    *
-    * @return PstnCallLogRow
-    */
-    public function setTenantCountryCode($val)
-    {
-        $this->_propDict["tenantCountryCode"] = $val;
+        $this->_propDict["conferenceId"] = $val;
         return $this;
     }
 
@@ -434,29 +216,29 @@ class PstnCallLogRow extends \Beta\Microsoft\Graph\Model\Entity
          return $this;
     }
     /**
-    * Gets the callerNumber
+    * Gets the currency
     *
-    * @return string The callerNumber
+    * @return string The currency
     */
-    public function getCallerNumber()
+    public function getCurrency()
     {
-        if (array_key_exists("callerNumber", $this->_propDict)) {
-            return $this->_propDict["callerNumber"];
+        if (array_key_exists("currency", $this->_propDict)) {
+            return $this->_propDict["currency"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the callerNumber
+    * Sets the currency
     *
-    * @param string $val The value of the callerNumber
+    * @param string $val The value of the currency
     *
     * @return PstnCallLogRow
     */
-    public function setCallerNumber($val)
+    public function setCurrency($val)
     {
-        $this->_propDict["callerNumber"] = $val;
+        $this->_propDict["currency"] = $val;
         return $this;
     }
     /**
@@ -512,29 +294,112 @@ class PstnCallLogRow extends \Beta\Microsoft\Graph\Model\Entity
         return $this;
     }
     /**
-    * Gets the conferenceId
+    * Gets the duration
     *
-    * @return string The conferenceId
+    * @return int The duration
     */
-    public function getConferenceId()
+    public function getDuration()
     {
-        if (array_key_exists("conferenceId", $this->_propDict)) {
-            return $this->_propDict["conferenceId"];
+        if (array_key_exists("duration", $this->_propDict)) {
+            return $this->_propDict["duration"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the conferenceId
+    * Sets the duration
     *
-    * @param string $val The value of the conferenceId
+    * @param int $val The value of the duration
     *
     * @return PstnCallLogRow
     */
-    public function setConferenceId($val)
+    public function setDuration($val)
     {
-        $this->_propDict["conferenceId"] = $val;
+        $this->_propDict["duration"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the endDateTime
+    *
+    * @return \DateTime The endDateTime
+    */
+    public function getEndDateTime()
+    {
+        if (array_key_exists("endDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["endDateTime"], "\DateTime")) {
+                return $this->_propDict["endDateTime"];
+            } else {
+                $this->_propDict["endDateTime"] = new \DateTime($this->_propDict["endDateTime"]);
+                return $this->_propDict["endDateTime"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the endDateTime
+    *
+    * @param \DateTime $val The value to assign to the endDateTime
+    *
+    * @return PstnCallLogRow The PstnCallLogRow
+    */
+    public function setEndDateTime($val)
+    {
+        $this->_propDict["endDateTime"] = $val;
+         return $this;
+    }
+    /**
+    * Gets the id
+    *
+    * @return string The id
+    */
+    public function getId()
+    {
+        if (array_key_exists("id", $this->_propDict)) {
+            return $this->_propDict["id"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the id
+    *
+    * @param string $val The value of the id
+    *
+    * @return PstnCallLogRow
+    */
+    public function setId($val)
+    {
+        $this->_propDict["id"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the inventoryType
+    *
+    * @return string The inventoryType
+    */
+    public function getInventoryType()
+    {
+        if (array_key_exists("inventoryType", $this->_propDict)) {
+            return $this->_propDict["inventoryType"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the inventoryType
+    *
+    * @param string $val The value of the inventoryType
+    *
+    * @return PstnCallLogRow
+    */
+    public function setInventoryType($val)
+    {
+        $this->_propDict["inventoryType"] = $val;
         return $this;
     }
     /**
@@ -563,30 +428,165 @@ class PstnCallLogRow extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["licenseCapability"] = $val;
         return $this;
     }
+
     /**
-    * Gets the inventoryType
+    * Gets the startDateTime
     *
-    * @return string The inventoryType
+    * @return \DateTime The startDateTime
     */
-    public function getInventoryType()
+    public function getStartDateTime()
     {
-        if (array_key_exists("inventoryType", $this->_propDict)) {
-            return $this->_propDict["inventoryType"];
+        if (array_key_exists("startDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
+                return $this->_propDict["startDateTime"];
+            } else {
+                $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);
+                return $this->_propDict["startDateTime"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the startDateTime
+    *
+    * @param \DateTime $val The value to assign to the startDateTime
+    *
+    * @return PstnCallLogRow The PstnCallLogRow
+    */
+    public function setStartDateTime($val)
+    {
+        $this->_propDict["startDateTime"] = $val;
+         return $this;
+    }
+    /**
+    * Gets the tenantCountryCode
+    *
+    * @return string The tenantCountryCode
+    */
+    public function getTenantCountryCode()
+    {
+        if (array_key_exists("tenantCountryCode", $this->_propDict)) {
+            return $this->_propDict["tenantCountryCode"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the inventoryType
+    * Sets the tenantCountryCode
     *
-    * @param string $val The value of the inventoryType
+    * @param string $val The value of the tenantCountryCode
     *
     * @return PstnCallLogRow
     */
-    public function setInventoryType($val)
+    public function setTenantCountryCode($val)
     {
-        $this->_propDict["inventoryType"] = $val;
+        $this->_propDict["tenantCountryCode"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the usageCountryCode
+    *
+    * @return string The usageCountryCode
+    */
+    public function getUsageCountryCode()
+    {
+        if (array_key_exists("usageCountryCode", $this->_propDict)) {
+            return $this->_propDict["usageCountryCode"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the usageCountryCode
+    *
+    * @param string $val The value of the usageCountryCode
+    *
+    * @return PstnCallLogRow
+    */
+    public function setUsageCountryCode($val)
+    {
+        $this->_propDict["usageCountryCode"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the userDisplayName
+    *
+    * @return string The userDisplayName
+    */
+    public function getUserDisplayName()
+    {
+        if (array_key_exists("userDisplayName", $this->_propDict)) {
+            return $this->_propDict["userDisplayName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the userDisplayName
+    *
+    * @param string $val The value of the userDisplayName
+    *
+    * @return PstnCallLogRow
+    */
+    public function setUserDisplayName($val)
+    {
+        $this->_propDict["userDisplayName"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the userId
+    *
+    * @return string The userId
+    */
+    public function getUserId()
+    {
+        if (array_key_exists("userId", $this->_propDict)) {
+            return $this->_propDict["userId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the userId
+    *
+    * @param string $val The value of the userId
+    *
+    * @return PstnCallLogRow
+    */
+    public function setUserId($val)
+    {
+        $this->_propDict["userId"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the userPrincipalName
+    *
+    * @return string The userPrincipalName
+    */
+    public function getUserPrincipalName()
+    {
+        if (array_key_exists("userPrincipalName", $this->_propDict)) {
+            return $this->_propDict["userPrincipalName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the userPrincipalName
+    *
+    * @param string $val The value of the userPrincipalName
+    *
+    * @return PstnCallLogRow
+    */
+    public function setUserPrincipalName($val)
+    {
+        $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
 }

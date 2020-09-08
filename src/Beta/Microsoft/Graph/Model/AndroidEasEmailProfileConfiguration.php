@@ -87,118 +87,31 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
     }
     
     /**
-    * Gets the syncCalendar
-    * Toggles syncing the calendar. If set to false calendar is turned off on the device.
+    * Gets the customDomainName
+    * Custom domain name value used while generating an email profile before installing on the device.
     *
-    * @return bool The syncCalendar
+    * @return string The customDomainName
     */
-    public function getSyncCalendar()
+    public function getCustomDomainName()
     {
-        if (array_key_exists("syncCalendar", $this->_propDict)) {
-            return $this->_propDict["syncCalendar"];
+        if (array_key_exists("customDomainName", $this->_propDict)) {
+            return $this->_propDict["customDomainName"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the syncCalendar
-    * Toggles syncing the calendar. If set to false calendar is turned off on the device.
+    * Sets the customDomainName
+    * Custom domain name value used while generating an email profile before installing on the device.
     *
-    * @param bool $val The syncCalendar
-    *
-    * @return AndroidEasEmailProfileConfiguration
-    */
-    public function setSyncCalendar($val)
-    {
-        $this->_propDict["syncCalendar"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the syncContacts
-    * Toggles syncing contacts. If set to false contacts are turned off on the device.
-    *
-    * @return bool The syncContacts
-    */
-    public function getSyncContacts()
-    {
-        if (array_key_exists("syncContacts", $this->_propDict)) {
-            return $this->_propDict["syncContacts"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the syncContacts
-    * Toggles syncing contacts. If set to false contacts are turned off on the device.
-    *
-    * @param bool $val The syncContacts
+    * @param string $val The customDomainName
     *
     * @return AndroidEasEmailProfileConfiguration
     */
-    public function setSyncContacts($val)
+    public function setCustomDomainName($val)
     {
-        $this->_propDict["syncContacts"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the syncTasks
-    * Toggles syncing tasks. If set to false tasks are turned off on the device.
-    *
-    * @return bool The syncTasks
-    */
-    public function getSyncTasks()
-    {
-        if (array_key_exists("syncTasks", $this->_propDict)) {
-            return $this->_propDict["syncTasks"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the syncTasks
-    * Toggles syncing tasks. If set to false tasks are turned off on the device.
-    *
-    * @param bool $val The syncTasks
-    *
-    * @return AndroidEasEmailProfileConfiguration
-    */
-    public function setSyncTasks($val)
-    {
-        $this->_propDict["syncTasks"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the syncNotes
-    * Toggles syncing notes. If set to false notes are turned off on the device.
-    *
-    * @return bool The syncNotes
-    */
-    public function getSyncNotes()
-    {
-        if (array_key_exists("syncNotes", $this->_propDict)) {
-            return $this->_propDict["syncNotes"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the syncNotes
-    * Toggles syncing notes. If set to false notes are turned off on the device.
-    *
-    * @param bool $val The syncNotes
-    *
-    * @return AndroidEasEmailProfileConfiguration
-    */
-    public function setSyncNotes($val)
-    {
-        $this->_propDict["syncNotes"] = boolval($val);
+        $this->_propDict["customDomainName"] = $val;
         return $this;
     }
     
@@ -389,35 +302,118 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
     }
     
     /**
-    * Gets the usernameSource
-    * Username attribute that is picked from AAD and injected into this profile before installing on the device.
+    * Gets the syncCalendar
+    * Toggles syncing the calendar. If set to false calendar is turned off on the device.
     *
-    * @return AndroidUsernameSource The usernameSource
+    * @return bool The syncCalendar
     */
-    public function getUsernameSource()
+    public function getSyncCalendar()
     {
-        if (array_key_exists("usernameSource", $this->_propDict)) {
-            if (is_a($this->_propDict["usernameSource"], "Beta\Microsoft\Graph\Model\AndroidUsernameSource")) {
-                return $this->_propDict["usernameSource"];
-            } else {
-                $this->_propDict["usernameSource"] = new AndroidUsernameSource($this->_propDict["usernameSource"]);
-                return $this->_propDict["usernameSource"];
-            }
+        if (array_key_exists("syncCalendar", $this->_propDict)) {
+            return $this->_propDict["syncCalendar"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the usernameSource
-    * Username attribute that is picked from AAD and injected into this profile before installing on the device.
+    * Sets the syncCalendar
+    * Toggles syncing the calendar. If set to false calendar is turned off on the device.
     *
-    * @param AndroidUsernameSource $val The usernameSource
+    * @param bool $val The syncCalendar
     *
     * @return AndroidEasEmailProfileConfiguration
     */
-    public function setUsernameSource($val)
+    public function setSyncCalendar($val)
     {
-        $this->_propDict["usernameSource"] = $val;
+        $this->_propDict["syncCalendar"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the syncContacts
+    * Toggles syncing contacts. If set to false contacts are turned off on the device.
+    *
+    * @return bool The syncContacts
+    */
+    public function getSyncContacts()
+    {
+        if (array_key_exists("syncContacts", $this->_propDict)) {
+            return $this->_propDict["syncContacts"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the syncContacts
+    * Toggles syncing contacts. If set to false contacts are turned off on the device.
+    *
+    * @param bool $val The syncContacts
+    *
+    * @return AndroidEasEmailProfileConfiguration
+    */
+    public function setSyncContacts($val)
+    {
+        $this->_propDict["syncContacts"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the syncNotes
+    * Toggles syncing notes. If set to false notes are turned off on the device.
+    *
+    * @return bool The syncNotes
+    */
+    public function getSyncNotes()
+    {
+        if (array_key_exists("syncNotes", $this->_propDict)) {
+            return $this->_propDict["syncNotes"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the syncNotes
+    * Toggles syncing notes. If set to false notes are turned off on the device.
+    *
+    * @param bool $val The syncNotes
+    *
+    * @return AndroidEasEmailProfileConfiguration
+    */
+    public function setSyncNotes($val)
+    {
+        $this->_propDict["syncNotes"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the syncTasks
+    * Toggles syncing tasks. If set to false tasks are turned off on the device.
+    *
+    * @return bool The syncTasks
+    */
+    public function getSyncTasks()
+    {
+        if (array_key_exists("syncTasks", $this->_propDict)) {
+            return $this->_propDict["syncTasks"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the syncTasks
+    * Toggles syncing tasks. If set to false tasks are turned off on the device.
+    *
+    * @param bool $val The syncTasks
+    *
+    * @return AndroidEasEmailProfileConfiguration
+    */
+    public function setSyncTasks($val)
+    {
+        $this->_propDict["syncTasks"] = boolval($val);
         return $this;
     }
     
@@ -455,31 +451,35 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
     }
     
     /**
-    * Gets the customDomainName
-    * Custom domain name value used while generating an email profile before installing on the device.
+    * Gets the usernameSource
+    * Username attribute that is picked from AAD and injected into this profile before installing on the device.
     *
-    * @return string The customDomainName
+    * @return AndroidUsernameSource The usernameSource
     */
-    public function getCustomDomainName()
+    public function getUsernameSource()
     {
-        if (array_key_exists("customDomainName", $this->_propDict)) {
-            return $this->_propDict["customDomainName"];
-        } else {
-            return null;
+        if (array_key_exists("usernameSource", $this->_propDict)) {
+            if (is_a($this->_propDict["usernameSource"], "Beta\Microsoft\Graph\Model\AndroidUsernameSource")) {
+                return $this->_propDict["usernameSource"];
+            } else {
+                $this->_propDict["usernameSource"] = new AndroidUsernameSource($this->_propDict["usernameSource"]);
+                return $this->_propDict["usernameSource"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the customDomainName
-    * Custom domain name value used while generating an email profile before installing on the device.
+    * Sets the usernameSource
+    * Username attribute that is picked from AAD and injected into this profile before installing on the device.
     *
-    * @param string $val The customDomainName
+    * @param AndroidUsernameSource $val The usernameSource
     *
     * @return AndroidEasEmailProfileConfiguration
     */
-    public function setCustomDomainName($val)
+    public function setUsernameSource($val)
     {
-        $this->_propDict["customDomainName"] = $val;
+        $this->_propDict["usernameSource"] = $val;
         return $this;
     }
     

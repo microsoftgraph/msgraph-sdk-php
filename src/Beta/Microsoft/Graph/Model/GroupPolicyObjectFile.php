@@ -25,60 +25,31 @@ namespace Beta\Microsoft\Graph\Model;
 class GroupPolicyObjectFile extends Entity
 {
     /**
-    * Gets the groupPolicyObjectId
-    * The Group Policy Object GUID from GPO Xml content
+    * Gets the content
+    * The Group Policy Object file content.
     *
-    * @return string The groupPolicyObjectId
+    * @return string The content
     */
-    public function getGroupPolicyObjectId()
+    public function getContent()
     {
-        if (array_key_exists("groupPolicyObjectId", $this->_propDict)) {
-            return $this->_propDict["groupPolicyObjectId"];
+        if (array_key_exists("content", $this->_propDict)) {
+            return $this->_propDict["content"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the groupPolicyObjectId
-    * The Group Policy Object GUID from GPO Xml content
+    * Sets the content
+    * The Group Policy Object file content.
     *
-    * @param string $val The groupPolicyObjectId
-    *
-    * @return GroupPolicyObjectFile
-    */
-    public function setGroupPolicyObjectId($val)
-    {
-        $this->_propDict["groupPolicyObjectId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the ouDistinguishedName
-    * The distinguished name of the OU.
-    *
-    * @return string The ouDistinguishedName
-    */
-    public function getOuDistinguishedName()
-    {
-        if (array_key_exists("ouDistinguishedName", $this->_propDict)) {
-            return $this->_propDict["ouDistinguishedName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the ouDistinguishedName
-    * The distinguished name of the OU.
-    *
-    * @param string $val The ouDistinguishedName
+    * @param string $val The content
     *
     * @return GroupPolicyObjectFile
     */
-    public function setOuDistinguishedName($val)
+    public function setContent($val)
     {
-        $this->_propDict["ouDistinguishedName"] = $val;
+        $this->_propDict["content"] = $val;
         return $this;
     }
     
@@ -116,6 +87,35 @@ class GroupPolicyObjectFile extends Entity
     }
     
     /**
+    * Gets the groupPolicyObjectId
+    * The Group Policy Object GUID from GPO Xml content
+    *
+    * @return string The groupPolicyObjectId
+    */
+    public function getGroupPolicyObjectId()
+    {
+        if (array_key_exists("groupPolicyObjectId", $this->_propDict)) {
+            return $this->_propDict["groupPolicyObjectId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the groupPolicyObjectId
+    * The Group Policy Object GUID from GPO Xml content
+    *
+    * @param string $val The groupPolicyObjectId
+    *
+    * @return GroupPolicyObjectFile
+    */
+    public function setGroupPolicyObjectId($val)
+    {
+        $this->_propDict["groupPolicyObjectId"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the lastModifiedDateTime
     * The date and time at which the GroupPolicyObjectFile was last modified.
     *
@@ -149,31 +149,31 @@ class GroupPolicyObjectFile extends Entity
     }
     
     /**
-    * Gets the content
-    * The Group Policy Object file content.
+    * Gets the ouDistinguishedName
+    * The distinguished name of the OU.
     *
-    * @return string The content
+    * @return string The ouDistinguishedName
     */
-    public function getContent()
+    public function getOuDistinguishedName()
     {
-        if (array_key_exists("content", $this->_propDict)) {
-            return $this->_propDict["content"];
+        if (array_key_exists("ouDistinguishedName", $this->_propDict)) {
+            return $this->_propDict["ouDistinguishedName"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the content
-    * The Group Policy Object file content.
+    * Sets the ouDistinguishedName
+    * The distinguished name of the OU.
     *
-    * @param string $val The content
+    * @param string $val The ouDistinguishedName
     *
     * @return GroupPolicyObjectFile
     */
-    public function setContent($val)
+    public function setOuDistinguishedName($val)
     {
-        $this->_propDict["content"] = $val;
+        $this->_propDict["ouDistinguishedName"] = $val;
         return $this;
     }
     

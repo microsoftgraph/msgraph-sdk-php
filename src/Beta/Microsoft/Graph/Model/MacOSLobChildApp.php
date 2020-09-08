@@ -24,34 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class MacOSLobChildApp extends Entity
 {
     /**
-    * Gets the bundleId
-    * The Identity Name.
-    *
-    * @return string The bundleId
-    */
-    public function getBundleId()
-    {
-        if (array_key_exists("bundleId", $this->_propDict)) {
-            return $this->_propDict["bundleId"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the bundleId
-    * The Identity Name.
-    *
-    * @param string $val The value of the bundleId
-    *
-    * @return MacOSLobChildApp
-    */
-    public function setBundleId($val)
-    {
-        $this->_propDict["bundleId"] = $val;
-        return $this;
-    }
-    /**
     * Gets the buildNumber
     * The build number of MacOS Line of Business (LoB) app.
     *
@@ -77,6 +49,34 @@ class MacOSLobChildApp extends Entity
     public function setBuildNumber($val)
     {
         $this->_propDict["buildNumber"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the bundleId
+    * The Identity Name.
+    *
+    * @return string The bundleId
+    */
+    public function getBundleId()
+    {
+        if (array_key_exists("bundleId", $this->_propDict)) {
+            return $this->_propDict["bundleId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the bundleId
+    * The Identity Name.
+    *
+    * @param string $val The value of the bundleId
+    *
+    * @return MacOSLobChildApp
+    */
+    public function setBundleId($val)
+    {
+        $this->_propDict["bundleId"] = $val;
         return $this;
     }
     /**

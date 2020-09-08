@@ -24,34 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class DeviceManagementUserRightsLocalUserOrGroup extends Entity
 {
     /**
-    * Gets the name
-    * The name of this local user or group.
-    *
-    * @return string The name
-    */
-    public function getName()
-    {
-        if (array_key_exists("name", $this->_propDict)) {
-            return $this->_propDict["name"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the name
-    * The name of this local user or group.
-    *
-    * @param string $val The value of the name
-    *
-    * @return DeviceManagementUserRightsLocalUserOrGroup
-    */
-    public function setName($val)
-    {
-        $this->_propDict["name"] = $val;
-        return $this;
-    }
-    /**
     * Gets the description
     * Admin???s description of this local user or group.
     *
@@ -77,6 +49,34 @@ class DeviceManagementUserRightsLocalUserOrGroup extends Entity
     public function setDescription($val)
     {
         $this->_propDict["description"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the name
+    * The name of this local user or group.
+    *
+    * @return string The name
+    */
+    public function getName()
+    {
+        if (array_key_exists("name", $this->_propDict)) {
+            return $this->_propDict["name"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the name
+    * The name of this local user or group.
+    *
+    * @param string $val The value of the name
+    *
+    * @return DeviceManagementUserRightsLocalUserOrGroup
+    */
+    public function setName($val)
+    {
+        $this->_propDict["name"] = $val;
         return $this;
     }
     /**

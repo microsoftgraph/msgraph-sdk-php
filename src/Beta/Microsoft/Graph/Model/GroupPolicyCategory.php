@@ -115,39 +115,6 @@ class GroupPolicyCategory extends Entity
         return $this;
     }
     
-    /**
-    * Gets the parent
-    * The parent category
-    *
-    * @return GroupPolicyCategory The parent
-    */
-    public function getParent()
-    {
-        if (array_key_exists("parent", $this->_propDict)) {
-            if (is_a($this->_propDict["parent"], "Beta\Microsoft\Graph\Model\GroupPolicyCategory")) {
-                return $this->_propDict["parent"];
-            } else {
-                $this->_propDict["parent"] = new GroupPolicyCategory($this->_propDict["parent"]);
-                return $this->_propDict["parent"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the parent
-    * The parent category
-    *
-    * @param GroupPolicyCategory $val The parent
-    *
-    * @return GroupPolicyCategory
-    */
-    public function setParent($val)
-    {
-        $this->_propDict["parent"] = $val;
-        return $this;
-    }
-    
 
      /** 
      * Gets the children
@@ -175,6 +142,39 @@ class GroupPolicyCategory extends Entity
     public function setChildren($val)
     {
 		$this->_propDict["children"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the definitionFile
+    * The id of the definition file the category came from
+    *
+    * @return GroupPolicyDefinitionFile The definitionFile
+    */
+    public function getDefinitionFile()
+    {
+        if (array_key_exists("definitionFile", $this->_propDict)) {
+            if (is_a($this->_propDict["definitionFile"], "Beta\Microsoft\Graph\Model\GroupPolicyDefinitionFile")) {
+                return $this->_propDict["definitionFile"];
+            } else {
+                $this->_propDict["definitionFile"] = new GroupPolicyDefinitionFile($this->_propDict["definitionFile"]);
+                return $this->_propDict["definitionFile"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the definitionFile
+    * The id of the definition file the category came from
+    *
+    * @param GroupPolicyDefinitionFile $val The definitionFile
+    *
+    * @return GroupPolicyCategory
+    */
+    public function setDefinitionFile($val)
+    {
+        $this->_propDict["definitionFile"] = $val;
         return $this;
     }
     
@@ -209,35 +209,35 @@ class GroupPolicyCategory extends Entity
     }
     
     /**
-    * Gets the definitionFile
-    * The id of the definition file the category came from
+    * Gets the parent
+    * The parent category
     *
-    * @return GroupPolicyDefinitionFile The definitionFile
+    * @return GroupPolicyCategory The parent
     */
-    public function getDefinitionFile()
+    public function getParent()
     {
-        if (array_key_exists("definitionFile", $this->_propDict)) {
-            if (is_a($this->_propDict["definitionFile"], "Beta\Microsoft\Graph\Model\GroupPolicyDefinitionFile")) {
-                return $this->_propDict["definitionFile"];
+        if (array_key_exists("parent", $this->_propDict)) {
+            if (is_a($this->_propDict["parent"], "Beta\Microsoft\Graph\Model\GroupPolicyCategory")) {
+                return $this->_propDict["parent"];
             } else {
-                $this->_propDict["definitionFile"] = new GroupPolicyDefinitionFile($this->_propDict["definitionFile"]);
-                return $this->_propDict["definitionFile"];
+                $this->_propDict["parent"] = new GroupPolicyCategory($this->_propDict["parent"]);
+                return $this->_propDict["parent"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the definitionFile
-    * The id of the definition file the category came from
+    * Sets the parent
+    * The parent category
     *
-    * @param GroupPolicyDefinitionFile $val The definitionFile
+    * @param GroupPolicyCategory $val The parent
     *
     * @return GroupPolicyCategory
     */
-    public function setDefinitionFile($val)
+    public function setParent($val)
     {
-        $this->_propDict["definitionFile"] = $val;
+        $this->_propDict["parent"] = $val;
         return $this;
     }
     

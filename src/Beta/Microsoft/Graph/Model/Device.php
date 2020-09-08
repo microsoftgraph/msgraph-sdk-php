@@ -811,29 +811,29 @@ class Device extends DirectoryObject
     }
     
     /**
-    * Gets the name
+    * Gets the kind
     *
-    * @return string The name
+    * @return string The kind
     */
-    public function getName()
+    public function getKind()
     {
-        if (array_key_exists("name", $this->_propDict)) {
-            return $this->_propDict["name"];
+        if (array_key_exists("kind", $this->_propDict)) {
+            return $this->_propDict["kind"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the name
+    * Sets the kind
     *
-    * @param string $val The name
+    * @param string $val The kind
     *
     * @return Device
     */
-    public function setName($val)
+    public function setKind($val)
     {
-        $this->_propDict["Name"] = $val;
+        $this->_propDict["Kind"] = $val;
         return $this;
     }
     
@@ -892,56 +892,29 @@ class Device extends DirectoryObject
     }
     
     /**
-    * Gets the kind
+    * Gets the name
     *
-    * @return string The kind
+    * @return string The name
     */
-    public function getKind()
+    public function getName()
     {
-        if (array_key_exists("kind", $this->_propDict)) {
-            return $this->_propDict["kind"];
+        if (array_key_exists("name", $this->_propDict)) {
+            return $this->_propDict["name"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the kind
+    * Sets the name
     *
-    * @param string $val The kind
-    *
-    * @return Device
-    */
-    public function setKind($val)
-    {
-        $this->_propDict["Kind"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the status
-    *
-    * @return string The status
-    */
-    public function getStatus()
-    {
-        if (array_key_exists("status", $this->_propDict)) {
-            return $this->_propDict["status"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the status
-    *
-    * @param string $val The status
+    * @param string $val The name
     *
     * @return Device
     */
-    public function setStatus($val)
+    public function setName($val)
     {
-        $this->_propDict["Status"] = $val;
+        $this->_propDict["Name"] = $val;
         return $this;
     }
     
@@ -969,6 +942,33 @@ class Device extends DirectoryObject
     public function setPlatform($val)
     {
         $this->_propDict["Platform"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the status
+    *
+    * @return string The status
+    */
+    public function getStatus()
+    {
+        if (array_key_exists("status", $this->_propDict)) {
+            return $this->_propDict["status"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the status
+    *
+    * @param string $val The status
+    *
+    * @return Device
+    */
+    public function setStatus($val)
+    {
+        $this->_propDict["Status"] = $val;
         return $this;
     }
     

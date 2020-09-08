@@ -23,61 +23,35 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class GovernanceSchedule extends Entity
 {
-    /**
-    * Gets the type
-    *
-    * @return string The type
-    */
-    public function getType()
-    {
-        if (array_key_exists("type", $this->_propDict)) {
-            return $this->_propDict["type"];
-        } else {
-            return null;
-        }
-    }
 
     /**
-    * Sets the type
+    * Gets the duration
     *
-    * @param string $val The value of the type
-    *
-    * @return GovernanceSchedule
+    * @return Duration The duration
     */
-    public function setType($val)
+    public function getDuration()
     {
-        $this->_propDict["type"] = $val;
-        return $this;
-    }
-
-    /**
-    * Gets the startDateTime
-    *
-    * @return \DateTime The startDateTime
-    */
-    public function getStartDateTime()
-    {
-        if (array_key_exists("startDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
-                return $this->_propDict["startDateTime"];
+        if (array_key_exists("duration", $this->_propDict)) {
+            if (is_a($this->_propDict["duration"], "Beta\Microsoft\Graph\Model\Duration")) {
+                return $this->_propDict["duration"];
             } else {
-                $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);
-                return $this->_propDict["startDateTime"];
+                $this->_propDict["duration"] = new Duration($this->_propDict["duration"]);
+                return $this->_propDict["duration"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the startDateTime
+    * Sets the duration
     *
-    * @param \DateTime $val The value to assign to the startDateTime
+    * @param Duration $val The value to assign to the duration
     *
     * @return GovernanceSchedule The GovernanceSchedule
     */
-    public function setStartDateTime($val)
+    public function setDuration($val)
     {
-        $this->_propDict["startDateTime"] = $val;
+        $this->_propDict["duration"] = $val;
          return $this;
     }
 
@@ -113,33 +87,59 @@ class GovernanceSchedule extends Entity
     }
 
     /**
-    * Gets the duration
+    * Gets the startDateTime
     *
-    * @return Duration The duration
+    * @return \DateTime The startDateTime
     */
-    public function getDuration()
+    public function getStartDateTime()
     {
-        if (array_key_exists("duration", $this->_propDict)) {
-            if (is_a($this->_propDict["duration"], "Beta\Microsoft\Graph\Model\Duration")) {
-                return $this->_propDict["duration"];
+        if (array_key_exists("startDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
+                return $this->_propDict["startDateTime"];
             } else {
-                $this->_propDict["duration"] = new Duration($this->_propDict["duration"]);
-                return $this->_propDict["duration"];
+                $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);
+                return $this->_propDict["startDateTime"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the duration
+    * Sets the startDateTime
     *
-    * @param Duration $val The value to assign to the duration
+    * @param \DateTime $val The value to assign to the startDateTime
     *
     * @return GovernanceSchedule The GovernanceSchedule
     */
-    public function setDuration($val)
+    public function setStartDateTime($val)
     {
-        $this->_propDict["duration"] = $val;
+        $this->_propDict["startDateTime"] = $val;
          return $this;
+    }
+    /**
+    * Gets the type
+    *
+    * @return string The type
+    */
+    public function getType()
+    {
+        if (array_key_exists("type", $this->_propDict)) {
+            return $this->_propDict["type"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the type
+    *
+    * @param string $val The value of the type
+    *
+    * @return GovernanceSchedule
+    */
+    public function setType($val)
+    {
+        $this->_propDict["type"] = $val;
+        return $this;
     }
 }

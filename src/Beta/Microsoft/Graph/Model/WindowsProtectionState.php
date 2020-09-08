@@ -25,31 +25,31 @@ namespace Beta\Microsoft\Graph\Model;
 class WindowsProtectionState extends Entity
 {
     /**
-    * Gets the malwareProtectionEnabled
-    * Anti malware is enabled or not
+    * Gets the antiMalwareVersion
+    * Current anti malware version
     *
-    * @return bool The malwareProtectionEnabled
+    * @return string The antiMalwareVersion
     */
-    public function getMalwareProtectionEnabled()
+    public function getAntiMalwareVersion()
     {
-        if (array_key_exists("malwareProtectionEnabled", $this->_propDict)) {
-            return $this->_propDict["malwareProtectionEnabled"];
+        if (array_key_exists("antiMalwareVersion", $this->_propDict)) {
+            return $this->_propDict["antiMalwareVersion"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the malwareProtectionEnabled
-    * Anti malware is enabled or not
+    * Sets the antiMalwareVersion
+    * Current anti malware version
     *
-    * @param bool $val The malwareProtectionEnabled
+    * @param string $val The antiMalwareVersion
     *
     * @return WindowsProtectionState
     */
-    public function setMalwareProtectionEnabled($val)
+    public function setAntiMalwareVersion($val)
     {
-        $this->_propDict["malwareProtectionEnabled"] = boolval($val);
+        $this->_propDict["antiMalwareVersion"] = $val;
         return $this;
     }
     
@@ -87,31 +87,275 @@ class WindowsProtectionState extends Entity
     }
     
     /**
-    * Gets the realTimeProtectionEnabled
-    * Real time protection is enabled or not?
+    * Gets the engineVersion
+    * Current endpoint protection engine's version
     *
-    * @return bool The realTimeProtectionEnabled
+    * @return string The engineVersion
     */
-    public function getRealTimeProtectionEnabled()
+    public function getEngineVersion()
     {
-        if (array_key_exists("realTimeProtectionEnabled", $this->_propDict)) {
-            return $this->_propDict["realTimeProtectionEnabled"];
+        if (array_key_exists("engineVersion", $this->_propDict)) {
+            return $this->_propDict["engineVersion"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the realTimeProtectionEnabled
-    * Real time protection is enabled or not?
+    * Sets the engineVersion
+    * Current endpoint protection engine's version
     *
-    * @param bool $val The realTimeProtectionEnabled
+    * @param string $val The engineVersion
     *
     * @return WindowsProtectionState
     */
-    public function setRealTimeProtectionEnabled($val)
+    public function setEngineVersion($val)
     {
-        $this->_propDict["realTimeProtectionEnabled"] = boolval($val);
+        $this->_propDict["engineVersion"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the fullScanOverdue
+    * Full scan overdue or not?
+    *
+    * @return bool The fullScanOverdue
+    */
+    public function getFullScanOverdue()
+    {
+        if (array_key_exists("fullScanOverdue", $this->_propDict)) {
+            return $this->_propDict["fullScanOverdue"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the fullScanOverdue
+    * Full scan overdue or not?
+    *
+    * @param bool $val The fullScanOverdue
+    *
+    * @return WindowsProtectionState
+    */
+    public function setFullScanOverdue($val)
+    {
+        $this->_propDict["fullScanOverdue"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the fullScanRequired
+    * Full scan required or not?
+    *
+    * @return bool The fullScanRequired
+    */
+    public function getFullScanRequired()
+    {
+        if (array_key_exists("fullScanRequired", $this->_propDict)) {
+            return $this->_propDict["fullScanRequired"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the fullScanRequired
+    * Full scan required or not?
+    *
+    * @param bool $val The fullScanRequired
+    *
+    * @return WindowsProtectionState
+    */
+    public function setFullScanRequired($val)
+    {
+        $this->_propDict["fullScanRequired"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the lastFullScanDateTime
+    * Last quick scan datetime
+    *
+    * @return \DateTime The lastFullScanDateTime
+    */
+    public function getLastFullScanDateTime()
+    {
+        if (array_key_exists("lastFullScanDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastFullScanDateTime"], "\DateTime")) {
+                return $this->_propDict["lastFullScanDateTime"];
+            } else {
+                $this->_propDict["lastFullScanDateTime"] = new \DateTime($this->_propDict["lastFullScanDateTime"]);
+                return $this->_propDict["lastFullScanDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the lastFullScanDateTime
+    * Last quick scan datetime
+    *
+    * @param \DateTime $val The lastFullScanDateTime
+    *
+    * @return WindowsProtectionState
+    */
+    public function setLastFullScanDateTime($val)
+    {
+        $this->_propDict["lastFullScanDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the lastFullScanSignatureVersion
+    * Last full scan signature version
+    *
+    * @return string The lastFullScanSignatureVersion
+    */
+    public function getLastFullScanSignatureVersion()
+    {
+        if (array_key_exists("lastFullScanSignatureVersion", $this->_propDict)) {
+            return $this->_propDict["lastFullScanSignatureVersion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the lastFullScanSignatureVersion
+    * Last full scan signature version
+    *
+    * @param string $val The lastFullScanSignatureVersion
+    *
+    * @return WindowsProtectionState
+    */
+    public function setLastFullScanSignatureVersion($val)
+    {
+        $this->_propDict["lastFullScanSignatureVersion"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the lastQuickScanDateTime
+    * Last quick scan datetime
+    *
+    * @return \DateTime The lastQuickScanDateTime
+    */
+    public function getLastQuickScanDateTime()
+    {
+        if (array_key_exists("lastQuickScanDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastQuickScanDateTime"], "\DateTime")) {
+                return $this->_propDict["lastQuickScanDateTime"];
+            } else {
+                $this->_propDict["lastQuickScanDateTime"] = new \DateTime($this->_propDict["lastQuickScanDateTime"]);
+                return $this->_propDict["lastQuickScanDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the lastQuickScanDateTime
+    * Last quick scan datetime
+    *
+    * @param \DateTime $val The lastQuickScanDateTime
+    *
+    * @return WindowsProtectionState
+    */
+    public function setLastQuickScanDateTime($val)
+    {
+        $this->_propDict["lastQuickScanDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the lastQuickScanSignatureVersion
+    * Last quick scan signature version
+    *
+    * @return string The lastQuickScanSignatureVersion
+    */
+    public function getLastQuickScanSignatureVersion()
+    {
+        if (array_key_exists("lastQuickScanSignatureVersion", $this->_propDict)) {
+            return $this->_propDict["lastQuickScanSignatureVersion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the lastQuickScanSignatureVersion
+    * Last quick scan signature version
+    *
+    * @param string $val The lastQuickScanSignatureVersion
+    *
+    * @return WindowsProtectionState
+    */
+    public function setLastQuickScanSignatureVersion($val)
+    {
+        $this->_propDict["lastQuickScanSignatureVersion"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the lastReportedDateTime
+    * Last device health status reported time
+    *
+    * @return \DateTime The lastReportedDateTime
+    */
+    public function getLastReportedDateTime()
+    {
+        if (array_key_exists("lastReportedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastReportedDateTime"], "\DateTime")) {
+                return $this->_propDict["lastReportedDateTime"];
+            } else {
+                $this->_propDict["lastReportedDateTime"] = new \DateTime($this->_propDict["lastReportedDateTime"]);
+                return $this->_propDict["lastReportedDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the lastReportedDateTime
+    * Last device health status reported time
+    *
+    * @param \DateTime $val The lastReportedDateTime
+    *
+    * @return WindowsProtectionState
+    */
+    public function setLastReportedDateTime($val)
+    {
+        $this->_propDict["lastReportedDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the malwareProtectionEnabled
+    * Anti malware is enabled or not
+    *
+    * @return bool The malwareProtectionEnabled
+    */
+    public function getMalwareProtectionEnabled()
+    {
+        if (array_key_exists("malwareProtectionEnabled", $this->_propDict)) {
+            return $this->_propDict["malwareProtectionEnabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the malwareProtectionEnabled
+    * Anti malware is enabled or not
+    *
+    * @param bool $val The malwareProtectionEnabled
+    *
+    * @return WindowsProtectionState
+    */
+    public function setMalwareProtectionEnabled($val)
+    {
+        $this->_propDict["malwareProtectionEnabled"] = boolval($val);
         return $this;
     }
     
@@ -174,60 +418,31 @@ class WindowsProtectionState extends Entity
     }
     
     /**
-    * Gets the fullScanOverdue
-    * Full scan overdue or not?
+    * Gets the realTimeProtectionEnabled
+    * Real time protection is enabled or not?
     *
-    * @return bool The fullScanOverdue
+    * @return bool The realTimeProtectionEnabled
     */
-    public function getFullScanOverdue()
+    public function getRealTimeProtectionEnabled()
     {
-        if (array_key_exists("fullScanOverdue", $this->_propDict)) {
-            return $this->_propDict["fullScanOverdue"];
+        if (array_key_exists("realTimeProtectionEnabled", $this->_propDict)) {
+            return $this->_propDict["realTimeProtectionEnabled"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the fullScanOverdue
-    * Full scan overdue or not?
+    * Sets the realTimeProtectionEnabled
+    * Real time protection is enabled or not?
     *
-    * @param bool $val The fullScanOverdue
-    *
-    * @return WindowsProtectionState
-    */
-    public function setFullScanOverdue($val)
-    {
-        $this->_propDict["fullScanOverdue"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the signatureUpdateOverdue
-    * Signature out of date or not?
-    *
-    * @return bool The signatureUpdateOverdue
-    */
-    public function getSignatureUpdateOverdue()
-    {
-        if (array_key_exists("signatureUpdateOverdue", $this->_propDict)) {
-            return $this->_propDict["signatureUpdateOverdue"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the signatureUpdateOverdue
-    * Signature out of date or not?
-    *
-    * @param bool $val The signatureUpdateOverdue
+    * @param bool $val The realTimeProtectionEnabled
     *
     * @return WindowsProtectionState
     */
-    public function setSignatureUpdateOverdue($val)
+    public function setRealTimeProtectionEnabled($val)
     {
-        $this->_propDict["signatureUpdateOverdue"] = boolval($val);
+        $this->_propDict["realTimeProtectionEnabled"] = boolval($val);
         return $this;
     }
     
@@ -261,60 +476,31 @@ class WindowsProtectionState extends Entity
     }
     
     /**
-    * Gets the fullScanRequired
-    * Full scan required or not?
+    * Gets the signatureUpdateOverdue
+    * Signature out of date or not?
     *
-    * @return bool The fullScanRequired
+    * @return bool The signatureUpdateOverdue
     */
-    public function getFullScanRequired()
+    public function getSignatureUpdateOverdue()
     {
-        if (array_key_exists("fullScanRequired", $this->_propDict)) {
-            return $this->_propDict["fullScanRequired"];
+        if (array_key_exists("signatureUpdateOverdue", $this->_propDict)) {
+            return $this->_propDict["signatureUpdateOverdue"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the fullScanRequired
-    * Full scan required or not?
+    * Sets the signatureUpdateOverdue
+    * Signature out of date or not?
     *
-    * @param bool $val The fullScanRequired
-    *
-    * @return WindowsProtectionState
-    */
-    public function setFullScanRequired($val)
-    {
-        $this->_propDict["fullScanRequired"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the engineVersion
-    * Current endpoint protection engine's version
-    *
-    * @return string The engineVersion
-    */
-    public function getEngineVersion()
-    {
-        if (array_key_exists("engineVersion", $this->_propDict)) {
-            return $this->_propDict["engineVersion"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the engineVersion
-    * Current endpoint protection engine's version
-    *
-    * @param string $val The engineVersion
+    * @param bool $val The signatureUpdateOverdue
     *
     * @return WindowsProtectionState
     */
-    public function setEngineVersion($val)
+    public function setSignatureUpdateOverdue($val)
     {
-        $this->_propDict["engineVersion"] = $val;
+        $this->_propDict["signatureUpdateOverdue"] = boolval($val);
         return $this;
     }
     
@@ -344,192 +530,6 @@ class WindowsProtectionState extends Entity
     public function setSignatureVersion($val)
     {
         $this->_propDict["signatureVersion"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the antiMalwareVersion
-    * Current anti malware version
-    *
-    * @return string The antiMalwareVersion
-    */
-    public function getAntiMalwareVersion()
-    {
-        if (array_key_exists("antiMalwareVersion", $this->_propDict)) {
-            return $this->_propDict["antiMalwareVersion"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the antiMalwareVersion
-    * Current anti malware version
-    *
-    * @param string $val The antiMalwareVersion
-    *
-    * @return WindowsProtectionState
-    */
-    public function setAntiMalwareVersion($val)
-    {
-        $this->_propDict["antiMalwareVersion"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the lastQuickScanDateTime
-    * Last quick scan datetime
-    *
-    * @return \DateTime The lastQuickScanDateTime
-    */
-    public function getLastQuickScanDateTime()
-    {
-        if (array_key_exists("lastQuickScanDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastQuickScanDateTime"], "\DateTime")) {
-                return $this->_propDict["lastQuickScanDateTime"];
-            } else {
-                $this->_propDict["lastQuickScanDateTime"] = new \DateTime($this->_propDict["lastQuickScanDateTime"]);
-                return $this->_propDict["lastQuickScanDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the lastQuickScanDateTime
-    * Last quick scan datetime
-    *
-    * @param \DateTime $val The lastQuickScanDateTime
-    *
-    * @return WindowsProtectionState
-    */
-    public function setLastQuickScanDateTime($val)
-    {
-        $this->_propDict["lastQuickScanDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the lastFullScanDateTime
-    * Last quick scan datetime
-    *
-    * @return \DateTime The lastFullScanDateTime
-    */
-    public function getLastFullScanDateTime()
-    {
-        if (array_key_exists("lastFullScanDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastFullScanDateTime"], "\DateTime")) {
-                return $this->_propDict["lastFullScanDateTime"];
-            } else {
-                $this->_propDict["lastFullScanDateTime"] = new \DateTime($this->_propDict["lastFullScanDateTime"]);
-                return $this->_propDict["lastFullScanDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the lastFullScanDateTime
-    * Last quick scan datetime
-    *
-    * @param \DateTime $val The lastFullScanDateTime
-    *
-    * @return WindowsProtectionState
-    */
-    public function setLastFullScanDateTime($val)
-    {
-        $this->_propDict["lastFullScanDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the lastQuickScanSignatureVersion
-    * Last quick scan signature version
-    *
-    * @return string The lastQuickScanSignatureVersion
-    */
-    public function getLastQuickScanSignatureVersion()
-    {
-        if (array_key_exists("lastQuickScanSignatureVersion", $this->_propDict)) {
-            return $this->_propDict["lastQuickScanSignatureVersion"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the lastQuickScanSignatureVersion
-    * Last quick scan signature version
-    *
-    * @param string $val The lastQuickScanSignatureVersion
-    *
-    * @return WindowsProtectionState
-    */
-    public function setLastQuickScanSignatureVersion($val)
-    {
-        $this->_propDict["lastQuickScanSignatureVersion"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the lastFullScanSignatureVersion
-    * Last full scan signature version
-    *
-    * @return string The lastFullScanSignatureVersion
-    */
-    public function getLastFullScanSignatureVersion()
-    {
-        if (array_key_exists("lastFullScanSignatureVersion", $this->_propDict)) {
-            return $this->_propDict["lastFullScanSignatureVersion"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the lastFullScanSignatureVersion
-    * Last full scan signature version
-    *
-    * @param string $val The lastFullScanSignatureVersion
-    *
-    * @return WindowsProtectionState
-    */
-    public function setLastFullScanSignatureVersion($val)
-    {
-        $this->_propDict["lastFullScanSignatureVersion"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the lastReportedDateTime
-    * Last device health status reported time
-    *
-    * @return \DateTime The lastReportedDateTime
-    */
-    public function getLastReportedDateTime()
-    {
-        if (array_key_exists("lastReportedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastReportedDateTime"], "\DateTime")) {
-                return $this->_propDict["lastReportedDateTime"];
-            } else {
-                $this->_propDict["lastReportedDateTime"] = new \DateTime($this->_propDict["lastReportedDateTime"]);
-                return $this->_propDict["lastReportedDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the lastReportedDateTime
-    * Last device health status reported time
-    *
-    * @param \DateTime $val The lastReportedDateTime
-    *
-    * @return WindowsProtectionState
-    */
-    public function setLastReportedDateTime($val)
-    {
-        $this->_propDict["lastReportedDateTime"] = $val;
         return $this;
     }
     

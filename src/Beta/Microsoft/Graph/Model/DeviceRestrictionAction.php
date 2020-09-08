@@ -23,6 +23,32 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class DeviceRestrictionAction extends DlpActionInfo
 {
+    /**
+    * Gets the message
+    *
+    * @return string The message
+    */
+    public function getMessage()
+    {
+        if (array_key_exists("message", $this->_propDict)) {
+            return $this->_propDict["message"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the message
+    *
+    * @param string $val The value of the message
+    *
+    * @return DeviceRestrictionAction
+    */
+    public function setMessage($val)
+    {
+        $this->_propDict["message"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the restrictionAction
@@ -84,31 +110,5 @@ class DeviceRestrictionAction extends DlpActionInfo
     {
         $this->_propDict["triggers"] = $val;
          return $this;
-    }
-    /**
-    * Gets the message
-    *
-    * @return string The message
-    */
-    public function getMessage()
-    {
-        if (array_key_exists("message", $this->_propDict)) {
-            return $this->_propDict["message"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the message
-    *
-    * @param string $val The value of the message
-    *
-    * @return DeviceRestrictionAction
-    */
-    public function setMessage($val)
-    {
-        $this->_propDict["message"] = $val;
-        return $this;
     }
 }

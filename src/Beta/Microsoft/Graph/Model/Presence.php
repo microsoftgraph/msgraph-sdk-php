@@ -25,33 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class Presence extends Entity
 {
     /**
-    * Gets the availability
-    *
-    * @return string The availability
-    */
-    public function getAvailability()
-    {
-        if (array_key_exists("availability", $this->_propDict)) {
-            return $this->_propDict["availability"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the availability
-    *
-    * @param string $val The availability
-    *
-    * @return Presence
-    */
-    public function setAvailability($val)
-    {
-        $this->_propDict["availability"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the activity
     *
     * @return string The activity
@@ -75,6 +48,33 @@ class Presence extends Entity
     public function setActivity($val)
     {
         $this->_propDict["activity"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the availability
+    *
+    * @return string The availability
+    */
+    public function getAvailability()
+    {
+        if (array_key_exists("availability", $this->_propDict)) {
+            return $this->_propDict["availability"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the availability
+    *
+    * @param string $val The availability
+    *
+    * @return Presence
+    */
+    public function setAvailability($val)
+    {
+        $this->_propDict["availability"] = $val;
         return $this;
     }
     

@@ -25,6 +25,35 @@ namespace Beta\Microsoft\Graph\Model;
 class EditionUpgradeConfiguration extends DeviceConfiguration
 {
     /**
+    * Gets the license
+    * Edition Upgrade License File Content.
+    *
+    * @return string The license
+    */
+    public function getLicense()
+    {
+        if (array_key_exists("license", $this->_propDict)) {
+            return $this->_propDict["license"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the license
+    * Edition Upgrade License File Content.
+    *
+    * @param string $val The license
+    *
+    * @return EditionUpgradeConfiguration
+    */
+    public function setLicense($val)
+    {
+        $this->_propDict["license"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the licenseType
     * Edition Upgrade License Type. Possible values are: productKey, licenseFile.
     *
@@ -58,6 +87,35 @@ class EditionUpgradeConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the productKey
+    * Edition Upgrade Product Key.
+    *
+    * @return string The productKey
+    */
+    public function getProductKey()
+    {
+        if (array_key_exists("productKey", $this->_propDict)) {
+            return $this->_propDict["productKey"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the productKey
+    * Edition Upgrade Product Key.
+    *
+    * @param string $val The productKey
+    *
+    * @return EditionUpgradeConfiguration
+    */
+    public function setProductKey($val)
+    {
+        $this->_propDict["productKey"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the targetEdition
     * Edition Upgrade Target Edition. Possible values are: windows10Enterprise, windows10EnterpriseN, windows10Education, windows10EducationN, windows10MobileEnterprise, windows10HolographicEnterprise, windows10Professional, windows10ProfessionalN, windows10ProfessionalEducation, windows10ProfessionalEducationN, windows10ProfessionalWorkstation, windows10ProfessionalWorkstationN.
     *
@@ -87,64 +145,6 @@ class EditionUpgradeConfiguration extends DeviceConfiguration
     public function setTargetEdition($val)
     {
         $this->_propDict["targetEdition"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the license
-    * Edition Upgrade License File Content.
-    *
-    * @return string The license
-    */
-    public function getLicense()
-    {
-        if (array_key_exists("license", $this->_propDict)) {
-            return $this->_propDict["license"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the license
-    * Edition Upgrade License File Content.
-    *
-    * @param string $val The license
-    *
-    * @return EditionUpgradeConfiguration
-    */
-    public function setLicense($val)
-    {
-        $this->_propDict["license"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the productKey
-    * Edition Upgrade Product Key.
-    *
-    * @return string The productKey
-    */
-    public function getProductKey()
-    {
-        if (array_key_exists("productKey", $this->_propDict)) {
-            return $this->_propDict["productKey"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the productKey
-    * Edition Upgrade Product Key.
-    *
-    * @param string $val The productKey
-    *
-    * @return EditionUpgradeConfiguration
-    */
-    public function setProductKey($val)
-    {
-        $this->_propDict["productKey"] = $val;
         return $this;
     }
     

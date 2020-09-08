@@ -83,93 +83,6 @@ class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileConfigurat
     }
     
     /**
-    * Gets the syncCalendar
-    * Whether or not to sync the calendar.
-    *
-    * @return bool The syncCalendar
-    */
-    public function getSyncCalendar()
-    {
-        if (array_key_exists("syncCalendar", $this->_propDict)) {
-            return $this->_propDict["syncCalendar"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the syncCalendar
-    * Whether or not to sync the calendar.
-    *
-    * @param bool $val The syncCalendar
-    *
-    * @return WindowsPhoneEASEmailProfileConfiguration
-    */
-    public function setSyncCalendar($val)
-    {
-        $this->_propDict["syncCalendar"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the syncContacts
-    * Whether or not to sync contacts.
-    *
-    * @return bool The syncContacts
-    */
-    public function getSyncContacts()
-    {
-        if (array_key_exists("syncContacts", $this->_propDict)) {
-            return $this->_propDict["syncContacts"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the syncContacts
-    * Whether or not to sync contacts.
-    *
-    * @param bool $val The syncContacts
-    *
-    * @return WindowsPhoneEASEmailProfileConfiguration
-    */
-    public function setSyncContacts($val)
-    {
-        $this->_propDict["syncContacts"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the syncTasks
-    * Whether or not to sync tasks.
-    *
-    * @return bool The syncTasks
-    */
-    public function getSyncTasks()
-    {
-        if (array_key_exists("syncTasks", $this->_propDict)) {
-            return $this->_propDict["syncTasks"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the syncTasks
-    * Whether or not to sync tasks.
-    *
-    * @param bool $val The syncTasks
-    *
-    * @return WindowsPhoneEASEmailProfileConfiguration
-    */
-    public function setSyncTasks($val)
-    {
-        $this->_propDict["syncTasks"] = boolval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the durationOfEmailToSync
     * Duration of email to sync.
     *
@@ -323,6 +236,93 @@ class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileConfigurat
     public function setRequireSsl($val)
     {
         $this->_propDict["requireSsl"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the syncCalendar
+    * Whether or not to sync the calendar.
+    *
+    * @return bool The syncCalendar
+    */
+    public function getSyncCalendar()
+    {
+        if (array_key_exists("syncCalendar", $this->_propDict)) {
+            return $this->_propDict["syncCalendar"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the syncCalendar
+    * Whether or not to sync the calendar.
+    *
+    * @param bool $val The syncCalendar
+    *
+    * @return WindowsPhoneEASEmailProfileConfiguration
+    */
+    public function setSyncCalendar($val)
+    {
+        $this->_propDict["syncCalendar"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the syncContacts
+    * Whether or not to sync contacts.
+    *
+    * @return bool The syncContacts
+    */
+    public function getSyncContacts()
+    {
+        if (array_key_exists("syncContacts", $this->_propDict)) {
+            return $this->_propDict["syncContacts"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the syncContacts
+    * Whether or not to sync contacts.
+    *
+    * @param bool $val The syncContacts
+    *
+    * @return WindowsPhoneEASEmailProfileConfiguration
+    */
+    public function setSyncContacts($val)
+    {
+        $this->_propDict["syncContacts"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the syncTasks
+    * Whether or not to sync tasks.
+    *
+    * @return bool The syncTasks
+    */
+    public function getSyncTasks()
+    {
+        if (array_key_exists("syncTasks", $this->_propDict)) {
+            return $this->_propDict["syncTasks"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the syncTasks
+    * Whether or not to sync tasks.
+    *
+    * @param bool $val The syncTasks
+    *
+    * @return WindowsPhoneEASEmailProfileConfiguration
+    */
+    public function setSyncTasks($val)
+    {
+        $this->_propDict["syncTasks"] = boolval($val);
         return $this;
     }
     

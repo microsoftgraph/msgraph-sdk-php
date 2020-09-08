@@ -145,6 +145,35 @@ class WindowsAppX extends MobileLobApp
     }
     
     /**
+    * Gets the identityVersion
+    * The identity version.
+    *
+    * @return string The identityVersion
+    */
+    public function getIdentityVersion()
+    {
+        if (array_key_exists("identityVersion", $this->_propDict)) {
+            return $this->_propDict["identityVersion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the identityVersion
+    * The identity version.
+    *
+    * @param string $val The identityVersion
+    *
+    * @return WindowsAppX
+    */
+    public function setIdentityVersion($val)
+    {
+        $this->_propDict["identityVersion"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the isBundle
     * Whether or not the app is a bundle.
     *
@@ -203,35 +232,6 @@ class WindowsAppX extends MobileLobApp
     public function setMinimumSupportedOperatingSystem($val)
     {
         $this->_propDict["minimumSupportedOperatingSystem"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the identityVersion
-    * The identity version.
-    *
-    * @return string The identityVersion
-    */
-    public function getIdentityVersion()
-    {
-        if (array_key_exists("identityVersion", $this->_propDict)) {
-            return $this->_propDict["identityVersion"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the identityVersion
-    * The identity version.
-    *
-    * @param string $val The identityVersion
-    *
-    * @return WindowsAppX
-    */
-    public function setIdentityVersion($val)
-    {
-        $this->_propDict["identityVersion"] = $val;
         return $this;
     }
     

@@ -25,6 +25,37 @@ namespace Beta\Microsoft\Graph\Model;
 class DelegatedPermissionClassification extends Entity
 {
     /**
+    * Gets the classification
+    *
+    * @return PermissionClassificationType The classification
+    */
+    public function getClassification()
+    {
+        if (array_key_exists("classification", $this->_propDict)) {
+            if (is_a($this->_propDict["classification"], "Beta\Microsoft\Graph\Model\PermissionClassificationType")) {
+                return $this->_propDict["classification"];
+            } else {
+                $this->_propDict["classification"] = new PermissionClassificationType($this->_propDict["classification"]);
+                return $this->_propDict["classification"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the classification
+    *
+    * @param PermissionClassificationType $val The classification
+    *
+    * @return DelegatedPermissionClassification
+    */
+    public function setClassification($val)
+    {
+        $this->_propDict["classification"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the permissionId
     *
     * @return string The permissionId
@@ -75,37 +106,6 @@ class DelegatedPermissionClassification extends Entity
     public function setPermissionName($val)
     {
         $this->_propDict["permissionName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the classification
-    *
-    * @return PermissionClassificationType The classification
-    */
-    public function getClassification()
-    {
-        if (array_key_exists("classification", $this->_propDict)) {
-            if (is_a($this->_propDict["classification"], "Beta\Microsoft\Graph\Model\PermissionClassificationType")) {
-                return $this->_propDict["classification"];
-            } else {
-                $this->_propDict["classification"] = new PermissionClassificationType($this->_propDict["classification"]);
-                return $this->_propDict["classification"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the classification
-    *
-    * @param PermissionClassificationType $val The classification
-    *
-    * @return DelegatedPermissionClassification
-    */
-    public function setClassification($val)
-    {
-        $this->_propDict["classification"] = $val;
         return $this;
     }
     

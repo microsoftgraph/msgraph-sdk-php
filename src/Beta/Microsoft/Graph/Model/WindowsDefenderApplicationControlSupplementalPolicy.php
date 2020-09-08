@@ -25,64 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class WindowsDefenderApplicationControlSupplementalPolicy extends Entity
 {
     /**
-    * Gets the displayName
-    * The display name of WindowsDefenderApplicationControl supplemental policy.
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the displayName
-    * The display name of WindowsDefenderApplicationControl supplemental policy.
-    *
-    * @param string $val The displayName
-    *
-    * @return WindowsDefenderApplicationControlSupplementalPolicy
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the description
-    * The description of WindowsDefenderApplicationControl supplemental policy.
-    *
-    * @return string The description
-    */
-    public function getDescription()
-    {
-        if (array_key_exists("description", $this->_propDict)) {
-            return $this->_propDict["description"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the description
-    * The description of WindowsDefenderApplicationControl supplemental policy.
-    *
-    * @param string $val The description
-    *
-    * @return WindowsDefenderApplicationControlSupplementalPolicy
-    */
-    public function setDescription($val)
-    {
-        $this->_propDict["description"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the content
     * The WindowsDefenderApplicationControl supplemental policy content in byte array format.
     *
@@ -145,35 +87,6 @@ class WindowsDefenderApplicationControlSupplementalPolicy extends Entity
     }
     
     /**
-    * Gets the version
-    * The WindowsDefenderApplicationControl supplemental policy's version.
-    *
-    * @return string The version
-    */
-    public function getVersion()
-    {
-        if (array_key_exists("version", $this->_propDict)) {
-            return $this->_propDict["version"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the version
-    * The WindowsDefenderApplicationControl supplemental policy's version.
-    *
-    * @param string $val The version
-    *
-    * @return WindowsDefenderApplicationControlSupplementalPolicy
-    */
-    public function setVersion($val)
-    {
-        $this->_propDict["version"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the creationDateTime
     * The date and time when the WindowsDefenderApplicationControl supplemental policy was uploaded.
     *
@@ -203,6 +116,64 @@ class WindowsDefenderApplicationControlSupplementalPolicy extends Entity
     public function setCreationDateTime($val)
     {
         $this->_propDict["creationDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the description
+    * The description of WindowsDefenderApplicationControl supplemental policy.
+    *
+    * @return string The description
+    */
+    public function getDescription()
+    {
+        if (array_key_exists("description", $this->_propDict)) {
+            return $this->_propDict["description"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the description
+    * The description of WindowsDefenderApplicationControl supplemental policy.
+    *
+    * @param string $val The description
+    *
+    * @return WindowsDefenderApplicationControlSupplementalPolicy
+    */
+    public function setDescription($val)
+    {
+        $this->_propDict["description"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the displayName
+    * The display name of WindowsDefenderApplicationControl supplemental policy.
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the displayName
+    * The display name of WindowsDefenderApplicationControl supplemental policy.
+    *
+    * @param string $val The displayName
+    *
+    * @return WindowsDefenderApplicationControlSupplementalPolicy
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
         return $this;
     }
     
@@ -265,6 +236,35 @@ class WindowsDefenderApplicationControlSupplementalPolicy extends Entity
     public function setRoleScopeTagIds($val)
     {
         $this->_propDict["roleScopeTagIds"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the version
+    * The WindowsDefenderApplicationControl supplemental policy's version.
+    *
+    * @return string The version
+    */
+    public function getVersion()
+    {
+        if (array_key_exists("version", $this->_propDict)) {
+            return $this->_propDict["version"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the version
+    * The WindowsDefenderApplicationControl supplemental policy's version.
+    *
+    * @param string $val The version
+    *
+    * @return WindowsDefenderApplicationControlSupplementalPolicy
+    */
+    public function setVersion($val)
+    {
+        $this->_propDict["version"] = $val;
         return $this;
     }
     

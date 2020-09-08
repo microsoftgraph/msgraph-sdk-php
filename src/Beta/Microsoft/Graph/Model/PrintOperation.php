@@ -25,37 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class PrintOperation extends Entity
 {
     /**
-    * Gets the status
-    *
-    * @return PrintOperationStatus The status
-    */
-    public function getStatus()
-    {
-        if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Beta\Microsoft\Graph\Model\PrintOperationStatus")) {
-                return $this->_propDict["status"];
-            } else {
-                $this->_propDict["status"] = new PrintOperationStatus($this->_propDict["status"]);
-                return $this->_propDict["status"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the status
-    *
-    * @param PrintOperationStatus $val The status
-    *
-    * @return PrintOperation
-    */
-    public function setStatus($val)
-    {
-        $this->_propDict["status"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the createdDateTime
     *
     * @return \DateTime The createdDateTime
@@ -83,6 +52,37 @@ class PrintOperation extends Entity
     public function setCreatedDateTime($val)
     {
         $this->_propDict["createdDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the status
+    *
+    * @return PrintOperationStatus The status
+    */
+    public function getStatus()
+    {
+        if (array_key_exists("status", $this->_propDict)) {
+            if (is_a($this->_propDict["status"], "Beta\Microsoft\Graph\Model\PrintOperationStatus")) {
+                return $this->_propDict["status"];
+            } else {
+                $this->_propDict["status"] = new PrintOperationStatus($this->_propDict["status"]);
+                return $this->_propDict["status"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the status
+    *
+    * @param PrintOperationStatus $val The status
+    *
+    * @return PrintOperation
+    */
+    public function setStatus($val)
+    {
+        $this->_propDict["status"] = $val;
         return $this;
     }
     

@@ -54,6 +54,64 @@ class WindowsMobileMSI extends MobileLobApp
     }
     
     /**
+    * Gets the identityVersion
+    * The identity version.
+    *
+    * @return string The identityVersion
+    */
+    public function getIdentityVersion()
+    {
+        if (array_key_exists("identityVersion", $this->_propDict)) {
+            return $this->_propDict["identityVersion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the identityVersion
+    * The identity version.
+    *
+    * @param string $val The identityVersion
+    *
+    * @return WindowsMobileMSI
+    */
+    public function setIdentityVersion($val)
+    {
+        $this->_propDict["identityVersion"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the ignoreVersionDetection
+    * A boolean to control whether the app's version will be used to detect the app after it is installed on a device. Set this to true for Windows Mobile MSI Line of Business (LoB) apps that use a self update feature.
+    *
+    * @return bool The ignoreVersionDetection
+    */
+    public function getIgnoreVersionDetection()
+    {
+        if (array_key_exists("ignoreVersionDetection", $this->_propDict)) {
+            return $this->_propDict["ignoreVersionDetection"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the ignoreVersionDetection
+    * A boolean to control whether the app's version will be used to detect the app after it is installed on a device. Set this to true for Windows Mobile MSI Line of Business (LoB) apps that use a self update feature.
+    *
+    * @param bool $val The ignoreVersionDetection
+    *
+    * @return WindowsMobileMSI
+    */
+    public function setIgnoreVersionDetection($val)
+    {
+        $this->_propDict["ignoreVersionDetection"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the productCode
     * The product code.
     *
@@ -108,64 +166,6 @@ class WindowsMobileMSI extends MobileLobApp
     public function setProductVersion($val)
     {
         $this->_propDict["productVersion"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the ignoreVersionDetection
-    * A boolean to control whether the app's version will be used to detect the app after it is installed on a device. Set this to true for Windows Mobile MSI Line of Business (LoB) apps that use a self update feature.
-    *
-    * @return bool The ignoreVersionDetection
-    */
-    public function getIgnoreVersionDetection()
-    {
-        if (array_key_exists("ignoreVersionDetection", $this->_propDict)) {
-            return $this->_propDict["ignoreVersionDetection"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the ignoreVersionDetection
-    * A boolean to control whether the app's version will be used to detect the app after it is installed on a device. Set this to true for Windows Mobile MSI Line of Business (LoB) apps that use a self update feature.
-    *
-    * @param bool $val The ignoreVersionDetection
-    *
-    * @return WindowsMobileMSI
-    */
-    public function setIgnoreVersionDetection($val)
-    {
-        $this->_propDict["ignoreVersionDetection"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the identityVersion
-    * The identity version.
-    *
-    * @return string The identityVersion
-    */
-    public function getIdentityVersion()
-    {
-        if (array_key_exists("identityVersion", $this->_propDict)) {
-            return $this->_propDict["identityVersion"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the identityVersion
-    * The identity version.
-    *
-    * @param string $val The identityVersion
-    *
-    * @return WindowsMobileMSI
-    */
-    public function setIdentityVersion($val)
-    {
-        $this->_propDict["identityVersion"] = $val;
         return $this;
     }
     

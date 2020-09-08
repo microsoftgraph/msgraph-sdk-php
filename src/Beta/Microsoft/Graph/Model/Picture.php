@@ -25,56 +25,33 @@ namespace Beta\Microsoft\Graph\Model;
 class Picture extends Entity
 {
     /**
-    * Gets the width
+    * Gets the content
     *
-    * @return int The width
+    * @return \GuzzleHttp\Psr7\Stream The content
     */
-    public function getWidth()
+    public function getContent()
     {
-        if (array_key_exists("width", $this->_propDict)) {
-            return $this->_propDict["width"];
-        } else {
-            return null;
+        if (array_key_exists("content", $this->_propDict)) {
+            if (is_a($this->_propDict["content"], "\GuzzleHttp\Psr7\Stream")) {
+                return $this->_propDict["content"];
+            } else {
+                $this->_propDict["content"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["content"]);
+                return $this->_propDict["content"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the width
+    * Sets the content
     *
-    * @param int $val The width
+    * @param \GuzzleHttp\Psr7\Stream $val The content
     *
     * @return Picture
     */
-    public function setWidth($val)
+    public function setContent($val)
     {
-        $this->_propDict["width"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the height
-    *
-    * @return int The height
-    */
-    public function getHeight()
-    {
-        if (array_key_exists("height", $this->_propDict)) {
-            return $this->_propDict["height"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the height
-    *
-    * @param int $val The height
-    *
-    * @return Picture
-    */
-    public function setHeight($val)
-    {
-        $this->_propDict["height"] = intval($val);
+        $this->_propDict["content"] = $val;
         return $this;
     }
     
@@ -106,33 +83,56 @@ class Picture extends Entity
     }
     
     /**
-    * Gets the content
+    * Gets the height
     *
-    * @return \GuzzleHttp\Psr7\Stream The content
+    * @return int The height
     */
-    public function getContent()
+    public function getHeight()
     {
-        if (array_key_exists("content", $this->_propDict)) {
-            if (is_a($this->_propDict["content"], "\GuzzleHttp\Psr7\Stream")) {
-                return $this->_propDict["content"];
-            } else {
-                $this->_propDict["content"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["content"]);
-                return $this->_propDict["content"];
-            }
+        if (array_key_exists("height", $this->_propDict)) {
+            return $this->_propDict["height"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the content
+    * Sets the height
     *
-    * @param \GuzzleHttp\Psr7\Stream $val The content
+    * @param int $val The height
     *
     * @return Picture
     */
-    public function setContent($val)
+    public function setHeight($val)
     {
-        $this->_propDict["content"] = $val;
+        $this->_propDict["height"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the width
+    *
+    * @return int The width
+    */
+    public function getWidth()
+    {
+        if (array_key_exists("width", $this->_propDict)) {
+            return $this->_propDict["width"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the width
+    *
+    * @param int $val The width
+    *
+    * @return Picture
+    */
+    public function setWidth($val)
+    {
+        $this->_propDict["width"] = intval($val);
         return $this;
     }
     

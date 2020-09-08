@@ -24,32 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class EducationSynchronizationOAuth2ClientCredentialsConnectionSettings extends EducationSynchronizationConnectionSettings
 {
     /**
-    * Gets the tokenUrl
-    *
-    * @return string The tokenUrl
-    */
-    public function getTokenUrl()
-    {
-        if (array_key_exists("tokenUrl", $this->_propDict)) {
-            return $this->_propDict["tokenUrl"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the tokenUrl
-    *
-    * @param string $val The value of the tokenUrl
-    *
-    * @return EducationSynchronizationOAuth2ClientCredentialsConnectionSettings
-    */
-    public function setTokenUrl($val)
-    {
-        $this->_propDict["tokenUrl"] = $val;
-        return $this;
-    }
-    /**
     * Gets the scope
     *
     * @return string The scope
@@ -73,6 +47,32 @@ class EducationSynchronizationOAuth2ClientCredentialsConnectionSettings extends 
     public function setScope($val)
     {
         $this->_propDict["scope"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the tokenUrl
+    *
+    * @return string The tokenUrl
+    */
+    public function getTokenUrl()
+    {
+        if (array_key_exists("tokenUrl", $this->_propDict)) {
+            return $this->_propDict["tokenUrl"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the tokenUrl
+    *
+    * @param string $val The value of the tokenUrl
+    *
+    * @return EducationSynchronizationOAuth2ClientCredentialsConnectionSettings
+    */
+    public function setTokenUrl($val)
+    {
+        $this->_propDict["tokenUrl"] = $val;
         return $this;
     }
 }

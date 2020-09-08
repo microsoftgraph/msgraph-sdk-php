@@ -56,37 +56,6 @@ class BitlockerRecoveryKey extends Entity
     }
     
     /**
-    * Gets the volumeType
-    *
-    * @return VolumeType The volumeType
-    */
-    public function getVolumeType()
-    {
-        if (array_key_exists("volumeType", $this->_propDict)) {
-            if (is_a($this->_propDict["volumeType"], "Beta\Microsoft\Graph\Model\VolumeType")) {
-                return $this->_propDict["volumeType"];
-            } else {
-                $this->_propDict["volumeType"] = new VolumeType($this->_propDict["volumeType"]);
-                return $this->_propDict["volumeType"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the volumeType
-    *
-    * @param VolumeType $val The volumeType
-    *
-    * @return BitlockerRecoveryKey
-    */
-    public function setVolumeType($val)
-    {
-        $this->_propDict["volumeType"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the deviceId
     *
     * @return string The deviceId
@@ -137,6 +106,37 @@ class BitlockerRecoveryKey extends Entity
     public function setKey($val)
     {
         $this->_propDict["key"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the volumeType
+    *
+    * @return VolumeType The volumeType
+    */
+    public function getVolumeType()
+    {
+        if (array_key_exists("volumeType", $this->_propDict)) {
+            if (is_a($this->_propDict["volumeType"], "Beta\Microsoft\Graph\Model\VolumeType")) {
+                return $this->_propDict["volumeType"];
+            } else {
+                $this->_propDict["volumeType"] = new VolumeType($this->_propDict["volumeType"]);
+                return $this->_propDict["volumeType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the volumeType
+    *
+    * @param VolumeType $val The volumeType
+    *
+    * @return BitlockerRecoveryKey
+    */
+    public function setVolumeType($val)
+    {
+        $this->_propDict["volumeType"] = $val;
         return $this;
     }
     

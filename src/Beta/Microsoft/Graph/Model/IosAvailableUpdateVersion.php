@@ -23,33 +23,38 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class IosAvailableUpdateVersion extends Entity
 {
+
     /**
-    * Gets the productVersion
-    * The version of the update.
+    * Gets the expirationDateTime
+    * The expiration date of the update.
     *
-    * @return string The productVersion
+    * @return \DateTime The expirationDateTime
     */
-    public function getProductVersion()
+    public function getExpirationDateTime()
     {
-        if (array_key_exists("productVersion", $this->_propDict)) {
-            return $this->_propDict["productVersion"];
-        } else {
-            return null;
+        if (array_key_exists("expirationDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["expirationDateTime"], "\DateTime")) {
+                return $this->_propDict["expirationDateTime"];
+            } else {
+                $this->_propDict["expirationDateTime"] = new \DateTime($this->_propDict["expirationDateTime"]);
+                return $this->_propDict["expirationDateTime"];
+            }
         }
+        return null;
     }
 
     /**
-    * Sets the productVersion
-    * The version of the update.
+    * Sets the expirationDateTime
+    * The expiration date of the update.
     *
-    * @param string $val The value of the productVersion
+    * @param \DateTime $val The value to assign to the expirationDateTime
     *
-    * @return IosAvailableUpdateVersion
+    * @return IosAvailableUpdateVersion The IosAvailableUpdateVersion
     */
-    public function setProductVersion($val)
+    public function setExpirationDateTime($val)
     {
-        $this->_propDict["productVersion"] = $val;
-        return $this;
+        $this->_propDict["expirationDateTime"] = $val;
+         return $this;
     }
 
     /**
@@ -84,38 +89,33 @@ class IosAvailableUpdateVersion extends Entity
         $this->_propDict["postingDateTime"] = $val;
          return $this;
     }
-
     /**
-    * Gets the expirationDateTime
-    * The expiration date of the update.
+    * Gets the productVersion
+    * The version of the update.
     *
-    * @return \DateTime The expirationDateTime
+    * @return string The productVersion
     */
-    public function getExpirationDateTime()
+    public function getProductVersion()
     {
-        if (array_key_exists("expirationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["expirationDateTime"], "\DateTime")) {
-                return $this->_propDict["expirationDateTime"];
-            } else {
-                $this->_propDict["expirationDateTime"] = new \DateTime($this->_propDict["expirationDateTime"]);
-                return $this->_propDict["expirationDateTime"];
-            }
+        if (array_key_exists("productVersion", $this->_propDict)) {
+            return $this->_propDict["productVersion"];
+        } else {
+            return null;
         }
-        return null;
     }
 
     /**
-    * Sets the expirationDateTime
-    * The expiration date of the update.
+    * Sets the productVersion
+    * The version of the update.
     *
-    * @param \DateTime $val The value to assign to the expirationDateTime
+    * @param string $val The value of the productVersion
     *
-    * @return IosAvailableUpdateVersion The IosAvailableUpdateVersion
+    * @return IosAvailableUpdateVersion
     */
-    public function setExpirationDateTime($val)
+    public function setProductVersion($val)
     {
-        $this->_propDict["expirationDateTime"] = $val;
-         return $this;
+        $this->_propDict["productVersion"] = $val;
+        return $this;
     }
     /**
     * Gets the supportedDevices

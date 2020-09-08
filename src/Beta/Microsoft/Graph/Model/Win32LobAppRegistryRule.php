@@ -61,6 +61,34 @@ class Win32LobAppRegistryRule extends Win32LobAppRule
         return $this;
     }
     /**
+    * Gets the comparisonValue
+    * The registry comparison value.
+    *
+    * @return string The comparisonValue
+    */
+    public function getComparisonValue()
+    {
+        if (array_key_exists("comparisonValue", $this->_propDict)) {
+            return $this->_propDict["comparisonValue"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the comparisonValue
+    * The registry comparison value.
+    *
+    * @param string $val The value of the comparisonValue
+    *
+    * @return Win32LobAppRegistryRule
+    */
+    public function setComparisonValue($val)
+    {
+        $this->_propDict["comparisonValue"] = $val;
+        return $this;
+    }
+    /**
     * Gets the keyPath
     * The full path of the registry entry containing the value to detect.
     *
@@ -86,34 +114,6 @@ class Win32LobAppRegistryRule extends Win32LobAppRule
     public function setKeyPath($val)
     {
         $this->_propDict["keyPath"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the valueName
-    * The name of the registry value to detect.
-    *
-    * @return string The valueName
-    */
-    public function getValueName()
-    {
-        if (array_key_exists("valueName", $this->_propDict)) {
-            return $this->_propDict["valueName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the valueName
-    * The name of the registry value to detect.
-    *
-    * @param string $val The value of the valueName
-    *
-    * @return Win32LobAppRegistryRule
-    */
-    public function setValueName($val)
-    {
-        $this->_propDict["valueName"] = $val;
         return $this;
     }
 
@@ -183,31 +183,31 @@ class Win32LobAppRegistryRule extends Win32LobAppRule
          return $this;
     }
     /**
-    * Gets the comparisonValue
-    * The registry comparison value.
+    * Gets the valueName
+    * The name of the registry value to detect.
     *
-    * @return string The comparisonValue
+    * @return string The valueName
     */
-    public function getComparisonValue()
+    public function getValueName()
     {
-        if (array_key_exists("comparisonValue", $this->_propDict)) {
-            return $this->_propDict["comparisonValue"];
+        if (array_key_exists("valueName", $this->_propDict)) {
+            return $this->_propDict["valueName"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the comparisonValue
-    * The registry comparison value.
+    * Sets the valueName
+    * The name of the registry value to detect.
     *
-    * @param string $val The value of the comparisonValue
+    * @param string $val The value of the valueName
     *
     * @return Win32LobAppRegistryRule
     */
-    public function setComparisonValue($val)
+    public function setValueName($val)
     {
-        $this->_propDict["comparisonValue"] = $val;
+        $this->_propDict["valueName"] = $val;
         return $this;
     }
 }

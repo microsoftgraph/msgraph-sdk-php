@@ -24,34 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class MacOSSystemExtension extends Entity
 {
     /**
-    * Gets the teamIdentifier
-    * Gets or sets the team identifier that was used to sign the system extension.
-    *
-    * @return string The teamIdentifier
-    */
-    public function getTeamIdentifier()
-    {
-        if (array_key_exists("teamIdentifier", $this->_propDict)) {
-            return $this->_propDict["teamIdentifier"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the teamIdentifier
-    * Gets or sets the team identifier that was used to sign the system extension.
-    *
-    * @param string $val The value of the teamIdentifier
-    *
-    * @return MacOSSystemExtension
-    */
-    public function setTeamIdentifier($val)
-    {
-        $this->_propDict["teamIdentifier"] = $val;
-        return $this;
-    }
-    /**
     * Gets the bundleId
     * Gets or sets the bundle identifier of the system extension.
     *
@@ -77,6 +49,34 @@ class MacOSSystemExtension extends Entity
     public function setBundleId($val)
     {
         $this->_propDict["bundleId"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the teamIdentifier
+    * Gets or sets the team identifier that was used to sign the system extension.
+    *
+    * @return string The teamIdentifier
+    */
+    public function getTeamIdentifier()
+    {
+        if (array_key_exists("teamIdentifier", $this->_propDict)) {
+            return $this->_propDict["teamIdentifier"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the teamIdentifier
+    * Gets or sets the team identifier that was used to sign the system extension.
+    *
+    * @param string $val The value of the teamIdentifier
+    *
+    * @return MacOSSystemExtension
+    */
+    public function setTeamIdentifier($val)
+    {
+        $this->_propDict["teamIdentifier"] = $val;
         return $this;
     }
 }

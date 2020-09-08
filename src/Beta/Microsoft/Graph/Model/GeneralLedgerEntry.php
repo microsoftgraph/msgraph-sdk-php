@@ -25,33 +25,145 @@ namespace Beta\Microsoft\Graph\Model;
 class GeneralLedgerEntry extends Entity
 {
     /**
-    * Gets the postingDate
+    * Gets the accountId
     *
-    * @return \DateTime The postingDate
+    * @return string The accountId
     */
-    public function getPostingDate()
+    public function getAccountId()
     {
-        if (array_key_exists("postingDate", $this->_propDict)) {
-            if (is_a($this->_propDict["postingDate"], "\DateTime")) {
-                return $this->_propDict["postingDate"];
+        if (array_key_exists("accountId", $this->_propDict)) {
+            return $this->_propDict["accountId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the accountId
+    *
+    * @param string $val The accountId
+    *
+    * @return GeneralLedgerEntry
+    */
+    public function setAccountId($val)
+    {
+        $this->_propDict["accountId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the accountNumber
+    *
+    * @return string The accountNumber
+    */
+    public function getAccountNumber()
+    {
+        if (array_key_exists("accountNumber", $this->_propDict)) {
+            return $this->_propDict["accountNumber"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the accountNumber
+    *
+    * @param string $val The accountNumber
+    *
+    * @return GeneralLedgerEntry
+    */
+    public function setAccountNumber($val)
+    {
+        $this->_propDict["accountNumber"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the creditAmount
+    *
+    * @return Decimal The creditAmount
+    */
+    public function getCreditAmount()
+    {
+        if (array_key_exists("creditAmount", $this->_propDict)) {
+            if (is_a($this->_propDict["creditAmount"], "Beta\Microsoft\Graph\Model\Decimal")) {
+                return $this->_propDict["creditAmount"];
             } else {
-                $this->_propDict["postingDate"] = new \DateTime($this->_propDict["postingDate"]);
-                return $this->_propDict["postingDate"];
+                $this->_propDict["creditAmount"] = new Decimal($this->_propDict["creditAmount"]);
+                return $this->_propDict["creditAmount"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the postingDate
+    * Sets the creditAmount
     *
-    * @param \DateTime $val The postingDate
+    * @param Decimal $val The creditAmount
     *
     * @return GeneralLedgerEntry
     */
-    public function setPostingDate($val)
+    public function setCreditAmount($val)
     {
-        $this->_propDict["postingDate"] = $val;
+        $this->_propDict["creditAmount"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the debitAmount
+    *
+    * @return Decimal The debitAmount
+    */
+    public function getDebitAmount()
+    {
+        if (array_key_exists("debitAmount", $this->_propDict)) {
+            if (is_a($this->_propDict["debitAmount"], "Beta\Microsoft\Graph\Model\Decimal")) {
+                return $this->_propDict["debitAmount"];
+            } else {
+                $this->_propDict["debitAmount"] = new Decimal($this->_propDict["debitAmount"]);
+                return $this->_propDict["debitAmount"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the debitAmount
+    *
+    * @param Decimal $val The debitAmount
+    *
+    * @return GeneralLedgerEntry
+    */
+    public function setDebitAmount($val)
+    {
+        $this->_propDict["debitAmount"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the description
+    *
+    * @return string The description
+    */
+    public function getDescription()
+    {
+        if (array_key_exists("description", $this->_propDict)) {
+            return $this->_propDict["description"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the description
+    *
+    * @param string $val The description
+    *
+    * @return GeneralLedgerEntry
+    */
+    public function setDescription($val)
+    {
+        $this->_propDict["description"] = $val;
         return $this;
     }
     
@@ -110,149 +222,6 @@ class GeneralLedgerEntry extends Entity
     }
     
     /**
-    * Gets the accountId
-    *
-    * @return string The accountId
-    */
-    public function getAccountId()
-    {
-        if (array_key_exists("accountId", $this->_propDict)) {
-            return $this->_propDict["accountId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the accountId
-    *
-    * @param string $val The accountId
-    *
-    * @return GeneralLedgerEntry
-    */
-    public function setAccountId($val)
-    {
-        $this->_propDict["accountId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the accountNumber
-    *
-    * @return string The accountNumber
-    */
-    public function getAccountNumber()
-    {
-        if (array_key_exists("accountNumber", $this->_propDict)) {
-            return $this->_propDict["accountNumber"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the accountNumber
-    *
-    * @param string $val The accountNumber
-    *
-    * @return GeneralLedgerEntry
-    */
-    public function setAccountNumber($val)
-    {
-        $this->_propDict["accountNumber"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the description
-    *
-    * @return string The description
-    */
-    public function getDescription()
-    {
-        if (array_key_exists("description", $this->_propDict)) {
-            return $this->_propDict["description"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the description
-    *
-    * @param string $val The description
-    *
-    * @return GeneralLedgerEntry
-    */
-    public function setDescription($val)
-    {
-        $this->_propDict["description"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the debitAmount
-    *
-    * @return Decimal The debitAmount
-    */
-    public function getDebitAmount()
-    {
-        if (array_key_exists("debitAmount", $this->_propDict)) {
-            if (is_a($this->_propDict["debitAmount"], "Beta\Microsoft\Graph\Model\Decimal")) {
-                return $this->_propDict["debitAmount"];
-            } else {
-                $this->_propDict["debitAmount"] = new Decimal($this->_propDict["debitAmount"]);
-                return $this->_propDict["debitAmount"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the debitAmount
-    *
-    * @param Decimal $val The debitAmount
-    *
-    * @return GeneralLedgerEntry
-    */
-    public function setDebitAmount($val)
-    {
-        $this->_propDict["debitAmount"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the creditAmount
-    *
-    * @return Decimal The creditAmount
-    */
-    public function getCreditAmount()
-    {
-        if (array_key_exists("creditAmount", $this->_propDict)) {
-            if (is_a($this->_propDict["creditAmount"], "Beta\Microsoft\Graph\Model\Decimal")) {
-                return $this->_propDict["creditAmount"];
-            } else {
-                $this->_propDict["creditAmount"] = new Decimal($this->_propDict["creditAmount"]);
-                return $this->_propDict["creditAmount"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the creditAmount
-    *
-    * @param Decimal $val The creditAmount
-    *
-    * @return GeneralLedgerEntry
-    */
-    public function setCreditAmount($val)
-    {
-        $this->_propDict["creditAmount"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the lastModifiedDateTime
     *
     * @return \DateTime The lastModifiedDateTime
@@ -280,6 +249,37 @@ class GeneralLedgerEntry extends Entity
     public function setLastModifiedDateTime($val)
     {
         $this->_propDict["lastModifiedDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the postingDate
+    *
+    * @return \DateTime The postingDate
+    */
+    public function getPostingDate()
+    {
+        if (array_key_exists("postingDate", $this->_propDict)) {
+            if (is_a($this->_propDict["postingDate"], "\DateTime")) {
+                return $this->_propDict["postingDate"];
+            } else {
+                $this->_propDict["postingDate"] = new \DateTime($this->_propDict["postingDate"]);
+                return $this->_propDict["postingDate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the postingDate
+    *
+    * @param \DateTime $val The postingDate
+    *
+    * @return GeneralLedgerEntry
+    */
+    public function setPostingDate($val)
+    {
+        $this->_propDict["postingDate"] = $val;
         return $this;
     }
     

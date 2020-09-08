@@ -25,33 +25,33 @@ class CalendarSharingMessageAction extends Entity
 {
 
     /**
-    * Gets the importance
+    * Gets the action
     *
-    * @return CalendarSharingActionImportance The importance
+    * @return CalendarSharingAction The action
     */
-    public function getImportance()
+    public function getAction()
     {
-        if (array_key_exists("importance", $this->_propDict)) {
-            if (is_a($this->_propDict["importance"], "Beta\Microsoft\Graph\Model\CalendarSharingActionImportance")) {
-                return $this->_propDict["importance"];
+        if (array_key_exists("action", $this->_propDict)) {
+            if (is_a($this->_propDict["action"], "Beta\Microsoft\Graph\Model\CalendarSharingAction")) {
+                return $this->_propDict["action"];
             } else {
-                $this->_propDict["importance"] = new CalendarSharingActionImportance($this->_propDict["importance"]);
-                return $this->_propDict["importance"];
+                $this->_propDict["action"] = new CalendarSharingAction($this->_propDict["action"]);
+                return $this->_propDict["action"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the importance
+    * Sets the action
     *
-    * @param CalendarSharingActionImportance $val The value to assign to the importance
+    * @param CalendarSharingAction $val The value to assign to the action
     *
     * @return CalendarSharingMessageAction The CalendarSharingMessageAction
     */
-    public function setImportance($val)
+    public function setAction($val)
     {
-        $this->_propDict["importance"] = $val;
+        $this->_propDict["action"] = $val;
          return $this;
     }
 
@@ -87,33 +87,33 @@ class CalendarSharingMessageAction extends Entity
     }
 
     /**
-    * Gets the action
+    * Gets the importance
     *
-    * @return CalendarSharingAction The action
+    * @return CalendarSharingActionImportance The importance
     */
-    public function getAction()
+    public function getImportance()
     {
-        if (array_key_exists("action", $this->_propDict)) {
-            if (is_a($this->_propDict["action"], "Beta\Microsoft\Graph\Model\CalendarSharingAction")) {
-                return $this->_propDict["action"];
+        if (array_key_exists("importance", $this->_propDict)) {
+            if (is_a($this->_propDict["importance"], "Beta\Microsoft\Graph\Model\CalendarSharingActionImportance")) {
+                return $this->_propDict["importance"];
             } else {
-                $this->_propDict["action"] = new CalendarSharingAction($this->_propDict["action"]);
-                return $this->_propDict["action"];
+                $this->_propDict["importance"] = new CalendarSharingActionImportance($this->_propDict["importance"]);
+                return $this->_propDict["importance"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the action
+    * Sets the importance
     *
-    * @param CalendarSharingAction $val The value to assign to the action
+    * @param CalendarSharingActionImportance $val The value to assign to the importance
     *
     * @return CalendarSharingMessageAction The CalendarSharingMessageAction
     */
-    public function setAction($val)
+    public function setImportance($val)
     {
-        $this->_propDict["action"] = $val;
+        $this->_propDict["importance"] = $val;
          return $this;
     }
 }

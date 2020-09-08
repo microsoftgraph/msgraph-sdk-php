@@ -25,68 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class MacOSLobApp extends MobileLobApp
 {
     /**
-    * Gets the bundleId
-    * The bundle id.
-    *
-    * @return string The bundleId
-    */
-    public function getBundleId()
-    {
-        if (array_key_exists("bundleId", $this->_propDict)) {
-            return $this->_propDict["bundleId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the bundleId
-    * The bundle id.
-    *
-    * @param string $val The bundleId
-    *
-    * @return MacOSLobApp
-    */
-    public function setBundleId($val)
-    {
-        $this->_propDict["bundleId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the minimumSupportedOperatingSystem
-    * The value for the minimum applicable operating system.
-    *
-    * @return MacOSMinimumOperatingSystem The minimumSupportedOperatingSystem
-    */
-    public function getMinimumSupportedOperatingSystem()
-    {
-        if (array_key_exists("minimumSupportedOperatingSystem", $this->_propDict)) {
-            if (is_a($this->_propDict["minimumSupportedOperatingSystem"], "Beta\Microsoft\Graph\Model\MacOSMinimumOperatingSystem")) {
-                return $this->_propDict["minimumSupportedOperatingSystem"];
-            } else {
-                $this->_propDict["minimumSupportedOperatingSystem"] = new MacOSMinimumOperatingSystem($this->_propDict["minimumSupportedOperatingSystem"]);
-                return $this->_propDict["minimumSupportedOperatingSystem"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the minimumSupportedOperatingSystem
-    * The value for the minimum applicable operating system.
-    *
-    * @param MacOSMinimumOperatingSystem $val The minimumSupportedOperatingSystem
-    *
-    * @return MacOSLobApp
-    */
-    public function setMinimumSupportedOperatingSystem($val)
-    {
-        $this->_propDict["minimumSupportedOperatingSystem"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the buildNumber
     * The build number of MacOS Line of Business (LoB) app.
     *
@@ -116,31 +54,31 @@ class MacOSLobApp extends MobileLobApp
     }
     
     /**
-    * Gets the versionNumber
-    * The version number of MacOS Line of Business (LoB) app.
+    * Gets the bundleId
+    * The bundle id.
     *
-    * @return string The versionNumber
+    * @return string The bundleId
     */
-    public function getVersionNumber()
+    public function getBundleId()
     {
-        if (array_key_exists("versionNumber", $this->_propDict)) {
-            return $this->_propDict["versionNumber"];
+        if (array_key_exists("bundleId", $this->_propDict)) {
+            return $this->_propDict["bundleId"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the versionNumber
-    * The version number of MacOS Line of Business (LoB) app.
+    * Sets the bundleId
+    * The bundle id.
     *
-    * @param string $val The versionNumber
+    * @param string $val The bundleId
     *
     * @return MacOSLobApp
     */
-    public function setVersionNumber($val)
+    public function setBundleId($val)
     {
-        $this->_propDict["versionNumber"] = $val;
+        $this->_propDict["bundleId"] = $val;
         return $this;
     }
     
@@ -204,31 +142,31 @@ class MacOSLobApp extends MobileLobApp
     }
     
     /**
-    * Gets the md5HashChunkSize
-    * The chunk size for MD5 hash
+    * Gets the ignoreVersionDetection
+    * A boolean to control whether the app's version will be used to detect the app after it is installed on a device. Set this to true for macOS Line of Business (LoB) apps that use a self update feature.
     *
-    * @return int The md5HashChunkSize
+    * @return bool The ignoreVersionDetection
     */
-    public function getMd5HashChunkSize()
+    public function getIgnoreVersionDetection()
     {
-        if (array_key_exists("md5HashChunkSize", $this->_propDict)) {
-            return $this->_propDict["md5HashChunkSize"];
+        if (array_key_exists("ignoreVersionDetection", $this->_propDict)) {
+            return $this->_propDict["ignoreVersionDetection"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the md5HashChunkSize
-    * The chunk size for MD5 hash
+    * Sets the ignoreVersionDetection
+    * A boolean to control whether the app's version will be used to detect the app after it is installed on a device. Set this to true for macOS Line of Business (LoB) apps that use a self update feature.
     *
-    * @param int $val The md5HashChunkSize
+    * @param bool $val The ignoreVersionDetection
     *
     * @return MacOSLobApp
     */
-    public function setMd5HashChunkSize($val)
+    public function setIgnoreVersionDetection($val)
     {
-        $this->_propDict["md5HashChunkSize"] = intval($val);
+        $this->_propDict["ignoreVersionDetection"] = boolval($val);
         return $this;
     }
     
@@ -262,31 +200,93 @@ class MacOSLobApp extends MobileLobApp
     }
     
     /**
-    * Gets the ignoreVersionDetection
-    * A boolean to control whether the app's version will be used to detect the app after it is installed on a device. Set this to true for macOS Line of Business (LoB) apps that use a self update feature.
+    * Gets the md5HashChunkSize
+    * The chunk size for MD5 hash
     *
-    * @return bool The ignoreVersionDetection
+    * @return int The md5HashChunkSize
     */
-    public function getIgnoreVersionDetection()
+    public function getMd5HashChunkSize()
     {
-        if (array_key_exists("ignoreVersionDetection", $this->_propDict)) {
-            return $this->_propDict["ignoreVersionDetection"];
+        if (array_key_exists("md5HashChunkSize", $this->_propDict)) {
+            return $this->_propDict["md5HashChunkSize"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the ignoreVersionDetection
-    * A boolean to control whether the app's version will be used to detect the app after it is installed on a device. Set this to true for macOS Line of Business (LoB) apps that use a self update feature.
+    * Sets the md5HashChunkSize
+    * The chunk size for MD5 hash
     *
-    * @param bool $val The ignoreVersionDetection
+    * @param int $val The md5HashChunkSize
     *
     * @return MacOSLobApp
     */
-    public function setIgnoreVersionDetection($val)
+    public function setMd5HashChunkSize($val)
     {
-        $this->_propDict["ignoreVersionDetection"] = boolval($val);
+        $this->_propDict["md5HashChunkSize"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the minimumSupportedOperatingSystem
+    * The value for the minimum applicable operating system.
+    *
+    * @return MacOSMinimumOperatingSystem The minimumSupportedOperatingSystem
+    */
+    public function getMinimumSupportedOperatingSystem()
+    {
+        if (array_key_exists("minimumSupportedOperatingSystem", $this->_propDict)) {
+            if (is_a($this->_propDict["minimumSupportedOperatingSystem"], "Beta\Microsoft\Graph\Model\MacOSMinimumOperatingSystem")) {
+                return $this->_propDict["minimumSupportedOperatingSystem"];
+            } else {
+                $this->_propDict["minimumSupportedOperatingSystem"] = new MacOSMinimumOperatingSystem($this->_propDict["minimumSupportedOperatingSystem"]);
+                return $this->_propDict["minimumSupportedOperatingSystem"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the minimumSupportedOperatingSystem
+    * The value for the minimum applicable operating system.
+    *
+    * @param MacOSMinimumOperatingSystem $val The minimumSupportedOperatingSystem
+    *
+    * @return MacOSLobApp
+    */
+    public function setMinimumSupportedOperatingSystem($val)
+    {
+        $this->_propDict["minimumSupportedOperatingSystem"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the versionNumber
+    * The version number of MacOS Line of Business (LoB) app.
+    *
+    * @return string The versionNumber
+    */
+    public function getVersionNumber()
+    {
+        if (array_key_exists("versionNumber", $this->_propDict)) {
+            return $this->_propDict["versionNumber"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the versionNumber
+    * The version number of MacOS Line of Business (LoB) app.
+    *
+    * @param string $val The versionNumber
+    *
+    * @return MacOSLobApp
+    */
+    public function setVersionNumber($val)
+    {
+        $this->_propDict["versionNumber"] = $val;
         return $this;
     }
     

@@ -25,114 +25,29 @@ namespace Beta\Microsoft\Graph\Model;
 class ReferenceAttachment extends Attachment
 {
     /**
-    * Gets the sourceUrl
+    * Gets the isFolder
     *
-    * @return string The sourceUrl
+    * @return bool The isFolder
     */
-    public function getSourceUrl()
+    public function getIsFolder()
     {
-        if (array_key_exists("sourceUrl", $this->_propDict)) {
-            return $this->_propDict["sourceUrl"];
+        if (array_key_exists("isFolder", $this->_propDict)) {
+            return $this->_propDict["isFolder"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the sourceUrl
+    * Sets the isFolder
     *
-    * @param string $val The sourceUrl
-    *
-    * @return ReferenceAttachment
-    */
-    public function setSourceUrl($val)
-    {
-        $this->_propDict["sourceUrl"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the providerType
-    *
-    * @return ReferenceAttachmentProvider The providerType
-    */
-    public function getProviderType()
-    {
-        if (array_key_exists("providerType", $this->_propDict)) {
-            if (is_a($this->_propDict["providerType"], "Beta\Microsoft\Graph\Model\ReferenceAttachmentProvider")) {
-                return $this->_propDict["providerType"];
-            } else {
-                $this->_propDict["providerType"] = new ReferenceAttachmentProvider($this->_propDict["providerType"]);
-                return $this->_propDict["providerType"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the providerType
-    *
-    * @param ReferenceAttachmentProvider $val The providerType
+    * @param bool $val The isFolder
     *
     * @return ReferenceAttachment
     */
-    public function setProviderType($val)
+    public function setIsFolder($val)
     {
-        $this->_propDict["providerType"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the thumbnailUrl
-    *
-    * @return string The thumbnailUrl
-    */
-    public function getThumbnailUrl()
-    {
-        if (array_key_exists("thumbnailUrl", $this->_propDict)) {
-            return $this->_propDict["thumbnailUrl"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the thumbnailUrl
-    *
-    * @param string $val The thumbnailUrl
-    *
-    * @return ReferenceAttachment
-    */
-    public function setThumbnailUrl($val)
-    {
-        $this->_propDict["thumbnailUrl"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the previewUrl
-    *
-    * @return string The previewUrl
-    */
-    public function getPreviewUrl()
-    {
-        if (array_key_exists("previewUrl", $this->_propDict)) {
-            return $this->_propDict["previewUrl"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the previewUrl
-    *
-    * @param string $val The previewUrl
-    *
-    * @return ReferenceAttachment
-    */
-    public function setPreviewUrl($val)
-    {
-        $this->_propDict["previewUrl"] = $val;
+        $this->_propDict["isFolder"] = boolval($val);
         return $this;
     }
     
@@ -168,29 +83,114 @@ class ReferenceAttachment extends Attachment
     }
     
     /**
-    * Gets the isFolder
+    * Gets the previewUrl
     *
-    * @return bool The isFolder
+    * @return string The previewUrl
     */
-    public function getIsFolder()
+    public function getPreviewUrl()
     {
-        if (array_key_exists("isFolder", $this->_propDict)) {
-            return $this->_propDict["isFolder"];
+        if (array_key_exists("previewUrl", $this->_propDict)) {
+            return $this->_propDict["previewUrl"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the isFolder
+    * Sets the previewUrl
     *
-    * @param bool $val The isFolder
+    * @param string $val The previewUrl
     *
     * @return ReferenceAttachment
     */
-    public function setIsFolder($val)
+    public function setPreviewUrl($val)
     {
-        $this->_propDict["isFolder"] = boolval($val);
+        $this->_propDict["previewUrl"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the providerType
+    *
+    * @return ReferenceAttachmentProvider The providerType
+    */
+    public function getProviderType()
+    {
+        if (array_key_exists("providerType", $this->_propDict)) {
+            if (is_a($this->_propDict["providerType"], "Beta\Microsoft\Graph\Model\ReferenceAttachmentProvider")) {
+                return $this->_propDict["providerType"];
+            } else {
+                $this->_propDict["providerType"] = new ReferenceAttachmentProvider($this->_propDict["providerType"]);
+                return $this->_propDict["providerType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the providerType
+    *
+    * @param ReferenceAttachmentProvider $val The providerType
+    *
+    * @return ReferenceAttachment
+    */
+    public function setProviderType($val)
+    {
+        $this->_propDict["providerType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the sourceUrl
+    *
+    * @return string The sourceUrl
+    */
+    public function getSourceUrl()
+    {
+        if (array_key_exists("sourceUrl", $this->_propDict)) {
+            return $this->_propDict["sourceUrl"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the sourceUrl
+    *
+    * @param string $val The sourceUrl
+    *
+    * @return ReferenceAttachment
+    */
+    public function setSourceUrl($val)
+    {
+        $this->_propDict["sourceUrl"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the thumbnailUrl
+    *
+    * @return string The thumbnailUrl
+    */
+    public function getThumbnailUrl()
+    {
+        if (array_key_exists("thumbnailUrl", $this->_propDict)) {
+            return $this->_propDict["thumbnailUrl"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the thumbnailUrl
+    *
+    * @param string $val The thumbnailUrl
+    *
+    * @return ReferenceAttachment
+    */
+    public function setThumbnailUrl($val)
+    {
+        $this->_propDict["thumbnailUrl"] = $val;
         return $this;
     }
     

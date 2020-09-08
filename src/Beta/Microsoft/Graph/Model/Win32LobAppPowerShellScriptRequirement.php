@@ -32,6 +32,39 @@ class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequirement
         $this->setODataType("#microsoft.graph.win32LobAppPowerShellScriptRequirement");
     }
 
+
+    /**
+    * Gets the detectionType
+    * The detection type for script output
+    *
+    * @return Win32LobAppPowerShellScriptDetectionType The detectionType
+    */
+    public function getDetectionType()
+    {
+        if (array_key_exists("detectionType", $this->_propDict)) {
+            if (is_a($this->_propDict["detectionType"], "Beta\Microsoft\Graph\Model\Win32LobAppPowerShellScriptDetectionType")) {
+                return $this->_propDict["detectionType"];
+            } else {
+                $this->_propDict["detectionType"] = new Win32LobAppPowerShellScriptDetectionType($this->_propDict["detectionType"]);
+                return $this->_propDict["detectionType"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the detectionType
+    * The detection type for script output
+    *
+    * @param Win32LobAppPowerShellScriptDetectionType $val The value to assign to the detectionType
+    *
+    * @return Win32LobAppPowerShellScriptRequirement The Win32LobAppPowerShellScriptRequirement
+    */
+    public function setDetectionType($val)
+    {
+        $this->_propDict["detectionType"] = $val;
+         return $this;
+    }
     /**
     * Gets the displayName
     * The unique display name for this rule
@@ -176,38 +209,5 @@ class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequirement
     {
         $this->_propDict["scriptContent"] = $val;
         return $this;
-    }
-
-    /**
-    * Gets the detectionType
-    * The detection type for script output
-    *
-    * @return Win32LobAppPowerShellScriptDetectionType The detectionType
-    */
-    public function getDetectionType()
-    {
-        if (array_key_exists("detectionType", $this->_propDict)) {
-            if (is_a($this->_propDict["detectionType"], "Beta\Microsoft\Graph\Model\Win32LobAppPowerShellScriptDetectionType")) {
-                return $this->_propDict["detectionType"];
-            } else {
-                $this->_propDict["detectionType"] = new Win32LobAppPowerShellScriptDetectionType($this->_propDict["detectionType"]);
-                return $this->_propDict["detectionType"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the detectionType
-    * The detection type for script output
-    *
-    * @param Win32LobAppPowerShellScriptDetectionType $val The value to assign to the detectionType
-    *
-    * @return Win32LobAppPowerShellScriptRequirement The Win32LobAppPowerShellScriptRequirement
-    */
-    public function setDetectionType($val)
-    {
-        $this->_propDict["detectionType"] = $val;
-         return $this;
     }
 }

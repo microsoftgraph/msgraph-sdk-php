@@ -25,35 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class DeviceManagementScriptUserState extends Entity
 {
     /**
-    * Gets the successDeviceCount
-    * Success device count for specific user.
-    *
-    * @return int The successDeviceCount
-    */
-    public function getSuccessDeviceCount()
-    {
-        if (array_key_exists("successDeviceCount", $this->_propDict)) {
-            return $this->_propDict["successDeviceCount"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the successDeviceCount
-    * Success device count for specific user.
-    *
-    * @param int $val The successDeviceCount
-    *
-    * @return DeviceManagementScriptUserState
-    */
-    public function setSuccessDeviceCount($val)
-    {
-        $this->_propDict["successDeviceCount"] = intval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the errorDeviceCount
     * Error device count for specific user.
     *
@@ -79,6 +50,35 @@ class DeviceManagementScriptUserState extends Entity
     public function setErrorDeviceCount($val)
     {
         $this->_propDict["errorDeviceCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the successDeviceCount
+    * Success device count for specific user.
+    *
+    * @return int The successDeviceCount
+    */
+    public function getSuccessDeviceCount()
+    {
+        if (array_key_exists("successDeviceCount", $this->_propDict)) {
+            return $this->_propDict["successDeviceCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the successDeviceCount
+    * Success device count for specific user.
+    *
+    * @param int $val The successDeviceCount
+    *
+    * @return DeviceManagementScriptUserState
+    */
+    public function setSuccessDeviceCount($val)
+    {
+        $this->_propDict["successDeviceCount"] = intval($val);
         return $this;
     }
     

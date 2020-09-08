@@ -25,6 +25,33 @@ namespace Beta\Microsoft\Graph\Model;
 class AccessPackageResourceScope extends Entity
 {
     /**
+    * Gets the description
+    *
+    * @return string The description
+    */
+    public function getDescription()
+    {
+        if (array_key_exists("description", $this->_propDict)) {
+            return $this->_propDict["description"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the description
+    *
+    * @param string $val The description
+    *
+    * @return AccessPackageResourceScope
+    */
+    public function setDescription($val)
+    {
+        $this->_propDict["description"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the displayName
     *
     * @return string The displayName
@@ -52,29 +79,29 @@ class AccessPackageResourceScope extends Entity
     }
     
     /**
-    * Gets the description
+    * Gets the isRootScope
     *
-    * @return string The description
+    * @return bool The isRootScope
     */
-    public function getDescription()
+    public function getIsRootScope()
     {
-        if (array_key_exists("description", $this->_propDict)) {
-            return $this->_propDict["description"];
+        if (array_key_exists("isRootScope", $this->_propDict)) {
+            return $this->_propDict["isRootScope"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the description
+    * Sets the isRootScope
     *
-    * @param string $val The description
+    * @param bool $val The isRootScope
     *
     * @return AccessPackageResourceScope
     */
-    public function setDescription($val)
+    public function setIsRootScope($val)
     {
-        $this->_propDict["description"] = $val;
+        $this->_propDict["isRootScope"] = boolval($val);
         return $this;
     }
     
@@ -156,33 +183,6 @@ class AccessPackageResourceScope extends Entity
     public function setRoleOriginId($val)
     {
         $this->_propDict["roleOriginId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the isRootScope
-    *
-    * @return bool The isRootScope
-    */
-    public function getIsRootScope()
-    {
-        if (array_key_exists("isRootScope", $this->_propDict)) {
-            return $this->_propDict["isRootScope"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the isRootScope
-    *
-    * @param bool $val The isRootScope
-    *
-    * @return AccessPackageResourceScope
-    */
-    public function setIsRootScope($val)
-    {
-        $this->_propDict["isRootScope"] = boolval($val);
         return $this;
     }
     

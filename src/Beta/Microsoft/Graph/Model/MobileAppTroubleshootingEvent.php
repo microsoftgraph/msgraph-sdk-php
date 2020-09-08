@@ -25,64 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshootingEvent
 {
     /**
-    * Gets the managedDeviceIdentifier
-    * Device identifier created or collected by Intune.
-    *
-    * @return string The managedDeviceIdentifier
-    */
-    public function getManagedDeviceIdentifier()
-    {
-        if (array_key_exists("managedDeviceIdentifier", $this->_propDict)) {
-            return $this->_propDict["managedDeviceIdentifier"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the managedDeviceIdentifier
-    * Device identifier created or collected by Intune.
-    *
-    * @param string $val The managedDeviceIdentifier
-    *
-    * @return MobileAppTroubleshootingEvent
-    */
-    public function setManagedDeviceIdentifier($val)
-    {
-        $this->_propDict["managedDeviceIdentifier"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the userId
-    * Identifier for the user that tried to enroll the device.
-    *
-    * @return string The userId
-    */
-    public function getUserId()
-    {
-        if (array_key_exists("userId", $this->_propDict)) {
-            return $this->_propDict["userId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the userId
-    * Identifier for the user that tried to enroll the device.
-    *
-    * @param string $val The userId
-    *
-    * @return MobileAppTroubleshootingEvent
-    */
-    public function setUserId($val)
-    {
-        $this->_propDict["userId"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the applicationId
     * Intune application identifier.
     *
@@ -138,6 +80,64 @@ class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshootingEvent
     public function setHistory($val)
     {
 		$this->_propDict["history"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the managedDeviceIdentifier
+    * Device identifier created or collected by Intune.
+    *
+    * @return string The managedDeviceIdentifier
+    */
+    public function getManagedDeviceIdentifier()
+    {
+        if (array_key_exists("managedDeviceIdentifier", $this->_propDict)) {
+            return $this->_propDict["managedDeviceIdentifier"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the managedDeviceIdentifier
+    * Device identifier created or collected by Intune.
+    *
+    * @param string $val The managedDeviceIdentifier
+    *
+    * @return MobileAppTroubleshootingEvent
+    */
+    public function setManagedDeviceIdentifier($val)
+    {
+        $this->_propDict["managedDeviceIdentifier"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userId
+    * Identifier for the user that tried to enroll the device.
+    *
+    * @return string The userId
+    */
+    public function getUserId()
+    {
+        if (array_key_exists("userId", $this->_propDict)) {
+            return $this->_propDict["userId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the userId
+    * Identifier for the user that tried to enroll the device.
+    *
+    * @param string $val The userId
+    *
+    * @return MobileAppTroubleshootingEvent
+    */
+    public function setUserId($val)
+    {
+        $this->_propDict["userId"] = $val;
         return $this;
     }
     

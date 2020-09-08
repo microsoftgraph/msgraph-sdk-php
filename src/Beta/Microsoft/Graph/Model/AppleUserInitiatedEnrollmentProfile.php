@@ -24,39 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class AppleUserInitiatedEnrollmentProfile extends Entity
 {
-    /**
-    * Gets the defaultEnrollmentType
-    * The default profile enrollment type.
-    *
-    * @return AppleUserInitiatedEnrollmentType The defaultEnrollmentType
-    */
-    public function getDefaultEnrollmentType()
-    {
-        if (array_key_exists("defaultEnrollmentType", $this->_propDict)) {
-            if (is_a($this->_propDict["defaultEnrollmentType"], "Beta\Microsoft\Graph\Model\AppleUserInitiatedEnrollmentType")) {
-                return $this->_propDict["defaultEnrollmentType"];
-            } else {
-                $this->_propDict["defaultEnrollmentType"] = new AppleUserInitiatedEnrollmentType($this->_propDict["defaultEnrollmentType"]);
-                return $this->_propDict["defaultEnrollmentType"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the defaultEnrollmentType
-    * The default profile enrollment type.
-    *
-    * @param AppleUserInitiatedEnrollmentType $val The defaultEnrollmentType
-    *
-    * @return AppleUserInitiatedEnrollmentProfile
-    */
-    public function setDefaultEnrollmentType($val)
-    {
-        $this->_propDict["defaultEnrollmentType"] = $val;
-        return $this;
-    }
-    
 
      /** 
      * Gets the availableEnrollmentTypeOptions
@@ -84,126 +51,6 @@ class AppleUserInitiatedEnrollmentProfile extends Entity
     public function setAvailableEnrollmentTypeOptions($val)
     {
 		$this->_propDict["availableEnrollmentTypeOptions"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the displayName
-    * Name of the profile
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the displayName
-    * Name of the profile
-    *
-    * @param string $val The displayName
-    *
-    * @return AppleUserInitiatedEnrollmentProfile
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the description
-    * Description of the profile
-    *
-    * @return string The description
-    */
-    public function getDescription()
-    {
-        if (array_key_exists("description", $this->_propDict)) {
-            return $this->_propDict["description"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the description
-    * Description of the profile
-    *
-    * @param string $val The description
-    *
-    * @return AppleUserInitiatedEnrollmentProfile
-    */
-    public function setDescription($val)
-    {
-        $this->_propDict["description"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the priority
-    * Priority, 0 is highest
-    *
-    * @return int The priority
-    */
-    public function getPriority()
-    {
-        if (array_key_exists("priority", $this->_propDict)) {
-            return $this->_propDict["priority"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the priority
-    * Priority, 0 is highest
-    *
-    * @param int $val The priority
-    *
-    * @return AppleUserInitiatedEnrollmentProfile
-    */
-    public function setPriority($val)
-    {
-        $this->_propDict["priority"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the platform
-    * The platform of the Device.
-    *
-    * @return DevicePlatformType The platform
-    */
-    public function getPlatform()
-    {
-        if (array_key_exists("platform", $this->_propDict)) {
-            if (is_a($this->_propDict["platform"], "Beta\Microsoft\Graph\Model\DevicePlatformType")) {
-                return $this->_propDict["platform"];
-            } else {
-                $this->_propDict["platform"] = new DevicePlatformType($this->_propDict["platform"]);
-                return $this->_propDict["platform"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the platform
-    * The platform of the Device.
-    *
-    * @param DevicePlatformType $val The platform
-    *
-    * @return AppleUserInitiatedEnrollmentProfile
-    */
-    public function setPlatform($val)
-    {
-        $this->_propDict["platform"] = $val;
         return $this;
     }
     
@@ -241,6 +88,97 @@ class AppleUserInitiatedEnrollmentProfile extends Entity
     }
     
     /**
+    * Gets the defaultEnrollmentType
+    * The default profile enrollment type.
+    *
+    * @return AppleUserInitiatedEnrollmentType The defaultEnrollmentType
+    */
+    public function getDefaultEnrollmentType()
+    {
+        if (array_key_exists("defaultEnrollmentType", $this->_propDict)) {
+            if (is_a($this->_propDict["defaultEnrollmentType"], "Beta\Microsoft\Graph\Model\AppleUserInitiatedEnrollmentType")) {
+                return $this->_propDict["defaultEnrollmentType"];
+            } else {
+                $this->_propDict["defaultEnrollmentType"] = new AppleUserInitiatedEnrollmentType($this->_propDict["defaultEnrollmentType"]);
+                return $this->_propDict["defaultEnrollmentType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the defaultEnrollmentType
+    * The default profile enrollment type.
+    *
+    * @param AppleUserInitiatedEnrollmentType $val The defaultEnrollmentType
+    *
+    * @return AppleUserInitiatedEnrollmentProfile
+    */
+    public function setDefaultEnrollmentType($val)
+    {
+        $this->_propDict["defaultEnrollmentType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the description
+    * Description of the profile
+    *
+    * @return string The description
+    */
+    public function getDescription()
+    {
+        if (array_key_exists("description", $this->_propDict)) {
+            return $this->_propDict["description"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the description
+    * Description of the profile
+    *
+    * @param string $val The description
+    *
+    * @return AppleUserInitiatedEnrollmentProfile
+    */
+    public function setDescription($val)
+    {
+        $this->_propDict["description"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the displayName
+    * Name of the profile
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the displayName
+    * Name of the profile
+    *
+    * @param string $val The displayName
+    *
+    * @return AppleUserInitiatedEnrollmentProfile
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the lastModifiedDateTime
     * Profile last modified time
     *
@@ -270,6 +208,68 @@ class AppleUserInitiatedEnrollmentProfile extends Entity
     public function setLastModifiedDateTime($val)
     {
         $this->_propDict["lastModifiedDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the platform
+    * The platform of the Device.
+    *
+    * @return DevicePlatformType The platform
+    */
+    public function getPlatform()
+    {
+        if (array_key_exists("platform", $this->_propDict)) {
+            if (is_a($this->_propDict["platform"], "Beta\Microsoft\Graph\Model\DevicePlatformType")) {
+                return $this->_propDict["platform"];
+            } else {
+                $this->_propDict["platform"] = new DevicePlatformType($this->_propDict["platform"]);
+                return $this->_propDict["platform"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the platform
+    * The platform of the Device.
+    *
+    * @param DevicePlatformType $val The platform
+    *
+    * @return AppleUserInitiatedEnrollmentProfile
+    */
+    public function setPlatform($val)
+    {
+        $this->_propDict["platform"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the priority
+    * Priority, 0 is highest
+    *
+    * @return int The priority
+    */
+    public function getPriority()
+    {
+        if (array_key_exists("priority", $this->_propDict)) {
+            return $this->_propDict["priority"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the priority
+    * Priority, 0 is highest
+    *
+    * @param int $val The priority
+    *
+    * @return AppleUserInitiatedEnrollmentProfile
+    */
+    public function setPriority($val)
+    {
+        $this->_propDict["priority"] = intval($val);
         return $this;
     }
     

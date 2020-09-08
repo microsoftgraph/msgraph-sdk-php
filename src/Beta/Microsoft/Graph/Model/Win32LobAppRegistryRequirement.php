@@ -60,6 +60,39 @@ class Win32LobAppRegistryRequirement extends Win32LobAppRequirement
         $this->_propDict["check32BitOn64System"] = $val;
         return $this;
     }
+
+    /**
+    * Gets the detectionType
+    * The registry data detection type
+    *
+    * @return Win32LobAppRegistryDetectionType The detectionType
+    */
+    public function getDetectionType()
+    {
+        if (array_key_exists("detectionType", $this->_propDict)) {
+            if (is_a($this->_propDict["detectionType"], "Beta\Microsoft\Graph\Model\Win32LobAppRegistryDetectionType")) {
+                return $this->_propDict["detectionType"];
+            } else {
+                $this->_propDict["detectionType"] = new Win32LobAppRegistryDetectionType($this->_propDict["detectionType"]);
+                return $this->_propDict["detectionType"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the detectionType
+    * The registry data detection type
+    *
+    * @param Win32LobAppRegistryDetectionType $val The value to assign to the detectionType
+    *
+    * @return Win32LobAppRegistryRequirement The Win32LobAppRegistryRequirement
+    */
+    public function setDetectionType($val)
+    {
+        $this->_propDict["detectionType"] = $val;
+         return $this;
+    }
     /**
     * Gets the keyPath
     * The registry key path to detect Win32 Line of Business (LoB) app
@@ -115,38 +148,5 @@ class Win32LobAppRegistryRequirement extends Win32LobAppRequirement
     {
         $this->_propDict["valueName"] = $val;
         return $this;
-    }
-
-    /**
-    * Gets the detectionType
-    * The registry data detection type
-    *
-    * @return Win32LobAppRegistryDetectionType The detectionType
-    */
-    public function getDetectionType()
-    {
-        if (array_key_exists("detectionType", $this->_propDict)) {
-            if (is_a($this->_propDict["detectionType"], "Beta\Microsoft\Graph\Model\Win32LobAppRegistryDetectionType")) {
-                return $this->_propDict["detectionType"];
-            } else {
-                $this->_propDict["detectionType"] = new Win32LobAppRegistryDetectionType($this->_propDict["detectionType"]);
-                return $this->_propDict["detectionType"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the detectionType
-    * The registry data detection type
-    *
-    * @param Win32LobAppRegistryDetectionType $val The value to assign to the detectionType
-    *
-    * @return Win32LobAppRegistryRequirement The Win32LobAppRegistryRequirement
-    */
-    public function setDetectionType($val)
-    {
-        $this->_propDict["detectionType"] = $val;
-         return $this;
     }
 }

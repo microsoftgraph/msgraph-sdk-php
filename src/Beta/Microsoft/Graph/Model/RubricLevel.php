@@ -23,58 +23,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class RubricLevel extends Entity
 {
-    /**
-    * Gets the levelId
-    *
-    * @return string The levelId
-    */
-    public function getLevelId()
-    {
-        if (array_key_exists("levelId", $this->_propDict)) {
-            return $this->_propDict["levelId"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the levelId
-    *
-    * @param string $val The value of the levelId
-    *
-    * @return RubricLevel
-    */
-    public function setLevelId($val)
-    {
-        $this->_propDict["levelId"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the displayName
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the displayName
-    *
-    * @param string $val The value of the displayName
-    *
-    * @return RubricLevel
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the description
@@ -106,6 +54,32 @@ class RubricLevel extends Entity
         $this->_propDict["description"] = $val;
          return $this;
     }
+    /**
+    * Gets the displayName
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the displayName
+    *
+    * @param string $val The value of the displayName
+    *
+    * @return RubricLevel
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the grading
@@ -136,5 +110,31 @@ class RubricLevel extends Entity
     {
         $this->_propDict["grading"] = $val;
          return $this;
+    }
+    /**
+    * Gets the levelId
+    *
+    * @return string The levelId
+    */
+    public function getLevelId()
+    {
+        if (array_key_exists("levelId", $this->_propDict)) {
+            return $this->_propDict["levelId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the levelId
+    *
+    * @param string $val The value of the levelId
+    *
+    * @return RubricLevel
+    */
+    public function setLevelId($val)
+    {
+        $this->_propDict["levelId"] = $val;
+        return $this;
     }
 }

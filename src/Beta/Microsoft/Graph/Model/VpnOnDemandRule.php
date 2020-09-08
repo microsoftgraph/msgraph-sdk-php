@@ -23,90 +23,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class VpnOnDemandRule extends Entity
 {
-    /**
-    * Gets the ssids
-    * Network Service Set Identifiers (SSIDs).
-    *
-    * @return string The ssids
-    */
-    public function getSsids()
-    {
-        if (array_key_exists("ssids", $this->_propDict)) {
-            return $this->_propDict["ssids"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the ssids
-    * Network Service Set Identifiers (SSIDs).
-    *
-    * @param string $val The value of the ssids
-    *
-    * @return VpnOnDemandRule
-    */
-    public function setSsids($val)
-    {
-        $this->_propDict["ssids"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the dnsSearchDomains
-    * DNS Search Domains.
-    *
-    * @return string The dnsSearchDomains
-    */
-    public function getDnsSearchDomains()
-    {
-        if (array_key_exists("dnsSearchDomains", $this->_propDict)) {
-            return $this->_propDict["dnsSearchDomains"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the dnsSearchDomains
-    * DNS Search Domains.
-    *
-    * @param string $val The value of the dnsSearchDomains
-    *
-    * @return VpnOnDemandRule
-    */
-    public function setDnsSearchDomains($val)
-    {
-        $this->_propDict["dnsSearchDomains"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the probeUrl
-    * A URL to probe. If this URL is successfully fetched (returning a 200 HTTP status code) without redirection, this rule matches.
-    *
-    * @return string The probeUrl
-    */
-    public function getProbeUrl()
-    {
-        if (array_key_exists("probeUrl", $this->_propDict)) {
-            return $this->_propDict["probeUrl"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the probeUrl
-    * A URL to probe. If this URL is successfully fetched (returning a 200 HTTP status code) without redirection, this rule matches.
-    *
-    * @param string $val The value of the probeUrl
-    *
-    * @return VpnOnDemandRule
-    */
-    public function setProbeUrl($val)
-    {
-        $this->_propDict["probeUrl"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the action
@@ -139,6 +55,34 @@ class VpnOnDemandRule extends Entity
     {
         $this->_propDict["action"] = $val;
          return $this;
+    }
+    /**
+    * Gets the dnsSearchDomains
+    * DNS Search Domains.
+    *
+    * @return string The dnsSearchDomains
+    */
+    public function getDnsSearchDomains()
+    {
+        if (array_key_exists("dnsSearchDomains", $this->_propDict)) {
+            return $this->_propDict["dnsSearchDomains"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the dnsSearchDomains
+    * DNS Search Domains.
+    *
+    * @param string $val The value of the dnsSearchDomains
+    *
+    * @return VpnOnDemandRule
+    */
+    public function setDnsSearchDomains($val)
+    {
+        $this->_propDict["dnsSearchDomains"] = $val;
+        return $this;
     }
 
     /**
@@ -227,6 +171,62 @@ class VpnOnDemandRule extends Entity
     public function setProbeRequiredUrl($val)
     {
         $this->_propDict["probeRequiredUrl"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the probeUrl
+    * A URL to probe. If this URL is successfully fetched (returning a 200 HTTP status code) without redirection, this rule matches.
+    *
+    * @return string The probeUrl
+    */
+    public function getProbeUrl()
+    {
+        if (array_key_exists("probeUrl", $this->_propDict)) {
+            return $this->_propDict["probeUrl"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the probeUrl
+    * A URL to probe. If this URL is successfully fetched (returning a 200 HTTP status code) without redirection, this rule matches.
+    *
+    * @param string $val The value of the probeUrl
+    *
+    * @return VpnOnDemandRule
+    */
+    public function setProbeUrl($val)
+    {
+        $this->_propDict["probeUrl"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the ssids
+    * Network Service Set Identifiers (SSIDs).
+    *
+    * @return string The ssids
+    */
+    public function getSsids()
+    {
+        if (array_key_exists("ssids", $this->_propDict)) {
+            return $this->_propDict["ssids"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the ssids
+    * Network Service Set Identifiers (SSIDs).
+    *
+    * @param string $val The value of the ssids
+    *
+    * @return VpnOnDemandRule
+    */
+    public function setSsids($val)
+    {
+        $this->_propDict["ssids"] = $val;
         return $this;
     }
 }

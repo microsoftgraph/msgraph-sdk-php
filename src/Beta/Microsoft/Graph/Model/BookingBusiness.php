@@ -25,33 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class BookingBusiness extends BookingNamedEntity
 {
     /**
-    * Gets the businessType
-    *
-    * @return string The businessType
-    */
-    public function getBusinessType()
-    {
-        if (array_key_exists("businessType", $this->_propDict)) {
-            return $this->_propDict["businessType"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the businessType
-    *
-    * @param string $val The businessType
-    *
-    * @return BookingBusiness
-    */
-    public function setBusinessType($val)
-    {
-        $this->_propDict["businessType"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the address
     *
     * @return PhysicalAddress The address
@@ -82,30 +55,85 @@ class BookingBusiness extends BookingNamedEntity
         return $this;
     }
     
-    /**
-    * Gets the phone
-    *
-    * @return string The phone
-    */
-    public function getPhone()
+
+     /** 
+     * Gets the businessHours
+     *
+     * @return array The businessHours
+     */
+    public function getBusinessHours()
     {
-        if (array_key_exists("phone", $this->_propDict)) {
-            return $this->_propDict["phone"];
+        if (array_key_exists("businessHours", $this->_propDict)) {
+           return $this->_propDict["businessHours"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the businessHours
+    *
+    * @param BookingWorkHours $val The businessHours
+    *
+    * @return BookingBusiness
+    */
+    public function setBusinessHours($val)
+    {
+		$this->_propDict["businessHours"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the businessType
+    *
+    * @return string The businessType
+    */
+    public function getBusinessType()
+    {
+        if (array_key_exists("businessType", $this->_propDict)) {
+            return $this->_propDict["businessType"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the phone
+    * Sets the businessType
     *
-    * @param string $val The phone
+    * @param string $val The businessType
     *
     * @return BookingBusiness
     */
-    public function setPhone($val)
+    public function setBusinessType($val)
     {
-        $this->_propDict["phone"] = $val;
+        $this->_propDict["businessType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the defaultCurrencyIso
+    *
+    * @return string The defaultCurrencyIso
+    */
+    public function getDefaultCurrencyIso()
+    {
+        if (array_key_exists("defaultCurrencyIso", $this->_propDict)) {
+            return $this->_propDict["defaultCurrencyIso"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the defaultCurrencyIso
+    *
+    * @param string $val The defaultCurrencyIso
+    *
+    * @return BookingBusiness
+    */
+    public function setDefaultCurrencyIso($val)
+    {
+        $this->_propDict["defaultCurrencyIso"] = $val;
         return $this;
     }
     
@@ -137,86 +165,83 @@ class BookingBusiness extends BookingNamedEntity
     }
     
     /**
-    * Gets the webSiteUrl
-    * Example: https://www.contoso.com
+    * Gets the isPublished
     *
-    * @return string The webSiteUrl
+    * @return bool The isPublished
     */
-    public function getWebSiteUrl()
+    public function getIsPublished()
     {
-        if (array_key_exists("webSiteUrl", $this->_propDict)) {
-            return $this->_propDict["webSiteUrl"];
+        if (array_key_exists("isPublished", $this->_propDict)) {
+            return $this->_propDict["isPublished"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the webSiteUrl
-    * Example: https://www.contoso.com
+    * Sets the isPublished
     *
-    * @param string $val The webSiteUrl
+    * @param bool $val The isPublished
     *
     * @return BookingBusiness
     */
-    public function setWebSiteUrl($val)
+    public function setIsPublished($val)
     {
-        $this->_propDict["webSiteUrl"] = $val;
+        $this->_propDict["isPublished"] = boolval($val);
         return $this;
     }
     
     /**
-    * Gets the defaultCurrencyIso
+    * Gets the phone
     *
-    * @return string The defaultCurrencyIso
+    * @return string The phone
     */
-    public function getDefaultCurrencyIso()
+    public function getPhone()
     {
-        if (array_key_exists("defaultCurrencyIso", $this->_propDict)) {
-            return $this->_propDict["defaultCurrencyIso"];
+        if (array_key_exists("phone", $this->_propDict)) {
+            return $this->_propDict["phone"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the defaultCurrencyIso
+    * Sets the phone
     *
-    * @param string $val The defaultCurrencyIso
+    * @param string $val The phone
     *
     * @return BookingBusiness
     */
-    public function setDefaultCurrencyIso($val)
+    public function setPhone($val)
     {
-        $this->_propDict["defaultCurrencyIso"] = $val;
+        $this->_propDict["phone"] = $val;
         return $this;
     }
     
-
-     /** 
-     * Gets the businessHours
-     *
-     * @return array The businessHours
-     */
-    public function getBusinessHours()
+    /**
+    * Gets the publicUrl
+    *
+    * @return string The publicUrl
+    */
+    public function getPublicUrl()
     {
-        if (array_key_exists("businessHours", $this->_propDict)) {
-           return $this->_propDict["businessHours"];
+        if (array_key_exists("publicUrl", $this->_propDict)) {
+            return $this->_propDict["publicUrl"];
         } else {
             return null;
         }
     }
     
-    /** 
-    * Sets the businessHours
+    /**
+    * Sets the publicUrl
     *
-    * @param BookingWorkHours $val The businessHours
+    * @param string $val The publicUrl
     *
     * @return BookingBusiness
     */
-    public function setBusinessHours($val)
+    public function setPublicUrl($val)
     {
-		$this->_propDict["businessHours"] = $val;
+        $this->_propDict["publicUrl"] = $val;
         return $this;
     }
     
@@ -252,56 +277,31 @@ class BookingBusiness extends BookingNamedEntity
     }
     
     /**
-    * Gets the isPublished
+    * Gets the webSiteUrl
+    * Example: https://www.contoso.com
     *
-    * @return bool The isPublished
+    * @return string The webSiteUrl
     */
-    public function getIsPublished()
+    public function getWebSiteUrl()
     {
-        if (array_key_exists("isPublished", $this->_propDict)) {
-            return $this->_propDict["isPublished"];
+        if (array_key_exists("webSiteUrl", $this->_propDict)) {
+            return $this->_propDict["webSiteUrl"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the isPublished
+    * Sets the webSiteUrl
+    * Example: https://www.contoso.com
     *
-    * @param bool $val The isPublished
-    *
-    * @return BookingBusiness
-    */
-    public function setIsPublished($val)
-    {
-        $this->_propDict["isPublished"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the publicUrl
-    *
-    * @return string The publicUrl
-    */
-    public function getPublicUrl()
-    {
-        if (array_key_exists("publicUrl", $this->_propDict)) {
-            return $this->_propDict["publicUrl"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the publicUrl
-    *
-    * @param string $val The publicUrl
+    * @param string $val The webSiteUrl
     *
     * @return BookingBusiness
     */
-    public function setPublicUrl($val)
+    public function setWebSiteUrl($val)
     {
-        $this->_propDict["publicUrl"] = $val;
+        $this->_propDict["webSiteUrl"] = $val;
         return $this;
     }
     

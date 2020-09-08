@@ -32,118 +32,6 @@ class MacOSCredentialSingleSignOnExtension extends MacOSSingleSignOnExtension
         $this->setODataType("#microsoft.graph.macOSCredentialSingleSignOnExtension");
     }
 
-    /**
-    * Gets the extensionIdentifier
-    * Gets or sets the bundle ID of the app extension that performs SSO for the specified URLs.
-    *
-    * @return string The extensionIdentifier
-    */
-    public function getExtensionIdentifier()
-    {
-        if (array_key_exists("extensionIdentifier", $this->_propDict)) {
-            return $this->_propDict["extensionIdentifier"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the extensionIdentifier
-    * Gets or sets the bundle ID of the app extension that performs SSO for the specified URLs.
-    *
-    * @param string $val The value of the extensionIdentifier
-    *
-    * @return MacOSCredentialSingleSignOnExtension
-    */
-    public function setExtensionIdentifier($val)
-    {
-        $this->_propDict["extensionIdentifier"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the teamIdentifier
-    * Gets or sets the team ID of the app extension that performs SSO for the specified URLs.
-    *
-    * @return string The teamIdentifier
-    */
-    public function getTeamIdentifier()
-    {
-        if (array_key_exists("teamIdentifier", $this->_propDict)) {
-            return $this->_propDict["teamIdentifier"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the teamIdentifier
-    * Gets or sets the team ID of the app extension that performs SSO for the specified URLs.
-    *
-    * @param string $val The value of the teamIdentifier
-    *
-    * @return MacOSCredentialSingleSignOnExtension
-    */
-    public function setTeamIdentifier($val)
-    {
-        $this->_propDict["teamIdentifier"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the domains
-    * Gets or sets a list of hosts or domain names for which the app extension performs SSO.
-    *
-    * @return string The domains
-    */
-    public function getDomains()
-    {
-        if (array_key_exists("domains", $this->_propDict)) {
-            return $this->_propDict["domains"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the domains
-    * Gets or sets a list of hosts or domain names for which the app extension performs SSO.
-    *
-    * @param string $val The value of the domains
-    *
-    * @return MacOSCredentialSingleSignOnExtension
-    */
-    public function setDomains($val)
-    {
-        $this->_propDict["domains"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the realm
-    * Gets or sets the case-sensitive realm name for this profile.
-    *
-    * @return string The realm
-    */
-    public function getRealm()
-    {
-        if (array_key_exists("realm", $this->_propDict)) {
-            return $this->_propDict["realm"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the realm
-    * Gets or sets the case-sensitive realm name for this profile.
-    *
-    * @param string $val The value of the realm
-    *
-    * @return MacOSCredentialSingleSignOnExtension
-    */
-    public function setRealm($val)
-    {
-        $this->_propDict["realm"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the configurations
@@ -176,5 +64,117 @@ class MacOSCredentialSingleSignOnExtension extends MacOSSingleSignOnExtension
     {
         $this->_propDict["configurations"] = $val;
          return $this;
+    }
+    /**
+    * Gets the domains
+    * Gets or sets a list of hosts or domain names for which the app extension performs SSO.
+    *
+    * @return string The domains
+    */
+    public function getDomains()
+    {
+        if (array_key_exists("domains", $this->_propDict)) {
+            return $this->_propDict["domains"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the domains
+    * Gets or sets a list of hosts or domain names for which the app extension performs SSO.
+    *
+    * @param string $val The value of the domains
+    *
+    * @return MacOSCredentialSingleSignOnExtension
+    */
+    public function setDomains($val)
+    {
+        $this->_propDict["domains"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the extensionIdentifier
+    * Gets or sets the bundle ID of the app extension that performs SSO for the specified URLs.
+    *
+    * @return string The extensionIdentifier
+    */
+    public function getExtensionIdentifier()
+    {
+        if (array_key_exists("extensionIdentifier", $this->_propDict)) {
+            return $this->_propDict["extensionIdentifier"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the extensionIdentifier
+    * Gets or sets the bundle ID of the app extension that performs SSO for the specified URLs.
+    *
+    * @param string $val The value of the extensionIdentifier
+    *
+    * @return MacOSCredentialSingleSignOnExtension
+    */
+    public function setExtensionIdentifier($val)
+    {
+        $this->_propDict["extensionIdentifier"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the realm
+    * Gets or sets the case-sensitive realm name for this profile.
+    *
+    * @return string The realm
+    */
+    public function getRealm()
+    {
+        if (array_key_exists("realm", $this->_propDict)) {
+            return $this->_propDict["realm"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the realm
+    * Gets or sets the case-sensitive realm name for this profile.
+    *
+    * @param string $val The value of the realm
+    *
+    * @return MacOSCredentialSingleSignOnExtension
+    */
+    public function setRealm($val)
+    {
+        $this->_propDict["realm"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the teamIdentifier
+    * Gets or sets the team ID of the app extension that performs SSO for the specified URLs.
+    *
+    * @return string The teamIdentifier
+    */
+    public function getTeamIdentifier()
+    {
+        if (array_key_exists("teamIdentifier", $this->_propDict)) {
+            return $this->_propDict["teamIdentifier"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the teamIdentifier
+    * Gets or sets the team ID of the app extension that performs SSO for the specified URLs.
+    *
+    * @param string $val The value of the teamIdentifier
+    *
+    * @return MacOSCredentialSingleSignOnExtension
+    */
+    public function setTeamIdentifier($val)
+    {
+        $this->_propDict["teamIdentifier"] = $val;
+        return $this;
     }
 }

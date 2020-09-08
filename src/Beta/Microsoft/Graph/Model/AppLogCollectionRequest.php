@@ -25,64 +25,35 @@ namespace Beta\Microsoft\Graph\Model;
 class AppLogCollectionRequest extends Entity
 {
     /**
-    * Gets the status
-    * Log upload status
+    * Gets the completedDateTime
+    * Time at which the upload log request reached a terminal state
     *
-    * @return AppLogUploadState The status
+    * @return \DateTime The completedDateTime
     */
-    public function getStatus()
+    public function getCompletedDateTime()
     {
-        if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Beta\Microsoft\Graph\Model\AppLogUploadState")) {
-                return $this->_propDict["status"];
+        if (array_key_exists("completedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["completedDateTime"], "\DateTime")) {
+                return $this->_propDict["completedDateTime"];
             } else {
-                $this->_propDict["status"] = new AppLogUploadState($this->_propDict["status"]);
-                return $this->_propDict["status"];
+                $this->_propDict["completedDateTime"] = new \DateTime($this->_propDict["completedDateTime"]);
+                return $this->_propDict["completedDateTime"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the status
-    * Log upload status
+    * Sets the completedDateTime
+    * Time at which the upload log request reached a terminal state
     *
-    * @param AppLogUploadState $val The status
-    *
-    * @return AppLogCollectionRequest
-    */
-    public function setStatus($val)
-    {
-        $this->_propDict["status"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the errorMessage
-    * Error message if any during the upload process
-    *
-    * @return string The errorMessage
-    */
-    public function getErrorMessage()
-    {
-        if (array_key_exists("errorMessage", $this->_propDict)) {
-            return $this->_propDict["errorMessage"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the errorMessage
-    * Error message if any during the upload process
-    *
-    * @param string $val The errorMessage
+    * @param \DateTime $val The completedDateTime
     *
     * @return AppLogCollectionRequest
     */
-    public function setErrorMessage($val)
+    public function setCompletedDateTime($val)
     {
-        $this->_propDict["errorMessage"] = $val;
+        $this->_propDict["completedDateTime"] = $val;
         return $this;
     }
     
@@ -116,35 +87,64 @@ class AppLogCollectionRequest extends Entity
     }
     
     /**
-    * Gets the completedDateTime
-    * Time at which the upload log request reached a terminal state
+    * Gets the errorMessage
+    * Error message if any during the upload process
     *
-    * @return \DateTime The completedDateTime
+    * @return string The errorMessage
     */
-    public function getCompletedDateTime()
+    public function getErrorMessage()
     {
-        if (array_key_exists("completedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["completedDateTime"], "\DateTime")) {
-                return $this->_propDict["completedDateTime"];
+        if (array_key_exists("errorMessage", $this->_propDict)) {
+            return $this->_propDict["errorMessage"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the errorMessage
+    * Error message if any during the upload process
+    *
+    * @param string $val The errorMessage
+    *
+    * @return AppLogCollectionRequest
+    */
+    public function setErrorMessage($val)
+    {
+        $this->_propDict["errorMessage"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the status
+    * Log upload status
+    *
+    * @return AppLogUploadState The status
+    */
+    public function getStatus()
+    {
+        if (array_key_exists("status", $this->_propDict)) {
+            if (is_a($this->_propDict["status"], "Beta\Microsoft\Graph\Model\AppLogUploadState")) {
+                return $this->_propDict["status"];
             } else {
-                $this->_propDict["completedDateTime"] = new \DateTime($this->_propDict["completedDateTime"]);
-                return $this->_propDict["completedDateTime"];
+                $this->_propDict["status"] = new AppLogUploadState($this->_propDict["status"]);
+                return $this->_propDict["status"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the completedDateTime
-    * Time at which the upload log request reached a terminal state
+    * Sets the status
+    * Log upload status
     *
-    * @param \DateTime $val The completedDateTime
+    * @param AppLogUploadState $val The status
     *
     * @return AppLogCollectionRequest
     */
-    public function setCompletedDateTime($val)
+    public function setStatus($val)
     {
-        $this->_propDict["completedDateTime"] = $val;
+        $this->_propDict["status"] = $val;
         return $this;
     }
     

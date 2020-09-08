@@ -49,6 +49,37 @@ class ClassifcationErrorBase extends Entity
         $this->_propDict["code"] = $val;
         return $this;
     }
+
+    /**
+    * Gets the innerError
+    *
+    * @return ClassificationInnerError The innerError
+    */
+    public function getInnerError()
+    {
+        if (array_key_exists("innerError", $this->_propDict)) {
+            if (is_a($this->_propDict["innerError"], "Beta\Microsoft\Graph\Model\ClassificationInnerError")) {
+                return $this->_propDict["innerError"];
+            } else {
+                $this->_propDict["innerError"] = new ClassificationInnerError($this->_propDict["innerError"]);
+                return $this->_propDict["innerError"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the innerError
+    *
+    * @param ClassificationInnerError $val The value to assign to the innerError
+    *
+    * @return ClassifcationErrorBase The ClassifcationErrorBase
+    */
+    public function setInnerError($val)
+    {
+        $this->_propDict["innerError"] = $val;
+         return $this;
+    }
     /**
     * Gets the message
     *
@@ -100,36 +131,5 @@ class ClassifcationErrorBase extends Entity
     {
         $this->_propDict["target"] = $val;
         return $this;
-    }
-
-    /**
-    * Gets the innerError
-    *
-    * @return ClassificationInnerError The innerError
-    */
-    public function getInnerError()
-    {
-        if (array_key_exists("innerError", $this->_propDict)) {
-            if (is_a($this->_propDict["innerError"], "Beta\Microsoft\Graph\Model\ClassificationInnerError")) {
-                return $this->_propDict["innerError"];
-            } else {
-                $this->_propDict["innerError"] = new ClassificationInnerError($this->_propDict["innerError"]);
-                return $this->_propDict["innerError"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the innerError
-    *
-    * @param ClassificationInnerError $val The value to assign to the innerError
-    *
-    * @return ClassifcationErrorBase The ClassifcationErrorBase
-    */
-    public function setInnerError($val)
-    {
-        $this->_propDict["innerError"] = $val;
-         return $this;
     }
 }

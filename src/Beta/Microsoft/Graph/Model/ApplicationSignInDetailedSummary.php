@@ -25,29 +25,33 @@ namespace Beta\Microsoft\Graph\Model;
 class ApplicationSignInDetailedSummary extends Entity
 {
     /**
-    * Gets the appId
+    * Gets the aggregatedEventDateTime
     *
-    * @return string The appId
+    * @return \DateTime The aggregatedEventDateTime
     */
-    public function getAppId()
+    public function getAggregatedEventDateTime()
     {
-        if (array_key_exists("appId", $this->_propDict)) {
-            return $this->_propDict["appId"];
-        } else {
-            return null;
+        if (array_key_exists("aggregatedEventDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["aggregatedEventDateTime"], "\DateTime")) {
+                return $this->_propDict["aggregatedEventDateTime"];
+            } else {
+                $this->_propDict["aggregatedEventDateTime"] = new \DateTime($this->_propDict["aggregatedEventDateTime"]);
+                return $this->_propDict["aggregatedEventDateTime"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the appId
+    * Sets the aggregatedEventDateTime
     *
-    * @param string $val The appId
+    * @param \DateTime $val The aggregatedEventDateTime
     *
     * @return ApplicationSignInDetailedSummary
     */
-    public function setAppId($val)
+    public function setAggregatedEventDateTime($val)
     {
-        $this->_propDict["appId"] = $val;
+        $this->_propDict["aggregatedEventDateTime"] = $val;
         return $this;
     }
     
@@ -79,33 +83,29 @@ class ApplicationSignInDetailedSummary extends Entity
     }
     
     /**
-    * Gets the status
+    * Gets the appId
     *
-    * @return SignInStatus The status
+    * @return string The appId
     */
-    public function getStatus()
+    public function getAppId()
     {
-        if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Beta\Microsoft\Graph\Model\SignInStatus")) {
-                return $this->_propDict["status"];
-            } else {
-                $this->_propDict["status"] = new SignInStatus($this->_propDict["status"]);
-                return $this->_propDict["status"];
-            }
+        if (array_key_exists("appId", $this->_propDict)) {
+            return $this->_propDict["appId"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the status
+    * Sets the appId
     *
-    * @param SignInStatus $val The status
+    * @param string $val The appId
     *
     * @return ApplicationSignInDetailedSummary
     */
-    public function setStatus($val)
+    public function setAppId($val)
     {
-        $this->_propDict["status"] = $val;
+        $this->_propDict["appId"] = $val;
         return $this;
     }
     
@@ -137,33 +137,33 @@ class ApplicationSignInDetailedSummary extends Entity
     }
     
     /**
-    * Gets the aggregatedEventDateTime
+    * Gets the status
     *
-    * @return \DateTime The aggregatedEventDateTime
+    * @return SignInStatus The status
     */
-    public function getAggregatedEventDateTime()
+    public function getStatus()
     {
-        if (array_key_exists("aggregatedEventDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["aggregatedEventDateTime"], "\DateTime")) {
-                return $this->_propDict["aggregatedEventDateTime"];
+        if (array_key_exists("status", $this->_propDict)) {
+            if (is_a($this->_propDict["status"], "Beta\Microsoft\Graph\Model\SignInStatus")) {
+                return $this->_propDict["status"];
             } else {
-                $this->_propDict["aggregatedEventDateTime"] = new \DateTime($this->_propDict["aggregatedEventDateTime"]);
-                return $this->_propDict["aggregatedEventDateTime"];
+                $this->_propDict["status"] = new SignInStatus($this->_propDict["status"]);
+                return $this->_propDict["status"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the aggregatedEventDateTime
+    * Sets the status
     *
-    * @param \DateTime $val The aggregatedEventDateTime
+    * @param SignInStatus $val The status
     *
     * @return ApplicationSignInDetailedSummary
     */
-    public function setAggregatedEventDateTime($val)
+    public function setStatus($val)
     {
-        $this->_propDict["aggregatedEventDateTime"] = $val;
+        $this->_propDict["status"] = $val;
         return $this;
     }
     

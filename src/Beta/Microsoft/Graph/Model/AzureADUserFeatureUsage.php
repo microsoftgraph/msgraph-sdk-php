@@ -24,6 +24,34 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class AzureADUserFeatureUsage extends Entity
 {
+
+     /** 
+     * Gets the featureUsageDetails
+     *
+     * @return array The featureUsageDetails
+     */
+    public function getFeatureUsageDetails()
+    {
+        if (array_key_exists("featureUsageDetails", $this->_propDict)) {
+           return $this->_propDict["featureUsageDetails"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the featureUsageDetails
+    *
+    * @param FeatureUsageDetail $val The featureUsageDetails
+    *
+    * @return AzureADUserFeatureUsage
+    */
+    public function setFeatureUsageDetails($val)
+    {
+		$this->_propDict["featureUsageDetails"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the lastUpdatedDateTime
     *
@@ -56,83 +84,33 @@ class AzureADUserFeatureUsage extends Entity
     }
     
     /**
-    * Gets the userId
+    * Gets the licenseAssigned
     *
-    * @return string The userId
+    * @return AzureADLicenseType The licenseAssigned
     */
-    public function getUserId()
+    public function getLicenseAssigned()
     {
-        if (array_key_exists("userId", $this->_propDict)) {
-            return $this->_propDict["userId"];
-        } else {
-            return null;
+        if (array_key_exists("licenseAssigned", $this->_propDict)) {
+            if (is_a($this->_propDict["licenseAssigned"], "Beta\Microsoft\Graph\Model\AzureADLicenseType")) {
+                return $this->_propDict["licenseAssigned"];
+            } else {
+                $this->_propDict["licenseAssigned"] = new AzureADLicenseType($this->_propDict["licenseAssigned"]);
+                return $this->_propDict["licenseAssigned"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the userId
+    * Sets the licenseAssigned
     *
-    * @param string $val The userId
+    * @param AzureADLicenseType $val The licenseAssigned
     *
     * @return AzureADUserFeatureUsage
     */
-    public function setUserId($val)
+    public function setLicenseAssigned($val)
     {
-        $this->_propDict["userId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the userDisplayName
-    *
-    * @return string The userDisplayName
-    */
-    public function getUserDisplayName()
-    {
-        if (array_key_exists("userDisplayName", $this->_propDict)) {
-            return $this->_propDict["userDisplayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the userDisplayName
-    *
-    * @param string $val The userDisplayName
-    *
-    * @return AzureADUserFeatureUsage
-    */
-    public function setUserDisplayName($val)
-    {
-        $this->_propDict["userDisplayName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the userPrincipalName
-    *
-    * @return string The userPrincipalName
-    */
-    public function getUserPrincipalName()
-    {
-        if (array_key_exists("userPrincipalName", $this->_propDict)) {
-            return $this->_propDict["userPrincipalName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the userPrincipalName
-    *
-    * @param string $val The userPrincipalName
-    *
-    * @return AzureADUserFeatureUsage
-    */
-    public function setUserPrincipalName($val)
-    {
-        $this->_propDict["userPrincipalName"] = $val;
+        $this->_propDict["licenseAssigned"] = $val;
         return $this;
     }
     
@@ -168,61 +146,83 @@ class AzureADUserFeatureUsage extends Entity
     }
     
     /**
-    * Gets the licenseAssigned
+    * Gets the userDisplayName
     *
-    * @return AzureADLicenseType The licenseAssigned
+    * @return string The userDisplayName
     */
-    public function getLicenseAssigned()
+    public function getUserDisplayName()
     {
-        if (array_key_exists("licenseAssigned", $this->_propDict)) {
-            if (is_a($this->_propDict["licenseAssigned"], "Beta\Microsoft\Graph\Model\AzureADLicenseType")) {
-                return $this->_propDict["licenseAssigned"];
-            } else {
-                $this->_propDict["licenseAssigned"] = new AzureADLicenseType($this->_propDict["licenseAssigned"]);
-                return $this->_propDict["licenseAssigned"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the licenseAssigned
-    *
-    * @param AzureADLicenseType $val The licenseAssigned
-    *
-    * @return AzureADUserFeatureUsage
-    */
-    public function setLicenseAssigned($val)
-    {
-        $this->_propDict["licenseAssigned"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the featureUsageDetails
-     *
-     * @return array The featureUsageDetails
-     */
-    public function getFeatureUsageDetails()
-    {
-        if (array_key_exists("featureUsageDetails", $this->_propDict)) {
-           return $this->_propDict["featureUsageDetails"];
+        if (array_key_exists("userDisplayName", $this->_propDict)) {
+            return $this->_propDict["userDisplayName"];
         } else {
             return null;
         }
     }
     
-    /** 
-    * Sets the featureUsageDetails
+    /**
+    * Sets the userDisplayName
     *
-    * @param FeatureUsageDetail $val The featureUsageDetails
+    * @param string $val The userDisplayName
     *
     * @return AzureADUserFeatureUsage
     */
-    public function setFeatureUsageDetails($val)
+    public function setUserDisplayName($val)
     {
-		$this->_propDict["featureUsageDetails"] = $val;
+        $this->_propDict["userDisplayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userId
+    *
+    * @return string The userId
+    */
+    public function getUserId()
+    {
+        if (array_key_exists("userId", $this->_propDict)) {
+            return $this->_propDict["userId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the userId
+    *
+    * @param string $val The userId
+    *
+    * @return AzureADUserFeatureUsage
+    */
+    public function setUserId($val)
+    {
+        $this->_propDict["userId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userPrincipalName
+    *
+    * @return string The userPrincipalName
+    */
+    public function getUserPrincipalName()
+    {
+        if (array_key_exists("userPrincipalName", $this->_propDict)) {
+            return $this->_propDict["userPrincipalName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the userPrincipalName
+    *
+    * @param string $val The userPrincipalName
+    *
+    * @return AzureADUserFeatureUsage
+    */
+    public function setUserPrincipalName($val)
+    {
+        $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
     

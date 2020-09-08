@@ -25,37 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class Office365ServicesUserCounts extends Entity
 {
     /**
-    * Gets the reportRefreshDate
-    *
-    * @return \DateTime The reportRefreshDate
-    */
-    public function getReportRefreshDate()
-    {
-        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
-                return $this->_propDict["reportRefreshDate"];
-            } else {
-                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
-                return $this->_propDict["reportRefreshDate"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the reportRefreshDate
-    *
-    * @param \DateTime $val The reportRefreshDate
-    *
-    * @return Office365ServicesUserCounts
-    */
-    public function setReportRefreshDate($val)
-    {
-        $this->_propDict["reportRefreshDate"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the exchangeActive
     *
     * @return int The exchangeActive
@@ -110,6 +79,60 @@ class Office365ServicesUserCounts extends Entity
     }
     
     /**
+    * Gets the office365Active
+    *
+    * @return int The office365Active
+    */
+    public function getOffice365Active()
+    {
+        if (array_key_exists("office365Active", $this->_propDict)) {
+            return $this->_propDict["office365Active"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the office365Active
+    *
+    * @param int $val The office365Active
+    *
+    * @return Office365ServicesUserCounts
+    */
+    public function setOffice365Active($val)
+    {
+        $this->_propDict["office365Active"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the office365Inactive
+    *
+    * @return int The office365Inactive
+    */
+    public function getOffice365Inactive()
+    {
+        if (array_key_exists("office365Inactive", $this->_propDict)) {
+            return $this->_propDict["office365Inactive"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the office365Inactive
+    *
+    * @param int $val The office365Inactive
+    *
+    * @return Office365ServicesUserCounts
+    */
+    public function setOffice365Inactive($val)
+    {
+        $this->_propDict["office365Inactive"] = intval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the oneDriveActive
     *
     * @return int The oneDriveActive
@@ -160,6 +183,64 @@ class Office365ServicesUserCounts extends Entity
     public function setOneDriveInactive($val)
     {
         $this->_propDict["oneDriveInactive"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the reportPeriod
+    *
+    * @return string The reportPeriod
+    */
+    public function getReportPeriod()
+    {
+        if (array_key_exists("reportPeriod", $this->_propDict)) {
+            return $this->_propDict["reportPeriod"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the reportPeriod
+    *
+    * @param string $val The reportPeriod
+    *
+    * @return Office365ServicesUserCounts
+    */
+    public function setReportPeriod($val)
+    {
+        $this->_propDict["reportPeriod"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the reportRefreshDate
+    *
+    * @return \DateTime The reportRefreshDate
+    */
+    public function getReportRefreshDate()
+    {
+        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
+                return $this->_propDict["reportRefreshDate"];
+            } else {
+                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
+                return $this->_propDict["reportRefreshDate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the reportRefreshDate
+    *
+    * @param \DateTime $val The reportRefreshDate
+    *
+    * @return Office365ServicesUserCounts
+    */
+    public function setReportRefreshDate($val)
+    {
+        $this->_propDict["reportRefreshDate"] = $val;
         return $this;
     }
     
@@ -272,60 +353,6 @@ class Office365ServicesUserCounts extends Entity
     }
     
     /**
-    * Gets the yammerActive
-    *
-    * @return int The yammerActive
-    */
-    public function getYammerActive()
-    {
-        if (array_key_exists("yammerActive", $this->_propDict)) {
-            return $this->_propDict["yammerActive"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the yammerActive
-    *
-    * @param int $val The yammerActive
-    *
-    * @return Office365ServicesUserCounts
-    */
-    public function setYammerActive($val)
-    {
-        $this->_propDict["yammerActive"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the yammerInactive
-    *
-    * @return int The yammerInactive
-    */
-    public function getYammerInactive()
-    {
-        if (array_key_exists("yammerInactive", $this->_propDict)) {
-            return $this->_propDict["yammerInactive"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the yammerInactive
-    *
-    * @param int $val The yammerInactive
-    *
-    * @return Office365ServicesUserCounts
-    */
-    public function setYammerInactive($val)
-    {
-        $this->_propDict["yammerInactive"] = intval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the teamsActive
     *
     * @return int The teamsActive
@@ -380,83 +407,56 @@ class Office365ServicesUserCounts extends Entity
     }
     
     /**
-    * Gets the office365Active
+    * Gets the yammerActive
     *
-    * @return int The office365Active
+    * @return int The yammerActive
     */
-    public function getOffice365Active()
+    public function getYammerActive()
     {
-        if (array_key_exists("office365Active", $this->_propDict)) {
-            return $this->_propDict["office365Active"];
+        if (array_key_exists("yammerActive", $this->_propDict)) {
+            return $this->_propDict["yammerActive"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the office365Active
+    * Sets the yammerActive
     *
-    * @param int $val The office365Active
+    * @param int $val The yammerActive
     *
     * @return Office365ServicesUserCounts
     */
-    public function setOffice365Active($val)
+    public function setYammerActive($val)
     {
-        $this->_propDict["office365Active"] = intval($val);
+        $this->_propDict["yammerActive"] = intval($val);
         return $this;
     }
     
     /**
-    * Gets the office365Inactive
+    * Gets the yammerInactive
     *
-    * @return int The office365Inactive
+    * @return int The yammerInactive
     */
-    public function getOffice365Inactive()
+    public function getYammerInactive()
     {
-        if (array_key_exists("office365Inactive", $this->_propDict)) {
-            return $this->_propDict["office365Inactive"];
+        if (array_key_exists("yammerInactive", $this->_propDict)) {
+            return $this->_propDict["yammerInactive"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the office365Inactive
+    * Sets the yammerInactive
     *
-    * @param int $val The office365Inactive
-    *
-    * @return Office365ServicesUserCounts
-    */
-    public function setOffice365Inactive($val)
-    {
-        $this->_propDict["office365Inactive"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the reportPeriod
-    *
-    * @return string The reportPeriod
-    */
-    public function getReportPeriod()
-    {
-        if (array_key_exists("reportPeriod", $this->_propDict)) {
-            return $this->_propDict["reportPeriod"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the reportPeriod
-    *
-    * @param string $val The reportPeriod
+    * @param int $val The yammerInactive
     *
     * @return Office365ServicesUserCounts
     */
-    public function setReportPeriod($val)
+    public function setYammerInactive($val)
     {
-        $this->_propDict["reportPeriod"] = $val;
+        $this->_propDict["yammerInactive"] = intval($val);
         return $this;
     }
     

@@ -25,29 +25,33 @@ namespace Beta\Microsoft\Graph\Model;
 class PrintDocument extends Entity
 {
     /**
-    * Gets the displayName
+    * Gets the configuration
     *
-    * @return string The displayName
+    * @return PrinterDocumentConfiguration The configuration
     */
-    public function getDisplayName()
+    public function getConfiguration()
     {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
+        if (array_key_exists("configuration", $this->_propDict)) {
+            if (is_a($this->_propDict["configuration"], "Beta\Microsoft\Graph\Model\PrinterDocumentConfiguration")) {
+                return $this->_propDict["configuration"];
+            } else {
+                $this->_propDict["configuration"] = new PrinterDocumentConfiguration($this->_propDict["configuration"]);
+                return $this->_propDict["configuration"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the displayName
+    * Sets the configuration
     *
-    * @param string $val The displayName
+    * @param PrinterDocumentConfiguration $val The configuration
     *
     * @return PrintDocument
     */
-    public function setDisplayName($val)
+    public function setConfiguration($val)
     {
-        $this->_propDict["displayName"] = $val;
+        $this->_propDict["configuration"] = $val;
         return $this;
     }
     
@@ -79,6 +83,33 @@ class PrintDocument extends Entity
     }
     
     /**
+    * Gets the displayName
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the displayName
+    *
+    * @param string $val The displayName
+    *
+    * @return PrintDocument
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the size
     *
     * @return int The size
@@ -102,37 +133,6 @@ class PrintDocument extends Entity
     public function setSize($val)
     {
         $this->_propDict["size"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the configuration
-    *
-    * @return PrinterDocumentConfiguration The configuration
-    */
-    public function getConfiguration()
-    {
-        if (array_key_exists("configuration", $this->_propDict)) {
-            if (is_a($this->_propDict["configuration"], "Beta\Microsoft\Graph\Model\PrinterDocumentConfiguration")) {
-                return $this->_propDict["configuration"];
-            } else {
-                $this->_propDict["configuration"] = new PrinterDocumentConfiguration($this->_propDict["configuration"]);
-                return $this->_propDict["configuration"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the configuration
-    *
-    * @param PrinterDocumentConfiguration $val The configuration
-    *
-    * @return PrintDocument
-    */
-    public function setConfiguration($val)
-    {
-        $this->_propDict["configuration"] = $val;
         return $this;
     }
     

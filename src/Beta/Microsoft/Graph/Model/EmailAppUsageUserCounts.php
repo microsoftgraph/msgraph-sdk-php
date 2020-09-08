@@ -25,33 +25,29 @@ namespace Beta\Microsoft\Graph\Model;
 class EmailAppUsageUserCounts extends Entity
 {
     /**
-    * Gets the reportRefreshDate
+    * Gets the imap4App
     *
-    * @return \DateTime The reportRefreshDate
+    * @return int The imap4App
     */
-    public function getReportRefreshDate()
+    public function getImap4App()
     {
-        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
-                return $this->_propDict["reportRefreshDate"];
-            } else {
-                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
-                return $this->_propDict["reportRefreshDate"];
-            }
+        if (array_key_exists("imap4App", $this->_propDict)) {
+            return $this->_propDict["imap4App"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the reportRefreshDate
+    * Sets the imap4App
     *
-    * @param \DateTime $val The reportRefreshDate
+    * @param int $val The imap4App
     *
     * @return EmailAppUsageUserCounts
     */
-    public function setReportRefreshDate($val)
+    public function setImap4App($val)
     {
-        $this->_propDict["reportRefreshDate"] = $val;
+        $this->_propDict["imap4App"] = intval($val);
         return $this;
     }
     
@@ -83,6 +79,33 @@ class EmailAppUsageUserCounts extends Entity
     }
     
     /**
+    * Gets the otherForMobile
+    *
+    * @return int The otherForMobile
+    */
+    public function getOtherForMobile()
+    {
+        if (array_key_exists("otherForMobile", $this->_propDict)) {
+            return $this->_propDict["otherForMobile"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the otherForMobile
+    *
+    * @param int $val The otherForMobile
+    *
+    * @return EmailAppUsageUserCounts
+    */
+    public function setOtherForMobile($val)
+    {
+        $this->_propDict["otherForMobile"] = intval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the outlookForMac
     *
     * @return int The outlookForMac
@@ -106,33 +129,6 @@ class EmailAppUsageUserCounts extends Entity
     public function setOutlookForMac($val)
     {
         $this->_propDict["outlookForMac"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the outlookForWindows
-    *
-    * @return int The outlookForWindows
-    */
-    public function getOutlookForWindows()
-    {
-        if (array_key_exists("outlookForWindows", $this->_propDict)) {
-            return $this->_propDict["outlookForWindows"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the outlookForWindows
-    *
-    * @param int $val The outlookForWindows
-    *
-    * @return EmailAppUsageUserCounts
-    */
-    public function setOutlookForWindows($val)
-    {
-        $this->_propDict["outlookForWindows"] = intval($val);
         return $this;
     }
     
@@ -164,33 +160,6 @@ class EmailAppUsageUserCounts extends Entity
     }
     
     /**
-    * Gets the otherForMobile
-    *
-    * @return int The otherForMobile
-    */
-    public function getOtherForMobile()
-    {
-        if (array_key_exists("otherForMobile", $this->_propDict)) {
-            return $this->_propDict["otherForMobile"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the otherForMobile
-    *
-    * @param int $val The otherForMobile
-    *
-    * @return EmailAppUsageUserCounts
-    */
-    public function setOtherForMobile($val)
-    {
-        $this->_propDict["otherForMobile"] = intval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the outlookForWeb
     *
     * @return int The outlookForWeb
@@ -218,6 +187,33 @@ class EmailAppUsageUserCounts extends Entity
     }
     
     /**
+    * Gets the outlookForWindows
+    *
+    * @return int The outlookForWindows
+    */
+    public function getOutlookForWindows()
+    {
+        if (array_key_exists("outlookForWindows", $this->_propDict)) {
+            return $this->_propDict["outlookForWindows"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the outlookForWindows
+    *
+    * @param int $val The outlookForWindows
+    *
+    * @return EmailAppUsageUserCounts
+    */
+    public function setOutlookForWindows($val)
+    {
+        $this->_propDict["outlookForWindows"] = intval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the pop3App
     *
     * @return int The pop3App
@@ -241,60 +237,6 @@ class EmailAppUsageUserCounts extends Entity
     public function setPop3App($val)
     {
         $this->_propDict["pop3App"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the imap4App
-    *
-    * @return int The imap4App
-    */
-    public function getImap4App()
-    {
-        if (array_key_exists("imap4App", $this->_propDict)) {
-            return $this->_propDict["imap4App"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the imap4App
-    *
-    * @param int $val The imap4App
-    *
-    * @return EmailAppUsageUserCounts
-    */
-    public function setImap4App($val)
-    {
-        $this->_propDict["imap4App"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the smtpApp
-    *
-    * @return int The smtpApp
-    */
-    public function getSmtpApp()
-    {
-        if (array_key_exists("smtpApp", $this->_propDict)) {
-            return $this->_propDict["smtpApp"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the smtpApp
-    *
-    * @param int $val The smtpApp
-    *
-    * @return EmailAppUsageUserCounts
-    */
-    public function setSmtpApp($val)
-    {
-        $this->_propDict["smtpApp"] = intval($val);
         return $this;
     }
     
@@ -353,6 +295,64 @@ class EmailAppUsageUserCounts extends Entity
     public function setReportPeriod($val)
     {
         $this->_propDict["reportPeriod"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the reportRefreshDate
+    *
+    * @return \DateTime The reportRefreshDate
+    */
+    public function getReportRefreshDate()
+    {
+        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
+                return $this->_propDict["reportRefreshDate"];
+            } else {
+                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
+                return $this->_propDict["reportRefreshDate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the reportRefreshDate
+    *
+    * @param \DateTime $val The reportRefreshDate
+    *
+    * @return EmailAppUsageUserCounts
+    */
+    public function setReportRefreshDate($val)
+    {
+        $this->_propDict["reportRefreshDate"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the smtpApp
+    *
+    * @return int The smtpApp
+    */
+    public function getSmtpApp()
+    {
+        if (array_key_exists("smtpApp", $this->_propDict)) {
+            return $this->_propDict["smtpApp"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the smtpApp
+    *
+    * @param int $val The smtpApp
+    *
+    * @return EmailAppUsageUserCounts
+    */
+    public function setSmtpApp($val)
+    {
+        $this->_propDict["smtpApp"] = intval($val);
         return $this;
     }
     

@@ -58,39 +58,6 @@ class DeviceHealthScriptDeviceState extends Entity
     }
     
     /**
-    * Gets the lastStateUpdateDateTime
-    * The last timestamp of when the device health script executed
-    *
-    * @return \DateTime The lastStateUpdateDateTime
-    */
-    public function getLastStateUpdateDateTime()
-    {
-        if (array_key_exists("lastStateUpdateDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastStateUpdateDateTime"], "\DateTime")) {
-                return $this->_propDict["lastStateUpdateDateTime"];
-            } else {
-                $this->_propDict["lastStateUpdateDateTime"] = new \DateTime($this->_propDict["lastStateUpdateDateTime"]);
-                return $this->_propDict["lastStateUpdateDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the lastStateUpdateDateTime
-    * The last timestamp of when the device health script executed
-    *
-    * @param \DateTime $val The lastStateUpdateDateTime
-    *
-    * @return DeviceHealthScriptDeviceState
-    */
-    public function setLastStateUpdateDateTime($val)
-    {
-        $this->_propDict["lastStateUpdateDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the expectedStateUpdateDateTime
     * The next timestamp of when the device health script is expected to execute
     *
@@ -120,6 +87,39 @@ class DeviceHealthScriptDeviceState extends Entity
     public function setExpectedStateUpdateDateTime($val)
     {
         $this->_propDict["expectedStateUpdateDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the lastStateUpdateDateTime
+    * The last timestamp of when the device health script executed
+    *
+    * @return \DateTime The lastStateUpdateDateTime
+    */
+    public function getLastStateUpdateDateTime()
+    {
+        if (array_key_exists("lastStateUpdateDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastStateUpdateDateTime"], "\DateTime")) {
+                return $this->_propDict["lastStateUpdateDateTime"];
+            } else {
+                $this->_propDict["lastStateUpdateDateTime"] = new \DateTime($this->_propDict["lastStateUpdateDateTime"]);
+                return $this->_propDict["lastStateUpdateDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the lastStateUpdateDateTime
+    * The last timestamp of when the device health script executed
+    *
+    * @param \DateTime $val The lastStateUpdateDateTime
+    *
+    * @return DeviceHealthScriptDeviceState
+    */
+    public function setLastStateUpdateDateTime($val)
+    {
+        $this->_propDict["lastStateUpdateDateTime"] = $val;
         return $this;
     }
     
@@ -157,89 +157,31 @@ class DeviceHealthScriptDeviceState extends Entity
     }
     
     /**
-    * Gets the preRemediationDetectionScriptOutput
-    * Output of the detection script before remediation
+    * Gets the postRemediationDetectionScriptError
+    * Error from the detection script after remediation
     *
-    * @return string The preRemediationDetectionScriptOutput
+    * @return string The postRemediationDetectionScriptError
     */
-    public function getPreRemediationDetectionScriptOutput()
+    public function getPostRemediationDetectionScriptError()
     {
-        if (array_key_exists("preRemediationDetectionScriptOutput", $this->_propDict)) {
-            return $this->_propDict["preRemediationDetectionScriptOutput"];
+        if (array_key_exists("postRemediationDetectionScriptError", $this->_propDict)) {
+            return $this->_propDict["postRemediationDetectionScriptError"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the preRemediationDetectionScriptOutput
-    * Output of the detection script before remediation
+    * Sets the postRemediationDetectionScriptError
+    * Error from the detection script after remediation
     *
-    * @param string $val The preRemediationDetectionScriptOutput
-    *
-    * @return DeviceHealthScriptDeviceState
-    */
-    public function setPreRemediationDetectionScriptOutput($val)
-    {
-        $this->_propDict["preRemediationDetectionScriptOutput"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the preRemediationDetectionScriptError
-    * Error from the detection script before remediation
-    *
-    * @return string The preRemediationDetectionScriptError
-    */
-    public function getPreRemediationDetectionScriptError()
-    {
-        if (array_key_exists("preRemediationDetectionScriptError", $this->_propDict)) {
-            return $this->_propDict["preRemediationDetectionScriptError"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the preRemediationDetectionScriptError
-    * Error from the detection script before remediation
-    *
-    * @param string $val The preRemediationDetectionScriptError
+    * @param string $val The postRemediationDetectionScriptError
     *
     * @return DeviceHealthScriptDeviceState
     */
-    public function setPreRemediationDetectionScriptError($val)
+    public function setPostRemediationDetectionScriptError($val)
     {
-        $this->_propDict["preRemediationDetectionScriptError"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the remediationScriptError
-    * Error output of the remediation script
-    *
-    * @return string The remediationScriptError
-    */
-    public function getRemediationScriptError()
-    {
-        if (array_key_exists("remediationScriptError", $this->_propDict)) {
-            return $this->_propDict["remediationScriptError"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the remediationScriptError
-    * Error output of the remediation script
-    *
-    * @param string $val The remediationScriptError
-    *
-    * @return DeviceHealthScriptDeviceState
-    */
-    public function setRemediationScriptError($val)
-    {
-        $this->_propDict["remediationScriptError"] = $val;
+        $this->_propDict["postRemediationDetectionScriptError"] = $val;
         return $this;
     }
     
@@ -273,31 +215,89 @@ class DeviceHealthScriptDeviceState extends Entity
     }
     
     /**
-    * Gets the postRemediationDetectionScriptError
-    * Error from the detection script after remediation
+    * Gets the preRemediationDetectionScriptError
+    * Error from the detection script before remediation
     *
-    * @return string The postRemediationDetectionScriptError
+    * @return string The preRemediationDetectionScriptError
     */
-    public function getPostRemediationDetectionScriptError()
+    public function getPreRemediationDetectionScriptError()
     {
-        if (array_key_exists("postRemediationDetectionScriptError", $this->_propDict)) {
-            return $this->_propDict["postRemediationDetectionScriptError"];
+        if (array_key_exists("preRemediationDetectionScriptError", $this->_propDict)) {
+            return $this->_propDict["preRemediationDetectionScriptError"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the postRemediationDetectionScriptError
-    * Error from the detection script after remediation
+    * Sets the preRemediationDetectionScriptError
+    * Error from the detection script before remediation
     *
-    * @param string $val The postRemediationDetectionScriptError
+    * @param string $val The preRemediationDetectionScriptError
     *
     * @return DeviceHealthScriptDeviceState
     */
-    public function setPostRemediationDetectionScriptError($val)
+    public function setPreRemediationDetectionScriptError($val)
     {
-        $this->_propDict["postRemediationDetectionScriptError"] = $val;
+        $this->_propDict["preRemediationDetectionScriptError"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the preRemediationDetectionScriptOutput
+    * Output of the detection script before remediation
+    *
+    * @return string The preRemediationDetectionScriptOutput
+    */
+    public function getPreRemediationDetectionScriptOutput()
+    {
+        if (array_key_exists("preRemediationDetectionScriptOutput", $this->_propDict)) {
+            return $this->_propDict["preRemediationDetectionScriptOutput"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the preRemediationDetectionScriptOutput
+    * Output of the detection script before remediation
+    *
+    * @param string $val The preRemediationDetectionScriptOutput
+    *
+    * @return DeviceHealthScriptDeviceState
+    */
+    public function setPreRemediationDetectionScriptOutput($val)
+    {
+        $this->_propDict["preRemediationDetectionScriptOutput"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the remediationScriptError
+    * Error output of the remediation script
+    *
+    * @return string The remediationScriptError
+    */
+    public function getRemediationScriptError()
+    {
+        if (array_key_exists("remediationScriptError", $this->_propDict)) {
+            return $this->_propDict["remediationScriptError"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the remediationScriptError
+    * Error output of the remediation script
+    *
+    * @param string $val The remediationScriptError
+    *
+    * @return DeviceHealthScriptDeviceState
+    */
+    public function setRemediationScriptError($val)
+    {
+        $this->_propDict["remediationScriptError"] = $val;
         return $this;
     }
     

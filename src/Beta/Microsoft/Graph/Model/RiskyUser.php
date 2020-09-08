@@ -83,6 +83,39 @@ class RiskyUser extends Entity
     }
     
     /**
+    * Gets the riskDetail
+    * Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
+    *
+    * @return RiskDetail The riskDetail
+    */
+    public function getRiskDetail()
+    {
+        if (array_key_exists("riskDetail", $this->_propDict)) {
+            if (is_a($this->_propDict["riskDetail"], "Beta\Microsoft\Graph\Model\RiskDetail")) {
+                return $this->_propDict["riskDetail"];
+            } else {
+                $this->_propDict["riskDetail"] = new RiskDetail($this->_propDict["riskDetail"]);
+                return $this->_propDict["riskDetail"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the riskDetail
+    * Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
+    *
+    * @param RiskDetail $val The riskDetail
+    *
+    * @return RiskyUser
+    */
+    public function setRiskDetail($val)
+    {
+        $this->_propDict["riskDetail"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the riskLastUpdatedDateTime
     * The date and time that the risky user was last updated.
     *
@@ -178,39 +211,6 @@ class RiskyUser extends Entity
     public function setRiskState($val)
     {
         $this->_propDict["riskState"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the riskDetail
-    * Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
-    *
-    * @return RiskDetail The riskDetail
-    */
-    public function getRiskDetail()
-    {
-        if (array_key_exists("riskDetail", $this->_propDict)) {
-            if (is_a($this->_propDict["riskDetail"], "Beta\Microsoft\Graph\Model\RiskDetail")) {
-                return $this->_propDict["riskDetail"];
-            } else {
-                $this->_propDict["riskDetail"] = new RiskDetail($this->_propDict["riskDetail"]);
-                return $this->_propDict["riskDetail"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the riskDetail
-    * Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
-    *
-    * @param RiskDetail $val The riskDetail
-    *
-    * @return RiskyUser
-    */
-    public function setRiskDetail($val)
-    {
-        $this->_propDict["riskDetail"] = $val;
         return $this;
     }
     

@@ -24,34 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class OrganizationSettings extends Entity
 {
-
-     /** 
-     * Gets the profileCardProperties
-     *
-     * @return array The profileCardProperties
-     */
-    public function getProfileCardProperties()
-    {
-        if (array_key_exists("profileCardProperties", $this->_propDict)) {
-           return $this->_propDict["profileCardProperties"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the profileCardProperties
-    *
-    * @param ProfileCardProperty $val The profileCardProperties
-    *
-    * @return OrganizationSettings
-    */
-    public function setProfileCardProperties($val)
-    {
-		$this->_propDict["profileCardProperties"] = $val;
-        return $this;
-    }
-    
     /**
     * Gets the itemInsights
     *
@@ -80,6 +52,34 @@ class OrganizationSettings extends Entity
     public function setItemInsights($val)
     {
         $this->_propDict["itemInsights"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the profileCardProperties
+     *
+     * @return array The profileCardProperties
+     */
+    public function getProfileCardProperties()
+    {
+        if (array_key_exists("profileCardProperties", $this->_propDict)) {
+           return $this->_propDict["profileCardProperties"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the profileCardProperties
+    *
+    * @param ProfileCardProperty $val The profileCardProperties
+    *
+    * @return OrganizationSettings
+    */
+    public function setProfileCardProperties($val)
+    {
+		$this->_propDict["profileCardProperties"] = $val;
         return $this;
     }
     

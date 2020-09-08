@@ -25,35 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class MobileAppInstallStatus extends Entity
 {
     /**
-    * Gets the deviceName
-    * Device name
-    *
-    * @return string The deviceName
-    */
-    public function getDeviceName()
-    {
-        if (array_key_exists("deviceName", $this->_propDict)) {
-            return $this->_propDict["deviceName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the deviceName
-    * Device name
-    *
-    * @param string $val The deviceName
-    *
-    * @return MobileAppInstallStatus
-    */
-    public function setDeviceName($val)
-    {
-        $this->_propDict["deviceName"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the deviceId
     * Device ID
     *
@@ -83,68 +54,89 @@ class MobileAppInstallStatus extends Entity
     }
     
     /**
-    * Gets the lastSyncDateTime
-    * Last sync date time
+    * Gets the deviceName
+    * Device name
     *
-    * @return \DateTime The lastSyncDateTime
+    * @return string The deviceName
     */
-    public function getLastSyncDateTime()
+    public function getDeviceName()
     {
-        if (array_key_exists("lastSyncDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastSyncDateTime"], "\DateTime")) {
-                return $this->_propDict["lastSyncDateTime"];
-            } else {
-                $this->_propDict["lastSyncDateTime"] = new \DateTime($this->_propDict["lastSyncDateTime"]);
-                return $this->_propDict["lastSyncDateTime"];
-            }
+        if (array_key_exists("deviceName", $this->_propDict)) {
+            return $this->_propDict["deviceName"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the lastSyncDateTime
-    * Last sync date time
+    * Sets the deviceName
+    * Device name
     *
-    * @param \DateTime $val The lastSyncDateTime
+    * @param string $val The deviceName
     *
     * @return MobileAppInstallStatus
     */
-    public function setLastSyncDateTime($val)
+    public function setDeviceName($val)
     {
-        $this->_propDict["lastSyncDateTime"] = $val;
+        $this->_propDict["deviceName"] = $val;
         return $this;
     }
     
     /**
-    * Gets the mobileAppInstallStatusValue
-    * The install state of the app.
+    * Gets the displayVersion
+    * Human readable version of the application
     *
-    * @return ResultantAppState The mobileAppInstallStatusValue
+    * @return string The displayVersion
     */
-    public function getMobileAppInstallStatusValue()
+    public function getDisplayVersion()
     {
-        if (array_key_exists("mobileAppInstallStatusValue", $this->_propDict)) {
-            if (is_a($this->_propDict["mobileAppInstallStatusValue"], "Beta\Microsoft\Graph\Model\ResultantAppState")) {
-                return $this->_propDict["mobileAppInstallStatusValue"];
-            } else {
-                $this->_propDict["mobileAppInstallStatusValue"] = new ResultantAppState($this->_propDict["mobileAppInstallStatusValue"]);
-                return $this->_propDict["mobileAppInstallStatusValue"];
-            }
+        if (array_key_exists("displayVersion", $this->_propDict)) {
+            return $this->_propDict["displayVersion"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the mobileAppInstallStatusValue
-    * The install state of the app.
+    * Sets the displayVersion
+    * Human readable version of the application
     *
-    * @param ResultantAppState $val The mobileAppInstallStatusValue
+    * @param string $val The displayVersion
     *
     * @return MobileAppInstallStatus
     */
-    public function setMobileAppInstallStatusValue($val)
+    public function setDisplayVersion($val)
     {
-        $this->_propDict["mobileAppInstallStatusValue"] = $val;
+        $this->_propDict["displayVersion"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the errorCode
+    * The error code for install or uninstall failures.
+    *
+    * @return int The errorCode
+    */
+    public function getErrorCode()
+    {
+        if (array_key_exists("errorCode", $this->_propDict)) {
+            return $this->_propDict["errorCode"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the errorCode
+    * The error code for install or uninstall failures.
+    *
+    * @param int $val The errorCode
+    *
+    * @return MobileAppInstallStatus
+    */
+    public function setErrorCode($val)
+    {
+        $this->_propDict["errorCode"] = intval($val);
         return $this;
     }
     
@@ -215,60 +207,68 @@ class MobileAppInstallStatus extends Entity
     }
     
     /**
-    * Gets the errorCode
-    * The error code for install or uninstall failures.
+    * Gets the lastSyncDateTime
+    * Last sync date time
     *
-    * @return int The errorCode
+    * @return \DateTime The lastSyncDateTime
     */
-    public function getErrorCode()
+    public function getLastSyncDateTime()
     {
-        if (array_key_exists("errorCode", $this->_propDict)) {
-            return $this->_propDict["errorCode"];
-        } else {
-            return null;
+        if (array_key_exists("lastSyncDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastSyncDateTime"], "\DateTime")) {
+                return $this->_propDict["lastSyncDateTime"];
+            } else {
+                $this->_propDict["lastSyncDateTime"] = new \DateTime($this->_propDict["lastSyncDateTime"]);
+                return $this->_propDict["lastSyncDateTime"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the errorCode
-    * The error code for install or uninstall failures.
+    * Sets the lastSyncDateTime
+    * Last sync date time
     *
-    * @param int $val The errorCode
+    * @param \DateTime $val The lastSyncDateTime
     *
     * @return MobileAppInstallStatus
     */
-    public function setErrorCode($val)
+    public function setLastSyncDateTime($val)
     {
-        $this->_propDict["errorCode"] = intval($val);
+        $this->_propDict["lastSyncDateTime"] = $val;
         return $this;
     }
     
     /**
-    * Gets the osVersion
-    * OS Version
+    * Gets the mobileAppInstallStatusValue
+    * The install state of the app.
     *
-    * @return string The osVersion
+    * @return ResultantAppState The mobileAppInstallStatusValue
     */
-    public function getOsVersion()
+    public function getMobileAppInstallStatusValue()
     {
-        if (array_key_exists("osVersion", $this->_propDict)) {
-            return $this->_propDict["osVersion"];
-        } else {
-            return null;
+        if (array_key_exists("mobileAppInstallStatusValue", $this->_propDict)) {
+            if (is_a($this->_propDict["mobileAppInstallStatusValue"], "Beta\Microsoft\Graph\Model\ResultantAppState")) {
+                return $this->_propDict["mobileAppInstallStatusValue"];
+            } else {
+                $this->_propDict["mobileAppInstallStatusValue"] = new ResultantAppState($this->_propDict["mobileAppInstallStatusValue"]);
+                return $this->_propDict["mobileAppInstallStatusValue"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the osVersion
-    * OS Version
+    * Sets the mobileAppInstallStatusValue
+    * The install state of the app.
     *
-    * @param string $val The osVersion
+    * @param ResultantAppState $val The mobileAppInstallStatusValue
     *
     * @return MobileAppInstallStatus
     */
-    public function setOsVersion($val)
+    public function setMobileAppInstallStatusValue($val)
     {
-        $this->_propDict["osVersion"] = $val;
+        $this->_propDict["mobileAppInstallStatusValue"] = $val;
         return $this;
     }
     
@@ -298,6 +298,35 @@ class MobileAppInstallStatus extends Entity
     public function setOsDescription($val)
     {
         $this->_propDict["osDescription"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the osVersion
+    * OS Version
+    *
+    * @return string The osVersion
+    */
+    public function getOsVersion()
+    {
+        if (array_key_exists("osVersion", $this->_propDict)) {
+            return $this->_propDict["osVersion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the osVersion
+    * OS Version
+    *
+    * @param string $val The osVersion
+    *
+    * @return MobileAppInstallStatus
+    */
+    public function setOsVersion($val)
+    {
+        $this->_propDict["osVersion"] = $val;
         return $this;
     }
     
@@ -356,35 +385,6 @@ class MobileAppInstallStatus extends Entity
     public function setUserPrincipalName($val)
     {
         $this->_propDict["userPrincipalName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the displayVersion
-    * Human readable version of the application
-    *
-    * @return string The displayVersion
-    */
-    public function getDisplayVersion()
-    {
-        if (array_key_exists("displayVersion", $this->_propDict)) {
-            return $this->_propDict["displayVersion"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the displayVersion
-    * Human readable version of the application
-    *
-    * @param string $val The displayVersion
-    *
-    * @return MobileAppInstallStatus
-    */
-    public function setDisplayVersion($val)
-    {
-        $this->_propDict["displayVersion"] = $val;
         return $this;
     }
     

@@ -25,37 +25,6 @@ class MeetingParticipants extends Entity
 {
 
     /**
-    * Gets the organizer
-    *
-    * @return MeetingParticipantInfo The organizer
-    */
-    public function getOrganizer()
-    {
-        if (array_key_exists("organizer", $this->_propDict)) {
-            if (is_a($this->_propDict["organizer"], "Beta\Microsoft\Graph\Model\MeetingParticipantInfo")) {
-                return $this->_propDict["organizer"];
-            } else {
-                $this->_propDict["organizer"] = new MeetingParticipantInfo($this->_propDict["organizer"]);
-                return $this->_propDict["organizer"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the organizer
-    *
-    * @param MeetingParticipantInfo $val The value to assign to the organizer
-    *
-    * @return MeetingParticipants The MeetingParticipants
-    */
-    public function setOrganizer($val)
-    {
-        $this->_propDict["organizer"] = $val;
-         return $this;
-    }
-
-    /**
     * Gets the attendees
     *
     * @return MeetingParticipantInfo The attendees
@@ -87,37 +56,6 @@ class MeetingParticipants extends Entity
     }
 
     /**
-    * Gets the producers
-    *
-    * @return MeetingParticipantInfo The producers
-    */
-    public function getProducers()
-    {
-        if (array_key_exists("producers", $this->_propDict)) {
-            if (is_a($this->_propDict["producers"], "Beta\Microsoft\Graph\Model\MeetingParticipantInfo")) {
-                return $this->_propDict["producers"];
-            } else {
-                $this->_propDict["producers"] = new MeetingParticipantInfo($this->_propDict["producers"]);
-                return $this->_propDict["producers"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the producers
-    *
-    * @param MeetingParticipantInfo $val The value to assign to the producers
-    *
-    * @return MeetingParticipants The MeetingParticipants
-    */
-    public function setProducers($val)
-    {
-        $this->_propDict["producers"] = $val;
-         return $this;
-    }
-
-    /**
     * Gets the contributors
     *
     * @return MeetingParticipantInfo The contributors
@@ -145,6 +83,68 @@ class MeetingParticipants extends Entity
     public function setContributors($val)
     {
         $this->_propDict["contributors"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the organizer
+    *
+    * @return MeetingParticipantInfo The organizer
+    */
+    public function getOrganizer()
+    {
+        if (array_key_exists("organizer", $this->_propDict)) {
+            if (is_a($this->_propDict["organizer"], "Beta\Microsoft\Graph\Model\MeetingParticipantInfo")) {
+                return $this->_propDict["organizer"];
+            } else {
+                $this->_propDict["organizer"] = new MeetingParticipantInfo($this->_propDict["organizer"]);
+                return $this->_propDict["organizer"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the organizer
+    *
+    * @param MeetingParticipantInfo $val The value to assign to the organizer
+    *
+    * @return MeetingParticipants The MeetingParticipants
+    */
+    public function setOrganizer($val)
+    {
+        $this->_propDict["organizer"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the producers
+    *
+    * @return MeetingParticipantInfo The producers
+    */
+    public function getProducers()
+    {
+        if (array_key_exists("producers", $this->_propDict)) {
+            if (is_a($this->_propDict["producers"], "Beta\Microsoft\Graph\Model\MeetingParticipantInfo")) {
+                return $this->_propDict["producers"];
+            } else {
+                $this->_propDict["producers"] = new MeetingParticipantInfo($this->_propDict["producers"]);
+                return $this->_propDict["producers"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the producers
+    *
+    * @param MeetingParticipantInfo $val The value to assign to the producers
+    *
+    * @return MeetingParticipants The MeetingParticipants
+    */
+    public function setProducers($val)
+    {
+        $this->_propDict["producers"] = $val;
          return $this;
     }
 }

@@ -24,34 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class MacOSLaunchItem extends Entity
 {
     /**
-    * Gets the path
-    * Path to the launch item.
-    *
-    * @return string The path
-    */
-    public function getPath()
-    {
-        if (array_key_exists("path", $this->_propDict)) {
-            return $this->_propDict["path"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the path
-    * Path to the launch item.
-    *
-    * @param string $val The value of the path
-    *
-    * @return MacOSLaunchItem
-    */
-    public function setPath($val)
-    {
-        $this->_propDict["path"] = $val;
-        return $this;
-    }
-    /**
     * Gets the hide
     * Whether or not to hide the item from the Users and Groups List.
     *
@@ -77,6 +49,34 @@ class MacOSLaunchItem extends Entity
     public function setHide($val)
     {
         $this->_propDict["hide"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the path
+    * Path to the launch item.
+    *
+    * @return string The path
+    */
+    public function getPath()
+    {
+        if (array_key_exists("path", $this->_propDict)) {
+            return $this->_propDict["path"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the path
+    * Path to the launch item.
+    *
+    * @param string $val The value of the path
+    *
+    * @return MacOSLaunchItem
+    */
+    public function setPath($val)
+    {
+        $this->_propDict["path"] = $val;
         return $this;
     }
 }

@@ -24,6 +24,63 @@ namespace Beta\Microsoft\Graph\Model;
 class ApprovalSettings extends Entity
 {
     /**
+    * Gets the approvalMode
+    *
+    * @return string The approvalMode
+    */
+    public function getApprovalMode()
+    {
+        if (array_key_exists("approvalMode", $this->_propDict)) {
+            return $this->_propDict["approvalMode"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the approvalMode
+    *
+    * @param string $val The value of the approvalMode
+    *
+    * @return ApprovalSettings
+    */
+    public function setApprovalMode($val)
+    {
+        $this->_propDict["approvalMode"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the approvalStages
+    *
+    * @return ApprovalStage The approvalStages
+    */
+    public function getApprovalStages()
+    {
+        if (array_key_exists("approvalStages", $this->_propDict)) {
+            if (is_a($this->_propDict["approvalStages"], "Beta\Microsoft\Graph\Model\ApprovalStage")) {
+                return $this->_propDict["approvalStages"];
+            } else {
+                $this->_propDict["approvalStages"] = new ApprovalStage($this->_propDict["approvalStages"]);
+                return $this->_propDict["approvalStages"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the approvalStages
+    *
+    * @param ApprovalStage $val The value to assign to the approvalStages
+    *
+    * @return ApprovalSettings The ApprovalSettings
+    */
+    public function setApprovalStages($val)
+    {
+        $this->_propDict["approvalStages"] = $val;
+         return $this;
+    }
+    /**
     * Gets the isApprovalRequired
     *
     * @return bool The isApprovalRequired
@@ -100,62 +157,5 @@ class ApprovalSettings extends Entity
     {
         $this->_propDict["isRequestorJustificationRequired"] = $val;
         return $this;
-    }
-    /**
-    * Gets the approvalMode
-    *
-    * @return string The approvalMode
-    */
-    public function getApprovalMode()
-    {
-        if (array_key_exists("approvalMode", $this->_propDict)) {
-            return $this->_propDict["approvalMode"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the approvalMode
-    *
-    * @param string $val The value of the approvalMode
-    *
-    * @return ApprovalSettings
-    */
-    public function setApprovalMode($val)
-    {
-        $this->_propDict["approvalMode"] = $val;
-        return $this;
-    }
-
-    /**
-    * Gets the approvalStages
-    *
-    * @return ApprovalStage The approvalStages
-    */
-    public function getApprovalStages()
-    {
-        if (array_key_exists("approvalStages", $this->_propDict)) {
-            if (is_a($this->_propDict["approvalStages"], "Beta\Microsoft\Graph\Model\ApprovalStage")) {
-                return $this->_propDict["approvalStages"];
-            } else {
-                $this->_propDict["approvalStages"] = new ApprovalStage($this->_propDict["approvalStages"]);
-                return $this->_propDict["approvalStages"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the approvalStages
-    *
-    * @param ApprovalStage $val The value to assign to the approvalStages
-    *
-    * @return ApprovalSettings The ApprovalSettings
-    */
-    public function setApprovalStages($val)
-    {
-        $this->_propDict["approvalStages"] = $val;
-         return $this;
     }
 }

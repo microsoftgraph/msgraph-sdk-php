@@ -25,87 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class AccessPackageCatalog extends Entity
 {
     /**
-    * Gets the displayName
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the displayName
-    *
-    * @param string $val The displayName
-    *
-    * @return AccessPackageCatalog
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the description
-    *
-    * @return string The description
-    */
-    public function getDescription()
-    {
-        if (array_key_exists("description", $this->_propDict)) {
-            return $this->_propDict["description"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the description
-    *
-    * @param string $val The description
-    *
-    * @return AccessPackageCatalog
-    */
-    public function setDescription($val)
-    {
-        $this->_propDict["description"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the catalogType
-    *
-    * @return string The catalogType
-    */
-    public function getCatalogType()
-    {
-        if (array_key_exists("catalogType", $this->_propDict)) {
-            return $this->_propDict["catalogType"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the catalogType
-    *
-    * @param string $val The catalogType
-    *
-    * @return AccessPackageCatalog
-    */
-    public function setCatalogType($val)
-    {
-        $this->_propDict["catalogType"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the catalogStatus
     *
     * @return string The catalogStatus
@@ -133,29 +52,29 @@ class AccessPackageCatalog extends Entity
     }
     
     /**
-    * Gets the isExternallyVisible
+    * Gets the catalogType
     *
-    * @return bool The isExternallyVisible
+    * @return string The catalogType
     */
-    public function getIsExternallyVisible()
+    public function getCatalogType()
     {
-        if (array_key_exists("isExternallyVisible", $this->_propDict)) {
-            return $this->_propDict["isExternallyVisible"];
+        if (array_key_exists("catalogType", $this->_propDict)) {
+            return $this->_propDict["catalogType"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the isExternallyVisible
+    * Sets the catalogType
     *
-    * @param bool $val The isExternallyVisible
+    * @param string $val The catalogType
     *
     * @return AccessPackageCatalog
     */
-    public function setIsExternallyVisible($val)
+    public function setCatalogType($val)
     {
-        $this->_propDict["isExternallyVisible"] = boolval($val);
+        $this->_propDict["catalogType"] = $val;
         return $this;
     }
     
@@ -214,6 +133,87 @@ class AccessPackageCatalog extends Entity
     public function setCreatedDateTime($val)
     {
         $this->_propDict["createdDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the description
+    *
+    * @return string The description
+    */
+    public function getDescription()
+    {
+        if (array_key_exists("description", $this->_propDict)) {
+            return $this->_propDict["description"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the description
+    *
+    * @param string $val The description
+    *
+    * @return AccessPackageCatalog
+    */
+    public function setDescription($val)
+    {
+        $this->_propDict["description"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the displayName
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the displayName
+    *
+    * @param string $val The displayName
+    *
+    * @return AccessPackageCatalog
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the isExternallyVisible
+    *
+    * @return bool The isExternallyVisible
+    */
+    public function getIsExternallyVisible()
+    {
+        if (array_key_exists("isExternallyVisible", $this->_propDict)) {
+            return $this->_propDict["isExternallyVisible"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isExternallyVisible
+    *
+    * @param bool $val The isExternallyVisible
+    *
+    * @return AccessPackageCatalog
+    */
+    public function setIsExternallyVisible($val)
+    {
+        $this->_propDict["isExternallyVisible"] = boolval($val);
         return $this;
     }
     
@@ -277,34 +277,6 @@ class AccessPackageCatalog extends Entity
     
 
      /** 
-     * Gets the accessPackageResources
-     *
-     * @return array The accessPackageResources
-     */
-    public function getAccessPackageResources()
-    {
-        if (array_key_exists("accessPackageResources", $this->_propDict)) {
-           return $this->_propDict["accessPackageResources"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the accessPackageResources
-    *
-    * @param AccessPackageResource $val The accessPackageResources
-    *
-    * @return AccessPackageCatalog
-    */
-    public function setAccessPackageResources($val)
-    {
-		$this->_propDict["accessPackageResources"] = $val;
-        return $this;
-    }
-    
-
-     /** 
      * Gets the accessPackageResourceRoles
      *
      * @return array The accessPackageResourceRoles
@@ -328,6 +300,34 @@ class AccessPackageCatalog extends Entity
     public function setAccessPackageResourceRoles($val)
     {
 		$this->_propDict["accessPackageResourceRoles"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the accessPackageResources
+     *
+     * @return array The accessPackageResources
+     */
+    public function getAccessPackageResources()
+    {
+        if (array_key_exists("accessPackageResources", $this->_propDict)) {
+           return $this->_propDict["accessPackageResources"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the accessPackageResources
+    *
+    * @param AccessPackageResource $val The accessPackageResources
+    *
+    * @return AccessPackageCatalog
+    */
+    public function setAccessPackageResources($val)
+    {
+		$this->_propDict["accessPackageResources"] = $val;
         return $this;
     }
     

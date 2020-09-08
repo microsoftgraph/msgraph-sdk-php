@@ -91,39 +91,6 @@ class SharedPCConfiguration extends DeviceConfiguration
     }
     
     /**
-    * Gets the localStorage
-    * Specifies whether local storage is allowed on a shared PC.
-    *
-    * @return Enablement The localStorage
-    */
-    public function getLocalStorage()
-    {
-        if (array_key_exists("localStorage", $this->_propDict)) {
-            if (is_a($this->_propDict["localStorage"], "Beta\Microsoft\Graph\Model\Enablement")) {
-                return $this->_propDict["localStorage"];
-            } else {
-                $this->_propDict["localStorage"] = new Enablement($this->_propDict["localStorage"]);
-                return $this->_propDict["localStorage"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the localStorage
-    * Specifies whether local storage is allowed on a shared PC.
-    *
-    * @param Enablement $val The localStorage
-    *
-    * @return SharedPCConfiguration
-    */
-    public function setLocalStorage($val)
-    {
-        $this->_propDict["localStorage"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the allowLocalStorage
     * Specifies whether local storage is allowed on a shared PC.
     *
@@ -149,39 +116,6 @@ class SharedPCConfiguration extends DeviceConfiguration
     public function setAllowLocalStorage($val)
     {
         $this->_propDict["allowLocalStorage"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the setAccountManager
-    * Disables the account manager for shared PC mode.
-    *
-    * @return Enablement The setAccountManager
-    */
-    public function getSetAccountManager()
-    {
-        if (array_key_exists("setAccountManager", $this->_propDict)) {
-            if (is_a($this->_propDict["setAccountManager"], "Beta\Microsoft\Graph\Model\Enablement")) {
-                return $this->_propDict["setAccountManager"];
-            } else {
-                $this->_propDict["setAccountManager"] = new Enablement($this->_propDict["setAccountManager"]);
-                return $this->_propDict["setAccountManager"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the setAccountManager
-    * Disables the account manager for shared PC mode.
-    *
-    * @param Enablement $val The setAccountManager
-    *
-    * @return SharedPCConfiguration
-    */
-    public function setSetAccountManager($val)
-    {
-        $this->_propDict["setAccountManager"] = $val;
         return $this;
     }
     
@@ -215,39 +149,6 @@ class SharedPCConfiguration extends DeviceConfiguration
     }
     
     /**
-    * Gets the setEduPolicies
-    * Specifies whether the default shared PC education environment policies should be enabled/disabled/not configured. For Windows 10 RS2 and later, this policy will be applied without setting Enabled to true.
-    *
-    * @return Enablement The setEduPolicies
-    */
-    public function getSetEduPolicies()
-    {
-        if (array_key_exists("setEduPolicies", $this->_propDict)) {
-            if (is_a($this->_propDict["setEduPolicies"], "Beta\Microsoft\Graph\Model\Enablement")) {
-                return $this->_propDict["setEduPolicies"];
-            } else {
-                $this->_propDict["setEduPolicies"] = new Enablement($this->_propDict["setEduPolicies"]);
-                return $this->_propDict["setEduPolicies"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the setEduPolicies
-    * Specifies whether the default shared PC education environment policies should be enabled/disabled/not configured. For Windows 10 RS2 and later, this policy will be applied without setting Enabled to true.
-    *
-    * @param Enablement $val The setEduPolicies
-    *
-    * @return SharedPCConfiguration
-    */
-    public function setSetEduPolicies($val)
-    {
-        $this->_propDict["setEduPolicies"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the disableEduPolicies
     * Specifies whether the default shared PC education environment policies should be disabled. For Windows 10 RS2 and later, this policy will be applied without setting Enabled to true.
     *
@@ -277,39 +178,6 @@ class SharedPCConfiguration extends DeviceConfiguration
     }
     
     /**
-    * Gets the setPowerPolicies
-    * Specifies whether the default shared PC power policies should be enabled/disabled.
-    *
-    * @return Enablement The setPowerPolicies
-    */
-    public function getSetPowerPolicies()
-    {
-        if (array_key_exists("setPowerPolicies", $this->_propDict)) {
-            if (is_a($this->_propDict["setPowerPolicies"], "Beta\Microsoft\Graph\Model\Enablement")) {
-                return $this->_propDict["setPowerPolicies"];
-            } else {
-                $this->_propDict["setPowerPolicies"] = new Enablement($this->_propDict["setPowerPolicies"]);
-                return $this->_propDict["setPowerPolicies"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the setPowerPolicies
-    * Specifies whether the default shared PC power policies should be enabled/disabled.
-    *
-    * @param Enablement $val The setPowerPolicies
-    *
-    * @return SharedPCConfiguration
-    */
-    public function setSetPowerPolicies($val)
-    {
-        $this->_propDict["setPowerPolicies"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the disablePowerPolicies
     * Specifies whether the default shared PC power policies should be disabled.
     *
@@ -335,39 +203,6 @@ class SharedPCConfiguration extends DeviceConfiguration
     public function setDisablePowerPolicies($val)
     {
         $this->_propDict["disablePowerPolicies"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the signInOnResume
-    * Specifies the requirement to sign in whenever the device wakes up from sleep mode.
-    *
-    * @return Enablement The signInOnResume
-    */
-    public function getSignInOnResume()
-    {
-        if (array_key_exists("signInOnResume", $this->_propDict)) {
-            if (is_a($this->_propDict["signInOnResume"], "Beta\Microsoft\Graph\Model\Enablement")) {
-                return $this->_propDict["signInOnResume"];
-            } else {
-                $this->_propDict["signInOnResume"] = new Enablement($this->_propDict["signInOnResume"]);
-                return $this->_propDict["signInOnResume"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the signInOnResume
-    * Specifies the requirement to sign in whenever the device wakes up from sleep mode.
-    *
-    * @param Enablement $val The signInOnResume
-    *
-    * @return SharedPCConfiguration
-    */
-    public function setSignInOnResume($val)
-    {
-        $this->_propDict["signInOnResume"] = $val;
         return $this;
     }
     
@@ -426,6 +261,39 @@ class SharedPCConfiguration extends DeviceConfiguration
     public function setEnabled($val)
     {
         $this->_propDict["enabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the fastFirstSignIn
+    * Specifies whether to auto connect new non-admin Azure AD accounts to pre-configured candidate local accounts
+    *
+    * @return Enablement The fastFirstSignIn
+    */
+    public function getFastFirstSignIn()
+    {
+        if (array_key_exists("fastFirstSignIn", $this->_propDict)) {
+            if (is_a($this->_propDict["fastFirstSignIn"], "Beta\Microsoft\Graph\Model\Enablement")) {
+                return $this->_propDict["fastFirstSignIn"];
+            } else {
+                $this->_propDict["fastFirstSignIn"] = new Enablement($this->_propDict["fastFirstSignIn"]);
+                return $this->_propDict["fastFirstSignIn"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the fastFirstSignIn
+    * Specifies whether to auto connect new non-admin Azure AD accounts to pre-configured candidate local accounts
+    *
+    * @param Enablement $val The fastFirstSignIn
+    *
+    * @return SharedPCConfiguration
+    */
+    public function setFastFirstSignIn($val)
+    {
+        $this->_propDict["fastFirstSignIn"] = $val;
         return $this;
     }
     
@@ -517,6 +385,39 @@ class SharedPCConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the localStorage
+    * Specifies whether local storage is allowed on a shared PC.
+    *
+    * @return Enablement The localStorage
+    */
+    public function getLocalStorage()
+    {
+        if (array_key_exists("localStorage", $this->_propDict)) {
+            if (is_a($this->_propDict["localStorage"], "Beta\Microsoft\Graph\Model\Enablement")) {
+                return $this->_propDict["localStorage"];
+            } else {
+                $this->_propDict["localStorage"] = new Enablement($this->_propDict["localStorage"]);
+                return $this->_propDict["localStorage"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the localStorage
+    * Specifies whether local storage is allowed on a shared PC.
+    *
+    * @param Enablement $val The localStorage
+    *
+    * @return SharedPCConfiguration
+    */
+    public function setLocalStorage($val)
+    {
+        $this->_propDict["localStorage"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the maintenanceStartTime
     * Specifies the daily start time of maintenance hour.
     *
@@ -550,35 +451,134 @@ class SharedPCConfiguration extends DeviceConfiguration
     }
     
     /**
-    * Gets the fastFirstSignIn
-    * Specifies whether to auto connect new non-admin Azure AD accounts to pre-configured candidate local accounts
+    * Gets the setAccountManager
+    * Disables the account manager for shared PC mode.
     *
-    * @return Enablement The fastFirstSignIn
+    * @return Enablement The setAccountManager
     */
-    public function getFastFirstSignIn()
+    public function getSetAccountManager()
     {
-        if (array_key_exists("fastFirstSignIn", $this->_propDict)) {
-            if (is_a($this->_propDict["fastFirstSignIn"], "Beta\Microsoft\Graph\Model\Enablement")) {
-                return $this->_propDict["fastFirstSignIn"];
+        if (array_key_exists("setAccountManager", $this->_propDict)) {
+            if (is_a($this->_propDict["setAccountManager"], "Beta\Microsoft\Graph\Model\Enablement")) {
+                return $this->_propDict["setAccountManager"];
             } else {
-                $this->_propDict["fastFirstSignIn"] = new Enablement($this->_propDict["fastFirstSignIn"]);
-                return $this->_propDict["fastFirstSignIn"];
+                $this->_propDict["setAccountManager"] = new Enablement($this->_propDict["setAccountManager"]);
+                return $this->_propDict["setAccountManager"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the fastFirstSignIn
-    * Specifies whether to auto connect new non-admin Azure AD accounts to pre-configured candidate local accounts
+    * Sets the setAccountManager
+    * Disables the account manager for shared PC mode.
     *
-    * @param Enablement $val The fastFirstSignIn
+    * @param Enablement $val The setAccountManager
     *
     * @return SharedPCConfiguration
     */
-    public function setFastFirstSignIn($val)
+    public function setSetAccountManager($val)
     {
-        $this->_propDict["fastFirstSignIn"] = $val;
+        $this->_propDict["setAccountManager"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the setEduPolicies
+    * Specifies whether the default shared PC education environment policies should be enabled/disabled/not configured. For Windows 10 RS2 and later, this policy will be applied without setting Enabled to true.
+    *
+    * @return Enablement The setEduPolicies
+    */
+    public function getSetEduPolicies()
+    {
+        if (array_key_exists("setEduPolicies", $this->_propDict)) {
+            if (is_a($this->_propDict["setEduPolicies"], "Beta\Microsoft\Graph\Model\Enablement")) {
+                return $this->_propDict["setEduPolicies"];
+            } else {
+                $this->_propDict["setEduPolicies"] = new Enablement($this->_propDict["setEduPolicies"]);
+                return $this->_propDict["setEduPolicies"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the setEduPolicies
+    * Specifies whether the default shared PC education environment policies should be enabled/disabled/not configured. For Windows 10 RS2 and later, this policy will be applied without setting Enabled to true.
+    *
+    * @param Enablement $val The setEduPolicies
+    *
+    * @return SharedPCConfiguration
+    */
+    public function setSetEduPolicies($val)
+    {
+        $this->_propDict["setEduPolicies"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the setPowerPolicies
+    * Specifies whether the default shared PC power policies should be enabled/disabled.
+    *
+    * @return Enablement The setPowerPolicies
+    */
+    public function getSetPowerPolicies()
+    {
+        if (array_key_exists("setPowerPolicies", $this->_propDict)) {
+            if (is_a($this->_propDict["setPowerPolicies"], "Beta\Microsoft\Graph\Model\Enablement")) {
+                return $this->_propDict["setPowerPolicies"];
+            } else {
+                $this->_propDict["setPowerPolicies"] = new Enablement($this->_propDict["setPowerPolicies"]);
+                return $this->_propDict["setPowerPolicies"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the setPowerPolicies
+    * Specifies whether the default shared PC power policies should be enabled/disabled.
+    *
+    * @param Enablement $val The setPowerPolicies
+    *
+    * @return SharedPCConfiguration
+    */
+    public function setSetPowerPolicies($val)
+    {
+        $this->_propDict["setPowerPolicies"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the signInOnResume
+    * Specifies the requirement to sign in whenever the device wakes up from sleep mode.
+    *
+    * @return Enablement The signInOnResume
+    */
+    public function getSignInOnResume()
+    {
+        if (array_key_exists("signInOnResume", $this->_propDict)) {
+            if (is_a($this->_propDict["signInOnResume"], "Beta\Microsoft\Graph\Model\Enablement")) {
+                return $this->_propDict["signInOnResume"];
+            } else {
+                $this->_propDict["signInOnResume"] = new Enablement($this->_propDict["signInOnResume"]);
+                return $this->_propDict["signInOnResume"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the signInOnResume
+    * Specifies the requirement to sign in whenever the device wakes up from sleep mode.
+    *
+    * @param Enablement $val The signInOnResume
+    *
+    * @return SharedPCConfiguration
+    */
+    public function setSignInOnResume($val)
+    {
+        $this->_propDict["signInOnResume"] = $val;
         return $this;
     }
     

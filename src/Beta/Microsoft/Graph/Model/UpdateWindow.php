@@ -25,37 +25,6 @@ class UpdateWindow extends Entity
 {
 
     /**
-    * Gets the updateWindowStartTime
-    *
-    * @return TimeOfDay The updateWindowStartTime
-    */
-    public function getUpdateWindowStartTime()
-    {
-        if (array_key_exists("updateWindowStartTime", $this->_propDict)) {
-            if (is_a($this->_propDict["updateWindowStartTime"], "Beta\Microsoft\Graph\Model\TimeOfDay")) {
-                return $this->_propDict["updateWindowStartTime"];
-            } else {
-                $this->_propDict["updateWindowStartTime"] = new TimeOfDay($this->_propDict["updateWindowStartTime"]);
-                return $this->_propDict["updateWindowStartTime"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the updateWindowStartTime
-    *
-    * @param TimeOfDay $val The value to assign to the updateWindowStartTime
-    *
-    * @return UpdateWindow The UpdateWindow
-    */
-    public function setUpdateWindowStartTime($val)
-    {
-        $this->_propDict["updateWindowStartTime"] = $val;
-         return $this;
-    }
-
-    /**
     * Gets the updateWindowEndTime
     *
     * @return TimeOfDay The updateWindowEndTime
@@ -83,6 +52,37 @@ class UpdateWindow extends Entity
     public function setUpdateWindowEndTime($val)
     {
         $this->_propDict["updateWindowEndTime"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the updateWindowStartTime
+    *
+    * @return TimeOfDay The updateWindowStartTime
+    */
+    public function getUpdateWindowStartTime()
+    {
+        if (array_key_exists("updateWindowStartTime", $this->_propDict)) {
+            if (is_a($this->_propDict["updateWindowStartTime"], "Beta\Microsoft\Graph\Model\TimeOfDay")) {
+                return $this->_propDict["updateWindowStartTime"];
+            } else {
+                $this->_propDict["updateWindowStartTime"] = new TimeOfDay($this->_propDict["updateWindowStartTime"]);
+                return $this->_propDict["updateWindowStartTime"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the updateWindowStartTime
+    *
+    * @param TimeOfDay $val The value to assign to the updateWindowStartTime
+    *
+    * @return UpdateWindow The UpdateWindow
+    */
+    public function setUpdateWindowStartTime($val)
+    {
+        $this->_propDict["updateWindowStartTime"] = $val;
          return $this;
     }
 }

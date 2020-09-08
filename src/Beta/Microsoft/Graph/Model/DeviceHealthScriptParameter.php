@@ -24,31 +24,31 @@ namespace Beta\Microsoft\Graph\Model;
 class DeviceHealthScriptParameter extends Entity
 {
     /**
-    * Gets the name
-    * The name of the param
+    * Gets the applyDefaultValueWhenNotAssigned
+    * Whether Apply DefaultValue When Not Assigned
     *
-    * @return string The name
+    * @return bool The applyDefaultValueWhenNotAssigned
     */
-    public function getName()
+    public function getApplyDefaultValueWhenNotAssigned()
     {
-        if (array_key_exists("name", $this->_propDict)) {
-            return $this->_propDict["name"];
+        if (array_key_exists("applyDefaultValueWhenNotAssigned", $this->_propDict)) {
+            return $this->_propDict["applyDefaultValueWhenNotAssigned"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the name
-    * The name of the param
+    * Sets the applyDefaultValueWhenNotAssigned
+    * Whether Apply DefaultValue When Not Assigned
     *
-    * @param string $val The value of the name
+    * @param bool $val The value of the applyDefaultValueWhenNotAssigned
     *
     * @return DeviceHealthScriptParameter
     */
-    public function setName($val)
+    public function setApplyDefaultValueWhenNotAssigned($val)
     {
-        $this->_propDict["name"] = $val;
+        $this->_propDict["applyDefaultValueWhenNotAssigned"] = $val;
         return $this;
     }
     /**
@@ -108,31 +108,31 @@ class DeviceHealthScriptParameter extends Entity
         return $this;
     }
     /**
-    * Gets the applyDefaultValueWhenNotAssigned
-    * Whether Apply DefaultValue When Not Assigned
+    * Gets the name
+    * The name of the param
     *
-    * @return bool The applyDefaultValueWhenNotAssigned
+    * @return string The name
     */
-    public function getApplyDefaultValueWhenNotAssigned()
+    public function getName()
     {
-        if (array_key_exists("applyDefaultValueWhenNotAssigned", $this->_propDict)) {
-            return $this->_propDict["applyDefaultValueWhenNotAssigned"];
+        if (array_key_exists("name", $this->_propDict)) {
+            return $this->_propDict["name"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the applyDefaultValueWhenNotAssigned
-    * Whether Apply DefaultValue When Not Assigned
+    * Sets the name
+    * The name of the param
     *
-    * @param bool $val The value of the applyDefaultValueWhenNotAssigned
+    * @param string $val The value of the name
     *
     * @return DeviceHealthScriptParameter
     */
-    public function setApplyDefaultValueWhenNotAssigned($val)
+    public function setName($val)
     {
-        $this->_propDict["applyDefaultValueWhenNotAssigned"] = $val;
+        $this->_propDict["name"] = $val;
         return $this;
     }
 }

@@ -24,6 +24,32 @@ namespace Beta\Microsoft\Graph\Model;
 class MarkContent extends LabelActionBase
 {
     /**
+    * Gets the fontColor
+    *
+    * @return string The fontColor
+    */
+    public function getFontColor()
+    {
+        if (array_key_exists("fontColor", $this->_propDict)) {
+            return $this->_propDict["fontColor"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the fontColor
+    *
+    * @param string $val The value of the fontColor
+    *
+    * @return MarkContent
+    */
+    public function setFontColor($val)
+    {
+        $this->_propDict["fontColor"] = $val;
+        return $this;
+    }
+    /**
     * Gets the fontSize
     *
     * @return int The fontSize
@@ -73,32 +99,6 @@ class MarkContent extends LabelActionBase
     public function setText($val)
     {
         $this->_propDict["text"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the fontColor
-    *
-    * @return string The fontColor
-    */
-    public function getFontColor()
-    {
-        if (array_key_exists("fontColor", $this->_propDict)) {
-            return $this->_propDict["fontColor"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the fontColor
-    *
-    * @param string $val The value of the fontColor
-    *
-    * @return MarkContent
-    */
-    public function setFontColor($val)
-    {
-        $this->_propDict["fontColor"] = $val;
         return $this;
     }
 }

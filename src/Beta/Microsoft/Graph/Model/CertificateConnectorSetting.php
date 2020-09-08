@@ -23,34 +23,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class CertificateConnectorSetting extends Entity
 {
-    /**
-    * Gets the status
-    * Certificate connector status
-    *
-    * @return int The status
-    */
-    public function getStatus()
-    {
-        if (array_key_exists("status", $this->_propDict)) {
-            return $this->_propDict["status"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the status
-    * Certificate connector status
-    *
-    * @param int $val The value of the status
-    *
-    * @return CertificateConnectorSetting
-    */
-    public function setStatus($val)
-    {
-        $this->_propDict["status"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the certExpiryTime
@@ -83,6 +55,34 @@ class CertificateConnectorSetting extends Entity
     {
         $this->_propDict["certExpiryTime"] = $val;
          return $this;
+    }
+    /**
+    * Gets the connectorVersion
+    * Version of certificate connector
+    *
+    * @return string The connectorVersion
+    */
+    public function getConnectorVersion()
+    {
+        if (array_key_exists("connectorVersion", $this->_propDict)) {
+            return $this->_propDict["connectorVersion"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the connectorVersion
+    * Version of certificate connector
+    *
+    * @param string $val The value of the connectorVersion
+    *
+    * @return CertificateConnectorSetting
+    */
+    public function setConnectorVersion($val)
+    {
+        $this->_propDict["connectorVersion"] = $val;
+        return $this;
     }
     /**
     * Gets the enrollmentError
@@ -146,34 +146,6 @@ class CertificateConnectorSetting extends Entity
          return $this;
     }
     /**
-    * Gets the connectorVersion
-    * Version of certificate connector
-    *
-    * @return string The connectorVersion
-    */
-    public function getConnectorVersion()
-    {
-        if (array_key_exists("connectorVersion", $this->_propDict)) {
-            return $this->_propDict["connectorVersion"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the connectorVersion
-    * Version of certificate connector
-    *
-    * @param string $val The value of the connectorVersion
-    *
-    * @return CertificateConnectorSetting
-    */
-    public function setConnectorVersion($val)
-    {
-        $this->_propDict["connectorVersion"] = $val;
-        return $this;
-    }
-    /**
     * Gets the lastUploadVersion
     * Version of last uploaded certificate connector
     *
@@ -199,6 +171,34 @@ class CertificateConnectorSetting extends Entity
     public function setLastUploadVersion($val)
     {
         $this->_propDict["lastUploadVersion"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the status
+    * Certificate connector status
+    *
+    * @return int The status
+    */
+    public function getStatus()
+    {
+        if (array_key_exists("status", $this->_propDict)) {
+            return $this->_propDict["status"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the status
+    * Certificate connector status
+    *
+    * @param int $val The value of the status
+    *
+    * @return CertificateConnectorSetting
+    */
+    public function setStatus($val)
+    {
+        $this->_propDict["status"] = $val;
         return $this;
     }
 }

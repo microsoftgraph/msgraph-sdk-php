@@ -25,97 +25,35 @@ namespace Beta\Microsoft\Graph\Model;
 class MacOSWiredNetworkConfiguration extends DeviceConfiguration
 {
     /**
-    * Gets the networkName
-    * Network Name
+    * Gets the authenticationMethod
+    * Authentication Method when EAP Type is configured to PEAP or EAP-TTLS.
     *
-    * @return string The networkName
+    * @return WiFiAuthenticationMethod The authenticationMethod
     */
-    public function getNetworkName()
+    public function getAuthenticationMethod()
     {
-        if (array_key_exists("networkName", $this->_propDict)) {
-            return $this->_propDict["networkName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the networkName
-    * Network Name
-    *
-    * @param string $val The networkName
-    *
-    * @return MacOSWiredNetworkConfiguration
-    */
-    public function setNetworkName($val)
-    {
-        $this->_propDict["networkName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the networkInterface
-    * Network interface.
-    *
-    * @return WiredNetworkInterface The networkInterface
-    */
-    public function getNetworkInterface()
-    {
-        if (array_key_exists("networkInterface", $this->_propDict)) {
-            if (is_a($this->_propDict["networkInterface"], "Beta\Microsoft\Graph\Model\WiredNetworkInterface")) {
-                return $this->_propDict["networkInterface"];
+        if (array_key_exists("authenticationMethod", $this->_propDict)) {
+            if (is_a($this->_propDict["authenticationMethod"], "Beta\Microsoft\Graph\Model\WiFiAuthenticationMethod")) {
+                return $this->_propDict["authenticationMethod"];
             } else {
-                $this->_propDict["networkInterface"] = new WiredNetworkInterface($this->_propDict["networkInterface"]);
-                return $this->_propDict["networkInterface"];
+                $this->_propDict["authenticationMethod"] = new WiFiAuthenticationMethod($this->_propDict["authenticationMethod"]);
+                return $this->_propDict["authenticationMethod"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the networkInterface
-    * Network interface.
+    * Sets the authenticationMethod
+    * Authentication Method when EAP Type is configured to PEAP or EAP-TTLS.
     *
-    * @param WiredNetworkInterface $val The networkInterface
-    *
-    * @return MacOSWiredNetworkConfiguration
-    */
-    public function setNetworkInterface($val)
-    {
-        $this->_propDict["networkInterface"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the eapType
-    * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the wired network.
-    *
-    * @return EapType The eapType
-    */
-    public function getEapType()
-    {
-        if (array_key_exists("eapType", $this->_propDict)) {
-            if (is_a($this->_propDict["eapType"], "Beta\Microsoft\Graph\Model\EapType")) {
-                return $this->_propDict["eapType"];
-            } else {
-                $this->_propDict["eapType"] = new EapType($this->_propDict["eapType"]);
-                return $this->_propDict["eapType"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the eapType
-    * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the wired network.
-    *
-    * @param EapType $val The eapType
+    * @param WiFiAuthenticationMethod $val The authenticationMethod
     *
     * @return MacOSWiredNetworkConfiguration
     */
-    public function setEapType($val)
+    public function setAuthenticationMethod($val)
     {
-        $this->_propDict["eapType"] = $val;
+        $this->_propDict["authenticationMethod"] = $val;
         return $this;
     }
     
@@ -153,64 +91,126 @@ class MacOSWiredNetworkConfiguration extends DeviceConfiguration
     }
     
     /**
-    * Gets the trustedServerCertificateNames
-    * Trusted server certificate names when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. This is the common name used in the certificates issued by your trusted certificate authority (CA). If you provide this information, you can bypass the dynamic trust dialog that is displayed on end users devices when they connect to this wired network.
+    * Gets the eapType
+    * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the wired network.
     *
-    * @return string The trustedServerCertificateNames
+    * @return EapType The eapType
     */
-    public function getTrustedServerCertificateNames()
+    public function getEapType()
     {
-        if (array_key_exists("trustedServerCertificateNames", $this->_propDict)) {
-            return $this->_propDict["trustedServerCertificateNames"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the trustedServerCertificateNames
-    * Trusted server certificate names when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. This is the common name used in the certificates issued by your trusted certificate authority (CA). If you provide this information, you can bypass the dynamic trust dialog that is displayed on end users devices when they connect to this wired network.
-    *
-    * @param string $val The trustedServerCertificateNames
-    *
-    * @return MacOSWiredNetworkConfiguration
-    */
-    public function setTrustedServerCertificateNames($val)
-    {
-        $this->_propDict["trustedServerCertificateNames"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the authenticationMethod
-    * Authentication Method when EAP Type is configured to PEAP or EAP-TTLS.
-    *
-    * @return WiFiAuthenticationMethod The authenticationMethod
-    */
-    public function getAuthenticationMethod()
-    {
-        if (array_key_exists("authenticationMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["authenticationMethod"], "Beta\Microsoft\Graph\Model\WiFiAuthenticationMethod")) {
-                return $this->_propDict["authenticationMethod"];
+        if (array_key_exists("eapType", $this->_propDict)) {
+            if (is_a($this->_propDict["eapType"], "Beta\Microsoft\Graph\Model\EapType")) {
+                return $this->_propDict["eapType"];
             } else {
-                $this->_propDict["authenticationMethod"] = new WiFiAuthenticationMethod($this->_propDict["authenticationMethod"]);
-                return $this->_propDict["authenticationMethod"];
+                $this->_propDict["eapType"] = new EapType($this->_propDict["eapType"]);
+                return $this->_propDict["eapType"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the authenticationMethod
-    * Authentication Method when EAP Type is configured to PEAP or EAP-TTLS.
+    * Sets the eapType
+    * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the wired network.
     *
-    * @param WiFiAuthenticationMethod $val The authenticationMethod
+    * @param EapType $val The eapType
     *
     * @return MacOSWiredNetworkConfiguration
     */
-    public function setAuthenticationMethod($val)
+    public function setEapType($val)
     {
-        $this->_propDict["authenticationMethod"] = $val;
+        $this->_propDict["eapType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the enableOuterIdentityPrivacy
+    * Enable identity privacy (Outer Identity) when EAP Type is configured to EAP-TTLS, EAP-FAST or PEAP. This property masks usernames with the text you enter. For example, if you use 'anonymous', each user that authenticates with this wired network using their real username is displayed as 'anonymous'.
+    *
+    * @return string The enableOuterIdentityPrivacy
+    */
+    public function getEnableOuterIdentityPrivacy()
+    {
+        if (array_key_exists("enableOuterIdentityPrivacy", $this->_propDict)) {
+            return $this->_propDict["enableOuterIdentityPrivacy"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the enableOuterIdentityPrivacy
+    * Enable identity privacy (Outer Identity) when EAP Type is configured to EAP-TTLS, EAP-FAST or PEAP. This property masks usernames with the text you enter. For example, if you use 'anonymous', each user that authenticates with this wired network using their real username is displayed as 'anonymous'.
+    *
+    * @param string $val The enableOuterIdentityPrivacy
+    *
+    * @return MacOSWiredNetworkConfiguration
+    */
+    public function setEnableOuterIdentityPrivacy($val)
+    {
+        $this->_propDict["enableOuterIdentityPrivacy"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the networkInterface
+    * Network interface.
+    *
+    * @return WiredNetworkInterface The networkInterface
+    */
+    public function getNetworkInterface()
+    {
+        if (array_key_exists("networkInterface", $this->_propDict)) {
+            if (is_a($this->_propDict["networkInterface"], "Beta\Microsoft\Graph\Model\WiredNetworkInterface")) {
+                return $this->_propDict["networkInterface"];
+            } else {
+                $this->_propDict["networkInterface"] = new WiredNetworkInterface($this->_propDict["networkInterface"]);
+                return $this->_propDict["networkInterface"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the networkInterface
+    * Network interface.
+    *
+    * @param WiredNetworkInterface $val The networkInterface
+    *
+    * @return MacOSWiredNetworkConfiguration
+    */
+    public function setNetworkInterface($val)
+    {
+        $this->_propDict["networkInterface"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the networkName
+    * Network Name
+    *
+    * @return string The networkName
+    */
+    public function getNetworkName()
+    {
+        if (array_key_exists("networkName", $this->_propDict)) {
+            return $this->_propDict["networkName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the networkName
+    * Network Name
+    *
+    * @param string $val The networkName
+    *
+    * @return MacOSWiredNetworkConfiguration
+    */
+    public function setNetworkName($val)
+    {
+        $this->_propDict["networkName"] = $val;
         return $this;
     }
     
@@ -248,64 +248,31 @@ class MacOSWiredNetworkConfiguration extends DeviceConfiguration
     }
     
     /**
-    * Gets the enableOuterIdentityPrivacy
-    * Enable identity privacy (Outer Identity) when EAP Type is configured to EAP-TTLS, EAP-FAST or PEAP. This property masks usernames with the text you enter. For example, if you use 'anonymous', each user that authenticates with this wired network using their real username is displayed as 'anonymous'.
+    * Gets the trustedServerCertificateNames
+    * Trusted server certificate names when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. This is the common name used in the certificates issued by your trusted certificate authority (CA). If you provide this information, you can bypass the dynamic trust dialog that is displayed on end users devices when they connect to this wired network.
     *
-    * @return string The enableOuterIdentityPrivacy
+    * @return string The trustedServerCertificateNames
     */
-    public function getEnableOuterIdentityPrivacy()
+    public function getTrustedServerCertificateNames()
     {
-        if (array_key_exists("enableOuterIdentityPrivacy", $this->_propDict)) {
-            return $this->_propDict["enableOuterIdentityPrivacy"];
+        if (array_key_exists("trustedServerCertificateNames", $this->_propDict)) {
+            return $this->_propDict["trustedServerCertificateNames"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the enableOuterIdentityPrivacy
-    * Enable identity privacy (Outer Identity) when EAP Type is configured to EAP-TTLS, EAP-FAST or PEAP. This property masks usernames with the text you enter. For example, if you use 'anonymous', each user that authenticates with this wired network using their real username is displayed as 'anonymous'.
+    * Sets the trustedServerCertificateNames
+    * Trusted server certificate names when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. This is the common name used in the certificates issued by your trusted certificate authority (CA). If you provide this information, you can bypass the dynamic trust dialog that is displayed on end users devices when they connect to this wired network.
     *
-    * @param string $val The enableOuterIdentityPrivacy
-    *
-    * @return MacOSWiredNetworkConfiguration
-    */
-    public function setEnableOuterIdentityPrivacy($val)
-    {
-        $this->_propDict["enableOuterIdentityPrivacy"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the rootCertificateForServerValidation
-    * Trusted Root Certificate for Server Validation when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP.
-    *
-    * @return MacOSTrustedRootCertificate The rootCertificateForServerValidation
-    */
-    public function getRootCertificateForServerValidation()
-    {
-        if (array_key_exists("rootCertificateForServerValidation", $this->_propDict)) {
-            if (is_a($this->_propDict["rootCertificateForServerValidation"], "Beta\Microsoft\Graph\Model\MacOSTrustedRootCertificate")) {
-                return $this->_propDict["rootCertificateForServerValidation"];
-            } else {
-                $this->_propDict["rootCertificateForServerValidation"] = new MacOSTrustedRootCertificate($this->_propDict["rootCertificateForServerValidation"]);
-                return $this->_propDict["rootCertificateForServerValidation"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the rootCertificateForServerValidation
-    * Trusted Root Certificate for Server Validation when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP.
-    *
-    * @param MacOSTrustedRootCertificate $val The rootCertificateForServerValidation
+    * @param string $val The trustedServerCertificateNames
     *
     * @return MacOSWiredNetworkConfiguration
     */
-    public function setRootCertificateForServerValidation($val)
+    public function setTrustedServerCertificateNames($val)
     {
-        $this->_propDict["rootCertificateForServerValidation"] = $val;
+        $this->_propDict["trustedServerCertificateNames"] = $val;
         return $this;
     }
     
@@ -339,6 +306,39 @@ class MacOSWiredNetworkConfiguration extends DeviceConfiguration
     public function setIdentityCertificateForClientAuthentication($val)
     {
         $this->_propDict["identityCertificateForClientAuthentication"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the rootCertificateForServerValidation
+    * Trusted Root Certificate for Server Validation when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP.
+    *
+    * @return MacOSTrustedRootCertificate The rootCertificateForServerValidation
+    */
+    public function getRootCertificateForServerValidation()
+    {
+        if (array_key_exists("rootCertificateForServerValidation", $this->_propDict)) {
+            if (is_a($this->_propDict["rootCertificateForServerValidation"], "Beta\Microsoft\Graph\Model\MacOSTrustedRootCertificate")) {
+                return $this->_propDict["rootCertificateForServerValidation"];
+            } else {
+                $this->_propDict["rootCertificateForServerValidation"] = new MacOSTrustedRootCertificate($this->_propDict["rootCertificateForServerValidation"]);
+                return $this->_propDict["rootCertificateForServerValidation"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the rootCertificateForServerValidation
+    * Trusted Root Certificate for Server Validation when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP.
+    *
+    * @param MacOSTrustedRootCertificate $val The rootCertificateForServerValidation
+    *
+    * @return MacOSWiredNetworkConfiguration
+    */
+    public function setRootCertificateForServerValidation($val)
+    {
+        $this->_propDict["rootCertificateForServerValidation"] = $val;
         return $this;
     }
     

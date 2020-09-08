@@ -52,33 +52,6 @@ class LanguageProficiency extends ItemFacet
     }
     
     /**
-    * Gets the tag
-    *
-    * @return string The tag
-    */
-    public function getTag()
-    {
-        if (array_key_exists("tag", $this->_propDict)) {
-            return $this->_propDict["tag"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the tag
-    *
-    * @param string $val The tag
-    *
-    * @return LanguageProficiency
-    */
-    public function setTag($val)
-    {
-        $this->_propDict["tag"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the proficiency
     *
     * @return LanguageProficiencyLevel The proficiency
@@ -106,6 +79,37 @@ class LanguageProficiency extends ItemFacet
     public function setProficiency($val)
     {
         $this->_propDict["proficiency"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the reading
+    *
+    * @return LanguageProficiencyLevel The reading
+    */
+    public function getReading()
+    {
+        if (array_key_exists("reading", $this->_propDict)) {
+            if (is_a($this->_propDict["reading"], "Beta\Microsoft\Graph\Model\LanguageProficiencyLevel")) {
+                return $this->_propDict["reading"];
+            } else {
+                $this->_propDict["reading"] = new LanguageProficiencyLevel($this->_propDict["reading"]);
+                return $this->_propDict["reading"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the reading
+    *
+    * @param LanguageProficiencyLevel $val The reading
+    *
+    * @return LanguageProficiency
+    */
+    public function setReading($val)
+    {
+        $this->_propDict["reading"] = $val;
         return $this;
     }
     
@@ -141,6 +145,33 @@ class LanguageProficiency extends ItemFacet
     }
     
     /**
+    * Gets the tag
+    *
+    * @return string The tag
+    */
+    public function getTag()
+    {
+        if (array_key_exists("tag", $this->_propDict)) {
+            return $this->_propDict["tag"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the tag
+    *
+    * @param string $val The tag
+    *
+    * @return LanguageProficiency
+    */
+    public function setTag($val)
+    {
+        $this->_propDict["tag"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the written
     *
     * @return LanguageProficiencyLevel The written
@@ -168,37 +199,6 @@ class LanguageProficiency extends ItemFacet
     public function setWritten($val)
     {
         $this->_propDict["written"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the reading
-    *
-    * @return LanguageProficiencyLevel The reading
-    */
-    public function getReading()
-    {
-        if (array_key_exists("reading", $this->_propDict)) {
-            if (is_a($this->_propDict["reading"], "Beta\Microsoft\Graph\Model\LanguageProficiencyLevel")) {
-                return $this->_propDict["reading"];
-            } else {
-                $this->_propDict["reading"] = new LanguageProficiencyLevel($this->_propDict["reading"]);
-                return $this->_propDict["reading"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the reading
-    *
-    * @param LanguageProficiencyLevel $val The reading
-    *
-    * @return LanguageProficiency
-    */
-    public function setReading($val)
-    {
-        $this->_propDict["reading"] = $val;
         return $this;
     }
     

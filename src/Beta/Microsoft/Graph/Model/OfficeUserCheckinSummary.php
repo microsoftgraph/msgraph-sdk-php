@@ -24,32 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class OfficeUserCheckinSummary extends Entity
 {
     /**
-    * Gets the succeededUserCount
-    *
-    * @return int The succeededUserCount
-    */
-    public function getSucceededUserCount()
-    {
-        if (array_key_exists("succeededUserCount", $this->_propDict)) {
-            return $this->_propDict["succeededUserCount"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the succeededUserCount
-    *
-    * @param int $val The value of the succeededUserCount
-    *
-    * @return OfficeUserCheckinSummary
-    */
-    public function setSucceededUserCount($val)
-    {
-        $this->_propDict["succeededUserCount"] = $val;
-        return $this;
-    }
-    /**
     * Gets the failedUserCount
     *
     * @return int The failedUserCount
@@ -73,6 +47,32 @@ class OfficeUserCheckinSummary extends Entity
     public function setFailedUserCount($val)
     {
         $this->_propDict["failedUserCount"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the succeededUserCount
+    *
+    * @return int The succeededUserCount
+    */
+    public function getSucceededUserCount()
+    {
+        if (array_key_exists("succeededUserCount", $this->_propDict)) {
+            return $this->_propDict["succeededUserCount"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the succeededUserCount
+    *
+    * @param int $val The value of the succeededUserCount
+    *
+    * @return OfficeUserCheckinSummary
+    */
+    public function setSucceededUserCount($val)
+    {
+        $this->_propDict["succeededUserCount"] = $val;
         return $this;
     }
 }

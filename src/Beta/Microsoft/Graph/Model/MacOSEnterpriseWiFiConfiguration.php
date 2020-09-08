@@ -25,35 +25,35 @@ namespace Beta\Microsoft\Graph\Model;
 class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration
 {
     /**
-    * Gets the eapType
-    * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router).
+    * Gets the authenticationMethod
+    * Authentication Method when EAP Type is configured to PEAP or EAP-TTLS.
     *
-    * @return EapType The eapType
+    * @return WiFiAuthenticationMethod The authenticationMethod
     */
-    public function getEapType()
+    public function getAuthenticationMethod()
     {
-        if (array_key_exists("eapType", $this->_propDict)) {
-            if (is_a($this->_propDict["eapType"], "Beta\Microsoft\Graph\Model\EapType")) {
-                return $this->_propDict["eapType"];
+        if (array_key_exists("authenticationMethod", $this->_propDict)) {
+            if (is_a($this->_propDict["authenticationMethod"], "Beta\Microsoft\Graph\Model\WiFiAuthenticationMethod")) {
+                return $this->_propDict["authenticationMethod"];
             } else {
-                $this->_propDict["eapType"] = new EapType($this->_propDict["eapType"]);
-                return $this->_propDict["eapType"];
+                $this->_propDict["authenticationMethod"] = new WiFiAuthenticationMethod($this->_propDict["authenticationMethod"]);
+                return $this->_propDict["authenticationMethod"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the eapType
-    * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router).
+    * Sets the authenticationMethod
+    * Authentication Method when EAP Type is configured to PEAP or EAP-TTLS.
     *
-    * @param EapType $val The eapType
+    * @param WiFiAuthenticationMethod $val The authenticationMethod
     *
     * @return MacOSEnterpriseWiFiConfiguration
     */
-    public function setEapType($val)
+    public function setAuthenticationMethod($val)
     {
-        $this->_propDict["eapType"] = $val;
+        $this->_propDict["authenticationMethod"] = $val;
         return $this;
     }
     
@@ -91,64 +91,35 @@ class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration
     }
     
     /**
-    * Gets the trustedServerCertificateNames
-    * Trusted server certificate names when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. This is the common name used in the certificates issued by your trusted certificate authority (CA). If you provide this information, you can bypass the dynamic trust dialog that is displayed on end users devices when they connect to this Wi-Fi network.
+    * Gets the eapType
+    * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router).
     *
-    * @return string The trustedServerCertificateNames
+    * @return EapType The eapType
     */
-    public function getTrustedServerCertificateNames()
+    public function getEapType()
     {
-        if (array_key_exists("trustedServerCertificateNames", $this->_propDict)) {
-            return $this->_propDict["trustedServerCertificateNames"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the trustedServerCertificateNames
-    * Trusted server certificate names when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. This is the common name used in the certificates issued by your trusted certificate authority (CA). If you provide this information, you can bypass the dynamic trust dialog that is displayed on end users devices when they connect to this Wi-Fi network.
-    *
-    * @param string $val The trustedServerCertificateNames
-    *
-    * @return MacOSEnterpriseWiFiConfiguration
-    */
-    public function setTrustedServerCertificateNames($val)
-    {
-        $this->_propDict["trustedServerCertificateNames"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the authenticationMethod
-    * Authentication Method when EAP Type is configured to PEAP or EAP-TTLS.
-    *
-    * @return WiFiAuthenticationMethod The authenticationMethod
-    */
-    public function getAuthenticationMethod()
-    {
-        if (array_key_exists("authenticationMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["authenticationMethod"], "Beta\Microsoft\Graph\Model\WiFiAuthenticationMethod")) {
-                return $this->_propDict["authenticationMethod"];
+        if (array_key_exists("eapType", $this->_propDict)) {
+            if (is_a($this->_propDict["eapType"], "Beta\Microsoft\Graph\Model\EapType")) {
+                return $this->_propDict["eapType"];
             } else {
-                $this->_propDict["authenticationMethod"] = new WiFiAuthenticationMethod($this->_propDict["authenticationMethod"]);
-                return $this->_propDict["authenticationMethod"];
+                $this->_propDict["eapType"] = new EapType($this->_propDict["eapType"]);
+                return $this->_propDict["eapType"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the authenticationMethod
-    * Authentication Method when EAP Type is configured to PEAP or EAP-TTLS.
+    * Sets the eapType
+    * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router).
     *
-    * @param WiFiAuthenticationMethod $val The authenticationMethod
+    * @param EapType $val The eapType
     *
     * @return MacOSEnterpriseWiFiConfiguration
     */
-    public function setAuthenticationMethod($val)
+    public function setEapType($val)
     {
-        $this->_propDict["authenticationMethod"] = $val;
+        $this->_propDict["eapType"] = $val;
         return $this;
     }
     
@@ -215,6 +186,68 @@ class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration
     }
     
     /**
+    * Gets the trustedServerCertificateNames
+    * Trusted server certificate names when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. This is the common name used in the certificates issued by your trusted certificate authority (CA). If you provide this information, you can bypass the dynamic trust dialog that is displayed on end users devices when they connect to this Wi-Fi network.
+    *
+    * @return string The trustedServerCertificateNames
+    */
+    public function getTrustedServerCertificateNames()
+    {
+        if (array_key_exists("trustedServerCertificateNames", $this->_propDict)) {
+            return $this->_propDict["trustedServerCertificateNames"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the trustedServerCertificateNames
+    * Trusted server certificate names when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. This is the common name used in the certificates issued by your trusted certificate authority (CA). If you provide this information, you can bypass the dynamic trust dialog that is displayed on end users devices when they connect to this Wi-Fi network.
+    *
+    * @param string $val The trustedServerCertificateNames
+    *
+    * @return MacOSEnterpriseWiFiConfiguration
+    */
+    public function setTrustedServerCertificateNames($val)
+    {
+        $this->_propDict["trustedServerCertificateNames"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the identityCertificateForClientAuthentication
+    * Identity Certificate for client authentication when EAP Type is configured to EAP-TLS, EAP-TTLS (with Certificate Authentication), or PEAP (with Certificate Authentication).
+    *
+    * @return MacOSCertificateProfileBase The identityCertificateForClientAuthentication
+    */
+    public function getIdentityCertificateForClientAuthentication()
+    {
+        if (array_key_exists("identityCertificateForClientAuthentication", $this->_propDict)) {
+            if (is_a($this->_propDict["identityCertificateForClientAuthentication"], "Beta\Microsoft\Graph\Model\MacOSCertificateProfileBase")) {
+                return $this->_propDict["identityCertificateForClientAuthentication"];
+            } else {
+                $this->_propDict["identityCertificateForClientAuthentication"] = new MacOSCertificateProfileBase($this->_propDict["identityCertificateForClientAuthentication"]);
+                return $this->_propDict["identityCertificateForClientAuthentication"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the identityCertificateForClientAuthentication
+    * Identity Certificate for client authentication when EAP Type is configured to EAP-TLS, EAP-TTLS (with Certificate Authentication), or PEAP (with Certificate Authentication).
+    *
+    * @param MacOSCertificateProfileBase $val The identityCertificateForClientAuthentication
+    *
+    * @return MacOSEnterpriseWiFiConfiguration
+    */
+    public function setIdentityCertificateForClientAuthentication($val)
+    {
+        $this->_propDict["identityCertificateForClientAuthentication"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the rootCertificateForServerValidation
     * Trusted Root Certificate for Server Validation when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP.
     *
@@ -274,39 +307,6 @@ class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration
     public function setRootCertificatesForServerValidation($val)
     {
 		$this->_propDict["rootCertificatesForServerValidation"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the identityCertificateForClientAuthentication
-    * Identity Certificate for client authentication when EAP Type is configured to EAP-TLS, EAP-TTLS (with Certificate Authentication), or PEAP (with Certificate Authentication).
-    *
-    * @return MacOSCertificateProfileBase The identityCertificateForClientAuthentication
-    */
-    public function getIdentityCertificateForClientAuthentication()
-    {
-        if (array_key_exists("identityCertificateForClientAuthentication", $this->_propDict)) {
-            if (is_a($this->_propDict["identityCertificateForClientAuthentication"], "Beta\Microsoft\Graph\Model\MacOSCertificateProfileBase")) {
-                return $this->_propDict["identityCertificateForClientAuthentication"];
-            } else {
-                $this->_propDict["identityCertificateForClientAuthentication"] = new MacOSCertificateProfileBase($this->_propDict["identityCertificateForClientAuthentication"]);
-                return $this->_propDict["identityCertificateForClientAuthentication"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the identityCertificateForClientAuthentication
-    * Identity Certificate for client authentication when EAP Type is configured to EAP-TLS, EAP-TTLS (with Certificate Authentication), or PEAP (with Certificate Authentication).
-    *
-    * @param MacOSCertificateProfileBase $val The identityCertificateForClientAuthentication
-    *
-    * @return MacOSEnterpriseWiFiConfiguration
-    */
-    public function setIdentityCertificateForClientAuthentication($val)
-    {
-        $this->_propDict["identityCertificateForClientAuthentication"] = $val;
         return $this;
     }
     

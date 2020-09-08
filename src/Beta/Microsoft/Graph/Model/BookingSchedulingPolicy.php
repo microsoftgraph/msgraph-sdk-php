@@ -23,37 +23,65 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class BookingSchedulingPolicy extends Entity
 {
+    /**
+    * Gets the allowStaffSelection
+    * Allow customers to choose a specific person for the booking.
+    *
+    * @return bool The allowStaffSelection
+    */
+    public function getAllowStaffSelection()
+    {
+        if (array_key_exists("allowStaffSelection", $this->_propDict)) {
+            return $this->_propDict["allowStaffSelection"];
+        } else {
+            return null;
+        }
+    }
 
     /**
-    * Gets the timeSlotInterval
-    * Duration of each time slot.
+    * Sets the allowStaffSelection
+    * Allow customers to choose a specific person for the booking.
     *
-    * @return Duration The timeSlotInterval
+    * @param bool $val The value of the allowStaffSelection
+    *
+    * @return BookingSchedulingPolicy
     */
-    public function getTimeSlotInterval()
+    public function setAllowStaffSelection($val)
     {
-        if (array_key_exists("timeSlotInterval", $this->_propDict)) {
-            if (is_a($this->_propDict["timeSlotInterval"], "Beta\Microsoft\Graph\Model\Duration")) {
-                return $this->_propDict["timeSlotInterval"];
+        $this->_propDict["allowStaffSelection"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the maximumAdvance
+    * Maximum number of days in advance that a booking can be made.
+    *
+    * @return Duration The maximumAdvance
+    */
+    public function getMaximumAdvance()
+    {
+        if (array_key_exists("maximumAdvance", $this->_propDict)) {
+            if (is_a($this->_propDict["maximumAdvance"], "Beta\Microsoft\Graph\Model\Duration")) {
+                return $this->_propDict["maximumAdvance"];
             } else {
-                $this->_propDict["timeSlotInterval"] = new Duration($this->_propDict["timeSlotInterval"]);
-                return $this->_propDict["timeSlotInterval"];
+                $this->_propDict["maximumAdvance"] = new Duration($this->_propDict["maximumAdvance"]);
+                return $this->_propDict["maximumAdvance"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the timeSlotInterval
-    * Duration of each time slot.
+    * Sets the maximumAdvance
+    * Maximum number of days in advance that a booking can be made.
     *
-    * @param Duration $val The value to assign to the timeSlotInterval
+    * @param Duration $val The value to assign to the maximumAdvance
     *
     * @return BookingSchedulingPolicy The BookingSchedulingPolicy
     */
-    public function setTimeSlotInterval($val)
+    public function setMaximumAdvance($val)
     {
-        $this->_propDict["timeSlotInterval"] = $val;
+        $this->_propDict["maximumAdvance"] = $val;
          return $this;
     }
 
@@ -89,39 +117,6 @@ class BookingSchedulingPolicy extends Entity
         $this->_propDict["minimumLeadTime"] = $val;
          return $this;
     }
-
-    /**
-    * Gets the maximumAdvance
-    * Maximum number of days in advance that a booking can be made.
-    *
-    * @return Duration The maximumAdvance
-    */
-    public function getMaximumAdvance()
-    {
-        if (array_key_exists("maximumAdvance", $this->_propDict)) {
-            if (is_a($this->_propDict["maximumAdvance"], "Beta\Microsoft\Graph\Model\Duration")) {
-                return $this->_propDict["maximumAdvance"];
-            } else {
-                $this->_propDict["maximumAdvance"] = new Duration($this->_propDict["maximumAdvance"]);
-                return $this->_propDict["maximumAdvance"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the maximumAdvance
-    * Maximum number of days in advance that a booking can be made.
-    *
-    * @param Duration $val The value to assign to the maximumAdvance
-    *
-    * @return BookingSchedulingPolicy The BookingSchedulingPolicy
-    */
-    public function setMaximumAdvance($val)
-    {
-        $this->_propDict["maximumAdvance"] = $val;
-         return $this;
-    }
     /**
     * Gets the sendConfirmationsToOwner
     * Notify the business via email when a booking is created or changed.
@@ -150,32 +145,37 @@ class BookingSchedulingPolicy extends Entity
         $this->_propDict["sendConfirmationsToOwner"] = $val;
         return $this;
     }
+
     /**
-    * Gets the allowStaffSelection
-    * Allow customers to choose a specific person for the booking.
+    * Gets the timeSlotInterval
+    * Duration of each time slot.
     *
-    * @return bool The allowStaffSelection
+    * @return Duration The timeSlotInterval
     */
-    public function getAllowStaffSelection()
+    public function getTimeSlotInterval()
     {
-        if (array_key_exists("allowStaffSelection", $this->_propDict)) {
-            return $this->_propDict["allowStaffSelection"];
-        } else {
-            return null;
+        if (array_key_exists("timeSlotInterval", $this->_propDict)) {
+            if (is_a($this->_propDict["timeSlotInterval"], "Beta\Microsoft\Graph\Model\Duration")) {
+                return $this->_propDict["timeSlotInterval"];
+            } else {
+                $this->_propDict["timeSlotInterval"] = new Duration($this->_propDict["timeSlotInterval"]);
+                return $this->_propDict["timeSlotInterval"];
+            }
         }
+        return null;
     }
 
     /**
-    * Sets the allowStaffSelection
-    * Allow customers to choose a specific person for the booking.
+    * Sets the timeSlotInterval
+    * Duration of each time slot.
     *
-    * @param bool $val The value of the allowStaffSelection
+    * @param Duration $val The value to assign to the timeSlotInterval
     *
-    * @return BookingSchedulingPolicy
+    * @return BookingSchedulingPolicy The BookingSchedulingPolicy
     */
-    public function setAllowStaffSelection($val)
+    public function setTimeSlotInterval($val)
     {
-        $this->_propDict["allowStaffSelection"] = $val;
-        return $this;
+        $this->_propDict["timeSlotInterval"] = $val;
+         return $this;
     }
 }

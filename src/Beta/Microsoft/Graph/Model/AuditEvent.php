@@ -25,97 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class AuditEvent extends Entity
 {
     /**
-    * Gets the displayName
-    * Event display name.
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the displayName
-    * Event display name.
-    *
-    * @param string $val The displayName
-    *
-    * @return AuditEvent
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the componentName
-    * Component name.
-    *
-    * @return string The componentName
-    */
-    public function getComponentName()
-    {
-        if (array_key_exists("componentName", $this->_propDict)) {
-            return $this->_propDict["componentName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the componentName
-    * Component name.
-    *
-    * @param string $val The componentName
-    *
-    * @return AuditEvent
-    */
-    public function setComponentName($val)
-    {
-        $this->_propDict["componentName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the actor
-    * AAD user and application that are associated with the audit event.
-    *
-    * @return AuditActor The actor
-    */
-    public function getActor()
-    {
-        if (array_key_exists("actor", $this->_propDict)) {
-            if (is_a($this->_propDict["actor"], "Beta\Microsoft\Graph\Model\AuditActor")) {
-                return $this->_propDict["actor"];
-            } else {
-                $this->_propDict["actor"] = new AuditActor($this->_propDict["actor"]);
-                return $this->_propDict["actor"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the actor
-    * AAD user and application that are associated with the audit event.
-    *
-    * @param AuditActor $val The actor
-    *
-    * @return AuditEvent
-    */
-    public function setActor($val)
-    {
-        $this->_propDict["actor"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the activity
     * Friendly name of the activity.
     *
@@ -178,35 +87,6 @@ class AuditEvent extends Entity
     }
     
     /**
-    * Gets the activityType
-    * The type of activity that was being performed.
-    *
-    * @return string The activityType
-    */
-    public function getActivityType()
-    {
-        if (array_key_exists("activityType", $this->_propDict)) {
-            return $this->_propDict["activityType"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the activityType
-    * The type of activity that was being performed.
-    *
-    * @param string $val The activityType
-    *
-    * @return AuditEvent
-    */
-    public function setActivityType($val)
-    {
-        $this->_propDict["activityType"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the activityOperationType
     * The HTTP operation type of the activity.
     *
@@ -265,6 +145,126 @@ class AuditEvent extends Entity
     }
     
     /**
+    * Gets the activityType
+    * The type of activity that was being performed.
+    *
+    * @return string The activityType
+    */
+    public function getActivityType()
+    {
+        if (array_key_exists("activityType", $this->_propDict)) {
+            return $this->_propDict["activityType"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the activityType
+    * The type of activity that was being performed.
+    *
+    * @param string $val The activityType
+    *
+    * @return AuditEvent
+    */
+    public function setActivityType($val)
+    {
+        $this->_propDict["activityType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the actor
+    * AAD user and application that are associated with the audit event.
+    *
+    * @return AuditActor The actor
+    */
+    public function getActor()
+    {
+        if (array_key_exists("actor", $this->_propDict)) {
+            if (is_a($this->_propDict["actor"], "Beta\Microsoft\Graph\Model\AuditActor")) {
+                return $this->_propDict["actor"];
+            } else {
+                $this->_propDict["actor"] = new AuditActor($this->_propDict["actor"]);
+                return $this->_propDict["actor"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the actor
+    * AAD user and application that are associated with the audit event.
+    *
+    * @param AuditActor $val The actor
+    *
+    * @return AuditEvent
+    */
+    public function setActor($val)
+    {
+        $this->_propDict["actor"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the category
+    * Audit category.
+    *
+    * @return string The category
+    */
+    public function getCategory()
+    {
+        if (array_key_exists("category", $this->_propDict)) {
+            return $this->_propDict["category"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the category
+    * Audit category.
+    *
+    * @param string $val The category
+    *
+    * @return AuditEvent
+    */
+    public function setCategory($val)
+    {
+        $this->_propDict["category"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the componentName
+    * Component name.
+    *
+    * @return string The componentName
+    */
+    public function getComponentName()
+    {
+        if (array_key_exists("componentName", $this->_propDict)) {
+            return $this->_propDict["componentName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the componentName
+    * Component name.
+    *
+    * @param string $val The componentName
+    *
+    * @return AuditEvent
+    */
+    public function setComponentName($val)
+    {
+        $this->_propDict["componentName"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the correlationId
     * The client request Id that is used to correlate activity within the system.
     *
@@ -290,6 +290,35 @@ class AuditEvent extends Entity
     public function setCorrelationId($val)
     {
         $this->_propDict["correlationId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the displayName
+    * Event display name.
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the displayName
+    * Event display name.
+    *
+    * @param string $val The displayName
+    *
+    * @return AuditEvent
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
         return $this;
     }
     
@@ -320,35 +349,6 @@ class AuditEvent extends Entity
     public function setResources($val)
     {
 		$this->_propDict["resources"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the category
-    * Audit category.
-    *
-    * @return string The category
-    */
-    public function getCategory()
-    {
-        if (array_key_exists("category", $this->_propDict)) {
-            return $this->_propDict["category"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the category
-    * Audit category.
-    *
-    * @param string $val The category
-    *
-    * @return AuditEvent
-    */
-    public function setCategory($val)
-    {
-        $this->_propDict["category"] = $val;
         return $this;
     }
     

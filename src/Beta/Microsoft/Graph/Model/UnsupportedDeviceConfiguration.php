@@ -24,35 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class UnsupportedDeviceConfiguration extends DeviceConfiguration
 {
-    /**
-    * Gets the originalEntityTypeName
-    * The type of entity that would be returned otherwise.
-    *
-    * @return string The originalEntityTypeName
-    */
-    public function getOriginalEntityTypeName()
-    {
-        if (array_key_exists("originalEntityTypeName", $this->_propDict)) {
-            return $this->_propDict["originalEntityTypeName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the originalEntityTypeName
-    * The type of entity that would be returned otherwise.
-    *
-    * @param string $val The originalEntityTypeName
-    *
-    * @return UnsupportedDeviceConfiguration
-    */
-    public function setOriginalEntityTypeName($val)
-    {
-        $this->_propDict["originalEntityTypeName"] = $val;
-        return $this;
-    }
-    
 
      /** 
      * Gets the details
@@ -80,6 +51,35 @@ class UnsupportedDeviceConfiguration extends DeviceConfiguration
     public function setDetails($val)
     {
 		$this->_propDict["details"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the originalEntityTypeName
+    * The type of entity that would be returned otherwise.
+    *
+    * @return string The originalEntityTypeName
+    */
+    public function getOriginalEntityTypeName()
+    {
+        if (array_key_exists("originalEntityTypeName", $this->_propDict)) {
+            return $this->_propDict["originalEntityTypeName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the originalEntityTypeName
+    * The type of entity that would be returned otherwise.
+    *
+    * @param string $val The originalEntityTypeName
+    *
+    * @return UnsupportedDeviceConfiguration
+    */
+    public function setOriginalEntityTypeName($val)
+    {
+        $this->_propDict["originalEntityTypeName"] = $val;
         return $this;
     }
     

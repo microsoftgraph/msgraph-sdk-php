@@ -24,34 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class SettingSource extends Entity
 {
     /**
-    * Gets the id
-    * Not yet documented
-    *
-    * @return string The id
-    */
-    public function getId()
-    {
-        if (array_key_exists("id", $this->_propDict)) {
-            return $this->_propDict["id"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the id
-    * Not yet documented
-    *
-    * @param string $val The value of the id
-    *
-    * @return SettingSource
-    */
-    public function setId($val)
-    {
-        $this->_propDict["id"] = $val;
-        return $this;
-    }
-    /**
     * Gets the displayName
     * Not yet documented
     *
@@ -77,6 +49,34 @@ class SettingSource extends Entity
     public function setDisplayName($val)
     {
         $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the id
+    * Not yet documented
+    *
+    * @return string The id
+    */
+    public function getId()
+    {
+        if (array_key_exists("id", $this->_propDict)) {
+            return $this->_propDict["id"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the id
+    * Not yet documented
+    *
+    * @param string $val The value of the id
+    *
+    * @return SettingSource
+    */
+    public function setId($val)
+    {
+        $this->_propDict["id"] = $val;
         return $this;
     }
 }

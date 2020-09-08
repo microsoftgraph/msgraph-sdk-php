@@ -33,32 +33,6 @@ class DomainIdentitySource extends IdentitySource
     }
 
     /**
-    * Gets the domainName
-    *
-    * @return string The domainName
-    */
-    public function getDomainName()
-    {
-        if (array_key_exists("domainName", $this->_propDict)) {
-            return $this->_propDict["domainName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the domainName
-    *
-    * @param string $val The value of the domainName
-    *
-    * @return DomainIdentitySource
-    */
-    public function setDomainName($val)
-    {
-        $this->_propDict["domainName"] = $val;
-        return $this;
-    }
-    /**
     * Gets the displayName
     *
     * @return string The displayName
@@ -82,6 +56,32 @@ class DomainIdentitySource extends IdentitySource
     public function setDisplayName($val)
     {
         $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the domainName
+    *
+    * @return string The domainName
+    */
+    public function getDomainName()
+    {
+        if (array_key_exists("domainName", $this->_propDict)) {
+            return $this->_propDict["domainName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the domainName
+    *
+    * @param string $val The value of the domainName
+    *
+    * @return DomainIdentitySource
+    */
+    public function setDomainName($val)
+    {
+        $this->_propDict["domainName"] = $val;
         return $this;
     }
 }

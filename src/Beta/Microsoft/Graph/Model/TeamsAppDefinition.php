@@ -25,35 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class TeamsAppDefinition extends Entity
 {
     /**
-    * Gets the teamsAppId
-    * The ID from the Teams app manifest.
-    *
-    * @return string The teamsAppId
-    */
-    public function getTeamsAppId()
-    {
-        if (array_key_exists("teamsAppId", $this->_propDict)) {
-            return $this->_propDict["teamsAppId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the teamsAppId
-    * The ID from the Teams app manifest.
-    *
-    * @param string $val The teamsAppId
-    *
-    * @return TeamsAppDefinition
-    */
-    public function setTeamsAppId($val)
-    {
-        $this->_propDict["teamsAppId"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the azureADAppId
     *
     * @return string The azureADAppId
@@ -77,6 +48,64 @@ class TeamsAppDefinition extends Entity
     public function setAzureADAppId($val)
     {
         $this->_propDict["azureADAppId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the createdBy
+    *
+    * @return IdentitySet The createdBy
+    */
+    public function getCreatedBy()
+    {
+        if (array_key_exists("createdBy", $this->_propDict)) {
+            if (is_a($this->_propDict["createdBy"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
+                return $this->_propDict["createdBy"];
+            } else {
+                $this->_propDict["createdBy"] = new IdentitySet($this->_propDict["createdBy"]);
+                return $this->_propDict["createdBy"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the createdBy
+    *
+    * @param IdentitySet $val The createdBy
+    *
+    * @return TeamsAppDefinition
+    */
+    public function setCreatedBy($val)
+    {
+        $this->_propDict["createdBy"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the description
+    *
+    * @return string The description
+    */
+    public function getDescription()
+    {
+        if (array_key_exists("description", $this->_propDict)) {
+            return $this->_propDict["description"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the description
+    *
+    * @param string $val The description
+    *
+    * @return TeamsAppDefinition
+    */
+    public function setDescription($val)
+    {
+        $this->_propDict["description"] = $val;
         return $this;
     }
     
@@ -110,31 +139,33 @@ class TeamsAppDefinition extends Entity
     }
     
     /**
-    * Gets the version
-    * The version number of the application.
+    * Gets the lastModifiedDateTime
     *
-    * @return string The version
+    * @return \DateTime The lastModifiedDateTime
     */
-    public function getVersion()
+    public function getLastModifiedDateTime()
     {
-        if (array_key_exists("version", $this->_propDict)) {
-            return $this->_propDict["version"];
-        } else {
-            return null;
+        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+                return $this->_propDict["lastModifiedDateTime"];
+            } else {
+                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
+                return $this->_propDict["lastModifiedDateTime"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the version
-    * The version number of the application.
+    * Sets the lastModifiedDateTime
     *
-    * @param string $val The version
+    * @param \DateTime $val The lastModifiedDateTime
     *
     * @return TeamsAppDefinition
     */
-    public function setVersion($val)
+    public function setLastModifiedDateTime($val)
     {
-        $this->_propDict["version"] = $val;
+        $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
     
@@ -199,91 +230,60 @@ class TeamsAppDefinition extends Entity
     }
     
     /**
-    * Gets the description
+    * Gets the teamsAppId
+    * The ID from the Teams app manifest.
     *
-    * @return string The description
+    * @return string The teamsAppId
     */
-    public function getDescription()
+    public function getTeamsAppId()
     {
-        if (array_key_exists("description", $this->_propDict)) {
-            return $this->_propDict["description"];
+        if (array_key_exists("teamsAppId", $this->_propDict)) {
+            return $this->_propDict["teamsAppId"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the description
+    * Sets the teamsAppId
+    * The ID from the Teams app manifest.
     *
-    * @param string $val The description
+    * @param string $val The teamsAppId
     *
     * @return TeamsAppDefinition
     */
-    public function setDescription($val)
+    public function setTeamsAppId($val)
     {
-        $this->_propDict["description"] = $val;
+        $this->_propDict["teamsAppId"] = $val;
         return $this;
     }
     
     /**
-    * Gets the lastModifiedDateTime
+    * Gets the version
+    * The version number of the application.
     *
-    * @return \DateTime The lastModifiedDateTime
+    * @return string The version
     */
-    public function getLastModifiedDateTime()
+    public function getVersion()
     {
-        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
-                return $this->_propDict["lastModifiedDateTime"];
-            } else {
-                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
-                return $this->_propDict["lastModifiedDateTime"];
-            }
+        if (array_key_exists("version", $this->_propDict)) {
+            return $this->_propDict["version"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the lastModifiedDateTime
+    * Sets the version
+    * The version number of the application.
     *
-    * @param \DateTime $val The lastModifiedDateTime
+    * @param string $val The version
     *
     * @return TeamsAppDefinition
     */
-    public function setLastModifiedDateTime($val)
+    public function setVersion($val)
     {
-        $this->_propDict["lastModifiedDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the createdBy
-    *
-    * @return IdentitySet The createdBy
-    */
-    public function getCreatedBy()
-    {
-        if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
-                return $this->_propDict["createdBy"];
-            } else {
-                $this->_propDict["createdBy"] = new IdentitySet($this->_propDict["createdBy"]);
-                return $this->_propDict["createdBy"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the createdBy
-    *
-    * @param IdentitySet $val The createdBy
-    *
-    * @return TeamsAppDefinition
-    */
-    public function setCreatedBy($val)
-    {
-        $this->_propDict["createdBy"] = $val;
+        $this->_propDict["version"] = $val;
         return $this;
     }
     

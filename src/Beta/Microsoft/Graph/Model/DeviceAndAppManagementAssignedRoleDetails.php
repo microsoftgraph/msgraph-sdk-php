@@ -24,34 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class DeviceAndAppManagementAssignedRoleDetails extends Entity
 {
     /**
-    * Gets the roleDefinitionIds
-    * Role Definition IDs for the specifc Role Definitions assigned to a user.
-    *
-    * @return string The roleDefinitionIds
-    */
-    public function getRoleDefinitionIds()
-    {
-        if (array_key_exists("roleDefinitionIds", $this->_propDict)) {
-            return $this->_propDict["roleDefinitionIds"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the roleDefinitionIds
-    * Role Definition IDs for the specifc Role Definitions assigned to a user.
-    *
-    * @param string $val The value of the roleDefinitionIds
-    *
-    * @return DeviceAndAppManagementAssignedRoleDetails
-    */
-    public function setRoleDefinitionIds($val)
-    {
-        $this->_propDict["roleDefinitionIds"] = $val;
-        return $this;
-    }
-    /**
     * Gets the roleAssignmentIds
     * Role Assignment IDs for the specifc Role Assignments assigned to a user.
     *
@@ -77,6 +49,34 @@ class DeviceAndAppManagementAssignedRoleDetails extends Entity
     public function setRoleAssignmentIds($val)
     {
         $this->_propDict["roleAssignmentIds"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the roleDefinitionIds
+    * Role Definition IDs for the specifc Role Definitions assigned to a user.
+    *
+    * @return string The roleDefinitionIds
+    */
+    public function getRoleDefinitionIds()
+    {
+        if (array_key_exists("roleDefinitionIds", $this->_propDict)) {
+            return $this->_propDict["roleDefinitionIds"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the roleDefinitionIds
+    * Role Definition IDs for the specifc Role Definitions assigned to a user.
+    *
+    * @param string $val The value of the roleDefinitionIds
+    *
+    * @return DeviceAndAppManagementAssignedRoleDetails
+    */
+    public function setRoleDefinitionIds($val)
+    {
+        $this->_propDict["roleDefinitionIds"] = $val;
         return $this;
     }
 }

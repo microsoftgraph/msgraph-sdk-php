@@ -34,6 +34,72 @@ class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings
 
 
     /**
+    * Gets the deliveryOptimizationPriority
+    * The delivery optimization priority for this app assignment. This setting is not supported in National Cloud environments.
+    *
+    * @return Win32LobAppDeliveryOptimizationPriority The deliveryOptimizationPriority
+    */
+    public function getDeliveryOptimizationPriority()
+    {
+        if (array_key_exists("deliveryOptimizationPriority", $this->_propDict)) {
+            if (is_a($this->_propDict["deliveryOptimizationPriority"], "Beta\Microsoft\Graph\Model\Win32LobAppDeliveryOptimizationPriority")) {
+                return $this->_propDict["deliveryOptimizationPriority"];
+            } else {
+                $this->_propDict["deliveryOptimizationPriority"] = new Win32LobAppDeliveryOptimizationPriority($this->_propDict["deliveryOptimizationPriority"]);
+                return $this->_propDict["deliveryOptimizationPriority"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the deliveryOptimizationPriority
+    * The delivery optimization priority for this app assignment. This setting is not supported in National Cloud environments.
+    *
+    * @param Win32LobAppDeliveryOptimizationPriority $val The value to assign to the deliveryOptimizationPriority
+    *
+    * @return Win32LobAppAssignmentSettings The Win32LobAppAssignmentSettings
+    */
+    public function setDeliveryOptimizationPriority($val)
+    {
+        $this->_propDict["deliveryOptimizationPriority"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the installTimeSettings
+    * The install time settings to apply for this app assignment.
+    *
+    * @return MobileAppInstallTimeSettings The installTimeSettings
+    */
+    public function getInstallTimeSettings()
+    {
+        if (array_key_exists("installTimeSettings", $this->_propDict)) {
+            if (is_a($this->_propDict["installTimeSettings"], "Beta\Microsoft\Graph\Model\MobileAppInstallTimeSettings")) {
+                return $this->_propDict["installTimeSettings"];
+            } else {
+                $this->_propDict["installTimeSettings"] = new MobileAppInstallTimeSettings($this->_propDict["installTimeSettings"]);
+                return $this->_propDict["installTimeSettings"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the installTimeSettings
+    * The install time settings to apply for this app assignment.
+    *
+    * @param MobileAppInstallTimeSettings $val The value to assign to the installTimeSettings
+    *
+    * @return Win32LobAppAssignmentSettings The Win32LobAppAssignmentSettings
+    */
+    public function setInstallTimeSettings($val)
+    {
+        $this->_propDict["installTimeSettings"] = $val;
+         return $this;
+    }
+
+    /**
     * Gets the notifications
     * The notification status for this app assignment.
     *
@@ -96,72 +162,6 @@ class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings
     public function setRestartSettings($val)
     {
         $this->_propDict["restartSettings"] = $val;
-         return $this;
-    }
-
-    /**
-    * Gets the installTimeSettings
-    * The install time settings to apply for this app assignment.
-    *
-    * @return MobileAppInstallTimeSettings The installTimeSettings
-    */
-    public function getInstallTimeSettings()
-    {
-        if (array_key_exists("installTimeSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["installTimeSettings"], "Beta\Microsoft\Graph\Model\MobileAppInstallTimeSettings")) {
-                return $this->_propDict["installTimeSettings"];
-            } else {
-                $this->_propDict["installTimeSettings"] = new MobileAppInstallTimeSettings($this->_propDict["installTimeSettings"]);
-                return $this->_propDict["installTimeSettings"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the installTimeSettings
-    * The install time settings to apply for this app assignment.
-    *
-    * @param MobileAppInstallTimeSettings $val The value to assign to the installTimeSettings
-    *
-    * @return Win32LobAppAssignmentSettings The Win32LobAppAssignmentSettings
-    */
-    public function setInstallTimeSettings($val)
-    {
-        $this->_propDict["installTimeSettings"] = $val;
-         return $this;
-    }
-
-    /**
-    * Gets the deliveryOptimizationPriority
-    * The delivery optimization priority for this app assignment. This setting is not supported in National Cloud environments.
-    *
-    * @return Win32LobAppDeliveryOptimizationPriority The deliveryOptimizationPriority
-    */
-    public function getDeliveryOptimizationPriority()
-    {
-        if (array_key_exists("deliveryOptimizationPriority", $this->_propDict)) {
-            if (is_a($this->_propDict["deliveryOptimizationPriority"], "Beta\Microsoft\Graph\Model\Win32LobAppDeliveryOptimizationPriority")) {
-                return $this->_propDict["deliveryOptimizationPriority"];
-            } else {
-                $this->_propDict["deliveryOptimizationPriority"] = new Win32LobAppDeliveryOptimizationPriority($this->_propDict["deliveryOptimizationPriority"]);
-                return $this->_propDict["deliveryOptimizationPriority"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the deliveryOptimizationPriority
-    * The delivery optimization priority for this app assignment. This setting is not supported in National Cloud environments.
-    *
-    * @param Win32LobAppDeliveryOptimizationPriority $val The value to assign to the deliveryOptimizationPriority
-    *
-    * @return Win32LobAppAssignmentSettings The Win32LobAppAssignmentSettings
-    */
-    public function setDeliveryOptimizationPriority($val)
-    {
-        $this->_propDict["deliveryOptimizationPriority"] = $val;
          return $this;
     }
 }

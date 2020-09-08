@@ -25,39 +25,6 @@ class DeviceHealthScriptRemediationHistory extends Entity
 {
 
     /**
-    * Gets the lastModifiedDateTime
-    * The date on which the results history is calculated for the healthscript.
-    *
-    * @return \DateTime The lastModifiedDateTime
-    */
-    public function getLastModifiedDateTime()
-    {
-        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
-                return $this->_propDict["lastModifiedDateTime"];
-            } else {
-                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
-                return $this->_propDict["lastModifiedDateTime"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the lastModifiedDateTime
-    * The date on which the results history is calculated for the healthscript.
-    *
-    * @param \DateTime $val The value to assign to the lastModifiedDateTime
-    *
-    * @return DeviceHealthScriptRemediationHistory The DeviceHealthScriptRemediationHistory
-    */
-    public function setLastModifiedDateTime($val)
-    {
-        $this->_propDict["lastModifiedDateTime"] = $val;
-         return $this;
-    }
-
-    /**
     * Gets the historyData
     * The number of devices remediated by the device health script on the given date.
     *
@@ -87,6 +54,39 @@ class DeviceHealthScriptRemediationHistory extends Entity
     public function setHistoryData($val)
     {
         $this->_propDict["historyData"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the lastModifiedDateTime
+    * The date on which the results history is calculated for the healthscript.
+    *
+    * @return \DateTime The lastModifiedDateTime
+    */
+    public function getLastModifiedDateTime()
+    {
+        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+                return $this->_propDict["lastModifiedDateTime"];
+            } else {
+                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
+                return $this->_propDict["lastModifiedDateTime"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the lastModifiedDateTime
+    * The date on which the results history is calculated for the healthscript.
+    *
+    * @param \DateTime $val The value to assign to the lastModifiedDateTime
+    *
+    * @return DeviceHealthScriptRemediationHistory The DeviceHealthScriptRemediationHistory
+    */
+    public function setLastModifiedDateTime($val)
+    {
+        $this->_propDict["lastModifiedDateTime"] = $val;
          return $this;
     }
 }

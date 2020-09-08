@@ -25,64 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class MailboxUsageStorage extends Entity
 {
     /**
-    * Gets the reportRefreshDate
-    *
-    * @return \DateTime The reportRefreshDate
-    */
-    public function getReportRefreshDate()
-    {
-        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
-                return $this->_propDict["reportRefreshDate"];
-            } else {
-                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
-                return $this->_propDict["reportRefreshDate"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the reportRefreshDate
-    *
-    * @param \DateTime $val The reportRefreshDate
-    *
-    * @return MailboxUsageStorage
-    */
-    public function setReportRefreshDate($val)
-    {
-        $this->_propDict["reportRefreshDate"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the storageUsedInBytes
-    *
-    * @return int The storageUsedInBytes
-    */
-    public function getStorageUsedInBytes()
-    {
-        if (array_key_exists("storageUsedInBytes", $this->_propDict)) {
-            return $this->_propDict["storageUsedInBytes"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the storageUsedInBytes
-    *
-    * @param int $val The storageUsedInBytes
-    *
-    * @return MailboxUsageStorage
-    */
-    public function setStorageUsedInBytes($val)
-    {
-        $this->_propDict["storageUsedInBytes"] = intval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the reportDate
     *
     * @return \DateTime The reportDate
@@ -137,6 +79,64 @@ class MailboxUsageStorage extends Entity
     public function setReportPeriod($val)
     {
         $this->_propDict["reportPeriod"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the reportRefreshDate
+    *
+    * @return \DateTime The reportRefreshDate
+    */
+    public function getReportRefreshDate()
+    {
+        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
+                return $this->_propDict["reportRefreshDate"];
+            } else {
+                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
+                return $this->_propDict["reportRefreshDate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the reportRefreshDate
+    *
+    * @param \DateTime $val The reportRefreshDate
+    *
+    * @return MailboxUsageStorage
+    */
+    public function setReportRefreshDate($val)
+    {
+        $this->_propDict["reportRefreshDate"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the storageUsedInBytes
+    *
+    * @return int The storageUsedInBytes
+    */
+    public function getStorageUsedInBytes()
+    {
+        if (array_key_exists("storageUsedInBytes", $this->_propDict)) {
+            return $this->_propDict["storageUsedInBytes"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the storageUsedInBytes
+    *
+    * @param int $val The storageUsedInBytes
+    *
+    * @return MailboxUsageStorage
+    */
+    public function setStorageUsedInBytes($val)
+    {
+        $this->_propDict["storageUsedInBytes"] = intval($val);
         return $this;
     }
     

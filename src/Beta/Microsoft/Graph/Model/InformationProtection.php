@@ -57,6 +57,34 @@ class InformationProtection extends Entity
     
 
      /** 
+     * Gets the dataLossPreventionPolicies
+     *
+     * @return array The dataLossPreventionPolicies
+     */
+    public function getDataLossPreventionPolicies()
+    {
+        if (array_key_exists("dataLossPreventionPolicies", $this->_propDict)) {
+           return $this->_propDict["dataLossPreventionPolicies"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the dataLossPreventionPolicies
+    *
+    * @param DataLossPreventionPolicy $val The dataLossPreventionPolicies
+    *
+    * @return InformationProtection
+    */
+    public function setDataLossPreventionPolicies($val)
+    {
+		$this->_propDict["dataLossPreventionPolicies"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the sensitivityLabels
      *
      * @return array The sensitivityLabels
@@ -111,34 +139,6 @@ class InformationProtection extends Entity
     public function setSensitivityPolicySettings($val)
     {
         $this->_propDict["sensitivityPolicySettings"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the dataLossPreventionPolicies
-     *
-     * @return array The dataLossPreventionPolicies
-     */
-    public function getDataLossPreventionPolicies()
-    {
-        if (array_key_exists("dataLossPreventionPolicies", $this->_propDict)) {
-           return $this->_propDict["dataLossPreventionPolicies"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the dataLossPreventionPolicies
-    *
-    * @param DataLossPreventionPolicy $val The dataLossPreventionPolicies
-    *
-    * @return InformationProtection
-    */
-    public function setDataLossPreventionPolicies($val)
-    {
-		$this->_propDict["dataLossPreventionPolicies"] = $val;
         return $this;
     }
     

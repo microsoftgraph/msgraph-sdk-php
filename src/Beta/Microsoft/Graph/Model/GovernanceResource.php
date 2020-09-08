@@ -25,60 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class GovernanceResource extends Entity
 {
     /**
-    * Gets the externalId
-    *
-    * @return string The externalId
-    */
-    public function getExternalId()
-    {
-        if (array_key_exists("externalId", $this->_propDict)) {
-            return $this->_propDict["externalId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the externalId
-    *
-    * @param string $val The externalId
-    *
-    * @return GovernanceResource
-    */
-    public function setExternalId($val)
-    {
-        $this->_propDict["externalId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the type
-    *
-    * @return string The type
-    */
-    public function getType()
-    {
-        if (array_key_exists("type", $this->_propDict)) {
-            return $this->_propDict["type"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the type
-    *
-    * @param string $val The type
-    *
-    * @return GovernanceResource
-    */
-    public function setType($val)
-    {
-        $this->_propDict["type"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the displayName
     *
     * @return string The displayName
@@ -106,29 +52,29 @@ class GovernanceResource extends Entity
     }
     
     /**
-    * Gets the status
+    * Gets the externalId
     *
-    * @return string The status
+    * @return string The externalId
     */
-    public function getStatus()
+    public function getExternalId()
     {
-        if (array_key_exists("status", $this->_propDict)) {
-            return $this->_propDict["status"];
+        if (array_key_exists("externalId", $this->_propDict)) {
+            return $this->_propDict["externalId"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the status
+    * Sets the externalId
     *
-    * @param string $val The status
+    * @param string $val The externalId
     *
     * @return GovernanceResource
     */
-    public function setStatus($val)
+    public function setExternalId($val)
     {
-        $this->_propDict["status"] = $val;
+        $this->_propDict["externalId"] = $val;
         return $this;
     }
     
@@ -191,6 +137,60 @@ class GovernanceResource extends Entity
     }
     
     /**
+    * Gets the status
+    *
+    * @return string The status
+    */
+    public function getStatus()
+    {
+        if (array_key_exists("status", $this->_propDict)) {
+            return $this->_propDict["status"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the status
+    *
+    * @param string $val The status
+    *
+    * @return GovernanceResource
+    */
+    public function setStatus($val)
+    {
+        $this->_propDict["status"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the type
+    *
+    * @return string The type
+    */
+    public function getType()
+    {
+        if (array_key_exists("type", $this->_propDict)) {
+            return $this->_propDict["type"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the type
+    *
+    * @param string $val The type
+    *
+    * @return GovernanceResource
+    */
+    public function setType($val)
+    {
+        $this->_propDict["type"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the parent
     *
     * @return GovernanceResource The parent
@@ -223,29 +223,29 @@ class GovernanceResource extends Entity
     
 
      /** 
-     * Gets the roleDefinitions
+     * Gets the roleAssignmentRequests
      *
-     * @return array The roleDefinitions
+     * @return array The roleAssignmentRequests
      */
-    public function getRoleDefinitions()
+    public function getRoleAssignmentRequests()
     {
-        if (array_key_exists("roleDefinitions", $this->_propDict)) {
-           return $this->_propDict["roleDefinitions"];
+        if (array_key_exists("roleAssignmentRequests", $this->_propDict)) {
+           return $this->_propDict["roleAssignmentRequests"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the roleDefinitions
+    * Sets the roleAssignmentRequests
     *
-    * @param GovernanceRoleDefinition $val The roleDefinitions
+    * @param GovernanceRoleAssignmentRequest $val The roleAssignmentRequests
     *
     * @return GovernanceResource
     */
-    public function setRoleDefinitions($val)
+    public function setRoleAssignmentRequests($val)
     {
-		$this->_propDict["roleDefinitions"] = $val;
+		$this->_propDict["roleAssignmentRequests"] = $val;
         return $this;
     }
     
@@ -279,29 +279,29 @@ class GovernanceResource extends Entity
     
 
      /** 
-     * Gets the roleAssignmentRequests
+     * Gets the roleDefinitions
      *
-     * @return array The roleAssignmentRequests
+     * @return array The roleDefinitions
      */
-    public function getRoleAssignmentRequests()
+    public function getRoleDefinitions()
     {
-        if (array_key_exists("roleAssignmentRequests", $this->_propDict)) {
-           return $this->_propDict["roleAssignmentRequests"];
+        if (array_key_exists("roleDefinitions", $this->_propDict)) {
+           return $this->_propDict["roleDefinitions"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the roleAssignmentRequests
+    * Sets the roleDefinitions
     *
-    * @param GovernanceRoleAssignmentRequest $val The roleAssignmentRequests
+    * @param GovernanceRoleDefinition $val The roleDefinitions
     *
     * @return GovernanceResource
     */
-    public function setRoleAssignmentRequests($val)
+    public function setRoleDefinitions($val)
     {
-		$this->_propDict["roleAssignmentRequests"] = $val;
+		$this->_propDict["roleDefinitions"] = $val;
         return $this;
     }
     

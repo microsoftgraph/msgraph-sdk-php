@@ -25,118 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class UserCredentialUsageDetails extends Entity
 {
     /**
-    * Gets the feature
-    *
-    * @return FeatureType The feature
-    */
-    public function getFeature()
-    {
-        if (array_key_exists("feature", $this->_propDict)) {
-            if (is_a($this->_propDict["feature"], "Beta\Microsoft\Graph\Model\FeatureType")) {
-                return $this->_propDict["feature"];
-            } else {
-                $this->_propDict["feature"] = new FeatureType($this->_propDict["feature"]);
-                return $this->_propDict["feature"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the feature
-    *
-    * @param FeatureType $val The feature
-    *
-    * @return UserCredentialUsageDetails
-    */
-    public function setFeature($val)
-    {
-        $this->_propDict["feature"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the userPrincipalName
-    *
-    * @return string The userPrincipalName
-    */
-    public function getUserPrincipalName()
-    {
-        if (array_key_exists("userPrincipalName", $this->_propDict)) {
-            return $this->_propDict["userPrincipalName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the userPrincipalName
-    *
-    * @param string $val The userPrincipalName
-    *
-    * @return UserCredentialUsageDetails
-    */
-    public function setUserPrincipalName($val)
-    {
-        $this->_propDict["userPrincipalName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the userDisplayName
-    *
-    * @return string The userDisplayName
-    */
-    public function getUserDisplayName()
-    {
-        if (array_key_exists("userDisplayName", $this->_propDict)) {
-            return $this->_propDict["userDisplayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the userDisplayName
-    *
-    * @param string $val The userDisplayName
-    *
-    * @return UserCredentialUsageDetails
-    */
-    public function setUserDisplayName($val)
-    {
-        $this->_propDict["userDisplayName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the isSuccess
-    *
-    * @return bool The isSuccess
-    */
-    public function getIsSuccess()
-    {
-        if (array_key_exists("isSuccess", $this->_propDict)) {
-            return $this->_propDict["isSuccess"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the isSuccess
-    *
-    * @param bool $val The isSuccess
-    *
-    * @return UserCredentialUsageDetails
-    */
-    public function setIsSuccess($val)
-    {
-        $this->_propDict["isSuccess"] = boolval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the authMethod
     *
     * @return UsageAuthMethod The authMethod
@@ -168,33 +56,6 @@ class UserCredentialUsageDetails extends Entity
     }
     
     /**
-    * Gets the failureReason
-    *
-    * @return string The failureReason
-    */
-    public function getFailureReason()
-    {
-        if (array_key_exists("failureReason", $this->_propDict)) {
-            return $this->_propDict["failureReason"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the failureReason
-    *
-    * @param string $val The failureReason
-    *
-    * @return UserCredentialUsageDetails
-    */
-    public function setFailureReason($val)
-    {
-        $this->_propDict["failureReason"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the eventDateTime
     *
     * @return \DateTime The eventDateTime
@@ -222,6 +83,145 @@ class UserCredentialUsageDetails extends Entity
     public function setEventDateTime($val)
     {
         $this->_propDict["eventDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the failureReason
+    *
+    * @return string The failureReason
+    */
+    public function getFailureReason()
+    {
+        if (array_key_exists("failureReason", $this->_propDict)) {
+            return $this->_propDict["failureReason"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the failureReason
+    *
+    * @param string $val The failureReason
+    *
+    * @return UserCredentialUsageDetails
+    */
+    public function setFailureReason($val)
+    {
+        $this->_propDict["failureReason"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the feature
+    *
+    * @return FeatureType The feature
+    */
+    public function getFeature()
+    {
+        if (array_key_exists("feature", $this->_propDict)) {
+            if (is_a($this->_propDict["feature"], "Beta\Microsoft\Graph\Model\FeatureType")) {
+                return $this->_propDict["feature"];
+            } else {
+                $this->_propDict["feature"] = new FeatureType($this->_propDict["feature"]);
+                return $this->_propDict["feature"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the feature
+    *
+    * @param FeatureType $val The feature
+    *
+    * @return UserCredentialUsageDetails
+    */
+    public function setFeature($val)
+    {
+        $this->_propDict["feature"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the isSuccess
+    *
+    * @return bool The isSuccess
+    */
+    public function getIsSuccess()
+    {
+        if (array_key_exists("isSuccess", $this->_propDict)) {
+            return $this->_propDict["isSuccess"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isSuccess
+    *
+    * @param bool $val The isSuccess
+    *
+    * @return UserCredentialUsageDetails
+    */
+    public function setIsSuccess($val)
+    {
+        $this->_propDict["isSuccess"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the userDisplayName
+    *
+    * @return string The userDisplayName
+    */
+    public function getUserDisplayName()
+    {
+        if (array_key_exists("userDisplayName", $this->_propDict)) {
+            return $this->_propDict["userDisplayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the userDisplayName
+    *
+    * @param string $val The userDisplayName
+    *
+    * @return UserCredentialUsageDetails
+    */
+    public function setUserDisplayName($val)
+    {
+        $this->_propDict["userDisplayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userPrincipalName
+    *
+    * @return string The userPrincipalName
+    */
+    public function getUserPrincipalName()
+    {
+        if (array_key_exists("userPrincipalName", $this->_propDict)) {
+            return $this->_propDict["userPrincipalName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the userPrincipalName
+    *
+    * @param string $val The userPrincipalName
+    *
+    * @return UserCredentialUsageDetails
+    */
+    public function setUserPrincipalName($val)
+    {
+        $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
     

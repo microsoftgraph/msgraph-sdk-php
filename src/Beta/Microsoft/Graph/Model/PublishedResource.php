@@ -52,33 +52,6 @@ class PublishedResource extends Entity
     }
     
     /**
-    * Gets the resourceName
-    *
-    * @return string The resourceName
-    */
-    public function getResourceName()
-    {
-        if (array_key_exists("resourceName", $this->_propDict)) {
-            return $this->_propDict["resourceName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the resourceName
-    *
-    * @param string $val The resourceName
-    *
-    * @return PublishedResource
-    */
-    public function setResourceName($val)
-    {
-        $this->_propDict["resourceName"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the publishingType
     *
     * @return OnPremisesPublishingType The publishingType
@@ -106,6 +79,33 @@ class PublishedResource extends Entity
     public function setPublishingType($val)
     {
         $this->_propDict["publishingType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the resourceName
+    *
+    * @return string The resourceName
+    */
+    public function getResourceName()
+    {
+        if (array_key_exists("resourceName", $this->_propDict)) {
+            return $this->_propDict["resourceName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the resourceName
+    *
+    * @param string $val The resourceName
+    *
+    * @return PublishedResource
+    */
+    public function setResourceName($val)
+    {
+        $this->_propDict["resourceName"] = $val;
         return $this;
     }
     

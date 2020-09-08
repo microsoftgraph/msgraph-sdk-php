@@ -24,33 +24,90 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class WindowsKioskConfiguration extends DeviceConfiguration
 {
-
-     /** 
-     * Gets the kioskProfiles
-    * This policy setting allows to define a list of Kiosk profiles for a Kiosk configuration. This collection can contain a maximum of 3 elements.
-     *
-     * @return array The kioskProfiles
-     */
-    public function getKioskProfiles()
+    /**
+    * Gets the edgeKioskEnablePublicBrowsing
+    * Enable public browsing kiosk mode for the Microsoft Edge browser. The Default is false.
+    *
+    * @return bool The edgeKioskEnablePublicBrowsing
+    */
+    public function getEdgeKioskEnablePublicBrowsing()
     {
-        if (array_key_exists("kioskProfiles", $this->_propDict)) {
-           return $this->_propDict["kioskProfiles"];
+        if (array_key_exists("edgeKioskEnablePublicBrowsing", $this->_propDict)) {
+            return $this->_propDict["edgeKioskEnablePublicBrowsing"];
         } else {
             return null;
         }
     }
     
-    /** 
-    * Sets the kioskProfiles
-    * This policy setting allows to define a list of Kiosk profiles for a Kiosk configuration. This collection can contain a maximum of 3 elements.
+    /**
+    * Sets the edgeKioskEnablePublicBrowsing
+    * Enable public browsing kiosk mode for the Microsoft Edge browser. The Default is false.
     *
-    * @param WindowsKioskProfile $val The kioskProfiles
+    * @param bool $val The edgeKioskEnablePublicBrowsing
     *
     * @return WindowsKioskConfiguration
     */
-    public function setKioskProfiles($val)
+    public function setEdgeKioskEnablePublicBrowsing($val)
     {
-		$this->_propDict["kioskProfiles"] = $val;
+        $this->_propDict["edgeKioskEnablePublicBrowsing"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the kioskBrowserBlockedUrlExceptions
+    * Specify URLs that the kiosk browser is allowed to navigate to
+    *
+    * @return string The kioskBrowserBlockedUrlExceptions
+    */
+    public function getKioskBrowserBlockedUrlExceptions()
+    {
+        if (array_key_exists("kioskBrowserBlockedUrlExceptions", $this->_propDict)) {
+            return $this->_propDict["kioskBrowserBlockedUrlExceptions"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the kioskBrowserBlockedUrlExceptions
+    * Specify URLs that the kiosk browser is allowed to navigate to
+    *
+    * @param string $val The kioskBrowserBlockedUrlExceptions
+    *
+    * @return WindowsKioskConfiguration
+    */
+    public function setKioskBrowserBlockedUrlExceptions($val)
+    {
+        $this->_propDict["kioskBrowserBlockedUrlExceptions"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the kioskBrowserBlockedURLs
+    * Specify URLs that the kiosk browsers should not navigate to
+    *
+    * @return string The kioskBrowserBlockedURLs
+    */
+    public function getKioskBrowserBlockedURLs()
+    {
+        if (array_key_exists("kioskBrowserBlockedURLs", $this->_propDict)) {
+            return $this->_propDict["kioskBrowserBlockedURLs"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the kioskBrowserBlockedURLs
+    * Specify URLs that the kiosk browsers should not navigate to
+    *
+    * @param string $val The kioskBrowserBlockedURLs
+    *
+    * @return WindowsKioskConfiguration
+    */
+    public function setKioskBrowserBlockedURLs($val)
+    {
+        $this->_propDict["kioskBrowserBlockedURLs"] = $val;
         return $this;
     }
     
@@ -80,6 +137,35 @@ class WindowsKioskConfiguration extends DeviceConfiguration
     public function setKioskBrowserDefaultUrl($val)
     {
         $this->_propDict["kioskBrowserDefaultUrl"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the kioskBrowserEnableEndSessionButton
+    * Enable the kiosk browser's end session button. By default, the end session button is disabled.
+    *
+    * @return bool The kioskBrowserEnableEndSessionButton
+    */
+    public function getKioskBrowserEnableEndSessionButton()
+    {
+        if (array_key_exists("kioskBrowserEnableEndSessionButton", $this->_propDict)) {
+            return $this->_propDict["kioskBrowserEnableEndSessionButton"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the kioskBrowserEnableEndSessionButton
+    * Enable the kiosk browser's end session button. By default, the end session button is disabled.
+    *
+    * @param bool $val The kioskBrowserEnableEndSessionButton
+    *
+    * @return WindowsKioskConfiguration
+    */
+    public function setKioskBrowserEnableEndSessionButton($val)
+    {
+        $this->_propDict["kioskBrowserEnableEndSessionButton"] = boolval($val);
         return $this;
     }
     
@@ -142,35 +228,6 @@ class WindowsKioskConfiguration extends DeviceConfiguration
     }
     
     /**
-    * Gets the kioskBrowserEnableEndSessionButton
-    * Enable the kiosk browser's end session button. By default, the end session button is disabled.
-    *
-    * @return bool The kioskBrowserEnableEndSessionButton
-    */
-    public function getKioskBrowserEnableEndSessionButton()
-    {
-        if (array_key_exists("kioskBrowserEnableEndSessionButton", $this->_propDict)) {
-            return $this->_propDict["kioskBrowserEnableEndSessionButton"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the kioskBrowserEnableEndSessionButton
-    * Enable the kiosk browser's end session button. By default, the end session button is disabled.
-    *
-    * @param bool $val The kioskBrowserEnableEndSessionButton
-    *
-    * @return WindowsKioskConfiguration
-    */
-    public function setKioskBrowserEnableEndSessionButton($val)
-    {
-        $this->_propDict["kioskBrowserEnableEndSessionButton"] = boolval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the kioskBrowserRestartOnIdleTimeInMinutes
     * Specify the number of minutes the session is idle until the kiosk browser restarts in a fresh state.  Valid values are 1-1440. Valid values 1 to 1440
     *
@@ -199,90 +256,33 @@ class WindowsKioskConfiguration extends DeviceConfiguration
         return $this;
     }
     
-    /**
-    * Gets the kioskBrowserBlockedURLs
-    * Specify URLs that the kiosk browsers should not navigate to
-    *
-    * @return string The kioskBrowserBlockedURLs
-    */
-    public function getKioskBrowserBlockedURLs()
+
+     /** 
+     * Gets the kioskProfiles
+    * This policy setting allows to define a list of Kiosk profiles for a Kiosk configuration. This collection can contain a maximum of 3 elements.
+     *
+     * @return array The kioskProfiles
+     */
+    public function getKioskProfiles()
     {
-        if (array_key_exists("kioskBrowserBlockedURLs", $this->_propDict)) {
-            return $this->_propDict["kioskBrowserBlockedURLs"];
+        if (array_key_exists("kioskProfiles", $this->_propDict)) {
+           return $this->_propDict["kioskProfiles"];
         } else {
             return null;
         }
     }
     
-    /**
-    * Sets the kioskBrowserBlockedURLs
-    * Specify URLs that the kiosk browsers should not navigate to
+    /** 
+    * Sets the kioskProfiles
+    * This policy setting allows to define a list of Kiosk profiles for a Kiosk configuration. This collection can contain a maximum of 3 elements.
     *
-    * @param string $val The kioskBrowserBlockedURLs
-    *
-    * @return WindowsKioskConfiguration
-    */
-    public function setKioskBrowserBlockedURLs($val)
-    {
-        $this->_propDict["kioskBrowserBlockedURLs"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the kioskBrowserBlockedUrlExceptions
-    * Specify URLs that the kiosk browser is allowed to navigate to
-    *
-    * @return string The kioskBrowserBlockedUrlExceptions
-    */
-    public function getKioskBrowserBlockedUrlExceptions()
-    {
-        if (array_key_exists("kioskBrowserBlockedUrlExceptions", $this->_propDict)) {
-            return $this->_propDict["kioskBrowserBlockedUrlExceptions"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the kioskBrowserBlockedUrlExceptions
-    * Specify URLs that the kiosk browser is allowed to navigate to
-    *
-    * @param string $val The kioskBrowserBlockedUrlExceptions
+    * @param WindowsKioskProfile $val The kioskProfiles
     *
     * @return WindowsKioskConfiguration
     */
-    public function setKioskBrowserBlockedUrlExceptions($val)
+    public function setKioskProfiles($val)
     {
-        $this->_propDict["kioskBrowserBlockedUrlExceptions"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the edgeKioskEnablePublicBrowsing
-    * Enable public browsing kiosk mode for the Microsoft Edge browser. The Default is false.
-    *
-    * @return bool The edgeKioskEnablePublicBrowsing
-    */
-    public function getEdgeKioskEnablePublicBrowsing()
-    {
-        if (array_key_exists("edgeKioskEnablePublicBrowsing", $this->_propDict)) {
-            return $this->_propDict["edgeKioskEnablePublicBrowsing"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the edgeKioskEnablePublicBrowsing
-    * Enable public browsing kiosk mode for the Microsoft Edge browser. The Default is false.
-    *
-    * @param bool $val The edgeKioskEnablePublicBrowsing
-    *
-    * @return WindowsKioskConfiguration
-    */
-    public function setEdgeKioskEnablePublicBrowsing($val)
-    {
-        $this->_propDict["edgeKioskEnablePublicBrowsing"] = boolval($val);
+		$this->_propDict["kioskProfiles"] = $val;
         return $this;
     }
     

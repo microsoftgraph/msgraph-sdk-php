@@ -24,34 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class DeviceHealthScriptRemediationSummary extends Entity
 {
     /**
-    * Gets the scriptCount
-    * The number of device health scripts deployed.
-    *
-    * @return int The scriptCount
-    */
-    public function getScriptCount()
-    {
-        if (array_key_exists("scriptCount", $this->_propDict)) {
-            return $this->_propDict["scriptCount"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the scriptCount
-    * The number of device health scripts deployed.
-    *
-    * @param int $val The value of the scriptCount
-    *
-    * @return DeviceHealthScriptRemediationSummary
-    */
-    public function setScriptCount($val)
-    {
-        $this->_propDict["scriptCount"] = $val;
-        return $this;
-    }
-    /**
     * Gets the remediatedDeviceCount
     * The number of devices remediated by device health scripts.
     *
@@ -77,6 +49,34 @@ class DeviceHealthScriptRemediationSummary extends Entity
     public function setRemediatedDeviceCount($val)
     {
         $this->_propDict["remediatedDeviceCount"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the scriptCount
+    * The number of device health scripts deployed.
+    *
+    * @return int The scriptCount
+    */
+    public function getScriptCount()
+    {
+        if (array_key_exists("scriptCount", $this->_propDict)) {
+            return $this->_propDict["scriptCount"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the scriptCount
+    * The number of device health scripts deployed.
+    *
+    * @param int $val The value of the scriptCount
+    *
+    * @return DeviceHealthScriptRemediationSummary
+    */
+    public function setScriptCount($val)
+    {
+        $this->_propDict["scriptCount"] = $val;
         return $this;
     }
 }

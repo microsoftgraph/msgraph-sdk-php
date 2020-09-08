@@ -257,35 +257,6 @@ class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
-    * Gets the passwordSignInFailureCountBeforeFactoryReset
-    * Number of sign in failures allowed before factory reset. Valid values 1 to 16
-    *
-    * @return int The passwordSignInFailureCountBeforeFactoryReset
-    */
-    public function getPasswordSignInFailureCountBeforeFactoryReset()
-    {
-        if (array_key_exists("passwordSignInFailureCountBeforeFactoryReset", $this->_propDict)) {
-            return $this->_propDict["passwordSignInFailureCountBeforeFactoryReset"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the passwordSignInFailureCountBeforeFactoryReset
-    * Number of sign in failures allowed before factory reset. Valid values 1 to 16
-    *
-    * @param int $val The passwordSignInFailureCountBeforeFactoryReset
-    *
-    * @return AndroidForWorkGeneralDeviceConfiguration
-    */
-    public function setPasswordSignInFailureCountBeforeFactoryReset($val)
-    {
-        $this->_propDict["passwordSignInFailureCountBeforeFactoryReset"] = intval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the passwordRequiredType
     * Type of password that is required.
     *
@@ -319,64 +290,147 @@ class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
-    * Gets the workProfileDataSharingType
-    * Type of data sharing that is allowed.
+    * Gets the passwordSignInFailureCountBeforeFactoryReset
+    * Number of sign in failures allowed before factory reset. Valid values 1 to 16
     *
-    * @return AndroidForWorkCrossProfileDataSharingType The workProfileDataSharingType
+    * @return int The passwordSignInFailureCountBeforeFactoryReset
     */
-    public function getWorkProfileDataSharingType()
+    public function getPasswordSignInFailureCountBeforeFactoryReset()
     {
-        if (array_key_exists("workProfileDataSharingType", $this->_propDict)) {
-            if (is_a($this->_propDict["workProfileDataSharingType"], "Beta\Microsoft\Graph\Model\AndroidForWorkCrossProfileDataSharingType")) {
-                return $this->_propDict["workProfileDataSharingType"];
-            } else {
-                $this->_propDict["workProfileDataSharingType"] = new AndroidForWorkCrossProfileDataSharingType($this->_propDict["workProfileDataSharingType"]);
-                return $this->_propDict["workProfileDataSharingType"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the workProfileDataSharingType
-    * Type of data sharing that is allowed.
-    *
-    * @param AndroidForWorkCrossProfileDataSharingType $val The workProfileDataSharingType
-    *
-    * @return AndroidForWorkGeneralDeviceConfiguration
-    */
-    public function setWorkProfileDataSharingType($val)
-    {
-        $this->_propDict["workProfileDataSharingType"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the workProfileBlockNotificationsWhileDeviceLocked
-    * Indicates whether or not to block notifications while device locked.
-    *
-    * @return bool The workProfileBlockNotificationsWhileDeviceLocked
-    */
-    public function getWorkProfileBlockNotificationsWhileDeviceLocked()
-    {
-        if (array_key_exists("workProfileBlockNotificationsWhileDeviceLocked", $this->_propDict)) {
-            return $this->_propDict["workProfileBlockNotificationsWhileDeviceLocked"];
+        if (array_key_exists("passwordSignInFailureCountBeforeFactoryReset", $this->_propDict)) {
+            return $this->_propDict["passwordSignInFailureCountBeforeFactoryReset"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the workProfileBlockNotificationsWhileDeviceLocked
-    * Indicates whether or not to block notifications while device locked.
+    * Sets the passwordSignInFailureCountBeforeFactoryReset
+    * Number of sign in failures allowed before factory reset. Valid values 1 to 16
     *
-    * @param bool $val The workProfileBlockNotificationsWhileDeviceLocked
+    * @param int $val The passwordSignInFailureCountBeforeFactoryReset
     *
     * @return AndroidForWorkGeneralDeviceConfiguration
     */
-    public function setWorkProfileBlockNotificationsWhileDeviceLocked($val)
+    public function setPasswordSignInFailureCountBeforeFactoryReset($val)
     {
-        $this->_propDict["workProfileBlockNotificationsWhileDeviceLocked"] = boolval($val);
+        $this->_propDict["passwordSignInFailureCountBeforeFactoryReset"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the securityRequireVerifyApps
+    * Require the Android Verify apps feature is turned on.
+    *
+    * @return bool The securityRequireVerifyApps
+    */
+    public function getSecurityRequireVerifyApps()
+    {
+        if (array_key_exists("securityRequireVerifyApps", $this->_propDict)) {
+            return $this->_propDict["securityRequireVerifyApps"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the securityRequireVerifyApps
+    * Require the Android Verify apps feature is turned on.
+    *
+    * @param bool $val The securityRequireVerifyApps
+    *
+    * @return AndroidForWorkGeneralDeviceConfiguration
+    */
+    public function setSecurityRequireVerifyApps($val)
+    {
+        $this->_propDict["securityRequireVerifyApps"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the vpnAlwaysOnPackageIdentifier
+    * Enable lockdown mode for always-on VPN.
+    *
+    * @return string The vpnAlwaysOnPackageIdentifier
+    */
+    public function getVpnAlwaysOnPackageIdentifier()
+    {
+        if (array_key_exists("vpnAlwaysOnPackageIdentifier", $this->_propDict)) {
+            return $this->_propDict["vpnAlwaysOnPackageIdentifier"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the vpnAlwaysOnPackageIdentifier
+    * Enable lockdown mode for always-on VPN.
+    *
+    * @param string $val The vpnAlwaysOnPackageIdentifier
+    *
+    * @return AndroidForWorkGeneralDeviceConfiguration
+    */
+    public function setVpnAlwaysOnPackageIdentifier($val)
+    {
+        $this->_propDict["vpnAlwaysOnPackageIdentifier"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the vpnEnableAlwaysOnLockdownMode
+    * Enable lockdown mode for always-on VPN.
+    *
+    * @return bool The vpnEnableAlwaysOnLockdownMode
+    */
+    public function getVpnEnableAlwaysOnLockdownMode()
+    {
+        if (array_key_exists("vpnEnableAlwaysOnLockdownMode", $this->_propDict)) {
+            return $this->_propDict["vpnEnableAlwaysOnLockdownMode"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the vpnEnableAlwaysOnLockdownMode
+    * Enable lockdown mode for always-on VPN.
+    *
+    * @param bool $val The vpnEnableAlwaysOnLockdownMode
+    *
+    * @return AndroidForWorkGeneralDeviceConfiguration
+    */
+    public function setVpnEnableAlwaysOnLockdownMode($val)
+    {
+        $this->_propDict["vpnEnableAlwaysOnLockdownMode"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the workProfileAllowWidgets
+    * Allow widgets from work profile apps.
+    *
+    * @return bool The workProfileAllowWidgets
+    */
+    public function getWorkProfileAllowWidgets()
+    {
+        if (array_key_exists("workProfileAllowWidgets", $this->_propDict)) {
+            return $this->_propDict["workProfileAllowWidgets"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the workProfileAllowWidgets
+    * Allow widgets from work profile apps.
+    *
+    * @param bool $val The workProfileAllowWidgets
+    *
+    * @return AndroidForWorkGeneralDeviceConfiguration
+    */
+    public function setWorkProfileAllowWidgets($val)
+    {
+        $this->_propDict["workProfileAllowWidgets"] = boolval($val);
         return $this;
     }
     
@@ -410,60 +464,31 @@ class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
-    * Gets the workProfileBluetoothEnableContactSharing
-    * Allow bluetooth devices to access enterprise contacts.
+    * Gets the workProfileBlockCamera
+    * Block work profile camera.
     *
-    * @return bool The workProfileBluetoothEnableContactSharing
+    * @return bool The workProfileBlockCamera
     */
-    public function getWorkProfileBluetoothEnableContactSharing()
+    public function getWorkProfileBlockCamera()
     {
-        if (array_key_exists("workProfileBluetoothEnableContactSharing", $this->_propDict)) {
-            return $this->_propDict["workProfileBluetoothEnableContactSharing"];
+        if (array_key_exists("workProfileBlockCamera", $this->_propDict)) {
+            return $this->_propDict["workProfileBlockCamera"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the workProfileBluetoothEnableContactSharing
-    * Allow bluetooth devices to access enterprise contacts.
+    * Sets the workProfileBlockCamera
+    * Block work profile camera.
     *
-    * @param bool $val The workProfileBluetoothEnableContactSharing
-    *
-    * @return AndroidForWorkGeneralDeviceConfiguration
-    */
-    public function setWorkProfileBluetoothEnableContactSharing($val)
-    {
-        $this->_propDict["workProfileBluetoothEnableContactSharing"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the workProfileBlockScreenCapture
-    * Block screen capture in work profile.
-    *
-    * @return bool The workProfileBlockScreenCapture
-    */
-    public function getWorkProfileBlockScreenCapture()
-    {
-        if (array_key_exists("workProfileBlockScreenCapture", $this->_propDict)) {
-            return $this->_propDict["workProfileBlockScreenCapture"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the workProfileBlockScreenCapture
-    * Block screen capture in work profile.
-    *
-    * @param bool $val The workProfileBlockScreenCapture
+    * @param bool $val The workProfileBlockCamera
     *
     * @return AndroidForWorkGeneralDeviceConfiguration
     */
-    public function setWorkProfileBlockScreenCapture($val)
+    public function setWorkProfileBlockCamera($val)
     {
-        $this->_propDict["workProfileBlockScreenCapture"] = boolval($val);
+        $this->_propDict["workProfileBlockCamera"] = boolval($val);
         return $this;
     }
     
@@ -493,35 +518,6 @@ class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguration
     public function setWorkProfileBlockCrossProfileCallerId($val)
     {
         $this->_propDict["workProfileBlockCrossProfileCallerId"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the workProfileBlockCamera
-    * Block work profile camera.
-    *
-    * @return bool The workProfileBlockCamera
-    */
-    public function getWorkProfileBlockCamera()
-    {
-        if (array_key_exists("workProfileBlockCamera", $this->_propDict)) {
-            return $this->_propDict["workProfileBlockCamera"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the workProfileBlockCamera
-    * Block work profile camera.
-    *
-    * @param bool $val The workProfileBlockCamera
-    *
-    * @return AndroidForWorkGeneralDeviceConfiguration
-    */
-    public function setWorkProfileBlockCamera($val)
-    {
-        $this->_propDict["workProfileBlockCamera"] = boolval($val);
         return $this;
     }
     
@@ -580,6 +576,155 @@ class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguration
     public function setWorkProfileBlockCrossProfileCopyPaste($val)
     {
         $this->_propDict["workProfileBlockCrossProfileCopyPaste"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the workProfileBlockNotificationsWhileDeviceLocked
+    * Indicates whether or not to block notifications while device locked.
+    *
+    * @return bool The workProfileBlockNotificationsWhileDeviceLocked
+    */
+    public function getWorkProfileBlockNotificationsWhileDeviceLocked()
+    {
+        if (array_key_exists("workProfileBlockNotificationsWhileDeviceLocked", $this->_propDict)) {
+            return $this->_propDict["workProfileBlockNotificationsWhileDeviceLocked"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the workProfileBlockNotificationsWhileDeviceLocked
+    * Indicates whether or not to block notifications while device locked.
+    *
+    * @param bool $val The workProfileBlockNotificationsWhileDeviceLocked
+    *
+    * @return AndroidForWorkGeneralDeviceConfiguration
+    */
+    public function setWorkProfileBlockNotificationsWhileDeviceLocked($val)
+    {
+        $this->_propDict["workProfileBlockNotificationsWhileDeviceLocked"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the workProfileBlockPersonalAppInstallsFromUnknownSources
+    * Prevent app installations from unknown sources in the personal profile.
+    *
+    * @return bool The workProfileBlockPersonalAppInstallsFromUnknownSources
+    */
+    public function getWorkProfileBlockPersonalAppInstallsFromUnknownSources()
+    {
+        if (array_key_exists("workProfileBlockPersonalAppInstallsFromUnknownSources", $this->_propDict)) {
+            return $this->_propDict["workProfileBlockPersonalAppInstallsFromUnknownSources"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the workProfileBlockPersonalAppInstallsFromUnknownSources
+    * Prevent app installations from unknown sources in the personal profile.
+    *
+    * @param bool $val The workProfileBlockPersonalAppInstallsFromUnknownSources
+    *
+    * @return AndroidForWorkGeneralDeviceConfiguration
+    */
+    public function setWorkProfileBlockPersonalAppInstallsFromUnknownSources($val)
+    {
+        $this->_propDict["workProfileBlockPersonalAppInstallsFromUnknownSources"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the workProfileBlockScreenCapture
+    * Block screen capture in work profile.
+    *
+    * @return bool The workProfileBlockScreenCapture
+    */
+    public function getWorkProfileBlockScreenCapture()
+    {
+        if (array_key_exists("workProfileBlockScreenCapture", $this->_propDict)) {
+            return $this->_propDict["workProfileBlockScreenCapture"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the workProfileBlockScreenCapture
+    * Block screen capture in work profile.
+    *
+    * @param bool $val The workProfileBlockScreenCapture
+    *
+    * @return AndroidForWorkGeneralDeviceConfiguration
+    */
+    public function setWorkProfileBlockScreenCapture($val)
+    {
+        $this->_propDict["workProfileBlockScreenCapture"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the workProfileBluetoothEnableContactSharing
+    * Allow bluetooth devices to access enterprise contacts.
+    *
+    * @return bool The workProfileBluetoothEnableContactSharing
+    */
+    public function getWorkProfileBluetoothEnableContactSharing()
+    {
+        if (array_key_exists("workProfileBluetoothEnableContactSharing", $this->_propDict)) {
+            return $this->_propDict["workProfileBluetoothEnableContactSharing"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the workProfileBluetoothEnableContactSharing
+    * Allow bluetooth devices to access enterprise contacts.
+    *
+    * @param bool $val The workProfileBluetoothEnableContactSharing
+    *
+    * @return AndroidForWorkGeneralDeviceConfiguration
+    */
+    public function setWorkProfileBluetoothEnableContactSharing($val)
+    {
+        $this->_propDict["workProfileBluetoothEnableContactSharing"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the workProfileDataSharingType
+    * Type of data sharing that is allowed.
+    *
+    * @return AndroidForWorkCrossProfileDataSharingType The workProfileDataSharingType
+    */
+    public function getWorkProfileDataSharingType()
+    {
+        if (array_key_exists("workProfileDataSharingType", $this->_propDict)) {
+            if (is_a($this->_propDict["workProfileDataSharingType"], "Beta\Microsoft\Graph\Model\AndroidForWorkCrossProfileDataSharingType")) {
+                return $this->_propDict["workProfileDataSharingType"];
+            } else {
+                $this->_propDict["workProfileDataSharingType"] = new AndroidForWorkCrossProfileDataSharingType($this->_propDict["workProfileDataSharingType"]);
+                return $this->_propDict["workProfileDataSharingType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the workProfileDataSharingType
+    * Type of data sharing that is allowed.
+    *
+    * @param AndroidForWorkCrossProfileDataSharingType $val The workProfileDataSharingType
+    *
+    * @return AndroidForWorkGeneralDeviceConfiguration
+    */
+    public function setWorkProfileDataSharingType($val)
+    {
+        $this->_propDict["workProfileDataSharingType"] = $val;
         return $this;
     }
     
@@ -791,64 +936,6 @@ class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
-    * Gets the workProfilePasswordMinNumericCharacters
-    * Minimum # of numeric characters required in work profile password. Valid values 1 to 10
-    *
-    * @return int The workProfilePasswordMinNumericCharacters
-    */
-    public function getWorkProfilePasswordMinNumericCharacters()
-    {
-        if (array_key_exists("workProfilePasswordMinNumericCharacters", $this->_propDict)) {
-            return $this->_propDict["workProfilePasswordMinNumericCharacters"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the workProfilePasswordMinNumericCharacters
-    * Minimum # of numeric characters required in work profile password. Valid values 1 to 10
-    *
-    * @param int $val The workProfilePasswordMinNumericCharacters
-    *
-    * @return AndroidForWorkGeneralDeviceConfiguration
-    */
-    public function setWorkProfilePasswordMinNumericCharacters($val)
-    {
-        $this->_propDict["workProfilePasswordMinNumericCharacters"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the workProfilePasswordMinNonLetterCharacters
-    * Minimum # of non-letter characters required in work profile password. Valid values 1 to 10
-    *
-    * @return int The workProfilePasswordMinNonLetterCharacters
-    */
-    public function getWorkProfilePasswordMinNonLetterCharacters()
-    {
-        if (array_key_exists("workProfilePasswordMinNonLetterCharacters", $this->_propDict)) {
-            return $this->_propDict["workProfilePasswordMinNonLetterCharacters"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the workProfilePasswordMinNonLetterCharacters
-    * Minimum # of non-letter characters required in work profile password. Valid values 1 to 10
-    *
-    * @param int $val The workProfilePasswordMinNonLetterCharacters
-    *
-    * @return AndroidForWorkGeneralDeviceConfiguration
-    */
-    public function setWorkProfilePasswordMinNonLetterCharacters($val)
-    {
-        $this->_propDict["workProfilePasswordMinNonLetterCharacters"] = intval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the workProfilePasswordMinLetterCharacters
     * Minimum # of letter characters required in work profile password. Valid values 1 to 10
     *
@@ -907,31 +994,60 @@ class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
-    * Gets the workProfilePasswordMinUpperCaseCharacters
-    * Minimum # of upper-case characters required in work profile password. Valid values 1 to 10
+    * Gets the workProfilePasswordMinNonLetterCharacters
+    * Minimum # of non-letter characters required in work profile password. Valid values 1 to 10
     *
-    * @return int The workProfilePasswordMinUpperCaseCharacters
+    * @return int The workProfilePasswordMinNonLetterCharacters
     */
-    public function getWorkProfilePasswordMinUpperCaseCharacters()
+    public function getWorkProfilePasswordMinNonLetterCharacters()
     {
-        if (array_key_exists("workProfilePasswordMinUpperCaseCharacters", $this->_propDict)) {
-            return $this->_propDict["workProfilePasswordMinUpperCaseCharacters"];
+        if (array_key_exists("workProfilePasswordMinNonLetterCharacters", $this->_propDict)) {
+            return $this->_propDict["workProfilePasswordMinNonLetterCharacters"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the workProfilePasswordMinUpperCaseCharacters
-    * Minimum # of upper-case characters required in work profile password. Valid values 1 to 10
+    * Sets the workProfilePasswordMinNonLetterCharacters
+    * Minimum # of non-letter characters required in work profile password. Valid values 1 to 10
     *
-    * @param int $val The workProfilePasswordMinUpperCaseCharacters
+    * @param int $val The workProfilePasswordMinNonLetterCharacters
     *
     * @return AndroidForWorkGeneralDeviceConfiguration
     */
-    public function setWorkProfilePasswordMinUpperCaseCharacters($val)
+    public function setWorkProfilePasswordMinNonLetterCharacters($val)
     {
-        $this->_propDict["workProfilePasswordMinUpperCaseCharacters"] = intval($val);
+        $this->_propDict["workProfilePasswordMinNonLetterCharacters"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the workProfilePasswordMinNumericCharacters
+    * Minimum # of numeric characters required in work profile password. Valid values 1 to 10
+    *
+    * @return int The workProfilePasswordMinNumericCharacters
+    */
+    public function getWorkProfilePasswordMinNumericCharacters()
+    {
+        if (array_key_exists("workProfilePasswordMinNumericCharacters", $this->_propDict)) {
+            return $this->_propDict["workProfilePasswordMinNumericCharacters"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the workProfilePasswordMinNumericCharacters
+    * Minimum # of numeric characters required in work profile password. Valid values 1 to 10
+    *
+    * @param int $val The workProfilePasswordMinNumericCharacters
+    *
+    * @return AndroidForWorkGeneralDeviceConfiguration
+    */
+    public function setWorkProfilePasswordMinNumericCharacters($val)
+    {
+        $this->_propDict["workProfilePasswordMinNumericCharacters"] = intval($val);
         return $this;
     }
     
@@ -961,6 +1077,35 @@ class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguration
     public function setWorkProfilePasswordMinSymbolCharacters($val)
     {
         $this->_propDict["workProfilePasswordMinSymbolCharacters"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the workProfilePasswordMinUpperCaseCharacters
+    * Minimum # of upper-case characters required in work profile password. Valid values 1 to 10
+    *
+    * @return int The workProfilePasswordMinUpperCaseCharacters
+    */
+    public function getWorkProfilePasswordMinUpperCaseCharacters()
+    {
+        if (array_key_exists("workProfilePasswordMinUpperCaseCharacters", $this->_propDict)) {
+            return $this->_propDict["workProfilePasswordMinUpperCaseCharacters"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the workProfilePasswordMinUpperCaseCharacters
+    * Minimum # of upper-case characters required in work profile password. Valid values 1 to 10
+    *
+    * @param int $val The workProfilePasswordMinUpperCaseCharacters
+    *
+    * @return AndroidForWorkGeneralDeviceConfiguration
+    */
+    public function setWorkProfilePasswordMinUpperCaseCharacters($val)
+    {
+        $this->_propDict["workProfilePasswordMinUpperCaseCharacters"] = intval($val);
         return $this;
     }
     
@@ -1023,35 +1168,6 @@ class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
-    * Gets the workProfilePasswordSignInFailureCountBeforeFactoryReset
-    * Number of sign in failures allowed before work profile is removed and all corporate data deleted. Valid values 1 to 16
-    *
-    * @return int The workProfilePasswordSignInFailureCountBeforeFactoryReset
-    */
-    public function getWorkProfilePasswordSignInFailureCountBeforeFactoryReset()
-    {
-        if (array_key_exists("workProfilePasswordSignInFailureCountBeforeFactoryReset", $this->_propDict)) {
-            return $this->_propDict["workProfilePasswordSignInFailureCountBeforeFactoryReset"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the workProfilePasswordSignInFailureCountBeforeFactoryReset
-    * Number of sign in failures allowed before work profile is removed and all corporate data deleted. Valid values 1 to 16
-    *
-    * @param int $val The workProfilePasswordSignInFailureCountBeforeFactoryReset
-    *
-    * @return AndroidForWorkGeneralDeviceConfiguration
-    */
-    public function setWorkProfilePasswordSignInFailureCountBeforeFactoryReset($val)
-    {
-        $this->_propDict["workProfilePasswordSignInFailureCountBeforeFactoryReset"] = intval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the workProfilePasswordRequiredType
     * Type of work profile password that is required.
     *
@@ -1085,6 +1201,35 @@ class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the workProfilePasswordSignInFailureCountBeforeFactoryReset
+    * Number of sign in failures allowed before work profile is removed and all corporate data deleted. Valid values 1 to 16
+    *
+    * @return int The workProfilePasswordSignInFailureCountBeforeFactoryReset
+    */
+    public function getWorkProfilePasswordSignInFailureCountBeforeFactoryReset()
+    {
+        if (array_key_exists("workProfilePasswordSignInFailureCountBeforeFactoryReset", $this->_propDict)) {
+            return $this->_propDict["workProfilePasswordSignInFailureCountBeforeFactoryReset"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the workProfilePasswordSignInFailureCountBeforeFactoryReset
+    * Number of sign in failures allowed before work profile is removed and all corporate data deleted. Valid values 1 to 16
+    *
+    * @param int $val The workProfilePasswordSignInFailureCountBeforeFactoryReset
+    *
+    * @return AndroidForWorkGeneralDeviceConfiguration
+    */
+    public function setWorkProfilePasswordSignInFailureCountBeforeFactoryReset($val)
+    {
+        $this->_propDict["workProfilePasswordSignInFailureCountBeforeFactoryReset"] = intval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the workProfileRequirePassword
     * Password is required or not for work profile
     *
@@ -1110,151 +1255,6 @@ class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguration
     public function setWorkProfileRequirePassword($val)
     {
         $this->_propDict["workProfileRequirePassword"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the securityRequireVerifyApps
-    * Require the Android Verify apps feature is turned on.
-    *
-    * @return bool The securityRequireVerifyApps
-    */
-    public function getSecurityRequireVerifyApps()
-    {
-        if (array_key_exists("securityRequireVerifyApps", $this->_propDict)) {
-            return $this->_propDict["securityRequireVerifyApps"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the securityRequireVerifyApps
-    * Require the Android Verify apps feature is turned on.
-    *
-    * @param bool $val The securityRequireVerifyApps
-    *
-    * @return AndroidForWorkGeneralDeviceConfiguration
-    */
-    public function setSecurityRequireVerifyApps($val)
-    {
-        $this->_propDict["securityRequireVerifyApps"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the vpnAlwaysOnPackageIdentifier
-    * Enable lockdown mode for always-on VPN.
-    *
-    * @return string The vpnAlwaysOnPackageIdentifier
-    */
-    public function getVpnAlwaysOnPackageIdentifier()
-    {
-        if (array_key_exists("vpnAlwaysOnPackageIdentifier", $this->_propDict)) {
-            return $this->_propDict["vpnAlwaysOnPackageIdentifier"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the vpnAlwaysOnPackageIdentifier
-    * Enable lockdown mode for always-on VPN.
-    *
-    * @param string $val The vpnAlwaysOnPackageIdentifier
-    *
-    * @return AndroidForWorkGeneralDeviceConfiguration
-    */
-    public function setVpnAlwaysOnPackageIdentifier($val)
-    {
-        $this->_propDict["vpnAlwaysOnPackageIdentifier"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the vpnEnableAlwaysOnLockdownMode
-    * Enable lockdown mode for always-on VPN.
-    *
-    * @return bool The vpnEnableAlwaysOnLockdownMode
-    */
-    public function getVpnEnableAlwaysOnLockdownMode()
-    {
-        if (array_key_exists("vpnEnableAlwaysOnLockdownMode", $this->_propDict)) {
-            return $this->_propDict["vpnEnableAlwaysOnLockdownMode"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the vpnEnableAlwaysOnLockdownMode
-    * Enable lockdown mode for always-on VPN.
-    *
-    * @param bool $val The vpnEnableAlwaysOnLockdownMode
-    *
-    * @return AndroidForWorkGeneralDeviceConfiguration
-    */
-    public function setVpnEnableAlwaysOnLockdownMode($val)
-    {
-        $this->_propDict["vpnEnableAlwaysOnLockdownMode"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the workProfileAllowWidgets
-    * Allow widgets from work profile apps.
-    *
-    * @return bool The workProfileAllowWidgets
-    */
-    public function getWorkProfileAllowWidgets()
-    {
-        if (array_key_exists("workProfileAllowWidgets", $this->_propDict)) {
-            return $this->_propDict["workProfileAllowWidgets"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the workProfileAllowWidgets
-    * Allow widgets from work profile apps.
-    *
-    * @param bool $val The workProfileAllowWidgets
-    *
-    * @return AndroidForWorkGeneralDeviceConfiguration
-    */
-    public function setWorkProfileAllowWidgets($val)
-    {
-        $this->_propDict["workProfileAllowWidgets"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the workProfileBlockPersonalAppInstallsFromUnknownSources
-    * Prevent app installations from unknown sources in the personal profile.
-    *
-    * @return bool The workProfileBlockPersonalAppInstallsFromUnknownSources
-    */
-    public function getWorkProfileBlockPersonalAppInstallsFromUnknownSources()
-    {
-        if (array_key_exists("workProfileBlockPersonalAppInstallsFromUnknownSources", $this->_propDict)) {
-            return $this->_propDict["workProfileBlockPersonalAppInstallsFromUnknownSources"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the workProfileBlockPersonalAppInstallsFromUnknownSources
-    * Prevent app installations from unknown sources in the personal profile.
-    *
-    * @param bool $val The workProfileBlockPersonalAppInstallsFromUnknownSources
-    *
-    * @return AndroidForWorkGeneralDeviceConfiguration
-    */
-    public function setWorkProfileBlockPersonalAppInstallsFromUnknownSources($val)
-    {
-        $this->_propDict["workProfileBlockPersonalAppInstallsFromUnknownSources"] = boolval($val);
         return $this;
     }
     

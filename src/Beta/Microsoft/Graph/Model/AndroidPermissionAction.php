@@ -23,34 +23,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class AndroidPermissionAction extends Entity
 {
-    /**
-    * Gets the permission
-    * Android permission string, defined in the official Android documentation.  Example 'android.permission.READ_CONTACTS'.
-    *
-    * @return string The permission
-    */
-    public function getPermission()
-    {
-        if (array_key_exists("permission", $this->_propDict)) {
-            return $this->_propDict["permission"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the permission
-    * Android permission string, defined in the official Android documentation.  Example 'android.permission.READ_CONTACTS'.
-    *
-    * @param string $val The value of the permission
-    *
-    * @return AndroidPermissionAction
-    */
-    public function setPermission($val)
-    {
-        $this->_propDict["permission"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the action
@@ -83,5 +55,33 @@ class AndroidPermissionAction extends Entity
     {
         $this->_propDict["action"] = $val;
          return $this;
+    }
+    /**
+    * Gets the permission
+    * Android permission string, defined in the official Android documentation.  Example 'android.permission.READ_CONTACTS'.
+    *
+    * @return string The permission
+    */
+    public function getPermission()
+    {
+        if (array_key_exists("permission", $this->_propDict)) {
+            return $this->_propDict["permission"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the permission
+    * Android permission string, defined in the official Android documentation.  Example 'android.permission.READ_CONTACTS'.
+    *
+    * @param string $val The value of the permission
+    *
+    * @return AndroidPermissionAction
+    */
+    public function setPermission($val)
+    {
+        $this->_propDict["permission"] = $val;
+        return $this;
     }
 }

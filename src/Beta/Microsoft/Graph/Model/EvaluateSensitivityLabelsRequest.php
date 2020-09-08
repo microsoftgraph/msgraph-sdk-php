@@ -25,37 +25,6 @@ class EvaluateSensitivityLabelsRequest extends Entity
 {
 
     /**
-    * Gets the discoveredSensitiveTypes
-    *
-    * @return DiscoveredSensitiveType The discoveredSensitiveTypes
-    */
-    public function getDiscoveredSensitiveTypes()
-    {
-        if (array_key_exists("discoveredSensitiveTypes", $this->_propDict)) {
-            if (is_a($this->_propDict["discoveredSensitiveTypes"], "Beta\Microsoft\Graph\Model\DiscoveredSensitiveType")) {
-                return $this->_propDict["discoveredSensitiveTypes"];
-            } else {
-                $this->_propDict["discoveredSensitiveTypes"] = new DiscoveredSensitiveType($this->_propDict["discoveredSensitiveTypes"]);
-                return $this->_propDict["discoveredSensitiveTypes"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the discoveredSensitiveTypes
-    *
-    * @param DiscoveredSensitiveType $val The value to assign to the discoveredSensitiveTypes
-    *
-    * @return EvaluateSensitivityLabelsRequest The EvaluateSensitivityLabelsRequest
-    */
-    public function setDiscoveredSensitiveTypes($val)
-    {
-        $this->_propDict["discoveredSensitiveTypes"] = $val;
-         return $this;
-    }
-
-    /**
     * Gets the currentLabel
     *
     * @return CurrentLabel The currentLabel
@@ -83,6 +52,37 @@ class EvaluateSensitivityLabelsRequest extends Entity
     public function setCurrentLabel($val)
     {
         $this->_propDict["currentLabel"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the discoveredSensitiveTypes
+    *
+    * @return DiscoveredSensitiveType The discoveredSensitiveTypes
+    */
+    public function getDiscoveredSensitiveTypes()
+    {
+        if (array_key_exists("discoveredSensitiveTypes", $this->_propDict)) {
+            if (is_a($this->_propDict["discoveredSensitiveTypes"], "Beta\Microsoft\Graph\Model\DiscoveredSensitiveType")) {
+                return $this->_propDict["discoveredSensitiveTypes"];
+            } else {
+                $this->_propDict["discoveredSensitiveTypes"] = new DiscoveredSensitiveType($this->_propDict["discoveredSensitiveTypes"]);
+                return $this->_propDict["discoveredSensitiveTypes"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the discoveredSensitiveTypes
+    *
+    * @param DiscoveredSensitiveType $val The value to assign to the discoveredSensitiveTypes
+    *
+    * @return EvaluateSensitivityLabelsRequest The EvaluateSensitivityLabelsRequest
+    */
+    public function setDiscoveredSensitiveTypes($val)
+    {
+        $this->_propDict["discoveredSensitiveTypes"] = $val;
          return $this;
     }
 }

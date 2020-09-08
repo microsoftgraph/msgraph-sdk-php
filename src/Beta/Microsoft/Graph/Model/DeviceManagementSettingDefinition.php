@@ -24,213 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class DeviceManagementSettingDefinition extends Entity
 {
-    /**
-    * Gets the valueType
-    * The data type of the value
-    *
-    * @return DeviceManangementIntentValueType The valueType
-    */
-    public function getValueType()
-    {
-        if (array_key_exists("valueType", $this->_propDict)) {
-            if (is_a($this->_propDict["valueType"], "Beta\Microsoft\Graph\Model\DeviceManangementIntentValueType")) {
-                return $this->_propDict["valueType"];
-            } else {
-                $this->_propDict["valueType"] = new DeviceManangementIntentValueType($this->_propDict["valueType"]);
-                return $this->_propDict["valueType"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the valueType
-    * The data type of the value
-    *
-    * @param DeviceManangementIntentValueType $val The valueType
-    *
-    * @return DeviceManagementSettingDefinition
-    */
-    public function setValueType($val)
-    {
-        $this->_propDict["valueType"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the displayName
-    * The setting's display name
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the displayName
-    * The setting's display name
-    *
-    * @param string $val The displayName
-    *
-    * @return DeviceManagementSettingDefinition
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the isTopLevel
-    * If the setting is top level, it can be configured without the need to be wrapped in a collection or complex setting
-    *
-    * @return bool The isTopLevel
-    */
-    public function getIsTopLevel()
-    {
-        if (array_key_exists("isTopLevel", $this->_propDict)) {
-            return $this->_propDict["isTopLevel"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the isTopLevel
-    * If the setting is top level, it can be configured without the need to be wrapped in a collection or complex setting
-    *
-    * @param bool $val The isTopLevel
-    *
-    * @return DeviceManagementSettingDefinition
-    */
-    public function setIsTopLevel($val)
-    {
-        $this->_propDict["isTopLevel"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the description
-    * The setting's description
-    *
-    * @return string The description
-    */
-    public function getDescription()
-    {
-        if (array_key_exists("description", $this->_propDict)) {
-            return $this->_propDict["description"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the description
-    * The setting's description
-    *
-    * @param string $val The description
-    *
-    * @return DeviceManagementSettingDefinition
-    */
-    public function setDescription($val)
-    {
-        $this->_propDict["description"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the placeholderText
-    * Placeholder text as an example of valid input
-    *
-    * @return string The placeholderText
-    */
-    public function getPlaceholderText()
-    {
-        if (array_key_exists("placeholderText", $this->_propDict)) {
-            return $this->_propDict["placeholderText"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the placeholderText
-    * Placeholder text as an example of valid input
-    *
-    * @param string $val The placeholderText
-    *
-    * @return DeviceManagementSettingDefinition
-    */
-    public function setPlaceholderText($val)
-    {
-        $this->_propDict["placeholderText"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the documentationUrl
-    * Url to setting documentation
-    *
-    * @return string The documentationUrl
-    */
-    public function getDocumentationUrl()
-    {
-        if (array_key_exists("documentationUrl", $this->_propDict)) {
-            return $this->_propDict["documentationUrl"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the documentationUrl
-    * Url to setting documentation
-    *
-    * @param string $val The documentationUrl
-    *
-    * @return DeviceManagementSettingDefinition
-    */
-    public function setDocumentationUrl($val)
-    {
-        $this->_propDict["documentationUrl"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the keywords
-    * Keywords associated with the setting
-    *
-    * @return string The keywords
-    */
-    public function getKeywords()
-    {
-        if (array_key_exists("keywords", $this->_propDict)) {
-            return $this->_propDict["keywords"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the keywords
-    * Keywords associated with the setting
-    *
-    * @param string $val The keywords
-    *
-    * @return DeviceManagementSettingDefinition
-    */
-    public function setKeywords($val)
-    {
-        $this->_propDict["keywords"] = $val;
-        return $this;
-    }
-    
 
      /** 
      * Gets the constraints
@@ -288,6 +81,213 @@ class DeviceManagementSettingDefinition extends Entity
     public function setDependencies($val)
     {
 		$this->_propDict["dependencies"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the description
+    * The setting's description
+    *
+    * @return string The description
+    */
+    public function getDescription()
+    {
+        if (array_key_exists("description", $this->_propDict)) {
+            return $this->_propDict["description"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the description
+    * The setting's description
+    *
+    * @param string $val The description
+    *
+    * @return DeviceManagementSettingDefinition
+    */
+    public function setDescription($val)
+    {
+        $this->_propDict["description"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the displayName
+    * The setting's display name
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the displayName
+    * The setting's display name
+    *
+    * @param string $val The displayName
+    *
+    * @return DeviceManagementSettingDefinition
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the documentationUrl
+    * Url to setting documentation
+    *
+    * @return string The documentationUrl
+    */
+    public function getDocumentationUrl()
+    {
+        if (array_key_exists("documentationUrl", $this->_propDict)) {
+            return $this->_propDict["documentationUrl"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the documentationUrl
+    * Url to setting documentation
+    *
+    * @param string $val The documentationUrl
+    *
+    * @return DeviceManagementSettingDefinition
+    */
+    public function setDocumentationUrl($val)
+    {
+        $this->_propDict["documentationUrl"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the isTopLevel
+    * If the setting is top level, it can be configured without the need to be wrapped in a collection or complex setting
+    *
+    * @return bool The isTopLevel
+    */
+    public function getIsTopLevel()
+    {
+        if (array_key_exists("isTopLevel", $this->_propDict)) {
+            return $this->_propDict["isTopLevel"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isTopLevel
+    * If the setting is top level, it can be configured without the need to be wrapped in a collection or complex setting
+    *
+    * @param bool $val The isTopLevel
+    *
+    * @return DeviceManagementSettingDefinition
+    */
+    public function setIsTopLevel($val)
+    {
+        $this->_propDict["isTopLevel"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the keywords
+    * Keywords associated with the setting
+    *
+    * @return string The keywords
+    */
+    public function getKeywords()
+    {
+        if (array_key_exists("keywords", $this->_propDict)) {
+            return $this->_propDict["keywords"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the keywords
+    * Keywords associated with the setting
+    *
+    * @param string $val The keywords
+    *
+    * @return DeviceManagementSettingDefinition
+    */
+    public function setKeywords($val)
+    {
+        $this->_propDict["keywords"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the placeholderText
+    * Placeholder text as an example of valid input
+    *
+    * @return string The placeholderText
+    */
+    public function getPlaceholderText()
+    {
+        if (array_key_exists("placeholderText", $this->_propDict)) {
+            return $this->_propDict["placeholderText"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the placeholderText
+    * Placeholder text as an example of valid input
+    *
+    * @param string $val The placeholderText
+    *
+    * @return DeviceManagementSettingDefinition
+    */
+    public function setPlaceholderText($val)
+    {
+        $this->_propDict["placeholderText"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the valueType
+    * The data type of the value
+    *
+    * @return DeviceManangementIntentValueType The valueType
+    */
+    public function getValueType()
+    {
+        if (array_key_exists("valueType", $this->_propDict)) {
+            if (is_a($this->_propDict["valueType"], "Beta\Microsoft\Graph\Model\DeviceManangementIntentValueType")) {
+                return $this->_propDict["valueType"];
+            } else {
+                $this->_propDict["valueType"] = new DeviceManangementIntentValueType($this->_propDict["valueType"]);
+                return $this->_propDict["valueType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the valueType
+    * The data type of the value
+    *
+    * @param DeviceManangementIntentValueType $val The valueType
+    *
+    * @return DeviceManagementSettingDefinition
+    */
+    public function setValueType($val)
+    {
+        $this->_propDict["valueType"] = $val;
         return $this;
     }
     

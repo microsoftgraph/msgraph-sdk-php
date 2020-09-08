@@ -24,29 +24,29 @@ namespace Beta\Microsoft\Graph\Model;
 class ClassificationResult extends Entity
 {
     /**
-    * Gets the sensitiveTypeId
+    * Gets the confidenceLevel
     *
-    * @return string The sensitiveTypeId
+    * @return int The confidenceLevel
     */
-    public function getSensitiveTypeId()
+    public function getConfidenceLevel()
     {
-        if (array_key_exists("sensitiveTypeId", $this->_propDict)) {
-            return $this->_propDict["sensitiveTypeId"];
+        if (array_key_exists("confidenceLevel", $this->_propDict)) {
+            return $this->_propDict["confidenceLevel"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the sensitiveTypeId
+    * Sets the confidenceLevel
     *
-    * @param string $val The value of the sensitiveTypeId
+    * @param int $val The value of the confidenceLevel
     *
     * @return ClassificationResult
     */
-    public function setSensitiveTypeId($val)
+    public function setConfidenceLevel($val)
     {
-        $this->_propDict["sensitiveTypeId"] = $val;
+        $this->_propDict["confidenceLevel"] = $val;
         return $this;
     }
     /**
@@ -76,29 +76,29 @@ class ClassificationResult extends Entity
         return $this;
     }
     /**
-    * Gets the confidenceLevel
+    * Gets the sensitiveTypeId
     *
-    * @return int The confidenceLevel
+    * @return string The sensitiveTypeId
     */
-    public function getConfidenceLevel()
+    public function getSensitiveTypeId()
     {
-        if (array_key_exists("confidenceLevel", $this->_propDict)) {
-            return $this->_propDict["confidenceLevel"];
+        if (array_key_exists("sensitiveTypeId", $this->_propDict)) {
+            return $this->_propDict["sensitiveTypeId"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the confidenceLevel
+    * Sets the sensitiveTypeId
     *
-    * @param int $val The value of the confidenceLevel
+    * @param string $val The value of the sensitiveTypeId
     *
     * @return ClassificationResult
     */
-    public function setConfidenceLevel($val)
+    public function setSensitiveTypeId($val)
     {
-        $this->_propDict["confidenceLevel"] = $val;
+        $this->_propDict["sensitiveTypeId"] = $val;
         return $this;
     }
 }

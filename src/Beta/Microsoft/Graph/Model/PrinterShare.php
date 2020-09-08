@@ -82,34 +82,31 @@ class PrinterShare extends PrinterBase
         return $this;
     }
     
-    /**
-    * Gets the printer
-    *
-    * @return Printer The printer
-    */
-    public function getPrinter()
+
+     /** 
+     * Gets the allowedGroups
+     *
+     * @return array The allowedGroups
+     */
+    public function getAllowedGroups()
     {
-        if (array_key_exists("printer", $this->_propDict)) {
-            if (is_a($this->_propDict["printer"], "Beta\Microsoft\Graph\Model\Printer")) {
-                return $this->_propDict["printer"];
-            } else {
-                $this->_propDict["printer"] = new Printer($this->_propDict["printer"]);
-                return $this->_propDict["printer"];
-            }
+        if (array_key_exists("allowedGroups", $this->_propDict)) {
+           return $this->_propDict["allowedGroups"];
+        } else {
+            return null;
         }
-        return null;
     }
     
-    /**
-    * Sets the printer
+    /** 
+    * Sets the allowedGroups
     *
-    * @param Printer $val The printer
+    * @param PrintIdentity $val The allowedGroups
     *
     * @return PrinterShare
     */
-    public function setPrinter($val)
+    public function setAllowedGroups($val)
     {
-        $this->_propDict["printer"] = $val;
+		$this->_propDict["allowedGroups"] = $val;
         return $this;
     }
     
@@ -141,31 +138,34 @@ class PrinterShare extends PrinterBase
         return $this;
     }
     
-
-     /** 
-     * Gets the allowedGroups
-     *
-     * @return array The allowedGroups
-     */
-    public function getAllowedGroups()
+    /**
+    * Gets the printer
+    *
+    * @return Printer The printer
+    */
+    public function getPrinter()
     {
-        if (array_key_exists("allowedGroups", $this->_propDict)) {
-           return $this->_propDict["allowedGroups"];
-        } else {
-            return null;
+        if (array_key_exists("printer", $this->_propDict)) {
+            if (is_a($this->_propDict["printer"], "Beta\Microsoft\Graph\Model\Printer")) {
+                return $this->_propDict["printer"];
+            } else {
+                $this->_propDict["printer"] = new Printer($this->_propDict["printer"]);
+                return $this->_propDict["printer"];
+            }
         }
+        return null;
     }
     
-    /** 
-    * Sets the allowedGroups
+    /**
+    * Sets the printer
     *
-    * @param PrintIdentity $val The allowedGroups
+    * @param Printer $val The printer
     *
     * @return PrinterShare
     */
-    public function setAllowedGroups($val)
+    public function setPrinter($val)
     {
-		$this->_propDict["allowedGroups"] = $val;
+        $this->_propDict["printer"] = $val;
         return $this;
     }
     

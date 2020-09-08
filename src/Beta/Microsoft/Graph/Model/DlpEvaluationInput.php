@@ -25,33 +25,33 @@ class DlpEvaluationInput extends Entity
 {
 
     /**
-    * Gets the discoveredSensitiveTypes
+    * Gets the accessScope
     *
-    * @return DiscoveredSensitiveType The discoveredSensitiveTypes
+    * @return AccessScope The accessScope
     */
-    public function getDiscoveredSensitiveTypes()
+    public function getAccessScope()
     {
-        if (array_key_exists("discoveredSensitiveTypes", $this->_propDict)) {
-            if (is_a($this->_propDict["discoveredSensitiveTypes"], "Beta\Microsoft\Graph\Model\DiscoveredSensitiveType")) {
-                return $this->_propDict["discoveredSensitiveTypes"];
+        if (array_key_exists("accessScope", $this->_propDict)) {
+            if (is_a($this->_propDict["accessScope"], "Beta\Microsoft\Graph\Model\AccessScope")) {
+                return $this->_propDict["accessScope"];
             } else {
-                $this->_propDict["discoveredSensitiveTypes"] = new DiscoveredSensitiveType($this->_propDict["discoveredSensitiveTypes"]);
-                return $this->_propDict["discoveredSensitiveTypes"];
+                $this->_propDict["accessScope"] = new AccessScope($this->_propDict["accessScope"]);
+                return $this->_propDict["accessScope"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the discoveredSensitiveTypes
+    * Sets the accessScope
     *
-    * @param DiscoveredSensitiveType $val The value to assign to the discoveredSensitiveTypes
+    * @param AccessScope $val The value to assign to the accessScope
     *
     * @return DlpEvaluationInput The DlpEvaluationInput
     */
-    public function setDiscoveredSensitiveTypes($val)
+    public function setAccessScope($val)
     {
-        $this->_propDict["discoveredSensitiveTypes"] = $val;
+        $this->_propDict["accessScope"] = $val;
          return $this;
     }
 
@@ -87,33 +87,33 @@ class DlpEvaluationInput extends Entity
     }
 
     /**
-    * Gets the accessScope
+    * Gets the discoveredSensitiveTypes
     *
-    * @return AccessScope The accessScope
+    * @return DiscoveredSensitiveType The discoveredSensitiveTypes
     */
-    public function getAccessScope()
+    public function getDiscoveredSensitiveTypes()
     {
-        if (array_key_exists("accessScope", $this->_propDict)) {
-            if (is_a($this->_propDict["accessScope"], "Beta\Microsoft\Graph\Model\AccessScope")) {
-                return $this->_propDict["accessScope"];
+        if (array_key_exists("discoveredSensitiveTypes", $this->_propDict)) {
+            if (is_a($this->_propDict["discoveredSensitiveTypes"], "Beta\Microsoft\Graph\Model\DiscoveredSensitiveType")) {
+                return $this->_propDict["discoveredSensitiveTypes"];
             } else {
-                $this->_propDict["accessScope"] = new AccessScope($this->_propDict["accessScope"]);
-                return $this->_propDict["accessScope"];
+                $this->_propDict["discoveredSensitiveTypes"] = new DiscoveredSensitiveType($this->_propDict["discoveredSensitiveTypes"]);
+                return $this->_propDict["discoveredSensitiveTypes"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the accessScope
+    * Sets the discoveredSensitiveTypes
     *
-    * @param AccessScope $val The value to assign to the accessScope
+    * @param DiscoveredSensitiveType $val The value to assign to the discoveredSensitiveTypes
     *
     * @return DlpEvaluationInput The DlpEvaluationInput
     */
-    public function setAccessScope($val)
+    public function setDiscoveredSensitiveTypes($val)
     {
-        $this->_propDict["accessScope"] = $val;
+        $this->_propDict["discoveredSensitiveTypes"] = $val;
          return $this;
     }
 }

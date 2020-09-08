@@ -23,6 +23,162 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class PrinterLocation extends Entity
 {
+    /**
+    * Gets the altitudeInMeters
+    *
+    * @return int The altitudeInMeters
+    */
+    public function getAltitudeInMeters()
+    {
+        if (array_key_exists("altitudeInMeters", $this->_propDict)) {
+            return $this->_propDict["altitudeInMeters"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the altitudeInMeters
+    *
+    * @param int $val The value of the altitudeInMeters
+    *
+    * @return PrinterLocation
+    */
+    public function setAltitudeInMeters($val)
+    {
+        $this->_propDict["altitudeInMeters"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the building
+    *
+    * @return string The building
+    */
+    public function getBuilding()
+    {
+        if (array_key_exists("building", $this->_propDict)) {
+            return $this->_propDict["building"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the building
+    *
+    * @param string $val The value of the building
+    *
+    * @return PrinterLocation
+    */
+    public function setBuilding($val)
+    {
+        $this->_propDict["building"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the city
+    *
+    * @return string The city
+    */
+    public function getCity()
+    {
+        if (array_key_exists("city", $this->_propDict)) {
+            return $this->_propDict["city"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the city
+    *
+    * @param string $val The value of the city
+    *
+    * @return PrinterLocation
+    */
+    public function setCity($val)
+    {
+        $this->_propDict["city"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the countryOrRegion
+    *
+    * @return string The countryOrRegion
+    */
+    public function getCountryOrRegion()
+    {
+        if (array_key_exists("countryOrRegion", $this->_propDict)) {
+            return $this->_propDict["countryOrRegion"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the countryOrRegion
+    *
+    * @param string $val The value of the countryOrRegion
+    *
+    * @return PrinterLocation
+    */
+    public function setCountryOrRegion($val)
+    {
+        $this->_propDict["countryOrRegion"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the floorDescription
+    *
+    * @return string The floorDescription
+    */
+    public function getFloorDescription()
+    {
+        if (array_key_exists("floorDescription", $this->_propDict)) {
+            return $this->_propDict["floorDescription"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the floorDescription
+    *
+    * @param string $val The value of the floorDescription
+    *
+    * @return PrinterLocation
+    */
+    public function setFloorDescription($val)
+    {
+        $this->_propDict["floorDescription"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the floorNumber
+    *
+    * @return int The floorNumber
+    */
+    public function getFloorNumber()
+    {
+        if (array_key_exists("floorNumber", $this->_propDict)) {
+            return $this->_propDict["floorNumber"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the floorNumber
+    *
+    * @param int $val The value of the floorNumber
+    *
+    * @return PrinterLocation
+    */
+    public function setFloorNumber($val)
+    {
+        $this->_propDict["floorNumber"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the latitude
@@ -86,107 +242,29 @@ class PrinterLocation extends Entity
          return $this;
     }
     /**
-    * Gets the altitudeInMeters
+    * Gets the organization
     *
-    * @return int The altitudeInMeters
+    * @return string The organization
     */
-    public function getAltitudeInMeters()
+    public function getOrganization()
     {
-        if (array_key_exists("altitudeInMeters", $this->_propDict)) {
-            return $this->_propDict["altitudeInMeters"];
+        if (array_key_exists("organization", $this->_propDict)) {
+            return $this->_propDict["organization"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the altitudeInMeters
+    * Sets the organization
     *
-    * @param int $val The value of the altitudeInMeters
-    *
-    * @return PrinterLocation
-    */
-    public function setAltitudeInMeters($val)
-    {
-        $this->_propDict["altitudeInMeters"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the streetAddress
-    *
-    * @return string The streetAddress
-    */
-    public function getStreetAddress()
-    {
-        if (array_key_exists("streetAddress", $this->_propDict)) {
-            return $this->_propDict["streetAddress"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the streetAddress
-    *
-    * @param string $val The value of the streetAddress
+    * @param string $val The value of the organization
     *
     * @return PrinterLocation
     */
-    public function setStreetAddress($val)
+    public function setOrganization($val)
     {
-        $this->_propDict["streetAddress"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the subunit
-    *
-    * @return string The subunit
-    */
-    public function getSubunit()
-    {
-        if (array_key_exists("subunit", $this->_propDict)) {
-            return $this->_propDict["subunit"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the subunit
-    *
-    * @param string $val The value of the subunit
-    *
-    * @return PrinterLocation
-    */
-    public function setSubunit($val)
-    {
-        $this->_propDict["subunit"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the city
-    *
-    * @return string The city
-    */
-    public function getCity()
-    {
-        if (array_key_exists("city", $this->_propDict)) {
-            return $this->_propDict["city"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the city
-    *
-    * @param string $val The value of the city
-    *
-    * @return PrinterLocation
-    */
-    public function setCity($val)
-    {
-        $this->_propDict["city"] = $val;
+        $this->_propDict["organization"] = $val;
         return $this;
     }
     /**
@@ -216,133 +294,29 @@ class PrinterLocation extends Entity
         return $this;
     }
     /**
-    * Gets the countryOrRegion
+    * Gets the roomDescription
     *
-    * @return string The countryOrRegion
+    * @return string The roomDescription
     */
-    public function getCountryOrRegion()
+    public function getRoomDescription()
     {
-        if (array_key_exists("countryOrRegion", $this->_propDict)) {
-            return $this->_propDict["countryOrRegion"];
+        if (array_key_exists("roomDescription", $this->_propDict)) {
+            return $this->_propDict["roomDescription"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the countryOrRegion
+    * Sets the roomDescription
     *
-    * @param string $val The value of the countryOrRegion
-    *
-    * @return PrinterLocation
-    */
-    public function setCountryOrRegion($val)
-    {
-        $this->_propDict["countryOrRegion"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the site
-    *
-    * @return string The site
-    */
-    public function getSite()
-    {
-        if (array_key_exists("site", $this->_propDict)) {
-            return $this->_propDict["site"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the site
-    *
-    * @param string $val The value of the site
+    * @param string $val The value of the roomDescription
     *
     * @return PrinterLocation
     */
-    public function setSite($val)
+    public function setRoomDescription($val)
     {
-        $this->_propDict["site"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the building
-    *
-    * @return string The building
-    */
-    public function getBuilding()
-    {
-        if (array_key_exists("building", $this->_propDict)) {
-            return $this->_propDict["building"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the building
-    *
-    * @param string $val The value of the building
-    *
-    * @return PrinterLocation
-    */
-    public function setBuilding($val)
-    {
-        $this->_propDict["building"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the floorNumber
-    *
-    * @return int The floorNumber
-    */
-    public function getFloorNumber()
-    {
-        if (array_key_exists("floorNumber", $this->_propDict)) {
-            return $this->_propDict["floorNumber"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the floorNumber
-    *
-    * @param int $val The value of the floorNumber
-    *
-    * @return PrinterLocation
-    */
-    public function setFloorNumber($val)
-    {
-        $this->_propDict["floorNumber"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the floorDescription
-    *
-    * @return string The floorDescription
-    */
-    public function getFloorDescription()
-    {
-        if (array_key_exists("floorDescription", $this->_propDict)) {
-            return $this->_propDict["floorDescription"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the floorDescription
-    *
-    * @param string $val The value of the floorDescription
-    *
-    * @return PrinterLocation
-    */
-    public function setFloorDescription($val)
-    {
-        $this->_propDict["floorDescription"] = $val;
+        $this->_propDict["roomDescription"] = $val;
         return $this;
     }
     /**
@@ -372,55 +346,81 @@ class PrinterLocation extends Entity
         return $this;
     }
     /**
-    * Gets the roomDescription
+    * Gets the site
     *
-    * @return string The roomDescription
+    * @return string The site
     */
-    public function getRoomDescription()
+    public function getSite()
     {
-        if (array_key_exists("roomDescription", $this->_propDict)) {
-            return $this->_propDict["roomDescription"];
+        if (array_key_exists("site", $this->_propDict)) {
+            return $this->_propDict["site"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the roomDescription
+    * Sets the site
     *
-    * @param string $val The value of the roomDescription
+    * @param string $val The value of the site
     *
     * @return PrinterLocation
     */
-    public function setRoomDescription($val)
+    public function setSite($val)
     {
-        $this->_propDict["roomDescription"] = $val;
+        $this->_propDict["site"] = $val;
         return $this;
     }
     /**
-    * Gets the organization
+    * Gets the stateOrProvince
     *
-    * @return string The organization
+    * @return string The stateOrProvince
     */
-    public function getOrganization()
+    public function getStateOrProvince()
     {
-        if (array_key_exists("organization", $this->_propDict)) {
-            return $this->_propDict["organization"];
+        if (array_key_exists("stateOrProvince", $this->_propDict)) {
+            return $this->_propDict["stateOrProvince"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the organization
+    * Sets the stateOrProvince
     *
-    * @param string $val The value of the organization
+    * @param string $val The value of the stateOrProvince
     *
     * @return PrinterLocation
     */
-    public function setOrganization($val)
+    public function setStateOrProvince($val)
     {
-        $this->_propDict["organization"] = $val;
+        $this->_propDict["stateOrProvince"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the streetAddress
+    *
+    * @return string The streetAddress
+    */
+    public function getStreetAddress()
+    {
+        if (array_key_exists("streetAddress", $this->_propDict)) {
+            return $this->_propDict["streetAddress"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the streetAddress
+    *
+    * @param string $val The value of the streetAddress
+    *
+    * @return PrinterLocation
+    */
+    public function setStreetAddress($val)
+    {
+        $this->_propDict["streetAddress"] = $val;
         return $this;
     }
     /**
@@ -450,29 +450,29 @@ class PrinterLocation extends Entity
         return $this;
     }
     /**
-    * Gets the stateOrProvince
+    * Gets the subunit
     *
-    * @return string The stateOrProvince
+    * @return string The subunit
     */
-    public function getStateOrProvince()
+    public function getSubunit()
     {
-        if (array_key_exists("stateOrProvince", $this->_propDict)) {
-            return $this->_propDict["stateOrProvince"];
+        if (array_key_exists("subunit", $this->_propDict)) {
+            return $this->_propDict["subunit"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the stateOrProvince
+    * Sets the subunit
     *
-    * @param string $val The value of the stateOrProvince
+    * @param string $val The value of the subunit
     *
     * @return PrinterLocation
     */
-    public function setStateOrProvince($val)
+    public function setSubunit($val)
     {
-        $this->_propDict["stateOrProvince"] = $val;
+        $this->_propDict["subunit"] = $val;
         return $this;
     }
 }

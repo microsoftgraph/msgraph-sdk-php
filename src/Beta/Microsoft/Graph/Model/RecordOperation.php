@@ -25,31 +25,33 @@ namespace Beta\Microsoft\Graph\Model;
 class RecordOperation extends CommsOperation
 {
     /**
-    * Gets the recordingLocation
-    * The location where the recording is located.
+    * Gets the completionReason
     *
-    * @return string The recordingLocation
+    * @return RecordCompletionReason The completionReason
     */
-    public function getRecordingLocation()
+    public function getCompletionReason()
     {
-        if (array_key_exists("recordingLocation", $this->_propDict)) {
-            return $this->_propDict["recordingLocation"];
-        } else {
-            return null;
+        if (array_key_exists("completionReason", $this->_propDict)) {
+            if (is_a($this->_propDict["completionReason"], "Beta\Microsoft\Graph\Model\RecordCompletionReason")) {
+                return $this->_propDict["completionReason"];
+            } else {
+                $this->_propDict["completionReason"] = new RecordCompletionReason($this->_propDict["completionReason"]);
+                return $this->_propDict["completionReason"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the recordingLocation
-    * The location where the recording is located.
+    * Sets the completionReason
     *
-    * @param string $val The recordingLocation
+    * @param RecordCompletionReason $val The completionReason
     *
     * @return RecordOperation
     */
-    public function setRecordingLocation($val)
+    public function setCompletionReason($val)
     {
-        $this->_propDict["recordingLocation"] = $val;
+        $this->_propDict["completionReason"] = $val;
         return $this;
     }
     
@@ -83,33 +85,31 @@ class RecordOperation extends CommsOperation
     }
     
     /**
-    * Gets the completionReason
+    * Gets the recordingLocation
+    * The location where the recording is located.
     *
-    * @return RecordCompletionReason The completionReason
+    * @return string The recordingLocation
     */
-    public function getCompletionReason()
+    public function getRecordingLocation()
     {
-        if (array_key_exists("completionReason", $this->_propDict)) {
-            if (is_a($this->_propDict["completionReason"], "Beta\Microsoft\Graph\Model\RecordCompletionReason")) {
-                return $this->_propDict["completionReason"];
-            } else {
-                $this->_propDict["completionReason"] = new RecordCompletionReason($this->_propDict["completionReason"]);
-                return $this->_propDict["completionReason"];
-            }
+        if (array_key_exists("recordingLocation", $this->_propDict)) {
+            return $this->_propDict["recordingLocation"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the completionReason
+    * Sets the recordingLocation
+    * The location where the recording is located.
     *
-    * @param RecordCompletionReason $val The completionReason
+    * @param string $val The recordingLocation
     *
     * @return RecordOperation
     */
-    public function setCompletionReason($val)
+    public function setRecordingLocation($val)
     {
-        $this->_propDict["completionReason"] = $val;
+        $this->_propDict["recordingLocation"] = $val;
         return $this;
     }
     

@@ -26,36 +26,6 @@ class OfficeGraphInsights extends Entity
 {
 
      /** 
-     * Gets the trending
-    * Calculated relationship identifying documents trending around a user. Trending documents are calculated based on activity of the user's closest network of people and include files stored in OneDrive for Business and SharePoint. Trending insights help the user to discover potentially useful content that the user has access to, but has never viewed before.
-     *
-     * @return array The trending
-     */
-    public function getTrending()
-    {
-        if (array_key_exists("trending", $this->_propDict)) {
-           return $this->_propDict["trending"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the trending
-    * Calculated relationship identifying documents trending around a user. Trending documents are calculated based on activity of the user's closest network of people and include files stored in OneDrive for Business and SharePoint. Trending insights help the user to discover potentially useful content that the user has access to, but has never viewed before.
-    *
-    * @param Trending $val The trending
-    *
-    * @return OfficeGraphInsights
-    */
-    public function setTrending($val)
-    {
-		$this->_propDict["trending"] = $val;
-        return $this;
-    }
-    
-
-     /** 
      * Gets the shared
     * Calculated relationship identifying documents shared with or by the user. This includes URLs, file attachments, and reference attachments to OneDrive for Business and SharePoint files found in Outlook messages and meetings. This also includes URLs and reference attachments to Teams conversations. Ordered by recency of share.
      *
@@ -81,6 +51,36 @@ class OfficeGraphInsights extends Entity
     public function setShared($val)
     {
 		$this->_propDict["shared"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the trending
+    * Calculated relationship identifying documents trending around a user. Trending documents are calculated based on activity of the user's closest network of people and include files stored in OneDrive for Business and SharePoint. Trending insights help the user to discover potentially useful content that the user has access to, but has never viewed before.
+     *
+     * @return array The trending
+     */
+    public function getTrending()
+    {
+        if (array_key_exists("trending", $this->_propDict)) {
+           return $this->_propDict["trending"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the trending
+    * Calculated relationship identifying documents trending around a user. Trending documents are calculated based on activity of the user's closest network of people and include files stored in OneDrive for Business and SharePoint. Trending insights help the user to discover potentially useful content that the user has access to, but has never viewed before.
+    *
+    * @param Trending $val The trending
+    *
+    * @return OfficeGraphInsights
+    */
+    public function setTrending($val)
+    {
+		$this->_propDict["trending"] = $val;
         return $this;
     }
     

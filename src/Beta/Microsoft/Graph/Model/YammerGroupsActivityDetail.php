@@ -25,37 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class YammerGroupsActivityDetail extends Entity
 {
     /**
-    * Gets the reportRefreshDate
-    *
-    * @return \DateTime The reportRefreshDate
-    */
-    public function getReportRefreshDate()
-    {
-        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
-                return $this->_propDict["reportRefreshDate"];
-            } else {
-                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
-                return $this->_propDict["reportRefreshDate"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the reportRefreshDate
-    *
-    * @param \DateTime $val The reportRefreshDate
-    *
-    * @return YammerGroupsActivityDetail
-    */
-    public function setReportRefreshDate($val)
-    {
-        $this->_propDict["reportRefreshDate"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the groupDisplayName
     *
     * @return string The groupDisplayName
@@ -83,6 +52,33 @@ class YammerGroupsActivityDetail extends Entity
     }
     
     /**
+    * Gets the groupType
+    *
+    * @return string The groupType
+    */
+    public function getGroupType()
+    {
+        if (array_key_exists("groupType", $this->_propDict)) {
+            return $this->_propDict["groupType"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the groupType
+    *
+    * @param string $val The groupType
+    *
+    * @return YammerGroupsActivityDetail
+    */
+    public function setGroupType($val)
+    {
+        $this->_propDict["groupType"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the isDeleted
     *
     * @return bool The isDeleted
@@ -106,33 +102,6 @@ class YammerGroupsActivityDetail extends Entity
     public function setIsDeleted($val)
     {
         $this->_propDict["isDeleted"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the ownerPrincipalName
-    *
-    * @return string The ownerPrincipalName
-    */
-    public function getOwnerPrincipalName()
-    {
-        if (array_key_exists("ownerPrincipalName", $this->_propDict)) {
-            return $this->_propDict["ownerPrincipalName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the ownerPrincipalName
-    *
-    * @param string $val The ownerPrincipalName
-    *
-    * @return YammerGroupsActivityDetail
-    */
-    public function setOwnerPrincipalName($val)
-    {
-        $this->_propDict["ownerPrincipalName"] = $val;
         return $this;
     }
     
@@ -168,29 +137,83 @@ class YammerGroupsActivityDetail extends Entity
     }
     
     /**
-    * Gets the groupType
+    * Gets the likedCount
     *
-    * @return string The groupType
+    * @return int The likedCount
     */
-    public function getGroupType()
+    public function getLikedCount()
     {
-        if (array_key_exists("groupType", $this->_propDict)) {
-            return $this->_propDict["groupType"];
+        if (array_key_exists("likedCount", $this->_propDict)) {
+            return $this->_propDict["likedCount"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the groupType
+    * Sets the likedCount
     *
-    * @param string $val The groupType
+    * @param int $val The likedCount
     *
     * @return YammerGroupsActivityDetail
     */
-    public function setGroupType($val)
+    public function setLikedCount($val)
     {
-        $this->_propDict["groupType"] = $val;
+        $this->_propDict["likedCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the memberCount
+    *
+    * @return int The memberCount
+    */
+    public function getMemberCount()
+    {
+        if (array_key_exists("memberCount", $this->_propDict)) {
+            return $this->_propDict["memberCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the memberCount
+    *
+    * @param int $val The memberCount
+    *
+    * @return YammerGroupsActivityDetail
+    */
+    public function setMemberCount($val)
+    {
+        $this->_propDict["memberCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the networkDisplayName
+    *
+    * @return string The networkDisplayName
+    */
+    public function getNetworkDisplayName()
+    {
+        if (array_key_exists("networkDisplayName", $this->_propDict)) {
+            return $this->_propDict["networkDisplayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the networkDisplayName
+    *
+    * @param string $val The networkDisplayName
+    *
+    * @return YammerGroupsActivityDetail
+    */
+    public function setNetworkDisplayName($val)
+    {
+        $this->_propDict["networkDisplayName"] = $val;
         return $this;
     }
     
@@ -222,29 +245,29 @@ class YammerGroupsActivityDetail extends Entity
     }
     
     /**
-    * Gets the memberCount
+    * Gets the ownerPrincipalName
     *
-    * @return int The memberCount
+    * @return string The ownerPrincipalName
     */
-    public function getMemberCount()
+    public function getOwnerPrincipalName()
     {
-        if (array_key_exists("memberCount", $this->_propDict)) {
-            return $this->_propDict["memberCount"];
+        if (array_key_exists("ownerPrincipalName", $this->_propDict)) {
+            return $this->_propDict["ownerPrincipalName"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the memberCount
+    * Sets the ownerPrincipalName
     *
-    * @param int $val The memberCount
+    * @param string $val The ownerPrincipalName
     *
     * @return YammerGroupsActivityDetail
     */
-    public function setMemberCount($val)
+    public function setOwnerPrincipalName($val)
     {
-        $this->_propDict["memberCount"] = intval($val);
+        $this->_propDict["ownerPrincipalName"] = $val;
         return $this;
     }
     
@@ -303,60 +326,6 @@ class YammerGroupsActivityDetail extends Entity
     }
     
     /**
-    * Gets the likedCount
-    *
-    * @return int The likedCount
-    */
-    public function getLikedCount()
-    {
-        if (array_key_exists("likedCount", $this->_propDict)) {
-            return $this->_propDict["likedCount"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the likedCount
-    *
-    * @param int $val The likedCount
-    *
-    * @return YammerGroupsActivityDetail
-    */
-    public function setLikedCount($val)
-    {
-        $this->_propDict["likedCount"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the networkDisplayName
-    *
-    * @return string The networkDisplayName
-    */
-    public function getNetworkDisplayName()
-    {
-        if (array_key_exists("networkDisplayName", $this->_propDict)) {
-            return $this->_propDict["networkDisplayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the networkDisplayName
-    *
-    * @param string $val The networkDisplayName
-    *
-    * @return YammerGroupsActivityDetail
-    */
-    public function setNetworkDisplayName($val)
-    {
-        $this->_propDict["networkDisplayName"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the reportPeriod
     *
     * @return string The reportPeriod
@@ -380,6 +349,37 @@ class YammerGroupsActivityDetail extends Entity
     public function setReportPeriod($val)
     {
         $this->_propDict["reportPeriod"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the reportRefreshDate
+    *
+    * @return \DateTime The reportRefreshDate
+    */
+    public function getReportRefreshDate()
+    {
+        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
+                return $this->_propDict["reportRefreshDate"];
+            } else {
+                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
+                return $this->_propDict["reportRefreshDate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the reportRefreshDate
+    *
+    * @param \DateTime $val The reportRefreshDate
+    *
+    * @return YammerGroupsActivityDetail
+    */
+    public function setReportRefreshDate($val)
+    {
+        $this->_propDict["reportRefreshDate"] = $val;
         return $this;
     }
     

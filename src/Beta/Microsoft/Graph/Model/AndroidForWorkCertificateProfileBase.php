@@ -25,97 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class AndroidForWorkCertificateProfileBase extends DeviceConfiguration
 {
     /**
-    * Gets the renewalThresholdPercentage
-    * Certificate renewal threshold percentage. Valid values 1 to 99
-    *
-    * @return int The renewalThresholdPercentage
-    */
-    public function getRenewalThresholdPercentage()
-    {
-        if (array_key_exists("renewalThresholdPercentage", $this->_propDict)) {
-            return $this->_propDict["renewalThresholdPercentage"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the renewalThresholdPercentage
-    * Certificate renewal threshold percentage. Valid values 1 to 99
-    *
-    * @param int $val The renewalThresholdPercentage
-    *
-    * @return AndroidForWorkCertificateProfileBase
-    */
-    public function setRenewalThresholdPercentage($val)
-    {
-        $this->_propDict["renewalThresholdPercentage"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the subjectNameFormat
-    * Certificate Subject Name Format.
-    *
-    * @return SubjectNameFormat The subjectNameFormat
-    */
-    public function getSubjectNameFormat()
-    {
-        if (array_key_exists("subjectNameFormat", $this->_propDict)) {
-            if (is_a($this->_propDict["subjectNameFormat"], "Beta\Microsoft\Graph\Model\SubjectNameFormat")) {
-                return $this->_propDict["subjectNameFormat"];
-            } else {
-                $this->_propDict["subjectNameFormat"] = new SubjectNameFormat($this->_propDict["subjectNameFormat"]);
-                return $this->_propDict["subjectNameFormat"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the subjectNameFormat
-    * Certificate Subject Name Format.
-    *
-    * @param SubjectNameFormat $val The subjectNameFormat
-    *
-    * @return AndroidForWorkCertificateProfileBase
-    */
-    public function setSubjectNameFormat($val)
-    {
-        $this->_propDict["subjectNameFormat"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the certificateValidityPeriodValue
-    * Value for the Certificate Validity Period.
-    *
-    * @return int The certificateValidityPeriodValue
-    */
-    public function getCertificateValidityPeriodValue()
-    {
-        if (array_key_exists("certificateValidityPeriodValue", $this->_propDict)) {
-            return $this->_propDict["certificateValidityPeriodValue"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the certificateValidityPeriodValue
-    * Value for the Certificate Validity Period.
-    *
-    * @param int $val The certificateValidityPeriodValue
-    *
-    * @return AndroidForWorkCertificateProfileBase
-    */
-    public function setCertificateValidityPeriodValue($val)
-    {
-        $this->_propDict["certificateValidityPeriodValue"] = intval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the certificateValidityPeriodScale
     * Scale for the Certificate Validity Period.
     *
@@ -145,6 +54,35 @@ class AndroidForWorkCertificateProfileBase extends DeviceConfiguration
     public function setCertificateValidityPeriodScale($val)
     {
         $this->_propDict["certificateValidityPeriodScale"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the certificateValidityPeriodValue
+    * Value for the Certificate Validity Period.
+    *
+    * @return int The certificateValidityPeriodValue
+    */
+    public function getCertificateValidityPeriodValue()
+    {
+        if (array_key_exists("certificateValidityPeriodValue", $this->_propDict)) {
+            return $this->_propDict["certificateValidityPeriodValue"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the certificateValidityPeriodValue
+    * Value for the Certificate Validity Period.
+    *
+    * @param int $val The certificateValidityPeriodValue
+    *
+    * @return AndroidForWorkCertificateProfileBase
+    */
+    public function setCertificateValidityPeriodValue($val)
+    {
+        $this->_propDict["certificateValidityPeriodValue"] = intval($val);
         return $this;
     }
     
@@ -179,6 +117,35 @@ class AndroidForWorkCertificateProfileBase extends DeviceConfiguration
     }
     
     /**
+    * Gets the renewalThresholdPercentage
+    * Certificate renewal threshold percentage. Valid values 1 to 99
+    *
+    * @return int The renewalThresholdPercentage
+    */
+    public function getRenewalThresholdPercentage()
+    {
+        if (array_key_exists("renewalThresholdPercentage", $this->_propDict)) {
+            return $this->_propDict["renewalThresholdPercentage"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the renewalThresholdPercentage
+    * Certificate renewal threshold percentage. Valid values 1 to 99
+    *
+    * @param int $val The renewalThresholdPercentage
+    *
+    * @return AndroidForWorkCertificateProfileBase
+    */
+    public function setRenewalThresholdPercentage($val)
+    {
+        $this->_propDict["renewalThresholdPercentage"] = intval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the subjectAlternativeNameType
     * Certificate Subject Alternative Name Type.
     *
@@ -208,6 +175,39 @@ class AndroidForWorkCertificateProfileBase extends DeviceConfiguration
     public function setSubjectAlternativeNameType($val)
     {
         $this->_propDict["subjectAlternativeNameType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the subjectNameFormat
+    * Certificate Subject Name Format.
+    *
+    * @return SubjectNameFormat The subjectNameFormat
+    */
+    public function getSubjectNameFormat()
+    {
+        if (array_key_exists("subjectNameFormat", $this->_propDict)) {
+            if (is_a($this->_propDict["subjectNameFormat"], "Beta\Microsoft\Graph\Model\SubjectNameFormat")) {
+                return $this->_propDict["subjectNameFormat"];
+            } else {
+                $this->_propDict["subjectNameFormat"] = new SubjectNameFormat($this->_propDict["subjectNameFormat"]);
+                return $this->_propDict["subjectNameFormat"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the subjectNameFormat
+    * Certificate Subject Name Format.
+    *
+    * @param SubjectNameFormat $val The subjectNameFormat
+    *
+    * @return AndroidForWorkCertificateProfileBase
+    */
+    public function setSubjectNameFormat($val)
+    {
+        $this->_propDict["subjectNameFormat"] = $val;
         return $this;
     }
     

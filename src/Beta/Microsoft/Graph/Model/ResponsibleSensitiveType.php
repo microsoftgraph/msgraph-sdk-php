@@ -24,6 +24,32 @@ namespace Beta\Microsoft\Graph\Model;
 class ResponsibleSensitiveType extends Entity
 {
     /**
+    * Gets the description
+    *
+    * @return string The description
+    */
+    public function getDescription()
+    {
+        if (array_key_exists("description", $this->_propDict)) {
+            return $this->_propDict["description"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the description
+    *
+    * @param string $val The value of the description
+    *
+    * @return ResponsibleSensitiveType
+    */
+    public function setDescription($val)
+    {
+        $this->_propDict["description"] = $val;
+        return $this;
+    }
+    /**
     * Gets the id
     *
     * @return string The id
@@ -76,29 +102,29 @@ class ResponsibleSensitiveType extends Entity
         return $this;
     }
     /**
-    * Gets the description
+    * Gets the publisherName
     *
-    * @return string The description
+    * @return string The publisherName
     */
-    public function getDescription()
+    public function getPublisherName()
     {
-        if (array_key_exists("description", $this->_propDict)) {
-            return $this->_propDict["description"];
+        if (array_key_exists("publisherName", $this->_propDict)) {
+            return $this->_propDict["publisherName"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the description
+    * Sets the publisherName
     *
-    * @param string $val The value of the description
+    * @param string $val The value of the publisherName
     *
     * @return ResponsibleSensitiveType
     */
-    public function setDescription($val)
+    public function setPublisherName($val)
     {
-        $this->_propDict["description"] = $val;
+        $this->_propDict["publisherName"] = $val;
         return $this;
     }
     /**
@@ -151,32 +177,6 @@ class ResponsibleSensitiveType extends Entity
     public function setRulePackageType($val)
     {
         $this->_propDict["rulePackageType"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the publisherName
-    *
-    * @return string The publisherName
-    */
-    public function getPublisherName()
-    {
-        if (array_key_exists("publisherName", $this->_propDict)) {
-            return $this->_propDict["publisherName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the publisherName
-    *
-    * @param string $val The value of the publisherName
-    *
-    * @return ResponsibleSensitiveType
-    */
-    public function setPublisherName($val)
-    {
-        $this->_propDict["publisherName"] = $val;
         return $this;
     }
 }

@@ -54,6 +54,32 @@ class PrinterStatus extends Entity
         $this->_propDict["processingState"] = $val;
          return $this;
     }
+    /**
+    * Gets the processingStateDescription
+    *
+    * @return string The processingStateDescription
+    */
+    public function getProcessingStateDescription()
+    {
+        if (array_key_exists("processingStateDescription", $this->_propDict)) {
+            return $this->_propDict["processingStateDescription"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the processingStateDescription
+    *
+    * @param string $val The value of the processingStateDescription
+    *
+    * @return PrinterStatus
+    */
+    public function setProcessingStateDescription($val)
+    {
+        $this->_propDict["processingStateDescription"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the processingStateReasons
@@ -84,31 +110,5 @@ class PrinterStatus extends Entity
     {
         $this->_propDict["processingStateReasons"] = $val;
          return $this;
-    }
-    /**
-    * Gets the processingStateDescription
-    *
-    * @return string The processingStateDescription
-    */
-    public function getProcessingStateDescription()
-    {
-        if (array_key_exists("processingStateDescription", $this->_propDict)) {
-            return $this->_propDict["processingStateDescription"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the processingStateDescription
-    *
-    * @param string $val The value of the processingStateDescription
-    *
-    * @return PrinterStatus
-    */
-    public function setProcessingStateDescription($val)
-    {
-        $this->_propDict["processingStateDescription"] = $val;
-        return $this;
     }
 }

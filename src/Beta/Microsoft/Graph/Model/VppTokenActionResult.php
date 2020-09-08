@@ -86,39 +86,6 @@ class VppTokenActionResult extends Entity
     }
 
     /**
-    * Gets the startDateTime
-    * Time the action was initiated
-    *
-    * @return \DateTime The startDateTime
-    */
-    public function getStartDateTime()
-    {
-        if (array_key_exists("startDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
-                return $this->_propDict["startDateTime"];
-            } else {
-                $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);
-                return $this->_propDict["startDateTime"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the startDateTime
-    * Time the action was initiated
-    *
-    * @param \DateTime $val The value to assign to the startDateTime
-    *
-    * @return VppTokenActionResult The VppTokenActionResult
-    */
-    public function setStartDateTime($val)
-    {
-        $this->_propDict["startDateTime"] = $val;
-         return $this;
-    }
-
-    /**
     * Gets the lastUpdatedDateTime
     * Time the action state was last updated
     *
@@ -148,6 +115,39 @@ class VppTokenActionResult extends Entity
     public function setLastUpdatedDateTime($val)
     {
         $this->_propDict["lastUpdatedDateTime"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the startDateTime
+    * Time the action was initiated
+    *
+    * @return \DateTime The startDateTime
+    */
+    public function getStartDateTime()
+    {
+        if (array_key_exists("startDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
+                return $this->_propDict["startDateTime"];
+            } else {
+                $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);
+                return $this->_propDict["startDateTime"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the startDateTime
+    * Time the action was initiated
+    *
+    * @param \DateTime $val The value to assign to the startDateTime
+    *
+    * @return VppTokenActionResult The VppTokenActionResult
+    */
+    public function setStartDateTime($val)
+    {
+        $this->_propDict["startDateTime"] = $val;
          return $this;
     }
 }

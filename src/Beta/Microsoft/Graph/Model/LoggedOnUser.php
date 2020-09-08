@@ -23,34 +23,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class LoggedOnUser extends Entity
 {
-    /**
-    * Gets the userId
-    * User id
-    *
-    * @return string The userId
-    */
-    public function getUserId()
-    {
-        if (array_key_exists("userId", $this->_propDict)) {
-            return $this->_propDict["userId"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the userId
-    * User id
-    *
-    * @param string $val The value of the userId
-    *
-    * @return LoggedOnUser
-    */
-    public function setUserId($val)
-    {
-        $this->_propDict["userId"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the lastLogOnDateTime
@@ -83,5 +55,33 @@ class LoggedOnUser extends Entity
     {
         $this->_propDict["lastLogOnDateTime"] = $val;
          return $this;
+    }
+    /**
+    * Gets the userId
+    * User id
+    *
+    * @return string The userId
+    */
+    public function getUserId()
+    {
+        if (array_key_exists("userId", $this->_propDict)) {
+            return $this->_propDict["userId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the userId
+    * User id
+    *
+    * @param string $val The value of the userId
+    *
+    * @return LoggedOnUser
+    */
+    public function setUserId($val)
+    {
+        $this->_propDict["userId"] = $val;
+        return $this;
     }
 }

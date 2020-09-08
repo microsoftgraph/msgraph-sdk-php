@@ -25,159 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class WindowsWifiConfiguration extends DeviceConfiguration
 {
     /**
-    * Gets the preSharedKey
-    * This is the pre-shared key for WPA Personal Wi-Fi network.
-    *
-    * @return string The preSharedKey
-    */
-    public function getPreSharedKey()
-    {
-        if (array_key_exists("preSharedKey", $this->_propDict)) {
-            return $this->_propDict["preSharedKey"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the preSharedKey
-    * This is the pre-shared key for WPA Personal Wi-Fi network.
-    *
-    * @param string $val The preSharedKey
-    *
-    * @return WindowsWifiConfiguration
-    */
-    public function setPreSharedKey($val)
-    {
-        $this->_propDict["preSharedKey"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the wifiSecurityType
-    * Specify the Wifi Security Type.
-    *
-    * @return WiFiSecurityType The wifiSecurityType
-    */
-    public function getWifiSecurityType()
-    {
-        if (array_key_exists("wifiSecurityType", $this->_propDict)) {
-            if (is_a($this->_propDict["wifiSecurityType"], "Beta\Microsoft\Graph\Model\WiFiSecurityType")) {
-                return $this->_propDict["wifiSecurityType"];
-            } else {
-                $this->_propDict["wifiSecurityType"] = new WiFiSecurityType($this->_propDict["wifiSecurityType"]);
-                return $this->_propDict["wifiSecurityType"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the wifiSecurityType
-    * Specify the Wifi Security Type.
-    *
-    * @param WiFiSecurityType $val The wifiSecurityType
-    *
-    * @return WindowsWifiConfiguration
-    */
-    public function setWifiSecurityType($val)
-    {
-        $this->_propDict["wifiSecurityType"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the meteredConnectionLimit
-    * Specify the metered connection limit type for the wifi connection.
-    *
-    * @return MeteredConnectionLimitType The meteredConnectionLimit
-    */
-    public function getMeteredConnectionLimit()
-    {
-        if (array_key_exists("meteredConnectionLimit", $this->_propDict)) {
-            if (is_a($this->_propDict["meteredConnectionLimit"], "Beta\Microsoft\Graph\Model\MeteredConnectionLimitType")) {
-                return $this->_propDict["meteredConnectionLimit"];
-            } else {
-                $this->_propDict["meteredConnectionLimit"] = new MeteredConnectionLimitType($this->_propDict["meteredConnectionLimit"]);
-                return $this->_propDict["meteredConnectionLimit"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the meteredConnectionLimit
-    * Specify the metered connection limit type for the wifi connection.
-    *
-    * @param MeteredConnectionLimitType $val The meteredConnectionLimit
-    *
-    * @return WindowsWifiConfiguration
-    */
-    public function setMeteredConnectionLimit($val)
-    {
-        $this->_propDict["meteredConnectionLimit"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the ssid
-    * Specify the SSID of the wifi connection.
-    *
-    * @return string The ssid
-    */
-    public function getSsid()
-    {
-        if (array_key_exists("ssid", $this->_propDict)) {
-            return $this->_propDict["ssid"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the ssid
-    * Specify the SSID of the wifi connection.
-    *
-    * @param string $val The ssid
-    *
-    * @return WindowsWifiConfiguration
-    */
-    public function setSsid($val)
-    {
-        $this->_propDict["ssid"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the networkName
-    * Specify the network configuration name.
-    *
-    * @return string The networkName
-    */
-    public function getNetworkName()
-    {
-        if (array_key_exists("networkName", $this->_propDict)) {
-            return $this->_propDict["networkName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the networkName
-    * Specify the network configuration name.
-    *
-    * @param string $val The networkName
-    *
-    * @return WindowsWifiConfiguration
-    */
-    public function setNetworkName($val)
-    {
-        $this->_propDict["networkName"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the connectAutomatically
     * Specify whether the wifi connection should connect automatically when in range.
     *
@@ -265,35 +112,151 @@ class WindowsWifiConfiguration extends DeviceConfiguration
     }
     
     /**
-    * Gets the proxySetting
-    * Specify the proxy setting for Wi-Fi configuration
+    * Gets the forceFIPSCompliance
+    * Specify whether to force FIPS compliance.
     *
-    * @return WiFiProxySetting The proxySetting
+    * @return bool The forceFIPSCompliance
     */
-    public function getProxySetting()
+    public function getForceFIPSCompliance()
     {
-        if (array_key_exists("proxySetting", $this->_propDict)) {
-            if (is_a($this->_propDict["proxySetting"], "Beta\Microsoft\Graph\Model\WiFiProxySetting")) {
-                return $this->_propDict["proxySetting"];
+        if (array_key_exists("forceFIPSCompliance", $this->_propDict)) {
+            return $this->_propDict["forceFIPSCompliance"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the forceFIPSCompliance
+    * Specify whether to force FIPS compliance.
+    *
+    * @param bool $val The forceFIPSCompliance
+    *
+    * @return WindowsWifiConfiguration
+    */
+    public function setForceFIPSCompliance($val)
+    {
+        $this->_propDict["forceFIPSCompliance"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the meteredConnectionLimit
+    * Specify the metered connection limit type for the wifi connection.
+    *
+    * @return MeteredConnectionLimitType The meteredConnectionLimit
+    */
+    public function getMeteredConnectionLimit()
+    {
+        if (array_key_exists("meteredConnectionLimit", $this->_propDict)) {
+            if (is_a($this->_propDict["meteredConnectionLimit"], "Beta\Microsoft\Graph\Model\MeteredConnectionLimitType")) {
+                return $this->_propDict["meteredConnectionLimit"];
             } else {
-                $this->_propDict["proxySetting"] = new WiFiProxySetting($this->_propDict["proxySetting"]);
-                return $this->_propDict["proxySetting"];
+                $this->_propDict["meteredConnectionLimit"] = new MeteredConnectionLimitType($this->_propDict["meteredConnectionLimit"]);
+                return $this->_propDict["meteredConnectionLimit"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the proxySetting
-    * Specify the proxy setting for Wi-Fi configuration
+    * Sets the meteredConnectionLimit
+    * Specify the metered connection limit type for the wifi connection.
     *
-    * @param WiFiProxySetting $val The proxySetting
+    * @param MeteredConnectionLimitType $val The meteredConnectionLimit
     *
     * @return WindowsWifiConfiguration
     */
-    public function setProxySetting($val)
+    public function setMeteredConnectionLimit($val)
     {
-        $this->_propDict["proxySetting"] = $val;
+        $this->_propDict["meteredConnectionLimit"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the networkName
+    * Specify the network configuration name.
+    *
+    * @return string The networkName
+    */
+    public function getNetworkName()
+    {
+        if (array_key_exists("networkName", $this->_propDict)) {
+            return $this->_propDict["networkName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the networkName
+    * Specify the network configuration name.
+    *
+    * @param string $val The networkName
+    *
+    * @return WindowsWifiConfiguration
+    */
+    public function setNetworkName($val)
+    {
+        $this->_propDict["networkName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the preSharedKey
+    * This is the pre-shared key for WPA Personal Wi-Fi network.
+    *
+    * @return string The preSharedKey
+    */
+    public function getPreSharedKey()
+    {
+        if (array_key_exists("preSharedKey", $this->_propDict)) {
+            return $this->_propDict["preSharedKey"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the preSharedKey
+    * This is the pre-shared key for WPA Personal Wi-Fi network.
+    *
+    * @param string $val The preSharedKey
+    *
+    * @return WindowsWifiConfiguration
+    */
+    public function setPreSharedKey($val)
+    {
+        $this->_propDict["preSharedKey"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the proxyAutomaticConfigurationUrl
+    * Specify the URL for the proxy server configuration script.
+    *
+    * @return string The proxyAutomaticConfigurationUrl
+    */
+    public function getProxyAutomaticConfigurationUrl()
+    {
+        if (array_key_exists("proxyAutomaticConfigurationUrl", $this->_propDict)) {
+            return $this->_propDict["proxyAutomaticConfigurationUrl"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the proxyAutomaticConfigurationUrl
+    * Specify the URL for the proxy server configuration script.
+    *
+    * @param string $val The proxyAutomaticConfigurationUrl
+    *
+    * @return WindowsWifiConfiguration
+    */
+    public function setProxyAutomaticConfigurationUrl($val)
+    {
+        $this->_propDict["proxyAutomaticConfigurationUrl"] = $val;
         return $this;
     }
     
@@ -356,60 +319,97 @@ class WindowsWifiConfiguration extends DeviceConfiguration
     }
     
     /**
-    * Gets the proxyAutomaticConfigurationUrl
-    * Specify the URL for the proxy server configuration script.
+    * Gets the proxySetting
+    * Specify the proxy setting for Wi-Fi configuration
     *
-    * @return string The proxyAutomaticConfigurationUrl
+    * @return WiFiProxySetting The proxySetting
     */
-    public function getProxyAutomaticConfigurationUrl()
+    public function getProxySetting()
     {
-        if (array_key_exists("proxyAutomaticConfigurationUrl", $this->_propDict)) {
-            return $this->_propDict["proxyAutomaticConfigurationUrl"];
-        } else {
-            return null;
+        if (array_key_exists("proxySetting", $this->_propDict)) {
+            if (is_a($this->_propDict["proxySetting"], "Beta\Microsoft\Graph\Model\WiFiProxySetting")) {
+                return $this->_propDict["proxySetting"];
+            } else {
+                $this->_propDict["proxySetting"] = new WiFiProxySetting($this->_propDict["proxySetting"]);
+                return $this->_propDict["proxySetting"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the proxyAutomaticConfigurationUrl
-    * Specify the URL for the proxy server configuration script.
+    * Sets the proxySetting
+    * Specify the proxy setting for Wi-Fi configuration
     *
-    * @param string $val The proxyAutomaticConfigurationUrl
+    * @param WiFiProxySetting $val The proxySetting
     *
     * @return WindowsWifiConfiguration
     */
-    public function setProxyAutomaticConfigurationUrl($val)
+    public function setProxySetting($val)
     {
-        $this->_propDict["proxyAutomaticConfigurationUrl"] = $val;
+        $this->_propDict["proxySetting"] = $val;
         return $this;
     }
     
     /**
-    * Gets the forceFIPSCompliance
-    * Specify whether to force FIPS compliance.
+    * Gets the ssid
+    * Specify the SSID of the wifi connection.
     *
-    * @return bool The forceFIPSCompliance
+    * @return string The ssid
     */
-    public function getForceFIPSCompliance()
+    public function getSsid()
     {
-        if (array_key_exists("forceFIPSCompliance", $this->_propDict)) {
-            return $this->_propDict["forceFIPSCompliance"];
+        if (array_key_exists("ssid", $this->_propDict)) {
+            return $this->_propDict["ssid"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the forceFIPSCompliance
-    * Specify whether to force FIPS compliance.
+    * Sets the ssid
+    * Specify the SSID of the wifi connection.
     *
-    * @param bool $val The forceFIPSCompliance
+    * @param string $val The ssid
     *
     * @return WindowsWifiConfiguration
     */
-    public function setForceFIPSCompliance($val)
+    public function setSsid($val)
     {
-        $this->_propDict["forceFIPSCompliance"] = boolval($val);
+        $this->_propDict["ssid"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the wifiSecurityType
+    * Specify the Wifi Security Type.
+    *
+    * @return WiFiSecurityType The wifiSecurityType
+    */
+    public function getWifiSecurityType()
+    {
+        if (array_key_exists("wifiSecurityType", $this->_propDict)) {
+            if (is_a($this->_propDict["wifiSecurityType"], "Beta\Microsoft\Graph\Model\WiFiSecurityType")) {
+                return $this->_propDict["wifiSecurityType"];
+            } else {
+                $this->_propDict["wifiSecurityType"] = new WiFiSecurityType($this->_propDict["wifiSecurityType"]);
+                return $this->_propDict["wifiSecurityType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the wifiSecurityType
+    * Specify the Wifi Security Type.
+    *
+    * @param WiFiSecurityType $val The wifiSecurityType
+    *
+    * @return WindowsWifiConfiguration
+    */
+    public function setWifiSecurityType($val)
+    {
+        $this->_propDict["wifiSecurityType"] = $val;
         return $this;
     }
     

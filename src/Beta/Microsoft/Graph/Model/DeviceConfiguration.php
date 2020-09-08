@@ -25,6 +25,196 @@ namespace Beta\Microsoft\Graph\Model;
 class DeviceConfiguration extends Entity
 {
     /**
+    * Gets the createdDateTime
+    * DateTime the object was created.
+    *
+    * @return \DateTime The createdDateTime
+    */
+    public function getCreatedDateTime()
+    {
+        if (array_key_exists("createdDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+                return $this->_propDict["createdDateTime"];
+            } else {
+                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
+                return $this->_propDict["createdDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the createdDateTime
+    * DateTime the object was created.
+    *
+    * @param \DateTime $val The createdDateTime
+    *
+    * @return DeviceConfiguration
+    */
+    public function setCreatedDateTime($val)
+    {
+        $this->_propDict["createdDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the description
+    * Admin provided description of the Device Configuration.
+    *
+    * @return string The description
+    */
+    public function getDescription()
+    {
+        if (array_key_exists("description", $this->_propDict)) {
+            return $this->_propDict["description"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the description
+    * Admin provided description of the Device Configuration.
+    *
+    * @param string $val The description
+    *
+    * @return DeviceConfiguration
+    */
+    public function setDescription($val)
+    {
+        $this->_propDict["description"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the deviceManagementApplicabilityRuleDeviceMode
+    * The device mode applicability rule for this Policy.
+    *
+    * @return DeviceManagementApplicabilityRuleDeviceMode The deviceManagementApplicabilityRuleDeviceMode
+    */
+    public function getDeviceManagementApplicabilityRuleDeviceMode()
+    {
+        if (array_key_exists("deviceManagementApplicabilityRuleDeviceMode", $this->_propDict)) {
+            if (is_a($this->_propDict["deviceManagementApplicabilityRuleDeviceMode"], "Beta\Microsoft\Graph\Model\DeviceManagementApplicabilityRuleDeviceMode")) {
+                return $this->_propDict["deviceManagementApplicabilityRuleDeviceMode"];
+            } else {
+                $this->_propDict["deviceManagementApplicabilityRuleDeviceMode"] = new DeviceManagementApplicabilityRuleDeviceMode($this->_propDict["deviceManagementApplicabilityRuleDeviceMode"]);
+                return $this->_propDict["deviceManagementApplicabilityRuleDeviceMode"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the deviceManagementApplicabilityRuleDeviceMode
+    * The device mode applicability rule for this Policy.
+    *
+    * @param DeviceManagementApplicabilityRuleDeviceMode $val The deviceManagementApplicabilityRuleDeviceMode
+    *
+    * @return DeviceConfiguration
+    */
+    public function setDeviceManagementApplicabilityRuleDeviceMode($val)
+    {
+        $this->_propDict["deviceManagementApplicabilityRuleDeviceMode"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the deviceManagementApplicabilityRuleOsEdition
+    * The OS edition applicability for this Policy.
+    *
+    * @return DeviceManagementApplicabilityRuleOsEdition The deviceManagementApplicabilityRuleOsEdition
+    */
+    public function getDeviceManagementApplicabilityRuleOsEdition()
+    {
+        if (array_key_exists("deviceManagementApplicabilityRuleOsEdition", $this->_propDict)) {
+            if (is_a($this->_propDict["deviceManagementApplicabilityRuleOsEdition"], "Beta\Microsoft\Graph\Model\DeviceManagementApplicabilityRuleOsEdition")) {
+                return $this->_propDict["deviceManagementApplicabilityRuleOsEdition"];
+            } else {
+                $this->_propDict["deviceManagementApplicabilityRuleOsEdition"] = new DeviceManagementApplicabilityRuleOsEdition($this->_propDict["deviceManagementApplicabilityRuleOsEdition"]);
+                return $this->_propDict["deviceManagementApplicabilityRuleOsEdition"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the deviceManagementApplicabilityRuleOsEdition
+    * The OS edition applicability for this Policy.
+    *
+    * @param DeviceManagementApplicabilityRuleOsEdition $val The deviceManagementApplicabilityRuleOsEdition
+    *
+    * @return DeviceConfiguration
+    */
+    public function setDeviceManagementApplicabilityRuleOsEdition($val)
+    {
+        $this->_propDict["deviceManagementApplicabilityRuleOsEdition"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the deviceManagementApplicabilityRuleOsVersion
+    * The OS version applicability rule for this Policy.
+    *
+    * @return DeviceManagementApplicabilityRuleOsVersion The deviceManagementApplicabilityRuleOsVersion
+    */
+    public function getDeviceManagementApplicabilityRuleOsVersion()
+    {
+        if (array_key_exists("deviceManagementApplicabilityRuleOsVersion", $this->_propDict)) {
+            if (is_a($this->_propDict["deviceManagementApplicabilityRuleOsVersion"], "Beta\Microsoft\Graph\Model\DeviceManagementApplicabilityRuleOsVersion")) {
+                return $this->_propDict["deviceManagementApplicabilityRuleOsVersion"];
+            } else {
+                $this->_propDict["deviceManagementApplicabilityRuleOsVersion"] = new DeviceManagementApplicabilityRuleOsVersion($this->_propDict["deviceManagementApplicabilityRuleOsVersion"]);
+                return $this->_propDict["deviceManagementApplicabilityRuleOsVersion"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the deviceManagementApplicabilityRuleOsVersion
+    * The OS version applicability rule for this Policy.
+    *
+    * @param DeviceManagementApplicabilityRuleOsVersion $val The deviceManagementApplicabilityRuleOsVersion
+    *
+    * @return DeviceConfiguration
+    */
+    public function setDeviceManagementApplicabilityRuleOsVersion($val)
+    {
+        $this->_propDict["deviceManagementApplicabilityRuleOsVersion"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the displayName
+    * Admin provided name of the device configuration.
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the displayName
+    * Admin provided name of the device configuration.
+    *
+    * @param string $val The displayName
+    *
+    * @return DeviceConfiguration
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the lastModifiedDateTime
     * DateTime the object was last modified.
     *
@@ -116,196 +306,6 @@ class DeviceConfiguration extends Entity
     }
     
     /**
-    * Gets the deviceManagementApplicabilityRuleOsEdition
-    * The OS edition applicability for this Policy.
-    *
-    * @return DeviceManagementApplicabilityRuleOsEdition The deviceManagementApplicabilityRuleOsEdition
-    */
-    public function getDeviceManagementApplicabilityRuleOsEdition()
-    {
-        if (array_key_exists("deviceManagementApplicabilityRuleOsEdition", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceManagementApplicabilityRuleOsEdition"], "Beta\Microsoft\Graph\Model\DeviceManagementApplicabilityRuleOsEdition")) {
-                return $this->_propDict["deviceManagementApplicabilityRuleOsEdition"];
-            } else {
-                $this->_propDict["deviceManagementApplicabilityRuleOsEdition"] = new DeviceManagementApplicabilityRuleOsEdition($this->_propDict["deviceManagementApplicabilityRuleOsEdition"]);
-                return $this->_propDict["deviceManagementApplicabilityRuleOsEdition"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the deviceManagementApplicabilityRuleOsEdition
-    * The OS edition applicability for this Policy.
-    *
-    * @param DeviceManagementApplicabilityRuleOsEdition $val The deviceManagementApplicabilityRuleOsEdition
-    *
-    * @return DeviceConfiguration
-    */
-    public function setDeviceManagementApplicabilityRuleOsEdition($val)
-    {
-        $this->_propDict["deviceManagementApplicabilityRuleOsEdition"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the deviceManagementApplicabilityRuleOsVersion
-    * The OS version applicability rule for this Policy.
-    *
-    * @return DeviceManagementApplicabilityRuleOsVersion The deviceManagementApplicabilityRuleOsVersion
-    */
-    public function getDeviceManagementApplicabilityRuleOsVersion()
-    {
-        if (array_key_exists("deviceManagementApplicabilityRuleOsVersion", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceManagementApplicabilityRuleOsVersion"], "Beta\Microsoft\Graph\Model\DeviceManagementApplicabilityRuleOsVersion")) {
-                return $this->_propDict["deviceManagementApplicabilityRuleOsVersion"];
-            } else {
-                $this->_propDict["deviceManagementApplicabilityRuleOsVersion"] = new DeviceManagementApplicabilityRuleOsVersion($this->_propDict["deviceManagementApplicabilityRuleOsVersion"]);
-                return $this->_propDict["deviceManagementApplicabilityRuleOsVersion"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the deviceManagementApplicabilityRuleOsVersion
-    * The OS version applicability rule for this Policy.
-    *
-    * @param DeviceManagementApplicabilityRuleOsVersion $val The deviceManagementApplicabilityRuleOsVersion
-    *
-    * @return DeviceConfiguration
-    */
-    public function setDeviceManagementApplicabilityRuleOsVersion($val)
-    {
-        $this->_propDict["deviceManagementApplicabilityRuleOsVersion"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the deviceManagementApplicabilityRuleDeviceMode
-    * The device mode applicability rule for this Policy.
-    *
-    * @return DeviceManagementApplicabilityRuleDeviceMode The deviceManagementApplicabilityRuleDeviceMode
-    */
-    public function getDeviceManagementApplicabilityRuleDeviceMode()
-    {
-        if (array_key_exists("deviceManagementApplicabilityRuleDeviceMode", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceManagementApplicabilityRuleDeviceMode"], "Beta\Microsoft\Graph\Model\DeviceManagementApplicabilityRuleDeviceMode")) {
-                return $this->_propDict["deviceManagementApplicabilityRuleDeviceMode"];
-            } else {
-                $this->_propDict["deviceManagementApplicabilityRuleDeviceMode"] = new DeviceManagementApplicabilityRuleDeviceMode($this->_propDict["deviceManagementApplicabilityRuleDeviceMode"]);
-                return $this->_propDict["deviceManagementApplicabilityRuleDeviceMode"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the deviceManagementApplicabilityRuleDeviceMode
-    * The device mode applicability rule for this Policy.
-    *
-    * @param DeviceManagementApplicabilityRuleDeviceMode $val The deviceManagementApplicabilityRuleDeviceMode
-    *
-    * @return DeviceConfiguration
-    */
-    public function setDeviceManagementApplicabilityRuleDeviceMode($val)
-    {
-        $this->_propDict["deviceManagementApplicabilityRuleDeviceMode"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the createdDateTime
-    * DateTime the object was created.
-    *
-    * @return \DateTime The createdDateTime
-    */
-    public function getCreatedDateTime()
-    {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
-                return $this->_propDict["createdDateTime"];
-            } else {
-                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
-                return $this->_propDict["createdDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the createdDateTime
-    * DateTime the object was created.
-    *
-    * @param \DateTime $val The createdDateTime
-    *
-    * @return DeviceConfiguration
-    */
-    public function setCreatedDateTime($val)
-    {
-        $this->_propDict["createdDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the description
-    * Admin provided description of the Device Configuration.
-    *
-    * @return string The description
-    */
-    public function getDescription()
-    {
-        if (array_key_exists("description", $this->_propDict)) {
-            return $this->_propDict["description"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the description
-    * Admin provided description of the Device Configuration.
-    *
-    * @param string $val The description
-    *
-    * @return DeviceConfiguration
-    */
-    public function setDescription($val)
-    {
-        $this->_propDict["description"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the displayName
-    * Admin provided name of the device configuration.
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the displayName
-    * Admin provided name of the device configuration.
-    *
-    * @param string $val The displayName
-    *
-    * @return DeviceConfiguration
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the version
     * Version of the device configuration.
     *
@@ -331,36 +331,6 @@ class DeviceConfiguration extends Entity
     public function setVersion($val)
     {
         $this->_propDict["version"] = intval($val);
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the groupAssignments
-    * The list of group assignments for the device configuration profile.
-     *
-     * @return array The groupAssignments
-     */
-    public function getGroupAssignments()
-    {
-        if (array_key_exists("groupAssignments", $this->_propDict)) {
-           return $this->_propDict["groupAssignments"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the groupAssignments
-    * The list of group assignments for the device configuration profile.
-    *
-    * @param DeviceConfigurationGroupAssignment $val The groupAssignments
-    *
-    * @return DeviceConfiguration
-    */
-    public function setGroupAssignments($val)
-    {
-		$this->_propDict["groupAssignments"] = $val;
         return $this;
     }
     
@@ -396,6 +366,36 @@ class DeviceConfiguration extends Entity
     
 
      /** 
+     * Gets the deviceSettingStateSummaries
+    * Device Configuration Setting State Device Summary
+     *
+     * @return array The deviceSettingStateSummaries
+     */
+    public function getDeviceSettingStateSummaries()
+    {
+        if (array_key_exists("deviceSettingStateSummaries", $this->_propDict)) {
+           return $this->_propDict["deviceSettingStateSummaries"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the deviceSettingStateSummaries
+    * Device Configuration Setting State Device Summary
+    *
+    * @param SettingStateDeviceSummary $val The deviceSettingStateSummaries
+    *
+    * @return DeviceConfiguration
+    */
+    public function setDeviceSettingStateSummaries($val)
+    {
+		$this->_propDict["deviceSettingStateSummaries"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the deviceStatuses
     * Device configuration installation status by device.
      *
@@ -421,36 +421,6 @@ class DeviceConfiguration extends Entity
     public function setDeviceStatuses($val)
     {
 		$this->_propDict["deviceStatuses"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the userStatuses
-    * Device configuration installation status by user.
-     *
-     * @return array The userStatuses
-     */
-    public function getUserStatuses()
-    {
-        if (array_key_exists("userStatuses", $this->_propDict)) {
-           return $this->_propDict["userStatuses"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the userStatuses
-    * Device configuration installation status by user.
-    *
-    * @param DeviceConfigurationUserStatus $val The userStatuses
-    *
-    * @return DeviceConfiguration
-    */
-    public function setUserStatuses($val)
-    {
-		$this->_propDict["userStatuses"] = $val;
         return $this;
     }
     
@@ -487,6 +457,66 @@ class DeviceConfiguration extends Entity
         return $this;
     }
     
+
+     /** 
+     * Gets the groupAssignments
+    * The list of group assignments for the device configuration profile.
+     *
+     * @return array The groupAssignments
+     */
+    public function getGroupAssignments()
+    {
+        if (array_key_exists("groupAssignments", $this->_propDict)) {
+           return $this->_propDict["groupAssignments"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the groupAssignments
+    * The list of group assignments for the device configuration profile.
+    *
+    * @param DeviceConfigurationGroupAssignment $val The groupAssignments
+    *
+    * @return DeviceConfiguration
+    */
+    public function setGroupAssignments($val)
+    {
+		$this->_propDict["groupAssignments"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the userStatuses
+    * Device configuration installation status by user.
+     *
+     * @return array The userStatuses
+     */
+    public function getUserStatuses()
+    {
+        if (array_key_exists("userStatuses", $this->_propDict)) {
+           return $this->_propDict["userStatuses"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the userStatuses
+    * Device configuration installation status by user.
+    *
+    * @param DeviceConfigurationUserStatus $val The userStatuses
+    *
+    * @return DeviceConfiguration
+    */
+    public function setUserStatuses($val)
+    {
+		$this->_propDict["userStatuses"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the userStatusOverview
     * Device Configuration users status overview
@@ -517,36 +547,6 @@ class DeviceConfiguration extends Entity
     public function setUserStatusOverview($val)
     {
         $this->_propDict["userStatusOverview"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the deviceSettingStateSummaries
-    * Device Configuration Setting State Device Summary
-     *
-     * @return array The deviceSettingStateSummaries
-     */
-    public function getDeviceSettingStateSummaries()
-    {
-        if (array_key_exists("deviceSettingStateSummaries", $this->_propDict)) {
-           return $this->_propDict["deviceSettingStateSummaries"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the deviceSettingStateSummaries
-    * Device Configuration Setting State Device Summary
-    *
-    * @param SettingStateDeviceSummary $val The deviceSettingStateSummaries
-    *
-    * @return DeviceConfiguration
-    */
-    public function setDeviceSettingStateSummaries($val)
-    {
-		$this->_propDict["deviceSettingStateSummaries"] = $val;
         return $this;
     }
     

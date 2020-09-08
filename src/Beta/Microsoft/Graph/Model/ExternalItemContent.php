@@ -23,32 +23,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class ExternalItemContent extends Entity
 {
-    /**
-    * Gets the value
-    *
-    * @return string The value
-    */
-    public function getValue()
-    {
-        if (array_key_exists("value", $this->_propDict)) {
-            return $this->_propDict["value"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the value
-    *
-    * @param string $val The value of the value
-    *
-    * @return ExternalItemContent
-    */
-    public function setValue($val)
-    {
-        $this->_propDict["value"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the type
@@ -79,5 +53,31 @@ class ExternalItemContent extends Entity
     {
         $this->_propDict["type"] = $val;
          return $this;
+    }
+    /**
+    * Gets the value
+    *
+    * @return string The value
+    */
+    public function getValue()
+    {
+        if (array_key_exists("value", $this->_propDict)) {
+            return $this->_propDict["value"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the value
+    *
+    * @param string $val The value of the value
+    *
+    * @return ExternalItemContent
+    */
+    public function setValue($val)
+    {
+        $this->_propDict["value"] = $val;
+        return $this;
     }
 }

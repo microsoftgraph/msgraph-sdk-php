@@ -79,33 +79,6 @@ class TaxGroup extends Entity
     }
     
     /**
-    * Gets the taxType
-    *
-    * @return string The taxType
-    */
-    public function getTaxType()
-    {
-        if (array_key_exists("taxType", $this->_propDict)) {
-            return $this->_propDict["taxType"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the taxType
-    *
-    * @param string $val The taxType
-    *
-    * @return TaxGroup
-    */
-    public function setTaxType($val)
-    {
-        $this->_propDict["taxType"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the lastModifiedDateTime
     *
     * @return \DateTime The lastModifiedDateTime
@@ -133,6 +106,33 @@ class TaxGroup extends Entity
     public function setLastModifiedDateTime($val)
     {
         $this->_propDict["lastModifiedDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the taxType
+    *
+    * @return string The taxType
+    */
+    public function getTaxType()
+    {
+        if (array_key_exists("taxType", $this->_propDict)) {
+            return $this->_propDict["taxType"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the taxType
+    *
+    * @param string $val The taxType
+    *
+    * @return TaxGroup
+    */
+    public function setTaxType($val)
+    {
+        $this->_propDict["taxType"] = $val;
         return $this;
     }
     

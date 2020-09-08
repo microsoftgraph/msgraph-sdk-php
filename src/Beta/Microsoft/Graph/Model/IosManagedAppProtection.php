@@ -25,185 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class IosManagedAppProtection extends TargetedManagedAppProtection
 {
     /**
-    * Gets the appDataEncryptionType
-    * Type of encryption which should be used for data in a managed app. Possible values are: useDeviceSettings, afterDeviceRestart, whenDeviceLockedExceptOpenFiles, whenDeviceLocked.
-    *
-    * @return ManagedAppDataEncryptionType The appDataEncryptionType
-    */
-    public function getAppDataEncryptionType()
-    {
-        if (array_key_exists("appDataEncryptionType", $this->_propDict)) {
-            if (is_a($this->_propDict["appDataEncryptionType"], "Beta\Microsoft\Graph\Model\ManagedAppDataEncryptionType")) {
-                return $this->_propDict["appDataEncryptionType"];
-            } else {
-                $this->_propDict["appDataEncryptionType"] = new ManagedAppDataEncryptionType($this->_propDict["appDataEncryptionType"]);
-                return $this->_propDict["appDataEncryptionType"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the appDataEncryptionType
-    * Type of encryption which should be used for data in a managed app. Possible values are: useDeviceSettings, afterDeviceRestart, whenDeviceLockedExceptOpenFiles, whenDeviceLocked.
-    *
-    * @param ManagedAppDataEncryptionType $val The appDataEncryptionType
-    *
-    * @return IosManagedAppProtection
-    */
-    public function setAppDataEncryptionType($val)
-    {
-        $this->_propDict["appDataEncryptionType"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the minimumRequiredSdkVersion
-    * Versions less than the specified version will block the managed app from accessing company data.
-    *
-    * @return string The minimumRequiredSdkVersion
-    */
-    public function getMinimumRequiredSdkVersion()
-    {
-        if (array_key_exists("minimumRequiredSdkVersion", $this->_propDict)) {
-            return $this->_propDict["minimumRequiredSdkVersion"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the minimumRequiredSdkVersion
-    * Versions less than the specified version will block the managed app from accessing company data.
-    *
-    * @param string $val The minimumRequiredSdkVersion
-    *
-    * @return IosManagedAppProtection
-    */
-    public function setMinimumRequiredSdkVersion($val)
-    {
-        $this->_propDict["minimumRequiredSdkVersion"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the deployedAppCount
-    * Count of apps to which the current policy is deployed.
-    *
-    * @return int The deployedAppCount
-    */
-    public function getDeployedAppCount()
-    {
-        if (array_key_exists("deployedAppCount", $this->_propDict)) {
-            return $this->_propDict["deployedAppCount"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the deployedAppCount
-    * Count of apps to which the current policy is deployed.
-    *
-    * @param int $val The deployedAppCount
-    *
-    * @return IosManagedAppProtection
-    */
-    public function setDeployedAppCount($val)
-    {
-        $this->_propDict["deployedAppCount"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the faceIdBlocked
-    * Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True.
-    *
-    * @return bool The faceIdBlocked
-    */
-    public function getFaceIdBlocked()
-    {
-        if (array_key_exists("faceIdBlocked", $this->_propDict)) {
-            return $this->_propDict["faceIdBlocked"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the faceIdBlocked
-    * Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True.
-    *
-    * @param bool $val The faceIdBlocked
-    *
-    * @return IosManagedAppProtection
-    */
-    public function setFaceIdBlocked($val)
-    {
-        $this->_propDict["faceIdBlocked"] = boolval($val);
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the exemptedAppProtocols
-    * Apps in this list will be exempt from the policy and will be able to receive data from managed apps.
-     *
-     * @return array The exemptedAppProtocols
-     */
-    public function getExemptedAppProtocols()
-    {
-        if (array_key_exists("exemptedAppProtocols", $this->_propDict)) {
-           return $this->_propDict["exemptedAppProtocols"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the exemptedAppProtocols
-    * Apps in this list will be exempt from the policy and will be able to receive data from managed apps.
-    *
-    * @param KeyValuePair $val The exemptedAppProtocols
-    *
-    * @return IosManagedAppProtection
-    */
-    public function setExemptedAppProtocols($val)
-    {
-		$this->_propDict["exemptedAppProtocols"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the minimumWipeSdkVersion
-    * Versions less than the specified version will block the managed app from accessing company data.
-    *
-    * @return string The minimumWipeSdkVersion
-    */
-    public function getMinimumWipeSdkVersion()
-    {
-        if (array_key_exists("minimumWipeSdkVersion", $this->_propDict)) {
-            return $this->_propDict["minimumWipeSdkVersion"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the minimumWipeSdkVersion
-    * Versions less than the specified version will block the managed app from accessing company data.
-    *
-    * @param string $val The minimumWipeSdkVersion
-    *
-    * @return IosManagedAppProtection
-    */
-    public function setMinimumWipeSdkVersion($val)
-    {
-        $this->_propDict["minimumWipeSdkVersion"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the allowedIosDeviceModels
     * Semicolon seperated list of device models allowed, as a string, for the managed app to work.
     *
@@ -266,118 +87,35 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     }
     
     /**
-    * Gets the thirdPartyKeyboardsBlocked
-    * Defines if third party keyboards are allowed while accessing a managed app
+    * Gets the appDataEncryptionType
+    * Type of encryption which should be used for data in a managed app. Possible values are: useDeviceSettings, afterDeviceRestart, whenDeviceLockedExceptOpenFiles, whenDeviceLocked.
     *
-    * @return bool The thirdPartyKeyboardsBlocked
+    * @return ManagedAppDataEncryptionType The appDataEncryptionType
     */
-    public function getThirdPartyKeyboardsBlocked()
+    public function getAppDataEncryptionType()
     {
-        if (array_key_exists("thirdPartyKeyboardsBlocked", $this->_propDict)) {
-            return $this->_propDict["thirdPartyKeyboardsBlocked"];
-        } else {
-            return null;
+        if (array_key_exists("appDataEncryptionType", $this->_propDict)) {
+            if (is_a($this->_propDict["appDataEncryptionType"], "Beta\Microsoft\Graph\Model\ManagedAppDataEncryptionType")) {
+                return $this->_propDict["appDataEncryptionType"];
+            } else {
+                $this->_propDict["appDataEncryptionType"] = new ManagedAppDataEncryptionType($this->_propDict["appDataEncryptionType"]);
+                return $this->_propDict["appDataEncryptionType"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the thirdPartyKeyboardsBlocked
-    * Defines if third party keyboards are allowed while accessing a managed app
+    * Sets the appDataEncryptionType
+    * Type of encryption which should be used for data in a managed app. Possible values are: useDeviceSettings, afterDeviceRestart, whenDeviceLockedExceptOpenFiles, whenDeviceLocked.
     *
-    * @param bool $val The thirdPartyKeyboardsBlocked
+    * @param ManagedAppDataEncryptionType $val The appDataEncryptionType
     *
     * @return IosManagedAppProtection
     */
-    public function setThirdPartyKeyboardsBlocked($val)
+    public function setAppDataEncryptionType($val)
     {
-        $this->_propDict["thirdPartyKeyboardsBlocked"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the filterOpenInToOnlyManagedApps
-    * Defines if open-in operation is supported from the managed app to the filesharing locations selected. This setting only applies when AllowedOutboundDataTransferDestinations is set to ManagedApps and DisableProtectionOfManagedOutboundOpenInData is set to False.
-    *
-    * @return bool The filterOpenInToOnlyManagedApps
-    */
-    public function getFilterOpenInToOnlyManagedApps()
-    {
-        if (array_key_exists("filterOpenInToOnlyManagedApps", $this->_propDict)) {
-            return $this->_propDict["filterOpenInToOnlyManagedApps"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the filterOpenInToOnlyManagedApps
-    * Defines if open-in operation is supported from the managed app to the filesharing locations selected. This setting only applies when AllowedOutboundDataTransferDestinations is set to ManagedApps and DisableProtectionOfManagedOutboundOpenInData is set to False.
-    *
-    * @param bool $val The filterOpenInToOnlyManagedApps
-    *
-    * @return IosManagedAppProtection
-    */
-    public function setFilterOpenInToOnlyManagedApps($val)
-    {
-        $this->_propDict["filterOpenInToOnlyManagedApps"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the disableProtectionOfManagedOutboundOpenInData
-    * Disable protection of data transferred to other apps through IOS OpenIn option. This setting is only allowed to be True when AllowedOutboundDataTransferDestinations is set to ManagedApps.
-    *
-    * @return bool The disableProtectionOfManagedOutboundOpenInData
-    */
-    public function getDisableProtectionOfManagedOutboundOpenInData()
-    {
-        if (array_key_exists("disableProtectionOfManagedOutboundOpenInData", $this->_propDict)) {
-            return $this->_propDict["disableProtectionOfManagedOutboundOpenInData"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the disableProtectionOfManagedOutboundOpenInData
-    * Disable protection of data transferred to other apps through IOS OpenIn option. This setting is only allowed to be True when AllowedOutboundDataTransferDestinations is set to ManagedApps.
-    *
-    * @param bool $val The disableProtectionOfManagedOutboundOpenInData
-    *
-    * @return IosManagedAppProtection
-    */
-    public function setDisableProtectionOfManagedOutboundOpenInData($val)
-    {
-        $this->_propDict["disableProtectionOfManagedOutboundOpenInData"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the protectInboundDataFromUnknownSources
-    * Protect incoming data from unknown source. This setting is only allowed to be True when AllowedInboundDataTransferSources is set to AllApps.
-    *
-    * @return bool The protectInboundDataFromUnknownSources
-    */
-    public function getProtectInboundDataFromUnknownSources()
-    {
-        if (array_key_exists("protectInboundDataFromUnknownSources", $this->_propDict)) {
-            return $this->_propDict["protectInboundDataFromUnknownSources"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the protectInboundDataFromUnknownSources
-    * Protect incoming data from unknown source. This setting is only allowed to be True when AllowedInboundDataTransferSources is set to AllApps.
-    *
-    * @param bool $val The protectInboundDataFromUnknownSources
-    *
-    * @return IosManagedAppProtection
-    */
-    public function setProtectInboundDataFromUnknownSources($val)
-    {
-        $this->_propDict["protectInboundDataFromUnknownSources"] = boolval($val);
+        $this->_propDict["appDataEncryptionType"] = $val;
         return $this;
     }
     
@@ -436,6 +174,268 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     public function setCustomDialerAppProtocol($val)
     {
         $this->_propDict["customDialerAppProtocol"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the deployedAppCount
+    * Count of apps to which the current policy is deployed.
+    *
+    * @return int The deployedAppCount
+    */
+    public function getDeployedAppCount()
+    {
+        if (array_key_exists("deployedAppCount", $this->_propDict)) {
+            return $this->_propDict["deployedAppCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the deployedAppCount
+    * Count of apps to which the current policy is deployed.
+    *
+    * @param int $val The deployedAppCount
+    *
+    * @return IosManagedAppProtection
+    */
+    public function setDeployedAppCount($val)
+    {
+        $this->_propDict["deployedAppCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the disableProtectionOfManagedOutboundOpenInData
+    * Disable protection of data transferred to other apps through IOS OpenIn option. This setting is only allowed to be True when AllowedOutboundDataTransferDestinations is set to ManagedApps.
+    *
+    * @return bool The disableProtectionOfManagedOutboundOpenInData
+    */
+    public function getDisableProtectionOfManagedOutboundOpenInData()
+    {
+        if (array_key_exists("disableProtectionOfManagedOutboundOpenInData", $this->_propDict)) {
+            return $this->_propDict["disableProtectionOfManagedOutboundOpenInData"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the disableProtectionOfManagedOutboundOpenInData
+    * Disable protection of data transferred to other apps through IOS OpenIn option. This setting is only allowed to be True when AllowedOutboundDataTransferDestinations is set to ManagedApps.
+    *
+    * @param bool $val The disableProtectionOfManagedOutboundOpenInData
+    *
+    * @return IosManagedAppProtection
+    */
+    public function setDisableProtectionOfManagedOutboundOpenInData($val)
+    {
+        $this->_propDict["disableProtectionOfManagedOutboundOpenInData"] = boolval($val);
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the exemptedAppProtocols
+    * Apps in this list will be exempt from the policy and will be able to receive data from managed apps.
+     *
+     * @return array The exemptedAppProtocols
+     */
+    public function getExemptedAppProtocols()
+    {
+        if (array_key_exists("exemptedAppProtocols", $this->_propDict)) {
+           return $this->_propDict["exemptedAppProtocols"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the exemptedAppProtocols
+    * Apps in this list will be exempt from the policy and will be able to receive data from managed apps.
+    *
+    * @param KeyValuePair $val The exemptedAppProtocols
+    *
+    * @return IosManagedAppProtection
+    */
+    public function setExemptedAppProtocols($val)
+    {
+		$this->_propDict["exemptedAppProtocols"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the faceIdBlocked
+    * Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True.
+    *
+    * @return bool The faceIdBlocked
+    */
+    public function getFaceIdBlocked()
+    {
+        if (array_key_exists("faceIdBlocked", $this->_propDict)) {
+            return $this->_propDict["faceIdBlocked"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the faceIdBlocked
+    * Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True.
+    *
+    * @param bool $val The faceIdBlocked
+    *
+    * @return IosManagedAppProtection
+    */
+    public function setFaceIdBlocked($val)
+    {
+        $this->_propDict["faceIdBlocked"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the filterOpenInToOnlyManagedApps
+    * Defines if open-in operation is supported from the managed app to the filesharing locations selected. This setting only applies when AllowedOutboundDataTransferDestinations is set to ManagedApps and DisableProtectionOfManagedOutboundOpenInData is set to False.
+    *
+    * @return bool The filterOpenInToOnlyManagedApps
+    */
+    public function getFilterOpenInToOnlyManagedApps()
+    {
+        if (array_key_exists("filterOpenInToOnlyManagedApps", $this->_propDict)) {
+            return $this->_propDict["filterOpenInToOnlyManagedApps"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the filterOpenInToOnlyManagedApps
+    * Defines if open-in operation is supported from the managed app to the filesharing locations selected. This setting only applies when AllowedOutboundDataTransferDestinations is set to ManagedApps and DisableProtectionOfManagedOutboundOpenInData is set to False.
+    *
+    * @param bool $val The filterOpenInToOnlyManagedApps
+    *
+    * @return IosManagedAppProtection
+    */
+    public function setFilterOpenInToOnlyManagedApps($val)
+    {
+        $this->_propDict["filterOpenInToOnlyManagedApps"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the minimumRequiredSdkVersion
+    * Versions less than the specified version will block the managed app from accessing company data.
+    *
+    * @return string The minimumRequiredSdkVersion
+    */
+    public function getMinimumRequiredSdkVersion()
+    {
+        if (array_key_exists("minimumRequiredSdkVersion", $this->_propDict)) {
+            return $this->_propDict["minimumRequiredSdkVersion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the minimumRequiredSdkVersion
+    * Versions less than the specified version will block the managed app from accessing company data.
+    *
+    * @param string $val The minimumRequiredSdkVersion
+    *
+    * @return IosManagedAppProtection
+    */
+    public function setMinimumRequiredSdkVersion($val)
+    {
+        $this->_propDict["minimumRequiredSdkVersion"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the minimumWipeSdkVersion
+    * Versions less than the specified version will block the managed app from accessing company data.
+    *
+    * @return string The minimumWipeSdkVersion
+    */
+    public function getMinimumWipeSdkVersion()
+    {
+        if (array_key_exists("minimumWipeSdkVersion", $this->_propDict)) {
+            return $this->_propDict["minimumWipeSdkVersion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the minimumWipeSdkVersion
+    * Versions less than the specified version will block the managed app from accessing company data.
+    *
+    * @param string $val The minimumWipeSdkVersion
+    *
+    * @return IosManagedAppProtection
+    */
+    public function setMinimumWipeSdkVersion($val)
+    {
+        $this->_propDict["minimumWipeSdkVersion"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the protectInboundDataFromUnknownSources
+    * Protect incoming data from unknown source. This setting is only allowed to be True when AllowedInboundDataTransferSources is set to AllApps.
+    *
+    * @return bool The protectInboundDataFromUnknownSources
+    */
+    public function getProtectInboundDataFromUnknownSources()
+    {
+        if (array_key_exists("protectInboundDataFromUnknownSources", $this->_propDict)) {
+            return $this->_propDict["protectInboundDataFromUnknownSources"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the protectInboundDataFromUnknownSources
+    * Protect incoming data from unknown source. This setting is only allowed to be True when AllowedInboundDataTransferSources is set to AllApps.
+    *
+    * @param bool $val The protectInboundDataFromUnknownSources
+    *
+    * @return IosManagedAppProtection
+    */
+    public function setProtectInboundDataFromUnknownSources($val)
+    {
+        $this->_propDict["protectInboundDataFromUnknownSources"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the thirdPartyKeyboardsBlocked
+    * Defines if third party keyboards are allowed while accessing a managed app
+    *
+    * @return bool The thirdPartyKeyboardsBlocked
+    */
+    public function getThirdPartyKeyboardsBlocked()
+    {
+        if (array_key_exists("thirdPartyKeyboardsBlocked", $this->_propDict)) {
+            return $this->_propDict["thirdPartyKeyboardsBlocked"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the thirdPartyKeyboardsBlocked
+    * Defines if third party keyboards are allowed while accessing a managed app
+    *
+    * @param bool $val The thirdPartyKeyboardsBlocked
+    *
+    * @return IosManagedAppProtection
+    */
+    public function setThirdPartyKeyboardsBlocked($val)
+    {
+        $this->_propDict["thirdPartyKeyboardsBlocked"] = boolval($val);
         return $this;
     }
     

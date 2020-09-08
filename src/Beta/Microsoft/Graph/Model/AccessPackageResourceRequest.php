@@ -79,6 +79,37 @@ class AccessPackageResourceRequest extends Entity
     }
     
     /**
+    * Gets the expirationDateTime
+    *
+    * @return \DateTime The expirationDateTime
+    */
+    public function getExpirationDateTime()
+    {
+        if (array_key_exists("expirationDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["expirationDateTime"], "\DateTime")) {
+                return $this->_propDict["expirationDateTime"];
+            } else {
+                $this->_propDict["expirationDateTime"] = new \DateTime($this->_propDict["expirationDateTime"]);
+                return $this->_propDict["expirationDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the expirationDateTime
+    *
+    * @param \DateTime $val The expirationDateTime
+    *
+    * @return AccessPackageResourceRequest
+    */
+    public function setExpirationDateTime($val)
+    {
+        $this->_propDict["expirationDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the isValidationOnly
     *
     * @return bool The isValidationOnly
@@ -106,29 +137,29 @@ class AccessPackageResourceRequest extends Entity
     }
     
     /**
-    * Gets the requestType
+    * Gets the justification
     *
-    * @return string The requestType
+    * @return string The justification
     */
-    public function getRequestType()
+    public function getJustification()
     {
-        if (array_key_exists("requestType", $this->_propDict)) {
-            return $this->_propDict["requestType"];
+        if (array_key_exists("justification", $this->_propDict)) {
+            return $this->_propDict["justification"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the requestType
+    * Sets the justification
     *
-    * @param string $val The requestType
+    * @param string $val The justification
     *
     * @return AccessPackageResourceRequest
     */
-    public function setRequestType($val)
+    public function setJustification($val)
     {
-        $this->_propDict["requestType"] = $val;
+        $this->_propDict["justification"] = $val;
         return $this;
     }
     
@@ -187,60 +218,29 @@ class AccessPackageResourceRequest extends Entity
     }
     
     /**
-    * Gets the expirationDateTime
+    * Gets the requestType
     *
-    * @return \DateTime The expirationDateTime
+    * @return string The requestType
     */
-    public function getExpirationDateTime()
+    public function getRequestType()
     {
-        if (array_key_exists("expirationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["expirationDateTime"], "\DateTime")) {
-                return $this->_propDict["expirationDateTime"];
-            } else {
-                $this->_propDict["expirationDateTime"] = new \DateTime($this->_propDict["expirationDateTime"]);
-                return $this->_propDict["expirationDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the expirationDateTime
-    *
-    * @param \DateTime $val The expirationDateTime
-    *
-    * @return AccessPackageResourceRequest
-    */
-    public function setExpirationDateTime($val)
-    {
-        $this->_propDict["expirationDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the justification
-    *
-    * @return string The justification
-    */
-    public function getJustification()
-    {
-        if (array_key_exists("justification", $this->_propDict)) {
-            return $this->_propDict["justification"];
+        if (array_key_exists("requestType", $this->_propDict)) {
+            return $this->_propDict["requestType"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the justification
+    * Sets the requestType
     *
-    * @param string $val The justification
+    * @param string $val The requestType
     *
     * @return AccessPackageResourceRequest
     */
-    public function setJustification($val)
+    public function setRequestType($val)
     {
-        $this->_propDict["justification"] = $val;
+        $this->_propDict["requestType"] = $val;
         return $this;
     }
     

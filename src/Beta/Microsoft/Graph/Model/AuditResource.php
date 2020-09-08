@@ -85,34 +85,6 @@ class AuditResource extends Entity
          return $this;
     }
     /**
-    * Gets the type
-    * Audit resource's type.
-    *
-    * @return string The type
-    */
-    public function getType()
-    {
-        if (array_key_exists("type", $this->_propDict)) {
-            return $this->_propDict["type"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the type
-    * Audit resource's type.
-    *
-    * @param string $val The value of the type
-    *
-    * @return AuditResource
-    */
-    public function setType($val)
-    {
-        $this->_propDict["type"] = $val;
-        return $this;
-    }
-    /**
     * Gets the resourceId
     * Audit resource's Id.
     *
@@ -138,6 +110,34 @@ class AuditResource extends Entity
     public function setResourceId($val)
     {
         $this->_propDict["resourceId"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the type
+    * Audit resource's type.
+    *
+    * @return string The type
+    */
+    public function getType()
+    {
+        if (array_key_exists("type", $this->_propDict)) {
+            return $this->_propDict["type"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the type
+    * Audit resource's type.
+    *
+    * @param string $val The value of the type
+    *
+    * @return AuditResource
+    */
+    public function setType($val)
+    {
+        $this->_propDict["type"] = $val;
         return $this;
     }
 }

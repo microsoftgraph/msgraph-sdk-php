@@ -24,6 +24,32 @@ namespace Beta\Microsoft\Graph\Model;
 class AssignmentReviewSettings extends Entity
 {
     /**
+    * Gets the durationInDays
+    *
+    * @return int The durationInDays
+    */
+    public function getDurationInDays()
+    {
+        if (array_key_exists("durationInDays", $this->_propDict)) {
+            return $this->_propDict["durationInDays"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the durationInDays
+    *
+    * @param int $val The value of the durationInDays
+    *
+    * @return AssignmentReviewSettings
+    */
+    public function setDurationInDays($val)
+    {
+        $this->_propDict["durationInDays"] = $val;
+        return $this;
+    }
+    /**
     * Gets the isEnabled
     *
     * @return bool The isEnabled
@@ -74,6 +100,37 @@ class AssignmentReviewSettings extends Entity
     {
         $this->_propDict["recurrenceType"] = $val;
         return $this;
+    }
+
+    /**
+    * Gets the reviewers
+    *
+    * @return UserSet The reviewers
+    */
+    public function getReviewers()
+    {
+        if (array_key_exists("reviewers", $this->_propDict)) {
+            if (is_a($this->_propDict["reviewers"], "Beta\Microsoft\Graph\Model\UserSet")) {
+                return $this->_propDict["reviewers"];
+            } else {
+                $this->_propDict["reviewers"] = new UserSet($this->_propDict["reviewers"]);
+                return $this->_propDict["reviewers"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the reviewers
+    *
+    * @param UserSet $val The value to assign to the reviewers
+    *
+    * @return AssignmentReviewSettings The AssignmentReviewSettings
+    */
+    public function setReviewers($val)
+    {
+        $this->_propDict["reviewers"] = $val;
+         return $this;
     }
     /**
     * Gets the reviewerType
@@ -130,63 +187,6 @@ class AssignmentReviewSettings extends Entity
     public function setStartDateTime($val)
     {
         $this->_propDict["startDateTime"] = $val;
-         return $this;
-    }
-    /**
-    * Gets the durationInDays
-    *
-    * @return int The durationInDays
-    */
-    public function getDurationInDays()
-    {
-        if (array_key_exists("durationInDays", $this->_propDict)) {
-            return $this->_propDict["durationInDays"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the durationInDays
-    *
-    * @param int $val The value of the durationInDays
-    *
-    * @return AssignmentReviewSettings
-    */
-    public function setDurationInDays($val)
-    {
-        $this->_propDict["durationInDays"] = $val;
-        return $this;
-    }
-
-    /**
-    * Gets the reviewers
-    *
-    * @return UserSet The reviewers
-    */
-    public function getReviewers()
-    {
-        if (array_key_exists("reviewers", $this->_propDict)) {
-            if (is_a($this->_propDict["reviewers"], "Beta\Microsoft\Graph\Model\UserSet")) {
-                return $this->_propDict["reviewers"];
-            } else {
-                $this->_propDict["reviewers"] = new UserSet($this->_propDict["reviewers"]);
-                return $this->_propDict["reviewers"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the reviewers
-    *
-    * @param UserSet $val The value to assign to the reviewers
-    *
-    * @return AssignmentReviewSettings The AssignmentReviewSettings
-    */
-    public function setReviewers($val)
-    {
-        $this->_propDict["reviewers"] = $val;
          return $this;
     }
 }

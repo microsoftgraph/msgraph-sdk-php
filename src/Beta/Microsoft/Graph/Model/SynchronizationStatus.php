@@ -23,6 +23,37 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class SynchronizationStatus extends Entity
 {
+
+    /**
+    * Gets the code
+    *
+    * @return SynchronizationStatusCode The code
+    */
+    public function getCode()
+    {
+        if (array_key_exists("code", $this->_propDict)) {
+            if (is_a($this->_propDict["code"], "Beta\Microsoft\Graph\Model\SynchronizationStatusCode")) {
+                return $this->_propDict["code"];
+            } else {
+                $this->_propDict["code"] = new SynchronizationStatusCode($this->_propDict["code"]);
+                return $this->_propDict["code"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the code
+    *
+    * @param SynchronizationStatusCode $val The value to assign to the code
+    *
+    * @return SynchronizationStatus The SynchronizationStatus
+    */
+    public function setCode($val)
+    {
+        $this->_propDict["code"] = $val;
+         return $this;
+    }
     /**
     * Gets the countSuccessiveCompleteFailures
     *
@@ -74,37 +105,6 @@ class SynchronizationStatus extends Entity
     {
         $this->_propDict["escrowsPruned"] = $val;
         return $this;
-    }
-
-    /**
-    * Gets the code
-    *
-    * @return SynchronizationStatusCode The code
-    */
-    public function getCode()
-    {
-        if (array_key_exists("code", $this->_propDict)) {
-            if (is_a($this->_propDict["code"], "Beta\Microsoft\Graph\Model\SynchronizationStatusCode")) {
-                return $this->_propDict["code"];
-            } else {
-                $this->_propDict["code"] = new SynchronizationStatusCode($this->_propDict["code"]);
-                return $this->_propDict["code"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the code
-    *
-    * @param SynchronizationStatusCode $val The value to assign to the code
-    *
-    * @return SynchronizationStatus The SynchronizationStatus
-    */
-    public function setCode($val)
-    {
-        $this->_propDict["code"] = $val;
-         return $this;
     }
 
     /**

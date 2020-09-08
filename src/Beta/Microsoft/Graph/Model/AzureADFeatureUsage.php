@@ -25,6 +25,33 @@ namespace Beta\Microsoft\Graph\Model;
 class AzureADFeatureUsage extends Entity
 {
     /**
+    * Gets the featureName
+    *
+    * @return string The featureName
+    */
+    public function getFeatureName()
+    {
+        if (array_key_exists("featureName", $this->_propDict)) {
+            return $this->_propDict["featureName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the featureName
+    *
+    * @param string $val The featureName
+    *
+    * @return AzureADFeatureUsage
+    */
+    public function setFeatureName($val)
+    {
+        $this->_propDict["featureName"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the snapshotDateTime
     *
     * @return \DateTime The snapshotDateTime
@@ -52,33 +79,6 @@ class AzureADFeatureUsage extends Entity
     public function setSnapshotDateTime($val)
     {
         $this->_propDict["snapshotDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the featureName
-    *
-    * @return string The featureName
-    */
-    public function getFeatureName()
-    {
-        if (array_key_exists("featureName", $this->_propDict)) {
-            return $this->_propDict["featureName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the featureName
-    *
-    * @param string $val The featureName
-    *
-    * @return AzureADFeatureUsage
-    */
-    public function setFeatureName($val)
-    {
-        $this->_propDict["featureName"] = $val;
         return $this;
     }
     

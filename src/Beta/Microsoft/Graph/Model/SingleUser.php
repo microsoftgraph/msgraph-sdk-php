@@ -24,32 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class SingleUser extends UserSet
 {
     /**
-    * Gets the id
-    *
-    * @return string The id
-    */
-    public function getId()
-    {
-        if (array_key_exists("id", $this->_propDict)) {
-            return $this->_propDict["id"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the id
-    *
-    * @param string $val The value of the id
-    *
-    * @return SingleUser
-    */
-    public function setId($val)
-    {
-        $this->_propDict["id"] = $val;
-        return $this;
-    }
-    /**
     * Gets the description
     *
     * @return string The description
@@ -73,6 +47,32 @@ class SingleUser extends UserSet
     public function setDescription($val)
     {
         $this->_propDict["description"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the id
+    *
+    * @return string The id
+    */
+    public function getId()
+    {
+        if (array_key_exists("id", $this->_propDict)) {
+            return $this->_propDict["id"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the id
+    *
+    * @param string $val The value of the id
+    *
+    * @return SingleUser
+    */
+    public function setId($val)
+    {
+        $this->_propDict["id"] = $val;
         return $this;
     }
 }

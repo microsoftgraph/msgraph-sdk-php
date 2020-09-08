@@ -25,6 +25,39 @@ namespace Beta\Microsoft\Graph\Model;
 class Windows81WifiImportConfiguration extends DeviceConfiguration
 {
     /**
+    * Gets the payload
+    * Payload. (UTF8 encoded byte array). This is the XML file saved on the device you used to connect to the Wi-Fi endpoint.
+    *
+    * @return \GuzzleHttp\Psr7\Stream The payload
+    */
+    public function getPayload()
+    {
+        if (array_key_exists("payload", $this->_propDict)) {
+            if (is_a($this->_propDict["payload"], "\GuzzleHttp\Psr7\Stream")) {
+                return $this->_propDict["payload"];
+            } else {
+                $this->_propDict["payload"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["payload"]);
+                return $this->_propDict["payload"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the payload
+    * Payload. (UTF8 encoded byte array). This is the XML file saved on the device you used to connect to the Wi-Fi endpoint.
+    *
+    * @param \GuzzleHttp\Psr7\Stream $val The payload
+    *
+    * @return Windows81WifiImportConfiguration
+    */
+    public function setPayload($val)
+    {
+        $this->_propDict["payload"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the payloadFileName
     * Payload file name (*.xml).
     *
@@ -79,39 +112,6 @@ class Windows81WifiImportConfiguration extends DeviceConfiguration
     public function setProfileName($val)
     {
         $this->_propDict["profileName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the payload
-    * Payload. (UTF8 encoded byte array). This is the XML file saved on the device you used to connect to the Wi-Fi endpoint.
-    *
-    * @return \GuzzleHttp\Psr7\Stream The payload
-    */
-    public function getPayload()
-    {
-        if (array_key_exists("payload", $this->_propDict)) {
-            if (is_a($this->_propDict["payload"], "\GuzzleHttp\Psr7\Stream")) {
-                return $this->_propDict["payload"];
-            } else {
-                $this->_propDict["payload"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["payload"]);
-                return $this->_propDict["payload"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the payload
-    * Payload. (UTF8 encoded byte array). This is the XML file saved on the device you used to connect to the Wi-Fi endpoint.
-    *
-    * @param \GuzzleHttp\Psr7\Stream $val The payload
-    *
-    * @return Windows81WifiImportConfiguration
-    */
-    public function setPayload($val)
-    {
-        $this->_propDict["payload"] = $val;
         return $this;
     }
     

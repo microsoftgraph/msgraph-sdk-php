@@ -25,29 +25,29 @@ namespace Beta\Microsoft\Graph\Model;
 class Notification extends Entity
 {
     /**
-    * Gets the targetHostName
+    * Gets the displayTimeToLive
     *
-    * @return string The targetHostName
+    * @return int The displayTimeToLive
     */
-    public function getTargetHostName()
+    public function getDisplayTimeToLive()
     {
-        if (array_key_exists("targetHostName", $this->_propDict)) {
-            return $this->_propDict["targetHostName"];
+        if (array_key_exists("displayTimeToLive", $this->_propDict)) {
+            return $this->_propDict["displayTimeToLive"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the targetHostName
+    * Sets the displayTimeToLive
     *
-    * @param string $val The targetHostName
+    * @param int $val The displayTimeToLive
     *
     * @return Notification
     */
-    public function setTargetHostName($val)
+    public function setDisplayTimeToLive($val)
     {
-        $this->_propDict["targetHostName"] = $val;
+        $this->_propDict["displayTimeToLive"] = intval($val);
         return $this;
     }
     
@@ -83,6 +83,33 @@ class Notification extends Entity
     }
     
     /**
+    * Gets the groupName
+    *
+    * @return string The groupName
+    */
+    public function getGroupName()
+    {
+        if (array_key_exists("groupName", $this->_propDict)) {
+            return $this->_propDict["groupName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the groupName
+    *
+    * @param string $val The groupName
+    *
+    * @return Notification
+    */
+    public function setGroupName($val)
+    {
+        $this->_propDict["groupName"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the payload
     *
     * @return PayloadTypes The payload
@@ -110,33 +137,6 @@ class Notification extends Entity
     public function setPayload($val)
     {
         $this->_propDict["payload"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the displayTimeToLive
-    *
-    * @return int The displayTimeToLive
-    */
-    public function getDisplayTimeToLive()
-    {
-        if (array_key_exists("displayTimeToLive", $this->_propDict)) {
-            return $this->_propDict["displayTimeToLive"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the displayTimeToLive
-    *
-    * @param int $val The displayTimeToLive
-    *
-    * @return Notification
-    */
-    public function setDisplayTimeToLive($val)
-    {
-        $this->_propDict["displayTimeToLive"] = intval($val);
         return $this;
     }
     
@@ -172,29 +172,29 @@ class Notification extends Entity
     }
     
     /**
-    * Gets the groupName
+    * Gets the targetHostName
     *
-    * @return string The groupName
+    * @return string The targetHostName
     */
-    public function getGroupName()
+    public function getTargetHostName()
     {
-        if (array_key_exists("groupName", $this->_propDict)) {
-            return $this->_propDict["groupName"];
+        if (array_key_exists("targetHostName", $this->_propDict)) {
+            return $this->_propDict["targetHostName"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the groupName
+    * Sets the targetHostName
     *
-    * @param string $val The groupName
+    * @param string $val The targetHostName
     *
     * @return Notification
     */
-    public function setGroupName($val)
+    public function setTargetHostName($val)
     {
-        $this->_propDict["groupName"] = $val;
+        $this->_propDict["targetHostName"] = $val;
         return $this;
     }
     

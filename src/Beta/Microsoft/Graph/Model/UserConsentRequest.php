@@ -25,33 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class UserConsentRequest extends Request
 {
     /**
-    * Gets the reason
-    *
-    * @return string The reason
-    */
-    public function getReason()
-    {
-        if (array_key_exists("reason", $this->_propDict)) {
-            return $this->_propDict["reason"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the reason
-    *
-    * @param string $val The reason
-    *
-    * @return UserConsentRequest
-    */
-    public function setReason($val)
-    {
-        $this->_propDict["reason"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the createdBy
     *
     * @return UserIdentity The createdBy
@@ -110,6 +83,33 @@ class UserConsentRequest extends Request
     public function setCreatedDateTime($val)
     {
         $this->_propDict["createdDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the reason
+    *
+    * @return string The reason
+    */
+    public function getReason()
+    {
+        if (array_key_exists("reason", $this->_propDict)) {
+            return $this->_propDict["reason"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the reason
+    *
+    * @param string $val The reason
+    *
+    * @return UserConsentRequest
+    */
+    public function setReason($val)
+    {
+        $this->_propDict["reason"] = $val;
         return $this;
     }
     

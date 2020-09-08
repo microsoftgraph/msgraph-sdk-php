@@ -23,6 +23,58 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class SearchRequest extends Entity
 {
+    /**
+    * Gets the contentSources
+    *
+    * @return string The contentSources
+    */
+    public function getContentSources()
+    {
+        if (array_key_exists("contentSources", $this->_propDict)) {
+            return $this->_propDict["contentSources"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the contentSources
+    *
+    * @param string $val The value of the contentSources
+    *
+    * @return SearchRequest
+    */
+    public function setContentSources($val)
+    {
+        $this->_propDict["contentSources"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the enableTopResults
+    *
+    * @return bool The enableTopResults
+    */
+    public function getEnableTopResults()
+    {
+        if (array_key_exists("enableTopResults", $this->_propDict)) {
+            return $this->_propDict["enableTopResults"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the enableTopResults
+    *
+    * @param bool $val The value of the enableTopResults
+    *
+    * @return SearchRequest
+    */
+    public function setEnableTopResults($val)
+    {
+        $this->_propDict["enableTopResults"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the entityTypes
@@ -55,29 +107,29 @@ class SearchRequest extends Entity
          return $this;
     }
     /**
-    * Gets the contentSources
+    * Gets the from
     *
-    * @return string The contentSources
+    * @return int The from
     */
-    public function getContentSources()
+    public function getFrom()
     {
-        if (array_key_exists("contentSources", $this->_propDict)) {
-            return $this->_propDict["contentSources"];
+        if (array_key_exists("from", $this->_propDict)) {
+            return $this->_propDict["from"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the contentSources
+    * Sets the from
     *
-    * @param string $val The value of the contentSources
+    * @param int $val The value of the from
     *
     * @return SearchRequest
     */
-    public function setContentSources($val)
+    public function setFrom($val)
     {
-        $this->_propDict["contentSources"] = $val;
+        $this->_propDict["from"] = $val;
         return $this;
     }
 
@@ -110,32 +162,6 @@ class SearchRequest extends Entity
     {
         $this->_propDict["query"] = $val;
          return $this;
-    }
-    /**
-    * Gets the from
-    *
-    * @return int The from
-    */
-    public function getFrom()
-    {
-        if (array_key_exists("from", $this->_propDict)) {
-            return $this->_propDict["from"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the from
-    *
-    * @param int $val The value of the from
-    *
-    * @return SearchRequest
-    */
-    public function setFrom($val)
-    {
-        $this->_propDict["from"] = $val;
-        return $this;
     }
     /**
     * Gets the size
@@ -187,32 +213,6 @@ class SearchRequest extends Entity
     public function setStored_fields($val)
     {
         $this->_propDict["storedFields"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the enableTopResults
-    *
-    * @return bool The enableTopResults
-    */
-    public function getEnableTopResults()
-    {
-        if (array_key_exists("enableTopResults", $this->_propDict)) {
-            return $this->_propDict["enableTopResults"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the enableTopResults
-    *
-    * @param bool $val The value of the enableTopResults
-    *
-    * @return SearchRequest
-    */
-    public function setEnableTopResults($val)
-    {
-        $this->_propDict["enableTopResults"] = $val;
         return $this;
     }
 }

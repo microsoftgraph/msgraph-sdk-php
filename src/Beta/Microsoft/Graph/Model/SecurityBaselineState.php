@@ -25,35 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class SecurityBaselineState extends Entity
 {
     /**
-    * Gets the securityBaselineTemplateId
-    * The security baseline template id
-    *
-    * @return string The securityBaselineTemplateId
-    */
-    public function getSecurityBaselineTemplateId()
-    {
-        if (array_key_exists("securityBaselineTemplateId", $this->_propDict)) {
-            return $this->_propDict["securityBaselineTemplateId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the securityBaselineTemplateId
-    * The security baseline template id
-    *
-    * @param string $val The securityBaselineTemplateId
-    *
-    * @return SecurityBaselineState
-    */
-    public function setSecurityBaselineTemplateId($val)
-    {
-        $this->_propDict["securityBaselineTemplateId"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the displayName
     * The display name of the security baseline
     *
@@ -79,6 +50,35 @@ class SecurityBaselineState extends Entity
     public function setDisplayName($val)
     {
         $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the securityBaselineTemplateId
+    * The security baseline template id
+    *
+    * @return string The securityBaselineTemplateId
+    */
+    public function getSecurityBaselineTemplateId()
+    {
+        if (array_key_exists("securityBaselineTemplateId", $this->_propDict)) {
+            return $this->_propDict["securityBaselineTemplateId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the securityBaselineTemplateId
+    * The security baseline template id
+    *
+    * @param string $val The securityBaselineTemplateId
+    *
+    * @return SecurityBaselineState
+    */
+    public function setSecurityBaselineTemplateId($val)
+    {
+        $this->_propDict["securityBaselineTemplateId"] = $val;
         return $this;
     }
     

@@ -25,89 +25,35 @@ namespace Beta\Microsoft\Graph\Model;
 class ManagedDeviceOverview extends Entity
 {
     /**
-    * Gets the enrolledDeviceCount
-    * Total enrolled device count. Does not include PC devices managed via Intune PC Agent
+    * Gets the deviceExchangeAccessStateSummary
+    * Distribution of Exchange Access State in Intune
     *
-    * @return int The enrolledDeviceCount
+    * @return DeviceExchangeAccessStateSummary The deviceExchangeAccessStateSummary
     */
-    public function getEnrolledDeviceCount()
+    public function getDeviceExchangeAccessStateSummary()
     {
-        if (array_key_exists("enrolledDeviceCount", $this->_propDict)) {
-            return $this->_propDict["enrolledDeviceCount"];
-        } else {
-            return null;
+        if (array_key_exists("deviceExchangeAccessStateSummary", $this->_propDict)) {
+            if (is_a($this->_propDict["deviceExchangeAccessStateSummary"], "Beta\Microsoft\Graph\Model\DeviceExchangeAccessStateSummary")) {
+                return $this->_propDict["deviceExchangeAccessStateSummary"];
+            } else {
+                $this->_propDict["deviceExchangeAccessStateSummary"] = new DeviceExchangeAccessStateSummary($this->_propDict["deviceExchangeAccessStateSummary"]);
+                return $this->_propDict["deviceExchangeAccessStateSummary"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the enrolledDeviceCount
-    * Total enrolled device count. Does not include PC devices managed via Intune PC Agent
+    * Sets the deviceExchangeAccessStateSummary
+    * Distribution of Exchange Access State in Intune
     *
-    * @param int $val The enrolledDeviceCount
+    * @param DeviceExchangeAccessStateSummary $val The deviceExchangeAccessStateSummary
     *
     * @return ManagedDeviceOverview
     */
-    public function setEnrolledDeviceCount($val)
+    public function setDeviceExchangeAccessStateSummary($val)
     {
-        $this->_propDict["enrolledDeviceCount"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the mdmEnrolledCount
-    * The number of devices enrolled in MDM
-    *
-    * @return int The mdmEnrolledCount
-    */
-    public function getMdmEnrolledCount()
-    {
-        if (array_key_exists("mdmEnrolledCount", $this->_propDict)) {
-            return $this->_propDict["mdmEnrolledCount"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the mdmEnrolledCount
-    * The number of devices enrolled in MDM
-    *
-    * @param int $val The mdmEnrolledCount
-    *
-    * @return ManagedDeviceOverview
-    */
-    public function setMdmEnrolledCount($val)
-    {
-        $this->_propDict["mdmEnrolledCount"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the dualEnrolledDeviceCount
-    * The number of devices enrolled in both MDM and EAS
-    *
-    * @return int The dualEnrolledDeviceCount
-    */
-    public function getDualEnrolledDeviceCount()
-    {
-        if (array_key_exists("dualEnrolledDeviceCount", $this->_propDict)) {
-            return $this->_propDict["dualEnrolledDeviceCount"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the dualEnrolledDeviceCount
-    * The number of devices enrolled in both MDM and EAS
-    *
-    * @param int $val The dualEnrolledDeviceCount
-    *
-    * @return ManagedDeviceOverview
-    */
-    public function setDualEnrolledDeviceCount($val)
-    {
-        $this->_propDict["dualEnrolledDeviceCount"] = intval($val);
+        $this->_propDict["deviceExchangeAccessStateSummary"] = $val;
         return $this;
     }
     
@@ -145,35 +91,93 @@ class ManagedDeviceOverview extends Entity
     }
     
     /**
-    * Gets the deviceExchangeAccessStateSummary
-    * Distribution of Exchange Access State in Intune
+    * Gets the dualEnrolledDeviceCount
+    * The number of devices enrolled in both MDM and EAS
     *
-    * @return DeviceExchangeAccessStateSummary The deviceExchangeAccessStateSummary
+    * @return int The dualEnrolledDeviceCount
     */
-    public function getDeviceExchangeAccessStateSummary()
+    public function getDualEnrolledDeviceCount()
     {
-        if (array_key_exists("deviceExchangeAccessStateSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceExchangeAccessStateSummary"], "Beta\Microsoft\Graph\Model\DeviceExchangeAccessStateSummary")) {
-                return $this->_propDict["deviceExchangeAccessStateSummary"];
+        if (array_key_exists("dualEnrolledDeviceCount", $this->_propDict)) {
+            return $this->_propDict["dualEnrolledDeviceCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the dualEnrolledDeviceCount
+    * The number of devices enrolled in both MDM and EAS
+    *
+    * @param int $val The dualEnrolledDeviceCount
+    *
+    * @return ManagedDeviceOverview
+    */
+    public function setDualEnrolledDeviceCount($val)
+    {
+        $this->_propDict["dualEnrolledDeviceCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the enrolledDeviceCount
+    * Total enrolled device count. Does not include PC devices managed via Intune PC Agent
+    *
+    * @return int The enrolledDeviceCount
+    */
+    public function getEnrolledDeviceCount()
+    {
+        if (array_key_exists("enrolledDeviceCount", $this->_propDict)) {
+            return $this->_propDict["enrolledDeviceCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the enrolledDeviceCount
+    * Total enrolled device count. Does not include PC devices managed via Intune PC Agent
+    *
+    * @param int $val The enrolledDeviceCount
+    *
+    * @return ManagedDeviceOverview
+    */
+    public function setEnrolledDeviceCount($val)
+    {
+        $this->_propDict["enrolledDeviceCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the lastModifiedDateTime
+    * Last modified date time of device overview
+    *
+    * @return \DateTime The lastModifiedDateTime
+    */
+    public function getLastModifiedDateTime()
+    {
+        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+                return $this->_propDict["lastModifiedDateTime"];
             } else {
-                $this->_propDict["deviceExchangeAccessStateSummary"] = new DeviceExchangeAccessStateSummary($this->_propDict["deviceExchangeAccessStateSummary"]);
-                return $this->_propDict["deviceExchangeAccessStateSummary"];
+                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
+                return $this->_propDict["lastModifiedDateTime"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the deviceExchangeAccessStateSummary
-    * Distribution of Exchange Access State in Intune
+    * Sets the lastModifiedDateTime
+    * Last modified date time of device overview
     *
-    * @param DeviceExchangeAccessStateSummary $val The deviceExchangeAccessStateSummary
+    * @param \DateTime $val The lastModifiedDateTime
     *
     * @return ManagedDeviceOverview
     */
-    public function setDeviceExchangeAccessStateSummary($val)
+    public function setLastModifiedDateTime($val)
     {
-        $this->_propDict["deviceExchangeAccessStateSummary"] = $val;
+        $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
     
@@ -211,35 +215,31 @@ class ManagedDeviceOverview extends Entity
     }
     
     /**
-    * Gets the lastModifiedDateTime
-    * Last modified date time of device overview
+    * Gets the mdmEnrolledCount
+    * The number of devices enrolled in MDM
     *
-    * @return \DateTime The lastModifiedDateTime
+    * @return int The mdmEnrolledCount
     */
-    public function getLastModifiedDateTime()
+    public function getMdmEnrolledCount()
     {
-        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
-                return $this->_propDict["lastModifiedDateTime"];
-            } else {
-                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
-                return $this->_propDict["lastModifiedDateTime"];
-            }
+        if (array_key_exists("mdmEnrolledCount", $this->_propDict)) {
+            return $this->_propDict["mdmEnrolledCount"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the lastModifiedDateTime
-    * Last modified date time of device overview
+    * Sets the mdmEnrolledCount
+    * The number of devices enrolled in MDM
     *
-    * @param \DateTime $val The lastModifiedDateTime
+    * @param int $val The mdmEnrolledCount
     *
     * @return ManagedDeviceOverview
     */
-    public function setLastModifiedDateTime($val)
+    public function setMdmEnrolledCount($val)
     {
-        $this->_propDict["lastModifiedDateTime"] = $val;
+        $this->_propDict["mdmEnrolledCount"] = intval($val);
         return $this;
     }
     

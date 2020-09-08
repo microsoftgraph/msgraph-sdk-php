@@ -25,29 +25,33 @@ namespace Beta\Microsoft\Graph\Model;
 class SensitiveType extends Entity
 {
     /**
-    * Gets the name
+    * Gets the classificationMethod
     *
-    * @return string The name
+    * @return ClassificationMethod The classificationMethod
     */
-    public function getName()
+    public function getClassificationMethod()
     {
-        if (array_key_exists("name", $this->_propDict)) {
-            return $this->_propDict["name"];
-        } else {
-            return null;
+        if (array_key_exists("classificationMethod", $this->_propDict)) {
+            if (is_a($this->_propDict["classificationMethod"], "Beta\Microsoft\Graph\Model\ClassificationMethod")) {
+                return $this->_propDict["classificationMethod"];
+            } else {
+                $this->_propDict["classificationMethod"] = new ClassificationMethod($this->_propDict["classificationMethod"]);
+                return $this->_propDict["classificationMethod"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the name
+    * Sets the classificationMethod
     *
-    * @param string $val The name
+    * @param ClassificationMethod $val The classificationMethod
     *
     * @return SensitiveType
     */
-    public function setName($val)
+    public function setClassificationMethod($val)
     {
-        $this->_propDict["name"] = $val;
+        $this->_propDict["classificationMethod"] = $val;
         return $this;
     }
     
@@ -75,6 +79,60 @@ class SensitiveType extends Entity
     public function setDescription($val)
     {
         $this->_propDict["description"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the name
+    *
+    * @return string The name
+    */
+    public function getName()
+    {
+        if (array_key_exists("name", $this->_propDict)) {
+            return $this->_propDict["name"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the name
+    *
+    * @param string $val The name
+    *
+    * @return SensitiveType
+    */
+    public function setName($val)
+    {
+        $this->_propDict["name"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the publisherName
+    *
+    * @return string The publisherName
+    */
+    public function getPublisherName()
+    {
+        if (array_key_exists("publisherName", $this->_propDict)) {
+            return $this->_propDict["publisherName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the publisherName
+    *
+    * @param string $val The publisherName
+    *
+    * @return SensitiveType
+    */
+    public function setPublisherName($val)
+    {
+        $this->_propDict["publisherName"] = $val;
         return $this;
     }
     
@@ -129,60 +187,6 @@ class SensitiveType extends Entity
     public function setRulePackageType($val)
     {
         $this->_propDict["rulePackageType"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the publisherName
-    *
-    * @return string The publisherName
-    */
-    public function getPublisherName()
-    {
-        if (array_key_exists("publisherName", $this->_propDict)) {
-            return $this->_propDict["publisherName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the publisherName
-    *
-    * @param string $val The publisherName
-    *
-    * @return SensitiveType
-    */
-    public function setPublisherName($val)
-    {
-        $this->_propDict["publisherName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the state
-    *
-    * @return string The state
-    */
-    public function getState()
-    {
-        if (array_key_exists("state", $this->_propDict)) {
-            return $this->_propDict["state"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the state
-    *
-    * @param string $val The state
-    *
-    * @return SensitiveType
-    */
-    public function setState($val)
-    {
-        $this->_propDict["state"] = $val;
         return $this;
     }
     
@@ -249,33 +253,29 @@ class SensitiveType extends Entity
     }
     
     /**
-    * Gets the classificationMethod
+    * Gets the state
     *
-    * @return ClassificationMethod The classificationMethod
+    * @return string The state
     */
-    public function getClassificationMethod()
+    public function getState()
     {
-        if (array_key_exists("classificationMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["classificationMethod"], "Beta\Microsoft\Graph\Model\ClassificationMethod")) {
-                return $this->_propDict["classificationMethod"];
-            } else {
-                $this->_propDict["classificationMethod"] = new ClassificationMethod($this->_propDict["classificationMethod"]);
-                return $this->_propDict["classificationMethod"];
-            }
+        if (array_key_exists("state", $this->_propDict)) {
+            return $this->_propDict["state"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the classificationMethod
+    * Sets the state
     *
-    * @param ClassificationMethod $val The classificationMethod
+    * @param string $val The state
     *
     * @return SensitiveType
     */
-    public function setClassificationMethod($val)
+    public function setState($val)
     {
-        $this->_propDict["classificationMethod"] = $val;
+        $this->_propDict["state"] = $val;
         return $this;
     }
     

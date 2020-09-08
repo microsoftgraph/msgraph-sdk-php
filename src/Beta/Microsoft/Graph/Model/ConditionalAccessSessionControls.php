@@ -91,39 +91,6 @@ class ConditionalAccessSessionControls extends Entity
     }
 
     /**
-    * Gets the signInFrequency
-    * Session control to enforce signin frequency.
-    *
-    * @return SignInFrequencySessionControl The signInFrequency
-    */
-    public function getSignInFrequency()
-    {
-        if (array_key_exists("signInFrequency", $this->_propDict)) {
-            if (is_a($this->_propDict["signInFrequency"], "Beta\Microsoft\Graph\Model\SignInFrequencySessionControl")) {
-                return $this->_propDict["signInFrequency"];
-            } else {
-                $this->_propDict["signInFrequency"] = new SignInFrequencySessionControl($this->_propDict["signInFrequency"]);
-                return $this->_propDict["signInFrequency"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the signInFrequency
-    * Session control to enforce signin frequency.
-    *
-    * @param SignInFrequencySessionControl $val The value to assign to the signInFrequency
-    *
-    * @return ConditionalAccessSessionControls The ConditionalAccessSessionControls
-    */
-    public function setSignInFrequency($val)
-    {
-        $this->_propDict["signInFrequency"] = $val;
-         return $this;
-    }
-
-    /**
     * Gets the persistentBrowser
     * Session control to define whether to persist cookies or not. All apps should be selected for this session control to work correctly.
     *
@@ -153,6 +120,39 @@ class ConditionalAccessSessionControls extends Entity
     public function setPersistentBrowser($val)
     {
         $this->_propDict["persistentBrowser"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the signInFrequency
+    * Session control to enforce signin frequency.
+    *
+    * @return SignInFrequencySessionControl The signInFrequency
+    */
+    public function getSignInFrequency()
+    {
+        if (array_key_exists("signInFrequency", $this->_propDict)) {
+            if (is_a($this->_propDict["signInFrequency"], "Beta\Microsoft\Graph\Model\SignInFrequencySessionControl")) {
+                return $this->_propDict["signInFrequency"];
+            } else {
+                $this->_propDict["signInFrequency"] = new SignInFrequencySessionControl($this->_propDict["signInFrequency"]);
+                return $this->_propDict["signInFrequency"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the signInFrequency
+    * Session control to enforce signin frequency.
+    *
+    * @param SignInFrequencySessionControl $val The value to assign to the signInFrequency
+    *
+    * @return ConditionalAccessSessionControls The ConditionalAccessSessionControls
+    */
+    public function setSignInFrequency($val)
+    {
+        $this->_propDict["signInFrequency"] = $val;
          return $this;
     }
 }

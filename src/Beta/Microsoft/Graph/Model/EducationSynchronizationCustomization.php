@@ -24,6 +24,58 @@ namespace Beta\Microsoft\Graph\Model;
 class EducationSynchronizationCustomization extends Entity
 {
     /**
+    * Gets the allowDisplayNameUpdate
+    *
+    * @return bool The allowDisplayNameUpdate
+    */
+    public function getAllowDisplayNameUpdate()
+    {
+        if (array_key_exists("allowDisplayNameUpdate", $this->_propDict)) {
+            return $this->_propDict["allowDisplayNameUpdate"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the allowDisplayNameUpdate
+    *
+    * @param bool $val The value of the allowDisplayNameUpdate
+    *
+    * @return EducationSynchronizationCustomization
+    */
+    public function setAllowDisplayNameUpdate($val)
+    {
+        $this->_propDict["allowDisplayNameUpdate"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the isSyncDeferred
+    *
+    * @return bool The isSyncDeferred
+    */
+    public function getIsSyncDeferred()
+    {
+        if (array_key_exists("isSyncDeferred", $this->_propDict)) {
+            return $this->_propDict["isSyncDeferred"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isSyncDeferred
+    *
+    * @param bool $val The value of the isSyncDeferred
+    *
+    * @return EducationSynchronizationCustomization
+    */
+    public function setIsSyncDeferred($val)
+    {
+        $this->_propDict["isSyncDeferred"] = $val;
+        return $this;
+    }
+    /**
     * Gets the optionalPropertiesToSync
     *
     * @return string The optionalPropertiesToSync
@@ -79,57 +131,5 @@ class EducationSynchronizationCustomization extends Entity
     {
         $this->_propDict["synchronizationStartDate"] = $val;
          return $this;
-    }
-    /**
-    * Gets the isSyncDeferred
-    *
-    * @return bool The isSyncDeferred
-    */
-    public function getIsSyncDeferred()
-    {
-        if (array_key_exists("isSyncDeferred", $this->_propDict)) {
-            return $this->_propDict["isSyncDeferred"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the isSyncDeferred
-    *
-    * @param bool $val The value of the isSyncDeferred
-    *
-    * @return EducationSynchronizationCustomization
-    */
-    public function setIsSyncDeferred($val)
-    {
-        $this->_propDict["isSyncDeferred"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the allowDisplayNameUpdate
-    *
-    * @return bool The allowDisplayNameUpdate
-    */
-    public function getAllowDisplayNameUpdate()
-    {
-        if (array_key_exists("allowDisplayNameUpdate", $this->_propDict)) {
-            return $this->_propDict["allowDisplayNameUpdate"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the allowDisplayNameUpdate
-    *
-    * @param bool $val The value of the allowDisplayNameUpdate
-    *
-    * @return EducationSynchronizationCustomization
-    */
-    public function setAllowDisplayNameUpdate($val)
-    {
-        $this->_propDict["allowDisplayNameUpdate"] = $val;
-        return $this;
     }
 }

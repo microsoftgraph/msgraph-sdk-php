@@ -52,6 +52,33 @@ class SkillProficiency extends ItemFacet
     }
     
     /**
+    * Gets the collaborationTags
+    *
+    * @return string The collaborationTags
+    */
+    public function getCollaborationTags()
+    {
+        if (array_key_exists("collaborationTags", $this->_propDict)) {
+            return $this->_propDict["collaborationTags"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the collaborationTags
+    *
+    * @param string $val The collaborationTags
+    *
+    * @return SkillProficiency
+    */
+    public function setCollaborationTags($val)
+    {
+        $this->_propDict["collaborationTags"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the displayName
     *
     * @return string The displayName
@@ -133,33 +160,6 @@ class SkillProficiency extends ItemFacet
     public function setWebUrl($val)
     {
         $this->_propDict["webUrl"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the collaborationTags
-    *
-    * @return string The collaborationTags
-    */
-    public function getCollaborationTags()
-    {
-        if (array_key_exists("collaborationTags", $this->_propDict)) {
-            return $this->_propDict["collaborationTags"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the collaborationTags
-    *
-    * @param string $val The collaborationTags
-    *
-    * @return SkillProficiency
-    */
-    public function setCollaborationTags($val)
-    {
-        $this->_propDict["collaborationTags"] = $val;
         return $this;
     }
     

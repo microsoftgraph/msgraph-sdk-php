@@ -25,87 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class JobResponseBase extends Entity
 {
     /**
-    * Gets the type
-    *
-    * @return string The type
-    */
-    public function getType()
-    {
-        if (array_key_exists("type", $this->_propDict)) {
-            return $this->_propDict["type"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the type
-    *
-    * @param string $val The type
-    *
-    * @return JobResponseBase
-    */
-    public function setType($val)
-    {
-        $this->_propDict["type"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the status
-    *
-    * @return string The status
-    */
-    public function getStatus()
-    {
-        if (array_key_exists("status", $this->_propDict)) {
-            return $this->_propDict["status"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the status
-    *
-    * @param string $val The status
-    *
-    * @return JobResponseBase
-    */
-    public function setStatus($val)
-    {
-        $this->_propDict["status"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the tenantId
-    *
-    * @return string The tenantId
-    */
-    public function getTenantId()
-    {
-        if (array_key_exists("tenantId", $this->_propDict)) {
-            return $this->_propDict["tenantId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the tenantId
-    *
-    * @param string $val The tenantId
-    *
-    * @return JobResponseBase
-    */
-    public function setTenantId($val)
-    {
-        $this->_propDict["tenantId"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the creationDateTime
     *
     * @return \DateTime The creationDateTime
@@ -133,37 +52,6 @@ class JobResponseBase extends Entity
     public function setCreationDateTime($val)
     {
         $this->_propDict["creationDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the startDateTime
-    *
-    * @return \DateTime The startDateTime
-    */
-    public function getStartDateTime()
-    {
-        if (array_key_exists("startDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
-                return $this->_propDict["startDateTime"];
-            } else {
-                $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);
-                return $this->_propDict["startDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the startDateTime
-    *
-    * @param \DateTime $val The startDateTime
-    *
-    * @return JobResponseBase
-    */
-    public function setStartDateTime($val)
-    {
-        $this->_propDict["startDateTime"] = $val;
         return $this;
     }
     
@@ -226,6 +114,118 @@ class JobResponseBase extends Entity
     public function setError($val)
     {
         $this->_propDict["error"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the startDateTime
+    *
+    * @return \DateTime The startDateTime
+    */
+    public function getStartDateTime()
+    {
+        if (array_key_exists("startDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
+                return $this->_propDict["startDateTime"];
+            } else {
+                $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);
+                return $this->_propDict["startDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the startDateTime
+    *
+    * @param \DateTime $val The startDateTime
+    *
+    * @return JobResponseBase
+    */
+    public function setStartDateTime($val)
+    {
+        $this->_propDict["startDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the status
+    *
+    * @return string The status
+    */
+    public function getStatus()
+    {
+        if (array_key_exists("status", $this->_propDict)) {
+            return $this->_propDict["status"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the status
+    *
+    * @param string $val The status
+    *
+    * @return JobResponseBase
+    */
+    public function setStatus($val)
+    {
+        $this->_propDict["status"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the tenantId
+    *
+    * @return string The tenantId
+    */
+    public function getTenantId()
+    {
+        if (array_key_exists("tenantId", $this->_propDict)) {
+            return $this->_propDict["tenantId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the tenantId
+    *
+    * @param string $val The tenantId
+    *
+    * @return JobResponseBase
+    */
+    public function setTenantId($val)
+    {
+        $this->_propDict["tenantId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the type
+    *
+    * @return string The type
+    */
+    public function getType()
+    {
+        if (array_key_exists("type", $this->_propDict)) {
+            return $this->_propDict["type"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the type
+    *
+    * @param string $val The type
+    *
+    * @return JobResponseBase
+    */
+    public function setType($val)
+    {
+        $this->_propDict["type"] = $val;
         return $this;
     }
     

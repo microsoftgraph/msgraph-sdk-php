@@ -58,6 +58,35 @@ class WindowsHealthMonitoringConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the configDeviceHealthMonitoringCustomScope
+    * Specifies custom set of events collected from the device where health monitoring is enabled
+    *
+    * @return string The configDeviceHealthMonitoringCustomScope
+    */
+    public function getConfigDeviceHealthMonitoringCustomScope()
+    {
+        if (array_key_exists("configDeviceHealthMonitoringCustomScope", $this->_propDict)) {
+            return $this->_propDict["configDeviceHealthMonitoringCustomScope"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the configDeviceHealthMonitoringCustomScope
+    * Specifies custom set of events collected from the device where health monitoring is enabled
+    *
+    * @param string $val The configDeviceHealthMonitoringCustomScope
+    *
+    * @return WindowsHealthMonitoringConfiguration
+    */
+    public function setConfigDeviceHealthMonitoringCustomScope($val)
+    {
+        $this->_propDict["configDeviceHealthMonitoringCustomScope"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the configDeviceHealthMonitoringScope
     * Specifies set of events collected from the device where health monitoring is enabled
     *
@@ -87,35 +116,6 @@ class WindowsHealthMonitoringConfiguration extends DeviceConfiguration
     public function setConfigDeviceHealthMonitoringScope($val)
     {
         $this->_propDict["configDeviceHealthMonitoringScope"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the configDeviceHealthMonitoringCustomScope
-    * Specifies custom set of events collected from the device where health monitoring is enabled
-    *
-    * @return string The configDeviceHealthMonitoringCustomScope
-    */
-    public function getConfigDeviceHealthMonitoringCustomScope()
-    {
-        if (array_key_exists("configDeviceHealthMonitoringCustomScope", $this->_propDict)) {
-            return $this->_propDict["configDeviceHealthMonitoringCustomScope"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the configDeviceHealthMonitoringCustomScope
-    * Specifies custom set of events collected from the device where health monitoring is enabled
-    *
-    * @param string $val The configDeviceHealthMonitoringCustomScope
-    *
-    * @return WindowsHealthMonitoringConfiguration
-    */
-    public function setConfigDeviceHealthMonitoringCustomScope($val)
-    {
-        $this->_propDict["configDeviceHealthMonitoringCustomScope"] = $val;
         return $this;
     }
     

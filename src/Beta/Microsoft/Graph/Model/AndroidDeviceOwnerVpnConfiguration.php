@@ -25,6 +25,64 @@ namespace Beta\Microsoft\Graph\Model;
 class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration
 {
     /**
+    * Gets the alwaysOn
+    * Whether or not to enable always-on VPN connection.
+    *
+    * @return bool The alwaysOn
+    */
+    public function getAlwaysOn()
+    {
+        if (array_key_exists("alwaysOn", $this->_propDict)) {
+            return $this->_propDict["alwaysOn"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the alwaysOn
+    * Whether or not to enable always-on VPN connection.
+    *
+    * @param bool $val The alwaysOn
+    *
+    * @return AndroidDeviceOwnerVpnConfiguration
+    */
+    public function setAlwaysOn($val)
+    {
+        $this->_propDict["alwaysOn"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the alwaysOnLockdown
+    * If always-on VPN connection is enabled, whether or not to lock network traffic when that VPN is disconnected.
+    *
+    * @return bool The alwaysOnLockdown
+    */
+    public function getAlwaysOnLockdown()
+    {
+        if (array_key_exists("alwaysOnLockdown", $this->_propDict)) {
+            return $this->_propDict["alwaysOnLockdown"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the alwaysOnLockdown
+    * If always-on VPN connection is enabled, whether or not to lock network traffic when that VPN is disconnected.
+    *
+    * @param bool $val The alwaysOnLockdown
+    *
+    * @return AndroidDeviceOwnerVpnConfiguration
+    */
+    public function setAlwaysOnLockdown($val)
+    {
+        $this->_propDict["alwaysOnLockdown"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the connectionType
     * Connection type.
     *
@@ -120,60 +178,35 @@ class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration
     }
     
     /**
-    * Gets the alwaysOn
-    * Whether or not to enable always-on VPN connection.
+    * Gets the derivedCredentialSettings
+    * Tenant level settings for the Derived Credentials to be used for authentication.
     *
-    * @return bool The alwaysOn
+    * @return DeviceManagementDerivedCredentialSettings The derivedCredentialSettings
     */
-    public function getAlwaysOn()
+    public function getDerivedCredentialSettings()
     {
-        if (array_key_exists("alwaysOn", $this->_propDict)) {
-            return $this->_propDict["alwaysOn"];
-        } else {
-            return null;
+        if (array_key_exists("derivedCredentialSettings", $this->_propDict)) {
+            if (is_a($this->_propDict["derivedCredentialSettings"], "Beta\Microsoft\Graph\Model\DeviceManagementDerivedCredentialSettings")) {
+                return $this->_propDict["derivedCredentialSettings"];
+            } else {
+                $this->_propDict["derivedCredentialSettings"] = new DeviceManagementDerivedCredentialSettings($this->_propDict["derivedCredentialSettings"]);
+                return $this->_propDict["derivedCredentialSettings"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the alwaysOn
-    * Whether or not to enable always-on VPN connection.
+    * Sets the derivedCredentialSettings
+    * Tenant level settings for the Derived Credentials to be used for authentication.
     *
-    * @param bool $val The alwaysOn
+    * @param DeviceManagementDerivedCredentialSettings $val The derivedCredentialSettings
     *
     * @return AndroidDeviceOwnerVpnConfiguration
     */
-    public function setAlwaysOn($val)
+    public function setDerivedCredentialSettings($val)
     {
-        $this->_propDict["alwaysOn"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the alwaysOnLockdown
-    * If always-on VPN connection is enabled, whether or not to lock network traffic when that VPN is disconnected.
-    *
-    * @return bool The alwaysOnLockdown
-    */
-    public function getAlwaysOnLockdown()
-    {
-        if (array_key_exists("alwaysOnLockdown", $this->_propDict)) {
-            return $this->_propDict["alwaysOnLockdown"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the alwaysOnLockdown
-    * If always-on VPN connection is enabled, whether or not to lock network traffic when that VPN is disconnected.
-    *
-    * @param bool $val The alwaysOnLockdown
-    *
-    * @return AndroidDeviceOwnerVpnConfiguration
-    */
-    public function setAlwaysOnLockdown($val)
-    {
-        $this->_propDict["alwaysOnLockdown"] = boolval($val);
+        $this->_propDict["derivedCredentialSettings"] = $val;
         return $this;
     }
     
@@ -207,39 +240,6 @@ class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration
     public function setIdentityCertificate($val)
     {
         $this->_propDict["identityCertificate"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the derivedCredentialSettings
-    * Tenant level settings for the Derived Credentials to be used for authentication.
-    *
-    * @return DeviceManagementDerivedCredentialSettings The derivedCredentialSettings
-    */
-    public function getDerivedCredentialSettings()
-    {
-        if (array_key_exists("derivedCredentialSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["derivedCredentialSettings"], "Beta\Microsoft\Graph\Model\DeviceManagementDerivedCredentialSettings")) {
-                return $this->_propDict["derivedCredentialSettings"];
-            } else {
-                $this->_propDict["derivedCredentialSettings"] = new DeviceManagementDerivedCredentialSettings($this->_propDict["derivedCredentialSettings"]);
-                return $this->_propDict["derivedCredentialSettings"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the derivedCredentialSettings
-    * Tenant level settings for the Derived Credentials to be used for authentication.
-    *
-    * @param DeviceManagementDerivedCredentialSettings $val The derivedCredentialSettings
-    *
-    * @return AndroidDeviceOwnerVpnConfiguration
-    */
-    public function setDerivedCredentialSettings($val)
-    {
-        $this->_propDict["derivedCredentialSettings"] = $val;
         return $this;
     }
     

@@ -25,35 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class DeviceCompliancePolicyGroupAssignment extends Entity
 {
     /**
-    * Gets the targetGroupId
-    * The Id of the AAD group we are targeting the device compliance policy to.
-    *
-    * @return string The targetGroupId
-    */
-    public function getTargetGroupId()
-    {
-        if (array_key_exists("targetGroupId", $this->_propDict)) {
-            return $this->_propDict["targetGroupId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the targetGroupId
-    * The Id of the AAD group we are targeting the device compliance policy to.
-    *
-    * @param string $val The targetGroupId
-    *
-    * @return DeviceCompliancePolicyGroupAssignment
-    */
-    public function setTargetGroupId($val)
-    {
-        $this->_propDict["targetGroupId"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the excludeGroup
     * Indicates if this group is should be excluded. Defaults that the group should be included
     *
@@ -79,6 +50,35 @@ class DeviceCompliancePolicyGroupAssignment extends Entity
     public function setExcludeGroup($val)
     {
         $this->_propDict["excludeGroup"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the targetGroupId
+    * The Id of the AAD group we are targeting the device compliance policy to.
+    *
+    * @return string The targetGroupId
+    */
+    public function getTargetGroupId()
+    {
+        if (array_key_exists("targetGroupId", $this->_propDict)) {
+            return $this->_propDict["targetGroupId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the targetGroupId
+    * The Id of the AAD group we are targeting the device compliance policy to.
+    *
+    * @param string $val The targetGroupId
+    *
+    * @return DeviceCompliancePolicyGroupAssignment
+    */
+    public function setTargetGroupId($val)
+    {
+        $this->_propDict["targetGroupId"] = $val;
         return $this;
     }
     

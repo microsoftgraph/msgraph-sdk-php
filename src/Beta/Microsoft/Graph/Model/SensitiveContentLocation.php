@@ -23,84 +23,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class SensitiveContentLocation extends Entity
 {
-    /**
-    * Gets the idMatch
-    *
-    * @return string The idMatch
-    */
-    public function getIdMatch()
-    {
-        if (array_key_exists("idMatch", $this->_propDict)) {
-            return $this->_propDict["idMatch"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the idMatch
-    *
-    * @param string $val The value of the idMatch
-    *
-    * @return SensitiveContentLocation
-    */
-    public function setIdMatch($val)
-    {
-        $this->_propDict["idMatch"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the offset
-    *
-    * @return int The offset
-    */
-    public function getOffset()
-    {
-        if (array_key_exists("offset", $this->_propDict)) {
-            return $this->_propDict["offset"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the offset
-    *
-    * @param int $val The value of the offset
-    *
-    * @return SensitiveContentLocation
-    */
-    public function setOffset($val)
-    {
-        $this->_propDict["offset"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the length
-    *
-    * @return int The length
-    */
-    public function getLength()
-    {
-        if (array_key_exists("length", $this->_propDict)) {
-            return $this->_propDict["length"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the length
-    *
-    * @param int $val The value of the length
-    *
-    * @return SensitiveContentLocation
-    */
-    public function setLength($val)
-    {
-        $this->_propDict["length"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the evidences
@@ -131,5 +53,83 @@ class SensitiveContentLocation extends Entity
     {
         $this->_propDict["evidences"] = $val;
          return $this;
+    }
+    /**
+    * Gets the idMatch
+    *
+    * @return string The idMatch
+    */
+    public function getIdMatch()
+    {
+        if (array_key_exists("idMatch", $this->_propDict)) {
+            return $this->_propDict["idMatch"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the idMatch
+    *
+    * @param string $val The value of the idMatch
+    *
+    * @return SensitiveContentLocation
+    */
+    public function setIdMatch($val)
+    {
+        $this->_propDict["idMatch"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the length
+    *
+    * @return int The length
+    */
+    public function getLength()
+    {
+        if (array_key_exists("length", $this->_propDict)) {
+            return $this->_propDict["length"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the length
+    *
+    * @param int $val The value of the length
+    *
+    * @return SensitiveContentLocation
+    */
+    public function setLength($val)
+    {
+        $this->_propDict["length"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the offset
+    *
+    * @return int The offset
+    */
+    public function getOffset()
+    {
+        if (array_key_exists("offset", $this->_propDict)) {
+            return $this->_propDict["offset"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the offset
+    *
+    * @param int $val The value of the offset
+    *
+    * @return SensitiveContentLocation
+    */
+    public function setOffset($val)
+    {
+        $this->_propDict["offset"] = $val;
+        return $this;
     }
 }

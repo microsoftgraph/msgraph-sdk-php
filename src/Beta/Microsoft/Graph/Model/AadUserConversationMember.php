@@ -25,35 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class AadUserConversationMember extends ConversationMember
 {
     /**
-    * Gets the userId
-    * The guid of the user.
-    *
-    * @return string The userId
-    */
-    public function getUserId()
-    {
-        if (array_key_exists("userId", $this->_propDict)) {
-            return $this->_propDict["userId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the userId
-    * The guid of the user.
-    *
-    * @param string $val The userId
-    *
-    * @return AadUserConversationMember
-    */
-    public function setUserId($val)
-    {
-        $this->_propDict["userId"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the email
     * The email address of the user.
     *
@@ -79,6 +50,35 @@ class AadUserConversationMember extends ConversationMember
     public function setEmail($val)
     {
         $this->_propDict["email"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userId
+    * The guid of the user.
+    *
+    * @return string The userId
+    */
+    public function getUserId()
+    {
+        if (array_key_exists("userId", $this->_propDict)) {
+            return $this->_propDict["userId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the userId
+    * The guid of the user.
+    *
+    * @param string $val The userId
+    *
+    * @return AadUserConversationMember
+    */
+    public function setUserId($val)
+    {
+        $this->_propDict["userId"] = $val;
         return $this;
     }
     

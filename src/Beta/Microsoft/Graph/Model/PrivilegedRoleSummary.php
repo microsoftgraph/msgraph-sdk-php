@@ -25,6 +25,87 @@ namespace Beta\Microsoft\Graph\Model;
 class PrivilegedRoleSummary extends Entity
 {
     /**
+    * Gets the elevatedCount
+    *
+    * @return int The elevatedCount
+    */
+    public function getElevatedCount()
+    {
+        if (array_key_exists("elevatedCount", $this->_propDict)) {
+            return $this->_propDict["elevatedCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the elevatedCount
+    *
+    * @param int $val The elevatedCount
+    *
+    * @return PrivilegedRoleSummary
+    */
+    public function setElevatedCount($val)
+    {
+        $this->_propDict["elevatedCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the managedCount
+    *
+    * @return int The managedCount
+    */
+    public function getManagedCount()
+    {
+        if (array_key_exists("managedCount", $this->_propDict)) {
+            return $this->_propDict["managedCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the managedCount
+    *
+    * @param int $val The managedCount
+    *
+    * @return PrivilegedRoleSummary
+    */
+    public function setManagedCount($val)
+    {
+        $this->_propDict["managedCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the mfaEnabled
+    *
+    * @return bool The mfaEnabled
+    */
+    public function getMfaEnabled()
+    {
+        if (array_key_exists("mfaEnabled", $this->_propDict)) {
+            return $this->_propDict["mfaEnabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the mfaEnabled
+    *
+    * @param bool $val The mfaEnabled
+    *
+    * @return PrivilegedRoleSummary
+    */
+    public function setMfaEnabled($val)
+    {
+        $this->_propDict["mfaEnabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the status
     *
     * @return RoleSummaryStatus The status
@@ -79,87 +160,6 @@ class PrivilegedRoleSummary extends Entity
     public function setUsersCount($val)
     {
         $this->_propDict["usersCount"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the managedCount
-    *
-    * @return int The managedCount
-    */
-    public function getManagedCount()
-    {
-        if (array_key_exists("managedCount", $this->_propDict)) {
-            return $this->_propDict["managedCount"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the managedCount
-    *
-    * @param int $val The managedCount
-    *
-    * @return PrivilegedRoleSummary
-    */
-    public function setManagedCount($val)
-    {
-        $this->_propDict["managedCount"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the elevatedCount
-    *
-    * @return int The elevatedCount
-    */
-    public function getElevatedCount()
-    {
-        if (array_key_exists("elevatedCount", $this->_propDict)) {
-            return $this->_propDict["elevatedCount"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the elevatedCount
-    *
-    * @param int $val The elevatedCount
-    *
-    * @return PrivilegedRoleSummary
-    */
-    public function setElevatedCount($val)
-    {
-        $this->_propDict["elevatedCount"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the mfaEnabled
-    *
-    * @return bool The mfaEnabled
-    */
-    public function getMfaEnabled()
-    {
-        if (array_key_exists("mfaEnabled", $this->_propDict)) {
-            return $this->_propDict["mfaEnabled"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the mfaEnabled
-    *
-    * @param bool $val The mfaEnabled
-    *
-    * @return PrivilegedRoleSummary
-    */
-    public function setMfaEnabled($val)
-    {
-        $this->_propDict["mfaEnabled"] = boolval($val);
         return $this;
     }
     

@@ -25,39 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class AndroidWorkProfileEnterpriseWiFiConfiguration extends AndroidWorkProfileWiFiConfiguration
 {
     /**
-    * Gets the eapType
-    * Indicates the type of EAP protocol set on the Wi-Fi endpoint (router).
-    *
-    * @return AndroidEapType The eapType
-    */
-    public function getEapType()
-    {
-        if (array_key_exists("eapType", $this->_propDict)) {
-            if (is_a($this->_propDict["eapType"], "Beta\Microsoft\Graph\Model\AndroidEapType")) {
-                return $this->_propDict["eapType"];
-            } else {
-                $this->_propDict["eapType"] = new AndroidEapType($this->_propDict["eapType"]);
-                return $this->_propDict["eapType"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the eapType
-    * Indicates the type of EAP protocol set on the Wi-Fi endpoint (router).
-    *
-    * @param AndroidEapType $val The eapType
-    *
-    * @return AndroidWorkProfileEnterpriseWiFiConfiguration
-    */
-    public function setEapType($val)
-    {
-        $this->_propDict["eapType"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the authenticationMethod
     * Indicates the Authentication Method the client (device) needs to use when the EAP Type is configured to PEAP or EAP-TTLS.
     *
@@ -87,6 +54,39 @@ class AndroidWorkProfileEnterpriseWiFiConfiguration extends AndroidWorkProfileWi
     public function setAuthenticationMethod($val)
     {
         $this->_propDict["authenticationMethod"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the eapType
+    * Indicates the type of EAP protocol set on the Wi-Fi endpoint (router).
+    *
+    * @return AndroidEapType The eapType
+    */
+    public function getEapType()
+    {
+        if (array_key_exists("eapType", $this->_propDict)) {
+            if (is_a($this->_propDict["eapType"], "Beta\Microsoft\Graph\Model\AndroidEapType")) {
+                return $this->_propDict["eapType"];
+            } else {
+                $this->_propDict["eapType"] = new AndroidEapType($this->_propDict["eapType"]);
+                return $this->_propDict["eapType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the eapType
+    * Indicates the type of EAP protocol set on the Wi-Fi endpoint (router).
+    *
+    * @param AndroidEapType $val The eapType
+    *
+    * @return AndroidWorkProfileEnterpriseWiFiConfiguration
+    */
+    public function setEapType($val)
+    {
+        $this->_propDict["eapType"] = $val;
         return $this;
     }
     
@@ -186,6 +186,35 @@ class AndroidWorkProfileEnterpriseWiFiConfiguration extends AndroidWorkProfileWi
     }
     
     /**
+    * Gets the proxyAutomaticConfigurationUrl
+    * URL of the proxy server automatic configuration script when automatic configuration is selected. This URL is typically the location of PAC (Proxy Auto Configuration) file.
+    *
+    * @return string The proxyAutomaticConfigurationUrl
+    */
+    public function getProxyAutomaticConfigurationUrl()
+    {
+        if (array_key_exists("proxyAutomaticConfigurationUrl", $this->_propDict)) {
+            return $this->_propDict["proxyAutomaticConfigurationUrl"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the proxyAutomaticConfigurationUrl
+    * URL of the proxy server automatic configuration script when automatic configuration is selected. This URL is typically the location of PAC (Proxy Auto Configuration) file.
+    *
+    * @param string $val The proxyAutomaticConfigurationUrl
+    *
+    * @return AndroidWorkProfileEnterpriseWiFiConfiguration
+    */
+    public function setProxyAutomaticConfigurationUrl($val)
+    {
+        $this->_propDict["proxyAutomaticConfigurationUrl"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the proxySettings
     * Proxy Type for this Wi-Fi connection
     *
@@ -219,31 +248,35 @@ class AndroidWorkProfileEnterpriseWiFiConfiguration extends AndroidWorkProfileWi
     }
     
     /**
-    * Gets the proxyAutomaticConfigurationUrl
-    * URL of the proxy server automatic configuration script when automatic configuration is selected. This URL is typically the location of PAC (Proxy Auto Configuration) file.
+    * Gets the identityCertificateForClientAuthentication
+    * Identity Certificate for client authentication when EAP Type is configured to EAP-TLS, EAP-TTLS (with Certificate Authentication), or PEAP (with Certificate Authentication). This is the certificate presented by client to the Wi-Fi endpoint. The authentication server sitting behind the Wi-Fi endpoint must accept this certificate to successfully establish a Wi-Fi connection.
     *
-    * @return string The proxyAutomaticConfigurationUrl
+    * @return AndroidWorkProfileCertificateProfileBase The identityCertificateForClientAuthentication
     */
-    public function getProxyAutomaticConfigurationUrl()
+    public function getIdentityCertificateForClientAuthentication()
     {
-        if (array_key_exists("proxyAutomaticConfigurationUrl", $this->_propDict)) {
-            return $this->_propDict["proxyAutomaticConfigurationUrl"];
-        } else {
-            return null;
+        if (array_key_exists("identityCertificateForClientAuthentication", $this->_propDict)) {
+            if (is_a($this->_propDict["identityCertificateForClientAuthentication"], "Beta\Microsoft\Graph\Model\AndroidWorkProfileCertificateProfileBase")) {
+                return $this->_propDict["identityCertificateForClientAuthentication"];
+            } else {
+                $this->_propDict["identityCertificateForClientAuthentication"] = new AndroidWorkProfileCertificateProfileBase($this->_propDict["identityCertificateForClientAuthentication"]);
+                return $this->_propDict["identityCertificateForClientAuthentication"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the proxyAutomaticConfigurationUrl
-    * URL of the proxy server automatic configuration script when automatic configuration is selected. This URL is typically the location of PAC (Proxy Auto Configuration) file.
+    * Sets the identityCertificateForClientAuthentication
+    * Identity Certificate for client authentication when EAP Type is configured to EAP-TLS, EAP-TTLS (with Certificate Authentication), or PEAP (with Certificate Authentication). This is the certificate presented by client to the Wi-Fi endpoint. The authentication server sitting behind the Wi-Fi endpoint must accept this certificate to successfully establish a Wi-Fi connection.
     *
-    * @param string $val The proxyAutomaticConfigurationUrl
+    * @param AndroidWorkProfileCertificateProfileBase $val The identityCertificateForClientAuthentication
     *
     * @return AndroidWorkProfileEnterpriseWiFiConfiguration
     */
-    public function setProxyAutomaticConfigurationUrl($val)
+    public function setIdentityCertificateForClientAuthentication($val)
     {
-        $this->_propDict["proxyAutomaticConfigurationUrl"] = $val;
+        $this->_propDict["identityCertificateForClientAuthentication"] = $val;
         return $this;
     }
     
@@ -277,39 +310,6 @@ class AndroidWorkProfileEnterpriseWiFiConfiguration extends AndroidWorkProfileWi
     public function setRootCertificateForServerValidation($val)
     {
         $this->_propDict["rootCertificateForServerValidation"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the identityCertificateForClientAuthentication
-    * Identity Certificate for client authentication when EAP Type is configured to EAP-TLS, EAP-TTLS (with Certificate Authentication), or PEAP (with Certificate Authentication). This is the certificate presented by client to the Wi-Fi endpoint. The authentication server sitting behind the Wi-Fi endpoint must accept this certificate to successfully establish a Wi-Fi connection.
-    *
-    * @return AndroidWorkProfileCertificateProfileBase The identityCertificateForClientAuthentication
-    */
-    public function getIdentityCertificateForClientAuthentication()
-    {
-        if (array_key_exists("identityCertificateForClientAuthentication", $this->_propDict)) {
-            if (is_a($this->_propDict["identityCertificateForClientAuthentication"], "Beta\Microsoft\Graph\Model\AndroidWorkProfileCertificateProfileBase")) {
-                return $this->_propDict["identityCertificateForClientAuthentication"];
-            } else {
-                $this->_propDict["identityCertificateForClientAuthentication"] = new AndroidWorkProfileCertificateProfileBase($this->_propDict["identityCertificateForClientAuthentication"]);
-                return $this->_propDict["identityCertificateForClientAuthentication"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the identityCertificateForClientAuthentication
-    * Identity Certificate for client authentication when EAP Type is configured to EAP-TLS, EAP-TTLS (with Certificate Authentication), or PEAP (with Certificate Authentication). This is the certificate presented by client to the Wi-Fi endpoint. The authentication server sitting behind the Wi-Fi endpoint must accept this certificate to successfully establish a Wi-Fi connection.
-    *
-    * @param AndroidWorkProfileCertificateProfileBase $val The identityCertificateForClientAuthentication
-    *
-    * @return AndroidWorkProfileEnterpriseWiFiConfiguration
-    */
-    public function setIdentityCertificateForClientAuthentication($val)
-    {
-        $this->_propDict["identityCertificateForClientAuthentication"] = $val;
         return $this;
     }
     

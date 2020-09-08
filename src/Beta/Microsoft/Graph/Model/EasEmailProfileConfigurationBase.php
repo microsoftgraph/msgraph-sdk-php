@@ -25,68 +25,31 @@ namespace Beta\Microsoft\Graph\Model;
 class EasEmailProfileConfigurationBase extends DeviceConfiguration
 {
     /**
-    * Gets the usernameSource
-    * Username attribute that is picked from AAD and injected into this profile before installing on the device.
+    * Gets the customDomainName
+    * Custom domain name value used while generating an email profile before installing on the device.
     *
-    * @return UserEmailSource The usernameSource
+    * @return string The customDomainName
     */
-    public function getUsernameSource()
+    public function getCustomDomainName()
     {
-        if (array_key_exists("usernameSource", $this->_propDict)) {
-            if (is_a($this->_propDict["usernameSource"], "Beta\Microsoft\Graph\Model\UserEmailSource")) {
-                return $this->_propDict["usernameSource"];
-            } else {
-                $this->_propDict["usernameSource"] = new UserEmailSource($this->_propDict["usernameSource"]);
-                return $this->_propDict["usernameSource"];
-            }
+        if (array_key_exists("customDomainName", $this->_propDict)) {
+            return $this->_propDict["customDomainName"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the usernameSource
-    * Username attribute that is picked from AAD and injected into this profile before installing on the device.
+    * Sets the customDomainName
+    * Custom domain name value used while generating an email profile before installing on the device.
     *
-    * @param UserEmailSource $val The usernameSource
+    * @param string $val The customDomainName
     *
     * @return EasEmailProfileConfigurationBase
     */
-    public function setUsernameSource($val)
+    public function setCustomDomainName($val)
     {
-        $this->_propDict["usernameSource"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the usernameAADSource
-    * Name of the AAD field, that will be used to retrieve UserName for email profile.
-    *
-    * @return UsernameSource The usernameAADSource
-    */
-    public function getUsernameAADSource()
-    {
-        if (array_key_exists("usernameAADSource", $this->_propDict)) {
-            if (is_a($this->_propDict["usernameAADSource"], "Beta\Microsoft\Graph\Model\UsernameSource")) {
-                return $this->_propDict["usernameAADSource"];
-            } else {
-                $this->_propDict["usernameAADSource"] = new UsernameSource($this->_propDict["usernameAADSource"]);
-                return $this->_propDict["usernameAADSource"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the usernameAADSource
-    * Name of the AAD field, that will be used to retrieve UserName for email profile.
-    *
-    * @param UsernameSource $val The usernameAADSource
-    *
-    * @return EasEmailProfileConfigurationBase
-    */
-    public function setUsernameAADSource($val)
-    {
-        $this->_propDict["usernameAADSource"] = $val;
+        $this->_propDict["customDomainName"] = $val;
         return $this;
     }
     
@@ -124,31 +87,68 @@ class EasEmailProfileConfigurationBase extends DeviceConfiguration
     }
     
     /**
-    * Gets the customDomainName
-    * Custom domain name value used while generating an email profile before installing on the device.
+    * Gets the usernameAADSource
+    * Name of the AAD field, that will be used to retrieve UserName for email profile.
     *
-    * @return string The customDomainName
+    * @return UsernameSource The usernameAADSource
     */
-    public function getCustomDomainName()
+    public function getUsernameAADSource()
     {
-        if (array_key_exists("customDomainName", $this->_propDict)) {
-            return $this->_propDict["customDomainName"];
-        } else {
-            return null;
+        if (array_key_exists("usernameAADSource", $this->_propDict)) {
+            if (is_a($this->_propDict["usernameAADSource"], "Beta\Microsoft\Graph\Model\UsernameSource")) {
+                return $this->_propDict["usernameAADSource"];
+            } else {
+                $this->_propDict["usernameAADSource"] = new UsernameSource($this->_propDict["usernameAADSource"]);
+                return $this->_propDict["usernameAADSource"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the customDomainName
-    * Custom domain name value used while generating an email profile before installing on the device.
+    * Sets the usernameAADSource
+    * Name of the AAD field, that will be used to retrieve UserName for email profile.
     *
-    * @param string $val The customDomainName
+    * @param UsernameSource $val The usernameAADSource
     *
     * @return EasEmailProfileConfigurationBase
     */
-    public function setCustomDomainName($val)
+    public function setUsernameAADSource($val)
     {
-        $this->_propDict["customDomainName"] = $val;
+        $this->_propDict["usernameAADSource"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the usernameSource
+    * Username attribute that is picked from AAD and injected into this profile before installing on the device.
+    *
+    * @return UserEmailSource The usernameSource
+    */
+    public function getUsernameSource()
+    {
+        if (array_key_exists("usernameSource", $this->_propDict)) {
+            if (is_a($this->_propDict["usernameSource"], "Beta\Microsoft\Graph\Model\UserEmailSource")) {
+                return $this->_propDict["usernameSource"];
+            } else {
+                $this->_propDict["usernameSource"] = new UserEmailSource($this->_propDict["usernameSource"]);
+                return $this->_propDict["usernameSource"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the usernameSource
+    * Username attribute that is picked from AAD and injected into this profile before installing on the device.
+    *
+    * @param UserEmailSource $val The usernameSource
+    *
+    * @return EasEmailProfileConfigurationBase
+    */
+    public function setUsernameSource($val)
+    {
+        $this->_propDict["usernameSource"] = $val;
         return $this;
     }
     

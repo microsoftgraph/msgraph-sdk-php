@@ -52,6 +52,33 @@ class ItemPhone extends ItemFacet
     }
     
     /**
+    * Gets the number
+    *
+    * @return string The number
+    */
+    public function getNumber()
+    {
+        if (array_key_exists("number", $this->_propDict)) {
+            return $this->_propDict["number"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the number
+    *
+    * @param string $val The number
+    *
+    * @return ItemPhone
+    */
+    public function setNumber($val)
+    {
+        $this->_propDict["number"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the type
     *
     * @return PhoneType The type
@@ -79,33 +106,6 @@ class ItemPhone extends ItemFacet
     public function setType($val)
     {
         $this->_propDict["type"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the number
-    *
-    * @return string The number
-    */
-    public function getNumber()
-    {
-        if (array_key_exists("number", $this->_propDict)) {
-            return $this->_propDict["number"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the number
-    *
-    * @param string $val The number
-    *
-    * @return ItemPhone
-    */
-    public function setNumber($val)
-    {
-        $this->_propDict["number"] = $val;
         return $this;
     }
     

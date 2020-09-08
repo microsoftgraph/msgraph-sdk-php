@@ -25,6 +25,37 @@ namespace Beta\Microsoft\Graph\Model;
 class PlannerPlan extends PlannerDelta
 {
     /**
+    * Gets the contexts
+    *
+    * @return PlannerPlanContextCollection The contexts
+    */
+    public function getContexts()
+    {
+        if (array_key_exists("contexts", $this->_propDict)) {
+            if (is_a($this->_propDict["contexts"], "Beta\Microsoft\Graph\Model\PlannerPlanContextCollection")) {
+                return $this->_propDict["contexts"];
+            } else {
+                $this->_propDict["contexts"] = new PlannerPlanContextCollection($this->_propDict["contexts"]);
+                return $this->_propDict["contexts"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the contexts
+    *
+    * @param PlannerPlanContextCollection $val The contexts
+    *
+    * @return PlannerPlan
+    */
+    public function setContexts($val)
+    {
+        $this->_propDict["contexts"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the createdBy
     * Read-only. The user who created the plan.
     *
@@ -148,67 +179,6 @@ class PlannerPlan extends PlannerDelta
         return $this;
     }
     
-    /**
-    * Gets the contexts
-    *
-    * @return PlannerPlanContextCollection The contexts
-    */
-    public function getContexts()
-    {
-        if (array_key_exists("contexts", $this->_propDict)) {
-            if (is_a($this->_propDict["contexts"], "Beta\Microsoft\Graph\Model\PlannerPlanContextCollection")) {
-                return $this->_propDict["contexts"];
-            } else {
-                $this->_propDict["contexts"] = new PlannerPlanContextCollection($this->_propDict["contexts"]);
-                return $this->_propDict["contexts"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the contexts
-    *
-    * @param PlannerPlanContextCollection $val The contexts
-    *
-    * @return PlannerPlan
-    */
-    public function setContexts($val)
-    {
-        $this->_propDict["contexts"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the tasks
-    * Read-only. Nullable. Collection of tasks in the plan.
-     *
-     * @return array The tasks
-     */
-    public function getTasks()
-    {
-        if (array_key_exists("tasks", $this->_propDict)) {
-           return $this->_propDict["tasks"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the tasks
-    * Read-only. Nullable. Collection of tasks in the plan.
-    *
-    * @param PlannerTask $val The tasks
-    *
-    * @return PlannerPlan
-    */
-    public function setTasks($val)
-    {
-		$this->_propDict["tasks"] = $val;
-        return $this;
-    }
-    
 
      /** 
      * Gets the buckets
@@ -269,6 +239,36 @@ class PlannerPlan extends PlannerDelta
     public function setDetails($val)
     {
         $this->_propDict["details"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the tasks
+    * Read-only. Nullable. Collection of tasks in the plan.
+     *
+     * @return array The tasks
+     */
+    public function getTasks()
+    {
+        if (array_key_exists("tasks", $this->_propDict)) {
+           return $this->_propDict["tasks"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the tasks
+    * Read-only. Nullable. Collection of tasks in the plan.
+    *
+    * @param PlannerTask $val The tasks
+    *
+    * @return PlannerPlan
+    */
+    public function setTasks($val)
+    {
+		$this->_propDict["tasks"] = $val;
         return $this;
     }
     

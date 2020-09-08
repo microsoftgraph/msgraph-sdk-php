@@ -24,32 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class PrintMargin extends Entity
 {
     /**
-    * Gets the top
-    *
-    * @return int The top
-    */
-    public function getTop()
-    {
-        if (array_key_exists("top", $this->_propDict)) {
-            return $this->_propDict["top"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the top
-    *
-    * @param int $val The value of the top
-    *
-    * @return PrintMargin
-    */
-    public function setTop($val)
-    {
-        $this->_propDict["top"] = $val;
-        return $this;
-    }
-    /**
     * Gets the bottom
     *
     * @return int The bottom
@@ -73,6 +47,32 @@ class PrintMargin extends Entity
     public function setBottom($val)
     {
         $this->_propDict["bottom"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the left
+    *
+    * @return int The left
+    */
+    public function getLeft()
+    {
+        if (array_key_exists("left", $this->_propDict)) {
+            return $this->_propDict["left"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the left
+    *
+    * @param int $val The value of the left
+    *
+    * @return PrintMargin
+    */
+    public function setLeft($val)
+    {
+        $this->_propDict["left"] = $val;
         return $this;
     }
     /**
@@ -102,29 +102,29 @@ class PrintMargin extends Entity
         return $this;
     }
     /**
-    * Gets the left
+    * Gets the top
     *
-    * @return int The left
+    * @return int The top
     */
-    public function getLeft()
+    public function getTop()
     {
-        if (array_key_exists("left", $this->_propDict)) {
-            return $this->_propDict["left"];
+        if (array_key_exists("top", $this->_propDict)) {
+            return $this->_propDict["top"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the left
+    * Sets the top
     *
-    * @param int $val The value of the left
+    * @param int $val The value of the top
     *
     * @return PrintMargin
     */
-    public function setLeft($val)
+    public function setTop($val)
     {
-        $this->_propDict["left"] = $val;
+        $this->_propDict["top"] = $val;
         return $this;
     }
 }

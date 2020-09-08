@@ -24,34 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class VpnProxyServer extends Entity
 {
     /**
-    * Gets the automaticConfigurationScriptUrl
-    * Proxy's automatic configuration script url.
-    *
-    * @return string The automaticConfigurationScriptUrl
-    */
-    public function getAutomaticConfigurationScriptUrl()
-    {
-        if (array_key_exists("automaticConfigurationScriptUrl", $this->_propDict)) {
-            return $this->_propDict["automaticConfigurationScriptUrl"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the automaticConfigurationScriptUrl
-    * Proxy's automatic configuration script url.
-    *
-    * @param string $val The value of the automaticConfigurationScriptUrl
-    *
-    * @return VpnProxyServer
-    */
-    public function setAutomaticConfigurationScriptUrl($val)
-    {
-        $this->_propDict["automaticConfigurationScriptUrl"] = $val;
-        return $this;
-    }
-    /**
     * Gets the address
     * Address.
     *
@@ -77,6 +49,34 @@ class VpnProxyServer extends Entity
     public function setAddress($val)
     {
         $this->_propDict["address"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the automaticConfigurationScriptUrl
+    * Proxy's automatic configuration script url.
+    *
+    * @return string The automaticConfigurationScriptUrl
+    */
+    public function getAutomaticConfigurationScriptUrl()
+    {
+        if (array_key_exists("automaticConfigurationScriptUrl", $this->_propDict)) {
+            return $this->_propDict["automaticConfigurationScriptUrl"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the automaticConfigurationScriptUrl
+    * Proxy's automatic configuration script url.
+    *
+    * @param string $val The value of the automaticConfigurationScriptUrl
+    *
+    * @return VpnProxyServer
+    */
+    public function setAutomaticConfigurationScriptUrl($val)
+    {
+        $this->_propDict["automaticConfigurationScriptUrl"] = $val;
         return $this;
     }
     /**

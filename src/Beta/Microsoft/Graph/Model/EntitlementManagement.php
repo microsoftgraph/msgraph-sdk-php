@@ -26,6 +26,118 @@ class EntitlementManagement extends Entity
 {
 
      /** 
+     * Gets the accessPackageAssignmentPolicies
+     *
+     * @return array The accessPackageAssignmentPolicies
+     */
+    public function getAccessPackageAssignmentPolicies()
+    {
+        if (array_key_exists("accessPackageAssignmentPolicies", $this->_propDict)) {
+           return $this->_propDict["accessPackageAssignmentPolicies"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the accessPackageAssignmentPolicies
+    *
+    * @param AccessPackageAssignmentPolicy $val The accessPackageAssignmentPolicies
+    *
+    * @return EntitlementManagement
+    */
+    public function setAccessPackageAssignmentPolicies($val)
+    {
+		$this->_propDict["accessPackageAssignmentPolicies"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the accessPackageAssignmentRequests
+     *
+     * @return array The accessPackageAssignmentRequests
+     */
+    public function getAccessPackageAssignmentRequests()
+    {
+        if (array_key_exists("accessPackageAssignmentRequests", $this->_propDict)) {
+           return $this->_propDict["accessPackageAssignmentRequests"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the accessPackageAssignmentRequests
+    *
+    * @param AccessPackageAssignmentRequest $val The accessPackageAssignmentRequests
+    *
+    * @return EntitlementManagement
+    */
+    public function setAccessPackageAssignmentRequests($val)
+    {
+		$this->_propDict["accessPackageAssignmentRequests"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the accessPackageAssignmentResourceRoles
+     *
+     * @return array The accessPackageAssignmentResourceRoles
+     */
+    public function getAccessPackageAssignmentResourceRoles()
+    {
+        if (array_key_exists("accessPackageAssignmentResourceRoles", $this->_propDict)) {
+           return $this->_propDict["accessPackageAssignmentResourceRoles"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the accessPackageAssignmentResourceRoles
+    *
+    * @param AccessPackageAssignmentResourceRole $val The accessPackageAssignmentResourceRoles
+    *
+    * @return EntitlementManagement
+    */
+    public function setAccessPackageAssignmentResourceRoles($val)
+    {
+		$this->_propDict["accessPackageAssignmentResourceRoles"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the accessPackageAssignments
+     *
+     * @return array The accessPackageAssignments
+     */
+    public function getAccessPackageAssignments()
+    {
+        if (array_key_exists("accessPackageAssignments", $this->_propDict)) {
+           return $this->_propDict["accessPackageAssignments"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the accessPackageAssignments
+    *
+    * @param AccessPackageAssignment $val The accessPackageAssignments
+    *
+    * @return EntitlementManagement
+    */
+    public function setAccessPackageAssignments($val)
+    {
+		$this->_propDict["accessPackageAssignments"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the accessPackageCatalogs
      *
      * @return array The accessPackageCatalogs
@@ -49,34 +161,6 @@ class EntitlementManagement extends Entity
     public function setAccessPackageCatalogs($val)
     {
 		$this->_propDict["accessPackageCatalogs"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the accessPackageResources
-     *
-     * @return array The accessPackageResources
-     */
-    public function getAccessPackageResources()
-    {
-        if (array_key_exists("accessPackageResources", $this->_propDict)) {
-           return $this->_propDict["accessPackageResources"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the accessPackageResources
-    *
-    * @param AccessPackageResource $val The accessPackageResources
-    *
-    * @return EntitlementManagement
-    */
-    public function setAccessPackageResources($val)
-    {
-		$this->_propDict["accessPackageResources"] = $val;
         return $this;
     }
     
@@ -138,6 +222,34 @@ class EntitlementManagement extends Entity
     
 
      /** 
+     * Gets the accessPackageResources
+     *
+     * @return array The accessPackageResources
+     */
+    public function getAccessPackageResources()
+    {
+        if (array_key_exists("accessPackageResources", $this->_propDict)) {
+           return $this->_propDict["accessPackageResources"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the accessPackageResources
+    *
+    * @param AccessPackageResource $val The accessPackageResources
+    *
+    * @return EntitlementManagement
+    */
+    public function setAccessPackageResources($val)
+    {
+		$this->_propDict["accessPackageResources"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the accessPackages
      *
      * @return array The accessPackages
@@ -166,113 +278,29 @@ class EntitlementManagement extends Entity
     
 
      /** 
-     * Gets the accessPackageAssignmentPolicies
+     * Gets the connectedOrganizations
      *
-     * @return array The accessPackageAssignmentPolicies
+     * @return array The connectedOrganizations
      */
-    public function getAccessPackageAssignmentPolicies()
+    public function getConnectedOrganizations()
     {
-        if (array_key_exists("accessPackageAssignmentPolicies", $this->_propDict)) {
-           return $this->_propDict["accessPackageAssignmentPolicies"];
+        if (array_key_exists("connectedOrganizations", $this->_propDict)) {
+           return $this->_propDict["connectedOrganizations"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the accessPackageAssignmentPolicies
+    * Sets the connectedOrganizations
     *
-    * @param AccessPackageAssignmentPolicy $val The accessPackageAssignmentPolicies
-    *
-    * @return EntitlementManagement
-    */
-    public function setAccessPackageAssignmentPolicies($val)
-    {
-		$this->_propDict["accessPackageAssignmentPolicies"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the accessPackageAssignments
-     *
-     * @return array The accessPackageAssignments
-     */
-    public function getAccessPackageAssignments()
-    {
-        if (array_key_exists("accessPackageAssignments", $this->_propDict)) {
-           return $this->_propDict["accessPackageAssignments"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the accessPackageAssignments
-    *
-    * @param AccessPackageAssignment $val The accessPackageAssignments
+    * @param ConnectedOrganization $val The connectedOrganizations
     *
     * @return EntitlementManagement
     */
-    public function setAccessPackageAssignments($val)
+    public function setConnectedOrganizations($val)
     {
-		$this->_propDict["accessPackageAssignments"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the accessPackageAssignmentRequests
-     *
-     * @return array The accessPackageAssignmentRequests
-     */
-    public function getAccessPackageAssignmentRequests()
-    {
-        if (array_key_exists("accessPackageAssignmentRequests", $this->_propDict)) {
-           return $this->_propDict["accessPackageAssignmentRequests"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the accessPackageAssignmentRequests
-    *
-    * @param AccessPackageAssignmentRequest $val The accessPackageAssignmentRequests
-    *
-    * @return EntitlementManagement
-    */
-    public function setAccessPackageAssignmentRequests($val)
-    {
-		$this->_propDict["accessPackageAssignmentRequests"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the accessPackageAssignmentResourceRoles
-     *
-     * @return array The accessPackageAssignmentResourceRoles
-     */
-    public function getAccessPackageAssignmentResourceRoles()
-    {
-        if (array_key_exists("accessPackageAssignmentResourceRoles", $this->_propDict)) {
-           return $this->_propDict["accessPackageAssignmentResourceRoles"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the accessPackageAssignmentResourceRoles
-    *
-    * @param AccessPackageAssignmentResourceRole $val The accessPackageAssignmentResourceRoles
-    *
-    * @return EntitlementManagement
-    */
-    public function setAccessPackageAssignmentResourceRoles($val)
-    {
-		$this->_propDict["accessPackageAssignmentResourceRoles"] = $val;
+		$this->_propDict["connectedOrganizations"] = $val;
         return $this;
     }
     
@@ -304,34 +332,6 @@ class EntitlementManagement extends Entity
     public function setSettings($val)
     {
         $this->_propDict["settings"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the connectedOrganizations
-     *
-     * @return array The connectedOrganizations
-     */
-    public function getConnectedOrganizations()
-    {
-        if (array_key_exists("connectedOrganizations", $this->_propDict)) {
-           return $this->_propDict["connectedOrganizations"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the connectedOrganizations
-    *
-    * @param ConnectedOrganization $val The connectedOrganizations
-    *
-    * @return EntitlementManagement
-    */
-    public function setConnectedOrganizations($val)
-    {
-		$this->_propDict["connectedOrganizations"] = $val;
         return $this;
     }
     

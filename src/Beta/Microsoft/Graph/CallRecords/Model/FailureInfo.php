@@ -23,6 +23,34 @@ namespace Beta\Microsoft\Graph\CallRecords\Model;
 */
 class FailureInfo extends \Beta\Microsoft\Graph\Model\Entity
 {
+    /**
+    * Gets the reason
+    * Classification of why a call or portion of a call failed.
+    *
+    * @return string The reason
+    */
+    public function getReason()
+    {
+        if (array_key_exists("reason", $this->_propDict)) {
+            return $this->_propDict["reason"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the reason
+    * Classification of why a call or portion of a call failed.
+    *
+    * @param string $val The value of the reason
+    *
+    * @return FailureInfo
+    */
+    public function setReason($val)
+    {
+        $this->_propDict["reason"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the stage
@@ -55,33 +83,5 @@ class FailureInfo extends \Beta\Microsoft\Graph\Model\Entity
     {
         $this->_propDict["stage"] = $val;
          return $this;
-    }
-    /**
-    * Gets the reason
-    * Classification of why a call or portion of a call failed.
-    *
-    * @return string The reason
-    */
-    public function getReason()
-    {
-        if (array_key_exists("reason", $this->_propDict)) {
-            return $this->_propDict["reason"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the reason
-    * Classification of why a call or portion of a call failed.
-    *
-    * @param string $val The value of the reason
-    *
-    * @return FailureInfo
-    */
-    public function setReason($val)
-    {
-        $this->_propDict["reason"] = $val;
-        return $this;
     }
 }

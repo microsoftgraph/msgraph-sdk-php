@@ -25,35 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class MacOSExtensionsConfiguration extends DeviceConfiguration
 {
     /**
-    * Gets the kernelExtensionOverridesAllowed
-    * If set to true, users can approve additional kernel extensions not explicitly allowed by configurations profiles.
-    *
-    * @return bool The kernelExtensionOverridesAllowed
-    */
-    public function getKernelExtensionOverridesAllowed()
-    {
-        if (array_key_exists("kernelExtensionOverridesAllowed", $this->_propDict)) {
-            return $this->_propDict["kernelExtensionOverridesAllowed"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the kernelExtensionOverridesAllowed
-    * If set to true, users can approve additional kernel extensions not explicitly allowed by configurations profiles.
-    *
-    * @param bool $val The kernelExtensionOverridesAllowed
-    *
-    * @return MacOSExtensionsConfiguration
-    */
-    public function setKernelExtensionOverridesAllowed($val)
-    {
-        $this->_propDict["kernelExtensionOverridesAllowed"] = boolval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the kernelExtensionAllowedTeamIdentifiers
     * All kernel extensions validly signed by the team identifiers in this list will be allowed to load.
     *
@@ -79,6 +50,35 @@ class MacOSExtensionsConfiguration extends DeviceConfiguration
     public function setKernelExtensionAllowedTeamIdentifiers($val)
     {
         $this->_propDict["kernelExtensionAllowedTeamIdentifiers"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the kernelExtensionOverridesAllowed
+    * If set to true, users can approve additional kernel extensions not explicitly allowed by configurations profiles.
+    *
+    * @return bool The kernelExtensionOverridesAllowed
+    */
+    public function getKernelExtensionOverridesAllowed()
+    {
+        if (array_key_exists("kernelExtensionOverridesAllowed", $this->_propDict)) {
+            return $this->_propDict["kernelExtensionOverridesAllowed"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the kernelExtensionOverridesAllowed
+    * If set to true, users can approve additional kernel extensions not explicitly allowed by configurations profiles.
+    *
+    * @param bool $val The kernelExtensionOverridesAllowed
+    *
+    * @return MacOSExtensionsConfiguration
+    */
+    public function setKernelExtensionOverridesAllowed($val)
+    {
+        $this->_propDict["kernelExtensionOverridesAllowed"] = boolval($val);
         return $this;
     }
     
@@ -112,32 +112,33 @@ class MacOSExtensionsConfiguration extends DeviceConfiguration
         return $this;
     }
     
-    /**
-    * Gets the systemExtensionsBlockOverride
-    * Gets or sets whether to allow the user to approve additional system extensions not explicitly allowed by configuration profiles.
-    *
-    * @return bool The systemExtensionsBlockOverride
-    */
-    public function getSystemExtensionsBlockOverride()
+
+     /** 
+     * Gets the systemExtensionsAllowed
+    * Gets or sets a list of allowed macOS system extensions. This collection can contain a maximum of 500 elements.
+     *
+     * @return array The systemExtensionsAllowed
+     */
+    public function getSystemExtensionsAllowed()
     {
-        if (array_key_exists("systemExtensionsBlockOverride", $this->_propDict)) {
-            return $this->_propDict["systemExtensionsBlockOverride"];
+        if (array_key_exists("systemExtensionsAllowed", $this->_propDict)) {
+           return $this->_propDict["systemExtensionsAllowed"];
         } else {
             return null;
         }
     }
     
-    /**
-    * Sets the systemExtensionsBlockOverride
-    * Gets or sets whether to allow the user to approve additional system extensions not explicitly allowed by configuration profiles.
+    /** 
+    * Sets the systemExtensionsAllowed
+    * Gets or sets a list of allowed macOS system extensions. This collection can contain a maximum of 500 elements.
     *
-    * @param bool $val The systemExtensionsBlockOverride
+    * @param MacOSSystemExtension $val The systemExtensionsAllowed
     *
     * @return MacOSExtensionsConfiguration
     */
-    public function setSystemExtensionsBlockOverride($val)
+    public function setSystemExtensionsAllowed($val)
     {
-        $this->_propDict["systemExtensionsBlockOverride"] = boolval($val);
+		$this->_propDict["systemExtensionsAllowed"] = $val;
         return $this;
     }
     
@@ -172,36 +173,6 @@ class MacOSExtensionsConfiguration extends DeviceConfiguration
     
 
      /** 
-     * Gets the systemExtensionsAllowed
-    * Gets or sets a list of allowed macOS system extensions. This collection can contain a maximum of 500 elements.
-     *
-     * @return array The systemExtensionsAllowed
-     */
-    public function getSystemExtensionsAllowed()
-    {
-        if (array_key_exists("systemExtensionsAllowed", $this->_propDict)) {
-           return $this->_propDict["systemExtensionsAllowed"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the systemExtensionsAllowed
-    * Gets or sets a list of allowed macOS system extensions. This collection can contain a maximum of 500 elements.
-    *
-    * @param MacOSSystemExtension $val The systemExtensionsAllowed
-    *
-    * @return MacOSExtensionsConfiguration
-    */
-    public function setSystemExtensionsAllowed($val)
-    {
-		$this->_propDict["systemExtensionsAllowed"] = $val;
-        return $this;
-    }
-    
-
-     /** 
      * Gets the systemExtensionsAllowedTypes
     * Gets or sets a list of allowed macOS system extension types. This collection can contain a maximum of 500 elements.
      *
@@ -227,6 +198,35 @@ class MacOSExtensionsConfiguration extends DeviceConfiguration
     public function setSystemExtensionsAllowedTypes($val)
     {
 		$this->_propDict["systemExtensionsAllowedTypes"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the systemExtensionsBlockOverride
+    * Gets or sets whether to allow the user to approve additional system extensions not explicitly allowed by configuration profiles.
+    *
+    * @return bool The systemExtensionsBlockOverride
+    */
+    public function getSystemExtensionsBlockOverride()
+    {
+        if (array_key_exists("systemExtensionsBlockOverride", $this->_propDict)) {
+            return $this->_propDict["systemExtensionsBlockOverride"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the systemExtensionsBlockOverride
+    * Gets or sets whether to allow the user to approve additional system extensions not explicitly allowed by configuration profiles.
+    *
+    * @param bool $val The systemExtensionsBlockOverride
+    *
+    * @return MacOSExtensionsConfiguration
+    */
+    public function setSystemExtensionsBlockOverride($val)
+    {
+        $this->_propDict["systemExtensionsBlockOverride"] = boolval($val);
         return $this;
     }
     

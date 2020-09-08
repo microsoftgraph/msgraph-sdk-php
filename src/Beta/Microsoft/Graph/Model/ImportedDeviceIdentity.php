@@ -25,101 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class ImportedDeviceIdentity extends Entity
 {
     /**
-    * Gets the importedDeviceIdentifier
-    * Imported Device Identifier
-    *
-    * @return string The importedDeviceIdentifier
-    */
-    public function getImportedDeviceIdentifier()
-    {
-        if (array_key_exists("importedDeviceIdentifier", $this->_propDict)) {
-            return $this->_propDict["importedDeviceIdentifier"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the importedDeviceIdentifier
-    * Imported Device Identifier
-    *
-    * @param string $val The importedDeviceIdentifier
-    *
-    * @return ImportedDeviceIdentity
-    */
-    public function setImportedDeviceIdentifier($val)
-    {
-        $this->_propDict["importedDeviceIdentifier"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the importedDeviceIdentityType
-    * Type of Imported Device Identity
-    *
-    * @return ImportedDeviceIdentityType The importedDeviceIdentityType
-    */
-    public function getImportedDeviceIdentityType()
-    {
-        if (array_key_exists("importedDeviceIdentityType", $this->_propDict)) {
-            if (is_a($this->_propDict["importedDeviceIdentityType"], "Beta\Microsoft\Graph\Model\ImportedDeviceIdentityType")) {
-                return $this->_propDict["importedDeviceIdentityType"];
-            } else {
-                $this->_propDict["importedDeviceIdentityType"] = new ImportedDeviceIdentityType($this->_propDict["importedDeviceIdentityType"]);
-                return $this->_propDict["importedDeviceIdentityType"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the importedDeviceIdentityType
-    * Type of Imported Device Identity
-    *
-    * @param ImportedDeviceIdentityType $val The importedDeviceIdentityType
-    *
-    * @return ImportedDeviceIdentity
-    */
-    public function setImportedDeviceIdentityType($val)
-    {
-        $this->_propDict["importedDeviceIdentityType"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the lastModifiedDateTime
-    * Last Modified DateTime of the description
-    *
-    * @return \DateTime The lastModifiedDateTime
-    */
-    public function getLastModifiedDateTime()
-    {
-        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
-                return $this->_propDict["lastModifiedDateTime"];
-            } else {
-                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
-                return $this->_propDict["lastModifiedDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the lastModifiedDateTime
-    * Last Modified DateTime of the description
-    *
-    * @param \DateTime $val The lastModifiedDateTime
-    *
-    * @return ImportedDeviceIdentity
-    */
-    public function setLastModifiedDateTime($val)
-    {
-        $this->_propDict["lastModifiedDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the createdDateTime
     * Created Date Time of the device
     *
@@ -149,39 +54,6 @@ class ImportedDeviceIdentity extends Entity
     public function setCreatedDateTime($val)
     {
         $this->_propDict["createdDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the lastContactedDateTime
-    * Last Contacted Date Time of the device
-    *
-    * @return \DateTime The lastContactedDateTime
-    */
-    public function getLastContactedDateTime()
-    {
-        if (array_key_exists("lastContactedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastContactedDateTime"], "\DateTime")) {
-                return $this->_propDict["lastContactedDateTime"];
-            } else {
-                $this->_propDict["lastContactedDateTime"] = new \DateTime($this->_propDict["lastContactedDateTime"]);
-                return $this->_propDict["lastContactedDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the lastContactedDateTime
-    * Last Contacted Date Time of the device
-    *
-    * @param \DateTime $val The lastContactedDateTime
-    *
-    * @return ImportedDeviceIdentity
-    */
-    public function setLastContactedDateTime($val)
-    {
-        $this->_propDict["lastContactedDateTime"] = $val;
         return $this;
     }
     
@@ -244,6 +116,134 @@ class ImportedDeviceIdentity extends Entity
     public function setEnrollmentState($val)
     {
         $this->_propDict["enrollmentState"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the importedDeviceIdentifier
+    * Imported Device Identifier
+    *
+    * @return string The importedDeviceIdentifier
+    */
+    public function getImportedDeviceIdentifier()
+    {
+        if (array_key_exists("importedDeviceIdentifier", $this->_propDict)) {
+            return $this->_propDict["importedDeviceIdentifier"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the importedDeviceIdentifier
+    * Imported Device Identifier
+    *
+    * @param string $val The importedDeviceIdentifier
+    *
+    * @return ImportedDeviceIdentity
+    */
+    public function setImportedDeviceIdentifier($val)
+    {
+        $this->_propDict["importedDeviceIdentifier"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the importedDeviceIdentityType
+    * Type of Imported Device Identity
+    *
+    * @return ImportedDeviceIdentityType The importedDeviceIdentityType
+    */
+    public function getImportedDeviceIdentityType()
+    {
+        if (array_key_exists("importedDeviceIdentityType", $this->_propDict)) {
+            if (is_a($this->_propDict["importedDeviceIdentityType"], "Beta\Microsoft\Graph\Model\ImportedDeviceIdentityType")) {
+                return $this->_propDict["importedDeviceIdentityType"];
+            } else {
+                $this->_propDict["importedDeviceIdentityType"] = new ImportedDeviceIdentityType($this->_propDict["importedDeviceIdentityType"]);
+                return $this->_propDict["importedDeviceIdentityType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the importedDeviceIdentityType
+    * Type of Imported Device Identity
+    *
+    * @param ImportedDeviceIdentityType $val The importedDeviceIdentityType
+    *
+    * @return ImportedDeviceIdentity
+    */
+    public function setImportedDeviceIdentityType($val)
+    {
+        $this->_propDict["importedDeviceIdentityType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the lastContactedDateTime
+    * Last Contacted Date Time of the device
+    *
+    * @return \DateTime The lastContactedDateTime
+    */
+    public function getLastContactedDateTime()
+    {
+        if (array_key_exists("lastContactedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastContactedDateTime"], "\DateTime")) {
+                return $this->_propDict["lastContactedDateTime"];
+            } else {
+                $this->_propDict["lastContactedDateTime"] = new \DateTime($this->_propDict["lastContactedDateTime"]);
+                return $this->_propDict["lastContactedDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the lastContactedDateTime
+    * Last Contacted Date Time of the device
+    *
+    * @param \DateTime $val The lastContactedDateTime
+    *
+    * @return ImportedDeviceIdentity
+    */
+    public function setLastContactedDateTime($val)
+    {
+        $this->_propDict["lastContactedDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the lastModifiedDateTime
+    * Last Modified DateTime of the description
+    *
+    * @return \DateTime The lastModifiedDateTime
+    */
+    public function getLastModifiedDateTime()
+    {
+        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+                return $this->_propDict["lastModifiedDateTime"];
+            } else {
+                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
+                return $this->_propDict["lastModifiedDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the lastModifiedDateTime
+    * Last Modified DateTime of the description
+    *
+    * @param \DateTime $val The lastModifiedDateTime
+    *
+    * @return ImportedDeviceIdentity
+    */
+    public function setLastModifiedDateTime($val)
+    {
+        $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
     

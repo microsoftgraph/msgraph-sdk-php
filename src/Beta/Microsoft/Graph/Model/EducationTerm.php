@@ -24,6 +24,67 @@ namespace Beta\Microsoft\Graph\Model;
 class EducationTerm extends Entity
 {
     /**
+    * Gets the displayName
+    * Display name of the term.
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the displayName
+    * Display name of the term.
+    *
+    * @param string $val The value of the displayName
+    *
+    * @return EducationTerm
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the endDate
+    * End of the term.
+    *
+    * @return \DateTime The endDate
+    */
+    public function getEndDate()
+    {
+        if (array_key_exists("endDate", $this->_propDict)) {
+            if (is_a($this->_propDict["endDate"], "\DateTime")) {
+                return $this->_propDict["endDate"];
+            } else {
+                $this->_propDict["endDate"] = new \DateTime($this->_propDict["endDate"]);
+                return $this->_propDict["endDate"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the endDate
+    * End of the term.
+    *
+    * @param \DateTime $val The value to assign to the endDate
+    *
+    * @return EducationTerm The EducationTerm
+    */
+    public function setEndDate($val)
+    {
+        $this->_propDict["endDate"] = $val;
+         return $this;
+    }
+    /**
     * Gets the externalId
     * ID of term in the syncing system.
     *
@@ -83,66 +144,5 @@ class EducationTerm extends Entity
     {
         $this->_propDict["startDate"] = $val;
          return $this;
-    }
-
-    /**
-    * Gets the endDate
-    * End of the term.
-    *
-    * @return \DateTime The endDate
-    */
-    public function getEndDate()
-    {
-        if (array_key_exists("endDate", $this->_propDict)) {
-            if (is_a($this->_propDict["endDate"], "\DateTime")) {
-                return $this->_propDict["endDate"];
-            } else {
-                $this->_propDict["endDate"] = new \DateTime($this->_propDict["endDate"]);
-                return $this->_propDict["endDate"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the endDate
-    * End of the term.
-    *
-    * @param \DateTime $val The value to assign to the endDate
-    *
-    * @return EducationTerm The EducationTerm
-    */
-    public function setEndDate($val)
-    {
-        $this->_propDict["endDate"] = $val;
-         return $this;
-    }
-    /**
-    * Gets the displayName
-    * Display name of the term.
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the displayName
-    * Display name of the term.
-    *
-    * @param string $val The value of the displayName
-    *
-    * @return EducationTerm
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
     }
 }

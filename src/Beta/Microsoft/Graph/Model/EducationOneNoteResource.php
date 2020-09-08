@@ -33,32 +33,6 @@ class EducationOneNoteResource extends EducationResource
     }
 
     /**
-    * Gets the sectionName
-    *
-    * @return string The sectionName
-    */
-    public function getSectionName()
-    {
-        if (array_key_exists("sectionName", $this->_propDict)) {
-            return $this->_propDict["sectionName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the sectionName
-    *
-    * @param string $val The value of the sectionName
-    *
-    * @return EducationOneNoteResource
-    */
-    public function setSectionName($val)
-    {
-        $this->_propDict["sectionName"] = $val;
-        return $this;
-    }
-    /**
     * Gets the pageUrl
     *
     * @return string The pageUrl
@@ -82,6 +56,32 @@ class EducationOneNoteResource extends EducationResource
     public function setPageUrl($val)
     {
         $this->_propDict["pageUrl"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the sectionName
+    *
+    * @return string The sectionName
+    */
+    public function getSectionName()
+    {
+        if (array_key_exists("sectionName", $this->_propDict)) {
+            return $this->_propDict["sectionName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the sectionName
+    *
+    * @param string $val The value of the sectionName
+    *
+    * @return EducationOneNoteResource
+    */
+    public function setSectionName($val)
+    {
+        $this->_propDict["sectionName"] = $val;
         return $this;
     }
 }

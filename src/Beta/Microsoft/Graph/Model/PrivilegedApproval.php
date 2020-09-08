@@ -25,83 +25,33 @@ namespace Beta\Microsoft\Graph\Model;
 class PrivilegedApproval extends Entity
 {
     /**
-    * Gets the userId
+    * Gets the approvalDuration
     *
-    * @return string The userId
+    * @return Duration The approvalDuration
     */
-    public function getUserId()
+    public function getApprovalDuration()
     {
-        if (array_key_exists("userId", $this->_propDict)) {
-            return $this->_propDict["userId"];
-        } else {
-            return null;
+        if (array_key_exists("approvalDuration", $this->_propDict)) {
+            if (is_a($this->_propDict["approvalDuration"], "Beta\Microsoft\Graph\Model\Duration")) {
+                return $this->_propDict["approvalDuration"];
+            } else {
+                $this->_propDict["approvalDuration"] = new Duration($this->_propDict["approvalDuration"]);
+                return $this->_propDict["approvalDuration"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the userId
+    * Sets the approvalDuration
     *
-    * @param string $val The userId
+    * @param Duration $val The approvalDuration
     *
     * @return PrivilegedApproval
     */
-    public function setUserId($val)
+    public function setApprovalDuration($val)
     {
-        $this->_propDict["userId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the roleId
-    *
-    * @return string The roleId
-    */
-    public function getRoleId()
-    {
-        if (array_key_exists("roleId", $this->_propDict)) {
-            return $this->_propDict["roleId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the roleId
-    *
-    * @param string $val The roleId
-    *
-    * @return PrivilegedApproval
-    */
-    public function setRoleId($val)
-    {
-        $this->_propDict["roleId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the approvalType
-    *
-    * @return string The approvalType
-    */
-    public function getApprovalType()
-    {
-        if (array_key_exists("approvalType", $this->_propDict)) {
-            return $this->_propDict["approvalType"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the approvalType
-    *
-    * @param string $val The approvalType
-    *
-    * @return PrivilegedApproval
-    */
-    public function setApprovalType($val)
-    {
-        $this->_propDict["approvalType"] = $val;
+        $this->_propDict["approvalDuration"] = $val;
         return $this;
     }
     
@@ -137,33 +87,87 @@ class PrivilegedApproval extends Entity
     }
     
     /**
-    * Gets the approvalDuration
+    * Gets the approvalType
     *
-    * @return Duration The approvalDuration
+    * @return string The approvalType
     */
-    public function getApprovalDuration()
+    public function getApprovalType()
     {
-        if (array_key_exists("approvalDuration", $this->_propDict)) {
-            if (is_a($this->_propDict["approvalDuration"], "Beta\Microsoft\Graph\Model\Duration")) {
-                return $this->_propDict["approvalDuration"];
+        if (array_key_exists("approvalType", $this->_propDict)) {
+            return $this->_propDict["approvalType"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the approvalType
+    *
+    * @param string $val The approvalType
+    *
+    * @return PrivilegedApproval
+    */
+    public function setApprovalType($val)
+    {
+        $this->_propDict["approvalType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the approverReason
+    *
+    * @return string The approverReason
+    */
+    public function getApproverReason()
+    {
+        if (array_key_exists("approverReason", $this->_propDict)) {
+            return $this->_propDict["approverReason"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the approverReason
+    *
+    * @param string $val The approverReason
+    *
+    * @return PrivilegedApproval
+    */
+    public function setApproverReason($val)
+    {
+        $this->_propDict["approverReason"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the endDateTime
+    *
+    * @return \DateTime The endDateTime
+    */
+    public function getEndDateTime()
+    {
+        if (array_key_exists("endDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["endDateTime"], "\DateTime")) {
+                return $this->_propDict["endDateTime"];
             } else {
-                $this->_propDict["approvalDuration"] = new Duration($this->_propDict["approvalDuration"]);
-                return $this->_propDict["approvalDuration"];
+                $this->_propDict["endDateTime"] = new \DateTime($this->_propDict["endDateTime"]);
+                return $this->_propDict["endDateTime"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the approvalDuration
+    * Sets the endDateTime
     *
-    * @param Duration $val The approvalDuration
+    * @param \DateTime $val The endDateTime
     *
     * @return PrivilegedApproval
     */
-    public function setApprovalDuration($val)
+    public function setEndDateTime($val)
     {
-        $this->_propDict["approvalDuration"] = $val;
+        $this->_propDict["endDateTime"] = $val;
         return $this;
     }
     
@@ -195,29 +199,29 @@ class PrivilegedApproval extends Entity
     }
     
     /**
-    * Gets the approverReason
+    * Gets the roleId
     *
-    * @return string The approverReason
+    * @return string The roleId
     */
-    public function getApproverReason()
+    public function getRoleId()
     {
-        if (array_key_exists("approverReason", $this->_propDict)) {
-            return $this->_propDict["approverReason"];
+        if (array_key_exists("roleId", $this->_propDict)) {
+            return $this->_propDict["roleId"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the approverReason
+    * Sets the roleId
     *
-    * @param string $val The approverReason
+    * @param string $val The roleId
     *
     * @return PrivilegedApproval
     */
-    public function setApproverReason($val)
+    public function setRoleId($val)
     {
-        $this->_propDict["approverReason"] = $val;
+        $this->_propDict["roleId"] = $val;
         return $this;
     }
     
@@ -253,33 +257,29 @@ class PrivilegedApproval extends Entity
     }
     
     /**
-    * Gets the endDateTime
+    * Gets the userId
     *
-    * @return \DateTime The endDateTime
+    * @return string The userId
     */
-    public function getEndDateTime()
+    public function getUserId()
     {
-        if (array_key_exists("endDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["endDateTime"], "\DateTime")) {
-                return $this->_propDict["endDateTime"];
-            } else {
-                $this->_propDict["endDateTime"] = new \DateTime($this->_propDict["endDateTime"]);
-                return $this->_propDict["endDateTime"];
-            }
+        if (array_key_exists("userId", $this->_propDict)) {
+            return $this->_propDict["userId"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the endDateTime
+    * Sets the userId
     *
-    * @param \DateTime $val The endDateTime
+    * @param string $val The userId
     *
     * @return PrivilegedApproval
     */
-    public function setEndDateTime($val)
+    public function setUserId($val)
     {
-        $this->_propDict["endDateTime"] = $val;
+        $this->_propDict["userId"] = $val;
         return $this;
     }
     

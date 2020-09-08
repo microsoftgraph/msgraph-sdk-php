@@ -23,34 +23,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class WindowsNetworkIsolationPolicy extends Entity
 {
-    /**
-    * Gets the enterpriseNetworkDomainNames
-    * This is the list of domains that comprise the boundaries of the enterprise. Data from one of these domains that is sent to a device will be considered enterprise data and protected. These locations will be considered a safe destination for enterprise data to be shared to.
-    *
-    * @return string The enterpriseNetworkDomainNames
-    */
-    public function getEnterpriseNetworkDomainNames()
-    {
-        if (array_key_exists("enterpriseNetworkDomainNames", $this->_propDict)) {
-            return $this->_propDict["enterpriseNetworkDomainNames"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the enterpriseNetworkDomainNames
-    * This is the list of domains that comprise the boundaries of the enterprise. Data from one of these domains that is sent to a device will be considered enterprise data and protected. These locations will be considered a safe destination for enterprise data to be shared to.
-    *
-    * @param string $val The value of the enterpriseNetworkDomainNames
-    *
-    * @return WindowsNetworkIsolationPolicy
-    */
-    public function setEnterpriseNetworkDomainNames($val)
-    {
-        $this->_propDict["enterpriseNetworkDomainNames"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the enterpriseCloudResources
@@ -83,6 +55,34 @@ class WindowsNetworkIsolationPolicy extends Entity
     {
         $this->_propDict["enterpriseCloudResources"] = $val;
          return $this;
+    }
+    /**
+    * Gets the enterpriseInternalProxyServers
+    * This is the comma-separated list of internal proxy servers. For example, "157.54.14.28, 157.54.11.118, 10.202.14.167, 157.53.14.163, 157.69.210.59". These proxies have been configured by the admin to connect to specific resources on the Internet. They are considered to be enterprise network locations. The proxies are only leveraged in configuring the EnterpriseCloudResources policy to force traffic to the matched cloud resources through these proxies.
+    *
+    * @return string The enterpriseInternalProxyServers
+    */
+    public function getEnterpriseInternalProxyServers()
+    {
+        if (array_key_exists("enterpriseInternalProxyServers", $this->_propDict)) {
+            return $this->_propDict["enterpriseInternalProxyServers"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the enterpriseInternalProxyServers
+    * This is the comma-separated list of internal proxy servers. For example, "157.54.14.28, 157.54.11.118, 10.202.14.167, 157.53.14.163, 157.69.210.59". These proxies have been configured by the admin to connect to specific resources on the Internet. They are considered to be enterprise network locations. The proxies are only leveraged in configuring the EnterpriseCloudResources policy to force traffic to the matched cloud resources through these proxies.
+    *
+    * @param string $val The value of the enterpriseInternalProxyServers
+    *
+    * @return WindowsNetworkIsolationPolicy
+    */
+    public function setEnterpriseInternalProxyServers($val)
+    {
+        $this->_propDict["enterpriseInternalProxyServers"] = $val;
+        return $this;
     }
 
     /**
@@ -118,34 +118,6 @@ class WindowsNetworkIsolationPolicy extends Entity
          return $this;
     }
     /**
-    * Gets the enterpriseInternalProxyServers
-    * This is the comma-separated list of internal proxy servers. For example, "157.54.14.28, 157.54.11.118, 10.202.14.167, 157.53.14.163, 157.69.210.59". These proxies have been configured by the admin to connect to specific resources on the Internet. They are considered to be enterprise network locations. The proxies are only leveraged in configuring the EnterpriseCloudResources policy to force traffic to the matched cloud resources through these proxies.
-    *
-    * @return string The enterpriseInternalProxyServers
-    */
-    public function getEnterpriseInternalProxyServers()
-    {
-        if (array_key_exists("enterpriseInternalProxyServers", $this->_propDict)) {
-            return $this->_propDict["enterpriseInternalProxyServers"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the enterpriseInternalProxyServers
-    * This is the comma-separated list of internal proxy servers. For example, "157.54.14.28, 157.54.11.118, 10.202.14.167, 157.53.14.163, 157.69.210.59". These proxies have been configured by the admin to connect to specific resources on the Internet. They are considered to be enterprise network locations. The proxies are only leveraged in configuring the EnterpriseCloudResources policy to force traffic to the matched cloud resources through these proxies.
-    *
-    * @param string $val The value of the enterpriseInternalProxyServers
-    *
-    * @return WindowsNetworkIsolationPolicy
-    */
-    public function setEnterpriseInternalProxyServers($val)
-    {
-        $this->_propDict["enterpriseInternalProxyServers"] = $val;
-        return $this;
-    }
-    /**
     * Gets the enterpriseIPRangesAreAuthoritative
     * Boolean value that tells the client to accept the configured list and not to use heuristics to attempt to find other subnets. Default is false.
     *
@@ -171,6 +143,34 @@ class WindowsNetworkIsolationPolicy extends Entity
     public function setEnterpriseIPRangesAreAuthoritative($val)
     {
         $this->_propDict["enterpriseIPRangesAreAuthoritative"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the enterpriseNetworkDomainNames
+    * This is the list of domains that comprise the boundaries of the enterprise. Data from one of these domains that is sent to a device will be considered enterprise data and protected. These locations will be considered a safe destination for enterprise data to be shared to.
+    *
+    * @return string The enterpriseNetworkDomainNames
+    */
+    public function getEnterpriseNetworkDomainNames()
+    {
+        if (array_key_exists("enterpriseNetworkDomainNames", $this->_propDict)) {
+            return $this->_propDict["enterpriseNetworkDomainNames"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the enterpriseNetworkDomainNames
+    * This is the list of domains that comprise the boundaries of the enterprise. Data from one of these domains that is sent to a device will be considered enterprise data and protected. These locations will be considered a safe destination for enterprise data to be shared to.
+    *
+    * @param string $val The value of the enterpriseNetworkDomainNames
+    *
+    * @return WindowsNetworkIsolationPolicy
+    */
+    public function setEnterpriseNetworkDomainNames($val)
+    {
+        $this->_propDict["enterpriseNetworkDomainNames"] = $val;
         return $this;
     }
     /**

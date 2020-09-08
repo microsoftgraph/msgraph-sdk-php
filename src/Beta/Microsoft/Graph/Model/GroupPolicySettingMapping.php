@@ -25,35 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class GroupPolicySettingMapping extends Entity
 {
     /**
-    * Gets the parentId
-    * Parent Id of the group policy setting.
-    *
-    * @return string The parentId
-    */
-    public function getParentId()
-    {
-        if (array_key_exists("parentId", $this->_propDict)) {
-            return $this->_propDict["parentId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the parentId
-    * Parent Id of the group policy setting.
-    *
-    * @param string $val The parentId
-    *
-    * @return GroupPolicySettingMapping
-    */
-    public function setParentId($val)
-    {
-        $this->_propDict["parentId"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the childIdList
     * List of Child Ids of the group policy setting.
     *
@@ -83,89 +54,267 @@ class GroupPolicySettingMapping extends Entity
     }
     
     /**
-    * Gets the settingName
-    * The name of this group policy setting.
+    * Gets the intuneSettingDefinitionId
+    * The Intune Setting Definition Id
     *
-    * @return string The settingName
+    * @return string The intuneSettingDefinitionId
     */
-    public function getSettingName()
+    public function getIntuneSettingDefinitionId()
     {
-        if (array_key_exists("settingName", $this->_propDict)) {
-            return $this->_propDict["settingName"];
+        if (array_key_exists("intuneSettingDefinitionId", $this->_propDict)) {
+            return $this->_propDict["intuneSettingDefinitionId"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the settingName
-    * The name of this group policy setting.
+    * Sets the intuneSettingDefinitionId
+    * The Intune Setting Definition Id
     *
-    * @param string $val The settingName
+    * @param string $val The intuneSettingDefinitionId
     *
     * @return GroupPolicySettingMapping
     */
-    public function setSettingName($val)
+    public function setIntuneSettingDefinitionId($val)
     {
-        $this->_propDict["settingName"] = $val;
+        $this->_propDict["intuneSettingDefinitionId"] = $val;
         return $this;
     }
     
     /**
-    * Gets the settingValue
-    * The value of this group policy setting.
+    * Gets the intuneSettingUriList
+    * The list of Intune Setting URIs this group policy setting maps to
     *
-    * @return string The settingValue
+    * @return string The intuneSettingUriList
     */
-    public function getSettingValue()
+    public function getIntuneSettingUriList()
     {
-        if (array_key_exists("settingValue", $this->_propDict)) {
-            return $this->_propDict["settingValue"];
+        if (array_key_exists("intuneSettingUriList", $this->_propDict)) {
+            return $this->_propDict["intuneSettingUriList"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the settingValue
-    * The value of this group policy setting.
+    * Sets the intuneSettingUriList
+    * The list of Intune Setting URIs this group policy setting maps to
     *
-    * @param string $val The settingValue
+    * @param string $val The intuneSettingUriList
     *
     * @return GroupPolicySettingMapping
     */
-    public function setSettingValue($val)
+    public function setIntuneSettingUriList($val)
     {
-        $this->_propDict["settingValue"] = $val;
+        $this->_propDict["intuneSettingUriList"] = $val;
         return $this;
     }
     
     /**
-    * Gets the settingValueType
-    * The value type of this group policy setting.
+    * Gets the isMdmSupported
+    * Indicates if the setting is supported by Intune or not
     *
-    * @return string The settingValueType
+    * @return bool The isMdmSupported
     */
-    public function getSettingValueType()
+    public function getIsMdmSupported()
     {
-        if (array_key_exists("settingValueType", $this->_propDict)) {
-            return $this->_propDict["settingValueType"];
+        if (array_key_exists("isMdmSupported", $this->_propDict)) {
+            return $this->_propDict["isMdmSupported"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the settingValueType
-    * The value type of this group policy setting.
+    * Sets the isMdmSupported
+    * Indicates if the setting is supported by Intune or not
     *
-    * @param string $val The settingValueType
+    * @param bool $val The isMdmSupported
     *
     * @return GroupPolicySettingMapping
     */
-    public function setSettingValueType($val)
+    public function setIsMdmSupported($val)
     {
-        $this->_propDict["settingValueType"] = $val;
+        $this->_propDict["isMdmSupported"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the mdmCspName
+    * The CSP name this group policy setting maps to.
+    *
+    * @return string The mdmCspName
+    */
+    public function getMdmCspName()
+    {
+        if (array_key_exists("mdmCspName", $this->_propDict)) {
+            return $this->_propDict["mdmCspName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the mdmCspName
+    * The CSP name this group policy setting maps to.
+    *
+    * @param string $val The mdmCspName
+    *
+    * @return GroupPolicySettingMapping
+    */
+    public function setMdmCspName($val)
+    {
+        $this->_propDict["mdmCspName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the mdmMinimumOSVersion
+    * The minimum OS version this mdm setting supports.
+    *
+    * @return int The mdmMinimumOSVersion
+    */
+    public function getMdmMinimumOSVersion()
+    {
+        if (array_key_exists("mdmMinimumOSVersion", $this->_propDict)) {
+            return $this->_propDict["mdmMinimumOSVersion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the mdmMinimumOSVersion
+    * The minimum OS version this mdm setting supports.
+    *
+    * @param int $val The mdmMinimumOSVersion
+    *
+    * @return GroupPolicySettingMapping
+    */
+    public function setMdmMinimumOSVersion($val)
+    {
+        $this->_propDict["mdmMinimumOSVersion"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the mdmSettingUri
+    * The MDM CSP URI this group policy setting maps to.
+    *
+    * @return string The mdmSettingUri
+    */
+    public function getMdmSettingUri()
+    {
+        if (array_key_exists("mdmSettingUri", $this->_propDict)) {
+            return $this->_propDict["mdmSettingUri"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the mdmSettingUri
+    * The MDM CSP URI this group policy setting maps to.
+    *
+    * @param string $val The mdmSettingUri
+    *
+    * @return GroupPolicySettingMapping
+    */
+    public function setMdmSettingUri($val)
+    {
+        $this->_propDict["mdmSettingUri"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the mdmSupportedState
+    * Indicates if the setting is supported in Mdm or not
+    *
+    * @return MdmSupportedState The mdmSupportedState
+    */
+    public function getMdmSupportedState()
+    {
+        if (array_key_exists("mdmSupportedState", $this->_propDict)) {
+            if (is_a($this->_propDict["mdmSupportedState"], "Beta\Microsoft\Graph\Model\MdmSupportedState")) {
+                return $this->_propDict["mdmSupportedState"];
+            } else {
+                $this->_propDict["mdmSupportedState"] = new MdmSupportedState($this->_propDict["mdmSupportedState"]);
+                return $this->_propDict["mdmSupportedState"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the mdmSupportedState
+    * Indicates if the setting is supported in Mdm or not
+    *
+    * @param MdmSupportedState $val The mdmSupportedState
+    *
+    * @return GroupPolicySettingMapping
+    */
+    public function setMdmSupportedState($val)
+    {
+        $this->_propDict["mdmSupportedState"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the parentId
+    * Parent Id of the group policy setting.
+    *
+    * @return string The parentId
+    */
+    public function getParentId()
+    {
+        if (array_key_exists("parentId", $this->_propDict)) {
+            return $this->_propDict["parentId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the parentId
+    * Parent Id of the group policy setting.
+    *
+    * @param string $val The parentId
+    *
+    * @return GroupPolicySettingMapping
+    */
+    public function setParentId($val)
+    {
+        $this->_propDict["parentId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the settingCategory
+    * The category the group policy setting is in.
+    *
+    * @return string The settingCategory
+    */
+    public function getSettingCategory()
+    {
+        if (array_key_exists("settingCategory", $this->_propDict)) {
+            return $this->_propDict["settingCategory"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the settingCategory
+    * The category the group policy setting is in.
+    *
+    * @param string $val The settingCategory
+    *
+    * @return GroupPolicySettingMapping
+    */
+    public function setSettingCategory($val)
+    {
+        $this->_propDict["settingCategory"] = $val;
         return $this;
     }
     
@@ -257,242 +406,31 @@ class GroupPolicySettingMapping extends Entity
     }
     
     /**
-    * Gets the settingValueDisplayUnits
-    * The display units of this group policy setting value
+    * Gets the settingName
+    * The name of this group policy setting.
     *
-    * @return string The settingValueDisplayUnits
+    * @return string The settingName
     */
-    public function getSettingValueDisplayUnits()
+    public function getSettingName()
     {
-        if (array_key_exists("settingValueDisplayUnits", $this->_propDict)) {
-            return $this->_propDict["settingValueDisplayUnits"];
+        if (array_key_exists("settingName", $this->_propDict)) {
+            return $this->_propDict["settingName"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the settingValueDisplayUnits
-    * The display units of this group policy setting value
+    * Sets the settingName
+    * The name of this group policy setting.
     *
-    * @param string $val The settingValueDisplayUnits
-    *
-    * @return GroupPolicySettingMapping
-    */
-    public function setSettingValueDisplayUnits($val)
-    {
-        $this->_propDict["settingValueDisplayUnits"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the settingCategory
-    * The category the group policy setting is in.
-    *
-    * @return string The settingCategory
-    */
-    public function getSettingCategory()
-    {
-        if (array_key_exists("settingCategory", $this->_propDict)) {
-            return $this->_propDict["settingCategory"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the settingCategory
-    * The category the group policy setting is in.
-    *
-    * @param string $val The settingCategory
+    * @param string $val The settingName
     *
     * @return GroupPolicySettingMapping
     */
-    public function setSettingCategory($val)
+    public function setSettingName($val)
     {
-        $this->_propDict["settingCategory"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the mdmCspName
-    * The CSP name this group policy setting maps to.
-    *
-    * @return string The mdmCspName
-    */
-    public function getMdmCspName()
-    {
-        if (array_key_exists("mdmCspName", $this->_propDict)) {
-            return $this->_propDict["mdmCspName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the mdmCspName
-    * The CSP name this group policy setting maps to.
-    *
-    * @param string $val The mdmCspName
-    *
-    * @return GroupPolicySettingMapping
-    */
-    public function setMdmCspName($val)
-    {
-        $this->_propDict["mdmCspName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the mdmSettingUri
-    * The MDM CSP URI this group policy setting maps to.
-    *
-    * @return string The mdmSettingUri
-    */
-    public function getMdmSettingUri()
-    {
-        if (array_key_exists("mdmSettingUri", $this->_propDict)) {
-            return $this->_propDict["mdmSettingUri"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the mdmSettingUri
-    * The MDM CSP URI this group policy setting maps to.
-    *
-    * @param string $val The mdmSettingUri
-    *
-    * @return GroupPolicySettingMapping
-    */
-    public function setMdmSettingUri($val)
-    {
-        $this->_propDict["mdmSettingUri"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the mdmMinimumOSVersion
-    * The minimum OS version this mdm setting supports.
-    *
-    * @return int The mdmMinimumOSVersion
-    */
-    public function getMdmMinimumOSVersion()
-    {
-        if (array_key_exists("mdmMinimumOSVersion", $this->_propDict)) {
-            return $this->_propDict["mdmMinimumOSVersion"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the mdmMinimumOSVersion
-    * The minimum OS version this mdm setting supports.
-    *
-    * @param int $val The mdmMinimumOSVersion
-    *
-    * @return GroupPolicySettingMapping
-    */
-    public function setMdmMinimumOSVersion($val)
-    {
-        $this->_propDict["mdmMinimumOSVersion"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the settingType
-    * The setting type (security or admx) of the Group Policy.
-    *
-    * @return GroupPolicySettingType The settingType
-    */
-    public function getSettingType()
-    {
-        if (array_key_exists("settingType", $this->_propDict)) {
-            if (is_a($this->_propDict["settingType"], "Beta\Microsoft\Graph\Model\GroupPolicySettingType")) {
-                return $this->_propDict["settingType"];
-            } else {
-                $this->_propDict["settingType"] = new GroupPolicySettingType($this->_propDict["settingType"]);
-                return $this->_propDict["settingType"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the settingType
-    * The setting type (security or admx) of the Group Policy.
-    *
-    * @param GroupPolicySettingType $val The settingType
-    *
-    * @return GroupPolicySettingMapping
-    */
-    public function setSettingType($val)
-    {
-        $this->_propDict["settingType"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the isMdmSupported
-    * Indicates if the setting is supported by Intune or not
-    *
-    * @return bool The isMdmSupported
-    */
-    public function getIsMdmSupported()
-    {
-        if (array_key_exists("isMdmSupported", $this->_propDict)) {
-            return $this->_propDict["isMdmSupported"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the isMdmSupported
-    * Indicates if the setting is supported by Intune or not
-    *
-    * @param bool $val The isMdmSupported
-    *
-    * @return GroupPolicySettingMapping
-    */
-    public function setIsMdmSupported($val)
-    {
-        $this->_propDict["isMdmSupported"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the mdmSupportedState
-    * Indicates if the setting is supported in Mdm or not
-    *
-    * @return MdmSupportedState The mdmSupportedState
-    */
-    public function getMdmSupportedState()
-    {
-        if (array_key_exists("mdmSupportedState", $this->_propDict)) {
-            if (is_a($this->_propDict["mdmSupportedState"], "Beta\Microsoft\Graph\Model\MdmSupportedState")) {
-                return $this->_propDict["mdmSupportedState"];
-            } else {
-                $this->_propDict["mdmSupportedState"] = new MdmSupportedState($this->_propDict["mdmSupportedState"]);
-                return $this->_propDict["mdmSupportedState"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the mdmSupportedState
-    * Indicates if the setting is supported in Mdm or not
-    *
-    * @param MdmSupportedState $val The mdmSupportedState
-    *
-    * @return GroupPolicySettingMapping
-    */
-    public function setMdmSupportedState($val)
-    {
-        $this->_propDict["mdmSupportedState"] = $val;
+        $this->_propDict["settingName"] = $val;
         return $this;
     }
     
@@ -530,60 +468,122 @@ class GroupPolicySettingMapping extends Entity
     }
     
     /**
-    * Gets the intuneSettingUriList
-    * The list of Intune Setting URIs this group policy setting maps to
+    * Gets the settingType
+    * The setting type (security or admx) of the Group Policy.
     *
-    * @return string The intuneSettingUriList
+    * @return GroupPolicySettingType The settingType
     */
-    public function getIntuneSettingUriList()
+    public function getSettingType()
     {
-        if (array_key_exists("intuneSettingUriList", $this->_propDict)) {
-            return $this->_propDict["intuneSettingUriList"];
-        } else {
-            return null;
+        if (array_key_exists("settingType", $this->_propDict)) {
+            if (is_a($this->_propDict["settingType"], "Beta\Microsoft\Graph\Model\GroupPolicySettingType")) {
+                return $this->_propDict["settingType"];
+            } else {
+                $this->_propDict["settingType"] = new GroupPolicySettingType($this->_propDict["settingType"]);
+                return $this->_propDict["settingType"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the intuneSettingUriList
-    * The list of Intune Setting URIs this group policy setting maps to
+    * Sets the settingType
+    * The setting type (security or admx) of the Group Policy.
     *
-    * @param string $val The intuneSettingUriList
+    * @param GroupPolicySettingType $val The settingType
     *
     * @return GroupPolicySettingMapping
     */
-    public function setIntuneSettingUriList($val)
+    public function setSettingType($val)
     {
-        $this->_propDict["intuneSettingUriList"] = $val;
+        $this->_propDict["settingType"] = $val;
         return $this;
     }
     
     /**
-    * Gets the intuneSettingDefinitionId
-    * The Intune Setting Definition Id
+    * Gets the settingValue
+    * The value of this group policy setting.
     *
-    * @return string The intuneSettingDefinitionId
+    * @return string The settingValue
     */
-    public function getIntuneSettingDefinitionId()
+    public function getSettingValue()
     {
-        if (array_key_exists("intuneSettingDefinitionId", $this->_propDict)) {
-            return $this->_propDict["intuneSettingDefinitionId"];
+        if (array_key_exists("settingValue", $this->_propDict)) {
+            return $this->_propDict["settingValue"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the intuneSettingDefinitionId
-    * The Intune Setting Definition Id
+    * Sets the settingValue
+    * The value of this group policy setting.
     *
-    * @param string $val The intuneSettingDefinitionId
+    * @param string $val The settingValue
     *
     * @return GroupPolicySettingMapping
     */
-    public function setIntuneSettingDefinitionId($val)
+    public function setSettingValue($val)
     {
-        $this->_propDict["intuneSettingDefinitionId"] = $val;
+        $this->_propDict["settingValue"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the settingValueDisplayUnits
+    * The display units of this group policy setting value
+    *
+    * @return string The settingValueDisplayUnits
+    */
+    public function getSettingValueDisplayUnits()
+    {
+        if (array_key_exists("settingValueDisplayUnits", $this->_propDict)) {
+            return $this->_propDict["settingValueDisplayUnits"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the settingValueDisplayUnits
+    * The display units of this group policy setting value
+    *
+    * @param string $val The settingValueDisplayUnits
+    *
+    * @return GroupPolicySettingMapping
+    */
+    public function setSettingValueDisplayUnits($val)
+    {
+        $this->_propDict["settingValueDisplayUnits"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the settingValueType
+    * The value type of this group policy setting.
+    *
+    * @return string The settingValueType
+    */
+    public function getSettingValueType()
+    {
+        if (array_key_exists("settingValueType", $this->_propDict)) {
+            return $this->_propDict["settingValueType"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the settingValueType
+    * The value type of this group policy setting.
+    *
+    * @param string $val The settingValueType
+    *
+    * @return GroupPolicySettingMapping
+    */
+    public function setSettingValueType($val)
+    {
+        $this->_propDict["settingValueType"] = $val;
         return $this;
     }
     

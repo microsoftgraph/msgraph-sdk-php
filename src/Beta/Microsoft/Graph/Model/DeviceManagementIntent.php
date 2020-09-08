@@ -25,35 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class DeviceManagementIntent extends Entity
 {
     /**
-    * Gets the displayName
-    * The user given display name
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the displayName
-    * The user given display name
-    *
-    * @param string $val The displayName
-    *
-    * @return DeviceManagementIntent
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the description
     * The user given description
     *
@@ -79,6 +50,35 @@ class DeviceManagementIntent extends Entity
     public function setDescription($val)
     {
         $this->_propDict["description"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the displayName
+    * The user given display name
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the displayName
+    * The user given display name
+    *
+    * @param string $val The displayName
+    *
+    * @return DeviceManagementIntent
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
         return $this;
     }
     
@@ -145,35 +145,6 @@ class DeviceManagementIntent extends Entity
     }
     
     /**
-    * Gets the templateId
-    * The ID of the template this intent was created from (if any)
-    *
-    * @return string The templateId
-    */
-    public function getTemplateId()
-    {
-        if (array_key_exists("templateId", $this->_propDict)) {
-            return $this->_propDict["templateId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the templateId
-    * The ID of the template this intent was created from (if any)
-    *
-    * @param string $val The templateId
-    *
-    * @return DeviceManagementIntent
-    */
-    public function setTemplateId($val)
-    {
-        $this->_propDict["templateId"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the roleScopeTagIds
     * List of Scope Tags for this Entity instance.
     *
@@ -202,63 +173,32 @@ class DeviceManagementIntent extends Entity
         return $this;
     }
     
-
-     /** 
-     * Gets the settings
-    * Collection of all settings to be applied
-     *
-     * @return array The settings
-     */
-    public function getSettings()
+    /**
+    * Gets the templateId
+    * The ID of the template this intent was created from (if any)
+    *
+    * @return string The templateId
+    */
+    public function getTemplateId()
     {
-        if (array_key_exists("settings", $this->_propDict)) {
-           return $this->_propDict["settings"];
+        if (array_key_exists("templateId", $this->_propDict)) {
+            return $this->_propDict["templateId"];
         } else {
             return null;
         }
     }
     
-    /** 
-    * Sets the settings
-    * Collection of all settings to be applied
+    /**
+    * Sets the templateId
+    * The ID of the template this intent was created from (if any)
     *
-    * @param DeviceManagementSettingInstance $val The settings
-    *
-    * @return DeviceManagementIntent
-    */
-    public function setSettings($val)
-    {
-		$this->_propDict["settings"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the categories
-    * Collection of setting categories within the intent
-     *
-     * @return array The categories
-     */
-    public function getCategories()
-    {
-        if (array_key_exists("categories", $this->_propDict)) {
-           return $this->_propDict["categories"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the categories
-    * Collection of setting categories within the intent
-    *
-    * @param DeviceManagementIntentSettingCategory $val The categories
+    * @param string $val The templateId
     *
     * @return DeviceManagementIntent
     */
-    public function setCategories($val)
+    public function setTemplateId($val)
     {
-		$this->_propDict["categories"] = $val;
+        $this->_propDict["templateId"] = $val;
         return $this;
     }
     
@@ -289,6 +229,36 @@ class DeviceManagementIntent extends Entity
     public function setAssignments($val)
     {
 		$this->_propDict["assignments"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the categories
+    * Collection of setting categories within the intent
+     *
+     * @return array The categories
+     */
+    public function getCategories()
+    {
+        if (array_key_exists("categories", $this->_propDict)) {
+           return $this->_propDict["categories"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the categories
+    * Collection of setting categories within the intent
+    *
+    * @param DeviceManagementIntentSettingCategory $val The categories
+    *
+    * @return DeviceManagementIntent
+    */
+    public function setCategories($val)
+    {
+		$this->_propDict["categories"] = $val;
         return $this;
     }
     
@@ -352,36 +322,6 @@ class DeviceManagementIntent extends Entity
         return $this;
     }
     
-
-     /** 
-     * Gets the userStates
-    * Collection of states of all users that the intent is applied to
-     *
-     * @return array The userStates
-     */
-    public function getUserStates()
-    {
-        if (array_key_exists("userStates", $this->_propDict)) {
-           return $this->_propDict["userStates"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the userStates
-    * Collection of states of all users that the intent is applied to
-    *
-    * @param DeviceManagementIntentUserState $val The userStates
-    *
-    * @return DeviceManagementIntent
-    */
-    public function setUserStates($val)
-    {
-		$this->_propDict["userStates"] = $val;
-        return $this;
-    }
-    
     /**
     * Gets the deviceStateSummary
     * A summary of device states and counts of devices that belong to corresponding state for all devices that the intent is applied to
@@ -412,6 +352,66 @@ class DeviceManagementIntent extends Entity
     public function setDeviceStateSummary($val)
     {
         $this->_propDict["deviceStateSummary"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the settings
+    * Collection of all settings to be applied
+     *
+     * @return array The settings
+     */
+    public function getSettings()
+    {
+        if (array_key_exists("settings", $this->_propDict)) {
+           return $this->_propDict["settings"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the settings
+    * Collection of all settings to be applied
+    *
+    * @param DeviceManagementSettingInstance $val The settings
+    *
+    * @return DeviceManagementIntent
+    */
+    public function setSettings($val)
+    {
+		$this->_propDict["settings"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the userStates
+    * Collection of states of all users that the intent is applied to
+     *
+     * @return array The userStates
+     */
+    public function getUserStates()
+    {
+        if (array_key_exists("userStates", $this->_propDict)) {
+           return $this->_propDict["userStates"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the userStates
+    * Collection of states of all users that the intent is applied to
+    *
+    * @param DeviceManagementIntentUserState $val The userStates
+    *
+    * @return DeviceManagementIntent
+    */
+    public function setUserStates($val)
+    {
+		$this->_propDict["userStates"] = $val;
         return $this;
     }
     

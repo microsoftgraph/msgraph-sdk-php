@@ -51,62 +51,6 @@ class PlannerChecklistItem extends Entity
         $this->_propDict["isChecked"] = $val;
         return $this;
     }
-    /**
-    * Gets the title
-    * Title of the checklist item
-    *
-    * @return string The title
-    */
-    public function getTitle()
-    {
-        if (array_key_exists("title", $this->_propDict)) {
-            return $this->_propDict["title"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the title
-    * Title of the checklist item
-    *
-    * @param string $val The value of the title
-    *
-    * @return PlannerChecklistItem
-    */
-    public function setTitle($val)
-    {
-        $this->_propDict["title"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the orderHint
-    * Used to set the relative order of items in the checklist. The format is defined as outlined here.
-    *
-    * @return string The orderHint
-    */
-    public function getOrderHint()
-    {
-        if (array_key_exists("orderHint", $this->_propDict)) {
-            return $this->_propDict["orderHint"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the orderHint
-    * Used to set the relative order of items in the checklist. The format is defined as outlined here.
-    *
-    * @param string $val The value of the orderHint
-    *
-    * @return PlannerChecklistItem
-    */
-    public function setOrderHint($val)
-    {
-        $this->_propDict["orderHint"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the lastModifiedBy
@@ -172,5 +116,61 @@ class PlannerChecklistItem extends Entity
     {
         $this->_propDict["lastModifiedDateTime"] = $val;
          return $this;
+    }
+    /**
+    * Gets the orderHint
+    * Used to set the relative order of items in the checklist. The format is defined as outlined here.
+    *
+    * @return string The orderHint
+    */
+    public function getOrderHint()
+    {
+        if (array_key_exists("orderHint", $this->_propDict)) {
+            return $this->_propDict["orderHint"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the orderHint
+    * Used to set the relative order of items in the checklist. The format is defined as outlined here.
+    *
+    * @param string $val The value of the orderHint
+    *
+    * @return PlannerChecklistItem
+    */
+    public function setOrderHint($val)
+    {
+        $this->_propDict["orderHint"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the title
+    * Title of the checklist item
+    *
+    * @return string The title
+    */
+    public function getTitle()
+    {
+        if (array_key_exists("title", $this->_propDict)) {
+            return $this->_propDict["title"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the title
+    * Title of the checklist item
+    *
+    * @param string $val The value of the title
+    *
+    * @return PlannerChecklistItem
+    */
+    public function setTitle($val)
+    {
+        $this->_propDict["title"] = $val;
+        return $this;
     }
 }

@@ -25,35 +25,35 @@ namespace Beta\Microsoft\Graph\Model;
 class GroupPolicyOperation extends Entity
 {
     /**
-    * Gets the operationType
-    * The type of group policy operation.
+    * Gets the lastModifiedDateTime
+    * The date and time the entity was last modified.
     *
-    * @return GroupPolicyOperationType The operationType
+    * @return \DateTime The lastModifiedDateTime
     */
-    public function getOperationType()
+    public function getLastModifiedDateTime()
     {
-        if (array_key_exists("operationType", $this->_propDict)) {
-            if (is_a($this->_propDict["operationType"], "Beta\Microsoft\Graph\Model\GroupPolicyOperationType")) {
-                return $this->_propDict["operationType"];
+        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+                return $this->_propDict["lastModifiedDateTime"];
             } else {
-                $this->_propDict["operationType"] = new GroupPolicyOperationType($this->_propDict["operationType"]);
-                return $this->_propDict["operationType"];
+                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
+                return $this->_propDict["lastModifiedDateTime"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the operationType
-    * The type of group policy operation.
+    * Sets the lastModifiedDateTime
+    * The date and time the entity was last modified.
     *
-    * @param GroupPolicyOperationType $val The operationType
+    * @param \DateTime $val The lastModifiedDateTime
     *
     * @return GroupPolicyOperation
     */
-    public function setOperationType($val)
+    public function setLastModifiedDateTime($val)
     {
-        $this->_propDict["operationType"] = $val;
+        $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
     
@@ -91,6 +91,39 @@ class GroupPolicyOperation extends Entity
     }
     
     /**
+    * Gets the operationType
+    * The type of group policy operation.
+    *
+    * @return GroupPolicyOperationType The operationType
+    */
+    public function getOperationType()
+    {
+        if (array_key_exists("operationType", $this->_propDict)) {
+            if (is_a($this->_propDict["operationType"], "Beta\Microsoft\Graph\Model\GroupPolicyOperationType")) {
+                return $this->_propDict["operationType"];
+            } else {
+                $this->_propDict["operationType"] = new GroupPolicyOperationType($this->_propDict["operationType"]);
+                return $this->_propDict["operationType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the operationType
+    * The type of group policy operation.
+    *
+    * @param GroupPolicyOperationType $val The operationType
+    *
+    * @return GroupPolicyOperation
+    */
+    public function setOperationType($val)
+    {
+        $this->_propDict["operationType"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the statusDetails
     * The group policy operation status detail.
     *
@@ -116,39 +149,6 @@ class GroupPolicyOperation extends Entity
     public function setStatusDetails($val)
     {
         $this->_propDict["statusDetails"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the lastModifiedDateTime
-    * The date and time the entity was last modified.
-    *
-    * @return \DateTime The lastModifiedDateTime
-    */
-    public function getLastModifiedDateTime()
-    {
-        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
-                return $this->_propDict["lastModifiedDateTime"];
-            } else {
-                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
-                return $this->_propDict["lastModifiedDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the lastModifiedDateTime
-    * The date and time the entity was last modified.
-    *
-    * @param \DateTime $val The lastModifiedDateTime
-    *
-    * @return GroupPolicyOperation
-    */
-    public function setLastModifiedDateTime($val)
-    {
-        $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
     

@@ -24,34 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class AndroidManagedStoreAppTrack extends Entity
 {
     /**
-    * Gets the trackId
-    * Unique track identifier.
-    *
-    * @return string The trackId
-    */
-    public function getTrackId()
-    {
-        if (array_key_exists("trackId", $this->_propDict)) {
-            return $this->_propDict["trackId"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the trackId
-    * Unique track identifier.
-    *
-    * @param string $val The value of the trackId
-    *
-    * @return AndroidManagedStoreAppTrack
-    */
-    public function setTrackId($val)
-    {
-        $this->_propDict["trackId"] = $val;
-        return $this;
-    }
-    /**
     * Gets the trackAlias
     * Friendly name for track.
     *
@@ -77,6 +49,34 @@ class AndroidManagedStoreAppTrack extends Entity
     public function setTrackAlias($val)
     {
         $this->_propDict["trackAlias"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the trackId
+    * Unique track identifier.
+    *
+    * @return string The trackId
+    */
+    public function getTrackId()
+    {
+        if (array_key_exists("trackId", $this->_propDict)) {
+            return $this->_propDict["trackId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the trackId
+    * Unique track identifier.
+    *
+    * @param string $val The value of the trackId
+    *
+    * @return AndroidManagedStoreAppTrack
+    */
+    public function setTrackId($val)
+    {
+        $this->_propDict["trackId"] = $val;
         return $this;
     }
 }

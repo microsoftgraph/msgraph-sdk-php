@@ -25,6 +25,35 @@ namespace Beta\Microsoft\Graph\Model;
 class NdesConnector extends Entity
 {
     /**
+    * Gets the displayName
+    * The friendly name of the Ndes Connector.
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the displayName
+    * The friendly name of the Ndes Connector.
+    *
+    * @param string $val The displayName
+    *
+    * @return NdesConnector
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the lastConnectionDateTime
     * Last connection time for the Ndes Connector
     *
@@ -87,35 +116,6 @@ class NdesConnector extends Entity
     public function setState($val)
     {
         $this->_propDict["state"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the displayName
-    * The friendly name of the Ndes Connector.
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the displayName
-    * The friendly name of the Ndes Connector.
-    *
-    * @param string $val The displayName
-    *
-    * @return NdesConnector
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
         return $this;
     }
     

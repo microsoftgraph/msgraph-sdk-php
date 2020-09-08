@@ -24,6 +24,32 @@ namespace Beta\Microsoft\Graph\Model;
 class SensitiveContentEvidence extends Entity
 {
     /**
+    * Gets the length
+    *
+    * @return int The length
+    */
+    public function getLength()
+    {
+        if (array_key_exists("length", $this->_propDict)) {
+            return $this->_propDict["length"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the length
+    *
+    * @param int $val The value of the length
+    *
+    * @return SensitiveContentEvidence
+    */
+    public function setLength($val)
+    {
+        $this->_propDict["length"] = $val;
+        return $this;
+    }
+    /**
     * Gets the match
     *
     * @return string The match
@@ -73,32 +99,6 @@ class SensitiveContentEvidence extends Entity
     public function setOffset($val)
     {
         $this->_propDict["offset"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the length
-    *
-    * @return int The length
-    */
-    public function getLength()
-    {
-        if (array_key_exists("length", $this->_propDict)) {
-            return $this->_propDict["length"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the length
-    *
-    * @param int $val The value of the length
-    *
-    * @return SensitiveContentEvidence
-    */
-    public function setLength($val)
-    {
-        $this->_propDict["length"] = $val;
         return $this;
     }
 }

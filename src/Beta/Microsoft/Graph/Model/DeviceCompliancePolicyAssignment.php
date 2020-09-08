@@ -25,39 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class DeviceCompliancePolicyAssignment extends Entity
 {
     /**
-    * Gets the target
-    * Target for the compliance policy assignment.
-    *
-    * @return DeviceAndAppManagementAssignmentTarget The target
-    */
-    public function getTarget()
-    {
-        if (array_key_exists("target", $this->_propDict)) {
-            if (is_a($this->_propDict["target"], "Beta\Microsoft\Graph\Model\DeviceAndAppManagementAssignmentTarget")) {
-                return $this->_propDict["target"];
-            } else {
-                $this->_propDict["target"] = new DeviceAndAppManagementAssignmentTarget($this->_propDict["target"]);
-                return $this->_propDict["target"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the target
-    * Target for the compliance policy assignment.
-    *
-    * @param DeviceAndAppManagementAssignmentTarget $val The target
-    *
-    * @return DeviceCompliancePolicyAssignment
-    */
-    public function setTarget($val)
-    {
-        $this->_propDict["target"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the source
     * The assignment source for the device compliance policy, direct or parcel/policySet.
     *
@@ -116,6 +83,39 @@ class DeviceCompliancePolicyAssignment extends Entity
     public function setSourceId($val)
     {
         $this->_propDict["sourceId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the target
+    * Target for the compliance policy assignment.
+    *
+    * @return DeviceAndAppManagementAssignmentTarget The target
+    */
+    public function getTarget()
+    {
+        if (array_key_exists("target", $this->_propDict)) {
+            if (is_a($this->_propDict["target"], "Beta\Microsoft\Graph\Model\DeviceAndAppManagementAssignmentTarget")) {
+                return $this->_propDict["target"];
+            } else {
+                $this->_propDict["target"] = new DeviceAndAppManagementAssignmentTarget($this->_propDict["target"]);
+                return $this->_propDict["target"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the target
+    * Target for the compliance policy assignment.
+    *
+    * @param DeviceAndAppManagementAssignmentTarget $val The target
+    *
+    * @return DeviceCompliancePolicyAssignment
+    */
+    public function setTarget($val)
+    {
+        $this->_propDict["target"] = $val;
         return $this;
     }
     

@@ -24,36 +24,33 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class DeviceManagementExchangeOnPremisesPolicy extends Entity
 {
-    /**
-    * Gets the notificationContent
-    * Notification text that will be sent to users quarantined by this policy. This is UTF8 encoded byte array HTML.
-    *
-    * @return \GuzzleHttp\Psr7\Stream The notificationContent
-    */
-    public function getNotificationContent()
+
+     /** 
+     * Gets the accessRules
+    * The list of device access rules in Exchange. The access rules apply globally to the entire Exchange organization
+     *
+     * @return array The accessRules
+     */
+    public function getAccessRules()
     {
-        if (array_key_exists("notificationContent", $this->_propDict)) {
-            if (is_a($this->_propDict["notificationContent"], "\GuzzleHttp\Psr7\Stream")) {
-                return $this->_propDict["notificationContent"];
-            } else {
-                $this->_propDict["notificationContent"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["notificationContent"]);
-                return $this->_propDict["notificationContent"];
-            }
+        if (array_key_exists("accessRules", $this->_propDict)) {
+           return $this->_propDict["accessRules"];
+        } else {
+            return null;
         }
-        return null;
     }
     
-    /**
-    * Sets the notificationContent
-    * Notification text that will be sent to users quarantined by this policy. This is UTF8 encoded byte array HTML.
+    /** 
+    * Sets the accessRules
+    * The list of device access rules in Exchange. The access rules apply globally to the entire Exchange organization
     *
-    * @param \GuzzleHttp\Psr7\Stream $val The notificationContent
+    * @param DeviceManagementExchangeAccessRule $val The accessRules
     *
     * @return DeviceManagementExchangeOnPremisesPolicy
     */
-    public function setNotificationContent($val)
+    public function setAccessRules($val)
     {
-        $this->_propDict["notificationContent"] = $val;
+		$this->_propDict["accessRules"] = $val;
         return $this;
     }
     
@@ -92,36 +89,6 @@ class DeviceManagementExchangeOnPremisesPolicy extends Entity
     
 
      /** 
-     * Gets the accessRules
-    * The list of device access rules in Exchange. The access rules apply globally to the entire Exchange organization
-     *
-     * @return array The accessRules
-     */
-    public function getAccessRules()
-    {
-        if (array_key_exists("accessRules", $this->_propDict)) {
-           return $this->_propDict["accessRules"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the accessRules
-    * The list of device access rules in Exchange. The access rules apply globally to the entire Exchange organization
-    *
-    * @param DeviceManagementExchangeAccessRule $val The accessRules
-    *
-    * @return DeviceManagementExchangeOnPremisesPolicy
-    */
-    public function setAccessRules($val)
-    {
-		$this->_propDict["accessRules"] = $val;
-        return $this;
-    }
-    
-
-     /** 
      * Gets the knownDeviceClasses
     * The list of device classes known to Exchange
      *
@@ -147,6 +114,39 @@ class DeviceManagementExchangeOnPremisesPolicy extends Entity
     public function setKnownDeviceClasses($val)
     {
 		$this->_propDict["knownDeviceClasses"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the notificationContent
+    * Notification text that will be sent to users quarantined by this policy. This is UTF8 encoded byte array HTML.
+    *
+    * @return \GuzzleHttp\Psr7\Stream The notificationContent
+    */
+    public function getNotificationContent()
+    {
+        if (array_key_exists("notificationContent", $this->_propDict)) {
+            if (is_a($this->_propDict["notificationContent"], "\GuzzleHttp\Psr7\Stream")) {
+                return $this->_propDict["notificationContent"];
+            } else {
+                $this->_propDict["notificationContent"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["notificationContent"]);
+                return $this->_propDict["notificationContent"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the notificationContent
+    * Notification text that will be sent to users quarantined by this policy. This is UTF8 encoded byte array HTML.
+    *
+    * @param \GuzzleHttp\Psr7\Stream $val The notificationContent
+    *
+    * @return DeviceManagementExchangeOnPremisesPolicy
+    */
+    public function setNotificationContent($val)
+    {
+        $this->_propDict["notificationContent"] = $val;
         return $this;
     }
     

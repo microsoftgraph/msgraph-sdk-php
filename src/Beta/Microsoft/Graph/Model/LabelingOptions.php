@@ -23,32 +23,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class LabelingOptions extends Entity
 {
-    /**
-    * Gets the labelId
-    *
-    * @return string The labelId
-    */
-    public function getLabelId()
-    {
-        if (array_key_exists("labelId", $this->_propDict)) {
-            return $this->_propDict["labelId"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the labelId
-    *
-    * @param string $val The value of the labelId
-    *
-    * @return LabelingOptions
-    */
-    public function setLabelId($val)
-    {
-        $this->_propDict["labelId"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the assignmentMethod
@@ -141,5 +115,31 @@ class LabelingOptions extends Entity
     {
         $this->_propDict["extendedProperties"] = $val;
          return $this;
+    }
+    /**
+    * Gets the labelId
+    *
+    * @return string The labelId
+    */
+    public function getLabelId()
+    {
+        if (array_key_exists("labelId", $this->_propDict)) {
+            return $this->_propDict["labelId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the labelId
+    *
+    * @param string $val The value of the labelId
+    *
+    * @return LabelingOptions
+    */
+    public function setLabelId($val)
+    {
+        $this->_propDict["labelId"] = $val;
+        return $this;
     }
 }

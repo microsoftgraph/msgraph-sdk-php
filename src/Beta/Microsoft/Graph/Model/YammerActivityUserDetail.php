@@ -25,60 +25,29 @@ namespace Beta\Microsoft\Graph\Model;
 class YammerActivityUserDetail extends Entity
 {
     /**
-    * Gets the reportRefreshDate
+    * Gets the assignedProducts
     *
-    * @return \DateTime The reportRefreshDate
+    * @return string The assignedProducts
     */
-    public function getReportRefreshDate()
+    public function getAssignedProducts()
     {
-        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
-                return $this->_propDict["reportRefreshDate"];
-            } else {
-                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
-                return $this->_propDict["reportRefreshDate"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the reportRefreshDate
-    *
-    * @param \DateTime $val The reportRefreshDate
-    *
-    * @return YammerActivityUserDetail
-    */
-    public function setReportRefreshDate($val)
-    {
-        $this->_propDict["reportRefreshDate"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the userPrincipalName
-    *
-    * @return string The userPrincipalName
-    */
-    public function getUserPrincipalName()
-    {
-        if (array_key_exists("userPrincipalName", $this->_propDict)) {
-            return $this->_propDict["userPrincipalName"];
+        if (array_key_exists("assignedProducts", $this->_propDict)) {
+            return $this->_propDict["assignedProducts"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the userPrincipalName
+    * Sets the assignedProducts
     *
-    * @param string $val The userPrincipalName
+    * @param string $val The assignedProducts
     *
     * @return YammerActivityUserDetail
     */
-    public function setUserPrincipalName($val)
+    public function setAssignedProducts($val)
     {
-        $this->_propDict["userPrincipalName"] = $val;
+        $this->_propDict["assignedProducts"] = $val;
         return $this;
     }
     
@@ -110,64 +79,6 @@ class YammerActivityUserDetail extends Entity
     }
     
     /**
-    * Gets the userState
-    *
-    * @return string The userState
-    */
-    public function getUserState()
-    {
-        if (array_key_exists("userState", $this->_propDict)) {
-            return $this->_propDict["userState"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the userState
-    *
-    * @param string $val The userState
-    *
-    * @return YammerActivityUserDetail
-    */
-    public function setUserState($val)
-    {
-        $this->_propDict["userState"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the stateChangeDate
-    *
-    * @return \DateTime The stateChangeDate
-    */
-    public function getStateChangeDate()
-    {
-        if (array_key_exists("stateChangeDate", $this->_propDict)) {
-            if (is_a($this->_propDict["stateChangeDate"], "\DateTime")) {
-                return $this->_propDict["stateChangeDate"];
-            } else {
-                $this->_propDict["stateChangeDate"] = new \DateTime($this->_propDict["stateChangeDate"]);
-                return $this->_propDict["stateChangeDate"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the stateChangeDate
-    *
-    * @param \DateTime $val The stateChangeDate
-    *
-    * @return YammerActivityUserDetail
-    */
-    public function setStateChangeDate($val)
-    {
-        $this->_propDict["stateChangeDate"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the lastActivityDate
     *
     * @return \DateTime The lastActivityDate
@@ -195,6 +106,33 @@ class YammerActivityUserDetail extends Entity
     public function setLastActivityDate($val)
     {
         $this->_propDict["lastActivityDate"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the likedCount
+    *
+    * @return int The likedCount
+    */
+    public function getLikedCount()
+    {
+        if (array_key_exists("likedCount", $this->_propDict)) {
+            return $this->_propDict["likedCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the likedCount
+    *
+    * @param int $val The likedCount
+    *
+    * @return YammerActivityUserDetail
+    */
+    public function setLikedCount($val)
+    {
+        $this->_propDict["likedCount"] = intval($val);
         return $this;
     }
     
@@ -253,60 +191,6 @@ class YammerActivityUserDetail extends Entity
     }
     
     /**
-    * Gets the likedCount
-    *
-    * @return int The likedCount
-    */
-    public function getLikedCount()
-    {
-        if (array_key_exists("likedCount", $this->_propDict)) {
-            return $this->_propDict["likedCount"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the likedCount
-    *
-    * @param int $val The likedCount
-    *
-    * @return YammerActivityUserDetail
-    */
-    public function setLikedCount($val)
-    {
-        $this->_propDict["likedCount"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the assignedProducts
-    *
-    * @return string The assignedProducts
-    */
-    public function getAssignedProducts()
-    {
-        if (array_key_exists("assignedProducts", $this->_propDict)) {
-            return $this->_propDict["assignedProducts"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the assignedProducts
-    *
-    * @param string $val The assignedProducts
-    *
-    * @return YammerActivityUserDetail
-    */
-    public function setAssignedProducts($val)
-    {
-        $this->_propDict["assignedProducts"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the reportPeriod
     *
     * @return string The reportPeriod
@@ -330,6 +214,122 @@ class YammerActivityUserDetail extends Entity
     public function setReportPeriod($val)
     {
         $this->_propDict["reportPeriod"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the reportRefreshDate
+    *
+    * @return \DateTime The reportRefreshDate
+    */
+    public function getReportRefreshDate()
+    {
+        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
+                return $this->_propDict["reportRefreshDate"];
+            } else {
+                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
+                return $this->_propDict["reportRefreshDate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the reportRefreshDate
+    *
+    * @param \DateTime $val The reportRefreshDate
+    *
+    * @return YammerActivityUserDetail
+    */
+    public function setReportRefreshDate($val)
+    {
+        $this->_propDict["reportRefreshDate"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the stateChangeDate
+    *
+    * @return \DateTime The stateChangeDate
+    */
+    public function getStateChangeDate()
+    {
+        if (array_key_exists("stateChangeDate", $this->_propDict)) {
+            if (is_a($this->_propDict["stateChangeDate"], "\DateTime")) {
+                return $this->_propDict["stateChangeDate"];
+            } else {
+                $this->_propDict["stateChangeDate"] = new \DateTime($this->_propDict["stateChangeDate"]);
+                return $this->_propDict["stateChangeDate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the stateChangeDate
+    *
+    * @param \DateTime $val The stateChangeDate
+    *
+    * @return YammerActivityUserDetail
+    */
+    public function setStateChangeDate($val)
+    {
+        $this->_propDict["stateChangeDate"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userPrincipalName
+    *
+    * @return string The userPrincipalName
+    */
+    public function getUserPrincipalName()
+    {
+        if (array_key_exists("userPrincipalName", $this->_propDict)) {
+            return $this->_propDict["userPrincipalName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the userPrincipalName
+    *
+    * @param string $val The userPrincipalName
+    *
+    * @return YammerActivityUserDetail
+    */
+    public function setUserPrincipalName($val)
+    {
+        $this->_propDict["userPrincipalName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userState
+    *
+    * @return string The userState
+    */
+    public function getUserState()
+    {
+        if (array_key_exists("userState", $this->_propDict)) {
+            return $this->_propDict["userState"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the userState
+    *
+    * @param string $val The userState
+    *
+    * @return YammerActivityUserDetail
+    */
+    public function setUserState($val)
+    {
+        $this->_propDict["userState"] = $val;
         return $this;
     }
     

@@ -24,34 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class ManagedDeviceMobileAppConfigurationState extends Entity
 {
-
-     /** 
-     * Gets the settingStates
-     *
-     * @return array The settingStates
-     */
-    public function getSettingStates()
-    {
-        if (array_key_exists("settingStates", $this->_propDict)) {
-           return $this->_propDict["settingStates"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the settingStates
-    *
-    * @param ManagedDeviceMobileAppConfigurationSettingState $val The settingStates
-    *
-    * @return ManagedDeviceMobileAppConfigurationState
-    */
-    public function setSettingStates($val)
-    {
-		$this->_propDict["settingStates"] = $val;
-        return $this;
-    }
-    
     /**
     * Gets the displayName
     * The name of the policy for this policyBase
@@ -78,35 +50,6 @@ class ManagedDeviceMobileAppConfigurationState extends Entity
     public function setDisplayName($val)
     {
         $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the version
-    * The version of the policy
-    *
-    * @return int The version
-    */
-    public function getVersion()
-    {
-        if (array_key_exists("version", $this->_propDict)) {
-            return $this->_propDict["version"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the version
-    * The version of the policy
-    *
-    * @param int $val The version
-    *
-    * @return ManagedDeviceMobileAppConfigurationState
-    */
-    public function setVersion($val)
-    {
-        $this->_propDict["version"] = intval($val);
         return $this;
     }
     
@@ -144,6 +87,63 @@ class ManagedDeviceMobileAppConfigurationState extends Entity
     }
     
     /**
+    * Gets the settingCount
+    * Count of how many setting a policy holds
+    *
+    * @return int The settingCount
+    */
+    public function getSettingCount()
+    {
+        if (array_key_exists("settingCount", $this->_propDict)) {
+            return $this->_propDict["settingCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the settingCount
+    * Count of how many setting a policy holds
+    *
+    * @param int $val The settingCount
+    *
+    * @return ManagedDeviceMobileAppConfigurationState
+    */
+    public function setSettingCount($val)
+    {
+        $this->_propDict["settingCount"] = intval($val);
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the settingStates
+     *
+     * @return array The settingStates
+     */
+    public function getSettingStates()
+    {
+        if (array_key_exists("settingStates", $this->_propDict)) {
+           return $this->_propDict["settingStates"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the settingStates
+    *
+    * @param ManagedDeviceMobileAppConfigurationSettingState $val The settingStates
+    *
+    * @return ManagedDeviceMobileAppConfigurationState
+    */
+    public function setSettingStates($val)
+    {
+		$this->_propDict["settingStates"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the state
     * The compliance state of the policy
     *
@@ -173,35 +173,6 @@ class ManagedDeviceMobileAppConfigurationState extends Entity
     public function setState($val)
     {
         $this->_propDict["state"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the settingCount
-    * Count of how many setting a policy holds
-    *
-    * @return int The settingCount
-    */
-    public function getSettingCount()
-    {
-        if (array_key_exists("settingCount", $this->_propDict)) {
-            return $this->_propDict["settingCount"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the settingCount
-    * Count of how many setting a policy holds
-    *
-    * @param int $val The settingCount
-    *
-    * @return ManagedDeviceMobileAppConfigurationState
-    */
-    public function setSettingCount($val)
-    {
-        $this->_propDict["settingCount"] = intval($val);
         return $this;
     }
     
@@ -260,6 +231,35 @@ class ManagedDeviceMobileAppConfigurationState extends Entity
     public function setUserPrincipalName($val)
     {
         $this->_propDict["userPrincipalName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the version
+    * The version of the policy
+    *
+    * @return int The version
+    */
+    public function getVersion()
+    {
+        if (array_key_exists("version", $this->_propDict)) {
+            return $this->_propDict["version"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the version
+    * The version of the policy
+    *
+    * @param int $val The version
+    *
+    * @return ManagedDeviceMobileAppConfigurationState
+    */
+    public function setVersion($val)
+    {
+        $this->_propDict["version"] = intval($val);
         return $this;
     }
     

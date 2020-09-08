@@ -23,6 +23,37 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class ErrorDetail extends Entity
 {
+
+    /**
+    * Gets the details
+    *
+    * @return InnerErrorDetail The details
+    */
+    public function getDetails()
+    {
+        if (array_key_exists("details", $this->_propDict)) {
+            if (is_a($this->_propDict["details"], "Beta\Microsoft\Graph\Model\InnerErrorDetail")) {
+                return $this->_propDict["details"];
+            } else {
+                $this->_propDict["details"] = new InnerErrorDetail($this->_propDict["details"]);
+                return $this->_propDict["details"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the details
+    *
+    * @param InnerErrorDetail $val The value to assign to the details
+    *
+    * @return ErrorDetail The ErrorDetail
+    */
+    public function setDetails($val)
+    {
+        $this->_propDict["details"] = $val;
+         return $this;
+    }
     /**
     * Gets the errorCode
     *
@@ -74,36 +105,5 @@ class ErrorDetail extends Entity
     {
         $this->_propDict["message"] = $val;
         return $this;
-    }
-
-    /**
-    * Gets the details
-    *
-    * @return InnerErrorDetail The details
-    */
-    public function getDetails()
-    {
-        if (array_key_exists("details", $this->_propDict)) {
-            if (is_a($this->_propDict["details"], "Beta\Microsoft\Graph\Model\InnerErrorDetail")) {
-                return $this->_propDict["details"];
-            } else {
-                $this->_propDict["details"] = new InnerErrorDetail($this->_propDict["details"]);
-                return $this->_propDict["details"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the details
-    *
-    * @param InnerErrorDetail $val The value to assign to the details
-    *
-    * @return ErrorDetail The ErrorDetail
-    */
-    public function setDetails($val)
-    {
-        $this->_propDict["details"] = $val;
-         return $this;
     }
 }

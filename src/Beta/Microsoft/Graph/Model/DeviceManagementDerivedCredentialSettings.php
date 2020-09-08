@@ -25,35 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class DeviceManagementDerivedCredentialSettings extends Entity
 {
     /**
-    * Gets the helpUrl
-    * The URL that will be accessible to end users as they retrieve a derived credential using the Company Portal.
-    *
-    * @return string The helpUrl
-    */
-    public function getHelpUrl()
-    {
-        if (array_key_exists("helpUrl", $this->_propDict)) {
-            return $this->_propDict["helpUrl"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the helpUrl
-    * The URL that will be accessible to end users as they retrieve a derived credential using the Company Portal.
-    *
-    * @param string $val The helpUrl
-    *
-    * @return DeviceManagementDerivedCredentialSettings
-    */
-    public function setHelpUrl($val)
-    {
-        $this->_propDict["helpUrl"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the displayName
     * The display name for the profile.
     *
@@ -79,6 +50,35 @@ class DeviceManagementDerivedCredentialSettings extends Entity
     public function setDisplayName($val)
     {
         $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the helpUrl
+    * The URL that will be accessible to end users as they retrieve a derived credential using the Company Portal.
+    *
+    * @return string The helpUrl
+    */
+    public function getHelpUrl()
+    {
+        if (array_key_exists("helpUrl", $this->_propDict)) {
+            return $this->_propDict["helpUrl"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the helpUrl
+    * The URL that will be accessible to end users as they retrieve a derived credential using the Company Portal.
+    *
+    * @param string $val The helpUrl
+    *
+    * @return DeviceManagementDerivedCredentialSettings
+    */
+    public function setHelpUrl($val)
+    {
+        $this->_propDict["helpUrl"] = $val;
         return $this;
     }
     

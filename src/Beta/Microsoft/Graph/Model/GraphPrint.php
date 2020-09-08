@@ -57,62 +57,6 @@ class GraphPrint extends Entity
     
 
      /** 
-     * Gets the services
-     *
-     * @return array The services
-     */
-    public function getServices()
-    {
-        if (array_key_exists("services", $this->_propDict)) {
-           return $this->_propDict["services"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the services
-    *
-    * @param PrintService $val The services
-    *
-    * @return Print
-    */
-    public function setServices($val)
-    {
-		$this->_propDict["services"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the printers
-     *
-     * @return array The printers
-     */
-    public function getPrinters()
-    {
-        if (array_key_exists("printers", $this->_propDict)) {
-           return $this->_propDict["printers"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the printers
-    *
-    * @param Printer $val The printers
-    *
-    * @return Print
-    */
-    public function setPrinters($val)
-    {
-		$this->_propDict["printers"] = $val;
-        return $this;
-    }
-    
-
-     /** 
      * Gets the connectors
      *
      * @return array The connectors
@@ -141,29 +85,57 @@ class GraphPrint extends Entity
     
 
      /** 
-     * Gets the shares
+     * Gets the operations
      *
-     * @return array The shares
+     * @return array The operations
      */
-    public function getShares()
+    public function getOperations()
     {
-        if (array_key_exists("shares", $this->_propDict)) {
-           return $this->_propDict["shares"];
+        if (array_key_exists("operations", $this->_propDict)) {
+           return $this->_propDict["operations"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the shares
+    * Sets the operations
     *
-    * @param PrinterShare $val The shares
+    * @param PrintOperation $val The operations
     *
     * @return Print
     */
-    public function setShares($val)
+    public function setOperations($val)
     {
-		$this->_propDict["shares"] = $val;
+		$this->_propDict["operations"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the printers
+     *
+     * @return array The printers
+     */
+    public function getPrinters()
+    {
+        if (array_key_exists("printers", $this->_propDict)) {
+           return $this->_propDict["printers"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the printers
+    *
+    * @param Printer $val The printers
+    *
+    * @return Print
+    */
+    public function setPrinters($val)
+    {
+		$this->_propDict["printers"] = $val;
         return $this;
     }
     
@@ -225,29 +197,57 @@ class GraphPrint extends Entity
     
 
      /** 
-     * Gets the operations
+     * Gets the services
      *
-     * @return array The operations
+     * @return array The services
      */
-    public function getOperations()
+    public function getServices()
     {
-        if (array_key_exists("operations", $this->_propDict)) {
-           return $this->_propDict["operations"];
+        if (array_key_exists("services", $this->_propDict)) {
+           return $this->_propDict["services"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the operations
+    * Sets the services
     *
-    * @param PrintOperation $val The operations
+    * @param PrintService $val The services
     *
     * @return Print
     */
-    public function setOperations($val)
+    public function setServices($val)
     {
-		$this->_propDict["operations"] = $val;
+		$this->_propDict["services"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the shares
+     *
+     * @return array The shares
+     */
+    public function getShares()
+    {
+        if (array_key_exists("shares", $this->_propDict)) {
+           return $this->_propDict["shares"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the shares
+    *
+    * @param PrinterShare $val The shares
+    *
+    * @return Print
+    */
+    public function setShares($val)
+    {
+		$this->_propDict["shares"] = $val;
         return $this;
     }
     

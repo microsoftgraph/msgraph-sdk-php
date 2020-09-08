@@ -25,31 +25,31 @@ namespace Beta\Microsoft\Graph\Model;
 class ImportedWindowsAutopilotDeviceIdentity extends Entity
 {
     /**
-    * Gets the orderIdentifier
-    * Order Id of the Windows autopilot device.
+    * Gets the assignedUserPrincipalName
+    * UPN of the user the device will be assigned
     *
-    * @return string The orderIdentifier
+    * @return string The assignedUserPrincipalName
     */
-    public function getOrderIdentifier()
+    public function getAssignedUserPrincipalName()
     {
-        if (array_key_exists("orderIdentifier", $this->_propDict)) {
-            return $this->_propDict["orderIdentifier"];
+        if (array_key_exists("assignedUserPrincipalName", $this->_propDict)) {
+            return $this->_propDict["assignedUserPrincipalName"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the orderIdentifier
-    * Order Id of the Windows autopilot device.
+    * Sets the assignedUserPrincipalName
+    * UPN of the user the device will be assigned
     *
-    * @param string $val The orderIdentifier
+    * @param string $val The assignedUserPrincipalName
     *
     * @return ImportedWindowsAutopilotDeviceIdentity
     */
-    public function setOrderIdentifier($val)
+    public function setAssignedUserPrincipalName($val)
     {
-        $this->_propDict["orderIdentifier"] = $val;
+        $this->_propDict["assignedUserPrincipalName"] = $val;
         return $this;
     }
     
@@ -79,93 +79,6 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity
     public function setGroupTag($val)
     {
         $this->_propDict["groupTag"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the serialNumber
-    * Serial number of the Windows autopilot device.
-    *
-    * @return string The serialNumber
-    */
-    public function getSerialNumber()
-    {
-        if (array_key_exists("serialNumber", $this->_propDict)) {
-            return $this->_propDict["serialNumber"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the serialNumber
-    * Serial number of the Windows autopilot device.
-    *
-    * @param string $val The serialNumber
-    *
-    * @return ImportedWindowsAutopilotDeviceIdentity
-    */
-    public function setSerialNumber($val)
-    {
-        $this->_propDict["serialNumber"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the productKey
-    * Product Key of the Windows autopilot device.
-    *
-    * @return string The productKey
-    */
-    public function getProductKey()
-    {
-        if (array_key_exists("productKey", $this->_propDict)) {
-            return $this->_propDict["productKey"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the productKey
-    * Product Key of the Windows autopilot device.
-    *
-    * @param string $val The productKey
-    *
-    * @return ImportedWindowsAutopilotDeviceIdentity
-    */
-    public function setProductKey($val)
-    {
-        $this->_propDict["productKey"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the importId
-    * The Import Id of the Windows autopilot device.
-    *
-    * @return string The importId
-    */
-    public function getImportId()
-    {
-        if (array_key_exists("importId", $this->_propDict)) {
-            return $this->_propDict["importId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the importId
-    * The Import Id of the Windows autopilot device.
-    *
-    * @param string $val The importId
-    *
-    * @return ImportedWindowsAutopilotDeviceIdentity
-    */
-    public function setImportId($val)
-    {
-        $this->_propDict["importId"] = $val;
         return $this;
     }
     
@@ -203,6 +116,122 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity
     }
     
     /**
+    * Gets the importId
+    * The Import Id of the Windows autopilot device.
+    *
+    * @return string The importId
+    */
+    public function getImportId()
+    {
+        if (array_key_exists("importId", $this->_propDict)) {
+            return $this->_propDict["importId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the importId
+    * The Import Id of the Windows autopilot device.
+    *
+    * @param string $val The importId
+    *
+    * @return ImportedWindowsAutopilotDeviceIdentity
+    */
+    public function setImportId($val)
+    {
+        $this->_propDict["importId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the orderIdentifier
+    * Order Id of the Windows autopilot device.
+    *
+    * @return string The orderIdentifier
+    */
+    public function getOrderIdentifier()
+    {
+        if (array_key_exists("orderIdentifier", $this->_propDict)) {
+            return $this->_propDict["orderIdentifier"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the orderIdentifier
+    * Order Id of the Windows autopilot device.
+    *
+    * @param string $val The orderIdentifier
+    *
+    * @return ImportedWindowsAutopilotDeviceIdentity
+    */
+    public function setOrderIdentifier($val)
+    {
+        $this->_propDict["orderIdentifier"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the productKey
+    * Product Key of the Windows autopilot device.
+    *
+    * @return string The productKey
+    */
+    public function getProductKey()
+    {
+        if (array_key_exists("productKey", $this->_propDict)) {
+            return $this->_propDict["productKey"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the productKey
+    * Product Key of the Windows autopilot device.
+    *
+    * @param string $val The productKey
+    *
+    * @return ImportedWindowsAutopilotDeviceIdentity
+    */
+    public function setProductKey($val)
+    {
+        $this->_propDict["productKey"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the serialNumber
+    * Serial number of the Windows autopilot device.
+    *
+    * @return string The serialNumber
+    */
+    public function getSerialNumber()
+    {
+        if (array_key_exists("serialNumber", $this->_propDict)) {
+            return $this->_propDict["serialNumber"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the serialNumber
+    * Serial number of the Windows autopilot device.
+    *
+    * @param string $val The serialNumber
+    *
+    * @return ImportedWindowsAutopilotDeviceIdentity
+    */
+    public function setSerialNumber($val)
+    {
+        $this->_propDict["serialNumber"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the state
     * Current state of the imported device.
     *
@@ -232,35 +261,6 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity
     public function setState($val)
     {
         $this->_propDict["state"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the assignedUserPrincipalName
-    * UPN of the user the device will be assigned
-    *
-    * @return string The assignedUserPrincipalName
-    */
-    public function getAssignedUserPrincipalName()
-    {
-        if (array_key_exists("assignedUserPrincipalName", $this->_propDict)) {
-            return $this->_propDict["assignedUserPrincipalName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the assignedUserPrincipalName
-    * UPN of the user the device will be assigned
-    *
-    * @param string $val The assignedUserPrincipalName
-    *
-    * @return ImportedWindowsAutopilotDeviceIdentity
-    */
-    public function setAssignedUserPrincipalName($val)
-    {
-        $this->_propDict["assignedUserPrincipalName"] = $val;
         return $this;
     }
     

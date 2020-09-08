@@ -25,63 +25,6 @@ class ApplyLabelAction extends InformationProtectionAction
 {
 
     /**
-    * Gets the label
-    *
-    * @return LabelDetails The label
-    */
-    public function getLabel()
-    {
-        if (array_key_exists("label", $this->_propDict)) {
-            if (is_a($this->_propDict["label"], "Beta\Microsoft\Graph\Model\LabelDetails")) {
-                return $this->_propDict["label"];
-            } else {
-                $this->_propDict["label"] = new LabelDetails($this->_propDict["label"]);
-                return $this->_propDict["label"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the label
-    *
-    * @param LabelDetails $val The value to assign to the label
-    *
-    * @return ApplyLabelAction The ApplyLabelAction
-    */
-    public function setLabel($val)
-    {
-        $this->_propDict["label"] = $val;
-         return $this;
-    }
-    /**
-    * Gets the responsibleSensitiveTypeIds
-    *
-    * @return string The responsibleSensitiveTypeIds
-    */
-    public function getResponsibleSensitiveTypeIds()
-    {
-        if (array_key_exists("responsibleSensitiveTypeIds", $this->_propDict)) {
-            return $this->_propDict["responsibleSensitiveTypeIds"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the responsibleSensitiveTypeIds
-    *
-    * @param string $val The value of the responsibleSensitiveTypeIds
-    *
-    * @return ApplyLabelAction
-    */
-    public function setResponsibleSensitiveTypeIds($val)
-    {
-        $this->_propDict["responsibleSensitiveTypeIds"] = $val;
-        return $this;
-    }
-
-    /**
     * Gets the actions
     *
     * @return InformationProtectionAction The actions
@@ -141,5 +84,62 @@ class ApplyLabelAction extends InformationProtectionAction
     {
         $this->_propDict["actionSource"] = $val;
          return $this;
+    }
+
+    /**
+    * Gets the label
+    *
+    * @return LabelDetails The label
+    */
+    public function getLabel()
+    {
+        if (array_key_exists("label", $this->_propDict)) {
+            if (is_a($this->_propDict["label"], "Beta\Microsoft\Graph\Model\LabelDetails")) {
+                return $this->_propDict["label"];
+            } else {
+                $this->_propDict["label"] = new LabelDetails($this->_propDict["label"]);
+                return $this->_propDict["label"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the label
+    *
+    * @param LabelDetails $val The value to assign to the label
+    *
+    * @return ApplyLabelAction The ApplyLabelAction
+    */
+    public function setLabel($val)
+    {
+        $this->_propDict["label"] = $val;
+         return $this;
+    }
+    /**
+    * Gets the responsibleSensitiveTypeIds
+    *
+    * @return string The responsibleSensitiveTypeIds
+    */
+    public function getResponsibleSensitiveTypeIds()
+    {
+        if (array_key_exists("responsibleSensitiveTypeIds", $this->_propDict)) {
+            return $this->_propDict["responsibleSensitiveTypeIds"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the responsibleSensitiveTypeIds
+    *
+    * @param string $val The value of the responsibleSensitiveTypeIds
+    *
+    * @return ApplyLabelAction
+    */
+    public function setResponsibleSensitiveTypeIds($val)
+    {
+        $this->_propDict["responsibleSensitiveTypeIds"] = $val;
+        return $this;
     }
 }

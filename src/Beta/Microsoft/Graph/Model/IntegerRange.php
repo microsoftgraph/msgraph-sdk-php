@@ -24,32 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class IntegerRange extends Entity
 {
     /**
-    * Gets the start
-    *
-    * @return int The start
-    */
-    public function getStart()
-    {
-        if (array_key_exists("start", $this->_propDict)) {
-            return $this->_propDict["start"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the start
-    *
-    * @param int $val The value of the start
-    *
-    * @return IntegerRange
-    */
-    public function setStart($val)
-    {
-        $this->_propDict["start"] = $val;
-        return $this;
-    }
-    /**
     * Gets the end
     *
     * @return int The end
@@ -73,6 +47,32 @@ class IntegerRange extends Entity
     public function setEnd($val)
     {
         $this->_propDict["end"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the maximum
+    *
+    * @return int The maximum
+    */
+    public function getMaximum()
+    {
+        if (array_key_exists("maximum", $this->_propDict)) {
+            return $this->_propDict["maximum"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the maximum
+    *
+    * @param int $val The value of the maximum
+    *
+    * @return IntegerRange
+    */
+    public function setMaximum($val)
+    {
+        $this->_propDict["maximum"] = $val;
         return $this;
     }
     /**
@@ -102,29 +102,29 @@ class IntegerRange extends Entity
         return $this;
     }
     /**
-    * Gets the maximum
+    * Gets the start
     *
-    * @return int The maximum
+    * @return int The start
     */
-    public function getMaximum()
+    public function getStart()
     {
-        if (array_key_exists("maximum", $this->_propDict)) {
-            return $this->_propDict["maximum"];
+        if (array_key_exists("start", $this->_propDict)) {
+            return $this->_propDict["start"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the maximum
+    * Sets the start
     *
-    * @param int $val The value of the maximum
+    * @param int $val The value of the start
     *
     * @return IntegerRange
     */
-    public function setMaximum($val)
+    public function setStart($val)
     {
-        $this->_propDict["maximum"] = $val;
+        $this->_propDict["start"] = $val;
         return $this;
     }
 }

@@ -26,36 +26,6 @@ class UserExperienceAnalyticsRegressionSummary extends Entity
 {
 
      /** 
-     * Gets the modelRegression
-    * The metric values for the user experience analytics model regression.
-     *
-     * @return array The modelRegression
-     */
-    public function getModelRegression()
-    {
-        if (array_key_exists("modelRegression", $this->_propDict)) {
-           return $this->_propDict["modelRegression"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the modelRegression
-    * The metric values for the user experience analytics model regression.
-    *
-    * @param UserExperienceAnalyticsMetric $val The modelRegression
-    *
-    * @return UserExperienceAnalyticsRegressionSummary
-    */
-    public function setModelRegression($val)
-    {
-		$this->_propDict["modelRegression"] = $val;
-        return $this;
-    }
-    
-
-     /** 
      * Gets the manufacturerRegression
     * The metric values for the user experience analytics Manufacturer regression.
      *
@@ -81,6 +51,36 @@ class UserExperienceAnalyticsRegressionSummary extends Entity
     public function setManufacturerRegression($val)
     {
 		$this->_propDict["manufacturerRegression"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the modelRegression
+    * The metric values for the user experience analytics model regression.
+     *
+     * @return array The modelRegression
+     */
+    public function getModelRegression()
+    {
+        if (array_key_exists("modelRegression", $this->_propDict)) {
+           return $this->_propDict["modelRegression"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the modelRegression
+    * The metric values for the user experience analytics model regression.
+    *
+    * @param UserExperienceAnalyticsMetric $val The modelRegression
+    *
+    * @return UserExperienceAnalyticsRegressionSummary
+    */
+    public function setModelRegression($val)
+    {
+		$this->_propDict["modelRegression"] = $val;
         return $this;
     }
     

@@ -25,6 +25,37 @@ namespace Beta\Microsoft\Graph\Model;
 class PrintJob extends Entity
 {
     /**
+    * Gets the createdBy
+    *
+    * @return UserIdentity The createdBy
+    */
+    public function getCreatedBy()
+    {
+        if (array_key_exists("createdBy", $this->_propDict)) {
+            if (is_a($this->_propDict["createdBy"], "Beta\Microsoft\Graph\Model\UserIdentity")) {
+                return $this->_propDict["createdBy"];
+            } else {
+                $this->_propDict["createdBy"] = new UserIdentity($this->_propDict["createdBy"]);
+                return $this->_propDict["createdBy"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the createdBy
+    *
+    * @param UserIdentity $val The createdBy
+    *
+    * @return PrintJob
+    */
+    public function setCreatedBy($val)
+    {
+        $this->_propDict["createdBy"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the createdDateTime
     *
     * @return \DateTime The createdDateTime
@@ -83,37 +114,6 @@ class PrintJob extends Entity
     public function setStatus($val)
     {
         $this->_propDict["status"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the createdBy
-    *
-    * @return UserIdentity The createdBy
-    */
-    public function getCreatedBy()
-    {
-        if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "Beta\Microsoft\Graph\Model\UserIdentity")) {
-                return $this->_propDict["createdBy"];
-            } else {
-                $this->_propDict["createdBy"] = new UserIdentity($this->_propDict["createdBy"]);
-                return $this->_propDict["createdBy"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the createdBy
-    *
-    * @param UserIdentity $val The createdBy
-    *
-    * @return PrintJob
-    */
-    public function setCreatedBy($val)
-    {
-        $this->_propDict["createdBy"] = $val;
         return $this;
     }
     

@@ -54,35 +54,6 @@ class ExtensionProperty extends DirectoryObject
     }
     
     /**
-    * Gets the name
-    * Name of the extension property. Not nullable.
-    *
-    * @return string The name
-    */
-    public function getName()
-    {
-        if (array_key_exists("name", $this->_propDict)) {
-            return $this->_propDict["name"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the name
-    * Name of the extension property. Not nullable.
-    *
-    * @param string $val The name
-    *
-    * @return ExtensionProperty
-    */
-    public function setName($val)
-    {
-        $this->_propDict["name"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the dataType
     * Specifies the data type of the value the extension property can hold. Following values are supported. Not nullable. Binary - 256 bytes maximumBooleanDateTime - Must be specified in ISO 8601 format. Will be stored in UTC.Integer - 32-bit value.LargeInteger - 64-bit value.String - 256 characters maximum
     *
@@ -137,6 +108,35 @@ class ExtensionProperty extends DirectoryObject
     public function setIsSyncedFromOnPremises($val)
     {
         $this->_propDict["isSyncedFromOnPremises"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the name
+    * Name of the extension property. Not nullable.
+    *
+    * @return string The name
+    */
+    public function getName()
+    {
+        if (array_key_exists("name", $this->_propDict)) {
+            return $this->_propDict["name"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the name
+    * Name of the extension property. Not nullable.
+    *
+    * @param string $val The name
+    *
+    * @return ExtensionProperty
+    */
+    public function setName($val)
+    {
+        $this->_propDict["name"] = $val;
         return $this;
     }
     

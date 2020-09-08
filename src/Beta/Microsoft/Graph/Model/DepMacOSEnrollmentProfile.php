@@ -25,31 +25,31 @@ namespace Beta\Microsoft\Graph\Model;
 class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile
 {
     /**
-    * Gets the registrationDisabled
-    * Indicates if registration is disabled
+    * Gets the chooseYourLockScreenDisabled
+    * Indicates if iCloud Documents and Desktop screen is disabled
     *
-    * @return bool The registrationDisabled
+    * @return bool The chooseYourLockScreenDisabled
     */
-    public function getRegistrationDisabled()
+    public function getChooseYourLockScreenDisabled()
     {
-        if (array_key_exists("registrationDisabled", $this->_propDict)) {
-            return $this->_propDict["registrationDisabled"];
+        if (array_key_exists("chooseYourLockScreenDisabled", $this->_propDict)) {
+            return $this->_propDict["chooseYourLockScreenDisabled"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the registrationDisabled
-    * Indicates if registration is disabled
+    * Sets the chooseYourLockScreenDisabled
+    * Indicates if iCloud Documents and Desktop screen is disabled
     *
-    * @param bool $val The registrationDisabled
+    * @param bool $val The chooseYourLockScreenDisabled
     *
     * @return DepMacOSEnrollmentProfile
     */
-    public function setRegistrationDisabled($val)
+    public function setChooseYourLockScreenDisabled($val)
     {
-        $this->_propDict["registrationDisabled"] = boolval($val);
+        $this->_propDict["chooseYourLockScreenDisabled"] = boolval($val);
         return $this;
     }
     
@@ -141,31 +141,31 @@ class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile
     }
     
     /**
-    * Gets the chooseYourLockScreenDisabled
-    * Indicates if iCloud Documents and Desktop screen is disabled
+    * Gets the registrationDisabled
+    * Indicates if registration is disabled
     *
-    * @return bool The chooseYourLockScreenDisabled
+    * @return bool The registrationDisabled
     */
-    public function getChooseYourLockScreenDisabled()
+    public function getRegistrationDisabled()
     {
-        if (array_key_exists("chooseYourLockScreenDisabled", $this->_propDict)) {
-            return $this->_propDict["chooseYourLockScreenDisabled"];
+        if (array_key_exists("registrationDisabled", $this->_propDict)) {
+            return $this->_propDict["registrationDisabled"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the chooseYourLockScreenDisabled
-    * Indicates if iCloud Documents and Desktop screen is disabled
+    * Sets the registrationDisabled
+    * Indicates if registration is disabled
     *
-    * @param bool $val The chooseYourLockScreenDisabled
+    * @param bool $val The registrationDisabled
     *
     * @return DepMacOSEnrollmentProfile
     */
-    public function setChooseYourLockScreenDisabled($val)
+    public function setRegistrationDisabled($val)
     {
-        $this->_propDict["chooseYourLockScreenDisabled"] = boolval($val);
+        $this->_propDict["registrationDisabled"] = boolval($val);
         return $this;
     }
     

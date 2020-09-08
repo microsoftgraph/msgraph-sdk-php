@@ -25,87 +25,29 @@ namespace Beta\Microsoft\Graph\Model;
 class EmailAppUsageVersionsUserCounts extends Entity
 {
     /**
-    * Gets the reportRefreshDate
+    * Gets the outlook2007
     *
-    * @return \DateTime The reportRefreshDate
+    * @return int The outlook2007
     */
-    public function getReportRefreshDate()
+    public function getOutlook2007()
     {
-        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
-                return $this->_propDict["reportRefreshDate"];
-            } else {
-                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
-                return $this->_propDict["reportRefreshDate"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the reportRefreshDate
-    *
-    * @param \DateTime $val The reportRefreshDate
-    *
-    * @return EmailAppUsageVersionsUserCounts
-    */
-    public function setReportRefreshDate($val)
-    {
-        $this->_propDict["reportRefreshDate"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the outlook2016
-    *
-    * @return int The outlook2016
-    */
-    public function getOutlook2016()
-    {
-        if (array_key_exists("outlook2016", $this->_propDict)) {
-            return $this->_propDict["outlook2016"];
+        if (array_key_exists("outlook2007", $this->_propDict)) {
+            return $this->_propDict["outlook2007"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the outlook2016
+    * Sets the outlook2007
     *
-    * @param int $val The outlook2016
-    *
-    * @return EmailAppUsageVersionsUserCounts
-    */
-    public function setOutlook2016($val)
-    {
-        $this->_propDict["outlook2016"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the outlook2013
-    *
-    * @return int The outlook2013
-    */
-    public function getOutlook2013()
-    {
-        if (array_key_exists("outlook2013", $this->_propDict)) {
-            return $this->_propDict["outlook2013"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the outlook2013
-    *
-    * @param int $val The outlook2013
+    * @param int $val The outlook2007
     *
     * @return EmailAppUsageVersionsUserCounts
     */
-    public function setOutlook2013($val)
+    public function setOutlook2007($val)
     {
-        $this->_propDict["outlook2013"] = intval($val);
+        $this->_propDict["outlook2007"] = intval($val);
         return $this;
     }
     
@@ -137,56 +79,56 @@ class EmailAppUsageVersionsUserCounts extends Entity
     }
     
     /**
-    * Gets the outlook2007
+    * Gets the outlook2013
     *
-    * @return int The outlook2007
+    * @return int The outlook2013
     */
-    public function getOutlook2007()
+    public function getOutlook2013()
     {
-        if (array_key_exists("outlook2007", $this->_propDict)) {
-            return $this->_propDict["outlook2007"];
+        if (array_key_exists("outlook2013", $this->_propDict)) {
+            return $this->_propDict["outlook2013"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the outlook2007
+    * Sets the outlook2013
     *
-    * @param int $val The outlook2007
+    * @param int $val The outlook2013
     *
     * @return EmailAppUsageVersionsUserCounts
     */
-    public function setOutlook2007($val)
+    public function setOutlook2013($val)
     {
-        $this->_propDict["outlook2007"] = intval($val);
+        $this->_propDict["outlook2013"] = intval($val);
         return $this;
     }
     
     /**
-    * Gets the undetermined
+    * Gets the outlook2016
     *
-    * @return int The undetermined
+    * @return int The outlook2016
     */
-    public function getUndetermined()
+    public function getOutlook2016()
     {
-        if (array_key_exists("undetermined", $this->_propDict)) {
-            return $this->_propDict["undetermined"];
+        if (array_key_exists("outlook2016", $this->_propDict)) {
+            return $this->_propDict["outlook2016"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the undetermined
+    * Sets the outlook2016
     *
-    * @param int $val The undetermined
+    * @param int $val The outlook2016
     *
     * @return EmailAppUsageVersionsUserCounts
     */
-    public function setUndetermined($val)
+    public function setOutlook2016($val)
     {
-        $this->_propDict["undetermined"] = intval($val);
+        $this->_propDict["outlook2016"] = intval($val);
         return $this;
     }
     
@@ -214,6 +156,64 @@ class EmailAppUsageVersionsUserCounts extends Entity
     public function setReportPeriod($val)
     {
         $this->_propDict["reportPeriod"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the reportRefreshDate
+    *
+    * @return \DateTime The reportRefreshDate
+    */
+    public function getReportRefreshDate()
+    {
+        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
+                return $this->_propDict["reportRefreshDate"];
+            } else {
+                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
+                return $this->_propDict["reportRefreshDate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the reportRefreshDate
+    *
+    * @param \DateTime $val The reportRefreshDate
+    *
+    * @return EmailAppUsageVersionsUserCounts
+    */
+    public function setReportRefreshDate($val)
+    {
+        $this->_propDict["reportRefreshDate"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the undetermined
+    *
+    * @return int The undetermined
+    */
+    public function getUndetermined()
+    {
+        if (array_key_exists("undetermined", $this->_propDict)) {
+            return $this->_propDict["undetermined"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the undetermined
+    *
+    * @param int $val The undetermined
+    *
+    * @return EmailAppUsageVersionsUserCounts
+    */
+    public function setUndetermined($val)
+    {
+        $this->_propDict["undetermined"] = intval($val);
         return $this;
     }
     

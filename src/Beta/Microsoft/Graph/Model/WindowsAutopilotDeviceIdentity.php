@@ -25,68 +25,60 @@ namespace Beta\Microsoft\Graph\Model;
 class WindowsAutopilotDeviceIdentity extends Entity
 {
     /**
-    * Gets the deploymentProfileAssignmentStatus
-    * Profile assignment status of the Windows autopilot device.
+    * Gets the addressableUserName
+    * Addressable user name.
     *
-    * @return WindowsAutopilotProfileAssignmentStatus The deploymentProfileAssignmentStatus
+    * @return string The addressableUserName
     */
-    public function getDeploymentProfileAssignmentStatus()
+    public function getAddressableUserName()
     {
-        if (array_key_exists("deploymentProfileAssignmentStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["deploymentProfileAssignmentStatus"], "Beta\Microsoft\Graph\Model\WindowsAutopilotProfileAssignmentStatus")) {
-                return $this->_propDict["deploymentProfileAssignmentStatus"];
-            } else {
-                $this->_propDict["deploymentProfileAssignmentStatus"] = new WindowsAutopilotProfileAssignmentStatus($this->_propDict["deploymentProfileAssignmentStatus"]);
-                return $this->_propDict["deploymentProfileAssignmentStatus"];
-            }
+        if (array_key_exists("addressableUserName", $this->_propDict)) {
+            return $this->_propDict["addressableUserName"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the deploymentProfileAssignmentStatus
-    * Profile assignment status of the Windows autopilot device.
+    * Sets the addressableUserName
+    * Addressable user name.
     *
-    * @param WindowsAutopilotProfileAssignmentStatus $val The deploymentProfileAssignmentStatus
+    * @param string $val The addressableUserName
     *
     * @return WindowsAutopilotDeviceIdentity
     */
-    public function setDeploymentProfileAssignmentStatus($val)
+    public function setAddressableUserName($val)
     {
-        $this->_propDict["deploymentProfileAssignmentStatus"] = $val;
+        $this->_propDict["addressableUserName"] = $val;
         return $this;
     }
     
     /**
-    * Gets the deploymentProfileAssignmentDetailedStatus
-    * Profile assignment detailed status of the Windows autopilot device.
+    * Gets the azureActiveDirectoryDeviceId
+    * AAD Device ID
     *
-    * @return WindowsAutopilotProfileAssignmentDetailedStatus The deploymentProfileAssignmentDetailedStatus
+    * @return string The azureActiveDirectoryDeviceId
     */
-    public function getDeploymentProfileAssignmentDetailedStatus()
+    public function getAzureActiveDirectoryDeviceId()
     {
-        if (array_key_exists("deploymentProfileAssignmentDetailedStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["deploymentProfileAssignmentDetailedStatus"], "Beta\Microsoft\Graph\Model\WindowsAutopilotProfileAssignmentDetailedStatus")) {
-                return $this->_propDict["deploymentProfileAssignmentDetailedStatus"];
-            } else {
-                $this->_propDict["deploymentProfileAssignmentDetailedStatus"] = new WindowsAutopilotProfileAssignmentDetailedStatus($this->_propDict["deploymentProfileAssignmentDetailedStatus"]);
-                return $this->_propDict["deploymentProfileAssignmentDetailedStatus"];
-            }
+        if (array_key_exists("azureActiveDirectoryDeviceId", $this->_propDict)) {
+            return $this->_propDict["azureActiveDirectoryDeviceId"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the deploymentProfileAssignmentDetailedStatus
-    * Profile assignment detailed status of the Windows autopilot device.
+    * Sets the azureActiveDirectoryDeviceId
+    * AAD Device ID
     *
-    * @param WindowsAutopilotProfileAssignmentDetailedStatus $val The deploymentProfileAssignmentDetailedStatus
+    * @param string $val The azureActiveDirectoryDeviceId
     *
     * @return WindowsAutopilotDeviceIdentity
     */
-    public function setDeploymentProfileAssignmentDetailedStatus($val)
+    public function setAzureActiveDirectoryDeviceId($val)
     {
-        $this->_propDict["deploymentProfileAssignmentDetailedStatus"] = $val;
+        $this->_propDict["azureActiveDirectoryDeviceId"] = $val;
         return $this;
     }
     
@@ -124,31 +116,130 @@ class WindowsAutopilotDeviceIdentity extends Entity
     }
     
     /**
-    * Gets the orderIdentifier
-    * Order Identifier of the Windows autopilot device - Deprecated
+    * Gets the deploymentProfileAssignmentDetailedStatus
+    * Profile assignment detailed status of the Windows autopilot device.
     *
-    * @return string The orderIdentifier
+    * @return WindowsAutopilotProfileAssignmentDetailedStatus The deploymentProfileAssignmentDetailedStatus
     */
-    public function getOrderIdentifier()
+    public function getDeploymentProfileAssignmentDetailedStatus()
     {
-        if (array_key_exists("orderIdentifier", $this->_propDict)) {
-            return $this->_propDict["orderIdentifier"];
+        if (array_key_exists("deploymentProfileAssignmentDetailedStatus", $this->_propDict)) {
+            if (is_a($this->_propDict["deploymentProfileAssignmentDetailedStatus"], "Beta\Microsoft\Graph\Model\WindowsAutopilotProfileAssignmentDetailedStatus")) {
+                return $this->_propDict["deploymentProfileAssignmentDetailedStatus"];
+            } else {
+                $this->_propDict["deploymentProfileAssignmentDetailedStatus"] = new WindowsAutopilotProfileAssignmentDetailedStatus($this->_propDict["deploymentProfileAssignmentDetailedStatus"]);
+                return $this->_propDict["deploymentProfileAssignmentDetailedStatus"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the deploymentProfileAssignmentDetailedStatus
+    * Profile assignment detailed status of the Windows autopilot device.
+    *
+    * @param WindowsAutopilotProfileAssignmentDetailedStatus $val The deploymentProfileAssignmentDetailedStatus
+    *
+    * @return WindowsAutopilotDeviceIdentity
+    */
+    public function setDeploymentProfileAssignmentDetailedStatus($val)
+    {
+        $this->_propDict["deploymentProfileAssignmentDetailedStatus"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the deploymentProfileAssignmentStatus
+    * Profile assignment status of the Windows autopilot device.
+    *
+    * @return WindowsAutopilotProfileAssignmentStatus The deploymentProfileAssignmentStatus
+    */
+    public function getDeploymentProfileAssignmentStatus()
+    {
+        if (array_key_exists("deploymentProfileAssignmentStatus", $this->_propDict)) {
+            if (is_a($this->_propDict["deploymentProfileAssignmentStatus"], "Beta\Microsoft\Graph\Model\WindowsAutopilotProfileAssignmentStatus")) {
+                return $this->_propDict["deploymentProfileAssignmentStatus"];
+            } else {
+                $this->_propDict["deploymentProfileAssignmentStatus"] = new WindowsAutopilotProfileAssignmentStatus($this->_propDict["deploymentProfileAssignmentStatus"]);
+                return $this->_propDict["deploymentProfileAssignmentStatus"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the deploymentProfileAssignmentStatus
+    * Profile assignment status of the Windows autopilot device.
+    *
+    * @param WindowsAutopilotProfileAssignmentStatus $val The deploymentProfileAssignmentStatus
+    *
+    * @return WindowsAutopilotDeviceIdentity
+    */
+    public function setDeploymentProfileAssignmentStatus($val)
+    {
+        $this->_propDict["deploymentProfileAssignmentStatus"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the displayName
+    * Display Name
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the orderIdentifier
-    * Order Identifier of the Windows autopilot device - Deprecated
+    * Sets the displayName
+    * Display Name
     *
-    * @param string $val The orderIdentifier
+    * @param string $val The displayName
     *
     * @return WindowsAutopilotDeviceIdentity
     */
-    public function setOrderIdentifier($val)
+    public function setDisplayName($val)
     {
-        $this->_propDict["orderIdentifier"] = $val;
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the enrollmentState
+    * Intune enrollment state of the Windows autopilot device.
+    *
+    * @return EnrollmentState The enrollmentState
+    */
+    public function getEnrollmentState()
+    {
+        if (array_key_exists("enrollmentState", $this->_propDict)) {
+            if (is_a($this->_propDict["enrollmentState"], "Beta\Microsoft\Graph\Model\EnrollmentState")) {
+                return $this->_propDict["enrollmentState"];
+            } else {
+                $this->_propDict["enrollmentState"] = new EnrollmentState($this->_propDict["enrollmentState"]);
+                return $this->_propDict["enrollmentState"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the enrollmentState
+    * Intune enrollment state of the Windows autopilot device.
+    *
+    * @param EnrollmentState $val The enrollmentState
+    *
+    * @return WindowsAutopilotDeviceIdentity
+    */
+    public function setEnrollmentState($val)
+    {
+        $this->_propDict["enrollmentState"] = $val;
         return $this;
     }
     
@@ -182,89 +273,64 @@ class WindowsAutopilotDeviceIdentity extends Entity
     }
     
     /**
-    * Gets the purchaseOrderIdentifier
-    * Purchase Order Identifier of the Windows autopilot device.
+    * Gets the lastContactedDateTime
+    * Intune Last Contacted Date Time of the Windows autopilot device.
     *
-    * @return string The purchaseOrderIdentifier
+    * @return \DateTime The lastContactedDateTime
     */
-    public function getPurchaseOrderIdentifier()
+    public function getLastContactedDateTime()
     {
-        if (array_key_exists("purchaseOrderIdentifier", $this->_propDict)) {
-            return $this->_propDict["purchaseOrderIdentifier"];
-        } else {
-            return null;
+        if (array_key_exists("lastContactedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastContactedDateTime"], "\DateTime")) {
+                return $this->_propDict["lastContactedDateTime"];
+            } else {
+                $this->_propDict["lastContactedDateTime"] = new \DateTime($this->_propDict["lastContactedDateTime"]);
+                return $this->_propDict["lastContactedDateTime"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the purchaseOrderIdentifier
-    * Purchase Order Identifier of the Windows autopilot device.
+    * Sets the lastContactedDateTime
+    * Intune Last Contacted Date Time of the Windows autopilot device.
     *
-    * @param string $val The purchaseOrderIdentifier
+    * @param \DateTime $val The lastContactedDateTime
     *
     * @return WindowsAutopilotDeviceIdentity
     */
-    public function setPurchaseOrderIdentifier($val)
+    public function setLastContactedDateTime($val)
     {
-        $this->_propDict["purchaseOrderIdentifier"] = $val;
+        $this->_propDict["lastContactedDateTime"] = $val;
         return $this;
     }
     
     /**
-    * Gets the serialNumber
-    * Serial number of the Windows autopilot device.
+    * Gets the managedDeviceId
+    * Managed Device ID
     *
-    * @return string The serialNumber
+    * @return string The managedDeviceId
     */
-    public function getSerialNumber()
+    public function getManagedDeviceId()
     {
-        if (array_key_exists("serialNumber", $this->_propDict)) {
-            return $this->_propDict["serialNumber"];
+        if (array_key_exists("managedDeviceId", $this->_propDict)) {
+            return $this->_propDict["managedDeviceId"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the serialNumber
-    * Serial number of the Windows autopilot device.
+    * Sets the managedDeviceId
+    * Managed Device ID
     *
-    * @param string $val The serialNumber
-    *
-    * @return WindowsAutopilotDeviceIdentity
-    */
-    public function setSerialNumber($val)
-    {
-        $this->_propDict["serialNumber"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the productKey
-    * Product Key of the Windows autopilot device.
-    *
-    * @return string The productKey
-    */
-    public function getProductKey()
-    {
-        if (array_key_exists("productKey", $this->_propDict)) {
-            return $this->_propDict["productKey"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the productKey
-    * Product Key of the Windows autopilot device.
-    *
-    * @param string $val The productKey
+    * @param string $val The managedDeviceId
     *
     * @return WindowsAutopilotDeviceIdentity
     */
-    public function setProductKey($val)
+    public function setManagedDeviceId($val)
     {
-        $this->_propDict["productKey"] = $val;
+        $this->_propDict["managedDeviceId"] = $val;
         return $this;
     }
     
@@ -327,126 +393,89 @@ class WindowsAutopilotDeviceIdentity extends Entity
     }
     
     /**
-    * Gets the enrollmentState
-    * Intune enrollment state of the Windows autopilot device.
+    * Gets the orderIdentifier
+    * Order Identifier of the Windows autopilot device - Deprecated
     *
-    * @return EnrollmentState The enrollmentState
+    * @return string The orderIdentifier
     */
-    public function getEnrollmentState()
+    public function getOrderIdentifier()
     {
-        if (array_key_exists("enrollmentState", $this->_propDict)) {
-            if (is_a($this->_propDict["enrollmentState"], "Beta\Microsoft\Graph\Model\EnrollmentState")) {
-                return $this->_propDict["enrollmentState"];
-            } else {
-                $this->_propDict["enrollmentState"] = new EnrollmentState($this->_propDict["enrollmentState"]);
-                return $this->_propDict["enrollmentState"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the enrollmentState
-    * Intune enrollment state of the Windows autopilot device.
-    *
-    * @param EnrollmentState $val The enrollmentState
-    *
-    * @return WindowsAutopilotDeviceIdentity
-    */
-    public function setEnrollmentState($val)
-    {
-        $this->_propDict["enrollmentState"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the lastContactedDateTime
-    * Intune Last Contacted Date Time of the Windows autopilot device.
-    *
-    * @return \DateTime The lastContactedDateTime
-    */
-    public function getLastContactedDateTime()
-    {
-        if (array_key_exists("lastContactedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastContactedDateTime"], "\DateTime")) {
-                return $this->_propDict["lastContactedDateTime"];
-            } else {
-                $this->_propDict["lastContactedDateTime"] = new \DateTime($this->_propDict["lastContactedDateTime"]);
-                return $this->_propDict["lastContactedDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the lastContactedDateTime
-    * Intune Last Contacted Date Time of the Windows autopilot device.
-    *
-    * @param \DateTime $val The lastContactedDateTime
-    *
-    * @return WindowsAutopilotDeviceIdentity
-    */
-    public function setLastContactedDateTime($val)
-    {
-        $this->_propDict["lastContactedDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the addressableUserName
-    * Addressable user name.
-    *
-    * @return string The addressableUserName
-    */
-    public function getAddressableUserName()
-    {
-        if (array_key_exists("addressableUserName", $this->_propDict)) {
-            return $this->_propDict["addressableUserName"];
+        if (array_key_exists("orderIdentifier", $this->_propDict)) {
+            return $this->_propDict["orderIdentifier"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the addressableUserName
-    * Addressable user name.
+    * Sets the orderIdentifier
+    * Order Identifier of the Windows autopilot device - Deprecated
     *
-    * @param string $val The addressableUserName
+    * @param string $val The orderIdentifier
     *
     * @return WindowsAutopilotDeviceIdentity
     */
-    public function setAddressableUserName($val)
+    public function setOrderIdentifier($val)
     {
-        $this->_propDict["addressableUserName"] = $val;
+        $this->_propDict["orderIdentifier"] = $val;
         return $this;
     }
     
     /**
-    * Gets the userPrincipalName
-    * User Principal Name.
+    * Gets the productKey
+    * Product Key of the Windows autopilot device.
     *
-    * @return string The userPrincipalName
+    * @return string The productKey
     */
-    public function getUserPrincipalName()
+    public function getProductKey()
     {
-        if (array_key_exists("userPrincipalName", $this->_propDict)) {
-            return $this->_propDict["userPrincipalName"];
+        if (array_key_exists("productKey", $this->_propDict)) {
+            return $this->_propDict["productKey"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the userPrincipalName
-    * User Principal Name.
+    * Sets the productKey
+    * Product Key of the Windows autopilot device.
     *
-    * @param string $val The userPrincipalName
+    * @param string $val The productKey
     *
     * @return WindowsAutopilotDeviceIdentity
     */
-    public function setUserPrincipalName($val)
+    public function setProductKey($val)
     {
-        $this->_propDict["userPrincipalName"] = $val;
+        $this->_propDict["productKey"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the purchaseOrderIdentifier
+    * Purchase Order Identifier of the Windows autopilot device.
+    *
+    * @return string The purchaseOrderIdentifier
+    */
+    public function getPurchaseOrderIdentifier()
+    {
+        if (array_key_exists("purchaseOrderIdentifier", $this->_propDict)) {
+            return $this->_propDict["purchaseOrderIdentifier"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the purchaseOrderIdentifier
+    * Purchase Order Identifier of the Windows autopilot device.
+    *
+    * @param string $val The purchaseOrderIdentifier
+    *
+    * @return WindowsAutopilotDeviceIdentity
+    */
+    public function setPurchaseOrderIdentifier($val)
+    {
+        $this->_propDict["purchaseOrderIdentifier"] = $val;
         return $this;
     }
     
@@ -476,6 +505,35 @@ class WindowsAutopilotDeviceIdentity extends Entity
     public function setResourceName($val)
     {
         $this->_propDict["resourceName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the serialNumber
+    * Serial number of the Windows autopilot device.
+    *
+    * @return string The serialNumber
+    */
+    public function getSerialNumber()
+    {
+        if (array_key_exists("serialNumber", $this->_propDict)) {
+            return $this->_propDict["serialNumber"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the serialNumber
+    * Serial number of the Windows autopilot device.
+    *
+    * @param string $val The serialNumber
+    *
+    * @return WindowsAutopilotDeviceIdentity
+    */
+    public function setSerialNumber($val)
+    {
+        $this->_propDict["serialNumber"] = $val;
         return $this;
     }
     
@@ -538,89 +596,31 @@ class WindowsAutopilotDeviceIdentity extends Entity
     }
     
     /**
-    * Gets the azureActiveDirectoryDeviceId
-    * AAD Device ID
+    * Gets the userPrincipalName
+    * User Principal Name.
     *
-    * @return string The azureActiveDirectoryDeviceId
+    * @return string The userPrincipalName
     */
-    public function getAzureActiveDirectoryDeviceId()
+    public function getUserPrincipalName()
     {
-        if (array_key_exists("azureActiveDirectoryDeviceId", $this->_propDict)) {
-            return $this->_propDict["azureActiveDirectoryDeviceId"];
+        if (array_key_exists("userPrincipalName", $this->_propDict)) {
+            return $this->_propDict["userPrincipalName"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the azureActiveDirectoryDeviceId
-    * AAD Device ID
+    * Sets the userPrincipalName
+    * User Principal Name.
     *
-    * @param string $val The azureActiveDirectoryDeviceId
-    *
-    * @return WindowsAutopilotDeviceIdentity
-    */
-    public function setAzureActiveDirectoryDeviceId($val)
-    {
-        $this->_propDict["azureActiveDirectoryDeviceId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the managedDeviceId
-    * Managed Device ID
-    *
-    * @return string The managedDeviceId
-    */
-    public function getManagedDeviceId()
-    {
-        if (array_key_exists("managedDeviceId", $this->_propDict)) {
-            return $this->_propDict["managedDeviceId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the managedDeviceId
-    * Managed Device ID
-    *
-    * @param string $val The managedDeviceId
+    * @param string $val The userPrincipalName
     *
     * @return WindowsAutopilotDeviceIdentity
     */
-    public function setManagedDeviceId($val)
+    public function setUserPrincipalName($val)
     {
-        $this->_propDict["managedDeviceId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the displayName
-    * Display Name
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the displayName
-    * Display Name
-    *
-    * @param string $val The displayName
-    *
-    * @return WindowsAutopilotDeviceIdentity
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
+        $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
     

@@ -52,33 +52,6 @@ class ProgramControl extends Entity
     }
     
     /**
-    * Gets the programId
-    *
-    * @return string The programId
-    */
-    public function getProgramId()
-    {
-        if (array_key_exists("programId", $this->_propDict)) {
-            return $this->_propDict["programId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the programId
-    *
-    * @param string $val The programId
-    *
-    * @return ProgramControl
-    */
-    public function setProgramId($val)
-    {
-        $this->_propDict["programId"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the controlTypeId
     *
     * @return string The controlTypeId
@@ -106,6 +79,37 @@ class ProgramControl extends Entity
     }
     
     /**
+    * Gets the createdDateTime
+    *
+    * @return \DateTime The createdDateTime
+    */
+    public function getCreatedDateTime()
+    {
+        if (array_key_exists("createdDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+                return $this->_propDict["createdDateTime"];
+            } else {
+                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
+                return $this->_propDict["createdDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the createdDateTime
+    *
+    * @param \DateTime $val The createdDateTime
+    *
+    * @return ProgramControl
+    */
+    public function setCreatedDateTime($val)
+    {
+        $this->_propDict["createdDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the displayName
     *
     * @return string The displayName
@@ -129,33 +133,6 @@ class ProgramControl extends Entity
     public function setDisplayName($val)
     {
         $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the status
-    *
-    * @return string The status
-    */
-    public function getStatus()
-    {
-        if (array_key_exists("status", $this->_propDict)) {
-            return $this->_propDict["status"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the status
-    *
-    * @param string $val The status
-    *
-    * @return ProgramControl
-    */
-    public function setStatus($val)
-    {
-        $this->_propDict["status"] = $val;
         return $this;
     }
     
@@ -191,6 +168,33 @@ class ProgramControl extends Entity
     }
     
     /**
+    * Gets the programId
+    *
+    * @return string The programId
+    */
+    public function getProgramId()
+    {
+        if (array_key_exists("programId", $this->_propDict)) {
+            return $this->_propDict["programId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the programId
+    *
+    * @param string $val The programId
+    *
+    * @return ProgramControl
+    */
+    public function setProgramId($val)
+    {
+        $this->_propDict["programId"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the resource
     *
     * @return ProgramResource The resource
@@ -222,33 +226,29 @@ class ProgramControl extends Entity
     }
     
     /**
-    * Gets the createdDateTime
+    * Gets the status
     *
-    * @return \DateTime The createdDateTime
+    * @return string The status
     */
-    public function getCreatedDateTime()
+    public function getStatus()
     {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
-                return $this->_propDict["createdDateTime"];
-            } else {
-                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
-                return $this->_propDict["createdDateTime"];
-            }
+        if (array_key_exists("status", $this->_propDict)) {
+            return $this->_propDict["status"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the createdDateTime
+    * Sets the status
     *
-    * @param \DateTime $val The createdDateTime
+    * @param string $val The status
     *
     * @return ProgramControl
     */
-    public function setCreatedDateTime($val)
+    public function setStatus($val)
     {
-        $this->_propDict["createdDateTime"] = $val;
+        $this->_propDict["status"] = $val;
         return $this;
     }
     

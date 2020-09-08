@@ -25,64 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class DeviceLogCollectionResponse extends Entity
 {
     /**
-    * Gets the status
-    * The status of the log collection request
-    *
-    * @return string The status
-    */
-    public function getStatus()
-    {
-        if (array_key_exists("status", $this->_propDict)) {
-            return $this->_propDict["status"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the status
-    * The status of the log collection request
-    *
-    * @param string $val The status
-    *
-    * @return DeviceLogCollectionResponse
-    */
-    public function setStatus($val)
-    {
-        $this->_propDict["status"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the managedDeviceId
-    * The device Id
-    *
-    * @return string The managedDeviceId
-    */
-    public function getManagedDeviceId()
-    {
-        if (array_key_exists("managedDeviceId", $this->_propDict)) {
-            return $this->_propDict["managedDeviceId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the managedDeviceId
-    * The device Id
-    *
-    * @param string $val The managedDeviceId
-    *
-    * @return DeviceLogCollectionResponse
-    */
-    public function setManagedDeviceId($val)
-    {
-        $this->_propDict["managedDeviceId"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the errorCode
     * The error code, if any. Valid values -9.22337203685478E+18 to 9.22337203685478E+18
     *
@@ -108,101 +50,6 @@ class DeviceLogCollectionResponse extends Entity
     public function setErrorCode($val)
     {
         $this->_propDict["errorCode"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the requestedDateTimeUTC
-    * The DateTime of the request
-    *
-    * @return \DateTime The requestedDateTimeUTC
-    */
-    public function getRequestedDateTimeUTC()
-    {
-        if (array_key_exists("requestedDateTimeUTC", $this->_propDict)) {
-            if (is_a($this->_propDict["requestedDateTimeUTC"], "\DateTime")) {
-                return $this->_propDict["requestedDateTimeUTC"];
-            } else {
-                $this->_propDict["requestedDateTimeUTC"] = new \DateTime($this->_propDict["requestedDateTimeUTC"]);
-                return $this->_propDict["requestedDateTimeUTC"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the requestedDateTimeUTC
-    * The DateTime of the request
-    *
-    * @param \DateTime $val The requestedDateTimeUTC
-    *
-    * @return DeviceLogCollectionResponse
-    */
-    public function setRequestedDateTimeUTC($val)
-    {
-        $this->_propDict["requestedDateTimeUTC"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the receivedDateTimeUTC
-    * The DateTime the request was received
-    *
-    * @return \DateTime The receivedDateTimeUTC
-    */
-    public function getReceivedDateTimeUTC()
-    {
-        if (array_key_exists("receivedDateTimeUTC", $this->_propDict)) {
-            if (is_a($this->_propDict["receivedDateTimeUTC"], "\DateTime")) {
-                return $this->_propDict["receivedDateTimeUTC"];
-            } else {
-                $this->_propDict["receivedDateTimeUTC"] = new \DateTime($this->_propDict["receivedDateTimeUTC"]);
-                return $this->_propDict["receivedDateTimeUTC"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the receivedDateTimeUTC
-    * The DateTime the request was received
-    *
-    * @param \DateTime $val The receivedDateTimeUTC
-    *
-    * @return DeviceLogCollectionResponse
-    */
-    public function setReceivedDateTimeUTC($val)
-    {
-        $this->_propDict["receivedDateTimeUTC"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the initiatedByUserPrincipalName
-    * The UPN for who initiated the request
-    *
-    * @return string The initiatedByUserPrincipalName
-    */
-    public function getInitiatedByUserPrincipalName()
-    {
-        if (array_key_exists("initiatedByUserPrincipalName", $this->_propDict)) {
-            return $this->_propDict["initiatedByUserPrincipalName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the initiatedByUserPrincipalName
-    * The UPN for who initiated the request
-    *
-    * @param string $val The initiatedByUserPrincipalName
-    *
-    * @return DeviceLogCollectionResponse
-    */
-    public function setInitiatedByUserPrincipalName($val)
-    {
-        $this->_propDict["initiatedByUserPrincipalName"] = $val;
         return $this;
     }
     
@@ -240,6 +87,130 @@ class DeviceLogCollectionResponse extends Entity
     }
     
     /**
+    * Gets the initiatedByUserPrincipalName
+    * The UPN for who initiated the request
+    *
+    * @return string The initiatedByUserPrincipalName
+    */
+    public function getInitiatedByUserPrincipalName()
+    {
+        if (array_key_exists("initiatedByUserPrincipalName", $this->_propDict)) {
+            return $this->_propDict["initiatedByUserPrincipalName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the initiatedByUserPrincipalName
+    * The UPN for who initiated the request
+    *
+    * @param string $val The initiatedByUserPrincipalName
+    *
+    * @return DeviceLogCollectionResponse
+    */
+    public function setInitiatedByUserPrincipalName($val)
+    {
+        $this->_propDict["initiatedByUserPrincipalName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the managedDeviceId
+    * The device Id
+    *
+    * @return string The managedDeviceId
+    */
+    public function getManagedDeviceId()
+    {
+        if (array_key_exists("managedDeviceId", $this->_propDict)) {
+            return $this->_propDict["managedDeviceId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the managedDeviceId
+    * The device Id
+    *
+    * @param string $val The managedDeviceId
+    *
+    * @return DeviceLogCollectionResponse
+    */
+    public function setManagedDeviceId($val)
+    {
+        $this->_propDict["managedDeviceId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the receivedDateTimeUTC
+    * The DateTime the request was received
+    *
+    * @return \DateTime The receivedDateTimeUTC
+    */
+    public function getReceivedDateTimeUTC()
+    {
+        if (array_key_exists("receivedDateTimeUTC", $this->_propDict)) {
+            if (is_a($this->_propDict["receivedDateTimeUTC"], "\DateTime")) {
+                return $this->_propDict["receivedDateTimeUTC"];
+            } else {
+                $this->_propDict["receivedDateTimeUTC"] = new \DateTime($this->_propDict["receivedDateTimeUTC"]);
+                return $this->_propDict["receivedDateTimeUTC"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the receivedDateTimeUTC
+    * The DateTime the request was received
+    *
+    * @param \DateTime $val The receivedDateTimeUTC
+    *
+    * @return DeviceLogCollectionResponse
+    */
+    public function setReceivedDateTimeUTC($val)
+    {
+        $this->_propDict["receivedDateTimeUTC"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the requestedDateTimeUTC
+    * The DateTime of the request
+    *
+    * @return \DateTime The requestedDateTimeUTC
+    */
+    public function getRequestedDateTimeUTC()
+    {
+        if (array_key_exists("requestedDateTimeUTC", $this->_propDict)) {
+            if (is_a($this->_propDict["requestedDateTimeUTC"], "\DateTime")) {
+                return $this->_propDict["requestedDateTimeUTC"];
+            } else {
+                $this->_propDict["requestedDateTimeUTC"] = new \DateTime($this->_propDict["requestedDateTimeUTC"]);
+                return $this->_propDict["requestedDateTimeUTC"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the requestedDateTimeUTC
+    * The DateTime of the request
+    *
+    * @param \DateTime $val The requestedDateTimeUTC
+    *
+    * @return DeviceLogCollectionResponse
+    */
+    public function setRequestedDateTimeUTC($val)
+    {
+        $this->_propDict["requestedDateTimeUTC"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the size
     * The size of the logs. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
     *
@@ -265,6 +236,35 @@ class DeviceLogCollectionResponse extends Entity
     public function setSize($val)
     {
         $this->_propDict["size"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the status
+    * The status of the log collection request
+    *
+    * @return string The status
+    */
+    public function getStatus()
+    {
+        if (array_key_exists("status", $this->_propDict)) {
+            return $this->_propDict["status"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the status
+    * The status of the log collection request
+    *
+    * @param string $val The status
+    *
+    * @return DeviceLogCollectionResponse
+    */
+    public function setStatus($val)
+    {
+        $this->_propDict["status"] = $val;
         return $this;
     }
     

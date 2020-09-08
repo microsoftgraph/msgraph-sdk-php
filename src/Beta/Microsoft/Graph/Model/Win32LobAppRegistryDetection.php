@@ -60,62 +60,6 @@ class Win32LobAppRegistryDetection extends Win32LobAppDetection
         $this->_propDict["check32BitOn64System"] = $val;
         return $this;
     }
-    /**
-    * Gets the keyPath
-    * The registry key path to detect Win32 Line of Business (LoB) app
-    *
-    * @return string The keyPath
-    */
-    public function getKeyPath()
-    {
-        if (array_key_exists("keyPath", $this->_propDict)) {
-            return $this->_propDict["keyPath"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the keyPath
-    * The registry key path to detect Win32 Line of Business (LoB) app
-    *
-    * @param string $val The value of the keyPath
-    *
-    * @return Win32LobAppRegistryDetection
-    */
-    public function setKeyPath($val)
-    {
-        $this->_propDict["keyPath"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the valueName
-    * The registry value name
-    *
-    * @return string The valueName
-    */
-    public function getValueName()
-    {
-        if (array_key_exists("valueName", $this->_propDict)) {
-            return $this->_propDict["valueName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the valueName
-    * The registry value name
-    *
-    * @param string $val The value of the valueName
-    *
-    * @return Win32LobAppRegistryDetection
-    */
-    public function setValueName($val)
-    {
-        $this->_propDict["valueName"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the detectionType
@@ -148,6 +92,62 @@ class Win32LobAppRegistryDetection extends Win32LobAppDetection
     {
         $this->_propDict["detectionType"] = $val;
          return $this;
+    }
+    /**
+    * Gets the detectionValue
+    * The registry detection value
+    *
+    * @return string The detectionValue
+    */
+    public function getDetectionValue()
+    {
+        if (array_key_exists("detectionValue", $this->_propDict)) {
+            return $this->_propDict["detectionValue"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the detectionValue
+    * The registry detection value
+    *
+    * @param string $val The value of the detectionValue
+    *
+    * @return Win32LobAppRegistryDetection
+    */
+    public function setDetectionValue($val)
+    {
+        $this->_propDict["detectionValue"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the keyPath
+    * The registry key path to detect Win32 Line of Business (LoB) app
+    *
+    * @return string The keyPath
+    */
+    public function getKeyPath()
+    {
+        if (array_key_exists("keyPath", $this->_propDict)) {
+            return $this->_propDict["keyPath"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the keyPath
+    * The registry key path to detect Win32 Line of Business (LoB) app
+    *
+    * @param string $val The value of the keyPath
+    *
+    * @return Win32LobAppRegistryDetection
+    */
+    public function setKeyPath($val)
+    {
+        $this->_propDict["keyPath"] = $val;
+        return $this;
     }
 
     /**
@@ -183,31 +183,31 @@ class Win32LobAppRegistryDetection extends Win32LobAppDetection
          return $this;
     }
     /**
-    * Gets the detectionValue
-    * The registry detection value
+    * Gets the valueName
+    * The registry value name
     *
-    * @return string The detectionValue
+    * @return string The valueName
     */
-    public function getDetectionValue()
+    public function getValueName()
     {
-        if (array_key_exists("detectionValue", $this->_propDict)) {
-            return $this->_propDict["detectionValue"];
+        if (array_key_exists("valueName", $this->_propDict)) {
+            return $this->_propDict["valueName"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the detectionValue
-    * The registry detection value
+    * Sets the valueName
+    * The registry value name
     *
-    * @param string $val The value of the detectionValue
+    * @param string $val The value of the valueName
     *
     * @return Win32LobAppRegistryDetection
     */
-    public function setDetectionValue($val)
+    public function setValueName($val)
     {
-        $this->_propDict["detectionValue"] = $val;
+        $this->_propDict["valueName"] = $val;
         return $this;
     }
 }

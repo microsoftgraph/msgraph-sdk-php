@@ -31,6 +31,6 @@ class OnenoteUserRole extends Enum
     */
     const OWNER = "owner";
     const CONTRIBUTOR = "contributor";
-    const READER = "reader";
     const NONE = "none";
+    const READER = "reader";
 }

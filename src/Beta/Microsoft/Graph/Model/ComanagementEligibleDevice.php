@@ -25,6 +25,39 @@ namespace Beta\Microsoft\Graph\Model;
 class ComanagementEligibleDevice extends Entity
 {
     /**
+    * Gets the clientRegistrationStatus
+    * ClientRegistrationStatus
+    *
+    * @return DeviceRegistrationState The clientRegistrationStatus
+    */
+    public function getClientRegistrationStatus()
+    {
+        if (array_key_exists("clientRegistrationStatus", $this->_propDict)) {
+            if (is_a($this->_propDict["clientRegistrationStatus"], "Beta\Microsoft\Graph\Model\DeviceRegistrationState")) {
+                return $this->_propDict["clientRegistrationStatus"];
+            } else {
+                $this->_propDict["clientRegistrationStatus"] = new DeviceRegistrationState($this->_propDict["clientRegistrationStatus"]);
+                return $this->_propDict["clientRegistrationStatus"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the clientRegistrationStatus
+    * ClientRegistrationStatus
+    *
+    * @param DeviceRegistrationState $val The clientRegistrationStatus
+    *
+    * @return ComanagementEligibleDevice
+    */
+    public function setClientRegistrationStatus($val)
+    {
+        $this->_propDict["clientRegistrationStatus"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the deviceName
     * DeviceName
     *
@@ -87,68 +120,31 @@ class ComanagementEligibleDevice extends Entity
     }
     
     /**
-    * Gets the clientRegistrationStatus
-    * ClientRegistrationStatus
+    * Gets the entitySource
+    * EntitySource
     *
-    * @return DeviceRegistrationState The clientRegistrationStatus
+    * @return int The entitySource
     */
-    public function getClientRegistrationStatus()
+    public function getEntitySource()
     {
-        if (array_key_exists("clientRegistrationStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["clientRegistrationStatus"], "Beta\Microsoft\Graph\Model\DeviceRegistrationState")) {
-                return $this->_propDict["clientRegistrationStatus"];
-            } else {
-                $this->_propDict["clientRegistrationStatus"] = new DeviceRegistrationState($this->_propDict["clientRegistrationStatus"]);
-                return $this->_propDict["clientRegistrationStatus"];
-            }
+        if (array_key_exists("entitySource", $this->_propDict)) {
+            return $this->_propDict["entitySource"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the clientRegistrationStatus
-    * ClientRegistrationStatus
+    * Sets the entitySource
+    * EntitySource
     *
-    * @param DeviceRegistrationState $val The clientRegistrationStatus
+    * @param int $val The entitySource
     *
     * @return ComanagementEligibleDevice
     */
-    public function setClientRegistrationStatus($val)
+    public function setEntitySource($val)
     {
-        $this->_propDict["clientRegistrationStatus"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the ownerType
-    * OwnerType
-    *
-    * @return OwnerType The ownerType
-    */
-    public function getOwnerType()
-    {
-        if (array_key_exists("ownerType", $this->_propDict)) {
-            if (is_a($this->_propDict["ownerType"], "Beta\Microsoft\Graph\Model\OwnerType")) {
-                return $this->_propDict["ownerType"];
-            } else {
-                $this->_propDict["ownerType"] = new OwnerType($this->_propDict["ownerType"]);
-                return $this->_propDict["ownerType"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the ownerType
-    * OwnerType
-    *
-    * @param OwnerType $val The ownerType
-    *
-    * @return ComanagementEligibleDevice
-    */
-    public function setOwnerType($val)
-    {
-        $this->_propDict["ownerType"] = $val;
+        $this->_propDict["entitySource"] = intval($val);
         return $this;
     }
     
@@ -219,31 +215,31 @@ class ComanagementEligibleDevice extends Entity
     }
     
     /**
-    * Gets the referenceId
-    * ReferenceId
+    * Gets the manufacturer
+    * Manufacturer
     *
-    * @return string The referenceId
+    * @return string The manufacturer
     */
-    public function getReferenceId()
+    public function getManufacturer()
     {
-        if (array_key_exists("referenceId", $this->_propDict)) {
-            return $this->_propDict["referenceId"];
+        if (array_key_exists("manufacturer", $this->_propDict)) {
+            return $this->_propDict["manufacturer"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the referenceId
-    * ReferenceId
+    * Sets the manufacturer
+    * Manufacturer
     *
-    * @param string $val The referenceId
+    * @param string $val The manufacturer
     *
     * @return ComanagementEligibleDevice
     */
-    public function setReferenceId($val)
+    public function setManufacturer($val)
     {
-        $this->_propDict["referenceId"] = $val;
+        $this->_propDict["manufacturer"] = $val;
         return $this;
     }
     
@@ -273,93 +269,6 @@ class ComanagementEligibleDevice extends Entity
     public function setMdmStatus($val)
     {
         $this->_propDict["mdmStatus"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the osVersion
-    * OSVersion
-    *
-    * @return string The osVersion
-    */
-    public function getOsVersion()
-    {
-        if (array_key_exists("osVersion", $this->_propDict)) {
-            return $this->_propDict["osVersion"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the osVersion
-    * OSVersion
-    *
-    * @param string $val The osVersion
-    *
-    * @return ComanagementEligibleDevice
-    */
-    public function setOsVersion($val)
-    {
-        $this->_propDict["osVersion"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the serialNumber
-    * SerialNumber
-    *
-    * @return string The serialNumber
-    */
-    public function getSerialNumber()
-    {
-        if (array_key_exists("serialNumber", $this->_propDict)) {
-            return $this->_propDict["serialNumber"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the serialNumber
-    * SerialNumber
-    *
-    * @param string $val The serialNumber
-    *
-    * @return ComanagementEligibleDevice
-    */
-    public function setSerialNumber($val)
-    {
-        $this->_propDict["serialNumber"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the manufacturer
-    * Manufacturer
-    *
-    * @return string The manufacturer
-    */
-    public function getManufacturer()
-    {
-        if (array_key_exists("manufacturer", $this->_propDict)) {
-            return $this->_propDict["manufacturer"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the manufacturer
-    * Manufacturer
-    *
-    * @param string $val The manufacturer
-    *
-    * @return ComanagementEligibleDevice
-    */
-    public function setManufacturer($val)
-    {
-        $this->_propDict["manufacturer"] = $val;
         return $this;
     }
     
@@ -422,60 +331,155 @@ class ComanagementEligibleDevice extends Entity
     }
     
     /**
-    * Gets the entitySource
-    * EntitySource
+    * Gets the osVersion
+    * OSVersion
     *
-    * @return int The entitySource
+    * @return string The osVersion
     */
-    public function getEntitySource()
+    public function getOsVersion()
     {
-        if (array_key_exists("entitySource", $this->_propDict)) {
-            return $this->_propDict["entitySource"];
+        if (array_key_exists("osVersion", $this->_propDict)) {
+            return $this->_propDict["osVersion"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the entitySource
-    * EntitySource
+    * Sets the osVersion
+    * OSVersion
     *
-    * @param int $val The entitySource
+    * @param string $val The osVersion
     *
     * @return ComanagementEligibleDevice
     */
-    public function setEntitySource($val)
+    public function setOsVersion($val)
     {
-        $this->_propDict["entitySource"] = intval($val);
+        $this->_propDict["osVersion"] = $val;
         return $this;
     }
     
     /**
-    * Gets the userId
-    * UserId
+    * Gets the ownerType
+    * OwnerType
     *
-    * @return string The userId
+    * @return OwnerType The ownerType
     */
-    public function getUserId()
+    public function getOwnerType()
     {
-        if (array_key_exists("userId", $this->_propDict)) {
-            return $this->_propDict["userId"];
+        if (array_key_exists("ownerType", $this->_propDict)) {
+            if (is_a($this->_propDict["ownerType"], "Beta\Microsoft\Graph\Model\OwnerType")) {
+                return $this->_propDict["ownerType"];
+            } else {
+                $this->_propDict["ownerType"] = new OwnerType($this->_propDict["ownerType"]);
+                return $this->_propDict["ownerType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the ownerType
+    * OwnerType
+    *
+    * @param OwnerType $val The ownerType
+    *
+    * @return ComanagementEligibleDevice
+    */
+    public function setOwnerType($val)
+    {
+        $this->_propDict["ownerType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the referenceId
+    * ReferenceId
+    *
+    * @return string The referenceId
+    */
+    public function getReferenceId()
+    {
+        if (array_key_exists("referenceId", $this->_propDict)) {
+            return $this->_propDict["referenceId"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the userId
-    * UserId
+    * Sets the referenceId
+    * ReferenceId
     *
-    * @param string $val The userId
+    * @param string $val The referenceId
     *
     * @return ComanagementEligibleDevice
     */
-    public function setUserId($val)
+    public function setReferenceId($val)
     {
-        $this->_propDict["userId"] = $val;
+        $this->_propDict["referenceId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the serialNumber
+    * SerialNumber
+    *
+    * @return string The serialNumber
+    */
+    public function getSerialNumber()
+    {
+        if (array_key_exists("serialNumber", $this->_propDict)) {
+            return $this->_propDict["serialNumber"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the serialNumber
+    * SerialNumber
+    *
+    * @param string $val The serialNumber
+    *
+    * @return ComanagementEligibleDevice
+    */
+    public function setSerialNumber($val)
+    {
+        $this->_propDict["serialNumber"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the status
+    * ComanagementEligibleStatus
+    *
+    * @return ComanagementEligibleType The status
+    */
+    public function getStatus()
+    {
+        if (array_key_exists("status", $this->_propDict)) {
+            if (is_a($this->_propDict["status"], "Beta\Microsoft\Graph\Model\ComanagementEligibleType")) {
+                return $this->_propDict["status"];
+            } else {
+                $this->_propDict["status"] = new ComanagementEligibleType($this->_propDict["status"]);
+                return $this->_propDict["status"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the status
+    * ComanagementEligibleStatus
+    *
+    * @param ComanagementEligibleType $val The status
+    *
+    * @return ComanagementEligibleDevice
+    */
+    public function setStatus($val)
+    {
+        $this->_propDict["status"] = $val;
         return $this;
     }
     
@@ -538,6 +542,35 @@ class ComanagementEligibleDevice extends Entity
     }
     
     /**
+    * Gets the userId
+    * UserId
+    *
+    * @return string The userId
+    */
+    public function getUserId()
+    {
+        if (array_key_exists("userId", $this->_propDict)) {
+            return $this->_propDict["userId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the userId
+    * UserId
+    *
+    * @param string $val The userId
+    *
+    * @return ComanagementEligibleDevice
+    */
+    public function setUserId($val)
+    {
+        $this->_propDict["userId"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the userName
     * UserName
     *
@@ -563,39 +596,6 @@ class ComanagementEligibleDevice extends Entity
     public function setUserName($val)
     {
         $this->_propDict["userName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the status
-    * ComanagementEligibleStatus
-    *
-    * @return ComanagementEligibleType The status
-    */
-    public function getStatus()
-    {
-        if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Beta\Microsoft\Graph\Model\ComanagementEligibleType")) {
-                return $this->_propDict["status"];
-            } else {
-                $this->_propDict["status"] = new ComanagementEligibleType($this->_propDict["status"]);
-                return $this->_propDict["status"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the status
-    * ComanagementEligibleStatus
-    *
-    * @param ComanagementEligibleType $val The status
-    *
-    * @return ComanagementEligibleDevice
-    */
-    public function setStatus($val)
-    {
-        $this->_propDict["status"] = $val;
         return $this;
     }
     

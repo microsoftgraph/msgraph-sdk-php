@@ -118,37 +118,6 @@ class EducationSynchronizationCustomizations extends EducationSynchronizationCus
     }
 
     /**
-    * Gets the teacher
-    *
-    * @return EducationSynchronizationCustomization The teacher
-    */
-    public function getTeacher()
-    {
-        if (array_key_exists("teacher", $this->_propDict)) {
-            if (is_a($this->_propDict["teacher"], "Beta\Microsoft\Graph\Model\EducationSynchronizationCustomization")) {
-                return $this->_propDict["teacher"];
-            } else {
-                $this->_propDict["teacher"] = new EducationSynchronizationCustomization($this->_propDict["teacher"]);
-                return $this->_propDict["teacher"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the teacher
-    *
-    * @param EducationSynchronizationCustomization $val The value to assign to the teacher
-    *
-    * @return EducationSynchronizationCustomizations The EducationSynchronizationCustomizations
-    */
-    public function setTeacher($val)
-    {
-        $this->_propDict["teacher"] = $val;
-         return $this;
-    }
-
-    /**
     * Gets the studentEnrollment
     *
     * @return EducationSynchronizationCustomization The studentEnrollment
@@ -176,6 +145,37 @@ class EducationSynchronizationCustomizations extends EducationSynchronizationCus
     public function setStudentEnrollment($val)
     {
         $this->_propDict["studentEnrollment"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the teacher
+    *
+    * @return EducationSynchronizationCustomization The teacher
+    */
+    public function getTeacher()
+    {
+        if (array_key_exists("teacher", $this->_propDict)) {
+            if (is_a($this->_propDict["teacher"], "Beta\Microsoft\Graph\Model\EducationSynchronizationCustomization")) {
+                return $this->_propDict["teacher"];
+            } else {
+                $this->_propDict["teacher"] = new EducationSynchronizationCustomization($this->_propDict["teacher"]);
+                return $this->_propDict["teacher"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the teacher
+    *
+    * @param EducationSynchronizationCustomization $val The value to assign to the teacher
+    *
+    * @return EducationSynchronizationCustomizations The EducationSynchronizationCustomizations
+    */
+    public function setTeacher($val)
+    {
+        $this->_propDict["teacher"] = $val;
          return $this;
     }
 

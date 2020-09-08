@@ -24,31 +24,31 @@ namespace Beta\Microsoft\Graph\Model;
 class SharedAppleDeviceUser extends Entity
 {
     /**
-    * Gets the userPrincipalName
-    * User name
+    * Gets the dataQuota
+    * Data quota
     *
-    * @return string The userPrincipalName
+    * @return int The dataQuota
     */
-    public function getUserPrincipalName()
+    public function getDataQuota()
     {
-        if (array_key_exists("userPrincipalName", $this->_propDict)) {
-            return $this->_propDict["userPrincipalName"];
+        if (array_key_exists("dataQuota", $this->_propDict)) {
+            return $this->_propDict["dataQuota"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the userPrincipalName
-    * User name
+    * Sets the dataQuota
+    * Data quota
     *
-    * @param string $val The value of the userPrincipalName
+    * @param int $val The value of the dataQuota
     *
     * @return SharedAppleDeviceUser
     */
-    public function setUserPrincipalName($val)
+    public function setDataQuota($val)
     {
-        $this->_propDict["userPrincipalName"] = $val;
+        $this->_propDict["dataQuota"] = $val;
         return $this;
     }
     /**
@@ -80,34 +80,6 @@ class SharedAppleDeviceUser extends Entity
         return $this;
     }
     /**
-    * Gets the dataQuota
-    * Data quota
-    *
-    * @return int The dataQuota
-    */
-    public function getDataQuota()
-    {
-        if (array_key_exists("dataQuota", $this->_propDict)) {
-            return $this->_propDict["dataQuota"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the dataQuota
-    * Data quota
-    *
-    * @param int $val The value of the dataQuota
-    *
-    * @return SharedAppleDeviceUser
-    */
-    public function setDataQuota($val)
-    {
-        $this->_propDict["dataQuota"] = $val;
-        return $this;
-    }
-    /**
     * Gets the dataUsed
     * Data quota
     *
@@ -133,6 +105,34 @@ class SharedAppleDeviceUser extends Entity
     public function setDataUsed($val)
     {
         $this->_propDict["dataUsed"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the userPrincipalName
+    * User name
+    *
+    * @return string The userPrincipalName
+    */
+    public function getUserPrincipalName()
+    {
+        if (array_key_exists("userPrincipalName", $this->_propDict)) {
+            return $this->_propDict["userPrincipalName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the userPrincipalName
+    * User name
+    *
+    * @param string $val The value of the userPrincipalName
+    *
+    * @return SharedAppleDeviceUser
+    */
+    public function setUserPrincipalName($val)
+    {
+        $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
 }

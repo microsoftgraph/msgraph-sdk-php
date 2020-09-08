@@ -52,6 +52,33 @@ class OutlookTaskGroup extends Entity
     }
     
     /**
+    * Gets the groupKey
+    *
+    * @return string The groupKey
+    */
+    public function getGroupKey()
+    {
+        if (array_key_exists("groupKey", $this->_propDict)) {
+            return $this->_propDict["groupKey"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the groupKey
+    *
+    * @param string $val The groupKey
+    *
+    * @return OutlookTaskGroup
+    */
+    public function setGroupKey($val)
+    {
+        $this->_propDict["groupKey"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the isDefaultGroup
     *
     * @return bool The isDefaultGroup
@@ -102,33 +129,6 @@ class OutlookTaskGroup extends Entity
     public function setName($val)
     {
         $this->_propDict["name"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the groupKey
-    *
-    * @return string The groupKey
-    */
-    public function getGroupKey()
-    {
-        if (array_key_exists("groupKey", $this->_propDict)) {
-            return $this->_propDict["groupKey"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the groupKey
-    *
-    * @param string $val The groupKey
-    *
-    * @return OutlookTaskGroup
-    */
-    public function setGroupKey($val)
-    {
-        $this->_propDict["groupKey"] = $val;
         return $this;
     }
     

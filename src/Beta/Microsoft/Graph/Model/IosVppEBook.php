@@ -25,35 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class IosVppEBook extends ManagedEBook
 {
     /**
-    * Gets the vppTokenId
-    * The Vpp token ID.
-    *
-    * @return string The vppTokenId
-    */
-    public function getVppTokenId()
-    {
-        if (array_key_exists("vppTokenId", $this->_propDict)) {
-            return $this->_propDict["vppTokenId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the vppTokenId
-    * The Vpp token ID.
-    *
-    * @param string $val The vppTokenId
-    *
-    * @return IosVppEBook
-    */
-    public function setVppTokenId($val)
-    {
-        $this->_propDict["vppTokenId"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the appleId
     * The Apple ID associated with Vpp token.
     *
@@ -79,35 +50,6 @@ class IosVppEBook extends ManagedEBook
     public function setAppleId($val)
     {
         $this->_propDict["appleId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the vppOrganizationName
-    * The Vpp token's organization name.
-    *
-    * @return string The vppOrganizationName
-    */
-    public function getVppOrganizationName()
-    {
-        if (array_key_exists("vppOrganizationName", $this->_propDict)) {
-            return $this->_propDict["vppOrganizationName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the vppOrganizationName
-    * The Vpp token's organization name.
-    *
-    * @param string $val The vppOrganizationName
-    *
-    * @return IosVppEBook
-    */
-    public function setVppOrganizationName($val)
-    {
-        $this->_propDict["vppOrganizationName"] = $val;
         return $this;
     }
     
@@ -166,6 +108,35 @@ class IosVppEBook extends ManagedEBook
     public function setLanguage($val)
     {
         $this->_propDict["language"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the roleScopeTagIds
+    * List of Scope Tags for this Entity instance.
+    *
+    * @return string The roleScopeTagIds
+    */
+    public function getRoleScopeTagIds()
+    {
+        if (array_key_exists("roleScopeTagIds", $this->_propDict)) {
+            return $this->_propDict["roleScopeTagIds"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the roleScopeTagIds
+    * List of Scope Tags for this Entity instance.
+    *
+    * @param string $val The roleScopeTagIds
+    *
+    * @return IosVppEBook
+    */
+    public function setRoleScopeTagIds($val)
+    {
+        $this->_propDict["roleScopeTagIds"] = $val;
         return $this;
     }
     
@@ -257,31 +228,60 @@ class IosVppEBook extends ManagedEBook
     }
     
     /**
-    * Gets the roleScopeTagIds
-    * List of Scope Tags for this Entity instance.
+    * Gets the vppOrganizationName
+    * The Vpp token's organization name.
     *
-    * @return string The roleScopeTagIds
+    * @return string The vppOrganizationName
     */
-    public function getRoleScopeTagIds()
+    public function getVppOrganizationName()
     {
-        if (array_key_exists("roleScopeTagIds", $this->_propDict)) {
-            return $this->_propDict["roleScopeTagIds"];
+        if (array_key_exists("vppOrganizationName", $this->_propDict)) {
+            return $this->_propDict["vppOrganizationName"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the roleScopeTagIds
-    * List of Scope Tags for this Entity instance.
+    * Sets the vppOrganizationName
+    * The Vpp token's organization name.
     *
-    * @param string $val The roleScopeTagIds
+    * @param string $val The vppOrganizationName
     *
     * @return IosVppEBook
     */
-    public function setRoleScopeTagIds($val)
+    public function setVppOrganizationName($val)
     {
-        $this->_propDict["roleScopeTagIds"] = $val;
+        $this->_propDict["vppOrganizationName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the vppTokenId
+    * The Vpp token ID.
+    *
+    * @return string The vppTokenId
+    */
+    public function getVppTokenId()
+    {
+        if (array_key_exists("vppTokenId", $this->_propDict)) {
+            return $this->_propDict["vppTokenId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the vppTokenId
+    * The Vpp token ID.
+    *
+    * @param string $val The vppTokenId
+    *
+    * @return IosVppEBook
+    */
+    public function setVppTokenId($val)
+    {
+        $this->_propDict["vppTokenId"] = $val;
         return $this;
     }
     

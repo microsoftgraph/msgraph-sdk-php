@@ -25,6 +25,94 @@ namespace Beta\Microsoft\Graph\Model;
 class DeviceManagementPartner extends Entity
 {
     /**
+    * Gets the displayName
+    * Partner display name
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the displayName
+    * Partner display name
+    *
+    * @param string $val The displayName
+    *
+    * @return DeviceManagementPartner
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the groupsRequiringPartnerEnrollment
+    * User groups that specifies whether enrollment is through partner.
+     *
+     * @return array The groupsRequiringPartnerEnrollment
+     */
+    public function getGroupsRequiringPartnerEnrollment()
+    {
+        if (array_key_exists("groupsRequiringPartnerEnrollment", $this->_propDict)) {
+           return $this->_propDict["groupsRequiringPartnerEnrollment"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the groupsRequiringPartnerEnrollment
+    * User groups that specifies whether enrollment is through partner.
+    *
+    * @param DeviceManagementPartnerAssignment $val The groupsRequiringPartnerEnrollment
+    *
+    * @return DeviceManagementPartner
+    */
+    public function setGroupsRequiringPartnerEnrollment($val)
+    {
+		$this->_propDict["groupsRequiringPartnerEnrollment"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the isConfigured
+    * Whether device management partner is configured or not
+    *
+    * @return bool The isConfigured
+    */
+    public function getIsConfigured()
+    {
+        if (array_key_exists("isConfigured", $this->_propDict)) {
+            return $this->_propDict["isConfigured"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isConfigured
+    * Whether device management partner is configured or not
+    *
+    * @param bool $val The isConfigured
+    *
+    * @return DeviceManagementPartner
+    */
+    public function setIsConfigured($val)
+    {
+        $this->_propDict["isConfigured"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the lastHeartbeatDateTime
     * Timestamp of last heartbeat after admin enabled option Connect to Device management Partner
     *
@@ -54,39 +142,6 @@ class DeviceManagementPartner extends Entity
     public function setLastHeartbeatDateTime($val)
     {
         $this->_propDict["lastHeartbeatDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the partnerState
-    * Partner state of this tenant. Possible values are: unknown, unavailable, enabled, terminated, rejected, unresponsive.
-    *
-    * @return DeviceManagementPartnerTenantState The partnerState
-    */
-    public function getPartnerState()
-    {
-        if (array_key_exists("partnerState", $this->_propDict)) {
-            if (is_a($this->_propDict["partnerState"], "Beta\Microsoft\Graph\Model\DeviceManagementPartnerTenantState")) {
-                return $this->_propDict["partnerState"];
-            } else {
-                $this->_propDict["partnerState"] = new DeviceManagementPartnerTenantState($this->_propDict["partnerState"]);
-                return $this->_propDict["partnerState"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the partnerState
-    * Partner state of this tenant. Possible values are: unknown, unavailable, enabled, terminated, rejected, unresponsive.
-    *
-    * @param DeviceManagementPartnerTenantState $val The partnerState
-    *
-    * @return DeviceManagementPartner
-    */
-    public function setPartnerState($val)
-    {
-        $this->_propDict["partnerState"] = $val;
         return $this;
     }
     
@@ -124,6 +179,39 @@ class DeviceManagementPartner extends Entity
     }
     
     /**
+    * Gets the partnerState
+    * Partner state of this tenant. Possible values are: unknown, unavailable, enabled, terminated, rejected, unresponsive.
+    *
+    * @return DeviceManagementPartnerTenantState The partnerState
+    */
+    public function getPartnerState()
+    {
+        if (array_key_exists("partnerState", $this->_propDict)) {
+            if (is_a($this->_propDict["partnerState"], "Beta\Microsoft\Graph\Model\DeviceManagementPartnerTenantState")) {
+                return $this->_propDict["partnerState"];
+            } else {
+                $this->_propDict["partnerState"] = new DeviceManagementPartnerTenantState($this->_propDict["partnerState"]);
+                return $this->_propDict["partnerState"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the partnerState
+    * Partner state of this tenant. Possible values are: unknown, unavailable, enabled, terminated, rejected, unresponsive.
+    *
+    * @param DeviceManagementPartnerTenantState $val The partnerState
+    *
+    * @return DeviceManagementPartner
+    */
+    public function setPartnerState($val)
+    {
+        $this->_propDict["partnerState"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the singleTenantAppId
     * Partner Single tenant App id
     *
@@ -149,97 +237,6 @@ class DeviceManagementPartner extends Entity
     public function setSingleTenantAppId($val)
     {
         $this->_propDict["singleTenantAppId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the displayName
-    * Partner display name
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the displayName
-    * Partner display name
-    *
-    * @param string $val The displayName
-    *
-    * @return DeviceManagementPartner
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the isConfigured
-    * Whether device management partner is configured or not
-    *
-    * @return bool The isConfigured
-    */
-    public function getIsConfigured()
-    {
-        if (array_key_exists("isConfigured", $this->_propDict)) {
-            return $this->_propDict["isConfigured"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the isConfigured
-    * Whether device management partner is configured or not
-    *
-    * @param bool $val The isConfigured
-    *
-    * @return DeviceManagementPartner
-    */
-    public function setIsConfigured($val)
-    {
-        $this->_propDict["isConfigured"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the whenPartnerDevicesWillBeRemoved
-    * DateTime in UTC when PartnerDevices will be removed. This will become obselete soon.
-    *
-    * @return \DateTime The whenPartnerDevicesWillBeRemoved
-    */
-    public function getWhenPartnerDevicesWillBeRemoved()
-    {
-        if (array_key_exists("whenPartnerDevicesWillBeRemoved", $this->_propDict)) {
-            if (is_a($this->_propDict["whenPartnerDevicesWillBeRemoved"], "\DateTime")) {
-                return $this->_propDict["whenPartnerDevicesWillBeRemoved"];
-            } else {
-                $this->_propDict["whenPartnerDevicesWillBeRemoved"] = new \DateTime($this->_propDict["whenPartnerDevicesWillBeRemoved"]);
-                return $this->_propDict["whenPartnerDevicesWillBeRemoved"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the whenPartnerDevicesWillBeRemoved
-    * DateTime in UTC when PartnerDevices will be removed. This will become obselete soon.
-    *
-    * @param \DateTime $val The whenPartnerDevicesWillBeRemoved
-    *
-    * @return DeviceManagementPartner
-    */
-    public function setWhenPartnerDevicesWillBeRemoved($val)
-    {
-        $this->_propDict["whenPartnerDevicesWillBeRemoved"] = $val;
         return $this;
     }
     
@@ -277,39 +274,6 @@ class DeviceManagementPartner extends Entity
     }
     
     /**
-    * Gets the whenPartnerDevicesWillBeRemovedDateTime
-    * DateTime in UTC when PartnerDevices will be removed
-    *
-    * @return \DateTime The whenPartnerDevicesWillBeRemovedDateTime
-    */
-    public function getWhenPartnerDevicesWillBeRemovedDateTime()
-    {
-        if (array_key_exists("whenPartnerDevicesWillBeRemovedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["whenPartnerDevicesWillBeRemovedDateTime"], "\DateTime")) {
-                return $this->_propDict["whenPartnerDevicesWillBeRemovedDateTime"];
-            } else {
-                $this->_propDict["whenPartnerDevicesWillBeRemovedDateTime"] = new \DateTime($this->_propDict["whenPartnerDevicesWillBeRemovedDateTime"]);
-                return $this->_propDict["whenPartnerDevicesWillBeRemovedDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the whenPartnerDevicesWillBeRemovedDateTime
-    * DateTime in UTC when PartnerDevices will be removed
-    *
-    * @param \DateTime $val The whenPartnerDevicesWillBeRemovedDateTime
-    *
-    * @return DeviceManagementPartner
-    */
-    public function setWhenPartnerDevicesWillBeRemovedDateTime($val)
-    {
-        $this->_propDict["whenPartnerDevicesWillBeRemovedDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime
     * DateTime in UTC when PartnerDevices will be marked as NonCompliant
     *
@@ -342,33 +306,69 @@ class DeviceManagementPartner extends Entity
         return $this;
     }
     
-
-     /** 
-     * Gets the groupsRequiringPartnerEnrollment
-    * User groups that specifies whether enrollment is through partner.
-     *
-     * @return array The groupsRequiringPartnerEnrollment
-     */
-    public function getGroupsRequiringPartnerEnrollment()
+    /**
+    * Gets the whenPartnerDevicesWillBeRemoved
+    * DateTime in UTC when PartnerDevices will be removed. This will become obselete soon.
+    *
+    * @return \DateTime The whenPartnerDevicesWillBeRemoved
+    */
+    public function getWhenPartnerDevicesWillBeRemoved()
     {
-        if (array_key_exists("groupsRequiringPartnerEnrollment", $this->_propDict)) {
-           return $this->_propDict["groupsRequiringPartnerEnrollment"];
-        } else {
-            return null;
+        if (array_key_exists("whenPartnerDevicesWillBeRemoved", $this->_propDict)) {
+            if (is_a($this->_propDict["whenPartnerDevicesWillBeRemoved"], "\DateTime")) {
+                return $this->_propDict["whenPartnerDevicesWillBeRemoved"];
+            } else {
+                $this->_propDict["whenPartnerDevicesWillBeRemoved"] = new \DateTime($this->_propDict["whenPartnerDevicesWillBeRemoved"]);
+                return $this->_propDict["whenPartnerDevicesWillBeRemoved"];
+            }
         }
+        return null;
     }
     
-    /** 
-    * Sets the groupsRequiringPartnerEnrollment
-    * User groups that specifies whether enrollment is through partner.
+    /**
+    * Sets the whenPartnerDevicesWillBeRemoved
+    * DateTime in UTC when PartnerDevices will be removed. This will become obselete soon.
     *
-    * @param DeviceManagementPartnerAssignment $val The groupsRequiringPartnerEnrollment
+    * @param \DateTime $val The whenPartnerDevicesWillBeRemoved
     *
     * @return DeviceManagementPartner
     */
-    public function setGroupsRequiringPartnerEnrollment($val)
+    public function setWhenPartnerDevicesWillBeRemoved($val)
     {
-		$this->_propDict["groupsRequiringPartnerEnrollment"] = $val;
+        $this->_propDict["whenPartnerDevicesWillBeRemoved"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the whenPartnerDevicesWillBeRemovedDateTime
+    * DateTime in UTC when PartnerDevices will be removed
+    *
+    * @return \DateTime The whenPartnerDevicesWillBeRemovedDateTime
+    */
+    public function getWhenPartnerDevicesWillBeRemovedDateTime()
+    {
+        if (array_key_exists("whenPartnerDevicesWillBeRemovedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["whenPartnerDevicesWillBeRemovedDateTime"], "\DateTime")) {
+                return $this->_propDict["whenPartnerDevicesWillBeRemovedDateTime"];
+            } else {
+                $this->_propDict["whenPartnerDevicesWillBeRemovedDateTime"] = new \DateTime($this->_propDict["whenPartnerDevicesWillBeRemovedDateTime"]);
+                return $this->_propDict["whenPartnerDevicesWillBeRemovedDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the whenPartnerDevicesWillBeRemovedDateTime
+    * DateTime in UTC when PartnerDevices will be removed
+    *
+    * @param \DateTime $val The whenPartnerDevicesWillBeRemovedDateTime
+    *
+    * @return DeviceManagementPartner
+    */
+    public function setWhenPartnerDevicesWillBeRemovedDateTime($val)
+    {
+        $this->_propDict["whenPartnerDevicesWillBeRemovedDateTime"] = $val;
         return $this;
     }
     

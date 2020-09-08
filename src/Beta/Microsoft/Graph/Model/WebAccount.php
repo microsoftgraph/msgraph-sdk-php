@@ -52,33 +52,6 @@ class WebAccount extends ItemFacet
     }
     
     /**
-    * Gets the userId
-    *
-    * @return string The userId
-    */
-    public function getUserId()
-    {
-        if (array_key_exists("userId", $this->_propDict)) {
-            return $this->_propDict["userId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the userId
-    *
-    * @param string $val The userId
-    *
-    * @return WebAccount
-    */
-    public function setUserId($val)
-    {
-        $this->_propDict["userId"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the service
     *
     * @return ServiceInformation The service
@@ -133,6 +106,33 @@ class WebAccount extends ItemFacet
     public function setStatusMessage($val)
     {
         $this->_propDict["statusMessage"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userId
+    *
+    * @return string The userId
+    */
+    public function getUserId()
+    {
+        if (array_key_exists("userId", $this->_propDict)) {
+            return $this->_propDict["userId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the userId
+    *
+    * @param string $val The userId
+    *
+    * @return WebAccount
+    */
+    public function setUserId($val)
+    {
+        $this->_propDict["userId"] = $val;
         return $this;
     }
     

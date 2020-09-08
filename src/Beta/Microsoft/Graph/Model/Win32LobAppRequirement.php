@@ -23,6 +23,34 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class Win32LobAppRequirement extends Entity
 {
+    /**
+    * Gets the detectionValue
+    * The detection value
+    *
+    * @return string The detectionValue
+    */
+    public function getDetectionValue()
+    {
+        if (array_key_exists("detectionValue", $this->_propDict)) {
+            return $this->_propDict["detectionValue"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the detectionValue
+    * The detection value
+    *
+    * @param string $val The value of the detectionValue
+    *
+    * @return Win32LobAppRequirement
+    */
+    public function setDetectionValue($val)
+    {
+        $this->_propDict["detectionValue"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the operator
@@ -55,33 +83,5 @@ class Win32LobAppRequirement extends Entity
     {
         $this->_propDict["operator"] = $val;
          return $this;
-    }
-    /**
-    * Gets the detectionValue
-    * The detection value
-    *
-    * @return string The detectionValue
-    */
-    public function getDetectionValue()
-    {
-        if (array_key_exists("detectionValue", $this->_propDict)) {
-            return $this->_propDict["detectionValue"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the detectionValue
-    * The detection value
-    *
-    * @param string $val The value of the detectionValue
-    *
-    * @return Win32LobAppRequirement
-    */
-    public function setDetectionValue($val)
-    {
-        $this->_propDict["detectionValue"] = $val;
-        return $this;
     }
 }

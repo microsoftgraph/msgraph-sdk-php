@@ -23,32 +23,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class ChatMessageReaction extends Entity
 {
-    /**
-    * Gets the reactionType
-    *
-    * @return string The reactionType
-    */
-    public function getReactionType()
-    {
-        if (array_key_exists("reactionType", $this->_propDict)) {
-            return $this->_propDict["reactionType"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the reactionType
-    *
-    * @param string $val The value of the reactionType
-    *
-    * @return ChatMessageReaction
-    */
-    public function setReactionType($val)
-    {
-        $this->_propDict["reactionType"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the createdDateTime
@@ -79,6 +53,32 @@ class ChatMessageReaction extends Entity
     {
         $this->_propDict["createdDateTime"] = $val;
          return $this;
+    }
+    /**
+    * Gets the reactionType
+    *
+    * @return string The reactionType
+    */
+    public function getReactionType()
+    {
+        if (array_key_exists("reactionType", $this->_propDict)) {
+            return $this->_propDict["reactionType"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the reactionType
+    *
+    * @param string $val The value of the reactionType
+    *
+    * @return ChatMessageReaction
+    */
+    public function setReactionType($val)
+    {
+        $this->_propDict["reactionType"] = $val;
+        return $this;
     }
 
     /**

@@ -23,6 +23,39 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class ConvertIdResult extends Entity
 {
+
+    /**
+    * Gets the errorDetails
+    * An error object indicating the reason for the conversion failure. This value is not present if the conversion succeeded.
+    *
+    * @return GenericError The errorDetails
+    */
+    public function getErrorDetails()
+    {
+        if (array_key_exists("errorDetails", $this->_propDict)) {
+            if (is_a($this->_propDict["errorDetails"], "Beta\Microsoft\Graph\Model\GenericError")) {
+                return $this->_propDict["errorDetails"];
+            } else {
+                $this->_propDict["errorDetails"] = new GenericError($this->_propDict["errorDetails"]);
+                return $this->_propDict["errorDetails"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the errorDetails
+    * An error object indicating the reason for the conversion failure. This value is not present if the conversion succeeded.
+    *
+    * @param GenericError $val The value to assign to the errorDetails
+    *
+    * @return ConvertIdResult The ConvertIdResult
+    */
+    public function setErrorDetails($val)
+    {
+        $this->_propDict["errorDetails"] = $val;
+         return $this;
+    }
     /**
     * Gets the sourceId
     * The identifier that was converted. This value is the original, un-converted identifier.
@@ -78,38 +111,5 @@ class ConvertIdResult extends Entity
     {
         $this->_propDict["targetId"] = $val;
         return $this;
-    }
-
-    /**
-    * Gets the errorDetails
-    * An error object indicating the reason for the conversion failure. This value is not present if the conversion succeeded.
-    *
-    * @return GenericError The errorDetails
-    */
-    public function getErrorDetails()
-    {
-        if (array_key_exists("errorDetails", $this->_propDict)) {
-            if (is_a($this->_propDict["errorDetails"], "Beta\Microsoft\Graph\Model\GenericError")) {
-                return $this->_propDict["errorDetails"];
-            } else {
-                $this->_propDict["errorDetails"] = new GenericError($this->_propDict["errorDetails"]);
-                return $this->_propDict["errorDetails"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the errorDetails
-    * An error object indicating the reason for the conversion failure. This value is not present if the conversion succeeded.
-    *
-    * @param GenericError $val The value to assign to the errorDetails
-    *
-    * @return ConvertIdResult The ConvertIdResult
-    */
-    public function setErrorDetails($val)
-    {
-        $this->_propDict["errorDetails"] = $val;
-         return $this;
     }
 }

@@ -145,6 +145,35 @@ class WindowsPhone81AppX extends MobileLobApp
     }
     
     /**
+    * Gets the identityVersion
+    * The identity version.
+    *
+    * @return string The identityVersion
+    */
+    public function getIdentityVersion()
+    {
+        if (array_key_exists("identityVersion", $this->_propDict)) {
+            return $this->_propDict["identityVersion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the identityVersion
+    * The identity version.
+    *
+    * @param string $val The identityVersion
+    *
+    * @return WindowsPhone81AppX
+    */
+    public function setIdentityVersion($val)
+    {
+        $this->_propDict["identityVersion"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the minimumSupportedOperatingSystem
     * The value for the minimum applicable operating system.
     *
@@ -232,35 +261,6 @@ class WindowsPhone81AppX extends MobileLobApp
     public function setPhonePublisherId($val)
     {
         $this->_propDict["phonePublisherId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the identityVersion
-    * The identity version.
-    *
-    * @return string The identityVersion
-    */
-    public function getIdentityVersion()
-    {
-        if (array_key_exists("identityVersion", $this->_propDict)) {
-            return $this->_propDict["identityVersion"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the identityVersion
-    * The identity version.
-    *
-    * @param string $val The identityVersion
-    *
-    * @return WindowsPhone81AppX
-    */
-    public function setIdentityVersion($val)
-    {
-        $this->_propDict["identityVersion"] = $val;
         return $this;
     }
     
