@@ -33,32 +33,6 @@ class AzureActiveDirectoryTenant extends IdentitySource
     }
 
     /**
-    * Gets the tenantId
-    *
-    * @return string The tenantId
-    */
-    public function getTenantId()
-    {
-        if (array_key_exists("tenantId", $this->_propDict)) {
-            return $this->_propDict["tenantId"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the tenantId
-    *
-    * @param string $val The value of the tenantId
-    *
-    * @return AzureActiveDirectoryTenant
-    */
-    public function setTenantId($val)
-    {
-        $this->_propDict["tenantId"] = $val;
-        return $this;
-    }
-    /**
     * Gets the displayName
     *
     * @return string The displayName
@@ -82,6 +56,32 @@ class AzureActiveDirectoryTenant extends IdentitySource
     public function setDisplayName($val)
     {
         $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the tenantId
+    *
+    * @return string The tenantId
+    */
+    public function getTenantId()
+    {
+        if (array_key_exists("tenantId", $this->_propDict)) {
+            return $this->_propDict["tenantId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the tenantId
+    *
+    * @param string $val The value of the tenantId
+    *
+    * @return AzureActiveDirectoryTenant
+    */
+    public function setTenantId($val)
+    {
+        $this->_propDict["tenantId"] = $val;
         return $this;
     }
 }

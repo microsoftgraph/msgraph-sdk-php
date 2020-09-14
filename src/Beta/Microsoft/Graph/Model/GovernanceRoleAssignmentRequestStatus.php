@@ -49,32 +49,6 @@ class GovernanceRoleAssignmentRequestStatus extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    /**
-    * Gets the subStatus
-    *
-    * @return string The subStatus
-    */
-    public function getSubStatus()
-    {
-        if (array_key_exists("subStatus", $this->_propDict)) {
-            return $this->_propDict["subStatus"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the subStatus
-    *
-    * @param string $val The value of the subStatus
-    *
-    * @return GovernanceRoleAssignmentRequestStatus
-    */
-    public function setSubStatus($val)
-    {
-        $this->_propDict["subStatus"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the statusDetails
@@ -105,5 +79,31 @@ class GovernanceRoleAssignmentRequestStatus extends Entity
     {
         $this->_propDict["statusDetails"] = $val;
          return $this;
+    }
+    /**
+    * Gets the subStatus
+    *
+    * @return string The subStatus
+    */
+    public function getSubStatus()
+    {
+        if (array_key_exists("subStatus", $this->_propDict)) {
+            return $this->_propDict["subStatus"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the subStatus
+    *
+    * @param string $val The value of the subStatus
+    *
+    * @return GovernanceRoleAssignmentRequestStatus
+    */
+    public function setSubStatus($val)
+    {
+        $this->_propDict["subStatus"] = $val;
+        return $this;
     }
 }

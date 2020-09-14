@@ -34,39 +34,6 @@ class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallScheduleType
 
 
     /**
-    * Gets the activeHoursStart
-    * Active Hours Start
-    *
-    * @return TimeOfDay The activeHoursStart
-    */
-    public function getActiveHoursStart()
-    {
-        if (array_key_exists("activeHoursStart", $this->_propDict)) {
-            if (is_a($this->_propDict["activeHoursStart"], "Beta\Microsoft\Graph\Model\TimeOfDay")) {
-                return $this->_propDict["activeHoursStart"];
-            } else {
-                $this->_propDict["activeHoursStart"] = new TimeOfDay($this->_propDict["activeHoursStart"]);
-                return $this->_propDict["activeHoursStart"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the activeHoursStart
-    * Active Hours Start
-    *
-    * @param TimeOfDay $val The value to assign to the activeHoursStart
-    *
-    * @return WindowsUpdateActiveHoursInstall The WindowsUpdateActiveHoursInstall
-    */
-    public function setActiveHoursStart($val)
-    {
-        $this->_propDict["activeHoursStart"] = $val;
-         return $this;
-    }
-
-    /**
     * Gets the activeHoursEnd
     * Active Hours End
     *
@@ -96,6 +63,39 @@ class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallScheduleType
     public function setActiveHoursEnd($val)
     {
         $this->_propDict["activeHoursEnd"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the activeHoursStart
+    * Active Hours Start
+    *
+    * @return TimeOfDay The activeHoursStart
+    */
+    public function getActiveHoursStart()
+    {
+        if (array_key_exists("activeHoursStart", $this->_propDict)) {
+            if (is_a($this->_propDict["activeHoursStart"], "Beta\Microsoft\Graph\Model\TimeOfDay")) {
+                return $this->_propDict["activeHoursStart"];
+            } else {
+                $this->_propDict["activeHoursStart"] = new TimeOfDay($this->_propDict["activeHoursStart"]);
+                return $this->_propDict["activeHoursStart"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the activeHoursStart
+    * Active Hours Start
+    *
+    * @param TimeOfDay $val The value to assign to the activeHoursStart
+    *
+    * @return WindowsUpdateActiveHoursInstall The WindowsUpdateActiveHoursInstall
+    */
+    public function setActiveHoursStart($val)
+    {
+        $this->_propDict["activeHoursStart"] = $val;
          return $this;
     }
 }

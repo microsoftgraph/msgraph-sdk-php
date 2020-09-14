@@ -51,6 +51,34 @@ class WorkPosition extends ItemFacet
         return $this;
     }
     
+
+     /** 
+     * Gets the colleagues
+     *
+     * @return array The colleagues
+     */
+    public function getColleagues()
+    {
+        if (array_key_exists("colleagues", $this->_propDict)) {
+           return $this->_propDict["colleagues"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the colleagues
+    *
+    * @param RelatedPerson $val The colleagues
+    *
+    * @return WorkPosition
+    */
+    public function setColleagues($val)
+    {
+		$this->_propDict["colleagues"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the detail
     *
@@ -83,6 +111,33 @@ class WorkPosition extends ItemFacet
     }
     
     /**
+    * Gets the isCurrent
+    *
+    * @return bool The isCurrent
+    */
+    public function getIsCurrent()
+    {
+        if (array_key_exists("isCurrent", $this->_propDict)) {
+            return $this->_propDict["isCurrent"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isCurrent
+    *
+    * @param bool $val The isCurrent
+    *
+    * @return WorkPosition
+    */
+    public function setIsCurrent($val)
+    {
+        $this->_propDict["isCurrent"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the manager
     *
     * @return RelatedPerson The manager
@@ -110,61 +165,6 @@ class WorkPosition extends ItemFacet
     public function setManager($val)
     {
         $this->_propDict["manager"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the colleagues
-     *
-     * @return array The colleagues
-     */
-    public function getColleagues()
-    {
-        if (array_key_exists("colleagues", $this->_propDict)) {
-           return $this->_propDict["colleagues"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the colleagues
-    *
-    * @param RelatedPerson $val The colleagues
-    *
-    * @return WorkPosition
-    */
-    public function setColleagues($val)
-    {
-		$this->_propDict["colleagues"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the isCurrent
-    *
-    * @return bool The isCurrent
-    */
-    public function getIsCurrent()
-    {
-        if (array_key_exists("isCurrent", $this->_propDict)) {
-            return $this->_propDict["isCurrent"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the isCurrent
-    *
-    * @param bool $val The isCurrent
-    *
-    * @return WorkPosition
-    */
-    public function setIsCurrent($val)
-    {
-        $this->_propDict["isCurrent"] = boolval($val);
         return $this;
     }
     

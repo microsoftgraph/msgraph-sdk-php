@@ -25,31 +25,64 @@ namespace Beta\Microsoft\Graph\Model;
 class ManagedDeviceEncryptionState extends Entity
 {
     /**
-    * Gets the userPrincipalName
-    * User name
+    * Gets the advancedBitLockerStates
+    * Advanced BitLocker State
     *
-    * @return string The userPrincipalName
+    * @return AdvancedBitLockerState The advancedBitLockerStates
     */
-    public function getUserPrincipalName()
+    public function getAdvancedBitLockerStates()
     {
-        if (array_key_exists("userPrincipalName", $this->_propDict)) {
-            return $this->_propDict["userPrincipalName"];
+        if (array_key_exists("advancedBitLockerStates", $this->_propDict)) {
+            if (is_a($this->_propDict["advancedBitLockerStates"], "Beta\Microsoft\Graph\Model\AdvancedBitLockerState")) {
+                return $this->_propDict["advancedBitLockerStates"];
+            } else {
+                $this->_propDict["advancedBitLockerStates"] = new AdvancedBitLockerState($this->_propDict["advancedBitLockerStates"]);
+                return $this->_propDict["advancedBitLockerStates"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the advancedBitLockerStates
+    * Advanced BitLocker State
+    *
+    * @param AdvancedBitLockerState $val The advancedBitLockerStates
+    *
+    * @return ManagedDeviceEncryptionState
+    */
+    public function setAdvancedBitLockerStates($val)
+    {
+        $this->_propDict["advancedBitLockerStates"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the deviceName
+    * Device name
+    *
+    * @return string The deviceName
+    */
+    public function getDeviceName()
+    {
+        if (array_key_exists("deviceName", $this->_propDict)) {
+            return $this->_propDict["deviceName"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the userPrincipalName
-    * User name
+    * Sets the deviceName
+    * Device name
     *
-    * @param string $val The userPrincipalName
+    * @param string $val The deviceName
     *
     * @return ManagedDeviceEncryptionState
     */
-    public function setUserPrincipalName($val)
+    public function setDeviceName($val)
     {
-        $this->_propDict["userPrincipalName"] = $val;
+        $this->_propDict["deviceName"] = $val;
         return $this;
     }
     
@@ -87,89 +120,35 @@ class ManagedDeviceEncryptionState extends Entity
     }
     
     /**
-    * Gets the osVersion
-    * Operating system version of the device
+    * Gets the encryptionPolicySettingState
+    * Encryption policy setting state
     *
-    * @return string The osVersion
+    * @return ComplianceStatus The encryptionPolicySettingState
     */
-    public function getOsVersion()
+    public function getEncryptionPolicySettingState()
     {
-        if (array_key_exists("osVersion", $this->_propDict)) {
-            return $this->_propDict["osVersion"];
-        } else {
-            return null;
+        if (array_key_exists("encryptionPolicySettingState", $this->_propDict)) {
+            if (is_a($this->_propDict["encryptionPolicySettingState"], "Beta\Microsoft\Graph\Model\ComplianceStatus")) {
+                return $this->_propDict["encryptionPolicySettingState"];
+            } else {
+                $this->_propDict["encryptionPolicySettingState"] = new ComplianceStatus($this->_propDict["encryptionPolicySettingState"]);
+                return $this->_propDict["encryptionPolicySettingState"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the osVersion
-    * Operating system version of the device
+    * Sets the encryptionPolicySettingState
+    * Encryption policy setting state
     *
-    * @param string $val The osVersion
+    * @param ComplianceStatus $val The encryptionPolicySettingState
     *
     * @return ManagedDeviceEncryptionState
     */
-    public function setOsVersion($val)
+    public function setEncryptionPolicySettingState($val)
     {
-        $this->_propDict["osVersion"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the tpmSpecificationVersion
-    * Device TPM Version
-    *
-    * @return string The tpmSpecificationVersion
-    */
-    public function getTpmSpecificationVersion()
-    {
-        if (array_key_exists("tpmSpecificationVersion", $this->_propDict)) {
-            return $this->_propDict["tpmSpecificationVersion"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the tpmSpecificationVersion
-    * Device TPM Version
-    *
-    * @param string $val The tpmSpecificationVersion
-    *
-    * @return ManagedDeviceEncryptionState
-    */
-    public function setTpmSpecificationVersion($val)
-    {
-        $this->_propDict["tpmSpecificationVersion"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the deviceName
-    * Device name
-    *
-    * @return string The deviceName
-    */
-    public function getDeviceName()
-    {
-        if (array_key_exists("deviceName", $this->_propDict)) {
-            return $this->_propDict["deviceName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the deviceName
-    * Device name
-    *
-    * @param string $val The deviceName
-    *
-    * @return ManagedDeviceEncryptionState
-    */
-    public function setDeviceName($val)
-    {
-        $this->_propDict["deviceName"] = $val;
+        $this->_propDict["encryptionPolicySettingState"] = $val;
         return $this;
     }
     
@@ -240,72 +219,6 @@ class ManagedDeviceEncryptionState extends Entity
     }
     
     /**
-    * Gets the encryptionPolicySettingState
-    * Encryption policy setting state
-    *
-    * @return ComplianceStatus The encryptionPolicySettingState
-    */
-    public function getEncryptionPolicySettingState()
-    {
-        if (array_key_exists("encryptionPolicySettingState", $this->_propDict)) {
-            if (is_a($this->_propDict["encryptionPolicySettingState"], "Beta\Microsoft\Graph\Model\ComplianceStatus")) {
-                return $this->_propDict["encryptionPolicySettingState"];
-            } else {
-                $this->_propDict["encryptionPolicySettingState"] = new ComplianceStatus($this->_propDict["encryptionPolicySettingState"]);
-                return $this->_propDict["encryptionPolicySettingState"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the encryptionPolicySettingState
-    * Encryption policy setting state
-    *
-    * @param ComplianceStatus $val The encryptionPolicySettingState
-    *
-    * @return ManagedDeviceEncryptionState
-    */
-    public function setEncryptionPolicySettingState($val)
-    {
-        $this->_propDict["encryptionPolicySettingState"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the advancedBitLockerStates
-    * Advanced BitLocker State
-    *
-    * @return AdvancedBitLockerState The advancedBitLockerStates
-    */
-    public function getAdvancedBitLockerStates()
-    {
-        if (array_key_exists("advancedBitLockerStates", $this->_propDict)) {
-            if (is_a($this->_propDict["advancedBitLockerStates"], "Beta\Microsoft\Graph\Model\AdvancedBitLockerState")) {
-                return $this->_propDict["advancedBitLockerStates"];
-            } else {
-                $this->_propDict["advancedBitLockerStates"] = new AdvancedBitLockerState($this->_propDict["advancedBitLockerStates"]);
-                return $this->_propDict["advancedBitLockerStates"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the advancedBitLockerStates
-    * Advanced BitLocker State
-    *
-    * @param AdvancedBitLockerState $val The advancedBitLockerStates
-    *
-    * @return ManagedDeviceEncryptionState
-    */
-    public function setAdvancedBitLockerStates($val)
-    {
-        $this->_propDict["advancedBitLockerStates"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the fileVaultStates
     * FileVault State
     *
@@ -338,6 +251,35 @@ class ManagedDeviceEncryptionState extends Entity
         return $this;
     }
     
+    /**
+    * Gets the osVersion
+    * Operating system version of the device
+    *
+    * @return string The osVersion
+    */
+    public function getOsVersion()
+    {
+        if (array_key_exists("osVersion", $this->_propDict)) {
+            return $this->_propDict["osVersion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the osVersion
+    * Operating system version of the device
+    *
+    * @param string $val The osVersion
+    *
+    * @return ManagedDeviceEncryptionState
+    */
+    public function setOsVersion($val)
+    {
+        $this->_propDict["osVersion"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the policyDetails
@@ -365,6 +307,64 @@ class ManagedDeviceEncryptionState extends Entity
     public function setPolicyDetails($val)
     {
 		$this->_propDict["policyDetails"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the tpmSpecificationVersion
+    * Device TPM Version
+    *
+    * @return string The tpmSpecificationVersion
+    */
+    public function getTpmSpecificationVersion()
+    {
+        if (array_key_exists("tpmSpecificationVersion", $this->_propDict)) {
+            return $this->_propDict["tpmSpecificationVersion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the tpmSpecificationVersion
+    * Device TPM Version
+    *
+    * @param string $val The tpmSpecificationVersion
+    *
+    * @return ManagedDeviceEncryptionState
+    */
+    public function setTpmSpecificationVersion($val)
+    {
+        $this->_propDict["tpmSpecificationVersion"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userPrincipalName
+    * User name
+    *
+    * @return string The userPrincipalName
+    */
+    public function getUserPrincipalName()
+    {
+        if (array_key_exists("userPrincipalName", $this->_propDict)) {
+            return $this->_propDict["userPrincipalName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the userPrincipalName
+    * User name
+    *
+    * @param string $val The userPrincipalName
+    *
+    * @return ManagedDeviceEncryptionState
+    */
+    public function setUserPrincipalName($val)
+    {
+        $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
     

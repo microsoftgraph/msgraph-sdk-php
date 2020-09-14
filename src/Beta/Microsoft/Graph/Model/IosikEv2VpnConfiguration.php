@@ -25,6 +25,97 @@ namespace Beta\Microsoft\Graph\Model;
 class IosikEv2VpnConfiguration extends IosVpnConfiguration
 {
     /**
+    * Gets the allowDefaultChildSecurityAssociationParameters
+    * Allows the use of child security association parameters by setting all parameters to the device's default unless explicitly specified.
+    *
+    * @return bool The allowDefaultChildSecurityAssociationParameters
+    */
+    public function getAllowDefaultChildSecurityAssociationParameters()
+    {
+        if (array_key_exists("allowDefaultChildSecurityAssociationParameters", $this->_propDict)) {
+            return $this->_propDict["allowDefaultChildSecurityAssociationParameters"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the allowDefaultChildSecurityAssociationParameters
+    * Allows the use of child security association parameters by setting all parameters to the device's default unless explicitly specified.
+    *
+    * @param bool $val The allowDefaultChildSecurityAssociationParameters
+    *
+    * @return IosikEv2VpnConfiguration
+    */
+    public function setAllowDefaultChildSecurityAssociationParameters($val)
+    {
+        $this->_propDict["allowDefaultChildSecurityAssociationParameters"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the allowDefaultSecurityAssociationParameters
+    * Allows the use of security association parameters by setting all parameters to the device's default unless explicitly specified.
+    *
+    * @return bool The allowDefaultSecurityAssociationParameters
+    */
+    public function getAllowDefaultSecurityAssociationParameters()
+    {
+        if (array_key_exists("allowDefaultSecurityAssociationParameters", $this->_propDict)) {
+            return $this->_propDict["allowDefaultSecurityAssociationParameters"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the allowDefaultSecurityAssociationParameters
+    * Allows the use of security association parameters by setting all parameters to the device's default unless explicitly specified.
+    *
+    * @param bool $val The allowDefaultSecurityAssociationParameters
+    *
+    * @return IosikEv2VpnConfiguration
+    */
+    public function setAllowDefaultSecurityAssociationParameters($val)
+    {
+        $this->_propDict["allowDefaultSecurityAssociationParameters"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the alwaysOnConfiguration
+    * AlwaysOn Configuration
+    *
+    * @return AppleVpnAlwaysOnConfiguration The alwaysOnConfiguration
+    */
+    public function getAlwaysOnConfiguration()
+    {
+        if (array_key_exists("alwaysOnConfiguration", $this->_propDict)) {
+            if (is_a($this->_propDict["alwaysOnConfiguration"], "Beta\Microsoft\Graph\Model\AppleVpnAlwaysOnConfiguration")) {
+                return $this->_propDict["alwaysOnConfiguration"];
+            } else {
+                $this->_propDict["alwaysOnConfiguration"] = new AppleVpnAlwaysOnConfiguration($this->_propDict["alwaysOnConfiguration"]);
+                return $this->_propDict["alwaysOnConfiguration"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the alwaysOnConfiguration
+    * AlwaysOn Configuration
+    *
+    * @param AppleVpnAlwaysOnConfiguration $val The alwaysOnConfiguration
+    *
+    * @return IosikEv2VpnConfiguration
+    */
+    public function setAlwaysOnConfiguration($val)
+    {
+        $this->_propDict["alwaysOnConfiguration"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the childSecurityAssociationParameters
     * Child Security Association Parameters
     *
@@ -178,6 +269,35 @@ class IosikEv2VpnConfiguration extends IosVpnConfiguration
     public function setDisableRedirect($val)
     {
         $this->_propDict["disableRedirect"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the enableAlwaysOnConfiguration
+    * Determines if Always on VPN is enabled
+    *
+    * @return bool The enableAlwaysOnConfiguration
+    */
+    public function getEnableAlwaysOnConfiguration()
+    {
+        if (array_key_exists("enableAlwaysOnConfiguration", $this->_propDict)) {
+            return $this->_propDict["enableAlwaysOnConfiguration"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the enableAlwaysOnConfiguration
+    * Determines if Always on VPN is enabled
+    *
+    * @param bool $val The enableAlwaysOnConfiguration
+    *
+    * @return IosikEv2VpnConfiguration
+    */
+    public function setEnableAlwaysOnConfiguration($val)
+    {
+        $this->_propDict["enableAlwaysOnConfiguration"] = boolval($val);
         return $this;
     }
     
@@ -567,126 +687,6 @@ class IosikEv2VpnConfiguration extends IosVpnConfiguration
     public function setTlsMinimumVersion($val)
     {
         $this->_propDict["tlsMinimumVersion"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the allowDefaultSecurityAssociationParameters
-    * Allows the use of security association parameters by setting all parameters to the device's default unless explicitly specified.
-    *
-    * @return bool The allowDefaultSecurityAssociationParameters
-    */
-    public function getAllowDefaultSecurityAssociationParameters()
-    {
-        if (array_key_exists("allowDefaultSecurityAssociationParameters", $this->_propDict)) {
-            return $this->_propDict["allowDefaultSecurityAssociationParameters"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the allowDefaultSecurityAssociationParameters
-    * Allows the use of security association parameters by setting all parameters to the device's default unless explicitly specified.
-    *
-    * @param bool $val The allowDefaultSecurityAssociationParameters
-    *
-    * @return IosikEv2VpnConfiguration
-    */
-    public function setAllowDefaultSecurityAssociationParameters($val)
-    {
-        $this->_propDict["allowDefaultSecurityAssociationParameters"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the allowDefaultChildSecurityAssociationParameters
-    * Allows the use of child security association parameters by setting all parameters to the device's default unless explicitly specified.
-    *
-    * @return bool The allowDefaultChildSecurityAssociationParameters
-    */
-    public function getAllowDefaultChildSecurityAssociationParameters()
-    {
-        if (array_key_exists("allowDefaultChildSecurityAssociationParameters", $this->_propDict)) {
-            return $this->_propDict["allowDefaultChildSecurityAssociationParameters"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the allowDefaultChildSecurityAssociationParameters
-    * Allows the use of child security association parameters by setting all parameters to the device's default unless explicitly specified.
-    *
-    * @param bool $val The allowDefaultChildSecurityAssociationParameters
-    *
-    * @return IosikEv2VpnConfiguration
-    */
-    public function setAllowDefaultChildSecurityAssociationParameters($val)
-    {
-        $this->_propDict["allowDefaultChildSecurityAssociationParameters"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the alwaysOnConfiguration
-    * AlwaysOn Configuration
-    *
-    * @return AppleVpnAlwaysOnConfiguration The alwaysOnConfiguration
-    */
-    public function getAlwaysOnConfiguration()
-    {
-        if (array_key_exists("alwaysOnConfiguration", $this->_propDict)) {
-            if (is_a($this->_propDict["alwaysOnConfiguration"], "Beta\Microsoft\Graph\Model\AppleVpnAlwaysOnConfiguration")) {
-                return $this->_propDict["alwaysOnConfiguration"];
-            } else {
-                $this->_propDict["alwaysOnConfiguration"] = new AppleVpnAlwaysOnConfiguration($this->_propDict["alwaysOnConfiguration"]);
-                return $this->_propDict["alwaysOnConfiguration"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the alwaysOnConfiguration
-    * AlwaysOn Configuration
-    *
-    * @param AppleVpnAlwaysOnConfiguration $val The alwaysOnConfiguration
-    *
-    * @return IosikEv2VpnConfiguration
-    */
-    public function setAlwaysOnConfiguration($val)
-    {
-        $this->_propDict["alwaysOnConfiguration"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the enableAlwaysOnConfiguration
-    * Determines if Always on VPN is enabled
-    *
-    * @return bool The enableAlwaysOnConfiguration
-    */
-    public function getEnableAlwaysOnConfiguration()
-    {
-        if (array_key_exists("enableAlwaysOnConfiguration", $this->_propDict)) {
-            return $this->_propDict["enableAlwaysOnConfiguration"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the enableAlwaysOnConfiguration
-    * Determines if Always on VPN is enabled
-    *
-    * @param bool $val The enableAlwaysOnConfiguration
-    *
-    * @return IosikEv2VpnConfiguration
-    */
-    public function setEnableAlwaysOnConfiguration($val)
-    {
-        $this->_propDict["enableAlwaysOnConfiguration"] = boolval($val);
         return $this;
     }
     

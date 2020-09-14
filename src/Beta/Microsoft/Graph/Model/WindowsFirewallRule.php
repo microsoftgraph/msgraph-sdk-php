@@ -23,319 +23,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class WindowsFirewallRule extends Entity
 {
-    /**
-    * Gets the displayName
-    * The display name of the rule. Does not need to be unique.
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the displayName
-    * The display name of the rule. Does not need to be unique.
-    *
-    * @param string $val The value of the displayName
-    *
-    * @return WindowsFirewallRule
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the description
-    * The description of the rule.
-    *
-    * @return string The description
-    */
-    public function getDescription()
-    {
-        if (array_key_exists("description", $this->_propDict)) {
-            return $this->_propDict["description"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the description
-    * The description of the rule.
-    *
-    * @param string $val The value of the description
-    *
-    * @return WindowsFirewallRule
-    */
-    public function setDescription($val)
-    {
-        $this->_propDict["description"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the packageFamilyName
-    * The package family name of a Microsoft Store application that's affected by the firewall rule.
-    *
-    * @return string The packageFamilyName
-    */
-    public function getPackageFamilyName()
-    {
-        if (array_key_exists("packageFamilyName", $this->_propDict)) {
-            return $this->_propDict["packageFamilyName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the packageFamilyName
-    * The package family name of a Microsoft Store application that's affected by the firewall rule.
-    *
-    * @param string $val The value of the packageFamilyName
-    *
-    * @return WindowsFirewallRule
-    */
-    public function setPackageFamilyName($val)
-    {
-        $this->_propDict["packageFamilyName"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the filePath
-    * The full file path of an app that's affected by the firewall rule.
-    *
-    * @return string The filePath
-    */
-    public function getFilePath()
-    {
-        if (array_key_exists("filePath", $this->_propDict)) {
-            return $this->_propDict["filePath"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the filePath
-    * The full file path of an app that's affected by the firewall rule.
-    *
-    * @param string $val The value of the filePath
-    *
-    * @return WindowsFirewallRule
-    */
-    public function setFilePath($val)
-    {
-        $this->_propDict["filePath"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the serviceName
-    * The name used in cases when a service, not an application, is sending or receiving traffic.
-    *
-    * @return string The serviceName
-    */
-    public function getServiceName()
-    {
-        if (array_key_exists("serviceName", $this->_propDict)) {
-            return $this->_propDict["serviceName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the serviceName
-    * The name used in cases when a service, not an application, is sending or receiving traffic.
-    *
-    * @param string $val The value of the serviceName
-    *
-    * @return WindowsFirewallRule
-    */
-    public function setServiceName($val)
-    {
-        $this->_propDict["serviceName"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the protocol
-    * 0-255 number representing the IP protocol (TCP = 6, UDP = 17). If not specified, the default is All. Valid values 0 to 255
-    *
-    * @return int The protocol
-    */
-    public function getProtocol()
-    {
-        if (array_key_exists("protocol", $this->_propDict)) {
-            return $this->_propDict["protocol"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the protocol
-    * 0-255 number representing the IP protocol (TCP = 6, UDP = 17). If not specified, the default is All. Valid values 0 to 255
-    *
-    * @param int $val The value of the protocol
-    *
-    * @return WindowsFirewallRule
-    */
-    public function setProtocol($val)
-    {
-        $this->_propDict["protocol"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the localPortRanges
-    * List of local port ranges. For example, "100-120", "200", "300-320". If not specified, the default is All.
-    *
-    * @return string The localPortRanges
-    */
-    public function getLocalPortRanges()
-    {
-        if (array_key_exists("localPortRanges", $this->_propDict)) {
-            return $this->_propDict["localPortRanges"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the localPortRanges
-    * List of local port ranges. For example, "100-120", "200", "300-320". If not specified, the default is All.
-    *
-    * @param string $val The value of the localPortRanges
-    *
-    * @return WindowsFirewallRule
-    */
-    public function setLocalPortRanges($val)
-    {
-        $this->_propDict["localPortRanges"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the remotePortRanges
-    * List of remote port ranges. For example, "100-120", "200", "300-320". If not specified, the default is All.
-    *
-    * @return string The remotePortRanges
-    */
-    public function getRemotePortRanges()
-    {
-        if (array_key_exists("remotePortRanges", $this->_propDict)) {
-            return $this->_propDict["remotePortRanges"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the remotePortRanges
-    * List of remote port ranges. For example, "100-120", "200", "300-320". If not specified, the default is All.
-    *
-    * @param string $val The value of the remotePortRanges
-    *
-    * @return WindowsFirewallRule
-    */
-    public function setRemotePortRanges($val)
-    {
-        $this->_propDict["remotePortRanges"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the localAddressRanges
-    * List of local addresses covered by the rule. Default is any address. Valid tokens include:&amp;lt;ul&amp;gt;&amp;lt;li&amp;gt;"*" indicates any local address. If present, this must be the only token included.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;A subnet can be specified using either the subnet mask or network prefix notation. If neither a subnet mask nor a network prefix is specified, the subnet mask defaults to 255.255.255.255.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;A valid IPv6 address.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;An IPv4 address range in the format of "start address - end address" with no spaces included.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;An IPv6 address range in the format of "start address - end address" with no spaces included.&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;
-    *
-    * @return string The localAddressRanges
-    */
-    public function getLocalAddressRanges()
-    {
-        if (array_key_exists("localAddressRanges", $this->_propDict)) {
-            return $this->_propDict["localAddressRanges"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the localAddressRanges
-    * List of local addresses covered by the rule. Default is any address. Valid tokens include:&amp;lt;ul&amp;gt;&amp;lt;li&amp;gt;"*" indicates any local address. If present, this must be the only token included.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;A subnet can be specified using either the subnet mask or network prefix notation. If neither a subnet mask nor a network prefix is specified, the subnet mask defaults to 255.255.255.255.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;A valid IPv6 address.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;An IPv4 address range in the format of "start address - end address" with no spaces included.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;An IPv6 address range in the format of "start address - end address" with no spaces included.&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;
-    *
-    * @param string $val The value of the localAddressRanges
-    *
-    * @return WindowsFirewallRule
-    */
-    public function setLocalAddressRanges($val)
-    {
-        $this->_propDict["localAddressRanges"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the remoteAddressRanges
-    * List of tokens specifying the remote addresses covered by the rule. Tokens are case insensitive. Default is any address. Valid tokens include:&amp;lt;ul&amp;gt;&amp;lt;li&amp;gt;"*" indicates any remote address. If present, this must be the only token included.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;"Defaultgateway"&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;"DHCP"&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;"DNS"&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;"WINS"&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;"Intranet" (supported on Windows versions 1809+)&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;"RmtIntranet" (supported on Windows versions 1809+)&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;"Internet" (supported on Windows versions 1809+)&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;"Ply2Renders" (supported on Windows versions 1809+)&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;"LocalSubnet" indicates any local address on the local subnet.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;A subnet can be specified using either the subnet mask or network prefix notation. If neither a subnet mask nor a network prefix is specified, the subnet mask defaults to 255.255.255.255.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;A valid IPv6 address.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;An IPv4 address range in the format of "start address - end address" with no spaces included.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;An IPv6 address range in the format of "start address - end address" with no spaces included.&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;
-    *
-    * @return string The remoteAddressRanges
-    */
-    public function getRemoteAddressRanges()
-    {
-        if (array_key_exists("remoteAddressRanges", $this->_propDict)) {
-            return $this->_propDict["remoteAddressRanges"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the remoteAddressRanges
-    * List of tokens specifying the remote addresses covered by the rule. Tokens are case insensitive. Default is any address. Valid tokens include:&amp;lt;ul&amp;gt;&amp;lt;li&amp;gt;"*" indicates any remote address. If present, this must be the only token included.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;"Defaultgateway"&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;"DHCP"&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;"DNS"&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;"WINS"&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;"Intranet" (supported on Windows versions 1809+)&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;"RmtIntranet" (supported on Windows versions 1809+)&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;"Internet" (supported on Windows versions 1809+)&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;"Ply2Renders" (supported on Windows versions 1809+)&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;"LocalSubnet" indicates any local address on the local subnet.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;A subnet can be specified using either the subnet mask or network prefix notation. If neither a subnet mask nor a network prefix is specified, the subnet mask defaults to 255.255.255.255.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;A valid IPv6 address.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;An IPv4 address range in the format of "start address - end address" with no spaces included.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;An IPv6 address range in the format of "start address - end address" with no spaces included.&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;
-    *
-    * @param string $val The value of the remoteAddressRanges
-    *
-    * @return WindowsFirewallRule
-    */
-    public function setRemoteAddressRanges($val)
-    {
-        $this->_propDict["remoteAddressRanges"] = $val;
-        return $this;
-    }
-
-    /**
-    * Gets the profileTypes
-    * Specifies the profiles to which the rule belongs. If not specified, the default is All.
-    *
-    * @return WindowsFirewallRuleNetworkProfileTypes The profileTypes
-    */
-    public function getProfileTypes()
-    {
-        if (array_key_exists("profileTypes", $this->_propDict)) {
-            if (is_a($this->_propDict["profileTypes"], "Beta\Microsoft\Graph\Model\WindowsFirewallRuleNetworkProfileTypes")) {
-                return $this->_propDict["profileTypes"];
-            } else {
-                $this->_propDict["profileTypes"] = new WindowsFirewallRuleNetworkProfileTypes($this->_propDict["profileTypes"]);
-                return $this->_propDict["profileTypes"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the profileTypes
-    * Specifies the profiles to which the rule belongs. If not specified, the default is All.
-    *
-    * @param WindowsFirewallRuleNetworkProfileTypes $val The value to assign to the profileTypes
-    *
-    * @return WindowsFirewallRule The WindowsFirewallRule
-    */
-    public function setProfileTypes($val)
-    {
-        $this->_propDict["profileTypes"] = $val;
-         return $this;
-    }
 
     /**
     * Gets the action
@@ -369,71 +56,61 @@ class WindowsFirewallRule extends Entity
         $this->_propDict["action"] = $val;
          return $this;
     }
-
     /**
-    * Gets the trafficDirection
-    * The traffic direction that the rule is enabled for. If not specified, the default is Out.
+    * Gets the description
+    * The description of the rule.
     *
-    * @return WindowsFirewallRuleTrafficDirectionType The trafficDirection
+    * @return string The description
     */
-    public function getTrafficDirection()
+    public function getDescription()
     {
-        if (array_key_exists("trafficDirection", $this->_propDict)) {
-            if (is_a($this->_propDict["trafficDirection"], "Beta\Microsoft\Graph\Model\WindowsFirewallRuleTrafficDirectionType")) {
-                return $this->_propDict["trafficDirection"];
-            } else {
-                $this->_propDict["trafficDirection"] = new WindowsFirewallRuleTrafficDirectionType($this->_propDict["trafficDirection"]);
-                return $this->_propDict["trafficDirection"];
-            }
+        if (array_key_exists("description", $this->_propDict)) {
+            return $this->_propDict["description"];
+        } else {
+            return null;
         }
-        return null;
     }
 
     /**
-    * Sets the trafficDirection
-    * The traffic direction that the rule is enabled for. If not specified, the default is Out.
+    * Sets the description
+    * The description of the rule.
     *
-    * @param WindowsFirewallRuleTrafficDirectionType $val The value to assign to the trafficDirection
+    * @param string $val The value of the description
     *
-    * @return WindowsFirewallRule The WindowsFirewallRule
+    * @return WindowsFirewallRule
     */
-    public function setTrafficDirection($val)
+    public function setDescription($val)
     {
-        $this->_propDict["trafficDirection"] = $val;
-         return $this;
+        $this->_propDict["description"] = $val;
+        return $this;
     }
-
     /**
-    * Gets the interfaceTypes
-    * The interface types of the rule.
+    * Gets the displayName
+    * The display name of the rule. Does not need to be unique.
     *
-    * @return WindowsFirewallRuleInterfaceTypes The interfaceTypes
+    * @return string The displayName
     */
-    public function getInterfaceTypes()
+    public function getDisplayName()
     {
-        if (array_key_exists("interfaceTypes", $this->_propDict)) {
-            if (is_a($this->_propDict["interfaceTypes"], "Beta\Microsoft\Graph\Model\WindowsFirewallRuleInterfaceTypes")) {
-                return $this->_propDict["interfaceTypes"];
-            } else {
-                $this->_propDict["interfaceTypes"] = new WindowsFirewallRuleInterfaceTypes($this->_propDict["interfaceTypes"]);
-                return $this->_propDict["interfaceTypes"];
-            }
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
         }
-        return null;
     }
 
     /**
-    * Sets the interfaceTypes
-    * The interface types of the rule.
+    * Sets the displayName
+    * The display name of the rule. Does not need to be unique.
     *
-    * @param WindowsFirewallRuleInterfaceTypes $val The value to assign to the interfaceTypes
+    * @param string $val The value of the displayName
     *
-    * @return WindowsFirewallRule The WindowsFirewallRule
+    * @return WindowsFirewallRule
     */
-    public function setInterfaceTypes($val)
+    public function setDisplayName($val)
     {
-        $this->_propDict["interfaceTypes"] = $val;
-         return $this;
+        $this->_propDict["displayName"] = $val;
+        return $this;
     }
 
     /**
@@ -469,6 +146,123 @@ class WindowsFirewallRule extends Entity
          return $this;
     }
     /**
+    * Gets the filePath
+    * The full file path of an app that's affected by the firewall rule.
+    *
+    * @return string The filePath
+    */
+    public function getFilePath()
+    {
+        if (array_key_exists("filePath", $this->_propDict)) {
+            return $this->_propDict["filePath"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the filePath
+    * The full file path of an app that's affected by the firewall rule.
+    *
+    * @param string $val The value of the filePath
+    *
+    * @return WindowsFirewallRule
+    */
+    public function setFilePath($val)
+    {
+        $this->_propDict["filePath"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the interfaceTypes
+    * The interface types of the rule.
+    *
+    * @return WindowsFirewallRuleInterfaceTypes The interfaceTypes
+    */
+    public function getInterfaceTypes()
+    {
+        if (array_key_exists("interfaceTypes", $this->_propDict)) {
+            if (is_a($this->_propDict["interfaceTypes"], "Beta\Microsoft\Graph\Model\WindowsFirewallRuleInterfaceTypes")) {
+                return $this->_propDict["interfaceTypes"];
+            } else {
+                $this->_propDict["interfaceTypes"] = new WindowsFirewallRuleInterfaceTypes($this->_propDict["interfaceTypes"]);
+                return $this->_propDict["interfaceTypes"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the interfaceTypes
+    * The interface types of the rule.
+    *
+    * @param WindowsFirewallRuleInterfaceTypes $val The value to assign to the interfaceTypes
+    *
+    * @return WindowsFirewallRule The WindowsFirewallRule
+    */
+    public function setInterfaceTypes($val)
+    {
+        $this->_propDict["interfaceTypes"] = $val;
+         return $this;
+    }
+    /**
+    * Gets the localAddressRanges
+    * List of local addresses covered by the rule. Default is any address. Valid tokens include:&amp;lt;ul&amp;gt;&amp;lt;li&amp;gt;"*" indicates any local address. If present, this must be the only token included.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;A subnet can be specified using either the subnet mask or network prefix notation. If neither a subnet mask nor a network prefix is specified, the subnet mask defaults to 255.255.255.255.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;A valid IPv6 address.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;An IPv4 address range in the format of "start address - end address" with no spaces included.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;An IPv6 address range in the format of "start address - end address" with no spaces included.&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;
+    *
+    * @return string The localAddressRanges
+    */
+    public function getLocalAddressRanges()
+    {
+        if (array_key_exists("localAddressRanges", $this->_propDict)) {
+            return $this->_propDict["localAddressRanges"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the localAddressRanges
+    * List of local addresses covered by the rule. Default is any address. Valid tokens include:&amp;lt;ul&amp;gt;&amp;lt;li&amp;gt;"*" indicates any local address. If present, this must be the only token included.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;A subnet can be specified using either the subnet mask or network prefix notation. If neither a subnet mask nor a network prefix is specified, the subnet mask defaults to 255.255.255.255.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;A valid IPv6 address.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;An IPv4 address range in the format of "start address - end address" with no spaces included.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;An IPv6 address range in the format of "start address - end address" with no spaces included.&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;
+    *
+    * @param string $val The value of the localAddressRanges
+    *
+    * @return WindowsFirewallRule
+    */
+    public function setLocalAddressRanges($val)
+    {
+        $this->_propDict["localAddressRanges"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the localPortRanges
+    * List of local port ranges. For example, "100-120", "200", "300-320". If not specified, the default is All.
+    *
+    * @return string The localPortRanges
+    */
+    public function getLocalPortRanges()
+    {
+        if (array_key_exists("localPortRanges", $this->_propDict)) {
+            return $this->_propDict["localPortRanges"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the localPortRanges
+    * List of local port ranges. For example, "100-120", "200", "300-320". If not specified, the default is All.
+    *
+    * @param string $val The value of the localPortRanges
+    *
+    * @return WindowsFirewallRule
+    */
+    public function setLocalPortRanges($val)
+    {
+        $this->_propDict["localPortRanges"] = $val;
+        return $this;
+    }
+    /**
     * Gets the localUserAuthorizations
     * Specifies the list of authorized local users for the app container. This is a string in Security Descriptor Definition Language (SDDL) format.
     *
@@ -495,5 +289,211 @@ class WindowsFirewallRule extends Entity
     {
         $this->_propDict["localUserAuthorizations"] = $val;
         return $this;
+    }
+    /**
+    * Gets the packageFamilyName
+    * The package family name of a Microsoft Store application that's affected by the firewall rule.
+    *
+    * @return string The packageFamilyName
+    */
+    public function getPackageFamilyName()
+    {
+        if (array_key_exists("packageFamilyName", $this->_propDict)) {
+            return $this->_propDict["packageFamilyName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the packageFamilyName
+    * The package family name of a Microsoft Store application that's affected by the firewall rule.
+    *
+    * @param string $val The value of the packageFamilyName
+    *
+    * @return WindowsFirewallRule
+    */
+    public function setPackageFamilyName($val)
+    {
+        $this->_propDict["packageFamilyName"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the profileTypes
+    * Specifies the profiles to which the rule belongs. If not specified, the default is All.
+    *
+    * @return WindowsFirewallRuleNetworkProfileTypes The profileTypes
+    */
+    public function getProfileTypes()
+    {
+        if (array_key_exists("profileTypes", $this->_propDict)) {
+            if (is_a($this->_propDict["profileTypes"], "Beta\Microsoft\Graph\Model\WindowsFirewallRuleNetworkProfileTypes")) {
+                return $this->_propDict["profileTypes"];
+            } else {
+                $this->_propDict["profileTypes"] = new WindowsFirewallRuleNetworkProfileTypes($this->_propDict["profileTypes"]);
+                return $this->_propDict["profileTypes"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the profileTypes
+    * Specifies the profiles to which the rule belongs. If not specified, the default is All.
+    *
+    * @param WindowsFirewallRuleNetworkProfileTypes $val The value to assign to the profileTypes
+    *
+    * @return WindowsFirewallRule The WindowsFirewallRule
+    */
+    public function setProfileTypes($val)
+    {
+        $this->_propDict["profileTypes"] = $val;
+         return $this;
+    }
+    /**
+    * Gets the protocol
+    * 0-255 number representing the IP protocol (TCP = 6, UDP = 17). If not specified, the default is All. Valid values 0 to 255
+    *
+    * @return int The protocol
+    */
+    public function getProtocol()
+    {
+        if (array_key_exists("protocol", $this->_propDict)) {
+            return $this->_propDict["protocol"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the protocol
+    * 0-255 number representing the IP protocol (TCP = 6, UDP = 17). If not specified, the default is All. Valid values 0 to 255
+    *
+    * @param int $val The value of the protocol
+    *
+    * @return WindowsFirewallRule
+    */
+    public function setProtocol($val)
+    {
+        $this->_propDict["protocol"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the remoteAddressRanges
+    * List of tokens specifying the remote addresses covered by the rule. Tokens are case insensitive. Default is any address. Valid tokens include:&amp;lt;ul&amp;gt;&amp;lt;li&amp;gt;"*" indicates any remote address. If present, this must be the only token included.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;"Defaultgateway"&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;"DHCP"&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;"DNS"&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;"WINS"&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;"Intranet" (supported on Windows versions 1809+)&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;"RmtIntranet" (supported on Windows versions 1809+)&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;"Internet" (supported on Windows versions 1809+)&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;"Ply2Renders" (supported on Windows versions 1809+)&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;"LocalSubnet" indicates any local address on the local subnet.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;A subnet can be specified using either the subnet mask or network prefix notation. If neither a subnet mask nor a network prefix is specified, the subnet mask defaults to 255.255.255.255.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;A valid IPv6 address.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;An IPv4 address range in the format of "start address - end address" with no spaces included.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;An IPv6 address range in the format of "start address - end address" with no spaces included.&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;
+    *
+    * @return string The remoteAddressRanges
+    */
+    public function getRemoteAddressRanges()
+    {
+        if (array_key_exists("remoteAddressRanges", $this->_propDict)) {
+            return $this->_propDict["remoteAddressRanges"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the remoteAddressRanges
+    * List of tokens specifying the remote addresses covered by the rule. Tokens are case insensitive. Default is any address. Valid tokens include:&amp;lt;ul&amp;gt;&amp;lt;li&amp;gt;"*" indicates any remote address. If present, this must be the only token included.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;"Defaultgateway"&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;"DHCP"&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;"DNS"&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;"WINS"&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;"Intranet" (supported on Windows versions 1809+)&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;"RmtIntranet" (supported on Windows versions 1809+)&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;"Internet" (supported on Windows versions 1809+)&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;"Ply2Renders" (supported on Windows versions 1809+)&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;"LocalSubnet" indicates any local address on the local subnet.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;A subnet can be specified using either the subnet mask or network prefix notation. If neither a subnet mask nor a network prefix is specified, the subnet mask defaults to 255.255.255.255.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;A valid IPv6 address.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;An IPv4 address range in the format of "start address - end address" with no spaces included.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;An IPv6 address range in the format of "start address - end address" with no spaces included.&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;
+    *
+    * @param string $val The value of the remoteAddressRanges
+    *
+    * @return WindowsFirewallRule
+    */
+    public function setRemoteAddressRanges($val)
+    {
+        $this->_propDict["remoteAddressRanges"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the remotePortRanges
+    * List of remote port ranges. For example, "100-120", "200", "300-320". If not specified, the default is All.
+    *
+    * @return string The remotePortRanges
+    */
+    public function getRemotePortRanges()
+    {
+        if (array_key_exists("remotePortRanges", $this->_propDict)) {
+            return $this->_propDict["remotePortRanges"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the remotePortRanges
+    * List of remote port ranges. For example, "100-120", "200", "300-320". If not specified, the default is All.
+    *
+    * @param string $val The value of the remotePortRanges
+    *
+    * @return WindowsFirewallRule
+    */
+    public function setRemotePortRanges($val)
+    {
+        $this->_propDict["remotePortRanges"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the serviceName
+    * The name used in cases when a service, not an application, is sending or receiving traffic.
+    *
+    * @return string The serviceName
+    */
+    public function getServiceName()
+    {
+        if (array_key_exists("serviceName", $this->_propDict)) {
+            return $this->_propDict["serviceName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the serviceName
+    * The name used in cases when a service, not an application, is sending or receiving traffic.
+    *
+    * @param string $val The value of the serviceName
+    *
+    * @return WindowsFirewallRule
+    */
+    public function setServiceName($val)
+    {
+        $this->_propDict["serviceName"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the trafficDirection
+    * The traffic direction that the rule is enabled for. If not specified, the default is Out.
+    *
+    * @return WindowsFirewallRuleTrafficDirectionType The trafficDirection
+    */
+    public function getTrafficDirection()
+    {
+        if (array_key_exists("trafficDirection", $this->_propDict)) {
+            if (is_a($this->_propDict["trafficDirection"], "Beta\Microsoft\Graph\Model\WindowsFirewallRuleTrafficDirectionType")) {
+                return $this->_propDict["trafficDirection"];
+            } else {
+                $this->_propDict["trafficDirection"] = new WindowsFirewallRuleTrafficDirectionType($this->_propDict["trafficDirection"]);
+                return $this->_propDict["trafficDirection"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the trafficDirection
+    * The traffic direction that the rule is enabled for. If not specified, the default is Out.
+    *
+    * @param WindowsFirewallRuleTrafficDirectionType $val The value to assign to the trafficDirection
+    *
+    * @return WindowsFirewallRule The WindowsFirewallRule
+    */
+    public function setTrafficDirection($val)
+    {
+        $this->_propDict["trafficDirection"] = $val;
+         return $this;
     }
 }

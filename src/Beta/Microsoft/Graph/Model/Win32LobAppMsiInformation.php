@@ -23,118 +23,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class Win32LobAppMsiInformation extends Entity
 {
-    /**
-    * Gets the productCode
-    * The MSI product code.
-    *
-    * @return string The productCode
-    */
-    public function getProductCode()
-    {
-        if (array_key_exists("productCode", $this->_propDict)) {
-            return $this->_propDict["productCode"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the productCode
-    * The MSI product code.
-    *
-    * @param string $val The value of the productCode
-    *
-    * @return Win32LobAppMsiInformation
-    */
-    public function setProductCode($val)
-    {
-        $this->_propDict["productCode"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the productVersion
-    * The MSI product version.
-    *
-    * @return string The productVersion
-    */
-    public function getProductVersion()
-    {
-        if (array_key_exists("productVersion", $this->_propDict)) {
-            return $this->_propDict["productVersion"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the productVersion
-    * The MSI product version.
-    *
-    * @param string $val The value of the productVersion
-    *
-    * @return Win32LobAppMsiInformation
-    */
-    public function setProductVersion($val)
-    {
-        $this->_propDict["productVersion"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the upgradeCode
-    * The MSI upgrade code.
-    *
-    * @return string The upgradeCode
-    */
-    public function getUpgradeCode()
-    {
-        if (array_key_exists("upgradeCode", $this->_propDict)) {
-            return $this->_propDict["upgradeCode"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the upgradeCode
-    * The MSI upgrade code.
-    *
-    * @param string $val The value of the upgradeCode
-    *
-    * @return Win32LobAppMsiInformation
-    */
-    public function setUpgradeCode($val)
-    {
-        $this->_propDict["upgradeCode"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the requiresReboot
-    * Whether the MSI app requires the machine to reboot to complete installation.
-    *
-    * @return bool The requiresReboot
-    */
-    public function getRequiresReboot()
-    {
-        if (array_key_exists("requiresReboot", $this->_propDict)) {
-            return $this->_propDict["requiresReboot"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the requiresReboot
-    * Whether the MSI app requires the machine to reboot to complete installation.
-    *
-    * @param bool $val The value of the requiresReboot
-    *
-    * @return Win32LobAppMsiInformation
-    */
-    public function setRequiresReboot($val)
-    {
-        $this->_propDict["requiresReboot"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the packageType
@@ -169,6 +57,34 @@ class Win32LobAppMsiInformation extends Entity
          return $this;
     }
     /**
+    * Gets the productCode
+    * The MSI product code.
+    *
+    * @return string The productCode
+    */
+    public function getProductCode()
+    {
+        if (array_key_exists("productCode", $this->_propDict)) {
+            return $this->_propDict["productCode"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the productCode
+    * The MSI product code.
+    *
+    * @param string $val The value of the productCode
+    *
+    * @return Win32LobAppMsiInformation
+    */
+    public function setProductCode($val)
+    {
+        $this->_propDict["productCode"] = $val;
+        return $this;
+    }
+    /**
     * Gets the productName
     * The MSI product name.
     *
@@ -197,6 +113,34 @@ class Win32LobAppMsiInformation extends Entity
         return $this;
     }
     /**
+    * Gets the productVersion
+    * The MSI product version.
+    *
+    * @return string The productVersion
+    */
+    public function getProductVersion()
+    {
+        if (array_key_exists("productVersion", $this->_propDict)) {
+            return $this->_propDict["productVersion"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the productVersion
+    * The MSI product version.
+    *
+    * @param string $val The value of the productVersion
+    *
+    * @return Win32LobAppMsiInformation
+    */
+    public function setProductVersion($val)
+    {
+        $this->_propDict["productVersion"] = $val;
+        return $this;
+    }
+    /**
     * Gets the publisher
     * The MSI publisher.
     *
@@ -222,6 +166,62 @@ class Win32LobAppMsiInformation extends Entity
     public function setPublisher($val)
     {
         $this->_propDict["publisher"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the requiresReboot
+    * Whether the MSI app requires the machine to reboot to complete installation.
+    *
+    * @return bool The requiresReboot
+    */
+    public function getRequiresReboot()
+    {
+        if (array_key_exists("requiresReboot", $this->_propDict)) {
+            return $this->_propDict["requiresReboot"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the requiresReboot
+    * Whether the MSI app requires the machine to reboot to complete installation.
+    *
+    * @param bool $val The value of the requiresReboot
+    *
+    * @return Win32LobAppMsiInformation
+    */
+    public function setRequiresReboot($val)
+    {
+        $this->_propDict["requiresReboot"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the upgradeCode
+    * The MSI upgrade code.
+    *
+    * @return string The upgradeCode
+    */
+    public function getUpgradeCode()
+    {
+        if (array_key_exists("upgradeCode", $this->_propDict)) {
+            return $this->_propDict["upgradeCode"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the upgradeCode
+    * The MSI upgrade code.
+    *
+    * @param string $val The value of the upgradeCode
+    *
+    * @return Win32LobAppMsiInformation
+    */
+    public function setUpgradeCode($val)
+    {
+        $this->_propDict["upgradeCode"] = $val;
         return $this;
     }
 }

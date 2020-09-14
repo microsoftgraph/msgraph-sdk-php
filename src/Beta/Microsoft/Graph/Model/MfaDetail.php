@@ -24,32 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class MfaDetail extends Entity
 {
     /**
-    * Gets the authMethod
-    *
-    * @return string The authMethod
-    */
-    public function getAuthMethod()
-    {
-        if (array_key_exists("authMethod", $this->_propDict)) {
-            return $this->_propDict["authMethod"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the authMethod
-    *
-    * @param string $val The value of the authMethod
-    *
-    * @return MfaDetail
-    */
-    public function setAuthMethod($val)
-    {
-        $this->_propDict["authMethod"] = $val;
-        return $this;
-    }
-    /**
     * Gets the authDetail
     *
     * @return string The authDetail
@@ -73,6 +47,32 @@ class MfaDetail extends Entity
     public function setAuthDetail($val)
     {
         $this->_propDict["authDetail"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the authMethod
+    *
+    * @return string The authMethod
+    */
+    public function getAuthMethod()
+    {
+        if (array_key_exists("authMethod", $this->_propDict)) {
+            return $this->_propDict["authMethod"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the authMethod
+    *
+    * @param string $val The value of the authMethod
+    *
+    * @return MfaDetail
+    */
+    public function setAuthMethod($val)
+    {
+        $this->_propDict["authMethod"] = $val;
         return $this;
     }
 }

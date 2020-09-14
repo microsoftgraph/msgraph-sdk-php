@@ -58,35 +58,31 @@ class WindowsPrivacyDataAccessControlItem extends Entity
     }
     
     /**
-    * Gets the dataCategory
-    * This indicates a privacy data category to which the specific access control will apply.
+    * Gets the appDisplayName
+    * The Package Family Name of a Windows app. When set, the access level applies to the specified application.
     *
-    * @return WindowsPrivacyDataCategory The dataCategory
+    * @return string The appDisplayName
     */
-    public function getDataCategory()
+    public function getAppDisplayName()
     {
-        if (array_key_exists("dataCategory", $this->_propDict)) {
-            if (is_a($this->_propDict["dataCategory"], "Beta\Microsoft\Graph\Model\WindowsPrivacyDataCategory")) {
-                return $this->_propDict["dataCategory"];
-            } else {
-                $this->_propDict["dataCategory"] = new WindowsPrivacyDataCategory($this->_propDict["dataCategory"]);
-                return $this->_propDict["dataCategory"];
-            }
+        if (array_key_exists("appDisplayName", $this->_propDict)) {
+            return $this->_propDict["appDisplayName"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the dataCategory
-    * This indicates a privacy data category to which the specific access control will apply.
+    * Sets the appDisplayName
+    * The Package Family Name of a Windows app. When set, the access level applies to the specified application.
     *
-    * @param WindowsPrivacyDataCategory $val The dataCategory
+    * @param string $val The appDisplayName
     *
     * @return WindowsPrivacyDataAccessControlItem
     */
-    public function setDataCategory($val)
+    public function setAppDisplayName($val)
     {
-        $this->_propDict["dataCategory"] = $val;
+        $this->_propDict["appDisplayName"] = $val;
         return $this;
     }
     
@@ -120,31 +116,35 @@ class WindowsPrivacyDataAccessControlItem extends Entity
     }
     
     /**
-    * Gets the appDisplayName
-    * The Package Family Name of a Windows app. When set, the access level applies to the specified application.
+    * Gets the dataCategory
+    * This indicates a privacy data category to which the specific access control will apply.
     *
-    * @return string The appDisplayName
+    * @return WindowsPrivacyDataCategory The dataCategory
     */
-    public function getAppDisplayName()
+    public function getDataCategory()
     {
-        if (array_key_exists("appDisplayName", $this->_propDict)) {
-            return $this->_propDict["appDisplayName"];
-        } else {
-            return null;
+        if (array_key_exists("dataCategory", $this->_propDict)) {
+            if (is_a($this->_propDict["dataCategory"], "Beta\Microsoft\Graph\Model\WindowsPrivacyDataCategory")) {
+                return $this->_propDict["dataCategory"];
+            } else {
+                $this->_propDict["dataCategory"] = new WindowsPrivacyDataCategory($this->_propDict["dataCategory"]);
+                return $this->_propDict["dataCategory"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the appDisplayName
-    * The Package Family Name of a Windows app. When set, the access level applies to the specified application.
+    * Sets the dataCategory
+    * This indicates a privacy data category to which the specific access control will apply.
     *
-    * @param string $val The appDisplayName
+    * @param WindowsPrivacyDataCategory $val The dataCategory
     *
     * @return WindowsPrivacyDataAccessControlItem
     */
-    public function setAppDisplayName($val)
+    public function setDataCategory($val)
     {
-        $this->_propDict["appDisplayName"] = $val;
+        $this->_propDict["dataCategory"] = $val;
         return $this;
     }
     

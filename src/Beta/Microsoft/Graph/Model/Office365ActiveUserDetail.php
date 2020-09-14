@@ -25,114 +25,29 @@ namespace Beta\Microsoft\Graph\Model;
 class Office365ActiveUserDetail extends Entity
 {
     /**
-    * Gets the reportRefreshDate
+    * Gets the assignedProducts
     *
-    * @return \DateTime The reportRefreshDate
+    * @return string The assignedProducts
     */
-    public function getReportRefreshDate()
+    public function getAssignedProducts()
     {
-        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
-                return $this->_propDict["reportRefreshDate"];
-            } else {
-                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
-                return $this->_propDict["reportRefreshDate"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the reportRefreshDate
-    *
-    * @param \DateTime $val The reportRefreshDate
-    *
-    * @return Office365ActiveUserDetail
-    */
-    public function setReportRefreshDate($val)
-    {
-        $this->_propDict["reportRefreshDate"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the userPrincipalName
-    *
-    * @return string The userPrincipalName
-    */
-    public function getUserPrincipalName()
-    {
-        if (array_key_exists("userPrincipalName", $this->_propDict)) {
-            return $this->_propDict["userPrincipalName"];
+        if (array_key_exists("assignedProducts", $this->_propDict)) {
+            return $this->_propDict["assignedProducts"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the userPrincipalName
+    * Sets the assignedProducts
     *
-    * @param string $val The userPrincipalName
-    *
-    * @return Office365ActiveUserDetail
-    */
-    public function setUserPrincipalName($val)
-    {
-        $this->_propDict["userPrincipalName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the displayName
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the displayName
-    *
-    * @param string $val The displayName
+    * @param string $val The assignedProducts
     *
     * @return Office365ActiveUserDetail
     */
-    public function setDisplayName($val)
+    public function setAssignedProducts($val)
     {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the isDeleted
-    *
-    * @return bool The isDeleted
-    */
-    public function getIsDeleted()
-    {
-        if (array_key_exists("isDeleted", $this->_propDict)) {
-            return $this->_propDict["isDeleted"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the isDeleted
-    *
-    * @param bool $val The isDeleted
-    *
-    * @return Office365ActiveUserDetail
-    */
-    public function setIsDeleted($val)
-    {
-        $this->_propDict["isDeleted"] = boolval($val);
+        $this->_propDict["assignedProducts"] = $val;
         return $this;
     }
     
@@ -164,6 +79,95 @@ class Office365ActiveUserDetail extends Entity
     public function setDeletedDate($val)
     {
         $this->_propDict["deletedDate"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the displayName
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the displayName
+    *
+    * @param string $val The displayName
+    *
+    * @return Office365ActiveUserDetail
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the exchangeLastActivityDate
+    *
+    * @return \DateTime The exchangeLastActivityDate
+    */
+    public function getExchangeLastActivityDate()
+    {
+        if (array_key_exists("exchangeLastActivityDate", $this->_propDict)) {
+            if (is_a($this->_propDict["exchangeLastActivityDate"], "\DateTime")) {
+                return $this->_propDict["exchangeLastActivityDate"];
+            } else {
+                $this->_propDict["exchangeLastActivityDate"] = new \DateTime($this->_propDict["exchangeLastActivityDate"]);
+                return $this->_propDict["exchangeLastActivityDate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the exchangeLastActivityDate
+    *
+    * @param \DateTime $val The exchangeLastActivityDate
+    *
+    * @return Office365ActiveUserDetail
+    */
+    public function setExchangeLastActivityDate($val)
+    {
+        $this->_propDict["exchangeLastActivityDate"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the exchangeLicenseAssignDate
+    *
+    * @return \DateTime The exchangeLicenseAssignDate
+    */
+    public function getExchangeLicenseAssignDate()
+    {
+        if (array_key_exists("exchangeLicenseAssignDate", $this->_propDict)) {
+            if (is_a($this->_propDict["exchangeLicenseAssignDate"], "\DateTime")) {
+                return $this->_propDict["exchangeLicenseAssignDate"];
+            } else {
+                $this->_propDict["exchangeLicenseAssignDate"] = new \DateTime($this->_propDict["exchangeLicenseAssignDate"]);
+                return $this->_propDict["exchangeLicenseAssignDate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the exchangeLicenseAssignDate
+    *
+    * @param \DateTime $val The exchangeLicenseAssignDate
+    *
+    * @return Office365ActiveUserDetail
+    */
+    public function setExchangeLicenseAssignDate($val)
+    {
+        $this->_propDict["exchangeLicenseAssignDate"] = $val;
         return $this;
     }
     
@@ -276,33 +280,6 @@ class Office365ActiveUserDetail extends Entity
     }
     
     /**
-    * Gets the hasYammerLicense
-    *
-    * @return bool The hasYammerLicense
-    */
-    public function getHasYammerLicense()
-    {
-        if (array_key_exists("hasYammerLicense", $this->_propDict)) {
-            return $this->_propDict["hasYammerLicense"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the hasYammerLicense
-    *
-    * @param bool $val The hasYammerLicense
-    *
-    * @return Office365ActiveUserDetail
-    */
-    public function setHasYammerLicense($val)
-    {
-        $this->_propDict["hasYammerLicense"] = boolval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the hasTeamsLicense
     *
     * @return bool The hasTeamsLicense
@@ -330,33 +307,56 @@ class Office365ActiveUserDetail extends Entity
     }
     
     /**
-    * Gets the exchangeLastActivityDate
+    * Gets the hasYammerLicense
     *
-    * @return \DateTime The exchangeLastActivityDate
+    * @return bool The hasYammerLicense
     */
-    public function getExchangeLastActivityDate()
+    public function getHasYammerLicense()
     {
-        if (array_key_exists("exchangeLastActivityDate", $this->_propDict)) {
-            if (is_a($this->_propDict["exchangeLastActivityDate"], "\DateTime")) {
-                return $this->_propDict["exchangeLastActivityDate"];
-            } else {
-                $this->_propDict["exchangeLastActivityDate"] = new \DateTime($this->_propDict["exchangeLastActivityDate"]);
-                return $this->_propDict["exchangeLastActivityDate"];
-            }
+        if (array_key_exists("hasYammerLicense", $this->_propDict)) {
+            return $this->_propDict["hasYammerLicense"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the exchangeLastActivityDate
+    * Sets the hasYammerLicense
     *
-    * @param \DateTime $val The exchangeLastActivityDate
+    * @param bool $val The hasYammerLicense
     *
     * @return Office365ActiveUserDetail
     */
-    public function setExchangeLastActivityDate($val)
+    public function setHasYammerLicense($val)
     {
-        $this->_propDict["exchangeLastActivityDate"] = $val;
+        $this->_propDict["hasYammerLicense"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the isDeleted
+    *
+    * @return bool The isDeleted
+    */
+    public function getIsDeleted()
+    {
+        if (array_key_exists("isDeleted", $this->_propDict)) {
+            return $this->_propDict["isDeleted"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isDeleted
+    *
+    * @param bool $val The isDeleted
+    *
+    * @return Office365ActiveUserDetail
+    */
+    public function setIsDeleted($val)
+    {
+        $this->_propDict["isDeleted"] = boolval($val);
         return $this;
     }
     
@@ -392,161 +392,6 @@ class Office365ActiveUserDetail extends Entity
     }
     
     /**
-    * Gets the sharePointLastActivityDate
-    *
-    * @return \DateTime The sharePointLastActivityDate
-    */
-    public function getSharePointLastActivityDate()
-    {
-        if (array_key_exists("sharePointLastActivityDate", $this->_propDict)) {
-            if (is_a($this->_propDict["sharePointLastActivityDate"], "\DateTime")) {
-                return $this->_propDict["sharePointLastActivityDate"];
-            } else {
-                $this->_propDict["sharePointLastActivityDate"] = new \DateTime($this->_propDict["sharePointLastActivityDate"]);
-                return $this->_propDict["sharePointLastActivityDate"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the sharePointLastActivityDate
-    *
-    * @param \DateTime $val The sharePointLastActivityDate
-    *
-    * @return Office365ActiveUserDetail
-    */
-    public function setSharePointLastActivityDate($val)
-    {
-        $this->_propDict["sharePointLastActivityDate"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the skypeForBusinessLastActivityDate
-    *
-    * @return \DateTime The skypeForBusinessLastActivityDate
-    */
-    public function getSkypeForBusinessLastActivityDate()
-    {
-        if (array_key_exists("skypeForBusinessLastActivityDate", $this->_propDict)) {
-            if (is_a($this->_propDict["skypeForBusinessLastActivityDate"], "\DateTime")) {
-                return $this->_propDict["skypeForBusinessLastActivityDate"];
-            } else {
-                $this->_propDict["skypeForBusinessLastActivityDate"] = new \DateTime($this->_propDict["skypeForBusinessLastActivityDate"]);
-                return $this->_propDict["skypeForBusinessLastActivityDate"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the skypeForBusinessLastActivityDate
-    *
-    * @param \DateTime $val The skypeForBusinessLastActivityDate
-    *
-    * @return Office365ActiveUserDetail
-    */
-    public function setSkypeForBusinessLastActivityDate($val)
-    {
-        $this->_propDict["skypeForBusinessLastActivityDate"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the yammerLastActivityDate
-    *
-    * @return \DateTime The yammerLastActivityDate
-    */
-    public function getYammerLastActivityDate()
-    {
-        if (array_key_exists("yammerLastActivityDate", $this->_propDict)) {
-            if (is_a($this->_propDict["yammerLastActivityDate"], "\DateTime")) {
-                return $this->_propDict["yammerLastActivityDate"];
-            } else {
-                $this->_propDict["yammerLastActivityDate"] = new \DateTime($this->_propDict["yammerLastActivityDate"]);
-                return $this->_propDict["yammerLastActivityDate"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the yammerLastActivityDate
-    *
-    * @param \DateTime $val The yammerLastActivityDate
-    *
-    * @return Office365ActiveUserDetail
-    */
-    public function setYammerLastActivityDate($val)
-    {
-        $this->_propDict["yammerLastActivityDate"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the teamsLastActivityDate
-    *
-    * @return \DateTime The teamsLastActivityDate
-    */
-    public function getTeamsLastActivityDate()
-    {
-        if (array_key_exists("teamsLastActivityDate", $this->_propDict)) {
-            if (is_a($this->_propDict["teamsLastActivityDate"], "\DateTime")) {
-                return $this->_propDict["teamsLastActivityDate"];
-            } else {
-                $this->_propDict["teamsLastActivityDate"] = new \DateTime($this->_propDict["teamsLastActivityDate"]);
-                return $this->_propDict["teamsLastActivityDate"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the teamsLastActivityDate
-    *
-    * @param \DateTime $val The teamsLastActivityDate
-    *
-    * @return Office365ActiveUserDetail
-    */
-    public function setTeamsLastActivityDate($val)
-    {
-        $this->_propDict["teamsLastActivityDate"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the exchangeLicenseAssignDate
-    *
-    * @return \DateTime The exchangeLicenseAssignDate
-    */
-    public function getExchangeLicenseAssignDate()
-    {
-        if (array_key_exists("exchangeLicenseAssignDate", $this->_propDict)) {
-            if (is_a($this->_propDict["exchangeLicenseAssignDate"], "\DateTime")) {
-                return $this->_propDict["exchangeLicenseAssignDate"];
-            } else {
-                $this->_propDict["exchangeLicenseAssignDate"] = new \DateTime($this->_propDict["exchangeLicenseAssignDate"]);
-                return $this->_propDict["exchangeLicenseAssignDate"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the exchangeLicenseAssignDate
-    *
-    * @param \DateTime $val The exchangeLicenseAssignDate
-    *
-    * @return Office365ActiveUserDetail
-    */
-    public function setExchangeLicenseAssignDate($val)
-    {
-        $this->_propDict["exchangeLicenseAssignDate"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the oneDriveLicenseAssignDate
     *
     * @return \DateTime The oneDriveLicenseAssignDate
@@ -574,6 +419,68 @@ class Office365ActiveUserDetail extends Entity
     public function setOneDriveLicenseAssignDate($val)
     {
         $this->_propDict["oneDriveLicenseAssignDate"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the reportRefreshDate
+    *
+    * @return \DateTime The reportRefreshDate
+    */
+    public function getReportRefreshDate()
+    {
+        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
+                return $this->_propDict["reportRefreshDate"];
+            } else {
+                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
+                return $this->_propDict["reportRefreshDate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the reportRefreshDate
+    *
+    * @param \DateTime $val The reportRefreshDate
+    *
+    * @return Office365ActiveUserDetail
+    */
+    public function setReportRefreshDate($val)
+    {
+        $this->_propDict["reportRefreshDate"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the sharePointLastActivityDate
+    *
+    * @return \DateTime The sharePointLastActivityDate
+    */
+    public function getSharePointLastActivityDate()
+    {
+        if (array_key_exists("sharePointLastActivityDate", $this->_propDict)) {
+            if (is_a($this->_propDict["sharePointLastActivityDate"], "\DateTime")) {
+                return $this->_propDict["sharePointLastActivityDate"];
+            } else {
+                $this->_propDict["sharePointLastActivityDate"] = new \DateTime($this->_propDict["sharePointLastActivityDate"]);
+                return $this->_propDict["sharePointLastActivityDate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the sharePointLastActivityDate
+    *
+    * @param \DateTime $val The sharePointLastActivityDate
+    *
+    * @return Office365ActiveUserDetail
+    */
+    public function setSharePointLastActivityDate($val)
+    {
+        $this->_propDict["sharePointLastActivityDate"] = $val;
         return $this;
     }
     
@@ -609,6 +516,37 @@ class Office365ActiveUserDetail extends Entity
     }
     
     /**
+    * Gets the skypeForBusinessLastActivityDate
+    *
+    * @return \DateTime The skypeForBusinessLastActivityDate
+    */
+    public function getSkypeForBusinessLastActivityDate()
+    {
+        if (array_key_exists("skypeForBusinessLastActivityDate", $this->_propDict)) {
+            if (is_a($this->_propDict["skypeForBusinessLastActivityDate"], "\DateTime")) {
+                return $this->_propDict["skypeForBusinessLastActivityDate"];
+            } else {
+                $this->_propDict["skypeForBusinessLastActivityDate"] = new \DateTime($this->_propDict["skypeForBusinessLastActivityDate"]);
+                return $this->_propDict["skypeForBusinessLastActivityDate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the skypeForBusinessLastActivityDate
+    *
+    * @param \DateTime $val The skypeForBusinessLastActivityDate
+    *
+    * @return Office365ActiveUserDetail
+    */
+    public function setSkypeForBusinessLastActivityDate($val)
+    {
+        $this->_propDict["skypeForBusinessLastActivityDate"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the skypeForBusinessLicenseAssignDate
     *
     * @return \DateTime The skypeForBusinessLicenseAssignDate
@@ -640,33 +578,33 @@ class Office365ActiveUserDetail extends Entity
     }
     
     /**
-    * Gets the yammerLicenseAssignDate
+    * Gets the teamsLastActivityDate
     *
-    * @return \DateTime The yammerLicenseAssignDate
+    * @return \DateTime The teamsLastActivityDate
     */
-    public function getYammerLicenseAssignDate()
+    public function getTeamsLastActivityDate()
     {
-        if (array_key_exists("yammerLicenseAssignDate", $this->_propDict)) {
-            if (is_a($this->_propDict["yammerLicenseAssignDate"], "\DateTime")) {
-                return $this->_propDict["yammerLicenseAssignDate"];
+        if (array_key_exists("teamsLastActivityDate", $this->_propDict)) {
+            if (is_a($this->_propDict["teamsLastActivityDate"], "\DateTime")) {
+                return $this->_propDict["teamsLastActivityDate"];
             } else {
-                $this->_propDict["yammerLicenseAssignDate"] = new \DateTime($this->_propDict["yammerLicenseAssignDate"]);
-                return $this->_propDict["yammerLicenseAssignDate"];
+                $this->_propDict["teamsLastActivityDate"] = new \DateTime($this->_propDict["teamsLastActivityDate"]);
+                return $this->_propDict["teamsLastActivityDate"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the yammerLicenseAssignDate
+    * Sets the teamsLastActivityDate
     *
-    * @param \DateTime $val The yammerLicenseAssignDate
+    * @param \DateTime $val The teamsLastActivityDate
     *
     * @return Office365ActiveUserDetail
     */
-    public function setYammerLicenseAssignDate($val)
+    public function setTeamsLastActivityDate($val)
     {
-        $this->_propDict["yammerLicenseAssignDate"] = $val;
+        $this->_propDict["teamsLastActivityDate"] = $val;
         return $this;
     }
     
@@ -702,29 +640,91 @@ class Office365ActiveUserDetail extends Entity
     }
     
     /**
-    * Gets the assignedProducts
+    * Gets the userPrincipalName
     *
-    * @return string The assignedProducts
+    * @return string The userPrincipalName
     */
-    public function getAssignedProducts()
+    public function getUserPrincipalName()
     {
-        if (array_key_exists("assignedProducts", $this->_propDict)) {
-            return $this->_propDict["assignedProducts"];
+        if (array_key_exists("userPrincipalName", $this->_propDict)) {
+            return $this->_propDict["userPrincipalName"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the assignedProducts
+    * Sets the userPrincipalName
     *
-    * @param string $val The assignedProducts
+    * @param string $val The userPrincipalName
     *
     * @return Office365ActiveUserDetail
     */
-    public function setAssignedProducts($val)
+    public function setUserPrincipalName($val)
     {
-        $this->_propDict["assignedProducts"] = $val;
+        $this->_propDict["userPrincipalName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the yammerLastActivityDate
+    *
+    * @return \DateTime The yammerLastActivityDate
+    */
+    public function getYammerLastActivityDate()
+    {
+        if (array_key_exists("yammerLastActivityDate", $this->_propDict)) {
+            if (is_a($this->_propDict["yammerLastActivityDate"], "\DateTime")) {
+                return $this->_propDict["yammerLastActivityDate"];
+            } else {
+                $this->_propDict["yammerLastActivityDate"] = new \DateTime($this->_propDict["yammerLastActivityDate"]);
+                return $this->_propDict["yammerLastActivityDate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the yammerLastActivityDate
+    *
+    * @param \DateTime $val The yammerLastActivityDate
+    *
+    * @return Office365ActiveUserDetail
+    */
+    public function setYammerLastActivityDate($val)
+    {
+        $this->_propDict["yammerLastActivityDate"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the yammerLicenseAssignDate
+    *
+    * @return \DateTime The yammerLicenseAssignDate
+    */
+    public function getYammerLicenseAssignDate()
+    {
+        if (array_key_exists("yammerLicenseAssignDate", $this->_propDict)) {
+            if (is_a($this->_propDict["yammerLicenseAssignDate"], "\DateTime")) {
+                return $this->_propDict["yammerLicenseAssignDate"];
+            } else {
+                $this->_propDict["yammerLicenseAssignDate"] = new \DateTime($this->_propDict["yammerLicenseAssignDate"]);
+                return $this->_propDict["yammerLicenseAssignDate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the yammerLicenseAssignDate
+    *
+    * @param \DateTime $val The yammerLicenseAssignDate
+    *
+    * @return Office365ActiveUserDetail
+    */
+    public function setYammerLicenseAssignDate($val)
+    {
+        $this->_propDict["yammerLicenseAssignDate"] = $val;
         return $this;
     }
     

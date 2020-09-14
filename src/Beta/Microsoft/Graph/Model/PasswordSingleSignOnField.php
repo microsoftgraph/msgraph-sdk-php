@@ -24,32 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class PasswordSingleSignOnField extends Entity
 {
     /**
-    * Gets the fieldId
-    *
-    * @return string The fieldId
-    */
-    public function getFieldId()
-    {
-        if (array_key_exists("fieldId", $this->_propDict)) {
-            return $this->_propDict["fieldId"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the fieldId
-    *
-    * @param string $val The value of the fieldId
-    *
-    * @return PasswordSingleSignOnField
-    */
-    public function setFieldId($val)
-    {
-        $this->_propDict["fieldId"] = $val;
-        return $this;
-    }
-    /**
     * Gets the customizedLabel
     *
     * @return string The customizedLabel
@@ -99,6 +73,32 @@ class PasswordSingleSignOnField extends Entity
     public function setDefaultLabel($val)
     {
         $this->_propDict["defaultLabel"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the fieldId
+    *
+    * @return string The fieldId
+    */
+    public function getFieldId()
+    {
+        if (array_key_exists("fieldId", $this->_propDict)) {
+            return $this->_propDict["fieldId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the fieldId
+    *
+    * @param string $val The value of the fieldId
+    *
+    * @return PasswordSingleSignOnField
+    */
+    public function setFieldId($val)
+    {
+        $this->_propDict["fieldId"] = $val;
         return $this;
     }
     /**

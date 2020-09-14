@@ -25,6 +25,35 @@ namespace Beta\Microsoft\Graph\Model;
 class GroupPolicyDefinition extends Entity
 {
     /**
+    * Gets the categoryPath
+    * The localized full category path for the policy.
+    *
+    * @return string The categoryPath
+    */
+    public function getCategoryPath()
+    {
+        if (array_key_exists("categoryPath", $this->_propDict)) {
+            return $this->_propDict["categoryPath"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the categoryPath
+    * The localized full category path for the policy.
+    *
+    * @param string $val The categoryPath
+    *
+    * @return GroupPolicyDefinition
+    */
+    public function setCategoryPath($val)
+    {
+        $this->_propDict["categoryPath"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the classType
     * Identifies the type of groups the policy can be applied to.
     *
@@ -116,97 +145,6 @@ class GroupPolicyDefinition extends Entity
     }
     
     /**
-    * Gets the categoryPath
-    * The localized full category path for the policy.
-    *
-    * @return string The categoryPath
-    */
-    public function getCategoryPath()
-    {
-        if (array_key_exists("categoryPath", $this->_propDict)) {
-            return $this->_propDict["categoryPath"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the categoryPath
-    * The localized full category path for the policy.
-    *
-    * @param string $val The categoryPath
-    *
-    * @return GroupPolicyDefinition
-    */
-    public function setCategoryPath($val)
-    {
-        $this->_propDict["categoryPath"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the supportedOn
-    * Localized string used to specify what operating system or application version is affected by the policy.
-    *
-    * @return string The supportedOn
-    */
-    public function getSupportedOn()
-    {
-        if (array_key_exists("supportedOn", $this->_propDict)) {
-            return $this->_propDict["supportedOn"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the supportedOn
-    * Localized string used to specify what operating system or application version is affected by the policy.
-    *
-    * @param string $val The supportedOn
-    *
-    * @return GroupPolicyDefinition
-    */
-    public function setSupportedOn($val)
-    {
-        $this->_propDict["supportedOn"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the policyType
-    * Specifies the type of group policy.
-    *
-    * @return GroupPolicyType The policyType
-    */
-    public function getPolicyType()
-    {
-        if (array_key_exists("policyType", $this->_propDict)) {
-            if (is_a($this->_propDict["policyType"], "Beta\Microsoft\Graph\Model\GroupPolicyType")) {
-                return $this->_propDict["policyType"];
-            } else {
-                $this->_propDict["policyType"] = new GroupPolicyType($this->_propDict["policyType"]);
-                return $this->_propDict["policyType"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the policyType
-    * Specifies the type of group policy.
-    *
-    * @param GroupPolicyType $val The policyType
-    *
-    * @return GroupPolicyDefinition
-    */
-    public function setPolicyType($val)
-    {
-        $this->_propDict["policyType"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the groupPolicyCategoryId
     * The category id of the parent category
     *
@@ -269,35 +207,64 @@ class GroupPolicyDefinition extends Entity
     }
     
     /**
-    * Gets the definitionFile
-    * The group policy file associated with the definition.
+    * Gets the policyType
+    * Specifies the type of group policy.
     *
-    * @return GroupPolicyDefinitionFile The definitionFile
+    * @return GroupPolicyType The policyType
     */
-    public function getDefinitionFile()
+    public function getPolicyType()
     {
-        if (array_key_exists("definitionFile", $this->_propDict)) {
-            if (is_a($this->_propDict["definitionFile"], "Beta\Microsoft\Graph\Model\GroupPolicyDefinitionFile")) {
-                return $this->_propDict["definitionFile"];
+        if (array_key_exists("policyType", $this->_propDict)) {
+            if (is_a($this->_propDict["policyType"], "Beta\Microsoft\Graph\Model\GroupPolicyType")) {
+                return $this->_propDict["policyType"];
             } else {
-                $this->_propDict["definitionFile"] = new GroupPolicyDefinitionFile($this->_propDict["definitionFile"]);
-                return $this->_propDict["definitionFile"];
+                $this->_propDict["policyType"] = new GroupPolicyType($this->_propDict["policyType"]);
+                return $this->_propDict["policyType"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the definitionFile
-    * The group policy file associated with the definition.
+    * Sets the policyType
+    * Specifies the type of group policy.
     *
-    * @param GroupPolicyDefinitionFile $val The definitionFile
+    * @param GroupPolicyType $val The policyType
     *
     * @return GroupPolicyDefinition
     */
-    public function setDefinitionFile($val)
+    public function setPolicyType($val)
     {
-        $this->_propDict["definitionFile"] = $val;
+        $this->_propDict["policyType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the supportedOn
+    * Localized string used to specify what operating system or application version is affected by the policy.
+    *
+    * @return string The supportedOn
+    */
+    public function getSupportedOn()
+    {
+        if (array_key_exists("supportedOn", $this->_propDict)) {
+            return $this->_propDict["supportedOn"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the supportedOn
+    * Localized string used to specify what operating system or application version is affected by the policy.
+    *
+    * @param string $val The supportedOn
+    *
+    * @return GroupPolicyDefinition
+    */
+    public function setSupportedOn($val)
+    {
+        $this->_propDict["supportedOn"] = $val;
         return $this;
     }
     
@@ -331,6 +298,39 @@ class GroupPolicyDefinition extends Entity
     public function setCategory($val)
     {
         $this->_propDict["category"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the definitionFile
+    * The group policy file associated with the definition.
+    *
+    * @return GroupPolicyDefinitionFile The definitionFile
+    */
+    public function getDefinitionFile()
+    {
+        if (array_key_exists("definitionFile", $this->_propDict)) {
+            if (is_a($this->_propDict["definitionFile"], "Beta\Microsoft\Graph\Model\GroupPolicyDefinitionFile")) {
+                return $this->_propDict["definitionFile"];
+            } else {
+                $this->_propDict["definitionFile"] = new GroupPolicyDefinitionFile($this->_propDict["definitionFile"]);
+                return $this->_propDict["definitionFile"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the definitionFile
+    * The group policy file associated with the definition.
+    *
+    * @param GroupPolicyDefinitionFile $val The definitionFile
+    *
+    * @return GroupPolicyDefinition
+    */
+    public function setDefinitionFile($val)
+    {
+        $this->_propDict["definitionFile"] = $val;
         return $this;
     }
     

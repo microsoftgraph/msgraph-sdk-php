@@ -25,64 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class DeviceHealthScriptRunSummary extends Entity
 {
     /**
-    * Gets the noIssueDetectedDeviceCount
-    * Number of devices for which the detection script did not find an issue and the device is healthy
-    *
-    * @return int The noIssueDetectedDeviceCount
-    */
-    public function getNoIssueDetectedDeviceCount()
-    {
-        if (array_key_exists("noIssueDetectedDeviceCount", $this->_propDict)) {
-            return $this->_propDict["noIssueDetectedDeviceCount"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the noIssueDetectedDeviceCount
-    * Number of devices for which the detection script did not find an issue and the device is healthy
-    *
-    * @param int $val The noIssueDetectedDeviceCount
-    *
-    * @return DeviceHealthScriptRunSummary
-    */
-    public function setNoIssueDetectedDeviceCount($val)
-    {
-        $this->_propDict["noIssueDetectedDeviceCount"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the issueDetectedDeviceCount
-    * Number of devices for which the detection script found an issue
-    *
-    * @return int The issueDetectedDeviceCount
-    */
-    public function getIssueDetectedDeviceCount()
-    {
-        if (array_key_exists("issueDetectedDeviceCount", $this->_propDict)) {
-            return $this->_propDict["issueDetectedDeviceCount"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the issueDetectedDeviceCount
-    * Number of devices for which the detection script found an issue
-    *
-    * @param int $val The issueDetectedDeviceCount
-    *
-    * @return DeviceHealthScriptRunSummary
-    */
-    public function setIssueDetectedDeviceCount($val)
-    {
-        $this->_propDict["issueDetectedDeviceCount"] = intval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the detectionScriptErrorDeviceCount
     * Number of devices on which the detection script execution encountered an error and did not complete
     *
@@ -141,6 +83,64 @@ class DeviceHealthScriptRunSummary extends Entity
     }
     
     /**
+    * Gets the issueDetectedDeviceCount
+    * Number of devices for which the detection script found an issue
+    *
+    * @return int The issueDetectedDeviceCount
+    */
+    public function getIssueDetectedDeviceCount()
+    {
+        if (array_key_exists("issueDetectedDeviceCount", $this->_propDict)) {
+            return $this->_propDict["issueDetectedDeviceCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the issueDetectedDeviceCount
+    * Number of devices for which the detection script found an issue
+    *
+    * @param int $val The issueDetectedDeviceCount
+    *
+    * @return DeviceHealthScriptRunSummary
+    */
+    public function setIssueDetectedDeviceCount($val)
+    {
+        $this->_propDict["issueDetectedDeviceCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the issueRemediatedCumulativeDeviceCount
+    * Number of devices that were remediated over the last 30 days
+    *
+    * @return int The issueRemediatedCumulativeDeviceCount
+    */
+    public function getIssueRemediatedCumulativeDeviceCount()
+    {
+        if (array_key_exists("issueRemediatedCumulativeDeviceCount", $this->_propDict)) {
+            return $this->_propDict["issueRemediatedCumulativeDeviceCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the issueRemediatedCumulativeDeviceCount
+    * Number of devices that were remediated over the last 30 days
+    *
+    * @param int $val The issueRemediatedCumulativeDeviceCount
+    *
+    * @return DeviceHealthScriptRunSummary
+    */
+    public function setIssueRemediatedCumulativeDeviceCount($val)
+    {
+        $this->_propDict["issueRemediatedCumulativeDeviceCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the issueRemediatedDeviceCount
     * Number of devices for which the remediation script was able to resolve the detected issue
     *
@@ -170,35 +170,6 @@ class DeviceHealthScriptRunSummary extends Entity
     }
     
     /**
-    * Gets the remediationSkippedDeviceCount
-    * Number of devices for which remediation was skipped
-    *
-    * @return int The remediationSkippedDeviceCount
-    */
-    public function getRemediationSkippedDeviceCount()
-    {
-        if (array_key_exists("remediationSkippedDeviceCount", $this->_propDict)) {
-            return $this->_propDict["remediationSkippedDeviceCount"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the remediationSkippedDeviceCount
-    * Number of devices for which remediation was skipped
-    *
-    * @param int $val The remediationSkippedDeviceCount
-    *
-    * @return DeviceHealthScriptRunSummary
-    */
-    public function setRemediationSkippedDeviceCount($val)
-    {
-        $this->_propDict["remediationSkippedDeviceCount"] = intval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the issueReoccurredDeviceCount
     * Number of devices for which the remediation script executed successfully but failed to resolve the detected issue
     *
@@ -224,35 +195,6 @@ class DeviceHealthScriptRunSummary extends Entity
     public function setIssueReoccurredDeviceCount($val)
     {
         $this->_propDict["issueReoccurredDeviceCount"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the remediationScriptErrorDeviceCount
-    * Number of devices for which the remediation script execution encountered an error and did not complete
-    *
-    * @return int The remediationScriptErrorDeviceCount
-    */
-    public function getRemediationScriptErrorDeviceCount()
-    {
-        if (array_key_exists("remediationScriptErrorDeviceCount", $this->_propDict)) {
-            return $this->_propDict["remediationScriptErrorDeviceCount"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the remediationScriptErrorDeviceCount
-    * Number of devices for which the remediation script execution encountered an error and did not complete
-    *
-    * @param int $val The remediationScriptErrorDeviceCount
-    *
-    * @return DeviceHealthScriptRunSummary
-    */
-    public function setRemediationScriptErrorDeviceCount($val)
-    {
-        $this->_propDict["remediationScriptErrorDeviceCount"] = intval($val);
         return $this;
     }
     
@@ -290,31 +232,89 @@ class DeviceHealthScriptRunSummary extends Entity
     }
     
     /**
-    * Gets the issueRemediatedCumulativeDeviceCount
-    * Number of devices that were remediated over the last 30 days
+    * Gets the noIssueDetectedDeviceCount
+    * Number of devices for which the detection script did not find an issue and the device is healthy
     *
-    * @return int The issueRemediatedCumulativeDeviceCount
+    * @return int The noIssueDetectedDeviceCount
     */
-    public function getIssueRemediatedCumulativeDeviceCount()
+    public function getNoIssueDetectedDeviceCount()
     {
-        if (array_key_exists("issueRemediatedCumulativeDeviceCount", $this->_propDict)) {
-            return $this->_propDict["issueRemediatedCumulativeDeviceCount"];
+        if (array_key_exists("noIssueDetectedDeviceCount", $this->_propDict)) {
+            return $this->_propDict["noIssueDetectedDeviceCount"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the issueRemediatedCumulativeDeviceCount
-    * Number of devices that were remediated over the last 30 days
+    * Sets the noIssueDetectedDeviceCount
+    * Number of devices for which the detection script did not find an issue and the device is healthy
     *
-    * @param int $val The issueRemediatedCumulativeDeviceCount
+    * @param int $val The noIssueDetectedDeviceCount
     *
     * @return DeviceHealthScriptRunSummary
     */
-    public function setIssueRemediatedCumulativeDeviceCount($val)
+    public function setNoIssueDetectedDeviceCount($val)
     {
-        $this->_propDict["issueRemediatedCumulativeDeviceCount"] = intval($val);
+        $this->_propDict["noIssueDetectedDeviceCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the remediationScriptErrorDeviceCount
+    * Number of devices for which the remediation script execution encountered an error and did not complete
+    *
+    * @return int The remediationScriptErrorDeviceCount
+    */
+    public function getRemediationScriptErrorDeviceCount()
+    {
+        if (array_key_exists("remediationScriptErrorDeviceCount", $this->_propDict)) {
+            return $this->_propDict["remediationScriptErrorDeviceCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the remediationScriptErrorDeviceCount
+    * Number of devices for which the remediation script execution encountered an error and did not complete
+    *
+    * @param int $val The remediationScriptErrorDeviceCount
+    *
+    * @return DeviceHealthScriptRunSummary
+    */
+    public function setRemediationScriptErrorDeviceCount($val)
+    {
+        $this->_propDict["remediationScriptErrorDeviceCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the remediationSkippedDeviceCount
+    * Number of devices for which remediation was skipped
+    *
+    * @return int The remediationSkippedDeviceCount
+    */
+    public function getRemediationSkippedDeviceCount()
+    {
+        if (array_key_exists("remediationSkippedDeviceCount", $this->_propDict)) {
+            return $this->_propDict["remediationSkippedDeviceCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the remediationSkippedDeviceCount
+    * Number of devices for which remediation was skipped
+    *
+    * @param int $val The remediationSkippedDeviceCount
+    *
+    * @return DeviceHealthScriptRunSummary
+    */
+    public function setRemediationSkippedDeviceCount($val)
+    {
+        $this->_propDict["remediationSkippedDeviceCount"] = intval($val);
         return $this;
     }
     

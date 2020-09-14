@@ -25,118 +25,29 @@ namespace Beta\Microsoft\Graph\Model;
 class AccessReview extends Entity
 {
     /**
-    * Gets the displayName
+    * Gets the businessFlowTemplateId
     *
-    * @return string The displayName
+    * @return string The businessFlowTemplateId
     */
-    public function getDisplayName()
+    public function getBusinessFlowTemplateId()
     {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
+        if (array_key_exists("businessFlowTemplateId", $this->_propDict)) {
+            return $this->_propDict["businessFlowTemplateId"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the displayName
+    * Sets the businessFlowTemplateId
     *
-    * @param string $val The displayName
-    *
-    * @return AccessReview
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the startDateTime
-    *
-    * @return \DateTime The startDateTime
-    */
-    public function getStartDateTime()
-    {
-        if (array_key_exists("startDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
-                return $this->_propDict["startDateTime"];
-            } else {
-                $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);
-                return $this->_propDict["startDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the startDateTime
-    *
-    * @param \DateTime $val The startDateTime
+    * @param string $val The businessFlowTemplateId
     *
     * @return AccessReview
     */
-    public function setStartDateTime($val)
+    public function setBusinessFlowTemplateId($val)
     {
-        $this->_propDict["startDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the endDateTime
-    *
-    * @return \DateTime The endDateTime
-    */
-    public function getEndDateTime()
-    {
-        if (array_key_exists("endDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["endDateTime"], "\DateTime")) {
-                return $this->_propDict["endDateTime"];
-            } else {
-                $this->_propDict["endDateTime"] = new \DateTime($this->_propDict["endDateTime"]);
-                return $this->_propDict["endDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the endDateTime
-    *
-    * @param \DateTime $val The endDateTime
-    *
-    * @return AccessReview
-    */
-    public function setEndDateTime($val)
-    {
-        $this->_propDict["endDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the status
-    *
-    * @return string The status
-    */
-    public function getStatus()
-    {
-        if (array_key_exists("status", $this->_propDict)) {
-            return $this->_propDict["status"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the status
-    *
-    * @param string $val The status
-    *
-    * @return AccessReview
-    */
-    public function setStatus($val)
-    {
-        $this->_propDict["status"] = $val;
+        $this->_propDict["businessFlowTemplateId"] = $val;
         return $this;
     }
     
@@ -172,29 +83,118 @@ class AccessReview extends Entity
     }
     
     /**
-    * Gets the businessFlowTemplateId
+    * Gets the description
     *
-    * @return string The businessFlowTemplateId
+    * @return string The description
     */
-    public function getBusinessFlowTemplateId()
+    public function getDescription()
     {
-        if (array_key_exists("businessFlowTemplateId", $this->_propDict)) {
-            return $this->_propDict["businessFlowTemplateId"];
+        if (array_key_exists("description", $this->_propDict)) {
+            return $this->_propDict["description"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the businessFlowTemplateId
+    * Sets the description
     *
-    * @param string $val The businessFlowTemplateId
+    * @param string $val The description
     *
     * @return AccessReview
     */
-    public function setBusinessFlowTemplateId($val)
+    public function setDescription($val)
     {
-        $this->_propDict["businessFlowTemplateId"] = $val;
+        $this->_propDict["description"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the displayName
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the displayName
+    *
+    * @param string $val The displayName
+    *
+    * @return AccessReview
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the endDateTime
+    *
+    * @return \DateTime The endDateTime
+    */
+    public function getEndDateTime()
+    {
+        if (array_key_exists("endDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["endDateTime"], "\DateTime")) {
+                return $this->_propDict["endDateTime"];
+            } else {
+                $this->_propDict["endDateTime"] = new \DateTime($this->_propDict["endDateTime"]);
+                return $this->_propDict["endDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the endDateTime
+    *
+    * @param \DateTime $val The endDateTime
+    *
+    * @return AccessReview
+    */
+    public function setEndDateTime($val)
+    {
+        $this->_propDict["endDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the reviewedEntity
+    *
+    * @return Identity The reviewedEntity
+    */
+    public function getReviewedEntity()
+    {
+        if (array_key_exists("reviewedEntity", $this->_propDict)) {
+            if (is_a($this->_propDict["reviewedEntity"], "Beta\Microsoft\Graph\Model\Identity")) {
+                return $this->_propDict["reviewedEntity"];
+            } else {
+                $this->_propDict["reviewedEntity"] = new Identity($this->_propDict["reviewedEntity"]);
+                return $this->_propDict["reviewedEntity"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the reviewedEntity
+    *
+    * @param Identity $val The reviewedEntity
+    *
+    * @return AccessReview
+    */
+    public function setReviewedEntity($val)
+    {
+        $this->_propDict["reviewedEntity"] = $val;
         return $this;
     }
     
@@ -222,33 +222,6 @@ class AccessReview extends Entity
     public function setReviewerType($val)
     {
         $this->_propDict["reviewerType"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the description
-    *
-    * @return string The description
-    */
-    public function getDescription()
-    {
-        if (array_key_exists("description", $this->_propDict)) {
-            return $this->_propDict["description"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the description
-    *
-    * @param string $val The description
-    *
-    * @return AccessReview
-    */
-    public function setDescription($val)
-    {
-        $this->_propDict["description"] = $val;
         return $this;
     }
     
@@ -284,61 +257,60 @@ class AccessReview extends Entity
     }
     
     /**
-    * Gets the reviewedEntity
+    * Gets the startDateTime
     *
-    * @return Identity The reviewedEntity
+    * @return \DateTime The startDateTime
     */
-    public function getReviewedEntity()
+    public function getStartDateTime()
     {
-        if (array_key_exists("reviewedEntity", $this->_propDict)) {
-            if (is_a($this->_propDict["reviewedEntity"], "Beta\Microsoft\Graph\Model\Identity")) {
-                return $this->_propDict["reviewedEntity"];
+        if (array_key_exists("startDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
+                return $this->_propDict["startDateTime"];
             } else {
-                $this->_propDict["reviewedEntity"] = new Identity($this->_propDict["reviewedEntity"]);
-                return $this->_propDict["reviewedEntity"];
+                $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);
+                return $this->_propDict["startDateTime"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the reviewedEntity
+    * Sets the startDateTime
     *
-    * @param Identity $val The reviewedEntity
+    * @param \DateTime $val The startDateTime
     *
     * @return AccessReview
     */
-    public function setReviewedEntity($val)
+    public function setStartDateTime($val)
     {
-        $this->_propDict["reviewedEntity"] = $val;
+        $this->_propDict["startDateTime"] = $val;
         return $this;
     }
     
-
-     /** 
-     * Gets the reviewers
-     *
-     * @return array The reviewers
-     */
-    public function getReviewers()
+    /**
+    * Gets the status
+    *
+    * @return string The status
+    */
+    public function getStatus()
     {
-        if (array_key_exists("reviewers", $this->_propDict)) {
-           return $this->_propDict["reviewers"];
+        if (array_key_exists("status", $this->_propDict)) {
+            return $this->_propDict["status"];
         } else {
             return null;
         }
     }
     
-    /** 
-    * Sets the reviewers
+    /**
+    * Sets the status
     *
-    * @param AccessReviewReviewer $val The reviewers
+    * @param string $val The status
     *
     * @return AccessReview
     */
-    public function setReviewers($val)
+    public function setStatus($val)
     {
-		$this->_propDict["reviewers"] = $val;
+        $this->_propDict["status"] = $val;
         return $this;
     }
     
@@ -372,6 +344,34 @@ class AccessReview extends Entity
     
 
      /** 
+     * Gets the instances
+     *
+     * @return array The instances
+     */
+    public function getInstances()
+    {
+        if (array_key_exists("instances", $this->_propDict)) {
+           return $this->_propDict["instances"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the instances
+    *
+    * @param AccessReview $val The instances
+    *
+    * @return AccessReview
+    */
+    public function setInstances($val)
+    {
+		$this->_propDict["instances"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the myDecisions
      *
      * @return array The myDecisions
@@ -400,29 +400,29 @@ class AccessReview extends Entity
     
 
      /** 
-     * Gets the instances
+     * Gets the reviewers
      *
-     * @return array The instances
+     * @return array The reviewers
      */
-    public function getInstances()
+    public function getReviewers()
     {
-        if (array_key_exists("instances", $this->_propDict)) {
-           return $this->_propDict["instances"];
+        if (array_key_exists("reviewers", $this->_propDict)) {
+           return $this->_propDict["reviewers"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the instances
+    * Sets the reviewers
     *
-    * @param AccessReview $val The instances
+    * @param AccessReviewReviewer $val The reviewers
     *
     * @return AccessReview
     */
-    public function setInstances($val)
+    public function setReviewers($val)
     {
-		$this->_propDict["instances"] = $val;
+		$this->_propDict["reviewers"] = $val;
         return $this;
     }
     

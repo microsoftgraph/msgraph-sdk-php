@@ -85,6 +85,34 @@ class VisualInfo extends Entity
         return $this;
     }
     /**
+    * Gets the content
+    * Optional. Custom piece of data - JSON object used to provide custom content to render the activity in the Windows Shell UI
+    *
+    * @return string The content
+    */
+    public function getContent()
+    {
+        if (array_key_exists("content", $this->_propDict)) {
+            return $this->_propDict["content"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the content
+    * Optional. Custom piece of data - JSON object used to provide custom content to render the activity in the Windows Shell UI
+    *
+    * @param string $val The value of the content
+    *
+    * @return VisualInfo
+    */
+    public function setContent($val)
+    {
+        $this->_propDict["content"] = $val;
+        return $this;
+    }
+    /**
     * Gets the description
     * Optional. Longer text description of the user's unique activity (example: document name, first sentence, and/or metadata)
     *
@@ -138,34 +166,6 @@ class VisualInfo extends Entity
     public function setDisplayText($val)
     {
         $this->_propDict["displayText"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the content
-    * Optional. Custom piece of data - JSON object used to provide custom content to render the activity in the Windows Shell UI
-    *
-    * @return string The content
-    */
-    public function getContent()
-    {
-        if (array_key_exists("content", $this->_propDict)) {
-            return $this->_propDict["content"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the content
-    * Optional. Custom piece of data - JSON object used to provide custom content to render the activity in the Windows Shell UI
-    *
-    * @param string $val The value of the content
-    *
-    * @return VisualInfo
-    */
-    public function setContent($val)
-    {
-        $this->_propDict["content"] = $val;
         return $this;
     }
 }

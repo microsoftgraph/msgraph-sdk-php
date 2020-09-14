@@ -25,39 +25,6 @@ class DeviceManagementUserRightsSetting extends Entity
 {
 
     /**
-    * Gets the state
-    * Representing the current state of this user rights setting
-    *
-    * @return StateManagementSetting The state
-    */
-    public function getState()
-    {
-        if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "Beta\Microsoft\Graph\Model\StateManagementSetting")) {
-                return $this->_propDict["state"];
-            } else {
-                $this->_propDict["state"] = new StateManagementSetting($this->_propDict["state"]);
-                return $this->_propDict["state"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the state
-    * Representing the current state of this user rights setting
-    *
-    * @param StateManagementSetting $val The value to assign to the state
-    *
-    * @return DeviceManagementUserRightsSetting The DeviceManagementUserRightsSetting
-    */
-    public function setState($val)
-    {
-        $this->_propDict["state"] = $val;
-         return $this;
-    }
-
-    /**
     * Gets the localUsersOrGroups
     * Representing a collection of local users or groups which will be set on device if the state of this setting is Allowed. This collection can contain a maximum of 500 elements.
     *
@@ -87,6 +54,39 @@ class DeviceManagementUserRightsSetting extends Entity
     public function setLocalUsersOrGroups($val)
     {
         $this->_propDict["localUsersOrGroups"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the state
+    * Representing the current state of this user rights setting
+    *
+    * @return StateManagementSetting The state
+    */
+    public function getState()
+    {
+        if (array_key_exists("state", $this->_propDict)) {
+            if (is_a($this->_propDict["state"], "Beta\Microsoft\Graph\Model\StateManagementSetting")) {
+                return $this->_propDict["state"];
+            } else {
+                $this->_propDict["state"] = new StateManagementSetting($this->_propDict["state"]);
+                return $this->_propDict["state"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the state
+    * Representing the current state of this user rights setting
+    *
+    * @param StateManagementSetting $val The value to assign to the state
+    *
+    * @return DeviceManagementUserRightsSetting The DeviceManagementUserRightsSetting
+    */
+    public function setState($val)
+    {
+        $this->_propDict["state"] = $val;
          return $this;
     }
 }

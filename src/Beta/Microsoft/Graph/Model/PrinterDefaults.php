@@ -23,6 +23,63 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class PrinterDefaults extends Entity
 {
+
+    /**
+    * Gets the colorMode
+    *
+    * @return PrintColorMode The colorMode
+    */
+    public function getColorMode()
+    {
+        if (array_key_exists("colorMode", $this->_propDict)) {
+            if (is_a($this->_propDict["colorMode"], "Beta\Microsoft\Graph\Model\PrintColorMode")) {
+                return $this->_propDict["colorMode"];
+            } else {
+                $this->_propDict["colorMode"] = new PrintColorMode($this->_propDict["colorMode"]);
+                return $this->_propDict["colorMode"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the colorMode
+    *
+    * @param PrintColorMode $val The value to assign to the colorMode
+    *
+    * @return PrinterDefaults The PrinterDefaults
+    */
+    public function setColorMode($val)
+    {
+        $this->_propDict["colorMode"] = $val;
+         return $this;
+    }
+    /**
+    * Gets the contentType
+    *
+    * @return string The contentType
+    */
+    public function getContentType()
+    {
+        if (array_key_exists("contentType", $this->_propDict)) {
+            return $this->_propDict["contentType"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the contentType
+    *
+    * @param string $val The value of the contentType
+    *
+    * @return PrinterDefaults
+    */
+    public function setContentType($val)
+    {
+        $this->_propDict["contentType"] = $val;
+        return $this;
+    }
     /**
     * Gets the copiesPerJob
     *
@@ -50,30 +107,118 @@ class PrinterDefaults extends Entity
         return $this;
     }
     /**
-    * Gets the contentType
+    * Gets the documentMimeType
     *
-    * @return string The contentType
+    * @return string The documentMimeType
     */
-    public function getContentType()
+    public function getDocumentMimeType()
     {
-        if (array_key_exists("contentType", $this->_propDict)) {
-            return $this->_propDict["contentType"];
+        if (array_key_exists("documentMimeType", $this->_propDict)) {
+            return $this->_propDict["documentMimeType"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the contentType
+    * Sets the documentMimeType
     *
-    * @param string $val The value of the contentType
+    * @param string $val The value of the documentMimeType
     *
     * @return PrinterDefaults
     */
-    public function setContentType($val)
+    public function setDocumentMimeType($val)
     {
-        $this->_propDict["contentType"] = $val;
+        $this->_propDict["documentMimeType"] = $val;
         return $this;
+    }
+    /**
+    * Gets the dpi
+    *
+    * @return int The dpi
+    */
+    public function getDpi()
+    {
+        if (array_key_exists("dpi", $this->_propDict)) {
+            return $this->_propDict["dpi"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the dpi
+    *
+    * @param int $val The value of the dpi
+    *
+    * @return PrinterDefaults
+    */
+    public function setDpi($val)
+    {
+        $this->_propDict["dpi"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the duplexConfiguration
+    *
+    * @return PrintDuplexConfiguration The duplexConfiguration
+    */
+    public function getDuplexConfiguration()
+    {
+        if (array_key_exists("duplexConfiguration", $this->_propDict)) {
+            if (is_a($this->_propDict["duplexConfiguration"], "Beta\Microsoft\Graph\Model\PrintDuplexConfiguration")) {
+                return $this->_propDict["duplexConfiguration"];
+            } else {
+                $this->_propDict["duplexConfiguration"] = new PrintDuplexConfiguration($this->_propDict["duplexConfiguration"]);
+                return $this->_propDict["duplexConfiguration"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the duplexConfiguration
+    *
+    * @param PrintDuplexConfiguration $val The value to assign to the duplexConfiguration
+    *
+    * @return PrinterDefaults The PrinterDefaults
+    */
+    public function setDuplexConfiguration($val)
+    {
+        $this->_propDict["duplexConfiguration"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the duplexMode
+    *
+    * @return PrintDuplexMode The duplexMode
+    */
+    public function getDuplexMode()
+    {
+        if (array_key_exists("duplexMode", $this->_propDict)) {
+            if (is_a($this->_propDict["duplexMode"], "Beta\Microsoft\Graph\Model\PrintDuplexMode")) {
+                return $this->_propDict["duplexMode"];
+            } else {
+                $this->_propDict["duplexMode"] = new PrintDuplexMode($this->_propDict["duplexMode"]);
+                return $this->_propDict["duplexMode"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the duplexMode
+    *
+    * @param PrintDuplexMode $val The value to assign to the duplexMode
+    *
+    * @return PrinterDefaults The PrinterDefaults
+    */
+    public function setDuplexMode($val)
+    {
+        $this->_propDict["duplexMode"] = $val;
+         return $this;
     }
 
     /**
@@ -107,6 +252,32 @@ class PrinterDefaults extends Entity
          return $this;
     }
     /**
+    * Gets the fitPdfToPage
+    *
+    * @return bool The fitPdfToPage
+    */
+    public function getFitPdfToPage()
+    {
+        if (array_key_exists("fitPdfToPage", $this->_propDict)) {
+            return $this->_propDict["fitPdfToPage"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the fitPdfToPage
+    *
+    * @param bool $val The value of the fitPdfToPage
+    *
+    * @return PrinterDefaults
+    */
+    public function setFitPdfToPage($val)
+    {
+        $this->_propDict["fitPdfToPage"] = $val;
+        return $this;
+    }
+    /**
     * Gets the mediaColor
     *
     * @return string The mediaColor
@@ -130,32 +301,6 @@ class PrinterDefaults extends Entity
     public function setMediaColor($val)
     {
         $this->_propDict["mediaColor"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the mediaType
-    *
-    * @return string The mediaType
-    */
-    public function getMediaType()
-    {
-        if (array_key_exists("mediaType", $this->_propDict)) {
-            return $this->_propDict["mediaType"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the mediaType
-    *
-    * @param string $val The value of the mediaType
-    *
-    * @return PrinterDefaults
-    */
-    public function setMediaType($val)
-    {
-        $this->_propDict["mediaType"] = $val;
         return $this;
     }
     /**
@@ -185,30 +330,61 @@ class PrinterDefaults extends Entity
         return $this;
     }
     /**
-    * Gets the pagesPerSheet
+    * Gets the mediaType
     *
-    * @return int The pagesPerSheet
+    * @return string The mediaType
     */
-    public function getPagesPerSheet()
+    public function getMediaType()
     {
-        if (array_key_exists("pagesPerSheet", $this->_propDict)) {
-            return $this->_propDict["pagesPerSheet"];
+        if (array_key_exists("mediaType", $this->_propDict)) {
+            return $this->_propDict["mediaType"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the pagesPerSheet
+    * Sets the mediaType
     *
-    * @param int $val The value of the pagesPerSheet
+    * @param string $val The value of the mediaType
     *
     * @return PrinterDefaults
     */
-    public function setPagesPerSheet($val)
+    public function setMediaType($val)
     {
-        $this->_propDict["pagesPerSheet"] = $val;
+        $this->_propDict["mediaType"] = $val;
         return $this;
+    }
+
+    /**
+    * Gets the multipageLayout
+    *
+    * @return PrintMultipageLayout The multipageLayout
+    */
+    public function getMultipageLayout()
+    {
+        if (array_key_exists("multipageLayout", $this->_propDict)) {
+            if (is_a($this->_propDict["multipageLayout"], "Beta\Microsoft\Graph\Model\PrintMultipageLayout")) {
+                return $this->_propDict["multipageLayout"];
+            } else {
+                $this->_propDict["multipageLayout"] = new PrintMultipageLayout($this->_propDict["multipageLayout"]);
+                return $this->_propDict["multipageLayout"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the multipageLayout
+    *
+    * @param PrintMultipageLayout $val The value to assign to the multipageLayout
+    *
+    * @return PrinterDefaults The PrinterDefaults
+    */
+    public function setMultipageLayout($val)
+    {
+        $this->_propDict["multipageLayout"] = $val;
+         return $this;
     }
 
     /**
@@ -268,236 +444,29 @@ class PrinterDefaults extends Entity
         return $this;
     }
     /**
-    * Gets the fitPdfToPage
+    * Gets the pagesPerSheet
     *
-    * @return bool The fitPdfToPage
+    * @return int The pagesPerSheet
     */
-    public function getFitPdfToPage()
+    public function getPagesPerSheet()
     {
-        if (array_key_exists("fitPdfToPage", $this->_propDict)) {
-            return $this->_propDict["fitPdfToPage"];
+        if (array_key_exists("pagesPerSheet", $this->_propDict)) {
+            return $this->_propDict["pagesPerSheet"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the fitPdfToPage
+    * Sets the pagesPerSheet
     *
-    * @param bool $val The value of the fitPdfToPage
-    *
-    * @return PrinterDefaults
-    */
-    public function setFitPdfToPage($val)
-    {
-        $this->_propDict["fitPdfToPage"] = $val;
-        return $this;
-    }
-
-    /**
-    * Gets the multipageLayout
-    *
-    * @return PrintMultipageLayout The multipageLayout
-    */
-    public function getMultipageLayout()
-    {
-        if (array_key_exists("multipageLayout", $this->_propDict)) {
-            if (is_a($this->_propDict["multipageLayout"], "Beta\Microsoft\Graph\Model\PrintMultipageLayout")) {
-                return $this->_propDict["multipageLayout"];
-            } else {
-                $this->_propDict["multipageLayout"] = new PrintMultipageLayout($this->_propDict["multipageLayout"]);
-                return $this->_propDict["multipageLayout"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the multipageLayout
-    *
-    * @param PrintMultipageLayout $val The value to assign to the multipageLayout
-    *
-    * @return PrinterDefaults The PrinterDefaults
-    */
-    public function setMultipageLayout($val)
-    {
-        $this->_propDict["multipageLayout"] = $val;
-         return $this;
-    }
-
-    /**
-    * Gets the colorMode
-    *
-    * @return PrintColorMode The colorMode
-    */
-    public function getColorMode()
-    {
-        if (array_key_exists("colorMode", $this->_propDict)) {
-            if (is_a($this->_propDict["colorMode"], "Beta\Microsoft\Graph\Model\PrintColorMode")) {
-                return $this->_propDict["colorMode"];
-            } else {
-                $this->_propDict["colorMode"] = new PrintColorMode($this->_propDict["colorMode"]);
-                return $this->_propDict["colorMode"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the colorMode
-    *
-    * @param PrintColorMode $val The value to assign to the colorMode
-    *
-    * @return PrinterDefaults The PrinterDefaults
-    */
-    public function setColorMode($val)
-    {
-        $this->_propDict["colorMode"] = $val;
-         return $this;
-    }
-
-    /**
-    * Gets the quality
-    *
-    * @return PrintQuality The quality
-    */
-    public function getQuality()
-    {
-        if (array_key_exists("quality", $this->_propDict)) {
-            if (is_a($this->_propDict["quality"], "Beta\Microsoft\Graph\Model\PrintQuality")) {
-                return $this->_propDict["quality"];
-            } else {
-                $this->_propDict["quality"] = new PrintQuality($this->_propDict["quality"]);
-                return $this->_propDict["quality"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the quality
-    *
-    * @param PrintQuality $val The value to assign to the quality
-    *
-    * @return PrinterDefaults The PrinterDefaults
-    */
-    public function setQuality($val)
-    {
-        $this->_propDict["quality"] = $val;
-         return $this;
-    }
-
-    /**
-    * Gets the duplexMode
-    *
-    * @return PrintDuplexMode The duplexMode
-    */
-    public function getDuplexMode()
-    {
-        if (array_key_exists("duplexMode", $this->_propDict)) {
-            if (is_a($this->_propDict["duplexMode"], "Beta\Microsoft\Graph\Model\PrintDuplexMode")) {
-                return $this->_propDict["duplexMode"];
-            } else {
-                $this->_propDict["duplexMode"] = new PrintDuplexMode($this->_propDict["duplexMode"]);
-                return $this->_propDict["duplexMode"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the duplexMode
-    *
-    * @param PrintDuplexMode $val The value to assign to the duplexMode
-    *
-    * @return PrinterDefaults The PrinterDefaults
-    */
-    public function setDuplexMode($val)
-    {
-        $this->_propDict["duplexMode"] = $val;
-         return $this;
-    }
-    /**
-    * Gets the dpi
-    *
-    * @return int The dpi
-    */
-    public function getDpi()
-    {
-        if (array_key_exists("dpi", $this->_propDict)) {
-            return $this->_propDict["dpi"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the dpi
-    *
-    * @param int $val The value of the dpi
+    * @param int $val The value of the pagesPerSheet
     *
     * @return PrinterDefaults
     */
-    public function setDpi($val)
+    public function setPagesPerSheet($val)
     {
-        $this->_propDict["dpi"] = $val;
-        return $this;
-    }
-
-    /**
-    * Gets the scaling
-    *
-    * @return PrintScaling The scaling
-    */
-    public function getScaling()
-    {
-        if (array_key_exists("scaling", $this->_propDict)) {
-            if (is_a($this->_propDict["scaling"], "Beta\Microsoft\Graph\Model\PrintScaling")) {
-                return $this->_propDict["scaling"];
-            } else {
-                $this->_propDict["scaling"] = new PrintScaling($this->_propDict["scaling"]);
-                return $this->_propDict["scaling"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the scaling
-    *
-    * @param PrintScaling $val The value to assign to the scaling
-    *
-    * @return PrinterDefaults The PrinterDefaults
-    */
-    public function setScaling($val)
-    {
-        $this->_propDict["scaling"] = $val;
-         return $this;
-    }
-    /**
-    * Gets the documentMimeType
-    *
-    * @return string The documentMimeType
-    */
-    public function getDocumentMimeType()
-    {
-        if (array_key_exists("documentMimeType", $this->_propDict)) {
-            return $this->_propDict["documentMimeType"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the documentMimeType
-    *
-    * @param string $val The value of the documentMimeType
-    *
-    * @return PrinterDefaults
-    */
-    public function setDocumentMimeType($val)
-    {
-        $this->_propDict["documentMimeType"] = $val;
+        $this->_propDict["pagesPerSheet"] = $val;
         return $this;
     }
     /**
@@ -621,33 +590,64 @@ class PrinterDefaults extends Entity
     }
 
     /**
-    * Gets the duplexConfiguration
+    * Gets the quality
     *
-    * @return PrintDuplexConfiguration The duplexConfiguration
+    * @return PrintQuality The quality
     */
-    public function getDuplexConfiguration()
+    public function getQuality()
     {
-        if (array_key_exists("duplexConfiguration", $this->_propDict)) {
-            if (is_a($this->_propDict["duplexConfiguration"], "Beta\Microsoft\Graph\Model\PrintDuplexConfiguration")) {
-                return $this->_propDict["duplexConfiguration"];
+        if (array_key_exists("quality", $this->_propDict)) {
+            if (is_a($this->_propDict["quality"], "Beta\Microsoft\Graph\Model\PrintQuality")) {
+                return $this->_propDict["quality"];
             } else {
-                $this->_propDict["duplexConfiguration"] = new PrintDuplexConfiguration($this->_propDict["duplexConfiguration"]);
-                return $this->_propDict["duplexConfiguration"];
+                $this->_propDict["quality"] = new PrintQuality($this->_propDict["quality"]);
+                return $this->_propDict["quality"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the duplexConfiguration
+    * Sets the quality
     *
-    * @param PrintDuplexConfiguration $val The value to assign to the duplexConfiguration
+    * @param PrintQuality $val The value to assign to the quality
     *
     * @return PrinterDefaults The PrinterDefaults
     */
-    public function setDuplexConfiguration($val)
+    public function setQuality($val)
     {
-        $this->_propDict["duplexConfiguration"] = $val;
+        $this->_propDict["quality"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the scaling
+    *
+    * @return PrintScaling The scaling
+    */
+    public function getScaling()
+    {
+        if (array_key_exists("scaling", $this->_propDict)) {
+            if (is_a($this->_propDict["scaling"], "Beta\Microsoft\Graph\Model\PrintScaling")) {
+                return $this->_propDict["scaling"];
+            } else {
+                $this->_propDict["scaling"] = new PrintScaling($this->_propDict["scaling"]);
+                return $this->_propDict["scaling"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the scaling
+    *
+    * @param PrintScaling $val The value to assign to the scaling
+    *
+    * @return PrinterDefaults The PrinterDefaults
+    */
+    public function setScaling($val)
+    {
+        $this->_propDict["scaling"] = $val;
          return $this;
     }
 }

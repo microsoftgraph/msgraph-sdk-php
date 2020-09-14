@@ -25,31 +25,35 @@ namespace Beta\Microsoft\Graph\Model;
 class WindowsFeatureUpdateProfile extends Entity
 {
     /**
-    * Gets the displayName
-    * The display name of the profile.
+    * Gets the createdDateTime
+    * The date time that the profile was created.
     *
-    * @return string The displayName
+    * @return \DateTime The createdDateTime
     */
-    public function getDisplayName()
+    public function getCreatedDateTime()
     {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
+        if (array_key_exists("createdDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+                return $this->_propDict["createdDateTime"];
+            } else {
+                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
+                return $this->_propDict["createdDateTime"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the displayName
-    * The display name of the profile.
+    * Sets the createdDateTime
+    * The date time that the profile was created.
     *
-    * @param string $val The displayName
+    * @param \DateTime $val The createdDateTime
     *
     * @return WindowsFeatureUpdateProfile
     */
-    public function setDisplayName($val)
+    public function setCreatedDateTime($val)
     {
-        $this->_propDict["displayName"] = $val;
+        $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
     
@@ -83,6 +87,35 @@ class WindowsFeatureUpdateProfile extends Entity
     }
     
     /**
+    * Gets the displayName
+    * The display name of the profile.
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the displayName
+    * The display name of the profile.
+    *
+    * @param string $val The displayName
+    *
+    * @return WindowsFeatureUpdateProfile
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the featureUpdateVersion
     * The feature update version that will be deployed to the devices targeted by this profile. The version could be any supported version for example 1709, 1803 or 1809 and so on.
     *
@@ -108,39 +141,6 @@ class WindowsFeatureUpdateProfile extends Entity
     public function setFeatureUpdateVersion($val)
     {
         $this->_propDict["featureUpdateVersion"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the createdDateTime
-    * The date time that the profile was created.
-    *
-    * @return \DateTime The createdDateTime
-    */
-    public function getCreatedDateTime()
-    {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
-                return $this->_propDict["createdDateTime"];
-            } else {
-                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
-                return $this->_propDict["createdDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the createdDateTime
-    * The date time that the profile was created.
-    *
-    * @param \DateTime $val The createdDateTime
-    *
-    * @return WindowsFeatureUpdateProfile
-    */
-    public function setCreatedDateTime($val)
-    {
-        $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
     

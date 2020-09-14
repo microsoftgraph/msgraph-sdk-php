@@ -24,29 +24,29 @@ namespace Beta\Microsoft\Graph\Model;
 class DeviceKey extends Entity
 {
     /**
-    * Gets the keyType
+    * Gets the deviceId
     *
-    * @return string The keyType
+    * @return string The deviceId
     */
-    public function getKeyType()
+    public function getDeviceId()
     {
-        if (array_key_exists("keyType", $this->_propDict)) {
-            return $this->_propDict["keyType"];
+        if (array_key_exists("deviceId", $this->_propDict)) {
+            return $this->_propDict["deviceId"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the keyType
+    * Sets the deviceId
     *
-    * @param string $val The value of the keyType
+    * @param string $val The value of the deviceId
     *
     * @return DeviceKey
     */
-    public function setKeyType($val)
+    public function setDeviceId($val)
     {
-        $this->_propDict["keyType"] = $val;
+        $this->_propDict["deviceId"] = $val;
         return $this;
     }
 
@@ -81,29 +81,29 @@ class DeviceKey extends Entity
          return $this;
     }
     /**
-    * Gets the deviceId
+    * Gets the keyType
     *
-    * @return string The deviceId
+    * @return string The keyType
     */
-    public function getDeviceId()
+    public function getKeyType()
     {
-        if (array_key_exists("deviceId", $this->_propDict)) {
-            return $this->_propDict["deviceId"];
+        if (array_key_exists("keyType", $this->_propDict)) {
+            return $this->_propDict["keyType"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the deviceId
+    * Sets the keyType
     *
-    * @param string $val The value of the deviceId
+    * @param string $val The value of the keyType
     *
     * @return DeviceKey
     */
-    public function setDeviceId($val)
+    public function setKeyType($val)
     {
-        $this->_propDict["deviceId"] = $val;
+        $this->_propDict["keyType"] = $val;
         return $this;
     }
 }

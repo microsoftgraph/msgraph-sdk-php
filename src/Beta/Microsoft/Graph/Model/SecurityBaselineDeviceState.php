@@ -25,35 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class SecurityBaselineDeviceState extends Entity
 {
     /**
-    * Gets the managedDeviceId
-    * Intune device id
-    *
-    * @return string The managedDeviceId
-    */
-    public function getManagedDeviceId()
-    {
-        if (array_key_exists("managedDeviceId", $this->_propDict)) {
-            return $this->_propDict["managedDeviceId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the managedDeviceId
-    * Intune device id
-    *
-    * @param string $val The managedDeviceId
-    *
-    * @return SecurityBaselineDeviceState
-    */
-    public function setManagedDeviceId($val)
-    {
-        $this->_propDict["managedDeviceId"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the deviceDisplayName
     * Display name of the device
     *
@@ -83,31 +54,64 @@ class SecurityBaselineDeviceState extends Entity
     }
     
     /**
-    * Gets the userPrincipalName
-    * User Principal Name
+    * Gets the lastReportedDateTime
+    * Last modified date time of the policy report
     *
-    * @return string The userPrincipalName
+    * @return \DateTime The lastReportedDateTime
     */
-    public function getUserPrincipalName()
+    public function getLastReportedDateTime()
     {
-        if (array_key_exists("userPrincipalName", $this->_propDict)) {
-            return $this->_propDict["userPrincipalName"];
+        if (array_key_exists("lastReportedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastReportedDateTime"], "\DateTime")) {
+                return $this->_propDict["lastReportedDateTime"];
+            } else {
+                $this->_propDict["lastReportedDateTime"] = new \DateTime($this->_propDict["lastReportedDateTime"]);
+                return $this->_propDict["lastReportedDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the lastReportedDateTime
+    * Last modified date time of the policy report
+    *
+    * @param \DateTime $val The lastReportedDateTime
+    *
+    * @return SecurityBaselineDeviceState
+    */
+    public function setLastReportedDateTime($val)
+    {
+        $this->_propDict["lastReportedDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the managedDeviceId
+    * Intune device id
+    *
+    * @return string The managedDeviceId
+    */
+    public function getManagedDeviceId()
+    {
+        if (array_key_exists("managedDeviceId", $this->_propDict)) {
+            return $this->_propDict["managedDeviceId"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the userPrincipalName
-    * User Principal Name
+    * Sets the managedDeviceId
+    * Intune device id
     *
-    * @param string $val The userPrincipalName
+    * @param string $val The managedDeviceId
     *
     * @return SecurityBaselineDeviceState
     */
-    public function setUserPrincipalName($val)
+    public function setManagedDeviceId($val)
     {
-        $this->_propDict["userPrincipalName"] = $val;
+        $this->_propDict["managedDeviceId"] = $val;
         return $this;
     }
     
@@ -145,35 +149,31 @@ class SecurityBaselineDeviceState extends Entity
     }
     
     /**
-    * Gets the lastReportedDateTime
-    * Last modified date time of the policy report
+    * Gets the userPrincipalName
+    * User Principal Name
     *
-    * @return \DateTime The lastReportedDateTime
+    * @return string The userPrincipalName
     */
-    public function getLastReportedDateTime()
+    public function getUserPrincipalName()
     {
-        if (array_key_exists("lastReportedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastReportedDateTime"], "\DateTime")) {
-                return $this->_propDict["lastReportedDateTime"];
-            } else {
-                $this->_propDict["lastReportedDateTime"] = new \DateTime($this->_propDict["lastReportedDateTime"]);
-                return $this->_propDict["lastReportedDateTime"];
-            }
+        if (array_key_exists("userPrincipalName", $this->_propDict)) {
+            return $this->_propDict["userPrincipalName"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the lastReportedDateTime
-    * Last modified date time of the policy report
+    * Sets the userPrincipalName
+    * User Principal Name
     *
-    * @param \DateTime $val The lastReportedDateTime
+    * @param string $val The userPrincipalName
     *
     * @return SecurityBaselineDeviceState
     */
-    public function setLastReportedDateTime($val)
+    public function setUserPrincipalName($val)
     {
-        $this->_propDict["lastReportedDateTime"] = $val;
+        $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
     

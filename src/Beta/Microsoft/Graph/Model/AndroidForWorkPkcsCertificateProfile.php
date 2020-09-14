@@ -25,6 +25,35 @@ namespace Beta\Microsoft\Graph\Model;
 class AndroidForWorkPkcsCertificateProfile extends AndroidForWorkCertificateProfileBase
 {
     /**
+    * Gets the certificateTemplateName
+    * PKCS Certificate Template Name
+    *
+    * @return string The certificateTemplateName
+    */
+    public function getCertificateTemplateName()
+    {
+        if (array_key_exists("certificateTemplateName", $this->_propDict)) {
+            return $this->_propDict["certificateTemplateName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the certificateTemplateName
+    * PKCS Certificate Template Name
+    *
+    * @param string $val The certificateTemplateName
+    *
+    * @return AndroidForWorkPkcsCertificateProfile
+    */
+    public function setCertificateTemplateName($val)
+    {
+        $this->_propDict["certificateTemplateName"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the certificationAuthority
     * PKCS Certification Authority
     *
@@ -79,35 +108,6 @@ class AndroidForWorkPkcsCertificateProfile extends AndroidForWorkCertificateProf
     public function setCertificationAuthorityName($val)
     {
         $this->_propDict["certificationAuthorityName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the certificateTemplateName
-    * PKCS Certificate Template Name
-    *
-    * @return string The certificateTemplateName
-    */
-    public function getCertificateTemplateName()
-    {
-        if (array_key_exists("certificateTemplateName", $this->_propDict)) {
-            return $this->_propDict["certificateTemplateName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the certificateTemplateName
-    * PKCS Certificate Template Name
-    *
-    * @param string $val The certificateTemplateName
-    *
-    * @return AndroidForWorkPkcsCertificateProfile
-    */
-    public function setCertificateTemplateName($val)
-    {
-        $this->_propDict["certificateTemplateName"] = $val;
         return $this;
     }
     

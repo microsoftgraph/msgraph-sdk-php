@@ -25,37 +25,6 @@ class OnPremisesPublishingSingleSignOn extends Entity
 {
 
     /**
-    * Gets the SingleSignOnMode
-    *
-    * @return SingleSignOnMode The SingleSignOnMode
-    */
-    public function getSingleSignOnMode()
-    {
-        if (array_key_exists("singleSignOnMode", $this->_propDict)) {
-            if (is_a($this->_propDict["singleSignOnMode"], "Beta\Microsoft\Graph\Model\SingleSignOnMode")) {
-                return $this->_propDict["singleSignOnMode"];
-            } else {
-                $this->_propDict["singleSignOnMode"] = new SingleSignOnMode($this->_propDict["singleSignOnMode"]);
-                return $this->_propDict["singleSignOnMode"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the SingleSignOnMode
-    *
-    * @param SingleSignOnMode $val The value to assign to the SingleSignOnMode
-    *
-    * @return OnPremisesPublishingSingleSignOn The OnPremisesPublishingSingleSignOn
-    */
-    public function setSingleSignOnMode($val)
-    {
-        $this->_propDict["SingleSignOnMode"] = $val;
-         return $this;
-    }
-
-    /**
     * Gets the KerberosSignOnSettings
     *
     * @return KerberosSignOnSettings The KerberosSignOnSettings
@@ -83,6 +52,37 @@ class OnPremisesPublishingSingleSignOn extends Entity
     public function setKerberosSignOnSettings($val)
     {
         $this->_propDict["KerberosSignOnSettings"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the SingleSignOnMode
+    *
+    * @return SingleSignOnMode The SingleSignOnMode
+    */
+    public function getSingleSignOnMode()
+    {
+        if (array_key_exists("singleSignOnMode", $this->_propDict)) {
+            if (is_a($this->_propDict["singleSignOnMode"], "Beta\Microsoft\Graph\Model\SingleSignOnMode")) {
+                return $this->_propDict["singleSignOnMode"];
+            } else {
+                $this->_propDict["singleSignOnMode"] = new SingleSignOnMode($this->_propDict["singleSignOnMode"]);
+                return $this->_propDict["singleSignOnMode"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the SingleSignOnMode
+    *
+    * @param SingleSignOnMode $val The value to assign to the SingleSignOnMode
+    *
+    * @return OnPremisesPublishingSingleSignOn The OnPremisesPublishingSingleSignOn
+    */
+    public function setSingleSignOnMode($val)
+    {
+        $this->_propDict["SingleSignOnMode"] = $val;
          return $this;
     }
 }

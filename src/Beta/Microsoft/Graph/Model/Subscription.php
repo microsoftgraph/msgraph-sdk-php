@@ -25,31 +25,31 @@ namespace Beta\Microsoft\Graph\Model;
 class Subscription extends Entity
 {
     /**
-    * Gets the resource
-    * Required. Specifies the resource that will be monitored for changes. Do not include the base URL (https://graph.microsoft.com/v1.0/). See the possible resource path values for each supported resource.
+    * Gets the applicationId
+    * Identifier of the application used to create the subscription. Read-only.
     *
-    * @return string The resource
+    * @return string The applicationId
     */
-    public function getResource()
+    public function getApplicationId()
     {
-        if (array_key_exists("resource", $this->_propDict)) {
-            return $this->_propDict["resource"];
+        if (array_key_exists("applicationId", $this->_propDict)) {
+            return $this->_propDict["applicationId"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the resource
-    * Required. Specifies the resource that will be monitored for changes. Do not include the base URL (https://graph.microsoft.com/v1.0/). See the possible resource path values for each supported resource.
+    * Sets the applicationId
+    * Identifier of the application used to create the subscription. Read-only.
     *
-    * @param string $val The resource
+    * @param string $val The applicationId
     *
     * @return Subscription
     */
-    public function setResource($val)
+    public function setApplicationId($val)
     {
-        $this->_propDict["resource"] = $val;
+        $this->_propDict["applicationId"] = $val;
         return $this;
     }
     
@@ -112,97 +112,6 @@ class Subscription extends Entity
     }
     
     /**
-    * Gets the notificationUrl
-    * Required. The URL of the endpoint that will receive the change notifications. This URL must make use of the HTTPS protocol.
-    *
-    * @return string The notificationUrl
-    */
-    public function getNotificationUrl()
-    {
-        if (array_key_exists("notificationUrl", $this->_propDict)) {
-            return $this->_propDict["notificationUrl"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the notificationUrl
-    * Required. The URL of the endpoint that will receive the change notifications. This URL must make use of the HTTPS protocol.
-    *
-    * @param string $val The notificationUrl
-    *
-    * @return Subscription
-    */
-    public function setNotificationUrl($val)
-    {
-        $this->_propDict["notificationUrl"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the expirationDateTime
-    * Required. Specifies the date and time when the webhook subscription expires. The time is in UTC, and can be an amount of time from subscription creation that varies for the resource subscribed to.  See the table below for maximum supported subscription length of time.
-    *
-    * @return \DateTime The expirationDateTime
-    */
-    public function getExpirationDateTime()
-    {
-        if (array_key_exists("expirationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["expirationDateTime"], "\DateTime")) {
-                return $this->_propDict["expirationDateTime"];
-            } else {
-                $this->_propDict["expirationDateTime"] = new \DateTime($this->_propDict["expirationDateTime"]);
-                return $this->_propDict["expirationDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the expirationDateTime
-    * Required. Specifies the date and time when the webhook subscription expires. The time is in UTC, and can be an amount of time from subscription creation that varies for the resource subscribed to.  See the table below for maximum supported subscription length of time.
-    *
-    * @param \DateTime $val The expirationDateTime
-    *
-    * @return Subscription
-    */
-    public function setExpirationDateTime($val)
-    {
-        $this->_propDict["expirationDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the applicationId
-    * Identifier of the application used to create the subscription. Read-only.
-    *
-    * @return string The applicationId
-    */
-    public function getApplicationId()
-    {
-        if (array_key_exists("applicationId", $this->_propDict)) {
-            return $this->_propDict["applicationId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the applicationId
-    * Identifier of the application used to create the subscription. Read-only.
-    *
-    * @param string $val The applicationId
-    *
-    * @return Subscription
-    */
-    public function setApplicationId($val)
-    {
-        $this->_propDict["applicationId"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the creatorId
     * Identifier of the user or service principal that created the subscription. If the app used delegated permissions to create the subscription, this field contains the id of the signed-in user the app called on behalf of. If the app used application permissions, this field contains the id of the service principal corresponding to the app. Read-only.
     *
@@ -228,87 +137,6 @@ class Subscription extends Entity
     public function setCreatorId($val)
     {
         $this->_propDict["creatorId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the includeProperties
-    *
-    * @return bool The includeProperties
-    */
-    public function getIncludeProperties()
-    {
-        if (array_key_exists("includeProperties", $this->_propDict)) {
-            return $this->_propDict["includeProperties"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the includeProperties
-    *
-    * @param bool $val The includeProperties
-    *
-    * @return Subscription
-    */
-    public function setIncludeProperties($val)
-    {
-        $this->_propDict["includeProperties"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the includeResourceData
-    *
-    * @return bool The includeResourceData
-    */
-    public function getIncludeResourceData()
-    {
-        if (array_key_exists("includeResourceData", $this->_propDict)) {
-            return $this->_propDict["includeResourceData"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the includeResourceData
-    *
-    * @param bool $val The includeResourceData
-    *
-    * @return Subscription
-    */
-    public function setIncludeResourceData($val)
-    {
-        $this->_propDict["includeResourceData"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the lifecycleNotificationUrl
-    *
-    * @return string The lifecycleNotificationUrl
-    */
-    public function getLifecycleNotificationUrl()
-    {
-        if (array_key_exists("lifecycleNotificationUrl", $this->_propDict)) {
-            return $this->_propDict["lifecycleNotificationUrl"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the lifecycleNotificationUrl
-    *
-    * @param string $val The lifecycleNotificationUrl
-    *
-    * @return Subscription
-    */
-    public function setLifecycleNotificationUrl($val)
-    {
-        $this->_propDict["lifecycleNotificationUrl"] = $val;
         return $this;
     }
     
@@ -367,6 +195,93 @@ class Subscription extends Entity
     }
     
     /**
+    * Gets the expirationDateTime
+    * Required. Specifies the date and time when the webhook subscription expires. The time is in UTC, and can be an amount of time from subscription creation that varies for the resource subscribed to.  See the table below for maximum supported subscription length of time.
+    *
+    * @return \DateTime The expirationDateTime
+    */
+    public function getExpirationDateTime()
+    {
+        if (array_key_exists("expirationDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["expirationDateTime"], "\DateTime")) {
+                return $this->_propDict["expirationDateTime"];
+            } else {
+                $this->_propDict["expirationDateTime"] = new \DateTime($this->_propDict["expirationDateTime"]);
+                return $this->_propDict["expirationDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the expirationDateTime
+    * Required. Specifies the date and time when the webhook subscription expires. The time is in UTC, and can be an amount of time from subscription creation that varies for the resource subscribed to.  See the table below for maximum supported subscription length of time.
+    *
+    * @param \DateTime $val The expirationDateTime
+    *
+    * @return Subscription
+    */
+    public function setExpirationDateTime($val)
+    {
+        $this->_propDict["expirationDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the includeProperties
+    *
+    * @return bool The includeProperties
+    */
+    public function getIncludeProperties()
+    {
+        if (array_key_exists("includeProperties", $this->_propDict)) {
+            return $this->_propDict["includeProperties"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the includeProperties
+    *
+    * @param bool $val The includeProperties
+    *
+    * @return Subscription
+    */
+    public function setIncludeProperties($val)
+    {
+        $this->_propDict["includeProperties"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the includeResourceData
+    *
+    * @return bool The includeResourceData
+    */
+    public function getIncludeResourceData()
+    {
+        if (array_key_exists("includeResourceData", $this->_propDict)) {
+            return $this->_propDict["includeResourceData"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the includeResourceData
+    *
+    * @param bool $val The includeResourceData
+    *
+    * @return Subscription
+    */
+    public function setIncludeResourceData($val)
+    {
+        $this->_propDict["includeResourceData"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the latestSupportedTlsVersion
     * Specifies the latest version of Transport Layer Security (TLS) that the notification endpoint, specified by notificationUrl, supports. The possible values are: v1_0, v1_1, v1_2, v1_3. For subscribers whose notification endpoint supports a version lower than the currently recommended version (TLS 1.2), specifying this property by a set timeline allows them to temporarily use their deprecated version of TLS before completing their upgrade to TLS 1.2. For these subscribers, not setting this property per the timeline would result in subscription operations failing. For subscribers whose notification endpoint already supports TLS 1.2, setting this property is optional. In such cases, Microsoft Graph defaults the property to v1_2.
     *
@@ -392,6 +307,91 @@ class Subscription extends Entity
     public function setLatestSupportedTlsVersion($val)
     {
         $this->_propDict["latestSupportedTlsVersion"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the lifecycleNotificationUrl
+    *
+    * @return string The lifecycleNotificationUrl
+    */
+    public function getLifecycleNotificationUrl()
+    {
+        if (array_key_exists("lifecycleNotificationUrl", $this->_propDict)) {
+            return $this->_propDict["lifecycleNotificationUrl"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the lifecycleNotificationUrl
+    *
+    * @param string $val The lifecycleNotificationUrl
+    *
+    * @return Subscription
+    */
+    public function setLifecycleNotificationUrl($val)
+    {
+        $this->_propDict["lifecycleNotificationUrl"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the notificationUrl
+    * Required. The URL of the endpoint that will receive the change notifications. This URL must make use of the HTTPS protocol.
+    *
+    * @return string The notificationUrl
+    */
+    public function getNotificationUrl()
+    {
+        if (array_key_exists("notificationUrl", $this->_propDict)) {
+            return $this->_propDict["notificationUrl"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the notificationUrl
+    * Required. The URL of the endpoint that will receive the change notifications. This URL must make use of the HTTPS protocol.
+    *
+    * @param string $val The notificationUrl
+    *
+    * @return Subscription
+    */
+    public function setNotificationUrl($val)
+    {
+        $this->_propDict["notificationUrl"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the resource
+    * Required. Specifies the resource that will be monitored for changes. Do not include the base URL (https://graph.microsoft.com/v1.0/). See the possible resource path values for each supported resource.
+    *
+    * @return string The resource
+    */
+    public function getResource()
+    {
+        if (array_key_exists("resource", $this->_propDict)) {
+            return $this->_propDict["resource"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the resource
+    * Required. Specifies the resource that will be monitored for changes. Do not include the base URL (https://graph.microsoft.com/v1.0/). See the possible resource path values for each supported resource.
+    *
+    * @param string $val The resource
+    *
+    * @return Subscription
+    */
+    public function setResource($val)
+    {
+        $this->_propDict["resource"] = $val;
         return $this;
     }
     

@@ -25,60 +25,29 @@ namespace Beta\Microsoft\Graph\Model;
 class Office365ActivationsUserCounts extends Entity
 {
     /**
-    * Gets the reportRefreshDate
+    * Gets the activated
     *
-    * @return \DateTime The reportRefreshDate
+    * @return int The activated
     */
-    public function getReportRefreshDate()
+    public function getActivated()
     {
-        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
-                return $this->_propDict["reportRefreshDate"];
-            } else {
-                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
-                return $this->_propDict["reportRefreshDate"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the reportRefreshDate
-    *
-    * @param \DateTime $val The reportRefreshDate
-    *
-    * @return Office365ActivationsUserCounts
-    */
-    public function setReportRefreshDate($val)
-    {
-        $this->_propDict["reportRefreshDate"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the productType
-    *
-    * @return string The productType
-    */
-    public function getProductType()
-    {
-        if (array_key_exists("productType", $this->_propDict)) {
-            return $this->_propDict["productType"];
+        if (array_key_exists("activated", $this->_propDict)) {
+            return $this->_propDict["activated"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the productType
+    * Sets the activated
     *
-    * @param string $val The productType
+    * @param int $val The activated
     *
     * @return Office365ActivationsUserCounts
     */
-    public function setProductType($val)
+    public function setActivated($val)
     {
-        $this->_propDict["productType"] = $val;
+        $this->_propDict["activated"] = intval($val);
         return $this;
     }
     
@@ -110,29 +79,60 @@ class Office365ActivationsUserCounts extends Entity
     }
     
     /**
-    * Gets the activated
+    * Gets the productType
     *
-    * @return int The activated
+    * @return string The productType
     */
-    public function getActivated()
+    public function getProductType()
     {
-        if (array_key_exists("activated", $this->_propDict)) {
-            return $this->_propDict["activated"];
+        if (array_key_exists("productType", $this->_propDict)) {
+            return $this->_propDict["productType"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the activated
+    * Sets the productType
     *
-    * @param int $val The activated
+    * @param string $val The productType
     *
     * @return Office365ActivationsUserCounts
     */
-    public function setActivated($val)
+    public function setProductType($val)
     {
-        $this->_propDict["activated"] = intval($val);
+        $this->_propDict["productType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the reportRefreshDate
+    *
+    * @return \DateTime The reportRefreshDate
+    */
+    public function getReportRefreshDate()
+    {
+        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
+                return $this->_propDict["reportRefreshDate"];
+            } else {
+                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
+                return $this->_propDict["reportRefreshDate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the reportRefreshDate
+    *
+    * @param \DateTime $val The reportRefreshDate
+    *
+    * @return Office365ActivationsUserCounts
+    */
+    public function setReportRefreshDate($val)
+    {
+        $this->_propDict["reportRefreshDate"] = $val;
         return $this;
     }
     

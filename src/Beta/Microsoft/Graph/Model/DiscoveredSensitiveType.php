@@ -24,29 +24,29 @@ namespace Beta\Microsoft\Graph\Model;
 class DiscoveredSensitiveType extends Entity
 {
     /**
-    * Gets the id
+    * Gets the confidence
     *
-    * @return string The id
+    * @return int The confidence
     */
-    public function getId()
+    public function getConfidence()
     {
-        if (array_key_exists("id", $this->_propDict)) {
-            return $this->_propDict["id"];
+        if (array_key_exists("confidence", $this->_propDict)) {
+            return $this->_propDict["confidence"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the id
+    * Sets the confidence
     *
-    * @param string $val The value of the id
+    * @param int $val The value of the confidence
     *
     * @return DiscoveredSensitiveType
     */
-    public function setId($val)
+    public function setConfidence($val)
     {
-        $this->_propDict["id"] = $val;
+        $this->_propDict["confidence"] = $val;
         return $this;
     }
     /**
@@ -76,29 +76,29 @@ class DiscoveredSensitiveType extends Entity
         return $this;
     }
     /**
-    * Gets the confidence
+    * Gets the id
     *
-    * @return int The confidence
+    * @return string The id
     */
-    public function getConfidence()
+    public function getId()
     {
-        if (array_key_exists("confidence", $this->_propDict)) {
-            return $this->_propDict["confidence"];
+        if (array_key_exists("id", $this->_propDict)) {
+            return $this->_propDict["id"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the confidence
+    * Sets the id
     *
-    * @param int $val The value of the confidence
+    * @param string $val The value of the id
     *
     * @return DiscoveredSensitiveType
     */
-    public function setConfidence($val)
+    public function setId($val)
     {
-        $this->_propDict["confidence"] = $val;
+        $this->_propDict["id"] = $val;
         return $this;
     }
 }

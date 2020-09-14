@@ -256,37 +256,6 @@ class BookingService extends BookingNamedEntity
     }
     
     /**
-    * Gets the preBuffer
-    *
-    * @return Duration The preBuffer
-    */
-    public function getPreBuffer()
-    {
-        if (array_key_exists("preBuffer", $this->_propDict)) {
-            if (is_a($this->_propDict["preBuffer"], "Beta\Microsoft\Graph\Model\Duration")) {
-                return $this->_propDict["preBuffer"];
-            } else {
-                $this->_propDict["preBuffer"] = new Duration($this->_propDict["preBuffer"]);
-                return $this->_propDict["preBuffer"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the preBuffer
-    *
-    * @param Duration $val The preBuffer
-    *
-    * @return BookingService
-    */
-    public function setPreBuffer($val)
-    {
-        $this->_propDict["preBuffer"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the postBuffer
     *
     * @return Duration The postBuffer
@@ -314,6 +283,37 @@ class BookingService extends BookingNamedEntity
     public function setPostBuffer($val)
     {
         $this->_propDict["postBuffer"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the preBuffer
+    *
+    * @return Duration The preBuffer
+    */
+    public function getPreBuffer()
+    {
+        if (array_key_exists("preBuffer", $this->_propDict)) {
+            if (is_a($this->_propDict["preBuffer"], "Beta\Microsoft\Graph\Model\Duration")) {
+                return $this->_propDict["preBuffer"];
+            } else {
+                $this->_propDict["preBuffer"] = new Duration($this->_propDict["preBuffer"]);
+                return $this->_propDict["preBuffer"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the preBuffer
+    *
+    * @param Duration $val The preBuffer
+    *
+    * @return BookingService
+    */
+    public function setPreBuffer($val)
+    {
+        $this->_propDict["preBuffer"] = $val;
         return $this;
     }
     

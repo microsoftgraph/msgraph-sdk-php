@@ -53,36 +53,6 @@ class WindowsVpnConfiguration extends DeviceConfiguration
         return $this;
     }
     
-
-     /** 
-     * Gets the servers
-    * List of VPN Servers on the network. Make sure end users can access these network locations. This collection can contain a maximum of 500 elements.
-     *
-     * @return array The servers
-     */
-    public function getServers()
-    {
-        if (array_key_exists("servers", $this->_propDict)) {
-           return $this->_propDict["servers"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the servers
-    * List of VPN Servers on the network. Make sure end users can access these network locations. This collection can contain a maximum of 500 elements.
-    *
-    * @param VpnServer $val The servers
-    *
-    * @return WindowsVpnConfiguration
-    */
-    public function setServers($val)
-    {
-		$this->_propDict["servers"] = $val;
-        return $this;
-    }
-    
     /**
     * Gets the customXml
     * Custom XML commands that configures the VPN connection. (UTF8 encoded byte array)
@@ -113,6 +83,36 @@ class WindowsVpnConfiguration extends DeviceConfiguration
     public function setCustomXml($val)
     {
         $this->_propDict["customXml"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the servers
+    * List of VPN Servers on the network. Make sure end users can access these network locations. This collection can contain a maximum of 500 elements.
+     *
+     * @return array The servers
+     */
+    public function getServers()
+    {
+        if (array_key_exists("servers", $this->_propDict)) {
+           return $this->_propDict["servers"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the servers
+    * List of VPN Servers on the network. Make sure end users can access these network locations. This collection can contain a maximum of 500 elements.
+    *
+    * @param VpnServer $val The servers
+    *
+    * @return WindowsVpnConfiguration
+    */
+    public function setServers($val)
+    {
+		$this->_propDict["servers"] = $val;
         return $this;
     }
     

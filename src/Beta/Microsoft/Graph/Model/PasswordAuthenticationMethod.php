@@ -25,33 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class PasswordAuthenticationMethod extends AuthenticationMethod
 {
     /**
-    * Gets the password
-    *
-    * @return string The password
-    */
-    public function getPassword()
-    {
-        if (array_key_exists("password", $this->_propDict)) {
-            return $this->_propDict["password"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the password
-    *
-    * @param string $val The password
-    *
-    * @return PasswordAuthenticationMethod
-    */
-    public function setPassword($val)
-    {
-        $this->_propDict["password"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the creationDateTime
     *
     * @return \DateTime The creationDateTime
@@ -79,6 +52,33 @@ class PasswordAuthenticationMethod extends AuthenticationMethod
     public function setCreationDateTime($val)
     {
         $this->_propDict["creationDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the password
+    *
+    * @return string The password
+    */
+    public function getPassword()
+    {
+        if (array_key_exists("password", $this->_propDict)) {
+            return $this->_propDict["password"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the password
+    *
+    * @param string $val The password
+    *
+    * @return PasswordAuthenticationMethod
+    */
+    public function setPassword($val)
+    {
+        $this->_propDict["password"] = $val;
         return $this;
     }
     

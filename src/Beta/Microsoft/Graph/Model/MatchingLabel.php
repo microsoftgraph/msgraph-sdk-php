@@ -23,188 +23,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class MatchingLabel extends Entity
 {
-    /**
-    * Gets the id
-    *
-    * @return string The id
-    */
-    public function getId()
-    {
-        if (array_key_exists("id", $this->_propDict)) {
-            return $this->_propDict["id"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the id
-    *
-    * @param string $val The value of the id
-    *
-    * @return MatchingLabel
-    */
-    public function setId($val)
-    {
-        $this->_propDict["id"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the name
-    *
-    * @return string The name
-    */
-    public function getName()
-    {
-        if (array_key_exists("name", $this->_propDict)) {
-            return $this->_propDict["name"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the name
-    *
-    * @param string $val The value of the name
-    *
-    * @return MatchingLabel
-    */
-    public function setName($val)
-    {
-        $this->_propDict["name"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the displayName
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the displayName
-    *
-    * @param string $val The value of the displayName
-    *
-    * @return MatchingLabel
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the description
-    *
-    * @return string The description
-    */
-    public function getDescription()
-    {
-        if (array_key_exists("description", $this->_propDict)) {
-            return $this->_propDict["description"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the description
-    *
-    * @param string $val The value of the description
-    *
-    * @return MatchingLabel
-    */
-    public function setDescription($val)
-    {
-        $this->_propDict["description"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the toolTip
-    *
-    * @return string The toolTip
-    */
-    public function getToolTip()
-    {
-        if (array_key_exists("toolTip", $this->_propDict)) {
-            return $this->_propDict["toolTip"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the toolTip
-    *
-    * @param string $val The value of the toolTip
-    *
-    * @return MatchingLabel
-    */
-    public function setToolTip($val)
-    {
-        $this->_propDict["toolTip"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the policyTip
-    *
-    * @return string The policyTip
-    */
-    public function getPolicyTip()
-    {
-        if (array_key_exists("policyTip", $this->_propDict)) {
-            return $this->_propDict["policyTip"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the policyTip
-    *
-    * @param string $val The value of the policyTip
-    *
-    * @return MatchingLabel
-    */
-    public function setPolicyTip($val)
-    {
-        $this->_propDict["policyTip"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the isEndpointProtectionEnabled
-    *
-    * @return bool The isEndpointProtectionEnabled
-    */
-    public function getIsEndpointProtectionEnabled()
-    {
-        if (array_key_exists("isEndpointProtectionEnabled", $this->_propDict)) {
-            return $this->_propDict["isEndpointProtectionEnabled"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the isEndpointProtectionEnabled
-    *
-    * @param bool $val The value of the isEndpointProtectionEnabled
-    *
-    * @return MatchingLabel
-    */
-    public function setIsEndpointProtectionEnabled($val)
-    {
-        $this->_propDict["isEndpointProtectionEnabled"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the applicationMode
@@ -235,6 +53,110 @@ class MatchingLabel extends Entity
     {
         $this->_propDict["applicationMode"] = $val;
          return $this;
+    }
+    /**
+    * Gets the description
+    *
+    * @return string The description
+    */
+    public function getDescription()
+    {
+        if (array_key_exists("description", $this->_propDict)) {
+            return $this->_propDict["description"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the description
+    *
+    * @param string $val The value of the description
+    *
+    * @return MatchingLabel
+    */
+    public function setDescription($val)
+    {
+        $this->_propDict["description"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the displayName
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the displayName
+    *
+    * @param string $val The value of the displayName
+    *
+    * @return MatchingLabel
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the id
+    *
+    * @return string The id
+    */
+    public function getId()
+    {
+        if (array_key_exists("id", $this->_propDict)) {
+            return $this->_propDict["id"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the id
+    *
+    * @param string $val The value of the id
+    *
+    * @return MatchingLabel
+    */
+    public function setId($val)
+    {
+        $this->_propDict["id"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the isEndpointProtectionEnabled
+    *
+    * @return bool The isEndpointProtectionEnabled
+    */
+    public function getIsEndpointProtectionEnabled()
+    {
+        if (array_key_exists("isEndpointProtectionEnabled", $this->_propDict)) {
+            return $this->_propDict["isEndpointProtectionEnabled"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isEndpointProtectionEnabled
+    *
+    * @param bool $val The value of the isEndpointProtectionEnabled
+    *
+    * @return MatchingLabel
+    */
+    public function setIsEndpointProtectionEnabled($val)
+    {
+        $this->_propDict["isEndpointProtectionEnabled"] = $val;
+        return $this;
     }
 
     /**
@@ -268,6 +190,58 @@ class MatchingLabel extends Entity
          return $this;
     }
     /**
+    * Gets the name
+    *
+    * @return string The name
+    */
+    public function getName()
+    {
+        if (array_key_exists("name", $this->_propDict)) {
+            return $this->_propDict["name"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the name
+    *
+    * @param string $val The value of the name
+    *
+    * @return MatchingLabel
+    */
+    public function setName($val)
+    {
+        $this->_propDict["name"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the policyTip
+    *
+    * @return string The policyTip
+    */
+    public function getPolicyTip()
+    {
+        if (array_key_exists("policyTip", $this->_propDict)) {
+            return $this->_propDict["policyTip"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the policyTip
+    *
+    * @param string $val The value of the policyTip
+    *
+    * @return MatchingLabel
+    */
+    public function setPolicyTip($val)
+    {
+        $this->_propDict["policyTip"] = $val;
+        return $this;
+    }
+    /**
     * Gets the priority
     *
     * @return int The priority
@@ -291,6 +265,32 @@ class MatchingLabel extends Entity
     public function setPriority($val)
     {
         $this->_propDict["priority"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the toolTip
+    *
+    * @return string The toolTip
+    */
+    public function getToolTip()
+    {
+        if (array_key_exists("toolTip", $this->_propDict)) {
+            return $this->_propDict["toolTip"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the toolTip
+    *
+    * @param string $val The value of the toolTip
+    *
+    * @return MatchingLabel
+    */
+    public function setToolTip($val)
+    {
+        $this->_propDict["toolTip"] = $val;
         return $this;
     }
 }

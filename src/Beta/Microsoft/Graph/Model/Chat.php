@@ -25,33 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class Chat extends Entity
 {
     /**
-    * Gets the topic
-    *
-    * @return string The topic
-    */
-    public function getTopic()
-    {
-        if (array_key_exists("topic", $this->_propDict)) {
-            return $this->_propDict["topic"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the topic
-    *
-    * @param string $val The topic
-    *
-    * @return Chat
-    */
-    public function setTopic($val)
-    {
-        $this->_propDict["topic"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the createdDateTime
     *
     * @return \DateTime The createdDateTime
@@ -113,6 +86,61 @@ class Chat extends Entity
         return $this;
     }
     
+    /**
+    * Gets the topic
+    *
+    * @return string The topic
+    */
+    public function getTopic()
+    {
+        if (array_key_exists("topic", $this->_propDict)) {
+            return $this->_propDict["topic"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the topic
+    *
+    * @param string $val The topic
+    *
+    * @return Chat
+    */
+    public function setTopic($val)
+    {
+        $this->_propDict["topic"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the installedApps
+     *
+     * @return array The installedApps
+     */
+    public function getInstalledApps()
+    {
+        if (array_key_exists("installedApps", $this->_propDict)) {
+           return $this->_propDict["installedApps"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the installedApps
+    *
+    * @param TeamsAppInstallation $val The installedApps
+    *
+    * @return Chat
+    */
+    public function setInstalledApps($val)
+    {
+		$this->_propDict["installedApps"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the members
@@ -166,34 +194,6 @@ class Chat extends Entity
     public function setMessages($val)
     {
 		$this->_propDict["messages"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the installedApps
-     *
-     * @return array The installedApps
-     */
-    public function getInstalledApps()
-    {
-        if (array_key_exists("installedApps", $this->_propDict)) {
-           return $this->_propDict["installedApps"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the installedApps
-    *
-    * @param TeamsAppInstallation $val The installedApps
-    *
-    * @return Chat
-    */
-    public function setInstalledApps($val)
-    {
-		$this->_propDict["installedApps"] = $val;
         return $this;
     }
     

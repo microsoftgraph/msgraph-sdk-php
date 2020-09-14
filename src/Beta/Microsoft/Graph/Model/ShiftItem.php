@@ -23,6 +23,39 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class ShiftItem extends ScheduleEntity
 {
+
+    /**
+    * Gets the activities
+    * An incremental part of a shift which can cover details of when and where an employee is during their shift. For example, an assignment or a scheduled break or lunch. Required.
+    *
+    * @return ShiftActivity The activities
+    */
+    public function getActivities()
+    {
+        if (array_key_exists("activities", $this->_propDict)) {
+            if (is_a($this->_propDict["activities"], "Beta\Microsoft\Graph\Model\ShiftActivity")) {
+                return $this->_propDict["activities"];
+            } else {
+                $this->_propDict["activities"] = new ShiftActivity($this->_propDict["activities"]);
+                return $this->_propDict["activities"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the activities
+    * An incremental part of a shift which can cover details of when and where an employee is during their shift. For example, an assignment or a scheduled break or lunch. Required.
+    *
+    * @param ShiftActivity $val The value to assign to the activities
+    *
+    * @return ShiftItem The ShiftItem
+    */
+    public function setActivities($val)
+    {
+        $this->_propDict["activities"] = $val;
+         return $this;
+    }
     /**
     * Gets the displayName
     * The shift label of the shiftItem.
@@ -78,38 +111,5 @@ class ShiftItem extends ScheduleEntity
     {
         $this->_propDict["notes"] = $val;
         return $this;
-    }
-
-    /**
-    * Gets the activities
-    * An incremental part of a shift which can cover details of when and where an employee is during their shift. For example, an assignment or a scheduled break or lunch. Required.
-    *
-    * @return ShiftActivity The activities
-    */
-    public function getActivities()
-    {
-        if (array_key_exists("activities", $this->_propDict)) {
-            if (is_a($this->_propDict["activities"], "Beta\Microsoft\Graph\Model\ShiftActivity")) {
-                return $this->_propDict["activities"];
-            } else {
-                $this->_propDict["activities"] = new ShiftActivity($this->_propDict["activities"]);
-                return $this->_propDict["activities"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the activities
-    * An incremental part of a shift which can cover details of when and where an employee is during their shift. For example, an assignment or a scheduled break or lunch. Required.
-    *
-    * @param ShiftActivity $val The value to assign to the activities
-    *
-    * @return ShiftItem The ShiftItem
-    */
-    public function setActivities($val)
-    {
-        $this->_propDict["activities"] = $val;
-         return $this;
     }
 }

@@ -25,6 +25,35 @@ namespace Beta\Microsoft\Graph\Model;
 class CartToClassAssociation extends Entity
 {
     /**
+    * Gets the classroomIds
+    * Identifiers of classrooms to be associated with device carts.
+    *
+    * @return string The classroomIds
+    */
+    public function getClassroomIds()
+    {
+        if (array_key_exists("classroomIds", $this->_propDict)) {
+            return $this->_propDict["classroomIds"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the classroomIds
+    * Identifiers of classrooms to be associated with device carts.
+    *
+    * @param string $val The classroomIds
+    *
+    * @return CartToClassAssociation
+    */
+    public function setClassroomIds($val)
+    {
+        $this->_propDict["classroomIds"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the createdDateTime
     * DateTime the object was created.
     *
@@ -54,97 +83,6 @@ class CartToClassAssociation extends Entity
     public function setCreatedDateTime($val)
     {
         $this->_propDict["createdDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the lastModifiedDateTime
-    * DateTime the object was last modified.
-    *
-    * @return \DateTime The lastModifiedDateTime
-    */
-    public function getLastModifiedDateTime()
-    {
-        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
-                return $this->_propDict["lastModifiedDateTime"];
-            } else {
-                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
-                return $this->_propDict["lastModifiedDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the lastModifiedDateTime
-    * DateTime the object was last modified.
-    *
-    * @param \DateTime $val The lastModifiedDateTime
-    *
-    * @return CartToClassAssociation
-    */
-    public function setLastModifiedDateTime($val)
-    {
-        $this->_propDict["lastModifiedDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the version
-    * Version of the CartToClassAssociation.
-    *
-    * @return int The version
-    */
-    public function getVersion()
-    {
-        if (array_key_exists("version", $this->_propDict)) {
-            return $this->_propDict["version"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the version
-    * Version of the CartToClassAssociation.
-    *
-    * @param int $val The version
-    *
-    * @return CartToClassAssociation
-    */
-    public function setVersion($val)
-    {
-        $this->_propDict["version"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the displayName
-    * Admin provided name of the device configuration.
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the displayName
-    * Admin provided name of the device configuration.
-    *
-    * @param string $val The displayName
-    *
-    * @return CartToClassAssociation
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
         return $this;
     }
     
@@ -207,31 +145,93 @@ class CartToClassAssociation extends Entity
     }
     
     /**
-    * Gets the classroomIds
-    * Identifiers of classrooms to be associated with device carts.
+    * Gets the displayName
+    * Admin provided name of the device configuration.
     *
-    * @return string The classroomIds
+    * @return string The displayName
     */
-    public function getClassroomIds()
+    public function getDisplayName()
     {
-        if (array_key_exists("classroomIds", $this->_propDict)) {
-            return $this->_propDict["classroomIds"];
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the classroomIds
-    * Identifiers of classrooms to be associated with device carts.
+    * Sets the displayName
+    * Admin provided name of the device configuration.
     *
-    * @param string $val The classroomIds
+    * @param string $val The displayName
     *
     * @return CartToClassAssociation
     */
-    public function setClassroomIds($val)
+    public function setDisplayName($val)
     {
-        $this->_propDict["classroomIds"] = $val;
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the lastModifiedDateTime
+    * DateTime the object was last modified.
+    *
+    * @return \DateTime The lastModifiedDateTime
+    */
+    public function getLastModifiedDateTime()
+    {
+        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+                return $this->_propDict["lastModifiedDateTime"];
+            } else {
+                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
+                return $this->_propDict["lastModifiedDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the lastModifiedDateTime
+    * DateTime the object was last modified.
+    *
+    * @param \DateTime $val The lastModifiedDateTime
+    *
+    * @return CartToClassAssociation
+    */
+    public function setLastModifiedDateTime($val)
+    {
+        $this->_propDict["lastModifiedDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the version
+    * Version of the CartToClassAssociation.
+    *
+    * @return int The version
+    */
+    public function getVersion()
+    {
+        if (array_key_exists("version", $this->_propDict)) {
+            return $this->_propDict["version"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the version
+    * Version of the CartToClassAssociation.
+    *
+    * @param int $val The version
+    *
+    * @return CartToClassAssociation
+    */
+    public function setVersion($val)
+    {
+        $this->_propDict["version"] = intval($val);
         return $this;
     }
     

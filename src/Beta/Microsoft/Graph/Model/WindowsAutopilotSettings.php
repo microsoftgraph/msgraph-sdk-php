@@ -25,39 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class WindowsAutopilotSettings extends Entity
 {
     /**
-    * Gets the lastSyncDateTime
-    * Last data sync date time with DDS service.
-    *
-    * @return \DateTime The lastSyncDateTime
-    */
-    public function getLastSyncDateTime()
-    {
-        if (array_key_exists("lastSyncDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastSyncDateTime"], "\DateTime")) {
-                return $this->_propDict["lastSyncDateTime"];
-            } else {
-                $this->_propDict["lastSyncDateTime"] = new \DateTime($this->_propDict["lastSyncDateTime"]);
-                return $this->_propDict["lastSyncDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the lastSyncDateTime
-    * Last data sync date time with DDS service.
-    *
-    * @param \DateTime $val The lastSyncDateTime
-    *
-    * @return WindowsAutopilotSettings
-    */
-    public function setLastSyncDateTime($val)
-    {
-        $this->_propDict["lastSyncDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the lastManualSyncTriggerDateTime
     * Last data sync date time with DDS service.
     *
@@ -87,6 +54,39 @@ class WindowsAutopilotSettings extends Entity
     public function setLastManualSyncTriggerDateTime($val)
     {
         $this->_propDict["lastManualSyncTriggerDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the lastSyncDateTime
+    * Last data sync date time with DDS service.
+    *
+    * @return \DateTime The lastSyncDateTime
+    */
+    public function getLastSyncDateTime()
+    {
+        if (array_key_exists("lastSyncDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastSyncDateTime"], "\DateTime")) {
+                return $this->_propDict["lastSyncDateTime"];
+            } else {
+                $this->_propDict["lastSyncDateTime"] = new \DateTime($this->_propDict["lastSyncDateTime"]);
+                return $this->_propDict["lastSyncDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the lastSyncDateTime
+    * Last data sync date time with DDS service.
+    *
+    * @param \DateTime $val The lastSyncDateTime
+    *
+    * @return WindowsAutopilotSettings
+    */
+    public function setLastSyncDateTime($val)
+    {
+        $this->_propDict["lastSyncDateTime"] = $val;
         return $this;
     }
     

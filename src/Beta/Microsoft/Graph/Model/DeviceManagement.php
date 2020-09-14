@@ -25,64 +25,35 @@ namespace Beta\Microsoft\Graph\Model;
 class DeviceManagement extends Entity
 {
     /**
-    * Gets the settings
-    * Account level settings.
+    * Gets the deviceComplianceReportSummarizationDateTime
+    * The last requested time of device compliance reporting for this account. This property is read-only.
     *
-    * @return DeviceManagementSettings The settings
+    * @return \DateTime The deviceComplianceReportSummarizationDateTime
     */
-    public function getSettings()
+    public function getDeviceComplianceReportSummarizationDateTime()
     {
-        if (array_key_exists("settings", $this->_propDict)) {
-            if (is_a($this->_propDict["settings"], "Beta\Microsoft\Graph\Model\DeviceManagementSettings")) {
-                return $this->_propDict["settings"];
+        if (array_key_exists("deviceComplianceReportSummarizationDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["deviceComplianceReportSummarizationDateTime"], "\DateTime")) {
+                return $this->_propDict["deviceComplianceReportSummarizationDateTime"];
             } else {
-                $this->_propDict["settings"] = new DeviceManagementSettings($this->_propDict["settings"]);
-                return $this->_propDict["settings"];
+                $this->_propDict["deviceComplianceReportSummarizationDateTime"] = new \DateTime($this->_propDict["deviceComplianceReportSummarizationDateTime"]);
+                return $this->_propDict["deviceComplianceReportSummarizationDateTime"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the settings
-    * Account level settings.
+    * Sets the deviceComplianceReportSummarizationDateTime
+    * The last requested time of device compliance reporting for this account. This property is read-only.
     *
-    * @param DeviceManagementSettings $val The settings
-    *
-    * @return DeviceManagement
-    */
-    public function setSettings($val)
-    {
-        $this->_propDict["settings"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the maximumDepTokens
-    * Maximum number of dep tokens allowed per-tenant.
-    *
-    * @return int The maximumDepTokens
-    */
-    public function getMaximumDepTokens()
-    {
-        if (array_key_exists("maximumDepTokens", $this->_propDict)) {
-            return $this->_propDict["maximumDepTokens"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the maximumDepTokens
-    * Maximum number of dep tokens allowed per-tenant.
-    *
-    * @param int $val The maximumDepTokens
+    * @param \DateTime $val The deviceComplianceReportSummarizationDateTime
     *
     * @return DeviceManagement
     */
-    public function setMaximumDepTokens($val)
+    public function setDeviceComplianceReportSummarizationDateTime($val)
     {
-        $this->_propDict["maximumDepTokens"] = intval($val);
+        $this->_propDict["deviceComplianceReportSummarizationDateTime"] = $val;
         return $this;
     }
     
@@ -149,39 +120,6 @@ class DeviceManagement extends Entity
     }
     
     /**
-    * Gets the deviceComplianceReportSummarizationDateTime
-    * The last requested time of device compliance reporting for this account. This property is read-only.
-    *
-    * @return \DateTime The deviceComplianceReportSummarizationDateTime
-    */
-    public function getDeviceComplianceReportSummarizationDateTime()
-    {
-        if (array_key_exists("deviceComplianceReportSummarizationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceComplianceReportSummarizationDateTime"], "\DateTime")) {
-                return $this->_propDict["deviceComplianceReportSummarizationDateTime"];
-            } else {
-                $this->_propDict["deviceComplianceReportSummarizationDateTime"] = new \DateTime($this->_propDict["deviceComplianceReportSummarizationDateTime"]);
-                return $this->_propDict["deviceComplianceReportSummarizationDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the deviceComplianceReportSummarizationDateTime
-    * The last requested time of device compliance reporting for this account. This property is read-only.
-    *
-    * @param \DateTime $val The deviceComplianceReportSummarizationDateTime
-    *
-    * @return DeviceManagement
-    */
-    public function setDeviceComplianceReportSummarizationDateTime($val)
-    {
-        $this->_propDict["deviceComplianceReportSummarizationDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the legacyPcManangementEnabled
     * The property to enable Non-MDM managed legacy PC management for this account. This property is read-only.
     *
@@ -207,6 +145,68 @@ class DeviceManagement extends Entity
     public function setLegacyPcManangementEnabled($val)
     {
         $this->_propDict["legacyPcManangementEnabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the maximumDepTokens
+    * Maximum number of dep tokens allowed per-tenant.
+    *
+    * @return int The maximumDepTokens
+    */
+    public function getMaximumDepTokens()
+    {
+        if (array_key_exists("maximumDepTokens", $this->_propDict)) {
+            return $this->_propDict["maximumDepTokens"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the maximumDepTokens
+    * Maximum number of dep tokens allowed per-tenant.
+    *
+    * @param int $val The maximumDepTokens
+    *
+    * @return DeviceManagement
+    */
+    public function setMaximumDepTokens($val)
+    {
+        $this->_propDict["maximumDepTokens"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the settings
+    * Account level settings.
+    *
+    * @return DeviceManagementSettings The settings
+    */
+    public function getSettings()
+    {
+        if (array_key_exists("settings", $this->_propDict)) {
+            if (is_a($this->_propDict["settings"], "Beta\Microsoft\Graph\Model\DeviceManagementSettings")) {
+                return $this->_propDict["settings"];
+            } else {
+                $this->_propDict["settings"] = new DeviceManagementSettings($this->_propDict["settings"]);
+                return $this->_propDict["settings"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the settings
+    * Account level settings.
+    *
+    * @param DeviceManagementSettings $val The settings
+    *
+    * @return DeviceManagement
+    */
+    public function setSettings($val)
+    {
+        $this->_propDict["settings"] = $val;
         return $this;
     }
     
@@ -273,101 +273,35 @@ class DeviceManagement extends Entity
     }
     
     /**
-    * Gets the subscriptionState
-    * Tenant mobile device management subscription state. The possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
+    * Gets the accountMoveCompletionDateTime
+    * The date &amp; time when tenant data moved between scaleunits.
     *
-    * @return DeviceManagementSubscriptionState The subscriptionState
+    * @return \DateTime The accountMoveCompletionDateTime
     */
-    public function getSubscriptionState()
+    public function getAccountMoveCompletionDateTime()
     {
-        if (array_key_exists("subscriptionState", $this->_propDict)) {
-            if (is_a($this->_propDict["subscriptionState"], "Beta\Microsoft\Graph\Model\DeviceManagementSubscriptionState")) {
-                return $this->_propDict["subscriptionState"];
+        if (array_key_exists("accountMoveCompletionDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["accountMoveCompletionDateTime"], "\DateTime")) {
+                return $this->_propDict["accountMoveCompletionDateTime"];
             } else {
-                $this->_propDict["subscriptionState"] = new DeviceManagementSubscriptionState($this->_propDict["subscriptionState"]);
-                return $this->_propDict["subscriptionState"];
+                $this->_propDict["accountMoveCompletionDateTime"] = new \DateTime($this->_propDict["accountMoveCompletionDateTime"]);
+                return $this->_propDict["accountMoveCompletionDateTime"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the subscriptionState
-    * Tenant mobile device management subscription state. The possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
+    * Sets the accountMoveCompletionDateTime
+    * The date &amp; time when tenant data moved between scaleunits.
     *
-    * @param DeviceManagementSubscriptionState $val The subscriptionState
-    *
-    * @return DeviceManagement
-    */
-    public function setSubscriptionState($val)
-    {
-        $this->_propDict["subscriptionState"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the subscriptions
-    * Tenant's Subscription.
-    *
-    * @return DeviceManagementSubscriptions The subscriptions
-    */
-    public function getSubscriptions()
-    {
-        if (array_key_exists("subscriptions", $this->_propDict)) {
-            if (is_a($this->_propDict["subscriptions"], "Beta\Microsoft\Graph\Model\DeviceManagementSubscriptions")) {
-                return $this->_propDict["subscriptions"];
-            } else {
-                $this->_propDict["subscriptions"] = new DeviceManagementSubscriptions($this->_propDict["subscriptions"]);
-                return $this->_propDict["subscriptions"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the subscriptions
-    * Tenant's Subscription.
-    *
-    * @param DeviceManagementSubscriptions $val The subscriptions
+    * @param \DateTime $val The accountMoveCompletionDateTime
     *
     * @return DeviceManagement
     */
-    public function setSubscriptions($val)
+    public function setAccountMoveCompletionDateTime($val)
     {
-        $this->_propDict["subscriptions"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the managedDeviceCleanupSettings
-    * Device cleanup rule
-    *
-    * @return ManagedDeviceCleanupSettings The managedDeviceCleanupSettings
-    */
-    public function getManagedDeviceCleanupSettings()
-    {
-        if (array_key_exists("managedDeviceCleanupSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["managedDeviceCleanupSettings"], "Beta\Microsoft\Graph\Model\ManagedDeviceCleanupSettings")) {
-                return $this->_propDict["managedDeviceCleanupSettings"];
-            } else {
-                $this->_propDict["managedDeviceCleanupSettings"] = new ManagedDeviceCleanupSettings($this->_propDict["managedDeviceCleanupSettings"]);
-                return $this->_propDict["managedDeviceCleanupSettings"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the managedDeviceCleanupSettings
-    * Device cleanup rule
-    *
-    * @param ManagedDeviceCleanupSettings $val The managedDeviceCleanupSettings
-    *
-    * @return DeviceManagement
-    */
-    public function setManagedDeviceCleanupSettings($val)
-    {
-        $this->_propDict["managedDeviceCleanupSettings"] = $val;
+        $this->_propDict["accountMoveCompletionDateTime"] = $val;
         return $this;
     }
     
@@ -438,68 +372,101 @@ class DeviceManagement extends Entity
     }
     
     /**
-    * Gets the windowsMalwareOverview
-    * Malware overview for windows devices.
+    * Gets the managedDeviceCleanupSettings
+    * Device cleanup rule
     *
-    * @return WindowsMalwareOverview The windowsMalwareOverview
+    * @return ManagedDeviceCleanupSettings The managedDeviceCleanupSettings
     */
-    public function getWindowsMalwareOverview()
+    public function getManagedDeviceCleanupSettings()
     {
-        if (array_key_exists("windowsMalwareOverview", $this->_propDict)) {
-            if (is_a($this->_propDict["windowsMalwareOverview"], "Beta\Microsoft\Graph\Model\WindowsMalwareOverview")) {
-                return $this->_propDict["windowsMalwareOverview"];
+        if (array_key_exists("managedDeviceCleanupSettings", $this->_propDict)) {
+            if (is_a($this->_propDict["managedDeviceCleanupSettings"], "Beta\Microsoft\Graph\Model\ManagedDeviceCleanupSettings")) {
+                return $this->_propDict["managedDeviceCleanupSettings"];
             } else {
-                $this->_propDict["windowsMalwareOverview"] = new WindowsMalwareOverview($this->_propDict["windowsMalwareOverview"]);
-                return $this->_propDict["windowsMalwareOverview"];
+                $this->_propDict["managedDeviceCleanupSettings"] = new ManagedDeviceCleanupSettings($this->_propDict["managedDeviceCleanupSettings"]);
+                return $this->_propDict["managedDeviceCleanupSettings"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the windowsMalwareOverview
-    * Malware overview for windows devices.
+    * Sets the managedDeviceCleanupSettings
+    * Device cleanup rule
     *
-    * @param WindowsMalwareOverview $val The windowsMalwareOverview
+    * @param ManagedDeviceCleanupSettings $val The managedDeviceCleanupSettings
     *
     * @return DeviceManagement
     */
-    public function setWindowsMalwareOverview($val)
+    public function setManagedDeviceCleanupSettings($val)
     {
-        $this->_propDict["windowsMalwareOverview"] = $val;
+        $this->_propDict["managedDeviceCleanupSettings"] = $val;
         return $this;
     }
     
     /**
-    * Gets the accountMoveCompletionDateTime
-    * The date &amp; time when tenant data moved between scaleunits.
+    * Gets the subscriptions
+    * Tenant's Subscription.
     *
-    * @return \DateTime The accountMoveCompletionDateTime
+    * @return DeviceManagementSubscriptions The subscriptions
     */
-    public function getAccountMoveCompletionDateTime()
+    public function getSubscriptions()
     {
-        if (array_key_exists("accountMoveCompletionDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["accountMoveCompletionDateTime"], "\DateTime")) {
-                return $this->_propDict["accountMoveCompletionDateTime"];
+        if (array_key_exists("subscriptions", $this->_propDict)) {
+            if (is_a($this->_propDict["subscriptions"], "Beta\Microsoft\Graph\Model\DeviceManagementSubscriptions")) {
+                return $this->_propDict["subscriptions"];
             } else {
-                $this->_propDict["accountMoveCompletionDateTime"] = new \DateTime($this->_propDict["accountMoveCompletionDateTime"]);
-                return $this->_propDict["accountMoveCompletionDateTime"];
+                $this->_propDict["subscriptions"] = new DeviceManagementSubscriptions($this->_propDict["subscriptions"]);
+                return $this->_propDict["subscriptions"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the accountMoveCompletionDateTime
-    * The date &amp; time when tenant data moved between scaleunits.
+    * Sets the subscriptions
+    * Tenant's Subscription.
     *
-    * @param \DateTime $val The accountMoveCompletionDateTime
+    * @param DeviceManagementSubscriptions $val The subscriptions
     *
     * @return DeviceManagement
     */
-    public function setAccountMoveCompletionDateTime($val)
+    public function setSubscriptions($val)
     {
-        $this->_propDict["accountMoveCompletionDateTime"] = $val;
+        $this->_propDict["subscriptions"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the subscriptionState
+    * Tenant mobile device management subscription state. The possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
+    *
+    * @return DeviceManagementSubscriptionState The subscriptionState
+    */
+    public function getSubscriptionState()
+    {
+        if (array_key_exists("subscriptionState", $this->_propDict)) {
+            if (is_a($this->_propDict["subscriptionState"], "Beta\Microsoft\Graph\Model\DeviceManagementSubscriptionState")) {
+                return $this->_propDict["subscriptionState"];
+            } else {
+                $this->_propDict["subscriptionState"] = new DeviceManagementSubscriptionState($this->_propDict["subscriptionState"]);
+                return $this->_propDict["subscriptionState"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the subscriptionState
+    * Tenant mobile device management subscription state. The possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
+    *
+    * @param DeviceManagementSubscriptionState $val The subscriptionState
+    *
+    * @return DeviceManagement
+    */
+    public function setSubscriptionState($val)
+    {
+        $this->_propDict["subscriptionState"] = $val;
         return $this;
     }
     
@@ -536,6 +503,39 @@ class DeviceManagement extends Entity
         return $this;
     }
     
+    /**
+    * Gets the windowsMalwareOverview
+    * Malware overview for windows devices.
+    *
+    * @return WindowsMalwareOverview The windowsMalwareOverview
+    */
+    public function getWindowsMalwareOverview()
+    {
+        if (array_key_exists("windowsMalwareOverview", $this->_propDict)) {
+            if (is_a($this->_propDict["windowsMalwareOverview"], "Beta\Microsoft\Graph\Model\WindowsMalwareOverview")) {
+                return $this->_propDict["windowsMalwareOverview"];
+            } else {
+                $this->_propDict["windowsMalwareOverview"] = new WindowsMalwareOverview($this->_propDict["windowsMalwareOverview"]);
+                return $this->_propDict["windowsMalwareOverview"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the windowsMalwareOverview
+    * Malware overview for windows devices.
+    *
+    * @param WindowsMalwareOverview $val The windowsMalwareOverview
+    *
+    * @return DeviceManagement
+    */
+    public function setWindowsMalwareOverview($val)
+    {
+        $this->_propDict["windowsMalwareOverview"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the auditEvents
@@ -566,36 +566,33 @@ class DeviceManagement extends Entity
         return $this;
     }
     
-    /**
-    * Gets the androidForWorkSettings
-    * The singleton Android for Work settings entity.
-    *
-    * @return AndroidForWorkSettings The androidForWorkSettings
-    */
-    public function getAndroidForWorkSettings()
+
+     /** 
+     * Gets the androidDeviceOwnerEnrollmentProfiles
+    * Android device owner enrollment profile entities.
+     *
+     * @return array The androidDeviceOwnerEnrollmentProfiles
+     */
+    public function getAndroidDeviceOwnerEnrollmentProfiles()
     {
-        if (array_key_exists("androidForWorkSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["androidForWorkSettings"], "Beta\Microsoft\Graph\Model\AndroidForWorkSettings")) {
-                return $this->_propDict["androidForWorkSettings"];
-            } else {
-                $this->_propDict["androidForWorkSettings"] = new AndroidForWorkSettings($this->_propDict["androidForWorkSettings"]);
-                return $this->_propDict["androidForWorkSettings"];
-            }
+        if (array_key_exists("androidDeviceOwnerEnrollmentProfiles", $this->_propDict)) {
+           return $this->_propDict["androidDeviceOwnerEnrollmentProfiles"];
+        } else {
+            return null;
         }
-        return null;
     }
     
-    /**
-    * Sets the androidForWorkSettings
-    * The singleton Android for Work settings entity.
+    /** 
+    * Sets the androidDeviceOwnerEnrollmentProfiles
+    * Android device owner enrollment profile entities.
     *
-    * @param AndroidForWorkSettings $val The androidForWorkSettings
+    * @param AndroidDeviceOwnerEnrollmentProfile $val The androidDeviceOwnerEnrollmentProfiles
     *
     * @return DeviceManagement
     */
-    public function setAndroidForWorkSettings($val)
+    public function setAndroidDeviceOwnerEnrollmentProfiles($val)
     {
-        $this->_propDict["androidForWorkSettings"] = $val;
+		$this->_propDict["androidDeviceOwnerEnrollmentProfiles"] = $val;
         return $this;
     }
     
@@ -656,6 +653,39 @@ class DeviceManagement extends Entity
     public function setAndroidForWorkEnrollmentProfiles($val)
     {
 		$this->_propDict["androidForWorkEnrollmentProfiles"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the androidForWorkSettings
+    * The singleton Android for Work settings entity.
+    *
+    * @return AndroidForWorkSettings The androidForWorkSettings
+    */
+    public function getAndroidForWorkSettings()
+    {
+        if (array_key_exists("androidForWorkSettings", $this->_propDict)) {
+            if (is_a($this->_propDict["androidForWorkSettings"], "Beta\Microsoft\Graph\Model\AndroidForWorkSettings")) {
+                return $this->_propDict["androidForWorkSettings"];
+            } else {
+                $this->_propDict["androidForWorkSettings"] = new AndroidForWorkSettings($this->_propDict["androidForWorkSettings"]);
+                return $this->_propDict["androidForWorkSettings"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the androidForWorkSettings
+    * The singleton Android for Work settings entity.
+    *
+    * @param AndroidForWorkSettings $val The androidForWorkSettings
+    *
+    * @return DeviceManagement
+    */
+    public function setAndroidForWorkSettings($val)
+    {
+        $this->_propDict["androidForWorkSettings"] = $val;
         return $this;
     }
     
@@ -724,36 +754,6 @@ class DeviceManagement extends Entity
     
 
      /** 
-     * Gets the androidDeviceOwnerEnrollmentProfiles
-    * Android device owner enrollment profile entities.
-     *
-     * @return array The androidDeviceOwnerEnrollmentProfiles
-     */
-    public function getAndroidDeviceOwnerEnrollmentProfiles()
-    {
-        if (array_key_exists("androidDeviceOwnerEnrollmentProfiles", $this->_propDict)) {
-           return $this->_propDict["androidDeviceOwnerEnrollmentProfiles"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the androidDeviceOwnerEnrollmentProfiles
-    * Android device owner enrollment profile entities.
-    *
-    * @param AndroidDeviceOwnerEnrollmentProfile $val The androidDeviceOwnerEnrollmentProfiles
-    *
-    * @return DeviceManagement
-    */
-    public function setAndroidDeviceOwnerEnrollmentProfiles($val)
-    {
-		$this->_propDict["androidDeviceOwnerEnrollmentProfiles"] = $val;
-        return $this;
-    }
-    
-
-     /** 
      * Gets the assignmentFilters
     * The list of assignment filters
      *
@@ -812,33 +812,66 @@ class DeviceManagement extends Entity
         return $this;
     }
     
+    /**
+    * Gets the advancedThreatProtectionOnboardingStateSummary
+    * The summary state of ATP onboarding state for this account.
+    *
+    * @return AdvancedThreatProtectionOnboardingStateSummary The advancedThreatProtectionOnboardingStateSummary
+    */
+    public function getAdvancedThreatProtectionOnboardingStateSummary()
+    {
+        if (array_key_exists("advancedThreatProtectionOnboardingStateSummary", $this->_propDict)) {
+            if (is_a($this->_propDict["advancedThreatProtectionOnboardingStateSummary"], "Beta\Microsoft\Graph\Model\AdvancedThreatProtectionOnboardingStateSummary")) {
+                return $this->_propDict["advancedThreatProtectionOnboardingStateSummary"];
+            } else {
+                $this->_propDict["advancedThreatProtectionOnboardingStateSummary"] = new AdvancedThreatProtectionOnboardingStateSummary($this->_propDict["advancedThreatProtectionOnboardingStateSummary"]);
+                return $this->_propDict["advancedThreatProtectionOnboardingStateSummary"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the advancedThreatProtectionOnboardingStateSummary
+    * The summary state of ATP onboarding state for this account.
+    *
+    * @param AdvancedThreatProtectionOnboardingStateSummary $val The advancedThreatProtectionOnboardingStateSummary
+    *
+    * @return DeviceManagement
+    */
+    public function setAdvancedThreatProtectionOnboardingStateSummary($val)
+    {
+        $this->_propDict["advancedThreatProtectionOnboardingStateSummary"] = $val;
+        return $this;
+    }
+    
 
      /** 
-     * Gets the deviceConfigurations
-    * The device configurations.
+     * Gets the cartToClassAssociations
+    * The Cart To Class Associations.
      *
-     * @return array The deviceConfigurations
+     * @return array The cartToClassAssociations
      */
-    public function getDeviceConfigurations()
+    public function getCartToClassAssociations()
     {
-        if (array_key_exists("deviceConfigurations", $this->_propDict)) {
-           return $this->_propDict["deviceConfigurations"];
+        if (array_key_exists("cartToClassAssociations", $this->_propDict)) {
+           return $this->_propDict["cartToClassAssociations"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the deviceConfigurations
-    * The device configurations.
+    * Sets the cartToClassAssociations
+    * The Cart To Class Associations.
     *
-    * @param DeviceConfiguration $val The deviceConfigurations
+    * @param CartToClassAssociation $val The cartToClassAssociations
     *
     * @return DeviceManagement
     */
-    public function setDeviceConfigurations($val)
+    public function setCartToClassAssociations($val)
     {
-		$this->_propDict["deviceConfigurations"] = $val;
+		$this->_propDict["cartToClassAssociations"] = $val;
         return $this;
     }
     
@@ -869,39 +902,6 @@ class DeviceManagement extends Entity
     public function setDeviceCompliancePolicies($val)
     {
 		$this->_propDict["deviceCompliancePolicies"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the softwareUpdateStatusSummary
-    * The software update status summary.
-    *
-    * @return SoftwareUpdateStatusSummary The softwareUpdateStatusSummary
-    */
-    public function getSoftwareUpdateStatusSummary()
-    {
-        if (array_key_exists("softwareUpdateStatusSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["softwareUpdateStatusSummary"], "Beta\Microsoft\Graph\Model\SoftwareUpdateStatusSummary")) {
-                return $this->_propDict["softwareUpdateStatusSummary"];
-            } else {
-                $this->_propDict["softwareUpdateStatusSummary"] = new SoftwareUpdateStatusSummary($this->_propDict["softwareUpdateStatusSummary"]);
-                return $this->_propDict["softwareUpdateStatusSummary"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the softwareUpdateStatusSummary
-    * The software update status summary.
-    *
-    * @param SoftwareUpdateStatusSummary $val The softwareUpdateStatusSummary
-    *
-    * @return DeviceManagement
-    */
-    public function setSoftwareUpdateStatusSummary($val)
-    {
-        $this->_propDict["softwareUpdateStatusSummary"] = $val;
         return $this;
     }
     
@@ -968,36 +968,33 @@ class DeviceManagement extends Entity
         return $this;
     }
     
-    /**
-    * Gets the advancedThreatProtectionOnboardingStateSummary
-    * The summary state of ATP onboarding state for this account.
-    *
-    * @return AdvancedThreatProtectionOnboardingStateSummary The advancedThreatProtectionOnboardingStateSummary
-    */
-    public function getAdvancedThreatProtectionOnboardingStateSummary()
+
+     /** 
+     * Gets the deviceConfigurationConflictSummary
+    * Summary of policies in conflict state for this account.
+     *
+     * @return array The deviceConfigurationConflictSummary
+     */
+    public function getDeviceConfigurationConflictSummary()
     {
-        if (array_key_exists("advancedThreatProtectionOnboardingStateSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["advancedThreatProtectionOnboardingStateSummary"], "Beta\Microsoft\Graph\Model\AdvancedThreatProtectionOnboardingStateSummary")) {
-                return $this->_propDict["advancedThreatProtectionOnboardingStateSummary"];
-            } else {
-                $this->_propDict["advancedThreatProtectionOnboardingStateSummary"] = new AdvancedThreatProtectionOnboardingStateSummary($this->_propDict["advancedThreatProtectionOnboardingStateSummary"]);
-                return $this->_propDict["advancedThreatProtectionOnboardingStateSummary"];
-            }
+        if (array_key_exists("deviceConfigurationConflictSummary", $this->_propDict)) {
+           return $this->_propDict["deviceConfigurationConflictSummary"];
+        } else {
+            return null;
         }
-        return null;
     }
     
-    /**
-    * Sets the advancedThreatProtectionOnboardingStateSummary
-    * The summary state of ATP onboarding state for this account.
+    /** 
+    * Sets the deviceConfigurationConflictSummary
+    * Summary of policies in conflict state for this account.
     *
-    * @param AdvancedThreatProtectionOnboardingStateSummary $val The advancedThreatProtectionOnboardingStateSummary
+    * @param DeviceConfigurationConflictSummary $val The deviceConfigurationConflictSummary
     *
     * @return DeviceManagement
     */
-    public function setAdvancedThreatProtectionOnboardingStateSummary($val)
+    public function setDeviceConfigurationConflictSummary($val)
     {
-        $this->_propDict["advancedThreatProtectionOnboardingStateSummary"] = $val;
+		$this->_propDict["deviceConfigurationConflictSummary"] = $val;
         return $this;
     }
     
@@ -1031,6 +1028,96 @@ class DeviceManagement extends Entity
     public function setDeviceConfigurationDeviceStateSummaries($val)
     {
         $this->_propDict["deviceConfigurationDeviceStateSummaries"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the deviceConfigurationRestrictedAppsViolations
+    * Restricted apps violations for this account.
+     *
+     * @return array The deviceConfigurationRestrictedAppsViolations
+     */
+    public function getDeviceConfigurationRestrictedAppsViolations()
+    {
+        if (array_key_exists("deviceConfigurationRestrictedAppsViolations", $this->_propDict)) {
+           return $this->_propDict["deviceConfigurationRestrictedAppsViolations"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the deviceConfigurationRestrictedAppsViolations
+    * Restricted apps violations for this account.
+    *
+    * @param RestrictedAppsViolation $val The deviceConfigurationRestrictedAppsViolations
+    *
+    * @return DeviceManagement
+    */
+    public function setDeviceConfigurationRestrictedAppsViolations($val)
+    {
+		$this->_propDict["deviceConfigurationRestrictedAppsViolations"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the deviceConfigurations
+    * The device configurations.
+     *
+     * @return array The deviceConfigurations
+     */
+    public function getDeviceConfigurations()
+    {
+        if (array_key_exists("deviceConfigurations", $this->_propDict)) {
+           return $this->_propDict["deviceConfigurations"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the deviceConfigurations
+    * The device configurations.
+    *
+    * @param DeviceConfiguration $val The deviceConfigurations
+    *
+    * @return DeviceManagement
+    */
+    public function setDeviceConfigurations($val)
+    {
+		$this->_propDict["deviceConfigurations"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the deviceConfigurationsAllManagedDeviceCertificateStates
+    * Summary of all certificates for all devices.
+     *
+     * @return array The deviceConfigurationsAllManagedDeviceCertificateStates
+     */
+    public function getDeviceConfigurationsAllManagedDeviceCertificateStates()
+    {
+        if (array_key_exists("deviceConfigurationsAllManagedDeviceCertificateStates", $this->_propDict)) {
+           return $this->_propDict["deviceConfigurationsAllManagedDeviceCertificateStates"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the deviceConfigurationsAllManagedDeviceCertificateStates
+    * Summary of all certificates for all devices.
+    *
+    * @param ManagedAllDeviceCertificateState $val The deviceConfigurationsAllManagedDeviceCertificateStates
+    *
+    * @return DeviceManagement
+    */
+    public function setDeviceConfigurationsAllManagedDeviceCertificateStates($val)
+    {
+		$this->_propDict["deviceConfigurationsAllManagedDeviceCertificateStates"] = $val;
         return $this;
     }
     
@@ -1069,36 +1156,6 @@ class DeviceManagement extends Entity
     
 
      /** 
-     * Gets the cartToClassAssociations
-    * The Cart To Class Associations.
-     *
-     * @return array The cartToClassAssociations
-     */
-    public function getCartToClassAssociations()
-    {
-        if (array_key_exists("cartToClassAssociations", $this->_propDict)) {
-           return $this->_propDict["cartToClassAssociations"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the cartToClassAssociations
-    * The Cart To Class Associations.
-    *
-    * @param CartToClassAssociation $val The cartToClassAssociations
-    *
-    * @return DeviceManagement
-    */
-    public function setCartToClassAssociations($val)
-    {
-		$this->_propDict["cartToClassAssociations"] = $val;
-        return $this;
-    }
-    
-
-     /** 
      * Gets the iosUpdateStatuses
     * The IOS software update installation statuses for this account.
      *
@@ -1124,66 +1181,6 @@ class DeviceManagement extends Entity
     public function setIosUpdateStatuses($val)
     {
 		$this->_propDict["iosUpdateStatuses"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the ndesConnectors
-    * The collection of Ndes connectors for this account.
-     *
-     * @return array The ndesConnectors
-     */
-    public function getNdesConnectors()
-    {
-        if (array_key_exists("ndesConnectors", $this->_propDict)) {
-           return $this->_propDict["ndesConnectors"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the ndesConnectors
-    * The collection of Ndes connectors for this account.
-    *
-    * @param NdesConnector $val The ndesConnectors
-    *
-    * @return DeviceManagement
-    */
-    public function setNdesConnectors($val)
-    {
-		$this->_propDict["ndesConnectors"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the deviceConfigurationRestrictedAppsViolations
-    * Restricted apps violations for this account.
-     *
-     * @return array The deviceConfigurationRestrictedAppsViolations
-     */
-    public function getDeviceConfigurationRestrictedAppsViolations()
-    {
-        if (array_key_exists("deviceConfigurationRestrictedAppsViolations", $this->_propDict)) {
-           return $this->_propDict["deviceConfigurationRestrictedAppsViolations"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the deviceConfigurationRestrictedAppsViolations
-    * Restricted apps violations for this account.
-    *
-    * @param RestrictedAppsViolation $val The deviceConfigurationRestrictedAppsViolations
-    *
-    * @return DeviceManagement
-    */
-    public function setDeviceConfigurationRestrictedAppsViolations($val)
-    {
-		$this->_propDict["deviceConfigurationRestrictedAppsViolations"] = $val;
         return $this;
     }
     
@@ -1219,214 +1216,94 @@ class DeviceManagement extends Entity
     
 
      /** 
-     * Gets the deviceConfigurationConflictSummary
-    * Summary of policies in conflict state for this account.
+     * Gets the ndesConnectors
+    * The collection of Ndes connectors for this account.
      *
-     * @return array The deviceConfigurationConflictSummary
+     * @return array The ndesConnectors
      */
-    public function getDeviceConfigurationConflictSummary()
+    public function getNdesConnectors()
     {
-        if (array_key_exists("deviceConfigurationConflictSummary", $this->_propDict)) {
-           return $this->_propDict["deviceConfigurationConflictSummary"];
+        if (array_key_exists("ndesConnectors", $this->_propDict)) {
+           return $this->_propDict["ndesConnectors"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the deviceConfigurationConflictSummary
-    * Summary of policies in conflict state for this account.
+    * Sets the ndesConnectors
+    * The collection of Ndes connectors for this account.
     *
-    * @param DeviceConfigurationConflictSummary $val The deviceConfigurationConflictSummary
-    *
-    * @return DeviceManagement
-    */
-    public function setDeviceConfigurationConflictSummary($val)
-    {
-		$this->_propDict["deviceConfigurationConflictSummary"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the deviceConfigurationsAllManagedDeviceCertificateStates
-    * Summary of all certificates for all devices.
-     *
-     * @return array The deviceConfigurationsAllManagedDeviceCertificateStates
-     */
-    public function getDeviceConfigurationsAllManagedDeviceCertificateStates()
-    {
-        if (array_key_exists("deviceConfigurationsAllManagedDeviceCertificateStates", $this->_propDict)) {
-           return $this->_propDict["deviceConfigurationsAllManagedDeviceCertificateStates"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the deviceConfigurationsAllManagedDeviceCertificateStates
-    * Summary of all certificates for all devices.
-    *
-    * @param ManagedAllDeviceCertificateState $val The deviceConfigurationsAllManagedDeviceCertificateStates
+    * @param NdesConnector $val The ndesConnectors
     *
     * @return DeviceManagement
     */
-    public function setDeviceConfigurationsAllManagedDeviceCertificateStates($val)
+    public function setNdesConnectors($val)
     {
-		$this->_propDict["deviceConfigurationsAllManagedDeviceCertificateStates"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the deviceCategories
-    * The list of device categories with the tenant.
-     *
-     * @return array The deviceCategories
-     */
-    public function getDeviceCategories()
-    {
-        if (array_key_exists("deviceCategories", $this->_propDict)) {
-           return $this->_propDict["deviceCategories"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the deviceCategories
-    * The list of device categories with the tenant.
-    *
-    * @param DeviceCategory $val The deviceCategories
-    *
-    * @return DeviceManagement
-    */
-    public function setDeviceCategories($val)
-    {
-		$this->_propDict["deviceCategories"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the exchangeConnectors
-    * The list of Exchange Connectors configured by the tenant.
-     *
-     * @return array The exchangeConnectors
-     */
-    public function getExchangeConnectors()
-    {
-        if (array_key_exists("exchangeConnectors", $this->_propDict)) {
-           return $this->_propDict["exchangeConnectors"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the exchangeConnectors
-    * The list of Exchange Connectors configured by the tenant.
-    *
-    * @param DeviceManagementExchangeConnector $val The exchangeConnectors
-    *
-    * @return DeviceManagement
-    */
-    public function setExchangeConnectors($val)
-    {
-		$this->_propDict["exchangeConnectors"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the deviceEnrollmentConfigurations
-    * The list of device enrollment configurations
-     *
-     * @return array The deviceEnrollmentConfigurations
-     */
-    public function getDeviceEnrollmentConfigurations()
-    {
-        if (array_key_exists("deviceEnrollmentConfigurations", $this->_propDict)) {
-           return $this->_propDict["deviceEnrollmentConfigurations"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the deviceEnrollmentConfigurations
-    * The list of device enrollment configurations
-    *
-    * @param DeviceEnrollmentConfiguration $val The deviceEnrollmentConfigurations
-    *
-    * @return DeviceManagement
-    */
-    public function setDeviceEnrollmentConfigurations($val)
-    {
-		$this->_propDict["deviceEnrollmentConfigurations"] = $val;
+		$this->_propDict["ndesConnectors"] = $val;
         return $this;
     }
     
     /**
-    * Gets the exchangeOnPremisesPolicy
-    * The policy which controls mobile device access to Exchange On Premises
+    * Gets the softwareUpdateStatusSummary
+    * The software update status summary.
     *
-    * @return DeviceManagementExchangeOnPremisesPolicy The exchangeOnPremisesPolicy
+    * @return SoftwareUpdateStatusSummary The softwareUpdateStatusSummary
     */
-    public function getExchangeOnPremisesPolicy()
+    public function getSoftwareUpdateStatusSummary()
     {
-        if (array_key_exists("exchangeOnPremisesPolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["exchangeOnPremisesPolicy"], "Beta\Microsoft\Graph\Model\DeviceManagementExchangeOnPremisesPolicy")) {
-                return $this->_propDict["exchangeOnPremisesPolicy"];
+        if (array_key_exists("softwareUpdateStatusSummary", $this->_propDict)) {
+            if (is_a($this->_propDict["softwareUpdateStatusSummary"], "Beta\Microsoft\Graph\Model\SoftwareUpdateStatusSummary")) {
+                return $this->_propDict["softwareUpdateStatusSummary"];
             } else {
-                $this->_propDict["exchangeOnPremisesPolicy"] = new DeviceManagementExchangeOnPremisesPolicy($this->_propDict["exchangeOnPremisesPolicy"]);
-                return $this->_propDict["exchangeOnPremisesPolicy"];
+                $this->_propDict["softwareUpdateStatusSummary"] = new SoftwareUpdateStatusSummary($this->_propDict["softwareUpdateStatusSummary"]);
+                return $this->_propDict["softwareUpdateStatusSummary"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the exchangeOnPremisesPolicy
-    * The policy which controls mobile device access to Exchange On Premises
+    * Sets the softwareUpdateStatusSummary
+    * The software update status summary.
     *
-    * @param DeviceManagementExchangeOnPremisesPolicy $val The exchangeOnPremisesPolicy
+    * @param SoftwareUpdateStatusSummary $val The softwareUpdateStatusSummary
     *
     * @return DeviceManagement
     */
-    public function setExchangeOnPremisesPolicy($val)
+    public function setSoftwareUpdateStatusSummary($val)
     {
-        $this->_propDict["exchangeOnPremisesPolicy"] = $val;
+        $this->_propDict["softwareUpdateStatusSummary"] = $val;
         return $this;
     }
     
 
      /** 
-     * Gets the exchangeOnPremisesPolicies
-    * The list of Exchange On Premisis policies configured by the tenant.
+     * Gets the complianceManagementPartners
+    * The list of Compliance Management Partners configured by the tenant.
      *
-     * @return array The exchangeOnPremisesPolicies
+     * @return array The complianceManagementPartners
      */
-    public function getExchangeOnPremisesPolicies()
+    public function getComplianceManagementPartners()
     {
-        if (array_key_exists("exchangeOnPremisesPolicies", $this->_propDict)) {
-           return $this->_propDict["exchangeOnPremisesPolicies"];
+        if (array_key_exists("complianceManagementPartners", $this->_propDict)) {
+           return $this->_propDict["complianceManagementPartners"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the exchangeOnPremisesPolicies
-    * The list of Exchange On Premisis policies configured by the tenant.
+    * Sets the complianceManagementPartners
+    * The list of Compliance Management Partners configured by the tenant.
     *
-    * @param DeviceManagementExchangeOnPremisesPolicy $val The exchangeOnPremisesPolicies
+    * @param ComplianceManagementPartner $val The complianceManagementPartners
     *
     * @return DeviceManagement
     */
-    public function setExchangeOnPremisesPolicies($val)
+    public function setComplianceManagementPartners($val)
     {
-		$this->_propDict["exchangeOnPremisesPolicies"] = $val;
+		$this->_propDict["complianceManagementPartners"] = $val;
         return $this;
     }
     
@@ -1465,31 +1342,61 @@ class DeviceManagement extends Entity
     
 
      /** 
-     * Gets the mobileThreatDefenseConnectors
-    * The list of Mobile threat Defense connectors configured by the tenant.
+     * Gets the deviceCategories
+    * The list of device categories with the tenant.
      *
-     * @return array The mobileThreatDefenseConnectors
+     * @return array The deviceCategories
      */
-    public function getMobileThreatDefenseConnectors()
+    public function getDeviceCategories()
     {
-        if (array_key_exists("mobileThreatDefenseConnectors", $this->_propDict)) {
-           return $this->_propDict["mobileThreatDefenseConnectors"];
+        if (array_key_exists("deviceCategories", $this->_propDict)) {
+           return $this->_propDict["deviceCategories"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the mobileThreatDefenseConnectors
-    * The list of Mobile threat Defense connectors configured by the tenant.
+    * Sets the deviceCategories
+    * The list of device categories with the tenant.
     *
-    * @param MobileThreatDefenseConnector $val The mobileThreatDefenseConnectors
+    * @param DeviceCategory $val The deviceCategories
     *
     * @return DeviceManagement
     */
-    public function setMobileThreatDefenseConnectors($val)
+    public function setDeviceCategories($val)
     {
-		$this->_propDict["mobileThreatDefenseConnectors"] = $val;
+		$this->_propDict["deviceCategories"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the deviceEnrollmentConfigurations
+    * The list of device enrollment configurations
+     *
+     * @return array The deviceEnrollmentConfigurations
+     */
+    public function getDeviceEnrollmentConfigurations()
+    {
+        if (array_key_exists("deviceEnrollmentConfigurations", $this->_propDict)) {
+           return $this->_propDict["deviceEnrollmentConfigurations"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the deviceEnrollmentConfigurations
+    * The list of device enrollment configurations
+    *
+    * @param DeviceEnrollmentConfiguration $val The deviceEnrollmentConfigurations
+    *
+    * @return DeviceManagement
+    */
+    public function setDeviceEnrollmentConfigurations($val)
+    {
+		$this->_propDict["deviceEnrollmentConfigurations"] = $val;
         return $this;
     }
     
@@ -1525,31 +1432,154 @@ class DeviceManagement extends Entity
     
 
      /** 
-     * Gets the complianceManagementPartners
-    * The list of Compliance Management Partners configured by the tenant.
+     * Gets the exchangeConnectors
+    * The list of Exchange Connectors configured by the tenant.
      *
-     * @return array The complianceManagementPartners
+     * @return array The exchangeConnectors
      */
-    public function getComplianceManagementPartners()
+    public function getExchangeConnectors()
     {
-        if (array_key_exists("complianceManagementPartners", $this->_propDict)) {
-           return $this->_propDict["complianceManagementPartners"];
+        if (array_key_exists("exchangeConnectors", $this->_propDict)) {
+           return $this->_propDict["exchangeConnectors"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the complianceManagementPartners
-    * The list of Compliance Management Partners configured by the tenant.
+    * Sets the exchangeConnectors
+    * The list of Exchange Connectors configured by the tenant.
     *
-    * @param ComplianceManagementPartner $val The complianceManagementPartners
+    * @param DeviceManagementExchangeConnector $val The exchangeConnectors
     *
     * @return DeviceManagement
     */
-    public function setComplianceManagementPartners($val)
+    public function setExchangeConnectors($val)
     {
-		$this->_propDict["complianceManagementPartners"] = $val;
+		$this->_propDict["exchangeConnectors"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the exchangeOnPremisesPolicies
+    * The list of Exchange On Premisis policies configured by the tenant.
+     *
+     * @return array The exchangeOnPremisesPolicies
+     */
+    public function getExchangeOnPremisesPolicies()
+    {
+        if (array_key_exists("exchangeOnPremisesPolicies", $this->_propDict)) {
+           return $this->_propDict["exchangeOnPremisesPolicies"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the exchangeOnPremisesPolicies
+    * The list of Exchange On Premisis policies configured by the tenant.
+    *
+    * @param DeviceManagementExchangeOnPremisesPolicy $val The exchangeOnPremisesPolicies
+    *
+    * @return DeviceManagement
+    */
+    public function setExchangeOnPremisesPolicies($val)
+    {
+		$this->_propDict["exchangeOnPremisesPolicies"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the exchangeOnPremisesPolicy
+    * The policy which controls mobile device access to Exchange On Premises
+    *
+    * @return DeviceManagementExchangeOnPremisesPolicy The exchangeOnPremisesPolicy
+    */
+    public function getExchangeOnPremisesPolicy()
+    {
+        if (array_key_exists("exchangeOnPremisesPolicy", $this->_propDict)) {
+            if (is_a($this->_propDict["exchangeOnPremisesPolicy"], "Beta\Microsoft\Graph\Model\DeviceManagementExchangeOnPremisesPolicy")) {
+                return $this->_propDict["exchangeOnPremisesPolicy"];
+            } else {
+                $this->_propDict["exchangeOnPremisesPolicy"] = new DeviceManagementExchangeOnPremisesPolicy($this->_propDict["exchangeOnPremisesPolicy"]);
+                return $this->_propDict["exchangeOnPremisesPolicy"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the exchangeOnPremisesPolicy
+    * The policy which controls mobile device access to Exchange On Premises
+    *
+    * @param DeviceManagementExchangeOnPremisesPolicy $val The exchangeOnPremisesPolicy
+    *
+    * @return DeviceManagement
+    */
+    public function setExchangeOnPremisesPolicy($val)
+    {
+        $this->_propDict["exchangeOnPremisesPolicy"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the mobileThreatDefenseConnectors
+    * The list of Mobile threat Defense connectors configured by the tenant.
+     *
+     * @return array The mobileThreatDefenseConnectors
+     */
+    public function getMobileThreatDefenseConnectors()
+    {
+        if (array_key_exists("mobileThreatDefenseConnectors", $this->_propDict)) {
+           return $this->_propDict["mobileThreatDefenseConnectors"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the mobileThreatDefenseConnectors
+    * The list of Mobile threat Defense connectors configured by the tenant.
+    *
+    * @param MobileThreatDefenseConnector $val The mobileThreatDefenseConnectors
+    *
+    * @return DeviceManagement
+    */
+    public function setMobileThreatDefenseConnectors($val)
+    {
+		$this->_propDict["mobileThreatDefenseConnectors"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the categories
+    * The available categories
+     *
+     * @return array The categories
+     */
+    public function getCategories()
+    {
+        if (array_key_exists("categories", $this->_propDict)) {
+           return $this->_propDict["categories"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the categories
+    * The available categories
+    *
+    * @param DeviceManagementSettingCategory $val The categories
+    *
+    * @return DeviceManagement
+    */
+    public function setCategories($val)
+    {
+		$this->_propDict["categories"] = $val;
         return $this;
     }
     
@@ -1643,66 +1673,6 @@ class DeviceManagement extends Entity
         return $this;
     }
     
-
-     /** 
-     * Gets the categories
-    * The available categories
-     *
-     * @return array The categories
-     */
-    public function getCategories()
-    {
-        if (array_key_exists("categories", $this->_propDict)) {
-           return $this->_propDict["categories"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the categories
-    * The available categories
-    *
-    * @param DeviceManagementSettingCategory $val The categories
-    *
-    * @return DeviceManagement
-    */
-    public function setCategories($val)
-    {
-		$this->_propDict["categories"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the remoteActionAudits
-    * The list of device remote action audits with the tenant.
-     *
-     * @return array The remoteActionAudits
-     */
-    public function getRemoteActionAudits()
-    {
-        if (array_key_exists("remoteActionAudits", $this->_propDict)) {
-           return $this->_propDict["remoteActionAudits"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the remoteActionAudits
-    * The list of device remote action audits with the tenant.
-    *
-    * @param RemoteActionAudit $val The remoteActionAudits
-    *
-    * @return DeviceManagement
-    */
-    public function setRemoteActionAudits($val)
-    {
-		$this->_propDict["remoteActionAudits"] = $val;
-        return $this;
-    }
-    
     /**
     * Gets the applePushNotificationCertificate
     * Apple push notification certificate.
@@ -1733,6 +1703,186 @@ class DeviceManagement extends Entity
     public function setApplePushNotificationCertificate($val)
     {
         $this->_propDict["applePushNotificationCertificate"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the comanagedDevices
+    * The list of co-managed devices report
+     *
+     * @return array The comanagedDevices
+     */
+    public function getComanagedDevices()
+    {
+        if (array_key_exists("comanagedDevices", $this->_propDict)) {
+           return $this->_propDict["comanagedDevices"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the comanagedDevices
+    * The list of co-managed devices report
+    *
+    * @param ManagedDevice $val The comanagedDevices
+    *
+    * @return DeviceManagement
+    */
+    public function setComanagedDevices($val)
+    {
+		$this->_propDict["comanagedDevices"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the comanagementEligibleDevices
+    * The list of co-management eligible devices report
+     *
+     * @return array The comanagementEligibleDevices
+     */
+    public function getComanagementEligibleDevices()
+    {
+        if (array_key_exists("comanagementEligibleDevices", $this->_propDict)) {
+           return $this->_propDict["comanagementEligibleDevices"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the comanagementEligibleDevices
+    * The list of co-management eligible devices report
+    *
+    * @param ComanagementEligibleDevice $val The comanagementEligibleDevices
+    *
+    * @return DeviceManagement
+    */
+    public function setComanagementEligibleDevices($val)
+    {
+		$this->_propDict["comanagementEligibleDevices"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the dataSharingConsents
+    * Data sharing consents.
+     *
+     * @return array The dataSharingConsents
+     */
+    public function getDataSharingConsents()
+    {
+        if (array_key_exists("dataSharingConsents", $this->_propDict)) {
+           return $this->_propDict["dataSharingConsents"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the dataSharingConsents
+    * Data sharing consents.
+    *
+    * @param DataSharingConsent $val The dataSharingConsents
+    *
+    * @return DeviceManagement
+    */
+    public function setDataSharingConsents($val)
+    {
+		$this->_propDict["dataSharingConsents"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the detectedApps
+    * The list of detected apps associated with a device.
+     *
+     * @return array The detectedApps
+     */
+    public function getDetectedApps()
+    {
+        if (array_key_exists("detectedApps", $this->_propDict)) {
+           return $this->_propDict["detectedApps"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the detectedApps
+    * The list of detected apps associated with a device.
+    *
+    * @param DetectedApp $val The detectedApps
+    *
+    * @return DeviceManagement
+    */
+    public function setDetectedApps($val)
+    {
+		$this->_propDict["detectedApps"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the deviceComplianceScripts
+    * The list of device compliance scripts associated with the tenant.
+     *
+     * @return array The deviceComplianceScripts
+     */
+    public function getDeviceComplianceScripts()
+    {
+        if (array_key_exists("deviceComplianceScripts", $this->_propDict)) {
+           return $this->_propDict["deviceComplianceScripts"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the deviceComplianceScripts
+    * The list of device compliance scripts associated with the tenant.
+    *
+    * @param DeviceComplianceScript $val The deviceComplianceScripts
+    *
+    * @return DeviceManagement
+    */
+    public function setDeviceComplianceScripts($val)
+    {
+		$this->_propDict["deviceComplianceScripts"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the deviceHealthScripts
+    * The list of device health scripts associated with the tenant.
+     *
+     * @return array The deviceHealthScripts
+     */
+    public function getDeviceHealthScripts()
+    {
+        if (array_key_exists("deviceHealthScripts", $this->_propDict)) {
+           return $this->_propDict["deviceHealthScripts"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the deviceHealthScripts
+    * The list of device health scripts associated with the tenant.
+    *
+    * @param DeviceHealthScript $val The deviceHealthScripts
+    *
+    * @return DeviceManagement
+    */
+    public function setDeviceHealthScripts($val)
+    {
+		$this->_propDict["deviceHealthScripts"] = $val;
         return $this;
     }
     
@@ -1796,66 +1946,6 @@ class DeviceManagement extends Entity
         return $this;
     }
     
-
-     /** 
-     * Gets the deviceHealthScripts
-    * The list of device health scripts associated with the tenant.
-     *
-     * @return array The deviceHealthScripts
-     */
-    public function getDeviceHealthScripts()
-    {
-        if (array_key_exists("deviceHealthScripts", $this->_propDict)) {
-           return $this->_propDict["deviceHealthScripts"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the deviceHealthScripts
-    * The list of device health scripts associated with the tenant.
-    *
-    * @param DeviceHealthScript $val The deviceHealthScripts
-    *
-    * @return DeviceManagement
-    */
-    public function setDeviceHealthScripts($val)
-    {
-		$this->_propDict["deviceHealthScripts"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the deviceComplianceScripts
-    * The list of device compliance scripts associated with the tenant.
-     *
-     * @return array The deviceComplianceScripts
-     */
-    public function getDeviceComplianceScripts()
-    {
-        if (array_key_exists("deviceComplianceScripts", $this->_propDict)) {
-           return $this->_propDict["deviceComplianceScripts"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the deviceComplianceScripts
-    * The list of device compliance scripts associated with the tenant.
-    *
-    * @param DeviceComplianceScript $val The deviceComplianceScripts
-    *
-    * @return DeviceManagement
-    */
-    public function setDeviceComplianceScripts($val)
-    {
-		$this->_propDict["deviceComplianceScripts"] = $val;
-        return $this;
-    }
-    
     /**
     * Gets the managedDeviceOverview
     * Device overview
@@ -1891,36 +1981,6 @@ class DeviceManagement extends Entity
     
 
      /** 
-     * Gets the detectedApps
-    * The list of detected apps associated with a device.
-     *
-     * @return array The detectedApps
-     */
-    public function getDetectedApps()
-    {
-        if (array_key_exists("detectedApps", $this->_propDict)) {
-           return $this->_propDict["detectedApps"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the detectedApps
-    * The list of detected apps associated with a device.
-    *
-    * @param DetectedApp $val The detectedApps
-    *
-    * @return DeviceManagement
-    */
-    public function setDetectedApps($val)
-    {
-		$this->_propDict["detectedApps"] = $val;
-        return $this;
-    }
-    
-
-     /** 
      * Gets the managedDevices
     * The list of managed devices.
      *
@@ -1946,66 +2006,6 @@ class DeviceManagement extends Entity
     public function setManagedDevices($val)
     {
 		$this->_propDict["managedDevices"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the windowsMalwareInformation
-    * The list of affected malware in the tenant.
-     *
-     * @return array The windowsMalwareInformation
-     */
-    public function getWindowsMalwareInformation()
-    {
-        if (array_key_exists("windowsMalwareInformation", $this->_propDict)) {
-           return $this->_propDict["windowsMalwareInformation"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the windowsMalwareInformation
-    * The list of affected malware in the tenant.
-    *
-    * @param WindowsMalwareInformation $val The windowsMalwareInformation
-    *
-    * @return DeviceManagement
-    */
-    public function setWindowsMalwareInformation($val)
-    {
-		$this->_propDict["windowsMalwareInformation"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the dataSharingConsents
-    * Data sharing consents.
-     *
-     * @return array The dataSharingConsents
-     */
-    public function getDataSharingConsents()
-    {
-        if (array_key_exists("dataSharingConsents", $this->_propDict)) {
-           return $this->_propDict["dataSharingConsents"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the dataSharingConsents
-    * Data sharing consents.
-    *
-    * @param DataSharingConsent $val The dataSharingConsents
-    *
-    * @return DeviceManagement
-    */
-    public function setDataSharingConsents($val)
-    {
-		$this->_propDict["dataSharingConsents"] = $val;
         return $this;
     }
     
@@ -2039,36 +2039,63 @@ class DeviceManagement extends Entity
         return $this;
     }
     
-    /**
-    * Gets the userExperienceAnalyticsOverview
-    * User experience analytics overview
-    *
-    * @return UserExperienceAnalyticsOverview The userExperienceAnalyticsOverview
-    */
-    public function getUserExperienceAnalyticsOverview()
+
+     /** 
+     * Gets the remoteActionAudits
+    * The list of device remote action audits with the tenant.
+     *
+     * @return array The remoteActionAudits
+     */
+    public function getRemoteActionAudits()
     {
-        if (array_key_exists("userExperienceAnalyticsOverview", $this->_propDict)) {
-            if (is_a($this->_propDict["userExperienceAnalyticsOverview"], "Beta\Microsoft\Graph\Model\UserExperienceAnalyticsOverview")) {
-                return $this->_propDict["userExperienceAnalyticsOverview"];
-            } else {
-                $this->_propDict["userExperienceAnalyticsOverview"] = new UserExperienceAnalyticsOverview($this->_propDict["userExperienceAnalyticsOverview"]);
-                return $this->_propDict["userExperienceAnalyticsOverview"];
-            }
+        if (array_key_exists("remoteActionAudits", $this->_propDict)) {
+           return $this->_propDict["remoteActionAudits"];
+        } else {
+            return null;
         }
-        return null;
     }
     
-    /**
-    * Sets the userExperienceAnalyticsOverview
-    * User experience analytics overview
+    /** 
+    * Sets the remoteActionAudits
+    * The list of device remote action audits with the tenant.
     *
-    * @param UserExperienceAnalyticsOverview $val The userExperienceAnalyticsOverview
+    * @param RemoteActionAudit $val The remoteActionAudits
     *
     * @return DeviceManagement
     */
-    public function setUserExperienceAnalyticsOverview($val)
+    public function setRemoteActionAudits($val)
     {
-        $this->_propDict["userExperienceAnalyticsOverview"] = $val;
+		$this->_propDict["remoteActionAudits"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the userExperienceAnalyticsAppHealthApplicationPerformance
+    * User experience analytics appHealth Application Performance
+     *
+     * @return array The userExperienceAnalyticsAppHealthApplicationPerformance
+     */
+    public function getUserExperienceAnalyticsAppHealthApplicationPerformance()
+    {
+        if (array_key_exists("userExperienceAnalyticsAppHealthApplicationPerformance", $this->_propDict)) {
+           return $this->_propDict["userExperienceAnalyticsAppHealthApplicationPerformance"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the userExperienceAnalyticsAppHealthApplicationPerformance
+    * User experience analytics appHealth Application Performance
+    *
+    * @param UserExperienceAnalyticsAppHealthApplicationPerformance $val The userExperienceAnalyticsAppHealthApplicationPerformance
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsAppHealthApplicationPerformance($val)
+    {
+		$this->_propDict["userExperienceAnalyticsAppHealthApplicationPerformance"] = $val;
         return $this;
     }
     
@@ -2159,39 +2186,6 @@ class DeviceManagement extends Entity
     public function setUserExperienceAnalyticsDevicePerformance($val)
     {
 		$this->_propDict["userExperienceAnalyticsDevicePerformance"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the userExperienceAnalyticsRegressionSummary
-    * User experience analytics regression summary
-    *
-    * @return UserExperienceAnalyticsRegressionSummary The userExperienceAnalyticsRegressionSummary
-    */
-    public function getUserExperienceAnalyticsRegressionSummary()
-    {
-        if (array_key_exists("userExperienceAnalyticsRegressionSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["userExperienceAnalyticsRegressionSummary"], "Beta\Microsoft\Graph\Model\UserExperienceAnalyticsRegressionSummary")) {
-                return $this->_propDict["userExperienceAnalyticsRegressionSummary"];
-            } else {
-                $this->_propDict["userExperienceAnalyticsRegressionSummary"] = new UserExperienceAnalyticsRegressionSummary($this->_propDict["userExperienceAnalyticsRegressionSummary"]);
-                return $this->_propDict["userExperienceAnalyticsRegressionSummary"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the userExperienceAnalyticsRegressionSummary
-    * User experience analytics regression summary
-    *
-    * @param UserExperienceAnalyticsRegressionSummary $val The userExperienceAnalyticsRegressionSummary
-    *
-    * @return DeviceManagement
-    */
-    public function setUserExperienceAnalyticsRegressionSummary($val)
-    {
-        $this->_propDict["userExperienceAnalyticsRegressionSummary"] = $val;
         return $this;
     }
     
@@ -2287,6 +2281,102 @@ class DeviceManagement extends Entity
     
 
      /** 
+     * Gets the userExperienceAnalyticsMetricHistory
+    * User experience analytics metric history
+     *
+     * @return array The userExperienceAnalyticsMetricHistory
+     */
+    public function getUserExperienceAnalyticsMetricHistory()
+    {
+        if (array_key_exists("userExperienceAnalyticsMetricHistory", $this->_propDict)) {
+           return $this->_propDict["userExperienceAnalyticsMetricHistory"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the userExperienceAnalyticsMetricHistory
+    * User experience analytics metric history
+    *
+    * @param UserExperienceAnalyticsMetricHistory $val The userExperienceAnalyticsMetricHistory
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsMetricHistory($val)
+    {
+		$this->_propDict["userExperienceAnalyticsMetricHistory"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userExperienceAnalyticsOverview
+    * User experience analytics overview
+    *
+    * @return UserExperienceAnalyticsOverview The userExperienceAnalyticsOverview
+    */
+    public function getUserExperienceAnalyticsOverview()
+    {
+        if (array_key_exists("userExperienceAnalyticsOverview", $this->_propDict)) {
+            if (is_a($this->_propDict["userExperienceAnalyticsOverview"], "Beta\Microsoft\Graph\Model\UserExperienceAnalyticsOverview")) {
+                return $this->_propDict["userExperienceAnalyticsOverview"];
+            } else {
+                $this->_propDict["userExperienceAnalyticsOverview"] = new UserExperienceAnalyticsOverview($this->_propDict["userExperienceAnalyticsOverview"]);
+                return $this->_propDict["userExperienceAnalyticsOverview"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the userExperienceAnalyticsOverview
+    * User experience analytics overview
+    *
+    * @param UserExperienceAnalyticsOverview $val The userExperienceAnalyticsOverview
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsOverview($val)
+    {
+        $this->_propDict["userExperienceAnalyticsOverview"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userExperienceAnalyticsRegressionSummary
+    * User experience analytics regression summary
+    *
+    * @return UserExperienceAnalyticsRegressionSummary The userExperienceAnalyticsRegressionSummary
+    */
+    public function getUserExperienceAnalyticsRegressionSummary()
+    {
+        if (array_key_exists("userExperienceAnalyticsRegressionSummary", $this->_propDict)) {
+            if (is_a($this->_propDict["userExperienceAnalyticsRegressionSummary"], "Beta\Microsoft\Graph\Model\UserExperienceAnalyticsRegressionSummary")) {
+                return $this->_propDict["userExperienceAnalyticsRegressionSummary"];
+            } else {
+                $this->_propDict["userExperienceAnalyticsRegressionSummary"] = new UserExperienceAnalyticsRegressionSummary($this->_propDict["userExperienceAnalyticsRegressionSummary"]);
+                return $this->_propDict["userExperienceAnalyticsRegressionSummary"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the userExperienceAnalyticsRegressionSummary
+    * User experience analytics regression summary
+    *
+    * @param UserExperienceAnalyticsRegressionSummary $val The userExperienceAnalyticsRegressionSummary
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsRegressionSummary($val)
+    {
+        $this->_propDict["userExperienceAnalyticsRegressionSummary"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the userExperienceAnalyticsScoreHistory
     * User experience analytics device Startup Score History
      *
@@ -2317,121 +2407,31 @@ class DeviceManagement extends Entity
     
 
      /** 
-     * Gets the userExperienceAnalyticsMetricHistory
-    * User experience analytics metric history
+     * Gets the windowsMalwareInformation
+    * The list of affected malware in the tenant.
      *
-     * @return array The userExperienceAnalyticsMetricHistory
+     * @return array The windowsMalwareInformation
      */
-    public function getUserExperienceAnalyticsMetricHistory()
+    public function getWindowsMalwareInformation()
     {
-        if (array_key_exists("userExperienceAnalyticsMetricHistory", $this->_propDict)) {
-           return $this->_propDict["userExperienceAnalyticsMetricHistory"];
+        if (array_key_exists("windowsMalwareInformation", $this->_propDict)) {
+           return $this->_propDict["windowsMalwareInformation"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the userExperienceAnalyticsMetricHistory
-    * User experience analytics metric history
+    * Sets the windowsMalwareInformation
+    * The list of affected malware in the tenant.
     *
-    * @param UserExperienceAnalyticsMetricHistory $val The userExperienceAnalyticsMetricHistory
-    *
-    * @return DeviceManagement
-    */
-    public function setUserExperienceAnalyticsMetricHistory($val)
-    {
-		$this->_propDict["userExperienceAnalyticsMetricHistory"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the userExperienceAnalyticsAppHealthApplicationPerformance
-    * User experience analytics appHealth Application Performance
-     *
-     * @return array The userExperienceAnalyticsAppHealthApplicationPerformance
-     */
-    public function getUserExperienceAnalyticsAppHealthApplicationPerformance()
-    {
-        if (array_key_exists("userExperienceAnalyticsAppHealthApplicationPerformance", $this->_propDict)) {
-           return $this->_propDict["userExperienceAnalyticsAppHealthApplicationPerformance"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the userExperienceAnalyticsAppHealthApplicationPerformance
-    * User experience analytics appHealth Application Performance
-    *
-    * @param UserExperienceAnalyticsAppHealthApplicationPerformance $val The userExperienceAnalyticsAppHealthApplicationPerformance
+    * @param WindowsMalwareInformation $val The windowsMalwareInformation
     *
     * @return DeviceManagement
     */
-    public function setUserExperienceAnalyticsAppHealthApplicationPerformance($val)
+    public function setWindowsMalwareInformation($val)
     {
-		$this->_propDict["userExperienceAnalyticsAppHealthApplicationPerformance"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the comanagedDevices
-    * The list of co-managed devices report
-     *
-     * @return array The comanagedDevices
-     */
-    public function getComanagedDevices()
-    {
-        if (array_key_exists("comanagedDevices", $this->_propDict)) {
-           return $this->_propDict["comanagedDevices"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the comanagedDevices
-    * The list of co-managed devices report
-    *
-    * @param ManagedDevice $val The comanagedDevices
-    *
-    * @return DeviceManagement
-    */
-    public function setComanagedDevices($val)
-    {
-		$this->_propDict["comanagedDevices"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the comanagementEligibleDevices
-    * The list of co-management eligible devices report
-     *
-     * @return array The comanagementEligibleDevices
-     */
-    public function getComanagementEligibleDevices()
-    {
-        if (array_key_exists("comanagementEligibleDevices", $this->_propDict)) {
-           return $this->_propDict["comanagementEligibleDevices"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the comanagementEligibleDevices
-    * The list of co-management eligible devices report
-    *
-    * @param ComanagementEligibleDevice $val The comanagementEligibleDevices
-    *
-    * @return DeviceManagement
-    */
-    public function setComanagementEligibleDevices($val)
-    {
-		$this->_propDict["comanagementEligibleDevices"] = $val;
+		$this->_propDict["windowsMalwareInformation"] = $val;
         return $this;
     }
     
@@ -2465,126 +2465,33 @@ class DeviceManagement extends Entity
         return $this;
     }
     
-    /**
-    * Gets the windowsAutopilotSettings
-    * The Windows autopilot account settings.
-    *
-    * @return WindowsAutopilotSettings The windowsAutopilotSettings
-    */
-    public function getWindowsAutopilotSettings()
-    {
-        if (array_key_exists("windowsAutopilotSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["windowsAutopilotSettings"], "Beta\Microsoft\Graph\Model\WindowsAutopilotSettings")) {
-                return $this->_propDict["windowsAutopilotSettings"];
-            } else {
-                $this->_propDict["windowsAutopilotSettings"] = new WindowsAutopilotSettings($this->_propDict["windowsAutopilotSettings"]);
-                return $this->_propDict["windowsAutopilotSettings"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the windowsAutopilotSettings
-    * The Windows autopilot account settings.
-    *
-    * @param WindowsAutopilotSettings $val The windowsAutopilotSettings
-    *
-    * @return DeviceManagement
-    */
-    public function setWindowsAutopilotSettings($val)
-    {
-        $this->_propDict["windowsAutopilotSettings"] = $val;
-        return $this;
-    }
-    
 
      /** 
-     * Gets the windowsAutopilotDeviceIdentities
-    * The Windows autopilot device identities contained collection.
+     * Gets the appleUserInitiatedEnrollmentProfiles
+    * Apple user initiated enrollment profiles
      *
-     * @return array The windowsAutopilotDeviceIdentities
+     * @return array The appleUserInitiatedEnrollmentProfiles
      */
-    public function getWindowsAutopilotDeviceIdentities()
+    public function getAppleUserInitiatedEnrollmentProfiles()
     {
-        if (array_key_exists("windowsAutopilotDeviceIdentities", $this->_propDict)) {
-           return $this->_propDict["windowsAutopilotDeviceIdentities"];
+        if (array_key_exists("appleUserInitiatedEnrollmentProfiles", $this->_propDict)) {
+           return $this->_propDict["appleUserInitiatedEnrollmentProfiles"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the windowsAutopilotDeviceIdentities
-    * The Windows autopilot device identities contained collection.
+    * Sets the appleUserInitiatedEnrollmentProfiles
+    * Apple user initiated enrollment profiles
     *
-    * @param WindowsAutopilotDeviceIdentity $val The windowsAutopilotDeviceIdentities
-    *
-    * @return DeviceManagement
-    */
-    public function setWindowsAutopilotDeviceIdentities($val)
-    {
-		$this->_propDict["windowsAutopilotDeviceIdentities"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the windowsAutopilotDeploymentProfiles
-    * Windows auto pilot deployment profiles
-     *
-     * @return array The windowsAutopilotDeploymentProfiles
-     */
-    public function getWindowsAutopilotDeploymentProfiles()
-    {
-        if (array_key_exists("windowsAutopilotDeploymentProfiles", $this->_propDict)) {
-           return $this->_propDict["windowsAutopilotDeploymentProfiles"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the windowsAutopilotDeploymentProfiles
-    * Windows auto pilot deployment profiles
-    *
-    * @param WindowsAutopilotDeploymentProfile $val The windowsAutopilotDeploymentProfiles
+    * @param AppleUserInitiatedEnrollmentProfile $val The appleUserInitiatedEnrollmentProfiles
     *
     * @return DeviceManagement
     */
-    public function setWindowsAutopilotDeploymentProfiles($val)
+    public function setAppleUserInitiatedEnrollmentProfiles($val)
     {
-		$this->_propDict["windowsAutopilotDeploymentProfiles"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the importedDeviceIdentities
-    * The imported device identities.
-     *
-     * @return array The importedDeviceIdentities
-     */
-    public function getImportedDeviceIdentities()
-    {
-        if (array_key_exists("importedDeviceIdentities", $this->_propDict)) {
-           return $this->_propDict["importedDeviceIdentities"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the importedDeviceIdentities
-    * The imported device identities.
-    *
-    * @param ImportedDeviceIdentity $val The importedDeviceIdentities
-    *
-    * @return DeviceManagement
-    */
-    public function setImportedDeviceIdentities($val)
-    {
-		$this->_propDict["importedDeviceIdentities"] = $val;
+		$this->_propDict["appleUserInitiatedEnrollmentProfiles"] = $val;
         return $this;
     }
     
@@ -2620,6 +2527,36 @@ class DeviceManagement extends Entity
     
 
      /** 
+     * Gets the importedDeviceIdentities
+    * The imported device identities.
+     *
+     * @return array The importedDeviceIdentities
+     */
+    public function getImportedDeviceIdentities()
+    {
+        if (array_key_exists("importedDeviceIdentities", $this->_propDict)) {
+           return $this->_propDict["importedDeviceIdentities"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the importedDeviceIdentities
+    * The imported device identities.
+    *
+    * @param ImportedDeviceIdentity $val The importedDeviceIdentities
+    *
+    * @return DeviceManagement
+    */
+    public function setImportedDeviceIdentities($val)
+    {
+		$this->_propDict["importedDeviceIdentities"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the importedWindowsAutopilotDeviceIdentities
     * Collection of imported Windows autopilot devices.
      *
@@ -2650,31 +2587,94 @@ class DeviceManagement extends Entity
     
 
      /** 
-     * Gets the appleUserInitiatedEnrollmentProfiles
-    * Apple user initiated enrollment profiles
+     * Gets the windowsAutopilotDeploymentProfiles
+    * Windows auto pilot deployment profiles
      *
-     * @return array The appleUserInitiatedEnrollmentProfiles
+     * @return array The windowsAutopilotDeploymentProfiles
      */
-    public function getAppleUserInitiatedEnrollmentProfiles()
+    public function getWindowsAutopilotDeploymentProfiles()
     {
-        if (array_key_exists("appleUserInitiatedEnrollmentProfiles", $this->_propDict)) {
-           return $this->_propDict["appleUserInitiatedEnrollmentProfiles"];
+        if (array_key_exists("windowsAutopilotDeploymentProfiles", $this->_propDict)) {
+           return $this->_propDict["windowsAutopilotDeploymentProfiles"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the appleUserInitiatedEnrollmentProfiles
-    * Apple user initiated enrollment profiles
+    * Sets the windowsAutopilotDeploymentProfiles
+    * Windows auto pilot deployment profiles
     *
-    * @param AppleUserInitiatedEnrollmentProfile $val The appleUserInitiatedEnrollmentProfiles
+    * @param WindowsAutopilotDeploymentProfile $val The windowsAutopilotDeploymentProfiles
     *
     * @return DeviceManagement
     */
-    public function setAppleUserInitiatedEnrollmentProfiles($val)
+    public function setWindowsAutopilotDeploymentProfiles($val)
     {
-		$this->_propDict["appleUserInitiatedEnrollmentProfiles"] = $val;
+		$this->_propDict["windowsAutopilotDeploymentProfiles"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the windowsAutopilotDeviceIdentities
+    * The Windows autopilot device identities contained collection.
+     *
+     * @return array The windowsAutopilotDeviceIdentities
+     */
+    public function getWindowsAutopilotDeviceIdentities()
+    {
+        if (array_key_exists("windowsAutopilotDeviceIdentities", $this->_propDict)) {
+           return $this->_propDict["windowsAutopilotDeviceIdentities"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the windowsAutopilotDeviceIdentities
+    * The Windows autopilot device identities contained collection.
+    *
+    * @param WindowsAutopilotDeviceIdentity $val The windowsAutopilotDeviceIdentities
+    *
+    * @return DeviceManagement
+    */
+    public function setWindowsAutopilotDeviceIdentities($val)
+    {
+		$this->_propDict["windowsAutopilotDeviceIdentities"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the windowsAutopilotSettings
+    * The Windows autopilot account settings.
+    *
+    * @return WindowsAutopilotSettings The windowsAutopilotSettings
+    */
+    public function getWindowsAutopilotSettings()
+    {
+        if (array_key_exists("windowsAutopilotSettings", $this->_propDict)) {
+            if (is_a($this->_propDict["windowsAutopilotSettings"], "Beta\Microsoft\Graph\Model\WindowsAutopilotSettings")) {
+                return $this->_propDict["windowsAutopilotSettings"];
+            } else {
+                $this->_propDict["windowsAutopilotSettings"] = new WindowsAutopilotSettings($this->_propDict["windowsAutopilotSettings"]);
+                return $this->_propDict["windowsAutopilotSettings"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the windowsAutopilotSettings
+    * The Windows autopilot account settings.
+    *
+    * @param WindowsAutopilotSettings $val The windowsAutopilotSettings
+    *
+    * @return DeviceManagement
+    */
+    public function setWindowsAutopilotSettings($val)
+    {
+        $this->_propDict["windowsAutopilotSettings"] = $val;
         return $this;
     }
     
@@ -2740,36 +2740,6 @@ class DeviceManagement extends Entity
     
 
      /** 
-     * Gets the groupPolicyObjectFiles
-    * A list of Group Policy Object files uploaded.
-     *
-     * @return array The groupPolicyObjectFiles
-     */
-    public function getGroupPolicyObjectFiles()
-    {
-        if (array_key_exists("groupPolicyObjectFiles", $this->_propDict)) {
-           return $this->_propDict["groupPolicyObjectFiles"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the groupPolicyObjectFiles
-    * A list of Group Policy Object files uploaded.
-    *
-    * @param GroupPolicyObjectFile $val The groupPolicyObjectFiles
-    *
-    * @return DeviceManagement
-    */
-    public function setGroupPolicyObjectFiles($val)
-    {
-		$this->_propDict["groupPolicyObjectFiles"] = $val;
-        return $this;
-    }
-    
-
-     /** 
      * Gets the groupPolicyMigrationReports
     * A list of Group Policy migration reports.
      *
@@ -2800,31 +2770,31 @@ class DeviceManagement extends Entity
     
 
      /** 
-     * Gets the groupPolicyConfigurations
-    * The group policy configurations created by this account.
+     * Gets the groupPolicyObjectFiles
+    * A list of Group Policy Object files uploaded.
      *
-     * @return array The groupPolicyConfigurations
+     * @return array The groupPolicyObjectFiles
      */
-    public function getGroupPolicyConfigurations()
+    public function getGroupPolicyObjectFiles()
     {
-        if (array_key_exists("groupPolicyConfigurations", $this->_propDict)) {
-           return $this->_propDict["groupPolicyConfigurations"];
+        if (array_key_exists("groupPolicyObjectFiles", $this->_propDict)) {
+           return $this->_propDict["groupPolicyObjectFiles"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the groupPolicyConfigurations
-    * The group policy configurations created by this account.
+    * Sets the groupPolicyObjectFiles
+    * A list of Group Policy Object files uploaded.
     *
-    * @param GroupPolicyConfiguration $val The groupPolicyConfigurations
+    * @param GroupPolicyObjectFile $val The groupPolicyObjectFiles
     *
     * @return DeviceManagement
     */
-    public function setGroupPolicyConfigurations($val)
+    public function setGroupPolicyObjectFiles($val)
     {
-		$this->_propDict["groupPolicyConfigurations"] = $val;
+		$this->_propDict["groupPolicyObjectFiles"] = $val;
         return $this;
     }
     
@@ -2860,31 +2830,31 @@ class DeviceManagement extends Entity
     
 
      /** 
-     * Gets the groupPolicyDefinitions
-    * The available group policy definitions for this account.
+     * Gets the groupPolicyConfigurations
+    * The group policy configurations created by this account.
      *
-     * @return array The groupPolicyDefinitions
+     * @return array The groupPolicyConfigurations
      */
-    public function getGroupPolicyDefinitions()
+    public function getGroupPolicyConfigurations()
     {
-        if (array_key_exists("groupPolicyDefinitions", $this->_propDict)) {
-           return $this->_propDict["groupPolicyDefinitions"];
+        if (array_key_exists("groupPolicyConfigurations", $this->_propDict)) {
+           return $this->_propDict["groupPolicyConfigurations"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the groupPolicyDefinitions
-    * The available group policy definitions for this account.
+    * Sets the groupPolicyConfigurations
+    * The group policy configurations created by this account.
     *
-    * @param GroupPolicyDefinition $val The groupPolicyDefinitions
+    * @param GroupPolicyConfiguration $val The groupPolicyConfigurations
     *
     * @return DeviceManagement
     */
-    public function setGroupPolicyDefinitions($val)
+    public function setGroupPolicyConfigurations($val)
     {
-		$this->_propDict["groupPolicyDefinitions"] = $val;
+		$this->_propDict["groupPolicyConfigurations"] = $val;
         return $this;
     }
     
@@ -2915,6 +2885,36 @@ class DeviceManagement extends Entity
     public function setGroupPolicyDefinitionFiles($val)
     {
 		$this->_propDict["groupPolicyDefinitionFiles"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the groupPolicyDefinitions
+    * The available group policy definitions for this account.
+     *
+     * @return array The groupPolicyDefinitions
+     */
+    public function getGroupPolicyDefinitions()
+    {
+        if (array_key_exists("groupPolicyDefinitions", $this->_propDict)) {
+           return $this->_propDict["groupPolicyDefinitions"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the groupPolicyDefinitions
+    * The available group policy definitions for this account.
+    *
+    * @param GroupPolicyDefinition $val The groupPolicyDefinitions
+    *
+    * @return DeviceManagement
+    */
+    public function setGroupPolicyDefinitions($val)
+    {
+		$this->_propDict["groupPolicyDefinitions"] = $val;
         return $this;
     }
     
@@ -3010,31 +3010,31 @@ class DeviceManagement extends Entity
     
 
      /** 
-     * Gets the roleDefinitions
-    * The Role Definitions.
+     * Gets the resourceOperations
+    * The Resource Operations.
      *
-     * @return array The roleDefinitions
+     * @return array The resourceOperations
      */
-    public function getRoleDefinitions()
+    public function getResourceOperations()
     {
-        if (array_key_exists("roleDefinitions", $this->_propDict)) {
-           return $this->_propDict["roleDefinitions"];
+        if (array_key_exists("resourceOperations", $this->_propDict)) {
+           return $this->_propDict["resourceOperations"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the roleDefinitions
-    * The Role Definitions.
+    * Sets the resourceOperations
+    * The Resource Operations.
     *
-    * @param RoleDefinition $val The roleDefinitions
+    * @param ResourceOperation $val The resourceOperations
     *
     * @return DeviceManagement
     */
-    public function setRoleDefinitions($val)
+    public function setResourceOperations($val)
     {
-		$this->_propDict["roleDefinitions"] = $val;
+		$this->_propDict["resourceOperations"] = $val;
         return $this;
     }
     
@@ -3070,6 +3070,36 @@ class DeviceManagement extends Entity
     
 
      /** 
+     * Gets the roleDefinitions
+    * The Role Definitions.
+     *
+     * @return array The roleDefinitions
+     */
+    public function getRoleDefinitions()
+    {
+        if (array_key_exists("roleDefinitions", $this->_propDict)) {
+           return $this->_propDict["roleDefinitions"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the roleDefinitions
+    * The Role Definitions.
+    *
+    * @param RoleDefinition $val The roleDefinitions
+    *
+    * @return DeviceManagement
+    */
+    public function setRoleDefinitions($val)
+    {
+		$this->_propDict["roleDefinitions"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the roleScopeTags
     * The Role Scope Tags.
      *
@@ -3095,36 +3125,6 @@ class DeviceManagement extends Entity
     public function setRoleScopeTags($val)
     {
 		$this->_propDict["roleScopeTags"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the resourceOperations
-    * The Resource Operations.
-     *
-     * @return array The resourceOperations
-     */
-    public function getResourceOperations()
-    {
-        if (array_key_exists("resourceOperations", $this->_propDict)) {
-           return $this->_propDict["resourceOperations"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the resourceOperations
-    * The Resource Operations.
-    *
-    * @param ResourceOperation $val The resourceOperations
-    *
-    * @return DeviceManagement
-    */
-    public function setResourceOperations($val)
-    {
-		$this->_propDict["resourceOperations"] = $val;
         return $this;
     }
     
@@ -3193,36 +3193,6 @@ class DeviceManagement extends Entity
     
 
      /** 
-     * Gets the telecomExpenseManagementPartners
-    * The telecom expense management partners.
-     *
-     * @return array The telecomExpenseManagementPartners
-     */
-    public function getTelecomExpenseManagementPartners()
-    {
-        if (array_key_exists("telecomExpenseManagementPartners", $this->_propDict)) {
-           return $this->_propDict["telecomExpenseManagementPartners"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the telecomExpenseManagementPartners
-    * The telecom expense management partners.
-    *
-    * @param TelecomExpenseManagementPartner $val The telecomExpenseManagementPartners
-    *
-    * @return DeviceManagement
-    */
-    public function setTelecomExpenseManagementPartners($val)
-    {
-		$this->_propDict["telecomExpenseManagementPartners"] = $val;
-        return $this;
-    }
-    
-
-     /** 
      * Gets the embeddedSIMActivationCodePools
     * The embedded SIM activation code pools created by this account.
      *
@@ -3253,31 +3223,31 @@ class DeviceManagement extends Entity
     
 
      /** 
-     * Gets the troubleshootingEvents
-    * The list of troubleshooting events for the tenant.
+     * Gets the telecomExpenseManagementPartners
+    * The telecom expense management partners.
      *
-     * @return array The troubleshootingEvents
+     * @return array The telecomExpenseManagementPartners
      */
-    public function getTroubleshootingEvents()
+    public function getTelecomExpenseManagementPartners()
     {
-        if (array_key_exists("troubleshootingEvents", $this->_propDict)) {
-           return $this->_propDict["troubleshootingEvents"];
+        if (array_key_exists("telecomExpenseManagementPartners", $this->_propDict)) {
+           return $this->_propDict["telecomExpenseManagementPartners"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the troubleshootingEvents
-    * The list of troubleshooting events for the tenant.
+    * Sets the telecomExpenseManagementPartners
+    * The telecom expense management partners.
     *
-    * @param DeviceManagementTroubleshootingEvent $val The troubleshootingEvents
+    * @param TelecomExpenseManagementPartner $val The telecomExpenseManagementPartners
     *
     * @return DeviceManagement
     */
-    public function setTroubleshootingEvents($val)
+    public function setTelecomExpenseManagementPartners($val)
     {
-		$this->_propDict["troubleshootingEvents"] = $val;
+		$this->_propDict["telecomExpenseManagementPartners"] = $val;
         return $this;
     }
     
@@ -3313,6 +3283,36 @@ class DeviceManagement extends Entity
     
 
      /** 
+     * Gets the troubleshootingEvents
+    * The list of troubleshooting events for the tenant.
+     *
+     * @return array The troubleshootingEvents
+     */
+    public function getTroubleshootingEvents()
+    {
+        if (array_key_exists("troubleshootingEvents", $this->_propDict)) {
+           return $this->_propDict["troubleshootingEvents"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the troubleshootingEvents
+    * The list of troubleshooting events for the tenant.
+    *
+    * @param DeviceManagementTroubleshootingEvent $val The troubleshootingEvents
+    *
+    * @return DeviceManagement
+    */
+    public function setTroubleshootingEvents($val)
+    {
+		$this->_propDict["troubleshootingEvents"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the windowsFeatureUpdateProfiles
     * A collection of windows feature update profiles
      *
@@ -3338,6 +3338,36 @@ class DeviceManagement extends Entity
     public function setWindowsFeatureUpdateProfiles($val)
     {
 		$this->_propDict["windowsFeatureUpdateProfiles"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the intuneBrandingProfiles
+    * Intune branding profiles targeted to AAD groups
+     *
+     * @return array The intuneBrandingProfiles
+     */
+    public function getIntuneBrandingProfiles()
+    {
+        if (array_key_exists("intuneBrandingProfiles", $this->_propDict)) {
+           return $this->_propDict["intuneBrandingProfiles"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the intuneBrandingProfiles
+    * Intune branding profiles targeted to AAD groups
+    *
+    * @param IntuneBrandingProfile $val The intuneBrandingProfiles
+    *
+    * @return DeviceManagement
+    */
+    public function setIntuneBrandingProfiles($val)
+    {
+		$this->_propDict["intuneBrandingProfiles"] = $val;
         return $this;
     }
     
@@ -3398,36 +3428,6 @@ class DeviceManagement extends Entity
     public function setWindowsInformationProtectionNetworkLearningSummaries($val)
     {
 		$this->_propDict["windowsInformationProtectionNetworkLearningSummaries"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the intuneBrandingProfiles
-    * Intune branding profiles targeted to AAD groups
-     *
-     * @return array The intuneBrandingProfiles
-     */
-    public function getIntuneBrandingProfiles()
-    {
-        if (array_key_exists("intuneBrandingProfiles", $this->_propDict)) {
-           return $this->_propDict["intuneBrandingProfiles"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the intuneBrandingProfiles
-    * Intune branding profiles targeted to AAD groups
-    *
-    * @param IntuneBrandingProfile $val The intuneBrandingProfiles
-    *
-    * @return DeviceManagement
-    */
-    public function setIntuneBrandingProfiles($val)
-    {
-		$this->_propDict["intuneBrandingProfiles"] = $val;
         return $this;
     }
     

@@ -23,32 +23,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class AddFooter extends MarkContent
 {
-    /**
-    * Gets the margin
-    *
-    * @return int The margin
-    */
-    public function getMargin()
-    {
-        if (array_key_exists("margin", $this->_propDict)) {
-            return $this->_propDict["margin"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the margin
-    *
-    * @param int $val The value of the margin
-    *
-    * @return AddFooter
-    */
-    public function setMargin($val)
-    {
-        $this->_propDict["margin"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the alignment
@@ -79,5 +53,31 @@ class AddFooter extends MarkContent
     {
         $this->_propDict["alignment"] = $val;
          return $this;
+    }
+    /**
+    * Gets the margin
+    *
+    * @return int The margin
+    */
+    public function getMargin()
+    {
+        if (array_key_exists("margin", $this->_propDict)) {
+            return $this->_propDict["margin"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the margin
+    *
+    * @param int $val The value of the margin
+    *
+    * @return AddFooter
+    */
+    public function setMargin($val)
+    {
+        $this->_propDict["margin"] = $val;
+        return $this;
     }
 }

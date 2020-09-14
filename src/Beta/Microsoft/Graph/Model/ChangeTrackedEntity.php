@@ -58,39 +58,6 @@ class ChangeTrackedEntity extends Entity
     }
     
     /**
-    * Gets the lastModifiedDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
-    *
-    * @return \DateTime The lastModifiedDateTime
-    */
-    public function getLastModifiedDateTime()
-    {
-        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
-                return $this->_propDict["lastModifiedDateTime"];
-            } else {
-                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
-                return $this->_propDict["lastModifiedDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the lastModifiedDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
-    *
-    * @param \DateTime $val The lastModifiedDateTime
-    *
-    * @return ChangeTrackedEntity
-    */
-    public function setLastModifiedDateTime($val)
-    {
-        $this->_propDict["lastModifiedDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the lastModifiedBy
     * Identity of the person who last modified the entity.
     *
@@ -120,6 +87,39 @@ class ChangeTrackedEntity extends Entity
     public function setLastModifiedBy($val)
     {
         $this->_propDict["lastModifiedBy"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the lastModifiedDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+    *
+    * @return \DateTime The lastModifiedDateTime
+    */
+    public function getLastModifiedDateTime()
+    {
+        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+                return $this->_propDict["lastModifiedDateTime"];
+            } else {
+                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
+                return $this->_propDict["lastModifiedDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the lastModifiedDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+    *
+    * @param \DateTime $val The lastModifiedDateTime
+    *
+    * @return ChangeTrackedEntity
+    */
+    public function setLastModifiedDateTime($val)
+    {
+        $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
     

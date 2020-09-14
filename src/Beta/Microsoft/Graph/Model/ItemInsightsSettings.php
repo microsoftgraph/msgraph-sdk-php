@@ -25,33 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class ItemInsightsSettings extends Entity
 {
     /**
-    * Gets the isEnabledInOrganization
-    *
-    * @return bool The isEnabledInOrganization
-    */
-    public function getIsEnabledInOrganization()
-    {
-        if (array_key_exists("isEnabledInOrganization", $this->_propDict)) {
-            return $this->_propDict["isEnabledInOrganization"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the isEnabledInOrganization
-    *
-    * @param bool $val The isEnabledInOrganization
-    *
-    * @return ItemInsightsSettings
-    */
-    public function setIsEnabledInOrganization($val)
-    {
-        $this->_propDict["isEnabledInOrganization"] = boolval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the disabledForGroup
     *
     * @return string The disabledForGroup
@@ -75,6 +48,33 @@ class ItemInsightsSettings extends Entity
     public function setDisabledForGroup($val)
     {
         $this->_propDict["disabledForGroup"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the isEnabledInOrganization
+    *
+    * @return bool The isEnabledInOrganization
+    */
+    public function getIsEnabledInOrganization()
+    {
+        if (array_key_exists("isEnabledInOrganization", $this->_propDict)) {
+            return $this->_propDict["isEnabledInOrganization"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isEnabledInOrganization
+    *
+    * @param bool $val The isEnabledInOrganization
+    *
+    * @return ItemInsightsSettings
+    */
+    public function setIsEnabledInOrganization($val)
+    {
+        $this->_propDict["isEnabledInOrganization"] = boolval($val);
         return $this;
     }
     

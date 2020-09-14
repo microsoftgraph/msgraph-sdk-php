@@ -344,6 +344,34 @@ class PolicyRoot extends Entity
         return $this;
     }
     
+
+     /** 
+     * Gets the conditionalAccessPolicies
+     *
+     * @return array The conditionalAccessPolicies
+     */
+    public function getConditionalAccessPolicies()
+    {
+        if (array_key_exists("conditionalAccessPolicies", $this->_propDict)) {
+           return $this->_propDict["conditionalAccessPolicies"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the conditionalAccessPolicies
+    *
+    * @param ConditionalAccessPolicy $val The conditionalAccessPolicies
+    *
+    * @return PolicyRoot
+    */
+    public function setConditionalAccessPolicies($val)
+    {
+		$this->_propDict["conditionalAccessPolicies"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the identitySecurityDefaultsEnforcementPolicy
     *
@@ -372,34 +400,6 @@ class PolicyRoot extends Entity
     public function setIdentitySecurityDefaultsEnforcementPolicy($val)
     {
         $this->_propDict["identitySecurityDefaultsEnforcementPolicy"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the conditionalAccessPolicies
-     *
-     * @return array The conditionalAccessPolicies
-     */
-    public function getConditionalAccessPolicies()
-    {
-        if (array_key_exists("conditionalAccessPolicies", $this->_propDict)) {
-           return $this->_propDict["conditionalAccessPolicies"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the conditionalAccessPolicies
-    *
-    * @param ConditionalAccessPolicy $val The conditionalAccessPolicies
-    *
-    * @return PolicyRoot
-    */
-    public function setConditionalAccessPolicies($val)
-    {
-		$this->_propDict["conditionalAccessPolicies"] = $val;
         return $this;
     }
     

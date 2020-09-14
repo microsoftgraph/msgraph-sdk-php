@@ -23,6 +23,34 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class MailboxSettings extends Entity
 {
+    /**
+    * Gets the archiveFolder
+    * Folder ID of an archive folder for the user.
+    *
+    * @return string The archiveFolder
+    */
+    public function getArchiveFolder()
+    {
+        if (array_key_exists("archiveFolder", $this->_propDict)) {
+            return $this->_propDict["archiveFolder"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the archiveFolder
+    * Folder ID of an archive folder for the user.
+    *
+    * @param string $val The value of the archiveFolder
+    *
+    * @return MailboxSettings
+    */
+    public function setArchiveFolder($val)
+    {
+        $this->_propDict["archiveFolder"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the automaticRepliesSetting
@@ -57,93 +85,32 @@ class MailboxSettings extends Entity
          return $this;
     }
     /**
-    * Gets the archiveFolder
-    * Folder ID of an archive folder for the user.
+    * Gets the dateFormat
+    * The date format for the user's mailbox.
     *
-    * @return string The archiveFolder
+    * @return string The dateFormat
     */
-    public function getArchiveFolder()
+    public function getDateFormat()
     {
-        if (array_key_exists("archiveFolder", $this->_propDict)) {
-            return $this->_propDict["archiveFolder"];
+        if (array_key_exists("dateFormat", $this->_propDict)) {
+            return $this->_propDict["dateFormat"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the archiveFolder
-    * Folder ID of an archive folder for the user.
+    * Sets the dateFormat
+    * The date format for the user's mailbox.
     *
-    * @param string $val The value of the archiveFolder
-    *
-    * @return MailboxSettings
-    */
-    public function setArchiveFolder($val)
-    {
-        $this->_propDict["archiveFolder"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the timeZone
-    * The default time zone for the user's mailbox.
-    *
-    * @return string The timeZone
-    */
-    public function getTimeZone()
-    {
-        if (array_key_exists("timeZone", $this->_propDict)) {
-            return $this->_propDict["timeZone"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the timeZone
-    * The default time zone for the user's mailbox.
-    *
-    * @param string $val The value of the timeZone
+    * @param string $val The value of the dateFormat
     *
     * @return MailboxSettings
     */
-    public function setTimeZone($val)
+    public function setDateFormat($val)
     {
-        $this->_propDict["timeZone"] = $val;
+        $this->_propDict["dateFormat"] = $val;
         return $this;
-    }
-
-    /**
-    * Gets the language
-    * The locale information for the user, including the preferred language and country/region.
-    *
-    * @return LocaleInfo The language
-    */
-    public function getLanguage()
-    {
-        if (array_key_exists("language", $this->_propDict)) {
-            if (is_a($this->_propDict["language"], "Beta\Microsoft\Graph\Model\LocaleInfo")) {
-                return $this->_propDict["language"];
-            } else {
-                $this->_propDict["language"] = new LocaleInfo($this->_propDict["language"]);
-                return $this->_propDict["language"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the language
-    * The locale information for the user, including the preferred language and country/region.
-    *
-    * @param LocaleInfo $val The value to assign to the language
-    *
-    * @return MailboxSettings The MailboxSettings
-    */
-    public function setLanguage($val)
-    {
-        $this->_propDict["language"] = $val;
-         return $this;
     }
 
     /**
@@ -180,64 +147,36 @@ class MailboxSettings extends Entity
     }
 
     /**
-    * Gets the workingHours
-    * The days of the week and hours in a specific time zone that the user works.
+    * Gets the language
+    * The locale information for the user, including the preferred language and country/region.
     *
-    * @return WorkingHours The workingHours
+    * @return LocaleInfo The language
     */
-    public function getWorkingHours()
+    public function getLanguage()
     {
-        if (array_key_exists("workingHours", $this->_propDict)) {
-            if (is_a($this->_propDict["workingHours"], "Beta\Microsoft\Graph\Model\WorkingHours")) {
-                return $this->_propDict["workingHours"];
+        if (array_key_exists("language", $this->_propDict)) {
+            if (is_a($this->_propDict["language"], "Beta\Microsoft\Graph\Model\LocaleInfo")) {
+                return $this->_propDict["language"];
             } else {
-                $this->_propDict["workingHours"] = new WorkingHours($this->_propDict["workingHours"]);
-                return $this->_propDict["workingHours"];
+                $this->_propDict["language"] = new LocaleInfo($this->_propDict["language"]);
+                return $this->_propDict["language"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the workingHours
-    * The days of the week and hours in a specific time zone that the user works.
+    * Sets the language
+    * The locale information for the user, including the preferred language and country/region.
     *
-    * @param WorkingHours $val The value to assign to the workingHours
+    * @param LocaleInfo $val The value to assign to the language
     *
     * @return MailboxSettings The MailboxSettings
     */
-    public function setWorkingHours($val)
+    public function setLanguage($val)
     {
-        $this->_propDict["workingHours"] = $val;
+        $this->_propDict["language"] = $val;
          return $this;
-    }
-    /**
-    * Gets the dateFormat
-    * The date format for the user's mailbox.
-    *
-    * @return string The dateFormat
-    */
-    public function getDateFormat()
-    {
-        if (array_key_exists("dateFormat", $this->_propDict)) {
-            return $this->_propDict["dateFormat"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the dateFormat
-    * The date format for the user's mailbox.
-    *
-    * @param string $val The value of the dateFormat
-    *
-    * @return MailboxSettings
-    */
-    public function setDateFormat($val)
-    {
-        $this->_propDict["dateFormat"] = $val;
-        return $this;
     }
     /**
     * Gets the timeFormat
@@ -265,6 +204,34 @@ class MailboxSettings extends Entity
     public function setTimeFormat($val)
     {
         $this->_propDict["timeFormat"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the timeZone
+    * The default time zone for the user's mailbox.
+    *
+    * @return string The timeZone
+    */
+    public function getTimeZone()
+    {
+        if (array_key_exists("timeZone", $this->_propDict)) {
+            return $this->_propDict["timeZone"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the timeZone
+    * The default time zone for the user's mailbox.
+    *
+    * @param string $val The value of the timeZone
+    *
+    * @return MailboxSettings
+    */
+    public function setTimeZone($val)
+    {
+        $this->_propDict["timeZone"] = $val;
         return $this;
     }
 
@@ -296,6 +263,70 @@ class MailboxSettings extends Entity
     public function setUserPurpose($val)
     {
         $this->_propDict["userPurpose"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the userPurposeV2
+    *
+    * @return MailboxRecipientType The userPurposeV2
+    */
+    public function getUserPurposeV2()
+    {
+        if (array_key_exists("userPurposeV2", $this->_propDict)) {
+            if (is_a($this->_propDict["userPurposeV2"], "Beta\Microsoft\Graph\Model\MailboxRecipientType")) {
+                return $this->_propDict["userPurposeV2"];
+            } else {
+                $this->_propDict["userPurposeV2"] = new MailboxRecipientType($this->_propDict["userPurposeV2"]);
+                return $this->_propDict["userPurposeV2"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the userPurposeV2
+    *
+    * @param MailboxRecipientType $val The value to assign to the userPurposeV2
+    *
+    * @return MailboxSettings The MailboxSettings
+    */
+    public function setUserPurposeV2($val)
+    {
+        $this->_propDict["userPurposeV2"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the workingHours
+    * The days of the week and hours in a specific time zone that the user works.
+    *
+    * @return WorkingHours The workingHours
+    */
+    public function getWorkingHours()
+    {
+        if (array_key_exists("workingHours", $this->_propDict)) {
+            if (is_a($this->_propDict["workingHours"], "Beta\Microsoft\Graph\Model\WorkingHours")) {
+                return $this->_propDict["workingHours"];
+            } else {
+                $this->_propDict["workingHours"] = new WorkingHours($this->_propDict["workingHours"]);
+                return $this->_propDict["workingHours"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the workingHours
+    * The days of the week and hours in a specific time zone that the user works.
+    *
+    * @param WorkingHours $val The value to assign to the workingHours
+    *
+    * @return MailboxSettings The MailboxSettings
+    */
+    public function setWorkingHours($val)
+    {
+        $this->_propDict["workingHours"] = $val;
          return $this;
     }
 }

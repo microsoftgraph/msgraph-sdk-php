@@ -54,35 +54,31 @@ class DepOnboardingSetting extends Entity
     }
     
     /**
-    * Gets the tokenExpirationDateTime
-    * When the token will expire.
+    * Gets the dataSharingConsentGranted
+    * Consent granted for data sharing with Apple Dep Service
     *
-    * @return \DateTime The tokenExpirationDateTime
+    * @return bool The dataSharingConsentGranted
     */
-    public function getTokenExpirationDateTime()
+    public function getDataSharingConsentGranted()
     {
-        if (array_key_exists("tokenExpirationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["tokenExpirationDateTime"], "\DateTime")) {
-                return $this->_propDict["tokenExpirationDateTime"];
-            } else {
-                $this->_propDict["tokenExpirationDateTime"] = new \DateTime($this->_propDict["tokenExpirationDateTime"]);
-                return $this->_propDict["tokenExpirationDateTime"];
-            }
+        if (array_key_exists("dataSharingConsentGranted", $this->_propDict)) {
+            return $this->_propDict["dataSharingConsentGranted"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the tokenExpirationDateTime
-    * When the token will expire.
+    * Sets the dataSharingConsentGranted
+    * Consent granted for data sharing with Apple Dep Service
     *
-    * @param \DateTime $val The tokenExpirationDateTime
+    * @param bool $val The dataSharingConsentGranted
     *
     * @return DepOnboardingSetting
     */
-    public function setTokenExpirationDateTime($val)
+    public function setDataSharingConsentGranted($val)
     {
-        $this->_propDict["tokenExpirationDateTime"] = $val;
+        $this->_propDict["dataSharingConsentGranted"] = boolval($val);
         return $this;
     }
     
@@ -153,6 +149,35 @@ class DepOnboardingSetting extends Entity
     }
     
     /**
+    * Gets the lastSyncErrorCode
+    * Error code reported by Apple during last dep sync.
+    *
+    * @return int The lastSyncErrorCode
+    */
+    public function getLastSyncErrorCode()
+    {
+        if (array_key_exists("lastSyncErrorCode", $this->_propDict)) {
+            return $this->_propDict["lastSyncErrorCode"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the lastSyncErrorCode
+    * Error code reported by Apple during last dep sync.
+    *
+    * @param int $val The lastSyncErrorCode
+    *
+    * @return DepOnboardingSetting
+    */
+    public function setLastSyncErrorCode($val)
+    {
+        $this->_propDict["lastSyncErrorCode"] = intval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the lastSyncTriggeredDateTime
     * When Intune last requested a sync.
     *
@@ -186,6 +211,35 @@ class DepOnboardingSetting extends Entity
     }
     
     /**
+    * Gets the roleScopeTagIds
+    * List of Scope Tags for this Entity instance.
+    *
+    * @return string The roleScopeTagIds
+    */
+    public function getRoleScopeTagIds()
+    {
+        if (array_key_exists("roleScopeTagIds", $this->_propDict)) {
+            return $this->_propDict["roleScopeTagIds"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the roleScopeTagIds
+    * List of Scope Tags for this Entity instance.
+    *
+    * @param string $val The roleScopeTagIds
+    *
+    * @return DepOnboardingSetting
+    */
+    public function setRoleScopeTagIds($val)
+    {
+        $this->_propDict["roleScopeTagIds"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the shareTokenWithSchoolDataSyncService
     * Whether or not the Dep token sharing is enabled with the School Data Sync service.
     *
@@ -211,97 +265,6 @@ class DepOnboardingSetting extends Entity
     public function setShareTokenWithSchoolDataSyncService($val)
     {
         $this->_propDict["shareTokenWithSchoolDataSyncService"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the lastSyncErrorCode
-    * Error code reported by Apple during last dep sync.
-    *
-    * @return int The lastSyncErrorCode
-    */
-    public function getLastSyncErrorCode()
-    {
-        if (array_key_exists("lastSyncErrorCode", $this->_propDict)) {
-            return $this->_propDict["lastSyncErrorCode"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the lastSyncErrorCode
-    * Error code reported by Apple during last dep sync.
-    *
-    * @param int $val The lastSyncErrorCode
-    *
-    * @return DepOnboardingSetting
-    */
-    public function setLastSyncErrorCode($val)
-    {
-        $this->_propDict["lastSyncErrorCode"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the tokenType
-    * Gets or sets the Dep Token Type.
-    *
-    * @return DepTokenType The tokenType
-    */
-    public function getTokenType()
-    {
-        if (array_key_exists("tokenType", $this->_propDict)) {
-            if (is_a($this->_propDict["tokenType"], "Beta\Microsoft\Graph\Model\DepTokenType")) {
-                return $this->_propDict["tokenType"];
-            } else {
-                $this->_propDict["tokenType"] = new DepTokenType($this->_propDict["tokenType"]);
-                return $this->_propDict["tokenType"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the tokenType
-    * Gets or sets the Dep Token Type.
-    *
-    * @param DepTokenType $val The tokenType
-    *
-    * @return DepOnboardingSetting
-    */
-    public function setTokenType($val)
-    {
-        $this->_propDict["tokenType"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the tokenName
-    * Friendly Name for Dep Token
-    *
-    * @return string The tokenName
-    */
-    public function getTokenName()
-    {
-        if (array_key_exists("tokenName", $this->_propDict)) {
-            return $this->_propDict["tokenName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the tokenName
-    * Friendly Name for Dep Token
-    *
-    * @param string $val The tokenName
-    *
-    * @return DepOnboardingSetting
-    */
-    public function setTokenName($val)
-    {
-        $this->_propDict["tokenName"] = $val;
         return $this;
     }
     
@@ -335,60 +298,97 @@ class DepOnboardingSetting extends Entity
     }
     
     /**
-    * Gets the dataSharingConsentGranted
-    * Consent granted for data sharing with Apple Dep Service
+    * Gets the tokenExpirationDateTime
+    * When the token will expire.
     *
-    * @return bool The dataSharingConsentGranted
+    * @return \DateTime The tokenExpirationDateTime
     */
-    public function getDataSharingConsentGranted()
+    public function getTokenExpirationDateTime()
     {
-        if (array_key_exists("dataSharingConsentGranted", $this->_propDict)) {
-            return $this->_propDict["dataSharingConsentGranted"];
-        } else {
-            return null;
+        if (array_key_exists("tokenExpirationDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["tokenExpirationDateTime"], "\DateTime")) {
+                return $this->_propDict["tokenExpirationDateTime"];
+            } else {
+                $this->_propDict["tokenExpirationDateTime"] = new \DateTime($this->_propDict["tokenExpirationDateTime"]);
+                return $this->_propDict["tokenExpirationDateTime"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the dataSharingConsentGranted
-    * Consent granted for data sharing with Apple Dep Service
+    * Sets the tokenExpirationDateTime
+    * When the token will expire.
     *
-    * @param bool $val The dataSharingConsentGranted
+    * @param \DateTime $val The tokenExpirationDateTime
     *
     * @return DepOnboardingSetting
     */
-    public function setDataSharingConsentGranted($val)
+    public function setTokenExpirationDateTime($val)
     {
-        $this->_propDict["dataSharingConsentGranted"] = boolval($val);
+        $this->_propDict["tokenExpirationDateTime"] = $val;
         return $this;
     }
     
     /**
-    * Gets the roleScopeTagIds
-    * List of Scope Tags for this Entity instance.
+    * Gets the tokenName
+    * Friendly Name for Dep Token
     *
-    * @return string The roleScopeTagIds
+    * @return string The tokenName
     */
-    public function getRoleScopeTagIds()
+    public function getTokenName()
     {
-        if (array_key_exists("roleScopeTagIds", $this->_propDict)) {
-            return $this->_propDict["roleScopeTagIds"];
+        if (array_key_exists("tokenName", $this->_propDict)) {
+            return $this->_propDict["tokenName"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the roleScopeTagIds
-    * List of Scope Tags for this Entity instance.
+    * Sets the tokenName
+    * Friendly Name for Dep Token
     *
-    * @param string $val The roleScopeTagIds
+    * @param string $val The tokenName
     *
     * @return DepOnboardingSetting
     */
-    public function setRoleScopeTagIds($val)
+    public function setTokenName($val)
     {
-        $this->_propDict["roleScopeTagIds"] = $val;
+        $this->_propDict["tokenName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the tokenType
+    * Gets or sets the Dep Token Type.
+    *
+    * @return DepTokenType The tokenType
+    */
+    public function getTokenType()
+    {
+        if (array_key_exists("tokenType", $this->_propDict)) {
+            if (is_a($this->_propDict["tokenType"], "Beta\Microsoft\Graph\Model\DepTokenType")) {
+                return $this->_propDict["tokenType"];
+            } else {
+                $this->_propDict["tokenType"] = new DepTokenType($this->_propDict["tokenType"]);
+                return $this->_propDict["tokenType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the tokenType
+    * Gets or sets the Dep Token Type.
+    *
+    * @param DepTokenType $val The tokenType
+    *
+    * @return DepOnboardingSetting
+    */
+    public function setTokenType($val)
+    {
+        $this->_propDict["tokenType"] = $val;
         return $this;
     }
     

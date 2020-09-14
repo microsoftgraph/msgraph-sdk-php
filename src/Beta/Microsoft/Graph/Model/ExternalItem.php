@@ -24,34 +24,31 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class ExternalItem extends Entity
 {
-    /**
-    * Gets the externalItemProperties
-    *
-    * @return Properties The externalItemProperties
-    */
-    public function getExternalItemProperties()
+
+     /** 
+     * Gets the acl
+     *
+     * @return array The acl
+     */
+    public function getAcl()
     {
-        if (array_key_exists("properties", $this->_propDict)) {
-            if (is_a($this->_propDict["properties"], "Beta\Microsoft\Graph\Model\Properties")) {
-                return $this->_propDict["properties"];
-            } else {
-                $this->_propDict["properties"] = new Properties($this->_propDict["properties"]);
-                return $this->_propDict["properties"];
-            }
+        if (array_key_exists("acl", $this->_propDict)) {
+           return $this->_propDict["acl"];
+        } else {
+            return null;
         }
-        return null;
     }
     
-    /**
-    * Sets the externalItemProperties
+    /** 
+    * Sets the acl
     *
-    * @param Properties $val The externalItemProperties
+    * @param Acl $val The acl
     *
     * @return ExternalItem
     */
-    public function setExternalItemProperties($val)
+    public function setAcl($val)
     {
-        $this->_propDict["properties"] = $val;
+		$this->_propDict["acl"] = $val;
         return $this;
     }
     
@@ -86,31 +83,34 @@ class ExternalItem extends Entity
         return $this;
     }
     
-
-     /** 
-     * Gets the acl
-     *
-     * @return array The acl
-     */
-    public function getAcl()
+    /**
+    * Gets the externalItemProperties
+    *
+    * @return Properties The externalItemProperties
+    */
+    public function getExternalItemProperties()
     {
-        if (array_key_exists("acl", $this->_propDict)) {
-           return $this->_propDict["acl"];
-        } else {
-            return null;
+        if (array_key_exists("properties", $this->_propDict)) {
+            if (is_a($this->_propDict["properties"], "Beta\Microsoft\Graph\Model\Properties")) {
+                return $this->_propDict["properties"];
+            } else {
+                $this->_propDict["properties"] = new Properties($this->_propDict["properties"]);
+                return $this->_propDict["properties"];
+            }
         }
+        return null;
     }
     
-    /** 
-    * Sets the acl
+    /**
+    * Sets the externalItemProperties
     *
-    * @param Acl $val The acl
+    * @param Properties $val The externalItemProperties
     *
     * @return ExternalItem
     */
-    public function setAcl($val)
+    public function setExternalItemProperties($val)
     {
-		$this->_propDict["acl"] = $val;
+        $this->_propDict["properties"] = $val;
         return $this;
     }
     

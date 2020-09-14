@@ -24,6 +24,32 @@ namespace Beta\Microsoft\Graph\Model;
 class Settings extends Entity
 {
     /**
+    * Gets the hasGraphMailbox
+    *
+    * @return bool The hasGraphMailbox
+    */
+    public function getHasGraphMailbox()
+    {
+        if (array_key_exists("hasGraphMailbox", $this->_propDict)) {
+            return $this->_propDict["hasGraphMailbox"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the hasGraphMailbox
+    *
+    * @param bool $val The value of the hasGraphMailbox
+    *
+    * @return Settings
+    */
+    public function setHasGraphMailbox($val)
+    {
+        $this->_propDict["hasGraphMailbox"] = $val;
+        return $this;
+    }
+    /**
     * Gets the hasLicense
     *
     * @return bool The hasLicense
@@ -73,32 +99,6 @@ class Settings extends Entity
     public function setHasOptedOut($val)
     {
         $this->_propDict["hasOptedOut"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the hasGraphMailbox
-    *
-    * @return bool The hasGraphMailbox
-    */
-    public function getHasGraphMailbox()
-    {
-        if (array_key_exists("hasGraphMailbox", $this->_propDict)) {
-            return $this->_propDict["hasGraphMailbox"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the hasGraphMailbox
-    *
-    * @param bool $val The value of the hasGraphMailbox
-    *
-    * @return Settings
-    */
-    public function setHasGraphMailbox($val)
-    {
-        $this->_propDict["hasGraphMailbox"] = $val;
         return $this;
     }
 }

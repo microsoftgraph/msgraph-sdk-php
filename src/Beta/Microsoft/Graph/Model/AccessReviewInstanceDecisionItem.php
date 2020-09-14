@@ -52,122 +52,6 @@ class AccessReviewInstanceDecisionItem extends Entity
     }
     
     /**
-    * Gets the reviewedBy
-    *
-    * @return UserIdentity The reviewedBy
-    */
-    public function getReviewedBy()
-    {
-        if (array_key_exists("reviewedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["reviewedBy"], "Beta\Microsoft\Graph\Model\UserIdentity")) {
-                return $this->_propDict["reviewedBy"];
-            } else {
-                $this->_propDict["reviewedBy"] = new UserIdentity($this->_propDict["reviewedBy"]);
-                return $this->_propDict["reviewedBy"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the reviewedBy
-    *
-    * @param UserIdentity $val The reviewedBy
-    *
-    * @return AccessReviewInstanceDecisionItem
-    */
-    public function setReviewedBy($val)
-    {
-        $this->_propDict["reviewedBy"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the reviewedDateTime
-    *
-    * @return \DateTime The reviewedDateTime
-    */
-    public function getReviewedDateTime()
-    {
-        if (array_key_exists("reviewedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["reviewedDateTime"], "\DateTime")) {
-                return $this->_propDict["reviewedDateTime"];
-            } else {
-                $this->_propDict["reviewedDateTime"] = new \DateTime($this->_propDict["reviewedDateTime"]);
-                return $this->_propDict["reviewedDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the reviewedDateTime
-    *
-    * @param \DateTime $val The reviewedDateTime
-    *
-    * @return AccessReviewInstanceDecisionItem
-    */
-    public function setReviewedDateTime($val)
-    {
-        $this->_propDict["reviewedDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the decision
-    *
-    * @return string The decision
-    */
-    public function getDecision()
-    {
-        if (array_key_exists("decision", $this->_propDict)) {
-            return $this->_propDict["decision"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the decision
-    *
-    * @param string $val The decision
-    *
-    * @return AccessReviewInstanceDecisionItem
-    */
-    public function setDecision($val)
-    {
-        $this->_propDict["decision"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the justification
-    *
-    * @return string The justification
-    */
-    public function getJustification()
-    {
-        if (array_key_exists("justification", $this->_propDict)) {
-            return $this->_propDict["justification"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the justification
-    *
-    * @param string $val The justification
-    *
-    * @return AccessReviewInstanceDecisionItem
-    */
-    public function setJustification($val)
-    {
-        $this->_propDict["justification"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the appliedBy
     *
     * @return UserIdentity The appliedBy
@@ -257,6 +141,60 @@ class AccessReviewInstanceDecisionItem extends Entity
     }
     
     /**
+    * Gets the decision
+    *
+    * @return string The decision
+    */
+    public function getDecision()
+    {
+        if (array_key_exists("decision", $this->_propDict)) {
+            return $this->_propDict["decision"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the decision
+    *
+    * @param string $val The decision
+    *
+    * @return AccessReviewInstanceDecisionItem
+    */
+    public function setDecision($val)
+    {
+        $this->_propDict["decision"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the justification
+    *
+    * @return string The justification
+    */
+    public function getJustification()
+    {
+        if (array_key_exists("justification", $this->_propDict)) {
+            return $this->_propDict["justification"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the justification
+    *
+    * @param string $val The justification
+    *
+    * @return AccessReviewInstanceDecisionItem
+    */
+    public function setJustification($val)
+    {
+        $this->_propDict["justification"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the recommendation
     *
     * @return string The recommendation
@@ -280,6 +218,68 @@ class AccessReviewInstanceDecisionItem extends Entity
     public function setRecommendation($val)
     {
         $this->_propDict["recommendation"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the reviewedBy
+    *
+    * @return UserIdentity The reviewedBy
+    */
+    public function getReviewedBy()
+    {
+        if (array_key_exists("reviewedBy", $this->_propDict)) {
+            if (is_a($this->_propDict["reviewedBy"], "Beta\Microsoft\Graph\Model\UserIdentity")) {
+                return $this->_propDict["reviewedBy"];
+            } else {
+                $this->_propDict["reviewedBy"] = new UserIdentity($this->_propDict["reviewedBy"]);
+                return $this->_propDict["reviewedBy"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the reviewedBy
+    *
+    * @param UserIdentity $val The reviewedBy
+    *
+    * @return AccessReviewInstanceDecisionItem
+    */
+    public function setReviewedBy($val)
+    {
+        $this->_propDict["reviewedBy"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the reviewedDateTime
+    *
+    * @return \DateTime The reviewedDateTime
+    */
+    public function getReviewedDateTime()
+    {
+        if (array_key_exists("reviewedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["reviewedDateTime"], "\DateTime")) {
+                return $this->_propDict["reviewedDateTime"];
+            } else {
+                $this->_propDict["reviewedDateTime"] = new \DateTime($this->_propDict["reviewedDateTime"]);
+                return $this->_propDict["reviewedDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the reviewedDateTime
+    *
+    * @param \DateTime $val The reviewedDateTime
+    *
+    * @return AccessReviewInstanceDecisionItem
+    */
+    public function setReviewedDateTime($val)
+    {
+        $this->_propDict["reviewedDateTime"] = $val;
         return $this;
     }
     

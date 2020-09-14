@@ -58,35 +58,6 @@ class GroupPolicyConfiguration extends Entity
     }
     
     /**
-    * Gets the displayName
-    * User provided name for the resource object.
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the displayName
-    * User provided name for the resource object.
-    *
-    * @param string $val The displayName
-    *
-    * @return GroupPolicyConfiguration
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the description
     * User provided description for the resource object.
     *
@@ -116,31 +87,31 @@ class GroupPolicyConfiguration extends Entity
     }
     
     /**
-    * Gets the roleScopeTagIds
-    * The list of scope tags for the configuration.
+    * Gets the displayName
+    * User provided name for the resource object.
     *
-    * @return string The roleScopeTagIds
+    * @return string The displayName
     */
-    public function getRoleScopeTagIds()
+    public function getDisplayName()
     {
-        if (array_key_exists("roleScopeTagIds", $this->_propDict)) {
-            return $this->_propDict["roleScopeTagIds"];
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the roleScopeTagIds
-    * The list of scope tags for the configuration.
+    * Sets the displayName
+    * User provided name for the resource object.
     *
-    * @param string $val The roleScopeTagIds
+    * @param string $val The displayName
     *
     * @return GroupPolicyConfiguration
     */
-    public function setRoleScopeTagIds($val)
+    public function setDisplayName($val)
     {
-        $this->_propDict["roleScopeTagIds"] = $val;
+        $this->_propDict["displayName"] = $val;
         return $this;
     }
     
@@ -177,33 +148,32 @@ class GroupPolicyConfiguration extends Entity
         return $this;
     }
     
-
-     /** 
-     * Gets the definitionValues
-    * The list of enabled or disabled group policy definition values for the configuration.
-     *
-     * @return array The definitionValues
-     */
-    public function getDefinitionValues()
+    /**
+    * Gets the roleScopeTagIds
+    * The list of scope tags for the configuration.
+    *
+    * @return string The roleScopeTagIds
+    */
+    public function getRoleScopeTagIds()
     {
-        if (array_key_exists("definitionValues", $this->_propDict)) {
-           return $this->_propDict["definitionValues"];
+        if (array_key_exists("roleScopeTagIds", $this->_propDict)) {
+            return $this->_propDict["roleScopeTagIds"];
         } else {
             return null;
         }
     }
     
-    /** 
-    * Sets the definitionValues
-    * The list of enabled or disabled group policy definition values for the configuration.
+    /**
+    * Sets the roleScopeTagIds
+    * The list of scope tags for the configuration.
     *
-    * @param GroupPolicyDefinitionValue $val The definitionValues
+    * @param string $val The roleScopeTagIds
     *
     * @return GroupPolicyConfiguration
     */
-    public function setDefinitionValues($val)
+    public function setRoleScopeTagIds($val)
     {
-		$this->_propDict["definitionValues"] = $val;
+        $this->_propDict["roleScopeTagIds"] = $val;
         return $this;
     }
     
@@ -234,6 +204,36 @@ class GroupPolicyConfiguration extends Entity
     public function setAssignments($val)
     {
 		$this->_propDict["assignments"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the definitionValues
+    * The list of enabled or disabled group policy definition values for the configuration.
+     *
+     * @return array The definitionValues
+     */
+    public function getDefinitionValues()
+    {
+        if (array_key_exists("definitionValues", $this->_propDict)) {
+           return $this->_propDict["definitionValues"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the definitionValues
+    * The list of enabled or disabled group policy definition values for the configuration.
+    *
+    * @param GroupPolicyDefinitionValue $val The definitionValues
+    *
+    * @return GroupPolicyConfiguration
+    */
+    public function setDefinitionValues($val)
+    {
+		$this->_propDict["definitionValues"] = $val;
         return $this;
     }
     

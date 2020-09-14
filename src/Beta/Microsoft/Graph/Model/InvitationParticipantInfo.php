@@ -25,6 +25,37 @@ class InvitationParticipantInfo extends Entity
 {
 
     /**
+    * Gets the endpointType
+    *
+    * @return EndpointType The endpointType
+    */
+    public function getEndpointType()
+    {
+        if (array_key_exists("endpointType", $this->_propDict)) {
+            if (is_a($this->_propDict["endpointType"], "Beta\Microsoft\Graph\Model\EndpointType")) {
+                return $this->_propDict["endpointType"];
+            } else {
+                $this->_propDict["endpointType"] = new EndpointType($this->_propDict["endpointType"]);
+                return $this->_propDict["endpointType"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the endpointType
+    *
+    * @param EndpointType $val The value to assign to the endpointType
+    *
+    * @return InvitationParticipantInfo The InvitationParticipantInfo
+    */
+    public function setEndpointType($val)
+    {
+        $this->_propDict["endpointType"] = $val;
+         return $this;
+    }
+
+    /**
     * Gets the identity
     * The identitySet associated with this invitation.
     *
@@ -54,37 +85,6 @@ class InvitationParticipantInfo extends Entity
     public function setIdentity($val)
     {
         $this->_propDict["identity"] = $val;
-         return $this;
-    }
-
-    /**
-    * Gets the endpointType
-    *
-    * @return EndpointType The endpointType
-    */
-    public function getEndpointType()
-    {
-        if (array_key_exists("endpointType", $this->_propDict)) {
-            if (is_a($this->_propDict["endpointType"], "Beta\Microsoft\Graph\Model\EndpointType")) {
-                return $this->_propDict["endpointType"];
-            } else {
-                $this->_propDict["endpointType"] = new EndpointType($this->_propDict["endpointType"]);
-                return $this->_propDict["endpointType"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the endpointType
-    *
-    * @param EndpointType $val The value to assign to the endpointType
-    *
-    * @return InvitationParticipantInfo The InvitationParticipantInfo
-    */
-    public function setEndpointType($val)
-    {
-        $this->_propDict["endpointType"] = $val;
          return $this;
     }
     /**

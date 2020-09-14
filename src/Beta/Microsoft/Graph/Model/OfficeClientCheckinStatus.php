@@ -24,30 +24,61 @@ namespace Beta\Microsoft\Graph\Model;
 class OfficeClientCheckinStatus extends Entity
 {
     /**
-    * Gets the userPrincipalName
+    * Gets the appliedPolicies
     *
-    * @return string The userPrincipalName
+    * @return string The appliedPolicies
     */
-    public function getUserPrincipalName()
+    public function getAppliedPolicies()
     {
-        if (array_key_exists("userPrincipalName", $this->_propDict)) {
-            return $this->_propDict["userPrincipalName"];
+        if (array_key_exists("appliedPolicies", $this->_propDict)) {
+            return $this->_propDict["appliedPolicies"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the userPrincipalName
+    * Sets the appliedPolicies
     *
-    * @param string $val The value of the userPrincipalName
+    * @param string $val The value of the appliedPolicies
     *
     * @return OfficeClientCheckinStatus
     */
-    public function setUserPrincipalName($val)
+    public function setAppliedPolicies($val)
     {
-        $this->_propDict["userPrincipalName"] = $val;
+        $this->_propDict["appliedPolicies"] = $val;
         return $this;
+    }
+
+    /**
+    * Gets the checkinDateTime
+    *
+    * @return \DateTime The checkinDateTime
+    */
+    public function getCheckinDateTime()
+    {
+        if (array_key_exists("checkinDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["checkinDateTime"], "\DateTime")) {
+                return $this->_propDict["checkinDateTime"];
+            } else {
+                $this->_propDict["checkinDateTime"] = new \DateTime($this->_propDict["checkinDateTime"]);
+                return $this->_propDict["checkinDateTime"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the checkinDateTime
+    *
+    * @param \DateTime $val The value to assign to the checkinDateTime
+    *
+    * @return OfficeClientCheckinStatus The OfficeClientCheckinStatus
+    */
+    public function setCheckinDateTime($val)
+    {
+        $this->_propDict["checkinDateTime"] = $val;
+         return $this;
     }
     /**
     * Gets the deviceName
@@ -128,29 +159,29 @@ class OfficeClientCheckinStatus extends Entity
         return $this;
     }
     /**
-    * Gets the wasSuccessful
+    * Gets the errorMessage
     *
-    * @return bool The wasSuccessful
+    * @return string The errorMessage
     */
-    public function getWasSuccessful()
+    public function getErrorMessage()
     {
-        if (array_key_exists("wasSuccessful", $this->_propDict)) {
-            return $this->_propDict["wasSuccessful"];
+        if (array_key_exists("errorMessage", $this->_propDict)) {
+            return $this->_propDict["errorMessage"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the wasSuccessful
+    * Sets the errorMessage
     *
-    * @param bool $val The value of the wasSuccessful
+    * @param string $val The value of the errorMessage
     *
     * @return OfficeClientCheckinStatus
     */
-    public function setWasSuccessful($val)
+    public function setErrorMessage($val)
     {
-        $this->_propDict["wasSuccessful"] = $val;
+        $this->_propDict["errorMessage"] = $val;
         return $this;
     }
     /**
@@ -179,87 +210,56 @@ class OfficeClientCheckinStatus extends Entity
         $this->_propDict["userId"] = $val;
         return $this;
     }
-
     /**
-    * Gets the checkinDateTime
+    * Gets the userPrincipalName
     *
-    * @return \DateTime The checkinDateTime
+    * @return string The userPrincipalName
     */
-    public function getCheckinDateTime()
+    public function getUserPrincipalName()
     {
-        if (array_key_exists("checkinDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["checkinDateTime"], "\DateTime")) {
-                return $this->_propDict["checkinDateTime"];
-            } else {
-                $this->_propDict["checkinDateTime"] = new \DateTime($this->_propDict["checkinDateTime"]);
-                return $this->_propDict["checkinDateTime"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the checkinDateTime
-    *
-    * @param \DateTime $val The value to assign to the checkinDateTime
-    *
-    * @return OfficeClientCheckinStatus The OfficeClientCheckinStatus
-    */
-    public function setCheckinDateTime($val)
-    {
-        $this->_propDict["checkinDateTime"] = $val;
-         return $this;
-    }
-    /**
-    * Gets the errorMessage
-    *
-    * @return string The errorMessage
-    */
-    public function getErrorMessage()
-    {
-        if (array_key_exists("errorMessage", $this->_propDict)) {
-            return $this->_propDict["errorMessage"];
+        if (array_key_exists("userPrincipalName", $this->_propDict)) {
+            return $this->_propDict["userPrincipalName"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the errorMessage
+    * Sets the userPrincipalName
     *
-    * @param string $val The value of the errorMessage
+    * @param string $val The value of the userPrincipalName
     *
     * @return OfficeClientCheckinStatus
     */
-    public function setErrorMessage($val)
+    public function setUserPrincipalName($val)
     {
-        $this->_propDict["errorMessage"] = $val;
+        $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
     /**
-    * Gets the appliedPolicies
+    * Gets the wasSuccessful
     *
-    * @return string The appliedPolicies
+    * @return bool The wasSuccessful
     */
-    public function getAppliedPolicies()
+    public function getWasSuccessful()
     {
-        if (array_key_exists("appliedPolicies", $this->_propDict)) {
-            return $this->_propDict["appliedPolicies"];
+        if (array_key_exists("wasSuccessful", $this->_propDict)) {
+            return $this->_propDict["wasSuccessful"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the appliedPolicies
+    * Sets the wasSuccessful
     *
-    * @param string $val The value of the appliedPolicies
+    * @param bool $val The value of the wasSuccessful
     *
     * @return OfficeClientCheckinStatus
     */
-    public function setAppliedPolicies($val)
+    public function setWasSuccessful($val)
     {
-        $this->_propDict["appliedPolicies"] = $val;
+        $this->_propDict["wasSuccessful"] = $val;
         return $this;
     }
 }

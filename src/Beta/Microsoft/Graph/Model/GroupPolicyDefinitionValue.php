@@ -25,6 +25,39 @@ namespace Beta\Microsoft\Graph\Model;
 class GroupPolicyDefinitionValue extends Entity
 {
     /**
+    * Gets the configurationType
+    * Specifies how the value should be configured. This can be either as a Policy or as a Preference.
+    *
+    * @return GroupPolicyConfigurationType The configurationType
+    */
+    public function getConfigurationType()
+    {
+        if (array_key_exists("configurationType", $this->_propDict)) {
+            if (is_a($this->_propDict["configurationType"], "Beta\Microsoft\Graph\Model\GroupPolicyConfigurationType")) {
+                return $this->_propDict["configurationType"];
+            } else {
+                $this->_propDict["configurationType"] = new GroupPolicyConfigurationType($this->_propDict["configurationType"]);
+                return $this->_propDict["configurationType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the configurationType
+    * Specifies how the value should be configured. This can be either as a Policy or as a Preference.
+    *
+    * @param GroupPolicyConfigurationType $val The configurationType
+    *
+    * @return GroupPolicyDefinitionValue
+    */
+    public function setConfigurationType($val)
+    {
+        $this->_propDict["configurationType"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the createdDateTime
     * The date and time the object was created.
     *
@@ -87,39 +120,6 @@ class GroupPolicyDefinitionValue extends Entity
     }
     
     /**
-    * Gets the configurationType
-    * Specifies how the value should be configured. This can be either as a Policy or as a Preference.
-    *
-    * @return GroupPolicyConfigurationType The configurationType
-    */
-    public function getConfigurationType()
-    {
-        if (array_key_exists("configurationType", $this->_propDict)) {
-            if (is_a($this->_propDict["configurationType"], "Beta\Microsoft\Graph\Model\GroupPolicyConfigurationType")) {
-                return $this->_propDict["configurationType"];
-            } else {
-                $this->_propDict["configurationType"] = new GroupPolicyConfigurationType($this->_propDict["configurationType"]);
-                return $this->_propDict["configurationType"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the configurationType
-    * Specifies how the value should be configured. This can be either as a Policy or as a Preference.
-    *
-    * @param GroupPolicyConfigurationType $val The configurationType
-    *
-    * @return GroupPolicyDefinitionValue
-    */
-    public function setConfigurationType($val)
-    {
-        $this->_propDict["configurationType"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the lastModifiedDateTime
     * The date and time the entity was last modified.
     *
@@ -149,36 +149,6 @@ class GroupPolicyDefinitionValue extends Entity
     public function setLastModifiedDateTime($val)
     {
         $this->_propDict["lastModifiedDateTime"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the presentationValues
-    * The associated group policy presentation values with the definition value.
-     *
-     * @return array The presentationValues
-     */
-    public function getPresentationValues()
-    {
-        if (array_key_exists("presentationValues", $this->_propDict)) {
-           return $this->_propDict["presentationValues"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the presentationValues
-    * The associated group policy presentation values with the definition value.
-    *
-    * @param GroupPolicyPresentationValue $val The presentationValues
-    *
-    * @return GroupPolicyDefinitionValue
-    */
-    public function setPresentationValues($val)
-    {
-		$this->_propDict["presentationValues"] = $val;
         return $this;
     }
     
@@ -212,6 +182,36 @@ class GroupPolicyDefinitionValue extends Entity
     public function setDefinition($val)
     {
         $this->_propDict["definition"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the presentationValues
+    * The associated group policy presentation values with the definition value.
+     *
+     * @return array The presentationValues
+     */
+    public function getPresentationValues()
+    {
+        if (array_key_exists("presentationValues", $this->_propDict)) {
+           return $this->_propDict["presentationValues"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the presentationValues
+    * The associated group policy presentation values with the definition value.
+    *
+    * @param GroupPolicyPresentationValue $val The presentationValues
+    *
+    * @return GroupPolicyDefinitionValue
+    */
+    public function setPresentationValues($val)
+    {
+		$this->_propDict["presentationValues"] = $val;
         return $this;
     }
     

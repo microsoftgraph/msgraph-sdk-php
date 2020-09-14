@@ -25,6 +25,126 @@ namespace Beta\Microsoft\Graph\Model;
 class AgedAccountsReceivable extends Entity
 {
     /**
+    * Gets the agedAsOfDate
+    *
+    * @return \DateTime The agedAsOfDate
+    */
+    public function getAgedAsOfDate()
+    {
+        if (array_key_exists("agedAsOfDate", $this->_propDict)) {
+            if (is_a($this->_propDict["agedAsOfDate"], "\DateTime")) {
+                return $this->_propDict["agedAsOfDate"];
+            } else {
+                $this->_propDict["agedAsOfDate"] = new \DateTime($this->_propDict["agedAsOfDate"]);
+                return $this->_propDict["agedAsOfDate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the agedAsOfDate
+    *
+    * @param \DateTime $val The agedAsOfDate
+    *
+    * @return AgedAccountsReceivable
+    */
+    public function setAgedAsOfDate($val)
+    {
+        $this->_propDict["agedAsOfDate"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the balanceDue
+    *
+    * @return Decimal The balanceDue
+    */
+    public function getBalanceDue()
+    {
+        if (array_key_exists("balanceDue", $this->_propDict)) {
+            if (is_a($this->_propDict["balanceDue"], "Beta\Microsoft\Graph\Model\Decimal")) {
+                return $this->_propDict["balanceDue"];
+            } else {
+                $this->_propDict["balanceDue"] = new Decimal($this->_propDict["balanceDue"]);
+                return $this->_propDict["balanceDue"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the balanceDue
+    *
+    * @param Decimal $val The balanceDue
+    *
+    * @return AgedAccountsReceivable
+    */
+    public function setBalanceDue($val)
+    {
+        $this->_propDict["balanceDue"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the currencyCode
+    *
+    * @return string The currencyCode
+    */
+    public function getCurrencyCode()
+    {
+        if (array_key_exists("currencyCode", $this->_propDict)) {
+            return $this->_propDict["currencyCode"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the currencyCode
+    *
+    * @param string $val The currencyCode
+    *
+    * @return AgedAccountsReceivable
+    */
+    public function setCurrencyCode($val)
+    {
+        $this->_propDict["currencyCode"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the currentAmount
+    *
+    * @return Decimal The currentAmount
+    */
+    public function getCurrentAmount()
+    {
+        if (array_key_exists("currentAmount", $this->_propDict)) {
+            if (is_a($this->_propDict["currentAmount"], "Beta\Microsoft\Graph\Model\Decimal")) {
+                return $this->_propDict["currentAmount"];
+            } else {
+                $this->_propDict["currentAmount"] = new Decimal($this->_propDict["currentAmount"]);
+                return $this->_propDict["currentAmount"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the currentAmount
+    *
+    * @param Decimal $val The currentAmount
+    *
+    * @return AgedAccountsReceivable
+    */
+    public function setCurrentAmount($val)
+    {
+        $this->_propDict["currentAmount"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the customerNumber
     *
     * @return string The customerNumber
@@ -75,95 +195,6 @@ class AgedAccountsReceivable extends Entity
     public function setName($val)
     {
         $this->_propDict["name"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the currencyCode
-    *
-    * @return string The currencyCode
-    */
-    public function getCurrencyCode()
-    {
-        if (array_key_exists("currencyCode", $this->_propDict)) {
-            return $this->_propDict["currencyCode"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the currencyCode
-    *
-    * @param string $val The currencyCode
-    *
-    * @return AgedAccountsReceivable
-    */
-    public function setCurrencyCode($val)
-    {
-        $this->_propDict["currencyCode"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the balanceDue
-    *
-    * @return Decimal The balanceDue
-    */
-    public function getBalanceDue()
-    {
-        if (array_key_exists("balanceDue", $this->_propDict)) {
-            if (is_a($this->_propDict["balanceDue"], "Beta\Microsoft\Graph\Model\Decimal")) {
-                return $this->_propDict["balanceDue"];
-            } else {
-                $this->_propDict["balanceDue"] = new Decimal($this->_propDict["balanceDue"]);
-                return $this->_propDict["balanceDue"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the balanceDue
-    *
-    * @param Decimal $val The balanceDue
-    *
-    * @return AgedAccountsReceivable
-    */
-    public function setBalanceDue($val)
-    {
-        $this->_propDict["balanceDue"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the currentAmount
-    *
-    * @return Decimal The currentAmount
-    */
-    public function getCurrentAmount()
-    {
-        if (array_key_exists("currentAmount", $this->_propDict)) {
-            if (is_a($this->_propDict["currentAmount"], "Beta\Microsoft\Graph\Model\Decimal")) {
-                return $this->_propDict["currentAmount"];
-            } else {
-                $this->_propDict["currentAmount"] = new Decimal($this->_propDict["currentAmount"]);
-                return $this->_propDict["currentAmount"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the currentAmount
-    *
-    * @param Decimal $val The currentAmount
-    *
-    * @return AgedAccountsReceivable
-    */
-    public function setCurrentAmount($val)
-    {
-        $this->_propDict["currentAmount"] = $val;
         return $this;
     }
     
@@ -257,37 +288,6 @@ class AgedAccountsReceivable extends Entity
     public function setPeriod3Amount($val)
     {
         $this->_propDict["period3Amount"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the agedAsOfDate
-    *
-    * @return \DateTime The agedAsOfDate
-    */
-    public function getAgedAsOfDate()
-    {
-        if (array_key_exists("agedAsOfDate", $this->_propDict)) {
-            if (is_a($this->_propDict["agedAsOfDate"], "\DateTime")) {
-                return $this->_propDict["agedAsOfDate"];
-            } else {
-                $this->_propDict["agedAsOfDate"] = new \DateTime($this->_propDict["agedAsOfDate"]);
-                return $this->_propDict["agedAsOfDate"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the agedAsOfDate
-    *
-    * @param \DateTime $val The agedAsOfDate
-    *
-    * @return AgedAccountsReceivable
-    */
-    public function setAgedAsOfDate($val)
-    {
-        $this->_propDict["agedAsOfDate"] = $val;
         return $this;
     }
     

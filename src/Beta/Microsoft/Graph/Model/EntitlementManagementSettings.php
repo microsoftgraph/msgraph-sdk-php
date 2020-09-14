@@ -25,33 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class EntitlementManagementSettings extends Entity
 {
     /**
-    * Gets the externalUserLifecycleAction
-    *
-    * @return string The externalUserLifecycleAction
-    */
-    public function getExternalUserLifecycleAction()
-    {
-        if (array_key_exists("externalUserLifecycleAction", $this->_propDict)) {
-            return $this->_propDict["externalUserLifecycleAction"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the externalUserLifecycleAction
-    *
-    * @param string $val The externalUserLifecycleAction
-    *
-    * @return EntitlementManagementSettings
-    */
-    public function setExternalUserLifecycleAction($val)
-    {
-        $this->_propDict["externalUserLifecycleAction"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the daysUntilExternalUserDeletedAfterBlocked
     *
     * @return int The daysUntilExternalUserDeletedAfterBlocked
@@ -75,6 +48,33 @@ class EntitlementManagementSettings extends Entity
     public function setDaysUntilExternalUserDeletedAfterBlocked($val)
     {
         $this->_propDict["daysUntilExternalUserDeletedAfterBlocked"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the externalUserLifecycleAction
+    *
+    * @return string The externalUserLifecycleAction
+    */
+    public function getExternalUserLifecycleAction()
+    {
+        if (array_key_exists("externalUserLifecycleAction", $this->_propDict)) {
+            return $this->_propDict["externalUserLifecycleAction"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the externalUserLifecycleAction
+    *
+    * @param string $val The externalUserLifecycleAction
+    *
+    * @return EntitlementManagementSettings
+    */
+    public function setExternalUserLifecycleAction($val)
+    {
+        $this->_propDict["externalUserLifecycleAction"] = $val;
         return $this;
     }
     

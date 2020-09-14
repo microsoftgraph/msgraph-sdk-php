@@ -51,64 +51,33 @@ class FeatureUsageDetail extends Entity
     }
 
     /**
-    * Gets the licenseRequired
+    * Gets the lastConfiguredDateTime
     *
-    * @return AzureADLicenseType The licenseRequired
+    * @return \DateTime The lastConfiguredDateTime
     */
-    public function getLicenseRequired()
+    public function getLastConfiguredDateTime()
     {
-        if (array_key_exists("licenseRequired", $this->_propDict)) {
-            if (is_a($this->_propDict["licenseRequired"], "Beta\Microsoft\Graph\Model\AzureADLicenseType")) {
-                return $this->_propDict["licenseRequired"];
+        if (array_key_exists("lastConfiguredDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastConfiguredDateTime"], "\DateTime")) {
+                return $this->_propDict["lastConfiguredDateTime"];
             } else {
-                $this->_propDict["licenseRequired"] = new AzureADLicenseType($this->_propDict["licenseRequired"]);
-                return $this->_propDict["licenseRequired"];
+                $this->_propDict["lastConfiguredDateTime"] = new \DateTime($this->_propDict["lastConfiguredDateTime"]);
+                return $this->_propDict["lastConfiguredDateTime"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the licenseRequired
+    * Sets the lastConfiguredDateTime
     *
-    * @param AzureADLicenseType $val The value to assign to the licenseRequired
-    *
-    * @return FeatureUsageDetail The FeatureUsageDetail
-    */
-    public function setLicenseRequired($val)
-    {
-        $this->_propDict["licenseRequired"] = $val;
-         return $this;
-    }
-
-    /**
-    * Gets the licenseAssigned
-    *
-    * @return AzureADLicenseType The licenseAssigned
-    */
-    public function getLicenseAssigned()
-    {
-        if (array_key_exists("licenseAssigned", $this->_propDict)) {
-            if (is_a($this->_propDict["licenseAssigned"], "Beta\Microsoft\Graph\Model\AzureADLicenseType")) {
-                return $this->_propDict["licenseAssigned"];
-            } else {
-                $this->_propDict["licenseAssigned"] = new AzureADLicenseType($this->_propDict["licenseAssigned"]);
-                return $this->_propDict["licenseAssigned"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the licenseAssigned
-    *
-    * @param AzureADLicenseType $val The value to assign to the licenseAssigned
+    * @param \DateTime $val The value to assign to the lastConfiguredDateTime
     *
     * @return FeatureUsageDetail The FeatureUsageDetail
     */
-    public function setLicenseAssigned($val)
+    public function setLastConfiguredDateTime($val)
     {
-        $this->_propDict["licenseAssigned"] = $val;
+        $this->_propDict["lastConfiguredDateTime"] = $val;
          return $this;
     }
 
@@ -144,33 +113,64 @@ class FeatureUsageDetail extends Entity
     }
 
     /**
-    * Gets the lastConfiguredDateTime
+    * Gets the licenseAssigned
     *
-    * @return \DateTime The lastConfiguredDateTime
+    * @return AzureADLicenseType The licenseAssigned
     */
-    public function getLastConfiguredDateTime()
+    public function getLicenseAssigned()
     {
-        if (array_key_exists("lastConfiguredDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastConfiguredDateTime"], "\DateTime")) {
-                return $this->_propDict["lastConfiguredDateTime"];
+        if (array_key_exists("licenseAssigned", $this->_propDict)) {
+            if (is_a($this->_propDict["licenseAssigned"], "Beta\Microsoft\Graph\Model\AzureADLicenseType")) {
+                return $this->_propDict["licenseAssigned"];
             } else {
-                $this->_propDict["lastConfiguredDateTime"] = new \DateTime($this->_propDict["lastConfiguredDateTime"]);
-                return $this->_propDict["lastConfiguredDateTime"];
+                $this->_propDict["licenseAssigned"] = new AzureADLicenseType($this->_propDict["licenseAssigned"]);
+                return $this->_propDict["licenseAssigned"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the lastConfiguredDateTime
+    * Sets the licenseAssigned
     *
-    * @param \DateTime $val The value to assign to the lastConfiguredDateTime
+    * @param AzureADLicenseType $val The value to assign to the licenseAssigned
     *
     * @return FeatureUsageDetail The FeatureUsageDetail
     */
-    public function setLastConfiguredDateTime($val)
+    public function setLicenseAssigned($val)
     {
-        $this->_propDict["lastConfiguredDateTime"] = $val;
+        $this->_propDict["licenseAssigned"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the licenseRequired
+    *
+    * @return AzureADLicenseType The licenseRequired
+    */
+    public function getLicenseRequired()
+    {
+        if (array_key_exists("licenseRequired", $this->_propDict)) {
+            if (is_a($this->_propDict["licenseRequired"], "Beta\Microsoft\Graph\Model\AzureADLicenseType")) {
+                return $this->_propDict["licenseRequired"];
+            } else {
+                $this->_propDict["licenseRequired"] = new AzureADLicenseType($this->_propDict["licenseRequired"]);
+                return $this->_propDict["licenseRequired"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the licenseRequired
+    *
+    * @param AzureADLicenseType $val The value to assign to the licenseRequired
+    *
+    * @return FeatureUsageDetail The FeatureUsageDetail
+    */
+    public function setLicenseRequired($val)
+    {
+        $this->_propDict["licenseRequired"] = $val;
          return $this;
     }
 }

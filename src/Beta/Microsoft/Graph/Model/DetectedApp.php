@@ -25,6 +25,35 @@ namespace Beta\Microsoft\Graph\Model;
 class DetectedApp extends Entity
 {
     /**
+    * Gets the deviceCount
+    * The number of devices that have installed this application
+    *
+    * @return int The deviceCount
+    */
+    public function getDeviceCount()
+    {
+        if (array_key_exists("deviceCount", $this->_propDict)) {
+            return $this->_propDict["deviceCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the deviceCount
+    * The number of devices that have installed this application
+    *
+    * @param int $val The deviceCount
+    *
+    * @return DetectedApp
+    */
+    public function setDeviceCount($val)
+    {
+        $this->_propDict["deviceCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the displayName
     * Name of the discovered application. Read-only
     *
@@ -50,35 +79,6 @@ class DetectedApp extends Entity
     public function setDisplayName($val)
     {
         $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the version
-    * Version of the discovered application. Read-only
-    *
-    * @return string The version
-    */
-    public function getVersion()
-    {
-        if (array_key_exists("version", $this->_propDict)) {
-            return $this->_propDict["version"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the version
-    * Version of the discovered application. Read-only
-    *
-    * @param string $val The version
-    *
-    * @return DetectedApp
-    */
-    public function setVersion($val)
-    {
-        $this->_propDict["version"] = $val;
         return $this;
     }
     
@@ -112,31 +112,31 @@ class DetectedApp extends Entity
     }
     
     /**
-    * Gets the deviceCount
-    * The number of devices that have installed this application
+    * Gets the version
+    * Version of the discovered application. Read-only
     *
-    * @return int The deviceCount
+    * @return string The version
     */
-    public function getDeviceCount()
+    public function getVersion()
     {
-        if (array_key_exists("deviceCount", $this->_propDict)) {
-            return $this->_propDict["deviceCount"];
+        if (array_key_exists("version", $this->_propDict)) {
+            return $this->_propDict["version"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the deviceCount
-    * The number of devices that have installed this application
+    * Sets the version
+    * Version of the discovered application. Read-only
     *
-    * @param int $val The deviceCount
+    * @param string $val The version
     *
     * @return DetectedApp
     */
-    public function setDeviceCount($val)
+    public function setVersion($val)
     {
-        $this->_propDict["deviceCount"] = intval($val);
+        $this->_propDict["version"] = $val;
         return $this;
     }
     

@@ -56,60 +56,87 @@ class ScheduleChangeRequest extends ChangeTrackedEntity
     }
     
     /**
-    * Gets the state
+    * Gets the managerActionDateTime
     *
-    * @return ScheduleChangeState The state
+    * @return \DateTime The managerActionDateTime
     */
-    public function getState()
+    public function getManagerActionDateTime()
     {
-        if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "Beta\Microsoft\Graph\Model\ScheduleChangeState")) {
-                return $this->_propDict["state"];
+        if (array_key_exists("managerActionDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["managerActionDateTime"], "\DateTime")) {
+                return $this->_propDict["managerActionDateTime"];
             } else {
-                $this->_propDict["state"] = new ScheduleChangeState($this->_propDict["state"]);
-                return $this->_propDict["state"];
+                $this->_propDict["managerActionDateTime"] = new \DateTime($this->_propDict["managerActionDateTime"]);
+                return $this->_propDict["managerActionDateTime"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the state
+    * Sets the managerActionDateTime
     *
-    * @param ScheduleChangeState $val The state
+    * @param \DateTime $val The managerActionDateTime
     *
     * @return ScheduleChangeRequest
     */
-    public function setState($val)
+    public function setManagerActionDateTime($val)
     {
-        $this->_propDict["state"] = $val;
+        $this->_propDict["managerActionDateTime"] = $val;
         return $this;
     }
     
     /**
-    * Gets the senderMessage
+    * Gets the managerActionMessage
     *
-    * @return string The senderMessage
+    * @return string The managerActionMessage
     */
-    public function getSenderMessage()
+    public function getManagerActionMessage()
     {
-        if (array_key_exists("senderMessage", $this->_propDict)) {
-            return $this->_propDict["senderMessage"];
+        if (array_key_exists("managerActionMessage", $this->_propDict)) {
+            return $this->_propDict["managerActionMessage"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the senderMessage
+    * Sets the managerActionMessage
     *
-    * @param string $val The senderMessage
+    * @param string $val The managerActionMessage
     *
     * @return ScheduleChangeRequest
     */
-    public function setSenderMessage($val)
+    public function setManagerActionMessage($val)
     {
-        $this->_propDict["senderMessage"] = $val;
+        $this->_propDict["managerActionMessage"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the managerUserId
+    *
+    * @return string The managerUserId
+    */
+    public function getManagerUserId()
+    {
+        if (array_key_exists("managerUserId", $this->_propDict)) {
+            return $this->_propDict["managerUserId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the managerUserId
+    *
+    * @param string $val The managerUserId
+    *
+    * @return ScheduleChangeRequest
+    */
+    public function setManagerUserId($val)
+    {
+        $this->_propDict["managerUserId"] = $val;
         return $this;
     }
     
@@ -145,60 +172,29 @@ class ScheduleChangeRequest extends ChangeTrackedEntity
     }
     
     /**
-    * Gets the managerActionMessage
+    * Gets the senderMessage
     *
-    * @return string The managerActionMessage
+    * @return string The senderMessage
     */
-    public function getManagerActionMessage()
+    public function getSenderMessage()
     {
-        if (array_key_exists("managerActionMessage", $this->_propDict)) {
-            return $this->_propDict["managerActionMessage"];
+        if (array_key_exists("senderMessage", $this->_propDict)) {
+            return $this->_propDict["senderMessage"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the managerActionMessage
+    * Sets the senderMessage
     *
-    * @param string $val The managerActionMessage
-    *
-    * @return ScheduleChangeRequest
-    */
-    public function setManagerActionMessage($val)
-    {
-        $this->_propDict["managerActionMessage"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the managerActionDateTime
-    *
-    * @return \DateTime The managerActionDateTime
-    */
-    public function getManagerActionDateTime()
-    {
-        if (array_key_exists("managerActionDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["managerActionDateTime"], "\DateTime")) {
-                return $this->_propDict["managerActionDateTime"];
-            } else {
-                $this->_propDict["managerActionDateTime"] = new \DateTime($this->_propDict["managerActionDateTime"]);
-                return $this->_propDict["managerActionDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the managerActionDateTime
-    *
-    * @param \DateTime $val The managerActionDateTime
+    * @param string $val The senderMessage
     *
     * @return ScheduleChangeRequest
     */
-    public function setManagerActionDateTime($val)
+    public function setSenderMessage($val)
     {
-        $this->_propDict["managerActionDateTime"] = $val;
+        $this->_propDict["senderMessage"] = $val;
         return $this;
     }
     
@@ -230,29 +226,33 @@ class ScheduleChangeRequest extends ChangeTrackedEntity
     }
     
     /**
-    * Gets the managerUserId
+    * Gets the state
     *
-    * @return string The managerUserId
+    * @return ScheduleChangeState The state
     */
-    public function getManagerUserId()
+    public function getState()
     {
-        if (array_key_exists("managerUserId", $this->_propDict)) {
-            return $this->_propDict["managerUserId"];
-        } else {
-            return null;
+        if (array_key_exists("state", $this->_propDict)) {
+            if (is_a($this->_propDict["state"], "Beta\Microsoft\Graph\Model\ScheduleChangeState")) {
+                return $this->_propDict["state"];
+            } else {
+                $this->_propDict["state"] = new ScheduleChangeState($this->_propDict["state"]);
+                return $this->_propDict["state"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the managerUserId
+    * Sets the state
     *
-    * @param string $val The managerUserId
+    * @param ScheduleChangeState $val The state
     *
     * @return ScheduleChangeRequest
     */
-    public function setManagerUserId($val)
+    public function setState($val)
     {
-        $this->_propDict["managerUserId"] = $val;
+        $this->_propDict["state"] = $val;
         return $this;
     }
     

@@ -25,35 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class SectionGroup extends OnenoteEntityHierarchyModel
 {
     /**
-    * Gets the sectionsUrl
-    * The URL for the sections navigation property, which returns all the sections in the section group. Read-only.
-    *
-    * @return string The sectionsUrl
-    */
-    public function getSectionsUrl()
-    {
-        if (array_key_exists("sectionsUrl", $this->_propDict)) {
-            return $this->_propDict["sectionsUrl"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the sectionsUrl
-    * The URL for the sections navigation property, which returns all the sections in the section group. Read-only.
-    *
-    * @param string $val The sectionsUrl
-    *
-    * @return SectionGroup
-    */
-    public function setSectionsUrl($val)
-    {
-        $this->_propDict["sectionsUrl"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the sectionGroupsUrl
     * The URL for the sectionGroups navigation property, which returns all the section groups in the section group. Read-only.
     *
@@ -79,6 +50,35 @@ class SectionGroup extends OnenoteEntityHierarchyModel
     public function setSectionGroupsUrl($val)
     {
         $this->_propDict["sectionGroupsUrl"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the sectionsUrl
+    * The URL for the sections navigation property, which returns all the sections in the section group. Read-only.
+    *
+    * @return string The sectionsUrl
+    */
+    public function getSectionsUrl()
+    {
+        if (array_key_exists("sectionsUrl", $this->_propDict)) {
+            return $this->_propDict["sectionsUrl"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the sectionsUrl
+    * The URL for the sections navigation property, which returns all the sections in the section group. Read-only.
+    *
+    * @param string $val The sectionsUrl
+    *
+    * @return SectionGroup
+    */
+    public function setSectionsUrl($val)
+    {
+        $this->_propDict["sectionsUrl"] = $val;
         return $this;
     }
     
@@ -150,36 +150,6 @@ class SectionGroup extends OnenoteEntityHierarchyModel
     
 
      /** 
-     * Gets the sections
-    * The sections in the section group. Read-only. Nullable.
-     *
-     * @return array The sections
-     */
-    public function getSections()
-    {
-        if (array_key_exists("sections", $this->_propDict)) {
-           return $this->_propDict["sections"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the sections
-    * The sections in the section group. Read-only. Nullable.
-    *
-    * @param OnenoteSection $val The sections
-    *
-    * @return SectionGroup
-    */
-    public function setSections($val)
-    {
-		$this->_propDict["sections"] = $val;
-        return $this;
-    }
-    
-
-     /** 
      * Gets the sectionGroups
     * The section groups in the section. Read-only. Nullable.
      *
@@ -205,6 +175,36 @@ class SectionGroup extends OnenoteEntityHierarchyModel
     public function setSectionGroups($val)
     {
 		$this->_propDict["sectionGroups"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the sections
+    * The sections in the section group. Read-only. Nullable.
+     *
+     * @return array The sections
+     */
+    public function getSections()
+    {
+        if (array_key_exists("sections", $this->_propDict)) {
+           return $this->_propDict["sections"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the sections
+    * The sections in the section group. Read-only. Nullable.
+    *
+    * @param OnenoteSection $val The sections
+    *
+    * @return SectionGroup
+    */
+    public function setSections($val)
+    {
+		$this->_propDict["sections"] = $val;
         return $this;
     }
     

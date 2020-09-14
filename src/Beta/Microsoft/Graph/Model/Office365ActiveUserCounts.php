@@ -25,33 +25,29 @@ namespace Beta\Microsoft\Graph\Model;
 class Office365ActiveUserCounts extends Entity
 {
     /**
-    * Gets the reportRefreshDate
+    * Gets the exchange
     *
-    * @return \DateTime The reportRefreshDate
+    * @return int The exchange
     */
-    public function getReportRefreshDate()
+    public function getExchange()
     {
-        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
-                return $this->_propDict["reportRefreshDate"];
-            } else {
-                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
-                return $this->_propDict["reportRefreshDate"];
-            }
+        if (array_key_exists("exchange", $this->_propDict)) {
+            return $this->_propDict["exchange"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the reportRefreshDate
+    * Sets the exchange
     *
-    * @param \DateTime $val The reportRefreshDate
+    * @param int $val The exchange
     *
     * @return Office365ActiveUserCounts
     */
-    public function setReportRefreshDate($val)
+    public function setExchange($val)
     {
-        $this->_propDict["reportRefreshDate"] = $val;
+        $this->_propDict["exchange"] = intval($val);
         return $this;
     }
     
@@ -83,33 +79,6 @@ class Office365ActiveUserCounts extends Entity
     }
     
     /**
-    * Gets the exchange
-    *
-    * @return int The exchange
-    */
-    public function getExchange()
-    {
-        if (array_key_exists("exchange", $this->_propDict)) {
-            return $this->_propDict["exchange"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the exchange
-    *
-    * @param int $val The exchange
-    *
-    * @return Office365ActiveUserCounts
-    */
-    public function setExchange($val)
-    {
-        $this->_propDict["exchange"] = intval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the oneDrive
     *
     * @return int The oneDrive
@@ -133,114 +102,6 @@ class Office365ActiveUserCounts extends Entity
     public function setOneDrive($val)
     {
         $this->_propDict["oneDrive"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the sharePoint
-    *
-    * @return int The sharePoint
-    */
-    public function getSharePoint()
-    {
-        if (array_key_exists("sharePoint", $this->_propDict)) {
-            return $this->_propDict["sharePoint"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the sharePoint
-    *
-    * @param int $val The sharePoint
-    *
-    * @return Office365ActiveUserCounts
-    */
-    public function setSharePoint($val)
-    {
-        $this->_propDict["sharePoint"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the skypeForBusiness
-    *
-    * @return int The skypeForBusiness
-    */
-    public function getSkypeForBusiness()
-    {
-        if (array_key_exists("skypeForBusiness", $this->_propDict)) {
-            return $this->_propDict["skypeForBusiness"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the skypeForBusiness
-    *
-    * @param int $val The skypeForBusiness
-    *
-    * @return Office365ActiveUserCounts
-    */
-    public function setSkypeForBusiness($val)
-    {
-        $this->_propDict["skypeForBusiness"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the yammer
-    *
-    * @return int The yammer
-    */
-    public function getYammer()
-    {
-        if (array_key_exists("yammer", $this->_propDict)) {
-            return $this->_propDict["yammer"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the yammer
-    *
-    * @param int $val The yammer
-    *
-    * @return Office365ActiveUserCounts
-    */
-    public function setYammer($val)
-    {
-        $this->_propDict["yammer"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the teams
-    *
-    * @return int The teams
-    */
-    public function getTeams()
-    {
-        if (array_key_exists("teams", $this->_propDict)) {
-            return $this->_propDict["teams"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the teams
-    *
-    * @param int $val The teams
-    *
-    * @return Office365ActiveUserCounts
-    */
-    public function setTeams($val)
-    {
-        $this->_propDict["teams"] = intval($val);
         return $this;
     }
     
@@ -299,6 +160,145 @@ class Office365ActiveUserCounts extends Entity
     public function setReportPeriod($val)
     {
         $this->_propDict["reportPeriod"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the reportRefreshDate
+    *
+    * @return \DateTime The reportRefreshDate
+    */
+    public function getReportRefreshDate()
+    {
+        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
+                return $this->_propDict["reportRefreshDate"];
+            } else {
+                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
+                return $this->_propDict["reportRefreshDate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the reportRefreshDate
+    *
+    * @param \DateTime $val The reportRefreshDate
+    *
+    * @return Office365ActiveUserCounts
+    */
+    public function setReportRefreshDate($val)
+    {
+        $this->_propDict["reportRefreshDate"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the sharePoint
+    *
+    * @return int The sharePoint
+    */
+    public function getSharePoint()
+    {
+        if (array_key_exists("sharePoint", $this->_propDict)) {
+            return $this->_propDict["sharePoint"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the sharePoint
+    *
+    * @param int $val The sharePoint
+    *
+    * @return Office365ActiveUserCounts
+    */
+    public function setSharePoint($val)
+    {
+        $this->_propDict["sharePoint"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the skypeForBusiness
+    *
+    * @return int The skypeForBusiness
+    */
+    public function getSkypeForBusiness()
+    {
+        if (array_key_exists("skypeForBusiness", $this->_propDict)) {
+            return $this->_propDict["skypeForBusiness"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the skypeForBusiness
+    *
+    * @param int $val The skypeForBusiness
+    *
+    * @return Office365ActiveUserCounts
+    */
+    public function setSkypeForBusiness($val)
+    {
+        $this->_propDict["skypeForBusiness"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the teams
+    *
+    * @return int The teams
+    */
+    public function getTeams()
+    {
+        if (array_key_exists("teams", $this->_propDict)) {
+            return $this->_propDict["teams"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the teams
+    *
+    * @param int $val The teams
+    *
+    * @return Office365ActiveUserCounts
+    */
+    public function setTeams($val)
+    {
+        $this->_propDict["teams"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the yammer
+    *
+    * @return int The yammer
+    */
+    public function getYammer()
+    {
+        if (array_key_exists("yammer", $this->_propDict)) {
+            return $this->_propDict["yammer"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the yammer
+    *
+    * @param int $val The yammer
+    *
+    * @return Office365ActiveUserCounts
+    */
+    public function setYammer($val)
+    {
+        $this->_propDict["yammer"] = intval($val);
         return $this;
     }
     

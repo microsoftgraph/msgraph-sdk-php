@@ -25,64 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class PrintUsageSummaryByPrinter extends Entity
 {
     /**
-    * Gets the printerId
-    *
-    * @return string The printerId
-    */
-    public function getPrinterId()
-    {
-        if (array_key_exists("printerId", $this->_propDict)) {
-            return $this->_propDict["printerId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the printerId
-    *
-    * @param string $val The printerId
-    *
-    * @return PrintUsageSummaryByPrinter
-    */
-    public function setPrinterId($val)
-    {
-        $this->_propDict["printerId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the usageDate
-    *
-    * @return \DateTime The usageDate
-    */
-    public function getUsageDate()
-    {
-        if (array_key_exists("usageDate", $this->_propDict)) {
-            if (is_a($this->_propDict["usageDate"], "\DateTime")) {
-                return $this->_propDict["usageDate"];
-            } else {
-                $this->_propDict["usageDate"] = new \DateTime($this->_propDict["usageDate"]);
-                return $this->_propDict["usageDate"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the usageDate
-    *
-    * @param \DateTime $val The usageDate
-    *
-    * @return PrintUsageSummaryByPrinter
-    */
-    public function setUsageDate($val)
-    {
-        $this->_propDict["usageDate"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the completedBlackAndWhiteJobCount
     *
     * @return int The completedBlackAndWhiteJobCount
@@ -160,6 +102,64 @@ class PrintUsageSummaryByPrinter extends Entity
     public function setIncompleteJobCount($val)
     {
         $this->_propDict["incompleteJobCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the printerId
+    *
+    * @return string The printerId
+    */
+    public function getPrinterId()
+    {
+        if (array_key_exists("printerId", $this->_propDict)) {
+            return $this->_propDict["printerId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the printerId
+    *
+    * @param string $val The printerId
+    *
+    * @return PrintUsageSummaryByPrinter
+    */
+    public function setPrinterId($val)
+    {
+        $this->_propDict["printerId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the usageDate
+    *
+    * @return \DateTime The usageDate
+    */
+    public function getUsageDate()
+    {
+        if (array_key_exists("usageDate", $this->_propDict)) {
+            if (is_a($this->_propDict["usageDate"], "\DateTime")) {
+                return $this->_propDict["usageDate"];
+            } else {
+                $this->_propDict["usageDate"] = new \DateTime($this->_propDict["usageDate"]);
+                return $this->_propDict["usageDate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the usageDate
+    *
+    * @param \DateTime $val The usageDate
+    *
+    * @return PrintUsageSummaryByPrinter
+    */
+    public function setUsageDate($val)
+    {
+        $this->_propDict["usageDate"] = $val;
         return $this;
     }
     

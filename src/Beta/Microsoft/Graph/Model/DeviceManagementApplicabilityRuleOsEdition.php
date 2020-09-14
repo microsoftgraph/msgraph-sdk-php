@@ -23,6 +23,34 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class DeviceManagementApplicabilityRuleOsEdition extends Entity
 {
+    /**
+    * Gets the name
+    * Name for object.
+    *
+    * @return string The name
+    */
+    public function getName()
+    {
+        if (array_key_exists("name", $this->_propDict)) {
+            return $this->_propDict["name"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the name
+    * Name for object.
+    *
+    * @param string $val The value of the name
+    *
+    * @return DeviceManagementApplicabilityRuleOsEdition
+    */
+    public function setName($val)
+    {
+        $this->_propDict["name"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the osEditionTypes
@@ -55,34 +83,6 @@ class DeviceManagementApplicabilityRuleOsEdition extends Entity
     {
         $this->_propDict["osEditionTypes"] = $val;
          return $this;
-    }
-    /**
-    * Gets the name
-    * Name for object.
-    *
-    * @return string The name
-    */
-    public function getName()
-    {
-        if (array_key_exists("name", $this->_propDict)) {
-            return $this->_propDict["name"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the name
-    * Name for object.
-    *
-    * @param string $val The value of the name
-    *
-    * @return DeviceManagementApplicabilityRuleOsEdition
-    */
-    public function setName($val)
-    {
-        $this->_propDict["name"] = $val;
-        return $this;
     }
 
     /**

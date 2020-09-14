@@ -24,34 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class VppTokenLicenseSummary extends Entity
 {
     /**
-    * Gets the vppTokenId
-    * Identifier of the VPP token.
-    *
-    * @return string The vppTokenId
-    */
-    public function getVppTokenId()
-    {
-        if (array_key_exists("vppTokenId", $this->_propDict)) {
-            return $this->_propDict["vppTokenId"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the vppTokenId
-    * Identifier of the VPP token.
-    *
-    * @param string $val The value of the vppTokenId
-    *
-    * @return VppTokenLicenseSummary
-    */
-    public function setVppTokenId($val)
-    {
-        $this->_propDict["vppTokenId"] = $val;
-        return $this;
-    }
-    /**
     * Gets the appleId
     * The Apple Id associated with the given Apple Volume Purchase Program Token.
     *
@@ -77,34 +49,6 @@ class VppTokenLicenseSummary extends Entity
     public function setAppleId($val)
     {
         $this->_propDict["appleId"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the organizationName
-    * The organization associated with the Apple Volume Purchase Program Token.
-    *
-    * @return string The organizationName
-    */
-    public function getOrganizationName()
-    {
-        if (array_key_exists("organizationName", $this->_propDict)) {
-            return $this->_propDict["organizationName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the organizationName
-    * The organization associated with the Apple Volume Purchase Program Token.
-    *
-    * @param string $val The value of the organizationName
-    *
-    * @return VppTokenLicenseSummary
-    */
-    public function setOrganizationName($val)
-    {
-        $this->_propDict["organizationName"] = $val;
         return $this;
     }
     /**
@@ -136,6 +80,34 @@ class VppTokenLicenseSummary extends Entity
         return $this;
     }
     /**
+    * Gets the organizationName
+    * The organization associated with the Apple Volume Purchase Program Token.
+    *
+    * @return string The organizationName
+    */
+    public function getOrganizationName()
+    {
+        if (array_key_exists("organizationName", $this->_propDict)) {
+            return $this->_propDict["organizationName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the organizationName
+    * The organization associated with the Apple Volume Purchase Program Token.
+    *
+    * @param string $val The value of the organizationName
+    *
+    * @return VppTokenLicenseSummary
+    */
+    public function setOrganizationName($val)
+    {
+        $this->_propDict["organizationName"] = $val;
+        return $this;
+    }
+    /**
     * Gets the usedLicenseCount
     * The number of VPP licenses in use.
     *
@@ -161,6 +133,34 @@ class VppTokenLicenseSummary extends Entity
     public function setUsedLicenseCount($val)
     {
         $this->_propDict["usedLicenseCount"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the vppTokenId
+    * Identifier of the VPP token.
+    *
+    * @return string The vppTokenId
+    */
+    public function getVppTokenId()
+    {
+        if (array_key_exists("vppTokenId", $this->_propDict)) {
+            return $this->_propDict["vppTokenId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the vppTokenId
+    * Identifier of the VPP token.
+    *
+    * @param string $val The value of the vppTokenId
+    *
+    * @return VppTokenLicenseSummary
+    */
+    public function setVppTokenId($val)
+    {
+        $this->_propDict["vppTokenId"] = $val;
         return $this;
     }
 }

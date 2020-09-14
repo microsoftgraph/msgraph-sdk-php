@@ -25,6 +25,33 @@ namespace Beta\Microsoft\Graph\Model;
 class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMethodTarget
 {
     /**
+    * Gets the isNumberMatchingRequired
+    *
+    * @return bool The isNumberMatchingRequired
+    */
+    public function getIsNumberMatchingRequired()
+    {
+        if (array_key_exists("isNumberMatchingRequired", $this->_propDict)) {
+            return $this->_propDict["isNumberMatchingRequired"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isNumberMatchingRequired
+    *
+    * @param bool $val The isNumberMatchingRequired
+    *
+    * @return MicrosoftAuthenticatorAuthenticationMethodTarget
+    */
+    public function setIsNumberMatchingRequired($val)
+    {
+        $this->_propDict["isNumberMatchingRequired"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the shownContext
     *
     * @return AuthenticatorAppContextType The shownContext
@@ -52,33 +79,6 @@ class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMet
     public function setShownContext($val)
     {
         $this->_propDict["shownContext"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the isNumberMatchingRequired
-    *
-    * @return bool The isNumberMatchingRequired
-    */
-    public function getIsNumberMatchingRequired()
-    {
-        if (array_key_exists("isNumberMatchingRequired", $this->_propDict)) {
-            return $this->_propDict["isNumberMatchingRequired"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the isNumberMatchingRequired
-    *
-    * @param bool $val The isNumberMatchingRequired
-    *
-    * @return MicrosoftAuthenticatorAuthenticationMethodTarget
-    */
-    public function setIsNumberMatchingRequired($val)
-    {
-        $this->_propDict["isNumberMatchingRequired"] = boolval($val);
         return $this;
     }
     

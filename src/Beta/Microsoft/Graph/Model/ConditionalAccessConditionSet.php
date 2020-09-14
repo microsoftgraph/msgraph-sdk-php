@@ -58,35 +58,163 @@ class ConditionalAccessConditionSet extends Entity
     }
 
     /**
-    * Gets the users
-    * Users, groups, and roles included in and excluded from the policy. Required.
+    * Gets the clientAppTypes
+    * Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other.
     *
-    * @return ConditionalAccessUsers The users
+    * @return ConditionalAccessClientApp The clientAppTypes
     */
-    public function getUsers()
+    public function getClientAppTypes()
     {
-        if (array_key_exists("users", $this->_propDict)) {
-            if (is_a($this->_propDict["users"], "Beta\Microsoft\Graph\Model\ConditionalAccessUsers")) {
-                return $this->_propDict["users"];
+        if (array_key_exists("clientAppTypes", $this->_propDict)) {
+            if (is_a($this->_propDict["clientAppTypes"], "Beta\Microsoft\Graph\Model\ConditionalAccessClientApp")) {
+                return $this->_propDict["clientAppTypes"];
             } else {
-                $this->_propDict["users"] = new ConditionalAccessUsers($this->_propDict["users"]);
-                return $this->_propDict["users"];
+                $this->_propDict["clientAppTypes"] = new ConditionalAccessClientApp($this->_propDict["clientAppTypes"]);
+                return $this->_propDict["clientAppTypes"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the users
-    * Users, groups, and roles included in and excluded from the policy. Required.
+    * Sets the clientAppTypes
+    * Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other.
     *
-    * @param ConditionalAccessUsers $val The value to assign to the users
+    * @param ConditionalAccessClientApp $val The value to assign to the clientAppTypes
     *
     * @return ConditionalAccessConditionSet The ConditionalAccessConditionSet
     */
-    public function setUsers($val)
+    public function setClientAppTypes($val)
     {
-        $this->_propDict["users"] = $val;
+        $this->_propDict["clientAppTypes"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the devices
+    *
+    * @return ConditionalAccessDevices The devices
+    */
+    public function getDevices()
+    {
+        if (array_key_exists("devices", $this->_propDict)) {
+            if (is_a($this->_propDict["devices"], "Beta\Microsoft\Graph\Model\ConditionalAccessDevices")) {
+                return $this->_propDict["devices"];
+            } else {
+                $this->_propDict["devices"] = new ConditionalAccessDevices($this->_propDict["devices"]);
+                return $this->_propDict["devices"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the devices
+    *
+    * @param ConditionalAccessDevices $val The value to assign to the devices
+    *
+    * @return ConditionalAccessConditionSet The ConditionalAccessConditionSet
+    */
+    public function setDevices($val)
+    {
+        $this->_propDict["devices"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the deviceStates
+    *
+    * @return ConditionalAccessDeviceStates The deviceStates
+    */
+    public function getDeviceStates()
+    {
+        if (array_key_exists("deviceStates", $this->_propDict)) {
+            if (is_a($this->_propDict["deviceStates"], "Beta\Microsoft\Graph\Model\ConditionalAccessDeviceStates")) {
+                return $this->_propDict["deviceStates"];
+            } else {
+                $this->_propDict["deviceStates"] = new ConditionalAccessDeviceStates($this->_propDict["deviceStates"]);
+                return $this->_propDict["deviceStates"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the deviceStates
+    *
+    * @param ConditionalAccessDeviceStates $val The value to assign to the deviceStates
+    *
+    * @return ConditionalAccessConditionSet The ConditionalAccessConditionSet
+    */
+    public function setDeviceStates($val)
+    {
+        $this->_propDict["deviceStates"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the locations
+    * Locations included in and excluded from the policy.
+    *
+    * @return ConditionalAccessLocations The locations
+    */
+    public function getLocations()
+    {
+        if (array_key_exists("locations", $this->_propDict)) {
+            if (is_a($this->_propDict["locations"], "Beta\Microsoft\Graph\Model\ConditionalAccessLocations")) {
+                return $this->_propDict["locations"];
+            } else {
+                $this->_propDict["locations"] = new ConditionalAccessLocations($this->_propDict["locations"]);
+                return $this->_propDict["locations"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the locations
+    * Locations included in and excluded from the policy.
+    *
+    * @param ConditionalAccessLocations $val The value to assign to the locations
+    *
+    * @return ConditionalAccessConditionSet The ConditionalAccessConditionSet
+    */
+    public function setLocations($val)
+    {
+        $this->_propDict["locations"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the platforms
+    * Platforms included in and excluded from the policy.
+    *
+    * @return ConditionalAccessPlatforms The platforms
+    */
+    public function getPlatforms()
+    {
+        if (array_key_exists("platforms", $this->_propDict)) {
+            if (is_a($this->_propDict["platforms"], "Beta\Microsoft\Graph\Model\ConditionalAccessPlatforms")) {
+                return $this->_propDict["platforms"];
+            } else {
+                $this->_propDict["platforms"] = new ConditionalAccessPlatforms($this->_propDict["platforms"]);
+                return $this->_propDict["platforms"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the platforms
+    * Platforms included in and excluded from the policy.
+    *
+    * @param ConditionalAccessPlatforms $val The value to assign to the platforms
+    *
+    * @return ConditionalAccessConditionSet The ConditionalAccessConditionSet
+    */
+    public function setPlatforms($val)
+    {
+        $this->_propDict["platforms"] = $val;
          return $this;
     }
 
@@ -155,163 +283,35 @@ class ConditionalAccessConditionSet extends Entity
     }
 
     /**
-    * Gets the platforms
-    * Platforms included in and excluded from the policy.
+    * Gets the users
+    * Users, groups, and roles included in and excluded from the policy. Required.
     *
-    * @return ConditionalAccessPlatforms The platforms
+    * @return ConditionalAccessUsers The users
     */
-    public function getPlatforms()
+    public function getUsers()
     {
-        if (array_key_exists("platforms", $this->_propDict)) {
-            if (is_a($this->_propDict["platforms"], "Beta\Microsoft\Graph\Model\ConditionalAccessPlatforms")) {
-                return $this->_propDict["platforms"];
+        if (array_key_exists("users", $this->_propDict)) {
+            if (is_a($this->_propDict["users"], "Beta\Microsoft\Graph\Model\ConditionalAccessUsers")) {
+                return $this->_propDict["users"];
             } else {
-                $this->_propDict["platforms"] = new ConditionalAccessPlatforms($this->_propDict["platforms"]);
-                return $this->_propDict["platforms"];
+                $this->_propDict["users"] = new ConditionalAccessUsers($this->_propDict["users"]);
+                return $this->_propDict["users"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the platforms
-    * Platforms included in and excluded from the policy.
+    * Sets the users
+    * Users, groups, and roles included in and excluded from the policy. Required.
     *
-    * @param ConditionalAccessPlatforms $val The value to assign to the platforms
-    *
-    * @return ConditionalAccessConditionSet The ConditionalAccessConditionSet
-    */
-    public function setPlatforms($val)
-    {
-        $this->_propDict["platforms"] = $val;
-         return $this;
-    }
-
-    /**
-    * Gets the locations
-    * Locations included in and excluded from the policy.
-    *
-    * @return ConditionalAccessLocations The locations
-    */
-    public function getLocations()
-    {
-        if (array_key_exists("locations", $this->_propDict)) {
-            if (is_a($this->_propDict["locations"], "Beta\Microsoft\Graph\Model\ConditionalAccessLocations")) {
-                return $this->_propDict["locations"];
-            } else {
-                $this->_propDict["locations"] = new ConditionalAccessLocations($this->_propDict["locations"]);
-                return $this->_propDict["locations"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the locations
-    * Locations included in and excluded from the policy.
-    *
-    * @param ConditionalAccessLocations $val The value to assign to the locations
+    * @param ConditionalAccessUsers $val The value to assign to the users
     *
     * @return ConditionalAccessConditionSet The ConditionalAccessConditionSet
     */
-    public function setLocations($val)
+    public function setUsers($val)
     {
-        $this->_propDict["locations"] = $val;
-         return $this;
-    }
-
-    /**
-    * Gets the clientAppTypes
-    * Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other.
-    *
-    * @return ConditionalAccessClientApp The clientAppTypes
-    */
-    public function getClientAppTypes()
-    {
-        if (array_key_exists("clientAppTypes", $this->_propDict)) {
-            if (is_a($this->_propDict["clientAppTypes"], "Beta\Microsoft\Graph\Model\ConditionalAccessClientApp")) {
-                return $this->_propDict["clientAppTypes"];
-            } else {
-                $this->_propDict["clientAppTypes"] = new ConditionalAccessClientApp($this->_propDict["clientAppTypes"]);
-                return $this->_propDict["clientAppTypes"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the clientAppTypes
-    * Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other.
-    *
-    * @param ConditionalAccessClientApp $val The value to assign to the clientAppTypes
-    *
-    * @return ConditionalAccessConditionSet The ConditionalAccessConditionSet
-    */
-    public function setClientAppTypes($val)
-    {
-        $this->_propDict["clientAppTypes"] = $val;
-         return $this;
-    }
-
-    /**
-    * Gets the deviceStates
-    *
-    * @return ConditionalAccessDeviceStates The deviceStates
-    */
-    public function getDeviceStates()
-    {
-        if (array_key_exists("deviceStates", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceStates"], "Beta\Microsoft\Graph\Model\ConditionalAccessDeviceStates")) {
-                return $this->_propDict["deviceStates"];
-            } else {
-                $this->_propDict["deviceStates"] = new ConditionalAccessDeviceStates($this->_propDict["deviceStates"]);
-                return $this->_propDict["deviceStates"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the deviceStates
-    *
-    * @param ConditionalAccessDeviceStates $val The value to assign to the deviceStates
-    *
-    * @return ConditionalAccessConditionSet The ConditionalAccessConditionSet
-    */
-    public function setDeviceStates($val)
-    {
-        $this->_propDict["deviceStates"] = $val;
-         return $this;
-    }
-
-    /**
-    * Gets the devices
-    *
-    * @return ConditionalAccessDevices The devices
-    */
-    public function getDevices()
-    {
-        if (array_key_exists("devices", $this->_propDict)) {
-            if (is_a($this->_propDict["devices"], "Beta\Microsoft\Graph\Model\ConditionalAccessDevices")) {
-                return $this->_propDict["devices"];
-            } else {
-                $this->_propDict["devices"] = new ConditionalAccessDevices($this->_propDict["devices"]);
-                return $this->_propDict["devices"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the devices
-    *
-    * @param ConditionalAccessDevices $val The value to assign to the devices
-    *
-    * @return ConditionalAccessConditionSet The ConditionalAccessConditionSet
-    */
-    public function setDevices($val)
-    {
-        $this->_propDict["devices"] = $val;
+        $this->_propDict["users"] = $val;
          return $this;
     }
 }

@@ -25,35 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class EnrollmentRestrictionsConfigurationPolicySetItem extends PolicySetItem
 {
     /**
-    * Gets the priority
-    * Priority of the EnrollmentRestrictionsConfigurationPolicySetItem.
-    *
-    * @return int The priority
-    */
-    public function getPriority()
-    {
-        if (array_key_exists("priority", $this->_propDict)) {
-            return $this->_propDict["priority"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the priority
-    * Priority of the EnrollmentRestrictionsConfigurationPolicySetItem.
-    *
-    * @param int $val The priority
-    *
-    * @return EnrollmentRestrictionsConfigurationPolicySetItem
-    */
-    public function setPriority($val)
-    {
-        $this->_propDict["priority"] = intval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the limit
     * Limit of the EnrollmentRestrictionsConfigurationPolicySetItem.
     *
@@ -79,6 +50,35 @@ class EnrollmentRestrictionsConfigurationPolicySetItem extends PolicySetItem
     public function setLimit($val)
     {
         $this->_propDict["limit"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the priority
+    * Priority of the EnrollmentRestrictionsConfigurationPolicySetItem.
+    *
+    * @return int The priority
+    */
+    public function getPriority()
+    {
+        if (array_key_exists("priority", $this->_propDict)) {
+            return $this->_propDict["priority"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the priority
+    * Priority of the EnrollmentRestrictionsConfigurationPolicySetItem.
+    *
+    * @param int $val The priority
+    *
+    * @return EnrollmentRestrictionsConfigurationPolicySetItem
+    */
+    public function setPriority($val)
+    {
+        $this->_propDict["priority"] = intval($val);
         return $this;
     }
     

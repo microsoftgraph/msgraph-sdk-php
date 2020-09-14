@@ -25,37 +25,6 @@ class TermsExpiration extends Entity
 {
 
     /**
-    * Gets the startDateTime
-    *
-    * @return \DateTime The startDateTime
-    */
-    public function getStartDateTime()
-    {
-        if (array_key_exists("startDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
-                return $this->_propDict["startDateTime"];
-            } else {
-                $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);
-                return $this->_propDict["startDateTime"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the startDateTime
-    *
-    * @param \DateTime $val The value to assign to the startDateTime
-    *
-    * @return TermsExpiration The TermsExpiration
-    */
-    public function setStartDateTime($val)
-    {
-        $this->_propDict["startDateTime"] = $val;
-         return $this;
-    }
-
-    /**
     * Gets the frequency
     *
     * @return Duration The frequency
@@ -83,6 +52,37 @@ class TermsExpiration extends Entity
     public function setFrequency($val)
     {
         $this->_propDict["frequency"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the startDateTime
+    *
+    * @return \DateTime The startDateTime
+    */
+    public function getStartDateTime()
+    {
+        if (array_key_exists("startDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
+                return $this->_propDict["startDateTime"];
+            } else {
+                $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);
+                return $this->_propDict["startDateTime"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the startDateTime
+    *
+    * @param \DateTime $val The value to assign to the startDateTime
+    *
+    * @return TermsExpiration The TermsExpiration
+    */
+    public function setStartDateTime($val)
+    {
+        $this->_propDict["startDateTime"] = $val;
          return $this;
     }
 }

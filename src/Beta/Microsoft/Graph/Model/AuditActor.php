@@ -24,59 +24,31 @@ namespace Beta\Microsoft\Graph\Model;
 class AuditActor extends Entity
 {
     /**
-    * Gets the type
-    * Actor Type.
+    * Gets the applicationDisplayName
+    * Name of the Application.
     *
-    * @return string The type
+    * @return string The applicationDisplayName
     */
-    public function getType()
+    public function getApplicationDisplayName()
     {
-        if (array_key_exists("type", $this->_propDict)) {
-            return $this->_propDict["type"];
+        if (array_key_exists("applicationDisplayName", $this->_propDict)) {
+            return $this->_propDict["applicationDisplayName"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the type
-    * Actor Type.
+    * Sets the applicationDisplayName
+    * Name of the Application.
     *
-    * @param string $val The value of the type
-    *
-    * @return AuditActor
-    */
-    public function setType($val)
-    {
-        $this->_propDict["type"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the userPermissions
-    * List of user permissions when the audit was performed.
-    *
-    * @return string The userPermissions
-    */
-    public function getUserPermissions()
-    {
-        if (array_key_exists("userPermissions", $this->_propDict)) {
-            return $this->_propDict["userPermissions"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the userPermissions
-    * List of user permissions when the audit was performed.
-    *
-    * @param string $val The value of the userPermissions
+    * @param string $val The value of the applicationDisplayName
     *
     * @return AuditActor
     */
-    public function setUserPermissions($val)
+    public function setApplicationDisplayName($val)
     {
-        $this->_propDict["userPermissions"] = $val;
+        $this->_propDict["applicationDisplayName"] = $val;
         return $this;
     }
     /**
@@ -108,90 +80,6 @@ class AuditActor extends Entity
         return $this;
     }
     /**
-    * Gets the applicationDisplayName
-    * Name of the Application.
-    *
-    * @return string The applicationDisplayName
-    */
-    public function getApplicationDisplayName()
-    {
-        if (array_key_exists("applicationDisplayName", $this->_propDict)) {
-            return $this->_propDict["applicationDisplayName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the applicationDisplayName
-    * Name of the Application.
-    *
-    * @param string $val The value of the applicationDisplayName
-    *
-    * @return AuditActor
-    */
-    public function setApplicationDisplayName($val)
-    {
-        $this->_propDict["applicationDisplayName"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the userPrincipalName
-    * User Principal Name (UPN).
-    *
-    * @return string The userPrincipalName
-    */
-    public function getUserPrincipalName()
-    {
-        if (array_key_exists("userPrincipalName", $this->_propDict)) {
-            return $this->_propDict["userPrincipalName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the userPrincipalName
-    * User Principal Name (UPN).
-    *
-    * @param string $val The value of the userPrincipalName
-    *
-    * @return AuditActor
-    */
-    public function setUserPrincipalName($val)
-    {
-        $this->_propDict["userPrincipalName"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the servicePrincipalName
-    * Service Principal Name (SPN).
-    *
-    * @return string The servicePrincipalName
-    */
-    public function getServicePrincipalName()
-    {
-        if (array_key_exists("servicePrincipalName", $this->_propDict)) {
-            return $this->_propDict["servicePrincipalName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the servicePrincipalName
-    * Service Principal Name (SPN).
-    *
-    * @param string $val The value of the servicePrincipalName
-    *
-    * @return AuditActor
-    */
-    public function setServicePrincipalName($val)
-    {
-        $this->_propDict["servicePrincipalName"] = $val;
-        return $this;
-    }
-    /**
     * Gets the ipAddress
     * IPAddress.
     *
@@ -218,67 +106,6 @@ class AuditActor extends Entity
     {
         $this->_propDict["ipAddress"] = $val;
         return $this;
-    }
-    /**
-    * Gets the userId
-    * User Id.
-    *
-    * @return string The userId
-    */
-    public function getUserId()
-    {
-        if (array_key_exists("userId", $this->_propDict)) {
-            return $this->_propDict["userId"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the userId
-    * User Id.
-    *
-    * @param string $val The value of the userId
-    *
-    * @return AuditActor
-    */
-    public function setUserId($val)
-    {
-        $this->_propDict["userId"] = $val;
-        return $this;
-    }
-
-    /**
-    * Gets the userRoleScopeTags
-    * List of user scope tags when the audit was performed.
-    *
-    * @return RoleScopeTagInfo The userRoleScopeTags
-    */
-    public function getUserRoleScopeTags()
-    {
-        if (array_key_exists("userRoleScopeTags", $this->_propDict)) {
-            if (is_a($this->_propDict["userRoleScopeTags"], "Beta\Microsoft\Graph\Model\RoleScopeTagInfo")) {
-                return $this->_propDict["userRoleScopeTags"];
-            } else {
-                $this->_propDict["userRoleScopeTags"] = new RoleScopeTagInfo($this->_propDict["userRoleScopeTags"]);
-                return $this->_propDict["userRoleScopeTags"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the userRoleScopeTags
-    * List of user scope tags when the audit was performed.
-    *
-    * @param RoleScopeTagInfo $val The value to assign to the userRoleScopeTags
-    *
-    * @return AuditActor The AuditActor
-    */
-    public function setUserRoleScopeTags($val)
-    {
-        $this->_propDict["userRoleScopeTags"] = $val;
-         return $this;
     }
     /**
     * Gets the remoteTenantId
@@ -335,5 +162,178 @@ class AuditActor extends Entity
     {
         $this->_propDict["remoteUserId"] = $val;
         return $this;
+    }
+    /**
+    * Gets the servicePrincipalName
+    * Service Principal Name (SPN).
+    *
+    * @return string The servicePrincipalName
+    */
+    public function getServicePrincipalName()
+    {
+        if (array_key_exists("servicePrincipalName", $this->_propDict)) {
+            return $this->_propDict["servicePrincipalName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the servicePrincipalName
+    * Service Principal Name (SPN).
+    *
+    * @param string $val The value of the servicePrincipalName
+    *
+    * @return AuditActor
+    */
+    public function setServicePrincipalName($val)
+    {
+        $this->_propDict["servicePrincipalName"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the type
+    * Actor Type.
+    *
+    * @return string The type
+    */
+    public function getType()
+    {
+        if (array_key_exists("type", $this->_propDict)) {
+            return $this->_propDict["type"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the type
+    * Actor Type.
+    *
+    * @param string $val The value of the type
+    *
+    * @return AuditActor
+    */
+    public function setType($val)
+    {
+        $this->_propDict["type"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the userId
+    * User Id.
+    *
+    * @return string The userId
+    */
+    public function getUserId()
+    {
+        if (array_key_exists("userId", $this->_propDict)) {
+            return $this->_propDict["userId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the userId
+    * User Id.
+    *
+    * @param string $val The value of the userId
+    *
+    * @return AuditActor
+    */
+    public function setUserId($val)
+    {
+        $this->_propDict["userId"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the userPermissions
+    * List of user permissions when the audit was performed.
+    *
+    * @return string The userPermissions
+    */
+    public function getUserPermissions()
+    {
+        if (array_key_exists("userPermissions", $this->_propDict)) {
+            return $this->_propDict["userPermissions"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the userPermissions
+    * List of user permissions when the audit was performed.
+    *
+    * @param string $val The value of the userPermissions
+    *
+    * @return AuditActor
+    */
+    public function setUserPermissions($val)
+    {
+        $this->_propDict["userPermissions"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the userPrincipalName
+    * User Principal Name (UPN).
+    *
+    * @return string The userPrincipalName
+    */
+    public function getUserPrincipalName()
+    {
+        if (array_key_exists("userPrincipalName", $this->_propDict)) {
+            return $this->_propDict["userPrincipalName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the userPrincipalName
+    * User Principal Name (UPN).
+    *
+    * @param string $val The value of the userPrincipalName
+    *
+    * @return AuditActor
+    */
+    public function setUserPrincipalName($val)
+    {
+        $this->_propDict["userPrincipalName"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the userRoleScopeTags
+    * List of user scope tags when the audit was performed.
+    *
+    * @return RoleScopeTagInfo The userRoleScopeTags
+    */
+    public function getUserRoleScopeTags()
+    {
+        if (array_key_exists("userRoleScopeTags", $this->_propDict)) {
+            if (is_a($this->_propDict["userRoleScopeTags"], "Beta\Microsoft\Graph\Model\RoleScopeTagInfo")) {
+                return $this->_propDict["userRoleScopeTags"];
+            } else {
+                $this->_propDict["userRoleScopeTags"] = new RoleScopeTagInfo($this->_propDict["userRoleScopeTags"]);
+                return $this->_propDict["userRoleScopeTags"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the userRoleScopeTags
+    * List of user scope tags when the audit was performed.
+    *
+    * @param RoleScopeTagInfo $val The value to assign to the userRoleScopeTags
+    *
+    * @return AuditActor The AuditActor
+    */
+    public function setUserRoleScopeTags($val)
+    {
+        $this->_propDict["userRoleScopeTags"] = $val;
+         return $this;
     }
 }

@@ -25,33 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class GovernanceSubject extends Entity
 {
     /**
-    * Gets the type
-    *
-    * @return string The type
-    */
-    public function getType()
-    {
-        if (array_key_exists("type", $this->_propDict)) {
-            return $this->_propDict["type"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the type
-    *
-    * @param string $val The type
-    *
-    * @return GovernanceSubject
-    */
-    public function setType($val)
-    {
-        $this->_propDict["type"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the displayName
     *
     * @return string The displayName
@@ -75,6 +48,33 @@ class GovernanceSubject extends Entity
     public function setDisplayName($val)
     {
         $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the email
+    *
+    * @return string The email
+    */
+    public function getEmail()
+    {
+        if (array_key_exists("email", $this->_propDict)) {
+            return $this->_propDict["email"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the email
+    *
+    * @param string $val The email
+    *
+    * @return GovernanceSubject
+    */
+    public function setEmail($val)
+    {
+        $this->_propDict["email"] = $val;
         return $this;
     }
     
@@ -106,29 +106,29 @@ class GovernanceSubject extends Entity
     }
     
     /**
-    * Gets the email
+    * Gets the type
     *
-    * @return string The email
+    * @return string The type
     */
-    public function getEmail()
+    public function getType()
     {
-        if (array_key_exists("email", $this->_propDict)) {
-            return $this->_propDict["email"];
+        if (array_key_exists("type", $this->_propDict)) {
+            return $this->_propDict["type"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the email
+    * Sets the type
     *
-    * @param string $val The email
+    * @param string $val The type
     *
     * @return GovernanceSubject
     */
-    public function setEmail($val)
+    public function setType($val)
     {
-        $this->_propDict["email"] = $val;
+        $this->_propDict["type"] = $val;
         return $this;
     }
     

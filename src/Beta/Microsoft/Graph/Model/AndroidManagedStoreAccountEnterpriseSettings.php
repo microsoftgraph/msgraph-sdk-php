@@ -25,6 +25,35 @@ namespace Beta\Microsoft\Graph\Model;
 class AndroidManagedStoreAccountEnterpriseSettings extends Entity
 {
     /**
+    * Gets the androidDeviceOwnerFullyManagedEnrollmentEnabled
+    * Company codes for AndroidManagedStoreAccountEnterpriseSettings
+    *
+    * @return bool The androidDeviceOwnerFullyManagedEnrollmentEnabled
+    */
+    public function getAndroidDeviceOwnerFullyManagedEnrollmentEnabled()
+    {
+        if (array_key_exists("androidDeviceOwnerFullyManagedEnrollmentEnabled", $this->_propDict)) {
+            return $this->_propDict["androidDeviceOwnerFullyManagedEnrollmentEnabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the androidDeviceOwnerFullyManagedEnrollmentEnabled
+    * Company codes for AndroidManagedStoreAccountEnterpriseSettings
+    *
+    * @param bool $val The androidDeviceOwnerFullyManagedEnrollmentEnabled
+    *
+    * @return AndroidManagedStoreAccountEnterpriseSettings
+    */
+    public function setAndroidDeviceOwnerFullyManagedEnrollmentEnabled($val)
+    {
+        $this->_propDict["androidDeviceOwnerFullyManagedEnrollmentEnabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the bindStatus
     * Bind status of the tenant with the Google EMM API
     *
@@ -54,6 +83,98 @@ class AndroidManagedStoreAccountEnterpriseSettings extends Entity
     public function setBindStatus($val)
     {
         $this->_propDict["bindStatus"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the companyCodes
+    * Company codes for AndroidManagedStoreAccountEnterpriseSettings
+     *
+     * @return array The companyCodes
+     */
+    public function getCompanyCodes()
+    {
+        if (array_key_exists("companyCodes", $this->_propDict)) {
+           return $this->_propDict["companyCodes"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the companyCodes
+    * Company codes for AndroidManagedStoreAccountEnterpriseSettings
+    *
+    * @param AndroidEnrollmentCompanyCode $val The companyCodes
+    *
+    * @return AndroidManagedStoreAccountEnterpriseSettings
+    */
+    public function setCompanyCodes($val)
+    {
+		$this->_propDict["companyCodes"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the deviceOwnerManagementEnabled
+    * Indicates if this account is flighting for Android Device Owner Management with CloudDPC.
+    *
+    * @return bool The deviceOwnerManagementEnabled
+    */
+    public function getDeviceOwnerManagementEnabled()
+    {
+        if (array_key_exists("deviceOwnerManagementEnabled", $this->_propDict)) {
+            return $this->_propDict["deviceOwnerManagementEnabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the deviceOwnerManagementEnabled
+    * Indicates if this account is flighting for Android Device Owner Management with CloudDPC.
+    *
+    * @param bool $val The deviceOwnerManagementEnabled
+    *
+    * @return AndroidManagedStoreAccountEnterpriseSettings
+    */
+    public function setDeviceOwnerManagementEnabled($val)
+    {
+        $this->_propDict["deviceOwnerManagementEnabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the enrollmentTarget
+    * Indicates which users can enroll devices in Android Enterprise device management
+    *
+    * @return AndroidManagedStoreAccountEnrollmentTarget The enrollmentTarget
+    */
+    public function getEnrollmentTarget()
+    {
+        if (array_key_exists("enrollmentTarget", $this->_propDict)) {
+            if (is_a($this->_propDict["enrollmentTarget"], "Beta\Microsoft\Graph\Model\AndroidManagedStoreAccountEnrollmentTarget")) {
+                return $this->_propDict["enrollmentTarget"];
+            } else {
+                $this->_propDict["enrollmentTarget"] = new AndroidManagedStoreAccountEnrollmentTarget($this->_propDict["enrollmentTarget"]);
+                return $this->_propDict["enrollmentTarget"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the enrollmentTarget
+    * Indicates which users can enroll devices in Android Enterprise device management
+    *
+    * @param AndroidManagedStoreAccountEnrollmentTarget $val The enrollmentTarget
+    *
+    * @return AndroidManagedStoreAccountEnterpriseSettings
+    */
+    public function setEnrollmentTarget($val)
+    {
+        $this->_propDict["enrollmentTarget"] = $val;
         return $this;
     }
     
@@ -124,64 +245,6 @@ class AndroidManagedStoreAccountEnterpriseSettings extends Entity
     }
     
     /**
-    * Gets the ownerUserPrincipalName
-    * Owner UPN that created the enterprise
-    *
-    * @return string The ownerUserPrincipalName
-    */
-    public function getOwnerUserPrincipalName()
-    {
-        if (array_key_exists("ownerUserPrincipalName", $this->_propDict)) {
-            return $this->_propDict["ownerUserPrincipalName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the ownerUserPrincipalName
-    * Owner UPN that created the enterprise
-    *
-    * @param string $val The ownerUserPrincipalName
-    *
-    * @return AndroidManagedStoreAccountEnterpriseSettings
-    */
-    public function setOwnerUserPrincipalName($val)
-    {
-        $this->_propDict["ownerUserPrincipalName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the ownerOrganizationName
-    * Organization name used when onboarding Android Enterprise
-    *
-    * @return string The ownerOrganizationName
-    */
-    public function getOwnerOrganizationName()
-    {
-        if (array_key_exists("ownerOrganizationName", $this->_propDict)) {
-            return $this->_propDict["ownerOrganizationName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the ownerOrganizationName
-    * Organization name used when onboarding Android Enterprise
-    *
-    * @param string $val The ownerOrganizationName
-    *
-    * @return AndroidManagedStoreAccountEnterpriseSettings
-    */
-    public function setOwnerOrganizationName($val)
-    {
-        $this->_propDict["ownerOrganizationName"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the lastModifiedDateTime
     * Last modification time for Android enterprise settings
     *
@@ -215,35 +278,60 @@ class AndroidManagedStoreAccountEnterpriseSettings extends Entity
     }
     
     /**
-    * Gets the enrollmentTarget
-    * Indicates which users can enroll devices in Android Enterprise device management
+    * Gets the ownerOrganizationName
+    * Organization name used when onboarding Android Enterprise
     *
-    * @return AndroidManagedStoreAccountEnrollmentTarget The enrollmentTarget
+    * @return string The ownerOrganizationName
     */
-    public function getEnrollmentTarget()
+    public function getOwnerOrganizationName()
     {
-        if (array_key_exists("enrollmentTarget", $this->_propDict)) {
-            if (is_a($this->_propDict["enrollmentTarget"], "Beta\Microsoft\Graph\Model\AndroidManagedStoreAccountEnrollmentTarget")) {
-                return $this->_propDict["enrollmentTarget"];
-            } else {
-                $this->_propDict["enrollmentTarget"] = new AndroidManagedStoreAccountEnrollmentTarget($this->_propDict["enrollmentTarget"]);
-                return $this->_propDict["enrollmentTarget"];
-            }
+        if (array_key_exists("ownerOrganizationName", $this->_propDict)) {
+            return $this->_propDict["ownerOrganizationName"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the enrollmentTarget
-    * Indicates which users can enroll devices in Android Enterprise device management
+    * Sets the ownerOrganizationName
+    * Organization name used when onboarding Android Enterprise
     *
-    * @param AndroidManagedStoreAccountEnrollmentTarget $val The enrollmentTarget
+    * @param string $val The ownerOrganizationName
     *
     * @return AndroidManagedStoreAccountEnterpriseSettings
     */
-    public function setEnrollmentTarget($val)
+    public function setOwnerOrganizationName($val)
     {
-        $this->_propDict["enrollmentTarget"] = $val;
+        $this->_propDict["ownerOrganizationName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the ownerUserPrincipalName
+    * Owner UPN that created the enterprise
+    *
+    * @return string The ownerUserPrincipalName
+    */
+    public function getOwnerUserPrincipalName()
+    {
+        if (array_key_exists("ownerUserPrincipalName", $this->_propDict)) {
+            return $this->_propDict["ownerUserPrincipalName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the ownerUserPrincipalName
+    * Owner UPN that created the enterprise
+    *
+    * @param string $val The ownerUserPrincipalName
+    *
+    * @return AndroidManagedStoreAccountEnterpriseSettings
+    */
+    public function setOwnerUserPrincipalName($val)
+    {
+        $this->_propDict["ownerUserPrincipalName"] = $val;
         return $this;
     }
     
@@ -273,94 +361,6 @@ class AndroidManagedStoreAccountEnterpriseSettings extends Entity
     public function setTargetGroupIds($val)
     {
         $this->_propDict["targetGroupIds"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the deviceOwnerManagementEnabled
-    * Indicates if this account is flighting for Android Device Owner Management with CloudDPC.
-    *
-    * @return bool The deviceOwnerManagementEnabled
-    */
-    public function getDeviceOwnerManagementEnabled()
-    {
-        if (array_key_exists("deviceOwnerManagementEnabled", $this->_propDict)) {
-            return $this->_propDict["deviceOwnerManagementEnabled"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the deviceOwnerManagementEnabled
-    * Indicates if this account is flighting for Android Device Owner Management with CloudDPC.
-    *
-    * @param bool $val The deviceOwnerManagementEnabled
-    *
-    * @return AndroidManagedStoreAccountEnterpriseSettings
-    */
-    public function setDeviceOwnerManagementEnabled($val)
-    {
-        $this->_propDict["deviceOwnerManagementEnabled"] = boolval($val);
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the companyCodes
-    * Company codes for AndroidManagedStoreAccountEnterpriseSettings
-     *
-     * @return array The companyCodes
-     */
-    public function getCompanyCodes()
-    {
-        if (array_key_exists("companyCodes", $this->_propDict)) {
-           return $this->_propDict["companyCodes"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the companyCodes
-    * Company codes for AndroidManagedStoreAccountEnterpriseSettings
-    *
-    * @param AndroidEnrollmentCompanyCode $val The companyCodes
-    *
-    * @return AndroidManagedStoreAccountEnterpriseSettings
-    */
-    public function setCompanyCodes($val)
-    {
-		$this->_propDict["companyCodes"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the androidDeviceOwnerFullyManagedEnrollmentEnabled
-    * Company codes for AndroidManagedStoreAccountEnterpriseSettings
-    *
-    * @return bool The androidDeviceOwnerFullyManagedEnrollmentEnabled
-    */
-    public function getAndroidDeviceOwnerFullyManagedEnrollmentEnabled()
-    {
-        if (array_key_exists("androidDeviceOwnerFullyManagedEnrollmentEnabled", $this->_propDict)) {
-            return $this->_propDict["androidDeviceOwnerFullyManagedEnrollmentEnabled"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the androidDeviceOwnerFullyManagedEnrollmentEnabled
-    * Company codes for AndroidManagedStoreAccountEnterpriseSettings
-    *
-    * @param bool $val The androidDeviceOwnerFullyManagedEnrollmentEnabled
-    *
-    * @return AndroidManagedStoreAccountEnterpriseSettings
-    */
-    public function setAndroidDeviceOwnerFullyManagedEnrollmentEnabled($val)
-    {
-        $this->_propDict["androidDeviceOwnerFullyManagedEnrollmentEnabled"] = boolval($val);
         return $this;
     }
     

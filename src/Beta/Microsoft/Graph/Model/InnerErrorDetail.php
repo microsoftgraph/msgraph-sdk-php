@@ -24,32 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class InnerErrorDetail extends Entity
 {
     /**
-    * Gets the source
-    *
-    * @return string The source
-    */
-    public function getSource()
-    {
-        if (array_key_exists("source", $this->_propDict)) {
-            return $this->_propDict["source"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the source
-    *
-    * @param string $val The value of the source
-    *
-    * @return InnerErrorDetail
-    */
-    public function setSource($val)
-    {
-        $this->_propDict["source"] = $val;
-        return $this;
-    }
-    /**
     * Gets the message
     *
     * @return string The message
@@ -73,6 +47,32 @@ class InnerErrorDetail extends Entity
     public function setMessage($val)
     {
         $this->_propDict["message"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the source
+    *
+    * @return string The source
+    */
+    public function getSource()
+    {
+        if (array_key_exists("source", $this->_propDict)) {
+            return $this->_propDict["source"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the source
+    *
+    * @param string $val The value of the source
+    *
+    * @return InnerErrorDetail
+    */
+    public function setSource($val)
+    {
+        $this->_propDict["source"] = $val;
         return $this;
     }
 }

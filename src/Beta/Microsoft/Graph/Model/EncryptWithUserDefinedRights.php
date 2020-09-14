@@ -24,29 +24,29 @@ namespace Beta\Microsoft\Graph\Model;
 class EncryptWithUserDefinedRights extends EncryptContent
 {
     /**
-    * Gets the decryptionRightsManagementTemplateId
+    * Gets the allowAdHocPermissions
     *
-    * @return string The decryptionRightsManagementTemplateId
+    * @return bool The allowAdHocPermissions
     */
-    public function getDecryptionRightsManagementTemplateId()
+    public function getAllowAdHocPermissions()
     {
-        if (array_key_exists("decryptionRightsManagementTemplateId", $this->_propDict)) {
-            return $this->_propDict["decryptionRightsManagementTemplateId"];
+        if (array_key_exists("allowAdHocPermissions", $this->_propDict)) {
+            return $this->_propDict["allowAdHocPermissions"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the decryptionRightsManagementTemplateId
+    * Sets the allowAdHocPermissions
     *
-    * @param string $val The value of the decryptionRightsManagementTemplateId
+    * @param bool $val The value of the allowAdHocPermissions
     *
     * @return EncryptWithUserDefinedRights
     */
-    public function setDecryptionRightsManagementTemplateId($val)
+    public function setAllowAdHocPermissions($val)
     {
-        $this->_propDict["decryptionRightsManagementTemplateId"] = $val;
+        $this->_propDict["allowAdHocPermissions"] = $val;
         return $this;
     }
     /**
@@ -76,29 +76,29 @@ class EncryptWithUserDefinedRights extends EncryptContent
         return $this;
     }
     /**
-    * Gets the allowAdHocPermissions
+    * Gets the decryptionRightsManagementTemplateId
     *
-    * @return bool The allowAdHocPermissions
+    * @return string The decryptionRightsManagementTemplateId
     */
-    public function getAllowAdHocPermissions()
+    public function getDecryptionRightsManagementTemplateId()
     {
-        if (array_key_exists("allowAdHocPermissions", $this->_propDict)) {
-            return $this->_propDict["allowAdHocPermissions"];
+        if (array_key_exists("decryptionRightsManagementTemplateId", $this->_propDict)) {
+            return $this->_propDict["decryptionRightsManagementTemplateId"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the allowAdHocPermissions
+    * Sets the decryptionRightsManagementTemplateId
     *
-    * @param bool $val The value of the allowAdHocPermissions
+    * @param string $val The value of the decryptionRightsManagementTemplateId
     *
     * @return EncryptWithUserDefinedRights
     */
-    public function setAllowAdHocPermissions($val)
+    public function setDecryptionRightsManagementTemplateId($val)
     {
-        $this->_propDict["allowAdHocPermissions"] = $val;
+        $this->_propDict["decryptionRightsManagementTemplateId"] = $val;
         return $this;
     }
 }

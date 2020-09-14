@@ -24,34 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class Win32LobAppRestartSettings extends Entity
 {
     /**
-    * Gets the gracePeriodInMinutes
-    * The number of minutes to wait before restarting the device after an app installation.
-    *
-    * @return int The gracePeriodInMinutes
-    */
-    public function getGracePeriodInMinutes()
-    {
-        if (array_key_exists("gracePeriodInMinutes", $this->_propDict)) {
-            return $this->_propDict["gracePeriodInMinutes"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the gracePeriodInMinutes
-    * The number of minutes to wait before restarting the device after an app installation.
-    *
-    * @param int $val The value of the gracePeriodInMinutes
-    *
-    * @return Win32LobAppRestartSettings
-    */
-    public function setGracePeriodInMinutes($val)
-    {
-        $this->_propDict["gracePeriodInMinutes"] = $val;
-        return $this;
-    }
-    /**
     * Gets the countdownDisplayBeforeRestartInMinutes
     * The number of minutes before the restart time to display the countdown dialog for pending restarts.
     *
@@ -77,6 +49,34 @@ class Win32LobAppRestartSettings extends Entity
     public function setCountdownDisplayBeforeRestartInMinutes($val)
     {
         $this->_propDict["countdownDisplayBeforeRestartInMinutes"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the gracePeriodInMinutes
+    * The number of minutes to wait before restarting the device after an app installation.
+    *
+    * @return int The gracePeriodInMinutes
+    */
+    public function getGracePeriodInMinutes()
+    {
+        if (array_key_exists("gracePeriodInMinutes", $this->_propDict)) {
+            return $this->_propDict["gracePeriodInMinutes"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the gracePeriodInMinutes
+    * The number of minutes to wait before restarting the device after an app installation.
+    *
+    * @param int $val The value of the gracePeriodInMinutes
+    *
+    * @return Win32LobAppRestartSettings
+    */
+    public function setGracePeriodInMinutes($val)
+    {
+        $this->_propDict["gracePeriodInMinutes"] = $val;
         return $this;
     }
     /**

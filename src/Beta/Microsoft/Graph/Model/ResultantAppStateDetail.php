@@ -35,8 +35,18 @@ class ResultantAppStateDetail extends Enum
     const DEPENDENCY_PENDING_REBOOT = "dependencyPendingReboot";
     const DEPENDENCY_WITH_AUTO_INSTALL_DISABLED = "dependencyWithAutoInstallDisabled";
     const IOS_APP_STORE_UPDATE_FAILED_TO_INSTALL = "iosAppStoreUpdateFailedToInstall";
+    const PROCESSOR_ARCHITECTURE_NOT_APPLICABLE = "processorArchitectureNotApplicable";
     const VPP_APP_HAS_UPDATE_AVAILABLE = "vppAppHasUpdateAvailable";
+    const MINIMUM_DISK_SPACE_NOT_MET = "minimumDiskSpaceNotMet";
     const USER_REJECTED_UPDATE = "userRejectedUpdate";
+    const MINIMUM_OS_VERSION_NOT_MET = "minimumOsVersionNotMet";
+    const MINIMUM_PHYSICAL_MEMORY_NOT_MET = "minimumPhysicalMemoryNotMet";
+    const MINIMUM_LOGICAL_PROCESSOR_COUNT_NOT_MET = "minimumLogicalProcessorCountNotMet";
+    const MINIMUM_CPU_SPEED_NOT_MET = "minimumCpuSpeedNotMet";
+    const PLATFORM_NOT_APPLICABLE = "platformNotApplicable";
+    const FILE_SYSTEM_REQUIREMENT_NOT_MET = "fileSystemRequirementNotMet";
+    const REGISTRY_REQUIREMENT_NOT_MET = "registryRequirementNotMet";
+    const POWER_SHELL_SCRIPT_REQUIREMENT_NOT_MET = "powerShellScriptRequirementNotMet";
     const SEE_INSTALL_ERROR_CODE = "seeInstallErrorCode";
     const AUTO_INSTALL_DISABLED = "autoInstallDisabled";
     const MANAGED_APP_NO_LONGER_PRESENT = "managedAppNoLongerPresent";
@@ -46,14 +56,4 @@ class ResultantAppStateDetail extends Enum
     const PENDING_REBOOT = "pendingReboot";
     const INSTALLING_DEPENDENCIES = "installingDependencies";
     const CONTENT_DOWNLOADED = "contentDownloaded";
-    const POWER_SHELL_SCRIPT_REQUIREMENT_NOT_MET = "powerShellScriptRequirementNotMet";
-    const REGISTRY_REQUIREMENT_NOT_MET = "registryRequirementNotMet";
-    const FILE_SYSTEM_REQUIREMENT_NOT_MET = "fileSystemRequirementNotMet";
-    const PLATFORM_NOT_APPLICABLE = "platformNotApplicable";
-    const MINIMUM_CPU_SPEED_NOT_MET = "minimumCpuSpeedNotMet";
-    const MINIMUM_LOGICAL_PROCESSOR_COUNT_NOT_MET = "minimumLogicalProcessorCountNotMet";
-    const MINIMUM_PHYSICAL_MEMORY_NOT_MET = "minimumPhysicalMemoryNotMet";
-    const MINIMUM_OS_VERSION_NOT_MET = "minimumOsVersionNotMet";
-    const MINIMUM_DISK_SPACE_NOT_MET = "minimumDiskSpaceNotMet";
-    const PROCESSOR_ARCHITECTURE_NOT_APPLICABLE = "processorArchitectureNotApplicable";
 }

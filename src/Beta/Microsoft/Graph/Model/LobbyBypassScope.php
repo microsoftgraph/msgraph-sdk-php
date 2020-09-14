@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* Search File
+* LobbyBypassScope File
 * PHP version 7
 *
 * @category  Library
@@ -13,8 +13,10 @@
 */
 namespace Beta\Microsoft\Graph\Model;
 
+use Microsoft\Graph\Core\Enum;
+
 /**
-* Search class
+* LobbyBypassScope class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,6 +24,14 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class Search extends Entity
+class LobbyBypassScope extends Enum
 {
+    /**
+    * The Enum LobbyBypassScope
+    */
+    const ORGANIZER = "organizer";
+    const ORGANIZATION = "organization";
+    const ORGANIZATION_AND_FEDERATED = "organizationAndFederated";
+    const EVERYONE = "everyone";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

@@ -25,39 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class Shift extends ChangeTrackedEntity
 {
     /**
-    * Gets the sharedShift
-    * The shared version of this shift that is viewable by both employees and managers. Required.
-    *
-    * @return ShiftItem The sharedShift
-    */
-    public function getSharedShift()
-    {
-        if (array_key_exists("sharedShift", $this->_propDict)) {
-            if (is_a($this->_propDict["sharedShift"], "Beta\Microsoft\Graph\Model\ShiftItem")) {
-                return $this->_propDict["sharedShift"];
-            } else {
-                $this->_propDict["sharedShift"] = new ShiftItem($this->_propDict["sharedShift"]);
-                return $this->_propDict["sharedShift"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the sharedShift
-    * The shared version of this shift that is viewable by both employees and managers. Required.
-    *
-    * @param ShiftItem $val The sharedShift
-    *
-    * @return Shift
-    */
-    public function setSharedShift($val)
-    {
-        $this->_propDict["sharedShift"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the draftShift
     * The draft version of this shift that is viewable by managers. Required.
     *
@@ -91,31 +58,29 @@ class Shift extends ChangeTrackedEntity
     }
     
     /**
-    * Gets the userId
-    * ID of the user assigned to the shift. Required.
+    * Gets the isStagedForDeletion
     *
-    * @return string The userId
+    * @return bool The isStagedForDeletion
     */
-    public function getUserId()
+    public function getIsStagedForDeletion()
     {
-        if (array_key_exists("userId", $this->_propDict)) {
-            return $this->_propDict["userId"];
+        if (array_key_exists("isStagedForDeletion", $this->_propDict)) {
+            return $this->_propDict["isStagedForDeletion"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the userId
-    * ID of the user assigned to the shift. Required.
+    * Sets the isStagedForDeletion
     *
-    * @param string $val The userId
+    * @param bool $val The isStagedForDeletion
     *
     * @return Shift
     */
-    public function setUserId($val)
+    public function setIsStagedForDeletion($val)
     {
-        $this->_propDict["userId"] = $val;
+        $this->_propDict["isStagedForDeletion"] = boolval($val);
         return $this;
     }
     
@@ -149,29 +114,64 @@ class Shift extends ChangeTrackedEntity
     }
     
     /**
-    * Gets the isStagedForDeletion
+    * Gets the sharedShift
+    * The shared version of this shift that is viewable by both employees and managers. Required.
     *
-    * @return bool The isStagedForDeletion
+    * @return ShiftItem The sharedShift
     */
-    public function getIsStagedForDeletion()
+    public function getSharedShift()
     {
-        if (array_key_exists("isStagedForDeletion", $this->_propDict)) {
-            return $this->_propDict["isStagedForDeletion"];
+        if (array_key_exists("sharedShift", $this->_propDict)) {
+            if (is_a($this->_propDict["sharedShift"], "Beta\Microsoft\Graph\Model\ShiftItem")) {
+                return $this->_propDict["sharedShift"];
+            } else {
+                $this->_propDict["sharedShift"] = new ShiftItem($this->_propDict["sharedShift"]);
+                return $this->_propDict["sharedShift"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the sharedShift
+    * The shared version of this shift that is viewable by both employees and managers. Required.
+    *
+    * @param ShiftItem $val The sharedShift
+    *
+    * @return Shift
+    */
+    public function setSharedShift($val)
+    {
+        $this->_propDict["sharedShift"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userId
+    * ID of the user assigned to the shift. Required.
+    *
+    * @return string The userId
+    */
+    public function getUserId()
+    {
+        if (array_key_exists("userId", $this->_propDict)) {
+            return $this->_propDict["userId"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the isStagedForDeletion
+    * Sets the userId
+    * ID of the user assigned to the shift. Required.
     *
-    * @param bool $val The isStagedForDeletion
+    * @param string $val The userId
     *
     * @return Shift
     */
-    public function setIsStagedForDeletion($val)
+    public function setUserId($val)
     {
-        $this->_propDict["isStagedForDeletion"] = boolval($val);
+        $this->_propDict["userId"] = $val;
         return $this;
     }
     

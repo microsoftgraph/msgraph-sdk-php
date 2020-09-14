@@ -25,6 +25,39 @@ namespace Beta\Microsoft\Graph\Model;
 class TeamsTab extends Entity
 {
     /**
+    * Gets the configuration
+    * Container for custom settings applied to a tab. The tab is considered configured only once this property is set.
+    *
+    * @return TeamsTabConfiguration The configuration
+    */
+    public function getConfiguration()
+    {
+        if (array_key_exists("configuration", $this->_propDict)) {
+            if (is_a($this->_propDict["configuration"], "Beta\Microsoft\Graph\Model\TeamsTabConfiguration")) {
+                return $this->_propDict["configuration"];
+            } else {
+                $this->_propDict["configuration"] = new TeamsTabConfiguration($this->_propDict["configuration"]);
+                return $this->_propDict["configuration"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the configuration
+    * Container for custom settings applied to a tab. The tab is considered configured only once this property is set.
+    *
+    * @param TeamsTabConfiguration $val The configuration
+    *
+    * @return TeamsTab
+    */
+    public function setConfiguration($val)
+    {
+        $this->_propDict["configuration"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the displayName
     * Name of the tab.
     *
@@ -50,60 +83,6 @@ class TeamsTab extends Entity
     public function setDisplayName($val)
     {
         $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the teamsAppId
-    *
-    * @return string The teamsAppId
-    */
-    public function getTeamsAppId()
-    {
-        if (array_key_exists("teamsAppId", $this->_propDict)) {
-            return $this->_propDict["teamsAppId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the teamsAppId
-    *
-    * @param string $val The teamsAppId
-    *
-    * @return TeamsTab
-    */
-    public function setTeamsAppId($val)
-    {
-        $this->_propDict["teamsAppId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the sortOrderIndex
-    *
-    * @return string The sortOrderIndex
-    */
-    public function getSortOrderIndex()
-    {
-        if (array_key_exists("sortOrderIndex", $this->_propDict)) {
-            return $this->_propDict["sortOrderIndex"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the sortOrderIndex
-    *
-    * @param string $val The sortOrderIndex
-    *
-    * @return TeamsTab
-    */
-    public function setSortOrderIndex($val)
-    {
-        $this->_propDict["sortOrderIndex"] = $val;
         return $this;
     }
     
@@ -135,6 +114,60 @@ class TeamsTab extends Entity
     }
     
     /**
+    * Gets the sortOrderIndex
+    *
+    * @return string The sortOrderIndex
+    */
+    public function getSortOrderIndex()
+    {
+        if (array_key_exists("sortOrderIndex", $this->_propDict)) {
+            return $this->_propDict["sortOrderIndex"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the sortOrderIndex
+    *
+    * @param string $val The sortOrderIndex
+    *
+    * @return TeamsTab
+    */
+    public function setSortOrderIndex($val)
+    {
+        $this->_propDict["sortOrderIndex"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the teamsAppId
+    *
+    * @return string The teamsAppId
+    */
+    public function getTeamsAppId()
+    {
+        if (array_key_exists("teamsAppId", $this->_propDict)) {
+            return $this->_propDict["teamsAppId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the teamsAppId
+    *
+    * @param string $val The teamsAppId
+    *
+    * @return TeamsTab
+    */
+    public function setTeamsAppId($val)
+    {
+        $this->_propDict["teamsAppId"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the webUrl
     * Deep link URL of the tab instance. Read only.
     *
@@ -160,39 +193,6 @@ class TeamsTab extends Entity
     public function setWebUrl($val)
     {
         $this->_propDict["webUrl"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the configuration
-    * Container for custom settings applied to a tab. The tab is considered configured only once this property is set.
-    *
-    * @return TeamsTabConfiguration The configuration
-    */
-    public function getConfiguration()
-    {
-        if (array_key_exists("configuration", $this->_propDict)) {
-            if (is_a($this->_propDict["configuration"], "Beta\Microsoft\Graph\Model\TeamsTabConfiguration")) {
-                return $this->_propDict["configuration"];
-            } else {
-                $this->_propDict["configuration"] = new TeamsTabConfiguration($this->_propDict["configuration"]);
-                return $this->_propDict["configuration"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the configuration
-    * Container for custom settings applied to a tab. The tab is considered configured only once this property is set.
-    *
-    * @param TeamsTabConfiguration $val The configuration
-    *
-    * @return TeamsTab
-    */
-    public function setConfiguration($val)
-    {
-        $this->_propDict["configuration"] = $val;
         return $this;
     }
     

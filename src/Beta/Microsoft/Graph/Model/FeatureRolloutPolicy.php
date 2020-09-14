@@ -25,33 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class FeatureRolloutPolicy extends Entity
 {
     /**
-    * Gets the displayName
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the displayName
-    *
-    * @param string $val The displayName
-    *
-    * @return FeatureRolloutPolicy
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the description
     *
     * @return string The description
@@ -75,6 +48,33 @@ class FeatureRolloutPolicy extends Entity
     public function setDescription($val)
     {
         $this->_propDict["description"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the displayName
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the displayName
+    *
+    * @param string $val The displayName
+    *
+    * @return FeatureRolloutPolicy
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
         return $this;
     }
     
@@ -110,33 +110,6 @@ class FeatureRolloutPolicy extends Entity
     }
     
     /**
-    * Gets the isEnabled
-    *
-    * @return bool The isEnabled
-    */
-    public function getIsEnabled()
-    {
-        if (array_key_exists("isEnabled", $this->_propDict)) {
-            return $this->_propDict["isEnabled"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the isEnabled
-    *
-    * @param bool $val The isEnabled
-    *
-    * @return FeatureRolloutPolicy
-    */
-    public function setIsEnabled($val)
-    {
-        $this->_propDict["isEnabled"] = boolval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the isAppliedToOrganization
     *
     * @return bool The isAppliedToOrganization
@@ -160,6 +133,33 @@ class FeatureRolloutPolicy extends Entity
     public function setIsAppliedToOrganization($val)
     {
         $this->_propDict["isAppliedToOrganization"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the isEnabled
+    *
+    * @return bool The isEnabled
+    */
+    public function getIsEnabled()
+    {
+        if (array_key_exists("isEnabled", $this->_propDict)) {
+            return $this->_propDict["isEnabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isEnabled
+    *
+    * @param bool $val The isEnabled
+    *
+    * @return FeatureRolloutPolicy
+    */
+    public function setIsEnabled($val)
+    {
+        $this->_propDict["isEnabled"] = boolval($val);
         return $this;
     }
     

@@ -25,64 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class AndroidForWorkWiFiConfiguration extends DeviceConfiguration
 {
     /**
-    * Gets the networkName
-    * Network Name
-    *
-    * @return string The networkName
-    */
-    public function getNetworkName()
-    {
-        if (array_key_exists("networkName", $this->_propDict)) {
-            return $this->_propDict["networkName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the networkName
-    * Network Name
-    *
-    * @param string $val The networkName
-    *
-    * @return AndroidForWorkWiFiConfiguration
-    */
-    public function setNetworkName($val)
-    {
-        $this->_propDict["networkName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the ssid
-    * This is the name of the Wi-Fi network that is broadcast to all devices.
-    *
-    * @return string The ssid
-    */
-    public function getSsid()
-    {
-        if (array_key_exists("ssid", $this->_propDict)) {
-            return $this->_propDict["ssid"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the ssid
-    * This is the name of the Wi-Fi network that is broadcast to all devices.
-    *
-    * @param string $val The ssid
-    *
-    * @return AndroidForWorkWiFiConfiguration
-    */
-    public function setSsid($val)
-    {
-        $this->_propDict["ssid"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the connectAutomatically
     * Connect automatically when this network is in range. Setting this to true will skip the user prompt and automatically connect the device to Wi-Fi network.
     *
@@ -137,6 +79,64 @@ class AndroidForWorkWiFiConfiguration extends DeviceConfiguration
     public function setConnectWhenNetworkNameIsHidden($val)
     {
         $this->_propDict["connectWhenNetworkNameIsHidden"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the networkName
+    * Network Name
+    *
+    * @return string The networkName
+    */
+    public function getNetworkName()
+    {
+        if (array_key_exists("networkName", $this->_propDict)) {
+            return $this->_propDict["networkName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the networkName
+    * Network Name
+    *
+    * @param string $val The networkName
+    *
+    * @return AndroidForWorkWiFiConfiguration
+    */
+    public function setNetworkName($val)
+    {
+        $this->_propDict["networkName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the ssid
+    * This is the name of the Wi-Fi network that is broadcast to all devices.
+    *
+    * @return string The ssid
+    */
+    public function getSsid()
+    {
+        if (array_key_exists("ssid", $this->_propDict)) {
+            return $this->_propDict["ssid"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the ssid
+    * This is the name of the Wi-Fi network that is broadcast to all devices.
+    *
+    * @param string $val The ssid
+    *
+    * @return AndroidForWorkWiFiConfiguration
+    */
+    public function setSsid($val)
+    {
+        $this->_propDict["ssid"] = $val;
         return $this;
     }
     

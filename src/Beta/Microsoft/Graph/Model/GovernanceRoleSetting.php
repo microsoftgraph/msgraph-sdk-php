@@ -24,145 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class GovernanceRoleSetting extends Entity
 {
-    /**
-    * Gets the resourceId
-    *
-    * @return string The resourceId
-    */
-    public function getResourceId()
-    {
-        if (array_key_exists("resourceId", $this->_propDict)) {
-            return $this->_propDict["resourceId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the resourceId
-    *
-    * @param string $val The resourceId
-    *
-    * @return GovernanceRoleSetting
-    */
-    public function setResourceId($val)
-    {
-        $this->_propDict["resourceId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the roleDefinitionId
-    *
-    * @return string The roleDefinitionId
-    */
-    public function getRoleDefinitionId()
-    {
-        if (array_key_exists("roleDefinitionId", $this->_propDict)) {
-            return $this->_propDict["roleDefinitionId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the roleDefinitionId
-    *
-    * @param string $val The roleDefinitionId
-    *
-    * @return GovernanceRoleSetting
-    */
-    public function setRoleDefinitionId($val)
-    {
-        $this->_propDict["roleDefinitionId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the isDefault
-    *
-    * @return bool The isDefault
-    */
-    public function getIsDefault()
-    {
-        if (array_key_exists("isDefault", $this->_propDict)) {
-            return $this->_propDict["isDefault"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the isDefault
-    *
-    * @param bool $val The isDefault
-    *
-    * @return GovernanceRoleSetting
-    */
-    public function setIsDefault($val)
-    {
-        $this->_propDict["isDefault"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the lastUpdatedDateTime
-    *
-    * @return \DateTime The lastUpdatedDateTime
-    */
-    public function getLastUpdatedDateTime()
-    {
-        if (array_key_exists("lastUpdatedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastUpdatedDateTime"], "\DateTime")) {
-                return $this->_propDict["lastUpdatedDateTime"];
-            } else {
-                $this->_propDict["lastUpdatedDateTime"] = new \DateTime($this->_propDict["lastUpdatedDateTime"]);
-                return $this->_propDict["lastUpdatedDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the lastUpdatedDateTime
-    *
-    * @param \DateTime $val The lastUpdatedDateTime
-    *
-    * @return GovernanceRoleSetting
-    */
-    public function setLastUpdatedDateTime($val)
-    {
-        $this->_propDict["lastUpdatedDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the lastUpdatedBy
-    *
-    * @return string The lastUpdatedBy
-    */
-    public function getLastUpdatedBy()
-    {
-        if (array_key_exists("lastUpdatedBy", $this->_propDict)) {
-            return $this->_propDict["lastUpdatedBy"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the lastUpdatedBy
-    *
-    * @param string $val The lastUpdatedBy
-    *
-    * @return GovernanceRoleSetting
-    */
-    public function setLastUpdatedBy($val)
-    {
-        $this->_propDict["lastUpdatedBy"] = $val;
-        return $this;
-    }
-    
 
      /** 
      * Gets the adminEligibleSettings
@@ -216,6 +77,145 @@ class GovernanceRoleSetting extends Entity
     public function setAdminMemberSettings($val)
     {
 		$this->_propDict["adminMemberSettings"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the isDefault
+    *
+    * @return bool The isDefault
+    */
+    public function getIsDefault()
+    {
+        if (array_key_exists("isDefault", $this->_propDict)) {
+            return $this->_propDict["isDefault"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isDefault
+    *
+    * @param bool $val The isDefault
+    *
+    * @return GovernanceRoleSetting
+    */
+    public function setIsDefault($val)
+    {
+        $this->_propDict["isDefault"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the lastUpdatedBy
+    *
+    * @return string The lastUpdatedBy
+    */
+    public function getLastUpdatedBy()
+    {
+        if (array_key_exists("lastUpdatedBy", $this->_propDict)) {
+            return $this->_propDict["lastUpdatedBy"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the lastUpdatedBy
+    *
+    * @param string $val The lastUpdatedBy
+    *
+    * @return GovernanceRoleSetting
+    */
+    public function setLastUpdatedBy($val)
+    {
+        $this->_propDict["lastUpdatedBy"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the lastUpdatedDateTime
+    *
+    * @return \DateTime The lastUpdatedDateTime
+    */
+    public function getLastUpdatedDateTime()
+    {
+        if (array_key_exists("lastUpdatedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastUpdatedDateTime"], "\DateTime")) {
+                return $this->_propDict["lastUpdatedDateTime"];
+            } else {
+                $this->_propDict["lastUpdatedDateTime"] = new \DateTime($this->_propDict["lastUpdatedDateTime"]);
+                return $this->_propDict["lastUpdatedDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the lastUpdatedDateTime
+    *
+    * @param \DateTime $val The lastUpdatedDateTime
+    *
+    * @return GovernanceRoleSetting
+    */
+    public function setLastUpdatedDateTime($val)
+    {
+        $this->_propDict["lastUpdatedDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the resourceId
+    *
+    * @return string The resourceId
+    */
+    public function getResourceId()
+    {
+        if (array_key_exists("resourceId", $this->_propDict)) {
+            return $this->_propDict["resourceId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the resourceId
+    *
+    * @param string $val The resourceId
+    *
+    * @return GovernanceRoleSetting
+    */
+    public function setResourceId($val)
+    {
+        $this->_propDict["resourceId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the roleDefinitionId
+    *
+    * @return string The roleDefinitionId
+    */
+    public function getRoleDefinitionId()
+    {
+        if (array_key_exists("roleDefinitionId", $this->_propDict)) {
+            return $this->_propDict["roleDefinitionId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the roleDefinitionId
+    *
+    * @param string $val The roleDefinitionId
+    *
+    * @return GovernanceRoleSetting
+    */
+    public function setRoleDefinitionId($val)
+    {
+        $this->_propDict["roleDefinitionId"] = $val;
         return $this;
     }
     
@@ -276,37 +276,6 @@ class GovernanceRoleSetting extends Entity
     }
     
     /**
-    * Gets the roleDefinition
-    *
-    * @return GovernanceRoleDefinition The roleDefinition
-    */
-    public function getRoleDefinition()
-    {
-        if (array_key_exists("roleDefinition", $this->_propDict)) {
-            if (is_a($this->_propDict["roleDefinition"], "Beta\Microsoft\Graph\Model\GovernanceRoleDefinition")) {
-                return $this->_propDict["roleDefinition"];
-            } else {
-                $this->_propDict["roleDefinition"] = new GovernanceRoleDefinition($this->_propDict["roleDefinition"]);
-                return $this->_propDict["roleDefinition"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the roleDefinition
-    *
-    * @param GovernanceRoleDefinition $val The roleDefinition
-    *
-    * @return GovernanceRoleSetting
-    */
-    public function setRoleDefinition($val)
-    {
-        $this->_propDict["roleDefinition"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the resource
     *
     * @return GovernanceResource The resource
@@ -334,6 +303,37 @@ class GovernanceRoleSetting extends Entity
     public function setResource($val)
     {
         $this->_propDict["resource"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the roleDefinition
+    *
+    * @return GovernanceRoleDefinition The roleDefinition
+    */
+    public function getRoleDefinition()
+    {
+        if (array_key_exists("roleDefinition", $this->_propDict)) {
+            if (is_a($this->_propDict["roleDefinition"], "Beta\Microsoft\Graph\Model\GovernanceRoleDefinition")) {
+                return $this->_propDict["roleDefinition"];
+            } else {
+                $this->_propDict["roleDefinition"] = new GovernanceRoleDefinition($this->_propDict["roleDefinition"]);
+                return $this->_propDict["roleDefinition"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the roleDefinition
+    *
+    * @param GovernanceRoleDefinition $val The roleDefinition
+    *
+    * @return GovernanceRoleSetting
+    */
+    public function setRoleDefinition($val)
+    {
+        $this->_propDict["roleDefinition"] = $val;
         return $this;
     }
     

@@ -25,31 +25,31 @@ namespace Beta\Microsoft\Graph\Model;
 class EnrollmentProfile extends Entity
 {
     /**
-    * Gets the displayName
-    * Name of the profile
+    * Gets the configurationEndpointUrl
+    * Configuration endpoint url to use for Enrollment
     *
-    * @return string The displayName
+    * @return string The configurationEndpointUrl
     */
-    public function getDisplayName()
+    public function getConfigurationEndpointUrl()
     {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
+        if (array_key_exists("configurationEndpointUrl", $this->_propDict)) {
+            return $this->_propDict["configurationEndpointUrl"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the displayName
-    * Name of the profile
+    * Sets the configurationEndpointUrl
+    * Configuration endpoint url to use for Enrollment
     *
-    * @param string $val The displayName
+    * @param string $val The configurationEndpointUrl
     *
     * @return EnrollmentProfile
     */
-    public function setDisplayName($val)
+    public function setConfigurationEndpointUrl($val)
     {
-        $this->_propDict["displayName"] = $val;
+        $this->_propDict["configurationEndpointUrl"] = $val;
         return $this;
     }
     
@@ -83,60 +83,31 @@ class EnrollmentProfile extends Entity
     }
     
     /**
-    * Gets the requiresUserAuthentication
-    * Indicates if the profile requires user authentication
+    * Gets the displayName
+    * Name of the profile
     *
-    * @return bool The requiresUserAuthentication
+    * @return string The displayName
     */
-    public function getRequiresUserAuthentication()
+    public function getDisplayName()
     {
-        if (array_key_exists("requiresUserAuthentication", $this->_propDict)) {
-            return $this->_propDict["requiresUserAuthentication"];
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the requiresUserAuthentication
-    * Indicates if the profile requires user authentication
+    * Sets the displayName
+    * Name of the profile
     *
-    * @param bool $val The requiresUserAuthentication
-    *
-    * @return EnrollmentProfile
-    */
-    public function setRequiresUserAuthentication($val)
-    {
-        $this->_propDict["requiresUserAuthentication"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the configurationEndpointUrl
-    * Configuration endpoint url to use for Enrollment
-    *
-    * @return string The configurationEndpointUrl
-    */
-    public function getConfigurationEndpointUrl()
-    {
-        if (array_key_exists("configurationEndpointUrl", $this->_propDict)) {
-            return $this->_propDict["configurationEndpointUrl"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the configurationEndpointUrl
-    * Configuration endpoint url to use for Enrollment
-    *
-    * @param string $val The configurationEndpointUrl
+    * @param string $val The displayName
     *
     * @return EnrollmentProfile
     */
-    public function setConfigurationEndpointUrl($val)
+    public function setDisplayName($val)
     {
-        $this->_propDict["configurationEndpointUrl"] = $val;
+        $this->_propDict["displayName"] = $val;
         return $this;
     }
     
@@ -195,6 +166,35 @@ class EnrollmentProfile extends Entity
     public function setRequireCompanyPortalOnSetupAssistantEnrolledDevices($val)
     {
         $this->_propDict["requireCompanyPortalOnSetupAssistantEnrolledDevices"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the requiresUserAuthentication
+    * Indicates if the profile requires user authentication
+    *
+    * @return bool The requiresUserAuthentication
+    */
+    public function getRequiresUserAuthentication()
+    {
+        if (array_key_exists("requiresUserAuthentication", $this->_propDict)) {
+            return $this->_propDict["requiresUserAuthentication"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the requiresUserAuthentication
+    * Indicates if the profile requires user authentication
+    *
+    * @param bool $val The requiresUserAuthentication
+    *
+    * @return EnrollmentProfile
+    */
+    public function setRequiresUserAuthentication($val)
+    {
+        $this->_propDict["requiresUserAuthentication"] = boolval($val);
         return $this;
     }
     

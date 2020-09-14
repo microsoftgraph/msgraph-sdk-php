@@ -23,6 +23,62 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class MobileAppSupportedDeviceType extends Entity
 {
+    /**
+    * Gets the maximumOperatingSystemVersion
+    * Maximum OS version
+    *
+    * @return string The maximumOperatingSystemVersion
+    */
+    public function getMaximumOperatingSystemVersion()
+    {
+        if (array_key_exists("maximumOperatingSystemVersion", $this->_propDict)) {
+            return $this->_propDict["maximumOperatingSystemVersion"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the maximumOperatingSystemVersion
+    * Maximum OS version
+    *
+    * @param string $val The value of the maximumOperatingSystemVersion
+    *
+    * @return MobileAppSupportedDeviceType
+    */
+    public function setMaximumOperatingSystemVersion($val)
+    {
+        $this->_propDict["maximumOperatingSystemVersion"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the minimumOperatingSystemVersion
+    * Minimum OS version
+    *
+    * @return string The minimumOperatingSystemVersion
+    */
+    public function getMinimumOperatingSystemVersion()
+    {
+        if (array_key_exists("minimumOperatingSystemVersion", $this->_propDict)) {
+            return $this->_propDict["minimumOperatingSystemVersion"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the minimumOperatingSystemVersion
+    * Minimum OS version
+    *
+    * @param string $val The value of the minimumOperatingSystemVersion
+    *
+    * @return MobileAppSupportedDeviceType
+    */
+    public function setMinimumOperatingSystemVersion($val)
+    {
+        $this->_propDict["minimumOperatingSystemVersion"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the type
@@ -55,61 +111,5 @@ class MobileAppSupportedDeviceType extends Entity
     {
         $this->_propDict["type"] = $val;
          return $this;
-    }
-    /**
-    * Gets the minimumOperatingSystemVersion
-    * Minimum OS version
-    *
-    * @return string The minimumOperatingSystemVersion
-    */
-    public function getMinimumOperatingSystemVersion()
-    {
-        if (array_key_exists("minimumOperatingSystemVersion", $this->_propDict)) {
-            return $this->_propDict["minimumOperatingSystemVersion"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the minimumOperatingSystemVersion
-    * Minimum OS version
-    *
-    * @param string $val The value of the minimumOperatingSystemVersion
-    *
-    * @return MobileAppSupportedDeviceType
-    */
-    public function setMinimumOperatingSystemVersion($val)
-    {
-        $this->_propDict["minimumOperatingSystemVersion"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the maximumOperatingSystemVersion
-    * Maximum OS version
-    *
-    * @return string The maximumOperatingSystemVersion
-    */
-    public function getMaximumOperatingSystemVersion()
-    {
-        if (array_key_exists("maximumOperatingSystemVersion", $this->_propDict)) {
-            return $this->_propDict["maximumOperatingSystemVersion"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the maximumOperatingSystemVersion
-    * Maximum OS version
-    *
-    * @param string $val The value of the maximumOperatingSystemVersion
-    *
-    * @return MobileAppSupportedDeviceType
-    */
-    public function setMaximumOperatingSystemVersion($val)
-    {
-        $this->_propDict["maximumOperatingSystemVersion"] = $val;
-        return $this;
     }
 }

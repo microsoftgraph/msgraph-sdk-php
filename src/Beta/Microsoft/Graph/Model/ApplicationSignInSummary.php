@@ -52,33 +52,6 @@ class ApplicationSignInSummary extends Entity
     }
     
     /**
-    * Gets the successfulSignInCount
-    *
-    * @return int The successfulSignInCount
-    */
-    public function getSuccessfulSignInCount()
-    {
-        if (array_key_exists("successfulSignInCount", $this->_propDict)) {
-            return $this->_propDict["successfulSignInCount"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the successfulSignInCount
-    *
-    * @param int $val The successfulSignInCount
-    *
-    * @return ApplicationSignInSummary
-    */
-    public function setSuccessfulSignInCount($val)
-    {
-        $this->_propDict["successfulSignInCount"] = intval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the failedSignInCount
     *
     * @return int The failedSignInCount
@@ -102,6 +75,33 @@ class ApplicationSignInSummary extends Entity
     public function setFailedSignInCount($val)
     {
         $this->_propDict["failedSignInCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the successfulSignInCount
+    *
+    * @return int The successfulSignInCount
+    */
+    public function getSuccessfulSignInCount()
+    {
+        if (array_key_exists("successfulSignInCount", $this->_propDict)) {
+            return $this->_propDict["successfulSignInCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the successfulSignInCount
+    *
+    * @param int $val The successfulSignInCount
+    *
+    * @return ApplicationSignInSummary
+    */
+    public function setSuccessfulSignInCount($val)
+    {
+        $this->_propDict["successfulSignInCount"] = intval($val);
         return $this;
     }
     

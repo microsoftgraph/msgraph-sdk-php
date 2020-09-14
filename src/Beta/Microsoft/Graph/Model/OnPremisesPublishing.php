@@ -24,6 +24,115 @@ namespace Beta\Microsoft\Graph\Model;
 class OnPremisesPublishing extends Entity
 {
     /**
+    * Gets the alternateUrl
+    *
+    * @return string The alternateUrl
+    */
+    public function getAlternateUrl()
+    {
+        if (array_key_exists("alternateUrl", $this->_propDict)) {
+            return $this->_propDict["alternateUrl"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the alternateUrl
+    *
+    * @param string $val The value of the alternateUrl
+    *
+    * @return OnPremisesPublishing
+    */
+    public function setAlternateUrl($val)
+    {
+        $this->_propDict["alternateUrl"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the applicationServerTimeout
+    *
+    * @return string The applicationServerTimeout
+    */
+    public function getApplicationServerTimeout()
+    {
+        if (array_key_exists("applicationServerTimeout", $this->_propDict)) {
+            return $this->_propDict["applicationServerTimeout"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the applicationServerTimeout
+    *
+    * @param string $val The value of the applicationServerTimeout
+    *
+    * @return OnPremisesPublishing
+    */
+    public function setApplicationServerTimeout($val)
+    {
+        $this->_propDict["applicationServerTimeout"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the applicationType
+    *
+    * @return string The applicationType
+    */
+    public function getApplicationType()
+    {
+        if (array_key_exists("applicationType", $this->_propDict)) {
+            return $this->_propDict["applicationType"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the applicationType
+    *
+    * @param string $val The value of the applicationType
+    *
+    * @return OnPremisesPublishing
+    */
+    public function setApplicationType($val)
+    {
+        $this->_propDict["applicationType"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the externalAuthenticationType
+    *
+    * @return ExternalAuthenticationType The externalAuthenticationType
+    */
+    public function getExternalAuthenticationType()
+    {
+        if (array_key_exists("externalAuthenticationType", $this->_propDict)) {
+            if (is_a($this->_propDict["externalAuthenticationType"], "Beta\Microsoft\Graph\Model\ExternalAuthenticationType")) {
+                return $this->_propDict["externalAuthenticationType"];
+            } else {
+                $this->_propDict["externalAuthenticationType"] = new ExternalAuthenticationType($this->_propDict["externalAuthenticationType"]);
+                return $this->_propDict["externalAuthenticationType"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the externalAuthenticationType
+    *
+    * @param ExternalAuthenticationType $val The value to assign to the externalAuthenticationType
+    *
+    * @return OnPremisesPublishing The OnPremisesPublishing
+    */
+    public function setExternalAuthenticationType($val)
+    {
+        $this->_propDict["externalAuthenticationType"] = $val;
+         return $this;
+    }
+    /**
     * Gets the externalUrl
     *
     * @return string The externalUrl
@@ -75,36 +184,109 @@ class OnPremisesPublishing extends Entity
         $this->_propDict["internalUrl"] = $val;
         return $this;
     }
-
     /**
-    * Gets the externalAuthenticationType
+    * Gets the isHttpOnlyCookieEnabled
     *
-    * @return ExternalAuthenticationType The externalAuthenticationType
+    * @return bool The isHttpOnlyCookieEnabled
     */
-    public function getExternalAuthenticationType()
+    public function getIsHttpOnlyCookieEnabled()
     {
-        if (array_key_exists("externalAuthenticationType", $this->_propDict)) {
-            if (is_a($this->_propDict["externalAuthenticationType"], "Beta\Microsoft\Graph\Model\ExternalAuthenticationType")) {
-                return $this->_propDict["externalAuthenticationType"];
-            } else {
-                $this->_propDict["externalAuthenticationType"] = new ExternalAuthenticationType($this->_propDict["externalAuthenticationType"]);
-                return $this->_propDict["externalAuthenticationType"];
-            }
+        if (array_key_exists("isHttpOnlyCookieEnabled", $this->_propDict)) {
+            return $this->_propDict["isHttpOnlyCookieEnabled"];
+        } else {
+            return null;
         }
-        return null;
     }
 
     /**
-    * Sets the externalAuthenticationType
+    * Sets the isHttpOnlyCookieEnabled
     *
-    * @param ExternalAuthenticationType $val The value to assign to the externalAuthenticationType
+    * @param bool $val The value of the isHttpOnlyCookieEnabled
     *
-    * @return OnPremisesPublishing The OnPremisesPublishing
+    * @return OnPremisesPublishing
     */
-    public function setExternalAuthenticationType($val)
+    public function setIsHttpOnlyCookieEnabled($val)
     {
-        $this->_propDict["externalAuthenticationType"] = $val;
-         return $this;
+        $this->_propDict["isHttpOnlyCookieEnabled"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the isOnPremPublishingEnabled
+    *
+    * @return bool The isOnPremPublishingEnabled
+    */
+    public function getIsOnPremPublishingEnabled()
+    {
+        if (array_key_exists("isOnPremPublishingEnabled", $this->_propDict)) {
+            return $this->_propDict["isOnPremPublishingEnabled"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isOnPremPublishingEnabled
+    *
+    * @param bool $val The value of the isOnPremPublishingEnabled
+    *
+    * @return OnPremisesPublishing
+    */
+    public function setIsOnPremPublishingEnabled($val)
+    {
+        $this->_propDict["isOnPremPublishingEnabled"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the isPersistentCookieEnabled
+    *
+    * @return bool The isPersistentCookieEnabled
+    */
+    public function getIsPersistentCookieEnabled()
+    {
+        if (array_key_exists("isPersistentCookieEnabled", $this->_propDict)) {
+            return $this->_propDict["isPersistentCookieEnabled"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isPersistentCookieEnabled
+    *
+    * @param bool $val The value of the isPersistentCookieEnabled
+    *
+    * @return OnPremisesPublishing
+    */
+    public function setIsPersistentCookieEnabled($val)
+    {
+        $this->_propDict["isPersistentCookieEnabled"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the isSecureCookieEnabled
+    *
+    * @return bool The isSecureCookieEnabled
+    */
+    public function getIsSecureCookieEnabled()
+    {
+        if (array_key_exists("isSecureCookieEnabled", $this->_propDict)) {
+            return $this->_propDict["isSecureCookieEnabled"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isSecureCookieEnabled
+    *
+    * @param bool $val The value of the isSecureCookieEnabled
+    *
+    * @return OnPremisesPublishing
+    */
+    public function setIsSecureCookieEnabled($val)
+    {
+        $this->_propDict["isSecureCookieEnabled"] = $val;
+        return $this;
     }
     /**
     * Gets the isTranslateHostHeaderEnabled
@@ -158,57 +340,93 @@ class OnPremisesPublishing extends Entity
         $this->_propDict["isTranslateLinksInBodyEnabled"] = $val;
         return $this;
     }
+
     /**
-    * Gets the isOnPremPublishingEnabled
+    * Gets the singleSignOnSettings
     *
-    * @return bool The isOnPremPublishingEnabled
+    * @return OnPremisesPublishingSingleSignOn The singleSignOnSettings
     */
-    public function getIsOnPremPublishingEnabled()
+    public function getSingleSignOnSettings()
     {
-        if (array_key_exists("isOnPremPublishingEnabled", $this->_propDict)) {
-            return $this->_propDict["isOnPremPublishingEnabled"];
+        if (array_key_exists("singleSignOnSettings", $this->_propDict)) {
+            if (is_a($this->_propDict["singleSignOnSettings"], "Beta\Microsoft\Graph\Model\OnPremisesPublishingSingleSignOn")) {
+                return $this->_propDict["singleSignOnSettings"];
+            } else {
+                $this->_propDict["singleSignOnSettings"] = new OnPremisesPublishingSingleSignOn($this->_propDict["singleSignOnSettings"]);
+                return $this->_propDict["singleSignOnSettings"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the singleSignOnSettings
+    *
+    * @param OnPremisesPublishingSingleSignOn $val The value to assign to the singleSignOnSettings
+    *
+    * @return OnPremisesPublishing The OnPremisesPublishing
+    */
+    public function setSingleSignOnSettings($val)
+    {
+        $this->_propDict["singleSignOnSettings"] = $val;
+         return $this;
+    }
+    /**
+    * Gets the useAlternateUrlForTranslationAndRedirect
+    *
+    * @return bool The useAlternateUrlForTranslationAndRedirect
+    */
+    public function getUseAlternateUrlForTranslationAndRedirect()
+    {
+        if (array_key_exists("useAlternateUrlForTranslationAndRedirect", $this->_propDict)) {
+            return $this->_propDict["useAlternateUrlForTranslationAndRedirect"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the isOnPremPublishingEnabled
+    * Sets the useAlternateUrlForTranslationAndRedirect
     *
-    * @param bool $val The value of the isOnPremPublishingEnabled
+    * @param bool $val The value of the useAlternateUrlForTranslationAndRedirect
     *
     * @return OnPremisesPublishing
     */
-    public function setIsOnPremPublishingEnabled($val)
+    public function setUseAlternateUrlForTranslationAndRedirect($val)
     {
-        $this->_propDict["isOnPremPublishingEnabled"] = $val;
+        $this->_propDict["useAlternateUrlForTranslationAndRedirect"] = $val;
         return $this;
-    }
-    /**
-    * Gets the applicationServerTimeout
-    *
-    * @return string The applicationServerTimeout
-    */
-    public function getApplicationServerTimeout()
-    {
-        if (array_key_exists("applicationServerTimeout", $this->_propDict)) {
-            return $this->_propDict["applicationServerTimeout"];
-        } else {
-            return null;
-        }
     }
 
     /**
-    * Sets the applicationServerTimeout
+    * Gets the verifiedCustomDomainCertificatesMetadata
     *
-    * @param string $val The value of the applicationServerTimeout
-    *
-    * @return OnPremisesPublishing
+    * @return VerifiedCustomDomainCertificatesMetadata The verifiedCustomDomainCertificatesMetadata
     */
-    public function setApplicationServerTimeout($val)
+    public function getVerifiedCustomDomainCertificatesMetadata()
     {
-        $this->_propDict["applicationServerTimeout"] = $val;
-        return $this;
+        if (array_key_exists("verifiedCustomDomainCertificatesMetadata", $this->_propDict)) {
+            if (is_a($this->_propDict["verifiedCustomDomainCertificatesMetadata"], "Beta\Microsoft\Graph\Model\VerifiedCustomDomainCertificatesMetadata")) {
+                return $this->_propDict["verifiedCustomDomainCertificatesMetadata"];
+            } else {
+                $this->_propDict["verifiedCustomDomainCertificatesMetadata"] = new VerifiedCustomDomainCertificatesMetadata($this->_propDict["verifiedCustomDomainCertificatesMetadata"]);
+                return $this->_propDict["verifiedCustomDomainCertificatesMetadata"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the verifiedCustomDomainCertificatesMetadata
+    *
+    * @param VerifiedCustomDomainCertificatesMetadata $val The value to assign to the verifiedCustomDomainCertificatesMetadata
+    *
+    * @return OnPremisesPublishing The OnPremisesPublishing
+    */
+    public function setVerifiedCustomDomainCertificatesMetadata($val)
+    {
+        $this->_propDict["verifiedCustomDomainCertificatesMetadata"] = $val;
+         return $this;
     }
 
     /**
@@ -271,223 +489,5 @@ class OnPremisesPublishing extends Entity
     {
         $this->_propDict["verifiedCustomDomainPasswordCredential"] = $val;
          return $this;
-    }
-
-    /**
-    * Gets the verifiedCustomDomainCertificatesMetadata
-    *
-    * @return VerifiedCustomDomainCertificatesMetadata The verifiedCustomDomainCertificatesMetadata
-    */
-    public function getVerifiedCustomDomainCertificatesMetadata()
-    {
-        if (array_key_exists("verifiedCustomDomainCertificatesMetadata", $this->_propDict)) {
-            if (is_a($this->_propDict["verifiedCustomDomainCertificatesMetadata"], "Beta\Microsoft\Graph\Model\VerifiedCustomDomainCertificatesMetadata")) {
-                return $this->_propDict["verifiedCustomDomainCertificatesMetadata"];
-            } else {
-                $this->_propDict["verifiedCustomDomainCertificatesMetadata"] = new VerifiedCustomDomainCertificatesMetadata($this->_propDict["verifiedCustomDomainCertificatesMetadata"]);
-                return $this->_propDict["verifiedCustomDomainCertificatesMetadata"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the verifiedCustomDomainCertificatesMetadata
-    *
-    * @param VerifiedCustomDomainCertificatesMetadata $val The value to assign to the verifiedCustomDomainCertificatesMetadata
-    *
-    * @return OnPremisesPublishing The OnPremisesPublishing
-    */
-    public function setVerifiedCustomDomainCertificatesMetadata($val)
-    {
-        $this->_propDict["verifiedCustomDomainCertificatesMetadata"] = $val;
-         return $this;
-    }
-
-    /**
-    * Gets the singleSignOnSettings
-    *
-    * @return OnPremisesPublishingSingleSignOn The singleSignOnSettings
-    */
-    public function getSingleSignOnSettings()
-    {
-        if (array_key_exists("singleSignOnSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["singleSignOnSettings"], "Beta\Microsoft\Graph\Model\OnPremisesPublishingSingleSignOn")) {
-                return $this->_propDict["singleSignOnSettings"];
-            } else {
-                $this->_propDict["singleSignOnSettings"] = new OnPremisesPublishingSingleSignOn($this->_propDict["singleSignOnSettings"]);
-                return $this->_propDict["singleSignOnSettings"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the singleSignOnSettings
-    *
-    * @param OnPremisesPublishingSingleSignOn $val The value to assign to the singleSignOnSettings
-    *
-    * @return OnPremisesPublishing The OnPremisesPublishing
-    */
-    public function setSingleSignOnSettings($val)
-    {
-        $this->_propDict["singleSignOnSettings"] = $val;
-         return $this;
-    }
-    /**
-    * Gets the applicationType
-    *
-    * @return string The applicationType
-    */
-    public function getApplicationType()
-    {
-        if (array_key_exists("applicationType", $this->_propDict)) {
-            return $this->_propDict["applicationType"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the applicationType
-    *
-    * @param string $val The value of the applicationType
-    *
-    * @return OnPremisesPublishing
-    */
-    public function setApplicationType($val)
-    {
-        $this->_propDict["applicationType"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the isHttpOnlyCookieEnabled
-    *
-    * @return bool The isHttpOnlyCookieEnabled
-    */
-    public function getIsHttpOnlyCookieEnabled()
-    {
-        if (array_key_exists("isHttpOnlyCookieEnabled", $this->_propDict)) {
-            return $this->_propDict["isHttpOnlyCookieEnabled"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the isHttpOnlyCookieEnabled
-    *
-    * @param bool $val The value of the isHttpOnlyCookieEnabled
-    *
-    * @return OnPremisesPublishing
-    */
-    public function setIsHttpOnlyCookieEnabled($val)
-    {
-        $this->_propDict["isHttpOnlyCookieEnabled"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the isSecureCookieEnabled
-    *
-    * @return bool The isSecureCookieEnabled
-    */
-    public function getIsSecureCookieEnabled()
-    {
-        if (array_key_exists("isSecureCookieEnabled", $this->_propDict)) {
-            return $this->_propDict["isSecureCookieEnabled"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the isSecureCookieEnabled
-    *
-    * @param bool $val The value of the isSecureCookieEnabled
-    *
-    * @return OnPremisesPublishing
-    */
-    public function setIsSecureCookieEnabled($val)
-    {
-        $this->_propDict["isSecureCookieEnabled"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the isPersistentCookieEnabled
-    *
-    * @return bool The isPersistentCookieEnabled
-    */
-    public function getIsPersistentCookieEnabled()
-    {
-        if (array_key_exists("isPersistentCookieEnabled", $this->_propDict)) {
-            return $this->_propDict["isPersistentCookieEnabled"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the isPersistentCookieEnabled
-    *
-    * @param bool $val The value of the isPersistentCookieEnabled
-    *
-    * @return OnPremisesPublishing
-    */
-    public function setIsPersistentCookieEnabled($val)
-    {
-        $this->_propDict["isPersistentCookieEnabled"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the alternateUrl
-    *
-    * @return string The alternateUrl
-    */
-    public function getAlternateUrl()
-    {
-        if (array_key_exists("alternateUrl", $this->_propDict)) {
-            return $this->_propDict["alternateUrl"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the alternateUrl
-    *
-    * @param string $val The value of the alternateUrl
-    *
-    * @return OnPremisesPublishing
-    */
-    public function setAlternateUrl($val)
-    {
-        $this->_propDict["alternateUrl"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the useAlternateUrlForTranslationAndRedirect
-    *
-    * @return bool The useAlternateUrlForTranslationAndRedirect
-    */
-    public function getUseAlternateUrlForTranslationAndRedirect()
-    {
-        if (array_key_exists("useAlternateUrlForTranslationAndRedirect", $this->_propDict)) {
-            return $this->_propDict["useAlternateUrlForTranslationAndRedirect"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the useAlternateUrlForTranslationAndRedirect
-    *
-    * @param bool $val The value of the useAlternateUrlForTranslationAndRedirect
-    *
-    * @return OnPremisesPublishing
-    */
-    public function setUseAlternateUrlForTranslationAndRedirect($val)
-    {
-        $this->_propDict["useAlternateUrlForTranslationAndRedirect"] = $val;
-        return $this;
     }
 }

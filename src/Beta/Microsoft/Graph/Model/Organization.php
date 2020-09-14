@@ -676,39 +676,6 @@ class Organization extends DirectoryObject
     }
     
     /**
-    * Gets the mobileDeviceManagementAuthority
-    * Mobile device management authority. Possible values are: unknown, intune, sccm, office365.
-    *
-    * @return MdmAuthority The mobileDeviceManagementAuthority
-    */
-    public function getMobileDeviceManagementAuthority()
-    {
-        if (array_key_exists("mobileDeviceManagementAuthority", $this->_propDict)) {
-            if (is_a($this->_propDict["mobileDeviceManagementAuthority"], "Beta\Microsoft\Graph\Model\MdmAuthority")) {
-                return $this->_propDict["mobileDeviceManagementAuthority"];
-            } else {
-                $this->_propDict["mobileDeviceManagementAuthority"] = new MdmAuthority($this->_propDict["mobileDeviceManagementAuthority"]);
-                return $this->_propDict["mobileDeviceManagementAuthority"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the mobileDeviceManagementAuthority
-    * Mobile device management authority. Possible values are: unknown, intune, sccm, office365.
-    *
-    * @param MdmAuthority $val The mobileDeviceManagementAuthority
-    *
-    * @return Organization
-    */
-    public function setMobileDeviceManagementAuthority($val)
-    {
-        $this->_propDict["mobileDeviceManagementAuthority"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the certificateConnectorSetting
     * Certificate connector setting.
     *
@@ -738,6 +705,39 @@ class Organization extends DirectoryObject
     public function setCertificateConnectorSetting($val)
     {
         $this->_propDict["certificateConnectorSetting"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the mobileDeviceManagementAuthority
+    * Mobile device management authority. Possible values are: unknown, intune, sccm, office365.
+    *
+    * @return MdmAuthority The mobileDeviceManagementAuthority
+    */
+    public function getMobileDeviceManagementAuthority()
+    {
+        if (array_key_exists("mobileDeviceManagementAuthority", $this->_propDict)) {
+            if (is_a($this->_propDict["mobileDeviceManagementAuthority"], "Beta\Microsoft\Graph\Model\MdmAuthority")) {
+                return $this->_propDict["mobileDeviceManagementAuthority"];
+            } else {
+                $this->_propDict["mobileDeviceManagementAuthority"] = new MdmAuthority($this->_propDict["mobileDeviceManagementAuthority"]);
+                return $this->_propDict["mobileDeviceManagementAuthority"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the mobileDeviceManagementAuthority
+    * Mobile device management authority. Possible values are: unknown, intune, sccm, office365.
+    *
+    * @param MdmAuthority $val The mobileDeviceManagementAuthority
+    *
+    * @return Organization
+    */
+    public function setMobileDeviceManagementAuthority($val)
+    {
+        $this->_propDict["mobileDeviceManagementAuthority"] = $val;
         return $this;
     }
     

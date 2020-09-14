@@ -33,34 +33,6 @@ class DeviceManagementSettingIntegerConstraint extends DeviceManagementConstrain
     }
 
     /**
-    * Gets the minimumValue
-    * The minimum permitted value
-    *
-    * @return int The minimumValue
-    */
-    public function getMinimumValue()
-    {
-        if (array_key_exists("minimumValue", $this->_propDict)) {
-            return $this->_propDict["minimumValue"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the minimumValue
-    * The minimum permitted value
-    *
-    * @param int $val The value of the minimumValue
-    *
-    * @return DeviceManagementSettingIntegerConstraint
-    */
-    public function setMinimumValue($val)
-    {
-        $this->_propDict["minimumValue"] = $val;
-        return $this;
-    }
-    /**
     * Gets the maximumValue
     * The maximum permitted value
     *
@@ -86,6 +58,34 @@ class DeviceManagementSettingIntegerConstraint extends DeviceManagementConstrain
     public function setMaximumValue($val)
     {
         $this->_propDict["maximumValue"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the minimumValue
+    * The minimum permitted value
+    *
+    * @return int The minimumValue
+    */
+    public function getMinimumValue()
+    {
+        if (array_key_exists("minimumValue", $this->_propDict)) {
+            return $this->_propDict["minimumValue"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the minimumValue
+    * The minimum permitted value
+    *
+    * @param int $val The value of the minimumValue
+    *
+    * @return DeviceManagementSettingIntegerConstraint
+    */
+    public function setMinimumValue($val)
+    {
+        $this->_propDict["minimumValue"] = $val;
         return $this;
     }
 }

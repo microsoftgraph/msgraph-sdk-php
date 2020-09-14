@@ -83,29 +83,57 @@ class ProjectParticipation extends ItemFacet
     }
     
     /**
-    * Gets the displayName
+    * Gets the collaborationTags
     *
-    * @return string The displayName
+    * @return string The collaborationTags
     */
-    public function getDisplayName()
+    public function getCollaborationTags()
     {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
+        if (array_key_exists("collaborationTags", $this->_propDict)) {
+            return $this->_propDict["collaborationTags"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the displayName
+    * Sets the collaborationTags
     *
-    * @param string $val The displayName
+    * @param string $val The collaborationTags
     *
     * @return ProjectParticipation
     */
-    public function setDisplayName($val)
+    public function setCollaborationTags($val)
     {
-        $this->_propDict["displayName"] = $val;
+        $this->_propDict["collaborationTags"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the colleagues
+     *
+     * @return array The colleagues
+     */
+    public function getColleagues()
+    {
+        if (array_key_exists("colleagues", $this->_propDict)) {
+           return $this->_propDict["colleagues"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the colleagues
+    *
+    * @param RelatedPerson $val The colleagues
+    *
+    * @return ProjectParticipation
+    */
+    public function setColleagues($val)
+    {
+		$this->_propDict["colleagues"] = $val;
         return $this;
     }
     
@@ -140,31 +168,30 @@ class ProjectParticipation extends ItemFacet
         return $this;
     }
     
-
-     /** 
-     * Gets the colleagues
-     *
-     * @return array The colleagues
-     */
-    public function getColleagues()
+    /**
+    * Gets the displayName
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
     {
-        if (array_key_exists("colleagues", $this->_propDict)) {
-           return $this->_propDict["colleagues"];
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
         } else {
             return null;
         }
     }
     
-    /** 
-    * Sets the colleagues
+    /**
+    * Sets the displayName
     *
-    * @param RelatedPerson $val The colleagues
+    * @param string $val The displayName
     *
     * @return ProjectParticipation
     */
-    public function setColleagues($val)
+    public function setDisplayName($val)
     {
-		$this->_propDict["colleagues"] = $val;
+        $this->_propDict["displayName"] = $val;
         return $this;
     }
     
@@ -193,33 +220,6 @@ class ProjectParticipation extends ItemFacet
     public function setSponsors($val)
     {
 		$this->_propDict["sponsors"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the collaborationTags
-    *
-    * @return string The collaborationTags
-    */
-    public function getCollaborationTags()
-    {
-        if (array_key_exists("collaborationTags", $this->_propDict)) {
-            return $this->_propDict["collaborationTags"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the collaborationTags
-    *
-    * @param string $val The collaborationTags
-    *
-    * @return ProjectParticipation
-    */
-    public function setCollaborationTags($val)
-    {
-        $this->_propDict["collaborationTags"] = $val;
         return $this;
     }
     

@@ -57,34 +57,6 @@ class IdentityContainer extends Entity
     
 
      /** 
-     * Gets the userFlows
-     *
-     * @return array The userFlows
-     */
-    public function getUserFlows()
-    {
-        if (array_key_exists("userFlows", $this->_propDict)) {
-           return $this->_propDict["userFlows"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the userFlows
-    *
-    * @param IdentityUserFlow $val The userFlows
-    *
-    * @return IdentityContainer
-    */
-    public function setUserFlows($val)
-    {
-		$this->_propDict["userFlows"] = $val;
-        return $this;
-    }
-    
-
-     /** 
      * Gets the b2cUserFlows
      *
      * @return array The b2cUserFlows
@@ -136,6 +108,65 @@ class IdentityContainer extends Entity
     public function setB2xUserFlows($val)
     {
 		$this->_propDict["b2xUserFlows"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the userFlows
+     *
+     * @return array The userFlows
+     */
+    public function getUserFlows()
+    {
+        if (array_key_exists("userFlows", $this->_propDict)) {
+           return $this->_propDict["userFlows"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the userFlows
+    *
+    * @param IdentityUserFlow $val The userFlows
+    *
+    * @return IdentityContainer
+    */
+    public function setUserFlows($val)
+    {
+		$this->_propDict["userFlows"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the continuousAccessEvaluationPolicy
+    *
+    * @return ContinuousAccessEvaluationPolicy The continuousAccessEvaluationPolicy
+    */
+    public function getContinuousAccessEvaluationPolicy()
+    {
+        if (array_key_exists("continuousAccessEvaluationPolicy", $this->_propDict)) {
+            if (is_a($this->_propDict["continuousAccessEvaluationPolicy"], "Beta\Microsoft\Graph\Model\ContinuousAccessEvaluationPolicy")) {
+                return $this->_propDict["continuousAccessEvaluationPolicy"];
+            } else {
+                $this->_propDict["continuousAccessEvaluationPolicy"] = new ContinuousAccessEvaluationPolicy($this->_propDict["continuousAccessEvaluationPolicy"]);
+                return $this->_propDict["continuousAccessEvaluationPolicy"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the continuousAccessEvaluationPolicy
+    *
+    * @param ContinuousAccessEvaluationPolicy $val The continuousAccessEvaluationPolicy
+    *
+    * @return IdentityContainer
+    */
+    public function setContinuousAccessEvaluationPolicy($val)
+    {
+        $this->_propDict["continuousAccessEvaluationPolicy"] = $val;
         return $this;
     }
     

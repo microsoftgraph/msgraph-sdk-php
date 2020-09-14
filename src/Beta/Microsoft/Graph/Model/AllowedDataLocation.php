@@ -52,29 +52,29 @@ class AllowedDataLocation extends Entity
     }
     
     /**
-    * Gets the location
+    * Gets the domain
     *
-    * @return string The location
+    * @return string The domain
     */
-    public function getLocation()
+    public function getDomain()
     {
-        if (array_key_exists("location", $this->_propDict)) {
-            return $this->_propDict["location"];
+        if (array_key_exists("domain", $this->_propDict)) {
+            return $this->_propDict["domain"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the location
+    * Sets the domain
     *
-    * @param string $val The location
+    * @param string $val The domain
     *
     * @return AllowedDataLocation
     */
-    public function setLocation($val)
+    public function setDomain($val)
     {
-        $this->_propDict["location"] = $val;
+        $this->_propDict["domain"] = $val;
         return $this;
     }
     
@@ -106,29 +106,29 @@ class AllowedDataLocation extends Entity
     }
     
     /**
-    * Gets the domain
+    * Gets the location
     *
-    * @return string The domain
+    * @return string The location
     */
-    public function getDomain()
+    public function getLocation()
     {
-        if (array_key_exists("domain", $this->_propDict)) {
-            return $this->_propDict["domain"];
+        if (array_key_exists("location", $this->_propDict)) {
+            return $this->_propDict["location"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the domain
+    * Sets the location
     *
-    * @param string $val The domain
+    * @param string $val The location
     *
     * @return AllowedDataLocation
     */
-    public function setDomain($val)
+    public function setLocation($val)
     {
-        $this->_propDict["domain"] = $val;
+        $this->_propDict["location"] = $val;
         return $this;
     }
     

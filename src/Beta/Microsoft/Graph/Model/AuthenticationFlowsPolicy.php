@@ -25,33 +25,29 @@ namespace Beta\Microsoft\Graph\Model;
 class AuthenticationFlowsPolicy extends Entity
 {
     /**
-    * Gets the selfServiceSignUp
+    * Gets the description
     *
-    * @return SelfServiceSignUpAuthenticationFlowConfiguration The selfServiceSignUp
+    * @return string The description
     */
-    public function getSelfServiceSignUp()
+    public function getDescription()
     {
-        if (array_key_exists("selfServiceSignUp", $this->_propDict)) {
-            if (is_a($this->_propDict["selfServiceSignUp"], "Beta\Microsoft\Graph\Model\SelfServiceSignUpAuthenticationFlowConfiguration")) {
-                return $this->_propDict["selfServiceSignUp"];
-            } else {
-                $this->_propDict["selfServiceSignUp"] = new SelfServiceSignUpAuthenticationFlowConfiguration($this->_propDict["selfServiceSignUp"]);
-                return $this->_propDict["selfServiceSignUp"];
-            }
+        if (array_key_exists("description", $this->_propDict)) {
+            return $this->_propDict["description"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the selfServiceSignUp
+    * Sets the description
     *
-    * @param SelfServiceSignUpAuthenticationFlowConfiguration $val The selfServiceSignUp
+    * @param string $val The description
     *
     * @return AuthenticationFlowsPolicy
     */
-    public function setSelfServiceSignUp($val)
+    public function setDescription($val)
     {
-        $this->_propDict["selfServiceSignUp"] = $val;
+        $this->_propDict["description"] = $val;
         return $this;
     }
     
@@ -83,29 +79,33 @@ class AuthenticationFlowsPolicy extends Entity
     }
     
     /**
-    * Gets the description
+    * Gets the selfServiceSignUp
     *
-    * @return string The description
+    * @return SelfServiceSignUpAuthenticationFlowConfiguration The selfServiceSignUp
     */
-    public function getDescription()
+    public function getSelfServiceSignUp()
     {
-        if (array_key_exists("description", $this->_propDict)) {
-            return $this->_propDict["description"];
-        } else {
-            return null;
+        if (array_key_exists("selfServiceSignUp", $this->_propDict)) {
+            if (is_a($this->_propDict["selfServiceSignUp"], "Beta\Microsoft\Graph\Model\SelfServiceSignUpAuthenticationFlowConfiguration")) {
+                return $this->_propDict["selfServiceSignUp"];
+            } else {
+                $this->_propDict["selfServiceSignUp"] = new SelfServiceSignUpAuthenticationFlowConfiguration($this->_propDict["selfServiceSignUp"]);
+                return $this->_propDict["selfServiceSignUp"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the description
+    * Sets the selfServiceSignUp
     *
-    * @param string $val The description
+    * @param SelfServiceSignUpAuthenticationFlowConfiguration $val The selfServiceSignUp
     *
     * @return AuthenticationFlowsPolicy
     */
-    public function setDescription($val)
+    public function setSelfServiceSignUp($val)
     {
-        $this->_propDict["description"] = $val;
+        $this->_propDict["selfServiceSignUp"] = $val;
         return $this;
     }
     

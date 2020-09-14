@@ -25,39 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class Windows81TrustedRootCertificate extends DeviceConfiguration
 {
     /**
-    * Gets the trustedRootCertificate
-    * Trusted Root Certificate
-    *
-    * @return \GuzzleHttp\Psr7\Stream The trustedRootCertificate
-    */
-    public function getTrustedRootCertificate()
-    {
-        if (array_key_exists("trustedRootCertificate", $this->_propDict)) {
-            if (is_a($this->_propDict["trustedRootCertificate"], "\GuzzleHttp\Psr7\Stream")) {
-                return $this->_propDict["trustedRootCertificate"];
-            } else {
-                $this->_propDict["trustedRootCertificate"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["trustedRootCertificate"]);
-                return $this->_propDict["trustedRootCertificate"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the trustedRootCertificate
-    * Trusted Root Certificate
-    *
-    * @param \GuzzleHttp\Psr7\Stream $val The trustedRootCertificate
-    *
-    * @return Windows81TrustedRootCertificate
-    */
-    public function setTrustedRootCertificate($val)
-    {
-        $this->_propDict["trustedRootCertificate"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the certFileName
     * File name to display in UI.
     *
@@ -116,6 +83,39 @@ class Windows81TrustedRootCertificate extends DeviceConfiguration
     public function setDestinationStore($val)
     {
         $this->_propDict["destinationStore"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the trustedRootCertificate
+    * Trusted Root Certificate
+    *
+    * @return \GuzzleHttp\Psr7\Stream The trustedRootCertificate
+    */
+    public function getTrustedRootCertificate()
+    {
+        if (array_key_exists("trustedRootCertificate", $this->_propDict)) {
+            if (is_a($this->_propDict["trustedRootCertificate"], "\GuzzleHttp\Psr7\Stream")) {
+                return $this->_propDict["trustedRootCertificate"];
+            } else {
+                $this->_propDict["trustedRootCertificate"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["trustedRootCertificate"]);
+                return $this->_propDict["trustedRootCertificate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the trustedRootCertificate
+    * Trusted Root Certificate
+    *
+    * @param \GuzzleHttp\Psr7\Stream $val The trustedRootCertificate
+    *
+    * @return Windows81TrustedRootCertificate
+    */
+    public function setTrustedRootCertificate($val)
+    {
+        $this->_propDict["trustedRootCertificate"] = $val;
         return $this;
     }
     

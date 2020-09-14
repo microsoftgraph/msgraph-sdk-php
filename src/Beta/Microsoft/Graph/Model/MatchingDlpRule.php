@@ -23,56 +23,61 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class MatchingDlpRule extends Entity
 {
+
     /**
-    * Gets the ruleId
+    * Gets the actions
     *
-    * @return string The ruleId
+    * @return DlpActionInfo The actions
     */
-    public function getRuleId()
+    public function getActions()
     {
-        if (array_key_exists("ruleId", $this->_propDict)) {
-            return $this->_propDict["ruleId"];
+        if (array_key_exists("actions", $this->_propDict)) {
+            if (is_a($this->_propDict["actions"], "Beta\Microsoft\Graph\Model\DlpActionInfo")) {
+                return $this->_propDict["actions"];
+            } else {
+                $this->_propDict["actions"] = new DlpActionInfo($this->_propDict["actions"]);
+                return $this->_propDict["actions"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the actions
+    *
+    * @param DlpActionInfo $val The value to assign to the actions
+    *
+    * @return MatchingDlpRule The MatchingDlpRule
+    */
+    public function setActions($val)
+    {
+        $this->_propDict["actions"] = $val;
+         return $this;
+    }
+    /**
+    * Gets the isMostRestrictive
+    *
+    * @return bool The isMostRestrictive
+    */
+    public function getIsMostRestrictive()
+    {
+        if (array_key_exists("isMostRestrictive", $this->_propDict)) {
+            return $this->_propDict["isMostRestrictive"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the ruleId
+    * Sets the isMostRestrictive
     *
-    * @param string $val The value of the ruleId
-    *
-    * @return MatchingDlpRule
-    */
-    public function setRuleId($val)
-    {
-        $this->_propDict["ruleId"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the ruleName
-    *
-    * @return string The ruleName
-    */
-    public function getRuleName()
-    {
-        if (array_key_exists("ruleName", $this->_propDict)) {
-            return $this->_propDict["ruleName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the ruleName
-    *
-    * @param string $val The value of the ruleName
+    * @param bool $val The value of the isMostRestrictive
     *
     * @return MatchingDlpRule
     */
-    public function setRuleName($val)
+    public function setIsMostRestrictive($val)
     {
-        $this->_propDict["ruleName"] = $val;
+        $this->_propDict["isMostRestrictive"] = $val;
         return $this;
     }
     /**
@@ -128,32 +133,6 @@ class MatchingDlpRule extends Entity
         return $this;
     }
     /**
-    * Gets the isMostRestrictive
-    *
-    * @return bool The isMostRestrictive
-    */
-    public function getIsMostRestrictive()
-    {
-        if (array_key_exists("isMostRestrictive", $this->_propDict)) {
-            return $this->_propDict["isMostRestrictive"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the isMostRestrictive
-    *
-    * @param bool $val The value of the isMostRestrictive
-    *
-    * @return MatchingDlpRule
-    */
-    public function setIsMostRestrictive($val)
-    {
-        $this->_propDict["isMostRestrictive"] = $val;
-        return $this;
-    }
-    /**
     * Gets the priority
     *
     * @return int The priority
@@ -179,36 +158,31 @@ class MatchingDlpRule extends Entity
         $this->_propDict["priority"] = $val;
         return $this;
     }
-
     /**
-    * Gets the actions
+    * Gets the ruleId
     *
-    * @return DlpActionInfo The actions
+    * @return string The ruleId
     */
-    public function getActions()
+    public function getRuleId()
     {
-        if (array_key_exists("actions", $this->_propDict)) {
-            if (is_a($this->_propDict["actions"], "Beta\Microsoft\Graph\Model\DlpActionInfo")) {
-                return $this->_propDict["actions"];
-            } else {
-                $this->_propDict["actions"] = new DlpActionInfo($this->_propDict["actions"]);
-                return $this->_propDict["actions"];
-            }
+        if (array_key_exists("ruleId", $this->_propDict)) {
+            return $this->_propDict["ruleId"];
+        } else {
+            return null;
         }
-        return null;
     }
 
     /**
-    * Sets the actions
+    * Sets the ruleId
     *
-    * @param DlpActionInfo $val The value to assign to the actions
+    * @param string $val The value of the ruleId
     *
-    * @return MatchingDlpRule The MatchingDlpRule
+    * @return MatchingDlpRule
     */
-    public function setActions($val)
+    public function setRuleId($val)
     {
-        $this->_propDict["actions"] = $val;
-         return $this;
+        $this->_propDict["ruleId"] = $val;
+        return $this;
     }
 
     /**
@@ -240,5 +214,31 @@ class MatchingDlpRule extends Entity
     {
         $this->_propDict["ruleMode"] = $val;
          return $this;
+    }
+    /**
+    * Gets the ruleName
+    *
+    * @return string The ruleName
+    */
+    public function getRuleName()
+    {
+        if (array_key_exists("ruleName", $this->_propDict)) {
+            return $this->_propDict["ruleName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the ruleName
+    *
+    * @param string $val The value of the ruleName
+    *
+    * @return MatchingDlpRule
+    */
+    public function setRuleName($val)
+    {
+        $this->_propDict["ruleName"] = $val;
+        return $this;
     }
 }

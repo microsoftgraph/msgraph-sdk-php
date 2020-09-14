@@ -24,32 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class ExpressionEvaluationDetails extends Entity
 {
     /**
-    * Gets the expressionResult
-    *
-    * @return bool The expressionResult
-    */
-    public function getExpressionResult()
-    {
-        if (array_key_exists("expressionResult", $this->_propDict)) {
-            return $this->_propDict["expressionResult"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the expressionResult
-    *
-    * @param bool $val The value of the expressionResult
-    *
-    * @return ExpressionEvaluationDetails
-    */
-    public function setExpressionResult($val)
-    {
-        $this->_propDict["expressionResult"] = $val;
-        return $this;
-    }
-    /**
     * Gets the expression
     *
     * @return string The expression
@@ -105,6 +79,32 @@ class ExpressionEvaluationDetails extends Entity
     {
         $this->_propDict["expressionEvaluationDetails"] = $val;
          return $this;
+    }
+    /**
+    * Gets the expressionResult
+    *
+    * @return bool The expressionResult
+    */
+    public function getExpressionResult()
+    {
+        if (array_key_exists("expressionResult", $this->_propDict)) {
+            return $this->_propDict["expressionResult"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the expressionResult
+    *
+    * @param bool $val The value of the expressionResult
+    *
+    * @return ExpressionEvaluationDetails
+    */
+    public function setExpressionResult($val)
+    {
+        $this->_propDict["expressionResult"] = $val;
+        return $this;
     }
 
     /**

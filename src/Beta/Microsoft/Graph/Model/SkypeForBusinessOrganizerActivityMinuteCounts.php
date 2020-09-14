@@ -106,37 +106,6 @@ class SkypeForBusinessOrganizerActivityMinuteCounts extends Entity
     }
     
     /**
-    * Gets the reportRefreshDate
-    *
-    * @return \DateTime The reportRefreshDate
-    */
-    public function getReportRefreshDate()
-    {
-        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
-                return $this->_propDict["reportRefreshDate"];
-            } else {
-                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
-                return $this->_propDict["reportRefreshDate"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the reportRefreshDate
-    *
-    * @param \DateTime $val The reportRefreshDate
-    *
-    * @return SkypeForBusinessOrganizerActivityMinuteCounts
-    */
-    public function setReportRefreshDate($val)
-    {
-        $this->_propDict["reportRefreshDate"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the reportDate
     *
     * @return \DateTime The reportDate
@@ -191,6 +160,37 @@ class SkypeForBusinessOrganizerActivityMinuteCounts extends Entity
     public function setReportPeriod($val)
     {
         $this->_propDict["reportPeriod"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the reportRefreshDate
+    *
+    * @return \DateTime The reportRefreshDate
+    */
+    public function getReportRefreshDate()
+    {
+        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
+                return $this->_propDict["reportRefreshDate"];
+            } else {
+                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
+                return $this->_propDict["reportRefreshDate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the reportRefreshDate
+    *
+    * @param \DateTime $val The reportRefreshDate
+    *
+    * @return SkypeForBusinessOrganizerActivityMinuteCounts
+    */
+    public function setReportRefreshDate($val)
+    {
+        $this->_propDict["reportRefreshDate"] = $val;
         return $this;
     }
     

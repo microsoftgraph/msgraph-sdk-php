@@ -25,149 +25,56 @@ namespace Beta\Microsoft\Graph\Model;
 class EducationAssignment extends Entity
 {
     /**
-    * Gets the classId
+    * Gets the allowLateSubmissions
     *
-    * @return string The classId
+    * @return bool The allowLateSubmissions
     */
-    public function getClassId()
+    public function getAllowLateSubmissions()
     {
-        if (array_key_exists("classId", $this->_propDict)) {
-            return $this->_propDict["classId"];
+        if (array_key_exists("allowLateSubmissions", $this->_propDict)) {
+            return $this->_propDict["allowLateSubmissions"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the classId
+    * Sets the allowLateSubmissions
     *
-    * @param string $val The classId
+    * @param bool $val The allowLateSubmissions
     *
     * @return EducationAssignment
     */
-    public function setClassId($val)
+    public function setAllowLateSubmissions($val)
     {
-        $this->_propDict["classId"] = $val;
+        $this->_propDict["allowLateSubmissions"] = boolval($val);
         return $this;
     }
     
     /**
-    * Gets the displayName
+    * Gets the allowStudentsToAddResourcesToSubmission
     *
-    * @return string The displayName
+    * @return bool The allowStudentsToAddResourcesToSubmission
     */
-    public function getDisplayName()
+    public function getAllowStudentsToAddResourcesToSubmission()
     {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
+        if (array_key_exists("allowStudentsToAddResourcesToSubmission", $this->_propDict)) {
+            return $this->_propDict["allowStudentsToAddResourcesToSubmission"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the displayName
+    * Sets the allowStudentsToAddResourcesToSubmission
     *
-    * @param string $val The displayName
-    *
-    * @return EducationAssignment
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the instructions
-    *
-    * @return EducationItemBody The instructions
-    */
-    public function getInstructions()
-    {
-        if (array_key_exists("instructions", $this->_propDict)) {
-            if (is_a($this->_propDict["instructions"], "Beta\Microsoft\Graph\Model\EducationItemBody")) {
-                return $this->_propDict["instructions"];
-            } else {
-                $this->_propDict["instructions"] = new EducationItemBody($this->_propDict["instructions"]);
-                return $this->_propDict["instructions"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the instructions
-    *
-    * @param EducationItemBody $val The instructions
+    * @param bool $val The allowStudentsToAddResourcesToSubmission
     *
     * @return EducationAssignment
     */
-    public function setInstructions($val)
+    public function setAllowStudentsToAddResourcesToSubmission($val)
     {
-        $this->_propDict["instructions"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the closeDateTime
-    *
-    * @return \DateTime The closeDateTime
-    */
-    public function getCloseDateTime()
-    {
-        if (array_key_exists("closeDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["closeDateTime"], "\DateTime")) {
-                return $this->_propDict["closeDateTime"];
-            } else {
-                $this->_propDict["closeDateTime"] = new \DateTime($this->_propDict["closeDateTime"]);
-                return $this->_propDict["closeDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the closeDateTime
-    *
-    * @param \DateTime $val The closeDateTime
-    *
-    * @return EducationAssignment
-    */
-    public function setCloseDateTime($val)
-    {
-        $this->_propDict["closeDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the dueDateTime
-    *
-    * @return \DateTime The dueDateTime
-    */
-    public function getDueDateTime()
-    {
-        if (array_key_exists("dueDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["dueDateTime"], "\DateTime")) {
-                return $this->_propDict["dueDateTime"];
-            } else {
-                $this->_propDict["dueDateTime"] = new \DateTime($this->_propDict["dueDateTime"]);
-                return $this->_propDict["dueDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the dueDateTime
-    *
-    * @param \DateTime $val The dueDateTime
-    *
-    * @return EducationAssignment
-    */
-    public function setDueDateTime($val)
-    {
-        $this->_propDict["dueDateTime"] = $val;
+        $this->_propDict["allowStudentsToAddResourcesToSubmission"] = boolval($val);
         return $this;
     }
     
@@ -234,37 +141,6 @@ class EducationAssignment extends Entity
     }
     
     /**
-    * Gets the grading
-    *
-    * @return EducationAssignmentGradeType The grading
-    */
-    public function getGrading()
-    {
-        if (array_key_exists("grading", $this->_propDict)) {
-            if (is_a($this->_propDict["grading"], "Beta\Microsoft\Graph\Model\EducationAssignmentGradeType")) {
-                return $this->_propDict["grading"];
-            } else {
-                $this->_propDict["grading"] = new EducationAssignmentGradeType($this->_propDict["grading"]);
-                return $this->_propDict["grading"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the grading
-    *
-    * @param EducationAssignmentGradeType $val The grading
-    *
-    * @return EducationAssignment
-    */
-    public function setGrading($val)
-    {
-        $this->_propDict["grading"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the assignTo
     *
     * @return EducationAssignmentRecipient The assignTo
@@ -296,60 +172,60 @@ class EducationAssignment extends Entity
     }
     
     /**
-    * Gets the allowLateSubmissions
+    * Gets the classId
     *
-    * @return bool The allowLateSubmissions
+    * @return string The classId
     */
-    public function getAllowLateSubmissions()
+    public function getClassId()
     {
-        if (array_key_exists("allowLateSubmissions", $this->_propDict)) {
-            return $this->_propDict["allowLateSubmissions"];
+        if (array_key_exists("classId", $this->_propDict)) {
+            return $this->_propDict["classId"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the allowLateSubmissions
+    * Sets the classId
     *
-    * @param bool $val The allowLateSubmissions
+    * @param string $val The classId
     *
     * @return EducationAssignment
     */
-    public function setAllowLateSubmissions($val)
+    public function setClassId($val)
     {
-        $this->_propDict["allowLateSubmissions"] = boolval($val);
+        $this->_propDict["classId"] = $val;
         return $this;
     }
     
     /**
-    * Gets the createdDateTime
+    * Gets the closeDateTime
     *
-    * @return \DateTime The createdDateTime
+    * @return \DateTime The closeDateTime
     */
-    public function getCreatedDateTime()
+    public function getCloseDateTime()
     {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
-                return $this->_propDict["createdDateTime"];
+        if (array_key_exists("closeDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["closeDateTime"], "\DateTime")) {
+                return $this->_propDict["closeDateTime"];
             } else {
-                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
-                return $this->_propDict["createdDateTime"];
+                $this->_propDict["closeDateTime"] = new \DateTime($this->_propDict["closeDateTime"]);
+                return $this->_propDict["closeDateTime"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the createdDateTime
+    * Sets the closeDateTime
     *
-    * @param \DateTime $val The createdDateTime
+    * @param \DateTime $val The closeDateTime
     *
     * @return EducationAssignment
     */
-    public function setCreatedDateTime($val)
+    public function setCloseDateTime($val)
     {
-        $this->_propDict["createdDateTime"] = $val;
+        $this->_propDict["closeDateTime"] = $val;
         return $this;
     }
     
@@ -385,33 +261,153 @@ class EducationAssignment extends Entity
     }
     
     /**
-    * Gets the lastModifiedDateTime
+    * Gets the createdDateTime
     *
-    * @return \DateTime The lastModifiedDateTime
+    * @return \DateTime The createdDateTime
     */
-    public function getLastModifiedDateTime()
+    public function getCreatedDateTime()
     {
-        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
-                return $this->_propDict["lastModifiedDateTime"];
+        if (array_key_exists("createdDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+                return $this->_propDict["createdDateTime"];
             } else {
-                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
-                return $this->_propDict["lastModifiedDateTime"];
+                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
+                return $this->_propDict["createdDateTime"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the lastModifiedDateTime
+    * Sets the createdDateTime
     *
-    * @param \DateTime $val The lastModifiedDateTime
+    * @param \DateTime $val The createdDateTime
     *
     * @return EducationAssignment
     */
-    public function setLastModifiedDateTime($val)
+    public function setCreatedDateTime($val)
     {
-        $this->_propDict["lastModifiedDateTime"] = $val;
+        $this->_propDict["createdDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the displayName
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the displayName
+    *
+    * @param string $val The displayName
+    *
+    * @return EducationAssignment
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the dueDateTime
+    *
+    * @return \DateTime The dueDateTime
+    */
+    public function getDueDateTime()
+    {
+        if (array_key_exists("dueDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["dueDateTime"], "\DateTime")) {
+                return $this->_propDict["dueDateTime"];
+            } else {
+                $this->_propDict["dueDateTime"] = new \DateTime($this->_propDict["dueDateTime"]);
+                return $this->_propDict["dueDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the dueDateTime
+    *
+    * @param \DateTime $val The dueDateTime
+    *
+    * @return EducationAssignment
+    */
+    public function setDueDateTime($val)
+    {
+        $this->_propDict["dueDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the grading
+    *
+    * @return EducationAssignmentGradeType The grading
+    */
+    public function getGrading()
+    {
+        if (array_key_exists("grading", $this->_propDict)) {
+            if (is_a($this->_propDict["grading"], "Beta\Microsoft\Graph\Model\EducationAssignmentGradeType")) {
+                return $this->_propDict["grading"];
+            } else {
+                $this->_propDict["grading"] = new EducationAssignmentGradeType($this->_propDict["grading"]);
+                return $this->_propDict["grading"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the grading
+    *
+    * @param EducationAssignmentGradeType $val The grading
+    *
+    * @return EducationAssignment
+    */
+    public function setGrading($val)
+    {
+        $this->_propDict["grading"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the instructions
+    *
+    * @return EducationItemBody The instructions
+    */
+    public function getInstructions()
+    {
+        if (array_key_exists("instructions", $this->_propDict)) {
+            if (is_a($this->_propDict["instructions"], "Beta\Microsoft\Graph\Model\EducationItemBody")) {
+                return $this->_propDict["instructions"];
+            } else {
+                $this->_propDict["instructions"] = new EducationItemBody($this->_propDict["instructions"]);
+                return $this->_propDict["instructions"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the instructions
+    *
+    * @param EducationItemBody $val The instructions
+    *
+    * @return EducationAssignment
+    */
+    public function setInstructions($val)
+    {
+        $this->_propDict["instructions"] = $val;
         return $this;
     }
     
@@ -447,29 +443,33 @@ class EducationAssignment extends Entity
     }
     
     /**
-    * Gets the allowStudentsToAddResourcesToSubmission
+    * Gets the lastModifiedDateTime
     *
-    * @return bool The allowStudentsToAddResourcesToSubmission
+    * @return \DateTime The lastModifiedDateTime
     */
-    public function getAllowStudentsToAddResourcesToSubmission()
+    public function getLastModifiedDateTime()
     {
-        if (array_key_exists("allowStudentsToAddResourcesToSubmission", $this->_propDict)) {
-            return $this->_propDict["allowStudentsToAddResourcesToSubmission"];
-        } else {
-            return null;
+        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+                return $this->_propDict["lastModifiedDateTime"];
+            } else {
+                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
+                return $this->_propDict["lastModifiedDateTime"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the allowStudentsToAddResourcesToSubmission
+    * Sets the lastModifiedDateTime
     *
-    * @param bool $val The allowStudentsToAddResourcesToSubmission
+    * @param \DateTime $val The lastModifiedDateTime
     *
     * @return EducationAssignment
     */
-    public function setAllowStudentsToAddResourcesToSubmission($val)
+    public function setLastModifiedDateTime($val)
     {
-        $this->_propDict["allowStudentsToAddResourcesToSubmission"] = boolval($val);
+        $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
     
@@ -506,62 +506,6 @@ class EducationAssignment extends Entity
     
 
      /** 
-     * Gets the resources
-     *
-     * @return array The resources
-     */
-    public function getResources()
-    {
-        if (array_key_exists("resources", $this->_propDict)) {
-           return $this->_propDict["resources"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the resources
-    *
-    * @param EducationAssignmentResource $val The resources
-    *
-    * @return EducationAssignment
-    */
-    public function setResources($val)
-    {
-		$this->_propDict["resources"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the submissions
-     *
-     * @return array The submissions
-     */
-    public function getSubmissions()
-    {
-        if (array_key_exists("submissions", $this->_propDict)) {
-           return $this->_propDict["submissions"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the submissions
-    *
-    * @param EducationSubmission $val The submissions
-    *
-    * @return EducationAssignment
-    */
-    public function setSubmissions($val)
-    {
-		$this->_propDict["submissions"] = $val;
-        return $this;
-    }
-    
-
-     /** 
      * Gets the categories
      *
      * @return array The categories
@@ -585,6 +529,34 @@ class EducationAssignment extends Entity
     public function setCategories($val)
     {
 		$this->_propDict["categories"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the resources
+     *
+     * @return array The resources
+     */
+    public function getResources()
+    {
+        if (array_key_exists("resources", $this->_propDict)) {
+           return $this->_propDict["resources"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the resources
+    *
+    * @param EducationAssignmentResource $val The resources
+    *
+    * @return EducationAssignment
+    */
+    public function setResources($val)
+    {
+		$this->_propDict["resources"] = $val;
         return $this;
     }
     
@@ -616,6 +588,34 @@ class EducationAssignment extends Entity
     public function setRubric($val)
     {
         $this->_propDict["rubric"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the submissions
+     *
+     * @return array The submissions
+     */
+    public function getSubmissions()
+    {
+        if (array_key_exists("submissions", $this->_propDict)) {
+           return $this->_propDict["submissions"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the submissions
+    *
+    * @param EducationSubmission $val The submissions
+    *
+    * @return EducationAssignment
+    */
+    public function setSubmissions($val)
+    {
+		$this->_propDict["submissions"] = $val;
         return $this;
     }
     

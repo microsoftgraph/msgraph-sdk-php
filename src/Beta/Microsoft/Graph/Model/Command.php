@@ -25,60 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class Command extends Entity
 {
     /**
-    * Gets the status
-    *
-    * @return string The status
-    */
-    public function getStatus()
-    {
-        if (array_key_exists("status", $this->_propDict)) {
-            return $this->_propDict["status"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the status
-    *
-    * @param string $val The status
-    *
-    * @return Command
-    */
-    public function setStatus($val)
-    {
-        $this->_propDict["Status"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the type
-    *
-    * @return string The type
-    */
-    public function getType()
-    {
-        if (array_key_exists("type", $this->_propDict)) {
-            return $this->_propDict["type"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the type
-    *
-    * @param string $val The type
-    *
-    * @return Command
-    */
-    public function setType($val)
-    {
-        $this->_propDict["Type"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the appServiceName
     *
     * @return string The appServiceName
@@ -106,33 +52,6 @@ class Command extends Entity
     }
     
     /**
-    * Gets the packageFamilyName
-    *
-    * @return string The packageFamilyName
-    */
-    public function getPackageFamilyName()
-    {
-        if (array_key_exists("packageFamilyName", $this->_propDict)) {
-            return $this->_propDict["packageFamilyName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the packageFamilyName
-    *
-    * @param string $val The packageFamilyName
-    *
-    * @return Command
-    */
-    public function setPackageFamilyName($val)
-    {
-        $this->_propDict["PackageFamilyName"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the error
     *
     * @return string The error
@@ -156,6 +75,33 @@ class Command extends Entity
     public function setError($val)
     {
         $this->_propDict["Error"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the packageFamilyName
+    *
+    * @return string The packageFamilyName
+    */
+    public function getPackageFamilyName()
+    {
+        if (array_key_exists("packageFamilyName", $this->_propDict)) {
+            return $this->_propDict["packageFamilyName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the packageFamilyName
+    *
+    * @param string $val The packageFamilyName
+    *
+    * @return Command
+    */
+    public function setPackageFamilyName($val)
+    {
+        $this->_propDict["PackageFamilyName"] = $val;
         return $this;
     }
     
@@ -241,6 +187,60 @@ class Command extends Entity
     public function setPostBackUri($val)
     {
         $this->_propDict["PostBackUri"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the status
+    *
+    * @return string The status
+    */
+    public function getStatus()
+    {
+        if (array_key_exists("status", $this->_propDict)) {
+            return $this->_propDict["status"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the status
+    *
+    * @param string $val The status
+    *
+    * @return Command
+    */
+    public function setStatus($val)
+    {
+        $this->_propDict["Status"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the type
+    *
+    * @return string The type
+    */
+    public function getType()
+    {
+        if (array_key_exists("type", $this->_propDict)) {
+            return $this->_propDict["type"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the type
+    *
+    * @param string $val The type
+    *
+    * @return Command
+    */
+    public function setType($val)
+    {
+        $this->_propDict["Type"] = $val;
         return $this;
     }
     

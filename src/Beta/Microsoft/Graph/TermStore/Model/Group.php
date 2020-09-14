@@ -25,6 +25,37 @@ namespace Beta\Microsoft\Graph\TermStore\Model;
 class Group extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
+    * Gets the createdDateTime
+    *
+    * @return \DateTime The createdDateTime
+    */
+    public function getCreatedDateTime()
+    {
+        if (array_key_exists("createdDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+                return $this->_propDict["createdDateTime"];
+            } else {
+                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
+                return $this->_propDict["createdDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the createdDateTime
+    *
+    * @param \DateTime $val The createdDateTime
+    *
+    * @return Group
+    */
+    public function setCreatedDateTime($val)
+    {
+        $this->_propDict["createdDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the description
     *
     * @return string The description
@@ -75,37 +106,6 @@ class Group extends \Beta\Microsoft\Graph\Model\Entity
     public function setDisplayName($val)
     {
         $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the createdDateTime
-    *
-    * @return \DateTime The createdDateTime
-    */
-    public function getCreatedDateTime()
-    {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
-                return $this->_propDict["createdDateTime"];
-            } else {
-                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
-                return $this->_propDict["createdDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the createdDateTime
-    *
-    * @param \DateTime $val The createdDateTime
-    *
-    * @return Group
-    */
-    public function setCreatedDateTime($val)
-    {
-        $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
     

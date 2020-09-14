@@ -79,39 +79,6 @@ class MobileAppIntentAndStateDetail extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-
-    /**
-    * Gets the mobileAppIntent
-    * Mobile App Intent.
-    *
-    * @return MobileAppIntent The mobileAppIntent
-    */
-    public function getMobileAppIntent()
-    {
-        if (array_key_exists("mobileAppIntent", $this->_propDict)) {
-            if (is_a($this->_propDict["mobileAppIntent"], "Beta\Microsoft\Graph\Model\MobileAppIntent")) {
-                return $this->_propDict["mobileAppIntent"];
-            } else {
-                $this->_propDict["mobileAppIntent"] = new MobileAppIntent($this->_propDict["mobileAppIntent"]);
-                return $this->_propDict["mobileAppIntent"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the mobileAppIntent
-    * Mobile App Intent.
-    *
-    * @param MobileAppIntent $val The value to assign to the mobileAppIntent
-    *
-    * @return MobileAppIntentAndStateDetail The MobileAppIntentAndStateDetail
-    */
-    public function setMobileAppIntent($val)
-    {
-        $this->_propDict["mobileAppIntent"] = $val;
-         return $this;
-    }
     /**
     * Gets the displayVersion
     * Human readable version of the application
@@ -171,6 +138,39 @@ class MobileAppIntentAndStateDetail extends Entity
     public function setInstallState($val)
     {
         $this->_propDict["installState"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the mobileAppIntent
+    * Mobile App Intent.
+    *
+    * @return MobileAppIntent The mobileAppIntent
+    */
+    public function getMobileAppIntent()
+    {
+        if (array_key_exists("mobileAppIntent", $this->_propDict)) {
+            if (is_a($this->_propDict["mobileAppIntent"], "Beta\Microsoft\Graph\Model\MobileAppIntent")) {
+                return $this->_propDict["mobileAppIntent"];
+            } else {
+                $this->_propDict["mobileAppIntent"] = new MobileAppIntent($this->_propDict["mobileAppIntent"]);
+                return $this->_propDict["mobileAppIntent"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the mobileAppIntent
+    * Mobile App Intent.
+    *
+    * @param MobileAppIntent $val The value to assign to the mobileAppIntent
+    *
+    * @return MobileAppIntentAndStateDetail The MobileAppIntentAndStateDetail
+    */
+    public function setMobileAppIntent($val)
+    {
+        $this->_propDict["mobileAppIntent"] = $val;
          return $this;
     }
 

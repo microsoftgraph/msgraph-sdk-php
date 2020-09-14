@@ -25,64 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class PrintUsageSummaryByUser extends Entity
 {
     /**
-    * Gets the userPrincipalName
-    *
-    * @return string The userPrincipalName
-    */
-    public function getUserPrincipalName()
-    {
-        if (array_key_exists("userPrincipalName", $this->_propDict)) {
-            return $this->_propDict["userPrincipalName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the userPrincipalName
-    *
-    * @param string $val The userPrincipalName
-    *
-    * @return PrintUsageSummaryByUser
-    */
-    public function setUserPrincipalName($val)
-    {
-        $this->_propDict["userPrincipalName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the usageDate
-    *
-    * @return \DateTime The usageDate
-    */
-    public function getUsageDate()
-    {
-        if (array_key_exists("usageDate", $this->_propDict)) {
-            if (is_a($this->_propDict["usageDate"], "\DateTime")) {
-                return $this->_propDict["usageDate"];
-            } else {
-                $this->_propDict["usageDate"] = new \DateTime($this->_propDict["usageDate"]);
-                return $this->_propDict["usageDate"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the usageDate
-    *
-    * @param \DateTime $val The usageDate
-    *
-    * @return PrintUsageSummaryByUser
-    */
-    public function setUsageDate($val)
-    {
-        $this->_propDict["usageDate"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the completedBlackAndWhiteJobCount
     *
     * @return int The completedBlackAndWhiteJobCount
@@ -160,6 +102,64 @@ class PrintUsageSummaryByUser extends Entity
     public function setIncompleteJobCount($val)
     {
         $this->_propDict["incompleteJobCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the usageDate
+    *
+    * @return \DateTime The usageDate
+    */
+    public function getUsageDate()
+    {
+        if (array_key_exists("usageDate", $this->_propDict)) {
+            if (is_a($this->_propDict["usageDate"], "\DateTime")) {
+                return $this->_propDict["usageDate"];
+            } else {
+                $this->_propDict["usageDate"] = new \DateTime($this->_propDict["usageDate"]);
+                return $this->_propDict["usageDate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the usageDate
+    *
+    * @param \DateTime $val The usageDate
+    *
+    * @return PrintUsageSummaryByUser
+    */
+    public function setUsageDate($val)
+    {
+        $this->_propDict["usageDate"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userPrincipalName
+    *
+    * @return string The userPrincipalName
+    */
+    public function getUserPrincipalName()
+    {
+        if (array_key_exists("userPrincipalName", $this->_propDict)) {
+            return $this->_propDict["userPrincipalName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the userPrincipalName
+    *
+    * @param string $val The userPrincipalName
+    *
+    * @return PrintUsageSummaryByUser
+    */
+    public function setUserPrincipalName($val)
+    {
+        $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
     

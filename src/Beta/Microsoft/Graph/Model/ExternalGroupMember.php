@@ -25,37 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class ExternalGroupMember extends Entity
 {
     /**
-    * Gets the type
-    *
-    * @return ExternalGroupMemberType The type
-    */
-    public function getType()
-    {
-        if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "Beta\Microsoft\Graph\Model\ExternalGroupMemberType")) {
-                return $this->_propDict["type"];
-            } else {
-                $this->_propDict["type"] = new ExternalGroupMemberType($this->_propDict["type"]);
-                return $this->_propDict["type"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the type
-    *
-    * @param ExternalGroupMemberType $val The type
-    *
-    * @return ExternalGroupMember
-    */
-    public function setType($val)
-    {
-        $this->_propDict["type"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the identitySource
     *
     * @return IdentitySourceType The identitySource
@@ -83,6 +52,37 @@ class ExternalGroupMember extends Entity
     public function setIdentitySource($val)
     {
         $this->_propDict["identitySource"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the type
+    *
+    * @return ExternalGroupMemberType The type
+    */
+    public function getType()
+    {
+        if (array_key_exists("type", $this->_propDict)) {
+            if (is_a($this->_propDict["type"], "Beta\Microsoft\Graph\Model\ExternalGroupMemberType")) {
+                return $this->_propDict["type"];
+            } else {
+                $this->_propDict["type"] = new ExternalGroupMemberType($this->_propDict["type"]);
+                return $this->_propDict["type"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the type
+    *
+    * @param ExternalGroupMemberType $val The type
+    *
+    * @return ExternalGroupMember
+    */
+    public function setType($val)
+    {
+        $this->_propDict["type"] = $val;
         return $this;
     }
     

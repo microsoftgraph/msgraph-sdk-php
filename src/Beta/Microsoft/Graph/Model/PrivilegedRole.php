@@ -51,6 +51,34 @@ class PrivilegedRole extends Entity
         return $this;
     }
     
+
+     /** 
+     * Gets the assignments
+     *
+     * @return array The assignments
+     */
+    public function getAssignments()
+    {
+        if (array_key_exists("assignments", $this->_propDict)) {
+           return $this->_propDict["assignments"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the assignments
+    *
+    * @param PrivilegedRoleAssignment $val The assignments
+    *
+    * @return PrivilegedRole
+    */
+    public function setAssignments($val)
+    {
+		$this->_propDict["assignments"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the settings
     *
@@ -79,34 +107,6 @@ class PrivilegedRole extends Entity
     public function setSettings($val)
     {
         $this->_propDict["settings"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the assignments
-     *
-     * @return array The assignments
-     */
-    public function getAssignments()
-    {
-        if (array_key_exists("assignments", $this->_propDict)) {
-           return $this->_propDict["assignments"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the assignments
-    *
-    * @param PrivilegedRoleAssignment $val The assignments
-    *
-    * @return PrivilegedRole
-    */
-    public function setAssignments($val)
-    {
-		$this->_propDict["assignments"] = $val;
         return $this;
     }
     

@@ -25,101 +25,31 @@ namespace Beta\Microsoft\Graph\Model;
 class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguration
 {
     /**
-    * Gets the deliveryOptimizationMode
-    * Specifies the download method that delivery optimization can use to manage network bandwidth consumption for large content distribution scenarios.
+    * Gets the backgroundDownloadFromHttpDelayInSeconds
+    * Specifies number of seconds to delay an HTTP source in a background download that is allowed to use peer-to-peer. Valid values 0 to 4294967295
     *
-    * @return WindowsDeliveryOptimizationMode The deliveryOptimizationMode
+    * @return int The backgroundDownloadFromHttpDelayInSeconds
     */
-    public function getDeliveryOptimizationMode()
+    public function getBackgroundDownloadFromHttpDelayInSeconds()
     {
-        if (array_key_exists("deliveryOptimizationMode", $this->_propDict)) {
-            if (is_a($this->_propDict["deliveryOptimizationMode"], "Beta\Microsoft\Graph\Model\WindowsDeliveryOptimizationMode")) {
-                return $this->_propDict["deliveryOptimizationMode"];
-            } else {
-                $this->_propDict["deliveryOptimizationMode"] = new WindowsDeliveryOptimizationMode($this->_propDict["deliveryOptimizationMode"]);
-                return $this->_propDict["deliveryOptimizationMode"];
-            }
+        if (array_key_exists("backgroundDownloadFromHttpDelayInSeconds", $this->_propDict)) {
+            return $this->_propDict["backgroundDownloadFromHttpDelayInSeconds"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the deliveryOptimizationMode
-    * Specifies the download method that delivery optimization can use to manage network bandwidth consumption for large content distribution scenarios.
+    * Sets the backgroundDownloadFromHttpDelayInSeconds
+    * Specifies number of seconds to delay an HTTP source in a background download that is allowed to use peer-to-peer. Valid values 0 to 4294967295
     *
-    * @param WindowsDeliveryOptimizationMode $val The deliveryOptimizationMode
+    * @param int $val The backgroundDownloadFromHttpDelayInSeconds
     *
     * @return WindowsDeliveryOptimizationConfiguration
     */
-    public function setDeliveryOptimizationMode($val)
+    public function setBackgroundDownloadFromHttpDelayInSeconds($val)
     {
-        $this->_propDict["deliveryOptimizationMode"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the restrictPeerSelectionBy
-    * Option 1 (Subnet mask) only applies to Delivery Optimization modes Download Mode LAN (1) and Group (2).
-    *
-    * @return DeliveryOptimizationRestrictPeerSelectionByOptions The restrictPeerSelectionBy
-    */
-    public function getRestrictPeerSelectionBy()
-    {
-        if (array_key_exists("restrictPeerSelectionBy", $this->_propDict)) {
-            if (is_a($this->_propDict["restrictPeerSelectionBy"], "Beta\Microsoft\Graph\Model\DeliveryOptimizationRestrictPeerSelectionByOptions")) {
-                return $this->_propDict["restrictPeerSelectionBy"];
-            } else {
-                $this->_propDict["restrictPeerSelectionBy"] = new DeliveryOptimizationRestrictPeerSelectionByOptions($this->_propDict["restrictPeerSelectionBy"]);
-                return $this->_propDict["restrictPeerSelectionBy"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the restrictPeerSelectionBy
-    * Option 1 (Subnet mask) only applies to Delivery Optimization modes Download Mode LAN (1) and Group (2).
-    *
-    * @param DeliveryOptimizationRestrictPeerSelectionByOptions $val The restrictPeerSelectionBy
-    *
-    * @return WindowsDeliveryOptimizationConfiguration
-    */
-    public function setRestrictPeerSelectionBy($val)
-    {
-        $this->_propDict["restrictPeerSelectionBy"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the groupIdSource
-    * The options set in this policy only apply to Delivery Optimization mode Group (2) download mode. If Group (2) isn't set as Download mode, this policy will be ignored. For option 3 - DHCP Option ID, the client will query DHCP Option ID 234 and use the returned GUID value as the Group ID.
-    *
-    * @return DeliveryOptimizationGroupIdSource The groupIdSource
-    */
-    public function getGroupIdSource()
-    {
-        if (array_key_exists("groupIdSource", $this->_propDict)) {
-            if (is_a($this->_propDict["groupIdSource"], "Beta\Microsoft\Graph\Model\DeliveryOptimizationGroupIdSource")) {
-                return $this->_propDict["groupIdSource"];
-            } else {
-                $this->_propDict["groupIdSource"] = new DeliveryOptimizationGroupIdSource($this->_propDict["groupIdSource"]);
-                return $this->_propDict["groupIdSource"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the groupIdSource
-    * The options set in this policy only apply to Delivery Optimization mode Group (2) download mode. If Group (2) isn't set as Download mode, this policy will be ignored. For option 3 - DHCP Option ID, the client will query DHCP Option ID 234 and use the returned GUID value as the Group ID.
-    *
-    * @param DeliveryOptimizationGroupIdSource $val The groupIdSource
-    *
-    * @return WindowsDeliveryOptimizationConfiguration
-    */
-    public function setGroupIdSource($val)
-    {
-        $this->_propDict["groupIdSource"] = $val;
+        $this->_propDict["backgroundDownloadFromHttpDelayInSeconds"] = intval($val);
         return $this;
     }
     
@@ -157,31 +87,122 @@ class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguration
     }
     
     /**
-    * Gets the backgroundDownloadFromHttpDelayInSeconds
-    * Specifies number of seconds to delay an HTTP source in a background download that is allowed to use peer-to-peer. Valid values 0 to 4294967295
+    * Gets the cacheServerBackgroundDownloadFallbackToHttpDelayInSeconds
+    * Specifies number of seconds to delay a fall back from cache servers to an HTTP source for a background download. Valid values 0 to 2592000.
     *
-    * @return int The backgroundDownloadFromHttpDelayInSeconds
+    * @return int The cacheServerBackgroundDownloadFallbackToHttpDelayInSeconds
     */
-    public function getBackgroundDownloadFromHttpDelayInSeconds()
+    public function getCacheServerBackgroundDownloadFallbackToHttpDelayInSeconds()
     {
-        if (array_key_exists("backgroundDownloadFromHttpDelayInSeconds", $this->_propDict)) {
-            return $this->_propDict["backgroundDownloadFromHttpDelayInSeconds"];
+        if (array_key_exists("cacheServerBackgroundDownloadFallbackToHttpDelayInSeconds", $this->_propDict)) {
+            return $this->_propDict["cacheServerBackgroundDownloadFallbackToHttpDelayInSeconds"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the backgroundDownloadFromHttpDelayInSeconds
-    * Specifies number of seconds to delay an HTTP source in a background download that is allowed to use peer-to-peer. Valid values 0 to 4294967295
+    * Sets the cacheServerBackgroundDownloadFallbackToHttpDelayInSeconds
+    * Specifies number of seconds to delay a fall back from cache servers to an HTTP source for a background download. Valid values 0 to 2592000.
     *
-    * @param int $val The backgroundDownloadFromHttpDelayInSeconds
+    * @param int $val The cacheServerBackgroundDownloadFallbackToHttpDelayInSeconds
     *
     * @return WindowsDeliveryOptimizationConfiguration
     */
-    public function setBackgroundDownloadFromHttpDelayInSeconds($val)
+    public function setCacheServerBackgroundDownloadFallbackToHttpDelayInSeconds($val)
     {
-        $this->_propDict["backgroundDownloadFromHttpDelayInSeconds"] = intval($val);
+        $this->_propDict["cacheServerBackgroundDownloadFallbackToHttpDelayInSeconds"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the cacheServerForegroundDownloadFallbackToHttpDelayInSeconds
+    * Specifies number of seconds to delay a fall back from cache servers to an HTTP source for a foreground download. Valid values 0 to 2592000.???
+    *
+    * @return int The cacheServerForegroundDownloadFallbackToHttpDelayInSeconds
+    */
+    public function getCacheServerForegroundDownloadFallbackToHttpDelayInSeconds()
+    {
+        if (array_key_exists("cacheServerForegroundDownloadFallbackToHttpDelayInSeconds", $this->_propDict)) {
+            return $this->_propDict["cacheServerForegroundDownloadFallbackToHttpDelayInSeconds"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the cacheServerForegroundDownloadFallbackToHttpDelayInSeconds
+    * Specifies number of seconds to delay a fall back from cache servers to an HTTP source for a foreground download. Valid values 0 to 2592000.???
+    *
+    * @param int $val The cacheServerForegroundDownloadFallbackToHttpDelayInSeconds
+    *
+    * @return WindowsDeliveryOptimizationConfiguration
+    */
+    public function setCacheServerForegroundDownloadFallbackToHttpDelayInSeconds($val)
+    {
+        $this->_propDict["cacheServerForegroundDownloadFallbackToHttpDelayInSeconds"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the cacheServerHostNames
+    * Specifies cache servers host names.
+    *
+    * @return string The cacheServerHostNames
+    */
+    public function getCacheServerHostNames()
+    {
+        if (array_key_exists("cacheServerHostNames", $this->_propDict)) {
+            return $this->_propDict["cacheServerHostNames"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the cacheServerHostNames
+    * Specifies cache servers host names.
+    *
+    * @param string $val The cacheServerHostNames
+    *
+    * @return WindowsDeliveryOptimizationConfiguration
+    */
+    public function setCacheServerHostNames($val)
+    {
+        $this->_propDict["cacheServerHostNames"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the deliveryOptimizationMode
+    * Specifies the download method that delivery optimization can use to manage network bandwidth consumption for large content distribution scenarios.
+    *
+    * @return WindowsDeliveryOptimizationMode The deliveryOptimizationMode
+    */
+    public function getDeliveryOptimizationMode()
+    {
+        if (array_key_exists("deliveryOptimizationMode", $this->_propDict)) {
+            if (is_a($this->_propDict["deliveryOptimizationMode"], "Beta\Microsoft\Graph\Model\WindowsDeliveryOptimizationMode")) {
+                return $this->_propDict["deliveryOptimizationMode"];
+            } else {
+                $this->_propDict["deliveryOptimizationMode"] = new WindowsDeliveryOptimizationMode($this->_propDict["deliveryOptimizationMode"]);
+                return $this->_propDict["deliveryOptimizationMode"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the deliveryOptimizationMode
+    * Specifies the download method that delivery optimization can use to manage network bandwidth consumption for large content distribution scenarios.
+    *
+    * @param WindowsDeliveryOptimizationMode $val The deliveryOptimizationMode
+    *
+    * @return WindowsDeliveryOptimizationConfiguration
+    */
+    public function setDeliveryOptimizationMode($val)
+    {
+        $this->_propDict["deliveryOptimizationMode"] = $val;
         return $this;
     }
     
@@ -215,147 +236,35 @@ class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguration
     }
     
     /**
-    * Gets the minimumRamAllowedToPeerInGigabytes
-    * Specifies the minimum RAM size in GB to use Peer Caching (1-100000). Valid values 1 to 100000
+    * Gets the groupIdSource
+    * The options set in this policy only apply to Delivery Optimization mode Group (2) download mode. If Group (2) isn't set as Download mode, this policy will be ignored. For option 3 - DHCP Option ID, the client will query DHCP Option ID 234 and use the returned GUID value as the Group ID.
     *
-    * @return int The minimumRamAllowedToPeerInGigabytes
+    * @return DeliveryOptimizationGroupIdSource The groupIdSource
     */
-    public function getMinimumRamAllowedToPeerInGigabytes()
+    public function getGroupIdSource()
     {
-        if (array_key_exists("minimumRamAllowedToPeerInGigabytes", $this->_propDict)) {
-            return $this->_propDict["minimumRamAllowedToPeerInGigabytes"];
-        } else {
-            return null;
+        if (array_key_exists("groupIdSource", $this->_propDict)) {
+            if (is_a($this->_propDict["groupIdSource"], "Beta\Microsoft\Graph\Model\DeliveryOptimizationGroupIdSource")) {
+                return $this->_propDict["groupIdSource"];
+            } else {
+                $this->_propDict["groupIdSource"] = new DeliveryOptimizationGroupIdSource($this->_propDict["groupIdSource"]);
+                return $this->_propDict["groupIdSource"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the minimumRamAllowedToPeerInGigabytes
-    * Specifies the minimum RAM size in GB to use Peer Caching (1-100000). Valid values 1 to 100000
+    * Sets the groupIdSource
+    * The options set in this policy only apply to Delivery Optimization mode Group (2) download mode. If Group (2) isn't set as Download mode, this policy will be ignored. For option 3 - DHCP Option ID, the client will query DHCP Option ID 234 and use the returned GUID value as the Group ID.
     *
-    * @param int $val The minimumRamAllowedToPeerInGigabytes
+    * @param DeliveryOptimizationGroupIdSource $val The groupIdSource
     *
     * @return WindowsDeliveryOptimizationConfiguration
     */
-    public function setMinimumRamAllowedToPeerInGigabytes($val)
+    public function setGroupIdSource($val)
     {
-        $this->_propDict["minimumRamAllowedToPeerInGigabytes"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the minimumDiskSizeAllowedToPeerInGigabytes
-    * Recommended values: 64 GB to 256 GB. Valid values 1 to 100000
-    *
-    * @return int The minimumDiskSizeAllowedToPeerInGigabytes
-    */
-    public function getMinimumDiskSizeAllowedToPeerInGigabytes()
-    {
-        if (array_key_exists("minimumDiskSizeAllowedToPeerInGigabytes", $this->_propDict)) {
-            return $this->_propDict["minimumDiskSizeAllowedToPeerInGigabytes"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the minimumDiskSizeAllowedToPeerInGigabytes
-    * Recommended values: 64 GB to 256 GB. Valid values 1 to 100000
-    *
-    * @param int $val The minimumDiskSizeAllowedToPeerInGigabytes
-    *
-    * @return WindowsDeliveryOptimizationConfiguration
-    */
-    public function setMinimumDiskSizeAllowedToPeerInGigabytes($val)
-    {
-        $this->_propDict["minimumDiskSizeAllowedToPeerInGigabytes"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the minimumFileSizeToCacheInMegabytes
-    * Recommended values: 1 MB to 100,000 MB. Valid values 1 to 100000
-    *
-    * @return int The minimumFileSizeToCacheInMegabytes
-    */
-    public function getMinimumFileSizeToCacheInMegabytes()
-    {
-        if (array_key_exists("minimumFileSizeToCacheInMegabytes", $this->_propDict)) {
-            return $this->_propDict["minimumFileSizeToCacheInMegabytes"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the minimumFileSizeToCacheInMegabytes
-    * Recommended values: 1 MB to 100,000 MB. Valid values 1 to 100000
-    *
-    * @param int $val The minimumFileSizeToCacheInMegabytes
-    *
-    * @return WindowsDeliveryOptimizationConfiguration
-    */
-    public function setMinimumFileSizeToCacheInMegabytes($val)
-    {
-        $this->_propDict["minimumFileSizeToCacheInMegabytes"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the minimumBatteryPercentageAllowedToUpload
-    * The default value is 0. The value 0 (zero) means "not limited" and the cloud service default value will be used. Valid values 0 to 100
-    *
-    * @return int The minimumBatteryPercentageAllowedToUpload
-    */
-    public function getMinimumBatteryPercentageAllowedToUpload()
-    {
-        if (array_key_exists("minimumBatteryPercentageAllowedToUpload", $this->_propDict)) {
-            return $this->_propDict["minimumBatteryPercentageAllowedToUpload"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the minimumBatteryPercentageAllowedToUpload
-    * The default value is 0. The value 0 (zero) means "not limited" and the cloud service default value will be used. Valid values 0 to 100
-    *
-    * @param int $val The minimumBatteryPercentageAllowedToUpload
-    *
-    * @return WindowsDeliveryOptimizationConfiguration
-    */
-    public function setMinimumBatteryPercentageAllowedToUpload($val)
-    {
-        $this->_propDict["minimumBatteryPercentageAllowedToUpload"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the modifyCacheLocation
-    * Specifies the drive that Delivery Optimization should use for its cache.
-    *
-    * @return string The modifyCacheLocation
-    */
-    public function getModifyCacheLocation()
-    {
-        if (array_key_exists("modifyCacheLocation", $this->_propDict)) {
-            return $this->_propDict["modifyCacheLocation"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the modifyCacheLocation
-    * Specifies the drive that Delivery Optimization should use for its cache.
-    *
-    * @param string $val The modifyCacheLocation
-    *
-    * @return WindowsDeliveryOptimizationConfiguration
-    */
-    public function setModifyCacheLocation($val)
-    {
-        $this->_propDict["modifyCacheLocation"] = $val;
+        $this->_propDict["groupIdSource"] = $val;
         return $this;
     }
     
@@ -422,6 +331,184 @@ class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the minimumBatteryPercentageAllowedToUpload
+    * The default value is 0. The value 0 (zero) means "not limited" and the cloud service default value will be used. Valid values 0 to 100
+    *
+    * @return int The minimumBatteryPercentageAllowedToUpload
+    */
+    public function getMinimumBatteryPercentageAllowedToUpload()
+    {
+        if (array_key_exists("minimumBatteryPercentageAllowedToUpload", $this->_propDict)) {
+            return $this->_propDict["minimumBatteryPercentageAllowedToUpload"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the minimumBatteryPercentageAllowedToUpload
+    * The default value is 0. The value 0 (zero) means "not limited" and the cloud service default value will be used. Valid values 0 to 100
+    *
+    * @param int $val The minimumBatteryPercentageAllowedToUpload
+    *
+    * @return WindowsDeliveryOptimizationConfiguration
+    */
+    public function setMinimumBatteryPercentageAllowedToUpload($val)
+    {
+        $this->_propDict["minimumBatteryPercentageAllowedToUpload"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the minimumDiskSizeAllowedToPeerInGigabytes
+    * Recommended values: 64 GB to 256 GB. Valid values 1 to 100000
+    *
+    * @return int The minimumDiskSizeAllowedToPeerInGigabytes
+    */
+    public function getMinimumDiskSizeAllowedToPeerInGigabytes()
+    {
+        if (array_key_exists("minimumDiskSizeAllowedToPeerInGigabytes", $this->_propDict)) {
+            return $this->_propDict["minimumDiskSizeAllowedToPeerInGigabytes"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the minimumDiskSizeAllowedToPeerInGigabytes
+    * Recommended values: 64 GB to 256 GB. Valid values 1 to 100000
+    *
+    * @param int $val The minimumDiskSizeAllowedToPeerInGigabytes
+    *
+    * @return WindowsDeliveryOptimizationConfiguration
+    */
+    public function setMinimumDiskSizeAllowedToPeerInGigabytes($val)
+    {
+        $this->_propDict["minimumDiskSizeAllowedToPeerInGigabytes"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the minimumFileSizeToCacheInMegabytes
+    * Recommended values: 1 MB to 100,000 MB. Valid values 1 to 100000
+    *
+    * @return int The minimumFileSizeToCacheInMegabytes
+    */
+    public function getMinimumFileSizeToCacheInMegabytes()
+    {
+        if (array_key_exists("minimumFileSizeToCacheInMegabytes", $this->_propDict)) {
+            return $this->_propDict["minimumFileSizeToCacheInMegabytes"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the minimumFileSizeToCacheInMegabytes
+    * Recommended values: 1 MB to 100,000 MB. Valid values 1 to 100000
+    *
+    * @param int $val The minimumFileSizeToCacheInMegabytes
+    *
+    * @return WindowsDeliveryOptimizationConfiguration
+    */
+    public function setMinimumFileSizeToCacheInMegabytes($val)
+    {
+        $this->_propDict["minimumFileSizeToCacheInMegabytes"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the minimumRamAllowedToPeerInGigabytes
+    * Specifies the minimum RAM size in GB to use Peer Caching (1-100000). Valid values 1 to 100000
+    *
+    * @return int The minimumRamAllowedToPeerInGigabytes
+    */
+    public function getMinimumRamAllowedToPeerInGigabytes()
+    {
+        if (array_key_exists("minimumRamAllowedToPeerInGigabytes", $this->_propDict)) {
+            return $this->_propDict["minimumRamAllowedToPeerInGigabytes"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the minimumRamAllowedToPeerInGigabytes
+    * Specifies the minimum RAM size in GB to use Peer Caching (1-100000). Valid values 1 to 100000
+    *
+    * @param int $val The minimumRamAllowedToPeerInGigabytes
+    *
+    * @return WindowsDeliveryOptimizationConfiguration
+    */
+    public function setMinimumRamAllowedToPeerInGigabytes($val)
+    {
+        $this->_propDict["minimumRamAllowedToPeerInGigabytes"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the modifyCacheLocation
+    * Specifies the drive that Delivery Optimization should use for its cache.
+    *
+    * @return string The modifyCacheLocation
+    */
+    public function getModifyCacheLocation()
+    {
+        if (array_key_exists("modifyCacheLocation", $this->_propDict)) {
+            return $this->_propDict["modifyCacheLocation"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the modifyCacheLocation
+    * Specifies the drive that Delivery Optimization should use for its cache.
+    *
+    * @param string $val The modifyCacheLocation
+    *
+    * @return WindowsDeliveryOptimizationConfiguration
+    */
+    public function setModifyCacheLocation($val)
+    {
+        $this->_propDict["modifyCacheLocation"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the restrictPeerSelectionBy
+    * Option 1 (Subnet mask) only applies to Delivery Optimization modes Download Mode LAN (1) and Group (2).
+    *
+    * @return DeliveryOptimizationRestrictPeerSelectionByOptions The restrictPeerSelectionBy
+    */
+    public function getRestrictPeerSelectionBy()
+    {
+        if (array_key_exists("restrictPeerSelectionBy", $this->_propDict)) {
+            if (is_a($this->_propDict["restrictPeerSelectionBy"], "Beta\Microsoft\Graph\Model\DeliveryOptimizationRestrictPeerSelectionByOptions")) {
+                return $this->_propDict["restrictPeerSelectionBy"];
+            } else {
+                $this->_propDict["restrictPeerSelectionBy"] = new DeliveryOptimizationRestrictPeerSelectionByOptions($this->_propDict["restrictPeerSelectionBy"]);
+                return $this->_propDict["restrictPeerSelectionBy"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the restrictPeerSelectionBy
+    * Option 1 (Subnet mask) only applies to Delivery Optimization modes Download Mode LAN (1) and Group (2).
+    *
+    * @param DeliveryOptimizationRestrictPeerSelectionByOptions $val The restrictPeerSelectionBy
+    *
+    * @return WindowsDeliveryOptimizationConfiguration
+    */
+    public function setRestrictPeerSelectionBy($val)
+    {
+        $this->_propDict["restrictPeerSelectionBy"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the vpnPeerCaching
     * Specifies whether the device is allowed to participate in Peer Caching while connected via VPN to the domain network.
     *
@@ -451,93 +538,6 @@ class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguration
     public function setVpnPeerCaching($val)
     {
         $this->_propDict["vpnPeerCaching"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the cacheServerHostNames
-    * Specifies cache servers host names.
-    *
-    * @return string The cacheServerHostNames
-    */
-    public function getCacheServerHostNames()
-    {
-        if (array_key_exists("cacheServerHostNames", $this->_propDict)) {
-            return $this->_propDict["cacheServerHostNames"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the cacheServerHostNames
-    * Specifies cache servers host names.
-    *
-    * @param string $val The cacheServerHostNames
-    *
-    * @return WindowsDeliveryOptimizationConfiguration
-    */
-    public function setCacheServerHostNames($val)
-    {
-        $this->_propDict["cacheServerHostNames"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the cacheServerForegroundDownloadFallbackToHttpDelayInSeconds
-    * Specifies number of seconds to delay a fall back from cache servers to an HTTP source for a foreground download. Valid values 0 to 2592000.???
-    *
-    * @return int The cacheServerForegroundDownloadFallbackToHttpDelayInSeconds
-    */
-    public function getCacheServerForegroundDownloadFallbackToHttpDelayInSeconds()
-    {
-        if (array_key_exists("cacheServerForegroundDownloadFallbackToHttpDelayInSeconds", $this->_propDict)) {
-            return $this->_propDict["cacheServerForegroundDownloadFallbackToHttpDelayInSeconds"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the cacheServerForegroundDownloadFallbackToHttpDelayInSeconds
-    * Specifies number of seconds to delay a fall back from cache servers to an HTTP source for a foreground download. Valid values 0 to 2592000.???
-    *
-    * @param int $val The cacheServerForegroundDownloadFallbackToHttpDelayInSeconds
-    *
-    * @return WindowsDeliveryOptimizationConfiguration
-    */
-    public function setCacheServerForegroundDownloadFallbackToHttpDelayInSeconds($val)
-    {
-        $this->_propDict["cacheServerForegroundDownloadFallbackToHttpDelayInSeconds"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the cacheServerBackgroundDownloadFallbackToHttpDelayInSeconds
-    * Specifies number of seconds to delay a fall back from cache servers to an HTTP source for a background download. Valid values 0 to 2592000.
-    *
-    * @return int The cacheServerBackgroundDownloadFallbackToHttpDelayInSeconds
-    */
-    public function getCacheServerBackgroundDownloadFallbackToHttpDelayInSeconds()
-    {
-        if (array_key_exists("cacheServerBackgroundDownloadFallbackToHttpDelayInSeconds", $this->_propDict)) {
-            return $this->_propDict["cacheServerBackgroundDownloadFallbackToHttpDelayInSeconds"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the cacheServerBackgroundDownloadFallbackToHttpDelayInSeconds
-    * Specifies number of seconds to delay a fall back from cache servers to an HTTP source for a background download. Valid values 0 to 2592000.
-    *
-    * @param int $val The cacheServerBackgroundDownloadFallbackToHttpDelayInSeconds
-    *
-    * @return WindowsDeliveryOptimizationConfiguration
-    */
-    public function setCacheServerBackgroundDownloadFallbackToHttpDelayInSeconds($val)
-    {
-        $this->_propDict["cacheServerBackgroundDownloadFallbackToHttpDelayInSeconds"] = intval($val);
         return $this;
     }
     

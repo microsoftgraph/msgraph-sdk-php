@@ -24,34 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class ManagementCertificateWithThumbprint extends Entity
 {
     /**
-    * Gets the thumbprint
-    * The thumbprint of the management certificate
-    *
-    * @return string The thumbprint
-    */
-    public function getThumbprint()
-    {
-        if (array_key_exists("thumbprint", $this->_propDict)) {
-            return $this->_propDict["thumbprint"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the thumbprint
-    * The thumbprint of the management certificate
-    *
-    * @param string $val The value of the thumbprint
-    *
-    * @return ManagementCertificateWithThumbprint
-    */
-    public function setThumbprint($val)
-    {
-        $this->_propDict["thumbprint"] = $val;
-        return $this;
-    }
-    /**
     * Gets the certificate
     * The Base 64 encoded management certificate
     *
@@ -77,6 +49,34 @@ class ManagementCertificateWithThumbprint extends Entity
     public function setCertificate($val)
     {
         $this->_propDict["certificate"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the thumbprint
+    * The thumbprint of the management certificate
+    *
+    * @return string The thumbprint
+    */
+    public function getThumbprint()
+    {
+        if (array_key_exists("thumbprint", $this->_propDict)) {
+            return $this->_propDict["thumbprint"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the thumbprint
+    * The thumbprint of the management certificate
+    *
+    * @param string $val The value of the thumbprint
+    *
+    * @return ManagementCertificateWithThumbprint
+    */
+    public function setThumbprint($val)
+    {
+        $this->_propDict["thumbprint"] = $val;
         return $this;
     }
 }

@@ -25,29 +25,29 @@ namespace Beta\Microsoft\Graph\Model;
 class GovernanceRoleDefinition extends Entity
 {
     /**
-    * Gets the resourceId
+    * Gets the displayName
     *
-    * @return string The resourceId
+    * @return string The displayName
     */
-    public function getResourceId()
+    public function getDisplayName()
     {
-        if (array_key_exists("resourceId", $this->_propDict)) {
-            return $this->_propDict["resourceId"];
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the resourceId
+    * Sets the displayName
     *
-    * @param string $val The resourceId
+    * @param string $val The displayName
     *
     * @return GovernanceRoleDefinition
     */
-    public function setResourceId($val)
+    public function setDisplayName($val)
     {
-        $this->_propDict["resourceId"] = $val;
+        $this->_propDict["displayName"] = $val;
         return $this;
     }
     
@@ -79,6 +79,33 @@ class GovernanceRoleDefinition extends Entity
     }
     
     /**
+    * Gets the resourceId
+    *
+    * @return string The resourceId
+    */
+    public function getResourceId()
+    {
+        if (array_key_exists("resourceId", $this->_propDict)) {
+            return $this->_propDict["resourceId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the resourceId
+    *
+    * @param string $val The resourceId
+    *
+    * @return GovernanceRoleDefinition
+    */
+    public function setResourceId($val)
+    {
+        $this->_propDict["resourceId"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the templateId
     *
     * @return string The templateId
@@ -102,33 +129,6 @@ class GovernanceRoleDefinition extends Entity
     public function setTemplateId($val)
     {
         $this->_propDict["templateId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the displayName
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the displayName
-    *
-    * @param string $val The displayName
-    *
-    * @return GovernanceRoleDefinition
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
         return $this;
     }
     

@@ -25,6 +25,35 @@ namespace Beta\Microsoft\Graph\Model;
 class WindowsDomainJoinConfiguration extends DeviceConfiguration
 {
     /**
+    * Gets the activeDirectoryDomainName
+    * Active Directory domain name to join.
+    *
+    * @return string The activeDirectoryDomainName
+    */
+    public function getActiveDirectoryDomainName()
+    {
+        if (array_key_exists("activeDirectoryDomainName", $this->_propDict)) {
+            return $this->_propDict["activeDirectoryDomainName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the activeDirectoryDomainName
+    * Active Directory domain name to join.
+    *
+    * @param string $val The activeDirectoryDomainName
+    *
+    * @return WindowsDomainJoinConfiguration
+    */
+    public function setActiveDirectoryDomainName($val)
+    {
+        $this->_propDict["activeDirectoryDomainName"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the computerNameStaticPrefix
     * Fixed prefix to be used for computer name.
     *
@@ -79,35 +108,6 @@ class WindowsDomainJoinConfiguration extends DeviceConfiguration
     public function setComputerNameSuffixRandomCharCount($val)
     {
         $this->_propDict["computerNameSuffixRandomCharCount"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the activeDirectoryDomainName
-    * Active Directory domain name to join.
-    *
-    * @return string The activeDirectoryDomainName
-    */
-    public function getActiveDirectoryDomainName()
-    {
-        if (array_key_exists("activeDirectoryDomainName", $this->_propDict)) {
-            return $this->_propDict["activeDirectoryDomainName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the activeDirectoryDomainName
-    * Active Directory domain name to join.
-    *
-    * @param string $val The activeDirectoryDomainName
-    *
-    * @return WindowsDomainJoinConfiguration
-    */
-    public function setActiveDirectoryDomainName($val)
-    {
-        $this->_propDict["activeDirectoryDomainName"] = $val;
         return $this;
     }
     

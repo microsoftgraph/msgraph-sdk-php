@@ -25,89 +25,60 @@ namespace Beta\Microsoft\Graph\Model;
 class DeviceConfigurationUserOverview extends Entity
 {
     /**
-    * Gets the pendingCount
-    * Number of pending Users
+    * Gets the configurationVersion
+    * Version of the policy for that overview
     *
-    * @return int The pendingCount
+    * @return int The configurationVersion
     */
-    public function getPendingCount()
+    public function getConfigurationVersion()
     {
-        if (array_key_exists("pendingCount", $this->_propDict)) {
-            return $this->_propDict["pendingCount"];
+        if (array_key_exists("configurationVersion", $this->_propDict)) {
+            return $this->_propDict["configurationVersion"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the pendingCount
-    * Number of pending Users
+    * Sets the configurationVersion
+    * Version of the policy for that overview
     *
-    * @param int $val The pendingCount
+    * @param int $val The configurationVersion
     *
     * @return DeviceConfigurationUserOverview
     */
-    public function setPendingCount($val)
+    public function setConfigurationVersion($val)
     {
-        $this->_propDict["pendingCount"] = intval($val);
+        $this->_propDict["configurationVersion"] = intval($val);
         return $this;
     }
     
     /**
-    * Gets the notApplicableCount
-    * Number of not applicable users
+    * Gets the conflictCount
+    * Number of users in conflict
     *
-    * @return int The notApplicableCount
+    * @return int The conflictCount
     */
-    public function getNotApplicableCount()
+    public function getConflictCount()
     {
-        if (array_key_exists("notApplicableCount", $this->_propDict)) {
-            return $this->_propDict["notApplicableCount"];
+        if (array_key_exists("conflictCount", $this->_propDict)) {
+            return $this->_propDict["conflictCount"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the notApplicableCount
-    * Number of not applicable users
+    * Sets the conflictCount
+    * Number of users in conflict
     *
-    * @param int $val The notApplicableCount
-    *
-    * @return DeviceConfigurationUserOverview
-    */
-    public function setNotApplicableCount($val)
-    {
-        $this->_propDict["notApplicableCount"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the successCount
-    * Number of succeeded Users
-    *
-    * @return int The successCount
-    */
-    public function getSuccessCount()
-    {
-        if (array_key_exists("successCount", $this->_propDict)) {
-            return $this->_propDict["successCount"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the successCount
-    * Number of succeeded Users
-    *
-    * @param int $val The successCount
+    * @param int $val The conflictCount
     *
     * @return DeviceConfigurationUserOverview
     */
-    public function setSuccessCount($val)
+    public function setConflictCount($val)
     {
-        $this->_propDict["successCount"] = intval($val);
+        $this->_propDict["conflictCount"] = intval($val);
         return $this;
     }
     
@@ -170,35 +141,6 @@ class DeviceConfigurationUserOverview extends Entity
     }
     
     /**
-    * Gets the conflictCount
-    * Number of users in conflict
-    *
-    * @return int The conflictCount
-    */
-    public function getConflictCount()
-    {
-        if (array_key_exists("conflictCount", $this->_propDict)) {
-            return $this->_propDict["conflictCount"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the conflictCount
-    * Number of users in conflict
-    *
-    * @param int $val The conflictCount
-    *
-    * @return DeviceConfigurationUserOverview
-    */
-    public function setConflictCount($val)
-    {
-        $this->_propDict["conflictCount"] = intval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the lastUpdateDateTime
     * Last update time
     *
@@ -232,31 +174,89 @@ class DeviceConfigurationUserOverview extends Entity
     }
     
     /**
-    * Gets the configurationVersion
-    * Version of the policy for that overview
+    * Gets the notApplicableCount
+    * Number of not applicable users
     *
-    * @return int The configurationVersion
+    * @return int The notApplicableCount
     */
-    public function getConfigurationVersion()
+    public function getNotApplicableCount()
     {
-        if (array_key_exists("configurationVersion", $this->_propDict)) {
-            return $this->_propDict["configurationVersion"];
+        if (array_key_exists("notApplicableCount", $this->_propDict)) {
+            return $this->_propDict["notApplicableCount"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the configurationVersion
-    * Version of the policy for that overview
+    * Sets the notApplicableCount
+    * Number of not applicable users
     *
-    * @param int $val The configurationVersion
+    * @param int $val The notApplicableCount
     *
     * @return DeviceConfigurationUserOverview
     */
-    public function setConfigurationVersion($val)
+    public function setNotApplicableCount($val)
     {
-        $this->_propDict["configurationVersion"] = intval($val);
+        $this->_propDict["notApplicableCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the pendingCount
+    * Number of pending Users
+    *
+    * @return int The pendingCount
+    */
+    public function getPendingCount()
+    {
+        if (array_key_exists("pendingCount", $this->_propDict)) {
+            return $this->_propDict["pendingCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the pendingCount
+    * Number of pending Users
+    *
+    * @param int $val The pendingCount
+    *
+    * @return DeviceConfigurationUserOverview
+    */
+    public function setPendingCount($val)
+    {
+        $this->_propDict["pendingCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the successCount
+    * Number of succeeded Users
+    *
+    * @return int The successCount
+    */
+    public function getSuccessCount()
+    {
+        if (array_key_exists("successCount", $this->_propDict)) {
+            return $this->_propDict["successCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the successCount
+    * Number of succeeded Users
+    *
+    * @param int $val The successCount
+    *
+    * @return DeviceConfigurationUserOverview
+    */
+    public function setSuccessCount($val)
+    {
+        $this->_propDict["successCount"] = intval($val);
         return $this;
     }
     

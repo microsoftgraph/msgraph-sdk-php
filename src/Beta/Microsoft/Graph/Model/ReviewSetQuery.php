@@ -25,29 +25,87 @@ namespace Beta\Microsoft\Graph\Model;
 class ReviewSetQuery extends Entity
 {
     /**
-    * Gets the query
+    * Gets the createdBy
     *
-    * @return string The query
+    * @return string The createdBy
     */
-    public function getQuery()
+    public function getCreatedBy()
     {
-        if (array_key_exists("query", $this->_propDict)) {
-            return $this->_propDict["query"];
+        if (array_key_exists("createdBy", $this->_propDict)) {
+            return $this->_propDict["createdBy"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the query
+    * Sets the createdBy
     *
-    * @param string $val The query
+    * @param string $val The createdBy
     *
     * @return ReviewSetQuery
     */
-    public function setQuery($val)
+    public function setCreatedBy($val)
     {
-        $this->_propDict["query"] = $val;
+        $this->_propDict["createdBy"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the createdDateTime
+    *
+    * @return \DateTime The createdDateTime
+    */
+    public function getCreatedDateTime()
+    {
+        if (array_key_exists("createdDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+                return $this->_propDict["createdDateTime"];
+            } else {
+                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
+                return $this->_propDict["createdDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the createdDateTime
+    *
+    * @param \DateTime $val The createdDateTime
+    *
+    * @return ReviewSetQuery
+    */
+    public function setCreatedDateTime($val)
+    {
+        $this->_propDict["createdDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the displayName
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the displayName
+    *
+    * @param string $val The displayName
+    *
+    * @return ReviewSetQuery
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
         return $this;
     }
     
@@ -75,33 +133,6 @@ class ReviewSetQuery extends Entity
     public function setLastModifiedBy($val)
     {
         $this->_propDict["lastModifiedBy"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the createdBy
-    *
-    * @return string The createdBy
-    */
-    public function getCreatedBy()
-    {
-        if (array_key_exists("createdBy", $this->_propDict)) {
-            return $this->_propDict["createdBy"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the createdBy
-    *
-    * @param string $val The createdBy
-    *
-    * @return ReviewSetQuery
-    */
-    public function setCreatedBy($val)
-    {
-        $this->_propDict["createdBy"] = $val;
         return $this;
     }
     
@@ -137,60 +168,29 @@ class ReviewSetQuery extends Entity
     }
     
     /**
-    * Gets the displayName
+    * Gets the query
     *
-    * @return string The displayName
+    * @return string The query
     */
-    public function getDisplayName()
+    public function getQuery()
     {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
+        if (array_key_exists("query", $this->_propDict)) {
+            return $this->_propDict["query"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the displayName
+    * Sets the query
     *
-    * @param string $val The displayName
-    *
-    * @return ReviewSetQuery
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the createdDateTime
-    *
-    * @return \DateTime The createdDateTime
-    */
-    public function getCreatedDateTime()
-    {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
-                return $this->_propDict["createdDateTime"];
-            } else {
-                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
-                return $this->_propDict["createdDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the createdDateTime
-    *
-    * @param \DateTime $val The createdDateTime
+    * @param string $val The query
     *
     * @return ReviewSetQuery
     */
-    public function setCreatedDateTime($val)
+    public function setQuery($val)
     {
-        $this->_propDict["createdDateTime"] = $val;
+        $this->_propDict["query"] = $val;
         return $this;
     }
     

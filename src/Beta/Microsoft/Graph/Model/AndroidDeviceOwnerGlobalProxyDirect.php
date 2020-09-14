@@ -33,6 +33,34 @@ class AndroidDeviceOwnerGlobalProxyDirect extends AndroidDeviceOwnerGlobalProxy
     }
 
     /**
+    * Gets the excludedHosts
+    * The excluded hosts
+    *
+    * @return string The excludedHosts
+    */
+    public function getExcludedHosts()
+    {
+        if (array_key_exists("excludedHosts", $this->_propDict)) {
+            return $this->_propDict["excludedHosts"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the excludedHosts
+    * The excluded hosts
+    *
+    * @param string $val The value of the excludedHosts
+    *
+    * @return AndroidDeviceOwnerGlobalProxyDirect
+    */
+    public function setExcludedHosts($val)
+    {
+        $this->_propDict["excludedHosts"] = $val;
+        return $this;
+    }
+    /**
     * Gets the host
     * The host name
     *
@@ -86,34 +114,6 @@ class AndroidDeviceOwnerGlobalProxyDirect extends AndroidDeviceOwnerGlobalProxy
     public function setPort($val)
     {
         $this->_propDict["port"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the excludedHosts
-    * The excluded hosts
-    *
-    * @return string The excludedHosts
-    */
-    public function getExcludedHosts()
-    {
-        if (array_key_exists("excludedHosts", $this->_propDict)) {
-            return $this->_propDict["excludedHosts"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the excludedHosts
-    * The excluded hosts
-    *
-    * @param string $val The value of the excludedHosts
-    *
-    * @return AndroidDeviceOwnerGlobalProxyDirect
-    */
-    public function setExcludedHosts($val)
-    {
-        $this->_propDict["excludedHosts"] = $val;
         return $this;
     }
 }

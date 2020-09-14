@@ -25,39 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class DeviceHealthScriptAssignment extends Entity
 {
     /**
-    * Gets the target
-    * The Azure Active Directory group we are targeting the script to
-    *
-    * @return DeviceAndAppManagementAssignmentTarget The target
-    */
-    public function getTarget()
-    {
-        if (array_key_exists("target", $this->_propDict)) {
-            if (is_a($this->_propDict["target"], "Beta\Microsoft\Graph\Model\DeviceAndAppManagementAssignmentTarget")) {
-                return $this->_propDict["target"];
-            } else {
-                $this->_propDict["target"] = new DeviceAndAppManagementAssignmentTarget($this->_propDict["target"]);
-                return $this->_propDict["target"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the target
-    * The Azure Active Directory group we are targeting the script to
-    *
-    * @param DeviceAndAppManagementAssignmentTarget $val The target
-    *
-    * @return DeviceHealthScriptAssignment
-    */
-    public function setTarget($val)
-    {
-        $this->_propDict["target"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the runRemediationScript
     * Determine whether we want to run detection script only or run both detection script and remediation script
     *
@@ -116,6 +83,39 @@ class DeviceHealthScriptAssignment extends Entity
     public function setRunSchedule($val)
     {
         $this->_propDict["runSchedule"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the target
+    * The Azure Active Directory group we are targeting the script to
+    *
+    * @return DeviceAndAppManagementAssignmentTarget The target
+    */
+    public function getTarget()
+    {
+        if (array_key_exists("target", $this->_propDict)) {
+            if (is_a($this->_propDict["target"], "Beta\Microsoft\Graph\Model\DeviceAndAppManagementAssignmentTarget")) {
+                return $this->_propDict["target"];
+            } else {
+                $this->_propDict["target"] = new DeviceAndAppManagementAssignmentTarget($this->_propDict["target"]);
+                return $this->_propDict["target"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the target
+    * The Azure Active Directory group we are targeting the script to
+    *
+    * @param DeviceAndAppManagementAssignmentTarget $val The target
+    *
+    * @return DeviceHealthScriptAssignment
+    */
+    public function setTarget($val)
+    {
+        $this->_propDict["target"] = $val;
         return $this;
     }
     

@@ -50,32 +50,6 @@ class UnifiedRolePermission extends Entity
         return $this;
     }
     /**
-    * Gets the excludedResourceActions
-    *
-    * @return string The excludedResourceActions
-    */
-    public function getExcludedResourceActions()
-    {
-        if (array_key_exists("excludedResourceActions", $this->_propDict)) {
-            return $this->_propDict["excludedResourceActions"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the excludedResourceActions
-    *
-    * @param string $val The value of the excludedResourceActions
-    *
-    * @return UnifiedRolePermission
-    */
-    public function setExcludedResourceActions($val)
-    {
-        $this->_propDict["excludedResourceActions"] = $val;
-        return $this;
-    }
-    /**
     * Gets the condition
     *
     * @return string The condition
@@ -99,6 +73,32 @@ class UnifiedRolePermission extends Entity
     public function setCondition($val)
     {
         $this->_propDict["condition"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the excludedResourceActions
+    *
+    * @return string The excludedResourceActions
+    */
+    public function getExcludedResourceActions()
+    {
+        if (array_key_exists("excludedResourceActions", $this->_propDict)) {
+            return $this->_propDict["excludedResourceActions"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the excludedResourceActions
+    *
+    * @param string $val The value of the excludedResourceActions
+    *
+    * @return UnifiedRolePermission
+    */
+    public function setExcludedResourceActions($val)
+    {
+        $this->_propDict["excludedResourceActions"] = $val;
         return $this;
     }
 }

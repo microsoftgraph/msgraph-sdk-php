@@ -25,118 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class Office365ActivationCounts extends Entity
 {
     /**
-    * Gets the reportRefreshDate
-    *
-    * @return \DateTime The reportRefreshDate
-    */
-    public function getReportRefreshDate()
-    {
-        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
-                return $this->_propDict["reportRefreshDate"];
-            } else {
-                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
-                return $this->_propDict["reportRefreshDate"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the reportRefreshDate
-    *
-    * @param \DateTime $val The reportRefreshDate
-    *
-    * @return Office365ActivationCounts
-    */
-    public function setReportRefreshDate($val)
-    {
-        $this->_propDict["reportRefreshDate"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the productType
-    *
-    * @return string The productType
-    */
-    public function getProductType()
-    {
-        if (array_key_exists("productType", $this->_propDict)) {
-            return $this->_propDict["productType"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the productType
-    *
-    * @param string $val The productType
-    *
-    * @return Office365ActivationCounts
-    */
-    public function setProductType($val)
-    {
-        $this->_propDict["productType"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the windows
-    *
-    * @return int The windows
-    */
-    public function getWindows()
-    {
-        if (array_key_exists("windows", $this->_propDict)) {
-            return $this->_propDict["windows"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the windows
-    *
-    * @param int $val The windows
-    *
-    * @return Office365ActivationCounts
-    */
-    public function setWindows($val)
-    {
-        $this->_propDict["windows"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the mac
-    *
-    * @return int The mac
-    */
-    public function getMac()
-    {
-        if (array_key_exists("mac", $this->_propDict)) {
-            return $this->_propDict["mac"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the mac
-    *
-    * @param int $val The mac
-    *
-    * @return Office365ActivationCounts
-    */
-    public function setMac($val)
-    {
-        $this->_propDict["mac"] = intval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the android
     *
     * @return int The android
@@ -187,6 +75,118 @@ class Office365ActivationCounts extends Entity
     public function setIos($val)
     {
         $this->_propDict["ios"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the mac
+    *
+    * @return int The mac
+    */
+    public function getMac()
+    {
+        if (array_key_exists("mac", $this->_propDict)) {
+            return $this->_propDict["mac"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the mac
+    *
+    * @param int $val The mac
+    *
+    * @return Office365ActivationCounts
+    */
+    public function setMac($val)
+    {
+        $this->_propDict["mac"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the productType
+    *
+    * @return string The productType
+    */
+    public function getProductType()
+    {
+        if (array_key_exists("productType", $this->_propDict)) {
+            return $this->_propDict["productType"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the productType
+    *
+    * @param string $val The productType
+    *
+    * @return Office365ActivationCounts
+    */
+    public function setProductType($val)
+    {
+        $this->_propDict["productType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the reportRefreshDate
+    *
+    * @return \DateTime The reportRefreshDate
+    */
+    public function getReportRefreshDate()
+    {
+        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
+                return $this->_propDict["reportRefreshDate"];
+            } else {
+                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
+                return $this->_propDict["reportRefreshDate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the reportRefreshDate
+    *
+    * @param \DateTime $val The reportRefreshDate
+    *
+    * @return Office365ActivationCounts
+    */
+    public function setReportRefreshDate($val)
+    {
+        $this->_propDict["reportRefreshDate"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the windows
+    *
+    * @return int The windows
+    */
+    public function getWindows()
+    {
+        if (array_key_exists("windows", $this->_propDict)) {
+            return $this->_propDict["windows"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the windows
+    *
+    * @param int $val The windows
+    *
+    * @return Office365ActivationCounts
+    */
+    public function setWindows($val)
+    {
+        $this->_propDict["windows"] = intval($val);
         return $this;
     }
     

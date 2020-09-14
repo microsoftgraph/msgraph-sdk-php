@@ -60,6 +60,34 @@ class Win32LobAppProductCodeDetection extends Win32LobAppDetection
         $this->_propDict["productCode"] = $val;
         return $this;
     }
+    /**
+    * Gets the productVersion
+    * The product version of Win32 Line of Business (LoB) app.
+    *
+    * @return string The productVersion
+    */
+    public function getProductVersion()
+    {
+        if (array_key_exists("productVersion", $this->_propDict)) {
+            return $this->_propDict["productVersion"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the productVersion
+    * The product version of Win32 Line of Business (LoB) app.
+    *
+    * @param string $val The value of the productVersion
+    *
+    * @return Win32LobAppProductCodeDetection
+    */
+    public function setProductVersion($val)
+    {
+        $this->_propDict["productVersion"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the productVersionOperator
@@ -92,33 +120,5 @@ class Win32LobAppProductCodeDetection extends Win32LobAppDetection
     {
         $this->_propDict["productVersionOperator"] = $val;
          return $this;
-    }
-    /**
-    * Gets the productVersion
-    * The product version of Win32 Line of Business (LoB) app.
-    *
-    * @return string The productVersion
-    */
-    public function getProductVersion()
-    {
-        if (array_key_exists("productVersion", $this->_propDict)) {
-            return $this->_propDict["productVersion"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the productVersion
-    * The product version of Win32 Line of Business (LoB) app.
-    *
-    * @param string $val The value of the productVersion
-    *
-    * @return Win32LobAppProductCodeDetection
-    */
-    public function setProductVersion($val)
-    {
-        $this->_propDict["productVersion"] = $val;
-        return $this;
     }
 }

@@ -24,90 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class MobileAppRelationshipState extends Entity
 {
     /**
-    * Gets the sourceIds
-    * The collection of source mobile app's ids.
-    *
-    * @return string The sourceIds
-    */
-    public function getSourceIds()
-    {
-        if (array_key_exists("sourceIds", $this->_propDict)) {
-            return $this->_propDict["sourceIds"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the sourceIds
-    * The collection of source mobile app's ids.
-    *
-    * @param string $val The value of the sourceIds
-    *
-    * @return MobileAppRelationshipState
-    */
-    public function setSourceIds($val)
-    {
-        $this->_propDict["sourceIds"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the targetId
-    * The related target app's id.
-    *
-    * @return string The targetId
-    */
-    public function getTargetId()
-    {
-        if (array_key_exists("targetId", $this->_propDict)) {
-            return $this->_propDict["targetId"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the targetId
-    * The related target app's id.
-    *
-    * @param string $val The value of the targetId
-    *
-    * @return MobileAppRelationshipState
-    */
-    public function setTargetId($val)
-    {
-        $this->_propDict["targetId"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the targetDisplayName
-    * The related target app's display name.
-    *
-    * @return string The targetDisplayName
-    */
-    public function getTargetDisplayName()
-    {
-        if (array_key_exists("targetDisplayName", $this->_propDict)) {
-            return $this->_propDict["targetDisplayName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the targetDisplayName
-    * The related target app's display name.
-    *
-    * @param string $val The value of the targetDisplayName
-    *
-    * @return MobileAppRelationshipState
-    */
-    public function setTargetDisplayName($val)
-    {
-        $this->_propDict["targetDisplayName"] = $val;
-        return $this;
-    }
-    /**
     * Gets the deviceId
     * The corresponding device id.
     *
@@ -133,6 +49,34 @@ class MobileAppRelationshipState extends Entity
     public function setDeviceId($val)
     {
         $this->_propDict["deviceId"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the errorCode
+    * The error code for install or uninstall failures of target app.
+    *
+    * @return int The errorCode
+    */
+    public function getErrorCode()
+    {
+        if (array_key_exists("errorCode", $this->_propDict)) {
+            return $this->_propDict["errorCode"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the errorCode
+    * The error code for install or uninstall failures of target app.
+    *
+    * @param int $val The value of the errorCode
+    *
+    * @return MobileAppRelationshipState
+    */
+    public function setErrorCode($val)
+    {
+        $this->_propDict["errorCode"] = $val;
         return $this;
     }
 
@@ -202,31 +146,87 @@ class MobileAppRelationshipState extends Entity
          return $this;
     }
     /**
-    * Gets the errorCode
-    * The error code for install or uninstall failures of target app.
+    * Gets the sourceIds
+    * The collection of source mobile app's ids.
     *
-    * @return int The errorCode
+    * @return string The sourceIds
     */
-    public function getErrorCode()
+    public function getSourceIds()
     {
-        if (array_key_exists("errorCode", $this->_propDict)) {
-            return $this->_propDict["errorCode"];
+        if (array_key_exists("sourceIds", $this->_propDict)) {
+            return $this->_propDict["sourceIds"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the errorCode
-    * The error code for install or uninstall failures of target app.
+    * Sets the sourceIds
+    * The collection of source mobile app's ids.
     *
-    * @param int $val The value of the errorCode
+    * @param string $val The value of the sourceIds
     *
     * @return MobileAppRelationshipState
     */
-    public function setErrorCode($val)
+    public function setSourceIds($val)
     {
-        $this->_propDict["errorCode"] = $val;
+        $this->_propDict["sourceIds"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the targetDisplayName
+    * The related target app's display name.
+    *
+    * @return string The targetDisplayName
+    */
+    public function getTargetDisplayName()
+    {
+        if (array_key_exists("targetDisplayName", $this->_propDict)) {
+            return $this->_propDict["targetDisplayName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the targetDisplayName
+    * The related target app's display name.
+    *
+    * @param string $val The value of the targetDisplayName
+    *
+    * @return MobileAppRelationshipState
+    */
+    public function setTargetDisplayName($val)
+    {
+        $this->_propDict["targetDisplayName"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the targetId
+    * The related target app's id.
+    *
+    * @return string The targetId
+    */
+    public function getTargetId()
+    {
+        if (array_key_exists("targetId", $this->_propDict)) {
+            return $this->_propDict["targetId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the targetId
+    * The related target app's id.
+    *
+    * @param string $val The value of the targetId
+    *
+    * @return MobileAppRelationshipState
+    */
+    public function setTargetId($val)
+    {
+        $this->_propDict["targetId"] = $val;
         return $this;
     }
 

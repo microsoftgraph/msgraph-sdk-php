@@ -24,6 +24,62 @@ namespace Beta\Microsoft\Graph\Model;
 class OptionalClaim extends Entity
 {
     /**
+    * Gets the additionalProperties
+    * Additional properties of the claim. If a property exists in this collection, it modifies the behavior of the optional claim specified in the name property.
+    *
+    * @return string The additionalProperties
+    */
+    public function getAdditionalProperties()
+    {
+        if (array_key_exists("additionalProperties", $this->_propDict)) {
+            return $this->_propDict["additionalProperties"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the additionalProperties
+    * Additional properties of the claim. If a property exists in this collection, it modifies the behavior of the optional claim specified in the name property.
+    *
+    * @param string $val The value of the additionalProperties
+    *
+    * @return OptionalClaim
+    */
+    public function setAdditionalProperties($val)
+    {
+        $this->_propDict["additionalProperties"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the essential
+    * If the value is true, the claim specified by the client is necessary to ensure a smooth authorization experience for the specific task requested by the end user. The default value is false.
+    *
+    * @return bool The essential
+    */
+    public function getEssential()
+    {
+        if (array_key_exists("essential", $this->_propDict)) {
+            return $this->_propDict["essential"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the essential
+    * If the value is true, the claim specified by the client is necessary to ensure a smooth authorization experience for the specific task requested by the end user. The default value is false.
+    *
+    * @param bool $val The value of the essential
+    *
+    * @return OptionalClaim
+    */
+    public function setEssential($val)
+    {
+        $this->_propDict["essential"] = $val;
+        return $this;
+    }
+    /**
     * Gets the name
     * The name of the optional claim.
     *
@@ -77,62 +133,6 @@ class OptionalClaim extends Entity
     public function setSource($val)
     {
         $this->_propDict["source"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the essential
-    * If the value is true, the claim specified by the client is necessary to ensure a smooth authorization experience for the specific task requested by the end user. The default value is false.
-    *
-    * @return bool The essential
-    */
-    public function getEssential()
-    {
-        if (array_key_exists("essential", $this->_propDict)) {
-            return $this->_propDict["essential"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the essential
-    * If the value is true, the claim specified by the client is necessary to ensure a smooth authorization experience for the specific task requested by the end user. The default value is false.
-    *
-    * @param bool $val The value of the essential
-    *
-    * @return OptionalClaim
-    */
-    public function setEssential($val)
-    {
-        $this->_propDict["essential"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the additionalProperties
-    * Additional properties of the claim. If a property exists in this collection, it modifies the behavior of the optional claim specified in the name property.
-    *
-    * @return string The additionalProperties
-    */
-    public function getAdditionalProperties()
-    {
-        if (array_key_exists("additionalProperties", $this->_propDict)) {
-            return $this->_propDict["additionalProperties"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the additionalProperties
-    * Additional properties of the claim. If a property exists in this collection, it modifies the behavior of the optional claim specified in the name property.
-    *
-    * @param string $val The value of the additionalProperties
-    *
-    * @return OptionalClaim
-    */
-    public function setAdditionalProperties($val)
-    {
-        $this->_propDict["additionalProperties"] = $val;
         return $this;
     }
 }

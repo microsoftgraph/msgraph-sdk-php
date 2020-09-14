@@ -24,34 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class ResourceReference extends Entity
 {
     /**
-    * Gets the webUrl
-    * A URL leading to the referenced item.
-    *
-    * @return string The webUrl
-    */
-    public function getWebUrl()
-    {
-        if (array_key_exists("webUrl", $this->_propDict)) {
-            return $this->_propDict["webUrl"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the webUrl
-    * A URL leading to the referenced item.
-    *
-    * @param string $val The value of the webUrl
-    *
-    * @return ResourceReference
-    */
-    public function setWebUrl($val)
-    {
-        $this->_propDict["webUrl"] = $val;
-        return $this;
-    }
-    /**
     * Gets the id
     * The item's unique identifier.
     *
@@ -105,6 +77,34 @@ class ResourceReference extends Entity
     public function setType($val)
     {
         $this->_propDict["type"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the webUrl
+    * A URL leading to the referenced item.
+    *
+    * @return string The webUrl
+    */
+    public function getWebUrl()
+    {
+        if (array_key_exists("webUrl", $this->_propDict)) {
+            return $this->_propDict["webUrl"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the webUrl
+    * A URL leading to the referenced item.
+    *
+    * @param string $val The value of the webUrl
+    *
+    * @return ResourceReference
+    */
+    public function setWebUrl($val)
+    {
+        $this->_propDict["webUrl"] = $val;
         return $this;
     }
 }

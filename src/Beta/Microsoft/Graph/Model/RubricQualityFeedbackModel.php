@@ -23,32 +23,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class RubricQualityFeedbackModel extends Entity
 {
-    /**
-    * Gets the qualityId
-    *
-    * @return string The qualityId
-    */
-    public function getQualityId()
-    {
-        if (array_key_exists("qualityId", $this->_propDict)) {
-            return $this->_propDict["qualityId"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the qualityId
-    *
-    * @param string $val The value of the qualityId
-    *
-    * @return RubricQualityFeedbackModel
-    */
-    public function setQualityId($val)
-    {
-        $this->_propDict["qualityId"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the feedback
@@ -79,5 +53,31 @@ class RubricQualityFeedbackModel extends Entity
     {
         $this->_propDict["feedback"] = $val;
          return $this;
+    }
+    /**
+    * Gets the qualityId
+    *
+    * @return string The qualityId
+    */
+    public function getQualityId()
+    {
+        if (array_key_exists("qualityId", $this->_propDict)) {
+            return $this->_propDict["qualityId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the qualityId
+    *
+    * @param string $val The value of the qualityId
+    *
+    * @return RubricQualityFeedbackModel
+    */
+    public function setQualityId($val)
+    {
+        $this->_propDict["qualityId"] = $val;
+        return $this;
     }
 }

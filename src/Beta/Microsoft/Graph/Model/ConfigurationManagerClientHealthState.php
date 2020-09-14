@@ -23,39 +23,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class ConfigurationManagerClientHealthState extends Entity
 {
-
-    /**
-    * Gets the state
-    * Current configuration manager client state.
-    *
-    * @return ConfigurationManagerClientState The state
-    */
-    public function getState()
-    {
-        if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "Beta\Microsoft\Graph\Model\ConfigurationManagerClientState")) {
-                return $this->_propDict["state"];
-            } else {
-                $this->_propDict["state"] = new ConfigurationManagerClientState($this->_propDict["state"]);
-                return $this->_propDict["state"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the state
-    * Current configuration manager client state.
-    *
-    * @param ConfigurationManagerClientState $val The value to assign to the state
-    *
-    * @return ConfigurationManagerClientHealthState The ConfigurationManagerClientHealthState
-    */
-    public function setState($val)
-    {
-        $this->_propDict["state"] = $val;
-         return $this;
-    }
     /**
     * Gets the errorCode
     * Error code for failed state.
@@ -115,6 +82,39 @@ class ConfigurationManagerClientHealthState extends Entity
     public function setLastSyncDateTime($val)
     {
         $this->_propDict["lastSyncDateTime"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the state
+    * Current configuration manager client state.
+    *
+    * @return ConfigurationManagerClientState The state
+    */
+    public function getState()
+    {
+        if (array_key_exists("state", $this->_propDict)) {
+            if (is_a($this->_propDict["state"], "Beta\Microsoft\Graph\Model\ConfigurationManagerClientState")) {
+                return $this->_propDict["state"];
+            } else {
+                $this->_propDict["state"] = new ConfigurationManagerClientState($this->_propDict["state"]);
+                return $this->_propDict["state"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the state
+    * Current configuration manager client state.
+    *
+    * @param ConfigurationManagerClientState $val The value to assign to the state
+    *
+    * @return ConfigurationManagerClientHealthState The ConfigurationManagerClientHealthState
+    */
+    public function setState($val)
+    {
+        $this->_propDict["state"] = $val;
          return $this;
     }
 }

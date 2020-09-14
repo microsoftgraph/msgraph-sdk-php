@@ -23,146 +23,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class DeviceManagementSettingComparison extends Entity
 {
-    /**
-    * Gets the id
-    * The setting ID
-    *
-    * @return string The id
-    */
-    public function getId()
-    {
-        if (array_key_exists("id", $this->_propDict)) {
-            return $this->_propDict["id"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the id
-    * The setting ID
-    *
-    * @param string $val The value of the id
-    *
-    * @return DeviceManagementSettingComparison
-    */
-    public function setId($val)
-    {
-        $this->_propDict["id"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the displayName
-    * The setting's display name
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the displayName
-    * The setting's display name
-    *
-    * @param string $val The value of the displayName
-    *
-    * @return DeviceManagementSettingComparison
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the definitionId
-    * The ID of the setting definition for this instance
-    *
-    * @return string The definitionId
-    */
-    public function getDefinitionId()
-    {
-        if (array_key_exists("definitionId", $this->_propDict)) {
-            return $this->_propDict["definitionId"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the definitionId
-    * The ID of the setting definition for this instance
-    *
-    * @param string $val The value of the definitionId
-    *
-    * @return DeviceManagementSettingComparison
-    */
-    public function setDefinitionId($val)
-    {
-        $this->_propDict["definitionId"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the currentValueJson
-    * JSON representation of current intent (or) template setting's value
-    *
-    * @return string The currentValueJson
-    */
-    public function getCurrentValueJson()
-    {
-        if (array_key_exists("currentValueJson", $this->_propDict)) {
-            return $this->_propDict["currentValueJson"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the currentValueJson
-    * JSON representation of current intent (or) template setting's value
-    *
-    * @param string $val The value of the currentValueJson
-    *
-    * @return DeviceManagementSettingComparison
-    */
-    public function setCurrentValueJson($val)
-    {
-        $this->_propDict["currentValueJson"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the newValueJson
-    * JSON representation of new template setting's value
-    *
-    * @return string The newValueJson
-    */
-    public function getNewValueJson()
-    {
-        if (array_key_exists("newValueJson", $this->_propDict)) {
-            return $this->_propDict["newValueJson"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the newValueJson
-    * JSON representation of new template setting's value
-    *
-    * @param string $val The value of the newValueJson
-    *
-    * @return DeviceManagementSettingComparison
-    */
-    public function setNewValueJson($val)
-    {
-        $this->_propDict["newValueJson"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the comparisonResult
@@ -195,5 +55,145 @@ class DeviceManagementSettingComparison extends Entity
     {
         $this->_propDict["comparisonResult"] = $val;
          return $this;
+    }
+    /**
+    * Gets the currentValueJson
+    * JSON representation of current intent (or) template setting's value
+    *
+    * @return string The currentValueJson
+    */
+    public function getCurrentValueJson()
+    {
+        if (array_key_exists("currentValueJson", $this->_propDict)) {
+            return $this->_propDict["currentValueJson"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the currentValueJson
+    * JSON representation of current intent (or) template setting's value
+    *
+    * @param string $val The value of the currentValueJson
+    *
+    * @return DeviceManagementSettingComparison
+    */
+    public function setCurrentValueJson($val)
+    {
+        $this->_propDict["currentValueJson"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the definitionId
+    * The ID of the setting definition for this instance
+    *
+    * @return string The definitionId
+    */
+    public function getDefinitionId()
+    {
+        if (array_key_exists("definitionId", $this->_propDict)) {
+            return $this->_propDict["definitionId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the definitionId
+    * The ID of the setting definition for this instance
+    *
+    * @param string $val The value of the definitionId
+    *
+    * @return DeviceManagementSettingComparison
+    */
+    public function setDefinitionId($val)
+    {
+        $this->_propDict["definitionId"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the displayName
+    * The setting's display name
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the displayName
+    * The setting's display name
+    *
+    * @param string $val The value of the displayName
+    *
+    * @return DeviceManagementSettingComparison
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the id
+    * The setting ID
+    *
+    * @return string The id
+    */
+    public function getId()
+    {
+        if (array_key_exists("id", $this->_propDict)) {
+            return $this->_propDict["id"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the id
+    * The setting ID
+    *
+    * @param string $val The value of the id
+    *
+    * @return DeviceManagementSettingComparison
+    */
+    public function setId($val)
+    {
+        $this->_propDict["id"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the newValueJson
+    * JSON representation of new template setting's value
+    *
+    * @return string The newValueJson
+    */
+    public function getNewValueJson()
+    {
+        if (array_key_exists("newValueJson", $this->_propDict)) {
+            return $this->_propDict["newValueJson"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the newValueJson
+    * JSON representation of new template setting's value
+    *
+    * @param string $val The value of the newValueJson
+    *
+    * @return DeviceManagementSettingComparison
+    */
+    public function setNewValueJson($val)
+    {
+        $this->_propDict["newValueJson"] = $val;
+        return $this;
     }
 }

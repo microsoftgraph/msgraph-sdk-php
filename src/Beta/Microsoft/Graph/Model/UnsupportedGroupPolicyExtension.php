@@ -25,35 +25,31 @@ namespace Beta\Microsoft\Graph\Model;
 class UnsupportedGroupPolicyExtension extends Entity
 {
     /**
-    * Gets the settingScope
-    * Setting Scope of the unsupported extension.
+    * Gets the extensionType
+    * ExtensionType of the unsupported extension.
     *
-    * @return GroupPolicySettingScope The settingScope
+    * @return string The extensionType
     */
-    public function getSettingScope()
+    public function getExtensionType()
     {
-        if (array_key_exists("settingScope", $this->_propDict)) {
-            if (is_a($this->_propDict["settingScope"], "Beta\Microsoft\Graph\Model\GroupPolicySettingScope")) {
-                return $this->_propDict["settingScope"];
-            } else {
-                $this->_propDict["settingScope"] = new GroupPolicySettingScope($this->_propDict["settingScope"]);
-                return $this->_propDict["settingScope"];
-            }
+        if (array_key_exists("extensionType", $this->_propDict)) {
+            return $this->_propDict["extensionType"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the settingScope
-    * Setting Scope of the unsupported extension.
+    * Sets the extensionType
+    * ExtensionType of the unsupported extension.
     *
-    * @param GroupPolicySettingScope $val The settingScope
+    * @param string $val The extensionType
     *
     * @return UnsupportedGroupPolicyExtension
     */
-    public function setSettingScope($val)
+    public function setExtensionType($val)
     {
-        $this->_propDict["settingScope"] = $val;
+        $this->_propDict["extensionType"] = $val;
         return $this;
     }
     
@@ -87,35 +83,6 @@ class UnsupportedGroupPolicyExtension extends Entity
     }
     
     /**
-    * Gets the extensionType
-    * ExtensionType of the unsupported extension.
-    *
-    * @return string The extensionType
-    */
-    public function getExtensionType()
-    {
-        if (array_key_exists("extensionType", $this->_propDict)) {
-            return $this->_propDict["extensionType"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the extensionType
-    * ExtensionType of the unsupported extension.
-    *
-    * @param string $val The extensionType
-    *
-    * @return UnsupportedGroupPolicyExtension
-    */
-    public function setExtensionType($val)
-    {
-        $this->_propDict["extensionType"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the nodeName
     * Node name of the unsupported extension.
     *
@@ -141,6 +108,39 @@ class UnsupportedGroupPolicyExtension extends Entity
     public function setNodeName($val)
     {
         $this->_propDict["nodeName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the settingScope
+    * Setting Scope of the unsupported extension.
+    *
+    * @return GroupPolicySettingScope The settingScope
+    */
+    public function getSettingScope()
+    {
+        if (array_key_exists("settingScope", $this->_propDict)) {
+            if (is_a($this->_propDict["settingScope"], "Beta\Microsoft\Graph\Model\GroupPolicySettingScope")) {
+                return $this->_propDict["settingScope"];
+            } else {
+                $this->_propDict["settingScope"] = new GroupPolicySettingScope($this->_propDict["settingScope"]);
+                return $this->_propDict["settingScope"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the settingScope
+    * Setting Scope of the unsupported extension.
+    *
+    * @param GroupPolicySettingScope $val The settingScope
+    *
+    * @return UnsupportedGroupPolicyExtension
+    */
+    public function setSettingScope($val)
+    {
+        $this->_propDict["settingScope"] = $val;
         return $this;
     }
     

@@ -24,29 +24,55 @@ namespace Beta\Microsoft\Graph\Model;
 class PrinterUsageSummary extends Entity
 {
     /**
-    * Gets the printerId
+    * Gets the completedJobCount
     *
-    * @return string The printerId
+    * @return int The completedJobCount
     */
-    public function getPrinterId()
+    public function getCompletedJobCount()
     {
-        if (array_key_exists("printerId", $this->_propDict)) {
-            return $this->_propDict["printerId"];
+        if (array_key_exists("completedJobCount", $this->_propDict)) {
+            return $this->_propDict["completedJobCount"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the printerId
+    * Sets the completedJobCount
     *
-    * @param string $val The value of the printerId
+    * @param int $val The value of the completedJobCount
     *
     * @return PrinterUsageSummary
     */
-    public function setPrinterId($val)
+    public function setCompletedJobCount($val)
     {
-        $this->_propDict["printerId"] = $val;
+        $this->_propDict["completedJobCount"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the incompleteJobCount
+    *
+    * @return int The incompleteJobCount
+    */
+    public function getIncompleteJobCount()
+    {
+        if (array_key_exists("incompleteJobCount", $this->_propDict)) {
+            return $this->_propDict["incompleteJobCount"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the incompleteJobCount
+    *
+    * @param int $val The value of the incompleteJobCount
+    *
+    * @return PrinterUsageSummary
+    */
+    public function setIncompleteJobCount($val)
+    {
+        $this->_propDict["incompleteJobCount"] = $val;
         return $this;
     }
     /**
@@ -73,6 +99,32 @@ class PrinterUsageSummary extends Entity
     public function setPrinterDisplayName($val)
     {
         $this->_propDict["printerDisplayName"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the printerId
+    *
+    * @return string The printerId
+    */
+    public function getPrinterId()
+    {
+        if (array_key_exists("printerId", $this->_propDict)) {
+            return $this->_propDict["printerId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the printerId
+    *
+    * @param string $val The value of the printerId
+    *
+    * @return PrinterUsageSummary
+    */
+    public function setPrinterId($val)
+    {
+        $this->_propDict["printerId"] = $val;
         return $this;
     }
     /**
@@ -125,58 +177,6 @@ class PrinterUsageSummary extends Entity
     public function setPrinterModel($val)
     {
         $this->_propDict["printerModel"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the completedJobCount
-    *
-    * @return int The completedJobCount
-    */
-    public function getCompletedJobCount()
-    {
-        if (array_key_exists("completedJobCount", $this->_propDict)) {
-            return $this->_propDict["completedJobCount"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the completedJobCount
-    *
-    * @param int $val The value of the completedJobCount
-    *
-    * @return PrinterUsageSummary
-    */
-    public function setCompletedJobCount($val)
-    {
-        $this->_propDict["completedJobCount"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the incompleteJobCount
-    *
-    * @return int The incompleteJobCount
-    */
-    public function getIncompleteJobCount()
-    {
-        if (array_key_exists("incompleteJobCount", $this->_propDict)) {
-            return $this->_propDict["incompleteJobCount"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the incompleteJobCount
-    *
-    * @param int $val The value of the incompleteJobCount
-    *
-    * @return PrinterUsageSummary
-    */
-    public function setIncompleteJobCount($val)
-    {
-        $this->_propDict["incompleteJobCount"] = $val;
         return $this;
     }
 

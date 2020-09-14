@@ -33,29 +33,29 @@ class EducationFormResource extends EducationResource
     }
 
     /**
-    * Gets the originalFormId
+    * Gets the editUrl
     *
-    * @return string The originalFormId
+    * @return string The editUrl
     */
-    public function getOriginalFormId()
+    public function getEditUrl()
     {
-        if (array_key_exists("originalFormId", $this->_propDict)) {
-            return $this->_propDict["originalFormId"];
+        if (array_key_exists("editUrl", $this->_propDict)) {
+            return $this->_propDict["editUrl"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the originalFormId
+    * Sets the editUrl
     *
-    * @param string $val The value of the originalFormId
+    * @param string $val The value of the editUrl
     *
     * @return EducationFormResource
     */
-    public function setOriginalFormId($val)
+    public function setEditUrl($val)
     {
-        $this->_propDict["originalFormId"] = $val;
+        $this->_propDict["editUrl"] = $val;
         return $this;
     }
     /**
@@ -111,6 +111,32 @@ class EducationFormResource extends EducationResource
         return $this;
     }
     /**
+    * Gets the originalFormId
+    *
+    * @return string The originalFormId
+    */
+    public function getOriginalFormId()
+    {
+        if (array_key_exists("originalFormId", $this->_propDict)) {
+            return $this->_propDict["originalFormId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the originalFormId
+    *
+    * @param string $val The value of the originalFormId
+    *
+    * @return EducationFormResource
+    */
+    public function setOriginalFormId($val)
+    {
+        $this->_propDict["originalFormId"] = $val;
+        return $this;
+    }
+    /**
     * Gets the viewUrl
     *
     * @return string The viewUrl
@@ -134,32 +160,6 @@ class EducationFormResource extends EducationResource
     public function setViewUrl($val)
     {
         $this->_propDict["viewUrl"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the editUrl
-    *
-    * @return string The editUrl
-    */
-    public function getEditUrl()
-    {
-        if (array_key_exists("editUrl", $this->_propDict)) {
-            return $this->_propDict["editUrl"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the editUrl
-    *
-    * @param string $val The value of the editUrl
-    *
-    * @return EducationFormResource
-    */
-    public function setEditUrl($val)
-    {
-        $this->_propDict["editUrl"] = $val;
         return $this;
     }
 }

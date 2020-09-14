@@ -23,6 +23,62 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class IosVpnSecurityAssociationParameters extends Entity
 {
+    /**
+    * Gets the lifetimeInMinutes
+    * Lifetime (minutes)
+    *
+    * @return int The lifetimeInMinutes
+    */
+    public function getLifetimeInMinutes()
+    {
+        if (array_key_exists("lifetimeInMinutes", $this->_propDict)) {
+            return $this->_propDict["lifetimeInMinutes"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the lifetimeInMinutes
+    * Lifetime (minutes)
+    *
+    * @param int $val The value of the lifetimeInMinutes
+    *
+    * @return IosVpnSecurityAssociationParameters
+    */
+    public function setLifetimeInMinutes($val)
+    {
+        $this->_propDict["lifetimeInMinutes"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the securityDiffieHellmanGroup
+    * Diffie-Hellman Group
+    *
+    * @return int The securityDiffieHellmanGroup
+    */
+    public function getSecurityDiffieHellmanGroup()
+    {
+        if (array_key_exists("securityDiffieHellmanGroup", $this->_propDict)) {
+            return $this->_propDict["securityDiffieHellmanGroup"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the securityDiffieHellmanGroup
+    * Diffie-Hellman Group
+    *
+    * @param int $val The value of the securityDiffieHellmanGroup
+    *
+    * @return IosVpnSecurityAssociationParameters
+    */
+    public function setSecurityDiffieHellmanGroup($val)
+    {
+        $this->_propDict["securityDiffieHellmanGroup"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the securityEncryptionAlgorithm
@@ -88,61 +144,5 @@ class IosVpnSecurityAssociationParameters extends Entity
     {
         $this->_propDict["securityIntegrityAlgorithm"] = $val;
          return $this;
-    }
-    /**
-    * Gets the securityDiffieHellmanGroup
-    * Diffie-Hellman Group
-    *
-    * @return int The securityDiffieHellmanGroup
-    */
-    public function getSecurityDiffieHellmanGroup()
-    {
-        if (array_key_exists("securityDiffieHellmanGroup", $this->_propDict)) {
-            return $this->_propDict["securityDiffieHellmanGroup"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the securityDiffieHellmanGroup
-    * Diffie-Hellman Group
-    *
-    * @param int $val The value of the securityDiffieHellmanGroup
-    *
-    * @return IosVpnSecurityAssociationParameters
-    */
-    public function setSecurityDiffieHellmanGroup($val)
-    {
-        $this->_propDict["securityDiffieHellmanGroup"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the lifetimeInMinutes
-    * Lifetime (minutes)
-    *
-    * @return int The lifetimeInMinutes
-    */
-    public function getLifetimeInMinutes()
-    {
-        if (array_key_exists("lifetimeInMinutes", $this->_propDict)) {
-            return $this->_propDict["lifetimeInMinutes"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the lifetimeInMinutes
-    * Lifetime (minutes)
-    *
-    * @param int $val The value of the lifetimeInMinutes
-    *
-    * @return IosVpnSecurityAssociationParameters
-    */
-    public function setLifetimeInMinutes($val)
-    {
-        $this->_propDict["lifetimeInMinutes"] = $val;
-        return $this;
     }
 }

@@ -25,33 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class ConnectorGroup extends Entity
 {
     /**
-    * Gets the name
-    *
-    * @return string The name
-    */
-    public function getName()
-    {
-        if (array_key_exists("name", $this->_propDict)) {
-            return $this->_propDict["name"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the name
-    *
-    * @param string $val The name
-    *
-    * @return ConnectorGroup
-    */
-    public function setName($val)
-    {
-        $this->_propDict["name"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the connectorGroupType
     *
     * @return ConnectorGroupType The connectorGroupType
@@ -110,6 +83,33 @@ class ConnectorGroup extends Entity
     }
     
     /**
+    * Gets the name
+    *
+    * @return string The name
+    */
+    public function getName()
+    {
+        if (array_key_exists("name", $this->_propDict)) {
+            return $this->_propDict["name"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the name
+    *
+    * @param string $val The name
+    *
+    * @return ConnectorGroup
+    */
+    public function setName($val)
+    {
+        $this->_propDict["name"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the region
     *
     * @return ConnectorGroupRegion The region
@@ -142,34 +142,6 @@ class ConnectorGroup extends Entity
     
 
      /** 
-     * Gets the members
-     *
-     * @return array The members
-     */
-    public function getMembers()
-    {
-        if (array_key_exists("members", $this->_propDict)) {
-           return $this->_propDict["members"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the members
-    *
-    * @param Connector $val The members
-    *
-    * @return ConnectorGroup
-    */
-    public function setMembers($val)
-    {
-		$this->_propDict["members"] = $val;
-        return $this;
-    }
-    
-
-     /** 
      * Gets the applications
      *
      * @return array The applications
@@ -193,6 +165,34 @@ class ConnectorGroup extends Entity
     public function setApplications($val)
     {
 		$this->_propDict["applications"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the members
+     *
+     * @return array The members
+     */
+    public function getMembers()
+    {
+        if (array_key_exists("members", $this->_propDict)) {
+           return $this->_propDict["members"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the members
+    *
+    * @param Connector $val The members
+    *
+    * @return ConnectorGroup
+    */
+    public function setMembers($val)
+    {
+		$this->_propDict["members"] = $val;
         return $this;
     }
     

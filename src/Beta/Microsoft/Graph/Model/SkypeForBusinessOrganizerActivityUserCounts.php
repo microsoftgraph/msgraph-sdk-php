@@ -25,60 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class SkypeForBusinessOrganizerActivityUserCounts extends Entity
 {
     /**
-    * Gets the im
-    *
-    * @return int The im
-    */
-    public function getIm()
-    {
-        if (array_key_exists("im", $this->_propDict)) {
-            return $this->_propDict["im"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the im
-    *
-    * @param int $val The im
-    *
-    * @return SkypeForBusinessOrganizerActivityUserCounts
-    */
-    public function setIm($val)
-    {
-        $this->_propDict["im"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the audioVideo
-    *
-    * @return int The audioVideo
-    */
-    public function getAudioVideo()
-    {
-        if (array_key_exists("audioVideo", $this->_propDict)) {
-            return $this->_propDict["audioVideo"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the audioVideo
-    *
-    * @param int $val The audioVideo
-    *
-    * @return SkypeForBusinessOrganizerActivityUserCounts
-    */
-    public function setAudioVideo($val)
-    {
-        $this->_propDict["audioVideo"] = intval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the appSharing
     *
     * @return int The appSharing
@@ -106,29 +52,29 @@ class SkypeForBusinessOrganizerActivityUserCounts extends Entity
     }
     
     /**
-    * Gets the web
+    * Gets the audioVideo
     *
-    * @return int The web
+    * @return int The audioVideo
     */
-    public function getWeb()
+    public function getAudioVideo()
     {
-        if (array_key_exists("web", $this->_propDict)) {
-            return $this->_propDict["web"];
+        if (array_key_exists("audioVideo", $this->_propDict)) {
+            return $this->_propDict["audioVideo"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the web
+    * Sets the audioVideo
     *
-    * @param int $val The web
+    * @param int $val The audioVideo
     *
     * @return SkypeForBusinessOrganizerActivityUserCounts
     */
-    public function setWeb($val)
+    public function setAudioVideo($val)
     {
-        $this->_propDict["web"] = intval($val);
+        $this->_propDict["audioVideo"] = intval($val);
         return $this;
     }
     
@@ -187,33 +133,29 @@ class SkypeForBusinessOrganizerActivityUserCounts extends Entity
     }
     
     /**
-    * Gets the reportRefreshDate
+    * Gets the im
     *
-    * @return \DateTime The reportRefreshDate
+    * @return int The im
     */
-    public function getReportRefreshDate()
+    public function getIm()
     {
-        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
-                return $this->_propDict["reportRefreshDate"];
-            } else {
-                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
-                return $this->_propDict["reportRefreshDate"];
-            }
+        if (array_key_exists("im", $this->_propDict)) {
+            return $this->_propDict["im"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the reportRefreshDate
+    * Sets the im
     *
-    * @param \DateTime $val The reportRefreshDate
+    * @param int $val The im
     *
     * @return SkypeForBusinessOrganizerActivityUserCounts
     */
-    public function setReportRefreshDate($val)
+    public function setIm($val)
     {
-        $this->_propDict["reportRefreshDate"] = $val;
+        $this->_propDict["im"] = intval($val);
         return $this;
     }
     
@@ -272,6 +214,64 @@ class SkypeForBusinessOrganizerActivityUserCounts extends Entity
     public function setReportPeriod($val)
     {
         $this->_propDict["reportPeriod"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the reportRefreshDate
+    *
+    * @return \DateTime The reportRefreshDate
+    */
+    public function getReportRefreshDate()
+    {
+        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
+                return $this->_propDict["reportRefreshDate"];
+            } else {
+                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
+                return $this->_propDict["reportRefreshDate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the reportRefreshDate
+    *
+    * @param \DateTime $val The reportRefreshDate
+    *
+    * @return SkypeForBusinessOrganizerActivityUserCounts
+    */
+    public function setReportRefreshDate($val)
+    {
+        $this->_propDict["reportRefreshDate"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the web
+    *
+    * @return int The web
+    */
+    public function getWeb()
+    {
+        if (array_key_exists("web", $this->_propDict)) {
+            return $this->_propDict["web"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the web
+    *
+    * @param int $val The web
+    *
+    * @return SkypeForBusinessOrganizerActivityUserCounts
+    */
+    public function setWeb($val)
+    {
+        $this->_propDict["web"] = intval($val);
         return $this;
     }
     

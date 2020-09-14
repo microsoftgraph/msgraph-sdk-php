@@ -24,31 +24,59 @@ namespace Beta\Microsoft\Graph\Model;
 class ConditionalAccessUsers extends Entity
 {
     /**
-    * Gets the includeUsers
-    * User IDs in scope of policy unless explicitly excluded, or None or All or GuestsOrExternalUsers.
+    * Gets the excludeGroups
+    * Group IDs excluded from scope of policy.
     *
-    * @return string The includeUsers
+    * @return string The excludeGroups
     */
-    public function getIncludeUsers()
+    public function getExcludeGroups()
     {
-        if (array_key_exists("includeUsers", $this->_propDict)) {
-            return $this->_propDict["includeUsers"];
+        if (array_key_exists("excludeGroups", $this->_propDict)) {
+            return $this->_propDict["excludeGroups"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the includeUsers
-    * User IDs in scope of policy unless explicitly excluded, or None or All or GuestsOrExternalUsers.
+    * Sets the excludeGroups
+    * Group IDs excluded from scope of policy.
     *
-    * @param string $val The value of the includeUsers
+    * @param string $val The value of the excludeGroups
     *
     * @return ConditionalAccessUsers
     */
-    public function setIncludeUsers($val)
+    public function setExcludeGroups($val)
     {
-        $this->_propDict["includeUsers"] = $val;
+        $this->_propDict["excludeGroups"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the excludeRoles
+    * Role IDs excluded from scope of policy.
+    *
+    * @return string The excludeRoles
+    */
+    public function getExcludeRoles()
+    {
+        if (array_key_exists("excludeRoles", $this->_propDict)) {
+            return $this->_propDict["excludeRoles"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the excludeRoles
+    * Role IDs excluded from scope of policy.
+    *
+    * @param string $val The value of the excludeRoles
+    *
+    * @return ConditionalAccessUsers
+    */
+    public function setExcludeRoles($val)
+    {
+        $this->_propDict["excludeRoles"] = $val;
         return $this;
     }
     /**
@@ -108,34 +136,6 @@ class ConditionalAccessUsers extends Entity
         return $this;
     }
     /**
-    * Gets the excludeGroups
-    * Group IDs excluded from scope of policy.
-    *
-    * @return string The excludeGroups
-    */
-    public function getExcludeGroups()
-    {
-        if (array_key_exists("excludeGroups", $this->_propDict)) {
-            return $this->_propDict["excludeGroups"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the excludeGroups
-    * Group IDs excluded from scope of policy.
-    *
-    * @param string $val The value of the excludeGroups
-    *
-    * @return ConditionalAccessUsers
-    */
-    public function setExcludeGroups($val)
-    {
-        $this->_propDict["excludeGroups"] = $val;
-        return $this;
-    }
-    /**
     * Gets the includeRoles
     * Role IDs in scope of policy unless explicitly excluded, or All.
     *
@@ -164,31 +164,31 @@ class ConditionalAccessUsers extends Entity
         return $this;
     }
     /**
-    * Gets the excludeRoles
-    * Role IDs excluded from scope of policy.
+    * Gets the includeUsers
+    * User IDs in scope of policy unless explicitly excluded, or None or All or GuestsOrExternalUsers.
     *
-    * @return string The excludeRoles
+    * @return string The includeUsers
     */
-    public function getExcludeRoles()
+    public function getIncludeUsers()
     {
-        if (array_key_exists("excludeRoles", $this->_propDict)) {
-            return $this->_propDict["excludeRoles"];
+        if (array_key_exists("includeUsers", $this->_propDict)) {
+            return $this->_propDict["includeUsers"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the excludeRoles
-    * Role IDs excluded from scope of policy.
+    * Sets the includeUsers
+    * User IDs in scope of policy unless explicitly excluded, or None or All or GuestsOrExternalUsers.
     *
-    * @param string $val The value of the excludeRoles
+    * @param string $val The value of the includeUsers
     *
     * @return ConditionalAccessUsers
     */
-    public function setExcludeRoles($val)
+    public function setIncludeUsers($val)
     {
-        $this->_propDict["excludeRoles"] = $val;
+        $this->_propDict["includeUsers"] = $val;
         return $this;
     }
 }

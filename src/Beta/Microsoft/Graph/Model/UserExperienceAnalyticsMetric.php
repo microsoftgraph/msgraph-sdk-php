@@ -25,35 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class UserExperienceAnalyticsMetric extends Entity
 {
     /**
-    * Gets the value
-    * The value of the user experience analytics metric.
-    *
-    * @return float The value
-    */
-    public function getValue()
-    {
-        if (array_key_exists("value", $this->_propDict)) {
-            return $this->_propDict["value"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the value
-    * The value of the user experience analytics metric.
-    *
-    * @param float $val The value
-    *
-    * @return UserExperienceAnalyticsMetric
-    */
-    public function setValue($val)
-    {
-        $this->_propDict["value"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the unit
     * The unit of the user experience analytics metric.
     *
@@ -79,6 +50,35 @@ class UserExperienceAnalyticsMetric extends Entity
     public function setUnit($val)
     {
         $this->_propDict["unit"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the value
+    * The value of the user experience analytics metric.
+    *
+    * @return float The value
+    */
+    public function getValue()
+    {
+        if (array_key_exists("value", $this->_propDict)) {
+            return $this->_propDict["value"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the value
+    * The value of the user experience analytics metric.
+    *
+    * @param float $val The value
+    *
+    * @return UserExperienceAnalyticsMetric
+    */
+    public function setValue($val)
+    {
+        $this->_propDict["value"] = $val;
         return $this;
     }
     

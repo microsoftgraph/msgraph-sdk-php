@@ -24,60 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class CredentialUserRegistrationDetails extends Entity
 {
-    /**
-    * Gets the userPrincipalName
-    *
-    * @return string The userPrincipalName
-    */
-    public function getUserPrincipalName()
-    {
-        if (array_key_exists("userPrincipalName", $this->_propDict)) {
-            return $this->_propDict["userPrincipalName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the userPrincipalName
-    *
-    * @param string $val The userPrincipalName
-    *
-    * @return CredentialUserRegistrationDetails
-    */
-    public function setUserPrincipalName($val)
-    {
-        $this->_propDict["userPrincipalName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the userDisplayName
-    *
-    * @return string The userDisplayName
-    */
-    public function getUserDisplayName()
-    {
-        if (array_key_exists("userDisplayName", $this->_propDict)) {
-            return $this->_propDict["userDisplayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the userDisplayName
-    *
-    * @param string $val The userDisplayName
-    *
-    * @return CredentialUserRegistrationDetails
-    */
-    public function setUserDisplayName($val)
-    {
-        $this->_propDict["userDisplayName"] = $val;
-        return $this;
-    }
-    
 
      /** 
      * Gets the authMethods
@@ -103,60 +49,6 @@ class CredentialUserRegistrationDetails extends Entity
     public function setAuthMethods($val)
     {
 		$this->_propDict["authMethods"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the isRegistered
-    *
-    * @return bool The isRegistered
-    */
-    public function getIsRegistered()
-    {
-        if (array_key_exists("isRegistered", $this->_propDict)) {
-            return $this->_propDict["isRegistered"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the isRegistered
-    *
-    * @param bool $val The isRegistered
-    *
-    * @return CredentialUserRegistrationDetails
-    */
-    public function setIsRegistered($val)
-    {
-        $this->_propDict["isRegistered"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the isEnabled
-    *
-    * @return bool The isEnabled
-    */
-    public function getIsEnabled()
-    {
-        if (array_key_exists("isEnabled", $this->_propDict)) {
-            return $this->_propDict["isEnabled"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the isEnabled
-    *
-    * @param bool $val The isEnabled
-    *
-    * @return CredentialUserRegistrationDetails
-    */
-    public function setIsEnabled($val)
-    {
-        $this->_propDict["isEnabled"] = boolval($val);
         return $this;
     }
     
@@ -188,6 +80,33 @@ class CredentialUserRegistrationDetails extends Entity
     }
     
     /**
+    * Gets the isEnabled
+    *
+    * @return bool The isEnabled
+    */
+    public function getIsEnabled()
+    {
+        if (array_key_exists("isEnabled", $this->_propDict)) {
+            return $this->_propDict["isEnabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isEnabled
+    *
+    * @param bool $val The isEnabled
+    *
+    * @return CredentialUserRegistrationDetails
+    */
+    public function setIsEnabled($val)
+    {
+        $this->_propDict["isEnabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the isMfaRegistered
     *
     * @return bool The isMfaRegistered
@@ -211,6 +130,87 @@ class CredentialUserRegistrationDetails extends Entity
     public function setIsMfaRegistered($val)
     {
         $this->_propDict["isMfaRegistered"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the isRegistered
+    *
+    * @return bool The isRegistered
+    */
+    public function getIsRegistered()
+    {
+        if (array_key_exists("isRegistered", $this->_propDict)) {
+            return $this->_propDict["isRegistered"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isRegistered
+    *
+    * @param bool $val The isRegistered
+    *
+    * @return CredentialUserRegistrationDetails
+    */
+    public function setIsRegistered($val)
+    {
+        $this->_propDict["isRegistered"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the userDisplayName
+    *
+    * @return string The userDisplayName
+    */
+    public function getUserDisplayName()
+    {
+        if (array_key_exists("userDisplayName", $this->_propDict)) {
+            return $this->_propDict["userDisplayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the userDisplayName
+    *
+    * @param string $val The userDisplayName
+    *
+    * @return CredentialUserRegistrationDetails
+    */
+    public function setUserDisplayName($val)
+    {
+        $this->_propDict["userDisplayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userPrincipalName
+    *
+    * @return string The userPrincipalName
+    */
+    public function getUserPrincipalName()
+    {
+        if (array_key_exists("userPrincipalName", $this->_propDict)) {
+            return $this->_propDict["userPrincipalName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the userPrincipalName
+    *
+    * @param string $val The userPrincipalName
+    *
+    * @return CredentialUserRegistrationDetails
+    */
+    public function setUserPrincipalName($val)
+    {
+        $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
     

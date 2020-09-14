@@ -24,6 +24,34 @@ namespace Beta\Microsoft\Graph\Model;
 class OutlookGeoCoordinates extends Entity
 {
     /**
+    * Gets the accuracy
+    * The accuracy of the latitude and longitude. As an example, the accuracy can be measured in meters, such as the latitude and longitude are accurate to within 50 meters.
+    *
+    * @return float The accuracy
+    */
+    public function getAccuracy()
+    {
+        if (array_key_exists("accuracy", $this->_propDict)) {
+            return $this->_propDict["accuracy"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the accuracy
+    * The accuracy of the latitude and longitude. As an example, the accuracy can be measured in meters, such as the latitude and longitude are accurate to within 50 meters.
+    *
+    * @param float $val The value of the accuracy
+    *
+    * @return OutlookGeoCoordinates
+    */
+    public function setAccuracy($val)
+    {
+        $this->_propDict["accuracy"] = $val;
+        return $this;
+    }
+    /**
     * Gets the altitude
     * The altitude of the location.
     *
@@ -49,6 +77,34 @@ class OutlookGeoCoordinates extends Entity
     public function setAltitude($val)
     {
         $this->_propDict["altitude"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the altitudeAccuracy
+    * The accuracy of the altitude.
+    *
+    * @return float The altitudeAccuracy
+    */
+    public function getAltitudeAccuracy()
+    {
+        if (array_key_exists("altitudeAccuracy", $this->_propDict)) {
+            return $this->_propDict["altitudeAccuracy"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the altitudeAccuracy
+    * The accuracy of the altitude.
+    *
+    * @param float $val The value of the altitudeAccuracy
+    *
+    * @return OutlookGeoCoordinates
+    */
+    public function setAltitudeAccuracy($val)
+    {
+        $this->_propDict["altitudeAccuracy"] = $val;
         return $this;
     }
     /**
@@ -105,62 +161,6 @@ class OutlookGeoCoordinates extends Entity
     public function setLongitude($val)
     {
         $this->_propDict["longitude"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the accuracy
-    * The accuracy of the latitude and longitude. As an example, the accuracy can be measured in meters, such as the latitude and longitude are accurate to within 50 meters.
-    *
-    * @return float The accuracy
-    */
-    public function getAccuracy()
-    {
-        if (array_key_exists("accuracy", $this->_propDict)) {
-            return $this->_propDict["accuracy"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the accuracy
-    * The accuracy of the latitude and longitude. As an example, the accuracy can be measured in meters, such as the latitude and longitude are accurate to within 50 meters.
-    *
-    * @param float $val The value of the accuracy
-    *
-    * @return OutlookGeoCoordinates
-    */
-    public function setAccuracy($val)
-    {
-        $this->_propDict["accuracy"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the altitudeAccuracy
-    * The accuracy of the altitude.
-    *
-    * @return float The altitudeAccuracy
-    */
-    public function getAltitudeAccuracy()
-    {
-        if (array_key_exists("altitudeAccuracy", $this->_propDict)) {
-            return $this->_propDict["altitudeAccuracy"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the altitudeAccuracy
-    * The accuracy of the altitude.
-    *
-    * @param float $val The value of the altitudeAccuracy
-    *
-    * @return OutlookGeoCoordinates
-    */
-    public function setAltitudeAccuracy($val)
-    {
-        $this->_propDict["altitudeAccuracy"] = $val;
         return $this;
     }
 }

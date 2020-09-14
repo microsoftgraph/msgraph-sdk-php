@@ -24,6 +24,110 @@ namespace Beta\Microsoft\Graph\Model;
 class RoleSuccessStatistics extends Entity
 {
     /**
+    * Gets the permanentFail
+    *
+    * @return int The permanentFail
+    */
+    public function getPermanentFail()
+    {
+        if (array_key_exists("permanentFail", $this->_propDict)) {
+            return $this->_propDict["permanentFail"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the permanentFail
+    *
+    * @param int $val The value of the permanentFail
+    *
+    * @return RoleSuccessStatistics
+    */
+    public function setPermanentFail($val)
+    {
+        $this->_propDict["permanentFail"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the permanentSuccess
+    *
+    * @return int The permanentSuccess
+    */
+    public function getPermanentSuccess()
+    {
+        if (array_key_exists("permanentSuccess", $this->_propDict)) {
+            return $this->_propDict["permanentSuccess"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the permanentSuccess
+    *
+    * @param int $val The value of the permanentSuccess
+    *
+    * @return RoleSuccessStatistics
+    */
+    public function setPermanentSuccess($val)
+    {
+        $this->_propDict["permanentSuccess"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the removeFail
+    *
+    * @return int The removeFail
+    */
+    public function getRemoveFail()
+    {
+        if (array_key_exists("removeFail", $this->_propDict)) {
+            return $this->_propDict["removeFail"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the removeFail
+    *
+    * @param int $val The value of the removeFail
+    *
+    * @return RoleSuccessStatistics
+    */
+    public function setRemoveFail($val)
+    {
+        $this->_propDict["removeFail"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the removeSuccess
+    *
+    * @return int The removeSuccess
+    */
+    public function getRemoveSuccess()
+    {
+        if (array_key_exists("removeSuccess", $this->_propDict)) {
+            return $this->_propDict["removeSuccess"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the removeSuccess
+    *
+    * @param int $val The value of the removeSuccess
+    *
+    * @return RoleSuccessStatistics
+    */
+    public function setRemoveSuccess($val)
+    {
+        $this->_propDict["removeSuccess"] = $val;
+        return $this;
+    }
+    /**
     * Gets the roleId
     *
     * @return string The roleId
@@ -76,32 +180,6 @@ class RoleSuccessStatistics extends Entity
         return $this;
     }
     /**
-    * Gets the temporarySuccess
-    *
-    * @return int The temporarySuccess
-    */
-    public function getTemporarySuccess()
-    {
-        if (array_key_exists("temporarySuccess", $this->_propDict)) {
-            return $this->_propDict["temporarySuccess"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the temporarySuccess
-    *
-    * @param int $val The value of the temporarySuccess
-    *
-    * @return RoleSuccessStatistics
-    */
-    public function setTemporarySuccess($val)
-    {
-        $this->_propDict["temporarySuccess"] = $val;
-        return $this;
-    }
-    /**
     * Gets the temporaryFail
     *
     * @return int The temporaryFail
@@ -128,107 +206,29 @@ class RoleSuccessStatistics extends Entity
         return $this;
     }
     /**
-    * Gets the permanentSuccess
+    * Gets the temporarySuccess
     *
-    * @return int The permanentSuccess
+    * @return int The temporarySuccess
     */
-    public function getPermanentSuccess()
+    public function getTemporarySuccess()
     {
-        if (array_key_exists("permanentSuccess", $this->_propDict)) {
-            return $this->_propDict["permanentSuccess"];
+        if (array_key_exists("temporarySuccess", $this->_propDict)) {
+            return $this->_propDict["temporarySuccess"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the permanentSuccess
+    * Sets the temporarySuccess
     *
-    * @param int $val The value of the permanentSuccess
-    *
-    * @return RoleSuccessStatistics
-    */
-    public function setPermanentSuccess($val)
-    {
-        $this->_propDict["permanentSuccess"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the permanentFail
-    *
-    * @return int The permanentFail
-    */
-    public function getPermanentFail()
-    {
-        if (array_key_exists("permanentFail", $this->_propDict)) {
-            return $this->_propDict["permanentFail"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the permanentFail
-    *
-    * @param int $val The value of the permanentFail
+    * @param int $val The value of the temporarySuccess
     *
     * @return RoleSuccessStatistics
     */
-    public function setPermanentFail($val)
+    public function setTemporarySuccess($val)
     {
-        $this->_propDict["permanentFail"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the removeSuccess
-    *
-    * @return int The removeSuccess
-    */
-    public function getRemoveSuccess()
-    {
-        if (array_key_exists("removeSuccess", $this->_propDict)) {
-            return $this->_propDict["removeSuccess"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the removeSuccess
-    *
-    * @param int $val The value of the removeSuccess
-    *
-    * @return RoleSuccessStatistics
-    */
-    public function setRemoveSuccess($val)
-    {
-        $this->_propDict["removeSuccess"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the removeFail
-    *
-    * @return int The removeFail
-    */
-    public function getRemoveFail()
-    {
-        if (array_key_exists("removeFail", $this->_propDict)) {
-            return $this->_propDict["removeFail"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the removeFail
-    *
-    * @param int $val The value of the removeFail
-    *
-    * @return RoleSuccessStatistics
-    */
-    public function setRemoveFail($val)
-    {
-        $this->_propDict["removeFail"] = $val;
+        $this->_propDict["temporarySuccess"] = $val;
         return $this;
     }
     /**

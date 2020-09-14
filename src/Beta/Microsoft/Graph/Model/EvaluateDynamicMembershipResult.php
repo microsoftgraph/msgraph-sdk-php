@@ -49,32 +49,6 @@ class EvaluateDynamicMembershipResult extends Entity
         $this->_propDict["membershipRule"] = $val;
         return $this;
     }
-    /**
-    * Gets the membershipRuleEvaluationResult
-    *
-    * @return bool The membershipRuleEvaluationResult
-    */
-    public function getMembershipRuleEvaluationResult()
-    {
-        if (array_key_exists("membershipRuleEvaluationResult", $this->_propDict)) {
-            return $this->_propDict["membershipRuleEvaluationResult"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the membershipRuleEvaluationResult
-    *
-    * @param bool $val The value of the membershipRuleEvaluationResult
-    *
-    * @return EvaluateDynamicMembershipResult
-    */
-    public function setMembershipRuleEvaluationResult($val)
-    {
-        $this->_propDict["membershipRuleEvaluationResult"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the membershipRuleEvaluationDetails
@@ -105,5 +79,31 @@ class EvaluateDynamicMembershipResult extends Entity
     {
         $this->_propDict["membershipRuleEvaluationDetails"] = $val;
          return $this;
+    }
+    /**
+    * Gets the membershipRuleEvaluationResult
+    *
+    * @return bool The membershipRuleEvaluationResult
+    */
+    public function getMembershipRuleEvaluationResult()
+    {
+        if (array_key_exists("membershipRuleEvaluationResult", $this->_propDict)) {
+            return $this->_propDict["membershipRuleEvaluationResult"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the membershipRuleEvaluationResult
+    *
+    * @param bool $val The value of the membershipRuleEvaluationResult
+    *
+    * @return EvaluateDynamicMembershipResult
+    */
+    public function setMembershipRuleEvaluationResult($val)
+    {
+        $this->_propDict["membershipRuleEvaluationResult"] = $val;
+        return $this;
     }
 }

@@ -25,6 +25,33 @@ namespace Beta\Microsoft\Graph\Model;
 class AgreementAcceptance extends Entity
 {
     /**
+    * Gets the agreementFileId
+    *
+    * @return string The agreementFileId
+    */
+    public function getAgreementFileId()
+    {
+        if (array_key_exists("agreementFileId", $this->_propDict)) {
+            return $this->_propDict["agreementFileId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the agreementFileId
+    *
+    * @param string $val The agreementFileId
+    *
+    * @return AgreementAcceptance
+    */
+    public function setAgreementFileId($val)
+    {
+        $this->_propDict["agreementFileId"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the agreementId
     *
     * @return string The agreementId
@@ -52,29 +79,29 @@ class AgreementAcceptance extends Entity
     }
     
     /**
-    * Gets the userId
+    * Gets the deviceDisplayName
     *
-    * @return string The userId
+    * @return string The deviceDisplayName
     */
-    public function getUserId()
+    public function getDeviceDisplayName()
     {
-        if (array_key_exists("userId", $this->_propDict)) {
-            return $this->_propDict["userId"];
+        if (array_key_exists("deviceDisplayName", $this->_propDict)) {
+            return $this->_propDict["deviceDisplayName"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the userId
+    * Sets the deviceDisplayName
     *
-    * @param string $val The userId
+    * @param string $val The deviceDisplayName
     *
     * @return AgreementAcceptance
     */
-    public function setUserId($val)
+    public function setDeviceDisplayName($val)
     {
-        $this->_propDict["userId"] = $val;
+        $this->_propDict["deviceDisplayName"] = $val;
         return $this;
     }
     
@@ -102,33 +129,6 @@ class AgreementAcceptance extends Entity
     public function setDeviceId($val)
     {
         $this->_propDict["deviceId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the deviceDisplayName
-    *
-    * @return string The deviceDisplayName
-    */
-    public function getDeviceDisplayName()
-    {
-        if (array_key_exists("deviceDisplayName", $this->_propDict)) {
-            return $this->_propDict["deviceDisplayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the deviceDisplayName
-    *
-    * @param string $val The deviceDisplayName
-    *
-    * @return AgreementAcceptance
-    */
-    public function setDeviceDisplayName($val)
-    {
-        $this->_propDict["deviceDisplayName"] = $val;
         return $this;
     }
     
@@ -187,110 +187,33 @@ class AgreementAcceptance extends Entity
     }
     
     /**
-    * Gets the agreementFileId
+    * Gets the expirationDateTime
     *
-    * @return string The agreementFileId
+    * @return \DateTime The expirationDateTime
     */
-    public function getAgreementFileId()
+    public function getExpirationDateTime()
     {
-        if (array_key_exists("agreementFileId", $this->_propDict)) {
-            return $this->_propDict["agreementFileId"];
-        } else {
-            return null;
+        if (array_key_exists("expirationDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["expirationDateTime"], "\DateTime")) {
+                return $this->_propDict["expirationDateTime"];
+            } else {
+                $this->_propDict["expirationDateTime"] = new \DateTime($this->_propDict["expirationDateTime"]);
+                return $this->_propDict["expirationDateTime"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the agreementFileId
+    * Sets the expirationDateTime
     *
-    * @param string $val The agreementFileId
+    * @param \DateTime $val The expirationDateTime
     *
     * @return AgreementAcceptance
     */
-    public function setAgreementFileId($val)
+    public function setExpirationDateTime($val)
     {
-        $this->_propDict["agreementFileId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the userDisplayName
-    *
-    * @return string The userDisplayName
-    */
-    public function getUserDisplayName()
-    {
-        if (array_key_exists("userDisplayName", $this->_propDict)) {
-            return $this->_propDict["userDisplayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the userDisplayName
-    *
-    * @param string $val The userDisplayName
-    *
-    * @return AgreementAcceptance
-    */
-    public function setUserDisplayName($val)
-    {
-        $this->_propDict["userDisplayName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the userPrincipalName
-    *
-    * @return string The userPrincipalName
-    */
-    public function getUserPrincipalName()
-    {
-        if (array_key_exists("userPrincipalName", $this->_propDict)) {
-            return $this->_propDict["userPrincipalName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the userPrincipalName
-    *
-    * @param string $val The userPrincipalName
-    *
-    * @return AgreementAcceptance
-    */
-    public function setUserPrincipalName($val)
-    {
-        $this->_propDict["userPrincipalName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the userEmail
-    *
-    * @return string The userEmail
-    */
-    public function getUserEmail()
-    {
-        if (array_key_exists("userEmail", $this->_propDict)) {
-            return $this->_propDict["userEmail"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the userEmail
-    *
-    * @param string $val The userEmail
-    *
-    * @return AgreementAcceptance
-    */
-    public function setUserEmail($val)
-    {
-        $this->_propDict["userEmail"] = $val;
+        $this->_propDict["expirationDateTime"] = $val;
         return $this;
     }
     
@@ -326,37 +249,6 @@ class AgreementAcceptance extends Entity
     }
     
     /**
-    * Gets the expirationDateTime
-    *
-    * @return \DateTime The expirationDateTime
-    */
-    public function getExpirationDateTime()
-    {
-        if (array_key_exists("expirationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["expirationDateTime"], "\DateTime")) {
-                return $this->_propDict["expirationDateTime"];
-            } else {
-                $this->_propDict["expirationDateTime"] = new \DateTime($this->_propDict["expirationDateTime"]);
-                return $this->_propDict["expirationDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the expirationDateTime
-    *
-    * @param \DateTime $val The expirationDateTime
-    *
-    * @return AgreementAcceptance
-    */
-    public function setExpirationDateTime($val)
-    {
-        $this->_propDict["expirationDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the state
     *
     * @return AgreementAcceptanceState The state
@@ -384,6 +276,114 @@ class AgreementAcceptance extends Entity
     public function setState($val)
     {
         $this->_propDict["state"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userDisplayName
+    *
+    * @return string The userDisplayName
+    */
+    public function getUserDisplayName()
+    {
+        if (array_key_exists("userDisplayName", $this->_propDict)) {
+            return $this->_propDict["userDisplayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the userDisplayName
+    *
+    * @param string $val The userDisplayName
+    *
+    * @return AgreementAcceptance
+    */
+    public function setUserDisplayName($val)
+    {
+        $this->_propDict["userDisplayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userEmail
+    *
+    * @return string The userEmail
+    */
+    public function getUserEmail()
+    {
+        if (array_key_exists("userEmail", $this->_propDict)) {
+            return $this->_propDict["userEmail"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the userEmail
+    *
+    * @param string $val The userEmail
+    *
+    * @return AgreementAcceptance
+    */
+    public function setUserEmail($val)
+    {
+        $this->_propDict["userEmail"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userId
+    *
+    * @return string The userId
+    */
+    public function getUserId()
+    {
+        if (array_key_exists("userId", $this->_propDict)) {
+            return $this->_propDict["userId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the userId
+    *
+    * @param string $val The userId
+    *
+    * @return AgreementAcceptance
+    */
+    public function setUserId($val)
+    {
+        $this->_propDict["userId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userPrincipalName
+    *
+    * @return string The userPrincipalName
+    */
+    public function getUserPrincipalName()
+    {
+        if (array_key_exists("userPrincipalName", $this->_propDict)) {
+            return $this->_propDict["userPrincipalName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the userPrincipalName
+    *
+    * @param string $val The userPrincipalName
+    *
+    * @return AgreementAcceptance
+    */
+    public function setUserPrincipalName($val)
+    {
+        $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
     

@@ -23,34 +23,6 @@ namespace Beta\Microsoft\Graph\CallRecords\Model;
 */
 class UserFeedback extends \Beta\Microsoft\Graph\Model\Entity
 {
-    /**
-    * Gets the text
-    * The feedback text provided by the user of this endpoint for the session.
-    *
-    * @return string The text
-    */
-    public function getText()
-    {
-        if (array_key_exists("text", $this->_propDict)) {
-            return $this->_propDict["text"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the text
-    * The feedback text provided by the user of this endpoint for the session.
-    *
-    * @param string $val The value of the text
-    *
-    * @return UserFeedback
-    */
-    public function setText($val)
-    {
-        $this->_propDict["text"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the rating
@@ -83,6 +55,34 @@ class UserFeedback extends \Beta\Microsoft\Graph\Model\Entity
     {
         $this->_propDict["rating"] = $val;
          return $this;
+    }
+    /**
+    * Gets the text
+    * The feedback text provided by the user of this endpoint for the session.
+    *
+    * @return string The text
+    */
+    public function getText()
+    {
+        if (array_key_exists("text", $this->_propDict)) {
+            return $this->_propDict["text"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the text
+    * The feedback text provided by the user of this endpoint for the session.
+    *
+    * @param string $val The value of the text
+    *
+    * @return UserFeedback
+    */
+    public function setText($val)
+    {
+        $this->_propDict["text"] = $val;
+        return $this;
     }
 
     /**

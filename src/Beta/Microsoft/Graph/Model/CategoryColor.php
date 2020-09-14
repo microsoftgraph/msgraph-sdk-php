@@ -31,6 +31,7 @@ class CategoryColor extends Enum
     */
     const PRESET0 = "preset0";
     const PRESET1 = "preset1";
+    const NONE = "none";
     const PRESET2 = "preset2";
     const PRESET3 = "preset3";
     const PRESET4 = "preset4";
@@ -54,5 +55,4 @@ class CategoryColor extends Enum
     const PRESET22 = "preset22";
     const PRESET23 = "preset23";
     const PRESET24 = "preset24";
-    const NONE = "none";
 }

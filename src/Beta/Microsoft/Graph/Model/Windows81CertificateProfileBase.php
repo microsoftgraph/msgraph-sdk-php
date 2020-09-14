@@ -26,36 +26,6 @@ class Windows81CertificateProfileBase extends WindowsCertificateProfileBase
 {
 
      /** 
-     * Gets the extendedKeyUsages
-    * Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.
-     *
-     * @return array The extendedKeyUsages
-     */
-    public function getExtendedKeyUsages()
-    {
-        if (array_key_exists("extendedKeyUsages", $this->_propDict)) {
-           return $this->_propDict["extendedKeyUsages"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the extendedKeyUsages
-    * Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.
-    *
-    * @param ExtendedKeyUsage $val The extendedKeyUsages
-    *
-    * @return Windows81CertificateProfileBase
-    */
-    public function setExtendedKeyUsages($val)
-    {
-		$this->_propDict["extendedKeyUsages"] = $val;
-        return $this;
-    }
-    
-
-     /** 
      * Gets the customSubjectAlternativeNames
     * Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
      *
@@ -81,6 +51,36 @@ class Windows81CertificateProfileBase extends WindowsCertificateProfileBase
     public function setCustomSubjectAlternativeNames($val)
     {
 		$this->_propDict["customSubjectAlternativeNames"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the extendedKeyUsages
+    * Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.
+     *
+     * @return array The extendedKeyUsages
+     */
+    public function getExtendedKeyUsages()
+    {
+        if (array_key_exists("extendedKeyUsages", $this->_propDict)) {
+           return $this->_propDict["extendedKeyUsages"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the extendedKeyUsages
+    * Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.
+    *
+    * @param ExtendedKeyUsage $val The extendedKeyUsages
+    *
+    * @return Windows81CertificateProfileBase
+    */
+    public function setExtendedKeyUsages($val)
+    {
+		$this->_propDict["extendedKeyUsages"] = $val;
         return $this;
     }
     

@@ -24,34 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class ComanagedDevicesSummary extends Entity
 {
     /**
-    * Gets the inventoryCount
-    * Number of devices with Inventory swung-over. This property is read-only.
-    *
-    * @return int The inventoryCount
-    */
-    public function getInventoryCount()
-    {
-        if (array_key_exists("inventoryCount", $this->_propDict)) {
-            return $this->_propDict["inventoryCount"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the inventoryCount
-    * Number of devices with Inventory swung-over. This property is read-only.
-    *
-    * @param int $val The value of the inventoryCount
-    *
-    * @return ComanagedDevicesSummary
-    */
-    public function setInventoryCount($val)
-    {
-        $this->_propDict["inventoryCount"] = $val;
-        return $this;
-    }
-    /**
     * Gets the compliancePolicyCount
     * Number of devices with CompliancePolicy swung-over. This property is read-only.
     *
@@ -77,34 +49,6 @@ class ComanagedDevicesSummary extends Entity
     public function setCompliancePolicyCount($val)
     {
         $this->_propDict["compliancePolicyCount"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the resourceAccessCount
-    * Number of devices with ResourceAccess swung-over. This property is read-only.
-    *
-    * @return int The resourceAccessCount
-    */
-    public function getResourceAccessCount()
-    {
-        if (array_key_exists("resourceAccessCount", $this->_propDict)) {
-            return $this->_propDict["resourceAccessCount"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the resourceAccessCount
-    * Number of devices with ResourceAccess swung-over. This property is read-only.
-    *
-    * @param int $val The value of the resourceAccessCount
-    *
-    * @return ComanagedDevicesSummary
-    */
-    public function setResourceAccessCount($val)
-    {
-        $this->_propDict["resourceAccessCount"] = $val;
         return $this;
     }
     /**
@@ -136,34 +80,6 @@ class ComanagedDevicesSummary extends Entity
         return $this;
     }
     /**
-    * Gets the windowsUpdateForBusinessCount
-    * Number of devices with WindowsUpdateForBusiness swung-over. This property is read-only.
-    *
-    * @return int The windowsUpdateForBusinessCount
-    */
-    public function getWindowsUpdateForBusinessCount()
-    {
-        if (array_key_exists("windowsUpdateForBusinessCount", $this->_propDict)) {
-            return $this->_propDict["windowsUpdateForBusinessCount"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the windowsUpdateForBusinessCount
-    * Number of devices with WindowsUpdateForBusiness swung-over. This property is read-only.
-    *
-    * @param int $val The value of the windowsUpdateForBusinessCount
-    *
-    * @return ComanagedDevicesSummary
-    */
-    public function setWindowsUpdateForBusinessCount($val)
-    {
-        $this->_propDict["windowsUpdateForBusinessCount"] = $val;
-        return $this;
-    }
-    /**
     * Gets the endpointProtectionCount
     * Number of devices with EndpointProtection swung-over. This property is read-only.
     *
@@ -189,6 +105,34 @@ class ComanagedDevicesSummary extends Entity
     public function setEndpointProtectionCount($val)
     {
         $this->_propDict["endpointProtectionCount"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the inventoryCount
+    * Number of devices with Inventory swung-over. This property is read-only.
+    *
+    * @return int The inventoryCount
+    */
+    public function getInventoryCount()
+    {
+        if (array_key_exists("inventoryCount", $this->_propDict)) {
+            return $this->_propDict["inventoryCount"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the inventoryCount
+    * Number of devices with Inventory swung-over. This property is read-only.
+    *
+    * @param int $val The value of the inventoryCount
+    *
+    * @return ComanagedDevicesSummary
+    */
+    public function setInventoryCount($val)
+    {
+        $this->_propDict["inventoryCount"] = $val;
         return $this;
     }
     /**
@@ -248,6 +192,34 @@ class ComanagedDevicesSummary extends Entity
         return $this;
     }
     /**
+    * Gets the resourceAccessCount
+    * Number of devices with ResourceAccess swung-over. This property is read-only.
+    *
+    * @return int The resourceAccessCount
+    */
+    public function getResourceAccessCount()
+    {
+        if (array_key_exists("resourceAccessCount", $this->_propDict)) {
+            return $this->_propDict["resourceAccessCount"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the resourceAccessCount
+    * Number of devices with ResourceAccess swung-over. This property is read-only.
+    *
+    * @param int $val The value of the resourceAccessCount
+    *
+    * @return ComanagedDevicesSummary
+    */
+    public function setResourceAccessCount($val)
+    {
+        $this->_propDict["resourceAccessCount"] = $val;
+        return $this;
+    }
+    /**
     * Gets the totalComanagedCount
     * Number of Co-Managed Devices. This property is read-only.
     *
@@ -273,6 +245,34 @@ class ComanagedDevicesSummary extends Entity
     public function setTotalComanagedCount($val)
     {
         $this->_propDict["totalComanagedCount"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the windowsUpdateForBusinessCount
+    * Number of devices with WindowsUpdateForBusiness swung-over. This property is read-only.
+    *
+    * @return int The windowsUpdateForBusinessCount
+    */
+    public function getWindowsUpdateForBusinessCount()
+    {
+        if (array_key_exists("windowsUpdateForBusinessCount", $this->_propDict)) {
+            return $this->_propDict["windowsUpdateForBusinessCount"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the windowsUpdateForBusinessCount
+    * Number of devices with WindowsUpdateForBusiness swung-over. This property is read-only.
+    *
+    * @param int $val The value of the windowsUpdateForBusinessCount
+    *
+    * @return ComanagedDevicesSummary
+    */
+    public function setWindowsUpdateForBusinessCount($val)
+    {
+        $this->_propDict["windowsUpdateForBusinessCount"] = $val;
         return $this;
     }
 }

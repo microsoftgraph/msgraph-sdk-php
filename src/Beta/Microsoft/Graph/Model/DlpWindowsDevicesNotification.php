@@ -24,32 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class DlpWindowsDevicesNotification extends DlpNotification
 {
     /**
-    * Gets the lastModfiedBy
-    *
-    * @return string The lastModfiedBy
-    */
-    public function getLastModfiedBy()
-    {
-        if (array_key_exists("lastModfiedBy", $this->_propDict)) {
-            return $this->_propDict["lastModfiedBy"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the lastModfiedBy
-    *
-    * @param string $val The value of the lastModfiedBy
-    *
-    * @return DlpWindowsDevicesNotification
-    */
-    public function setLastModfiedBy($val)
-    {
-        $this->_propDict["lastModfiedBy"] = $val;
-        return $this;
-    }
-    /**
     * Gets the contentName
     *
     * @return string The contentName
@@ -73,6 +47,32 @@ class DlpWindowsDevicesNotification extends DlpNotification
     public function setContentName($val)
     {
         $this->_propDict["contentName"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the lastModfiedBy
+    *
+    * @return string The lastModfiedBy
+    */
+    public function getLastModfiedBy()
+    {
+        if (array_key_exists("lastModfiedBy", $this->_propDict)) {
+            return $this->_propDict["lastModfiedBy"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the lastModfiedBy
+    *
+    * @param string $val The value of the lastModfiedBy
+    *
+    * @return DlpWindowsDevicesNotification
+    */
+    public function setLastModfiedBy($val)
+    {
+        $this->_propDict["lastModfiedBy"] = $val;
         return $this;
     }
 }

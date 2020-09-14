@@ -56,6 +56,37 @@ class SynchronizationQuarantine extends Entity
     }
 
     /**
+    * Gets the error
+    *
+    * @return SynchronizationError The error
+    */
+    public function getError()
+    {
+        if (array_key_exists("error", $this->_propDict)) {
+            if (is_a($this->_propDict["error"], "Beta\Microsoft\Graph\Model\SynchronizationError")) {
+                return $this->_propDict["error"];
+            } else {
+                $this->_propDict["error"] = new SynchronizationError($this->_propDict["error"]);
+                return $this->_propDict["error"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the error
+    *
+    * @param SynchronizationError $val The value to assign to the error
+    *
+    * @return SynchronizationQuarantine The SynchronizationQuarantine
+    */
+    public function setError($val)
+    {
+        $this->_propDict["error"] = $val;
+         return $this;
+    }
+
+    /**
     * Gets the nextAttempt
     *
     * @return \DateTime The nextAttempt
@@ -114,37 +145,6 @@ class SynchronizationQuarantine extends Entity
     public function setReason($val)
     {
         $this->_propDict["reason"] = $val;
-         return $this;
-    }
-
-    /**
-    * Gets the error
-    *
-    * @return SynchronizationError The error
-    */
-    public function getError()
-    {
-        if (array_key_exists("error", $this->_propDict)) {
-            if (is_a($this->_propDict["error"], "Beta\Microsoft\Graph\Model\SynchronizationError")) {
-                return $this->_propDict["error"];
-            } else {
-                $this->_propDict["error"] = new SynchronizationError($this->_propDict["error"]);
-                return $this->_propDict["error"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the error
-    *
-    * @param SynchronizationError $val The value to assign to the error
-    *
-    * @return SynchronizationQuarantine The SynchronizationQuarantine
-    */
-    public function setError($val)
-    {
-        $this->_propDict["error"] = $val;
          return $this;
     }
 

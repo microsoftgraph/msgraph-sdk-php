@@ -52,33 +52,6 @@ class AdminConsentRequestPolicy extends Entity
     }
     
     /**
-    * Gets the version
-    *
-    * @return int The version
-    */
-    public function getVersion()
-    {
-        if (array_key_exists("version", $this->_propDict)) {
-            return $this->_propDict["version"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the version
-    *
-    * @param int $val The version
-    *
-    * @return AdminConsentRequestPolicy
-    */
-    public function setVersion($val)
-    {
-        $this->_propDict["version"] = intval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the notifyReviewers
     *
     * @return bool The notifyReviewers
@@ -184,6 +157,33 @@ class AdminConsentRequestPolicy extends Entity
     public function setReviewers($val)
     {
 		$this->_propDict["reviewers"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the version
+    *
+    * @return int The version
+    */
+    public function getVersion()
+    {
+        if (array_key_exists("version", $this->_propDict)) {
+            return $this->_propDict["version"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the version
+    *
+    * @param int $val The version
+    *
+    * @return AdminConsentRequestPolicy
+    */
+    public function setVersion($val)
+    {
+        $this->_propDict["version"] = intval($val);
         return $this;
     }
     

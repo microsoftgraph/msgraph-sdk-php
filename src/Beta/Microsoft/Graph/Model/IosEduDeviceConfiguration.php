@@ -25,35 +25,35 @@ namespace Beta\Microsoft\Graph\Model;
 class IosEduDeviceConfiguration extends DeviceConfiguration
 {
     /**
-    * Gets the teacherCertificateSettings
-    * The Trusted Root and PFX certificates for Teacher
+    * Gets the deviceCertificateSettings
+    * The Trusted Root and PFX certificates for Device
     *
-    * @return IosEduCertificateSettings The teacherCertificateSettings
+    * @return IosEduCertificateSettings The deviceCertificateSettings
     */
-    public function getTeacherCertificateSettings()
+    public function getDeviceCertificateSettings()
     {
-        if (array_key_exists("teacherCertificateSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["teacherCertificateSettings"], "Beta\Microsoft\Graph\Model\IosEduCertificateSettings")) {
-                return $this->_propDict["teacherCertificateSettings"];
+        if (array_key_exists("deviceCertificateSettings", $this->_propDict)) {
+            if (is_a($this->_propDict["deviceCertificateSettings"], "Beta\Microsoft\Graph\Model\IosEduCertificateSettings")) {
+                return $this->_propDict["deviceCertificateSettings"];
             } else {
-                $this->_propDict["teacherCertificateSettings"] = new IosEduCertificateSettings($this->_propDict["teacherCertificateSettings"]);
-                return $this->_propDict["teacherCertificateSettings"];
+                $this->_propDict["deviceCertificateSettings"] = new IosEduCertificateSettings($this->_propDict["deviceCertificateSettings"]);
+                return $this->_propDict["deviceCertificateSettings"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the teacherCertificateSettings
-    * The Trusted Root and PFX certificates for Teacher
+    * Sets the deviceCertificateSettings
+    * The Trusted Root and PFX certificates for Device
     *
-    * @param IosEduCertificateSettings $val The teacherCertificateSettings
+    * @param IosEduCertificateSettings $val The deviceCertificateSettings
     *
     * @return IosEduDeviceConfiguration
     */
-    public function setTeacherCertificateSettings($val)
+    public function setDeviceCertificateSettings($val)
     {
-        $this->_propDict["teacherCertificateSettings"] = $val;
+        $this->_propDict["deviceCertificateSettings"] = $val;
         return $this;
     }
     
@@ -91,35 +91,35 @@ class IosEduDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
-    * Gets the deviceCertificateSettings
-    * The Trusted Root and PFX certificates for Device
+    * Gets the teacherCertificateSettings
+    * The Trusted Root and PFX certificates for Teacher
     *
-    * @return IosEduCertificateSettings The deviceCertificateSettings
+    * @return IosEduCertificateSettings The teacherCertificateSettings
     */
-    public function getDeviceCertificateSettings()
+    public function getTeacherCertificateSettings()
     {
-        if (array_key_exists("deviceCertificateSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceCertificateSettings"], "Beta\Microsoft\Graph\Model\IosEduCertificateSettings")) {
-                return $this->_propDict["deviceCertificateSettings"];
+        if (array_key_exists("teacherCertificateSettings", $this->_propDict)) {
+            if (is_a($this->_propDict["teacherCertificateSettings"], "Beta\Microsoft\Graph\Model\IosEduCertificateSettings")) {
+                return $this->_propDict["teacherCertificateSettings"];
             } else {
-                $this->_propDict["deviceCertificateSettings"] = new IosEduCertificateSettings($this->_propDict["deviceCertificateSettings"]);
-                return $this->_propDict["deviceCertificateSettings"];
+                $this->_propDict["teacherCertificateSettings"] = new IosEduCertificateSettings($this->_propDict["teacherCertificateSettings"]);
+                return $this->_propDict["teacherCertificateSettings"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the deviceCertificateSettings
-    * The Trusted Root and PFX certificates for Device
+    * Sets the teacherCertificateSettings
+    * The Trusted Root and PFX certificates for Teacher
     *
-    * @param IosEduCertificateSettings $val The deviceCertificateSettings
+    * @param IosEduCertificateSettings $val The teacherCertificateSettings
     *
     * @return IosEduDeviceConfiguration
     */
-    public function setDeviceCertificateSettings($val)
+    public function setTeacherCertificateSettings($val)
     {
-        $this->_propDict["deviceCertificateSettings"] = $val;
+        $this->_propDict["teacherCertificateSettings"] = $val;
         return $this;
     }
     

@@ -25,31 +25,35 @@ namespace Beta\Microsoft\Graph\Model;
 class RiskyUserHistoryItem extends RiskyUser
 {
     /**
-    * Gets the userId
-    * The id of the user.
+    * Gets the activity
+    * The activity related to user risk level change.
     *
-    * @return string The userId
+    * @return RiskUserActivity The activity
     */
-    public function getUserId()
+    public function getActivity()
     {
-        if (array_key_exists("userId", $this->_propDict)) {
-            return $this->_propDict["userId"];
-        } else {
-            return null;
+        if (array_key_exists("activity", $this->_propDict)) {
+            if (is_a($this->_propDict["activity"], "Beta\Microsoft\Graph\Model\RiskUserActivity")) {
+                return $this->_propDict["activity"];
+            } else {
+                $this->_propDict["activity"] = new RiskUserActivity($this->_propDict["activity"]);
+                return $this->_propDict["activity"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the userId
-    * The id of the user.
+    * Sets the activity
+    * The activity related to user risk level change.
     *
-    * @param string $val The userId
+    * @param RiskUserActivity $val The activity
     *
     * @return RiskyUserHistoryItem
     */
-    public function setUserId($val)
+    public function setActivity($val)
     {
-        $this->_propDict["userId"] = $val;
+        $this->_propDict["activity"] = $val;
         return $this;
     }
     
@@ -83,35 +87,31 @@ class RiskyUserHistoryItem extends RiskyUser
     }
     
     /**
-    * Gets the activity
-    * The activity related to user risk level change.
+    * Gets the userId
+    * The id of the user.
     *
-    * @return RiskUserActivity The activity
+    * @return string The userId
     */
-    public function getActivity()
+    public function getUserId()
     {
-        if (array_key_exists("activity", $this->_propDict)) {
-            if (is_a($this->_propDict["activity"], "Beta\Microsoft\Graph\Model\RiskUserActivity")) {
-                return $this->_propDict["activity"];
-            } else {
-                $this->_propDict["activity"] = new RiskUserActivity($this->_propDict["activity"]);
-                return $this->_propDict["activity"];
-            }
+        if (array_key_exists("userId", $this->_propDict)) {
+            return $this->_propDict["userId"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the activity
-    * The activity related to user risk level change.
+    * Sets the userId
+    * The id of the user.
     *
-    * @param RiskUserActivity $val The activity
+    * @param string $val The userId
     *
     * @return RiskyUserHistoryItem
     */
-    public function setActivity($val)
+    public function setUserId($val)
     {
-        $this->_propDict["activity"] = $val;
+        $this->_propDict["userId"] = $val;
         return $this;
     }
     

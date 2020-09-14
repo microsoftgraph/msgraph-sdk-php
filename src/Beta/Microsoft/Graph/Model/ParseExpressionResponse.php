@@ -55,32 +55,6 @@ class ParseExpressionResponse extends Entity
          return $this;
     }
     /**
-    * Gets the evaluationSucceeded
-    *
-    * @return bool The evaluationSucceeded
-    */
-    public function getEvaluationSucceeded()
-    {
-        if (array_key_exists("evaluationSucceeded", $this->_propDict)) {
-            return $this->_propDict["evaluationSucceeded"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the evaluationSucceeded
-    *
-    * @param bool $val The value of the evaluationSucceeded
-    *
-    * @return ParseExpressionResponse
-    */
-    public function setEvaluationSucceeded($val)
-    {
-        $this->_propDict["evaluationSucceeded"] = $val;
-        return $this;
-    }
-    /**
     * Gets the evaluationResult
     *
     * @return string The evaluationResult
@@ -104,6 +78,32 @@ class ParseExpressionResponse extends Entity
     public function setEvaluationResult($val)
     {
         $this->_propDict["evaluationResult"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the evaluationSucceeded
+    *
+    * @return bool The evaluationSucceeded
+    */
+    public function getEvaluationSucceeded()
+    {
+        if (array_key_exists("evaluationSucceeded", $this->_propDict)) {
+            return $this->_propDict["evaluationSucceeded"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the evaluationSucceeded
+    *
+    * @param bool $val The value of the evaluationSucceeded
+    *
+    * @return ParseExpressionResponse
+    */
+    public function setEvaluationSucceeded($val)
+    {
+        $this->_propDict["evaluationSucceeded"] = $val;
         return $this;
     }
 

@@ -23,6 +23,62 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class ImportedWindowsAutopilotDeviceIdentityState extends Entity
 {
+    /**
+    * Gets the deviceErrorCode
+    * Device error code reported by Device Directory Service(DDS).
+    *
+    * @return int The deviceErrorCode
+    */
+    public function getDeviceErrorCode()
+    {
+        if (array_key_exists("deviceErrorCode", $this->_propDict)) {
+            return $this->_propDict["deviceErrorCode"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the deviceErrorCode
+    * Device error code reported by Device Directory Service(DDS).
+    *
+    * @param int $val The value of the deviceErrorCode
+    *
+    * @return ImportedWindowsAutopilotDeviceIdentityState
+    */
+    public function setDeviceErrorCode($val)
+    {
+        $this->_propDict["deviceErrorCode"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the deviceErrorName
+    * Device error name reported by Device Directory Service(DDS).
+    *
+    * @return string The deviceErrorName
+    */
+    public function getDeviceErrorName()
+    {
+        if (array_key_exists("deviceErrorName", $this->_propDict)) {
+            return $this->_propDict["deviceErrorName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the deviceErrorName
+    * Device error name reported by Device Directory Service(DDS).
+    *
+    * @param string $val The value of the deviceErrorName
+    *
+    * @return ImportedWindowsAutopilotDeviceIdentityState
+    */
+    public function setDeviceErrorName($val)
+    {
+        $this->_propDict["deviceErrorName"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the deviceImportStatus
@@ -82,62 +138,6 @@ class ImportedWindowsAutopilotDeviceIdentityState extends Entity
     public function setDeviceRegistrationId($val)
     {
         $this->_propDict["deviceRegistrationId"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the deviceErrorCode
-    * Device error code reported by Device Directory Service(DDS).
-    *
-    * @return int The deviceErrorCode
-    */
-    public function getDeviceErrorCode()
-    {
-        if (array_key_exists("deviceErrorCode", $this->_propDict)) {
-            return $this->_propDict["deviceErrorCode"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the deviceErrorCode
-    * Device error code reported by Device Directory Service(DDS).
-    *
-    * @param int $val The value of the deviceErrorCode
-    *
-    * @return ImportedWindowsAutopilotDeviceIdentityState
-    */
-    public function setDeviceErrorCode($val)
-    {
-        $this->_propDict["deviceErrorCode"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the deviceErrorName
-    * Device error name reported by Device Directory Service(DDS).
-    *
-    * @return string The deviceErrorName
-    */
-    public function getDeviceErrorName()
-    {
-        if (array_key_exists("deviceErrorName", $this->_propDict)) {
-            return $this->_propDict["deviceErrorName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the deviceErrorName
-    * Device error name reported by Device Directory Service(DDS).
-    *
-    * @param string $val The value of the deviceErrorName
-    *
-    * @return ImportedWindowsAutopilotDeviceIdentityState
-    */
-    public function setDeviceErrorName($val)
-    {
-        $this->_propDict["deviceErrorName"] = $val;
         return $this;
     }
 }

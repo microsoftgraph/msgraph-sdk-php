@@ -25,87 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class Currency extends Entity
 {
     /**
-    * Gets the code
-    *
-    * @return string The code
-    */
-    public function getCode()
-    {
-        if (array_key_exists("code", $this->_propDict)) {
-            return $this->_propDict["code"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the code
-    *
-    * @param string $val The code
-    *
-    * @return Currency
-    */
-    public function setCode($val)
-    {
-        $this->_propDict["code"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the displayName
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the displayName
-    *
-    * @param string $val The displayName
-    *
-    * @return Currency
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the symbol
-    *
-    * @return string The symbol
-    */
-    public function getSymbol()
-    {
-        if (array_key_exists("symbol", $this->_propDict)) {
-            return $this->_propDict["symbol"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the symbol
-    *
-    * @param string $val The symbol
-    *
-    * @return Currency
-    */
-    public function setSymbol($val)
-    {
-        $this->_propDict["symbol"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the amountDecimalPlaces
     *
     * @return string The amountDecimalPlaces
@@ -164,6 +83,60 @@ class Currency extends Entity
     }
     
     /**
+    * Gets the code
+    *
+    * @return string The code
+    */
+    public function getCode()
+    {
+        if (array_key_exists("code", $this->_propDict)) {
+            return $this->_propDict["code"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the code
+    *
+    * @param string $val The code
+    *
+    * @return Currency
+    */
+    public function setCode($val)
+    {
+        $this->_propDict["code"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the displayName
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the displayName
+    *
+    * @param string $val The displayName
+    *
+    * @return Currency
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the lastModifiedDateTime
     *
     * @return \DateTime The lastModifiedDateTime
@@ -191,6 +164,33 @@ class Currency extends Entity
     public function setLastModifiedDateTime($val)
     {
         $this->_propDict["lastModifiedDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the symbol
+    *
+    * @return string The symbol
+    */
+    public function getSymbol()
+    {
+        if (array_key_exists("symbol", $this->_propDict)) {
+            return $this->_propDict["symbol"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the symbol
+    *
+    * @param string $val The symbol
+    *
+    * @return Currency
+    */
+    public function setSymbol($val)
+    {
+        $this->_propDict["symbol"] = $val;
         return $this;
     }
     

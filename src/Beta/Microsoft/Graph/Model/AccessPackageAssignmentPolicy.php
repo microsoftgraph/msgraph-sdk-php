@@ -52,56 +52,33 @@ class AccessPackageAssignmentPolicy extends Entity
     }
     
     /**
-    * Gets the displayName
+    * Gets the accessReviewSettings
     *
-    * @return string The displayName
+    * @return AssignmentReviewSettings The accessReviewSettings
     */
-    public function getDisplayName()
+    public function getAccessReviewSettings()
     {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
+        if (array_key_exists("accessReviewSettings", $this->_propDict)) {
+            if (is_a($this->_propDict["accessReviewSettings"], "Beta\Microsoft\Graph\Model\AssignmentReviewSettings")) {
+                return $this->_propDict["accessReviewSettings"];
+            } else {
+                $this->_propDict["accessReviewSettings"] = new AssignmentReviewSettings($this->_propDict["accessReviewSettings"]);
+                return $this->_propDict["accessReviewSettings"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the displayName
+    * Sets the accessReviewSettings
     *
-    * @param string $val The displayName
+    * @param AssignmentReviewSettings $val The accessReviewSettings
     *
     * @return AccessPackageAssignmentPolicy
     */
-    public function setDisplayName($val)
+    public function setAccessReviewSettings($val)
     {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the description
-    *
-    * @return string The description
-    */
-    public function getDescription()
-    {
-        if (array_key_exists("description", $this->_propDict)) {
-            return $this->_propDict["description"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the description
-    *
-    * @param string $val The description
-    *
-    * @return AccessPackageAssignmentPolicy
-    */
-    public function setDescription($val)
-    {
-        $this->_propDict["description"] = $val;
+        $this->_propDict["accessReviewSettings"] = $val;
         return $this;
     }
     
@@ -129,64 +106,6 @@ class AccessPackageAssignmentPolicy extends Entity
     public function setCanExtend($val)
     {
         $this->_propDict["canExtend"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the durationInDays
-    *
-    * @return int The durationInDays
-    */
-    public function getDurationInDays()
-    {
-        if (array_key_exists("durationInDays", $this->_propDict)) {
-            return $this->_propDict["durationInDays"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the durationInDays
-    *
-    * @param int $val The durationInDays
-    *
-    * @return AccessPackageAssignmentPolicy
-    */
-    public function setDurationInDays($val)
-    {
-        $this->_propDict["durationInDays"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the expirationDateTime
-    *
-    * @return \DateTime The expirationDateTime
-    */
-    public function getExpirationDateTime()
-    {
-        if (array_key_exists("expirationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["expirationDateTime"], "\DateTime")) {
-                return $this->_propDict["expirationDateTime"];
-            } else {
-                $this->_propDict["expirationDateTime"] = new \DateTime($this->_propDict["expirationDateTime"]);
-                return $this->_propDict["expirationDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the expirationDateTime
-    *
-    * @param \DateTime $val The expirationDateTime
-    *
-    * @return AccessPackageAssignmentPolicy
-    */
-    public function setExpirationDateTime($val)
-    {
-        $this->_propDict["expirationDateTime"] = $val;
         return $this;
     }
     
@@ -249,6 +168,118 @@ class AccessPackageAssignmentPolicy extends Entity
     }
     
     /**
+    * Gets the description
+    *
+    * @return string The description
+    */
+    public function getDescription()
+    {
+        if (array_key_exists("description", $this->_propDict)) {
+            return $this->_propDict["description"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the description
+    *
+    * @param string $val The description
+    *
+    * @return AccessPackageAssignmentPolicy
+    */
+    public function setDescription($val)
+    {
+        $this->_propDict["description"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the displayName
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the displayName
+    *
+    * @param string $val The displayName
+    *
+    * @return AccessPackageAssignmentPolicy
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the durationInDays
+    *
+    * @return int The durationInDays
+    */
+    public function getDurationInDays()
+    {
+        if (array_key_exists("durationInDays", $this->_propDict)) {
+            return $this->_propDict["durationInDays"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the durationInDays
+    *
+    * @param int $val The durationInDays
+    *
+    * @return AccessPackageAssignmentPolicy
+    */
+    public function setDurationInDays($val)
+    {
+        $this->_propDict["durationInDays"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the expirationDateTime
+    *
+    * @return \DateTime The expirationDateTime
+    */
+    public function getExpirationDateTime()
+    {
+        if (array_key_exists("expirationDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["expirationDateTime"], "\DateTime")) {
+                return $this->_propDict["expirationDateTime"];
+            } else {
+                $this->_propDict["expirationDateTime"] = new \DateTime($this->_propDict["expirationDateTime"]);
+                return $this->_propDict["expirationDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the expirationDateTime
+    *
+    * @param \DateTime $val The expirationDateTime
+    *
+    * @return AccessPackageAssignmentPolicy
+    */
+    public function setExpirationDateTime($val)
+    {
+        $this->_propDict["expirationDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the modifiedBy
     *
     * @return string The modifiedBy
@@ -307,37 +338,6 @@ class AccessPackageAssignmentPolicy extends Entity
     }
     
     /**
-    * Gets the requestorSettings
-    *
-    * @return RequestorSettings The requestorSettings
-    */
-    public function getRequestorSettings()
-    {
-        if (array_key_exists("requestorSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["requestorSettings"], "Beta\Microsoft\Graph\Model\RequestorSettings")) {
-                return $this->_propDict["requestorSettings"];
-            } else {
-                $this->_propDict["requestorSettings"] = new RequestorSettings($this->_propDict["requestorSettings"]);
-                return $this->_propDict["requestorSettings"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the requestorSettings
-    *
-    * @param RequestorSettings $val The requestorSettings
-    *
-    * @return AccessPackageAssignmentPolicy
-    */
-    public function setRequestorSettings($val)
-    {
-        $this->_propDict["requestorSettings"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the requestApprovalSettings
     *
     * @return ApprovalSettings The requestApprovalSettings
@@ -369,33 +369,33 @@ class AccessPackageAssignmentPolicy extends Entity
     }
     
     /**
-    * Gets the accessReviewSettings
+    * Gets the requestorSettings
     *
-    * @return AssignmentReviewSettings The accessReviewSettings
+    * @return RequestorSettings The requestorSettings
     */
-    public function getAccessReviewSettings()
+    public function getRequestorSettings()
     {
-        if (array_key_exists("accessReviewSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["accessReviewSettings"], "Beta\Microsoft\Graph\Model\AssignmentReviewSettings")) {
-                return $this->_propDict["accessReviewSettings"];
+        if (array_key_exists("requestorSettings", $this->_propDict)) {
+            if (is_a($this->_propDict["requestorSettings"], "Beta\Microsoft\Graph\Model\RequestorSettings")) {
+                return $this->_propDict["requestorSettings"];
             } else {
-                $this->_propDict["accessReviewSettings"] = new AssignmentReviewSettings($this->_propDict["accessReviewSettings"]);
-                return $this->_propDict["accessReviewSettings"];
+                $this->_propDict["requestorSettings"] = new RequestorSettings($this->_propDict["requestorSettings"]);
+                return $this->_propDict["requestorSettings"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the accessReviewSettings
+    * Sets the requestorSettings
     *
-    * @param AssignmentReviewSettings $val The accessReviewSettings
+    * @param RequestorSettings $val The requestorSettings
     *
     * @return AccessPackageAssignmentPolicy
     */
-    public function setAccessReviewSettings($val)
+    public function setRequestorSettings($val)
     {
-        $this->_propDict["accessReviewSettings"] = $val;
+        $this->_propDict["requestorSettings"] = $val;
         return $this;
     }
     

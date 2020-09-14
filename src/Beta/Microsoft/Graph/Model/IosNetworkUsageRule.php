@@ -23,6 +23,62 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class IosNetworkUsageRule extends Entity
 {
+    /**
+    * Gets the cellularDataBlocked
+    * If set to true, corresponding managed apps will not be allowed to use cellular data at any time.
+    *
+    * @return bool The cellularDataBlocked
+    */
+    public function getCellularDataBlocked()
+    {
+        if (array_key_exists("cellularDataBlocked", $this->_propDict)) {
+            return $this->_propDict["cellularDataBlocked"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the cellularDataBlocked
+    * If set to true, corresponding managed apps will not be allowed to use cellular data at any time.
+    *
+    * @param bool $val The value of the cellularDataBlocked
+    *
+    * @return IosNetworkUsageRule
+    */
+    public function setCellularDataBlocked($val)
+    {
+        $this->_propDict["cellularDataBlocked"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the cellularDataBlockWhenRoaming
+    * If set to true, corresponding managed apps will not be allowed to use cellular data when roaming.
+    *
+    * @return bool The cellularDataBlockWhenRoaming
+    */
+    public function getCellularDataBlockWhenRoaming()
+    {
+        if (array_key_exists("cellularDataBlockWhenRoaming", $this->_propDict)) {
+            return $this->_propDict["cellularDataBlockWhenRoaming"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the cellularDataBlockWhenRoaming
+    * If set to true, corresponding managed apps will not be allowed to use cellular data when roaming.
+    *
+    * @param bool $val The value of the cellularDataBlockWhenRoaming
+    *
+    * @return IosNetworkUsageRule
+    */
+    public function setCellularDataBlockWhenRoaming($val)
+    {
+        $this->_propDict["cellularDataBlockWhenRoaming"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the managedApps
@@ -55,61 +111,5 @@ class IosNetworkUsageRule extends Entity
     {
         $this->_propDict["managedApps"] = $val;
          return $this;
-    }
-    /**
-    * Gets the cellularDataBlockWhenRoaming
-    * If set to true, corresponding managed apps will not be allowed to use cellular data when roaming.
-    *
-    * @return bool The cellularDataBlockWhenRoaming
-    */
-    public function getCellularDataBlockWhenRoaming()
-    {
-        if (array_key_exists("cellularDataBlockWhenRoaming", $this->_propDict)) {
-            return $this->_propDict["cellularDataBlockWhenRoaming"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the cellularDataBlockWhenRoaming
-    * If set to true, corresponding managed apps will not be allowed to use cellular data when roaming.
-    *
-    * @param bool $val The value of the cellularDataBlockWhenRoaming
-    *
-    * @return IosNetworkUsageRule
-    */
-    public function setCellularDataBlockWhenRoaming($val)
-    {
-        $this->_propDict["cellularDataBlockWhenRoaming"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the cellularDataBlocked
-    * If set to true, corresponding managed apps will not be allowed to use cellular data at any time.
-    *
-    * @return bool The cellularDataBlocked
-    */
-    public function getCellularDataBlocked()
-    {
-        if (array_key_exists("cellularDataBlocked", $this->_propDict)) {
-            return $this->_propDict["cellularDataBlocked"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the cellularDataBlocked
-    * If set to true, corresponding managed apps will not be allowed to use cellular data at any time.
-    *
-    * @param bool $val The value of the cellularDataBlocked
-    *
-    * @return IosNetworkUsageRule
-    */
-    public function setCellularDataBlocked($val)
-    {
-        $this->_propDict["cellularDataBlocked"] = $val;
-        return $this;
     }
 }

@@ -25,6 +25,64 @@ namespace Beta\Microsoft\Graph\Model;
 class OutlookItem extends Entity
 {
     /**
+    * Gets the categories
+    * The categories associated with the item
+    *
+    * @return string The categories
+    */
+    public function getCategories()
+    {
+        if (array_key_exists("categories", $this->_propDict)) {
+            return $this->_propDict["categories"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the categories
+    * The categories associated with the item
+    *
+    * @param string $val The categories
+    *
+    * @return OutlookItem
+    */
+    public function setCategories($val)
+    {
+        $this->_propDict["categories"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the changeKey
+    * Identifies the version of the item. Every time the item is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
+    *
+    * @return string The changeKey
+    */
+    public function getChangeKey()
+    {
+        if (array_key_exists("changeKey", $this->_propDict)) {
+            return $this->_propDict["changeKey"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the changeKey
+    * Identifies the version of the item. Every time the item is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
+    *
+    * @param string $val The changeKey
+    *
+    * @return OutlookItem
+    */
+    public function setChangeKey($val)
+    {
+        $this->_propDict["changeKey"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the createdDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
@@ -87,64 +145,6 @@ class OutlookItem extends Entity
     public function setLastModifiedDateTime($val)
     {
         $this->_propDict["lastModifiedDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the changeKey
-    * Identifies the version of the item. Every time the item is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
-    *
-    * @return string The changeKey
-    */
-    public function getChangeKey()
-    {
-        if (array_key_exists("changeKey", $this->_propDict)) {
-            return $this->_propDict["changeKey"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the changeKey
-    * Identifies the version of the item. Every time the item is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
-    *
-    * @param string $val The changeKey
-    *
-    * @return OutlookItem
-    */
-    public function setChangeKey($val)
-    {
-        $this->_propDict["changeKey"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the categories
-    * The categories associated with the item
-    *
-    * @return string The categories
-    */
-    public function getCategories()
-    {
-        if (array_key_exists("categories", $this->_propDict)) {
-            return $this->_propDict["categories"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the categories
-    * The categories associated with the item
-    *
-    * @param string $val The categories
-    *
-    * @return OutlookItem
-    */
-    public function setCategories($val)
-    {
-        $this->_propDict["categories"] = $val;
         return $this;
     }
     

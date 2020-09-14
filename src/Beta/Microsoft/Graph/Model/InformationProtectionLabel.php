@@ -25,29 +25,29 @@ namespace Beta\Microsoft\Graph\Model;
 class InformationProtectionLabel extends Entity
 {
     /**
-    * Gets the name
+    * Gets the color
     *
-    * @return string The name
+    * @return string The color
     */
-    public function getName()
+    public function getColor()
     {
-        if (array_key_exists("name", $this->_propDict)) {
-            return $this->_propDict["name"];
+        if (array_key_exists("color", $this->_propDict)) {
+            return $this->_propDict["color"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the name
+    * Sets the color
     *
-    * @param string $val The name
+    * @param string $val The color
     *
     * @return InformationProtectionLabel
     */
-    public function setName($val)
+    public function setColor($val)
     {
-        $this->_propDict["name"] = $val;
+        $this->_propDict["color"] = $val;
         return $this;
     }
     
@@ -79,29 +79,56 @@ class InformationProtectionLabel extends Entity
     }
     
     /**
-    * Gets the color
+    * Gets the isActive
     *
-    * @return string The color
+    * @return bool The isActive
     */
-    public function getColor()
+    public function getIsActive()
     {
-        if (array_key_exists("color", $this->_propDict)) {
-            return $this->_propDict["color"];
+        if (array_key_exists("isActive", $this->_propDict)) {
+            return $this->_propDict["isActive"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the color
+    * Sets the isActive
     *
-    * @param string $val The color
+    * @param bool $val The isActive
     *
     * @return InformationProtectionLabel
     */
-    public function setColor($val)
+    public function setIsActive($val)
     {
-        $this->_propDict["color"] = $val;
+        $this->_propDict["isActive"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the name
+    *
+    * @return string The name
+    */
+    public function getName()
+    {
+        if (array_key_exists("name", $this->_propDict)) {
+            return $this->_propDict["name"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the name
+    *
+    * @param string $val The name
+    *
+    * @return InformationProtectionLabel
+    */
+    public function setName($val)
+    {
+        $this->_propDict["name"] = $val;
         return $this;
     }
     
@@ -156,33 +183,6 @@ class InformationProtectionLabel extends Entity
     public function setTooltip($val)
     {
         $this->_propDict["tooltip"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the isActive
-    *
-    * @return bool The isActive
-    */
-    public function getIsActive()
-    {
-        if (array_key_exists("isActive", $this->_propDict)) {
-            return $this->_propDict["isActive"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the isActive
-    *
-    * @param bool $val The isActive
-    *
-    * @return InformationProtectionLabel
-    */
-    public function setIsActive($val)
-    {
-        $this->_propDict["isActive"] = boolval($val);
         return $this;
     }
     

@@ -23,6 +23,32 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class PrintOperationStatus extends Entity
 {
+    /**
+    * Gets the description
+    *
+    * @return string The description
+    */
+    public function getDescription()
+    {
+        if (array_key_exists("description", $this->_propDict)) {
+            return $this->_propDict["description"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the description
+    *
+    * @param string $val The value of the description
+    *
+    * @return PrintOperationStatus
+    */
+    public function setDescription($val)
+    {
+        $this->_propDict["description"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the state
@@ -53,31 +79,5 @@ class PrintOperationStatus extends Entity
     {
         $this->_propDict["state"] = $val;
          return $this;
-    }
-    /**
-    * Gets the description
-    *
-    * @return string The description
-    */
-    public function getDescription()
-    {
-        if (array_key_exists("description", $this->_propDict)) {
-            return $this->_propDict["description"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the description
-    *
-    * @param string $val The value of the description
-    *
-    * @return PrintOperationStatus
-    */
-    public function setDescription($val)
-    {
-        $this->_propDict["description"] = $val;
-        return $this;
     }
 }

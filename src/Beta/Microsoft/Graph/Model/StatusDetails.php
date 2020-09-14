@@ -24,58 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class StatusDetails extends StatusBase
 {
     /**
-    * Gets the errorCode
-    *
-    * @return string The errorCode
-    */
-    public function getErrorCode()
-    {
-        if (array_key_exists("errorCode", $this->_propDict)) {
-            return $this->_propDict["errorCode"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the errorCode
-    *
-    * @param string $val The value of the errorCode
-    *
-    * @return StatusDetails
-    */
-    public function setErrorCode($val)
-    {
-        $this->_propDict["errorCode"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the reason
-    *
-    * @return string The reason
-    */
-    public function getReason()
-    {
-        if (array_key_exists("reason", $this->_propDict)) {
-            return $this->_propDict["reason"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the reason
-    *
-    * @param string $val The value of the reason
-    *
-    * @return StatusDetails
-    */
-    public function setReason($val)
-    {
-        $this->_propDict["reason"] = $val;
-        return $this;
-    }
-    /**
     * Gets the additionalDetails
     *
     * @return string The additionalDetails
@@ -125,6 +73,58 @@ class StatusDetails extends StatusBase
     public function setErrorCategory($val)
     {
         $this->_propDict["errorCategory"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the errorCode
+    *
+    * @return string The errorCode
+    */
+    public function getErrorCode()
+    {
+        if (array_key_exists("errorCode", $this->_propDict)) {
+            return $this->_propDict["errorCode"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the errorCode
+    *
+    * @param string $val The value of the errorCode
+    *
+    * @return StatusDetails
+    */
+    public function setErrorCode($val)
+    {
+        $this->_propDict["errorCode"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the reason
+    *
+    * @return string The reason
+    */
+    public function getReason()
+    {
+        if (array_key_exists("reason", $this->_propDict)) {
+            return $this->_propDict["reason"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the reason
+    *
+    * @param string $val The value of the reason
+    *
+    * @return StatusDetails
+    */
+    public function setReason($val)
+    {
+        $this->_propDict["reason"] = $val;
         return $this;
     }
     /**

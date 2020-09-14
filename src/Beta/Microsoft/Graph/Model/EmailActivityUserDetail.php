@@ -25,60 +25,60 @@ namespace Beta\Microsoft\Graph\Model;
 class EmailActivityUserDetail extends Entity
 {
     /**
-    * Gets the reportRefreshDate
+    * Gets the assignedProducts
     *
-    * @return \DateTime The reportRefreshDate
+    * @return string The assignedProducts
     */
-    public function getReportRefreshDate()
+    public function getAssignedProducts()
     {
-        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
-                return $this->_propDict["reportRefreshDate"];
-            } else {
-                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
-                return $this->_propDict["reportRefreshDate"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the reportRefreshDate
-    *
-    * @param \DateTime $val The reportRefreshDate
-    *
-    * @return EmailActivityUserDetail
-    */
-    public function setReportRefreshDate($val)
-    {
-        $this->_propDict["reportRefreshDate"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the userPrincipalName
-    *
-    * @return string The userPrincipalName
-    */
-    public function getUserPrincipalName()
-    {
-        if (array_key_exists("userPrincipalName", $this->_propDict)) {
-            return $this->_propDict["userPrincipalName"];
+        if (array_key_exists("assignedProducts", $this->_propDict)) {
+            return $this->_propDict["assignedProducts"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the userPrincipalName
+    * Sets the assignedProducts
     *
-    * @param string $val The userPrincipalName
+    * @param string $val The assignedProducts
     *
     * @return EmailActivityUserDetail
     */
-    public function setUserPrincipalName($val)
+    public function setAssignedProducts($val)
     {
-        $this->_propDict["userPrincipalName"] = $val;
+        $this->_propDict["assignedProducts"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the deletedDate
+    *
+    * @return \DateTime The deletedDate
+    */
+    public function getDeletedDate()
+    {
+        if (array_key_exists("deletedDate", $this->_propDict)) {
+            if (is_a($this->_propDict["deletedDate"], "\DateTime")) {
+                return $this->_propDict["deletedDate"];
+            } else {
+                $this->_propDict["deletedDate"] = new \DateTime($this->_propDict["deletedDate"]);
+                return $this->_propDict["deletedDate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the deletedDate
+    *
+    * @param \DateTime $val The deletedDate
+    *
+    * @return EmailActivityUserDetail
+    */
+    public function setDeletedDate($val)
+    {
+        $this->_propDict["deletedDate"] = $val;
         return $this;
     }
     
@@ -137,37 +137,6 @@ class EmailActivityUserDetail extends Entity
     }
     
     /**
-    * Gets the deletedDate
-    *
-    * @return \DateTime The deletedDate
-    */
-    public function getDeletedDate()
-    {
-        if (array_key_exists("deletedDate", $this->_propDict)) {
-            if (is_a($this->_propDict["deletedDate"], "\DateTime")) {
-                return $this->_propDict["deletedDate"];
-            } else {
-                $this->_propDict["deletedDate"] = new \DateTime($this->_propDict["deletedDate"]);
-                return $this->_propDict["deletedDate"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the deletedDate
-    *
-    * @param \DateTime $val The deletedDate
-    *
-    * @return EmailActivityUserDetail
-    */
-    public function setDeletedDate($val)
-    {
-        $this->_propDict["deletedDate"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the lastActivityDate
     *
     * @return \DateTime The lastActivityDate
@@ -199,29 +168,29 @@ class EmailActivityUserDetail extends Entity
     }
     
     /**
-    * Gets the sendCount
+    * Gets the readCount
     *
-    * @return int The sendCount
+    * @return int The readCount
     */
-    public function getSendCount()
+    public function getReadCount()
     {
-        if (array_key_exists("sendCount", $this->_propDict)) {
-            return $this->_propDict["sendCount"];
+        if (array_key_exists("readCount", $this->_propDict)) {
+            return $this->_propDict["readCount"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the sendCount
+    * Sets the readCount
     *
-    * @param int $val The sendCount
+    * @param int $val The readCount
     *
     * @return EmailActivityUserDetail
     */
-    public function setSendCount($val)
+    public function setReadCount($val)
     {
-        $this->_propDict["sendCount"] = intval($val);
+        $this->_propDict["readCount"] = intval($val);
         return $this;
     }
     
@@ -253,60 +222,6 @@ class EmailActivityUserDetail extends Entity
     }
     
     /**
-    * Gets the readCount
-    *
-    * @return int The readCount
-    */
-    public function getReadCount()
-    {
-        if (array_key_exists("readCount", $this->_propDict)) {
-            return $this->_propDict["readCount"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the readCount
-    *
-    * @param int $val The readCount
-    *
-    * @return EmailActivityUserDetail
-    */
-    public function setReadCount($val)
-    {
-        $this->_propDict["readCount"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the assignedProducts
-    *
-    * @return string The assignedProducts
-    */
-    public function getAssignedProducts()
-    {
-        if (array_key_exists("assignedProducts", $this->_propDict)) {
-            return $this->_propDict["assignedProducts"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the assignedProducts
-    *
-    * @param string $val The assignedProducts
-    *
-    * @return EmailActivityUserDetail
-    */
-    public function setAssignedProducts($val)
-    {
-        $this->_propDict["assignedProducts"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the reportPeriod
     *
     * @return string The reportPeriod
@@ -330,6 +245,91 @@ class EmailActivityUserDetail extends Entity
     public function setReportPeriod($val)
     {
         $this->_propDict["reportPeriod"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the reportRefreshDate
+    *
+    * @return \DateTime The reportRefreshDate
+    */
+    public function getReportRefreshDate()
+    {
+        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
+                return $this->_propDict["reportRefreshDate"];
+            } else {
+                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
+                return $this->_propDict["reportRefreshDate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the reportRefreshDate
+    *
+    * @param \DateTime $val The reportRefreshDate
+    *
+    * @return EmailActivityUserDetail
+    */
+    public function setReportRefreshDate($val)
+    {
+        $this->_propDict["reportRefreshDate"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the sendCount
+    *
+    * @return int The sendCount
+    */
+    public function getSendCount()
+    {
+        if (array_key_exists("sendCount", $this->_propDict)) {
+            return $this->_propDict["sendCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the sendCount
+    *
+    * @param int $val The sendCount
+    *
+    * @return EmailActivityUserDetail
+    */
+    public function setSendCount($val)
+    {
+        $this->_propDict["sendCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the userPrincipalName
+    *
+    * @return string The userPrincipalName
+    */
+    public function getUserPrincipalName()
+    {
+        if (array_key_exists("userPrincipalName", $this->_propDict)) {
+            return $this->_propDict["userPrincipalName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the userPrincipalName
+    *
+    * @param string $val The userPrincipalName
+    *
+    * @return EmailActivityUserDetail
+    */
+    public function setUserPrincipalName($val)
+    {
+        $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
     

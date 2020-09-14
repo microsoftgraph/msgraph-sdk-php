@@ -25,6 +25,60 @@ namespace Beta\Microsoft\Graph\Model;
 class Journal extends Entity
 {
     /**
+    * Gets the balancingAccountId
+    *
+    * @return string The balancingAccountId
+    */
+    public function getBalancingAccountId()
+    {
+        if (array_key_exists("balancingAccountId", $this->_propDict)) {
+            return $this->_propDict["balancingAccountId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the balancingAccountId
+    *
+    * @param string $val The balancingAccountId
+    *
+    * @return Journal
+    */
+    public function setBalancingAccountId($val)
+    {
+        $this->_propDict["balancingAccountId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the balancingAccountNumber
+    *
+    * @return string The balancingAccountNumber
+    */
+    public function getBalancingAccountNumber()
+    {
+        if (array_key_exists("balancingAccountNumber", $this->_propDict)) {
+            return $this->_propDict["balancingAccountNumber"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the balancingAccountNumber
+    *
+    * @param string $val The balancingAccountNumber
+    *
+    * @return Journal
+    */
+    public function setBalancingAccountNumber($val)
+    {
+        $this->_propDict["balancingAccountNumber"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the code
     *
     * @return string The code
@@ -106,60 +160,6 @@ class Journal extends Entity
     public function setLastModifiedDateTime($val)
     {
         $this->_propDict["lastModifiedDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the balancingAccountId
-    *
-    * @return string The balancingAccountId
-    */
-    public function getBalancingAccountId()
-    {
-        if (array_key_exists("balancingAccountId", $this->_propDict)) {
-            return $this->_propDict["balancingAccountId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the balancingAccountId
-    *
-    * @param string $val The balancingAccountId
-    *
-    * @return Journal
-    */
-    public function setBalancingAccountId($val)
-    {
-        $this->_propDict["balancingAccountId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the balancingAccountNumber
-    *
-    * @return string The balancingAccountNumber
-    */
-    public function getBalancingAccountNumber()
-    {
-        if (array_key_exists("balancingAccountNumber", $this->_propDict)) {
-            return $this->_propDict["balancingAccountNumber"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the balancingAccountNumber
-    *
-    * @param string $val The balancingAccountNumber
-    *
-    * @return Journal
-    */
-    public function setBalancingAccountNumber($val)
-    {
-        $this->_propDict["balancingAccountNumber"] = $val;
         return $this;
     }
     

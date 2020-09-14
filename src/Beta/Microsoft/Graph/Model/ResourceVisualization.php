@@ -24,59 +24,87 @@ namespace Beta\Microsoft\Graph\Model;
 class ResourceVisualization extends Entity
 {
     /**
-    * Gets the title
-    * The item's title text.
+    * Gets the containerDisplayName
+    * A string describing where the item is stored. For example, the name of a SharePoint site or the user name identifying the owner of the OneDrive storing the item.
     *
-    * @return string The title
+    * @return string The containerDisplayName
     */
-    public function getTitle()
+    public function getContainerDisplayName()
     {
-        if (array_key_exists("title", $this->_propDict)) {
-            return $this->_propDict["title"];
+        if (array_key_exists("containerDisplayName", $this->_propDict)) {
+            return $this->_propDict["containerDisplayName"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the title
-    * The item's title text.
+    * Sets the containerDisplayName
+    * A string describing where the item is stored. For example, the name of a SharePoint site or the user name identifying the owner of the OneDrive storing the item.
     *
-    * @param string $val The value of the title
+    * @param string $val The value of the containerDisplayName
     *
     * @return ResourceVisualization
     */
-    public function setTitle($val)
+    public function setContainerDisplayName($val)
     {
-        $this->_propDict["title"] = $val;
+        $this->_propDict["containerDisplayName"] = $val;
         return $this;
     }
     /**
-    * Gets the type
-    * The item's media type. Can be used for filtering for a specific file based on a specific type. See below for supported types.
+    * Gets the containerType
+    * Can be used for filtering by the type of container in which the file is stored. Such as Site or OneDriveBusiness.
     *
-    * @return string The type
+    * @return string The containerType
     */
-    public function getType()
+    public function getContainerType()
     {
-        if (array_key_exists("type", $this->_propDict)) {
-            return $this->_propDict["type"];
+        if (array_key_exists("containerType", $this->_propDict)) {
+            return $this->_propDict["containerType"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the type
-    * The item's media type. Can be used for filtering for a specific file based on a specific type. See below for supported types.
+    * Sets the containerType
+    * Can be used for filtering by the type of container in which the file is stored. Such as Site or OneDriveBusiness.
     *
-    * @param string $val The value of the type
+    * @param string $val The value of the containerType
     *
     * @return ResourceVisualization
     */
-    public function setType($val)
+    public function setContainerType($val)
     {
-        $this->_propDict["type"] = $val;
+        $this->_propDict["containerType"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the containerWebUrl
+    * A path leading to the folder in which the item is stored.
+    *
+    * @return string The containerWebUrl
+    */
+    public function getContainerWebUrl()
+    {
+        if (array_key_exists("containerWebUrl", $this->_propDict)) {
+            return $this->_propDict["containerWebUrl"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the containerWebUrl
+    * A path leading to the folder in which the item is stored.
+    *
+    * @param string $val The value of the containerWebUrl
+    *
+    * @return ResourceVisualization
+    */
+    public function setContainerWebUrl($val)
+    {
+        $this->_propDict["containerWebUrl"] = $val;
         return $this;
     }
     /**
@@ -164,87 +192,59 @@ class ResourceVisualization extends Entity
         return $this;
     }
     /**
-    * Gets the containerWebUrl
-    * A path leading to the folder in which the item is stored.
+    * Gets the title
+    * The item's title text.
     *
-    * @return string The containerWebUrl
+    * @return string The title
     */
-    public function getContainerWebUrl()
+    public function getTitle()
     {
-        if (array_key_exists("containerWebUrl", $this->_propDict)) {
-            return $this->_propDict["containerWebUrl"];
+        if (array_key_exists("title", $this->_propDict)) {
+            return $this->_propDict["title"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the containerWebUrl
-    * A path leading to the folder in which the item is stored.
+    * Sets the title
+    * The item's title text.
     *
-    * @param string $val The value of the containerWebUrl
+    * @param string $val The value of the title
     *
     * @return ResourceVisualization
     */
-    public function setContainerWebUrl($val)
+    public function setTitle($val)
     {
-        $this->_propDict["containerWebUrl"] = $val;
+        $this->_propDict["title"] = $val;
         return $this;
     }
     /**
-    * Gets the containerDisplayName
-    * A string describing where the item is stored. For example, the name of a SharePoint site or the user name identifying the owner of the OneDrive storing the item.
+    * Gets the type
+    * The item's media type. Can be used for filtering for a specific file based on a specific type. See below for supported types.
     *
-    * @return string The containerDisplayName
+    * @return string The type
     */
-    public function getContainerDisplayName()
+    public function getType()
     {
-        if (array_key_exists("containerDisplayName", $this->_propDict)) {
-            return $this->_propDict["containerDisplayName"];
+        if (array_key_exists("type", $this->_propDict)) {
+            return $this->_propDict["type"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the containerDisplayName
-    * A string describing where the item is stored. For example, the name of a SharePoint site or the user name identifying the owner of the OneDrive storing the item.
+    * Sets the type
+    * The item's media type. Can be used for filtering for a specific file based on a specific type. See below for supported types.
     *
-    * @param string $val The value of the containerDisplayName
-    *
-    * @return ResourceVisualization
-    */
-    public function setContainerDisplayName($val)
-    {
-        $this->_propDict["containerDisplayName"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the containerType
-    * Can be used for filtering by the type of container in which the file is stored. Such as Site or OneDriveBusiness.
-    *
-    * @return string The containerType
-    */
-    public function getContainerType()
-    {
-        if (array_key_exists("containerType", $this->_propDict)) {
-            return $this->_propDict["containerType"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the containerType
-    * Can be used for filtering by the type of container in which the file is stored. Such as Site or OneDriveBusiness.
-    *
-    * @param string $val The value of the containerType
+    * @param string $val The value of the type
     *
     * @return ResourceVisualization
     */
-    public function setContainerType($val)
+    public function setType($val)
     {
-        $this->_propDict["containerType"] = $val;
+        $this->_propDict["type"] = $val;
         return $this;
     }
 }

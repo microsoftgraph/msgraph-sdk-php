@@ -24,58 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class GroupPrintUsageSummary extends Entity
 {
     /**
-    * Gets the groupMail
-    *
-    * @return string The groupMail
-    */
-    public function getGroupMail()
-    {
-        if (array_key_exists("groupMail", $this->_propDict)) {
-            return $this->_propDict["groupMail"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the groupMail
-    *
-    * @param string $val The value of the groupMail
-    *
-    * @return GroupPrintUsageSummary
-    */
-    public function setGroupMail($val)
-    {
-        $this->_propDict["groupMail"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the groupDisplayName
-    *
-    * @return string The groupDisplayName
-    */
-    public function getGroupDisplayName()
-    {
-        if (array_key_exists("groupDisplayName", $this->_propDict)) {
-            return $this->_propDict["groupDisplayName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the groupDisplayName
-    *
-    * @param string $val The value of the groupDisplayName
-    *
-    * @return GroupPrintUsageSummary
-    */
-    public function setGroupDisplayName($val)
-    {
-        $this->_propDict["groupDisplayName"] = $val;
-        return $this;
-    }
-    /**
     * Gets the completedJobCount
     *
     * @return int The completedJobCount
@@ -99,32 +47,6 @@ class GroupPrintUsageSummary extends Entity
     public function setCompletedJobCount($val)
     {
         $this->_propDict["completedJobCount"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the incompleteJobCount
-    *
-    * @return int The incompleteJobCount
-    */
-    public function getIncompleteJobCount()
-    {
-        if (array_key_exists("incompleteJobCount", $this->_propDict)) {
-            return $this->_propDict["incompleteJobCount"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the incompleteJobCount
-    *
-    * @param int $val The value of the incompleteJobCount
-    *
-    * @return GroupPrintUsageSummary
-    */
-    public function setIncompleteJobCount($val)
-    {
-        $this->_propDict["incompleteJobCount"] = $val;
         return $this;
     }
 
@@ -157,5 +79,83 @@ class GroupPrintUsageSummary extends Entity
     {
         $this->_propDict["group"] = $val;
          return $this;
+    }
+    /**
+    * Gets the groupDisplayName
+    *
+    * @return string The groupDisplayName
+    */
+    public function getGroupDisplayName()
+    {
+        if (array_key_exists("groupDisplayName", $this->_propDict)) {
+            return $this->_propDict["groupDisplayName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the groupDisplayName
+    *
+    * @param string $val The value of the groupDisplayName
+    *
+    * @return GroupPrintUsageSummary
+    */
+    public function setGroupDisplayName($val)
+    {
+        $this->_propDict["groupDisplayName"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the groupMail
+    *
+    * @return string The groupMail
+    */
+    public function getGroupMail()
+    {
+        if (array_key_exists("groupMail", $this->_propDict)) {
+            return $this->_propDict["groupMail"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the groupMail
+    *
+    * @param string $val The value of the groupMail
+    *
+    * @return GroupPrintUsageSummary
+    */
+    public function setGroupMail($val)
+    {
+        $this->_propDict["groupMail"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the incompleteJobCount
+    *
+    * @return int The incompleteJobCount
+    */
+    public function getIncompleteJobCount()
+    {
+        if (array_key_exists("incompleteJobCount", $this->_propDict)) {
+            return $this->_propDict["incompleteJobCount"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the incompleteJobCount
+    *
+    * @param int $val The value of the incompleteJobCount
+    *
+    * @return GroupPrintUsageSummary
+    */
+    public function setIncompleteJobCount($val)
+    {
+        $this->_propDict["incompleteJobCount"] = $val;
+        return $this;
     }
 }

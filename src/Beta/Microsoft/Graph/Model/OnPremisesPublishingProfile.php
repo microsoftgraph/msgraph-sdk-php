@@ -25,33 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class OnPremisesPublishingProfile extends Entity
 {
     /**
-    * Gets the isEnabled
-    *
-    * @return bool The isEnabled
-    */
-    public function getIsEnabled()
-    {
-        if (array_key_exists("isEnabled", $this->_propDict)) {
-            return $this->_propDict["isEnabled"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the isEnabled
-    *
-    * @param bool $val The isEnabled
-    *
-    * @return OnPremisesPublishingProfile
-    */
-    public function setIsEnabled($val)
-    {
-        $this->_propDict["isEnabled"] = boolval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the hybridAgentUpdaterConfiguration
     *
     * @return HybridAgentUpdaterConfiguration The hybridAgentUpdaterConfiguration
@@ -82,31 +55,30 @@ class OnPremisesPublishingProfile extends Entity
         return $this;
     }
     
-
-     /** 
-     * Gets the agents
-     *
-     * @return array The agents
-     */
-    public function getAgents()
+    /**
+    * Gets the isEnabled
+    *
+    * @return bool The isEnabled
+    */
+    public function getIsEnabled()
     {
-        if (array_key_exists("agents", $this->_propDict)) {
-           return $this->_propDict["agents"];
+        if (array_key_exists("isEnabled", $this->_propDict)) {
+            return $this->_propDict["isEnabled"];
         } else {
             return null;
         }
     }
     
-    /** 
-    * Sets the agents
+    /**
+    * Sets the isEnabled
     *
-    * @param OnPremisesAgent $val The agents
+    * @param bool $val The isEnabled
     *
     * @return OnPremisesPublishingProfile
     */
-    public function setAgents($val)
+    public function setIsEnabled($val)
     {
-		$this->_propDict["agents"] = $val;
+        $this->_propDict["isEnabled"] = boolval($val);
         return $this;
     }
     
@@ -140,29 +112,57 @@ class OnPremisesPublishingProfile extends Entity
     
 
      /** 
-     * Gets the publishedResources
+     * Gets the agents
      *
-     * @return array The publishedResources
+     * @return array The agents
      */
-    public function getPublishedResources()
+    public function getAgents()
     {
-        if (array_key_exists("publishedResources", $this->_propDict)) {
-           return $this->_propDict["publishedResources"];
+        if (array_key_exists("agents", $this->_propDict)) {
+           return $this->_propDict["agents"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the publishedResources
+    * Sets the agents
     *
-    * @param PublishedResource $val The publishedResources
+    * @param OnPremisesAgent $val The agents
     *
     * @return OnPremisesPublishingProfile
     */
-    public function setPublishedResources($val)
+    public function setAgents($val)
     {
-		$this->_propDict["publishedResources"] = $val;
+		$this->_propDict["agents"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the connectorGroups
+     *
+     * @return array The connectorGroups
+     */
+    public function getConnectorGroups()
+    {
+        if (array_key_exists("connectorGroups", $this->_propDict)) {
+           return $this->_propDict["connectorGroups"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the connectorGroups
+    *
+    * @param ConnectorGroup $val The connectorGroups
+    *
+    * @return OnPremisesPublishingProfile
+    */
+    public function setConnectorGroups($val)
+    {
+		$this->_propDict["connectorGroups"] = $val;
         return $this;
     }
     
@@ -196,29 +196,29 @@ class OnPremisesPublishingProfile extends Entity
     
 
      /** 
-     * Gets the connectorGroups
+     * Gets the publishedResources
      *
-     * @return array The connectorGroups
+     * @return array The publishedResources
      */
-    public function getConnectorGroups()
+    public function getPublishedResources()
     {
-        if (array_key_exists("connectorGroups", $this->_propDict)) {
-           return $this->_propDict["connectorGroups"];
+        if (array_key_exists("publishedResources", $this->_propDict)) {
+           return $this->_propDict["publishedResources"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the connectorGroups
+    * Sets the publishedResources
     *
-    * @param ConnectorGroup $val The connectorGroups
+    * @param PublishedResource $val The publishedResources
     *
     * @return OnPremisesPublishingProfile
     */
-    public function setConnectorGroups($val)
+    public function setPublishedResources($val)
     {
-		$this->_propDict["connectorGroups"] = $val;
+		$this->_propDict["publishedResources"] = $val;
         return $this;
     }
     

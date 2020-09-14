@@ -50,32 +50,6 @@ class ChangeNotificationEncryptedContent extends Entity
         return $this;
     }
     /**
-    * Gets the dataSignature
-    *
-    * @return string The dataSignature
-    */
-    public function getDataSignature()
-    {
-        if (array_key_exists("dataSignature", $this->_propDict)) {
-            return $this->_propDict["dataSignature"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the dataSignature
-    *
-    * @param string $val The value of the dataSignature
-    *
-    * @return ChangeNotificationEncryptedContent
-    */
-    public function setDataSignature($val)
-    {
-        $this->_propDict["dataSignature"] = $val;
-        return $this;
-    }
-    /**
     * Gets the dataKey
     *
     * @return string The dataKey
@@ -99,6 +73,32 @@ class ChangeNotificationEncryptedContent extends Entity
     public function setDataKey($val)
     {
         $this->_propDict["dataKey"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the dataSignature
+    *
+    * @return string The dataSignature
+    */
+    public function getDataSignature()
+    {
+        if (array_key_exists("dataSignature", $this->_propDict)) {
+            return $this->_propDict["dataSignature"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the dataSignature
+    *
+    * @param string $val The value of the dataSignature
+    *
+    * @return ChangeNotificationEncryptedContent
+    */
+    public function setDataSignature($val)
+    {
+        $this->_propDict["dataSignature"] = $val;
         return $this;
     }
     /**

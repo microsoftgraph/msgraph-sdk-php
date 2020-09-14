@@ -25,60 +25,29 @@ namespace Beta\Microsoft\Graph\Model;
 class EmailActivitySummary extends Entity
 {
     /**
-    * Gets the reportRefreshDate
+    * Gets the read
     *
-    * @return \DateTime The reportRefreshDate
+    * @return int The read
     */
-    public function getReportRefreshDate()
+    public function getRead()
     {
-        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
-                return $this->_propDict["reportRefreshDate"];
-            } else {
-                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
-                return $this->_propDict["reportRefreshDate"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the reportRefreshDate
-    *
-    * @param \DateTime $val The reportRefreshDate
-    *
-    * @return EmailActivitySummary
-    */
-    public function setReportRefreshDate($val)
-    {
-        $this->_propDict["reportRefreshDate"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the send
-    *
-    * @return int The send
-    */
-    public function getSend()
-    {
-        if (array_key_exists("send", $this->_propDict)) {
-            return $this->_propDict["send"];
+        if (array_key_exists("read", $this->_propDict)) {
+            return $this->_propDict["read"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the send
+    * Sets the read
     *
-    * @param int $val The send
+    * @param int $val The read
     *
     * @return EmailActivitySummary
     */
-    public function setSend($val)
+    public function setRead($val)
     {
-        $this->_propDict["send"] = intval($val);
+        $this->_propDict["read"] = intval($val);
         return $this;
     }
     
@@ -106,33 +75,6 @@ class EmailActivitySummary extends Entity
     public function setReceive($val)
     {
         $this->_propDict["receive"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the read
-    *
-    * @return int The read
-    */
-    public function getRead()
-    {
-        if (array_key_exists("read", $this->_propDict)) {
-            return $this->_propDict["read"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the read
-    *
-    * @param int $val The read
-    *
-    * @return EmailActivitySummary
-    */
-    public function setRead($val)
-    {
-        $this->_propDict["read"] = intval($val);
         return $this;
     }
     
@@ -191,6 +133,64 @@ class EmailActivitySummary extends Entity
     public function setReportPeriod($val)
     {
         $this->_propDict["reportPeriod"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the reportRefreshDate
+    *
+    * @return \DateTime The reportRefreshDate
+    */
+    public function getReportRefreshDate()
+    {
+        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
+                return $this->_propDict["reportRefreshDate"];
+            } else {
+                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
+                return $this->_propDict["reportRefreshDate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the reportRefreshDate
+    *
+    * @param \DateTime $val The reportRefreshDate
+    *
+    * @return EmailActivitySummary
+    */
+    public function setReportRefreshDate($val)
+    {
+        $this->_propDict["reportRefreshDate"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the send
+    *
+    * @return int The send
+    */
+    public function getSend()
+    {
+        if (array_key_exists("send", $this->_propDict)) {
+            return $this->_propDict["send"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the send
+    *
+    * @param int $val The send
+    *
+    * @return EmailActivitySummary
+    */
+    public function setSend($val)
+    {
+        $this->_propDict["send"] = intval($val);
         return $this;
     }
     

@@ -24,33 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class ProfileCardProperty extends Entity
 {
-    /**
-    * Gets the directoryPropertyName
-    *
-    * @return string The directoryPropertyName
-    */
-    public function getDirectoryPropertyName()
-    {
-        if (array_key_exists("directoryPropertyName", $this->_propDict)) {
-            return $this->_propDict["directoryPropertyName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the directoryPropertyName
-    *
-    * @param string $val The directoryPropertyName
-    *
-    * @return ProfileCardProperty
-    */
-    public function setDirectoryPropertyName($val)
-    {
-        $this->_propDict["directoryPropertyName"] = $val;
-        return $this;
-    }
-    
 
      /** 
      * Gets the annotations
@@ -76,6 +49,33 @@ class ProfileCardProperty extends Entity
     public function setAnnotations($val)
     {
 		$this->_propDict["annotations"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the directoryPropertyName
+    *
+    * @return string The directoryPropertyName
+    */
+    public function getDirectoryPropertyName()
+    {
+        if (array_key_exists("directoryPropertyName", $this->_propDict)) {
+            return $this->_propDict["directoryPropertyName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the directoryPropertyName
+    *
+    * @param string $val The directoryPropertyName
+    *
+    * @return ProfileCardProperty
+    */
+    public function setDirectoryPropertyName($val)
+    {
+        $this->_propDict["directoryPropertyName"] = $val;
         return $this;
     }
     

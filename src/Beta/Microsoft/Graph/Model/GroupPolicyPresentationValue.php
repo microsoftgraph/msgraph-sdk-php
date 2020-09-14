@@ -25,39 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class GroupPolicyPresentationValue extends Entity
 {
     /**
-    * Gets the lastModifiedDateTime
-    * The date and time the object was last modified.
-    *
-    * @return \DateTime The lastModifiedDateTime
-    */
-    public function getLastModifiedDateTime()
-    {
-        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
-                return $this->_propDict["lastModifiedDateTime"];
-            } else {
-                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
-                return $this->_propDict["lastModifiedDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the lastModifiedDateTime
-    * The date and time the object was last modified.
-    *
-    * @param \DateTime $val The lastModifiedDateTime
-    *
-    * @return GroupPolicyPresentationValue
-    */
-    public function setLastModifiedDateTime($val)
-    {
-        $this->_propDict["lastModifiedDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the createdDateTime
     * The date and time the object was created.
     *
@@ -87,6 +54,39 @@ class GroupPolicyPresentationValue extends Entity
     public function setCreatedDateTime($val)
     {
         $this->_propDict["createdDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the lastModifiedDateTime
+    * The date and time the object was last modified.
+    *
+    * @return \DateTime The lastModifiedDateTime
+    */
+    public function getLastModifiedDateTime()
+    {
+        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+                return $this->_propDict["lastModifiedDateTime"];
+            } else {
+                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
+                return $this->_propDict["lastModifiedDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the lastModifiedDateTime
+    * The date and time the object was last modified.
+    *
+    * @param \DateTime $val The lastModifiedDateTime
+    *
+    * @return GroupPolicyPresentationValue
+    */
+    public function setLastModifiedDateTime($val)
+    {
+        $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
     

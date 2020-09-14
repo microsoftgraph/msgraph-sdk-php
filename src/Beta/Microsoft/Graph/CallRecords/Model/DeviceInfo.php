@@ -24,34 +24,6 @@ namespace Beta\Microsoft\Graph\CallRecords\Model;
 class DeviceInfo extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
-    * Gets the captureDeviceName
-    * Name of the capture device used by the media endpoint.
-    *
-    * @return string The captureDeviceName
-    */
-    public function getCaptureDeviceName()
-    {
-        if (array_key_exists("captureDeviceName", $this->_propDict)) {
-            return $this->_propDict["captureDeviceName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the captureDeviceName
-    * Name of the capture device used by the media endpoint.
-    *
-    * @param string $val The value of the captureDeviceName
-    *
-    * @return DeviceInfo
-    */
-    public function setCaptureDeviceName($val)
-    {
-        $this->_propDict["captureDeviceName"] = $val;
-        return $this;
-    }
-    /**
     * Gets the captureDeviceDriver
     * Name of the capture device driver used by the media endpoint.
     *
@@ -80,204 +52,64 @@ class DeviceInfo extends \Beta\Microsoft\Graph\Model\Entity
         return $this;
     }
     /**
-    * Gets the renderDeviceName
-    * Name of the render device used by the media endpoint.
+    * Gets the captureDeviceName
+    * Name of the capture device used by the media endpoint.
     *
-    * @return string The renderDeviceName
+    * @return string The captureDeviceName
     */
-    public function getRenderDeviceName()
+    public function getCaptureDeviceName()
     {
-        if (array_key_exists("renderDeviceName", $this->_propDict)) {
-            return $this->_propDict["renderDeviceName"];
+        if (array_key_exists("captureDeviceName", $this->_propDict)) {
+            return $this->_propDict["captureDeviceName"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the renderDeviceName
-    * Name of the render device used by the media endpoint.
+    * Sets the captureDeviceName
+    * Name of the capture device used by the media endpoint.
     *
-    * @param string $val The value of the renderDeviceName
-    *
-    * @return DeviceInfo
-    */
-    public function setRenderDeviceName($val)
-    {
-        $this->_propDict["renderDeviceName"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the renderDeviceDriver
-    * Name of the render device driver used by the media endpoint.
-    *
-    * @return string The renderDeviceDriver
-    */
-    public function getRenderDeviceDriver()
-    {
-        if (array_key_exists("renderDeviceDriver", $this->_propDict)) {
-            return $this->_propDict["renderDeviceDriver"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the renderDeviceDriver
-    * Name of the render device driver used by the media endpoint.
-    *
-    * @param string $val The value of the renderDeviceDriver
+    * @param string $val The value of the captureDeviceName
     *
     * @return DeviceInfo
     */
-    public function setRenderDeviceDriver($val)
+    public function setCaptureDeviceName($val)
     {
-        $this->_propDict["renderDeviceDriver"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the sentSignalLevel
-    * Average energy level of sent audio for audio classified as mono speech, or left channel of stereo speech by the media endpoint.
-    *
-    * @return int The sentSignalLevel
-    */
-    public function getSentSignalLevel()
-    {
-        if (array_key_exists("sentSignalLevel", $this->_propDict)) {
-            return $this->_propDict["sentSignalLevel"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the sentSignalLevel
-    * Average energy level of sent audio for audio classified as mono speech, or left channel of stereo speech by the media endpoint.
-    *
-    * @param int $val The value of the sentSignalLevel
-    *
-    * @return DeviceInfo
-    */
-    public function setSentSignalLevel($val)
-    {
-        $this->_propDict["sentSignalLevel"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the receivedSignalLevel
-    * Average energy level of received audio for audio classified as mono speech, or left channel of stereo speech by the media endpoint.
-    *
-    * @return int The receivedSignalLevel
-    */
-    public function getReceivedSignalLevel()
-    {
-        if (array_key_exists("receivedSignalLevel", $this->_propDict)) {
-            return $this->_propDict["receivedSignalLevel"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the receivedSignalLevel
-    * Average energy level of received audio for audio classified as mono speech, or left channel of stereo speech by the media endpoint.
-    *
-    * @param int $val The value of the receivedSignalLevel
-    *
-    * @return DeviceInfo
-    */
-    public function setReceivedSignalLevel($val)
-    {
-        $this->_propDict["receivedSignalLevel"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the sentNoiseLevel
-    * Average energy level of sent audio for audio classified as mono noise or left channel of stereo noise by the media endpoint.
-    *
-    * @return int The sentNoiseLevel
-    */
-    public function getSentNoiseLevel()
-    {
-        if (array_key_exists("sentNoiseLevel", $this->_propDict)) {
-            return $this->_propDict["sentNoiseLevel"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the sentNoiseLevel
-    * Average energy level of sent audio for audio classified as mono noise or left channel of stereo noise by the media endpoint.
-    *
-    * @param int $val The value of the sentNoiseLevel
-    *
-    * @return DeviceInfo
-    */
-    public function setSentNoiseLevel($val)
-    {
-        $this->_propDict["sentNoiseLevel"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the receivedNoiseLevel
-    * Average energy level of received audio for audio classified as mono noise or left channel of stereo noise by the media endpoint.
-    *
-    * @return int The receivedNoiseLevel
-    */
-    public function getReceivedNoiseLevel()
-    {
-        if (array_key_exists("receivedNoiseLevel", $this->_propDict)) {
-            return $this->_propDict["receivedNoiseLevel"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the receivedNoiseLevel
-    * Average energy level of received audio for audio classified as mono noise or left channel of stereo noise by the media endpoint.
-    *
-    * @param int $val The value of the receivedNoiseLevel
-    *
-    * @return DeviceInfo
-    */
-    public function setReceivedNoiseLevel($val)
-    {
-        $this->_propDict["receivedNoiseLevel"] = $val;
+        $this->_propDict["captureDeviceName"] = $val;
         return $this;
     }
 
     /**
-    * Gets the initialSignalLevelRootMeanSquare
-    * The root mean square (RMS) of the incoming signal of up to the first 30 seconds of the call.
+    * Gets the captureNotFunctioningEventRatio
+    * Fraction of the call that the media endpoint detected the capture device was not working properly.
     *
-    * @return Beta\Microsoft\Graph\Model\Single The initialSignalLevelRootMeanSquare
+    * @return Beta\Microsoft\Graph\Model\Single The captureNotFunctioningEventRatio
     */
-    public function getInitialSignalLevelRootMeanSquare()
+    public function getCaptureNotFunctioningEventRatio()
     {
-        if (array_key_exists("initialSignalLevelRootMeanSquare", $this->_propDict)) {
-            if (is_a($this->_propDict["initialSignalLevelRootMeanSquare"], "Beta\Microsoft\Graph\Model\Single")) {
-                return $this->_propDict["initialSignalLevelRootMeanSquare"];
+        if (array_key_exists("captureNotFunctioningEventRatio", $this->_propDict)) {
+            if (is_a($this->_propDict["captureNotFunctioningEventRatio"], "Beta\Microsoft\Graph\Model\Single")) {
+                return $this->_propDict["captureNotFunctioningEventRatio"];
             } else {
-                $this->_propDict["initialSignalLevelRootMeanSquare"] = new Beta\Microsoft\Graph\Model\Single($this->_propDict["initialSignalLevelRootMeanSquare"]);
-                return $this->_propDict["initialSignalLevelRootMeanSquare"];
+                $this->_propDict["captureNotFunctioningEventRatio"] = new Beta\Microsoft\Graph\Model\Single($this->_propDict["captureNotFunctioningEventRatio"]);
+                return $this->_propDict["captureNotFunctioningEventRatio"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the initialSignalLevelRootMeanSquare
-    * The root mean square (RMS) of the incoming signal of up to the first 30 seconds of the call.
+    * Sets the captureNotFunctioningEventRatio
+    * Fraction of the call that the media endpoint detected the capture device was not working properly.
     *
-    * @param Beta\Microsoft\Graph\Model\Single $val The value to assign to the initialSignalLevelRootMeanSquare
+    * @param Beta\Microsoft\Graph\Model\Single $val The value to assign to the captureNotFunctioningEventRatio
     *
     * @return DeviceInfo The DeviceInfo
     */
-    public function setInitialSignalLevelRootMeanSquare($val)
+    public function setCaptureNotFunctioningEventRatio($val)
     {
-        $this->_propDict["initialSignalLevelRootMeanSquare"] = $val;
+        $this->_propDict["captureNotFunctioningEventRatio"] = $val;
          return $this;
     }
 
@@ -315,68 +147,35 @@ class DeviceInfo extends \Beta\Microsoft\Graph\Model\Entity
     }
 
     /**
-    * Gets the renderNotFunctioningEventRatio
-    * Fraction of the call that the media endpoint detected the render device was not working properly.
+    * Gets the deviceClippingEventRatio
+    * Fraction of the call that the media endpoint detected clipping in the captured audio that caused poor quality of the audio being sent.
     *
-    * @return Beta\Microsoft\Graph\Model\Single The renderNotFunctioningEventRatio
+    * @return Beta\Microsoft\Graph\Model\Single The deviceClippingEventRatio
     */
-    public function getRenderNotFunctioningEventRatio()
+    public function getDeviceClippingEventRatio()
     {
-        if (array_key_exists("renderNotFunctioningEventRatio", $this->_propDict)) {
-            if (is_a($this->_propDict["renderNotFunctioningEventRatio"], "Beta\Microsoft\Graph\Model\Single")) {
-                return $this->_propDict["renderNotFunctioningEventRatio"];
+        if (array_key_exists("deviceClippingEventRatio", $this->_propDict)) {
+            if (is_a($this->_propDict["deviceClippingEventRatio"], "Beta\Microsoft\Graph\Model\Single")) {
+                return $this->_propDict["deviceClippingEventRatio"];
             } else {
-                $this->_propDict["renderNotFunctioningEventRatio"] = new Beta\Microsoft\Graph\Model\Single($this->_propDict["renderNotFunctioningEventRatio"]);
-                return $this->_propDict["renderNotFunctioningEventRatio"];
+                $this->_propDict["deviceClippingEventRatio"] = new Beta\Microsoft\Graph\Model\Single($this->_propDict["deviceClippingEventRatio"]);
+                return $this->_propDict["deviceClippingEventRatio"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the renderNotFunctioningEventRatio
-    * Fraction of the call that the media endpoint detected the render device was not working properly.
+    * Sets the deviceClippingEventRatio
+    * Fraction of the call that the media endpoint detected clipping in the captured audio that caused poor quality of the audio being sent.
     *
-    * @param Beta\Microsoft\Graph\Model\Single $val The value to assign to the renderNotFunctioningEventRatio
-    *
-    * @return DeviceInfo The DeviceInfo
-    */
-    public function setRenderNotFunctioningEventRatio($val)
-    {
-        $this->_propDict["renderNotFunctioningEventRatio"] = $val;
-         return $this;
-    }
-
-    /**
-    * Gets the captureNotFunctioningEventRatio
-    * Fraction of the call that the media endpoint detected the capture device was not working properly.
-    *
-    * @return Beta\Microsoft\Graph\Model\Single The captureNotFunctioningEventRatio
-    */
-    public function getCaptureNotFunctioningEventRatio()
-    {
-        if (array_key_exists("captureNotFunctioningEventRatio", $this->_propDict)) {
-            if (is_a($this->_propDict["captureNotFunctioningEventRatio"], "Beta\Microsoft\Graph\Model\Single")) {
-                return $this->_propDict["captureNotFunctioningEventRatio"];
-            } else {
-                $this->_propDict["captureNotFunctioningEventRatio"] = new Beta\Microsoft\Graph\Model\Single($this->_propDict["captureNotFunctioningEventRatio"]);
-                return $this->_propDict["captureNotFunctioningEventRatio"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the captureNotFunctioningEventRatio
-    * Fraction of the call that the media endpoint detected the capture device was not working properly.
-    *
-    * @param Beta\Microsoft\Graph\Model\Single $val The value to assign to the captureNotFunctioningEventRatio
+    * @param Beta\Microsoft\Graph\Model\Single $val The value to assign to the deviceClippingEventRatio
     *
     * @return DeviceInfo The DeviceInfo
     */
-    public function setCaptureNotFunctioningEventRatio($val)
+    public function setDeviceClippingEventRatio($val)
     {
-        $this->_propDict["captureNotFunctioningEventRatio"] = $val;
+        $this->_propDict["deviceClippingEventRatio"] = $val;
          return $this;
     }
 
@@ -412,37 +211,65 @@ class DeviceInfo extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["deviceGlitchEventRatio"] = $val;
          return $this;
     }
+    /**
+    * Gets the howlingEventCount
+    * Number of times during the call that the media endpoint detected howling or screeching audio.
+    *
+    * @return int The howlingEventCount
+    */
+    public function getHowlingEventCount()
+    {
+        if (array_key_exists("howlingEventCount", $this->_propDict)) {
+            return $this->_propDict["howlingEventCount"];
+        } else {
+            return null;
+        }
+    }
 
     /**
-    * Gets the lowSpeechToNoiseEventRatio
-    * Fraction of the call that the media endpoint detected low speech to noise level that caused poor quality of the audio being sent.
+    * Sets the howlingEventCount
+    * Number of times during the call that the media endpoint detected howling or screeching audio.
     *
-    * @return Beta\Microsoft\Graph\Model\Single The lowSpeechToNoiseEventRatio
+    * @param int $val The value of the howlingEventCount
+    *
+    * @return DeviceInfo
     */
-    public function getLowSpeechToNoiseEventRatio()
+    public function setHowlingEventCount($val)
     {
-        if (array_key_exists("lowSpeechToNoiseEventRatio", $this->_propDict)) {
-            if (is_a($this->_propDict["lowSpeechToNoiseEventRatio"], "Beta\Microsoft\Graph\Model\Single")) {
-                return $this->_propDict["lowSpeechToNoiseEventRatio"];
+        $this->_propDict["howlingEventCount"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the initialSignalLevelRootMeanSquare
+    * The root mean square (RMS) of the incoming signal of up to the first 30 seconds of the call.
+    *
+    * @return Beta\Microsoft\Graph\Model\Single The initialSignalLevelRootMeanSquare
+    */
+    public function getInitialSignalLevelRootMeanSquare()
+    {
+        if (array_key_exists("initialSignalLevelRootMeanSquare", $this->_propDict)) {
+            if (is_a($this->_propDict["initialSignalLevelRootMeanSquare"], "Beta\Microsoft\Graph\Model\Single")) {
+                return $this->_propDict["initialSignalLevelRootMeanSquare"];
             } else {
-                $this->_propDict["lowSpeechToNoiseEventRatio"] = new Beta\Microsoft\Graph\Model\Single($this->_propDict["lowSpeechToNoiseEventRatio"]);
-                return $this->_propDict["lowSpeechToNoiseEventRatio"];
+                $this->_propDict["initialSignalLevelRootMeanSquare"] = new Beta\Microsoft\Graph\Model\Single($this->_propDict["initialSignalLevelRootMeanSquare"]);
+                return $this->_propDict["initialSignalLevelRootMeanSquare"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the lowSpeechToNoiseEventRatio
-    * Fraction of the call that the media endpoint detected low speech to noise level that caused poor quality of the audio being sent.
+    * Sets the initialSignalLevelRootMeanSquare
+    * The root mean square (RMS) of the incoming signal of up to the first 30 seconds of the call.
     *
-    * @param Beta\Microsoft\Graph\Model\Single $val The value to assign to the lowSpeechToNoiseEventRatio
+    * @param Beta\Microsoft\Graph\Model\Single $val The value to assign to the initialSignalLevelRootMeanSquare
     *
     * @return DeviceInfo The DeviceInfo
     */
-    public function setLowSpeechToNoiseEventRatio($val)
+    public function setInitialSignalLevelRootMeanSquare($val)
     {
-        $this->_propDict["lowSpeechToNoiseEventRatio"] = $val;
+        $this->_propDict["initialSignalLevelRootMeanSquare"] = $val;
          return $this;
     }
 
@@ -480,97 +307,181 @@ class DeviceInfo extends \Beta\Microsoft\Graph\Model\Entity
     }
 
     /**
-    * Gets the deviceClippingEventRatio
-    * Fraction of the call that the media endpoint detected clipping in the captured audio that caused poor quality of the audio being sent.
+    * Gets the lowSpeechToNoiseEventRatio
+    * Fraction of the call that the media endpoint detected low speech to noise level that caused poor quality of the audio being sent.
     *
-    * @return Beta\Microsoft\Graph\Model\Single The deviceClippingEventRatio
+    * @return Beta\Microsoft\Graph\Model\Single The lowSpeechToNoiseEventRatio
     */
-    public function getDeviceClippingEventRatio()
+    public function getLowSpeechToNoiseEventRatio()
     {
-        if (array_key_exists("deviceClippingEventRatio", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceClippingEventRatio"], "Beta\Microsoft\Graph\Model\Single")) {
-                return $this->_propDict["deviceClippingEventRatio"];
+        if (array_key_exists("lowSpeechToNoiseEventRatio", $this->_propDict)) {
+            if (is_a($this->_propDict["lowSpeechToNoiseEventRatio"], "Beta\Microsoft\Graph\Model\Single")) {
+                return $this->_propDict["lowSpeechToNoiseEventRatio"];
             } else {
-                $this->_propDict["deviceClippingEventRatio"] = new Beta\Microsoft\Graph\Model\Single($this->_propDict["deviceClippingEventRatio"]);
-                return $this->_propDict["deviceClippingEventRatio"];
+                $this->_propDict["lowSpeechToNoiseEventRatio"] = new Beta\Microsoft\Graph\Model\Single($this->_propDict["lowSpeechToNoiseEventRatio"]);
+                return $this->_propDict["lowSpeechToNoiseEventRatio"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the deviceClippingEventRatio
-    * Fraction of the call that the media endpoint detected clipping in the captured audio that caused poor quality of the audio being sent.
+    * Sets the lowSpeechToNoiseEventRatio
+    * Fraction of the call that the media endpoint detected low speech to noise level that caused poor quality of the audio being sent.
     *
-    * @param Beta\Microsoft\Graph\Model\Single $val The value to assign to the deviceClippingEventRatio
+    * @param Beta\Microsoft\Graph\Model\Single $val The value to assign to the lowSpeechToNoiseEventRatio
     *
     * @return DeviceInfo The DeviceInfo
     */
-    public function setDeviceClippingEventRatio($val)
+    public function setLowSpeechToNoiseEventRatio($val)
     {
-        $this->_propDict["deviceClippingEventRatio"] = $val;
+        $this->_propDict["lowSpeechToNoiseEventRatio"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the micGlitchRate
+    * Glitches per 5 minute interval for the media endpoint's microphone.
+    *
+    * @return Beta\Microsoft\Graph\Model\Single The micGlitchRate
+    */
+    public function getMicGlitchRate()
+    {
+        if (array_key_exists("micGlitchRate", $this->_propDict)) {
+            if (is_a($this->_propDict["micGlitchRate"], "Beta\Microsoft\Graph\Model\Single")) {
+                return $this->_propDict["micGlitchRate"];
+            } else {
+                $this->_propDict["micGlitchRate"] = new Beta\Microsoft\Graph\Model\Single($this->_propDict["micGlitchRate"]);
+                return $this->_propDict["micGlitchRate"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the micGlitchRate
+    * Glitches per 5 minute interval for the media endpoint's microphone.
+    *
+    * @param Beta\Microsoft\Graph\Model\Single $val The value to assign to the micGlitchRate
+    *
+    * @return DeviceInfo The DeviceInfo
+    */
+    public function setMicGlitchRate($val)
+    {
+        $this->_propDict["micGlitchRate"] = $val;
          return $this;
     }
     /**
-    * Gets the howlingEventCount
-    * Number of times during the call that the media endpoint detected howling or screeching audio.
+    * Gets the receivedNoiseLevel
+    * Average energy level of received audio for audio classified as mono noise or left channel of stereo noise by the media endpoint.
     *
-    * @return int The howlingEventCount
+    * @return int The receivedNoiseLevel
     */
-    public function getHowlingEventCount()
+    public function getReceivedNoiseLevel()
     {
-        if (array_key_exists("howlingEventCount", $this->_propDict)) {
-            return $this->_propDict["howlingEventCount"];
+        if (array_key_exists("receivedNoiseLevel", $this->_propDict)) {
+            return $this->_propDict["receivedNoiseLevel"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the howlingEventCount
-    * Number of times during the call that the media endpoint detected howling or screeching audio.
+    * Sets the receivedNoiseLevel
+    * Average energy level of received audio for audio classified as mono noise or left channel of stereo noise by the media endpoint.
     *
-    * @param int $val The value of the howlingEventCount
+    * @param int $val The value of the receivedNoiseLevel
     *
     * @return DeviceInfo
     */
-    public function setHowlingEventCount($val)
+    public function setReceivedNoiseLevel($val)
     {
-        $this->_propDict["howlingEventCount"] = $val;
+        $this->_propDict["receivedNoiseLevel"] = $val;
         return $this;
     }
-
     /**
-    * Gets the renderZeroVolumeEventRatio
-    * Fraction of the call that media endpoint detected device render volume is set to 0.
+    * Gets the receivedSignalLevel
+    * Average energy level of received audio for audio classified as mono speech, or left channel of stereo speech by the media endpoint.
     *
-    * @return Beta\Microsoft\Graph\Model\Single The renderZeroVolumeEventRatio
+    * @return int The receivedSignalLevel
     */
-    public function getRenderZeroVolumeEventRatio()
+    public function getReceivedSignalLevel()
     {
-        if (array_key_exists("renderZeroVolumeEventRatio", $this->_propDict)) {
-            if (is_a($this->_propDict["renderZeroVolumeEventRatio"], "Beta\Microsoft\Graph\Model\Single")) {
-                return $this->_propDict["renderZeroVolumeEventRatio"];
-            } else {
-                $this->_propDict["renderZeroVolumeEventRatio"] = new Beta\Microsoft\Graph\Model\Single($this->_propDict["renderZeroVolumeEventRatio"]);
-                return $this->_propDict["renderZeroVolumeEventRatio"];
-            }
+        if (array_key_exists("receivedSignalLevel", $this->_propDict)) {
+            return $this->_propDict["receivedSignalLevel"];
+        } else {
+            return null;
         }
-        return null;
     }
 
     /**
-    * Sets the renderZeroVolumeEventRatio
-    * Fraction of the call that media endpoint detected device render volume is set to 0.
+    * Sets the receivedSignalLevel
+    * Average energy level of received audio for audio classified as mono speech, or left channel of stereo speech by the media endpoint.
     *
-    * @param Beta\Microsoft\Graph\Model\Single $val The value to assign to the renderZeroVolumeEventRatio
+    * @param int $val The value of the receivedSignalLevel
     *
-    * @return DeviceInfo The DeviceInfo
+    * @return DeviceInfo
     */
-    public function setRenderZeroVolumeEventRatio($val)
+    public function setReceivedSignalLevel($val)
     {
-        $this->_propDict["renderZeroVolumeEventRatio"] = $val;
-         return $this;
+        $this->_propDict["receivedSignalLevel"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the renderDeviceDriver
+    * Name of the render device driver used by the media endpoint.
+    *
+    * @return string The renderDeviceDriver
+    */
+    public function getRenderDeviceDriver()
+    {
+        if (array_key_exists("renderDeviceDriver", $this->_propDict)) {
+            return $this->_propDict["renderDeviceDriver"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the renderDeviceDriver
+    * Name of the render device driver used by the media endpoint.
+    *
+    * @param string $val The value of the renderDeviceDriver
+    *
+    * @return DeviceInfo
+    */
+    public function setRenderDeviceDriver($val)
+    {
+        $this->_propDict["renderDeviceDriver"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the renderDeviceName
+    * Name of the render device used by the media endpoint.
+    *
+    * @return string The renderDeviceName
+    */
+    public function getRenderDeviceName()
+    {
+        if (array_key_exists("renderDeviceName", $this->_propDict)) {
+            return $this->_propDict["renderDeviceName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the renderDeviceName
+    * Name of the render device used by the media endpoint.
+    *
+    * @param string $val The value of the renderDeviceName
+    *
+    * @return DeviceInfo
+    */
+    public function setRenderDeviceName($val)
+    {
+        $this->_propDict["renderDeviceName"] = $val;
+        return $this;
     }
 
     /**
@@ -607,36 +518,125 @@ class DeviceInfo extends \Beta\Microsoft\Graph\Model\Entity
     }
 
     /**
-    * Gets the micGlitchRate
-    * Glitches per 5 minute interval for the media endpoint's microphone.
+    * Gets the renderNotFunctioningEventRatio
+    * Fraction of the call that the media endpoint detected the render device was not working properly.
     *
-    * @return Beta\Microsoft\Graph\Model\Single The micGlitchRate
+    * @return Beta\Microsoft\Graph\Model\Single The renderNotFunctioningEventRatio
     */
-    public function getMicGlitchRate()
+    public function getRenderNotFunctioningEventRatio()
     {
-        if (array_key_exists("micGlitchRate", $this->_propDict)) {
-            if (is_a($this->_propDict["micGlitchRate"], "Beta\Microsoft\Graph\Model\Single")) {
-                return $this->_propDict["micGlitchRate"];
+        if (array_key_exists("renderNotFunctioningEventRatio", $this->_propDict)) {
+            if (is_a($this->_propDict["renderNotFunctioningEventRatio"], "Beta\Microsoft\Graph\Model\Single")) {
+                return $this->_propDict["renderNotFunctioningEventRatio"];
             } else {
-                $this->_propDict["micGlitchRate"] = new Beta\Microsoft\Graph\Model\Single($this->_propDict["micGlitchRate"]);
-                return $this->_propDict["micGlitchRate"];
+                $this->_propDict["renderNotFunctioningEventRatio"] = new Beta\Microsoft\Graph\Model\Single($this->_propDict["renderNotFunctioningEventRatio"]);
+                return $this->_propDict["renderNotFunctioningEventRatio"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the micGlitchRate
-    * Glitches per 5 minute interval for the media endpoint's microphone.
+    * Sets the renderNotFunctioningEventRatio
+    * Fraction of the call that the media endpoint detected the render device was not working properly.
     *
-    * @param Beta\Microsoft\Graph\Model\Single $val The value to assign to the micGlitchRate
+    * @param Beta\Microsoft\Graph\Model\Single $val The value to assign to the renderNotFunctioningEventRatio
     *
     * @return DeviceInfo The DeviceInfo
     */
-    public function setMicGlitchRate($val)
+    public function setRenderNotFunctioningEventRatio($val)
     {
-        $this->_propDict["micGlitchRate"] = $val;
+        $this->_propDict["renderNotFunctioningEventRatio"] = $val;
          return $this;
+    }
+
+    /**
+    * Gets the renderZeroVolumeEventRatio
+    * Fraction of the call that media endpoint detected device render volume is set to 0.
+    *
+    * @return Beta\Microsoft\Graph\Model\Single The renderZeroVolumeEventRatio
+    */
+    public function getRenderZeroVolumeEventRatio()
+    {
+        if (array_key_exists("renderZeroVolumeEventRatio", $this->_propDict)) {
+            if (is_a($this->_propDict["renderZeroVolumeEventRatio"], "Beta\Microsoft\Graph\Model\Single")) {
+                return $this->_propDict["renderZeroVolumeEventRatio"];
+            } else {
+                $this->_propDict["renderZeroVolumeEventRatio"] = new Beta\Microsoft\Graph\Model\Single($this->_propDict["renderZeroVolumeEventRatio"]);
+                return $this->_propDict["renderZeroVolumeEventRatio"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the renderZeroVolumeEventRatio
+    * Fraction of the call that media endpoint detected device render volume is set to 0.
+    *
+    * @param Beta\Microsoft\Graph\Model\Single $val The value to assign to the renderZeroVolumeEventRatio
+    *
+    * @return DeviceInfo The DeviceInfo
+    */
+    public function setRenderZeroVolumeEventRatio($val)
+    {
+        $this->_propDict["renderZeroVolumeEventRatio"] = $val;
+         return $this;
+    }
+    /**
+    * Gets the sentNoiseLevel
+    * Average energy level of sent audio for audio classified as mono noise or left channel of stereo noise by the media endpoint.
+    *
+    * @return int The sentNoiseLevel
+    */
+    public function getSentNoiseLevel()
+    {
+        if (array_key_exists("sentNoiseLevel", $this->_propDict)) {
+            return $this->_propDict["sentNoiseLevel"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the sentNoiseLevel
+    * Average energy level of sent audio for audio classified as mono noise or left channel of stereo noise by the media endpoint.
+    *
+    * @param int $val The value of the sentNoiseLevel
+    *
+    * @return DeviceInfo
+    */
+    public function setSentNoiseLevel($val)
+    {
+        $this->_propDict["sentNoiseLevel"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the sentSignalLevel
+    * Average energy level of sent audio for audio classified as mono speech, or left channel of stereo speech by the media endpoint.
+    *
+    * @return int The sentSignalLevel
+    */
+    public function getSentSignalLevel()
+    {
+        if (array_key_exists("sentSignalLevel", $this->_propDict)) {
+            return $this->_propDict["sentSignalLevel"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the sentSignalLevel
+    * Average energy level of sent audio for audio classified as mono speech, or left channel of stereo speech by the media endpoint.
+    *
+    * @param int $val The value of the sentSignalLevel
+    *
+    * @return DeviceInfo
+    */
+    public function setSentSignalLevel($val)
+    {
+        $this->_propDict["sentSignalLevel"] = $val;
+        return $this;
     }
 
     /**

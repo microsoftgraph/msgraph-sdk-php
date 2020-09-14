@@ -54,35 +54,6 @@ class MacOSCustomAppConfiguration extends DeviceConfiguration
     }
     
     /**
-    * Gets the fileName
-    * Configuration file name (*.plist | *.xml).
-    *
-    * @return string The fileName
-    */
-    public function getFileName()
-    {
-        if (array_key_exists("fileName", $this->_propDict)) {
-            return $this->_propDict["fileName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the fileName
-    * Configuration file name (*.plist | *.xml).
-    *
-    * @param string $val The fileName
-    *
-    * @return MacOSCustomAppConfiguration
-    */
-    public function setFileName($val)
-    {
-        $this->_propDict["fileName"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the configurationXml
     * Configuration xml. (UTF8 encoded byte array)
     *
@@ -112,6 +83,35 @@ class MacOSCustomAppConfiguration extends DeviceConfiguration
     public function setConfigurationXml($val)
     {
         $this->_propDict["configurationXml"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the fileName
+    * Configuration file name (*.plist | *.xml).
+    *
+    * @return string The fileName
+    */
+    public function getFileName()
+    {
+        if (array_key_exists("fileName", $this->_propDict)) {
+            return $this->_propDict["fileName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the fileName
+    * Configuration file name (*.plist | *.xml).
+    *
+    * @param string $val The fileName
+    *
+    * @return MacOSCustomAppConfiguration
+    */
+    public function setFileName($val)
+    {
+        $this->_propDict["fileName"] = $val;
         return $this;
     }
     

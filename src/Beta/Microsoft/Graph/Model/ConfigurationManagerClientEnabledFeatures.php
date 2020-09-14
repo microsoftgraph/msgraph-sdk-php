@@ -24,6 +24,90 @@ namespace Beta\Microsoft\Graph\Model;
 class ConfigurationManagerClientEnabledFeatures extends Entity
 {
     /**
+    * Gets the compliancePolicy
+    * Whether compliance policy is managed by Intune
+    *
+    * @return bool The compliancePolicy
+    */
+    public function getCompliancePolicy()
+    {
+        if (array_key_exists("compliancePolicy", $this->_propDict)) {
+            return $this->_propDict["compliancePolicy"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the compliancePolicy
+    * Whether compliance policy is managed by Intune
+    *
+    * @param bool $val The value of the compliancePolicy
+    *
+    * @return ConfigurationManagerClientEnabledFeatures
+    */
+    public function setCompliancePolicy($val)
+    {
+        $this->_propDict["compliancePolicy"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the deviceConfiguration
+    * Whether device configuration is managed by Intune
+    *
+    * @return bool The deviceConfiguration
+    */
+    public function getDeviceConfiguration()
+    {
+        if (array_key_exists("deviceConfiguration", $this->_propDict)) {
+            return $this->_propDict["deviceConfiguration"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the deviceConfiguration
+    * Whether device configuration is managed by Intune
+    *
+    * @param bool $val The value of the deviceConfiguration
+    *
+    * @return ConfigurationManagerClientEnabledFeatures
+    */
+    public function setDeviceConfiguration($val)
+    {
+        $this->_propDict["deviceConfiguration"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the endpointProtection
+    * Whether Endpoint Protection is managed by Intune
+    *
+    * @return bool The endpointProtection
+    */
+    public function getEndpointProtection()
+    {
+        if (array_key_exists("endpointProtection", $this->_propDict)) {
+            return $this->_propDict["endpointProtection"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the endpointProtection
+    * Whether Endpoint Protection is managed by Intune
+    *
+    * @param bool $val The value of the endpointProtection
+    *
+    * @return ConfigurationManagerClientEnabledFeatures
+    */
+    public function setEndpointProtection($val)
+    {
+        $this->_propDict["endpointProtection"] = $val;
+        return $this;
+    }
+    /**
     * Gets the inventory
     * Whether inventory is managed by Intune
     *
@@ -80,6 +164,34 @@ class ConfigurationManagerClientEnabledFeatures extends Entity
         return $this;
     }
     /**
+    * Gets the officeApps
+    * Whether Office application is managed by Intune
+    *
+    * @return bool The officeApps
+    */
+    public function getOfficeApps()
+    {
+        if (array_key_exists("officeApps", $this->_propDict)) {
+            return $this->_propDict["officeApps"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the officeApps
+    * Whether Office application is managed by Intune
+    *
+    * @param bool $val The value of the officeApps
+    *
+    * @return ConfigurationManagerClientEnabledFeatures
+    */
+    public function setOfficeApps($val)
+    {
+        $this->_propDict["officeApps"] = $val;
+        return $this;
+    }
+    /**
     * Gets the resourceAccess
     * Whether resource access is managed by Intune
     *
@@ -108,62 +220,6 @@ class ConfigurationManagerClientEnabledFeatures extends Entity
         return $this;
     }
     /**
-    * Gets the deviceConfiguration
-    * Whether device configuration is managed by Intune
-    *
-    * @return bool The deviceConfiguration
-    */
-    public function getDeviceConfiguration()
-    {
-        if (array_key_exists("deviceConfiguration", $this->_propDict)) {
-            return $this->_propDict["deviceConfiguration"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the deviceConfiguration
-    * Whether device configuration is managed by Intune
-    *
-    * @param bool $val The value of the deviceConfiguration
-    *
-    * @return ConfigurationManagerClientEnabledFeatures
-    */
-    public function setDeviceConfiguration($val)
-    {
-        $this->_propDict["deviceConfiguration"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the compliancePolicy
-    * Whether compliance policy is managed by Intune
-    *
-    * @return bool The compliancePolicy
-    */
-    public function getCompliancePolicy()
-    {
-        if (array_key_exists("compliancePolicy", $this->_propDict)) {
-            return $this->_propDict["compliancePolicy"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the compliancePolicy
-    * Whether compliance policy is managed by Intune
-    *
-    * @param bool $val The value of the compliancePolicy
-    *
-    * @return ConfigurationManagerClientEnabledFeatures
-    */
-    public function setCompliancePolicy($val)
-    {
-        $this->_propDict["compliancePolicy"] = $val;
-        return $this;
-    }
-    /**
     * Gets the windowsUpdateForBusiness
     * Whether Windows Update for Business is managed by Intune
     *
@@ -189,62 +245,6 @@ class ConfigurationManagerClientEnabledFeatures extends Entity
     public function setWindowsUpdateForBusiness($val)
     {
         $this->_propDict["windowsUpdateForBusiness"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the endpointProtection
-    * Whether Endpoint Protection is managed by Intune
-    *
-    * @return bool The endpointProtection
-    */
-    public function getEndpointProtection()
-    {
-        if (array_key_exists("endpointProtection", $this->_propDict)) {
-            return $this->_propDict["endpointProtection"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the endpointProtection
-    * Whether Endpoint Protection is managed by Intune
-    *
-    * @param bool $val The value of the endpointProtection
-    *
-    * @return ConfigurationManagerClientEnabledFeatures
-    */
-    public function setEndpointProtection($val)
-    {
-        $this->_propDict["endpointProtection"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the officeApps
-    * Whether Office application is managed by Intune
-    *
-    * @return bool The officeApps
-    */
-    public function getOfficeApps()
-    {
-        if (array_key_exists("officeApps", $this->_propDict)) {
-            return $this->_propDict["officeApps"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the officeApps
-    * Whether Office application is managed by Intune
-    *
-    * @param bool $val The value of the officeApps
-    *
-    * @return ConfigurationManagerClientEnabledFeatures
-    */
-    public function setOfficeApps($val)
-    {
-        $this->_propDict["officeApps"] = $val;
         return $this;
     }
 }

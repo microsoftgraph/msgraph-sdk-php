@@ -25,6 +25,64 @@ namespace Beta\Microsoft\Graph\Model;
 class TermsAndConditions extends Entity
 {
     /**
+    * Gets the acceptanceStatement
+    * Administrator-supplied explanation of the terms and conditions, typically describing what it means to accept the terms and conditions set out in the T&amp;C policy. This is shown to the user on prompts to accept the T&amp;C policy.
+    *
+    * @return string The acceptanceStatement
+    */
+    public function getAcceptanceStatement()
+    {
+        if (array_key_exists("acceptanceStatement", $this->_propDict)) {
+            return $this->_propDict["acceptanceStatement"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the acceptanceStatement
+    * Administrator-supplied explanation of the terms and conditions, typically describing what it means to accept the terms and conditions set out in the T&amp;C policy. This is shown to the user on prompts to accept the T&amp;C policy.
+    *
+    * @param string $val The acceptanceStatement
+    *
+    * @return TermsAndConditions
+    */
+    public function setAcceptanceStatement($val)
+    {
+        $this->_propDict["acceptanceStatement"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the bodyText
+    * Administrator-supplied body text of the terms and conditions, typically the terms themselves. This is shown to the user on prompts to accept the T&amp;C policy.
+    *
+    * @return string The bodyText
+    */
+    public function getBodyText()
+    {
+        if (array_key_exists("bodyText", $this->_propDict)) {
+            return $this->_propDict["bodyText"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the bodyText
+    * Administrator-supplied body text of the terms and conditions, typically the terms themselves. This is shown to the user on prompts to accept the T&amp;C policy.
+    *
+    * @param string $val The bodyText
+    *
+    * @return TermsAndConditions
+    */
+    public function setBodyText($val)
+    {
+        $this->_propDict["bodyText"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the createdDateTime
     * DateTime the object was created.
     *
@@ -58,35 +116,60 @@ class TermsAndConditions extends Entity
     }
     
     /**
-    * Gets the modifiedDateTime
-    * DateTime the object was last modified.
+    * Gets the description
+    * Administrator-supplied description of the T&amp;C policy.
     *
-    * @return \DateTime The modifiedDateTime
+    * @return string The description
     */
-    public function getModifiedDateTime()
+    public function getDescription()
     {
-        if (array_key_exists("modifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["modifiedDateTime"], "\DateTime")) {
-                return $this->_propDict["modifiedDateTime"];
-            } else {
-                $this->_propDict["modifiedDateTime"] = new \DateTime($this->_propDict["modifiedDateTime"]);
-                return $this->_propDict["modifiedDateTime"];
-            }
+        if (array_key_exists("description", $this->_propDict)) {
+            return $this->_propDict["description"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the modifiedDateTime
-    * DateTime the object was last modified.
+    * Sets the description
+    * Administrator-supplied description of the T&amp;C policy.
     *
-    * @param \DateTime $val The modifiedDateTime
+    * @param string $val The description
     *
     * @return TermsAndConditions
     */
-    public function setModifiedDateTime($val)
+    public function setDescription($val)
     {
-        $this->_propDict["modifiedDateTime"] = $val;
+        $this->_propDict["description"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the displayName
+    * Administrator-supplied name for the T&amp;C policy.
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the displayName
+    * Administrator-supplied name for the T&amp;C policy.
+    *
+    * @param string $val The displayName
+    *
+    * @return TermsAndConditions
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
         return $this;
     }
     
@@ -124,60 +207,64 @@ class TermsAndConditions extends Entity
     }
     
     /**
-    * Gets the displayName
-    * Administrator-supplied name for the T&amp;C policy.
+    * Gets the modifiedDateTime
+    * DateTime the object was last modified.
     *
-    * @return string The displayName
+    * @return \DateTime The modifiedDateTime
     */
-    public function getDisplayName()
+    public function getModifiedDateTime()
     {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
+        if (array_key_exists("modifiedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["modifiedDateTime"], "\DateTime")) {
+                return $this->_propDict["modifiedDateTime"];
+            } else {
+                $this->_propDict["modifiedDateTime"] = new \DateTime($this->_propDict["modifiedDateTime"]);
+                return $this->_propDict["modifiedDateTime"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the displayName
-    * Administrator-supplied name for the T&amp;C policy.
+    * Sets the modifiedDateTime
+    * DateTime the object was last modified.
     *
-    * @param string $val The displayName
+    * @param \DateTime $val The modifiedDateTime
     *
     * @return TermsAndConditions
     */
-    public function setDisplayName($val)
+    public function setModifiedDateTime($val)
     {
-        $this->_propDict["displayName"] = $val;
+        $this->_propDict["modifiedDateTime"] = $val;
         return $this;
     }
     
     /**
-    * Gets the description
-    * Administrator-supplied description of the T&amp;C policy.
+    * Gets the roleScopeTagIds
+    * List of Scope Tags for this Entity instance.
     *
-    * @return string The description
+    * @return string The roleScopeTagIds
     */
-    public function getDescription()
+    public function getRoleScopeTagIds()
     {
-        if (array_key_exists("description", $this->_propDict)) {
-            return $this->_propDict["description"];
+        if (array_key_exists("roleScopeTagIds", $this->_propDict)) {
+            return $this->_propDict["roleScopeTagIds"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the description
-    * Administrator-supplied description of the T&amp;C policy.
+    * Sets the roleScopeTagIds
+    * List of Scope Tags for this Entity instance.
     *
-    * @param string $val The description
+    * @param string $val The roleScopeTagIds
     *
     * @return TermsAndConditions
     */
-    public function setDescription($val)
+    public function setRoleScopeTagIds($val)
     {
-        $this->_propDict["description"] = $val;
+        $this->_propDict["roleScopeTagIds"] = $val;
         return $this;
     }
     
@@ -211,64 +298,6 @@ class TermsAndConditions extends Entity
     }
     
     /**
-    * Gets the bodyText
-    * Administrator-supplied body text of the terms and conditions, typically the terms themselves. This is shown to the user on prompts to accept the T&amp;C policy.
-    *
-    * @return string The bodyText
-    */
-    public function getBodyText()
-    {
-        if (array_key_exists("bodyText", $this->_propDict)) {
-            return $this->_propDict["bodyText"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the bodyText
-    * Administrator-supplied body text of the terms and conditions, typically the terms themselves. This is shown to the user on prompts to accept the T&amp;C policy.
-    *
-    * @param string $val The bodyText
-    *
-    * @return TermsAndConditions
-    */
-    public function setBodyText($val)
-    {
-        $this->_propDict["bodyText"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the acceptanceStatement
-    * Administrator-supplied explanation of the terms and conditions, typically describing what it means to accept the terms and conditions set out in the T&amp;C policy. This is shown to the user on prompts to accept the T&amp;C policy.
-    *
-    * @return string The acceptanceStatement
-    */
-    public function getAcceptanceStatement()
-    {
-        if (array_key_exists("acceptanceStatement", $this->_propDict)) {
-            return $this->_propDict["acceptanceStatement"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the acceptanceStatement
-    * Administrator-supplied explanation of the terms and conditions, typically describing what it means to accept the terms and conditions set out in the T&amp;C policy. This is shown to the user on prompts to accept the T&amp;C policy.
-    *
-    * @param string $val The acceptanceStatement
-    *
-    * @return TermsAndConditions
-    */
-    public function setAcceptanceStatement($val)
-    {
-        $this->_propDict["acceptanceStatement"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the version
     * Integer indicating the current version of the terms. Incremented when an administrator makes a change to the terms and wishes to require users to re-accept the modified T&amp;C policy.
     *
@@ -297,62 +326,33 @@ class TermsAndConditions extends Entity
         return $this;
     }
     
-    /**
-    * Gets the roleScopeTagIds
-    * List of Scope Tags for this Entity instance.
-    *
-    * @return string The roleScopeTagIds
-    */
-    public function getRoleScopeTagIds()
-    {
-        if (array_key_exists("roleScopeTagIds", $this->_propDict)) {
-            return $this->_propDict["roleScopeTagIds"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the roleScopeTagIds
-    * List of Scope Tags for this Entity instance.
-    *
-    * @param string $val The roleScopeTagIds
-    *
-    * @return TermsAndConditions
-    */
-    public function setRoleScopeTagIds($val)
-    {
-        $this->_propDict["roleScopeTagIds"] = $val;
-        return $this;
-    }
-    
 
      /** 
-     * Gets the groupAssignments
-    * The list of group assignments for this T&amp;C policy.
+     * Gets the acceptanceStatuses
+    * The list of acceptance statuses for this T&amp;C policy.
      *
-     * @return array The groupAssignments
+     * @return array The acceptanceStatuses
      */
-    public function getGroupAssignments()
+    public function getAcceptanceStatuses()
     {
-        if (array_key_exists("groupAssignments", $this->_propDict)) {
-           return $this->_propDict["groupAssignments"];
+        if (array_key_exists("acceptanceStatuses", $this->_propDict)) {
+           return $this->_propDict["acceptanceStatuses"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the groupAssignments
-    * The list of group assignments for this T&amp;C policy.
+    * Sets the acceptanceStatuses
+    * The list of acceptance statuses for this T&amp;C policy.
     *
-    * @param TermsAndConditionsGroupAssignment $val The groupAssignments
+    * @param TermsAndConditionsAcceptanceStatus $val The acceptanceStatuses
     *
     * @return TermsAndConditions
     */
-    public function setGroupAssignments($val)
+    public function setAcceptanceStatuses($val)
     {
-		$this->_propDict["groupAssignments"] = $val;
+		$this->_propDict["acceptanceStatuses"] = $val;
         return $this;
     }
     
@@ -388,31 +388,31 @@ class TermsAndConditions extends Entity
     
 
      /** 
-     * Gets the acceptanceStatuses
-    * The list of acceptance statuses for this T&amp;C policy.
+     * Gets the groupAssignments
+    * The list of group assignments for this T&amp;C policy.
      *
-     * @return array The acceptanceStatuses
+     * @return array The groupAssignments
      */
-    public function getAcceptanceStatuses()
+    public function getGroupAssignments()
     {
-        if (array_key_exists("acceptanceStatuses", $this->_propDict)) {
-           return $this->_propDict["acceptanceStatuses"];
+        if (array_key_exists("groupAssignments", $this->_propDict)) {
+           return $this->_propDict["groupAssignments"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the acceptanceStatuses
-    * The list of acceptance statuses for this T&amp;C policy.
+    * Sets the groupAssignments
+    * The list of group assignments for this T&amp;C policy.
     *
-    * @param TermsAndConditionsAcceptanceStatus $val The acceptanceStatuses
+    * @param TermsAndConditionsGroupAssignment $val The groupAssignments
     *
     * @return TermsAndConditions
     */
-    public function setAcceptanceStatuses($val)
+    public function setGroupAssignments($val)
     {
-		$this->_propDict["acceptanceStatuses"] = $val;
+		$this->_propDict["groupAssignments"] = $val;
         return $this;
     }
     

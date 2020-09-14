@@ -56,33 +56,33 @@ class ItemFacet extends Entity
     }
     
     /**
-    * Gets the inference
+    * Gets the createdBy
     *
-    * @return InferenceData The inference
+    * @return IdentitySet The createdBy
     */
-    public function getInference()
+    public function getCreatedBy()
     {
-        if (array_key_exists("inference", $this->_propDict)) {
-            if (is_a($this->_propDict["inference"], "Beta\Microsoft\Graph\Model\InferenceData")) {
-                return $this->_propDict["inference"];
+        if (array_key_exists("createdBy", $this->_propDict)) {
+            if (is_a($this->_propDict["createdBy"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
+                return $this->_propDict["createdBy"];
             } else {
-                $this->_propDict["inference"] = new InferenceData($this->_propDict["inference"]);
-                return $this->_propDict["inference"];
+                $this->_propDict["createdBy"] = new IdentitySet($this->_propDict["createdBy"]);
+                return $this->_propDict["createdBy"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the inference
+    * Sets the createdBy
     *
-    * @param InferenceData $val The inference
+    * @param IdentitySet $val The createdBy
     *
     * @return ItemFacet
     */
-    public function setInference($val)
+    public function setCreatedBy($val)
     {
-        $this->_propDict["inference"] = $val;
+        $this->_propDict["createdBy"] = $val;
         return $this;
     }
     
@@ -118,64 +118,33 @@ class ItemFacet extends Entity
     }
     
     /**
-    * Gets the createdBy
+    * Gets the inference
     *
-    * @return IdentitySet The createdBy
+    * @return InferenceData The inference
     */
-    public function getCreatedBy()
+    public function getInference()
     {
-        if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
-                return $this->_propDict["createdBy"];
+        if (array_key_exists("inference", $this->_propDict)) {
+            if (is_a($this->_propDict["inference"], "Beta\Microsoft\Graph\Model\InferenceData")) {
+                return $this->_propDict["inference"];
             } else {
-                $this->_propDict["createdBy"] = new IdentitySet($this->_propDict["createdBy"]);
-                return $this->_propDict["createdBy"];
+                $this->_propDict["inference"] = new InferenceData($this->_propDict["inference"]);
+                return $this->_propDict["inference"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the createdBy
+    * Sets the inference
     *
-    * @param IdentitySet $val The createdBy
-    *
-    * @return ItemFacet
-    */
-    public function setCreatedBy($val)
-    {
-        $this->_propDict["createdBy"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the lastModifiedDateTime
-    *
-    * @return \DateTime The lastModifiedDateTime
-    */
-    public function getLastModifiedDateTime()
-    {
-        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
-                return $this->_propDict["lastModifiedDateTime"];
-            } else {
-                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
-                return $this->_propDict["lastModifiedDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the lastModifiedDateTime
-    *
-    * @param \DateTime $val The lastModifiedDateTime
+    * @param InferenceData $val The inference
     *
     * @return ItemFacet
     */
-    public function setLastModifiedDateTime($val)
+    public function setInference($val)
     {
-        $this->_propDict["lastModifiedDateTime"] = $val;
+        $this->_propDict["inference"] = $val;
         return $this;
     }
     
@@ -207,6 +176,37 @@ class ItemFacet extends Entity
     public function setLastModifiedBy($val)
     {
         $this->_propDict["lastModifiedBy"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the lastModifiedDateTime
+    *
+    * @return \DateTime The lastModifiedDateTime
+    */
+    public function getLastModifiedDateTime()
+    {
+        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+                return $this->_propDict["lastModifiedDateTime"];
+            } else {
+                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
+                return $this->_propDict["lastModifiedDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the lastModifiedDateTime
+    *
+    * @param \DateTime $val The lastModifiedDateTime
+    *
+    * @return ItemFacet
+    */
+    public function setLastModifiedDateTime($val)
+    {
+        $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
     

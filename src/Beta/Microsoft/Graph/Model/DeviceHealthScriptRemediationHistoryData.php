@@ -57,34 +57,6 @@ class DeviceHealthScriptRemediationHistoryData extends Entity
          return $this;
     }
     /**
-    * Gets the remediatedDeviceCount
-    * The number of devices remediated by the device health script.
-    *
-    * @return int The remediatedDeviceCount
-    */
-    public function getRemediatedDeviceCount()
-    {
-        if (array_key_exists("remediatedDeviceCount", $this->_propDict)) {
-            return $this->_propDict["remediatedDeviceCount"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the remediatedDeviceCount
-    * The number of devices remediated by the device health script.
-    *
-    * @param int $val The value of the remediatedDeviceCount
-    *
-    * @return DeviceHealthScriptRemediationHistoryData
-    */
-    public function setRemediatedDeviceCount($val)
-    {
-        $this->_propDict["remediatedDeviceCount"] = $val;
-        return $this;
-    }
-    /**
     * Gets the noIssueDeviceCount
     * The number of devices that were found to have no issue by the device health script.
     *
@@ -110,6 +82,34 @@ class DeviceHealthScriptRemediationHistoryData extends Entity
     public function setNoIssueDeviceCount($val)
     {
         $this->_propDict["noIssueDeviceCount"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the remediatedDeviceCount
+    * The number of devices remediated by the device health script.
+    *
+    * @return int The remediatedDeviceCount
+    */
+    public function getRemediatedDeviceCount()
+    {
+        if (array_key_exists("remediatedDeviceCount", $this->_propDict)) {
+            return $this->_propDict["remediatedDeviceCount"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the remediatedDeviceCount
+    * The number of devices remediated by the device health script.
+    *
+    * @param int $val The value of the remediatedDeviceCount
+    *
+    * @return DeviceHealthScriptRemediationHistoryData
+    */
+    public function setRemediatedDeviceCount($val)
+    {
+        $this->_propDict["remediatedDeviceCount"] = $val;
         return $this;
     }
 }

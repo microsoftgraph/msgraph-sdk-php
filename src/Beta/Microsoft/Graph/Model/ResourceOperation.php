@@ -25,64 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class ResourceOperation extends Entity
 {
     /**
-    * Gets the resource
-    * Resource category to which this Operation belongs.
-    *
-    * @return string The resource
-    */
-    public function getResource()
-    {
-        if (array_key_exists("resource", $this->_propDict)) {
-            return $this->_propDict["resource"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the resource
-    * Resource category to which this Operation belongs.
-    *
-    * @param string $val The resource
-    *
-    * @return ResourceOperation
-    */
-    public function setResource($val)
-    {
-        $this->_propDict["resource"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the resourceName
-    * Name of the Resource this operation is performed on.
-    *
-    * @return string The resourceName
-    */
-    public function getResourceName()
-    {
-        if (array_key_exists("resourceName", $this->_propDict)) {
-            return $this->_propDict["resourceName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the resourceName
-    * Name of the Resource this operation is performed on.
-    *
-    * @param string $val The resourceName
-    *
-    * @return ResourceOperation
-    */
-    public function setResourceName($val)
-    {
-        $this->_propDict["resourceName"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the actionName
     * Type of action this operation is going to perform. The actionName should be concise and limited to as few words as possible.
     *
@@ -166,6 +108,64 @@ class ResourceOperation extends Entity
     public function setEnabledForScopeValidation($val)
     {
         $this->_propDict["enabledForScopeValidation"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the resource
+    * Resource category to which this Operation belongs.
+    *
+    * @return string The resource
+    */
+    public function getResource()
+    {
+        if (array_key_exists("resource", $this->_propDict)) {
+            return $this->_propDict["resource"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the resource
+    * Resource category to which this Operation belongs.
+    *
+    * @param string $val The resource
+    *
+    * @return ResourceOperation
+    */
+    public function setResource($val)
+    {
+        $this->_propDict["resource"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the resourceName
+    * Name of the Resource this operation is performed on.
+    *
+    * @return string The resourceName
+    */
+    public function getResourceName()
+    {
+        if (array_key_exists("resourceName", $this->_propDict)) {
+            return $this->_propDict["resourceName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the resourceName
+    * Name of the Resource this operation is performed on.
+    *
+    * @param string $val The resourceName
+    *
+    * @return ResourceOperation
+    */
+    public function setResourceName($val)
+    {
+        $this->_propDict["resourceName"] = $val;
         return $this;
     }
     

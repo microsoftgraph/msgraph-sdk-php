@@ -25,6 +25,114 @@ namespace Beta\Microsoft\Graph\Model;
 class SkypeForBusinessDeviceUsageDistributionUserCounts extends Entity
 {
     /**
+    * Gets the androidPhone
+    *
+    * @return int The androidPhone
+    */
+    public function getAndroidPhone()
+    {
+        if (array_key_exists("androidPhone", $this->_propDict)) {
+            return $this->_propDict["androidPhone"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the androidPhone
+    *
+    * @param int $val The androidPhone
+    *
+    * @return SkypeForBusinessDeviceUsageDistributionUserCounts
+    */
+    public function setAndroidPhone($val)
+    {
+        $this->_propDict["androidPhone"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the iPad
+    *
+    * @return int The iPad
+    */
+    public function getIPad()
+    {
+        if (array_key_exists("iPad", $this->_propDict)) {
+            return $this->_propDict["iPad"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the iPad
+    *
+    * @param int $val The iPad
+    *
+    * @return SkypeForBusinessDeviceUsageDistributionUserCounts
+    */
+    public function setIPad($val)
+    {
+        $this->_propDict["iPad"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the iPhone
+    *
+    * @return int The iPhone
+    */
+    public function getIPhone()
+    {
+        if (array_key_exists("iPhone", $this->_propDict)) {
+            return $this->_propDict["iPhone"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the iPhone
+    *
+    * @param int $val The iPhone
+    *
+    * @return SkypeForBusinessDeviceUsageDistributionUserCounts
+    */
+    public function setIPhone($val)
+    {
+        $this->_propDict["iPhone"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the reportPeriod
+    *
+    * @return string The reportPeriod
+    */
+    public function getReportPeriod()
+    {
+        if (array_key_exists("reportPeriod", $this->_propDict)) {
+            return $this->_propDict["reportPeriod"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the reportPeriod
+    *
+    * @param string $val The reportPeriod
+    *
+    * @return SkypeForBusinessDeviceUsageDistributionUserCounts
+    */
+    public function setReportPeriod($val)
+    {
+        $this->_propDict["reportPeriod"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the reportRefreshDate
     *
     * @return \DateTime The reportRefreshDate
@@ -106,114 +214,6 @@ class SkypeForBusinessDeviceUsageDistributionUserCounts extends Entity
     public function setWindowsPhone($val)
     {
         $this->_propDict["windowsPhone"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the androidPhone
-    *
-    * @return int The androidPhone
-    */
-    public function getAndroidPhone()
-    {
-        if (array_key_exists("androidPhone", $this->_propDict)) {
-            return $this->_propDict["androidPhone"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the androidPhone
-    *
-    * @param int $val The androidPhone
-    *
-    * @return SkypeForBusinessDeviceUsageDistributionUserCounts
-    */
-    public function setAndroidPhone($val)
-    {
-        $this->_propDict["androidPhone"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the iPhone
-    *
-    * @return int The iPhone
-    */
-    public function getIPhone()
-    {
-        if (array_key_exists("iPhone", $this->_propDict)) {
-            return $this->_propDict["iPhone"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the iPhone
-    *
-    * @param int $val The iPhone
-    *
-    * @return SkypeForBusinessDeviceUsageDistributionUserCounts
-    */
-    public function setIPhone($val)
-    {
-        $this->_propDict["iPhone"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the iPad
-    *
-    * @return int The iPad
-    */
-    public function getIPad()
-    {
-        if (array_key_exists("iPad", $this->_propDict)) {
-            return $this->_propDict["iPad"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the iPad
-    *
-    * @param int $val The iPad
-    *
-    * @return SkypeForBusinessDeviceUsageDistributionUserCounts
-    */
-    public function setIPad($val)
-    {
-        $this->_propDict["iPad"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the reportPeriod
-    *
-    * @return string The reportPeriod
-    */
-    public function getReportPeriod()
-    {
-        if (array_key_exists("reportPeriod", $this->_propDict)) {
-            return $this->_propDict["reportPeriod"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the reportPeriod
-    *
-    * @param string $val The reportPeriod
-    *
-    * @return SkypeForBusinessDeviceUsageDistributionUserCounts
-    */
-    public function setReportPeriod($val)
-    {
-        $this->_propDict["reportPeriod"] = $val;
         return $this;
     }
     

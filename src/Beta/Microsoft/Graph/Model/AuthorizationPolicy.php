@@ -106,6 +106,37 @@ class AuthorizationPolicy extends PolicyBase
     }
     
     /**
+    * Gets the allowInvitesFrom
+    *
+    * @return AllowInvitesFrom The allowInvitesFrom
+    */
+    public function getAllowInvitesFrom()
+    {
+        if (array_key_exists("allowInvitesFrom", $this->_propDict)) {
+            if (is_a($this->_propDict["allowInvitesFrom"], "Beta\Microsoft\Graph\Model\AllowInvitesFrom")) {
+                return $this->_propDict["allowInvitesFrom"];
+            } else {
+                $this->_propDict["allowInvitesFrom"] = new AllowInvitesFrom($this->_propDict["allowInvitesFrom"]);
+                return $this->_propDict["allowInvitesFrom"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the allowInvitesFrom
+    *
+    * @param AllowInvitesFrom $val The allowInvitesFrom
+    *
+    * @return AuthorizationPolicy
+    */
+    public function setAllowInvitesFrom($val)
+    {
+        $this->_propDict["allowInvitesFrom"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the blockMsolPowerShell
     *
     * @return bool The blockMsolPowerShell

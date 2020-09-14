@@ -23,67 +23,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class DeviceComplianceScriptRule extends Entity
 {
-    /**
-    * Gets the settingName
-    * Setting name specified in the rule.
-    *
-    * @return string The settingName
-    */
-    public function getSettingName()
-    {
-        if (array_key_exists("settingName", $this->_propDict)) {
-            return $this->_propDict["settingName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the settingName
-    * Setting name specified in the rule.
-    *
-    * @param string $val The value of the settingName
-    *
-    * @return DeviceComplianceScriptRule
-    */
-    public function setSettingName($val)
-    {
-        $this->_propDict["settingName"] = $val;
-        return $this;
-    }
-
-    /**
-    * Gets the operator
-    * Operator specified in the rule.
-    *
-    * @return Operator The operator
-    */
-    public function getOperator()
-    {
-        if (array_key_exists("operator", $this->_propDict)) {
-            if (is_a($this->_propDict["operator"], "Beta\Microsoft\Graph\Model\Operator")) {
-                return $this->_propDict["operator"];
-            } else {
-                $this->_propDict["operator"] = new Operator($this->_propDict["operator"]);
-                return $this->_propDict["operator"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the operator
-    * Operator specified in the rule.
-    *
-    * @param Operator $val The value to assign to the operator
-    *
-    * @return DeviceComplianceScriptRule The DeviceComplianceScriptRule
-    */
-    public function setOperator($val)
-    {
-        $this->_propDict["operator"] = $val;
-         return $this;
-    }
 
     /**
     * Gets the dataType
@@ -143,6 +82,67 @@ class DeviceComplianceScriptRule extends Entity
     public function setOperand($val)
     {
         $this->_propDict["operand"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the operator
+    * Operator specified in the rule.
+    *
+    * @return Operator The operator
+    */
+    public function getOperator()
+    {
+        if (array_key_exists("operator", $this->_propDict)) {
+            if (is_a($this->_propDict["operator"], "Beta\Microsoft\Graph\Model\Operator")) {
+                return $this->_propDict["operator"];
+            } else {
+                $this->_propDict["operator"] = new Operator($this->_propDict["operator"]);
+                return $this->_propDict["operator"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the operator
+    * Operator specified in the rule.
+    *
+    * @param Operator $val The value to assign to the operator
+    *
+    * @return DeviceComplianceScriptRule The DeviceComplianceScriptRule
+    */
+    public function setOperator($val)
+    {
+        $this->_propDict["operator"] = $val;
+         return $this;
+    }
+    /**
+    * Gets the settingName
+    * Setting name specified in the rule.
+    *
+    * @return string The settingName
+    */
+    public function getSettingName()
+    {
+        if (array_key_exists("settingName", $this->_propDict)) {
+            return $this->_propDict["settingName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the settingName
+    * Setting name specified in the rule.
+    *
+    * @param string $val The value of the settingName
+    *
+    * @return DeviceComplianceScriptRule
+    */
+    public function setSettingName($val)
+    {
+        $this->_propDict["settingName"] = $val;
         return $this;
     }
 }

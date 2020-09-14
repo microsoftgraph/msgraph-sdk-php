@@ -25,56 +25,29 @@ namespace Beta\Microsoft\Graph\Model;
 class Company extends Entity
 {
     /**
-    * Gets the systemVersion
+    * Gets the businessProfileId
     *
-    * @return string The systemVersion
+    * @return string The businessProfileId
     */
-    public function getSystemVersion()
+    public function getBusinessProfileId()
     {
-        if (array_key_exists("systemVersion", $this->_propDict)) {
-            return $this->_propDict["systemVersion"];
+        if (array_key_exists("businessProfileId", $this->_propDict)) {
+            return $this->_propDict["businessProfileId"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the systemVersion
+    * Sets the businessProfileId
     *
-    * @param string $val The systemVersion
-    *
-    * @return Company
-    */
-    public function setSystemVersion($val)
-    {
-        $this->_propDict["systemVersion"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the name
-    *
-    * @return string The name
-    */
-    public function getName()
-    {
-        if (array_key_exists("name", $this->_propDict)) {
-            return $this->_propDict["name"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the name
-    *
-    * @param string $val The name
+    * @param string $val The businessProfileId
     *
     * @return Company
     */
-    public function setName($val)
+    public function setBusinessProfileId($val)
     {
-        $this->_propDict["name"] = $val;
+        $this->_propDict["businessProfileId"] = $val;
         return $this;
     }
     
@@ -106,113 +79,140 @@ class Company extends Entity
     }
     
     /**
-    * Gets the businessProfileId
+    * Gets the name
     *
-    * @return string The businessProfileId
+    * @return string The name
     */
-    public function getBusinessProfileId()
+    public function getName()
     {
-        if (array_key_exists("businessProfileId", $this->_propDict)) {
-            return $this->_propDict["businessProfileId"];
+        if (array_key_exists("name", $this->_propDict)) {
+            return $this->_propDict["name"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the businessProfileId
+    * Sets the name
     *
-    * @param string $val The businessProfileId
+    * @param string $val The name
     *
     * @return Company
     */
-    public function setBusinessProfileId($val)
+    public function setName($val)
     {
-        $this->_propDict["businessProfileId"] = $val;
+        $this->_propDict["name"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the systemVersion
+    *
+    * @return string The systemVersion
+    */
+    public function getSystemVersion()
+    {
+        if (array_key_exists("systemVersion", $this->_propDict)) {
+            return $this->_propDict["systemVersion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the systemVersion
+    *
+    * @param string $val The systemVersion
+    *
+    * @return Company
+    */
+    public function setSystemVersion($val)
+    {
+        $this->_propDict["systemVersion"] = $val;
         return $this;
     }
     
 
      /** 
-     * Gets the items
+     * Gets the accounts
      *
-     * @return array The items
+     * @return array The accounts
      */
-    public function getItems()
+    public function getAccounts()
     {
-        if (array_key_exists("items", $this->_propDict)) {
-           return $this->_propDict["items"];
+        if (array_key_exists("accounts", $this->_propDict)) {
+           return $this->_propDict["accounts"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the items
+    * Sets the accounts
     *
-    * @param Item $val The items
+    * @param Account $val The accounts
     *
     * @return Company
     */
-    public function setItems($val)
+    public function setAccounts($val)
     {
-		$this->_propDict["items"] = $val;
+		$this->_propDict["accounts"] = $val;
         return $this;
     }
     
 
      /** 
-     * Gets the customers
+     * Gets the agedAccountsPayable
      *
-     * @return array The customers
+     * @return array The agedAccountsPayable
      */
-    public function getCustomers()
+    public function getAgedAccountsPayable()
     {
-        if (array_key_exists("customers", $this->_propDict)) {
-           return $this->_propDict["customers"];
+        if (array_key_exists("agedAccountsPayable", $this->_propDict)) {
+           return $this->_propDict["agedAccountsPayable"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the customers
+    * Sets the agedAccountsPayable
     *
-    * @param Customer $val The customers
+    * @param AgedAccountsPayable $val The agedAccountsPayable
     *
     * @return Company
     */
-    public function setCustomers($val)
+    public function setAgedAccountsPayable($val)
     {
-		$this->_propDict["customers"] = $val;
+		$this->_propDict["agedAccountsPayable"] = $val;
         return $this;
     }
     
 
      /** 
-     * Gets the vendors
+     * Gets the agedAccountsReceivable
      *
-     * @return array The vendors
+     * @return array The agedAccountsReceivable
      */
-    public function getVendors()
+    public function getAgedAccountsReceivable()
     {
-        if (array_key_exists("vendors", $this->_propDict)) {
-           return $this->_propDict["vendors"];
+        if (array_key_exists("agedAccountsReceivable", $this->_propDict)) {
+           return $this->_propDict["agedAccountsReceivable"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the vendors
+    * Sets the agedAccountsReceivable
     *
-    * @param Vendor $val The vendors
+    * @param AgedAccountsReceivable $val The agedAccountsReceivable
     *
     * @return Company
     */
-    public function setVendors($val)
+    public function setAgedAccountsReceivable($val)
     {
-		$this->_propDict["vendors"] = $val;
+		$this->_propDict["agedAccountsReceivable"] = $val;
         return $this;
     }
     
@@ -246,57 +246,57 @@ class Company extends Entity
     
 
      /** 
-     * Gets the salesInvoices
+     * Gets the countriesRegions
      *
-     * @return array The salesInvoices
+     * @return array The countriesRegions
      */
-    public function getSalesInvoices()
+    public function getCountriesRegions()
     {
-        if (array_key_exists("salesInvoices", $this->_propDict)) {
-           return $this->_propDict["salesInvoices"];
+        if (array_key_exists("countriesRegions", $this->_propDict)) {
+           return $this->_propDict["countriesRegions"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the salesInvoices
+    * Sets the countriesRegions
     *
-    * @param SalesInvoice $val The salesInvoices
+    * @param CountryRegion $val The countriesRegions
     *
     * @return Company
     */
-    public function setSalesInvoices($val)
+    public function setCountriesRegions($val)
     {
-		$this->_propDict["salesInvoices"] = $val;
+		$this->_propDict["countriesRegions"] = $val;
         return $this;
     }
     
 
      /** 
-     * Gets the salesInvoiceLines
+     * Gets the currencies
      *
-     * @return array The salesInvoiceLines
+     * @return array The currencies
      */
-    public function getSalesInvoiceLines()
+    public function getCurrencies()
     {
-        if (array_key_exists("salesInvoiceLines", $this->_propDict)) {
-           return $this->_propDict["salesInvoiceLines"];
+        if (array_key_exists("currencies", $this->_propDict)) {
+           return $this->_propDict["currencies"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the salesInvoiceLines
+    * Sets the currencies
     *
-    * @param SalesInvoiceLine $val The salesInvoiceLines
+    * @param Currency $val The currencies
     *
     * @return Company
     */
-    public function setSalesInvoiceLines($val)
+    public function setCurrencies($val)
     {
-		$this->_propDict["salesInvoiceLines"] = $val;
+		$this->_propDict["currencies"] = $val;
         return $this;
     }
     
@@ -358,225 +358,29 @@ class Company extends Entity
     
 
      /** 
-     * Gets the accounts
+     * Gets the customers
      *
-     * @return array The accounts
+     * @return array The customers
      */
-    public function getAccounts()
+    public function getCustomers()
     {
-        if (array_key_exists("accounts", $this->_propDict)) {
-           return $this->_propDict["accounts"];
+        if (array_key_exists("customers", $this->_propDict)) {
+           return $this->_propDict["customers"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the accounts
+    * Sets the customers
     *
-    * @param Account $val The accounts
-    *
-    * @return Company
-    */
-    public function setAccounts($val)
-    {
-		$this->_propDict["accounts"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the taxGroups
-     *
-     * @return array The taxGroups
-     */
-    public function getTaxGroups()
-    {
-        if (array_key_exists("taxGroups", $this->_propDict)) {
-           return $this->_propDict["taxGroups"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the taxGroups
-    *
-    * @param TaxGroup $val The taxGroups
+    * @param Customer $val The customers
     *
     * @return Company
     */
-    public function setTaxGroups($val)
+    public function setCustomers($val)
     {
-		$this->_propDict["taxGroups"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the journals
-     *
-     * @return array The journals
-     */
-    public function getJournals()
-    {
-        if (array_key_exists("journals", $this->_propDict)) {
-           return $this->_propDict["journals"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the journals
-    *
-    * @param Journal $val The journals
-    *
-    * @return Company
-    */
-    public function setJournals($val)
-    {
-		$this->_propDict["journals"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the journalLines
-     *
-     * @return array The journalLines
-     */
-    public function getJournalLines()
-    {
-        if (array_key_exists("journalLines", $this->_propDict)) {
-           return $this->_propDict["journalLines"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the journalLines
-    *
-    * @param JournalLine $val The journalLines
-    *
-    * @return Company
-    */
-    public function setJournalLines($val)
-    {
-		$this->_propDict["journalLines"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the employees
-     *
-     * @return array The employees
-     */
-    public function getEmployees()
-    {
-        if (array_key_exists("employees", $this->_propDict)) {
-           return $this->_propDict["employees"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the employees
-    *
-    * @param Employee $val The employees
-    *
-    * @return Company
-    */
-    public function setEmployees($val)
-    {
-		$this->_propDict["employees"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the generalLedgerEntries
-     *
-     * @return array The generalLedgerEntries
-     */
-    public function getGeneralLedgerEntries()
-    {
-        if (array_key_exists("generalLedgerEntries", $this->_propDict)) {
-           return $this->_propDict["generalLedgerEntries"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the generalLedgerEntries
-    *
-    * @param GeneralLedgerEntry $val The generalLedgerEntries
-    *
-    * @return Company
-    */
-    public function setGeneralLedgerEntries($val)
-    {
-		$this->_propDict["generalLedgerEntries"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the currencies
-     *
-     * @return array The currencies
-     */
-    public function getCurrencies()
-    {
-        if (array_key_exists("currencies", $this->_propDict)) {
-           return $this->_propDict["currencies"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the currencies
-    *
-    * @param Currency $val The currencies
-    *
-    * @return Company
-    */
-    public function setCurrencies($val)
-    {
-		$this->_propDict["currencies"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the paymentMethods
-     *
-     * @return array The paymentMethods
-     */
-    public function getPaymentMethods()
-    {
-        if (array_key_exists("paymentMethods", $this->_propDict)) {
-           return $this->_propDict["paymentMethods"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the paymentMethods
-    *
-    * @param PaymentMethod $val The paymentMethods
-    *
-    * @return Company
-    */
-    public function setPaymentMethods($val)
-    {
-		$this->_propDict["paymentMethods"] = $val;
+		$this->_propDict["customers"] = $val;
         return $this;
     }
     
@@ -638,57 +442,57 @@ class Company extends Entity
     
 
      /** 
-     * Gets the paymentTerms
+     * Gets the employees
      *
-     * @return array The paymentTerms
+     * @return array The employees
      */
-    public function getPaymentTerms()
+    public function getEmployees()
     {
-        if (array_key_exists("paymentTerms", $this->_propDict)) {
-           return $this->_propDict["paymentTerms"];
+        if (array_key_exists("employees", $this->_propDict)) {
+           return $this->_propDict["employees"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the paymentTerms
+    * Sets the employees
     *
-    * @param PaymentTerm $val The paymentTerms
+    * @param Employee $val The employees
     *
     * @return Company
     */
-    public function setPaymentTerms($val)
+    public function setEmployees($val)
     {
-		$this->_propDict["paymentTerms"] = $val;
+		$this->_propDict["employees"] = $val;
         return $this;
     }
     
 
      /** 
-     * Gets the shipmentMethods
+     * Gets the generalLedgerEntries
      *
-     * @return array The shipmentMethods
+     * @return array The generalLedgerEntries
      */
-    public function getShipmentMethods()
+    public function getGeneralLedgerEntries()
     {
-        if (array_key_exists("shipmentMethods", $this->_propDict)) {
-           return $this->_propDict["shipmentMethods"];
+        if (array_key_exists("generalLedgerEntries", $this->_propDict)) {
+           return $this->_propDict["generalLedgerEntries"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the shipmentMethods
+    * Sets the generalLedgerEntries
     *
-    * @param ShipmentMethod $val The shipmentMethods
+    * @param GeneralLedgerEntry $val The generalLedgerEntries
     *
     * @return Company
     */
-    public function setShipmentMethods($val)
+    public function setGeneralLedgerEntries($val)
     {
-		$this->_propDict["shipmentMethods"] = $val;
+		$this->_propDict["generalLedgerEntries"] = $val;
         return $this;
     }
     
@@ -722,337 +526,169 @@ class Company extends Entity
     
 
      /** 
-     * Gets the countriesRegions
+     * Gets the items
      *
-     * @return array The countriesRegions
+     * @return array The items
      */
-    public function getCountriesRegions()
+    public function getItems()
     {
-        if (array_key_exists("countriesRegions", $this->_propDict)) {
-           return $this->_propDict["countriesRegions"];
+        if (array_key_exists("items", $this->_propDict)) {
+           return $this->_propDict["items"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the countriesRegions
+    * Sets the items
     *
-    * @param CountryRegion $val The countriesRegions
+    * @param Item $val The items
     *
     * @return Company
     */
-    public function setCountriesRegions($val)
+    public function setItems($val)
     {
-		$this->_propDict["countriesRegions"] = $val;
+		$this->_propDict["items"] = $val;
         return $this;
     }
     
 
      /** 
-     * Gets the salesOrders
+     * Gets the journalLines
      *
-     * @return array The salesOrders
+     * @return array The journalLines
      */
-    public function getSalesOrders()
+    public function getJournalLines()
     {
-        if (array_key_exists("salesOrders", $this->_propDict)) {
-           return $this->_propDict["salesOrders"];
+        if (array_key_exists("journalLines", $this->_propDict)) {
+           return $this->_propDict["journalLines"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the salesOrders
+    * Sets the journalLines
     *
-    * @param SalesOrder $val The salesOrders
+    * @param JournalLine $val The journalLines
     *
     * @return Company
     */
-    public function setSalesOrders($val)
+    public function setJournalLines($val)
     {
-		$this->_propDict["salesOrders"] = $val;
+		$this->_propDict["journalLines"] = $val;
         return $this;
     }
     
 
      /** 
-     * Gets the salesOrderLines
+     * Gets the journals
      *
-     * @return array The salesOrderLines
+     * @return array The journals
      */
-    public function getSalesOrderLines()
+    public function getJournals()
     {
-        if (array_key_exists("salesOrderLines", $this->_propDict)) {
-           return $this->_propDict["salesOrderLines"];
+        if (array_key_exists("journals", $this->_propDict)) {
+           return $this->_propDict["journals"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the salesOrderLines
+    * Sets the journals
     *
-    * @param SalesOrderLine $val The salesOrderLines
+    * @param Journal $val The journals
     *
     * @return Company
     */
-    public function setSalesOrderLines($val)
+    public function setJournals($val)
     {
-		$this->_propDict["salesOrderLines"] = $val;
+		$this->_propDict["journals"] = $val;
         return $this;
     }
     
 
      /** 
-     * Gets the unitsOfMeasure
+     * Gets the paymentMethods
      *
-     * @return array The unitsOfMeasure
+     * @return array The paymentMethods
      */
-    public function getUnitsOfMeasure()
+    public function getPaymentMethods()
     {
-        if (array_key_exists("unitsOfMeasure", $this->_propDict)) {
-           return $this->_propDict["unitsOfMeasure"];
+        if (array_key_exists("paymentMethods", $this->_propDict)) {
+           return $this->_propDict["paymentMethods"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the unitsOfMeasure
+    * Sets the paymentMethods
     *
-    * @param UnitOfMeasure $val The unitsOfMeasure
+    * @param PaymentMethod $val The paymentMethods
     *
     * @return Company
     */
-    public function setUnitsOfMeasure($val)
+    public function setPaymentMethods($val)
     {
-		$this->_propDict["unitsOfMeasure"] = $val;
+		$this->_propDict["paymentMethods"] = $val;
         return $this;
     }
     
 
      /** 
-     * Gets the agedAccountsReceivable
+     * Gets the paymentTerms
      *
-     * @return array The agedAccountsReceivable
+     * @return array The paymentTerms
      */
-    public function getAgedAccountsReceivable()
+    public function getPaymentTerms()
     {
-        if (array_key_exists("agedAccountsReceivable", $this->_propDict)) {
-           return $this->_propDict["agedAccountsReceivable"];
+        if (array_key_exists("paymentTerms", $this->_propDict)) {
+           return $this->_propDict["paymentTerms"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the agedAccountsReceivable
+    * Sets the paymentTerms
     *
-    * @param AgedAccountsReceivable $val The agedAccountsReceivable
+    * @param PaymentTerm $val The paymentTerms
     *
     * @return Company
     */
-    public function setAgedAccountsReceivable($val)
+    public function setPaymentTerms($val)
     {
-		$this->_propDict["agedAccountsReceivable"] = $val;
+		$this->_propDict["paymentTerms"] = $val;
         return $this;
     }
     
 
      /** 
-     * Gets the agedAccountsPayable
+     * Gets the picture
      *
-     * @return array The agedAccountsPayable
+     * @return array The picture
      */
-    public function getAgedAccountsPayable()
+    public function getPicture()
     {
-        if (array_key_exists("agedAccountsPayable", $this->_propDict)) {
-           return $this->_propDict["agedAccountsPayable"];
+        if (array_key_exists("picture", $this->_propDict)) {
+           return $this->_propDict["picture"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the agedAccountsPayable
+    * Sets the picture
     *
-    * @param AgedAccountsPayable $val The agedAccountsPayable
-    *
-    * @return Company
-    */
-    public function setAgedAccountsPayable($val)
-    {
-		$this->_propDict["agedAccountsPayable"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the taxAreas
-     *
-     * @return array The taxAreas
-     */
-    public function getTaxAreas()
-    {
-        if (array_key_exists("taxAreas", $this->_propDict)) {
-           return $this->_propDict["taxAreas"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the taxAreas
-    *
-    * @param TaxArea $val The taxAreas
+    * @param Picture $val The picture
     *
     * @return Company
     */
-    public function setTaxAreas($val)
+    public function setPicture($val)
     {
-		$this->_propDict["taxAreas"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the salesQuotes
-     *
-     * @return array The salesQuotes
-     */
-    public function getSalesQuotes()
-    {
-        if (array_key_exists("salesQuotes", $this->_propDict)) {
-           return $this->_propDict["salesQuotes"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the salesQuotes
-    *
-    * @param SalesQuote $val The salesQuotes
-    *
-    * @return Company
-    */
-    public function setSalesQuotes($val)
-    {
-		$this->_propDict["salesQuotes"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the salesQuoteLines
-     *
-     * @return array The salesQuoteLines
-     */
-    public function getSalesQuoteLines()
-    {
-        if (array_key_exists("salesQuoteLines", $this->_propDict)) {
-           return $this->_propDict["salesQuoteLines"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the salesQuoteLines
-    *
-    * @param SalesQuoteLine $val The salesQuoteLines
-    *
-    * @return Company
-    */
-    public function setSalesQuoteLines($val)
-    {
-		$this->_propDict["salesQuoteLines"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the salesCreditMemos
-     *
-     * @return array The salesCreditMemos
-     */
-    public function getSalesCreditMemos()
-    {
-        if (array_key_exists("salesCreditMemos", $this->_propDict)) {
-           return $this->_propDict["salesCreditMemos"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the salesCreditMemos
-    *
-    * @param SalesCreditMemo $val The salesCreditMemos
-    *
-    * @return Company
-    */
-    public function setSalesCreditMemos($val)
-    {
-		$this->_propDict["salesCreditMemos"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the salesCreditMemoLines
-     *
-     * @return array The salesCreditMemoLines
-     */
-    public function getSalesCreditMemoLines()
-    {
-        if (array_key_exists("salesCreditMemoLines", $this->_propDict)) {
-           return $this->_propDict["salesCreditMemoLines"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the salesCreditMemoLines
-    *
-    * @param SalesCreditMemoLine $val The salesCreditMemoLines
-    *
-    * @return Company
-    */
-    public function setSalesCreditMemoLines($val)
-    {
-		$this->_propDict["salesCreditMemoLines"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the purchaseInvoices
-     *
-     * @return array The purchaseInvoices
-     */
-    public function getPurchaseInvoices()
-    {
-        if (array_key_exists("purchaseInvoices", $this->_propDict)) {
-           return $this->_propDict["purchaseInvoices"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the purchaseInvoices
-    *
-    * @param PurchaseInvoice $val The purchaseInvoices
-    *
-    * @return Company
-    */
-    public function setPurchaseInvoices($val)
-    {
-		$this->_propDict["purchaseInvoices"] = $val;
+		$this->_propDict["picture"] = $val;
         return $this;
     }
     
@@ -1086,29 +722,393 @@ class Company extends Entity
     
 
      /** 
-     * Gets the picture
+     * Gets the purchaseInvoices
      *
-     * @return array The picture
+     * @return array The purchaseInvoices
      */
-    public function getPicture()
+    public function getPurchaseInvoices()
     {
-        if (array_key_exists("picture", $this->_propDict)) {
-           return $this->_propDict["picture"];
+        if (array_key_exists("purchaseInvoices", $this->_propDict)) {
+           return $this->_propDict["purchaseInvoices"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the picture
+    * Sets the purchaseInvoices
     *
-    * @param Picture $val The picture
+    * @param PurchaseInvoice $val The purchaseInvoices
     *
     * @return Company
     */
-    public function setPicture($val)
+    public function setPurchaseInvoices($val)
     {
-		$this->_propDict["picture"] = $val;
+		$this->_propDict["purchaseInvoices"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the salesCreditMemoLines
+     *
+     * @return array The salesCreditMemoLines
+     */
+    public function getSalesCreditMemoLines()
+    {
+        if (array_key_exists("salesCreditMemoLines", $this->_propDict)) {
+           return $this->_propDict["salesCreditMemoLines"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the salesCreditMemoLines
+    *
+    * @param SalesCreditMemoLine $val The salesCreditMemoLines
+    *
+    * @return Company
+    */
+    public function setSalesCreditMemoLines($val)
+    {
+		$this->_propDict["salesCreditMemoLines"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the salesCreditMemos
+     *
+     * @return array The salesCreditMemos
+     */
+    public function getSalesCreditMemos()
+    {
+        if (array_key_exists("salesCreditMemos", $this->_propDict)) {
+           return $this->_propDict["salesCreditMemos"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the salesCreditMemos
+    *
+    * @param SalesCreditMemo $val The salesCreditMemos
+    *
+    * @return Company
+    */
+    public function setSalesCreditMemos($val)
+    {
+		$this->_propDict["salesCreditMemos"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the salesInvoiceLines
+     *
+     * @return array The salesInvoiceLines
+     */
+    public function getSalesInvoiceLines()
+    {
+        if (array_key_exists("salesInvoiceLines", $this->_propDict)) {
+           return $this->_propDict["salesInvoiceLines"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the salesInvoiceLines
+    *
+    * @param SalesInvoiceLine $val The salesInvoiceLines
+    *
+    * @return Company
+    */
+    public function setSalesInvoiceLines($val)
+    {
+		$this->_propDict["salesInvoiceLines"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the salesInvoices
+     *
+     * @return array The salesInvoices
+     */
+    public function getSalesInvoices()
+    {
+        if (array_key_exists("salesInvoices", $this->_propDict)) {
+           return $this->_propDict["salesInvoices"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the salesInvoices
+    *
+    * @param SalesInvoice $val The salesInvoices
+    *
+    * @return Company
+    */
+    public function setSalesInvoices($val)
+    {
+		$this->_propDict["salesInvoices"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the salesOrderLines
+     *
+     * @return array The salesOrderLines
+     */
+    public function getSalesOrderLines()
+    {
+        if (array_key_exists("salesOrderLines", $this->_propDict)) {
+           return $this->_propDict["salesOrderLines"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the salesOrderLines
+    *
+    * @param SalesOrderLine $val The salesOrderLines
+    *
+    * @return Company
+    */
+    public function setSalesOrderLines($val)
+    {
+		$this->_propDict["salesOrderLines"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the salesOrders
+     *
+     * @return array The salesOrders
+     */
+    public function getSalesOrders()
+    {
+        if (array_key_exists("salesOrders", $this->_propDict)) {
+           return $this->_propDict["salesOrders"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the salesOrders
+    *
+    * @param SalesOrder $val The salesOrders
+    *
+    * @return Company
+    */
+    public function setSalesOrders($val)
+    {
+		$this->_propDict["salesOrders"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the salesQuoteLines
+     *
+     * @return array The salesQuoteLines
+     */
+    public function getSalesQuoteLines()
+    {
+        if (array_key_exists("salesQuoteLines", $this->_propDict)) {
+           return $this->_propDict["salesQuoteLines"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the salesQuoteLines
+    *
+    * @param SalesQuoteLine $val The salesQuoteLines
+    *
+    * @return Company
+    */
+    public function setSalesQuoteLines($val)
+    {
+		$this->_propDict["salesQuoteLines"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the salesQuotes
+     *
+     * @return array The salesQuotes
+     */
+    public function getSalesQuotes()
+    {
+        if (array_key_exists("salesQuotes", $this->_propDict)) {
+           return $this->_propDict["salesQuotes"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the salesQuotes
+    *
+    * @param SalesQuote $val The salesQuotes
+    *
+    * @return Company
+    */
+    public function setSalesQuotes($val)
+    {
+		$this->_propDict["salesQuotes"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the shipmentMethods
+     *
+     * @return array The shipmentMethods
+     */
+    public function getShipmentMethods()
+    {
+        if (array_key_exists("shipmentMethods", $this->_propDict)) {
+           return $this->_propDict["shipmentMethods"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the shipmentMethods
+    *
+    * @param ShipmentMethod $val The shipmentMethods
+    *
+    * @return Company
+    */
+    public function setShipmentMethods($val)
+    {
+		$this->_propDict["shipmentMethods"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the taxAreas
+     *
+     * @return array The taxAreas
+     */
+    public function getTaxAreas()
+    {
+        if (array_key_exists("taxAreas", $this->_propDict)) {
+           return $this->_propDict["taxAreas"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the taxAreas
+    *
+    * @param TaxArea $val The taxAreas
+    *
+    * @return Company
+    */
+    public function setTaxAreas($val)
+    {
+		$this->_propDict["taxAreas"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the taxGroups
+     *
+     * @return array The taxGroups
+     */
+    public function getTaxGroups()
+    {
+        if (array_key_exists("taxGroups", $this->_propDict)) {
+           return $this->_propDict["taxGroups"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the taxGroups
+    *
+    * @param TaxGroup $val The taxGroups
+    *
+    * @return Company
+    */
+    public function setTaxGroups($val)
+    {
+		$this->_propDict["taxGroups"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the unitsOfMeasure
+     *
+     * @return array The unitsOfMeasure
+     */
+    public function getUnitsOfMeasure()
+    {
+        if (array_key_exists("unitsOfMeasure", $this->_propDict)) {
+           return $this->_propDict["unitsOfMeasure"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the unitsOfMeasure
+    *
+    * @param UnitOfMeasure $val The unitsOfMeasure
+    *
+    * @return Company
+    */
+    public function setUnitsOfMeasure($val)
+    {
+		$this->_propDict["unitsOfMeasure"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the vendors
+     *
+     * @return array The vendors
+     */
+    public function getVendors()
+    {
+        if (array_key_exists("vendors", $this->_propDict)) {
+           return $this->_propDict["vendors"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the vendors
+    *
+    * @param Vendor $val The vendors
+    *
+    * @return Company
+    */
+    public function setVendors($val)
+    {
+		$this->_propDict["vendors"] = $val;
         return $this;
     }
     

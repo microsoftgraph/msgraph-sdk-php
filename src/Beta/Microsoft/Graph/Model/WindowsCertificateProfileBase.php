@@ -25,31 +25,64 @@ namespace Beta\Microsoft\Graph\Model;
 class WindowsCertificateProfileBase extends DeviceConfiguration
 {
     /**
-    * Gets the renewalThresholdPercentage
-    * Certificate renewal threshold percentage. Valid values 1 to 99
+    * Gets the certificateValidityPeriodScale
+    * Scale for the Certificate Validity Period
     *
-    * @return int The renewalThresholdPercentage
+    * @return CertificateValidityPeriodScale The certificateValidityPeriodScale
     */
-    public function getRenewalThresholdPercentage()
+    public function getCertificateValidityPeriodScale()
     {
-        if (array_key_exists("renewalThresholdPercentage", $this->_propDict)) {
-            return $this->_propDict["renewalThresholdPercentage"];
+        if (array_key_exists("certificateValidityPeriodScale", $this->_propDict)) {
+            if (is_a($this->_propDict["certificateValidityPeriodScale"], "Beta\Microsoft\Graph\Model\CertificateValidityPeriodScale")) {
+                return $this->_propDict["certificateValidityPeriodScale"];
+            } else {
+                $this->_propDict["certificateValidityPeriodScale"] = new CertificateValidityPeriodScale($this->_propDict["certificateValidityPeriodScale"]);
+                return $this->_propDict["certificateValidityPeriodScale"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the certificateValidityPeriodScale
+    * Scale for the Certificate Validity Period
+    *
+    * @param CertificateValidityPeriodScale $val The certificateValidityPeriodScale
+    *
+    * @return WindowsCertificateProfileBase
+    */
+    public function setCertificateValidityPeriodScale($val)
+    {
+        $this->_propDict["certificateValidityPeriodScale"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the certificateValidityPeriodValue
+    * Value for the Certificate Validity Period
+    *
+    * @return int The certificateValidityPeriodValue
+    */
+    public function getCertificateValidityPeriodValue()
+    {
+        if (array_key_exists("certificateValidityPeriodValue", $this->_propDict)) {
+            return $this->_propDict["certificateValidityPeriodValue"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the renewalThresholdPercentage
-    * Certificate renewal threshold percentage. Valid values 1 to 99
+    * Sets the certificateValidityPeriodValue
+    * Value for the Certificate Validity Period
     *
-    * @param int $val The renewalThresholdPercentage
+    * @param int $val The certificateValidityPeriodValue
     *
     * @return WindowsCertificateProfileBase
     */
-    public function setRenewalThresholdPercentage($val)
+    public function setCertificateValidityPeriodValue($val)
     {
-        $this->_propDict["renewalThresholdPercentage"] = intval($val);
+        $this->_propDict["certificateValidityPeriodValue"] = intval($val);
         return $this;
     }
     
@@ -87,35 +120,31 @@ class WindowsCertificateProfileBase extends DeviceConfiguration
     }
     
     /**
-    * Gets the subjectNameFormat
-    * Certificate Subject Name Format
+    * Gets the renewalThresholdPercentage
+    * Certificate renewal threshold percentage. Valid values 1 to 99
     *
-    * @return SubjectNameFormat The subjectNameFormat
+    * @return int The renewalThresholdPercentage
     */
-    public function getSubjectNameFormat()
+    public function getRenewalThresholdPercentage()
     {
-        if (array_key_exists("subjectNameFormat", $this->_propDict)) {
-            if (is_a($this->_propDict["subjectNameFormat"], "Beta\Microsoft\Graph\Model\SubjectNameFormat")) {
-                return $this->_propDict["subjectNameFormat"];
-            } else {
-                $this->_propDict["subjectNameFormat"] = new SubjectNameFormat($this->_propDict["subjectNameFormat"]);
-                return $this->_propDict["subjectNameFormat"];
-            }
+        if (array_key_exists("renewalThresholdPercentage", $this->_propDict)) {
+            return $this->_propDict["renewalThresholdPercentage"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the subjectNameFormat
-    * Certificate Subject Name Format
+    * Sets the renewalThresholdPercentage
+    * Certificate renewal threshold percentage. Valid values 1 to 99
     *
-    * @param SubjectNameFormat $val The subjectNameFormat
+    * @param int $val The renewalThresholdPercentage
     *
     * @return WindowsCertificateProfileBase
     */
-    public function setSubjectNameFormat($val)
+    public function setRenewalThresholdPercentage($val)
     {
-        $this->_propDict["subjectNameFormat"] = $val;
+        $this->_propDict["renewalThresholdPercentage"] = intval($val);
         return $this;
     }
     
@@ -153,64 +182,35 @@ class WindowsCertificateProfileBase extends DeviceConfiguration
     }
     
     /**
-    * Gets the certificateValidityPeriodValue
-    * Value for the Certificate Validity Period
+    * Gets the subjectNameFormat
+    * Certificate Subject Name Format
     *
-    * @return int The certificateValidityPeriodValue
+    * @return SubjectNameFormat The subjectNameFormat
     */
-    public function getCertificateValidityPeriodValue()
+    public function getSubjectNameFormat()
     {
-        if (array_key_exists("certificateValidityPeriodValue", $this->_propDict)) {
-            return $this->_propDict["certificateValidityPeriodValue"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the certificateValidityPeriodValue
-    * Value for the Certificate Validity Period
-    *
-    * @param int $val The certificateValidityPeriodValue
-    *
-    * @return WindowsCertificateProfileBase
-    */
-    public function setCertificateValidityPeriodValue($val)
-    {
-        $this->_propDict["certificateValidityPeriodValue"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the certificateValidityPeriodScale
-    * Scale for the Certificate Validity Period
-    *
-    * @return CertificateValidityPeriodScale The certificateValidityPeriodScale
-    */
-    public function getCertificateValidityPeriodScale()
-    {
-        if (array_key_exists("certificateValidityPeriodScale", $this->_propDict)) {
-            if (is_a($this->_propDict["certificateValidityPeriodScale"], "Beta\Microsoft\Graph\Model\CertificateValidityPeriodScale")) {
-                return $this->_propDict["certificateValidityPeriodScale"];
+        if (array_key_exists("subjectNameFormat", $this->_propDict)) {
+            if (is_a($this->_propDict["subjectNameFormat"], "Beta\Microsoft\Graph\Model\SubjectNameFormat")) {
+                return $this->_propDict["subjectNameFormat"];
             } else {
-                $this->_propDict["certificateValidityPeriodScale"] = new CertificateValidityPeriodScale($this->_propDict["certificateValidityPeriodScale"]);
-                return $this->_propDict["certificateValidityPeriodScale"];
+                $this->_propDict["subjectNameFormat"] = new SubjectNameFormat($this->_propDict["subjectNameFormat"]);
+                return $this->_propDict["subjectNameFormat"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the certificateValidityPeriodScale
-    * Scale for the Certificate Validity Period
+    * Sets the subjectNameFormat
+    * Certificate Subject Name Format
     *
-    * @param CertificateValidityPeriodScale $val The certificateValidityPeriodScale
+    * @param SubjectNameFormat $val The subjectNameFormat
     *
     * @return WindowsCertificateProfileBase
     */
-    public function setCertificateValidityPeriodScale($val)
+    public function setSubjectNameFormat($val)
     {
-        $this->_propDict["certificateValidityPeriodScale"] = $val;
+        $this->_propDict["subjectNameFormat"] = $val;
         return $this;
     }
     

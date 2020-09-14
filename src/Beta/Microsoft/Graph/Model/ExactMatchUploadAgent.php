@@ -25,33 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class ExactMatchUploadAgent extends Entity
 {
     /**
-    * Gets the description
-    *
-    * @return string The description
-    */
-    public function getDescription()
-    {
-        if (array_key_exists("description", $this->_propDict)) {
-            return $this->_propDict["description"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the description
-    *
-    * @param string $val The description
-    *
-    * @return ExactMatchUploadAgent
-    */
-    public function setDescription($val)
-    {
-        $this->_propDict["description"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the creationDateTime
     *
     * @return \DateTime The creationDateTime
@@ -79,6 +52,33 @@ class ExactMatchUploadAgent extends Entity
     public function setCreationDateTime($val)
     {
         $this->_propDict["creationDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the description
+    *
+    * @return string The description
+    */
+    public function getDescription()
+    {
+        if (array_key_exists("description", $this->_propDict)) {
+            return $this->_propDict["description"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the description
+    *
+    * @param string $val The description
+    *
+    * @return ExactMatchUploadAgent
+    */
+    public function setDescription($val)
+    {
+        $this->_propDict["description"] = $val;
         return $this;
     }
     

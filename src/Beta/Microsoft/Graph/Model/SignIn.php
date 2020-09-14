@@ -433,35 +433,6 @@ class SignIn extends Entity
     }
     
     /**
-    * Gets the isInteractive
-    * Indicates if a sign-in is interactive or not.
-    *
-    * @return bool The isInteractive
-    */
-    public function getIsInteractive()
-    {
-        if (array_key_exists("isInteractive", $this->_propDict)) {
-            return $this->_propDict["isInteractive"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the isInteractive
-    * Indicates if a sign-in is interactive or not.
-    *
-    * @param bool $val The isInteractive
-    *
-    * @return SignIn
-    */
-    public function setIsInteractive($val)
-    {
-        $this->_propDict["isInteractive"] = boolval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the ipAddress
     * IP address of the client used to sign in.
     *
@@ -487,6 +458,35 @@ class SignIn extends Entity
     public function setIpAddress($val)
     {
         $this->_propDict["ipAddress"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the isInteractive
+    * Indicates if a sign-in is interactive or not.
+    *
+    * @return bool The isInteractive
+    */
+    public function getIsInteractive()
+    {
+        if (array_key_exists("isInteractive", $this->_propDict)) {
+            return $this->_propDict["isInteractive"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isInteractive
+    * Indicates if a sign-in is interactive or not.
+    *
+    * @param bool $val The isInteractive
+    *
+    * @return SignIn
+    */
+    public function setIsInteractive($val)
+    {
+        $this->_propDict["isInteractive"] = boolval($val);
         return $this;
     }
     
@@ -633,6 +633,91 @@ class SignIn extends Entity
     public function setProcessingTimeInMilliseconds($val)
     {
         $this->_propDict["processingTimeInMilliseconds"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the resourceDisplayName
+    * Name of the resource the user signed into.
+    *
+    * @return string The resourceDisplayName
+    */
+    public function getResourceDisplayName()
+    {
+        if (array_key_exists("resourceDisplayName", $this->_propDict)) {
+            return $this->_propDict["resourceDisplayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the resourceDisplayName
+    * Name of the resource the user signed into.
+    *
+    * @param string $val The resourceDisplayName
+    *
+    * @return SignIn
+    */
+    public function setResourceDisplayName($val)
+    {
+        $this->_propDict["resourceDisplayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the resourceId
+    * ID of the resource that the user signed into.
+    *
+    * @return string The resourceId
+    */
+    public function getResourceId()
+    {
+        if (array_key_exists("resourceId", $this->_propDict)) {
+            return $this->_propDict["resourceId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the resourceId
+    * ID of the resource that the user signed into.
+    *
+    * @param string $val The resourceId
+    *
+    * @return SignIn
+    */
+    public function setResourceId($val)
+    {
+        $this->_propDict["resourceId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the resourceTenantId
+    *
+    * @return string The resourceTenantId
+    */
+    public function getResourceTenantId()
+    {
+        if (array_key_exists("resourceTenantId", $this->_propDict)) {
+            return $this->_propDict["resourceTenantId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the resourceTenantId
+    *
+    * @param string $val The resourceTenantId
+    *
+    * @return SignIn
+    */
+    public function setResourceTenantId($val)
+    {
+        $this->_propDict["resourceTenantId"] = $val;
         return $this;
     }
     
@@ -824,91 +909,6 @@ class SignIn extends Entity
     public function setRiskState($val)
     {
         $this->_propDict["riskState"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the resourceDisplayName
-    * Name of the resource the user signed into.
-    *
-    * @return string The resourceDisplayName
-    */
-    public function getResourceDisplayName()
-    {
-        if (array_key_exists("resourceDisplayName", $this->_propDict)) {
-            return $this->_propDict["resourceDisplayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the resourceDisplayName
-    * Name of the resource the user signed into.
-    *
-    * @param string $val The resourceDisplayName
-    *
-    * @return SignIn
-    */
-    public function setResourceDisplayName($val)
-    {
-        $this->_propDict["resourceDisplayName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the resourceId
-    * ID of the resource that the user signed into.
-    *
-    * @return string The resourceId
-    */
-    public function getResourceId()
-    {
-        if (array_key_exists("resourceId", $this->_propDict)) {
-            return $this->_propDict["resourceId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the resourceId
-    * ID of the resource that the user signed into.
-    *
-    * @param string $val The resourceId
-    *
-    * @return SignIn
-    */
-    public function setResourceId($val)
-    {
-        $this->_propDict["resourceId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the resourceTenantId
-    *
-    * @return string The resourceTenantId
-    */
-    public function getResourceTenantId()
-    {
-        if (array_key_exists("resourceTenantId", $this->_propDict)) {
-            return $this->_propDict["resourceTenantId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the resourceTenantId
-    *
-    * @param string $val The resourceTenantId
-    *
-    * @return SignIn
-    */
-    public function setResourceTenantId($val)
-    {
-        $this->_propDict["resourceTenantId"] = $val;
         return $this;
     }
     

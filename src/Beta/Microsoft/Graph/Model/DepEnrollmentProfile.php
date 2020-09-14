@@ -25,6 +25,151 @@ namespace Beta\Microsoft\Graph\Model;
 class DepEnrollmentProfile extends EnrollmentProfile
 {
     /**
+    * Gets the appleIdDisabled
+    * Indicates if Apple id setup pane is disabled
+    *
+    * @return bool The appleIdDisabled
+    */
+    public function getAppleIdDisabled()
+    {
+        if (array_key_exists("appleIdDisabled", $this->_propDict)) {
+            return $this->_propDict["appleIdDisabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the appleIdDisabled
+    * Indicates if Apple id setup pane is disabled
+    *
+    * @param bool $val The appleIdDisabled
+    *
+    * @return DepEnrollmentProfile
+    */
+    public function setAppleIdDisabled($val)
+    {
+        $this->_propDict["appleIdDisabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the applePayDisabled
+    * Indicates if Apple pay setup pane is disabled
+    *
+    * @return bool The applePayDisabled
+    */
+    public function getApplePayDisabled()
+    {
+        if (array_key_exists("applePayDisabled", $this->_propDict)) {
+            return $this->_propDict["applePayDisabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the applePayDisabled
+    * Indicates if Apple pay setup pane is disabled
+    *
+    * @param bool $val The applePayDisabled
+    *
+    * @return DepEnrollmentProfile
+    */
+    public function setApplePayDisabled($val)
+    {
+        $this->_propDict["applePayDisabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the awaitDeviceConfiguredConfirmation
+    * Indicates if the device will need to wait for configured confirmation
+    *
+    * @return bool The awaitDeviceConfiguredConfirmation
+    */
+    public function getAwaitDeviceConfiguredConfirmation()
+    {
+        if (array_key_exists("awaitDeviceConfiguredConfirmation", $this->_propDict)) {
+            return $this->_propDict["awaitDeviceConfiguredConfirmation"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the awaitDeviceConfiguredConfirmation
+    * Indicates if the device will need to wait for configured confirmation
+    *
+    * @param bool $val The awaitDeviceConfiguredConfirmation
+    *
+    * @return DepEnrollmentProfile
+    */
+    public function setAwaitDeviceConfiguredConfirmation($val)
+    {
+        $this->_propDict["awaitDeviceConfiguredConfirmation"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the diagnosticsDisabled
+    * Indicates if diagnostics setup pane is disabled
+    *
+    * @return bool The diagnosticsDisabled
+    */
+    public function getDiagnosticsDisabled()
+    {
+        if (array_key_exists("diagnosticsDisabled", $this->_propDict)) {
+            return $this->_propDict["diagnosticsDisabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the diagnosticsDisabled
+    * Indicates if diagnostics setup pane is disabled
+    *
+    * @param bool $val The diagnosticsDisabled
+    *
+    * @return DepEnrollmentProfile
+    */
+    public function setDiagnosticsDisabled($val)
+    {
+        $this->_propDict["diagnosticsDisabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the enableSharedIPad
+    * This indicates whether the device is to be enrolled in a mode which enables multi user scenarios. Only applicable in shared iPads.
+    *
+    * @return bool The enableSharedIPad
+    */
+    public function getEnableSharedIPad()
+    {
+        if (array_key_exists("enableSharedIPad", $this->_propDict)) {
+            return $this->_propDict["enableSharedIPad"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the enableSharedIPad
+    * This indicates whether the device is to be enrolled in a mode which enables multi user scenarios. Only applicable in shared iPads.
+    *
+    * @param bool $val The enableSharedIPad
+    *
+    * @return DepEnrollmentProfile
+    */
+    public function setEnableSharedIPad($val)
+    {
+        $this->_propDict["enableSharedIPad"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the isDefault
     * Indicates if this is the default profile
     *
@@ -54,93 +199,6 @@ class DepEnrollmentProfile extends EnrollmentProfile
     }
     
     /**
-    * Gets the supervisedModeEnabled
-    * Supervised mode, True to enable, false otherwise. See https://docs.microsoft.com/en-us/intune/deploy-use/enroll-devices-in-microsoft-intune for additional information.
-    *
-    * @return bool The supervisedModeEnabled
-    */
-    public function getSupervisedModeEnabled()
-    {
-        if (array_key_exists("supervisedModeEnabled", $this->_propDict)) {
-            return $this->_propDict["supervisedModeEnabled"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the supervisedModeEnabled
-    * Supervised mode, True to enable, false otherwise. See https://docs.microsoft.com/en-us/intune/deploy-use/enroll-devices-in-microsoft-intune for additional information.
-    *
-    * @param bool $val The supervisedModeEnabled
-    *
-    * @return DepEnrollmentProfile
-    */
-    public function setSupervisedModeEnabled($val)
-    {
-        $this->_propDict["supervisedModeEnabled"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the supportDepartment
-    * Support department information
-    *
-    * @return string The supportDepartment
-    */
-    public function getSupportDepartment()
-    {
-        if (array_key_exists("supportDepartment", $this->_propDict)) {
-            return $this->_propDict["supportDepartment"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the supportDepartment
-    * Support department information
-    *
-    * @param string $val The supportDepartment
-    *
-    * @return DepEnrollmentProfile
-    */
-    public function setSupportDepartment($val)
-    {
-        $this->_propDict["supportDepartment"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the passCodeDisabled
-    * Indicates if Passcode setup pane is disabled
-    *
-    * @return bool The passCodeDisabled
-    */
-    public function getPassCodeDisabled()
-    {
-        if (array_key_exists("passCodeDisabled", $this->_propDict)) {
-            return $this->_propDict["passCodeDisabled"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the passCodeDisabled
-    * Indicates if Passcode setup pane is disabled
-    *
-    * @param bool $val The passCodeDisabled
-    *
-    * @return DepEnrollmentProfile
-    */
-    public function setPassCodeDisabled($val)
-    {
-        $this->_propDict["passCodeDisabled"] = boolval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the isMandatory
     * Indicates if the profile is mandatory
     *
@@ -166,64 +224,6 @@ class DepEnrollmentProfile extends EnrollmentProfile
     public function setIsMandatory($val)
     {
         $this->_propDict["isMandatory"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the locationDisabled
-    * Indicates if Location service setup pane is disabled
-    *
-    * @return bool The locationDisabled
-    */
-    public function getLocationDisabled()
-    {
-        if (array_key_exists("locationDisabled", $this->_propDict)) {
-            return $this->_propDict["locationDisabled"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the locationDisabled
-    * Indicates if Location service setup pane is disabled
-    *
-    * @param bool $val The locationDisabled
-    *
-    * @return DepEnrollmentProfile
-    */
-    public function setLocationDisabled($val)
-    {
-        $this->_propDict["locationDisabled"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the supportPhoneNumber
-    * Support phone number
-    *
-    * @return string The supportPhoneNumber
-    */
-    public function getSupportPhoneNumber()
-    {
-        if (array_key_exists("supportPhoneNumber", $this->_propDict)) {
-            return $this->_propDict["supportPhoneNumber"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the supportPhoneNumber
-    * Support phone number
-    *
-    * @param string $val The supportPhoneNumber
-    *
-    * @return DepEnrollmentProfile
-    */
-    public function setSupportPhoneNumber($val)
-    {
-        $this->_propDict["supportPhoneNumber"] = $val;
         return $this;
     }
     
@@ -261,31 +261,89 @@ class DepEnrollmentProfile extends EnrollmentProfile
     }
     
     /**
-    * Gets the profileRemovalDisabled
-    * Indicates if the profile removal option is disabled
+    * Gets the locationDisabled
+    * Indicates if Location service setup pane is disabled
     *
-    * @return bool The profileRemovalDisabled
+    * @return bool The locationDisabled
     */
-    public function getProfileRemovalDisabled()
+    public function getLocationDisabled()
     {
-        if (array_key_exists("profileRemovalDisabled", $this->_propDict)) {
-            return $this->_propDict["profileRemovalDisabled"];
+        if (array_key_exists("locationDisabled", $this->_propDict)) {
+            return $this->_propDict["locationDisabled"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the profileRemovalDisabled
-    * Indicates if the profile removal option is disabled
+    * Sets the locationDisabled
+    * Indicates if Location service setup pane is disabled
     *
-    * @param bool $val The profileRemovalDisabled
+    * @param bool $val The locationDisabled
     *
     * @return DepEnrollmentProfile
     */
-    public function setProfileRemovalDisabled($val)
+    public function setLocationDisabled($val)
     {
-        $this->_propDict["profileRemovalDisabled"] = boolval($val);
+        $this->_propDict["locationDisabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the macOSFileVaultDisabled
+    * Indicates if Mac OS file vault is disabled
+    *
+    * @return bool The macOSFileVaultDisabled
+    */
+    public function getMacOSFileVaultDisabled()
+    {
+        if (array_key_exists("macOSFileVaultDisabled", $this->_propDict)) {
+            return $this->_propDict["macOSFileVaultDisabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the macOSFileVaultDisabled
+    * Indicates if Mac OS file vault is disabled
+    *
+    * @param bool $val The macOSFileVaultDisabled
+    *
+    * @return DepEnrollmentProfile
+    */
+    public function setMacOSFileVaultDisabled($val)
+    {
+        $this->_propDict["macOSFileVaultDisabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the macOSRegistrationDisabled
+    * Indicates if Mac OS registration is disabled
+    *
+    * @return bool The macOSRegistrationDisabled
+    */
+    public function getMacOSRegistrationDisabled()
+    {
+        if (array_key_exists("macOSRegistrationDisabled", $this->_propDict)) {
+            return $this->_propDict["macOSRegistrationDisabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the macOSRegistrationDisabled
+    * Indicates if Mac OS registration is disabled
+    *
+    * @param bool $val The macOSRegistrationDisabled
+    *
+    * @return DepEnrollmentProfile
+    */
+    public function setMacOSRegistrationDisabled($val)
+    {
+        $this->_propDict["macOSRegistrationDisabled"] = boolval($val);
         return $this;
     }
     
@@ -316,6 +374,64 @@ class DepEnrollmentProfile extends EnrollmentProfile
     public function setManagementCertificates($val)
     {
 		$this->_propDict["managementCertificates"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the passCodeDisabled
+    * Indicates if Passcode setup pane is disabled
+    *
+    * @return bool The passCodeDisabled
+    */
+    public function getPassCodeDisabled()
+    {
+        if (array_key_exists("passCodeDisabled", $this->_propDict)) {
+            return $this->_propDict["passCodeDisabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the passCodeDisabled
+    * Indicates if Passcode setup pane is disabled
+    *
+    * @param bool $val The passCodeDisabled
+    *
+    * @return DepEnrollmentProfile
+    */
+    public function setPassCodeDisabled($val)
+    {
+        $this->_propDict["passCodeDisabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the profileRemovalDisabled
+    * Indicates if the profile removal option is disabled
+    *
+    * @return bool The profileRemovalDisabled
+    */
+    public function getProfileRemovalDisabled()
+    {
+        if (array_key_exists("profileRemovalDisabled", $this->_propDict)) {
+            return $this->_propDict["profileRemovalDisabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the profileRemovalDisabled
+    * Indicates if the profile removal option is disabled
+    *
+    * @param bool $val The profileRemovalDisabled
+    *
+    * @return DepEnrollmentProfile
+    */
+    public function setProfileRemovalDisabled($val)
+    {
+        $this->_propDict["profileRemovalDisabled"] = boolval($val);
         return $this;
     }
     
@@ -378,31 +494,147 @@ class DepEnrollmentProfile extends EnrollmentProfile
     }
     
     /**
-    * Gets the appleIdDisabled
-    * Indicates if Apple id setup pane is disabled
+    * Gets the sharedIPadMaximumUserCount
+    * This specifies the maximum number of users that can use a shared iPad. Only applicable in shared iPad mode.
     *
-    * @return bool The appleIdDisabled
+    * @return int The sharedIPadMaximumUserCount
     */
-    public function getAppleIdDisabled()
+    public function getSharedIPadMaximumUserCount()
     {
-        if (array_key_exists("appleIdDisabled", $this->_propDict)) {
-            return $this->_propDict["appleIdDisabled"];
+        if (array_key_exists("sharedIPadMaximumUserCount", $this->_propDict)) {
+            return $this->_propDict["sharedIPadMaximumUserCount"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the appleIdDisabled
-    * Indicates if Apple id setup pane is disabled
+    * Sets the sharedIPadMaximumUserCount
+    * This specifies the maximum number of users that can use a shared iPad. Only applicable in shared iPad mode.
     *
-    * @param bool $val The appleIdDisabled
+    * @param int $val The sharedIPadMaximumUserCount
     *
     * @return DepEnrollmentProfile
     */
-    public function setAppleIdDisabled($val)
+    public function setSharedIPadMaximumUserCount($val)
     {
-        $this->_propDict["appleIdDisabled"] = boolval($val);
+        $this->_propDict["sharedIPadMaximumUserCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the siriDisabled
+    * Indicates if siri setup pane is disabled
+    *
+    * @return bool The siriDisabled
+    */
+    public function getSiriDisabled()
+    {
+        if (array_key_exists("siriDisabled", $this->_propDict)) {
+            return $this->_propDict["siriDisabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the siriDisabled
+    * Indicates if siri setup pane is disabled
+    *
+    * @param bool $val The siriDisabled
+    *
+    * @return DepEnrollmentProfile
+    */
+    public function setSiriDisabled($val)
+    {
+        $this->_propDict["siriDisabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the supervisedModeEnabled
+    * Supervised mode, True to enable, false otherwise. See https://docs.microsoft.com/en-us/intune/deploy-use/enroll-devices-in-microsoft-intune for additional information.
+    *
+    * @return bool The supervisedModeEnabled
+    */
+    public function getSupervisedModeEnabled()
+    {
+        if (array_key_exists("supervisedModeEnabled", $this->_propDict)) {
+            return $this->_propDict["supervisedModeEnabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the supervisedModeEnabled
+    * Supervised mode, True to enable, false otherwise. See https://docs.microsoft.com/en-us/intune/deploy-use/enroll-devices-in-microsoft-intune for additional information.
+    *
+    * @param bool $val The supervisedModeEnabled
+    *
+    * @return DepEnrollmentProfile
+    */
+    public function setSupervisedModeEnabled($val)
+    {
+        $this->_propDict["supervisedModeEnabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the supportDepartment
+    * Support department information
+    *
+    * @return string The supportDepartment
+    */
+    public function getSupportDepartment()
+    {
+        if (array_key_exists("supportDepartment", $this->_propDict)) {
+            return $this->_propDict["supportDepartment"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the supportDepartment
+    * Support department information
+    *
+    * @param string $val The supportDepartment
+    *
+    * @return DepEnrollmentProfile
+    */
+    public function setSupportDepartment($val)
+    {
+        $this->_propDict["supportDepartment"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the supportPhoneNumber
+    * Support phone number
+    *
+    * @return string The supportPhoneNumber
+    */
+    public function getSupportPhoneNumber()
+    {
+        if (array_key_exists("supportPhoneNumber", $this->_propDict)) {
+            return $this->_propDict["supportPhoneNumber"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the supportPhoneNumber
+    * Support phone number
+    *
+    * @param string $val The supportPhoneNumber
+    *
+    * @return DepEnrollmentProfile
+    */
+    public function setSupportPhoneNumber($val)
+    {
+        $this->_propDict["supportPhoneNumber"] = $val;
         return $this;
     }
     
@@ -465,35 +697,6 @@ class DepEnrollmentProfile extends EnrollmentProfile
     }
     
     /**
-    * Gets the applePayDisabled
-    * Indicates if Apple pay setup pane is disabled
-    *
-    * @return bool The applePayDisabled
-    */
-    public function getApplePayDisabled()
-    {
-        if (array_key_exists("applePayDisabled", $this->_propDict)) {
-            return $this->_propDict["applePayDisabled"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the applePayDisabled
-    * Indicates if Apple pay setup pane is disabled
-    *
-    * @param bool $val The applePayDisabled
-    *
-    * @return DepEnrollmentProfile
-    */
-    public function setApplePayDisabled($val)
-    {
-        $this->_propDict["applePayDisabled"] = boolval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the zoomDisabled
     * Indicates if zoom setup pane is disabled
     *
@@ -519,209 +722,6 @@ class DepEnrollmentProfile extends EnrollmentProfile
     public function setZoomDisabled($val)
     {
         $this->_propDict["zoomDisabled"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the siriDisabled
-    * Indicates if siri setup pane is disabled
-    *
-    * @return bool The siriDisabled
-    */
-    public function getSiriDisabled()
-    {
-        if (array_key_exists("siriDisabled", $this->_propDict)) {
-            return $this->_propDict["siriDisabled"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the siriDisabled
-    * Indicates if siri setup pane is disabled
-    *
-    * @param bool $val The siriDisabled
-    *
-    * @return DepEnrollmentProfile
-    */
-    public function setSiriDisabled($val)
-    {
-        $this->_propDict["siriDisabled"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the diagnosticsDisabled
-    * Indicates if diagnostics setup pane is disabled
-    *
-    * @return bool The diagnosticsDisabled
-    */
-    public function getDiagnosticsDisabled()
-    {
-        if (array_key_exists("diagnosticsDisabled", $this->_propDict)) {
-            return $this->_propDict["diagnosticsDisabled"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the diagnosticsDisabled
-    * Indicates if diagnostics setup pane is disabled
-    *
-    * @param bool $val The diagnosticsDisabled
-    *
-    * @return DepEnrollmentProfile
-    */
-    public function setDiagnosticsDisabled($val)
-    {
-        $this->_propDict["diagnosticsDisabled"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the macOSRegistrationDisabled
-    * Indicates if Mac OS registration is disabled
-    *
-    * @return bool The macOSRegistrationDisabled
-    */
-    public function getMacOSRegistrationDisabled()
-    {
-        if (array_key_exists("macOSRegistrationDisabled", $this->_propDict)) {
-            return $this->_propDict["macOSRegistrationDisabled"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the macOSRegistrationDisabled
-    * Indicates if Mac OS registration is disabled
-    *
-    * @param bool $val The macOSRegistrationDisabled
-    *
-    * @return DepEnrollmentProfile
-    */
-    public function setMacOSRegistrationDisabled($val)
-    {
-        $this->_propDict["macOSRegistrationDisabled"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the macOSFileVaultDisabled
-    * Indicates if Mac OS file vault is disabled
-    *
-    * @return bool The macOSFileVaultDisabled
-    */
-    public function getMacOSFileVaultDisabled()
-    {
-        if (array_key_exists("macOSFileVaultDisabled", $this->_propDict)) {
-            return $this->_propDict["macOSFileVaultDisabled"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the macOSFileVaultDisabled
-    * Indicates if Mac OS file vault is disabled
-    *
-    * @param bool $val The macOSFileVaultDisabled
-    *
-    * @return DepEnrollmentProfile
-    */
-    public function setMacOSFileVaultDisabled($val)
-    {
-        $this->_propDict["macOSFileVaultDisabled"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the awaitDeviceConfiguredConfirmation
-    * Indicates if the device will need to wait for configured confirmation
-    *
-    * @return bool The awaitDeviceConfiguredConfirmation
-    */
-    public function getAwaitDeviceConfiguredConfirmation()
-    {
-        if (array_key_exists("awaitDeviceConfiguredConfirmation", $this->_propDict)) {
-            return $this->_propDict["awaitDeviceConfiguredConfirmation"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the awaitDeviceConfiguredConfirmation
-    * Indicates if the device will need to wait for configured confirmation
-    *
-    * @param bool $val The awaitDeviceConfiguredConfirmation
-    *
-    * @return DepEnrollmentProfile
-    */
-    public function setAwaitDeviceConfiguredConfirmation($val)
-    {
-        $this->_propDict["awaitDeviceConfiguredConfirmation"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the sharedIPadMaximumUserCount
-    * This specifies the maximum number of users that can use a shared iPad. Only applicable in shared iPad mode.
-    *
-    * @return int The sharedIPadMaximumUserCount
-    */
-    public function getSharedIPadMaximumUserCount()
-    {
-        if (array_key_exists("sharedIPadMaximumUserCount", $this->_propDict)) {
-            return $this->_propDict["sharedIPadMaximumUserCount"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the sharedIPadMaximumUserCount
-    * This specifies the maximum number of users that can use a shared iPad. Only applicable in shared iPad mode.
-    *
-    * @param int $val The sharedIPadMaximumUserCount
-    *
-    * @return DepEnrollmentProfile
-    */
-    public function setSharedIPadMaximumUserCount($val)
-    {
-        $this->_propDict["sharedIPadMaximumUserCount"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the enableSharedIPad
-    * This indicates whether the device is to be enrolled in a mode which enables multi user scenarios. Only applicable in shared iPads.
-    *
-    * @return bool The enableSharedIPad
-    */
-    public function getEnableSharedIPad()
-    {
-        if (array_key_exists("enableSharedIPad", $this->_propDict)) {
-            return $this->_propDict["enableSharedIPad"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the enableSharedIPad
-    * This indicates whether the device is to be enrolled in a mode which enables multi user scenarios. Only applicable in shared iPads.
-    *
-    * @param bool $val The enableSharedIPad
-    *
-    * @return DepEnrollmentProfile
-    */
-    public function setEnableSharedIPad($val)
-    {
-        $this->_propDict["enableSharedIPad"] = boolval($val);
         return $this;
     }
     

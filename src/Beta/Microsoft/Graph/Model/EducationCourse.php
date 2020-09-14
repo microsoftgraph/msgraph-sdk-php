@@ -24,32 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class EducationCourse extends Entity
 {
     /**
-    * Gets the subject
-    *
-    * @return string The subject
-    */
-    public function getSubject()
-    {
-        if (array_key_exists("subject", $this->_propDict)) {
-            return $this->_propDict["subject"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the subject
-    *
-    * @param string $val The value of the subject
-    *
-    * @return EducationCourse
-    */
-    public function setSubject($val)
-    {
-        $this->_propDict["subject"] = $val;
-        return $this;
-    }
-    /**
     * Gets the courseNumber
     *
     * @return string The courseNumber
@@ -151,6 +125,32 @@ class EducationCourse extends Entity
     public function setExternalId($val)
     {
         $this->_propDict["externalId"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the subject
+    *
+    * @return string The subject
+    */
+    public function getSubject()
+    {
+        if (array_key_exists("subject", $this->_propDict)) {
+            return $this->_propDict["subject"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the subject
+    *
+    * @param string $val The value of the subject
+    *
+    * @return EducationCourse
+    */
+    public function setSubject($val)
+    {
+        $this->_propDict["subject"] = $val;
         return $this;
     }
 }

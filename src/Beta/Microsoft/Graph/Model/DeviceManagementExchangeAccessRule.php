@@ -25,39 +25,6 @@ class DeviceManagementExchangeAccessRule extends Entity
 {
 
     /**
-    * Gets the deviceClass
-    * Device Class which will be impacted by this rule.
-    *
-    * @return DeviceManagementExchangeDeviceClass The deviceClass
-    */
-    public function getDeviceClass()
-    {
-        if (array_key_exists("deviceClass", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceClass"], "Beta\Microsoft\Graph\Model\DeviceManagementExchangeDeviceClass")) {
-                return $this->_propDict["deviceClass"];
-            } else {
-                $this->_propDict["deviceClass"] = new DeviceManagementExchangeDeviceClass($this->_propDict["deviceClass"]);
-                return $this->_propDict["deviceClass"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the deviceClass
-    * Device Class which will be impacted by this rule.
-    *
-    * @param DeviceManagementExchangeDeviceClass $val The value to assign to the deviceClass
-    *
-    * @return DeviceManagementExchangeAccessRule The DeviceManagementExchangeAccessRule
-    */
-    public function setDeviceClass($val)
-    {
-        $this->_propDict["deviceClass"] = $val;
-         return $this;
-    }
-
-    /**
     * Gets the accessLevel
     * Access Level for Exchange granted by this rule.
     *
@@ -87,6 +54,39 @@ class DeviceManagementExchangeAccessRule extends Entity
     public function setAccessLevel($val)
     {
         $this->_propDict["accessLevel"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the deviceClass
+    * Device Class which will be impacted by this rule.
+    *
+    * @return DeviceManagementExchangeDeviceClass The deviceClass
+    */
+    public function getDeviceClass()
+    {
+        if (array_key_exists("deviceClass", $this->_propDict)) {
+            if (is_a($this->_propDict["deviceClass"], "Beta\Microsoft\Graph\Model\DeviceManagementExchangeDeviceClass")) {
+                return $this->_propDict["deviceClass"];
+            } else {
+                $this->_propDict["deviceClass"] = new DeviceManagementExchangeDeviceClass($this->_propDict["deviceClass"]);
+                return $this->_propDict["deviceClass"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the deviceClass
+    * Device Class which will be impacted by this rule.
+    *
+    * @param DeviceManagementExchangeDeviceClass $val The value to assign to the deviceClass
+    *
+    * @return DeviceManagementExchangeAccessRule The DeviceManagementExchangeAccessRule
+    */
+    public function setDeviceClass($val)
+    {
+        $this->_propDict["deviceClass"] = $val;
          return $this;
     }
 }

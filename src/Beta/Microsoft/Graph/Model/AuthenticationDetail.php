@@ -23,37 +23,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class AuthenticationDetail extends Entity
 {
-
-    /**
-    * Gets the authenticationStepDateTime
-    *
-    * @return \DateTime The authenticationStepDateTime
-    */
-    public function getAuthenticationStepDateTime()
-    {
-        if (array_key_exists("authenticationStepDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["authenticationStepDateTime"], "\DateTime")) {
-                return $this->_propDict["authenticationStepDateTime"];
-            } else {
-                $this->_propDict["authenticationStepDateTime"] = new \DateTime($this->_propDict["authenticationStepDateTime"]);
-                return $this->_propDict["authenticationStepDateTime"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the authenticationStepDateTime
-    *
-    * @param \DateTime $val The value to assign to the authenticationStepDateTime
-    *
-    * @return AuthenticationDetail The AuthenticationDetail
-    */
-    public function setAuthenticationStepDateTime($val)
-    {
-        $this->_propDict["authenticationStepDateTime"] = $val;
-         return $this;
-    }
     /**
     * Gets the authenticationMethod
     *
@@ -106,30 +75,61 @@ class AuthenticationDetail extends Entity
         $this->_propDict["authenticationMethodDetail"] = $val;
         return $this;
     }
+
     /**
-    * Gets the succeeded
+    * Gets the authenticationStepDateTime
     *
-    * @return bool The succeeded
+    * @return \DateTime The authenticationStepDateTime
     */
-    public function getSucceeded()
+    public function getAuthenticationStepDateTime()
     {
-        if (array_key_exists("succeeded", $this->_propDict)) {
-            return $this->_propDict["succeeded"];
+        if (array_key_exists("authenticationStepDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["authenticationStepDateTime"], "\DateTime")) {
+                return $this->_propDict["authenticationStepDateTime"];
+            } else {
+                $this->_propDict["authenticationStepDateTime"] = new \DateTime($this->_propDict["authenticationStepDateTime"]);
+                return $this->_propDict["authenticationStepDateTime"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the authenticationStepDateTime
+    *
+    * @param \DateTime $val The value to assign to the authenticationStepDateTime
+    *
+    * @return AuthenticationDetail The AuthenticationDetail
+    */
+    public function setAuthenticationStepDateTime($val)
+    {
+        $this->_propDict["authenticationStepDateTime"] = $val;
+         return $this;
+    }
+    /**
+    * Gets the authenticationStepRequirement
+    *
+    * @return string The authenticationStepRequirement
+    */
+    public function getAuthenticationStepRequirement()
+    {
+        if (array_key_exists("authenticationStepRequirement", $this->_propDict)) {
+            return $this->_propDict["authenticationStepRequirement"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the succeeded
+    * Sets the authenticationStepRequirement
     *
-    * @param bool $val The value of the succeeded
+    * @param string $val The value of the authenticationStepRequirement
     *
     * @return AuthenticationDetail
     */
-    public function setSucceeded($val)
+    public function setAuthenticationStepRequirement($val)
     {
-        $this->_propDict["succeeded"] = $val;
+        $this->_propDict["authenticationStepRequirement"] = $val;
         return $this;
     }
     /**
@@ -159,29 +159,29 @@ class AuthenticationDetail extends Entity
         return $this;
     }
     /**
-    * Gets the authenticationStepRequirement
+    * Gets the succeeded
     *
-    * @return string The authenticationStepRequirement
+    * @return bool The succeeded
     */
-    public function getAuthenticationStepRequirement()
+    public function getSucceeded()
     {
-        if (array_key_exists("authenticationStepRequirement", $this->_propDict)) {
-            return $this->_propDict["authenticationStepRequirement"];
+        if (array_key_exists("succeeded", $this->_propDict)) {
+            return $this->_propDict["succeeded"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the authenticationStepRequirement
+    * Sets the succeeded
     *
-    * @param string $val The value of the authenticationStepRequirement
+    * @param bool $val The value of the succeeded
     *
     * @return AuthenticationDetail
     */
-    public function setAuthenticationStepRequirement($val)
+    public function setSucceeded($val)
     {
-        $this->_propDict["authenticationStepRequirement"] = $val;
+        $this->_propDict["succeeded"] = $val;
         return $this;
     }
 }

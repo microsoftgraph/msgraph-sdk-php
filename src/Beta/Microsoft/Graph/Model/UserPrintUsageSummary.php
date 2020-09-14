@@ -24,58 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class UserPrintUsageSummary extends Entity
 {
     /**
-    * Gets the userPrincipalName
-    *
-    * @return string The userPrincipalName
-    */
-    public function getUserPrincipalName()
-    {
-        if (array_key_exists("userPrincipalName", $this->_propDict)) {
-            return $this->_propDict["userPrincipalName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the userPrincipalName
-    *
-    * @param string $val The value of the userPrincipalName
-    *
-    * @return UserPrintUsageSummary
-    */
-    public function setUserPrincipalName($val)
-    {
-        $this->_propDict["userPrincipalName"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the userDisplayName
-    *
-    * @return string The userDisplayName
-    */
-    public function getUserDisplayName()
-    {
-        if (array_key_exists("userDisplayName", $this->_propDict)) {
-            return $this->_propDict["userDisplayName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the userDisplayName
-    *
-    * @param string $val The value of the userDisplayName
-    *
-    * @return UserPrintUsageSummary
-    */
-    public function setUserDisplayName($val)
-    {
-        $this->_propDict["userDisplayName"] = $val;
-        return $this;
-    }
-    /**
     * Gets the completedJobCount
     *
     * @return int The completedJobCount
@@ -157,5 +105,57 @@ class UserPrintUsageSummary extends Entity
     {
         $this->_propDict["user"] = $val;
          return $this;
+    }
+    /**
+    * Gets the userDisplayName
+    *
+    * @return string The userDisplayName
+    */
+    public function getUserDisplayName()
+    {
+        if (array_key_exists("userDisplayName", $this->_propDict)) {
+            return $this->_propDict["userDisplayName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the userDisplayName
+    *
+    * @param string $val The value of the userDisplayName
+    *
+    * @return UserPrintUsageSummary
+    */
+    public function setUserDisplayName($val)
+    {
+        $this->_propDict["userDisplayName"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the userPrincipalName
+    *
+    * @return string The userPrincipalName
+    */
+    public function getUserPrincipalName()
+    {
+        if (array_key_exists("userPrincipalName", $this->_propDict)) {
+            return $this->_propDict["userPrincipalName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the userPrincipalName
+    *
+    * @param string $val The value of the userPrincipalName
+    *
+    * @return UserPrintUsageSummary
+    */
+    public function setUserPrincipalName($val)
+    {
+        $this->_propDict["userPrincipalName"] = $val;
+        return $this;
     }
 }

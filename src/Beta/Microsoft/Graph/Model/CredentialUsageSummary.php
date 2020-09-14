@@ -25,6 +25,64 @@ namespace Beta\Microsoft\Graph\Model;
 class CredentialUsageSummary extends Entity
 {
     /**
+    * Gets the authMethod
+    *
+    * @return UsageAuthMethod The authMethod
+    */
+    public function getAuthMethod()
+    {
+        if (array_key_exists("authMethod", $this->_propDict)) {
+            if (is_a($this->_propDict["authMethod"], "Beta\Microsoft\Graph\Model\UsageAuthMethod")) {
+                return $this->_propDict["authMethod"];
+            } else {
+                $this->_propDict["authMethod"] = new UsageAuthMethod($this->_propDict["authMethod"]);
+                return $this->_propDict["authMethod"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the authMethod
+    *
+    * @param UsageAuthMethod $val The authMethod
+    *
+    * @return CredentialUsageSummary
+    */
+    public function setAuthMethod($val)
+    {
+        $this->_propDict["authMethod"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the failureActivityCount
+    *
+    * @return int The failureActivityCount
+    */
+    public function getFailureActivityCount()
+    {
+        if (array_key_exists("failureActivityCount", $this->_propDict)) {
+            return $this->_propDict["failureActivityCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the failureActivityCount
+    *
+    * @param int $val The failureActivityCount
+    *
+    * @return CredentialUsageSummary
+    */
+    public function setFailureActivityCount($val)
+    {
+        $this->_propDict["failureActivityCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the feature
     *
     * @return FeatureType The feature
@@ -79,64 +137,6 @@ class CredentialUsageSummary extends Entity
     public function setSuccessfulActivityCount($val)
     {
         $this->_propDict["successfulActivityCount"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the failureActivityCount
-    *
-    * @return int The failureActivityCount
-    */
-    public function getFailureActivityCount()
-    {
-        if (array_key_exists("failureActivityCount", $this->_propDict)) {
-            return $this->_propDict["failureActivityCount"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the failureActivityCount
-    *
-    * @param int $val The failureActivityCount
-    *
-    * @return CredentialUsageSummary
-    */
-    public function setFailureActivityCount($val)
-    {
-        $this->_propDict["failureActivityCount"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the authMethod
-    *
-    * @return UsageAuthMethod The authMethod
-    */
-    public function getAuthMethod()
-    {
-        if (array_key_exists("authMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["authMethod"], "Beta\Microsoft\Graph\Model\UsageAuthMethod")) {
-                return $this->_propDict["authMethod"];
-            } else {
-                $this->_propDict["authMethod"] = new UsageAuthMethod($this->_propDict["authMethod"]);
-                return $this->_propDict["authMethod"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the authMethod
-    *
-    * @param UsageAuthMethod $val The authMethod
-    *
-    * @return CredentialUsageSummary
-    */
-    public function setAuthMethod($val)
-    {
-        $this->_propDict["authMethod"] = $val;
         return $this;
     }
     

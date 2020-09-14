@@ -112,6 +112,36 @@ class TargetedManagedAppConfiguration extends ManagedAppConfiguration
         return $this;
     }
     
+
+     /** 
+     * Gets the assignments
+    * Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
+     *
+     * @return array The assignments
+     */
+    public function getAssignments()
+    {
+        if (array_key_exists("assignments", $this->_propDict)) {
+           return $this->_propDict["assignments"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the assignments
+    * Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
+    *
+    * @param TargetedManagedAppPolicyAssignment $val The assignments
+    *
+    * @return TargetedManagedAppConfiguration
+    */
+    public function setAssignments($val)
+    {
+		$this->_propDict["assignments"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the deploymentSummary
     * Navigation property to deployment summary of the configuration.
@@ -142,36 +172,6 @@ class TargetedManagedAppConfiguration extends ManagedAppConfiguration
     public function setDeploymentSummary($val)
     {
         $this->_propDict["deploymentSummary"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the assignments
-    * Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
-     *
-     * @return array The assignments
-     */
-    public function getAssignments()
-    {
-        if (array_key_exists("assignments", $this->_propDict)) {
-           return $this->_propDict["assignments"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the assignments
-    * Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
-    *
-    * @param TargetedManagedAppPolicyAssignment $val The assignments
-    *
-    * @return TargetedManagedAppConfiguration
-    */
-    public function setAssignments($val)
-    {
-		$this->_propDict["assignments"] = $val;
         return $this;
     }
     

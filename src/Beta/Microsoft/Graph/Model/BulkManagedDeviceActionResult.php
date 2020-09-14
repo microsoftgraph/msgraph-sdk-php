@@ -24,34 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class BulkManagedDeviceActionResult extends Entity
 {
     /**
-    * Gets the successfulDeviceIds
-    * Successful devices
-    *
-    * @return string The successfulDeviceIds
-    */
-    public function getSuccessfulDeviceIds()
-    {
-        if (array_key_exists("successfulDeviceIds", $this->_propDict)) {
-            return $this->_propDict["successfulDeviceIds"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the successfulDeviceIds
-    * Successful devices
-    *
-    * @param string $val The value of the successfulDeviceIds
-    *
-    * @return BulkManagedDeviceActionResult
-    */
-    public function setSuccessfulDeviceIds($val)
-    {
-        $this->_propDict["successfulDeviceIds"] = $val;
-        return $this;
-    }
-    /**
     * Gets the failedDeviceIds
     * Failed devices
     *
@@ -133,6 +105,34 @@ class BulkManagedDeviceActionResult extends Entity
     public function setNotSupportedDeviceIds($val)
     {
         $this->_propDict["notSupportedDeviceIds"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the successfulDeviceIds
+    * Successful devices
+    *
+    * @return string The successfulDeviceIds
+    */
+    public function getSuccessfulDeviceIds()
+    {
+        if (array_key_exists("successfulDeviceIds", $this->_propDict)) {
+            return $this->_propDict["successfulDeviceIds"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the successfulDeviceIds
+    * Successful devices
+    *
+    * @param string $val The value of the successfulDeviceIds
+    *
+    * @return BulkManagedDeviceActionResult
+    */
+    public function setSuccessfulDeviceIds($val)
+    {
+        $this->_propDict["successfulDeviceIds"] = $val;
         return $this;
     }
 }

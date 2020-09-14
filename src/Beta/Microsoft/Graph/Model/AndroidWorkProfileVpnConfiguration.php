@@ -25,6 +25,97 @@ namespace Beta\Microsoft\Graph\Model;
 class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
 {
     /**
+    * Gets the alwaysOn
+    * Whether or not to enable always-on VPN connection.
+    *
+    * @return bool The alwaysOn
+    */
+    public function getAlwaysOn()
+    {
+        if (array_key_exists("alwaysOn", $this->_propDict)) {
+            return $this->_propDict["alwaysOn"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the alwaysOn
+    * Whether or not to enable always-on VPN connection.
+    *
+    * @param bool $val The alwaysOn
+    *
+    * @return AndroidWorkProfileVpnConfiguration
+    */
+    public function setAlwaysOn($val)
+    {
+        $this->_propDict["alwaysOn"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the alwaysOnLockdown
+    * If always-on VPN connection is enabled, whether or not to lock network traffic when that VPN is disconnected.
+    *
+    * @return bool The alwaysOnLockdown
+    */
+    public function getAlwaysOnLockdown()
+    {
+        if (array_key_exists("alwaysOnLockdown", $this->_propDict)) {
+            return $this->_propDict["alwaysOnLockdown"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the alwaysOnLockdown
+    * If always-on VPN connection is enabled, whether or not to lock network traffic when that VPN is disconnected.
+    *
+    * @param bool $val The alwaysOnLockdown
+    *
+    * @return AndroidWorkProfileVpnConfiguration
+    */
+    public function setAlwaysOnLockdown($val)
+    {
+        $this->_propDict["alwaysOnLockdown"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the authenticationMethod
+    * Authentication method.
+    *
+    * @return VpnAuthenticationMethod The authenticationMethod
+    */
+    public function getAuthenticationMethod()
+    {
+        if (array_key_exists("authenticationMethod", $this->_propDict)) {
+            if (is_a($this->_propDict["authenticationMethod"], "Beta\Microsoft\Graph\Model\VpnAuthenticationMethod")) {
+                return $this->_propDict["authenticationMethod"];
+            } else {
+                $this->_propDict["authenticationMethod"] = new VpnAuthenticationMethod($this->_propDict["authenticationMethod"]);
+                return $this->_propDict["authenticationMethod"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the authenticationMethod
+    * Authentication method.
+    *
+    * @param VpnAuthenticationMethod $val The authenticationMethod
+    *
+    * @return AndroidWorkProfileVpnConfiguration
+    */
+    public function setAuthenticationMethod($val)
+    {
+        $this->_propDict["authenticationMethod"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the connectionName
     * Connection name displayed to the user.
     *
@@ -83,123 +174,6 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
     public function setConnectionType($val)
     {
         $this->_propDict["connectionType"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the role
-    * Role when connection type is set to Pulse Secure.
-    *
-    * @return string The role
-    */
-    public function getRole()
-    {
-        if (array_key_exists("role", $this->_propDict)) {
-            return $this->_propDict["role"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the role
-    * Role when connection type is set to Pulse Secure.
-    *
-    * @param string $val The role
-    *
-    * @return AndroidWorkProfileVpnConfiguration
-    */
-    public function setRole($val)
-    {
-        $this->_propDict["role"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the realm
-    * Realm when connection type is set to Pulse Secure.
-    *
-    * @return string The realm
-    */
-    public function getRealm()
-    {
-        if (array_key_exists("realm", $this->_propDict)) {
-            return $this->_propDict["realm"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the realm
-    * Realm when connection type is set to Pulse Secure.
-    *
-    * @param string $val The realm
-    *
-    * @return AndroidWorkProfileVpnConfiguration
-    */
-    public function setRealm($val)
-    {
-        $this->_propDict["realm"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the servers
-    * List of VPN Servers on the network. Make sure end users can access these network locations. This collection can contain a maximum of 500 elements.
-     *
-     * @return array The servers
-     */
-    public function getServers()
-    {
-        if (array_key_exists("servers", $this->_propDict)) {
-           return $this->_propDict["servers"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the servers
-    * List of VPN Servers on the network. Make sure end users can access these network locations. This collection can contain a maximum of 500 elements.
-    *
-    * @param VpnServer $val The servers
-    *
-    * @return AndroidWorkProfileVpnConfiguration
-    */
-    public function setServers($val)
-    {
-		$this->_propDict["servers"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the fingerprint
-    * Fingerprint is a string that will be used to verify the VPN server can be trusted, which is only applicable when connection type is Check Point Capsule VPN.
-    *
-    * @return string The fingerprint
-    */
-    public function getFingerprint()
-    {
-        if (array_key_exists("fingerprint", $this->_propDict)) {
-            return $this->_propDict["fingerprint"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the fingerprint
-    * Fingerprint is a string that will be used to verify the VPN server can be trusted, which is only applicable when connection type is Check Point Capsule VPN.
-    *
-    * @param string $val The fingerprint
-    *
-    * @return AndroidWorkProfileVpnConfiguration
-    */
-    public function setFingerprint($val)
-    {
-        $this->_propDict["fingerprint"] = $val;
         return $this;
     }
     
@@ -264,35 +238,31 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
     }
     
     /**
-    * Gets the authenticationMethod
-    * Authentication method.
+    * Gets the fingerprint
+    * Fingerprint is a string that will be used to verify the VPN server can be trusted, which is only applicable when connection type is Check Point Capsule VPN.
     *
-    * @return VpnAuthenticationMethod The authenticationMethod
+    * @return string The fingerprint
     */
-    public function getAuthenticationMethod()
+    public function getFingerprint()
     {
-        if (array_key_exists("authenticationMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["authenticationMethod"], "Beta\Microsoft\Graph\Model\VpnAuthenticationMethod")) {
-                return $this->_propDict["authenticationMethod"];
-            } else {
-                $this->_propDict["authenticationMethod"] = new VpnAuthenticationMethod($this->_propDict["authenticationMethod"]);
-                return $this->_propDict["authenticationMethod"];
-            }
+        if (array_key_exists("fingerprint", $this->_propDict)) {
+            return $this->_propDict["fingerprint"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the authenticationMethod
-    * Authentication method.
+    * Sets the fingerprint
+    * Fingerprint is a string that will be used to verify the VPN server can be trusted, which is only applicable when connection type is Check Point Capsule VPN.
     *
-    * @param VpnAuthenticationMethod $val The authenticationMethod
+    * @param string $val The fingerprint
     *
     * @return AndroidWorkProfileVpnConfiguration
     */
-    public function setAuthenticationMethod($val)
+    public function setFingerprint($val)
     {
-        $this->_propDict["authenticationMethod"] = $val;
+        $this->_propDict["fingerprint"] = $val;
         return $this;
     }
     
@@ -330,6 +300,94 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the realm
+    * Realm when connection type is set to Pulse Secure.
+    *
+    * @return string The realm
+    */
+    public function getRealm()
+    {
+        if (array_key_exists("realm", $this->_propDict)) {
+            return $this->_propDict["realm"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the realm
+    * Realm when connection type is set to Pulse Secure.
+    *
+    * @param string $val The realm
+    *
+    * @return AndroidWorkProfileVpnConfiguration
+    */
+    public function setRealm($val)
+    {
+        $this->_propDict["realm"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the role
+    * Role when connection type is set to Pulse Secure.
+    *
+    * @return string The role
+    */
+    public function getRole()
+    {
+        if (array_key_exists("role", $this->_propDict)) {
+            return $this->_propDict["role"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the role
+    * Role when connection type is set to Pulse Secure.
+    *
+    * @param string $val The role
+    *
+    * @return AndroidWorkProfileVpnConfiguration
+    */
+    public function setRole($val)
+    {
+        $this->_propDict["role"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the servers
+    * List of VPN Servers on the network. Make sure end users can access these network locations. This collection can contain a maximum of 500 elements.
+     *
+     * @return array The servers
+     */
+    public function getServers()
+    {
+        if (array_key_exists("servers", $this->_propDict)) {
+           return $this->_propDict["servers"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the servers
+    * List of VPN Servers on the network. Make sure end users can access these network locations. This collection can contain a maximum of 500 elements.
+    *
+    * @param VpnServer $val The servers
+    *
+    * @return AndroidWorkProfileVpnConfiguration
+    */
+    public function setServers($val)
+    {
+		$this->_propDict["servers"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the targetedPackageIds
     * Targeted App package IDs.
     *
@@ -355,64 +413,6 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
     public function setTargetedPackageIds($val)
     {
         $this->_propDict["targetedPackageIds"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the alwaysOn
-    * Whether or not to enable always-on VPN connection.
-    *
-    * @return bool The alwaysOn
-    */
-    public function getAlwaysOn()
-    {
-        if (array_key_exists("alwaysOn", $this->_propDict)) {
-            return $this->_propDict["alwaysOn"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the alwaysOn
-    * Whether or not to enable always-on VPN connection.
-    *
-    * @param bool $val The alwaysOn
-    *
-    * @return AndroidWorkProfileVpnConfiguration
-    */
-    public function setAlwaysOn($val)
-    {
-        $this->_propDict["alwaysOn"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the alwaysOnLockdown
-    * If always-on VPN connection is enabled, whether or not to lock network traffic when that VPN is disconnected.
-    *
-    * @return bool The alwaysOnLockdown
-    */
-    public function getAlwaysOnLockdown()
-    {
-        if (array_key_exists("alwaysOnLockdown", $this->_propDict)) {
-            return $this->_propDict["alwaysOnLockdown"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the alwaysOnLockdown
-    * If always-on VPN connection is enabled, whether or not to lock network traffic when that VPN is disconnected.
-    *
-    * @param bool $val The alwaysOnLockdown
-    *
-    * @return AndroidWorkProfileVpnConfiguration
-    */
-    public function setAlwaysOnLockdown($val)
-    {
-        $this->_propDict["alwaysOnLockdown"] = boolval($val);
         return $this;
     }
     

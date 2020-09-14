@@ -52,6 +52,33 @@ class ApprovalStep extends Entity
     }
     
     /**
+    * Gets the justification
+    *
+    * @return string The justification
+    */
+    public function getJustification()
+    {
+        if (array_key_exists("justification", $this->_propDict)) {
+            return $this->_propDict["justification"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the justification
+    *
+    * @param string $val The justification
+    *
+    * @return ApprovalStep
+    */
+    public function setJustification($val)
+    {
+        $this->_propDict["justification"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the reviewedBy
     *
     * @return Identity The reviewedBy
@@ -137,33 +164,6 @@ class ApprovalStep extends Entity
     public function setReviewResult($val)
     {
         $this->_propDict["reviewResult"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the justification
-    *
-    * @return string The justification
-    */
-    public function getJustification()
-    {
-        if (array_key_exists("justification", $this->_propDict)) {
-            return $this->_propDict["justification"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the justification
-    *
-    * @param string $val The justification
-    *
-    * @return ApprovalStep
-    */
-    public function setJustification($val)
-    {
-        $this->_propDict["justification"] = $val;
         return $this;
     }
     

@@ -25,70 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class EventMessage extends Message
 {
     /**
-    * Gets the meetingMessageType
-    * The type of event message: none, meetingRequest, meetingCancelled, meetingAccepted, meetingTenativelyAccepted, meetingDeclined.
-    *
-    * @return MeetingMessageType The meetingMessageType
-    */
-    public function getMeetingMessageType()
-    {
-        if (array_key_exists("meetingMessageType", $this->_propDict)) {
-            if (is_a($this->_propDict["meetingMessageType"], "Beta\Microsoft\Graph\Model\MeetingMessageType")) {
-                return $this->_propDict["meetingMessageType"];
-            } else {
-                $this->_propDict["meetingMessageType"] = new MeetingMessageType($this->_propDict["meetingMessageType"]);
-                return $this->_propDict["meetingMessageType"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the meetingMessageType
-    * The type of event message: none, meetingRequest, meetingCancelled, meetingAccepted, meetingTenativelyAccepted, meetingDeclined.
-    *
-    * @param MeetingMessageType $val The meetingMessageType
-    *
-    * @return EventMessage
-    */
-    public function setMeetingMessageType($val)
-    {
-        $this->_propDict["meetingMessageType"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the startDateTime
-    *
-    * @return DateTimeTimeZone The startDateTime
-    */
-    public function getStartDateTime()
-    {
-        if (array_key_exists("startDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startDateTime"], "Beta\Microsoft\Graph\Model\DateTimeTimeZone")) {
-                return $this->_propDict["startDateTime"];
-            } else {
-                $this->_propDict["startDateTime"] = new DateTimeTimeZone($this->_propDict["startDateTime"]);
-                return $this->_propDict["startDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the startDateTime
-    *
-    * @param DateTimeTimeZone $val The startDateTime
-    *
-    * @return EventMessage
-    */
-    public function setStartDateTime($val)
-    {
-        $this->_propDict["startDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the endDateTime
     *
     * @return DateTimeTimeZone The endDateTime
@@ -116,126 +52,6 @@ class EventMessage extends Message
     public function setEndDateTime($val)
     {
         $this->_propDict["endDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the location
-    *
-    * @return Location The location
-    */
-    public function getLocation()
-    {
-        if (array_key_exists("location", $this->_propDict)) {
-            if (is_a($this->_propDict["location"], "Beta\Microsoft\Graph\Model\Location")) {
-                return $this->_propDict["location"];
-            } else {
-                $this->_propDict["location"] = new Location($this->_propDict["location"]);
-                return $this->_propDict["location"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the location
-    *
-    * @param Location $val The location
-    *
-    * @return EventMessage
-    */
-    public function setLocation($val)
-    {
-        $this->_propDict["location"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the type
-    *
-    * @return EventType The type
-    */
-    public function getType()
-    {
-        if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "Beta\Microsoft\Graph\Model\EventType")) {
-                return $this->_propDict["type"];
-            } else {
-                $this->_propDict["type"] = new EventType($this->_propDict["type"]);
-                return $this->_propDict["type"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the type
-    *
-    * @param EventType $val The type
-    *
-    * @return EventMessage
-    */
-    public function setType($val)
-    {
-        $this->_propDict["type"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the recurrence
-    *
-    * @return PatternedRecurrence The recurrence
-    */
-    public function getRecurrence()
-    {
-        if (array_key_exists("recurrence", $this->_propDict)) {
-            if (is_a($this->_propDict["recurrence"], "Beta\Microsoft\Graph\Model\PatternedRecurrence")) {
-                return $this->_propDict["recurrence"];
-            } else {
-                $this->_propDict["recurrence"] = new PatternedRecurrence($this->_propDict["recurrence"]);
-                return $this->_propDict["recurrence"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the recurrence
-    *
-    * @param PatternedRecurrence $val The recurrence
-    *
-    * @return EventMessage
-    */
-    public function setRecurrence($val)
-    {
-        $this->_propDict["recurrence"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the isOutOfDate
-    *
-    * @return bool The isOutOfDate
-    */
-    public function getIsOutOfDate()
-    {
-        if (array_key_exists("isOutOfDate", $this->_propDict)) {
-            return $this->_propDict["isOutOfDate"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the isOutOfDate
-    *
-    * @param bool $val The isOutOfDate
-    *
-    * @return EventMessage
-    */
-    public function setIsOutOfDate($val)
-    {
-        $this->_propDict["isOutOfDate"] = boolval($val);
         return $this;
     }
     
@@ -292,6 +108,190 @@ class EventMessage extends Message
     public function setIsDelegated($val)
     {
         $this->_propDict["isDelegated"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the isOutOfDate
+    *
+    * @return bool The isOutOfDate
+    */
+    public function getIsOutOfDate()
+    {
+        if (array_key_exists("isOutOfDate", $this->_propDict)) {
+            return $this->_propDict["isOutOfDate"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isOutOfDate
+    *
+    * @param bool $val The isOutOfDate
+    *
+    * @return EventMessage
+    */
+    public function setIsOutOfDate($val)
+    {
+        $this->_propDict["isOutOfDate"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the location
+    *
+    * @return Location The location
+    */
+    public function getLocation()
+    {
+        if (array_key_exists("location", $this->_propDict)) {
+            if (is_a($this->_propDict["location"], "Beta\Microsoft\Graph\Model\Location")) {
+                return $this->_propDict["location"];
+            } else {
+                $this->_propDict["location"] = new Location($this->_propDict["location"]);
+                return $this->_propDict["location"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the location
+    *
+    * @param Location $val The location
+    *
+    * @return EventMessage
+    */
+    public function setLocation($val)
+    {
+        $this->_propDict["location"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the meetingMessageType
+    * The type of event message: none, meetingRequest, meetingCancelled, meetingAccepted, meetingTenativelyAccepted, meetingDeclined.
+    *
+    * @return MeetingMessageType The meetingMessageType
+    */
+    public function getMeetingMessageType()
+    {
+        if (array_key_exists("meetingMessageType", $this->_propDict)) {
+            if (is_a($this->_propDict["meetingMessageType"], "Beta\Microsoft\Graph\Model\MeetingMessageType")) {
+                return $this->_propDict["meetingMessageType"];
+            } else {
+                $this->_propDict["meetingMessageType"] = new MeetingMessageType($this->_propDict["meetingMessageType"]);
+                return $this->_propDict["meetingMessageType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the meetingMessageType
+    * The type of event message: none, meetingRequest, meetingCancelled, meetingAccepted, meetingTenativelyAccepted, meetingDeclined.
+    *
+    * @param MeetingMessageType $val The meetingMessageType
+    *
+    * @return EventMessage
+    */
+    public function setMeetingMessageType($val)
+    {
+        $this->_propDict["meetingMessageType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the recurrence
+    *
+    * @return PatternedRecurrence The recurrence
+    */
+    public function getRecurrence()
+    {
+        if (array_key_exists("recurrence", $this->_propDict)) {
+            if (is_a($this->_propDict["recurrence"], "Beta\Microsoft\Graph\Model\PatternedRecurrence")) {
+                return $this->_propDict["recurrence"];
+            } else {
+                $this->_propDict["recurrence"] = new PatternedRecurrence($this->_propDict["recurrence"]);
+                return $this->_propDict["recurrence"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the recurrence
+    *
+    * @param PatternedRecurrence $val The recurrence
+    *
+    * @return EventMessage
+    */
+    public function setRecurrence($val)
+    {
+        $this->_propDict["recurrence"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the startDateTime
+    *
+    * @return DateTimeTimeZone The startDateTime
+    */
+    public function getStartDateTime()
+    {
+        if (array_key_exists("startDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["startDateTime"], "Beta\Microsoft\Graph\Model\DateTimeTimeZone")) {
+                return $this->_propDict["startDateTime"];
+            } else {
+                $this->_propDict["startDateTime"] = new DateTimeTimeZone($this->_propDict["startDateTime"]);
+                return $this->_propDict["startDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the startDateTime
+    *
+    * @param DateTimeTimeZone $val The startDateTime
+    *
+    * @return EventMessage
+    */
+    public function setStartDateTime($val)
+    {
+        $this->_propDict["startDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the type
+    *
+    * @return EventType The type
+    */
+    public function getType()
+    {
+        if (array_key_exists("type", $this->_propDict)) {
+            if (is_a($this->_propDict["type"], "Beta\Microsoft\Graph\Model\EventType")) {
+                return $this->_propDict["type"];
+            } else {
+                $this->_propDict["type"] = new EventType($this->_propDict["type"]);
+                return $this->_propDict["type"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the type
+    *
+    * @param EventType $val The type
+    *
+    * @return EventMessage
+    */
+    public function setType($val)
+    {
+        $this->_propDict["type"] = $val;
         return $this;
     }
     

@@ -25,37 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class Office365GroupsActivityCounts extends Entity
 {
     /**
-    * Gets the reportRefreshDate
-    *
-    * @return \DateTime The reportRefreshDate
-    */
-    public function getReportRefreshDate()
-    {
-        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
-                return $this->_propDict["reportRefreshDate"];
-            } else {
-                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
-                return $this->_propDict["reportRefreshDate"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the reportRefreshDate
-    *
-    * @param \DateTime $val The reportRefreshDate
-    *
-    * @return Office365GroupsActivityCounts
-    */
-    public function setReportRefreshDate($val)
-    {
-        $this->_propDict["reportRefreshDate"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the exchangeEmailsReceived
     *
     * @return int The exchangeEmailsReceived
@@ -79,87 +48,6 @@ class Office365GroupsActivityCounts extends Entity
     public function setExchangeEmailsReceived($val)
     {
         $this->_propDict["exchangeEmailsReceived"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the yammerMessagesPosted
-    *
-    * @return int The yammerMessagesPosted
-    */
-    public function getYammerMessagesPosted()
-    {
-        if (array_key_exists("yammerMessagesPosted", $this->_propDict)) {
-            return $this->_propDict["yammerMessagesPosted"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the yammerMessagesPosted
-    *
-    * @param int $val The yammerMessagesPosted
-    *
-    * @return Office365GroupsActivityCounts
-    */
-    public function setYammerMessagesPosted($val)
-    {
-        $this->_propDict["yammerMessagesPosted"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the yammerMessagesRead
-    *
-    * @return int The yammerMessagesRead
-    */
-    public function getYammerMessagesRead()
-    {
-        if (array_key_exists("yammerMessagesRead", $this->_propDict)) {
-            return $this->_propDict["yammerMessagesRead"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the yammerMessagesRead
-    *
-    * @param int $val The yammerMessagesRead
-    *
-    * @return Office365GroupsActivityCounts
-    */
-    public function setYammerMessagesRead($val)
-    {
-        $this->_propDict["yammerMessagesRead"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the yammerMessagesLiked
-    *
-    * @return int The yammerMessagesLiked
-    */
-    public function getYammerMessagesLiked()
-    {
-        if (array_key_exists("yammerMessagesLiked", $this->_propDict)) {
-            return $this->_propDict["yammerMessagesLiked"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the yammerMessagesLiked
-    *
-    * @param int $val The yammerMessagesLiked
-    *
-    * @return Office365GroupsActivityCounts
-    */
-    public function setYammerMessagesLiked($val)
-    {
-        $this->_propDict["yammerMessagesLiked"] = intval($val);
         return $this;
     }
     
@@ -218,6 +106,118 @@ class Office365GroupsActivityCounts extends Entity
     public function setReportPeriod($val)
     {
         $this->_propDict["reportPeriod"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the reportRefreshDate
+    *
+    * @return \DateTime The reportRefreshDate
+    */
+    public function getReportRefreshDate()
+    {
+        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
+                return $this->_propDict["reportRefreshDate"];
+            } else {
+                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
+                return $this->_propDict["reportRefreshDate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the reportRefreshDate
+    *
+    * @param \DateTime $val The reportRefreshDate
+    *
+    * @return Office365GroupsActivityCounts
+    */
+    public function setReportRefreshDate($val)
+    {
+        $this->_propDict["reportRefreshDate"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the yammerMessagesLiked
+    *
+    * @return int The yammerMessagesLiked
+    */
+    public function getYammerMessagesLiked()
+    {
+        if (array_key_exists("yammerMessagesLiked", $this->_propDict)) {
+            return $this->_propDict["yammerMessagesLiked"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the yammerMessagesLiked
+    *
+    * @param int $val The yammerMessagesLiked
+    *
+    * @return Office365GroupsActivityCounts
+    */
+    public function setYammerMessagesLiked($val)
+    {
+        $this->_propDict["yammerMessagesLiked"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the yammerMessagesPosted
+    *
+    * @return int The yammerMessagesPosted
+    */
+    public function getYammerMessagesPosted()
+    {
+        if (array_key_exists("yammerMessagesPosted", $this->_propDict)) {
+            return $this->_propDict["yammerMessagesPosted"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the yammerMessagesPosted
+    *
+    * @param int $val The yammerMessagesPosted
+    *
+    * @return Office365GroupsActivityCounts
+    */
+    public function setYammerMessagesPosted($val)
+    {
+        $this->_propDict["yammerMessagesPosted"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the yammerMessagesRead
+    *
+    * @return int The yammerMessagesRead
+    */
+    public function getYammerMessagesRead()
+    {
+        if (array_key_exists("yammerMessagesRead", $this->_propDict)) {
+            return $this->_propDict["yammerMessagesRead"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the yammerMessagesRead
+    *
+    * @param int $val The yammerMessagesRead
+    *
+    * @return Office365GroupsActivityCounts
+    */
+    public function setYammerMessagesRead($val)
+    {
+        $this->_propDict["yammerMessagesRead"] = intval($val);
         return $this;
     }
     

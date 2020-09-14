@@ -25,35 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class AndroidForWorkApp extends MobileApp
 {
     /**
-    * Gets the packageId
-    * The package identifier.
-    *
-    * @return string The packageId
-    */
-    public function getPackageId()
-    {
-        if (array_key_exists("packageId", $this->_propDict)) {
-            return $this->_propDict["packageId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the packageId
-    * The package identifier.
-    *
-    * @param string $val The packageId
-    *
-    * @return AndroidForWorkApp
-    */
-    public function setPackageId($val)
-    {
-        $this->_propDict["packageId"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the appIdentifier
     * The Identity Name.
     *
@@ -83,31 +54,60 @@ class AndroidForWorkApp extends MobileApp
     }
     
     /**
-    * Gets the usedLicenseCount
-    * The number of VPP licenses in use.
+    * Gets the appStoreUrl
+    * The Play for Work Store app URL.
     *
-    * @return int The usedLicenseCount
+    * @return string The appStoreUrl
     */
-    public function getUsedLicenseCount()
+    public function getAppStoreUrl()
     {
-        if (array_key_exists("usedLicenseCount", $this->_propDict)) {
-            return $this->_propDict["usedLicenseCount"];
+        if (array_key_exists("appStoreUrl", $this->_propDict)) {
+            return $this->_propDict["appStoreUrl"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the usedLicenseCount
-    * The number of VPP licenses in use.
+    * Sets the appStoreUrl
+    * The Play for Work Store app URL.
     *
-    * @param int $val The usedLicenseCount
+    * @param string $val The appStoreUrl
     *
     * @return AndroidForWorkApp
     */
-    public function setUsedLicenseCount($val)
+    public function setAppStoreUrl($val)
     {
-        $this->_propDict["usedLicenseCount"] = intval($val);
+        $this->_propDict["appStoreUrl"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the packageId
+    * The package identifier.
+    *
+    * @return string The packageId
+    */
+    public function getPackageId()
+    {
+        if (array_key_exists("packageId", $this->_propDict)) {
+            return $this->_propDict["packageId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the packageId
+    * The package identifier.
+    *
+    * @param string $val The packageId
+    *
+    * @return AndroidForWorkApp
+    */
+    public function setPackageId($val)
+    {
+        $this->_propDict["packageId"] = $val;
         return $this;
     }
     
@@ -141,31 +141,31 @@ class AndroidForWorkApp extends MobileApp
     }
     
     /**
-    * Gets the appStoreUrl
-    * The Play for Work Store app URL.
+    * Gets the usedLicenseCount
+    * The number of VPP licenses in use.
     *
-    * @return string The appStoreUrl
+    * @return int The usedLicenseCount
     */
-    public function getAppStoreUrl()
+    public function getUsedLicenseCount()
     {
-        if (array_key_exists("appStoreUrl", $this->_propDict)) {
-            return $this->_propDict["appStoreUrl"];
+        if (array_key_exists("usedLicenseCount", $this->_propDict)) {
+            return $this->_propDict["usedLicenseCount"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the appStoreUrl
-    * The Play for Work Store app URL.
+    * Sets the usedLicenseCount
+    * The number of VPP licenses in use.
     *
-    * @param string $val The appStoreUrl
+    * @param int $val The usedLicenseCount
     *
     * @return AndroidForWorkApp
     */
-    public function setAppStoreUrl($val)
+    public function setUsedLicenseCount($val)
     {
-        $this->_propDict["appStoreUrl"] = $val;
+        $this->_propDict["usedLicenseCount"] = intval($val);
         return $this;
     }
     

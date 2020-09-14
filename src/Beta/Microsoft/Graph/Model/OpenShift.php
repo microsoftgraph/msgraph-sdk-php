@@ -25,39 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class OpenShift extends ChangeTrackedEntity
 {
     /**
-    * Gets the sharedOpenShift
-    * A published open shift.
-    *
-    * @return OpenShiftItem The sharedOpenShift
-    */
-    public function getSharedOpenShift()
-    {
-        if (array_key_exists("sharedOpenShift", $this->_propDict)) {
-            if (is_a($this->_propDict["sharedOpenShift"], "Beta\Microsoft\Graph\Model\OpenShiftItem")) {
-                return $this->_propDict["sharedOpenShift"];
-            } else {
-                $this->_propDict["sharedOpenShift"] = new OpenShiftItem($this->_propDict["sharedOpenShift"]);
-                return $this->_propDict["sharedOpenShift"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the sharedOpenShift
-    * A published open shift.
-    *
-    * @param OpenShiftItem $val The sharedOpenShift
-    *
-    * @return OpenShift
-    */
-    public function setSharedOpenShift($val)
-    {
-        $this->_propDict["sharedOpenShift"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the draftOpenShift
     * An unpublished open shift.
     *
@@ -91,6 +58,33 @@ class OpenShift extends ChangeTrackedEntity
     }
     
     /**
+    * Gets the isStagedForDeletion
+    *
+    * @return bool The isStagedForDeletion
+    */
+    public function getIsStagedForDeletion()
+    {
+        if (array_key_exists("isStagedForDeletion", $this->_propDict)) {
+            return $this->_propDict["isStagedForDeletion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isStagedForDeletion
+    *
+    * @param bool $val The isStagedForDeletion
+    *
+    * @return OpenShift
+    */
+    public function setIsStagedForDeletion($val)
+    {
+        $this->_propDict["isStagedForDeletion"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the schedulingGroupId
     * ID for the scheduling group that the open shift belongs to.
     *
@@ -120,29 +114,35 @@ class OpenShift extends ChangeTrackedEntity
     }
     
     /**
-    * Gets the isStagedForDeletion
+    * Gets the sharedOpenShift
+    * A published open shift.
     *
-    * @return bool The isStagedForDeletion
+    * @return OpenShiftItem The sharedOpenShift
     */
-    public function getIsStagedForDeletion()
+    public function getSharedOpenShift()
     {
-        if (array_key_exists("isStagedForDeletion", $this->_propDict)) {
-            return $this->_propDict["isStagedForDeletion"];
-        } else {
-            return null;
+        if (array_key_exists("sharedOpenShift", $this->_propDict)) {
+            if (is_a($this->_propDict["sharedOpenShift"], "Beta\Microsoft\Graph\Model\OpenShiftItem")) {
+                return $this->_propDict["sharedOpenShift"];
+            } else {
+                $this->_propDict["sharedOpenShift"] = new OpenShiftItem($this->_propDict["sharedOpenShift"]);
+                return $this->_propDict["sharedOpenShift"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the isStagedForDeletion
+    * Sets the sharedOpenShift
+    * A published open shift.
     *
-    * @param bool $val The isStagedForDeletion
+    * @param OpenShiftItem $val The sharedOpenShift
     *
     * @return OpenShift
     */
-    public function setIsStagedForDeletion($val)
+    public function setSharedOpenShift($val)
     {
-        $this->_propDict["isStagedForDeletion"] = boolval($val);
+        $this->_propDict["sharedOpenShift"] = $val;
         return $this;
     }
     

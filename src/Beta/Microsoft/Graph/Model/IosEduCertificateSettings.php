@@ -23,39 +23,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class IosEduCertificateSettings extends Entity
 {
-
-    /**
-    * Gets the trustedRootCertificate
-    * Trusted Root Certificate.
-    *
-    * @return \GuzzleHttp\Psr7\Stream The trustedRootCertificate
-    */
-    public function getTrustedRootCertificate()
-    {
-        if (array_key_exists("trustedRootCertificate", $this->_propDict)) {
-            if (is_a($this->_propDict["trustedRootCertificate"], "\GuzzleHttp\Psr7\Stream")) {
-                return $this->_propDict["trustedRootCertificate"];
-            } else {
-                $this->_propDict["trustedRootCertificate"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["trustedRootCertificate"]);
-                return $this->_propDict["trustedRootCertificate"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the trustedRootCertificate
-    * Trusted Root Certificate.
-    *
-    * @param \GuzzleHttp\Psr7\Stream $val The value to assign to the trustedRootCertificate
-    *
-    * @return IosEduCertificateSettings The IosEduCertificateSettings
-    */
-    public function setTrustedRootCertificate($val)
-    {
-        $this->_propDict["trustedRootCertificate"] = $val;
-         return $this;
-    }
     /**
     * Gets the certFileName
     * File name to display in UI.
@@ -82,6 +49,95 @@ class IosEduCertificateSettings extends Entity
     public function setCertFileName($val)
     {
         $this->_propDict["certFileName"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the certificateTemplateName
+    * PKCS Certificate Template Name.
+    *
+    * @return string The certificateTemplateName
+    */
+    public function getCertificateTemplateName()
+    {
+        if (array_key_exists("certificateTemplateName", $this->_propDict)) {
+            return $this->_propDict["certificateTemplateName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the certificateTemplateName
+    * PKCS Certificate Template Name.
+    *
+    * @param string $val The value of the certificateTemplateName
+    *
+    * @return IosEduCertificateSettings
+    */
+    public function setCertificateTemplateName($val)
+    {
+        $this->_propDict["certificateTemplateName"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the certificateValidityPeriodScale
+    * Scale for the Certificate Validity Period.
+    *
+    * @return CertificateValidityPeriodScale The certificateValidityPeriodScale
+    */
+    public function getCertificateValidityPeriodScale()
+    {
+        if (array_key_exists("certificateValidityPeriodScale", $this->_propDict)) {
+            if (is_a($this->_propDict["certificateValidityPeriodScale"], "Beta\Microsoft\Graph\Model\CertificateValidityPeriodScale")) {
+                return $this->_propDict["certificateValidityPeriodScale"];
+            } else {
+                $this->_propDict["certificateValidityPeriodScale"] = new CertificateValidityPeriodScale($this->_propDict["certificateValidityPeriodScale"]);
+                return $this->_propDict["certificateValidityPeriodScale"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the certificateValidityPeriodScale
+    * Scale for the Certificate Validity Period.
+    *
+    * @param CertificateValidityPeriodScale $val The value to assign to the certificateValidityPeriodScale
+    *
+    * @return IosEduCertificateSettings The IosEduCertificateSettings
+    */
+    public function setCertificateValidityPeriodScale($val)
+    {
+        $this->_propDict["certificateValidityPeriodScale"] = $val;
+         return $this;
+    }
+    /**
+    * Gets the certificateValidityPeriodValue
+    * Value for the Certificate Validity Period.
+    *
+    * @return int The certificateValidityPeriodValue
+    */
+    public function getCertificateValidityPeriodValue()
+    {
+        if (array_key_exists("certificateValidityPeriodValue", $this->_propDict)) {
+            return $this->_propDict["certificateValidityPeriodValue"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the certificateValidityPeriodValue
+    * Value for the Certificate Validity Period.
+    *
+    * @param int $val The value of the certificateValidityPeriodValue
+    *
+    * @return IosEduCertificateSettings
+    */
+    public function setCertificateValidityPeriodValue($val)
+    {
+        $this->_propDict["certificateValidityPeriodValue"] = $val;
         return $this;
     }
     /**
@@ -141,34 +197,6 @@ class IosEduCertificateSettings extends Entity
         return $this;
     }
     /**
-    * Gets the certificateTemplateName
-    * PKCS Certificate Template Name.
-    *
-    * @return string The certificateTemplateName
-    */
-    public function getCertificateTemplateName()
-    {
-        if (array_key_exists("certificateTemplateName", $this->_propDict)) {
-            return $this->_propDict["certificateTemplateName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the certificateTemplateName
-    * PKCS Certificate Template Name.
-    *
-    * @param string $val The value of the certificateTemplateName
-    *
-    * @return IosEduCertificateSettings
-    */
-    public function setCertificateTemplateName($val)
-    {
-        $this->_propDict["certificateTemplateName"] = $val;
-        return $this;
-    }
-    /**
     * Gets the renewalThresholdPercentage
     * Certificate renewal threshold percentage. Valid values 1 to 99
     *
@@ -196,65 +224,37 @@ class IosEduCertificateSettings extends Entity
         $this->_propDict["renewalThresholdPercentage"] = $val;
         return $this;
     }
-    /**
-    * Gets the certificateValidityPeriodValue
-    * Value for the Certificate Validity Period.
-    *
-    * @return int The certificateValidityPeriodValue
-    */
-    public function getCertificateValidityPeriodValue()
-    {
-        if (array_key_exists("certificateValidityPeriodValue", $this->_propDict)) {
-            return $this->_propDict["certificateValidityPeriodValue"];
-        } else {
-            return null;
-        }
-    }
 
     /**
-    * Sets the certificateValidityPeriodValue
-    * Value for the Certificate Validity Period.
+    * Gets the trustedRootCertificate
+    * Trusted Root Certificate.
     *
-    * @param int $val The value of the certificateValidityPeriodValue
-    *
-    * @return IosEduCertificateSettings
+    * @return \GuzzleHttp\Psr7\Stream The trustedRootCertificate
     */
-    public function setCertificateValidityPeriodValue($val)
+    public function getTrustedRootCertificate()
     {
-        $this->_propDict["certificateValidityPeriodValue"] = $val;
-        return $this;
-    }
-
-    /**
-    * Gets the certificateValidityPeriodScale
-    * Scale for the Certificate Validity Period.
-    *
-    * @return CertificateValidityPeriodScale The certificateValidityPeriodScale
-    */
-    public function getCertificateValidityPeriodScale()
-    {
-        if (array_key_exists("certificateValidityPeriodScale", $this->_propDict)) {
-            if (is_a($this->_propDict["certificateValidityPeriodScale"], "Beta\Microsoft\Graph\Model\CertificateValidityPeriodScale")) {
-                return $this->_propDict["certificateValidityPeriodScale"];
+        if (array_key_exists("trustedRootCertificate", $this->_propDict)) {
+            if (is_a($this->_propDict["trustedRootCertificate"], "\GuzzleHttp\Psr7\Stream")) {
+                return $this->_propDict["trustedRootCertificate"];
             } else {
-                $this->_propDict["certificateValidityPeriodScale"] = new CertificateValidityPeriodScale($this->_propDict["certificateValidityPeriodScale"]);
-                return $this->_propDict["certificateValidityPeriodScale"];
+                $this->_propDict["trustedRootCertificate"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["trustedRootCertificate"]);
+                return $this->_propDict["trustedRootCertificate"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the certificateValidityPeriodScale
-    * Scale for the Certificate Validity Period.
+    * Sets the trustedRootCertificate
+    * Trusted Root Certificate.
     *
-    * @param CertificateValidityPeriodScale $val The value to assign to the certificateValidityPeriodScale
+    * @param \GuzzleHttp\Psr7\Stream $val The value to assign to the trustedRootCertificate
     *
     * @return IosEduCertificateSettings The IosEduCertificateSettings
     */
-    public function setCertificateValidityPeriodScale($val)
+    public function setTrustedRootCertificate($val)
     {
-        $this->_propDict["certificateValidityPeriodScale"] = $val;
+        $this->_propDict["trustedRootCertificate"] = $val;
          return $this;
     }
 }

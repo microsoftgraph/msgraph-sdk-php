@@ -33,34 +33,6 @@ class MacOSAzureAdSingleSignOnExtension extends MacOSSingleSignOnExtension
     }
 
     /**
-    * Gets the enableSharedDeviceMode
-    * Enables or disables shared device mode.
-    *
-    * @return bool The enableSharedDeviceMode
-    */
-    public function getEnableSharedDeviceMode()
-    {
-        if (array_key_exists("enableSharedDeviceMode", $this->_propDict)) {
-            return $this->_propDict["enableSharedDeviceMode"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the enableSharedDeviceMode
-    * Enables or disables shared device mode.
-    *
-    * @param bool $val The value of the enableSharedDeviceMode
-    *
-    * @return MacOSAzureAdSingleSignOnExtension
-    */
-    public function setEnableSharedDeviceMode($val)
-    {
-        $this->_propDict["enableSharedDeviceMode"] = $val;
-        return $this;
-    }
-    /**
     * Gets the bundleIdAccessControlList
     * An optional list of additional bundle IDs allowed to use the AAD extension for single sign-on.
     *
@@ -120,5 +92,33 @@ class MacOSAzureAdSingleSignOnExtension extends MacOSSingleSignOnExtension
     {
         $this->_propDict["configurations"] = $val;
          return $this;
+    }
+    /**
+    * Gets the enableSharedDeviceMode
+    * Enables or disables shared device mode.
+    *
+    * @return bool The enableSharedDeviceMode
+    */
+    public function getEnableSharedDeviceMode()
+    {
+        if (array_key_exists("enableSharedDeviceMode", $this->_propDict)) {
+            return $this->_propDict["enableSharedDeviceMode"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the enableSharedDeviceMode
+    * Enables or disables shared device mode.
+    *
+    * @param bool $val The value of the enableSharedDeviceMode
+    *
+    * @return MacOSAzureAdSingleSignOnExtension
+    */
+    public function setEnableSharedDeviceMode($val)
+    {
+        $this->_propDict["enableSharedDeviceMode"] = $val;
+        return $this;
     }
 }

@@ -25,39 +25,6 @@ class BinaryManagementConditionExpression extends ManagementConditionExpressionM
 {
 
     /**
-    * Gets the operator
-    * The operator used in the evaluation of the binary operation.
-    *
-    * @return BinaryManagementConditionExpressionOperatorType The operator
-    */
-    public function getOperator()
-    {
-        if (array_key_exists("operator", $this->_propDict)) {
-            if (is_a($this->_propDict["operator"], "Beta\Microsoft\Graph\Model\BinaryManagementConditionExpressionOperatorType")) {
-                return $this->_propDict["operator"];
-            } else {
-                $this->_propDict["operator"] = new BinaryManagementConditionExpressionOperatorType($this->_propDict["operator"]);
-                return $this->_propDict["operator"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the operator
-    * The operator used in the evaluation of the binary operation.
-    *
-    * @param BinaryManagementConditionExpressionOperatorType $val The value to assign to the operator
-    *
-    * @return BinaryManagementConditionExpression The BinaryManagementConditionExpression
-    */
-    public function setOperator($val)
-    {
-        $this->_propDict["operator"] = $val;
-         return $this;
-    }
-
-    /**
     * Gets the firstOperand
     * The first operand of the binary operation.
     *
@@ -87,6 +54,39 @@ class BinaryManagementConditionExpression extends ManagementConditionExpressionM
     public function setFirstOperand($val)
     {
         $this->_propDict["firstOperand"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the operator
+    * The operator used in the evaluation of the binary operation.
+    *
+    * @return BinaryManagementConditionExpressionOperatorType The operator
+    */
+    public function getOperator()
+    {
+        if (array_key_exists("operator", $this->_propDict)) {
+            if (is_a($this->_propDict["operator"], "Beta\Microsoft\Graph\Model\BinaryManagementConditionExpressionOperatorType")) {
+                return $this->_propDict["operator"];
+            } else {
+                $this->_propDict["operator"] = new BinaryManagementConditionExpressionOperatorType($this->_propDict["operator"]);
+                return $this->_propDict["operator"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the operator
+    * The operator used in the evaluation of the binary operation.
+    *
+    * @param BinaryManagementConditionExpressionOperatorType $val The value to assign to the operator
+    *
+    * @return BinaryManagementConditionExpression The BinaryManagementConditionExpression
+    */
+    public function setOperator($val)
+    {
+        $this->_propDict["operator"] = $val;
          return $this;
     }
 

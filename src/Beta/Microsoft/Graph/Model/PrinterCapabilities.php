@@ -24,6 +24,89 @@ namespace Beta\Microsoft\Graph\Model;
 class PrinterCapabilities extends Entity
 {
     /**
+    * Gets the bottomMargins
+    *
+    * @return int The bottomMargins
+    */
+    public function getBottomMargins()
+    {
+        if (array_key_exists("bottomMargins", $this->_propDict)) {
+            return $this->_propDict["bottomMargins"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the bottomMargins
+    *
+    * @param int $val The value of the bottomMargins
+    *
+    * @return PrinterCapabilities
+    */
+    public function setBottomMargins($val)
+    {
+        $this->_propDict["bottomMargins"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the collation
+    *
+    * @return bool The collation
+    */
+    public function getCollation()
+    {
+        if (array_key_exists("collation", $this->_propDict)) {
+            return $this->_propDict["collation"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the collation
+    *
+    * @param bool $val The value of the collation
+    *
+    * @return PrinterCapabilities
+    */
+    public function setCollation($val)
+    {
+        $this->_propDict["collation"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the colorModes
+    *
+    * @return PrintColorMode The colorModes
+    */
+    public function getColorModes()
+    {
+        if (array_key_exists("colorModes", $this->_propDict)) {
+            if (is_a($this->_propDict["colorModes"], "Beta\Microsoft\Graph\Model\PrintColorMode")) {
+                return $this->_propDict["colorModes"];
+            } else {
+                $this->_propDict["colorModes"] = new PrintColorMode($this->_propDict["colorModes"]);
+                return $this->_propDict["colorModes"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the colorModes
+    *
+    * @param PrintColorMode $val The value to assign to the colorModes
+    *
+    * @return PrinterCapabilities The PrinterCapabilities
+    */
+    public function setColorModes($val)
+    {
+        $this->_propDict["colorModes"] = $val;
+         return $this;
+    }
+    /**
     * Gets the contentTypes
     *
     * @return string The contentTypes
@@ -49,118 +132,35 @@ class PrinterCapabilities extends Entity
         $this->_propDict["contentTypes"] = $val;
         return $this;
     }
-    /**
-    * Gets the isColorPrintingSupported
-    *
-    * @return bool The isColorPrintingSupported
-    */
-    public function getIsColorPrintingSupported()
-    {
-        if (array_key_exists("isColorPrintingSupported", $this->_propDict)) {
-            return $this->_propDict["isColorPrintingSupported"];
-        } else {
-            return null;
-        }
-    }
 
     /**
-    * Sets the isColorPrintingSupported
+    * Gets the copiesPerJob
     *
-    * @param bool $val The value of the isColorPrintingSupported
-    *
-    * @return PrinterCapabilities
+    * @return IntegerRange The copiesPerJob
     */
-    public function setIsColorPrintingSupported($val)
+    public function getCopiesPerJob()
     {
-        $this->_propDict["isColorPrintingSupported"] = $val;
-        return $this;
-    }
-
-    /**
-    * Gets the feedDirections
-    *
-    * @return PrinterFeedDirection The feedDirections
-    */
-    public function getFeedDirections()
-    {
-        if (array_key_exists("feedDirections", $this->_propDict)) {
-            if (is_a($this->_propDict["feedDirections"], "Beta\Microsoft\Graph\Model\PrinterFeedDirection")) {
-                return $this->_propDict["feedDirections"];
+        if (array_key_exists("copiesPerJob", $this->_propDict)) {
+            if (is_a($this->_propDict["copiesPerJob"], "Beta\Microsoft\Graph\Model\IntegerRange")) {
+                return $this->_propDict["copiesPerJob"];
             } else {
-                $this->_propDict["feedDirections"] = new PrinterFeedDirection($this->_propDict["feedDirections"]);
-                return $this->_propDict["feedDirections"];
+                $this->_propDict["copiesPerJob"] = new IntegerRange($this->_propDict["copiesPerJob"]);
+                return $this->_propDict["copiesPerJob"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the feedDirections
+    * Sets the copiesPerJob
     *
-    * @param PrinterFeedDirection $val The value to assign to the feedDirections
-    *
-    * @return PrinterCapabilities The PrinterCapabilities
-    */
-    public function setFeedDirections($val)
-    {
-        $this->_propDict["feedDirections"] = $val;
-         return $this;
-    }
-    /**
-    * Gets the isPageRangeSupported
-    *
-    * @return bool The isPageRangeSupported
-    */
-    public function getIsPageRangeSupported()
-    {
-        if (array_key_exists("isPageRangeSupported", $this->_propDict)) {
-            return $this->_propDict["isPageRangeSupported"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the isPageRangeSupported
-    *
-    * @param bool $val The value of the isPageRangeSupported
-    *
-    * @return PrinterCapabilities
-    */
-    public function setIsPageRangeSupported($val)
-    {
-        $this->_propDict["isPageRangeSupported"] = $val;
-        return $this;
-    }
-
-    /**
-    * Gets the qualities
-    *
-    * @return PrintQuality The qualities
-    */
-    public function getQualities()
-    {
-        if (array_key_exists("qualities", $this->_propDict)) {
-            if (is_a($this->_propDict["qualities"], "Beta\Microsoft\Graph\Model\PrintQuality")) {
-                return $this->_propDict["qualities"];
-            } else {
-                $this->_propDict["qualities"] = new PrintQuality($this->_propDict["qualities"]);
-                return $this->_propDict["qualities"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the qualities
-    *
-    * @param PrintQuality $val The value to assign to the qualities
+    * @param IntegerRange $val The value to assign to the copiesPerJob
     *
     * @return PrinterCapabilities The PrinterCapabilities
     */
-    public function setQualities($val)
+    public function setCopiesPerJob($val)
     {
-        $this->_propDict["qualities"] = $val;
+        $this->_propDict["copiesPerJob"] = $val;
          return $this;
     }
     /**
@@ -222,33 +222,33 @@ class PrinterCapabilities extends Entity
     }
 
     /**
-    * Gets the copiesPerJob
+    * Gets the feedDirections
     *
-    * @return IntegerRange The copiesPerJob
+    * @return PrinterFeedDirection The feedDirections
     */
-    public function getCopiesPerJob()
+    public function getFeedDirections()
     {
-        if (array_key_exists("copiesPerJob", $this->_propDict)) {
-            if (is_a($this->_propDict["copiesPerJob"], "Beta\Microsoft\Graph\Model\IntegerRange")) {
-                return $this->_propDict["copiesPerJob"];
+        if (array_key_exists("feedDirections", $this->_propDict)) {
+            if (is_a($this->_propDict["feedDirections"], "Beta\Microsoft\Graph\Model\PrinterFeedDirection")) {
+                return $this->_propDict["feedDirections"];
             } else {
-                $this->_propDict["copiesPerJob"] = new IntegerRange($this->_propDict["copiesPerJob"]);
-                return $this->_propDict["copiesPerJob"];
+                $this->_propDict["feedDirections"] = new PrinterFeedDirection($this->_propDict["feedDirections"]);
+                return $this->_propDict["feedDirections"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the copiesPerJob
+    * Sets the feedDirections
     *
-    * @param IntegerRange $val The value to assign to the copiesPerJob
+    * @param PrinterFeedDirection $val The value to assign to the feedDirections
     *
     * @return PrinterCapabilities The PrinterCapabilities
     */
-    public function setCopiesPerJob($val)
+    public function setFeedDirections($val)
     {
-        $this->_propDict["copiesPerJob"] = $val;
+        $this->_propDict["feedDirections"] = $val;
          return $this;
     }
 
@@ -283,6 +283,110 @@ class PrinterCapabilities extends Entity
          return $this;
     }
     /**
+    * Gets the inputBins
+    *
+    * @return string The inputBins
+    */
+    public function getInputBins()
+    {
+        if (array_key_exists("inputBins", $this->_propDict)) {
+            return $this->_propDict["inputBins"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the inputBins
+    *
+    * @param string $val The value of the inputBins
+    *
+    * @return PrinterCapabilities
+    */
+    public function setInputBins($val)
+    {
+        $this->_propDict["inputBins"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the isColorPrintingSupported
+    *
+    * @return bool The isColorPrintingSupported
+    */
+    public function getIsColorPrintingSupported()
+    {
+        if (array_key_exists("isColorPrintingSupported", $this->_propDict)) {
+            return $this->_propDict["isColorPrintingSupported"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isColorPrintingSupported
+    *
+    * @param bool $val The value of the isColorPrintingSupported
+    *
+    * @return PrinterCapabilities
+    */
+    public function setIsColorPrintingSupported($val)
+    {
+        $this->_propDict["isColorPrintingSupported"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the isPageRangeSupported
+    *
+    * @return bool The isPageRangeSupported
+    */
+    public function getIsPageRangeSupported()
+    {
+        if (array_key_exists("isPageRangeSupported", $this->_propDict)) {
+            return $this->_propDict["isPageRangeSupported"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isPageRangeSupported
+    *
+    * @param bool $val The value of the isPageRangeSupported
+    *
+    * @return PrinterCapabilities
+    */
+    public function setIsPageRangeSupported($val)
+    {
+        $this->_propDict["isPageRangeSupported"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the leftMargins
+    *
+    * @return int The leftMargins
+    */
+    public function getLeftMargins()
+    {
+        if (array_key_exists("leftMargins", $this->_propDict)) {
+            return $this->_propDict["leftMargins"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the leftMargins
+    *
+    * @param int $val The value of the leftMargins
+    *
+    * @return PrinterCapabilities
+    */
+    public function setLeftMargins($val)
+    {
+        $this->_propDict["leftMargins"] = $val;
+        return $this;
+    }
+    /**
     * Gets the mediaColors
     *
     * @return string The mediaColors
@@ -306,32 +410,6 @@ class PrinterCapabilities extends Entity
     public function setMediaColors($val)
     {
         $this->_propDict["mediaColors"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the mediaTypes
-    *
-    * @return string The mediaTypes
-    */
-    public function getMediaTypes()
-    {
-        if (array_key_exists("mediaTypes", $this->_propDict)) {
-            return $this->_propDict["mediaTypes"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the mediaTypes
-    *
-    * @param string $val The value of the mediaTypes
-    *
-    * @return PrinterCapabilities
-    */
-    public function setMediaTypes($val)
-    {
-        $this->_propDict["mediaTypes"] = $val;
         return $this;
     }
     /**
@@ -361,30 +439,61 @@ class PrinterCapabilities extends Entity
         return $this;
     }
     /**
-    * Gets the pagesPerSheet
+    * Gets the mediaTypes
     *
-    * @return int The pagesPerSheet
+    * @return string The mediaTypes
     */
-    public function getPagesPerSheet()
+    public function getMediaTypes()
     {
-        if (array_key_exists("pagesPerSheet", $this->_propDict)) {
-            return $this->_propDict["pagesPerSheet"];
+        if (array_key_exists("mediaTypes", $this->_propDict)) {
+            return $this->_propDict["mediaTypes"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the pagesPerSheet
+    * Sets the mediaTypes
     *
-    * @param int $val The value of the pagesPerSheet
+    * @param string $val The value of the mediaTypes
     *
     * @return PrinterCapabilities
     */
-    public function setPagesPerSheet($val)
+    public function setMediaTypes($val)
     {
-        $this->_propDict["pagesPerSheet"] = $val;
+        $this->_propDict["mediaTypes"] = $val;
         return $this;
+    }
+
+    /**
+    * Gets the multipageLayouts
+    *
+    * @return PrintMultipageLayout The multipageLayouts
+    */
+    public function getMultipageLayouts()
+    {
+        if (array_key_exists("multipageLayouts", $this->_propDict)) {
+            if (is_a($this->_propDict["multipageLayouts"], "Beta\Microsoft\Graph\Model\PrintMultipageLayout")) {
+                return $this->_propDict["multipageLayouts"];
+            } else {
+                $this->_propDict["multipageLayouts"] = new PrintMultipageLayout($this->_propDict["multipageLayouts"]);
+                return $this->_propDict["multipageLayouts"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the multipageLayouts
+    *
+    * @param PrintMultipageLayout $val The value to assign to the multipageLayouts
+    *
+    * @return PrinterCapabilities The PrinterCapabilities
+    */
+    public function setMultipageLayouts($val)
+    {
+        $this->_propDict["multipageLayouts"] = $val;
+         return $this;
     }
 
     /**
@@ -444,170 +553,61 @@ class PrinterCapabilities extends Entity
         return $this;
     }
     /**
-    * Gets the supportsFitPdfToPage
+    * Gets the pagesPerSheet
     *
-    * @return bool The supportsFitPdfToPage
+    * @return int The pagesPerSheet
     */
-    public function getSupportsFitPdfToPage()
+    public function getPagesPerSheet()
     {
-        if (array_key_exists("supportsFitPdfToPage", $this->_propDict)) {
-            return $this->_propDict["supportsFitPdfToPage"];
+        if (array_key_exists("pagesPerSheet", $this->_propDict)) {
+            return $this->_propDict["pagesPerSheet"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the supportsFitPdfToPage
+    * Sets the pagesPerSheet
     *
-    * @param bool $val The value of the supportsFitPdfToPage
+    * @param int $val The value of the pagesPerSheet
     *
     * @return PrinterCapabilities
     */
-    public function setSupportsFitPdfToPage($val)
+    public function setPagesPerSheet($val)
     {
-        $this->_propDict["supportsFitPdfToPage"] = $val;
+        $this->_propDict["pagesPerSheet"] = $val;
         return $this;
     }
 
     /**
-    * Gets the multipageLayouts
+    * Gets the qualities
     *
-    * @return PrintMultipageLayout The multipageLayouts
+    * @return PrintQuality The qualities
     */
-    public function getMultipageLayouts()
+    public function getQualities()
     {
-        if (array_key_exists("multipageLayouts", $this->_propDict)) {
-            if (is_a($this->_propDict["multipageLayouts"], "Beta\Microsoft\Graph\Model\PrintMultipageLayout")) {
-                return $this->_propDict["multipageLayouts"];
+        if (array_key_exists("qualities", $this->_propDict)) {
+            if (is_a($this->_propDict["qualities"], "Beta\Microsoft\Graph\Model\PrintQuality")) {
+                return $this->_propDict["qualities"];
             } else {
-                $this->_propDict["multipageLayouts"] = new PrintMultipageLayout($this->_propDict["multipageLayouts"]);
-                return $this->_propDict["multipageLayouts"];
+                $this->_propDict["qualities"] = new PrintQuality($this->_propDict["qualities"]);
+                return $this->_propDict["qualities"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the multipageLayouts
+    * Sets the qualities
     *
-    * @param PrintMultipageLayout $val The value to assign to the multipageLayouts
-    *
-    * @return PrinterCapabilities The PrinterCapabilities
-    */
-    public function setMultipageLayouts($val)
-    {
-        $this->_propDict["multipageLayouts"] = $val;
-         return $this;
-    }
-
-    /**
-    * Gets the colorModes
-    *
-    * @return PrintColorMode The colorModes
-    */
-    public function getColorModes()
-    {
-        if (array_key_exists("colorModes", $this->_propDict)) {
-            if (is_a($this->_propDict["colorModes"], "Beta\Microsoft\Graph\Model\PrintColorMode")) {
-                return $this->_propDict["colorModes"];
-            } else {
-                $this->_propDict["colorModes"] = new PrintColorMode($this->_propDict["colorModes"]);
-                return $this->_propDict["colorModes"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the colorModes
-    *
-    * @param PrintColorMode $val The value to assign to the colorModes
+    * @param PrintQuality $val The value to assign to the qualities
     *
     * @return PrinterCapabilities The PrinterCapabilities
     */
-    public function setColorModes($val)
+    public function setQualities($val)
     {
-        $this->_propDict["colorModes"] = $val;
+        $this->_propDict["qualities"] = $val;
          return $this;
-    }
-    /**
-    * Gets the inputBins
-    *
-    * @return string The inputBins
-    */
-    public function getInputBins()
-    {
-        if (array_key_exists("inputBins", $this->_propDict)) {
-            return $this->_propDict["inputBins"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the inputBins
-    *
-    * @param string $val The value of the inputBins
-    *
-    * @return PrinterCapabilities
-    */
-    public function setInputBins($val)
-    {
-        $this->_propDict["inputBins"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the topMargins
-    *
-    * @return int The topMargins
-    */
-    public function getTopMargins()
-    {
-        if (array_key_exists("topMargins", $this->_propDict)) {
-            return $this->_propDict["topMargins"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the topMargins
-    *
-    * @param int $val The value of the topMargins
-    *
-    * @return PrinterCapabilities
-    */
-    public function setTopMargins($val)
-    {
-        $this->_propDict["topMargins"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the bottomMargins
-    *
-    * @return int The bottomMargins
-    */
-    public function getBottomMargins()
-    {
-        if (array_key_exists("bottomMargins", $this->_propDict)) {
-            return $this->_propDict["bottomMargins"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the bottomMargins
-    *
-    * @param int $val The value of the bottomMargins
-    *
-    * @return PrinterCapabilities
-    */
-    public function setBottomMargins($val)
-    {
-        $this->_propDict["bottomMargins"] = $val;
-        return $this;
     }
     /**
     * Gets the rightMargins
@@ -633,58 +633,6 @@ class PrinterCapabilities extends Entity
     public function setRightMargins($val)
     {
         $this->_propDict["rightMargins"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the leftMargins
-    *
-    * @return int The leftMargins
-    */
-    public function getLeftMargins()
-    {
-        if (array_key_exists("leftMargins", $this->_propDict)) {
-            return $this->_propDict["leftMargins"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the leftMargins
-    *
-    * @param int $val The value of the leftMargins
-    *
-    * @return PrinterCapabilities
-    */
-    public function setLeftMargins($val)
-    {
-        $this->_propDict["leftMargins"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the collation
-    *
-    * @return bool The collation
-    */
-    public function getCollation()
-    {
-        if (array_key_exists("collation", $this->_propDict)) {
-            return $this->_propDict["collation"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the collation
-    *
-    * @param bool $val The value of the collation
-    *
-    * @return PrinterCapabilities
-    */
-    public function setCollation($val)
-    {
-        $this->_propDict["collation"] = $val;
         return $this;
     }
 
@@ -716,6 +664,37 @@ class PrinterCapabilities extends Entity
     public function setScalings($val)
     {
         $this->_propDict["scalings"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the supportedColorConfigurations
+    *
+    * @return PrintColorConfiguration The supportedColorConfigurations
+    */
+    public function getSupportedColorConfigurations()
+    {
+        if (array_key_exists("supportedColorConfigurations", $this->_propDict)) {
+            if (is_a($this->_propDict["supportedColorConfigurations"], "Beta\Microsoft\Graph\Model\PrintColorConfiguration")) {
+                return $this->_propDict["supportedColorConfigurations"];
+            } else {
+                $this->_propDict["supportedColorConfigurations"] = new PrintColorConfiguration($this->_propDict["supportedColorConfigurations"]);
+                return $this->_propDict["supportedColorConfigurations"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the supportedColorConfigurations
+    *
+    * @param PrintColorConfiguration $val The value to assign to the supportedColorConfigurations
+    *
+    * @return PrinterCapabilities The PrinterCapabilities
+    */
+    public function setSupportedColorConfigurations($val)
+    {
+        $this->_propDict["supportedColorConfigurations"] = $val;
          return $this;
     }
 
@@ -777,6 +756,37 @@ class PrinterCapabilities extends Entity
     }
 
     /**
+    * Gets the supportedDuplexConfigurations
+    *
+    * @return PrintDuplexConfiguration The supportedDuplexConfigurations
+    */
+    public function getSupportedDuplexConfigurations()
+    {
+        if (array_key_exists("supportedDuplexConfigurations", $this->_propDict)) {
+            if (is_a($this->_propDict["supportedDuplexConfigurations"], "Beta\Microsoft\Graph\Model\PrintDuplexConfiguration")) {
+                return $this->_propDict["supportedDuplexConfigurations"];
+            } else {
+                $this->_propDict["supportedDuplexConfigurations"] = new PrintDuplexConfiguration($this->_propDict["supportedDuplexConfigurations"]);
+                return $this->_propDict["supportedDuplexConfigurations"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the supportedDuplexConfigurations
+    *
+    * @param PrintDuplexConfiguration $val The value to assign to the supportedDuplexConfigurations
+    *
+    * @return PrinterCapabilities The PrinterCapabilities
+    */
+    public function setSupportedDuplexConfigurations($val)
+    {
+        $this->_propDict["supportedDuplexConfigurations"] = $val;
+         return $this;
+    }
+
+    /**
     * Gets the supportedFinishings
     *
     * @return PrintFinishing The supportedFinishings
@@ -832,6 +842,32 @@ class PrinterCapabilities extends Entity
         $this->_propDict["supportedMediaColors"] = $val;
         return $this;
     }
+    /**
+    * Gets the supportedMediaSizes
+    *
+    * @return string The supportedMediaSizes
+    */
+    public function getSupportedMediaSizes()
+    {
+        if (array_key_exists("supportedMediaSizes", $this->_propDict)) {
+            return $this->_propDict["supportedMediaSizes"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the supportedMediaSizes
+    *
+    * @param string $val The value of the supportedMediaSizes
+    *
+    * @return PrinterCapabilities
+    */
+    public function setSupportedMediaSizes($val)
+    {
+        $this->_propDict["supportedMediaSizes"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the supportedMediaTypes
@@ -861,94 +897,6 @@ class PrinterCapabilities extends Entity
     public function setSupportedMediaTypes($val)
     {
         $this->_propDict["supportedMediaTypes"] = $val;
-         return $this;
-    }
-
-    /**
-    * Gets the supportedDuplexConfigurations
-    *
-    * @return PrintDuplexConfiguration The supportedDuplexConfigurations
-    */
-    public function getSupportedDuplexConfigurations()
-    {
-        if (array_key_exists("supportedDuplexConfigurations", $this->_propDict)) {
-            if (is_a($this->_propDict["supportedDuplexConfigurations"], "Beta\Microsoft\Graph\Model\PrintDuplexConfiguration")) {
-                return $this->_propDict["supportedDuplexConfigurations"];
-            } else {
-                $this->_propDict["supportedDuplexConfigurations"] = new PrintDuplexConfiguration($this->_propDict["supportedDuplexConfigurations"]);
-                return $this->_propDict["supportedDuplexConfigurations"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the supportedDuplexConfigurations
-    *
-    * @param PrintDuplexConfiguration $val The value to assign to the supportedDuplexConfigurations
-    *
-    * @return PrinterCapabilities The PrinterCapabilities
-    */
-    public function setSupportedDuplexConfigurations($val)
-    {
-        $this->_propDict["supportedDuplexConfigurations"] = $val;
-         return $this;
-    }
-    /**
-    * Gets the supportedMediaSizes
-    *
-    * @return string The supportedMediaSizes
-    */
-    public function getSupportedMediaSizes()
-    {
-        if (array_key_exists("supportedMediaSizes", $this->_propDict)) {
-            return $this->_propDict["supportedMediaSizes"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the supportedMediaSizes
-    *
-    * @param string $val The value of the supportedMediaSizes
-    *
-    * @return PrinterCapabilities
-    */
-    public function setSupportedMediaSizes($val)
-    {
-        $this->_propDict["supportedMediaSizes"] = $val;
-        return $this;
-    }
-
-    /**
-    * Gets the supportedPagesPerSheet
-    *
-    * @return IntegerRange The supportedPagesPerSheet
-    */
-    public function getSupportedPagesPerSheet()
-    {
-        if (array_key_exists("supportedPagesPerSheet", $this->_propDict)) {
-            if (is_a($this->_propDict["supportedPagesPerSheet"], "Beta\Microsoft\Graph\Model\IntegerRange")) {
-                return $this->_propDict["supportedPagesPerSheet"];
-            } else {
-                $this->_propDict["supportedPagesPerSheet"] = new IntegerRange($this->_propDict["supportedPagesPerSheet"]);
-                return $this->_propDict["supportedPagesPerSheet"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the supportedPagesPerSheet
-    *
-    * @param IntegerRange $val The value to assign to the supportedPagesPerSheet
-    *
-    * @return PrinterCapabilities The PrinterCapabilities
-    */
-    public function setSupportedPagesPerSheet($val)
-    {
-        $this->_propDict["supportedPagesPerSheet"] = $val;
          return $this;
     }
 
@@ -1010,6 +958,37 @@ class PrinterCapabilities extends Entity
     }
 
     /**
+    * Gets the supportedPagesPerSheet
+    *
+    * @return IntegerRange The supportedPagesPerSheet
+    */
+    public function getSupportedPagesPerSheet()
+    {
+        if (array_key_exists("supportedPagesPerSheet", $this->_propDict)) {
+            if (is_a($this->_propDict["supportedPagesPerSheet"], "Beta\Microsoft\Graph\Model\IntegerRange")) {
+                return $this->_propDict["supportedPagesPerSheet"];
+            } else {
+                $this->_propDict["supportedPagesPerSheet"] = new IntegerRange($this->_propDict["supportedPagesPerSheet"]);
+                return $this->_propDict["supportedPagesPerSheet"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the supportedPagesPerSheet
+    *
+    * @param IntegerRange $val The value to assign to the supportedPagesPerSheet
+    *
+    * @return PrinterCapabilities The PrinterCapabilities
+    */
+    public function setSupportedPagesPerSheet($val)
+    {
+        $this->_propDict["supportedPagesPerSheet"] = $val;
+         return $this;
+    }
+
+    /**
     * Gets the supportedPresentationDirections
     *
     * @return PrintPresentationDirection The supportedPresentationDirections
@@ -1037,37 +1016,6 @@ class PrinterCapabilities extends Entity
     public function setSupportedPresentationDirections($val)
     {
         $this->_propDict["supportedPresentationDirections"] = $val;
-         return $this;
-    }
-
-    /**
-    * Gets the supportedColorConfigurations
-    *
-    * @return PrintColorConfiguration The supportedColorConfigurations
-    */
-    public function getSupportedColorConfigurations()
-    {
-        if (array_key_exists("supportedColorConfigurations", $this->_propDict)) {
-            if (is_a($this->_propDict["supportedColorConfigurations"], "Beta\Microsoft\Graph\Model\PrintColorConfiguration")) {
-                return $this->_propDict["supportedColorConfigurations"];
-            } else {
-                $this->_propDict["supportedColorConfigurations"] = new PrintColorConfiguration($this->_propDict["supportedColorConfigurations"]);
-                return $this->_propDict["supportedColorConfigurations"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the supportedColorConfigurations
-    *
-    * @param PrintColorConfiguration $val The value to assign to the supportedColorConfigurations
-    *
-    * @return PrinterCapabilities The PrinterCapabilities
-    */
-    public function setSupportedColorConfigurations($val)
-    {
-        $this->_propDict["supportedColorConfigurations"] = $val;
          return $this;
     }
 
@@ -1100,5 +1048,57 @@ class PrinterCapabilities extends Entity
     {
         $this->_propDict["supportedPrintQualities"] = $val;
          return $this;
+    }
+    /**
+    * Gets the supportsFitPdfToPage
+    *
+    * @return bool The supportsFitPdfToPage
+    */
+    public function getSupportsFitPdfToPage()
+    {
+        if (array_key_exists("supportsFitPdfToPage", $this->_propDict)) {
+            return $this->_propDict["supportsFitPdfToPage"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the supportsFitPdfToPage
+    *
+    * @param bool $val The value of the supportsFitPdfToPage
+    *
+    * @return PrinterCapabilities
+    */
+    public function setSupportsFitPdfToPage($val)
+    {
+        $this->_propDict["supportsFitPdfToPage"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the topMargins
+    *
+    * @return int The topMargins
+    */
+    public function getTopMargins()
+    {
+        if (array_key_exists("topMargins", $this->_propDict)) {
+            return $this->_propDict["topMargins"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the topMargins
+    *
+    * @param int $val The value of the topMargins
+    *
+    * @return PrinterCapabilities
+    */
+    public function setTopMargins($val)
+    {
+        $this->_propDict["topMargins"] = $val;
+        return $this;
     }
 }

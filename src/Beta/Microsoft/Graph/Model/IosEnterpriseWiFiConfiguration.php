@@ -25,35 +25,35 @@ namespace Beta\Microsoft\Graph\Model;
 class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration
 {
     /**
-    * Gets the eapType
-    * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router).
+    * Gets the authenticationMethod
+    * Authentication Method when EAP Type is configured to PEAP or EAP-TTLS.
     *
-    * @return EapType The eapType
+    * @return WiFiAuthenticationMethod The authenticationMethod
     */
-    public function getEapType()
+    public function getAuthenticationMethod()
     {
-        if (array_key_exists("eapType", $this->_propDict)) {
-            if (is_a($this->_propDict["eapType"], "Beta\Microsoft\Graph\Model\EapType")) {
-                return $this->_propDict["eapType"];
+        if (array_key_exists("authenticationMethod", $this->_propDict)) {
+            if (is_a($this->_propDict["authenticationMethod"], "Beta\Microsoft\Graph\Model\WiFiAuthenticationMethod")) {
+                return $this->_propDict["authenticationMethod"];
             } else {
-                $this->_propDict["eapType"] = new EapType($this->_propDict["eapType"]);
-                return $this->_propDict["eapType"];
+                $this->_propDict["authenticationMethod"] = new WiFiAuthenticationMethod($this->_propDict["authenticationMethod"]);
+                return $this->_propDict["authenticationMethod"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the eapType
-    * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router).
+    * Sets the authenticationMethod
+    * Authentication Method when EAP Type is configured to PEAP or EAP-TTLS.
     *
-    * @param EapType $val The eapType
+    * @param WiFiAuthenticationMethod $val The authenticationMethod
     *
     * @return IosEnterpriseWiFiConfiguration
     */
-    public function setEapType($val)
+    public function setAuthenticationMethod($val)
     {
-        $this->_propDict["eapType"] = $val;
+        $this->_propDict["authenticationMethod"] = $val;
         return $this;
     }
     
@@ -91,64 +91,35 @@ class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration
     }
     
     /**
-    * Gets the trustedServerCertificateNames
-    * Trusted server certificate names when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. This is the common name used in the certificates issued by your trusted certificate authority (CA). If you provide this information, you can bypass the dynamic trust dialog that is displayed on end users' devices when they connect to this Wi-Fi network.
+    * Gets the eapType
+    * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router).
     *
-    * @return string The trustedServerCertificateNames
+    * @return EapType The eapType
     */
-    public function getTrustedServerCertificateNames()
+    public function getEapType()
     {
-        if (array_key_exists("trustedServerCertificateNames", $this->_propDict)) {
-            return $this->_propDict["trustedServerCertificateNames"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the trustedServerCertificateNames
-    * Trusted server certificate names when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. This is the common name used in the certificates issued by your trusted certificate authority (CA). If you provide this information, you can bypass the dynamic trust dialog that is displayed on end users' devices when they connect to this Wi-Fi network.
-    *
-    * @param string $val The trustedServerCertificateNames
-    *
-    * @return IosEnterpriseWiFiConfiguration
-    */
-    public function setTrustedServerCertificateNames($val)
-    {
-        $this->_propDict["trustedServerCertificateNames"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the authenticationMethod
-    * Authentication Method when EAP Type is configured to PEAP or EAP-TTLS.
-    *
-    * @return WiFiAuthenticationMethod The authenticationMethod
-    */
-    public function getAuthenticationMethod()
-    {
-        if (array_key_exists("authenticationMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["authenticationMethod"], "Beta\Microsoft\Graph\Model\WiFiAuthenticationMethod")) {
-                return $this->_propDict["authenticationMethod"];
+        if (array_key_exists("eapType", $this->_propDict)) {
+            if (is_a($this->_propDict["eapType"], "Beta\Microsoft\Graph\Model\EapType")) {
+                return $this->_propDict["eapType"];
             } else {
-                $this->_propDict["authenticationMethod"] = new WiFiAuthenticationMethod($this->_propDict["authenticationMethod"]);
-                return $this->_propDict["authenticationMethod"];
+                $this->_propDict["eapType"] = new EapType($this->_propDict["eapType"]);
+                return $this->_propDict["eapType"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the authenticationMethod
-    * Authentication Method when EAP Type is configured to PEAP or EAP-TTLS.
+    * Sets the eapType
+    * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router).
     *
-    * @param WiFiAuthenticationMethod $val The authenticationMethod
+    * @param EapType $val The eapType
     *
     * @return IosEnterpriseWiFiConfiguration
     */
-    public function setAuthenticationMethod($val)
+    public function setEapType($val)
     {
-        $this->_propDict["authenticationMethod"] = $val;
+        $this->_propDict["eapType"] = $val;
         return $this;
     }
     
@@ -215,6 +186,64 @@ class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration
     }
     
     /**
+    * Gets the passwordFormatString
+    * Password format string used to build the password to connect to wifi
+    *
+    * @return string The passwordFormatString
+    */
+    public function getPasswordFormatString()
+    {
+        if (array_key_exists("passwordFormatString", $this->_propDict)) {
+            return $this->_propDict["passwordFormatString"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the passwordFormatString
+    * Password format string used to build the password to connect to wifi
+    *
+    * @param string $val The passwordFormatString
+    *
+    * @return IosEnterpriseWiFiConfiguration
+    */
+    public function setPasswordFormatString($val)
+    {
+        $this->_propDict["passwordFormatString"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the trustedServerCertificateNames
+    * Trusted server certificate names when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. This is the common name used in the certificates issued by your trusted certificate authority (CA). If you provide this information, you can bypass the dynamic trust dialog that is displayed on end users' devices when they connect to this Wi-Fi network.
+    *
+    * @return string The trustedServerCertificateNames
+    */
+    public function getTrustedServerCertificateNames()
+    {
+        if (array_key_exists("trustedServerCertificateNames", $this->_propDict)) {
+            return $this->_propDict["trustedServerCertificateNames"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the trustedServerCertificateNames
+    * Trusted server certificate names when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. This is the common name used in the certificates issued by your trusted certificate authority (CA). If you provide this information, you can bypass the dynamic trust dialog that is displayed on end users' devices when they connect to this Wi-Fi network.
+    *
+    * @param string $val The trustedServerCertificateNames
+    *
+    * @return IosEnterpriseWiFiConfiguration
+    */
+    public function setTrustedServerCertificateNames($val)
+    {
+        $this->_propDict["trustedServerCertificateNames"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the usernameFormatString
     * Username format string used to build the username to connect to wifi
     *
@@ -244,61 +273,35 @@ class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration
     }
     
     /**
-    * Gets the passwordFormatString
-    * Password format string used to build the password to connect to wifi
+    * Gets the derivedCredentialSettings
+    * Tenant level settings for the Derived Credentials to be used for authentication.
     *
-    * @return string The passwordFormatString
+    * @return DeviceManagementDerivedCredentialSettings The derivedCredentialSettings
     */
-    public function getPasswordFormatString()
+    public function getDerivedCredentialSettings()
     {
-        if (array_key_exists("passwordFormatString", $this->_propDict)) {
-            return $this->_propDict["passwordFormatString"];
-        } else {
-            return null;
+        if (array_key_exists("derivedCredentialSettings", $this->_propDict)) {
+            if (is_a($this->_propDict["derivedCredentialSettings"], "Beta\Microsoft\Graph\Model\DeviceManagementDerivedCredentialSettings")) {
+                return $this->_propDict["derivedCredentialSettings"];
+            } else {
+                $this->_propDict["derivedCredentialSettings"] = new DeviceManagementDerivedCredentialSettings($this->_propDict["derivedCredentialSettings"]);
+                return $this->_propDict["derivedCredentialSettings"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the passwordFormatString
-    * Password format string used to build the password to connect to wifi
+    * Sets the derivedCredentialSettings
+    * Tenant level settings for the Derived Credentials to be used for authentication.
     *
-    * @param string $val The passwordFormatString
-    *
-    * @return IosEnterpriseWiFiConfiguration
-    */
-    public function setPasswordFormatString($val)
-    {
-        $this->_propDict["passwordFormatString"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the rootCertificatesForServerValidation
-    * Trusted Root Certificates for Server Validation when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. If you provide this value you do not need to provide trustedServerCertificateNames, and vice versa.
-     *
-     * @return array The rootCertificatesForServerValidation
-     */
-    public function getRootCertificatesForServerValidation()
-    {
-        if (array_key_exists("rootCertificatesForServerValidation", $this->_propDict)) {
-           return $this->_propDict["rootCertificatesForServerValidation"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the rootCertificatesForServerValidation
-    * Trusted Root Certificates for Server Validation when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. If you provide this value you do not need to provide trustedServerCertificateNames, and vice versa.
-    *
-    * @param IosTrustedRootCertificate $val The rootCertificatesForServerValidation
+    * @param DeviceManagementDerivedCredentialSettings $val The derivedCredentialSettings
     *
     * @return IosEnterpriseWiFiConfiguration
     */
-    public function setRootCertificatesForServerValidation($val)
+    public function setDerivedCredentialSettings($val)
     {
-		$this->_propDict["rootCertificatesForServerValidation"] = $val;
+        $this->_propDict["derivedCredentialSettings"] = $val;
         return $this;
     }
     
@@ -335,36 +338,33 @@ class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration
         return $this;
     }
     
-    /**
-    * Gets the derivedCredentialSettings
-    * Tenant level settings for the Derived Credentials to be used for authentication.
-    *
-    * @return DeviceManagementDerivedCredentialSettings The derivedCredentialSettings
-    */
-    public function getDerivedCredentialSettings()
+
+     /** 
+     * Gets the rootCertificatesForServerValidation
+    * Trusted Root Certificates for Server Validation when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. If you provide this value you do not need to provide trustedServerCertificateNames, and vice versa.
+     *
+     * @return array The rootCertificatesForServerValidation
+     */
+    public function getRootCertificatesForServerValidation()
     {
-        if (array_key_exists("derivedCredentialSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["derivedCredentialSettings"], "Beta\Microsoft\Graph\Model\DeviceManagementDerivedCredentialSettings")) {
-                return $this->_propDict["derivedCredentialSettings"];
-            } else {
-                $this->_propDict["derivedCredentialSettings"] = new DeviceManagementDerivedCredentialSettings($this->_propDict["derivedCredentialSettings"]);
-                return $this->_propDict["derivedCredentialSettings"];
-            }
+        if (array_key_exists("rootCertificatesForServerValidation", $this->_propDict)) {
+           return $this->_propDict["rootCertificatesForServerValidation"];
+        } else {
+            return null;
         }
-        return null;
     }
     
-    /**
-    * Sets the derivedCredentialSettings
-    * Tenant level settings for the Derived Credentials to be used for authentication.
+    /** 
+    * Sets the rootCertificatesForServerValidation
+    * Trusted Root Certificates for Server Validation when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. If you provide this value you do not need to provide trustedServerCertificateNames, and vice versa.
     *
-    * @param DeviceManagementDerivedCredentialSettings $val The derivedCredentialSettings
+    * @param IosTrustedRootCertificate $val The rootCertificatesForServerValidation
     *
     * @return IosEnterpriseWiFiConfiguration
     */
-    public function setDerivedCredentialSettings($val)
+    public function setRootCertificatesForServerValidation($val)
     {
-        $this->_propDict["derivedCredentialSettings"] = $val;
+		$this->_propDict["rootCertificatesForServerValidation"] = $val;
         return $this;
     }
     

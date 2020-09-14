@@ -25,60 +25,31 @@ namespace Beta\Microsoft\Graph\Model;
 class WindowsInformationProtectionDeviceRegistration extends Entity
 {
     /**
-    * Gets the userId
-    * UserId associated with this device registration record.
+    * Gets the deviceMacAddress
+    * Device Mac address.
     *
-    * @return string The userId
+    * @return string The deviceMacAddress
     */
-    public function getUserId()
+    public function getDeviceMacAddress()
     {
-        if (array_key_exists("userId", $this->_propDict)) {
-            return $this->_propDict["userId"];
+        if (array_key_exists("deviceMacAddress", $this->_propDict)) {
+            return $this->_propDict["deviceMacAddress"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the userId
-    * UserId associated with this device registration record.
+    * Sets the deviceMacAddress
+    * Device Mac address.
     *
-    * @param string $val The userId
-    *
-    * @return WindowsInformationProtectionDeviceRegistration
-    */
-    public function setUserId($val)
-    {
-        $this->_propDict["userId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the deviceRegistrationId
-    * Device identifier for this device registration record.
-    *
-    * @return string The deviceRegistrationId
-    */
-    public function getDeviceRegistrationId()
-    {
-        if (array_key_exists("deviceRegistrationId", $this->_propDict)) {
-            return $this->_propDict["deviceRegistrationId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the deviceRegistrationId
-    * Device identifier for this device registration record.
-    *
-    * @param string $val The deviceRegistrationId
+    * @param string $val The deviceMacAddress
     *
     * @return WindowsInformationProtectionDeviceRegistration
     */
-    public function setDeviceRegistrationId($val)
+    public function setDeviceMacAddress($val)
     {
-        $this->_propDict["deviceRegistrationId"] = $val;
+        $this->_propDict["deviceMacAddress"] = $val;
         return $this;
     }
     
@@ -112,6 +83,35 @@ class WindowsInformationProtectionDeviceRegistration extends Entity
     }
     
     /**
+    * Gets the deviceRegistrationId
+    * Device identifier for this device registration record.
+    *
+    * @return string The deviceRegistrationId
+    */
+    public function getDeviceRegistrationId()
+    {
+        if (array_key_exists("deviceRegistrationId", $this->_propDict)) {
+            return $this->_propDict["deviceRegistrationId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the deviceRegistrationId
+    * Device identifier for this device registration record.
+    *
+    * @param string $val The deviceRegistrationId
+    *
+    * @return WindowsInformationProtectionDeviceRegistration
+    */
+    public function setDeviceRegistrationId($val)
+    {
+        $this->_propDict["deviceRegistrationId"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the deviceType
     * Device type, for example, Windows laptop VS Windows phone.
     *
@@ -137,35 +137,6 @@ class WindowsInformationProtectionDeviceRegistration extends Entity
     public function setDeviceType($val)
     {
         $this->_propDict["deviceType"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the deviceMacAddress
-    * Device Mac address.
-    *
-    * @return string The deviceMacAddress
-    */
-    public function getDeviceMacAddress()
-    {
-        if (array_key_exists("deviceMacAddress", $this->_propDict)) {
-            return $this->_propDict["deviceMacAddress"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the deviceMacAddress
-    * Device Mac address.
-    *
-    * @param string $val The deviceMacAddress
-    *
-    * @return WindowsInformationProtectionDeviceRegistration
-    */
-    public function setDeviceMacAddress($val)
-    {
-        $this->_propDict["deviceMacAddress"] = $val;
         return $this;
     }
     
@@ -199,6 +170,35 @@ class WindowsInformationProtectionDeviceRegistration extends Entity
     public function setLastCheckInDateTime($val)
     {
         $this->_propDict["lastCheckInDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userId
+    * UserId associated with this device registration record.
+    *
+    * @return string The userId
+    */
+    public function getUserId()
+    {
+        if (array_key_exists("userId", $this->_propDict)) {
+            return $this->_propDict["userId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the userId
+    * UserId associated with this device registration record.
+    *
+    * @param string $val The userId
+    *
+    * @return WindowsInformationProtectionDeviceRegistration
+    */
+    public function setUserId($val)
+    {
+        $this->_propDict["userId"] = $val;
         return $this;
     }
     

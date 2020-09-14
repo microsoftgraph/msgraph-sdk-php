@@ -26,34 +26,6 @@ class PermissionGrantPolicy extends PolicyBase
 {
 
      /** 
-     * Gets the includes
-     *
-     * @return array The includes
-     */
-    public function getIncludes()
-    {
-        if (array_key_exists("includes", $this->_propDict)) {
-           return $this->_propDict["includes"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the includes
-    *
-    * @param PermissionGrantConditionSet $val The includes
-    *
-    * @return PermissionGrantPolicy
-    */
-    public function setIncludes($val)
-    {
-		$this->_propDict["includes"] = $val;
-        return $this;
-    }
-    
-
-     /** 
      * Gets the excludes
      *
      * @return array The excludes
@@ -77,6 +49,34 @@ class PermissionGrantPolicy extends PolicyBase
     public function setExcludes($val)
     {
 		$this->_propDict["excludes"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the includes
+     *
+     * @return array The includes
+     */
+    public function getIncludes()
+    {
+        if (array_key_exists("includes", $this->_propDict)) {
+           return $this->_propDict["includes"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the includes
+    *
+    * @param PermissionGrantConditionSet $val The includes
+    *
+    * @return PermissionGrantPolicy
+    */
+    public function setIncludes($val)
+    {
+		$this->_propDict["includes"] = $val;
         return $this;
     }
     

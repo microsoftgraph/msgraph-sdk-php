@@ -54,35 +54,6 @@ class PlannerBucket extends PlannerDelta
     }
     
     /**
-    * Gets the planId
-    * Plan ID to which the bucket belongs.
-    *
-    * @return string The planId
-    */
-    public function getPlanId()
-    {
-        if (array_key_exists("planId", $this->_propDict)) {
-            return $this->_propDict["planId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the planId
-    * Plan ID to which the bucket belongs.
-    *
-    * @param string $val The planId
-    *
-    * @return PlannerBucket
-    */
-    public function setPlanId($val)
-    {
-        $this->_propDict["planId"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the orderHint
     * Hint used to order items of this type in a list view. The format is defined as outlined here.
     *
@@ -108,6 +79,35 @@ class PlannerBucket extends PlannerDelta
     public function setOrderHint($val)
     {
         $this->_propDict["orderHint"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the planId
+    * Plan ID to which the bucket belongs.
+    *
+    * @return string The planId
+    */
+    public function getPlanId()
+    {
+        if (array_key_exists("planId", $this->_propDict)) {
+            return $this->_propDict["planId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the planId
+    * Plan ID to which the bucket belongs.
+    *
+    * @param string $val The planId
+    *
+    * @return PlannerBucket
+    */
+    public function setPlanId($val)
+    {
+        $this->_propDict["planId"] = $val;
         return $this;
     }
     

@@ -23,37 +23,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class RegistrationAndResetTarget extends Entity
 {
-
-    /**
-    * Gets the targetType
-    *
-    * @return AuthenticationMethodTargetType The targetType
-    */
-    public function getTargetType()
-    {
-        if (array_key_exists("targetType", $this->_propDict)) {
-            if (is_a($this->_propDict["targetType"], "Beta\Microsoft\Graph\Model\AuthenticationMethodTargetType")) {
-                return $this->_propDict["targetType"];
-            } else {
-                $this->_propDict["targetType"] = new AuthenticationMethodTargetType($this->_propDict["targetType"]);
-                return $this->_propDict["targetType"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the targetType
-    *
-    * @param AuthenticationMethodTargetType $val The value to assign to the targetType
-    *
-    * @return RegistrationAndResetTarget The RegistrationAndResetTarget
-    */
-    public function setTargetType($val)
-    {
-        $this->_propDict["targetType"] = $val;
-         return $this;
-    }
     /**
     * Gets the id
     *
@@ -131,5 +100,36 @@ class RegistrationAndResetTarget extends Entity
     {
         $this->_propDict["minAuthMethodsToReset"] = $val;
         return $this;
+    }
+
+    /**
+    * Gets the targetType
+    *
+    * @return AuthenticationMethodTargetType The targetType
+    */
+    public function getTargetType()
+    {
+        if (array_key_exists("targetType", $this->_propDict)) {
+            if (is_a($this->_propDict["targetType"], "Beta\Microsoft\Graph\Model\AuthenticationMethodTargetType")) {
+                return $this->_propDict["targetType"];
+            } else {
+                $this->_propDict["targetType"] = new AuthenticationMethodTargetType($this->_propDict["targetType"]);
+                return $this->_propDict["targetType"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the targetType
+    *
+    * @param AuthenticationMethodTargetType $val The value to assign to the targetType
+    *
+    * @return RegistrationAndResetTarget The RegistrationAndResetTarget
+    */
+    public function setTargetType($val)
+    {
+        $this->_propDict["targetType"] = $val;
+         return $this;
     }
 }

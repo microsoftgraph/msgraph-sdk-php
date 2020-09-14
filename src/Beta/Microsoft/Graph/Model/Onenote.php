@@ -56,61 +56,31 @@ class Onenote extends Entity
     
 
      /** 
-     * Gets the sections
-    * The sections in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
+     * Gets the operations
+    * The status of OneNote operations. Getting an operations collection is not supported, but you can get the status of long-running operations if the Operation-Location header is returned in the response. Read-only. Nullable.
      *
-     * @return array The sections
+     * @return array The operations
      */
-    public function getSections()
+    public function getOperations()
     {
-        if (array_key_exists("sections", $this->_propDict)) {
-           return $this->_propDict["sections"];
+        if (array_key_exists("operations", $this->_propDict)) {
+           return $this->_propDict["operations"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the sections
-    * The sections in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
+    * Sets the operations
+    * The status of OneNote operations. Getting an operations collection is not supported, but you can get the status of long-running operations if the Operation-Location header is returned in the response. Read-only. Nullable.
     *
-    * @param OnenoteSection $val The sections
-    *
-    * @return Onenote
-    */
-    public function setSections($val)
-    {
-		$this->_propDict["sections"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the sectionGroups
-    * The section groups in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
-     *
-     * @return array The sectionGroups
-     */
-    public function getSectionGroups()
-    {
-        if (array_key_exists("sectionGroups", $this->_propDict)) {
-           return $this->_propDict["sectionGroups"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the sectionGroups
-    * The section groups in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
-    *
-    * @param SectionGroup $val The sectionGroups
+    * @param OnenoteOperation $val The operations
     *
     * @return Onenote
     */
-    public function setSectionGroups($val)
+    public function setOperations($val)
     {
-		$this->_propDict["sectionGroups"] = $val;
+		$this->_propDict["operations"] = $val;
         return $this;
     }
     
@@ -176,31 +146,61 @@ class Onenote extends Entity
     
 
      /** 
-     * Gets the operations
-    * The status of OneNote operations. Getting an operations collection is not supported, but you can get the status of long-running operations if the Operation-Location header is returned in the response. Read-only. Nullable.
+     * Gets the sectionGroups
+    * The section groups in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
      *
-     * @return array The operations
+     * @return array The sectionGroups
      */
-    public function getOperations()
+    public function getSectionGroups()
     {
-        if (array_key_exists("operations", $this->_propDict)) {
-           return $this->_propDict["operations"];
+        if (array_key_exists("sectionGroups", $this->_propDict)) {
+           return $this->_propDict["sectionGroups"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the operations
-    * The status of OneNote operations. Getting an operations collection is not supported, but you can get the status of long-running operations if the Operation-Location header is returned in the response. Read-only. Nullable.
+    * Sets the sectionGroups
+    * The section groups in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
     *
-    * @param OnenoteOperation $val The operations
+    * @param SectionGroup $val The sectionGroups
     *
     * @return Onenote
     */
-    public function setOperations($val)
+    public function setSectionGroups($val)
     {
-		$this->_propDict["operations"] = $val;
+		$this->_propDict["sectionGroups"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the sections
+    * The sections in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
+     *
+     * @return array The sections
+     */
+    public function getSections()
+    {
+        if (array_key_exists("sections", $this->_propDict)) {
+           return $this->_propDict["sections"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the sections
+    * The sections in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
+    *
+    * @param OnenoteSection $val The sections
+    *
+    * @return Onenote
+    */
+    public function setSections($val)
+    {
+		$this->_propDict["sections"] = $val;
         return $this;
     }
     

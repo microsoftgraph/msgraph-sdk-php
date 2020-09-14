@@ -25,31 +25,300 @@ namespace Beta\Microsoft\Graph\Model;
 class MacOSCompliancePolicy extends DeviceCompliancePolicy
 {
     /**
-    * Gets the passwordRequired
-    * Whether or not to require a password.
+    * Gets the deviceThreatProtectionEnabled
+    * Require that devices have enabled device threat protection.
     *
-    * @return bool The passwordRequired
+    * @return bool The deviceThreatProtectionEnabled
     */
-    public function getPasswordRequired()
+    public function getDeviceThreatProtectionEnabled()
     {
-        if (array_key_exists("passwordRequired", $this->_propDict)) {
-            return $this->_propDict["passwordRequired"];
+        if (array_key_exists("deviceThreatProtectionEnabled", $this->_propDict)) {
+            return $this->_propDict["deviceThreatProtectionEnabled"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the passwordRequired
-    * Whether or not to require a password.
+    * Sets the deviceThreatProtectionEnabled
+    * Require that devices have enabled device threat protection.
     *
-    * @param bool $val The passwordRequired
+    * @param bool $val The deviceThreatProtectionEnabled
     *
     * @return MacOSCompliancePolicy
     */
-    public function setPasswordRequired($val)
+    public function setDeviceThreatProtectionEnabled($val)
     {
-        $this->_propDict["passwordRequired"] = boolval($val);
+        $this->_propDict["deviceThreatProtectionEnabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the deviceThreatProtectionRequiredSecurityLevel
+    * Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
+    *
+    * @return DeviceThreatProtectionLevel The deviceThreatProtectionRequiredSecurityLevel
+    */
+    public function getDeviceThreatProtectionRequiredSecurityLevel()
+    {
+        if (array_key_exists("deviceThreatProtectionRequiredSecurityLevel", $this->_propDict)) {
+            if (is_a($this->_propDict["deviceThreatProtectionRequiredSecurityLevel"], "Beta\Microsoft\Graph\Model\DeviceThreatProtectionLevel")) {
+                return $this->_propDict["deviceThreatProtectionRequiredSecurityLevel"];
+            } else {
+                $this->_propDict["deviceThreatProtectionRequiredSecurityLevel"] = new DeviceThreatProtectionLevel($this->_propDict["deviceThreatProtectionRequiredSecurityLevel"]);
+                return $this->_propDict["deviceThreatProtectionRequiredSecurityLevel"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the deviceThreatProtectionRequiredSecurityLevel
+    * Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
+    *
+    * @param DeviceThreatProtectionLevel $val The deviceThreatProtectionRequiredSecurityLevel
+    *
+    * @return MacOSCompliancePolicy
+    */
+    public function setDeviceThreatProtectionRequiredSecurityLevel($val)
+    {
+        $this->_propDict["deviceThreatProtectionRequiredSecurityLevel"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the firewallBlockAllIncoming
+    * Corresponds to the 'Block all incoming connections' option.
+    *
+    * @return bool The firewallBlockAllIncoming
+    */
+    public function getFirewallBlockAllIncoming()
+    {
+        if (array_key_exists("firewallBlockAllIncoming", $this->_propDict)) {
+            return $this->_propDict["firewallBlockAllIncoming"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the firewallBlockAllIncoming
+    * Corresponds to the 'Block all incoming connections' option.
+    *
+    * @param bool $val The firewallBlockAllIncoming
+    *
+    * @return MacOSCompliancePolicy
+    */
+    public function setFirewallBlockAllIncoming($val)
+    {
+        $this->_propDict["firewallBlockAllIncoming"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the firewallEnabled
+    * Whether the firewall should be enabled or not.
+    *
+    * @return bool The firewallEnabled
+    */
+    public function getFirewallEnabled()
+    {
+        if (array_key_exists("firewallEnabled", $this->_propDict)) {
+            return $this->_propDict["firewallEnabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the firewallEnabled
+    * Whether the firewall should be enabled or not.
+    *
+    * @param bool $val The firewallEnabled
+    *
+    * @return MacOSCompliancePolicy
+    */
+    public function setFirewallEnabled($val)
+    {
+        $this->_propDict["firewallEnabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the firewallEnableStealthMode
+    * Corresponds to 'Enable stealth mode.'
+    *
+    * @return bool The firewallEnableStealthMode
+    */
+    public function getFirewallEnableStealthMode()
+    {
+        if (array_key_exists("firewallEnableStealthMode", $this->_propDict)) {
+            return $this->_propDict["firewallEnableStealthMode"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the firewallEnableStealthMode
+    * Corresponds to 'Enable stealth mode.'
+    *
+    * @param bool $val The firewallEnableStealthMode
+    *
+    * @return MacOSCompliancePolicy
+    */
+    public function setFirewallEnableStealthMode($val)
+    {
+        $this->_propDict["firewallEnableStealthMode"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the gatekeeperAllowedAppSource
+    * System and Privacy setting that determines which download locations apps can be run from on a macOS device.
+    *
+    * @return MacOSGatekeeperAppSources The gatekeeperAllowedAppSource
+    */
+    public function getGatekeeperAllowedAppSource()
+    {
+        if (array_key_exists("gatekeeperAllowedAppSource", $this->_propDict)) {
+            if (is_a($this->_propDict["gatekeeperAllowedAppSource"], "Beta\Microsoft\Graph\Model\MacOSGatekeeperAppSources")) {
+                return $this->_propDict["gatekeeperAllowedAppSource"];
+            } else {
+                $this->_propDict["gatekeeperAllowedAppSource"] = new MacOSGatekeeperAppSources($this->_propDict["gatekeeperAllowedAppSource"]);
+                return $this->_propDict["gatekeeperAllowedAppSource"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the gatekeeperAllowedAppSource
+    * System and Privacy setting that determines which download locations apps can be run from on a macOS device.
+    *
+    * @param MacOSGatekeeperAppSources $val The gatekeeperAllowedAppSource
+    *
+    * @return MacOSCompliancePolicy
+    */
+    public function setGatekeeperAllowedAppSource($val)
+    {
+        $this->_propDict["gatekeeperAllowedAppSource"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the osMaximumBuildVersion
+    * Maximum MacOS build version.
+    *
+    * @return string The osMaximumBuildVersion
+    */
+    public function getOsMaximumBuildVersion()
+    {
+        if (array_key_exists("osMaximumBuildVersion", $this->_propDict)) {
+            return $this->_propDict["osMaximumBuildVersion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the osMaximumBuildVersion
+    * Maximum MacOS build version.
+    *
+    * @param string $val The osMaximumBuildVersion
+    *
+    * @return MacOSCompliancePolicy
+    */
+    public function setOsMaximumBuildVersion($val)
+    {
+        $this->_propDict["osMaximumBuildVersion"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the osMaximumVersion
+    * Maximum MacOS version.
+    *
+    * @return string The osMaximumVersion
+    */
+    public function getOsMaximumVersion()
+    {
+        if (array_key_exists("osMaximumVersion", $this->_propDict)) {
+            return $this->_propDict["osMaximumVersion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the osMaximumVersion
+    * Maximum MacOS version.
+    *
+    * @param string $val The osMaximumVersion
+    *
+    * @return MacOSCompliancePolicy
+    */
+    public function setOsMaximumVersion($val)
+    {
+        $this->_propDict["osMaximumVersion"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the osMinimumBuildVersion
+    * Minimum MacOS build version.
+    *
+    * @return string The osMinimumBuildVersion
+    */
+    public function getOsMinimumBuildVersion()
+    {
+        if (array_key_exists("osMinimumBuildVersion", $this->_propDict)) {
+            return $this->_propDict["osMinimumBuildVersion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the osMinimumBuildVersion
+    * Minimum MacOS build version.
+    *
+    * @param string $val The osMinimumBuildVersion
+    *
+    * @return MacOSCompliancePolicy
+    */
+    public function setOsMinimumBuildVersion($val)
+    {
+        $this->_propDict["osMinimumBuildVersion"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the osMinimumVersion
+    * Minimum MacOS version.
+    *
+    * @return string The osMinimumVersion
+    */
+    public function getOsMinimumVersion()
+    {
+        if (array_key_exists("osMinimumVersion", $this->_propDict)) {
+            return $this->_propDict["osMinimumVersion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the osMinimumVersion
+    * Minimum MacOS version.
+    *
+    * @param string $val The osMinimumVersion
+    *
+    * @return MacOSCompliancePolicy
+    */
+    public function setOsMinimumVersion($val)
+    {
+        $this->_propDict["osMinimumVersion"] = $val;
         return $this;
     }
     
@@ -108,6 +377,35 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     public function setPasswordExpirationDays($val)
     {
         $this->_propDict["passwordExpirationDays"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the passwordMinimumCharacterSetCount
+    * The number of character sets required in the password.
+    *
+    * @return int The passwordMinimumCharacterSetCount
+    */
+    public function getPasswordMinimumCharacterSetCount()
+    {
+        if (array_key_exists("passwordMinimumCharacterSetCount", $this->_propDict)) {
+            return $this->_propDict["passwordMinimumCharacterSetCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the passwordMinimumCharacterSetCount
+    * The number of character sets required in the password.
+    *
+    * @param int $val The passwordMinimumCharacterSetCount
+    *
+    * @return MacOSCompliancePolicy
+    */
+    public function setPasswordMinimumCharacterSetCount($val)
+    {
+        $this->_propDict["passwordMinimumCharacterSetCount"] = intval($val);
         return $this;
     }
     
@@ -199,31 +497,31 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     }
     
     /**
-    * Gets the passwordMinimumCharacterSetCount
-    * The number of character sets required in the password.
+    * Gets the passwordRequired
+    * Whether or not to require a password.
     *
-    * @return int The passwordMinimumCharacterSetCount
+    * @return bool The passwordRequired
     */
-    public function getPasswordMinimumCharacterSetCount()
+    public function getPasswordRequired()
     {
-        if (array_key_exists("passwordMinimumCharacterSetCount", $this->_propDict)) {
-            return $this->_propDict["passwordMinimumCharacterSetCount"];
+        if (array_key_exists("passwordRequired", $this->_propDict)) {
+            return $this->_propDict["passwordRequired"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the passwordMinimumCharacterSetCount
-    * The number of character sets required in the password.
+    * Sets the passwordRequired
+    * Whether or not to require a password.
     *
-    * @param int $val The passwordMinimumCharacterSetCount
+    * @param bool $val The passwordRequired
     *
     * @return MacOSCompliancePolicy
     */
-    public function setPasswordMinimumCharacterSetCount($val)
+    public function setPasswordRequired($val)
     {
-        $this->_propDict["passwordMinimumCharacterSetCount"] = intval($val);
+        $this->_propDict["passwordRequired"] = boolval($val);
         return $this;
     }
     
@@ -261,213 +559,6 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     }
     
     /**
-    * Gets the osMinimumVersion
-    * Minimum MacOS version.
-    *
-    * @return string The osMinimumVersion
-    */
-    public function getOsMinimumVersion()
-    {
-        if (array_key_exists("osMinimumVersion", $this->_propDict)) {
-            return $this->_propDict["osMinimumVersion"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the osMinimumVersion
-    * Minimum MacOS version.
-    *
-    * @param string $val The osMinimumVersion
-    *
-    * @return MacOSCompliancePolicy
-    */
-    public function setOsMinimumVersion($val)
-    {
-        $this->_propDict["osMinimumVersion"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the osMaximumVersion
-    * Maximum MacOS version.
-    *
-    * @return string The osMaximumVersion
-    */
-    public function getOsMaximumVersion()
-    {
-        if (array_key_exists("osMaximumVersion", $this->_propDict)) {
-            return $this->_propDict["osMaximumVersion"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the osMaximumVersion
-    * Maximum MacOS version.
-    *
-    * @param string $val The osMaximumVersion
-    *
-    * @return MacOSCompliancePolicy
-    */
-    public function setOsMaximumVersion($val)
-    {
-        $this->_propDict["osMaximumVersion"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the osMinimumBuildVersion
-    * Minimum MacOS build version.
-    *
-    * @return string The osMinimumBuildVersion
-    */
-    public function getOsMinimumBuildVersion()
-    {
-        if (array_key_exists("osMinimumBuildVersion", $this->_propDict)) {
-            return $this->_propDict["osMinimumBuildVersion"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the osMinimumBuildVersion
-    * Minimum MacOS build version.
-    *
-    * @param string $val The osMinimumBuildVersion
-    *
-    * @return MacOSCompliancePolicy
-    */
-    public function setOsMinimumBuildVersion($val)
-    {
-        $this->_propDict["osMinimumBuildVersion"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the osMaximumBuildVersion
-    * Maximum MacOS build version.
-    *
-    * @return string The osMaximumBuildVersion
-    */
-    public function getOsMaximumBuildVersion()
-    {
-        if (array_key_exists("osMaximumBuildVersion", $this->_propDict)) {
-            return $this->_propDict["osMaximumBuildVersion"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the osMaximumBuildVersion
-    * Maximum MacOS build version.
-    *
-    * @param string $val The osMaximumBuildVersion
-    *
-    * @return MacOSCompliancePolicy
-    */
-    public function setOsMaximumBuildVersion($val)
-    {
-        $this->_propDict["osMaximumBuildVersion"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the systemIntegrityProtectionEnabled
-    * Require that devices have enabled system integrity protection.
-    *
-    * @return bool The systemIntegrityProtectionEnabled
-    */
-    public function getSystemIntegrityProtectionEnabled()
-    {
-        if (array_key_exists("systemIntegrityProtectionEnabled", $this->_propDict)) {
-            return $this->_propDict["systemIntegrityProtectionEnabled"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the systemIntegrityProtectionEnabled
-    * Require that devices have enabled system integrity protection.
-    *
-    * @param bool $val The systemIntegrityProtectionEnabled
-    *
-    * @return MacOSCompliancePolicy
-    */
-    public function setSystemIntegrityProtectionEnabled($val)
-    {
-        $this->_propDict["systemIntegrityProtectionEnabled"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the deviceThreatProtectionEnabled
-    * Require that devices have enabled device threat protection.
-    *
-    * @return bool The deviceThreatProtectionEnabled
-    */
-    public function getDeviceThreatProtectionEnabled()
-    {
-        if (array_key_exists("deviceThreatProtectionEnabled", $this->_propDict)) {
-            return $this->_propDict["deviceThreatProtectionEnabled"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the deviceThreatProtectionEnabled
-    * Require that devices have enabled device threat protection.
-    *
-    * @param bool $val The deviceThreatProtectionEnabled
-    *
-    * @return MacOSCompliancePolicy
-    */
-    public function setDeviceThreatProtectionEnabled($val)
-    {
-        $this->_propDict["deviceThreatProtectionEnabled"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the deviceThreatProtectionRequiredSecurityLevel
-    * Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
-    *
-    * @return DeviceThreatProtectionLevel The deviceThreatProtectionRequiredSecurityLevel
-    */
-    public function getDeviceThreatProtectionRequiredSecurityLevel()
-    {
-        if (array_key_exists("deviceThreatProtectionRequiredSecurityLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceThreatProtectionRequiredSecurityLevel"], "Beta\Microsoft\Graph\Model\DeviceThreatProtectionLevel")) {
-                return $this->_propDict["deviceThreatProtectionRequiredSecurityLevel"];
-            } else {
-                $this->_propDict["deviceThreatProtectionRequiredSecurityLevel"] = new DeviceThreatProtectionLevel($this->_propDict["deviceThreatProtectionRequiredSecurityLevel"]);
-                return $this->_propDict["deviceThreatProtectionRequiredSecurityLevel"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the deviceThreatProtectionRequiredSecurityLevel
-    * Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
-    *
-    * @param DeviceThreatProtectionLevel $val The deviceThreatProtectionRequiredSecurityLevel
-    *
-    * @return MacOSCompliancePolicy
-    */
-    public function setDeviceThreatProtectionRequiredSecurityLevel($val)
-    {
-        $this->_propDict["deviceThreatProtectionRequiredSecurityLevel"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the storageRequireEncryption
     * Require encryption on Mac OS devices.
     *
@@ -497,122 +588,31 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     }
     
     /**
-    * Gets the gatekeeperAllowedAppSource
-    * System and Privacy setting that determines which download locations apps can be run from on a macOS device.
+    * Gets the systemIntegrityProtectionEnabled
+    * Require that devices have enabled system integrity protection.
     *
-    * @return MacOSGatekeeperAppSources The gatekeeperAllowedAppSource
+    * @return bool The systemIntegrityProtectionEnabled
     */
-    public function getGatekeeperAllowedAppSource()
+    public function getSystemIntegrityProtectionEnabled()
     {
-        if (array_key_exists("gatekeeperAllowedAppSource", $this->_propDict)) {
-            if (is_a($this->_propDict["gatekeeperAllowedAppSource"], "Beta\Microsoft\Graph\Model\MacOSGatekeeperAppSources")) {
-                return $this->_propDict["gatekeeperAllowedAppSource"];
-            } else {
-                $this->_propDict["gatekeeperAllowedAppSource"] = new MacOSGatekeeperAppSources($this->_propDict["gatekeeperAllowedAppSource"]);
-                return $this->_propDict["gatekeeperAllowedAppSource"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the gatekeeperAllowedAppSource
-    * System and Privacy setting that determines which download locations apps can be run from on a macOS device.
-    *
-    * @param MacOSGatekeeperAppSources $val The gatekeeperAllowedAppSource
-    *
-    * @return MacOSCompliancePolicy
-    */
-    public function setGatekeeperAllowedAppSource($val)
-    {
-        $this->_propDict["gatekeeperAllowedAppSource"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the firewallEnabled
-    * Whether the firewall should be enabled or not.
-    *
-    * @return bool The firewallEnabled
-    */
-    public function getFirewallEnabled()
-    {
-        if (array_key_exists("firewallEnabled", $this->_propDict)) {
-            return $this->_propDict["firewallEnabled"];
+        if (array_key_exists("systemIntegrityProtectionEnabled", $this->_propDict)) {
+            return $this->_propDict["systemIntegrityProtectionEnabled"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the firewallEnabled
-    * Whether the firewall should be enabled or not.
+    * Sets the systemIntegrityProtectionEnabled
+    * Require that devices have enabled system integrity protection.
     *
-    * @param bool $val The firewallEnabled
-    *
-    * @return MacOSCompliancePolicy
-    */
-    public function setFirewallEnabled($val)
-    {
-        $this->_propDict["firewallEnabled"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the firewallBlockAllIncoming
-    * Corresponds to the 'Block all incoming connections' option.
-    *
-    * @return bool The firewallBlockAllIncoming
-    */
-    public function getFirewallBlockAllIncoming()
-    {
-        if (array_key_exists("firewallBlockAllIncoming", $this->_propDict)) {
-            return $this->_propDict["firewallBlockAllIncoming"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the firewallBlockAllIncoming
-    * Corresponds to the 'Block all incoming connections' option.
-    *
-    * @param bool $val The firewallBlockAllIncoming
+    * @param bool $val The systemIntegrityProtectionEnabled
     *
     * @return MacOSCompliancePolicy
     */
-    public function setFirewallBlockAllIncoming($val)
+    public function setSystemIntegrityProtectionEnabled($val)
     {
-        $this->_propDict["firewallBlockAllIncoming"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the firewallEnableStealthMode
-    * Corresponds to 'Enable stealth mode.'
-    *
-    * @return bool The firewallEnableStealthMode
-    */
-    public function getFirewallEnableStealthMode()
-    {
-        if (array_key_exists("firewallEnableStealthMode", $this->_propDict)) {
-            return $this->_propDict["firewallEnableStealthMode"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the firewallEnableStealthMode
-    * Corresponds to 'Enable stealth mode.'
-    *
-    * @param bool $val The firewallEnableStealthMode
-    *
-    * @return MacOSCompliancePolicy
-    */
-    public function setFirewallEnableStealthMode($val)
-    {
-        $this->_propDict["firewallEnableStealthMode"] = boolval($val);
+        $this->_propDict["systemIntegrityProtectionEnabled"] = boolval($val);
         return $this;
     }
     

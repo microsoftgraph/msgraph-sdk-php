@@ -25,31 +25,367 @@ namespace Beta\Microsoft\Graph\Model;
 class AndroidManagedAppProtection extends TargetedManagedAppProtection
 {
     /**
-    * Gets the screenCaptureBlocked
-    * Indicates whether a managed user can take screen captures of managed apps
+    * Gets the allowedAndroidDeviceManufacturers
+    * Semicolon seperated list of device manufacturers allowed, as a string, for the managed app to work.
     *
-    * @return bool The screenCaptureBlocked
+    * @return string The allowedAndroidDeviceManufacturers
     */
-    public function getScreenCaptureBlocked()
+    public function getAllowedAndroidDeviceManufacturers()
     {
-        if (array_key_exists("screenCaptureBlocked", $this->_propDict)) {
-            return $this->_propDict["screenCaptureBlocked"];
+        if (array_key_exists("allowedAndroidDeviceManufacturers", $this->_propDict)) {
+            return $this->_propDict["allowedAndroidDeviceManufacturers"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the screenCaptureBlocked
-    * Indicates whether a managed user can take screen captures of managed apps
+    * Sets the allowedAndroidDeviceManufacturers
+    * Semicolon seperated list of device manufacturers allowed, as a string, for the managed app to work.
     *
-    * @param bool $val The screenCaptureBlocked
+    * @param string $val The allowedAndroidDeviceManufacturers
     *
     * @return AndroidManagedAppProtection
     */
-    public function setScreenCaptureBlocked($val)
+    public function setAllowedAndroidDeviceManufacturers($val)
     {
-        $this->_propDict["screenCaptureBlocked"] = boolval($val);
+        $this->_propDict["allowedAndroidDeviceManufacturers"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the allowedAndroidDeviceModels
+    * List of device models allowed, as a string, for the managed app to work.
+    *
+    * @return string The allowedAndroidDeviceModels
+    */
+    public function getAllowedAndroidDeviceModels()
+    {
+        if (array_key_exists("allowedAndroidDeviceModels", $this->_propDict)) {
+            return $this->_propDict["allowedAndroidDeviceModels"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the allowedAndroidDeviceModels
+    * List of device models allowed, as a string, for the managed app to work.
+    *
+    * @param string $val The allowedAndroidDeviceModels
+    *
+    * @return AndroidManagedAppProtection
+    */
+    public function setAllowedAndroidDeviceModels($val)
+    {
+        $this->_propDict["allowedAndroidDeviceModels"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the appActionIfAndroidDeviceManufacturerNotAllowed
+    * Defines a managed app behavior, either block or wipe, if the specified device manufacturer is not allowed.
+    *
+    * @return ManagedAppRemediationAction The appActionIfAndroidDeviceManufacturerNotAllowed
+    */
+    public function getAppActionIfAndroidDeviceManufacturerNotAllowed()
+    {
+        if (array_key_exists("appActionIfAndroidDeviceManufacturerNotAllowed", $this->_propDict)) {
+            if (is_a($this->_propDict["appActionIfAndroidDeviceManufacturerNotAllowed"], "Beta\Microsoft\Graph\Model\ManagedAppRemediationAction")) {
+                return $this->_propDict["appActionIfAndroidDeviceManufacturerNotAllowed"];
+            } else {
+                $this->_propDict["appActionIfAndroidDeviceManufacturerNotAllowed"] = new ManagedAppRemediationAction($this->_propDict["appActionIfAndroidDeviceManufacturerNotAllowed"]);
+                return $this->_propDict["appActionIfAndroidDeviceManufacturerNotAllowed"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the appActionIfAndroidDeviceManufacturerNotAllowed
+    * Defines a managed app behavior, either block or wipe, if the specified device manufacturer is not allowed.
+    *
+    * @param ManagedAppRemediationAction $val The appActionIfAndroidDeviceManufacturerNotAllowed
+    *
+    * @return AndroidManagedAppProtection
+    */
+    public function setAppActionIfAndroidDeviceManufacturerNotAllowed($val)
+    {
+        $this->_propDict["appActionIfAndroidDeviceManufacturerNotAllowed"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the appActionIfAndroidDeviceModelNotAllowed
+    * Defines a managed app behavior, either block or wipe, if the specified device model is not allowed.
+    *
+    * @return ManagedAppRemediationAction The appActionIfAndroidDeviceModelNotAllowed
+    */
+    public function getAppActionIfAndroidDeviceModelNotAllowed()
+    {
+        if (array_key_exists("appActionIfAndroidDeviceModelNotAllowed", $this->_propDict)) {
+            if (is_a($this->_propDict["appActionIfAndroidDeviceModelNotAllowed"], "Beta\Microsoft\Graph\Model\ManagedAppRemediationAction")) {
+                return $this->_propDict["appActionIfAndroidDeviceModelNotAllowed"];
+            } else {
+                $this->_propDict["appActionIfAndroidDeviceModelNotAllowed"] = new ManagedAppRemediationAction($this->_propDict["appActionIfAndroidDeviceModelNotAllowed"]);
+                return $this->_propDict["appActionIfAndroidDeviceModelNotAllowed"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the appActionIfAndroidDeviceModelNotAllowed
+    * Defines a managed app behavior, either block or wipe, if the specified device model is not allowed.
+    *
+    * @param ManagedAppRemediationAction $val The appActionIfAndroidDeviceModelNotAllowed
+    *
+    * @return AndroidManagedAppProtection
+    */
+    public function setAppActionIfAndroidDeviceModelNotAllowed($val)
+    {
+        $this->_propDict["appActionIfAndroidDeviceModelNotAllowed"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the appActionIfAndroidSafetyNetAppsVerificationFailed
+    * Defines a managed app behavior, either warn or block, if the specified Android App Verification requirment fails.
+    *
+    * @return ManagedAppRemediationAction The appActionIfAndroidSafetyNetAppsVerificationFailed
+    */
+    public function getAppActionIfAndroidSafetyNetAppsVerificationFailed()
+    {
+        if (array_key_exists("appActionIfAndroidSafetyNetAppsVerificationFailed", $this->_propDict)) {
+            if (is_a($this->_propDict["appActionIfAndroidSafetyNetAppsVerificationFailed"], "Beta\Microsoft\Graph\Model\ManagedAppRemediationAction")) {
+                return $this->_propDict["appActionIfAndroidSafetyNetAppsVerificationFailed"];
+            } else {
+                $this->_propDict["appActionIfAndroidSafetyNetAppsVerificationFailed"] = new ManagedAppRemediationAction($this->_propDict["appActionIfAndroidSafetyNetAppsVerificationFailed"]);
+                return $this->_propDict["appActionIfAndroidSafetyNetAppsVerificationFailed"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the appActionIfAndroidSafetyNetAppsVerificationFailed
+    * Defines a managed app behavior, either warn or block, if the specified Android App Verification requirment fails.
+    *
+    * @param ManagedAppRemediationAction $val The appActionIfAndroidSafetyNetAppsVerificationFailed
+    *
+    * @return AndroidManagedAppProtection
+    */
+    public function setAppActionIfAndroidSafetyNetAppsVerificationFailed($val)
+    {
+        $this->_propDict["appActionIfAndroidSafetyNetAppsVerificationFailed"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the appActionIfAndroidSafetyNetDeviceAttestationFailed
+    * Defines a managed app behavior, either warn or block, if the specified Android SafetyNet Attestation requirment fails.
+    *
+    * @return ManagedAppRemediationAction The appActionIfAndroidSafetyNetDeviceAttestationFailed
+    */
+    public function getAppActionIfAndroidSafetyNetDeviceAttestationFailed()
+    {
+        if (array_key_exists("appActionIfAndroidSafetyNetDeviceAttestationFailed", $this->_propDict)) {
+            if (is_a($this->_propDict["appActionIfAndroidSafetyNetDeviceAttestationFailed"], "Beta\Microsoft\Graph\Model\ManagedAppRemediationAction")) {
+                return $this->_propDict["appActionIfAndroidSafetyNetDeviceAttestationFailed"];
+            } else {
+                $this->_propDict["appActionIfAndroidSafetyNetDeviceAttestationFailed"] = new ManagedAppRemediationAction($this->_propDict["appActionIfAndroidSafetyNetDeviceAttestationFailed"]);
+                return $this->_propDict["appActionIfAndroidSafetyNetDeviceAttestationFailed"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the appActionIfAndroidSafetyNetDeviceAttestationFailed
+    * Defines a managed app behavior, either warn or block, if the specified Android SafetyNet Attestation requirment fails.
+    *
+    * @param ManagedAppRemediationAction $val The appActionIfAndroidSafetyNetDeviceAttestationFailed
+    *
+    * @return AndroidManagedAppProtection
+    */
+    public function setAppActionIfAndroidSafetyNetDeviceAttestationFailed($val)
+    {
+        $this->_propDict["appActionIfAndroidSafetyNetDeviceAttestationFailed"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the approvedKeyboards
+    * If Keyboard Restriction is enabled, only keyboards in this approved list will be allowed. A key should be Android package id for a keyboard and value should be a friendly name
+     *
+     * @return array The approvedKeyboards
+     */
+    public function getApprovedKeyboards()
+    {
+        if (array_key_exists("approvedKeyboards", $this->_propDict)) {
+           return $this->_propDict["approvedKeyboards"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the approvedKeyboards
+    * If Keyboard Restriction is enabled, only keyboards in this approved list will be allowed. A key should be Android package id for a keyboard and value should be a friendly name
+    *
+    * @param KeyValuePair $val The approvedKeyboards
+    *
+    * @return AndroidManagedAppProtection
+    */
+    public function setApprovedKeyboards($val)
+    {
+		$this->_propDict["approvedKeyboards"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the customBrowserDisplayName
+    * Friendly name of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+    *
+    * @return string The customBrowserDisplayName
+    */
+    public function getCustomBrowserDisplayName()
+    {
+        if (array_key_exists("customBrowserDisplayName", $this->_propDict)) {
+            return $this->_propDict["customBrowserDisplayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the customBrowserDisplayName
+    * Friendly name of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+    *
+    * @param string $val The customBrowserDisplayName
+    *
+    * @return AndroidManagedAppProtection
+    */
+    public function setCustomBrowserDisplayName($val)
+    {
+        $this->_propDict["customBrowserDisplayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the customBrowserPackageId
+    * Unique identifier of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+    *
+    * @return string The customBrowserPackageId
+    */
+    public function getCustomBrowserPackageId()
+    {
+        if (array_key_exists("customBrowserPackageId", $this->_propDict)) {
+            return $this->_propDict["customBrowserPackageId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the customBrowserPackageId
+    * Unique identifier of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+    *
+    * @param string $val The customBrowserPackageId
+    *
+    * @return AndroidManagedAppProtection
+    */
+    public function setCustomBrowserPackageId($val)
+    {
+        $this->_propDict["customBrowserPackageId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the customDialerAppDisplayName
+    * Friendly name of a custom dialer app to click-to-open a phone number on Android.
+    *
+    * @return string The customDialerAppDisplayName
+    */
+    public function getCustomDialerAppDisplayName()
+    {
+        if (array_key_exists("customDialerAppDisplayName", $this->_propDict)) {
+            return $this->_propDict["customDialerAppDisplayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the customDialerAppDisplayName
+    * Friendly name of a custom dialer app to click-to-open a phone number on Android.
+    *
+    * @param string $val The customDialerAppDisplayName
+    *
+    * @return AndroidManagedAppProtection
+    */
+    public function setCustomDialerAppDisplayName($val)
+    {
+        $this->_propDict["customDialerAppDisplayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the customDialerAppPackageId
+    * PackageId of a custom dialer app to click-to-open a phone number on Android.
+    *
+    * @return string The customDialerAppPackageId
+    */
+    public function getCustomDialerAppPackageId()
+    {
+        if (array_key_exists("customDialerAppPackageId", $this->_propDict)) {
+            return $this->_propDict["customDialerAppPackageId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the customDialerAppPackageId
+    * PackageId of a custom dialer app to click-to-open a phone number on Android.
+    *
+    * @param string $val The customDialerAppPackageId
+    *
+    * @return AndroidManagedAppProtection
+    */
+    public function setCustomDialerAppPackageId($val)
+    {
+        $this->_propDict["customDialerAppPackageId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the deployedAppCount
+    * Count of apps to which the current policy is deployed.
+    *
+    * @return int The deployedAppCount
+    */
+    public function getDeployedAppCount()
+    {
+        if (array_key_exists("deployedAppCount", $this->_propDict)) {
+            return $this->_propDict["deployedAppCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the deployedAppCount
+    * Count of apps to which the current policy is deployed.
+    *
+    * @param int $val The deployedAppCount
+    *
+    * @return AndroidManagedAppProtection
+    */
+    public function setDeployedAppCount($val)
+    {
+        $this->_propDict["deployedAppCount"] = intval($val);
         return $this;
     }
     
@@ -111,32 +447,91 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
         return $this;
     }
     
-    /**
-    * Gets the deployedAppCount
-    * Count of apps to which the current policy is deployed.
-    *
-    * @return int The deployedAppCount
-    */
-    public function getDeployedAppCount()
+
+     /** 
+     * Gets the exemptedAppPackages
+    * App packages in this list will be exempt from the policy and will be able to receive data from managed apps.
+     *
+     * @return array The exemptedAppPackages
+     */
+    public function getExemptedAppPackages()
     {
-        if (array_key_exists("deployedAppCount", $this->_propDict)) {
-            return $this->_propDict["deployedAppCount"];
+        if (array_key_exists("exemptedAppPackages", $this->_propDict)) {
+           return $this->_propDict["exemptedAppPackages"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the exemptedAppPackages
+    * App packages in this list will be exempt from the policy and will be able to receive data from managed apps.
+    *
+    * @param KeyValuePair $val The exemptedAppPackages
+    *
+    * @return AndroidManagedAppProtection
+    */
+    public function setExemptedAppPackages($val)
+    {
+		$this->_propDict["exemptedAppPackages"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the keyboardsRestricted
+    * Indicates if keyboard restriction is enabled. If enabled list of approved keyboards must be provided as well.
+    *
+    * @return bool The keyboardsRestricted
+    */
+    public function getKeyboardsRestricted()
+    {
+        if (array_key_exists("keyboardsRestricted", $this->_propDict)) {
+            return $this->_propDict["keyboardsRestricted"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the deployedAppCount
-    * Count of apps to which the current policy is deployed.
+    * Sets the keyboardsRestricted
+    * Indicates if keyboard restriction is enabled. If enabled list of approved keyboards must be provided as well.
     *
-    * @param int $val The deployedAppCount
+    * @param bool $val The keyboardsRestricted
     *
     * @return AndroidManagedAppProtection
     */
-    public function setDeployedAppCount($val)
+    public function setKeyboardsRestricted($val)
     {
-        $this->_propDict["deployedAppCount"] = intval($val);
+        $this->_propDict["keyboardsRestricted"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the minimumRequiredCompanyPortalVersion
+    * Minimum version of the Company portal that must be installed on the device or app access will be blocked
+    *
+    * @return string The minimumRequiredCompanyPortalVersion
+    */
+    public function getMinimumRequiredCompanyPortalVersion()
+    {
+        if (array_key_exists("minimumRequiredCompanyPortalVersion", $this->_propDict)) {
+            return $this->_propDict["minimumRequiredCompanyPortalVersion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the minimumRequiredCompanyPortalVersion
+    * Minimum version of the Company portal that must be installed on the device or app access will be blocked
+    *
+    * @param string $val The minimumRequiredCompanyPortalVersion
+    *
+    * @return AndroidManagedAppProtection
+    */
+    public function setMinimumRequiredCompanyPortalVersion($val)
+    {
+        $this->_propDict["minimumRequiredCompanyPortalVersion"] = $val;
         return $this;
     }
     
@@ -170,6 +565,35 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     }
     
     /**
+    * Gets the minimumWarningCompanyPortalVersion
+    * Minimum version of the Company portal that must be installed on the device or the user will receive a warning
+    *
+    * @return string The minimumWarningCompanyPortalVersion
+    */
+    public function getMinimumWarningCompanyPortalVersion()
+    {
+        if (array_key_exists("minimumWarningCompanyPortalVersion", $this->_propDict)) {
+            return $this->_propDict["minimumWarningCompanyPortalVersion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the minimumWarningCompanyPortalVersion
+    * Minimum version of the Company portal that must be installed on the device or the user will receive a warning
+    *
+    * @param string $val The minimumWarningCompanyPortalVersion
+    *
+    * @return AndroidManagedAppProtection
+    */
+    public function setMinimumWarningCompanyPortalVersion($val)
+    {
+        $this->_propDict["minimumWarningCompanyPortalVersion"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the minimumWarningPatchVersion
     * Define the oldest recommended Android security patch level a user can have for secure access to the app.
     *
@@ -198,33 +622,32 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
         return $this;
     }
     
-
-     /** 
-     * Gets the exemptedAppPackages
-    * App packages in this list will be exempt from the policy and will be able to receive data from managed apps.
-     *
-     * @return array The exemptedAppPackages
-     */
-    public function getExemptedAppPackages()
+    /**
+    * Gets the minimumWipeCompanyPortalVersion
+    * Minimum version of the Company portal that must be installed on the device or the company data on the app will be wiped
+    *
+    * @return string The minimumWipeCompanyPortalVersion
+    */
+    public function getMinimumWipeCompanyPortalVersion()
     {
-        if (array_key_exists("exemptedAppPackages", $this->_propDict)) {
-           return $this->_propDict["exemptedAppPackages"];
+        if (array_key_exists("minimumWipeCompanyPortalVersion", $this->_propDict)) {
+            return $this->_propDict["minimumWipeCompanyPortalVersion"];
         } else {
             return null;
         }
     }
     
-    /** 
-    * Sets the exemptedAppPackages
-    * App packages in this list will be exempt from the policy and will be able to receive data from managed apps.
+    /**
+    * Sets the minimumWipeCompanyPortalVersion
+    * Minimum version of the Company portal that must be installed on the device or the company data on the app will be wiped
     *
-    * @param KeyValuePair $val The exemptedAppPackages
+    * @param string $val The minimumWipeCompanyPortalVersion
     *
     * @return AndroidManagedAppProtection
     */
-    public function setExemptedAppPackages($val)
+    public function setMinimumWipeCompanyPortalVersion($val)
     {
-		$this->_propDict["exemptedAppPackages"] = $val;
+        $this->_propDict["minimumWipeCompanyPortalVersion"] = $val;
         return $this;
     }
     
@@ -254,134 +677,6 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     public function setMinimumWipePatchVersion($val)
     {
         $this->_propDict["minimumWipePatchVersion"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the allowedAndroidDeviceManufacturers
-    * Semicolon seperated list of device manufacturers allowed, as a string, for the managed app to work.
-    *
-    * @return string The allowedAndroidDeviceManufacturers
-    */
-    public function getAllowedAndroidDeviceManufacturers()
-    {
-        if (array_key_exists("allowedAndroidDeviceManufacturers", $this->_propDict)) {
-            return $this->_propDict["allowedAndroidDeviceManufacturers"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the allowedAndroidDeviceManufacturers
-    * Semicolon seperated list of device manufacturers allowed, as a string, for the managed app to work.
-    *
-    * @param string $val The allowedAndroidDeviceManufacturers
-    *
-    * @return AndroidManagedAppProtection
-    */
-    public function setAllowedAndroidDeviceManufacturers($val)
-    {
-        $this->_propDict["allowedAndroidDeviceManufacturers"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the appActionIfAndroidDeviceManufacturerNotAllowed
-    * Defines a managed app behavior, either block or wipe, if the specified device manufacturer is not allowed.
-    *
-    * @return ManagedAppRemediationAction The appActionIfAndroidDeviceManufacturerNotAllowed
-    */
-    public function getAppActionIfAndroidDeviceManufacturerNotAllowed()
-    {
-        if (array_key_exists("appActionIfAndroidDeviceManufacturerNotAllowed", $this->_propDict)) {
-            if (is_a($this->_propDict["appActionIfAndroidDeviceManufacturerNotAllowed"], "Beta\Microsoft\Graph\Model\ManagedAppRemediationAction")) {
-                return $this->_propDict["appActionIfAndroidDeviceManufacturerNotAllowed"];
-            } else {
-                $this->_propDict["appActionIfAndroidDeviceManufacturerNotAllowed"] = new ManagedAppRemediationAction($this->_propDict["appActionIfAndroidDeviceManufacturerNotAllowed"]);
-                return $this->_propDict["appActionIfAndroidDeviceManufacturerNotAllowed"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the appActionIfAndroidDeviceManufacturerNotAllowed
-    * Defines a managed app behavior, either block or wipe, if the specified device manufacturer is not allowed.
-    *
-    * @param ManagedAppRemediationAction $val The appActionIfAndroidDeviceManufacturerNotAllowed
-    *
-    * @return AndroidManagedAppProtection
-    */
-    public function setAppActionIfAndroidDeviceManufacturerNotAllowed($val)
-    {
-        $this->_propDict["appActionIfAndroidDeviceManufacturerNotAllowed"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the requiredAndroidSafetyNetDeviceAttestationType
-    * Defines the Android SafetyNet Device Attestation requirement for a managed app to work.
-    *
-    * @return AndroidManagedAppSafetyNetDeviceAttestationType The requiredAndroidSafetyNetDeviceAttestationType
-    */
-    public function getRequiredAndroidSafetyNetDeviceAttestationType()
-    {
-        if (array_key_exists("requiredAndroidSafetyNetDeviceAttestationType", $this->_propDict)) {
-            if (is_a($this->_propDict["requiredAndroidSafetyNetDeviceAttestationType"], "Beta\Microsoft\Graph\Model\AndroidManagedAppSafetyNetDeviceAttestationType")) {
-                return $this->_propDict["requiredAndroidSafetyNetDeviceAttestationType"];
-            } else {
-                $this->_propDict["requiredAndroidSafetyNetDeviceAttestationType"] = new AndroidManagedAppSafetyNetDeviceAttestationType($this->_propDict["requiredAndroidSafetyNetDeviceAttestationType"]);
-                return $this->_propDict["requiredAndroidSafetyNetDeviceAttestationType"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the requiredAndroidSafetyNetDeviceAttestationType
-    * Defines the Android SafetyNet Device Attestation requirement for a managed app to work.
-    *
-    * @param AndroidManagedAppSafetyNetDeviceAttestationType $val The requiredAndroidSafetyNetDeviceAttestationType
-    *
-    * @return AndroidManagedAppProtection
-    */
-    public function setRequiredAndroidSafetyNetDeviceAttestationType($val)
-    {
-        $this->_propDict["requiredAndroidSafetyNetDeviceAttestationType"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the appActionIfAndroidSafetyNetDeviceAttestationFailed
-    * Defines a managed app behavior, either warn or block, if the specified Android SafetyNet Attestation requirment fails.
-    *
-    * @return ManagedAppRemediationAction The appActionIfAndroidSafetyNetDeviceAttestationFailed
-    */
-    public function getAppActionIfAndroidSafetyNetDeviceAttestationFailed()
-    {
-        if (array_key_exists("appActionIfAndroidSafetyNetDeviceAttestationFailed", $this->_propDict)) {
-            if (is_a($this->_propDict["appActionIfAndroidSafetyNetDeviceAttestationFailed"], "Beta\Microsoft\Graph\Model\ManagedAppRemediationAction")) {
-                return $this->_propDict["appActionIfAndroidSafetyNetDeviceAttestationFailed"];
-            } else {
-                $this->_propDict["appActionIfAndroidSafetyNetDeviceAttestationFailed"] = new ManagedAppRemediationAction($this->_propDict["appActionIfAndroidSafetyNetDeviceAttestationFailed"]);
-                return $this->_propDict["appActionIfAndroidSafetyNetDeviceAttestationFailed"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the appActionIfAndroidSafetyNetDeviceAttestationFailed
-    * Defines a managed app behavior, either warn or block, if the specified Android SafetyNet Attestation requirment fails.
-    *
-    * @param ManagedAppRemediationAction $val The appActionIfAndroidSafetyNetDeviceAttestationFailed
-    *
-    * @return AndroidManagedAppProtection
-    */
-    public function setAppActionIfAndroidSafetyNetDeviceAttestationFailed($val)
-    {
-        $this->_propDict["appActionIfAndroidSafetyNetDeviceAttestationFailed"] = $val;
         return $this;
     }
     
@@ -419,359 +714,64 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     }
     
     /**
-    * Gets the appActionIfAndroidSafetyNetAppsVerificationFailed
-    * Defines a managed app behavior, either warn or block, if the specified Android App Verification requirment fails.
+    * Gets the requiredAndroidSafetyNetDeviceAttestationType
+    * Defines the Android SafetyNet Device Attestation requirement for a managed app to work.
     *
-    * @return ManagedAppRemediationAction The appActionIfAndroidSafetyNetAppsVerificationFailed
+    * @return AndroidManagedAppSafetyNetDeviceAttestationType The requiredAndroidSafetyNetDeviceAttestationType
     */
-    public function getAppActionIfAndroidSafetyNetAppsVerificationFailed()
+    public function getRequiredAndroidSafetyNetDeviceAttestationType()
     {
-        if (array_key_exists("appActionIfAndroidSafetyNetAppsVerificationFailed", $this->_propDict)) {
-            if (is_a($this->_propDict["appActionIfAndroidSafetyNetAppsVerificationFailed"], "Beta\Microsoft\Graph\Model\ManagedAppRemediationAction")) {
-                return $this->_propDict["appActionIfAndroidSafetyNetAppsVerificationFailed"];
+        if (array_key_exists("requiredAndroidSafetyNetDeviceAttestationType", $this->_propDict)) {
+            if (is_a($this->_propDict["requiredAndroidSafetyNetDeviceAttestationType"], "Beta\Microsoft\Graph\Model\AndroidManagedAppSafetyNetDeviceAttestationType")) {
+                return $this->_propDict["requiredAndroidSafetyNetDeviceAttestationType"];
             } else {
-                $this->_propDict["appActionIfAndroidSafetyNetAppsVerificationFailed"] = new ManagedAppRemediationAction($this->_propDict["appActionIfAndroidSafetyNetAppsVerificationFailed"]);
-                return $this->_propDict["appActionIfAndroidSafetyNetAppsVerificationFailed"];
+                $this->_propDict["requiredAndroidSafetyNetDeviceAttestationType"] = new AndroidManagedAppSafetyNetDeviceAttestationType($this->_propDict["requiredAndroidSafetyNetDeviceAttestationType"]);
+                return $this->_propDict["requiredAndroidSafetyNetDeviceAttestationType"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the appActionIfAndroidSafetyNetAppsVerificationFailed
-    * Defines a managed app behavior, either warn or block, if the specified Android App Verification requirment fails.
+    * Sets the requiredAndroidSafetyNetDeviceAttestationType
+    * Defines the Android SafetyNet Device Attestation requirement for a managed app to work.
     *
-    * @param ManagedAppRemediationAction $val The appActionIfAndroidSafetyNetAppsVerificationFailed
+    * @param AndroidManagedAppSafetyNetDeviceAttestationType $val The requiredAndroidSafetyNetDeviceAttestationType
     *
     * @return AndroidManagedAppProtection
     */
-    public function setAppActionIfAndroidSafetyNetAppsVerificationFailed($val)
+    public function setRequiredAndroidSafetyNetDeviceAttestationType($val)
     {
-        $this->_propDict["appActionIfAndroidSafetyNetAppsVerificationFailed"] = $val;
+        $this->_propDict["requiredAndroidSafetyNetDeviceAttestationType"] = $val;
         return $this;
     }
     
     /**
-    * Gets the customBrowserPackageId
-    * Unique identifier of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+    * Gets the screenCaptureBlocked
+    * Indicates whether a managed user can take screen captures of managed apps
     *
-    * @return string The customBrowserPackageId
+    * @return bool The screenCaptureBlocked
     */
-    public function getCustomBrowserPackageId()
+    public function getScreenCaptureBlocked()
     {
-        if (array_key_exists("customBrowserPackageId", $this->_propDict)) {
-            return $this->_propDict["customBrowserPackageId"];
+        if (array_key_exists("screenCaptureBlocked", $this->_propDict)) {
+            return $this->_propDict["screenCaptureBlocked"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the customBrowserPackageId
-    * Unique identifier of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+    * Sets the screenCaptureBlocked
+    * Indicates whether a managed user can take screen captures of managed apps
     *
-    * @param string $val The customBrowserPackageId
-    *
-    * @return AndroidManagedAppProtection
-    */
-    public function setCustomBrowserPackageId($val)
-    {
-        $this->_propDict["customBrowserPackageId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the customBrowserDisplayName
-    * Friendly name of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
-    *
-    * @return string The customBrowserDisplayName
-    */
-    public function getCustomBrowserDisplayName()
-    {
-        if (array_key_exists("customBrowserDisplayName", $this->_propDict)) {
-            return $this->_propDict["customBrowserDisplayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the customBrowserDisplayName
-    * Friendly name of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
-    *
-    * @param string $val The customBrowserDisplayName
+    * @param bool $val The screenCaptureBlocked
     *
     * @return AndroidManagedAppProtection
     */
-    public function setCustomBrowserDisplayName($val)
+    public function setScreenCaptureBlocked($val)
     {
-        $this->_propDict["customBrowserDisplayName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the minimumRequiredCompanyPortalVersion
-    * Minimum version of the Company portal that must be installed on the device or app access will be blocked
-    *
-    * @return string The minimumRequiredCompanyPortalVersion
-    */
-    public function getMinimumRequiredCompanyPortalVersion()
-    {
-        if (array_key_exists("minimumRequiredCompanyPortalVersion", $this->_propDict)) {
-            return $this->_propDict["minimumRequiredCompanyPortalVersion"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the minimumRequiredCompanyPortalVersion
-    * Minimum version of the Company portal that must be installed on the device or app access will be blocked
-    *
-    * @param string $val The minimumRequiredCompanyPortalVersion
-    *
-    * @return AndroidManagedAppProtection
-    */
-    public function setMinimumRequiredCompanyPortalVersion($val)
-    {
-        $this->_propDict["minimumRequiredCompanyPortalVersion"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the minimumWarningCompanyPortalVersion
-    * Minimum version of the Company portal that must be installed on the device or the user will receive a warning
-    *
-    * @return string The minimumWarningCompanyPortalVersion
-    */
-    public function getMinimumWarningCompanyPortalVersion()
-    {
-        if (array_key_exists("minimumWarningCompanyPortalVersion", $this->_propDict)) {
-            return $this->_propDict["minimumWarningCompanyPortalVersion"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the minimumWarningCompanyPortalVersion
-    * Minimum version of the Company portal that must be installed on the device or the user will receive a warning
-    *
-    * @param string $val The minimumWarningCompanyPortalVersion
-    *
-    * @return AndroidManagedAppProtection
-    */
-    public function setMinimumWarningCompanyPortalVersion($val)
-    {
-        $this->_propDict["minimumWarningCompanyPortalVersion"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the minimumWipeCompanyPortalVersion
-    * Minimum version of the Company portal that must be installed on the device or the company data on the app will be wiped
-    *
-    * @return string The minimumWipeCompanyPortalVersion
-    */
-    public function getMinimumWipeCompanyPortalVersion()
-    {
-        if (array_key_exists("minimumWipeCompanyPortalVersion", $this->_propDict)) {
-            return $this->_propDict["minimumWipeCompanyPortalVersion"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the minimumWipeCompanyPortalVersion
-    * Minimum version of the Company portal that must be installed on the device or the company data on the app will be wiped
-    *
-    * @param string $val The minimumWipeCompanyPortalVersion
-    *
-    * @return AndroidManagedAppProtection
-    */
-    public function setMinimumWipeCompanyPortalVersion($val)
-    {
-        $this->_propDict["minimumWipeCompanyPortalVersion"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the keyboardsRestricted
-    * Indicates if keyboard restriction is enabled. If enabled list of approved keyboards must be provided as well.
-    *
-    * @return bool The keyboardsRestricted
-    */
-    public function getKeyboardsRestricted()
-    {
-        if (array_key_exists("keyboardsRestricted", $this->_propDict)) {
-            return $this->_propDict["keyboardsRestricted"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the keyboardsRestricted
-    * Indicates if keyboard restriction is enabled. If enabled list of approved keyboards must be provided as well.
-    *
-    * @param bool $val The keyboardsRestricted
-    *
-    * @return AndroidManagedAppProtection
-    */
-    public function setKeyboardsRestricted($val)
-    {
-        $this->_propDict["keyboardsRestricted"] = boolval($val);
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the approvedKeyboards
-    * If Keyboard Restriction is enabled, only keyboards in this approved list will be allowed. A key should be Android package id for a keyboard and value should be a friendly name
-     *
-     * @return array The approvedKeyboards
-     */
-    public function getApprovedKeyboards()
-    {
-        if (array_key_exists("approvedKeyboards", $this->_propDict)) {
-           return $this->_propDict["approvedKeyboards"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the approvedKeyboards
-    * If Keyboard Restriction is enabled, only keyboards in this approved list will be allowed. A key should be Android package id for a keyboard and value should be a friendly name
-    *
-    * @param KeyValuePair $val The approvedKeyboards
-    *
-    * @return AndroidManagedAppProtection
-    */
-    public function setApprovedKeyboards($val)
-    {
-		$this->_propDict["approvedKeyboards"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the allowedAndroidDeviceModels
-    * List of device models allowed, as a string, for the managed app to work.
-    *
-    * @return string The allowedAndroidDeviceModels
-    */
-    public function getAllowedAndroidDeviceModels()
-    {
-        if (array_key_exists("allowedAndroidDeviceModels", $this->_propDict)) {
-            return $this->_propDict["allowedAndroidDeviceModels"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the allowedAndroidDeviceModels
-    * List of device models allowed, as a string, for the managed app to work.
-    *
-    * @param string $val The allowedAndroidDeviceModels
-    *
-    * @return AndroidManagedAppProtection
-    */
-    public function setAllowedAndroidDeviceModels($val)
-    {
-        $this->_propDict["allowedAndroidDeviceModels"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the appActionIfAndroidDeviceModelNotAllowed
-    * Defines a managed app behavior, either block or wipe, if the specified device model is not allowed.
-    *
-    * @return ManagedAppRemediationAction The appActionIfAndroidDeviceModelNotAllowed
-    */
-    public function getAppActionIfAndroidDeviceModelNotAllowed()
-    {
-        if (array_key_exists("appActionIfAndroidDeviceModelNotAllowed", $this->_propDict)) {
-            if (is_a($this->_propDict["appActionIfAndroidDeviceModelNotAllowed"], "Beta\Microsoft\Graph\Model\ManagedAppRemediationAction")) {
-                return $this->_propDict["appActionIfAndroidDeviceModelNotAllowed"];
-            } else {
-                $this->_propDict["appActionIfAndroidDeviceModelNotAllowed"] = new ManagedAppRemediationAction($this->_propDict["appActionIfAndroidDeviceModelNotAllowed"]);
-                return $this->_propDict["appActionIfAndroidDeviceModelNotAllowed"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the appActionIfAndroidDeviceModelNotAllowed
-    * Defines a managed app behavior, either block or wipe, if the specified device model is not allowed.
-    *
-    * @param ManagedAppRemediationAction $val The appActionIfAndroidDeviceModelNotAllowed
-    *
-    * @return AndroidManagedAppProtection
-    */
-    public function setAppActionIfAndroidDeviceModelNotAllowed($val)
-    {
-        $this->_propDict["appActionIfAndroidDeviceModelNotAllowed"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the customDialerAppPackageId
-    * PackageId of a custom dialer app to click-to-open a phone number on Android.
-    *
-    * @return string The customDialerAppPackageId
-    */
-    public function getCustomDialerAppPackageId()
-    {
-        if (array_key_exists("customDialerAppPackageId", $this->_propDict)) {
-            return $this->_propDict["customDialerAppPackageId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the customDialerAppPackageId
-    * PackageId of a custom dialer app to click-to-open a phone number on Android.
-    *
-    * @param string $val The customDialerAppPackageId
-    *
-    * @return AndroidManagedAppProtection
-    */
-    public function setCustomDialerAppPackageId($val)
-    {
-        $this->_propDict["customDialerAppPackageId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the customDialerAppDisplayName
-    * Friendly name of a custom dialer app to click-to-open a phone number on Android.
-    *
-    * @return string The customDialerAppDisplayName
-    */
-    public function getCustomDialerAppDisplayName()
-    {
-        if (array_key_exists("customDialerAppDisplayName", $this->_propDict)) {
-            return $this->_propDict["customDialerAppDisplayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the customDialerAppDisplayName
-    * Friendly name of a custom dialer app to click-to-open a phone number on Android.
-    *
-    * @param string $val The customDialerAppDisplayName
-    *
-    * @return AndroidManagedAppProtection
-    */
-    public function setCustomDialerAppDisplayName($val)
-    {
-        $this->_propDict["customDialerAppDisplayName"] = $val;
+        $this->_propDict["screenCaptureBlocked"] = boolval($val);
         return $this;
     }
     

@@ -24,61 +24,33 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class ManagementConditionStatement extends Entity
 {
-    /**
-    * Gets the displayName
-    * The admin defined name of the management condition statement.
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
+
+     /** 
+     * Gets the applicablePlatforms
+    * This is calculated from looking the management conditions associated to the management condition statement and finding the intersection of applicable platforms.
+     *
+     * @return array The applicablePlatforms
+     */
+    public function getApplicablePlatforms()
     {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
+        if (array_key_exists("applicablePlatforms", $this->_propDict)) {
+           return $this->_propDict["applicablePlatforms"];
         } else {
             return null;
         }
     }
     
-    /**
-    * Sets the displayName
-    * The admin defined name of the management condition statement.
+    /** 
+    * Sets the applicablePlatforms
+    * This is calculated from looking the management conditions associated to the management condition statement and finding the intersection of applicable platforms.
     *
-    * @param string $val The displayName
-    *
-    * @return ManagementConditionStatement
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the description
-    * The admin defined description of the management condition statement.
-    *
-    * @return string The description
-    */
-    public function getDescription()
-    {
-        if (array_key_exists("description", $this->_propDict)) {
-            return $this->_propDict["description"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the description
-    * The admin defined description of the management condition statement.
-    *
-    * @param string $val The description
+    * @param DevicePlatformType $val The applicablePlatforms
     *
     * @return ManagementConditionStatement
     */
-    public function setDescription($val)
+    public function setApplicablePlatforms($val)
     {
-        $this->_propDict["description"] = $val;
+		$this->_propDict["applicablePlatforms"] = $val;
         return $this;
     }
     
@@ -116,35 +88,89 @@ class ManagementConditionStatement extends Entity
     }
     
     /**
-    * Gets the modifiedDateTime
-    * The time the management condition statement was last modified. Updated service side.
+    * Gets the description
+    * The admin defined description of the management condition statement.
     *
-    * @return \DateTime The modifiedDateTime
+    * @return string The description
     */
-    public function getModifiedDateTime()
+    public function getDescription()
     {
-        if (array_key_exists("modifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["modifiedDateTime"], "\DateTime")) {
-                return $this->_propDict["modifiedDateTime"];
-            } else {
-                $this->_propDict["modifiedDateTime"] = new \DateTime($this->_propDict["modifiedDateTime"]);
-                return $this->_propDict["modifiedDateTime"];
-            }
+        if (array_key_exists("description", $this->_propDict)) {
+            return $this->_propDict["description"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the modifiedDateTime
-    * The time the management condition statement was last modified. Updated service side.
+    * Sets the description
+    * The admin defined description of the management condition statement.
     *
-    * @param \DateTime $val The modifiedDateTime
+    * @param string $val The description
     *
     * @return ManagementConditionStatement
     */
-    public function setModifiedDateTime($val)
+    public function setDescription($val)
     {
-        $this->_propDict["modifiedDateTime"] = $val;
+        $this->_propDict["description"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the displayName
+    * The admin defined name of the management condition statement.
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the displayName
+    * The admin defined name of the management condition statement.
+    *
+    * @param string $val The displayName
+    *
+    * @return ManagementConditionStatement
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the eTag
+    * ETag of the management condition statement. Updated service side.
+    *
+    * @return string The eTag
+    */
+    public function getETag()
+    {
+        if (array_key_exists("eTag", $this->_propDict)) {
+            return $this->_propDict["eTag"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the eTag
+    * ETag of the management condition statement. Updated service side.
+    *
+    * @param string $val The eTag
+    *
+    * @return ManagementConditionStatement
+    */
+    public function setETag($val)
+    {
+        $this->_propDict["eTag"] = $val;
         return $this;
     }
     
@@ -182,61 +208,35 @@ class ManagementConditionStatement extends Entity
     }
     
     /**
-    * Gets the eTag
-    * ETag of the management condition statement. Updated service side.
+    * Gets the modifiedDateTime
+    * The time the management condition statement was last modified. Updated service side.
     *
-    * @return string The eTag
+    * @return \DateTime The modifiedDateTime
     */
-    public function getETag()
+    public function getModifiedDateTime()
     {
-        if (array_key_exists("eTag", $this->_propDict)) {
-            return $this->_propDict["eTag"];
-        } else {
-            return null;
+        if (array_key_exists("modifiedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["modifiedDateTime"], "\DateTime")) {
+                return $this->_propDict["modifiedDateTime"];
+            } else {
+                $this->_propDict["modifiedDateTime"] = new \DateTime($this->_propDict["modifiedDateTime"]);
+                return $this->_propDict["modifiedDateTime"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the eTag
-    * ETag of the management condition statement. Updated service side.
+    * Sets the modifiedDateTime
+    * The time the management condition statement was last modified. Updated service side.
     *
-    * @param string $val The eTag
-    *
-    * @return ManagementConditionStatement
-    */
-    public function setETag($val)
-    {
-        $this->_propDict["eTag"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the applicablePlatforms
-    * This is calculated from looking the management conditions associated to the management condition statement and finding the intersection of applicable platforms.
-     *
-     * @return array The applicablePlatforms
-     */
-    public function getApplicablePlatforms()
-    {
-        if (array_key_exists("applicablePlatforms", $this->_propDict)) {
-           return $this->_propDict["applicablePlatforms"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the applicablePlatforms
-    * This is calculated from looking the management conditions associated to the management condition statement and finding the intersection of applicable platforms.
-    *
-    * @param DevicePlatformType $val The applicablePlatforms
+    * @param \DateTime $val The modifiedDateTime
     *
     * @return ManagementConditionStatement
     */
-    public function setApplicablePlatforms($val)
+    public function setModifiedDateTime($val)
     {
-		$this->_propDict["applicablePlatforms"] = $val;
+        $this->_propDict["modifiedDateTime"] = $val;
         return $this;
     }
     

@@ -23,91 +23,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class PhysicalAddress extends Entity
 {
-
-    /**
-    * Gets the type
-    *
-    * @return PhysicalAddressType The type
-    */
-    public function getType()
-    {
-        if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "Beta\Microsoft\Graph\Model\PhysicalAddressType")) {
-                return $this->_propDict["type"];
-            } else {
-                $this->_propDict["type"] = new PhysicalAddressType($this->_propDict["type"]);
-                return $this->_propDict["type"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the type
-    *
-    * @param PhysicalAddressType $val The value to assign to the type
-    *
-    * @return PhysicalAddress The PhysicalAddress
-    */
-    public function setType($val)
-    {
-        $this->_propDict["type"] = $val;
-         return $this;
-    }
-    /**
-    * Gets the postOfficeBox
-    *
-    * @return string The postOfficeBox
-    */
-    public function getPostOfficeBox()
-    {
-        if (array_key_exists("postOfficeBox", $this->_propDict)) {
-            return $this->_propDict["postOfficeBox"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the postOfficeBox
-    *
-    * @param string $val The value of the postOfficeBox
-    *
-    * @return PhysicalAddress
-    */
-    public function setPostOfficeBox($val)
-    {
-        $this->_propDict["postOfficeBox"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the street
-    * The street.
-    *
-    * @return string The street
-    */
-    public function getStreet()
-    {
-        if (array_key_exists("street", $this->_propDict)) {
-            return $this->_propDict["street"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the street
-    * The street.
-    *
-    * @param string $val The value of the street
-    *
-    * @return PhysicalAddress
-    */
-    public function setStreet($val)
-    {
-        $this->_propDict["street"] = $val;
-        return $this;
-    }
     /**
     * Gets the city
     * The city.
@@ -134,34 +49,6 @@ class PhysicalAddress extends Entity
     public function setCity($val)
     {
         $this->_propDict["city"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the state
-    * The state.
-    *
-    * @return string The state
-    */
-    public function getState()
-    {
-        if (array_key_exists("state", $this->_propDict)) {
-            return $this->_propDict["state"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the state
-    * The state.
-    *
-    * @param string $val The value of the state
-    *
-    * @return PhysicalAddress
-    */
-    public function setState($val)
-    {
-        $this->_propDict["state"] = $val;
         return $this;
     }
     /**
@@ -219,5 +106,118 @@ class PhysicalAddress extends Entity
     {
         $this->_propDict["postalCode"] = $val;
         return $this;
+    }
+    /**
+    * Gets the postOfficeBox
+    *
+    * @return string The postOfficeBox
+    */
+    public function getPostOfficeBox()
+    {
+        if (array_key_exists("postOfficeBox", $this->_propDict)) {
+            return $this->_propDict["postOfficeBox"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the postOfficeBox
+    *
+    * @param string $val The value of the postOfficeBox
+    *
+    * @return PhysicalAddress
+    */
+    public function setPostOfficeBox($val)
+    {
+        $this->_propDict["postOfficeBox"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the state
+    * The state.
+    *
+    * @return string The state
+    */
+    public function getState()
+    {
+        if (array_key_exists("state", $this->_propDict)) {
+            return $this->_propDict["state"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the state
+    * The state.
+    *
+    * @param string $val The value of the state
+    *
+    * @return PhysicalAddress
+    */
+    public function setState($val)
+    {
+        $this->_propDict["state"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the street
+    * The street.
+    *
+    * @return string The street
+    */
+    public function getStreet()
+    {
+        if (array_key_exists("street", $this->_propDict)) {
+            return $this->_propDict["street"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the street
+    * The street.
+    *
+    * @param string $val The value of the street
+    *
+    * @return PhysicalAddress
+    */
+    public function setStreet($val)
+    {
+        $this->_propDict["street"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the type
+    *
+    * @return PhysicalAddressType The type
+    */
+    public function getType()
+    {
+        if (array_key_exists("type", $this->_propDict)) {
+            if (is_a($this->_propDict["type"], "Beta\Microsoft\Graph\Model\PhysicalAddressType")) {
+                return $this->_propDict["type"];
+            } else {
+                $this->_propDict["type"] = new PhysicalAddressType($this->_propDict["type"]);
+                return $this->_propDict["type"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the type
+    *
+    * @param PhysicalAddressType $val The value to assign to the type
+    *
+    * @return PhysicalAddress The PhysicalAddress
+    */
+    public function setType($val)
+    {
+        $this->_propDict["type"] = $val;
+         return $this;
     }
 }

@@ -25,35 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class DeviceManagementIntentDeviceSettingStateSummary extends Entity
 {
     /**
-    * Gets the settingName
-    * Name of a setting
-    *
-    * @return string The settingName
-    */
-    public function getSettingName()
-    {
-        if (array_key_exists("settingName", $this->_propDict)) {
-            return $this->_propDict["settingName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the settingName
-    * Name of a setting
-    *
-    * @param string $val The settingName
-    *
-    * @return DeviceManagementIntentDeviceSettingStateSummary
-    */
-    public function setSettingName($val)
-    {
-        $this->_propDict["settingName"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the compliantCount
     * Number of compliant devices
     *
@@ -224,6 +195,35 @@ class DeviceManagementIntentDeviceSettingStateSummary extends Entity
     public function setRemediatedCount($val)
     {
         $this->_propDict["remediatedCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the settingName
+    * Name of a setting
+    *
+    * @return string The settingName
+    */
+    public function getSettingName()
+    {
+        if (array_key_exists("settingName", $this->_propDict)) {
+            return $this->_propDict["settingName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the settingName
+    * Name of a setting
+    *
+    * @param string $val The settingName
+    *
+    * @return DeviceManagementIntentDeviceSettingStateSummary
+    */
+    public function setSettingName($val)
+    {
+        $this->_propDict["settingName"] = $val;
         return $this;
     }
     

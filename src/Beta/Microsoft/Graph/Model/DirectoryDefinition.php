@@ -25,37 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class DirectoryDefinition extends Entity
 {
     /**
-    * Gets the discoveryDateTime
-    *
-    * @return \DateTime The discoveryDateTime
-    */
-    public function getDiscoveryDateTime()
-    {
-        if (array_key_exists("discoveryDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["discoveryDateTime"], "\DateTime")) {
-                return $this->_propDict["discoveryDateTime"];
-            } else {
-                $this->_propDict["discoveryDateTime"] = new \DateTime($this->_propDict["discoveryDateTime"]);
-                return $this->_propDict["discoveryDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the discoveryDateTime
-    *
-    * @param \DateTime $val The discoveryDateTime
-    *
-    * @return DirectoryDefinition
-    */
-    public function setDiscoveryDateTime($val)
-    {
-        $this->_propDict["discoveryDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the discoverabilities
     *
     * @return DirectoryDefinitionDiscoverabilities The discoverabilities
@@ -83,6 +52,37 @@ class DirectoryDefinition extends Entity
     public function setDiscoverabilities($val)
     {
         $this->_propDict["discoverabilities"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the discoveryDateTime
+    *
+    * @return \DateTime The discoveryDateTime
+    */
+    public function getDiscoveryDateTime()
+    {
+        if (array_key_exists("discoveryDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["discoveryDateTime"], "\DateTime")) {
+                return $this->_propDict["discoveryDateTime"];
+            } else {
+                $this->_propDict["discoveryDateTime"] = new \DateTime($this->_propDict["discoveryDateTime"]);
+                return $this->_propDict["discoveryDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the discoveryDateTime
+    *
+    * @param \DateTime $val The discoveryDateTime
+    *
+    * @return DirectoryDefinition
+    */
+    public function setDiscoveryDateTime($val)
+    {
+        $this->_propDict["discoveryDateTime"] = $val;
         return $this;
     }
     

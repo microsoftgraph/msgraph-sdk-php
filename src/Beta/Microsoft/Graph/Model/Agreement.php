@@ -52,6 +52,60 @@ class Agreement extends Entity
     }
     
     /**
+    * Gets the isPerDeviceAcceptanceRequired
+    *
+    * @return bool The isPerDeviceAcceptanceRequired
+    */
+    public function getIsPerDeviceAcceptanceRequired()
+    {
+        if (array_key_exists("isPerDeviceAcceptanceRequired", $this->_propDict)) {
+            return $this->_propDict["isPerDeviceAcceptanceRequired"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isPerDeviceAcceptanceRequired
+    *
+    * @param bool $val The isPerDeviceAcceptanceRequired
+    *
+    * @return Agreement
+    */
+    public function setIsPerDeviceAcceptanceRequired($val)
+    {
+        $this->_propDict["isPerDeviceAcceptanceRequired"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the isViewingBeforeAcceptanceRequired
+    *
+    * @return bool The isViewingBeforeAcceptanceRequired
+    */
+    public function getIsViewingBeforeAcceptanceRequired()
+    {
+        if (array_key_exists("isViewingBeforeAcceptanceRequired", $this->_propDict)) {
+            return $this->_propDict["isViewingBeforeAcceptanceRequired"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isViewingBeforeAcceptanceRequired
+    *
+    * @param bool $val The isViewingBeforeAcceptanceRequired
+    *
+    * @return Agreement
+    */
+    public function setIsViewingBeforeAcceptanceRequired($val)
+    {
+        $this->_propDict["isViewingBeforeAcceptanceRequired"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the termsExpiration
     *
     * @return TermsExpiration The termsExpiration
@@ -113,57 +167,31 @@ class Agreement extends Entity
         return $this;
     }
     
-    /**
-    * Gets the isViewingBeforeAcceptanceRequired
-    *
-    * @return bool The isViewingBeforeAcceptanceRequired
-    */
-    public function getIsViewingBeforeAcceptanceRequired()
+
+     /** 
+     * Gets the acceptances
+     *
+     * @return array The acceptances
+     */
+    public function getAcceptances()
     {
-        if (array_key_exists("isViewingBeforeAcceptanceRequired", $this->_propDict)) {
-            return $this->_propDict["isViewingBeforeAcceptanceRequired"];
+        if (array_key_exists("acceptances", $this->_propDict)) {
+           return $this->_propDict["acceptances"];
         } else {
             return null;
         }
     }
     
-    /**
-    * Sets the isViewingBeforeAcceptanceRequired
+    /** 
+    * Sets the acceptances
     *
-    * @param bool $val The isViewingBeforeAcceptanceRequired
-    *
-    * @return Agreement
-    */
-    public function setIsViewingBeforeAcceptanceRequired($val)
-    {
-        $this->_propDict["isViewingBeforeAcceptanceRequired"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the isPerDeviceAcceptanceRequired
-    *
-    * @return bool The isPerDeviceAcceptanceRequired
-    */
-    public function getIsPerDeviceAcceptanceRequired()
-    {
-        if (array_key_exists("isPerDeviceAcceptanceRequired", $this->_propDict)) {
-            return $this->_propDict["isPerDeviceAcceptanceRequired"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the isPerDeviceAcceptanceRequired
-    *
-    * @param bool $val The isPerDeviceAcceptanceRequired
+    * @param AgreementAcceptance $val The acceptances
     *
     * @return Agreement
     */
-    public function setIsPerDeviceAcceptanceRequired($val)
+    public function setAcceptances($val)
     {
-        $this->_propDict["isPerDeviceAcceptanceRequired"] = boolval($val);
+		$this->_propDict["acceptances"] = $val;
         return $this;
     }
     
@@ -223,34 +251,6 @@ class Agreement extends Entity
     public function setFiles($val)
     {
 		$this->_propDict["files"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the acceptances
-     *
-     * @return array The acceptances
-     */
-    public function getAcceptances()
-    {
-        if (array_key_exists("acceptances", $this->_propDict)) {
-           return $this->_propDict["acceptances"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the acceptances
-    *
-    * @param AgreementAcceptance $val The acceptances
-    *
-    * @return Agreement
-    */
-    public function setAcceptances($val)
-    {
-		$this->_propDict["acceptances"] = $val;
         return $this;
     }
     

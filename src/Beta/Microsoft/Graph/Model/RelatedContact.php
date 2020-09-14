@@ -24,31 +24,31 @@ namespace Beta\Microsoft\Graph\Model;
 class RelatedContact extends Entity
 {
     /**
-    * Gets the id
-    * Identity of the contact within Azure Active Directory.
+    * Gets the accessConsent
+    * Indicates whether the user has been consented to access student data.
     *
-    * @return string The id
+    * @return bool The accessConsent
     */
-    public function getId()
+    public function getAccessConsent()
     {
-        if (array_key_exists("id", $this->_propDict)) {
-            return $this->_propDict["id"];
+        if (array_key_exists("accessConsent", $this->_propDict)) {
+            return $this->_propDict["accessConsent"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the id
-    * Identity of the contact within Azure Active Directory.
+    * Sets the accessConsent
+    * Indicates whether the user has been consented to access student data.
     *
-    * @param string $val The value of the id
+    * @param bool $val The value of the accessConsent
     *
     * @return RelatedContact
     */
-    public function setId($val)
+    public function setAccessConsent($val)
     {
-        $this->_propDict["id"] = $val;
+        $this->_propDict["accessConsent"] = $val;
         return $this;
     }
     /**
@@ -105,6 +105,34 @@ class RelatedContact extends Entity
     public function setEmailAddress($val)
     {
         $this->_propDict["emailAddress"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the id
+    * Identity of the contact within Azure Active Directory.
+    *
+    * @return string The id
+    */
+    public function getId()
+    {
+        if (array_key_exists("id", $this->_propDict)) {
+            return $this->_propDict["id"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the id
+    * Identity of the contact within Azure Active Directory.
+    *
+    * @param string $val The value of the id
+    *
+    * @return RelatedContact
+    */
+    public function setId($val)
+    {
+        $this->_propDict["id"] = $val;
         return $this;
     }
     /**
@@ -167,33 +195,5 @@ class RelatedContact extends Entity
     {
         $this->_propDict["relationship"] = $val;
          return $this;
-    }
-    /**
-    * Gets the accessConsent
-    * Indicates whether the user has been consented to access student data.
-    *
-    * @return bool The accessConsent
-    */
-    public function getAccessConsent()
-    {
-        if (array_key_exists("accessConsent", $this->_propDict)) {
-            return $this->_propDict["accessConsent"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the accessConsent
-    * Indicates whether the user has been consented to access student data.
-    *
-    * @param bool $val The value of the accessConsent
-    *
-    * @return RelatedContact
-    */
-    public function setAccessConsent($val)
-    {
-        $this->_propDict["accessConsent"] = $val;
-        return $this;
     }
 }

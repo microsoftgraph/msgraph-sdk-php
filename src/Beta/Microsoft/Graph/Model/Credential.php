@@ -50,32 +50,6 @@ class Credential extends Entity
         return $this;
     }
     /**
-    * Gets the value
-    *
-    * @return string The value
-    */
-    public function getValue()
-    {
-        if (array_key_exists("value", $this->_propDict)) {
-            return $this->_propDict["value"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the value
-    *
-    * @param string $val The value of the value
-    *
-    * @return Credential
-    */
-    public function setValue($val)
-    {
-        $this->_propDict["value"] = $val;
-        return $this;
-    }
-    /**
     * Gets the type
     *
     * @return string The type
@@ -99,6 +73,32 @@ class Credential extends Entity
     public function setType($val)
     {
         $this->_propDict["type"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the value
+    *
+    * @return string The value
+    */
+    public function getValue()
+    {
+        if (array_key_exists("value", $this->_propDict)) {
+            return $this->_propDict["value"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the value
+    *
+    * @param string $val The value of the value
+    *
+    * @return Credential
+    */
+    public function setValue($val)
+    {
+        $this->_propDict["value"] = $val;
         return $this;
     }
 }

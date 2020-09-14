@@ -25,35 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class DeviceManagementTemplate extends Entity
 {
     /**
-    * Gets the displayName
-    * The template's display name
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the displayName
-    * The template's display name
-    *
-    * @param string $val The displayName
-    *
-    * @return DeviceManagementTemplate
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the description
     * The template's description
     *
@@ -83,60 +54,31 @@ class DeviceManagementTemplate extends Entity
     }
     
     /**
-    * Gets the versionInfo
-    * The template's version information
+    * Gets the displayName
+    * The template's display name
     *
-    * @return string The versionInfo
+    * @return string The displayName
     */
-    public function getVersionInfo()
+    public function getDisplayName()
     {
-        if (array_key_exists("versionInfo", $this->_propDict)) {
-            return $this->_propDict["versionInfo"];
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the versionInfo
-    * The template's version information
+    * Sets the displayName
+    * The template's display name
     *
-    * @param string $val The versionInfo
-    *
-    * @return DeviceManagementTemplate
-    */
-    public function setVersionInfo($val)
-    {
-        $this->_propDict["versionInfo"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the isDeprecated
-    * The template is deprecated or not. Intents cannot be created from a deprecated template.
-    *
-    * @return bool The isDeprecated
-    */
-    public function getIsDeprecated()
-    {
-        if (array_key_exists("isDeprecated", $this->_propDict)) {
-            return $this->_propDict["isDeprecated"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the isDeprecated
-    * The template is deprecated or not. Intents cannot be created from a deprecated template.
-    *
-    * @param bool $val The isDeprecated
+    * @param string $val The displayName
     *
     * @return DeviceManagementTemplate
     */
-    public function setIsDeprecated($val)
+    public function setDisplayName($val)
     {
-        $this->_propDict["isDeprecated"] = boolval($val);
+        $this->_propDict["displayName"] = $val;
         return $this;
     }
     
@@ -170,35 +112,31 @@ class DeviceManagementTemplate extends Entity
     }
     
     /**
-    * Gets the templateType
-    * The template's type.
+    * Gets the isDeprecated
+    * The template is deprecated or not. Intents cannot be created from a deprecated template.
     *
-    * @return DeviceManagementTemplateType The templateType
+    * @return bool The isDeprecated
     */
-    public function getTemplateType()
+    public function getIsDeprecated()
     {
-        if (array_key_exists("templateType", $this->_propDict)) {
-            if (is_a($this->_propDict["templateType"], "Beta\Microsoft\Graph\Model\DeviceManagementTemplateType")) {
-                return $this->_propDict["templateType"];
-            } else {
-                $this->_propDict["templateType"] = new DeviceManagementTemplateType($this->_propDict["templateType"]);
-                return $this->_propDict["templateType"];
-            }
+        if (array_key_exists("isDeprecated", $this->_propDict)) {
+            return $this->_propDict["isDeprecated"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the templateType
-    * The template's type.
+    * Sets the isDeprecated
+    * The template is deprecated or not. Intents cannot be created from a deprecated template.
     *
-    * @param DeviceManagementTemplateType $val The templateType
+    * @param bool $val The isDeprecated
     *
     * @return DeviceManagementTemplate
     */
-    public function setTemplateType($val)
+    public function setIsDeprecated($val)
     {
-        $this->_propDict["templateType"] = $val;
+        $this->_propDict["isDeprecated"] = boolval($val);
         return $this;
     }
     
@@ -236,6 +174,39 @@ class DeviceManagementTemplate extends Entity
     }
     
     /**
+    * Gets the publishedDateTime
+    * When the template was published
+    *
+    * @return \DateTime The publishedDateTime
+    */
+    public function getPublishedDateTime()
+    {
+        if (array_key_exists("publishedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["publishedDateTime"], "\DateTime")) {
+                return $this->_propDict["publishedDateTime"];
+            } else {
+                $this->_propDict["publishedDateTime"] = new \DateTime($this->_propDict["publishedDateTime"]);
+                return $this->_propDict["publishedDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the publishedDateTime
+    * When the template was published
+    *
+    * @param \DateTime $val The publishedDateTime
+    *
+    * @return DeviceManagementTemplate
+    */
+    public function setPublishedDateTime($val)
+    {
+        $this->_propDict["publishedDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the templateSubtype
     * The template's subtype.
     *
@@ -269,65 +240,64 @@ class DeviceManagementTemplate extends Entity
     }
     
     /**
-    * Gets the publishedDateTime
-    * When the template was published
+    * Gets the templateType
+    * The template's type.
     *
-    * @return \DateTime The publishedDateTime
+    * @return DeviceManagementTemplateType The templateType
     */
-    public function getPublishedDateTime()
+    public function getTemplateType()
     {
-        if (array_key_exists("publishedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["publishedDateTime"], "\DateTime")) {
-                return $this->_propDict["publishedDateTime"];
+        if (array_key_exists("templateType", $this->_propDict)) {
+            if (is_a($this->_propDict["templateType"], "Beta\Microsoft\Graph\Model\DeviceManagementTemplateType")) {
+                return $this->_propDict["templateType"];
             } else {
-                $this->_propDict["publishedDateTime"] = new \DateTime($this->_propDict["publishedDateTime"]);
-                return $this->_propDict["publishedDateTime"];
+                $this->_propDict["templateType"] = new DeviceManagementTemplateType($this->_propDict["templateType"]);
+                return $this->_propDict["templateType"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the publishedDateTime
-    * When the template was published
+    * Sets the templateType
+    * The template's type.
     *
-    * @param \DateTime $val The publishedDateTime
+    * @param DeviceManagementTemplateType $val The templateType
     *
     * @return DeviceManagementTemplate
     */
-    public function setPublishedDateTime($val)
+    public function setTemplateType($val)
     {
-        $this->_propDict["publishedDateTime"] = $val;
+        $this->_propDict["templateType"] = $val;
         return $this;
     }
     
-
-     /** 
-     * Gets the settings
-    * Collection of all settings this template has
-     *
-     * @return array The settings
-     */
-    public function getSettings()
+    /**
+    * Gets the versionInfo
+    * The template's version information
+    *
+    * @return string The versionInfo
+    */
+    public function getVersionInfo()
     {
-        if (array_key_exists("settings", $this->_propDict)) {
-           return $this->_propDict["settings"];
+        if (array_key_exists("versionInfo", $this->_propDict)) {
+            return $this->_propDict["versionInfo"];
         } else {
             return null;
         }
     }
     
-    /** 
-    * Sets the settings
-    * Collection of all settings this template has
+    /**
+    * Sets the versionInfo
+    * The template's version information
     *
-    * @param DeviceManagementSettingInstance $val The settings
+    * @param string $val The versionInfo
     *
     * @return DeviceManagementTemplate
     */
-    public function setSettings($val)
+    public function setVersionInfo($val)
     {
-		$this->_propDict["settings"] = $val;
+        $this->_propDict["versionInfo"] = $val;
         return $this;
     }
     
@@ -388,6 +358,36 @@ class DeviceManagementTemplate extends Entity
     public function setMigratableTo($val)
     {
 		$this->_propDict["migratableTo"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the settings
+    * Collection of all settings this template has
+     *
+     * @return array The settings
+     */
+    public function getSettings()
+    {
+        if (array_key_exists("settings", $this->_propDict)) {
+           return $this->_propDict["settings"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the settings
+    * Collection of all settings this template has
+    *
+    * @param DeviceManagementSettingInstance $val The settings
+    *
+    * @return DeviceManagementTemplate
+    */
+    public function setSettings($val)
+    {
+		$this->_propDict["settings"] = $val;
         return $this;
     }
     

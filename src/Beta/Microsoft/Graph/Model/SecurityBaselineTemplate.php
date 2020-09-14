@@ -24,36 +24,33 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class SecurityBaselineTemplate extends DeviceManagementTemplate
 {
-    /**
-    * Gets the deviceStateSummary
-    * The security baseline device state summary
-    *
-    * @return SecurityBaselineStateSummary The deviceStateSummary
-    */
-    public function getDeviceStateSummary()
+
+     /** 
+     * Gets the categoryDeviceStateSummaries
+    * The security baseline per category device state summary
+     *
+     * @return array The categoryDeviceStateSummaries
+     */
+    public function getCategoryDeviceStateSummaries()
     {
-        if (array_key_exists("deviceStateSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceStateSummary"], "Beta\Microsoft\Graph\Model\SecurityBaselineStateSummary")) {
-                return $this->_propDict["deviceStateSummary"];
-            } else {
-                $this->_propDict["deviceStateSummary"] = new SecurityBaselineStateSummary($this->_propDict["deviceStateSummary"]);
-                return $this->_propDict["deviceStateSummary"];
-            }
+        if (array_key_exists("categoryDeviceStateSummaries", $this->_propDict)) {
+           return $this->_propDict["categoryDeviceStateSummaries"];
+        } else {
+            return null;
         }
-        return null;
     }
     
-    /**
-    * Sets the deviceStateSummary
-    * The security baseline device state summary
+    /** 
+    * Sets the categoryDeviceStateSummaries
+    * The security baseline per category device state summary
     *
-    * @param SecurityBaselineStateSummary $val The deviceStateSummary
+    * @param SecurityBaselineCategoryStateSummary $val The categoryDeviceStateSummaries
     *
     * @return SecurityBaselineTemplate
     */
-    public function setDeviceStateSummary($val)
+    public function setCategoryDeviceStateSummaries($val)
     {
-        $this->_propDict["deviceStateSummary"] = $val;
+		$this->_propDict["categoryDeviceStateSummaries"] = $val;
         return $this;
     }
     
@@ -87,33 +84,36 @@ class SecurityBaselineTemplate extends DeviceManagementTemplate
         return $this;
     }
     
-
-     /** 
-     * Gets the categoryDeviceStateSummaries
-    * The security baseline per category device state summary
-     *
-     * @return array The categoryDeviceStateSummaries
-     */
-    public function getCategoryDeviceStateSummaries()
+    /**
+    * Gets the deviceStateSummary
+    * The security baseline device state summary
+    *
+    * @return SecurityBaselineStateSummary The deviceStateSummary
+    */
+    public function getDeviceStateSummary()
     {
-        if (array_key_exists("categoryDeviceStateSummaries", $this->_propDict)) {
-           return $this->_propDict["categoryDeviceStateSummaries"];
-        } else {
-            return null;
+        if (array_key_exists("deviceStateSummary", $this->_propDict)) {
+            if (is_a($this->_propDict["deviceStateSummary"], "Beta\Microsoft\Graph\Model\SecurityBaselineStateSummary")) {
+                return $this->_propDict["deviceStateSummary"];
+            } else {
+                $this->_propDict["deviceStateSummary"] = new SecurityBaselineStateSummary($this->_propDict["deviceStateSummary"]);
+                return $this->_propDict["deviceStateSummary"];
+            }
         }
+        return null;
     }
     
-    /** 
-    * Sets the categoryDeviceStateSummaries
-    * The security baseline per category device state summary
+    /**
+    * Sets the deviceStateSummary
+    * The security baseline device state summary
     *
-    * @param SecurityBaselineCategoryStateSummary $val The categoryDeviceStateSummaries
+    * @param SecurityBaselineStateSummary $val The deviceStateSummary
     *
     * @return SecurityBaselineTemplate
     */
-    public function setCategoryDeviceStateSummaries($val)
+    public function setDeviceStateSummary($val)
     {
-		$this->_propDict["categoryDeviceStateSummaries"] = $val;
+        $this->_propDict["deviceStateSummary"] = $val;
         return $this;
     }
     

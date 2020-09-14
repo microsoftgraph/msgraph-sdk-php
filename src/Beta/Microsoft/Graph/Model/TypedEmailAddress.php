@@ -23,6 +23,32 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class TypedEmailAddress extends EmailAddress
 {
+    /**
+    * Gets the otherLabel
+    *
+    * @return string The otherLabel
+    */
+    public function getOtherLabel()
+    {
+        if (array_key_exists("otherLabel", $this->_propDict)) {
+            return $this->_propDict["otherLabel"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the otherLabel
+    *
+    * @param string $val The value of the otherLabel
+    *
+    * @return TypedEmailAddress
+    */
+    public function setOtherLabel($val)
+    {
+        $this->_propDict["otherLabel"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the type
@@ -53,31 +79,5 @@ class TypedEmailAddress extends EmailAddress
     {
         $this->_propDict["type"] = $val;
          return $this;
-    }
-    /**
-    * Gets the otherLabel
-    *
-    * @return string The otherLabel
-    */
-    public function getOtherLabel()
-    {
-        if (array_key_exists("otherLabel", $this->_propDict)) {
-            return $this->_propDict["otherLabel"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the otherLabel
-    *
-    * @param string $val The value of the otherLabel
-    *
-    * @return TypedEmailAddress
-    */
-    public function setOtherLabel($val)
-    {
-        $this->_propDict["otherLabel"] = $val;
-        return $this;
     }
 }

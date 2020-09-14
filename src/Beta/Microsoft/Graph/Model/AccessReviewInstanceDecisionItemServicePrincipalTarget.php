@@ -33,29 +33,29 @@ class AccessReviewInstanceDecisionItemServicePrincipalTarget extends AccessRevie
     }
 
     /**
-    * Gets the servicePrincipalId
+    * Gets the appId
     *
-    * @return string The servicePrincipalId
+    * @return string The appId
     */
-    public function getServicePrincipalId()
+    public function getAppId()
     {
-        if (array_key_exists("servicePrincipalId", $this->_propDict)) {
-            return $this->_propDict["servicePrincipalId"];
+        if (array_key_exists("appId", $this->_propDict)) {
+            return $this->_propDict["appId"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the servicePrincipalId
+    * Sets the appId
     *
-    * @param string $val The value of the servicePrincipalId
+    * @param string $val The value of the appId
     *
     * @return AccessReviewInstanceDecisionItemServicePrincipalTarget
     */
-    public function setServicePrincipalId($val)
+    public function setAppId($val)
     {
-        $this->_propDict["servicePrincipalId"] = $val;
+        $this->_propDict["appId"] = $val;
         return $this;
     }
     /**
@@ -85,29 +85,29 @@ class AccessReviewInstanceDecisionItemServicePrincipalTarget extends AccessRevie
         return $this;
     }
     /**
-    * Gets the appId
+    * Gets the servicePrincipalId
     *
-    * @return string The appId
+    * @return string The servicePrincipalId
     */
-    public function getAppId()
+    public function getServicePrincipalId()
     {
-        if (array_key_exists("appId", $this->_propDict)) {
-            return $this->_propDict["appId"];
+        if (array_key_exists("servicePrincipalId", $this->_propDict)) {
+            return $this->_propDict["servicePrincipalId"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the appId
+    * Sets the servicePrincipalId
     *
-    * @param string $val The value of the appId
+    * @param string $val The value of the servicePrincipalId
     *
     * @return AccessReviewInstanceDecisionItemServicePrincipalTarget
     */
-    public function setAppId($val)
+    public function setServicePrincipalId($val)
     {
-        $this->_propDict["appId"] = $val;
+        $this->_propDict["servicePrincipalId"] = $val;
         return $this;
     }
 }

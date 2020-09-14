@@ -286,35 +286,6 @@ class Domain extends Entity
     }
     
     /**
-    * Gets the supportedServices
-    * The capabilities assigned to the domain.Can include 0, 1 or more of following values: Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline, SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune The values which you can add/remove using Graph API include: Email, OfficeCommunicationsOnline, YammerNot nullable
-    *
-    * @return string The supportedServices
-    */
-    public function getSupportedServices()
-    {
-        if (array_key_exists("supportedServices", $this->_propDict)) {
-            return $this->_propDict["supportedServices"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the supportedServices
-    * The capabilities assigned to the domain.Can include 0, 1 or more of following values: Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline, SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune The values which you can add/remove using Graph API include: Email, OfficeCommunicationsOnline, YammerNot nullable
-    *
-    * @param string $val The supportedServices
-    *
-    * @return Domain
-    */
-    public function setSupportedServices($val)
-    {
-        $this->_propDict["supportedServices"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the state
     * Status of asynchronous operations scheduled for the domain.
     *
@@ -344,6 +315,65 @@ class Domain extends Entity
     public function setState($val)
     {
         $this->_propDict["state"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the supportedServices
+    * The capabilities assigned to the domain.Can include 0, 1 or more of following values: Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline, SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune The values which you can add/remove using Graph API include: Email, OfficeCommunicationsOnline, YammerNot nullable
+    *
+    * @return string The supportedServices
+    */
+    public function getSupportedServices()
+    {
+        if (array_key_exists("supportedServices", $this->_propDict)) {
+            return $this->_propDict["supportedServices"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the supportedServices
+    * The capabilities assigned to the domain.Can include 0, 1 or more of following values: Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline, SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune The values which you can add/remove using Graph API include: Email, OfficeCommunicationsOnline, YammerNot nullable
+    *
+    * @param string $val The supportedServices
+    *
+    * @return Domain
+    */
+    public function setSupportedServices($val)
+    {
+        $this->_propDict["supportedServices"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the domainNameReferences
+    * Read-only, Nullable
+     *
+     * @return array The domainNameReferences
+     */
+    public function getDomainNameReferences()
+    {
+        if (array_key_exists("domainNameReferences", $this->_propDict)) {
+           return $this->_propDict["domainNameReferences"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the domainNameReferences
+    * Read-only, Nullable
+    *
+    * @param DirectoryObject $val The domainNameReferences
+    *
+    * @return Domain
+    */
+    public function setDomainNameReferences($val)
+    {
+		$this->_propDict["domainNameReferences"] = $val;
         return $this;
     }
     
@@ -404,36 +434,6 @@ class Domain extends Entity
     public function setVerificationDnsRecords($val)
     {
 		$this->_propDict["verificationDnsRecords"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the domainNameReferences
-    * Read-only, Nullable
-     *
-     * @return array The domainNameReferences
-     */
-    public function getDomainNameReferences()
-    {
-        if (array_key_exists("domainNameReferences", $this->_propDict)) {
-           return $this->_propDict["domainNameReferences"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the domainNameReferences
-    * Read-only, Nullable
-    *
-    * @param DirectoryObject $val The domainNameReferences
-    *
-    * @return Domain
-    */
-    public function setDomainNameReferences($val)
-    {
-		$this->_propDict["domainNameReferences"] = $val;
         return $this;
     }
     

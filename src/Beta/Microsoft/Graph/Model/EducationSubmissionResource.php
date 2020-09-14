@@ -25,6 +25,33 @@ namespace Beta\Microsoft\Graph\Model;
 class EducationSubmissionResource extends Entity
 {
     /**
+    * Gets the assignmentResourceUrl
+    *
+    * @return string The assignmentResourceUrl
+    */
+    public function getAssignmentResourceUrl()
+    {
+        if (array_key_exists("assignmentResourceUrl", $this->_propDict)) {
+            return $this->_propDict["assignmentResourceUrl"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the assignmentResourceUrl
+    *
+    * @param string $val The assignmentResourceUrl
+    *
+    * @return EducationSubmissionResource
+    */
+    public function setAssignmentResourceUrl($val)
+    {
+        $this->_propDict["assignmentResourceUrl"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the resource
     *
     * @return EducationResource The resource
@@ -52,33 +79,6 @@ class EducationSubmissionResource extends Entity
     public function setResource($val)
     {
         $this->_propDict["resource"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the assignmentResourceUrl
-    *
-    * @return string The assignmentResourceUrl
-    */
-    public function getAssignmentResourceUrl()
-    {
-        if (array_key_exists("assignmentResourceUrl", $this->_propDict)) {
-            return $this->_propDict["assignmentResourceUrl"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the assignmentResourceUrl
-    *
-    * @param string $val The assignmentResourceUrl
-    *
-    * @return EducationSubmissionResource
-    */
-    public function setAssignmentResourceUrl($val)
-    {
-        $this->_propDict["assignmentResourceUrl"] = $val;
         return $this;
     }
     

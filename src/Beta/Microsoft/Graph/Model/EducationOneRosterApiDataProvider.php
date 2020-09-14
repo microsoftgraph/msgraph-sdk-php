@@ -32,32 +32,6 @@ class EducationOneRosterApiDataProvider extends EducationSynchronizationDataProv
         $this->setODataType("#microsoft.graph.educationOneRosterApiDataProvider");
     }
 
-    /**
-    * Gets the connectionUrl
-    *
-    * @return string The connectionUrl
-    */
-    public function getConnectionUrl()
-    {
-        if (array_key_exists("connectionUrl", $this->_propDict)) {
-            return $this->_propDict["connectionUrl"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the connectionUrl
-    *
-    * @param string $val The value of the connectionUrl
-    *
-    * @return EducationOneRosterApiDataProvider
-    */
-    public function setConnectionUrl($val)
-    {
-        $this->_propDict["connectionUrl"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the connectionSettings
@@ -88,6 +62,89 @@ class EducationOneRosterApiDataProvider extends EducationSynchronizationDataProv
     {
         $this->_propDict["connectionSettings"] = $val;
          return $this;
+    }
+    /**
+    * Gets the connectionUrl
+    *
+    * @return string The connectionUrl
+    */
+    public function getConnectionUrl()
+    {
+        if (array_key_exists("connectionUrl", $this->_propDict)) {
+            return $this->_propDict["connectionUrl"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the connectionUrl
+    *
+    * @param string $val The value of the connectionUrl
+    *
+    * @return EducationOneRosterApiDataProvider
+    */
+    public function setConnectionUrl($val)
+    {
+        $this->_propDict["connectionUrl"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the customizations
+    *
+    * @return EducationSynchronizationCustomizations The customizations
+    */
+    public function getCustomizations()
+    {
+        if (array_key_exists("customizations", $this->_propDict)) {
+            if (is_a($this->_propDict["customizations"], "Beta\Microsoft\Graph\Model\EducationSynchronizationCustomizations")) {
+                return $this->_propDict["customizations"];
+            } else {
+                $this->_propDict["customizations"] = new EducationSynchronizationCustomizations($this->_propDict["customizations"]);
+                return $this->_propDict["customizations"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the customizations
+    *
+    * @param EducationSynchronizationCustomizations $val The value to assign to the customizations
+    *
+    * @return EducationOneRosterApiDataProvider The EducationOneRosterApiDataProvider
+    */
+    public function setCustomizations($val)
+    {
+        $this->_propDict["customizations"] = $val;
+         return $this;
+    }
+    /**
+    * Gets the providerName
+    *
+    * @return string The providerName
+    */
+    public function getProviderName()
+    {
+        if (array_key_exists("providerName", $this->_propDict)) {
+            return $this->_propDict["providerName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the providerName
+    *
+    * @param string $val The value of the providerName
+    *
+    * @return EducationOneRosterApiDataProvider
+    */
+    public function setProviderName($val)
+    {
+        $this->_propDict["providerName"] = $val;
+        return $this;
     }
     /**
     * Gets the schoolsIds
@@ -140,62 +197,5 @@ class EducationOneRosterApiDataProvider extends EducationSynchronizationDataProv
     {
         $this->_propDict["termIds"] = $val;
         return $this;
-    }
-    /**
-    * Gets the providerName
-    *
-    * @return string The providerName
-    */
-    public function getProviderName()
-    {
-        if (array_key_exists("providerName", $this->_propDict)) {
-            return $this->_propDict["providerName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the providerName
-    *
-    * @param string $val The value of the providerName
-    *
-    * @return EducationOneRosterApiDataProvider
-    */
-    public function setProviderName($val)
-    {
-        $this->_propDict["providerName"] = $val;
-        return $this;
-    }
-
-    /**
-    * Gets the customizations
-    *
-    * @return EducationSynchronizationCustomizations The customizations
-    */
-    public function getCustomizations()
-    {
-        if (array_key_exists("customizations", $this->_propDict)) {
-            if (is_a($this->_propDict["customizations"], "Beta\Microsoft\Graph\Model\EducationSynchronizationCustomizations")) {
-                return $this->_propDict["customizations"];
-            } else {
-                $this->_propDict["customizations"] = new EducationSynchronizationCustomizations($this->_propDict["customizations"]);
-                return $this->_propDict["customizations"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the customizations
-    *
-    * @param EducationSynchronizationCustomizations $val The value to assign to the customizations
-    *
-    * @return EducationOneRosterApiDataProvider The EducationOneRosterApiDataProvider
-    */
-    public function setCustomizations($val)
-    {
-        $this->_propDict["customizations"] = $val;
-         return $this;
     }
 }

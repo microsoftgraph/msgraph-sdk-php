@@ -58,6 +58,35 @@ class DataPolicyOperation extends Entity
     }
     
     /**
+    * Gets the progress
+    * Specifies the progress of an operation.
+    *
+    * @return float The progress
+    */
+    public function getProgress()
+    {
+        if (array_key_exists("progress", $this->_propDict)) {
+            return $this->_propDict["progress"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the progress
+    * Specifies the progress of an operation.
+    *
+    * @param float $val The progress
+    *
+    * @return DataPolicyOperation
+    */
+    public function setProgress($val)
+    {
+        $this->_propDict["progress"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the status
     * Possible values are: notStarted, running, complete, failed, unknownFutureValue.
     *
@@ -120,35 +149,6 @@ class DataPolicyOperation extends Entity
     }
     
     /**
-    * Gets the userId
-    * The id for the user on whom the operation is performed.
-    *
-    * @return string The userId
-    */
-    public function getUserId()
-    {
-        if (array_key_exists("userId", $this->_propDict)) {
-            return $this->_propDict["userId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the userId
-    * The id for the user on whom the operation is performed.
-    *
-    * @param string $val The userId
-    *
-    * @return DataPolicyOperation
-    */
-    public function setUserId($val)
-    {
-        $this->_propDict["userId"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the submittedDateTime
     * Represents when the request for this data operation was submitted, in UTC time, using the ISO 8601 format. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
@@ -182,31 +182,31 @@ class DataPolicyOperation extends Entity
     }
     
     /**
-    * Gets the progress
-    * Specifies the progress of an operation.
+    * Gets the userId
+    * The id for the user on whom the operation is performed.
     *
-    * @return float The progress
+    * @return string The userId
     */
-    public function getProgress()
+    public function getUserId()
     {
-        if (array_key_exists("progress", $this->_propDict)) {
-            return $this->_propDict["progress"];
+        if (array_key_exists("userId", $this->_propDict)) {
+            return $this->_propDict["userId"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the progress
-    * Specifies the progress of an operation.
+    * Sets the userId
+    * The id for the user on whom the operation is performed.
     *
-    * @param float $val The progress
+    * @param string $val The userId
     *
     * @return DataPolicyOperation
     */
-    public function setProgress($val)
+    public function setUserId($val)
     {
-        $this->_propDict["progress"] = $val;
+        $this->_propDict["userId"] = $val;
         return $this;
     }
     

@@ -23,62 +23,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class AppLogCollectionDownloadDetails extends Entity
 {
-    /**
-    * Gets the downloadUrl
-    * Download SAS Url for completed AppLogUploadRequest
-    *
-    * @return string The downloadUrl
-    */
-    public function getDownloadUrl()
-    {
-        if (array_key_exists("downloadUrl", $this->_propDict)) {
-            return $this->_propDict["downloadUrl"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the downloadUrl
-    * Download SAS Url for completed AppLogUploadRequest
-    *
-    * @param string $val The value of the downloadUrl
-    *
-    * @return AppLogCollectionDownloadDetails
-    */
-    public function setDownloadUrl($val)
-    {
-        $this->_propDict["downloadUrl"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the decryptionKey
-    * DecryptionKey as string
-    *
-    * @return string The decryptionKey
-    */
-    public function getDecryptionKey()
-    {
-        if (array_key_exists("decryptionKey", $this->_propDict)) {
-            return $this->_propDict["decryptionKey"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the decryptionKey
-    * DecryptionKey as string
-    *
-    * @param string $val The value of the decryptionKey
-    *
-    * @return AppLogCollectionDownloadDetails
-    */
-    public function setDecryptionKey($val)
-    {
-        $this->_propDict["decryptionKey"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the appLogDecryptionAlgorithm
@@ -111,5 +55,61 @@ class AppLogCollectionDownloadDetails extends Entity
     {
         $this->_propDict["appLogDecryptionAlgorithm"] = $val;
          return $this;
+    }
+    /**
+    * Gets the decryptionKey
+    * DecryptionKey as string
+    *
+    * @return string The decryptionKey
+    */
+    public function getDecryptionKey()
+    {
+        if (array_key_exists("decryptionKey", $this->_propDict)) {
+            return $this->_propDict["decryptionKey"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the decryptionKey
+    * DecryptionKey as string
+    *
+    * @param string $val The value of the decryptionKey
+    *
+    * @return AppLogCollectionDownloadDetails
+    */
+    public function setDecryptionKey($val)
+    {
+        $this->_propDict["decryptionKey"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the downloadUrl
+    * Download SAS Url for completed AppLogUploadRequest
+    *
+    * @return string The downloadUrl
+    */
+    public function getDownloadUrl()
+    {
+        if (array_key_exists("downloadUrl", $this->_propDict)) {
+            return $this->_propDict["downloadUrl"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the downloadUrl
+    * Download SAS Url for completed AppLogUploadRequest
+    *
+    * @param string $val The value of the downloadUrl
+    *
+    * @return AppLogCollectionDownloadDetails
+    */
+    public function setDownloadUrl($val)
+    {
+        $this->_propDict["downloadUrl"] = $val;
+        return $this;
     }
 }

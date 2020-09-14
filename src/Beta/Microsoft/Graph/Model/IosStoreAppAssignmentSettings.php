@@ -33,34 +33,6 @@ class IosStoreAppAssignmentSettings extends MobileAppAssignmentSettings
     }
 
     /**
-    * Gets the vpnConfigurationId
-    * The VPN Configuration Id to apply for this app.
-    *
-    * @return string The vpnConfigurationId
-    */
-    public function getVpnConfigurationId()
-    {
-        if (array_key_exists("vpnConfigurationId", $this->_propDict)) {
-            return $this->_propDict["vpnConfigurationId"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the vpnConfigurationId
-    * The VPN Configuration Id to apply for this app.
-    *
-    * @param string $val The value of the vpnConfigurationId
-    *
-    * @return IosStoreAppAssignmentSettings
-    */
-    public function setVpnConfigurationId($val)
-    {
-        $this->_propDict["vpnConfigurationId"] = $val;
-        return $this;
-    }
-    /**
     * Gets the uninstallOnDeviceRemoval
     * Whether or not to uninstall the app when device is removed from Intune.
     *
@@ -86,6 +58,34 @@ class IosStoreAppAssignmentSettings extends MobileAppAssignmentSettings
     public function setUninstallOnDeviceRemoval($val)
     {
         $this->_propDict["uninstallOnDeviceRemoval"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the vpnConfigurationId
+    * The VPN Configuration Id to apply for this app.
+    *
+    * @return string The vpnConfigurationId
+    */
+    public function getVpnConfigurationId()
+    {
+        if (array_key_exists("vpnConfigurationId", $this->_propDict)) {
+            return $this->_propDict["vpnConfigurationId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the vpnConfigurationId
+    * The VPN Configuration Id to apply for this app.
+    *
+    * @param string $val The value of the vpnConfigurationId
+    *
+    * @return IosStoreAppAssignmentSettings
+    */
+    public function setVpnConfigurationId($val)
+    {
+        $this->_propDict["vpnConfigurationId"] = $val;
         return $this;
     }
 }

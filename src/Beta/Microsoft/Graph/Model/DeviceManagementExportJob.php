@@ -25,31 +25,35 @@ namespace Beta\Microsoft\Graph\Model;
 class DeviceManagementExportJob extends Entity
 {
     /**
-    * Gets the reportName
-    * Name of the report
+    * Gets the expirationDateTime
+    * Time that the exported report expires
     *
-    * @return string The reportName
+    * @return \DateTime The expirationDateTime
     */
-    public function getReportName()
+    public function getExpirationDateTime()
     {
-        if (array_key_exists("reportName", $this->_propDict)) {
-            return $this->_propDict["reportName"];
-        } else {
-            return null;
+        if (array_key_exists("expirationDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["expirationDateTime"], "\DateTime")) {
+                return $this->_propDict["expirationDateTime"];
+            } else {
+                $this->_propDict["expirationDateTime"] = new \DateTime($this->_propDict["expirationDateTime"]);
+                return $this->_propDict["expirationDateTime"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the reportName
-    * Name of the report
+    * Sets the expirationDateTime
+    * Time that the exported report expires
     *
-    * @param string $val The reportName
+    * @param \DateTime $val The expirationDateTime
     *
     * @return DeviceManagementExportJob
     */
-    public function setReportName($val)
+    public function setExpirationDateTime($val)
     {
-        $this->_propDict["reportName"] = $val;
+        $this->_propDict["expirationDateTime"] = $val;
         return $this;
     }
     
@@ -83,35 +87,6 @@ class DeviceManagementExportJob extends Entity
     }
     
     /**
-    * Gets the select
-    * Columns selected from the report
-    *
-    * @return string The select
-    */
-    public function getSelect()
-    {
-        if (array_key_exists("select", $this->_propDict)) {
-            return $this->_propDict["select"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the select
-    * Columns selected from the report
-    *
-    * @param string $val The select
-    *
-    * @return DeviceManagementExportJob
-    */
-    public function setSelect($val)
-    {
-        $this->_propDict["select"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the format
     * Format of the exported report
     *
@@ -141,6 +116,97 @@ class DeviceManagementExportJob extends Entity
     public function setFormat($val)
     {
         $this->_propDict["format"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the reportName
+    * Name of the report
+    *
+    * @return string The reportName
+    */
+    public function getReportName()
+    {
+        if (array_key_exists("reportName", $this->_propDict)) {
+            return $this->_propDict["reportName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the reportName
+    * Name of the report
+    *
+    * @param string $val The reportName
+    *
+    * @return DeviceManagementExportJob
+    */
+    public function setReportName($val)
+    {
+        $this->_propDict["reportName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the requestDateTime
+    * Time that the exported report was requested
+    *
+    * @return \DateTime The requestDateTime
+    */
+    public function getRequestDateTime()
+    {
+        if (array_key_exists("requestDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["requestDateTime"], "\DateTime")) {
+                return $this->_propDict["requestDateTime"];
+            } else {
+                $this->_propDict["requestDateTime"] = new \DateTime($this->_propDict["requestDateTime"]);
+                return $this->_propDict["requestDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the requestDateTime
+    * Time that the exported report was requested
+    *
+    * @param \DateTime $val The requestDateTime
+    *
+    * @return DeviceManagementExportJob
+    */
+    public function setRequestDateTime($val)
+    {
+        $this->_propDict["requestDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the select
+    * Columns selected from the report
+    *
+    * @return string The select
+    */
+    public function getSelect()
+    {
+        if (array_key_exists("select", $this->_propDict)) {
+            return $this->_propDict["select"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the select
+    * Columns selected from the report
+    *
+    * @param string $val The select
+    *
+    * @return DeviceManagementExportJob
+    */
+    public function setSelect($val)
+    {
+        $this->_propDict["select"] = $val;
         return $this;
     }
     
@@ -232,72 +298,6 @@ class DeviceManagementExportJob extends Entity
     public function setUrl($val)
     {
         $this->_propDict["url"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the requestDateTime
-    * Time that the exported report was requested
-    *
-    * @return \DateTime The requestDateTime
-    */
-    public function getRequestDateTime()
-    {
-        if (array_key_exists("requestDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["requestDateTime"], "\DateTime")) {
-                return $this->_propDict["requestDateTime"];
-            } else {
-                $this->_propDict["requestDateTime"] = new \DateTime($this->_propDict["requestDateTime"]);
-                return $this->_propDict["requestDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the requestDateTime
-    * Time that the exported report was requested
-    *
-    * @param \DateTime $val The requestDateTime
-    *
-    * @return DeviceManagementExportJob
-    */
-    public function setRequestDateTime($val)
-    {
-        $this->_propDict["requestDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the expirationDateTime
-    * Time that the exported report expires
-    *
-    * @return \DateTime The expirationDateTime
-    */
-    public function getExpirationDateTime()
-    {
-        if (array_key_exists("expirationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["expirationDateTime"], "\DateTime")) {
-                return $this->_propDict["expirationDateTime"];
-            } else {
-                $this->_propDict["expirationDateTime"] = new \DateTime($this->_propDict["expirationDateTime"]);
-                return $this->_propDict["expirationDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the expirationDateTime
-    * Time that the exported report expires
-    *
-    * @param \DateTime $val The expirationDateTime
-    *
-    * @return DeviceManagementExportJob
-    */
-    public function setExpirationDateTime($val)
-    {
-        $this->_propDict["expirationDateTime"] = $val;
         return $this;
     }
     

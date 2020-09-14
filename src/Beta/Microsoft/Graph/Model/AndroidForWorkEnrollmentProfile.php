@@ -54,64 +54,6 @@ class AndroidForWorkEnrollmentProfile extends Entity
     }
     
     /**
-    * Gets the displayName
-    * Display name for the enrollment profile.
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the displayName
-    * Display name for the enrollment profile.
-    *
-    * @param string $val The displayName
-    *
-    * @return AndroidForWorkEnrollmentProfile
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the description
-    * Description for the enrollment profile.
-    *
-    * @return string The description
-    */
-    public function getDescription()
-    {
-        if (array_key_exists("description", $this->_propDict)) {
-            return $this->_propDict["description"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the description
-    * Description for the enrollment profile.
-    *
-    * @param string $val The description
-    *
-    * @return AndroidForWorkEnrollmentProfile
-    */
-    public function setDescription($val)
-    {
-        $this->_propDict["description"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the createdDateTime
     * Date time the enrollment profile was created.
     *
@@ -145,97 +87,60 @@ class AndroidForWorkEnrollmentProfile extends Entity
     }
     
     /**
-    * Gets the lastModifiedDateTime
-    * Date time the enrollment profile was last modified.
+    * Gets the description
+    * Description for the enrollment profile.
     *
-    * @return \DateTime The lastModifiedDateTime
+    * @return string The description
     */
-    public function getLastModifiedDateTime()
+    public function getDescription()
     {
-        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
-                return $this->_propDict["lastModifiedDateTime"];
-            } else {
-                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
-                return $this->_propDict["lastModifiedDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the lastModifiedDateTime
-    * Date time the enrollment profile was last modified.
-    *
-    * @param \DateTime $val The lastModifiedDateTime
-    *
-    * @return AndroidForWorkEnrollmentProfile
-    */
-    public function setLastModifiedDateTime($val)
-    {
-        $this->_propDict["lastModifiedDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the tokenValue
-    * Value of the most recently created token for this enrollment profile.
-    *
-    * @return string The tokenValue
-    */
-    public function getTokenValue()
-    {
-        if (array_key_exists("tokenValue", $this->_propDict)) {
-            return $this->_propDict["tokenValue"];
+        if (array_key_exists("description", $this->_propDict)) {
+            return $this->_propDict["description"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the tokenValue
-    * Value of the most recently created token for this enrollment profile.
+    * Sets the description
+    * Description for the enrollment profile.
     *
-    * @param string $val The tokenValue
+    * @param string $val The description
     *
     * @return AndroidForWorkEnrollmentProfile
     */
-    public function setTokenValue($val)
+    public function setDescription($val)
     {
-        $this->_propDict["tokenValue"] = $val;
+        $this->_propDict["description"] = $val;
         return $this;
     }
     
     /**
-    * Gets the tokenExpirationDateTime
-    * Date time the most recently created token will expire.
+    * Gets the displayName
+    * Display name for the enrollment profile.
     *
-    * @return \DateTime The tokenExpirationDateTime
+    * @return string The displayName
     */
-    public function getTokenExpirationDateTime()
+    public function getDisplayName()
     {
-        if (array_key_exists("tokenExpirationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["tokenExpirationDateTime"], "\DateTime")) {
-                return $this->_propDict["tokenExpirationDateTime"];
-            } else {
-                $this->_propDict["tokenExpirationDateTime"] = new \DateTime($this->_propDict["tokenExpirationDateTime"]);
-                return $this->_propDict["tokenExpirationDateTime"];
-            }
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the tokenExpirationDateTime
-    * Date time the most recently created token will expire.
+    * Sets the displayName
+    * Display name for the enrollment profile.
     *
-    * @param \DateTime $val The tokenExpirationDateTime
+    * @param string $val The displayName
     *
     * @return AndroidForWorkEnrollmentProfile
     */
-    public function setTokenExpirationDateTime($val)
+    public function setDisplayName($val)
     {
-        $this->_propDict["tokenExpirationDateTime"] = $val;
+        $this->_propDict["displayName"] = $val;
         return $this;
     }
     
@@ -265,6 +170,39 @@ class AndroidForWorkEnrollmentProfile extends Entity
     public function setEnrolledDeviceCount($val)
     {
         $this->_propDict["enrolledDeviceCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the lastModifiedDateTime
+    * Date time the enrollment profile was last modified.
+    *
+    * @return \DateTime The lastModifiedDateTime
+    */
+    public function getLastModifiedDateTime()
+    {
+        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+                return $this->_propDict["lastModifiedDateTime"];
+            } else {
+                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
+                return $this->_propDict["lastModifiedDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the lastModifiedDateTime
+    * Date time the enrollment profile was last modified.
+    *
+    * @param \DateTime $val The lastModifiedDateTime
+    *
+    * @return AndroidForWorkEnrollmentProfile
+    */
+    public function setLastModifiedDateTime($val)
+    {
+        $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
     
@@ -327,6 +265,68 @@ class AndroidForWorkEnrollmentProfile extends Entity
     public function setQrCodeImage($val)
     {
         $this->_propDict["qrCodeImage"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the tokenExpirationDateTime
+    * Date time the most recently created token will expire.
+    *
+    * @return \DateTime The tokenExpirationDateTime
+    */
+    public function getTokenExpirationDateTime()
+    {
+        if (array_key_exists("tokenExpirationDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["tokenExpirationDateTime"], "\DateTime")) {
+                return $this->_propDict["tokenExpirationDateTime"];
+            } else {
+                $this->_propDict["tokenExpirationDateTime"] = new \DateTime($this->_propDict["tokenExpirationDateTime"]);
+                return $this->_propDict["tokenExpirationDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the tokenExpirationDateTime
+    * Date time the most recently created token will expire.
+    *
+    * @param \DateTime $val The tokenExpirationDateTime
+    *
+    * @return AndroidForWorkEnrollmentProfile
+    */
+    public function setTokenExpirationDateTime($val)
+    {
+        $this->_propDict["tokenExpirationDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the tokenValue
+    * Value of the most recently created token for this enrollment profile.
+    *
+    * @return string The tokenValue
+    */
+    public function getTokenValue()
+    {
+        if (array_key_exists("tokenValue", $this->_propDict)) {
+            return $this->_propDict["tokenValue"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the tokenValue
+    * Value of the most recently created token for this enrollment profile.
+    *
+    * @param string $val The tokenValue
+    *
+    * @return AndroidForWorkEnrollmentProfile
+    */
+    public function setTokenValue($val)
+    {
+        $this->_propDict["tokenValue"] = $val;
         return $this;
     }
     

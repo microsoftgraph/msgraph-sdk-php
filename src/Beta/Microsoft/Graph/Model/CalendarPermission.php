@@ -24,6 +24,36 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class CalendarPermission extends Entity
 {
+
+     /** 
+     * Gets the allowedRoles
+    * List of allowed sharing or delegating permission levels for the calendar. Possible values are: none, freeBusyRead, limitedRead, read, write, delegateWithoutPrivateEventAccess, delegateWithPrivateEventAccess, custom.
+     *
+     * @return array The allowedRoles
+     */
+    public function getAllowedRoles()
+    {
+        if (array_key_exists("allowedRoles", $this->_propDict)) {
+           return $this->_propDict["allowedRoles"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the allowedRoles
+    * List of allowed sharing or delegating permission levels for the calendar. Possible values are: none, freeBusyRead, limitedRead, read, write, delegateWithoutPrivateEventAccess, delegateWithPrivateEventAccess, custom.
+    *
+    * @param CalendarRoleType $val The allowedRoles
+    *
+    * @return CalendarPermission
+    */
+    public function setAllowedRoles($val)
+    {
+		$this->_propDict["allowedRoles"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the emailAddress
     * Represents a sharee or delegate who has access to the calendar. For the 'My Organization' sharee, the address property is null. Read-only.
@@ -58,35 +88,6 @@ class CalendarPermission extends Entity
     }
     
     /**
-    * Gets the isRemovable
-    * True if the user can be removed from the list of sharees or delegates for the specified calendar, false otherwise. The 'My organization' user determines the permissions other people within your organization have to the given calendar. You cannot remove 'My organization' as a sharee to a calendar.
-    *
-    * @return bool The isRemovable
-    */
-    public function getIsRemovable()
-    {
-        if (array_key_exists("isRemovable", $this->_propDict)) {
-            return $this->_propDict["isRemovable"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the isRemovable
-    * True if the user can be removed from the list of sharees or delegates for the specified calendar, false otherwise. The 'My organization' user determines the permissions other people within your organization have to the given calendar. You cannot remove 'My organization' as a sharee to a calendar.
-    *
-    * @param bool $val The isRemovable
-    *
-    * @return CalendarPermission
-    */
-    public function setIsRemovable($val)
-    {
-        $this->_propDict["isRemovable"] = boolval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the isInsideOrganization
     * True if the user in context (sharee or delegate) is inside the same organization as the calendar owner.
     *
@@ -112,6 +113,35 @@ class CalendarPermission extends Entity
     public function setIsInsideOrganization($val)
     {
         $this->_propDict["isInsideOrganization"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the isRemovable
+    * True if the user can be removed from the list of sharees or delegates for the specified calendar, false otherwise. The 'My organization' user determines the permissions other people within your organization have to the given calendar. You cannot remove 'My organization' as a sharee to a calendar.
+    *
+    * @return bool The isRemovable
+    */
+    public function getIsRemovable()
+    {
+        if (array_key_exists("isRemovable", $this->_propDict)) {
+            return $this->_propDict["isRemovable"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isRemovable
+    * True if the user can be removed from the list of sharees or delegates for the specified calendar, false otherwise. The 'My organization' user determines the permissions other people within your organization have to the given calendar. You cannot remove 'My organization' as a sharee to a calendar.
+    *
+    * @param bool $val The isRemovable
+    *
+    * @return CalendarPermission
+    */
+    public function setIsRemovable($val)
+    {
+        $this->_propDict["isRemovable"] = boolval($val);
         return $this;
     }
     
@@ -145,36 +175,6 @@ class CalendarPermission extends Entity
     public function setRole($val)
     {
         $this->_propDict["role"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the allowedRoles
-    * List of allowed sharing or delegating permission levels for the calendar. Possible values are: none, freeBusyRead, limitedRead, read, write, delegateWithoutPrivateEventAccess, delegateWithPrivateEventAccess, custom.
-     *
-     * @return array The allowedRoles
-     */
-    public function getAllowedRoles()
-    {
-        if (array_key_exists("allowedRoles", $this->_propDict)) {
-           return $this->_propDict["allowedRoles"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the allowedRoles
-    * List of allowed sharing or delegating permission levels for the calendar. Possible values are: none, freeBusyRead, limitedRead, read, write, delegateWithoutPrivateEventAccess, delegateWithPrivateEventAccess, custom.
-    *
-    * @param CalendarRoleType $val The allowedRoles
-    *
-    * @return CalendarPermission
-    */
-    public function setAllowedRoles($val)
-    {
-		$this->_propDict["allowedRoles"] = $val;
         return $this;
     }
     

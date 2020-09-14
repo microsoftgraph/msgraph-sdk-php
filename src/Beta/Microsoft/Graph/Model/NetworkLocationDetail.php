@@ -23,6 +23,32 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class NetworkLocationDetail extends Entity
 {
+    /**
+    * Gets the networkNames
+    *
+    * @return string The networkNames
+    */
+    public function getNetworkNames()
+    {
+        if (array_key_exists("networkNames", $this->_propDict)) {
+            return $this->_propDict["networkNames"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the networkNames
+    *
+    * @param string $val The value of the networkNames
+    *
+    * @return NetworkLocationDetail
+    */
+    public function setNetworkNames($val)
+    {
+        $this->_propDict["networkNames"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the networkType
@@ -53,31 +79,5 @@ class NetworkLocationDetail extends Entity
     {
         $this->_propDict["networkType"] = $val;
          return $this;
-    }
-    /**
-    * Gets the networkNames
-    *
-    * @return string The networkNames
-    */
-    public function getNetworkNames()
-    {
-        if (array_key_exists("networkNames", $this->_propDict)) {
-            return $this->_propDict["networkNames"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the networkNames
-    *
-    * @param string $val The value of the networkNames
-    *
-    * @return NetworkLocationDetail
-    */
-    public function setNetworkNames($val)
-    {
-        $this->_propDict["networkNames"] = $val;
-        return $this;
     }
 }

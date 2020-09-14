@@ -25,6 +25,35 @@ namespace Beta\Microsoft\Graph\Model;
 class WorkforceIntegration extends ChangeTrackedEntity
 {
     /**
+    * Gets the apiVersion
+    * API version for the call back URL. Start with 1.
+    *
+    * @return int The apiVersion
+    */
+    public function getApiVersion()
+    {
+        if (array_key_exists("apiVersion", $this->_propDict)) {
+            return $this->_propDict["apiVersion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the apiVersion
+    * API version for the call back URL. Start with 1.
+    *
+    * @param int $val The apiVersion
+    *
+    * @return WorkforceIntegration
+    */
+    public function setApiVersion($val)
+    {
+        $this->_propDict["apiVersion"] = intval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the displayName
     * Name of the workforce integration.
     *
@@ -54,31 +83,33 @@ class WorkforceIntegration extends ChangeTrackedEntity
     }
     
     /**
-    * Gets the apiVersion
-    * API version for the call back URL. Start with 1.
+    * Gets the eligibilityFilteringEnabledEntities
     *
-    * @return int The apiVersion
+    * @return EligibilityFilteringEnabledEntities The eligibilityFilteringEnabledEntities
     */
-    public function getApiVersion()
+    public function getEligibilityFilteringEnabledEntities()
     {
-        if (array_key_exists("apiVersion", $this->_propDict)) {
-            return $this->_propDict["apiVersion"];
-        } else {
-            return null;
+        if (array_key_exists("eligibilityFilteringEnabledEntities", $this->_propDict)) {
+            if (is_a($this->_propDict["eligibilityFilteringEnabledEntities"], "Beta\Microsoft\Graph\Model\EligibilityFilteringEnabledEntities")) {
+                return $this->_propDict["eligibilityFilteringEnabledEntities"];
+            } else {
+                $this->_propDict["eligibilityFilteringEnabledEntities"] = new EligibilityFilteringEnabledEntities($this->_propDict["eligibilityFilteringEnabledEntities"]);
+                return $this->_propDict["eligibilityFilteringEnabledEntities"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the apiVersion
-    * API version for the call back URL. Start with 1.
+    * Sets the eligibilityFilteringEnabledEntities
     *
-    * @param int $val The apiVersion
+    * @param EligibilityFilteringEnabledEntities $val The eligibilityFilteringEnabledEntities
     *
     * @return WorkforceIntegration
     */
-    public function setApiVersion($val)
+    public function setEligibilityFilteringEnabledEntities($val)
     {
-        $this->_propDict["apiVersion"] = intval($val);
+        $this->_propDict["eligibilityFilteringEnabledEntities"] = $val;
         return $this;
     }
     
@@ -145,31 +176,35 @@ class WorkforceIntegration extends ChangeTrackedEntity
     }
     
     /**
-    * Gets the url
-    * Workforce Integration URL for callbacks from the Shifts service.
+    * Gets the supportedEntities
+    * The Shifts entities supported for synchronous change notifications. Shifts will make a call back to the url provided on client changes on those entities added here. By default, no entities are supported for change notifications. Possible values are: none, shift, swapRequest, openshift, openShiftRequest, userShiftPreferences
     *
-    * @return string The url
+    * @return WorkforceIntegrationSupportedEntities The supportedEntities
     */
-    public function getUrl()
+    public function getSupportedEntities()
     {
-        if (array_key_exists("url", $this->_propDict)) {
-            return $this->_propDict["url"];
-        } else {
-            return null;
+        if (array_key_exists("supportedEntities", $this->_propDict)) {
+            if (is_a($this->_propDict["supportedEntities"], "Beta\Microsoft\Graph\Model\WorkforceIntegrationSupportedEntities")) {
+                return $this->_propDict["supportedEntities"];
+            } else {
+                $this->_propDict["supportedEntities"] = new WorkforceIntegrationSupportedEntities($this->_propDict["supportedEntities"]);
+                return $this->_propDict["supportedEntities"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the url
-    * Workforce Integration URL for callbacks from the Shifts service.
+    * Sets the supportedEntities
+    * The Shifts entities supported for synchronous change notifications. Shifts will make a call back to the url provided on client changes on those entities added here. By default, no entities are supported for change notifications. Possible values are: none, shift, swapRequest, openshift, openShiftRequest, userShiftPreferences
     *
-    * @param string $val The url
+    * @param WorkforceIntegrationSupportedEntities $val The supportedEntities
     *
     * @return WorkforceIntegration
     */
-    public function setUrl($val)
+    public function setSupportedEntities($val)
     {
-        $this->_propDict["url"] = $val;
+        $this->_propDict["supportedEntities"] = $val;
         return $this;
     }
     
@@ -205,66 +240,31 @@ class WorkforceIntegration extends ChangeTrackedEntity
     }
     
     /**
-    * Gets the supportedEntities
-    * The Shifts entities supported for synchronous change notifications. Shifts will make a call back to the url provided on client changes on those entities added here. By default, no entities are supported for change notifications. Possible values are: none, shift, swapRequest, openshift, openShiftRequest, userShiftPreferences
+    * Gets the url
+    * Workforce Integration URL for callbacks from the Shifts service.
     *
-    * @return WorkforceIntegrationSupportedEntities The supportedEntities
+    * @return string The url
     */
-    public function getSupportedEntities()
+    public function getUrl()
     {
-        if (array_key_exists("supportedEntities", $this->_propDict)) {
-            if (is_a($this->_propDict["supportedEntities"], "Beta\Microsoft\Graph\Model\WorkforceIntegrationSupportedEntities")) {
-                return $this->_propDict["supportedEntities"];
-            } else {
-                $this->_propDict["supportedEntities"] = new WorkforceIntegrationSupportedEntities($this->_propDict["supportedEntities"]);
-                return $this->_propDict["supportedEntities"];
-            }
+        if (array_key_exists("url", $this->_propDict)) {
+            return $this->_propDict["url"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the supportedEntities
-    * The Shifts entities supported for synchronous change notifications. Shifts will make a call back to the url provided on client changes on those entities added here. By default, no entities are supported for change notifications. Possible values are: none, shift, swapRequest, openshift, openShiftRequest, userShiftPreferences
+    * Sets the url
+    * Workforce Integration URL for callbacks from the Shifts service.
     *
-    * @param WorkforceIntegrationSupportedEntities $val The supportedEntities
+    * @param string $val The url
     *
     * @return WorkforceIntegration
     */
-    public function setSupportedEntities($val)
+    public function setUrl($val)
     {
-        $this->_propDict["supportedEntities"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the eligibilityFilteringEnabledEntities
-    *
-    * @return EligibilityFilteringEnabledEntities The eligibilityFilteringEnabledEntities
-    */
-    public function getEligibilityFilteringEnabledEntities()
-    {
-        if (array_key_exists("eligibilityFilteringEnabledEntities", $this->_propDict)) {
-            if (is_a($this->_propDict["eligibilityFilteringEnabledEntities"], "Beta\Microsoft\Graph\Model\EligibilityFilteringEnabledEntities")) {
-                return $this->_propDict["eligibilityFilteringEnabledEntities"];
-            } else {
-                $this->_propDict["eligibilityFilteringEnabledEntities"] = new EligibilityFilteringEnabledEntities($this->_propDict["eligibilityFilteringEnabledEntities"]);
-                return $this->_propDict["eligibilityFilteringEnabledEntities"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the eligibilityFilteringEnabledEntities
-    *
-    * @param EligibilityFilteringEnabledEntities $val The eligibilityFilteringEnabledEntities
-    *
-    * @return WorkforceIntegration
-    */
-    public function setEligibilityFilteringEnabledEntities($val)
-    {
-        $this->_propDict["eligibilityFilteringEnabledEntities"] = $val;
+        $this->_propDict["url"] = $val;
         return $this;
     }
     

@@ -23,88 +23,65 @@ namespace Beta\Microsoft\Graph\CallRecords\Model;
 */
 class NetworkInfo extends \Beta\Microsoft\Graph\Model\Entity
 {
+
     /**
-    * Gets the ipAddress
-    * IP address of the media endpoint.
+    * Gets the bandwidthLowEventRatio
+    * Fraction of the call that the media endpoint detected the available bandwidth or bandwidth policy was low enough to cause poor quality of the audio sent.
     *
-    * @return string The ipAddress
+    * @return Beta\Microsoft\Graph\Model\Single The bandwidthLowEventRatio
     */
-    public function getIpAddress()
+    public function getBandwidthLowEventRatio()
     {
-        if (array_key_exists("ipAddress", $this->_propDict)) {
-            return $this->_propDict["ipAddress"];
+        if (array_key_exists("bandwidthLowEventRatio", $this->_propDict)) {
+            if (is_a($this->_propDict["bandwidthLowEventRatio"], "Beta\Microsoft\Graph\Model\Single")) {
+                return $this->_propDict["bandwidthLowEventRatio"];
+            } else {
+                $this->_propDict["bandwidthLowEventRatio"] = new Beta\Microsoft\Graph\Model\Single($this->_propDict["bandwidthLowEventRatio"]);
+                return $this->_propDict["bandwidthLowEventRatio"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the bandwidthLowEventRatio
+    * Fraction of the call that the media endpoint detected the available bandwidth or bandwidth policy was low enough to cause poor quality of the audio sent.
+    *
+    * @param Beta\Microsoft\Graph\Model\Single $val The value to assign to the bandwidthLowEventRatio
+    *
+    * @return NetworkInfo The NetworkInfo
+    */
+    public function setBandwidthLowEventRatio($val)
+    {
+        $this->_propDict["bandwidthLowEventRatio"] = $val;
+         return $this;
+    }
+    /**
+    * Gets the basicServiceSetIdentifier
+    * The wireless LAN basic service set identifier of the media endpoint used to connect to the network.
+    *
+    * @return string The basicServiceSetIdentifier
+    */
+    public function getBasicServiceSetIdentifier()
+    {
+        if (array_key_exists("basicServiceSetIdentifier", $this->_propDict)) {
+            return $this->_propDict["basicServiceSetIdentifier"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the ipAddress
-    * IP address of the media endpoint.
+    * Sets the basicServiceSetIdentifier
+    * The wireless LAN basic service set identifier of the media endpoint used to connect to the network.
     *
-    * @param string $val The value of the ipAddress
-    *
-    * @return NetworkInfo
-    */
-    public function setIpAddress($val)
-    {
-        $this->_propDict["ipAddress"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the subnet
-    * Subnet used for media stream by the media endpoint.
-    *
-    * @return string The subnet
-    */
-    public function getSubnet()
-    {
-        if (array_key_exists("subnet", $this->_propDict)) {
-            return $this->_propDict["subnet"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the subnet
-    * Subnet used for media stream by the media endpoint.
-    *
-    * @param string $val The value of the subnet
+    * @param string $val The value of the basicServiceSetIdentifier
     *
     * @return NetworkInfo
     */
-    public function setSubnet($val)
+    public function setBasicServiceSetIdentifier($val)
     {
-        $this->_propDict["subnet"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the linkSpeed
-    * Link speed in bits per second reported by the network adapter used by the media endpoint.
-    *
-    * @return int The linkSpeed
-    */
-    public function getLinkSpeed()
-    {
-        if (array_key_exists("linkSpeed", $this->_propDict)) {
-            return $this->_propDict["linkSpeed"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the linkSpeed
-    * Link speed in bits per second reported by the network adapter used by the media endpoint.
-    *
-    * @param int $val The value of the linkSpeed
-    *
-    * @return NetworkInfo
-    */
-    public function setLinkSpeed($val)
-    {
-        $this->_propDict["linkSpeed"] = $val;
+        $this->_propDict["basicServiceSetIdentifier"] = $val;
         return $this;
     }
 
@@ -140,6 +117,151 @@ class NetworkInfo extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["connectionType"] = $val;
          return $this;
     }
+
+    /**
+    * Gets the delayEventRatio
+    * Fraction of the call that the media endpoint detected the network delay was significant enough to impact the ability to have real-time two-way communication.
+    *
+    * @return Beta\Microsoft\Graph\Model\Single The delayEventRatio
+    */
+    public function getDelayEventRatio()
+    {
+        if (array_key_exists("delayEventRatio", $this->_propDict)) {
+            if (is_a($this->_propDict["delayEventRatio"], "Beta\Microsoft\Graph\Model\Single")) {
+                return $this->_propDict["delayEventRatio"];
+            } else {
+                $this->_propDict["delayEventRatio"] = new Beta\Microsoft\Graph\Model\Single($this->_propDict["delayEventRatio"]);
+                return $this->_propDict["delayEventRatio"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the delayEventRatio
+    * Fraction of the call that the media endpoint detected the network delay was significant enough to impact the ability to have real-time two-way communication.
+    *
+    * @param Beta\Microsoft\Graph\Model\Single $val The value to assign to the delayEventRatio
+    *
+    * @return NetworkInfo The NetworkInfo
+    */
+    public function setDelayEventRatio($val)
+    {
+        $this->_propDict["delayEventRatio"] = $val;
+         return $this;
+    }
+    /**
+    * Gets the dnsSuffix
+    * DNS suffix associated with the network adapter of the media endpoint.
+    *
+    * @return string The dnsSuffix
+    */
+    public function getDnsSuffix()
+    {
+        if (array_key_exists("dnsSuffix", $this->_propDict)) {
+            return $this->_propDict["dnsSuffix"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the dnsSuffix
+    * DNS suffix associated with the network adapter of the media endpoint.
+    *
+    * @param string $val The value of the dnsSuffix
+    *
+    * @return NetworkInfo
+    */
+    public function setDnsSuffix($val)
+    {
+        $this->_propDict["dnsSuffix"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the ipAddress
+    * IP address of the media endpoint.
+    *
+    * @return string The ipAddress
+    */
+    public function getIpAddress()
+    {
+        if (array_key_exists("ipAddress", $this->_propDict)) {
+            return $this->_propDict["ipAddress"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the ipAddress
+    * IP address of the media endpoint.
+    *
+    * @param string $val The value of the ipAddress
+    *
+    * @return NetworkInfo
+    */
+    public function setIpAddress($val)
+    {
+        $this->_propDict["ipAddress"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the linkSpeed
+    * Link speed in bits per second reported by the network adapter used by the media endpoint.
+    *
+    * @return int The linkSpeed
+    */
+    public function getLinkSpeed()
+    {
+        if (array_key_exists("linkSpeed", $this->_propDict)) {
+            return $this->_propDict["linkSpeed"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the linkSpeed
+    * Link speed in bits per second reported by the network adapter used by the media endpoint.
+    *
+    * @param int $val The value of the linkSpeed
+    *
+    * @return NetworkInfo
+    */
+    public function setLinkSpeed($val)
+    {
+        $this->_propDict["linkSpeed"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the macAddress
+    * The media access control (MAC) address of the media endpoint's network device.
+    *
+    * @return string The macAddress
+    */
+    public function getMacAddress()
+    {
+        if (array_key_exists("macAddress", $this->_propDict)) {
+            return $this->_propDict["macAddress"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the macAddress
+    * The media access control (MAC) address of the media endpoint's network device.
+    *
+    * @param string $val The value of the macAddress
+    *
+    * @return NetworkInfo
+    */
+    public function setMacAddress($val)
+    {
+        $this->_propDict["macAddress"] = $val;
+        return $this;
+    }
     /**
     * Gets the port
     * Network port number used by media endpoint.
@@ -167,6 +289,39 @@ class NetworkInfo extends \Beta\Microsoft\Graph\Model\Entity
     {
         $this->_propDict["port"] = $val;
         return $this;
+    }
+
+    /**
+    * Gets the receivedQualityEventRatio
+    * Fraction of the call that the media endpoint detected the network was causing poor quality of the audio received.
+    *
+    * @return Beta\Microsoft\Graph\Model\Single The receivedQualityEventRatio
+    */
+    public function getReceivedQualityEventRatio()
+    {
+        if (array_key_exists("receivedQualityEventRatio", $this->_propDict)) {
+            if (is_a($this->_propDict["receivedQualityEventRatio"], "Beta\Microsoft\Graph\Model\Single")) {
+                return $this->_propDict["receivedQualityEventRatio"];
+            } else {
+                $this->_propDict["receivedQualityEventRatio"] = new Beta\Microsoft\Graph\Model\Single($this->_propDict["receivedQualityEventRatio"]);
+                return $this->_propDict["receivedQualityEventRatio"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the receivedQualityEventRatio
+    * Fraction of the call that the media endpoint detected the network was causing poor quality of the audio received.
+    *
+    * @param Beta\Microsoft\Graph\Model\Single $val The value to assign to the receivedQualityEventRatio
+    *
+    * @return NetworkInfo The NetworkInfo
+    */
+    public function setReceivedQualityEventRatio($val)
+    {
+        $this->_propDict["receivedQualityEventRatio"] = $val;
+         return $this;
     }
     /**
     * Gets the reflexiveIPAddress
@@ -252,32 +407,154 @@ class NetworkInfo extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["relayPort"] = $val;
         return $this;
     }
+
     /**
-    * Gets the macAddress
-    * The media access control (MAC) address of the media endpoint's network device.
+    * Gets the sentQualityEventRatio
+    * Fraction of the call that the media endpoint detected the network was causing poor quality of the audio sent.
     *
-    * @return string The macAddress
+    * @return Beta\Microsoft\Graph\Model\Single The sentQualityEventRatio
     */
-    public function getMacAddress()
+    public function getSentQualityEventRatio()
     {
-        if (array_key_exists("macAddress", $this->_propDict)) {
-            return $this->_propDict["macAddress"];
+        if (array_key_exists("sentQualityEventRatio", $this->_propDict)) {
+            if (is_a($this->_propDict["sentQualityEventRatio"], "Beta\Microsoft\Graph\Model\Single")) {
+                return $this->_propDict["sentQualityEventRatio"];
+            } else {
+                $this->_propDict["sentQualityEventRatio"] = new Beta\Microsoft\Graph\Model\Single($this->_propDict["sentQualityEventRatio"]);
+                return $this->_propDict["sentQualityEventRatio"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the sentQualityEventRatio
+    * Fraction of the call that the media endpoint detected the network was causing poor quality of the audio sent.
+    *
+    * @param Beta\Microsoft\Graph\Model\Single $val The value to assign to the sentQualityEventRatio
+    *
+    * @return NetworkInfo The NetworkInfo
+    */
+    public function setSentQualityEventRatio($val)
+    {
+        $this->_propDict["sentQualityEventRatio"] = $val;
+         return $this;
+    }
+    /**
+    * Gets the subnet
+    * Subnet used for media stream by the media endpoint.
+    *
+    * @return string The subnet
+    */
+    public function getSubnet()
+    {
+        if (array_key_exists("subnet", $this->_propDict)) {
+            return $this->_propDict["subnet"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the macAddress
-    * The media access control (MAC) address of the media endpoint's network device.
+    * Sets the subnet
+    * Subnet used for media stream by the media endpoint.
     *
-    * @param string $val The value of the macAddress
+    * @param string $val The value of the subnet
     *
     * @return NetworkInfo
     */
-    public function setMacAddress($val)
+    public function setSubnet($val)
     {
-        $this->_propDict["macAddress"] = $val;
+        $this->_propDict["subnet"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the wifiBand
+    * WiFi band used by the media endpoint. Possible values are: unknown, frequency24GHz, frequency50GHz, frequency60GHz, unknownFutureValue.
+    *
+    * @return WifiBand The wifiBand
+    */
+    public function getWifiBand()
+    {
+        if (array_key_exists("wifiBand", $this->_propDict)) {
+            if (is_a($this->_propDict["wifiBand"], "Beta\Microsoft\Graph\CallRecords\Model\WifiBand")) {
+                return $this->_propDict["wifiBand"];
+            } else {
+                $this->_propDict["wifiBand"] = new WifiBand($this->_propDict["wifiBand"]);
+                return $this->_propDict["wifiBand"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the wifiBand
+    * WiFi band used by the media endpoint. Possible values are: unknown, frequency24GHz, frequency50GHz, frequency60GHz, unknownFutureValue.
+    *
+    * @param WifiBand $val The value to assign to the wifiBand
+    *
+    * @return NetworkInfo The NetworkInfo
+    */
+    public function setWifiBand($val)
+    {
+        $this->_propDict["wifiBand"] = $val;
+         return $this;
+    }
+    /**
+    * Gets the wifiBatteryCharge
+    * Estimated remaining battery charge in percentage reported by the media endpoint.
+    *
+    * @return int The wifiBatteryCharge
+    */
+    public function getWifiBatteryCharge()
+    {
+        if (array_key_exists("wifiBatteryCharge", $this->_propDict)) {
+            return $this->_propDict["wifiBatteryCharge"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the wifiBatteryCharge
+    * Estimated remaining battery charge in percentage reported by the media endpoint.
+    *
+    * @param int $val The value of the wifiBatteryCharge
+    *
+    * @return NetworkInfo
+    */
+    public function setWifiBatteryCharge($val)
+    {
+        $this->_propDict["wifiBatteryCharge"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the wifiChannel
+    * WiFi channel used by the media endpoint.
+    *
+    * @return int The wifiChannel
+    */
+    public function getWifiChannel()
+    {
+        if (array_key_exists("wifiChannel", $this->_propDict)) {
+            return $this->_propDict["wifiChannel"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the wifiChannel
+    * WiFi channel used by the media endpoint.
+    *
+    * @param int $val The value of the wifiChannel
+    *
+    * @return NetworkInfo
+    */
+    public function setWifiChannel($val)
+    {
+        $this->_propDict["wifiChannel"] = $val;
         return $this;
     }
     /**
@@ -334,151 +611,6 @@ class NetworkInfo extends \Beta\Microsoft\Graph\Model\Entity
     public function setWifiMicrosoftDriverVersion($val)
     {
         $this->_propDict["wifiMicrosoftDriverVersion"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the wifiVendorDriver
-    * Name of the WiFi driver used by the media endpoint. Value may be localized based on the language used by endpoint.
-    *
-    * @return string The wifiVendorDriver
-    */
-    public function getWifiVendorDriver()
-    {
-        if (array_key_exists("wifiVendorDriver", $this->_propDict)) {
-            return $this->_propDict["wifiVendorDriver"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the wifiVendorDriver
-    * Name of the WiFi driver used by the media endpoint. Value may be localized based on the language used by endpoint.
-    *
-    * @param string $val The value of the wifiVendorDriver
-    *
-    * @return NetworkInfo
-    */
-    public function setWifiVendorDriver($val)
-    {
-        $this->_propDict["wifiVendorDriver"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the wifiVendorDriverVersion
-    * Version of the WiFi driver used by the media endpoint.
-    *
-    * @return string The wifiVendorDriverVersion
-    */
-    public function getWifiVendorDriverVersion()
-    {
-        if (array_key_exists("wifiVendorDriverVersion", $this->_propDict)) {
-            return $this->_propDict["wifiVendorDriverVersion"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the wifiVendorDriverVersion
-    * Version of the WiFi driver used by the media endpoint.
-    *
-    * @param string $val The value of the wifiVendorDriverVersion
-    *
-    * @return NetworkInfo
-    */
-    public function setWifiVendorDriverVersion($val)
-    {
-        $this->_propDict["wifiVendorDriverVersion"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the wifiChannel
-    * WiFi channel used by the media endpoint.
-    *
-    * @return int The wifiChannel
-    */
-    public function getWifiChannel()
-    {
-        if (array_key_exists("wifiChannel", $this->_propDict)) {
-            return $this->_propDict["wifiChannel"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the wifiChannel
-    * WiFi channel used by the media endpoint.
-    *
-    * @param int $val The value of the wifiChannel
-    *
-    * @return NetworkInfo
-    */
-    public function setWifiChannel($val)
-    {
-        $this->_propDict["wifiChannel"] = $val;
-        return $this;
-    }
-
-    /**
-    * Gets the wifiBand
-    * WiFi band used by the media endpoint. Possible values are: unknown, frequency24GHz, frequency50GHz, frequency60GHz, unknownFutureValue.
-    *
-    * @return WifiBand The wifiBand
-    */
-    public function getWifiBand()
-    {
-        if (array_key_exists("wifiBand", $this->_propDict)) {
-            if (is_a($this->_propDict["wifiBand"], "Beta\Microsoft\Graph\CallRecords\Model\WifiBand")) {
-                return $this->_propDict["wifiBand"];
-            } else {
-                $this->_propDict["wifiBand"] = new WifiBand($this->_propDict["wifiBand"]);
-                return $this->_propDict["wifiBand"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the wifiBand
-    * WiFi band used by the media endpoint. Possible values are: unknown, frequency24GHz, frequency50GHz, frequency60GHz, unknownFutureValue.
-    *
-    * @param WifiBand $val The value to assign to the wifiBand
-    *
-    * @return NetworkInfo The NetworkInfo
-    */
-    public function setWifiBand($val)
-    {
-        $this->_propDict["wifiBand"] = $val;
-         return $this;
-    }
-    /**
-    * Gets the basicServiceSetIdentifier
-    * The wireless LAN basic service set identifier of the media endpoint used to connect to the network.
-    *
-    * @return string The basicServiceSetIdentifier
-    */
-    public function getBasicServiceSetIdentifier()
-    {
-        if (array_key_exists("basicServiceSetIdentifier", $this->_propDict)) {
-            return $this->_propDict["basicServiceSetIdentifier"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the basicServiceSetIdentifier
-    * The wireless LAN basic service set identifier of the media endpoint used to connect to the network.
-    *
-    * @param string $val The value of the basicServiceSetIdentifier
-    *
-    * @return NetworkInfo
-    */
-    public function setBasicServiceSetIdentifier($val)
-    {
-        $this->_propDict["basicServiceSetIdentifier"] = $val;
         return $this;
     }
 
@@ -543,191 +675,59 @@ class NetworkInfo extends \Beta\Microsoft\Graph\Model\Entity
         return $this;
     }
     /**
-    * Gets the wifiBatteryCharge
-    * Estimated remaining battery charge in percentage reported by the media endpoint.
+    * Gets the wifiVendorDriver
+    * Name of the WiFi driver used by the media endpoint. Value may be localized based on the language used by endpoint.
     *
-    * @return int The wifiBatteryCharge
+    * @return string The wifiVendorDriver
     */
-    public function getWifiBatteryCharge()
+    public function getWifiVendorDriver()
     {
-        if (array_key_exists("wifiBatteryCharge", $this->_propDict)) {
-            return $this->_propDict["wifiBatteryCharge"];
+        if (array_key_exists("wifiVendorDriver", $this->_propDict)) {
+            return $this->_propDict["wifiVendorDriver"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the wifiBatteryCharge
-    * Estimated remaining battery charge in percentage reported by the media endpoint.
+    * Sets the wifiVendorDriver
+    * Name of the WiFi driver used by the media endpoint. Value may be localized based on the language used by endpoint.
     *
-    * @param int $val The value of the wifiBatteryCharge
+    * @param string $val The value of the wifiVendorDriver
     *
     * @return NetworkInfo
     */
-    public function setWifiBatteryCharge($val)
+    public function setWifiVendorDriver($val)
     {
-        $this->_propDict["wifiBatteryCharge"] = $val;
+        $this->_propDict["wifiVendorDriver"] = $val;
         return $this;
     }
     /**
-    * Gets the dnsSuffix
-    * DNS suffix associated with the network adapter of the media endpoint.
+    * Gets the wifiVendorDriverVersion
+    * Version of the WiFi driver used by the media endpoint.
     *
-    * @return string The dnsSuffix
+    * @return string The wifiVendorDriverVersion
     */
-    public function getDnsSuffix()
+    public function getWifiVendorDriverVersion()
     {
-        if (array_key_exists("dnsSuffix", $this->_propDict)) {
-            return $this->_propDict["dnsSuffix"];
+        if (array_key_exists("wifiVendorDriverVersion", $this->_propDict)) {
+            return $this->_propDict["wifiVendorDriverVersion"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the dnsSuffix
-    * DNS suffix associated with the network adapter of the media endpoint.
+    * Sets the wifiVendorDriverVersion
+    * Version of the WiFi driver used by the media endpoint.
     *
-    * @param string $val The value of the dnsSuffix
+    * @param string $val The value of the wifiVendorDriverVersion
     *
     * @return NetworkInfo
     */
-    public function setDnsSuffix($val)
+    public function setWifiVendorDriverVersion($val)
     {
-        $this->_propDict["dnsSuffix"] = $val;
+        $this->_propDict["wifiVendorDriverVersion"] = $val;
         return $this;
-    }
-
-    /**
-    * Gets the sentQualityEventRatio
-    * Fraction of the call that the media endpoint detected the network was causing poor quality of the audio sent.
-    *
-    * @return Beta\Microsoft\Graph\Model\Single The sentQualityEventRatio
-    */
-    public function getSentQualityEventRatio()
-    {
-        if (array_key_exists("sentQualityEventRatio", $this->_propDict)) {
-            if (is_a($this->_propDict["sentQualityEventRatio"], "Beta\Microsoft\Graph\Model\Single")) {
-                return $this->_propDict["sentQualityEventRatio"];
-            } else {
-                $this->_propDict["sentQualityEventRatio"] = new Beta\Microsoft\Graph\Model\Single($this->_propDict["sentQualityEventRatio"]);
-                return $this->_propDict["sentQualityEventRatio"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the sentQualityEventRatio
-    * Fraction of the call that the media endpoint detected the network was causing poor quality of the audio sent.
-    *
-    * @param Beta\Microsoft\Graph\Model\Single $val The value to assign to the sentQualityEventRatio
-    *
-    * @return NetworkInfo The NetworkInfo
-    */
-    public function setSentQualityEventRatio($val)
-    {
-        $this->_propDict["sentQualityEventRatio"] = $val;
-         return $this;
-    }
-
-    /**
-    * Gets the receivedQualityEventRatio
-    * Fraction of the call that the media endpoint detected the network was causing poor quality of the audio received.
-    *
-    * @return Beta\Microsoft\Graph\Model\Single The receivedQualityEventRatio
-    */
-    public function getReceivedQualityEventRatio()
-    {
-        if (array_key_exists("receivedQualityEventRatio", $this->_propDict)) {
-            if (is_a($this->_propDict["receivedQualityEventRatio"], "Beta\Microsoft\Graph\Model\Single")) {
-                return $this->_propDict["receivedQualityEventRatio"];
-            } else {
-                $this->_propDict["receivedQualityEventRatio"] = new Beta\Microsoft\Graph\Model\Single($this->_propDict["receivedQualityEventRatio"]);
-                return $this->_propDict["receivedQualityEventRatio"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the receivedQualityEventRatio
-    * Fraction of the call that the media endpoint detected the network was causing poor quality of the audio received.
-    *
-    * @param Beta\Microsoft\Graph\Model\Single $val The value to assign to the receivedQualityEventRatio
-    *
-    * @return NetworkInfo The NetworkInfo
-    */
-    public function setReceivedQualityEventRatio($val)
-    {
-        $this->_propDict["receivedQualityEventRatio"] = $val;
-         return $this;
-    }
-
-    /**
-    * Gets the delayEventRatio
-    * Fraction of the call that the media endpoint detected the network delay was significant enough to impact the ability to have real-time two-way communication.
-    *
-    * @return Beta\Microsoft\Graph\Model\Single The delayEventRatio
-    */
-    public function getDelayEventRatio()
-    {
-        if (array_key_exists("delayEventRatio", $this->_propDict)) {
-            if (is_a($this->_propDict["delayEventRatio"], "Beta\Microsoft\Graph\Model\Single")) {
-                return $this->_propDict["delayEventRatio"];
-            } else {
-                $this->_propDict["delayEventRatio"] = new Beta\Microsoft\Graph\Model\Single($this->_propDict["delayEventRatio"]);
-                return $this->_propDict["delayEventRatio"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the delayEventRatio
-    * Fraction of the call that the media endpoint detected the network delay was significant enough to impact the ability to have real-time two-way communication.
-    *
-    * @param Beta\Microsoft\Graph\Model\Single $val The value to assign to the delayEventRatio
-    *
-    * @return NetworkInfo The NetworkInfo
-    */
-    public function setDelayEventRatio($val)
-    {
-        $this->_propDict["delayEventRatio"] = $val;
-         return $this;
-    }
-
-    /**
-    * Gets the bandwidthLowEventRatio
-    * Fraction of the call that the media endpoint detected the available bandwidth or bandwidth policy was low enough to cause poor quality of the audio sent.
-    *
-    * @return Beta\Microsoft\Graph\Model\Single The bandwidthLowEventRatio
-    */
-    public function getBandwidthLowEventRatio()
-    {
-        if (array_key_exists("bandwidthLowEventRatio", $this->_propDict)) {
-            if (is_a($this->_propDict["bandwidthLowEventRatio"], "Beta\Microsoft\Graph\Model\Single")) {
-                return $this->_propDict["bandwidthLowEventRatio"];
-            } else {
-                $this->_propDict["bandwidthLowEventRatio"] = new Beta\Microsoft\Graph\Model\Single($this->_propDict["bandwidthLowEventRatio"]);
-                return $this->_propDict["bandwidthLowEventRatio"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the bandwidthLowEventRatio
-    * Fraction of the call that the media endpoint detected the available bandwidth or bandwidth policy was low enough to cause poor quality of the audio sent.
-    *
-    * @param Beta\Microsoft\Graph\Model\Single $val The value to assign to the bandwidthLowEventRatio
-    *
-    * @return NetworkInfo The NetworkInfo
-    */
-    public function setBandwidthLowEventRatio($val)
-    {
-        $this->_propDict["bandwidthLowEventRatio"] = $val;
-         return $this;
     }
 }

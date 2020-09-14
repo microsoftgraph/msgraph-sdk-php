@@ -54,35 +54,6 @@ class GroupPolicyPresentationTextBox extends GroupPolicyPresentation
     }
     
     /**
-    * Gets the required
-    * Requirement to enter a value in the text box. Default value is false.
-    *
-    * @return bool The required
-    */
-    public function getRequired()
-    {
-        if (array_key_exists("required", $this->_propDict)) {
-            return $this->_propDict["required"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the required
-    * Requirement to enter a value in the text box. Default value is false.
-    *
-    * @param bool $val The required
-    *
-    * @return GroupPolicyPresentationTextBox
-    */
-    public function setRequired($val)
-    {
-        $this->_propDict["required"] = boolval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the maxLength
     * An unsigned integer that specifies the maximum number of text characters. Default value is 1023.
     *
@@ -108,6 +79,35 @@ class GroupPolicyPresentationTextBox extends GroupPolicyPresentation
     public function setMaxLength($val)
     {
         $this->_propDict["maxLength"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the required
+    * Requirement to enter a value in the text box. Default value is false.
+    *
+    * @return bool The required
+    */
+    public function getRequired()
+    {
+        if (array_key_exists("required", $this->_propDict)) {
+            return $this->_propDict["required"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the required
+    * Requirement to enter a value in the text box. Default value is false.
+    *
+    * @param bool $val The required
+    *
+    * @return GroupPolicyPresentationTextBox
+    */
+    public function setRequired($val)
+    {
+        $this->_propDict["required"] = boolval($val);
         return $this;
     }
     

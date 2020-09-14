@@ -25,64 +25,33 @@ namespace Beta\Microsoft\Graph\Model;
 class Trending extends Entity
 {
     /**
-    * Gets the weight
-    * Value indicating how much the document is currently trending. The larger the number, the more the document is currently trending around the user (the more relevant it is). Returned documents are sorted by this value.
+    * Gets the lastModifiedDateTime
     *
-    * @return float The weight
+    * @return \DateTime The lastModifiedDateTime
     */
-    public function getWeight()
+    public function getLastModifiedDateTime()
     {
-        if (array_key_exists("weight", $this->_propDict)) {
-            return $this->_propDict["weight"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the weight
-    * Value indicating how much the document is currently trending. The larger the number, the more the document is currently trending around the user (the more relevant it is). Returned documents are sorted by this value.
-    *
-    * @param float $val The weight
-    *
-    * @return Trending
-    */
-    public function setWeight($val)
-    {
-        $this->_propDict["weight"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the resourceVisualization
-    * Properties that you can use to visualize the document in your experience.
-    *
-    * @return ResourceVisualization The resourceVisualization
-    */
-    public function getResourceVisualization()
-    {
-        if (array_key_exists("resourceVisualization", $this->_propDict)) {
-            if (is_a($this->_propDict["resourceVisualization"], "Beta\Microsoft\Graph\Model\ResourceVisualization")) {
-                return $this->_propDict["resourceVisualization"];
+        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+                return $this->_propDict["lastModifiedDateTime"];
             } else {
-                $this->_propDict["resourceVisualization"] = new ResourceVisualization($this->_propDict["resourceVisualization"]);
-                return $this->_propDict["resourceVisualization"];
+                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
+                return $this->_propDict["lastModifiedDateTime"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the resourceVisualization
-    * Properties that you can use to visualize the document in your experience.
+    * Sets the lastModifiedDateTime
     *
-    * @param ResourceVisualization $val The resourceVisualization
+    * @param \DateTime $val The lastModifiedDateTime
     *
     * @return Trending
     */
-    public function setResourceVisualization($val)
+    public function setLastModifiedDateTime($val)
     {
-        $this->_propDict["resourceVisualization"] = $val;
+        $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
     
@@ -120,33 +89,64 @@ class Trending extends Entity
     }
     
     /**
-    * Gets the lastModifiedDateTime
+    * Gets the resourceVisualization
+    * Properties that you can use to visualize the document in your experience.
     *
-    * @return \DateTime The lastModifiedDateTime
+    * @return ResourceVisualization The resourceVisualization
     */
-    public function getLastModifiedDateTime()
+    public function getResourceVisualization()
     {
-        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
-                return $this->_propDict["lastModifiedDateTime"];
+        if (array_key_exists("resourceVisualization", $this->_propDict)) {
+            if (is_a($this->_propDict["resourceVisualization"], "Beta\Microsoft\Graph\Model\ResourceVisualization")) {
+                return $this->_propDict["resourceVisualization"];
             } else {
-                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
-                return $this->_propDict["lastModifiedDateTime"];
+                $this->_propDict["resourceVisualization"] = new ResourceVisualization($this->_propDict["resourceVisualization"]);
+                return $this->_propDict["resourceVisualization"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the lastModifiedDateTime
+    * Sets the resourceVisualization
+    * Properties that you can use to visualize the document in your experience.
     *
-    * @param \DateTime $val The lastModifiedDateTime
+    * @param ResourceVisualization $val The resourceVisualization
     *
     * @return Trending
     */
-    public function setLastModifiedDateTime($val)
+    public function setResourceVisualization($val)
     {
-        $this->_propDict["lastModifiedDateTime"] = $val;
+        $this->_propDict["resourceVisualization"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the weight
+    * Value indicating how much the document is currently trending. The larger the number, the more the document is currently trending around the user (the more relevant it is). Returned documents are sorted by this value.
+    *
+    * @return float The weight
+    */
+    public function getWeight()
+    {
+        if (array_key_exists("weight", $this->_propDict)) {
+            return $this->_propDict["weight"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the weight
+    * Value indicating how much the document is currently trending. The larger the number, the more the document is currently trending around the user (the more relevant it is). Returned documents are sorted by this value.
+    *
+    * @param float $val The weight
+    *
+    * @return Trending
+    */
+    public function setWeight($val)
+    {
+        $this->_propDict["weight"] = $val;
         return $this;
     }
     

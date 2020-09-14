@@ -23,34 +23,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class SignInFrequencySessionControl extends ConditionalAccessSessionControl
 {
-    /**
-    * Gets the value
-    * The number of days or hours.
-    *
-    * @return int The value
-    */
-    public function getValue()
-    {
-        if (array_key_exists("value", $this->_propDict)) {
-            return $this->_propDict["value"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the value
-    * The number of days or hours.
-    *
-    * @param int $val The value of the value
-    *
-    * @return SignInFrequencySessionControl
-    */
-    public function setValue($val)
-    {
-        $this->_propDict["value"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the type
@@ -83,5 +55,33 @@ class SignInFrequencySessionControl extends ConditionalAccessSessionControl
     {
         $this->_propDict["type"] = $val;
          return $this;
+    }
+    /**
+    * Gets the value
+    * The number of days or hours.
+    *
+    * @return int The value
+    */
+    public function getValue()
+    {
+        if (array_key_exists("value", $this->_propDict)) {
+            return $this->_propDict["value"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the value
+    * The number of days or hours.
+    *
+    * @param int $val The value of the value
+    *
+    * @return SignInFrequencySessionControl
+    */
+    public function setValue($val)
+    {
+        $this->_propDict["value"] = $val;
+        return $this;
     }
 }

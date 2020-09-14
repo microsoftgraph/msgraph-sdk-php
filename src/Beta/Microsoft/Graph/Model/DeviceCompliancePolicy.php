@@ -25,35 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class DeviceCompliancePolicy extends Entity
 {
     /**
-    * Gets the roleScopeTagIds
-    * List of Scope Tags for this Entity instance.
-    *
-    * @return string The roleScopeTagIds
-    */
-    public function getRoleScopeTagIds()
-    {
-        if (array_key_exists("roleScopeTagIds", $this->_propDict)) {
-            return $this->_propDict["roleScopeTagIds"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the roleScopeTagIds
-    * List of Scope Tags for this Entity instance.
-    *
-    * @param string $val The roleScopeTagIds
-    *
-    * @return DeviceCompliancePolicy
-    */
-    public function setRoleScopeTagIds($val)
-    {
-        $this->_propDict["roleScopeTagIds"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the createdDateTime
     * DateTime the object was created.
     *
@@ -116,6 +87,35 @@ class DeviceCompliancePolicy extends Entity
     }
     
     /**
+    * Gets the displayName
+    * Admin provided name of the device configuration.
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the displayName
+    * Admin provided name of the device configuration.
+    *
+    * @param string $val The displayName
+    *
+    * @return DeviceCompliancePolicy
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the lastModifiedDateTime
     * DateTime the object was last modified.
     *
@@ -149,31 +149,31 @@ class DeviceCompliancePolicy extends Entity
     }
     
     /**
-    * Gets the displayName
-    * Admin provided name of the device configuration.
+    * Gets the roleScopeTagIds
+    * List of Scope Tags for this Entity instance.
     *
-    * @return string The displayName
+    * @return string The roleScopeTagIds
     */
-    public function getDisplayName()
+    public function getRoleScopeTagIds()
     {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
+        if (array_key_exists("roleScopeTagIds", $this->_propDict)) {
+            return $this->_propDict["roleScopeTagIds"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the displayName
-    * Admin provided name of the device configuration.
+    * Sets the roleScopeTagIds
+    * List of Scope Tags for this Entity instance.
     *
-    * @param string $val The displayName
+    * @param string $val The roleScopeTagIds
     *
     * @return DeviceCompliancePolicy
     */
-    public function setDisplayName($val)
+    public function setRoleScopeTagIds($val)
     {
-        $this->_propDict["displayName"] = $val;
+        $this->_propDict["roleScopeTagIds"] = $val;
         return $this;
     }
     
@@ -208,31 +208,61 @@ class DeviceCompliancePolicy extends Entity
     
 
      /** 
-     * Gets the scheduledActionsForRule
-    * The list of scheduled action for this rule
+     * Gets the assignments
+    * The collection of assignments for this compliance policy.
      *
-     * @return array The scheduledActionsForRule
+     * @return array The assignments
      */
-    public function getScheduledActionsForRule()
+    public function getAssignments()
     {
-        if (array_key_exists("scheduledActionsForRule", $this->_propDict)) {
-           return $this->_propDict["scheduledActionsForRule"];
+        if (array_key_exists("assignments", $this->_propDict)) {
+           return $this->_propDict["assignments"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the scheduledActionsForRule
-    * The list of scheduled action for this rule
+    * Sets the assignments
+    * The collection of assignments for this compliance policy.
     *
-    * @param DeviceComplianceScheduledActionForRule $val The scheduledActionsForRule
+    * @param DeviceCompliancePolicyAssignment $val The assignments
     *
     * @return DeviceCompliancePolicy
     */
-    public function setScheduledActionsForRule($val)
+    public function setAssignments($val)
     {
-		$this->_propDict["scheduledActionsForRule"] = $val;
+		$this->_propDict["assignments"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the deviceSettingStateSummaries
+    * Compliance Setting State Device Summary
+     *
+     * @return array The deviceSettingStateSummaries
+     */
+    public function getDeviceSettingStateSummaries()
+    {
+        if (array_key_exists("deviceSettingStateSummaries", $this->_propDict)) {
+           return $this->_propDict["deviceSettingStateSummaries"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the deviceSettingStateSummaries
+    * Compliance Setting State Device Summary
+    *
+    * @param SettingStateDeviceSummary $val The deviceSettingStateSummaries
+    *
+    * @return DeviceCompliancePolicy
+    */
+    public function setDeviceSettingStateSummaries($val)
+    {
+		$this->_propDict["deviceSettingStateSummaries"] = $val;
         return $this;
     }
     
@@ -263,36 +293,6 @@ class DeviceCompliancePolicy extends Entity
     public function setDeviceStatuses($val)
     {
 		$this->_propDict["deviceStatuses"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the userStatuses
-    * List of DeviceComplianceUserStatus.
-     *
-     * @return array The userStatuses
-     */
-    public function getUserStatuses()
-    {
-        if (array_key_exists("userStatuses", $this->_propDict)) {
-           return $this->_propDict["userStatuses"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the userStatuses
-    * List of DeviceComplianceUserStatus.
-    *
-    * @param DeviceComplianceUserStatus $val The userStatuses
-    *
-    * @return DeviceCompliancePolicy
-    */
-    public function setUserStatuses($val)
-    {
-		$this->_propDict["userStatuses"] = $val;
         return $this;
     }
     
@@ -329,6 +329,66 @@ class DeviceCompliancePolicy extends Entity
         return $this;
     }
     
+
+     /** 
+     * Gets the scheduledActionsForRule
+    * The list of scheduled action for this rule
+     *
+     * @return array The scheduledActionsForRule
+     */
+    public function getScheduledActionsForRule()
+    {
+        if (array_key_exists("scheduledActionsForRule", $this->_propDict)) {
+           return $this->_propDict["scheduledActionsForRule"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the scheduledActionsForRule
+    * The list of scheduled action for this rule
+    *
+    * @param DeviceComplianceScheduledActionForRule $val The scheduledActionsForRule
+    *
+    * @return DeviceCompliancePolicy
+    */
+    public function setScheduledActionsForRule($val)
+    {
+		$this->_propDict["scheduledActionsForRule"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the userStatuses
+    * List of DeviceComplianceUserStatus.
+     *
+     * @return array The userStatuses
+     */
+    public function getUserStatuses()
+    {
+        if (array_key_exists("userStatuses", $this->_propDict)) {
+           return $this->_propDict["userStatuses"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the userStatuses
+    * List of DeviceComplianceUserStatus.
+    *
+    * @param DeviceComplianceUserStatus $val The userStatuses
+    *
+    * @return DeviceCompliancePolicy
+    */
+    public function setUserStatuses($val)
+    {
+		$this->_propDict["userStatuses"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the userStatusOverview
     * Device compliance users status overview
@@ -359,66 +419,6 @@ class DeviceCompliancePolicy extends Entity
     public function setUserStatusOverview($val)
     {
         $this->_propDict["userStatusOverview"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the deviceSettingStateSummaries
-    * Compliance Setting State Device Summary
-     *
-     * @return array The deviceSettingStateSummaries
-     */
-    public function getDeviceSettingStateSummaries()
-    {
-        if (array_key_exists("deviceSettingStateSummaries", $this->_propDict)) {
-           return $this->_propDict["deviceSettingStateSummaries"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the deviceSettingStateSummaries
-    * Compliance Setting State Device Summary
-    *
-    * @param SettingStateDeviceSummary $val The deviceSettingStateSummaries
-    *
-    * @return DeviceCompliancePolicy
-    */
-    public function setDeviceSettingStateSummaries($val)
-    {
-		$this->_propDict["deviceSettingStateSummaries"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the assignments
-    * The collection of assignments for this compliance policy.
-     *
-     * @return array The assignments
-     */
-    public function getAssignments()
-    {
-        if (array_key_exists("assignments", $this->_propDict)) {
-           return $this->_propDict["assignments"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the assignments
-    * The collection of assignments for this compliance policy.
-    *
-    * @param DeviceCompliancePolicyAssignment $val The assignments
-    *
-    * @return DeviceCompliancePolicy
-    */
-    public function setAssignments($val)
-    {
-		$this->_propDict["assignments"] = $val;
         return $this;
     }
     

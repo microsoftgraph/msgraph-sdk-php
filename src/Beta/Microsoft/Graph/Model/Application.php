@@ -177,64 +177,6 @@ class Application extends DirectoryObject
     }
     
     /**
-    * Gets the isFallbackPublicClient
-    * Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as web app. There are certain scenarios where Azure AD cannot determine the client application type (e.g. ROPC flow where it is configured without specifying a redirect URI). In those cases Azure AD will interpret the application type based on the value of this property.
-    *
-    * @return bool The isFallbackPublicClient
-    */
-    public function getIsFallbackPublicClient()
-    {
-        if (array_key_exists("isFallbackPublicClient", $this->_propDict)) {
-            return $this->_propDict["isFallbackPublicClient"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the isFallbackPublicClient
-    * Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as web app. There are certain scenarios where Azure AD cannot determine the client application type (e.g. ROPC flow where it is configured without specifying a redirect URI). In those cases Azure AD will interpret the application type based on the value of this property.
-    *
-    * @param bool $val The isFallbackPublicClient
-    *
-    * @return Application
-    */
-    public function setIsFallbackPublicClient($val)
-    {
-        $this->_propDict["isFallbackPublicClient"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the identifierUris
-    * The URIs that identify the application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant. For more information see Application Objects and Service Principal Objects. The any operator is required for filter expressions on multi-valued properties. Not nullable.
-    *
-    * @return string The identifierUris
-    */
-    public function getIdentifierUris()
-    {
-        if (array_key_exists("identifierUris", $this->_propDict)) {
-            return $this->_propDict["identifierUris"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the identifierUris
-    * The URIs that identify the application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant. For more information see Application Objects and Service Principal Objects. The any operator is required for filter expressions on multi-valued properties. Not nullable.
-    *
-    * @param string $val The identifierUris
-    *
-    * @return Application
-    */
-    public function setIdentifierUris($val)
-    {
-        $this->_propDict["identifierUris"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the displayName
     * The display name for the application.
     *
@@ -289,6 +231,35 @@ class Application extends DirectoryObject
     public function setGroupMembershipClaims($val)
     {
         $this->_propDict["groupMembershipClaims"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the identifierUris
+    * The URIs that identify the application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant. For more information see Application Objects and Service Principal Objects. The any operator is required for filter expressions on multi-valued properties. Not nullable.
+    *
+    * @return string The identifierUris
+    */
+    public function getIdentifierUris()
+    {
+        if (array_key_exists("identifierUris", $this->_propDict)) {
+            return $this->_propDict["identifierUris"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the identifierUris
+    * The URIs that identify the application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant. For more information see Application Objects and Service Principal Objects. The any operator is required for filter expressions on multi-valued properties. Not nullable.
+    *
+    * @param string $val The identifierUris
+    *
+    * @return Application
+    */
+    public function setIdentifierUris($val)
+    {
+        $this->_propDict["identifierUris"] = $val;
         return $this;
     }
     
@@ -349,6 +320,35 @@ class Application extends DirectoryObject
     public function setIsDeviceOnlyAuthSupported($val)
     {
         $this->_propDict["isDeviceOnlyAuthSupported"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the isFallbackPublicClient
+    * Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as web app. There are certain scenarios where Azure AD cannot determine the client application type (e.g. ROPC flow where it is configured without specifying a redirect URI). In those cases Azure AD will interpret the application type based on the value of this property.
+    *
+    * @return bool The isFallbackPublicClient
+    */
+    public function getIsFallbackPublicClient()
+    {
+        if (array_key_exists("isFallbackPublicClient", $this->_propDict)) {
+            return $this->_propDict["isFallbackPublicClient"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isFallbackPublicClient
+    * Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as web app. There are certain scenarios where Azure AD cannot determine the client application type (e.g. ROPC flow where it is configured without specifying a redirect URI). In those cases Azure AD will interpret the application type based on the value of this property.
+    *
+    * @param bool $val The isFallbackPublicClient
+    *
+    * @return Application
+    */
+    public function setIsFallbackPublicClient($val)
+    {
+        $this->_propDict["isFallbackPublicClient"] = boolval($val);
         return $this;
     }
     
@@ -660,6 +660,37 @@ class Application extends DirectoryObject
     }
     
     /**
+    * Gets the spa
+    *
+    * @return SpaApplication The spa
+    */
+    public function getSpa()
+    {
+        if (array_key_exists("spa", $this->_propDict)) {
+            if (is_a($this->_propDict["spa"], "Beta\Microsoft\Graph\Model\SpaApplication")) {
+                return $this->_propDict["spa"];
+            } else {
+                $this->_propDict["spa"] = new SpaApplication($this->_propDict["spa"]);
+                return $this->_propDict["spa"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the spa
+    *
+    * @param SpaApplication $val The spa
+    *
+    * @return Application
+    */
+    public function setSpa($val)
+    {
+        $this->_propDict["spa"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the tags
     * Custom strings that can be used to categorize and identify the application. Not nullable.
     *
@@ -808,36 +839,6 @@ class Application extends DirectoryObject
         return $this;
     }
     
-
-     /** 
-     * Gets the extensionProperties
-    * Read-only. Nullable.
-     *
-     * @return array The extensionProperties
-     */
-    public function getExtensionProperties()
-    {
-        if (array_key_exists("extensionProperties", $this->_propDict)) {
-           return $this->_propDict["extensionProperties"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the extensionProperties
-    * Read-only. Nullable.
-    *
-    * @param ExtensionProperty $val The extensionProperties
-    *
-    * @return Application
-    */
-    public function setExtensionProperties($val)
-    {
-		$this->_propDict["extensionProperties"] = $val;
-        return $this;
-    }
-    
     /**
     * Gets the createdOnBehalfOf
     * Read-only.
@@ -873,31 +874,31 @@ class Application extends DirectoryObject
     
 
      /** 
-     * Gets the owners
-    * Directory objects that are owners of the application. The owners are a set of non-admin users who are allowed to modify this object. Requires version 2013-11-08 or newer. Read-only. Nullable.
+     * Gets the extensionProperties
+    * Read-only. Nullable.
      *
-     * @return array The owners
+     * @return array The extensionProperties
      */
-    public function getOwners()
+    public function getExtensionProperties()
     {
-        if (array_key_exists("owners", $this->_propDict)) {
-           return $this->_propDict["owners"];
+        if (array_key_exists("extensionProperties", $this->_propDict)) {
+           return $this->_propDict["extensionProperties"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the owners
-    * Directory objects that are owners of the application. The owners are a set of non-admin users who are allowed to modify this object. Requires version 2013-11-08 or newer. Read-only. Nullable.
+    * Sets the extensionProperties
+    * Read-only. Nullable.
     *
-    * @param DirectoryObject $val The owners
+    * @param ExtensionProperty $val The extensionProperties
     *
     * @return Application
     */
-    public function setOwners($val)
+    public function setExtensionProperties($val)
     {
-		$this->_propDict["owners"] = $val;
+		$this->_propDict["extensionProperties"] = $val;
         return $this;
     }
     
@@ -926,6 +927,36 @@ class Application extends DirectoryObject
     public function setHomeRealmDiscoveryPolicies($val)
     {
 		$this->_propDict["homeRealmDiscoveryPolicies"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the owners
+    * Directory objects that are owners of the application. The owners are a set of non-admin users who are allowed to modify this object. Requires version 2013-11-08 or newer. Read-only. Nullable.
+     *
+     * @return array The owners
+     */
+    public function getOwners()
+    {
+        if (array_key_exists("owners", $this->_propDict)) {
+           return $this->_propDict["owners"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the owners
+    * Directory objects that are owners of the application. The owners are a set of non-admin users who are allowed to modify this object. Requires version 2013-11-08 or newer. Read-only. Nullable.
+    *
+    * @param DirectoryObject $val The owners
+    *
+    * @return Application
+    */
+    public function setOwners($val)
+    {
+		$this->_propDict["owners"] = $val;
         return $this;
     }
     

@@ -25,33 +25,33 @@ class EvaluateLabelJobResult extends Entity
 {
 
     /**
-    * Gets the sensitivityLabel
+    * Gets the responsiblePolicy
     *
-    * @return MatchingLabel The sensitivityLabel
+    * @return ResponsiblePolicy The responsiblePolicy
     */
-    public function getSensitivityLabel()
+    public function getResponsiblePolicy()
     {
-        if (array_key_exists("sensitivityLabel", $this->_propDict)) {
-            if (is_a($this->_propDict["sensitivityLabel"], "Beta\Microsoft\Graph\Model\MatchingLabel")) {
-                return $this->_propDict["sensitivityLabel"];
+        if (array_key_exists("responsiblePolicy", $this->_propDict)) {
+            if (is_a($this->_propDict["responsiblePolicy"], "Beta\Microsoft\Graph\Model\ResponsiblePolicy")) {
+                return $this->_propDict["responsiblePolicy"];
             } else {
-                $this->_propDict["sensitivityLabel"] = new MatchingLabel($this->_propDict["sensitivityLabel"]);
-                return $this->_propDict["sensitivityLabel"];
+                $this->_propDict["responsiblePolicy"] = new ResponsiblePolicy($this->_propDict["responsiblePolicy"]);
+                return $this->_propDict["responsiblePolicy"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the sensitivityLabel
+    * Sets the responsiblePolicy
     *
-    * @param MatchingLabel $val The value to assign to the sensitivityLabel
+    * @param ResponsiblePolicy $val The value to assign to the responsiblePolicy
     *
     * @return EvaluateLabelJobResult The EvaluateLabelJobResult
     */
-    public function setSensitivityLabel($val)
+    public function setResponsiblePolicy($val)
     {
-        $this->_propDict["sensitivityLabel"] = $val;
+        $this->_propDict["responsiblePolicy"] = $val;
          return $this;
     }
 
@@ -87,33 +87,33 @@ class EvaluateLabelJobResult extends Entity
     }
 
     /**
-    * Gets the responsiblePolicy
+    * Gets the sensitivityLabel
     *
-    * @return ResponsiblePolicy The responsiblePolicy
+    * @return MatchingLabel The sensitivityLabel
     */
-    public function getResponsiblePolicy()
+    public function getSensitivityLabel()
     {
-        if (array_key_exists("responsiblePolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["responsiblePolicy"], "Beta\Microsoft\Graph\Model\ResponsiblePolicy")) {
-                return $this->_propDict["responsiblePolicy"];
+        if (array_key_exists("sensitivityLabel", $this->_propDict)) {
+            if (is_a($this->_propDict["sensitivityLabel"], "Beta\Microsoft\Graph\Model\MatchingLabel")) {
+                return $this->_propDict["sensitivityLabel"];
             } else {
-                $this->_propDict["responsiblePolicy"] = new ResponsiblePolicy($this->_propDict["responsiblePolicy"]);
-                return $this->_propDict["responsiblePolicy"];
+                $this->_propDict["sensitivityLabel"] = new MatchingLabel($this->_propDict["sensitivityLabel"]);
+                return $this->_propDict["sensitivityLabel"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the responsiblePolicy
+    * Sets the sensitivityLabel
     *
-    * @param ResponsiblePolicy $val The value to assign to the responsiblePolicy
+    * @param MatchingLabel $val The value to assign to the sensitivityLabel
     *
     * @return EvaluateLabelJobResult The EvaluateLabelJobResult
     */
-    public function setResponsiblePolicy($val)
+    public function setSensitivityLabel($val)
     {
-        $this->_propDict["responsiblePolicy"] = $val;
+        $this->_propDict["sensitivityLabel"] = $val;
          return $this;
     }
 }

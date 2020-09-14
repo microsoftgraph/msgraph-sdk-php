@@ -25,35 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class AndroidLobApp extends MobileLobApp
 {
     /**
-    * Gets the packageId
-    * The package identifier.
-    *
-    * @return string The packageId
-    */
-    public function getPackageId()
-    {
-        if (array_key_exists("packageId", $this->_propDict)) {
-            return $this->_propDict["packageId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the packageId
-    * The package identifier.
-    *
-    * @param string $val The packageId
-    *
-    * @return AndroidLobApp
-    */
-    public function setPackageId($val)
-    {
-        $this->_propDict["packageId"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the identityName
     * The Identity Name.
     *
@@ -79,6 +50,35 @@ class AndroidLobApp extends MobileLobApp
     public function setIdentityName($val)
     {
         $this->_propDict["identityName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the identityVersion
+    * The identity version.
+    *
+    * @return string The identityVersion
+    */
+    public function getIdentityVersion()
+    {
+        if (array_key_exists("identityVersion", $this->_propDict)) {
+            return $this->_propDict["identityVersion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the identityVersion
+    * The identity version.
+    *
+    * @param string $val The identityVersion
+    *
+    * @return AndroidLobApp
+    */
+    public function setIdentityVersion($val)
+    {
+        $this->_propDict["identityVersion"] = $val;
         return $this;
     }
     
@@ -116,31 +116,31 @@ class AndroidLobApp extends MobileLobApp
     }
     
     /**
-    * Gets the versionName
-    * The version name of Android Line of Business (LoB) app.
+    * Gets the packageId
+    * The package identifier.
     *
-    * @return string The versionName
+    * @return string The packageId
     */
-    public function getVersionName()
+    public function getPackageId()
     {
-        if (array_key_exists("versionName", $this->_propDict)) {
-            return $this->_propDict["versionName"];
+        if (array_key_exists("packageId", $this->_propDict)) {
+            return $this->_propDict["packageId"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the versionName
-    * The version name of Android Line of Business (LoB) app.
+    * Sets the packageId
+    * The package identifier.
     *
-    * @param string $val The versionName
+    * @param string $val The packageId
     *
     * @return AndroidLobApp
     */
-    public function setVersionName($val)
+    public function setPackageId($val)
     {
-        $this->_propDict["versionName"] = $val;
+        $this->_propDict["packageId"] = $val;
         return $this;
     }
     
@@ -174,31 +174,31 @@ class AndroidLobApp extends MobileLobApp
     }
     
     /**
-    * Gets the identityVersion
-    * The identity version.
+    * Gets the versionName
+    * The version name of Android Line of Business (LoB) app.
     *
-    * @return string The identityVersion
+    * @return string The versionName
     */
-    public function getIdentityVersion()
+    public function getVersionName()
     {
-        if (array_key_exists("identityVersion", $this->_propDict)) {
-            return $this->_propDict["identityVersion"];
+        if (array_key_exists("versionName", $this->_propDict)) {
+            return $this->_propDict["versionName"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the identityVersion
-    * The identity version.
+    * Sets the versionName
+    * The version name of Android Line of Business (LoB) app.
     *
-    * @param string $val The identityVersion
+    * @param string $val The versionName
     *
     * @return AndroidLobApp
     */
-    public function setIdentityVersion($val)
+    public function setVersionName($val)
     {
-        $this->_propDict["identityVersion"] = $val;
+        $this->_propDict["versionName"] = $val;
         return $this;
     }
     

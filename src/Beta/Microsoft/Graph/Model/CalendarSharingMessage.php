@@ -52,33 +52,6 @@ class CalendarSharingMessage extends Message
     }
     
     /**
-    * Gets the suggestedCalendarName
-    *
-    * @return string The suggestedCalendarName
-    */
-    public function getSuggestedCalendarName()
-    {
-        if (array_key_exists("suggestedCalendarName", $this->_propDict)) {
-            return $this->_propDict["suggestedCalendarName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the suggestedCalendarName
-    *
-    * @param string $val The suggestedCalendarName
-    *
-    * @return CalendarSharingMessage
-    */
-    public function setSuggestedCalendarName($val)
-    {
-        $this->_propDict["suggestedCalendarName"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the sharingMessageAction
     *
     * @return CalendarSharingMessageAction The sharingMessageAction
@@ -134,6 +107,33 @@ class CalendarSharingMessage extends Message
     public function setSharingMessageActions($val)
     {
 		$this->_propDict["sharingMessageActions"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the suggestedCalendarName
+    *
+    * @return string The suggestedCalendarName
+    */
+    public function getSuggestedCalendarName()
+    {
+        if (array_key_exists("suggestedCalendarName", $this->_propDict)) {
+            return $this->_propDict["suggestedCalendarName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the suggestedCalendarName
+    *
+    * @param string $val The suggestedCalendarName
+    *
+    * @return CalendarSharingMessage
+    */
+    public function setSuggestedCalendarName($val)
+    {
+        $this->_propDict["suggestedCalendarName"] = $val;
         return $this;
     }
     

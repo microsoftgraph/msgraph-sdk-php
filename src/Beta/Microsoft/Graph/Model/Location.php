@@ -23,62 +23,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class Location extends Entity
 {
-    /**
-    * Gets the displayName
-    * The name associated with the location.
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the displayName
-    * The name associated with the location.
-    *
-    * @param string $val The value of the displayName
-    *
-    * @return Location
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the locationEmailAddress
-    * Optional email address of the location.
-    *
-    * @return string The locationEmailAddress
-    */
-    public function getLocationEmailAddress()
-    {
-        if (array_key_exists("locationEmailAddress", $this->_propDict)) {
-            return $this->_propDict["locationEmailAddress"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the locationEmailAddress
-    * Optional email address of the location.
-    *
-    * @param string $val The value of the locationEmailAddress
-    *
-    * @return Location
-    */
-    public function setLocationEmailAddress($val)
-    {
-        $this->_propDict["locationEmailAddress"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the address
@@ -146,31 +90,59 @@ class Location extends Entity
          return $this;
     }
     /**
-    * Gets the locationUri
-    * Optional URI representing the location.
+    * Gets the displayName
+    * The name associated with the location.
     *
-    * @return string The locationUri
+    * @return string The displayName
     */
-    public function getLocationUri()
+    public function getDisplayName()
     {
-        if (array_key_exists("locationUri", $this->_propDict)) {
-            return $this->_propDict["locationUri"];
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the locationUri
-    * Optional URI representing the location.
+    * Sets the displayName
+    * The name associated with the location.
     *
-    * @param string $val The value of the locationUri
+    * @param string $val The value of the displayName
     *
     * @return Location
     */
-    public function setLocationUri($val)
+    public function setDisplayName($val)
     {
-        $this->_propDict["locationUri"] = $val;
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the locationEmailAddress
+    * Optional email address of the location.
+    *
+    * @return string The locationEmailAddress
+    */
+    public function getLocationEmailAddress()
+    {
+        if (array_key_exists("locationEmailAddress", $this->_propDict)) {
+            return $this->_propDict["locationEmailAddress"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the locationEmailAddress
+    * Optional email address of the location.
+    *
+    * @param string $val The value of the locationEmailAddress
+    *
+    * @return Location
+    */
+    public function setLocationEmailAddress($val)
+    {
+        $this->_propDict["locationEmailAddress"] = $val;
         return $this;
     }
 
@@ -205,6 +177,34 @@ class Location extends Entity
     {
         $this->_propDict["locationType"] = $val;
          return $this;
+    }
+    /**
+    * Gets the locationUri
+    * Optional URI representing the location.
+    *
+    * @return string The locationUri
+    */
+    public function getLocationUri()
+    {
+        if (array_key_exists("locationUri", $this->_propDict)) {
+            return $this->_propDict["locationUri"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the locationUri
+    * Optional URI representing the location.
+    *
+    * @param string $val The value of the locationUri
+    *
+    * @return Location
+    */
+    public function setLocationUri($val)
+    {
+        $this->_propDict["locationUri"] = $val;
+        return $this;
     }
     /**
     * Gets the uniqueId

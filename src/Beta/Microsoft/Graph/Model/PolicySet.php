@@ -58,68 +58,6 @@ class PolicySet extends Entity
     }
     
     /**
-    * Gets the lastModifiedDateTime
-    * Last modified time of the PolicySet.
-    *
-    * @return \DateTime The lastModifiedDateTime
-    */
-    public function getLastModifiedDateTime()
-    {
-        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
-                return $this->_propDict["lastModifiedDateTime"];
-            } else {
-                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
-                return $this->_propDict["lastModifiedDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the lastModifiedDateTime
-    * Last modified time of the PolicySet.
-    *
-    * @param \DateTime $val The lastModifiedDateTime
-    *
-    * @return PolicySet
-    */
-    public function setLastModifiedDateTime($val)
-    {
-        $this->_propDict["lastModifiedDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the displayName
-    * DisplayName of the PolicySet.
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the displayName
-    * DisplayName of the PolicySet.
-    *
-    * @param string $val The displayName
-    *
-    * @return PolicySet
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the description
     * Description of the PolicySet.
     *
@@ -149,35 +87,31 @@ class PolicySet extends Entity
     }
     
     /**
-    * Gets the status
-    * Validation/assignment status of the PolicySet.
+    * Gets the displayName
+    * DisplayName of the PolicySet.
     *
-    * @return PolicySetStatus The status
+    * @return string The displayName
     */
-    public function getStatus()
+    public function getDisplayName()
     {
-        if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Beta\Microsoft\Graph\Model\PolicySetStatus")) {
-                return $this->_propDict["status"];
-            } else {
-                $this->_propDict["status"] = new PolicySetStatus($this->_propDict["status"]);
-                return $this->_propDict["status"];
-            }
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the status
-    * Validation/assignment status of the PolicySet.
+    * Sets the displayName
+    * DisplayName of the PolicySet.
     *
-    * @param PolicySetStatus $val The status
+    * @param string $val The displayName
     *
     * @return PolicySet
     */
-    public function setStatus($val)
+    public function setDisplayName($val)
     {
-        $this->_propDict["status"] = $val;
+        $this->_propDict["displayName"] = $val;
         return $this;
     }
     
@@ -244,6 +178,39 @@ class PolicySet extends Entity
     }
     
     /**
+    * Gets the lastModifiedDateTime
+    * Last modified time of the PolicySet.
+    *
+    * @return \DateTime The lastModifiedDateTime
+    */
+    public function getLastModifiedDateTime()
+    {
+        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+                return $this->_propDict["lastModifiedDateTime"];
+            } else {
+                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
+                return $this->_propDict["lastModifiedDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the lastModifiedDateTime
+    * Last modified time of the PolicySet.
+    *
+    * @param \DateTime $val The lastModifiedDateTime
+    *
+    * @return PolicySet
+    */
+    public function setLastModifiedDateTime($val)
+    {
+        $this->_propDict["lastModifiedDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the roleScopeTags
     * RoleScopeTags of the PolicySet
     *
@@ -269,6 +236,39 @@ class PolicySet extends Entity
     public function setRoleScopeTags($val)
     {
         $this->_propDict["roleScopeTags"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the status
+    * Validation/assignment status of the PolicySet.
+    *
+    * @return PolicySetStatus The status
+    */
+    public function getStatus()
+    {
+        if (array_key_exists("status", $this->_propDict)) {
+            if (is_a($this->_propDict["status"], "Beta\Microsoft\Graph\Model\PolicySetStatus")) {
+                return $this->_propDict["status"];
+            } else {
+                $this->_propDict["status"] = new PolicySetStatus($this->_propDict["status"]);
+                return $this->_propDict["status"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the status
+    * Validation/assignment status of the PolicySet.
+    *
+    * @param PolicySetStatus $val The status
+    *
+    * @return PolicySet
+    */
+    public function setStatus($val)
+    {
+        $this->_propDict["status"] = $val;
         return $this;
     }
     

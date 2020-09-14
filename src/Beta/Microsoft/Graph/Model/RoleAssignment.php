@@ -25,6 +25,35 @@ namespace Beta\Microsoft\Graph\Model;
 class RoleAssignment extends Entity
 {
     /**
+    * Gets the description
+    * Description of the Role Assignment.
+    *
+    * @return string The description
+    */
+    public function getDescription()
+    {
+        if (array_key_exists("description", $this->_propDict)) {
+            return $this->_propDict["description"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the description
+    * Description of the Role Assignment.
+    *
+    * @param string $val The description
+    *
+    * @return RoleAssignment
+    */
+    public function setDescription($val)
+    {
+        $this->_propDict["description"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the displayName
     * The display or friendly name of the role Assignment.
     *
@@ -54,31 +83,31 @@ class RoleAssignment extends Entity
     }
     
     /**
-    * Gets the description
-    * Description of the Role Assignment.
+    * Gets the resourceScopes
+    * List of ids of role scope member security groups.  These are IDs from Azure Active Directory.
     *
-    * @return string The description
+    * @return string The resourceScopes
     */
-    public function getDescription()
+    public function getResourceScopes()
     {
-        if (array_key_exists("description", $this->_propDict)) {
-            return $this->_propDict["description"];
+        if (array_key_exists("resourceScopes", $this->_propDict)) {
+            return $this->_propDict["resourceScopes"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the description
-    * Description of the Role Assignment.
+    * Sets the resourceScopes
+    * List of ids of role scope member security groups.  These are IDs from Azure Active Directory.
     *
-    * @param string $val The description
+    * @param string $val The resourceScopes
     *
     * @return RoleAssignment
     */
-    public function setDescription($val)
+    public function setResourceScopes($val)
     {
-        $this->_propDict["description"] = $val;
+        $this->_propDict["resourceScopes"] = $val;
         return $this;
     }
     
@@ -141,35 +170,6 @@ class RoleAssignment extends Entity
     public function setScopeType($val)
     {
         $this->_propDict["scopeType"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the resourceScopes
-    * List of ids of role scope member security groups.  These are IDs from Azure Active Directory.
-    *
-    * @return string The resourceScopes
-    */
-    public function getResourceScopes()
-    {
-        if (array_key_exists("resourceScopes", $this->_propDict)) {
-            return $this->_propDict["resourceScopes"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the resourceScopes
-    * List of ids of role scope member security groups.  These are IDs from Azure Active Directory.
-    *
-    * @param string $val The resourceScopes
-    *
-    * @return RoleAssignment
-    */
-    public function setResourceScopes($val)
-    {
-        $this->_propDict["resourceScopes"] = $val;
         return $this;
     }
     

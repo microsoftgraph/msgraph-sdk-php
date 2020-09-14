@@ -25,39 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class SecurityConfigurationTask extends DeviceAppManagementTask
 {
     /**
-    * Gets the endpointSecurityPolicy
-    * The endpoint security policy type.
-    *
-    * @return EndpointSecurityConfigurationType The endpointSecurityPolicy
-    */
-    public function getEndpointSecurityPolicy()
-    {
-        if (array_key_exists("endpointSecurityPolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["endpointSecurityPolicy"], "Beta\Microsoft\Graph\Model\EndpointSecurityConfigurationType")) {
-                return $this->_propDict["endpointSecurityPolicy"];
-            } else {
-                $this->_propDict["endpointSecurityPolicy"] = new EndpointSecurityConfigurationType($this->_propDict["endpointSecurityPolicy"]);
-                return $this->_propDict["endpointSecurityPolicy"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the endpointSecurityPolicy
-    * The endpoint security policy type.
-    *
-    * @param EndpointSecurityConfigurationType $val The endpointSecurityPolicy
-    *
-    * @return SecurityConfigurationTask
-    */
-    public function setEndpointSecurityPolicy($val)
-    {
-        $this->_propDict["endpointSecurityPolicy"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the applicablePlatform
     * The applicable platform.
     *
@@ -87,6 +54,39 @@ class SecurityConfigurationTask extends DeviceAppManagementTask
     public function setApplicablePlatform($val)
     {
         $this->_propDict["applicablePlatform"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the endpointSecurityPolicy
+    * The endpoint security policy type.
+    *
+    * @return EndpointSecurityConfigurationType The endpointSecurityPolicy
+    */
+    public function getEndpointSecurityPolicy()
+    {
+        if (array_key_exists("endpointSecurityPolicy", $this->_propDict)) {
+            if (is_a($this->_propDict["endpointSecurityPolicy"], "Beta\Microsoft\Graph\Model\EndpointSecurityConfigurationType")) {
+                return $this->_propDict["endpointSecurityPolicy"];
+            } else {
+                $this->_propDict["endpointSecurityPolicy"] = new EndpointSecurityConfigurationType($this->_propDict["endpointSecurityPolicy"]);
+                return $this->_propDict["endpointSecurityPolicy"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the endpointSecurityPolicy
+    * The endpoint security policy type.
+    *
+    * @param EndpointSecurityConfigurationType $val The endpointSecurityPolicy
+    *
+    * @return SecurityConfigurationTask
+    */
+    public function setEndpointSecurityPolicy($val)
+    {
+        $this->_propDict["endpointSecurityPolicy"] = $val;
         return $this;
     }
     
@@ -152,35 +152,6 @@ class SecurityConfigurationTask extends DeviceAppManagementTask
         return $this;
     }
     
-    /**
-    * Gets the managedDeviceCount
-    * The number of vulnerable devices.
-    *
-    * @return int The managedDeviceCount
-    */
-    public function getManagedDeviceCount()
-    {
-        if (array_key_exists("managedDeviceCount", $this->_propDict)) {
-            return $this->_propDict["managedDeviceCount"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the managedDeviceCount
-    * The number of vulnerable devices.
-    *
-    * @param int $val The managedDeviceCount
-    *
-    * @return SecurityConfigurationTask
-    */
-    public function setManagedDeviceCount($val)
-    {
-        $this->_propDict["managedDeviceCount"] = intval($val);
-        return $this;
-    }
-    
 
      /** 
      * Gets the intendedSettings
@@ -208,6 +179,35 @@ class SecurityConfigurationTask extends DeviceAppManagementTask
     public function setIntendedSettings($val)
     {
 		$this->_propDict["intendedSettings"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the managedDeviceCount
+    * The number of vulnerable devices.
+    *
+    * @return int The managedDeviceCount
+    */
+    public function getManagedDeviceCount()
+    {
+        if (array_key_exists("managedDeviceCount", $this->_propDict)) {
+            return $this->_propDict["managedDeviceCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the managedDeviceCount
+    * The number of vulnerable devices.
+    *
+    * @param int $val The managedDeviceCount
+    *
+    * @return SecurityConfigurationTask
+    */
+    public function setManagedDeviceCount($val)
+    {
+        $this->_propDict["managedDeviceCount"] = intval($val);
         return $this;
     }
     

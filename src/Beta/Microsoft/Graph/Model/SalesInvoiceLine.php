@@ -25,87 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class SalesInvoiceLine extends Entity
 {
     /**
-    * Gets the documentId
-    *
-    * @return string The documentId
-    */
-    public function getDocumentId()
-    {
-        if (array_key_exists("documentId", $this->_propDict)) {
-            return $this->_propDict["documentId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the documentId
-    *
-    * @param string $val The documentId
-    *
-    * @return SalesInvoiceLine
-    */
-    public function setDocumentId($val)
-    {
-        $this->_propDict["documentId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the sequence
-    *
-    * @return int The sequence
-    */
-    public function getSequence()
-    {
-        if (array_key_exists("sequence", $this->_propDict)) {
-            return $this->_propDict["sequence"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the sequence
-    *
-    * @param int $val The sequence
-    *
-    * @return SalesInvoiceLine
-    */
-    public function setSequence($val)
-    {
-        $this->_propDict["sequence"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the itemId
-    *
-    * @return string The itemId
-    */
-    public function getItemId()
-    {
-        if (array_key_exists("itemId", $this->_propDict)) {
-            return $this->_propDict["itemId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the itemId
-    *
-    * @param string $val The itemId
-    *
-    * @return SalesInvoiceLine
-    */
-    public function setItemId($val)
-    {
-        $this->_propDict["itemId"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the accountId
     *
     * @return string The accountId
@@ -133,29 +52,64 @@ class SalesInvoiceLine extends Entity
     }
     
     /**
-    * Gets the lineType
+    * Gets the amountExcludingTax
     *
-    * @return string The lineType
+    * @return Decimal The amountExcludingTax
     */
-    public function getLineType()
+    public function getAmountExcludingTax()
     {
-        if (array_key_exists("lineType", $this->_propDict)) {
-            return $this->_propDict["lineType"];
-        } else {
-            return null;
+        if (array_key_exists("amountExcludingTax", $this->_propDict)) {
+            if (is_a($this->_propDict["amountExcludingTax"], "Beta\Microsoft\Graph\Model\Decimal")) {
+                return $this->_propDict["amountExcludingTax"];
+            } else {
+                $this->_propDict["amountExcludingTax"] = new Decimal($this->_propDict["amountExcludingTax"]);
+                return $this->_propDict["amountExcludingTax"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the lineType
+    * Sets the amountExcludingTax
     *
-    * @param string $val The lineType
+    * @param Decimal $val The amountExcludingTax
     *
     * @return SalesInvoiceLine
     */
-    public function setLineType($val)
+    public function setAmountExcludingTax($val)
     {
-        $this->_propDict["lineType"] = $val;
+        $this->_propDict["amountExcludingTax"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the amountIncludingTax
+    *
+    * @return Decimal The amountIncludingTax
+    */
+    public function getAmountIncludingTax()
+    {
+        if (array_key_exists("amountIncludingTax", $this->_propDict)) {
+            if (is_a($this->_propDict["amountIncludingTax"], "Beta\Microsoft\Graph\Model\Decimal")) {
+                return $this->_propDict["amountIncludingTax"];
+            } else {
+                $this->_propDict["amountIncludingTax"] = new Decimal($this->_propDict["amountIncludingTax"]);
+                return $this->_propDict["amountIncludingTax"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the amountIncludingTax
+    *
+    * @param Decimal $val The amountIncludingTax
+    *
+    * @return SalesInvoiceLine
+    */
+    public function setAmountIncludingTax($val)
+    {
+        $this->_propDict["amountIncludingTax"] = $val;
         return $this;
     }
     
@@ -183,95 +137,6 @@ class SalesInvoiceLine extends Entity
     public function setDescription($val)
     {
         $this->_propDict["description"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the unitOfMeasureId
-    *
-    * @return string The unitOfMeasureId
-    */
-    public function getUnitOfMeasureId()
-    {
-        if (array_key_exists("unitOfMeasureId", $this->_propDict)) {
-            return $this->_propDict["unitOfMeasureId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the unitOfMeasureId
-    *
-    * @param string $val The unitOfMeasureId
-    *
-    * @return SalesInvoiceLine
-    */
-    public function setUnitOfMeasureId($val)
-    {
-        $this->_propDict["unitOfMeasureId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the unitPrice
-    *
-    * @return Decimal The unitPrice
-    */
-    public function getUnitPrice()
-    {
-        if (array_key_exists("unitPrice", $this->_propDict)) {
-            if (is_a($this->_propDict["unitPrice"], "Beta\Microsoft\Graph\Model\Decimal")) {
-                return $this->_propDict["unitPrice"];
-            } else {
-                $this->_propDict["unitPrice"] = new Decimal($this->_propDict["unitPrice"]);
-                return $this->_propDict["unitPrice"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the unitPrice
-    *
-    * @param Decimal $val The unitPrice
-    *
-    * @return SalesInvoiceLine
-    */
-    public function setUnitPrice($val)
-    {
-        $this->_propDict["unitPrice"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the quantity
-    *
-    * @return Decimal The quantity
-    */
-    public function getQuantity()
-    {
-        if (array_key_exists("quantity", $this->_propDict)) {
-            if (is_a($this->_propDict["quantity"], "Beta\Microsoft\Graph\Model\Decimal")) {
-                return $this->_propDict["quantity"];
-            } else {
-                $this->_propDict["quantity"] = new Decimal($this->_propDict["quantity"]);
-                return $this->_propDict["quantity"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the quantity
-    *
-    * @param Decimal $val The quantity
-    *
-    * @return SalesInvoiceLine
-    */
-    public function setQuantity($val)
-    {
-        $this->_propDict["quantity"] = $val;
         return $this;
     }
     
@@ -307,6 +172,33 @@ class SalesInvoiceLine extends Entity
     }
     
     /**
+    * Gets the discountAppliedBeforeTax
+    *
+    * @return bool The discountAppliedBeforeTax
+    */
+    public function getDiscountAppliedBeforeTax()
+    {
+        if (array_key_exists("discountAppliedBeforeTax", $this->_propDict)) {
+            return $this->_propDict["discountAppliedBeforeTax"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the discountAppliedBeforeTax
+    *
+    * @param bool $val The discountAppliedBeforeTax
+    *
+    * @return SalesInvoiceLine
+    */
+    public function setDiscountAppliedBeforeTax($val)
+    {
+        $this->_propDict["discountAppliedBeforeTax"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the discountPercent
     *
     * @return Decimal The discountPercent
@@ -338,60 +230,296 @@ class SalesInvoiceLine extends Entity
     }
     
     /**
-    * Gets the discountAppliedBeforeTax
+    * Gets the documentId
     *
-    * @return bool The discountAppliedBeforeTax
+    * @return string The documentId
     */
-    public function getDiscountAppliedBeforeTax()
+    public function getDocumentId()
     {
-        if (array_key_exists("discountAppliedBeforeTax", $this->_propDict)) {
-            return $this->_propDict["discountAppliedBeforeTax"];
+        if (array_key_exists("documentId", $this->_propDict)) {
+            return $this->_propDict["documentId"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the discountAppliedBeforeTax
+    * Sets the documentId
     *
-    * @param bool $val The discountAppliedBeforeTax
+    * @param string $val The documentId
     *
     * @return SalesInvoiceLine
     */
-    public function setDiscountAppliedBeforeTax($val)
+    public function setDocumentId($val)
     {
-        $this->_propDict["discountAppliedBeforeTax"] = boolval($val);
+        $this->_propDict["documentId"] = $val;
         return $this;
     }
     
     /**
-    * Gets the amountExcludingTax
+    * Gets the invoiceDiscountAllocation
     *
-    * @return Decimal The amountExcludingTax
+    * @return Decimal The invoiceDiscountAllocation
     */
-    public function getAmountExcludingTax()
+    public function getInvoiceDiscountAllocation()
     {
-        if (array_key_exists("amountExcludingTax", $this->_propDict)) {
-            if (is_a($this->_propDict["amountExcludingTax"], "Beta\Microsoft\Graph\Model\Decimal")) {
-                return $this->_propDict["amountExcludingTax"];
+        if (array_key_exists("invoiceDiscountAllocation", $this->_propDict)) {
+            if (is_a($this->_propDict["invoiceDiscountAllocation"], "Beta\Microsoft\Graph\Model\Decimal")) {
+                return $this->_propDict["invoiceDiscountAllocation"];
             } else {
-                $this->_propDict["amountExcludingTax"] = new Decimal($this->_propDict["amountExcludingTax"]);
-                return $this->_propDict["amountExcludingTax"];
+                $this->_propDict["invoiceDiscountAllocation"] = new Decimal($this->_propDict["invoiceDiscountAllocation"]);
+                return $this->_propDict["invoiceDiscountAllocation"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the amountExcludingTax
+    * Sets the invoiceDiscountAllocation
     *
-    * @param Decimal $val The amountExcludingTax
+    * @param Decimal $val The invoiceDiscountAllocation
     *
     * @return SalesInvoiceLine
     */
-    public function setAmountExcludingTax($val)
+    public function setInvoiceDiscountAllocation($val)
     {
-        $this->_propDict["amountExcludingTax"] = $val;
+        $this->_propDict["invoiceDiscountAllocation"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the itemId
+    *
+    * @return string The itemId
+    */
+    public function getItemId()
+    {
+        if (array_key_exists("itemId", $this->_propDict)) {
+            return $this->_propDict["itemId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the itemId
+    *
+    * @param string $val The itemId
+    *
+    * @return SalesInvoiceLine
+    */
+    public function setItemId($val)
+    {
+        $this->_propDict["itemId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the lineType
+    *
+    * @return string The lineType
+    */
+    public function getLineType()
+    {
+        if (array_key_exists("lineType", $this->_propDict)) {
+            return $this->_propDict["lineType"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the lineType
+    *
+    * @param string $val The lineType
+    *
+    * @return SalesInvoiceLine
+    */
+    public function setLineType($val)
+    {
+        $this->_propDict["lineType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the netAmount
+    *
+    * @return Decimal The netAmount
+    */
+    public function getNetAmount()
+    {
+        if (array_key_exists("netAmount", $this->_propDict)) {
+            if (is_a($this->_propDict["netAmount"], "Beta\Microsoft\Graph\Model\Decimal")) {
+                return $this->_propDict["netAmount"];
+            } else {
+                $this->_propDict["netAmount"] = new Decimal($this->_propDict["netAmount"]);
+                return $this->_propDict["netAmount"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the netAmount
+    *
+    * @param Decimal $val The netAmount
+    *
+    * @return SalesInvoiceLine
+    */
+    public function setNetAmount($val)
+    {
+        $this->_propDict["netAmount"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the netAmountIncludingTax
+    *
+    * @return Decimal The netAmountIncludingTax
+    */
+    public function getNetAmountIncludingTax()
+    {
+        if (array_key_exists("netAmountIncludingTax", $this->_propDict)) {
+            if (is_a($this->_propDict["netAmountIncludingTax"], "Beta\Microsoft\Graph\Model\Decimal")) {
+                return $this->_propDict["netAmountIncludingTax"];
+            } else {
+                $this->_propDict["netAmountIncludingTax"] = new Decimal($this->_propDict["netAmountIncludingTax"]);
+                return $this->_propDict["netAmountIncludingTax"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the netAmountIncludingTax
+    *
+    * @param Decimal $val The netAmountIncludingTax
+    *
+    * @return SalesInvoiceLine
+    */
+    public function setNetAmountIncludingTax($val)
+    {
+        $this->_propDict["netAmountIncludingTax"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the netTaxAmount
+    *
+    * @return Decimal The netTaxAmount
+    */
+    public function getNetTaxAmount()
+    {
+        if (array_key_exists("netTaxAmount", $this->_propDict)) {
+            if (is_a($this->_propDict["netTaxAmount"], "Beta\Microsoft\Graph\Model\Decimal")) {
+                return $this->_propDict["netTaxAmount"];
+            } else {
+                $this->_propDict["netTaxAmount"] = new Decimal($this->_propDict["netTaxAmount"]);
+                return $this->_propDict["netTaxAmount"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the netTaxAmount
+    *
+    * @param Decimal $val The netTaxAmount
+    *
+    * @return SalesInvoiceLine
+    */
+    public function setNetTaxAmount($val)
+    {
+        $this->_propDict["netTaxAmount"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the quantity
+    *
+    * @return Decimal The quantity
+    */
+    public function getQuantity()
+    {
+        if (array_key_exists("quantity", $this->_propDict)) {
+            if (is_a($this->_propDict["quantity"], "Beta\Microsoft\Graph\Model\Decimal")) {
+                return $this->_propDict["quantity"];
+            } else {
+                $this->_propDict["quantity"] = new Decimal($this->_propDict["quantity"]);
+                return $this->_propDict["quantity"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the quantity
+    *
+    * @param Decimal $val The quantity
+    *
+    * @return SalesInvoiceLine
+    */
+    public function setQuantity($val)
+    {
+        $this->_propDict["quantity"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the sequence
+    *
+    * @return int The sequence
+    */
+    public function getSequence()
+    {
+        if (array_key_exists("sequence", $this->_propDict)) {
+            return $this->_propDict["sequence"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the sequence
+    *
+    * @param int $val The sequence
+    *
+    * @return SalesInvoiceLine
+    */
+    public function setSequence($val)
+    {
+        $this->_propDict["sequence"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the shipmentDate
+    *
+    * @return \DateTime The shipmentDate
+    */
+    public function getShipmentDate()
+    {
+        if (array_key_exists("shipmentDate", $this->_propDict)) {
+            if (is_a($this->_propDict["shipmentDate"], "\DateTime")) {
+                return $this->_propDict["shipmentDate"];
+            } else {
+                $this->_propDict["shipmentDate"] = new \DateTime($this->_propDict["shipmentDate"]);
+                return $this->_propDict["shipmentDate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the shipmentDate
+    *
+    * @param \DateTime $val The shipmentDate
+    *
+    * @return SalesInvoiceLine
+    */
+    public function setShipmentDate($val)
+    {
+        $this->_propDict["shipmentDate"] = $val;
         return $this;
     }
     
@@ -485,219 +613,60 @@ class SalesInvoiceLine extends Entity
     }
     
     /**
-    * Gets the amountIncludingTax
+    * Gets the unitOfMeasureId
     *
-    * @return Decimal The amountIncludingTax
+    * @return string The unitOfMeasureId
     */
-    public function getAmountIncludingTax()
+    public function getUnitOfMeasureId()
     {
-        if (array_key_exists("amountIncludingTax", $this->_propDict)) {
-            if (is_a($this->_propDict["amountIncludingTax"], "Beta\Microsoft\Graph\Model\Decimal")) {
-                return $this->_propDict["amountIncludingTax"];
-            } else {
-                $this->_propDict["amountIncludingTax"] = new Decimal($this->_propDict["amountIncludingTax"]);
-                return $this->_propDict["amountIncludingTax"];
-            }
+        if (array_key_exists("unitOfMeasureId", $this->_propDict)) {
+            return $this->_propDict["unitOfMeasureId"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the amountIncludingTax
+    * Sets the unitOfMeasureId
     *
-    * @param Decimal $val The amountIncludingTax
+    * @param string $val The unitOfMeasureId
     *
     * @return SalesInvoiceLine
     */
-    public function setAmountIncludingTax($val)
+    public function setUnitOfMeasureId($val)
     {
-        $this->_propDict["amountIncludingTax"] = $val;
+        $this->_propDict["unitOfMeasureId"] = $val;
         return $this;
     }
     
     /**
-    * Gets the invoiceDiscountAllocation
+    * Gets the unitPrice
     *
-    * @return Decimal The invoiceDiscountAllocation
+    * @return Decimal The unitPrice
     */
-    public function getInvoiceDiscountAllocation()
+    public function getUnitPrice()
     {
-        if (array_key_exists("invoiceDiscountAllocation", $this->_propDict)) {
-            if (is_a($this->_propDict["invoiceDiscountAllocation"], "Beta\Microsoft\Graph\Model\Decimal")) {
-                return $this->_propDict["invoiceDiscountAllocation"];
+        if (array_key_exists("unitPrice", $this->_propDict)) {
+            if (is_a($this->_propDict["unitPrice"], "Beta\Microsoft\Graph\Model\Decimal")) {
+                return $this->_propDict["unitPrice"];
             } else {
-                $this->_propDict["invoiceDiscountAllocation"] = new Decimal($this->_propDict["invoiceDiscountAllocation"]);
-                return $this->_propDict["invoiceDiscountAllocation"];
+                $this->_propDict["unitPrice"] = new Decimal($this->_propDict["unitPrice"]);
+                return $this->_propDict["unitPrice"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the invoiceDiscountAllocation
+    * Sets the unitPrice
     *
-    * @param Decimal $val The invoiceDiscountAllocation
-    *
-    * @return SalesInvoiceLine
-    */
-    public function setInvoiceDiscountAllocation($val)
-    {
-        $this->_propDict["invoiceDiscountAllocation"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the netAmount
-    *
-    * @return Decimal The netAmount
-    */
-    public function getNetAmount()
-    {
-        if (array_key_exists("netAmount", $this->_propDict)) {
-            if (is_a($this->_propDict["netAmount"], "Beta\Microsoft\Graph\Model\Decimal")) {
-                return $this->_propDict["netAmount"];
-            } else {
-                $this->_propDict["netAmount"] = new Decimal($this->_propDict["netAmount"]);
-                return $this->_propDict["netAmount"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the netAmount
-    *
-    * @param Decimal $val The netAmount
+    * @param Decimal $val The unitPrice
     *
     * @return SalesInvoiceLine
     */
-    public function setNetAmount($val)
+    public function setUnitPrice($val)
     {
-        $this->_propDict["netAmount"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the netTaxAmount
-    *
-    * @return Decimal The netTaxAmount
-    */
-    public function getNetTaxAmount()
-    {
-        if (array_key_exists("netTaxAmount", $this->_propDict)) {
-            if (is_a($this->_propDict["netTaxAmount"], "Beta\Microsoft\Graph\Model\Decimal")) {
-                return $this->_propDict["netTaxAmount"];
-            } else {
-                $this->_propDict["netTaxAmount"] = new Decimal($this->_propDict["netTaxAmount"]);
-                return $this->_propDict["netTaxAmount"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the netTaxAmount
-    *
-    * @param Decimal $val The netTaxAmount
-    *
-    * @return SalesInvoiceLine
-    */
-    public function setNetTaxAmount($val)
-    {
-        $this->_propDict["netTaxAmount"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the netAmountIncludingTax
-    *
-    * @return Decimal The netAmountIncludingTax
-    */
-    public function getNetAmountIncludingTax()
-    {
-        if (array_key_exists("netAmountIncludingTax", $this->_propDict)) {
-            if (is_a($this->_propDict["netAmountIncludingTax"], "Beta\Microsoft\Graph\Model\Decimal")) {
-                return $this->_propDict["netAmountIncludingTax"];
-            } else {
-                $this->_propDict["netAmountIncludingTax"] = new Decimal($this->_propDict["netAmountIncludingTax"]);
-                return $this->_propDict["netAmountIncludingTax"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the netAmountIncludingTax
-    *
-    * @param Decimal $val The netAmountIncludingTax
-    *
-    * @return SalesInvoiceLine
-    */
-    public function setNetAmountIncludingTax($val)
-    {
-        $this->_propDict["netAmountIncludingTax"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the shipmentDate
-    *
-    * @return \DateTime The shipmentDate
-    */
-    public function getShipmentDate()
-    {
-        if (array_key_exists("shipmentDate", $this->_propDict)) {
-            if (is_a($this->_propDict["shipmentDate"], "\DateTime")) {
-                return $this->_propDict["shipmentDate"];
-            } else {
-                $this->_propDict["shipmentDate"] = new \DateTime($this->_propDict["shipmentDate"]);
-                return $this->_propDict["shipmentDate"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the shipmentDate
-    *
-    * @param \DateTime $val The shipmentDate
-    *
-    * @return SalesInvoiceLine
-    */
-    public function setShipmentDate($val)
-    {
-        $this->_propDict["shipmentDate"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the item
-    *
-    * @return Item The item
-    */
-    public function getItem()
-    {
-        if (array_key_exists("item", $this->_propDict)) {
-            if (is_a($this->_propDict["item"], "Beta\Microsoft\Graph\Model\Item")) {
-                return $this->_propDict["item"];
-            } else {
-                $this->_propDict["item"] = new Item($this->_propDict["item"]);
-                return $this->_propDict["item"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the item
-    *
-    * @param Item $val The item
-    *
-    * @return SalesInvoiceLine
-    */
-    public function setItem($val)
-    {
-        $this->_propDict["item"] = $val;
+        $this->_propDict["unitPrice"] = $val;
         return $this;
     }
     
@@ -729,6 +698,37 @@ class SalesInvoiceLine extends Entity
     public function setAccount($val)
     {
         $this->_propDict["account"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the item
+    *
+    * @return Item The item
+    */
+    public function getItem()
+    {
+        if (array_key_exists("item", $this->_propDict)) {
+            if (is_a($this->_propDict["item"], "Beta\Microsoft\Graph\Model\Item")) {
+                return $this->_propDict["item"];
+            } else {
+                $this->_propDict["item"] = new Item($this->_propDict["item"]);
+                return $this->_propDict["item"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the item
+    *
+    * @param Item $val The item
+    *
+    * @return SalesInvoiceLine
+    */
+    public function setItem($val)
+    {
+        $this->_propDict["item"] = $val;
         return $this;
     }
     

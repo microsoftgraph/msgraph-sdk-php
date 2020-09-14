@@ -53,36 +53,6 @@ class OfficeSuiteApp extends MobileApp
         return $this;
     }
     
-
-     /** 
-     * Gets the productIds
-    * The Product Ids that represent the Office365 Suite SKU.
-     *
-     * @return array The productIds
-     */
-    public function getProductIds()
-    {
-        if (array_key_exists("productIds", $this->_propDict)) {
-           return $this->_propDict["productIds"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the productIds
-    * The Product Ids that represent the Office365 Suite SKU.
-    *
-    * @param OfficeProductId $val The productIds
-    *
-    * @return OfficeSuiteApp
-    */
-    public function setProductIds($val)
-    {
-		$this->_propDict["productIds"] = $val;
-        return $this;
-    }
-    
     /**
     * Gets the excludedApps
     * The property to represent the apps which are excluded from the selected Office365 Product Id.
@@ -117,64 +87,97 @@ class OfficeSuiteApp extends MobileApp
     }
     
     /**
-    * Gets the useSharedComputerActivation
-    * The property to represent that whether the shared computer activation is used not for Office365 app suite.
+    * Gets the installProgressDisplayLevel
+    * To specify the level of display for the Installation Progress Setup UI on the Device.
     *
-    * @return bool The useSharedComputerActivation
+    * @return OfficeSuiteInstallProgressDisplayLevel The installProgressDisplayLevel
     */
-    public function getUseSharedComputerActivation()
+    public function getInstallProgressDisplayLevel()
     {
-        if (array_key_exists("useSharedComputerActivation", $this->_propDict)) {
-            return $this->_propDict["useSharedComputerActivation"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the useSharedComputerActivation
-    * The property to represent that whether the shared computer activation is used not for Office365 app suite.
-    *
-    * @param bool $val The useSharedComputerActivation
-    *
-    * @return OfficeSuiteApp
-    */
-    public function setUseSharedComputerActivation($val)
-    {
-        $this->_propDict["useSharedComputerActivation"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the updateChannel
-    * The property to represent the Office365 Update Channel.
-    *
-    * @return OfficeUpdateChannel The updateChannel
-    */
-    public function getUpdateChannel()
-    {
-        if (array_key_exists("updateChannel", $this->_propDict)) {
-            if (is_a($this->_propDict["updateChannel"], "Beta\Microsoft\Graph\Model\OfficeUpdateChannel")) {
-                return $this->_propDict["updateChannel"];
+        if (array_key_exists("installProgressDisplayLevel", $this->_propDict)) {
+            if (is_a($this->_propDict["installProgressDisplayLevel"], "Beta\Microsoft\Graph\Model\OfficeSuiteInstallProgressDisplayLevel")) {
+                return $this->_propDict["installProgressDisplayLevel"];
             } else {
-                $this->_propDict["updateChannel"] = new OfficeUpdateChannel($this->_propDict["updateChannel"]);
-                return $this->_propDict["updateChannel"];
+                $this->_propDict["installProgressDisplayLevel"] = new OfficeSuiteInstallProgressDisplayLevel($this->_propDict["installProgressDisplayLevel"]);
+                return $this->_propDict["installProgressDisplayLevel"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the updateChannel
-    * The property to represent the Office365 Update Channel.
+    * Sets the installProgressDisplayLevel
+    * To specify the level of display for the Installation Progress Setup UI on the Device.
     *
-    * @param OfficeUpdateChannel $val The updateChannel
+    * @param OfficeSuiteInstallProgressDisplayLevel $val The installProgressDisplayLevel
     *
     * @return OfficeSuiteApp
     */
-    public function setUpdateChannel($val)
+    public function setInstallProgressDisplayLevel($val)
     {
-        $this->_propDict["updateChannel"] = $val;
+        $this->_propDict["installProgressDisplayLevel"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the localesToInstall
+    * The property to represent the locales which are installed when the apps from Office365 is installed. It uses standard RFC 6033. Ref: https://technet.microsoft.com/en-us/library/cc179219(v=office.16).aspx
+    *
+    * @return string The localesToInstall
+    */
+    public function getLocalesToInstall()
+    {
+        if (array_key_exists("localesToInstall", $this->_propDict)) {
+            return $this->_propDict["localesToInstall"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the localesToInstall
+    * The property to represent the locales which are installed when the apps from Office365 is installed. It uses standard RFC 6033. Ref: https://technet.microsoft.com/en-us/library/cc179219(v=office.16).aspx
+    *
+    * @param string $val The localesToInstall
+    *
+    * @return OfficeSuiteApp
+    */
+    public function setLocalesToInstall($val)
+    {
+        $this->_propDict["localesToInstall"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the officeConfigurationXml
+    * The property to represent the XML configuration file that can be specified for Office ProPlus Apps. Takes precedence over all other properties. When present, the XML configuration file will be used to create the app.
+    *
+    * @return \GuzzleHttp\Psr7\Stream The officeConfigurationXml
+    */
+    public function getOfficeConfigurationXml()
+    {
+        if (array_key_exists("officeConfigurationXml", $this->_propDict)) {
+            if (is_a($this->_propDict["officeConfigurationXml"], "\GuzzleHttp\Psr7\Stream")) {
+                return $this->_propDict["officeConfigurationXml"];
+            } else {
+                $this->_propDict["officeConfigurationXml"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["officeConfigurationXml"]);
+                return $this->_propDict["officeConfigurationXml"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the officeConfigurationXml
+    * The property to represent the XML configuration file that can be specified for Office ProPlus Apps. Takes precedence over all other properties. When present, the XML configuration file will be used to create the app.
+    *
+    * @param \GuzzleHttp\Psr7\Stream $val The officeConfigurationXml
+    *
+    * @return OfficeSuiteApp
+    */
+    public function setOfficeConfigurationXml($val)
+    {
+        $this->_propDict["officeConfigurationXml"] = $val;
         return $this;
     }
     
@@ -211,65 +214,33 @@ class OfficeSuiteApp extends MobileApp
         return $this;
     }
     
-    /**
-    * Gets the localesToInstall
-    * The property to represent the locales which are installed when the apps from Office365 is installed. It uses standard RFC 6033. Ref: https://technet.microsoft.com/en-us/library/cc179219(v=office.16).aspx
-    *
-    * @return string The localesToInstall
-    */
-    public function getLocalesToInstall()
+
+     /** 
+     * Gets the productIds
+    * The Product Ids that represent the Office365 Suite SKU.
+     *
+     * @return array The productIds
+     */
+    public function getProductIds()
     {
-        if (array_key_exists("localesToInstall", $this->_propDict)) {
-            return $this->_propDict["localesToInstall"];
+        if (array_key_exists("productIds", $this->_propDict)) {
+           return $this->_propDict["productIds"];
         } else {
             return null;
         }
     }
     
-    /**
-    * Sets the localesToInstall
-    * The property to represent the locales which are installed when the apps from Office365 is installed. It uses standard RFC 6033. Ref: https://technet.microsoft.com/en-us/library/cc179219(v=office.16).aspx
+    /** 
+    * Sets the productIds
+    * The Product Ids that represent the Office365 Suite SKU.
     *
-    * @param string $val The localesToInstall
-    *
-    * @return OfficeSuiteApp
-    */
-    public function setLocalesToInstall($val)
-    {
-        $this->_propDict["localesToInstall"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the installProgressDisplayLevel
-    * To specify the level of display for the Installation Progress Setup UI on the Device.
-    *
-    * @return OfficeSuiteInstallProgressDisplayLevel The installProgressDisplayLevel
-    */
-    public function getInstallProgressDisplayLevel()
-    {
-        if (array_key_exists("installProgressDisplayLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["installProgressDisplayLevel"], "Beta\Microsoft\Graph\Model\OfficeSuiteInstallProgressDisplayLevel")) {
-                return $this->_propDict["installProgressDisplayLevel"];
-            } else {
-                $this->_propDict["installProgressDisplayLevel"] = new OfficeSuiteInstallProgressDisplayLevel($this->_propDict["installProgressDisplayLevel"]);
-                return $this->_propDict["installProgressDisplayLevel"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the installProgressDisplayLevel
-    * To specify the level of display for the Installation Progress Setup UI on the Device.
-    *
-    * @param OfficeSuiteInstallProgressDisplayLevel $val The installProgressDisplayLevel
+    * @param OfficeProductId $val The productIds
     *
     * @return OfficeSuiteApp
     */
-    public function setInstallProgressDisplayLevel($val)
+    public function setProductIds($val)
     {
-        $this->_propDict["installProgressDisplayLevel"] = $val;
+		$this->_propDict["productIds"] = $val;
         return $this;
     }
     
@@ -332,6 +303,39 @@ class OfficeSuiteApp extends MobileApp
     }
     
     /**
+    * Gets the updateChannel
+    * The property to represent the Office365 Update Channel.
+    *
+    * @return OfficeUpdateChannel The updateChannel
+    */
+    public function getUpdateChannel()
+    {
+        if (array_key_exists("updateChannel", $this->_propDict)) {
+            if (is_a($this->_propDict["updateChannel"], "Beta\Microsoft\Graph\Model\OfficeUpdateChannel")) {
+                return $this->_propDict["updateChannel"];
+            } else {
+                $this->_propDict["updateChannel"] = new OfficeUpdateChannel($this->_propDict["updateChannel"]);
+                return $this->_propDict["updateChannel"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the updateChannel
+    * The property to represent the Office365 Update Channel.
+    *
+    * @param OfficeUpdateChannel $val The updateChannel
+    *
+    * @return OfficeSuiteApp
+    */
+    public function setUpdateChannel($val)
+    {
+        $this->_propDict["updateChannel"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the updateVersion
     * The property to represent the update version in which the specific target version is available for the Office365 app suite.
     *
@@ -361,35 +365,31 @@ class OfficeSuiteApp extends MobileApp
     }
     
     /**
-    * Gets the officeConfigurationXml
-    * The property to represent the XML configuration file that can be specified for Office ProPlus Apps. Takes precedence over all other properties. When present, the XML configuration file will be used to create the app.
+    * Gets the useSharedComputerActivation
+    * The property to represent that whether the shared computer activation is used not for Office365 app suite.
     *
-    * @return \GuzzleHttp\Psr7\Stream The officeConfigurationXml
+    * @return bool The useSharedComputerActivation
     */
-    public function getOfficeConfigurationXml()
+    public function getUseSharedComputerActivation()
     {
-        if (array_key_exists("officeConfigurationXml", $this->_propDict)) {
-            if (is_a($this->_propDict["officeConfigurationXml"], "\GuzzleHttp\Psr7\Stream")) {
-                return $this->_propDict["officeConfigurationXml"];
-            } else {
-                $this->_propDict["officeConfigurationXml"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["officeConfigurationXml"]);
-                return $this->_propDict["officeConfigurationXml"];
-            }
+        if (array_key_exists("useSharedComputerActivation", $this->_propDict)) {
+            return $this->_propDict["useSharedComputerActivation"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the officeConfigurationXml
-    * The property to represent the XML configuration file that can be specified for Office ProPlus Apps. Takes precedence over all other properties. When present, the XML configuration file will be used to create the app.
+    * Sets the useSharedComputerActivation
+    * The property to represent that whether the shared computer activation is used not for Office365 app suite.
     *
-    * @param \GuzzleHttp\Psr7\Stream $val The officeConfigurationXml
+    * @param bool $val The useSharedComputerActivation
     *
     * @return OfficeSuiteApp
     */
-    public function setOfficeConfigurationXml($val)
+    public function setUseSharedComputerActivation($val)
     {
-        $this->_propDict["officeConfigurationXml"] = $val;
+        $this->_propDict["useSharedComputerActivation"] = boolval($val);
         return $this;
     }
     

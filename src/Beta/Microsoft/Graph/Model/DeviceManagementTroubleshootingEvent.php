@@ -24,6 +24,65 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class DeviceManagementTroubleshootingEvent extends Entity
 {
+
+     /** 
+     * Gets the additionalInformation
+    * A set of string key and string value pairs which provides additional information on the Troubleshooting event
+     *
+     * @return array The additionalInformation
+     */
+    public function getAdditionalInformation()
+    {
+        if (array_key_exists("additionalInformation", $this->_propDict)) {
+           return $this->_propDict["additionalInformation"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the additionalInformation
+    * A set of string key and string value pairs which provides additional information on the Troubleshooting event
+    *
+    * @param KeyValuePair $val The additionalInformation
+    *
+    * @return DeviceManagementTroubleshootingEvent
+    */
+    public function setAdditionalInformation($val)
+    {
+		$this->_propDict["additionalInformation"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the correlationId
+    * Id used for tracing the failure in the service.
+    *
+    * @return string The correlationId
+    */
+    public function getCorrelationId()
+    {
+        if (array_key_exists("correlationId", $this->_propDict)) {
+            return $this->_propDict["correlationId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the correlationId
+    * Id used for tracing the failure in the service.
+    *
+    * @param string $val The correlationId
+    *
+    * @return DeviceManagementTroubleshootingEvent
+    */
+    public function setCorrelationId($val)
+    {
+        $this->_propDict["correlationId"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the eventDateTime
     * Time when the event occurred .
@@ -58,31 +117,31 @@ class DeviceManagementTroubleshootingEvent extends Entity
     }
     
     /**
-    * Gets the correlationId
-    * Id used for tracing the failure in the service.
+    * Gets the eventName
+    * Event Name corresponding to the Troubleshooting Event. It is an Optional field
     *
-    * @return string The correlationId
+    * @return string The eventName
     */
-    public function getCorrelationId()
+    public function getEventName()
     {
-        if (array_key_exists("correlationId", $this->_propDict)) {
-            return $this->_propDict["correlationId"];
+        if (array_key_exists("eventName", $this->_propDict)) {
+            return $this->_propDict["eventName"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the correlationId
-    * Id used for tracing the failure in the service.
+    * Sets the eventName
+    * Event Name corresponding to the Troubleshooting Event. It is an Optional field
     *
-    * @param string $val The correlationId
+    * @param string $val The eventName
     *
     * @return DeviceManagementTroubleshootingEvent
     */
-    public function setCorrelationId($val)
+    public function setEventName($val)
     {
-        $this->_propDict["correlationId"] = $val;
+        $this->_propDict["eventName"] = $val;
         return $this;
     }
     
@@ -116,65 +175,6 @@ class DeviceManagementTroubleshootingEvent extends Entity
     public function setTroubleshootingErrorDetails($val)
     {
         $this->_propDict["troubleshootingErrorDetails"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the eventName
-    * Event Name corresponding to the Troubleshooting Event. It is an Optional field
-    *
-    * @return string The eventName
-    */
-    public function getEventName()
-    {
-        if (array_key_exists("eventName", $this->_propDict)) {
-            return $this->_propDict["eventName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the eventName
-    * Event Name corresponding to the Troubleshooting Event. It is an Optional field
-    *
-    * @param string $val The eventName
-    *
-    * @return DeviceManagementTroubleshootingEvent
-    */
-    public function setEventName($val)
-    {
-        $this->_propDict["eventName"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the additionalInformation
-    * A set of string key and string value pairs which provides additional information on the Troubleshooting event
-     *
-     * @return array The additionalInformation
-     */
-    public function getAdditionalInformation()
-    {
-        if (array_key_exists("additionalInformation", $this->_propDict)) {
-           return $this->_propDict["additionalInformation"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the additionalInformation
-    * A set of string key and string value pairs which provides additional information on the Troubleshooting event
-    *
-    * @param KeyValuePair $val The additionalInformation
-    *
-    * @return DeviceManagementTroubleshootingEvent
-    */
-    public function setAdditionalInformation($val)
-    {
-		$this->_propDict["additionalInformation"] = $val;
         return $this;
     }
     

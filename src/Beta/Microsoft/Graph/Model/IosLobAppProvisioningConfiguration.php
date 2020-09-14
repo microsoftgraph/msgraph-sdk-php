@@ -25,130 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class IosLobAppProvisioningConfiguration extends Entity
 {
     /**
-    * Gets the expirationDateTime
-    * Optional profile expiration date and time.
-    *
-    * @return \DateTime The expirationDateTime
-    */
-    public function getExpirationDateTime()
-    {
-        if (array_key_exists("expirationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["expirationDateTime"], "\DateTime")) {
-                return $this->_propDict["expirationDateTime"];
-            } else {
-                $this->_propDict["expirationDateTime"] = new \DateTime($this->_propDict["expirationDateTime"]);
-                return $this->_propDict["expirationDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the expirationDateTime
-    * Optional profile expiration date and time.
-    *
-    * @param \DateTime $val The expirationDateTime
-    *
-    * @return IosLobAppProvisioningConfiguration
-    */
-    public function setExpirationDateTime($val)
-    {
-        $this->_propDict["expirationDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the payloadFileName
-    * Payload file name (*.mobileprovision | *.xml).
-    *
-    * @return string The payloadFileName
-    */
-    public function getPayloadFileName()
-    {
-        if (array_key_exists("payloadFileName", $this->_propDict)) {
-            return $this->_propDict["payloadFileName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the payloadFileName
-    * Payload file name (*.mobileprovision | *.xml).
-    *
-    * @param string $val The payloadFileName
-    *
-    * @return IosLobAppProvisioningConfiguration
-    */
-    public function setPayloadFileName($val)
-    {
-        $this->_propDict["payloadFileName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the payload
-    * Payload. (UTF8 encoded byte array)
-    *
-    * @return \GuzzleHttp\Psr7\Stream The payload
-    */
-    public function getPayload()
-    {
-        if (array_key_exists("payload", $this->_propDict)) {
-            if (is_a($this->_propDict["payload"], "\GuzzleHttp\Psr7\Stream")) {
-                return $this->_propDict["payload"];
-            } else {
-                $this->_propDict["payload"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["payload"]);
-                return $this->_propDict["payload"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the payload
-    * Payload. (UTF8 encoded byte array)
-    *
-    * @param \GuzzleHttp\Psr7\Stream $val The payload
-    *
-    * @return IosLobAppProvisioningConfiguration
-    */
-    public function setPayload($val)
-    {
-        $this->_propDict["payload"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the roleScopeTagIds
-    * List of Scope Tags for this iOS LOB app provisioning configuration entity.
-    *
-    * @return string The roleScopeTagIds
-    */
-    public function getRoleScopeTagIds()
-    {
-        if (array_key_exists("roleScopeTagIds", $this->_propDict)) {
-            return $this->_propDict["roleScopeTagIds"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the roleScopeTagIds
-    * List of Scope Tags for this iOS LOB app provisioning configuration entity.
-    *
-    * @param string $val The roleScopeTagIds
-    *
-    * @return IosLobAppProvisioningConfiguration
-    */
-    public function setRoleScopeTagIds($val)
-    {
-        $this->_propDict["roleScopeTagIds"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the createdDateTime
     * DateTime the object was created.
     *
@@ -211,6 +87,68 @@ class IosLobAppProvisioningConfiguration extends Entity
     }
     
     /**
+    * Gets the displayName
+    * Admin provided name of the device configuration.
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the displayName
+    * Admin provided name of the device configuration.
+    *
+    * @param string $val The displayName
+    *
+    * @return IosLobAppProvisioningConfiguration
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the expirationDateTime
+    * Optional profile expiration date and time.
+    *
+    * @return \DateTime The expirationDateTime
+    */
+    public function getExpirationDateTime()
+    {
+        if (array_key_exists("expirationDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["expirationDateTime"], "\DateTime")) {
+                return $this->_propDict["expirationDateTime"];
+            } else {
+                $this->_propDict["expirationDateTime"] = new \DateTime($this->_propDict["expirationDateTime"]);
+                return $this->_propDict["expirationDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the expirationDateTime
+    * Optional profile expiration date and time.
+    *
+    * @param \DateTime $val The expirationDateTime
+    *
+    * @return IosLobAppProvisioningConfiguration
+    */
+    public function setExpirationDateTime($val)
+    {
+        $this->_propDict["expirationDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the lastModifiedDateTime
     * DateTime the object was last modified.
     *
@@ -244,31 +182,93 @@ class IosLobAppProvisioningConfiguration extends Entity
     }
     
     /**
-    * Gets the displayName
-    * Admin provided name of the device configuration.
+    * Gets the payload
+    * Payload. (UTF8 encoded byte array)
     *
-    * @return string The displayName
+    * @return \GuzzleHttp\Psr7\Stream The payload
     */
-    public function getDisplayName()
+    public function getPayload()
     {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
+        if (array_key_exists("payload", $this->_propDict)) {
+            if (is_a($this->_propDict["payload"], "\GuzzleHttp\Psr7\Stream")) {
+                return $this->_propDict["payload"];
+            } else {
+                $this->_propDict["payload"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["payload"]);
+                return $this->_propDict["payload"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the payload
+    * Payload. (UTF8 encoded byte array)
+    *
+    * @param \GuzzleHttp\Psr7\Stream $val The payload
+    *
+    * @return IosLobAppProvisioningConfiguration
+    */
+    public function setPayload($val)
+    {
+        $this->_propDict["payload"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the payloadFileName
+    * Payload file name (*.mobileprovision | *.xml).
+    *
+    * @return string The payloadFileName
+    */
+    public function getPayloadFileName()
+    {
+        if (array_key_exists("payloadFileName", $this->_propDict)) {
+            return $this->_propDict["payloadFileName"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the displayName
-    * Admin provided name of the device configuration.
+    * Sets the payloadFileName
+    * Payload file name (*.mobileprovision | *.xml).
     *
-    * @param string $val The displayName
+    * @param string $val The payloadFileName
     *
     * @return IosLobAppProvisioningConfiguration
     */
-    public function setDisplayName($val)
+    public function setPayloadFileName($val)
     {
-        $this->_propDict["displayName"] = $val;
+        $this->_propDict["payloadFileName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the roleScopeTagIds
+    * List of Scope Tags for this iOS LOB app provisioning configuration entity.
+    *
+    * @return string The roleScopeTagIds
+    */
+    public function getRoleScopeTagIds()
+    {
+        if (array_key_exists("roleScopeTagIds", $this->_propDict)) {
+            return $this->_propDict["roleScopeTagIds"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the roleScopeTagIds
+    * List of Scope Tags for this iOS LOB app provisioning configuration entity.
+    *
+    * @param string $val The roleScopeTagIds
+    *
+    * @return IosLobAppProvisioningConfiguration
+    */
+    public function setRoleScopeTagIds($val)
+    {
+        $this->_propDict["roleScopeTagIds"] = $val;
         return $this;
     }
     
@@ -298,36 +298,6 @@ class IosLobAppProvisioningConfiguration extends Entity
     public function setVersion($val)
     {
         $this->_propDict["version"] = intval($val);
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the groupAssignments
-    * The associated group assignments.
-     *
-     * @return array The groupAssignments
-     */
-    public function getGroupAssignments()
-    {
-        if (array_key_exists("groupAssignments", $this->_propDict)) {
-           return $this->_propDict["groupAssignments"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the groupAssignments
-    * The associated group assignments.
-    *
-    * @param MobileAppProvisioningConfigGroupAssignment $val The groupAssignments
-    *
-    * @return IosLobAppProvisioningConfiguration
-    */
-    public function setGroupAssignments($val)
-    {
-		$this->_propDict["groupAssignments"] = $val;
         return $this;
     }
     
@@ -388,6 +358,36 @@ class IosLobAppProvisioningConfiguration extends Entity
     public function setDeviceStatuses($val)
     {
 		$this->_propDict["deviceStatuses"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the groupAssignments
+    * The associated group assignments.
+     *
+     * @return array The groupAssignments
+     */
+    public function getGroupAssignments()
+    {
+        if (array_key_exists("groupAssignments", $this->_propDict)) {
+           return $this->_propDict["groupAssignments"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the groupAssignments
+    * The associated group assignments.
+    *
+    * @param MobileAppProvisioningConfigGroupAssignment $val The groupAssignments
+    *
+    * @return IosLobAppProvisioningConfiguration
+    */
+    public function setGroupAssignments($val)
+    {
+		$this->_propDict["groupAssignments"] = $val;
         return $this;
     }
     

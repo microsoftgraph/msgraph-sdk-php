@@ -25,6 +25,37 @@ namespace Beta\Microsoft\Graph\Model;
 class EducationSynchronizationProfile extends Entity
 {
     /**
+    * Gets the dataProvider
+    *
+    * @return EducationSynchronizationDataProvider The dataProvider
+    */
+    public function getDataProvider()
+    {
+        if (array_key_exists("dataProvider", $this->_propDict)) {
+            if (is_a($this->_propDict["dataProvider"], "Beta\Microsoft\Graph\Model\EducationSynchronizationDataProvider")) {
+                return $this->_propDict["dataProvider"];
+            } else {
+                $this->_propDict["dataProvider"] = new EducationSynchronizationDataProvider($this->_propDict["dataProvider"]);
+                return $this->_propDict["dataProvider"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the dataProvider
+    *
+    * @param EducationSynchronizationDataProvider $val The dataProvider
+    *
+    * @return EducationSynchronizationProfile
+    */
+    public function setDataProvider($val)
+    {
+        $this->_propDict["dataProvider"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the displayName
     *
     * @return string The displayName
@@ -83,33 +114,29 @@ class EducationSynchronizationProfile extends Entity
     }
     
     /**
-    * Gets the dataProvider
+    * Gets the handleSpecialCharacterConstraint
     *
-    * @return EducationSynchronizationDataProvider The dataProvider
+    * @return bool The handleSpecialCharacterConstraint
     */
-    public function getDataProvider()
+    public function getHandleSpecialCharacterConstraint()
     {
-        if (array_key_exists("dataProvider", $this->_propDict)) {
-            if (is_a($this->_propDict["dataProvider"], "Beta\Microsoft\Graph\Model\EducationSynchronizationDataProvider")) {
-                return $this->_propDict["dataProvider"];
-            } else {
-                $this->_propDict["dataProvider"] = new EducationSynchronizationDataProvider($this->_propDict["dataProvider"]);
-                return $this->_propDict["dataProvider"];
-            }
+        if (array_key_exists("handleSpecialCharacterConstraint", $this->_propDict)) {
+            return $this->_propDict["handleSpecialCharacterConstraint"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the dataProvider
+    * Sets the handleSpecialCharacterConstraint
     *
-    * @param EducationSynchronizationDataProvider $val The dataProvider
+    * @param bool $val The handleSpecialCharacterConstraint
     *
     * @return EducationSynchronizationProfile
     */
-    public function setDataProvider($val)
+    public function setHandleSpecialCharacterConstraint($val)
     {
-        $this->_propDict["dataProvider"] = $val;
+        $this->_propDict["handleSpecialCharacterConstraint"] = boolval($val);
         return $this;
     }
     
@@ -200,33 +227,6 @@ class EducationSynchronizationProfile extends Entity
     public function setState($val)
     {
         $this->_propDict["state"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the handleSpecialCharacterConstraint
-    *
-    * @return bool The handleSpecialCharacterConstraint
-    */
-    public function getHandleSpecialCharacterConstraint()
-    {
-        if (array_key_exists("handleSpecialCharacterConstraint", $this->_propDict)) {
-            return $this->_propDict["handleSpecialCharacterConstraint"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the handleSpecialCharacterConstraint
-    *
-    * @param bool $val The handleSpecialCharacterConstraint
-    *
-    * @return EducationSynchronizationProfile
-    */
-    public function setHandleSpecialCharacterConstraint($val)
-    {
-        $this->_propDict["handleSpecialCharacterConstraint"] = boolval($val);
         return $this;
     }
     

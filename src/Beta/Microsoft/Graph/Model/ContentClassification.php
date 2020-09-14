@@ -24,58 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class ContentClassification extends Entity
 {
     /**
-    * Gets the sensitiveTypeId
-    *
-    * @return string The sensitiveTypeId
-    */
-    public function getSensitiveTypeId()
-    {
-        if (array_key_exists("sensitiveTypeId", $this->_propDict)) {
-            return $this->_propDict["sensitiveTypeId"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the sensitiveTypeId
-    *
-    * @param string $val The value of the sensitiveTypeId
-    *
-    * @return ContentClassification
-    */
-    public function setSensitiveTypeId($val)
-    {
-        $this->_propDict["sensitiveTypeId"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the uniqueCount
-    *
-    * @return int The uniqueCount
-    */
-    public function getUniqueCount()
-    {
-        if (array_key_exists("uniqueCount", $this->_propDict)) {
-            return $this->_propDict["uniqueCount"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the uniqueCount
-    *
-    * @param int $val The value of the uniqueCount
-    *
-    * @return ContentClassification
-    */
-    public function setUniqueCount($val)
-    {
-        $this->_propDict["uniqueCount"] = $val;
-        return $this;
-    }
-    /**
     * Gets the confidence
     *
     * @return int The confidence
@@ -131,5 +79,57 @@ class ContentClassification extends Entity
     {
         $this->_propDict["matches"] = $val;
          return $this;
+    }
+    /**
+    * Gets the sensitiveTypeId
+    *
+    * @return string The sensitiveTypeId
+    */
+    public function getSensitiveTypeId()
+    {
+        if (array_key_exists("sensitiveTypeId", $this->_propDict)) {
+            return $this->_propDict["sensitiveTypeId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the sensitiveTypeId
+    *
+    * @param string $val The value of the sensitiveTypeId
+    *
+    * @return ContentClassification
+    */
+    public function setSensitiveTypeId($val)
+    {
+        $this->_propDict["sensitiveTypeId"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the uniqueCount
+    *
+    * @return int The uniqueCount
+    */
+    public function getUniqueCount()
+    {
+        if (array_key_exists("uniqueCount", $this->_propDict)) {
+            return $this->_propDict["uniqueCount"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the uniqueCount
+    *
+    * @param int $val The value of the uniqueCount
+    *
+    * @return ContentClassification
+    */
+    public function setUniqueCount($val)
+    {
+        $this->_propDict["uniqueCount"] = $val;
+        return $this;
     }
 }

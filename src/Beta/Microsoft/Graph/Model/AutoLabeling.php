@@ -24,32 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class AutoLabeling extends Entity
 {
     /**
-    * Gets the sensitiveTypeIds
-    *
-    * @return string The sensitiveTypeIds
-    */
-    public function getSensitiveTypeIds()
-    {
-        if (array_key_exists("sensitiveTypeIds", $this->_propDict)) {
-            return $this->_propDict["sensitiveTypeIds"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the sensitiveTypeIds
-    *
-    * @param string $val The value of the sensitiveTypeIds
-    *
-    * @return AutoLabeling
-    */
-    public function setSensitiveTypeIds($val)
-    {
-        $this->_propDict["sensitiveTypeIds"] = $val;
-        return $this;
-    }
-    /**
     * Gets the message
     *
     * @return string The message
@@ -73,6 +47,32 @@ class AutoLabeling extends Entity
     public function setMessage($val)
     {
         $this->_propDict["message"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the sensitiveTypeIds
+    *
+    * @return string The sensitiveTypeIds
+    */
+    public function getSensitiveTypeIds()
+    {
+        if (array_key_exists("sensitiveTypeIds", $this->_propDict)) {
+            return $this->_propDict["sensitiveTypeIds"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the sensitiveTypeIds
+    *
+    * @param string $val The value of the sensitiveTypeIds
+    *
+    * @return AutoLabeling
+    */
+    public function setSensitiveTypeIds($val)
+    {
+        $this->_propDict["sensitiveTypeIds"] = $val;
         return $this;
     }
 }

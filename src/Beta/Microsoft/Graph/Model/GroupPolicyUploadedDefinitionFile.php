@@ -25,6 +25,68 @@ namespace Beta\Microsoft\Graph\Model;
 class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
 {
     /**
+    * Gets the content
+    * The contents of the uploaded ADMX file.
+    *
+    * @return \GuzzleHttp\Psr7\Stream The content
+    */
+    public function getContent()
+    {
+        if (array_key_exists("content", $this->_propDict)) {
+            if (is_a($this->_propDict["content"], "\GuzzleHttp\Psr7\Stream")) {
+                return $this->_propDict["content"];
+            } else {
+                $this->_propDict["content"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["content"]);
+                return $this->_propDict["content"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the content
+    * The contents of the uploaded ADMX file.
+    *
+    * @param \GuzzleHttp\Psr7\Stream $val The content
+    *
+    * @return GroupPolicyUploadedDefinitionFile
+    */
+    public function setContent($val)
+    {
+        $this->_propDict["content"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the defaultLanguageCode
+    * The default language of the uploaded ADMX file.
+    *
+    * @return string The defaultLanguageCode
+    */
+    public function getDefaultLanguageCode()
+    {
+        if (array_key_exists("defaultLanguageCode", $this->_propDict)) {
+            return $this->_propDict["defaultLanguageCode"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the defaultLanguageCode
+    * The default language of the uploaded ADMX file.
+    *
+    * @param string $val The defaultLanguageCode
+    *
+    * @return GroupPolicyUploadedDefinitionFile
+    */
+    public function setDefaultLanguageCode($val)
+    {
+        $this->_propDict["defaultLanguageCode"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the fileName
     * The file name of the uploaded ADML file.
     *
@@ -50,6 +112,36 @@ class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
     public function setFileName($val)
     {
         $this->_propDict["fileName"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the groupPolicyUploadedLanguageFiles
+    * The list of ADML files associated with the uploaded ADMX file.
+     *
+     * @return array The groupPolicyUploadedLanguageFiles
+     */
+    public function getGroupPolicyUploadedLanguageFiles()
+    {
+        if (array_key_exists("groupPolicyUploadedLanguageFiles", $this->_propDict)) {
+           return $this->_propDict["groupPolicyUploadedLanguageFiles"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the groupPolicyUploadedLanguageFiles
+    * The list of ADML files associated with the uploaded ADMX file.
+    *
+    * @param GroupPolicyUploadedLanguageFile $val The groupPolicyUploadedLanguageFiles
+    *
+    * @return GroupPolicyUploadedDefinitionFile
+    */
+    public function setGroupPolicyUploadedLanguageFiles($val)
+    {
+		$this->_propDict["groupPolicyUploadedLanguageFiles"] = $val;
         return $this;
     }
     
@@ -87,39 +179,6 @@ class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
     }
     
     /**
-    * Gets the content
-    * The contents of the uploaded ADMX file.
-    *
-    * @return \GuzzleHttp\Psr7\Stream The content
-    */
-    public function getContent()
-    {
-        if (array_key_exists("content", $this->_propDict)) {
-            if (is_a($this->_propDict["content"], "\GuzzleHttp\Psr7\Stream")) {
-                return $this->_propDict["content"];
-            } else {
-                $this->_propDict["content"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["content"]);
-                return $this->_propDict["content"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the content
-    * The contents of the uploaded ADMX file.
-    *
-    * @param \GuzzleHttp\Psr7\Stream $val The content
-    *
-    * @return GroupPolicyUploadedDefinitionFile
-    */
-    public function setContent($val)
-    {
-        $this->_propDict["content"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the uploadDateTime
     * The uploaded time of the uploaded ADMX file.
     *
@@ -149,65 +208,6 @@ class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
     public function setUploadDateTime($val)
     {
         $this->_propDict["uploadDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the defaultLanguageCode
-    * The default language of the uploaded ADMX file.
-    *
-    * @return string The defaultLanguageCode
-    */
-    public function getDefaultLanguageCode()
-    {
-        if (array_key_exists("defaultLanguageCode", $this->_propDict)) {
-            return $this->_propDict["defaultLanguageCode"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the defaultLanguageCode
-    * The default language of the uploaded ADMX file.
-    *
-    * @param string $val The defaultLanguageCode
-    *
-    * @return GroupPolicyUploadedDefinitionFile
-    */
-    public function setDefaultLanguageCode($val)
-    {
-        $this->_propDict["defaultLanguageCode"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the groupPolicyUploadedLanguageFiles
-    * The list of ADML files associated with the uploaded ADMX file.
-     *
-     * @return array The groupPolicyUploadedLanguageFiles
-     */
-    public function getGroupPolicyUploadedLanguageFiles()
-    {
-        if (array_key_exists("groupPolicyUploadedLanguageFiles", $this->_propDict)) {
-           return $this->_propDict["groupPolicyUploadedLanguageFiles"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the groupPolicyUploadedLanguageFiles
-    * The list of ADML files associated with the uploaded ADMX file.
-    *
-    * @param GroupPolicyUploadedLanguageFile $val The groupPolicyUploadedLanguageFiles
-    *
-    * @return GroupPolicyUploadedDefinitionFile
-    */
-    public function setGroupPolicyUploadedLanguageFiles($val)
-    {
-		$this->_propDict["groupPolicyUploadedLanguageFiles"] = $val;
         return $this;
     }
     

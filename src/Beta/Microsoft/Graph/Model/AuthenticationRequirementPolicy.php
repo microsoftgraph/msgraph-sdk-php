@@ -23,6 +23,32 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class AuthenticationRequirementPolicy extends Entity
 {
+    /**
+    * Gets the detail
+    *
+    * @return string The detail
+    */
+    public function getDetail()
+    {
+        if (array_key_exists("detail", $this->_propDict)) {
+            return $this->_propDict["detail"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the detail
+    *
+    * @param string $val The value of the detail
+    *
+    * @return AuthenticationRequirementPolicy
+    */
+    public function setDetail($val)
+    {
+        $this->_propDict["detail"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the requirementProvider
@@ -53,31 +79,5 @@ class AuthenticationRequirementPolicy extends Entity
     {
         $this->_propDict["requirementProvider"] = $val;
          return $this;
-    }
-    /**
-    * Gets the detail
-    *
-    * @return string The detail
-    */
-    public function getDetail()
-    {
-        if (array_key_exists("detail", $this->_propDict)) {
-            return $this->_propDict["detail"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the detail
-    *
-    * @param string $val The value of the detail
-    *
-    * @return AuthenticationRequirementPolicy
-    */
-    public function setDetail($val)
-    {
-        $this->_propDict["detail"] = $val;
-        return $this;
     }
 }

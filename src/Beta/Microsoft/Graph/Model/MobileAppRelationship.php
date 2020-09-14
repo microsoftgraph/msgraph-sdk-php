@@ -25,35 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class MobileAppRelationship extends Entity
 {
     /**
-    * Gets the targetId
-    * The target mobile app's app id.
-    *
-    * @return string The targetId
-    */
-    public function getTargetId()
-    {
-        if (array_key_exists("targetId", $this->_propDict)) {
-            return $this->_propDict["targetId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the targetId
-    * The target mobile app's app id.
-    *
-    * @param string $val The targetId
-    *
-    * @return MobileAppRelationship
-    */
-    public function setTargetId($val)
-    {
-        $this->_propDict["targetId"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the targetDisplayName
     * The target mobile app's display name.
     *
@@ -79,6 +50,35 @@ class MobileAppRelationship extends Entity
     public function setTargetDisplayName($val)
     {
         $this->_propDict["targetDisplayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the targetId
+    * The target mobile app's app id.
+    *
+    * @return string The targetId
+    */
+    public function getTargetId()
+    {
+        if (array_key_exists("targetId", $this->_propDict)) {
+            return $this->_propDict["targetId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the targetId
+    * The target mobile app's app id.
+    *
+    * @param string $val The targetId
+    *
+    * @return MobileAppRelationship
+    */
+    public function setTargetId($val)
+    {
+        $this->_propDict["targetId"] = $val;
         return $this;
     }
     

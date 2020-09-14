@@ -33,6 +33,34 @@ class Win32LobAppPowerShellScriptRule extends Win32LobAppRule
     }
 
     /**
+    * Gets the comparisonValue
+    * The script output comparison value. Do not specify a value if the rule is used for detection.
+    *
+    * @return string The comparisonValue
+    */
+    public function getComparisonValue()
+    {
+        if (array_key_exists("comparisonValue", $this->_propDict)) {
+            return $this->_propDict["comparisonValue"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the comparisonValue
+    * The script output comparison value. Do not specify a value if the rule is used for detection.
+    *
+    * @param string $val The value of the comparisonValue
+    *
+    * @return Win32LobAppPowerShellScriptRule
+    */
+    public function setComparisonValue($val)
+    {
+        $this->_propDict["comparisonValue"] = $val;
+        return $this;
+    }
+    /**
     * Gets the displayName
     * The display name for the rule. Do not specify this value if the rule is used for detection.
     *
@@ -87,6 +115,72 @@ class Win32LobAppPowerShellScriptRule extends Win32LobAppRule
     {
         $this->_propDict["enforceSignatureCheck"] = $val;
         return $this;
+    }
+
+    /**
+    * Gets the operationType
+    * The script output comparison operation type. Use NotConfigured (the default value) if the rule is used for detection.
+    *
+    * @return Win32LobAppPowerShellScriptRuleOperationType The operationType
+    */
+    public function getOperationType()
+    {
+        if (array_key_exists("operationType", $this->_propDict)) {
+            if (is_a($this->_propDict["operationType"], "Beta\Microsoft\Graph\Model\Win32LobAppPowerShellScriptRuleOperationType")) {
+                return $this->_propDict["operationType"];
+            } else {
+                $this->_propDict["operationType"] = new Win32LobAppPowerShellScriptRuleOperationType($this->_propDict["operationType"]);
+                return $this->_propDict["operationType"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the operationType
+    * The script output comparison operation type. Use NotConfigured (the default value) if the rule is used for detection.
+    *
+    * @param Win32LobAppPowerShellScriptRuleOperationType $val The value to assign to the operationType
+    *
+    * @return Win32LobAppPowerShellScriptRule The Win32LobAppPowerShellScriptRule
+    */
+    public function setOperationType($val)
+    {
+        $this->_propDict["operationType"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the operator
+    * The script output operator. Use NotConfigured (the default value) if the rule is used for detection.
+    *
+    * @return Win32LobAppRuleOperator The operator
+    */
+    public function getOperator()
+    {
+        if (array_key_exists("operator", $this->_propDict)) {
+            if (is_a($this->_propDict["operator"], "Beta\Microsoft\Graph\Model\Win32LobAppRuleOperator")) {
+                return $this->_propDict["operator"];
+            } else {
+                $this->_propDict["operator"] = new Win32LobAppRuleOperator($this->_propDict["operator"]);
+                return $this->_propDict["operator"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the operator
+    * The script output operator. Use NotConfigured (the default value) if the rule is used for detection.
+    *
+    * @param Win32LobAppRuleOperator $val The value to assign to the operator
+    *
+    * @return Win32LobAppPowerShellScriptRule The Win32LobAppPowerShellScriptRule
+    */
+    public function setOperator($val)
+    {
+        $this->_propDict["operator"] = $val;
+         return $this;
     }
     /**
     * Gets the runAs32Bit
@@ -175,100 +269,6 @@ class Win32LobAppPowerShellScriptRule extends Win32LobAppRule
     public function setScriptContent($val)
     {
         $this->_propDict["scriptContent"] = $val;
-        return $this;
-    }
-
-    /**
-    * Gets the operationType
-    * The script output comparison operation type. Use NotConfigured (the default value) if the rule is used for detection.
-    *
-    * @return Win32LobAppPowerShellScriptRuleOperationType The operationType
-    */
-    public function getOperationType()
-    {
-        if (array_key_exists("operationType", $this->_propDict)) {
-            if (is_a($this->_propDict["operationType"], "Beta\Microsoft\Graph\Model\Win32LobAppPowerShellScriptRuleOperationType")) {
-                return $this->_propDict["operationType"];
-            } else {
-                $this->_propDict["operationType"] = new Win32LobAppPowerShellScriptRuleOperationType($this->_propDict["operationType"]);
-                return $this->_propDict["operationType"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the operationType
-    * The script output comparison operation type. Use NotConfigured (the default value) if the rule is used for detection.
-    *
-    * @param Win32LobAppPowerShellScriptRuleOperationType $val The value to assign to the operationType
-    *
-    * @return Win32LobAppPowerShellScriptRule The Win32LobAppPowerShellScriptRule
-    */
-    public function setOperationType($val)
-    {
-        $this->_propDict["operationType"] = $val;
-         return $this;
-    }
-
-    /**
-    * Gets the operator
-    * The script output operator. Use NotConfigured (the default value) if the rule is used for detection.
-    *
-    * @return Win32LobAppRuleOperator The operator
-    */
-    public function getOperator()
-    {
-        if (array_key_exists("operator", $this->_propDict)) {
-            if (is_a($this->_propDict["operator"], "Beta\Microsoft\Graph\Model\Win32LobAppRuleOperator")) {
-                return $this->_propDict["operator"];
-            } else {
-                $this->_propDict["operator"] = new Win32LobAppRuleOperator($this->_propDict["operator"]);
-                return $this->_propDict["operator"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the operator
-    * The script output operator. Use NotConfigured (the default value) if the rule is used for detection.
-    *
-    * @param Win32LobAppRuleOperator $val The value to assign to the operator
-    *
-    * @return Win32LobAppPowerShellScriptRule The Win32LobAppPowerShellScriptRule
-    */
-    public function setOperator($val)
-    {
-        $this->_propDict["operator"] = $val;
-         return $this;
-    }
-    /**
-    * Gets the comparisonValue
-    * The script output comparison value. Do not specify a value if the rule is used for detection.
-    *
-    * @return string The comparisonValue
-    */
-    public function getComparisonValue()
-    {
-        if (array_key_exists("comparisonValue", $this->_propDict)) {
-            return $this->_propDict["comparisonValue"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the comparisonValue
-    * The script output comparison value. Do not specify a value if the rule is used for detection.
-    *
-    * @param string $val The value of the comparisonValue
-    *
-    * @return Win32LobAppPowerShellScriptRule
-    */
-    public function setComparisonValue($val)
-    {
-        $this->_propDict["comparisonValue"] = $val;
         return $this;
     }
 }

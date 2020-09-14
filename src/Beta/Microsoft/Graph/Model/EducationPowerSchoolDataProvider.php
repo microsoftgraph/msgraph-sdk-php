@@ -33,29 +33,29 @@ class EducationPowerSchoolDataProvider extends EducationSynchronizationDataProvi
     }
 
     /**
-    * Gets the connectionUrl
+    * Gets the allowTeachersInMultipleSchools
     *
-    * @return string The connectionUrl
+    * @return bool The allowTeachersInMultipleSchools
     */
-    public function getConnectionUrl()
+    public function getAllowTeachersInMultipleSchools()
     {
-        if (array_key_exists("connectionUrl", $this->_propDict)) {
-            return $this->_propDict["connectionUrl"];
+        if (array_key_exists("allowTeachersInMultipleSchools", $this->_propDict)) {
+            return $this->_propDict["allowTeachersInMultipleSchools"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the connectionUrl
+    * Sets the allowTeachersInMultipleSchools
     *
-    * @param string $val The value of the connectionUrl
+    * @param bool $val The value of the allowTeachersInMultipleSchools
     *
     * @return EducationPowerSchoolDataProvider
     */
-    public function setConnectionUrl($val)
+    public function setAllowTeachersInMultipleSchools($val)
     {
-        $this->_propDict["connectionUrl"] = $val;
+        $this->_propDict["allowTeachersInMultipleSchools"] = $val;
         return $this;
     }
     /**
@@ -111,6 +111,63 @@ class EducationPowerSchoolDataProvider extends EducationSynchronizationDataProvi
         return $this;
     }
     /**
+    * Gets the connectionUrl
+    *
+    * @return string The connectionUrl
+    */
+    public function getConnectionUrl()
+    {
+        if (array_key_exists("connectionUrl", $this->_propDict)) {
+            return $this->_propDict["connectionUrl"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the connectionUrl
+    *
+    * @param string $val The value of the connectionUrl
+    *
+    * @return EducationPowerSchoolDataProvider
+    */
+    public function setConnectionUrl($val)
+    {
+        $this->_propDict["connectionUrl"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the customizations
+    *
+    * @return EducationSynchronizationCustomizations The customizations
+    */
+    public function getCustomizations()
+    {
+        if (array_key_exists("customizations", $this->_propDict)) {
+            if (is_a($this->_propDict["customizations"], "Beta\Microsoft\Graph\Model\EducationSynchronizationCustomizations")) {
+                return $this->_propDict["customizations"];
+            } else {
+                $this->_propDict["customizations"] = new EducationSynchronizationCustomizations($this->_propDict["customizations"]);
+                return $this->_propDict["customizations"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the customizations
+    *
+    * @param EducationSynchronizationCustomizations $val The value to assign to the customizations
+    *
+    * @return EducationPowerSchoolDataProvider The EducationPowerSchoolDataProvider
+    */
+    public function setCustomizations($val)
+    {
+        $this->_propDict["customizations"] = $val;
+         return $this;
+    }
+    /**
     * Gets the schoolsIds
     *
     * @return string The schoolsIds
@@ -161,62 +218,5 @@ class EducationPowerSchoolDataProvider extends EducationSynchronizationDataProvi
     {
         $this->_propDict["schoolYear"] = $val;
         return $this;
-    }
-    /**
-    * Gets the allowTeachersInMultipleSchools
-    *
-    * @return bool The allowTeachersInMultipleSchools
-    */
-    public function getAllowTeachersInMultipleSchools()
-    {
-        if (array_key_exists("allowTeachersInMultipleSchools", $this->_propDict)) {
-            return $this->_propDict["allowTeachersInMultipleSchools"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the allowTeachersInMultipleSchools
-    *
-    * @param bool $val The value of the allowTeachersInMultipleSchools
-    *
-    * @return EducationPowerSchoolDataProvider
-    */
-    public function setAllowTeachersInMultipleSchools($val)
-    {
-        $this->_propDict["allowTeachersInMultipleSchools"] = $val;
-        return $this;
-    }
-
-    /**
-    * Gets the customizations
-    *
-    * @return EducationSynchronizationCustomizations The customizations
-    */
-    public function getCustomizations()
-    {
-        if (array_key_exists("customizations", $this->_propDict)) {
-            if (is_a($this->_propDict["customizations"], "Beta\Microsoft\Graph\Model\EducationSynchronizationCustomizations")) {
-                return $this->_propDict["customizations"];
-            } else {
-                $this->_propDict["customizations"] = new EducationSynchronizationCustomizations($this->_propDict["customizations"]);
-                return $this->_propDict["customizations"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the customizations
-    *
-    * @param EducationSynchronizationCustomizations $val The value to assign to the customizations
-    *
-    * @return EducationPowerSchoolDataProvider The EducationPowerSchoolDataProvider
-    */
-    public function setCustomizations($val)
-    {
-        $this->_propDict["customizations"] = $val;
-         return $this;
     }
 }

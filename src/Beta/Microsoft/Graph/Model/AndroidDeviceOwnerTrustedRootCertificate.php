@@ -25,6 +25,35 @@ namespace Beta\Microsoft\Graph\Model;
 class AndroidDeviceOwnerTrustedRootCertificate extends DeviceConfiguration
 {
     /**
+    * Gets the certFileName
+    * File name to display in UI.
+    *
+    * @return string The certFileName
+    */
+    public function getCertFileName()
+    {
+        if (array_key_exists("certFileName", $this->_propDict)) {
+            return $this->_propDict["certFileName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the certFileName
+    * File name to display in UI.
+    *
+    * @param string $val The certFileName
+    *
+    * @return AndroidDeviceOwnerTrustedRootCertificate
+    */
+    public function setCertFileName($val)
+    {
+        $this->_propDict["certFileName"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the trustedRootCertificate
     * Trusted Root Certificate
     *
@@ -54,35 +83,6 @@ class AndroidDeviceOwnerTrustedRootCertificate extends DeviceConfiguration
     public function setTrustedRootCertificate($val)
     {
         $this->_propDict["trustedRootCertificate"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the certFileName
-    * File name to display in UI.
-    *
-    * @return string The certFileName
-    */
-    public function getCertFileName()
-    {
-        if (array_key_exists("certFileName", $this->_propDict)) {
-            return $this->_propDict["certFileName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the certFileName
-    * File name to display in UI.
-    *
-    * @param string $val The certFileName
-    *
-    * @return AndroidDeviceOwnerTrustedRootCertificate
-    */
-    public function setCertFileName($val)
-    {
-        $this->_propDict["certFileName"] = $val;
         return $this;
     }
     

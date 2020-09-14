@@ -25,60 +25,31 @@ namespace Beta\Microsoft\Graph\Model;
 class NetworkIPv4ConfigurationManagementCondition extends NetworkManagementCondition
 {
     /**
-    * Gets the ipV4Prefix
-    * The IPv4 subnet to be connected to. e.g. 10.0.0.0/8
+    * Gets the dnsSuffixList
+    * Valid DNS suffixes for the current network. e.g. seattle.contoso.com
     *
-    * @return string The ipV4Prefix
+    * @return string The dnsSuffixList
     */
-    public function getIpV4Prefix()
+    public function getDnsSuffixList()
     {
-        if (array_key_exists("ipV4Prefix", $this->_propDict)) {
-            return $this->_propDict["ipV4Prefix"];
+        if (array_key_exists("dnsSuffixList", $this->_propDict)) {
+            return $this->_propDict["dnsSuffixList"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the ipV4Prefix
-    * The IPv4 subnet to be connected to. e.g. 10.0.0.0/8
+    * Sets the dnsSuffixList
+    * Valid DNS suffixes for the current network. e.g. seattle.contoso.com
     *
-    * @param string $val The ipV4Prefix
-    *
-    * @return NetworkIPv4ConfigurationManagementCondition
-    */
-    public function setIpV4Prefix($val)
-    {
-        $this->_propDict["ipV4Prefix"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the ipV4Gateway
-    * The IPv4 gateway address. e.g. 10.0.0.0
-    *
-    * @return string The ipV4Gateway
-    */
-    public function getIpV4Gateway()
-    {
-        if (array_key_exists("ipV4Gateway", $this->_propDict)) {
-            return $this->_propDict["ipV4Gateway"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the ipV4Gateway
-    * The IPv4 gateway address. e.g. 10.0.0.0
-    *
-    * @param string $val The ipV4Gateway
+    * @param string $val The dnsSuffixList
     *
     * @return NetworkIPv4ConfigurationManagementCondition
     */
-    public function setIpV4Gateway($val)
+    public function setDnsSuffixList($val)
     {
-        $this->_propDict["ipV4Gateway"] = $val;
+        $this->_propDict["dnsSuffixList"] = $val;
         return $this;
     }
     
@@ -141,31 +112,60 @@ class NetworkIPv4ConfigurationManagementCondition extends NetworkManagementCondi
     }
     
     /**
-    * Gets the dnsSuffixList
-    * Valid DNS suffixes for the current network. e.g. seattle.contoso.com
+    * Gets the ipV4Gateway
+    * The IPv4 gateway address. e.g. 10.0.0.0
     *
-    * @return string The dnsSuffixList
+    * @return string The ipV4Gateway
     */
-    public function getDnsSuffixList()
+    public function getIpV4Gateway()
     {
-        if (array_key_exists("dnsSuffixList", $this->_propDict)) {
-            return $this->_propDict["dnsSuffixList"];
+        if (array_key_exists("ipV4Gateway", $this->_propDict)) {
+            return $this->_propDict["ipV4Gateway"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the dnsSuffixList
-    * Valid DNS suffixes for the current network. e.g. seattle.contoso.com
+    * Sets the ipV4Gateway
+    * The IPv4 gateway address. e.g. 10.0.0.0
     *
-    * @param string $val The dnsSuffixList
+    * @param string $val The ipV4Gateway
     *
     * @return NetworkIPv4ConfigurationManagementCondition
     */
-    public function setDnsSuffixList($val)
+    public function setIpV4Gateway($val)
     {
-        $this->_propDict["dnsSuffixList"] = $val;
+        $this->_propDict["ipV4Gateway"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the ipV4Prefix
+    * The IPv4 subnet to be connected to. e.g. 10.0.0.0/8
+    *
+    * @return string The ipV4Prefix
+    */
+    public function getIpV4Prefix()
+    {
+        if (array_key_exists("ipV4Prefix", $this->_propDict)) {
+            return $this->_propDict["ipV4Prefix"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the ipV4Prefix
+    * The IPv4 subnet to be connected to. e.g. 10.0.0.0/8
+    *
+    * @param string $val The ipV4Prefix
+    *
+    * @return NetworkIPv4ConfigurationManagementCondition
+    */
+    public function setIpV4Prefix($val)
+    {
+        $this->_propDict["ipV4Prefix"] = $val;
         return $this;
     }
     

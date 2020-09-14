@@ -25,6 +25,37 @@ namespace Beta\Microsoft\Graph\Model;
 class AgreementFileProperties extends Entity
 {
     /**
+    * Gets the fileData
+    *
+    * @return AgreementFileData The fileData
+    */
+    public function getFileData()
+    {
+        if (array_key_exists("fileData", $this->_propDict)) {
+            if (is_a($this->_propDict["fileData"], "Beta\Microsoft\Graph\Model\AgreementFileData")) {
+                return $this->_propDict["fileData"];
+            } else {
+                $this->_propDict["fileData"] = new AgreementFileData($this->_propDict["fileData"]);
+                return $this->_propDict["fileData"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the fileData
+    *
+    * @param AgreementFileData $val The fileData
+    *
+    * @return AgreementFileProperties
+    */
+    public function setFileData($val)
+    {
+        $this->_propDict["fileData"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the fileName
     *
     * @return string The fileName
@@ -48,33 +79,6 @@ class AgreementFileProperties extends Entity
     public function setFileName($val)
     {
         $this->_propDict["fileName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the language
-    *
-    * @return string The language
-    */
-    public function getLanguage()
-    {
-        if (array_key_exists("language", $this->_propDict)) {
-            return $this->_propDict["language"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the language
-    *
-    * @param string $val The language
-    *
-    * @return AgreementFileProperties
-    */
-    public function setLanguage($val)
-    {
-        $this->_propDict["language"] = $val;
         return $this;
     }
     
@@ -106,33 +110,29 @@ class AgreementFileProperties extends Entity
     }
     
     /**
-    * Gets the fileData
+    * Gets the language
     *
-    * @return AgreementFileData The fileData
+    * @return string The language
     */
-    public function getFileData()
+    public function getLanguage()
     {
-        if (array_key_exists("fileData", $this->_propDict)) {
-            if (is_a($this->_propDict["fileData"], "Beta\Microsoft\Graph\Model\AgreementFileData")) {
-                return $this->_propDict["fileData"];
-            } else {
-                $this->_propDict["fileData"] = new AgreementFileData($this->_propDict["fileData"]);
-                return $this->_propDict["fileData"];
-            }
+        if (array_key_exists("language", $this->_propDict)) {
+            return $this->_propDict["language"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the fileData
+    * Sets the language
     *
-    * @param AgreementFileData $val The fileData
+    * @param string $val The language
     *
     * @return AgreementFileProperties
     */
-    public function setFileData($val)
+    public function setLanguage($val)
     {
-        $this->_propDict["fileData"] = $val;
+        $this->_propDict["language"] = $val;
         return $this;
     }
     

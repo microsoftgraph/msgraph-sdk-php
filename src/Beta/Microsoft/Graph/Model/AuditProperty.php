@@ -52,34 +52,6 @@ class AuditProperty extends Entity
         return $this;
     }
     /**
-    * Gets the oldValue
-    * Old value.
-    *
-    * @return string The oldValue
-    */
-    public function getOldValue()
-    {
-        if (array_key_exists("oldValue", $this->_propDict)) {
-            return $this->_propDict["oldValue"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the oldValue
-    * Old value.
-    *
-    * @param string $val The value of the oldValue
-    *
-    * @return AuditProperty
-    */
-    public function setOldValue($val)
-    {
-        $this->_propDict["oldValue"] = $val;
-        return $this;
-    }
-    /**
     * Gets the newValue
     * New value.
     *
@@ -105,6 +77,34 @@ class AuditProperty extends Entity
     public function setNewValue($val)
     {
         $this->_propDict["newValue"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the oldValue
+    * Old value.
+    *
+    * @return string The oldValue
+    */
+    public function getOldValue()
+    {
+        if (array_key_exists("oldValue", $this->_propDict)) {
+            return $this->_propDict["oldValue"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the oldValue
+    * Old value.
+    *
+    * @param string $val The value of the oldValue
+    *
+    * @return AuditProperty
+    */
+    public function setOldValue($val)
+    {
+        $this->_propDict["oldValue"] = $val;
         return $this;
     }
 }
